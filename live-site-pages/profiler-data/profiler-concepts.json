@@ -188,6 +188,14 @@
       "def": "The gap between the temperature a heat exchanger achieves and the theoretical best it could achieve — tower water above wet-bulb, or leaving water above refrigerant temperature. Closing an approach costs surface area and money."
     },
     {
+      "slug": "approach-temperature",
+      "term": "approach temperature",
+      "def": "At a heat exchanger, the temperature gap between the two fluids that drives heat across it — at a CDU, how much warmer the coolant leaving for the racks is than the facility water arriving from the plant. A capacity rating is only meaningful at a stated approach, and the rack's inlet limit minus the CDU's approach is the warmest water the plant is allowed to make.",
+      "aliases": [
+        "approach temperature differential"
+      ]
+    },
+    {
       "slug": "arc-flash",
       "term": "arc flash",
       "def": "The explosive release of energy when current jumps through the air between conductors — a blast hot enough to be lethal at a panel door. An arc-flash study calculates that energy at every piece of gear so the right protective clothing and breaker settings can be specified, and it has to be redone whenever the electrical system changes.",
@@ -216,6 +224,17 @@
       "slug": "ashrae-90-1",
       "term": "ASHRAE 90.1",
       "def": "The North American energy standard that sets the minimum full-load and part-load efficiency a chiller may legally have, by type and size. It is the floor every catalogue is written against."
+    },
+    {
+      "slug": "ashrae-w-class",
+      "term": "ASHRAE W-class",
+      "def": "ASHRAE's classification of the water temperature liquid-cooled IT equipment will accept: since the fifth edition the number is the maximum supply temperature in °C (W17, W27, W32, W40, W45 and W+ above 45 °C), all starting at 2 °C. A rack's class fixes how warm the facility water may be, and so whether the plant needs chillers.",
+      "aliases": [
+        "W-class",
+        "ASHRAE W classes",
+        "W45",
+        "W32"
+      ]
     },
     {
       "slug": "asynchronous-tie",
@@ -768,6 +787,14 @@
       "def": "Letting condenser water get colder when the weather allows, which lowers the lift and so the compressor work. It is most of why a chiller's part-load efficiency beats its full-load efficiency."
     },
     {
+      "slug": "conditions-precedent",
+      "term": "conditions precedent",
+      "def": "The list of things that must be true before a lender's money can flow: signed contracts, permits in hand, insurance bound, the independent engineer's report delivered. Financial close is the day the last one is ticked.",
+      "aliases": [
+        "CPs"
+      ]
+    },
+    {
       "slug": "conductance-testing",
       "term": "conductance testing",
       "def": "Measuring each cell's internal resistance or conductance as a fast proxy for its health, without discharging the string. It reliably finds the cell that has already failed; it does not prove how many minutes the string still holds.",
@@ -872,6 +899,15 @@
         "protection study",
         "protective device coordination",
         "coordination studies"
+      ]
+    },
+    {
+      "slug": "corrosion-inhibitor",
+      "term": "corrosion inhibitor",
+      "def": "The additive package in a coolant that coats metal surfaces so the fluid cannot attack them — typically tolyltriazole for copper and silicates for aluminium in a glycol blend. It depletes over time and has to be measured and re-dosed; a loop topped up with plain water quietly loses its protection.",
+      "aliases": [
+        "inhibitor package",
+        "inhibited glycol"
       ]
     },
     {
@@ -1258,6 +1294,15 @@
       ]
     },
     {
+      "slug": "dew-point",
+      "term": "dew point",
+      "def": "The temperature at which the room's air begins to condense water on a surface. Coolant supplied below it sweats every hose and cold plate onto the boards beneath, so a CDU holds its supply temperature above the data hall's dew point — one reason warm-water cooling is safer than cold.",
+      "aliases": [
+        "dewpoint",
+        "dew-point"
+      ]
+    },
+    {
       "slug": "diesel-exhaust-fluid",
       "term": "DEF",
       "def": "Diesel exhaust fluid: the urea-and-water solution injected into the exhaust ahead of an SCR catalyst, where it converts nitrogen oxides into nitrogen and water. A Tier 4 engine cannot meet its emissions limit without it, so DEF supply and freeze protection become part of the site's operating plan.",
@@ -1283,6 +1328,15 @@
       "def": "A simulated copy of a real asset, fed by its live data, used to rehearse changes before they touch the hardware — testing a control strategy, forecasting degradation, or learning what normal looks like so anomalies stand out. It is how an operator tries something on a plant without trying it on the plant.",
       "aliases": [
         "digital twins"
+      ]
+    },
+    {
+      "slug": "direct-liquid-cooling",
+      "term": "direct liquid cooling",
+      "def": "Cooling servers by circulating liquid through cold plates bolted onto the processors, memory and other hot parts, instead of blowing air over them. Single-phase DLC keeps the fluid liquid throughout; the heat leaves the rack in a coolant loop and is handed to the building at a coolant distribution unit.",
+      "aliases": [
+        "DLC",
+        "single-phase direct liquid cooling"
       ]
     },
     {
@@ -1363,6 +1417,15 @@
         "drawout breaker",
         "withdrawable breaker",
         "racking"
+      ]
+    },
+    {
+      "slug": "drawdown",
+      "term": "drawdown",
+      "def": "A single release of loan money to a project during construction, made against a certificate that the work it pays for has been done. The independent engineer's monthly construction-monitoring report is what the lender relies on before signing each one.",
+      "aliases": [
+        "loan drawdown",
+        "disbursement"
       ]
     },
     {
@@ -1626,6 +1689,14 @@
       ]
     },
     {
+      "slug": "engineer-of-record",
+      "term": "engineer of record",
+      "def": "The licensed engineer who signs and seals a project's design and carries legal responsibility for it. On a turnkey EPC job it works for the contractor; on a multi-contract job the owner's engineer may hold the seal — which decides who answers when the design is wrong.",
+      "aliases": [
+        "EOR"
+      ]
+    },
+    {
       "slug": "enrichment",
       "term": "enrichment",
       "def": "Raising the share of the fissile isotope uranium-235 above the 0.7% found in nature. The higher the enrichment, the more compact a core can be — and the tighter the security and transport rules become."
@@ -1740,6 +1811,16 @@
       "def": "The European rules capping and reducing fluorinated-gas supply and banning specific uses on a schedule. It runs ahead of the US phasedown and is why some product lines change in Europe first."
     },
     {
+      "slug": "facility-water-system",
+      "term": "facility water system",
+      "def": "The building's own cooling-water loop — the plant side of a coolant distribution unit — connected to chillers, cooling towers or dry coolers where the heat finally leaves the site. Larger, at whatever temperature the plant can make, and treated to plant rather than electronics standards, it never touches the servers.",
+      "aliases": [
+        "FWS",
+        "facility water loop",
+        "primary coolant loop"
+      ]
+    },
+    {
       "slug": "factorized-power",
       "term": "factorized power",
       "def": "A power-chain design that splits the two jobs a converter normally does — holding the voltage steady (regulation) and changing its level (transformation) — into separate stages, so each can be built where it works best. The regulator lives upstream where the current is small, and a fixed-ratio current multiplier lives next to the load where the current is enormous.",
@@ -1827,6 +1908,14 @@
       "def": "A single number that multiplies a device's on-resistance by a switching-related charge, so two switches can be compared on conduction and switching cost together. Lower is better, and it is how a datasheet argument about one material beating another is usually settled.",
       "aliases": [
         "RDS(on) x Qg"
+      ]
+    },
+    {
+      "slug": "financial-close",
+      "term": "financial close",
+      "def": "The date on which a project's loan agreements become effective and money can be drawn: every condition precedent satisfied, every adviser's report delivered. Construction schedules, equipment slots and tax-credit deadlines all hang on hitting it.",
+      "aliases": [
+        "close of financing"
       ]
     },
     {
@@ -1931,6 +2020,14 @@
       "def": "The weight per unit area a floor is allowed to carry. It decides where battery strings, large UPS frames and transformers may stand, and in retrofits it settles more equipment arguments than price does."
     },
     {
+      "slug": "flow-balancing",
+      "term": "flow balancing",
+      "def": "Making every rack on a shared coolant header receive its share of flow, since coolant takes the easiest path and the nearest or least-restricted racks would otherwise starve the far ones. Done with balancing valves or orifices at each manifold, reverse-return piping and a pump held to a pressure setpoint.",
+      "aliases": [
+        "hydraulic balancing"
+      ]
+    },
+    {
       "slug": "flywheel",
       "term": "flywheel",
       "aliases": [
@@ -2022,6 +2119,14 @@
       "aliases": [
         "fuel conditioning",
         "polishing"
+      ]
+    },
+    {
+      "slug": "galvanic-corrosion",
+      "term": "galvanic corrosion",
+      "def": "Corrosion that starts when two different metals sit in one conductive fluid and form a battery, dissolving the less noble one. In a coolant loop the defence is matched wetted materials, plastic piping where metals would otherwise meet, and an inhibitor package kept at strength.",
+      "aliases": [
+        "galvanic attack"
       ]
     },
     {
@@ -2359,6 +2464,14 @@
       "def": "The international safety standard for industrial lithium cells and batteries, stationary storage included. A certificate against it is the common passport for selling cells into other markets."
     },
     {
+      "slug": "iec-62933",
+      "term": "IEC 62933",
+      "def": "The international standard series for electrical energy storage systems — unit parameters, test methods, planning, safety and environmental requirements — that independent engineers and recommended practices cite when specifying how a grid battery is to be tested and accepted.",
+      "aliases": [
+        "IEC 62933 series"
+      ]
+    },
+    {
       "slug": "ieee-1584",
       "term": "IEEE 1584",
       "def": "The standard method for calculating arc-flash incident energy: given the available fault current, the gap between conductors, the enclosure and — critically — how long the protective device takes to clear, it returns the energy a worker at a stated distance would receive. Clearing time is the term the engineer can actually change, which is why arc-flash mitigation is usually a protection-settings problem.",
@@ -2384,6 +2497,24 @@
         "IGBTs"
       ],
       "def": "Insulated-gate bipolar transistor: the silicon switch that static UPS inverters, drives and grid inverters have been built on for three decades — fast enough to chop DC into a clean sine wave thousands of times a second and rugged enough for megawatts. Silicon carbide is displacing it where the last points of efficiency matter."
+    },
+    {
+      "slug": "in-rack-cdu",
+      "term": "in-rack CDU",
+      "def": "A coolant distribution unit built into the server rack itself — a few rack units of pumps, exchanger and filters serving that one cabinet. Its fault domain is one rack and it can be filled and tested off-site, at the cost of rack space, a pump per rack and a capacity ceiling.",
+      "aliases": [
+        "rack-mounted CDU",
+        "rack-based CDU"
+      ]
+    },
+    {
+      "slug": "in-row-cdu",
+      "term": "in-row CDU",
+      "def": "A cabinet-sized coolant distribution unit standing in the row and feeding a shared header to several racks — the megawatt-class units the current AI rack generation is designed around. One unit and one facility connection serve up to a dozen racks, so the fault domain is the row unless a partner unit shares the header.",
+      "aliases": [
+        "row-based CDU",
+        "row CDU"
+      ]
     },
     {
       "slug": "incident-energy",
@@ -2708,6 +2839,15 @@
       ]
     },
     {
+      "slug": "leak-detection",
+      "term": "leak detection",
+      "def": "The layered sensing that finds coolant where it should not be: conductive trace loops around each cold plate reporting through the server's management controller, sensing cable along manifolds and drip trays, and level sensors on the CDU reservoir. Detection triggers isolation of the branch and a clean shutdown before water reaches live boards.",
+      "aliases": [
+        "leak sensing",
+        "leak-detection cable"
+      ]
+    },
+    {
       "slug": "lean-burn",
       "term": "lean-burn",
       "def": "A gas-engine combustion strategy that burns with excess air, which lowers peak flame temperature and so forms far less nitrogen oxide inside the cylinder. It is how a natural-gas gen-set meets a tight air permit with little after-treatment, at the cost of a slower response to sudden load steps than a diesel.",
@@ -2748,6 +2888,24 @@
       "slug": "line-interactive",
       "term": "line-interactive",
       "def": "A UPS that normally passes the supply through while a transformer or inverter trims the voltage, stepping in fully only when the supply fails. Cheaper and more efficient than double conversion, at the cost of a short break the load must be able to ride."
+    },
+    {
+      "slug": "liquid-to-air-cdu",
+      "term": "liquid-to-air CDU",
+      "def": "A coolant distribution unit that rejects the racks' heat into the room air through a radiator and fans instead of into facility water, so liquid-cooled racks can go into a hall that has no water near them. It pays a much higher approach temperature and fan power, and the room's air system must still carry the heat away.",
+      "aliases": [
+        "liquid-to-air",
+        "L2A CDU"
+      ]
+    },
+    {
+      "slug": "liquidated-damages",
+      "term": "liquidated damages",
+      "def": "A pre-agreed sum a contractor or supplier pays per day of delay or per unit of performance shortfall, written into the contract so the owner does not have to prove its loss. Capped in practice, so the independent engineer checks whether the cap actually covers the lender's exposure.",
+      "aliases": [
+        "LDs",
+        "delay damages"
+      ]
     },
     {
       "slug": "llc-converter",
@@ -3331,6 +3489,15 @@
       ]
     },
     {
+      "slug": "owners-engineer",
+      "term": "owner's engineer",
+      "def": "The engineering firm an owner hires to act as its technical agent — writing the specification, reviewing the contractor's design submittals, witnessing tests and advising on change orders — as distinct from the contractor's engineer of record or the lender's independent engineer. Paid a fee; takes no equity and builds nothing.",
+      "aliases": [
+        "OE",
+        "owner's engineering"
+      ]
+    },
+    {
       "slug": "paralleling-switchgear",
       "term": "paralleling switchgear",
       "def": "Switchgear whose controller synchronizes several generators onto one common bus, adds them in a set order, shares the load between them and sheds low-priority load if generation runs short — a room of engines behaving as one plant. It is what turns a collection of standby gen-sets into a campus-scale power source.",
@@ -3432,6 +3599,16 @@
       ]
     },
     {
+      "slug": "pg25",
+      "term": "PG25",
+      "def": "The standard rack-side coolant: inhibited propylene glycol mixed 25 percent by volume with deionised or filtered water. The glycol carries the corrosion-inhibitor package, protects to about −10 °C and suppresses microbial growth; 25 percent is the least that does all three without costing much of the water's heat capacity.",
+      "aliases": [
+        "PG-25",
+        "propylene glycol 25%",
+        "25% propylene glycol"
+      ]
+    },
+    {
       "slug": "pjm",
       "term": "PJM",
       "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
@@ -3446,6 +3623,14 @@
         "planning reserve",
         "resource adequacy",
         "target reserve margin"
+      ]
+    },
+    {
+      "slug": "plate-heat-exchanger",
+      "term": "plate heat exchanger",
+      "def": "A stack of thin corrugated metal plates through which two fluids flow in alternate channels, so heat crosses the metal while the fluids never mix. It is the boundary inside a liquid-to-liquid CDU between facility water and rack coolant; more plate area buys a lower approach temperature.",
+      "aliases": [
+        "brazed plate heat exchanger"
       ]
     },
     {
@@ -3597,6 +3782,14 @@
       "def": "The estimating, planning, constructability review and procurement work done before construction starts. It is where a schedule is either made possible or quietly made impossible."
     },
     {
+      "slug": "pressure-drop",
+      "term": "pressure drop",
+      "def": "The pressure a fluid loses as it flows through pipes, fittings, connectors and cold-plate channels — the head the CDU's pumps must supply at design flow or the far racks starve. Narrow lines multiply it: a 1-inch branch can lose over five times the pressure of a 2-inch one.",
+      "aliases": [
+        "head loss"
+      ]
+    },
+    {
       "slug": "pressure-ratio",
       "term": "pressure ratio",
       "def": "How much a gas turbine's compressor raises the pressure of the air passing through it, typically in the high teens to low twenties on a modern heavy-duty machine. Along with firing temperature it sets the cycle's efficiency, and raising it costs compressor stages, which is one reason turbines grow rather than simply improve.",
@@ -3721,6 +3914,25 @@
       "def": "An electrochemical route to separating usable material from spent metallic fuel in molten salt, developed alongside metallic-fuel fast reactors. It recovers fuel without the aqueous chemistry of conventional reprocessing."
     },
     {
+      "slug": "quick-disconnect",
+      "term": "quick disconnect",
+      "def": "The coupling at each server hose and manifold port that lets a server be unplugged from a live coolant loop. Dry-break (drip-less) designs close a valve in each half as they separate; blind-mate versions engage as the server slides in. Connections outnumber pipes, so they are the dominant leak risk and are colour-coded and leak-tested.",
+      "aliases": [
+        "QD",
+        "dry-break connector",
+        "quick-disconnect coupling"
+      ]
+    },
+    {
+      "slug": "rack-manifold",
+      "term": "rack manifold",
+      "def": "The vertical supply and return pipes in a rack that split the row's coolant to each server's hoses through quick disconnects and collect it again — stainless steel, built for the rack standard (EIA, ORV3, MGX) and height, leak-tested before shipment, and the place where flow to each server is set.",
+      "aliases": [
+        "rack manifolds",
+        "vertical rack manifold"
+      ]
+    },
+    {
       "slug": "ramp-period",
       "term": "ramp period",
       "def": "The years a large-load tariff gives a new customer to grow into its contracted demand before the minimum bill applies in full — a schedule such as forty percent in year one, sixty in year two, then the whole contract demand. It recognizes that a campus energizes in halls, and it is the term a developer negotiates hardest after the term itself.",
@@ -3791,6 +4003,15 @@
       ]
     },
     {
+      "slug": "rear-door-heat-exchanger",
+      "term": "rear-door heat exchanger",
+      "def": "A liquid-cooled radiator that replaces a rack's back door and neutralises the servers' hot exhaust air before it reaches the room, while the servers themselves stay air-cooled. The transitional step that brings liquid to the rack without touching the IT hardware.",
+      "aliases": [
+        "RDHx",
+        "rear door heat exchanger"
+      ]
+    },
+    {
       "slug": "rectifier",
       "term": "rectifier",
       "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
@@ -3813,6 +4034,14 @@
       "aliases": [
         "lag",
         "recovery lag"
+      ]
+    },
+    {
+      "slug": "reliance-letter",
+      "term": "reliance letter",
+      "def": "The engineer's written agreement that a named party other than its client — a new lender, a buyer of the project — may rely on its report, usually under the same liability cap. Without one, a report found in a data room is information, not something the reader can sue over.",
+      "aliases": [
+        "reliance"
       ]
     },
     {
@@ -4776,6 +5005,14 @@
       ]
     },
     {
+      "slug": "thermal-design-power",
+      "term": "thermal design power",
+      "def": "The heat a processor is designed to give off at sustained load, in watts — the number a cold plate and the coolant flow behind it are sized to remove. AI accelerators went from about 700 W to 1,400 W in two generations and are heading past 2,000 W, which is what drives rack power and CDU capacity.",
+      "aliases": [
+        "TDP"
+      ]
+    },
+    {
       "slug": "thermal-energy-storage",
       "term": "thermal energy storage",
       "def": "Storing cooling rather than electricity: chilled water or ice made when power is cheap or plentiful and drawn on later. In a critical facility it is also the ride-through that covers a chiller restart.",
@@ -5157,6 +5394,14 @@
       "def": "The lowest temperature air can be cooled to by evaporating water into it. It is always at or below the dry-bulb temperature, and it is the floor an evaporative device works against.",
       "aliases": [
         "wet bulb"
+      ]
+    },
+    {
+      "slug": "wetted-materials",
+      "term": "wetted materials",
+      "def": "Every material the coolant touches — plate metal, pipe, hose lining, seals, cold-plate copper. They must be compatible with each other and with the fluid's inhibitor package, because a single mismatched metal or elastomer in the loop is where corrosion, leaching or leaks begin.",
+      "aliases": [
+        "wetted material"
       ]
     },
     {

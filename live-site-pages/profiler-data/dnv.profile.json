@@ -1,0 +1,1351 @@
+{
+ "schemaVersion": 7,
+ "slug": "dnv",
+ "name": "DNV Group AS (operating as DNV; principal Norwegian legal entity DNV AS)",
+ "shortName": "DNV",
+ "categories": [
+  "advisor"
+ ],
+ "website": "https://www.dnv.com/",
+ "headquarters": "Veritasveien 1, Høvik (Bærum), Norway",
+ "founded": 1864,
+ "employees": "15,380 at year-end 2025 (98% permanent), of whom 5,131 in Energy Systems; 15,420 at year-end 2024 (DNV Annual Report 2025)",
+ "ownership": {
+  "type": "private",
+  "ticker": ""
+ },
+ "summary": "BOTTOM LINE UP FRONT: DNV is the foundation-owned assurance group whose Energy Systems business (NOK 12,217 million of a NOK 35,291 million group in 2025, roughly 35 percent) sells the technical judgments that make a battery project financeable — the independent engineer's report a lender relies on, the recommended practice a buyer can write into a contract, the laboratory test and the certificate an insurer will accept — and its own 2025 accounts record that North America, the largest Energy Systems market, contracted about 12 percent while every storage financing it publicised in the period sat in Australia, Chile, Germany, Egypt or the United Kingdom. BACKGROUND. Founded 15 June 1864 by six Norwegian mutual marine insurers as Det Norske Veritas; merged with Germanischer Lloyd in September 2013 as DNV GL; the foundation bought out the German minority (36.5 percent) in December 2017 and the group reverted to the DNV name on 1 March 2021 (Store norske leksikon; DNV Annual Report 2025). DNV Group AS is 100 percent owned by Det Norske Veritas Holding AS, itself wholly owned by the independent foundation Stiftelsen Det Norske Veritas; there is no listing, no external shareholder and no published guidance or analyst consensus. Group revenue NOK 35,291 million in 2025 (+0.9 percent; −1.7 percent currency headwind), EBITDA NOK 5,615 million, profit before tax NOK 4,666 million; a NOK 4,000 million extraordinary dividend was paid to the owner in December 2025 and the foundation launched a NOK 2 billion independent research fund in October 2025 (Annual Report 2025). Energy Systems — led since April 2016 by Ditlev Engel, formerly chief executive of Vestas — covers wind, solar, storage, power grids, hydrogen, oil and gas and CCS; from 1 January 2026 Digital Solutions was folded into it to form an energy-assurance business area under a five-area structure. The storage franchise has three legs, all in evidence in the trailing 24 months: lender's and technical advisory on financings (Akaysha's AUD 650 million Orana BESS with an eleven-bank group, 2024; Grenergy and Zelestra hybrids in Chile, 2025–2026; TotalEnergies' sale of a 789 MW / 1,628 MWh German battery portfolio to Allianz Global Investors, 2026), the recommended-practice and testing layer (DNVGL-RP-0043 on safety, operation and performance of grid-connected storage, edition December 2015, from the GRIDSTOR joint industry project; the Battery Scorecard, in its fifth edition in 2024; a Rochester, New York cell laboratory and a Texas facility where Prevalon and Sungrow burn tests were witnessed), and digital monitoring through GreenPowerMonitor, the DNV company that reports more than 100 GW under management. Collection gap, stated rather than smoothed: DNV's own website is fronted by a bot challenge that this session's tooling could not pass, so no dnv.com page was read in full. First-party facts here come from the group's Annual Report 2025 as hosted by a third party, from DNV releases republished on news wires, from GreenPowerMonitor's site, and from the RP-0043 text itself; fourteen dnv.com pages are cited by title only and carry no quoted content. The revision dates of the revised RP-0043 and of DNV-RP-0577 could not be read, and no DNV brochure describing an independent engineer's report scope was reachable.",
+ "ecosystemRole": "The first `advisor` in this corpus, and the seat every financing in it passes through: the independent engineer (lender's technical advisor) that lenders and tax-equity investors appoint — and developers pay — to test a storage or data-centre power project's design, equipment, contracts and revenue model before financial close, and to sign off drawdowns during construction. DNV holds that seat alongside Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions; what distinguishes it is that it also writes the recommended practice the contract cites, runs the laboratory that produces the degradation and safety data, and certifies the product, so it appears on both sides of the same transaction — as the OEM's certifier (Trina Storage, Sungrow, Prevalon, Huawei) and as the lender's engineer. In the AI data-centre chain its footprint is advisory and analytical: the Energy Transition Outlook's data-centre load forecasts, an efficiency-programme role for Arizona Public Service, technical due diligence for the Brazilian operator Ascenty, and a published collaboration with Fluence on storage for data centres; no hyperscaler engagement is on any readable channel.",
+ "productsAndServices": [
+  {
+   "name": "Independent engineering, lender's technical advisory and technical due diligence",
+   "category": "Financing advisory — storage and renewables",
+   "description": "The independent engineer's (IE) report and construction-phase lender's engineering that debt and tax-equity providers require before financial close and during drawdowns; technical due diligence on portfolio sales; market consultancy on battery revenue (revenue-stacking analysis, power-price forecasting, PPA structure assessment, dispatch optimisation) for lenders who must underwrite merchant storage cash flows.",
+   "highlights": [
+    "Akaysha Energy (BlackRock), Orana BESS, New South Wales, 415 MW / 1,660 MWh, AUD 650 million, eleven-bank group (closed July 2024): 'The technical due diligence work was provided by DNV's project engineering and energy storage experts in Australia, Singapore and the UK' and 'DNV will also support the construction and commissioning phases of this project as the lender's engineer' — the second Akaysha portfolio financing DNV supported after the AUD 250 million Ulinda and Brendale deal (ESS News, 2024-08-21).",
+    "TotalEnergies' sale of a 50 percent stake in an 800 MW German battery portfolio (11 projects, 789 MW / 1,628 MWh) to Allianz Global Investors, March 2026: DNV 'acted as technical advisor to TotalEnergies' with 'a comprehensive technical due diligence of the 11-project portfolio' (Energy Global, 2026-04-02) — sell-side rather than lender-side work.",
+    "Grenergy Central Oasis, Chile (398 MW PV / 1.4 GWh BESS; BNP Paribas, Santander, Rabobank): DNV 'acted as market consultant', with 'market due diligence to evaluate project feasibility, detailed review of power purchase agreements, and independent auditing of the expected operational strategy for the BESS assets' (Renewable Energy Magazine, 2026-03-23); Grenergy Elena (430 MW / 3.5 GWh, USD 270 million; SMBC, BNP Paribas, BBVA, KfW) and Zelestra Aurora (1 GWh, USD 282 million; Natixis, BNP Paribas, BCI) carried the same role in 2025.",
+    "Zenobē's £235 million non-recourse financing of Blackhillock and Kilmarnock South (2 × 200 MW / 400 MWh, Scotland; CIBC, Rabobank, Santander UK, Siemens Bank, NatWest) lists 'DNV as technical advisor' — a client-side statement of the IE role (Zenobē, 2023-02-15).",
+    "Forensic and independent-review work sits in the same practice: Arizona Public Service 'chose DNV GL, based on this firm's reputation and experience, to combine various forensic and expert inputs into the single, consolidated report' on the April 2019 McMicken BESS explosion, which attributed the event to an internal cell defect (APS, 2020-07-27) — a finding the cell supplier disputed at the time (per trade press; the rebuttal itself was not readable).",
+    "What the IE tests, in the market's own words: 'Much of the lenders' diligence on technology risks will be covered by a report from an independent engineer, who will examine the project's ability to satisfy the commissioning testing requirements and minimum performance requirements under the applicable offtake agreements' (Morgan Lewis, March 2026); Sandia's financing series defines the report as covering 'the design, engineering, construction, contracting and performance predictions for the facility' and notes that for lithium-ion 'the need of the IER is more geared toward system design and acceptance' (SAND2018-10110).",
+    "Collection gap: no named US BESS or data-centre IE mandate with a company covered in this corpus appears in any readable first- or third-party source; US developers finance gigawatt-hours a year and the IE report is a confidential lender deliverable, so absence of publicity is not evidence of absence of work — but it is also consistent with the Annual Report's statement that North America, the largest Energy Systems market, contracted about 12 percent in 2025."
+   ],
+   "positioning": "One of a handful of IE/lender's engineers lenders accept on storage: Sargent & Lundy (ENR's No. 2 battery-storage design firm in 2026), Black & Veatch (No. 2 in 2025), Burns & McDonnell, Leidos, UL Solutions and SgurrEnergy all sell the same report. A 2026 sector overview calls DNV 'a premier independent advisory firm' for 'bankability reports, energy yield assessments, and technical due diligence' while assigning Sargent & Lundy the interconnection-and-design lane (Metapress, 2026-01-23). Technical-adviser league tables exist (inspiratia, IJGlobal) but are paywalled; no public market-share figure for IE mandates was found.",
+   "soldThrough": "Fee-for-service mandates. Market practice, per third-party descriptions, is that the lender appoints the IE and the developer pays; DNV takes no equity, no EPC scope and no performance guarantee.",
+   "targetSegments": [
+    "Project-finance lenders and lender groups",
+    "Tax-equity investors",
+    "Infrastructure funds acquiring operating portfolios",
+    "Developers seeking financial close",
+    "Sellers in portfolio M&A"
+   ],
+   "roadmap": "No announced roadmap. The observable direction is toward market-revenue consultancy for merchant storage (Chile 2025–2026) and toward data-centre counterparties (Ascenty technical due diligence, 2026; Fluence collaboration on storage for data centres, 2026 — both known by release title only)."
+  },
+  {
+   "name": "Owner's engineering and project advisory for storage and hybrid plants",
+   "category": "Engineering advisory",
+   "description": "Owner's-engineer mandates from concept and tender through construction supervision and commissioning oversight on solar-plus-storage and standalone storage, plus grid-connection engineering for large loads and generators.",
+   "highlights": [
+    "Appointed owner's engineer for AMEA Power's Abydos 2 project at Benban, Egypt — 1 GW solar PV with 600 MWh of storage — 'from feasibility and design review through to construction supervision and commissioning oversight' (Energy Global, 2025-06-19); the Annual Report 2025 records the same mandate and a technical-and-environmental adviser role on a 500 MW Kuwait solar tender.",
+    "Beijing Energy International Australia: technical advisory across five solar farms (DNV release, 2024, title only).",
+    "Second-life storage: assessment with ACCIONA Energía of repurposed e-scooter batteries 'against European standards and industry best practices' (DNV release, 2025-07-08, title only)."
+   ],
+   "positioning": "Owner's engineering is a secondary line for DNV; Sargent & Lundy and Black & Veatch, which also design and (with partners) build, are the volume providers in the United States. DNV's published OE mandates are in the Middle East, Africa and Australia.",
+   "soldThrough": "Direct professional-services contracts with the asset owner.",
+   "targetSegments": [
+    "Independent power producers",
+    "Developers of hybrid solar-plus-storage plants",
+    "Utilities procuring storage under new contract forms"
+   ]
+  },
+  {
+   "name": "Battery testing, the Battery Scorecard and Battery AI",
+   "category": "Laboratory testing and data products",
+   "description": "Cell- and system-level performance and abuse testing at DNV's own laboratories; the annual, free Battery Scorecard that publishes anonymised comparative degradation and safety results; and Battery AI, the Veracity-hosted model ('Modelling battery health using AI and laboratory testing data') that turns the test archive into lifetime forecasts under a customer's duty cycle.",
+   "highlights": [
+    "Scorecard lineage: Battery XT (2017) was 'the world's first testing-based verification tool for battery lifetime' (Utility Dive, 2017-11-10); the first Scorecard followed in 2018, the 2020 edition covered '22 batteries from undisclosed companies' and '5 million hours across 40 examinations' (pv magazine, 2020-12-15), the 2022 edition tested 19 cell types across three use cases and named CATL and Narada LFP cells among the top three for both stationary durations (Energy-Storage.news, 2022-09-06), and the fifth edition (2024) reported 'dozens' of cells with wide manufacturer-to-manufacturer variance (Energy-Storage.news, 2024-04-24). No 2025 or 2026 edition was found on any channel.",
+    "DNV's own framing of the product: 'This [Battery Scorecard] is sort of the free starter kit' and 'By testing a bunch of different characteristics, you can create a bit of a fingerprint of a particular cell' — Jason Goodhand, DNV's global segment lead for energy storage (Energy-Storage.news, 2024-04-24 and 2024-05-22).",
+    "Facilities in evidence: the Rochester, New York battery test centre (cited in pv magazine's 2020 Scorecard coverage); 'DNV's test facility in Texas', where Prevalon's 6 MWh HD5 container was subjected to cell-level thermal-runaway conditions (ESS News, 2025-04-25); DNV supervision of Sungrow's 10 MWh (June 2024) and 20 MWh (November 2024) burn tests and its 2025 four-unit burn simulation (Energy-Storage.news; Sungrow releases).",
+    "What DNV no longer owns: the KEMA high-power and high-voltage laboratories in Arnhem, Prague and Chalfont, Pennsylvania passed to CESI in 2019–2020; DNV retained 'advisory services as well as DNV GL's testing and verification services for power failures, battery testing, transformer oil testing and smart grid testing' (CESI / PR Newswire, October 2019).",
+    "Richard S. Barnes, region president, Energy Systems North America: 'The best and most accurate way to ensure performance and safety is through testing' (T&D World, 2022-09-02)."
+   ],
+   "positioning": "The Scorecard is the only free, multi-vendor, test-based cell comparison the industry has; UL Solutions and TÜV Rheinland compete for the witness-and-certify seat on OEM fire tests (CATL's UL 9540A programme runs through UL Solutions; Sungrow's April 2026 PowerKeeper certification named TÜV Rheinland), so DNV's laboratory position is contested product by product.",
+   "soldThrough": "Free report; paid Battery AI subscription on the Veracity marketplace; paid test programmes and witness services for OEMs.",
+   "targetSegments": [
+    "Battery buyers and integrators",
+    "Cell and system OEMs seeking independent data",
+    "Lenders' engineers and insurers"
+   ]
+  },
+  {
+   "name": "Recommended practices, product certification and bankability reports",
+   "category": "Standards and certification",
+   "description": "DNV-authored recommended practices for grid-connected storage, energy-storage-system and type certification against them, grid-code compliance certification of inverters, marine type approval of lithium-ion systems, and vendor-commissioned bankability reports on storage products.",
+   "highlights": [
+    "DNVGL-RP-0043, 'Safety, operation and performance of grid-connected energy storage systems', Edition December 2015, 106 pages, developed in the GRIDSTOR joint industry project: 'The objective of this RP is to provide a comprehensive set of recommendations for grid-connected energy storage systems. It aims to be valid in all major markets and geographic regions, for all applications, on all levels from component to system, covering the entire life cycle' (RP-0043 §1.2). A 2017 update added guidance on 'cyber security, communications protocols, microgrids, conformity assessment, warranties, decommissioning, tendering and procurement, bankability, residual value' (Energy-Storage.news, 2017-10-04). A landing page for a revised edition exists on dnv.com; its date could not be read.",
+    "DNV-RP-0577, 'Standardized performance testing of battery cells to foster industry collaboration' — the cell-degradation test protocol behind the Scorecard (dnv.com landing page, title only; edition date not read).",
+    "Grid-code compliance certification: DNV Renewables Certification GmbH, Hamburg, issued Equipment Certificates to Huawei for its SUN2000 inverter families 'According to: DNVGL-SE-0124, 2016-03: Certification of Grid Code Compliance' and Regulation 2016/631 (NC RfG) in July 2021 and, under DNV-SE-0124 (2021-10), in August 2023 (certificates hosted by distributors).",
+    "Bankability reports for OEM products: Trina Storage's 4 MWh Elementa 2 'received independent bankability reports from both DNV and UL Solutions, validating its safety, reliability, and investment readiness' (Trina Storage, 2025-05-02; ESS News, 2024-09-11 — the DNV report assessed performance, safety, reliability, delivery capacity and compliance with UL 1973, UL 9540, IEC 62619 and IEC 63056).",
+    "Marine type approval of lithium-ion battery systems continues under DNV class rules (Type Approval Certificate to Huizhou RoyPow, 2025-04-22, liability cap USD 300,000) — a reminder that the group's battery-certification muscle was built in shipping.",
+    "Collection gap: no DNV service specification (DNV-SE) specific to stationary storage certification and no DNV standard (DNV-ST) on batteries, power electronics or data-centre infrastructure was found on any channel; the storage-certification pages state that certification proceeds against standards the client proposes and against RP-0043."
+   ],
+   "positioning": "RP-0043 has no direct equivalent from UL, IEC or IEEE — those bodies publish component and installation standards (UL 9540/9540A, IEC 62933, NFPA 855), not a whole-system, whole-lifecycle practice — but this session found no RFP, tariff, permitting guide or insurer document that cites RP-0043 (NYSERDA's 2020 guidebook has no DNV reference; Munich Re and Marsh name no certifier), so its market weight is as an authoring credential and a due-diligence checklist rather than a mandated reference.",
+   "soldThrough": "Recommended practices free of charge as PDFs (per the RP-0043 front matter) with paid access through the Rules & Standards Explorer subscription; certification and bankability reports as paid services to OEMs.",
+   "targetSegments": [
+    "Storage system integrators and cell OEMs entering Western markets",
+    "Inverter OEMs needing European grid-code certificates",
+    "Buyers writing employer's requirements"
+   ]
+  },
+  {
+   "name": "Power-system, grid-connection and HVDC advisory",
+   "category": "Grid advisory",
+   "description": "Interconnection and system-impact studies, grid-code compliance advisory and model validation, grid-forming control conformity statements, and HVDC/FACTS advisory, expanded by acquisition.",
+   "highlights": [
+    "DNV's US offshore HVDC joint industry project concluded that 'Plans for an AC mesh solution are no longer viable within the proposed time scales' and called for a 525 kV HVDC network; Shell and GE Vernova signed the supporting letter (Utility Dive, 2024-05-14).",
+    "Acquisitions: Power System Dynamics (2022), Amplitude Consultants (November 2025 — the Annual Report notes the deal 'provides transmission and distribution power grid services in the Asia Pacific region' and that DNV 'expanded its technical capabilities in high voltage direct current (HVDC)'), Smarter Power Solutions Pty Ltd (2026, a grid-connection engineering centre of excellence in Australia, per the release title), and the February 2026 purchase of Automa Power & Utilities S.A., a Brazilian 'integrated monitoring, control and performance management' company for power plants and grids (Annual Report 2025, subsequent events).",
+    "Grid-forming: statements of conformity for grid-forming control issued to Mingyang Smart Energy and Hopewind Electric (DNV release, 2023, title only); GreenPowerMonitor's power-oscillation-damping controls 'successfully received TSO approval' in grid-compliance testing (GreenPowerMonitor, 2026-05-18).",
+    "The Annual Report's own market read: 'power-grid activity expanded nearly 20%' in 2025 within Energy Systems, against a 1.0 percent revenue decline for the business area as a whole."
+   ],
+   "positioning": "Without the KEMA laboratories DNV competes in grid studies as a consultancy against Siemens PTI, PSC, EnerNex (now a CESI company) and the engineering firms' power-systems groups; its differentiator is grid-code certification and the global TSO relationships behind it.",
+   "soldThrough": "Direct consultancy contracts with utilities, TSOs, developers and OEMs.",
+   "targetSegments": [
+    "Transmission owners and TSOs",
+    "Renewable and storage developers in interconnection queues",
+    "Inverter and turbine OEMs"
+   ]
+  },
+  {
+   "name": "GreenPowerMonitor and Veracity — monitoring, energy management and data products",
+   "category": "Digital solutions",
+   "description": "GreenPowerMonitor (GPM), 'a DNV company', supplies SCADA, monitoring and energy-management software for solar, wind and battery portfolios; Veracity is DNV's data platform and marketplace. From 1 January 2026 the former Digital Solutions business area was combined with Energy Systems.",
+   "highlights": [
+    "GPM reports '7,500+ facilities managed', '90+ countries' and '100+ gigawatts under management' (GPM About page), '700 clients' at the launch of GPM Horizon for multi-technology portfolios including Horizon Storage (2025-10-30), and EMS/hybrid-EMS for BESS and PV with 'support for over 400 communication protocols' and 'IEC 62443 and ISO 27001 certification' (2026-06-26).",
+    "Equinor awarded GPM the Horizon platform for its onshore wind, solar and BESS portfolio (2025-12-18); Renewance partnership for BESS deployment and lifecycle across North America (2025-05-19); MoU with IP Gotion Poland for BESS EMS/SCADA in Central and Eastern Europe (2026-07-21).",
+    "The Annual Report 2025 attributes 'digital revenue growth of 29% across all services' to Energy Systems and says the 'Green Power Monitoring & Solutions business grew by over 35% year-on-year' (results release, title-level).",
+    "Data-centre demand is the stated growth frame for GPM North America: Anat Razon, named head of GPM North America in March 2026, cites customers who 'value trusted partners who understand both the technical realities of their assets and the commercial pressures they face' (GreenPowerMonitor, 2026-03-26)."
+   ],
+   "positioning": "Competes with Power Factors, Also Energy and the OEM EMS layer (Fluence Mosaic, Wärtsilä GEMS, Tesla Autobidder) for independent monitoring and dispatch software; the DNV distinction is bundling monitoring with the advisory and lifecycle (Renewance) services around it.",
+   "soldThrough": "Software subscriptions and EMS supply, sold by GPM directly and cross-sold by DNV key-account teams.",
+   "targetSegments": [
+    "Solar, wind and storage asset owners and IPPs",
+    "Storage developers in Europe and North America",
+    "Oil and gas majors with renewable portfolios"
+   ]
+  },
+  {
+   "name": "Data-centre power advisory and research",
+   "category": "Analysis and programme services",
+   "description": "Energy-transition research on data-centre load, utility efficiency-programme administration covering data centres, and early technical due-diligence and collaboration work with data-centre operators and storage OEMs.",
+   "highlights": [
+    "Energy Transition Outlook 2025 (ninth edition, 8 October 2025): data centres to reach 5 percent of global electricity by 2040 with AI accounting for 3 percent; in North America 16 percent of regional power by 2040 with 12 percent for AI (DNV release via PR Newswire, 2025-10-08). The North America outlook expects grid-connected battery capacity to rise 25-fold by 2040 with almost 60 percent co-located with solar (GreenPowerMonitor, 2026-06-09).",
+    "DNV administers Arizona Public Service's efficiency programme collateral for data centres: 'Data centers consume up to 50 times more energy compared to a typical commercial office building' (APS segment guide, updated January 2025).",
+    "Independent technical due diligence supporting Ascenty's renewable power agreement in Brazil (DNV release, 2026, title only) and an article on 'How Fluence is accelerating speed to power for data centers' (dnv.com, 2026, title only) are the only data-centre engagements on any channel.",
+    "The Annual Report's transition-risk register lists 'Growth in data centres' and 'Grid constraints' among market drivers, and states that AI's energy use 'is growing fast but projected to stay below that of booming sectors like EV charging and space cooling'."
+   ],
+   "positioning": "No RAM study, data-centre certification scheme or hyperscaler engagement is in evidence; Sargent & Lundy, Black & Veatch and Burns & McDonnell hold the visible owner's-engineer and design seats on data-centre campus power. DNV's asset here is the forecast, not the drawing.",
+   "soldThrough": "Reports (ETO free of charge), utility programme contracts, and due-diligence mandates.",
+   "targetSegments": [
+    "Utilities running large-load and efficiency programmes",
+    "Data-centre operators contracting renewable supply",
+    "Storage OEMs positioning for behind-the-meter data-centre demand"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "DNVGL-RP-0043 — Safety, operation and performance of grid-connected energy storage systems (Edition December 2015, GRIDSTOR)",
+   "specs": [
+    {
+     "band": "Document",
+     "label": "Code and title",
+     "value": "DNVGL-RP-0043, 'Safety, operation and performance of grid-connected energy storage systems'"
+    },
+    {
+     "band": "Document",
+     "label": "Edition",
+     "value": "Edition December 2015; 'This is a new document'"
+    },
+    {
+     "band": "Document",
+     "label": "Length and access",
+     "value": "106 pages; 'The documents are available free of charge in PDF format'"
+    },
+    {
+     "band": "Document",
+     "label": "Origin",
+     "value": "'This recommended practice (RP) was developed in a Joint Industry Project (JIP). The work was performed by DNV GL'"
+    },
+    {
+     "band": "Scope",
+     "label": "Objective",
+     "value": "'to provide a comprehensive set of recommendations for grid-connected energy storage systems. It aims to be valid in all major markets and geographic regions, for all applications, on all levels from component to system, covering the entire life cycle'"
+    },
+    {
+     "band": "Scope",
+     "label": "Three aspects",
+     "value": "'recommendations for three main aspects of grid-connected energy storage: safety, operation and performance'"
+    },
+    {
+     "band": "Scope",
+     "label": "Technologies",
+     "value": "'electricity storage systems in general, but also with emphasis on certain battery technologies (lead-acid, Li-ion and redox flow) and Li-ion capacitors'"
+    },
+    {
+     "band": "Scope",
+     "label": "Distinction from standards",
+     "value": "'cover a broad range of energy storage technologies, instead of one or more battery types — have a system-level approach, instead of being limited to one or two key components — have a comprehensive and structured approach'"
+    },
+    {
+     "band": "Revision",
+     "label": "2017 update (per trade press)",
+     "value": "added 'cyber security, communications protocols, microgrids, conformity assessment, warranties, decommissioning, tendering and procurement, bankability, residual value and a tool for calculating carbon emissions'; 15 contributing organisations; 'put before some 140 further organisations for their feedback'"
+    },
+    {
+     "band": "Revision",
+     "label": "Revised edition",
+     "value": "Landing page titled '… - Revised' exists on dnv.com; edition date not readable in this session"
+    }
+   ],
+   "notes": "Verbatim from the RP-0043 PDF as hosted by ASHB and from Energy-Storage.news (2017-10-04). RP-0577 (standardized performance testing of battery cells) is known by title only."
+  },
+  {
+   "product": "Battery Scorecard — editions and scope as reported",
+   "specs": [
+    {
+     "band": "Editions",
+     "label": "Antecedent (2017)",
+     "value": "Battery XT — 'the world's first testing-based verification tool for battery lifetime' that 'compiles battery lifecycle data and predicts battery degradation under different conditions and duty cycles'"
+    },
+    {
+     "band": "Editions",
+     "label": "1st (2018)",
+     "value": "'first Battery Performance Scorecard to provide independent data to battery system buyers' (release title)"
+    },
+    {
+     "band": "Editions",
+     "label": "2nd (2019)",
+     "value": "'results of its product qualification program, which tests a range of batteries, is included in the scorecard'"
+    },
+    {
+     "band": "Editions",
+     "label": "3rd (2020)",
+     "value": "'22 batteries from undisclosed companies'; '5 million hours across 40 examinations'"
+    },
+    {
+     "band": "Editions",
+     "label": "4th (2022)",
+     "value": "19 cell types; three use cases (sub-2-hour grid support, 4-hour solar shifting, high-power vehicle) plus calendar fade, BMS optimisation and safety; CATL and Narada LFP 'among the top performers'; onset temperatures 'vastly different across cells'; free report plus online dashboard"
+    },
+    {
+     "band": "Editions",
+     "label": "5th (2024)",
+     "value": "'dozens' of cells; LFP dominant; wide variance between manufacturers; smaller Chinese makers gaining"
+    },
+    {
+     "band": "Editions",
+     "label": "2025–2026",
+     "value": "No sixth edition found on any channel"
+    },
+    {
+     "band": "Facilities",
+     "label": "Rochester, New York",
+     "value": "Battery test centre cited in Scorecard coverage; a Safety and Abuse Facility was added in 2021 (release title)"
+    },
+    {
+     "band": "Facilities",
+     "label": "Texas",
+     "value": "'Conducted at DNV's test facility in Texas, the test subjected the 6 MWh HD5 containerised system to internal cell-level thermal runaway conditions' (Prevalon, 2025)"
+    },
+    {
+     "band": "Facilities",
+     "label": "Hamburg",
+     "value": "DNV Renewables Certification GmbH — grid-code compliance certificates under DNVGL-SE-0124 (2016-03) and DNV-SE-0124 (2021-10)"
+    },
+    {
+     "band": "Facilities",
+     "label": "Arnhem, Prague, Chalfont",
+     "value": "KEMA Laboratories 'to change ownership from DNV GL to CESI' (October 2019); DNV retained 'battery testing, transformer oil testing and smart grid testing'"
+    }
+   ],
+   "notes": "Edition facts are third-party reports of DNV publications; dnv.com landing pages for each edition exist but were not readable."
+  },
+  {
+   "product": "Group scale — Annual Report 2025",
+   "specs": [
+    {
+     "band": "Group",
+     "label": "Operating revenue",
+     "value": "'NOK 35,291 million in 2025, compared to NOK 34,966 million in 2024, representing growth of 0.9%, despite a negative impact of 1.7% caused by changes in currency rates'"
+    },
+    {
+     "band": "Group",
+     "label": "Employees",
+     "value": "'The total number of employees at year-end 2025 was 15,380, of whom 98% were permanent employees'; 74 countries; 127 nationalities"
+    },
+    {
+     "band": "Group",
+     "label": "Ownership",
+     "value": "'Stiftelsen Det Norske Veritas is a free-standing, autonomous, and independent foundation … This purpose is achieved mainly through its ownership of DNV Group, which is 100% owned by the foundation'"
+    },
+    {
+     "band": "Business areas (2025 revenue)",
+     "label": "Energy Systems",
+     "value": "'NOK 12,217 million in 2025, a reduction of 1.0% compared to 2024'; 5,131 employees (2024: 5,172)"
+    },
+    {
+     "band": "Business areas (2025 revenue)",
+     "label": "Maritime",
+     "value": "'NOK 11,706 million in 2025, an increase of 2.3%'"
+    },
+    {
+     "band": "Business areas (2025 revenue)",
+     "label": "Business Assurance",
+     "value": "'NOK 4,404 million … an increase of 4.5%'"
+    },
+    {
+     "band": "Business areas (2025 revenue)",
+     "label": "The Accelerator",
+     "value": "'NOK 2,724 million … an increase of 1.1%'"
+    },
+    {
+     "band": "Business areas (2025 revenue)",
+     "label": "Supply Chain & Product Assurance",
+     "value": "'NOK 2,572 million … a reduction of 0.8%'"
+    },
+    {
+     "band": "Business areas (2025 revenue)",
+     "label": "Digital Solutions",
+     "value": "'NOK 1,443 million … a reduction of 0.8%'; combined with Energy Systems from 1 January 2026"
+    },
+    {
+     "band": "Energy Systems markets",
+     "label": "North America",
+     "value": "'In the largest market for Energy Systems, North America, there was a contraction of approximately 12%'"
+    },
+    {
+     "band": "Energy Systems markets",
+     "label": "Key accounts",
+     "value": "'Half of the business area's operating income came from key accounts'"
+    },
+    {
+     "band": "Capital",
+     "label": "Extraordinary dividend",
+     "value": "'NOK 4,000 million extraordinary dividend distribution in December 2025'"
+    },
+    {
+     "band": "Capital",
+     "label": "Bonds",
+     "value": "'NOK 750 million 3 year floating rate bond maturing in 2027 with a margin of 3 month nibor +57 basis points and a NOK 1 250 million 5 year floating rate bond maturing in 2029 with a margin of 3 month nibor +72 basis points' — listed on Nordic ABM, unsecured"
+    },
+    {
+     "band": "Capital",
+     "label": "Revolving credit",
+     "value": "'NOK 3 000 million multi-currency revolving credit facility' (Handelsbanken, Danske Bank, Nordea), expiring December 2028, undrawn at year-end"
+    },
+    {
+     "band": "Capital",
+     "label": "Research",
+     "value": "R&D commitment 'from five to six percent of our annual revenue, starting in 2026'; foundation's 'new NOK 2 billion independent research funding initiative' (October 2025)"
+    }
+   ],
+   "notes": "Quoted from the DNV Annual Report 2025 (published March 2026), read as a PDF hosted by the International Input-Output Association because annualreport.dnv.com is not reachable from this environment."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-07-21",
+   "category": "partnership",
+   "headline": "GreenPowerMonitor and IP Gotion Poland sign an MoU on EMS/SCADA for battery storage in Poland and Central and Eastern Europe",
+   "read": "DNV's digital arm attaching itself to a cell-maker's regional BESS build-out — monitoring as the entry ticket to the storage lifecycle.",
+   "source": "https://www.greenpowermonitor.com/news/gpm-and-ip-gotion-poland-sign-mou-to-advance-bess-in-central-and-eastern-europe/"
+  },
+  {
+   "date": "2026-06-26",
+   "category": "market",
+   "headline": "DNV forecasts a fiftyfold storage surge — half of new solar with batteries by the mid-2030s — and expands the GPM EMS/HEMS line with IEC 62443 and ISO 27001 certification",
+   "read": "The forecast sells the software: a house view that storage attaches to everything, released alongside the product that manages it.",
+   "source": "https://www.greenpowermonitor.com/news/dnv-forecasts-fiftyfold-storage-surge-and-expands-digital-offering/"
+  },
+  {
+   "date": "2026-04-02",
+   "category": "customer",
+   "headline": "DNV acted as technical advisor to TotalEnergies on the sale of a 50 percent stake in an 800 MW (789 MW / 1,628 MWh) German battery portfolio to Allianz Global Investors, with 'a comprehensive technical due diligence of the 11-project portfolio'",
+   "read": "Sell-side technical diligence on an operating BESS portfolio is a second market for the same IE skill set, and Europe is where DNV is publicly winning it.",
+   "source": "https://www.energyglobal.com/energy-storage/02042026/dnv-advises-on-totalenergies-sale-of-800-mw-german-battery-portfolio/amp/"
+  },
+  {
+   "date": "2026-03-26",
+   "category": "leadership",
+   "headline": "Anat Razon named Head of GreenPowerMonitor North America, with BESS and data-centre demand as the stated growth frame",
+   "read": "A North America leadership appointment in the digital line while the advisory line in the same region shrank — the region is being re-attacked through software.",
+   "source": "https://www.greenpowermonitor.com/news/advancing-bess-renewable-performance-at-scale-north-america/"
+  },
+  {
+   "date": "2026-03-23",
+   "category": "customer",
+   "headline": "DNV acts as market consultant on Grenergy's Central Oasis financing in Chile (398 MW PV / 1.4 GWh BESS; BNP Paribas, Santander, Rabobank), auditing the BESS operating strategy and reviewing PPAs",
+   "read": "The third Chilean hybrid mandate in twelve months — merchant-storage revenue underwriting has become DNV's most repeatable financing product.",
+   "source": "https://www.renewableenergymagazine.com/pv_solar/dnv-supports-grenergy-in-securing-financing-for-20260323"
+  },
+  {
+   "date": "2026-03",
+   "category": "financial",
+   "headline": "Annual Report 2025: group revenue NOK 35,291 million (+0.9%), Energy Systems NOK 12,217 million (−1.0%), North America contracted about 12 percent; NOK 4,000 million extraordinary dividend to the foundation; five-business-area structure from 1 January 2026 with Digital Solutions folded into Energy Systems",
+   "read": "The energy business is the group's largest and its softest: a flat year, a shrinking US market, and a reorganisation that puts the software under the advisers.",
+   "source": "https://iioa.global/wp-content/uploads/2026/03/DNV-Annual-Report-2025.pdf"
+  },
+  {
+   "date": "2026-02",
+   "category": "ma",
+   "headline": "DNV acquires 100 percent of Automa Power & Utilities S.A., a Brazilian monitoring, control and performance-management technology company for renewables and grids",
+   "read": "Fourth grid or monitoring acquisition in four years — DNV is buying the operating-data layer it once only advised on.",
+   "source": "https://iioa.global/wp-content/uploads/2026/03/DNV-Annual-Report-2025.pdf"
+  },
+  {
+   "date": "2026-01-20",
+   "category": "leadership",
+   "headline": "Knut Ørbeck-Nilssen appointed interim Group President and CEO from 1 February to 31 August 2026 while Remi Eriksen takes leave for cancer treatment; Cristina Saenz de Santa Maria interim CEO Maritime",
+   "read": "A defined-term interim arrangement that expired four days before this dossier; whether Eriksen has resumed is not on any readable channel.",
+   "source": "https://maritime-executive.com/article/knut-orbeck-nilssen-fills-top-role-at-dnv-during-remi-eriksen-s-absence"
+  },
+  {
+   "date": "2025-12-18",
+   "category": "order-win",
+   "headline": "Equinor awards GreenPowerMonitor the GPM Horizon platform for its onshore wind, solar and BESS portfolio",
+   "read": "A key account (Equinor) taking the monitoring layer as well as the advisory — the cross-sell the 2026 reorganisation is built to repeat.",
+   "source": "https://www.greenpowermonitor.com/news/gpm-awarded-contract-by-equinor-for-use-of-gpm-horizon-in-onshore-renewable-energy-porfolio/"
+  },
+  {
+   "date": "2025-11",
+   "category": "ma",
+   "headline": "DNV acquires Amplitude Consultants, forming what it calls Asia-Pacific's largest HVDC advisory team",
+   "read": "Grid work grew nearly 20 percent in 2025 and this is where the acquisition money went.",
+   "source": "https://iioa.global/wp-content/uploads/2026/03/DNV-Annual-Report-2025.pdf"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "product-launch",
+   "headline": "GreenPowerMonitor launches GPM Horizon for multi-technology portfolios, including Horizon Storage, citing more than 700 clients in 90 countries",
+   "read": "Storage becomes a first-class asset class in DNV's monitoring software a decade after it became one in its advisory.",
+   "source": "https://www.greenpowermonitor.com/news/greenpowermonitor-unveils-complete-gpm-horizon-for-multi-tech-portfolios-including-storage/"
+  },
+  {
+   "date": "2025-10-22",
+   "category": "customer",
+   "headline": "DNV serves as market consultant on Grenergy's USD 270 million Elena financing (77 MW PV + 430 MW / 3.5 GWh BESS; SMBC, BNP Paribas, BBVA, KfW), providing 'a detailed battery revenue forecast to de-risk complex revenue streams for lenders'",
+   "read": "Lenders will now finance a 3.5 GWh merchant battery on a forecast — if the forecaster is one they already trust.",
+   "source": "https://renewablewatch.in/2025/10/22/dnv-supports-270-million-financing-for-solar-plus-storage-project-in-chile/"
+  },
+  {
+   "date": "2025-10-08",
+   "category": "market",
+   "headline": "Energy Transition Outlook 2025 (ninth edition): data centres to consume 5 percent of global electricity by 2040 (AI 3 percent); 16 percent of North American power (AI 12 percent)",
+   "read": "DNV's data-centre position is the forecast itself — the number everyone in this corpus quotes when they need a neutral source.",
+   "source": "https://www.prnewswire.com/apac/zh/news-releases/dnv--302581803.html"
+  },
+  {
+   "date": "2025-10",
+   "category": "corporate",
+   "headline": "Stiftelsen Det Norske Veritas establishes a NOK 2 billion independent research funding initiative; DNV commits to raise R&D to six percent of revenue from 2026",
+   "read": "Foundation ownership in action: cash goes to research and a special dividend, not to a buyer or a buyback.",
+   "source": "https://iioa.global/wp-content/uploads/2026/03/DNV-Annual-Report-2025.pdf"
+  },
+  {
+   "date": "2025-08-19",
+   "category": "customer",
+   "headline": "DNV supports Zelestra's USD 282 million Aurora financing in Chile (220 MWdc PV + 1 GWh BESS; Natixis CIB, BNP Paribas, BCI) with revenue forecasting, PPA structure assessment and battery dispatch optimisation",
+   "read": "Same lenders, same product, different sponsor: the Chilean hybrid market has standardised on DNV's market report.",
+   "source": "https://www.renewableenergymagazine.com/pv_solar/dnv-supports-zelestra-in-securing-282-million-20250819"
+  },
+  {
+   "date": "2025-06-19",
+   "category": "order-win",
+   "headline": "DNV appointed owner's engineer for AMEA Power's Abydos 2 project at Benban, Egypt — 1 GW solar with 600 MWh of storage — 'from feasibility and design review through to construction supervision and commissioning oversight'",
+   "read": "The largest owner's-engineer mandate DNV has publicised, and the clearest statement of what the role spans.",
+   "source": "https://www.energyglobal.com/energy-storage/19062025/dnv-appointed-owners-engineer-for-landmark-solar-and-storage-project/"
+  },
+  {
+   "date": "2025-05-19",
+   "category": "partnership",
+   "headline": "GreenPowerMonitor partners with Renewance, which has 'commissioned and serviced over 20 GWh of battery systems', on BESS deployments across North America",
+   "read": "Monitoring plus lifecycle service is DNV's route back into US storage while its advisory book there shrinks.",
+   "source": "https://www.greenpowermonitor.com/news/greenpowermonitor-and-renewance-partner-to-power-battery-energy-storage-system-deployments-across-north-america/"
+  },
+  {
+   "date": "2025-05-02",
+   "category": "customer",
+   "headline": "Trina Storage says its Elementa 2 platform 'received independent bankability reports from both DNV and UL Solutions'",
+   "read": "The Chinese integrator buys two Western stamps at once — DNV's certificate is necessary but no longer sufficient.",
+   "source": "https://www.trinasolar.com/en-glb/resources/newsroom/trina-storage-strengthens-global-position-with-upgraded-bankability-rating-and-recognition-as-major-market-supplier-in-europe/"
+  },
+  {
+   "date": "2025-04-29",
+   "category": "customer",
+   "headline": "Sungrow's four-unit PowerTitan burn simulation is 'monitored by DNV, live streamed globally, and witnessed by over 100 industry professionals'; DNV officials call it 'an exceptionally successful burn test'",
+   "read": "The witness seat on Chinese OEM fire tests is a recurring, public role — and a reputational exposure if a witnessed product later fails in the field.",
+   "source": "https://www.pv-magazine.com/press-releases/fire-tested-sungrow-reinforces-bess-safety-with-large-scale-burn-simulation/"
+  },
+  {
+   "date": "2025-04-25",
+   "category": "customer",
+   "headline": "Prevalon's 6 MWh HD5 container is tested to internal cell-level thermal runaway 'at DNV's test facility in Texas'",
+   "read": "A US large-scale fire-test facility that DNV owns is the physical asset behind its safety advisory.",
+   "source": "https://www.ess-news.com/2025/04/25/battery-storage-providers-highlight-fire-test-results-as-industry-continues-focus-on-safety/"
+  },
+  {
+   "date": "2024-11-21",
+   "category": "customer",
+   "headline": "Sungrow's 20 MWh burn test is 'completed under the oversight of DNV (Det Norske Veritas) experts and over 100 clients'",
+   "read": "Second Sungrow burn test DNV oversaw in 2024 after the 10 MWh test in June.",
+   "source": "https://www.pv-magazine.com/press-releases/setting-a-new-safety-benchmark-for-the-industry-sungrow-achieves-success-in-the-worlds-largest-bess-fire-test/"
+  },
+  {
+   "date": "2024-08-21",
+   "category": "customer",
+   "headline": "DNV provides technical due diligence and continues as lender's engineer on Akaysha Energy's AUD 650 million Orana BESS (415 MW / 1,660 MWh, eleven banks)",
+   "read": "The reference IE mandate: pre-close diligence rolling into construction-phase lender's engineering on one of the world's largest single-site batteries.",
+   "source": "https://www.ess-news.com/2024/08/21/dnv-supports-aud-650m-financing-for-akayshas-orana-energy-storage-project-in-new-south-wales-australia/"
+  },
+  {
+   "date": "2024-05-14",
+   "category": "regulatory",
+   "headline": "DNV's US offshore HVDC joint industry project, with Shell and GE Vernova as signatories, concludes an AC mesh is 'no longer viable within the proposed time scales' and calls for a 525 kV HVDC network",
+   "read": "Convening power as a product — DNV writing the technical case that state planners and OEMs then cite.",
+   "source": "https://www.utilitydive.com/news/offshore-wind-transmission-dnv-report-ge-vernova-shell/715853/"
+  },
+  {
+   "date": "2024-04-24",
+   "category": "product-launch",
+   "headline": "Fifth Battery Scorecard published: 'dozens' of cells tested, wide variance between manufacturers, LFP dominant",
+   "read": "The last edition on record; the eighteen-month gap since is itself an indicator.",
+   "source": "https://www.energy-storage.news/dnv-battery-scorecard-asks-the-questions-every-battery-buyer-should-consider/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "sungrow",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-06",
+   "via": "Large-scale BESS burn-test oversight",
+   "note": "DNV supervised Sungrow's 10 MWh (June 2024) and 20 MWh (November 2024) PowerTitan burn tests and monitored its 2025 four-unit burn simulation.",
+   "context": "Energy-Storage.news reported that Sungrow's June 2024 test 'was supervised by DNV' and that the November 2024 20 MWh test was 'overseen by standards and certification group DNV'; Sungrow's April 2025 release says its simulation 'was monitored by DNV, live streamed globally, and witnessed by over 100 industry professionals' and quotes DNV officials calling it 'an exceptionally successful burn test'. Sungrow's ESS page lists DNV among its certifiers.\n\nThe seat is not exclusive: Sungrow's April 2026 PowerKeeper 'triple UL 9540A' certification named TÜV Rheinland as witness.",
+   "source": "https://www.energy-storage.news/sungrow-conducts-real-world-power-plant-fire-test-on-20mwh-battery-storage-units/"
+  },
+  {
+   "slug": "trina-storage",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-09",
+   "via": "Bankability report — Elementa 2",
+   "note": "DNV issued an independent bankability report on Trina Storage's 4 MWh Elementa 2 platform, alongside a parallel report from UL Solutions.",
+   "context": "ESS News (2024-09-11) reported that DNV assessed Elementa 2's performance, safety, reliability, Trina's delivery and service capacity and compliance with UL 1973, UL 9540, IEC 62619 and IEC 63056, recognising 'the bankability, reliability, performance and successful global deployment of Elementa 2'. Trina Storage's own May 2025 release repeats that the platform 'received independent bankability reports from both DNV and UL Solutions, validating its safety, reliability, and investment readiness'.",
+   "source": "https://www.trinasolar.com/en-glb/resources/newsroom/trina-storage-strengthens-global-position-with-upgraded-bankability-rating-and-recognition-as-major-market-supplier-in-europe/"
+  },
+  {
+   "slug": "prevalon",
+   "type": "customer",
+   "status": "active",
+   "since": "2025",
+   "via": "Large-scale fire test — Texas facility",
+   "note": "Prevalon's 6 MWh HD5 containerised system was tested to internal cell-level thermal runaway at DNV's Texas test facility.",
+   "context": "ESS News (2025-04-25): 'Conducted at DNV's test facility in Texas, the test subjected the 6 MWh HD5 containerised system to internal cell-level thermal runaway conditions.' The engagement is a test-service purchase, not an IE mandate.",
+   "source": "https://www.ess-news.com/2025/04/25/battery-storage-providers-highlight-fire-test-results-as-industry-continues-focus-on-safety/"
+  },
+  {
+   "slug": "huawei-digital-power",
+   "type": "customer",
+   "status": "active",
+   "since": "2021-07",
+   "via": "Grid-code compliance certification (DNV-SE-0124)",
+   "note": "DNV Renewables Certification GmbH issued grid-code compliance equipment certificates to Huawei for its SUN2000 inverter families in 2021 and 2023.",
+   "context": "Certificate TC-GCC-DNVGL-SE-0124-07237-0 (Hamburg, 2 July 2021) covers the SUN2000-185KTL-H1 'According to: DNVGL-SE-0124, 2016-03: Certification of Grid Code Compliance … 32016R0631, 2016-04: Requirements for Generators (NC RfG)'; certificate TC-GCC-DNV-SE-0124-09419-1 (25 August 2023) covers the SUN2000-[12-25]KTL-M5 family under DNV-SE-0124 (2021-10). Both are hosted by European distributors.",
+   "source": "https://portal.segensolar.de/reseller/docs/ROGA.pdf"
+  },
+  {
+   "slug": "catl",
+   "type": "other",
+   "status": "historical",
+   "since": "2022",
+   "via": "Battery Scorecard",
+   "note": "CATL LFP cells were named among the top performers in DNV's 2022 Battery Scorecard and again in 2024.",
+   "context": "Energy-Storage.news (2022-09-06) reported CATL and Narada LFP among the top three for both stationary durations in the fourth Scorecard; the 2024 coverage names CATL again. The Scorecard is DNV's independent test programme, so the link is tested-and-ranked rather than a commercial mandate; whether CATL commissioned any DNV work is not stated.",
+   "source": "https://www.energy-storage.news/catl-narada-among-top-performers-in-dnvs-2022-battery-scorecard/"
+  },
+  {
+   "slug": "narada",
+   "type": "other",
+   "status": "historical",
+   "since": "2022",
+   "via": "Battery Scorecard",
+   "note": "Narada LFP cells were named among the top performers in DNV's 2022 Battery Scorecard and again in 2024.",
+   "context": "Same basis as the CATL entry: Energy-Storage.news (2022-09-06) on the fourth edition and its 2024 coverage of the fifth. Independent ranking, not a disclosed commercial engagement.",
+   "source": "https://www.energy-storage.news/catl-narada-among-top-performers-in-dnvs-2022-battery-scorecard/"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "partner",
+   "status": "historical",
+   "since": "2024-04",
+   "via": "US offshore HVDC joint industry project",
+   "note": "GE Vernova and Shell signed the letter supporting the recommendations of DNV's US offshore HVDC joint industry project.",
+   "context": "Utility Dive (2024-05-14) reported the DNV-authored study, supported by Shell and GE Vernova, concluding that 'Plans for an AC mesh solution are no longer viable within the proposed time scales' and calling for a 525 kV HVDC offshore network. A study partnership rather than a supply or advisory contract.",
+   "source": "https://www.utilitydive.com/news/offshore-wind-transmission-dnv-report-ge-vernova-shell/715853/"
+  },
+  {
+   "slug": "fluence",
+   "type": "other",
+   "status": "announced",
+   "since": "2026",
+   "note": "DNV published an article in 2026 on how Fluence is accelerating speed to power for data centres with battery storage; the article body could not be read, so the depth of the collaboration is unverified.",
+   "context": "The dnv.com article 'How Fluence is accelerating speed to power for data centers' is the only first-party document pairing DNV with a covered storage OEM in a data-centre context. Its text sits behind the site's bot challenge; search-layer summaries describe a joint research initiative on data-centre load growth and power quality, which this dossier does not treat as verified. Collection gap stated: nature, date and commercial terms unknown.",
+   "source": "https://www.dnv.com/article/how-fluence-is-accelerating-speed-to-power-for-data-centers/"
+  },
+  {
+   "slug": "sargent-lundy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer independent engineer on storage financings; Sargent & Lundy is ENR's No. 2 battery-storage design firm (2026) and sells the same IE due-diligence report.",
+   "context": "A 2026 sector overview assigns the two firms different lanes — DNV 'a premier independent advisory firm' for 'bankability reports, energy yield assessments, and technical due diligence', Sargent & Lundy 'interconnection studies and engineering design' — but both appear on lenders' IE panels and the bankability guidance in this corpus names them together. Sargent & Lundy also designs and, with constructor partners, delivers plants; DNV does neither.",
+   "source": "https://metapress.com/what-are-the-leading-energy-consulting-firms-for-utility-scale-solar-projects/"
+  },
+  {
+   "slug": "black-veatch",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer owner's engineer and IE on storage; Black & Veatch ranks No. 2 in battery-storage design (ENR 2025) and offers 'owner's engineering services and technical due diligence'.",
+   "context": "The same 2026 overview that positions DNV as the bankability adviser positions Black & Veatch on owner's engineering and technical due diligence. Black & Veatch's design-and-build reach means it can hold the owner's-engineer and EPC-adjacent seats DNV does not compete for; on the IE report itself the two are substitutes.",
+   "source": "https://metapress.com/what-are-the-leading-energy-consulting-firms-for-utility-scale-solar-projects/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "NFPA 855 / UL 9540A",
+   "status": "in-effect",
+   "exposure": "DNV is a supplier into the compliance regime rather than a regulated party: its Texas facility hosted Prevalon's cell-level thermal-runaway test of a 6 MWh container in 2025, it supervised Sungrow's 10 MWh and 20 MWh burn tests in 2024 and monitored a further simulation in 2025, and its Rochester laboratory added a safety-and-abuse facility in 2021. The 2022 Scorecard coverage records DNV's own finding that thermal-runaway onset temperatures are 'vastly different across cells'.",
+   "mitigation": "DNV's stated response is testing itself — 'The best and most accurate way to ensure performance and safety is through testing' (Richard S. Barnes, region president, Energy Systems North America).",
+   "source": "https://www.ess-news.com/2025/04/25/battery-storage-providers-highlight-fire-test-results-as-industry-continues-focus-on-safety/"
+  },
+  {
+   "regime": "EU Network Code Requirements for Generators (Regulation 2016/631)",
+   "status": "in-effect",
+   "effectiveDate": "2016-04",
+   "exposure": "DNV Renewables Certification GmbH in Hamburg issues equipment certificates of grid-code compliance against the NC RfG under its own service specification DNV-SE-0124, as the Huawei SUN2000 certificates of 2021 and 2023 show — a fee-earning certification franchise that exists because the regulation does.",
+   "source": "https://portal.segensolar.de/reseller/docs/ROGA.pdf"
+  },
+  {
+   "regime": "US sanctions — Protecting Europe's Energy Security Act (PEESA)",
+   "status": "in-effect",
+   "effectiveDate": "2020-12",
+   "exposure": "DNV GL suspended and then withdrew from Nord Stream 2 pipeline verification work: 'We are of the opinion that DNV-GL's activities in risk management for equipped vessels supervising the Nord Stream 2 project are subject to US sanctions' (November 2020) and 'DNV GL is withdrawing from the Nord Stream 2 gas pipeline in response to a possible widening of US sanctions against companies conducting pipeline testing, inspection, or certification services for the project' (January 2021). The episode shows that a certifier's independence stops at the sanctions line.",
+   "mitigation": "Withdrawal from the affected scope; the Annual Report 2025 records a compliance management system 'in accordance with ISO 37301, focusing on anti-corruption, antitrust, data protection, export controls, sanctions, and human rights'.",
+   "source": "https://jpt.spe.org/dnv-gl-exits-nord-stream-2-as-new-sanctions-loom"
+  },
+  {
+   "regime": "Norway Transparency Act",
+   "status": "in-effect",
+   "exposure": "'DNV continued to implement requirements under Norway's Transparency Act. The Human Rights Due Diligence Report 2025 was published alongside the annual report' — the supply-chain human-rights duty that applies to large Norwegian enterprises, relevant because DNV's storage work certifies Chinese-manufactured products.",
+   "source": "https://iioa.global/wp-content/uploads/2026/03/DNV-Annual-Report-2025.pdf"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Remi Eriksen",
+   "title": "Group President and Chief Executive Officer (on leave for medical treatment, 1 February to 31 August 2026)",
+   "photo": "images/execs/dnv-eriksen.jpg",
+   "background": [
+    "Group President and CEO since 1 August 2015, succeeding Henrik O. Madsen",
+    "Chair of the board of DNV AS, the principal Norwegian operating entity (Norwegian company register)",
+    "Diagnosed with cancer in January 2026 and took seven months' leave; the Annual Report 2025 lists him as Group President and CEO '(on sick leave)'",
+    "Whether he resumed the role on 1 September 2026 is not stated on any channel readable in this session"
+   ]
+  },
+  {
+   "name": "Knut Ørbeck-Nilssen",
+   "title": "Group President and Chief Executive Officer (interim, 1 February to 31 August 2026); CEO Maritime (on leave from that role)",
+   "photo": "images/execs/dnv-orbeck-nilssen.jpg",
+   "background": [
+    "Appointed interim Group President and CEO by the board for the defined period of Remi Eriksen's absence",
+    "CEO of DNV Maritime since 2015; 'over 25 years of international management experience in the marine, oil and gas industry'",
+    "Cristina Saenz de Santa Maria served as interim CEO Maritime during the same period"
+   ]
+  },
+  {
+   "name": "Ditlev Engel",
+   "title": "Chief Executive Officer, Energy Systems; member of the Executive Committee",
+   "photo": "images/execs/dnv-engel.jpg",
+   "background": [
+    "CEO of DNV's energy business since 4 April 2016, succeeding acting CEO Elisabeth Harstad; leads the business area of about 5,000 people",
+    "Group President and CEO of Vestas Wind Systems A/S, 2005–2013",
+    "Twenty years at Hempel A/S, including Group President and CEO, 2000–2005",
+    "From 1 January 2026 the business area also absorbed the former Digital Solutions unit"
+   ]
+  },
+  {
+   "name": "Kjetil M. Ebbesberg",
+   "title": "Group Chief Financial Officer; general manager (daglig leder) of DNV AS",
+   "photo": "images/execs/dnv-ebbesberg.jpg",
+   "background": [
+    "Group CFO on the Executive Committee per the Annual Report 2025",
+    "Registered general manager of DNV AS (org. no. 945 748 931), the Høvik operating company with about 2,300 employees (Norwegian company register)"
+   ]
+  },
+  {
+   "name": "Jon Fredrik Baksaas",
+   "title": "Chair of the Board of Directors, DNV Group AS",
+   "background": [
+    "Chair since 2020; re-elected in 2025 (Annual Report 2025; Store norske leksikon)",
+    "Board of 11 members, four of them employee-elected; seven elected by the foundation's Council",
+    "Vice Chair Leif O. Høegh elected 1 August 2025"
+   ]
+  },
+  {
+   "name": "Richard S. Barnes",
+   "title": "Region President, Energy Systems North America",
+   "background": [
+    "Quoted as DNV's regional head for North American energy in Battery Scorecard coverage (2022): 'Battery systems aren't worth installing if they can't be run safely and reliably'",
+    "Runs the market the Annual Report 2025 describes as Energy Systems' largest and as having contracted about 12 percent in 2025"
+   ]
+  },
+  {
+   "name": "Jason Goodhand",
+   "title": "Global Segment Lead, Energy Storage",
+   "background": [
+    "DNV's public voice on the Battery Scorecard: 'This is sort of the free starter kit' (2024)",
+    "Quoted in 2026 on grid-forming and power-oscillation-damping controls for BESS: battery storage is 'at the heart of the global shift toward flexible, renewable-dominated grids'"
+   ]
+  },
+  {
+   "name": "Juan Carlos Arévalo",
+   "title": "Executive Vice President, Digital & Data Solutions, Energy Systems",
+   "background": [
+    "CEO of GreenPowerMonitor, a DNV company, through 2025; titled Executive Vice President, Green Power Monitoring & Solutions in December 2025 and Executive Vice President for Digital & Data Solutions, Energy Systems from mid-2026",
+    "Leads the monitoring and EMS line that DNV reports grew more than 35 percent in 2025"
+   ]
+  },
+  {
+   "name": "Anat Razon",
+   "title": "Head of GreenPowerMonitor North America",
+   "background": [
+    "Appointed March 2026; '15+ years experience working with renewable energy customers'",
+    "Charged with the North American BESS and data-centre demand frame for DNV's digital line"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "NOK",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2023",
+    "periodType": "annual",
+    "periodEnd": "2023-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue (group)",
+      "actual": "NOK 31,594 million",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Seven-year series in the Annual Report 2025: 2019 21,551 / 2020 20,911 / 2021 21,464 / 2022 25,031 / 2023 31,594 / 2024 34,966 / 2025 35,291. No consensus exists for a foundation-owned group; the field is left empty",
+      "kpi": "revenue"
+     },
+     {
+      "name": "Employees (year-end)",
+      "actual": "14,841",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2025 series"
+     }
+    ],
+    "commentary": "The step-up from 2022 reflects acquisitions and the post-pandemic recovery; the group publishes no segment margins."
+   },
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue (group)",
+      "actual": "NOK 34,966 million",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2025 comparative",
+      "kpi": "revenue"
+     },
+     {
+      "name": "Energy Systems revenue",
+      "actual": "NOK 12,335 million (implied by the 2025 figure and stated change); Energy Systems employees 5,172",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Business-area review page of the Annual Report 2025"
+     },
+     {
+      "name": "EBITDA (group)",
+      "actual": "NOK 5,602 million",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2025 comparative"
+     },
+     {
+      "name": "Employees (year-end)",
+      "actual": "15,420, representing 125 nationalities",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2025 series"
+     }
+    ],
+    "commentary": "The 2024 base year against which 2025 was flat. No guidance or consensus exists."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue (group)",
+      "actual": "NOK 35,291 million, +0.9% (−1.7% currency effect)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "'DNV recorded operating revenues of NOK 35,291 million in 2025, compared to NOK 34,966 million in 2024, representing growth of 0.9%, despite a negative impact of 1.7% caused by changes in currency rates.' A third-party data vendor restates this as about USD 3.4 billion; no sourced conversion rate was available to this session, so no normalised USD figure is recorded",
+      "kpi": "revenue"
+     },
+     {
+      "name": "Energy Systems revenue",
+      "actual": "NOK 12,217 million, −1.0%; 5,131 employees (−0.8%)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "'Energy Systems reported revenues of NOK 12,217 million in 2025, a reduction of 1.0% compared to 2024.' The verdict is against the group's own growth, not a consensus: the energy business shrank while the group grew. 'In the largest market for Energy Systems, North America, there was a contraction of approximately 12%'; 'Half of the business area's operating income came from key accounts'"
+     },
+     {
+      "name": "EBITDA (group)",
+      "actual": "NOK 5,615 million (2024: 5,602)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "EBITA NOK 4,848 million (4,916); EBIT NOK 4,349 million (4,392); profit before tax NOK 4,666 million"
+     },
+     {
+      "name": "Other business areas",
+      "actual": "Maritime NOK 11,706 million (+2.3%); Business Assurance NOK 4,404 million (+4.5%); The Accelerator NOK 2,724 million (+1.1%); Supply Chain & Product Assurance NOK 2,572 million (−0.8%); Digital Solutions NOK 1,443 million (−0.8%)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2025 financial-performance section"
+     },
+     {
+      "name": "Employees (year-end)",
+      "actual": "15,380 (98% permanent), 127 nationalities, 74 countries",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2025"
+     },
+     {
+      "name": "Capital returned and committed",
+      "actual": "NOK 4,000 million extraordinary dividend to the owner (December 2025); NOK 2 billion foundation research initiative (October 2025); R&D to 6% of revenue from 2026",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Financing cash flow of −NOK 4,463 million 'mainly due to the NOK 4,000 million extraordinary dividend distribution'"
+     }
+    ],
+    "commentary": "Read two ways. The group is financially unconstrained — undrawn NOK 3 billion revolver, two modest unrated bonds, a NOK 4 billion special dividend paid from cash — so nothing in the balance sheet forces a strategy. The energy business, its largest, went backwards in real terms in 2025 with its biggest market down about 12 percent, and the response was structural (folding Digital Solutions into Energy Systems from 1 January 2026) and acquisitive (Amplitude, Smarter Power Solutions, Automa) rather than a stated recovery plan. No 2026 interim figures were readable."
+   }
+  ],
+  "commentary": "DNV is foundation-owned and publishes no guidance and attracts no analyst consensus; every 'expected' field is therefore empty by design rather than omission. Figures are in Norwegian kroner as reported and are not normalised to US dollars: the schema requires a cited conversion rate and none could be retrieved in this session. The group carries no public credit rating — its two floating-rate bonds are listed on Nordic ABM, the Oslo segment used by unrated issuers, and the Annual Report names no agency or grade. Segment profitability is not disclosed; the only Energy Systems profit statement is that half its operating income comes from key accounts."
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess DNV's storage franchise rests on selling independence itself — the one input a lender cannot buy from the developer, the EPC or the OEM — and that its three layers (the IE report, the recommended practice, the laboratory) reinforce one another commercially. Basis: Sandia's definition of the independent engineering report as 'a central part of the lenders risk management process'; Morgan Lewis's statement that 'Much of the lenders' diligence on technology risks will be covered by a report from an independent engineer'; the Akaysha, Zenobē and TotalEnergies mandates; RP-0043's stated aim to be the 'single all-encompassing document' a buyer can cite; and the Scorecard as the 'free starter kit' that leads to paid Battery AI and certification work.",
+  "2. **(Moderate confidence)** We assess that DNV's North American storage advisory book is weaker than its brand suggests. Basis: every BESS financing DNV publicised in the trailing 30 months is in Australia, Chile, Germany, Egypt or the United Kingdom; no readable first- or third-party source names DNV as IE, owner's engineer or certifier for any of the roughly eighty US developers, hyperscalers, EPCs or OEMs covered in this corpus; and the Annual Report records that North America, Energy Systems' largest market, 'contracted approximately 12%' in 2025. Against this: IE reports are confidential lender deliverables and reliance letters name banks, not press, so unpublicised US work is likely; and the search coverage of covered-company pairings was incomplete. The judgment is therefore about publicity and momentum, not about market share.",
+  "3. **(High confidence)** We assess the 2019 sale of the KEMA laboratories to CESI narrowed DNV's testing position by choice, and that what remains — cell degradation, large-scale fire and abuse testing, grid-code certification and controller hardware-in-the-loop — is the storage-specific residue. Basis: CESI's release transferring the Arnhem, Prague and Chalfont high-power and high-voltage labs while DNV kept 'battery testing, transformer oil testing and smart grid testing'; the Texas fire-test facility used by Prevalon; the Hamburg grid-code certificates. Consequence for the ecosystem: for switchgear, transformer and short-circuit testing DNV is now a customer of CESI like everyone else, and its grid advisory competes as a consultancy.",
+  "4. **(Moderate confidence)** We assess the Battery Scorecard has moved from a market-shaping publication toward a maintenance mode. Basis: editions in 2018, 2019, 2020, 2022 and 2024, with no 2025 or 2026 edition found on any channel eighteen months after the fifth; DNV's own description of it as a starter kit for the paid Battery AI model; and the emergence of vendor-commissioned bankability reports (Trina Storage, with UL Solutions in parallel) as the revenue-bearing form of the same testing. Collection gap: dnv.com's Scorecard pages could not be read, so a 2026 edition announced only there would be missed.",
+  "5. **(Moderate confidence)** We assess DNV's role in the AI data-centre power chain is that of forecaster and occasional diligence provider rather than engineer, and that this is unlikely to change through organic growth. Basis: the Energy Transition Outlook's data-centre load figures are the neutral numbers the corpus quotes; the only data-centre engagements on any channel are a Brazilian operator's renewable PPA due diligence and a published collaboration with Fluence, both known by title; Sargent & Lundy and Black & Veatch hold the visible owner's-engineer seats on campus power; and DNV's own risk register frames AI load as a market driver to analyse. The digital line (GPM North America under a new head with a data-centre demand brief) is the one organic route in.",
+  "6. **(High confidence)** We assess foundation ownership removes external capital discipline from DNV's strategy and that the 2025 accounts show what it does with that freedom. Basis: a NOK 4,000 million extraordinary dividend to the foundation, a NOK 2 billion independent research fund, an R&D commitment of six percent of revenue from 2026, four grid and monitoring acquisitions in 2022–2026, and no listing, guidance or rating. The consequence for counterparties is stability of the IE seat through cycles — and no acquisition premium for anyone hoping to buy the franchise.",
+  "7. **(Low confidence)** We assess the witness-and-certify seat on Chinese OEM fire tests is reputationally asymmetric for DNV: the OEM gains a Western stamp and DNV gains a fee, while a witnessed product that later fails in the field would be traced to the witness. Basis: DNV's quoted endorsement of Sungrow's 2025 burn simulation; the Trina and Prevalon engagements; the disputed McMicken root-cause finding in 2020 as precedent for a DNV conclusion being contested by a cell supplier. Contestable: UL Solutions and TÜV Rheinland compete for the same seat, which caps DNV's pricing power but also spreads the exposure.",
+  "Collection gap: DNV's website could not be read from this environment (bot challenge on every page), the annual-report microsite is unreachable, and the standards explorer requires a login. The Annual Report 2025 was read in full from a third-party host; dnv.com pages are cited by title only. The revised RP-0043 date, RP-0577's edition, any DNV storage service specification, DNV's own IE-scope brochure, 2026 interim results and the status of the CEO after 31 August 2026 are all unverified.",
+  "**INDICATORS TO WATCH** — *By September 2026 — CEO status:* an announcement that Remi Eriksen has resumed, or that Knut Ørbeck-Nilssen's interim term is extended or made permanent, decides who leads the 2030 strategy. *2026 — a sixth Battery Scorecard:* publication would refute Judgment 4; another year without one confirms it. *2026 — a named US BESS or data-centre IE mandate:* a lender or developer release naming DNV on a US financing would weaken Judgment 2; continued silence alongside 2026 results showing a second North American contraction would strengthen it. *Half-year 2026 results (dnv.com):* Energy Systems growth after the Digital Solutions merger, and any North American recovery. *Ecosystem check:* whether the Fluence collaboration produces a named data-centre storage deployment in which DNV is the technical adviser."
+ ],
+ "sources": [
+  {
+   "label": "GreenPowerMonitor — GPM and IP Gotion Poland sign MoU to advance BESS in Central and Eastern Europe",
+   "url": "https://www.greenpowermonitor.com/news/gpm-and-ip-gotion-poland-sign-mou-to-advance-bess-in-central-and-eastern-europe/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Wood Mackenzie — Global BESS integrator ranking 2026",
+   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "GreenPowerMonitor — DNV forecasts fiftyfold storage surge and expands digital energy management offering",
+   "url": "https://www.greenpowermonitor.com/news/dnv-forecasts-fiftyfold-storage-surge-and-expands-digital-offering/",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "GreenPowerMonitor — North America co-located BESS supports grid access (cites DNV ETO North America 2025)",
+   "url": "https://www.greenpowermonitor.com/articles/north-america-co-located-bess-supports-grid-access/",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "GreenPowerMonitor — POD control in battery energy storage (Jason Goodhand)",
+   "url": "https://www.greenpowermonitor.com/articles/pod-control-in-battery-energy-storage/",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Briefly Industrial — DNV GL GRIDSTOR use cases in grid-forming BESS",
+   "url": "https://www.brieflyindustrial.com/news/New_Energy/Utility_Scale_Inverters/Grid_Forming_Sovereignty/DNV_GL_GRIDSTOR_Use_Cases_in_Grid_Forming_BESS.html",
+   "date": "2026-05-23"
+  },
+  {
+   "label": "Sungrow via PR Newswire — PowerKeeper achieves triple UL 9540A certification (TÜV Rheinland as witness)",
+   "url": "https://www.prnewswire.com/news-releases/ace-safety-sungrow-powerkeeper-achieves-industry-first-triple-ul-9540a-certification-302735177.html",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "Energy Global — DNV advises on TotalEnergies' sale of 800 MW German battery portfolio",
+   "url": "https://www.energyglobal.com/energy-storage/02042026/dnv-advises-on-totalenergies-sale-of-800-mw-german-battery-portfolio/amp/",
+   "date": "2026-04-02"
+  },
+  {
+   "label": "GreenPowerMonitor — Anat Razon named Head of GPM North America",
+   "url": "https://www.greenpowermonitor.com/news/advancing-bess-renewable-performance-at-scale-north-america/",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "Renewable Energy Magazine — DNV supports Grenergy in securing financing for Central Oasis",
+   "url": "https://www.renewableenergymagazine.com/pv_solar/dnv-supports-grenergy-in-securing-financing-for-20260323",
+   "date": "2026-03-23"
+  },
+  {
+   "label": "TotalEnergies via The Globe and Mail — TotalEnergies sells 50% of 800 MW German battery portfolio to AllianzGI",
+   "url": "https://www.theglobeandmail.com/investing/markets/stocks/TTE/pressreleases/552652/totalenergies-sells-50-of-800-mw-german-battery-portfolio-to-allianzgi/",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "Allianz Global Investors — AllianzGI partners with TotalEnergies on German battery portfolio",
+   "url": "https://www.allianzgi.com/en/press-centre/media/press-releases/20260303-allianzgi-partners-with-totalenergies",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "DNV — Annual Report 2025 (PDF, hosted by the International Input-Output Association)",
+   "url": "https://iioa.global/wp-content/uploads/2026/03/DNV-Annual-Report-2025.pdf",
+   "date": "2026-03",
+   "party": "company"
+  },
+  {
+   "label": "Morgan Lewis — Project financing trends for global energy storage projects in 2026 and beyond",
+   "url": "https://www.morganlewis.com/pubs/2026/03/project-financing-trends-for-global-energy-storage-projects-in-2026-and-beyond",
+   "date": "2026-03"
+  },
+  {
+   "label": "Metapress — What are the leading energy consulting firms for utility-scale solar projects?",
+   "url": "https://metapress.com/what-are-the-leading-energy-consulting-firms-for-utility-scale-solar-projects/",
+   "date": "2026-01-23"
+  },
+  {
+   "label": "The Maritime Executive — Knut Ørbeck-Nilssen fills top role at DNV during Remi Eriksen's absence",
+   "url": "https://maritime-executive.com/article/knut-orbeck-nilssen-fills-top-role-at-dnv-during-remi-eriksen-s-absence",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "Riviera — DNV appoints Knut Ørbeck-Nilssen to head group temporarily with CEO on medical leave",
+   "url": "https://www.rivieramm.com/news-content-hub/news-content-hub/dnv-appoints-knut-orbeck-nilssen-to-head-group-temporarily-with-ceo-on-medical-leave-87502",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "Container News — Knut Ørbeck-Nilssen appointed interim DNV Group President and CEO",
+   "url": "https://container-news.com/knut-orbeck-nilssen-appointed-interim-dnv-group-president-and-ceo/",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "GreenPowerMonitor — GPM awarded contract by Equinor for GPM Horizon across onshore renewable portfolio",
+   "url": "https://www.greenpowermonitor.com/news/gpm-awarded-contract-by-equinor-for-use-of-gpm-horizon-in-onshore-renewable-energy-porfolio/",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "WECC — Moss Landing BESS Fire Report (no DNV reference)",
+   "url": "https://www.wecc.org/sites/default/files/documents/progress_report/2025/Moss%20Landing%20BESS%20Fire%20Report%20Final%2012.22.25.pdf",
+   "date": "2025-12"
+  },
+  {
+   "label": "Store norske leksikon — DNV",
+   "url": "https://snl.no/DNV",
+   "date": "2025-12-12"
+  },
+  {
+   "label": "GreenPowerMonitor — GPM Horizon for multi-tech portfolios including Horizon Storage",
+   "url": "https://www.greenpowermonitor.com/news/greenpowermonitor-unveils-complete-gpm-horizon-for-multi-tech-portfolios-including-storage/",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Renewable Watch — DNV supports USD 270 million financing for solar-plus-storage project in Chile (Grenergy Elena)",
+   "url": "https://renewablewatch.in/2025/10/22/dnv-supports-270-million-financing-for-solar-plus-storage-project-in-chile/",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "SA World — DNV 2025 Energy Transition Outlook: data-centre load quotes",
+   "url": "https://www.sa-world.com/blog/dnv-2025-energy-transition-report-offshore-wind-renewables-future-trends.html",
+   "date": "2025-10-16"
+  },
+  {
+   "label": "DNV via PR Newswire — Energy Transition Outlook 2025, ninth edition (Chinese-language release)",
+   "url": "https://www.prnewswire.com/apac/zh/news-releases/dnv--302581803.html",
+   "date": "2025-10-08"
+  },
+  {
+   "label": "Renewable Energy Magazine — DNV supports Zelestra in securing USD 282 million for Aurora",
+   "url": "https://www.renewableenergymagazine.com/pv_solar/dnv-supports-zelestra-in-securing-282-million-20250819",
+   "date": "2025-08-19"
+  },
+  {
+   "label": "NYSERDA — Battery Energy Storage Guidebook (no DNV reference)",
+   "url": "https://www.nyserda.ny.gov/All-Programs/Clean-Energy-Siting-Resources/Battery-Energy-Storage-Guidebook",
+   "date": "2025-07-25"
+  },
+  {
+   "label": "REGlobal — Zelestra secures USD 282 million financing package for Aurora (names Sungrow, not DNV)",
+   "url": "https://reglobal.org/zelestra-secures-282-million-financing-package-for-the-aurora-project-in-chile/",
+   "date": "2025-07-01"
+  },
+  {
+   "label": "Energy Global — DNV appointed owner's engineer for landmark solar and storage project (Abydos 2, Egypt)",
+   "url": "https://www.energyglobal.com/energy-storage/19062025/dnv-appointed-owners-engineer-for-landmark-solar-and-storage-project/",
+   "date": "2025-06-19"
+  },
+  {
+   "label": "GreenPowerMonitor — GreenPowerMonitor and Renewance partner on BESS deployments across North America",
+   "url": "https://www.greenpowermonitor.com/news/greenpowermonitor-and-renewance-partner-to-power-battery-energy-storage-system-deployments-across-north-america/",
+   "date": "2025-05-19"
+  },
+  {
+   "label": "Trina Storage — Upgraded bankability rating; Elementa 2 bankability reports from DNV and UL Solutions",
+   "url": "https://www.trinasolar.com/en-glb/resources/newsroom/trina-storage-strengthens-global-position-with-upgraded-bankability-rating-and-recognition-as-major-market-supplier-in-europe/",
+   "date": "2025-05-02"
+  },
+  {
+   "label": "Sungrow via pv magazine — Fire-tested: Sungrow reinforces BESS safety with large-scale burn simulation (monitored by DNV)",
+   "url": "https://www.pv-magazine.com/press-releases/fire-tested-sungrow-reinforces-bess-safety-with-large-scale-burn-simulation/",
+   "date": "2025-04-29"
+  },
+  {
+   "label": "GreenPowerMonitor — Energy management with hybrid and storage systems (EMS/HEMS)",
+   "url": "https://www.greenpowermonitor.com/news/energy-management-with-innovative-hybrid-and-storage-systems/",
+   "date": "2025-04-29"
+  },
+  {
+   "label": "ESS News — Battery storage providers highlight fire test results (Prevalon at DNV's Texas facility)",
+   "url": "https://www.ess-news.com/2025/04/25/battery-storage-providers-highlight-fire-test-results-as-industry-continues-focus-on-safety/",
+   "date": "2025-04-25"
+  },
+  {
+   "label": "Huizhou RoyPow — DNV Type Approval Certificate TAE0000523 (PDF)",
+   "url": "https://www.roypow.com/uploads/DNV-CERTIFICATE.pdf",
+   "date": "2025-04-22"
+  },
+  {
+   "label": "ESS News — UK's largest solar and storage project secures financial close (Cleve Hill; names Norton Rose Fulbright only)",
+   "url": "https://www.ess-news.com/2025/03/17/uks-largest-solar-and-storage-project-secures-financial-close/",
+   "date": "2025-03-17"
+  },
+  {
+   "label": "Morgan Lewis — The project financing outlook for global energy projects in 2025",
+   "url": "https://www.morganlewis.com/pubs/2025/03/the-project-financing-outlook-for-global-energy-projects-2025",
+   "date": "2025-03-07"
+  },
+  {
+   "label": "inspiratia — 2024 energy transition league tables (technical advisers ranked; paywalled)",
+   "url": "https://inspiratia.com/article/inspiratias-2024-energy-transition-league-tables-",
+   "date": "2025-02-06"
+  },
+  {
+   "label": "DNV — APS 'Manage the energy intensity of your data center' segment guide (PDF, webtools.dnv.com)",
+   "url": "https://webtools.dnv.com/projects/Portals/15/APS_SegmentGuide_Data%20Centers.pdf",
+   "date": "2025-01"
+  },
+  {
+   "label": "Sungrow via pv magazine — Setting a new safety benchmark: world's largest BESS fire test (20 MWh, oversight of DNV)",
+   "url": "https://www.pv-magazine.com/press-releases/setting-a-new-safety-benchmark-for-the-industry-sungrow-achieves-success-in-the-worlds-largest-bess-fire-test/",
+   "date": "2024-11-21"
+  },
+  {
+   "label": "Energy-Storage.news — Sungrow conducts 'real-world power plant fire' test on 20 MWh BESS units (overseen by DNV)",
+   "url": "https://www.energy-storage.news/sungrow-conducts-real-world-power-plant-fire-test-on-20mwh-battery-storage-units/",
+   "date": "2024-11-18"
+  },
+  {
+   "label": "ESS News — Trina Storage Elementa 2 recognised for bankability, reliability and safety by DNV",
+   "url": "https://www.ess-news.com/2024/09/11/trina-storage-elementa-2-recognised-for-bankability-reliability-and-safety-by-dnv/",
+   "date": "2024-09-11"
+  },
+  {
+   "label": "Energy Global — DNV supports Australian renewable energy development (Akaysha Orana)",
+   "url": "https://www.energyglobal.com/energy-storage/23082024/dnv-supports-australian-renewable-energy-development/",
+   "date": "2024-08-23"
+  },
+  {
+   "label": "ESS News — DNV supports AUD 650m financing for Akaysha's Orana energy storage project",
+   "url": "https://www.ess-news.com/2024/08/21/dnv-supports-aud-650m-financing-for-akayshas-orana-energy-storage-project-in-new-south-wales-australia/",
+   "date": "2024-08-21"
+  },
+  {
+   "label": "Sargent & Lundy — ENR Sourcebook 2024 rankings (competitor context)",
+   "url": "https://www.sargentlundy.com/news/enr-sourcebook-2024/",
+   "date": "2024-07-17"
+  },
+  {
+   "label": "Energy-Storage.news — Sungrow burns 10 MWh of BESS, proves thermal runaway propagation risk mitigation (supervised by DNV)",
+   "url": "https://www.energy-storage.news/sungrow-burns-bess-proves-thermal-runaway-propagation-risk-mitigation/",
+   "date": "2024-06-24"
+  },
+  {
+   "label": "Energy-Storage.news — DNV: things to know before buying cells for battery storage applications",
+   "url": "https://www.energy-storage.news/things-to-know-before-buying-cells-for-battery-storage-applications-with-dnv/",
+   "date": "2024-05-22"
+  },
+  {
+   "label": "Utility Dive — DNV report: offshore wind transmission should shift to HVDC (Shell, GE Vernova signatories)",
+   "url": "https://www.utilitydive.com/news/offshore-wind-transmission-dnv-report-ge-vernova-shell/715853/",
+   "date": "2024-05-14"
+  },
+  {
+   "label": "Energy-Storage.news — DNV Battery Scorecard 'asks the questions every battery buyer should consider' (fifth edition)",
+   "url": "https://www.energy-storage.news/dnv-battery-scorecard-asks-the-questions-every-battery-buyer-should-consider/",
+   "date": "2024-04-24"
+  },
+  {
+   "label": "CESI — KEMA Labs enhances high-voltage laboratory in Chalfont, PA",
+   "url": "https://www.cesi.it/news/2024/kema-labs-enhances-high-voltage-laboratory/",
+   "date": "2024-02-16"
+  },
+  {
+   "label": "SegenSolar — DNV grid-code compliance equipment certificate TC-GCC-DNV-SE-0124-09419-1 to Huawei (PDF)",
+   "url": "https://portal.segensolar.de/reseller/docs/ROGA.pdf",
+   "date": "2023-08-25"
+  },
+  {
+   "label": "Morgan Lewis — Project financing and energy storage: risks and revenue",
+   "url": "https://www.morganlewis.com/pubs/2023/03/project-financing-and-energy-storage-risks-and-revenue",
+   "date": "2023-03-08"
+  },
+  {
+   "label": "Zenobē — £235 million project finance from five banks for Blackhillock and Kilmarnock South ('DNV as technical advisor')",
+   "url": "https://www.zenobe.com/news-and-events/zenobe-235-million-project-finance-five-banks-energy-storage/",
+   "date": "2023-02-15"
+  },
+  {
+   "label": "Energy-Storage.news — CATL to start conducting UL 9540A tests through UL Solutions partnership",
+   "url": "https://www.energy-storage.news/catl-to-start-conducting-ul9540a-tests-through-ul-solutions-partnership/",
+   "date": "2023-01-18"
+  },
+  {
+   "label": "Charged EVs — DNV's Battery Scorecard includes safety and performance data for 19 cell types",
+   "url": "https://chargedevs.com/newswire/dnvs-battery-scorecard-includes-safety-and-performance-data-for-19-cell-types/",
+   "date": "2022-09-28"
+  },
+  {
+   "label": "Energy-Storage.news — CATL, Narada among top performers in DNV's 2022 Battery Scorecard",
+   "url": "https://www.energy-storage.news/catl-narada-among-top-performers-in-dnvs-2022-battery-scorecard/",
+   "date": "2022-09-06"
+  },
+  {
+   "label": "T&D World — DNV launches Battery Scorecard to inform industry decisions on battery performance (Richard S. Barnes quoted)",
+   "url": "https://www.tdworld.com/distributed-energy-resources/article/21250054/dnv-gl-dnv-launches-battery-scorecard-to-inform-industry-decisions-on-battery-performance",
+   "date": "2022-09-02"
+  },
+  {
+   "label": "Sandia National Laboratories — Energy Storage Financing: Operations & Market Strategy (SAND2022-0422)",
+   "url": "https://www.osti.gov/servlets/purl/1840836",
+   "date": "2022-01"
+  },
+  {
+   "label": "Keno Energy — DNV grid-code compliance equipment certificate TC-GCC-DNVGL-SE-0124-07237-0 to Huawei (PDF)",
+   "url": "https://files.keno-energy.com/dokumentacja/files/SYSTEMY%20FOTOWOLTAICZNE/FALOWNIKI/HUAWEI/SUN2000-185KTL-H1/Certificate%20NCRfG%20EN.PDF",
+   "date": "2021-07-02"
+  },
+  {
+   "label": "Sandia National Laboratories — Energy Storage Financing: Project and Portfolio Valuation (SAND2021-0830)",
+   "url": "https://www.osti.gov/servlets/purl/1817849",
+   "date": "2021-01"
+  },
+  {
+   "label": "JPT / SPE — DNV GL exits Nord Stream 2 as new sanctions loom",
+   "url": "https://jpt.spe.org/dnv-gl-exits-nord-stream-2-as-new-sanctions-loom",
+   "date": "2021-01-11"
+  },
+  {
+   "label": "pv magazine — DNV GL's Battery Scorecard 2020 sees manufacturers focus on LFP and fire safety",
+   "url": "https://www.pv-magazine.com/2020/12/15/dnv-gls-battery-scorecard-2020-sees-manufacturers-focus-on-lfp-and-fire-safety/",
+   "date": "2020-12-15"
+  },
+  {
+   "label": "Clean Energy Wire — Certification company suspends Nord Stream 2 work after US sanction threats",
+   "url": "https://www.cleanenergywire.org/news/certification-company-suspends-nord-stream-2-work-after-us-sanction-threats",
+   "date": "2020-11-30"
+  },
+  {
+   "label": "Batteries International — Independent assessors blame Arizona lithium battery explosion on thermal runaway",
+   "url": "https://www.batteriesinternational.com/2020/08/13/independent-assessors-blame-arizona-lithium-battery-explosion-on-thermal-runaway/",
+   "date": "2020-08-13"
+  },
+  {
+   "label": "pv magazine — New reports look at 2019 Arizona battery explosion",
+   "url": "https://www.pv-magazine.com/2020/07/31/new-reports-look-at-2019-arizona-battery-explosion/",
+   "date": "2020-07-31"
+  },
+  {
+   "label": "Arizona Public Service — Equipment failure at McMicken Battery Facility ('APS chose DNV GL')",
+   "url": "https://www.aps.com/en/About/Our-Company/Newsroom/Articles/Equipment-failure-at-McMicken-Battery-Facility",
+   "date": "2020-07-27"
+  },
+  {
+   "label": "Energy Storage Association archive — DNV GL upgrades Battery Scorecard",
+   "url": "https://energystorageassociationarchive.org/dnv-gl-upgrades-battery-scorecard/",
+   "date": "2019-11-07"
+  },
+  {
+   "label": "PR Newswire — KEMA Laboratories to change ownership from DNV GL to CESI",
+   "url": "https://www.prnewswire.com/news-releases/kema-laboratories-to-change-ownership-from-dnv-gl-to-cesi-300933158.html",
+   "date": "2019-10-09"
+  },
+  {
+   "label": "CESI — KEMA Laboratories to change ownership from DNV GL to CESI",
+   "url": "https://www.cesi.it/press-release/kema-laboratories-to-change-ownership-from-dnv-gl-to-cesi/",
+   "date": "2019-10-08"
+  },
+  {
+   "label": "Sandia National Laboratories — Energy Storage Financing: Performance Impacts on Project Financing (SAND2018-10110)",
+   "url": "https://www.sandia.gov/app/uploads/sites/163/2021/09/ESF2-MustangPrairie_SAND2018-10110_final.pdf",
+   "date": "2018-09"
+  },
+  {
+   "label": "Utility Dive — New DNV GL service allows independent testing of Li-ion battery lifetimes (Battery XT)",
+   "url": "https://www.utilitydive.com/news/new-dnv-gl-service-allows-independent-testing-of-li-on-battery-lifetimes-ac/510561/",
+   "date": "2017-11-10"
+  },
+  {
+   "label": "Energy-Storage.news — DNV GL updates GRIDSTOR best practice guide",
+   "url": "https://www.energy-storage.news/dnv-gl-updates-gridstor-best-practice-guide/",
+   "date": "2017-10-04"
+  },
+  {
+   "label": "DERlab — DNV GL GRIDSTOR recommended practice for grid-connected energy storage",
+   "url": "https://der-lab.net/dnv-gl-gridstor-recommended-practice-for-grid-connected-energy-storage/",
+   "date": "2017-09-07"
+  },
+  {
+   "label": "Renewable Energy Industry — DNV GL appoints Ditlev Engel as new Energy CEO",
+   "url": "https://www.renewable-energy-industry.com/countries/article-4825-dnv-gl-appoints-ditlev-engel-as-new-energy-ceo",
+   "date": "2016-03-04"
+  },
+  {
+   "label": "Utility Dive — DNV GL aims for energy storage 'global guide' with GRIDSTOR standards",
+   "url": "https://www.utilitydive.com/news/dnv-gl-aims-for-energy-storage-global-guide-with-gridstor-standards/412322/",
+   "date": "2016-01-19"
+  },
+  {
+   "label": "DNV GL — DNVGL-RP-0043 Safety, operation and performance of grid-connected energy storage systems, Edition December 2015 (PDF, hosted by ASHB)",
+   "url": "https://www.ashb.com/wp-content/uploads/2020/04/IS-2017-209.pdf",
+   "date": "2015-12",
+   "party": "company"
+  },
+  {
+   "label": "DNV Careers — Energy Systems (business-area descriptions)",
+   "url": "https://jobs.dnv.com/our-business/energy-systems"
+  },
+  {
+   "label": "GreenPowerMonitor — About us",
+   "url": "https://www.greenpowermonitor.com/about-us/"
+  },
+  {
+   "label": "Veracity by DNV — Battery AI",
+   "url": "https://store.veracity.com/battery-ai"
+  },
+  {
+   "label": "DNV — DNV-RP-0043 Safety, operation and performance of grid-connected energy storage systems — Revised (landing page; title only)",
+   "url": "https://www.dnv.com/energy/standards-guidelines/dnv-rp-0043-safety-operation-and-performance-of-grid-connected-energy-storage-systems-revised/"
+  },
+  {
+   "label": "DNV — DNV-RP-0577 Standardized performance testing of battery cells to foster industry collaboration (landing page; title only)",
+   "url": "https://www.dnv.com/energy/standards-guidelines/dnv-rp-0577-standardized-performance-testing-of-battery-cells-to-foster-industry-collaboration/"
+  },
+  {
+   "label": "DNV — Energy storage system certification (service page; title only)",
+   "url": "https://www.dnv.com/services/energy-storage-system-certification-122545/"
+  },
+  {
+   "label": "DNV — Independent engineering and technical due diligence (service page; title only)",
+   "url": "https://www.dnv.com/services/independent-engineering-and-technical-due-diligence-63108/"
+  },
+  {
+   "label": "DNV — Owner's engineering for energy storage (service page; title only)",
+   "url": "https://www.dnv.com/services/owner-s-engineering-for-energy-storage-63162/"
+  },
+  {
+   "label": "DNV — 2024 Battery Scorecard (publication page; title only)",
+   "url": "https://www.dnv.com/publications/2024-battery-scorecard/"
+  },
+  {
+   "label": "DNV — Battery test lab expands capabilities with safety and abuse facility (2021 release; title only)",
+   "url": "https://www.dnv.com/news/2021/battery-test-lab-expands-capabilities-with-safety-and-abuse-facility-208613/"
+  },
+  {
+   "label": "DNV — DNV issues statement of conformity to Mingyang Smart Energy and Hopewind Electric for grid-forming control (2023 release; title only)",
+   "url": "https://www.dnv.com/news/2023/dnv-issues-statement-of-conformity-to-mingyang-smart-energy-and-hopewind-electric-for-grid-forming-control-237866/"
+  },
+  {
+   "label": "DNV — DNV acquires Smarter Power Solutions Pty Ltd to establish global centre of excellence for grid connection engineering in Australia (2026 release; title only)",
+   "url": "https://www.dnv.com/news/2026/dnv-acquires-smarter-power-solutions-pty-ltd-to-establish-global-centre-of-excellence-for-grid-connection-engineering-in-australia/"
+  },
+  {
+   "label": "DNV — DNV Ventures invests in Gridcog (2026 release; title only)",
+   "url": "https://www.dnv.com/news/2026/dnvventures-gridcog/"
+  },
+  {
+   "label": "DNV — DNV supports Ascenty's renewable power agreement in Brazil with independent technical due diligence (2026 release; title only)",
+   "url": "https://www.dnv.com/news/2026/dnv-supports-ascentys-renewable-power-agreement-in-brazil-with-independent-technical-due-diligence/"
+  },
+  {
+   "label": "DNV — How Fluence is accelerating speed to power for data centers (2026 article; title only)",
+   "url": "https://www.dnv.com/article/how-fluence-is-accelerating-speed-to-power-for-data-centers/"
+  },
+  {
+   "label": "DNV — DNV and ACCIONA Energía collaborate on sustainable battery storage solutions (2025 release; title only)",
+   "url": "https://www.dnv.com/news/2025/dnv-and-acciona-energia-collaborate-on-sustainable-battery-storage-solutions/"
+  },
+  {
+   "label": "DNV — DNV provides technical advisory expertise to Beijing Energy International Australia for five solar farms (2024 release; title only)",
+   "url": "https://www.dnv.com/news/2024/dnv-provides-technical-advisory-expertise-to-beijing-energy-international-australia-for-five-solar-farms-252715/"
+  },
+  {
+   "label": "Proff.no — DNV AS company register entry",
+   "url": "https://www.proff.no/selskap/dnv-as/h%C3%B8vik/teknisk-pr%C3%B8ving-og-analyse/IFN2OJN10L1"
+  },
+  {
+   "label": "GlobalData — DNV Group AS company profile",
+   "url": "https://www.globaldata.com/company-profile/dnv-group-as/"
+  },
+  {
+   "label": "Maritime Battery Forum — DNV's 2024 Battery Scorecard (listing)",
+   "url": "https://www.maritimebatteryforum.com/reports-documents-1/dnvs-2024-battery-scorecard"
+  },
+  {
+   "label": "Sungrow — Energy storage systems (certifications list)",
+   "url": "https://www.sungrowpower.com/en/ess"
+  },
+  {
+   "label": "Munich Re — Insurance covers for electrical energy storage systems (no certifier named)",
+   "url": "https://www.munichre.com/en/solutions/for-industry-clients/insurance-covers-for-electrical-energy-storage-systems.html"
+  },
+  {
+   "label": "Marsh — Battery energy storage systems (no certifier named)",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/expertise/battery-energy-storage-systems.html"
+  },
+  {
+   "label": "Sargent & Lundy — Battery Energy Storage Systems Independent Engineering Due Diligence (white paper; peer IE scope)",
+   "url": "https://www.sargentlundy.com/resources/whitepapers/battery-energy-storage-systems-independent-engineering-due-diligence/"
+  },
+  {
+   "label": "SgurrEnergy — Lender's technical advisory for renewable energy projects (peer LTA scope)",
+   "url": "https://sgurrenergy.com/landing/lenders-technical-advisory-renewable-energy-projects"
+  }
+ ],
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
+}

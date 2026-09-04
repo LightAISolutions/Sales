@@ -1,0 +1,1715 @@
+{
+ "schemaVersion": 7,
+ "slug": "coolit",
+ "name": "CoolIT Systems Inc.",
+ "shortName": "CoolIT Systems",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.coolitsystems.com/",
+ "headquarters": "#200, 115 Quarry Park Road SE, Calgary, Alberta T2C 5G9, Canada (Starfield manufacturing and Liquid Lab also in Calgary; Taipei Liquid Lab; offices in Wilmington DE, Shenzhen and Abu Dhabi)",
+ "founded": 2001,
+ "employees": "'approximately 363 employees as at December 31, 2024' (statutory forced-labour report); about 650 at the March 2026 sale to Ecolab (KKR and Ecolab materials, Calgary Herald); 'nearly 900' by August 2026 (Calgary Herald)",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "parent NYSE: ECL (Ecolab Inc.)"
+ },
+ "summary": "BOTTOM LINE UP FRONT: CoolIT Systems is the Calgary direct-liquid-cooling specialist that Ecolab bought from KKR for about USD 4.75 billion in cash on 2 July 2026 — 29 times estimated next-twelve-month adjusted EBITDA on roughly USD 550 million of expected sales — because it sits at every point where liquid touches an AI rack: the cold plate on the GPU, the manifold in the rack, the coolant distribution unit (CDU) in the row, and the pre-fabricated piping between them; its CHx2000 row CDU is rated at 2,000 kW and twelve NVIDIA GB300 NVL72 racks, it manufactures 'multi-gigawatts' of CDU capacity a year in Canada, China and Vietnam, and a CDU for racks above 1 MW is due on 28 September 2026. BACKGROUND. Incorporated 27 February 2001 by Alexander 'Sandy' Scott, Brydon Gierl and Jason Myers; started in gaming-PC liquid coolers, shipped its first Xeon cold plate in 2013, and has been factory-installed in Dell PowerEdge servers since 2017 (company history). Direct liquid cooling by CoolIT is in 'seven of the top 10 supercomputers' including El Capitan, the TOP500 No. 1 of November 2024; the company claims '5+ million cold plates shipped', deployments at '300+ data centers' in more than 80 countries, and '4 of the top 5 server OEMs and 4 of the 5 hyperscalers as customers' — no hyperscaler is named anywhere. KKR's Global Impact Fund II bought a majority in May 2023 (value undisclosed; the Calgary Herald reports US$270 million) with Mubadala as minority co-investor; under that ownership CDU capacity rose 25-fold, headcount roughly doubled and, per KKR's exit materials, revenue was on track to quadruple with EBITDA up tenfold through 2026. The sale to Ecolab was agreed on 20 March 2026 and closed early; CoolIT now reports inside Ecolab's Global Water segment, and Ecolab has set a USD 4 billion, 25-percent-margin target for its Global High-Tech business by 2030. Two premises in the commissioning brief did not survive research and are corrected here rather than smoothed: CoolIT is Ecolab-owned, not KKR-owned; and the Asetek patent litigation never produced a jury verdict — the 2019 case ended on an 11 September 2022 summary judgment holding Asetek's last live patent valid but not infringed by any CoolIT product, followed by a confidential settlement and dismissal with prejudice on 6 October 2022, with CoolIT's own '567 patent later revived by the Federal Circuit in March 2024. Collection gap, stated: CoolIT publishes no revenue, margin, installed-megawatt or annual unit figure of its own; every financial number here is the acquirer's. The two Asian contract manufacturers are unnamed; CDU weights, heat-exchanger type and coolant temperature limits beyond the ASHRAE class are not published; and no customer in this corpus is named by either side.",
+ "ecosystemRole": "The CDU specialist the corpus lacked: where Vertiv, Schneider Electric (through Motivair) and Trane (through LiquidStack) reach liquid cooling from the plant side, CoolIT reaches it from the chip — it designs the cold plate to the silicon vendor's reference (NVIDIA's Recommended Vendor List; Intel and AMD series), builds the loop and the manifold for the server OEM (Dell, HPE, Gigabyte; Supermicro as a stated collaborator), and sells the row and in-rack CDUs that separate that clean technology-cooling loop from the building's water. Its counterparties in this corpus are therefore NVIDIA on the design side and Vertiv and Schneider on the competitive side; its customers — 'four of the five hyperscalers' — are unnamed. Since July 2026 it is also the hardware half of Ecolab's water-and-chemistry pitch to data centres, with coolant monitoring (3D TRASAR) and on-site service bundled to the CDU.",
+ "productsAndServices": [
+  {
+   "name": "Row-based liquid-to-liquid CDUs — CHx2000, CHx1500, CHx500 (and the legacy CHx750)",
+   "category": "Coolant distribution units — row / megawatt class",
+   "description": "Free-standing liquid-to-liquid coolant distribution units in a 750 × 1,200 mm rack footprint that isolate the technology cooling system (TCS) from the facility water system (FWS) through an internal heat exchanger, pump treated coolant to a row of racks, filter it, and report through Redfish, SNMP, Modbus and BACnet with group control of up to 20 units.",
+   "highlights": [
+    "CHx2000 — 'The AI CDU': '2000 kW cooling capacity at 5°C ATD' (approach temperature differential), '2125 LPM at 35 psi', power consumption '12.24 kW', '12 x GB300 NVL72 racks per CDU', 'best-in-class performance density (1698 kW/m²)', 'All stainless-steel piping', '4\" tri-clamp interface at facility water system (FWS) and technology cooling system (TCS)', '100% PG25 leak testing for every unit', production '100 units per week' — in production since October 2024 (product page and sheet, 2026).",
+    "Launch framing (April 2025): 'CHx2000 offers an unrivaled 2 MW liquid cooling capacity. With a flow rate of 1.2 liters per minute per kilowatt (LPM/kW), it supports cooling for up to twelve 120kW NVIDIA GB200 NVL72 racks'; 'over 2X cooling capacity than the next best 1350 CDU and unmatched 53 psi secondary head pressure'; 'integrated 25-micron filtration'; 'Built-in redundancies and group control for up to 20 units enable six-nines (99.9999%) availability'.",
+    "CHx1500: '1500 kW at 5°C approach temperature (2100 LPM primary, 1800 LPM secondary, PG25 coolant)'; 'Delivers 1500 LPM at 34 psi external pressure drop in single pump operation (N+N pump redundancy)'; 'Built-in 25 µ filters with 50 µ option'; 'Integrated ultracapacitor for interruption-free operation … Optional ATS'; 'Compatible with ASHRAE W+'; 'can cool 9 x NVIDIA GB200 NVL72 racks today' (brochure and March 2025 release).",
+    "CHx500 (announced July 2024): 'Four CHx500 units can be stacked to provide an unprecedented 2 MW of heat management in a single rack', 'Supporting ASHRAE W45 cooling'; no live product page in 2026. CHx750 (legacy): nine units managed 5.5 MW across 91 racks at TACC's Frontera; three cool GWDG's Emmy at 32 °C inlet with a DLC PUE of 1.07.",
+    "The company's own selection rule: 'A target of 1.5 liters per minute (LPM) per kilowatt (kW) of heat is typical for AI systems'; 'A lower approach temperature (the delta between facility supply fluid and technical fluid) indicates better cooling performance'; 'Look for internal redundancy in pumps, filters, sensors, and power supplies' (January 2026).",
+    "Next generation: 'Launching September 28, 2026: CoolIT's next-generation CDU is engineered for 1MW+ ultra-dense AI racks' — no name, capacity or specification disclosed; the company's own blog says 'Liquid-to-liquid CDUs rated in the multi-megawatt range will be necessary to support 1MW+ racks'."
+   ],
+   "positioning": "Against Vertiv (which Dell'Oro names as market leader), Motivair (Schneider Electric), Boyd, nVent and roughly forty other CDU vendors, CoolIT's published comparison puts the CHx2000 at 2,269 kW cooling load against anonymised competitors' 1,073 kW and 734 kW, on the same footprint; HPE specifies a 1.3 MW in-row CDU for eight GB200/GB300 racks. Dell'Oro (September 2025): 'Established names such as Vertiv, CoolIT, or Boyd will need to maintain their edge' and 'We expect fewer than 10 vendors to ultimately capture the lion's share of the market.'",
+   "soldThrough": "Direct to hyperscalers and colocation operators, through server OEMs and ODMs as part of a rack-scale solution, and via NVIDIA's Recommended Vendor List to NVIDIA's manufacturing partners; skidded CDUs built to order — 'one large cloud service provider requested thousands of skidded CDUs'.",
+   "targetSegments": [
+    "Hyperscale cloud providers",
+    "AI neoclouds and GPU-as-a-service operators",
+    "Colocation and build-to-suit developers",
+    "Supercomputing centres",
+    "Server OEMs and ODMs integrating rack-scale DLC"
+   ],
+   "roadmap": "A multi-megawatt-class CDU for 1 MW+ racks launching 28 September 2026 (announced 2026-08-17); 'System-level designs that enable future >1MW rack power' (June 2026 tech brief)."
+  },
+  {
+   "name": "Liquid-to-air CDUs — AHx240 and AHx180",
+   "category": "Coolant distribution units — liquid-to-air",
+   "description": "CDUs that reject the technology-loop heat to the room's air through an internal radiator and fan array, so that direct-liquid-cooled racks can be deployed in air-cooled data centres with no facility water — the retrofit and bridging form factor.",
+   "highlights": [
+    "AHx240: 'The highest-capacity liquid-to-air CDU for the latest AI deployments in traditional air-cooled data centers'; 'No facility water required'; cooling capacity '240 kW'; '2x GB300/GB200 NVL72 racks per CDU (at 15°C ATD and N+1 pump redundancy)'; '280LPM at 35psi'; power consumption '15.5 kW'; 'N+N redundancy on all critical components'; '8-Fan Array'; 2,293 × 1,200 × 1,199 mm; '100 units per week production capacities' (product page and sheet, 2026). At launch in July 2024 the company said one unit 'can cool up to four [NVIDIA GB200] NVL72 racks'; the 2026 page says two GB300 racks at 15 °C approach — the same box re-rated to a hotter chip.",
+    "AHx180: '180 kW cooling capacity at 15°C approach'; '2 x high-performance pumps', '4 x high-efficiency fans'; 'Delivers 270 LPM at a 40 psi external pressure drop under single-pump operation'; 'Integrated 50 µ serviceable filter with 25 µ to 150 µ options'; 'Redundant pumps (2N) and fan (N+1)'; 'Integrated sensors: flow, pressure, temperature, humidity, coolant level and leak detection'; power consumption '11.32 kW'; 'Supports common hot and cold aisle data center architecture'; 'Up to 2 NVIDIA GB200 NVL72 racks'.",
+    "The trade-off in the company's and the standards body's words: liquid-to-air keeps DLC out of the facility's plumbing but hands the heat back to the CRAH; ASHRAE notes that 'liquid/air heat exchangers have much higher approach temperatures than liquid/liquid' — hence the 15 °C rating basis against 5 °C for the CHx line.",
+    "Dell'Oro (September 2025): 'L2A CDUs have maintained a role even with large operators—ideal for retrofit projects'."
+   ],
+   "positioning": "Vertiv and Motivair sell liquid-to-air units too; CoolIT's claim is highest capacity in the class and OEM validation across NVIDIA racks. The form factor's ceiling is the room's air-handling capacity, not the CDU.",
+   "soldThrough": "Same channels as the CHx line; positioned for retrofit of existing air-cooled halls and for early GB200 deployments where facility water is not yet plumbed.",
+   "targetSegments": [
+    "Enterprises and colocation operators retrofitting air-cooled halls",
+    "Early AI deployments awaiting facility-water build-out",
+    "Edge and HPC sites without chilled-water loops"
+   ]
+  },
+  {
+   "name": "In-rack CDUs — CHx200 and CHx80",
+   "category": "Coolant distribution units — rack-based, 4U",
+   "description": "Four-rack-unit liquid-to-liquid CDUs mounted at the top or bottom of a single rack, giving each cabinet its own isolated technology loop.",
+   "highlights": [
+    "CHx200: 'Capable of managing 200 kW of heat load in a remarkably small 4U of space, this system provides cooling for up to 200 servers'; 'Compatible with ASHRAE W17 to W+ warm water cooling'; 'N+1 redundant pumps and power supplies'; 'Intelligent controls with leak detection'; 'Servers remain hot-swappable for service'. First field installation TU Dresden's Birdie (2019); 26 units at CHIME; four at amplitUDE (2024).",
+    "CHx80: '80 kW of heat load in a remarkably small 4U of space … cooling for up to 100 servers'; otherwise identical feature set; used in Dell's Zenith innovation-lab cluster.",
+    "The architecture argument, from an analyst rather than the vendor: in-rack CDUs' 'Slightly lower partial power usage effectiveness (pPUE) can be offset by advantages in modularity, ease of off-site rack integration and commissioning, and containment of faults and leaks' (Dell'Oro, September 2025); Vertiv's own guidance notes the form factor 'reduces the impact of potential cooling outages to one rack instead of multiple … but adds mechanical complexity inside the rack'.",
+    "Flow, pressure, filtration and power figures for the 4U units are not published — a gap the datasheet-first buyer should note."
+   ],
+   "positioning": "A mature line (2019 first install) now secondary to the row CDUs for AI; competes with Vertiv's and Motivair's rack CDUs and with the in-house rack CDUs Supermicro and Lenovo build.",
+   "soldThrough": "Through OEM rack-scale integrations and direct.",
+   "targetSegments": [
+    "HPC centres",
+    "Enterprise AI at rack scale",
+    "Off-site rack integrators"
+   ]
+  },
+  {
+   "name": "Cold plates and coldplate loops — Split-Flow, OMNI, the 4 kW and 15 kW demonstrators",
+   "category": "Server-level direct liquid cooling",
+   "description": "Copper microchannel cold plates bolted to CPUs, GPUs, accelerators, memory, optics, storage and power components, assembled into server loops with chassis manifolds and quick disconnects; designed per silicon vendor and per OEM board layout, manufactured at clean-room lines in Canada, China and Vietnam.",
+   "highlights": [
+    "Split-Flow (patented 2009): 'CoolIT's patented micro-channel architecture. In addition to up to 30% better coolant flow and heat capture versus standard coldplates, the Split-Flow design directs coolant to a chip's hotspot to ensure uniform cooling'; 'drastically reduces internal pressure drop'.",
+    "OMNI all-metal cold plate (May 2024): 'aerospace-grade all-metallic unibody construction, OMNI Coldplates eliminate the risk of differential coefficients of thermal expansion (CTE) from using multiple materials'; handles 'thermal loads exceeding 1,500 W TDP and thermal fluxes over 300 W/cm2' with 'up to 60% lower thermal resistance compared with standard coldplates'; launch SKUs for NVIDIA GB200, H100, GH200, Intel Data Center Max and Xeon, and AMD.",
+    "4,000 W demonstrator (March 2025): 'capturing 97%+ of heat from a 4000W thermal test vehicle (TTV) with a flow rate of 6 litres per minute (LPM)' — 'equivalent to 1.5 LPM per kW' — with 'ultra-low thermal resistance of Tr<0.009 C/W while limiting the full flow loop pressure drop (including all fittings and QDs) to just 8 PSI'.",
+    "15 kW demonstrator (June 2026): 'validated with a standard water-glycol coolant at 1.2 L/min/kW' and 'suitable for 45°C warm-water cooling environments'; the tech brief ran three cold plates on a 15 kW test vehicle at 45 °C inlet with an average coolant temperature rise 'just below 35°C' and 'an average case temperature (Tcase) of 80°C' — the company's answer to the claim that single-phase DLC tops out at '2 to 2.5 kW' per device.",
+    "Product series: CP-NV-GB200-SUPERCHIP (Grace Blackwell and Blackwell Ultra), CP-NV-B200-GPU, CP-NV-GH200-SUPERCHIP, CP-NV-H200-GPU; CP-AMD-MI355-GPU, MI300X, MI300A, MI250, SP7 (Venice), SP5, SP3; CP-INT-SR-CPU, CP-INT-GR-CPU; CP-OSFP, CP-DDR5-DIMM, CP-DDR4-DIMM 'enable 100% heat capture across the server'. The NA2 loop for NVIDIA GB200 is catalogued by part number (900-02162 to 900-02165).",
+    "Scale: '5+ million cold plates shipped'; '10,000s of server coldplate loops per month'; loops 'from 70% to 100% Heat Capture' enabling 'Fanless Designs'; 'more than 150 liquid cooling patents' (July 2026; earlier pages say 100-plus and 120-plus)."
+   ],
+   "positioning": "The cold plate is where the Asetek dispute was fought and where Supermicro and Lenovo build in-house; CoolIT's claim is thermal headroom (4 kW and 15 kW demonstrated on single-phase water-glycol) that pushes back two-phase and immersion alternatives. Dell'Oro: 'Single-phase direct liquid cooling accounts for the vast majority of liquid-cooled capacity coming online today'.",
+   "soldThrough": "Designed into OEM and ODM servers (Dell factory-installed since 2017; HPE Cray EX and Apollo; Gigabyte; Supermicro as stated collaborator) and co-developed with hyperscalers — 'CoolIT partners with hyperscalers to co-develop and mass produce coldplates, loops, rack manifolds and CDUs'.",
+   "targetSegments": [
+    "Server OEMs and ODMs",
+    "Hyperscalers designing their own racks",
+    "Silicon vendors' reference designs"
+   ],
+   "roadmap": "'New coldplate architecture, including direct-to-die and micro-channel lids' (June 2026 tech brief)."
+  },
+  {
+   "name": "Rack manifolds, quick disconnects and prefabricated technology-cooling-system piping",
+   "category": "Rack and row plumbing",
+   "description": "Stainless-steel vertical rack manifolds in EIA, ORV3 and MGX rack series with dry-break quick disconnects, and prefabricated TCS piping — stainless with Victaulic couplings or polypropylene (Aquatherm) — connecting CDUs to rows of racks.",
+   "highlights": [
+    "Manifolds: 'EIA racks: 42U, 48U, 52U', 'ORV3 racks: 44OU', custom heights; 'Corrosion-resistant treated stainless steel construction'; 'Industry-leading all-metal dry-break quick disconnects available from multiple trusted suppliers'; 'FD83 quick-disconnect connectors are the most commonly used TCS connection type in production deployments'; '100% leak testing before it ships (including the quick-disconnect fittings) under both static and dynamic conditions'; 'hardware-agnostic … work with any CDU and any liquid-cooled server platform'.",
+    "Quality control on the connector: 'AI-based high-speed optical screening confirms O-ring presence on every Quick Disconnect before installation on our Vertical Rack Manifolds' (December 2025).",
+    "TCS piping: 'SAE 304 or 316 stainless steel with polished option', '2.5\" to 8\" piping options', 'Modules undergo passivation and pickling processes before shipping to site', or 'Prefabricated modular Aquatherm components fused onsite' in polypropylene to 'Prevent galvanic reactions and corrosion'; optional loop telemetry to the BMS.",
+    "Why prefabrication: OCP's cloud-scale TCS guidance notes that 'Achieving stringent filtration requirements, such as 25 microns, is challenging with conventional job-site construction, as materials like pipe tape and pipe dope are prohibited within TCS systems'; CoolIT's answer is to 'shift critical assembly activities into a controlled manufacturing environment'."
+   ],
+   "positioning": "Competes with Victaulic-based mechanical contractors and the OEMs' own manifolds; the value is the leak-tested, pre-cleaned assembly arriving as one part number.",
+   "soldThrough": "With the CDU as a system, or standalone to any platform.",
+   "targetSegments": [
+    "Colocation operators building liquid-ready halls",
+    "Rack integrators",
+    "Hyperscalers standardising on ORV3 or MGX"
+   ]
+  },
+  {
+   "name": "Global professional services, coolant and Ecolab-integrated monitoring",
+   "category": "Services",
+   "description": "Site survey, system flush and fill, CDU commissioning, factory witness testing on a 6 MW rig, planned preventive maintenance with coolant analysis, service-level agreements, and — since the Ecolab acquisition — continuous coolant monitoring.",
+   "highlights": [
+    "Coolant: 'CoolIT uses a Propylene Glycol 25% computer coolant mixture, consisting of additional inhibitors to reduce corrosion and microbial growth'; PG25 is the factory fill and leak-test fluid across the line; 'It's not just water; we use fluids like PG25 or LC25, and compatibility matters' (director of professional services, November 2025).",
+    "Maintenance: 'Planned Preventative Maintenance (PPM) visits are typically scheduled every 6 months' with 'coolant sampling and coolant analysis to ensure the integrity of the fluid'; 'Service Level Agreements range from 2-5 years in 1 year increments'; support 'in over 80 countries'.",
+    "Field lesson the company tells against itself: 'We worked with a hyperscaler where we discovered their flushing procedures weren't adequate. Filters were clogging within minutes.'",
+    "Ecolab: 'CoolIT's preventive on-site maintenance programs, along with continuous coolant monitoring with the Ecolab™ 3D TRASAR™ system, provide an additional level of assurance' (June 2026); Ecolab's own thesis — 'bringing together CoolIT's engineered cooling technologies with Ecolab's expertise in water, chemistry and digital service'.",
+    "Test capacity: 'Boilers and cooling towers supporting up to 6 MW of simulated load'; '18 thermal chambers, a 1MW data center simulator'; in-house UL-DAP capability; erosion research on the 1.5 m/s copper velocity limit with PG25 (May 2025)."
+   ],
+   "positioning": "The recurring-revenue layer Ecolab paid for: chemistry, monitoring and service around hardware that competitors sell as one-time equipment.",
+   "soldThrough": "SLAs attached to CDU sales; Ecolab's field-service organisation post-close.",
+   "targetSegments": [
+    "Every CDU customer",
+    "Colocation operators without liquid-cooling staff",
+    "Hyperscalers standardising fluid quality programmes"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "CHx2000 row-based liquid-to-liquid CDU (product page and sheet, May 2026; launch release April 2025)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Cooling capacity",
+     "value": "'2000 kW cooling capacity at 5°C ATD'"
+    },
+    {
+     "band": "Capacity",
+     "label": "Racks",
+     "value": "'12 x GB300 NVL72 racks per CDU'; launch: 'up to twelve 120kW NVIDIA GB200 NVL72 racks'"
+    },
+    {
+     "band": "Capacity",
+     "label": "Density",
+     "value": "'1698 kW/m²' (page); comparison table: '2269 kW cooling load … 2521 kW/m2 density, 53 psi secondary pressure'"
+    },
+    {
+     "band": "Hydraulics",
+     "label": "Flow and pressure",
+     "value": "'2125 LPM at 35 psi'"
+    },
+    {
+     "band": "Hydraulics",
+     "label": "Design flow rule",
+     "value": "'1.2 liters per minute per kilowatt (LPM/kW)'"
+    },
+    {
+     "band": "Hydraulics",
+     "label": "Interfaces",
+     "value": "'4\" tri-clamp interface at facility water system (FWS) and technology cooling system (TCS)'; 'All stainless-steel piping'"
+    },
+    {
+     "band": "Filtration and fluid",
+     "label": "Filtration",
+     "value": "'integrated 25-micron filtration'"
+    },
+    {
+     "band": "Filtration and fluid",
+     "label": "Test fluid",
+     "value": "'100% PG25 leak testing for every unit'"
+    },
+    {
+     "band": "Electrical",
+     "label": "Power consumption",
+     "value": "'12.24 kW'"
+    },
+    {
+     "band": "Controls",
+     "label": "Telemetry",
+     "value": "'Redfish, SNMP, TCP/IP, Modbus'; 'group control of up to 20 CDUs'; '10\" Touchscreen Panel'"
+    },
+    {
+     "band": "Controls",
+     "label": "Availability claim",
+     "value": "'Built-in redundancies and group control for up to 20 units enable six-nines (99.9999%) availability'"
+    },
+    {
+     "band": "Physical",
+     "label": "Dimensions",
+     "value": "'2300mm / 90.6\" (H) × 750mm / 29.5\" (W) × 1200mm / 47.2\" (D)'"
+    },
+    {
+     "band": "Physical",
+     "label": "Features",
+     "value": "'Rear Access for TCS Filter · Front, Sliding Access for Pumps · Integrated Fill Pumps · Stainless Steel Piping · Expansion Tank · … · Heat Exchanger · Integrated Reservoir · Front Access for Primary Filters · Sensor Networking Array'"
+    },
+    {
+     "band": "Production",
+     "label": "Rate and test",
+     "value": "'100 units per week'; '6 MW FAT simulation testing'"
+    }
+   ],
+   "notes": "Two capacity conventions appear in the company's own material: 2,000 kW at 5 °C approach (2026 page and sheet) and 2,269 kW 'cooling load' in the April 2025 comparison table, which does not state its approach temperature. Weight, heat-exchanger type, pump count and input voltage are not published."
+  },
+  {
+   "product": "CHx1500 row-based liquid-to-liquid CDU (brochure, March 2025; launch release)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Cooling capacity",
+     "value": "'1500 kW at 5°C approach temperature (2100 LPM primary, 1800 LPM secondary, PG25 coolant)'; '1364 kW at 4°C ATD'"
+    },
+    {
+     "band": "Capacity",
+     "label": "Racks",
+     "value": "'can cool 9 x NVIDIA GB200 NVL72 racks today'"
+    },
+    {
+     "band": "Hydraulics",
+     "label": "Pressure delivery",
+     "value": "'1.2 LPM/kW flow to support high TDP chips. Delivers 1500 LPM at 34 psi external pressure drop in single pump operation (N+N pump redundancy)'"
+    },
+    {
+     "band": "Hydraulics",
+     "label": "Piping",
+     "value": "'All stainless-steel piping with 4\" Victaulic couplings'"
+    },
+    {
+     "band": "Filtration and fluid",
+     "label": "Filtration",
+     "value": "'Built-in 25 µ filters with 50 µ option'; '25 µ hot-swappable filters with integrated fill pumps and reservoir'"
+    },
+    {
+     "band": "Filtration and fluid",
+     "label": "Wetted materials",
+     "value": "'Highest-grade wetted materials to ensure coolant compatibility and extend coolant life'"
+    },
+    {
+     "band": "Availability",
+     "label": "Ride-through",
+     "value": "'Integrated ultracapacitor for interruption-free operation. Built-in redundancies, continuous monitoring and hot-swappable components. Optional ATS'"
+    },
+    {
+     "band": "Controls",
+     "label": "Management",
+     "value": "'Group control for up to 20 CDUs. Automatic condensation prevention and cooling optimization controls'; 'Redfish, SNMP, TCP/IP, Modbus, BACnet and other protocols'"
+    },
+    {
+     "band": "Thermal envelope",
+     "label": "Water class",
+     "value": "'Compatible with ASHRAE W+, allowing for energy-efficient free cooling, heat load optimization and opportunities for waste heat reuse'"
+    },
+    {
+     "band": "Physical",
+     "label": "Footprint",
+     "value": "'750 mm W x 1200 mm D'"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Claims",
+     "value": "'Up to 30% lower TCO when used with CoolIT-enabled DLC Servers'; 'Up to 40% lower energy costs than air cooling'"
+    }
+   ],
+   "notes": "Verbatim from the CHx1500 brochure (PDF, March 2025) and the 17 March 2025 launch release. The unit has no live product page in 2026 but remains in NVIDIA's RVL table on CoolIT's site at nine GB200 racks."
+  },
+  {
+   "product": "AHx240 and AHx180 liquid-to-air CDUs (product pages and brochures, 2025–2026)",
+   "specs": [
+    {
+     "band": "AHx240",
+     "label": "Capacity",
+     "value": "'240 kW'; '2x GB300/GB200 NVL72 racks per CDU (at 15°C ATD and N+1 pump redundancy)'"
+    },
+    {
+     "band": "AHx240",
+     "label": "Flow and pressure",
+     "value": "'280LPM at 35psi'"
+    },
+    {
+     "band": "AHx240",
+     "label": "Power consumption",
+     "value": "'15.5 kW'"
+    },
+    {
+     "band": "AHx240",
+     "label": "Redundancy",
+     "value": "'N+1 pump redundancy'; 'N+N redundancy on all critical components'; '8-Fan Array'"
+    },
+    {
+     "band": "AHx240",
+     "label": "Dimensions",
+     "value": "'2293.3mm / 90.3\"' × '1200mm / 47.2\"' × '1199mm / 47.2\"'"
+    },
+    {
+     "band": "AHx240",
+     "label": "Facility water",
+     "value": "'No facility water required'"
+    },
+    {
+     "band": "AHx180",
+     "label": "Capacity",
+     "value": "'180 kW cooling capacity at 15°C approach'; 'Up to 2 NVIDIA GB200 NVL72 racks'"
+    },
+    {
+     "band": "AHx180",
+     "label": "Flow and pressure",
+     "value": "'Over 1.5 LPM / kW to support high TDP chips. Delivers 270 LPM at a 40 psi external pressure drop under single-pump operation'"
+    },
+    {
+     "band": "AHx180",
+     "label": "Power consumption",
+     "value": "'11.32 kW'"
+    },
+    {
+     "band": "AHx180",
+     "label": "Redundancy",
+     "value": "'Redundant pumps (2N) and fan (N+1)'; 'Optional ATS'"
+    },
+    {
+     "band": "AHx180",
+     "label": "Filtration",
+     "value": "'Integrated 50 µ serviceable filter with 25 µ to 150 µ options'"
+    },
+    {
+     "band": "AHx180",
+     "label": "Sensors",
+     "value": "'flow, pressure, temperature, humidity, coolant level and leak detection'; 'Automatic condensation prevention'"
+    },
+    {
+     "band": "AHx180",
+     "label": "Footprint",
+     "value": "'Slim 2-rack footprint (1200 mm W x 1066 mm D / 47.2\" W x 41.9\" D)'"
+    }
+   ],
+   "notes": "Liquid-to-air units are rated at 15 °C approach against 5 °C for the liquid-to-liquid line — the penalty for rejecting to air. The AHx240's rack count fell from 'up to four' GB200 NVL72 at launch (2024) to two GB300 NVL72 at 15 °C on the 2026 page."
+  },
+  {
+   "product": "In-rack CDUs CHx200 and CHx80 (product pages)",
+   "specs": [
+    {
+     "band": "CHx200",
+     "label": "Capacity",
+     "value": "'200 kW of heat load in a remarkably small 4U of space … cooling for up to 200 servers'"
+    },
+    {
+     "band": "CHx200",
+     "label": "Water class",
+     "value": "'Compatible with ASHRAE W17 to W+ warm water cooling'"
+    },
+    {
+     "band": "CHx200",
+     "label": "Redundancy",
+     "value": "'N+1 redundant pumps and power supplies'"
+    },
+    {
+     "band": "CHx200",
+     "label": "Controls",
+     "value": "'4.3″ LCD screen with touch functionality'; 'Intelligent controls with leak detection'"
+    },
+    {
+     "band": "CHx200",
+     "label": "Mounting",
+     "value": "'4U rack-mount chassis'; 'Install at the bottom or top of server rack'; 'Servers remain hot-swappable for service'"
+    },
+    {
+     "band": "CHx80",
+     "label": "Capacity",
+     "value": "'80 kW of heat load in a remarkably small 4U of space … cooling for up to 100 servers'"
+    },
+    {
+     "band": "CHx80",
+     "label": "Other",
+     "value": "Feature set identical to CHx200"
+    }
+   ],
+   "notes": "Flow, pressure, filtration, protocols and power draw are not published for the 4U units."
+  },
+  {
+   "product": "Cold plates — OMNI platform and the 4 kW and 15 kW single-phase demonstrators",
+   "specs": [
+    {
+     "band": "OMNI (2024)",
+     "label": "Construction",
+     "value": "'aerospace-grade all-metallic unibody construction'; 'eliminates the need for brazing materials, eliminating differential coefficients of thermal expansion'"
+    },
+    {
+     "band": "OMNI (2024)",
+     "label": "Rating",
+     "value": "'thermal loads exceeding 1,500 W TDP and thermal fluxes over 300 W/cm2'"
+    },
+    {
+     "band": "OMNI (2024)",
+     "label": "Thermal resistance",
+     "value": "'up to 60% lower thermal resistance compared with standard coldplates'"
+    },
+    {
+     "band": "Split-Flow",
+     "label": "Flow claim",
+     "value": "'up to 30% better coolant flow and heat capture versus standard coldplates'; 'directs coolant to a chip's hotspot'"
+    },
+    {
+     "band": "4 kW demonstrator (2025)",
+     "label": "Heat capture",
+     "value": "'capturing 97%+ of heat from a 4000W thermal test vehicle (TTV) with a flow rate of 6 litres per minute (LPM)'"
+    },
+    {
+     "band": "4 kW demonstrator (2025)",
+     "label": "Thermal resistance and pressure drop",
+     "value": "'Tr<0.009 C/W while limiting the full flow loop pressure drop (including all fittings and QDs) to just 8 PSI'"
+    },
+    {
+     "band": "4 kW demonstrator (2025)",
+     "label": "Coolant",
+     "value": "'water or water-glycol mixture'"
+    },
+    {
+     "band": "15 kW demonstrator (2026)",
+     "label": "Test",
+     "value": "'Four ceramic heaters simulated GPU and HBM zones, delivering a total of 15kW TDP'; three cold plates, eight thermocouples"
+    },
+    {
+     "band": "15 kW demonstrator (2026)",
+     "label": "Flow and inlet",
+     "value": "'validated with a standard water-glycol coolant at 1.2 L/min/kW'; '45°C warm water as the inlet temperature'"
+    },
+    {
+     "band": "15 kW demonstrator (2026)",
+     "label": "Result",
+     "value": "average coolant temperature rise 'just below 35°C'; 'an average case temperature (Tcase) of 80°C'; 'standard thermal interface materials, in this case, thermal paste'"
+    },
+    {
+     "band": "Context (company blog, Dec 2025)",
+     "label": "Chip TDPs",
+     "value": "'NVIDIA GB300 has a TDP of 1400W'; 'AMD MI355X has a TDP of 1100W'; 'NVIDIA's Blackwell B200 tensor core chip consumes 1200W'; GB200 'total power draw up to 2,700W'"
+    }
+   ],
+   "notes": "All figures are the company's, from launch releases and the June 2026 technical brief. Per-series watt, thermal-resistance and flow ratings for the catalogued CP- series are not published."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-31",
+   "category": "capacity",
+   "headline": "Calgary Herald: since the Ecolab close CoolIT's headcount has grown from about 650 to 'nearly 900'; Ecolab's Global High-Tech head says the Calgary manufacturing, engineering and R&D footprint will keep growing and new offices are planned in the Bay Area and Houston",
+   "read": "The acquirer is adding people in Calgary rather than moving the work — the Canadian manufacturing base survives the change of owner, at least for now.",
+   "source": "https://ca.news.yahoo.com/ai-data-centre-rush-feeds-113055448.html"
+  },
+  {
+   "date": "2026-08-17",
+   "category": "product-launch",
+   "headline": "'Launching September 28, 2026: CoolIT's next-generation CDU is engineered for 1MW+ ultra-dense AI racks' — no name, capacity or specification disclosed",
+   "read": "The row CDU went from 750 kW to 2,000 kW in two years; the next step is sized for the Rubin-class rack.",
+   "source": "https://www.coolitsystems.com/resources/news/the-next-gen-ai-cdu/"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "product-launch",
+   "headline": "CoolIT publishes its cold-plate coverage — processors, HBM and SOCAMM memory, OSFP optics, E1.S drives, VRMs and PSUs — claiming 'up to 100% heat capture', racks 'beyond 250kW' and 'more than 150 liquid cooling patents'",
+   "read": "The catalogue is moving from the GPU to everything else in the chassis, which is what fanless racks require.",
+   "source": "https://www.coolitsystems.com/resources/news/coolit-behind-the-worlds-most-advanced-ai-coldplates/"
+  },
+  {
+   "date": "2026-07-02",
+   "category": "ma",
+   "headline": "Ecolab closes the acquisition of CoolIT Systems 'earlier than expected'; 'CoolIT's year-to-date sales have grown more than 100%'; the business joins Ecolab's Global Water segment from Q3 2026; Ecolab targets USD 4 billion of Global High-Tech sales at 25 percent operating margin by 2030",
+   "read": "The first parent that will consolidate CoolIT into a reported segment — the first hard financial disclosure the company has ever had is coming in Ecolab's third-quarter 10-Q.",
+   "source": "https://investor.ecolab.com/news/news-details/2026/Ecolab-Closes-CoolIT-Acquisition-and-Expands-AI-Cooling-Platform-as-Global-High-Tech-Business-Targets-4-Billion-by-2030/default.aspx"
+  },
+  {
+   "date": "2026-06-13",
+   "category": "product-launch",
+   "headline": "CoolIT frames the CDU as a system: 'multi-gigawatts of CDUs' supplied and serviced, six-nines availability through group control, prefabricated stainless or polypropylene TCS piping, and Ecolab's 3D TRASAR coolant monitoring added to preventive maintenance",
+   "read": "The Ecolab bundle in one blog post — hardware, piping, chemistry and monitoring sold as one assurance.",
+   "source": "https://www.coolitsystems.com/resources/news/more-than-a-coolant-distribution-unit-how-much-more/"
+  },
+  {
+   "date": "2026-06-01",
+   "category": "product-launch",
+   "headline": "15 kW single-phase cold plate demonstrated at 1.2 L/min/kW with 45 °C inlet water and an 80 °C average case temperature — 'nearly four times the performance of earlier single-phase' designs and 'more than 10x the cooling capacity required for the current generation of AI GPUs'",
+   "read": "An answer to the two-phase and immersion camps: single-phase water-glycol has headroom to the 2030 chip roadmap.",
+   "source": "https://www.prnewswire.com/news-releases/coolit-systems-demonstrates-15kw-coldplate-extending-single-phase-dlc-roadmap-far-beyond-2030-302787344.html"
+  },
+  {
+   "date": "2026-04-27",
+   "category": "corporate",
+   "headline": "Calgary Herald's inside story of the sale: incorporated 27 February 2001 by Sandy Scott, Brydon Gierl and Jason Myers; KKR's 2023 purchase reported at US$270 million; employee payouts from one year's salary to eight times annual wage, averaging $240,000",
+   "read": "A US$270 million entry and a US$4.75 billion exit in three years is the return that will bring every private-equity buyer to the next liquid-cooling specialist.",
+   "source": "https://calgaryherald.com/feature/inside-story-cool-it-calgary-startup-purchase-by-ecolab"
+  },
+  {
+   "date": "2026-03-26",
+   "category": "ma",
+   "headline": "Mubadala agrees to sell its minority stake in the KKR-led USD 4.75 billion transaction; under their ownership CoolIT 'increased coolant distribution unit (CDU) capacity by 25x' and 'delivered approximately 2.18 billion kWh in energy savings in 2025'",
+   "read": "The co-investor's exit confirms the capital structure: KKR majority, Mubadala minority, both out.",
+   "source": "https://www.mubadala.com/en/news/mubadala-agrees-to-sell-minority-stake-in-coolit-to-ecolab-in-kkr-led-4-75-billion-transaction"
+  },
+  {
+   "date": "2026-03-25",
+   "category": "financial",
+   "headline": "KKR's exit 'returns approximately 15 times the original equity invested'; CoolIT 'doubled its headcount by adding more than 300 jobs, expanded manufacturing to over 300,000 square feet' and is 'on track to deliver roughly fourfold revenue growth and tenfold EBITDA growth through 2026'; all 650 employees receive cash payouts",
+   "read": "The only growth-rate statements in the record are the seller's; they imply a business whose EBITDA margin expanded sharply as it scaled.",
+   "source": "https://www.alternativeswatch.com/2026/03/25/kkr-coolit-ecolab-sale-exit/"
+  },
+  {
+   "date": "2026-03-20",
+   "category": "ma",
+   "headline": "Ecolab agrees to acquire CoolIT for 'approximately $4.75 billion in cash' — '29x and 24x estimated next 12-month and 2027 adjusted EBITDA'; CoolIT 'expected to generate approximately $550 million in sales over the next 12 months'; the deal is to 'double Ecolab's Global High-Tech market opportunity from $5 billion to $10 billion'",
+   "read": "A water-chemistry company paying a software multiple for a hardware maker is a bet that the coolant loop becomes a recurring-service business.",
+   "source": "https://www.sec.gov/Archives/edgar/data/31462/000110465926032446/tm269446d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-03-08",
+   "category": "ma",
+   "headline": "Financial Times reports KKR working with advisers on a sale of CoolIT 'for a price tag potentially exceeding $3 billion'",
+   "read": "The final price came in more than 50 percent above the first leak.",
+   "source": "https://www.investing.com/news/stock-market-news/kkr-eyes-multibilliondollar-sale-of-data-center-cooling-company-ft-reports-4548581"
+  },
+  {
+   "date": "2026-03-06",
+   "category": "product-launch",
+   "headline": "CHx2000 blog: the 2 MW CDU 'can cool up to 12 NVIDIA GB300 NVL72 racks', is built at 'hundreds of units per month' and has been in production since October 2024",
+   "read": "The product was shipping five months before it was announced — the announcement cadence lags the hyperscaler shipments.",
+   "source": "https://www.coolitsystems.com/resources/news/chx2000-the-ai-cdu/"
+  },
+  {
+   "date": "2026-02-25",
+   "category": "capacity",
+   "headline": "25th anniversary: 'CoolIT manufactures 100s of coolant distribution units (CDUs), 1,000s of rack manifolds and 10,000s of server coldplate loops per month'; capacity grown 'at triple-digit rates over the past two years'; customers include '4 of top 5' server OEMs and '4 of 5' hyperscalers",
+   "read": "The only volume figures the company publishes, and they are monthly orders of magnitude rather than counts.",
+   "source": "https://www.prnewswire.com/news-releases/coolit-systems-continues-rapid-growth-as-it-celebrates-25-years-302696525.html"
+  },
+  {
+   "date": "2026-01-20",
+   "category": "market",
+   "headline": "CoolIT on Vera Rubin's 45 °C water: 'Warm water cooling reduces chiller dependency, but it does not magically eliminate the need for mechanical cooling … the need for mechanical cooling will remain, simply as a risk-management tool for the hottest days of the year'",
+   "read": "The CDU vendor siding with the chiller vendor against the chip vendor's 'no chillers' line — because the CDU's approach temperature is what the hottest day is spent on.",
+   "source": "https://www.coolitsystems.com/resources/news/warm-water-cooling-and-ai-the-future-is-here-but-its-not-chiller-free/"
+  },
+  {
+   "date": "2026-01-08",
+   "category": "market",
+   "headline": "Dell'Oro: liquid cooling to reach 'approximately $7 billion in manufacturer revenue by 2029' after roughly doubling to 'close to $3 billion' in 2025; 'Vertiv leading the liquid cooling market and established players such as CoolIT, nVent, and Boyd maintaining strong market share positions'; Aaon rising on hyperscaler custom work",
+   "read": "The one independent ranking that names CoolIT puts it in the chasing pack behind Vertiv — and flags that custom hyperscaler work moves share fast.",
+   "source": "https://www.delloro.com/news/data-center-liquid-cooling-market-to-approach-7-billion-by-2029-as-ai-deployments-accelerate/"
+  },
+  {
+   "date": "2025-12-02",
+   "category": "capacity",
+   "headline": "Starfield, Calgary: 'spans 112,000 square feet' with end-to-end lines from cold plates to CDUs; 'nearly 150,000 square feet dedicated to manufacturing and R&D'; 'Scaling production 25X in just the past 18 months'; '18 thermal chambers, a 1MW data center simulator'",
+   "read": "A North American CDU plant at hyperscale volume is the physical asset the acquirer bought; the two Asian contract manufacturers remain unnamed.",
+   "source": "https://www.coolitsystems.com/resources/news/coolit-systems-scales-north-american-manufacturing-to-cool-ais-next-wave/"
+  },
+  {
+   "date": "2025-09-30",
+   "category": "market",
+   "headline": "Dell'Oro: direct liquid cooling 'surged 156 percent year-over-year in 2Q 2025'; 'around 40 companies with CDUs within their product portfolios'; 'We expect fewer than 10 vendors to ultimately capture the lion's share'; KKR's CoolIT deal cited as private equity entering the CDU market",
+   "read": "Forty vendors and fewer than ten survivors is the consolidation thesis Ecolab paid to be on the right side of.",
+   "source": "https://www.delloro.com/market-at-the-boiling-point-is-the-cdu-space-becoming-saturated/"
+  },
+  {
+   "date": "2025-05-27",
+   "category": "other",
+   "headline": "CoolIT publishes an erosion-corrosion test programme on copper coupons in PG25 to check 'if the 1.5 m/s velocity limit is accurate to prevent erosion-corrosion in IT cooling systems'",
+   "read": "Flow velocity is the design constraint that ties cold-plate performance to loop life — and the vendor is testing its own industry rule.",
+   "source": "https://www.coolitsystems.com/resources/news/erosion-in-liquid-cooling-systems-investigating-velocity-dependent-degradation-mechanisms/"
+  },
+  {
+   "date": "2025-04-22",
+   "category": "leadership",
+   "headline": "Jason Waxman appointed CEO — 23 years at Intel's data-centre group, three as president of Fluke, founding board member of the Open Compute Project; COO Patrick McGinn becomes President and COO; KKR's Kyle Matter chairs the board",
+   "read": "A hyperscaler-facing CEO from the buyer's side of the OCP table, installed a year before the sale.",
+   "source": "https://www.prnewswire.com/news-releases/coolit-welcomes-jason-waxman-as-ceo-302434395.html"
+  },
+  {
+   "date": "2025-04-15",
+   "category": "product-launch",
+   "headline": "CHx2000 announced: 'unrivaled 2 MW liquid cooling capacity', twelve 120 kW GB200 NVL72 racks at 1.2 LPM/kW, 53 psi secondary head, 25-micron filtration, group control of 20 units for 'six-nines (99.9999%) availability'",
+   "read": "Sixty-six percent more capacity than the CHx1500 announced four weeks earlier, in the same footprint.",
+   "source": "https://www.prnewswire.com/news-releases/coolit-systems-announces-further-breakthroughs-in-row-based-coolant-distribution-unit-performance-302428345.html"
+  },
+  {
+   "date": "2025-03-17",
+   "category": "product-launch",
+   "headline": "CHx1500 announced: 1,500 kW at 5 °C approach, 1.2 LPM/kW, nine GB200 NVL72 racks, '53% more cooling capacity and 26% greater pump pressure capacity than other major row-based CDU manufacturers'",
+   "read": "The rack-count-per-CDU became the marketing unit of the category.",
+   "source": "https://www.prnewswire.com/news-releases/coolit-announces-the-worlds-highest-performance-row-based-coolant-distribution-unit-302402667.html"
+  },
+  {
+   "date": "2025-03-14",
+   "category": "partnership",
+   "headline": "GTC 2025: 'All of CoolIT's AI-ready chip-to-CDU products – including coldplates, liquid rack manifolds and CDUs – are available to NVIDIA's server manufacturing partners through the NVIDIA Recommended Vendor List (RVL)'",
+   "read": "The RVL is the channel: NVIDIA's ODM partners can specify CoolIT parts without qualifying them.",
+   "source": "https://www.prnewswire.com/news-releases/coolit-showcases-ai-ready-liquid-cooling-technology-at-nvidia-gtc-2025-302401702.html"
+  },
+  {
+   "date": "2025-03-13",
+   "category": "product-launch",
+   "headline": "4,000 W single-phase cold plate: '97%+ of heat' captured at 6 LPM, 'Tr<0.009 C/W', 8 psi loop pressure drop — 'more than doubling the previously accepted limits of single-phase direct liquid cooling'",
+   "read": "The first of two demonstrators arguing that single-phase DLC does not run out before the chip roadmap does.",
+   "source": "https://www.prnewswire.com/news-releases/coolits-4000w-coldplate-establishes-single-phase-direct-liquid-cooling-technology-leadership-302401512.html"
+  },
+  {
+   "date": "2024-12-12",
+   "category": "capacity",
+   "headline": "'25x capacity expansion in its new Calgary, Canada manufacturing facility'; Scott Hudson, ex-Celestica, hired as VP Quality",
+   "read": "Quality leadership from a contract manufacturer arrives with the volume — the failure mode of scaling is quality, and the company hired for it.",
+   "source": "https://www.prnewswire.com/news-releases/coolit-systems-continues-to-expand-manufacturing-capabilities-302330782.html"
+  },
+  {
+   "date": "2024-10-15",
+   "category": "partnership",
+   "headline": "CoolIT joins the NVIDIA Partner Network and announces a new CDU line and 'multi-gigawatt manufacturing expansion in Canada and internationally' for the Blackwell ramp; NVIDIA's Jeremy Rodriguez: the expansion 'will help meet the growing demands of data centers'",
+   "read": "The only NVIDIA-quoted endorsement in the record before the Ecolab close — the design-side relationship made public.",
+   "source": "https://www.hpcwire.com/off-the-wire/coolit-systems-joins-nvidia-partner-network-unveils-ai-centric-liquid-cooling-solutions/"
+  },
+  {
+   "date": "2024-07-09",
+   "category": "product-launch",
+   "headline": "Three CDUs launched — AHx240 ('the industry's highest-capacity liquid-to-air CDU'), AHx180 and the stackable CHx500 ('Four CHx500 units can be stacked to provide … 2 MW … in a single rack')",
+   "read": "The liquid-to-air line for air-cooled halls and the stackable unit for density arrive together — retrofit and greenfield covered in one release.",
+   "source": "https://www.coolitsystems.com/resources/news/coolit-systems-launches-three-high-density-coolant-distribution-units/"
+  },
+  {
+   "date": "2024-06-18",
+   "category": "market",
+   "headline": "Omdia: 'In this near $1bn market of liquid cooling, direct-to-chip vendor CoolIT remain the top leader in liquid cooling market, followed by immersion cooling leader Sugon and server vendor Lenovo' (2023 data); growth 'primarily constrained by production capacity, particularly for components like Cooling Distribution Units (CDUs)'",
+   "read": "The last time an analyst put CoolIT first — before Vertiv's CoolTera purchase and the hyperscaler CDU ramps re-ordered the table.",
+   "source": "https://omdia.tech.informa.com/pr/2024/jun/omdia-research-predicts-data-center-cooling-market-to-reach-16point87-billion-dollars-in-2028"
+  },
+  {
+   "date": "2024-05-09",
+   "category": "product-launch",
+   "headline": "OMNI all-metal cold plates unveiled: unibody aerospace-grade construction, 'thermal loads exceeding 1,500 W TDP and thermal fluxes over 300 W/cm2', 'up to 60% lower thermal resistance'; high-volume shipping from June 2024",
+   "read": "Removing the brazed joint removes the failure mode that a decade of thermal cycling finds.",
+   "source": "https://www.coolitsystems.com/resources/news/coolit-systems-unveils-omni-all-metal-coldplates/"
+  },
+  {
+   "date": "2024-03-07",
+   "category": "legal",
+   "headline": "Federal Circuit vacates and remands the PTAB's unpatentability finding on CoolIT's US 9,057,567 cold-plate patent, construing 'matingly engaged' as 'mechanically joined or fitted together' — the last act of a twelve-year dispute with Asetek that ended in the district court with an 11 September 2022 summary judgment of non-infringement for all CoolIT products and a confidential settlement on 6 October 2022",
+   "read": "No jury ever ruled between the two companies and no damages were paid either way; CoolIT's products were held non-infringing and its own patent survived on appeal — a defended position, not a moat.",
+   "source": "https://www.cafc.uscourts.gov/opinions-orders/22-1221.OPINION.3-7-2024_2282155.pdf"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-10",
+   "via": "NVIDIA Partner Network; Recommended Vendor List",
+   "note": "Member of the NVIDIA Partner Network as 'a Solution Advisor for Compute and DGX AI Compute Systems' with cold plates, manifolds and CDUs on NVIDIA's Recommended Vendor List; NVIDIA engineers are quoted endorsing CoolIT in 2024 and, with Ecolab, in 2026.",
+   "context": "CoolIT's collaboration with NVIDIA 'began in 2009 with the design of the NV200 VGA coldplate for the GeForce GTX 295'. In October 2024 it joined the NVIDIA Partner Network for the Blackwell ramp; NVIDIA's Jeremy Rodriguez, senior director of data center engineering, said the expansion 'will help meet the growing demands of data centers'. At GTC 2025 the company stated that all its chip-to-CDU products 'are available to NVIDIA's server manufacturing partners through the NVIDIA Recommended Vendor List (RVL)', and its site tabulates GB200 NVL72 racks per CDU (CHx2000 12, CHx1500 9, AHx240 4, AHx180 2).\n\nAt the Ecolab close NVIDIA's Ali Heydari and Saket Karajgikar stated that 'NVIDIA has collaborated with Ecolab and CoolIT across a broad range of liquid-cooling initiatives, including coolant qualification, coolant health monitoring, cooling infrastructure development, and next-generation AI factory technologies'. No formal 'NVIDIA-certified' or reference-design designation exists; no CoolIT product is claimed for Vera Rubin NVL72.",
+   "source": "https://www.hpcwire.com/off-the-wire/coolit-systems-joins-nvidia-partner-network-unveils-ai-centric-liquid-cooling-solutions/"
+  },
+  {
+   "slug": "vertiv",
+   "type": "competitor",
+   "status": "active",
+   "note": "Dell'Oro names Vertiv as 'leading the liquid cooling market' with CoolIT among the 'established players … maintaining strong market share positions'.",
+   "context": "Dell'Oro's January 2026 release: 'The competitive landscape is evolving rapidly, with Vertiv leading the liquid cooling market and established players such as CoolIT, nVent, and Boyd maintaining strong market share positions.' Its September 2025 CDU note records 'Vertiv's acquisition of CoolTera in December 2023' and expects 'fewer than 10 vendors to ultimately capture the lion's share'. Omdia's June 2024 release had placed CoolIT first in a roughly USD 1 billion 2023 market. Vertiv reaches liquid cooling from the plant and power side; CoolIT from the chip.",
+   "source": "https://www.delloro.com/news/data-center-liquid-cooling-market-to-approach-7-billion-by-2029-as-ai-deployments-accelerate/"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "competitor",
+   "status": "active",
+   "since": "2024-10",
+   "note": "Schneider Electric entered the CDU market through its October 2024 purchase of Motivair, which Gigabyte lists alongside CoolIT as a direct-liquid-cooling partner.",
+   "context": "Dell'Oro's CDU analysis cites 'Schneider Electric's purchase of Motivair in October 2024' among the consolidation moves reshaping the category. Giga Computing's 2023 release put the two head to head: 'Motivair joins our other partner, CoolIT Systems, to demonstrate GIGABYTE's dedication to offering a comprehensive DLC solution'. Schneider's own CDU guidance (five CDU functions; rack-mounted units 20 to about 40 kW) is the teaching text quoted in this dossier's study guide.",
+   "source": "https://www.delloro.com/market-at-the-boiling-point-is-the-cdu-space-becoming-saturated/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Canada — Fighting Against Forced Labour and Child Labour in Supply Chains Act",
+   "status": "in-effect",
+   "effectiveDate": "2024-01-01",
+   "exposure": "CoolIT files the statutory report (CIT-RPT-002, signed by the CEO on 30 May 2025): it 'meets the definition of an entity', employs 'more than 250 employees globally' and 'utilizes two principal third-party contract manufacturers based in Shenzhen, China, and Vietnam who either ship parts to Calgary for assembly or function as original equipment manufacturers'; component sourcing spans twenty countries including China, Malaysia, Taiwan and the United States. The report is also the only first-party headcount ('approximately 363 employees as at December 31, 2024') and the only named description of the Asian manufacturing footprint.",
+   "mitigation": "Vendor Code of Conduct aligned to SA8000; supplier qualification questionnaire; an ESG assessment by ERM Inc. in late 2023; Tier-2 supplier mapping planned for 2025; 'zero incidents' reported.",
+   "source": "https://www.coolitsystems.com/wp-content/uploads/2025/07/CIT-RPT-002-Report_2025.pdf"
+  },
+  {
+   "regime": "US–Canada trade measures (Section 232 and reciprocal tariffs)",
+   "status": "in-effect",
+   "exposure": "CoolIT makes no first-party statement on tariffs. Its exposure is structural: CDUs are 'Produced in volume … at CoolIT's Canadian manufacturing operations' for a customer base that is largely American, with cold-plate loops built in China and Vietnam. The statutory report records that '2024 was dedicated to evaluating geopolitical risks, trade restrictions, and economic trends that may impact vendor reliability and sourcing strategies' and that 'In 2024, CIT continued taking steps to shift critical component suppliers to North America', naming Wieland and Stoltz as near-shored vendors.",
+   "mitigation": "Stated: dual sourcing and geographic diversification of suppliers ('CoolIT dual-sources key components and diversifies supplier geographies'); the acquirer plans new US offices in the Bay Area and Houston but no US manufacturing plant is reported.",
+   "source": "https://www.coolitsystems.com/wp-content/uploads/2025/07/CIT-RPT-002-Report_2025.pdf"
+  },
+  {
+   "regime": "ASHRAE TC 9.9 liquid-cooling thermal guidelines (W-classes)",
+   "status": "in-effect",
+   "exposure": "The industry's temperature vocabulary for facility water: the 2021 fifth edition renamed the classes by their upper limit — 'W17 (previously W1), W27 (W2), W32 (W3), W40 (new), W45 (W4), and W+ (W5)' with 'a lower temperature limit of 2°C'. CoolIT rates the CHx200 and CHx80 'Compatible with ASHRAE W17 to W+', the CHx1500 'Compatible with ASHRAE W+', the CHx500 for 'ASHRAE W45', and validated its 15 kW cold plate at 45 °C inlet; every rating that decides whether a site can run without a chiller is written in these classes.",
+   "mitigation": "The company's own position is that warm-water classes reduce but do not remove mechanical cooling ('it's not chiller-free', January 2026).",
+   "source": "https://www.ashrae.org/file%20library/technical%20resources/bookstore/emergence-and-expansion-of-liquid-cooling-in-mainstream-data-centers_wp.pdf"
+  },
+  {
+   "regime": "Open Compute Project — ORV3 racks and Modular TCS guidance",
+   "status": "in-effect",
+   "exposure": "Rack manifolds are offered in an 'ORV3 Rack Series' ('ORV3 racks: 44OU') alongside EIA and MGX; the CEO was 'a founding board member of the Open Compute Project' with '9+ years on the board'. OCP's cloud-scale TCS guidance sets the filtration and construction expectations (25 µm inline plus sidestream filtration; no pipe tape or dope in the TCS) that CoolIT's prefabricated piping and 25-micron CDU filtration are built to meet. No OCP specification authored by CoolIT was found.",
+   "source": "https://ocp-all.groups.io/g/OCP-DCF/attachment/498/4/2025%20Modular%20TCS%20@%20CloudScale%20Design,%20Delivery,%20Selection%20Guidance%20-%20Rev%201%20March.pdf"
+  },
+  {
+   "regime": "US patent law — inter partes review and district-court enforcement (Asetek dispute)",
+   "status": "expired",
+   "effectiveDate": "2022-10-06",
+   "exposure": "Twelve years of litigation with Asetek over sealed-loop and cold-plate patents (N.D. Cal. 2012; N.D. Cal. and D. Del. 2014; N.D. Cal. 2019–2022; PTAB and Federal Circuit 2020–2024). The 2019 case ended when Judge Chen 'GRANTS IN PART CoolIT's Motion for summary judgment with regards to noninfringement of the reservoir and curved blade limitations of Asetek's '362 Patent' while holding that patent valid; the parties then settled on confidential terms and the case was dismissed with prejudice on 6 October 2022. The Federal Circuit later vacated the PTAB's unpatentability finding on CoolIT's '567 patent (7 March 2024). No damages were awarded to either side in any of the actions.",
+   "mitigation": "CoolIT's stated position (October 2022): the court 'granted summary judgment of non-infringement for all of CoolIT's past and current products in regard to Asetek's U.S. Patent Number 8,240,362'; it maintains a virtual-marking page listing 40 US patents.",
+   "source": "https://storage.courtlistener.com/recap/gov.uscourts.cand.337454/gov.uscourts.cand.337454.504.0.pdf"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Jason Waxman",
+   "title": "Chief Executive Officer",
+   "photo": "images/execs/coolit-waxman.jpg",
+   "background": [
+    "CEO since 22 April 2025; the company says leadership continues under Ecolab",
+    "President of Fluke Corporation for three years before joining",
+    "More than 23 years at Intel Corporation in the data centre group, leading large international teams",
+    "Founding board member of the Open Compute Project Foundation; '9+ years on the board'",
+    "Signed CoolIT's statutory forced-labour report (May 2025)"
+   ]
+  },
+  {
+   "name": "Patrick McGinn",
+   "title": "President and Chief Operating Officer",
+   "photo": "images/execs/coolit-mcginn.jpg",
+   "background": [
+    "President and COO since April 2025; joined CoolIT in 2012 as a product manager",
+    "Oversees marketing, sales, product development, engineering, supply chain and manufacturing",
+    "Quoted on the NVIDIA Blackwell ramp and the OMNI launch; the company credits him with its 'global market share leader' position in direct liquid cooling",
+    "Bachelor's degree in international business"
+   ]
+  },
+  {
+   "name": "Adam Schader",
+   "title": "Chief Financial Officer",
+   "photo": "images/execs/coolit-schader.jpg",
+   "background": [
+    "Over 20 years of international experience managing technology companies",
+    "Previously CFO at AC Photonics",
+    "BS and MS in Accounting; CPA"
+   ]
+  },
+  {
+   "name": "Kamal Mostafavi",
+   "title": "Chief Technology Officer",
+   "photo": "images/execs/coolit-mostafavi.jpg",
+   "background": [
+    "CTO by 2026 (titled Vice President of Engineering in the 2024 OMNI and 2025 4 kW cold-plate releases)",
+    "Defines technology strategy and leads engineering from feasibility and R&D through verification and production support",
+    "Quoted on the 15 kW cold plate: 'Single-phase DLC is already cooling millions of AI accelerators today'",
+    "PhD, MSc and BSc in Mechanical Engineering; previously a technical manager in the medical industry and a university instructor"
+   ]
+  },
+  {
+   "name": "David Meffe",
+   "title": "Chief Commercial Officer",
+   "photo": "images/execs/coolit-meffe.jpg",
+   "background": [
+    "Joined by February 2026",
+    "More than two decades at Intel across the PC, server, hyperscale and industrial computing businesses",
+    "Previously Chief Revenue Officer at OnLogic"
+   ]
+  },
+  {
+   "name": "Hamid Rafiei",
+   "title": "Senior Vice President, Global Operations",
+   "photo": "images/execs/coolit-rafiei.jpg",
+   "background": [
+    "Joined December 2020; leads manufacturing across North America and Asia, manufacturing engineering, supply chain and supplier quality",
+    "'spearheaded automation of assembly lines and restructuring of supply chain'",
+    "Eight-plus years at Eaton in operations and quality roles; MSc ECE, University of Calgary"
+   ]
+  },
+  {
+   "name": "Brydon Gierl",
+   "title": "Founder; Senior Vice President, Product Development",
+   "photo": "images/execs/coolit-gierl.jpg",
+   "background": [
+    "Co-founded CoolIT in 2001 'with 3 friends in a garage in Calgary'; the only founder still with the company",
+    "Drives product innovation and automation; background in construction and fabrication"
+   ]
+  },
+  {
+   "name": "Ken Lau",
+   "title": "General Manager",
+   "background": [
+    "Over two decades across semiconductors, client computing and data-centre platforms",
+    "More than 25 years at Intel in senior general-management roles, scaling data-centre programmes and building OEM and ODM partnerships across Asia-Pacific",
+    "Later CEO of an AI ASIC start-up"
+   ]
+  },
+  {
+   "name": "Neil Mulji",
+   "title": "Vice President, Program Management (Vice President of Product in 2025 releases)",
+   "photo": "images/execs/coolit-mulji.jpg",
+   "background": [
+    "Joined 2019 as program manager; leads product strategy, customer engagement and program development",
+    "Quoted on the CHx1500 and CHx2000 launches",
+    "BSc and MSc Mechanical Engineering; P.Eng."
+   ]
+  },
+  {
+   "name": "Paul O'Connor",
+   "title": "Vice President, Supply Chain",
+   "photo": "images/execs/coolit-oconnor.jpg",
+   "background": [
+    "Joined by February 2026; formerly Vice President of Global Procurement at Fluke and Senior Director of Strategic Sourcing at Danaher/Fortive (13 years)",
+    "More than 20 years across industrial technology, aerospace, defence and telecommunications"
+   ]
+  },
+  {
+   "name": "Scott Hudson",
+   "title": "Vice President, Quality",
+   "photo": "images/execs/coolit-hudson.jpg",
+   "background": [
+    "Joined December 2024; previously VP of Global Quality at Celestica 'across over 30 sites'",
+    "Author of the company's quality and NPI risk-reduction posts (December 2025)"
+   ]
+  },
+  {
+   "name": "Amy Walsh",
+   "title": "General Counsel",
+   "photo": "images/execs/coolit-walsh.jpg",
+   "background": [
+    "Oversees legal, compliance and governance",
+    "BSc Biochemistry; JD; Law Society of British Columbia (2012) and Alberta (2014)"
+   ]
+  },
+  {
+   "name": "Ian Graham",
+   "title": "Vice President, Information Technology",
+   "photo": "images/execs/coolit-graham.jpg",
+   "background": [
+    "20-plus years of IT leadership in oil and gas, container shipping, cybersecurity and high-tech start-ups",
+    "BSc Computer Science"
+   ]
+  },
+  {
+   "name": "Josh Magnuson",
+   "title": "Executive Vice President and General Manager, Global High Tech, Ecolab (parent)",
+   "background": [
+    "Speaks for CoolIT within Ecolab since the July 2026 close; told the Calgary Herald in August 2026 that Ecolab will 'continue growing our manufacturing, design, engineering and research and development footprint (in Calgary)' and plans offices in the Bay Area and Houston",
+    "Ecolab targets USD 4 billion of Global High-Tech sales at 25 percent operating margin by 2030"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2023 (KKR entry year; no statements)",
+    "periodType": "annual",
+    "periodEnd": "2023-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "Not disclosed",
+      "expected": "",
+      "verdict": "inline",
+      "result": "CoolIT has never published revenue. Deloitte programme thresholds show it had at least USD 25 million of revenue in 2019 (Enterprise Fast 15 eligibility)"
+     },
+     {
+      "name": "Acquisition by KKR",
+      "actual": "Majority acquired by KKR's Global Impact Fund II, signed 2 May 2023, with Mubadala as minority co-investor; value undisclosed — the Calgary Herald reports US$270 million",
+      "expected": "",
+      "verdict": "inline",
+      "result": "'reported' figure from local press; KKR's release states no value"
+     },
+     {
+      "name": "Headcount growth",
+      "actual": "'CoolIT increased its global employee headcount by 58%'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company release, February 2024"
+     }
+    ],
+    "commentary": "The base year for every growth claim the seller made in 2026."
+   },
+   {
+    "period": "FY2024 (no statements)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "Not disclosed",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Aggregator revenue bands (USD 100–500 million) exist only in unread search snippets and are not used"
+     },
+     {
+      "name": "Employees",
+      "actual": "'approximately 363 employees as at December 31, 2024'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Statutory forced-labour report CIT-RPT-002 — the only first-party headcount ever published"
+     },
+     {
+      "name": "Capacity",
+      "actual": "'25x capacity expansion in its new Calgary, Canada manufacturing facility'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company release, December 2024"
+     }
+    ],
+    "commentary": "The year the Starfield plant and the OMNI cold plate arrived; no financial disclosure."
+   },
+   {
+    "period": "FY2025 and the sale (acquirer and seller figures)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Next-twelve-month sales (at March 2026)",
+      "actual": "'expected to generate approximately $550 million in sales over the next 12 months'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Ecolab's acquisition release (SEC EX-99.1, 2026-03-20). A forward expectation by the acquirer, not a reported actual — deliberately not tagged as a revenue KPI"
+     },
+     {
+      "name": "Purchase price and multiple",
+      "actual": "'approximately $4.75 billion in cash'; '29x and 24x estimated next 12-month and 2027 adjusted EBITDA'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Arithmetic on the acquirer's own multiples (analysis, not a disclosed figure) implies next-twelve-month adjusted EBITDA of roughly USD 165 million and 2027 of roughly USD 200 million"
+     },
+     {
+      "name": "Growth (seller's statements)",
+      "actual": "'roughly fourfold revenue growth and tenfold EBITDA growth through 2026' since 2023; KKR's exit 'returns approximately 15 times the original equity invested'",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Alternatives Watch on KKR's exit materials; the verdict is against the seller's own base, the only comparison available"
+     },
+     {
+      "name": "Employees",
+      "actual": "About 650 at signing (March 2026), 'most of whom are in the city' (Calgary)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Calgary Herald; KKR exit materials ('all 650 employees')"
+     },
+     {
+      "name": "Energy savings claim",
+      "actual": "'delivered approximately 2.18 billion kWh in energy savings in 2025'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Mubadala release; methodology not stated"
+     }
+    ],
+    "commentary": "Every number is the buyer's or the seller's. A 29-times EBITDA price on a hardware maker is a statement about growth and about the service annuity Ecolab expects to attach; the seller's 'tenfold EBITDA growth' on 'fourfold revenue growth' implies margin expansion that the company itself has never described."
+   },
+   {
+    "period": "H1 2026 (acquirer's statement)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Year-to-date sales growth",
+      "actual": "'CoolIT's year-to-date sales have grown more than 100%'",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Ecolab close release (2026-07-02); no absolute figure"
+     },
+     {
+      "name": "Employees",
+      "actual": "'nearly 900' by August 2026, from about 650 earlier in the year",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Calgary Herald, 2026-08-31"
+     }
+    ],
+    "commentary": "From the third quarter of 2026 CoolIT is consolidated in Ecolab's Global Water segment; Ecolab's Q3 2026 10-Q will be the first filing to carry any CoolIT-related actuals, and they will be segment-blended."
+   }
+  ],
+  "commentary": "CoolIT was private under KKR and Mubadala from May 2023 and is a wholly owned Ecolab subsidiary from 2 July 2026; it has never published an income statement, and Ecolab's disclosure will be at segment level. The financial record therefore consists of the acquirer's price and multiples (USD 4.75 billion; 29x NTM and 24x 2027 adjusted EBITDA; about USD 550 million NTM sales), the seller's growth claims, two headcount figures and one statutory report. No normalised revenue KPI is recorded because no reported annual revenue exists. Neither CoolIT nor its former owners carried a public credit rating; the acquisition was funded by USD 5.0 billion of Ecolab senior notes issued in May 2026."
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess Ecolab paid for channel position and manufacturing scale rather than for patents, and that the price says so. Basis: 29 times next-twelve-month adjusted EBITDA for a hardware maker whose stated assets are '4 of the top 5 server OEMs and 4 of the 5 hyperscalers as customers', NVIDIA Recommended Vendor List placement, '100s of coolant distribution units … 10,000s of server coldplate loops per month' and a 112,000-square-foot Canadian CDU plant; Ecolab's own thesis names 'deep preexisting relationships with the world's major hyperscaler and colocation customers' first. The Asetek record shows the patents are defensible; nothing in it shows they excluded Vertiv, Motivair, Boyd or the OEMs' in-house lines.",
+  "2. **(High confidence)** We assess the coolant distribution unit is where the category's margin and its consolidation are being decided, and that CoolIT is positioned in the leading group but not at its head. Basis: the row CDU moved from 750 kW (CHx750) to 1,500 kW and 2,000 kW within 2025, with a 1 MW-plus-rack unit due 28 September 2026; Dell'Oro counts 'around 40 companies with CDUs' and expects 'fewer than 10 vendors to ultimately capture the lion's share', naming Vertiv as leader and CoolIT among 'established players … maintaining strong market share positions'; Omdia had placed CoolIT first in 2023. The rack-count-per-CDU (12 GB300 NVL72 racks) has become the unit of competition.",
+  "3. **(Moderate confidence)** We assess the Ecolab combination is a bet that the recurring revenue of liquid cooling is chemistry and monitoring, not hardware. Basis: Ecolab's stated intent to provide 'a complete cooling solution' from 'water, chemistry and digital service'; CoolIT's six-monthly preventive maintenance with coolant analysis, two-to-five-year SLAs and the post-close bundling of 3D TRASAR monitoring; the field anecdote that a hyperscaler's inadequate flushing clogged filters 'within minutes'; Ecolab's 25-percent operating-margin target for the segment. The risk is that hyperscalers run their own fluid programmes (OCP quarterly testing guidance) and treat the CDU as a commodity.",
+  "4. **(Moderate confidence)** We assess CoolIT's customer base is concentrated in a small number of unnamed hyperscalers and that the concentration is undisclosed by design. Basis: 'one large cloud service provider requested thousands of skidded CDUs'; Ecolab's reference to 'major hyperscaler and colocation customers'; no customer in this corpus named by either side; Dell'Oro's note that Aaon's 'deep hyperscaler partnerships and the ability to deliver highly customized solutions can quickly translate into market share gains' — which cuts both ways for an incumbent. Ecolab's segment reporting will not resolve this.",
+  "5. **(Moderate confidence)** We assess NVIDIA sets CoolIT's roadmap on both the demand and the specification side, and that the Vera Rubin generation shifts value toward warm-water CDU design and away from the cold plate as the constraint. Basis: every CDU is rated in GB200/GB300 NVL72 racks; the cold-plate demonstrators (4 kW, 15 kW at 45 °C) are aimed at NVIDIA's stated 45 °C supply direction; independent estimates put Rubin racks at 180–220 kW against 120–140 kW for Blackwell; and CoolIT's own January 2026 post argues that 45 °C water 'does not magically eliminate the need for mechanical cooling'. The company has claimed no product for Vera Rubin NVL72 — a gap to watch on 28 September.",
+  "6. **(Low confidence)** We assess the OEM channel is more contestable than the '4 of the top 5' phrasing implies. Basis: Supermicro's and Lenovo's own materials describe in-house CDUs and cold plates with no CoolIT mention; Dell lists JetCool as an OEM partner alongside its CoolIT-factory-installed history; HPE's quoted collaboration dates from 2020 and Gigabyte pairs CoolIT with Motivair. Against this: Dell's factory-installed DLC since 2017, the El Capitan and Frontier credits, and the NVIDIA RVL route to every ODM.",
+  "7. **(Low confidence)** We assess the two premises the commissioning brief carried — KKR ownership and a 2022 jury verdict — are the kind of errors that propagate through a corpus, and we record the corrections as findings. Basis: Ecolab's SEC-filed release and 10-Q for the ownership; the RECAP-hosted summary-judgment order, the Asetek and CoolIT statements and the Federal Circuit opinions for the litigation. The 'December jury verdict' belongs to Asetek's case against Cooler Master (2014), not to CoolIT.",
+  "Collection gap: CoolIT publishes no revenue, margin, installed-megawatt or annual unit figure; the two Asian contract manufacturers are unnamed; CDU weights, heat-exchanger type, input voltage and coolant temperature limits beyond the ASHRAE class are not published; no hyperscaler, colocation or neocloud customer is named by any source; the full KKR 2023 and 2026 releases and CoolIT's own Ecolab announcement were not readable (403/404); Ken Lau has no headshot; the board and reporting line under Ecolab are not disclosed. Note that 'Switch Datacenters', a Dutch operator CoolIT partnered with in 2023, is not the Switch covered in this corpus and no link is recorded.",
+  "**INDICATORS TO WATCH** — *28 September 2026 — the next-generation CDU:* a named capacity above 2 MW and any Vera Rubin NVL72 rack rating would confirm Judgment 2 and close the Rubin gap in Judgment 5; a re-badged CHx2000 would not. *Late October 2026 — Ecolab's Q3 10-Q:* the first filing to carry CoolIT in the Global Water segment; any disclosed contribution or customer-concentration language tests Judgments 1 and 4. *Q4 2026 — Dell'Oro and Omdia rankings:* whether CoolIT holds its place behind Vertiv or Aaon overtakes it. *2026–2027 — Calgary headcount and a US plant:* Ecolab's stated Calgary growth versus any move of CDU assembly into the United States would test the tariff exposure. *Ecosystem check:* the first covered hyperscaler, neocloud or colocation operator to name CoolIT (or Ecolab) as its liquid-cooling supplier."
+ ],
+ "sources": [
+  {
+   "label": "CoolIT newsroom — Scientific Computing World: 'Coldplate innovation: Raising the bar and the thermal ceiling'",
+   "url": "https://www.coolitsystems.com/resources/news/raising-the-bar-and-the-thermal-ceiling/",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Calgary Herald (via Yahoo News) — 'AI data centre rush feeds expansion, hiring spree at Calgary tech darling CoolIT'",
+   "url": "https://ca.news.yahoo.com/ai-data-centre-rush-feeds-113055448.html",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "CoolIT newsroom — Calgary Herald: AI data centre rush feeds expansion (media pointer)",
+   "url": "https://www.coolitsystems.com/resources/news/ai-data-centre-rush-feeds-expansion/",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "CoolIT — 'The Next-Gen AI CDU' — launching 28 September 2026, engineered for 1 MW+ racks",
+   "url": "https://www.coolitsystems.com/resources/news/the-next-gen-ai-cdu/",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "CoolIT blog — 'CoolIT: Behind the World's Most Advanced AI Coldplates'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-behind-the-worlds-most-advanced-ai-coldplates/",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Ecolab — Form 10-Q for the quarter ended 30 June 2026 (CoolIT acquisition closed 2 July 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000031462/000162828026053886/ecl-20260630.htm",
+   "date": "2026-07"
+  },
+  {
+   "label": "Ecolab IR — 'Ecolab Closes CoolIT Acquisition and Expands AI Cooling Platform as Global High-Tech Business Targets $4 Billion by 2030'",
+   "url": "https://investor.ecolab.com/news/news-details/2026/Ecolab-Closes-CoolIT-Acquisition-and-Expands-AI-Cooling-Platform-as-Global-High-Tech-Business-Targets-4-Billion-by-2030/default.aspx",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "CoolIT newsroom — 'Ecolab has closed its acquisition of CoolIT Systems'",
+   "url": "https://www.coolitsystems.com/resources/news/ecolab-has-closed-its-acquisition-of-coolit-systems/",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "CoolIT blog — 'More Than a Coolant Distribution Unit: How Much More?'",
+   "url": "https://www.coolitsystems.com/resources/news/more-than-a-coolant-distribution-unit-how-much-more/",
+   "date": "2026-06-13"
+  },
+  {
+   "label": "CoolIT blog — 'TCS Engineering: More Than a Design'",
+   "url": "https://www.coolitsystems.com/resources/news/tcs-engineering-more-than-a-design/",
+   "date": "2026-06-13"
+  },
+  {
+   "label": "CoolIT — Technical Brief: 15kW Coldplate (PDF)",
+   "url": "https://44473873.fs1.hubspotusercontent-na1.net/hubfs/44473873/Technical%20Briefs/Tech%20Brief%20-%2015kW%20Coldplate.pdf",
+   "date": "2026-06"
+  },
+  {
+   "label": "CoolIT — Product Sheet: CDU AHx240 (PDF)",
+   "url": "https://44473873.fs1.hubspotusercontent-na1.net/hubfs/44473873/Brochure%20Download/CoolIT-Product%20Sheet-CDU-AHx240.pdf",
+   "date": "2026-06"
+  },
+  {
+   "label": "PR Newswire — 'CoolIT Systems Demonstrates 15kW Coldplate, Extending Single-Phase DLC Roadmap Far Beyond 2030'",
+   "url": "https://www.prnewswire.com/news-releases/coolit-systems-demonstrates-15kw-coldplate-extending-single-phase-dlc-roadmap-far-beyond-2030-302787344.html",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "CoolIT newsroom — 15kW coldplate press release",
+   "url": "https://www.coolitsystems.com/resources/news/15kw_press_release/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "CoolIT newsroom — 15kW Coldplate tech brief page",
+   "url": "https://www.coolitsystems.com/resources/news/15kw-coldplate/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "CoolIT — Product Sheet: CDU CHx2000 (PDF)",
+   "url": "https://44473873.fs1.hubspotusercontent-na1.net/hubfs/44473873/Product%20Specification/CoolIT-Product%20Sheet-CDU-CHx2000.pdf",
+   "date": "2026-05"
+  },
+  {
+   "label": "Calgary Herald — 'Crazy, Cool adventure: the inside story of a Calgary startup's improbable $6.6B journey' (Ecolab purchase; employee payouts)",
+   "url": "https://calgaryherald.com/feature/inside-story-cool-it-calgary-startup-purchase-by-ecolab",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "CoolIT newsroom — Calgary Herald 'Crazy, Cool adventure' (media pointer)",
+   "url": "https://www.coolitsystems.com/resources/news/calgary-herald-crazy-cool-adventure-the-inside-story-of-a-calgary-startups-improbable-6-6b-journey/",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "Alternatives Watch — KKR sells CoolIT Systems to Ecolab for $4.75 billion (exit)",
+   "url": "https://www.alternativeswatch.com/2026/03/25/kkr-coolit-ecolab-sale-exit/",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Calgary.tech — 'CoolIT exit delivers major payout for employees'",
+   "url": "https://calgary.tech/2026/03/25/coolit-exit-delivers-major-payout-for-employees/",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Calgary Herald — 'Calgary firm CoolIT sold in city's biggest-ever tech deal'",
+   "url": "https://calgaryherald.com/business/local-business/calgary-firm-coolit-sold-city-biggest-ever-tech-deal",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Mubadala — 'Mubadala agrees to sell minority stake in CoolIT to Ecolab in KKR-led $4.75 billion transaction'",
+   "url": "https://www.mubadala.com/en/news/mubadala-agrees-to-sell-minority-stake-in-coolit-to-ecolab-in-kkr-led-4-75-billion-transaction",
+   "date": "2026-03"
+  },
+  {
+   "label": "Futurum Group — 'Will Ecolab's $4.75B CoolIT Systems Bet Define the Future of GPU Liquid Cooling?'",
+   "url": "https://futurumgroup.com/insights/will-ecolabs-4-75b-coolit-systems-bet-define-the-future-of-gpu-liquid-cooling/",
+   "date": "2026-03"
+  },
+  {
+   "label": "SEC EDGAR — Ecolab Form 8-K Exhibit 99.1: press release announcing definitive agreement to acquire CoolIT Systems",
+   "url": "https://www.sec.gov/Archives/edgar/data/31462/000110465926032446/tm269446d1_ex99-1.htm",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "Ecolab IR — 'Ecolab to Acquire CoolIT Systems, a Global Leader in Advanced Liquid Cooling for Next-Gen AI Data Centers'",
+   "url": "https://investor.ecolab.com/news/news-details/2026/Ecolab-to-Acquire-CoolIT-Systems-a-Global-Leader-in-Advanced-Liquid-Cooling-for-Next-Gen-AI-Data-Centers/default.aspx",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "CoolIT newsroom — CBC: 'CoolIT Systems, Calgary's homegrown liquid cooling innovator, is making headlines' (media pointer)",
+   "url": "https://www.coolitsystems.com/resources/news/cbc-coolit-systems-calgarys-homegrown-liquid-cooling-innovator-is-making-headlines/",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "Investing.com / Reuters — 'KKR eyes multibillion-dollar sale of data center cooling company, FT reports'",
+   "url": "https://www.investing.com/news/stock-market-news/kkr-eyes-multibilliondollar-sale-of-data-center-cooling-company-ft-reports-4548581",
+   "date": "2026-03-08"
+  },
+  {
+   "label": "CoolIT blog — 'CHx2000: The AI CDU'",
+   "url": "https://www.coolitsystems.com/resources/news/chx2000-the-ai-cdu/",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "CoolIT blog — 'Liquid Cooling AI Infrastructure'",
+   "url": "https://www.coolitsystems.com/resources/news/liquid-cooling-ai-infrastructure/",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "NVIDIA — DGX GB200 / DGX GB Rack Scale Systems User Guide (PDF; leak detection and rack cooling)",
+   "url": "https://docs.nvidia.com/dgx/dgxgb200-user-guide/dgxgb200-user-guide.pdf",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "PR Newswire — 'CoolIT Systems Continues Rapid Growth as It Celebrates 25 Years'",
+   "url": "https://www.prnewswire.com/news-releases/coolit-systems-continues-rapid-growth-as-it-celebrates-25-years-302696525.html",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "CoolIT newsroom — 25 years of liquid cooling",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-25-years-liquid-cooling/",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Calgary.tech — 'CoolIT Systems scales liquid cooling for AI era'",
+   "url": "https://calgary.tech/2026/02/25/coolit-systems-scales-liquid-cooling-for-ai-era/",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "CoolIT blog — Data center cooling trends",
+   "url": "https://www.coolitsystems.com/resources/news/data-center-cooling-trends/",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "CoolIT — Customer showcase: 'How GWDG Enables AI with CoolIT's Direct Liquid Cooling'",
+   "url": "https://www.coolitsystems.com/resources/news/how-gwdg-enables-ai-with-direct-liquid-cooling/",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "CoolIT blog — 'Warm Water Cooling and AI: The Future Is Here, But It's Not Chiller-Free'",
+   "url": "https://www.coolitsystems.com/resources/news/warm-water-cooling-and-ai-the-future-is-here-but-its-not-chiller-free/",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "CoolIT / HPCwire — 'Liquid Cooling Without the Hype'",
+   "url": "https://www.coolitsystems.com/resources/news/liquid-cooling-without-the-hype/",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "CoolIT blog — 'Choosing the Right CDU'",
+   "url": "https://www.coolitsystems.com/resources/news/choosing-the-right-cdu-2/",
+   "date": "2026-01-12"
+  },
+  {
+   "label": "Dell'Oro Group — 'Data Center Liquid Cooling Market to Approach $7 Billion by 2029 as AI Deployments Accelerate'",
+   "url": "https://www.delloro.com/news/data-center-liquid-cooling-market-to-approach-7-billion-by-2029-as-ai-deployments-accelerate/",
+   "date": "2026-01-08"
+  },
+  {
+   "label": "CoolIT blog — 'The Secret to Liquid Cooling NPI Risk Reduction'",
+   "url": "https://www.coolitsystems.com/resources/news/the-secret-to-liquid-cooling-npi-risk-reduction/",
+   "date": "2025-12-11"
+  },
+  {
+   "label": "CoolIT blog — 'Quality in Liquid Cooling: Inside CoolIT's Customer-Centric Approach to Reliability'",
+   "url": "https://www.coolitsystems.com/resources/news/quality-in-liquid-cooling-inside-coolits-customer-centric-approach-to-reliability/",
+   "date": "2025-12-10"
+  },
+  {
+   "label": "CoolIT blog — 'CoolIT Systems Scales North American Manufacturing to Cool AI's Next Wave' (Starfield facility)",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-scales-north-american-manufacturing-to-cool-ais-next-wave/",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "CoolIT blog — 'CoolIT Systems' 4000W Breakthrough: Redefining Single-Phase DLC for Ultra-High-Wattage AI Processors'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-4000w-breakthrough-redefining-single-phase-dlc-for-ultra-high-wattage-ai-processors/",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "CoolIT blog — How to improve data center efficiency",
+   "url": "https://www.coolitsystems.com/resources/news/how-to-improve-data-center-efficiency/",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "CoolIT blog — 'Design to Deployment: How Liquid Cooling Services Enable Reliable Adoption of Liquid Cooling'",
+   "url": "https://www.coolitsystems.com/resources/news/design-to-deployment-how-liquid-cooling-services-enable-reliable-adoption-of-liquid-cooling-2/",
+   "date": "2025-11-20"
+  },
+  {
+   "label": "CoolIT blog — Data center liquid cooling solutions",
+   "url": "https://www.coolitsystems.com/resources/news/data-center-liquid-cooling-solutions/",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "CIBSE Journal — CPD Module 254: liquid cooling for data centres (TCS and FWS loops)",
+   "url": "https://www.cibsejournal.com/cpd/modules/2025-09-lcdca/",
+   "date": "2025-10"
+  },
+  {
+   "label": "Dell'Oro Group — 'Market at the Boiling Point: Is the CDU Space Becoming Saturated?'",
+   "url": "https://www.delloro.com/market-at-the-boiling-point-is-the-cdu-space-becoming-saturated/",
+   "date": "2025-09-30"
+  },
+  {
+   "label": "Dell'Oro Group — 'Data Center Physical Infrastructure Maintains Strong Growth Trajectory, Up 18 Percent Y/Y in 2Q 2025'",
+   "url": "https://www.delloro.com/news/data-center-physical-infrastructure-maintains-strong-growth-trajectory-up-18-percent-y-y-in-2q-2025/",
+   "date": "2025-09-10"
+  },
+  {
+   "label": "Vertiv — 'Evaluating Coolant Distribution Unit (CDU) Architectures: Advantages, Considerations and Best Use Cases'",
+   "url": "https://www.vertiv.com/en-asia/insights/articles/educational-articles/evaluating-coolant-distribution-unit-cdu-architectures-advantages-considerations-and-best-use-cases/",
+   "date": "2025-09"
+  },
+  {
+   "label": "CoolIT blog — Coolant distribution units — liquid cooling",
+   "url": "https://www.coolitsystems.com/resources/news/coolant-distribution-units-liquid-cooling/",
+   "date": "2025-07-03"
+  },
+  {
+   "label": "CoolIT blog — 'Rising to AI's Cooling Demands: How CoolIT Delivers Speed, Scale and Flexibility'",
+   "url": "https://www.coolitsystems.com/resources/news/rising-to-ais-cooling-demands-how-coolit-delivers-speed-scale-and-flexibility/",
+   "date": "2025-06-26"
+  },
+  {
+   "label": "CoolIT newsroom — Fierce Network: 'CoolIT's CEO has a plan to beat market growth' (Waxman interview pointer)",
+   "url": "https://www.coolitsystems.com/resources/news/exclusive-coolits-ceo-has-a-plan-to-beat-market-growth/",
+   "date": "2025-06-11"
+  },
+  {
+   "label": "CoolIT blog — 'Cooling AI at Scale: Are CDUs the Bottleneck or the Breakthrough?'",
+   "url": "https://www.coolitsystems.com/resources/news/cooling-ai-at-scale-are-cdus-the-bottleneck-or-the-breakthrough/",
+   "date": "2025-06-10"
+  },
+  {
+   "label": "CoolIT — CIT-RPT-002: Fighting Against Forced Labour and Child Labour in Supply Chains Act report, FY2024 (PDF)",
+   "url": "https://www.coolitsystems.com/wp-content/uploads/2025/07/CIT-RPT-002-Report_2025.pdf",
+   "date": "2025-05-30"
+  },
+  {
+   "label": "CoolIT — 'Erosion in Liquid Cooling Systems: Investigating Velocity-Dependent Degradation Mechanisms'",
+   "url": "https://www.coolitsystems.com/resources/news/erosion-in-liquid-cooling-systems-investigating-velocity-dependent-degradation-mechanisms/",
+   "date": "2025-05-27"
+  },
+  {
+   "label": "CoolIT blog — How to choose a data center cooling company",
+   "url": "https://www.coolitsystems.com/resources/news/how-to-choose-data-center-cooling-company/",
+   "date": "2025-05-03"
+  },
+  {
+   "label": "CoolIT newsroom — 'CoolIT Welcomes Jason Waxman as CEO'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-welcomes-jason-waxman-as-ceo/",
+   "date": "2025-04-22"
+  },
+  {
+   "label": "PR Newswire — 'CoolIT Welcomes Jason Waxman as CEO'",
+   "url": "https://www.prnewswire.com/news-releases/coolit-welcomes-jason-waxman-as-ceo-302434395.html",
+   "date": "2025-04-22"
+  },
+  {
+   "label": "PR Newswire — 'CoolIT Systems Announces Further Breakthroughs in Row-Based Coolant Distribution Unit Performance' (CHx2000)",
+   "url": "https://www.prnewswire.com/news-releases/coolit-systems-announces-further-breakthroughs-in-row-based-coolant-distribution-unit-performance-302428345.html",
+   "date": "2025-04-15"
+  },
+  {
+   "label": "CoolIT newsroom — CHx2000 launch release",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-announces-further-breakthroughs-in-row-based-coolant-distribution-unit-performance/",
+   "date": "2025-04-15"
+  },
+  {
+   "label": "PR Newswire — 'CoolIT Announces the World's Highest-Performance Row-Based Coolant Distribution Unit' (CHx1500)",
+   "url": "https://www.prnewswire.com/news-releases/coolit-announces-the-worlds-highest-performance-row-based-coolant-distribution-unit-302402667.html",
+   "date": "2025-03-17"
+  },
+  {
+   "label": "PR Newswire — 'CoolIT Showcases AI-Ready Liquid Cooling Technology at NVIDIA GTC 2025'",
+   "url": "https://www.prnewswire.com/news-releases/coolit-showcases-ai-ready-liquid-cooling-technology-at-nvidia-gtc-2025-302401702.html",
+   "date": "2025-03-14"
+  },
+  {
+   "label": "PR Newswire — 'CoolIT's 4000W Coldplate Establishes Single-Phase Direct Liquid Cooling Technology Leadership'",
+   "url": "https://www.prnewswire.com/news-releases/coolits-4000w-coldplate-establishes-single-phase-direct-liquid-cooling-technology-leadership-302401512.html",
+   "date": "2025-03-13"
+  },
+  {
+   "label": "Open Compute Project — 'Modular Technology Cooling System for Cloud Scale: Design, Delivery, Selection Guidance', Rev 1 (PDF)",
+   "url": "https://ocp-all.groups.io/g/OCP-DCF/attachment/498/4/2025%20Modular%20TCS%20@%20CloudScale%20Design,%20Delivery,%20Selection%20Guidance%20-%20Rev%201%20March.pdf",
+   "date": "2025-03"
+  },
+  {
+   "label": "CoolIT — Product Brochure: CHx1500 (PDF)",
+   "url": "https://44473873.fs1.hubspotusercontent-na1.net/hubfs/44473873/Brochure%20Download/CoolIT-ProductBrochure-CHx1500.pdf",
+   "date": "2025-03"
+  },
+  {
+   "label": "CoolIT — Product Brochure: AHx180 (PDF)",
+   "url": "https://44473873.fs1.hubspotusercontent-na1.net/hubfs/44473873/Brochure%20Download/CoolIT-ProductBrochure-AHx180.pdf",
+   "date": "2025-01"
+  },
+  {
+   "label": "PR Newswire — 'CoolIT Systems Continues to Expand Manufacturing Capabilities' (25x Calgary capacity expansion)",
+   "url": "https://www.prnewswire.com/news-releases/coolit-systems-continues-to-expand-manufacturing-capabilities-302330782.html",
+   "date": "2024-12-12"
+  },
+  {
+   "label": "CoolIT newsroom — 'CoolIT Systems Growing Liquid-Cooling Product Line, Manufacturing Capacity to Support NVIDIA Blackwell Platform Ramp'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-growing-liquid-cooling-product-line-manufacturing-capacity-to-support-nvidia-blackwell-platform-ramp/",
+   "date": "2024-10-15"
+  },
+  {
+   "label": "HPCwire — 'CoolIT Systems Joins NVIDIA Partner Network, Unveils AI-Centric Liquid Cooling Solutions'",
+   "url": "https://www.hpcwire.com/off-the-wire/coolit-systems-joins-nvidia-partner-network-unveils-ai-centric-liquid-cooling-solutions/",
+   "date": "2024-10-15"
+  },
+  {
+   "label": "PR Newswire — Supermicro: 'Solidifies Position as a Leader in Complete Rack Scale Liquid Cooling Solutions' (in-house DLC)",
+   "url": "https://www.prnewswire.com/news-releases/supermicro-solidifies-position-as-a-leader-in-complete-rack-scale-liquid-cooling-solutions----currently-shipping-over-100-000-gpus-per-quarter-302268615.html",
+   "date": "2024-10-07"
+  },
+  {
+   "label": "CoolIT blog — 'Considerations for Selecting a Row-Based CDU for Your Data Center'",
+   "url": "https://www.coolitsystems.com/resources/news/considerations-for-selecting-a-row-based-cdu-for-your-data-center/",
+   "date": "2024-09-10"
+  },
+  {
+   "label": "Liquid Cooling Coalition — founding members (CoolIT Systems)",
+   "url": "https://www.lccoalition.com/",
+   "date": "2024-08-06"
+  },
+  {
+   "label": "Upsite Technologies — 'Major changes to ASHRAE's fifth edition of Thermal Guidelines, part 3: liquid cooling chapter updates'",
+   "url": "https://www.upsite.com/blog/major-changes-to-ashraes-fifth-edition-of-thermal-guidelines-part-3-liquid-cooling-chapter-updates/",
+   "date": "2024-07-31"
+  },
+  {
+   "label": "CoolIT newsroom — 'CoolIT Systems Launches Three High-Density Coolant Distribution Units' (AHx240, AHx180, CHx500)",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-launches-three-high-density-coolant-distribution-units/",
+   "date": "2024-07-09"
+  },
+  {
+   "label": "CoolIT newsroom — 'CoolIT Systems Receives the International Scaleup of the Year Award'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-receives-the-international-scaleup-of-the-year-award/",
+   "date": "2024-06-21"
+  },
+  {
+   "label": "Omdia — 'Omdia research predicts data center cooling market to reach $16.87 billion in 2028' (CoolIT named top direct-to-chip vendor)",
+   "url": "https://omdia.tech.informa.com/pr/2024/jun/omdia-research-predicts-data-center-cooling-market-to-reach-16point87-billion-dollars-in-2028",
+   "date": "2024-06-18"
+  },
+  {
+   "label": "CoolIT newsroom — 'CoolIT Systems Unveils OMNI All-Metal Coldplates'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-unveils-omni-all-metal-coldplates/",
+   "date": "2024-05-09"
+  },
+  {
+   "label": "IPWatchdog — 'Federal Circuit Reverses PTAB Claim Construction, Reviving Cooling Patent' (CoolIT v. Vidal)",
+   "url": "https://ipwatchdog.com/2024/03/08/federal-circuit-reverses-ptab-claim-construction-reviving-cooling-patent/",
+   "date": "2024-03-08"
+  },
+  {
+   "label": "US Court of Appeals for the Federal Circuit — CoolIT Systems, Inc. v. Vidal, No. 22-1221, opinion (PDF)",
+   "url": "https://www.cafc.uscourts.gov/opinions-orders/22-1221.OPINION.3-7-2024_2282155.pdf",
+   "date": "2024-03-07"
+  },
+  {
+   "label": "Schneider Electric (Data Center Frontier) — 'Navigating Liquid Cooling Architectures for Data Centers: Capacity and Form Factor Considerations for CDUs'",
+   "url": "https://www.datacenterfrontier.com/sponsored/article/33037684/schneider-electric-navigating-liquid-cooling-architectures-for-data-centers-capacity-and-form-factor-considerations-for-cdus",
+   "date": "2024-02-28"
+  },
+  {
+   "label": "CoolIT newsroom — 'CoolIT Systems Reports Unprecedented Growth Fueled by Generative AI Expansion in 2023'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-reports-unprecedented-growth-fueled-by-generative-ai-expansion-in-2023/",
+   "date": "2024-02-26"
+  },
+  {
+   "label": "US Court of Appeals for the Federal Circuit — Asetek Danmark A/S v. Vidal, No. 22-1050, Rule 36 judgment (PDF)",
+   "url": "https://www.cafc.uscourts.gov/opinions-orders/22-1050.RULE_36_JUDGMENT.2-12-2024_2268379.pdf",
+   "date": "2024-02-12"
+  },
+  {
+   "label": "CoolIT / HPCwire — energy-efficiency white paper: direct liquid cooling and data-centre energy (PDF)",
+   "url": "https://www.coolitsystems.com/wp-content/uploads/2025/07/HPCW-CoolIT-Energy-WP-v9-1-1.pdf",
+   "date": "2024-02"
+  },
+  {
+   "label": "Giga Computing — news: Motivair joins CoolIT Systems as GIGABYTE direct-liquid-cooling technology partner",
+   "url": "https://www.gigacomputing.com/en/news-detail/019/",
+   "date": "2023-11-07"
+  },
+  {
+   "label": "CoolIT newsroom — 'CoolIT Systems Receives the Transaction of the Year Award by START Alberta'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-receives-the-transaction-of-the-year-award-by-start-alberta/",
+   "date": "2023-10-23"
+  },
+  {
+   "label": "CoolIT newsroom — 'CoolIT Systems Partners with Switch Datacenters to Launch Advanced Energy-Efficient Data Centers'",
+   "url": "https://www.coolitsystems.com/resources/news/coolit-systems-partners-with-switch-datacenters-to-launch-advanced-energy-efficient-data-centers/",
+   "date": "2023-10-04"
+  },
+  {
+   "label": "StorageReview — 'Dell PowerEdge XE9640 Liquid-Cooled GPU Server Deep Dive' (CoolIT partnership)",
+   "url": "https://www.storagereview.com/review/dell-poweredge-xe9640-liquid-cooled-gpu-server-deep-dive",
+   "date": "2023-09-20"
+  },
+  {
+   "label": "CoolIT blog — 'Leading the Way in Direct Liquid Cooling: CoolIT Systems' Manufacturing Revolution'",
+   "url": "https://www.coolitsystems.com/resources/news/leading-the-way-in-direct-liquid-cooling-coolit-systems-manufacturing-revolution/",
+   "date": "2023-09-06"
+  },
+  {
+   "label": "CoolIT newsroom — 'KKR and Mubadala Partner to Invest in CoolIT Systems'",
+   "url": "https://www.coolitsystems.com/resources/news/kkr-and-mubadala-partner-to-invest-in-coolit-systems/",
+   "date": "2023-07-06"
+  },
+  {
+   "label": "CoolIT newsroom — 'KKR to Acquire CoolIT Systems'",
+   "url": "https://www.coolitsystems.com/resources/news/kkr-to-acquire-coolit-systems/",
+   "date": "2023-05-03"
+  },
+  {
+   "label": "Globe and Mail (BusinessWire syndication) — 'KKR to Acquire CoolIT Systems'",
+   "url": "https://www.theglobeandmail.com/investing/markets/stocks/KKR/pressreleases/16522685/kkr-to-acquire-coolit-systems/",
+   "date": "2023-05-02"
+  },
+  {
+   "label": "Kirkland & Ellis — 'Kirkland Advises KKR on Acquisition of CoolIT'",
+   "url": "https://www.kirkland.com/news/press-release/2023/05/kirkland-advises-kkr-on-acquisition-of-coolit",
+   "date": "2023-05"
+  },
+  {
+   "label": "Calgary.tech — Alberta tech companies named to Deloitte Technology Fast 50 (2022)",
+   "url": "https://calgary.tech/2022/11/16/alberta-tech-companies-named-deloitte-fast-50/",
+   "date": "2022-11-16"
+  },
+  {
+   "label": "Cooley — 'CoolIT, Corsair Secure Summary Judgment of Non-Infringement in Patent Dispute'",
+   "url": "https://www.cooley.com/news/coverage/2022/2022-10-31-coolit-corsair-secure-summary-judgment-of-non-infringement-in-patent-dispute",
+   "date": "2022-10-31"
+  },
+  {
+   "label": "HPCwire — 'District Court Rejects Asetek Patent Claims and Determines CoolIT Systems Non-Infringing'",
+   "url": "https://www.hpcwire.com/off-the-wire/district-court-rejects-asetek-patent-claims-and-determines-coolit-systems-non-infringing/",
+   "date": "2022-10-05"
+  },
+  {
+   "label": "Asetek (Cision) — 'Asetek — Litigation Update'",
+   "url": "https://news.cision.com/asetek/r/asetek---litigation-update,c3642084",
+   "date": "2022-10-04"
+  },
+  {
+   "label": "CourtListener RECAP — Asetek Danmark A/S v. CoolIT Systems, Inc. (N.D. Cal.), order on summary judgment, Dkt. 504 (PDF)",
+   "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.337454/gov.uscourts.cand.337454.504.0.pdf",
+   "date": "2022-09-11"
+  },
+  {
+   "label": "Network World — 'Gigabyte and CoolIT partner for liquid-cooled servers'",
+   "url": "https://www.networkworld.com/article/970268/gigabyte-and-coolit-partner-for-liquid-cooled-servers.html",
+   "date": "2021-09-28"
+  },
+  {
+   "label": "Cabling Installation & Maintenance — 'HPE, CoolIT renew collaboration on HPC direct liquid cooling designs'",
+   "url": "https://www.cablinginstall.com/data-center/article/14186816/hewlett-packard-enterprise-hpe-coolit-hpe-renew-collaboration-on-hpc-direct-liquid-cooling-designs",
+   "date": "2020-11-05"
+  },
+  {
+   "label": "HPCwire — 'CoolIT Continues Collaboration with HPE on Direct Liquid Cooling Designs for HPC Systems'",
+   "url": "https://www.hpcwire.com/off-the-wire/coolit-continues-collaboration-with-hpe-on-direct-liquid-cooling-designs-for-hpc-systems/",
+   "date": "2020-11-03"
+  },
+  {
+   "label": "HPCwire — 'CoolIT Systems Appoints Steve Walton as CEO'",
+   "url": "https://www.hpcwire.com/off-the-wire/coolit-systems-appoints-steve-walton-as-ceo/",
+   "date": "2020-03-18"
+  },
+  {
+   "label": "BetaKit — 'Deloitte unveils Canada's Technology Fast 50' (2014; CoolIT ranked 28th)",
+   "url": "https://betakit.com/deloitte-unveils-canadas-technology-fast-50/",
+   "date": "2014-11-13"
+  },
+  {
+   "label": "bit-tech — 'CoolIT sues Asetek over Split-Flow patent'",
+   "url": "https://bit-tech.net/news/hardware/2014/06/11/coolit-split-flow-asetek/1",
+   "date": "2014-06-11"
+  },
+  {
+   "label": "HPCwire — 'CoolIT Partners with Penguin Computing' (Relion 2808GT Rack DCLC)",
+   "url": "https://www.hpcwire.com/off-the-wire/coolit-partners-penguin-computing/",
+   "date": "2014-03-25"
+  },
+  {
+   "label": "bit-tech — 'Asetek sues CoolIT' (2012 patent filing)",
+   "url": "https://bit-tech.net/news/hardware/2012/08/31/astek-sues-coolit/1",
+   "date": "2012-08-31"
+  },
+  {
+   "label": "CoolIT Systems — homepage (stat strip; Ecolab banner)",
+   "url": "https://www.coolitsystems.com/"
+  },
+  {
+   "label": "CoolIT — About",
+   "url": "https://www.coolitsystems.com/about/"
+  },
+  {
+   "label": "CoolIT — Company overview",
+   "url": "https://www.coolitsystems.com/about/coolit-overview/"
+  },
+  {
+   "label": "CoolIT — History",
+   "url": "https://www.coolitsystems.com/about/history/"
+  },
+  {
+   "label": "CoolIT — Leadership",
+   "url": "https://www.coolitsystems.com/about/leadership/"
+  },
+  {
+   "label": "CoolIT — Reports (compliance)",
+   "url": "https://www.coolitsystems.com/about/reports/"
+  },
+  {
+   "label": "CoolIT — Coolant Distribution Units (product family)",
+   "url": "https://www.coolitsystems.com/products-services/data-center-products/cooling-distribution-units/"
+  },
+  {
+   "label": "CoolIT — CHx2000 CDU product page",
+   "url": "https://www.coolitsystems.com/cdu-product/chx2000/"
+  },
+  {
+   "label": "CoolIT — AHx240 CDU product page",
+   "url": "https://www.coolitsystems.com/cdu-product/ahx240/"
+  },
+  {
+   "label": "CoolIT — AHx180 CDU product page",
+   "url": "https://www.coolitsystems.com/cdu-product/ahx180/"
+  },
+  {
+   "label": "CoolIT — CHx200 CDU product page",
+   "url": "https://www.coolitsystems.com/cdu-product/chx200/"
+  },
+  {
+   "label": "CoolIT — CHx80 CDU product page",
+   "url": "https://www.coolitsystems.com/cdu-product/chx80/"
+  },
+  {
+   "label": "CoolIT — Coldplate technology",
+   "url": "https://www.coolitsystems.com/coldplate-technology/"
+  },
+  {
+   "label": "CoolIT — NVIDIA coldplates (CP-NV series)",
+   "url": "https://www.coolitsystems.com/nvidia-coldplates/"
+  },
+  {
+   "label": "CoolIT — AMD coldplates (CP-AMD series)",
+   "url": "https://www.coolitsystems.com/amd-coldplates/"
+  },
+  {
+   "label": "CoolIT — Intel coldplates (CP-INT series)",
+   "url": "https://www.coolitsystems.com/intel-coldplates/"
+  },
+  {
+   "label": "CoolIT — Coldplates for other components (OSFP, DIMM)",
+   "url": "https://www.coolitsystems.com/coldplates/other-components/"
+  },
+  {
+   "label": "CoolIT — Coldplate loops",
+   "url": "https://www.coolitsystems.com/products-services/server-products/coldplate-loops/"
+  },
+  {
+   "label": "CoolIT — Rack manifolds",
+   "url": "https://www.coolitsystems.com/products-services/server-products/rack-manifolds/"
+  },
+  {
+   "label": "CoolIT — Technology Cooling System (TCS)",
+   "url": "https://www.coolitsystems.com/products-services/data-center-products/technology-cooling-system/"
+  },
+  {
+   "label": "CoolIT — Direct liquid cooled servers",
+   "url": "https://www.coolitsystems.com/products-services/data-center-products/direct-liquid-cooled-servers/"
+  },
+  {
+   "label": "CoolIT — Global Professional Services (coolant specification)",
+   "url": "https://www.coolitsystems.com/products-services/global-professional-services/"
+  },
+  {
+   "label": "CoolIT — Co-innovation (NVIDIA Partner Network)",
+   "url": "https://www.coolitsystems.com/capabilities/co-innovation/"
+  },
+  {
+   "label": "CoolIT — Co-innovation: NVIDIA (RVL table; NA2 loop)",
+   "url": "https://www.coolitsystems.com/capabilities/co-innovation/nvidia/"
+  },
+  {
+   "label": "CoolIT — Design engineering",
+   "url": "https://www.coolitsystems.com/capabilities/design-engineering/"
+  },
+  {
+   "label": "CoolIT — Manufacturing",
+   "url": "https://www.coolitsystems.com/capabilities/manufacturing/"
+  },
+  {
+   "label": "CoolIT — Testing and validation (Liquid Lab)",
+   "url": "https://www.coolitsystems.com/capabilities/testing-and-validation/"
+  },
+  {
+   "label": "CoolIT — Data center deployments map",
+   "url": "https://www.coolitsystems.com/resources/data-center-deployments-map/"
+  },
+  {
+   "label": "CoolIT — Understanding liquid cooling",
+   "url": "https://www.coolitsystems.com/resources/understanding-liquid-cooling/"
+  },
+  {
+   "label": "CoolIT — Server loop technology (Split-Flow)",
+   "url": "https://www.coolitsystems.com/server-loop-technology/"
+  },
+  {
+   "label": "CoolIT — Patents (virtual marking)",
+   "url": "https://www.coolitsystems.com/patents/"
+  },
+  {
+   "label": "CoolIT — Contact (sites and legal entities)",
+   "url": "https://www.coolitsystems.com/contact/contact/"
+  },
+  {
+   "label": "CoolIT — Events",
+   "url": "https://www.coolitsystems.com/events/"
+  },
+  {
+   "label": "CourtListener — docket: Asetek Danmark A/S v. CoolIT Systems, Inc., N.D. Cal. (filed 23 Jan 2019, terminated 6 Oct 2022)",
+   "url": "https://www.courtlistener.com/docket/14660522/asetek-danmark-as-v-coolit-systems-inc/"
+  },
+  {
+   "label": "CourtListener — docket: Asetek A/S v. CoolIT Systems, Inc. (filed 11 Jun 2014, terminated 18 Feb 2015)",
+   "url": "https://www.courtlistener.com/docket/4180918/asetek-as-v-coolit-systems-inc/"
+  },
+  {
+   "label": "CourtListener — docket: CoolIT Systems, Inc. v. Asetek Holdings, Inc., D. Del. (filed 10 Jun 2014, dismissed 1 May 2017)",
+   "url": "https://www.courtlistener.com/docket/4220538/coolit-systems-inc-v-asetek-holdings-inc/"
+  },
+  {
+   "label": "Justia — Asetek v. CoolIT (N.D. Cal. 2012), Doc. 28: motion to stay pending inter partes reexamination (PDF)",
+   "url": "https://cases.justia.com/federal/district-courts/california/candce/3:2012cv04498/258428/28/0.pdf"
+  },
+  {
+   "label": "ASHRAE TC 9.9 — 'Emergence and Expansion of Liquid Cooling in Mainstream Data Centers' white paper (PDF)",
+   "url": "https://www.ashrae.org/file%20library/technical%20resources/bookstore/emergence-and-expansion-of-liquid-cooling-in-mainstream-data-centers_wp.pdf"
+  },
+  {
+   "label": "Dell Technologies — 'Liquid Coolants Guidance for Technology Cooling System and Facility Water System' white paper (PDF)",
+   "url": "https://www.delltechnologies.com/asset/en-us/products/servers/industry-market/liquid-coolants-guidance-for-technology-cooling-system-and-facility-water-system-whitepaper.pdf"
+  },
+  {
+   "label": "Dober — PG-25 coolant for data centers (product page)",
+   "url": "https://www.dober.com/performance-fluids/resources/pg-25-coolant-data-centers"
+  },
+  {
+   "label": "Vertiv — 'Understanding Coolant Distribution Units (CDUs) for Liquid Cooling'",
+   "url": "https://www.vertiv.com/en-emea/insights/articles/educational-articles/understanding-coolant-distribution-units-cdus-for-liquid-cooling/"
+  },
+  {
+   "label": "NVIDIA — GB200 NVL72 product page",
+   "url": "https://www.nvidia.com/en-us/data-center/gb200-nvl72/"
+  },
+  {
+   "label": "NVIDIA — GB300 NVL72 product page",
+   "url": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/"
+  },
+  {
+   "label": "NVIDIA — Vera Rubin NVL72 product page",
+   "url": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/"
+  },
+  {
+   "label": "SemiAnalysis — 'Vera Rubin: Extreme Co-Design, an Evolution'",
+   "url": "https://newsletter.semianalysis.com/p/vera-rubin-extreme-co-design-an-evolution"
+  }
+ ],
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
+}

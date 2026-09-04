@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-04",
- "companies": 109,
+ "companies": 112,
  "edges": [
   {
    "a": "abb",
@@ -1390,6 +1390,22 @@
     }
    ],
    "last": "2025-11-05"
+  },
+  {
+   "a": "aep",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "A century-scale client per the firm's own account: D.C. Cook's digital upgrade ('AEP's preferred digital engineering service provider'), three transmission and substation EPC contracts through the Sargent & Lundy–EC Source joint venture (2016), and a place on the 2020 top-ten nuclear services list filed with the NRC.",
+     "context": "The firm describes AEP as one of its longest-standing clients (a 2023 first-party post whose URL could not be re-located is not cited). D.C. Cook's reactor-controls digital upgrade ('Over $50 million'; the firm calls itself 'AEP's preferred digital engineering service provider'); three EPC contracts for transmission and substation upgrades awarded in 2016 to the Sargent & Lundy–EC Source joint venture ECSL, with Sargent & Lundy 'providing the project management and engineering & design' and EC Source the construction; a 69/138 kV infrastructure programme across West Virginia, Texas, Ohio, Indiana and Michigan. AEP also appears on the firm's 2020 top-ten nuclear services client list filed with the NRC.",
+     "source": "https://www.sargentlundy.com/news/aep-awards-three-epc-contracts-to-sargent-lundy-and-ec-source-for-transmission-substation-upgrade-projects/",
+     "status": "active",
+     "via": "Nuclear digital upgrades; transmission and substation EPC"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "aep",
@@ -3639,6 +3655,59 @@
    "last": ""
   },
   {
+   "a": "bechtel",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Integrated project delivery partners with TVA and GE Vernova Hitachi on the Clinch River SMR; Bechtel's 2025 Global Supplier Award went to Sargent & Lundy for specialty equipment design.",
+     "context": "Bechtel's release (2025-01-23): 'Sargent & Lundy will lead the detailed design for the site-specific implementation of the BWRX-300 at the Clinch River Nuclear site', with Bechtel contributing construction expertise; the team applied for DOE's Gen III+ SMR funding, awarded at USD 400 million in December 2025. A Sargent & Lundy project sheet records a '2025 Bechtel Global Supplier Award for overcoming complex equipment design challenges'.",
+     "source": "https://www.bechtel.com/press-releases/tva-bechtel-sargent-lundy-and-ge-hitachi-plan-initial-construction-and-design-for-potential-clinch-river-smr/",
+     "status": "active",
+     "since": "2025-01",
+     "via": "Clinch River BWRX-300 integrated project delivery"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Second, nuclear: TVA's owner's engineer and detailed-design lead for the Clinch River BWRX-300 alongside Bechtel and GE Vernova Hitachi; NRC-inspected design packages for the Palisades restart and the Dow / X-energy Xe-100 site; the 2020 top-ten nuclear services clients read TVA, Exelon, Dominion, PSEG, AEP, DTE, Xcel Energy, Southern Nuclear, APS and Ameren.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Nuclear — new build, SMR licensing and design, restarts, uprates and life extension",
+     "date": "",
+     "text": "nuclear power plants') and the design partner of choice for BWRX-300, Xe-100 and NuScale deployments; Bechtel builds, Kiewit and Fluor compete on construction and EPCM, Burns & McDonnell and Black & Veatch (Cascade JV) compete on SMR owner's engineering.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-11",
+     "text": "DOE awards TVA USD 400 million under the Generation III+ SMR programme for Clinch River; the team is TVA, Sargent & Lundy, GE Vernova Hitachi and Bechtel — Federal money now sits behind the project the firm is detailed-design lead on.",
+     "src": "https://www.sargentlundy.com/news/department-of-energy-grants-400m-for-tva-small-modular-reactor-project/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-23",
+     "text": "TVA selects Bechtel, Sargent & Lundy and GE Hitachi for the Clinch River BWRX-300; 'Sargent & Lundy will lead the detailed design for the site-specific implementation' — The first US utility SMR gets a three-firm integrated delivery team with the architect-engineer, not the constructor, leading design.",
+     "src": "https://www.powermag.com/tva-taps-bechtel-sargent-lundy-and-ge-hitachi-for-clinch-river-smr-nuclear-project/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-11"
+  },
+  {
    "a": "black-veatch",
    "b": "burns-mcdonnell",
    "curated": {
@@ -3663,6 +3732,57 @@
      "where": "Capabilities · Electrical Transmission & Distribution + Substations",
      "date": "",
      "text": "Perennial #1 vs Black & Veatch (#2 in power design seven straight years) and Sargent & Lundy (#3); designs what Quanta and Kiewit often build",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "black-veatch",
+   "b": "dnv",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer owner's engineer and IE on storage; Black & Veatch ranks No. 2 in battery-storage design (ENR 2025) and offers 'owner's engineering services and technical due diligence'.",
+     "context": "The same 2026 overview that positions DNV as the bankability adviser positions Black & Veatch on owner's engineering and technical due diligence. Black & Veatch's design-and-build reach means it can hold the owner's-engineer and EPC-adjacent seats DNV does not compete for; on the IE report itself the two are substitutes.",
+     "source": "https://metapress.com/what-are-the-leading-energy-consulting-firms-for-utility-scale-solar-projects/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "DNV holds that seat alongside Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions; what distinguishes it is that it also writes the recommended practice the contract cites, runs the laboratory that produces the degradation and safety data, and certifies the product, so it appears on both sides of the same transaction — as the OEM's certifier (Trina Storage, Sungrow, Prevalon, Huawei) and as the lender's engineer.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Energy Transition Outlook's data-centre load figures are the neutral numbers the corpus quotes; the only data-centre engagements on any channel are a Brazilian operator's renewable PPA due diligence and a published collaboration with Fluence, both known by title; Sargent & Lundy and Black & Veatch hold the visible owner's-engineer seats on campus power; and DNV's own risk register frames AI load as a market driver to analyse.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Independent engineering, lender's technical advisory and technical due diligence",
+     "date": "",
+     "text": "2 battery-storage design firm in 2026), Black & Veatch (No.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Owner's engineering and project advisory for storage and hybrid plants",
+     "date": "",
+     "text": "Owner's engineering is a secondary line for DNV; Sargent & Lundy and Black & Veatch, which also design and (with partners) build, are the volume providers in the United States.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre power advisory and research",
+     "date": "",
+     "text": "No RAM study, data-centre certification scheme or hyperscaler engagement is in evidence; Sargent & Lundy, Black & Veatch and Burns & McDonnell hold the visible owner's-engineer and design seats on data-centre campus power.",
      "src": "",
      "from": "b"
     }
@@ -3785,6 +3905,85 @@
    },
    "evid": [],
    "last": "2016"
+  },
+  {
+   "a": "black-veatch",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer power design firm: ENR's No. 4 in power and No. 2 in battery-storage design (2025) against Sargent & Lundy's No. 3 in power and No. 2 in battery storage (2026).",
+     "context": "Black & Veatch's own ENR release (2025-04-24) claims 'No. 13 overall', 'No. 4 in power', 'the country's No. 1 solar design firm' and No. 2 in battery-storage design; it offers 'owner's engineering services and technical due diligence' and, through the Cascade JV with Kiewit, competes on SMR delivery. Sargent & Lundy names it only as a fellow committee member on an ASCE design guide.",
+     "source": "https://www.bv.com/en-US/news/leading-industry-publication-affirms-black-and-veatch-as-global-critical-infrastructure-leader-championing-sustainability-lower-carbon-solutions",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Sargent & Lundy is the 135-year-old Chicago architect-engineer that holds the owner's-engineer and independent-engineer seats on more of the power projects in this corpus than any firm except Burns & McDonnell and Black & Veatch, ranks first in nuclear and second in battery-storage design in ENR's 2026 Sourcebook, and has quietly built a data-centre practice — campus power, on-site generation, large-load interconnection and behind-the-meter nuclear — whose clients it names only as 'confidential hyperscaler' and 'confidential colocater'; it is privately owned by its own engineers, publishes no revenue, and is paid fees for judgment, never for equipment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Owner's engineering — generation, storage, transmission and data-centre campuses",
+     "date": "",
+     "text": "1 power design firm for a decade) and Black & Veatch (No.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Independent engineering and due diligence for lenders, investors and buyers",
+     "date": "",
+     "text": "On lender panels alongside DNV, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy storage engineering and utility technical advisory",
+     "date": "",
+     "text": "Black & Veatch (No.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre power — campus design, on-site generation, large-load interconnection",
+     "date": "",
+     "text": "Competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering and the utilities' own planning groups for campus power, and with HDR, Jacobs and the specialist data-centre engineers for the building.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Nuclear — new build, SMR licensing and design, restarts, uprates and life extension",
+     "date": "",
+     "text": "nuclear power plants') and the design partner of choice for BWRX-300, Xe-100 and NuScale deployments; Bechtel builds, Kiewit and Fluor compete on construction and EPCM, Burns & McDonnell and Black & Veatch (Cascade JV) compete on SMR owner's engineering.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Grid — transmission, substations, interconnection studies and HVDC",
+     "date": "",
+     "text": "Competes with Burns & McDonnell, Black & Veatch, WSP (which bought POWER Engineers for USD 1.78 billion in 2024), Stantec and HDR; the data-centre angle is that the same group that designs the hyperscaler's substation also runs the mock system-impact study that chose the site.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Conventional generation — gas combined cycle, peakers and reciprocating engines",
+     "date": "",
+     "text": "Behind Burns & McDonnell and Black & Veatch on ENR's fossil-fuel design list but the only one of the three with a first J-class engineer-of-record credit in the 2020s; Kiewit and Zachry compete as EPCs with in-house engineering.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "blattner",
@@ -4258,6 +4457,34 @@
   },
   {
    "a": "burns-mcdonnell",
+   "b": "dnv",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "DNV holds that seat alongside Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions; what distinguishes it is that it also writes the recommended practice the contract cites, runs the laboratory that produces the degradation and safety data, and certifies the product, so it appears on both sides of the same transaction — as the OEM's certifier (Trina Storage, Sungrow, Prevalon, Huawei) and as the lender's engineer.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Independent engineering, lender's technical advisory and technical due diligence",
+     "date": "",
+     "text": "2 in 2025), Burns & McDonnell, Leidos, UL Solutions and SgurrEnergy all sell the same report.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre power advisory and research",
+     "date": "",
+     "text": "No RAM study, data-centre certification scheme or hyperscaler engagement is in evidence; Sargent & Lundy, Black & Veatch and Burns & McDonnell hold the visible owner's-engineer and design seats on data-centre campus power.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "burns-mcdonnell",
    "b": "kiewit",
    "curated": {
     "a": {
@@ -4345,6 +4572,99 @@
     }
    ],
    "last": "2026-06-24"
+  },
+  {
+   "a": "burns-mcdonnell",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "ENR's No. 1 power design firm 'unchanged for a decade' and No. 7 overall — the benchmark Sargent & Lundy's No. 3 in power is measured against.",
+     "context": "Burns & McDonnell's release (2025-04-24): 'maintained its No. 7 spot on Engineering News-Record's (ENR) 2025 Top 500 Design Firms list' and 'the No. 1 firm in the Power category — a spot unchanged for a decade'. The two firms compete for owner's-engineer, design and EPC-adjacent roles on generation, transmission and data-centre campus power; Sargent & Lundy's site names Burns & McDonnell only as a co-author on an industry design guide.",
+     "source": "https://www.burnsmcd.com/news/enr-top-10-eighth-consecutive-year",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The integrated pitch — data center, substation, interconnection, and bridge generation under one P&L — is the differentiation against both pure designers (Sargent & Lundy) and pure builders (Quanta, Kiewit).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Electrical Transmission & Distribution + Substations",
+     "date": "",
+     "text": "Perennial #1 vs Black & Veatch (#2 in power design seven straight years) and Sargent & Lundy (#3); designs what Quanta and Kiewit often build",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Sargent & Lundy is the 135-year-old Chicago architect-engineer that holds the owner's-engineer and independent-engineer seats on more of the power projects in this corpus than any firm except Burns & McDonnell and Black & Veatch, ranks first in nuclear and second in battery-storage design in ENR's 2026 Sourcebook, and has quietly built a data-centre practice — campus power, on-site generation, large-load interconnection and behind-the-meter nuclear — whose clients it names only as 'confidential hyperscaler' and 'confidential colocater'; it is privately owned by its own engineers, publishes no revenue, and is paid fees for judgment, never for equipment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Owner's engineering — generation, storage, transmission and data-centre campuses",
+     "date": "",
+     "text": "Burns & McDonnell (ENR's No.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Independent engineering and due diligence for lenders, investors and buyers",
+     "date": "",
+     "text": "On lender panels alongside DNV, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy storage engineering and utility technical advisory",
+     "date": "",
+     "text": "2 in 2025) and Burns & McDonnell are the storage-design peers; DNV sells the independent-engineer and certification layer but does not design plants.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre power — campus design, on-site generation, large-load interconnection",
+     "date": "",
+     "text": "Competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering and the utilities' own planning groups for campus power, and with HDR, Jacobs and the specialist data-centre engineers for the building.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Nuclear — new build, SMR licensing and design, restarts, uprates and life extension",
+     "date": "",
+     "text": "nuclear power plants') and the design partner of choice for BWRX-300, Xe-100 and NuScale deployments; Bechtel builds, Kiewit and Fluor compete on construction and EPCM, Burns & McDonnell and Black & Veatch (Cascade JV) compete on SMR owner's engineering.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Grid — transmission, substations, interconnection studies and HVDC",
+     "date": "",
+     "text": "Competes with Burns & McDonnell, Black & Veatch, WSP (which bought POWER Engineers for USD 1.78 billion in 2024), Stantec and HDR; the data-centre angle is that the same group that designs the hyperscaler's substation also runs the mock system-impact study that chose the site.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Conventional generation — gas combined cycle, peakers and reciprocating engines",
+     "date": "",
+     "text": "Behind Burns & McDonnell and Black & Veatch on ENR's fossil-fuel design list but the only one of the three with a first J-class engineer-of-record credit in the 2020s; Kiewit and Zachry compete as EPCs with in-house engineering.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "burns-mcdonnell",
@@ -5917,6 +6237,31 @@
   },
   {
    "a": "catl",
+   "b": "dnv",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "CATL LFP cells were named among the top performers in DNV's 2022 Battery Scorecard and again in 2024.",
+     "context": "Energy-Storage.news (2022-09-06) reported CATL and Narada LFP among the top three for both stationary durations in the fourth Scorecard; the 2024 coverage names CATL again. The Scorecard is DNV's independent test programme, so the link is tested-and-ranked rather than a commercial mandate; whether CATL commissioned any DNV work is not stated.",
+     "source": "https://www.energy-storage.news/catl-narada-among-top-performers-in-dnvs-2022-battery-scorecard/",
+     "status": "historical",
+     "since": "2022",
+     "via": "Battery Scorecard"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Battery testing, the Battery Scorecard and Battery AI",
+     "date": "",
+     "text": "The Scorecard is the only free, multi-vendor, test-based cell comparison the industry has; UL Solutions and TÜV Rheinland compete for the witness-and-certify seat on OEM fire tests (CATL's UL 9540A programme runs through UL Solutions; Sungrow's April 2026 PowerKeeper certification named TÜV Rheinland), so DNV's laboratory position is contested product by product.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2022"
+  },
+  {
+   "a": "catl",
    "b": "envision-energy",
    "curated": {
     "b": {
@@ -6898,6 +7243,249 @@
     }
    ],
    "last": "2025-11-18"
+  },
+  {
+   "a": "constellation-energy",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Predecessor relationship: a multi-year engineer-of-choice contract with Exelon for its 17 nuclear units at 10 sites (2002); Exelon was a 2020 top-ten nuclear services client. No role on the Crane Clean Energy Center restart was found.",
+     "context": "Renewable Energy World (2002-08-12) reported the 'multi-year engineer-of-choice contract' for 'extensive engineering, project management, and outage support services for Exelon's 17 nuclear generating units at 10 sites'; the NRC pre-submittal slides (2021) list 'EXELON' among 2020 top-ten services clients. Constellation inherited the fleet in 2022. Every readable source on the Crane restart names no engineering contractor — the link is asserted as historical and fleet-level, not as a current named mandate.",
+     "source": "https://www.renewableenergyworld.com/energy-storage/sargent-lundy-signs-engineer-of-choice-contract-for-exelons-nuclear-and-fossil-fleets/",
+     "status": "historical",
+     "since": "2002",
+     "via": "Exelon engineer-of-choice contract"
+    }
+   },
+   "evid": [],
+   "last": "2002"
+  },
+  {
+   "a": "coolit",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Member of the NVIDIA Partner Network as 'a Solution Advisor for Compute and DGX AI Compute Systems' with cold plates, manifolds and CDUs on NVIDIA's Recommended Vendor List; NVIDIA engineers are quoted endorsing CoolIT in 2024 and, with Ecolab, in 2026.",
+     "context": "CoolIT's collaboration with NVIDIA 'began in 2009 with the design of the NV200 VGA coldplate for the GeForce GTX 295'. In October 2024 it joined the NVIDIA Partner Network for the Blackwell ramp; NVIDIA's Jeremy Rodriguez, senior director of data center engineering, said the expansion 'will help meet the growing demands of data centers'. At GTC 2025 the company stated that all its chip-to-CDU products 'are available to NVIDIA's server manufacturing partners through the NVIDIA Recommended Vendor List (RVL)', and its site tabulates GB200 NVL72 racks per CDU (CHx2000 12, CHx1500 9, AHx240 4, AHx180 2).\n\nAt the Ecolab close NVIDIA's Ali Heydari and Saket Karajgikar stated that 'NVIDIA has collaborated with Ecolab and CoolIT across a broad range of liquid-cooling initiatives, including coolant qualification, coolant health monitoring, cooling infrastructure development, and next-generation AI factory technologies'. No formal 'NVIDIA-certified' or reference-design designation exists; no CoolIT product is claimed for Vera Rubin NVL72.",
+     "source": "https://www.hpcwire.com/off-the-wire/coolit-systems-joins-nvidia-partner-network-unveils-ai-centric-liquid-cooling-solutions/",
+     "status": "active",
+     "since": "2024-10",
+     "via": "NVIDIA Partner Network; Recommended Vendor List"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: CoolIT Systems is the Calgary direct-liquid-cooling specialist that Ecolab bought from KKR for about USD 4.75 billion in cash on 2 July 2026 — 29 times estimated next-twelve-month adjusted EBITDA on roughly USD 550 million of expected sales — because it sits at every point where liquid touches an AI rack: the cold plate on the GPU, the manifold in the rack, the coolant distribution unit (CDU) in the row, and the pre-fabricated piping between them; its CHx2000 row CDU is rated at 2,000 kW and twelve NVIDIA GB300 NVL72 racks, it manufactures 'multi-gigawatts' of CDU capacity a year in Canada, China and Vietnam, and a CDU for racks above 1 MW is due on 28 September 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The CDU specialist the corpus lacked: where Vertiv, Schneider Electric (through Motivair) and Trane (through LiquidStack) reach liquid cooling from the plant side, CoolIT reaches it from the chip — it designs the cold plate to the silicon vendor's reference (NVIDIA's Recommended Vendor List; Intel and AMD series), builds the loop and the manifold for the server OEM (Dell, HPE, Gigabyte; Supermicro as a stated collaborator), and sells the row and in-rack CDUs that separate that clean technology-cooling loop from the building's water.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its counterparties in this corpus are therefore NVIDIA on the design side and Vertiv and Schneider on the competitive side; its customers — 'four of the five hyperscalers' — are unnamed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: 29 times next-twelve-month adjusted EBITDA for a hardware maker whose stated assets are '4 of the top 5 server OEMs and 4 of the 5 hyperscalers as customers', NVIDIA Recommended Vendor List placement, '100s of coolant distribution units … 10,000s of server coldplate loops per month' and a 112,000-square-foot Canadian CDU plant; Ecolab's own thesis names 'deep preexisting relationships with the world's major hyperscaler and colocation customers' first.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess NVIDIA sets CoolIT's roadmap on both the demand and the specification side, and that the Vera Rubin generation shifts value toward warm-water CDU design and away from the cold plate as the constraint.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: every CDU is rated in GB200/GB300 NVL72 racks; the cold-plate demonstrators (4 kW, 15 kW at 45 °C) are aimed at NVIDIA's stated 45 °C supply direction; independent estimates put Rubin racks at 180–220 kW against 120–140 kW for Blackwell; and CoolIT's own January 2026 post argues that 45 °C water 'does not magically eliminate the need for mechanical cooling'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against this: Dell's factory-installed DLC since 2017, the El Capitan and Frontier credits, and the NVIDIA RVL route to every ODM.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Liquid-to-air CDUs — AHx240 and AHx180",
+     "date": "",
+     "text": "Vertiv and Motivair sell liquid-to-air units too; CoolIT's claim is highest capacity in the class and OEM validation across NVIDIA racks.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-06",
+     "text": "CHx2000 blog: the 2 MW CDU 'can cool up to 12 NVIDIA GB300 NVL72 racks', is built at 'hundreds of units per month' and has been in production since October 2024 — The product was shipping five months before it was announced — the announcement cadence lags the hyperscaler shipments.",
+     "src": "https://www.coolitsystems.com/resources/news/chx2000-the-ai-cdu/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-14",
+     "text": "GTC 2025: 'All of CoolIT's AI-ready chip-to-CDU products – including coldplates, liquid rack manifolds and CDUs – are available to NVIDIA's server manufacturing partners through the NVIDIA Recommended Vendor List (RVL)' — The RVL is the channel: NVIDIA's ODM partners can specify CoolIT parts without qualifying them.",
+     "src": "https://www.prnewswire.com/news-releases/coolit-showcases-ai-ready-liquid-cooling-technology-at-nvidia-gtc-2025-302401702.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-15",
+     "text": "CoolIT joins the NVIDIA Partner Network and announces a new CDU line and 'multi-gigawatt manufacturing expansion in Canada and internationally' for the Blackwell ramp; NVIDIA's Jeremy Rodriguez: the expansion 'will help meet the growing demands of data centers' — The only NVIDIA-quoted endorsement in the record before the Ecolab close — the design-side relationship made public.",
+     "src": "https://www.hpcwire.com/off-the-wire/coolit-systems-joins-nvidia-partner-network-unveils-ai-centric-liquid-cooling-solutions/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-06"
+  },
+  {
+   "a": "coolit",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Schneider Electric entered the CDU market through its October 2024 purchase of Motivair, which Gigabyte lists alongside CoolIT as a direct-liquid-cooling partner.",
+     "context": "Dell'Oro's CDU analysis cites 'Schneider Electric's purchase of Motivair in October 2024' among the consolidation moves reshaping the category. Giga Computing's 2023 release put the two head to head: 'Motivair joins our other partner, CoolIT Systems, to demonstrate GIGABYTE's dedication to offering a comprehensive DLC solution'. Schneider's own CDU guidance (five CDU functions; rack-mounted units 20 to about 40 kW) is the teaching text quoted in this dossier's study guide.",
+     "source": "https://www.delloro.com/market-at-the-boiling-point-is-the-cdu-space-becoming-saturated/",
+     "status": "active",
+     "since": "2024-10"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The CDU specialist the corpus lacked: where Vertiv, Schneider Electric (through Motivair) and Trane (through LiquidStack) reach liquid cooling from the plant side, CoolIT reaches it from the chip — it designs the cold plate to the silicon vendor's reference (NVIDIA's Recommended Vendor List; Intel and AMD series), builds the loop and the manifold for the server OEM (Dell, HPE, Gigabyte; Supermicro as a stated collaborator), and sells the row and in-rack CDUs that separate that clean technology-cooling loop from the building's water.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Row-based liquid-to-liquid CDUs — CHx2000, CHx1500, CHx500 (and the legacy CHx750)",
+     "date": "",
+     "text": "Against Vertiv (which Dell'Oro names as market leader), Motivair (Schneider Electric), Boyd, nVent and roughly forty other CDU vendors, CoolIT's published comparison puts the CHx2000 at 2,269 kW cooling load against anonymised competitors' 1,073 kW and 734 kW, on the same footprint; HPE specifies a 1.3 MW in-row CDU for eight GB200/GB300 racks.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-10"
+  },
+  {
+   "a": "coolit",
+   "b": "switch",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Note that 'Switch Datacenters', a Dutch operator CoolIT partnered with in 2023, is not the Switch covered in this corpus and no link is recorded.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "coolit",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Dell'Oro names Vertiv as 'leading the liquid cooling market' with CoolIT among the 'established players … maintaining strong market share positions'.",
+     "context": "Dell'Oro's January 2026 release: 'The competitive landscape is evolving rapidly, with Vertiv leading the liquid cooling market and established players such as CoolIT, nVent, and Boyd maintaining strong market share positions.' Its September 2025 CDU note records 'Vertiv's acquisition of CoolTera in December 2023' and expects 'fewer than 10 vendors to ultimately capture the lion's share'. Omdia's June 2024 release had placed CoolIT first in a roughly USD 1 billion 2023 market. Vertiv reaches liquid cooling from the plant and power side; CoolIT from the chip.",
+     "source": "https://www.delloro.com/news/data-center-liquid-cooling-market-to-approach-7-billion-by-2029-as-ai-deployments-accelerate/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The CDU specialist the corpus lacked: where Vertiv, Schneider Electric (through Motivair) and Trane (through LiquidStack) reach liquid cooling from the plant side, CoolIT reaches it from the chip — it designs the cold plate to the silicon vendor's reference (NVIDIA's Recommended Vendor List; Intel and AMD series), builds the loop and the manifold for the server OEM (Dell, HPE, Gigabyte; Supermicro as a stated collaborator), and sells the row and in-rack CDUs that separate that clean technology-cooling loop from the building's water.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its counterparties in this corpus are therefore NVIDIA on the design side and Vertiv and Schneider on the competitive side; its customers — 'four of the five hyperscalers' — are unnamed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Asetek record shows the patents are defensible; nothing in it shows they excluded Vertiv, Motivair, Boyd or the OEMs' in-house lines.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the row CDU moved from 750 kW (CHx750) to 1,500 kW and 2,000 kW within 2025, with a 1 MW-plus-rack unit due 28 September 2026; Dell'Oro counts 'around 40 companies with CDUs' and expects 'fewer than 10 vendors to ultimately capture the lion's share', naming Vertiv as leader and CoolIT among 'established players … maintaining strong market share positions'; Omdia had placed CoolIT first in 2023.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Q4 2026 — Dell'Oro and Omdia rankings:* whether CoolIT holds its place behind Vertiv or Aaon overtakes it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Row-based liquid-to-liquid CDUs — CHx2000, CHx1500, CHx500 (and the legacy CHx750)",
+     "date": "",
+     "text": "Against Vertiv (which Dell'Oro names as market leader), Motivair (Schneider Electric), Boyd, nVent and roughly forty other CDU vendors, CoolIT's published comparison puts the CHx2000 at 2,269 kW cooling load against anonymised competitors' 1,073 kW and 734 kW, on the same footprint; HPE specifies a 1.3 MW in-row CDU for eight GB200/GB300 racks.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Row-based liquid-to-liquid CDUs — CHx2000, CHx1500, CHx500 (and the legacy CHx750)",
+     "date": "",
+     "text": "Dell'Oro (September 2025): 'Established names such as Vertiv, CoolIT, or Boyd will need to maintain their edge' and 'We expect fewer than 10 vendors to ultimately capture the lion's share of the market.'",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · In-rack CDUs — CHx200 and CHx80",
+     "date": "",
+     "text": "A mature line (2019 first install) now secondary to the row CDUs for AI; competes with Vertiv's and Motivair's rack CDUs and with the in-house rack CDUs Supermicro and Lenovo build.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-08",
+     "text": "Dell'Oro: liquid cooling to reach 'approximately $7 billion in manufacturer revenue by 2029' after roughly doubling to 'close to $3 billion' in 2025; 'Vertiv leading the liquid cooling market and established players such as CoolIT, nVent, and Boyd maintaining strong market share positions'; Aaon rising on hyperscaler custom work — The one independent ranking that names CoolIT puts it in the chasing pack behind Vertiv — and flags that custom hyperscaler work moves share fast.",
+     "src": "https://www.delloro.com/news/data-center-liquid-cooling-market-to-approach-7-billion-by-2029-as-ai-deployments-accelerate/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-06-18",
+     "text": "Omdia: 'In this near $1bn market of liquid cooling, direct-to-chip vendor CoolIT remain the top leader in liquid cooling market, followed by immersion cooling leader Sugon and server vendor Lenovo' (2023 data); growth 'primarily constrained by production capacity, particularly for components like Cooling Distribution Units (CDUs)' — The last time an analyst put CoolIT first — before Vertiv's CoolTera purchase and the hyperscaler CDU ramps re-ordered the table.",
+     "src": "https://omdia.tech.informa.com/pr/2024/jun/omdia-research-predicts-data-center-cooling-market-to-reach-16point87-billion-dollars-in-2028",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-08"
   },
   {
    "a": "core-scientific",
@@ -9385,6 +9973,361 @@
    "last": "2026-07-24"
   },
   {
+   "a": "dnv",
+   "b": "fluence",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "DNV published an article in 2026 on how Fluence is accelerating speed to power for data centres with battery storage; the article body could not be read, so the depth of the collaboration is unverified.",
+     "context": "The dnv.com article 'How Fluence is accelerating speed to power for data centers' is the only first-party document pairing DNV with a covered storage OEM in a data-centre context. Its text sits behind the site's bot challenge; search-layer summaries describe a joint research initiative on data-centre load growth and power quality, which this dossier does not treat as verified. Collection gap stated: nature, date and commercial terms unknown.",
+     "source": "https://www.dnv.com/article/how-fluence-is-accelerating-speed-to-power-for-data-centers/",
+     "status": "announced",
+     "since": "2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In the AI data-centre chain its footprint is advisory and analytical: the Energy Transition Outlook's data-centre load forecasts, an efficiency-programme role for Arizona Public Service, technical due diligence for the Brazilian operator Ascenty, and a published collaboration with Fluence on storage for data centres; no hyperscaler engagement is on any readable channel.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Energy Transition Outlook's data-centre load figures are the neutral numbers the corpus quotes; the only data-centre engagements on any channel are a Brazilian operator's renewable PPA due diligence and a published collaboration with Fluence, both known by title; Sargent & Lundy and Black & Veatch hold the visible owner's-engineer seats on campus power; and DNV's own risk register frames AI load as a market driver to analyse.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Ecosystem check:* whether the Fluence collaboration produces a named data-centre storage deployment in which DNV is the technical adviser.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · GreenPowerMonitor and Veracity — monitoring, energy management and data products",
+     "date": "",
+     "text": "Competes with Power Factors, Also Energy and the OEM EMS layer (Fluence Mosaic, Wärtsilä GEMS, Tesla Autobidder) for independent monitoring and dispatch software; the DNV distinction is bundling monitoring with the advisory and lifecycle (Renewance) services around it.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026"
+  },
+  {
+   "a": "dnv",
+   "b": "ge-vernova",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "GE Vernova and Shell signed the letter supporting the recommendations of DNV's US offshore HVDC joint industry project.",
+     "context": "Utility Dive (2024-05-14) reported the DNV-authored study, supported by Shell and GE Vernova, concluding that 'Plans for an AC mesh solution are no longer viable within the proposed time scales' and calling for a 525 kV HVDC offshore network. A study partnership rather than a supply or advisory contract.",
+     "source": "https://www.utilitydive.com/news/offshore-wind-transmission-dnv-report-ge-vernova-shell/715853/",
+     "status": "historical",
+     "since": "2024-04",
+     "via": "US offshore HVDC joint industry project"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-05-14",
+     "text": "DNV's US offshore HVDC joint industry project, with Shell and GE Vernova as signatories, concludes an AC mesh is 'no longer viable within the proposed time scales' and calls for a 525 kV HVDC network — Convening power as a product — DNV writing the technical case that state planners and OEMs then cite.",
+     "src": "https://www.utilitydive.com/news/offshore-wind-transmission-dnv-report-ge-vernova-shell/715853/",
+     "from": "a"
+    }
+   ],
+   "last": "2024-05-14"
+  },
+  {
+   "a": "dnv",
+   "b": "huawei-digital-power",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "DNV Renewables Certification GmbH issued grid-code compliance equipment certificates to Huawei for its SUN2000 inverter families in 2021 and 2023.",
+     "context": "Certificate TC-GCC-DNVGL-SE-0124-07237-0 (Hamburg, 2 July 2021) covers the SUN2000-185KTL-H1 'According to: DNVGL-SE-0124, 2016-03: Certification of Grid Code Compliance … 32016R0631, 2016-04: Requirements for Generators (NC RfG)'; certificate TC-GCC-DNV-SE-0124-09419-1 (25 August 2023) covers the SUN2000-[12-25]KTL-M5 family under DNV-SE-0124 (2021-10). Both are hosted by European distributors.",
+     "source": "https://portal.segensolar.de/reseller/docs/ROGA.pdf",
+     "status": "active",
+     "since": "2021-07",
+     "via": "Grid-code compliance certification (DNV-SE-0124)"
+    }
+   },
+   "evid": [],
+   "last": "2021-07"
+  },
+  {
+   "a": "dnv",
+   "b": "narada",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Narada LFP cells were named among the top performers in DNV's 2022 Battery Scorecard and again in 2024.",
+     "context": "Same basis as the CATL entry: Energy-Storage.news (2022-09-06) on the fourth edition and its 2024 coverage of the fifth. Independent ranking, not a disclosed commercial engagement.",
+     "source": "https://www.energy-storage.news/catl-narada-among-top-performers-in-dnvs-2022-battery-scorecard/",
+     "status": "historical",
+     "since": "2022",
+     "via": "Battery Scorecard"
+    }
+   },
+   "evid": [],
+   "last": "2022"
+  },
+  {
+   "a": "dnv",
+   "b": "prevalon",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Prevalon's 6 MWh HD5 containerised system was tested to internal cell-level thermal runaway at DNV's Texas test facility.",
+     "context": "ESS News (2025-04-25): 'Conducted at DNV's test facility in Texas, the test subjected the 6 MWh HD5 containerised system to internal cell-level thermal runaway conditions.' The engagement is a test-service purchase, not an IE mandate.",
+     "source": "https://www.ess-news.com/2025/04/25/battery-storage-providers-highlight-fire-test-results-as-industry-continues-focus-on-safety/",
+     "status": "active",
+     "since": "2025",
+     "via": "Large-scale fire test — Texas facility"
+    }
+   },
+   "evid": [],
+   "last": "2025"
+  },
+  {
+   "a": "dnv",
+   "b": "sargent-lundy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Peer independent engineer on storage financings; Sargent & Lundy is ENR's No. 2 battery-storage design firm (2026) and sells the same IE due-diligence report.",
+     "context": "A 2026 sector overview assigns the two firms different lanes — DNV 'a premier independent advisory firm' for 'bankability reports, energy yield assessments, and technical due diligence', Sargent & Lundy 'interconnection studies and engineering design' — but both appear on lenders' IE panels and the bankability guidance in this corpus names them together. Sargent & Lundy also designs and, with constructor partners, delivers plants; DNV does neither.",
+     "source": "https://metapress.com/what-are-the-leading-energy-consulting-firms-for-utility-scale-solar-projects/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Peer independent engineer on storage financings; DNV sells the IE report, certification and test data but does not design plants.",
+     "context": "A 2026 sector overview positions DNV as 'a premier independent advisory firm' for 'bankability reports, energy yield assessments, and technical due diligence' and Sargent & Lundy on 'interconnection studies and engineering design'; both sit on lenders' IE panels, and Sargent & Lundy calls itself 'one of the few tax-equity accepted independent engineers for BESS projects'. The two dossiers in this corpus are written as a pair: DNV as the lender's engineer, Sargent & Lundy as the owner's.",
+     "source": "https://metapress.com/what-are-the-leading-energy-consulting-firms-for-utility-scale-solar-projects/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "DNV holds that seat alongside Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions; what distinguishes it is that it also writes the recommended practice the contract cites, runs the laboratory that produces the degradation and safety data, and certifies the product, so it appears on both sides of the same transaction — as the OEM's certifier (Trina Storage, Sungrow, Prevalon, Huawei) and as the lender's engineer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Energy Transition Outlook's data-centre load figures are the neutral numbers the corpus quotes; the only data-centre engagements on any channel are a Brazilian operator's renewable PPA due diligence and a published collaboration with Fluence, both known by title; Sargent & Lundy and Black & Veatch hold the visible owner's-engineer seats on campus power; and DNV's own risk register frames AI load as a market driver to analyse.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Independent engineering, lender's technical advisory and technical due diligence",
+     "date": "",
+     "text": "One of a handful of IE/lender's engineers lenders accept on storage: Sargent & Lundy (ENR's No.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Independent engineering, lender's technical advisory and technical due diligence",
+     "date": "",
+     "text": "A 2026 sector overview calls DNV 'a premier independent advisory firm' for 'bankability reports, energy yield assessments, and technical due diligence' while assigning Sargent & Lundy the interconnection-and-design lane (Metapress, 2026-01-23).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owner's engineering and project advisory for storage and hybrid plants",
+     "date": "",
+     "text": "Owner's engineering is a secondary line for DNV; Sargent & Lundy and Black & Veatch, which also design and (with partners) build, are the volume providers in the United States.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data-centre power advisory and research",
+     "date": "",
+     "text": "No RAM study, data-centre certification scheme or hyperscaler engagement is in evidence; Sargent & Lundy, Black & Veatch and Burns & McDonnell hold the visible owner's-engineer and design seats on data-centre campus power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The second `advisor` in this corpus and the owner's-engineer counterpart to DNV's lender's-engineer profile: where DNV writes the report the bank relies on, Sargent & Lundy more often writes the specification the bidders answer, reviews the EPC's 30, 60 and 90 percent designs on the owner's behalf, witnesses the factory tests and oversees commissioning — and, when a lender needs it, sits as independent engineer too.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Ecosystem check:* whether Sargent & Lundy or DNV appears as IE on the next US BESS financing that a covered developer announces.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Independent engineering and due diligence for lenders, investors and buyers",
+     "date": "",
+     "text": "On lender panels alongside DNV, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Independent engineering and due diligence for lenders, investors and buyers",
+     "date": "",
+     "text": "A 2026 overview assigns Sargent & Lundy the 'interconnection studies and engineering design' lane and DNV the bankability-report lane, but the firm's white papers and the Leeward, Ten West and EVgo mandates show it sells the full IE report.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy storage engineering and utility technical advisory",
+     "date": "",
+     "text": "2 in 2025) and Burns & McDonnell are the storage-design peers; DNV sells the independent-engineer and certification layer but does not design plants.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dnv",
+   "b": "sinexcel",
+   "evid": [
+    {
+     "where": "Capabilities · Power quality solutions",
+     "date": "",
+     "text": "The company's original business (2009 Shenzhen 'Startup Star' prize for its active power filter), with 20,000+ projects deployed: active harmonic filters (BLADE AHF 5-15 A SiC wall/rack units; standard AHF 25-300 A modules; PRO AHF 150 A at 98.5% peak efficiency; SiC-based Ultra AHF), static var generators (standard 30-200 kvar; PRO SVG 100 kvar at 98.5%; Ultra SVG, ASVG, HSVG, 50/100 kvar hot-plug units), AVC-RTS supercapacitor voltage-sag correction (30-2,400 kVA), and modular UPS; marine-certified variants (DNV, RINA, CCS, BV).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dnv",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "DNV supervised Sungrow's 10 MWh (June 2024) and 20 MWh (November 2024) PowerTitan burn tests and monitored its 2025 four-unit burn simulation.",
+     "context": "Energy-Storage.news reported that Sungrow's June 2024 test 'was supervised by DNV' and that the November 2024 20 MWh test was 'overseen by standards and certification group DNV'; Sungrow's April 2025 release says its simulation 'was monitored by DNV, live streamed globally, and witnessed by over 100 industry professionals' and quotes DNV officials calling it 'an exceptionally successful burn test'. Sungrow's ESS page lists DNV among its certifiers.\n\nThe seat is not exclusive: Sungrow's April 2026 PowerKeeper 'triple UL 9540A' certification named TÜV Rheinland as witness.",
+     "source": "https://www.energy-storage.news/sungrow-conducts-real-world-power-plant-fire-test-on-20mwh-battery-storage-units/",
+     "status": "active",
+     "since": "2024-06",
+     "via": "Large-scale BESS burn-test oversight"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The storage franchise has three legs, all in evidence in the trailing 24 months: lender's and technical advisory on financings (Akaysha's AUD 650 million Orana BESS with an eleven-bank group, 2024; Grenergy and Zelestra hybrids in Chile, 2025–2026; TotalEnergies' sale of a 789 MW / 1,628 MWh German battery portfolio to Allianz Global Investors, 2026), the recommended-practice and testing layer (DNVGL-RP-0043 on safety, operation and performance of grid-connected storage, edition December 2015, from the GRIDSTOR joint industry project; the Battery Scorecard, in its fifth edition in 2024; a Rochester, New York cell laboratory and a Texas facility where Prevalon and Sungrow burn tests were witnessed), and digital monitoring through GreenPowerMonitor, the DNV company that reports more than 100 GW under management.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "DNV holds that seat alongside Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions; what distinguishes it is that it also writes the recommended practice the contract cites, runs the laboratory that produces the degradation and safety data, and certifies the product, so it appears on both sides of the same transaction — as the OEM's certifier (Trina Storage, Sungrow, Prevalon, Huawei) and as the lender's engineer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: DNV's quoted endorsement of Sungrow's 2025 burn simulation; the Trina and Prevalon engagements; the disputed McMicken root-cause finding in 2020 as precedent for a DNV conclusion being contested by a cell supplier.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery testing, the Battery Scorecard and Battery AI",
+     "date": "",
+     "text": "The Scorecard is the only free, multi-vendor, test-based cell comparison the industry has; UL Solutions and TÜV Rheinland compete for the witness-and-certify seat on OEM fire tests (CATL's UL 9540A programme runs through UL Solutions; Sungrow's April 2026 PowerKeeper certification named TÜV Rheinland), so DNV's laboratory position is contested product by product.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-06"
+  },
+  {
+   "a": "dnv",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Capabilities · GreenPowerMonitor and Veracity — monitoring, energy management and data products",
+     "date": "",
+     "text": "Competes with Power Factors, Also Energy and the OEM EMS layer (Fluence Mosaic, Wärtsilä GEMS, Tesla Autobidder) for independent monitoring and dispatch software; the DNV distinction is bundling monitoring with the advisory and lifecycle (Renewance) services around it.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dnv",
+   "b": "trina-storage",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "DNV issued an independent bankability report on Trina Storage's 4 MWh Elementa 2 platform, alongside a parallel report from UL Solutions.",
+     "context": "ESS News (2024-09-11) reported that DNV assessed Elementa 2's performance, safety, reliability, Trina's delivery and service capacity and compliance with UL 1973, UL 9540, IEC 62619 and IEC 63056, recognising 'the bankability, reliability, performance and successful global deployment of Elementa 2'. Trina Storage's own May 2025 release repeats that the platform 'received independent bankability reports from both DNV and UL Solutions, validating its safety, reliability, and investment readiness'.",
+     "source": "https://www.trinasolar.com/en-glb/resources/newsroom/trina-storage-strengthens-global-position-with-upgraded-bankability-rating-and-recognition-as-major-market-supplier-in-europe/",
+     "status": "active",
+     "since": "2024-09",
+     "via": "Bankability report — Elementa 2"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "DNV holds that seat alongside Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions; what distinguishes it is that it also writes the recommended practice the contract cites, runs the laboratory that produces the degradation and safety data, and certifies the product, so it appears on both sides of the same transaction — as the OEM's certifier (Trina Storage, Sungrow, Prevalon, Huawei) and as the lender's engineer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: editions in 2018, 2019, 2020, 2022 and 2024, with no 2025 or 2026 edition found on any channel eighteen months after the fifth; DNV's own description of it as a starter kit for the paid Battery AI model; and the emergence of vendor-commissioned bankability reports (Trina Storage, with UL Solutions in parallel) as the revenue-bearing form of the same testing.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-02",
+     "text": "Trina Storage says its Elementa 2 platform 'received independent bankability reports from both DNV and UL Solutions' — The Chinese integrator buys two Western stamps at once — DNV's certificate is necessary but no longer sufficient.",
+     "src": "https://www.trinasolar.com/en-glb/resources/newsroom/trina-storage-strengthens-global-position-with-upgraded-bankability-rating-and-recognition-as-major-market-supplier-in-europe/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-05-02"
+  },
+  {
+   "a": "dnv",
+   "b": "wartsila",
+   "evid": [
+    {
+     "where": "Capabilities · GreenPowerMonitor and Veracity — monitoring, energy management and data products",
+     "date": "",
+     "text": "Competes with Power Factors, Also Energy and the OEM EMS layer (Fluence Mosaic, Wärtsilä GEMS, Tesla Autobidder) for independent monitoring and dispatch software; the DNV distinction is bundling monitoring with the advisory and lifecycle (Renewance) services around it.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "dominion-energy",
    "b": "entergy",
    "curated": {
@@ -9537,6 +10480,23 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "dominion-energy",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "'DOMINION' appears on Sargent & Lundy's 2020 top-ten nuclear services client list filed with the NRC; no current named project was found.",
+     "context": "The firm's SL-TR-1 Revision 26 pre-submittal meeting slides (NRC ADAMS ML21029A106, 2021-02-01) list 'Nuclear Power Group 2020 Top 10 Clients - Services: TENNESSEE VALLEY AUTHORITY, EXELON, DOMINION, PSEG, AEP, DETROIT EDISON, XCEL ENERGY, SOUTHERN NUCLEAR, ARIZONA PUBLIC SERVICE COMPANY, AMEREN'. Neither the firm's site nor Dominion's names a specific engagement; the only other Dominion mention on sargentlundy.com is a 2017 conference co-panelist.",
+     "source": "https://www.nrc.gov/docs/ML2102/ML21029A106.pdf",
+     "status": "historical",
+     "since": "2020",
+     "via": "Nuclear services"
+    }
+   },
+   "evid": [],
+   "last": "2020"
   },
   {
    "a": "dominion-energy",
@@ -11304,6 +12264,67 @@
     }
    ],
    "last": "2026-07-15"
+  },
+  {
+   "a": "entergy",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Engineer of record in the EPC consortium building Entergy Texas' 1,215 MW hydrogen-capable Orange County station, and 'primary vendor' for Entergy Arkansas' ANO-1 subsequent licence renewal.",
+     "context": "POWER (2023-03-03): 'Sargent & Lundy, known for its advanced class combined-cycle engineering experience, is the Engineer of Record' in a consortium with Mitsubishi Power (two M501JAC turbines) and TIC as constructor; the company calls it 'the firm's first J-class combustion turbine design', with COD in 2026 and Sargent & Lundy and TIC 'leading the commissioning management'.\n\nIn March 2026 the firm described itself as 'primary vendor' for the ANO-1 licence renewal to 2054 and listed further Entergy work at Grand Gulf, Waterford 3 and River Bend — a client across gas and nuclear at once.",
+     "source": "https://www.powermag.com/press-releases/epc-consortium-of-mitsubishi-power-tic-and-sargent-lundy-to-build-entergy-texas-new-cleaner-and-more-reliable-power-station/",
+     "status": "active",
+     "since": "2022-11",
+     "scale": "1,215 MW",
+     "via": "Engineer of record — Orange County Advanced Power Station; ANO-1 subsequent licence renewal"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the sellers in this corpus it is four different counterparties: for turbine competitors, a market closed for the decade by the exclusivity agreement; for balance-of-plant, transformer and switchgear suppliers, ten approved combined-cycle units and more than a thousand miles of new transmission whose EPCs — Sargent & Lundy and TIC at Orange County — are named only for the first; for battery sellers, operating-company RFPs (Louisiana's 2025 BESS solicitation, Mississippi's and Arkansas's renewables-and-storage RFPs) and the utility-owned Cypress project, with no supplier yet named on any owned system; and for the hyperscalers and developers in this file — Meta, Google, Amazon Web Services and Hut 8 by name — the counterparty whose 15- to 20-year ESAs, minimum bills sized to the revenue requirement, parent guaranties and contributions in aid of construction are the price of a 2028 in-service date.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Texas generation and transmission — Orange County, Legend, Lone Star and the SETEX 500 kV line",
+     "date": "",
+     "text": "The Orange County Advanced Power Station (approximately 1,215 MW, two Mitsubishi Power M501JAC units, EPC consortium Mitsubishi Power, Sargent & Lundy and TIC per POWER) achieved first fire in April 2026 and is expected in service in Q3 2026; the Q2 2026 10-Q states a generation cost recovery rider of $150.4M a year takes effect on that date and that Entergy Texas made a $248M payment in June 2026 on a financed portion of construction work in progress.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-23",
+     "text": "Orange County Advanced Power Station achieves first fire (1,215 MW; Mitsubishi Power, Sargent & Lundy and TIC) — The first of the ten combined-cycle units to reach a milestone; in service Q3 2026.",
+     "src": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It designs (engineer of record on Entergy Texas' 1,215 MW Orange County station; reactor-building standard plant for GE Hitachi's BWRX-300) and will take EPC scope only with a constructor partner (TIC, PCL, Boldt).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-02",
+     "text": "Sargent & Lundy is the 'primary vendor' for Entergy Arkansas' Arkansas Nuclear One Unit 1 subsequent licence renewal, extending operation to 2054, with further Entergy work at Grand Gulf, Waterford 3 and River Bend — Fleet life-extension is the annuity beneath the new-build headlines — and Entergy is now a client in both gas and nuclear.",
+     "src": "https://www.sargentlundy.com/news/sargent-lundy-supports-arkansas-nuclear-one-license-renewal/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-23"
   },
   {
    "a": "envision-energy",
@@ -14231,6 +15252,45 @@
   },
   {
    "a": "ge-vernova",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "'working directly with General Electric Hitachi (GEH) since 2023 … responsible for GEH's reactor building standard plant design', with GEH's control-rod-drive mechanical design among the NRC-inspected packages.",
+     "context": "The Nuclear Power page states the standard-plant role; the NRC's July 2025 vendor inspection sampled 'GEH's BWRX-300 control rod drive system mechanical design' among Sargent & Lundy's safety-related design packages and cited the 'BWRX-300 Standard Plant Design S&L Project Manual' (April 2024), finding 'No findings of significance'. The two firms also share the Clinch River delivery team and co-presented Duke Energy's DeBary hydrogen demonstration and NYPA's Brentwood hydrogen pilot with GE.",
+     "source": "https://www.nrc.gov/docs/ML2522/ML25223A330.pdf",
+     "status": "active",
+     "since": "2023",
+     "via": "BWRX-300 reactor building standard plant design"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Second, nuclear: TVA's owner's engineer and detailed-design lead for the Clinch River BWRX-300 alongside Bechtel and GE Vernova Hitachi; NRC-inspected design packages for the Palisades restart and the Dow / X-energy Xe-100 site; the 2020 top-ten nuclear services clients read TVA, Exelon, Dominion, PSEG, AEP, DTE, Xcel Energy, Southern Nuclear, APS and Ameren.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-11",
+     "text": "DOE awards TVA USD 400 million under the Generation III+ SMR programme for Clinch River; the team is TVA, Sargent & Lundy, GE Vernova Hitachi and Bechtel — Federal money now sits behind the project the firm is detailed-design lead on.",
+     "src": "https://www.sargentlundy.com/news/department-of-energy-grants-400m-for-tva-small-modular-reactor-project/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-11"
+  },
+  {
+   "a": "ge-vernova",
    "b": "siemens-energy",
    "curated": {
     "a": {
@@ -14860,6 +15920,27 @@
     }
    ],
    "last": "2025-08-12"
+  },
+  {
+   "a": "google",
+   "b": "sargent-lundy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: a dedicated service page with six sub-services, a project sheet listing two confidential hyperscalers and two confidential colocation operators plus utility substation work for 'hyperscaler digital campuses' in four ISO regions, a 2025 senior-vice-president appointment for 'nuclear power-related data center initiatives', a NERC Large Loads Task Force seat, and speaking slots beside NVIDIA and Google Cloud — against zero third-party corroboration of any client.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-12",
+     "text": "CEO Vic Suchodolski keynotes POWERGEN alongside NVIDIA's senior managing director of energy and Google Cloud's global power lead; a colleague presents on air permitting for new data-centre generation — Sharing a stage with the chip vendor and the hyperscaler is the closest the firm comes to naming a data-centre client.",
+     "src": "https://www.sargentlundy.com/news/sargent-lundy-ceo-to-kick-off-powergen-conference/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-12"
   },
   {
    "a": "google",
@@ -18087,6 +19168,59 @@
    "last": ""
   },
   {
+   "a": "kiewit",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Combined EPC contractor with Kiewit Power Constructors for Enchant Energy's San Juan carbon-capture retrofit (about USD 1.3 billion) and FEED partners with Kiewit and MHI on Prairie State's capture study.",
+     "context": "Power Engineering (2020-04-15) reported Kiewit Engineering Group, Mitsubishi Heavy Industries America and Sargent & Lundy on a DOE-supported FEED to 'capture 95 percent of carbon emissions' at Prairie State, noting the three 'previously collaborated on the Petra Nova carbon capture project in Texas'. The firm's own 2019 release named 'Kiewit Power Constructors Co. (Kiewit) and Sargent & Lundy as the combined engineering, procurement, and construction (EPC) contractor' for San Juan. Kiewit is the constructor the firm pairs with on carbon capture, as TIC and PCL are on gas.",
+     "source": "https://www.power-eng.com/environmental-emissions/carbon-capture-storage/kiewit-mhi-and-sargent-lundy-parnering-on-carbon-capture-retrofit-at-illinois-gas-fired-plant/",
+     "status": "historical",
+     "since": "2019-12",
+     "via": "Carbon-capture FEED and EPC teams"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: every EPC credit in the record is a consortium or joint venture (TIC on Orange County, PCL in White Oak Power Constructors, Boldt in Westside Energy Partners, EC Source in ECSL for AEP, Kiewit on San Juan); the firm reports to ENR's fee-based professional-services list; its ESOP-free 'owned and led by engineers' structure has no external capital to put at risk.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre power — campus design, on-site generation, large-load interconnection",
+     "date": "",
+     "text": "Competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering and the utilities' own planning groups for campus power, and with HDR, Jacobs and the specialist data-centre engineers for the building.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Nuclear — new build, SMR licensing and design, restarts, uprates and life extension",
+     "date": "",
+     "text": "nuclear power plants') and the design partner of choice for BWRX-300, Xe-100 and NuScale deployments; Bechtel builds, Kiewit and Fluor compete on construction and EPCM, Burns & McDonnell and Black & Veatch (Cascade JV) compete on SMR owner's engineering.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Conventional generation — gas combined cycle, peakers and reciprocating engines",
+     "date": "",
+     "text": "Behind Burns & McDonnell and Black & Veatch on ENR's fossil-fuel design list but the only one of the three with a first J-class engineer-of-record credit in the 2020s; Kiewit and Zachry compete as EPCs with in-house engineering.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2019-12"
+  },
+  {
    "a": "lambda",
    "b": "microsoft",
    "curated": {
@@ -21173,6 +22307,32 @@
   },
   {
    "a": "mitsubishi-power",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "EPC consortium partners on Entergy Texas' 1,215 MW station — Mitsubishi Power supplying two M501JAC turbines, Sargent & Lundy as engineer of record, TIC as constructor.",
+     "context": "POWER (2023-03-03) and the firm's project sheet describe the consortium; Sargent & Lundy has designed Mitsubishi 501GAC plants at Kings Mountain, Middletown, Astoria and Wildcat Point, and the two firms worked with Kiewit on the Petra Nova carbon-capture project and the Prairie State CCS FEED. Fourteen first-party mentions make Mitsubishi the turbine OEM the firm's gas book is most often built around.",
+     "source": "https://www.powermag.com/entergy-picks-epc-team-for-massive-hydrogen-capable-ccgt-project-in-texas/",
+     "status": "active",
+     "since": "2022-11",
+     "scale": "1,215 MW",
+     "via": "Orange County Advanced Power Station EPC consortium"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is named by Entergy, TVA, Bechtel, GE Vernova, Mitsubishi Power and Duke; it competes with Burns & McDonnell, Black & Veatch, Kiewit Engineering, WSP (POWER Engineers), Stantec and DNV.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2022-11"
+  },
+  {
+   "a": "mitsubishi-power",
    "b": "siemens-energy",
    "curated": {
     "a": {
@@ -21717,6 +22877,23 @@
   },
   {
    "a": "nextera-energy-resources",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Sargent & Lundy engineers have supported NextEra Energy Resources on wind, solar and repowering work; the firm says it 'has assessed 7.6 GW of repowerings'.",
+     "context": "A 2017 staff profile: 'He is supporting the ongoing work with Nextera Energy Resources, working on wind, solar, and developmental projects.' A 2020 reprint on the firm's site covers NextEra's Iowa repowering; the firm's white paper claims experience with '35 repowered wind projects, involving more than 2,600 wind turbines', updated in 2025 to 'over 100 wind project repowering efforts'. No role on the Duane Arnold restart was found in NRC or press sources.",
+     "source": "https://www.sargentlundy.com/news/young-professionals-in-power-2017/",
+     "status": "historical",
+     "since": "2017",
+     "via": "Wind repowering engineering"
+    }
+   },
+   "evid": [],
+   "last": "2017"
+  },
+  {
+   "a": "nextera-energy-resources",
    "b": "southern-company",
    "curated": {
     "b": {
@@ -22047,6 +23224,27 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "nvidia",
+   "b": "sargent-lundy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: a dedicated service page with six sub-services, a project sheet listing two confidential hyperscalers and two confidential colocation operators plus utility substation work for 'hyperscaler digital campuses' in four ISO regions, a 2025 senior-vice-president appointment for 'nuclear power-related data center initiatives', a NERC Large Loads Task Force seat, and speaking slots beside NVIDIA and Google Cloud — against zero third-party corroboration of any client.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-12",
+     "text": "CEO Vic Suchodolski keynotes POWERGEN alongside NVIDIA's senior managing director of energy and Google Cloud's global power lead; a colleague presents on air permitting for new data-centre generation — Sharing a stage with the chip vendor and the hyperscaler is the closest the firm comes to naming a data-centre client.",
+     "src": "https://www.sargentlundy.com/news/sargent-lundy-ceo-to-kick-off-powergen-conference/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-12"
   },
   {
    "a": "nvidia",
@@ -24632,6 +25830,22 @@
   },
   {
    "a": "rosendin",
+   "b": "sargent-lundy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Rosendin 'installed the collection system' on the Summit Wind Farm repowering that Sargent & Lundy engineered.",
+     "context": "A single project-sheet mention: the electrical contractor on a wind repowering the firm designed. Recorded because both companies are covered; no broader relationship is stated.",
+     "source": "https://www.sargentlundy.com/projects/summit-wind-farm/",
+     "status": "historical",
+     "via": "Summit Wind Farm repowering"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "rosendin",
    "b": "siemens-energy",
    "evid": [
     {
@@ -24780,6 +25994,66 @@
     }
    ],
    "last": "2025-11-04"
+  },
+  {
+   "a": "sargent-lundy",
+   "b": "southern-company",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "On-site support to Southern Nuclear at the Vogtle 3 and 4 construction site since 2018, and a 2024 Augusta office opened 'with a specific focus on Southern Nuclear'.",
+     "context": "The Nuclear Power page: 'In 2018, we began providing on-site support to Southern Nuclear at the Vogtle 3 and 4 construction site… project management, project controls, design authority turnover, field engineering, construction management, site-specific engineering, and modifications.' The February 2024 Augusta office release: 'The new office will primarily serve nuclear power clients, with a specific focus on Southern Nuclear. Proximity to Plant Vogtle Units 1-4 and Plant Hatch Units 1-2…'. Southern Nuclear is on the 2020 top-ten services and new-facilities client lists filed with the NRC. Georgia Power and the parent are not named as clients.",
+     "source": "https://www.sargentlundy.com/news/augusta-office/",
+     "status": "active",
+     "since": "2018",
+     "via": "Vogtle 3 and 4 on-site support; Augusta office"
+    }
+   },
+   "evid": [],
+   "last": "2018"
+  },
+  {
+   "a": "sargent-lundy",
+   "b": "wartsila",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Wärtsilä engines are the prime movers on Sargent & Lundy-engineered reciprocating plants — Tampa Electric's 72 MW islanding-capable South Tampa Resiliency Project (four 18V50SG) and Tucson Electric's Sundt modernisation (ten 18V50DF).",
+     "context": "The Tampa Electric project sheet: 'a new 72-MW natural gas-fired electric-generating facility using four 18-MW Wärtsilä 18V50SG engines … capable of forming a microgrid', an ENR Southeast Best Project award of merit in 2026; the Sundt sheet lists 'RICE Supplier/Model: Wärtsilä/18V50DF. RICE Size: 10X18MW'. An OEM-on-the-drawing relationship, not a contract between the two firms.",
+     "source": "https://www.sargentlundy.com/projects/tampa-electric-company-reciprocating-internal-combustion-engines/",
+     "status": "active",
+     "since": "2023",
+     "scale": "72 MW",
+     "via": "Reciprocating-engine plants engineered by Sargent & Lundy"
+    }
+   },
+   "evid": [],
+   "last": "2023"
+  },
+  {
+   "a": "sargent-lundy",
+   "b": "xcel-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Engineer of choice for Xcel's Prairie Island and Monticello nuclear plants through the Utilities Service Alliance contract, plus coal-to-gas and security work.",
+     "context": "The Utilities Service Alliance selected Sargent & Lundy as engineer of choice for up to five years from January 2020 covering 'Xcel Energy (Prairie Island Nuclear Generating Plant and Monticello Nuclear Generating Plant…)' among eight members; a Monticello security-strategy optimisation project sheet names Xcel as client; the Black Dog Unit 6 coal-to-gas conversion won a POWER Reinvention Award in 2019. Xcel is also on the 2020 top-ten nuclear services list filed with the NRC.",
+     "source": "https://www.sargentlundy.com/news/usa-selects-sl-as-engineer-of-choice/",
+     "status": "active",
+     "since": "2020-01",
+     "via": "Utilities Service Alliance engineer-of-choice; Monticello security; Black Dog conversion"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Second, nuclear: TVA's owner's engineer and detailed-design lead for the Clinch River BWRX-300 alongside Bechtel and GE Vernova Hitachi; NRC-inspected design packages for the Palisades restart and the Dow / X-energy Xe-100 site; the 2020 top-ten nuclear services clients read TVA, Exelon, Dominion, PSEG, AEP, DTE, Xcel Energy, Southern Nuclear, APS and Ameren.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2020-01"
   },
   {
    "a": "schneider-electric",

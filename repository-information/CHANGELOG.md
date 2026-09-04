@@ -3,11 +3,103 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 74/100`
+`Sections: 75/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.58r] — 2026-09-04 07:21:00 PM EST
+
+> Fresh session on Fable 5.1 High. Run Phase B session F1 of repository-information/PROFILER-COVERAGE-PLAN.md:
+> DNV, Sargent & Lundy, CoolIT Systems — the §8 rows `dnv` (advisor), `sargent-lundy` (advisor), `coolit`
+> (supplier), listed under B10 in §4/§8. F1 is the first of the F1–F8 regrouping recommended in chat on
+> 2026-09-04 (SESSION-CONTEXT.md, Previous Sessions): B10 was split, MGX + Excelsior + X-energy moved to F6.
+> When you flip the three §8 rows, add one dated line to §4 recording that regrouping so the plan matches.
+> READ FIRST: repository-information/SESSION-CONTEXT.md (both entries — the Latest has the environment notes
+> and the head-to-head lessons); PROFILER-COVERAGE-PLAN.md §2 (the model rule, now with a dated head-to-head
+> paragraph — no substitution to record, F1 is natively Fable High), §7 and the three §8 rows;
+> CLASSROOM-CURRICULUM-PLAN.md §6 rows G7 and G10 — F1 closes both; .claude/rules/profiler-app.md (Profiler
+> Command, Profiler Prep Command); repository-information/PROFILER-SCHEMA.md; PROFILER-STYLES.md (active
+> style: intel-briefing); .claude/rules/classroom-app.md is NOT needed — no lesson is being written.
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, categories per the §8 row, intel-briefing prose with confidence-tagged key judgments and
+> an indicators-to-watch bullet) and study guide (schema v2, a where-it-fails section, {{term}} tooltips
+> against profiler-concepts.json, new shared concepts registered there rather than in local glossaries,
+> flashcards and quiz on how the technology and the buying process work, never company trivia). All three
+> are private: DNV is foundation-owned, Sargent & Lundy is employee-owned, CoolIT is KKR-owned since 2023.
+> Disclose revenue, headcount or backlog only where a source states it; leave `expected` empty and say so;
+> calendar rows carry `cadence: "quarterly"`.
+> RESEARCH PRIORITIES. DNV: what the independent engineer actually delivers in a BESS or AIDC financing —
+> IE report scope, technical due-diligence stages, the Energy Storage recommended practices and product
+> certifications it publishes (name them and their revision dates), the annual battery-performance
+> scorecard, the grid-code and interconnection studies, the data-center power and cooling advisory line;
+> named BESS/AIDC engagements with covered companies. Sargent & Lundy: owner's-engineer and IE roles on
+> generation, transmission, BESS and data-center campus power; nuclear (SMR, restart) work; named
+> utility and hyperscaler engagements; how it is paid (fee-for-service, no equity). CoolIT: every CDU and
+> cold-plate line by capacity (kW) and form factor (in-rack, row, facility), the NVIDIA GB200 NVL72 /
+> Vera Rubin reference-design position, coolant chemistry and filtration, the Calgary and any new
+> manufacturing capacity, the KKR ownership and the Asetek patent litigation outcome, hyperscaler and OEM
+> channel (Dell, HPE, Supermicro, Lenovo). For each firm the two research agents must be told explicitly:
+> first-party exhaustive (recommended practices, certification scopes, project sheets, datasheets,
+> leadership pages with headshot URLs) then third-party (trade press, court records, ratings where any
+> exist, partner announcements), with a URL for every relationship claim and the schema's rule that
+> relationships[] resolve only to covered slugs with a source that states the link. Put every must-find
+> item in the agent prompts — nothing can be searched after they return.
+> STUDY GUIDES. G10 (DNV + S&L, one guide each, do not duplicate): what "bankable" means and who decides
+> it; the IE's place between lender, owner, EPC and OEM; the technical due-diligence sequence from
+> feasibility to construction monitoring; what a certification does and does not prove; where the IE
+> fails (scope gaps, reliance letters, augmentation assumptions). G7 (CoolIT): the CDU as a machine —
+> heat exchanger, pumps, filtration, secondary loop, the TCS/FWS interface and ASHRAE W-classes, approach
+> temperature and why it decides the chiller plant, flow balancing across a row, leak detection and the
+> failure modes that take a rack down. Check the existing trane-technologies guide first and do not
+> repeat its chiller material.
+> REGISTER + CHIPS. This is the first `advisor` category with data: after the registry sync, run a
+> Playwright pass on the roster with the advisor chip selected and on each dossier's Relationships tab,
+> and screenshot it — include the check in the report. Append a dated re-check parenthetical to the G7
+> and G10 rows in CLASSROOM-CURRICULUM-PLAN.md §6 naming the slugs that landed and flip their status
+> (G7 → Closed if the CDU half now exists; G10 → Closed or Partial per your judgment on whether two IE
+> dossiers satisfy "insurance and independent engineers" — brokers are still absent; say so).
+> BOOKKEEPING, same commit: python3 scripts/sync-profiler-registry.py, build-profiler-graph.py,
+> check-profiler-study.py; three calendar rows; README tree entries for every profile, study file and
+> study-prep folder plus the execs count; flip the three §8 rows; the §4 line above; CHANGELOG entry
+> (counter is at 74/100 — no rotation this session). One push commit with the repo version bump.
+> ENVIRONMENT (confirmed this session): pip install playwright and pip install pymupdf are both needed;
+> never run playwright install — use the /opt/pw-browsers/chromium-*/chrome-linux/chrome executable; the
+> HTTP server for the harness must be threaded (ThreadingMixIn, daemon threads, swallow BrokenPipeError)
+> or Profiler.html's ~100 parallel JSON fetches deadlock it; route script.google.com to the roles stub in
+> scripts/verify-profiler-roles.py and fulfill accounts.google.com with an empty script; reload between
+> dossiers. The refresh-calendar and registry taglines summarize existing dossiers — irrelevant here since
+> all three are new, but do not read other dossiers' prose as a template for judgments.
+> VERIFY BEFORE COMMIT: sync-profiler-registry.py --check clean, check-profiler-study.py clean, every
+> dossier and guide renders with zero page errors and zero console errors, every relationships[] slug and
+> every {{term}} resolving. Normal Pre-Commit and Pre-Push checklists; push on a claude/* branch.
+> If a rating, a spec or an engagement cannot be sourced from a datasheet, a recommended practice, a court
+> record, a regulator or the company's own release, leave it out and say so.
+
+### Added
+
+**Profiler dossiers + study guides — Phase B session F1 (data-only; no page or GAS change)**
+
+- **`live-site-pages/profiler-data/dnv.profile.json`** — DNV, `advisor`, schema v7, profileVersion 1, intel-briefing style: 101 sources (76 dated; 32% first-party — dnv.com is unreadable from this environment behind Cloudflare, so the 2025 annual report was read from a mirror host with `party: "company"` and 14 dnv.com pages are cited by title only, stated as a collection gap in the dossier); 7 products, 36 spec rows (Energy Storage recommended practices with revision dates, Battery Scorecard, grid-code and interconnection studies, data-centre advisory), 24 developments, 10 relationships to covered companies, 4 policy regimes, 9 decision makers with 4 headshots extracted from the annual report; NOK financials with `expected` empty and no USD normalisation (no sourced FX rate); 7 confidence-tagged judgments, a collection-gaps paragraph and an indicators-to-watch bullet.
+- **`live-site-pages/profiler-data/sargent-lundy.profile.json`** — Sargent & Lundy, `advisor`, profileVersion 1: 158 sources (71% first-party), 8 products, 30 developments, 16 relationships (entergy, xcel-energy, southern-company, constellation-energy, dominion-energy, nextera-energy-resources, bechtel, ge-vernova, mitsubishi-power, kiewit, wartsila, rosendin, black-veatch, burns-mcdonnell, dnv…), 6 policy regimes, 18 decision makers with 12 headshots; private — no revenue disclosed and none invented; premise correction recorded: the firm describes itself as "privately owned and led by engineers" and is absent from the NCEO Employee Ownership 100 — it is not an ESOP.
+- **`live-site-pages/profiler-data/coolit.profile.json`** — CoolIT Systems, `supplier`, profileVersion 1: 151 sources (65% first-party), every CDU line by kW and form factor (CHx2000/1500/500, AHx240/180, CHx200/80, legacy CHx750) with 56 spec rows, the NVIDIA Recommended Vendor List rack-count table, coolant chemistry and filtration, 29 developments, 3 relationships (nvidia partner; vertiv and schneider-electric competitors), 5 policy regimes, 14 decision makers with 12 headshots. **Two premise corrections in the commissioning brief, recorded in the dossier rather than smoothed:** CoolIT is an Ecolab subsidiary (agreement 2026-03-20, closed 2026-07-02, about USD 4.75bn, roughly 29x NTM adjusted EBITDA on about USD 550m NTM sales), owned by KKR and Mubadala only from May 2023 to July 2026; and Asetek v. CoolIT never reached a jury — the 2022-09-11 summary-judgment order (Asetek's patent valid but not infringed), a confidential settlement and dismissal on 2022-10-06, with the Federal Circuit reviving CoolIT's own '567 patent on 2024-03-07 (court records cited).
+- **`dnv.study.json`, `sargent-lundy.study.json`, `coolit.study.json`** (schema v2, each with a where-it-fails section, flashcards and a self-test on how the technology and the buying process work — never company trivia). DNV and Sargent & Lundy are one lesson in two halves (G10): what "bankable" means and who decides it, the IE between lender, owner, EPC and OEM, inside the IE report, degradation and test data, certification against recommended practice, the financing sequence, reliance and liability, where the IE fails — then owner's engineer against independent engineer against engineer of record, the 30/60/90 design review, how engineering firms are paid, campus power as an owner's-engineer problem. CoolIT (G7) teaches the CDU as a machine — heat exchanger, pumps, filtration, reservoir and ride-through power; the TCS/FWS boundary; approach temperature as the number that sizes the chiller plant; ASHRAE W-classes; flow, pressure and balancing across a row; PG25 chemistry; the three CDU positions; leak detection and the rack-down failure modes; how liquid cooling is bought through two channels — and does not repeat the Trane guide's chiller material or the Vertiv guide's thermal-chain material.
+- **`repository-information/study-prep/{dnv,sargent-lundy,coolit}/*-lesson-plan.md`** — three five-module lesson plans from the Profiler Prep Command.
+- **`live-site-pages/images/execs/`** — 28 new company-published headshots (dnv-* 4, sargent-lundy-* 12, coolit-* 12).
+- **`profiler-concepts.json`** — 28 new shared concepts registered (610 → 638): financial-close, conditions-precedent, drawdown, reliance-letter, liquidated-damages, iec-62933, owners-engineer, engineer-of-record from the IE guides; approach-temperature, ashrae-w-class, facility-water-system, direct-liquid-cooling, pg25, corrosion-inhibitor, galvanic-corrosion, dew-point, flow-balancing, pressure-drop, rack-manifold, quick-disconnect, leak-detection, in-rack-cdu, in-row-cdu, liquid-to-air-cdu, rear-door-heat-exchanger, plate-heat-exchanger, thermal-design-power, wetted-materials from the CDU guide. The existing `approach` (tower/chiller sense) is left alone; `approach-temperature` carries only the "approach temperature differential" alias to avoid the collision.
+
+### Changed
+
+- **`profiler-companies.json`** — three registry entries (`dnv` and `sargent-lundy` are the first two `advisor`-category entries with data; `coolit` under `supplier`), 109 → 112 companies; `sync-profiler-registry.py` wrote `srcTotal`/`srcFirstPct`/`kpiNorm`. **`profiler-graph.json`** rebuilt: 745 edges (566 curated), 2,196 evidence items. **`repository-information/profiler-refresh-calendar.json`** — three private rows with `cadence: "quarterly"`, a source note and watch lists (73 rows); `updated` 2026-09-04.
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — the three §8 rows flipped to `B10 → F1 … v1 · v04.58r | ✓ · v04.58r`; a dated §4 paragraph records the F1–F8 regrouping (B10 split; MGX, Excelsior and X-energy moved to F6).
+- **`repository-information/CLASSROOM-CURRICULUM-PLAN.md` §6** — G7 → **Closed** v04.58r (the CDU-specialist half landed; Trane holds the chiller half); G10 → **Partial** v04.58r (two independent-engineer dossiers landed and `what-bankable-means` now has public corroboration, but the row also names insurance and brokers, and no broker or insurer dossier exists — said so on the row).
+- README tree: entries for the three profiles, three study guides, three study-prep folders and lesson plans; execs count 348 → 376 images across 68 companies; `Last updated:` and `Repo version:`; repo version v04.57r → **v04.58r**.
+
+### Verified
+
+- `sync-profiler-registry.py --check`: 0 of 112 out of sync. `check-profiler-study.py`: 86 guides + 638 concepts, 0 errors, 0 warnings. `build-profiler-graph.py`: no unresolved slugs.
+- Playwright (threaded server, GAS stubbed): roster renders with the **Advisor chip showing 2** and filtering to DNV and Sargent & Lundy; each of the three dossiers renders all nine tabs including Relationships (10 / 16 / 3 curated links, 0 unresolved), every `sources[]` entry renders (101 / 158 / 151), each study guide renders with 0 literal `{{}}` markers and 0 unresolved term spans; zero page errors and zero console errors. Screenshots kept in the session scratchpad.
 
 ## [v04.57r] — 2026-09-04 05:11:11 PM EST
 

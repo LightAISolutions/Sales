@@ -1,0 +1,650 @@
+{
+ "schemaVersion": 2,
+ "slug": "dnv",
+ "title": "DNV — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "glossary": [
+  {
+   "t": "construction monitoring",
+   "d": "In project finance: the independent engineer's recurring site visits and reports during construction, checking progress, quality and spend against the plan so that each loan drawdown can be certified. Distinct from the utility-commission sense of the term used in the Dominion and Southern Company material."
+  },
+  {
+   "t": "IE report",
+   "d": "The independent engineer's report: the written technical assessment a lender commissions before financial close, covering technology, design, contracts, permits, safety, schedule, budget and the technical inputs to the financial model."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-the-seat-the-money-sits-in",
+   "title": "Start here: the seat the money sits in",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "This corpus already teaches how a battery is built and how a data centre is powered. What it has not taught is **who decides whether either one gets paid for**. This guide is the first half of that answer: what **{{bankability}}** means and who actually rules on it, what sits inside the **{{independent engineer}}**'s report, what a certificate or a recommended practice does and does not prove, where the test data behind a warranty curve comes from, and the specific ways the independent engineer (IE) fails a project or a lender.",
+    "**What it deliberately leaves to the Sargent & Lundy guide:** the difference between an owner's engineer, an independent engineer and an EPC; the design-review sequence (30, 60, 90 percent); how engineering firms are paid; and campus power for data centres. Read that guide second — the two are one lesson in two halves, and neither repeats the other.",
+    "**One idea carries this half.** A lender cannot test a battery, read a warranty or witness a fire test. It buys those judgments from a party that has no stake in the answer, and the whole financing rests on that party being right. DNV's business is being that party — and also writing the practice the contract cites and running the laboratory the data comes from, which is why it appears on both sides of the same deal.",
+    "Written for a reader with high-school science and no finance background. Every acronym is defined on first use; the drills test how the process works, never who runs it."
+   ]
+  },
+  {
+   "id": "what-bankable-means-and-who-decides",
+   "title": "What 'bankable' means, and who decides it",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**Bankable is a lender's word, not an engineer's.** A project is bankable when a bank's credit committee will lend against it — meaning the committee believes the project's future cash flows will repay the debt even when things go moderately wrong. Nothing about the battery itself makes it bankable; what makes it bankable is that every question the committee asks has a defensible answer from someone the committee trusts. **{{bankability}}** is therefore a property of the *package* — technology, contracts, counterparties, permits and forecasts together — and it is decided by the people who are putting money in, not by the people who built the thing.",
+    "**Three tests, in the order a committee asks them.** *Does the technology work as claimed, for as long as claimed?* — a battery that loses capacity faster than the model assumes repays less debt. *Will the counterparties still be standing?* — a warranty is only as good as the company behind it; an **{{offtake}}** contract is only as good as the buyer. *Do the contracts actually allocate the risks the way the model assumes?* — a **{{take-or-pay}}** clause that turns out to have an escape hatch, or a **{{tolling agreement}}** whose availability test the plant cannot pass, is a hole in the cash flow the spreadsheet did not show.",
+    "**Who is in the room.** The lenders (often a club of banks, sometimes a bond issue); in the United States the tax-equity investor, who monetises the investment credit and has its own diligence; the sponsor or developer, who wants the money; and around them a ring of advisers each answering one question the bank cannot answer itself — legal counsel on the contracts, an insurance adviser on what is insurable, a market consultant on what merchant revenue is worth, and the **{{independent engineer}}** on whether the machine and the plan are sound. The engineer's report is the one the others lean on, because every other question eventually reduces to whether the plant will perform.",
+    "**The decision is a date.** All of this converges on **{{financial close}}** — the day the loan agreement's **{{conditions precedent}}** are satisfied and money can flow. The IE report is almost always one of those conditions. Miss the date and construction slips, equipment slots lapse and the developer carries interest on nothing. So the IE is not writing an essay; it is clearing a gate on a calendar, and everyone knows which day the gate has to open.",
+    "**The market's own words.** Project-finance counsel describe it plainly: 'Much of the lenders' diligence on technology risks will be covered by a report from an independent engineer, who will examine the project's ability to satisfy the commissioning testing requirements and minimum performance requirements under the applicable offtake agreements.' A national-laboratory financing study calls the report 'a central part of the lenders risk management process in their credit approval process' covering 'the design, engineering, construction, contracting and performance predictions for the facility'. Note what both say: the report is *for* the lender, *about* the project, and *against* the contracts.",
+    "**Self-check:** a developer says its battery is 'bankable because it uses a top-tier cell'. Which of the three tests does that sentence address, and which two does it skip? *(Only the technology test, and only partly — it says nothing about counterparty strength or contract terms, and a top-tier cell in a plant cycled twice a day against a one-cycle warranty is not bankable at all.)*"
+   ]
+  },
+  {
+   "id": "five-parties-and-what-each-wants",
+   "title": "Five parties around a battery project, and what each wants the engineer to say",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The independent engineer sits at the centre of a ring of interests that pull in different directions. Understanding what each party wants from the report explains why the report reads the way it does — and why the IE's independence is the entire product.",
+   "cols": [
+    "Party",
+    "What it wants",
+    "What the IE actually tests on its behalf",
+    "Where the tension is"
+   ],
+   "rows": [
+    [
+     "**Lender / tax equity**",
+     "Certainty that debt is repaid under stress; a report it can rely on legally",
+     "Design against use case; contracts against model; degradation against warranty; schedule and budget; permits and safety",
+     "Wants conservatism — every downside case explored — but not so much that the deal dies"
+    ],
+    [
+     "**Sponsor / owner**",
+     "Financial close on schedule at the lowest cost of capital",
+     "Nothing directly — the sponsor pays the IE but does not appoint it",
+     "Pays for a report that may cut its debt sizing; wants issues 'closed' rather than 'flagged'"
+    ],
+    [
+     "**{{EPC}} contractor**",
+     "A design accepted as compliant; no late changes",
+     "Whether the design meets the specification and codes; whether the schedule is credible; **{{liquidated damages}}** terms",
+     "Every IE comment is a potential change order or a delay to its own milestones"
+    ],
+    [
+     "**OEM / integrator**",
+     "Its product accepted; its warranty read as sufficient",
+     "Cell test data, safety certification, warranty limits (cycles, depth of discharge, temperature), spares and service network, financial strength",
+     "The IE reads the warranty's exclusions as carefully as its promises — and may ask for independent test data the OEM would rather not supply"
+    ],
+    [
+     "**Offtaker (utility, trader, tenant)**",
+     "A plant that passes its **{{capacity test}}** and keeps its **{{availability guarantee}}**",
+     "Whether the plant as designed can meet the contract's performance requirements",
+     "Its contract may demand a cycling regime the warranty does not permit — the IE is the party that notices"
+    ]
+   ]
+  },
+  {
+   "id": "inside-the-ie-report",
+   "title": "Inside the IE report: section by section",
+   "kind": "table",
+   "read": "9 min",
+   "intro": "An independent engineer's report follows a recognisable order. The right-hand column says what a reader should take from each part, and what a lender is really buying.",
+   "cols": [
+    "Section",
+    "What it covers",
+    "What it is really testing"
+   ],
+   "rows": [
+    [
+     "**Technology review**",
+     "The cell chemistry, module and rack design, the **{{PCS}}**, the **{{BMS}}** and **{{EMS}}**; field record of the exact product generation; certifications held",
+     "Whether this is proven equipment or a first-of-a-kind dressed as one — the national-lab framing is that for lithium-ion 'the need of the IER is more geared toward system design and acceptance' than to whether the chemistry works at all"
+    ],
+    [
+     "**Design review against use case**",
+     "The dispatch the revenue model assumes (cycles per day, depth of discharge, duration) against the plant's electrical and thermal design and the warranty envelope",
+     "The single most common BESS finding: a use case the design or the warranty cannot support"
+    ],
+    [
+     "**Contract review**",
+     "EPC contract, equipment supply and warranty, **{{LTSA}}** or O&M agreement, interconnection agreement, **{{offtake}}** or tolling contract",
+     "Whether the risks the model assigns to others are actually theirs on paper — and whether the warranty's conditions match how the plant will be run"
+    ],
+    [
+     "**Financial-model inputs**",
+     "Capacity, efficiency, degradation, availability, O&M cost, **{{augmentation}}** cost and timing",
+     "The IE does not opine on price forecasts; it validates every *technical* number the spreadsheet contains"
+    ],
+    [
+     "**Permitting and safety**",
+     "Zoning and environmental permits; fire-code compliance (**{{NFPA 855}}**); **{{UL 9540A}}** test data and what it shows; setbacks; emergency response",
+     "Whether the project can legally be built and operated where it stands, and whether a fire would be contained"
+    ],
+    [
+     "**Schedule and budget**",
+     "EPC schedule realism; **{{long-lead item}}** delivery; **{{contingency}}**; **{{interconnection queue}}** position and energisation date",
+     "Whether the plant reaches **{{commissioning}}** before the offtake or tax-credit deadline"
+    ],
+    [
+     "**Construction monitoring**",
+     "Monthly site visits; progress against schedule and spend; certification of each **{{drawdown}}**",
+     "'No drawdown certificate, no disbursement' — the IE's signature controls the flow of funds during construction"
+    ],
+    [
+     "**Commissioning and operations**",
+     "Witnessing the **{{capacity test}}** and **{{round-trip efficiency}}** test; annual operating reviews against guarantees",
+     "Whether the contracted numbers were actually demonstrated — the only measurement that turns a claim into a fact"
+    ]
+   ]
+  },
+  {
+   "id": "degradation-is-where-the-money-leaks",
+   "title": "Degradation is where the money leaks",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**A battery is the only power plant that gets smaller every year by design.** Every cycle and every month of calendar life removes a little usable capacity; the industry calls the running total **{{degradation}}** and its remaining fraction **{{state of health}}**. A gas turbine that still makes 100 percent of its rating in year ten is normal. A battery that does is impossible. So a battery financing is built on a *curve*, not a number — and the whole revenue model slides down that curve.",
+    "**The warranty is a curve with conditions.** The OEM guarantees a retention path — say 70 percent of nameplate energy after so many cycles — but only if the plant stays inside an envelope: a maximum number of cycles per year, a depth-of-discharge window, a temperature band, sometimes a resting state of charge. Run outside the envelope and the guarantee is void. The IE's most valuable single finding is often the sentence: *the revenue model cycles this plant more than the warranty permits*. A two-cycles-a-day contract against a one-cycle warranty is a project whose insurance policy expires the day it opens.",
+    "**Augmentation is how the curve is bought back.** Because the plant must still deliver its contracted megawatt-hours in year eight, the owner adds cells — **{{augmentation}}** — to offset what has been lost. That costs money (in the model as a capital line in the augmentation years), it needs physical room (empty rack positions, spare inverter and transformer capacity, a fire-code layout that anticipates it) and it needs a supplier still selling a compatible product a decade later. An IE asks all three questions. A model that assumes augmentation but a site plan that has nowhere to put it is a quiet, expensive contradiction.",
+    "**Efficiency compounds.** **{{Round-trip efficiency}}** — the share of energy put in that comes back out — also drifts with age and temperature. A plant that buys power to sell it later loses the difference twice: once in the physics and again in the model if the model assumed year-one efficiency for twenty years.",
+    "**Why the IE will not take the OEM's curve at face value.** Vendor degradation curves come from the vendor's own testing under the vendor's chosen conditions. The market's independent answer is comparative laboratory data: DNV's Battery Scorecard, for instance, reported that thermal-runaway onset temperatures were 'vastly different across cells' and that buyers 'should request independently verified test data from vendors'. When such data exist, the IE compares them to the warranty; when they do not, it haircuts the curve — and the debt shrinks with it.",
+    "**Self-check:** a model assumes 365 full cycles a year and augmentation in years 7 and 12. The warranty allows 300 cycles a year. What happens, and to whom? *(The plant either honours the contract and voids its warranty, or honours the warranty and misses its revenue. Either way the lender's downside case is wrong — which is exactly the kind of finding that changes debt sizing before close.)*"
+   ]
+  },
+  {
+   "id": "where-a-degradation-curve-comes-from",
+   "title": "Test data: where a degradation curve comes from",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**Two clocks run at once.** Cells age with use (*cycle fade*: each charge and discharge strains the electrodes) and with time (*calendar fade*: chemistry drifts even at rest, faster when warm and full). A useful curve separates the two, because a grid battery that idles at high state of charge in a hot climate can lose more to the calendar than to the cycling. Test programmes therefore hold cells at fixed states of charge and temperatures for months while others are cycled — and the cycled ones are run through the actual duty profiles a grid plant sees (frequency response, four-hour solar shifting) rather than the tidy full cycles of a datasheet.",
+    "**Why the test has to be standardised.** A degradation number is meaningless without its conditions, and two vendors quoting 'cycle life' rarely mean the same thing. This is what a standardised cell-testing practice does — it fixes the depth of discharge, the current rates, the temperatures, the rest periods and the measurement method, so that results from different manufacturers can sit on the same chart. DNV's public statement of the method is its recommended practice on standardised performance testing of battery cells; the results, anonymised, are the Battery Scorecard.",
+    "**What a fingerprint is.** DNV's storage lead describes the output as 'a bit of a fingerprint of a particular cell' — a set of measured characteristics (fade rates under several profiles, efficiency versus temperature, abuse behaviour) that identifies how a cell will behave rather than what its label says. The 2020 edition rested on '5 million hours across 40 examinations' of 22 batteries; the 2022 edition tested 19 cell types across three use cases. Small samples by consumer-electronics standards, but the only multi-vendor independent series the industry has.",
+    "**The safety half of the same test.** The abuse tests — overheating, nail penetration, overcharge — measure when and how a cell vents and whether it ignites its neighbour. This is the cell-level layer of **{{UL 9540A}}**, and it is where the Scorecard's headline finding came from: onset temperatures differ widely between cells that all pass the same certification. A certificate says a product met a threshold; a test series says by how much.",
+    "**What the data cannot tell you.** Laboratory cells are not a field plant. Manufacturing variation between batches, BMS calibration, cooling-system behaviour and the operator's real dispatch all move the curve after the lab is done. This is why the IE report treats test data as evidence to weigh against the warranty, not as a forecast — and why the same firm sells monitoring software for the years after close."
+   ]
+  },
+  {
+   "id": "three-documents-that-are-not-the-same",
+   "title": "Certificate, recommended practice, bankability report: three documents that are not the same",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Sales conversations blur these; a credit committee does not. Each proves something specific and is silent about something else.",
+   "cols": [
+    "Document",
+    "Who issues it, to whom",
+    "What it proves",
+    "What it does not prove",
+    "Example in the record"
+   ],
+   "rows": [
+    [
+     "**Product safety certification** (UL 1973, UL 9540, IEC 62619)",
+     "A test laboratory or notified body, to the OEM, for a defined product",
+     "That a sample of that product met the standard's tests on the day it was tested",
+     "Field reliability, degradation, performance in *this* project's use case, or that the units shipped are identical to the sample",
+     "Trina Storage's Elementa 2 assessed for compliance with UL 1973, UL 9540, IEC 62619 and IEC 63056 (2024)"
+    ],
+    [
+     "**Fire-test report** ({{UL 9540A}}; large-scale burn test)",
+     "A laboratory or a witnessing body, to the OEM",
+     "How thermal runaway propagates in this design — cell to module to unit — under a defined ignition",
+     "That a fire will never start; the probability of a field event; anything about a different enclosure or layout",
+     "Sungrow's 10 MWh and 20 MWh burn tests supervised by DNV (2024); Prevalon's 6 MWh test at DNV's Texas facility (2025)"
+    ],
+    [
+     "**Recommended practice** (DNV-RP-0043)",
+     "A standards author, to the market at large",
+     "A structured checklist of what a safe, well-operated, well-performing storage system should address, across the whole lifecycle",
+     "Nothing about any particular project — it is guidance to write requirements against, not a stamp on a product",
+     "RP-0043's stated aim: 'a comprehensive set of recommendations for grid-connected energy storage systems … on all levels from component to system, covering the entire life cycle'"
+    ],
+    [
+     "**Bankability report** (vendor-commissioned)",
+     "An assessor, to the OEM, about the OEM and its product",
+     "The vendor's financial strength, manufacturing capacity, service network and product track record — the *counterparty* half of the lender's question",
+     "That any specific project using the product is financeable; the report is about the seller, paid for by the seller",
+     "Elementa 2 'received independent bankability reports from both DNV and UL Solutions' (2025) — two stamps bought at once"
+    ],
+    [
+     "**IE report** (project-specific)",
+     "The independent engineer, appointed by the lender, paid by the developer",
+     "That *this* project's design, contracts, schedule, budget and technical model inputs hold together",
+     "Merchant power prices (the market consultant's job); legal enforceability (counsel's job); insurability (the broker's job)",
+     "Akaysha's Orana BESS: pre-close technical due diligence rolling into construction-phase lender's engineering (2024)"
+    ]
+   ]
+  },
+  {
+   "id": "recommended-practice-versus-standard",
+   "title": "Recommended practice versus standard: what RP-0043 is for",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "**Standards are narrow on purpose.** UL 9540 certifies a storage system; UL 9540A characterises its fire behaviour; **{{NFPA 855}}** tells a fire marshal how far apart to place units; **{{IEC 62933}}** specifies system-level requirements; **{{UL 1973}}** covers the battery itself. Each is written to be *testable* and *enforceable*, which means each stops at a boundary. Nothing in that list tells a buyer how to specify a plant, judge a warranty, plan decommissioning or write a tender.",
+    "**A recommended practice fills the space between.** RP-0043 set out to 'cover a broad range of energy storage technologies, instead of one or more battery types', to 'have a system-level approach, instead of being limited to one or two key components', and to be 'comprehensive and structured'. Its 2017 update added chapters on cyber security, communications protocols, conformity assessment, warranties, decommissioning, tendering and procurement, bankability and residual value. That is the table of contents of a buyer's due diligence, published as a document a contract can cite.",
+    "**How it gets used.** Three ways. As *employer's requirements* — a developer writes 'the system shall comply with DNV-RP-0043' into a tender, and the bidders' compliance matrices inherit its structure. As a *diligence checklist* — an IE (of any firm) walks a project through its sections. And as the *basis of certification* — DNV's own storage-system certification proceeds against standards the client proposes plus the RP. It is not law and no regulator mandates it; this session found no RFP, tariff, permitting guide or insurer requirement that cites it. Its weight is that it exists and nothing else covers the same ground.",
+    "**The conflict of interest, named.** The same organisation writes the practice, certifies against it and sits as IE on projects that cite it. The industry accepts this because the practice was built in a joint industry project with dozens of participants and is free to download — the credibility comes from the process, not the author. But a reader should notice the structure: an author who is also the examiner has an interest in the exam being taken.",
+    "**Self-check:** a tender says 'battery containers shall be UL 9540 listed'. What has the buyer specified, and what has it left unspecified that RP-0043 would have prompted? *(It has specified a product certification and nothing about system integration, operating limits, warranty structure, cyber security, decommissioning or how performance will be verified — the whole-life questions the practice exists to raise.)*"
+   ]
+  },
+  {
+   "id": "the-financing-sequence",
+   "title": "The financing sequence: from feasibility to construction monitoring",
+   "kind": "timeline",
+   "read": "7 min",
+   "intro": "Months relative to financial close. The independent engineer's work runs from before the term sheet to after commissioning; the lender's exposure begins at zero and peaks at commissioning. Lanes: what the developer is doing, what the IE is doing.",
+   "unit": "months relative to financial close (negative = before)",
+   "lanes": {
+    "dev": "Developer / sponsor",
+    "ie": "Independent engineer / lender's advisers"
+   },
+   "items": [
+    {
+     "x": -24,
+     "lane": "dev",
+     "label": "Feasibility and interconnection application",
+     "sub": "Site, {{interconnection queue}} entry, technology shortlist, offtake conversations"
+    },
+    {
+     "x": -18,
+     "lane": "dev",
+     "label": "Equipment and EPC selection; term sheet with lenders",
+     "sub": "OEM warranty terms negotiated; {{basis of design}} fixed"
+    },
+    {
+     "x": -12,
+     "lane": "ie",
+     "label": "IE appointed by lenders; kick-off",
+     "sub": "Scope agreed; reliance and liability terms set; document request list issued"
+    },
+    {
+     "x": -8,
+     "lane": "ie",
+     "label": "Technology and design review; contract review",
+     "sub": "Use case vs design vs warranty; EPC, supply, O&M, interconnection and offtake contracts read against the model"
+    },
+    {
+     "x": -5,
+     "lane": "ie",
+     "label": "Draft IE report; financial-model inputs validated",
+     "sub": "Degradation, augmentation, availability, O&M and efficiency assumptions confirmed or haircut"
+    },
+    {
+     "x": -2,
+     "lane": "dev",
+     "label": "Conditions precedent cleared",
+     "sub": "Permits, insurance, legal opinions, final IE report and reliance letters delivered"
+    },
+    {
+     "x": 0,
+     "lane": "dev",
+     "label": "Financial close — first drawdown",
+     "sub": "Loan agreement effective; the IE report is a condition of it"
+    },
+    {
+     "x": 6,
+     "lane": "ie",
+     "label": "Construction monitoring — monthly site visits",
+     "sub": "Progress, quality and spend against plan; each {{drawdown}} certified"
+    },
+    {
+     "x": 16,
+     "lane": "dev",
+     "label": "Mechanical completion; energisation",
+     "sub": "Utility interconnection energised; {{commissioning}} begins"
+    },
+    {
+     "x": 18,
+     "lane": "ie",
+     "label": "Commissioning witnessed; capacity and efficiency tests",
+     "sub": "The contracted numbers demonstrated — or not"
+    },
+    {
+     "x": 20,
+     "lane": "dev",
+     "label": "Commercial operation date; conversion to term loan",
+     "sub": "Completion certificate; lender exposure shifts from construction to operating risk"
+    },
+    {
+     "x": 32,
+     "lane": "ie",
+     "label": "Annual operating review",
+     "sub": "Degradation against the warranty curve; augmentation reserve tested; covenant compliance"
+    }
+   ]
+  },
+  {
+   "id": "reliance-who-may-trust-the-report",
+   "title": "Reliance: who is allowed to trust the report, and for how much",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "**A report is only useful to the people it is addressed to.** An IE report is written for its client — the lenders who appointed the engineer — and the engineer's duty of care runs to them. Anyone else who wants to act on it (a tax-equity investor joining later, a bond trustee, a buyer of the project in year five) needs a **{{reliance letter}}**: a short agreement in which the engineer extends its duty to the named party, usually under the same conditions and cap as the original engagement. No letter, no legal right to rely — however public the report becomes.",
+    "**Liability is capped, and the cap is the tell.** Engineering firms limit their liability to a multiple of their fee or to a fixed sum, and certificates carry the same structure — a marine type-approval certificate in this record states a liability cap of USD 300,000 on its face. On a financing of several hundred million, the engineer's exposure is a rounding error against the lender's. That is not a scandal; it is the price of having any independent party willing to sign. But it means the report's value to a lender is *information*, not *insurance* — the bank cannot recover its loan from the engineer if the engineer was wrong.",
+    "**Who appoints and who pays.** The lender selects the IE (from a panel it trusts) and the developer pays the fee. The arrangement is deliberate: the party bearing the risk chooses the adviser; the party wanting the money bears the cost. It also creates the IE's central discipline — it cannot please the party paying it without losing the party that hires it. A firm that acquired a reputation for soft reports would drop off lender panels, which is why independence is guarded as the franchise itself.",
+    "**Confidentiality is why you cannot see the work.** IE reports are lender deliverables under non-disclosure; reliance letters name banks, not journalists. That is the reason a large IE firm's United States storage work can be invisible in the press even while it is busy — and equally the reason absence of publicity cannot be read as absence of mandates. The public record of IE work is almost entirely the client's release ('DNV as technical advisor') or the engineer's own, when both agree to say so.",
+    "**Self-check:** a fund buying an operating battery in year four finds the original IE report in the data room. Can it rely on it? *(Not as of right. It needs a reliance letter from the engineer — which the engineer may refuse, condition or charge for, and which will carry the original cap. Otherwise the fund commissions its own technical due diligence, as the buyer of the German portfolio in this record did.)*"
+   ]
+  },
+  {
+   "id": "fire-testing-and-the-witness",
+   "title": "Fire testing and the witness: what a burn test tells a lender",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Battery fires are the risk a lender cannot model and an insurer prices first. Testing answers some of the question; a witness answers a different one. The rows go from the smallest sample to the largest.",
+   "cols": [
+    "Level",
+    "What is burned",
+    "What it shows",
+    "What it cannot show"
+   ],
+   "rows": [
+    [
+     "**Cell** ({{UL 9540A}} cell level)",
+     "A single cell driven into {{thermal runaway}} by heat",
+     "Onset temperature, gas volume and composition, whether the cell ignites",
+     "Anything about propagation — this is chemistry, not design"
+    ],
+    [
+     "**Module**",
+     "A module with one cell forced into runaway",
+     "Whether runaway spreads cell to cell inside the module; heat release",
+     "Behaviour of the enclosure, the suppression system or the spacing"
+    ],
+    [
+     "**Unit / enclosure**",
+     "A full container or cabinet with an initiating module",
+     "Whether fire propagates between modules; external surface temperatures; deflagration risk; what the suppression and venting do",
+     "Field probability; a different layout; the site's response"
+    ],
+    [
+     "**Installation** (large-scale burn test)",
+     "Several full units at contractual spacing — Sungrow's 20 MWh test used real-world spacing",
+     "Unit-to-unit propagation and the heat exposure of neighbouring equipment; what a site fire would look like",
+     "That the specific cells shipped to a project match the tested batch; long-term degradation effects on safety"
+    ],
+    [
+     "**The witness**",
+     "Nothing — the witness observes the test and attests to its conduct",
+     "That the test happened as described, to the protocol claimed, with the stated result",
+     "That the product is safe in service. A witness certifies a *test*, and the reputational asymmetry runs one way: a witnessed product that later fails in the field is traced to the witness"
+    ]
+   ]
+  },
+  {
+   "id": "how-big-a-battery-financing-is",
+   "title": "How big a battery financing is — the storage behind the debt",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "megawatt-hours of storage in the financing (client-side and trade-press figures, 2023–2026)",
+   "intro": "Every bar is a financing in which DNV is named as technical adviser, market consultant or lender's engineer. Read the ladder as the scale of the decisions an IE report gates — and notice that the debt behind each bar is in the hundreds of millions while the engineer's fee is a fraction of one percent of it.",
+   "items": [
+    {
+     "label": "Cleve Hill, UK (Quinbrook)",
+     "sub": "373 MW PV + 150 MW / 300 MWh BESS; £218.5m debt (Lloyds, NatWest) — DNV's lender's-adviser role is stated only on its own UK site",
+     "v": 300
+    },
+    {
+     "label": "Zenobē Blackhillock + Kilmarnock South, Scotland",
+     "sub": "2 × 200 MW / 400 MWh; £235m from five banks; 'DNV as technical advisor'",
+     "v": 800
+    },
+    {
+     "label": "Zelestra Aurora, Chile",
+     "sub": "220 MWdc PV + 1 GWh BESS; USD 282m (Natixis, BNP Paribas, BCI); market advisory and technical due diligence",
+     "v": 1000
+    },
+    {
+     "label": "Grenergy Central Oasis, Chile",
+     "sub": "398 MW PV + 1.4 GWh BESS; BNP Paribas, Santander, Rabobank; market consultant",
+     "v": 1400
+    },
+    {
+     "label": "TotalEnergies → AllianzGI, Germany",
+     "sub": "11 projects, 789 MW / 1,628 MWh; sell-side technical due diligence on a 50% stake",
+     "v": 1628
+    },
+    {
+     "label": "Akaysha Orana, New South Wales",
+     "sub": "415 MW / 1,660 MWh; AUD 650m from eleven banks; technical due diligence then lender's engineer",
+     "v": 1660
+    },
+    {
+     "label": "Grenergy Elena, Chile",
+     "sub": "77 MW PV + 430 MW / 3.5 GWh BESS; USD 270m (SMBC, BNP Paribas, BBVA, KfW); battery revenue forecast for lenders",
+     "v": 3500
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "8 min",
+   "ps": [
+    "**The scope gap.** The IE reviews what it is engaged to review, and the engagement letter was negotiated by a sponsor trying to keep the fee down. A report that covers the battery and the EPC contract but not the interconnection agreement, or the plant but not the **{{augmentation}}** plan, has a hole exactly where the lender assumed it was covered. Owned by whoever wrote the scope; discovered when the uncovered item goes wrong.",
+    "**The use case that drifted.** The report validates the design against the dispatch in the model. Then the merchant market changes, the operator chases a new revenue stream, and the plant is cycled in a way the warranty forbids. Nothing in the report was wrong on the day; the plant simply stopped being the plant that was diligenced. This is why the same firms sell operating monitoring — and why a lender's annual review asks for the cycle count.",
+    "**Augmentation on paper only.** The model shows an augmentation line in year seven. The site has no spare rack positions, the inverters are sized to the day-one battery, and the cell format will have been discontinued. The IE that accepted the model's number without asking where the cells would physically go has accepted a fiction. The test is a site plan with the augmentation drawn on it.",
+    "**Reliance the reader does not have.** A later investor reads the report in a data room and treats it as its own diligence. It has no **{{reliance letter}}**, the report is three years old, and the engineer's cap was a fraction of the original loan. The failure is legal as much as technical — and common enough that buyers of operating portfolios commission fresh due diligence rather than inherit the old report.",
+    "**The witnessed test taken for a safety record.** A supervised 20 MWh burn test shows how a design behaves when one module is deliberately failed. It does not show how often modules fail, what a defective batch does, or how a different site layout would behave. Reading the witness's attestation as a warranty of field safety is the buyer's error, not the witness's — but the witness's name is the one that travels.",
+    "**The root cause that is contested.** After the 2019 McMicken explosion the utility's chosen investigator attributed the event to an internal cell defect; the cell supplier's own experts pointed elsewhere. Two credentialed engineering opinions, one event. The lesson for a reader is that forensic engineering ends in a report, not a verdict — and that an IE's conclusion is evidence a counterparty will argue with when money turns on it.",
+    "**The first-of-a-kind dressed as proven.** A new cell format, a new integrator, a new enclosure, a new grid code — each individually modest, together a plant nobody has operated. The IE's technology review is supposed to catch this; the pressure to describe everything as 'proven, with minor modifications' comes from every party in the room except the lender.",
+    "**Independence eroded by proximity.** The firm that certifies the OEM's product, witnesses its burn test, writes the practice its tender cites and then sits as IE on a project using it has four fee relationships around one decision. Each is legitimate; the accumulation is the risk. The check is disclosure — and lenders who rotate their panels."
+   ]
+  },
+  {
+   "id": "where-dnv-slots-in",
+   "title": "Where DNV's products slot into the financing chain",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The same seats every IE firm competes for, with DNV's published instance of each. The right-hand column is what the reader should take from the row.",
+   "cols": [
+    "Seat in the chain",
+    "DNV's instance",
+    "Evidence in the record",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "**Recommended practice the tender cites**",
+     "DNVGL-RP-0043 (Edition December 2015; 2017 update); RP-0577 for cell testing",
+     "RP-0043 text; Energy-Storage.news 2017",
+     "Whoever writes the checklist shapes every diligence that follows"
+    ],
+    [
+     "**Independent test data**",
+     "Battery Scorecard, editions 2018–2024; Rochester cell laboratory; Texas fire-test facility",
+     "pv magazine 2020; Energy-Storage.news 2022, 2024; ESS News 2025",
+     "The only multi-vendor independent degradation and abuse series — and the raw material for the paid Battery AI model"
+    ],
+    [
+     "**Certifier and witness for the OEM**",
+     "Bankability report on Trina Storage's Elementa 2; supervision of Sungrow's burn tests; grid-code certificates to Huawei",
+     "ESS News 2024; pv magazine 2024, 2025; distributor-hosted certificates",
+     "Necessary stamps for a Chinese product entering Western financings — and a fee relationship with the seller"
+    ],
+    [
+     "**Lender's engineer / technical adviser**",
+     "Akaysha Orana (AUD 650m), Zenobē (£235m), TotalEnergies portfolio sale",
+     "ESS News 2024; Zenobē 2023; Energy Global 2026",
+     "The core product: the report the credit committee relies on"
+    ],
+    [
+     "**Market consultant on merchant revenue**",
+     "Grenergy Elena and Central Oasis, Zelestra Aurora — 'a detailed battery revenue forecast to de-risk complex revenue streams for lenders'",
+     "Renewable Watch 2025; Renewable Energy Magazine 2025, 2026",
+     "Storage that sells into a market rather than a contract needs a forecaster the bank trusts; this is where the Chilean mandates cluster"
+    ],
+    [
+     "**Owner's engineer**",
+     "AMEA Power's Abydos 2, Egypt — 1 GW PV + 600 MWh, 'from feasibility and design review through to construction supervision and commissioning oversight'",
+     "Energy Global 2025",
+     "The owner's-side seat, taught in full in the Sargent & Lundy guide"
+    ],
+    [
+     "**Operating monitoring after close**",
+     "GreenPowerMonitor — GPM Horizon Storage, EMS/HEMS, more than 100 GW under management",
+     "GreenPowerMonitor 2025–2026",
+     "The years after the report, when the use case drifts and the cycle count matters"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Define bankability in one sentence, and say who decides it.",
+     "a": "Whether a lender's credit committee will finance a project — a property of the whole package (technology, contracts, counterparties, permits, forecasts), decided by the parties putting money in, not by the builder."
+    },
+    {
+     "q": "Name the three tests a credit committee applies, in order.",
+     "a": "Does the technology perform as claimed for as long as claimed; will the counterparties still be standing; do the contracts actually allocate the risks the way the model assumes."
+    },
+    {
+     "q": "Who appoints the independent engineer, and who pays it? Why is it arranged that way?",
+     "a": "The lender appoints from a panel it trusts; the developer pays. The party bearing the risk chooses the adviser and the party wanting the money bears the cost — which also stops the IE from pleasing its paymaster at the expense of its client."
+    },
+    {
+     "q": "What is the single most common BESS finding in an IE report?",
+     "a": "A use case the design or the warranty cannot support — typically a revenue model that cycles the plant more than the warranty permits."
+    },
+    {
+     "q": "What three questions does an IE ask about an augmentation assumption?",
+     "a": "Is it costed in the right years; is there physical room (rack positions, inverter and transformer capacity, fire-code layout) for it; will a compatible product still be sold when it is needed."
+    },
+    {
+     "q": "Distinguish cycle fade from calendar fade and say why a grid battery can lose more to the second.",
+     "a": "Cycle fade is capacity lost per charge-discharge; calendar fade is loss with time at rest, faster when warm and at high state of charge. A battery that idles full in a hot climate ages on the calendar clock even when it barely cycles."
+    },
+    {
+     "q": "What does a product certification prove, and what does it not?",
+     "a": "That a sample of the product met a standard's tests on the day it was tested. Not field reliability, not degradation, not performance in a specific project's use case, and not that shipped units match the sample."
+    },
+    {
+     "q": "What is a recommended practice, and how does it differ from a standard?",
+     "a": "Guidance across a whole system and lifecycle that a contract can cite as requirements and a diligence can use as a checklist. A standard is narrow and testable — it certifies a product or fixes an installation rule — and stops at its boundary."
+    },
+    {
+     "q": "What does a reliance letter do?",
+     "a": "Extends the engineer's duty of care from its original client to a named third party, usually under the same conditions and liability cap, so that party may legally act on the report."
+    },
+    {
+     "q": "Why is an IE's liability cap not a scandal, and what does it mean for the lender?",
+     "a": "No independent party would sign without one. It means the report's value is information, not insurance — the bank cannot recover a bad loan from the engineer."
+    },
+    {
+     "q": "What does a witnessed large-scale burn test show, and what does it not?",
+     "a": "How the design behaves when a module is deliberately driven into runaway at real spacing — propagation, heat exposure of neighbours, what suppression does. Not how often failures occur, not batch defects, not a different layout, and not field safety."
+    },
+    {
+     "q": "Why can an IE firm's US storage work be invisible in the press while it is busy?",
+     "a": "IE reports are confidential lender deliverables; reliance letters name banks, not journalists. The public record is the client's release, when both parties agree to say so."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A revenue model assumes 365 full cycles a year; the OEM warranty allows 300. The correct reading of this finding is:",
+     "c": [
+      "A minor commercial point for the sponsor to negotiate after close",
+      "The lender's downside case is wrong — the plant must either void its warranty or miss its revenue",
+      "The warranty will be extended automatically once the plant is operating",
+      "The IE should assume 300 cycles and leave the model unchanged"
+     ],
+     "a": 1,
+     "why": "Either the plant honours the contract and loses its warranty or honours the warranty and loses revenue. Both break the case the debt was sized on, so it is a pre-close finding that changes debt sizing or contracts, not a footnote."
+    },
+    {
+     "q": "A developer's tender requires 'UL 9540 listed containers'. What has it left unspecified?",
+     "c": [
+      "Nothing — UL 9540 covers the whole system",
+      "System integration, operating limits, warranty structure, cyber security, decommissioning and performance verification",
+      "Only the fire-marshal spacing rules",
+      "The cell chemistry"
+     ],
+     "a": 1,
+     "why": "UL 9540 certifies a product against a standard's tests. The whole-life and whole-system questions are what a recommended practice such as RP-0043 exists to prompt."
+    },
+    {
+     "q": "A fund buying an operating battery finds the original IE report in the data room. Its legal position is:",
+     "c": [
+      "It may rely on the report because the report is about the asset it is buying",
+      "It may rely on the report only if the original lender consents",
+      "It has no right to rely without a reliance letter from the engineer, which will carry the original cap",
+      "It may rely on the report if the report is less than five years old"
+     ],
+     "a": 2,
+     "why": "The engineer's duty runs to its client. A reliance letter extends it to a named party; without one the buyer commissions its own diligence, as the German portfolio buyer in this guide did."
+    },
+    {
+     "q": "Which statement about a supervised 20 MWh burn test is correct?",
+     "c": [
+      "It demonstrates the field failure rate of the product",
+      "It shows how the design behaves when one module is deliberately failed at real spacing",
+      "It certifies that shipped units match the tested batch",
+      "It replaces UL 9540A cell-level testing"
+     ],
+     "a": 1,
+     "why": "An installation-level test characterises propagation and heat exposure under a defined ignition. Probability, batch conformity and other layouts are outside what any single test can show."
+    },
+    {
+     "q": "Why is independent cell test data valuable to an IE even though the OEM supplies a degradation curve?",
+     "c": [
+      "Because vendor curves are always wrong",
+      "Because vendor curves come from the vendor's own conditions, and standardised independent tests put different cells on the same chart under known conditions",
+      "Because lenders are required by law to obtain it",
+      "Because independent data replaces the need for a warranty"
+     ],
+     "a": 1,
+     "why": "A degradation number is meaningless without its conditions. Standardised testing fixes depth of discharge, rates, temperatures and method so results are comparable — and the Scorecard's finding that onset temperatures differ widely between certified cells is the argument in one line."
+    },
+    {
+     "q": "An augmentation line appears in the model in year seven. The best single test of whether it is real is:",
+     "c": [
+      "Whether the OEM has confirmed it will exist in seven years",
+      "A site plan with the augmentation drawn on it, plus inverter and transformer headroom",
+      "Whether the model's discount rate is reasonable",
+      "Whether the fire marshal has been consulted"
+     ],
+     "a": 1,
+     "why": "Augmentation needs physical room and electrical headroom on day one, or it cannot happen on day 2,555. The drawing is the fact; the model line is the intention."
+    },
+    {
+     "q": "Which party appoints the independent engineer, and which pays?",
+     "c": [
+      "The developer appoints and pays",
+      "The lender appoints; the developer pays",
+      "The EPC appoints; the lender pays",
+      "The OEM appoints; the offtaker pays"
+     ],
+     "a": 1,
+     "why": "The party bearing the risk chooses; the party wanting the money bears the cost. It is the arrangement that makes independence enforceable."
+    },
+    {
+     "q": "A firm certifies an OEM's product, witnesses its burn test, authored the practice the tender cites, and is then proposed as the lender's IE on a project using that product. The right response is:",
+     "c": [
+      "Reject the firm — the conflicts disqualify it",
+      "Accept without comment — each role is legitimate",
+      "Require disclosure of each relationship and consider rotating the panel; the accumulation, not any single role, is the risk",
+      "Ask the OEM to pay the IE fee instead"
+     ],
+     "a": 2,
+     "why": "Every role is a normal part of the assurance business; four fee relationships around one decision is what a lender should see written down before it relies on the fifth."
+    }
+   ]
+  }
+ ]
+}

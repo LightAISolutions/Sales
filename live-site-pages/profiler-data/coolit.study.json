@@ -1,0 +1,751 @@
+{
+ "schemaVersion": 2,
+ "slug": "coolit",
+ "title": "CoolIT Systems — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "glossary": [
+  {
+   "t": "ATD",
+   "d": "Approach temperature differential: the CDU maker's term for the approach temperature at which a capacity rating is quoted — the gap between the facility water entering the unit and the coolant it sends to the racks. CoolIT rates its liquid-to-liquid units at 5 °C ATD and its liquid-to-air units at 15 °C ATD."
+  },
+  {
+   "t": "group control",
+   "d": "A controller mode in which several CDUs on one secondary piping network share setpoints and telemetry and back each other up, so the row keeps its flow and temperature when one unit stops. CoolIT's units support groups of up to 20."
+  },
+  {
+   "t": "factory witness test",
+   "d": "A factory acceptance test the customer attends: the finished CDU is run against a simulated heat load on the maker's test rig before shipment, so performance at the rated approach and flow is demonstrated rather than promised. CoolIT's Calgary rig simulates loads to 6 MW."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-the-machine-between-the-chip-and-the-plant",
+   "title": "Start here: the machine between the chip and the plant",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The Vertiv guide in this corpus names the **{{CDU}}** as liquid cooling's central appliance and walks the thermal chain from silicon to sky as a temperature budget; the Trane guide teaches the chiller plant on the far side and why warmer water is the cheapest efficiency lever. Neither opens the box. This guide does: what is physically inside a coolant distribution unit, what the two loops it separates are for, why one number on its datasheet decides how big the chiller plant has to be, how coolant is kept clean and chemically stable, how flow is shared across a row of racks, and the specific ways a liquid-cooled rack goes down.",
+    "**What it deliberately does not repeat:** how a chiller works, what a cooling tower's numbers mean, or the chip-to-atmosphere temperature budget as a concept — those are taught in the Trane and Vertiv guides and are only referenced here. The CDU is treated as a purchasable machine: what it is made of, what each rating commits the buyer to, and how it is bought.",
+    "**One idea carries the guide.** A CDU is a boundary. On one side is the building's water — large, dirty by electronics standards, at whatever temperature the plant can make that day. On the other is a small, sealed, filtered, chemically treated loop that touches copper channels a few hundred microns wide, sitting on silicon worth more than the building's cooling plant. Every component in the unit exists to hold that boundary: to move heat across it while letting nothing else cross, and to do so without ever letting the clean side get too hot, too cold, too slow or too dirty.",
+    "Written for a reader with high-school physics and no data-centre background. Every acronym is defined on first use; the drills test how the machine and its buying process work, never company trivia."
+   ]
+  },
+  {
+   "id": "open-the-box-what-is-inside-a-cdu",
+   "title": "Open the box: what is inside a coolant distribution unit",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**Start with the job.** A coolant distribution unit takes heat out of the clean coolant that has just left the racks, hands that heat to the building's water, and sends the coolant back to the racks at a set temperature, a set pressure and enough flow. Schneider Electric's engineers list five functions — heat exchange and isolation, temperature control, pressure control, flow control, fluid treatment — and every part inside the cabinet belongs to one of them.",
+    "**The heat exchanger is the boundary itself.** In a liquid-to-liquid unit a **{{plate heat exchanger}}** carries the facility water through one set of channels and the rack coolant through the other, separated by thin metal. Heat crosses; fluid does not. CoolIT's product page puts the purpose plainly: the internal exchanger 'prevents fluid mixing, protects IT equipment from building-side fluctuations'. In a liquid-to-air unit the exchanger is a radiator and a bank of fans instead — the heat goes into the room air, which is why those units need no facility water at all.",
+    "**Pumps give the clean loop its pressure and flow.** Because the rack side is a closed circuit, the CDU's pumps are the only thing that moves coolant through hundreds of cold plates and the manifolds and hoses between them. Redundancy is standard: CoolIT's CHx1500 brochure specifies '2 x hot-swappable pumps (N+N), 1500 LPM at 34 psi for single pump operation' — meaning either pump alone can carry the rated duty. The AHx180 quotes '270 LPM at a 40 psi external pressure drop under single-pump operation'. A variable-speed drive lets the controller hold a pressure or flow setpoint as racks come and go.",
+    "**Filters protect the microchannels.** Coolant returning from the racks passes through filters before it goes back out — 25 micron on the CHx2000 ('integrated 25-micron filtration'), 'Built-in 25 µ filters with 50 µ option' on the CHx1500, 'Integrated 50 µ serviceable filter with 25 µ to 150 µ options' on the AHx180. They are **{{hot-swappable}}** so a clogged element can be changed with the row running. The CHx2000 sheet also shows 'Front Access for Primary Filters' — the facility side is filtered too, because the exchanger's own channels can foul.",
+    "**A reservoir, an expansion tank and fill pumps manage the fluid itself.** Coolant expands when it warms and contracts when it cools; hoses and cold plates are replaced; a little fluid is lost at every disconnect. The CHx2000's feature list — 'Integrated Fill Pumps · Expansion Tank · Integrated Reservoir' — is the equipment that keeps the loop full and at a stable pressure without a technician carrying a jug. The AHx180 adds 'Easily accessible drain and reservoir tanks'.",
+    "**Sensors and a controller close the loop.** The AHx180 brochure lists 'Integrated sensors: flow, pressure, temperature, humidity, coolant level and leak detection' feeding a 'PLC-based control system with 10\" front panel touchscreen'. The controller holds the supply temperature above the room's **{{dew point}}** ('Automatic condensation prevention'), modulates pumps and any facility-side valve, raises alarms, and speaks to the building — 'Redfish, SNMP, TCP/IP, Modbus, BACnet and others' — so the **{{BMS}}** and the IT operations tools see the same numbers.",
+    "**Power protection is part of the machine.** A CDU that loses power for a second stops the only pumps the racks have. So the CHx1500 carries an 'Integrated ultracapacitor for interruption-free operation' and an 'Optional ATS' — an **{{ultracapacitor}}** to ride through a transfer and an **{{ATS}}** to switch feeds. The CHx2000 draws '12.24 kW' itself; the AHx240 '15.5 kW', most of it fans.",
+    "**The cabinet is a rack.** CoolIT's row units are built into a '750 mm W x 1200 mm D' footprint so they 'fit in standard data center rack/row layout', 2.3 m tall, with '4\" tri-clamp interface' or '4\" Victaulic couplings' where the two loops enter and leave. The whole point of the form factor is that a CDU is installed like another cabinet in the row, not like a piece of plant.",
+    "**Self-check:** a CDU vendor's sheet lists heat exchanger, two pumps, filters, reservoir, sensors and a controller but no expansion tank or fill pump. What will the operator be doing by hand? *(Topping up and bleeding the loop every time the fluid temperature swings or a hose is changed — the tank and fill pumps are what make the sealed loop self-maintaining.)*"
+   ]
+  },
+  {
+   "id": "two-loops-tcs-and-fws",
+   "title": "Two loops: the technology cooling system and the facility water system",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "The CDU exists because the two loops it separates have opposite requirements. The table reads each property across the boundary. 'TCS' is the industry's name for the clean rack-side loop and 'FWS' for the building side; CIBSE's course text calls them 'the technology cooling system (TCS), sometimes called the secondary flow network, and the facility water supply (FWS), or primary coolant loop'.",
+   "cols": [
+    "Property",
+    "Technology cooling system (rack side)",
+    "Facility water system (building side)"
+   ],
+   "rows": [
+    [
+     "**What it touches**",
+     "Cold plates on processors and memory, server hoses, **{{rack manifold}}**s, the CDU's secondary side",
+     "Chillers, cooling towers or dry coolers, plant piping, the CDU's primary side — 'where heat is rejected to the environment through cooling towers or dry coolers' (CIBSE)"
+    ],
+    [
+     "**Who owns it**",
+     "The IT or liquid-cooling vendor and the operator's IT-facing team; the fluid specification comes from the server maker",
+     "The facilities or mechanical team; often a general contractor's plumbing scope"
+    ],
+    [
+     "**Fluid**",
+     "Treated **{{PG25}}** — 'inhibited propylene glycol, mixed 25% by volume with filtered or deionized water' (Dell) — or treated water; CoolIT: 'a Propylene Glycol 25% computer coolant mixture, consisting of additional inhibitors to reduce corrosion and microbial growth'",
+     "Plant water: chilled water or condenser water, treated for steel and copper alloys; 'pH … typically maintained between 7.0 and 9.0 for steel systems' (Dell)"
+    ],
+    [
+     "**Cleanliness**",
+     "Filtered to 25–50 µm in the CDU; OCP guidance combines '25 µm inline filtration with sidestream filtration (<5µm)'; 'pipe tape and pipe dope are prohibited within TCS systems'",
+     "Ordinary hydronic practice; strainers, not micron filters"
+    ],
+    [
+     "**Temperature**",
+     "Supply held to the server maker's window and above the room dew point; expressed as an **{{ASHRAE W-class}}** (W32, W45…)",
+     "Whatever the plant produces — 'the temperature difference between the TCS and the supply fluid provided by the FWS' is the CDU's **{{approach temperature}}**"
+    ],
+    [
+     "**Pressure**",
+     "Set by the CDU's pumps to overcome the **{{pressure drop}}** of manifolds, hoses and cold plates (34–53 psi at rated flow on CoolIT's row units); 'TCS loops can be designed to operate under positive or negative pressure' (Schneider)",
+     "Set by the plant's pumps; the CDU's exchanger is just one more load on the primary circuit"
+    ],
+    [
+     "**Piping material**",
+     "Stainless steel or polypropylene — CoolIT's TCS is 'SAE 304 or 316 stainless steel' with Victaulic couplings, or 'Prefabricated modular Aquatherm components fused onsite' whose plastic 'Prevent[s] galvanic reactions and corrosion'",
+     "Carbon steel, copper, PVC as the plant dictates"
+    ],
+    [
+     "**Failure of the loop means**",
+     "Racks overheat within seconds to minutes — the pumps stop, the flow stops, the silicon throttles or trips",
+     "The plant loses capacity; the TCS keeps circulating and its thermal mass buys minutes — 'protects IT equipment from building-side fluctuations' (CoolIT)"
+    ],
+    [
+     "**Where they meet**",
+     "The CDU's secondary connections — '4\" tri-clamp interface at facility water system (FWS) and technology cooling system (TCS)' on the CHx2000",
+     "The CDU's primary connections, one valve pair on the plant"
+    ]
+   ]
+  },
+  {
+   "id": "approach-temperature-the-number-that-sizes-the-plant",
+   "title": "Approach temperature: the number that sizes the chiller plant",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**Definition first.** Heat only flows from hot to cold, and a heat exchanger needs a temperature difference across its plates to push heat through them. The **{{approach temperature}}** is that difference at the CDU: how much warmer the coolant leaving for the racks is than the facility water arriving from the plant. CIBSE's course puts it exactly: 'the temperature difference between the TCS and the supply fluid provided by the FWS. The lower the approach temperature at a given heat load, the better the cooling efficiency of a CDU.'",
+    "**Every capacity rating hides an approach.** CoolIT rates the CHx2000 at '2000 kW cooling capacity at 5°C ATD' and the CHx1500 at '1500 kW at 5°C approach temperature'. The same CHx2000 appears in a comparison table as '2269 kW cooling load' — a bigger number because the approach assumed is different. A capacity figure without its approach is not a rating; it is a headline. The first question to ask any CDU sheet is *at what approach?*",
+    "**Why it decides the plant.** Work the chain backwards. A GB300-class rack asks for coolant no warmer than the server maker's limit — Lenovo publishes its GB300 NVL72 rack as W45, water up to 45 °C. Subtract the CDU's approach and you have the warmest facility water the plant may deliver: 40 °C at a 5 °C approach, 30 °C at a 15 °C approach. The Trane guide taught what that means on the plant side: a chiller making 30 °C water needs compressors for much of the year in most climates; a dry cooler can make 40 °C water without any compressor whenever the outdoor air is a few degrees cooler than that. **Ten degrees of approach is the difference between a plant with chillers and a plant without them.** The CDU's exchanger is the single stage in Vertiv's temperature budget that the buyer controls with a purchase order.",
+    "**Liquid-to-air units spend far more of the budget.** Air carries little heat per litre, so a radiator needs a much bigger temperature gap than a plate exchanger. ASHRAE's TC 9.9 white paper says it directly: 'liquid/air heat exchangers have much higher approach temperatures than liquid/liquid. As a result, the use of liquid/air heat exchangers as an interim solution will accelerate the required reduction in facility water temperatures'. CoolIT rates its AHx240 for '2x GB300/GB200 NVL72 racks per CDU (at 15°C ATD…)' and the AHx180 for '180 kW cooling capacity at 15°C approach' — three times the approach of the liquid-to-liquid units, and the room air must be cool enough to absorb the heat.",
+    "**Approach is bought with metal and flow.** A lower approach at the same load needs more exchanger area, higher flow on both sides, or both. That is why CoolIT's CHx2000 is heavier on pumps than its predecessor — the maker describes having 'pushed pump performance and heat exchanger capacity even further' inside the same 750 × 1200 mm footprint. It is also why 'performance density (1698 kW/m²)' appears on the sheet: exchanger area per floor tile is the real constraint.",
+    "**The warm-water debate is an approach debate.** When NVIDIA's chief executive said the Vera Rubin platform could run on 45 °C water with 'no chillers', CoolIT's own engineers pushed back in print: warm water 'reduces chiller dependency, but it does not magically eliminate the need for mechanical cooling', because 'Data centers are designed for worst-case conditions'. Both statements are about the same arithmetic — the rack's inlet limit, minus the CDU approach, minus the heat-rejection equipment's own approach, against the hottest wet-bulb day the site will see.",
+    "**Self-check:** a rack accepts 40 °C coolant; the CDU is rated at 5 °C approach; the site's dry coolers make water 6 °C above outdoor air. Above what outdoor temperature does the plant need a chiller? *(40 − 5 − 6 = 29 °C. Every hour above 29 °C is a compressor hour; every degree of approach saved at the CDU buys another degree of chiller-free weather.)*"
+   ]
+  },
+  {
+   "id": "ashrae-w-classes",
+   "title": "Reading the water temperature: ASHRAE's W-classes",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Server makers and CDU makers describe the coolant they will accept as a letter-and-number class from ASHRAE's Thermal Guidelines. Since the fifth edition (2021) the number is the maximum supply temperature in °C; every class starts at 2 °C. ASHRAE's white paper: 'The classes are newly named as follows: W17 (previously W1), W27 (W2), W32 (W3), W40 (new), W45 (W4), and W+ (W5).' The right-hand columns say what each class means for the plant and where it appears in CoolIT's own material.",
+   "cols": [
+    "Class",
+    "Supply-water band",
+    "What the plant needs to make it",
+    "Where it appears"
+   ],
+   "rows": [
+    [
+     "**W17**",
+     "2–17 °C",
+     "Chilled water: compressors running almost always",
+     "CHx200 and CHx80 pages: 'Compatible with ASHRAE W17 to W+ warm water cooling' — the in-rack units accept the coldest water as well as the warmest"
+    ],
+    [
+     "**W27**",
+     "2–27 °C",
+     "Chillers most of the year in warm climates; **{{free cooling}}** in cool ones",
+     "Legacy CPU-era deployments; the class most existing chilled-water plants can serve without change"
+    ],
+    [
+     "**W32**",
+     "2–32 °C",
+     "A **{{dry cooler}}** or tower for much of the year; ASHRAE: 'Most cold plate solutions today can live easily on W32 water with case temperatures in the 80°C–90°C range'",
+     "GWDG's Emmy system runs 'coolant inlet temperatures up to 32 °C' on CHx750 units, PUE 1.07 for the liquid-cooled nodes"
+    ],
+    [
+     "**W40**",
+     "2–40 °C",
+     "Added in the fifth edition because 'several manufacturers are designing liquid cooled solutions that operate around 40°C entering facility water' (Upsite on ASHRAE)",
+     "The band a 45 °C rack limit minus a 5 °C CDU approach lands in — the design point of the warm-water argument"
+    ],
+    [
+     "**W45**",
+     "2–45 °C",
+     "Compressor-free in most climates most of the year; heat warm enough to reuse",
+     "CoolIT's CHx500 announcement: 'Supporting ASHRAE W45 cooling, it facilitates efficient heat reuse'; Lenovo's GB300 NVL72 rack is published as W45; CoolIT's 15 kW cold plate was demonstrated with '45°C warm water as the inlet temperature'"
+    ],
+    [
+     "**W+**",
+     "above 45 °C",
+     "No mechanical cooling; district-heat-grade reuse",
+     "CHx1500 brochure: 'Compatible with ASHRAE W+, allowing for energy-efficient free cooling, heat load optimization and opportunities for waste heat reuse'"
+    ]
+   ]
+  },
+  {
+   "id": "flow-pressure-and-balancing-across-a-row",
+   "title": "Flow, pressure and balancing across a row",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "**Heat leaves in litres.** A cold plate removes heat by warming the coolant that passes through it; the warmer the coolant is allowed to get, the less of it is needed. The trade sizes flow in litres per minute per kilowatt of heat, and CoolIT's material carries two figures: its CDU ratings assume 'the industry standard flow rate for AI systems of 1.2 LPM/kW', and its selection guide says 'A target of 1.5 liters per minute (LPM) per kilowatt (kW) of heat is typical for AI systems'. At 1.2 LPM/kW a 120 kW rack needs about 144 litres a minute; a 2 MW CDU rated '2125 LPM at 35 psi' has the flow for twelve of them, which is exactly the '12 x GB300 NVL72 racks per CDU' claim.",
+    "**The pump has to pay for every restriction.** Coolant loses pressure everywhere it turns, narrows or splits: through the **{{rack manifold}}**, through each **{{quick disconnect}}**, through metres of hose, and above all through the microchannels of the **{{cold plate}}** itself. The total is the loop's **{{pressure drop}}**, and the CDU's pumps must supply at least that much head at the design flow or the far racks starve. CoolIT quotes its units as flow at an external pressure — '1500 LPM at 34 psi', '270 LPM at a 40 psi external pressure drop' — because the pair, not either number alone, says what a row can be.",
+    "**Pipe size changes the arithmetic fivefold.** The Open Compute Project's TCS guidance, written by engineers from Victaulic, Oracle, Microsoft and OVHcloud, warns that 'Multiple smaller connections create more challenges in pressure drop and flow balancing. Pressure drop across 1\"/DN25 lines can be over five times higher than 2\"/DN50 lines, with impact on CDU pump sizing'. The same document notes that 'Additives such as glycol generally reduce the specific heat of water (typically <10%), which reduces the cooling capacity of the TCS by the same percentage' — the antifreeze that protects the loop also costs flow.",
+    "**Warm water costs pumping head.** Lenovo's published table for a GB300 NVL72 rack is the clearest illustration in print: supplying 25 °C water needs 59 LPM at 2.3 psi; 30 °C needs 71 LPM at 3.2 psi; 35 °C, 89 LPM at 4.9 psi; 40 °C, 119 LPM at 8.5 psi; 45 °C, 177 LPM at 18.4 psi. Warmer coolant can carry less heat per litre before the chip's limit is reached, so three times the flow and eight times the pressure are needed at 45 °C compared with 25 °C. The warm-water lever that saves chiller energy in the Trane guide is paid for here, in pump energy and pipe size.",
+    "**Balancing is sharing.** A CDU feeds a supply header; each rack draws from it through its manifold and returns to a return header. Coolant takes the easiest path, so racks nearest the CDU — or racks with fewer, wider cold plates — take more than their share unless the design equalises resistance. Schneider's engineers list 'Flow Control — CDUs must be capable of delivering adequate flow through the rack manifolds, connectors, and cold plates of each connected IT asset'; the tools are balancing valves or flow-limiting orifices at each manifold, reverse-return piping so every rack sees the same header length, and a pump held to a differential-pressure setpoint so the header stays stiff as racks are added. This is the **{{flow balancing}}** the OCP paper flags — and it is why a CDU vendor sells the manifolds and the TCS piping as well as the box.",
+    "**Several CDUs on one header.** CoolIT's units support 'group control of up to 20 CDUs' 'connected to the same secondary piping network'. Two things follow. First, capacity and redundancy scale together — the company's claim that 'Multi-CDU configurations with CoolIT's group control function can support larger clusters with six 9's availability' rests on units backing each other up on a shared header. Second, balancing becomes a control problem as well as a piping one: several pumps must hold one pressure without fighting, which is what the group controller is for.",
+    "**Self-check:** a row is fed at 1.2 LPM/kW through 1\" branch lines; a redesign moves to 2\" lines. What changes at the CDU? *(Roughly a fifth of the branch pressure drop, so the pumps deliver the same flow at far lower head — smaller pumps, less energy, or more racks on the same unit. The trade is more copper or steel in the row.)*"
+   ]
+  },
+  {
+   "id": "reading-a-cdu-datasheet",
+   "title": "Reading a CDU datasheet: what each line commits you to",
+   "kind": "table",
+   "read": "9 min",
+   "intro": "The lines below are the ones on CoolIT's CHx2000 and CHx1500 sheets, in the order a buyer should read them. The right-hand column is the question each line answers — and the one it does not.",
+   "cols": [
+    "Datasheet line",
+    "Example (CoolIT, verbatim)",
+    "What it commits you to — and what to ask"
+   ],
+   "rows": [
+    [
+     "**Cooling capacity at approach**",
+     "'2000 kW cooling capacity at 5°C ATD'",
+     "The heat the unit moves *when the plant delivers water 5 °C below the coolant setpoint*. Ask: at what facility inlet temperature and flow? A warmer plant means less capacity"
+    ],
+    [
+     "**Flow at pressure**",
+     "'2125 LPM at 35 psi'; '1500 LPM at 34 psi … in single pump operation'",
+     "The row the unit can feed against a given loop resistance. Ask: is the figure single-pump (true redundancy) or both pumps together?"
+    ],
+    [
+     "**Racks per CDU**",
+     "'12 x GB300 NVL72 racks per CDU'; AHx240: '2x GB300/GB200 NVL72 racks per CDU (at 15°C ATD and N+1 pump redundancy)'",
+     "A vendor's own arithmetic from capacity, flow and a rack's published load — note how the AHx240's count fell from 'up to four' GB200 racks in 2024 to two GB300 racks in 2026 as the rack grew and the conditions were stated"
+    ],
+    [
+     "**Power consumption**",
+     "'12.24 kW' (CHx2000); '15.5 kW' (AHx240); '11.32 kW' (AHx180)",
+     "The unit's own draw, which counts against the site's **{{PUE}}** and needs a protected feed. Liquid-to-air units spend most of it on fans"
+    ],
+    [
+     "**Redundancy**",
+     "'N+N pump redundancy'; 'N+1 pump redundancy, N+N redundancy on all critical components'",
+     "Whether a single failure stops the row. **{{N+1}}** means one spare; N+N means every component doubled. Ask: is the controller and its power supply redundant too?"
+    ],
+    [
+     "**Filtration**",
+     "'integrated 25-micron filtration'; '50 µ serviceable filter with 25 µ to 150 µ options'",
+     "How small a particle the unit will stop before the cold plates. Ask the server maker what its microchannels require; 25 µm is the OCP inline recommendation"
+    ],
+    [
+     "**Footprint and density**",
+     "'750 mm x 1200 mm footprint'; 'best-in-class performance density (1698 kW/m²)'",
+     "Floor space and, implicitly, exchanger area. A higher kW/m² at the same approach means more exchanger packed per tile — or a rating at a friendlier condition; check the approach"
+    ],
+    [
+     "**Interfaces**",
+     "'4\" tri-clamp interface at facility water system (FWS) and technology cooling system (TCS)'; 'All stainless-steel piping with 4\" Victaulic couplings'",
+     "Whether the plant's piping and the row's TCS can connect without adapters; **{{wetted materials}}** compatibility with the coolant"
+    ],
+    [
+     "**Controls and telemetry**",
+     "'Redfish, SNMP, TCP/IP, Modbus, BACnet'; 'group control of up to 20 CDUs'",
+     "Whether the IT tools (Redfish, SNMP) and the building system (Modbus, BACnet) both see the unit, and whether several units share a header. Ask: what happens on loss of communication?"
+    ],
+    [
+     "**Power protection**",
+     "'Integrated ultracapacitor'; 'Optional ATS'",
+     "Whether the pumps survive a utility transfer. Ask how many seconds the ride-through lasts and whether the ATS is standard"
+    ],
+    [
+     "**Ride-through and warm-water range**",
+     "'Compatible with ASHRAE W+'; 'Compatible with ASHRAE W17 to W+'",
+     "The facility-water band the controller can hold a setpoint against. A W+ unit can run on hot plant water; a unit that only lists W17–W32 forces chillers"
+    ],
+    [
+     "**Testing and volume**",
+     "'100% PG25 leak testing for every unit'; '6 MW FAT simulation testing'; '100 units per week'",
+     "Whether each unit is proven before shipment (leak test, **{{factory acceptance test}}**) and whether the maker can deliver a campus's worth on the project's schedule"
+    ],
+    [
+     "**Support**",
+     "'Complete service support in over 80 countries'",
+     "Who changes a pump at 3 a.m. — the missing line on many sheets, and the one operators ask about first"
+    ]
+   ]
+  },
+  {
+   "id": "coolant-chemistry-what-is-in-the-loop",
+   "title": "Coolant chemistry: what is actually in the loop, and why it goes bad",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**The fluid is a product, not water.** Server makers specify it. Dell's white paper: 'Dell servers require PG25 coolant for the TCS (which is inhibited propylene glycol, mixed 25% by volume with filtered or deionized water and a small number of other additives)'. CoolIT's service page says the same in its own words: 'a Propylene Glycol 25% computer coolant mixture, consisting of additional inhibitors to reduce corrosion and microbial growth.' **{{PG25}}** is the trade's shorthand, and it is the factory test fluid too — '100% PG25 leak testing for every unit'.",
+    "**Why 25 percent.** Glycol does three jobs: it stops the loop freezing in transit and in cold plants ('At a 25% concentration, the blend protects to roughly −10 °C', the fluid maker Dober notes), it carries the inhibitor package, and it starves microbes — Dell warns that 'concentrations below ~25% propylene glycol are not effective at protecting' against biological growth. More glycol would protect better but, as the OCP guidance notes, every percent of glycol reduces the water's heat capacity, so 25 percent is the compromise between protection and cooling.",
+    "**The inhibitors are the expensive part.** A **{{corrosion inhibitor}}** package — 'typically a buffered package containing tolyltriazole for copper protection and other inhibitors for aluminum, like silicates' (Dober) — coats the metal surfaces so the fluid cannot attack them. CoolIT's own brochure language, 'Highest-grade wetted materials to ensure coolant compatibility and extend coolant life', is the other half of the same design decision: choose metals the package can protect, and avoid mixing metals at all. Mixing them is how **{{galvanic corrosion}}** starts — two dissimilar metals in one conductive fluid form a battery and one of them dissolves; OCP notes that 'An integrated design approach for headers and branch lines significantly mitigates the risk of galvanic corrosion', and CoolIT's polypropylene TCS option exists because plastic pipe 'Prevent[s] galvanic reactions and corrosion'.",
+    "**Inhibitors deplete, and someone has to measure.** Dell's guidance is a maintenance calendar: 'Quarterly on-site testing is recommended by OCP … pH Measurement — verify that the heat transfer fluid maintains an acceptable pH within the supplier's recommended range (typically 8–10.5) … Glycol Concentration — measure propylene glycol concentration using a refractometer', and annually 'a comprehensive laboratory analysis … propylene glycol concentration, pH and reserve alkalinity, visual appearance, concentration of inhibitors, total hardness, sulfate, chloride, degradation acids, and dissolved metals'. The failure mode is slow and invisible: 'Over time, inhibitors deplete, and dissolved solids accumulate', biofilm forms and 'promotes deposit corrosion' while raising **{{thermal resistance}}** on the very surfaces that must transfer heat.",
+    "**Velocity is a chemistry limit too.** Coolant moving fast enough scours the protective film and erodes soft metal at bends and inlets. CoolIT published a study 'to assess if the 1.5 m/s velocity limit' on copper is appropriate for its geometries — a reminder that the flow rates in the previous section are bounded from above as well as below.",
+    "**The facility side has its own chemistry.** The plant water the CDU's primary side sees is treated for steel and copper alloys — Dell: 'Corrosion is significantly influenced by chloride and sulfate ions, which accelerate pitting and galvanic attack, particularly in aluminum and copper alloys', with pH 'typically maintained between 7.0 and 9.0 for steel systems'. The plate exchanger is the only component exposed to both fluids, which is why the CHx2000 filters its facility inlet and why exchangers are cleaned or changed on a schedule.",
+    "**Self-check:** a refractometer reading shows the glycol has drifted to 18 percent after a year of topping up with water. Name the two protections that have weakened. *(Freeze protection and microbial control — and because the top-up water diluted the inhibitor package, corrosion protection has weakened too. The fix is a measured re-dose, not more water.)*"
+   ]
+  },
+  {
+   "id": "filtration-and-cleanliness",
+   "title": "Filtration and cleanliness: the microns that decide uptime",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "**The channels are small.** A modern cold plate moves heat through microchannel fins whose passages are measured in hundreds of microns. A particle that would never trouble a building's pipework can lodge in one and stop its flow; the plate behind it then runs hot with nothing on the outside to show it. CoolIT describes its plates as 'microchannel fin, all-metal, unibody construction'; the industry's caution is blunt — 'A single contaminant particle can clog the microchannel cold plates'.",
+    "**Two stages of filtration.** The CDU's inline filters — 25 or 50 µm on CoolIT's units, 'typically 50 microns' in Vertiv's description of the class — catch what circulates. OCP's guidance adds a second, finer stage: 'Combining 25 µm inline filtration with sidestream filtration (<5µm) is one method to achieve and maintain filtration requirements', where a small side branch polishes a fraction of the flow continuously, and its appendix recommends filtering 'to 1-micron when possible' during fill.",
+    "**Cleanliness is built, not filtered in.** Most contamination enters during construction — pipe scale, weld spatter, sealant. OCP: 'Achieving stringent filtration requirements, such as 25 microns, is challenging with conventional job-site construction, as materials like pipe tape and pipe dope are prohibited within TCS systems'. This is the engineering reason behind CoolIT's prefabricated **{{technology cooling system}}**: stainless modules that 'undergo passivation and pickling processes before shipping to site' (passivation forms the protective oxide film on stainless steel; pickling removes scale), or polypropylene modules 'fused onsite by certified technicians'. Prefabrication 'shifts critical assembly activities into a controlled manufacturing environment' — a clean room instead of a construction site.",
+    "**Every component is leak-tested before it leaves.** The manifolds page promises '100% leak testing before it ships (including the quick-disconnect fittings) under both static and dynamic conditions'; the quality blog describes 'AI-based high-speed optical screening [that] confirms O-ring presence on every Quick Disconnect before installation'. A missing O-ring is a leak on day one; a stray chip of stainless is a hot GPU in month six.",
+    "**Self-check:** a contractor proposes threading the TCS branch lines with pipe dope 'as usual'. Why is the answer no? *(Sealant shreds into the loop and cannot be filtered out before it reaches a microchannel; OCP prohibits it in TCS systems. Use fused polypropylene, grooved stainless couplings or orbital welds, and flush and filter to 1 µm before connecting racks.)*"
+   ]
+  },
+  {
+   "id": "three-places-to-put-the-cdu",
+   "title": "Three places to put the CDU",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "The same machine is built in three sizes for three positions, and the choice is about fault domain and floor space more than about cooling. Capacities are Schneider's and CoolIT's published figures.",
+   "cards": [
+    {
+     "t": "In the rack",
+     "meta": "An **{{in-rack CDU}}** — CoolIT's CHx80 and CHx200, '80 kW' and '200 kW of heat load in a remarkably small 4U of space', installed 'at the bottom or top of server rack'. Schneider's class: 'Rack-mounted CDUs are typically used to provide a TCS loop for a single rack … with capacities ranging from 20kW through ~40kW'.",
+     "adv": [
+      "The fault domain is one rack — Vertiv: 'reduces the impact of potential cooling outages to one rack instead of multiple'",
+      "The rack can be built, filled and tested off-site and rolled in complete; Dell'Oro notes 'ease of off-site rack integration and commissioning, and containment of faults and leaks'",
+      "No shared header to balance; each rack's pumps serve only its own cold plates",
+      "Accepts the widest water band — 'ASHRAE W17 to W+' on both CoolIT units"
+     ],
+     "dis": [
+      "Uses rack units that could hold servers, and 'adds mechanical complexity inside the rack' (Vertiv)",
+      "A pump and exchanger per rack — more parts to fail, more to service, and a per-rack efficiency penalty Dell'Oro flags",
+      "'Limited capacity also makes this setup less suited for larger-scale deployments' (Vertiv) — a 200 kW unit cannot serve a 250 kW rack",
+      "Every rack needs its own facility-water connection pair"
+     ]
+    },
+    {
+     "t": "In the row",
+     "meta": "An **{{in-row CDU}}** — CoolIT's CHx1500 and CHx2000 at 1.5 and 2 MW in one 750 × 1200 mm cabinet; the AHx240 and AHx180 in the same position without facility water. Vertiv: 'In-row CDUs centralize cooling between racks … They reduce the number of CDUs while enabling scalable liquid distribution'.",
+     "adv": [
+      "One unit and one facility connection for up to twelve racks; the cheapest cooling per kilowatt",
+      "Redundancy pools across the row — group control lets units on a shared header back each other up",
+      "Installed like a cabinet, not like plant; no mechanical-room space needed",
+      "The unit that the current AI rack generation (120–140 kW) is designed around — CoolIT's rack counts are quoted against NVL72 racks"
+     ],
+     "dis": [
+      "The fault domain is the row: a stopped CDU without a partner takes every rack on its header down",
+      "Needs the header designed and balanced — Vertiv: 'requires careful design to avoid thermal imbalance and maintain redundancy'",
+      "A 2 MW unit is a 2 MW purchase; small deployments overbuy",
+      "Liquid-to-air variants in this position spend 15 °C of approach and blow the heat into the room"
+     ]
+    },
+    {
+     "t": "At the facility (gallery)",
+     "meta": "Facility-scale skids in a mechanical corridor — Vertiv: 'Gallery CDUs are facility-scale systems positioned at the perimeter or in mechanical corridors … require extensive planning for layout, piping, and control logic'. CoolIT's only statement is that a hyperscaler 'requested thousands of skidded CDUs'; its September 2026 launch is described only as 'engineered for 1MW+ ultra-dense AI racks'.",
+     "adv": [
+      "Nothing but pipes on the data-hall floor; every tile holds IT",
+      "Service happens in the corridor, away from the racks",
+      "Matches how the rest of the plant is built — skids, headers, a plant-room controller",
+      "The natural home for the multi-megawatt units the next rack generation will need"
+     ],
+     "dis": [
+      "The fault domain is the hall unless the header is fully redundant",
+      "Long TCS runs: more pressure drop, more fluid, more places to leak",
+      "Must be designed with the building — cannot be added to an existing hall the way a row unit can",
+      "The longest planning lead time of the three"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "liquid-to-air-where-there-is-no-water",
+   "title": "Liquid-to-air: liquid cooling where the building has no water",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "**The problem it solves.** Most existing halls were built for air-cooled servers and have no facility water anywhere near the racks. A **{{liquid-to-air CDU}}** lets liquid-cooled racks be installed anyway: the clean loop runs to the cold plates as usual, but the CDU rejects the heat through a radiator and fans into the room, where the existing air conditioning carries it away. CoolIT's AHx240 is 'The highest-capacity liquid-to-air CDU for the latest AI deployments in traditional air-cooled data centers' — 'No facility water required.'",
+    "**What it costs.** Air is a poor heat carrier, so the exchanger needs a big temperature gap and a lot of air: the AHx240 is rated at 15 °C approach, draws 15.5 kW mostly for its '8-Fan Array', and occupies two rack positions ('1200mm' wide) to move 240 kW; the AHx180 uses '4 x high-efficiency fans' for 180 kW in the same two-rack footprint. The room's air system must then absorb everything the fans put out, which is exactly the load it was struggling with before the racks went liquid. ASHRAE's caution stands: liquid-to-air is 'an interim solution' whose high approach 'will accelerate the required reduction in facility water temperatures'.",
+    "**Where it fits.** Retrofits, pilots, edge sites, and the first liquid racks in a hall whose plant water is not yet piped — CoolIT positions the AHx180 for 'multiple artificial intelligence (AI), high-performance computing (HPC) and high-density enterprise direct liquid cooled (DLC) servers without requiring facility water' and notes it 'Supports common hot and cold aisle data center architecture'. It is a bridge, and the rack-count trend says how short: the AHx240's published count went from four GB200 racks in 2024 to two GB300 racks in 2026.",
+    "**Self-check:** a hall has 1 MW of spare air-cooling capacity. How much liquid-cooled IT can liquid-to-air CDUs add? *(Less than 1 MW — the racks' heat plus the CDUs' own fan power all lands on the air system. Four AHx240s would add about 960 kW of rack load and 62 kW of CDU draw against the 1 MW.)*"
+   ]
+  },
+  {
+   "id": "leak-detection-and-how-a-rack-goes-down",
+   "title": "Leak detection, and the failure modes that take a rack down",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "**Start with what the standards body says can go wrong.** The OCP TCS guidance's failure analysis names three water risks: 'Pipe failure, connection failure, and condensation. The probability of pipe rupture is generally minimal with proper design, commissioning and maintenance. The risk of condensation should be eliminated by proper design and operation above dew-point.' It adds two non-water findings that experienced operators put first: 'Human error is often cited as the most common cause of failures' and 'EOPs for emergencies (e.g. pump failure) is most important' — emergency operating procedures, written before the pump stops.",
+    "**Connections, not pipes.** Every rack has dozens of joints: a **{{quick disconnect}}** at each server hose, manifold couplings, the CDU's own fittings. The industry's answer is the dry-break connector — a valve in each half that closes as it is unplugged, so a server can be pulled from a live loop without a drip. CoolIT's manifold page: 'Industry-leading all-metal dry-break quick disconnects available from multiple trusted suppliers', in hand-mate and blind-mate forms, colour-coded 'red (hot)/blue (cold)'; 'FD83 quick-disconnect connectors are the most commonly used TCS connection type in production deployments'. OCP's own large connector is specified 'with drip-less characteristics'. Blind-mate means the server engages its coolant connection as it slides into the rack, the way it engages power — no hands, no hose, no chance to plug hot into cold.",
+    "**Condensation is a leak with no hole.** If the coolant is colder than the room air's **{{dew point}}**, water condenses on every cold surface — hoses, manifolds, the cold plates themselves — and drips onto the boards below. Vertiv describes the defence: 'The CDU maintains the secondary loop supply temperature above the dew point of the data center, preventing condensation and ensuring 100% sensible cooling'; CoolIT lists 'Automatic condensation prevention' and a humidity sensor on its units. Warm-water cooling is safer here than cold: the same 40 °C supply that spares the chiller cannot condense anything.",
+    "**Detection is layered.** At the server, Dell describes 'fine copper traces in a lopped pattern around the entire water block. If any water drips onto these connections, the open wiring loop detects a small short' and reports through the server's management controller. In the rack, sensing cable runs along the manifold and the drip tray. At the CDU, 'coolant level and leak detection' sensors watch the reservoir — a falling level with no service event is a leak somewhere. NVIDIA's rack guide states the purpose: **{{leak detection}}** 'prevents damage to equipment, ensures system reliability and uptime, protects data integrity, and maintains safety … and prevents secondary damage to infrastructure'. The response is automatic: isolate the affected branch, shut the server down cleanly, alarm.",
+    "**Loss of flow is the fast failure.** A liquid-cooled processor has no fan to fall back on; when coolant stops, junction temperature climbs in seconds and the chip throttles or trips. Causes: a pump failure without a partner ('Redundant pumps and power inputs ensure continuous operation' — Vertiv), a power transfer the CDU does not ride through (the ultracapacitor and ATS), a clogged filter, a closed valve after maintenance, or a single CDU on a header with no group partner. This is why 'racks per CDU' should be read alongside 'what stops if this CDU stops'.",
+    "**Fouling is the slow failure.** A microchannel blocked by a particle, a plate exchanger coated in biofilm, an inhibitor package that has run out: each raises **{{thermal resistance}}** gradually, and the symptom is a GPU running a few degrees warmer each month until it throttles under load. Dell's chemistry calendar and the CDU's filter differential-pressure alarm are the only early warnings; there is no visible drip.",
+    "**Erosion and corrosion are the long failure.** Coolant velocity above the copper limit thins bends; dissimilar metals in one loop set up **{{galvanic corrosion}}**; a plant-water excursion that fouls the exchanger's primary side reduces capacity. They appear as leaks or lost approach years in.",
+    "**Availability is arithmetic across all of these.** CoolIT's claim that group-controlled rows reach 'six-nines (99.9999%) availability' — about 32 seconds a year — is a statement about redundant pumps, redundant units on a shared header, hot-swappable filters and sensors, and ride-through power, all at once. Remove any one and the figure is a different number.",
+    "**Self-check:** a rack's leak sensor trips at 3 a.m. and the CDU reservoir level is steady. Where is the water most likely coming from? *(Not the loop — a steady reservoir means no fluid has left it. Look for condensation: check the supply temperature against the room dew point, or a facility-side or overhead-pipe source.)*"
+   ]
+  },
+  {
+   "id": "the-kilowatt-ladder",
+   "title": "The kilowatt ladder: CDUs and the racks they serve",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "kilowatts — CDU rated capacity (at the maker's stated approach) or rack power (maker's published figure)",
+   "intro": "CoolIT's current and recent units against the racks they are quoted for. Read the gap between rack and unit as the 'racks per CDU' arithmetic — and the top rungs as why a 1 MW+ rack forces a new class of machine.",
+   "items": [
+    {
+     "label": "CHx80 — in-rack, liquid-to-liquid",
+     "sub": "'80 kW of heat load in … 4U'; up to 100 servers",
+     "v": 80
+    },
+    {
+     "label": "GB200 NVL72 rack",
+     "sub": "'approximately 120kW' — NVIDIA DGX guide",
+     "v": 120
+    },
+    {
+     "label": "GB300 NVL72 rack",
+     "sub": "'up to 142 kW' — reference architecture as relayed; Lenovo publishes W45 water",
+     "v": 142
+    },
+    {
+     "label": "AHx180 — liquid-to-air, two-rack footprint",
+     "sub": "'180 kW cooling capacity at 15°C approach'; 'Up to 2 NVIDIA GB200 NVL72 racks'",
+     "v": 180
+    },
+    {
+     "label": "CHx200 — in-rack, liquid-to-liquid",
+     "sub": "'200 kW of heat load in … 4U'; first fielded at TU Dresden in 2019",
+     "v": 200
+    },
+    {
+     "label": "Vera Rubin NVL72 rack",
+     "sub": "'TDP up to 220kW for the 2300W Rubin TDP SKU' — SemiAnalysis; NVIDIA publishes no kW figure",
+     "v": 220
+    },
+    {
+     "label": "AHx240 — liquid-to-air, two-rack footprint",
+     "sub": "'240 kW'; '2x GB300/GB200 NVL72 racks per CDU (at 15°C ATD…)'",
+     "v": 240
+    },
+    {
+     "label": "CHx500 — stackable, liquid-to-liquid (announced 2024)",
+     "sub": "'Four CHx500 units can be stacked to provide … 2 MW … in a single rack'; W45",
+     "v": 500
+    },
+    {
+     "label": "CHx1500 — row, liquid-to-liquid",
+     "sub": "'1500 kW at 5°C approach'; 'can cool 9 x NVIDIA GB200 NVL72 racks'",
+     "v": 1500
+    },
+    {
+     "label": "CHx2000 — row, liquid-to-liquid",
+     "sub": "'2000 kW cooling capacity at 5°C ATD'; '12 x GB300 NVL72 racks per CDU'",
+     "v": 2000
+    }
+   ]
+  },
+  {
+   "id": "how-a-cdu-is-bought",
+   "title": "How liquid cooling is actually bought: the two channels",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "A CDU maker sells two very different things through two very different doors. Cold plates and loops go to the people who build servers; CDUs, manifolds and TCS piping go to the people who build halls. The steps below are the sequence CoolIT's own material describes, from a server maker's design win to a row's witness test.",
+   "cols": [
+    "Step",
+    "Who",
+    "What happens",
+    "Where the schedule dies"
+   ],
+   "rows": [
+    [
+     "**1. Silicon roadmap**",
+     "Chip maker → cooling vendor",
+     "The processor's **{{TDP}}** and package geometry are shared under NDA years ahead; the cold-plate maker designs to it — CoolIT publishes 4,000 W and 15 kW demonstrators to show headroom above today's 1,400 W parts",
+     "A plate designed to the wrong package or heat flux is a year lost; this is why 'Split-Flow' and all-metal construction are marketed to chip makers, not operators"
+    ],
+    [
+     "**2. Server design win**",
+     "Server OEM/**{{ODM}}** → cooling vendor",
+     "The server maker integrates a coldplate loop into its board layout — 'Every loop is built around the server board layout' — and the vendor supplies loops and chassis manifolds (the NA2 loop for GB200 carries Dell-style part numbers). CoolIT claims '4 of top 5' server OEMs",
+     "One qualification cycle per server generation; losing a platform loses every rack built on it. Server makers with in-house designs (Lenovo Neptune, Supermicro) are the competitor here"
+    ],
+    [
+     "**3. Reference listing**",
+     "Platform owner (NVIDIA) → ecosystem",
+     "The platform owner publishes which vendors' parts it has validated — CoolIT is on 'NVIDIA's Recommended Vendor List (RVL)' with a table of racks per CDU — so the buyer's engineer can specify from a short list",
+     "A vendor not on the list is not considered; a rack count that changes (AHx240: four → two) changes the bill of materials"
+    ],
+    [
+     "**4. Design and basis of design**",
+     "Operator or **{{hyperscaler}}**, its engineer, the cooling vendor",
+     "Racks per CDU, W-class, approach, header layout, redundancy (N+1 or N+N), in-row versus facility, stainless versus polypropylene TCS, telemetry protocols — CoolIT's guidance: 'Choose suppliers who design CDUs as part of a broader DLC system. This ensures compatibility of wetted materials'",
+     "A plant designed for W27 water and a rack that wants W45 is a redesign; a header laid out before the rack count is fixed is a rebalance"
+    ],
+    [
+     "**5. Award**",
+     "Operator or its general contractor",
+     "CDUs, manifolds and TCS modules are bought as equipment, often through the electrical or mechanical contractor's scope; cold plates arrive inside the servers",
+     "Lead time — CoolIT argues 'When CDUs are manufactured in Canada, lead times are significantly more stable'; the market surged '156 percent year-over-year in 2Q 2025' (Dell'Oro) and capacity, not price, decided awards"
+    ],
+    [
+     "**6. Factory witness test**",
+     "Vendor, buyer's engineer",
+     "The unit is run against a simulated load before it ships — CoolIT's '6 MW FAT simulation testing' rig and '100% PG25 leak testing for every unit'",
+     "A unit that misses its approach at rated flow on the rig is a unit not shipped — better found here than in the hall"
+    ],
+    [
+     "**7. Install, fill, flush**",
+     "Mechanical contractor, vendor's services",
+     "TCS modules set, joined without sealants, flushed and filtered; loop filled with specified coolant; racks connected through dry-break disconnects; CDU **{{commissioning}}** against the plant",
+     "A dirty flush or the wrong fill fluid is a warranty argument for years; this is why the vendor sells 'design, installation … and maintenance' services around the box"
+    ],
+    [
+     "**8. Operate and refresh**",
+     "Operator, vendor's service network",
+     "Filter changes, quarterly chemistry checks, pump swaps under 'service support in over 80 countries'; each rack generation raises the load and the CDU count is re-run",
+     "A W32-era CDU serving W45-era racks is the next refresh cycle's problem — and the next sale"
+    ]
+   ]
+  },
+  {
+   "id": "where-coolit-slots-into-the-chain",
+   "title": "Where CoolIT's products slot into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The thermal chain from the Vertiv guide, stage by stage, with the CoolIT product that sits at each stage and the dossier fact that locates it. Stages with no CoolIT product are marked — they are the neighbours' business.",
+   "cols": [
+    "Stage in the chain",
+    "CoolIT product",
+    "Locating fact"
+   ],
+   "rows": [
+    [
+     "**Silicon package**",
+     "Cold plates — CP-NV, CP-AMD, CP-INT series; OMNI all-metal plates",
+     "'Split-Flow™ … patented micro-channel architecture'; OMNI 'aerospace-grade all-metallic unibody construction'; '5+ MILLION COLD PLATES SHIPPED'"
+    ],
+    [
+     "**Memory, optics, power in the server**",
+     "Peripheral cold plates — CP-OSFP, CP-DDR5-DIMM series",
+     "'Coldplates for OSFP transceivers, memory modules and voltage regulators enable 100% heat capture across the server'"
+    ],
+    [
+     "**Server chassis**",
+     "Coldplate loops and chassis manifolds (e.g. NA2 for GB200)",
+     "'Scalable Server Cooling from 70% to 100% Heat Capture'; 'Every loop is built around the server board layout'"
+    ],
+    [
+     "**Rack**",
+     "Rack manifolds — EIA, ORV3 and MGX series with dry-break quick disconnects",
+     "'Corrosion-resistant treated stainless steel construction'; 'hardware-agnostic … any CDU and any liquid-cooled server platform'"
+    ],
+    [
+     "**Row / hall distribution**",
+     "Technology Cooling System — stainless (Victaulic) or polypropylene (Aquatherm) prefabricated modules",
+     "'CoolIT designs and prefabricates cooling systems, including piping and valve trains'; '2.5\" to 8\" piping options'"
+    ],
+    [
+     "**Boundary to the plant**",
+     "CDUs — CHx2000, CHx1500 (row), AHx240, AHx180 (liquid-to-air), CHx200, CHx80 (in-rack)",
+     "'2000 kW cooling capacity at 5°C ATD'; 'group control of up to 20 CDUs'"
+    ],
+    [
+     "**Facility water, chillers, towers, dry coolers**",
+     "*None — the plant side*",
+     "Taught in the Trane guide; CoolIT's TCS ends at the CDU's primary connections"
+    ],
+    [
+     "**Fluid and monitoring**",
+     "Coolant specification and services; since July 2026 the parent's chemistry and monitoring businesses",
+     "'Propylene Glycol 25% computer coolant mixture'; the parent's stated intent to unite 'hardware technology, science-based chemistry, real-time advanced monitoring'"
+    ],
+    [
+     "**The alternative path: rear door**",
+     "*Not a CoolIT product line today* — the **{{rear-door heat exchanger}}** appears only in older case studies (COSMA-8: 13 rear-door units alongside two CHx750s)",
+     "Air-cooled servers with liquid at the rack; the transitional species the Vertiv guide describes"
+    ]
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The approach gets eaten.** A CDU rated at 5 °C approach is installed behind a plant whose water arrives 3 °C warmer than the design assumed, on a day the dry coolers are 2 °C short. The unit still moves heat — at less than its rating — and the racks see coolant above their limit. Every rating on the sheet was conditional, and the condition was the plant's to meet.",
+    "**Flow starves the far rack.** A header balanced for eight racks gets a ninth; or a rack with a different cold-plate count draws more than its share; or 1\" branch lines were kept to save copper. The nearest racks run cool, the last one throttles, and the CDU's own gauges read normal because the pump is holding pressure exactly where it was told to.",
+    "**The chemistry is nobody's job.** The fluid was specified by the server maker, filled by the mechanical contractor, and belongs, after handover, to a facilities team that tests boiler water. Nobody owns the refractometer. Inhibitors deplete, glycol dilutes with top-ups, biofilm grows, and eighteen months later cold plates read hotter with no leak to find.",
+    "**Construction dirt reaches the microchannels.** The TCS was built to plant standards — threaded joints, sealant, a quick flush. The first year's failures are individual GPUs throttling one at a time, each a plate with a blocked channel, each replaced as a 'bad card'.",
+    "**The one CDU on the header stops.** A row was designed with a single 2 MW unit because the arithmetic said twelve racks fit; N+N pumps looked like redundancy. Then the unit's controller loses power, or a facility valve is closed for maintenance, and every rack on the header goes down together. Pump redundancy is not unit redundancy; unit redundancy needs a partner on the same header.",
+    "**The vendor's channel moves.** Server makers with in-house liquid designs (Lenovo's Neptune; Supermicro's rack-scale line) need no third-party loop, and the platform owner's rack counts change with each generation. A cold-plate business lives on design wins it does not control, which is why the CDU, TCS and service businesses — sold to the operator — matter to the vendor's strategy.",
+    "**The next rack outruns the machine.** Row CDUs went from 750 kW to 2 MW in two years while the rack went from 120 to 220 kW and the platform owner talks of 1 MW racks. A hall whose CDU generation is fixed at construction will serve a rack generation it was not sized for — and liquid-to-air bridges, at 15 °C approach, run out first.",
+    "**Warm water is mistaken for no plant.** '45 °C, no chillers' is read as permission to delete the mechanical plant. The CDU maker's own engineers say the opposite: 'the need for mechanical cooling will remain, simply as a risk-management tool for the hottest days of the year'. Approach plus approach plus the worst wet-bulb day is the design condition, not the average one."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Name the five functions a CDU performs.",
+     "a": "Heat exchange and isolation between the two loops; temperature control of the supply; pressure control of the clean loop; flow control to every connected rack; fluid treatment (filtration and chemistry) — Schneider's list."
+    },
+    {
+     "q": "What is the approach temperature of a CDU, and why does it size the chiller plant?",
+     "a": "The difference between the facility water entering and the coolant leaving for the racks. The rack's inlet limit minus the approach is the warmest plant water allowed — so a 5 °C approach behind a 45 °C rack permits 40 °C water (often compressor-free), while a 15 °C approach demands 30 °C water."
+    },
+    {
+     "q": "Why is a liquid-to-air CDU rated at three times the approach of a liquid-to-liquid one?",
+     "a": "Air carries far less heat per litre than water, so a radiator needs a much larger temperature gap and a lot of fan power to move the same kilowatts — ASHRAE calls liquid-to-air an interim solution for that reason."
+    },
+    {
+     "q": "What do the ASHRAE W-class numbers mean since the fifth edition?",
+     "a": "The maximum supply-water temperature in °C: W17, W27, W32, W40, W45 and W+ (above 45 °C), all starting at 2 °C. A rack published as W45 accepts water up to 45 °C."
+    },
+    {
+     "q": "Why is the rack-side fluid 25 percent propylene glycol rather than water or 50 percent glycol?",
+     "a": "25 percent carries the inhibitor package, protects to about −10 °C and is the minimum concentration that suppresses microbial growth; more glycol would cut the water's heat capacity further and cost flow and capacity."
+    },
+    {
+     "q": "Why do TCS systems prohibit pipe dope and tape, and what replaces them?",
+     "a": "Sealant fragments cannot be filtered out before they reach microchannels a few hundred microns wide. Fused polypropylene, grooved stainless couplings or welds are used, and the loop is flushed and filtered to 1 µm before racks connect."
+    },
+    {
+     "q": "What two filtration stages does OCP recommend for a TCS loop?",
+     "a": "Inline filtration at 25 µm in the CDU plus a sidestream polisher below 5 µm that continuously cleans a fraction of the flow."
+    },
+    {
+     "q": "Give the three water risks in OCP's TCS failure analysis and the one non-water cause it puts first.",
+     "a": "Pipe failure, connection failure and condensation; and human error as the most commonly cited cause, with emergency procedures for pump failure as the most important preparation."
+    },
+    {
+     "q": "What is a dry-break (drip-less) quick disconnect and why does every server hose end in one?",
+     "a": "A connector whose two halves each close a valve as they separate, so a server can be unplugged from a live coolant loop without a drip — the joint count per rack makes connections, not pipes, the dominant leak risk."
+    },
+    {
+     "q": "Why does warm-water cooling cost pumping head, and what published table shows it?",
+     "a": "Warmer coolant can absorb less heat per litre before the chip limit, so more flow and pressure are needed: Lenovo's GB300 rack table goes from 59 LPM at 2.3 psi (25 °C) to 177 LPM at 18.4 psi (45 °C)."
+    },
+    {
+     "q": "What is the difference between pump redundancy and unit redundancy on a row?",
+     "a": "N+N pumps keep one CDU running through a pump failure; only a second CDU on the same header, under group control, keeps the row running through a unit, controller or power failure."
+    },
+    {
+     "q": "Through which two channels does a liquid-cooling specialist sell, and to whom?",
+     "a": "Cold plates and loops to server OEMs/ODMs as design wins per platform generation; CDUs, manifolds and TCS piping to operators and their contractors as equipment for the hall — with the platform owner's recommended-vendor list sitting between the two."
+    },
+    {
+     "q": "A CDU sheet says '2269 kW cooling load' and another says '2000 kW at 5°C ATD' for the same unit. Which is the rating?",
+     "a": "Neither without its condition; the 2000 kW figure states its approach and is comparable across vendors, the larger figure assumes a different, unstated approach."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A rack accepts 40 °C coolant, the CDU is rated at 5 °C approach, and the site's dry coolers make water 6 °C above outdoor air. Above what outdoor temperature does the plant need a chiller?",
+     "c": [
+      "40 °C",
+      "34 °C",
+      "29 °C",
+      "23 °C"
+     ],
+     "a": 2,
+     "why": "40 − 5 − 6 = 29 °C. Each stage in the chain spends part of the temperature budget; the CDU's approach is the stage the buyer chooses."
+    },
+    {
+     "q": "A leak sensor trips under a rack; the CDU reservoir level has not moved. The most likely source is:",
+     "c": [
+      "A cold-plate microchannel rupture",
+      "A failed quick disconnect on a server hose",
+      "Condensation — coolant running below the room's dew point",
+      "A plate heat exchanger breach into the facility loop"
+     ],
+     "a": 2,
+     "why": "Any loop leak lowers the reservoir. A steady level with water present points to condensation on cold surfaces, or to a source outside the loop."
+    },
+    {
+     "q": "Moving a row's branch lines from 1\" to 2\" primarily:",
+     "c": [
+      "Raises the approach temperature",
+      "Cuts branch pressure drop roughly fivefold, reducing pump head needed",
+      "Increases the glycol concentration required",
+      "Lets the CDU run at a lower W-class"
+     ],
+     "a": 1,
+     "why": "OCP: pressure drop across 1\" lines 'can be over five times higher than 2\" lines, with impact on CDU pump sizing'."
+    },
+    {
+     "q": "A refractometer shows the TCS glycol at 18 percent after a year of topping up with water. Which protection has NOT weakened?",
+     "c": [
+      "Freeze protection",
+      "Microbial control",
+      "Corrosion inhibition",
+      "Heat capacity of the fluid"
+     ],
+     "a": 3,
+     "why": "Diluting glycol slightly raises the fluid's heat capacity; freeze, microbial and inhibitor protection all fall with the dilution."
+    },
+    {
+     "q": "A vendor quotes '12 racks per CDU'. The claim depends on all of the following EXCEPT:",
+     "c": [
+      "The CDU's capacity at a stated approach",
+      "The CDU's flow at the row's pressure drop",
+      "The rack's published power and flow requirement",
+      "The colour coding of the quick disconnects"
+     ],
+     "a": 3,
+     "why": "Racks per CDU is capacity, flow and rack load arithmetic under stated conditions; connector colour is a service convention."
+    },
+    {
+     "q": "Why does a CDU carry an ultracapacitor?",
+     "c": [
+      "To heat the coolant on cold starts",
+      "To keep the pumps running through a power transfer so the racks never lose flow",
+      "To power the touchscreen when the network is down",
+      "To drive the fans in a liquid-to-air unit"
+     ],
+     "a": 1,
+     "why": "Liquid-cooled processors have no fan fallback; a one-second pump stop during a utility-to-generator transfer is a thermal event, so the unit rides through it."
+    },
+    {
+     "q": "A single 2 MW CDU with N+N pumps serves twelve racks. What single event still takes the whole row down?",
+     "c": [
+      "One pump failing",
+      "One filter clogging",
+      "The unit's controller or its power feed failing, with no partner CDU on the header",
+      "One server hose being disconnected"
+     ],
+     "a": 2,
+     "why": "Pump redundancy protects against a pump. Unit-level events — controller, power, a closed facility valve — need a second unit on the same header under group control."
+    },
+    {
+     "q": "Which statement about liquid-to-air CDUs is correct?",
+     "c": [
+      "They need facility water at W45",
+      "They reject rack heat into the room air at a high approach, so the room's air system must absorb it",
+      "They achieve lower approach temperatures than plate exchangers",
+      "They eliminate the need for leak detection"
+     ],
+     "a": 1,
+     "why": "Air's low heat capacity forces a ~15 °C approach and fan power; the heat still has to leave the room through the existing air conditioning."
+    },
+    {
+     "q": "A cold-plate maker's revenue is most exposed to:",
+     "c": [
+      "The price of propylene glycol",
+      "Server makers designing their own loops or a platform owner changing its recommended-vendor list",
+      "The ASHRAE class naming scheme",
+      "The colour of the rack manifolds"
+     ],
+     "a": 1,
+     "why": "Cold plates are sold as design wins per server generation and specified from the platform owner's list; in-house OEM designs and list changes move the volume."
+    }
+   ]
+  }
+ ]
+}

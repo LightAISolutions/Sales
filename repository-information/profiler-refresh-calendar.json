@@ -1037,6 +1037,51 @@
         "Supply chain: the Chief Global Integrated Supply Chain Officer departed 2026-08-01 against an estimated ~$200M annual tariff cost after mitigation. Watch for a successor and for any change in the surcharge posture",
         "Chesterton check: no source names a single hyperscaler, colocation operator or contractor as a Trane customer. The only publicly stated ecosystem relationships are the NVIDIA and Eaton reference designs. Absence of a named customer is not evidence of absence of orders"
       ]
+    },
+    {
+      "slug": "dnv",
+      "cadence": "quarterly",
+      "source": "Foundation-owned (Stiftelsen Det Norske Veritas); no listing, no earnings calendar. Publishes an annual report each spring with NOK revenue and headcount (AR2025: NOK 43.9bn, 17,463 employees) — the only audited figures. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). dnv.com itself is unreadable from this environment (Cloudflare 403); the annual report was read from a mirror host and 14 dnv.com pages are cited by title only.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "The 2026 annual report (expected spring 2027): Energy Systems revenue and headcount, and whether the data-centre advisory line is broken out for the first time",
+        "Revision dates on the Energy Storage recommended practices — RP-0043 (grid-connected storage) and the battery-testing practice — and any new RP on data-centre power or hydrogen-ready plant; each revision changes what lenders cite",
+        "The next Battery Performance Scorecard edition and which cell makers are named; scorecard findings move independent-engineer assumptions on degradation and thermal-runaway onset",
+        "Named independent-engineer or technical-adviser roles on battery and hybrid financings above 500 MWh, and any first named data-centre campus engagement with a covered hyperscaler or developer",
+        "Grid-code and interconnection-study work in ERCOT, PJM and Europe as large-load rules change — DNV is cited on both the storage side and the load side",
+        "Ownership and structure: any change to the foundation model, a sale of a non-core unit, or an acquisition in digital assurance (Veracity, GreenPowerMonitor) that shifts the mix",
+        "Chesterton check: DNV is an assurance body, not a supplier — no order books, no backlog. Do not import revenue estimates from consultancy rankings; the annual report is the only figure"
+      ]
+    },
+    {
+      "slug": "sargent-lundy",
+      "cadence": "quarterly",
+      "source": "Private, 'privately owned and led by engineers' (not an ESOP — absent from the NCEO Employee Ownership 100). No filings, no revenue disclosure; the only external series is the ENR Top 500 Design Firms rank (22nd in 2026) and ENR sector rankings. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "The ENR 2027 Top 500 Design Firms rank and the power-sector and international rankings — the only comparable series for a firm with no income statement",
+        "Nuclear: Palisades restart operations, the TVA Clinch River BWRX-300 construction permit and the USD 400m DOE award, the Dow/X-energy Long Mott construction permit, and any new SMR or restart owner's-engineer role named on the firm's own channels",
+        "Data-centre campus power: any named hyperscaler or developer engagement beyond conference talks; the January 2026 POWERGEN keynote alongside NVIDIA and Google Cloud is the closest the firm has come to naming one",
+        "Grid and interconnection: substation and large-load interconnection work as utilities restructure large-load tariffs; the firm's engineers sit on IEEE protection and substation committees",
+        "Leadership: the 2026 executive appointments settling in; any succession signal around the CEO who won POWER's 2025 executive award",
+        "Headquarters: the Chicago HQ expansion and hiring announced January 2026 — headcount is otherwise undisclosed",
+        "Chesterton check: no litigation, debarment or NRC enforcement against the firm was found; the NRC vendor inspection 99900507/2025-201 closed with findings on procedure, not on design. Do not import the 'employee-owned' label — the firm does not use it"
+      ]
+    },
+    {
+      "slug": "coolit",
+      "cadence": "quarterly",
+      "source": "Private subsidiary of Ecolab (NYSE: ECL) since 2 July 2026; no separate filings. The only revenue figures are the acquirer's — 'approximately $550 million in sales over the next 12 months' at the March 2026 signing and 'year-to-date sales have grown more than 100%' at close — so Ecolab's quarterly releases and 10-Qs are the disclosure channel to read (Global High-Tech segment commentary). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "Ecolab's Q3 2026 release and 10-Q (late October 2026): first quarter with CoolIT consolidated — any stated CoolIT sales, the Global High-Tech growth rate, and progress against the '$4 billion by 2030' target named at close",
+        "The next-generation CDU launched 28 September 2026 'for 1MW+ ultra-dense AI racks': name, kW rating and the approach temperature it is rated at; whether it is skidded/facility-scale rather than row-based",
+        "NVIDIA Recommended Vendor List rack counts after Vera Rubin NVL72 ships (SemiAnalysis: 180–220 kW per rack): whether CoolIT publishes racks-per-CDU for Rubin and whether a Rubin-class cold-plate series (CP-NV-VR) appears",
+        "Calgary capacity and headcount: 'nearly 900' at August 2026 from about 650 in March; the Starfield facility's stated 25x scaling; any new site outside Canada beyond Taipei, Vietnam and China",
+        "Channel concentration: named server-OEM design wins (Dell, HPE, Gigabyte are sourced; Supermicro and Lenovo run in-house designs) and any first named hyperscaler — CoolIT claims '4 of 5' hyperscalers without naming one",
+        "Litigation: the Asetek disputes ended in 2022 (summary judgment, settlement) with the Federal Circuit reviving CoolIT's '567 patent in March 2024 — watch for any new assertion now that a deep-pocketed parent owns the portfolio",
+        "Chesterton check: CoolIT was KKR/Mubadala-owned May 2023–July 2026, not 'KKR-owned since 2023' today, and no jury verdict was ever reached in Asetek v. CoolIT. Do not re-import either premise"
+      ]
     }
   ]
 }

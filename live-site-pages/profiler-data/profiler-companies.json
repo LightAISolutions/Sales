@@ -2048,6 +2048,61 @@
       "srcTotal": 43,
       "srcFirstPct": 42,
       "kpiNorm": true
+    },
+    {
+      "slug": "dnv",
+      "name": "DNV",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Norwegian foundation-owned assurance and risk-management group (NOK 43.9bn revenue, 2025) whose Energy Systems arm writes the recommended practices and independent-engineer reports that make batteries and grids bankable — and runs the labs the data comes from.",
+      "hq": "Høvik, Norway",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "dnv.com",
+        "greenpowermonitor.com",
+        "veracity.com"
+      ],
+      "srcTotal": 101,
+      "srcFirstPct": 32,
+      "kpiNorm": false
+    },
+    {
+      "slug": "sargent-lundy",
+      "name": "Sargent & Lundy",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Chicago power-engineering firm since 1891, privately owned and led by engineers, working as owner's engineer, independent engineer and engineer of record on nuclear restarts, SMRs, gas plants, grid and data-centre campus power — fee-for-service, no equity, no construction.",
+      "hq": "Chicago, Illinois, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "sargentlundy.com"
+      ],
+      "srcTotal": 158,
+      "srcFirstPct": 71,
+      "kpiNorm": false
+    },
+    {
+      "slug": "coolit",
+      "name": "CoolIT Systems",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Calgary direct-liquid-cooling specialist — cold plates, rack manifolds and 80 kW to 2 MW CDUs on NVIDIA's recommended-vendor list — bought by Ecolab for about USD 4.75bn (closed July 2026) after three years under KKR and Mubadala.",
+      "hq": "Calgary, Alberta, Canada",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "coolitsystems.com",
+        "44473873.fs1.hubspotusercontent-na1.net",
+        "ecolab.com"
+      ],
+      "srcTotal": 151,
+      "srcFirstPct": 65,
+      "kpiNorm": false
     }
   ]
 }

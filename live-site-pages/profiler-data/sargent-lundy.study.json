@@ -1,0 +1,678 @@
+{
+ "schemaVersion": 2,
+ "slug": "sargent-lundy",
+ "title": "Sargent & Lundy — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "glossary": [
+  {
+   "t": "construction monitoring",
+   "d": "In project finance: the independent engineer's recurring site visits and reports during construction, checking progress, quality and spend against the plan so that each loan drawdown can be certified. Distinct from the utility-commission sense of the term used in the Dominion and Southern Company material."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-the-second-half",
+   "title": "Start here: the second half of the bankability lesson",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The **DNV guide** taught what **{{bankability}}** means and who decides it, what sits inside the independent engineer's report, what a certificate and a recommended practice do and do not prove, where degradation test data comes from, and how reliance and liability work. **None of that is repeated here.** This guide takes the other chair at the same table: the engineer who works for the *owner* rather than the lender.",
+    "**What this guide teaches:** the three engineers on every project — **{{owner's engineer}}**, **{{independent engineer}}** and the EPC's own engineer — and why they cannot be the same firm; the technical due-diligence sequence from feasibility to **{{construction monitoring}}**, and what a 30, 60 and 90 percent design review is for; how engineering firms are paid and the risks they never carry; campus power for a data centre as an owner's-engineer problem — the interconnection queue, the mock study, the islanded plant, and what 99.995 percent actually means in minutes; and why a hyperscaler evaluating a reactor hires an architect-engineer.",
+    "**One idea carries this half.** An engineering firm sells *judgment on someone else's behalf*, and every role it holds is defined by whose behalf. The owner's engineer advocates; the independent engineer verifies; the EPC's engineer delivers. Sargent & Lundy is the worked example because it holds all three seats on different projects — engineer of record on a 1,215 MW gas plant, owner's engineer on a 1,200 MWh battery, independent engineer on a 500 kV line and a billion-dollar loan guarantee — and because it does so with no equity, no construction risk and no published revenue.",
+    "Written for a reader with high-school science. Every acronym is defined on first use; the drills test how the roles and the process work, never who runs the firm."
+   ]
+  },
+  {
+   "id": "three-engineers-one-project",
+   "title": "Three engineers, one project",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Every large power project has at least three engineering firms on it, and confusing them is the commonest mistake a newcomer makes. The columns are the questions that separate them.",
+   "cols": [
+    "",
+    "Owner's engineer (OE)",
+    "Independent engineer (IE)",
+    "EPC contractor's engineer"
+   ],
+   "rows": [
+    [
+     "**Who hires it**",
+     "The owner or developer",
+     "The lender (appointed) — the developer pays",
+     "The EPC contractor (in-house or subcontracted)"
+    ],
+    [
+     "**Whose interest it serves**",
+     "The owner's — 'an independent advocate for the owner'",
+     "The lender's — 'the gatekeepers of project bankability'",
+     "The contractor's — to deliver the contract, no more"
+    ],
+    [
+     "**What it produces**",
+     "Specifications, design basis, bid reviews, design-review comments, FAT witness reports, commissioning oversight",
+     "The IE report, drawdown certificates, operating reviews",
+     "The stamped construction drawings — it is the **{{engineer of record}}**"
+    ],
+    [
+     "**When it starts**",
+     "Before there is a project — feasibility and siting",
+     "About a year before financial close",
+     "After contract award"
+    ],
+    [
+     "**Contract form**",
+     "'a professional services agreement with owner' — hourly or lump-sum fee",
+     "Fee-for-service engagement letter with reliance terms",
+     "Inside the EPC's 'lump-sum or turnkey contract with owner'"
+    ],
+    [
+     "**Risk it carries**",
+     "Professional liability, capped",
+     "Professional liability, capped",
+     "Cost overruns and schedule within the agreed scope — the EPC 'carries the financial risk'"
+    ],
+    [
+     "**The rule that keeps them apart**",
+     "Must not bid the EPC — owners should include 'a provision that precludes the owner's engineer from bidding on any related EPC contract'",
+     "Must not have designed what it reviews",
+     "May not also be the owner's engineer on the same job"
+    ],
+    [
+     "**In one sentence**",
+     "'IEs identify issues. OEs help solve them'",
+     "Verifies the owner's plan for someone else's money",
+     "Builds what the contract says"
+    ]
+   ]
+  },
+  {
+   "id": "why-the-owner-needs-its-own-engineer",
+   "title": "Why the owner needs its own engineer",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**The asymmetry.** An owner buying a power plant usually buys one; the **{{EPC}}** contractor has built dozens. The contractor knows where the margin hides — in an **{{or-equal}}** substitution, in a **{{change order}}** the specification left room for, in a test procedure written loosely enough to pass. 'The EPC contractor's primary obligation is to deliver within the terms of the contract — not to optimise outcomes for the owner beyond those terms.' Someone has to read the drawings on the owner's side with the contractor's level of knowledge. That is the owner's engineer.",
+    "**What advocacy means in practice.** Writing the **{{basis of design}}** and the specification before the tender — because 'whoever writes it decides what the bidders are allowed to offer'. Reviewing the bids for what they leave out. After award, reading each design package as it matures and pushing back before steel is ordered. Sitting in the factory when the transformer is tested. Standing on site when the plant is first energised. In Sargent & Lundy's words: 'We help evaluate whether EPC contractors have designed and constructed the facility in accordance with contract documents and industry standards.'",
+    "**The cost argument.** An owner's engineer is an added fee on a project that already has an engineer. The case for it is that 'the expense of the owner's engineer is often easily counterbalanced by cost savings obtained through tight control of the schedule, scope management, change orders, and overall project controls' — the fee is 'a small fraction of total project cost', typically priced 'on a time-and-materials basis so the owner pays for the expertise it actually uses'.",
+    "**Why it must be independent of the EPC.** An owner's engineer 'who is working for an EPC contractor or who has key alliances with vendors' cannot advocate. The standard protection is contractual: the owner's engineer is barred from bidding the EPC it helped specify. This is also why the same firm can be owner's engineer on one project and engineer of record inside an EPC consortium on another — the conflict is per project, not per firm.",
+    "**Self-check:** an EPC offers to 'include owner's engineering services at no charge'. What is wrong with the offer? *(The service exists to review the EPC. An engineer paid by the contractor to check the contractor is the contractor's engineer with a different label — the advocacy is gone even if the competence is not.)*"
+   ]
+  },
+  {
+   "id": "the-technical-due-diligence-sequence",
+   "title": "The technical due-diligence sequence, from feasibility to construction monitoring",
+   "kind": "timeline",
+   "read": "8 min",
+   "intro": "Months relative to EPC contract award. The owner's engineer is present from the first month; the EPC appears at zero; the independent engineer's window (taught in the DNV guide) overlaps the middle. Lanes: what the owner and its engineer do, what the EPC does.",
+   "unit": "months relative to EPC contract award (negative = before)",
+   "lanes": {
+    "oe": "Owner and owner's engineer",
+    "epc": "EPC contractor"
+   },
+   "items": [
+    {
+     "x": -24,
+     "lane": "oe",
+     "label": "Feasibility, siting, power-supply plan",
+     "sub": "'Project feasibility evaluations. Site selection and environmental compliance reviews. Technology and major equipment selection'"
+    },
+    {
+     "x": -18,
+     "lane": "oe",
+     "label": "Interconnection application and studies",
+     "sub": "Grid prospecting, mock {{system impact study}}, {{point of interconnection}} chosen, load or generator application filed"
+    },
+    {
+     "x": -14,
+     "lane": "oe",
+     "label": "Basis of design; 10 and 30 percent concept design",
+     "sub": "'conceptual project designs (e.g., 10%, 30%) to provide a basis for contracting'"
+    },
+    {
+     "x": -9,
+     "lane": "oe",
+     "label": "EPC specification and tender",
+     "sub": "'Engineering, procurement, and construction (EPC) specification and bid reviews'; {{long-lead item}} reservations"
+    },
+    {
+     "x": -3,
+     "lane": "oe",
+     "label": "Bid evaluation and contract negotiation",
+     "sub": "'Contract negotiation assistance'; liquidated damages, performance guarantees, test procedures agreed"
+    },
+    {
+     "x": 0,
+     "lane": "epc",
+     "label": "EPC award — notice to proceed",
+     "sub": "Constructor mobilises; the EPC's engineer becomes engineer of record"
+    },
+    {
+     "x": 3,
+     "lane": "epc",
+     "label": "30 percent design package",
+     "sub": "Layouts, single-line diagrams, major equipment specifications"
+    },
+    {
+     "x": 4,
+     "lane": "oe",
+     "label": "30 percent review meeting",
+     "sub": "'Conducting 30%, 60%, 90%, and issued for construction (IFC) engineering design package reviews and design review meetings'"
+    },
+    {
+     "x": 8,
+     "lane": "epc",
+     "label": "60 percent package; procurement and {{submittal}}s",
+     "sub": "Equipment selected, studies complete; vendor drawings flow for approval"
+    },
+    {
+     "x": 12,
+     "lane": "epc",
+     "label": "90 percent and issued-for-construction drawings",
+     "sub": "Construction-ready detail; the last chance to change anything cheaply"
+    },
+    {
+     "x": 14,
+     "lane": "oe",
+     "label": "Factory acceptance tests witnessed",
+     "sub": "'We also monitor factory acceptance tests (FATs)' — transformers, switchgear, inverters, engines before they ship"
+    },
+    {
+     "x": 18,
+     "lane": "oe",
+     "label": "Construction monitoring",
+     "sub": "'Monitoring on-site construction and owner's representative services' — schedule, quality, deviations from scope"
+    },
+    {
+     "x": 26,
+     "lane": "epc",
+     "label": "Mechanical completion; site acceptance tests; energisation",
+     "sub": "{{site acceptance test}} proves the installation, where the factory test proved the machine"
+    },
+    {
+     "x": 28,
+     "lane": "oe",
+     "label": "Commissioning and performance test oversight",
+     "sub": "'verify that systems have been tested to perform under load conditions, adhere to redundancy design, and comply with all operational metrics'"
+    },
+    {
+     "x": 30,
+     "lane": "epc",
+     "label": "Substantial completion and turnover",
+     "sub": "Punch list, as-builts, warranties start; O&M strategy handed to the owner"
+    }
+   ]
+  },
+  {
+   "id": "what-a-design-review-is-for",
+   "title": "What a 30, 60 and 90 percent design review is for",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "The percentages are conventions for how far a design has matured, and each review asks a different question. Reviewing a 90 percent package for concept errors is too late; reviewing a 30 percent package for cable schedules is too early.",
+   "cols": [
+    "Stage",
+    "What the package contains",
+    "The question the owner's engineer asks",
+    "What it costs to change afterwards"
+   ],
+   "rows": [
+    [
+     "**10 percent (concept)**",
+     "Site plan, block diagram, capacity and technology choice",
+     "Is this the right plant on the right site for the {{basis of design}}?",
+     "Almost nothing — this is the stage to argue"
+    ],
+    [
+     "**30 percent (preliminary)**",
+     "General arrangement, single-line diagram, major equipment list and specifications, code path",
+     "Does the architecture meet the functional requirements and the interconnection? Are the long-lead items the right ones?",
+     "The layout and the big equipment are now committed; re-doing them costs weeks"
+    ],
+    [
+     "**60 percent (definitive)**",
+     "Equipment selected, electrical and mechanical studies complete, P&IDs, structural design, control philosophy",
+     "Do the studies close — short circuit, protection coordination, load flow, thermal? Do vendor {{submittal}}s match what was specified?",
+     "Equipment is on order; changes become {{change order}}s"
+    ],
+    [
+     "**90 percent (final)**",
+     "Construction detail, cable and conduit schedules, installation drawings, test procedures",
+     "Is it constructible and coordinated? Do the test procedures actually prove the performance guarantees?",
+     "Materials are procured; a change is a field change"
+    ],
+    [
+     "**Issued for construction (IFC)**",
+     "Stamped by the {{engineer of record}}",
+     "Does it match the last review's resolved comments?",
+     "Concrete is being poured"
+    ],
+    [
+     "**Submittals (continuous)**",
+     "Vendor drawings, ratings, test reports, wiring diagrams",
+     "Is the offered product the specified one — or an {{or-equal}} that is not equal?",
+     "'Approval, not the purchase order, is usually what releases the factory slot'"
+    ]
+   ]
+  },
+  {
+   "id": "how-engineering-firms-are-paid",
+   "title": "How engineering firms are paid, and what they never carry",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**Fees for judgment.** An owner's engineer, an independent engineer and a design engineer are paid under professional-services agreements — by the hour, by a lump-sum fee for a defined scope, or a mix — and the fee is 'a small fraction of total project cost'. There is no margin on equipment, no share of the plant's output, and no equity. Sargent & Lundy reports to ENR's professional-services list, which ranks firms by 'revenue from construction and program management fees'; that is the whole business.",
+    "**What the fee does not buy.** The engineer does not guarantee the plant. Cost overruns, schedule slips and performance shortfalls sit with the EPC under its **{{lump sum}}** or turnkey contract, backed by **{{liquidated damages}}**; the engineer's exposure is professional liability, capped at a multiple of its fee. This is the same structure the DNV guide describes for the IE, and it holds for the owner's engineer and the engineer of record alike.",
+    "**Why an engineer-owned firm cannot carry construction risk.** A firm owned by its own engineers — 'the people who own and manage our company' — has no external balance sheet to absorb a lump-sum overrun. So when such a firm takes EPC scope, it does so in a consortium or joint venture with a constructor: the engineer designs and manages, the constructor builds and carries the construction risk. Every EPC credit in Sargent & Lundy's record has that shape — TIC on Entergy's Orange County station, PCL in White Oak Power Constructors, Boldt in Westside Energy Partners, EC Source in the AEP joint venture, Kiewit on carbon capture.",
+    "**The exceptions are informative.** A design firm occasionally takes an equity position in a technology it designs for — Sargent & Lundy disclosed an investment in NuScale in 2019 alongside its standard-plant design role. That is a bet on a design it wrote, not on a plant it built, and it is rare enough to be announced.",
+    "**How the firm grows without publishing a number.** A private engineer publishes no revenue. What it can show is rank — ENR compiles design revenue from self-reported surveys, so relative position is comparable even when the figures are not — headcount, and real estate. 'Company-record annual revenue, nearly doubled its backlog and workforce' since 2023; No. 23 to No. 22 in ENR's Top 500 and No. 5 to No. 2 in battery-storage design in one year; a headquarters 60 percent larger than the one it left. Read them as a series, not as a statement of accounts.",
+    "**Self-check:** a proposal from an architect-engineer includes 'EPC delivery of the 400 MW plant'. What should the next question be? *(Who is the constructor, and which party's balance sheet stands behind the lump sum — because the engineer's does not.)*"
+   ]
+  },
+  {
+   "id": "campus-power-between-hyperscaler-and-utility",
+   "title": "Campus power: the owner's engineer between the hyperscaler and the utility",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "**The problem restated.** A data-centre campus is a load of several hundred megawatts that wants to be energised in two years, in a grid where the interconnection queue takes longer than that. The owner's engineer's job is to find the site where the wires already have room, prove it to the utility before the utility's own study does, and design the campus so that the answer stays yes. Sargent & Lundy's version: 'We perform mock system impact studies to evaluate grid capacity and quantify expected network upgrade costs … Our system impact studies enable clients to submit load and interconnect requests at economically viable points of interconnection rather than waiting for opaque and costly study results.'",
+    "**Grid prospecting, then the mock study.** Transmission planners run the same models the utility runs — power flow, contingency, short-circuit — on public and purchased network data, to rank candidate **{{point of interconnection}}** options by available capacity and likely network-upgrade cost. The **{{large-load interconnection}}** application is then filed with a site the engineer already believes will pass. During the utility's study the engineer acts 'as the client's technical advisor … managing milestone schedules, responding to technical queries, and negotiating interconnection agreements', and identifies 'cost-sharing mechanisms for required transmission upgrades'.",
+    "**Designing the campus to size the application.** Layouts 'that help size interconnection load applications, develop medium voltage systems, size cooling systems, and size backup generation systems' — because the megawatts requested from the utility depend on how much of the campus's peak is served by on-site generation and storage, and the **{{large-load tariff}}** and **{{credit support}}** the utility demands depend on the megawatts requested.",
+    "**When the grid says no, or not yet: on-site and bridging power.** The alternatives are **{{behind-the-meter}}** generation and **{{bridge power}}**: gas turbines in simple or combined cycle, reciprocating engines, eventually a reactor. The engineering questions change: 'we assess interconnection complexity, emissions permitting, fuel availability, technology fit, and lifecycle cost', and for 'islanded sites that are completely independent from the grid' the plan must 'accommodate forced outage scenarios to achieve reliability goals' — with 'redundancy, intelligent controls, and the ability to restore the grid after a complete shutdown or black start'. Air permits become the schedule's critical path.",
+    "**The number the contract is written on.** Data-centre tenants sign for availability, and the owner's engineer must show the design meets it: 'We help clients understand how reliability metrics, such as mean time between failure (MTBF) and mean time to repair (MTTR), impact uptime guarantees and service level agreement (SLA) compliance', using 'Monte Carlo simulations' — thousands of simulated years of random failures and repairs — to estimate how often the campus would fall short. The next table turns the percentages into minutes.",
+    "**Why this is nuclear-adjacent.** Sargent & Lundy sells its data-centre reliability work as a transfer of nuclear practice: 'We leverage our experience providing extremely high-reliability backup power systems to the nuclear industry to meet the challenges posed by high-consumption and mission-critical data center customers.' The same firm's 'Confidential Hyperscaler' engagement — 'existing utility-scale nuclear reactors, new advanced modular reactors (AMRs), and new small modular reactors (SMRs)' with 'A quantitative availability model' and 'A data center campus site plan' — is the two practices meeting."
+   ]
+  },
+  {
+   "id": "reliability-arithmetic",
+   "title": "Reliability arithmetic: what 99.995 percent means",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Availability is the fraction of the year a system is able to serve load. Each extra nine costs roughly an order of magnitude in redundancy and money. The islanded data-centre plant in Sargent & Lundy's record targets 99.995 percent.",
+   "cols": [
+    "Availability",
+    "Downtime per year",
+    "Typical architecture",
+    "What has to be true"
+   ],
+   "rows": [
+    [
+     "**99.9%** ('three nines')",
+     "525.6 minutes (8.8 hours)",
+     "Single path, some spares",
+     "A component failure takes the load down; repair time is the availability"
+    ],
+    [
+     "**99.99%** ('four nines')",
+     "52.6 minutes",
+     "{{N+1}} redundancy on major equipment",
+     "Any one unit can fail without loss of load; two failures or a common-mode event still hurt"
+    ],
+    [
+     "**99.995%**",
+     "26.3 minutes",
+     "N+1 or 2N with {{concurrent maintainability}}",
+     "Any one component can be *taken out for maintenance* without dropping load — the Uptime Tier III test — and the forced-outage arithmetic of the generators still closes"
+    ],
+    [
+     "**99.999%** ('five nines')",
+     "5.3 minutes",
+     "2N or 2(N+1), fault tolerant",
+     "Any single failure — including a fault, not just a planned outage — is survived; the {{Uptime tier}} IV standard"
+    ],
+    [
+     "**How the number is built**",
+     "Availability = MTBF ÷ (MTBF + MTTR) per component, combined across the architecture",
+     "Series components multiply down; parallel components multiply up",
+     "A Monte Carlo model draws random failures and repairs over thousands of simulated years and reports how often the campus fell short"
+    ],
+    [
+     "**The catch for islanded plants**",
+     "A gas turbine's forced-outage rate is measured in percent, not parts per million",
+     "Islanded 99.995 percent needs spare units, fuel security and a maintenance plan that never coincides with a forced outage",
+     "'develop robust plans for scheduled maintenance and accommodate forced outage scenarios' — the plan is the product"
+    ]
+   ]
+  },
+  {
+   "id": "nuclear-as-an-engineering-product",
+   "title": "Nuclear as an engineering product: what a licensing package is",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**Two designs, one plant.** An **{{SMR}}** is sold as a *standard plant* — the reactor and the buildings around it, designed once so that regulators can review them once. Each site then needs a *site-specific* design that adapts the standard plant to its soil, seismic conditions, flooding, cooling water and grid connection. Sargent & Lundy does both kinds: 'responsible for GEH's reactor building standard plant design' for the BWRX-300, and 'the detailed design for the site-specific implementation of the BWRX-300 at Clinch River' for TVA.",
+    "**The licensing package.** Before a reactor can be built in the United States it needs a **{{construction permit}}** under 10 CFR Part 50 (or a **{{combined licence}}** under Part 52). The application is a set of documents an architect-engineer writes: an environmental report, a preliminary safety analysis report describing the design and its safety case, and siting studies — geotechnical, seismic, hydrological. Dow and X-energy's four-unit Xe-100 plant at Seadrift filed under Part 50 in March 2025 on Sargent & Lundy's environmental report and safety analysis; the regulator's environmental assessment and finding of no significant impact followed in August 2026, with the safety review expected 'to be completed by year-end'.",
+    "**The regulator inspects the engineer.** Safety-related design work is done under a quality-assurance programme the Nuclear Regulatory Commission audits directly. In July 2025 inspectors sampled Sargent & Lundy's design packages for the Palisades restart (auxiliary feedwater controllers), the BWRX-300 control-rod drive, the Clinch River subsurface investigation and the Dow site's geotechnical work, and found 'No findings of significance'. This is the credential a data-centre owner is actually buying when it hires a nuclear architect-engineer — not a reactor, but a firm the regulator has already examined.",
+    "**Behind-the-meter nuclear, mechanically.** 'Clients connect new electric loads to the station's generation output before a transmission service supplier meters the electricity … The new loads are planned to be metered separately and provide power directly from the generation company, rather than the local transmission provider's system.' In plain terms: a data centre on the plant's side of the meter buys from the generator, not the grid, through land leases and a generator-output interconnection. The engineering is a switchyard, a metering arrangement and a set of protection studies; the argument is regulatory, and it belongs to the utility guides.",
+    "**Self-check:** a hyperscaler's release says it will 'evaluate advanced reactors' for a campus. Which engineering deliverables would you expect to exist before any reactor vendor is chosen? *(An availability model of the campus against candidate reactor outage rates, a site plan showing where a plant and its exclusion zone fit, a siting screen of the ground and the water, and an economic comparison against gas and grid — the 'Confidential Hyperscaler' deliverables in this record.)*"
+   ]
+  },
+  {
+   "id": "two-ways-to-buy-a-plant",
+   "title": "Two ways to buy a plant",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "The delivery method decides which engineer the owner needs and how much risk it keeps. Neither is right in general; the choice depends on how well the owner can define what it wants and how much it is willing to pay someone else to be wrong.",
+   "cards": [
+    {
+     "t": "Turnkey EPC with the contractor's own engineering",
+     "meta": "One contract, one price, one party to blame. The EPC's engineer is the engineer of record; the owner still needs an owner's engineer to review it.",
+     "adv": [
+      "Single point of responsibility for cost, schedule and performance — backed by {{liquidated damages}}",
+      "A {{lump sum}} the owner can finance against; lenders like a wrapped price",
+      "Fastest procurement — the contractor buys long-lead equipment early on its own account",
+      "The contractor's engineering knows its own construction methods"
+     ],
+     "dis": [
+      "The price carries a risk premium for everything the contractor cannot see at award",
+      "Every gap in the specification becomes a {{change order}} priced by the party that found it",
+      "The engineer of record works for the contractor — the owner learns about design trade-offs after they are made",
+      "Few contractors will wrap first-of-a-kind technology at any price"
+     ]
+    },
+    {
+     "t": "Multi-contract with an owner's engineer",
+     "meta": "The owner buys engineering, major equipment and construction separately and integrates them — the model Sargent & Lundy's 'multi-contracting, design-build, or … EPC-owner's engineer' list describes.",
+     "adv": [
+      "The owner controls the specification and sees every design decision as it is made",
+      "No contractor risk premium on the whole project; equipment is bought at the OEM's price",
+      "Works for technology no EPC will wrap — nuclear, novel storage, hybrid campuses",
+      "The owner's engineer's fee is 'a small fraction of total project cost'"
+     ],
+     "dis": [
+      "Interface risk sits with the owner: if the transformer and the switchgear do not fit, nobody else pays",
+      "Harder to finance — lenders want a wrap and will demand an IE to compensate",
+      "Needs an owner with the staff, or the engineer, to run a programme rather than sign a contract",
+      "Schedule risk is the owner's; the EPC's incentive to hit a date is gone"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-megawatt-ladder",
+   "title": "The ladder of named power scopes, in megawatts",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "nameplate megawatts of the named project (owner's engineer, independent engineer or engineer-of-record scope; storage shown as MW with MWh in the note)",
+   "intro": "Every rung is a project the firm names on its own channels or a client names. Read it as the range of things one engineering firm is asked to judge — from an 18 MW battery to a 500 kV switchyard aggregating 2.7 GW.",
+   "items": [
+    {
+     "label": "PJM frequency-response BESS, Pennsylvania",
+     "sub": "18 MW; three 6 MW enclosures behind a new 115 kV substation — design (2015)",
+     "v": 18
+    },
+    {
+     "label": "South Tampa Resiliency Project (Tampa Electric)",
+     "sub": "72 MW; four Wärtsilä 18V50SG engines, islanding-capable — conceptual engineering and EpCM",
+     "v": 72
+    },
+    {
+     "label": "McIntosh reciprocating engines (Lakeland Electric)",
+     "sub": "120 MW; six MAN 18V51/60G, hydrogen-blend capable — EpCM",
+     "v": 120
+    },
+    {
+     "label": "Archtop solar (Earthrise Energy)",
+     "sub": "270 MW on a gas peaker's existing interconnection — owner's engineer",
+     "v": 270
+    },
+    {
+     "label": "Eleven Mile Solar Center (Ørsted)",
+     "sub": "300 MW PV + 300 MW / 1,200 MWh BESS — owner's engineer",
+     "v": 300
+    },
+    {
+     "label": "Long Mott Xe-100 plant (Dow / X-energy)",
+     "sub": "320 MW, four units — siting, environmental report, PSAR",
+     "v": 320
+    },
+    {
+     "label": "UAE first BESS IPP (EWEC)",
+     "sub": "400 MW / up to 800 MWh — buyer's technical adviser",
+     "v": 400
+    },
+    {
+     "label": "Big Bend modernisation (Tampa Electric)",
+     "sub": "1,090 MW; two GE 7HA.02 — detailed engineering to commissioning oversight",
+     "v": 1090
+    },
+    {
+     "label": "Orange County Advanced Power Station (Entergy Texas)",
+     "sub": "1,215 MW; two Mitsubishi M501JAC, hydrogen-capable — engineer of record in EPC consortium",
+     "v": 1215
+    },
+    {
+     "label": "Cielo Azul 500 kV switchyard (Lotus Infrastructure)",
+     "sub": "Interconnects 2,700 MW of solar and storage — engineer of record",
+     "v": 2700
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "8 min",
+   "ps": [
+    "**The owner's engineer that also wants the EPC.** The advocacy dies the moment the reviewer might bid the job. The protection is contractual and old — 'a provision that precludes the owner's engineer from bidding on any related EPC contract' — and it is the first clause to check in an engineering proposal.",
+    "**The gap between the owner's engineer and the independent engineer.** Each may assume the other checked the interconnection agreement, the warranty conditions or the augmentation layout. Two engineers on the same project is not twice the coverage; it is two scopes with a seam, and the seam is where the lender's surprise lives. The fix is a scope matrix both firms sign.",
+    "**Design reviews under schedule pressure.** A 60 percent review with two weeks to turn comments becomes a rubber stamp. The tell is a review log with no rejected items. A 30 percent comment that is deferred to 60 percent has doubled in cost; deferred to 90 percent it becomes a field change.",
+    "**The or-equal that is not.** A {{submittal}} offers an equivalent product; the reviewer approves it against the specification's headline ratings; the difference — a different fault rating, a different footprint, a different control interface — surfaces at site. 'It is the clause by which a second and third vendor get into a bid — and the clause all three of them argue about.'",
+    "**Factory test witnessed, site test assumed.** The factory acceptance test proves the machine in the shop; only the {{site acceptance test}} and the integrated test prove the installation. A programme that budgets travel for the first and none for the second has proven half the plant.",
+    "**The mock study that assumed today's grid.** A point of interconnection chosen on public network data can lose its headroom to another applicant, a retirement or a utility upgrade before the real study is done. 'Interconnection rights replacement studies' exist because this happens; the owner's engineer's job is to have a second site.",
+    "**Queue arbitrage that trips the rules.** Reusing a retired peaker's interconnection, converting a wind queue position to solar or to gas — each is legitimate and each must be shown to be 'equal or better' to the grid operator under the material-modification rules. A conversion argued badly loses the queue position it was meant to save.",
+    "**Standards described rather than named.** A firm whose material says fire protection 'must be verified to be in accordance with local and national standards' without naming NFPA 855 or UL 9540A may know them intimately — its people sit on the committees — or may be leaving the reader to assume. The reader should ask which edition, and who on the team has applied it.",
+    "**Confidentiality that hides the track record.** Every data-centre client in this firm's record is 'Confidential Hyperscaler' or 'Confidential Colocater'. That is normal for the sector and it is also the reason a buyer cannot verify the résumé; references, not releases, are the check."
+   ]
+  },
+  {
+   "id": "where-sargent-lundy-slots-in",
+   "title": "Where Sargent & Lundy slots into the chain",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The seats an engineering firm can hold on one project, with the firm's published instance of each. The right-hand column is what the reader should take from the row.",
+   "cols": [
+    "Seat",
+    "The firm's instance",
+    "Evidence",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "**Owner's engineer, storage and renewables**",
+     "Ørsted's Eleven Mile: specification, design reviews, PPA and permitting reviews; Earthrise's Archtop",
+     "Project sheets; 2025 release",
+     "'over 5 GW of solar PV projects in the role of owner's engineer'; 'nearly 25 gigawatts' OE plus IE in clean energy"
+    ],
+    [
+     "**Buyer's technical adviser**",
+     "EWEC's 400 MW / 800 MWh tender: use case, specification, 'a new energy storage agreement'",
+     "2024 release",
+     "The engineer writes the requirements the bidders' IEs will later test"
+    ],
+    [
+     "**Independent engineer**",
+     "Leeward's Big Plain and Oak Trail (debt and tax equity); Ten West Link 500 kV; EVgo's USD 1.05 billion DOE loan guarantee; Macquarie's USD 2.4 billion Dow acquisition",
+     "Project sheets; 2024–2025 releases",
+     "'one of the few tax-equity accepted independent engineers for BESS projects' — the lender-side seat the DNV guide teaches"
+    ],
+    [
+     "**Engineer of record**",
+     "Entergy Texas' 1,215 MW Orange County station (with Mitsubishi Power and TIC); Cielo Azul 500 kV",
+     "POWER 2023; project sheet",
+     "Design responsibility inside a consortium — the constructor carries the lump sum"
+    ],
+    [
+     "**Campus power engineer**",
+     "Confidential hyperscalers and colocation operators: islanded 99.995 percent gas plant, off-grid supply study, nuclear feasibility, substation design in PJM, ERCOT, SPP and WECC",
+     "Data Center Projects sheet",
+     "Real and unnamed — the pattern for a fee-for-service engineer whose clients do the announcing"
+    ],
+    [
+     "**Nuclear architect-engineer**",
+     "BWRX-300 standard plant (GE Hitachi); Clinch River site-specific design (TVA); Long Mott licensing (Dow / X-energy); Palisades restart packages",
+     "World Nuclear News 2025; NRC inspection 2025",
+     "The credential a hyperscaler evaluating a reactor is buying"
+    ],
+    [
+     "**Grid and interconnection consultant**",
+     "Mock system-impact studies; large-load applications; FERC Order 845 conversions; NERC Large Loads Task Force seat",
+     "Service pages; white papers",
+     "Sells time in a market where energisation date is the scarce input"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Name the three engineers on a large power project and whose interest each serves.",
+     "a": "The owner's engineer (the owner's advocate), the independent engineer (the lender's verifier) and the EPC contractor's engineer of record (the contractor's deliverer)."
+    },
+    {
+     "q": "Why must the owner's engineer be barred from bidding the EPC?",
+     "a": "Because a reviewer who might win the construction contract cannot advocate against the contractor's interest; the standard protection is a contract clause precluding the OE from bidding any related EPC."
+    },
+    {
+     "q": "What contract form does an owner's engineer work under, and what risk does it carry?",
+     "a": "A professional-services agreement — hourly or lump-sum fee, a small fraction of project cost. It carries capped professional liability; cost overruns and performance shortfalls sit with the EPC under its lump-sum or turnkey contract."
+    },
+    {
+     "q": "What question does a 30 percent design review ask, and what does a 90 percent review ask?",
+     "a": "30 percent: does the architecture — layout, single-line, major equipment — meet the functional requirements and the interconnection? 90 percent: is it constructible and coordinated, and do the test procedures prove the guarantees? Concept errors found at 90 percent are field changes."
+    },
+    {
+     "q": "What is a submittal and why does its approval matter more than the purchase order?",
+     "a": "The vendor's drawings, ratings and test reports sent for the engineer's approval after award. Approval, not the purchase order, is usually what releases the factory slot — and it is where an 'or-equal' that is not equal gets through."
+    },
+    {
+     "q": "Why does an engineer-owned firm take EPC scope only in a consortium?",
+     "a": "It has no external balance sheet to absorb a lump-sum overrun; the constructor partner builds and carries the construction risk while the engineer designs and manages."
+    },
+    {
+     "q": "What is a mock system-impact study for?",
+     "a": "To run the utility's own kind of power-flow, contingency and short-circuit analysis on candidate points of interconnection before filing, so the application goes to a site the engineer already believes will pass, and to estimate network-upgrade costs early."
+    },
+    {
+     "q": "Convert 99.995 percent availability into downtime per year, and name the architectural property it usually implies.",
+     "a": "About 26 minutes a year. It usually implies N+1 or 2N with concurrent maintainability — any component can be taken out for planned work without dropping load."
+    },
+    {
+     "q": "How is availability built from MTBF and MTTR?",
+     "a": "Per component, availability = MTBF ÷ (MTBF + MTTR); series components multiply it down, parallel ones multiply it up; a Monte Carlo model draws random failures and repairs over thousands of simulated years to see how often the system falls short."
+    },
+    {
+     "q": "What is the difference between a standard plant and a site-specific design for an SMR?",
+     "a": "The standard plant is the reactor and its buildings designed once for regulators to review once; the site-specific design adapts it to a site's soil, seismic, flooding, cooling water and grid connection."
+    },
+    {
+     "q": "What documents make up a Part 50 construction permit application?",
+     "a": "An environmental report, a preliminary safety analysis report describing the design and its safety case, and siting studies — geotechnical, seismic, hydrological — written by an architect-engineer."
+    },
+    {
+     "q": "Why does a factory acceptance test not prove a plant?",
+     "a": "It proves the machine in the shop under simulated conditions; only the site acceptance test and the integrated systems test prove the installation, energised and in its final configuration."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "An EPC contractor offers to provide the owner's engineering 'at no additional cost'. The best response is:",
+     "c": [
+      "Accept — it saves a fee on a service the EPC already performs",
+      "Decline — an engineer paid by the contractor to review the contractor is the contractor's engineer under another name",
+      "Accept if the EPC's engineer is licensed in the state",
+      "Accept but require monthly reports"
+     ],
+     "a": 1,
+     "why": "The owner's engineer exists to advocate for the owner against the contractor's interest; competence does not restore advocacy that the payment relationship has removed."
+    },
+    {
+     "q": "A concept-level objection — the plant should be on the other side of the substation — is first raised at the 90 percent review. What has it become?",
+     "c": [
+      "A design comment to be resolved before IFC",
+      "A change order or a field change, because layout and major equipment were committed at 30 percent",
+      "Irrelevant, since the EPC owns the design",
+      "A warranty issue"
+     ],
+     "a": 1,
+     "why": "Each review stage asks a different question; arguing the architecture after the 30 percent package is priced by the contractor as a change, and after procurement as a field change."
+    },
+    {
+     "q": "An engineer-owned architect-engineer proposes to deliver a 400 MW plant 'as EPC'. The question that matters most is:",
+     "c": [
+      "Which software the engineers use",
+      "Who the constructor partner is and whose balance sheet backs the lump sum",
+      "How many PEs are on staff",
+      "Whether the firm is ENR-ranked"
+     ],
+     "a": 1,
+     "why": "A fee-based firm owned by its engineers has no external capital to absorb an overrun; every such EPC credit in this record is a consortium or joint venture with a constructor carrying the construction risk."
+    },
+    {
+     "q": "A data-centre developer wants to file a large-load application next month. The owner's engineer's first deliverable should be:",
+     "c": [
+      "The building architecture",
+      "A mock system-impact study ranking candidate points of interconnection by capacity and upgrade cost",
+      "The tenant lease",
+      "A cooling specification"
+     ],
+     "a": 1,
+     "why": "The application's megawatts and its site are the product of the interconnection analysis; filing before it means waiting for the utility's study to say no."
+    },
+    {
+     "q": "An islanded gas plant is specified to 99.995 percent availability. Which statement is correct?",
+     "c": [
+      "About 5 minutes of downtime a year; single-path design suffices",
+      "About 26 minutes a year; the design needs redundancy, concurrent maintainability, and a maintenance plan that never coincides with a forced outage",
+      "About 8.8 hours a year; N+1 is more than enough",
+      "Availability cannot be computed for islanded plants"
+     ],
+     "a": 1,
+     "why": "99.995 percent of a year leaves 26.3 minutes. Gas-turbine forced-outage rates are measured in percent, so the arithmetic closes only with spare units and planning."
+    },
+    {
+     "q": "Why does a hyperscaler evaluating a reactor hire a nuclear architect-engineer before choosing a vendor?",
+     "c": [
+      "Because the architect-engineer sells reactors",
+      "Because it needs a campus availability model, a site plan with exclusion zone, a siting screen and an economic comparison — deliverables that exist before any vendor is chosen",
+      "Because the NRC requires it",
+      "Because reactors are cheaper than gas turbines"
+     ],
+     "a": 1,
+     "why": "The 'Confidential Hyperscaler' engagement in this record is exactly that set of deliverables; the vendor choice comes after the site and the availability case are understood."
+    },
+    {
+     "q": "Two firms are engaged — an owner's engineer and an independent engineer — and neither reviewed the augmentation layout. What went wrong?",
+     "c": [
+      "The lender should have hired a third engineer",
+      "Each assumed the other had it; the scopes had a seam and nobody signed a scope matrix",
+      "Augmentation is not an engineering matter",
+      "The EPC should have reviewed it"
+     ],
+     "a": 1,
+     "why": "Two engineers is two scopes, not twice the coverage. The fix is a scope matrix both sign so every item has an owner."
+    },
+    {
+     "q": "A firm's brochure says fire protection 'must be verified in accordance with local and national standards' without naming them. The right inference is:",
+     "c": [
+      "The firm does not know the standards",
+      "Nothing yet — ask which edition of NFPA 855 and UL 9540A, and who on the team has applied them",
+      "The standards do not apply to storage",
+      "The firm is exempt because its staff sit on committees"
+     ],
+     "a": 1,
+     "why": "House style can describe capability without citing rules, and this firm's people do sit on the committees; the reader's job is to ask, not to assume in either direction."
+    }
+   ]
+  }
+ ]
+}

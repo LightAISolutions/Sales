@@ -75,6 +75,8 @@ Twenty-nine companies, **up to three per session, dossier + study guide each**, 
 | B-I | B10 | **MGX** · **DNV** · **Sargent & Lundy** | investor · advisor · advisor | Stargate and Aligned money (10 dossiers); the two independent engineers G10 names — first entries in the `investor` and `advisor` categories |
 | B-L | B10 | **CoolIT** · **X-energy** | supplier | Fold into B10 or run as B11: the CDU specialist for G7 and Amazon's SMR partner for G8 |
 
+**Regrouping (2026-09-04, recorded by session F1 at v04.58r).** The Phase B remainder was regrouped in chat on 2026-09-04 (v04.56r session) into eight Fable 5.1 High sessions **F1–F8**, ordered so the register closers and the most opaque subjects run first: **F1** DNV · Sargent & Lundy · CoolIT (closes G10 and G7; first `advisor` chip) · **F2** Fluidstack · Nscale · Anthropic · **F3** Aypa · Spearmint · Intersect · **F4** Invenergy · Gridstor · Available Power · **F5** esVolta · Strata · Hunt · **F6** MGX · Excelsior Energy Capital · X-energy (first `investor` chips; Excelsior moved here from B6, and B10 was split — MGX and X-energy moved to F6, DNV, Sargent & Lundy and CoolIT became F1) · **F7** Compass · EdgeCore · PowerHouse · **F8** Fermi America · Tract · Prime Data Centers. The B-group table above is kept as the original grouping; the §8 `Group` column records `B10 → F1` for the three rows F1 landed.
+
 **Why these are Fable and not Opus.** Every company in Phase B is private, unit-level, or (for the utilities) public but regulatory-dense. The dossier's value is the strategy read and the confidence-tagged judgments, which is exactly the layer where the research subagents cannot help and the authoring model can.
 
 ---
@@ -183,9 +185,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | B9 | `nscale` | Nscale | neocloud | Fable 5.1 High | AIDC developers | — | — |
 | B9 | `anthropic` | Anthropic | hyperscaler | Fable 5.1 High | AIDC developers | — | — |
 | B10 | `mgx` | MGX | investor | Fable 5.1 High | ecosystem | — | — |
-| B10 | `dnv` | DNV | advisor | Fable 5.1 High | G10 | — | — |
-| B10 | `sargent-lundy` | Sargent & Lundy | advisor | Fable 5.1 High | G10 | — | — |
-| B10 | `coolit` | CoolIT Systems | supplier | Fable 5.1 High | G7 | — | — |
+| B10 → F1 | `dnv` | DNV | advisor | Fable 5.1 High | G10 | v1 · v04.58r | ✓ · v04.58r |
+| B10 → F1 | `sargent-lundy` | Sargent & Lundy | advisor | Fable 5.1 High | G10 | v1 · v04.58r | ✓ · v04.58r |
+| B10 → F1 | `coolit` | CoolIT Systems | supplier | Fable 5.1 High | G7 | v1 · v04.58r | ✓ · v04.58r |
 | B10 | `x-energy` | X-energy | supplier | Fable 5.1 High | G8 | — | — |
 | C1 | `cummins` | Cummins | supplier | Opus 5 xhigh | G2 | v1 · v04.47r | ✓ · v04.47r |
 | C1 | `rolls-royce-power-systems` | Rolls-Royce Power Systems (mtu) | supplier | Opus 5 xhigh | G2 | v1 · v04.47r | ✓ · v04.47r |
