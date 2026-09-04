@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-04 07:29 PM EST
+**Repo version:** v04.58r (bumped this session on the F1 push commit `1c3a3cc`; this entry is the housekeeping commit `Remember session context`)
+**Branch:** `claude/fable-phase-b-f1-5mj1xg` (the v04.58r push merged and the branch was swept; rebased onto `origin/main` at `3e806ee` before this commit)
+**Model:** Fable 5.1 High — Phase B session F1 (DNV · Sargent & Lundy · CoolIT).
+
+### What was done
+
+- **Three dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** `dnv` and `sargent-lundy` are the registry's first two `advisor`-category entries (the roster's Advisor chip now shows 2 and filters to them — Playwright-verified with a screenshot); `coolit` under `supplier`. Sources 101 / 158 / 151 (first-party 32 / 71 / 65 percent); relationships 10 / 16 / 3, all resolving; 28 headshots; 28 shared concepts registered (8 project-finance terms from the IE guides, 20 CDU terms). Registry sync, graph rebuild (745 edges) and the study checker all clean; three quarterly calendar rows.
+- **Premise corrections recorded in the CoolIT dossier, not smoothed:** Ecolab-owned since 2026-07-02 (about USD 4.75bn; KKR + Mubadala only May 2023 → July 2026); Asetek v. CoolIT ended in the 2022-09-11 summary judgment and a settlement, no jury verdict; the Federal Circuit revived CoolIT's '567 patent 2024-03-07. Sargent & Lundy is not an ESOP ("privately owned and led by engineers").
+- **Register:** G7 → **Closed** v04.58r (CDU-specialist half landed; Trane holds the chiller half). G10 → **Partial** v04.58r — two IE dossiers satisfy the independent-engineer half and give `what-bankable-means` public corroboration, but no broker or insurer dossier exists, so the insurance half is still open and the row says so. §8 rows flipped to `B10 → F1 … v1 · v04.58r | ✓ · v04.58r`; §4 carries the dated F1–F8 regrouping paragraph.
+- **Wrote the paste-ready F2 prompt** (Fluidstack · Nscale · Anthropic) in chat at ~07:29 PM EST — same structure as F1, with this session's two lessons added to its ENVIRONMENT block.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean after this commit. F2–F8 remain on Fable 5.1 High; the G6 guidance module (Opus 5 xhigh), Phase C C4–C10 + C12, 26 guide backfills and Phase D are unchanged.
+
+### Key decisions and findings
+
+- **Verify every source URL against the research reports before assembly.** One URL was fabricated mid-assembly (an AEP centenary page for Sargent & Lundy that no report contained); caught before commit by grepping the reports, then the CoolIT assembly asserted every URL programmatically. Future sessions: build the sources list from a URL index extracted from the agent reports, never from memory of a quote.
+- **Ownership and litigation premises in a commissioning brief are dated facts — re-check them first.** The F1 brief said "KKR-owned since 2023" and implied an Asetek jury verdict; both were stale. Put the ownership and litigation questions in the agent prompts explicitly, as F1 did, and record corrections in the dossier's summary and judgments.
+- **`party` field and parent domains:** for a subsidiary, the parent's domain goes into registry `domains` (schema rule), so Ecolab's releases count as first-party for CoolIT. DNV's annual report read from a mirror host carries `party: "company"`; title-only citations of unreadable pages are stated as a collection gap in the dossier rather than dropped.
+- **Concept collisions:** the registry already had `approach` (tower/chiller sense) — `approach-temperature` was registered with only the "approach temperature differential" alias. `direct-to-chip cooling` is an alias of `cold-plate`; `direct-liquid-cooling` carries `DLC` only. Check aliases before registering.
+- **JSON formatting:** `profiler-concepts.json` and `profiler-refresh-calendar.json` are two-space indented; a one-space dump produced a 10,000-line diff and was re-serialised before commit.
+- **Environment re-confirmed:** dnv.com is Cloudflare-blocked (403 on every page) and annualreport.dnv.com egress-denied — mirror hosts (IIOA for the annual report, ASHB for RP-0043) worked; tool output above ~30 KB is persisted to a file, so read reports in ≤40-line chunks; foreground `sleep` is blocked — use the Monitor tool to wait on agent report files; a stop hook fires on uncommitted plan edits while agents run — `git stash` them and pop before the commit. Threaded HTTP server + roles stub + `/opt/pw-browsers/chromium-*` still the working Playwright recipe (`f1-render-check.py` pattern: roster chip click, per-slug tabs, sources count, `{{}}` and gd-term resolution).
+- **Time:** F1 took 1h 34m against a 45m estimate — six agent reports totalling ~2,000 lines, a context compaction, and dossiers averaging 137 sources. Estimate F2 at ~90 minutes.
+
+### Active context
+
+- Branch `claude/fable-phase-b-f1-5mj1xg`; repo version **v04.58r**; CHANGELOG 75/100.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders.
+- Registry 112 companies (2 advisor); concepts 638; calendar 73 rows; execs 376 images across 68 companies.
+
+### Recommendation for next session
+
+- **Run F2 (Fluidstack · Nscale · Anthropic) as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at ~07:29 PM EST** — three dossiers + three guides, first hyperscaler-category AI lab authored on Fable, neocloud guides that must not repeat CoreWeave / Nebius / Lambda, §8 rows flipped, one push commit.
+**To continue:** type `run F2 on Fable 5.1 High`
+
+## Previous Sessions
+
 **Date:** 2026-09-04 05:40 PM EST
 **Repo version:** v04.57r (bumped this session on the head-to-head push commit `14d6411`; this entry is the housekeeping commit `Remember session context`)
 **Branch:** `claude/fable-5-1-xcel-energy-comparison-fhxyhe` (the v04.57r push merged and the branch was swept; rebased onto `origin/main` at `0048387` before this commit)
@@ -40,41 +80,5 @@ Nothing is in flight. Working tree clean after this commit. The Fable window ope
 
 - **Run F1 (DNV · Sargent & Lundy · CoolIT) as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at 05:40 PM EST** — three dossiers + three guides, first `advisor` chip with a Playwright check, G7/G10 re-checked and flipped in-session, the §4 regrouping line, one push commit.
 **To continue:** type `run F1 on Fable 5.1 High`
-
-## Previous Sessions
-
-**Date:** 2026-09-04 04:28 PM EST
-**Repo version:** v04.56r (no bump — this session made no code or data change; one housekeeping commit `Remember session context`)
-**Branch:** `claude/profiler-coverage-phase-b-3jimh8`
-**Model:** Fable 5.1 (this session), used only for planning — no dossier, guide or module was authored, so no §8 row and no §2 note changed.
-
-### What was done
-
-- **Audited `PROFILER-COVERAGE-PLAN.md` §8 against the filesystem.** Every row matches the files on `main`: 20 of 65 new companies landed (A1–A4 · B1–B2 · C1, C2, C3, C11), 4 of 30 guide passes (Vertiv, Schneider, Siemens Energy revisions + the Narada backfill). Register §6: G2, G3, G4, G5, G8, G9 closed; G7 Partial (CoolIT); G10 Open (DNV, S&L); G6 Open (guidance module); G11/G12 standing.
-- **Recommended a Fable-first action plan** (in chat, 04:20 PM EST): no Fable xhigh work remains; the Phase B remainder (24 companies) runs on Fable 5.1 High as eight sessions **F1–F8**, reordered so register closers and the most opaque subjects go first — F1 DNV · Sargent & Lundy · CoolIT (closes G10 + G7, first `advisor` chip, re-check and flip both rows in-session) · F2 Fluidstack · Nscale · Anthropic · F3 Aypa · Spearmint · Intersect · F4 Invenergy · Gridstor · Available Power · F5 esVolta · Strata · Hunt · F6 MGX · Excelsior Energy Capital · X-energy (first `investor` chips; Excelsior moved here from B6, B10 split in two) · F7 Compass · EdgeCore · PowerHouse · F8 Fermi America · Tract · Prime Data Centers · **F9** the Xcel head-to-head (the active reminder) as the leftover-credit filler. Opus 5 xhigh afterwards: G6 module first, then C4–C10, C12, the 26 backfills, then Phase D. **§8 and §4 were NOT edited** — the regrouping is a chat recommendation; the F1 session should note it in §4 when it flips its rows.
-- **Wrote the paste-ready prompt for the Xcel head-to-head** (in chat, this turn) — Fable 5.1 High, dossier-only, written blind to the Opus version, reported by section with every difference classed *same-fact-different-treatment* vs *search luck*, verdict into §2's confidence note, §8 `xcel-energy` row flipped, reminder moved to Completed (developer authorised the completion by commissioning the session on 2026-09-04).
-
-### Where we left off
-
-Nothing is in flight. Working tree clean, branch at `origin/main` plus this commit. The developer's Fable window (~14 h from 04:19 PM EST 2026-09-04) is open and unspent; the intended order is the Xcel head-to-head first (developer's choice, ahead of F1), then F1–F8.
-
-### Key decisions and findings
-
-- **Baseline facts for the head-to-head, verified this session:** `xcel-energy.profile.json` on `main` is byte-identical to commit `2652d30` (v04.46r), profileVersion 1, schema 7, 101 sources, 6 relationships, 13 decision makers, 7 strategyRead judgments; **never archived** (no `archive/xcel-energy.*` entry), so the Fable re-run is a normal revision — v1 goes to `archive/xcel-energy.profile.v1.json` with an archive-index entry and the new file is profileVersion 2. `xcel-energy.study.json` stays untouched — the comparison is dossier-only.
-- **Write-blind rule (added to the prompt, not in the reminder):** the Fable session must not open the Opus dossier until its own v2 is written, or the comparison measures editing rather than authoring.
-- **The head-to-head verdict has a consequence beyond the reminder:** if Fable High is materially better on the (a)-class evidence, Oncor and AEP (the other two B2 Opus substitutions) become Fable make-good candidates; if not, §2 can send the rest of Phase B to Opus without regret.
-- CHANGELOG counter 73/100 — no archive rotation due during the remaining program.
-
-### Active context
-
-- Branch `claude/profiler-coverage-phase-b-3jimh8`; repo version **v04.56r**.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md` still carries the one active reminder (Xcel head-to-head) — it is the spec for the next session and is closed by that session, not this one.
-- Still owed elsewhere: G6 guidance module (Opus 5 xhigh), Phase B F1–F8, Phase C C4–C10 + C12, 26 guide backfills, Phase D.
-
-### Recommendation for next session
-
-- **Run the Xcel Energy head-to-head as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at 04:26 PM EST** (spec: the active reminder in `REMINDERS.md`; baseline commit `2652d30`; archive v1, write v2 blind, report by section, weight same-fact-different-treatment differences only, verdict into §2's confidence note, flip the §8 `xcel-energy` row, move the reminder to Completed). Then proceed to F1 (DNV · Sargent & Lundy · CoolIT) with the F1 prompt from the same chat.
-**To continue:** type `run the Xcel Energy head-to-head on Fable 5.1 High`
 
 Developed by: LightAISolutions
