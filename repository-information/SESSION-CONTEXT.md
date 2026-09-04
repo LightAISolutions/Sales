@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-04 03:19 PM EST
+**Repo version:** v04.54r (started at v04.51r — **three** push commits this session: `966da36` v04.52r, `2eeccde` v04.53r, `2d5ff01` v04.54r, plus this context write)
+**Branch:** `claude/phase-c11-profiler-coverage-49yg1c`
+**Model:** **Opus 5 xhigh — §2 assigns Phase C to Opus natively, so there is NO substitution to record.** The three C11 rows in §8 read plain `Opus 5 xhigh`
+
+### What was done
+
+- **Phase C11 (v04.52r)** — `oklo`, `trane-technologies` and `mccarthy`: three schema-v7 dossiers at profileVersion 1, three schema-v2 study guides, 145 net new shared concepts (465 → 610), 18 relationship backfills with archival, 20 exec headshots, three lesson plans, three calendar rows, README tree entries and the three §8 rows flipped. Verified with `sync-profiler-registry.py --check` (0 of 109 out of sync), `check-profiler-study.py` (0 errors / 0 warnings, 83 guides, 610 concepts), `build-profiler-graph.py` (706 edges, 534 curated) and Playwright across all three plus a control slug with zero page errors and zero unresolved `{{term}}` markers.
+- **§6 bookkeeping, first pass (v04.53r)** — **G8 closed** and **G7 moved to Partial**, both dated `v04.52r`, plus a "Targeted re-run of G7 and G8" paragraph in the v04.51r form.
+- **§6 full re-run (v04.54r)** — the re-run the register said was owed at the close of Phase B, run one phase late. Writing an honest standings note meant re-checking every row first, and **that found two rows sitting at Partial after the work that closes them had already landed**: **G2 closed** (the corpus holds all four gen-set OEMs — `caterpillar`, `cummins`, `rolls-royce-power-systems` and `rehlko`, Rehlko being the carved-out Kohler Energy business, against an ask of two of four) and **G5 closed, over-satisfied** (six `utility` dossiers with guides against an ask of four). G4, G6 and G10 re-checked and dated unchanged. A **Standings block** was inserted directly under the table, ahead of the four dated re-check paragraphs, sorting what is left by **scheduled** (G7, G10 — both coverage-plan §8 row B10) versus **structural** (G4, G6 — no ledger row can produce them).
+
+### Where we left off
+
+All three commits are pushed and merged; the working tree is clean and the branch is at `origin/main`. The register now stands at **six closed** (G1, G2, G3, G5, G8, G9), **two Partial** (G4, G7), **two Open** (G6, G10), **two standing judgments** (G11, G12). The developer asked for a paste-ready commissioning prompt for the **G4 guidance module**, which was delivered in chat this turn and is reproduced in the recommendation below.
+
+### Key decisions and findings
+
+- **The recommendation to "rewrite the stale commission-first paragraph" was deliberately not followed.** That paragraph is a dated record in an append-only trail; rewriting it would have made §6 lie about its own history. The real problem was the **order** a top-down reader met things in, so current standings were inserted **above** the trail and all four historical paragraphs were left untouched.
+- **The register's staleness is a structural failure mode, not a one-off.** G2 and G5 sat wrong for four and five repo versions because their own text named the sessions that would close them and nobody re-ran the check afterwards. Nothing in the repo fires that check automatically.
+- **A prior session's assumption about G4 was wrong and is corrected here.** The v04.51r entry said G4's module "needs a source document from the developer". It does not: **five of the seven existing guidance modules have no ingested source at all** — only `nvidia-800vdc-white-paper-2026-08.pdf` and the EO 14420 HTML/txt exist under `industry-guidance/sources/`. The other five are teaching syntheses that declare provenance in a `**Provenance:**` line (see `power-infrastructure-aidc-analysis.md`). A G4 session can be commissioned today with no upload.
+- **G10 was deliberately left Open on a judgment call.** `black-veatch` is covered but as an EPC, and the row names it among the independent engineers; whether an EPC dossier can occupy the IE seat is the developer's call, not a re-check's.
+- **`powell-industries`, not `powell`.** An early probe on the short slug returned a false negative that would have contradicted G4's v04.51r text.
+- Six curly apostrophes written earlier in the session were normalised to straight, matching the file's 84-to-0 convention.
+
+### Active context
+
+- Branch `claude/phase-c11-profiler-coverage-49yg1c`; repo version **v04.54r**; CHANGELOG counter **71/100**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- Registry at **109 companies**, concepts at **610**, study guides at **83**, graph at **706 edges**.
+- `REMINDERS.md` still carries one active reminder: the **Fable 5.1 High vs Opus 5 xhigh head-to-head on the Xcel Energy dossier** (baseline is `xcel-energy.profile.json` at `v04.46r`, commit `2652d30`).
+- Still owed elsewhere: Fable session **B10** (`coolit` closes G7, `dnv`/`sargent-lundy` close G10, plus `mgx`, `x-energy`), and a guidance session for **G6** ("Interconnection for large loads").
+
+### Recommendation for next session
+
+- **Commission the G4 guidance module — "The grid-equipment shortage: GOES, bushings, test bays, lead times" — as a fresh Opus 5 xhigh session.** It is the top of the register's own restated list, it is the only remaining gap whose public sources are already in the corpus (the Siemens Energy Grid Technologies spine, `powell-industries`, plus `hitachi-energy`, `ge-vernova`, `abb`, `mitsubishi-electric`), and no scheduled Profiler session will ever close it. The full paste-ready prompt was written out in chat on 2026-09-04 at 03:19 PM EST; re-derive it from `.claude/rules/industry-guidance.md` steps 1–10 if it is not to hand. **The session must also flip §6's G4 row to Closed with a dated re-check AND update the Standings block in the same commit** — that block names G4 and G6 as the two structural rows and goes stale the moment the module lands, which is precisely the failure this session spent a commit repairing.
+**To continue:** type `commission the G4 grid-equipment-shortage guidance module on Opus 5 xhigh`
+
+## Previous Sessions
+
+
 **Date:** 2026-09-04 04:40 AM EST
 **Repo version:** v04.51r (started at v04.50r — one push commit, `4a371aa`, plus this context write)
 **Branch:** `claude/section8-guide-revisions-opus5-7y6n3p`
@@ -53,64 +93,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - **Run C11 — Oklo, Trane Technologies and McCarthy — as one Opus 5 xhigh dossier session.** It is the only remaining Opus session that closes a register row: Oklo closes **G8** outright if its guide teaches what is genuinely new about an SMR as engineering (factory fabrication vs site construction, HALEU, the licensing path as the schedule, load-following, build-own-operate) rather than telling a company story, and Trane delivers the chiller half of **G7** — whose CDU half is CoolIT in Fable session **B10**, so G7 cannot close this session and the report at the end should say so plainly. After C11, every register row Opus can close is closed, and the remaining blockers are Fable's B10 (G7, G10) and a **guidance session** for G4's grid-equipment-shortage module, which needs a source document from the developer.
 **To continue:** type `run Phase C11 on Opus 5 xhigh`
-
-## Previous Sessions
-
-**Date:** 2026-09-04 03:30 AM EST
-**Repo version:** v04.50r (started at v04.49r — one push commit, `5ff34d9`, plus this context write)
-**Branch:** `claude/phase-c3-infineon-flex-wc40ov`
-**Model:** **Opus 5 xhigh — the plan's own assignment for Phase C, so there is NO substitution to record.** The §8 Model column reads plain `Opus 5 xhigh` on both C3 rows
-
-**What we worked on — Phase C3 of `PROFILER-COVERAGE-PLAN.md`, landed as v04.50r in one data-only push, then the deferred Phase-B-vs-Phase-C recommendation and a re-plan of everything that remains:**
-
-- **`infineon.profile.json`** — 77 sources at 53% first-party, 9 product lines, 6 spec groups, 29 developments, 6 relationships, 5 policy regimes, 10 decision makers (9 headshots), 5 financial periods. Centre of gravity held on data-centre power silicon rather than automotive microcontrollers, as briefed
-- **`flex.profile.json`** — 91 sources at 68% first-party, 7 product lines, 6 spec groups, 28 developments, 13 relationships, 6 policy regimes, 16 decision makers (15 headshots), 4 financial periods. The owned-versus-built-for-others line is held in every figure with a labelling key stated in `financials.commentary`
-- **`infineon.study.json`** (14 sections) teaches **the switch, not the chain**; **`flex.study.json`** (11 sections) teaches **the last hundred metres and the contract**. Each opens with an explicit list of what it does not repeat from Vicor, Megmeet, Delta, LITEON and Zhonhen
-- **49 shared concepts** (352 → **401**); four candidates dropped as alias collisions rather than added
-- **Thirteen dossiers backfilled** with archival and `profileVersion` +1: nvidia, delta-electronics, mitsubishi-electric, vicor, liteon, megmeet, vertiv, eaton, schneider-electric, abb, powell-industries, amazon, google
-- **25 headshots** (304 → **328** images across 62 companies)
-
-**The three findings that would have made the dossiers wrong if missed:**
-
-- **Infineon's Dresden fab OPENED 2026-07-02, about three months AHEAD of schedule** — not under construction. It also **divested its Austin, Texas fab** to SkyWater in FY2025, and the Marvell deal was **automotive Ethernet**, not custom HBM. Infineon **re-segmented on 2026-07-01** (four segments to three), so every ATV/GIP/PSS/CSS series terminates at Q3 FY2026
-- **Flex's board approved spinning off the ENTIRE Cloud and Power Infrastructure segment on 2026-05-05**, targeted Q1 calendar 2027, with the CEO going to the new company — and then agreed a **$4.4bn acquisition of EPC Power on 2026-09-03**, into that segment, weeks before it separates. The dossier describes a structure with roughly two quarters left
-- **The EPS blending trap is live and provable.** Investing.com recorded a 35.01% miss on Infineon's 2025-08-05 print by comparing an IFRS actual (€0.22) against an adjusted consensus (€0.339); TipRanks recorded a beat on the same print by staying on one basis. It was a beat on the adjusted basis and roughly in line on IFRS. **Every `expected` value in the file now comes from the Vara Research consensus Infineon itself commissions, which prints both bases side by side.** Flex has the same trap in GAAP-vs-adjusted form ($2.33 against $3.30 in FY2026)
-
-**Key decisions and positions taken:**
-
-- **No Infineon↔Flex relationship is curated at all.** NVIDIA's 800 VDC roster names them in *different* tiers, which states each party's relationship to NVIDIA and not to each other; both research passes independently searched for a bilateral data-centre link and found none. The only sourced tie is an automotive zone-controller kit. The non-curation is written into both dossiers rather than left silent — as are the ABB / Eaton / GE Vernova / Hitachi Energy / LITEON / Megmeet / Schneider / Vertiv co-membership links, on the same reasoning
-- **`siemens-energy` was deliberately NOT linked from either file.** The switchgear and 800 VDC sources name *Siemens AG*, a separately listed company. Both agents flagged it independently
-- **`tesla` is curated on Infineon as `historical`** with the reason stated — 2018-vintage trade press, and Tesla has since cut SiC content per vehicle by about three quarters
-- **No Flex data-centre revenue figure was derived**, because none exists. The smallest disclosed unit is the CPI segment ($6,614m FY2026), which blends owned product with contract manufacturing; the Cloud and Cooling / Power sub-lines are disclosed only as growth rates
-- **Revathi Advaithi has no headshot.** Flex's leadership page carries her name and bio but no image file and three predictable asset paths 404'd. Recorded in her `background[]` rather than filled from outside the photo policy. Same discipline as `peter-friedrichs` on Infineon, whose asset URL genuinely 403s while all nine siblings returned distinct images (control-tested)
-
-**Environment notes — two corrections to the inherited harness, both needed:**
-
-- **The Playwright harness needs `localStorage.setItem('ov_note_role','admin')` in an `add_init_script`** or the Relationships tab and the Study-guide button never render — they are gated by `OV_ROLE_CAPS` and a signed-out session is `viewer`. **And `#ov-authwall` must be hidden with an injected style**, because it is appended whenever a GAS backend URL is configured and it intercepts every pointer event (clicks time out with "div#ov-authwall intercepts pointer events"). Also: tabs carry `id="ov-tab-<key>"`, **not** `data-tab`
-- **The `.ov-rel-src >= len(relationships[])` assertion inherited from C1 is wrong** and fails on other sessions' data. Assert against the count of relationships that actually **carry a `source` field**. The scan this prompted found **77 of the corpus's 662 curated relationships have no `source` field at all** — catl 6 of 7, arevon/black-veatch/blattner 5 of 5, abb and eaton 4 of 9–11, delta-electronics 4 of 9. Pre-existing, other sessions' rows, **reported not fixed**
-- `json.dumps(sg)` must use `ensure_ascii=False` when comparing markers to rendered text, or `I²R loss` becomes `i²r loss` and reports a false failure
-- **The `indent=1` trap did not repeat.** Verified against live files first: `*.profile.json` / `*.study.json` are indent=1 with **no trailing newline**; `archive-index.json` is indent=1 **with** one; `profiler-concepts.json` / `profiler-companies.json` are indent=2 with one. Thirteen backfills produced **823 insertions / 38 deletions**
-- Research subagents again exhausted the WebSearch budget. What paid off: naming the must-find list explicitly, giving each agent the full covered-slug list, telling Agent B to **name the outlet per figure and never blend**, and telling each agent that a premise of mine might be wrong — which is how the Dresden and spin-off corrections surfaced
-
-**Verification, all green at close:** registry sync `0 of 106 out of sync` · study checker `0 errors, 79 guides / 401 concepts` · local schema-v7 validator clean on both new profiles and **0 new errors** on the thirteen backfilled ones compared against their archived pre-edit copies · graph 643 → **678 edges (512 curated), 2,008 evidence items** · Playwright across all fifteen touched dossiers with zero page errors and zero console errors
-
-**Where we left off:** C3 is pushed as `5ff34d9` (v04.50r). The developer asked for a re-plan of everything remaining, split by model, and for the paste-in prompt to run the three §8 guide revisions. Both were delivered in chat at this session's close.
-
-**THE RE-PLAN — this is the part a future session most needs:**
-
-- **§2's model rule assigns ALL 30 guide passes to Opus, not just the three revisions.** The §8 sub-table is literally headed "Study guides on existing dossiers (Opus 5 xhigh)". That is the finding that reshapes the queue: **~16 Opus sessions are available without touching Fable at all** — 7 guide sessions (30 passes at 4–5 each) plus 9 dossier sessions C4–C12
-- **Register arithmetic, verified this session.** Of the 48 remaining companies, only **C11 (Oklo → G8, Trane → half of G7)** and **B10 (DNV or Sargent & Lundy → G10, CoolIT → the other half of G7, X-energy → G8)** close any §6 row. **B3–B9, C4–C10 and C12 — 40 companies — close nothing.** The guide passes close more per session than any dossier group: the three revisions close **G3 outright** and deliver G4's guide third, and the `narada` backfill closes **G9**
-- **G4 cannot fully close from §8 work at all.** It wants three things and the third is a guidance module on the grid-equipment shortage that appears nowhere in §8. Even after the siemens-energy revision it stands at two of three. Flag this at the phase-close re-check rather than expecting a close
-- **G7 is split across phases by design** — Trane is C11 (Opus), CoolIT is B10 (Fable). Neither phase can close it alone
-- **Recommended Opus order:** (1) guide session one = the three revisions + `narada`, which moves three register rows; (2) **C11**; (3) the remaining 26 guide backfills, ~6 sessions; (4) C4, C5, C6+C7, C8, C12; (5) **hold C9 and C10** — C9's own §5 rationale names Anthropic and Fluidstack (B9) and C10's names Aypa (B3) and Compass (B7), so running them early means writing dossiers that need backfilling later
-- **Recommended Fable order when the cap resets:** **B10 first** (it is the only Fable session that closes a register row), then B9, B3 and B7 to unblock C9 and C10, then B4, B5, B6, B8
-- After guide session one and C11, **every register row Opus can close is closed**, and G7 and G10 need Fable's B10. That is the natural handover point
-
-**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · `START_OF_RESPONSE_BLOCK` On · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · Profiler `v01.82w` / `v01.34g` (untouched this session — C3 was data-only) · **106 dossiers · 79 study guides · concepts 401 · graph 678 edges · calendar 67 rows · execs 328 images / 62 companies · CHANGELOG 67/100** · 1 active reminder (the Xcel Fable-vs-Opus model test) · TODO empty
-
-**Known open items, reported not fixed:** the 77 sourceless relationships above; and `xcel-energy.study.json`'s `what-a-minimum-demand-charge-buys` section still carries section-level `pros`/`cons` arrays the renderer never reads, carried forward unfixed from C2.
-
-**Recommendation for next session:**
-
-- **Run the three §8 guide revisions — `vertiv` and `schneider-electric` each gaining a UPS section, `siemens-energy` gaining a grid-technologies section — plus the `narada` backfill, as one Opus 5 xhigh session.** It is the highest-leverage session left in the whole program: it closes **G3** outright, closes **G9**, and delivers the only remaining guide third of **G4**, with no research budget beyond re-prep on dossiers that already exist. Then re-check G3, G4 and G9 and date them in `CLASSROOM-CURRICULUM-PLAN.md` §6.
-**To continue:** type `run the three §8 guide revisions plus the narada backfill on Opus 5 xhigh`
