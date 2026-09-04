@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.00g] — 2026-09-04 04:01:12 PM EST — v04.55r
+
+### Added
+- One more interest topic is available to switch on, seeded from the study library and arriving flagged as new
+
+### Changed
+- Its search terms were chosen to be distinctive rather than broad, so it scores the articles it is actually about instead of padding every equipment story
 
 ## [v01.99g] — 2026-09-02 02:41:00 AM EST — v04.22r
 

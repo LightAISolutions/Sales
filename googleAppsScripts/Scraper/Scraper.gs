@@ -1,4 +1,4 @@
-var VERSION = "v01.99g";
+var VERSION = "v02.00g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -638,6 +638,18 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
   { key: 'topic-bess-technology', label: 'BESS technology & battery cell supply',
     terms: ['LFP', 'battery cell', 'sodium-ion', 'grid-scale battery', 'energy storage system'],
     source: 'guidance:bess-tech-fundamentals-2026-08' },
+  // Guidance seed for the grid-equipment-shortage module (industry-guidance.md
+  // step 9). Terms are the trade press's own nouns for the SUPPLY side, chosen
+  // to discriminate against 'topic-grid-infrastructure' above, which already
+  // carries 'transformer shortage' from the demand side. 'supply chain' and
+  // 'shortage' are deliberately absent: both match everything and would pad the
+  // topic band, the same trap the 'supply chain'/'warranty' notes below record.
+  // 'GOES' is kept alongside the spelled-out form because the steel and utility
+  // trades use the acronym in headlines where the full phrase never appears.
+  { key: 'topic-grid-equipment-shortage', label: 'Grid-equipment supply: core steel, bushings, test bays, lead times',
+    terms: ['grain-oriented electrical steel', 'GOES', 'bushing', 'test bay',
+            'transformer lead time', 'on-load tap changer', 'large power transformer'],
+    source: 'guidance:grid-equipment-shortage-2026-09' },
   { key: 'topic-grid-infrastructure', label: 'Grid infrastructure & the AIDC power chain',
     terms: ['grid capacity', 'transformer shortage', 'gas turbine', 'transmission', 'NOGRR 282', 'SB 6'],
     source: 'guidance:power-infra-aidc-2026-08' },

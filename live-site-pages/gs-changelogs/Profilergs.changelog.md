@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 34/50`
+`Sections: 35/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.35g] — 2026-09-04 04:01:12 PM EST — v04.55r
+
+### Added
+- A new study module in the guidance library, for the accounts that have access to it
+
+### Changed
+- The library now groups one more module under an existing topic heading; no other module changed
 
 ## [v01.34g] — 2026-09-02 05:16:32 PM EST — v04.27r
 

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-04 03:22:01 PM EST` · Repo version: `v04.54r`
+Last updated: `2026-09-04 04:02:42 PM EST` · Repo version: `v04.55r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -747,6 +747,7 @@ Last updated: `2026-09-04 03:22:01 PM EST` · Repo version: `v04.54r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/china-policy-stack-analysis.md">china-policy-stack-analysis.md</a> — The China policy stack for a BESS seller (research synthesis; source of truth for the in-app module)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/nvidia-800vdc-analysis.md">nvidia-800vdc-analysis.md</a> — Full analysis + study guide of NVIDIA's Aug 2026 800 VDC white paper (source of truth for the in-app module; claims ledger verified by two extraction passes)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/eo14420-bulk-power-system-analysis.md">eo14420-bulk-power-system-analysis.md</a> — EO 14420 (2026-08-26), the bulk-power-system national emergency: named equipment, the 69 kV scoping line, retroactive reach and the dated gates (primary-text analysis; source of truth for the in-app module)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/grid-equipment-shortage-analysis.md">grid-equipment-shortage-analysis.md</a> — The grid-equipment shortage: GOES, bushings, test bays and lead times as a supply system (research-based synthesis over public primary sources plus verified internal material — no ingested source document; source of truth for the in-app module)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/power-infrastructure-aidc-analysis.md">power-infrastructure-aidc-analysis.md</a> — Power infrastructure &amp; the AIDC power chain (teaching synthesis from verified internal material; source of truth for the in-app training module)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/utility-aidc-procurement-analysis.md">utility-aidc-procurement-analysis.md</a> — Utility procurement meets AIDC load, five case studies (research synthesis; source of truth for the in-app module)
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/industry-guidance/sources">sources/</a> — Committed source documents

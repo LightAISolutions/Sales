@@ -1,4 +1,4 @@
-var VERSION = "v01.34g";
+var VERSION = "v01.35g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -941,6 +941,7 @@ function guidanceDocs_() {
   // fundamentals first, then the AI data-center wave, then market access.
   return [guidanceDocBessTech_(), guidanceDocPowerInfra_(),
           guidanceDocNvidia800_(), guidanceDocUtilityAidc_(),
+          guidanceDocGridEquipment_(),
           guidanceDocChinaPolicy_(), guidanceDocBankability_(),
           guidanceDocEo14420_()];
 }
@@ -3277,6 +3278,871 @@ function guidanceDocUtilityAidc_() {
   {
    "t": "kill switch",
    "d": "SB 6's requirement that ERCOT be able to isolate co-located (behind-the-meter) load in emergencies - a condition of the co-location review for ≥75 MW arrangements."
+  }
+ ]
+};
+}
+// Content: The Grid-Equipment Shortage - GOES, bushings, test bays, lead times
+// (research-based synthesis, 2026-09-04). Derived from
+// repository-information/industry-guidance/grid-equipment-shortage-analysis.md.
+// NO source document was ingested; claims are verified against DOE's July 2024
+// Large Power Transformer Resilience report to Congress, EPRI's August 2023
+// bushing-failure white paper, IEC 60076-2 and 60076-3, the Wood Mackenzie and
+// PTR lead-time series, and OEM capacity disclosures. The supply-side
+// counterpart to guidanceDocUtilityAidc_(), which is why it shares its lane.
+// Companies are named only where the record names them - a capacity
+// announcement is objective fact; per the 2026-08-29 content-scope directive
+// there is no guidance to buy from or avoid any single company.
+function guidanceDocGridEquipment_() {
+  return {
+ "id": "grid-equipment-shortage-2026-09",
+ "group": "The AI Data-Center Wave",
+ "title": "The Grid-Equipment Shortage: GOES, Bushings, Test Bays, Lead Times",
+ "short": "Why the transformer is late, taught as a supply system with four constraints rather than as a headline number - and what a buyer can actually do about it.",
+ "source": {
+  "doc": "Research synthesis - DOE's 2024 Large Power Transformer Resilience report to Congress, EPRI's 2023 bushing-failure white paper, IEC 60076-2 and 60076-3, the Wood Mackenzie and PTR lead-time series, and OEM capacity disclosures",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 6,
+  "series": "Industry Guidance - supply-chain module",
+  "repo": "repository-information/industry-guidance/grid-equipment-shortage-analysis.md"
+ },
+ "updated": "2026-09-04",
+ "reviewBy": "2027-03-31",
+ "revisions": [
+  {
+   "date": "2026-09-04",
+   "note": "Authored as the supply-side counterpart to the utility-procurement module. No source document was ingested; this is research-based synthesis over public primary sources plus already-verified internal material, and the analysis file carries the provenance line. Companies are named only where the record names them - a capacity announcement is objective fact; there is no recommendation to buy from or avoid anyone."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "1 mill",
+   "v": "makes US core steel",
+   "sub": "Cleveland-Cliffs is the sole domestic GOES supplier, meets 12-20% of demand, and is not profitable at it (DOE, 2024)"
+  },
+  {
+   "k": "~18%",
+   "v": "of failures start here",
+   "sub": "Bushings, per CIGRE's reliability survey - and 30% of generator step-up transformer failures"
+  },
+  {
+   "k": "72.5 kV",
+   "v": "the testing line",
+   "sub": "Above it the lightning impulse test is a ROUTINE test - every unit passes through a test bay"
+  },
+  {
+   "k": "57/yr",
+   "v": "the flagship new plant",
+   "sub": "At full capacity, against roughly 900 units/yr of US demand - about 6%, starting early 2027"
+  }
+ ],
+ "sections": [
+  {
+   "id": "system",
+   "title": "Four constraints, not one shortage",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "A shortage with one cause ends when price fixes that cause. This one has **four independent constraints**, any one of which would be enough on its own, which is why several years of very high prices - normally the cure - have not cured it.",
+    "**The input is concentrated and structurally unprofitable.** One US company makes {{GOES}}, the core steel every transformer needs. It meets 12-20% of domestic demand and DOE records it as *not currently profitable*. The highest grade, {{PDR}}, has a **single source on earth** and is not made in the US at all. A shortage whose input loses money at the clearing price does not resolve by paying more for the output.",
+    "**The component queue is a second queue.** High-voltage {{bushing}}s and {{OLTC}}s are the two items most consistently flagged as build-schedule bottlenecks. A plant with the floor space and crews for twenty units a month ships fifteen if its bushing supplier ships fifteen.",
+    "**The exit is gated by a test.** For units above 72.5 kV the lightning {{impulse test}} is a *routine* test under IEC 60076-3 - every unit, not a sample. The {{heat run}} is a *type* test that takes the bay for days on the first unit of each new design. A {{test bay}} holds one unit at a time.",
+    "**Capacity is measured in slots, and slots do not stretch.** DOE's words are worth memorising: *\"Manufacturing facilities have a certain number of build slots... capacity cannot easily be expanded except by building a new facility.\"* New factories take 1-3 years; the winding machines and core tables inside them take another 1-2 to obtain.",
+    "**Field note:** the equipment shortage and the equipment maker's expanding margin are the same fact seen from two sides. When a factory is sold out for years, new orders enter at current prices while old cheaply-priced ones deliver first - so reported margins improve mechanically for years. An OEM's good quarter is not evidence the shortage is easing."
+   ],
+   "sales": "The question that separates someone who has read this from someone who has read a headline: **\"what is that lead time measured from - order placement, drawing approval, or release to manufacture?\"** Those differ by many months, and the difference is usually the buyer's own review cycle."
+  },
+  {
+   "id": "goes",
+   "title": "GOES: the material that will not answer a price signal",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "**What it is.** Grain-oriented electrical steel is silicon steel rolled and annealed so its magnetic grains line up with the rolling direction. That alignment is what makes core loss low enough for a transformer to be efficient. It comes in grades - conventional (CGO), high-permeability (HI-B), domain-refined ({{PDR}}) and an intermediate grade (MOH) - and makers want the domain-refined material because lower core loss means a smaller, lighter unit for the same rating.",
+    "**Why the capacity is what it is - three facts, all from DOE's 2024 report to Congress.** *One domestic producer*: Cleveland-Cliffs, through its 2020 acquisition of AK Steel, is the sole active domestic supplier, meets **12-20% of domestic demand**, and is *\"not currently profitable\"*. *One global source for the top grade*: PDR *\"is only available from a single manufacturer, Nippon Steel in Japan, and is not manufactured in the U.S.\"* *The domestic mill's better business competes with it*: electric-vehicle production consumes **{{NOES}}** from the same capacity, so *\"domestic NOES demand crowds out the less profitable domestic production of GOES.\"*",
+    "**Exit is easy and re-entry is not.** ATI shut down its GOES line in 2016 on unprofitability. US GOES imports rose **155%** the following year. That is the shape of the whole problem in one data point: capacity that leaves does not come back on a price signal.",
+    "**Where the world's GOES actually comes from.** China's output was **620,000 tonnes in 2023 - 56% of global production** - with one producer at 500,000 tonnes of that. Against a world market on the order of 1.1 Mt/yr, roughly **80% of the GOES used in US transformer manufacture was imported** as of 2019. A policy instrument that restricts foreign *equipment* therefore lands on a chain whose *material* was majority-foreign long before the finished unit was.",
+    "**Why it matters commercially.** GOES and {{CTC}} copper wire **each account for roughly 25% of a large power transformer's production cost**. Half the machine's cost is two commodities, one of them structurally short. GOES prices roughly doubled between January 2020 and 2024, and US GOES prices are up 60-70% since 2020.",
+    "**Field note:** capacity added downstream - winding shops, test bays, trained winders - does nothing if the steel is short. That ordering is the reason this module puts GOES first."
+   ]
+  },
+  {
+   "id": "bushings",
+   "title": "Bushings: the failure point that is also a queue",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "**What a bushing is.** It carries an energised conductor through a grounded barrier - the transformer tank wall - without connecting to it. That makes it the highest-stress dielectric interface on the machine, and it sits on the outside where weather, ice and contamination reach it. The common construction is oil-impregnated paper: a condenser body of kraft paper with foil electrode layers, dried under heat, vacuumed, impregnated with oil, held between porcelain sheds by springs, with a {{test tap}} on the mounting flange bringing the outermost electrode out for measurement.",
+    "**Why it is the most common failure point.** EPRI's 2023 investigation puts bushing failures at **roughly 18% of transformer failures**, citing CIGRE's *Transformer Reliability Survey*, and notes that IEEE, CIGRE and IEC reports together put the contribution at **~17-20% globally** - rising to **30% of {{GSU}} failures**. The mechanisms are moisture intrusion through leaks, partial discharge, surface tracking and thermal ageing. The test tap that exists to diagnose the bushing is itself a documented failure site when its cap is not properly grounded.",
+    "**Why the consequence outruns the share.** Bushing failures do not fail quietly. EPRI's cases include ruptured tanks, expelled oil, fires and porcelain scattered across the yard - so a bushing failure frequently *becomes* a transformer failure and an environmental incident. A component worth a low single-digit percentage of the machine's cost drives a disproportionate share of its outage risk.",
+    "**Why it is also a supply bottleneck.** Bushings are a specialised product line built by a small set of makers, not something the transformer plant produces. They and on-load tap changers are the components most consistently flagged as build-schedule bottlenecks. The arithmetic is unforgiving: the factory's throughput is its slowest component supplier's throughput, not its own.",
+    "**The clearest institutional evidence.** The private strategic-spares entity that warehouses transformers for subscribing utilities holds **circuit breakers and bushings in the same inventory**. You do not warehouse a commodity you can buy when you need it. The industry treats the bushing as an independent long-lead item, and so should a schedule.",
+    "**Field note:** the bushing queue sits *inside* the transformer's lead time, which means it is invisible on the buyer's schedule until it is the reason the schedule moved."
+   ],
+   "sales": "Bushings are the one long-lead item on this list that is genuinely stockable - small enough to warehouse, fungible across several designs, and cheap relative to the machine. A matched spare set is the cheapest insurance available against the mechanism behind roughly a fifth of transformer failures. The catch is matching: voltage class, current rating, creepage, flange and mounting geometry, and the OEM's acceptance of a third-party part."
+  },
+  {
+   "id": "testbay",
+   "title": "Test bays: the gate at the exit",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "**One line to carry: a transformer that cannot be tested cannot ship.** Everything the factory does - core stacking, winding, weeks of vacuum drying, tanking, oil processing - produces an object that is not yet a saleable asset. It becomes one when it passes its factory test sequence in a high-voltage {{test bay}}.",
+    "**Why the bay is a per-unit gate, not a per-order one.** This is the fact that turns testing from an engineering formality into a throughput constraint, and the standards are explicit. Under **IEC 60076-3:2013**, for transformers with Um above 72.5 kV the full-wave lightning {{impulse test}} on the line terminals is a **routine** test - every unit. Below that line it is a type test; between 72.5 and 170 kV the full-wave test is routine and the chopped-wave test is special. Since a large power transformer is by definition above that line, **the impulse test gates the entire {{LPT}} population, one unit at a time.**",
+    "**And a second, slower queue runs through the same room.** Under **IEC 60076-2:2011** the temperature-rise test - the {{heat run}} - is a **type** test, normally performed on the first unit of an order, with current maintained until top-oil temperature reaches the type-test value and for a minimum of four hours, all coolers connected. On a large unit the full heat run occupies the bay for days. A factory that wins a large order of a *new design* pays for it in bay-days before it ships anything.",
+    "**What a bay physically is.** A screened hall big enough for the assembled unit with dielectric clearance; a crane to place it; an impulse generator producing a standard steep-fronted surge; a variable-frequency source for the induced-voltage test; partial-discharge instrumentation with a noise floor low enough to mean something; and loss measurement accurate enough that a fraction of a percent is worth real money under a contract with loss penalties. One of the most capital-intensive rooms in the plant, and it holds one unit at a time.",
+    "**Why it is the constraint nobody sees.** It appears on no purchase order and in no quotation - the buyer sees a lead time, and the bay is inside it. And of all the factory tests, the impulse test is the one most likely to reveal a defect, which means a failure there sends a nearly finished unit back into the shop and to the end of a queue it had almost cleared. **The test bay is the only stage where months of work can be undone in microseconds.**",
+    "**Honesty about the evidence.** The mechanism above is sourced to the standards. The *queue* behind it is not measurable from public data: there is no published register of test-bay capacity, utilisation or waiting time anywhere, and none of the announced factory expansions discloses how many bays it adds. This module therefore teaches the bay as a mechanism and refuses to put a number on the queue. See the closing section."
+   ],
+   "sales": "Factory acceptance testing is the buyer's one real chance to inspect the machine before it is theirs, and most buyers do not use it. Attending the FAT and reading the test report line by line is free leverage. A related point worth making early: a repeat design has already passed its type tests, so standardisation buys a shorter path through the bay as well as a place in a repeat production run."
+  },
+  {
+   "id": "leadtimes",
+   "title": "The lead-time series, dated",
+   "read": "3 min",
+   "kind": "table",
+   "intro": "Never quote a single remembered number. Quote a dated figure with its measurement basis - and note that a class matters as much as a date: a generator step-up unit and a substation unit are not the same queue.",
+   "cols": [
+    "When",
+    "What",
+    "Figure",
+    "Source"
+   ],
+   "rows": [
+    [
+     "Pre-2020",
+     "Large power transformer",
+     "7-14 months typical",
+     "PTR Inc., Mar 2026"
+    ],
+    [
+     "2021",
+     "Power transformer, average",
+     "~50 weeks",
+     "Wood Mackenzie"
+    ],
+    [
+     "2024",
+     "Power transformer, average",
+     "~120 weeks",
+     "Wood Mackenzie"
+    ],
+    [
+     "2024",
+     "Large transformers (substation + GSU)",
+     "80-210 weeks",
+     "Wood Mackenzie"
+    ],
+    [
+     "Jul 2024",
+     "Large power transformer",
+     "\"up to and exceeding 36 months\"",
+     "DOE, Report to Congress"
+    ],
+    [
+     "Q2 2025",
+     "Power transformer, average",
+     "128 weeks",
+     "Wood Mackenzie survey"
+    ],
+    [
+     "Q2 2025",
+     "Generator step-up transformer",
+     "144 weeks",
+     "Wood Mackenzie survey"
+    ],
+    [
+     "Q2 2025",
+     "Switchgear",
+     "44 weeks",
+     "Wood Mackenzie survey"
+    ],
+    [
+     "Mar 2026",
+     "LPT, most major markets",
+     "\"well beyond 24 months\"",
+     "PTR Inc."
+    ],
+    [
+     "Mar 2026",
+     "Specialised units",
+     "36-48 months",
+     "PTR Inc."
+    ]
+   ],
+   "note": "**Prices moved with the lead times, and not uniformly - the spread is the useful signal.** Since 2019: power transformers +77%, generator step-up units +45%, some distribution classes +95%. Since 2021: circuit breakers +47%, medium-voltage switchgear +50%. A category up 95% is capacity-limited in a different way from one up 45%. **And demand is the other half of the ratio**: 2019-2025 power-transformer demand rose 119%, generator step-up units 274%, substation power transformers 116%, distribution 34%; the August 2025 read put the national shortfall at roughly 30% for power transformers and 10% for distribution."
+  },
+  {
+   "id": "slots",
+   "title": "Slots: how a lead time becomes a schedule risk",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "A lead time is a **duration**. A {{build slot}} is a **position in a finite production schedule**. Confusing the two is what turns a manageable procurement into a project delay, because durations can be planned around and positions can be lost.",
+    "**Slots are substitutable across products, so you are bidding against smaller units too.** A slot spent refurbishing a core or building a medium unit is a slot not spent on a large one. When distribution and substation demand rises, it competes for the same floor - which is why a large-load buyer's schedule is exposed to a utility's replacement programme it has never heard of.",
+    "**Expansion is slow at both levels.** New factory construction takes 1-3 years, and the specialty equipment inside - winding machines, core tables - takes another 1-2 years to obtain. Cranes, air pallets and space reallocation expand capacity only marginally. Expansion is also people-limited before it is machine-limited: winders, testers and design engineers take years to develop, and a new plant ramps only as fast as experienced staff can seed new crews.",
+    "**Nameplate utilisation understates the problem.** In 2019 US capacity utilisation for large power transformers was estimated at about **40%** against a derived maximum of ~343 units/year - while **617 units, 82% of the total, were imported**. Capacity that is not staffed, tooled and bay-served is not capacity.",
+    "**Even a finished unit has a queue in front of it.** Large power transformers typically require 18- or 20-axle {{Schnabel car}}s. DOE reports that **only about three of these specialised transport cars are available in North America**, and that route clearance *\"can take nine months to complete\"*. Against that, once a matched unit is physically on hand, the expedited replacement sequence - site prep, transport, assemble, vacuum, oil fill, a five-day settle, commissioning - totals **3-4 weeks**.",
+    "**Field note:** the distance between \"3-4 weeks\" and \"128 weeks\" is the entire subject of this module. Nothing about installing a transformer is slow. Everything about obtaining one is."
+   ]
+  },
+  {
+   "id": "capacity",
+   "title": "What the announced capacity actually adds",
+   "read": "2 min",
+   "kind": "bars",
+   "unit": "large power transformer units per year (US)",
+   "items": [
+    {
+     "label": "US demand expected by 2027",
+     "v": 900,
+     "sub": "DOE projection for units above 60 MVA"
+    },
+    {
+     "label": "US demand, 2019",
+     "v": 750,
+     "sub": "over 80% of it met by imports"
+    },
+    {
+     "label": "Derived max domestic capacity, 2019",
+     "v": 343,
+     "sub": "Commerce estimate; ~40% utilised"
+    },
+    {
+     "label": "Built domestically for domestic use, 2019",
+     "v": 137,
+     "sub": "18% - the other 617 units were imported"
+    },
+    {
+     "label": "Flagship new US plant, full capacity",
+     "v": 57,
+     "sub": "plus 24 repair and refurbishment units"
+    },
+    {
+     "label": "Flagship new US plant, initial output",
+     "v": 24,
+     "sub": "from early 2027"
+    }
+   ],
+   "note": "**The arithmetic that makes the point.** Nearly **$1.8bn** of OEM manufacturing investment has been announced across North America since 2023, and it is real: a $150M plant in Charlotte starting early 2027 (24 units initially, 57/yr at full capacity), a $457M Hitachi Energy plant in South Boston operational 2028, a $340M Eaton facility in South Carolina targeting 2027, more than $300M across Prolec GE sites, a $40M Virginia Transformer expansion lifting one site's output 70%. Set the first of them against national demand and the flagship domestic plant is about **6% of it**, arriving in 2027 and ramping after. That is what \"supply answers shortage in years, not quarters\" means numerically - and it is why a project being planned today should assume the shortage rather than assume relief. Companies are named here because the record names them; nothing in this module recommends buying from or avoiding any of them."
+  },
+  {
+   "id": "gates",
+   "title": "The dated gates",
+   "read": "2 min",
+   "kind": "timeline",
+   "intro": "Three lanes: where the constraint came from (gold), what the measurements actually said and when (rose), and when the announced cure is scheduled to produce anything (blue). The asymmetry is the lesson - the causes are a decade old and the cures start in 2027.",
+   "lanes": {
+    "gen": "Where the constraint came from",
+    "eco": "What the surveys measured",
+    "deploy": "When the cure produces"
+   },
+   "items": [
+    {
+     "x": 2016.5,
+     "lane": "gen",
+     "label": "A US producer exits GOES",
+     "sub": "ATI shuts its line on unprofitability; US GOES imports rise 155% the following year"
+    },
+    {
+     "x": 2019.0,
+     "lane": "gen",
+     "label": "The baseline year the reports measure from",
+     "sub": "~750 US units above 60 MVA demanded; 137 built domestically for domestic use, 617 imported"
+    },
+    {
+     "x": 2021.0,
+     "lane": "eco",
+     "label": "Power transformer lead time ~50 weeks",
+     "sub": "The pre-boom baseline against which everything since is read"
+    },
+    {
+     "x": 2023.0,
+     "lane": "gen",
+     "label": "China produces 620,000 t of GOES",
+     "sub": "56% of global output; one producer accounts for 500,000 t of it"
+    },
+    {
+     "x": 2024.0,
+     "lane": "eco",
+     "label": "~120 weeks average; 80-210 weeks for large units",
+     "sub": "Transformer prices up 60-80% since Jan 2020; GOES doubled; copper up ~50%"
+    },
+    {
+     "x": 2024.52,
+     "lane": "gen",
+     "label": "DOE reports to Congress",
+     "sub": "One domestic GOES supplier at 12-20% of demand; build slots that cannot easily expand; three Schnabel cars in North America"
+    },
+    {
+     "x": 2025.4,
+     "lane": "eco",
+     "label": "128 weeks average; GSUs 144; switchgear 44",
+     "sub": "Shortfall estimated at ~30% for power transformers, ~10% for distribution"
+    },
+    {
+     "x": 2026.2,
+     "lane": "eco",
+     "label": "Well beyond 24 months; 36-48 for specialised units",
+     "sub": "Lead times nearly doubled on average since 2021; ~$1.8bn of North American OEM investment announced since 2023"
+    },
+    {
+     "x": 2027.1,
+     "lane": "deploy",
+     "label": "First new US large-transformer line starts production",
+     "sub": "Charlotte, NC - 24 units initially, 57/yr at full capacity. THIS MODULE'S REVIEW GATE"
+    },
+    {
+     "x": 2027.6,
+     "lane": "deploy",
+     "label": "Second announced facility targeted",
+     "sub": "$340M three-phase transformer plant in South Carolina, 2027 target with no stated month"
+    },
+    {
+     "x": 2028.0,
+     "lane": "deploy",
+     "label": "Largest announced US transformer plant operational",
+     "sub": "$457M in South Boston, VA - the biggest single capacity addition announced"
+    },
+    {
+     "x": 2029.0,
+     "lane": "deploy",
+     "label": "Domestic GOES project complete",
+     "sub": "Four induction reheat furnaces replacing two gas-fired slab reheat furnaces at Butler Works; federal cost share up to $75M"
+    }
+   ]
+  },
+  {
+   "id": "constraints",
+   "title": "Each constraint: what helps, and what does not",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "The four constraints do not respond to the same instruments, which is why a single procurement strategy never covers all of them. Read the last column as the more useful one.",
+   "cols": [
+    "Constraint",
+    "Why it binds",
+    "What actually helps",
+    "What does not help"
+   ],
+   "rows": [
+    [
+     "**{{GOES}}**",
+     "One domestic producer, unprofitable at the clearing price; the top grade has one global source; EV demand for non-oriented steel competes for the same capacity",
+     "Accepting a lower grade when schedule dominates (a larger, lossier core); tracking the published price series; funded domestic projects, on a 2029 horizon",
+     "Paying more. The domestic mill loses money at the price that clears, so a higher output price does not by itself restart capacity"
+    ],
+    [
+     "**{{bushing}}s and {{OLTC}}s**",
+     "Specialised product lines outside the transformer plant; the factory's throughput is capped by theirs",
+     "Stocking spares - they are small, warehouse-able and fungible across designs; condition monitoring at the {{test tap}}; specifying a component the OEM already runs",
+     "Escalating with the transformer OEM. The queue is at a supplier the OEM does not control either"
+    ],
+    [
+     "**{{test bay}} capacity**",
+     "The lightning impulse test is routine above 72.5 kV, so every unit passes through; the heat run takes days on the first unit of a new design",
+     "Repeating a design - it is already type-tested, so it takes the shorter path; attending the factory acceptance test and reading the report",
+     "Asking for the schedule. No public register of bay capacity or queue time exists, and no expansion announcement discloses bays added"
+    ],
+    [
+     "**{{build slot}}s**",
+     "Finite positions substitutable across product sizes; new plants take 1-3 years and their machines another 1-2; expansion is people-limited first",
+     "Reserving early and standardising the rating so a slot bought for one phase serves another; fixing what the lead time is measured from at the same time",
+     "Waiting for announced capacity. The first flagship plant is ~6% of national demand and starts in 2027"
+    ]
+   ]
+  },
+  {
+   "id": "buyer",
+   "title": "The buyer's instruments, honestly priced",
+   "read": "3 min",
+   "kind": "callout",
+   "ps": [
+    "**1 - Standardise the rating.** The single largest lever, and it is an engineering concession made for schedule: a slightly oversized or less-than-optimal unit in exchange for a place in a repeat production run and a shorter path through the test bay. Buyers who repeat a design are not being unimaginative; they are buying schedule optionality.",
+    "**2 - Reserve the slot early, and fix the measurement basis in the same conversation.** Money at risk on a project that may not happen, and a specification frozen before the design is ready. In a shortage *the queue position is the thing being bought*, not the transformer.",
+    "**3 - Buy the components separately where you can.** Bushings are stockable and fungible in a way transformers are not. This is the cheapest available insurance against the mechanism behind roughly a fifth of transformer failures.",
+    "**4 - Decide the spare explicitly.** Either there is a physical spare somewhere - on the pad, at another site, or shared under an agreement - or a transformer failure is a multi-year outage of that capacity. **Naming which of the two has been chosen is more useful than any reliability statistic.**",
+    "**5 - Buy schedule rather than assets where the trade is favourable.** Mobile substations, re-using a retired plant's existing connection, generating on site: each converts a queue problem into a different problem - lower rating, inherited condition, permitting risk - which may be the cheaper problem.",
+    "**6 - Watch the impedance line.** A late substitution of the step-up transformer changes the fault current available downstream and can take existing switchgear past its withstand rating, invalidating the coordination study the protection settings came from. Two independent records land on this: the equipment-side guides in this app, and the private spares programme that standardises voltage, rating, tap-changer configuration, impulse level, losses, cooling and transport dimensions but reports **impedance** as among the hardest *\"because of their impacts on the rest of the system (e.g., downstream system protection).\"* A transformer substitution is never only a transformer substitution."
+   ],
+   "sales": "For anyone selling equipment that sits behind a delayed connection - storage, on-site generation, buffering - the honest and strong line is not that the product is cheaper but that it is what lets a site energise before its grid equipment arrives. The corollary is a discipline: a container lead time quoted without the balance-of-plant lead time is half a schedule, because the step-up transformer, the medium-voltage switchgear and the protection sit in this same queue and carry this same price series."
+  },
+  {
+   "id": "spares",
+   "title": "The sparing and sharing layer",
+   "read": "3 min",
+   "kind": "table",
+   "intro": "Above the individual purchase sits a layer most buyers never look at: how the industry as a whole holds spares. It is a useful mirror, because what the collective mechanisms can and cannot do says exactly what an individual buyer should and should not rely on.",
+   "cols": [
+    "Mechanism",
+    "What it is",
+    "The honest assessment"
+   ],
+   "rows": [
+    [
+     "**Self-supply**",
+     "The owner keeps its own spare unit",
+     "Most transmission operators do this. DOE notes spares are *\"costly, infrequently utilized, and must be maintained and protected while producing no revenue\"* - and that many self-supplied spares are stored **in the same substations as the in-service units**, exposing the spare to the same event as the asset it protects"
+    ],
+    [
+     "**A collective sharing agreement**",
+     "Investor-owned utilities agree to sell spares to each other on a trigger; started 2006, more than 50 member companies, $10,000 to enroll and $7,500 a year",
+     "The trigger requires a presidentially-declared terrorist attack or state of emergency - so stringent that the programme **has never been used**. It also adds no incremental capacity: it reallocates existing assets rather than creating any"
+    ],
+    [
+     "**A voluntary mutual-assistance initiative**",
+     "A less formal channel for members to find each other's available equipment",
+     "Lower friction than the formal agreement, and a correspondingly weaker guarantee. Useful as a search tool, not as a plan"
+    ],
+    [
+     "**A private warehousing entity**",
+     "Buys, stores and maintains spares for subscribers: five transformer classes, seven ratings sets, plus circuit breakers and bushings; inventory sized by Monte Carlo simulation over 10,000+ events to a 98% likelihood of meeting anticipated need; units held up to 25 years in like-new condition with an assignable 12-month OEM warranty",
+     "The only mechanism that adds incremental supply rather than reallocating it. As of DOE's 2024 report it **had not yet actually provided a replacement unit** - which is a statement about how rarely the trigger fires, not about whether the model works"
+    ]
+   ],
+   "note": "**The lesson for an individual buyer is in the failure modes, not the successes.** A spare stored beside the asset it protects is not a spare. A sharing agreement whose trigger has never fired is not availability. And a standardisation programme run by people whose whole job is fungibility still could not standardise impedance - so a buyer who assumes their own units are interchangeable should check that assumption against the protection study before relying on it."
+  },
+  {
+   "id": "groups",
+   "title": "What it means by group",
+   "read": "6 min",
+   "kind": "proscons",
+   "intro": "Exposure on the left, the opening on the right. Read the component-supplier card as the strategic one - it is the only group in this shortage whose scarcity is durable rather than cyclical.",
+   "cards": [
+    {
+     "t": "Transformer & switchgear OEMs",
+     "meta": "the sold-out side",
+     "adv": [
+      "Order books years deep, with new orders entering at current prices while old cheaply-priced ones deliver first - margins improve mechanically for years",
+      "A repeat design is already type-tested, so standardisation is a margin lever as well as a schedule one",
+      "Domestic capacity announcements now attract policy support that did not exist for a flat, cyclical business"
+     ],
+     "dis": [
+      "Expansion is people-limited before machine-limited: 1-3 years for a building, 1-2 more for winding machines and core tables, and years to train winders and testers",
+      "Every announced expansion bids for the same GOES tonnage, so the industry can add plants faster than it can add steel",
+      "Component suppliers cap throughput regardless of floor space",
+      "Building capacity that opens in three-plus years is a bet that the boom outlives the build"
+     ]
+    },
+    {
+     "t": "Data-center developers & large-load buyers",
+     "meta": "the queue's customers",
+     "adv": [
+      "Standardising a rating across phases makes slots fungible, so a slot bought for one phase serves another",
+      "The instruments that convert a queue problem into a permitting problem - on-site generation, mobile substations, re-using a retired plant's connection - are proven and available now",
+      "Attending the factory acceptance test is free leverage almost nobody uses"
+     ],
+     "dis": [
+      "Money committed against an unfinished design, with later changes arriving as factory change orders rather than redlines",
+      "A lead time quoted without its measurement basis hides the buyer's own review cycle - the one part of the schedule the buyer controls",
+      "A late transformer substitution changes downstream fault current and can invalidate the coordination study",
+      "You are bidding for slots against utility replacement programmes you never see"
+     ]
+    },
+    {
+     "t": "Utilities & transmission owners",
+     "meta": "the replacement floor",
+     "adv": [
+      "Sparing and sharing mechanisms exist, and the private warehousing model is the one that adds incremental supply rather than reallocating it",
+      "A standardised fleet is worth more in a shortage than an optimised one, and the collective programmes have already done much of the standardisation work",
+      "Condition monitoring on bushings converts an unplanned catastrophic failure into a planned component swap"
+     ],
+     "dis": [
+      "An ageing installed base sets a replacement floor that competes directly with new load: intended service life is ~40 years and average installed age is ~40 years",
+      "The formal sharing agreement's trigger has never fired, and it adds no incremental capacity when it does",
+      "Self-supplied spares are frequently stored in the same substations as the units they protect"
+     ]
+    },
+    {
+     "t": "BESS, inverter & on-site power suppliers",
+     "meta": "same queue, different container",
+     "adv": [
+      "Everything that firms a weak or delayed connection gains value in an equipment-constrained market - the product argument is schedule, not price",
+      "Storage is one of the few things that lets a campus energise before its grid equipment arrives",
+      "Composing into repeatable, standard-rating blocks sells the buyer's own largest lever back to them"
+     ],
+     "dis": [
+      "A storage plant needs its own step-up transformer, medium-voltage switchgear and protection from this same queue - quoting a container lead time without balance-of-plant is quoting half a schedule",
+      "Switchgear averaged 44 weeks and medium-voltage switchgear prices are up 50% since 2021, so the balance-of-plant exposure is real and rising",
+      "Policy restrictions on bulk-power equipment land on a chain whose material was already majority-imported"
+     ]
+    },
+    {
+     "t": "Component suppliers - bushings, tap changers, core steel",
+     "meta": "the inner queue",
+     "adv": [
+      "The factory's throughput is capped by theirs, which is durable pricing power rather than a cyclical spike",
+      "Bushings appear in strategic spares inventories alongside transformers - an aftermarket the transformer itself does not have",
+      "Condition monitoring and diagnostics build a service annuity on top of the part"
+     ],
+     "dis": [
+      "Concentrated, and for domestic core steel structurally unprofitable at the price that clears",
+      "The top core-steel grade has a single global source, so the whole industry shares one point of failure",
+      "Substitute demand - non-oriented steel for electric vehicles - grows faster and pays better than the transformer business"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "notsay",
+   "title": "What the record does NOT say",
+   "read": "3 min",
+   "kind": "callout",
+   "ps": [
+    "**1 - There is no public count of high-voltage test bays.** Not in the US, not globally, not by maker. The bay's role as the exit gate is established from the standards; the *queue* behind it is not measurable from public data, and none of the announced expansions discloses how many bays it adds. Anyone who quotes a testing-queue figure is quoting something unsourced.",
+    "**2 - Bushing lead-time numbers circulate without a primary source.** Figures such as \"bushings run up to 130 weeks\" appear on vendor and reseller pages with no attribution and no survey behind them. They may well be right. They are not citable, and they are deliberately absent from this module. What *is* citable is that bushings and tap changers are the most consistently flagged component bottlenecks, and that the industry warehouses bushings as strategic spares.",
+    "**3 - The claim that a single US producer makes on-load tap changers, with the rest from Germany and Switzerland, could not be verified.** It appears in secondary write-ups without attribution. The direction is consistent with the general finding that fabricated subcomponents are largely imported; the specific supplier count is not sourced and is omitted.",
+    "**4 - The bushing failure share is a band, not a number.** Published figures span roughly 15% to 50% depending on whether generator step-up units are separated out, which voltage classes are counted, and whether \"bushing-initiated\" or \"bushing-attributed\" is meant. This module uses ~18%, ~17-20% globally and 30% for GSUs, and says it is a band.",
+    "**5 - No current national GOES tonnage figure could be verified.** Secondary sources give the domestic producer's electrical-steel capacity at both ~200,000 and ~250,000 t/yr without separating grain-oriented from non-oriented product. This module uses DOE's *share of demand met* framing (12-20%) because that is what the primary source supports.",
+    "**6 - The quarterly lead-time series is relayed here, not read directly.** The 2025 figures come through a trade journal that attributes each to the analyst house by date; the underlying surveys are subscription products. The attribution is explicit and the relay is a journal of record, but this is second-hand and the ledger says so.",
+    "**7 - No source quantifies the winder and tester labour gap.** \"People-limited before machine-limited\" is well supported qualitatively and appears in DOE's list of inputs manufacturers struggle to obtain, but there is no published headcount, vacancy rate or training-pipeline figure anywhere. The mechanism is taught; no number is invented for it.",
+    "**8 - Nothing here forecasts when the shortage ends.** This module states the announced capacity, its dated start and the arithmetic against demand. It does not extrapolate a crossover year, because that would require a demand path nobody has published with confidence."
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Name the four constraints, in causal order.",
+     "a": "GOES (the core steel) -> bushings and tap changers (the component queue) -> test bays (the exit gate) -> lead times (the output, not a cause). Capacity added downstream does nothing if the steel is short, which is why the order matters."
+    },
+    {
+     "q": "Why does a high price not fix the GOES shortage?",
+     "a": "Because the domestic producer loses money at the price that clears. One US company makes it, meets 12-20% of domestic demand, and DOE records it as not currently profitable - while EV demand for non-oriented electrical steel competes for the same capacity and pays better. The highest grade has a single global source and is not made in the US at all."
+    },
+    {
+     "q": "What happened when a US producer exited GOES in 2016?",
+     "a": "US GOES imports rose 155% the following year. It is the cleanest evidence that capacity which leaves this business does not return on a price signal."
+    },
+    {
+     "q": "What share of transformer failures start at the bushing, and why does the consequence outrun the share?",
+     "a": "Roughly 18% (CIGRE's reliability survey), ~17-20% globally, and 30% of generator step-up transformer failures. The consequence outruns the share because bushing failures rupture tanks, expel oil, ignite fires and scatter porcelain - so a bushing failure frequently becomes a transformer failure and an environmental incident."
+    },
+    {
+     "q": "Why is the test bay a per-unit gate rather than a per-order one?",
+     "a": "Because under IEC 60076-3 the full-wave lightning impulse test on line terminals is a ROUTINE test for units above 72.5 kV - every unit, not a sample. The heat run (IEC 60076-2) is a type test on the first unit of an order and takes the bay for days, so a new design costs bay-days before anything ships."
+    },
+    {
+     "q": "What is the difference between a lead time and a build slot?",
+     "a": "A lead time is a duration; a slot is a position in a finite production schedule. Durations can be planned around, positions can be lost. Slots are also substitutable across product sizes, so a large-transformer buyer is bidding against refurbishments and medium units for the same floor."
+    },
+    {
+     "q": "A supplier quotes '24 months'. What is the one question to ask back?",
+     "a": "What is it measured from - order placement, drawing approval, or release to manufacture? Those can differ by many months, and the difference is usually the buyer's own review cycle, which is the one part of the schedule the buyer controls and the part most often left out of their own plan."
+    },
+    {
+     "q": "How much does the flagship new US transformer plant add, against national demand?",
+     "a": "24 units initially, rising to 57 per year at full capacity, from early 2027 - against roughly 900 units per year of expected US demand for units above 60 MVA. About 6%. That is what 'supply answers shortage in years, not quarters' means numerically."
+    },
+    {
+     "q": "Why is impedance the specification line that ripples furthest?",
+     "a": "It sets how much fault current reaches the switchgear behind the transformer. A substituted unit with different impedance can take existing switchgear past its withstand rating and invalidate the coordination study the protection settings came from. The private spares programme that standardises everything else reports impedance as among the hardest, for exactly this reason."
+    },
+    {
+     "q": "Why is an OEM's expanding margin not evidence the shortage is easing?",
+     "a": "Because when a factory is sold out for years, new orders enter at current prices while older, cheaply-priced ones deliver first. Reported margins improve mechanically for years. The shortage and the margin expansion are the same fact seen from two sides."
+    },
+    {
+     "q": "What does the sparing-and-sharing layer teach an individual buyer?",
+     "a": "Read its failure modes. A spare stored in the same substation as the asset it protects is not a spare. A sharing agreement whose trigger requires a presidential declaration - and has therefore never fired - is not availability. And the only mechanism that adds incremental supply rather than reallocating it is a private entity that, as of DOE's 2024 report, had not yet delivered a replacement unit."
+    },
+    {
+     "q": "Once a matched transformer is physically on hand, how long does replacement take?",
+     "a": "3-4 weeks, expedited: site prep, transport, assembly, vacuum, oil fill, a five-day settle and commissioning. The gap between that and a 128-week lead time is the whole subject. Nothing about installing a transformer is slow; everything about obtaining one is."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "6 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A buyer says the transformer shortage will resolve because prices are high enough to attract capacity. What is the strongest counter?",
+     "c": [
+      "Prices are not actually high - they are up less than 20% since 2019",
+      "The core-steel input is loss-making for the domestic producer at the clearing price, so the price signal does not reach the binding constraint",
+      "Capacity has already been added and lead times are falling",
+      "Demand will collapse before capacity arrives"
+     ],
+     "a": 1,
+     "why": "Prices are up sharply (power transformers +77% since 2019) and capacity has been announced ($1.8bn since 2023). The reason it does not clear is that the binding input - domestic GOES - is unprofitable at the price that clears, and the substitute product from the same mills (non-oriented steel for EVs) pays better."
+    },
+    {
+     "q": "Which factory test gates EVERY large power transformer rather than the first unit of a design?",
+     "c": [
+      "The temperature-rise (heat run) test",
+      "The short-circuit withstand test",
+      "The full-wave lightning impulse test on line terminals",
+      "None - large units are sampled"
+     ],
+     "a": 2,
+     "why": "Under IEC 60076-3:2013 the full-wave lightning impulse test is a routine test for units with Um above 72.5 kV, which is every large power transformer. The heat run (IEC 60076-2) is a type test, normally on the first unit of an order."
+    },
+    {
+     "q": "A project standardises on one transformer rating across all campus phases instead of optimising each. What has it actually bought?",
+     "c": [
+      "A lower purchase price per unit",
+      "Higher efficiency across the fleet",
+      "Fungible slots plus a shorter path through the test bay, at the price of a less-than-optimal unit",
+      "Exemption from the coordination study"
+     ],
+     "a": 2,
+     "why": "Slots become interchangeable across phases and the design is already type-tested, so it takes the shorter route through the bay. The cost is an oversized or less efficient unit. This is an engineering concession made for schedule, and it is the single largest lever a buyer has."
+    },
+    {
+     "q": "Which of these is a documented, published figure?",
+     "c": [
+      "US high-voltage test-bay count and average queue time",
+      "Bushing lead times of up to 130 weeks",
+      "The number of trained transformer winders the US is short",
+      "Approximately three Schnabel-type transport cars available in North America"
+     ],
+     "a": 3,
+     "why": "The Schnabel car figure - and the nine-month route-clearance process - is in DOE's 2024 report to Congress. The other three are not published anywhere: no test-bay register exists, the 130-week bushing figure circulates on vendor pages without attribution, and no labour-gap headcount has been published."
+    },
+    {
+     "q": "A storage supplier quotes a 40-week container lead time to a developer. What is missing?",
+     "c": [
+      "Nothing - the container is the long pole",
+      "The balance of plant: the step-up transformer, medium-voltage switchgear and protection sit in this same queue",
+      "The warranty term",
+      "The shipping route"
+     ],
+     "a": 1,
+     "why": "Switchgear averaged 44 weeks in the same survey that put power transformers at 128, and medium-voltage switchgear prices are up 50% since 2021. A container lead time without balance-of-plant lead time is half a schedule, and it is the error most likely to make a supplier look naive about the chain."
+    },
+    {
+     "q": "Why does the module set its review date to early 2027 rather than six months out?",
+     "c": [
+      "Six months is the standard cadence for all guidance modules",
+      "Because the first announced new US large-transformer line is scheduled to begin production then - the module's own nearest dated gate",
+      "Because the analyst surveys are annual",
+      "Because the policy rules land then"
+     ],
+     "a": 1,
+     "why": "The freshness rule sets review from a module's own nearest dated gate, not a fixed cadence. Whether the first of the announced plants starts on time - and at what initial rate against the 24-unit figure - is the first real evidence of whether the announced fix behaves as announced."
+    }
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Every load-bearing quantitative statement above, with its source. The full ledger, including the sourcing for claims that were checked and rejected, is in the analysis file in the repo.",
+   "rows": [
+    [
+     "Sole active domestic GOES supplier; meets 12-20% of domestic demand; not currently profitable",
+     "DOE, Large Power Transformer Resilience: Report to Congress, Jul 2024, p.15"
+    ],
+    [
+     "GOES and CTC copper each ~25% of final LPT production cost",
+     "2020 US Dept. of Commerce industry survey, cited DOE Jul 2024, p.13"
+    ],
+    [
+     "~80% of GOES used in US LPT manufacture was imported (2019)",
+     "DOE Jul 2024, p.15"
+    ],
+    [
+     "Highest grade GOES (PDR) available from a single manufacturer, Nippon Steel, Japan; not made in the US",
+     "DOE Jul 2024, p.15"
+    ],
+    [
+     "ATI exited GOES in 2016; GOES imports rose 155% the following year",
+     "DOE Jul 2024, p.15"
+    ],
+    [
+     "EV demand for non-oriented steel 'crowds out the less profitable domestic production of GOES'",
+     "DOE Jul 2024, p.14"
+    ],
+    [
+     "China GOES output 620,000 t in 2023 = 56% of global production; one producer 500,000 t",
+     "Fastmarkets, 20 Sep 2024"
+    ],
+    [
+     "GOES prices doubled since Jan 2020; transformer prices +60-80%; copper +50%",
+     "Wood Mackenzie (2024)"
+    ],
+    [
+     "US GOES prices +60-70% since 2020; ~$1.8bn North American OEM investment since 2023",
+     "PTR Inc., 17 Mar 2026"
+    ],
+    [
+     "Bushing failures ~18% of transformer failures",
+     "EPRI, Transformer Bushing Failure Investigation, Aug 2023, p.2, from CIGRE SC A2.37 TB 642"
+    ],
+    [
+     "~17-20% of transformer failures globally; 30% of generator step-up failures",
+     "EPRI Aug 2023, p.3"
+    ],
+    [
+     "Mechanisms: moisture intrusion via leaks, partial discharge, tracking, thermal ageing; test tap a failure site",
+     "EPRI Aug 2023, pp.3-4"
+    ],
+    [
+     "Bushings and OLTCs the components most consistently flagged as build-schedule bottlenecks",
+     "PTR Inc., 17 Mar 2026"
+    ],
+    [
+     "Strategic spares inventory holds LPTs and associated circuit breakers and bushings",
+     "DOE Jul 2024, p.24"
+    ],
+    [
+     "Lightning impulse on line terminals is a routine test for Um > 72.5 kV",
+     "IEC 60076-3:2013"
+    ],
+    [
+     "Temperature-rise test is a type test, first unit of an order, minimum 4 hours at steady top oil, all coolers connected",
+     "IEC 60076-2:2011"
+    ],
+    [
+     "Lead times: ~50 weeks 2021, ~120 weeks 2024, 80-210 week range for large units",
+     "Wood Mackenzie (2024)"
+    ],
+    [
+     "Q2 2025: power transformers 128 weeks, GSUs 144, switchgear 44; shortfall ~30% / ~10%",
+     "Wood Mackenzie, via POWER Magazine"
+    ],
+    [
+     "Lead times 'up to and exceeding 36 months'",
+     "DOE Jul 2024, p.12"
+    ],
+    [
+     "7-14 months pre-pandemic; well beyond 24 months now; 36-48 for specialised units",
+     "PTR Inc., 17 Mar 2026"
+    ],
+    [
+     "Demand 2019-2025: power transformers +119%, GSUs +274%, substation +116%, distribution +34%",
+     "Wood Mackenzie Sep 2025, via POWER Magazine"
+    ],
+    [
+     "Prices since 2019: power transformers +77%, GSUs +45%, some distribution +95%; breakers +47% and MV switchgear +50% since 2021",
+     "Wood Mackenzie, via POWER Magazine"
+    ],
+    [
+     "'Manufacturing facilities have a certain number of build slots... capacity cannot easily be expanded except by building a new facility'",
+     "DOE Jul 2024, p.14"
+    ],
+    [
+     "New factory construction 1-3 years; winding machines and core tables 1-2 years to obtain",
+     "DOE Jul 2024, pp.14-15"
+    ],
+    [
+     "2019: 137 LPTs (18%) built domestically for domestic use, 617 (82%) imported; ~40% utilisation; derived max ~343/yr",
+     "US Dept. of Commerce, cited DOE Jul 2024, p.14"
+    ],
+    [
+     "2019 US demand for units >60 MVA ~750; expected ~900/yr by 2027",
+     "DOE Jul 2024, p.13"
+    ],
+    [
+     "Charlotte NC plant: $150M, 24 LPTs/yr initially rising to 57/yr, plus 12->24 repair units; 82% of US LPTs imported",
+     "Siemens Energy, US manufacturing expansion disclosure"
+    ],
+    [
+     "Charlotte production start 'by early 2027' - this module's review gate",
+     "Siemens Energy / trade coverage, Aug 2025"
+    ],
+    [
+     "South Boston VA plant $457M, operational 2028; Eaton SC $340M targeting 2027; Prolec GE >$300M; Virginia Transformer $40M at +70% output",
+     "Trade coverage (ENR, Utility Dive, TD World, POWER), 2025-26"
+    ],
+    [
+     "Butler Works GOES project: four induction reheat furnaces replacing two gas-fired, federal cost share up to $75M, completion 2029",
+     "Cleveland-Cliffs / DOE OCED project disclosure"
+    ],
+    [
+     "~3 Schnabel-type cars in North America; route clearance can take nine months; 18-20 axles typical",
+     "DOE Jul 2024, p.19"
+    ],
+    [
+     "Expedited replacement of an available unit totals 3-4 weeks",
+     "DOE Jul 2024, Table 1, pp.21-22"
+    ],
+    [
+     "LPT service life ~40 years; average installed age ~40 years; >70% over 25 years (2014 estimate)",
+     "DOE Jul 2024, p.14"
+    ],
+    [
+     "Sharing agreement: >50 members, $10,000 enrollment, $7,500/yr, presidential-declaration trigger, never used, adds no capacity",
+     "DOE Jul 2024, pp.22-23"
+    ],
+    [
+     "Private spares entity: 5 classes, 7 ratings sets, Monte Carlo over 10,000+ events to 98% likelihood, 25-year hold, had not yet provided a replacement LPT",
+     "DOE Jul 2024, pp.24-25"
+    ],
+    [
+     "Impedance among the hardest parameters to standardise 'because of their impacts on the rest of the system (e.g., downstream system protection)'",
+     "DOE Jul 2024, p.25"
+    ],
+    [
+     "Self-supplied spares often stored in the same substations as in-service units",
+     "DOE Jul 2024, p.22"
+    ]
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "GOES",
+   "d": "Grain-oriented electrical steel - silicon steel rolled and annealed so its magnetic grains align with the rolling direction, giving the low core loss a transformer needs. Graded conventional (CGO), high-permeability (HI-B), domain-refined (PDR) and intermediate (MOH). One US producer; roughly 80% of the GOES used in US transformer manufacture was imported as of 2019."
+  },
+  {
+   "t": "PDR",
+   "d": "Permanent domain-refined GOES - the highest grade, laser- or mechanically-scribed to reduce core loss further. Available from a single manufacturer worldwide (Nippon Steel, Japan) and not produced in the United States."
+  },
+  {
+   "t": "NOES",
+   "d": "Non-oriented electrical steel - the grade used in motors and generators, including electric-vehicle traction motors. It competes with GOES for the same domestic production capacity and is more profitable, which is why DOE says domestic NOES demand crowds GOES out."
+  },
+  {
+   "t": "CTC",
+   "d": "Continuously transposed conductor - the specialty copper wire used for transformer windings, in which many enamelled strands are transposed along their length to suppress circulating currents. With GOES, one of the two inputs that each account for roughly a quarter of a large power transformer's production cost."
+  },
+  {
+   "t": "LPT",
+   "d": "Large power transformer - in the US supply-chain literature, a transformer above roughly 60 MVA. Custom-engineered to order, weighing hundreds of tonnes, and the item whose lead time most often sets a project's critical path."
+  },
+  {
+   "t": "GSU",
+   "d": "Generator step-up transformer - the transformer between a generating unit's terminals and the transmission system. Highly specific to its plant and therefore of little use to anyone else, which is why a GSU failure is a plant outage rather than an inventory problem. Its lead times run longer than substation units and 30% of its failures start at a bushing."
+  },
+  {
+   "t": "bushing",
+   "d": "The insulated terminal that carries an energised conductor through the grounded transformer tank wall without connecting to it - the highest-stress dielectric interface on the machine. Usually oil-impregnated paper: a kraft-paper condenser body with foil electrode layers, dried, vacuumed, oil-impregnated and held between porcelain sheds."
+  },
+  {
+   "t": "test tap",
+   "d": "Also the measuring or tan-delta tap. A connection on the bushing's mounting flange that brings the outermost foil electrode out so capacitance and power factor can be measured offline, or partial discharge monitored online. In service it is grounded through its cap - and an improperly grounded cap is itself a documented failure site."
+  },
+  {
+   "t": "OLTC",
+   "d": "On-load tap changer - the mechanism that changes a transformer's turns ratio to correct output voltage without interrupting the load. The only substantial moving part in the machine, correspondingly the part most likely to need maintenance, and one of the two components most consistently flagged as a build-schedule bottleneck."
+  },
+  {
+   "t": "test bay",
+   "d": "The screened high-voltage hall where a finished transformer passes its factory tests: impulse generator, variable-frequency source for the induced-voltage test, partial-discharge instrumentation and precision loss measurement. Single-occupancy, capital-intensive, and the last gate a unit passes before it becomes a shippable asset."
+  },
+  {
+   "t": "impulse test",
+   "d": "A factory dielectric test applying a standard steep-fronted surge to simulate a lightning transient. Under IEC 60076-3:2013 the full-wave test on line terminals is a ROUTINE test for units above 72.5 kV - meaning every large power transformer passes through a test bay - and it is the factory test most likely to reveal a defect."
+  },
+  {
+   "t": "heat run",
+   "d": "The temperature-rise test (IEC 60076-2:2011), which proves the cooling design by holding load until top-oil temperature is steady, for a minimum of four hours, with all coolers connected. A TYPE test, normally run on the first unit of an order, and on a large unit it occupies the test bay for days."
+  },
+  {
+   "t": "build slot",
+   "d": "A position in a transformer factory's finite production schedule. DOE's framing: each slot can take a large unit, a smaller transformer or a core refurbishment, and 'capacity cannot easily be expanded except by building a new facility.' In a shortage the slot, not the transformer, is what a buyer is actually purchasing."
+  },
+  {
+   "t": "Schnabel car",
+   "d": "A specialised railcar that grips a load at each end so the load itself becomes a structural member, used to move transformers far heavier than a standard car's ~100-ton limit. Large power transformers typically need 18- or 20-axle versions; DOE reports only about three such cars available in North America and a route-clearance process that can take nine months."
   }
  ]
 };

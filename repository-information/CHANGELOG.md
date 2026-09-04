@@ -3,11 +3,150 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 71/100`
+`Sections: 72/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.55r] — 2026-09-04 04:01:12 PM EST
+
+> Commission the G4 guidance module on Opus 5 xhigh as a fresh session: "The grid-equipment
+> shortage: GOES, bushings, test bays, lead times". This is an INDUSTRY GUIDANCE session, not a
+> Profiler session. It closes the last remaining ask on CLASSROOM-CURRICULUM-PLAN.md §6 row G4.
+>
+> There is NO model rule to record. §2 of PROFILER-COVERAGE-PLAN.md assigns models for Profiler
+> sessions; §8 contains no guidance-module row at all — which is precisely why G4 is "structural"
+> and why no scheduled session can close it. Do not add a §8 row for this work.
+>
+> READ FIRST, before writing anything:
+>
+> 1. `.claude/rules/industry-guidance.md` — all ten steps. It is short and it is the whole
+>    procedure. Steps 4, 5, 9 and 10 are the ones with traps in them.
+> 2. CLASSROOM-CURRICULUM-PLAN.md §6 — the G4 row in full, including its three dated re-check
+>    parentheticals, AND the "Standings — read this before the trail below" block above the table.
+>    §5's failure map, rows 1, 2, 3 and 4, is the map this module has to line up with.
+> 3. The two existing modules this one sits beside: `guidanceDocUtilityAidc_()` (the demand side of
+>    the same story) and `guidanceDocEo14420_()` (the newest module, and the closest precedent for
+>    a supply-restriction topic) in the PROJECT block of `googleAppsScripts/Profiler/Profiler.gs`.
+>    Read their meta blocks, their section kinds and their `sales` notes before authoring.
+> 4. `repository-information/industry-guidance/power-infrastructure-aidc-analysis.md` — read its
+>    first fifteen lines specifically. Its `**Provenance:**` line is the convention you will need.
+>
+> CORRECTING AN ASSUMPTION YOU MAY INHERIT: an earlier session's note said this module "needs a
+> source document from the developer." It does not. Only TWO of the seven existing modules have an
+> ingested source under `industry-guidance/sources/` — the NVIDIA 800 VDC white paper and the
+> EO 14420 order text. The other five are teaching syntheses that declare what they are in a
+> `**Provenance:**` line. Step 1 of the Industry Guidance Command (ingest the source) does not apply
+> here; skip it and declare provenance honestly instead. This module is neither a document ingest
+> nor a pure internal synthesis — it is research-based synthesis over public sources plus
+> already-verified internal material, and the Provenance line should say exactly that.
+>
+> THE TASK, in the order the rules give it:
+>
+> - **Research the shortage as a supply system, not as a news story.** The four nouns in the row's
+>   own title are the spine: grain-oriented electrical steel (who makes it, how much, why the
+>   capacity is what it is), bushings (why they are the transformer's most common failure point AND
+>   a separate supply bottleneck), test bays (the constraint nobody sees — a transformer that cannot
+>   be tested cannot ship), and lead times (with the ranges dated and sourced, never a single
+>   remembered number). Add the two that the failure map demands: the queue/slot mechanics that turn
+>   a lead time into a schedule risk, and what a buyer can actually do about it.
+> - **Write the analysis markdown** at `repository-information/industry-guidance/
+>   grid-equipment-shortage-analysis.md` — never deployed, and the source of truth. Follow the shape
+>   in step 3 of the rules: what this is → executive read → known-vs-new against the current
+>   curriculum → per-topic deep dives with advantages and disadvantages made explicit → what it means
+>   for the active engagement → a claims ledger with every quantitative claim carrying its source →
+>   what the record does NOT say.
+> - **Author the in-app module** as a new `guidanceDocGridEquipment_()` in the PROJECT block of
+>   `Profiler.gs`, registered in `guidanceDocs_()` in lane order. Recommended `group`: **"The AI
+>   Data-Center Wave"** — it is the supply-side counterpart to `utility-aidc-procurement-2026-08`
+>   and belongs next to it. Override that if the content argues otherwise, but say why in the
+>   CHANGELOG. Suggested id: `grid-equipment-shortage-2026-09`.
+> - **Add the Scraper interest seed** (step 9) to `SCRAPER_INTEREST_TOPIC_SEEDS` in
+>   `googleAppsScripts/Scraper/Scraper.gs`: `key: 'topic-grid-equipment-shortage'`,
+>   `source: 'guidance:<module-id>'`. Read the EO 14420 seed's comment first — its terms are the
+>   order's OWN vocabulary rather than paraphrase, and that is deliberate. Pick discriminating terms
+>   the trade press actually uses ("grain-oriented electrical steel", "GOES", "bushing", "test bay",
+>   "transformer lead time"), not generic ones like "supply chain".
+>
+> THE TRAPS THIS TOPIC CARRIES:
+>
+> - **Content scope (developer directive, 2026-08-29): modules give guidance to supplier and buyer
+>   GROUPS, never to a single named company.** This is the trap this module is most likely to fall
+>   into, because a shortage story pulls hard toward "buy from X, avoid Y". Statutory facts that
+>   name companies are fine as objective information; recommendations are not. Company-specific
+>   analysis reaches admins through a report's `guidanceOverlays[]`, not through module content.
+> - **Do not invent a number.** Lead times, GOES tonnage and test-bay counts are exactly the figures
+>   that drift in trade press and get repeated without a primary source. Every quantitative claim in
+>   the module needs a source in the analysis's claims ledger, and anything you could not verify
+>   goes in the "what the record does NOT say" section rather than into the module hedged.
+> - **`reviewBy` comes from this module's OWN nearest dated gate** (step 10) — a stated capacity
+>   expansion coming online, a published lead-time survey's next edition, a dated regulatory action —
+>   NOT a fixed six months. Say in the CHANGELOG which gate you picked and why.
+> - **Public sources are already in the corpus and should be used rather than re-researched.** The
+>   Grid Technologies spine in `siemens-energy.study.json` (transformer lead times as the buyer's
+>   problem, the six instruments against a three-year transformer), `powell-industries.profile.json`,
+>   and the grid-equipment content in `hitachi-energy`, `ge-vernova`, `abb` and `mitsubishi-electric`.
+>   This module is the one place the *supply* side of that material becomes teachable.
+> - **New modules need no page changes.** `Profiler.html`'s guidance renderer already handles every
+>   section kind, `{{term}}` tooltips, `sales` notes, company chips, search and the unified glossary.
+>   Do not bump the page version unless you actually change the renderer.
+>
+> VERIFY BEFORE COMMITTING (step 7): `node --check` on a `.js` copy of `Profiler.gs`;
+> `scripts/check-gas-inner-scripts.js`; and a Playwright render of the module through a direct
+> `gdRenderDoc()` invocation with the new JSON, auth bypassed with `bypass_csp` plus the localStorage
+> role. The Playwright harness notes in SESSION-CONTEXT.md still apply: threaded HTTP server,
+> `executable_path='/opt/pw-browsers/chromium'` (`playwright install` is NOT the fix), and an
+> injected style hiding `#ov-authwall`.
+>
+> THE BOOKKEEPING THIS SESSION OWES, IN THE SAME COMMIT AS THE MODULE:
+>
+> - **Flip §6's G4 row to `**Closed** v<this repo version>`** with a dated re-check parenthetical in
+>   the form the other rows use. The register's own rule is that a row is not closed until someone
+>   re-runs its check and dates it there — so actually re-check all three of G4's asks, do not just
+>   assert the third one is done.
+> - **Update the "Standings — read this before the trail below" block.** It currently names G4 and
+>   G6 as the two structural rows and recommends "G4 then G6, and nothing else". The moment this
+>   module lands that block is wrong, and it must become "G6, and nothing else". THIS IS THE POINT
+>   THE PREVIOUS SESSION SPENT AN ENTIRE COMMIT REPAIRING: two rows (G2 and G5) sat at Partial for
+>   four and five repo versions because the work that closed them landed and nobody re-ran the check.
+>   Do not recreate that failure on the row you are closing.
+> - **Append a dated "Targeted re-run of G4" paragraph** below the standings, in the form the v04.51r
+>   and v04.52r paragraphs use. Do NOT rewrite any existing paragraph — that trail is append-only,
+>   and each entry is true as of its own date.
+> - Versioning: content lives in `Profiler.gs`, so bump the **Profiler GAS** version
+>   ([PC-GS-VERSION] #1) and, because of the seed, the **Scraper GAS** version too. Public GAS
+>   changelog entries stay generic per changelog-security — do not name the topic publicly. README
+>   tree entry for the new analysis markdown. Normal Pre-Commit and Pre-Push checklists; bump the
+>   repo version on the push commit; one push commit; push on a `claude/*` branch.
+>
+> AT THE END, TELL ME PLAINLY: whether G4 closes on the re-check of all three of its asks, and what
+> the register's commissioning backlog is once it does.
+
+### Added
+
+- **`repository-information/industry-guidance/grid-equipment-shortage-analysis.md`** — the analysis file and source of truth for the new guidance module (never deployed). Its `**Provenance:**` line states exactly what it is: **research-based synthesis over public sources plus already-verified internal material — neither a document ingest nor a pure internal synthesis.** Primary public sources are DOE's July 2024 *Large Power Transformer Resilience: Report to Congress*, EPRI's August 2023 *Transformer Bushing Failure Investigation* white paper, IEC 60076-2:2011 and IEC 60076-3:2013, the Cleveland-Cliffs / DOE OCED Butler Works project disclosures and Siemens Energy's own US manufacturing disclosures; dated analyst and trade reporting comes from Wood Mackenzie (relayed by POWER Magazine, with the relay stated), PTR Inc. and Fastmarkets; internal material is the Grid Technologies spine in `siemens-energy.study.json` plus the `hitachi-energy`, `ge-vernova`, `mitsubishi-electric` and `powell-industries` guides. **Nothing was added under `industry-guidance/sources/`** — step 1 of the Industry Guidance Command does not apply, and the assumption that it did is corrected in §6's trail. Twelve sections: what this is → executive read → known-vs-new against the current curriculum → per-topic deep dives (GOES, bushings, test bays, lead times) each with advantages and disadvantages made explicit → slot mechanics → buyer instruments → what it means for the active engagement → a claims ledger of ~60 sourced quantitative claims grouped by topic → a nine-item *what the record does NOT say* → the freshness-gate rationale.
+- **`guidanceDocGridEquipment_()` in `googleAppsScripts/Profiler/Profiler.gs`** — module `grid-equipment-shortage-2026-09`, *The Grid-Equipment Shortage: GOES, Bushings, Test Bays, Lead Times*, registered in `guidanceDocs_()` immediately after `guidanceDocUtilityAidc_()`. **Sixteen sections**: the four constraints in causal order (`prose`); GOES as the material that will not answer a price signal (`prose`); bushings as the failure point that is also a queue (`prose`); test bays as the gate at the exit (`prose`); the dated lead-time series (`table`, 10 rows); slot mechanics (`prose`); what the announced capacity actually adds (`bars`, 6 items); the dated gates (`timeline`, 12 items across three lanes); each constraint with what helps and what does not (`table`); the buyer's instruments honestly priced (`callout`); the sparing-and-sharing layer (`table`); what it means by group (`proscons`, 5 cards); what the record does NOT say (`callout`, 8 items); 12 flashcards; a 6-question self-test; and a 37-row claims ledger. Fourteen `{{term}}` glossary entries (GOES, PDR, NOES, CTC, LPT, GSU, bushing, test tap, OLTC, test bay, impulse test, heat run, build slot, Schnabel car), all used and all resolving. Four `sales` notes.
+- **`topic-grid-equipment-shortage` in `SCRAPER_INTEREST_TOPIC_SEEDS`** (`googleAppsScripts/Scraper/Scraper.gs`) — step 9 of the guidance rules, `source: 'guidance:grid-equipment-shortage-2026-09'`. Terms are the trade's own supply-side nouns: `grain-oriented electrical steel`, `GOES`, `bushing`, `test bay`, `transformer lead time`, `on-load tap changer`, `large power transformer`. Its comment records why `supply chain` and `shortage` are deliberately absent (both match everything and pad the topic band, the trap the neighbouring `supply chain`/`warranty` comments already record) and why the acronym is kept alongside the spelled-out form (steel and utility trades use `GOES` in headlines where the full phrase never appears). Deliberately discriminated against the existing `topic-grid-infrastructure` seed, which already carries `transformer shortage` from the demand side.
+
+### Changed
+
+- **`repository-information/CLASSROOM-CURRICULUM-PLAN.md` §6 — G4 flipped to `**Closed** v04.55r`, and all three of its asks were re-checked against the corpus rather than asserted.** Ask 1: `siemens-energy.study.json` holds 9 Grid Technologies sections inside an 18-section guide (landed v04.51r, re-confirmed). Ask 2: `powell-industries.profile.json` at profileVersion 2 under `supplier`, with `powell-industries.study.json` beside it (landed v04.48r, re-confirmed). Ask 3: `guidanceDocs_()` returns **eight** modules where it returned seven.
+- **The Standings block was rewritten in the same commit**, which is the point of the exercise. It named G4 and G6 as the two structural rows and recommended "G4 then G6, and nothing else"; it now reads **seven closed** (G1, G2, G3, G4, G5, G8, G9), one Partial (G7), two Open (G6, G10), two standing judgments (G11, G12), and **"G6, and nothing else."** It also records that G6 is the *harder* of the two structural rows — G4 went first because half of it was already done and its public sources were in the corpus, and G6 has neither advantage. This is the failure the v04.54r session spent a whole commit repairing (G2 and G5 sat at Partial for four and five repo versions after the work closing them had landed); not recreating it on the row being closed was an explicit requirement of this session.
+- **A fifth dated trail paragraph, "Targeted re-run of G4 (2026-09-04, v04.55r)", was appended** below the standings. No existing paragraph was rewritten — the trail is append-only and each entry is true as of its own date; the intro line was updated from "four paragraphs" to "five" and now states the append-only rule explicitly. The paragraph records two corrections: that the v04.51r entry's implication of a needed source document was wrong (only two of the eight modules have an ingested source; the other six declare provenance in a line), and that the v04.52r entry's scheduled-versus-structural distinction was right and is why this session existed.
+- **No `PROFILER-COVERAGE-PLAN.md` §8 row was added, and none should be.** The commissioning prompt said so and the register agrees: adding one would convert the last remaining structural ask into a scheduled one on paper without making it so in fact. §2's model rule is untouched for the same reason — it assigns models for Profiler sessions and this was not one.
+- `Profiler.gs` v01.34g → **v01.35g**; `Scraper.gs` v01.99g → **v02.00g**; both `gs-versions` files synced. **`Profiler.html` was NOT bumped** — the guidance renderer already handles every section kind, `{{term}}` tooltips, `sales` notes, company chips, search and the unified glossary, so a new module needs no page change, and the render test confirmed it.
+- README tree gains the new analysis markdown under `industry-guidance/`.
+
+### Notes
+
+- **The `group` choice, as the prompt asked to have justified.** **"The AI Data-Center Wave"**, as recommended, and the content argued for it rather than against: the module's purpose in the curriculum is to be the *supply* side of the story `utility-aidc-procurement-2026-08` tells from the demand side, its buyer countermeasures are AIDC procurement moves, and the lane grouping is what physically places it beside its counterpart in the library view. The alternative — "Technology Foundations", on the grounds that GOES metallurgy and factory testing would be true without AI — was rejected because the module is framed throughout around why the equipment a project needs is late, which is an AIDC-wave concern.
+- **The `reviewBy` gate, and why.** **`2027-03-31`** — the module's own nearest dated gate is Siemens Energy's Charlotte plant beginning large power transformer production, reported as "by early 2027". It is the first of the ~$1.8bn of announced North American capacity additions scheduled to actually produce a unit, and it carries the module's central arithmetic: 24 units initially rising to 57/year at full capacity, against ~900 units/year of expected US demand — about 6%. Whether it starts on time and at what rate is the first real evidence of whether the announced fix behaves as announced. Rejected alternatives, recorded in the analysis: Hitachi Energy's South Boston plant (2028) and Eaton's South Carolina facility (2027, no month) are later or less precisely dated; the Butler Works GOES project (2029) is furthest out and its date is disputed across sources; Wood Mackenzie's lead-time survey is a continuous quarterly series rather than a gate. A fixed six months would have been a cadence, which step 10 forbids.
+- **Content scope held.** The module gives guidance to **groups** only — transformer and switchgear OEMs, data-center developers and large-load buyers, utilities and transmission owners, BESS/inverter/on-site power suppliers, and component suppliers. Companies appear only where the record names them (who announced which plant, at what value, for what output), and the module says so in its own text and in its revision note. There is no recommendation anywhere to buy from or avoid any company — which was the trap flagged as most likely for a shortage topic. The five auto-rendered company chips are Siemens Energy, Hitachi Energy and Eaton, all inside capacity-announcement facts.
+- **"Do not invent a number" — what that cost.** Nine items went into *what the record does NOT say* instead of into the module: there is **no public register of high-voltage test-bay capacity, utilisation or queue time** anywhere, and no expansion announcement discloses bays added, so the bay is taught as a mechanism sourced to the standards (the lightning impulse test is a **routine** test above 72.5 kV under IEC 60076-3, so every large unit passes through one; the heat run is a **type** test under IEC 60076-2) with no number attached to the queue; the widely-circulated "bushings run up to 130 weeks" figure appears only on vendor pages with no attribution and is omitted; the "single US on-load tap changer producer" claim could not be verified and is omitted; the bushing failure share is stated as a band (~18%, ~17–20% globally, 30% for GSUs) because published figures span 15–50% depending on population; no current national GOES tonnage could be verified, so DOE's *share of demand met* framing (12–20%) is used instead; the Wood Mackenzie 2025 figures are flagged as relayed through a trade journal rather than read directly; the Butler Works completion date is inconsistent across sources and the primary page's 2029 is used; no source quantifies the winder/tester labour gap; and no crossover year is forecast.
+- **A corroboration worth recording.** DOE's account of the private spares programme reports that **impedance** is among the hardest parameters to standardise "because of their impacts on the rest of the system (e.g., downstream system protection)" — independently reaching the same conclusion `mitsubishi-electric.study.json` teaches from the buyer's side, that a transformer substitution is never only a transformer substitution. Two unrelated sources, one conclusion.
+- **Verification (step 7).** `node --check` on `.js` copies of both `Profiler.gs` and `Scraper.gs` — clean. `scripts/check-gas-inner-scripts.js` — 9 files, 86 inner `<script>` blocks, all parse. JSON validation of the module object plus a tooltip audit: 14 glossary terms, 14 markers used, **0 unresolved and 0 unused**. Playwright render through a direct `gdRenderDoc()` invocation with the JSON extracted from `Profiler.gs` itself (threaded HTTP server, `bypass_csp`, `localStorage ov_note_role='admin'`, injected style hiding `#ov-authwall`, `executable_path` into `/opt/pw-browsers`): **46 785 characters of rendered text, 4 tables / 59 rows, 12 timeline dots in the three CVD-validated hues (gold #b18f35, rose #cc5f75, blue #4f83e6), 6 bars, 24 tooltips, 5 pros/cons cards, 12 flashcards, 5 company chips, 4 "Sales angle" notes, the review-by chip rendering, 0 unresolved `{{term}}` markers and zero page errors.** Standard harness: Profiler **PASS**.
+- **One pre-existing failure, not caused by this change.** `scripts/playwright-harness.py Scraper` reports a CSP image-load refusal for a `lightaisolutions.github.io` logo URL when the page is served from `127.0.0.1` rather than the Pages origin. `Scraper.html` was not touched in this commit — only `Scraper.gs`, which the harness never loads — so the result is independent of this change and environmental to serving the page off-origin.
 
 ## [v04.54r] — 2026-09-04 03:07:23 PM EST
 
