@@ -6,6 +6,56 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-04 04:40 AM EST
+**Repo version:** v04.51r (started at v04.50r — one push commit, `4a371aa`, plus this context write)
+**Branch:** `claude/section8-guide-revisions-opus5-7y6n3p`
+**Model:** **Opus 5 xhigh — §2 assigns ALL study-guide work on existing dossiers to Opus natively, so there is NO substitution to record.** The §8 Guide column reads plain `✓ · v04.51r` on all four rows
+
+**What we worked on — the three §8 guide revisions plus the `narada` backfill, landed as v04.51r in one data-only push. This was a GUIDE session: no new dossiers, no new companies, no profile writes.**
+
+- **`vertiv.study.json` 6 → 18 sections.** The guide was cooling-only. Ten new sections teach the UPS as **the machine and the transaction**: what a `power module` physically is and the three things engineered into the *slot* (current sharing by droop, precharge/isolation decoupling, touch safety); module/frame/unit/system/path as five different purchases; capacity-on-demand, which defers about a third of the cost rather than most of it; the ratings ladder from a 33 kW rack shelf to a 50 MW prefab block; a twelve-row datasheet reading (overload rating, short-circuit contribution, THDi, battery charge-current limit, floor loading, IEC 62443); the eleven-step procurement sequence with **submittal approval named as the silent schedule killer**; and what moving the store into the rack distributes
+- **`schneider-electric.study.json` 6 → 17 sections.** Nine new sections on the deliberately different axis — **the system and the ladder**: the five redundancy arrangements above the machine, the installed-MW-per-protected-MW arithmetic (N = 1.0 · block-redundant and N+1 at 4+1 = 1.25 · distributed redundant = 1.5 · 2N = 2.0), the maintenance day as the real design case, the distribution between the UPS output and the server's two cords read as a *redundancy* problem, one UPS idea across four orders of magnitude, and the battery that earns
+- **`siemens-energy.study.json` 6 → 18 sections.** Ten new Grid Technologies sections teaching **the network as a system**: why the wire not the plant is the constraint and the three limits that bind under N-1; terminals → GCB → GSU → bay → switchyard → point of interconnection as a procurement sequence, read twice (once for a plant, once for a campus); AIS vs GIS vs SF6-free; the four reasons to build a DC link; inertia and system strength with the synchronous condenser against the STATCOM; and the buyer's six instruments against a 36-month transformer
+- **`narada.study.json` new, 13 sections** — the backup battery from the **cell's** side: the sprinter and the distance runner, electrode thickness as the choice that splits them, the constant-power specification (watts per cell, to an end voltage, at a temperature) and why amp-hour sizing comes up short, AGM/lead-carbon and why lead survived partial-state-of-charge duty, the string and its worst cell (conductance screening vs a real capacity test), and the 500 ms pulse duty
+- **Lesson plans** under `study-prep/vertiv/`, `.../schneider-electric/`, `.../siemens-energy/` and `.../narada/` — **four new folders; none of these four companies had one before**
+- **Concepts 401 → 464** (+62, plus 2 added on validator feedback = 465 final)
+
+**The register answer, verified against the corpus rather than remembered:**
+
+- **G3 CLOSES** (v04.51r). Both revisions landed; the dossier half was already satisfied twice over by Piller (v04.42r) and Mitsubishi Electric (v04.48r)
+- **G9 CLOSES** (v04.51r). The Narada guide is the battery half of the DC bus; Vicor (v04.44r) was the silicon/shelf half. `inside-the-rack` and `the-800-vdc-shift` can now pin `study:narada`
+- **G4 is TWO OF THREE and cannot close from Profiler work at all.** Siemens Energy revision ✓, Powell dossier ✓ (v04.48r). The third ask is a guidance module *"The grid-equipment shortage: GOES, bushings, test bays, lead times"*. Verified: `guidanceDocs_()` still returns the same seven modules, and **§8 of the coverage plan contains no guidance-module row anywhere**. §5 of that plan predicts G4 will close at the phase re-run — that prediction is wrong, and the §6 register note now says so. **The Industry Guidance Command's step 1 requires an UPLOADED source document**, so this cannot be handed to an unattended session; the developer has to bring a document
+- Only G3, G4 and G9 were re-run. G2, G5, G6, G7, G8, G10, G11, G12 keep their Phase-A dates; the full re-run is still owed at the close of Phase B
+
+**Key decisions and positions taken:**
+
+- **The vertiv/schneider split was decided explicitly and stated in both guides' opening callouts**, as the brief required: Vertiv = the machine and the transaction, Schneider = the system and the ladder. The split was chosen *after* reading Rehlko, Piller, Mitsubishi Electric and Eaton in full — Rehlko already owns monolithic-vs-modular, the four clocks and the three sizing numbers, and Mitsubishi Electric owns the efficiency curve and the VRLA/lithium table, so neither revision re-argues any of it
+- **Nothing was deleted from the three revised guides.** All six pre-existing sections in each are byte-identical (verified with `git show HEAD:`), and all 36 legacy top-level `flashcards[]` cards were preserved by folding them into the new inline `drill` sections. Chesterton's Fence held: the temptation was to rewrite the mechanically-lifted v1 prose, and it was resisted because the brief asked for an addition, not a rewrite
+- **Three concept candidates were dropped as alias collisions rather than added**: `maintenance bypass` and `wrap-around bypass` already resolve through `static bypass`, `switchyard` through `substation`, `reactive power` through `power factor`. The existing definitions were checked and found adequate; the distinctions that mattered (a manual wrap-around cabinet vs the automatic static switch) are taught in plain prose instead
+- **No registry sync and no graph rebuild were run, deliberately** — no `*.profile.json` was touched, so both would have been no-ops. Reported as a decision rather than silently skipped, because the brief asked for exactly that. No calendar rows, no Profiler page or GAS bump
+
+**Environment notes — TWO NEW CORRECTIONS beyond the inherited C3 set:**
+
+- **The Profiler route is `#<slug>`, NOT `#/company/<slug>`.** The C3 notes never recorded the hash format and the first harness run timed out waiting for `#ov-study-btn`
+- **The image's Playwright browser build is 1194; the pip package (1.62) expects 1234.** Launch with `executable_path='/opt/pw-browsers/chromium'` (plus `--no-sandbox`). **`playwright install` is not the fix** and should not be attempted
+- Everything else from C3 held exactly and should be carried forward: threaded HTTP server or `page.reload()` deadlocks; `add_init_script` setting `localStorage ov_note_role='admin'`; an injected style hiding `#ov-authwall`; `accounts.google.com` fulfilled with an empty script; `ensure_ascii=False` for marker comparison; tabs are `id="ov-tab-<key>"`; assert `.ov-rel-src` against *sourced* relationships only; control-test an untouched slug first to set the console baseline
+- **NEW AUTHORING TRAP: a `{{term}}` marker must carry the concept's TERM, not its slug.** `{{mobile-substation}}` does not resolve where the registry holds `mobile substation`. It is completely silent while authoring — a slug reads like a plausible marker — and it produced **48 errors across 25 distinct terms in two guides**. `check-profiler-study.py` catches every one, and a slug→term repair pass fixes them mechanically
+- The indent trap did not repeat: `*.profile.json` / `*.study.json` at indent=1 with **no** trailing newline, `profiler-concepts.json` at indent=2 **with** one — verified against live files before writing. `repository.version.txt` **does** carry a trailing newline (caught at the pre-stage diff review)
+- **Authoring the guides as one Python builder script each** (12–18 sections per tool call) rather than many small Edits is why the session ran 41m against a 75m estimate. The per-tool-call heuristics do not model this pattern
+
+**Verification, all green at close:** study checker `0 errors, 80 guides / 465 concepts` · Playwright across all four guides plus an untouched control slug (`rehlko`) — zero page errors, zero new console errors, zero literal `{{markers}}` rendered, every `{{term}}` resolving in the DOM (145 distinct concepts; 204 counted per guide) and every section title present, 18/18 · 17/17 · 18/18 · 13/13 sections rendered
+
+**Where we left off:** `4a371aa` is merged to `main` (v04.51r) and the branch was deleted by the auto-merge workflow. The developer then asked for the next paste-in prompt, which was delivered in chat for **C11** — Oklo · Trane Technologies · McCarthy — with its own entity-discipline notes (Oklo is pre-revenue and no Aurora is operating; Trane Technologies is not just Trane and the data-centre line is a minority of revenue; McCarthy is private and employee-owned, so expect a collection gap on revenue and mix).
+
+**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · `START_OF_RESPONSE_BLOCK` On · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · Profiler `v01.82w` / `v01.34g` (untouched — data-only session) · **106 dossiers · 80 study guides · concepts 465 · graph 678 edges (unchanged) · calendar 67 rows (unchanged) · execs 328 images / 62 companies · CHANGELOG 68/100** · 1 active reminder (the Xcel Fable-vs-Opus model test) · TODO empty
+
+**Recommendation for next session:**
+
+- **Run C11 — Oklo, Trane Technologies and McCarthy — as one Opus 5 xhigh dossier session.** It is the only remaining Opus session that closes a register row: Oklo closes **G8** outright if its guide teaches what is genuinely new about an SMR as engineering (factory fabrication vs site construction, HALEU, the licensing path as the schedule, load-following, build-own-operate) rather than telling a company story, and Trane delivers the chiller half of **G7** — whose CDU half is CoolIT in Fable session **B10**, so G7 cannot close this session and the report at the end should say so plainly. After C11, every register row Opus can close is closed, and the remaining blockers are Fable's B10 (G7, G10) and a **guidance session** for G4's grid-equipment-shortage module, which needs a source document from the developer.
+**To continue:** type `run Phase C11 on Opus 5 xhigh`
+
+## Previous Sessions
+
 **Date:** 2026-09-04 03:30 AM EST
 **Repo version:** v04.50r (started at v04.49r — one push commit, `5ff34d9`, plus this context write)
 **Branch:** `claude/phase-c3-infineon-flex-wc40ov`
@@ -64,63 +114,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - **Run the three §8 guide revisions — `vertiv` and `schneider-electric` each gaining a UPS section, `siemens-energy` gaining a grid-technologies section — plus the `narada` backfill, as one Opus 5 xhigh session.** It is the highest-leverage session left in the whole program: it closes **G3** outright, closes **G9**, and delivers the only remaining guide third of **G4**, with no research budget beyond re-prep on dossiers that already exist. Then re-check G3, G4 and G9 and date them in `CLASSROOM-CURRICULUM-PLAN.md` §6.
 **To continue:** type `run the three §8 guide revisions plus the narada backfill on Opus 5 xhigh`
-
-## Previous Sessions
-
-**Date:** 2026-09-04 01:20 AM EST
-**Repo version:** v04.49r (started at v04.47r — two push commits: `97a42db` = v04.48r, the C2 data push; then v04.49r, the renderer fix + this context write)
-**Branch:** `claude/phase-c2-profiler-coverage-hu3e60`
-**Model:** **Opus 5 xhigh — the plan's own assignment for Phase C, so there is NO substitution to record.** §2 assigns Phase C to Opus natively; the §8 Model column reads plain `Opus 5 xhigh` on all three C2 rows
-
-**What we worked on — Phase C2 of `PROFILER-COVERAGE-PLAN.md`, then a page-layer bug the verification surfaced:**
-
-**Push 1 — v04.48r (`97a42db`), the C2 deliverable, data-only:**
-
-- **Three `supplier` dossiers** (schema v7, profileVersion 1, intel-briefing prose): `mitsubishi-electric` (76 sources, 62% first-party, 17 relationships, 11 decision makers, 8 key judgments), `powell-industries` (67 sources, 75% first-party, 7 relationships, 10 people, 9 judgments), `mitsubishi-power` (77 sources, 68% first-party, 11 relationships, 11 people, 10 judgments)
-- **Three study guides** with `where-it-fails` sections: the static UPS as a machine (ME), the medium-voltage room (POWL), the gas turbine read *against* GE Vernova and Siemens Energy rather than taught as a new category (MPower). Each opens with an explicit "what this deliberately does NOT repeat" list naming the adjacent guides
-- **41 new shared concepts** in `profiler-concepts.json` (311 → 352). No local glossaries
-- **Eight backfilled dossiers** whose links became curatable once the C2 slugs existed, each with a source that states the link explicitly: `ge-vernova`, `siemens-energy` (v4→v5) to mitsubishi-power; `eaton`, `abb`, `schneider-electric`, `vertiv` (v4→v5) and `piller` (v1→v2) to the C2 suppliers; `prevalon` (v3→v4). Prior versions archived and indexed
-- **CHANGELOG rotation fired** at 101 sections — the whole 2026-08-29 group (36 sections) moved with SHA enrichment on every header; `Sections: 100/100` → `65/100`
-
-**Push 2 — v04.49r, a real reader-facing bug the Playwright verification exposed:**
-
-- `gdProsCons` set `card.t` / `card.meta` and `gdBars` set `it.label` / `it.sub` with **`textContent`**, not the `gdFmt` formatter every sibling field uses. A `{{term}}` in any of those four fields rendered to the reader as **literal braces**. A DOM probe confirmed it visibly on **10 guides / 18 markers** — `aep`, `cummins`, `dominion-energy`, `entergy`, `oncor`, `piller`, `rehlko`, `rolls-royce-power-systems`, `southern-company` and (before the fix) `mitsubishi-electric`
-- **Fixed at the page layer, not in the data** — four edits in `Profiler.html` (v01.81w → **v01.82w**), plus a new `gdPlain()` helper for attribute contexts (`title=`) that cannot hold the markup `gdFmt` emits. One change repaired all ten guides; no other session's data was touched
-- **Added a `check-profiler-study.py` rule** (`check_unformatted`) rejecting `{{` in the fields that remain plain by design — `sec.title`, `sec.read`, `timeline.lanes` — and negative-tested it: injecting a marker produces exactly one error, removing it returns to clean
-- Reverted the data workaround from push 1: the C2 markers were **restored**, because the data was never wrong — the renderer was
-
-**Where we left off:** both pushes merged; C2 is closed. C3 (Infineon, Flex) is the next session and is the one that owes the developer the **Phase-B-vs-Phase-C recommendation**.
-
-**Key decisions and findings worth carrying forward:**
-
-- **G3 and G4 are HALF-closed, not closed.** G3 wants two guide revisions (`vertiv`, `schneider-electric` — add a UPS section) plus a dossier for Piller *or* Mitsubishi Electric. The dossier half was already satisfied by Piller at v04.42r; ME over-satisfies it. **Both revisions remain untouched — verified, zero UPS content in either guide.** G4 wants a `siemens-energy` grid-technology revision, a Powell dossier, and a guidance module on the grid-equipment shortage (GOES, bushings, test bays, lead times). Powell closes exactly one of three. **The three guide revisions in §8's "Study guides on existing dossiers" table are the real blockers for both rows**
-- **Entity discipline held for Mitsubishi Power**: every financial line is labelled MHI consolidated / MHI Energy Systems segment / GTCC business line, with an explicit statement that no unit-level figure exists or can be derived
-- **No FX published for either Japanese company.** No defensible fiscal-year average JPY/USD rate could be sourced, so `usdMillions` is omitted and the reason is stated in `financials.commentary`; `kpiNorm` false for both. Powell is "as reported"
-- **One headshot was deleted rather than published** — two readings of Mitsubishi Electric's leadership page disagreed on whose face `img_32`/`img_39` was; the omission is recorded in that person's `background[]`
-- **Deliberate non-curations, all recorded in the dossiers**: `powell-industries ↔ siemens-energy` (Powell's 10-K names *Siemens Industries, Inc.* = Siemens AG, not Siemens Energy AG), the 2006 GE Consumer & Industrial route to `ge-vernova` (that unit became GE Industrial Solutions and went to ABB — the ge-vernova link is instead carried on an explicit market ranking), and `mitsubishi-power ↔ nvidia` (a parent-level cooling/power partnership, not a turbine relationship)
-- **An agent premise of mine was wrong and the agent corrected it**: I told the ME agent the Memphis TN transformer plant was relevant; it established MELCO *sold* it to Hyosung in 2019 for $46.5M. That became the dossier's headline collection gap
-- **JSON indentation trap**: the backfill script wrote `indent=2` where the repo convention for `*.profile.json` / `*.study.json` is **`indent=1`**. It reformatted every line of nine files — 9,375 insertions before normalisation, 2,863 after. Caught at the pre-stage `git diff --stat` review. **Any future backfill script must serialize at `indent=1`.** (`profiler-concepts.json` and `profiler-companies.json` are genuinely `indent=2`; archive snapshots match whatever the file they snapshot used)
-
-**Environment notes (carried forward from C1, all re-confirmed this session):**
-
-- **The Playwright HTTP server MUST be threaded.** `Profiler.html` fetches ~100 JSON files on load, so a single-threaded `socketserver.TCPServer` deadlocks on `page.reload()`. Use `socketserver.ThreadingMixIn` + `http.server.HTTPServer` with `daemon_threads`, swallow `BrokenPipeError`/`ConnectionResetError` in `handle_one_request`, add a no-op `handle_error`, and install a flushing `print` shim (output is otherwise lost when a run dies)
-- `page.reload()` between dossiers — the Study Guide overlay persists across hash navigation
-- The Relationships tab id is **`rels`**, not `relationships`
-- `#ov-guide-overlay` is `position:fixed`, so `offsetParent` is always null — test visibility with `getComputedStyle(ov).display !== 'none'`
-- Wait for `#ov-guide-overlay .gd-title` after clicking `#ov-study-btn` (concepts load asynchronously)
-- **Fulfill** `accounts.google.com` with an empty script rather than aborting — an aborted GIS load logs a network failure the console-error assertion correctly counts
-- Derived "Detected" relationship cards render alongside curated ones, so "every card has a source link" fails wrongly. Assert instead: cards carrying `.ov-rel-src` ≥ `len(relationships[])`
-- No JS regex literals inside `page.evaluate` strings — Python eats the escapes
-- **Console 404s map exactly to companies with no study guide** (27 of 104). Not a defect. Before blaming a change, control-test an untouched slug
-- Research subagents exhaust the WebSearch budget — **every must-find item goes in the agent prompt**, because nothing can be searched after they return
-
-**Verification gates, all green at close:** registry sync `0 of 104 out of sync` · study checker `0 errors, 77 guides / 352 concepts` (with the new rule active) · local schema-v7 validator `0 errors` on the three new profiles and `0 new` on the eight backfilled ones (compared against their archived pre-edit files) · graph `643 edges (493 curated), 1,921 evidence items` · Playwright: zero page errors and zero console errors, every `relationships[]` slug and every `{{term}}` resolving, and `0 guides showing literal braces`
-
-**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · `START_OF_RESPONSE_BLOCK` On · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · Profiler `v01.82w` / `v01.34g` · Classroom `v01.07w` / `v01.16g` · **104 dossiers · 77 study guides · concepts 352 · graph 643 edges · calendar 65 rows · execs 304 images / 60 companies · CHANGELOG 65/100 · Profiler page changelog 50/50** · 1 active reminder (the Xcel Fable-vs-Opus test) · TODO empty
-
-**Known open item, not fixed here:** `xcel-energy.study.json` section `what-a-minimum-demand-charge-buys` carries section-level `pros`/`cons` arrays that the renderer never reads — that content is invisible to the reader. Different bug class from the brace defect (missing content, not wrong markup) and it belongs to another session's row, so it is reported rather than edited.
-
-**Recommendation for next session:**
-
-- **Run Phase C3 — Infineon and Flex — on Opus 5 xhigh** as a fresh session, using the paste-in prompt handed over at this session's close. It is the last group before the developer's Phase-B-vs-Phase-C decision is owed, neither company depends on an uncovered Phase B slug, and it closes G9 (rack/board power) plus the rack-power gap.
-**To continue:** type `run Phase C3 of PROFILER-COVERAGE-PLAN.md — Infineon and Flex — on Opus 5 xhigh`
