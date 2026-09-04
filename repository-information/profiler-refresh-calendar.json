@@ -986,6 +986,57 @@
         "Singapore High Court approval for the capital reduction and distribution the separation requires - the same route the Nextracker spin took in January 2024",
         "Collection gaps to close if possible: no standalone revenue exists for Anord Mardix, JetCool, Crown or EP2; Flex's individual rank in the MMI Top 50 and in4ma Global 100 is paywalled; no named ranking firm publishes a share for Anord Mardix or JetCool; and no contemporaneous analyst verdict on the Nextracker separation could be found"
       ]
+    },
+    {
+      "slug": "mccarthy",
+      "cadence": "quarterly",
+      "source": "Private and 100% employee-owned; no filing record, no earnings calendar, no audited financials. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). The only company-published total revenue figure in existence is 'exceeding $4.8 billion' for 2020; third-party figures are self-reported survey responses and disagree.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "The ENR Top 400 rank, which is the most informative series available for a company with no income statement: 19 → 20 → 20 → 22 across four editions, the fall landing in the year the data-centre category grew 86.4%. The 2027 edition is the number to watch",
+        "The 418 MW built against 2 GW-plus in planning, design and preconstruction. Whether that preconstruction figure converts, and whether any hyperscale client other than Vantage is ever named",
+        "Lighthouse / Port Washington: the Turner-McCarthy JV on Buildings 13 and 14 (468 MW combined) inside the $8bn first phase, completion 2028. Also Vantage NV12 phased turnover from December 2027 to early 2029",
+        "The renewables pipeline after the OBBBA safe harbour. Credits terminate for wind and solar placed in service after 2027-12-31 unless construction began before 2026-07-04; Lupinus I/II broke ground March 2026 and sits inside it. What is in the book that could not start in time is the open question",
+        "The Palantir dependency: a multi-year, multi-million-dollar agreement with the internal technology team reportedly restructuring around embedded Palantir engineers. Watch for any published productivity result from Pulse, and for the investment amount, which is undisclosed",
+        "Leadership: Dhruv Patel became President and COO in August 2026 having scaled renewables from $20M to $2B-plus; Cathy Orquiola joined from PCL in August 2026 focused on self-perform and mission critical. Watch whether a data-centre-specific practice leadership emerges",
+        "Safety: the open OSHA health citation at Sparks NV (inspection 1826381.015, silica NEP) and whether any company-wide, dated EMR or TRIR is ever published — the existing 0.45 and 0.47 figures are undated and market-scoped",
+        "Chesterton check: no civil litigation, debarment, bid protest or licensing action was found after direct database and press searching. Three false attributions circulate and must not be re-imported — the Whiting-Turner Top 400 entry, EdgeCore Mesa (Holder), and Meta Beaver Dam (Mortenson)"
+      ]
+    },
+    {
+      "slug": "oklo",
+      "nextReport": "2026-11-11",
+      "confirmed": false,
+      "source": "Cadence-inferred, not announced. Oklo reported Q2 2026 on Friday 2026-08-07 and Q3 2025 on Wednesday 2025-11-12 — no consistent weekday, so the row infers only the position in the reporting month and uses 2026-11-11, one year on from the prior Q3 print. Confirm from https://oklo.com/investors and the 8-K feed (CIK 0001849056) before relying on it. Note the company files 10-Qs; there is no separate earnings-release cadence to cross-check.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "THE PJM/FERC DISPUTE, first. PJM withdrew the 750 MW Pike County interconnection request (150 MW nuclear / 300 MW fuel cells / 300 MW gas) on 2026-08-03 for failure to demonstrate voltage ride-through; Oklo filed an emergency complaint at FERC on 2026-08-28 claiming a delay of at least 14 months. PJM's response was due 2026-09-04. Track the FERC docket outcome — it governs the Meta campus date, not the reactor",
+        "Aurora-INL on the DOE ladder: OTA and NSDA approved 2026-03-17, PDSA approved 2026-06-11. The Documented Safety Analysis, readiness review and startup authorization are all still pending. Commissioning targeted late 2027 to early 2028",
+        "Whether an updated NRC combined licence application has actually been SUBMITTED. As of the Q2 2026 10-Q it had not, and the NRC's pages list pre-application activities only. The company website's regulatory page still describes the 2020 application in the present tense — treat the 10-K as authoritative",
+        "Conversion of any non-binding instrument into a definitive PPA. As of this writing there is not one in the record: Switch is a non-binding 12 GW master agreement, Diamondback / Prometheus Hyperscale / Equinix are LOIs, Eielson is a notice of intent conditional on an NRC licence, Meta is a prepayment structure. The only binding commercial contract is with Siemens Energy, a supplier",
+        "Revenue composition. The first-ever revenue ($1.210M in Q2 2026) is engineering, consulting and fabrication services from the ARMEC and Creative Engineers acquisitions — not power and not isotopes. Watch whether isotope sales from the Idaho materials licence appear as a named line",
+        "Cash burn against raised guidance: operating $120-150M and PP&E $400-500M for 2026, both raised from the March guide. Roughly 15% dilution in H1 2026 through at-the-market programmes; the 2026 $1bn ATM was still running at 30 June",
+        "Fuel: whether the Centrus letter of intent converts to a definitive contract (deliveries scheduled from 2029), whether the Piketon deconversion JV moves past 'discussions', and whether A3F startup holds for 2027",
+        "Chesterton check on the next refresh: no first-party source publishes a thermal rating for the 15-75 MWe class or a HALEU enrichment percentage, and the 2023 FOAK/NOAK unit economics describe a 15 MWe machine and have never been reaffirmed. Absence of a figure is not evidence it does not exist"
+      ]
+    },
+    {
+      "slug": "trane-technologies",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "source": "Tracker-sourced (TipRanks) and not company-announced as of 2026-09-04; TipRanks also carries a Q3 consensus of $4.72 against company guidance of about $4.70. DISCREPANCY worth carrying: Trane's last four prints were all Thursdays (2025-10-30, 2026-01-29, 2026-04-30, 2026-07-30, each verified), while the tracker's 2026-11-04 is a Wednesday — so the tracker date breaks the company's own cadence and the nearest cadence-consistent date is Thursday 2026-11-05. The tracker date is kept because it is the only sourced one; confirm from https://investors.tranetechnologies.com/news-and-events/events before relying on it. CAUTION when reading this ticker's trackers: TipRanks renders its forecast and actual EPS columns transposed for TT, verified across four quarters.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "THE BASIS TRAP, first. Trane reports both GAAP and adjusted continuing EPS and in FY2025 and Q1 2026 GAAP EXCEEDED adjusted ($13.14 vs $13.06; $2.66 vs $2.63), traceable to non-cash contingent-consideration adjustments that cut S&A expense by $61.2M in 2025. Every published sell-side consensus located is adjusted-basis. Always state the basis of both sides of any beat/miss",
+        "Backlog conversion, not intake. $12.1bn at Q2 2026 (+70%) with Applied bookings +130% for a fourth consecutive quarter above 100% — but roughly $1bn of the Q1 step was acquired with Stellar Energy rather than booked, and about $6bn is scheduled for 2027 and beyond. Watch the organic-versus-acquired split and any cancellation-terms disclosure",
+        "Whether the company ever discloses a data-centre revenue figure. It has not: 'data center' appears four times in the FY2025 10-K, all inside an alphabetical product list, and the Q4 2025 and Q2 2026 releases carry no data-centre commentary. Do not derive one; the only quantification in existence is an unattributed analyst estimate relayed by a retail outlet",
+        "The residential divergence, unreconciled. AHRI industry shipments were down 29.2% YoY in January 2026 on an eighth consecutive monthly decline and Lennox guided volumes down, while Trane reported residential bookings up in the high twenties percent. One of these is wrong or they are measuring different things",
+        "EMEA: revenue fell 1% reported and 4% organic in Q2 2026 and segment adjusted EBITDA margin dropped 150 basis points in FY2025 to 18.3%. The only segment moving the wrong way",
+        "The asbestos estimation trial. Phase 1 in the Aldrich Pump / Murray Boiler Chapter 11 was scheduled for the week of 2026-08-10 before Judge Whitley and no outcome has been found; the Fourth Circuit affirmed in August 2025 with a dissent and an en banc denial on a six-vote split, and a Supreme Court petition in the related Bestwall line (No. 25-1013) is live",
+        "Policy dates with teeth: the 178 Section 301 exclusions — which specifically cover rotary compressors, DC blowers and electric motors — expire 2026-11-09; Section 232's temporary 15% residential HVAC rate runs to 2027-12-31; EPA's May 2026 amendments pushed industrial process chillers to 2030",
+        "Supply chain: the Chief Global Integrated Supply Chain Officer departed 2026-08-01 against an estimated ~$200M annual tariff cost after mitigation. Watch for a successor and for any change in the surcharge posture",
+        "Chesterton check: no source names a single hyperscaler, colocation operator or contractor as a Trane customer. The only publicly stated ecosystem relationships are the NVIDIA and Eaton reference designs. Absence of a named customer is not evidence of absence of orders"
+      ]
     }
   ]
 }

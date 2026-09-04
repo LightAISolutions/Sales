@@ -227,6 +227,16 @@
    "status": "active",
    "since": "2024-12",
    "scale": "120 MWac"
+  },
+  {
+   "slug": "oklo",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-01",
+   "scale": "Up to 1.2 GW campus",
+   "note": "Prepayment agreement supporting a 1.2 GW clean-energy campus in Pike County, Ohio — Meta prepays for power and funds powerhouse deployment.",
+   "context": "Announced 9 January 2026, signed on 5 January, and the strongest instrument in Oklo's entire customer book because it moves money rather than intent: Oklo states the funding is applied to securing nuclear fuel for the first phase. First phase targeted as early as 2030 with the full 1.2 GW by 2034.\n\nThe interconnection is the live risk. PJM withdrew the 750 MW Pike County request on 3 August 2026 — 150 MW nuclear, 300 MW fuel cells and 300 MW gas — stating Oklo never demonstrated ride-through of a sudden voltage drop; Oklo filed an emergency complaint at FERC on 28 August 2026 claiming a delay of at least 14 months.",
+   "source": "https://oklo.com/newsroom/news-details/2026/Oklo-Meta-Announce-Agreement-in-Support-of-1-2-GW-Nuclear-Energy-Development-in-Southern-Ohio/default.aspx"
   }
  ],
  "policyExposure": [
@@ -528,6 +538,6 @@
    "url": "https://www.ucs.org/about/news/judge-orders-meta-explain-new-gas-demand-hyperscale-louisiana-data-center"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 6
 }

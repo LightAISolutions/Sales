@@ -260,6 +260,16 @@
    "context": "Constellation appears on Lightsource bp's named-offtaker roster alongside the hyperscalers and corporates (Toyota, McDonald's, Verizon, L3Harris, H&M, Allianz) — a conventional PPA relationship within the top-ranked US solar development platform.",
    "source": "Lightsource bp US platform disclosures",
    "status": "active"
+  },
+  {
+   "slug": "mccarthy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2021",
+   "scale": "Elm Branch 163 MW, Briar Creek 153 MW, Pueblo 600 MW",
+   "note": "Engineering, procurement and construction contractor on multiple utility-scale solar projects in Texas and Colorado.",
+   "context": "McCarthy was selected as EPC contractor for Elm Branch (163 MW, Ennis, Texas) and Briar Creek (153 MW, Corsicana, Texas), announced March 2021, and built 600 MW across Pueblo, Colorado including the 300 MW Bighorn Solar and Sun Mountain projects — 1,700-plus acres, 636,990 First Solar panels, Array Technologies trackers and more than four miles of transmission line.\n\nMcCarthy is ranked second among large-scale storage installers and third among EPC providers by Solar Power World, having climbed from seventh-ranked solar contractor nationally in 2018.",
+   "source": "Texas Contractor — McCarthy begins construction on two Texas solar farms totalling more than 300 MW for Lightsource bp"
   }
  ],
  "policyExposure": [
@@ -464,6 +474,6 @@
    "url": "https://lightsourcebp.com/data-center-solutions/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 4
 }

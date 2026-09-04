@@ -1,0 +1,1273 @@
+{
+ "schemaVersion": 7,
+ "slug": "mccarthy",
+ "name": "McCarthy Holdings, Inc. (McCarthy Building Companies, Inc.)",
+ "shortName": "McCarthy",
+ "categories": [
+  "gc"
+ ],
+ "website": "https://www.mccarthy.com/",
+ "headquarters": "St. Louis, Missouri (historic) and Dallas, Texas — the company does not state a single headquarters",
+ "founded": 1864,
+ "employees": "more than 8,000 salaried employees and craft professionals (company, February 2026); 8,074 (Forbes, December 2025); 4,050 ESOP participants (NCEO, October 2025)",
+ "ownership": {
+  "type": "private"
+ },
+ "summary": "BOTTOM LINE UP FRONT: McCarthy is a 162-year-old, 100% employee-owned national builder with 418 MW of data centres delivered against more than 2 GW in planning, design and preconstruction — a five-to-one ratio ahead of it — while its ENR Top 400 rank slipped from 20 to 22 in the very year the data-centre category grew 86% and reshuffled the league table above it. BACKGROUND. Founded in 1864 by Timothy McCarthy in Ann Arbor, Michigan; family-owned for 138 years; an ESOP was established in 1996 and the company became 100% employee-owned on 12 April 2002. Nineteen offices, five regional operating units under McCarthy Holdings, Inc., plus MC Industrial for industrial work and Castle Contracting, now operating as a division, for earthwork and underground utilities. Markets span healthcare — where it claims 1,000-plus facilities and a Modern Healthcare number-one general contractor ranking in 2024 and 2026 — education, water and wastewater, aviation, parking, government, science and technology, heavy civil, marine, and two that have grown fastest: mission critical and renewable energy, the latter scaled from $20M to more than $2B of revenue. Collection gap, stated rather than reconstructed: as a private, employee-owned company McCarthy has no filing record. It has published a total revenue figure exactly once — 2020 revenues exceeding $4.8bn — and publishes no margin, no backlog and no end-market mix at all. Third-party revenue figures are self-reported survey responses, and the best-sourced of them is Forbes at $7.1bn as of December 2025.",
+ "ecosystemRole": "The general contractor the corpus names most often after Turner, and the one whose data-centre position is most clearly in transition. Its confirmed hyperscale work runs through a single client, Vantage Data Centers, across four engagements — Goodyear Arizona Phase II as general contractor, the NV1 campus outside Reno with its NV11 and NV12 buildings, and Buildings 13 and 14 of the Lighthouse campus at Port Washington, Wisconsin, which McCarthy builds in a joint venture with Turner and which will host a combined 468 MW for Oracle and OpenAI's Stargate venture. Beyond data centres it appears in two other ecosystem roles: as a joint-venture partner to HITT on the $1.7bn Next NGA West intelligence campus and to Mortenson on the Las Vegas stadium work, and as a utility-scale solar and storage contractor to Lightsource bp, Swift Current Energy, Longroad Energy, Silicon Ranch and Sunraycer. It is also the corpus's clearest case study in reading a private contractor: every capability figure in this file comes from the party making the claim.",
+ "productsAndServices": [
+  {
+   "name": "Mission critical — data centres and secure facilities",
+   "category": "Construction — mission critical",
+   "description": "The company's flagship growth practice, defined more broadly than data centres alone: 'data centers, telecommunication hubs, emergency service centers, control centers, SCIFs, high-performance computing (HPC) research facilities and more'. Published service scope covers fast-track data-hall fit-outs, critical-system upgrades, white-space uplifts and renovations, ground-up greenfield and brownfield campuses, major expansions to existing facilities, and shell hardening. The two headline figures the company publishes are the whole story of the practice: 418 MW of data centres built across the country, against more than 2 GW in the planning, design and preconstruction phase.",
+   "highlights": [
+    "Vantage NV12, near Reno: 64 MW, 260,000 sq ft, two storeys, design-build with McCarthy as general contractor. Construction started May 2024, topped out January 2026, phased turnover from December 2027 and final completion early 2029. More than 1.1 million labour hours with zero lost-time incidents claimed and 1,200-plus local construction jobs",
+    "Vantage NV1 campus, Storey County, Nevada: 224 MW projected across four buildings on 137 acres at about 5,500 ft elevation, with 805,000-plus labour hours to date, 700-plus workers on site daily and a total project incident rate of 0.25. NV11 and NV12 together form a 128 MW Phase I",
+    "Vantage Goodyear, Arizona Phase II: McCarthy served as general contractor; the campus at full build is 176 MW of IT capacity across three facilities in more than one million square feet, on client investment stated at more than $1.5bn. The project earned an OSHA/ADOSH VPP STAR site designation, described as OSHA's highest safety recognition",
+    "Lighthouse, Port Washington, Wisconsin: the Turner-McCarthy joint venture is building Buildings 13 and 14, hosting a combined 468 MW for Oracle and OpenAI's Stargate venture, within an $8bn first phase of a $15bn, 1.3 GW campus split four ways with Whiting-Turner, The Weitz Co. and Michels. Staffing scaled from over 40 people to more than 200 operations professionals plus 250 McCarthy craft workers",
+    "Smaller and older published projects show the scope vocabulary: the FAA data centre at Hampton, Georgia (16,000 sq ft — 'major switchgear installation; EPMS, boilers, and chillers; HVAC/CRAC units; VESDA fire suppression; fiber optics; commissioning services'); a confidential-client Scottsdale renovation of about 391,574 sq ft; and a 12,500 sq ft, 3 MW Tier 3 facility for Yuma Regional Medical Center",
+    "Every named hyperscale data-centre client on the company's own site is Vantage. No Meta, Microsoft, AWS, Google, Oracle-direct, QTS, CyrusOne or Switch project is named anywhere, and no independent source names McCarthy on one — while the Scottsdale project is explicitly listed with a confidential client, proving the company does carry undisclosed mission-critical work",
+    "Collection gap, and it is the significant one: despite mission critical being the flagship practice, McCarthy publishes no data-centre self-perform percentage, no data-centre prefabrication scope, no concrete volumes or placement rates, no MEP self-perform split, no commissioning methodology and no schedule claim such as months from slab to power"
+   ],
+   "positioning": "McCarthy does not appear in the named leaders of ENR's or Building Design+Construction's data-centre rankings, nor in Construction Dive's roundup of multibillion-dollar hyperscaler projects — those name HITT, Holder, DPR, Clayco, Turner, Whiting-Turner, Fortis, JE Dunn and Mortenson. In the ENR 2026 Top 400 every peer with a heavy data-centre book moved sharply up (Mortenson +12, Clune +13, Fortis +11, Holder +3, HITT +2 into the top ten) while McCarthy moved down two places to 22. Read together with 418 MW built against 2 GW-plus in preconstruction, the position is best described as a diversified builder entering the sector rather than an incumbent in it.",
+   "soldThrough": "Direct as general contractor and design-builder, and increasingly through joint ventures with peer contractors — Turner on Lighthouse, HITT on federal secure work.",
+   "targetSegments": [
+    "AIDC developers and colocation operators",
+    "Federal and secure facilities",
+    "Healthcare and enterprise data centres",
+    "High-performance computing"
+   ],
+   "roadmap": "More than 2 GW in planning, design and preconstruction; the Lighthouse buildings complete in 2028 and Vantage NV12 in early 2029."
+  },
+  {
+   "name": "Renewable energy — utility-scale solar and battery storage",
+   "category": "Construction — EPC and general contracting",
+   "description": "The fastest-growing practice by the company's own account, scaled from $20M to more than $2B of revenue under the executive who now serves as president and chief operating officer. McCarthy self-describes as a utility-scale solar and energy-storage EPC and publishes headline figures of more than 17 GW of utility-scale solar installed, 9 GWh of battery storage and more than 114 projects, with 4,600 craft professionals nationwide. It is ranked second among large-scale storage installers and third among EPC providers by Solar Power World. The role varies materially by project: EPC on some, general contractor or balance-of-plant on others, and the company publishes no split.",
+   "highlights": [
+    "Double Black Diamond, Sangamon and Morgan Counties, Illinois for Swift Current Energy: 593 MWac / 800 MWdc, McCarthy as EPC including the substation, three main power transformers and the tie into an Ameren switchyard. More than 1.6 million US-made panels and 19,382 steel piles; the largest operating solar facility in Illinois and east of the Mississippi; 50% of the plant delivered seven months early; powers about 70% of Chicago city-run facilities including O'Hare and Midway. $779M, construction from March 2023, commercial operation April 2025",
+    "Bright Arrow, Hopkins County, Texas for RWE Renewables Americas: 300 MWac / 390 MWdc plus a 100 MWac / 200 MWh battery system on 3,000-plus acres, 876,000 panels, 85 central inverters. McCarthy as EPC, and the project where it pioneered 'a prefabrication strategy for all underground installations' since expanded portfolio-wide",
+    "Serrano, Pinal and Pima Counties, Arizona for Longroad Energy: 170 MWac / 220 MWdc plus a 214 MW / 860 MWh battery system on 770-plus acres with 415,000-plus panels. The site where McCarthy launched its Registered Apprenticeship Program with 22 apprentices, and a pilot site for First Solar Series 7 and Nextracker HailPro",
+    "Sun Streams 4, west of Phoenix for Longroad Energy — described as McCarthy's fifth project with that developer: 377 MWdc plus 300 MWac / 1,200 MWh of storage, peak workforce above 250, with more than 65 registered apprentices at prevailing wage to meet IRA bonus conditions",
+    "Arrow Canyon, Clark County, Nevada for EDF Renewables: 275 MWdc plus a 75 MW / 375 MWh DC-coupled battery system on 1,387 acres, with 46 members of the Moapa Tribe among 450-plus team members. Cattlemen Solar Park, Milam County, Texas for EDP Renewables: 390 MWac / 536 MWdc combined across two phases. Sun Mountain, Pueblo, Colorado for Lightsource bp: 300 MWdc, 636,990 First Solar panels and four-plus miles of transmission line",
+    "Lupinus I and II plus Eagle Springs, north-east Texas for Sunraycer Renewables: 620 MWdc combined with 477 MWh of storage, groundbreaking March 2026 — inside the OBBBA begin-construction safe harbour of 4 July 2026, with completion set for early 2028",
+    "Independent reporting establishes the developer set, and it is not the one an outside observer would guess: Swift Current Energy, Sunraycer, Longroad, Silicon Ranch, Lightsource bp, EDF Renewables and EDP Renewables. No relationship was found with NextEra, Arevon, Intersect Power, Apex Clean Energy, Recurrent, AES, RWE beyond Bright Arrow, Clearway, Terra-Gen, Eolian, Plus Power, Jupiter Power, esVolta, Strata or Origis"
+   ],
+   "positioning": "A climb from seventh-ranked solar contractor nationally in 2018 to second in large-scale storage and third in EPC, on the company's cited Solar Power World rankings. The competitive set is Blattner, MasTec, Primoris and SOLV Energy — all covered in this corpus, and none of them linked to McCarthy by any source.",
+   "soldThrough": "Direct EPC and general-contracting agreements with independent power producers and developers.",
+   "targetSegments": [
+    "Utility-scale solar developers",
+    "Battery-storage developers",
+    "Independent power producers"
+   ],
+   "roadmap": "Portfolio claim of 85 utility-scale clean-energy projects since 2010; the OBBBA begin-construction deadline of 4 July 2026 is the structural question for anything not already started."
+  },
+  {
+   "name": "Healthcare, water and the diversified building book",
+   "category": "Construction — buildings and infrastructure",
+   "description": "The base of the business and the source of the disciplines the mission-critical practice draws on. Healthcare is the deepest-tenured market — more than a century, 1,000-plus facilities built or renovated, ranked number-one general contractor by Modern Healthcare in 2024 and 2026, with two-thirds of projects at $25M or less. Water and wastewater is a 40-year practice with 80% repeat clients, a stated 0.45 experience modification rate and eight major advanced water-treatment projects in twelve years. Alongside sit education, aviation, parking, government, science and technology, commercial, hospitality, heavy civil and marine terminals, plus MC Industrial for power, manufacturing and process work.",
+   "highlights": [
+    "Healthcare flagships with published values: Scripps Memorial Hospital La Jolla Tower II at $664M and 418,500 sq ft (completed June 2025); Barnes-Jewish Plaza West Tower at 16 storeys and 660,000 sq ft (December 2025); Mercy Hospital Fort Smith at $185M; CommonSpirit Memorial Hospital North Georgia at $90M; Citizens Medical Center, Colby, Kansas at $105M, described as one of the largest USDA-funded critical-access hospital projects nationwide; SSM Health Cardinal Glennon Children's Hospital, 14 storeys, topped out April 2026",
+    "Water flagships: Kansas River wastewater treatment plant modernisation at $74.3M under construction management at risk, 8 MGD serving 80% of Lawrence's wastewater, completed 2026 while the plant stayed operational; Signal Butte water treatment plant expansion in Mesa at $168M taking the plant from 24 to 48 MGD with a new 8-million-gallon reservoir; Torrance Groundwater Desalter expansion, design-build with Jacobs, 7,100 acre-feet a year, completing 2029",
+    "Federal: 'more than $4 billion of projects' for federal agencies. The McCarthy HITT joint venture delivered Next NGA West in St. Louis — $1.7bn, 700,000 sq ft on 97 acres, opened January 2026 and called the largest federal investment in St. Louis history — with Black & Veatch Special Projects, Gensler and Akima on the team",
+    "Science and technology: 'constructed more than half the BSL4 facilities in the nation' and built 'the first net-zero lab in the country'; Gilead Sciences Technical Development Center topped out April 2026 at 180,000 sq ft",
+    "Marine and port terminals carries the best safety disclosure on the site: total project incident rate 0.69 against an industry average of 3.2, lost-time incident rate 0.03, experience modification rate 0.47, and self-performance of '80 percent or more' of activities",
+    "The transferable discipline: a dedicated Specialized Solutions Group handles small projects and renovations in occupied facilities, 'delivering results without disruption'. A century of building inside operating hospitals is the closest analogue in construction to expanding beside a live data hall"
+   ],
+   "positioning": "Diversification is the structural argument for this company and also the reason its ENR rank fell in 2026 — a builder whose revenue is spread across healthcare, education, water and civil grows more slowly than one concentrated in the category growing 86% a year. The counter-argument is the one the company implicitly makes with its 2 GW preconstruction figure.",
+   "soldThrough": "Construction management at risk, design-build, progressive design-build, hard bid and public-private partnership, per the company's own collaborative-delivery page.",
+   "targetSegments": [
+    "Health systems",
+    "Public school districts and universities",
+    "Municipal water authorities",
+    "Federal agencies",
+    "Airports and ports",
+    "Life sciences"
+   ]
+  },
+  {
+   "name": "Self-perform, prefabrication and Castle Contracting",
+   "category": "Construction — self-performed trades",
+   "description": "An unusually broad self-perform stack for a general contractor of this size: concrete (formwork, placing and finishing), electrical, mechanical, plumbing and HVAC (ductwork, piping, controls, water supply, waste disposal, heating and cooling, ventilation), and civil (earthwork, grading, excavation, paving, site utilities), plus building controls, demolition, drywall and framing, firestopping, fencing, doors and hardware, casework and general carpentry. Castle Contracting, acquired with CastleGPS by McCarthy Holdings on 31 October 2014 and now operating as a division under the McCarthy Building Companies name, covers earthwork, underground utilities and civil design-build from two offices in St. Louis and Omaha. Prefabrication covers solar steel fabrication, modular wall panels, mechanical assemblies, cold-formed steel structural wall systems, universal exterior finish panels and anchor-bolt assemblies, run through a proprietary planning platform the company calls McCarthy SiteShift Source.",
+   "highlights": [
+    "Published self-perform percentages exist only by market, never company-wide: '80 percent or more' of activities on marine and port terminal projects, 'the vast majority' of heavy civil work, and self-perform described as 'the foundation of every structured parking project'",
+    "Owned facilities: an Innovation and Craft Workforce Center in Chandler, Arizona (40,000 sq ft — 32,000 sq ft of office and training plus 8,000 sq ft of warehouse and prefabrication, serving about 500 Arizona-based and 2,000 regional craft professionals); and a 17-acre Equipment Operations Hub in Maryland Heights, Missouri with a 9.5-acre equipment yard, 32,000 sq ft warehouse, 10,000 sq ft maintenance shop and prefabrication workshop areas, supporting Central Region operations across 28 states",
+    "The only quantified productivity claims the company publishes: UC Riverside North District Phase 2 — $285M, 424,000 sq ft, 1,568 beds — delivered 'in just 21 months' by switching from a wood structure to prefabricated cold-formed steel at the contractor's suggestion; and 50% of Double Black Diamond delivered seven months early through phased delivery",
+    "Subsurface utility mapping is now a named McCarthy expertise, having originated in the CastleGPS acquisition — the capability to know where existing underground services are before excavating, which is the single most common source of civil-scope surprise",
+    "A new 12-acre national employee development campus in Tempe, Arizona broke ground August 2026 for opening in early 2028, serving more than 8,000 employees; the Southwest regional headquarters is relocating in Phoenix for occupancy in late 2027"
+   ],
+   "positioning": "Holding concrete, full MEP and civil directly is the operating distinction from a pure construction manager. On a data-centre schedule those are precisely the scopes on the critical path — the slab, the equipment pads, the electrical rough-in — so self-performing them is a claim about schedule control rather than about margin.",
+   "soldThrough": "Bundled inside the prime contract rather than sold separately.",
+   "targetSegments": [
+    "Own projects across all markets"
+   ],
+   "roadmap": "Prefabrication capacity expanding through the Chandler and Maryland Heights facilities; the Tempe development campus opens early 2028."
+  },
+  {
+   "name": "Technology — VDC, subsurface mapping and the Palantir partnership",
+   "category": "Construction technology",
+   "description": "Virtual design and construction is organised around three published pillars — visualisation, coordination ('model-based workflows to compel pre-planning, coordination and communication') and reality capture ('capturing as-builts and existing conditions with extreme fidelity'). In June 2026 McCarthy announced a multi-year, multi-million-dollar strategic partnership with Palantir built on Palantir's Artificial Intelligence Platform, and launched its own product on top of it: Pulse, an AI Operations Suite described as 'an AI-native system built on AIP designed to support field teams with real-time insights, scenario planning, risk analysis, and decision orchestration across construction workflows'.",
+   "highlights": [
+    "Pulse use cases span 'field execution, estimating, contracts, bidding, buyout, QA/QC, logistics, and equipment planning integrated through a unified Ontology'",
+    "Palantir's head of energy and infrastructure characterised it as more than a tool purchase: 'McCarthy is not treating AI as a point solution, they are building an operating system for the way construction actually works'",
+    "Independent reporting adds the organisational commitment the release does not: McCarthy is restructuring its internal technology team around embedded Palantir engineers. Investment amount and any equity stake are not disclosed",
+    "Named technology partners: Autodesk, Procore, Revizto, Trimble, Hexagon, Bentley, AXA Innovators and Building Ventures, plus GoContractor for digital safety onboarding and Gravity for carbon accounting",
+    "Not published: VDC team size, any 4D or 5D scheduling claim, robotics, or quantified productivity metrics from any of it"
+   ],
+   "positioning": "DPR's guide in this app covers virtual design and construction as a discipline; what is distinctive here is the depth of a single-vendor platform commitment. A partnership described by both parties as an operating system rather than an application is a dependency as much as a capability.",
+   "soldThrough": "Internal capability applied across the project portfolio.",
+   "targetSegments": [
+    "Own projects"
+   ],
+   "roadmap": "Pulse rollout across field execution and preconstruction workflows."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Published scale and market figures — every one self-reported",
+   "specs": [
+    {
+     "band": "Data centres",
+     "label": "Delivered capacity",
+     "value": "'418 MW of data centers built across the country'"
+    },
+    {
+     "band": "Data centres",
+     "label": "Pipeline",
+     "value": "'2GW+ data centers in the planning, design & preconstruction phase'"
+    },
+    {
+     "band": "Renewables",
+     "label": "Solar installed",
+     "value": "'17 GW+' utility-scale solar"
+    },
+    {
+     "band": "Renewables",
+     "label": "Storage",
+     "value": "'9 GHr' battery storage (the company's own rendering; read as GWh)"
+    },
+    {
+     "band": "Renewables",
+     "label": "Projects and craft",
+     "value": "'114+ Projects'; '4,600' craft professionals nationwide"
+    },
+    {
+     "band": "Renewables",
+     "label": "Rankings cited",
+     "value": "'#2 Large-Scale Storage Installer' and '#3 EPC Provider' — Solar Power World"
+    },
+    {
+     "band": "Renewables",
+     "label": "Portfolio claim",
+     "value": "85 utility-scale clean-energy projects since 2010, over 9.5 GW of generation and over 1,033 MW of battery storage"
+    },
+    {
+     "band": "Healthcare",
+     "label": "Facilities and ranking",
+     "value": "'1,000+ facilities'; '#1 General Contractor' — Modern Healthcare, 2026 and 2024; 'Over 100 years' in the market; two-thirds of projects at $25M or less"
+    },
+    {
+     "band": "Water",
+     "label": "Practice figures",
+     "value": "'40 years'; '80% repeat clients'; '.45 EMR'; '8 major advanced water treatment projects' in twelve years"
+    },
+    {
+     "band": "Science",
+     "label": "Claims",
+     "value": "'constructed more than half the BSL4 facilities in the nation'; built 'the first net-zero lab in the country'"
+    },
+    {
+     "band": "Federal",
+     "label": "Cumulative",
+     "value": "'more than $4 billion of projects' for federal agencies"
+    },
+    {
+     "band": "Company",
+     "label": "Only total revenue ever published by the company",
+     "value": "'2020 revenues exceeding $4.8 billion' (November 2021)"
+    },
+    {
+     "band": "Company",
+     "label": "Segment revenue published",
+     "value": "Renewable Energy group scaled 'from $20 million to over $2 billion in revenue' (August 2026)"
+    },
+    {
+     "band": "Company",
+     "label": "Employees",
+     "value": "'more than 8,000 salaried employees and craft professionals' (February 2026)"
+    },
+    {
+     "band": "Company",
+     "label": "Offices and sites",
+     "value": "19 offices; 'more than 300 jobsites, offices, and supply chain activities' in 2024 greenhouse-gas data"
+    },
+    {
+     "band": "Company",
+     "label": "Ownership",
+     "value": "ESOP established 1996; 100% employee-owned since 12 April 2002; founded 1864"
+    },
+    {
+     "band": "Company",
+     "label": "Not published anywhere",
+     "value": "Current total revenue, annual construction volume, backlog, gross or net margin, EBITDA, end-market revenue mix, bonding capacity, ESOP share value, company-wide self-perform percentage, current employee-owner count, and a single stated headquarters"
+    }
+   ],
+   "notes": "Every figure in this group originates with McCarthy. It is reproduced because it is the only capability record a private employee-owned company produces, and it is labelled as self-reported because there is no auditor, no filing and no third party standing behind any of it."
+  },
+  {
+   "product": "Independent record — ENR rank, peer position and the safety file",
+   "specs": [
+    {
+     "band": "ENR Top 400",
+     "label": "2026 edition (2025 revenue)",
+     "value": "Rank 22, from 20 — 'McCarthy Holdings Inc., St. Louis, Mo.'"
+    },
+    {
+     "band": "ENR Top 400",
+     "label": "2025 edition (2024 revenue)",
+     "value": "Rank 20, unchanged from 20"
+    },
+    {
+     "band": "ENR Top 400",
+     "label": "2024 edition (2023 revenue)",
+     "value": "Rank 20, from 19"
+    },
+    {
+     "band": "ENR Top 400",
+     "label": "Methodology",
+     "value": "Self-reported. ENR's own editor: firms are 'submitting surveys ahead of the deadline… Firms are ranked based on their total regional revenue from the previous year'. Revenue columns are paywalled and ENR publishes multiple revenue bases per firm across its lists"
+    },
+    {
+     "band": "ENR Top 400",
+     "label": "Context for the 2026 slip",
+     "value": "Top 400 aggregate revenue rose 11.8% to $671.4bn in the 2026 edition, with the telecommunications and data-centre category up 86.4% past $100bn and now 15.1% of Top 400 revenue, from 4.5% in 2021"
+    },
+    {
+     "band": "Peers, same edition",
+     "label": "Above McCarthy",
+     "value": "Turner 1, Whiting-Turner 5 ($14.7bn), DPR 7 ($14.0bn), HITT 8 ($13.0bn), Mortenson 10 ($10.85bn), Hensel Phelps 11, Holder 12, Skanska USA 17, Gilbane 19, Clayco 20, JE Dunn 21"
+    },
+    {
+     "band": "Peers, same edition",
+     "label": "Movement",
+     "value": "Sharp risers all carry heavy data-centre books — Mortenson +12, Clune +13, Fortis +11, Holder +3, HITT +2. Fallers do not — Skanska -5, JE Dunn -3, Gilbane -2, McCarthy -2"
+    },
+    {
+     "band": "Revenue, third-party",
+     "label": "Forbes, America's Largest Private Companies",
+     "value": "$7.1bn revenue and 8,074 employees as of December 2025; prior year shown as $6.3bn"
+    },
+    {
+     "band": "Revenue, third-party",
+     "label": "Caution",
+     "value": "Three third-party revenue figures circulate and disagree ($7.1bn Forbes; 'over $6.9bn' attributed to ENR 2025; $8.00bn from a low-tier aggregator). None is audited and they must not be averaged"
+    },
+    {
+     "band": "Employee ownership",
+     "label": "NCEO Employee Ownership 100",
+     "value": "Rank 25 with 4,050 employees, updated October 2025 — a plan-participant count materially below the ~8,074 total headcount. Prior positions: 30 in 2021, 47 in 2020"
+    },
+    {
+     "band": "Safety",
+     "label": "OSHA inspection record, 2017-2026",
+     "value": "80 inspections across 12 states; 14 violations across 10 of them — an 87.5% no-citation rate. No willful and no repeat violations; every serious was reclassified or vacated on settlement or ALJ order"
+    },
+    {
+     "band": "Safety",
+     "label": "Fatality, Clayton, Missouri",
+     "value": "OSHA inspection 1497025.015, 5 October 2020. A 27-year-old carpenter apprentice dismantling a steel concrete forming panel removed the structural bolts before the panel was secured to the crane; the panel broke loose and he fell 19 feet with his fall protection attached to the panel. No citation issued"
+    },
+    {
+     "band": "Safety",
+     "label": "Fatality, Barnes-Jewish campus, St. Louis",
+     "value": "25 October 2024. A sheet-metal worker employed by subcontractor IWR fell 12 feet from a ladder while installing an insulated metal panel and died two days later; McCarthy was the construction company on the project"
+    },
+    {
+     "band": "Safety",
+     "label": "Valley Fever contest, Shandon, California",
+     "value": "Cal/OSHA inspection 1235941.015, opened 15 May 2017 on a solar site. Initial 2 serious plus 2 other violations at $46,540 proposed; final 1 other violation at $700; case closed 2 April 2026 after nearly nine years. The ALJ decision addressed whether coccidioidomycosis spores constitute regulated dust under the respirator standard"
+    },
+    {
+     "band": "Safety",
+     "label": "Open citation",
+     "value": "OSHA inspection 1826381.015, Sparks, Nevada, opened 22 May 2025 — a health complaint under the respirable-crystalline-silica national emphasis programme; one 'other' violation at $500, still open at retrieval"
+    },
+    {
+     "band": "Labour",
+     "label": "Union posture",
+     "value": "Mixed by region, visible in the OSHA records: union on Clayton MO, Sparks NV, Rosamond CA, San Diego and Shandon CA jobs; non-union on Houston TX and Los Angeles jobs. Became signatory with the Mid-America Carpenters Regional Council in Kansas City in late 2024, announced January 2025 — the council's own account describes initial resistance that 'began to wear down'"
+    },
+    {
+     "band": "Not found",
+     "label": "Civil litigation, debarment, licensing action",
+     "value": "No construction-defect or payment litigation, no debarment or SAM.gov exclusion, no bid protest and no state licensing action located after direct database and press searching"
+    }
+   ],
+   "notes": "This group is the counterweight to the self-reported one above it. The ENR ranks are public even where the revenue columns are not; the OSHA record was retrieved directly from the establishment database. Three false attributions were encountered during research and are recorded here so they do not propagate: a $14,675.9M / rank-5 / Baltimore entry belongs to Whiting-Turner and not McCarthy; EdgeCore's Mesa campus was built by Holder; and Meta's Beaver Dam data centre was built by Mortenson."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-17",
+   "category": "leadership",
+   "headline": "Cathy Orquiola joins as Regional CEO and executive committee member from PCL Construction, focused on self-perform leadership and the mission-critical market",
+   "read": "A western regional president hired out of a rival specifically for the two capabilities the data-centre practice runs on.",
+   "source": "https://www.mccarthy.com/insights/construction-industry-veteran-cathy-orquiola-joins-mccarthy-building-companies-inc"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "capacity",
+   "headline": "Breaks ground on a 12-acre national employee development campus in Tempe, Arizona, opening early 2028",
+   "read": "Capital spent on the workforce constraint rather than on capacity — consistent with ENR's finding that the whole Top 400 has hit a craft ceiling.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-national-employee-development-campus"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "leadership",
+   "headline": "Dhruv Patel named President and Chief Operating Officer of McCarthy Holdings; Joe Jouvenal moves to Chief Transformation Officer; Ray Sedey remains Chairman and CEO",
+   "read": "The executive who scaled renewables from $20M to more than $2B now runs the whole company — the clearest statement available about where growth is expected to come from.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-holdings-inc-names-dhruv-patel-president-and-chief-operating-officer"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "project",
+   "headline": "Profile of the Lighthouse campus at Port Washington, Wisconsin — the Turner-McCarthy joint venture scaled to more than 200 operations professionals plus 250 craft workers",
+   "read": "The staffing curve is the real disclosure: a joint venture is how a builder takes on a giga-campus without a bench of its own.",
+   "source": "https://www.mccarthy.com/insights/building-at-hyperscale"
+  },
+  {
+   "date": "2026-07-06",
+   "category": "project",
+   "headline": "Completes the $74.3M Kansas River wastewater treatment plant modernisation in Lawrence, Kansas — 8 MGD, delivered while the plant stayed operational",
+   "read": "The live-facility discipline that transfers directly to expanding beside a running data hall, executed under construction management at risk.",
+   "source": "https://www.mccarthy.com/insights/city-of-lawrence-and-mccarthy-building-companies-mark-completion-of-kansas-river"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "partnership",
+   "headline": "Multi-year, multi-million-dollar strategic partnership with Palantir; launches Pulse, an AI Operations Suite built on Palantir AIP",
+   "read": "Described by Palantir as 'an operating system for the way construction actually works' — an organisational commitment rather than a software purchase, with the amount undisclosed.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-and-palantir-announce-strategic-partnership-to-bring-ai-to-the-construction-field"
+  },
+  {
+   "date": "2026-06-19",
+   "category": "project",
+   "headline": "Breaks ground with Jacobs on the Torrance Groundwater Desalter expansion, nearly doubling capacity to 7,100 acre-feet a year, completing 2029",
+   "read": "Design-build on a water-reuse asset — the plant a campus has to build if it intends to reclaim water rather than pledge to.",
+   "source": "https://www.mccarthy.com/insights/wrd-and-the-city-of-torrance-break-ground-on-the-torrance-groundwater-desalter-expansion"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "order-win",
+   "headline": "Construction under way on Sunraycer's Lupinus I and II and Eagle Springs in north-east Texas — 620 MWdc with 477 MWh of storage, as EPC",
+   "read": "Groundbreaking in March 2026 puts the portfolio inside the 4 July 2026 begin-construction safe harbour, with completion in early 2028 after the placed-in-service deadline.",
+   "source": "https://www.solarpowerworldonline.com/2026/03/construction-underway-on-620-mw-solar-project-portfolio-in-northeast-texas/"
+  },
+  {
+   "date": "2026-01-29",
+   "category": "project",
+   "headline": "McCarthy HITT joint venture and the National Geospatial-Intelligence Agency open the $1.7bn Next NGA West campus in St. Louis",
+   "read": "700,000 sq ft on 97 acres after about six years — the largest federal investment in St. Louis history, and the deepest secure-facility credential in the file.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-hitt-and-nga-celebrate-completion-and-opening-of-next-nga-west-campus-in-st-louis"
+  },
+  {
+   "date": "2026-01-22",
+   "category": "project",
+   "headline": "Tops out NV12 at Vantage Data Centers near Reno — 64 MW, 260,000 sq ft, design-build, more than 1.1 million labour hours with zero lost-time incidents",
+   "read": "Phase I of the campus reaches 128 MW across NV11 and NV12; phased turnover runs from December 2027 to early 2029.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-building-companies-celebrates-topping-out-of-nv12-project-at-vantage-data-centers"
+  },
+  {
+   "date": "2026-01-22",
+   "category": "order-win",
+   "headline": "Turner-McCarthy joint venture confirmed on Buildings 13 and 14 of the Lighthouse campus, hosting a combined 468 MW for Oracle and OpenAI's Stargate venture",
+   "read": "The largest data-centre engagement in the company's public record, and the first that reaches a hyperscale AI end user — through Vantage rather than directly.",
+   "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/"
+  },
+  {
+   "date": "2026-02-12",
+   "category": "corporate",
+   "headline": "Publishes an updated greenhouse-gas emissions report covering more than 300 jobsites and offices, with Scopes 1 and 2 third-party audited",
+   "read": "The disclosure that also carries the ENR ranking claim of fifteenth largest domestic builder, from the May 2025 list.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-holdings-inc-publishes-updated-greenhouse-gas-emissions-report"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "order-win",
+   "headline": "Construction team chosen for the $8bn first phase of the $15bn, 1.3 GW Vantage campus in Wisconsin — Whiting-Turner, The Weitz Co., the Turner-McCarthy joint venture and Michels",
+   "read": "A four-way split of a single phase, and ENR notes the friction alongside it: an open-shop right-to-work state with a Building Trades Council labour partnership, and community opposition on water use, habitat loss and light pollution.",
+   "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus"
+  },
+  {
+   "date": "2025-10-27",
+   "category": "project",
+   "headline": "Vantage NV1 campus detail published — 224 MW projected across four buildings on 137 acres, 805,000-plus labour hours, 700-plus workers daily, total project incident rate 0.25",
+   "read": "The safety number on a high-tempo campus is the most substantive operational disclosure the company makes about data-centre work.",
+   "source": "https://www.mccarthy.com/insights/how-mccarthys-vantage-data-centers-nv1-team-is-shaping-the-future-of-mission-critical"
+  },
+  {
+   "date": "2025-10-15",
+   "category": "project",
+   "headline": "Completes UC Riverside North District Phase 2 — $285M, 424,000 sq ft, 1,568 beds, delivered in 21 months using prefabricated cold-formed steel",
+   "read": "The only fully quantified prefabrication productivity claim the company publishes, and it came from the contractor proposing a structural change to the design.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-completes-landmark-university-of-california-riverside-student-housing-development"
+  },
+  {
+   "date": "2025-07-24",
+   "category": "capacity",
+   "headline": "Begins construction on a 17-acre Equipment Operations Hub in Maryland Heights, Missouri supporting Central Region operations across 28 states",
+   "read": "A 9.5-acre equipment yard and a prefabrication workshop — capital committed to self-perform capacity rather than to overhead.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-building-companies-inc-begins-construction-on-new-17-acre-equipment-operations"
+  },
+  {
+   "date": "2025-07-23",
+   "category": "order-win",
+   "headline": "Awarded the New Gen A and B Concourses at Reno-Tahoe International Airport — a $650M pre-approved budget, design-bid-build, groundbreaking Q1 2026",
+   "read": "The largest single aviation award in the file, on the most traditional delivery method — a reminder that most of this company's book is not data centres.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-building-companies-awarded-new-gen-ab-concourses-project-at-reno-tahoe"
+  },
+  {
+   "date": "2025-06-26",
+   "category": "project",
+   "headline": "Completes Scripps Memorial Hospital La Jolla Tower II — $664M, 418,500 sq ft, 170 beds, ten storeys, nine operating rooms",
+   "read": "The flagship of the healthcare practice and the largest published project value in the building book.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-completes-state-of-the-art-scripps-memorial-hospital-la-jolla-tower-ii"
+  },
+  {
+   "date": "2025-05",
+   "category": "project",
+   "headline": "Double Black Diamond reaches commercial operation — 593 MWac / 800 MWdc for Swift Current Energy, the largest operating solar facility east of the Mississippi",
+   "read": "Fifty percent of the plant delivered seven months early on a $779M EPC scope that included the substation and the utility tie-in — the strongest execution datapoint in the file.",
+   "source": "https://www.solarpowerworldonline.com/2025/05/largest-solar-project-east-of-mississippi-river-now-online-in-illinois/"
+  },
+  {
+   "date": "2025-01-21",
+   "category": "legal",
+   "headline": "Becomes signatory with the Mid-America Carpenters Regional Council in Kansas City",
+   "read": "The council's own account records initial resistance to McCarthy signing a local agreement, which 'began to wear down' — a candid look at how a mixed-shop national builder enters a union market.",
+   "source": "https://www.carpentersunion.org/news/big-signing-mccarthy-now-signatory-in-chicago-st-louis-and-kansas-city/"
+  },
+  {
+   "date": "2024-10-30",
+   "category": "incident",
+   "headline": "A sheet-metal worker employed by subcontractor IWR dies after a 12-foot fall on the Barnes-Jewish campus in St. Louis, where McCarthy was the construction company",
+   "read": "A subcontractor's employee on a McCarthy job — the distinction matters legally and not at all operationally.",
+   "source": "https://www.firstalert4.com/2024/10/30/sheet-metal-worker-killed-after-falling-while-working-construction-site-bjc-campus-central-west-end/"
+  },
+  {
+   "date": "2023-07-06",
+   "category": "project",
+   "headline": "Tops out Phase II of Vantage Data Centers' Goodyear, Arizona campus as general contractor — 176 MW across three facilities at full build",
+   "read": "The relationship that began the data-centre practice and still accounts for every named hyperscale client in the file.",
+   "source": "https://vantage-dc.com/news/vantage-data-centers-and-mccarthy-building-companies-celebrate-topping-out-of-construction-on-phase-ii-of-major-data-center-project-in-goodyear-ariz/"
+  },
+  {
+   "date": "2023-03-30",
+   "category": "regulatory",
+   "headline": "Earns an OSHA/ADOSH VPP STAR site designation on the Vantage Goodyear data-centre construction",
+   "read": "Described as OSHA's highest safety recognition across all federal and state offices; VPP STAR recipients run injury rates more than 50% below the national average.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-earns-highest-safety-adosh-distinction-on-construction-of-vantage-data-centers"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "vantage",
+   "type": "customer",
+   "status": "active",
+   "since": "2023",
+   "scale": "418 MW built; NV1 224 MW projected, Goodyear 176 MW, Lighthouse buildings 468 MW",
+   "note": "The only named hyperscale data-centre client anywhere in McCarthy's public record, across four engagements on three campuses.",
+   "context": "McCarthy 'serves as the general contractor for Phase II' of Vantage's Goodyear, Arizona campus, which topped out in July 2023 and reaches 176 MW of IT capacity across three facilities in more than a million square feet on stated client investment above $1.5bn. At Storey County, Nevada it is building the NV1 campus — 224 MW projected across four buildings on 137 acres — where NV12 alone is 64 MW in 260,000 sq ft and topped out in January 2026 with more than 1.1 million labour hours and zero lost-time incidents claimed. And at Port Washington, Wisconsin the Turner-McCarthy joint venture is building two buildings of the Lighthouse campus.\n\nVantage's own dossier records the McCarthy side of the Lighthouse engagement through Turner. The concentration is the finding: no other hyperscale client is named by McCarthy or by any independent source, while a confidential-client Scottsdale project proves the company does carry undisclosed mission-critical work.",
+   "source": "https://vantage-dc.com/news/vantage-data-centers-and-mccarthy-building-companies-celebrate-topping-out-of-construction-on-phase-ii-of-major-data-center-project-in-goodyear-ariz/"
+  },
+  {
+   "slug": "turner-construction",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-11",
+   "scale": "468 MW across Buildings 13 and 14",
+   "project": "lighthouse",
+   "via": "Turner-McCarthy joint venture",
+   "note": "Fifty-fifty joint venture on the Lighthouse campus, and the ENR Top 400 leader McCarthy competes with everywhere else.",
+   "context": "ENR named the first-phase construction team in November 2025: 'Whiting-Turner Contracting Co., The Weitz Co., a joint venture of Turner Construction and McCarthy Building Cos., and Michels'. The Daily Reporter then stated the scope precisely: 'Working as the Turner McCarthy Building Companies, Inc. Joint Venture, the contractors will work on Buildings 13 and 14, which will host a combined 468 MW to support Oracle and OpenAI's Stargate venture.'\n\nTurner's own dossier records the same joint venture from its side with `via: Turner-McCarthy JV`, inside a data-centre book that roughly tripled toward $9bn in 2025. The relationship is the mechanism by which McCarthy reached a giga-campus at all — a four-way phase split is how a landlord buys capacity it cannot get from one builder.",
+   "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/"
+  },
+  {
+   "slug": "hitt",
+   "type": "partner",
+   "status": "active",
+   "since": "2016",
+   "scale": "$1.7bn, 700,000 sq ft on 97 acres",
+   "via": "McCarthy HITT joint venture",
+   "note": "Joint venture on the Next NGA West intelligence campus in St. Louis, opened January 2026, and on a NASA Johnson Space Center multiple-award contract.",
+   "context": "The McCarthy HITT joint venture delivered the National Geospatial-Intelligence Agency's Next NGA West campus — $1.7bn, 700,000 sq ft on 97 acres, announced June 2016, major construction from early 2020, opened 26 January 2026 and described as the largest federal investment in St. Louis history. The delivery team included Black & Veatch Special Projects, Gensler and Akima. The same joint venture holds a NASA Johnson Space Center multiple-award construction contract worth up to $300M awarded in June 2026, as one of seven awardees.\n\nHITT's own dossier records the campus completion from its side. Secure federal work is where the two firms combine rather than compete; in the data-centre market they are direct rivals and HITT ranks fourteen places above McCarthy in the ENR 2026 Top 400.",
+   "source": "https://www.hitt.com/news-hub/mccarthy-hitt-celebrate-next-nga-west-completion/"
+  },
+  {
+   "slug": "black-veatch",
+   "type": "partner",
+   "status": "historical",
+   "since": "2016",
+   "note": "Named on the Next NGA West delivery team through Black & Veatch Special Projects alongside the McCarthy HITT joint venture.",
+   "context": "McCarthy's own account of the Next NGA West campus names the delivery team as the McCarthy HITT joint venture with Black & Veatch Special Projects, Gensler and Akima. The engagement is recorded as historical because the campus opened in January 2026 and no continuing programme between the two firms is published.\n\nIt is a narrow but real link: Black & Veatch's own dossier in this corpus is an engineering and construction firm on the power and water side, and the secure-federal market is one of the few places its scope and a building general contractor's overlap directly.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-hitt-and-nga-celebrate-completion-and-opening-of-next-nga-west-campus-in-st-louis"
+  },
+  {
+   "slug": "mortenson",
+   "type": "partner",
+   "status": "active",
+   "since": "2018",
+   "scale": "Allegiant Stadium $1.97B; Las Vegas Athletics ballpark $1.75B",
+   "note": "Mortenson-McCarthy joint venture holds both marquee Las Vegas stadium jobs — Allegiant Stadium and the Athletics ballpark.",
+   "context": "Mortenson's own dossier records the pairing: the Mortenson-McCarthy joint venture holds both marquee Las Vegas jobs, Allegiant Stadium at $1.97bn with a certificate of occupancy in 2020 and the $1.75bn, 33,000-seat Las Vegas Athletics ballpark, which broke ground in June 2025 for a 2028 opening.\n\nThe two firms are joint-venture partners on sports and rivals on data centres, where Mortenson rose twelve places to tenth in the ENR 2026 Top 400 on a hyperscale book that includes Meta's Beaver Dam and Rosemount campuses. It is the same pattern as the Turner relationship: partner where the job is too big for one bench, competitor everywhere else.",
+   "source": "Construction Equipment Guide — Athletics break ground on the $1.75B Las Vegas ballpark due in 2028 (Mortenson-McCarthy); McCarthy company history"
+  },
+  {
+   "slug": "lightsource-bp",
+   "type": "customer",
+   "status": "active",
+   "since": "2021",
+   "scale": "Elm Branch 163 MW, Briar Creek 153 MW, Sun Mountain / Bighorn 300 MW",
+   "note": "Selected as EPC contractor on multiple utility-scale solar projects in Texas and Colorado.",
+   "context": "McCarthy was 'selected by Lightsource bp as the Engineering, Procurement, and Construction (EPC) Contractor' for Elm Branch (163 MW, Ennis, Texas) and Briar Creek (153 MW, Corsicana, Texas), announced March 2021, and built 600 MW across Pueblo, Colorado including the 300 MW Bighorn Solar and Sun Mountain projects — 1,700-plus acres, 636,990 First Solar panels, Array Technologies trackers and more than four miles of transmission line.\n\nLightsource bp's own dossier covers the developer side. This is the only relationship in McCarthy's renewables book that resolves to a company already covered here — the rest of the developer set is Swift Current Energy, Sunraycer, Longroad, Silicon Ranch, EDF Renewables and EDP Renewables, none of which is in the registry.",
+   "source": "Texas Contractor — McCarthy begins construction on two Texas solar farms totalling more than 300 MW for Lightsource bp; Solar Builder archive"
+  },
+  {
+   "slug": "oracle",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-01",
+   "scale": "468 MW across Buildings 13 and 14",
+   "project": "lighthouse",
+   "note": "End user of the capacity the Turner-McCarthy joint venture is building at Lighthouse; McCarthy's contract is with Vantage, not with Oracle.",
+   "context": "The Daily Reporter states that Buildings 13 and 14 'will host a combined 468 MW to support Oracle and OpenAI's Stargate venture'. The indirection is stated deliberately: McCarthy's contractual counterparty is Vantage Data Centers as landlord and developer, and Oracle is the tenant of record for the capacity being built.\n\nIt is curated because the source names the link explicitly and because the same chain is recorded from the other end in Vantage's and Turner's dossiers, where Oracle appears as anchor tenant of the two Stargate giga-campuses.",
+   "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/"
+  },
+  {
+   "slug": "openai",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-01",
+   "project": "lighthouse",
+   "note": "Named alongside Oracle as the venture the Lighthouse capacity supports; McCarthy's contract is with Vantage.",
+   "context": "Same source and same indirection as the Oracle link: the buildings the Turner-McCarthy joint venture is constructing will host capacity supporting Oracle and OpenAI's Stargate venture. There is no contractual relationship between McCarthy and OpenAI in any source.\n\nRecorded because the corpus tracks Stargate as a named project and because a reader following the campus from tenant to builder should find the chain complete rather than broken at the general contractor.",
+   "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/"
+  },
+  {
+   "slug": "dpr",
+   "type": "competitor",
+   "status": "active",
+   "note": "Ranked seventh to McCarthy's twenty-second in the ENR 2026 Top 400, and one of the named leaders in the data-centre rankings McCarthy does not appear in.",
+   "context": "DPR reported $14.0bn of 2025 revenue at rank seven in the ENR 2026 Top 400, moving up one place, and is named among the leaders in Building Design+Construction's data-centre ranking; McCarthy is absent from that named group. Basis for curating the link: a comparative league table that ranks both firms on the same self-reported measure, with ENR's own analysis attributing the 2026 reshuffle specifically to data-centre exposure.\n\nDPR's own guide in this app covers employee ownership and design for manufacture — the two firms are also the corpus's two employee-owned general contractors, which makes them the natural comparison on that axis as well.",
+   "source": "https://www.enr.com/toplists/2026-Top-400-Contractors-1"
+  },
+  {
+   "slug": "holder-construction",
+   "type": "competitor",
+   "status": "active",
+   "note": "Ranked twelfth to McCarthy's twenty-second in the same ENR edition, having risen three places on a hyperscale book.",
+   "context": "Holder moved from fifteenth to twelfth in the ENR 2026 Top 400 while McCarthy fell from twentieth to twenty-second, in an edition where the telecommunications and data-centre category grew 86.4%. Independent reporting places Holder on Google's Fort Wayne campus and EdgeCore's $1.9bn Mesa campus — the latter a project misattributed to McCarthy in aggregator content and corrected here.\n\nBasis for the link is the same comparative ranking rather than any commercial dealing; no relationship between the two firms was found in any source.",
+   "source": "https://www.constructiondive.com/news/holder-construction-arizona-data-center/704098/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "IRA prevailing wage and apprenticeship requirements",
+   "status": "in-effect",
+   "exposure": "Direct and central to the renewables practice. Solar and storage projects above 1 MW must meet prevailing-wage and apprenticeship conditions for their developer to claim the full credit, which multiplies the base investment or production credit fivefold. Apprentice labour-hour thresholds run at 15% for construction beginning in 2024 and after, with a daily apprentice-to-journeyworker ratio that must be met or apprentices paid full prevailing wage for non-compliant days. McCarthy markets compliance explicitly as its value proposition: 200 registered apprenticeships across four 2023 projects and more than 65 registered apprentices at prevailing wage on Sun Streams 4. The apprenticeship pipeline is therefore a contractual dependency for its clients rather than a corporate-responsibility line.",
+   "source": "IRS — Prevailing wage and apprenticeship requirements; DOL Wage and Hour Division — Prevailing wage and the Inflation Reduction Act; CRS R48428"
+  },
+  {
+   "regime": "OBBBA clean-energy credit termination",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "Investment and production credits terminate for wind and solar placed in service after 31 December 2027, except for facilities that begin construction before 4 July 2026 — twelve months from enactment. The exposure is acute and time-boxed for a contractor whose renewables group is its fastest-growing business. The Lupinus I and II groundbreaking in March 2026 sits inside the safe-harbour window with completion set for early 2028, after the placed-in-service deadline, which is consistent with a begin-construction safe harbour. The structural question the record does not answer is what the pipeline looks like for projects that could not start before 4 July 2026.",
+   "source": "Clifford Chance — One Big Beautiful Bill Act: notable terminations of tax credits for solar, wind and hydrogen (2025-11); Steptoe — The One Big Beautiful Bill: impact on the IRA's clean energy tax credits"
+  },
+  {
+   "regime": "Davis-Bacon prevailing wage (2023 final rule)",
+   "status": "in-effect",
+   "effectiveDate": "2024-06-24",
+   "exposure": "Key provisions of the 2023 final rule were nationally enjoined on 24 June 2024 by a Texas federal court — operation-of-law incorporation into all federal contracts, the narrowed material-supplier exemption, and extension to off-site truck drivers. Remaining provisions including new wage calculations and updated determinations stay in effect. The injunction narrows exposure on McCarthy's federal and federally assisted work, which spans VA and USDA facilities, the Next NGA West campus and municipal water projects.",
+   "source": "Jackson Lewis — Court enjoins key provisions of the Davis-Bacon prevailing wage final rule; Crowell & Moring; Construction Dive"
+  },
+  {
+   "regime": "Buy America / Build America domestic content",
+   "status": "in-effect",
+   "exposure": "Applies to federally funded infrastructure and, through the domestic-content bonus, to clean-energy projects. Visible in the record as a marketing and credit differentiator rather than as a constraint: Swift Current Energy's release on the McCarthy-built Double Black Diamond emphasises American-made equipment — First Solar modules from Ohio, Nextracker racking, and components fabricated in Chicago with 100% US-made steel.",
+   "source": "Swift Current Energy — Energization of a landmark 800 MW solar facility in Illinois with American-made equipment"
+  },
+  {
+   "regime": "Immigration enforcement and craft labour availability",
+   "status": "in-effect",
+   "exposure": "A joint AGC of America and NCCER survey found 28% of construction firms reported workforce disruptions tied to immigration enforcement activity in the prior six months. Roughly 34% of US construction workers are immigrants, above 60% in trades such as drywall and plastering, and the Houston metropolitan area runs at about 38.6% foreign-born non-citizen construction workforce per Census data. McCarthy's Texas exposure is material — twelve OSHA-recorded Texas jobsites in the 2016-2026 window and an active Houston hospital project.",
+   "source": "Construction Dive and HR Dive — ICE raids worsen construction's labor shortage; Texas Public Radio (2026-02-04)"
+  },
+  {
+   "regime": "Craft labour supply and the data-centre crowding-out effect",
+   "status": "in-effect",
+   "exposure": "ENR's own 2026 survey reporting frames the industry-wide condition: Top 400 revenue rose 11.8% to $671.4bn while the telecommunications and data-centre category grew 86.4% past $100bn. The mechanism by which this reaches a diversified builder is stated plainly by a peer chief executive quoted by ENR — data centres 'absorb a significant share of skilled labor, tightening the overall workforce available for other construction sectors'. For McCarthy this degrades the non-data-centre markets that are most of its book even where it is not bidding the data-centre work.",
+   "source": "ENR — Top 400 review: data center boom raises stakes (2026-09-03); ENR — Top 400 contractors hit craft ceiling as AI boom strains skilled labor resources (2026-05-20)"
+  },
+  {
+   "regime": "OSHA respirable crystalline silica national emphasis programme",
+   "status": "in-effect",
+   "exposure": "An open health-complaint inspection at Sparks, Nevada in the Tahoe Reno Industrial Center corridor — inspection 1826381.015, opened 22 May 2025, flagged under the silica national emphasis programme and a construction emphasis programme, with one 'other' citation at $500 still open at retrieval. Separately, the nine-year Cal/OSHA contest over Valley Fever exposure on a Shandon, California solar site closed on 2 April 2026 at one 'other' violation and $700, from an initial $46,540 proposal — a dust-borne occupational-health question litigated through McCarthy's own case.",
+   "source": "OSHA inspection records 1826381.015 and 1235941.015; Cal/OSHA Appeals Board ALJ decision (2024)"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Ray Sedey",
+   "title": "Chairman and Chief Executive Officer, McCarthy Holdings, Inc.",
+   "photo": "images/execs/mccarthy-sedey.jpg",
+   "background": [
+    "Chief Executive Officer since 2020 — the second non-family member to hold the role",
+    "Joined McCarthy in 2000 as a project engineer and moved through core operations and leadership roles",
+    "Executive sponsor of the national craft initiative and an instructor in the leadership development programme",
+    "Boards and councils: Dallas Regional Chamber, Dallas College Foundation, Montana State University Advisory Council, Construction Industry Round Table, Time for Change, Tugboat Institute",
+    "BS Construction Engineering, Montana State University; named to the 2022 D CEO Dallas 500"
+   ]
+  },
+  {
+   "name": "Dhruv Patel",
+   "title": "President and Chief Operating Officer, McCarthy Holdings, Inc.",
+   "photo": "images/execs/mccarthy-patel.jpg",
+   "background": [
+    "Appointed President and Chief Operating Officer in August 2026",
+    "Joined McCarthy in 2013; scaled the Renewable Energy group from $20 million to more than $2 billion in revenue",
+    "President of the Renewable Energy Group 2025; Chief Operating Officer 2024; prior roles across preconstruction and operations",
+    "Former Leadership Circle member, Energy Storage Association; named to the 2026 ENR Top 20 Under 40",
+    "BS Electrical Engineering and MBA, Arizona State University; based in Phoenix"
+   ]
+  },
+  {
+   "name": "Joe Jouvenal",
+   "title": "Chief Transformation Officer, McCarthy Holdings, Inc.",
+   "photo": "images/execs/mccarthy-jouvenal.jpg",
+   "background": [
+    "Chief Transformation Officer since 2026; Chief Operating Officer 2024-2026; first Chief Administrative Officer 2022",
+    "Southern Region President 2019; VP Operations Dallas 2012; project manager and director roles from 1998",
+    "Joined McCarthy in 1998 as a project engineer",
+    "Boards: Children's Health of Dallas Foundation; Dallas Citizens Council",
+    "BS Civil Engineering, Virginia Tech"
+   ]
+  },
+  {
+   "name": "Kristine Newman",
+   "title": "Chief Financial Officer, McCarthy Holdings, Inc.",
+   "photo": "images/execs/mccarthy-newman.jpg",
+   "background": [
+    "Chief Financial Officer since April 2022, succeeding the retiring Doug Audiffred",
+    "Joined McCarthy in 2005 as Southwest Region controller; later EVP Finance",
+    "Audit and consulting, Arthur Andersen LLP, Chicago and Phoenix",
+    "Oversees accounting, finance, insurance, cash management, investments, internal audit, financial reporting and risk management",
+    "BS Accounting, Purdue University; CPA. 2023 Executive of the Year, CFMA Valley of the Sun"
+   ]
+  },
+  {
+   "name": "Justin McFarland",
+   "title": "Chief Digital Officer, McCarthy Holdings, Inc.",
+   "photo": "images/execs/mccarthy-mcfarland.jpg",
+   "background": [
+    "Leads enterprise digital strategy across technology, data, AI and innovation — including the Palantir partnership and the Pulse AI Operations Suite",
+    "Formerly Chief Administrative Officer and EVP of Information Technology",
+    "More than 25 years across construction, manufacturing, distribution and consulting",
+    "BSBA and MBA, Washington University in St. Louis; 2022 St. Louis ORBIE CIO of the Year"
+   ]
+  },
+  {
+   "name": "Cathy Orquiola",
+   "title": "Regional CEO and Executive Committee Member",
+   "background": [
+    "Joined McCarthy in August 2026, reporting to Chairman and CEO Ray Sedey",
+    "Previously western regional president and board member at PCL Construction Services, covering Arizona, California, Hawaii and Washington",
+    "More than 30 years in the industry, with expertise in concrete, civil, electrical and steel, and in public-private partnership and design-build delivery",
+    "Focus stated as self-perform leadership and the mission-critical and data-centre market",
+    "BS Civil Engineering, Florida Institute of Technology; YPO; national board, ACE Mentor Program of America"
+   ]
+  },
+  {
+   "name": "Justin Kelton",
+   "title": "Chief Executive Officer, Southwest Region",
+   "photo": "images/execs/mccarthy-kelton.jpg",
+   "background": [
+    "Began his career as a labourer on a hospital project and served in the Marine Corps",
+    "Joined McCarthy as a project engineer in 2001; project director, VP, SVP, EVP, President, then Regional CEO",
+    "Instrumental in growing the national renewable-energy and water and wastewater practices",
+    "Civil and Environmental Engineering, Vermont Technical College; Executive Program, University of Chicago Booth"
+   ]
+  },
+  {
+   "name": "Mike Myers",
+   "title": "Chief Executive Officer, Southern Pacific Region",
+   "photo": "images/execs/mccarthy-myers.jpg",
+   "background": [
+    "Assumed the regional CEO role in 2024, overseeing about 1,500 partners across San Diego, Los Angeles, Newport Beach and Las Vegas",
+    "More than 20 years with the company",
+    "Serves on McCarthy Holdings' executive committee and board",
+    "YPO Southern California; Orange County American Heart Association board; CHOC Foundation Cabinet"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2020 (the only total revenue the company has ever published)",
+    "periodType": "annual",
+    "periodEnd": "2020-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "'2020 revenues exceeding $4.8 billion'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Published by McCarthy itself in a November 2021 release about the NCEO Employee Ownership 100 ranking. It is the only company-published total revenue figure in existence and it is five years old"
+     }
+    ],
+    "commentary": "Included because it is the sole first-party revenue disclosure and because its age is the point: a private employee-owned company has no obligation to publish, and McCarthy has not."
+   },
+   {
+    "period": "FY2024 (third-party reported)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue, third-party",
+      "actual": "$6.3bn per Forbes' prior-year figure in its America's Largest Private Companies profile",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Self-reported to Forbes; not audited"
+     },
+     {
+      "name": "ENR Top 400 rank",
+      "actual": "20, unchanged from 20 in the prior edition",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ENR revenue columns are paywalled; the rank is public. ENR ranks on self-reported survey responses"
+     }
+    ],
+    "commentary": "No margin, no backlog and no end-market mix exists for this or any other year."
+   },
+   {
+    "period": "FY2025 (third-party reported)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue, third-party",
+      "actual": "$7.1bn with 8,074 employees, as of December 2025",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Forbes, America's Largest Private Companies. The best-sourced of three circulating figures — the others are 'over $6.9bn' attributed to the ENR 2025 list and $8.00bn from a low-tier aggregator. They disagree, none is audited, and they must not be averaged",
+      "kpi": "revenue",
+      "usdMillions": 7100,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "ENR Top 400 rank",
+      "actual": "22, down from 20",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The decline happened in the edition where Top 400 aggregate revenue rose 11.8% to $671.4bn and the telecommunications and data-centre category rose 86.4% past $100bn. Every peer that rose sharply carries a heavy data-centre book; every peer that fell does not"
+     },
+     {
+      "name": "Employee ownership scale",
+      "actual": "NCEO Employee Ownership 100 rank 25 with 4,050 employees, updated October 2025",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The 4,050 is a plan-participant count and sits materially below the roughly 8,074 total headcount — about half the workforce are not, or not yet, participants. Neither NCEO nor McCarthy frames it that way. Prior positions were 30 in 2021 and 47 in 2020"
+     },
+     {
+      "name": "Company self-description of scale",
+      "actual": "'15th largest domestic builder' citing ENR, May 2025",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Cited by McCarthy in February 2026. Note it does not match the Top 400 rank of 20 for the same year — ENR publishes several revenue bases across different lists, so 'ENR rank' is meaningless without naming the list"
+     }
+    ],
+    "commentary": "The rank movement is the most informative financial fact available about this company, precisely because there is no income statement to read instead."
+   }
+  ],
+  "commentary": "There is no filing record. McCarthy Holdings, Inc. is private and 100% employee-owned through an ESOP established in 1996 and completed on 12 April 2002, and it publishes no audited financials, no margin, no backlog and no end-market revenue mix. This section therefore reports a collection gap rather than reconstructing figures. Two kinds of number exist and both are labelled: company-published claims, of which exactly one is a total revenue figure and it is for 2020; and third-party rankings, all of which originate in self-reported survey responses. ENR's own editor describes the process plainly — firms submit surveys and are ranked on the revenue they report. The most useful independent series is therefore the rank rather than the revenue: 19, then 20, then 20, then 22 across four editions, a two-place decline in the year the data-centre category grew 86.4%. Set against the company's own 418 MW delivered and more than 2 GW in preconstruction, the honest reading is a diversified builder whose data-centre position is largely still ahead of it. Expectations honesty: there is no consensus, no guidance and no analyst coverage for a private company, and none is manufactured here."
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess McCarthy is entering the hyperscale data-centre market rather than competing in it as an incumbent, and that its own two published figures say so. Basis: 418 MW built against more than 2 GW in planning, design and preconstruction — a five-to-one ratio ahead of the company. Every named hyperscale client on its site is Vantage; its largest engagement, the 468 MW at Lighthouse, is reached through a joint venture with Turner; and it appears in none of ENR's or Building Design+Construction's named data-centre leaders, nor in Construction Dive's roundup of multibillion-dollar hyperscaler projects.",
+  "2. **(High confidence)** We assess the ENR rank movement is the single most informative datapoint in a file with no income statement. Basis: 19 to 20 to 20 to 22 across four editions, with the fall landing in the year Top 400 revenue rose 11.8% and the data-centre category rose 86.4%. Mortenson rose twelve places, Clune thirteen, Fortis eleven, Holder three and HITT two into the top ten — all on hyperscale books. Skanska, JE Dunn, Gilbane and McCarthy fell. In a league table of self-reported revenue, relative position is the only comparable measure, and it is moving the wrong way.",
+  "3. **(Moderate confidence)** We assess the diversification that costs McCarthy rank is also the reason its data-centre entry is credible. Basis: a century of healthcare with 1,000-plus facilities and a Modern Healthcare number-one ranking is the closest analogue in construction to building beside a live data hall, and the company runs a dedicated Specialized Solutions Group for occupied-facility work; a 40-year water and wastewater practice with eight advanced treatment plants in twelve years is the capability a water-reuse campus commitment actually requires; and an unusually broad self-perform stack covering concrete, full mechanical, electrical and plumbing, and civil holds the scopes that sit on a data-centre critical path. None of that shows in a revenue ranking.",
+  "4. **(Moderate confidence)** We assess the renewables group, not the data-centre group, is the business the company has actually bet on. Basis: it scaled from $20M to more than $2B, it is ranked second in large-scale storage installation and third among EPC providers, and in August 2026 the executive who built it was made president and chief operating officer of the whole holding company. The counterweight is regulatory and dated: the OBBBA terminates the credits for wind and solar placed in service after 31 December 2027 unless construction began before 4 July 2026, which makes the shape of the post-July pipeline the open question the public record does not answer.",
+  "5. **(Moderate confidence)** We assess the Palantir partnership is a genuine organisational commitment rather than a procurement, and that this cuts both ways. Basis: a multi-year, multi-million-dollar agreement; a company-branded product, Pulse, built on the vendor's platform; independent reporting that McCarthy is restructuring its internal technology team around embedded Palantir engineers; and the vendor's own framing of it as 'an operating system for the way construction actually works'. A general contractor whose estimating, contracts, buyout, quality control and logistics run through one external platform has bought capability and a dependency in the same transaction.",
+  "6. **(Low confidence)** We assess the employee-ownership structure is more complicated as a competitive asset than either the company or the ranking bodies present it. Basis: NCEO's October 2025 entry gives 4,050 employees against roughly 8,074 total headcount, meaning about half the workforce are not plan participants; the company publishes an ESOP contribution of up to 19% of base pay and a claim of three to four times the industry average in retirement contributions, but no retention or turnover figure at all; and no independent analysis exists of whether the ESOP helps or hurts recruitment against Turner, DPR or Holder. DPR, also employee-owned, ranks fifteen places higher.",
+  "7. **(Low confidence)** We assess the safety record is strong on the measurable dimensions and carries two events the ranking bodies do not capture. Basis: 80 OSHA inspections across a decade produced 14 violations in ten of them, an 87.5% no-citation rate with no willful and no repeat findings, alongside a VPP STAR designation on a Vantage data-centre site and market-level figures of 0.45 to 0.47 experience modification rate. Against that sit a 2020 fatality of a 27-year-old carpenter apprentice on the company's own Clayton development, closed with no citation, and a 2024 subcontractor fatality on the Barnes-Jewish job. Collection gap: no company-wide, current-year, dated experience modification rate or total recordable incident rate is published anywhere — the figures that exist are undated and market-scoped."
+ ],
+ "sources": [
+  {
+   "label": "ENR — Top 400 review: data center boom raises stakes (sector growth data)",
+   "url": "https://www.enr.com/articles/63598-enr-top-400-review-data-center-boom-raises-stakes",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "BusinessWire via Morningstar — Construction industry veteran Cathy Orquiola joins McCarthy Building Companies",
+   "url": "https://www.morningstar.com/news/business-wire/20260820015222/construction-industry-veteran-cathy-orquiola-joins-mccarthy-building-companies-inc",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "McCarthy — Construction industry veteran Cathy Orquiola joins McCarthy Building Companies, Inc.",
+   "url": "https://www.mccarthy.com/insights/construction-industry-veteran-cathy-orquiola-joins-mccarthy-building-companies-inc",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "McCarthy — Breaks ground on a national employee development campus",
+   "url": "https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-national-employee-development-campus",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "McCarthy — McCarthy Holdings, Inc. names Dhruv Patel President and Chief Operating Officer",
+   "url": "https://www.mccarthy.com/insights/mccarthy-holdings-inc-names-dhruv-patel-president-and-chief-operating-officer",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "McCarthy — Building at hyperscale (Lighthouse campus staffing)",
+   "url": "https://www.mccarthy.com/insights/building-at-hyperscale",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "McCarthy — City of Lawrence and McCarthy mark completion of the Kansas River wastewater treatment plant modernisation",
+   "url": "https://www.mccarthy.com/insights/city-of-lawrence-and-mccarthy-building-companies-mark-completion-of-kansas-river",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "McCarthy — WRD and the City of Torrance break ground on the Torrance Groundwater Desalter expansion",
+   "url": "https://www.mccarthy.com/insights/wrd-and-the-city-of-torrance-break-ground-on-the-torrance-groundwater-desalter-expansion",
+   "date": "2026-06-19"
+  },
+  {
+   "label": "McCarthy — McCarthy and Palantir announce a strategic partnership to bring AI to the construction field",
+   "url": "https://www.mccarthy.com/insights/mccarthy-and-palantir-announce-strategic-partnership-to-bring-ai-to-the-construction-field",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Construction Dive — McCarthy, Palantir partner on AI (internal team restructuring around embedded engineers)",
+   "url": "https://www.constructiondive.com/news/mccarthy-palantir-artificial-intelligence-ai-partnership/822517/",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "ENR — Top 400 contractors hit craft ceiling as AI boom strains skilled labor resources",
+   "url": "https://www.enr.com/articles/63029-top-400-contractors-hit-craft-ceiling-as-ai-boom-strains-skilled-labor-resources",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "ENR Midwest — Publishes preliminary 2026 Top Contractor list (survey methodology stated)",
+   "url": "https://www.enr.com/blogs/10-midwest-musings/post/63006-enr-midwest-publishes-preliminary-2026-top-contractor-list",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Construction Dive — Top commercial contractors of 2026 (ENR revenue for the top ten)",
+   "url": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+   "date": "2026-05-22"
+  },
+  {
+   "label": "ENR — 2026 Top 400 Contractors 1-100 (McCarthy Holdings rank 22, from 20)",
+   "url": "https://www.enr.com/toplists/2026-Top-400-Contractors-1",
+   "date": "2026-05"
+  },
+  {
+   "label": "McCarthy — Construction begins on ASU's new Health Headquarters building",
+   "url": "https://www.mccarthy.com/insights/construction-begins-on-asus-new-health-headquarters-building-in-the-downtown-phoenix",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "McCarthy — SSM Health Cardinal Glennon Children's Hospital marks topping out",
+   "url": "https://www.mccarthy.com/insights/ssm-health-cardinal-glennon-childrens-hospital-marks-construction-milestone-with-topping",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "McCarthy — Delivers CommonSpirit Memorial Hospital North Georgia ($90M, 134,000 sq ft, 64 beds)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-building-companies-delivers-commonspirit-memorial-hospital-north-georgia",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "Solar Power World — Construction under way on a 620 MW solar portfolio in north-east Texas (Sunraycer; McCarthy EPC)",
+   "url": "https://www.solarpowerworldonline.com/2026/03/construction-underway-on-620-mw-solar-project-portfolio-in-northeast-texas/",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "Correctional News — New San Quentin learning centre opens ($239M progressive design-build, McCarthy contractor)",
+   "url": "https://correctionalnews.com/2026/02/23/new-san-quentin-learning-center-opens-to-advance-california-model/",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "McCarthy — Completes a new critical-access hospital serving rural north-west Kansas ($105M, 171,000 sq ft)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-completes-construction-of-new-critical-access-hospital-serving-rural-northwest",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "Construction Superintendent — McCarthy tops out its project at Vantage Data Centers' campus outside Reno",
+   "url": "https://consupt.com/2026/02/mccarthy-tops-out-project-at-vantage-data-centers-campus-outside-reno-nevada/",
+   "date": "2026-02"
+  },
+  {
+   "label": "McCarthy — McCarthy Holdings, Inc. publishes an updated greenhouse-gas emissions report (ENR fifteenth-largest claim; 8,000-plus employees)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-holdings-inc-publishes-updated-greenhouse-gas-emissions-report",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "McCarthy — Hilltop School for the Arts and Theater beam ceremony marks topping out ($74.5M)",
+   "url": "https://www.mccarthy.com/insights/hilltop-school-for-the-arts-and-theater-beam-ceremony-marks-topping-out-a-major",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "McCarthy — McCarthy HITT and NGA celebrate the completion and opening of the Next NGA West campus",
+   "url": "https://www.mccarthy.com/insights/mccarthy-hitt-and-nga-celebrate-completion-and-opening-of-next-nga-west-campus-in-st-louis",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "McCarthy — Announces the creation of a campus focused on developing people and visionary leaders (Tempe, 12 acres)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-announces-creation-of-its-new-campus-focused-on-developing-people-and-visionary",
+   "date": "2026-01-27"
+  },
+  {
+   "label": "McCarthy — Completion of a new reservoir at the Signal Butte water treatment plant in Mesa ($168M expansion, 24 to 48 MGD)",
+   "url": "https://www.mccarthy.com/insights/completion-of-new-reservoir-at-signal-butte-water-treatment-plant-in-mesa-ariz-marks",
+   "date": "2026-01-23"
+  },
+  {
+   "label": "The Daily Reporter — Turner and McCarthy announce a partnership for the $15B Port Washington project (Buildings 13 and 14, 468 MW)",
+   "url": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "McCarthy — Celebrates the topping out of the NV12 project at Vantage Data Centers",
+   "url": "https://www.mccarthy.com/insights/mccarthy-building-companies-celebrates-topping-out-of-nv12-project-at-vantage-data-centers",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "McCarthy — Marks two major construction milestones in Ontario's multi-billion-dollar community expansion (parking structures)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-marks-two-major-construction-milestones-in-ontarios-multi-billion-dollar",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "McCarthy — Completes construction and celebrates the opening of the Plaza West Tower at Barnes-Jewish Hospital",
+   "url": "https://www.mccarthy.com/insights/mccarthy-completes-construction-and-celebrates-opening-of-plaza-west-tower-at-barnes",
+   "date": "2025-12-09"
+  },
+  {
+   "label": "ENR — Construction team chosen for the first phase of the $15B Wisconsin data-centre campus",
+   "url": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Construction Dive — Meta taps Mortenson for a $1B Wisconsin data centre (corrects a misattribution to McCarthy)",
+   "url": "https://www.constructiondive.com/news/meta-mortenson-beaver-dam-wisconsin-data-center/806211/",
+   "date": "2025-11-14"
+  },
+  {
+   "label": "McCarthy — How McCarthy's Vantage Data Centers NV1 team is shaping the future of mission critical",
+   "url": "https://www.mccarthy.com/insights/how-mccarthys-vantage-data-centers-nv1-team-is-shaping-the-future-of-mission-critical",
+   "date": "2025-10-27"
+  },
+  {
+   "label": "Building Design+Construction — Top data center construction firms for 2025 (named leaders; McCarthy absent)",
+   "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+   "date": "2025-10-07"
+  },
+  {
+   "label": "McCarthy — Completes the landmark University of California Riverside student housing development (21 months, cold-formed steel)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-completes-landmark-university-of-california-riverside-student-housing-development",
+   "date": "2025-10-15"
+  },
+  {
+   "label": "McCarthy — Completes a $185M addition and expansion at Mercy Hospital Fort Smith",
+   "url": "https://www.mccarthy.com/insights/mccarthy-completes-185m-addition-and-expansion-at-mercy-hospital-fort-smith",
+   "date": "2025-09-10"
+  },
+  {
+   "label": "McCarthy — Announces completion of the new USDA Food Safety and Inspection Service Midwestern Laboratory",
+   "url": "https://www.mccarthy.com/insights/mccarthy-building-companies-announces-completion-of-new-usda-food-safety-and-inspection",
+   "date": "2025-08-27"
+  },
+  {
+   "label": "Nevada Appeal — $3 billion data-centre project at the Tahoe Reno Industrial Center pushing forward",
+   "url": "https://www.nevadaappeal.com/news/2025/aug/05/3-billion-data-center-project-at-tahoe-reno-industrial-center-pushing-forward/",
+   "date": "2025-08-05"
+  },
+  {
+   "label": "McCarthy — Phoenix Union begins the construction transformation of Metro Tech High School",
+   "url": "https://www.mccarthy.com/insights/phoenix-union-begins-construction-transformation-of-metro-tech-high-school",
+   "date": "2025-08-14"
+  },
+  {
+   "label": "McCarthy — Begins construction on a new 17-acre Equipment Operations Hub",
+   "url": "https://www.mccarthy.com/insights/mccarthy-building-companies-inc-begins-construction-on-new-17-acre-equipment-operations",
+   "date": "2025-07-24"
+  },
+  {
+   "label": "McCarthy — Awarded the New Gen A and B Concourses project at Reno-Tahoe International Airport ($650M)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-building-companies-awarded-new-gen-ab-concourses-project-at-reno-tahoe",
+   "date": "2025-07-23"
+  },
+  {
+   "label": "McCarthy — Completes the state-of-the-art Scripps Memorial Hospital La Jolla Tower II ($664M)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-completes-state-of-the-art-scripps-memorial-hospital-la-jolla-tower-ii",
+   "date": "2025-06-26"
+  },
+  {
+   "label": "ENR — 2025 Top 400 Contractors preview (McCarthy rank 20)",
+   "url": "https://www.enr.com/toplists/2025-Top-400-Contractors-1-preview",
+   "date": "2025-05"
+  },
+  {
+   "label": "Solar Power World — Largest solar project east of the Mississippi River now online in Illinois (Double Black Diamond)",
+   "url": "https://www.solarpowerworldonline.com/2025/05/largest-solar-project-east-of-mississippi-river-now-online-in-illinois/",
+   "date": "2025-05"
+  },
+  {
+   "label": "Mid-America Carpenters Regional Council — Big signing: McCarthy now signatory in Chicago, St. Louis and Kansas City",
+   "url": "https://www.carpentersunion.org/news/big-signing-mccarthy-now-signatory-in-chicago-st-louis-and-kansas-city/",
+   "date": "2025-01-21"
+  },
+  {
+   "label": "First Alert 4 (KMOV) — Sheet-metal worker killed after falling at a BJC campus construction site",
+   "url": "https://www.firstalert4.com/2024/10/30/sheet-metal-worker-killed-after-falling-while-working-construction-site-bjc-campus-central-west-end/",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "Rocky Mountain Construction — Longroad Energy's Sun Streams 4 reaches its peak-workforce milestone (McCarthy EPC, fifth Longroad project)",
+   "url": "https://acppubs.com/RMC/article/DB8265B4-longroad-energy-s-sun-streams-4-solar-project-reaches-construction-milestone-of-peak-workforce",
+   "date": "2024-04"
+  },
+  {
+   "label": "ENR — 2024 Top 400 Contractors preview (McCarthy rank 20, from 19)",
+   "url": "https://www.enr.com/toplists/2024-Top-400-Contractors-1-preview",
+   "date": "2024-05"
+  },
+  {
+   "label": "Construction Dive — Texas judge puts a hold on the prevailing wage rule",
+   "url": "https://www.constructiondive.com/news/prevailing-wage-davis-bacon-texas-judge-agc/720017/",
+   "date": "2024-06"
+  },
+  {
+   "label": "PV Tech — McCarthy Building Companies targets IRA labour bonuses for a 1.1 GW-plus solar portfolio",
+   "url": "https://www.pv-tech.org/mccarthy-building-companies-targets-ira-labour-bonuses-for-over-1-1gw-solar-portfolio/",
+   "date": "2023-11-14"
+  },
+  {
+   "label": "Construction Dive — Holder Construction gets the $1.9B Arizona data-centre job (corrects a misattribution to McCarthy)",
+   "url": "https://www.constructiondive.com/news/holder-construction-arizona-data-center/704098/",
+   "date": "2023-08-01"
+  },
+  {
+   "label": "Vantage Data Centers — Vantage and McCarthy celebrate the topping out of Phase II in Goodyear, Arizona",
+   "url": "https://vantage-dc.com/news/vantage-data-centers-and-mccarthy-building-companies-celebrate-topping-out-of-construction-on-phase-ii-of-major-data-center-project-in-goodyear-ariz/",
+   "date": "2023-07-07"
+  },
+  {
+   "label": "McCarthy — Earns the highest ADOSH safety distinction on the construction of Vantage Data Centers (VPP STAR)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-earns-highest-safety-adosh-distinction-on-construction-of-vantage-data-centers",
+   "date": "2023-03-30"
+  },
+  {
+   "label": "McCarthy — New Innovation and Craft Workforce Center in Chandler, Arizona unveiled",
+   "url": "https://www.mccarthy.com/insights/new-innovation-and-craft-workforce-center-in-chandler-ariz-unveiled-by-mccarthy",
+   "date": "2023-03-01"
+  },
+  {
+   "label": "McCarthy — Promotes Kristine Newman to Chief Financial Officer",
+   "url": "https://www.mccarthy.com/insights/mccarthy-holdings-inc-promotes-kristine-newman-to-chief-financial-officer",
+   "date": "2022-04-08"
+  },
+  {
+   "label": "McCarthy — Recognised as the 30th largest employee-owned company (the source of the 2020 revenue figure)",
+   "url": "https://www.mccarthy.com/insights/mccarthy-recognized-as-30th-largest-employee-owned-company",
+   "date": "2021-11-03"
+  },
+  {
+   "label": "Silicon Ranch — McCarthy begins construction of two solar projects in south Georgia to help power a Facebook data centre",
+   "url": "https://www.siliconranch.com/stories/mccarthy-building-companies-begins-construction-of-two-solar-projects-for-silicon-ranch-in-south-georgia-to-help-power-facebook-data-center/",
+   "date": "2021"
+  },
+  {
+   "label": "Texas Contractor — McCarthy begins construction on two Texas solar farms totalling more than 300 MW for Lightsource bp",
+   "url": "https://acppubs.com/TXC/article/6C5F5BCE-mccarthy-begins-construction-on-two-texas-solar-farms-totaling-more-than-300mw-for-lightsource-bp",
+   "date": "2021-03"
+  },
+  {
+   "label": "Cal/OSHA Appeals Board — ALJ decision, inspection 1235941 (McCarthy Building, Valley Fever)",
+   "url": "https://www.dir.ca.gov/oshab/Decisions-ALJ/2024/1235941-McCarthy-Building.pdf",
+   "date": "2024"
+  },
+  {
+   "label": "OSHA — Inspection 1497025.015, Clayton, Missouri fatality",
+   "url": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1497025.015",
+   "date": "2020-10-07"
+  },
+  {
+   "label": "OSHA — Inspection 1826381.015, Sparks, Nevada (silica national emphasis programme; open)",
+   "url": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1826381.015",
+   "date": "2025-05-22"
+  },
+  {
+   "label": "OSHA — Inspection 1235941.015, Shandon, California (Valley Fever, closed 2 April 2026)",
+   "url": "https://www.osha.gov/ords/imis/establishment.inspection_detail?id=1235941.015",
+   "date": "2017-05-15"
+  },
+  {
+   "label": "Forbes — McCarthy Holdings company profile (America's Largest Private Companies)",
+   "url": "https://www.forbes.com/companies/mccarthy-holdings/",
+   "date": "2025-12"
+  },
+  {
+   "label": "NCEO — Employee Ownership 100 (McCarthy Holdings rank 25, 4,050 employees)",
+   "url": "https://www.nceo.org/articles/employee-ownership-100",
+   "date": "2025-10"
+  },
+  {
+   "label": "ESCA — 100% employee-owned McCarthy Holdings celebrates 150 years of building America",
+   "url": "https://esca.us/news/100-employee-owned-mccarthy-holdings-inc-celebrates-150-years-of-building-america/"
+  },
+  {
+   "label": "Swift Current Energy — Energization of a landmark 800 MW solar facility in Illinois with American-made equipment",
+   "url": "https://swiftcurrentenergy.com/swift-current-energy-announces-energization-of-landmark-800-mw-solar-facility-in-illinois-with-american-made-equipment/",
+   "date": "2025"
+  },
+  {
+   "label": "Swift Current Energy — Ramps up construction of the 800 MW Double Black Diamond project with McCarthy Building Companies",
+   "url": "https://swiftcurrentenergy.com/swift-current-energy-ramps-up-construction-of-800-mw-double-black-diamond-solar-project-with-mccarthy-building-companies/",
+   "date": "2023"
+  },
+  {
+   "label": "Solar Builder — McCarthy Building Companies archive (Lightsource bp Bighorn and Pueblo projects)",
+   "url": "https://solarbuildermag.com/tag/mccarthy-building-companies/",
+   "date": "2022"
+  },
+  {
+   "label": "IRS — Prevailing wage and apprenticeship requirements",
+   "url": "https://www.irs.gov/credits-deductions/prevailing-wage-and-apprenticeship-requirements"
+  },
+  {
+   "label": "Clifford Chance — One Big Beautiful Bill Act: notable terminations of tax credits for solar, wind, hydrogen and clean vehicles",
+   "url": "https://www.cliffordchance.com/content/dam/cliffordchance/briefings/2025/11/one-big-beautiful-bill-act-notable-terminations-of-tax-credits-for-solar-wind-hydrogen-and-clean-vehicles.pdf",
+   "date": "2025-11"
+  },
+  {
+   "label": "Jackson Lewis — Court enjoins key provisions of the Davis-Bacon prevailing wage final rule",
+   "url": "https://www.jacksonlewis.com/insights/court-enjoins-key-provisions-davis-bacon-prevailing-wage-final-rule-construction-contractors"
+  },
+  {
+   "label": "Construction Dive — ICE raids worsen construction's labor shortage (AGC/NCCER survey)",
+   "url": "https://www.constructiondive.com/news/construction-labor-ice-raids/756989/"
+  },
+  {
+   "label": "Texas Public Radio — Construction site ICE raids hurting the economy and the building industry",
+   "url": "https://www.tpr.org/border-immigration/2026-02-04/construction-site-ice-raids-hurting-economy-and-building-industry",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "McCarthy — Mission Critical (418 MW built; 2 GW-plus in preconstruction)",
+   "url": "https://www.mccarthy.com/projects/mission-critical"
+  },
+  {
+   "label": "McCarthy — Renewable Energy (17 GW-plus solar, 9 GWh storage, 114-plus projects, 4,600 craft)",
+   "url": "https://www.mccarthy.com/projects/renewable-energy"
+  },
+  {
+   "label": "McCarthy — Healthcare (1,000-plus facilities; Modern Healthcare number-one general contractor)",
+   "url": "https://www.mccarthy.com/projects/healthcare"
+  },
+  {
+   "label": "McCarthy — Water and Wastewater (40 years, 80% repeat clients, 0.45 EMR)",
+   "url": "https://www.mccarthy.com/projects/water-wastewater"
+  },
+  {
+   "label": "McCarthy — Marine and Port Terminals (TPIR 0.69, LTIR 0.03, EMR 0.47, 80%-plus self-perform)",
+   "url": "https://www.mccarthy.com/projects/marine-port-terminals"
+  },
+  {
+   "label": "McCarthy — Government (more than $4 billion of federal projects)",
+   "url": "https://www.mccarthy.com/projects/government"
+  },
+  {
+   "label": "McCarthy — Science and Technology (more than half the BSL4 facilities in the nation)",
+   "url": "https://www.mccarthy.com/projects/science-technology"
+  },
+  {
+   "label": "McCarthy — Self-perform (trades list)",
+   "url": "https://www.mccarthy.com/our-approach/self-perform"
+  },
+  {
+   "label": "McCarthy — Prefabrication (scope and SiteShift Source)",
+   "url": "https://www.mccarthy.com/our-approach/prefabrication"
+  },
+  {
+   "label": "McCarthy — Virtual Design and Construction (three pillars)",
+   "url": "https://www.mccarthy.com/projects/virtual-design-construction"
+  },
+  {
+   "label": "McCarthy — Collaborative delivery (hard bid to CMAR, design-build, P3, IPD)",
+   "url": "https://www.mccarthy.com/our-approach/collaborative-delivery"
+  },
+  {
+   "label": "McCarthy — Our history (founding 1864, ESOP 1996, 100% employee-owned 2002, Castle acquisition 2014)",
+   "url": "https://www.mccarthy.com/about/our-history"
+  },
+  {
+   "label": "McCarthy — Employee ownership",
+   "url": "https://www.mccarthy.com/about/employee-ownership"
+  },
+  {
+   "label": "McCarthy — Locations (19 offices)",
+   "url": "https://www.mccarthy.com/locations"
+  },
+  {
+   "label": "McCarthy — Specialized Solutions Group (occupied-facility renovations)",
+   "url": "https://www.mccarthy.com/projects/specialized-solutions-group"
+  },
+  {
+   "label": "McCarthy — Subsurface utility mapping",
+   "url": "https://www.mccarthy.com/projects/subsurface-utility-mapping"
+  },
+  {
+   "label": "McCarthy — Double Black Diamond Solar project page",
+   "url": "https://www.mccarthy.com/projects/double-black-diamond-solar"
+  },
+  {
+   "label": "McCarthy — Bright Arrow Solar and Storage project page",
+   "url": "https://www.mccarthy.com/projects/bright-arrow-solar-storage"
+  },
+  {
+   "label": "McCarthy — Serrano Solar and Storage project page",
+   "url": "https://www.mccarthy.com/projects/serrano-solar-storage"
+  },
+  {
+   "label": "McCarthy — Arrow Canyon Solar and Storage project page",
+   "url": "https://www.mccarthy.com/projects/arrow-canyon-solar-storage"
+  },
+  {
+   "label": "McCarthy — Cattlemen Solar Park project page",
+   "url": "https://www.mccarthy.com/projects/cattlemen-solar-park"
+  },
+  {
+   "label": "McCarthy — Sun Mountain Solar project page",
+   "url": "https://www.mccarthy.com/projects/sun-mountain-solar"
+  },
+  {
+   "label": "McCarthy — FAA Data Center Atlanta project page",
+   "url": "https://www.mccarthy.com/projects/faa-data-center-atlanta"
+  },
+  {
+   "label": "McCarthy — Yuma Regional Medical Center data centre project page",
+   "url": "https://www.mccarthy.com/projects/yuma-regional-medical-center-data-center"
+  },
+  {
+   "label": "Castle Contracting (digcastle.com) — services and offices",
+   "url": "https://www.digcastle.com/"
+  },
+  {
+   "label": "Vantage Data Centers — $3 billion AI campus in Nevada (NV1, 224 MW)",
+   "url": "https://vantage-dc.com/news/vantage-data-centers-invests-3-billion-to-deliver-ai-campus-in-growing-nevada-market/"
+  }
+ ],
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
+}

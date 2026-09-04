@@ -1,0 +1,865 @@
+{
+ "schemaVersion": 2,
+ "slug": "oklo",
+ "title": "Oklo — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "sections": [
+  {
+   "id": "what-this-guide-does-not-repeat",
+   "title": "Start here: the reactor, not the company",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "This app already teaches nuclear from four directions and this guide repeats none of them. **Constellation Energy's guide** covers the operating fleet as a *business*: merchant power, capacity markets, life extension and uprates, restarting a shut reactor, attribute markets, and why a reactor's cost structure pushes it to run flat out. **Dominion Energy's guide** covers the {{SMR}} as a line item in a regulated buyer's programme — the {{clean firm power}} question from the buyer's chair — how a utility decides, and what an integrated resource plan and a certificate of public convenience do to the clock. **Kiewit's guide** gives the constructor's four-bullet summary of advanced reactors: factory fabrication against megaproject, fast neutrons in one sentence, first-of-a-kind financing risk, and the learning curve as an incumbency. And **GE Vernova, Siemens Energy and Mitsubishi Power** cover the turbines and the grid connection that any thermal plant needs.",
+    "**What none of them opens is the machine.** This guide's subject is what is *actually* new about a small modular reactor as engineering, and the honest answer is that almost none of it is the word 'small'. It is: removing the {{moderator}} and what that forces; choosing a coolant that boils at 880 °C instead of 300 °C and what that removes from the building; a safety claim that rests on the sign of a coefficient rather than on a pump; a fuel that barely exists at commercial scale; a licence route that is now genuinely two routes; the {{xenon poisoning}} that makes a thermal reactor a poor follower and a fast one less so; and a business model in which nobody sells you a reactor at all.",
+    "**Three ideas carry it.** The {{moderator}} is the fork in the road — nearly every other difference follows from removing it. The **coolant's boiling point sets the building**, because pressure is what makes a reactor big. And the **licence, not the construction, is the schedule**.",
+    "**A reading discipline this subject demands.** Oklo is pre-commercial: no Aurora powerhouse has produced a kilowatt-hour, and its entire announced customer book consists of non-binding instruments. So this guide is careful throughout to separate four things that headlines routinely merge — a design, a regulatory milestone, an announcement, and a delivered megawatt-hour. That discipline is itself part of the curriculum, because it is how you read this whole sector.",
+    "Written for a reader with high-school physics and chemistry. Every acronym is defined on first use, and the drills test mechanism, never company facts."
+   ]
+  },
+  {
+   "id": "what-a-reactor-is-doing",
+   "title": "What a reactor is actually doing",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "A reactor is a machine for boiling water with a neutron economy. Everything hard about it follows from the second half of that sentence.",
+    "**{{fission}} is a neutron transaction.** A neutron strikes a heavy nucleus, the nucleus splits into two lighter fragments, and out come energy and — this is the operative part — **two or three more free neutrons**, which is what makes a {{chain reaction}} possible. If on average exactly one of those goes on to cause the next fission, the reaction sustains itself at constant power. More than one and power climbs; fewer and it falls. The number is called reactivity and holding it at exactly one is what a reactor's control system does all day.",
+    "**Why that is controllable at all comes down to a small fraction of the neutrons.** Most fission neutrons appear within about a hundred-millionth of a second — far too fast for any mechanical system to chase. But somewhat under one percent of them, the {{delayed neutrons}}, are emitted seconds to minutes later by the decay of certain fission products. A reactor is deliberately operated so that it depends on those stragglers to reach criticality, which stretches its response from microseconds to a human timescale. **The entire practicality of nuclear power rests on that sub-one-percent.**",
+    "**And now the fact that shapes every safety system: turning it off does not stop the heat.** The fission products accumulated in the fuel are radioactive and keep decaying regardless of whether the chain reaction is running. That {{decay heat}} is roughly six to seven percent of full power at the instant of shutdown, falling over hours and days — for a 75 MWe unit, several megawatts of thermal power that must go somewhere for a long time after everything is 'off'. Every serious reactor accident in history has been a failure to remove decay heat, not a failure to stop the chain reaction. When a vendor says a design is safe, the question that matters is *how does it remove decay heat with no power and nobody present*.",
+    "**One more piece of vocabulary before the fork in the road.** A neutron's chance of causing a fission is described by a {{neutron cross-section}}, an effective target area measured in barns — and it depends enormously on the neutron's energy. Slow neutrons are far more likely to cause fission in uranium-235 than fast ones are. That single energy dependence is why the next section exists."
+   ]
+  },
+  {
+   "id": "the-fork-in-the-road",
+   "title": "The fork in the road: keeping or removing the moderator",
+   "kind": "table",
+   "read": "9 min",
+   "intro": "Nearly every operating commercial reactor slows its neutrons down before using them. A fast reactor does not. This one choice cascades into the fuel, the coolant, the core size, the waste and the regulator — and it is the single most useful thing to understand about what is new in the advanced-reactor field.",
+   "cols": [
+    "",
+    "Thermal spectrum (almost every operating plant)",
+    "Fast spectrum (Aurora, Natrium, and the sodium family)",
+    "Why it follows"
+   ],
+   "rows": [
+    [
+     "**The {{moderator}}**",
+     "Present — a {{thermal spectrum}}. Light water in a pressurised or boiling water reactor; graphite in some designs. Its job is to slow fission neutrons down through repeated collisions with light nuclei",
+     "**Absent by design.** Nothing in the core is there to slow neutrons",
+     "A neutron loses energy fastest bouncing off something its own mass — a hydrogen nucleus. Remove the hydrogen and the neutrons stay fast"
+    ],
+    [
+     "**Fission probability**",
+     "High. A slow neutron has a large {{neutron cross-section}} for fission in uranium-235",
+     "Low. A fast neutron is far less likely to cause a fission per encounter",
+     "Cross-sections are strongly energy-dependent — this is the physics that forces everything below"
+    ],
+    [
+     "**{{enrichment}} required**",
+     "Around 3 to 5 percent uranium-235",
+     "Higher — the {{HALEU}} band above 5 and below 20 percent",
+     "If each neutron is less likely to fission, you need more fissile atoms in its path to keep the chain going"
+    ],
+    [
+     "**Core size and density**",
+     "Large, dilute, full of water",
+     "Small, dense, compact",
+     "More fissile material per litre and no moderator between the fuel pins means a physically smaller core for the same power"
+    ],
+    [
+     "**What the coolant may be**",
+     "Water works, because water is also the moderator you wanted",
+     "**Must not moderate.** Liquid metal, molten salt or gas — never ordinary water",
+     "Cooling a fast core with water would re-introduce the moderator you removed and turn it back into a thermal reactor"
+    ],
+    [
+     "**What the spare neutrons can do**",
+     "Little. The neutron economy is tight",
+     "Convert non-fissile uranium-238 into plutonium, and fission some of the long-lived heavy elements a thermal reactor merely accumulates",
+     "A fast neutron carries enough energy to fission nuclei that a slow one only gets absorbed by. This is the real argument for the spectrum"
+    ],
+    [
+     "**{{xenon poisoning}} sensitivity**",
+     "High — xenon-135 has an enormous appetite for *thermal* neutrons",
+     "Much lower, because that appetite is a thermal-energy phenomenon",
+     "The same cross-section energy dependence, working in the operator's favour for once"
+    ],
+    [
+     "**Industrial base**",
+     "Sixty years of supply chain, codes, trained operators and regulatory precedent",
+     "Thin. Demonstrated — but the fuel, the components and the licensing precedent all have to be rebuilt",
+     "This, not the physics, is the real difficulty. Every 'new' reactor is competing against six decades of learning in the old one"
+    ]
+   ],
+   "note": "**The honest summary: 'small modular reactor' is a category of commerce, not of physics.** The designs grouped under it include light-water plants that are simply smaller, gas-cooled pebble beds, molten-salt machines and sodium-cooled fast reactors — and they share a *business* model (build in a factory, licence once, repeat) far more than they share a technology. When a source says a company is building an SMR, the useful follow-up is: thermal or fast, and cooled with what? Those two answers predict nearly everything else, including how hard the licence will be."
+  },
+  {
+   "id": "the-coolant-sets-the-building",
+   "title": "The coolant's boiling point sets the size of the building",
+   "kind": "proscons",
+   "read": "8 min",
+   "intro": "Here is the least intuitive and most consequential idea in the subject. A reactor is pressurised not because the reaction needs pressure, but because water boils at 100 °C and you need it liquid at 300 °C. Change the coolant and the pressure vessel — and much of the containment building around it — stops being necessary.",
+   "cards": [
+    {
+     "t": "Water at 155 atmospheres",
+     "meta": "The pressurised light-water reactor: water is coolant and {{moderator}} at once, held liquid at about 320 °C by roughly 155 bar of pressure",
+     "adv": [
+      "Sixty years of operating experience, a mature supply chain, trained operators and settled regulatory precedent — an advantage that is very hard to overstate",
+      "Water is cheap, non-toxic, transparent, chemically well understood and does not burn",
+      "It moderates and cools with one fluid, which keeps the core simple",
+      "Every code, standard and inspection regime in the industry was written for it"
+     ],
+     "dis": [
+      "**Everything must hold 155 bar.** A thick forged pressure vessel, thick piping, a containment building sized for the steam released if that piping fails — this is where much of a nuclear plant's cost and size actually goes",
+      "The defining accident is a loss-of-coolant: depressurise and the water flashes to steam and leaves, taking the cooling with it",
+      "Decay-heat removal after shutdown depends on keeping water where it is, which historically meant pumps and therefore electricity",
+      "Water's boiling point caps the steam temperature and therefore the thermal efficiency of the whole plant"
+     ]
+    },
+    {
+     "t": "Liquid sodium at atmospheric pressure",
+     "meta": "The {{sodium-cooled fast reactor}}: sodium melts at 98 °C and boils near 880 °C, so it stays liquid across the whole operating range with essentially no pressurisation",
+     "adv": [
+      "**No pressure means no thick vessel and no large loss-of-coolant accident** — the single largest architectural saving, and the reason a small unit can be genuinely small",
+      "Enormous thermal margin: the coolant runs hundreds of degrees below its boiling point, so a temperature excursion does not immediately produce vapour",
+      "Excellent heat transfer and high heat capacity per unit volume, which suits a compact, power-dense core",
+      "The margin plus a pool of hot metal gives very large thermal inertia, which is what makes {{natural circulation}} of decay heat plausible"
+     ],
+     "dis": [
+      "**Sodium burns on contact with air and reacts violently with water.** Every sodium plant is an exercise in keeping it away from both, which is why an {{intermediate loop}} is inserted between the radioactive primary sodium and the water/steam side",
+      "It is opaque, so refuelling and in-service inspection cannot be done by looking — everything is by instrument and by feel",
+      "It freezes at 98 °C, so every pipe, valve and tank needs trace heating for the plant's whole life",
+      "The industrial base is small: pumps, valves, seals and instruments for hot sodium are a speciality, not a catalogue item"
+     ]
+    },
+    {
+     "t": "The rest of the field, briefly",
+     "meta": "Helium in a high-temperature gas reactor; fluoride or chloride {{molten salt reactor}}s; sealed {{heat-pipe reactor}}s in the microreactor class",
+     "adv": [
+      "Helium is chemically inert and transparent to neutrons, and permits very high outlet temperatures useful for industrial heat",
+      "Molten salts run hot at low pressure and, where the fuel is dissolved in the salt, can in principle be processed online",
+      "A heat pipe removes the coolant loop entirely — a sealed tube where fluid evaporates hot and condenses cold, with no pumps at all",
+      "All three avoid water's pressure problem by a different route"
+     ],
+     "dis": [
+      "Helium's poor heat capacity means large volumes and big blowers; a depressurisation loses cooling quickly",
+      "Molten salts are a materials-science problem before they are an engineering one — corrosion at temperature is the long pole",
+      "Heat pipes scale poorly: they suit single-digit megawatts, not a campus",
+      "None has a commercial operating fleet, so every one of them is arguing from test reactors and analysis"
+     ]
+    }
+   ],
+   "note": "**Where the heritage claim comes from, and what it is worth.** The sodium-cooled fast reactor is not new: {{EBR-II}} ran at Idaho from 1964 to 1994, and in 1986 it was deliberately subjected to a loss of flow and a loss of heat sink at full power **with the safety systems disabled and no operator action**, and shut itself down and cooled itself in both tests. That is the experiment the entire modern passive-safety claim points back at. What it demonstrates is real. What it does not demonstrate is a commercial supply chain, a licensed commercial design, or a cost — and those, not the physics, are what the field is still short of."
+  },
+  {
+   "id": "safety-as-a-coefficient",
+   "title": "When safety is a sign rather than a system",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "The phrase vendors use is 'walk-away safe'. It sounds like marketing and it names something specific, so it is worth taking apart carefully — including the part that is genuinely a claim rather than a fact.",
+    "**Start with the mechanism. A reactor's reactivity changes as it gets hotter**, and whether it goes up or down is a property of the core's design — its geometry, its materials, how the fuel expands. Design it so that heating makes the chain reaction *weaker*, and you have a {{negative temperature coefficient}}: an excursion in power raises the temperature, the higher temperature suppresses the reaction, and the power falls again. **Nothing acted. No sensor detected anything, no operator decided anything, no valve moved.** The physics did it.",
+    "**Metal fuel makes this stronger, which is why the fuel form is a safety choice.** {{metallic fuel}} conducts heat far better than a ceramic oxide pellet, so the fuel runs much cooler and responds fast; and it expands when hot in a way that pushes fissile material apart and leaks neutrons out of the core, which is itself a negative feedback. A ceramic pellet, by contrast, is a good insulator: its centre runs far hotter than its edge and it stores that heat.",
+    "**Then the second half of the problem — {{decay heat}} — and here the coolant's boiling point pays off again.** With no pressure to lose and hundreds of degrees of margin to the coolant's boiling point, a pool of hot liquid metal can move heat by {{natural circulation}}: hot fluid is less dense, so it rises; cold fluid sinks; the loop turns without a pump. Add enough thermal mass and enough surface to the outside world and the decay heat leaves on its own. That is what {{passive safety}} means concretely — gravity, density and conduction doing the work that pumps and diesels do in a conventional plant.",
+    "**Now the caution, and it is the reason this section exists.** A passive-safety claim is only as good as **the conditions under which it was demonstrated, and the state the machine was in**. EBR-II's 1986 tests were real and are properly famous, and they were performed on one reactor, at one power, in one configuration, at the end of a long operating campaign. A modern design that shares the physics is not thereby the same machine, and this is precisely what a regulator's review exists to establish. It is also, concretely, what the US regulator said was missing in 2022 when it denied Oklo's first licence application: insufficient information on the maximum credible accident methodology and on how safety-significant components were classified.",
+    "**The reader's takeaway is a question rather than a fact.** When any vendor claims passive safety, ask: *which accident, at what power, with what assumed initial condition, and demonstrated or analysed?* The answer separates an engineering property from a brochure line, and it is the same discipline the rest of this guide applies to announcements."
+   ]
+  },
+  {
+   "id": "the-fuel-is-the-constraint",
+   "title": "The fuel is the constraint, not the reactor",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Ask what is stopping advanced reactors and the intuitive answers are cost, licensing and construction. The less intuitive one, and arguably the binding one, is that **the fuel they need barely exists**.",
+    "**{{HALEU}} is uranium enriched above the roughly 5 percent of conventional fuel and below the 20 percent that would count as highly enriched.** A compact fast core needs it for the reason the fork-in-the-road table gave: fast neutrons are less likely to fission, so you need more fissile atoms in their path. Nearly every advanced design — fast reactors, high-temperature gas reactors, most molten-salt concepts — lands in that band.",
+    "**The supply picture is stark, and it is an industry fact rather than a company one.** Only one US enricher is producing HALEU at all, and at pilot scale: it completed a 900 kilogram delivery to the Department of Energy in January 2026. Nine hundred kilograms. The department's availability programme targeted 21 metric tons by mid-2026, and its first allocation round in April 2025 divided material among five developers. Set that against a fleet ambition measured in gigawatts and the arithmetic does not yet close.",
+    "**So the near-term fuel comes from an unusual place.** Oklo's first core is roughly five metric tons of HALEU recovered from **used EBR-II fuel** — material irradiated decades ago at Idaho, electrochemically processed and blended down. It is government-owned material under a cooperative agreement, and the Department of Energy retains ownership through and after use. That is not a supply chain; it is an inheritance, and it is enough for a first unit.",
+    "**Above the enrichment sits fabrication, and it is its own bottleneck.** Metal fuel is not made by the companies that make oxide pellets, so the fabrication plant has to be built too — which is why a reactor developer ends up constructing a fuel facility, and why the largest single capital commitment Oklo has announced is a fuel recycling facility rather than a power plant.",
+    "**And beneath everything, three constraints people forget.** Higher enrichment means tighter **material control and accounting** and a different security category, with guards, inventories and reporting that scale with it. It means **transport packages** certified for the material — a genuine bottleneck with its own development programme. And it means **conversion and deconversion** steps between the enricher's product and the fabricator's feed that almost nobody has capacity for.",
+    "**The lesson generalises past any one company.** In a mature industry the constraint is demand. In an immature one it is almost always a single upstream input nobody thought about while designing the product. For advanced fission today, that input is enriched uranium in a band the world has not needed at scale before."
+   ]
+  },
+  {
+   "id": "what-modular-really-means",
+   "title": "What 'modular' actually buys, and what caps it",
+   "kind": "proscons",
+   "read": "8 min",
+   "intro": "The word does a lot of work in this field and it is worth separating what it means physically from what it means economically. Kiewit's guide states the constructor's version in a sentence; this is the mechanism underneath it, and the constraint at the end that nobody advertises.",
+   "cards": [
+    {
+     "t": "The economics of scale — the old argument",
+     "meta": "Build one very large unit, because cost rises more slowly than output. A 1,000 MW plant costs far less than seven 150 MW plants",
+     "adv": [
+      "Genuinely true in physics: surface area, and therefore material, grows more slowly than volume",
+      "Fewer control rooms, fewer licences, fewer interconnections, fewer staff per megawatt",
+      "The whole nuclear industry was built on this argument and it is why plants got bigger for forty years"
+     ],
+     "dis": [
+      "Every unit is a megaproject built once on a site, so nothing is ever repeated and nothing is learned twice",
+      "The capital at risk before any revenue is enormous, which restricts the buyer set to entities that can absorb it",
+      "A schedule slip on a decade-long build compounds through financing cost — the mechanism that has killed more nuclear projects than any technical failure",
+      "The construction workforce is assembled, taught, and dispersed"
+     ]
+    },
+    {
+     "t": "The economics of series — the modular argument",
+     "meta": "Build many small identical units in a factory, and let the {{learning curve}} do the work. Unit cost falls by a roughly constant percentage each time cumulative output doubles",
+     "adv": [
+      "Factory conditions: fixtures, jigs, controlled welding, repeatable quality, and inspection at a bench rather than on a scaffold",
+      "The workforce is permanent and gets better; the site crew installs rather than fabricates",
+      "Much less capital at risk per unit, so a wider set of buyers and a shorter path to revenue",
+      "One licensed design repeated, rather than a bespoke argument each time — in principle the regulatory work is done once",
+      "Output can be matched to demand incrementally instead of guessing a decade ahead"
+     ],
+     "dis": [
+      "**It is a claim about the tenth unit, made while building the first.** {{first-of-a-kind}} cost is not evidence about {{nth-of-a-kind}} cost, and treating it as such is the commonest error in reading any new-technology cost case",
+      "The factory only exists if the order book does, and the order book only exists if the cost is low — a genuine chicken-and-egg that public money is currently being used to break",
+      "You gave up the scale economy to buy the series economy, so if the series never materialises you are left with the worst of both",
+      "Regulatory repeatability is an assumption: it requires the design to actually stay standard, and sites are not standard"
+     ]
+    }
+   ],
+   "note": "**The constraint nobody advertises: the shipping envelope.** 'Factory-built' is limited by what can leave the factory. Oklo's own materials are precise about this — 'all components can be transported by truck and can be lifted by typical cranes' — and that is a real engineering boundary, not a slogan. Road and rail clearances cap module width, height and weight, which caps how much can be assembled before shipping, which caps how much site labour the factory can actually displace. It is why a 'factory-built' reactor still arrives as a set of large pieces to be joined on site, and why the honest question about any modular claim is: **what fraction of the labour hours moved indoors?** Nobody publishes that number."
+  },
+  {
+   "id": "two-regulators-two-clocks",
+   "title": "Two regulators, two clocks — and why the licence is the schedule",
+   "kind": "table",
+   "read": "9 min",
+   "intro": "This is the section a reader of 2026 headlines most needs, because the American advanced-reactor field currently runs on two entirely different legal routes and the coverage frequently merges them. Both are real; they are not interchangeable.",
+   "cols": [
+    "",
+    "The NRC route",
+    "The DOE authorization route",
+    "What the difference actually is"
+   ],
+   "rows": [
+    [
+     "**Who is the regulator**",
+     "The Nuclear Regulatory Commission — an independent civilian agency licensing commercial reactors",
+     "The Department of Energy, self-regulating facilities on its own sites under its own nuclear-safety orders",
+     "One is external licensing of a commercial actor; the other is a federal department authorising work on its own land"
+    ],
+    [
+     "**The instrument**",
+     "A {{construction permit}} then an operating licence (the two-step route), or a {{combined licence}} granting both against inspections and tests agreed in advance",
+     "An Other Transaction Agreement, then a Nuclear Safety Design Agreement, then a Preliminary Documented Safety Analysis, then a Documented Safety Analysis, then a readiness review, then startup authorization",
+     "Six named gates in both cases, but only one of them produces a licence you can take to a commercial site"
+    ],
+    [
+     "**The frameworks available**",
+     "10 CFR Part 50, Part 52, and since March 2026 **{{Part 53}}** — the technology-inclusive, risk-informed framework written specifically so a non-light-water design need not be argued against rules drafted for something else",
+     "DOE nuclear safety orders",
+     "Part 53 is the biggest structural change in US reactor licensing in decades, and it was finalised more than a year ahead of its statutory deadline"
+    ],
+    [
+     "**{{design certification}}**",
+     "Available: approve a standardised design once, independent of any site, so later applicants reference it instead of re-arguing it",
+     "Not applicable",
+     "This is the mechanism by which the modular argument is supposed to work on the regulatory side. Only one small-reactor design in the US currently holds such an approval"
+    ],
+    [
+     "**Where it can be used**",
+     "Anywhere a licence can be granted — this is what a commercial fleet requires",
+     "Only on DOE sites, or under DOE authority",
+     "**The decisive limitation.** A DOE-authorised reactor at a national laboratory is not a template for a reactor at a customer's campus"
+    ],
+    [
+     "**Speed, in practice**",
+     "Years. Component approvals can be fast — a principal design criteria topical report was approved in under half the traditional timeline in May 2026 — but a full application is a multi-year review",
+     "Fast enough to matter: one privately sited pilot reactor went from groundbreaking to first criticality in about eleven months in 2025-2026",
+     "The DOE route lets engineering, construction and safety review advance **in parallel** rather than in sequence. That is the whole speed advantage"
+    ],
+    [
+     "**What it does not remove**",
+     "—",
+     "Emergency planning, security, material accounting, environmental review and the interconnection queue all still apply",
+     "A faster safety review does not shorten a transmission study or a fuel delivery"
+    ]
+   ],
+   "note": "**Two cautions for reading any story in this field.** First, a **materials licence is not a reactor licence**: authorisation to possess and distribute a couple of curies of a radioisotope is a real NRC licence and says nothing about permission to operate a power plant, yet headlines routinely blur them. Second, **an application that was accepted for review in one year and denied in a later one is not a pending application** — several secondary sources still describe a 2020 acceptance in the present tense years after the 2022 denial. The general lesson: in this sector, the regulatory noun is the fact. Application, acceptance, docketing, approval, permit and licence are six different things, and only the last two let you build or run anything."
+  },
+  {
+   "id": "why-a-reactor-follows-badly",
+   "title": "Why a reactor is a bad follower — and what changes it",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "Constellation's guide states the economics: a reactor's costs are nearly all fixed, so every unsold megawatt-hour is margin thrown away, and well-run fleets therefore run flat out. That is true and it is not the whole story. There is a **physical** reason a thermal reactor follows load badly, and it is one of the most elegant mechanisms in the subject.",
+    "**Meet xenon-135.** It is a fission product, it is produced both directly and by the decay of iodine-135 with a roughly six-and-a-half-hour half-life, and it has one of the largest {{neutron cross-section}}s of any nucleus known — an appetite for **thermal** neutrons some millions of times greater than ordinary fuel. In a reactor at steady power, xenon is being produced by fission and destroyed by neutron absorption at the same rate, and it sits at an equilibrium level the operators have long since accounted for.",
+    "**Now reduce power, and watch what happens.** Fission drops immediately, so xenon production from direct fission drops with it — but the iodine already in the fuel keeps decaying into xenon on its own schedule, and the neutron flux that was *destroying* xenon has fallen. Production from decay continues; destruction collapses. So **xenon builds up**, peaking several hours later, and while it is there it is absorbing the neutrons the chain reaction needs. This is the {{xenon poisoning}} pit, and its practical consequence is severe: for a period of hours after a significant power reduction, a thermal reactor may be unable to return to full power at all, no matter what the operator wants.",
+    "**That is the physical reason nuclear does not chase a load**, and it sits on top of the economic reason and two more mechanical ones: rapid power changes cycle fuel and cladding through thermal stress, and every cycle consumes some of the fuel's conditioning and the plant's overhaul life.",
+    "**Now the part that is genuinely new, and it is the payoff of the fork in the road.** Xenon's enormous appetite is a **thermal-neutron** phenomenon: its cross-section is vast for slow neutrons and small for fast ones. A {{fast spectrum}} core is therefore far less troubled by it. A fast reactor is not automatically a good follower — the thermal-stress and economic arguments still apply — but the physical trap that most constrains a conventional plant is largely absent.",
+    "**And there is a second route to the same end, which is worth naming because it is the one the field is actually taking.** Put a thermal store between the reactor and the turbine — molten salt, most commonly — and run the reactor flat out while varying only what the store releases to the steam cycle. The reactor never changes power; the *plant* follows the grid. It is the same trick as a battery beside a solar farm, at a different point in the chain, and it decouples a machine that hates changing from a market that demands it.",
+    "**Why any of this matters for an AI campus.** Constellation's guide makes the pairing argument from the demand side: an AI hall draws nearly flat power around the clock, which matches the output profile a reactor wants to produce and gives nuclear a high {{capacity credit}}. This is the same argument from the supply side, with a caveat the demand-side version omits — **an AI training load is not actually flat.** It steps, hard and rhythmically, which is exactly what §5's row 12 of the failure map describes. A generator that cannot follow is fine when the average is what matters and problematic when the steps are, which is why every serious campus design has something fast between the reactor and the racks."
+   ]
+  },
+  {
+   "id": "the-plant-around-the-reactor",
+   "title": "The plant around the reactor: heat is the product, electricity is the sale",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "A reactor makes heat. Everything between that heat and a customer is conventional thermal-plant engineering, bought from the same suppliers the gas-turbine guides in this app describe. This is where an exotic nuclear island meets an entirely ordinary secondary side.",
+   "cols": [
+    "Stage",
+    "What it is",
+    "What is novel about it in an advanced reactor",
+    "Who supplies it"
+   ],
+   "rows": [
+    [
+     "**Primary circuit**",
+     "The coolant loop in contact with the fuel, carrying heat out of the core",
+     "Everything. Liquid metal, molten salt or gas rather than pressurised water — and at essentially atmospheric pressure in the sodium case",
+     "The reactor vendor. This is the part that is genuinely new"
+    ],
+    [
+     "**{{intermediate loop}}**",
+     "A second coolant circuit between the radioactive primary and the water/steam side",
+     "Present in sodium designs specifically so that a sodium-water reaction cannot happen inside the reactor. It costs some efficiency and buys separation",
+     "The reactor vendor"
+    ],
+    [
+     "**Steam generator**",
+     "Where heat crosses from the coolant into water and makes steam",
+     "The interface everyone worries about in a sodium plant, because it is where the two reactive fluids come closest",
+     "The reactor vendor, usually with a specialist"
+    ],
+    [
+     "**Turbine and generator**",
+     "{{Rankine cycle}}: expand the steam through a turbine, condense it, pump it back",
+     "**Nothing.** This is a conventional steam turbine and a conventional generator, and a fast reactor buys them from the same catalogue a gas plant does",
+     "An established turbine OEM — Oklo's first unit uses a Siemens Energy condensing SST-600 turbine and an SGen-100A generator under a binding contract"
+    ],
+    [
+     "**Heat rejection**",
+     "Getting the condenser's waste heat to the environment — cooling tower, once-through water, or air-cooled condensers",
+     "Air-cooled condensers are the notable choice: they trade efficiency for freeing the plant from siting beside a body of water",
+     "Conventional heat-rejection suppliers"
+    ],
+    [
+     "**Switchyard and interconnection**",
+     "{{generator step-up transformer}}, {{switchgear}}, protection, and the {{point of interconnection}}",
+     "Nothing nuclear about it — and it is where the schedule most often actually breaks",
+     "The grid-equipment OEMs, and the transmission operator's queue"
+    ],
+    [
+     "**Heat as a product**",
+     "Steam or hot fluid sold directly rather than converted to electricity",
+     "A genuine advantage of higher-temperature designs, and the reason industrial and process customers appear in these order books at all",
+     "The reactor vendor, direct to the customer"
+    ]
+   ],
+   "note": "**Two things follow from this table and both are easy to miss.** First, **an advanced reactor is not an entirely new supply chain** — roughly half the plant is thermal-power equipment that already exists, which is why Siemens Energy and the constructors in this corpus appear in an SMR file at all, and why the turbine guides here are directly relevant. Second, **the interconnection is not nuclear and can still stop everything**: a grid operator withdrew a multi-fuel interconnection request for one advanced-reactor campus in August 2026 for failure to demonstrate voltage ride-through, a study-process failure of exactly the kind §5's row 1 describes, with nothing to do with the reactor at all."
+  },
+  {
+   "id": "nobody-sells-you-a-reactor",
+   "title": "When nobody sells you a reactor",
+   "kind": "proscons",
+   "read": "8 min",
+   "intro": "Every other equipment guide in this app describes a purchase: you buy a chiller, a UPS, a gen-set, a turbine. Here the model is different, and it changes what the customer is actually agreeing to. This section also teaches the reading discipline the whole sector needs.",
+   "cards": [
+    {
+     "t": "Sell the reactor (the conventional model)",
+     "meta": "A vendor designs and supplies the plant; a utility or independent producer owns it, licenses it, staffs it and operates it",
+     "adv": [
+      "The buyer owns an asset and controls it, and can rate-base it where it is a regulated utility",
+      "The vendor's capital requirement is manageable — it is manufacturing, not project finance",
+      "Sixty years of contracting precedent: everyone knows what the warranties, the liabilities and the scope boundaries look like",
+      "The operating licence sits with an entity that already holds others"
+     ],
+     "dis": [
+      "The buyer takes construction risk, schedule risk and operating risk on a technology it has never run",
+      "For a data-centre developer this is very far outside its competence — it wants power, not a nuclear licence",
+      "First-of-a-kind cost lands entirely on the first buyer, which is why first buyers are so hard to find"
+     ]
+    },
+    {
+     "t": "{{build-own-operate}} and sell the power",
+     "meta": "The vendor finances, builds, owns, licenses and runs the plant, and sells electricity or heat under long-term power purchase agreements",
+     "adv": [
+      "The customer buys a familiar thing — a {{PPA}} — and takes no nuclear risk at all",
+      "The vendor keeps the technology, the operating experience and the learning across a fleet, which is exactly what the {{learning curve}} argument requires",
+      "Revenue is recurring rather than lumpy, and a fleet operator can standardise operations across identical units",
+      "It lets the vendor sell to buyers who could never own a reactor"
+     ],
+     "dis": [
+      "**The vendor now carries all the capital**, before any revenue and for years — which is why such a company is financed by equity issuance rather than by product sales",
+      "It must become a licensed operator, with everything that implies in staffing, security and regulatory standing",
+      "Its balance sheet, not its order book, is the real constraint on how many units it can build",
+      "And the customer's protection is only as strong as the instrument signed — which is the next point"
+     ]
+    }
+   ],
+   "note": "**The reading discipline, and it is the most transferable thing in this guide.** In a build-own-operate model there is no purchase order to point at, so the sector communicates through announcements — and the instruments behind them are wildly different in strength. In rough ascending order: a **memorandum of understanding** (we will talk), a **letter of intent** (we intend to transact, {{non-binding agreement}}), a **master agreement** (a framework, often explicitly non-binding, under which future binding contracts *may* be signed), a **prepayment** (money has actually moved), a **notice of intent to award** (a government means to contract, often conditional on a licence), and a **definitive power purchase agreement** (an obligation to buy at a price). A pipeline quoted in gigawatts may consist almost entirely of the first three. When one non-binding master agreement accounts for most of a headline order book — as one 12 GW instrument does in this sector — the number is a statement of interest, not of sales."
+  },
+  {
+   "id": "what-a-reactor-site-needs",
+   "title": "What a reactor site needs that a gas plant does not",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Every campus in this corpus is sited against interconnection, water, land and permits. A reactor adds a layer that the guides on gas turbines and gen-sets never have to discuss, and it is the layer that most shapes whether a small unit can sit near a load.",
+   "cols": [
+    "Requirement",
+    "What it is",
+    "Why it exists",
+    "What it does to siting"
+   ],
+   "rows": [
+    [
+     "**{{emergency planning zone}}**",
+     "The area around a plant within which off-site emergency plans, notification systems and drills must exist",
+     "Sized by the regulator from the {{source term}} — how much radioactive material a given accident could release",
+     "**The concrete practical claim small designs make.** A smaller source term can justify a smaller zone, which is what would let a reactor sit close to a load. It is decided by the regulator, not by the vendor"
+    ],
+    [
+     "**Security and material control**",
+     "A guarded perimeter, a response force, and accounting for every gram of fissile material",
+     "Higher {{enrichment}} moves material into a stricter category with tighter accounting, transport and reporting rules",
+     "Fixed staffing and cost that does not shrink with reactor size — one of the reasons small units are hard to make cheap per megawatt"
+    ],
+    [
+     "**Environmental review**",
+     "A formal assessment of the site's impacts before construction",
+     "Statutory, and independent of the safety review",
+     "A parallel clock. It can run alongside licensing or extend past it"
+    ],
+    [
+     "**Water for the condenser**",
+     "Cooling for the steam cycle's cold end — a tower, once-through water, or air-cooled condensers",
+     "Thermodynamics: every thermal plant must reject roughly twice what it sells",
+     "Air-cooled condensers free a plant from siting beside a river or lake, at an efficiency cost. Oklo's published claim for the Aurora is about 9,000 gallons a day, or 5 gallons per MWh"
+    ],
+    [
+     "**Seismic and geotechnical qualification**",
+     "Ground motion characterisation and foundation design to nuclear standards",
+     "Safety-significant structures must survive a design-basis earthquake",
+     "Site characterisation — borings and a geotechnical programme — happens years before construction. McCarthy's guide covers what that investigation physically is"
+    ],
+    [
+     "**{{point of interconnection}}**",
+     "Where the plant connects to the transmission system, and the study queue that governs it",
+     "Grid reliability, and it is exactly the same process every other generator faces",
+     "The most underestimated item on the list, and demonstrably capable of costing more than a year"
+    ],
+    [
+     "**Community consent**",
+     "Not a formal requirement, and decisive in practice",
+     "Local history, land use and trust",
+     "A former enrichment or weapons site offers land, workforce and grid — and often a population with direct memory of contamination. Both facts are usually true of the same site"
+    ]
+   ],
+   "note": "**The pattern worth noticing.** Several of these — security staffing, emergency planning, the operating organisation — are **largely fixed costs that do not scale down with reactor size**. That is the structural headwind against small reactors on a cost-per-megawatt basis, and it is why the modular argument has to be won on series production and factory labour rather than on the reactor being small. A smaller machine with the same guard force is more expensive per megawatt, not less."
+  },
+  {
+   "id": "what-comes-out",
+   "title": "What comes out, and what recycling does and does not solve",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Spent fuel is where public argument concentrates and where the technical picture is most often misdescribed in both directions. Three facts do most of the work.",
+    "**First, the volume is small and the heat is the problem.** Discharged fuel is intensely radioactive and generates {{decay heat}} for years, which is why it sits in a {{spent fuel pool}} — water is simultaneously the coolant and the shield — before moving to dry storage casks. The engineering challenge is thermal and temporal rather than volumetric.",
+    "**Second, the United States runs a {{once-through fuel cycle}}.** Fuel is used once and stored. Most of the energy in the original uranium is still in it when it is discharged, because a thermal reactor fissions only a small fraction of what it loads — its {{burnup}} is low. That is the fact recycling advocates start from and it is correct.",
+    "**Third — and here is where the fast spectrum matters again — what 'recycling' means depends on the spectrum.** In a fast reactor the spare neutrons can fission the long-lived heavy elements that a thermal reactor merely accumulates. So reprocessing used fuel to feed a fast reactor is not only recovering unburned fuel; it is *converting* part of the long-lived inventory into fission products, which are intensely radioactive but decay on a far shorter timescale.",
+    "**{{pyroprocessing}} is the route developed alongside metallic fuel.** Spent metal fuel is dissolved in a molten salt bath and the usable material recovered electrochemically, rather than through the aqueous chemistry of conventional reprocessing. Its designers emphasise that it is **non-separative** — it keeps the transuranic elements together rather than producing a stream of separated plutonium — which is a proliferation-resistance argument as much as a chemical one.",
+    "**Now the honest limits, because this is where enthusiasm runs ahead of the evidence.** Recycling changes the *volume, composition and heat load* of what must be stored; it does not remove the need to store something. Fission products are still highly radioactive for centuries. Reprocessing is an industrial chemical operation with its own waste streams, its own safeguards regime and its own cost. And no commercial-scale facility of this kind operates in the United States today — the announced ones are announcements, at the pre-application stage with a regulator.",
+    "**The balanced statement a reader should be able to make:** a fast-spectrum fuel cycle can genuinely reduce the long-lived component of nuclear waste and extract far more energy from the same uranium — and it requires building a fuel-recycling industry that does not currently exist, at a cost nobody has demonstrated. Both halves are true, and most coverage carries only one of them."
+   ]
+  },
+  {
+   "id": "the-ladder",
+   "title": "Megawatts per machine — where a reactor sits beside everything else",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "electrical output per unit, MWe (published ratings; the gen-set and turbine rungs are drawn from the machines this app already teaches)",
+   "intro": "One axis, from a single engine to a conventional nuclear unit, with the advanced-reactor class in between. The ladder is the fastest way to see what an SMR is actually competing with — and it is not other reactors.",
+   "items": [
+    {
+     "label": "Large diesel gen-set",
+     "sub": "one engine on one frame, standby duty, hours of runtime",
+     "v": 3
+    },
+    {
+     "label": "Bridge-power gas engine block",
+     "sub": "reciprocating engines ganged into a plant, weeks to months",
+     "v": 20
+    },
+    {
+     "label": "Microreactor class",
+     "sub": "the {{microreactor}} class: single-digit to tens of MWe, transportable, installed as equipment rather than constructed",
+     "v": 15
+    },
+    {
+     "label": "Aurora-INL, the first unit",
+     "sub": "75 MWe sodium-cooled fast reactor; the product line is offered 15-75 MWe",
+     "v": 75
+    },
+    {
+     "label": "Aeroderivative gas turbine",
+     "sub": "fast-start, the machine a campus buys when it needs power this year",
+     "v": 100
+    },
+    {
+     "label": "Small modular reactor, upper class",
+     "sub": "roughly 300 MWe — the light-water SMR designs",
+     "v": 300
+    },
+    {
+     "label": "Heavy-duty gas turbine, simple cycle",
+     "sub": "one large frame machine",
+     "v": 400
+    },
+    {
+     "label": "Combined-cycle block",
+     "sub": "gas turbines plus a steam bottoming cycle — the standard new thermal plant",
+     "v": 1100
+    },
+    {
+     "label": "Conventional nuclear unit",
+     "sub": "a large light-water reactor, the historical product",
+     "v": 1100
+    }
+   ],
+   "note": "**Read the middle of the ladder, not the ends.** An Aurora-class unit sits *below* a single aeroderivative gas turbine and roughly level with a bridge-power engine block. That is the real competitive set: for a campus that needs a few tens of megawatts of firm capacity, the alternatives on the table today are gas engines and turbines that can be delivered in months, against a reactor that is measured in years and carries no fuel cost once built. It also explains a commercial pattern that looks odd at first — the same advanced-reactor developers announce **gas bridge-power alliances** alongside their reactors. They are not hedging; they are selling the only thing that answers the customer's date, with the reactor behind it."
+  },
+  {
+   "id": "the-timeline-of-a-reactor",
+   "title": "From design to first power, with the years attached",
+   "kind": "timeline",
+   "read": "7 min",
+   "intro": "A representative sequence for a first-of-a-kind advanced reactor, in years from the start of serious design. Gold is the regulatory clock, blue is the physical build, red is the two things that most often actually govern the date. Note how much of the horizontal axis has no construction on it at all.",
+   "lanes": {
+    "reg": "Regulatory",
+    "build": "Physical build",
+    "gov": "What actually governs"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "reg",
+     "label": "Pre-application engagement",
+     "sub": "Years of dialogue with the regulator before any application exists — topical reports, design criteria, methodology. Free of deadlines and not free of time."
+    },
+    {
+     "x": 1.5,
+     "lane": "gov",
+     "label": "Fuel pathway secured",
+     "sub": "Where does the {{HALEU}} come from, who owns it, and who fabricates it? For a first unit this is often a government allocation rather than a market purchase."
+    },
+    {
+     "x": 2,
+     "lane": "build",
+     "label": "Site selection and characterisation",
+     "sub": "Geotechnical borings, seismic work, environmental baseline. A DOE site removes some of this; a commercial site does not."
+    },
+    {
+     "x": 2.5,
+     "lane": "gov",
+     "label": "Interconnection request filed",
+     "sub": "The queue starts here and runs on its own clock, indifferent to everything else on this chart. §5's row 1: the date moves."
+    },
+    {
+     "x": 3,
+     "lane": "reg",
+     "label": "Application submitted",
+     "sub": "A {{combined licence}} application, or the first gate of a DOE authorization. This is where most public attention starts, and it is already year three."
+    },
+    {
+     "x": 4,
+     "lane": "reg",
+     "label": "Accepted for review / docketed",
+     "sub": "Acceptance is not approval. It means the application is complete enough to review — a distinction routinely lost in coverage."
+    },
+    {
+     "x": 5,
+     "lane": "build",
+     "label": "Long-lead procurement",
+     "sub": "Turbine, generator, vessel, heat exchangers. The {{Rankine cycle}} equipment is ordinary and still has a lead time measured in years."
+    },
+    {
+     "x": 5.5,
+     "lane": "build",
+     "label": "Groundbreaking",
+     "sub": "Site work, foundations, {{equipment pad}}s. Under a DOE authorization this can begin while the safety review continues, which is the whole speed argument."
+    },
+    {
+     "x": 7,
+     "lane": "reg",
+     "label": "Safety analysis approved",
+     "sub": "The documented safety analysis and readiness review — the last gates before fuel is allowed near the machine."
+    },
+    {
+     "x": 7.5,
+     "lane": "build",
+     "label": "Fuel delivered and loaded",
+     "sub": "Requires the fabrication plant to exist, the transport package to be certified, and the material accounting regime to be in place."
+    },
+    {
+     "x": 8,
+     "lane": "gov",
+     "label": "Startup authorization",
+     "sub": "The permission that converts a finished building into a reactor. Nothing physical happens on this date and everything waits for it."
+    },
+    {
+     "x": 8.2,
+     "lane": "build",
+     "label": "First criticality",
+     "sub": "The chain reaction is self-sustaining for the first time. Still not power on the grid."
+    },
+    {
+     "x": 8.7,
+     "lane": "build",
+     "label": "Grid synchronisation and power ascension",
+     "sub": "Stepwise power increases with testing at each plateau. Months, not days."
+    }
+   ],
+   "note": "**Three readings.** First, **roughly the first three years contain no construction at all** — the schedule is dominated by regulatory and fuel work, which is why 'the licence is the schedule' is the section title it deserves. Second, the two red items — fuel and interconnection — run on clocks nobody on the project controls, and either can become the binding constraint while everyone watches the other. Third, an authorization route that lets construction and safety review proceed **in parallel** compresses the middle of this chart substantially, which is exactly what a first-of-a-kind builder is buying by going that way — and exactly what it does not get at a commercial site."
+  },
+  {
+   "id": "where-oklo-slots-in",
+   "title": "Where these products slot into a campus power plan",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The company's published product lines mapped onto the chain this guide has taught. The right-hand column is what a reader should take from each — the engineering point, not a claim about the firm.",
+   "cols": [
+    "Layer",
+    "The product",
+    "Published position",
+    "What the reader should take from it"
+   ],
+   "rows": [
+    [
+     "**The reactor**",
+     "Aurora powerhouse — a {{sodium-cooled fast reactor}} on {{metallic fuel}}, with {{EBR-II}} heritage",
+     "Offered 15-75 MWe, with the first unit at 75 MWe. Refuelling stated at about 2,500 kg roughly every ten years across a 40-year design life",
+     "Every architectural feature traces to two choices: no {{moderator}}, and a coolant that boils near 880 °C. The ten-year refuelling interval is a direct consequence of the fuel loading a compact fast core needs"
+    ],
+    [
+     "**The power conversion**",
+     "Steam {{Rankine cycle}} — a conventional condensing turbine and industrial generator",
+     "Supplied under binding contract by an established turbine OEM",
+     "Half the plant is ordinary thermal equipment. This is the reason a nuclear developer appears in the same supply chain as a gas plant"
+    ],
+    [
+     "**Heat rejection**",
+     "Air-cooled condensers",
+     "Company claim of about 9,000 gallons of water a day, or 5 gallons per MWh, and no requirement to site beside a body of water",
+     "The same air-versus-water trade the chiller guide teaches, at plant scale: efficiency given up to remove a water constraint"
+    ],
+    [
+     "**The fuel**",
+     "An in-house fabrication facility fed by recovered {{EBR-II}} material, plus an announced recycling facility",
+     "First core is roughly five metric tons of government-owned {{HALEU}}; commercial supply is a letter of intent for deliveries from 2029",
+     "Vertical integration into fuel is not diversification — it is a response to the constraint being upstream of the reactor"
+    ],
+    [
+     "**The commercial model**",
+     "{{build-own-operate}}, selling electricity and heat under {{PPA}}s rather than selling powerhouses",
+     "Company states this explicitly, while noting it intends to offer more flexibility as the technology matures",
+     "The customer buys power and takes no nuclear risk; the vendor carries all the capital, which is why the balance sheet rather than the order book is the constraint"
+    ],
+    [
+     "**The near-term answer**",
+     "Alliances pairing gas bridge power with later nuclear baseload",
+     "Announced with gas-engine and power-services partners in 2025",
+     "An honest acknowledgement that the reactor does not answer a 2027 date, and the clearest illustration of where an SMR actually sits on the ladder"
+    ],
+    [
+     "**The adjacent business**",
+     "Radioisotope production on a separate light-water pool-type test reactor",
+     "One such reactor reached first criticality in August 2026 under a DOE authorization",
+     "**Not an Aurora and not a power reactor.** The same company can truthfully have an operating reactor and no operating power plant — a distinction worth holding in every headline"
+    ]
+   ],
+   "note": "**The single most useful sentence for reading this sector.** As of this guide's date, no Aurora powerhouse has produced electricity; the first is under construction at a national laboratory under a Department of Energy authorization rather than an NRC licence, targeted for late 2027 to early 2028; and the announced customer book consists of non-binding letters of intent, one non-binding master agreement and one prepayment structure. Every one of those clauses is a different kind of fact, and keeping them apart is the skill this guide is really teaching."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "7 min",
+   "ps": [
+    "**{{decay heat}} with no power and nobody present.** This is the failure mode every reactor accident in history reduces to, and it is why the passive-safety claim is the claim that matters. A design that removes it by {{natural circulation}} has to demonstrate that under the actual accident, at the actual power, from the actual initial condition — not by analogy to a test done on a different machine forty years ago. Owned by the designer, and adjudicated by the regulator, which is exactly what a licence review is for.",
+    "**A licence clock treated as a construction clock.** Roughly the first three years of an advanced-reactor programme contain no construction at all. A campus that plans its power date from a groundbreaking has mis-modelled the schedule by years, and a campus that plans it from an application being *accepted for review* has confused a completeness check for an approval. Owned by whoever wrote the business case, and discovered by whoever is holding the load.",
+    "**{{HALEU}} that does not exist yet.** A first core may come from a government allocation of legacy material; a fleet cannot. With a single US enricher producing at pilot scale, a fabrication plant still being built, transport packages still being developed and conversion capacity thin, the fuel is a harder constraint than the reactor. A project whose fuel is a letter of intent for deliveries three years out has an unfunded dependency in its critical path. Owned by the developer, and shared by the whole industry.",
+    "**{{first-of-a-kind}} cost read as {{nth-of-a-kind}} cost.** The modular argument is a claim about the tenth unit made while building the first, and the gap between them is the entire investment case. Independent techno-economic work puts small-reactor overnight capital in the region of four to five thousand dollars per kilowatt and {{LCOE}} in the eighties per megawatt-hour, against developer figures materially below that. A business case built on the vendor's nth-of-a-kind number for a first unit is not optimistic; it is measuring the wrong thing. Owned by whoever signed the offtake.",
+    "**A non-binding pipeline read as an order book.** Letters of intent, memoranda and master agreements express interest; they do not oblige anyone to transact. Where a single non-binding instrument accounts for most of a headline gigawatt figure, the figure is a marketing artefact. The test is simple and rarely applied: **has money moved, and is there a price?** Owned by the reader.",
+    "**The interconnection, which is not nuclear at all.** A multi-fuel campus interconnection was withdrawn from a queue in August 2026 for failure to demonstrate ride-through of a sudden voltage drop, with the developer claiming a delay of at least fourteen months. Nothing about that involves the reactor. This is §5's row 1 in its purest form — the study models the grid as it will be, the grid keeps changing, and the requester funds upgrades it does not control. Owned by the developer and the grid operator jointly, which in practice means owned by nobody until it is too late.",
+    "**A load that steps, met by a machine that cannot.** §5's row 12 describes tens of megawatts swinging in milliseconds, rhythmically, from a training job. A reactor is the least suitable machine in this corpus for that duty: economics push it to run flat, {{xenon poisoning}} physically punishes a thermal machine for reducing power, and thermal stress punishes any of them for cycling. A fast spectrum removes the xenon trap and not the others. The campus answer is always something fast in between — storage, engines, or a thermal buffer — and a plan that omits it has not read its own load profile. Owned by whoever designed the campus.",
+    "**Community consent on a site chosen for its convenience.** Former enrichment and weapons sites offer land, grid, workforce and a supportive local government. They frequently also offer a population with direct experience of contamination and an unresolved argument with a federal agency about it. Both facts are usually true of the same parcel, and the second one is not a public-relations problem to be managed — it is a real constraint with a real veto. Owned by the developer, and consistently underweighted."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is a chain reaction controllable on a human timescale at all?",
+     "a": "Because of delayed neutrons. Most fission neutrons appear within about a hundred-millionth of a second, but somewhat under one percent are emitted seconds to minutes later by the decay of certain fission products. A reactor is operated so that it depends on those stragglers to reach criticality, which stretches its response from microseconds to seconds."
+    },
+    {
+     "q": "What is decay heat, roughly how large is it, and why does it dominate reactor safety?",
+     "a": "The heat from the continuing radioactive decay of fission products after the chain reaction stops — about six to seven percent of full power at shutdown, falling over hours and days. It cannot be switched off, so every serious reactor accident has been a failure to remove decay heat rather than a failure to stop the reaction."
+    },
+    {
+     "q": "What does a moderator do, and name three things that change when you remove it.",
+     "a": "It slows fast fission neutrons to thermal energies where they are far more likely to cause the next fission. Remove it and: enrichment must rise (fast neutrons fission less readily), the core becomes small and dense, and the coolant can no longer be ordinary water — because water would moderate and undo the choice."
+    },
+    {
+     "q": "Why can a sodium-cooled reactor avoid a thick pressure vessel?",
+     "a": "Because sodium boils near 880 °C, so it stays liquid across the whole operating range at essentially atmospheric pressure. A water-cooled plant needs roughly 155 bar to keep water liquid at operating temperature, and that pressure is what forces the thick vessel, thick piping and large containment."
+    },
+    {
+     "q": "What are the two principal hazards a sodium coolant introduces, and what engineering answers them?",
+     "a": "It burns on contact with air and reacts violently with water. The main answer is an intermediate loop — a second coolant circuit between the radioactive primary sodium and the water/steam side — so a sodium-water reaction cannot occur inside the reactor. It also freezes at 98 °C, so the whole system needs permanent trace heating."
+    },
+    {
+     "q": "Explain a negative temperature coefficient of reactivity and why it counts as passive safety.",
+     "a": "The core is designed so that as it gets hotter the chain reaction gets weaker. A power excursion raises temperature, the higher temperature suppresses reactivity, and power falls back — with no sensor, no operator and no valve involved. Safety rests on the sign of a physical coefficient rather than on a system that has to work."
+    },
+    {
+     "q": "What is HALEU, why do fast reactors need it, and what is the supply position?",
+     "a": "High-assay low-enriched uranium — enriched above the roughly 5 percent of conventional fuel and below the 20 percent that counts as highly enriched. Fast neutrons are less likely to fission, so more fissile atoms are needed in their path. Supply is the binding constraint: one US enricher is producing at pilot scale, having completed a 900 kg delivery in January 2026."
+    },
+    {
+     "q": "State the economics of scale and the economics of series, and which one a modular reactor is betting on.",
+     "a": "Scale says a single large unit costs less per megawatt because material grows more slowly than volume. Series says unit cost falls a constant percentage each time cumulative output doubles, so many identical factory-built units get cheap through repetition. A modular reactor gives up the first to buy the second — a bet on a learning curve that only pays if the order book materialises."
+    },
+    {
+     "q": "What physically caps how much of a 'factory-built' reactor is actually built in the factory?",
+     "a": "The shipping envelope. Road and rail clearances cap module width, height and weight, which caps how much can be assembled before shipping and therefore how much site labour the factory can displace. The honest measure of any modular claim is what fraction of labour hours moved indoors, and nobody publishes it."
+    },
+    {
+     "q": "Explain xenon poisoning and why a fast reactor is less troubled by it.",
+     "a": "Xenon-135 is a fission product with an enormous cross-section for thermal neutrons. Reduce power and its production from iodine decay continues while its destruction by neutron absorption collapses, so it builds to a peak hours later and can prevent a return to full power. That appetite is a thermal-neutron phenomenon, so a fast-spectrum core is largely free of the trap."
+    },
+    {
+     "q": "Two ways to make a nuclear plant follow a varying load without changing reactor power. Name them.",
+     "a": "Use a fast spectrum, which removes the xenon trap that most constrains a thermal machine. Or put a thermal store — typically molten salt — between the reactor and the turbine, run the reactor flat out, and vary only what the store releases to the steam cycle, so the plant follows while the reactor does not."
+    },
+    {
+     "q": "Which parts of an advanced reactor plant are genuinely novel, and which are ordinary?",
+     "a": "Novel: the primary coolant circuit, the intermediate loop, the steam generator interface, and the fuel. Ordinary: the steam turbine and generator on a conventional Rankine cycle, the condenser and heat rejection, and the switchyard and interconnection. Roughly half the plant is bought from the same suppliers a gas plant uses."
+    },
+    {
+     "q": "Rank these from weakest to strongest as a commercial commitment: master agreement, prepayment, memorandum of understanding, definitive PPA, letter of intent.",
+     "a": "Memorandum of understanding (we will talk), letter of intent (we intend to transact, non-binding), master agreement (a framework under which binding contracts may later be signed), prepayment (money has actually moved), definitive power purchase agreement (an obligation to buy at a price)."
+    },
+    {
+     "q": "Why do several siting requirements make small reactors expensive per megawatt?",
+     "a": "Because security staffing, emergency planning, the operating organisation and material accounting are largely fixed and do not scale down with output. A smaller machine with the same guard force costs more per megawatt, which is why the modular case must be won on factory series production rather than on smallness itself."
+    },
+    {
+     "q": "What does fast-spectrum recycling change about nuclear waste, and what does it not change?",
+     "a": "It can fission long-lived heavy elements that a thermal reactor merely accumulates, reducing the long-lived component and extracting far more energy from the same uranium. It does not remove the need to store waste: fission products remain highly radioactive for centuries, and reprocessing is an industrial chemical operation with its own waste streams, safeguards and cost."
+    },
+    {
+     "q": "Where does an Aurora-class unit actually sit on the megawatt ladder, and what does it compete with?",
+     "a": "At 75 MWe it sits below a single aeroderivative gas turbine and roughly level with a bridge-power reciprocating-engine block. Its real competition for a campus needing tens of megawatts of firm capacity is gas engines and turbines deliverable in months — which is why advanced-reactor developers announce gas bridge-power alliances alongside their reactors."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A reactor design removes the moderator. Which consequence does NOT follow?",
+     "c": [
+      "Enrichment must rise",
+      "The core becomes smaller and denser",
+      "Ordinary water can still be used as the coolant",
+      "Spare neutrons can fission long-lived heavy elements"
+     ],
+     "a": 2,
+     "why": "Water is a moderator. Using it as the coolant would slow the neutrons back down and turn the machine into a thermal reactor, undoing the choice. That is why fast reactors are cooled with liquid metal, molten salt or gas, and it is the single constraint that shapes the whole design."
+    },
+    {
+     "q": "The main architectural reason a sodium-cooled reactor can be physically smaller than a light-water reactor of the same output is:",
+     "c": [
+      "Sodium transfers heat better",
+      "It runs at essentially atmospheric pressure, so no thick pressure vessel or large-break containment is needed",
+      "Fast neutrons release more energy per fission",
+      "It uses less fuel"
+     ],
+     "a": 1,
+     "why": "Sodium boils near 880 °C and therefore needs no pressurisation to stay liquid at operating temperature. The thick forged vessel, thick piping and containment sized for a steam release exist to hold roughly 155 bar in a water plant — remove the pressure and most of that structure goes with it."
+    },
+    {
+     "q": "An operator reduces a thermal reactor's power by half and finds several hours later that full power cannot be restored. The cause is:",
+     "c": [
+      "Fuel damage from the transient",
+      "Xenon-135 building up because its production from iodine decay continued while neutron destruction collapsed",
+      "The turbine tripped",
+      "The control rods jammed"
+     ],
+     "a": 1,
+     "why": "Xenon-135 has an enormous thermal-neutron cross-section. After a power reduction the iodine already in the fuel keeps decaying into xenon while the flux destroying it has fallen, so xenon peaks hours later and absorbs the neutrons the chain reaction needs. It is the physical reason thermal reactors follow load badly."
+    },
+    {
+     "q": "A developer quotes a 14 GW order book. The most important question to ask is:",
+     "c": [
+      "How many reactors is that?",
+      "What instrument stands behind each gigawatt, and has money moved at a stated price?",
+      "Which sites will they be on?",
+      "What is the capacity factor assumption?"
+     ],
+     "a": 1,
+     "why": "In a build-own-operate model there is no purchase order, so the sector communicates by announcement. Memoranda, letters of intent and non-binding master agreements express interest without obliging anyone. Where a single non-binding instrument accounts for most of the total, the figure describes interest rather than sales."
+    },
+    {
+     "q": "A company announces that its reactor achieved first criticality while also stating that no unit of its flagship product is operating. The most likely explanation is:",
+     "c": [
+      "The statements contradict each other",
+      "A different reactor — a smaller, non-power machine on different technology — reached criticality, not the flagship power reactor",
+      "Criticality does not mean the reactor works",
+      "One statement is out of date"
+     ],
+     "a": 1,
+     "why": "Both can be true simultaneously. A company can operate a small non-power test reactor on entirely different technology — light-water and pool-type, say — while its sodium-cooled fast power reactor is still under construction. Reading which machine a milestone belongs to is the core discipline in this sector."
+    },
+    {
+     "q": "Roughly the first three years of a first-of-a-kind reactor programme are dominated by:",
+     "c": [
+      "Foundation and structural work",
+      "Regulatory engagement and securing a fuel pathway, with no construction at all",
+      "Turbine manufacturing",
+      "Operator training"
+     ],
+     "a": 1,
+     "why": "Pre-application engagement, application preparation, acceptance and review, plus establishing where the fuel comes from and who fabricates it, all precede construction. That is why the licence rather than the build is the schedule, and why planning a power date from a groundbreaking mis-models it by years."
+    },
+    {
+     "q": "Which is the strongest reason small reactors struggle on cost per megawatt?",
+     "c": [
+      "The physics is less efficient at small scale",
+      "Several major requirements — security staffing, emergency planning, the operating organisation — are largely fixed and do not scale down",
+      "Small reactors need more fuel per megawatt",
+      "Small reactors cannot use standard turbines"
+     ],
+     "a": 1,
+     "why": "A smaller machine with the same guard force, the same emergency-planning obligations and a similar operating organisation costs more per megawatt, not less. That is the structural headwind, and it is why the modular case has to be won on factory series production rather than on the reactor being small."
+    },
+    {
+     "q": "A campus interconnection request for an advanced-reactor project is withdrawn from the grid operator's queue for failure to demonstrate voltage ride-through. This is best understood as:",
+     "c": [
+      "A nuclear safety issue",
+      "A grid interconnection study failure, unrelated to the reactor technology, of the kind that delays any generator",
+      "A licensing failure",
+      "A fuel supply problem"
+     ],
+     "a": 1,
+     "why": "Ride-through is a grid-code performance requirement applying to any generator. Nothing about it is nuclear. It illustrates the failure-map's first row: the study models the grid as it will be, the grid keeps changing, and the requester funds upgrades it does not control."
+    }
+   ]
+  }
+ ]
+}

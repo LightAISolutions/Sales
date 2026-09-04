@@ -243,6 +243,25 @@
    "note": "NVIDIA names Flex Power among the power system components vendors for its 800 VDC architecture, and Flex has shipped power shelves built to NVIDIA platform requirements.",
    "context": "Flex sits in the second of NVIDIA's three published tiers — power system components — with Bizlink, Delta, Lead Wealth, LITEON and Megmeet. That tier consumes the silicon the first tier supplies and feeds the facility-power systems of the third.\n\nFlex has shipped against it: a 33 kW power shelf for the GB300 NVL72 platform at 97.5% peak half-load efficiency in August 2025, then a 110 kW shelf and an 800 VDC Power Rack for the Vera Rubin platform in March 2026, plus reference designs for NVIDIA's Omniverse DSX blueprint. Flex states it plans full-scale production of 800 VDC power components to coincide with NVIDIA Kyber rack-scale systems.\n\nOne observation belongs with it: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in independent coverage of NVIDIA's GTC 2026 800 VDC ecosystem. From 2026 the announcements are largely Flex's own.",
    "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx"
+  },
+  {
+   "slug": "oklo",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-04",
+   "note": "Collaboration with Oklo and Los Alamos National Laboratory on AI-enabled modelling, digital twins and fuel validation for plutonium-bearing fuels.",
+   "context": "Announced 23 April 2026. The direction is unusual for this corpus: compute applied to the reactor rather than the reactor applied to compute. The work supports fuel qualification for the surplus-plutonium pathway Oklo entered advanced DOE negotiations on a month later.\n\nA parallel strand runs through Idaho National Laboratory's 'Prometheus' AI platform, integrated under a strategic partnership announced 12 May 2026 in support of Pluto, Oklo's plutonium-fuelled reactor system.",
+   "source": "https://oklo.com/newsroom/news-details/2026/Oklo-NVIDIA-and-Los-Alamos-National-Laboratory-Collaborate-to-Advance-Nuclear-Fuel-Validation-at-Los-Alamos-in-Support-of-Nuclear-Powered-AI-Factories/default.aspx"
+  },
+  {
+   "slug": "trane-technologies",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-10",
+   "via": "Thermal management reference design",
+   "note": "Thermal-management reference designs for gigawatt-scale AI factories, engineered for the NVIDIA Omniverse DSX Blueprint.",
+   "context": "Announced 28 October 2025 as the first comprehensive thermal-management system reference design at gigawatt scale, supporting GB300 NVL72 and next-generation Vera Rubin systems with OpenUSD-based SimReady assets.\n\nOptimised 16 March 2026 with a stated 10% improvement in overall thermal performance that frees 22 MW of cooling capacity for IT power, delivered as a 250 MW duplex system and a 1 GW magnetic-bearing air-cooled architecture. LiquidStack, a Trane company since March 2026, subsequently launched a GigaModular CDU built to Vera Rubin specifications and scaling to 14 MW.",
+   "source": "https://www.businesswire.com/news/home/20251028272299/en/Trane-Technologies-Unveils-Industrys-First-Comprehensive-Thermal-Management-System-Reference-Design-for-Gigawatt-Scale-NVIDIA-AI-Factories"
   }
  ],
  "policyExposure": [
@@ -521,5 +540,5 @@
   }
  ],
  "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "profileVersion": 7
 }

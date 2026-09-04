@@ -1,0 +1,1512 @@
+{
+ "schemaVersion": 7,
+ "slug": "trane-technologies",
+ "name": "Trane Technologies plc",
+ "shortName": "Trane Technologies",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.tranetechnologies.com/",
+ "headquarters": "Registered in Swords, Co. Dublin, Ireland; US operational headquarters in Davidson, North Carolina",
+ "founded": 2009,
+ "employees": "approximately 44,000 in 62 countries, including over 16,000 outside the United States (31 December 2025)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: TT"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Trane Technologies is a $21.3bn applied-HVAC manufacturer whose commercial business has been re-rated by data-centre demand — order backlog rose 70% year on year to $12.1bn by Q2 2026 with Applied bookings up 130% for a fourth consecutive quarter above 100% — while the company discloses no data-centre revenue figure of any kind and its residential business simultaneously weakened through a regulated refrigerant transition. BACKGROUND. The listed entity is the former Ingersoll-Rand plc, incorporated in Ireland in 2009 and renamed in February 2020 after spinning off its Industrial segment to Gardner Denver in a Reverse Morris Trust; the retained Climate business began trading as TT on 2 March 2020. It reports three geographic segments — Americas $17,168.8M, EMEA $2,802.1M and Asia Pacific $1,351.0M in FY2025 — with the Americas alone at 80.5% of revenue. Two strategic brands: Trane for commercial and residential heating, cooling and ventilation (with American Standard Heating & Air Conditioning alongside it), and Thermo King for transport refrigeration. FY2025 revenue was $21,321.9M, up 7.5%, with GAAP continuing EPS of $13.14 and adjusted continuing EPS of $13.06 — an inversion, with GAAP above adjusted, traceable to non-cash contingent-consideration adjustments that reduced expense by $61.2M. Collection gap: the company publishes no split of revenue between commercial HVAC, residential HVAC and transport refrigeration, and 'data center' appears in the FY2025 10-K only four times, all inside an alphabetical product list.",
+ "ecosystemRole": "The chiller and thermal-plant layer of the data-centre cooling chain, and the equipment-side counterpart to the operator-side cooling material already in this corpus. Where Vertiv's dossier covers the room and the coolant distribution unit and Schneider's covers the building system, Trane covers the machine that actually rejects the heat and, since 2026, the distribution equipment between that machine and the rack: it acquired the direct-to-chip and immersion specialist LiquidStack in March 2026 and the modular cooling-plant business Stellar Energy in February 2026 for $553.4M gross, and it sells coolant distribution units of its own at up to 14 MW. Its ecosystem position is unusual in one respect worth stating plainly — despite a backlog driven by data-centre orders, no public source names a single hyperscaler, colocation operator or general contractor as a Trane customer. The only two publicly stated commercial relationships in this ecosystem are reference-design collaborations with NVIDIA (October 2025) and Eaton (August 2026).",
+ "productsAndServices": [
+  {
+   "name": "CenTraVac water-cooled centrifugal chillers",
+   "category": "Applied HVAC — water-cooled chillers",
+   "description": "The flagship large-tonnage line, catalogued at 120 to 4,000+ tons (450 to 14,000+ kW) at 50 and 60 Hz across models CVHE, CVHF, CVHG, CVHH and the dual-compressor Duplex variants CDHF, CDHG and CDHH. The company states the product line provides more than 200,000 individual unit selections. The architecture's defining claim is mechanical simplicity: 'The CenTraVac chiller has only one primary moving part — a single rotating shaft supported by two bearings. This direct drive concept minimizes the chance of failure by reducing the number of critical parts — no gear boxes, couplings, extra shafts, or shaft seals.' Trane traces low-pressure refrigerants in its centrifugal design to the first Trane centrifugal chiller in 1938. 'Series E' and 'Duplex' are not separate families: Series E denotes the large-tonnage CVHH and CDHH models, and the CD prefix denotes the dual-compressor variants.",
+   "highlights": [
+    "Full-load efficiency, quoted verbatim: 'selectable at an unmatched efficiency level of 0.45 kW/ton at standard AHRI conditions… averaging at least 13.5 percent better than the next best centrifugal chiller available today'",
+    "Refrigerant leak rate, quoted verbatim: 'the industry's lowest documented refrigerant leak rate — less than 0.5 percent annually versus the industry-accepted rate of 2.0 percent', backed by a Leak-Tight Warranty the company describes as the first offered by any HVAC manufacturer",
+    "Refrigerants are ultra-low GWP: R-514A across the line, with R-1233zd(E) an option on CDHH and CVHH. Both are stated at a GWP 'of less than two', and R-1233zd(E) is classified A1 — nonflammable — under ASHRAE Standard 34",
+    "Heat recovery is a catalogued mode with a stated efficiency penalty: 'Typical catalog efficiencies for heat recovery machines operating in the heat recovery mode range from 0.64 to 0.84 kW/ton… and range from 0.54 to 0.57 kW/ton for a cooling-only machine'",
+    "Certified to AHRI 550/590 (I-P) and ANSI/AHRI 551/591 (SI) — with the catalogue naming explicit exclusions from that certification: free cooling, low-temperature applications below 36 °F including ice storage, machines above 3,000 tons, heat recovery and heat pump ratings, auxiliary condenser, and glycol and brines",
+    "Disclosure boundary: the catalogue publishes flow-rate tables but no per-model IPLV, NPLV, kW/ton or sound data — selection is routed to Trane Select Assist software. This is a deliberate first-party gap rather than an omission"
+   ],
+   "positioning": "Independent share data places Trane second in data-centre chillers at 18.7% of a $2.6bn 2025 market behind Johnson Controls at 20.9%, ahead of Carrier at 14.5%, Daikin at 12.0% and Vertiv at 8.1% (Global Market Insights, August 2026). A separate US all-end-market chiller ranking places Daikin first and Trane second without publishing percentages (MarketsandMarkets, July 2026).",
+   "soldThrough": "Direct sales and service organisation plus consulting-engineer specification — applied equipment is engineered into a building rather than bought off a shelf.",
+   "targetSegments": [
+    "Data centres",
+    "Healthcare",
+    "Education",
+    "Commercial offices",
+    "District energy",
+    "Industrial process"
+   ],
+   "roadmap": "Ongoing migration of the portfolio to next-generation low-GWP refrigerants, which the company describes as the industry's transition 'from HCFCs and HFCs to next-generation, low-GWP refrigerants'."
+  },
+  {
+   "name": "Air-cooled chillers — Ascend, Sintesis, CGAM",
+   "category": "Applied HVAC — air-cooled chillers",
+   "description": "The air-cooled range spans roughly 20 to 550 tons across three families. Ascend covers ACR (150-550 tons, screw), ACS (140-230 tons, scroll with intermediate discharge valves) and ACX (80-230 tons, vapour-injection scroll air-to-water heat pump). Sintesis RTAF covers 115-500 tons on helical rotary screw with R-513A. CGAM covers 20-130 tons on scroll compressors with R-454B. The Ascend ACR is the technical flagship, built around what Trane calls AdaptiSpeed technology — 'the integration of an adaptive frequency drive efficiently tuned to match perfectly the permanent magnet compressor motors'.",
+   "highlights": [
+    "Efficiency against code, quoted verbatim: 'Over 18% better full load efficiency than ASHRAE 90.1-2016 Path B' and 'Over 22% higher IPLV than ASHRAE 90.1-2016 Path B'",
+    "Motors: 'The compressor's and condenser fans' permanent magnet motor design is up to 4 percent more efficient than conventional induction motors'; the 150 to 300 ton units use variable volume ratio semi-hermetic direct-drive rotary screw compressors",
+    "Sound is engineered and sold in tiers: 'Integral compressor muffler lowers sound levels by 4-10 dB compared to previous design'; optional metallic discharge and suction bellows 'reduce compressor sound by 8-10 dB'; three levels of sound reduction are offered",
+    "Refrigerant charge: 'Up to 40% lower refrigerant charge compared to previous evaporator designs'",
+    "Electrical: available with passive harmonic filtering achieving 5% total demand distortion, to comply with IEEE 519",
+    "Ambient envelope is a purchasable option set, quoted verbatim: standard 32 to 105 °F, low ambient 0 to 105 °F, extreme low ambient -16 to 105 °F (150-300 ton) or -15 to 105 °F (375-550 ton), high ambient 32 to 125 °F, wide ambient 0 to 125 °F",
+    "Leaving-water categories: standard 40 to 68 °F, low-temperature process below 40 °F, and ice-making 20 to 68 °F"
+   ],
+   "positioning": "An independent sub-segment estimate places Trane second in global air-cooled chillers at 10.8% behind Carrier at 12.3% and ahead of Johnson Controls at 9.7% and Daikin at 8.4%. Air-cooled is the arrangement that trades efficiency for the removal of a cooling tower, its water and its chemistry — a trade increasingly settled by local water availability rather than by thermodynamics.",
+   "soldThrough": "Direct and through the applied-equipment channel; packaged outdoor machines reduce the mechanical-room and installation scope.",
+   "targetSegments": [
+    "Data centres",
+    "Commercial buildings",
+    "Light industrial",
+    "Water-constrained sites"
+   ],
+   "roadmap": "ACS and ACX ship on R-454B, an A2L; ACR and Sintesis on R-513A, an A1 — the split reflects where the low-GWP transition has and has not required a flammability class change."
+  },
+  {
+   "name": "Data-centre thermal management — chillers, CDUs and liquid cooling",
+   "category": "Data-centre cooling",
+   "description": "A dedicated data-centre range assembled largely through acquisition and reference-design partnership since late 2025. Four chillers are catalogued for the application: CenTraVac CDHH at 900-6,000+ tons (up to 21 MW) and CVHH at 850-2,600 tons (up to 9 MW), both on R-1233zd(E); an Ascend ACR data-centre variant up to 2 MW on R-1234ze with a factory-installed waterside economiser, a published Environmental Product Declaration and operation to 131 °F ambient; and the TCA oil-free magnetic-bearing air-cooled machine at 300-850 tons (up to 3 MW) on R-515B or R-1234ze. Beneath the plant, Trane sells coolant distribution units: the GigaModular CDU in 2.5 MW scalable building blocks validated to 14 MW, the CDU-1MW rated up to 1.35 MW with dual concurrently maintainable hot-swappable pumps, and an Asia-Pacific DCDA series. LiquidStack, acquired in March 2026, adds direct-to-chip and single- and two-phase immersion.",
+   "highlights": [
+    "Portfolio claim, quoted verbatim: 'direct-to-chip liquid cooling distribution units that delivers up to 14MW of cooling capacity, the most in their size class'",
+    "GigaModular economics, quoted verbatim: 'Up to 25% CAPEX and floor space savings vs. traditional CDUs' and 'Up to 32% lower CapEx versus traditional row CDU deployments, depending on project design'; skid-mounted with front-only service access and operation to 50 °C ambient",
+    "Rapid Restart is offered on both the Ascend ACR data-centre chiller and the TCA — the feature that addresses the minutes-long gap between a power interruption and a plant making cooling again",
+    "The NVIDIA reference design was optimised in March 2026: a stated 10% improvement in overall thermal performance against the October 2025 design, freeing 22 MW of cooling capacity for IT power, delivered as two Trane Continuum Rubin DSX designs — a 250 MW duplex simplified system available now with extended free cooling and integrated heat recovery (14% thermal-system efficiency increase, 10% of heat rejection load to recovery), and a 1 GW magnetic-bearing air-cooled architecture using 3 MW air-cooled chiller units",
+    "The Eaton collaboration of August 2026 integrates Trane chillers, CDUs and controls with Eaton electrical infrastructure and claims up to 15% combined energy-efficiency gain, up to 80% less copper and up to 30% lower installation cost against conventional low-voltage designs",
+    "Disclosure boundary, stated rather than estimated: no data-centre revenue, growth rate, bookings figure or backlog split is disclosed anywhere. 'Data center' appears four times in the FY2025 10-K, all four inside an alphabetical products-and-services list, and the Q4 2025 and Q2 2026 earnings releases contain no data-centre commentary at all",
+    "What Trane does not sell here: no rear-door heat exchangers and no cold-plate products appear on the liquid-cooling pages, and no flow rates, approach-temperature figures or physical dimensions are published for either CDU"
+   ],
+   "positioning": "ABI Research's January 2025 competitive ranking of thermal-management providers for data centres places Trane fifth, in the Mainstream tier, behind market leaders Vertiv and Johnson Controls and behind Schneider Electric and Daikin. Trade coverage positions the LiquidStack purchase as following rather than leading — Facilities Dive described it as 'the most recent deal between a major building systems OEM and a cutting-edge data center cooling technology provider, following moves last year by Schneider Electric and Johnson Controls' — notwithstanding Trane's minority stake in LiquidStack since 2023.",
+   "soldThrough": "Direct, increasingly through published reference designs co-authored with NVIDIA and Eaton that specify the whole power-and-thermal chain rather than a single machine.",
+   "targetSegments": [
+    "Hyperscale AI data centres",
+    "Colocation operators",
+    "High-performance computing"
+   ],
+   "roadmap": "The 1 GW magnetic-bearing air-cooled Continuum Rubin DSX architecture was described in March 2026 as 'available soon'; the DCDA CDU series was expected in first China orders in Q1 2026."
+  },
+  {
+   "name": "Commercial HVAC systems, controls and services",
+   "category": "Applied HVAC and building services",
+   "description": "The bulk of the business and the part that is not about data centres. Rooftop and applied air handling, terminal units, unitary and split systems, building management and controls, and an energy-services business that operates as a DOE-qualified energy services company. Services and maintenance contracts typically run 12 to 60 months and extended warranties up to five years; the company describes expanding recurring revenue through services and rental as an explicit growth strategy. Trane Cloud is the remote monitoring and management platform, and Trane AI Control — built on BrainBox AI, acquired in 2025 — is an artificial-intelligence service layered on Tracer SC+ controls.",
+   "highlights": [
+    "Services scale, computed from the company's own disclosed line items rather than published as a percentage: services were $7,339.6M of $21,321.9M in FY2025, about 34.4%, up from about 32.9% in FY2024",
+    "AI Control claims, quoted verbatim: 'up to 25% reduction in HVAC energy consumption', 'Reduce your building's carbon footprint by up to 40%', and it 'requires no additional hardware'. The underlying BrainBox AI platform is stated as in use in over 14,000 buildings worldwide",
+    "Energy-savings performance guarantees are a real balance-sheet item: 'As of December 31, 2025, the Company has outstanding performance guarantees of approximately $1 billion related to completed energy savings contracts that extend from 2026-2049'",
+    "Four named performance obligations structure the revenue: equipment, contracting and installation, services and maintenance, and extended warranties. Revenue transferred at a point in time was approximately 79% in 2025",
+    "An exclusive US and Canada supply agreement with Valent, a Greenheck Group company, effective 18 May 2026, makes Trane the exclusive channel for Valent-branded dedicated outdoor air systems, value-added rooftop units and energy-recovery products"
+   ],
+   "positioning": "Trane is an applied and commercial specialist rather than a volume air-conditioning player: it does not appear in independent top-five rankings of the global air-conditioning market, which are led by Daikin, Carrier, LG, Midea and Mitsubishi Electric. That distinction — engineered systems sold through engineers, not units sold through distribution — is the whole shape of the business.",
+   "soldThrough": "Direct sales and service organisation, consulting-engineer specification, and a contractor and distributor channel for unitary products.",
+   "targetSegments": [
+    "Commercial buildings",
+    "Healthcare",
+    "Education",
+    "Government and federal (DOE-qualified ESCO since 1999)",
+    "Industrial"
+   ],
+   "roadmap": "R&D of $347.6M in 2025 (from $309.6M in 2024 and $252.3M in 2023) is directed at energy efficiency, lower-GWP refrigerants, material reduction and design for circularity, with a Design for Sustainability module inside the new-product-development process."
+  },
+  {
+   "name": "Residential HVAC — Trane and American Standard Heating & Air Conditioning",
+   "category": "Residential HVAC",
+   "description": "Residential heating and cooling sold under two brands inside the Americas segment. The line completed a refrigerant transition to R-454B beginning with the 15 SEER2 heat pump, under a stated commitment to transition to low-GWP refrigerants in HVAC products by 2025. This is the part of the business that weakened in 2025.",
+   "highlights": [
+    "The company's own read on the year, quoted verbatim from the FY2025 10-K: 'Residential markets have weakened considerably throughout 2025 due to navigating a regulatory refrigerant transition and softer consumer demand'",
+    "R-454B is described as offering 'nearly 78% lower' global warming potential than R-410A, and is a blend of R-32 and R-1234yf",
+    "Entity discipline: American Standard Heating & Air Conditioning is a Trane Technologies brand. American Standard Brands, the plumbing and bathroom-fixture business, has been a LIXIL Group subsidiary since 2013 and has no corporate connection — both descend from the 2007 break-up of American Standard Companies",
+    "A CPSC recall on 3 July 2025 covered approximately 5,000 gas/electric packaged units sold under both the Trane and American Standard brands between January 2024 and March 2025, for a fuel gas valve that can open unexpectedly; one report of gas leaking, remedy a free ignition-board replacement",
+    "Independent industry data frames the demand backdrop: AHRI recorded US shipments of central air conditioners and air-source heat pumps at 440,819 units in January 2026, down 29.2% year on year and an eighth consecutive monthly decline. Trane's own Q2 2026 commentary was sharply at odds with that — residential bookings up in the high twenties percent and revenue up low teens, with distributor inventory described as at appropriate levels"
+   ],
+   "positioning": "A replacement-driven business whose demand is shaped by incentives and regulation as much as by weather. The early termination of the Section 25C residential efficiency credit for property placed in service after 31 December 2025 removes a point-of-sale subsidy from exactly this line.",
+   "soldThrough": "Independent dealers and two-step distribution.",
+   "targetSegments": [
+    "US residential replacement",
+    "New residential construction"
+   ]
+  },
+  {
+   "name": "Thermo King — transport refrigeration",
+   "category": "Transport refrigeration",
+   "description": "The other strategic brand, and a different business on the same thermodynamics: refrigeration on a moving vehicle, which must carry its own power and survive vibration, road salt and wildly varying ambient conditions. Thermo King describes itself as the inventor of the transport refrigeration unit. Applications span trailers, trucks and vans, buses, rail cargo and passenger, and marine and shipping containers. Product families include Precedent trailer units (C and S Series, single- and multi-temperature), the T-90 Series diesel truck units, TriPac auxiliary power units and the ConnectedSuite telematics line. Thermo King is a brand and product line, not a reportable segment — its results are distributed across all three geographic segments.",
+   "highlights": [
+    "The electrification line is branded evolve: 'A brand representing our electric transport refrigeration solutions for truck, trailer, bus, rail and marine applications'",
+    "Named electric products: the e1000, 'a fully electric transport refrigeration unit with zero emissions for large trucks'; the e200, CARB-approved for incentive programmes; the TriPac Envidia all-electric auxiliary power unit; the Precedent S-750i hybrid-electric trailer unit with integrated shore power; and the TE Series all-electric bus HVAC",
+    "Market condition, quoted verbatim from the FY2025 10-K: 'Transport refrigeration markets continue to experience weaker demand, particularly in the United States'",
+    "Independent check on the cycle: ACT Research reported US trailer orders of 13,500 in June 2026, down 35% month on month and 9% year on year, and characterises 2026 as rebalancing with backlog-to-build ratios below long-run averages — more equivocal than the company's own framing of a recovery in late 2026"
+   ],
+   "positioning": "A cyclical business tied to freight and to fleet replacement rather than to construction, which is why it moves out of phase with commercial HVAC and why it dilutes the data-centre story in any consolidated number.",
+   "soldThrough": "Dealer network and direct fleet sales.",
+   "targetSegments": [
+    "Trucking and trailer fleets",
+    "Cold-chain logistics",
+    "Transit and rail operators",
+    "Marine and container shipping"
+   ],
+   "roadmap": "Electrification across truck, trailer, bus, rail and marine, tied explicitly to the corporate commitment to reduce customer greenhouse gas emissions by one billion metric tons."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "CenTraVac water-cooled centrifugal chiller (catalogue CTV-PRC021G-EN, December 2024)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Catalogued range",
+     "value": "120 to 4000+ tons (450 to 14000+ kW), 60 and 50 Hz"
+    },
+    {
+     "band": "Capacity",
+     "label": "Selection breadth",
+     "value": "'more than 200,000 individual unit selections'"
+    },
+    {
+     "band": "Capacity",
+     "label": "Models",
+     "value": "CVHE, CVHF, CVHG, CVHH (simplex); CDHF, CDHG, CDHH (Duplex, dual compressor)"
+    },
+    {
+     "band": "Capacity",
+     "label": "Series E designation",
+     "value": "3000 to 14000 kW (850 to 4000 tons) at 50 Hz; 3150 to 14000 kW (900 to 4000 tons) at 60 Hz — the CVHH and CDHH models"
+    },
+    {
+     "band": "Mechanical",
+     "label": "Moving parts",
+     "value": "'only one primary moving part — a single rotating shaft supported by two bearings'"
+    },
+    {
+     "band": "Mechanical",
+     "label": "Drive",
+     "value": "Direct drive — 'no gear boxes, couplings, extra shafts, or shaft seals'"
+    },
+    {
+     "band": "Mechanical",
+     "label": "Condenser arrangement, CVHH",
+     "value": "'two separate bundles within the same condenser shell'"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Full load, standard AHRI conditions",
+     "value": "0.45 kW/ton"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Claim against competition",
+     "value": "'averaging at least 13.5 percent better than the next best centrifugal chiller available today'"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Cooling-only mode, catalogue range",
+     "value": "0.54 to 0.57 kW/ton (6.51 to 6.16 COP)"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Heat-recovery mode, catalogue range",
+     "value": "0.64 to 0.84 kW/ton (5.49 to 4.18 COP)"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Part-load curve published",
+     "value": "800-ton (2800 kW) unit with unit-mounted VSD, designed 42 °F/54 °F at 2.5 gpm/ton, plotted at entering condenser water 85 °F, 75 °F and 65 °F across 10-100% load"
+    },
+    {
+     "band": "Refrigerant",
+     "label": "Standard",
+     "value": "R-514A, GWP 'less than two'"
+    },
+    {
+     "band": "Refrigerant",
+     "label": "Option on CDHH and CVHH",
+     "value": "R-1233zd(E) — 'Classified as an A1 refrigerant per ASHRAE Standard 34… one of the few nonflammable olefin options available today'"
+    },
+    {
+     "band": "Refrigerant",
+     "label": "Annual leak rate",
+     "value": "'less than 0.5 percent annually versus the industry-accepted rate of 2.0 percent', with a Leak-Tight Warranty"
+    },
+    {
+     "band": "Rating",
+     "label": "Certification",
+     "value": "AHRI Standard 550/590 (I-P) and ANSI/AHRI Standard 551/591 (SI)"
+    },
+    {
+     "band": "Rating",
+     "label": "Excluded from AHRI certification",
+     "value": "Free cooling; low-temperature applications below 36 °F (2.2 °C) including ice storage; machines above 3000 tons (10551 kW) or above 15000 volts; heat recovery and heat pump ratings; auxiliary condenser; glycol and brines"
+    },
+    {
+     "band": "Rating",
+     "label": "IPLV load points",
+     "value": "'AHRI Standard 550/590 defines the entering condenser water temperatures for loads of 100, 75, 50, and 25 percent'"
+    },
+    {
+     "band": "Rating",
+     "label": "Trane's alternative part-load tool",
+     "value": "myPLV, 'calculating four performance points (94, 75, 50 and 25 percent)'"
+    },
+    {
+     "band": "Rating",
+     "label": "LEED requirement noted",
+     "value": "'Both full load and IPLV ratings are required for LEED Energy and Atmosphere (EA) credits'"
+    },
+    {
+     "band": "Disclosure",
+     "label": "Per-model IPLV, NPLV, kW/ton and sound data",
+     "value": "Not catalogued — routed to Trane Select Assist selection software"
+    }
+   ],
+   "notes": "Values quoted verbatim from Trane's own product catalogue CTV-PRC021G-EN (December 2024) and the Series E catalogue CTV-PRC015B-EN (August 2015). The absence of per-model part-load and acoustic data is a deliberate first-party disclosure boundary, recorded rather than filled from a third party."
+  },
+  {
+   "product": "Ascend air-cooled chiller, model ACR (catalogue AC-PRC001G-EN, January 2022)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Nominal range",
+     "value": "150 to 550 nominal tons"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Full load against code",
+     "value": "'Over 18% better full load efficiency than ASHRAE 90.1-2016 Path B'"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Part load against code",
+     "value": "'Over 22% higher IPLV than ASHRAE 90.1-2016 Path B'"
+    },
+    {
+     "band": "Mechanical",
+     "label": "Core technology",
+     "value": "AdaptiSpeed — 'the integration of an adaptive frequency drive efficiently tuned to match perfectly the permanent magnet compressor motors'"
+    },
+    {
+     "band": "Mechanical",
+     "label": "Compressor",
+     "value": "'Variable volume ratio screw compressor'; 150 to 300 ton units use variable volume ratio semi-hermetic direct-drive rotary screw"
+    },
+    {
+     "band": "Mechanical",
+     "label": "Motors",
+     "value": "Permanent magnet, 'up to 4 percent more efficient than conventional induction motors'"
+    },
+    {
+     "band": "Mechanical",
+     "label": "Refrigerant charge",
+     "value": "'Up to 40% lower refrigerant charge compared to previous evaporator designs'"
+    },
+    {
+     "band": "Acoustic",
+     "label": "Compressor muffler",
+     "value": "'Integral compressor muffler lowers sound levels by 4-10 dB compared to previous design'"
+    },
+    {
+     "band": "Acoustic",
+     "label": "Optional bellows",
+     "value": "'Optional metallic discharge and suction bellows reduce compressor sound by 8-10 dB'"
+    },
+    {
+     "band": "Acoustic",
+     "label": "Options offered",
+     "value": "'Three levels of sound reduction available to meet various jobsite acoustical requirements'"
+    },
+    {
+     "band": "Electrical",
+     "label": "Harmonics",
+     "value": "Passive harmonic filtering achieving 5% total demand distortion, optional; 'Harmonic attenuation to comply with IEEE 519 and achieving 5% TDD when ISC/ILOAD 20'"
+    },
+    {
+     "band": "Ambient",
+     "label": "Standard range",
+     "value": "32 to 105 °F (0 to 40.6 °C)"
+    },
+    {
+     "band": "Ambient",
+     "label": "Low ambient",
+     "value": "0 to 105 °F (-17.7 to 40.6 °C)"
+    },
+    {
+     "band": "Ambient",
+     "label": "Extreme low ambient",
+     "value": "-16 to 105 °F (150-300 ton units); -15 to 105 °F (375-550 ton units)"
+    },
+    {
+     "band": "Ambient",
+     "label": "High ambient",
+     "value": "32 to 125 °F (0 to 52 °C)"
+    },
+    {
+     "band": "Ambient",
+     "label": "Wide ambient",
+     "value": "0 to 125 °F (-17.7 to 52 °C)"
+    },
+    {
+     "band": "Water",
+     "label": "Standard leaving solution",
+     "value": "40 to 68 °F (4.4 to 20 °C)"
+    },
+    {
+     "band": "Water",
+     "label": "Low-temperature process",
+     "value": "Leaving solution below 40 °F (4.4 °C)"
+    },
+    {
+     "band": "Water",
+     "label": "Ice-making",
+     "value": "20 to 68 °F (-6.7 to 20 °C)"
+    },
+    {
+     "band": "Water",
+     "label": "Maximum non-operating circulating temperature",
+     "value": "125 °F (52 °C)"
+    },
+    {
+     "band": "Controls",
+     "label": "Interface and protocols",
+     "value": "7-inch colour touchscreen, Symbio 800; BACnet, Modbus and LonTalk 'without the need for gateways'"
+    }
+   ],
+   "notes": "Quoted verbatim from Trane's Ascend ACR product catalogue. The ambient options are the clearest illustration of how an applied machine is actually purchased: the temperature envelope is a selectable option set with a price, not a fixed property of the model."
+  },
+  {
+   "product": "Data-centre range — chillers and coolant distribution units",
+   "specs": [
+    {
+     "band": "Chillers",
+     "label": "CenTraVac CDHH",
+     "value": "900-6000+ tons (up to 21 MW), low-GWP R-1233zd"
+    },
+    {
+     "band": "Chillers",
+     "label": "CenTraVac CVHH",
+     "value": "850-2600 tons (up to 9 MW), R-1233zd"
+    },
+    {
+     "band": "Chillers",
+     "label": "Ascend ACR data-centre variant",
+     "value": "Up to 2 MW, low-GWP R-1234ze, variable-speed screw compressor, chilled water 40-72 °F, factory-installed waterside economiser, Rapid Restart, published Environmental Product Declaration"
+    },
+    {
+     "band": "Chillers",
+     "label": "Ascend ACR high-ambient rating",
+     "value": "'Designed for operation in high ambient temperatures up to 131 °F'"
+    },
+    {
+     "band": "Chillers",
+     "label": "TCA oil-free magnetic-bearing air-cooled",
+     "value": "300-850 tons (up to 3 MW), Trane VMAX magnetic bearing compressor, low-GWP R-515B or R-1234ze, cooling waterside 60-86 °F, ambient -20 to 130 °F, designed for waterside delta-T of 24 °F or greater, Rapid Restart"
+    },
+    {
+     "band": "Liquid cooling",
+     "label": "GigaModular CDU",
+     "value": "'2.5MW scalable building blocks'; 'Validated deployment architecture supporting up to 14MW, depending on site hydronic design considerations'"
+    },
+    {
+     "band": "Liquid cooling",
+     "label": "GigaModular design",
+     "value": "'Skid-mounted design with front-only service access'; 'Centralized control with redundant, hot-swappable components'; 'Up to 50°C ambient operation'"
+    },
+    {
+     "band": "Liquid cooling",
+     "label": "GigaModular economics",
+     "value": "'Up to 25% CAPEX and floor space savings vs. traditional CDUs'; 'Up to 32% lower CapEx versus traditional row CDU deployments, depending on project design'"
+    },
+    {
+     "band": "Liquid cooling",
+     "label": "CDU-1MW",
+     "value": "Up to 1.35 MW; 'Dual concurrently maintainable pumps', hot-swappable; concurrently maintainable filtration; thermowell-based sensor servicing; MODBUS, RESTful API, SNMP and BACnet"
+    },
+    {
+     "band": "Liquid cooling",
+     "label": "Portfolio claim",
+     "value": "'direct-to-chip liquid cooling distribution units that delivers up to 14MW of cooling capacity, the most in their size class'"
+    },
+    {
+     "band": "Liquid cooling",
+     "label": "DCDA series (Asia Pacific)",
+     "value": "In-row and in-room CDU, full-front-access, 'saving up to 20% of room floor space'; first China orders expected Q1 2026"
+    },
+    {
+     "band": "Reference designs",
+     "label": "NVIDIA, October 2025",
+     "value": "'Industry's First Comprehensive Thermal Management System Reference Design for Gigawatt Scale NVIDIA AI Factories', engineered for the NVIDIA Omniverse DSX Blueprint"
+    },
+    {
+     "band": "Reference designs",
+     "label": "NVIDIA optimisation, March 2026",
+     "value": "10% improvement in overall thermal performance against the October design, freeing 22 MW of cooling capacity for IT power"
+    },
+    {
+     "band": "Reference designs",
+     "label": "Continuum Rubin DSX, 250 MW duplex",
+     "value": "Available now; extended free cooling plus integrated heat recovery; 14% increase in thermal management system efficiency; 10% of heat rejection load to heat recovery"
+    },
+    {
+     "band": "Reference designs",
+     "label": "Continuum Rubin DSX, 1 GW",
+     "value": "Magnetic-bearing air-cooled architecture using 3 MW air-cooled chiller units, eliminating integrated waterside economisers; described as available soon"
+    },
+    {
+     "band": "Reference designs",
+     "label": "Eaton collaboration, August 2026",
+     "value": "Up to 15% combined energy-efficiency gain, up to 80% less copper, up to 30% lower installation cost against conventional low-voltage designs"
+    },
+    {
+     "band": "Disclosure",
+     "label": "Data-centre revenue",
+     "value": "Not disclosed in any form. 'Data center' appears four times in the FY2025 10-K, all inside an alphabetical product list"
+    },
+    {
+     "band": "Disclosure",
+     "label": "CDU flow rates, approach temperatures, dimensions",
+     "value": "Not published; approach described qualitatively as 'narrow approach temperatures'"
+    },
+    {
+     "band": "Disclosure",
+     "label": "Products not offered",
+     "value": "No rear-door heat exchangers and no cold-plate products appear on the liquid-cooling pages"
+    }
+   ],
+   "notes": "Assembled from Trane's data-centre chiller and liquid-cooling product pages and from the company's own reference-design releases. Every efficiency and cost figure in the reference-design rows is a vendor claim about a design rather than a measured result on an operating campus."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-17",
+   "category": "partnership",
+   "headline": "Trane Technologies and Eaton publish an industry-first joint power-and-thermal reference design for AI data centres",
+   "read": "The chiller vendor and the electrical vendor selling one engineered chain rather than two catalogues — and the only publicly stated commercial relationship Trane has in this ecosystem besides NVIDIA.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "financial",
+   "headline": "Q2 2026: revenue $6,353.5M up 11%, adjusted continuing EPS $4.31 up 11%, backlog a record $12.1bn up 70%, Applied bookings up 130%",
+   "read": "A fourth consecutive quarter of Applied bookings above 100% growth, with roughly half the backlog scheduled beyond 2027 — the constraint is now conversion timing rather than order intake.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Reports-Strong-Second-Quarter-Results-Raises-Full-Year-Revenue-and-EPS-Guidance/default.aspx"
+  },
+  {
+   "date": "2026-07-20",
+   "category": "leadership",
+   "headline": "SVP and Chief Global Integrated Supply Chain Officer Mingxiao (Gary) Guo departs effective 1 August 2026",
+   "read": "The 8-K states the departure did not arise from any disagreement over operations, policies, controls or financial matters; the timing sits alongside a tariff bill of roughly $200M a year and a Section 301 exclusion cliff in November.",
+   "source": "Trane Technologies Form 8-K, 2026-07-20, as reported by TipRanks and Kalkine Media"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "leadership",
+   "headline": "Donny Simmons, a 25-year veteran and most recently Group President Americas, named Chief Operating Officer effective 1 July 2026",
+   "read": "Consolidates regional business units and operations under one officer; the leadership page now shows no Group President Americas, with separate presidents for Commercial HVAC Americas and Residential HVAC.",
+   "source": "https://www.businesswire.com/news/home/20260609927206/en/Trane-Technologies-Names-Donny-Simmons-as-Chief-Operating-Officer"
+  },
+  {
+   "date": "2026-06-08",
+   "category": "corporate",
+   "headline": "2025 Sustainability Report: 331 million metric tons of customer CO2e reduced since 2019 and operational emissions down 59%",
+   "read": "About a third of the way to the Gigaton Challenge with four years to run, and ahead of the operational science-based target — the product roadmap and the commitment are the same roadmap.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Scales-Sustainability-Through-Climate-Innovation-Circularity-and-Workforce-Development/default.aspx"
+  },
+  {
+   "date": "2026-05-26",
+   "category": "policy",
+   "headline": "EPA finalises amendments loosening the Technology Transitions rule — the residential installation deadline is removed and industrial process chillers move to 1 January 2030",
+   "read": "A demand-timing negative for a company that had already completed its transition: the forced-replacement catalyst in the applied line most exposed to data centres slips by up to four years.",
+   "source": "Holland & Knight — EPA finalizes changes to Technology Transitions provisions, 2026-05-26"
+  },
+  {
+   "date": "2026-05-18",
+   "category": "partnership",
+   "headline": "Exclusive US and Canada supply agreement with Valent, a Greenheck Group company, for dedicated outdoor air systems and energy-recovery products",
+   "read": "Buys a product line through the channel rather than through the balance sheet — an exclusivity rather than an acquisition.",
+   "source": "Supply House Times — Trane Technologies and Valent announce exclusive supply agreement, 2026-05"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "financial",
+   "headline": "Q1 2026: revenue $4,969M, adjusted continuing EPS $2.63 up 7%, record backlog $10.7bn up more than 30% from year-end; guidance raised",
+   "read": "Roughly $1bn of the backlog step came from the Stellar Energy acquisition rather than from organic orders — the distinction the headline number does not make.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0001466258/000162828026028547/exhibit991-q12026earningsr.htm"
+  },
+  {
+   "date": "2026-04-06",
+   "category": "policy",
+   "headline": "Section 232 tariffs restructured into two tiers — 50% on articles wholly of steel, aluminium or copper and 25% on derivative products, applied to full customs value",
+   "read": "The tariff line moved from about 1.5 points of enterprise impact to closer to two points, offset by strategic surcharges; the company's estimated cost after mitigation is around $200M a year.",
+   "source": "C.H. Robinson client advisory, 2026-04-06; Trane Q1 2026 earnings call, 2026-04-30"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "product-launch",
+   "headline": "NVIDIA thermal reference design optimised: 10% better thermal performance, freeing 22 MW of cooling capacity for IT power, delivered as two Trane Continuum Rubin DSX designs",
+   "read": "Selling the blueprint before the hardware, at gigawatt scale — and quantifying the prize in megawatts of IT capacity rather than in efficiency percentages.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Optimizes-IndustryFirst-Thermal-Management-Reference-Design-for-AI-Factories-Introduces-Two-New-Designs/default.aspx"
+  },
+  {
+   "date": "2026-03-03",
+   "category": "ma",
+   "headline": "Completes the acquisition of LiquidStack, adding direct-to-chip and single- and two-phase immersion cooling; terms not disclosed",
+   "read": "Converts a 2023 minority stake into ownership and takes Trane from the plant down to the chip — following rather than leading Schneider and Johnson Controls into the same layer.",
+   "source": "https://www.businesswire.com/news/home/20260303582406/en/Trane-Technologies-Completes-Acquisition-of-LiquidStack"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "ma",
+   "headline": "Completes the acquisition of Stellar Energy Americas for gross consideration of $553.4M, adding modular cooling plants and CDUs",
+   "read": "The larger of the two 2026 thermal deals by disclosed value, and the one that put roughly $1bn into the Q1 backlog step.",
+   "source": "Trane Technologies Q2 FY2026 Form 10-Q, filed August 2026"
+  },
+  {
+   "date": "2026-01-29",
+   "category": "financial",
+   "headline": "FY2025: revenue $21,321.9M up 7.5%, GAAP continuing EPS $13.14, adjusted continuing EPS $13.06 up 16%, record backlog $7.8bn up 15%",
+   "read": "The year GAAP EPS exceeded adjusted EPS — an inversion traceable to non-cash contingent-consideration adjustments, and a live trap for any beat-or-miss read that mixes the two bases.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Reports-Strong-Fourth-Quarter-and-Full-Year-2025-Results-Robust-Bookings-and-Backlog-Provide-Strong-Visibility-Entering-2026/default.aspx"
+  },
+  {
+   "date": "2025-12-02",
+   "category": "ma",
+   "headline": "Agrees to acquire Stellar Energy Digital — modular cooling plants and CDUs, two Jacksonville plants, approximately 700 employees",
+   "read": "The price stayed undisclosed for roughly nine months until the Q2 2026 10-Q; announcement and disclosure are not the same event.",
+   "source": "https://www.investing.com/news/company-news/trane-technologies-to-acquire-stellar-energy-digital-in-data-center-cooling-push-93CH-4387033"
+  },
+  {
+   "date": "2025-10-28",
+   "category": "product-launch",
+   "headline": "Unveils the industry's first comprehensive thermal management system reference design for gigawatt-scale NVIDIA AI factories",
+   "read": "Positions the chiller vendor inside NVIDIA's design blueprint rather than downstream of it — the same reference-design pattern the power OEMs use.",
+   "source": "https://www.businesswire.com/news/home/20251028272299/en/Trane-Technologies-Unveils-Industrys-First-Comprehensive-Thermal-Management-System-Reference-Design-for-Gigawatt-Scale-NVIDIA-AI-Factories"
+  },
+  {
+   "date": "2025-09-05",
+   "category": "regulatory",
+   "headline": "US Department of Energy issues a Notice of Intent to Investigate under 10 CFR Part 851 following a technician injury at Los Alamos National Laboratory",
+   "read": "A worker-safety matter that is also a federal-contracting exposure for a company that has held DOE energy-services contracts since 1999; no outcome reported.",
+   "source": "https://www.energy.gov/sites/default/files/2025-09/Notice%20of%20Intent%20to%20Investigate,%20Trane%20Technologies,%20PLC.pdf"
+  },
+  {
+   "date": "2025-08",
+   "category": "legal",
+   "headline": "Fourth Circuit affirms the denial of dismissal in the Aldrich Pump and Murray Boiler asbestos Chapter 11, with a dissent and en banc rehearing denied on a six-vote split",
+   "read": "The Texas Two-Step structure survives in the Fourth Circuit on the Bestwall reasoning, but the closeness of the split and a live Supreme Court petition in that line keep the question open.",
+   "source": "US Court of Appeals for the Fourth Circuit, No. 24-1493, published opinion, August 2025"
+  },
+  {
+   "date": "2025-07-31",
+   "category": "market",
+   "headline": "HSBC downgrades Trane Technologies from Buy to Hold on valuation at 32 times 2025 and 28 times 2026 estimates, raising its target to $460",
+   "read": "The only published bear case located, and it predates the backlog inflection — its argument was that the bar for further beats had become very high.",
+   "source": "https://www.investing.com/news/analyst-ratings/trane-technologies-stock-rating-downgraded-to-hold-by-hsbc-on-valuation-93CH-4162341"
+  },
+  {
+   "date": "2025-07-03",
+   "category": "incident",
+   "headline": "CPSC recall of approximately 5,000 gas/electric packaged units under the Trane and American Standard brands for a fuel gas valve that can open unexpectedly",
+   "read": "One report of gas leaking, remedied by a free ignition-board replacement; units sold January 2024 to March 2025 at $8,250 to $12,900.",
+   "source": "https://www.cpsc.gov/Recalls/2025/Trane-Recalls-Gas-Electric-Packaged-Units-Due-to-Risk-of-Gas-Leak-Fire-Hazard"
+  },
+  {
+   "date": "2025-06-10",
+   "category": "product-launch",
+   "headline": "Expands the liquid-cooling portfolio with CDUs from 2.5 MW to 10 MW alongside the existing 1 MW unit",
+   "read": "The step from a rack-adjacent appliance to a plant-scale one, and the first appearance of a named VP and General Manager for Data Centers and High-Tech.",
+   "source": "https://www.trane.com/commercial/north-america/us/en/about-us/newsroom/press-releases/expansion-of-liquid-cooling-portfolio-strengthens-thermal-management-system-capabilities.html"
+  },
+  {
+   "date": "2025-04-01",
+   "category": "leadership",
+   "headline": "Matthew Pine, president and chief executive of Xylem, appointed to the board of directors",
+   "read": "A water-infrastructure chief executive joining a thermal-equipment board as water becomes a data-centre constraint.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1466258/000146625825000023/tranetechnologies_matthewp.htm"
+  },
+  {
+   "date": "2025-02",
+   "category": "legal",
+   "headline": "IAM lodges at La Crosse, Wisconsin ratify an agreement after a three-day strike; Clarksville, Tennessee ratifies a four-year contract with a 9.3% first-year increase",
+   "read": "Both settled; the Clarksville agreement covers more than 1,300 employees with an immediate $2 an hour rise plus a $2 skill adder for maintenance.",
+   "source": "IAM Union — Local 1296 members at Trane Technologies ratify a four-year contract; Wisconsin Public Radio, February 2025"
+  },
+  {
+   "date": "2025-01-30",
+   "category": "financial",
+   "headline": "FY2024: revenue $19,838.2M, organic revenue up 12%, adjusted continuing EPS $11.22, bookings $20.3bn up 11%, free cash flow $2,789.0M at 109% conversion",
+   "read": "The last year before the data-centre order step, and a useful baseline for reading the 70% backlog growth that followed.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2025/Trane-Technologies-Reports-Strong-Fourth-Quarter-and-Full-Year-2024-Results-Robust-Bookings-and-Backlog-Provide-Strong-Visibility-Entering-2025/default.aspx"
+  },
+  {
+   "date": "2025",
+   "category": "ma",
+   "headline": "Completes the acquisition of BrainBox AI, adding autonomous generative-AI HVAC controls now sold as Trane AI Control",
+   "read": "Buys the control layer that monetises the installed base without new hardware — the company claims up to 25% HVAC energy reduction with no equipment change.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2025/Trane-Technologies-Completes-Acquisition-of-BrainBox-AI/default.aspx"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-10",
+   "via": "Thermal management reference design",
+   "note": "Co-authored thermal-management reference designs for gigawatt-scale NVIDIA AI factories, engineered for the NVIDIA Omniverse DSX Blueprint.",
+   "context": "Announced 28 October 2025 as the industry's first comprehensive thermal-management system reference design at gigawatt scale, supporting GB300 NVL72 and next-generation Vera Rubin systems, with OpenUSD-based SimReady assets for digital-twin work.\n\nOptimised on 16 March 2026 with a stated 10% improvement in overall thermal performance that frees 22 MW of cooling capacity for IT power, delivered as two Trane Continuum Rubin DSX designs — a 250 MW duplex system available then, and a 1 GW magnetic-bearing air-cooled architecture using 3 MW chiller units. LiquidStack, a Trane company since March 2026, subsequently launched a GigaModular CDU built to NVIDIA Vera Rubin specifications and scaling to 14 MW.",
+   "source": "https://www.businesswire.com/news/home/20251028272299/en/Trane-Technologies-Unveils-Industrys-First-Comprehensive-Thermal-Management-System-Reference-Design-for-Gigawatt-Scale-NVIDIA-AI-Factories"
+  },
+  {
+   "slug": "eaton",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-08",
+   "via": "Trane Continuum Rubin DSX / Eaton Beam Rubin DSX",
+   "note": "Joint reference design integrating Trane chillers, coolant distribution units and controls with Eaton electrical infrastructure for AI data centres.",
+   "context": "Announced 17 August 2026 and described by both companies as an industry first: 'a unified, intelligent system for power and cooling for next-generation data centers' replacing what the release calls a traditionally slow, manual and siloed design process. Claimed benefits against conventional low-voltage designs are up to 15% combined energy-efficiency gain, up to 80% less copper and up to 30% lower installation cost.\n\nThe design ships inside the Trane Continuum Rubin DSX and Eaton Beam Rubin DSX platforms. It is the clearest instance in this corpus of the power and thermal chains being sold as one engineered path rather than as two procurements — the pattern Vertiv's guide describes from the power side.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx"
+  },
+  {
+   "slug": "vertiv",
+   "type": "competitor",
+   "status": "active",
+   "note": "The market leader Trane competes with in data-centre thermal management, and the vendor whose guide in this app teaches the room-level chain.",
+   "context": "ABI Research's competitive ranking of thermal-management providers for data centres, published 30 January 2025, places Vertiv first as a Market Leader and Trane fifth in the Mainstream tier, with Johnson Controls, Schneider Electric and Daikin in between. Global Market Insights' data-centre chiller share table for 2025 runs the other way at the plant level — Trane second at 18.7%, Vertiv fifth at 8.1% — because the two companies are strong at different points in the same chain.\n\nThe pairing is the most useful comparison in the cooling half of this corpus: Vertiv sells the room and the distribution to the rack, Trane sells the machine that rejects the heat, and both have spent 2025 and 2026 buying their way toward the other's territory.",
+   "source": "ABI Research — Vertiv and Johnson Controls take the lead in ABI Research's Thermal Management Providers for Data Centers competitive ranking (2025-01-30); Global Market Insights — Data Center Chillers Market (August 2026)"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "competitor",
+   "status": "active",
+   "note": "Ranked immediately above Trane in the Mainstream tier of the same thermal-management assessment, and the acquirer of CDU specialist Motivair.",
+   "context": "Schneider took a controlling interest in the direct-to-chip CDU vendor Motivair in September 2025 and launched a 2.5 MW MCDU-70 in January 2026. Facilities Dive positioned Trane's LiquidStack acquisition as following that move, describing it as 'the most recent deal between a major building systems OEM and a cutting-edge data center cooling technology provider, following moves last year by Schneider Electric and Johnson Controls'.\n\nNo supply, licensing or joint-development relationship between Trane and Schneider was found in any source. The link is curated as competitive because both are named in the same independent ranking and are acquiring into the same layer of the same chain.",
+   "source": "https://www.facilitiesdive.com/news/liquidstack-buy-gives-trane-ai-data-center-cooling-exposure/812053/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "AIM Act HFC phasedown",
+   "status": "in-effect",
+   "exposure": "The AIM Act requires US hydrofluorocarbon consumption to fall to 15% of the historic baseline by 2036, on an allowance schedule stepping down in 2026-2028, 2029-2033, 2034-2035 and 2036 onward. Trane's exposure is direct and dual: it must redesign products around lower-GWP fluids ahead of each step, and its residential line completed a transition to R-454B under a stated commitment to move to low-GWP refrigerants by 2025. The FY2025 10-K describes the risk in the company's own words without naming the statute: regulations 'could have a negative competitive impact on our company by requiring us to make costly changes to our products, or could make some of our existing HVAC and refrigeration products non-compliant or obsolete'.",
+   "mitigation": "The commercial portfolio already ships on ultra-low-GWP fluids — R-514A and R-1233zd(E) at a stated GWP below two on CenTraVac, R-513A across much of the applied range — and $347.6M of 2025 R&D is directed in part at lower-GWP products. During the 2025 R-454B shortage the company increased factory pre-charging to reduce field refrigerant requirements.",
+   "source": "Hunton Andrews Kurth — Status update on the AIM Act and EPA's HFC refrigerant regulations (2025-12-15); Trane Technologies FY2025 Form 10-K"
+  },
+  {
+   "regime": "EPA Technology Transitions rule (as amended)",
+   "status": "in-effect",
+   "effectiveDate": "2026-05-26",
+   "exposure": "The original rule took effect on 1 January 2025. EPA finalised amendments on 26 May 2026 that materially loosened it: the installation deadline for residential and light-commercial systems using refrigerant of 700 GWP or above manufactured before 1 January 2025 was removed entirely, supermarket refrigeration and cold-storage warehouses were extended to 1 January 2032, and semiconductor-manufacturing refrigeration and industrial process chillers moved from 2026 and 2028 to 1 January 2030. For Trane both changes are demand-timing negatives rather than compliance problems: the residential change reduces stranded-inventory risk for competitors still holding legacy stock, and the industrial-chiller delay removes a near-term forced-transition catalyst in the applied line most exposed to data centres.",
+   "source": "Holland & Knight — EPA finalizes changes to Technology Transitions provisions (2026-05-26)"
+  },
+  {
+   "regime": "A2L refrigerants and building codes (ASHRAE 15 and 34)",
+   "status": "in-effect",
+   "exposure": "Most low-GWP replacements are classified A2L — low toxicity, mildly flammable — which brings leak detection, ventilation, charge limits and labelling into the machine room and into the building code. The 2024 editions of the IMC, IBC, IFC and IRC, keyed to ASHRAE 15 and 34 (2024), permit A2Ls with those requirements; the majority of US jurisdictions remain on the 2021 IMC, which does not reference A2Ls at all. A known gap under the 2024 IMC requires A2L refrigerant lines penetrating two or more floor or ceiling assemblies to run in a ventilated fire-rated shaft, with some jurisdictions adopting 2027 IMC language early to resolve it. Trane's exposure is uneven by product: R-454B lines (CGAM, Ascend ACS and ACX, most Thermafit, residential) are A2L; the CenTraVac line's R-1233zd(E) is explicitly A1 and nonflammable.",
+   "source": "ICC Building Safety Journal — A2L refrigerants: latest challenges and opportunities; ACHR News — The code challenges behind the A2L transition"
+  },
+  {
+   "regime": "Section 232 tariffs on steel, aluminium and copper",
+   "status": "in-effect",
+   "effectiveDate": "2026-04-06",
+   "exposure": "Restructured from 6 April 2026 into two tiers — 50% on articles wholly of the covered metals and 25% on derivative products substantially but not wholly of them — applied to the full customs value including derivatives, with the entirely-US-metal threshold relaxed from 95% to 85%. From 8 June 2026 residential HVAC systems and components were temporarily reduced to 15% ad valorem through 31 December 2027. Trane's quantified exposure is an estimated approximately $200M annual tariff cost after mitigation, with the CFO describing the enterprise impact moving from around 1.5 points to closer to two points.",
+   "mitigation": "Strategic surcharges, stated by the company as the offset.",
+   "source": "C.H. Robinson client advisories, 2026-04-06 and 2026-06-02; Trane Technologies Q1 2026 earnings call transcript, 2026-04-30"
+  },
+  {
+   "regime": "Section 301 tariffs and the exclusion expiry",
+   "status": "in-effect",
+   "effectiveDate": "2026-11-09",
+   "exposure": "List rates run 25% on industrial machinery (Lists 1-3) and 7.5% on List 4A consumer goods. 178 product exclusions remain in force and expire at 23:59 ET on 9 November 2026, after which entries revert to the underlying list rate. The exclusions are narrowly drawn and specifically include rotary compressors within defined wattage ranges, DC blowers within defined size and output specifications, and electric motors within defined phase and horsepower limits — precisely the HVAC input categories. This is a dateable near-term cost event for the whole industry rather than for Trane alone.",
+   "source": "Great Lakes Customs Law — Section 301 China exclusions in 2026: the 178 products still protected"
+  },
+  {
+   "regime": "Section 25C and 179D efficiency incentives (OBBBA)",
+   "status": "expired",
+   "effectiveDate": "2025-07-04",
+   "exposure": "The One Big Beautiful Bill Act terminated the Section 25C residential energy-efficiency credit early: it applies only to property placed in service before 31 December 2025, so equipment installed in 2026 does not qualify, and the trigger is placed-in-service rather than contract or deposit date. Section 25D for geothermal is gone on the same basis, and Section 179D, the commercial-buildings energy-efficiency deduction, expires for construction beginning after 30 June 2026. The 25C expiry removes a point-of-sale subsidy of up to $2,000 from residential replacement demand at the same time as AHRI shipment data showed an eighth consecutive monthly decline. The HEAR rebate programme survives because it was appropriated as grants to state energy offices rather than structured as a tax credit.",
+   "source": "HVAC Base (2026); Energy Rebate Calculator (2026)"
+  },
+  {
+   "regime": "Irish domicile and OECD Pillar Two",
+   "status": "in-effect",
+   "effectiveDate": "2024-01-01",
+   "exposure": "Trane Technologies plc is an Irish-incorporated public limited company with US operational headquarters in Davidson, North Carolina. Ireland applies a 12.5% trading-income corporation tax and a 25% passive rate, and groups with consolidated revenue at or above EUR 750M are subject to the 15% Pillar Two minimum effective rate, legislated in Ireland with effect from 1 January 2024. The company stated it included Pillar Two in its FY2024 estimated annual effective tax rate. Irish Revenue published updated guidance on 24 March 2026.",
+   "source": "PwC Ireland corporate tax summary; KPMG TaxNewsFlash — Ireland: updated Pillar Two guidance (2026-04); Trane Technologies Q1 FY2024 Form 10-Q"
+  },
+  {
+   "regime": "Asbestos liability — Aldrich Pump and Murray Boiler Chapter 11",
+   "status": "in-effect",
+   "effectiveDate": "2020-06",
+   "exposure": "Two indirect wholly owned subsidiaries created by a divisive merger under Texas law filed voluntary Chapter 11 petitions in June 2020 in the Western District of North Carolina, seeking a channelling injunction; pre-petition asbestos settlement and defence costs were reported at approximately $100M a year. All asbestos-related lawsuits against the two entities are stayed. The bankruptcy court denied motions to dismiss and certified a direct appeal; the Fourth Circuit affirmed in a published opinion in August 2025 (No. 24-1493) relying on its contemporaneous Bestwall holding, with a dissent, and denied rehearing en banc with six judges voting to grant. The court granted a motion to streamline liability-estimation proceedings on 17 December 2025, with Phase 1 of the estimation trial scheduled to begin the week of 10 August 2026. No outcome of that hearing was found as of 4 September 2026, and a Supreme Court petition in the Bestwall line (No. 25-1013) remains live.",
+   "source": "US Court of Appeals for the Fourth Circuit, No. 24-1493 (August 2025); Haynes Boone (2024-02-29); Trane Technologies FY2025 Form 10-K"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Dave Regnery",
+   "title": "Chair and Chief Executive Officer",
+   "photo": "images/execs/trane-technologies-regnery.jpg",
+   "background": [
+    "Chief Executive Officer since July 2021 and Chair since January 2022",
+    "No change to the chief executive or chief financial officer roles occurred in 2025 or 2026"
+   ]
+  },
+  {
+   "name": "Chris Kuehn",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "photo": "images/execs/trane-technologies-kuehn.jpg",
+   "background": [
+    "Chief Financial Officer since 2021",
+    "Quantified the enterprise tariff impact on the Q1 2026 call as moving from around 1.5 points in January to closer to two points, offset by strategic surcharges"
+   ]
+  },
+  {
+   "name": "Donny Simmons",
+   "title": "Executive Vice President and Chief Operating Officer",
+   "photo": "images/execs/trane-technologies-simmons.jpg",
+   "background": [
+    "Appointed Chief Operating Officer effective 1 July 2026, reporting to the Chair and Chief Executive",
+    "Group President of the Americas region until the appointment, overseeing commercial and residential HVAC, transport refrigeration and life sciences",
+    "A 25-year veteran of the company"
+   ]
+  },
+  {
+   "name": "Mauro J. Atalla",
+   "title": "Senior Vice President and Chief Technology and Sustainability Officer",
+   "photo": "images/execs/trane-technologies-atalla.jpg",
+   "background": [
+    "Named in the March 2026 reference-design release on the AI-factory thermal designs"
+   ]
+  },
+  {
+   "name": "Holly Paeper",
+   "title": "President, Commercial HVAC Americas",
+   "photo": "images/execs/trane-technologies-paeper.jpg",
+   "background": [
+    "Quoted on the LiquidStack acquisition: customers 'need integrated cooling solutions that scale from the central plant to the chip and can adapt as performance demands continue to evolve'"
+   ]
+  },
+  {
+   "name": "Mark Majocha",
+   "title": "President, Residential HVAC",
+   "photo": "images/execs/trane-technologies-majocha.jpg",
+   "background": [
+    "Leads the Trane and American Standard Heating & Air Conditioning residential business through the R-454B transition"
+   ]
+  },
+  {
+   "name": "Jose La Loggia",
+   "title": "Group President, EMEA",
+   "photo": "images/execs/trane-technologies-laloggia.jpg",
+   "background": [
+    "EMEA revenue was $2,802.1M in FY2025, up 9.6%, with segment adjusted EBITDA margin down 150 basis points to 18.3%"
+   ]
+  },
+  {
+   "name": "Allen Ge",
+   "title": "Group President, Asia Pacific",
+   "photo": "images/execs/trane-technologies-ge.jpg",
+   "background": [
+    "Asia Pacific revenue was $1,351.0M in FY2025, down 2.0%, with segment adjusted EBITDA margin flat at 23.9%"
+   ]
+  },
+  {
+   "name": "Karin De Bondt",
+   "title": "Senior Vice President and Chief Strategy Officer",
+   "photo": "images/execs/trane-technologies-debondt.jpg",
+   "background": [
+    "Leads corporate strategy across the three geographic segments"
+   ]
+  },
+  {
+   "name": "Riaz Raihan",
+   "title": "Senior Vice President and Chief Digital Officer",
+   "photo": "images/execs/trane-technologies-raihan.jpg",
+   "background": [
+    "Owns the digital layer spanning Trane Cloud and the BrainBox AI-derived Trane AI Control service"
+   ]
+  },
+  {
+   "name": "Victoria Lazar",
+   "title": "Senior Vice President and General Counsel",
+   "photo": "images/execs/trane-technologies-lazar.jpg",
+   "background": [
+    "Legal responsibility spans the Aldrich Pump and Murray Boiler Chapter 11 proceedings"
+   ]
+  },
+  {
+   "name": "Mairead Magner",
+   "title": "Senior Vice President and Chief Human Resources Officer",
+   "photo": "images/execs/trane-technologies-magner.jpg",
+   "background": [
+    "Workforce of approximately 44,000 in 62 countries at 31 December 2025"
+   ]
+  },
+  {
+   "name": "Carrie Ruddy",
+   "title": "Senior Vice President and Chief Communications and Marketing Officer",
+   "photo": "images/execs/trane-technologies-ruddy.jpg",
+   "background": []
+  },
+  {
+   "name": "Matthew Pine",
+   "title": "Director",
+   "background": [
+    "Appointed to the board effective 1 April 2025",
+    "President and Chief Executive Officer of Xylem Inc."
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024 (ended 31 December 2024)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Net revenue",
+      "actual": "$19,838.2M — Americas $15,903.2M, EMEA $2,556.7M, Asia Pacific $1,378.3M; organic revenue up 12%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "",
+      "kpi": "revenue",
+      "usdMillions": 19838.2,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP continuing EPS",
+      "actual": "$11.35",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Basis note: published sell-side consensus for this company is adjusted-basis. Comparing this GAAP figure against it manufactures a surprise, and at least two outlets did so in 2024 and 2025 quarters"
+     },
+     {
+      "name": "Adjusted continuing EPS",
+      "actual": "$11.22",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Zacks records Q1 2024 +18.3%, Q2 2024 +7.1%, Q3 2024 about +4.0% and Q4 2024 +2.8% against adjusted-basis consensus",
+      "kpi": "eps"
+     },
+     {
+      "name": "Operating margin",
+      "actual": "GAAP 17.6%, up 120 basis points; adjusted 17.6%, up 130 basis points",
+      "expected": "",
+      "verdict": "beat",
+      "result": ""
+     },
+     {
+      "name": "Bookings",
+      "actual": "$20.3bn, up 11%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "",
+      "kpi": "orders",
+      "usdMillions": 20300,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Backlog at period end",
+      "actual": "$6,747.7M",
+      "expected": "",
+      "verdict": "inline",
+      "result": "",
+      "kpi": "backlog",
+      "usdMillions": 6747.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Free cash flow",
+      "actual": "$2,789.0M, 109% conversion",
+      "expected": "",
+      "verdict": "beat",
+      "result": ""
+     }
+    ],
+    "commentary": "The baseline year before the data-centre order step. Capital deployed: dividends about $760M, repurchases $1.3bn, M&A about $470M."
+   },
+   {
+    "period": "FY2025 (ended 31 December 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Net revenue",
+      "actual": "$21,321.9M, up 7.5% — Americas $17,168.8M (+8.0%), EMEA $2,802.1M (+9.6%), Asia Pacific $1,351.0M (-2.0%); organic revenue up 6%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Americas organic bridge: volume 3.6%, pricing 3.8%, acquisitions 0.7%, currency -0.1%",
+      "kpi": "revenue",
+      "usdMillions": 21321.9,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "GAAP continuing EPS",
+      "actual": "$13.14",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The inversion: GAAP exceeded adjusted this year, traceable to non-cash contingent-consideration adjustments that reduced selling and administrative expense by $61.2M. This is the opposite of the usual direction and it is the single most important thing to know before reading any beat-or-miss headline on this company"
+     },
+     {
+      "name": "Adjusted continuing EPS",
+      "actual": "$13.06, up 16%",
+      "expected": "$12.95 to $13.05, the company's own guidance range",
+      "verdict": "beat",
+      "result": "Landed at the high end of guidance. Quarterly consensus, adjusted basis: Q2 2025 $3.88 against $3.79 (Investing.com), Q3 2025 $3.88 against $3.80 (Zacks) or $3.78 (Investing.com), Q4 2025 $2.86 against $2.83 (Zacks)",
+      "kpi": "eps"
+     },
+     {
+      "name": "Revenue against consensus, quarterly",
+      "actual": "Q2 2025 $5.75bn and Q3 2025 $5.74bn",
+      "expected": "$5.76bn and $5.79bn (Investing.com)",
+      "verdict": "miss",
+      "result": "Two consecutive small revenue misses inside a year of EPS beats — the shape of a company converting backlog on margin rather than on volume"
+     },
+     {
+      "name": "Operating margin",
+      "actual": "GAAP 18.6%; adjusted 18.5%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Segment adjusted EBITDA margin: Americas 21.6% (from 20.9%), EMEA 18.3% (from 19.8%), Asia Pacific 23.9% (flat)"
+     },
+     {
+      "name": "Bookings",
+      "actual": "$22,648M, up 12% reported and 11% organic; organic bookings up 22% in Q4 with Americas Commercial HVAC up more than 35%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "",
+      "kpi": "orders",
+      "usdMillions": 22648,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Backlog at period end",
+      "actual": "$7,769.4M, up 15% — Americas $6,298.6M, EMEA $775.9M, Asia Pacific $694.9M; Americas Commercial HVAC backlog up 25%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Definition caution, from the 10-K: backlog is 'based on orders received and only include amounts associated with our equipment and contracting and installation performance obligations'. A major portion of residential products is built in advance of order and does not appear",
+      "kpi": "backlog",
+      "usdMillions": 7769.4,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Free cash flow",
+      "actual": "$2,887.3M, 98% conversion",
+      "expected": "",
+      "verdict": "inline",
+      "result": ""
+     },
+     {
+      "name": "Services revenue",
+      "actual": "$7,339.6M — Americas $5,956.2M, EMEA $902.7M, Asia Pacific $480.7M",
+      "expected": "",
+      "verdict": "inline",
+      "result": "About 34.4% of total revenue, computed from the company's own disclosed equipment-versus-services lines rather than published as a percentage. Revenue transferred at a point in time was approximately 79%"
+     },
+     {
+      "name": "Research and development",
+      "actual": "$347.6M, from $309.6M in 2024 and $252.3M in 2023",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Described by the company as approximately 2% of annual net revenues"
+     }
+    ],
+    "commentary": "Capital deployed in 2025: dividends about $840M, share repurchases $1.5bn which exhausted the 2022 authorisation and left $4.8bn under the 2024 authorisation, M&A about $720M committed, and $150M of debt retirement. The quarterly dividend was raised 12% in February 2026 from $0.94 to $1.05, or $3.76 to $4.20 annualised — a 77% increase since the company was launched in March 2020. Cash at year end was $1,763.3M, of which $1,653.8M sat with non-US subsidiaries. Approximately 75% of net revenues were derived inside the United States and no single customer accounted for more than 10%."
+   },
+   {
+    "period": "Q1 2026 (ended 31 March 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Net revenue",
+      "actual": "$4,969M — Americas $3,998M, EMEA $639.5M, Asia Pacific $331.5M; organic revenue up 3%",
+      "expected": "$4.81bn (Investing.com)",
+      "verdict": "beat",
+      "result": "+3.33%",
+      "kpi": "revenue",
+      "usdMillions": 4969,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted continuing EPS",
+      "actual": "$2.63, up 7%",
+      "expected": "$2.53 (Investing.com)",
+      "verdict": "beat",
+      "result": "+3.95% on an adjusted-against-adjusted comparison",
+      "kpi": "eps"
+     },
+     {
+      "name": "GAAP continuing EPS",
+      "actual": "$2.66",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The inversion again — GAAP above adjusted"
+     },
+     {
+      "name": "Segment operating margin",
+      "actual": "Americas 17.8%, EMEA 12.0%, Asia Pacific 22.1%; enterprise GAAP 15.6% and adjusted 16.0%",
+      "expected": "",
+      "verdict": "inline",
+      "result": ""
+     },
+     {
+      "name": "Bookings and backlog",
+      "actual": "Bookings $6,691M, organic up 24%; record backlog $10.7bn, up more than 30% from year-end 2025",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Approximately $1bn of the backlog step came from the Stellar Energy acquisition rather than from organic orders — a distinction the headline number does not draw. Americas commercial HVAC bookings were up about 40% and Applied bookings up more than 100%",
+      "kpi": "backlog",
+      "usdMillions": 10700,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "Guidance raised: full-year 2026 reported revenue growth of approximately 9.5%, organic approximately 7%, and GAAP and adjusted continuing EPS of approximately $14.75 to $14.95, against the initial January guide of 8.5-9.5% reported and $14.65 to $14.85."
+   },
+   {
+    "period": "Q2 2026 (ended 30 June 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Net revenue",
+      "actual": "$6,353.5M, up 11% reported and 9% organic — Americas $5,271.3M (+12% reported, +11% organic), EMEA $697.6M (-1% reported, -4% organic), Asia Pacific $384.6M (+11% reported, +10% organic)",
+      "expected": "$6.19bn (Investing.com); Zacks-implied approximately $6.17bn",
+      "verdict": "beat",
+      "result": "+2.86% on the Zacks pairing. EMEA declined organically — the one segment moving the other way",
+      "kpi": "revenue",
+      "usdMillions": 6353.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted continuing EPS",
+      "actual": "$4.31, up 11%",
+      "expected": "$4.27 (Zacks) / $4.26 (Investing.com)",
+      "verdict": "beat",
+      "result": "+0.94% on the Zacks pairing — the narrowest beat in the series, on an adjusted-against-adjusted basis",
+      "kpi": "eps"
+     },
+     {
+      "name": "GAAP continuing EPS",
+      "actual": "$4.20",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Here GAAP sits below adjusted, the conventional direction — the inversion is not permanent and must be checked period by period"
+     },
+     {
+      "name": "Bookings and book-to-bill",
+      "actual": "Bookings $7,818M, up 39% reported and 37% organic; book-to-bill 123% and above 100% in all segments",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Organic bookings up 37%, led by Americas Commercial HVAC up 50%",
+      "kpi": "orders",
+      "usdMillions": 7818,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Backlog at period end",
+      "actual": "$12.1bn, up 70% year on year; Americas Commercial HVAC up 90%; approximately $6bn scheduled for 2027 and beyond",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Applied bookings up 130% — the fourth consecutive quarter above 100%. Roughly half the backlog sits beyond 2027, which makes conversion timing rather than order intake the variable",
+      "kpi": "backlog",
+      "usdMillions": 12100,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Segment operating margin",
+      "actual": "Americas 21.8% GAAP and 22.1% adjusted; EMEA 11.8% and 13.1%; Asia Pacific 21.0% and 21.0%; enterprise 19.3% GAAP and 19.7% adjusted",
+      "expected": "",
+      "verdict": "beat",
+      "result": ""
+     },
+     {
+      "name": "Free cash flow, six months",
+      "actual": "$1,602.7M",
+      "expected": "",
+      "verdict": "inline",
+      "result": ""
+     }
+    ],
+    "commentary": "Guidance raised again: full-year 2026 reported revenue growth of approximately 11.5% and organic approximately 9%; GAAP continuing EPS of approximately $15.00 to $15.10 including $0.20 of non-GAAP adjustments, and adjusted continuing EPS of $15.20 to $15.30. Note a genuine conflict in the market reaction on the print date — Investing.com reported the stock down 0.49% premarket at $444.62 while StockStory reported it up 7.2% to $478.92; the 3 September close of $445.19 sits closer to the former, and neither is used here without the caveat."
+   }
+  ],
+  "commentary": "Two things have to be held apart when reading this record. The first is the basis problem, and it is live: Trane reports both GAAP and adjusted continuing EPS, every published sell-side consensus located is adjusted-basis, and in FY2025 and Q1 2026 GAAP exceeded adjusted — the inverse of the usual direction. At least two outlets headlined the GAAP figure against an adjusted estimate in 2024 and 2025 quarters, manufacturing surprises of about six percentage points that do not exist. Every pairing above states its basis. A separate caution: one earnings-history tracker renders its forecast and actual columns transposed for this ticker, verified across four quarters. The second is that the backlog story is real but partly bought: the Q1 2026 step of more than 30% included roughly $1bn from the Stellar Energy acquisition, and backlog excludes residential product built in advance of order. Collection gap, stated rather than estimated: there is no data-centre revenue, growth rate or bookings disclosure of any kind, and no published split between commercial HVAC, residential HVAC and transport refrigeration. One retail outlet relayed an unattributed analyst estimate that data centres were about a fifth of commercial HVAC sales or about 10% of total revenue in 2025; it names no analyst and no firm, and it is recorded here as an estimate rather than used. Market data for context, at the close on 3 September 2026: share price $445.19, market capitalisation $97.95bn, 220.02M shares outstanding, dividend $4.20 at a 0.94% yield, trailing price/earnings 33.18, short interest 1.27% of float, and a consensus 12-month target of $526.99 across 24 analysts with a range of $422 to $575."
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess Trane is buying its way down the thermal chain rather than building down it, and doing so as a follower. Basis: a minority stake in LiquidStack taken in 2023 was converted to full ownership only in March 2026, after Schneider Electric took control of Motivair in September 2025 and Johnson Controls invested in Accelsius; Stellar Energy closed a month earlier for $553.4M gross. Facilities Dive described the LiquidStack purchase in exactly those terms — the most recent such deal, following moves the year before. The strategic logic is nonetheless sound: a chiller vendor that stops at the plant room sells into a shrinking share of the heat path as direct-to-chip cooling advances.",
+  "2. **(High confidence)** We assess the reference design, not the product catalogue, is now the company's principal go-to-market instrument in data centres. Basis: three published designs in ten months — NVIDIA in October 2025, an optimisation in March 2026 quantified as 22 MW of cooling capacity freed for IT power, and the Eaton power-and-thermal integration in August 2026 claiming 80% less copper and 30% lower installation cost. Selling a validated chain rather than a machine is how a vendor gets specified before the procurement starts, and it is the same pattern the power OEMs run.",
+  "3. **(Moderate confidence)** We assess the backlog is genuinely strong and partly mis-read. Basis: $12.1bn at Q2 2026 is 70% growth and about 57% of FY2025 revenue, against Carrier's $8bn at about 37% — a materially better coverage ratio. But roughly $1bn of the Q1 step was acquired rather than booked, about half the backlog is scheduled for 2027 and beyond, and backlog excludes residential product built in advance of order. The variable is conversion timing and capacity, not demand. We found no published analyst work questioning backlog durability, cancellation terms or the organic-versus-acquired split, and that absence is itself worth noting.",
+  "4. **(Moderate confidence)** We assess the company is running two businesses on opposite cycles and that this is under-appreciated in any single headline number. Basis: Americas commercial HVAC bookings up 50% in Q2 2026 against residential markets the company itself describes as having 'weakened considerably throughout 2025', AHRI industry shipments down 29.2% year on year in January 2026 on an eighth consecutive monthly decline, and transport refrigeration explicitly weak with ACT Research reporting US trailer orders down 35% month on month in June 2026. Trane's own Q2 residential commentary — bookings up in the high twenties percent — is sharply at odds with the industry data, and that divergence is unreconciled.",
+  "5. **(Moderate confidence)** We assess the refrigerant transition has flipped from a tailwind to a timing headwind. Basis: the company completed its commercial migration to ultra-low-GWP fluids and its residential migration to R-454B ahead of the schedule, and then EPA's May 2026 amendments removed the residential installation deadline entirely and pushed industrial process chillers from 2026 and 2028 to 2030. A company that transitioned early loses the forced-replacement catalyst it had priced in, while competitors holding legacy inventory gain relief. Against that, the January 2026 leak-repair rule for appliances with 15 lb or more of charge enlarges the recurring-service base, which is the higher-margin revenue.",
+  "6. **(Low confidence)** We assess the most conspicuous gap in the public record is the absence of a single named data-centre customer. Basis: across an exhaustive check of hyperscalers, colocation operators, AIDC developers and the general contractors that build for them, no source states a commercial relationship between Trane Technologies and any of them; the only two publicly stated relationships in this ecosystem are the NVIDIA and Eaton reference designs. For a company whose backlog growth is attributed to data-centre orders, that is either exceptional customer confidentiality or a sign that the orders route through contractors and developers rather than through named end users. Both readings are consistent with the evidence and neither is established.",
+  "7. **(Low confidence)** We assess the asbestos structure remains the largest single unquantified liability in the file. Basis: Aldrich Pump and Murray Boiler have been in Chapter 11 since June 2020 on pre-petition costs reported at about $100M a year; the Fourth Circuit affirmed in August 2025 but with a dissent and an en banc denial on a six-vote split; Phase 1 of the liability-estimation trial was scheduled for the week of 10 August 2026 and no outcome was found; and a Supreme Court petition in the related Bestwall line is live. An adverse ruling on the divisive-merger structure would reach this company directly."
+ ],
+ "sources": [
+  {
+   "label": "Trane Technologies and Eaton collaborate on an industry-first reference design for AI data centres",
+   "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "Data Center Dynamics — Trane and Eaton tout integrated designs for AI data-centre power and cooling systems",
+   "url": "https://www.datacenterdynamics.com/en/news/trane-and-eaton-tout-integrated-designs-for-ai-data-center-power-and-cooling-systems/",
+   "date": "2026-08"
+  },
+  {
+   "label": "Motley Fool — Data centres don't just need power, they need cooling (unattributed analyst estimate of Trane's data-centre exposure)",
+   "url": "https://www.fool.com/investing/2026/08/20/data-centers-dont-just-need-power-they-need-coolin/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Trane Technologies — Q2 FY2026 Form 10-Q (Stellar Energy Americas gross consideration $553.4M)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001466258/000162828026051117/tt-20260630.htm",
+   "date": "2026-08"
+  },
+  {
+   "label": "Trane Technologies reports strong second-quarter results and raises full-year revenue and EPS guidance",
+   "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Reports-Strong-Second-Quarter-Results-Raises-Full-Year-Revenue-and-EPS-Guidance/default.aspx",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Investing.com — Trane Technologies Q2 2026 earnings call transcript (consensus, backlog, Applied bookings)",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-trane-technologies-tops-q2-2026-estimates-lifts-outlook-93CH-4825402",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Trane Technologies Q2 2026 earnings, adjusted basis stated",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/trane-technologies-tt-q2-earnings-113502402.html",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "TipRanks — Trane Technologies announces a leadership change in supply chain (Form 8-K, departure effective 1 August 2026)",
+   "url": "https://www.tipranks.com/news/company-announcements/trane-technologies-announces-leadership-change-in-supply-chain",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Trane Technologies — Names Donny Simmons as Chief Operating Officer",
+   "url": "https://www.businesswire.com/news/home/20260609927206/en/Trane-Technologies-Names-Donny-Simmons-as-Chief-Operating-Officer",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Trane Technologies scales sustainability through climate innovation, circularity and workforce development (2025 Sustainability Report)",
+   "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Scales-Sustainability-Through-Climate-Innovation-Circularity-and-Workforce-Development/default.aspx",
+   "date": "2026-06-08"
+  },
+  {
+   "label": "C.H. Robinson — Section 232 updates: residential HVAC reduced to 15% effective 8 June 2026",
+   "url": "https://www.chrobinson.com/en-us/resources/insights-and-advisories/client-advisories/2026q2/06-02-2026-client-advisory-updates-to-section-232-tariffs-on-steel-aluminum-copper/",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "Holland & Knight — EPA finalizes changes to Technology Transitions provisions",
+   "url": "https://www.hklaw.com/en/insights/publications/2026/05/epa-finalizes-changes-to-technology-transitions-provisions",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "Supply House Times — Trane Technologies and Valent announce an exclusive supply agreement",
+   "url": "https://www.supplyht.com/articles/107214-trane-technologies-and-valent-announce-exclusive-supply-agreement",
+   "date": "2026-05"
+  },
+  {
+   "label": "Trane Technologies — Q1 2026 earnings release, Form 8-K exhibit 99.1",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001466258/000162828026028547/exhibit991-q12026earningsr.htm",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Motley Fool — Trane Technologies Q1 2026 earnings call transcript (tariff cost quantified)",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/trane-tt-q1-2026-earnings-call-transcript/",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "KPMG TaxNewsFlash — Ireland: updated Pillar Two guidance",
+   "url": "https://kpmg.com/us/en/taxnewsflash/news/2026/04/ireland-updated-pillar-two-guidance.html",
+   "date": "2026-04"
+  },
+  {
+   "label": "C.H. Robinson — US expands and increases Section 232 tariffs on aluminium, steel and copper effective 6 April 2026",
+   "url": "https://www.chrobinson.com/en-us/resources/insights-and-advisories/client-advisories/2026q2/04-06-2026-us-expands-n-increases-sec232-tariffs-on-aluminum-steel-n-copper-effective-apr-6/",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "Trane Technologies optimizes its industry-first thermal management reference design for AI factories and introduces two new designs",
+   "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Optimizes-IndustryFirst-Thermal-Management-Reference-Design-for-AI-Factories-Introduces-Two-New-Designs/default.aspx",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "Trane Technologies completes the acquisition of LiquidStack",
+   "url": "https://www.businesswire.com/news/home/20260303582406/en/Trane-Technologies-Completes-Acquisition-of-LiquidStack",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "Facilities Dive — LiquidStack buy gives Trane AI data-centre cooling exposure",
+   "url": "https://www.facilitiesdive.com/news/liquidstack-buy-gives-trane-ai-data-center-cooling-exposure/812053/",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "Trane Technologies — FY2025 Form 10-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1466258/000162828026005731/tt-20251231.htm",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "ACHR News — AHRI shipment data show air conditioners and heat pumps down 29% in January",
+   "url": "https://www.achrnews.com/articles/165975-ahri-shipment-data-show-a-c-heat-pumps-down-by-29-in-january",
+   "date": "2026-02"
+  },
+  {
+   "label": "Trane Technologies reports strong fourth-quarter and full-year 2025 results",
+   "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Reports-Strong-Fourth-Quarter-and-Full-Year-2025-Results-Robust-Bookings-and-Backlog-Provide-Strong-Visibility-Entering-2026/default.aspx",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Trane launches an advanced CDU to enhance liquid-cooling efficiency in Asia Pacific data centres (DCDA series)",
+   "url": "https://www.trane.com/commercial/asia-pacific/china/en/about-us/press-releases/Trane-Launches-Advanced-CDU-to-Enhance-Liquid-Cooling-Efficiency-in-Asia-Pacific-Data-Centers.html",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "Hunton Andrews Kurth — Status update on the AIM Act and EPA's HFC refrigerant regulations",
+   "url": "https://www.hunton.com/the-nickel-report/status-update-on-the-aim-act-and-epas-hfc-refrigerant-regulations",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "Investing.com — Trane Technologies to acquire Stellar Energy Digital in a data-centre cooling push",
+   "url": "https://www.investing.com/news/company-news/trane-technologies-to-acquire-stellar-energy-digital-in-data-center-cooling-push-93CH-4387033",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "Trane Technologies reports strong third-quarter results",
+   "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2025/Trane-Technologies-Reports-Strong-Third-Quarter-Results/default.aspx",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Trane Technologies unveils the industry's first comprehensive thermal management system reference design for gigawatt-scale NVIDIA AI factories",
+   "url": "https://www.businesswire.com/news/home/20251028272299/en/Trane-Technologies-Unveils-Industrys-First-Comprehensive-Thermal-Management-System-Reference-Design-for-Gigawatt-Scale-NVIDIA-AI-Factories",
+   "date": "2025-10-28"
+  },
+  {
+   "label": "US Department of Energy — Notice of Intent to Investigate, Trane Technologies plc, 10 CFR Part 851",
+   "url": "https://www.energy.gov/sites/default/files/2025-09/Notice%20of%20Intent%20to%20Investigate,%20Trane%20Technologies,%20PLC.pdf",
+   "date": "2025-09-05"
+  },
+  {
+   "label": "Investing.com — Trane Technologies downgraded to Hold by HSBC on valuation",
+   "url": "https://www.investing.com/news/analyst-ratings/trane-technologies-stock-rating-downgraded-to-hold-by-hsbc-on-valuation-93CH-4162341",
+   "date": "2025-07-31"
+  },
+  {
+   "label": "Investing.com — Trane Technologies Q2 2025 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-trane-technologies-q2-2025-sees-eps-rise-stock-dips-93CH-4203175",
+   "date": "2025-07-30"
+  },
+  {
+   "label": "US Consumer Product Safety Commission — Trane recalls gas/electric packaged units due to risk of gas leak and fire hazard",
+   "url": "https://www.cpsc.gov/Recalls/2025/Trane-Recalls-Gas-Electric-Packaged-Units-Due-to-Risk-of-Gas-Leak-Fire-Hazard",
+   "date": "2025-07-03"
+  },
+  {
+   "label": "Trane Technologies — Expansion of the liquid-cooling portfolio strengthens thermal management system capabilities",
+   "url": "https://www.trane.com/commercial/north-america/us/en/about-us/newsroom/press-releases/expansion-of-liquid-cooling-portfolio-strengthens-thermal-management-system-capabilities.html",
+   "date": "2025-06-10"
+  },
+  {
+   "label": "Cooling Post — US air-conditioning companies move to ease the R-454B refrigerant shortage",
+   "url": "https://www.coolingpost.com/world-news/us-ac-companies-move-to-ease-r454b-refrigerant-shortage/",
+   "date": "2025-06"
+  },
+  {
+   "label": "Trane Technologies — Form 8-K, Matthew Pine appointed to the board effective 1 April 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1466258/000146625825000023/tranetechnologies_matthewp.htm",
+   "date": "2025-04-01"
+  },
+  {
+   "label": "IAM Union — Local 1296 members at Trane Technologies ratify a landmark four-year contract",
+   "url": "https://www.goiam.org/news/iam-union-local-1296-members-at-trane-technologies-ratify-landmark-four-year-contract/",
+   "date": "2025-02"
+  },
+  {
+   "label": "Wisconsin Public Radio — After a three-day strike, labor union reaches agreement with Trane",
+   "url": "https://www.wpr.org/news/after-3-day-strike-labor-union-reaches-agreement-trane",
+   "date": "2025-02"
+  },
+  {
+   "label": "ABI Research — Vertiv and Johnson Controls take the lead in ABI Research's Thermal Management Providers for Data Centers competitive ranking",
+   "url": "https://www.abiresearch.com/press/vertiv-and-johnson-controls-take-the-lead-in-abi-researchs-thermal-management-providers-for-data-centers-competitive-ranking",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "Trane Technologies reports strong fourth-quarter and full-year 2024 results",
+   "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2025/Trane-Technologies-Reports-Strong-Fourth-Quarter-and-Full-Year-2024-Results-Robust-Bookings-and-Backlog-Provide-Strong-Visibility-Entering-2025/default.aspx",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "US Court of Appeals for the Fourth Circuit — No. 24-1493 (Aldrich Pump), published opinion",
+   "url": "https://www.ca4.uscourts.gov/opinions/241493.P.pdf",
+   "date": "2025-08"
+  },
+  {
+   "label": "Trane Technologies — CenTraVac water-cooled chillers with Symbio controls, product catalogue CTV-PRC021G-EN",
+   "url": "https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Catalog/CTV-PRC021G-EN_12202024.pdf",
+   "date": "2024-12"
+  },
+  {
+   "label": "Trane Technologies — Ascend air-cooled chiller model ACR, product catalogue AC-PRC001G-EN",
+   "url": "https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/equipment/chillers/air-cooled/ascend/AC-PRC001G-EN_01302022.pdf",
+   "date": "2022-01"
+  },
+  {
+   "label": "Trane — Why is Trane changing refrigerants? (R-454B residential transition)",
+   "url": "https://www.trane.com/residential/en/resources/blog/why-is-trane-changing-refrigerants/",
+   "date": "2024-02-09"
+  },
+  {
+   "label": "Haynes Boone — Not the last dance: court declines to dismiss Aldrich Pump's Texas Two-Step case",
+   "url": "https://www.haynesboone.com/news/alerts/not-the-last-dance-court-declines-to-dismiss-aldrich-pumps-texas-two-step-case",
+   "date": "2024-02-29"
+  },
+  {
+   "label": "Trane Technologies — Series E CenTraVac chiller product catalogue CTV-PRC015B-EN",
+   "url": "https://www.trane.com/content/dam/Trane/Commercial/EMEIA/sales-offices/Turkey/Urunler%20ve%20Sistemler/Product/ECTV_CATALOG.pdf",
+   "date": "2015-08"
+  },
+  {
+   "label": "Ingersoll-Rand announces details for the anticipated completion of the spin-off and subsequent merger of its Industrial segment",
+   "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2020/Ingersoll-Rand-Announces-Details-for-Anticipated-Completion-of-Spin-Off-and-Subsequent-Merger-of-its-Industrial-Segment/default.aspx",
+   "date": "2020-02"
+  },
+  {
+   "label": "Global Market Insights — Data Center Chillers Market (2025 vendor shares)",
+   "url": "https://www.gminsights.com/industry-analysis/data-center-chillers-market",
+   "date": "2026-08"
+  },
+  {
+   "label": "MarketsandMarkets — Data Center Chillers companies (report CH 10550)",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-chillers-companies.asp",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "MarketsandMarkets — US Chillers companies (report CH 10552)",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/us-chillers-companies.asp",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "Great Lakes Customs Law — Section 301 China exclusions in 2026: the 178 products still protected",
+   "url": "https://greatlakescustomslaw.com/section-301-china-exclusions-in-2026-the-178-products-still-protected-and-who-actually-benefits/",
+   "date": "2026"
+  },
+  {
+   "label": "Fleet Equipment citing ACT Research — US trailer orders, June 2026",
+   "url": "https://www.fleetequipmentmag.com/us-trailer-orders-june-2026/",
+   "date": "2026-07"
+  },
+  {
+   "label": "EHPA — Why heat pump sales are growing again (European market recovery)",
+   "url": "https://ehpa.org/news-and-resources/news/why-heat-pump-sales-are-growing-again/",
+   "date": "2026"
+  },
+  {
+   "label": "ICC Building Safety Journal — A2L refrigerants: latest challenges and opportunities",
+   "url": "https://www.iccsafe.org/building-safety-journal/bsj-technical/a2l-refrigerants-latest-challenges-and-opportunities/"
+  },
+  {
+   "label": "ACHR News — The code challenges behind the A2L transition",
+   "url": "https://www.achrnews.com/articles/165133-the-code-challenges-behind-the-a2l-transition"
+  },
+  {
+   "label": "Trane — Data centre chillers (CDHH, CVHH, Ascend ACR, TCA ratings)",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/data-center-chillers.html"
+  },
+  {
+   "label": "Trane — Oil-free magnetic bearing data-centre chiller (TCA)",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/data-center-chillers/oil-free-magnetic-bearing.html"
+  },
+  {
+   "label": "Trane — Ascend ACR data-centre chiller",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/data-center-chillers/ascend-acr-data-center-chiller.html"
+  },
+  {
+   "label": "Trane — Coolant distribution units",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/liquid-cooling-systems/coolant-distribution-unit-cdu.html"
+  },
+  {
+   "label": "Trane — GigaModular CDU",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/liquid-cooling-systems/coolant-distribution-unit-cdu/giga-modular-cdu.html"
+  },
+  {
+   "label": "Trane — CDU-1MW",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/liquid-cooling-systems/coolant-distribution-unit-cdu/coolant-distribution-unit-1mw.html"
+  },
+  {
+   "label": "Trane — Chillers portfolio index",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers.html"
+  },
+  {
+   "label": "Trane — Water-cooled chillers",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/water-cooled-chillers.html"
+  },
+  {
+   "label": "Trane — Air-cooled chillers",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/air-cooled-chillers.html"
+  },
+  {
+   "label": "Trane — Thermafit modular chillers",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/modular-chillers.html"
+  },
+  {
+   "label": "Trane — Agility water-cooled magnetic-bearing chiller",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/water-cooled-chillers/agility.html"
+  },
+  {
+   "label": "Trane — Series R water-cooled screw chillers RTWD and RTHD",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/water-cooled-chillers/series-r-rtwd-rthd.html"
+  },
+  {
+   "label": "Trane — Sintesis air-cooled chiller",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/chillers/air-cooled-chillers/sintesis.html"
+  },
+  {
+   "label": "Trane — Autonomous Control / AI Control powered by BrainBox AI",
+   "url": "https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/ai-solutions/trane-autonomous-control.html"
+  },
+  {
+   "label": "Trane Technologies — Executive leadership",
+   "url": "https://www.tranetechnologies.com/en/index/company/leadership.html"
+  },
+  {
+   "label": "Trane Technologies — Sustainability and the Gigaton Challenge",
+   "url": "https://www.tranetechnologies.com/en/index/sustainability.html"
+  },
+  {
+   "label": "Thermo King — North America overview",
+   "url": "https://www.thermoking.com/na/en.html"
+  },
+  {
+   "label": "Thermo King — Electrification solutions (the evolve line)",
+   "url": "https://www.thermoking.com/na/en/road/electrification-solutions.html"
+  },
+  {
+   "label": "stockanalysis.com — TT statistics (price, market capitalisation, short interest, dividend)",
+   "url": "https://stockanalysis.com/stocks/tt/statistics/",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "stockanalysis.com — TT analyst forecast (consensus target and named firm targets)",
+   "url": "https://stockanalysis.com/stocks/tt/forecast/",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "ACT Research — Trucking industry forecast for 2026",
+   "url": "https://actresearch.substack.com/p/trucking-industry-forecast-for-2026",
+   "date": "2026"
+  },
+  {
+   "label": "WARN Firehose — Trane USA WARN Act filings",
+   "url": "https://warnfirehose.com/data/layoffs/company/trane-usa"
+  },
+  {
+   "label": "PwC — Ireland corporate taxes on corporate income",
+   "url": "https://taxsummaries.pwc.com/ireland/corporate/taxes-on-corporate-income"
+  }
+ ],
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
+}

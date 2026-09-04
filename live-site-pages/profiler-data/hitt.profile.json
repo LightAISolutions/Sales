@@ -289,6 +289,17 @@
    "context": "Holder trails HITT on BD+C's 2025 public data-center ranking, but its NDA-heavy hyperscaler base (Google, EdgeCore, legacy Meta/Apple) means public rankings understate the head-to-head. Both are family-held, repeat-relationship CM/GC franchises concentrated in the same customer set.",
    "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
    "status": "active"
+  },
+  {
+   "slug": "mccarthy",
+   "type": "partner",
+   "status": "active",
+   "since": "2016",
+   "scale": "$1.7bn, 700,000 sq ft on 97 acres",
+   "via": "McCarthy HITT joint venture",
+   "note": "Joint-venture partner on the Next NGA West intelligence campus and on a NASA Johnson Space Center multiple-award contract.",
+   "context": "The McCarthy HITT joint venture delivered the National Geospatial-Intelligence Agency's Next NGA West campus in St. Louis — $1.7bn, 700,000 sq ft on 97 acres, opened 26 January 2026 — with Black & Veatch Special Projects, Gensler and Akima on the delivery team. The same joint venture holds a NASA Johnson Space Center multiple-award construction contract worth up to $300M, awarded June 2026 as one of seven awardees.\n\nSecure federal work is where the two firms combine; in the data-centre market they are direct rivals, and HITT ranks fourteen places above McCarthy in the ENR 2026 Top 400.",
+   "source": "https://www.hitt.com/news-hub/mccarthy-hitt-celebrate-next-nga-west-completion/"
   }
  ],
  "technicalSpecs": [
@@ -639,6 +650,6 @@
    "url": "https://www.hitt.com/leadership/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 4
 }

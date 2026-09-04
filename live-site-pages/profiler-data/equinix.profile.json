@@ -154,6 +154,16 @@
    "source": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results",
    "status": "active",
    "since": "2026-03"
+  },
+  {
+   "slug": "oklo",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2024-02",
+   "scale": "100-500 MWe",
+   "note": "Non-binding letters of intent with a $25M prepayment and a right of first refusal — reported as the first colocation-operator SMR agreement.",
+   "context": "The letter of intent was executed on 16 February 2024 and disclosed in an AltC SEC filing on 2 April 2024; Oklo names Equinix among its LOI counterparties in its FY2025 10-K without ever having issued a dedicated release. Independent reporting describes a $25M prepayment and a right of first refusal on 100 to 500 MWe for up to 36 months, a window that expires around February 2027.\n\nRead alongside the rest of this dossier's firm-power book, it is the most speculative instrument in it: Oklo has no operating Aurora, no NRC reactor licence, and its first unit is proceeding under a Department of Energy authorization pathway targeted at late 2027 to early 2028.",
+   "source": "https://www.datacenterdynamics.com/en/news/equinix-signs-deal-to-procure-up-to-500mw-of-nuclear-power-from-oklo-smrs-makes-25m-pre-payment/"
   }
  ],
  "policyExposure": [
@@ -384,6 +394,6 @@
    "date": "2023-03"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 5
 }

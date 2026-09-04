@@ -211,9 +211,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | C10 | `blackstone` | Blackstone | investor | Opus 5 xhigh | ecosystem | — | — |
 | C10 | `brookfield` | Brookfield | investor | Opus 5 xhigh | ecosystem | — | — |
 | C10 | `macquarie` | Macquarie | investor | Opus 5 xhigh | ecosystem | — | — |
-| C11 | `oklo` | Oklo | supplier | Opus 5 xhigh | G8 | — | — |
-| C11 | `trane-technologies` | Trane Technologies | supplier | Opus 5 xhigh | G7 | — | — |
-| C11 | `mccarthy` | McCarthy Building Companies | gc | Opus 5 xhigh | GC completeness | — | — |
+| C11 | `oklo` | Oklo | supplier | Opus 5 xhigh | G8 | v1 · v04.52r | ✓ · v04.52r |
+| C11 | `trane-technologies` | Trane Technologies | supplier | Opus 5 xhigh | G7 | v1 · v04.52r | ✓ · v04.52r |
+| C11 | `mccarthy` | McCarthy Building Companies | gc | Opus 5 xhigh | GC completeness | v1 · v04.52r | ✓ · v04.52r |
 | C12 | `whiting-turner` | Whiting-Turner | gc | Opus 5 xhigh | GC completeness | — | — |
 | C12 | `gotion` | Gotion High-Tech | supplier | Opus 5 xhigh | FEOC roster | — | — |
 | C12 | `rept` | REPT Battero | supplier | Opus 5 xhigh | FEOC roster | — | — |

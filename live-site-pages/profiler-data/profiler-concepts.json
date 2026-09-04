@@ -32,6 +32,14 @@
       ]
     },
     {
+      "slug": "a2l",
+      "term": "A2L",
+      "def": "A refrigerant safety class meaning low toxicity and mild flammability. Most low-GWP replacements fall in it, which brings leak detection, ventilation and charge limits into the machine room and into the building code.",
+      "aliases": [
+        "A2L refrigerant"
+      ]
+    },
+    {
       "slug": "active-front-end",
       "term": "active front end",
       "def": "A rectifier built from switching transistors rather than plain diodes, so the equipment behind it can draw a near-sinusoidal current at close to unity power factor instead of pulling in gulps. It is what lets a modern UPS or drive stop being a dirty load on the supply feeding it, at the cost of more silicon and more control software.",
@@ -49,6 +57,16 @@
         "anti-dumping",
         "countervailing duties"
       ]
+    },
+    {
+      "slug": "adiabatic-cooling",
+      "term": "adiabatic cooling",
+      "def": "Pre-wetting the air entering an air-cooled condenser or dry cooler so it arrives closer to wet-bulb. It buys much of a tower's efficiency on the hottest days while using water only on those days."
+    },
+    {
+      "slug": "admixture",
+      "term": "admixture",
+      "def": "A chemical added to a concrete mix to change how it behaves — plasticisers for flow, retarders and accelerators for setting time, air entrainment for freeze resistance. It is how one mix serves many conditions."
     },
     {
       "slug": "aeroderivative",
@@ -73,6 +91,29 @@
       "aliases": [
         "absorbent glass mat"
       ]
+    },
+    {
+      "slug": "ahj",
+      "term": "AHJ",
+      "def": "Authority having jurisdiction: whichever local official actually enforces the code on this site. Codes are national, interpretations are local, and it is the interpretation that has to be satisfied.",
+      "aliases": [
+        "authority having jurisdiction"
+      ]
+    },
+    {
+      "slug": "ahri-550-590",
+      "term": "AHRI 550/590",
+      "def": "The North American standard that fixes the conditions a water-cooled chiller is rated at and the weighting used for its part-load number, so that two manufacturers' figures can be compared at all."
+    },
+    {
+      "slug": "aim-act",
+      "term": "AIM Act",
+      "def": "The US law directing a stepwise phasedown of high-GWP hydrofluorocarbon production and imports, with sector rules restricting what new equipment may be charged with. It sets the calendar the whole HVAC industry is redesigning against."
+    },
+    {
+      "slug": "air-barrier",
+      "term": "air barrier",
+      "def": "The continuous layer that stops air leaking through a building envelope. In a building full of dry heat it governs how much outdoor moisture arrives uninvited, and it must be continuous to work at all."
     },
     {
       "slug": "air-insulated-switchgear",
@@ -142,6 +183,11 @@
       ]
     },
     {
+      "slug": "approach",
+      "term": "approach",
+      "def": "The gap between the temperature a heat exchanger achieves and the theoretical best it could achieve — tower water above wet-bulb, or leaving water above refrigerant temperature. Closing an approach costs surface area and money."
+    },
+    {
       "slug": "arc-flash",
       "term": "arc flash",
       "def": "The explosive release of energy when current jumps through the air between conductors — a blast hot enough to be lethal at a panel door. An arc-flash study calculates that energy at every piece of gear so the right protective clothing and breaker settings can be specified, and it has to be redone whenever the electrical system changes.",
@@ -160,6 +206,16 @@
         "IEEE C37.20.7",
         "arc-resistant"
       ]
+    },
+    {
+      "slug": "ashrae-15",
+      "term": "ASHRAE 15",
+      "def": "The refrigeration-systems safety standard that governs machine rooms: charge limits, refrigerant detection, ventilation and relief. It is the reason a refrigerant change is a building change."
+    },
+    {
+      "slug": "ashrae-90-1",
+      "term": "ASHRAE 90.1",
+      "def": "The North American energy standard that sets the minimum full-load and part-load efficiency a chiller may legally have, by type and size. It is the floor every catalogue is written against."
     },
     {
       "slug": "asynchronous-tie",
@@ -272,6 +328,11 @@
       ]
     },
     {
+      "slug": "bearing-capacity",
+      "term": "bearing capacity",
+      "def": "How much pressure the ground can carry before it fails or settles unacceptably, in pounds per square foot or kilopascals. It sets whether a structure sits on spread footings, a mat, or piles."
+    },
+    {
       "slug": "behind-the-meter",
       "term": "behind-the-meter",
       "def": "Generation or storage connected on the customer's side of the utility meter, serving the site directly — like on-site power at a data-center campus — versus front-of-the-meter assets selling into the grid.",
@@ -316,6 +377,11 @@
         "100% block load",
         "load step"
       ]
+    },
+    {
+      "slug": "blowdown",
+      "term": "blowdown",
+      "def": "Water deliberately discharged from a cooling tower to stop dissolved solids concentrating without limit. It plus evaporation and drift is where a plant's water consumption goes."
     },
     {
       "slug": "bms",
@@ -405,6 +471,15 @@
       ]
     },
     {
+      "slug": "build-own-operate",
+      "term": "build-own-operate",
+      "def": "A model in which the vendor finances, builds, owns and runs the plant and sells the output, rather than selling the plant to a utility. The customer buys electricity and the vendor keeps the technology and the risk.",
+      "aliases": [
+        "build own operate",
+        "BOO"
+      ]
+    },
+    {
       "slug": "build-own-transfer",
       "term": "build-own-transfer",
       "def": "A procurement structure in which a developer builds a generation or storage project and then transfers ownership to the utility at commercial operation. It gives the utility rate-based ownership without carrying construction risk, and gives the developer a defined exit. The middle option between a purchase agreement, where the utility never owns the asset, and a self-build, where it carries every risk.",
@@ -414,6 +489,11 @@
         "build-transfer agreement",
         "BTA"
       ]
+    },
+    {
+      "slug": "burnup",
+      "term": "burnup",
+      "def": "How much energy has been extracted from a given mass of fuel before it is discharged, in gigawatt-days per tonne. Higher burnup means fewer refuellings and less spent fuel per unit of electricity."
     },
     {
       "slug": "bus-converter",
@@ -453,6 +533,11 @@
       "slug": "cable-charging-current",
       "term": "cable charging current",
       "def": "The current an AC cable draws simply to charge its own capacitance, growing with length and voltage. Beyond roughly a hundred kilometres of subsea cable it consumes the whole rating, which is why long submarine links are direct current."
+    },
+    {
+      "slug": "capacity-credit",
+      "term": "capacity credit",
+      "def": "The fraction of a generator's nameplate that a grid planner is willing to count on at the moment of system peak. Firm plant approaches its nameplate; weather-dependent plant does not."
     },
     {
       "slug": "capacity-factor",
@@ -511,6 +596,11 @@
       ]
     },
     {
+      "slug": "centrifugal-compressor",
+      "term": "centrifugal compressor",
+      "def": "A compressor that raises pressure by flinging refrigerant outward with a high-speed impeller. Very efficient at large capacities and smooth flow, and it has a lower flow limit below which it cannot maintain head."
+    },
+    {
       "slug": "certificate-of-need",
       "term": "Minnesota certificate of need",
       "def": "Minnesota's version of the certificate: the commission's finding that a specific large plant or line is needed, issued in its own docket after the resource plan has set the direction. A combustion turbine or a transmission line in Minnesota needs one before it can be built and recovered.",
@@ -519,6 +609,43 @@
         "CON",
         "certificate-of-need"
       ]
+    },
+    {
+      "slug": "certificate-of-occupancy",
+      "term": "certificate of occupancy",
+      "def": "The document that makes a building legally usable. Everything from a fire pump test to a landscaping condition can hold it up, and no amount of finished construction substitutes for it.",
+      "aliases": [
+        "CofO"
+      ]
+    },
+    {
+      "slug": "chain-reaction",
+      "term": "chain reaction",
+      "def": "A self-sustaining sequence in which each fission releases neutrons that cause further fissions. A reactor is held at exactly one fission per fission — any more and power rises, any less and it falls."
+    },
+    {
+      "slug": "change-order",
+      "term": "change order",
+      "def": "A formal amendment to the contract's scope, price or schedule. Their number and cause is the honest measure of how complete a design was when construction started."
+    },
+    {
+      "slug": "chilled-water-supply-temperature",
+      "term": "chilled-water supply temperature",
+      "def": "The temperature of the water a chiller sends out to the coils or the CDUs. Raising it is the single cheapest efficiency lever in a plant, and its ceiling is set by what the load can accept.",
+      "aliases": [
+        "chilled water supply temperature",
+        "CHWS"
+      ]
+    },
+    {
+      "slug": "chiller-restart",
+      "term": "chiller restart",
+      "def": "The minutes a chilled-water plant needs after a power interruption before it is making cooling again, because compressors cannot be restarted instantly. It is the thermal analogue of the ten-second race on the power side."
+    },
+    {
+      "slug": "chiller-staging",
+      "term": "chiller staging",
+      "def": "The control logic that decides how many machines run and which ones. Getting it wrong is the difference between a plant at design efficiency and one running four machines lightly loaded."
     },
     {
       "slug": "chp",
@@ -531,6 +658,16 @@
       ]
     },
     {
+      "slug": "clarification",
+      "term": "clarification",
+      "def": "The treatment step in which suspended solids are allowed or induced to settle out of water. It is the workhorse ahead of filtration in nearly every water and wastewater train."
+    },
+    {
+      "slug": "clean-firm-power",
+      "term": "clean firm power",
+      "def": "Generation that is both low-carbon and available on demand around the clock — nuclear, geothermal, hydro, or a fuel-burning plant with capture. It is what a load with a flat, continuous profile actually needs."
+    },
+    {
       "slug": "closed-transition",
       "term": "closed transition",
       "def": "A transfer that closes onto the new source before opening the old one, so the two are briefly in parallel and the load never sees a break. It requires the generator to be synchronized to the utility first, and the utility's permission, because for a fraction of a second the site's engines are feeding the grid.",
@@ -539,6 +676,20 @@
         "make-before-break",
         "closed-transition ATS"
       ]
+    },
+    {
+      "slug": "cm-at-risk",
+      "term": "CM at risk",
+      "def": "A delivery method in which the construction manager joins during design as an adviser and then converts into the builder under a price it guarantees. The owner buys preconstruction advice and price certainty from the same firm.",
+      "aliases": [
+        "construction manager at risk",
+        "CMAR"
+      ]
+    },
+    {
+      "slug": "coefficient-of-performance",
+      "term": "coefficient of performance",
+      "def": "Coefficient of performance: heat moved divided by work put in. A chiller at a COP of 6 moves six units of heat per unit of electricity — it is moving heat, not making it, which is why the number exceeds one."
     },
     {
       "slug": "coincident-peak",
@@ -580,12 +731,22 @@
       ]
     },
     {
+      "slug": "combined-licence",
+      "term": "combined licence",
+      "def": "The one-step US route in which permission to build and permission to operate are granted together, against inspections and tests agreed in advance. It removes the risk of a finished plant that cannot be allowed to run."
+    },
+    {
       "slug": "commissioning",
       "term": "commissioning",
       "def": "The structured testing that proves a finished plant performs as contracted before it is handed over and paid for. For storage it is where capacity and round-trip-efficiency guarantees are measured; for a data center it is where the outage choreography gets rehearsed rather than discovered in production.",
       "aliases": [
         "commissioned"
       ]
+    },
+    {
+      "slug": "compaction",
+      "term": "compaction",
+      "def": "Densifying placed soil so it will carry load without settling later, verified in the field against a laboratory maximum. Fill that was not compacted to specification shows up as a cracked slab years afterwards."
     },
     {
       "slug": "concurrent-maintainability",
@@ -595,6 +756,16 @@
         "concurrent maintenance"
       ],
       "def": "The property that any single component can be taken out of service for planned work without dropping the critical load — the defining requirement of Uptime Tier III. It is decided by topology rather than by equipment quality: there must be a second path, and the switch onto it must itself be safe."
+    },
+    {
+      "slug": "condenser",
+      "term": "condenser",
+      "def": "The heat exchanger where the compressed refrigerant gives its heat up and turns back into a liquid — to outdoor air in an air-cooled machine, to tower water in a water-cooled one."
+    },
+    {
+      "slug": "condenser-water-relief",
+      "term": "condenser-water relief",
+      "def": "Letting condenser water get colder when the weather allows, which lowers the lift and so the compressor work. It is most of why a chiller's part-load efficiency beats its full-load efficiency."
     },
     {
       "slug": "conductance-testing",
@@ -637,6 +808,16 @@
       ]
     },
     {
+      "slug": "construction-permit",
+      "term": "construction permit",
+      "def": "Under the older two-step US licensing route, the authorisation to build a reactor. A separate operating licence is applied for later, once the plant is largely built."
+    },
+    {
+      "slug": "contingency",
+      "term": "contingency",
+      "def": "Money held inside a budget for the work that is certain to be needed and not yet identified. Whose contingency it is, and who keeps what is unspent, is a negotiated term rather than an accounting detail."
+    },
+    {
       "slug": "continuous-rating",
       "term": "continuous rating",
       "def": "The generator rating for carrying a constant load at full output for unlimited hours a year, as a power station would. It is the most conservative of the standard ratings — the same engine carries a smaller number as continuous than as prime or standby — and the one a permanently islanded campus should be reading.",
@@ -673,6 +854,14 @@
       "aliases": [
         "conversion stages",
         "power conversion stage"
+      ]
+    },
+    {
+      "slug": "cooling-tower",
+      "term": "cooling tower",
+      "def": "An open device that rejects heat by evaporating a small part of the water flowing through it into an air stream. It reaches a colder temperature than any air-cooled device can, and it consumes water to do so.",
+      "aliases": [
+        "cooling towers"
       ]
     },
     {
@@ -743,6 +932,22 @@
       ]
     },
     {
+      "slug": "crac",
+      "term": "CRAC",
+      "def": "Computer room air conditioner: a self-contained refrigeration machine, compressor and all, sitting in the room it cools. Common on smaller sites where there is no central chilled-water plant to feed from.",
+      "aliases": [
+        "computer room air conditioner"
+      ]
+    },
+    {
+      "slug": "crah",
+      "term": "CRAH",
+      "def": "Computer room air handler: a coil and fans fed with chilled water from a central plant, with no compressor of its own. Large facilities centralise the refrigeration in chillers and distribute cold water to many of these.",
+      "aliases": [
+        "computer room air handler"
+      ]
+    },
+    {
       "slug": "credit-support",
       "term": "credit support",
       "def": "The collateral a utility requires from a large new customer before it builds for it — a letter of credit, a cash deposit, a parent-company guaranty or a surety bond — sized to some months or years of the minimum bill, so that a customer that walks away leaves money behind rather than a stranded substation.",
@@ -753,6 +958,14 @@
         "parent guaranty",
         "financial security",
         "credit requirements"
+      ]
+    },
+    {
+      "slug": "critical-path",
+      "term": "critical path",
+      "def": "The chain of activities whose durations add up to the project's finish date. Only work on this chain can make the project later, and only work on it can make it earlier.",
+      "aliases": [
+        "critical path method"
       ]
     },
     {
@@ -775,6 +988,11 @@
         "M-CRPS",
         "common redundant power supply"
       ]
+    },
+    {
+      "slug": "curing",
+      "term": "curing",
+      "def": "Keeping fresh concrete moist and within a temperature range while it gains strength, which is a chemical reaction and not drying. Poorly cured concrete is permanently weaker and more prone to cracking."
     },
     {
       "slug": "current-density",
@@ -831,6 +1049,11 @@
       ]
     },
     {
+      "slug": "cut-and-fill",
+      "term": "cut and fill",
+      "def": "Balancing the soil excavated from high areas against the soil needed in low ones, so that as little as possible is hauled on or off site. Haul is the expensive part, and the balance is designed."
+    },
+    {
       "slug": "cwip",
       "term": "CWIP",
       "def": "Construction work in progress: plant that is being built but is not yet in service. Normally it earns no return until it is finished; a legislature or commission that lets CWIP into rate base lets the utility charge customers for a plant before it produces anything, which lowers financing cost and shifts construction risk toward customers.",
@@ -847,6 +1070,16 @@
         "cycle count",
         "rated cycles"
       ]
+    },
+    {
+      "slug": "cycles-of-concentration",
+      "term": "cycles of concentration",
+      "def": "How many times more concentrated the dissolved solids in a cooling tower's water are than in the make-up water. Running more cycles saves water and pushes the chemistry towards scaling and corrosion."
+    },
+    {
+      "slug": "cylinder-break",
+      "term": "cylinder break",
+      "def": "The laboratory crushing of test cylinders cast from a concrete pour, typically at seven and twenty-eight days, to prove the concrete reached its specified strength. A failed break stops everything that was going to sit on it."
     },
     {
       "slug": "day-tank",
@@ -913,6 +1146,16 @@
       ]
     },
     {
+      "slug": "decay-heat",
+      "term": "decay heat",
+      "def": "The heat a reactor keeps producing after the chain reaction stops, from the radioactive decay of fission products — roughly 6-7% of full power at shutdown, falling over hours and days. Removing it is the central safety problem of every reactor."
+    },
+    {
+      "slug": "decoupler",
+      "term": "decoupler",
+      "def": "The short length of pipe joining the primary and secondary loops of a chilled-water plant. Which way water flows through it, and how much, is the plant's most useful single diagnostic."
+    },
+    {
       "slug": "decoupling",
       "term": "decoupling",
       "def": "A rate mechanism that separates a utility's revenue from the volume of energy it sells, so that selling less does not cut its earnings and selling more does not raise them — with a true-up each year. It removes the utility's incentive to oppose efficiency, and it changes what data-center load growth is worth to it: under full decoupling the growth pays for wires, not profit.",
@@ -923,9 +1166,24 @@
       ]
     },
     {
+      "slug": "deep-foundation",
+      "term": "deep foundation",
+      "def": "Piles or drilled shafts that carry load past unsuitable near-surface soil to competent material below. They are chosen when the ground near the surface cannot be made good enough."
+    },
+    {
       "slug": "degradation",
       "term": "degradation",
       "def": "The gradual loss of a battery's usable capacity with cycling and age. Storage contracts manage it with capacity guarantees and planned augmentation."
+    },
+    {
+      "slug": "delayed-neutrons",
+      "term": "delayed neutrons",
+      "def": "The small fraction of fission neutrons (under one percent) emitted seconds to minutes after the split rather than instantly. They are the reason a reactor responds on a human timescale and can be controlled at all."
+    },
+    {
+      "slug": "delta-t",
+      "term": "delta-T",
+      "def": "The temperature difference between the water returning to a chiller and the water leaving it. A plant is designed around a delta-T, and the flow it must pump for a given duty is inversely proportional to it."
     },
     {
       "slug": "demand-charge",
@@ -963,6 +1221,16 @@
       "aliases": [
         "change control authority"
       ]
+    },
+    {
+      "slug": "design-build",
+      "term": "design-build",
+      "def": "A delivery method in which one entity holds both the design and the construction contracts, so the owner has a single point of responsibility and the two disciplines cannot blame each other."
+    },
+    {
+      "slug": "design-certification",
+      "term": "design certification",
+      "def": "Regulatory approval of a standardised reactor design, once, independent of any site — so that later applicants reference the approved design instead of re-litigating it. Approving the design and licensing the site are two different clocks."
     },
     {
       "slug": "design-cycle",
@@ -1016,6 +1284,11 @@
       "aliases": [
         "digital twins"
       ]
+    },
+    {
+      "slug": "disinfection",
+      "term": "disinfection",
+      "def": "The final treatment step that inactivates pathogens — chlorine, ozone or ultraviolet light. Which method is used changes what residual protection the water carries downstream."
     },
     {
       "slug": "dispatchable",
@@ -1093,6 +1366,11 @@
       ]
     },
     {
+      "slug": "drift",
+      "term": "drift",
+      "def": "Liquid water carried out of a cooling tower as droplets in the exhaust air, as distinct from water that has evaporated. It is small, it is regulated, and it carries whatever is in the basin with it."
+    },
+    {
       "slug": "drift-region",
       "term": "drift region",
       "def": "The lightly doped layer inside a power transistor that absorbs the voltage when the device is off. It has to be thicker for a higher voltage rating, and every micron of thickness adds resistance when the device is on — the trade at the heart of power-device design.",
@@ -1121,6 +1399,19 @@
         "diesel dynamic UPS"
       ],
       "def": "Diesel rotary uninterruptible power supply: a rotary UPS whose flywheel and synchronous machine share a shaft line with a diesel engine through a clutch. When the supply fails the flywheel carries the load for the seconds the engine needs to start and clutch in, so one machine does the work of UPS, transfer switch and generator — with no battery and no separate transfer."
+    },
+    {
+      "slug": "dry-bulb",
+      "term": "dry-bulb temperature",
+      "def": "Air temperature as an ordinary thermometer reads it. An air-cooled machine rejects heat against this, which is why it is less efficient than a tower on the same day.",
+      "aliases": [
+        "dry bulb"
+      ]
+    },
+    {
+      "slug": "dry-cooler",
+      "term": "dry cooler",
+      "def": "A closed-loop finned coil that rejects heat from a fluid straight to ambient air, with no evaporation and no water. It trades efficiency and hot-day capacity for using no water at all."
     },
     {
       "slug": "dry-type-transformer",
@@ -1167,6 +1458,11 @@
         "electrical house",
         "e-houses"
       ]
+    },
+    {
+      "slug": "ebr-ii",
+      "term": "EBR-II",
+      "def": "The Experimental Breeder Reactor II, a sodium-cooled fast reactor that ran at Idaho from 1964 to 1994 and in 1986 survived deliberate loss-of-flow and loss-of-heat-sink tests at full power with no operator action. Most US fast-reactor design heritage traces to it."
     },
     {
       "slug": "eco-mode",
@@ -1243,6 +1539,11 @@
       ]
     },
     {
+      "slug": "embed",
+      "term": "embed",
+      "def": "A steel plate, anchor bolt, rail or bracket cast into concrete while it is wet, so something can later be bolted to it. Once the pour has cured, a missing embed becomes a drilled, tested and disputed repair."
+    },
+    {
       "slug": "emergency-generator",
       "term": "emergency generator",
       "def": "The regulatory class for a stationary engine that runs only when the normal supply fails, plus a small annual allowance of hours for testing and maintenance. The class is what lets a backup fleet be permitted quickly and without the strictest emission controls — and it is lost the moment the same engines are run for prime power, peak shaving or a demand-response payment.",
@@ -1251,6 +1552,11 @@
         "emergency stationary engine",
         "emergency-only"
       ]
+    },
+    {
+      "slug": "emergency-planning-zone",
+      "term": "emergency planning zone",
+      "def": "The area around a reactor within which off-site emergency plans must exist. Shrinking it is one of the concrete practical claims small designs make, and it is decided by the regulator against the source term, not by the vendor."
     },
     {
       "slug": "ems",
@@ -1320,6 +1626,11 @@
       ]
     },
     {
+      "slug": "enrichment",
+      "term": "enrichment",
+      "def": "Raising the share of the fissile isotope uranium-235 above the 0.7% found in nature. The higher the enrichment, the more compact a core can be — and the tighter the security and transport rules become."
+    },
+    {
       "slug": "epa-tier-2",
       "term": "EPA Tier 2",
       "def": "The US emission stage most large standby data-center engines are certified to, available because an engine that only runs in emergencies is regulated far more loosely than one that runs for a living. It is why the same engine block is sold as a cheap Tier 2 standby set and an expensive Tier 4 prime set.",
@@ -1348,6 +1659,11 @@
       ]
     },
     {
+      "slug": "equipment-pad",
+      "term": "equipment pad",
+      "def": "The engineered concrete base under a transformer, generator, chiller or tower, sized for its weight, its dynamic loads and its maintenance access. It has to exist before the equipment can be set, which puts it on the critical path."
+    },
+    {
       "slug": "equity-ratio",
       "term": "equity ratio",
       "def": "The share of a utility's regulatory capital structure funded by equity rather than debt. Regulators set it for ratemaking regardless of how the company actually finances itself. A higher equity ratio raises the allowed return in dollars, because equity earns the authorized return on equity while debt earns only its interest cost.",
@@ -1364,6 +1680,14 @@
       "def": "The Texas grid operator. An energy-only market with its own interconnection process — faster to connect, more volatile to operate in — which is why so much US storage and data-center buildout lands in Texas."
     },
     {
+      "slug": "esop",
+      "term": "ESOP",
+      "def": "An employee stock ownership plan: a trust that holds company shares on behalf of employees, who receive an ownership account rather than buying in. It is a retirement plan and an ownership structure at once.",
+      "aliases": [
+        "employee stock ownership plan"
+      ]
+    },
+    {
       "slug": "eu-stage-v",
       "term": "EU Stage V",
       "def": "The European Union's emission stage for non-road and stationary engines — the counterpart to the US EPA tiers, and stricter than Tier 4 on particle number. A gen-set sold into both markets is certified twice, which is one reason European and American versions of the same product carry different after-treatment.",
@@ -1372,6 +1696,11 @@
         "Stage 5",
         "EU Stage 5"
       ]
+    },
+    {
+      "slug": "evaporator",
+      "term": "evaporator",
+      "def": "The heat exchanger where the refrigerant boils and takes heat out of the water being chilled. In a chiller it is where the useful cooling actually happens."
     },
     {
       "slug": "excitation",
@@ -1396,6 +1725,21 @@
       ]
     },
     {
+      "slug": "expansion-device",
+      "term": "expansion device",
+      "def": "The valve or orifice that drops the high-pressure liquid refrigerant back to evaporator pressure, cooling it as it goes. The cheapest component in the loop and the one that meters the whole machine."
+    },
+    {
+      "slug": "expansive-soil",
+      "term": "expansive soil",
+      "def": "Clay that swells when it takes on water and shrinks when it dries, moving whatever sits on it. It is treated by removing it, stabilising it, or spanning over it — never by ignoring it."
+    },
+    {
+      "slug": "f-gas-regulation",
+      "term": "F-gas Regulation",
+      "def": "The European rules capping and reducing fluorinated-gas supply and banning specific uses on a schedule. It runs ahead of the US phasedown and is why some product lines change in Europe first."
+    },
+    {
       "slug": "factorized-power",
       "term": "factorized power",
       "def": "A power-chain design that splits the two jobs a converter normally does — holding the voltage steady (regulation) and changing its level (transformation) — into separate stages, so each can be built where it works best. The regulator lives upstream where the current is small, and a fixed-ratio current multiplier lives next to the load where the current is enormous.",
@@ -1418,6 +1762,15 @@
       "slug": "facts",
       "term": "FACTS",
       "def": "Flexible AC transmission systems: the family of power-electronic devices — shunt and series compensation, STATCOMs, phase shifters — that make power flow in an AC network controllable instead of merely the arithmetic consequence of impedance."
+    },
+    {
+      "slug": "fast-spectrum",
+      "term": "fast spectrum",
+      "def": "A reactor that fissions with unmoderated, high-energy neutrons. Fission is less likely per neutron, so the fuel must be more enriched and the core more compact — but the neutrons that are left can do things thermal neutrons cannot.",
+      "aliases": [
+        "fast reactor",
+        "fast neutron spectrum"
+      ]
     },
     {
       "slug": "fault-current",
@@ -1477,6 +1830,11 @@
       ]
     },
     {
+      "slug": "fire-compartmentation",
+      "term": "fire compartmentation",
+      "def": "Dividing a building with rated walls and floors so that a fire and its smoke stay in one part of it for a stated number of hours. Every penetration through such a wall has to be sealed to the same rating."
+    },
+    {
       "slug": "firing-temperature",
       "term": "firing temperature",
       "def": "How hot the gas is where it first meets the turbine blades — the single number a gas turbine's efficiency and output track most closely. Every extra hundred degrees buys efficiency and costs materials science: single-crystal blades, ceramic coatings and cooling air bled from the compressor, which is itself a loss. Modern heavy-duty machines are described by class as 1,600°C or 1,650°C.",
@@ -1505,6 +1863,22 @@
       "aliases": [
         "first article",
         "FAI"
+      ]
+    },
+    {
+      "slug": "first-of-a-kind",
+      "term": "first-of-a-kind",
+      "def": "The first unit of a new design, which pays for every lesson the design has not yet learned. Its cost is not evidence about the tenth unit, and treating it as such is the commonest error in reading a new-technology cost claim.",
+      "aliases": [
+        "FOAK"
+      ]
+    },
+    {
+      "slug": "fission",
+      "term": "Fission",
+      "def": "Splitting a heavy nucleus into lighter fragments, releasing energy and two or three free neutrons. Those neutrons are what make a chain reaction possible: the energy is a by-product of a neutron economy.",
+      "aliases": [
+        "nuclear fission"
       ]
     },
     {
@@ -1543,6 +1917,15 @@
       ]
     },
     {
+      "slug": "floor-flatness",
+      "term": "floor flatness",
+      "def": "How level and how wavy a finished concrete floor is, expressed as F-numbers measured within days of the pour. A floor flat enough for an office is not necessarily flat enough for a row of racks on castors.",
+      "aliases": [
+        "F-number",
+        "F-numbers"
+      ]
+    },
+    {
       "slug": "floor-loading",
       "term": "floor loading",
       "def": "The weight per unit area a floor is allowed to carry. It decides where battery strings, large UPS frames and transformers may stand, and in retrofits it settles more equipment arguments than price does."
@@ -1577,6 +1960,16 @@
         "formula rates",
         "formula rate plans"
       ]
+    },
+    {
+      "slug": "fouling-factor",
+      "term": "fouling factor",
+      "def": "An allowance built into a heat exchanger's rating for the film of scale, biology and dirt that will accumulate on its tubes. Real fouling beyond the allowance shows up as a widening approach and a rising kW/ton."
+    },
+    {
+      "slug": "free-cooling",
+      "term": "free cooling",
+      "def": "Rejecting heat without running the compressors, by using a heat exchanger when the outdoor condition is cold enough to do the job directly. How many hours a year it works is a property of the climate and the water temperature chosen."
     },
     {
       "slug": "frequency-converter",
@@ -1700,6 +2093,15 @@
       ]
     },
     {
+      "slug": "geotechnical-investigation",
+      "term": "geotechnical investigation",
+      "def": "The programme of borings, samples and laboratory tests that establishes what is under a site before anything is designed for it. It is the cheapest work on a project and the source of its most expensive surprises.",
+      "aliases": [
+        "geotechnical report",
+        "soils report"
+      ]
+    },
+    {
       "slug": "goes",
       "term": "GOES",
       "def": "Grain-oriented electrical steel: the specialty magnetic steel every transformer core requires. Only a handful of mills worldwide produce it, and every announced transformer plant bids for the same tonnage — which is why transformer lead times, not capital, gate so many projects.",
@@ -1733,6 +2135,30 @@
       ]
     },
     {
+      "slug": "guaranteed-maximum-price",
+      "term": "guaranteed maximum price",
+      "def": "A ceiling on cost that the builder commits to, above which it absorbs the overrun. What is inside the ceiling, what the contingency covers and who keeps the savings are the terms that matter.",
+      "aliases": [
+        "GMP"
+      ]
+    },
+    {
+      "slug": "gwp",
+      "term": "GWP",
+      "def": "Global warming potential: how much a kilogram of a gas warms the atmosphere over a period, relative to a kilogram of carbon dioxide. It is the number regulators use to rank refrigerants.",
+      "aliases": [
+        "global warming potential"
+      ]
+    },
+    {
+      "slug": "haleu",
+      "term": "HALEU",
+      "def": "High-assay low-enriched uranium: fuel enriched above the roughly 5% of conventional reactors but below the 20% that counts as highly enriched. Compact fast cores need it, and almost nobody makes it yet.",
+      "aliases": [
+        "high-assay low-enriched uranium"
+      ]
+    },
+    {
       "slug": "half-bridge",
       "term": "half-bridge",
       "def": "Two switches in series across a supply with the load taken from the point between them. Almost every power converter is built from one or more of these, and most of what can go wrong in one is about what happens at the instant the pair change over.",
@@ -1751,12 +2177,22 @@
       ]
     },
     {
+      "slug": "heat-pipe-reactor",
+      "term": "heat-pipe reactor",
+      "def": "A microreactor design that moves heat out of the core through sealed tubes in which a fluid evaporates at the hot end and condenses at the cold end, with no pumps and no coolant loop at all."
+    },
+    {
       "slug": "heat-rate",
       "term": "heat rate",
       "def": "The efficiency yardstick for a thermal power plant: fuel energy in per unit of electricity out, so a lower number is better. It decides which plants a market dispatches first, hour by hour, and it is the same quantity as percentage efficiency quoted the other way up.",
       "aliases": [
         "heat-rate"
       ]
+    },
+    {
+      "slug": "heat-recovery-chiller",
+      "term": "heat-recovery chiller",
+      "def": "A chiller run so that the heat it rejects is sold or used rather than thrown away — hot water for a building or a district. Physically it is a heat pump; commercially it is a chiller with a second product."
     },
     {
       "slug": "heavy-duty-gas-turbine",
@@ -1893,6 +2329,14 @@
       ]
     },
     {
+      "slug": "icra",
+      "term": "ICRA",
+      "def": "Infection control risk assessment: the formal procedure for building inside or beside an operating healthcare facility — barriers, negative pressure, filtration, traffic routes. The discipline transfers directly to building beside a live data hall.",
+      "aliases": [
+        "infection control risk assessment"
+      ]
+    },
+    {
       "slug": "iec-62040-3",
       "term": "IEC 62040-3",
       "aliases": [
@@ -2016,6 +2460,11 @@
       ]
     },
     {
+      "slug": "interim-life-safety",
+      "term": "interim life safety measures",
+      "def": "The temporary arrangements — alarms, exits, fire watch, access routes — that keep an occupied building safe while construction has disabled part of its permanent systems."
+    },
+    {
       "slug": "intermediate-bus",
       "term": "intermediate bus",
       "def": "The voltage a rack or a server distributes between its main supply and the point-of-load converters — 12 volts in the older chain, 48 volts (often run at 54) in the modern one. Choosing it is a trade between the current the bus must carry, the safety rules it falls under, and how hard the final conversion becomes.",
@@ -2027,6 +2476,11 @@
         "48V bus",
         "54 V bus"
       ]
+    },
+    {
+      "slug": "intermediate-loop",
+      "term": "intermediate loop",
+      "def": "A second coolant circuit placed between the radioactive primary coolant and the water/steam side, so that a leak between sodium and water cannot happen inside the reactor. It costs efficiency and buys separation."
     },
     {
       "slug": "interruptible",
@@ -2070,6 +2524,16 @@
         "patent license",
         "licensing program"
       ]
+    },
+    {
+      "slug": "ipd",
+      "term": "IPD",
+      "def": "Integrated project delivery: a multi-party contract in which owner, designer and builder share a single risk-and-reward pool. It aligns incentives and requires an owner willing to work inside the team."
+    },
+    {
+      "slug": "iplv",
+      "term": "IPLV",
+      "def": "Integrated part-load value: a single efficiency number that weights performance at 100, 75, 50 and 25 percent load, because a chiller almost never runs at its design point. It uses standard-rating conditions."
     },
     {
       "slug": "irp",
@@ -2177,6 +2641,14 @@
       ]
     },
     {
+      "slug": "kw-per-ton",
+      "term": "kW/ton",
+      "def": "Electrical power drawn per ton of cooling delivered — the chiller industry's efficiency measure, where lower is better. It is the inverse of COP in different units.",
+      "aliases": [
+        "kW per ton"
+      ]
+    },
+    {
       "slug": "large-load-interconnection",
       "term": "large-load interconnection",
       "def": "The process by which a very large new customer — a data center, a hydrogen plant, a crypto mine — is studied and connected to the transmission system. In ERCOT the wires utility runs the studies and builds the substation, the grid operator reviews the request against the wider system, and since 2025 the state's rules set fees, security and curtailment terms for it. It is a load process, distinct from the generator interconnection queue.",
@@ -2208,6 +2680,11 @@
       ]
     },
     {
+      "slug": "latent-heat",
+      "term": "latent heat",
+      "def": "The energy a substance absorbs or releases while changing phase, at constant temperature. It is far larger than the energy involved in warming the same mass by a few degrees, which is why refrigeration boils a fluid rather than merely warming one."
+    },
+    {
       "slug": "lateral-power-delivery",
       "term": "lateral power delivery",
       "def": "Feeding a processor from converters mounted on the board beside the package, with the current running sideways through the board's copper for the last centimetre. It is the conventional arrangement, and the one that runs out of room and out of copper as chip currents climb.",
@@ -2215,6 +2692,11 @@
         "LPD",
         "lateral power"
       ]
+    },
+    {
+      "slug": "lcoe",
+      "term": "LCOE",
+      "def": "Levelised cost of energy: the lifetime cost of a plant divided by the lifetime energy it produces, discounted. It compresses capital cost, fuel, operating cost, capacity factor and the cost of money into one number, and hides all five."
     },
     {
       "slug": "lead-carbon",
@@ -2234,6 +2716,16 @@
         "lean-burn gas engine",
         "lean-burn engine"
       ]
+    },
+    {
+      "slug": "learning-curve",
+      "term": "learning curve",
+      "def": "The empirical observation that unit cost falls by a roughly constant percentage each time cumulative output doubles. It is the whole economic argument for making reactors in a factory in series rather than on a site once."
+    },
+    {
+      "slug": "legionella",
+      "term": "Legionella",
+      "def": "A bacterium that grows in warm stagnant water and can be dispersed in aerosols, which is why open cooling towers carry a mandated water-treatment and testing regime."
     },
     {
       "slug": "lfp",
@@ -2329,6 +2821,29 @@
       ]
     },
     {
+      "slug": "long-lead-item",
+      "term": "long-lead item",
+      "def": "Equipment whose manufacturing time is long enough that it must be ordered before the design around it is complete. Transformers, switchgear and chillers are the classic three.",
+      "aliases": [
+        "long lead item",
+        "long-lead equipment"
+      ]
+    },
+    {
+      "slug": "low-delta-t-syndrome",
+      "term": "low delta-T syndrome",
+      "def": "The chronic plant failure in which return water comes back too cool, so the plant must move far more water for the same cooling and stages on chillers it does not need. Almost always caused downstream, at coils and valves, not at the chiller.",
+      "aliases": [
+        "low delta-T",
+        "low delta T syndrome"
+      ]
+    },
+    {
+      "slug": "low-pressure-refrigerant",
+      "term": "low-pressure refrigerant",
+      "def": "A refrigerant whose cycle runs below atmospheric pressure on the low side, so a leak draws air in rather than pushing refrigerant out. It permits a very different, thinner-walled machine and needs a purge unit."
+    },
+    {
       "slug": "low-voltage",
       "term": "low voltage",
       "aliases": [
@@ -2344,6 +2859,11 @@
       "aliases": [
         "long-term service agreement"
       ]
+    },
+    {
+      "slug": "lump-sum",
+      "term": "lump sum",
+      "def": "A fixed price for a fully defined scope, bid competitively. Cheapest where the design is complete and most expensive where it is not, because every change becomes a negotiation."
     },
     {
       "slug": "magnetic-bearing",
@@ -2375,11 +2895,34 @@
       ]
     },
     {
+      "slug": "makeup-water",
+      "term": "makeup water",
+      "def": "Water added to a cooling or process loop to replace what evaporation, blowdown and leakage remove. A site's water demand is largely its makeup rate."
+    },
+    {
+      "slug": "mass-grading",
+      "term": "mass grading",
+      "def": "Reshaping an entire site to the elevations the design needs, before any building work. It is the first major scope on a greenfield project and the least reversible."
+    },
+    {
+      "slug": "mat-foundation",
+      "term": "mat foundation",
+      "def": "A single thick reinforced slab under an entire structure, spreading its load over the whole footprint. Used where soil is weak, loads are heavy, or differential settlement must be controlled."
+    },
+    {
       "slug": "medium-voltage",
       "term": "medium voltage",
       "def": "Distribution-level voltage, roughly the single-digit to tens of kilovolts — the tier data centers and storage plants connect at before power is stepped down to usable levels.",
       "aliases": [
         "MV"
+      ]
+    },
+    {
+      "slug": "mep",
+      "term": "MEP",
+      "def": "Mechanical, electrical and plumbing — the building services trades taken together. On a data-centre schedule MEP is where most of the labour hours and most of the risk sit, which is why who holds those trades decides who can compress the programme.",
+      "aliases": [
+        "mechanical electrical and plumbing"
       ]
     },
     {
@@ -2393,9 +2936,19 @@
       ]
     },
     {
+      "slug": "metallic-fuel",
+      "term": "metallic fuel",
+      "def": "Fuel in the form of a uranium alloy rather than a ceramic oxide pellet. It conducts heat far better, runs cooler, and expands when hot in a way that helps shut the reaction down."
+    },
+    {
       "slug": "microgrid",
       "term": "microgrid",
       "def": "A self-contained power system — generation, storage, and controls — that can run connected to the grid or islanded on its own. It is how some AI campuses get power before utility interconnection arrives."
+    },
+    {
+      "slug": "microreactor",
+      "term": "microreactor",
+      "def": "A reactor in the single-digit-to-tens-of-megawatts class, small enough to be transported largely assembled and installed as equipment rather than constructed as a plant."
     },
     {
       "slug": "minimum-demand-charge",
@@ -2409,6 +2962,11 @@
         "minimum bill",
         "minimum billing demand"
       ]
+    },
+    {
+      "slug": "minimum-stable-load",
+      "term": "minimum stable load",
+      "def": "The lowest output a machine can hold continuously without cycling off. A centrifugal chiller's floor is set by surge, and a plant that spends the year below its smallest machine's floor is a plant that was staged wrong."
     },
     {
       "slug": "minor-source",
@@ -2450,6 +3008,14 @@
       ]
     },
     {
+      "slug": "moderator",
+      "term": "moderator",
+      "def": "A light material — water, graphite — that slows fast fission neutrons down to thermal speeds, where they are far more likely to cause the next fission. Removing the moderator is what makes a reactor a fast reactor.",
+      "aliases": [
+        "neutron moderator"
+      ]
+    },
+    {
       "slug": "modular-ups",
       "term": "modular UPS",
       "def": "A UPS built from hot-swappable power modules in a common frame, so capacity is added a module at a time and a failed module is replaced without dropping the load. It trades a slightly higher cost per kilowatt for the ability to buy redundancy and capacity in small increments as a hall fills.",
@@ -2457,6 +3023,11 @@
         "scalable UPS",
         "modular uninterruptible power supply"
       ]
+    },
+    {
+      "slug": "molten-salt-reactor",
+      "term": "molten salt reactor",
+      "def": "A design in which the coolant, and sometimes the fuel itself, is a molten fluoride or chloride salt. Very high boiling point, low pressure, and a chemistry problem that has to be solved before it is an engineering problem."
     },
     {
       "slug": "mosfet",
@@ -2535,6 +3106,11 @@
       ]
     },
     {
+      "slug": "natural-circulation",
+      "term": "natural circulation",
+      "def": "Fluid moving through a loop because hot fluid is less dense than cold, with no pump. A reactor that can remove decay heat this way keeps cooling itself after losing all electrical power."
+    },
+    {
       "slug": "ndaa-154",
       "term": "NDAA §154",
       "def": "A US defense-authorization provision restricting Department of Defense battery procurement from named Chinese suppliers — the list that made \"is your cell maker §154-listed?\" a standard sourcing question.",
@@ -2544,9 +3120,24 @@
       ]
     },
     {
+      "slug": "negative-pressure-containment",
+      "term": "negative pressure containment",
+      "def": "Sealing a work area and holding it at slightly lower pressure than its surroundings, with filtered exhaust, so dust and contaminants flow inward rather than out into the live space."
+    },
+    {
+      "slug": "negative-temperature-coefficient",
+      "term": "negative temperature coefficient",
+      "def": "A core designed so that getting hotter makes the chain reaction weaker. Power then self-corrects without any operator or control system acting — the physical basis of a passive-safety claim."
+    },
+    {
       "slug": "neocloud",
       "term": "neocloud",
       "def": "A newer GPU-cloud provider renting AI compute capacity, typically growing faster than its capital base — a distinct buyer class from the hyperscalers."
+    },
+    {
+      "slug": "neutron-cross-section",
+      "term": "neutron cross-section",
+      "def": "The effective target area a nucleus presents to a neutron, measured in barns. It is strongly energy-dependent, which is why slowing a neutron down changes what it will do."
     },
     {
       "slug": "nfpa-110",
@@ -2606,6 +3197,11 @@
       ]
     },
     {
+      "slug": "non-binding-agreement",
+      "term": "non-binding agreement",
+      "def": "A letter of intent, memorandum or master agreement that expresses intent to transact without obligating either party to do so. In a pre-revenue pipeline it is a marker of interest, not of a sale."
+    },
+    {
       "slug": "nox",
       "term": "NOx",
       "def": "Nitrogen oxides: the pollutant family formed when the air's own nitrogen burns at high flame temperature. It drives ozone formation downwind and is the number most air permits are written around — which is why diesels carry after-treatment, gas engines run lean and turbines carry low-NOx combustors.",
@@ -2620,6 +3216,19 @@
       "def": "New product introduction — the phase between a working prototype and volume production, where the design is made buildable: tooling cut, test fixtures written, the line laid out and the first units built and torn down. It is where most of a manufacturing relationship's risk actually sits.",
       "aliases": [
         "new product introduction"
+      ]
+    },
+    {
+      "slug": "nplv",
+      "term": "NPLV",
+      "def": "Non-standard part-load value: the same weighted part-load calculation as IPLV but computed at the temperatures the actual project will run at. It is the honest number when the design is not the standard rating point."
+    },
+    {
+      "slug": "nth-of-a-kind",
+      "term": "nth-of-a-kind",
+      "def": "The projected cost of a unit built after the design, the supply chain and the workforce have repeated it enough times to stop improving. Every modular-reactor economic case is a claim about how fast the curve between the first and the nth actually falls.",
+      "aliases": [
+        "NOAK"
       ]
     },
     {
@@ -2676,6 +3285,11 @@
         "R-DS(on)",
         "Rds(on)"
       ]
+    },
+    {
+      "slug": "once-through-fuel-cycle",
+      "term": "once-through fuel cycle",
+      "def": "Using fuel once and then storing it, which is what the United States does. Recycling changes the volume and the heat load of what is left, and does not remove the need to store something."
     },
     {
       "slug": "open-transition",
@@ -2737,6 +3351,11 @@
       ]
     },
     {
+      "slug": "part-53",
+      "term": "Part 53",
+      "def": "The technology-inclusive, risk-informed US licensing framework written for reactors that are not large light-water plants, so that a design need not be argued against rules drafted for something else."
+    },
+    {
       "slug": "part-load",
       "term": "part load",
       "def": "Running a generating machine below its full rating. Efficiency and emissions both move with load — a large gas turbine is efficient only near full output, while a fleet of engines can shut units down and keep the rest at their sweet spot — so the shape of the load, not just its peak, decides which machine is cheaper to run.",
@@ -2753,6 +3372,11 @@
       "aliases": [
         "PSoC"
       ]
+    },
+    {
+      "slug": "passive-safety",
+      "term": "passive safety",
+      "def": "Safety that rests on physics and geometry rather than on pumps, valves and operator action — gravity, natural circulation, thermal expansion. The claim is only as good as the conditions under which it was demonstrated."
     },
     {
       "slug": "pcba",
@@ -2823,6 +3447,11 @@
         "resource adequacy",
         "target reserve margin"
       ]
+    },
+    {
+      "slug": "point-load",
+      "term": "point load",
+      "def": "A concentrated load applied over a small area — a rack foot, a jack, a transformer wheel. A floor can satisfy a uniform load rating and still fail a point-load check under the same equipment."
     },
     {
       "slug": "point-of-interconnection",
@@ -2947,6 +3576,11 @@
       ]
     },
     {
+      "slug": "precast-concrete",
+      "term": "precast concrete",
+      "def": "Structural elements cast in a factory under controlled conditions and delivered to site to be erected. It moves work off the critical path and out of the weather, at the cost of transport limits and long lead times."
+    },
+    {
       "slug": "precharge",
       "term": "precharge",
       "def": "A circuit that charges a unit's capacitors gently through a resistor or a controlled switch before the main connection closes, so a live insertion does not draw a damaging inrush surge. It is the quiet engineering that makes hot-swap possible.",
@@ -2958,6 +3592,11 @@
       ]
     },
     {
+      "slug": "preconstruction",
+      "term": "preconstruction",
+      "def": "The estimating, planning, constructability review and procurement work done before construction starts. It is where a schedule is either made possible or quietly made impossible."
+    },
+    {
       "slug": "pressure-ratio",
       "term": "pressure ratio",
       "def": "How much a gas turbine's compressor raises the pressure of the air passing through it, typically in the high teens to low twenties on a modern heavy-duty machine. Along with firing temperature it sets the cycle's efficiency, and raising it costs compressor stages, which is one reason turbines grow rather than simply improve.",
@@ -2965,6 +3604,11 @@
         "cycle pressure ratio",
         "compression ratio"
       ]
+    },
+    {
+      "slug": "primary-secondary-pumping",
+      "term": "primary-secondary pumping",
+      "def": "A plant split into a constant-flow loop through the chillers and a variable-flow loop out to the load, joined by a short bypass. Simple to control, and it hides a low delta-T rather than exposing it."
     },
     {
       "slug": "prime-mover",
@@ -2994,6 +3638,11 @@
         "co-location arrangement",
         "co-located generation"
       ]
+    },
+    {
+      "slug": "proctor-test",
+      "term": "Proctor test",
+      "def": "The laboratory test that establishes the maximum dry density a given soil can reach and the moisture content at which it reaches it. Field compaction is then specified as a percentage of that number."
     },
     {
       "slug": "prudence-review",
@@ -3067,6 +3716,11 @@
       ]
     },
     {
+      "slug": "pyroprocessing",
+      "term": "pyroprocessing",
+      "def": "An electrochemical route to separating usable material from spent metallic fuel in molten salt, developed alongside metallic-fuel fast reactors. It recovers fuel without the aqueous chemistry of conventional reprocessing."
+    },
+    {
       "slug": "ramp-period",
       "term": "ramp period",
       "def": "The years a large-load tariff gives a new customer to grow into its contracted demand before the minimum bill applies in full — a schedule such as forty percent in year one, sixty in year two, then the whole contract demand. It recognizes that a campus energizes in halls, and it is the term a developer negotiates hardest after the term itself.",
@@ -3077,6 +3731,11 @@
         "ramp",
         "ramp-up"
       ]
+    },
+    {
+      "slug": "range",
+      "term": "range",
+      "def": "The temperature drop a cooling tower actually produces between the water entering it and the water leaving. Range times flow is the heat the tower is rejecting."
     },
     {
       "slug": "rankine-cycle",
@@ -3185,6 +3844,11 @@
       "aliases": [
         "revenue requirements"
       ]
+    },
+    {
+      "slug": "reverse-osmosis",
+      "term": "reverse osmosis",
+      "def": "Forcing water through a membrane at pressure so that dissolved salts are left behind. It produces very pure water and a concentrated reject stream that has to go somewhere."
     },
     {
       "slug": "reverse-recovery",
@@ -3342,6 +4006,16 @@
       ]
     },
     {
+      "slug": "screw-compressor",
+      "term": "screw compressor",
+      "def": "A compressor in which two meshing helical rotors trap gas and squeeze it as it moves along them. Tolerant of high lift and of part load, and physically smaller than a centrifugal for the same duty."
+    },
+    {
+      "slug": "scroll-compressor",
+      "term": "scroll compressor",
+      "def": "A compressor formed by two interleaved spirals, one orbiting inside the other, sweeping gas inward. Simple, quiet, and the standard building block of small and modular machines."
+    },
+    {
       "slug": "secondary-fluid-network",
       "term": "secondary fluid network",
       "def": "The closed loop of clean coolant that runs between a distribution unit and the cold plates in the racks, kept separate from the building's own chilled-water loop. Separating them lets the rack loop be filtered, treated and pressure-controlled independently of the facility.",
@@ -3423,6 +4097,11 @@
       ]
     },
     {
+      "slug": "self-perform",
+      "term": "self-perform",
+      "def": "Work a general contractor executes with its own directly employed craft workforce rather than subcontracting it. It buys schedule control and cost visibility on the scopes that drive the programme."
+    },
+    {
       "slug": "selv",
       "term": "SELV",
       "def": "Safety extra-low voltage: a supply below about 60 volts DC that the safety standards treat as safe to touch, so it can be handled, wired and serviced without the insulation, clearances and lockout that higher voltages demand. The 48-volt rack bus sits deliberately just under that line.",
@@ -3443,6 +4122,11 @@
         "semi-solid electrolyte",
         "hybrid solid-liquid electrolyte"
       ]
+    },
+    {
+      "slug": "sensible-heat-ratio",
+      "term": "sensible heat ratio",
+      "def": "The share of a cooling load that lowers air temperature rather than condensing moisture out of it. IT heat is almost entirely sensible, which is why equipment for data halls is built differently from comfort air conditioning."
     },
     {
       "slug": "sequence-of-operations",
@@ -3481,6 +4165,11 @@
         "SF6-free",
         "clean air switchgear"
       ]
+    },
+    {
+      "slug": "shell-and-core",
+      "term": "shell and core",
+      "def": "Building the enclosure, structure and base services of a facility while leaving the interior fit-out for a later scope or a different contractor. It is how a data hall gets built ahead of knowing exactly what will go in it."
     },
     {
       "slug": "shoot-through",
@@ -3579,6 +4268,19 @@
       ]
     },
     {
+      "slug": "slab-on-grade",
+      "term": "slab on grade",
+      "def": "A concrete floor cast directly on prepared ground rather than spanning between supports. It is the working surface of a data hall, and its flatness and load rating are specifications, not by-products.",
+      "aliases": [
+        "slab-on-grade"
+      ]
+    },
+    {
+      "slug": "sleeve",
+      "term": "sleeve",
+      "def": "A pipe cast through a concrete wall or slab so that conduit, piping or busway can pass through it later without cutting structure. Sleeves are set from coordinated drawings before the pour, not afterwards."
+    },
+    {
       "slug": "slot-reservation",
       "term": "slot reservation",
       "def": "A payment that holds a place in a manufacturer's production schedule before the equipment has been specified, sometimes before it has been designed. In a shortage it is the queue position, not the price, that is being bought.",
@@ -3595,6 +4297,14 @@
         "small modular reactor",
         "small modular reactors",
         "SMRs"
+      ]
+    },
+    {
+      "slug": "sodium-cooled-fast-reactor",
+      "term": "sodium-cooled fast reactor",
+      "def": "A fast reactor cooled by liquid sodium, which boils near 880 C and so runs at essentially atmospheric pressure. That removes the thick pressure vessel, and adds a metal that burns on contact with air or water.",
+      "aliases": [
+        "SFR"
       ]
     },
     {
@@ -3628,6 +4338,16 @@
       ]
     },
     {
+      "slug": "source-term",
+      "term": "source term",
+      "def": "The quantity and kind of radioactive material a given accident could release. Almost every downstream siting, staffing and emergency-planning requirement is sized from it."
+    },
+    {
+      "slug": "special-inspection",
+      "term": "special inspection",
+      "def": "Independent third-party inspection and testing of specific structural work — welds, bolts, concrete, soils — required by code and scheduled in advance. Work covered up before its inspection gets uncovered."
+    },
+    {
       "slug": "specific-power",
       "term": "specific power",
       "def": "How much power a cell delivers per kilogram of itself, in watts per kilogram. It is the figure of merit for a backup cell, where energy per litre is the figure of merit for a grid cell.",
@@ -3635,6 +4355,11 @@
         "W/kg",
         "power per kilogram"
       ]
+    },
+    {
+      "slug": "spent-fuel-pool",
+      "term": "spent fuel pool",
+      "def": "The water-filled bay where discharged fuel sits while its decay heat falls, before it can be moved into dry storage casks. The water is a coolant and a shield at the same time."
     },
     {
       "slug": "spinning-reserve",
@@ -3655,6 +4380,11 @@
       ]
     },
     {
+      "slug": "spread-footing",
+      "term": "spread footing",
+      "def": "An isolated concrete pad under a column that spreads its load over enough ground to stay within the bearing capacity. The default foundation where the soil is good."
+    },
+    {
       "slug": "sscb",
       "term": "SSCB",
       "def": "Solid-state circuit breaker: a breaker that interrupts electronically in a fraction of a millisecond, before fault current reaches its peak, instead of physically parting contacts. It is the enabling protection device for DC distribution, where there is no AC zero crossing to help extinguish the arc.",
@@ -3668,6 +4398,15 @@
       "def": "Solid-state transformer: a power-electronics replacement for the iron transformer that converts medium-voltage AC directly to regulated DC using high-frequency switching — a candidate to collapse today's multi-stage data-center power chain into one device.",
       "aliases": [
         "solid-state transformer"
+      ]
+    },
+    {
+      "slug": "standard-penetration-test",
+      "term": "standard penetration test",
+      "def": "A field test in which a standard sampler is driven into the soil by a standard hammer and the blows per increment are counted. The blow count is a rough, universally understood index of how dense or stiff the ground is.",
+      "aliases": [
+        "SPT",
+        "blow count"
       ]
     },
     {
@@ -3740,6 +4479,11 @@
       "def": "A UPS built from power electronics — a rectifier, a DC link with batteries on it and an inverter — with no moving parts except fans. It is the incumbent form in data centers: modular, efficient, factory-built at low voltage, and dependent on a battery room whose chemistry, life and fire code are a design in themselves."
     },
     {
+      "slug": "stormwater-detention",
+      "term": "stormwater detention",
+      "def": "Holding rainwater on site and releasing it slowly so that covering acres in roof and pavement does not flood everything downstream. It is a permit condition, and it occupies land that cannot then be built on."
+    },
+    {
       "slug": "stranded-capacity",
       "term": "stranded capacity",
       "def": "Capacity that has been paid for but cannot be used because power, cooling, space and redundancy do not line up — a row with spare amps and no cooling takes no more racks."
@@ -3763,6 +4507,11 @@
         "strict liability standard",
         "liability without fault"
       ]
+    },
+    {
+      "slug": "subcooling",
+      "term": "subcooling",
+      "def": "How many degrees below its condensing temperature the liquid refrigerant is when it leaves the condenser. More subcooling means more useful cooling per kilogram circulated."
     },
     {
       "slug": "submittal",
@@ -3818,6 +4567,11 @@
       ]
     },
     {
+      "slug": "superheat",
+      "term": "superheat",
+      "def": "How many degrees of extra warming the refrigerant vapour has above its boiling point when it leaves the evaporator. It is the margin that stops liquid reaching the compressor, and it is actively controlled."
+    },
+    {
       "slug": "superjunction",
       "term": "superjunction",
       "def": "A silicon MOSFET structure that buries alternating columns of opposite doping in the drift region so it can be doped harder without losing its voltage rating. It buys several times lower on-resistance for a given area than plain silicon and is what keeps silicon competitive at 600–900 volts.",
@@ -3835,6 +4589,11 @@
         "local transmission",
         "supplemental project"
       ]
+    },
+    {
+      "slug": "surge",
+      "term": "surge",
+      "def": "The flow breakdown that occurs when a centrifugal compressor is asked for more pressure rise than its current flow can sustain: the gas momentarily reverses. It is noisy, damaging, and the reason a centrifugal chiller has a minimum load."
     },
     {
       "slug": "switchgear",
@@ -3992,6 +4751,11 @@
       ]
     },
     {
+      "slug": "temperature-lift",
+      "term": "temperature lift",
+      "def": "The temperature difference a refrigeration machine has to pump heat across — condensing temperature minus evaporating temperature. Compressor work rises with lift, so every degree given back at either end is money."
+    },
+    {
       "slug": "test-year",
       "term": "test year",
       "def": "The twelve-month period of actual costs and sales a rate case uses as its base. A historic test year uses costs already incurred; a forecast or future test year projects them forward. The choice matters: a utility investing faster than it depreciates recovers less under a historic year, which is why commissions sometimes impose one as a discipline.",
@@ -4012,6 +4776,15 @@
       ]
     },
     {
+      "slug": "thermal-energy-storage",
+      "term": "thermal energy storage",
+      "def": "Storing cooling rather than electricity: chilled water or ice made when power is cheap or plentiful and drawn on later. In a critical facility it is also the ride-through that covers a chiller restart.",
+      "aliases": [
+        "ice storage",
+        "chilled water storage"
+      ]
+    },
+    {
       "slug": "thermal-resistance",
       "term": "thermal resistance",
       "def": "How hard it is for heat to escape from a part to the air or liquid that carries it away, measured as temperature rise per watt. A converter's current rating is really a thermal statement: the current it can carry before its junction temperature reaches the limit through the path it has been given.",
@@ -4026,6 +4799,14 @@
       "slug": "thermal-runaway",
       "term": "thermal runaway",
       "def": "A self-accelerating overheating reaction inside a battery cell: heat triggers reactions that release more heat, potentially propagating cell to cell. The failure mode BESS safety standards are designed to contain."
+    },
+    {
+      "slug": "thermal-spectrum",
+      "term": "thermal spectrum",
+      "def": "A reactor whose neutrons have been slowed by a moderator to roughly the thermal energy of their surroundings. Almost every operating commercial reactor is one.",
+      "aliases": [
+        "thermal reactor"
+      ]
     },
     {
       "slug": "three-level-inverter",
@@ -4051,6 +4832,15 @@
       ]
     },
     {
+      "slug": "tilt-up",
+      "term": "tilt-up construction",
+      "def": "Casting a building's wall panels flat on the slab and then craning them upright into place. Fast, cheap and weather-tolerant, which is why so many large single-storey buildings are built this way.",
+      "aliases": [
+        "tilt-up",
+        "tilt-up concrete"
+      ]
+    },
+    {
       "slug": "time-current-curve",
       "term": "time-current curve",
       "def": "A plot of how long a protective device takes to operate against how much current it sees, drawn on log-log paper so a whole series of devices can be compared on one sheet. Nesting the curves so the downstream device always clears first is what selective coordination means in practice; where two curves cross or touch, selectivity is lost at that current.",
@@ -4067,6 +4857,14 @@
       "def": "A storage contract where the offtaker pays a fixed fee for the right to charge and discharge the battery as they wish — the owner operates the asset, the toller takes the market risk.",
       "aliases": [
         "tolling"
+      ]
+    },
+    {
+      "slug": "ton-of-refrigeration",
+      "term": "ton of refrigeration",
+      "def": "The traditional cooling unit: the rate of heat removal that would freeze one short ton of ice in a day, about 3.517 kW. A megawatt of IT load needs roughly 284 tons of cooling.",
+      "aliases": [
+        "refrigeration ton"
       ]
     },
     {
@@ -4167,6 +4965,11 @@
       "def": "The test method that characterizes how battery fires start and propagate at cell, module, unit, and installation level. Its data feeds fire-safety design and permitting for storage projects."
     },
     {
+      "slug": "uniform-load",
+      "term": "uniform load",
+      "def": "The distributed weight per unit area a floor is rated to carry, in pounds per square foot. Data halls are rated far above office space, and liquid-cooled rows above conventional halls."
+    },
+    {
       "slug": "unipolar-device",
       "term": "unipolar device",
       "def": "A switch that conducts with one kind of charge carrier only, like a MOSFET. It has no stored charge to clear when it turns off, so it switches quickly and cleanly, but its resistance climbs steeply with voltage rating.",
@@ -4221,11 +5024,33 @@
       ]
     },
     {
+      "slug": "vapour-compression-cycle",
+      "term": "vapour-compression cycle",
+      "def": "The four-step loop every chiller, refrigerator and air conditioner runs on: a liquid evaporates and absorbs heat, a compressor raises its pressure and temperature, it condenses and gives the heat up somewhere hotter, and an expansion device drops it back down.",
+      "aliases": [
+        "vapor-compression cycle",
+        "refrigeration cycle"
+      ]
+    },
+    {
+      "slug": "variable-primary-flow",
+      "term": "variable primary flow",
+      "def": "A plant with one variable-flow pumping loop that runs through the chillers themselves, saving pumping energy at the cost of having to respect each machine's minimum flow."
+    },
+    {
       "slug": "vcea",
       "term": "VCEA",
       "def": "The Virginia Clean Economy Act of 2020: the state law that sets Dominion Energy Virginia on a path to carbon-free generation by 2045 and mandates specific gigawatts of solar, offshore wind and energy storage along the way, executed through annual filings the commission approves. It is the statutory reason the utility runs a standing storage procurement.",
       "aliases": [
         "Virginia Clean Economy Act"
+      ]
+    },
+    {
+      "slug": "vdc",
+      "term": "VDC",
+      "def": "Virtual design and construction: building the building once in a coordinated 3-D model so that clashes between structure, ductwork, pipe and conduit are found on a screen rather than in the field.",
+      "aliases": [
+        "virtual design and construction"
       ]
     },
     {
@@ -4317,6 +5142,24 @@
       ]
     },
     {
+      "slug": "water-cement-ratio",
+      "term": "water-cement ratio",
+      "def": "The mass of water relative to cement in a concrete mix, and the single strongest determinant of its strength and durability. Adding water at the truck to make placement easier trades permanent strength for temporary convenience."
+    },
+    {
+      "slug": "water-reclamation",
+      "term": "water reclamation",
+      "def": "Treating used water to a standard fit for reuse rather than discharging it. A campus that promises to return or reuse its water has to build and operate a plant to do it."
+    },
+    {
+      "slug": "wet-bulb",
+      "term": "wet-bulb temperature",
+      "def": "The lowest temperature air can be cooled to by evaporating water into it. It is always at or below the dry-bulb temperature, and it is the floor an evaporative device works against.",
+      "aliases": [
+        "wet bulb"
+      ]
+    },
+    {
       "slug": "white-space",
       "term": "white space",
       "def": "The floor area of a data hall where racks actually stand, as distinct from the plant rooms, switchrooms and battery rooms that serve it. It is what gets leased, so every square metre spent on plant is measured against it."
@@ -4370,6 +5213,15 @@
       "def": "Water usage effectiveness: water consumed per unit of IT energy, the cooling counterpart to PUE. Closed-loop and air-cooled designs spend a little more electricity to spend almost no water, which in a water-stressed watershed is usually the more permittable trade.",
       "aliases": [
         "water usage effectiveness"
+      ]
+    },
+    {
+      "slug": "xenon-poisoning",
+      "term": "xenon poisoning",
+      "def": "Xenon-135, a fission product with an enormous appetite for thermal neutrons, builds up after a power reduction and suppresses the chain reaction for hours. It is the physical reason a thermal reactor is a poor load-follower.",
+      "aliases": [
+        "xenon-135",
+        "xenon pit"
       ]
     },
     {

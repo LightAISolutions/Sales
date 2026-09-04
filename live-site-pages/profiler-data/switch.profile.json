@@ -288,6 +288,16 @@
    "source": "Dossier competitive assessment — AI factories",
    "via": "EVO AI Factories",
    "status": "active"
+  },
+  {
+   "slug": "oklo",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2024-12",
+   "scale": "12 GW through 2044",
+   "note": "Non-binding master power agreement for Aurora powerhouses — a framework, with individual binding agreements to be finalised as project milestones are reached.",
+   "context": "Signed 18 December 2024 and described by both parties as one of the largest corporate clean-power agreements ever signed. Utility Dive's contemporaneous account is explicit that it is 'not yet binding on either party'.\n\nThe arithmetic is worth carrying: Oklo's stated order book reached approximately 14 GW after this signing, so roughly six sevenths of that pipeline sits inside this single instrument — and Oklo stopped publishing a pipeline figure after mid-2025.",
+   "source": "https://www.utilitydive.com/news/oklo-aurora-smr-advanced-nuclear-reactor-supply-agreement-data-center-developer-switch/735933/"
   }
  ],
  "policyExposure": [
@@ -832,6 +842,6 @@
    "url": "https://www.switch.com/atlanta/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 5
 }

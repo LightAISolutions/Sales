@@ -244,6 +244,18 @@
    "project": "hyperion",
    "status": "active",
    "since": "2024-12"
+  },
+  {
+   "slug": "mccarthy",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-11",
+   "scale": "468 MW across Buildings 13 and 14",
+   "project": "lighthouse",
+   "via": "Turner-McCarthy joint venture",
+   "note": "Fifty-fifty joint-venture partner on the Lighthouse campus at Port Washington, and a building-GC rival everywhere else.",
+   "context": "ENR named the first-phase construction team in November 2025 as Whiting-Turner, The Weitz Co., a joint venture of Turner Construction and McCarthy Building Cos., and Michels. The Daily Reporter later gave the scope precisely: the joint venture builds Buildings 13 and 14, hosting a combined 468 MW to support Oracle and OpenAI's Stargate venture.\n\nMcCarthy is the smaller partner by ENR rank — 22 against 1 in the 2026 Top 400 — and the pairing is the mechanism by which it reached a giga-campus at all.",
+   "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/"
   }
  ],
  "technicalSpecs": [
@@ -553,6 +565,6 @@
    "url": "https://www.turnerconstruction.com/services"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 6
 }

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-04",
- "companies": 106,
+ "companies": 109,
  "edges": [
   {
    "a": "abb",
@@ -469,6 +469,38 @@
     }
    ],
    "last": "2026-06"
+  },
+  {
+   "a": "abb",
+   "b": "oklo",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Memorandum of understanding under which a monitoring room was commissioned for Oklo operator training.",
+     "context": "Announced 21 August 2025 as an MOU rather than a supply contract, with a commissioned monitoring room supporting operator training as the described deliverable.\n\nIt connects to Oklo's licensing strategy: the company is designing for a high degree of automation and has a Licensed Operator topical report before the NRC proposing that operators be licensed to the technology rather than to a single site, which would allow one control room to monitor several plants.",
+     "source": "Oklo press release archive, 2025-08-21 (ABB memorandum of understanding; monitoring room commissioned for operator training)",
+     "status": "announced",
+     "since": "2025-08"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Memorandum of understanding under which a monitoring room was commissioned for operator training.",
+     "context": "Announced 21 August 2025. The instrument is an MOU rather than a supply contract, and the deliverable described is a commissioned monitoring room supporting operator training.\n\nIt connects to Oklo's licensing strategy rather than to its plant equipment: the company is designing for a high degree of automation and has a Licensed Operator topical report before the NRC proposing that operators be licensed to the technology rather than to a single site, which would allow one control room to monitor several plants.",
+     "source": "Oklo press release archive, 2025-08-21 (ABB memorandum of understanding; monitoring room commissioned for operator training)",
+     "status": "announced",
+     "since": "2025-08"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its supply chain reaches back into companies already covered here — Siemens Energy for the power conversion system under the only binding commercial contract Oklo has announced, Kiewit for construction, Vertiv for power and thermal reference designs, ABB for the operator monitoring room, and NVIDIA with Los Alamos for fuel-modelling work.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-08"
   },
   {
    "a": "abb",
@@ -3733,6 +3765,30 @@
    "last": ""
   },
   {
+   "a": "black-veatch",
+   "b": "mccarthy",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Named together on the Next NGA West delivery team, with Black & Veatch Special Projects alongside the McCarthy HITT joint venture.",
+     "context": "McCarthy's account of the campus names the delivery team as the McCarthy HITT joint venture with Black & Veatch Special Projects, Gensler and Akima. The $1.7bn, 700,000 sq ft campus opened in January 2026 and no continuing programme between the two firms is published, so the engagement is recorded as historical.\n\nSecure federal facilities are one of the few markets where an engineering and construction firm's scope and a building general contractor's overlap directly rather than sitting on either side of a fence.",
+     "source": "https://www.mccarthy.com/insights/mccarthy-hitt-and-nga-celebrate-completion-and-opening-of-next-nga-west-campus-in-st-louis",
+     "status": "historical",
+     "since": "2016"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Named on the Next NGA West delivery team through Black & Veatch Special Projects alongside the McCarthy HITT joint venture.",
+     "context": "McCarthy's own account of the Next NGA West campus names the delivery team as the McCarthy HITT joint venture with Black & Veatch Special Projects, Gensler and Akima. The engagement is recorded as historical because the campus opened in January 2026 and no continuing programme between the two firms is published.\n\nIt is a narrow but real link: Black & Veatch's own dossier in this corpus is an engineering and construction firm on the power and water side, and the secure-federal market is one of the few places its scope and a building general contractor's overlap directly.",
+     "source": "https://www.mccarthy.com/insights/mccarthy-hitt-and-nga-celebrate-completion-and-opening-of-next-nga-west-campus-in-st-louis",
+     "status": "historical",
+     "since": "2016"
+    }
+   },
+   "evid": [],
+   "last": "2016"
+  },
+  {
    "a": "blattner",
    "b": "fluence",
    "curated": {
@@ -3832,6 +3888,20 @@
      "where": "Key Judgments",
      "date": "",
      "text": "(Moderate confidence) For the Hithium lens: the actionable surfaces are (1) MasTec Professional Services and Wanzek's storage BOP practice for EPC-procured mid-scale packages, (2) alliance-developer introductions (Vitis-class owners who already buy Chinese systems), and (3) install-compatibility qualification like Blattner/SOLV.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blattner",
+   "b": "mccarthy",
+   "evid": [
+    {
+     "where": "Capabilities · Renewable energy — utility-scale solar and battery storage",
+     "date": "",
+     "text": "The competitive set is Blattner, MasTec, Primoris and SOLV Energy — all covered in this corpus, and none of them linked to McCarthy by any source.",
      "src": "",
      "from": "b"
     }
@@ -9593,6 +9663,21 @@
   },
   {
    "a": "dpr",
+   "b": "mccarthy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Ranked seventh to McCarthy's twenty-second in the ENR 2026 Top 400, and one of the named leaders in the data-centre rankings McCarthy does not appear in.",
+     "context": "DPR reported $14.0bn of 2025 revenue at rank seven in the ENR 2026 Top 400, moving up one place, and is named among the leaders in Building Design+Construction's data-centre ranking; McCarthy is absent from that named group. Basis for curating the link: a comparative league table that ranks both firms on the same self-reported measure, with ENR's own analysis attributing the 2026 reshuffle specifically to data-centre exposure.\n\nDPR's own guide in this app covers employee ownership and design for manufacture — the two firms are also the corpus's two employee-owned general contractors, which makes them the natural comparison on that axis as well.",
+     "source": "https://www.enr.com/toplists/2026-Top-400-Contractors-1",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "dpr",
    "b": "meta",
    "curated": {
     "a": {
@@ -10432,6 +10517,61 @@
     }
    ],
    "last": "2025-06-03"
+  },
+  {
+   "a": "eaton",
+   "b": "trane-technologies",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Joint reference design integrating Eaton electrical infrastructure with Trane chillers, coolant distribution units and controls for AI data centres.",
+     "context": "Announced 17 August 2026 and described by both companies as an industry first: 'a unified, intelligent system for power and cooling for next-generation data centers' replacing a design process the release calls slow, manual and siloed. Claimed against conventional low-voltage designs: up to 15% combined energy-efficiency gain, up to 80% less copper and up to 30% lower installation cost.\n\nIt is the clearest instance in this corpus of the power chain and the thermal chain being sold as one engineered path rather than as two separate procurements.",
+     "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx",
+     "status": "active",
+     "since": "2026-08",
+     "via": "Eaton Beam Rubin DSX / Trane Continuum Rubin DSX"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Joint reference design integrating Trane chillers, coolant distribution units and controls with Eaton electrical infrastructure for AI data centres.",
+     "context": "Announced 17 August 2026 and described by both companies as an industry first: 'a unified, intelligent system for power and cooling for next-generation data centers' replacing what the release calls a traditionally slow, manual and siloed design process. Claimed benefits against conventional low-voltage designs are up to 15% combined energy-efficiency gain, up to 80% less copper and up to 30% lower installation cost.\n\nThe design ships inside the Trane Continuum Rubin DSX and Eaton Beam Rubin DSX platforms. It is the clearest instance in this corpus of the power and thermal chains being sold as one engineered path rather than as two procurements — the pattern Vertiv's guide describes from the power side.",
+     "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx",
+     "status": "active",
+     "since": "2026-08",
+     "via": "Trane Continuum Rubin DSX / Eaton Beam Rubin DSX"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The only two publicly stated commercial relationships in this ecosystem are reference-design collaborations with NVIDIA (October 2025) and Eaton (August 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: three published designs in ten months — NVIDIA in October 2025, an optimisation in March 2026 quantified as 22 MW of cooling capacity freed for IT power, and the Eaton power-and-thermal integration in August 2026 claiming 80% less copper and 30% lower installation cost.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: across an exhaustive check of hyperscalers, colocation operators, AIDC developers and the general contractors that build for them, no source states a commercial relationship between Trane Technologies and any of them; the only two publicly stated relationships in this ecosystem are the NVIDIA and Eaton reference designs.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-17",
+     "text": "Trane Technologies and Eaton publish an industry-first joint power-and-thermal reference design for AI data centres — The chiller vendor and the electrical vendor selling one engineered chain rather than two catalogues — and the only publicly stated commercial relationship Trane has in this ecosystem besides NVIDIA.",
+     "src": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-17"
   },
   {
    "a": "eaton",
@@ -11881,6 +12021,68 @@
     }
    ],
    "last": "2026"
+  },
+  {
+   "a": "equinix",
+   "b": "oklo",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Non-binding letters of intent with a $25M prepayment and a right of first refusal — reported as the first colocation-operator SMR agreement.",
+     "context": "The letter of intent was executed on 16 February 2024 and disclosed in an AltC SEC filing on 2 April 2024; Oklo names Equinix among its LOI counterparties in its FY2025 10-K without ever having issued a dedicated release. Independent reporting describes a $25M prepayment and a right of first refusal on 100 to 500 MWe for up to 36 months, a window that expires around February 2027.\n\nRead alongside the rest of this dossier's firm-power book, it is the most speculative instrument in it: Oklo has no operating Aurora, no NRC reactor licence, and its first unit is proceeding under a Department of Energy authorization pathway targeted at late 2027 to early 2028.",
+     "source": "https://www.datacenterdynamics.com/en/news/equinix-signs-deal-to-procure-up-to-500mw-of-nuclear-power-from-oklo-smrs-makes-25m-pre-payment/",
+     "status": "announced",
+     "since": "2024-02",
+     "scale": "100-500 MWe"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Non-binding letters of intent with a $25M prepayment and a right of first refusal, reported as the first colocation-operator SMR deal.",
+     "context": "The letter of intent was executed on 16 February 2024 and disclosed in an AltC SEC filing on 2 April 2024. Independent reporting describes a $25M prepayment and a right of first refusal on 100 to 500 MWe for up to 36 months — a window that expires around February 2027. Oklo names Equinix among its LOI counterparties in the FY2025 10-K but has never issued a dedicated release.\n\nEquinix's own dossier records it as the first data-centre-operator SMR deal at 500 MW, inside the most diversified firm-power book in colocation, beside Bloom fuel cells, Radiant, Rolls-Royce SMR and Stellaria.",
+     "source": "Oklo FY2025 Form 10-K (LOI counterparties named); Data Center Dynamics — Equinix signs deal for up to 500MW, makes $25m pre-payment (2024-04)",
+     "status": "announced",
+     "since": "2024-02",
+     "scale": "100-500 MWe"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: direct-to-chip liquid cooling deployed across 100+ facilities, the >100 MW Bloom fuel-cell fleet (the industry's largest and the template Bloom sells against), ~1.25 GW of advanced-nuclear commitments and LOIs (Oklo, Radiant, Rolls-Royce SMR, Stellaria), and the Central Georgia EMC take-or-pay structure where Equinix funds 100% of grid upgrades — a ratepayer-protection template regulators will point other operators toward.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy & firm-power portfolio",
+     "date": "",
+     "text": "The most diversified colo power stack: Bloom solid-oxide fuel cells >100 MW across 19+ US sites (from a 1 MW 2015 pilot; ~75 MW operating); advanced nuclear — Oklo 500 MW (first colo SMR deal), Radiant 20 Kaleidos microreactor preorder, ULC-Energy/Rolls-Royce 250 MWe LOI, Stellaria 500 MWe pre-order; a Dublin hydrogen-generator trial (June 2026); 96% renewable coverage with a 2030 100% goal; the Central Georgia EMC 20-year take-or-pay with Equinix funding all grid upgrades and overruns.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-14",
+     "text": "Alternative-energy portfolio disclosed: Bloom fuel cells expanding past 100 MW across 19+ sites; nuclear agreements with Oklo (500 MW), Radiant (20 microreactors), Rolls-Royce SMR (250 MWe LOI), Stellaria (500 MWe) — The most diversified firm-power book in colocation — and the first data-center-operator SMR deal (Oklo) in the industry.",
+     "src": "https://newsroom.equinix.com/2025-08-14-Equinix-Collaborates-with-Leading-Alternative-Energy-Providers-to-Power-AI-Ready-Data-Center-Growth",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Oklo sits on the generation side of the fence rather than inside the building: it appears in Switch's dossier as a 12 GW non-binding master agreement, in Equinix's as the first colocation SMR deal, in Meta's as up to 1.2 GW of a January 2026 nuclear package, and in Kiewit's as the constructor seat on the first unit.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Switch instrument is explicitly a non-binding master agreement; Diamondback, Prometheus Hyperscale and Equinix are non-binding letters of intent; Eielson is a notice of intent to award; the Meta agreement is a prepayment structure that is not described as a PPA.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-08-14"
   },
   {
    "a": "equinix",
@@ -16424,6 +16626,49 @@
   },
   {
    "a": "hitt",
+   "b": "mccarthy",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Joint-venture partner on the Next NGA West intelligence campus and on a NASA Johnson Space Center multiple-award contract.",
+     "context": "The McCarthy HITT joint venture delivered the National Geospatial-Intelligence Agency's Next NGA West campus in St. Louis — $1.7bn, 700,000 sq ft on 97 acres, opened 26 January 2026 — with Black & Veatch Special Projects, Gensler and Akima on the delivery team. The same joint venture holds a NASA Johnson Space Center multiple-award construction contract worth up to $300M, awarded June 2026 as one of seven awardees.\n\nSecure federal work is where the two firms combine; in the data-centre market they are direct rivals, and HITT ranks fourteen places above McCarthy in the ENR 2026 Top 400.",
+     "source": "https://www.hitt.com/news-hub/mccarthy-hitt-celebrate-next-nga-west-completion/",
+     "status": "active",
+     "since": "2016",
+     "scale": "$1.7bn, 700,000 sq ft on 97 acres",
+     "via": "McCarthy HITT joint venture"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Joint venture on the Next NGA West intelligence campus in St. Louis, opened January 2026, and on a NASA Johnson Space Center multiple-award contract.",
+     "context": "The McCarthy HITT joint venture delivered the National Geospatial-Intelligence Agency's Next NGA West campus — $1.7bn, 700,000 sq ft on 97 acres, announced June 2016, major construction from early 2020, opened 26 January 2026 and described as the largest federal investment in St. Louis history. The delivery team included Black & Veatch Special Projects, Gensler and Akima. The same joint venture holds a NASA Johnson Space Center multiple-award construction contract worth up to $300M awarded in June 2026, as one of seven awardees.\n\nHITT's own dossier records the campus completion from its side. Secure federal work is where the two firms combine rather than compete; in the data-centre market they are direct rivals and HITT ranks fourteen places above McCarthy in the ENR 2026 Top 400.",
+     "source": "https://www.hitt.com/news-hub/mccarthy-hitt-celebrate-next-nga-west-completion/",
+     "status": "active",
+     "since": "2016",
+     "scale": "$1.7bn, 700,000 sq ft on 97 acres",
+     "via": "McCarthy HITT joint venture"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Government & Secure Spaces",
+     "date": "",
+     "text": "Federal and secure-facility construction: the McCarthy HITT JV delivered the Next NGA West campus in St.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-26",
+     "text": "McCarthy HITT JV and NGA celebrate completion and opening of the Next NGA West campus, St. Louis — Intelligence-community delivery credential banked — the kind of past performance that feeds the Secure Spaces and federal data-center lines.",
+     "src": "HITT news hub, 2026-01-26",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-26"
+  },
+  {
+   "a": "hitt",
    "b": "microsoft",
    "curated": {
     "a": {
@@ -16567,6 +16812,21 @@
     }
    ],
    "last": "2025-04-10"
+  },
+  {
+   "a": "holder-construction",
+   "b": "mccarthy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Ranked twelfth to McCarthy's twenty-second in the same ENR edition, having risen three places on a hyperscale book.",
+     "context": "Holder moved from fifteenth to twelfth in the ENR 2026 Top 400 while McCarthy fell from twentieth to twenty-second, in an edition where the telecommunications and data-centre category grew 86.4%. Independent reporting places Holder on Google's Fort Wayne campus and EdgeCore's $1.9bn Mesa campus — the latter a project misattributed to McCarthy in aggregator content and corrected here.\n\nBasis for the link is the same comparative ranking rather than any commercial dealing; no relationship between the two firms was found in any source.",
+     "source": "https://www.constructiondive.com/news/holder-construction-arizona-data-center/704098/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "holder-construction",
@@ -17699,6 +17959,76 @@
   },
   {
    "a": "kiewit",
+   "b": "oklo",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Kiewit Nuclear Solutions is lead constructor for Oklo's first Aurora powerhouse under a Master Services Agreement, with a separate MOU for Ohio EPC planning.",
+     "context": "Selected 15 July 2025 for non-nuclear scope on Aurora-INL, with groundbreaking on 22 September 2025 and commissioning targeted for late 2027 to early 2028. A memorandum of understanding covering engineering, procurement and construction planning for Oklo's Ohio campus followed on 18 June 2026.\n\nOklo's dossier records the reactor it is building: a 75 MWe sodium-cooled fast reactor on EBR-II heritage, proceeding under DOE authorization rather than an NRC licence — which is what makes the schedule possible and what makes the seat unusual.",
+     "source": "https://oklo.com/newsroom/news-details/2025/Oklo-Selects-Kiewit-as-the-Lead-Constructor-for-First-Aurora-Powerhouse-in-Idaho/default.aspx",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "75 MWe first unit"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Lead constructor for the first Aurora powerhouse under a Master Services Agreement, with a separate MOU covering Ohio EPC planning.",
+     "context": "Kiewit Nuclear Solutions was selected on 15 July 2025 as lead constructor for Aurora-INL, focused on non-nuclear scope, and a memorandum of understanding covering engineering, procurement and construction planning for the Ohio campus followed on 18 June 2026. Groundbreaking at Idaho took place on 22 September 2025.\n\nKiewit's own dossier records the seat and its scale — roughly 370 construction jobs, commissioning targeted late 2027 to early 2028 — and notes as a negative finding that no confirmed Kiewit role exists on TerraPower Natrium, BWXT or X-energy programmes. The Oklo seat is the verified advanced-reactor relationship on both sides.",
+     "source": "https://oklo.com/newsroom/news-details/2025/Oklo-Selects-Kiewit-as-the-Lead-Constructor-for-First-Aurora-Powerhouse-in-Idaho/default.aspx",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "Lead constructor, Aurora-INL",
+     "via": "Kiewit Nuclear Solutions"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Kiewit is the power picks-and-shovels play on the AI buildout — a 142-year-old, employee-owned Omaha EPC giant now stacking a ~11 GW AI-driven gas-generation book: EPC on Homer City, PA (up to 4.5 GW, seven GE Vernova 7HA.02 turbines — the largest US gas plant under construction, powering a >3,200-acre AI campus), the NRG/GE Vernova venture (~5.4 GW of CCGTs for data-center demand in ERCOT/PJM), and Oglethorpe's 1,425 MW Georgia plant, plus lead-constructor on Oklo's first Aurora fast reactor at Idaho National Laboratory and completion of the 339-mile, 1,250 MW Champlain Hudson Power Express HVDC line.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Kiewit is the purest power-side play on the AI buildout among top-tier contractors: a stacked ~11 GW gas-EPC book (Homer City 4.5 GW, NRG/GEV ~5.4 GW, Oglethorpe 1.4 GW), completed HVDC delivery (CHPE), the Oklo SMR constructor seat, and a data-center practice that sells campus power/water/shell rather than fit-out.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Nuclear (Kiewit Nuclear Solutions)",
+     "date": "",
+     "text": "Kiewit Nuclear Solutions is lead constructor for Oklo's first Aurora powerhouse at Idaho National Laboratory (~75 MWe fast reactor; Sam Altman-backed developer): design, procurement, and construction management focused on non-nuclear scope; ~370 construction jobs; commissioning targeted late 2027-early 2028.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Oklo sits on the generation side of the fence rather than inside the building: it appears in Switch's dossier as a 12 GW non-binding master agreement, in Equinix's as the first colocation SMR deal, in Meta's as up to 1.2 GW of a January 2026 nuclear package, and in Kiewit's as the constructor seat on the first unit.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its supply chain reaches back into companies already covered here — Siemens Energy for the power conversion system under the only binding commercial contract Oklo has announced, Kiewit for construction, Vertiv for power and thermal reference designs, ABB for the operator monitoring room, and NVIDIA with Los Alamos for fuel-modelling work.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-18",
+     "text": "Letter of intent with Centrus for HALEU sufficient for up to five Aurora powerhouses, deliveries scheduled to begin 2029; Kiewit MOU for Ohio EPC planning — The commercial fuel supply is still a letter of intent whose price, volume and prepayment terms are all unnegotiated — three years before the first delivery date.",
+     "src": "https://oklo.com/newsroom/news-details/2026/Oklo-Centrus-Sign-Letter-of-Intent-to-Purchase-Nuclear-Fuel-for-Aurora-Powerhouse-Deployment-in-Southern-Ohio/default.aspx",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-18"
+  },
+  {
+   "a": "kiewit",
    "b": "primoris",
    "curated": {
     "b": {
@@ -18082,6 +18412,40 @@
     }
    ],
    "last": "2026-05-08"
+  },
+  {
+   "a": "lightsource-bp",
+   "b": "mccarthy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Engineering, procurement and construction contractor on multiple utility-scale solar projects in Texas and Colorado.",
+     "context": "McCarthy was selected as EPC contractor for Elm Branch (163 MW, Ennis, Texas) and Briar Creek (153 MW, Corsicana, Texas), announced March 2021, and built 600 MW across Pueblo, Colorado including the 300 MW Bighorn Solar and Sun Mountain projects — 1,700-plus acres, 636,990 First Solar panels, Array Technologies trackers and more than four miles of transmission line.\n\nMcCarthy is ranked second among large-scale storage installers and third among EPC providers by Solar Power World, having climbed from seventh-ranked solar contractor nationally in 2018.",
+     "source": "Texas Contractor — McCarthy begins construction on two Texas solar farms totalling more than 300 MW for Lightsource bp",
+     "status": "active",
+     "since": "2021",
+     "scale": "Elm Branch 163 MW, Briar Creek 153 MW, Pueblo 600 MW"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Selected as EPC contractor on multiple utility-scale solar projects in Texas and Colorado.",
+     "context": "McCarthy was 'selected by Lightsource bp as the Engineering, Procurement, and Construction (EPC) Contractor' for Elm Branch (163 MW, Ennis, Texas) and Briar Creek (153 MW, Corsicana, Texas), announced March 2021, and built 600 MW across Pueblo, Colorado including the 300 MW Bighorn Solar and Sun Mountain projects — 1,700-plus acres, 636,990 First Solar panels, Array Technologies trackers and more than four miles of transmission line.\n\nLightsource bp's own dossier covers the developer side. This is the only relationship in McCarthy's renewables book that resolves to a company already covered here — the rest of the developer set is Swift Current Energy, Sunraycer, Longroad, Silicon Ranch, EDF Renewables and EDP Renewables, none of which is in the registry.",
+     "source": "Texas Contractor — McCarthy begins construction on two Texas solar farms totalling more than 300 MW for Lightsource bp; Solar Builder archive",
+     "status": "active",
+     "since": "2021",
+     "scale": "Elm Branch 163 MW, Briar Creek 153 MW, Sun Mountain / Bighorn 300 MW"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Beyond data centres it appears in two other ecosystem roles: as a joint-venture partner to HITT on the $1.7bn Next NGA West intelligence campus and to Mortenson on the Las Vegas stadium work, and as a utility-scale solar and storage contractor to Lightsource bp, Swift Current Energy, Longroad Energy, Silicon Ranch and Sunraycer.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2021"
   },
   {
    "a": "lightsource-bp",
@@ -18572,6 +18936,20 @@
   },
   {
    "a": "mastec",
+   "b": "mccarthy",
+   "evid": [
+    {
+     "where": "Capabilities · Renewable energy — utility-scale solar and battery storage",
+     "date": "",
+     "text": "The competitive set is Blattner, MasTec, Primoris and SOLV Energy — all covered in this corpus, and none of them linked to McCarthy by any source.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mastec",
    "b": "mortenson",
    "curated": {
     "b": {
@@ -18731,6 +19109,255 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "mccarthy",
+   "b": "mortenson",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Mortenson-McCarthy joint venture holds both marquee Las Vegas stadium jobs — Allegiant Stadium and the Athletics ballpark.",
+     "context": "Mortenson's own dossier records the pairing: the Mortenson-McCarthy joint venture holds both marquee Las Vegas jobs, Allegiant Stadium at $1.97bn with a certificate of occupancy in 2020 and the $1.75bn, 33,000-seat Las Vegas Athletics ballpark, which broke ground in June 2025 for a 2028 opening.\n\nThe two firms are joint-venture partners on sports and rivals on data centres, where Mortenson rose twelve places to tenth in the ENR 2026 Top 400 on a hyperscale book that includes Meta's Beaver Dam and Rosemount campuses. It is the same pattern as the Turner relationship: partner where the job is too big for one bench, competitor everywhere else.",
+     "source": "Construction Equipment Guide — Athletics break ground on the $1.75B Las Vegas ballpark due in 2028 (Mortenson-McCarthy); McCarthy company history",
+     "status": "active",
+     "since": "2018",
+     "scale": "Allegiant Stadium $1.97B; Las Vegas Athletics ballpark $1.75B"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Joint-venture partner on both marquee Las Vegas stadium jobs — Allegiant Stadium and the Athletics ballpark — and a data-centre rival.",
+     "context": "The Mortenson-McCarthy joint venture holds Allegiant Stadium, delivered at $1.97bn with a certificate of occupancy in 2020, and the $1.75bn, 33,000-seat Las Vegas Athletics ballpark, which broke ground in June 2025 for a 2028 opening.\n\nThe two firms diverged sharply in the ENR 2026 Top 400: Mortenson rose twelve places to tenth on a hyperscale book that includes Meta's Beaver Dam and Rosemount campuses, while McCarthy fell two places to twenty-second. Partner where a job is too big for one bench, competitor everywhere else.",
+     "source": "Construction Equipment Guide — Athletics break ground on the $1.75B Las Vegas ballpark due in 2028 (Mortenson-McCarthy)",
+     "status": "active",
+     "since": "2018",
+     "scale": "Allegiant Stadium $1.97B; Las Vegas Athletics ballpark $1.75B"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Beyond data centres it appears in two other ecosystem roles: as a joint-venture partner to HITT on the $1.7bn Next NGA West intelligence campus and to Mortenson on the Las Vegas stadium work, and as a utility-scale solar and storage contractor to Lightsource bp, Swift Current Energy, Longroad Energy, Silicon Ranch and Sunraycer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Mission critical — data centres and secure facilities",
+     "date": "",
+     "text": "McCarthy does not appear in the named leaders of ENR's or Building Design+Construction's data-centre rankings, nor in Construction Dive's roundup of multibillion-dollar hyperscaler projects — those name HITT, Holder, DPR, Clayco, Turner, Whiting-Turner, Fortis, JE Dunn and Mortenson.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Mission critical — data centres and secure facilities",
+     "date": "",
+     "text": "In the ENR 2026 Top 400 every peer with a heavy data-centre book moved sharply up (Mortenson +12, Clune +13, Fortis +11, Holder +3, HITT +2 into the top ten) while McCarthy moved down two places to 22.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Sports, Healthcare & Development (Mortenson Properties)",
+     "date": "",
+     "text": "Bank Stadium, Fiserv Forum, Chase Center, Climate Pledge Arena; the $1.75B Las Vegas Athletics ballpark underway with McCarthy for 2028), $14B+ of healthcare work over 60 years, federal, higher-ed, and advanced-manufacturing markets, plus Mortenson Properties — the family real-estate arm that has developed 8M+ sq ft valued at >$2B over ten years and now fronts data-center land entitlement (e.g., the Google-anchored Hermantown MN site).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-24",
+     "text": "Groundbreaking on the $1.75B, 33,000-seat Las Vegas Athletics ballpark (Mortenson-McCarthy CM; 2028 opening) — The sports franchise keeps its second-largest-US-sports-builder position funded and staffed without competing for data-center labor pools.",
+     "src": "Construction Equipment Guide, June 2025",
+     "from": "b"
+    }
+   ],
+   "last": "2025-06-24"
+  },
+  {
+   "a": "mccarthy",
+   "b": "openai",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Named alongside Oracle as the venture the Lighthouse capacity supports; McCarthy's contract is with Vantage.",
+     "context": "Same source and same indirection as the Oracle link: the buildings the Turner-McCarthy joint venture is constructing will host capacity supporting Oracle and OpenAI's Stargate venture. There is no contractual relationship between McCarthy and OpenAI in any source.\n\nRecorded because the corpus tracks Stargate as a named project and because a reader following the campus from tenant to builder should find the chain complete rather than broken at the general contractor.",
+     "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+     "status": "announced",
+     "since": "2026-01",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its confirmed hyperscale work runs through a single client, Vantage Data Centers, across four engagements — Goodyear Arizona Phase II as general contractor, the NV1 campus outside Reno with its NV11 and NV12 buildings, and Buildings 13 and 14 of the Lighthouse campus at Port Washington, Wisconsin, which McCarthy builds in a joint venture with Turner and which will host a combined 468 MW for Oracle and OpenAI's Stargate venture.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-22",
+     "text": "Turner-McCarthy joint venture confirmed on Buildings 13 and 14 of the Lighthouse campus, hosting a combined 468 MW for Oracle and OpenAI's Stargate venture — The largest data-centre engagement in the company's public record, and the first that reaches a hyperscale AI end user — through Vantage rather than directly.",
+     "src": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-22"
+  },
+  {
+   "a": "mccarthy",
+   "b": "oracle",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "End user of the capacity the Turner-McCarthy joint venture is building at Lighthouse; McCarthy's contract is with Vantage, not with Oracle.",
+     "context": "The Daily Reporter states that Buildings 13 and 14 'will host a combined 468 MW to support Oracle and OpenAI's Stargate venture'. The indirection is stated deliberately: McCarthy's contractual counterparty is Vantage Data Centers as landlord and developer, and Oracle is the tenant of record for the capacity being built.\n\nIt is curated because the source names the link explicitly and because the same chain is recorded from the other end in Vantage's and Turner's dossiers, where Oracle appears as anchor tenant of the two Stargate giga-campuses.",
+     "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+     "status": "announced",
+     "since": "2026-01",
+     "scale": "468 MW across Buildings 13 and 14",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its confirmed hyperscale work runs through a single client, Vantage Data Centers, across four engagements — Goodyear Arizona Phase II as general contractor, the NV1 campus outside Reno with its NV11 and NV12 buildings, and Buildings 13 and 14 of the Lighthouse campus at Port Washington, Wisconsin, which McCarthy builds in a joint venture with Turner and which will host a combined 468 MW for Oracle and OpenAI's Stargate venture.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-22",
+     "text": "Turner-McCarthy joint venture confirmed on Buildings 13 and 14 of the Lighthouse campus, hosting a combined 468 MW for Oracle and OpenAI's Stargate venture — The largest data-centre engagement in the company's public record, and the first that reaches a hyperscale AI end user — through Vantage rather than directly.",
+     "src": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-22"
+  },
+  {
+   "a": "mccarthy",
+   "b": "primoris",
+   "evid": [
+    {
+     "where": "Capabilities · Renewable energy — utility-scale solar and battery storage",
+     "date": "",
+     "text": "The competitive set is Blattner, MasTec, Primoris and SOLV Energy — all covered in this corpus, and none of them linked to McCarthy by any source.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mccarthy",
+   "b": "solv-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Renewable energy — utility-scale solar and battery storage",
+     "date": "",
+     "text": "The competitive set is Blattner, MasTec, Primoris and SOLV Energy — all covered in this corpus, and none of them linked to McCarthy by any source.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mccarthy",
+   "b": "turner-construction",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Fifty-fifty joint venture on the Lighthouse campus, and the ENR Top 400 leader McCarthy competes with everywhere else.",
+     "context": "ENR named the first-phase construction team in November 2025: 'Whiting-Turner Contracting Co., The Weitz Co., a joint venture of Turner Construction and McCarthy Building Cos., and Michels'. The Daily Reporter then stated the scope precisely: 'Working as the Turner McCarthy Building Companies, Inc. Joint Venture, the contractors will work on Buildings 13 and 14, which will host a combined 468 MW to support Oracle and OpenAI's Stargate venture.'\n\nTurner's own dossier records the same joint venture from its side with `via: Turner-McCarthy JV`, inside a data-centre book that roughly tripled toward $9bn in 2025. The relationship is the mechanism by which McCarthy reached a giga-campus at all — a four-way phase split is how a landlord buys capacity it cannot get from one builder.",
+     "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "468 MW across Buildings 13 and 14",
+     "via": "Turner-McCarthy joint venture",
+     "project": "lighthouse"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Fifty-fifty joint-venture partner on the Lighthouse campus at Port Washington, and a building-GC rival everywhere else.",
+     "context": "ENR named the first-phase construction team in November 2025 as Whiting-Turner, The Weitz Co., a joint venture of Turner Construction and McCarthy Building Cos., and Michels. The Daily Reporter later gave the scope precisely: the joint venture builds Buildings 13 and 14, hosting a combined 468 MW to support Oracle and OpenAI's Stargate venture.\n\nMcCarthy is the smaller partner by ENR rank — 22 against 1 in the 2026 Top 400 — and the pairing is the mechanism by which it reached a giga-campus at all.",
+     "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "468 MW across Buildings 13 and 14",
+     "via": "Turner-McCarthy joint venture",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The award stack reads like the AI buildout itself: Meta Richland Parish LA (expanded to $50B / 5 GW, shared with DPR and Mortenson), Meta Lebanon IN ($10B / 1 GW), CoreWeave Lancaster PA ($6B, Turner-Wohlsen JV), and the $15B Vantage 'Stargate' campus for OpenAI/Oracle in Port Washington WI (Turner-McCarthy JV on phase 1).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-25",
+     "text": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028) — A seat on the flagship OpenAI-linked campus — split four ways with Whiting-Turner, Weitz, and Michels, the clearest evidence hyperscale owners multi-source GC capacity.",
+     "src": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11"
+  },
+  {
+   "a": "mccarthy",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "The only named hyperscale data-centre client anywhere in McCarthy's public record, across four engagements on three campuses.",
+     "context": "McCarthy 'serves as the general contractor for Phase II' of Vantage's Goodyear, Arizona campus, which topped out in July 2023 and reaches 176 MW of IT capacity across three facilities in more than a million square feet on stated client investment above $1.5bn. At Storey County, Nevada it is building the NV1 campus — 224 MW projected across four buildings on 137 acres — where NV12 alone is 64 MW in 260,000 sq ft and topped out in January 2026 with more than 1.1 million labour hours and zero lost-time incidents claimed. And at Port Washington, Wisconsin the Turner-McCarthy joint venture is building two buildings of the Lighthouse campus.\n\nVantage's own dossier records the McCarthy side of the Lighthouse engagement through Turner. The concentration is the finding: no other hyperscale client is named by McCarthy or by any independent source, while a confidential-client Scottsdale project proves the company does carry undisclosed mission-critical work.",
+     "source": "https://vantage-dc.com/news/vantage-data-centers-and-mccarthy-building-companies-celebrate-topping-out-of-construction-on-phase-ii-of-major-data-center-project-in-goodyear-ariz/",
+     "status": "active",
+     "since": "2023",
+     "scale": "418 MW built; NV1 224 MW projected, Goodyear 176 MW, Lighthouse buildings 468 MW"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "General contractor across three campuses — Goodyear Phase II, the NV1 campus near Reno including NV11 and NV12, and, in joint venture with Turner, Buildings 13 and 14 at Lighthouse.",
+     "context": "McCarthy served as general contractor for Phase II at Goodyear, Arizona, topped out July 2023 and reaching 176 MW across three facilities in more than a million square feet. At Storey County, Nevada it is building the NV1 campus — 224 MW projected across four buildings — where NV12 alone is 64 MW in 260,000 sq ft, topped out January 2026 with more than 1.1 million labour hours and zero lost-time incidents claimed.\n\nAt Port Washington the Turner-McCarthy joint venture is building Buildings 13 and 14, hosting a combined 468 MW for the Oracle and OpenAI Stargate venture within the $8bn first phase. Notably, this dossier is the only named hyperscale data-centre client anywhere in McCarthy's public record.",
+     "source": "https://vantage-dc.com/news/vantage-data-centers-and-mccarthy-building-companies-celebrate-topping-out-of-construction-on-phase-ii-of-major-data-center-project-in-goodyear-ariz/",
+     "status": "active",
+     "since": "2023",
+     "scale": "Goodyear 176 MW, NV1 224 MW projected, Lighthouse 468 MW",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its confirmed hyperscale work runs through a single client, Vantage Data Centers, across four engagements — Goodyear Arizona Phase II as general contractor, the NV1 campus outside Reno with its NV11 and NV12 buildings, and Buildings 13 and 14 of the Lighthouse campus at Port Washington, Wisconsin, which McCarthy builds in a joint venture with Turner and which will host a combined 468 MW for Oracle and OpenAI's Stargate venture.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-22",
+     "text": "Tops out NV12 at Vantage Data Centers near Reno — 64 MW, 260,000 sq ft, design-build, more than 1.1 million labour hours with zero lost-time incidents — Phase I of the campus reaches 128 MW across NV11 and NV12; phased turnover runs from December 2027 to early 2029.",
+     "src": "https://www.mccarthy.com/insights/mccarthy-building-companies-celebrates-topping-out-of-nv12-project-at-vantage-data-centers",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2023-07-06",
+     "text": "Tops out Phase II of Vantage Data Centers' Goodyear, Arizona campus as general contractor — 176 MW across three facilities at full build — The relationship that began the data-centre practice and still accounts for every named hyperscale client in the file.",
+     "src": "https://vantage-dc.com/news/vantage-data-centers-and-mccarthy-building-companies-celebrate-topping-out-of-construction-on-phase-ii-of-major-data-center-project-in-goodyear-ariz/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-22"
   },
   {
    "a": "megmeet",
@@ -19183,6 +19810,75 @@
     }
    ],
    "last": "2026-04-09"
+  },
+  {
+   "a": "meta",
+   "b": "oklo",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Prepayment agreement supporting a 1.2 GW clean-energy campus in Pike County, Ohio — Meta prepays for power and funds powerhouse deployment.",
+     "context": "Announced 9 January 2026, signed on 5 January, and the strongest instrument in Oklo's entire customer book because it moves money rather than intent: Oklo states the funding is applied to securing nuclear fuel for the first phase. First phase targeted as early as 2030 with the full 1.2 GW by 2034.\n\nThe interconnection is the live risk. PJM withdrew the 750 MW Pike County request on 3 August 2026 — 150 MW nuclear, 300 MW fuel cells and 300 MW gas — stating Oklo never demonstrated ride-through of a sudden voltage drop; Oklo filed an emergency complaint at FERC on 28 August 2026 claiming a delay of at least 14 months.",
+     "source": "https://oklo.com/newsroom/news-details/2026/Oklo-Meta-Announce-Agreement-in-Support-of-1-2-GW-Nuclear-Energy-Development-in-Southern-Ohio/default.aspx",
+     "status": "announced",
+     "since": "2026-01",
+     "scale": "Up to 1.2 GW campus"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Prepayment agreement supporting the Pike County, Ohio campus — Meta prepays for power and funds powerhouse deployment; Oklo states the funding secures nuclear fuel.",
+     "context": "Announced 9 January 2026 and signed on 5 January. It is the strongest instrument in Oklo's customer book because it moves money rather than intent: Meta prepays for power and the funding is applied to securing fuel for the first phase. Neither the dollar value nor the bindingness of the whole agreement is disclosed, and it is not described as a power purchase agreement.\n\nMeta's own dossier records it inside a January 2026 nuclear package of up to 6.6 GW alongside TerraPower and Vistra, with the Oklo element at up to 1.2 GW targeted for around 2030. The campus interconnection was withdrawn by PJM on 3 August 2026 and is under emergency complaint at FERC.",
+     "source": "https://oklo.com/newsroom/news-details/2026/Oklo-Meta-Announce-Agreement-in-Support-of-1-2-GW-Nuclear-Energy-Development-in-Southern-Ohio/default.aspx",
+     "status": "announced",
+     "since": "2026-01",
+     "scale": "Up to 1.2 GW campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Meta as the ecosystem's most aggressive single energy buyer relative to its size: >30 GW of clean energy contracted, ~7.7 GW of nuclear (Constellation Clinton 1.1 GW + the January 2026 TerraPower/Oklo/Vistra package of up to 6.6 GW), seven new gas plants plus three grid-scale batteries in the Entergy Louisiana package, and frontier bets (1 GW/100 GWh Noon Energy long-duration storage reservation; 1 GW space solar).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy Procurement Portfolio",
+     "date": "",
+     "text": "Nuclear: Constellation Clinton (1,121 MW, 20-yr, from 2027) plus the January 2026 package — TerraPower (2 Natrium units of 690 MW each + rights to six more, with 1.2 GW of molten-salt thermal storage capability), Oklo (up to 1.2 GW Aurora campus, ~2030), Vistra (2.1 GW existing-plant PPAs + 433 MW uprates, the largest corporate-backed uprates).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "Up to 6.6 GW of nuclear contracted: TerraPower (Natrium, ~2032), Oklo (~2030), Vistra (2.1 GW + 433 MW uprates) — The largest corporate nuclear package — Natrium's built-in 1.2 GW thermal-storage capability is the adjacent-storage angle worth tracking.",
+     "src": "https://about.fb.com/news/2026/01/meta-nuclear-energy-projects-power-american-ai-leadership/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Oklo sits on the generation side of the fence rather than inside the building: it appears in Switch's dossier as a 12 GW non-binding master agreement, in Equinix's as the first colocation SMR deal, in Meta's as up to 1.2 GW of a January 2026 nuclear package, and in Kiewit's as the constructor seat on the first unit.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Switch instrument is explicitly a non-binding master agreement; Diamondback, Prometheus Hyperscale and Equinix are non-binding letters of intent; Eielson is a notice of intent to award; the Meta agreement is a prepayment structure that is not described as a PPA.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-31",
+     "text": "PJM withdraws Oklo's 750 MW Pike County interconnection project; Oklo files an emergency complaint at FERC — The interconnection, not the reactor, is the binding constraint on the Meta-backed Ohio campus — and Oklo says the withdrawal costs it at least 14 months.",
+     "src": "Utility Dive — PJM drops Oklo advanced nuclear project from interconnection study cycle (published 2026-08-31, updated 2026-09-01)",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-31"
   },
   {
    "a": "meta",
@@ -20265,6 +20961,20 @@
   },
   {
    "a": "mitsubishi-electric",
+   "b": "trane-technologies",
+   "evid": [
+    {
+     "where": "Capabilities · Commercial HVAC systems, controls and services",
+     "date": "",
+     "text": "Trane is an applied and commercial specialist rather than a volume air-conditioning player: it does not appear in independent top-five rankings of the global air-conditioning market, which are led by Daikin, Carrier, LG, Midea and Mitsubishi Electric.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
    "b": "vertiv",
    "curated": {
     "a": {
@@ -20993,6 +21703,52 @@
   },
   {
    "a": "nvidia",
+   "b": "oklo",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Collaboration with Oklo and Los Alamos National Laboratory on AI-enabled modelling, digital twins and fuel validation for plutonium-bearing fuels.",
+     "context": "Announced 23 April 2026. The direction is unusual for this corpus: compute applied to the reactor rather than the reactor applied to compute. The work supports fuel qualification for the surplus-plutonium pathway Oklo entered advanced DOE negotiations on a month later.\n\nA parallel strand runs through Idaho National Laboratory's 'Prometheus' AI platform, integrated under a strategic partnership announced 12 May 2026 in support of Pluto, Oklo's plutonium-fuelled reactor system.",
+     "source": "https://oklo.com/newsroom/news-details/2026/Oklo-NVIDIA-and-Los-Alamos-National-Laboratory-Collaborate-to-Advance-Nuclear-Fuel-Validation-at-Los-Alamos-in-Support-of-Nuclear-Powered-AI-Factories/default.aspx",
+     "status": "active",
+     "since": "2026-04"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Collaboration with NVIDIA and Los Alamos National Laboratory on AI-enabled modelling, digital twins and fuel validation for plutonium-bearing fuels.",
+     "context": "Announced 23 April 2026. Unusually for this corpus, the compute is pointed at the reactor rather than the reactor at the compute: the work applies AI-enabled modelling and digital twins to fuel qualification, supporting the surplus-plutonium pathway Oklo entered advanced negotiations on a month later.\n\nA separate strand runs through Idaho National Laboratory's 'Prometheus' AI platform, integrated under a strategic partnership project announced 12 May 2026 in support of Pluto, Oklo's plutonium-fuelled reactor system under the Reactor Pilot Program.",
+     "source": "https://oklo.com/newsroom/news-details/2026/Oklo-NVIDIA-and-Los-Alamos-National-Laboratory-Collaborate-to-Advance-Nuclear-Fuel-Validation-at-Los-Alamos-in-Support-of-Nuclear-Powered-AI-Factories/default.aspx",
+     "status": "active",
+     "since": "2026-04"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its supply chain reaches back into companies already covered here — Siemens Energy for the power conversion system under the only binding commercial contract Oklo has announced, Kiewit for construction, Vertiv for power and thermal reference designs, ABB for the operator monitoring room, and NVIDIA with Los Alamos for fuel-modelling work.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-23",
+     "text": "Collaboration with NVIDIA and Los Alamos National Laboratory on AI-enabled modelling, digital twins and fuel validation for plutonium-bearing fuels — The AI-and-nuclear relationship running in the unusual direction: compute applied to fuel qualification rather than reactors applied to compute.",
+     "src": "https://oklo.com/newsroom/news-details/2026/Oklo-NVIDIA-and-Los-Alamos-National-Laboratory-Collaborate-to-Advance-Nuclear-Fuel-Validation-at-Los-Alamos-in-Support-of-Nuclear-Powered-AI-Factories/default.aspx",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-22",
+     "text": "Collaboration agreement with Vertiv to co-develop power and thermal reference designs, with a pilot demonstration planned for the first Aurora — Positions the reactor inside the data-centre equipment stack rather than beside it — the same reference-design pattern the cooling and power OEMs use with NVIDIA.",
+     "src": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Vertiv-Announce-Collaboration-to-Advance-Power-and-Cooling-Solutions-for-Hyperscale-and-Colocation-Data-Centers-in-the-United-States/default.aspx",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-23"
+  },
+  {
+   "a": "nvidia",
    "b": "openai",
    "curated": {
     "a": {
@@ -21431,6 +22187,75 @@
   },
   {
    "a": "nvidia",
+   "b": "trane-technologies",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Thermal-management reference designs for gigawatt-scale AI factories, engineered for the NVIDIA Omniverse DSX Blueprint.",
+     "context": "Announced 28 October 2025 as the first comprehensive thermal-management system reference design at gigawatt scale, supporting GB300 NVL72 and next-generation Vera Rubin systems with OpenUSD-based SimReady assets.\n\nOptimised 16 March 2026 with a stated 10% improvement in overall thermal performance that frees 22 MW of cooling capacity for IT power, delivered as a 250 MW duplex system and a 1 GW magnetic-bearing air-cooled architecture. LiquidStack, a Trane company since March 2026, subsequently launched a GigaModular CDU built to Vera Rubin specifications and scaling to 14 MW.",
+     "source": "https://www.businesswire.com/news/home/20251028272299/en/Trane-Technologies-Unveils-Industrys-First-Comprehensive-Thermal-Management-System-Reference-Design-for-Gigawatt-Scale-NVIDIA-AI-Factories",
+     "status": "active",
+     "since": "2025-10",
+     "via": "Thermal management reference design"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Co-authored thermal-management reference designs for gigawatt-scale NVIDIA AI factories, engineered for the NVIDIA Omniverse DSX Blueprint.",
+     "context": "Announced 28 October 2025 as the industry's first comprehensive thermal-management system reference design at gigawatt scale, supporting GB300 NVL72 and next-generation Vera Rubin systems, with OpenUSD-based SimReady assets for digital-twin work.\n\nOptimised on 16 March 2026 with a stated 10% improvement in overall thermal performance that frees 22 MW of cooling capacity for IT power, delivered as two Trane Continuum Rubin DSX designs — a 250 MW duplex system available then, and a 1 GW magnetic-bearing air-cooled architecture using 3 MW chiller units. LiquidStack, a Trane company since March 2026, subsequently launched a GigaModular CDU built to NVIDIA Vera Rubin specifications and scaling to 14 MW.",
+     "source": "https://www.businesswire.com/news/home/20251028272299/en/Trane-Technologies-Unveils-Industrys-First-Comprehensive-Thermal-Management-System-Reference-Design-for-Gigawatt-Scale-NVIDIA-AI-Factories",
+     "status": "active",
+     "since": "2025-10",
+     "via": "Thermal management reference design"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The only two publicly stated commercial relationships in this ecosystem are reference-design collaborations with NVIDIA (October 2025) and Eaton (August 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: three published designs in ten months — NVIDIA in October 2025, an optimisation in March 2026 quantified as 22 MW of cooling capacity freed for IT power, and the Eaton power-and-thermal integration in August 2026 claiming 80% less copper and 30% lower installation cost.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: across an exhaustive check of hyperscalers, colocation operators, AIDC developers and the general contractors that build for them, no source states a commercial relationship between Trane Technologies and any of them; the only two publicly stated relationships in this ecosystem are the NVIDIA and Eaton reference designs.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-17",
+     "text": "Trane Technologies and Eaton publish an industry-first joint power-and-thermal reference design for AI data centres — The chiller vendor and the electrical vendor selling one engineered chain rather than two catalogues — and the only publicly stated commercial relationship Trane has in this ecosystem besides NVIDIA.",
+     "src": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-16",
+     "text": "NVIDIA thermal reference design optimised: 10% better thermal performance, freeing 22 MW of cooling capacity for IT power, delivered as two Trane Continuum Rubin DSX designs — Selling the blueprint before the hardware, at gigawatt scale — and quantifying the prize in megawatts of IT capacity rather than in efficiency percentages.",
+     "src": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-Optimizes-IndustryFirst-Thermal-Management-Reference-Design-for-AI-Factories-Introduces-Two-New-Designs/default.aspx",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-28",
+     "text": "Unveils the industry's first comprehensive thermal management system reference design for gigawatt-scale NVIDIA AI factories — Positions the chiller vendor inside NVIDIA's design blueprint rather than downstream of it — the same reference-design pattern the power OEMs use.",
+     "src": "https://www.businesswire.com/news/home/20251028272299/en/Trane-Technologies-Unveils-Industrys-First-Comprehensive-Thermal-Management-System-Reference-Design-for-Gigawatt-Scale-NVIDIA-AI-Factories",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-17"
+  },
+  {
+   "a": "nvidia",
    "b": "vantage",
    "evid": [
     {
@@ -21759,6 +22584,192 @@
     }
    ],
    "last": "2026-08-21"
+  },
+  {
+   "a": "oklo",
+   "b": "openai",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-22",
+     "text": "Sam Altman steps down as chairman; CEO Jacob DeWitte becomes chairman — Removes a conflict ahead of possible AI-company supply talks and combines the chair and chief-executive roles in one person; no OpenAI agreement has followed in the seventeen months since.",
+     "src": "https://oklo.com/newsroom/news-details/2025/Oklo-Announces-Chairman-Transition/default.aspx",
+     "from": "a"
+    }
+   ],
+   "last": "2025-04-22"
+  },
+  {
+   "a": "oklo",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Under binding contract to deliver the Aurora-INL power conversion system — the only binding commercial contract in Oklo's public record.",
+     "context": "The relationship ran through three escalating instruments: a memorandum of understanding in December 2023, a preferred-supplier agreement in August 2024, and a binding contract signed on 19 November 2025 covering a condensing SST-600 steam turbine, an SGen-100A industrial generator and associated auxiliaries.\n\nIt is the single most useful fact about the Aurora's architecture. A sodium-cooled fast reactor is exotic on the nuclear side and entirely conventional on the power side: the secondary circuit is a steam Rankine cycle, and the turbine and generator can therefore be bought from an established turbine OEM rather than developed. Siemens Energy's own dossier here covers that catalogue from the other direction.",
+     "source": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Siemens-Energy-Sign-Binding-Contract-to-Expedite-Procurement-of-the-Power-Conversion-System-for-Commercial-Power-Plant/default.aspx",
+     "status": "active",
+     "since": "2023-12",
+     "scale": "SST-600 turbine + SGen-100A generator",
+     "via": "Power conversion system"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Binding contract to supply the power conversion system — a condensing SST-600 steam turbine and SGen-100A generator — for Oklo's first Aurora powerhouse.",
+     "context": "The relationship escalated through three instruments: an MOU in December 2023, a preferred-supplier agreement in August 2024, and a binding contract signed 19 November 2025. It is the only binding commercial contract in Oklo's entire public record.\n\nIt is also the clearest statement of what an advanced reactor actually buys from a turbine OEM. The nuclear island is exotic — sodium-cooled, fast spectrum, metal fuel — and the secondary side is a conventional steam Rankine cycle, so the turbine and generator come from the same catalogue this dossier's grid and generation sections describe.",
+     "source": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Siemens-Energy-Sign-Binding-Contract-to-Expedite-Procurement-of-the-Power-Conversion-System-for-Commercial-Power-Plant/default.aspx",
+     "status": "active",
+     "since": "2023-12",
+     "scale": "SST-600 turbine + SGen-100A generator",
+     "via": "Power conversion system"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its supply chain reaches back into companies already covered here — Siemens Energy for the power conversion system under the only binding commercial contract Oklo has announced, Kiewit for construction, Vertiv for power and thermal reference designs, ABB for the operator monitoring room, and NVIDIA with Los Alamos for fuel-modelling work.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The only binding commercial contract Oklo has announced is with a supplier, Siemens Energy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Aurora powerhouse — sodium-cooled fast reactor",
+     "date": "",
+     "text": "Power conversion is a steam Rankine cycle: Siemens Energy is under binding contract to deliver a condensing SST-600 steam turbine, an SGen-100A industrial generator and associated auxiliaries for the first unit.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-19",
+     "text": "Binding contract with Siemens Energy for the Aurora-INL power conversion system: a condensing SST-600 steam turbine and SGen-100A generator — The only binding commercial contract in the entire company record, and it is with a supplier rather than a customer.",
+     "src": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Siemens-Energy-Sign-Binding-Contract-to-Expedite-Procurement-of-the-Power-Conversion-System-for-Commercial-Power-Plant/default.aspx",
+     "from": "a"
+    }
+   ],
+   "last": "2025-11-19"
+  },
+  {
+   "a": "oklo",
+   "b": "switch",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Non-binding master power agreement — a framework, with individual binding agreements to be finalised as project milestones are reached.",
+     "context": "Signed 18 December 2024 and described by both parties as one of the largest corporate clean-power agreements ever signed. It is explicitly non-binding: the master agreement establishes a framework, and Switch's own dossier records the same caution — 'non-binding, with no operating Oklo plant yet'.\n\nIts significance is arithmetic as much as commercial. Oklo's stated order book reached approximately 14 GW after this signing, which means roughly six sevenths of the pipeline sits inside this one instrument. Oklo stopped publishing a pipeline figure after mid-2025.",
+     "source": "https://oklo.com/newsroom/news-details/2024/Oklo-and-Switch-Form-Landmark-Strategic-Relationship-to-Deploy-12-Gigawatts-of-Advanced-Nuclear-Power-One-of-the-Largest-Corporate-Clean-Power-Agreements-Ever-Signed/default.aspx",
+     "status": "announced",
+     "since": "2024-12",
+     "scale": "12 GW through 2044"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Non-binding master power agreement for Aurora powerhouses — a framework, with individual binding agreements to be finalised as project milestones are reached.",
+     "context": "Signed 18 December 2024 and described by both parties as one of the largest corporate clean-power agreements ever signed. Utility Dive's contemporaneous account is explicit that it is 'not yet binding on either party'.\n\nThe arithmetic is worth carrying: Oklo's stated order book reached approximately 14 GW after this signing, so roughly six sevenths of that pipeline sits inside this single instrument — and Oklo stopped publishing a pipeline figure after mid-2025.",
+     "source": "https://www.utilitydive.com/news/oklo-aurora-smr-advanced-nuclear-reactor-supply-agreement-data-center-developer-switch/735933/",
+     "status": "announced",
+     "since": "2024-12",
+     "scale": "12 GW through 2044"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Oklo sits on the generation side of the fence rather than inside the building: it appears in Switch's dossier as a 12 GW non-binding master agreement, in Equinix's as the first colocation SMR deal, in Meta's as up to 1.2 GW of a January 2026 nuclear package, and in Kiewit's as the constructor seat on the first unit.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Switch instrument is explicitly a non-binding master agreement; Diamondback, Prometheus Hyperscale and Equinix are non-binding letters of intent; Eielson is a notice of intent to award; the Meta agreement is a prepayment structure that is not described as a PPA.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-18",
+     "text": "Non-binding master power agreement with Switch for 12 GW of Aurora capacity through 2044 — Twelve of the fourteen gigawatts Oklo went on to describe as an order book sit in this single non-binding instrument; individual binding agreements are to be finalised as project milestones are reached.",
+     "src": "https://oklo.com/newsroom/news-details/2024/Oklo-and-Switch-Form-Landmark-Strategic-Relationship-to-Deploy-12-Gigawatts-of-Advanced-Nuclear-Power-One-of-the-Largest-Corporate-Clean-Power-Agreements-Ever-Signed/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Switch is the patent-moated, Tier 5-branded US colocation landlord racing back to the public markets: it filed confidentially for a US IPO in August 2026 (per Bloomberg) after hiring banks for a listing that could raise up to $10B and value it at up to $80B including debt as soon as Q4 2026 (per Reuters, July 2026; Bloomberg's July report put the target near $50B) — less than four years after DigitalBridge and IFM Investors took it private for ~$11B — carrying more than $24B raised since 2024, a 12GW non-binding Oklo nuclear master agreement, and Rob Roy's EVO AI Factories rated to 2MW per rack into the AI buildout.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For power-chain vendors it is a standards-driven, Nevada-anchored buyer that self-funds power infrastructure — a first-of-kind $2.6B (now $3.5B) syndicated performance letter-of-credit facility backs its transmission and generation commitments — and signs decade-scale offtakes (Oklo 12GW through 2044, Ormat 20-year geothermal).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 12GW non-binding Oklo master agreement through 2044 (no operating plant yet — execution risk is real), a 20-year Ormat geothermal PPA with deliveries from 2030, 100% renewable procurement since 2016, and an industry-first $3.5B syndicated performance-LC facility that collateralizes utility transmission and generation commitments — the structural opposite of Vantage's microgrid-ownership path.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power procurement and sustainability platform",
+     "date": "",
+     "text": "Switch buys and finances its own power position rather than building generation: 100% renewable supply across all campuses since January 1, 2016 (via PPAs and renewable credits, with net-zero Scope 1-2 claimed), a non-binding 12GW master power agreement with Oklo (December 2024) to be drawn down through individual PPAs on Aurora fast-reactor powerhouses through 2044, and a 20-year, ~13MW geothermal PPA with Ormat from the Salt Wells plant near Fallon, NV (January 2026; deliveries from Q1 2030, with a ~7MW solar add option) — Ormat's first direct data-center PPA.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-12-18"
+  },
+  {
+   "a": "oklo",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Collaboration agreement to co-develop power and thermal reference designs for hyperscale and colocation data centres, with a pilot demonstration planned for the first Aurora.",
+     "context": "Announced 22 July 2025. It is a technology collaboration rather than a power offtake: the two companies intend to publish integrated reference designs so that a campus can be engineered around an Aurora from the outset rather than retrofitted to one.\n\nThe pattern is the same one the cooling and power OEMs use with NVIDIA — sell the blueprint before the hardware — applied here to generation. Vertiv's own guide in this app teaches the thermal chain and the UPS the reference design would have to accommodate.",
+     "source": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Vertiv-Announce-Collaboration-to-Advance-Power-and-Cooling-Solutions-for-Hyperscale-and-Colocation-Data-Centers-in-the-United-States/default.aspx",
+     "status": "active",
+     "since": "2025-07"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Collaboration agreement to co-develop power and thermal reference designs, with a pilot technology demonstration planned for Oklo's first Aurora powerhouse.",
+     "context": "Announced 22 July 2025. It is a technology collaboration rather than a power offtake: the two intend to publish integrated reference designs so a campus can be engineered around an advanced reactor from the outset.\n\nIt is the same instrument type Vertiv's competitors use with NVIDIA — sell the validated chain before the hardware — applied to generation rather than to the rack.",
+     "source": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Vertiv-Announce-Collaboration-to-Advance-Power-and-Cooling-Solutions-for-Hyperscale-and-Colocation-Data-Centers-in-the-United-States/default.aspx",
+     "status": "active",
+     "since": "2025-07"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its supply chain reaches back into companies already covered here — Siemens Energy for the power conversion system under the only binding commercial contract Oklo has announced, Kiewit for construction, Vertiv for power and thermal reference designs, ABB for the operator monitoring room, and NVIDIA with Los Alamos for fuel-modelling work.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-22",
+     "text": "Collaboration agreement with Vertiv to co-develop power and thermal reference designs, with a pilot demonstration planned for the first Aurora — Positions the reactor inside the data-centre equipment stack rather than beside it — the same reference-design pattern the cooling and power OEMs use with NVIDIA.",
+     "src": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Vertiv-Announce-Collaboration-to-Advance-Power-and-Cooling-Solutions-for-Hyperscale-and-Colocation-Data-Centers-in-the-United-States/default.aspx",
+     "from": "a"
+    }
+   ],
+   "last": "2025-07-22"
   },
   {
    "a": "on-energy",
@@ -23779,6 +24790,50 @@
   },
   {
    "a": "schneider-electric",
+   "b": "trane-technologies",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ranked immediately below Schneider in the same independent thermal-management assessment, and following it into liquid cooling by acquisition.",
+     "context": "ABI Research places Schneider Electric third and Trane fifth, both in the Mainstream tier. Facilities Dive positioned Trane's February 2026 LiquidStack acquisition as following Schneider's controlling investment in Motivair in September 2025 and Johnson Controls' investment in Accelsius.\n\nNo commercial relationship between the two companies was found in any source; the link is curated as competitive on the basis of the shared independent ranking and the identical acquisition strategy into the same layer.",
+     "source": "https://www.facilitiesdive.com/news/liquidstack-buy-gives-trane-ai-data-center-cooling-exposure/812053/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Ranked immediately above Trane in the Mainstream tier of the same thermal-management assessment, and the acquirer of CDU specialist Motivair.",
+     "context": "Schneider took a controlling interest in the direct-to-chip CDU vendor Motivair in September 2025 and launched a 2.5 MW MCDU-70 in January 2026. Facilities Dive positioned Trane's LiquidStack acquisition as following that move, describing it as 'the most recent deal between a major building systems OEM and a cutting-edge data center cooling technology provider, following moves last year by Schneider Electric and Johnson Controls'.\n\nNo supply, licensing or joint-development relationship between Trane and Schneider was found in any source. The link is curated as competitive because both are named in the same independent ranking and are acquiring into the same layer of the same chain.",
+     "source": "https://www.facilitiesdive.com/news/liquidstack-buy-gives-trane-ai-data-center-cooling-exposure/812053/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: a minority stake in LiquidStack taken in 2023 was converted to full ownership only in March 2026, after Schneider Electric took control of Motivair in September 2025 and Johnson Controls invested in Accelsius; Stellar Energy closed a month earlier for $553.4M gross.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre thermal management — chillers, CDUs and liquid cooling",
+     "date": "",
+     "text": "ABI Research's January 2025 competitive ranking of thermal-management providers for data centres places Trane fifth, in the Mainstream tier, behind market leaders Vertiv and Johnson Controls and behind Schneider Electric and Daikin.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre thermal management — chillers, CDUs and liquid cooling",
+     "date": "",
+     "text": "Trade coverage positions the LiquidStack purchase as following rather than leading — Facilities Dive described it as 'the most recent deal between a major building systems OEM and a cutting-edge data center cooling technology provider, following moves last year by Schneider Electric and Johnson Controls' — notwithstanding Trane's minority stake in LiquidStack since 2023.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "schneider-electric",
    "b": "vertiv",
    "curated": {
     "a": {
@@ -24788,6 +25843,50 @@
     }
    ],
    "last": "2026-02-02"
+  },
+  {
+   "a": "trane-technologies",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The market leader Trane competes with in data-centre thermal management, and the vendor whose guide in this app teaches the room-level chain.",
+     "context": "ABI Research's competitive ranking of thermal-management providers for data centres, published 30 January 2025, places Vertiv first as a Market Leader and Trane fifth in the Mainstream tier, with Johnson Controls, Schneider Electric and Daikin in between. Global Market Insights' data-centre chiller share table for 2025 runs the other way at the plant level — Trane second at 18.7%, Vertiv fifth at 8.1% — because the two companies are strong at different points in the same chain.\n\nThe pairing is the most useful comparison in the cooling half of this corpus: Vertiv sells the room and the distribution to the rack, Trane sells the machine that rejects the heat, and both have spent 2025 and 2026 buying their way toward the other's territory.",
+     "source": "ABI Research — Vertiv and Johnson Controls take the lead in ABI Research's Thermal Management Providers for Data Centers competitive ranking (2025-01-30); Global Market Insights — Data Center Chillers Market (August 2026)",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The applied-chiller specialist ranked below Vertiv in data-centre thermal management overall, and above it at the chiller-plant layer specifically.",
+     "context": "ABI Research's January 2025 competitive ranking of thermal-management providers for data centres places Vertiv first as a Market Leader and Trane fifth in the Mainstream tier. Global Market Insights' 2025 data-centre chiller shares run the other way — Trane second at 18.7%, Vertiv fifth at 8.1% — because the two are strong at different points in the same chain.\n\nThe convergence is recent and mutual: Trane bought LiquidStack in March 2026 to reach the chip, having previously stopped at the plant, while this dossier's own portfolio has moved from the room toward the rack.",
+     "source": "https://www.abiresearch.com/press/vertiv-and-johnson-controls-take-the-lead-in-abi-researchs-thermal-management-providers-for-data-centers-competitive-ranking",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Where Vertiv's dossier covers the room and the coolant distribution unit and Schneider's covers the building system, Trane covers the machine that actually rejects the heat and, since 2026, the distribution equipment between that machine and the rack: it acquired the direct-to-chip and immersion specialist LiquidStack in March 2026 and the modular cooling-plant business Stellar Energy in February 2026 for $553.4M gross, and it sells coolant distribution units of its own at up to 14 MW.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · CenTraVac water-cooled centrifugal chillers",
+     "date": "",
+     "text": "Independent share data places Trane second in data-centre chillers at 18.7% of a $2.6bn 2025 market behind Johnson Controls at 20.9%, ahead of Carrier at 14.5%, Daikin at 12.0% and Vertiv at 8.1% (Global Market Insights, August 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data-centre thermal management — chillers, CDUs and liquid cooling",
+     "date": "",
+     "text": "ABI Research's January 2025 competitive ranking of thermal-management providers for data centres places Trane fifth, in the Mainstream tier, behind market leaders Vertiv and Johnson Controls and behind Schneider Electric and Daikin.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "turner-construction",

@@ -178,6 +178,17 @@
    "note": "Siemens Energy and Mitsubishi Electric signed a memorandum of understanding in June 2021 to run a feasibility study on jointly developed high-voltage switching solutions with zero global-warming potential, beginning with a 245 kV dead-tank circuit breaker.",
    "context": "This is cooperation between two competitors in gas-insulated switchgear, aimed at the regulation that threatens the product both of them sell: the announcement puts SF6's global warming potential at roughly 23,500 times that of carbon dioxide and notes that restrictions are being reviewed and implemented in various parts of the world.\n\nThe two are simultaneously listed as competing majors in gas-insulated switchgear by Straits Research and Mordor Intelligence, and independent transformer rankings place Siemens Energy above Mitsubishi Electric. No product from the memorandum has been announced.",
    "source": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou"
+  },
+  {
+   "slug": "oklo",
+   "type": "customer",
+   "status": "active",
+   "since": "2023-12",
+   "scale": "SST-600 turbine + SGen-100A generator",
+   "via": "Power conversion system",
+   "note": "Binding contract to supply the power conversion system — a condensing SST-600 steam turbine and SGen-100A generator — for Oklo's first Aurora powerhouse.",
+   "context": "The relationship escalated through three instruments: an MOU in December 2023, a preferred-supplier agreement in August 2024, and a binding contract signed 19 November 2025. It is the only binding commercial contract in Oklo's entire public record.\n\nIt is also the clearest statement of what an advanced reactor actually buys from a turbine OEM. The nuclear island is exotic — sodium-cooled, fast spectrum, metal fuel — and the secondary side is a conventional steam Rankine cycle, so the turbine and generator come from the same catalogue this dossier's grid and generation sections describe.",
+   "source": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Siemens-Energy-Sign-Binding-Contract-to-Expedite-Procurement-of-the-Power-Conversion-System-for-Commercial-Power-Plant/default.aspx"
   }
  ],
  "policyExposure": [
@@ -484,6 +495,6 @@
    "url": "https://capital.com/en-int/analysis/siemens-energy-stock-forecast"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 5
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 6
 }

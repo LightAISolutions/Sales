@@ -313,6 +313,17 @@
    "context": "Vantage's wholesale/build-to-suit model contrasts with interconnection-led Equinix; it recycles capital through securitization rather than public equity, and competes with Equinix directly in the Johor/Singapore corridor. The 2026 C-suite wave included a chief procurement officer hired from Equinix to centralize sourcing across power, cooling, construction and network.",
    "source": "Dossier competitive assessment — platform models",
    "status": "active"
+  },
+  {
+   "slug": "mccarthy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2023",
+   "scale": "Goodyear 176 MW, NV1 224 MW projected, Lighthouse 468 MW",
+   "project": "lighthouse",
+   "note": "General contractor across three campuses — Goodyear Phase II, the NV1 campus near Reno including NV11 and NV12, and, in joint venture with Turner, Buildings 13 and 14 at Lighthouse.",
+   "context": "McCarthy served as general contractor for Phase II at Goodyear, Arizona, topped out July 2023 and reaching 176 MW across three facilities in more than a million square feet. At Storey County, Nevada it is building the NV1 campus — 224 MW projected across four buildings — where NV12 alone is 64 MW in 260,000 sq ft, topped out January 2026 with more than 1.1 million labour hours and zero lost-time incidents claimed.\n\nAt Port Washington the Turner-McCarthy joint venture is building Buildings 13 and 14, hosting a combined 468 MW for the Oracle and OpenAI Stargate venture within the $8bn first phase. Notably, this dossier is the only named hyperscale data-centre client anywhere in McCarthy's public record.",
+   "source": "https://vantage-dc.com/news/vantage-data-centers-and-mccarthy-building-companies-celebrate-topping-out-of-construction-on-phase-ii-of-major-data-center-project-in-goodyear-ariz/"
   }
  ],
  "policyExposure": [
@@ -825,6 +836,6 @@
    "url": "https://vantage-dc.com/sustainability/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 6
 }

@@ -1,0 +1,723 @@
+{
+ "schemaVersion": 2,
+ "slug": "trane-technologies",
+ "title": "Trane Technologies — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "sections": [
+  {
+   "id": "what-this-guide-does-not-repeat",
+   "title": "Start here: the machine that moves the heat",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "This app already carries the deepest treatment of the **thermal chain** anywhere in the corpus, and this guide deliberately re-teaches none of it. **Vertiv's guide** covers {{CRAC}} against {{CRAH}} against chiller as a room-level choice, the {{CDU}} and the plumbing family below it — manifolds, {{cold plate}}s, quick disconnects, the rear-door heat exchanger — the **temperature budget** from junction to outdoor air, why warm water buys chiller-free hours, and rack airflow, blanking panels and {{floor loading}} at the cabinet. **Schneider Electric's guide** covers the {{BMS}}, {{DCIM}}, prefabricated modular plant and energy accounting. Neither is repeated here.",
+    "**What none of them opens is the chiller itself.** Vertiv's guide gives the vapour-compression cycle one sentence and moves on, because its subject is the chain rather than the machine in it. This guide's subject is that machine and the plant built around it: why compressor work is a function of **{{temperature lift}}** and nothing else you can easily change; why the compressor type is the single decision that determines the machine's whole character; why the **{{part load}}** number is the honest one and the full-load number is nearly decorative; why the refrigerant became a regulated component with a legal calendar; why rejecting heat to a **wet-bulb** temperature beats rejecting it to a dry-bulb one, and what that costs in water; and why a chilled-water plant with perfectly good chillers can still fail.",
+    "**Three ideas carry it.** Every degree of **lift** you can give back is compressor work you do not pay for. A chiller is bought at **full load** and lived with at **part load**. And a plant fails at its **hydronics** far more often than at its machines.",
+    "One more boundary. Trane Technologies is not \"Trane\": the listed company owns the **Trane** commercial and residential brand, **American Standard Heating & Air Conditioning**, and **Thermo King** transport refrigeration, and commercial HVAC in the Americas is the great bulk of it. The data-centre thermal line taught here is a minority of the business and is not separately disclosed. The last table in this guide holds those apart deliberately.",
+    "Written for a reader with high-school physics. Every acronym is defined on first use, and the drills test mechanism, never company facts."
+   ]
+  },
+  {
+   "id": "lifting-heat-uphill",
+   "title": "Lifting heat uphill: the cycle, and the one number that costs money",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "A chiller does not make cold. It **moves heat** from a place you want cool to a place you do not care about, and the only way to move heat from cold to hot is to do work on the way. That work is the electricity bill, and almost everything in the rest of this guide is an argument about how to make it smaller.",
+    "**The {{vapour-compression cycle}}, in four steps.** A liquid refrigerant enters the **{{evaporator}}** at low pressure, where its boiling point is below the temperature of the water being chilled — so it boils, and boiling absorbs an enormous amount of energy at constant temperature ({{latent heat}}, far more per kilogram than merely warming the same fluid). The cold vapour goes to the **compressor**, which raises its pressure and, with it, its temperature. The hot high-pressure vapour enters the **{{condenser}}**, where its condensing temperature is now *above* the outdoor air or the tower water, so it gives its heat up and turns back into a liquid. Finally the **{{expansion device}}** drops the liquid back to evaporator pressure, cooling it as it goes, and the loop closes.",
+    "**{{coefficient of performance}} is greater than one, and that is not a trick.** A chiller moving six kilowatts of heat for one kilowatt of electricity has a COP of 6. It is not creating energy; it is *relocating* it, and the electricity only pays for the relocation. That is why a chiller and a heat pump are the same machine — one sells the cold end, the other the hot end.",
+    "**Now the number that matters. {{temperature lift}}** is the difference between the condensing temperature and the evaporating temperature — how far uphill the machine has to push. Compressor work rises steeply with lift, and everything else is second order. Two consequences follow, and they explain most of the engineering in this guide: **raise the chilled-water temperature** and the evaporator end of the lift comes up; **lower the condensing temperature** and the other end comes down. Both are worth real money, both are free when the weather cooperates, and both are why a plant designed around the hottest hour of the year spends the rest of the year with an efficiency opportunity it may or may not take.",
+    "**Two smaller controls, both actively managed.** {{superheat}} is the few degrees of extra warming the vapour carries above its boiling point when it leaves the evaporator — the margin that keeps liquid out of the compressor, which is a machine designed to compress gas and not to survive liquid. {{subcooling}} is the few degrees below condensing temperature the liquid carries when it leaves the condenser — more subcooling means more useful cooling per kilogram circulated. Neither is exotic; both are set by the expansion device and watched by the controller.",
+    "**And the sizing unit is historical.** A **{{ton of refrigeration}}** is the rate that would freeze a short ton of ice in a day — about 3.517 kW of heat removal. Useful conversion to carry: **a megawatt of IT load needs roughly 284 tons of cooling**, before you add anything for the losses in the electrical chain that also become heat."
+   ]
+  },
+  {
+   "id": "the-compressor-is-the-choice",
+   "title": "The compressor is the choice that decides everything else",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Four ways to raise the pressure of a gas. The choice sets the machine's capacity range, its behaviour at part load, its noise, its maintenance and its failure mode — everything a datasheet later describes is downstream of it.",
+   "cols": [
+    "Type",
+    "How it raises pressure",
+    "Where it lives",
+    "What it is good and bad at"
+   ],
+   "rows": [
+    [
+     "**{{centrifugal compressor}}**",
+     "A high-speed impeller flings refrigerant outward; the velocity it imparts becomes pressure as the flow slows in a diffuser — continuous flow, no reciprocating parts",
+     "The large end: hundreds to thousands of tons, the machine under a big campus or a district plant",
+     "**Good:** the highest efficiency available at large capacity, smooth continuous flow, few moving parts. **Bad:** it has a lower flow limit called {{surge}}, below which it cannot hold head at all — so a big centrifugal is a poor small machine"
+    ],
+    [
+     "**{{screw compressor}}**",
+     "Two meshing helical rotors trap a pocket of gas and squeeze it progressively as it travels along them — positive displacement",
+     "The middle: roughly a hundred to several hundred tons; the workhorse of air-cooled machines",
+     "**Good:** tolerant of high {{temperature lift}} and of deep part load, physically compact for its duty, no surge limit. **Bad:** less efficient than a centrifugal at the same large duty, and it needs oil management"
+    ],
+    [
+     "**{{scroll compressor}}**",
+     "Two interleaved spirals, one orbiting inside the other, sweeping gas inward into a shrinking pocket",
+     "The small end: tens of tons, and the building block of modular machines that gang many together",
+     "**Good:** simple, quiet, cheap, and highly reliable; ganging several gives excellent {{part load}} because you simply switch some off. **Bad:** limited capacity per compressor, so large machines become many small ones"
+    ],
+    [
+     "**Reciprocating**",
+     "A piston in a cylinder, exactly as in an engine run backwards",
+     "Largely displaced in new applied equipment; still common in refrigeration and transport",
+     "**Good:** tolerant of very high lift and of dirty duty. **Bad:** more moving parts, more vibration, more maintenance"
+    ]
+   ],
+   "note": "**Two refinements that matter for the large machines.** First, a **variable-speed drive** on a centrifugal is not merely a soft-start: it lets the machine reduce its impeller speed as the required lift falls, which is precisely the condition that occurs for most of the year, and it is the largest single contributor to a good part-load number. Second, a **{{magnetic bearing}}** floats the shaft on controlled magnetic fields instead of riding it on oil — the same idea the flywheel guides describe, applied to a compressor. The point is not the friction saved but the **oil removed**: oil that escapes the compressor ends up as a film on the evaporator tubes, quietly degrading heat transfer for the life of the machine. An oil-free machine cannot foul itself that way, and it will hold its rated performance longer."
+  },
+  {
+   "id": "part-load-is-the-real-operating-point",
+   "title": "Bought at full load, lived with at part load",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "A chiller is selected against the worst hour of the design year — the hottest afternoon, with every rack drawing full power. It then spends essentially none of its life there. A plant sized for that hour runs at a fraction of it for most of the year, and the efficiency that decides its operating cost is the efficiency **at that fraction**, not the one on the front of the brochure.",
+    "**The industry codified this into one number.** {{IPLV}} — integrated part-load value — is a weighted average of the machine's efficiency at four operating points: **100, 75, 50 and 25 percent load**, weighted roughly **1, 42, 45 and 12 percent** of the hours respectively under the North American rating standard, {{AHRI 550/590}}. Read those weights again. **The rated full-load point carries about one percent of the weight.** Nearly nine tenths of the number comes from the middle two points, which is where the machine actually lives.",
+    "**{{NPLV}} is the honest version.** IPLV is computed at the standard's own temperatures. A real project rarely runs at those temperatures — a data hall's chilled water is usually warmer than the standard's, and its condenser water may be different too. NPLV is the same weighted calculation done at the project's actual conditions, and it is the number to ask for when the design is not standard. Comparing one manufacturer's IPLV against another's NPLV is meaningless, and it happens.",
+    "**Why part-load efficiency is often *better* than full-load efficiency.** This surprises people. The reason is {{condenser-water relief}}: when it is cooler outside, the condensing temperature falls, the {{temperature lift}} shrinks, and the compressor's work per unit of cooling drops with it. Part load usually coincides with cooler weather. So the machine is doing less work per ton at exactly the times it is asked for fewer tons, and the two effects compound. A plant control sequence that holds condenser water at a fixed high temperature all year — because someone was worried about the machine — throws this away entirely.",
+    "**And the floor. {{minimum stable load}}** is the lowest output a machine can hold continuously. On a centrifugal it is set by {{surge}}: below a certain flow the impeller can no longer sustain the pressure rise, and the gas momentarily reverses through it — audible, damaging, and something the controller works hard to avoid. Below that floor the machine cycles on and off, which wastes energy in every restart and wears the machine. A plant whose smallest chiller has a higher minimum than the building's night-time load is a plant that will cycle every night of the year, and the fix is a smaller machine in the lineup rather than a control setting.",
+    "**The one thing that makes a data hall different.** A hall's load is far flatter than an office's, and its {{sensible heat ratio}} is close to one — it does not go home at six, and it does not stop in winter. That removes some of the part-load argument and sharpens another: the load fraction stays high, so the machine sits nearer its design point, but the **outdoor** condition still swings through the whole year. So the value migrates from load-following to lift-following: a hall's efficiency story is almost entirely about how low the plant is allowed to let its condensing temperature go on a cold night, and whether it can stop the compressors altogether."
+   ]
+  },
+  {
+   "id": "the-refrigerant-is-regulated",
+   "title": "The refrigerant is a regulated component with a legal calendar",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "For most of the industry's history the working fluid was an engineering choice. It is now a compliance choice with an engineering consequence, and the calendar is set by law rather than by product planning. Read the last column as what changes in the machine and in the building, not just in the drum.",
+   "cols": [
+    "The lever",
+    "What it says",
+    "Where it bites",
+    "What it forces in the machine or the building"
+   ],
+   "rows": [
+    [
+     "**{{GWP}}**",
+     "How much a kilogram of the gas warms the atmosphere over a period, relative to carbon dioxide — the number regulators rank fluids by",
+     "Every fluorinated refrigerant",
+     "It is the sorting variable for everything below. A fluid is not banned for being a refrigerant; it is restricted for its number"
+    ],
+    [
+     "**{{AIM Act}}** (US)",
+     "A stepwise phasedown of high-GWP hydrofluorocarbon production and imports, with sector rules restricting what new equipment may be charged with",
+     "US manufacture and import of the fluid, and what new equipment may legally use",
+     "Product lines are redesigned around lower-GWP fluids ahead of the steps, and the transition is a manufacturing programme, not a catalogue edit"
+    ],
+    [
+     "**{{F-gas Regulation}}** (EU)",
+     "A steeper quota schedule on placing fluorinated gases on the market, running to zero, plus outright bans on specific uses",
+     "European supply of the fluid itself",
+     "Europe reaches restrictions first, so a global manufacturer often ships different fluids into different markets from the same factory"
+    ],
+    [
+     "**{{A2L}} classification**",
+     "A safety class meaning low toxicity and **mild flammability** — where most low-GWP replacements land",
+     "The machine room and the building code, not the machine's thermodynamics",
+     "Refrigerant leak detection, machine-room ventilation, charge limits per space, labelling — and pipe routing rules through rated assemblies. This is a **building** change dressed as a fluid change"
+    ],
+    [
+     "**{{ASHRAE 15}}**",
+     "The refrigeration-systems safety standard governing machine rooms — charge limits, detection, ventilation, pressure relief",
+     "Wherever the machine physically sits",
+     "It is the reason a refrigerant swap can require a ventilation fan, a detector and a code review before it requires a compressor"
+    ],
+    [
+     "**{{low-pressure refrigerant}}**",
+     "A fluid whose cycle runs *below* atmospheric pressure on the low side",
+     "The machine's construction, fundamentally",
+     "A leak draws air **in** rather than pushing refrigerant **out**, which permits a thinner-walled, lighter machine — and requires a **purge unit** to continuously remove the air and moisture that leak inward. A genuinely different machine, not a different charge"
+    ]
+   ],
+   "note": "**The practical reading for a buyer.** The refrigerant decides three things that outlive the purchase: whether the fluid will still be available and affordable to top the machine up in fifteen years; whether the machine room needs detection and ventilation it does not currently have; and whether the machine is a high-pressure or a low-pressure design, which changes its physical construction, its service regime and its leak behaviour. None of those is visible in a kW/ton number, and all three are decided the moment the fluid is chosen. **The transition is also not smooth in practice** — the US saw a genuine shortage of one A2L replacement fluid through 2025, with surcharges and manufacturers extending factory pre-charging to reduce what had to be added in the field."
+  },
+  {
+   "id": "air-or-water",
+   "title": "Where the heat goes: air, or water",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "The single largest architectural decision in a cooling plant, and it is made before any machine is selected. Both options reject the same heat to the same atmosphere. They differ in the temperature they can reach, and therefore in the {{temperature lift}} the compressor has to pay for — and in whether the site consumes water.",
+   "cards": [
+    {
+     "t": "Air-cooled — reject to {{dry-bulb temperature}}",
+     "meta": "A finned condenser coil with fans, usually with the whole chiller packaged outdoors on a roof or a pad. The floor it can reach is the outdoor air temperature",
+     "adv": [
+      "**No water at all** — no tower, no basin, no chemistry, no {{Legionella}} programme, no discharge permit",
+      "One packaged machine instead of a chiller, a tower, condenser pumps and the piping between them — far less to install, commission and maintain",
+      "Nothing to freeze in winter and nothing to drain, so cold-climate operation is simpler",
+      "Sited outdoors, so it consumes no mechanical-room floor area and imposes no refrigerant charge on an occupied space"
+     ],
+     "dis": [
+      "The condensing temperature can never fall below the {{dry-bulb temperature}} temperature, so the {{temperature lift}} is structurally higher — this costs compressor energy every hour of every year",
+      "Capacity falls exactly when it is needed most: on the hottest afternoon the machine is both least efficient and least capable",
+      "Fans are noisy and numerous, which becomes a planning condition near neighbours",
+      "Coils foul with airborne dirt and pollen, and a fouled coil raises condensing temperature further"
+     ]
+    },
+    {
+     "t": "Water-cooled — reject to {{wet-bulb temperature}} through a {{cooling tower}}",
+     "meta": "A shell-and-tube condenser cooled by water that is pumped to a tower, where a small fraction of it evaporates into an air stream and carries the heat away",
+     "adv": [
+      "Evaporation reaches the {{wet-bulb temperature}} temperature, which is **always at or below** dry-bulb and on a hot dry day dramatically below — a much smaller lift, and materially lower energy for the same duty",
+      "Capacity holds up better on hot days, because wet-bulb rises less than dry-bulb does",
+      "Permits the largest and most efficient machines — a big {{centrifugal compressor}} is a water-cooled machine",
+      "Opens {{free cooling}}: when the wet-bulb is low enough, a heat exchanger can do the whole job and the compressors can stop"
+     ],
+     "dis": [
+      "**It consumes water**, continuously, by design — {{makeup water}} replaces what evaporates, what is discharged as {{blowdown}}, and the small amount lost as {{drift}}",
+      "Water chemistry is a permanent operating programme: scale, corrosion, biology, and a mandated {{Legionella}} regime with testing and record-keeping",
+      "Far more equipment: tower, condenser pumps, basin heaters, filtration, chemical dosing — more to install, more to fail, more to freeze",
+      "The tower is a large, visible, wet structure with a plume, and both the plume and the discharge attract permitting attention"
+     ]
+    }
+   ],
+   "note": "**The middle ground is now where most new plants land.** An **{{adiabatic cooling}}** arrangement pre-wets the air entering an air-cooled condenser only on the hottest days, capturing most of the tower's efficiency while using water for a few hundred hours a year rather than all of them. A **{{dry cooler}}** goes the other way and uses none at all, accepting worse hot-day performance in exchange. The choice is genuinely a site-by-site trade between kilowatt-hours and gallons, and it is increasingly settled by what the local water authority and the community will accept rather than by which is thermodynamically better. Holder's guide covers water-neutrality as an operator's *commitment*; this is the equipment decision underneath it."
+  },
+  {
+   "id": "the-tower-and-the-water",
+   "title": "Reading a cooling tower: five numbers and where the water goes",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "A tower looks like a box with a fan. It is actually a controlled evaporator whose behaviour is described by a handful of numbers, every one of which appears in either the energy bill or the water bill.",
+   "cols": [
+    "Number",
+    "What it is",
+    "What moves it",
+    "Where it shows up"
+   ],
+   "rows": [
+    [
+     "**{{wet-bulb temperature}}**",
+     "The lowest temperature the tower could theoretically reach — a property of the weather, not the equipment",
+     "Nothing you own. It is climate, and it is why cooling design starts with a weather file",
+     "The floor under the condensing temperature, and therefore under the whole plant's efficiency"
+    ],
+    [
+     "**{{approach}}**",
+     "How far above wet-bulb the tower's leaving water actually is",
+     "Tower size and fill surface area. Closing the approach by a degree costs a materially bigger tower",
+     "Directly in the {{temperature lift}}. A degree of approach is a degree of compressor work, forever"
+    ],
+    [
+     "**{{range}}**",
+     "The temperature drop across the tower — water in minus water out",
+     "The condenser flow rate for a given heat load. Range × flow is the heat being rejected",
+     "Pump energy: a wider range means less water pumped for the same duty"
+    ],
+    [
+     "**Evaporation**",
+     "The water that actually leaves as vapour and carries the heat with it",
+     "The heat load. Roughly speaking, about one percent of the circulating flow evaporates for every 5.5 °C of range",
+     "The irreducible part of water consumption — you cannot reject heat evaporatively without it"
+    ],
+    [
+     "**{{cycles of concentration}}**",
+     "How many times more concentrated the dissolved solids are in the basin than in the make-up water, because evaporation leaves them behind",
+     "Water chemistry and treatment. More cycles means less {{blowdown}}",
+     "The **controllable** part of water consumption — and the tension: more cycles saves water and pushes the chemistry towards scaling and corrosion"
+    ],
+    [
+     "**{{drift}}**",
+     "Liquid droplets carried out in the exhaust air, as distinct from vapour",
+     "Drift eliminators in the tower",
+     "Small in volume, regulated in effect — it carries whatever is in the basin out with it, which is why it is limited by code"
+    ]
+   ],
+   "note": "**The water budget in one line: make-up equals evaporation plus blowdown plus drift.** Evaporation is physics and is not negotiable for a given heat load. Drift is small and engineered down. **Blowdown is the lever**, and running more {{cycles of concentration}} to cut it trades water for chemistry risk — scale on the condenser tubes, which widens the {{approach}}, which raises the lift, which raises the energy bill. **The site metric that captures the trade is {{WUE}} against {{PUE}}**: a plant tuned hard for water will show a worse energy number, and one tuned hard for energy will show a worse water number. Anyone quoting one without the other is quoting half the answer. McCarthy's guide covers the treatment plant a site must build if it intends to reclaim the water; this is the demand side that plant exists to serve."
+  },
+  {
+   "id": "the-plant-is-not-the-chiller",
+   "title": "The plant is not the chiller: hydronics, and how a good plant goes bad",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "You can buy the most efficient chillers in the catalogue, install them correctly, and still run a plant that costs half again what it should. The reason is almost always the water outside the machines — the pumps, the pipe arrangement, and the control sequence that decides how many chillers run.",
+    "**Start with the identity that governs everything.** The heat a loop carries is the flow multiplied by the temperature difference between what leaves and what returns — the plant's **{{delta-T}}**. Turn that around: for a fixed cooling duty, **flow is inversely proportional to delta-T**. If the design delta-T is 10 °C and the plant actually achieves 5 °C, it must pump **twice the water** for exactly the same amount of cooling. Pumping power rises steeply with flow, and the chillers see a flow they were not selected for.",
+    "**That is {{low delta-T syndrome}}, and it is the classic chilled-water plant failure.** It is chronic rather than dramatic, it is nearly universal in older plants, and — this is the important part — **it is almost never caused at the chiller.** It is caused downstream: control valves that leak through when they are supposed to be shut, three-way valves bypassing water around coils that do not need it, coils fouled or oversized so they cannot pull the design temperature rise out of the air, or a bypass left open because someone was chasing a complaint five years ago. The plant then does something that looks insane and is perfectly logical: it **stages on another chiller** — not because the building needs more cooling, but because the flow demanded by the secondary loop exceeds what the running machines can pass. A plant at half its cooling load with all its chillers running is the signature.",
+    "**Which is why the pipe arrangement matters.** A **{{primary-secondary pumping}}** plant splits the water into a constant-flow loop through the chillers and a variable-flow loop out to the load, joined by a short pipe called the **{{decoupler}}**. It is easy to control and forgiving of the machines. It also *hides* a low delta-T, because excess secondary flow simply reverses through the decoupler and mixes warm return water into the supply — the symptom is invisible unless you look at the decoupler. **Which way and how much water flows through that short pipe is the single most useful diagnostic in the whole plant**, and most plants do not measure it.",
+    "**{{variable primary flow}}** removes the second set of pumps and varies flow through the chillers themselves. It saves real pumping energy and it exposes the delta-T problem instead of hiding it — but it requires respecting each machine's minimum flow, which means a bypass valve and a control sequence that is genuinely harder to get right. It is the better arrangement and the less forgiving one.",
+    "**{{chiller staging}} is the last piece, and the one most often left as the vendor shipped it.** The sequence decides how many machines run and which. Stage on too early and the plant runs four machines lightly loaded where two would be efficient; stage on too late and a machine hits {{surge}} or the building loses temperature. The right sequence depends on the machines' individual part-load curves, on the pumping arrangement, and on the season — and it should be revisited whenever the load changes, which in a growing data hall is continuously. **This is the {{sequence of operations}} the failure map names as invisible and decisive**, and it is invisible precisely because a badly sequenced plant is not broken. It just costs more, every hour, for twenty years."
+   ]
+  },
+  {
+   "id": "raising-the-water-temperature",
+   "title": "The cheapest lever: raising the water temperature",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "There is one move that improves a chiller plant's efficiency more than any equipment upgrade, costs nothing, and is available on most existing plants: **send the water out warmer**.",
+    "**The mechanism is just {{temperature lift}} again.** Raise the {{chilled-water supply temperature}} and the evaporator end of the lift comes up; the compressor has less distance to push, and its work falls. The gain is substantial — meaningful percentage points of chiller energy for each degree — and it compounds with the second effect: a warmer chilled-water loop means the outdoor condition needed for **{{free cooling}}** is reached far more often, so the hours per year when the compressors can simply stop go up sharply.",
+    "**So why is the water not always warmer? Because of what the load can accept.** In a conventional air-cooled hall the coil has to do two jobs — lower the air temperature and, sometimes, condense moisture out of it. Dehumidification requires a coil surface below the air's dew point, which puts a hard floor under the water temperature. And the coil's capacity falls as the water warms, so a coil selected for cold water simply cannot deliver its rated duty on warm water. This is why the lever is easy to describe and hard to pull on an existing building.",
+    "**Direct liquid cooling removes the objection entirely, and that is its quiet second benefit.** A {{cold plate}} bolted to a processor is not trying to dehumidify anything. It only has to be colder than the silicon, and silicon tolerates temperatures that would be absurd for a room. So the facility water can be far warmer — and once it is, a great many climates can reject the heat with no mechanical cooling at all for most of the year. **Vertiv's guide teaches this as the temperature budget from the chip's side; this is the same physics read from the plant's side**, where it shows up as compressor hours that never happen.",
+    "**One caution that gets lost in the enthusiasm.** Warmer water does not reduce the heat; it only makes the heat easier to reject. The plant still has to move every watt the racks produce, the pipes still have to carry the flow, and the tower or dry cooler still has to be sized for the hottest day. Raising the temperature buys **energy**, not **capacity** — and a design that spent the saving on smaller heat-rejection equipment will discover the difference on the worst afternoon of the year."
+   ]
+  },
+  {
+   "id": "storing-cold",
+   "title": "Storing cold: the thermal answer to the ten-second race",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Every power guide in this app teaches the same drama: the utility fails, stored energy carries the load for milliseconds to minutes, and rotating plant takes over. **The cooling side has exactly the same problem and it is much less well known**, because it plays out over minutes rather than milliseconds and nobody watches it.",
+    "**Here is the gap. When the power fails, the {{UPS}} carries the IT load without interruption — so the racks keep producing heat at full rate, immediately.** The chillers, however, are on generator power and have stopped. Compressors cannot simply be restarted: motors must be re-energised in sequence to avoid overwhelming the generators, and many machines enforce an anti-recycle timer measured in minutes to protect themselves. So there is a window — call it the **{{chiller restart}}** window — during which the hall is generating megawatts of heat and the plant is making no cooling at all. The only thing standing between that and a thermal shutdown is the **water already in the pipes**.",
+    "**Which is why serious facilities buy thermal inertia deliberately.** {{thermal energy storage}} — most simply a large insulated tank of chilled water, or an ice bank for a more compact store — is charged during normal operation and drawn down during the restart window. Functionally it is the cooling system's battery, and it is sized in exactly the same way: how many minutes of load, at what rate, to what end temperature. A tank sized for the restart sequence plus a margin is cheap insurance against the least glamorous failure mode in the building.",
+    "**The same asset then earns the rest of the year, and a {{heat-recovery chiller}} makes the point more generally: the heat a plant rejects can be a second product rather than a loss.** A store charged when electricity is cheap or plentiful and discharged at peak shifts load off the expensive hours — the cooling analogue of the peak-shaving duty the battery guides describe. It can also absorb a step in the hall's load without the plant having to chase it. The economics differ by tariff, and in a market with a large {{demand charge}} the storage can pay for itself on that alone.",
+    "**The honest limits.** A chilled-water tank is large — thermal storage has a poor energy density compared with almost anything electrical, which is why it lives outdoors in a tank rather than in a room. Ice storage is more compact per unit stored but requires making ice, which means running the chiller at a lower evaporating temperature and therefore a higher {{temperature lift}} and worse efficiency during the charging hours. And stratification matters: a tank that mixes warm return water into its cold reserve loses the reserve without losing the water."
+   ]
+  },
+  {
+   "id": "reading-a-chiller-datasheet",
+   "title": "Reading a chiller datasheet: what each line commits you to",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Twelve lines, using Trane's own published figures where they exist. The right-hand column is the question the line answers, and the point of the exercise is that only two of the twelve are about how much cooling you get.",
+   "cols": [
+    "Line",
+    "What a real one says",
+    "Why it is on the page",
+    "What it commits you to"
+   ],
+   "rows": [
+    [
+     "**Capacity**",
+     "CenTraVac catalogued at 120 to 4,000+ tons (450 to 14,000+ kW); Ascend ACR at 150 to 550 nominal tons",
+     "The headline, and the only number most people read",
+     "Nothing on its own — capacity is stated at rating conditions that may not be your conditions"
+    ],
+    [
+     "**Full-load efficiency**",
+     "0.45 {{kW/ton}} at standard AHRI conditions, claimed as 'at least 13.5 percent better than the next best centrifugal chiller'",
+     "The comparison number, and the one every marketing sheet leads with",
+     "Roughly one percent of the {{IPLV}} weighting. It is the number you will operate at least often"
+    ],
+    [
+     "**Part-load efficiency**",
+     "{{IPLV}} or {{NPLV}}, weighted at 100, 75, 50 and 25 percent load under {{AHRI 550/590}}",
+     "Because the machine lives at part load",
+     "Nearly the whole operating cost. Insist on {{NPLV}} at project conditions when the design is not standard"
+    ],
+    [
+     "**Rating standard and exclusions**",
+     "AHRI 550/590 certified — but the catalogue names what is *not* covered: free cooling, temperatures below 36 °F including ice storage, machines above 3,000 tons, heat recovery and heat pump ratings, glycol and brines",
+     "Certification is a scope, not a blanket",
+     "If your application is on the exclusion list, the certified numbers do not describe your machine"
+    ],
+    [
+     "**Refrigerant and safety class**",
+     "R-514A or R-1233zd(E) at a stated GWP below two; R-1233zd(E) explicitly 'A1' and nonflammable under ASHRAE 34; R-454B on other lines is {{A2L}}",
+     "The fluid is now a regulated component",
+     "Machine-room detection, ventilation and charge limits under {{ASHRAE 15}} — a building change, not a fluid change"
+    ],
+    [
+     "**Refrigerant pressure class**",
+     "CenTraVac runs a {{low-pressure refrigerant}}; Trane traces this to its first centrifugal chiller in 1938",
+     "It changes the machine, not just the charge",
+     "A thinner-walled machine that leaks air *inward* and needs a purge unit — different construction and a different service regime"
+    ],
+    [
+     "**Leak rate**",
+     "'less than 0.5 percent annually versus the industry-accepted rate of 2.0 percent', with a Leak-Tight Warranty",
+     "Because refrigerant will be scarce and expensive under the phasedown",
+     "Top-up cost and compliance exposure across a twenty-five-year life"
+    ],
+    [
+     "**Minimum load and turndown**",
+     "Set by {{surge}} on a centrifugal; scroll machines gang small compressors instead",
+     "The floor below which the machine cycles",
+     "Whether the plant can follow a light night-time load without short-cycling"
+    ],
+    [
+     "**Flow and pressure drop**",
+     "Evaporator and condenser minimum and maximum gpm by shell size, published in the catalogue",
+     "Because the pumps are sized from it",
+     "Pumping energy for the life of the plant, and whether {{variable primary flow}} is even possible"
+    ],
+    [
+     "**Ambient envelope**",
+     "Ascend ACR is sold in five bands: standard 32-105 °F, low 0-105 °F, extreme low -16-105 °F, high 32-125 °F, wide 0-125 °F",
+     "Because an air-cooled machine's world is the weather",
+     "A purchasable option with a price — not a property of the model"
+    ],
+    [
+     "**Sound**",
+     "Ascend publishes relative reductions — a muffler at 4-10 dB, optional bellows at 8-10 dB, three selectable levels",
+     "Because a planning condition can stop a project",
+     "Neighbour objections, and possibly an acoustic enclosure bought late"
+    ],
+    [
+     "**Electrical**",
+     "Optional passive harmonic filtering to 5% total demand distortion, to comply with IEEE 519",
+     "A large variable-speed drive is a harmonic source",
+     "{{harmonics}} injected back into a building whose other loads are also nonlinear"
+    ]
+   ],
+   "note": "**The disclosure boundary is itself a lesson.** Trane's CenTraVac catalogue publishes flow tables but no per-model {{IPLV}}, {{NPLV}}, {{kW/ton}} or sound data — selection is routed to its own software, and the same is true of the data-centre TCA machine. That is normal for applied equipment and it has a consequence: **you cannot compare two applied chillers from their catalogues**. You compare selections, generated at your conditions, and the conditions you specify are therefore part of the purchase."
+  },
+  {
+   "id": "the-ladder",
+   "title": "Tons per machine — and what a data hall needs",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "nominal cooling capacity, tons of refrigeration (published catalogue ratings; 1 MW of IT load ≈ 284 tons)",
+   "intro": "One axis, one catalogue, plus the load it has to serve. Every rung is a real published rating. Read it as a ladder of *purchases* — the machine changes character at each step, and so does who buys it.",
+   "items": [
+    {
+     "label": "Thermafit modular, one module",
+     "sub": "15-80 ton modules, ganged 1-12 per bank — scroll compressors, a bank rather than a machine",
+     "v": 80
+    },
+    {
+     "label": "CGAM air-cooled",
+     "sub": "20-130 tons, scroll with intermediate discharge valves, R-454B",
+     "v": 130
+    },
+    {
+     "label": "Series R water-cooled screw (RTHD)",
+     "sub": "175-400 tons, helical rotary — 'only four moving parts'",
+     "v": 400
+    },
+    {
+     "label": "Ascend ACR air-cooled",
+     "sub": "150-550 tons, variable volume ratio screw on permanent-magnet motors",
+     "v": 550
+    },
+    {
+     "label": "Sintesis air-cooled",
+     "sub": "115-500 tons, helical rotary screw on R-513A",
+     "v": 500
+    },
+    {
+     "label": "TCA data-centre magnetic-bearing",
+     "sub": "300-850 tons (up to 3 MW), oil-free, air-cooled, R-515B or R-1234ze",
+     "v": 850
+    },
+    {
+     "label": "One megawatt of IT load",
+     "sub": "the reference point: about 284 tons of cooling, before electrical losses",
+     "v": 284
+    },
+    {
+     "label": "CenTraVac CVHH",
+     "sub": "850-2,600 tons (up to 9 MW) on R-1233zd — the data-centre simplex",
+     "v": 2600
+    },
+    {
+     "label": "CenTraVac CDHH",
+     "sub": "900-6,000+ tons (up to 21 MW) — the Duplex, two compressors on one machine",
+     "v": 6000
+    }
+   ],
+   "note": "**Three readings.** First, put the 284-ton marker beside the top rung: **a single CDHH covers roughly 21 MW of IT load**, which is why a large campus buys a handful of machines rather than dozens. Second, the character changes as you climb — the bottom is a **product** bought through distribution and ganged to size, the middle is **applied equipment** specified by an engineer, and the top is a **project** with a rigging plan and a lead time. Third, notice the TCA sits deliberately in the middle: an air-cooled, oil-free machine at data-centre scale exists because some sites will not or cannot use water, and that constraint now outranks efficiency in the selection."
+  },
+  {
+   "id": "two-businesses-one-company",
+   "title": "Two businesses, one thermodynamics",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The same vapour-compression cycle, sold into two industries that share almost nothing else. Holding them apart is the single most common error in reading this company, and the third column is why.",
+   "cols": [
+    "Dimension",
+    "Commercial and residential HVAC (Trane, American Standard Heating & Air Conditioning)",
+    "Transport refrigeration (Thermo King)",
+    "What actually differs"
+   ],
+   "rows": [
+    [
+     "**The box**",
+     "A building. Fixed, surveyed, connected to a utility, with a mechanical room and a roof",
+     "A trailer, truck body, rail car, bus or shipping container. Moving, vibrating, salted, and sometimes at sea",
+     "One is designed once for a site; the other must work at every site"
+    ],
+    [
+     "**Where the power comes from**",
+     "The building's electrical service, through {{switchgear}} and a distribution board",
+     "Its own diesel engine, its own battery, a shore-power connection, or the vehicle's alternator — the unit carries its own supply",
+     "A transport unit is a small power plant as well as a refrigeration plant"
+    ],
+    [
+     "**The duty**",
+     "Steady-ish, weather-following, with a design day and a load profile",
+     "Brutal and variable: door openings, ambient from arctic to desert, road shock, and a load that must not warm at all",
+     "Reliability under mechanical abuse rather than efficiency at design conditions"
+    ],
+    [
+     "**The customer**",
+     "Building owners, developers, health systems, universities — buying through consulting engineers and contractors",
+     "Fleet operators and logistics companies — buying through a dealer network against a total-cost-per-mile calculation",
+     "Specification-led against replacement-cycle-led"
+    ],
+    [
+     "**The cycle it rides**",
+     "Construction and retrofit, plus a regulated {{part load}} efficiency floor under {{ASHRAE 90.1}} and a refrigerant calendar",
+     "Freight. Trailer orders, rejection rates and spot-to-contract spreads — which move out of phase with construction",
+     "Two different macro clocks inside one income statement"
+    ],
+    [
+     "**Where it is in the accounts**",
+     "Inside the Americas, EMEA and Asia Pacific geographic segments",
+     "Also inside those same three segments — Thermo King is a brand, not a reportable segment",
+     "Neither is separately disclosed. There is no commercial-versus-residential-versus-transport revenue split published at all"
+    ],
+    [
+     "**Electrification**",
+     "Heat pumps: the same machine run to sell the hot end, in a market shaped by incentives and codes",
+     "The *evolve* line — all-electric truck, trailer, bus, rail and marine units, plus electric auxiliary power units",
+     "Both are the same physics; the constraint is battery energy on a vehicle and code compliance in a building"
+    ]
+   ],
+   "note": "**Why this table is in a technology guide.** Because the entity discipline is a reading skill, not a legal footnote. 'Trane' is a brand; **Trane Technologies** is the listed company; **American Standard Heating & Air Conditioning** is a second HVAC brand and is unrelated to the plumbing-fixture company of a similar name, which has belonged to a different group since 2013; and **Thermo King** is a third business on a different cycle. When a headline says the company's backlog rose 70% on data-centre demand, the accurate reading is that one line inside one segment moved — while residential weakened through a refrigerant transition and transport refrigeration stayed soft. Nothing in the published accounts lets you separate them, and the honest response is to say so rather than to estimate."
+  },
+  {
+   "id": "where-trane-slots-in",
+   "title": "Where these products slot into the thermal chain",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Vertiv's guide walks the chain from the chip outward. This is the same chain read from the plant inward, with the company's published products placed on it. The right-hand column is what the reader should take from each stage.",
+   "cols": [
+    "Stage in the chain",
+    "The product",
+    "What it is rated at",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "**Heat rejection to atmosphere**",
+     "Cooling towers, dry coolers and adiabatic units — bought from the market, not from this catalogue",
+     "Sized against {{wet-bulb temperature}} or {{dry-bulb temperature}} for the site's weather file",
+     "This is the stage that decides whether the site consumes water, and it is chosen before any machine is selected"
+    ],
+    [
+     "**The plant, water-cooled**",
+     "CenTraVac CDHH and CVHH",
+     "CDHH 900-6,000+ tons (up to 21 MW); CVHH 850-2,600 tons (up to 9 MW), both on R-1233zd(E)",
+     "The largest and most efficient option, and the one that requires a tower and its chemistry"
+    ],
+    [
+     "**The plant, air-cooled**",
+     "Ascend ACR data-centre variant and the TCA magnetic-bearing machine",
+     "ACR up to 2 MW with a factory waterside economiser and operation to 131 °F; TCA 300-850 tons (up to 3 MW), oil-free",
+     "The no-water answer. Both carry Rapid Restart, which addresses the {{chiller restart}} gap after a power interruption"
+    ],
+    [
+     "**Facility water distribution**",
+     "Pumps, headers and the plant hydronics — the layer that is not a product at all",
+     "Sized on {{delta-T}} and flow",
+     "Where {{low delta-T syndrome}} lives, and where more plants underperform than at any machine"
+    ],
+    [
+     "**Facility-to-technology separation**",
+     "Coolant distribution units — GigaModular and CDU-1MW",
+     "GigaModular in 2.5 MW blocks validated to 14 MW; CDU-1MW up to 1.35 MW with dual hot-swappable pumps",
+     "The {{CDU}} itself is Vertiv's guide's subject. What is new here is that the chiller vendor now sells it, at plant scale"
+    ],
+    [
+     "**Chip-level**",
+     "LiquidStack — direct-to-chip and single- and two-phase immersion, acquired March 2026",
+     "Not separately rated in Trane's published material",
+     "The end of the argument that a chiller company stops at the plant room"
+    ],
+    [
+     "**The design itself**",
+     "Trane Continuum Rubin DSX reference designs, with NVIDIA and with Eaton",
+     "A 250 MW duplex system and a 1 GW magnetic-bearing air-cooled architecture on 3 MW chiller units",
+     "The product is increasingly the *validated chain*: the March 2026 optimisation claims 22 MW of cooling capacity freed for IT power"
+    ],
+    [
+     "**Controls and services**",
+     "Symbio controllers, Trane Cloud, and AI Control built on BrainBox AI",
+     "Claimed up to 25% HVAC energy reduction with no additional hardware",
+     "The {{sequence of operations}} is where a good plant is either realised or wasted, and it is the highest-margin revenue in the business"
+    ]
+   ],
+   "note": "**What this catalogue does not contain, stated plainly.** No rear-door heat exchangers and no cold-plate products appear on the liquid-cooling pages; no flow rates, approach-temperature figures or physical dimensions are published for either coolant distribution unit; and no data-centre revenue, growth rate or bookings figure is disclosed anywhere in the company's financial reporting. One retail outlet has relayed an unattributed analyst estimate of roughly 10% of total revenue — it names no analyst and no firm, and it is not used here."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**{{low delta-T syndrome}} — the failure that stages a chiller nobody needs.** Return water comes back too cool, so for the same duty the plant must move far more water, and flow rather than load trips the next machine on. It is caused downstream — a leaking control valve, a three-way bypass, a fouled or oversized coil — and it presents at the plant, which is where people look. The diagnostic is which way and how much water flows through the {{decoupler}}, and most plants do not measure it. Owned by the controls and commissioning agent, and inherited by whoever operates it for twenty years.",
+    "**A pinched {{approach}} nobody watched.** {{fouling factor}} is an allowance in the rating; real fouling beyond it widens the approach at the condenser, raises the condensing temperature, raises the {{temperature lift}}, and raises {{kW/ton}} — silently, continuously, and without a single alarm. This is §5's row 13 in its purest form: heat flows in series and the worst stage limits the path. Owned by the water-treatment programme and the tube-cleaning schedule.",
+    "**A centrifugal asked to run below its floor.** {{surge}} is the flow breakdown that occurs when the impeller cannot sustain the required head — audible, damaging, and the reason every large centrifugal has a {{minimum stable load}}. A plant whose smallest machine's floor is above the building's night load will cycle every night of the year. Owned by whoever sized the lineup, and discovered by whoever operates it.",
+    "**The {{sequence of operations}} left as the vendor shipped it.** Stage on too early and four machines run lightly loaded where two would be efficient; stage on too late and a machine surges or the hall loses temperature. The sequence depends on the machines' individual part-load curves, on the pumping arrangement and on the season, and in a growing hall the load changes continuously. A badly sequenced plant is not broken — it simply costs more every hour, which is exactly why nobody fixes it.",
+    "**Condenser water held warm all year 'to protect the machine'.** {{condenser-water relief}} is most of why part-load efficiency beats full-load efficiency; a control setting that holds a fixed high condensing temperature through the winter throws the entire benefit away. Owned by an operator acting on a plausible-sounding instinct, and invisible in every report except the electricity bill.",
+    "**A refrigerant change treated as a fluid change.** Moving to an {{A2L}} brings leak detection, ventilation, charge limits and pipe-routing rules through rated assemblies into the machine room under {{ASHRAE 15}} — and most US jurisdictions are still on a code edition that does not reference A2Ls at all. The building work, the code review and the local interpretation are the project; the drum is the easy part. Owned by the mechanical engineer and settled by the {{AHJ}}.",
+    "**No thermal ride-through for the {{chiller restart}}.** When the utility fails the {{UPS}} carries the IT load without interruption, so the racks keep making heat immediately — while compressors on generator power must be re-energised in sequence and many enforce an anti-recycle timer measured in minutes. The only thing bridging that gap is the water already in the pipes. A plant with no {{thermal energy storage}} and no plan for the restart sequence has an uncovered window in exactly the event the whole facility was designed around. Owned by the design engineer, and proven or disproven only in an integrated systems test.",
+    "**A tower run for water and judged on energy, or the reverse.** Pushing {{cycles of concentration}} up saves water and pushes the chemistry toward scale, which widens the approach and costs energy; running dry saves water and costs capacity on the hottest day. {{WUE}} and {{PUE}} move in opposite directions and anyone quoting one without the other is quoting half the answer. Owned by whoever set the site's sustainability target without asking what it does to the other one."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Describe the vapour-compression cycle in four steps, and say which one you pay for.",
+     "a": "A liquid refrigerant boils in the evaporator and absorbs heat; a compressor raises its pressure and temperature; it condenses in the condenser and gives the heat up somewhere hotter; an expansion device drops it back to evaporator pressure. You pay for the compressor — the work of moving heat uphill."
+    },
+    {
+     "q": "Why can a chiller have a coefficient of performance greater than one?",
+     "a": "Because it moves heat rather than creating it. The electricity pays only for the relocation, not for the energy relocated, so six units of heat moved per unit of electricity is a COP of 6 and violates nothing."
+    },
+    {
+     "q": "Define temperature lift and state the two ways to reduce it.",
+     "a": "The difference between the condensing and evaporating temperatures — how far uphill the machine has to push heat. Compressor work rises steeply with it. Reduce it by raising the chilled-water supply temperature (the evaporator end comes up) or by lowering the condensing temperature (the condenser end comes down)."
+    },
+    {
+     "q": "What is surge, which compressor type has it, and what does it set?",
+     "a": "The flow breakdown that occurs when a centrifugal compressor is asked for more pressure rise than its current flow can sustain, so gas momentarily reverses through the impeller. It is specific to centrifugals and it sets the machine's minimum stable load."
+    },
+    {
+     "q": "Why is IPLV a better efficiency number than full-load kW/ton, and what is NPLV?",
+     "a": "Because a chiller almost never runs at full load: IPLV weights performance at 100, 75, 50 and 25 percent load, and under the AHRI standard the full-load point carries only about one percent of the weight. NPLV is the same weighted calculation done at the project's actual temperatures rather than the standard's — the honest number when the design is non-standard."
+    },
+    {
+     "q": "Why is a chiller's part-load efficiency often better than its full-load efficiency?",
+     "a": "Condenser-water relief. Part load usually coincides with cooler weather, so the condensing temperature falls, the lift shrinks, and compressor work per ton drops — at the same time as fewer tons are being asked for. The two effects compound, and a control sequence that holds condenser water at a fixed high temperature throws it away."
+    },
+    {
+     "q": "Air-cooled or water-cooled: what does each reject heat to, and what is the trade?",
+     "a": "Air-cooled rejects to the dry-bulb temperature; water-cooled rejects through a cooling tower to the wet-bulb, which is always at or below dry-bulb and on a hot dry day far below. Water-cooled therefore runs a smaller lift and uses less energy, at the cost of water consumption, chemistry, a Legionella regime and a great deal more equipment."
+    },
+    {
+     "q": "Write the water budget of a cooling tower and say which term is controllable.",
+     "a": "Make-up equals evaporation plus blowdown plus drift. Evaporation is physics for a given heat load and is not negotiable; drift is small and engineered down with eliminators. Blowdown is the lever, and running more cycles of concentration to cut it trades water for scaling and corrosion risk."
+    },
+    {
+     "q": "What is low delta-T syndrome, where is it caused, and how does it show up?",
+     "a": "Return water comes back too cool, so the plant must pump far more water for the same cooling. It is caused downstream — leaking control valves, three-way bypasses, fouled or oversized coils — and it shows up at the plant as extra chillers staging on to satisfy flow rather than load. The decoupler flow is the diagnostic."
+    },
+    {
+     "q": "Why is raising the chilled-water supply temperature the cheapest efficiency lever, and what usually stops you?",
+     "a": "It reduces the lift directly and multiplies the hours when free cooling can do the whole job. What stops you in an air-cooled hall is dehumidification — the coil must sit below the air's dew point — and coil capacity, which falls as the water warms. Direct liquid cooling removes both objections because a cold plate is not dehumidifying anything."
+    },
+    {
+     "q": "What problem does thermal energy storage solve in a critical facility, beyond load shifting?",
+     "a": "The chiller-restart gap. When power fails the UPS carries the IT load instantly, so the racks keep producing heat, while compressors on generator power must be restarted in sequence and often enforce an anti-recycle timer of minutes. Stored chilled water or ice bridges that window — the cooling system's equivalent of a battery."
+    },
+    {
+     "q": "Why is an A2L refrigerant a building change rather than a fluid change?",
+     "a": "A2L means mildly flammable, which brings refrigerant leak detection, machine-room ventilation, charge limits per space, labelling and pipe-routing rules through rated assemblies under ASHRAE 15 and the mechanical code. Most US jurisdictions are still on a code edition that does not reference A2Ls, so the local interpretation becomes part of the design."
+    },
+    {
+     "q": "What is a low-pressure refrigerant and what does it change about the machine?",
+     "a": "One whose cycle runs below atmospheric pressure on the low side, so a leak draws air in rather than pushing refrigerant out. It permits a thinner-walled, lighter machine and requires a purge unit to continuously remove the air and moisture that leak inward — a genuinely different construction and service regime, not a different charge."
+    },
+    {
+     "q": "How many tons of cooling does a megawatt of IT load need, and what does that imply about plant size?",
+     "a": "About 284 tons, before adding the electrical losses that also become heat. So a single large duplex centrifugal rated to about 21 MW covers roughly twenty megawatts of IT load — which is why a big campus buys a handful of machines rather than dozens."
+    },
+    {
+     "q": "Name the three things a refrigerant choice commits you to that no efficiency number shows.",
+     "a": "Whether the fluid will still be available and affordable to top the machine up in fifteen years; whether the machine room needs detection and ventilation it does not currently have; and whether the machine is a high-pressure or low-pressure design, which changes its construction, its service regime and its leak behaviour."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A chilled-water plant is running four chillers at roughly 40% load each on a mild day. The most likely cause is:",
+     "c": [
+      "The chillers are undersized",
+      "Low delta-T syndrome forcing the plant to stage on flow rather than load",
+      "The outdoor air is too cold for the machines",
+      "The refrigerant charge is low"
+     ],
+     "a": 1,
+     "why": "When return water comes back too cool, the flow needed for a given duty roughly doubles, and the plant stages on additional machines to pass that flow even though the building's cooling load has not changed. The cause is downstream at valves and coils, not at the chillers."
+    },
+    {
+     "q": "Two chillers have identical full-load kW/ton. Chiller A has a much better IPLV. Over a year in a data hall, the most accurate expectation is:",
+     "c": [
+      "They will cost the same to run, since the load is flat",
+      "Chiller A will cost materially less, because the machine spends nearly all its hours away from the rated point",
+      "Chiller B will cost less because IPLV is a marketing number",
+      "It cannot be compared without knowing the refrigerant"
+     ],
+     "a": 1,
+     "why": "Under AHRI 550/590 the full-load point carries about one percent of the weighting and the middle two points carry nearly nine tenths. Even in a hall whose IT load is flat, the outdoor condition swings all year, so the lift — and therefore the operating point on the efficiency curve — moves constantly."
+    },
+    {
+     "q": "A site in a hot, dry climate must choose between air-cooled and water-cooled chillers. The thermodynamic argument for water-cooled is strongest because:",
+     "c": [
+      "Water conducts heat better than air",
+      "A cooling tower reaches the wet-bulb temperature, which in dry air is far below dry-bulb, so the lift is much smaller",
+      "Water-cooled chillers use less refrigerant",
+      "Towers are quieter than air-cooled fans"
+     ],
+     "a": 1,
+     "why": "Evaporation cools toward the wet-bulb, and the drier the air the further wet-bulb sits below dry-bulb. That directly shrinks the condensing temperature and therefore the compressor work. The counter-argument in the same climate is that water is exactly what the site may not have."
+    },
+    {
+     "q": "An operator sets the condenser-water temperature to a fixed high value year-round to protect the chillers. The consequence is:",
+     "c": [
+      "Longer machine life at no energy cost",
+      "The loss of most of the plant's part-load efficiency benefit, every mild and cold hour of the year",
+      "Better part-load efficiency",
+      "Lower refrigerant leak rates"
+     ],
+     "a": 1,
+     "why": "Condenser-water relief — letting the condensing temperature fall when the weather allows — is the main reason part-load efficiency exceeds full-load efficiency. Holding it fixed keeps the lift artificially high for most of the year, at a cost that appears only in the electricity bill."
+    },
+    {
+     "q": "After a utility outage, generators start and the UPS has carried the IT load without interruption. The hall's temperature nevertheless rises for several minutes. The reason is:",
+     "c": [
+      "The UPS failed to transfer",
+      "Compressors must be restarted in sequence and often enforce an anti-recycle timer, so the plant makes no cooling during that window",
+      "The generators cannot carry the cooling load",
+      "The racks throttled themselves"
+     ],
+     "a": 1,
+     "why": "The power side rides through in milliseconds; the thermal side does not. The racks keep producing heat at full rate while the plant is restarting, and the only bridge is the water already in the pipes — which is why serious facilities buy chilled-water or ice storage sized for the restart sequence."
+    },
+    {
+     "q": "A project switches a product line from an A1 refrigerant to an A2L. The largest practical consequence is usually:",
+     "c": [
+      "A change in cooling capacity",
+      "Machine-room leak detection, ventilation, charge limits and code interpretation — a building change",
+      "A change in compressor type",
+      "A different pipe material"
+     ],
+     "a": 1,
+     "why": "A2L means mildly flammable, which triggers ASHRAE 15 requirements and mechanical-code provisions for detection, ventilation, charge per space and routing through rated assemblies. Since most jurisdictions are on a code edition that does not reference A2Ls at all, the local authority's interpretation becomes part of the design."
+    },
+    {
+     "q": "A condenser's approach temperature has widened by two degrees over three years with no change in load. The most likely explanation is:",
+     "c": [
+      "The refrigerant has degraded",
+      "Fouling on the condenser tubes beyond the rating's allowance",
+      "The compressor is worn",
+      "The chilled-water setpoint drifted"
+     ],
+     "a": 1,
+     "why": "A fouling factor is an allowance built into the heat-exchanger rating. Real fouling beyond it degrades heat transfer, so the condensing temperature must rise to move the same heat — which shows up as a widening approach and a rising kW/ton, silently and without an alarm."
+    },
+    {
+     "q": "Which statement about Trane Technologies' data-centre business can be supported from disclosed figures?",
+     "c": [
+      "Data centres are about 10% of total revenue",
+      "Data-centre revenue is not disclosed in any form; what is disclosed is a backlog of $12.1bn, up 70%, with Applied bookings up 130%",
+      "Data centres are a reportable segment",
+      "Thermo King includes the data-centre cooling line"
+     ],
+     "a": 1,
+     "why": "The company reports three geographic segments and no data-centre line; 'data center' appears in the FY2025 annual report only inside an alphabetical product list. The 10% figure exists solely as an unattributed analyst estimate relayed by a retail outlet, and the backlog and bookings figures are the disclosed ones."
+    }
+   ]
+  }
+ ]
+}

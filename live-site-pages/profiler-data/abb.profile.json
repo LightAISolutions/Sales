@@ -225,6 +225,15 @@
    "note": "Busway market research names ABB among the market leaders while categorising Flex's Anord Mardix business as an other player, and both are named in data-centre switchgear vendor surveys.",
    "context": "Curated on a ranked basis: a busway survey separating a named leader group — Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens — from the other players, with Anord Mardix outside it.\n\nABB is separately named in a third-party top-five grouping of data-centre power suppliers at roughly 41 to 43% of that market, and in a North American grouping at roughly 62% with Schneider, Vertiv, Eaton and Mitsubishi Electric. Flex appears in neither.\n\nABB also appears in NVIDIA's data-centre power systems tier and in the solid-state transformer group at GTC 2026 — a category Flex is only now entering, through an EPC Power acquisition whose stated capabilities include planned solid-state transformer development.",
    "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html"
+  },
+  {
+   "slug": "oklo",
+   "type": "customer",
+   "status": "announced",
+   "since": "2025-08",
+   "note": "Memorandum of understanding under which a monitoring room was commissioned for Oklo operator training.",
+   "context": "Announced 21 August 2025 as an MOU rather than a supply contract, with a commissioned monitoring room supporting operator training as the described deliverable.\n\nIt connects to Oklo's licensing strategy: the company is designing for a high degree of automation and has a Licensed Operator topical report before the NRC proposing that operators be licensed to the technology rather than to a single site, which would allow one control room to monitor several plants.",
+   "source": "Oklo press release archive, 2025-08-21 (ABB memorandum of understanding; monitoring room commissioned for operator training)"
   }
  ],
  "technicalSpecs": [
@@ -620,5 +629,5 @@
   }
  ],
  "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "profileVersion": 7
 }

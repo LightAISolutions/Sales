@@ -220,6 +220,16 @@
    "context": "Kiewit slipped to #4 in the ENR 2026 Top 400 despite growth because building-side AI plays (STO, DPR, HITT, Mortenson) scaled faster than its power-side exposure — which is larger in dollars but recognized over longer EPC schedules. Different lanes (power EPC vs data-center GC), same AI capex pool.",
    "source": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10",
    "status": "active"
+  },
+  {
+   "slug": "oklo",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-07",
+   "scale": "75 MWe first unit",
+   "note": "Kiewit Nuclear Solutions is lead constructor for Oklo's first Aurora powerhouse under a Master Services Agreement, with a separate MOU for Ohio EPC planning.",
+   "context": "Selected 15 July 2025 for non-nuclear scope on Aurora-INL, with groundbreaking on 22 September 2025 and commissioning targeted for late 2027 to early 2028. A memorandum of understanding covering engineering, procurement and construction planning for Oklo's Ohio campus followed on 18 June 2026.\n\nOklo's dossier records the reactor it is building: a 75 MWe sodium-cooled fast reactor on EBR-II heritage, proceeding under DOE authorization rather than an NRC licence — which is what makes the schedule possible and what makes the seat unusual.",
+   "source": "https://oklo.com/newsroom/news-details/2025/Oklo-Selects-Kiewit-as-the-Lead-Constructor-for-First-Aurora-Powerhouse-in-Idaho/default.aspx"
   }
  ],
  "policyExposure": [
@@ -526,6 +536,6 @@
    "url": "https://www.datacenterdynamics.com/en/news/homer-city-and-kiewit-unveil-plans-for-45gw-natural-gas-powered-ai-data-center-in-pennsylvania/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 5
 }

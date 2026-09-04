@@ -237,6 +237,15 @@
    "slug": "mastec",
    "type": "competitor",
    "note": "Larger field T&D rival — B&V is smaller in field transmission & distribution but pairs construction with top-6 power design authority."
+  },
+  {
+   "slug": "mccarthy",
+   "type": "partner",
+   "status": "historical",
+   "since": "2016",
+   "note": "Named together on the Next NGA West delivery team, with Black & Veatch Special Projects alongside the McCarthy HITT joint venture.",
+   "context": "McCarthy's account of the campus names the delivery team as the McCarthy HITT joint venture with Black & Veatch Special Projects, Gensler and Akima. The $1.7bn, 700,000 sq ft campus opened in January 2026 and no continuing programme between the two firms is published, so the engagement is recorded as historical.\n\nSecure federal facilities are one of the few markets where an engineering and construction firm's scope and a building general contractor's overlap directly rather than sitting on either side of a fence.",
+   "source": "https://www.mccarthy.com/insights/mccarthy-hitt-and-nga-celebrate-completion-and-opening-of-next-nga-west-campus-in-st-louis"
   }
  ],
  "technicalSpecs": [
@@ -551,6 +560,6 @@
    "url": "https://www.forbes.com/companies/black-veatch/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 5
 }

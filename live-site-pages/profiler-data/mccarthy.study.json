@@ -1,0 +1,706 @@
+{
+ "schemaVersion": 2,
+ "slug": "mccarthy",
+ "title": "McCarthy — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "sections": [
+  {
+   "id": "what-this-guide-does-not-repeat",
+   "title": "Start here: below the equipment, and before it",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "This app already carries **nine** guides written from a contractor's chair, and this one deliberately teaches none of what they teach. **HITT** covers the anatomy of a data centre, the {{commissioning}} ladder, speed economics and the geography of Data Center Alley. **Holder** covers how hyperscalers buy construction, containment, joint ventures and how to read a private contractor's reported numbers. **Turner** covers the delivery chain, procurement as the product, six-nines reliability and offsite construction. **DPR** covers employee ownership and the {{ESOP}}, design for manufacture, {{VDC}}, the inside of an AI data hall and schedule science. **Mortenson** covers EPC against GC, {{substation}}s and voltage, MW against MWh, and entitlement. **Rosendin** covers the electrician's trade, the power-chain walk, electrical prefabrication and the apprenticeship pipeline. **Kiewit** covers combined-cycle gas, {{HVDC}}, advanced reactors and progressive design-build. **Primoris** covers how a solar farm gets built and how to read percentage-of-completion accounting. **Quanta** covers craft labour as the product and energised-line work.",
+    "**What none of them teaches is the ground, the concrete and the statutory gates** — the scopes that come before any equipment arrives and the approvals that come after the last cable is pulled. That is this guide's subject: what a soils report decides, why a foundation is a division problem, why concrete sits on the {{critical path}} even though it is neither the most expensive nor the most technical work, what a data-hall floor is actually specified on, how a shell gets closed three different ways, what it takes to build inside a hall that is running, what a water-reuse promise commits you to constructing, and why a fully commissioned building can still be illegal to occupy.",
+    "**Three ideas carry it.** The site is **discovered, not designed** — the ground is the one input nobody chose. Concrete is a **chemical reaction on a clock**, not an installation. And a building is **proven, not finished** — by a chain of independent parties, any one of whom can stop it.",
+    "Written for a reader with high-school physics and no construction background. Every acronym is defined on first use. There is no company trivia here and none in the drills — founding dates, executives and headquarters live in the dossier where they belong."
+   ]
+  },
+  {
+   "id": "the-site-is-discovered",
+   "title": "The site is discovered, not designed",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Every other guide in this app starts with equipment. This one starts underneath it, because the first thing a builder buys on a greenfield campus is **information about dirt**, and almost every expensive surprise on a project is a fact about the ground that nobody paid to learn early enough.",
+    "**A {{geotechnical investigation}} is a sampling programme, not a survey.** A rig drills borings on a grid — perhaps one every hundred to two hundred feet across a campus, deeper under the heavy things — and at intervals down each hole it drives a standard sampler with a standard hammer and counts the blows. That count, the {{standard penetration test}} number, is the crudest possible index of how dense or stiff the soil is, and it is also the most widely understood number in the industry. Samples go to a laboratory for grain size, moisture, plasticity and strength. Out of it comes a report that says, in effect: here is what you may stand on, here is what you must remove, and here is where the water is.",
+    "**The report's real output is a {{bearing capacity}}** — the pressure the ground will carry without failing or settling more than the structure can tolerate, in pounds per square foot. Good ground carries several thousand and takes ordinary footings. Poor ground carries a few hundred and forces a different foundation entirely, which is a different price and a different schedule.",
+    "**Three findings change a project rather than inform it.** {{expansive soil}} — clay that swells when wet and shrinks when dry — moves whatever sits on it through the seasons, and is dealt with by removing it, chemically stabilising it, or spanning over it, never by hoping. **Shallow groundwater** turns an excavation into a dewatering operation with a discharge permit attached. **Undocumented fill** — a previous owner's buried demolition debris, an old pond, a filled ravine — is worthless as support and has to come out, and nobody knows how much of it there is until it is being dug.",
+    "**Why this belongs in a data-centre curriculum at all.** A campus concentrates enormous, awkward, immovable weights on small patches of ground: a transformer, a generator on its pad, a chiller plant, and — new since liquid cooling — rows of racks that individually exceed a tonne. The soil report is the first document that decides whether those weights are cheap or expensive to support, and it is written before a single piece of that equipment has been selected."
+   ]
+  },
+  {
+   "id": "moving-the-ground",
+   "title": "Moving the ground: the first scope, and the least reversible",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Sitework happens before anything recognisable as a building, it is largely invisible in the finished product, and it is where a schedule is quietly won or lost. Each row is a distinct scope with its own crews, its own equipment and its own way of going wrong.",
+   "cols": [
+    "Scope",
+    "What it physically is",
+    "What governs it",
+    "How it goes wrong"
+   ],
+   "rows": [
+    [
+     "**Clearing and stripping**",
+     "Removing vegetation and the organic topsoil layer, which is compressible and cannot be built on",
+     "Environmental permits, protected-species windows, tree ordinances",
+     "A permit condition discovered after mobilisation; topsoil stockpiled where the building goes"
+    ],
+    [
+     "**{{mass grading}}**",
+     "Cutting the high ground down and filling the low ground up until the site matches the design elevations",
+     "{{cut and fill}} balance — hauling soil on or off site is the expensive part, so the design tries to balance it",
+     "An unbalanced earthwork model, so thousands of truckloads leave or arrive that nobody priced"
+    ],
+    [
+     "**Engineered fill and {{compaction}}**",
+     "Placing soil back in thin lifts and densifying each one to a specified percentage of its laboratory maximum",
+     "The {{proctor test}} sets the target density; field tests verify each lift",
+     "Fill placed too thick, too wet or too dry. The failure surfaces years later as a cracked slab or a settled pad"
+    ],
+    [
+     "**{{stormwater detention}}**",
+     "Basins, vaults and piping that hold rain and release it slowly, because the campus has replaced acres of field with roof and pavement",
+     "The discharge permit and the local drainage ordinance",
+     "Detention volume grows during permitting and takes land the site plan had already allocated to a building"
+    ],
+    [
+     "**Underground utilities**",
+     "Storm, sanitary, domestic water, fire water, gas, and the duct banks the electrical service runs in",
+     "Sequence — everything underground has to be in and inspected before the slab covers it",
+     "A duct bank routed after the foundations are set, so it has to go around them, adding length and losses"
+    ],
+    [
+     "**Paving and access**",
+     "Haul roads, crane pads, laydown yards, and eventually the permanent roads",
+     "Load, not appearance: a crawler crane and a transformer trailer both impose more than a car park was designed for",
+     "A permanent road built early and destroyed by construction traffic, then rebuilt at the end"
+    ]
+   ],
+   "note": "**The unifying property is irreversibility.** Concrete can be demolished, a wall can be moved, equipment can be swapped. Ground that was compacted badly under a building that is now standing on it cannot be fixed without taking the building off. That is why earthwork gets inspected continuously, by a third party, in real time — and why the inspection reports are kept for the life of the asset."
+  },
+  {
+   "id": "the-foundation-under-a-megawatt",
+   "title": "The foundation under a megawatt",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A foundation exists to spread a concentrated load out over enough ground that the ground does not care. The engineering is a division problem — load divided by area must stay under the {{bearing capacity}} — and the interesting part is what happens when the answer comes out wrong.",
+    "**{{spread footing}}s** are the default: an isolated pad of reinforced concrete under each column, sized so its footprint brings the pressure down to something the soil accepts. They are cheap, fast and independent, which is also their weakness — each one settles on its own, and differential settlement between two of them is what cracks the structure above.",
+    "**A {{mat foundation}}** replaces all of them with one thick reinforced slab under the whole structure. It is used when the soil is weak, when the loads are heavy and closely spaced, or when differential settlement has to be eliminated rather than tolerated. It is far more concrete and far more reinforcing steel, and it turns the foundation into a single monolithic pour that has to be planned like an operation.",
+    "**A {{deep foundation}}** — driven piles or drilled shafts — gives up on the near-surface soil and carries the load down to competent material, tens of feet below. It is the answer where the top of the site is fill, soft clay or liquefiable sand. It brings specialised rigs, a pile-driving noise ordinance, and a testing programme, and it is the most expensive of the three by a wide margin.",
+    "**The data-centre twist is that the heaviest things are not the building.** A large power transformer, a standby generator, a chiller and its tower, and a battery room are point concentrations of mass that arrive on their own {{equipment pad}}s, each engineered for static weight, for the dynamic loads a rotating machine imposes, and for the access a crane and a maintenance crew will need. Those pads carry a further burden: they are usually on the critical path, because equipment cannot be set until its pad has cured, and equipment that cannot be set cannot be terminated, tested or commissioned.",
+    "**And the last quiet trap is the {{embed}} and the {{sleeve}}.** Anything that will later bolt to concrete — an anchor bolt pattern, a rail, a bracket — and anything that will later pass through it — conduit, chilled-water pipe, busway — has to be placed while the concrete is still wet, from drawings that were coordinated between four trades who have never met. Once the pour has cured, a missing embed becomes a drilled-and-epoxied repair that has to be designed, tested and argued about, and a missing sleeve becomes a hole cut through structure that an engineer has to approve. This is the mechanism by which a five-minute coordination failure becomes a three-week schedule item."
+   ]
+  },
+  {
+   "id": "concrete-is-the-schedule",
+   "title": "Concrete is a chemical reaction on a clock",
+   "kind": "timeline",
+   "read": "7 min",
+   "intro": "A pour is not an installation, it is the start of a reaction. Gold is the material, blue is what the schedule is waiting on, red is the decision points where a project can lose weeks. Hours from the batch plant along the axis, on a log-ish scale collapsed to days at the right.",
+   "lanes": {
+    "mat": "The material",
+    "sched": "What waits on it",
+    "dec": "Decision points"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "mat",
+     "label": "Batched",
+     "sub": "Cement, aggregate, sand and water mixed at the plant. The {{water-cement ratio}} is fixed here, and it is the single strongest determinant of the finished strength."
+    },
+    {
+     "x": 0.5,
+     "lane": "dec",
+     "label": "Truck arrives; someone wants to add water",
+     "sub": "Wetter concrete is easier to place. It is also permanently weaker. This is the most common quality failure in the industry and it happens at the chute, not in the design."
+    },
+    {
+     "x": 1,
+     "lane": "mat",
+     "label": "Placed, consolidated, finished",
+     "sub": "Vibrated to remove voids, screeded and floated. For a hall floor the finishing operation is where {{floor flatness}} is created or lost — and it cannot be corrected later without grinding."
+    },
+    {
+     "x": 6,
+     "lane": "mat",
+     "label": "Initial set",
+     "sub": "The mix stops being workable. {{admixture}}s move this window: retarders buy time in heat, accelerators buy it in cold."
+    },
+    {
+     "x": 24,
+     "lane": "dec",
+     "label": "{{curing}} regime begins in earnest",
+     "sub": "Strength gain is a hydration reaction, not drying. Keeping it moist and in temperature range for days is what produces the specified strength; a slab left to dry in the sun is permanently weaker."
+    },
+    {
+     "x": 72,
+     "lane": "sched",
+     "label": "Formwork stripped, next lift starts",
+     "sub": "Vertical work can resume long before full strength, against early-strength criteria."
+    },
+    {
+     "x": 168,
+     "lane": "dec",
+     "label": "Seven-day {{cylinder break}}",
+     "sub": "Test cylinders cast from the pour are crushed. A low seven-day break is an early warning, not yet a verdict."
+    },
+    {
+     "x": 300,
+     "lane": "sched",
+     "label": "Steel erection / tilt panels lifted",
+     "sub": "The crane and the shell are waiting on concrete that can take the load."
+    },
+    {
+     "x": 672,
+     "lane": "dec",
+     "label": "Twenty-eight-day {{cylinder break}}",
+     "sub": "The contractual strength test. A failure triggers core sampling, a structural review, and in the worst case removal — of concrete that other trades have already built on top of."
+    }
+   ],
+   "note": "**Two things this timeline explains.** First, why concrete sits on the {{critical path}} even though it is neither the most expensive nor the most technical scope: everything structural above it is waiting on a reaction that cannot be hurried much and cannot be skipped. Second, why cold and hot weather are cost items — below about 5 °C hydration nearly stops and the pour needs heated enclosures and blankets; above about 32 °C it sets too fast and needs ice, chilled water, night pours and retarders. The same slab costs different money in January and July, and a schedule that assumed otherwise finds out."
+  },
+  {
+   "id": "the-floor-is-a-specification",
+   "title": "The floor is a specification, not a surface",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "A data hall's {{slab-on-grade}} is the single largest engineered component most people never think about. It is a structure, a working surface, a vapour barrier and a load path, and every one of those roles is a separately specified number. Read the right-hand column as the failure the number exists to prevent.",
+   "cols": [
+    "Property",
+    "What it means",
+    "Typical order of magnitude",
+    "What it prevents"
+   ],
+   "rows": [
+    [
+     "**{{uniform load}} rating**",
+     "Distributed weight per unit area the floor may carry everywhere",
+     "Office space is rated in the tens of pounds per square foot; a conventional data hall in the low hundreds; a liquid-cooled row higher again",
+     "A hall that cannot legally be filled with the racks it was built for"
+    ],
+    [
+     "**{{point load}} rating**",
+     "A concentrated load on a small contact area — a rack castor, a jack, a pallet-truck wheel",
+     "Governed by punching shear at the contact patch, not by the uniform rating",
+     "A floor that passes its uniform check and cracks under a single rack foot during move-in"
+    ],
+    [
+     "**{{floor flatness}} (F-numbers)**",
+     "How level and how wavy the finished surface is, measured within days of the pour before curl develops",
+     "Data halls and warehouse racking specify far tighter numbers than commercial space",
+     "A rack row that will not align, and cabinets that rock on three feet out of four"
+    ],
+    [
+     "**Thickness and reinforcement**",
+     "Slab depth plus rebar or fibre, sized for the loads and for crack control",
+     "Set by the structural engineer against the loads above, not by convention",
+     "Cracks that propagate through the whole hall from one over-loaded bay"
+    ],
+    [
+     "**Joint layout**",
+     "Where the slab is deliberately allowed to move, and how load is transferred across the gap",
+     "Saw-cut control joints on a grid; dowelled construction joints where pours meet",
+     "Random cracking, which is what an unjointed slab does instead"
+    ],
+    [
+     "**Vapour retarder**",
+     "A membrane under the slab stopping ground moisture rising through it",
+     "Continuous, sealed at laps and penetrations",
+     "Moisture emerging through the slab into a room full of electronics, and flooring adhesives failing"
+    ],
+    [
+     "**Surface finish**",
+     "Hardened, sealed, and non-dusting",
+     "A trowelled and sealed finish rather than bare concrete",
+     "Concrete dust in the air intake of every server in the hall"
+    ],
+    [
+     "**{{embed}}s and {{sleeve}}s**",
+     "Everything cast in before the pour, from anchor patterns to pipe penetrations",
+     "Coordinated from a merged model of all trades",
+     "The most expensive category of rework on any project"
+    ]
+   ],
+   "note": "**The connection to the equipment guides.** Vertiv's guide names {{floor loading}} as a line on a UPS datasheet, and Narada's names the weight of a battery string. This is the other side of that line: the number on the datasheet is a request, and the slab is where it is either granted or refused. The awkward cases are always retrofits — a hall built for air-cooled racks being asked to accept liquid-cooled ones that weigh two or three times as much, in the same footprint, on a floor that was poured to a different number."
+  },
+  {
+   "id": "three-ways-to-make-a-shell",
+   "title": "Three ways to make a shell",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "Once the slab is down, the building has to be enclosed — and a data hall's enclosure is bought for schedule and weather tolerance far more than for appearance. The three methods below are genuinely different industrial processes, not three finishes of one.",
+   "cards": [
+    {
+     "t": "{{tilt-up}} concrete",
+     "meta": "Wall panels cast flat on the slab that has just been poured, cured in place, then lifted upright by crane and braced until the roof ties them together",
+     "adv": [
+      "The casting bed already exists — it is the floor of the building, so no forms have to be built and no panels have to be trucked",
+      "Very fast for large, repetitive, single-storey footprints, which is exactly the shape of a data hall",
+      "Panels are inherently fire-resistant, secure and durable, with no separate cladding trade to schedule",
+      "Crews are local and the equipment is a crane; no factory slot has to be booked months ahead"
+     ],
+     "dis": [
+      "It occupies the slab. Nothing else can happen on that floor while panels are cast and cured on it",
+      "Panel size is limited by what the crane on site can pick, which constrains the architecture",
+      "Weather-dependent on both ends — the pour and the lift",
+      "The lift itself is one of the highest-risk operations on any project, and it is irreversible"
+     ]
+    },
+    {
+     "t": "{{precast concrete}}",
+     "meta": "Structural panels, columns and double-tees cast in a factory under controlled conditions, cured indoors, and delivered to site on trucks to be erected",
+     "adv": [
+      "The work happens off the {{critical path}} and out of the weather, in a plant that pours the same piece every day",
+      "Tighter tolerances and better finishes than site casting, with embeds placed under factory quality control",
+      "The slab stays free for other trades from day one",
+      "Erection is fast once panels arrive — a crew can close a building in weeks"
+     ],
+     "dis": [
+      "Transport sets a hard ceiling on piece size and weight, and the haul distance is a real cost",
+      "Factory capacity is booked well ahead — this becomes a {{long-lead item}} like any other",
+      "A design change after the moulds are made is expensive in a way a site-cast change is not",
+      "Erection sequence is fixed by the design; you cannot easily build out of order"
+     ]
+    },
+    {
+     "t": "Structural steel with a light skin",
+     "meta": "A steel frame with metal panel, insulated panel or masonry infill hung on it",
+     "adv": [
+      "Longest clear spans and the most flexible interior — useful where the equipment layout is not settled",
+      "Lightest structure, which can mean a cheaper foundation on poor ground",
+      "Easy to penetrate and modify later for the pipe and busway that liquid cooling keeps adding",
+      "Fabrication and detailing are highly digitised, so the model drives the shop directly"
+     ],
+     "dis": [
+      "Steel is a global commodity with volatile pricing and mill lead times measured in months",
+      "Fire protection is an added scope — sprayed or intumescent — that concrete does not need",
+      "Requires more separate trades to reach a weather-tight enclosure",
+      "Deflection and vibration have to be actively designed for equipment that concrete would simply not notice"
+     ]
+    }
+   ],
+   "note": "**Read the choice as a schedule instrument.** All three enclose a building; they differ in where the work happens and therefore in what can go wrong. Tilt-up trades floor availability for speed. Precast trades flexibility for weather-independence and factory quality. Steel trades a simpler structure for more trades and more lead time. On a campus of identical buildings the answer tends to be whichever method makes building number six faster than building number one — the same {{learning curve}} argument the modular-reactor guide makes about factories, applied to a wall."
+  },
+  {
+   "id": "the-envelope-of-a-heat-source",
+   "title": "The envelope of a building that is mostly heat source",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Nearly every building code, insulation rule and envelope habit was written for a building that people occupy and that must be heated in winter. A data hall inverts almost all of it: it is unoccupied for most of its floor area, it generates tens of megawatts of heat continuously, and its problem is getting heat out rather than keeping it in.",
+    "**The {{air barrier}} still matters, for a different reason.** In a conventional building the barrier is about heating and cooling energy. Here it is about **moisture and dust**: a hall held at a controlled humidity beside outdoor air at a different dew point will move water vapour through any gap in the envelope, and unfiltered outdoor air brings particulate straight into equipment intakes. The barrier has to be genuinely continuous — through every penetration, every joint, every roof-to-wall transition — because air, like current, finds the one path that was left open.",
+    "**{{fire compartmentation}} is the envelope's other half, and it is internal.** Rated walls and floors divide the building so a fire and its smoke stay in one part of it for a stated number of hours. The engineering discipline that follows is unglamorous and decisive: every conduit, pipe, cable tray and duct that passes through a rated wall has to be firestopped back to the wall's own rating, with a tested, listed assembly, documented per penetration. A campus has tens of thousands of such penetrations, they are installed by every trade on the job, and they are inspected one at a time.",
+    "**The roof became a floor.** Air-cooled chillers, dry coolers, condensers, generator exhaust and increasingly whole mechanical yards sit on the roof, which means the roof structure is designed for equipment weight, for maintenance access, for the wind uplift on a machine standing proud of the parapet, and for the vibration a rotating machine imposes on the structure beneath it. It also means the roof membrane — historically the cheapest part of an envelope — is now something people walk on weekly, with walk pads, curbs and flashing designed for traffic.",
+    "**And the whole envelope is a security boundary.** Bollards, vehicle barriers, hardened walls, controlled openings, and a fence line whose standoff distance is a client requirement rather than an aesthetic one. Where the campus takes federal or defence work, the requirements harden further into a formal accreditation with its own inspection regime, and the construction process itself — who may enter, what may be photographed, how material is delivered — becomes part of the specification."
+   ]
+  },
+  {
+   "id": "working-in-a-live-building",
+   "title": "Working in a live building: the discipline healthcare invented",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "The hardest construction on a mature campus is not the next new building. It is the work that has to happen **inside or beside a hall that is running**, with a tenant's production load in it, at a moment when nobody is allowed to notice.",
+    "**Healthcare solved this problem first, and the transfer is direct.** Building inside an operating hospital produced a formal, codified procedure — an {{ICRA}}, an infection control risk assessment — that classifies the work by how much dust it makes and the space by how vulnerable its occupants are, and then prescribes the containment that follows. It is not advice; it is a permit that hangs on the barrier, signed, with the class written on it.",
+    "**The mechanism is pressure, not sheeting.** A containment is sealed and then held at slightly **lower** pressure than the space around it, with filtered exhaust, so that every leak flows *inward* — {{negative pressure containment}}. Air locks at the entrance, tacky mats on the floor, HEPA filtration on the exhaust, and a manometer on the wall showing that the pressure differential is actually there. The same physics keeps concrete dust out of a hall full of server intakes as keeps it out of an oncology ward.",
+    "**{{interim life safety measures}} measures are the second half.** Construction routinely disables the permanent systems that make a building safe — a sprinkler branch is drained, a smoke detector is bagged against dust, an exit corridor becomes a work zone, a fire-rated wall is opened for a new duct. Every one of those creates a temporary condition that has to be compensated: a fire watch, temporary alarms, a signed alternative exit route, a daily inspection log. On a live data campus the analogue is exact, and it extends to the electrical: a temporary tie, a bypassed protective device, a disabled EPO circuit is a life-safety condition, not merely an operational one.",
+    "**The reason this belongs in a data-centre curriculum.** A hospital and a data hall are the same kind of building in the ways that matter to a builder: continuously occupied by something that cannot be turned off, dense with mechanical and electrical systems, with a change to any one system capable of taking down the whole. A firm that learned the discipline on wards brings a written procedure to a hall expansion; a firm that has only built empty shells is inventing one on the day. That is the honest, non-marketing version of why a contractor's other markets are relevant to this one.",
+    "**And the schedule consequence is the part people miss.** Work in a live environment is slower per unit — the barrier has to be built, the pressure verified, the route escorted, the shift often moved to nights — and the *unit* is smaller, because the tie-in windows are handed out by an operations team in hours, not weeks. Pricing that work at open-site productivity is one of the most reliable ways to lose money in construction."
+   ]
+  },
+  {
+   "id": "water-is-a-building",
+   "title": "Water is not a utility, it is a building",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "A campus that promises to reuse water, or to return more than it takes, has committed to constructing and operating a treatment plant. This is the plant, stage by stage — the same unit operations a municipal works uses, at a size a campus can host. Read the last column as what the stage exists to protect downstream.",
+   "cols": [
+    "Stage",
+    "What physically happens",
+    "Why a campus needs it",
+    "What it protects"
+   ],
+   "rows": [
+    [
+     "**Screening and grit removal**",
+     "Bars and settling channels take out solids large enough to damage a pump",
+     "Any reclaimed or surface source arrives with debris in it",
+     "Every pump and membrane after this point"
+    ],
+    [
+     "**{{clarification}}**",
+     "Solids are allowed or chemically induced to settle out of the water in a large quiescent basin",
+     "It is the cheapest way to remove the bulk of the suspended load",
+     "Filter life — filtering water that could have been settled first is expensive"
+    ],
+    [
+     "**Filtration**",
+     "Water is passed through media or membranes that catch what settling did not",
+     "Cooling towers and boilers foul on what filtration removes",
+     "Heat-exchanger {{approach}}, and therefore plant efficiency"
+    ],
+    [
+     "**Softening / {{reverse osmosis}}**",
+     "Hardness and dissolved salts are removed — by chemistry, by ion exchange, or by pushing water through a membrane at pressure",
+     "Determines how many {{cycles of concentration}} a tower can run before it scales",
+     "Tower fill, condenser tubes, and the site's total water draw"
+    ],
+    [
+     "**{{disinfection}}**",
+     "Pathogens are inactivated with chlorine, ozone or ultraviolet light",
+     "Open recirculating water is a {{Legionella}} risk that is regulated, not optional",
+     "People, and the operating licence"
+    ],
+    [
+     "**Residuals handling**",
+     "The concentrated reject, sludge and {{blowdown}} that every stage above produces has to be dewatered, hauled or discharged",
+     "This is where a reuse promise most often quietly fails",
+     "The discharge permit — and the credibility of the water claim"
+    ]
+   ],
+   "note": "**Two honest points.** First, water reuse does not eliminate water consumption; it changes where the consumption is and adds an energy cost, because pumping water through a membrane at pressure is work. A site that reuses aggressively will find its {{WUE}} improves and its {{PUE}} does not. Second, this is a **plant**, with operators, chemistry, permits and failure modes — which is why a campus that commits to it is committing to run a small utility, not to install a package. The thermal side of the same argument — evaporation, {{blowdown}}, {{drift}} and the dry-cooler alternative — belongs to the chiller guide, and is not repeated here."
+  },
+  {
+   "id": "who-carries-the-risk",
+   "title": "The delivery method decides who carries which risk",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Every project answers three questions: who designs it, who builds it, and who is exposed when the price or the date moves. The delivery method is the answer, and it is chosen before anything is drawn. Read the last column as what the owner is actually buying.",
+   "cols": [
+    "Method",
+    "Who holds what",
+    "When the price is fixed",
+    "What the owner is buying"
+   ],
+   "rows": [
+    [
+     "**Design-bid-build ({{lump sum}})**",
+     "Owner holds the designer; a separate builder bids the finished drawings",
+     "At bid, on a complete design",
+     "The lowest price for a fully defined scope — and a builder with no reason to have improved the design, since it did not see it"
+    ],
+    [
+     "**{{CM at risk}}**",
+     "One firm advises through design, then converts into the builder under a {{guaranteed maximum price}}",
+     "Progressively, as design completes, capped by the GMP",
+     "Constructability advice and buyable early packages, at the cost of a negotiated rather than a bid price"
+    ],
+    [
+     "**{{design-build}}**",
+     "One entity holds design and construction together",
+     "Early, often on a partial design",
+     "A single point of responsibility and an early date — with the owner relying on the contract to protect quality the design has not yet specified"
+    ],
+    [
+     "**Progressive design-build**",
+     "Design-build selected on qualifications, price agreed later against an open book",
+     "Late, at a validated GMP, with an exit ramp if it is unacceptable",
+     "Speed without committing to a price before the scope is known — the method that has taken over complex power and process work"
+    ],
+    [
+     "**{{ipd}}**",
+     "Owner, designer and builder sign one contract with a shared risk-and-reward pool",
+     "Collaboratively, against a target cost",
+     "Aligned incentives, and an obligation on the owner to actually participate"
+    ]
+   ],
+   "note": "**The mechanics that matter more than the label.** A **{{guaranteed maximum price}}** is only as good as its scope definition and its allowances — the argument is always about what was inside it. **{{preconstruction}}** is where a schedule is either made possible or quietly made impossible, and **{{contingency}}** is the money held for work that is certain to be needed and not yet identified; whose contingency it is, and who keeps what is unspent, is negotiated, and it is the single most revealing term in a construction contract. **Early work packages** — issuing foundations for construction while the building above is still being designed, the {{shell and core}} logic applied to a schedule — are how any of these methods actually beat a linear schedule, and they trade rework risk for months. And a **{{change order}}** log is the honest measure of how complete a design was when construction started, which is why experienced owners read it before they read the schedule."
+  },
+  {
+   "id": "proven-not-finished",
+   "title": "Proven, not finished: the inspection supply chain",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A building is not complete when it is built. It is complete when a series of independent parties have each certified a piece of it, in a sequence, and the last of them has issued a document. On a data campus that chain runs from a soil technician to a fire marshal to a commissioning agent to a tenant, and any link can stop the whole thing.",
+    "**{{special inspection}} is the structural layer.** Code requires independent, qualified inspection of specified work — soils and compaction, concrete placement and testing, structural welds and bolted connections, spray-applied fireproofing, anchors in concrete — performed by an agency the owner engages, not by the contractor. It is scheduled in advance, it happens while the work is exposed, and its reports are submitted to the building department. **Work that gets covered up before its inspection gets uncovered**, which is the most avoidable and most repeated schedule loss on a large project.",
+    "**The {{ahj}} is the layer nobody can design around.** Codes are written nationally and enforced locally, and the authority having jurisdiction — a specific plans examiner, a specific fire marshal — decides what the code means on this site. Two identical buildings in two counties can require different fire pump arrangements, different exiting, different generator enclosures. This is why a national builder's local knowledge is a real asset and not a marketing claim: it is a map of who interprets what, and how long each of them takes.",
+    "**Then the fire and life-safety chain.** Sprinkler hydrostatic tests, fire pump acceptance testing at rated flow, alarm device-by-device verification, smoke control testing, and the interlocks between them — a smoke detector that must shut a fan down, a fan that must start on alarm, a door that must release. These are cross-system tests, which means they cannot happen until the electrical, mechanical and fire systems are all substantially complete, which puts them at the end of a schedule where there is least float.",
+    "**And finally the {{certificate of occupancy}}**, which converts a finished building into a usable one. It can be held up by things that have nothing to do with the hall: a landscaping condition, a traffic-signal contribution, a stormwater as-built, a health-department sign-off on a break-room sink. Owners routinely pursue a temporary or partial certificate to energise and commission a portion while the rest closes out — an arrangement that is negotiated, not granted.",
+    "**How this sits beside commissioning.** HITT's guide covers the commissioning ladder itself — the levels, the integrated systems test, the theatre of failure at Level 5. This section is the *other* set of gates that run alongside it: the statutory ones, held by people who do not work for the owner and cannot be scheduled by the project. A building can be fully commissioned and still not legally occupiable, and that gap is where a power-on date most often slips at the very end."
+   ]
+  },
+  {
+   "id": "the-load-ladder",
+   "title": "What each floor has to carry",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "floor load rating, pounds per square foot (order-of-magnitude design values, not any one project's specification)",
+   "intro": "One axis, from an office to a transformer pad. This is the number that decides whether a hall can accept the racks somebody wants to put in it, and it is fixed in concrete years before those racks are chosen. Read each rung as a design decision that cannot be revisited cheaply.",
+   "items": [
+    {
+     "label": "Office floor",
+     "sub": "people, desks, partitions — the number every other building is designed to",
+     "v": 50
+    },
+    {
+     "label": "Light commercial / corridor",
+     "sub": "circulation and light storage",
+     "v": 100
+    },
+    {
+     "label": "Conventional raised-floor data hall",
+     "sub": "air-cooled racks at conventional density, plus the access floor itself",
+     "v": 150
+    },
+    {
+     "label": "Slab-on-grade AI hall",
+     "sub": "the modern arrangement: no raised floor, racks direct on the slab",
+     "v": 300
+    },
+    {
+     "label": "Liquid-cooled row",
+     "sub": "cabinets past a tonne each, plus manifolds, {{CDU}}s and the water in them",
+     "v": 500
+    },
+    {
+     "label": "Battery room / UPS gallery",
+     "sub": "a string of cells is one of the densest static loads in the building",
+     "v": 750
+    },
+    {
+     "label": "Switchgear and transformer pads",
+     "sub": "not a floor at all — an engineered {{equipment pad}} on its own foundation",
+     "v": 1500
+    }
+   ],
+   "note": "**Two readings.** Going up the ladder, **weight arrives faster than area does**: a liquid-cooled row does not spread its extra mass out, it concentrates it, which is why the {{point load}} check and not the {{uniform load}} check is what usually fails. Going down, notice how far a data hall already sits above ordinary construction before liquid cooling is even mentioned — a hall is closer to a warehouse or a light industrial building than to an office, and it is designed by people who think that way. The awkward case is always the **retrofit**: a hall poured for the third rung being asked to accept the fifth, where the honest answers are a structural strengthening scheme, a lower rack density, or a different building."
+  },
+  {
+   "id": "where-mccarthy-slots-in",
+   "title": "Where these capabilities slot into a campus",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The company's own published capability set, mapped onto the stages this guide teaches. The right-hand column is what the reader should take from each — the reason the scope matters, not a claim about the firm.",
+   "cols": [
+    "Stage",
+    "The scope",
+    "Published capability",
+    "Why it matters to the reader"
+   ],
+   "rows": [
+    [
+     "**Before anything**",
+     "Earthwork, {{mass grading}}, excavation, site utilities, stormwater",
+     "Castle Contracting — the civil arm operating as a division, covering earthwork, wet utilities, civil design-build and subsurface utility mapping",
+     "Civil is the scope most often subcontracted and most often the source of the first delay. A builder holding it directly holds its own start date"
+    ],
+    [
+     "**Foundations and structure**",
+     "{{spread footing}}s, {{mat foundation}}s, {{equipment pad}}s, {{slab-on-grade}}, structured parking",
+     "Concrete is a named self-perform trade — formwork, placing and finishing — and self-perform is described as the foundation of every structured parking project",
+     "Self-performed concrete means the schedule's spine is held by the same party that owns the schedule"
+    ],
+    [
+     "**The building services**",
+     "Electrical, mechanical, plumbing, HVAC, ductwork, piping, controls, firestopping",
+     "All named as self-perform trades — an unusually broad {{self-perform}} stack for a general contractor",
+     "{{MEP}} is where a data-centre schedule is actually consumed. Who holds it determines who can compress it"
+    ],
+    [
+     "**The hall itself**",
+     "Fast-track data-hall fit-outs, white-space uplifts, critical-system upgrades, greenfield and brownfield campuses, shell hardening",
+     "**418 MW of data centres built**, against **2 GW+ in planning, design and preconstruction** — the company's own published figures",
+     "That ratio is the single most informative number about any builder in this market right now: roughly five times as much ahead as behind"
+    ],
+    [
+     "**Working around live operations**",
+     "Renovations and upgrades in occupied facilities",
+     "A dedicated small-project and renovation arm for occupied facilities, and a healthcare practice of 1,000+ facilities where {{ICRA}} discipline is routine",
+     "The healthcare tenure is the credential that transfers — the procedure for building beside something that cannot stop is the same procedure"
+    ],
+    [
+     "**Water**",
+     "{{water reclamation}}, treatment plants, reservoirs, desalters",
+     "A 40-year water and wastewater practice; eight major advanced water-treatment projects in twelve years",
+     "A campus that commits to water reuse is commissioning a treatment plant, and somebody has to have built one before"
+    ],
+    [
+     "**The energy side of the fence**",
+     "Utility-scale solar and storage as EPC, GC or balance-of-plant",
+     "17 GW+ of solar installed and 9 GWh of storage across 114+ projects, ranked #2 large-scale storage installer and #3 EPC by Solar Power World",
+     "The same firms increasingly build the load and the generation. Note the role varies project by project between EPC and GC — the distinction Mortenson's guide teaches"
+    ],
+    [
+     "**Prefabrication**",
+     "Solar steel fabrication, modular wall panels, mechanical assemblies, cold-formed steel wall systems, anchor-bolt assemblies",
+     "Owned facilities in Chandler AZ and Maryland Heights MO with dedicated prefabrication space",
+     "Prefabrication moves hours off the site and out of the weather — the same {{learning curve}} argument the modular-reactor guide makes about factories"
+    ]
+   ],
+   "note": "**One honest caution about reading any of this.** Almost every figure above is **self-published and undated**, because a private, employee-owned company has no filing obligation and no audited disclosure. There is no revenue, margin, backlog or end-market mix in the public record at all. Holder's guide covers how to read private-contractor numbers generally; the point here is narrower — when the only source for a capability claim is the party making it, the claim is a starting point for a question, not an answer."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**Fill that was never compacted to specification.** It passes visual inspection, it is covered by a slab, and it announces itself two to five years later as a crack across a hall or a settled {{equipment pad}} under a transformer. There is no cheap repair: the load has to come off before the ground can be fixed. Owned by the earthwork contractor at the moment, and by the owner forever after. It is the reason compaction is tested lift by lift by a third party rather than at the end.",
+    "**An {{embed}} or a {{sleeve}} that was not set before the pour.** Four trades coordinate a penetration schedule from a merged model, one item is missed, and the concrete cures. What was a five-minute placement becomes an engineered repair — a core-drilled hole an engineer must approve, or an epoxy anchor that has to be pull-tested — with a schedule cost measured in weeks and an argument about who pays. Owned by whoever ran the coordination, and discovered by whoever shows up with the equipment.",
+    "**A floor that is flat enough for an office and not for a rack row.** {{floor flatness}} is measured within days of the pour and is effectively permanent afterwards; grinding a hall flat is expensive, dusty and done in a building other trades want to work in. The failure presents at move-in, as cabinets that rock and rows that will not align, long after the concrete crew has left the site. Owned by the finishing operation, and specified by whoever wrote the floor section months earlier — this is §5's row 8 in a different costume: thousands of small placements proven only at the end.",
+    "**A {{point load}} check nobody ran.** The hall's {{uniform load}} rating is quoted, the racks are ordered, and the concentrated load under a single castor exceeds what the slab can take in punching shear. It is the classic liquid-cooling retrofit failure, and it is arithmetic that takes an hour and is skipped because the uniform number looked comfortable. Owned by the structural engineer, and triggered by an equipment decision made after the engineer left.",
+    "**Work covered up before its {{special inspection}}.** Reinforcing steel, a weld, a fireproofing thickness, a compaction lift — inspected on a schedule the inspector controls, not the contractor. What is covered gets uncovered, and the second pour costs more than the first. Owned by the superintendent, and it is the most avoidable schedule loss on any large project.",
+    "**Live-building work priced at open-site productivity.** A tie-in beside a running hall needs a barrier, verified {{negative pressure containment}}, an escorted route, an {{interim life safety measures}} plan and usually a night shift — and the operations team hands out the windows in hours, not weeks. The estimate assumed a day's work; the reality is six nights. Owned by preconstruction, and this is §5's row 14 arriving early: what was not planned under live conditions was not planned.",
+    "**The {{certificate of occupancy}} that a landscaping condition is holding.** Every system is commissioned, the tenant's equipment is on the dock, and the building is not legally occupiable because a stormwater as-built has not been accepted or a traffic-signal contribution has not cleared. The {{ahj}} does not work for the project and cannot be scheduled by it. Owned by nobody on the construction team, which is exactly why it is missed — and why experienced owners chase a partial or temporary certificate months before they think they need to.",
+    "**And the one that is not a construction failure at all: the long-lead equipment.** A transformer, switchgear or a chiller ordered against a design that was not yet fixed arrives late or arrives wrong, and the {{equipment pad}} sits cured and empty. §5's row 2 owns the transformer itself; the construction-side version is that the {{long-lead item}} had to be ordered before the building around it was designed, and every change after that order is a change to a manufacturing slot rather than to a drawing."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does a geotechnical investigation actually produce, and what is its most consequential output?",
+     "a": "A programme of borings, samples and laboratory tests, producing a report on what is under the site. Its most consequential output is a bearing capacity — the pressure the ground can carry without failing or settling unacceptably — because that number decides whether the structure sits on spread footings, a mat, or piles, which is a large difference in both cost and schedule."
+    },
+    {
+     "q": "Why is compaction tested lift by lift rather than at the end?",
+     "a": "Because badly compacted fill cannot be fixed once something is standing on it. The failure is invisible at the time, surfaces years later as settlement or cracking, and the only repair is to remove the load first. Continuous third-party testing against a laboratory maximum density is the only point at which the defect is cheap."
+    },
+    {
+     "q": "Concrete gains strength by what process, and what does that imply about curing?",
+     "a": "By hydration — a chemical reaction between cement and water — not by drying. So curing means keeping it moist and within a temperature range while the reaction proceeds. Concrete left to dry out is permanently weaker, and the loss cannot be recovered later."
+    },
+    {
+     "q": "Why does adding water at the truck to make concrete easier to place matter?",
+     "a": "Because the water-cement ratio is the single strongest determinant of finished strength and durability. Water added at the chute trades permanent strength for temporary workability, and the test cylinders cast from that load are what will be crushed at 28 days."
+    },
+    {
+     "q": "State the difference between a uniform load rating and a point load rating, and which one usually fails first in a liquid-cooling retrofit.",
+     "a": "Uniform load is distributed weight per unit area the floor may carry everywhere; point load is a concentrated load on a small contact patch, such as a rack castor. The point-load check usually fails first, because liquid-cooled cabinets concentrate their extra mass rather than spreading it, and punching shear at the contact patch is governed by different arithmetic than the uniform rating."
+    },
+    {
+     "q": "What are floor F-numbers, and why can they not be fixed later?",
+     "a": "They express how level and how wavy a finished concrete floor is, measured within days of the pour. They are created by the finishing operation and are effectively permanent — correcting them afterwards means grinding a floor inside a building other trades are working in, which is expensive, dusty and slow."
+    },
+    {
+     "q": "Compare tilt-up, precast and steel as ways to close a shell, in one sentence each.",
+     "a": "Tilt-up casts wall panels flat on the building's own slab and lifts them — fast and cheap, but it occupies the floor and the crane limits panel size. Precast casts them in a factory and trucks them in — off the critical path and out of the weather, but transport limits piece size and the plant has to be booked. Steel frames the building and hangs a light skin — longest spans and most flexible, but more trades, added fire protection and mill lead times."
+    },
+    {
+     "q": "What is an ICRA, and why does the discipline transfer from hospitals to data halls?",
+     "a": "An infection control risk assessment: a formal, permitted procedure for building inside or beside an operating healthcare facility, classifying the work by dust generation and the space by vulnerability, then prescribing the containment. It transfers because a hospital and a data hall are the same kind of building for a builder — continuously occupied by something that cannot be turned off, dense with mechanical and electrical systems, where a change to one system can take down the whole."
+    },
+    {
+     "q": "How does a negative-pressure containment actually work, and how do you know it is working?",
+     "a": "The work area is sealed and then held at slightly lower pressure than its surroundings with filtered exhaust, so every leak flows inward rather than out. You know it is working from a manometer showing the pressure differential — the sheeting alone proves nothing."
+    },
+    {
+     "q": "Why does a campus that promises water reuse have to build a plant rather than sign a pledge?",
+     "a": "Because reuse is a sequence of physical unit operations — screening, clarification, filtration, softening or reverse osmosis, disinfection, and residuals handling — each with equipment, chemistry, permits and operators. Reuse also does not eliminate water consumption; it moves it and adds an energy cost, because pushing water through a membrane at pressure is work."
+    },
+    {
+     "q": "What does a guaranteed maximum price actually guarantee, and what is the term underneath it that matters more?",
+     "a": "It caps the cost the builder may charge, absorbing overruns above it — but only for the scope it defines. The term that matters more is the contingency: how much is held for work that is certain to be needed and not yet identified, whose money it is, and who keeps what is unspent."
+    },
+    {
+     "q": "Why can a fully commissioned building still be illegal to occupy?",
+     "a": "Because commissioning proves performance to the owner, while occupancy is granted by the authority having jurisdiction against a separate statutory chain — special inspections, fire and life-safety acceptance testing, and conditions that may have nothing to do with the hall, such as stormwater as-builts or a landscaping requirement. The certificate of occupancy is a different gate held by different people."
+    },
+    {
+     "q": "What is a special inspection and what is the classic way it costs a project weeks?",
+     "a": "Independent, code-required third-party inspection of specified structural work — soils, concrete, welds, bolts, fireproofing, anchors — engaged by the owner and scheduled in advance while the work is still exposed. It costs weeks when work is covered up before the inspection happens, because it then has to be uncovered."
+    },
+    {
+     "q": "Why are equipment pads so often on the critical path?",
+     "a": "Because equipment cannot be set until its pad is poured and cured, and it cannot be terminated, tested or commissioned until it is set. A pad is a small, cheap scope holding a large, expensive, long-lead one — which is why the pad's design has to be fixed long before the equipment arrives."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A hall's slab was designed and poured for conventional air-cooled racks. The tenant now wants liquid-cooled cabinets weighing over a tonne each. The check most likely to fail is:",
+     "c": [
+      "The uniform load rating",
+      "The point load rating at the cabinet feet",
+      "The floor flatness specification",
+      "The vapour retarder"
+     ],
+     "a": 1,
+     "why": "Liquid-cooled cabinets concentrate their extra mass on the same small contact patches rather than spreading it. Punching shear at the castor is governed by different arithmetic from the distributed rating, so a floor can pass its uniform check comfortably and still fail under a single rack foot."
+    },
+    {
+     "q": "Test cylinders from a slab pour fail their 28-day break. The most likely root cause is:",
+     "c": [
+      "The concrete was too old when it arrived",
+      "Water was added at the truck to improve workability",
+      "The slab was poured too thick",
+      "The reinforcement was mis-placed"
+     ],
+     "a": 1,
+     "why": "The water-cement ratio is the strongest single determinant of finished strength, and adding water at the chute to make placement easier lowers it permanently. Thickness and reinforcement affect structural capacity, not the cylinder strength; cylinder results test the mix as delivered and placed."
+    },
+    {
+     "q": "An earthwork contractor placed fill in thick lifts to save time, and it passed a visual walk-through. The failure this most likely produces is:",
+     "c": [
+      "Immediate collapse during construction",
+      "Settlement and cracking two to five years after occupancy",
+      "A failed concrete cylinder break",
+      "A stormwater permit violation"
+     ],
+     "a": 1,
+     "why": "Under-compacted fill carries load initially and consolidates slowly under sustained weight. The defect is invisible at handover and surfaces years later as differential settlement — by which point the only repair is to take the load off the ground, which is why compaction is tested lift by lift rather than at the end."
+    },
+    {
+     "q": "A contractor prices a tie-in beside a running data hall using its normal open-site productivity rates. The most likely outcome is:",
+     "c": [
+      "The work finishes early because the area is small",
+      "The work takes several times longer because of containment, escorted access and night-shift windows",
+      "The work is unaffected — productivity is a property of the crew",
+      "The work is cheaper because no new structure is built"
+     ],
+     "a": 1,
+     "why": "Live-environment work is slower per unit — barriers built, pressure differential verified, routes escorted, shifts moved to nights — and the units are smaller, because tie-in windows are issued by an operations team in hours rather than weeks. Pricing it at open-site rates is one of the most reliable ways to lose money in construction."
+    },
+    {
+     "q": "Every system on a new hall has been commissioned successfully and the tenant's equipment is on site. The building still cannot be occupied. The most likely reason is:",
+     "c": [
+      "A commissioning level was skipped",
+      "An outstanding condition on the certificate of occupancy that is unrelated to the hall",
+      "The UPS has not been load-banked",
+      "The client has not paid"
+     ],
+     "a": 1,
+     "why": "Commissioning proves performance to the owner; occupancy is granted by the authority having jurisdiction against a separate statutory chain. Conditions with nothing to do with the data hall — a stormwater as-built, a traffic contribution, a health-department sign-off — routinely hold the certificate, which is why partial or temporary certificates are pursued in advance."
+    },
+    {
+     "q": "A campus commits to reusing its cooling water. The most accurate statement about the consequence is:",
+     "c": [
+      "Water consumption falls to zero",
+      "Water use efficiency improves and power usage effectiveness does not",
+      "Both water and energy consumption fall together",
+      "It is a procurement decision rather than a construction one"
+     ],
+     "a": 1,
+     "why": "Reuse changes where the water consumption sits and adds an energy cost, because pumping water through filtration and membranes at pressure is work. The site's water metric improves; its energy metric does not — and the commitment obliges it to build and operate a treatment plant with permits, chemistry and operators."
+    },
+    {
+     "q": "Anchor bolts for a switchgear lineup were omitted from a slab pour and discovered after curing. The correct characterisation of the consequence is:",
+     "c": [
+      "A minor field adjustment with no schedule impact",
+      "An engineered repair requiring design, drilling and testing, plus a schedule and commercial dispute",
+      "A reason to re-pour the slab",
+      "Covered automatically by the concrete warranty"
+     ],
+     "a": 1,
+     "why": "An embed placed in wet concrete costs minutes. Recreating it afterwards means a post-installed anchor design, drilling that must avoid reinforcement, pull testing, and an engineer's approval — with weeks of schedule and an argument about which trade's coordination failed. This is why embed and sleeve coordination is the highest-value hour on a project."
+    }
+   ]
+  }
+ ]
+}

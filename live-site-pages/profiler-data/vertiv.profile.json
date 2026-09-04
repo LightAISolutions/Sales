@@ -211,6 +211,23 @@
    "note": "A data-centre switchgear survey names Vertiv and Powell Industries as specialised players carving out niches with vertically integrated switchgear, UPS and power distribution — the proposition Flex's Anord Mardix business sells.",
    "context": "The source names the strategy rather than only the market, which is what makes it usable: it describes specialised players such as Vertiv and Powell Industries carving out significant niches in hyperscale data-centre deployments through vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution systems.\n\nThat is what Flex assembled by acquisition — Anord Mardix for switchgear, busway and power pods, Crown Technical Systems for relay panels and control enclosures, Electrical Power Products for substation control, and JetCool for direct-to-chip cooling.\n\nThe competition runs across power and thermal at once: Vertiv is also a named leader in liquid cooling, a market where JetCool appears in no published ranking, and sits one tier above Flex in NVIDIA's 800 VDC ecosystem.",
    "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548"
+  },
+  {
+   "slug": "oklo",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-07",
+   "note": "Collaboration agreement to co-develop power and thermal reference designs, with a pilot technology demonstration planned for Oklo's first Aurora powerhouse.",
+   "context": "Announced 22 July 2025. It is a technology collaboration rather than a power offtake: the two intend to publish integrated reference designs so a campus can be engineered around an advanced reactor from the outset.\n\nIt is the same instrument type Vertiv's competitors use with NVIDIA — sell the validated chain before the hardware — applied to generation rather than to the rack.",
+   "source": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Vertiv-Announce-Collaboration-to-Advance-Power-and-Cooling-Solutions-for-Hyperscale-and-Colocation-Data-Centers-in-the-United-States/default.aspx"
+  },
+  {
+   "slug": "trane-technologies",
+   "type": "competitor",
+   "status": "active",
+   "note": "The applied-chiller specialist ranked below Vertiv in data-centre thermal management overall, and above it at the chiller-plant layer specifically.",
+   "context": "ABI Research's January 2025 competitive ranking of thermal-management providers for data centres places Vertiv first as a Market Leader and Trane fifth in the Mainstream tier. Global Market Insights' 2025 data-centre chiller shares run the other way — Trane second at 18.7%, Vertiv fifth at 8.1% — because the two are strong at different points in the same chain.\n\nThe convergence is recent and mutual: Trane bought LiquidStack in March 2026 to reach the chip, having previously stopped at the plant, while this dossier's own portfolio has moved from the room toward the rack.",
+   "source": "https://www.abiresearch.com/press/vertiv-and-johnson-controls-take-the-lead-in-abi-researchs-thermal-management-providers-for-data-centers-competitive-ranking"
   }
  ],
  "technicalSpecs": [
@@ -493,5 +510,5 @@
   }
  ],
  "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "profileVersion": 8
 }

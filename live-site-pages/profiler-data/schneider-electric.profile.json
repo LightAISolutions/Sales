@@ -213,6 +213,14 @@
    "note": "Busway market research ranks Schneider Electric among the leaders and categorises Flex's Anord Mardix business as an other player, and Schneider's control of Motivair placed it against Flex's JetCool in liquid cooling.",
    "context": "The clearest ranked link available for this pairing, because the source explicitly separates a leader group — Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens — from the other players, and puts the two companies on opposite sides of that line.\n\nSchneider also appears in a third-party top-five grouping holding roughly 41 to 43% of the data-centre power market, a grouping Flex does not appear in, and took a controlling interest in Motivair in February 2025 — making it a named liquid-cooling leader in a market where Flex's JetCool is unranked.\n\nFlex is closing the gap by purchase rather than by growth: about $6.3bn committed across Anord Mardix, JetCool, Crown, a Polish plant, Electrical Power Products and a $4.4bn agreement for EPC Power, with the whole segment then scheduled to be separated into an independent company in early 2027.",
    "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html"
+  },
+  {
+   "slug": "trane-technologies",
+   "type": "competitor",
+   "status": "active",
+   "note": "Ranked immediately below Schneider in the same independent thermal-management assessment, and following it into liquid cooling by acquisition.",
+   "context": "ABI Research places Schneider Electric third and Trane fifth, both in the Mainstream tier. Facilities Dive positioned Trane's February 2026 LiquidStack acquisition as following Schneider's controlling investment in Motivair in September 2025 and Johnson Controls' investment in Accelsius.\n\nNo commercial relationship between the two companies was found in any source; the link is curated as competitive on the basis of the shared independent ranking and the identical acquisition strategy into the same layer.",
+   "source": "https://www.facilitiesdive.com/news/liquidstack-buy-gives-trane-ai-data-center-cooling-exposure/812053/"
   }
  ],
  "policyExposure": [
@@ -509,5 +517,5 @@
   }
  ],
  "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "profileVersion": 7
 }

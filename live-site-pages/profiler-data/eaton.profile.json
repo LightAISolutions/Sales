@@ -233,6 +233,16 @@
    "note": "A data-centre switchgear survey names Eaton and Flex's Anord Mardix business among the key players in the same market, and Eaton's $9.5bn purchase of Boyd Thermal placed it directly against Flex's JetCool in liquid cooling.",
    "context": "Competition on two fronts, and both are quantified. In switchgear, third-party vendor surveys name Eaton in the leader group and Anord Mardix among key players or as an other player depending on the report. In liquid cooling, Eaton completed a $9.5bn acquisition of Boyd Thermal in March 2026 — a business forecast at about $1.7bn of calendar-2026 sales of which about $1.5bn is liquid cooling — against the $53m Flex paid for JetCool in November 2024.\n\nEaton also sits one tier above Flex in NVIDIA's published 800 VDC ecosystem, in data-centre power systems rather than power system components.\n\nTwo threads run the other way and are recorded rather than suppressed. JetCool and Eaton announced a collaboration on liquid cooling for high-power data-centre applications in December 2022, two years before Flex acquired JetCool, and no source confirms it continues. And several of Flex's data-centre power leaders are former Eaton executives, including the chief executive named to lead the business Flex is spinning out.",
    "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market"
+  },
+  {
+   "slug": "trane-technologies",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-08",
+   "via": "Eaton Beam Rubin DSX / Trane Continuum Rubin DSX",
+   "note": "Joint reference design integrating Eaton electrical infrastructure with Trane chillers, coolant distribution units and controls for AI data centres.",
+   "context": "Announced 17 August 2026 and described by both companies as an industry first: 'a unified, intelligent system for power and cooling for next-generation data centers' replacing a design process the release calls slow, manual and siloed. Claimed against conventional low-voltage designs: up to 15% combined energy-efficiency gain, up to 80% less copper and up to 30% lower installation cost.\n\nIt is the clearest instance in this corpus of the power chain and the thermal chain being sold as one engineered path rather than as two separate procurements.",
+   "source": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx"
   }
  ],
  "technicalSpecs": [
@@ -531,5 +541,5 @@
   }
  ],
  "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "profileVersion": 7
 }
