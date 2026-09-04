@@ -1,0 +1,1551 @@
+{
+ "schemaVersion": 7,
+ "slug": "mitsubishi-electric",
+ "name": "Mitsubishi Electric Corporation",
+ "shortName": "Mitsubishi Electric",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.mitsubishielectric.com/",
+ "headquarters": "Tokyo, Japan",
+ "founded": "1921",
+ "employees": "~150,000 worldwide across 200+ group companies (FY2026)",
+ "ownership": {
+  "type": "public",
+  "ticker": "TSE: 6503"
+ },
+ "sources": [
+  {
+   "label": "MELCO — Agreement to acquire PCI Energy Solutions",
+   "url": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0820_ei2.pdf",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Dealroom — Mitsubishi Electric to buy energy software firm PCI for $1.4bn",
+   "url": "https://dealroom.co/news/146014-mitsubishi-electric-to-buy-energy-software-firm-pci-for-1-4b/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Energy Digital — Mitsubishi Electric to buy PCI Energy Solutions for US$1.4bn",
+   "url": "https://energydigital.com/news/mitsubishi-electric-to-buy-pci-energy-solutions-for-us-1-4bn",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Mordor Intelligence — North America medium-voltage switchgear market to 2031",
+   "url": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Simply Wall St — Mitsubishi Electric beat revenue estimates by 8.0%",
+   "url": "https://simplywall.st/stocks/jp/capital-goods/tse-6503/mitsubishi-electric-shares/news/mitsubishi-electric-corporation-just-beat-revenue-estimates",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "MELCO — Q1 FY2027 consolidated financial results (quarter ended 2026-06-30)",
+   "url": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0731_co1.pdf",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "BigGo Finance — Mitsubishi Electric Q1 FY2027 earnings call summary",
+   "url": "https://finance.biggo.com/news/JP_6503.T_2026-07-31",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "MELCO — New Medium-term Corporate Strategy (FY2031 targets)",
+   "url": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0529_co1.pdf",
+   "date": "2026-05-29"
+  },
+  {
+   "label": "MELCO — FY2026 consolidated financial results (year ended 2026-03-31)",
+   "url": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0428_co1.pdf",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "MELCO — FY2026 results supplementary briefing materials",
+   "url": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0428_co2.pdf",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "Business Wire — Mitsubishi Electric announces consolidated financial results for fiscal 2026",
+   "url": "https://www.businesswire.com/news/home/20260427060797/en/Mitsubishi-Electric-Announces-Consolidated-Financial-Results-for-Fiscal-2026",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "MEPPI — expands service center capabilities for critical power infrastructure (Vista, CA)",
+   "url": "https://www.meppi.com/news/meppi-expands-service-center-capabilities",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Investing.com — Q3 FY2026 slides: record revenue despite restructuring costs",
+   "url": "https://www.investing.com/news/company-news/mitsubishi-electric-q3-fy26-slides-record-revenue-despite-restructuring-costs-93CH-4490935",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "MELCO — ME Innovation Fund invests in Lucend (data-center operations AI)",
+   "url": "https://www.mitsubishielectric.com/en/pr/2026/0127-b/",
+   "date": "2026-01-27"
+  },
+  {
+   "label": "MELCO / Mitsubishi Power — next-generation gas turbine control system completes functional testing",
+   "url": "https://www.mitsubishielectric.com/en/pr/2025/pdf/1224.pdf",
+   "date": "2025-12-24"
+  },
+  {
+   "label": "Mitsubishi Power — next-generation gas turbine control system jointly developed with Mitsubishi Electric",
+   "url": "https://power.mhi.com/news/251224.html",
+   "date": "2025-12-24"
+  },
+  {
+   "label": "MEPPI — to power next-generation AI factories with 800 VDC infrastructure, collaborating with NVIDIA",
+   "url": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure",
+   "date": "2025-10-13"
+  },
+  {
+   "label": "EnergyTech — NVIDIA and ABB collaborate on 800 VDC data-center power",
+   "url": "https://www.energytech.com/data-center-power/news/55322896/nvidia-and-abb-collaborate-to-power-next-gen-ai-data-centers-with-advanced-dc-technologies",
+   "date": "2025-10-01"
+  },
+  {
+   "label": "MEPPI — celebrates 40 years",
+   "url": "https://www.meppi.com/news/meppi-celebrates-40-years",
+   "date": "2025-09-25"
+  },
+  {
+   "label": "PwC — steel and aluminum goods subject to Section 232 tariffs expanded",
+   "url": "https://www.pwc.com/us/en/services/tax/library/pwc-steel-and-aluminum-goods-subject-to-section-232-tariffs-expanded.html",
+   "date": "2025-08-19"
+  },
+  {
+   "label": "Federal Register — adoption and procedures of the Section 232 steel and aluminum tariff inclusions process",
+   "url": "https://www.federalregister.gov/documents/2025/08/19/2025-15819/adoption-and-procedures-of-the-section-232-steel-and-aluminum-tariff-inclusions-process",
+   "date": "2025-08-19"
+  },
+  {
+   "label": "Business Wire — Mitsubishi Electric announces consolidated financial results for fiscal 2025",
+   "url": "https://www.businesswire.com/news/home/20250427719266/en/mitsubishi-electric-announces-consolidated-financial-results-for-fiscal-2025",
+   "date": "2025-04-27"
+  },
+  {
+   "label": "Research and Markets via Business Wire — data center UPS market outlook 2025-2030: ABB, Eaton, Vertiv, Schneider Electric, Delta Electronics, Legrand, Piller Power Systems and Mitsubishi Electric dominate",
+   "url": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+   "date": "2025-04-25"
+  },
+  {
+   "label": "tEDmag — administration increases tariffs on certain transformers; NEMA coalition opposition",
+   "url": "https://tedmag.com/trump-administration-increases-tariffs-on-certain-transformers/",
+   "date": "2025-04-01"
+  },
+  {
+   "label": "Manufacturing Dive — Mitsubishi subsidiary invests $86 million in Pennsylvania switchgear facility",
+   "url": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/",
+   "date": "2024-12-02"
+  },
+  {
+   "label": "Utility Dive — Mitsubishi subsidiary invests $86 million in switchgear facility",
+   "url": "https://www.utilitydive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734456/",
+   "date": "2024-12-02"
+  },
+  {
+   "label": "Transformers Magazine — Mitsubishi Electric's new US facility",
+   "url": "https://transformers-magazine.com/tm-news/mitsubishi-electrics-new-us-facility/",
+   "date": "2024-11-01"
+  },
+  {
+   "label": "MELCO — strengthening production facilities for the energy systems business in the US and Japan",
+   "url": "https://www.mitsubishielectric.com/en/pr/2024/1030/",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "MEPPI — $86M advanced switchgear factory in western Pennsylvania",
+   "url": "https://www.meppi.com/news/mitsubishi-electric-power-products-inc-meppi-to-make-86-million-dollar-investment-in-new-manufacturing-factory-in-western-pa",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "The Cyber Express — ICONICS and Mitsubishi Electric MC Works64 vulnerability (CVE-2024-7587)",
+   "url": "https://thecyberexpress.com/iconics-and-mitsubishi-electric-vulnerability/",
+   "date": "2024-10-22"
+  },
+  {
+   "label": "Federal Register — DOE energy conservation standards for distribution transformers",
+   "url": "https://www.federalregister.gov/documents/2024/04/22/2024-07480/energy-conservation-program-energy-conservation-standards-for-distribution-transformers",
+   "date": "2024-04-22"
+  },
+  {
+   "label": "MELCO — transfer of the distribution transformer business",
+   "url": "https://www.mitsubishielectric.com/en/pr/2024/pdf/0405.pdf",
+   "date": "2024-04-05"
+  },
+  {
+   "label": "TMEIC — notice concerning company name change and organizational restructuring",
+   "url": "https://tmeic.com/notice-concerning-company-name-change-and-organizational-restructuring/",
+   "date": "2024-04-01"
+  },
+  {
+   "label": "MEPPI — Tricia Breeger named CEO",
+   "url": "https://www.meppi.com/news/tricia-breeger-named-ceo-of-mitsubishi-electric-power-products-inc",
+   "date": "2023-04-03"
+  },
+  {
+   "label": "MELCO — investigative committee final report on improper quality control practices",
+   "url": "https://www.mitsubishielectric.com/sites/news/2022/pdf/1027-a1.pdf",
+   "date": "2022-10-27"
+  },
+  {
+   "label": "The Register — Mitsubishi Electric improper quality control across Japanese factories",
+   "url": "https://www.theregister.com/2022/05/26/mitsubishi_electric_improper_quality_control/",
+   "date": "2022-05-26"
+  },
+  {
+   "label": "MEPPI — acquisition of Computer Protection Technology",
+   "url": "https://www.meppi.com/news/mitsubishi-electric-power-products-inc-to-acquire-computer-protection-technology",
+   "date": "2022-02-24"
+  },
+  {
+   "label": "MEPPI — SMUD battery energy storage system partnership",
+   "url": "https://www.meppi.com/news/smud-and-meppi-partner-to-bring-battery-energy-storage-system-bess-online",
+   "date": "2022-02-02"
+  },
+  {
+   "label": "Nikkei Asia — Mitsubishi Electric used fake-data program in years of deception",
+   "url": "https://asia.nikkei.com/business/electronics/mitsubishi-electric-used-fake-data-program-in-years-of-deception",
+   "date": "2021-10-21"
+  },
+  {
+   "label": "EconoTimes — Mitsubishi Electric admits faking test data on transformers",
+   "url": "https://www.econotimes.com/Mitsubishi-Electric-admits-to-faking-test-data-on-transformers-1631992",
+   "date": "2021-10-01"
+  },
+  {
+   "label": "MEPPI — Mitsubishi Electric and Siemens Energy sign MoU on SF6-free high-voltage switching",
+   "url": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou",
+   "date": "2021-06-08"
+  },
+  {
+   "label": "MEPPI — integrated power protection and IT cooling with MEHITS for US data centers",
+   "url": "https://www.meppi.com/news/mitsubishi-electric-to-provide-integrated-power-protection-and-it-cooling-solutions-for-us-data-center-applications",
+   "date": "2021-04-01"
+  },
+  {
+   "label": "Power Engineering — Hyosung acquiring the Memphis transformer plant from Mitsubishi Electric Power Products",
+   "url": "https://www.power-eng.com/business/hyosung-acquiring-memphis-transformer-plant-from-mitsubishi-electric-power/",
+   "date": "2019-08-01"
+  },
+  {
+   "label": "MELCO — corporate governance and management (directors and executive officers)",
+   "url": "https://www.mitsubishielectric.com/en/about/management/"
+  },
+  {
+   "label": "MELCO — transmission and distribution: power transformers",
+   "url": "https://www.mitsubishielectric.com/eig/energysystems/products/transmission/transformers/"
+  },
+  {
+   "label": "MELCO — IR calendar",
+   "url": "https://www.mitsubishielectric.com/investors/others/calendar/"
+  },
+  {
+   "label": "MELCO — results library (quarterly and annual filings)",
+   "url": "https://www.mitsubishielectric.com/investors/library/results/"
+  },
+  {
+   "label": "MEPPI — Critical Power Solutions Division UPS line-up (6 kVA to 2 MW)",
+   "url": "https://mitsubishicritical.com/uninterruptible-power-supplies/"
+  },
+  {
+   "label": "MEPPI — 9900D large modular UPS (1200-2000 kVA)",
+   "url": "https://mitsubishicritical.com/uninterruptible-power-supplies/9900d/"
+  },
+  {
+   "label": "MEPPI — 9900D data sheet SA-ENL0061R5",
+   "url": "https://mitsubishicritical.com/wp-content/uploads/2025/02/sa-enl0061-9900d-data-sheet.pdf"
+  },
+  {
+   "label": "MEPPI — 9900D engineering specification U-ENS00082 Rev 6",
+   "url": "https://mitsubishicritical.com/wp-content/uploads/2025/02/U-ENS00082-9900D-SPECIFICATION-Rev_6.pdf"
+  },
+  {
+   "label": "MEPPI — SUMMIT Series silicon-carbide UPS data sheet SA-ENL0048 R2",
+   "url": "https://mitsubishicritical.com/wp-content/uploads/2025/02/SA-ENL0048-SUMMIT-Data-Sheet.pdf"
+  },
+  {
+   "label": "MEPPI — SUMMIT Series UPS",
+   "url": "https://mitsubishicritical.com/uninterruptible-power-supplies/summit-ups/"
+  },
+  {
+   "label": "MEPPI — 9900CX UPS data sheet SA-ENL0052",
+   "url": "https://mitsubishicritical.com/wp-content/uploads/2025/02/SA-ENL0052-9900CX-Data-Sheet.pdf"
+  },
+  {
+   "label": "MEPPI — 9900CX UPS",
+   "url": "https://mitsubishicritical.com/uninterruptible-power-supplies/9900cx-ups/"
+  },
+  {
+   "label": "MEPPI — 9900AEGIS UPS data sheet SA-ENL0054 R2",
+   "url": "https://mitsubishicritical.com/wp-content/uploads/2025/02/sa-enl0054-9900aegis-data-sheet.pdf"
+  },
+  {
+   "label": "MEPPI — 9900B UPS data sheet SA-ENL0052 Rev 2",
+   "url": "https://mitsubishicritical.com/wp-content/uploads/2025/02/SA-ENL0052-9900B-Data-Sheet-Rev_2.pdf"
+  },
+  {
+   "label": "MEPPI — silicon-carbide technology and the case against eco-mode",
+   "url": "https://mitsubishicritical.com/technologies/sic-technology/"
+  },
+  {
+   "label": "MEPPI — ENERGY STAR positioning for double-conversion UPS",
+   "url": "https://mitsubishicritical.com/energystar/"
+  },
+  {
+   "label": "MEPPI — paralleling and Critical Load Cabinets",
+   "url": "https://mitsubishicritical.com/uninterruptible-power-supplies/paralleling-critical-load-cabinets/"
+  },
+  {
+   "label": "MEPPI — data center cooling solutions (CritiCool)",
+   "url": "https://mitsubishicritical.com/data-center-cooling-solutions/"
+  },
+  {
+   "label": "MEPPI — published customer roster",
+   "url": "https://mitsubishicritical.com/our-customers/"
+  },
+  {
+   "label": "MEPPI — about us and divisional structure",
+   "url": "https://www.meppi.com/about-us"
+  },
+  {
+   "label": "MEPPI — power transformers (core-form and shell-form ranges)",
+   "url": "https://www.meppi.com/products/power-transformers"
+  },
+  {
+   "label": "MEPPI — high-voltage gas-insulated circuit breakers (72.5-800 kV)",
+   "url": "https://www.meppi.com/products/hv-gas-insulated-circuit-breakers"
+  },
+  {
+   "label": "MEPPI — gas-insulated switchgear",
+   "url": "https://www.meppi.com/products/gas-insulated-switchgear"
+  },
+  {
+   "label": "MEPPI — gas-insulated switchgear brochure BR0040100001",
+   "url": "https://0aab1c21-cdn.agilitycms.cloud/AttachmentLists/File/BR0040100001_GIS_1219_Final.pdf"
+  },
+  {
+   "label": "MEPPI — medium-voltage vacuum circuit breakers",
+   "url": "https://www.meppi.com/products/mv-vacuum-circuit-breakers"
+  },
+  {
+   "label": "Investing.com — Mitsubishi Electric earnings history and consensus",
+   "url": "https://www.investing.com/equities/mitsubishi-electric-corp.-earnings"
+  },
+  {
+   "label": "FT / Markit Digital — 6503:TYO analyst forecasts and consensus",
+   "url": "https://markets.ft.markitdigital.com/data/equities/tearsheet/forecasts?s=6503%3ATYO"
+  },
+  {
+   "label": "MarketBeat — MIELY earnings history and estimates (Fiscal.ai data)",
+   "url": "https://www.marketbeat.com/stocks/OTCMKTS/MIELY/earnings/"
+  },
+  {
+   "label": "Global Market Insights — data center UPS market",
+   "url": "https://www.gminsights.com/industry-analysis/data-center-UPS-market"
+  },
+  {
+   "label": "Straits Research — gas-insulated switchgear market",
+   "url": "https://straitsresearch.com/report/gas-insulated-switchgear-market"
+  },
+  {
+   "label": "MarketsandMarkets — top companies in the power transformer market",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/power-transformers-market.asp"
+  },
+  {
+   "label": "TMEIC — corporate profile (Toshiba / Mitsubishi Electric 50-50 joint venture)",
+   "url": "https://tmeic.com/about/corporate-profiles/"
+  },
+  {
+   "label": "Congressional Research Service R48933 — electricity distribution transformers: supply, tariffs and policy options",
+   "url": "https://www.congress.gov/crs-product/R48933"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1,
+ "summary": "BOTTOM LINE UP FRONT: Mitsubishi Electric is a ¥5.89 trillion Japanese electrical conglomerate whose relevance to AI data-center power sits in one segment — Infrastructure — and specifically in three product families: large static uninterruptible power supplies to 2 MW, power transformers to 765 kV, and gas-insulated switchgear and circuit breakers to 800 kV. That segment is where the company's growth now is: Infrastructure revenue rose 19% to ¥1,463.4bn in the year ended 2026-03-31 with operating profit up 73%, and Energy Systems orders rose 80% year on year in the quarter ended 2026-06-30 on what the company attributes to North American transformer business expansion. BACKGROUND. Founded 1921, listed in Tokyo (6503), roughly 150,000 employees across 200+ group companies. FY2026 (year ended 2026-03-31) revenue ¥5,894.7bn (+7%) and operating profit ¥433.1bn per company filings; net profit attributable to stockholders ¥407.8bn (+26%). The US arm is Mitsubishi Electric Power Products, Inc. (MEPPI), Warrendale, Pennsylvania, founded 1985 as a joint venture with Westinghouse Electric and wholly owned since 1989; its Critical Power Solutions Division in Pittsburgh has manufactured UPS since 1964 and is the entity that actually sells into data centers. Note the fiscal-year convention: the company labels the year ending 31 March 2026 as FY2026.",
+ "ecosystemRole": "One of a small number of vendors that can supply the medium- and high-voltage equipment upstream of a data-center hall and the uninterruptible supply inside it from the same corporate parent — transformers, gas-insulated switchgear, vacuum circuit breakers and large static UPS. It is consistently named in the leading vendor set for data-center UPS, power transformers and gas-insulated switchgear by market-research firms, but no firm reachable in this research published a market-share percentage for it in any of those three markets, and where sources rank rather than list it falls below the top five in transformers. Its distinctive technical claim is vertical integration into its own power semiconductors, which underwrites both its silicon-carbide UPS line and its stated position against eco-mode.",
+ "productsAndServices": [
+  {
+   "name": "Large static UPS — 9900 Series",
+   "category": "Critical power",
+   "description": "Three-phase double-conversion uninterruptible power supplies from 80 kVA to 2 MW, built on three-level IGBT inverter topology and sold in the US through MEPPI's Critical Power Solutions Division. The 9900D is the range topper at 1200-2000 kVA, transformerless, modular in 400 kVA power modules and configurable N or N+1; the 9900CX is a 1050 kVA / 1000 kW unit parallelable to six; the 9900B covers 300-750 kVA; the 9900AEGIS covers 80-225 kVA and parallels to four modules.",
+   "highlights": [
+    "Company describes the 9900B as the industry's first UPS with three-level IGBT topology; the 9900D is presented as the first 2 MW system to market and the smallest modular scalable static UPS at the highest power densities",
+    "Published double-conversion efficiency peaks at 97.0% on the 9900D and 9900CX and 96.6% on the 9900AEGIS; every published curve is for true online double conversion, and the company states plainly that no eco-mode is required",
+    "9900D and 9900CX are rated at unity output power factor (kVA = kW) at 1200-2000 kVA and 0.95 at 1050 kVA respectively; the 9900AEGIS is rated at 0.90",
+    "Company cites an Omdia 2025 UPS market research report for the claim that the 9900D is the best-selling UPS at 1500 kVA and above",
+    "Efficiency guarantee is backed by a stated refund of up to $10,000 per year for three years if a verified performance test fails to meet it",
+    "Self-load test function runs a burn-in at 20-100% of rating for 1-600 minutes at any power factor from zero to unity, removing the need for load banks",
+    "Battery options span VRLA, VLA, NiCad, pure lead and lithium-ion, with Narada, EnerSys, Deka/East Penn, C&D Technologies and Samsung SDI documentation published as 9900D peripherals"
+   ],
+   "positioning": "Mitsubishi Electric names no competitor anywhere in its own UPS literature, benchmarking instead against ENERGY STAR and citing Omdia for share. Its stated differentiator is vertical integration: it says it is the only UPS brand that designs and manufactures its own semiconductors, and that competitors may incorporate older-generation Mitsubishi Electric IGBTs while only Mitsubishi Electric uses its current designs. Independent research places it in the leading data-center UPS vendor set alongside ABB, Eaton, Vertiv, Schneider Electric, Delta Electronics, Legrand and Piller Power Systems, without a published share figure.",
+   "soldThrough": "Direct sales and direct field service through MEPPI's Critical Power Solutions and Service Center Divisions, with named field service technicians published individually; a MEPPI Alliance Program operates on the transmission and distribution side.",
+   "targetSegments": [
+    "Data centers including edge",
+    "Cloud computing and colocation",
+    "Financial services",
+    "Healthcare",
+    "Telecommunications",
+    "Government",
+    "Energy and utilities",
+    "Manufacturing and light industrial"
+   ],
+   "roadmap": "Corporate strategy published 2026-05-29 names development of next-generation 800 V and 1,500 V DC power supply systems and a PUE 1.1 data center as targets; MEPPI announced in October 2025 that it is developing 800 VDC power-delivery systems in collaboration with NVIDIA."
+  },
+  {
+   "name": "SUMMIT Series silicon-carbide UPS",
+   "category": "Critical power",
+   "description": "A 500 and 750 kVA double-conversion UPS built on silicon-carbide devices in place of silicon IGBTs, rated at unity output power factor and published at 98.2% peak efficiency in true double conversion — the company's technical answer to eco-mode.",
+   "highlights": [
+    "Published efficiency of 97.9 / 98.2 / 98.0 / 97.6% at 25 / 50 / 75 / 100% load on the 500 kVA unit, all in double conversion",
+    "The company's stated position is that silicon carbide makes eco-mode unnecessary: module efficiencies up to 98% are achievable without line-interactive operation, so there is no detection-and-transfer event to engineer around",
+    "ENERGY STAR rated, and the company says it sits at the top of all double-conversion UPS on the ENERGY STAR list",
+    "1.1:1 generator compatibility, active power-factor correction and harmonic mitigation, 65 or 100 kAIC options",
+    "500 kVA unit is 3,072 lb and rejects 42.0 kBTU/hr; the 750 kVA is 4,290 lb at 62.9 kBTU/hr"
+   ],
+   "positioning": "Positioned against the industry's eco-mode trade-off rather than against a named vendor: where most large UPS buy back double-conversion losses by running the load on bypass during normal conditions, this line argues the losses were small enough to leave the load permanently on the inverter.",
+   "soldThrough": "Direct through MEPPI Critical Power Solutions Division.",
+   "targetSegments": [
+    "Data centers",
+    "Colocation",
+    "Telecommunications"
+   ],
+   "roadmap": "Silicon carbide is the stated bridge to the 800 VDC and 1,500 VDC systems named in the FY2031 strategy."
+  },
+  {
+   "name": "Power transformers",
+   "category": "Transmission and distribution",
+   "description": "Core-form transformers from 69 to 275 kV and shell-form transformers from 115 to 765 kV, with the transition between the two designs at approximately 200 MVA bank capacity and a 275 kV high-voltage winding. The range includes generator step-up units, three-phase and single-phase autotransformers and gas-insulated transformers.",
+   "highlights": [
+    "Company states it has supplied power transformers for over 95 years, with manufacturing beginning in 1910",
+    "Developed and manufactured a three-phase transformer for what it describes as the world's largest-capacity nuclear generator step-up application at 1,510 MVA",
+    "More than 550 shell-form special three-phase transformers whose transport size can be reduced to 50% of a conventional three-phase unit — a direct answer to the shipping constraint on large transformers",
+    "Gas-insulated transformers use SF6 as both cooling and insulating medium and are nonflammable, which is what allows them indoors or underground",
+    "Autotransformer reference installation named first-party: TEPCO Power Grid's Shin Kisaradzu substation"
+   ],
+   "positioning": "Named among the top companies in the power transformer market by MarketsandMarkets alongside Hitachi Energy, GE, Siemens, Eaton and Hyundai Electric. Where independent sources rank rather than list, Mitsubishi Electric falls outside the top five, which are led by Siemens Energy and Hitachi Energy. No research firm reachable in this pass published a Mitsubishi Electric transformer share figure.",
+   "soldThrough": "Direct and through MEPPI in North America.",
+   "targetSegments": [
+    "Electric utilities",
+    "Independent power producers",
+    "Large industrial and data-center campuses"
+   ],
+   "roadmap": "The company announced a transfer of its distribution transformer business in April 2024 and sold its Memphis, Tennessee high-voltage transformer plant to Hyosung Heavy Industries in 2019 for $46.5M, so the North American transformer position is not underpinned by a US plant. Collection gap: the company attributed Energy Systems growth in the quarter ended 2026-06-30 to North American transformer business expansion, and no source located in this research identifies where that capacity physically sits."
+  },
+  {
+   "name": "Gas-insulated switchgear and high-voltage circuit breakers",
+   "category": "Transmission and distribution",
+   "description": "Gas-insulated switchgear from 145 kV to 550 kV and dead-tank gas-insulated circuit breakers from 72.5 kV to 800 kV with interrupting classes from 40 kA to 80 kA, plus air-insulated switchgear and medium-voltage gas-insulated circuit breakers.",
+   "highlights": [
+    "GIS product matrix runs 145 kV / 3150 A / 40 kA at the entry point to 550 kV / 6300 A / 63 kA on the two-break 500MITS, with iso-phase enclosures above 245 kV",
+    "Company states its first GIS was built in 1968, its first 500 kV hybrid GIS substation in 1973, and the world's first 550 kV fully gas-insulated switchyard at Kansai Electric's Ohi Nuclear Power Station in 1976",
+    "Installed base stated as more than 20,000 GIS bays worldwide on the current product page, up from more than 10,000 in the archived brochure",
+    "High-voltage circuit breakers offer mixed SF6/CF4 gas for cold climates, operation from -30°C to +50°C and to -50°C with tank heaters, gang and independent-pole operation, and synchronous control on all IPO breakers",
+    "Company states its high-voltage circuit breakers are fully assembled and tested in the USA"
+   ],
+   "positioning": "Named among the gas-insulated switchgear majors by Straits Research and Mordor Intelligence alongside ABB, Siemens Energy, Hitachi Energy, GE Vernova and Toshiba Energy Systems, with a second participant list adding Eaton, Powell Industries, Schneider Electric and Hyosung Heavy. No GIS share percentage for Mitsubishi Electric was found in any source.",
+   "soldThrough": "Direct and through MEPPI, with a MEPPI Alliance Program for qualifying customers.",
+   "targetSegments": [
+    "Electric utilities",
+    "Transmission system operators",
+    "Large industrial substations"
+   ],
+   "roadmap": "SF6-free is the stated direction: a 72 kV vacuum circuit breaker with dry-air insulation is the current flagship, the company points to forthcoming vacuum models on its SF6-free journey, and it signed a memorandum of understanding with Siemens Energy in 2021 to study jointly developed zero-global-warming-potential high-voltage switching starting with a 245 kV dead-tank breaker."
+  },
+  {
+   "name": "Medium-voltage vacuum circuit breakers",
+   "category": "Transmission and distribution",
+   "description": "Vacuum circuit breakers from 5 kV to 72 kV with three-cycle interrupting time, spanning 1200 A to 3000 A continuous and 25 kA to 31.5 kA short-circuit ratings, positioned as the SF6-free path for medium- and sub-transmission voltages.",
+   "highlights": [
+    "72 kV unit rated 31.5 kA and 2000 A with dry-air insulation — the company's SF6-free flagship at sub-transmission voltage",
+    "38 kV and 27 kV units operate from -50°C to +50°C, with the 27 kV rated to 3000 A continuous",
+    "Company states the breakers are M2 life-tested for 10,000 operations and use fully welded cabinets",
+    "Stated benefit is the absence of greenhouse gases entirely, rather than a lower-GWP substitute",
+    "Vacuum circuit breakers are the initial and transitioning product for the new Pennsylvania switchgear factory"
+   ],
+   "positioning": "Profiled alongside Powell Industries, ABB, Siemens, Schneider Electric, Eaton, GE Vernova, Hitachi Energy and Toshiba International in Mordor Intelligence's North America medium-voltage switchgear roster, where the top five are said to control roughly 55-60% of the market. Mitsubishi Electric is not in that top five and no individual share is published. Metal-clad switchgear is not a named MEPPI product line.",
+   "soldThrough": "Direct and through MEPPI.",
+   "targetSegments": [
+    "Electric utilities",
+    "Industrial substations",
+    "Data-center campus substations"
+   ],
+   "roadmap": "The $86M Pennsylvania factory begins with vacuum and gas circuit breakers and transitions to predominantly vacuum circuit breakers."
+  },
+  {
+   "name": "Data-center cooling and integrated power",
+   "category": "Thermal",
+   "description": "The CritiCool line of air-cooled chillers, a MEWALL thermal wall and wall-mounted direct-expansion units at 10, 20 and 40 kW, introduced in 2021 and sold alongside the UPS line as an integrated power-and-cooling offer for North American data centers.",
+   "highlights": [
+    "Cooling was added to the UPS division's line in 2021, three years before the current AI data-center build cycle",
+    "Delivered through a strategic alliance between MEPPI's UPS division and Mitsubishi Electric Hydronics and IT Cooling Systems S.p.A. of Italy, announced April 2021",
+    "Positioned as turnkey power protection plus IT cooling from one supplier for North American data-center applications",
+    "The FY2031 corporate strategy names a PUE 1.1 data center as a development target, which is a cooling claim rather than a power one"
+   ],
+   "positioning": "A cross-sell attached to the UPS franchise rather than a standalone thermal business; the company does not publish share or competitive positioning for it.",
+   "soldThrough": "Direct through MEPPI alongside UPS.",
+   "targetSegments": [
+    "Data centers",
+    "Colocation",
+    "Edge"
+   ],
+   "roadmap": "PUE 1.1 data center named as a development target in the FY2031 strategy."
+  },
+  {
+   "name": "Grid software, DERMS and energy management",
+   "category": "Software and services",
+   "description": "A software layer over the transmission and distribution hardware business, assembled by acquisition: Smarter Grid Solutions for distributed energy resource management in 2021, and an agreement announced in August 2026 to wholly acquire PCI Energy Solutions of Norman, Oklahoma for approximately $1.4bn.",
+   "highlights": [
+    "PCI Energy Solutions supplies energy-trading, scheduling and forecasting software to power-market participants; trade coverage reports its platform touches around 60% of US electricity generation",
+    "PCI is to become a wholly owned subsidiary with closing expected before the end of 2026, subject to regulatory approval",
+    "Smarter Grid Solutions, acquired in March 2021, brought distributed energy resource management; its integration with Clean Power Research was launched at DISTRIBUTECH 2025",
+    "Mitsubishi Electric also offers an SF6 gas monitoring and analytics system, a synchronous condenser, HVDC, FACTS/STATCOM and BESS on the same transmission and distribution catalogue",
+    "The ME Innovation Fund invested in Lucend, a US startup with an AI platform for data-center operational optimization, in January 2026"
+   ],
+   "positioning": "The acquisition moves Mitsubishi Electric from selling grid hardware to selling the software that dispatches it, in the same direction Schneider Electric and Siemens have taken with EcoStruxure Grid and Xcelerator. It is the largest single capital commitment in the company's recent record and is a market-operations play rather than a data-center one.",
+   "soldThrough": "Direct and via subsidiaries.",
+   "targetSegments": [
+    "Electric utilities",
+    "Independent system operators and market participants",
+    "Distributed energy operators"
+   ],
+   "roadmap": "PCI closing expected before end-2026; the FY2031 strategy targets Solutions revenue of ¥1.0trn at a 15% operating margin, up from ¥0.4trn at 7%."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "9900D large modular UPS",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Rated output",
+     "value": "1200, 1250, 1500, 1600 and 2000 kVA — kW equal to kVA at unity output power factor"
+    },
+    {
+     "band": "Power",
+     "label": "Modularity",
+     "value": "Expandable in 400 kVA power modules, up to 5 power modules, configurable N or N+1"
+    },
+    {
+     "band": "Power",
+     "label": "Overload",
+     "value": "105-110% for 60 min; 111-125% for 10 min; 126-150% for 1 min"
+    },
+    {
+     "band": "Power",
+     "label": "Inverter current limit",
+     "value": "230% of rated load current"
+    },
+    {
+     "band": "Electrical",
+     "label": "AC input",
+     "value": "3-phase 3-wire, 480 V +15% / -20%, 60 Hz ±10%"
+    },
+    {
+     "band": "Electrical",
+     "label": "Input power factor",
+     "value": ">0.98 lagging"
+    },
+    {
+     "band": "Electrical",
+     "label": "Reflected current distortion",
+     "value": "3% typical at 100% load; 6% typical at 50% load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Battery",
+     "value": "480 Vdc nominal, 400 Vdc minimum, float to 600 Vdc — VRLA, VLA, NiCad or lithium-ion"
+    },
+    {
+     "band": "Electrical",
+     "label": "AC output",
+     "value": "3-phase 3-wire, 480 V; regulation ±1% balanced, 2% at 100% unbalanced"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output distortion",
+     "value": "<2% at 100% linear load; <5% at 100% non-linear load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Transient response",
+     "value": "±5% on step load; ±1% on loss or return of AC input; ±5% on retransfer bypass to inverter; 20 ms recovery"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency, AC to AC (2000 kVA)",
+     "value": "96.3 / 97.0 / 97.0 / 96.9% at 25 / 50 / 75 / 100% load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency, battery to AC (2000 kVA)",
+     "value": "95.6 / 96.4 / 96.6 / 96.2% at 25 / 50 / 75 / 100% load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Topology",
+     "value": "7th-generation IGBT, three-level, transformerless, true online double conversion"
+    },
+    {
+     "band": "Design",
+     "label": "Dimensions (W x D x H)",
+     "value": "133.9 x 35.4 x 80.7 in at 1200-1250 kVA; 169.3 x 35.4 x 80.7 in at 1500-1600 kVA; 192.9 x 35.4 x 80.7 in at 2000 kVA"
+    },
+    {
+     "band": "Design",
+     "label": "Weight",
+     "value": "7,270 lb (3,300 kg) / 9,750 lb (4,423 kg) / 11,470 lb (5,220 kg)"
+    },
+    {
+     "band": "Design",
+     "label": "Heat rejection at 100% load",
+     "value": "135.4 to 218.3 kBTU/hr across the range"
+    },
+    {
+     "band": "Design",
+     "label": "Clearance",
+     "value": "Top 23.6 in, front 39.4 in, rear 0 in"
+    },
+    {
+     "band": "Design",
+     "label": "Environment",
+     "value": "32-104°F (0-40°C); 5-95% RH non-condensing; 0-6,500 ft with no derating"
+    },
+    {
+     "band": "Design",
+     "label": "Capacitor design life",
+     "value": "15 years"
+    },
+    {
+     "band": "Design",
+     "label": "Generator compatibility",
+     "value": "1.1:1"
+    },
+    {
+     "band": "Compliance",
+     "label": "Listings",
+     "value": "UL 1778, CSA 22.2 (cUL), IEC semiconductor converter standards, ISO 9001"
+    },
+    {
+     "band": "Compliance",
+     "label": "EMC",
+     "value": "IEC 62040-2 category C3; FCC Part 15 Subpart B Class A optional"
+    },
+    {
+     "band": "Compliance",
+     "label": "Surge withstand",
+     "value": "IEEE 587 / ANSI C62.41-1991"
+    },
+    {
+     "band": "Compliance",
+     "label": "Fault current rating",
+     "value": "100 kAIC option"
+    }
+   ],
+   "notes": "Collection gap: no IEC 62040-3 classification code (VFI-SS-111 or equivalent) is published for any model in the range. The 21-page engineering specification cites IEC 62040-2 for EMC only. The company describes the topology in words as true online double conversion, which is what VFI denotes, but does not publish the coded classification."
+  },
+  {
+   "product": "SUMMIT Series silicon-carbide UPS",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Rated output",
+     "value": "500 kVA (500 kW) and 750 kVA (750 kW) at unity output power factor"
+    },
+    {
+     "band": "Power",
+     "label": "Overload",
+     "value": "105-109% for 60 min; 110-124% for 1 min; 125-149% for 10 s"
+    },
+    {
+     "band": "Electrical",
+     "label": "AC input",
+     "value": "3-phase 3-wire, 480 V +15% / -20%, 60 Hz ±10%"
+    },
+    {
+     "band": "Electrical",
+     "label": "Input power factor",
+     "value": ">0.99 lagging"
+    },
+    {
+     "band": "Electrical",
+     "label": "Reflected current distortion",
+     "value": "3% at 100% load; 5% at 50% load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Battery",
+     "value": "480 Vdc nominal, 400 Vdc minimum, float to 545 Vdc — VRLA, VLA or lithium-ion"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency (500 kVA)",
+     "value": "97.9 / 98.2 / 98.0 / 97.6% at 25 / 50 / 75 / 100% load, in true online double conversion"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency (750 kVA)",
+     "value": "97.8 / 98.0 / 97.9 / 97.5% at 25 / 50 / 75 / 100% load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output",
+     "value": "480 V 3-phase 3-wire; regulation ±1% balanced, ±2% unbalanced; distortion <2% linear, <5% non-linear; ±2% on step load; 20 ms recovery"
+    },
+    {
+     "band": "Electrical",
+     "label": "Semiconductors",
+     "value": "Silicon carbide devices with three-level topology"
+    },
+    {
+     "band": "Design",
+     "label": "Dimensions (W x D x H)",
+     "value": "79.4 x 33.6 x 80.4 in at 500 kVA; 101.8 x 33.6 x 80.6 in at 750 kVA"
+    },
+    {
+     "band": "Design",
+     "label": "Weight",
+     "value": "3,072 lb (1,394 kg) at 500 kVA; 4,290 lb (1,946 kg) at 750 kVA"
+    },
+    {
+     "band": "Design",
+     "label": "Heat rejection",
+     "value": "42.0 kBTU/hr at 500 kVA; 62.9 kBTU/hr at 750 kVA"
+    },
+    {
+     "band": "Design",
+     "label": "Environment",
+     "value": "41-95°F (5-35°C); 0-7,400 ft (2,255 m)"
+    },
+    {
+     "band": "Compliance",
+     "label": "Listings",
+     "value": "UL 1778, CSA 22.2, IEC semiconductor converter standards, ISO 9001, ENERGY STAR rated"
+    },
+    {
+     "band": "Compliance",
+     "label": "EMC",
+     "value": "IEC 62040-2 category C3"
+    },
+    {
+     "band": "Compliance",
+     "label": "Fault current rating",
+     "value": "65 or 100 kAIC options"
+    }
+   ],
+   "notes": "The narrower operating temperature window (41-95°F against the 9900D's 32-104°F) is the visible cost of the higher efficiency and should be read against the room's design conditions."
+  },
+  {
+   "product": "9900CX and 9900AEGIS UPS",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "9900CX rated output",
+     "value": "1050 kVA / 1000 kW at 0.95 output power factor"
+    },
+    {
+     "band": "Power",
+     "label": "9900CX paralleling",
+     "value": "Parallelable up to 6 units with internal module-level redundancy"
+    },
+    {
+     "band": "Power",
+     "label": "9900AEGIS rated output",
+     "value": "80 kVA (72 kW), 100 (90), 150 (135), 160 (144) and 225 kVA (202.5 kW) at 0.90 output power factor"
+    },
+    {
+     "band": "Power",
+     "label": "9900AEGIS paralleling",
+     "value": "Up to 4 modules"
+    },
+    {
+     "band": "Power",
+     "label": "Overload (both)",
+     "value": "105-110% for 60 min; 111-125% for 10 min; 126-150% for 1 min"
+    },
+    {
+     "band": "Electrical",
+     "label": "9900CX efficiency",
+     "value": "96.2 / 96.9 / 97.0 / 96.8% at 25 / 50 / 75 / 100% load"
+    },
+    {
+     "band": "Electrical",
+     "label": "9900AEGIS efficiency (100 kVA)",
+     "value": "94.2 / 96.1 / 96.5 / 96.6% at 25 / 50 / 75 / 100% load"
+    },
+    {
+     "band": "Electrical",
+     "label": "9900CX input power factor",
+     "value": "0.99 lagging"
+    },
+    {
+     "band": "Electrical",
+     "label": "9900CX transient response",
+     "value": "±3% on step load"
+    },
+    {
+     "band": "Electrical",
+     "label": "9900CX battery",
+     "value": "480 Vdc nominal, 400 minimum, float to 600 Vdc — VRLA, VLA, NiCad or lithium-ion"
+    },
+    {
+     "band": "Electrical",
+     "label": "9900AEGIS topology",
+     "value": "Transformerless, three-level IGBT with PWM, internal static bypass, dual input"
+    },
+    {
+     "band": "Design",
+     "label": "9900CX dimensions and weight",
+     "value": "118.1 x 35.4 x 80.7 in; 6,613 lb (3,000 kg); 125.9 kBTU/hr"
+    },
+    {
+     "band": "Design",
+     "label": "9900AEGIS dimensions",
+     "value": "27.6 x 32.8 x 80.6 in at 80-160 kVA; 35.4 x 32.8 x 80.6 in at 225 kVA"
+    },
+    {
+     "band": "Design",
+     "label": "9900AEGIS weight",
+     "value": "772 to 1,080 lb across the range; 8.6-22.8 kBTU/hr"
+    },
+    {
+     "band": "Design",
+     "label": "Altitude",
+     "value": "9900CX 0-6,500 ft; 9900AEGIS 0-7,400 ft"
+    },
+    {
+     "band": "Compliance",
+     "label": "9900AEGIS additional listing",
+     "value": "UL 924 listed at 80 and 100 kVA for emergency lighting"
+    },
+    {
+     "band": "Compliance",
+     "label": "9900AEGIS step load",
+     "value": "Can accept a 100% step load without batteries — the stated case is MRI and CT start-up"
+    }
+   ],
+   "notes": "Company footprint claim for the 9900CX: the same load in 80% of the footprint of competitor systems, with power density up to 24% higher. Competitors are not named."
+  },
+  {
+   "product": "Gas-insulated switchgear",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "140-SFMT",
+     "value": "145 kV max, 275 kV BIL, 3150 A continuous, 40 kA short-time withstand, spring mechanism, 1-break gang-operated, 3-phase enclosure"
+    },
+    {
+     "band": "Electrical",
+     "label": "120-SFMT",
+     "value": "145 kV max, 650 kV BIL, 4000 A continuous, 63 kA short-time withstand, spring mechanism, 1-break gang-operated, 3-phase enclosure"
+    },
+    {
+     "band": "Electrical",
+     "label": "200-SFMT",
+     "value": "245 kV max, 900/1050 kV BIL, 4000 A continuous, 63/80 kA short-time withstand, 1-break independent-pole, iso-phase enclosure"
+    },
+    {
+     "band": "Electrical",
+     "label": "400-SFMT",
+     "value": "420 kV max, 1425 kV BIL, 4000 A continuous, 63 kA short-time withstand, 1-break independent-pole, iso-phase enclosure"
+    },
+    {
+     "band": "Electrical",
+     "label": "500-SFMT",
+     "value": "550 kV max, 1550/1800 kV BIL, 4000 A continuous, 63 kA short-time withstand, pneumatic open and spring close, iso-phase enclosure"
+    },
+    {
+     "band": "Electrical",
+     "label": "500MITS",
+     "value": "550 kV max, 1800 kV BIL, 6300 A continuous, 63 kA short-time withstand, spring mechanism, 2-break independent-pole, iso-phase enclosure"
+    },
+    {
+     "band": "Compliance",
+     "label": "Installed base",
+     "value": "More than 20,000 GIS bays installed worldwide per the current product page"
+    },
+    {
+     "band": "Compliance",
+     "label": "Heritage",
+     "value": "First GIS 1968; first 500 kV hybrid GIS substation 1973; world's first 550 kV fully gas-insulated switchyard 1976"
+    }
+   ],
+   "notes": "The archived brochure states more than 10,000 GIS bays and the current web page states more than 20,000; both figures are company-published and the difference is a date, not a discrepancy."
+  },
+  {
+   "product": "High-voltage circuit breakers and medium-voltage vacuum circuit breakers",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "HV gas-insulated circuit breakers",
+     "value": "72.5 kV to 800 kV; interrupting classes 40 kA to 80 kA"
+    },
+    {
+     "band": "Electrical",
+     "label": "72 kV vacuum circuit breaker",
+     "value": "72 kV max, 31.5 kA short circuit, 2000 A full load, 3-cycle interrupting, -33°C to 50°C — dry-air insulated, SF6-free"
+    },
+    {
+     "band": "Electrical",
+     "label": "38 kV vacuum circuit breaker",
+     "value": "38 kV max, 31.5 kA, 1200 A or 2000 A, 3-cycle interrupting, -50°C to 50°C"
+    },
+    {
+     "band": "Electrical",
+     "label": "27 kV vacuum circuit breaker",
+     "value": "27 kV max, 25 kA, 1200 / 2000 / 3000 A, 3-cycle interrupting, -50°C to 50°C"
+    },
+    {
+     "band": "Electrical",
+     "label": "17.5 kV vacuum circuit breaker",
+     "value": "17.5 kV max, 25 kA, 1200 A or 2000 A, 3-cycle interrupting, -50°C to 50°C"
+    },
+    {
+     "band": "Electrical",
+     "label": "15 kV vacuum circuit breaker",
+     "value": "15.5 kV max, 25 kA, 1200 A or 2000 A, 3-cycle interrupting"
+    },
+    {
+     "band": "Design",
+     "label": "Cold-climate options",
+     "value": "Mixed SF6/CF4 gas on 123-170 kV class; operation to -50°C with tank heaters"
+    },
+    {
+     "band": "Design",
+     "label": "Operating modes",
+     "value": "Gang and independent-pole options; synchronous control available on all independent-pole breakers"
+    },
+    {
+     "band": "Design",
+     "label": "Mechanical life",
+     "value": "M2 life tested for 10,000 operations; fully welded cabinets"
+    },
+    {
+     "band": "Design",
+     "label": "Manufacture",
+     "value": "Company states high-voltage circuit breakers are fully assembled and tested in the USA"
+    }
+   ],
+   "notes": "Metal-clad switchgear is not a named MEPPI product line — the North American catalogue covers air-insulated switchgear, gas-insulated switchgear, gas-insulated circuit breakers and vacuum circuit breakers."
+  },
+  {
+   "product": "Power transformers",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Core-form range",
+     "value": "69 kV to 275 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "Shell-form range",
+     "value": "115 kV to 765 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "Design transition point",
+     "value": "Approximately 200 MVA bank capacity and a 275 kV high-voltage winding; everything above adopts shell-form"
+    },
+    {
+     "band": "Electrical",
+     "label": "Largest generator step-up unit",
+     "value": "Three-phase transformer for a 1,510 MVA nuclear application, described by the company as the world's largest capacity"
+    },
+    {
+     "band": "Design",
+     "label": "Special three-phase autotransformers",
+     "value": "More than 550 shell-form units whose transport size can be reduced to 50% of a conventional three-phase unit"
+    },
+    {
+     "band": "Design",
+     "label": "Gas-insulated transformers",
+     "value": "SF6 as combined cooling and insulating medium; nonflammable"
+    }
+   ],
+   "notes": "Collection gap: no lead-time or MVA-per-year capacity figure is published first-party. Dry-type and cast-resin transformers do not appear in the current catalogue, and the company announced a transfer of its distribution transformer business in April 2024."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-20",
+   "category": "ma",
+   "headline": "Agreement signed to wholly acquire PCI Energy Solutions of Norman, Oklahoma for approximately US$1.4bn, closing expected before end-2026 subject to regulatory approval",
+   "read": "The largest capital commitment in the company's recent record moves it from selling grid hardware to selling the market software that dispatches it — trade coverage puts PCI's platform in touch with around 60% of US electricity generation.",
+   "source": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0820_ei2.pdf"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "financial",
+   "headline": "Q1 FY2027 (quarter ended 2026-06-30): revenue ¥1,497.1bn (+14.0%), adjusted operating profit ¥144.3bn (+53.8%); full-year guidance raised to ¥6,270.0bn revenue and ¥620.0bn adjusted operating profit",
+   "read": "Energy Systems orders rose 80% year on year in the quarter and the company attributed segment growth to North American transformer business expansion — the clearest signal yet that the AI build cycle is reaching the transmission and distribution side of this company.",
+   "source": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0731_co1.pdf"
+  },
+  {
+   "date": "2026-05-29",
+   "category": "corporate",
+   "headline": "New medium-term corporate strategy sets FY2031 targets: 12% adjusted operating margin excluding automotive, 12% ROE, 3-5% revenue CAGR, and development of next-generation 800 V and 1,500 V DC power supply systems plus a PUE 1.1 data center",
+   "read": "The DC-architecture and PUE targets put data-center power in the corporate plan rather than only in a divisional catalogue, which is what makes the NVIDIA collaboration a strategy rather than a product line.",
+   "source": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0529_co1.pdf"
+  },
+  {
+   "date": "2026-04-28",
+   "category": "financial",
+   "headline": "FY2026 (year ended 2026-03-31): record revenue ¥5,894.7bn (+7%) and operating profit ¥433.1bn; net profit attributable to stockholders ¥407.8bn (+26%); Infrastructure segment revenue ¥1,463.4bn (+19%) with operating profit up 73%",
+   "read": "The growth is concentrated in the segment that carries UPS and transmission and distribution, and the record operating-profit headlines circulating in trade press are the ex-restructuring figure rather than the reported one.",
+   "source": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0428_co1.pdf"
+  },
+  {
+   "date": "2026-02-10",
+   "category": "capacity",
+   "headline": "MEPPI relocates its California service center from Escondido to Vista, nearly doubling operational space, citing surging demand for critical power infrastructure",
+   "read": "Service capacity is the constraint that shows up second in a critical-power business — an installed base grows before the field organization does, and this is the company acting on that.",
+   "source": "https://www.meppi.com/news/meppi-expands-service-center-capabilities"
+  },
+  {
+   "date": "2026-02-06",
+   "category": "financial",
+   "headline": "Q3 FY2026: revenue ¥1,423.5bn but reported operating profit ¥70.3bn, down ¥56.4bn year on year after ¥74.3bn of Next-Stage restructuring charges; full-year restructuring estimate raised from ¥40.0bn to ¥100.0bn and reported operating profit guidance cut ¥30.0bn",
+   "read": "The gap between the ex-restructuring and reported lines is the year's single most misread number: guidance for ex-restructuring profit rose ¥30bn in the same breath that reported profit guidance fell ¥30bn.",
+   "source": "https://www.investing.com/news/company-news/mitsubishi-electric-q3-fy26-slides-record-revenue-despite-restructuring-costs-93CH-4490935"
+  },
+  {
+   "date": "2026-01-27",
+   "category": "partnership",
+   "headline": "ME Innovation Fund invests in Lucend, a US startup with an AI platform for data-center operational optimization",
+   "read": "A small cheque aimed at the layer above the hardware — pairing operational optimization software with the company's own power and cooling equipment.",
+   "source": "https://www.mitsubishielectric.com/en/pr/2026/0127-b/"
+  },
+  {
+   "date": "2025-12-24",
+   "category": "product-launch",
+   "headline": "Next-generation gas turbine control system for thermal power plants completes functional testing, jointly developed by Mitsubishi Power and Mitsubishi Electric, with market launch targeted for fiscal 2026",
+   "read": "The two Mitsubishi-named companies are legally and operationally separate, and this is the one place in the public record where they build a product together — control and instrumentation from the electrical company, the machine from the heavy-industry one.",
+   "source": "https://power.mhi.com/news/251224.html"
+  },
+  {
+   "date": "2025-10-13",
+   "category": "partnership",
+   "headline": "MEPPI announces it is developing 800 VDC power-delivery systems for next-generation AI factories through collaboration with NVIDIA",
+   "read": "This is the company's entry into the rack-power architecture conversation, and it is visible only in a first-party release — independent coverage of NVIDIA's 800 VDC ecosystem names ABB, Hitachi Energy, Schneider Electric and Vertiv and does not name Mitsubishi Electric.",
+   "source": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure"
+  },
+  {
+   "date": "2025-09-25",
+   "category": "corporate",
+   "headline": "MEPPI marks 40 years since its 1985 founding as WM Power Products, a 50/50 joint venture with Westinghouse Electric that became a wholly owned subsidiary in 1989",
+   "read": "The US arm is older than the AI cycle by four decades, and its UPS manufacturing heritage runs to 1964 — relevant when a buyer is weighing service continuity over a twenty-year asset life.",
+   "source": "https://www.meppi.com/news/meppi-celebrates-40-years"
+  },
+  {
+   "date": "2025-04-28",
+   "category": "financial",
+   "headline": "FY2025 (year ended 2025-03-31): revenue ¥5,521.7bn and operating profit ¥391.8bn, both records; ¥100bn buyback completed with more than 29.8 million shares repurchased",
+   "read": "The prior year's record set the base the FY2026 comparison runs against, and the buyback signals a balance sheet with room ahead of the PCI acquisition.",
+   "source": "https://www.businesswire.com/news/home/20250427719266/en/mitsubishi-electric-announces-consolidated-financial-results-for-fiscal-2025"
+  },
+  {
+   "date": "2024-12-02",
+   "category": "capacity",
+   "headline": "MEPPI to build a 160,000 sq ft advanced switchgear factory in the Pittsburgh region for US$86M, initially producing vacuum and gas circuit breakers and transitioning to predominantly vacuum breakers, with more than 200 full-time jobs at capacity",
+   "read": "Combined with a parallel Japanese investment the programme is about US$110M / ¥16bn, and it is squarely a tariff and lead-time hedge: domestic assembly of the product line whose imported equivalent now carries a Section 232 derivative duty.",
+   "source": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/"
+  },
+  {
+   "date": "2024-10-30",
+   "category": "capacity",
+   "headline": "Mitsubishi Electric announces strengthened production facilities for its energy systems business in the US and Japan, supported by a US$4M Pennsylvania RACP grant and a US$2.75M Pennsylvania First grant",
+   "read": "State money on a Japanese manufacturer's US switchgear plant is the same bargain being struck across the grid-equipment industry — public subsidy against domestic capacity for equipment the grid cannot get.",
+   "source": "https://www.mitsubishielectric.com/en/pr/2024/1030/"
+  },
+  {
+   "date": "2024-04-05",
+   "category": "corporate",
+   "headline": "Mitsubishi Electric announces the transfer of its distribution transformer business",
+   "read": "Read alongside the 2019 sale of the Memphis high-voltage transformer plant, the company has been narrowing rather than broadening its North American transformer manufacturing footprint — which makes the Q1 FY2027 attribution of growth to North American transformer business the dossier's outstanding question.",
+   "source": "https://www.mitsubishielectric.com/en/pr/2024/pdf/0405.pdf"
+  },
+  {
+   "date": "2022-10-27",
+   "category": "incident",
+   "headline": "External investigative committee concludes its review of all 22 Japanese sites, reporting 197 cases of improper quality control across four reports",
+   "read": "The company admitted falsifying transformer test data over roughly four decades, which is the single most consequential risk item for a dossier centred on transformers and switchgear; the president resigned in July 2021 and the chairman in October 2021.",
+   "source": "https://www.mitsubishielectric.com/sites/news/2022/pdf/1027-a1.pdf"
+  },
+  {
+   "date": "2022-02-24",
+   "category": "ma",
+   "headline": "MEPPI acquires Computer Protection Technology, a southern California critical-power service provider",
+   "read": "Buying field service rather than product — the recurring-revenue half of a critical-power franchise and the part a customer actually experiences.",
+   "source": "https://www.meppi.com/news/mitsubishi-electric-power-products-inc-to-acquire-computer-protection-technology"
+  },
+  {
+   "date": "2021-06-08",
+   "category": "partnership",
+   "headline": "Mitsubishi Electric and Siemens Energy sign a memorandum of understanding on a feasibility study for jointly developed zero-global-warming-potential high-voltage switching, beginning with a 245 kV dead-tank circuit breaker",
+   "read": "Two competitors in gas-insulated switchgear cooperating on the technology that would obsolete the gas both of them sell — a regulatory-risk hedge structured as a partnership.",
+   "source": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou"
+  },
+  {
+   "date": "2021-04-01",
+   "category": "partnership",
+   "headline": "MEPPI's UPS division forms a strategic alliance with Mitsubishi Electric Hydronics and IT Cooling Systems (MEHITS) of Italy for turnkey power protection and IT cooling in North American data centers",
+   "read": "Cooling was attached to the UPS franchise in 2021, three years before the current build cycle — the cross-sell predates the demand.",
+   "source": "https://www.meppi.com/news/mitsubishi-electric-to-provide-integrated-power-protection-and-it-cooling-solutions-for-us-data-center-applications"
+  },
+  {
+   "date": "2019-08-01",
+   "category": "corporate",
+   "headline": "MEPPI sells its Memphis, Tennessee high-voltage transformer manufacturing plant to Hyosung Heavy Industries for US$46.5M",
+   "read": "The plant, opened in 2013, reopened under Hyosung in 2020 and has since been expanded repeatedly — so every current Memphis transformer expansion story belongs to Hyosung, not to Mitsubishi Electric.",
+   "source": "https://www.power-eng.com/business/hyosung-acquiring-memphis-transformer-plant-from-mitsubishi-electric-power/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-10",
+   "via": "800 VDC power delivery",
+   "note": "MEPPI states it is developing 800 VDC power-delivery systems for next-generation AI factories through collaboration with NVIDIA, and NVIDIA also appears on Mitsubishi Electric's published UPS customer roster.",
+   "context": "The October 2025 MEPPI release is the only place in the public record where Mitsubishi Electric is placed inside the 800 VDC rack-power conversation. It matters because independent coverage of NVIDIA's 800 VDC ecosystem consistently names ABB, Hitachi Energy, Schneider Electric and Vertiv and does not name Mitsubishi Electric — so the relationship is visible first-party and invisible third-party.\n\nThe corporate strategy published in May 2026 corroborates the direction at board level, naming development of next-generation 800 V and 1,500 V DC power supply systems and a PUE 1.1 data center as targets. NVIDIA separately appears on the company's own customer roster, so the link is both a development collaboration and a supply relationship, though no order value or product has been disclosed.",
+   "source": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure"
+  },
+  {
+   "slug": "mitsubishi-power",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-12",
+   "via": "Next-generation gas turbine control system",
+   "note": "Mitsubishi Power and Mitsubishi Electric jointly developed a next-generation gas turbine control system that completed functional testing in December 2025, with market launch targeted for fiscal 2026.",
+   "context": "These are two legally and operationally separate companies that share only the Mitsubishi keiretsu name — Mitsubishi Power is a brand of Mitsubishi Heavy Industries (TSE: 7011), while Mitsubishi Electric is TSE: 6503. Neither is a subsidiary or affiliate of the other, and conflating them is the single most common error made about either company.\n\nThe control system is the one place in the public record where they build a product together: instrumentation and control from the electrical company, the machine from the heavy-industry one. Mitsubishi Power's DIASYS control series has more than 3,000 units delivered to over 60 countries, so the joint product enters an established installed base. Both companies published the announcement on the same day from their own newsrooms.",
+   "source": "https://power.mhi.com/news/251224.html"
+  },
+  {
+   "slug": "siemens-energy",
+   "type": "partner",
+   "status": "announced",
+   "since": "2021-06",
+   "via": "SF6-free high-voltage switching",
+   "note": "The two companies signed a memorandum of understanding in June 2021 to run a feasibility study on jointly developed high-voltage switching solutions with zero global-warming potential, beginning with a 245 kV dead-tank circuit breaker.",
+   "context": "This is a cooperation between two competitors in gas-insulated switchgear, aimed squarely at the regulation that threatens the product both of them sell: SF6 has a global warming potential the companies state as roughly 23,500 times that of carbon dioxide, and jurisdictions are moving to restrict it.\n\nThe two are simultaneously listed as competing majors in gas-insulated switchgear by Straits Research and Mordor Intelligence, and independent transformer rankings place Siemens Energy above Mitsubishi Electric. Cooperating on the technology that would obsolete the gas while competing on the equipment that uses it is the structure of the relationship, and no product from the MoU has been announced.",
+   "source": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou"
+  },
+  {
+   "slug": "samsung-sdi",
+   "type": "supplier",
+   "status": "active",
+   "via": "Lithium-ion battery strings for the 9900D UPS",
+   "note": "Samsung SDI lithium-ion battery product specifications and installation manuals are published by Mitsubishi Electric as 9900D peripherals, and the company hosts a dedicated article on Samsung SDI lithium-ion battery safety.",
+   "context": "The 9900D is marketed as Lithium Ready, and Samsung SDI is the lithium cell partner whose documentation the company publishes alongside its own. The relationship is a component-supply one at the battery-string level rather than a joint development.\n\nIt sits alongside VRLA, VLA, NiCad and pure-lead options from Narada, EnerSys, Deka/East Penn and C&D Technologies, so lithium is one path among several rather than the default. That matters commercially: the battery is the part of a UPS that ages and needs replacing, and the choice of chemistry is a maintenance and fire-code decision as much as an energy-density one.",
+   "source": "https://mitsubishicritical.com/uninterruptible-power-supplies/9900d/"
+  },
+  {
+   "slug": "narada",
+   "type": "supplier",
+   "status": "active",
+   "via": "HRL-700 VRLA battery strings for the 9900D UPS",
+   "note": "Narada HRL-700 data sheets and HRL series warranty documents are published by Mitsubishi Electric as approved 9900D battery options.",
+   "context": "Narada is one of five named battery suppliers whose documentation Mitsubishi Electric hosts for the 9900D, covering the high-rate VRLA option. The HRL-700 is a high-rate long-life lead-acid product of the type used where a UPS needs minutes rather than hours of autonomy.\n\nThe link is documented only through published product documentation rather than through any announced agreement, so its scale is unknown. It is nonetheless a real supply relationship: a UPS vendor publishes battery documentation for the strings it has qualified against its own charger and monitoring.",
+   "source": "https://mitsubishicritical.com/uninterruptible-power-supplies/9900d/"
+  },
+  {
+   "slug": "tesla",
+   "type": "customer",
+   "status": "active",
+   "via": "Uninterruptible power supplies",
+   "note": "Tesla appears on Mitsubishi Electric's own published UPS customer roster.",
+   "context": "The roster is company-published structured data listing several hundred named UPS customers. It establishes the fact of a customer relationship and nothing more — no product, capacity, site or date is disclosed for any entry.\n\nRead it as evidence of installed base rather than of a specific deployment. For a dossier the value is negative as well as positive: a vendor that publishes a customer list and does not publish a single data-center order value or reference capacity is telling you where its disclosure line sits.",
+   "source": "https://mitsubishicritical.com/our-customers/"
+  },
+  {
+   "slug": "oracle",
+   "type": "customer",
+   "status": "active",
+   "via": "Uninterruptible power supplies",
+   "note": "Oracle appears on Mitsubishi Electric's own published UPS customer roster.",
+   "context": "As with the other roster entries, the company publishes the name without a product, site, capacity or date. Oracle is a hyperscale data-center operator, so the entry is more materially interesting than most, but it cannot be sized from any public source.\n\nNo Mitsubishi Electric release, case study or third-party report located in this research names a data-center UPS order, reference installation or deployed capacity for any hyperscaler. The published case studies are for Element Critical, Sabey, UScellular and Grupo Salinas.",
+   "source": "https://mitsubishicritical.com/our-customers/"
+  },
+  {
+   "slug": "qts",
+   "type": "customer",
+   "status": "active",
+   "via": "Uninterruptible power supplies",
+   "note": "QTS appears on Mitsubishi Electric's own published UPS customer roster.",
+   "context": "QTS is a hyperscale colocation landlord, so the entry places Mitsubishi Electric UPS inside a wholesale data-center estate. The roster also carries Sabey, CoreSite, CyrusOne, Flexential, TierPoint, Cologix, Serverfarm, Element Critical and Evocative among colocation operators.\n\nAs with every other roster entry, no capacity, site or date is published. The colocation cluster is nonetheless the clearest published evidence of where this UPS line actually sells.",
+   "source": "https://mitsubishicritical.com/our-customers/"
+  },
+  {
+   "slug": "piller",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center UPS",
+   "note": "Research and Markets names Mitsubishi Electric and Piller Power Systems together in the set of vendors it says dominate the data center UPS market for 2025-2030.",
+   "context": "This is the only source located in this research that names Piller and Mitsubishi Electric in one defined market. It is a title-level ranking rather than a share table, and no percentage is attached to either party.\n\nThe two compete from opposite ends of the technology: Piller's franchise is rotary and diesel-rotary UPS with a flywheel store, while Mitsubishi Electric's is large static UPS with a battery store. Where they meet is the same purchase decision at the same megawatt scale, which is why a market report lists them together and why a buyer comparing them is comparing architectures rather than products.",
+   "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com"
+  },
+  {
+   "slug": "eaton",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center UPS",
+   "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS, and again among the top companies in the power transformer market by MarketsandMarkets.",
+   "context": "Eaton meets Mitsubishi Electric in two of its three relevant markets — data-center UPS and transformers — and is one of the five suppliers Mordor Intelligence says control roughly 55-60% of the North America medium-voltage switchgear market, a tier Mitsubishi Electric sits below.\n\nNeither firm publishes a Mitsubishi Electric share figure in any of these markets, so the comparison is positional rather than quantitative. Where research firms rank rather than list, Mitsubishi Electric is consistently in the named-major tier and consistently not in the leading five.",
+   "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com"
+  },
+  {
+   "slug": "vertiv",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center UPS and switchgear manufacturing capacity",
+   "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS, and set directly against MEPPI on North American switchgear capital investment in Manufacturing Dive's coverage of the Pennsylvania plant.",
+   "context": "The two compete in data-center UPS, and the same trade article that reported MEPPI's $86M Pennsylvania switchgear factory noted Vertiv expanding switchgear and busbar manufacturing in the US and internationally — putting the two in the same capacity race.\n\nVertiv is also inside NVIDIA's publicly named 800 VDC collaboration set, with an 800 VDC portfolio release stated for the second half of 2026, while Mitsubishi Electric's 800 VDC work is visible only through its own release. On the rack-power architecture the two are at different points of public commitment.",
+   "source": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center UPS and gas-insulated switchgear",
+   "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS and in Straits Research's gas-insulated switchgear participant list.",
+   "context": "Global Market Insights puts Schneider Electric at 24.3% of the data-center UPS market in 2024 and the top five — Eaton, Schneider, Vertiv, ABB and Delta — at about 60% combined, with Mitsubishi Electric named in the top seven and given no percentage. That asymmetry is the relationship: a named major with no published share against a leader with one.\n\nMordor Intelligence also identifies Schneider's EcoStruxure Grid as part of a shift of competition toward software bundled with switchgear, which is the same direction Mitsubishi Electric's $1.4bn PCI Energy Solutions acquisition points.",
+   "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com"
+  },
+  {
+   "slug": "abb",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center UPS and gas-insulated switchgear",
+   "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS and among the gas-insulated switchgear majors by Straits Research.",
+   "context": "ABB meets Mitsubishi Electric in both UPS and gas-insulated switchgear, and is one of the five suppliers Mordor says control roughly 55-60% of North American medium-voltage switchgear.\n\nABB is also the first name in NVIDIA's publicly announced 800 VDC collaborations, and Mordor cites its 800 V DC lineup as trimming cooling loads 10-15% in hyperscale facilities. Both companies are therefore making the same architectural bet, with ABB's version far more visible in independent coverage.",
+   "source": "https://straitsresearch.com/report/gas-insulated-switchgear-market"
+  },
+  {
+   "slug": "delta-electronics",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center UPS",
+   "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS.",
+   "context": "Delta sits inside the top-five group Global Market Insights credits with about 60% of the data-center UPS market, where Mitsubishi Electric is named in the top seven without a share.\n\nThe two also approach the market from different scales: Delta's data-center franchise runs from rack power shelves upward, while Mitsubishi Electric's runs from the 80 kVA to 2 MW room-scale UPS downward. They meet in the middle of a hall rather than across a catalogue.",
+   "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com"
+  },
+  {
+   "slug": "hitachi-energy",
+   "type": "competitor",
+   "status": "active",
+   "via": "Gas-insulated switchgear and North American manufacturing capacity",
+   "note": "Named among the gas-insulated switchgear majors alongside Mitsubishi Electric by Straits Research, and set directly against MEPPI's Pennsylvania plant in a head-to-head North American capital-investment comparison.",
+   "context": "The clearest quantitative comparison between the two comes from Manufacturing Dive's coverage of the Pennsylvania factory, which reported Mitsubishi Electric's $86M single-plant investment alongside Hitachi Energy's $155M across three North American plants, including $60M for its own Pennsylvania switchgear and breaker facility.\n\nAgainst Hitachi Energy's stated $9bn global programme, Mitsubishi Electric's North American grid-equipment capital commitment is one to two orders of magnitude smaller. Hitachi Energy also leads or co-leads the transformer rankings that place Mitsubishi Electric outside the top five.",
+   "source": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "competitor",
+   "status": "active",
+   "via": "Gas-insulated switchgear and transformers",
+   "note": "Named among the gas-insulated switchgear majors alongside Mitsubishi Electric by Straits Research and Mordor Intelligence, and among the top power-transformer companies by MarketsandMarkets.",
+   "context": "GE Vernova is one of the five suppliers Mordor Intelligence says control roughly 55-60% of the North America medium-voltage switchgear market, a tier Mitsubishi Electric sits below in the same report.\n\nThe two also meet in transformers, where MarketsandMarkets names both among the top companies while a competing ranking places Siemens Energy, Hitachi Energy, GE Grid Solutions, TBEA and CG Power in the top five and Mitsubishi Electric outside it.",
+   "source": "https://straitsresearch.com/report/gas-insulated-switchgear-market"
+  },
+  {
+   "slug": "powell-industries",
+   "type": "competitor",
+   "status": "active",
+   "via": "Medium-voltage switchgear",
+   "note": "Mordor Intelligence profiles Mitsubishi Electric Power Products and Powell Industries alongside each other in its North America medium-voltage switchgear company roster, and Straits Research lists both among gas-insulated switchgear participants.",
+   "context": "Both sit outside the five suppliers Mordor says control roughly 55-60% of the North American medium-voltage switchgear market, but they occupy that space differently. Powell's stated differentiator in the same report is speed from a domestic plant — tailored switchgear in ten weeks from Texas — while Mitsubishi Electric's is a vacuum and gas circuit-breaker portfolio to 800 kV backed by a new $86M Pennsylvania factory.\n\nThe overlap is real but partial: metal-clad switchgear, which is Powell's core product class, is not a named MEPPI product line, while gas-insulated switchgear at transmission voltages is not Powell's. They meet at the medium-voltage breaker rather than across the whole lineup.",
+   "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Section 232 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2025-08-18",
+   "exposure": "The Bureau of Industry and Security added 407 new tariff codes to the Section 232 steel and aluminium derivative list effective for goods entered on or after 2025-08-18, applying a 50% tariff to the steel and aluminium content of covered products. Transformers and switchgear are within the derivative scope, and trade advisers report that the 2026 restructuring assesses duties on full customs value with a capped 15% rate for specified electrical-grid equipment through 2027-12-31, rising to 25% from 2028. Mitsubishi Electric names tariffs as a negative driver in its own FY2026 operating-profit bridge but does not separately quantify the impact.",
+   "mitigation": "The company announced strengthened production facilities for its energy systems business in the US and Japan in October 2024, including an $86M advanced switchgear factory in the Pittsburgh region producing vacuum and gas circuit breakers, supported by a $4M Pennsylvania RACP grant and a $2.75M Pennsylvania First grant. It also states that its high-voltage circuit breakers are fully assembled and tested in the USA.",
+   "source": "https://www.pwc.com/us/en/services/tax/library/pwc-steel-and-aluminum-goods-subject-to-section-232-tariffs-expanded.html"
+  },
+  {
+   "regime": "SF6 and fluorinated-gas restrictions",
+   "status": "in-effect",
+   "exposure": "The company states that regulations to reduce or prohibit fluorinated gases in the electrical industry are being reviewed and implemented in various parts of the world, and puts SF6's global warming potential at roughly 23,500 times that of carbon dioxide. Gas-insulated switchgear and gas-insulated circuit breakers, which run from 145 kV to 800 kV in its catalogue, are the exposed product lines, and gas-insulated transformers use SF6 as their combined cooling and insulating medium.",
+   "mitigation": "A stated SF6-free roadmap: a 72 kV vacuum circuit breaker with dry-air insulation as the current flagship, forthcoming vacuum models, an SF6 gas monitoring and analytics system, and a 2021 memorandum of understanding with Siemens Energy to study jointly developed zero-global-warming-potential high-voltage switching starting with a 245 kV dead-tank breaker.",
+   "source": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou"
+  },
+  {
+   "regime": "DOE distribution transformer efficiency standards",
+   "status": "in-effect",
+   "effectiveDate": "2024-07-08",
+   "exposure": "The final rule took effect 2024-07-08 with compliance required on and after 2029-04-23. The exposure is indirect for Mitsubishi Electric: it sold its Memphis high-voltage transformer plant to Hyosung Heavy Industries in 2019 and announced a transfer of its distribution transformer business in April 2024, so the rule bears on its utility customers' procurement cycles rather than on its own US compliance obligations.",
+   "mitigation": "No company statement on this rule was located.",
+   "source": "https://www.federalregister.gov/documents/2024/04/22/2024-07480/energy-conservation-program-energy-conservation-standards-for-distribution-transformers"
+  },
+  {
+   "regime": "ENERGY STAR",
+   "status": "in-effect",
+   "exposure": "ENERGY STAR is the only third-party efficiency benchmark Mitsubishi Electric cites in its own UPS literature, and it uses it as a positioning claim rather than treating it as a constraint: it states it holds the highest efficiency rating in the AC double-conversion category and that the SUMMIT Series sits at the top of all double-conversion UPS on the ENERGY STAR list. A published case study attributes substantial government rebates to the efficiency rating.",
+   "mitigation": "Not applicable — the programme is used as a commercial advantage rather than mitigated.",
+   "source": "https://mitsubishicritical.com/energystar/"
+  },
+  {
+   "regime": "Product safety and EMC listings",
+   "status": "in-effect",
+   "exposure": "The UPS line is listed to UL 1778 and CSA 22.2, meets IEC 62040-2 category C3 for electromagnetic compatibility and IEEE 587 / ANSI C62.41-1991 for surge withstand, and the 9900AEGIS carries an additional UL 924 listing at 80 and 100 kVA for emergency lighting. Collection gap: no IEC 62040-3 classification code is published for any model, so the standard classification that would let a specifier compare this line against a competitor's on a coded basis is absent from the public record.",
+   "mitigation": "The company describes topology in words as true online double conversion, which is what the VFI classification denotes, and publishes full efficiency curves for that mode.",
+   "source": "https://mitsubishicritical.com/wp-content/uploads/2025/02/U-ENS00082-9900D-SPECIFICATION-Rev_6.pdf"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Kei Uruma (漆間 啓)",
+   "title": "Representative Executive Officer, President & CEO; Member of the Nomination Committee",
+   "photo": "images/execs/mitsubishi-electric-uruma.jpg",
+   "background": [
+    "President & CEO, Mitsubishi Electric Corporation — appointed in the wake of the quality-misconduct disclosures that removed his predecessor and the chairman",
+    "Career executive at Mitsubishi Electric; led the company through the external investigative committee's review of all 22 Japanese sites, concluded October 2022",
+    "Presided over the FY2026 record and the May 2026 medium-term strategy setting FY2031 targets of a 12% adjusted operating margin and 12% ROE"
+   ]
+  },
+  {
+   "name": "Kenichiro Fujimoto (藤本 健一郎)",
+   "title": "Executive Officer, CFO — in charge of financial strategy, accounting and finance; also in charge of IR and SR; Director and member of the Compensation Committee",
+   "photo": "images/execs/mitsubishi-electric-fujimoto.jpg",
+   "background": [
+    "CFO, Mitsubishi Electric Corporation",
+    "Owns the guidance the company raised on 2026-07-31 — revenue to ¥6,270.0bn and adjusted operating profit to ¥620.0bn for FY2027",
+    "Carries the investor-relations account through the Next-Stage restructuring, where reported and ex-restructuring operating profit moved in opposite directions"
+   ]
+  },
+  {
+   "name": "Hideto Negoro (根来 秀人)",
+   "title": "Executive Officer, Infrastructure Business Area Owner; Senior General Manager, Infrastructure BA Strategic Planning Office",
+   "photo": "images/execs/mitsubishi-electric-negoro.jpg",
+   "background": [
+    "Owns the Infrastructure business area — the segment containing both the UPS business and the transmission and distribution business, and the one carrying the company's growth",
+    "Infrastructure revenue rose 19% to ¥1,463.4bn in FY2026 with operating profit up 73%",
+    "The single most relevant executive for a data-center power conversation with this company"
+   ]
+  },
+  {
+   "name": "Soichi Hamamoto (濱本 総一)",
+   "title": "Executive Officer (Associate), Group President, Energy & Industrial Systems",
+   "photo": "images/execs/mitsubishi-electric-hamamoto.jpg",
+   "background": [
+    "Heads the business group carrying transmission and distribution — transformers, gas-insulated switchgear, circuit breakers",
+    "Energy Systems revenue rose 19% to ¥473.3bn in FY2026 and orders rose 80% year on year in the quarter ended 2026-06-30",
+    "The Q1 FY2027 order growth was attributed by the company to North American transformer business expansion"
+   ]
+  },
+  {
+   "name": "Naoto Masuda (増田 直人)",
+   "title": "Executive Officer (Associate), Group President, Public Utility Systems",
+   "background": [
+    "Heads the sub-segment the UPS business reports into; Public Utility Systems revenue rose 20% to ¥568.6bn in FY2026 with operating profit up 105%",
+    "Public Utility Systems orders rose 37% year on year in the quarter ended 2026-06-30",
+    "Collection gap: the company's leadership page serves portraits through a template that does not attach names to images, and the document-order mapping for this individual could not be reconciled between two independent reads — so no photograph is attached rather than risk the wrong face"
+   ]
+  },
+  {
+   "name": "Michael Corbo",
+   "title": "Executive Officer; in charge of Global Strategic Planning & Marketing; VP Global Strategic Planning & Marketing; Representative of the Americas; President, Mitsubishi Electric US Holdings; President & CEO, Mitsubishi Electric US",
+   "photo": "images/execs/mitsubishi-electric-corbo.jpg",
+   "background": [
+    "Senior-most Mitsubishi Electric executive for the Americas, holding both the US holding-company and US operating-company presidencies",
+    "Also carries the global strategic planning and marketing portfolio at corporate level",
+    "The Americas group runs roughly 4,000 employees across 38 US locations"
+   ]
+  },
+  {
+   "name": "Kunihiko Kaga (加賀 邦彦)",
+   "title": "Representative Executive Officer, Executive Vice President; CTO; Industry & Mobility Business Area Owner; in charge of export control",
+   "photo": "images/execs/mitsubishi-electric-kaga.jpg",
+   "background": [
+    "Chief Technology Officer — owns the technology roadmap including the next-generation 800 V and 1,500 V DC power supply systems named in the FY2031 strategy",
+    "Also owns export control, which is where trade-policy exposure lands organizationally",
+    "Representative Executive Officer, so one of the officers able to bind the company"
+   ]
+  },
+  {
+   "name": "Noriyuki Takazawa (高澤 範行)",
+   "title": "Representative Executive Officer, Executive Vice President; CSO — corporate strategic planning and operations of associated companies; Director",
+   "photo": "images/execs/mitsubishi-electric-takazawa.jpg",
+   "background": [
+    "Chief Strategy Officer; owns corporate strategic planning and the operations of associated companies",
+    "The natural owner of the approximately $1.4bn PCI Energy Solutions acquisition announced 2026-08-20 and of the TMEIC joint-venture relationship with Toshiba",
+    "Also a Director, so sits on both the executive and board sides"
+   ]
+  },
+  {
+   "name": "Hiroyuki Yanagi (柳 弘之)",
+   "title": "Outside Director, Chairperson of the Board of Directors",
+   "photo": "images/execs/mitsubishi-electric-yanagi.jpg",
+   "background": [
+    "Independent chair of the board — an outside director holding the chair, which is the governance structure adopted after the quality-misconduct disclosures",
+    "Chairs a board that oversaw the external investigative committee's review of 197 cases of improper quality control across all 22 Japanese sites"
+   ]
+  },
+  {
+   "name": "Tricia Breeger",
+   "title": "President & CEO, Mitsubishi Electric Power Products, Inc. (MEPPI)",
+   "photo": "images/execs/mitsubishi-electric-breeger.jpg",
+   "background": [
+    "President & CEO, MEPPI since 2023-04-01 — described by the company as the first female CEO appointed across the Mitsubishi Electric group companies",
+    "President, MEPPI (2022); Vice President for long-term strategic planning (2020), concurrently VP/General Manager of the Uninterruptible Power Supply Division",
+    "General Manager, Uninterruptible Power Supplies Division (2018) — the company credits her with expanding the division's share in the critical power industry",
+    "General Manager, Electrical Distribution Division; joined MEPPI in 2000",
+    "Vice Chair, Board of Directors, Catalyst Connection (Western Pennsylvania manufacturing non-profit)",
+    "BS Mechanical Engineering, University of Arkansas; MBA, Robert Morris University"
+   ]
+  },
+  {
+   "name": "John Campion",
+   "title": "General Manager, MEPPI Critical Power Solutions Division",
+   "background": [
+    "Runs the division that designs, manufactures and services the UPS line and the CritiCool cooling products — the business unit that actually sells into data centers",
+    "Appointed General Manager following Tricia Breeger's promotion to President of MEPPI in about 2022",
+    "Company spokesman on the Computer Protection Technology acquisition (2022) and on the NVIDIA 800 VDC initiative (2025-10-13)",
+    "Collection gap: no company-published photograph exists for him on meppi.com or mitsubishicritical.com"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "JPY",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2025 (year ended 2025-03-31)",
+    "periodType": "annual",
+    "periodEnd": "2025-03-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "kpi": "revenue",
+      "actual": "¥5,521.7bn (+¥263.7bn year on year) — a record at the time",
+      "expected": "No pre-print full-year consensus was located for this period",
+      "verdict": "inline",
+      "result": "Company-reported record. No retrievable outlet published a pre-print FY2025 consensus, so no beat or miss verdict is possible on an analyst basis."
+     },
+     {
+      "name": "Operating profit",
+      "kpi": "operating-profit",
+      "actual": "¥391.8bn (7.1% margin, +¥63.3bn) — a record at the time",
+      "expected": "",
+      "result": "Reported alongside initial FY2026 guidance of ¥5,400.0bn revenue — a decline of ¥121.7bn on a stronger yen — and ¥430.0bn operating profit."
+     },
+     {
+      "name": "Net profit attributable to stockholders",
+      "kpi": "net-income",
+      "actual": "¥324.1bn",
+      "expected": "",
+      "result": "A ¥100bn buyback was completed in the same year with more than 29.8 million shares repurchased."
+     }
+    ],
+    "commentary": "The company labels the year ending 31 March 2025 as FY2025. Both revenue and operating profit were records. No usable full-year analyst consensus for this period was retrievable from any outlet, so the expectations column is left empty rather than reconstructed."
+   },
+   {
+    "period": "FY2026 (year ended 2026-03-31)",
+    "periodType": "annual",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "kpi": "revenue",
+      "actual": "¥5,894.7bn (+¥373.0bn, +7%) — a record",
+      "expected": "Company's own revised guidance of ¥5,760.0bn",
+      "verdict": "beat",
+      "result": "Beat the company's revised guidance by ¥134.7bn. This is a guidance comparison, not an analyst-consensus one — no pre-print FY2026 street consensus was retrievable."
+     },
+     {
+      "name": "Operating profit (reported)",
+      "kpi": "operating-profit",
+      "actual": "¥433.1bn (7.3% margin, +¥41.2bn)",
+      "expected": "Company's own revised guidance of ¥400.0bn reported operating profit",
+      "verdict": "beat",
+      "result": "Reported operating profit is after ¥100.0bn of Next-Stage restructuring charges, an estimate the company raised from ¥40.0bn during the year. Operating profit excluding Next-Stage was ¥538.4bn (+¥146.6bn) against ¥500.0bn guided — every record operating-profit headline for this year is the ex-restructuring figure."
+     },
+     {
+      "name": "Net profit attributable to stockholders",
+      "kpi": "net-income",
+      "actual": "¥407.8bn (+¥83.7bn, +26%)",
+      "expected": "",
+      "result": "Profit before income taxes ¥526.1bn (+20%). Free cash flow ¥231.5bn; stockholders' equity ratio 60.9%."
+     },
+     {
+      "name": "Infrastructure segment revenue",
+      "actual": "¥1,463.4bn (+19%), with segment operating profit ¥154.7bn (+73%)",
+      "expected": "",
+      "result": "The segment carrying UPS and transmission and distribution. Within it, Public Utility Systems revenue ¥568.6bn (+20%) with operating profit +105%, and Energy Systems revenue ¥473.3bn (+19%) with operating profit ¥45.3bn (+65%) at a 9.6% margin."
+     },
+     {
+      "name": "Energy Systems orders",
+      "kpi": "orders",
+      "actual": "¥610.0bn (+14%)",
+      "expected": "",
+      "result": "Against Public Utility Systems orders of ¥570.4bn (−9%) in the same year — the order growth is on the transmission and distribution side, not the UPS side."
+     }
+    ],
+    "commentary": "The year the growth arrived in the relevant segment. The presentational trap is the restructuring: the company raised its Next-Stage cost estimate from ¥40.0bn to ¥100.0bn mid-year, cutting reported operating-profit guidance by ¥30.0bn in the same announcement that raised ex-restructuring guidance by ¥30.0bn. Reported and ex-restructuring figures are both carried above and are never blended."
+   },
+   {
+    "period": "Q1 FY2027 (quarter ended 2026-06-30)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "kpi": "revenue",
+      "actual": "¥1,497.1bn (+14.0%)",
+      "expected": "Investing.com consensus ¥1.39tn; FT/Markit Digital consensus ¥1.38tn; MarketBeat consensus US$8.75bn on the MIELY ADR",
+      "verdict": "beat",
+      "result": "A beat on all three bases. The outlets are reported separately and never blended: Investing.com scored +7.9% on revenue, Simply Wall St +8.0% against its own estimate, and MarketBeat +7.4% in USD on the ADR."
+     },
+     {
+      "name": "Earnings per share",
+      "kpi": "eps",
+      "actual": "¥53.66 basic (company-reported)",
+      "expected": "Investing.com and FT/Markit consensus ¥50.59; MarketBeat consensus US$0.6310 (GAAP, ADR)",
+      "verdict": "beat",
+      "result": "The outlets disagree on the ACTUAL, not only the estimate: FT/Markit and Simply Wall St both carry ¥53.66 — matching the company's own reported basic EPS — while Investing.com carries ¥54.19. Simply Wall St labels its figure statutory and scores a 4.7% beat; Investing.com's basis is unlabelled and scores 7.1%; MarketBeat's GAAP ADR figure of $0.67 scores 6.2%. Analyst panel size also differs sharply: FT counts 16, Simply Wall St 14, and the ADR-only panel behind MarketBeat's aggregate rating is 3."
+     },
+     {
+      "name": "Adjusted operating profit",
+      "actual": "¥144.3bn (+53.8%); reported operating profit ¥139.5bn (+24.6%)",
+      "expected": "",
+      "result": "The adjusted figure is the one the company leads with. An independent analyst blog argues more than 60% of the ¥50.4bn adjusted increase is non-organic — roughly ¥22bn from a weaker yen and ¥9.05bn from a change of depreciation method from declining-balance to straight-line — putting organic growth nearer +20.6%. That is an attributed third-party calculation, not a company figure, and is carried here as attribution rather than fact."
+     },
+     {
+      "name": "Energy Systems orders",
+      "kpi": "orders",
+      "actual": "¥207.1bn (+80%)",
+      "expected": "",
+      "result": "The single most striking operating number in the quarter, and the company attributes segment growth to North American transformer business expansion. Public Utility Systems orders were ¥153.8bn (+37%)."
+     },
+     {
+      "name": "Net profit attributable to stockholders",
+      "kpi": "net-income",
+      "actual": "¥109.8bn (+20.8%)",
+      "expected": "",
+      "result": "Overseas revenue ratio 57% (+2pt). Full-year FY2027 guidance was raised on the print to ¥6,270.0bn revenue and ¥620.0bn adjusted operating profit, from ¥6,200.0bn and ¥590.0bn."
+     }
+    ],
+    "commentary": "The company labels this quarter Q1 FY2027; several trackers label the same period Q1 FY2026, so the period-end date is the only safe identifier. Guidance was raised on the print, with FX assumptions of ¥150/US$, ¥175/EUR and ¥21.5/CNY."
+   }
+  ],
+  "commentary": "Mitsubishi Electric reports in Japanese yen under IFRS with a fiscal year ending 31 March, and labels the year ending 31 March 2026 as FY2026. No normalized USD overlay is carried on any period. Converting these figures would require a citable fiscal-year average JPY/USD rate covering April 2025 to March 2026; the OECD quarterly series reachable in this research supplies the June, September and December 2025 quarters but not the March 2026 quarter, so any full-year average would be fabricated precision. The company's own guidance FX assumption of ¥150/US$ is a planning rate for a future year, not a conversion basis for reported results. The figures are therefore left in reported currency and kpiNorm is false. Two further honesty notes: no retrievable outlet published a pre-print full-year consensus for FY2025 or FY2026, so the annual verdicts above compare against the company's own guidance and say so; and for the latest quarter the outlets disagree on the reported EPS itself, not merely on the estimate, so each is carried with its outlet and basis named."
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess that Mitsubishi Electric's exposure to the AI data-center build is real but concentrated in transmission and distribution rather than in the UPS line that its data-center marketing leads with. Basis: Energy Systems orders rose 80% year on year in the quarter ended 2026-06-30 and the company attributed segment growth to North American transformer business expansion, while Public Utility Systems — the sub-segment containing UPS — saw full-year FY2026 orders fall 9% even as its revenue rose 20%. The order book is being written on the grid side.",
+  "**(High confidence)** We assess the company is deliberately positioned against eco-mode as a competitive stance rather than lacking the capability. Basis: it publishes no eco-mode efficiency figure for any model, states plainly that silicon carbide makes eco-mode and its switching event unnecessary, and publishes 98.2% double-conversion efficiency on the SUMMIT Series. Where most of the industry buys back double-conversion losses by running the load on bypass and engineering a detection-and-transfer budget, this vendor is arguing the losses are now small enough not to. That is a coherent technical position and it is also a narrow one — it depends on the customer valuing the removed failure mode more than the remaining efficiency gap.",
+  "**(Moderate confidence)** We assess that vertical integration into its own power semiconductors is the company's most durable differentiator and its least legible one. Basis: it states it is the only UPS brand designing and manufacturing its own semiconductors, and that competitors may use older-generation Mitsubishi Electric IGBTs while only it uses current designs. The claim is unverifiable from outside and is never quantified, but it is consistent with the silicon-carbide product existing at all and with the company's semiconductor segment. Treat it as a credible structural advantage of unknown commercial weight.",
+  "**(Moderate confidence)** We assess the $86M Pennsylvania switchgear factory is primarily a tariff and lead-time hedge rather than a growth investment. Basis: it was announced in October 2024 with $6.75M of Pennsylvania state grants, produces vacuum and gas circuit breakers transitioning to predominantly vacuum, and lands in the same period as the Section 232 derivative expansion that put transformers and switchgear inside a tariff regime assessed on full customs value. Against Hitachi Energy's $155M across three North American plants and its stated $9bn global programme, this is a defensive footprint rather than a bid for share.",
+  "**(Low confidence)** Trade press and market-research firms consistently name Mitsubishi Electric in the leading vendor set for data-center UPS, power transformers and gas-insulated switchgear, but no firm reachable in this research publishes a market-share percentage for it in any of those three markets, and where sources rank rather than list it falls below the top five in transformers and outside the top five in North American medium-voltage switchgear. We assess the company is a credible top-seven participant across all three and a share leader in none, but the evidence is a pattern of named-without-a-number rather than a measurement.",
+  "**Collection gap — the largest unresolved question in this dossier.** The company attributed Q1 FY2027 Energy Systems growth to North American transformer business expansion, yet it sold its only US transformer plant, in Memphis, Tennessee, to Hyosung Heavy Industries for $46.5M in 2019, announced a transfer of its distribution transformer business in April 2024, and its 2024 US capacity investment was for switchgear rather than transformers. No source located in this research identifies where that North American transformer capacity physically sits — whether it is import-and-service, Japan-supplied, or an unannounced facility.",
+  "**Collection gap — no named data-center UPS deployment exists anywhere in the public record.** The company publishes a customer roster naming NVIDIA, Tesla, Oracle, QTS, Sabey, CoreSite, CyrusOne, Flexential and several hundred others, and publishes case studies for Element Critical, Sabey, UScellular and Grupo Salinas. It publishes no order value, no reference capacity and no named hyperscaler deployment. A dossier reader should treat the roster as evidence of installed base and not as evidence of scale.",
+  "**Collection gap — the quality-misconduct record ends in October 2022 and its consequences are unsourced.** An external investigative committee reported 197 cases of improper quality control across all 22 Japanese sites, and the company admitted falsifying transformer test data over roughly four decades. That is the most consequential risk item for a dossier centred on transformers and switchgear. Whether it produced fines, customer claims, contract losses or ongoing monitoring is not established by any source located here, and the absence of later reporting is not evidence of resolution."
+ ]
+}

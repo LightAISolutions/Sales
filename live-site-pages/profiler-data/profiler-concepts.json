@@ -32,6 +32,16 @@
       ]
     },
     {
+      "slug": "active-front-end",
+      "term": "active front end",
+      "def": "A rectifier built from switching transistors rather than plain diodes, so the equipment behind it can draw a near-sinusoidal current at close to unity power factor instead of pulling in gulps. It is what lets a modern UPS or drive stop being a dirty load on the supply feeding it, at the cost of more silicon and more control software.",
+      "aliases": [
+        "AFE",
+        "active rectifier",
+        "IGBT rectifier"
+      ]
+    },
+    {
       "slug": "ad-cvd",
       "term": "AD/CVD",
       "def": "Anti-dumping and countervailing duties: US trade remedies against imports priced below fair value or subsidized at home. Even a petition creates pricing risk, because duties can apply retroactively to goods already entered.",
@@ -99,12 +109,32 @@
       ]
     },
     {
+      "slug": "apparent-power",
+      "term": "apparent power",
+      "def": "Volts times amps, measured in kVA — the total current a supply must carry, whether or not that current does useful work. Real power (kW) is the part that becomes work or heat in the load; the ratio of the two is the power factor. Equipment is sized on apparent power because copper and semiconductors heat on current, but the customer buys real power.",
+      "aliases": [
+        "kVA",
+        "volt-amperes"
+      ]
+    },
+    {
       "slug": "arc-flash",
       "term": "arc flash",
       "def": "The explosive release of energy when current jumps through the air between conductors — a blast hot enough to be lethal at a panel door. An arc-flash study calculates that energy at every piece of gear so the right protective clothing and breaker settings can be specified, and it has to be redone whenever the electrical system changes.",
       "aliases": [
         "arc-flash",
         "arc-flash study"
+      ]
+    },
+    {
+      "slug": "arc-resistant-switchgear",
+      "term": "arc-resistant switchgear",
+      "def": "Switchgear built and type-tested so that an internal arcing fault vents its pressure and hot gas away from anyone standing at the door, usually upward through a plenum or duct. The standard is IEEE C37.20.7, and it grades enclosures by which sides are protected and whether the protection survives with a low-voltage door open. It does not stop the arc — it redirects what the arc produces.",
+      "aliases": [
+        "arc resistant",
+        "arc-resistant construction",
+        "IEEE C37.20.7",
+        "arc-resistant"
       ]
     },
     {
@@ -226,6 +256,14 @@
       "def": "Battery management system: the electronics that watch every cell's voltage, current, and temperature, balance the cells, and disconnect the battery when limits are crossed — the battery's safety and health guardian.",
       "aliases": [
         "battery management system"
+      ]
+    },
+    {
+      "slug": "brayton-cycle",
+      "term": "Brayton cycle",
+      "def": "The thermodynamic cycle a gas turbine runs on: compress air, add heat by burning fuel in it, expand the hot gas through a turbine, exhaust what is left. Roughly half the turbine's output is consumed driving its own compressor, and efficiency rises with both the pressure ratio and the temperature the machine can survive at — which is why turbine development is largely a materials problem.",
+      "aliases": [
+        "Brayton"
       ]
     },
     {
@@ -364,6 +402,16 @@
       ]
     },
     {
+      "slug": "chp",
+      "term": "CHP",
+      "def": "Combined heat and power, also called cogeneration: using both the electricity a prime mover generates and the heat it would otherwise vent. Because the heat is free once the fuel is burned, overall fuel utilisation can pass 80 percent — but only if there is a real use for the heat next door, which is what makes siting rather than efficiency the binding question.",
+      "aliases": [
+        "combined heat and power",
+        "cogeneration",
+        "cogen"
+      ]
+    },
+    {
       "slug": "closed-transition",
       "term": "closed transition",
       "def": "A transfer that closes onto the new source before opening the old one, so the two are briefly in parallel and the load never sees a break. It requires the generator to be synchronized to the utility first, and the utility's permission, because for a fraction of a second the site's engines are feeding the grid.",
@@ -467,6 +515,16 @@
       "aliases": [
         "conversion stages",
         "power conversion stage"
+      ]
+    },
+    {
+      "slug": "coordination-study",
+      "term": "coordination study",
+      "def": "The engineering exercise that turns a one-line diagram into a set of protective-device settings: model every source and cable, compute the fault current available at each point, then choose relay curves and time delays so the nearest upstream device always clears first. Its outputs are relay settings, breaker trip units and the labels on the gear — and it is only true for the system it was drawn against.",
+      "aliases": [
+        "protection study",
+        "protective device coordination",
+        "coordination studies"
       ]
     },
     {
@@ -586,6 +644,15 @@
       "aliases": [
         "load sharing",
         "active current sharing"
+      ]
+    },
+    {
+      "slug": "current-transformer",
+      "term": "current transformer",
+      "def": "A transformer whose job is measurement rather than power: it wraps a conductor and produces a small, proportional current a relay or meter can read safely. Its ratio is chosen so a relay sees a usable signal at both normal load and fault current, and a wrong ratio is one of the quiet ways a protection scheme fails to do what its settings say.",
+      "aliases": [
+        "CT",
+        "instrument transformer"
       ]
     },
     {
@@ -771,6 +838,17 @@
       ]
     },
     {
+      "slug": "dln-combustor",
+      "term": "DLN combustor",
+      "def": "Dry low-NOx combustion: premixing fuel and air before the flame so the mixture burns lean and cool enough to form little nitrogen oxide, without injecting water or steam to do it. Lean premixed flames sit close to blowing out and close to travelling back up the burner, so the combustor is the part of a gas turbine most constrained by the fuel it is asked to burn.",
+      "aliases": [
+        "dry low NOx",
+        "DLN",
+        "dry low-NOx combustor",
+        "lean premixed combustion"
+      ]
+    },
+    {
       "slug": "docket",
       "term": "docket",
       "def": "A commission's case file: a numbered proceeding holding the application, testimony, discovery, intervenor filings, hearing transcripts and the final order. For a seller the docket is the only place a utility's plans are stated under oath with dates attached — read the docket, not the press release.",
@@ -790,6 +868,16 @@
         "true online"
       ],
       "def": "The UPS mode in which all power is rectified to DC and re-made as AC by the inverter, continuously, so the load always sees a synthesized waveform and never the raw supply. It is the highest grade of protection — VFI in the IEC classification — and costs a few percent of every megawatt-hour as conversion heat; eco-mode is the alternative that idles the conversion and accepts a transfer."
+    },
+    {
+      "slug": "draw-out-breaker",
+      "term": "draw-out breaker",
+      "def": "A circuit breaker that racks in and out of its cell on rails, with three defined positions: connected, test (control power live, main contacts isolated) and disconnected. It lets a breaker be tested or replaced without de-energizing the bus behind it, which is why medium-voltage switchgear is built this way and why racking is one of the highest-exposure tasks in an electrical room.",
+      "aliases": [
+        "drawout breaker",
+        "withdrawable breaker",
+        "racking"
+      ]
     },
     {
       "slug": "droop",
@@ -814,9 +902,31 @@
       "def": "Diesel rotary uninterruptible power supply: a rotary UPS whose flywheel and synchronous machine share a shaft line with a diesel engine through a clutch. When the supply fails the flywheel carries the load for the seconds the engine needs to start and clutch in, so one machine does the work of UPS, transfer switch and generator — with no battery and no separate transfer."
     },
     {
+      "slug": "dry-type-transformer",
+      "term": "dry-type transformer",
+      "def": "A transformer insulated and cooled by air or solid resin instead of oil. It carries no fire load and no oil-containment requirement, so it can sit inside a building, but it is larger, noisier and less efficient than an equivalent oil-filled unit and does not scale as far up in rating.",
+      "aliases": [
+        "cast-resin transformer",
+        "cast resin",
+        "dry type transformer"
+      ]
+    },
+    {
       "slug": "duration",
       "term": "duration",
       "def": "How long a storage plant can discharge at full power (energy divided by power, MWh ÷ MW). Duration decides which grid jobs a battery can do — most US grid-scale projects run a few hours."
+    },
+    {
+      "slug": "e-house",
+      "term": "e-house",
+      "def": "A power room built and wired in a factory, tested as a unit, then shipped to site as a walk-in enclosure — switchgear, transformers, controls, lighting, HVAC and cable already in place. It converts skilled field electrical labour into factory labour and moves the schedule risk from the site to the shop, at the price of shipping weight, crane access and a design frozen much earlier.",
+      "aliases": [
+        "power control room",
+        "PCR",
+        "modular substation",
+        "electrical house",
+        "e-houses"
+      ]
     },
     {
       "slug": "eco-mode",
@@ -1012,6 +1122,14 @@
       ]
     },
     {
+      "slug": "factory-acceptance-test",
+      "term": "factory acceptance test",
+      "def": "Testing assembled equipment at the manufacturer's works, with the customer present, before it ships. It catches wiring and logic errors while the fix is cheap and the gear is still accessible — but it can only prove what can be simulated in a shop, so an integrated test on site under real load is still the thing that proves the system.",
+      "aliases": [
+        "FAT"
+      ]
+    },
+    {
       "slug": "fault-current",
       "term": "fault current",
       "aliases": [
@@ -1061,6 +1179,16 @@
       ]
     },
     {
+      "slug": "firing-temperature",
+      "term": "firing temperature",
+      "def": "How hot the gas is where it first meets the turbine blades — the single number a gas turbine's efficiency and output track most closely. Every extra hundred degrees buys efficiency and costs materials science: single-crystal blades, ceramic coatings and cooling air bled from the compressor, which is itself a loss. Modern heavy-duty machines are described by class as 1,600°C or 1,650°C.",
+      "aliases": [
+        "turbine inlet temperature",
+        "TIT",
+        "combustor outlet temperature"
+      ]
+    },
+    {
       "slug": "firm-load-shed",
       "term": "firm load shed",
       "def": "The grid operator's last resort: ordering utilities to cut power to ordinary customers because supply cannot meet demand. Texas's 2025 large-load law ties the biggest customers to it — during an emergency the operator may direct a large load to run its backup generation or curtail before, or instead of, cutting homes.",
@@ -1070,6 +1198,24 @@
         "energy emergency alert",
         "rotating outages",
         "load shed event"
+      ]
+    },
+    {
+      "slug": "flame-speed",
+      "term": "flame speed",
+      "def": "How fast a flame front travels through a fuel-air mixture. Hydrogen's is several times methane's, which is the root of most of the engineering in hydrogen-capable combustors: a flame that outruns the incoming mixture stops sitting where it was designed to sit.",
+      "aliases": [
+        "laminar flame speed",
+        "burning velocity"
+      ]
+    },
+    {
+      "slug": "flashback",
+      "term": "flashback",
+      "def": "A premixed flame travelling upstream into the burner it should be sitting in front of, because the mixture's flame speed has overtaken the flow feeding it. Hardware not designed for it melts. It is the specific failure mode that limits how much hydrogen a dry low-NOx combustor can take.",
+      "aliases": [
+        "flame flashback",
+        "flame holding"
       ]
     },
     {
@@ -1170,6 +1316,16 @@
       ]
     },
     {
+      "slug": "gas-insulated-switchgear",
+      "term": "gas-insulated switchgear",
+      "def": "Switchgear whose live parts sit in a sealed enclosure filled with an insulating gas — historically sulphur hexafluoride, increasingly a lower-warming alternative — instead of open air. The gas holds off far more voltage per centimetre than air, so a gas-insulated substation occupies a small fraction of the footprint of an air-insulated one, which is why it is chosen where land is expensive or the site is indoors.",
+      "aliases": [
+        "GIS",
+        "SF6 switchgear",
+        "gas insulated switchgear"
+      ]
+    },
+    {
       "slug": "gen-set",
       "term": "gen-set",
       "def": "Generator set: an engine or turbine coupled to an alternator on one frame, with its controls, cooling and fuel system — the packaged unit a data center buys, rather than a bare engine. Rated in kilowatts or kilovolt-amperes at a declared duty: standby, prime or continuous.",
@@ -1224,6 +1380,17 @@
       ]
     },
     {
+      "slug": "heavy-duty-gas-turbine",
+      "term": "heavy-duty gas turbine",
+      "def": "A large, stationary gas turbine designed from scratch for power generation rather than adapted from a jet engine: single-shaft, heavy castings, tens to hundreds of megawatts, built for long runs between overhauls rather than for light weight or fast starts. Manufacturers grade them by class — F, G, H, J — which is shorthand for firing temperature, and each class step buys efficiency.",
+      "aliases": [
+        "frame machine",
+        "industrial frame gas turbine",
+        "frame turbine",
+        "heavy duty gas turbine"
+      ]
+    },
+    {
       "slug": "high-voltage",
       "term": "high voltage",
       "def": "The transmission tier — roughly 100 kV and up in the United States, with 230 kV, 500 kV and 765 kV the workhorse classes — used to move bulk power between regions and into a cluster of substations. Higher voltage carries more power over the same right-of-way with less loss, which is why the lines proposed for data-center corridors keep going up a class.",
@@ -1258,6 +1425,17 @@
       ]
     },
     {
+      "slug": "hot-start",
+      "term": "hot start",
+      "def": "Starting a turbine that is still warm from a recent shutdown, which is far quicker than starting one that has cooled — thick steam-turbine casings must be reheated slowly or they distort. Plants are quoted as hot, warm and cold start times, and the gap between them is why a machine that is cheap to run flat out can be expensive to use as a follower.",
+      "aliases": [
+        "warm start",
+        "cold start",
+        "start-up time",
+        "starting time"
+      ]
+    },
+    {
       "slug": "hot-swap",
       "term": "hot-swap",
       "def": "Removing or inserting a unit — a power supply, a converter shelf, a drive — while the rest of the system stays live. It works only because the unit and its slot were engineered for it: the connector sequence, the inrush control and the isolation of a failed unit are all deliberate design work.",
@@ -1267,6 +1445,15 @@
         "hot swappable",
         "hot-plug",
         "live swap"
+      ]
+    },
+    {
+      "slug": "hrsg",
+      "term": "HRSG",
+      "def": "Heat-recovery steam generator: the boiler that sits in a gas turbine's exhaust and makes steam from heat that a simple-cycle plant throws away. It is where a combined-cycle plant's extra third of output comes from, and it is also most of the extra equipment, the extra water treatment and the extra construction time.",
+      "aliases": [
+        "heat recovery steam generator",
+        "heat-recovery steam generator"
       ]
     },
     {
@@ -1285,6 +1472,17 @@
         "hydrotreated vegetable oil",
         "renewable diesel",
         "EN 15940"
+      ]
+    },
+    {
+      "slug": "hydrogen-co-firing",
+      "term": "hydrogen co-firing",
+      "def": "Burning a hydrogen-natural-gas blend in a machine designed for gas. The percentage quoted is almost always by volume, and hydrogen carries about a third of methane's energy per unit volume — so a 30 percent by volume blend is only about ten to eleven percent of the energy and cuts carbon dioxide by roughly the same tenth. Reading a volumetric figure as an energy figure overstates the decarbonisation about threefold.",
+      "aliases": [
+        "co-firing",
+        "co-fire",
+        "hydrogen blending",
+        "hydrogen blend"
       ]
     },
     {
@@ -1328,6 +1526,15 @@
       "def": "The international standard that classifies a UPS by how much of the supply's misbehavior reaches the load: VFD (voltage and frequency dependent — the supply passes through until it fails), VI (voltage independent — line-interactive, voltage corrected), and VFI (voltage and frequency independent — the load is fully isolated, as in double conversion or a rotary machine). Codes such as VFI-SS-111 add the output-waveform and transient grades so two makers' promises can be compared."
     },
     {
+      "slug": "ieee-1584",
+      "term": "IEEE 1584",
+      "def": "The standard method for calculating arc-flash incident energy: given the available fault current, the gap between conductors, the enclosure and — critically — how long the protective device takes to clear, it returns the energy a worker at a stated distance would receive. Clearing time is the term the engineer can actually change, which is why arc-flash mitigation is usually a protection-settings problem.",
+      "aliases": [
+        "arc-flash calculation",
+        "IEEE Std 1584"
+      ]
+    },
+    {
       "slug": "ieee-519",
       "term": "IEEE 519",
       "def": "The standard that sets harmonic-distortion limits at the point of common coupling — the property line where a facility's electrical system meets the utility. It draws the boundary so one customer's distorted loads cannot degrade a neighbor's power quality, and compliance is measured at that point rather than assumed.",
@@ -1346,6 +1553,17 @@
       "def": "Insulated-gate bipolar transistor: the silicon switch that static UPS inverters, drives and grid inverters have been built on for three decades — fast enough to chop DC into a clean sine wave thousands of times a second and rugged enough for megawatts. Silicon carbide is displacing it where the last points of efficiency matter."
     },
     {
+      "slug": "incident-energy",
+      "term": "incident energy",
+      "def": "The thermal energy an arcing fault would deliver to a worker standing at a stated working distance, expressed in calories per square centimetre. It sets the protective clothing required to open the door, and it falls with anything that shortens the arc's duration — faster relay settings, a maintenance-mode switch, or an upstream device that sees the fault sooner.",
+      "aliases": [
+        "cal/cm2",
+        "cal/cm²",
+        "arc-flash boundary",
+        "arc flash boundary"
+      ]
+    },
+    {
       "slug": "independent-engineer",
       "term": "independent engineer",
       "def": "The technical diligence firm lenders hire to review a project on their behalf — the design, the equipment, the contracts, the production estimate. Its report is the gate to financial close, which makes the independent engineer, not the buyer, the audience a supplier's certifications and track record ultimately have to satisfy.",
@@ -1360,6 +1578,17 @@
       "aliases": [
         "synthetic inertia",
         "grid inertia"
+      ]
+    },
+    {
+      "slug": "inlet-air-cooling",
+      "term": "inlet air cooling",
+      "def": "Chilling or humidifying the air entering a gas turbine's compressor to claw back the output that hot weather takes away. A turbine is a volumetric machine — it swallows a fixed volume per revolution — so hotter, thinner air means less mass, less fuel burned and less power, typically a fraction of a percent of output per degree Celsius.",
+      "aliases": [
+        "evaporative cooling",
+        "inlet chilling",
+        "inlet fogging",
+        "inlet cooling"
       ]
     },
     {
@@ -1460,6 +1689,16 @@
       "aliases": [
         "ISO 8528-1",
         "ISO-8528"
+      ]
+    },
+    {
+      "slug": "iso-rating",
+      "term": "ISO rating",
+      "def": "A gas turbine's output and efficiency quoted at internationally agreed reference conditions — 15°C, sea level, 60 percent relative humidity, no inlet or exhaust pressure loss. Real sites are hotter, higher, and always have ducting, so the site rating is always below the catalogue number and the gap is the first correction any honest plant calculation makes.",
+      "aliases": [
+        "ISO conditions",
+        "ISO base rating",
+        "ISO base load"
       ]
     },
     {
@@ -1656,6 +1895,16 @@
       "def": "A bearing that holds a shaft in place with controlled magnetic fields instead of contact, so a high-speed flywheel can spin with almost no friction and no lubrication. It is what lets a small, light rotor store useful energy at tens of thousands of rpm — and it needs control power of its own."
     },
     {
+      "slug": "main-tie-main",
+      "term": "main-tie-main",
+      "def": "A switchgear arrangement with two incoming supplies, each feeding half the bus, and a normally-open tie breaker between them. Lose one supply and the tie closes so the surviving source carries everything, which is why each source must be sized for the whole load. It is the standard way a campus takes two utility feeds and the reason a one-line drawing has to be read for what happens after the tie closes, not just before.",
+      "aliases": [
+        "double-ended substation",
+        "main tie main",
+        "secondary selective"
+      ]
+    },
+    {
       "slug": "major-source",
       "term": "major source",
       "def": "An air-permitting classification for a plant whose potential emissions exceed the thresholds that trigger full pre-construction review — modelling, public comment and best-available-control analysis. Crossing the line turns a permit measured in months into one measured in years, so on-site plants are packaged to stay under it.",
@@ -1671,6 +1920,16 @@
       "def": "Distribution-level voltage, roughly the single-digit to tens of kilovolts — the tier data centers and storage plants connect at before power is stepped down to usable levels.",
       "aliases": [
         "MV"
+      ]
+    },
+    {
+      "slug": "metal-clad-switchgear",
+      "term": "metal-clad switchgear",
+      "def": "The most rigorously defined class of medium-voltage switchgear (IEEE C37.20.2): draw-out breakers, grounded metal barriers between every major compartment, insulated bus, and shutters that cover the live stabs when a breaker is withdrawn. The compartmentalisation is the point — it limits how far a fault inside one cell can propagate and lets a breaker be pulled with the bus alive.",
+      "aliases": [
+        "metal clad switchgear",
+        "IEEE C37.20.2",
+        "metal-enclosed switchgear"
       ]
     },
     {
@@ -1803,6 +2062,14 @@
       ]
     },
     {
+      "slug": "nfpa-70e",
+      "term": "NFPA 70E",
+      "def": "The US standard for electrical safety in the workplace: it requires an energised-work justification, an arc-flash risk assessment, labelling of equipment with its incident energy, and protective clothing matched to that number. It governs the people rather than the equipment — the equipment answer to the same hazard is arc-resistant construction.",
+      "aliases": [
+        "70E"
+      ]
+    },
+    {
       "slug": "nfpa-855",
       "term": "NFPA 855",
       "def": "The US fire-protection standard for stationary energy storage installations — spacing, enclosures, suppression, and the fire testing (UL 9540A) it references. Permitting officials work from it."
@@ -1866,6 +2133,16 @@
       "slug": "offtake",
       "term": "offtake",
       "def": "The committed purchase of a project's output — power, capacity, or storage services. Signed offtake is what turns a development pipeline into a financeable project."
+    },
+    {
+      "slug": "on-load-tap-changer",
+      "term": "on-load tap changer",
+      "def": "A switch inside a transformer that changes the number of turns in use — and so the output voltage — without interrupting the load. It is the only substantial moving part in most transformers, which makes it the part most likely to need maintenance and one of the more common causes of transformer outages.",
+      "aliases": [
+        "OLTC",
+        "tap changer",
+        "tap-changer"
+      ]
     },
     {
       "slug": "open-transition",
@@ -2067,6 +2344,15 @@
       ]
     },
     {
+      "slug": "pressure-ratio",
+      "term": "pressure ratio",
+      "def": "How much a gas turbine's compressor raises the pressure of the air passing through it, typically in the high teens to low twenties on a modern heavy-duty machine. Along with firing temperature it sets the cycle's efficiency, and raising it costs compressor stages, which is one reason turbines grow rather than simply improve.",
+      "aliases": [
+        "cycle pressure ratio",
+        "compression ratio"
+      ]
+    },
+    {
       "slug": "prime-mover",
       "term": "prime mover",
       "def": "The machine that turns fuel into shaft power — a reciprocating engine, a gas turbine or a fuel cell stack driving a generator. Naming it separately matters because the prime mover sets the start time, the load-acceptance behaviour, the emissions profile and the maintenance interval, while the electrical end is comparatively interchangeable.",
@@ -2168,6 +2454,16 @@
         "ramp-up schedule",
         "ramp",
         "ramp-up"
+      ]
+    },
+    {
+      "slug": "rankine-cycle",
+      "term": "Rankine cycle",
+      "def": "The steam cycle: boil water, expand the steam through a turbine, condense it, pump it back. In a combined-cycle plant it is the bottoming half, run entirely on heat the gas turbine would otherwise have vented — which is why the second turbine adds output without adding fuel.",
+      "aliases": [
+        "Rankine",
+        "steam cycle",
+        "bottoming cycle"
       ]
     },
     {
@@ -2488,6 +2784,16 @@
       ]
     },
     {
+      "slug": "short-circuit-study",
+      "term": "short-circuit study",
+      "def": "The calculation of how much current would flow at every point in an electrical system if it faulted there, given every source that can contribute — the utility, the generators, and the motors that briefly act as generators as they spin down. It sets the interrupting rating every breaker must meet and is the input both the coordination study and the arc-flash calculation run on.",
+      "aliases": [
+        "fault study",
+        "short circuit study",
+        "available fault current"
+      ]
+    },
+    {
       "slug": "sic",
       "term": "SiC",
       "def": "Silicon carbide: a wide-bandgap semiconductor that switches faster with lower losses than silicon, at higher voltages and temperatures — the material behind smaller, more efficient inverters and converters.",
@@ -2526,6 +2832,16 @@
         "SAC",
         "Sine Amplitude Converter",
         "sine-amplitude converter"
+      ]
+    },
+    {
+      "slug": "single-crystal-blade",
+      "term": "single-crystal blade",
+      "def": "A turbine blade cast as one continuous metal crystal, with no grain boundaries for creep to open up. Grain boundaries are where hot metal under load slowly pulls apart, so removing them buys perhaps another fifty degrees of firing temperature — and each blade is a slow, expensive casting.",
+      "aliases": [
+        "single crystal",
+        "directionally solidified",
+        "single-crystal casting"
       ]
     },
     {
@@ -2741,6 +3057,14 @@
       ]
     },
     {
+      "slug": "switching-loss",
+      "term": "switching loss",
+      "def": "Energy burned each time a transistor turns on or off, because for a few hundred nanoseconds it is carrying current and holding voltage at the same time. It scales with switching frequency, which is why a converter designer trades frequency — and therefore filter size and response speed — against efficiency.",
+      "aliases": [
+        "switching losses"
+      ]
+    },
+    {
       "slug": "synchronization",
       "term": "synchronization",
       "def": "Matching a generator's voltage, frequency, phase angle and phase rotation to a live bus before its breaker closes. Close out of step and the machine takes a torque shock and a current surge; the synchronizer or sync-check relay exists to make that impossible.",
@@ -2855,6 +3179,15 @@
       ]
     },
     {
+      "slug": "thermal-barrier-coating",
+      "term": "thermal barrier coating",
+      "def": "A thin ceramic layer sprayed onto turbine blades and combustor walls so the metal underneath runs a couple of hundred degrees cooler than the gas around it. It is what allows firing temperatures well above the melting point of the alloy, and its condition is a large part of what an overhaul inspects.",
+      "aliases": [
+        "TBC",
+        "thermal barrier coatings"
+      ]
+    },
+    {
       "slug": "thermal-resistance",
       "term": "thermal resistance",
       "def": "How hard it is for heat to escape from a part to the air or liquid that carries it away, measured as temperature rise per watt. A converter's current rating is really a thermal statement: the current it can carry before its junction temperature reaches the limit through the path it has been given.",
@@ -2871,6 +3204,18 @@
       "def": "A self-accelerating overheating reaction inside a battery cell: heat triggers reactions that release more heat, potentially propagating cell to cell. The failure mode BESS safety standards are designed to contain."
     },
     {
+      "slug": "three-level-inverter",
+      "term": "three-level inverter",
+      "def": "An inverter whose output can sit at three voltage steps rather than two, usually by clamping to the midpoint of a split DC link. Each switch then blocks half the voltage and the output waveform starts closer to a sine wave, so both switching losses and the output filter shrink — the main reason large modern UPS units reach efficiencies in the high nineties where two-level designs did not.",
+      "aliases": [
+        "3-level inverter",
+        "NPC inverter",
+        "neutral-point clamped",
+        "three-level topology",
+        "T-type inverter"
+      ]
+    },
+    {
       "slug": "tier-4",
       "term": "Tier 4",
       "def": "The strictest US EPA emission stage for diesel engines, cutting nitrogen oxides and particulates to a small fraction of earlier stages, usually with after-treatment such as SCR and a particulate filter. Emergency-only stationary engines are held to an earlier stage; a diesel that will run for prime power, peak shaving or demand response generally must meet it — the regulatory fork in a data center's generator strategy.",
@@ -2879,6 +3224,17 @@
         "EPA Tier 4",
         "Tier 4F",
         "Tier 4 Interim"
+      ]
+    },
+    {
+      "slug": "time-current-curve",
+      "term": "time-current curve",
+      "def": "A plot of how long a protective device takes to operate against how much current it sees, drawn on log-log paper so a whole series of devices can be compared on one sheet. Nesting the curves so the downstream device always clears first is what selective coordination means in practice; where two curves cross or touch, selectivity is lost at that current.",
+      "aliases": [
+        "TCC",
+        "time-current characteristic",
+        "TCC curve",
+        "time current curve"
       ]
     },
     {
@@ -2907,12 +3263,42 @@
       ]
     },
     {
+      "slug": "transformerless-ups",
+      "term": "transformerless UPS",
+      "def": "A UPS built without the bulky low-frequency transformer that older designs used to derive the output neutral and provide isolation, using higher-frequency switching and a split DC link instead. It is markedly smaller, lighter and more efficient — and it hands the neutral and fault-current questions the transformer used to answer back to the system designer.",
+      "aliases": [
+        "transformer-free UPS",
+        "transformerless"
+      ]
+    },
+    {
+      "slug": "turbine-cooling-air",
+      "term": "turbine cooling air",
+      "def": "Air bled from the compressor and piped through hollow blades and vanes so they survive gas hotter than their own melting point. It is a direct loss — that air was compressed at cost and does no work in the combustor — so every design is a trade between how hot the machine can fire and how much of its own air it must spend to allow it.",
+      "aliases": [
+        "compressor bleed",
+        "blade cooling",
+        "cooling air"
+      ]
+    },
+    {
       "slug": "turbo-lag",
       "term": "turbo lag",
       "def": "The delay between asking a turbocharged engine for more power and the turbocharger spooling up enough air to burn the extra fuel. It is the physical reason a large diesel cannot always take its full rating in one step, and the reason load-acceptance figures are quoted per step with a recovery time.",
       "aliases": [
         "turbocharger lag",
         "turbo response"
+      ]
+    },
+    {
+      "slug": "twelve-pulse-rectifier",
+      "term": "12-pulse rectifier",
+      "def": "A diode rectifier fed through two transformer windings phase-shifted by thirty degrees, so the two halves' distortion partly cancels and the current drawn is much closer to a sine wave than a plain six-pulse bridge manages. It was the standard way to make a large UPS or drive tolerable to its upstream supply before active front ends took over.",
+      "aliases": [
+        "twelve-pulse rectifier",
+        "12-pulse",
+        "6-pulse rectifier",
+        "six-pulse rectifier"
       ]
     },
     {
@@ -2936,6 +3322,16 @@
         "Uptime Institute Tier",
         "Tier III",
         "Tier IV"
+      ]
+    },
+    {
+      "slug": "vacuum-circuit-breaker",
+      "term": "vacuum circuit breaker",
+      "def": "A medium-voltage breaker whose contacts part inside a sealed vacuum bottle. With almost nothing to ionise, the arc dies at the first current zero and the gap recovers its strength in microseconds — which is why vacuum displaced oil and gas interruption at distribution voltages and why the bottle, not the mechanism, is the part that defines the breaker's life.",
+      "aliases": [
+        "VCB",
+        "vacuum interrupter",
+        "vacuum bottle"
       ]
     },
     {
@@ -3028,6 +3424,17 @@
         "WMP",
         "wildfire mitigation",
         "mitigation plan"
+      ]
+    },
+    {
+      "slug": "withstand-rating",
+      "term": "withstand rating",
+      "def": "How much fault current a piece of equipment can survive, as opposed to interrupt — the bus bars, supports and enclosure must hold together for the cycles it takes an upstream device to clear. Magnetic force between conductors goes with current squared, so bracing a bus for a higher fault level is a physical redesign, not a paperwork change.",
+      "aliases": [
+        "short-circuit withstand",
+        "bus bracing",
+        "momentary rating",
+        "short-time withstand"
       ]
     },
     {

@@ -159,25 +159,6 @@
    "source": "https://www.siemens-energy.com/us/en/home/press-releases/siemens-energy-is-investing--1-billion",
    "status": "active",
    "since": "2026-02"
-  },
-  {
-   "slug": "mitsubishi-power",
-   "type": "competitor",
-   "status": "active",
-   "via": "Heavy-duty gas turbines",
-   "note": "POWER Magazine ranks Siemens Energy at 95 GW of turbines under contract against Mitsubishi Heavy Industries' 35 GW of large-frame backlog, and Global Energy Monitor names the two alongside GE Vernova as the three manufacturers supplying two-thirds of turbines in gas plants under construction.",
-   "context": "Siemens Energy's 95 GW comprises 69 GW of firm backlog plus 26 GW of slot reservations, with 22 GW tied to data centers — a far more data-center-weighted book than Mitsubishi's, which POWER describes as focused on large-frame projects for core utility customers. Siemens Energy's unit shipments nearly doubled from 100 in 2024 to 194 in 2025.\n\nGlobal Energy Monitor gives Siemens Energy 16% of Asian capacity under construction against Mitsubishi's 17%, the one market where the two are close, and records that Siemens once considered merging its gas turbine unit with Mitsubishi's.",
-   "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/"
-  },
-  {
-   "slug": "mitsubishi-electric",
-   "type": "partner",
-   "status": "announced",
-   "since": "2021-06",
-   "via": "SF6-free high-voltage switching",
-   "note": "Siemens Energy and Mitsubishi Electric signed a memorandum of understanding in June 2021 to run a feasibility study on jointly developed high-voltage switching solutions with zero global-warming potential, beginning with a 245 kV dead-tank circuit breaker.",
-   "context": "This is cooperation between two competitors in gas-insulated switchgear, aimed at the regulation that threatens the product both of them sell: the announcement puts SF6's global warming potential at roughly 23,500 times that of carbon dioxide and notes that restrictions are being reviewed and implemented in various parts of the world.\n\nThe two are simultaneously listed as competing majors in gas-insulated switchgear by Straits Research and Mordor Intelligence, and independent transformer rankings place Siemens Energy above Mitsubishi Electric. No product from the memorandum has been announced.",
-   "source": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou"
   }
  ],
  "policyExposure": [
@@ -398,11 +379,6 @@
  },
  "sources": [
   {
-   "label": "POWER Magazine — Ansaldo returns to the US gas turbine market as the equipment crunch widens the supplier field",
-   "url": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
-   "date": "2026-09-01"
-  },
-  {
    "label": "Siemens Energy — Q3 FY26 earnings release (record orders/revenue/margin, backlog €162B)",
    "url": "https://assets.siemens-energy.com/dam/30018eed-275d-4e73-811e-b49d004cdc3d/2026-08-05-Earnings_Release_Q3_FY26_EN-pdf_Original%20file.pdf",
    "date": "2026-08-05"
@@ -463,11 +439,6 @@
    "date": "2023-08-07"
   },
   {
-   "label": "MEPPI — Mitsubishi Electric and Siemens Energy sign MoU on SF6-free high-voltage switching",
-   "url": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou",
-   "date": "2021-06-08"
-  },
-  {
    "label": "Siemens Energy — SGT-800 product page",
    "url": "https://www.siemens-energy.com/global/en/home/products-services/product/sgt-800.html"
   },
@@ -484,6 +455,6 @@
    "url": "https://capital.com/en-int/analysis/siemens-energy-stock-forecast"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

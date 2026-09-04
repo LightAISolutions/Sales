@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-04",
- "companies": 101,
+ "companies": 104,
  "edges": [
   {
    "a": "abb",
@@ -248,6 +248,66 @@
   },
   {
    "a": "abb",
+   "b": "mitsubishi-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS and among the gas-insulated switchgear majors by Straits Research.",
+     "context": "ABB meets Mitsubishi Electric in both UPS and gas-insulated switchgear, and is one of the five suppliers Mordor Intelligence says control roughly 55-60% of North American medium-voltage switchgear.\n\nABB is also the first name in NVIDIA's publicly announced 800 VDC collaborations, with Mordor citing its 800 V DC lineup as trimming cooling loads 10-15% in hyperscale facilities. Mitsubishi Electric announced 800 VDC development with NVIDIA in its own October 2025 release, but independent coverage of that ecosystem does not name it — so both companies are making the same architectural bet with very different public visibility.",
+     "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+     "status": "active",
+     "via": "Data-center UPS and gas-insulated switchgear"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS and among the gas-insulated switchgear majors by Straits Research.",
+     "context": "ABB meets Mitsubishi Electric in both UPS and gas-insulated switchgear, and is one of the five suppliers Mordor says control roughly 55-60% of North American medium-voltage switchgear.\n\nABB is also the first name in NVIDIA's publicly announced 800 VDC collaborations, and Mordor cites its 800 V DC lineup as trimming cooling loads 10-15% in hyperscale facilities. Both companies are therefore making the same architectural bet, with ABB's version far more visible in independent coverage.",
+     "source": "https://straitsresearch.com/report/gas-insulated-switchgear-market",
+     "status": "active",
+     "via": "Data-center UPS and gas-insulated switchgear"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · LV UPS, switchgear & busway",
+     "date": "",
+     "text": "Top-5 global data-center power/UPS/PDU player per MarketsandMarkets — behind Schneider (category leader) and, in UPS, also behind Vertiv, Eaton, and Huawei; North American top-5 (with Schneider, Vertiv, Eaton, Mitsubishi Electric) holding ~62% collectively.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Large static UPS — 9900 Series",
+     "date": "",
+     "text": "Independent research places it in the leading data-center UPS vendor set alongside ABB, Eaton, Vertiv, Schneider Electric, Delta Electronics, Legrand and Piller Power Systems, without a published share figure.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Gas-insulated switchgear and high-voltage circuit breakers",
+     "date": "",
+     "text": "Named among the gas-insulated switchgear majors by Straits Research and Mordor Intelligence alongside ABB, Siemens Energy, Hitachi Energy, GE Vernova and Toshiba Energy Systems, with a second participant list adding Eaton, Powell Industries, Schneider Electric and Hyosung Heavy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Medium-voltage vacuum circuit breakers",
+     "date": "",
+     "text": "Profiled alongside Powell Industries, ABB, Siemens, Schneider Electric, Eaton, GE Vernova, Hitachi Energy and Toshiba International in Mordor Intelligence's North America medium-voltage switchgear roster, where the top five are said to control roughly 55-60% of the market.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "MEPPI announces it is developing 800 VDC power-delivery systems for next-generation AI factories through collaboration with NVIDIA — This is the company's entry into the rack-power architecture conversation, and it is visible only in a first-party release — independent coverage of NVIDIA's 800 VDC ecosystem names ABB, Hitachi Energy, Schneider Electric and Vertiv and does not name Mitsubishi Electric.",
+     "src": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "abb",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -400,6 +460,73 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "abb",
+   "b": "powell-industries",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Powell Industries' Form 10-K names ABB first among its principal competitors, and Mordor Intelligence places ABB in the top five controlling roughly 55-60% of the North America medium-voltage switchgear market.",
+     "context": "This is a competitor link stated by the company itself rather than inferred from a market report: Powell's FY2025 10-K reads that its principal competitors include ABB, Eaton, Schneider and Siemens Industries, Inc.\n\nTwo further threads run through it. Powell publishes a replacement vacuum circuit breaker for the ABB type ITE-HK air circuit breaker, so it competes for the second half of an ABB installed base's life. And Powell's CEO Brett Cope spent twenty years at ABB, latterly as a Group Vice President responsible for ABB's global business with ExxonMobil.",
+     "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
+     "status": "active",
+     "via": "Medium-voltage switchgear"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Powell's own Form 10-K names ABB first among its principal competitors, and Mordor Intelligence places ABB in the top five controlling roughly 55-60% of the North America medium-voltage switchgear market.",
+     "context": "This is one of the few competitor links in the corpus stated by the company itself rather than inferred from a market report: the FY2025 10-K reads that Powell's principal competitors include ABB, Eaton, Schneider and Siemens Industries, Inc.\n\nThe relationship has two further threads. Powell publishes a PowlVac-ND replacement vacuum circuit breaker for the ABB type ITE-HK air circuit breaker, so it competes for the second half of an ABB installed base's life. And CEO Brett Cope spent twenty years at ABB, latterly as a Group Vice President responsible for ABB's global business with ExxonMobil.",
+     "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
+     "status": "active",
+     "via": "Medium-voltage switchgear"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The medium-voltage switchgear specialist in a market whose top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — control roughly 55-60% of North American volume.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Mordor Intelligence places the top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — at roughly 55-60% of the North America medium-voltage switchgear market and names Powell's differentiator explicitly as tailored switchgear in ten weeks from its Texas facility, credited with winning multiple 2025 data-center awards.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Separately, the Power/Vac line was acquired from GE Consumer & Industrial in 2006 — a unit that became GE Industrial Solutions and was divested to ABB, and is not GE Vernova.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowlVac and PowlVac-AR metal-clad switchgear",
+     "date": "",
+     "text": "The FY2025 10-K names the principal competitors as ABB, Eaton, Schneider and Siemens Industries, Inc.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Integrated package solutions — Power Control Rooms, e-houses and modules",
+     "date": "",
+     "text": "SNS Insider names Powell among five companies shaping e-house technology alongside ABB, Siemens, Schneider Electric and Eaton, describing its position as designing custom-built systems requiring little site work.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2006-08-07",
+     "text": "Powell acquires the medium-voltage ANSI switchgear product line from GE Consumer & Industrial for $32 million in cash, with an exclusive long-term commercial alliance to supply that channel's medium-voltage ANSI switchgear — The origin of the Power/Vac line and of Powell's installed-base service annuity. The GE unit involved later became GE Industrial Solutions and was divested to ABB — it is not GE Vernova, and the two are routinely confused.",
+     "src": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-announces-acquisition-ge-medium-voltage-ansi",
+     "from": "b"
+    }
+   ],
+   "last": "2006-08-07"
   },
   {
    "a": "abb",
@@ -3984,6 +4111,31 @@
   },
   {
    "a": "burns-mcdonnell",
+   "b": "mitsubishi-power",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Burns & McDonnell provides EPC services on PowerSouth Energy Cooperative's Lowman Energy Center expansion, for which Mitsubishi Power supplies a second M501JAC with a 25-year long-term service agreement.",
+     "context": "The release quotes Burns & McDonnell's SVP and General Manager of its Power group directly alongside Mitsubishi Power, and the expansion takes the plant's winter capacity from 696 MW to over 1 GW, serving approximately 694,000 homes. The first Lowman M501JAC began operating in 2023, so this is a repeat pairing on the same site.\n\nIt is a cooperative rather than an investor-owned utility, which is the customer profile Mitsubishi Power says it is prioritising as it declines to chase data-center volume.",
+     "source": "https://power.mhi.com/regions/amer/news/260603",
+     "status": "active",
+     "since": "2026-06",
+     "via": "EPC on Lowman Energy Center"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-04",
+     "text": "PowerSouth Energy Cooperative expands the Lowman Energy Center with a second advanced-class M501JAC and a 25-year long-term service agreement, with Burns & McDonnell as EPC, taking winter capacity from 696 MW to over 1 GW — A cooperative repeat order with a quarter-century service tail — the shape of business Mitsubishi Power says it is prioritising over data-center volume.",
+     "src": "https://power.mhi.com/regions/amer/news/260603",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-04"
+  },
+  {
+   "a": "burns-mcdonnell",
    "b": "panasonic",
    "curated": {
     "a": {
@@ -5158,6 +5310,27 @@
     }
    ],
    "last": "2026-06-22"
+  },
+  {
+   "a": "caterpillar",
+   "b": "mitsubishi-power",
+   "evid": [
+    {
+     "where": "Capabilities · Solar Turbines — Titan 130 / 250 / 350, Mars 100, Taurus, PGM 130 modules and SMT130 mobile turbines",
+     "date": "",
+     "text": "Occupies the 5–40 MW gap between reciprocating engines and the heavy frames of GE Vernova, Siemens Energy and Mitsubishi Power — the machine a campus buys when it wants megawatts per unit but cannot wait for a heavy-frame slot, and often the balance-of-plant turbine beside a frame (Abilene, Kilby).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against Rolls-Royce Power Systems and Caterpillar, both of which retain in-house storage, this is a narrowed proposition for exactly the swinging-load application data centers present.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "caterpillar",
@@ -7764,6 +7937,31 @@
   },
   {
    "a": "crusoe",
+   "b": "mitsubishi-power",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Crusoe is the named AI infrastructure partner on Tallgrass's Cheyenne Power Hub in Wyoming, where Mitsubishi Power has allocated its first two M501JAC turbines for approximately 1,150 MW of Phase 1 site-ready power.",
+     "context": "This is Mitsubishi Power's flagship public data-center project and the clearest link between its turbines and an AI buyer. The campus sits in the Switchgrass Industrial Park in Laramie County with fuel supplied through Tallgrass's Rockies Express Pipeline, in an investment exceeding $7 billion, and the data center is reported at 1.8 GW initially and scalable to 10 GW.\n\nThe relationship is triangular rather than direct: Tallgrass is the developer and Mitsubishi Power's counterparty for the turbines, with Crusoe named as the AI infrastructure partner. Turbine installation was expected to begin as early as July 2026.",
+     "source": "https://www.power-eng.com/gas/turbines/wyoming-data-center-power-projects-highlight-new-entrants-partnerships-in-power-generation-market/",
+     "status": "announced",
+     "since": "2026-05",
+     "via": "Cheyenne Power Hub on-site generation"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-28",
+     "text": "Tallgrass and Mitsubishi Power Americas announce the first two M501JAC units allocated to the Cheyenne Power Hub, delivering approximately 1,150 MW of site-ready gas-fired power for a large-scale data center in the Switchgrass Industrial Park, Wyoming, in an investment exceeding $7 billion — The company's flagship data-center project and the one place its turbines are publicly tied to an AI campus; Crusoe is the named AI infrastructure partner and fuel comes through Tallgrass's Rockies Express Pipeline, with turbine installation expected to begin as early as July 2026.",
+     "src": "https://power.mhi.com/regions/amer/news/260515",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-28"
+  },
+  {
+   "a": "crusoe",
    "b": "nvidia",
    "evid": [
     {
@@ -8700,6 +8898,30 @@
   },
   {
    "a": "delta-electronics",
+   "b": "mitsubishi-electric",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS.",
+     "context": "Delta sits inside the top-five group Global Market Insights credits with about 60% of the data-center UPS market, where Mitsubishi Electric is named in the top seven without a share.\n\nThe two also approach the market from different scales: Delta's data-center franchise runs from rack power shelves upward, while Mitsubishi Electric's runs from the 80 kVA to 2 MW room-scale UPS downward. They meet in the middle of a hall rather than across a catalogue.",
+     "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+     "status": "active",
+     "via": "Data-center UPS"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Large static UPS — 9900 Series",
+     "date": "",
+     "text": "Independent research places it in the leading data-center UPS vendor set alongside ABB, Eaton, Vertiv, Schneider Electric, Delta Electronics, Legrand and Piller Power Systems, without a published share figure.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "delta-electronics",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -8999,6 +9221,22 @@
     }
    ],
    "last": "2026-05-18"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "powell-industries",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Independent director Katheryn B. Curtis retired in 2022 as Senior Vice President, Generation at Dominion Energy Virginia, having previously served as Vice President Retail Operations and Vice President Merchant Operations at Dominion Energy.",
+     "context": "This is a board-biography link and not a commercial relationship. No source establishes Dominion Energy as a Powell customer, and Powell names no customers in any filing.\n\nIt is recorded because utility-sector governance experience is a real and sourced connection between the two covered companies, and because Powell's electric utility end market grew from 19% to 25% of revenue between FY2024 and FY2025 and accounted for 24% of backlog at 2026-06-30. Read it as domain experience on the board, nothing more.",
+     "source": "https://powellindustriesinc.gcs-web.com/corporate-governance",
+     "status": "historical",
+     "via": "Board membership"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "dominion-energy",
@@ -9439,6 +9677,59 @@
   },
   {
    "a": "eaton",
+   "b": "mitsubishi-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS, and again among the top companies in the power transformer market by MarketsandMarkets.",
+     "context": "The two meet in two of Mitsubishi Electric's three relevant markets. Global Market Insights places the top five in data-center UPS — Eaton, Schneider Electric, Vertiv, ABB and Delta — at about 60% of the market combined, with Mitsubishi Electric named in the top seven and given no share figure.\n\nMordor Intelligence separately puts Eaton inside the five suppliers controlling roughly 55-60% of North American medium-voltage switchgear, a tier Mitsubishi Electric sits below. The pattern across all three markets is consistent: Eaton is ranked with a number, Mitsubishi Electric is named without one.",
+     "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+     "status": "active",
+     "via": "Data-center UPS and transformers"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS, and again among the top companies in the power transformer market by MarketsandMarkets.",
+     "context": "Eaton meets Mitsubishi Electric in two of its three relevant markets — data-center UPS and transformers — and is one of the five suppliers Mordor Intelligence says control roughly 55-60% of the North America medium-voltage switchgear market, a tier Mitsubishi Electric sits below.\n\nNeither firm publishes a Mitsubishi Electric share figure in any of these markets, so the comparison is positional rather than quantitative. Where research firms rank rather than list, Mitsubishi Electric is consistently in the named-major tier and consistently not in the leading five.",
+     "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+     "status": "active",
+     "via": "Data-center UPS"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Large static UPS — 9900 Series",
+     "date": "",
+     "text": "Independent research places it in the leading data-center UPS vendor set alongside ABB, Eaton, Vertiv, Schneider Electric, Delta Electronics, Legrand and Piller Power Systems, without a published share figure.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power transformers",
+     "date": "",
+     "text": "Named among the top companies in the power transformer market by MarketsandMarkets alongside Hitachi Energy, GE, Siemens, Eaton and Hyundai Electric.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Gas-insulated switchgear and high-voltage circuit breakers",
+     "date": "",
+     "text": "Named among the gas-insulated switchgear majors by Straits Research and Mordor Intelligence alongside ABB, Siemens Energy, Hitachi Energy, GE Vernova and Toshiba Energy Systems, with a second participant list adding Eaton, Powell Industries, Schneider Electric and Hyosung Heavy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Medium-voltage vacuum circuit breakers",
+     "date": "",
+     "text": "Profiled alongside Powell Industries, ABB, Siemens, Schneider Electric, Eaton, GE Vernova, Hitachi Energy and Toshiba International in Mordor Intelligence's North America medium-voltage switchgear roster, where the top five are said to control roughly 55-60% of the market.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eaton",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -9595,6 +9886,66 @@
      "where": "Capabilities · Static UPS and static transfer switches — M+ Series (M+500, M+1200), APOSTAR, APOTRANS",
      "date": "",
      "text": "Head-on with Schneider Electric Galaxy VXL (500–1,250 kW frames, 125 kW modules), Vertiv Trinergy (1.5–2.5 MW blocks to 20 MW) and Eaton 9395X (to 1,700 kVA) — a late entrant at 500–1,200 kW per unit whose stated edge is Piller's service network and short-circuit capacity, and whose hardware provenance the company has not disclosed.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eaton",
+   "b": "powell-industries",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Powell Industries' Form 10-K names Eaton among its principal competitors, and Powell simultaneously designs its FlexGear and FlexTrol platforms to accept Eaton Magnum DS draw-out breakers and Eaton draw-out contactors.",
+     "context": "The dual relationship is the commercially interesting part. Powell's universal-platform strategy means it buys the interrupting element from a company it names as a competitor in its own filing, and sells the assembly, the engineering and the arc-resistant structure around it.\n\nThere is also a board-level link: Powell director James W. McGill spent forty years at Eaton, retiring as President of its Electrical Sector for the Americas. Mordor Intelligence places Eaton inside the top five holding roughly 55-60% of North American medium-voltage switchgear, with Powell in the specialist tier competing on a ten-week lead time from Texas.",
+     "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
+     "status": "active",
+     "via": "Medium-voltage switchgear and low-voltage breaker elements"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Named in Powell's 10-K as a principal competitor, and simultaneously a component supplier whose Magnum DS draw-out breakers and draw-out contactors Powell designs its FlexGear and FlexTrol platforms to accept.",
+     "context": "The dual relationship is the commercially interesting part. Powell's universal-platform strategy means it buys the interrupting element from a company it names as a competitor and sells the assembly, the engineering and the arc-resistant structure around it. FlexGear accommodates Eaton Magnum DS elements; FlexTrol medium-voltage motor control accepts Eaton draw-out contactors.\n\nThere is also a board-level link: director James W. McGill spent forty years at Eaton, retiring as President of the Electrical Sector for the Americas. Mordor Intelligence places Eaton inside the top five holding roughly 55-60% of North American medium-voltage switchgear, a tier Powell sits below.",
+     "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
+     "status": "active",
+     "via": "Medium-voltage switchgear and low-voltage breaker elements"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The medium-voltage switchgear specialist in a market whose top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — control roughly 55-60% of North American volume.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Mordor Intelligence places the top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — at roughly 55-60% of the North America medium-voltage switchgear market and names Powell's differentiator explicitly as tailored switchgear in ten weeks from its Texas facility, credited with winning multiple 2025 data-center awards.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: FlexGear low-voltage switchgear is engineered to accept Eaton Magnum DS, Siemens WL or Schneider Masterpact MTZ draw-out elements, and FlexTrol accepts either Eaton draw-out or Allen-Bradley fixed-mounted contactors — so Powell buys the interrupting element from the companies its own 10-K names as principal competitors and sells the assembly, the engineering and the arc-resistant structure around whichever breaker the customer's standards already specify.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowlVac and PowlVac-AR metal-clad switchgear",
+     "date": "",
+     "text": "The FY2025 10-K names the principal competitors as ABB, Eaton, Schneider and Siemens Industries, Inc.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Integrated package solutions — Power Control Rooms, e-houses and modules",
+     "date": "",
+     "text": "SNS Insider names Powell among five companies shaping e-house technology alongside ABB, Siemens, Schneider Electric and Eaton, describing its position as designing custom-built systems requiring little site work.",
      "src": "",
      "from": "b"
     }
@@ -10449,6 +10800,66 @@
     }
    ],
    "last": "2026-08-27"
+  },
+  {
+   "a": "entergy",
+   "b": "mitsubishi-power",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Entergy and MHI Group signed a memorandum of understanding in July 2026 on integrated combined-cycle generation with carbon capture, bundling M501JAC turbines from Mitsubishi Power Americas with capture technology from Mitsubishi Heavy Industries America and targeting a stated 50% reduction in overall costs.",
+     "context": "The release describes the MOU as the result of a long collaboration between Entergy and Mitsubishi Power Americas, so this is an extension of an existing supplier relationship rather than a new one. Separately, Mitsubishi Power leads the EPC consortium for Entergy Texas's Orange County Advanced Power Station — a 1,215 MW hydrogen-capable combined-cycle plant near Bridge City supplying two M501JAC units, the steam turbine, the heat recovery steam generator and the control system, with first fire achieved.\n\nAn MOU is not an order. What it establishes is that the integrated turbine-plus-capture offer has a named utility counterparty willing to develop it, at a moment when the regulatory driver for capture has weakened.",
+     "source": "https://power.mhi.com/regions/amer/news/260715",
+     "status": "announced",
+     "since": "2026-07",
+     "via": "M501JAC gas turbines with carbon capture"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that the vendor in the exclusivity agreement is Mitsubishi Power, on the basis that Mitsubishi supplied the Orange County and Delta Blues units, that the July 2026 MHI memorandum names the M501JAC, and that no second J-class OEM appears in any filing or release.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Texas generation and transmission — Orange County, Legend, Lone Star and the SETEX 500 kV line",
+     "date": "",
+     "text": "The Orange County Advanced Power Station (approximately 1,215 MW, two Mitsubishi Power M501JAC units, EPC consortium Mitsubishi Power, Sargent & Lundy and TIC per POWER) achieved first fire in April 2026 and is expected in service in Q3 2026; the Q2 2026 10-Q states a generation cost recovery rider of $150.4M a year takes effect on that date and that Entergy Texas made a $248M payment in June 2026 on a financed portion of construction work in progress.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Turbine supply exclusivity and the MHI carbon-capture partnership",
+     "date": "",
+     "text": "The filings do not name the vendor; the July 15, 2026 memorandum with MHI Group names Mitsubishi Power Americas' M501JAC turbines and MHIA carbon capture with a goal of a 50 percent reduction in carbon-capture cost, and Mitsubishi Power supplied the Orange County units and, per Global Energy Monitor, the Delta Blues unit.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-15",
+     "text": "Entergy and MHI Group outline a carbon-capture partnership around Mitsubishi Power's M501JAC turbines with a goal of halving carbon-capture cost — Names the OEM the exclusivity agreement does not, and the carbon-capture readiness every certificate promises.",
+     "src": "https://www.entergy.com/news/entergy-and-mhi-group-outline-collaborative-partnership-designed-to-accelerate-commercialization-and-affordability-around-carbon-capture-solutions",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-23",
+     "text": "Orange County Advanced Power Station achieves first fire (1,215 MW; Mitsubishi Power, Sargent & Lundy and TIC) — The first of the ten combined-cycle units to reach a milestone; in service Q3 2026.",
+     "src": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-23",
+     "text": "Google backs the Broadwing Energy Center in Decatur, Illinois — a 400 MW cogeneration plant with more than 90% carbon capture employing a single Mitsubishi Power M501JAC, developed by Low Carbon Infrastructure with Kiewit Power Constructors as EPC and ADM as site host — A hyperscaler taking corporate offtake from a gas plant with integrated capture is the template Mitsubishi Power's Entergy MOU is built for, and it is the second public link between its turbines and an AI-driven buyer.",
+     "src": "https://www.powermag.com/google-backs-first-u-s-gas-fired-power-plant-with-integrated-ccs-for-data-centers/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-15"
   },
   {
    "a": "entergy",
@@ -12355,6 +12766,111 @@
   },
   {
    "a": "ge-vernova",
+   "b": "mitsubishi-electric",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named among the gas-insulated switchgear majors alongside Mitsubishi Electric by Straits Research and Mordor Intelligence, and among the top power-transformer companies by MarketsandMarkets.",
+     "context": "GE Vernova is one of the five suppliers Mordor Intelligence says control roughly 55-60% of the North America medium-voltage switchgear market, a tier Mitsubishi Electric sits below in the same report.\n\nThe two also meet in transformers, where MarketsandMarkets names both among the top companies while a competing ranking places Siemens Energy, Hitachi Energy, GE Grid Solutions, TBEA and CG Power in the top five and Mitsubishi Electric outside it.",
+     "source": "https://straitsresearch.com/report/gas-insulated-switchgear-market",
+     "status": "active",
+     "via": "Gas-insulated switchgear and transformers"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Gas-insulated switchgear and high-voltage circuit breakers",
+     "date": "",
+     "text": "Named among the gas-insulated switchgear majors by Straits Research and Mordor Intelligence alongside ABB, Siemens Energy, Hitachi Energy, GE Vernova and Toshiba Energy Systems, with a second participant list adding Eaton, Powell Industries, Schneider Electric and Hyosung Heavy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Medium-voltage vacuum circuit breakers",
+     "date": "",
+     "text": "Profiled alongside Powell Industries, ABB, Siemens, Schneider Electric, Eaton, GE Vernova, Hitachi Energy and Toshiba International in Mordor Intelligence's North America medium-voltage switchgear roster, where the top five are said to control roughly 55-60% of the market.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "ge-vernova",
+   "b": "mitsubishi-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "POWER Magazine's September 2026 comparison ranks the two directly: GE Vernova at 116 GW of turbines under contract against Mitsubishi Heavy Industries' 35 GW of large-frame backlog across 80 units.",
+     "context": "GE Vernova leads the heavy-duty gas turbine market on every published measure of order book — POWER puts its 116 GW as 53 GW of firm backlog plus 63 GW of slot reservations, on a capacity path from 20 GW annualised in 2026 to 30 GW by 2030. Global Energy Monitor separately gives it almost 55 GW of turbines in plants under construction globally and 38% of Asian capacity under construction, against Mitsubishi's 17%.\n\nTwo qualifications belong with the ranking. GE Vernova's and Siemens Energy's figures include slot reservations while Mitsubishi's is stated as contract backlog with no reservation split, and no source normalises them. And the three are effectively tied at around 64% combined-cycle efficiency, so the competition is decided by delivery slots, service and customer mix rather than by a technical lead — GE Vernova's book is roughly 20% data centers across about 100 customers, where Mitsubishi is described as focused on core utility customers.",
+     "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
+     "status": "active",
+     "via": "Heavy-duty gas turbines"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "POWER Magazine's September 2026 comparison ranks the two directly: GE Vernova at 116 GW of turbines under contract against Mitsubishi Heavy Industries' 35 GW of large-frame backlog across 80 units.",
+     "context": "GE Vernova leads on every published measure of order book. POWER puts its 116 GW as 53 GW firm backlog plus 63 GW of slot reservations, with a capacity path from 20 GW annualised in 2026 to 30 GW by 2030 and roughly 80% of its mix in traditional power against 20% data centers. Global Energy Monitor separately gives GE Vernova almost 55 GW of turbines in plants under construction globally and 38% of Asian capacity under construction, against Mitsubishi's 17%.\n\nThe comparison carries an important caveat the sources state themselves: GE Vernova's and Siemens Energy's figures include slot reservations, while Mitsubishi's 35 GW is stated as large-frame contract backlog with no reservation split disclosed. No source normalises them, so the gap is real but its exact size is uncertain. On efficiency the three are effectively tied at around 64% combined cycle, so the competition is decided by delivery slots and service rather than by a technical lead.",
+     "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
+     "status": "active",
+     "via": "Heavy-duty gas turbines"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Heavy-duty gas turbines (7HA/9HA family)",
+     "date": "",
+     "text": "One of three OEMs (with Siemens Energy and Mitsubishi Power) supplying two-thirds of turbines for gas plants under construction globally; largest single share of heavy-duty (>14.5% per GMInsights).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Mitsubishi Power is the third of the three manufacturers who build essentially all heavy-duty gas turbines for the Western market, and it is a distant third by order book — 35 GW of large-frame turbines under contract across 80 units at 2026-06-30, against GE Vernova's 116 GW and Siemens Energy's 95 GW per POWER Magazine's September 2026 comparison.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: POWER Magazine's September 2026 comparison describes its focus as large-frame projects for core utility customers, against GE Vernova's roughly 20% data-center mix across about 100 customers and Siemens Energy's 22 GW tied to data centers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: POWER's figures for GE Vernova and Siemens Energy explicitly include slot reservations — 63 GW of GE Vernova's 116 GW and 26 GW of Siemens Energy's 95 GW — while Mitsubishi's 35 GW is stated as large-frame contract backlog with no reservation split disclosed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · M501 and M701 heavy-duty gas turbines",
+     "date": "",
+     "text": "Independent sources rank it third: POWER Magazine's September 2026 comparison puts GE Vernova at 116 GW under contract and Siemens Energy at 95 GW against Mitsubishi's 35 GW of large-frame backlog, though those figures are not perfectly like-for-like because the first two include slot reservations that Mitsubishi does not split out.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · M501 and M701 heavy-duty gas turbines",
+     "date": "",
+     "text": "Global Energy Monitor gives Mitsubishi 17% of Asian capacity under construction against GE Vernova's 38% and Siemens Energy's 16%.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "POWER Magazine publishes a four-way comparison of turbines under contract: GE Vernova 116 GW, Siemens Energy 95 GW, Mitsubishi Heavy Industries 35 GW of large-frame backlog across 80 units, with Ansaldo Energia re-entering the US market — The cleanest independent ranking of the three, and it places Mitsubishi at roughly 30% of GE Vernova's book — while noting Mitsubishi's focus is large-frame projects for core utility customers rather than the direct data-center sales that make up 20% of GE Vernova's mix and 22 GW of Siemens Energy's.",
+     "src": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-01"
+  },
+  {
+   "a": "ge-vernova",
    "b": "nextera-energy-resources",
    "curated": {
     "b": {
@@ -12512,6 +13028,51 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "ge-vernova",
+   "b": "powell-industries",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Mordor Intelligence names General Electric (GE Vernova) among the five suppliers controlling roughly 55-60% of the North America medium-voltage switchgear market, in the same passage that places Powell in the specialist tier eroding that share.",
+     "context": "The ranking passage is the basis for this link and it is explicit: the top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — control roughly 55-60% of the market, yet regional specialists are eroding share by offering rapid customization and domestic production, with Powell leveraging its Texas facility to deliver tailored switchgear in ten weeks and winning multiple 2025 data-center awards.\n\nA caution that belongs with this link: Powell acquired its Power/Vac line from GE Consumer & Industrial in 2006, and that unit later became GE Industrial Solutions and was divested to ABB. It is not the GE Vernova business, and the 2006 transaction should never be read as a Powell–GE Vernova relationship.",
+     "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market",
+     "status": "active",
+     "via": "Medium-voltage switchgear"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The medium-voltage switchgear specialist in a market whose top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — control roughly 55-60% of North American volume.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Mordor Intelligence places the top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — at roughly 55-60% of the North America medium-voltage switchgear market and names Powell's differentiator explicitly as tailored switchgear in ten weeks from its Texas facility, credited with winning multiple 2025 data-center awards.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Separately, the Power/Vac line was acquired from GE Consumer & Industrial in 2006 — a unit that became GE Industrial Solutions and was divested to ABB, and is not GE Vernova.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2006-08-07",
+     "text": "Powell acquires the medium-voltage ANSI switchgear product line from GE Consumer & Industrial for $32 million in cash, with an exclusive long-term commercial alliance to supply that channel's medium-voltage ANSI switchgear — The origin of the Power/Vac line and of Powell's installed-base service annuity. The GE unit involved later became GE Industrial Solutions and was divested to ABB — it is not GE Vernova, and the two are routinely confused.",
+     "src": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-announces-acquisition-ge-medium-voltage-ansi",
+     "from": "b"
+    }
+   ],
+   "last": "2006-08-07"
   },
   {
    "a": "ge-vernova",
@@ -12991,6 +13552,23 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "google",
+   "b": "mitsubishi-power",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Google is the corporate power offtaker for the Broadwing Energy Center in Decatur, Illinois, which POWER Magazine reports will employ a single Mitsubishi Power M501JAC gas turbine.",
+     "context": "Broadwing is a 400 MW cogeneration plant with more than 90% carbon capture, developed by Low Carbon Infrastructure, an I Squared Capital portfolio company, with ADM as site host and carbon sequestration partner and Kiewit Power Constructors as EPC. Commercial operation was targeted for end-2029 with carbon capture from early 2030, with final investment decision indicated for the second quarter of 2026.\n\nGoogle's relationship is as offtaker rather than as Mitsubishi Power's direct customer — the turbine is sold to the project. It is nonetheless one of only two public links between Mitsubishi Power turbines and a hyperscaler, and the only one involving integrated carbon capture.",
+     "source": "https://www.powermag.com/google-backs-first-u-s-gas-fired-power-plant-with-integrated-ccs-for-data-centers/",
+     "status": "announced",
+     "since": "2025-10",
+     "via": "Broadwing Energy Center M501JAC"
+    }
+   },
+   "evid": [],
+   "last": "2025-10"
   },
   {
    "a": "google",
@@ -13535,6 +14113,65 @@
   },
   {
    "a": "hitachi-energy",
+   "b": "mitsubishi-electric",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named among the gas-insulated switchgear majors alongside Mitsubishi Electric by Straits Research, and set directly against MEPPI's Pennsylvania plant in a head-to-head North American capital-investment comparison.",
+     "context": "The clearest quantitative comparison between the two comes from Manufacturing Dive's coverage of the Pennsylvania factory, which reported Mitsubishi Electric's $86M single-plant investment alongside Hitachi Energy's $155M across three North American plants, including $60M for its own Pennsylvania switchgear and breaker facility.\n\nAgainst Hitachi Energy's stated $9bn global programme, Mitsubishi Electric's North American grid-equipment capital commitment is one to two orders of magnitude smaller. Hitachi Energy also leads or co-leads the transformer rankings that place Mitsubishi Electric outside the top five.",
+     "source": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/",
+     "status": "active",
+     "via": "Gas-insulated switchgear and North American manufacturing capacity"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against Hitachi Energy's $155M across three North American plants and its stated $9bn global programme, this is a defensive footprint rather than a bid for share.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power transformers",
+     "date": "",
+     "text": "Named among the top companies in the power transformer market by MarketsandMarkets alongside Hitachi Energy, GE, Siemens, Eaton and Hyundai Electric.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power transformers",
+     "date": "",
+     "text": "Where independent sources rank rather than list, Mitsubishi Electric falls outside the top five, which are led by Siemens Energy and Hitachi Energy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Gas-insulated switchgear and high-voltage circuit breakers",
+     "date": "",
+     "text": "Named among the gas-insulated switchgear majors by Straits Research and Mordor Intelligence alongside ABB, Siemens Energy, Hitachi Energy, GE Vernova and Toshiba Energy Systems, with a second participant list adding Eaton, Powell Industries, Schneider Electric and Hyosung Heavy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Medium-voltage vacuum circuit breakers",
+     "date": "",
+     "text": "Profiled alongside Powell Industries, ABB, Siemens, Schneider Electric, Eaton, GE Vernova, Hitachi Energy and Toshiba International in Mordor Intelligence's North America medium-voltage switchgear roster, where the top five are said to control roughly 55-60% of the market.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "MEPPI announces it is developing 800 VDC power-delivery systems for next-generation AI factories through collaboration with NVIDIA — This is the company's entry into the rack-power architecture conversation, and it is visible only in a first-party release — independent coverage of NVIDIA's 800 VDC ecosystem names ABB, Hitachi Energy, Schneider Electric and Vertiv and does not name Mitsubishi Electric.",
+     "src": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "hitachi-energy",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -13636,6 +14273,22 @@
     }
    ],
    "last": "2026-03-23"
+  },
+  {
+   "a": "hitachi-energy",
+   "b": "powell-industries",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Profiled alongside Powell Industries in Mordor Intelligence's North America medium-voltage switchgear company roster.",
+     "context": "Both companies are profiled in the same market study, outside the named top five. Hitachi Energy competes from a very different position — a global grid-equipment franchise with a stated multi-billion-dollar investment programme against Powell's roughly $1.16bn of revenue and single-country manufacturing base.\n\nThe overlap is partial. Hitachi Energy's centre of gravity is transformers and high-voltage equipment; Powell's is medium-voltage metal-clad switchgear and factory-built power rooms. They meet on a data-center campus rather than across a catalogue.",
+     "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market",
+     "status": "active",
+     "via": "Medium-voltage switchgear"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "hitachi-energy",
@@ -15749,6 +16402,20 @@
   },
   {
    "a": "key-capture-energy",
+   "b": "mitsubishi-power",
+   "evid": [
+    {
+     "where": "Capabilities · ERCOT operating fleet (~580 MW)",
+     "date": "",
+     "text": "Built in three procurement waves: (1) three 9.9 MW distribution-connected units, 29.7 MW total, COD 2020 — Powin; (2) KCE TX 11 (50 MW), TX 12 (100 MW), TX 23 (50 MW) — 200 MW, Powin systems with Mitsubishi Power as EPC/PCS, COD ~2021-22; (3) the Sungrow era — TX 13 (50 MW, Scurry Co.), TX 19 + TX 21 (100 MW combined, Williamson Co., in the Dec 2023 ITC transfer), TX 10 (100 MW/200 MWh, Denton Co.) and TX 15 (100 MW/200 MWh, Grimes Co.), both COD Jan 2025 with the 10% Energy Community ITC adder.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "key-capture-energy",
    "b": "sungrow",
    "curated": {
     "a": {
@@ -15807,6 +16474,30 @@
     }
    ],
    "last": "2025-01-07"
+  },
+  {
+   "a": "kiewit",
+   "b": "mitsubishi-power",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Kiewit Power Constructors is the EPC on the Broadwing Energy Center alongside a Mitsubishi Power M501JAC, and TIC — The Industrial Company, a wholly owned Kiewit subsidiary — is the constructor in the EPC consortium with Mitsubishi Power for Entergy Texas's Orange County Advanced Power Station.",
+     "context": "Two separate projects place Kiewit and Mitsubishi Power on the same construction team, which makes this a working delivery relationship rather than a single co-mention. On Orange County the consortium is Mitsubishi Power, TIC and Sargent & Lundy, with Mitsubishi Power supplying the hydrogen-capable power train.\n\nThis is the seam where a turbine order becomes a plant. In a market where the manufacturer's slot is the binding constraint, an EPC that has already built with a given OEM's power island is part of what makes a delivery date credible.",
+     "source": "https://www.powermag.com/google-backs-first-u-s-gas-fired-power-plant-with-integrated-ccs-for-data-centers/",
+     "status": "active",
+     "via": "EPC on Mitsubishi Power turbine projects"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-23",
+     "text": "Google backs the Broadwing Energy Center in Decatur, Illinois — a 400 MW cogeneration plant with more than 90% carbon capture employing a single Mitsubishi Power M501JAC, developed by Low Carbon Infrastructure with Kiewit Power Constructors as EPC and ADM as site host — A hyperscaler taking corporate offtake from a gas plant with integrated capture is the template Mitsubishi Power's Entergy MOU is built for, and it is the second public link between its turbines and an AI-driven buyer.",
+     "src": "https://www.powermag.com/google-backs-first-u-s-gas-fired-power-plant-with-integrated-ccs-for-data-centers/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-23"
   },
   {
    "a": "kiewit",
@@ -18027,6 +18718,655 @@
    },
    "evid": [],
    "last": "2025-05"
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "mitsubishi-power",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Mitsubishi Power and Mitsubishi Electric jointly developed a next-generation gas turbine control system that completed functional testing in December 2025, with market launch targeted for fiscal 2026.",
+     "context": "These are two legally and operationally separate companies that share only the Mitsubishi keiretsu name — Mitsubishi Power is a brand of Mitsubishi Heavy Industries (TSE: 7011), while Mitsubishi Electric is TSE: 6503. Neither is a subsidiary or affiliate of the other, and conflating them is the single most common error made about either company.\n\nThe control system is the one place in the public record where they build a product together: instrumentation and control from the electrical company, the machine from the heavy-industry one. Mitsubishi Power's DIASYS control series has more than 3,000 units delivered to over 60 countries, so the joint product enters an established installed base. Both companies published the announcement on the same day from their own newsrooms.",
+     "source": "https://power.mhi.com/news/251224.html",
+     "status": "active",
+     "since": "2025-12",
+     "via": "Next-generation gas turbine control system"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Mitsubishi Power and Mitsubishi Electric jointly developed a next-generation gas turbine control system for thermal power plants that completed functional testing in December 2025, with market launch targeted for fiscal 2026.",
+     "context": "These are two separate listed groups — Mitsubishi Power is a brand of Mitsubishi Heavy Industries (TSE: 7011) and Mitsubishi Electric is TSE: 6503 — that share the keiretsu name and nothing structural. Neither is a subsidiary of the other, and treating them as one company is the most common error made about either.\n\nThe control system is the single place in the public record where they build a product together, and both published it from their own newsrooms on the same day. It enters an installed base of more than 3,000 DIASYS control units across over 60 countries.",
+     "source": "https://power.mhi.com/news/251224.html",
+     "status": "active",
+     "since": "2025-12",
+     "via": "Next-generation gas turbine control system"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-24",
+     "text": "Next-generation gas turbine control system for thermal power plants completes functional testing, jointly developed by Mitsubishi Power and Mitsubishi Electric, with market launch targeted for fiscal 2026 — The two Mitsubishi-named companies are legally and operationally separate, and this is the one place in the public record where they build a product together — control and instrumentation from the electrical company, the machine from the heavy-industry one.",
+     "src": "https://power.mhi.com/news/251224.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "MHI is also legally and operationally separate from Mitsubishi Electric (TSE: 6503); the two share only the keiretsu name.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "And Mitsubishi Power is not connected to Mitsubishi Electric other than through the jointly developed control system recorded in the relationships above — they are separate listed groups sharing a keiretsu name.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-24",
+     "text": "Next-generation gas turbine control system for thermal power plants completes functional testing, jointly developed by Mitsubishi Power and Mitsubishi Electric, with market launch targeted for fiscal 2026 — The one product the two separate Mitsubishi-named companies build together, entering an installed base of more than 3,000 DIASYS control units across over 60 countries.",
+     "src": "https://power.mhi.com/news/251224.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-24"
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "narada",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Narada HRL-700 data sheets and HRL series warranty documents are published by Mitsubishi Electric as approved 9900D battery options.",
+     "context": "Narada is one of five named battery suppliers whose documentation Mitsubishi Electric hosts for the 9900D, covering the high-rate VRLA option. The HRL-700 is a high-rate long-life lead-acid product of the type used where a UPS needs minutes rather than hours of autonomy.\n\nThe link is documented only through published product documentation rather than through any announced agreement, so its scale is unknown. It is nonetheless a real supply relationship: a UPS vendor publishes battery documentation for the strings it has qualified against its own charger and monitoring.",
+     "source": "https://mitsubishicritical.com/uninterruptible-power-supplies/9900d/",
+     "status": "active",
+     "via": "HRL-700 VRLA battery strings for the 9900D UPS"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "MEPPI states it is developing 800 VDC power-delivery systems for next-generation AI factories through collaboration with NVIDIA, and NVIDIA also appears on Mitsubishi Electric's published UPS customer roster.",
+     "context": "The October 2025 MEPPI release is the only place in the public record where Mitsubishi Electric is placed inside the 800 VDC rack-power conversation. It matters because independent coverage of NVIDIA's 800 VDC ecosystem consistently names ABB, Hitachi Energy, Schneider Electric and Vertiv and does not name Mitsubishi Electric — so the relationship is visible first-party and invisible third-party.\n\nThe corporate strategy published in May 2026 corroborates the direction at board level, naming development of next-generation 800 V and 1,500 V DC power supply systems and a PUE 1.1 data center as targets. NVIDIA separately appears on the company's own customer roster, so the link is both a development collaboration and a supply relationship, though no order value or product has been disclosed.",
+     "source": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure",
+     "status": "active",
+     "since": "2025-10",
+     "via": "800 VDC power delivery"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gap — no named data-center UPS deployment exists anywhere in the public record.** The company publishes a customer roster naming NVIDIA, Tesla, Oracle, QTS, Sabey, CoreSite, CyrusOne, Flexential and several hundred others, and publishes case studies for Element Critical, Sabey, UScellular and Grupo Salinas.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-29",
+     "text": "New medium-term corporate strategy sets FY2031 targets: 12% adjusted operating margin excluding automotive, 12% ROE, 3-5% revenue CAGR, and development of next-generation 800 V and 1,500 V DC power supply systems plus a PUE 1.1 data center — The DC-architecture and PUE targets put data-center power in the corporate plan rather than only in a divisional catalogue, which is what makes the NVIDIA collaboration a strategy rather than a product line.",
+     "src": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0529_co1.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "MEPPI announces it is developing 800 VDC power-delivery systems for next-generation AI factories through collaboration with NVIDIA — This is the company's entry into the rack-power architecture conversation, and it is visible only in a first-party release — independent coverage of NVIDIA's 800 VDC ecosystem names ABB, Hitachi Energy, Schneider Electric and Vertiv and does not name Mitsubishi Electric.",
+     "src": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05-29"
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "oracle",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Oracle appears on Mitsubishi Electric's own published UPS customer roster.",
+     "context": "As with the other roster entries, the company publishes the name without a product, site, capacity or date. Oracle is a hyperscale data-center operator, so the entry is more materially interesting than most, but it cannot be sized from any public source.\n\nNo Mitsubishi Electric release, case study or third-party report located in this research names a data-center UPS order, reference installation or deployed capacity for any hyperscaler. The published case studies are for Element Critical, Sabey, UScellular and Grupo Salinas.",
+     "source": "https://mitsubishicritical.com/our-customers/",
+     "status": "active",
+     "via": "Uninterruptible power supplies"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gap — no named data-center UPS deployment exists anywhere in the public record.** The company publishes a customer roster naming NVIDIA, Tesla, Oracle, QTS, Sabey, CoreSite, CyrusOne, Flexential and several hundred others, and publishes case studies for Element Critical, Sabey, UScellular and Grupo Salinas.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "piller",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Research and Markets names Mitsubishi Electric and Piller Power Systems together in the set of vendors it says dominate the data center UPS market for 2025-2030.",
+     "context": "This is the only source located in this research that names Piller and Mitsubishi Electric in one defined market. It is a title-level ranking rather than a share table, and no percentage is attached to either party.\n\nThe two compete from opposite ends of the technology: Piller's franchise is rotary and diesel-rotary UPS with a flywheel store, while Mitsubishi Electric's is large static UPS with a battery store. Where they meet is the same purchase decision at the same megawatt scale, which is why a market report lists them together and why a buyer comparing them is comparing architectures rather than products.",
+     "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+     "status": "active",
+     "via": "Data-center UPS"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Research and Markets names Piller Power Systems and Mitsubishi Electric together in the set of vendors it says dominate the data center UPS market for 2025-2030.",
+     "context": "This is the only source located that names the two in one defined market. It is a title-level ranking rather than a share table, and no percentage is attached to either party.\n\nThe two compete from opposite ends of the technology. Piller's franchise is rotary and diesel-rotary UPS with a flywheel store; Mitsubishi Electric's is large static UPS from 80 kVA to 2 MW with a battery store, built on three-level IGBT and silicon-carbide topologies. Where they meet is the same purchase decision at the same megawatt scale, so a buyer comparing them is comparing architectures rather than products.",
+     "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+     "status": "active",
+     "via": "Data-center UPS"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Large static UPS — 9900 Series",
+     "date": "",
+     "text": "Independent research places it in the leading data-center UPS vendor set alongside ABB, Eaton, Vertiv, Schneider Electric, Delta Electronics, Legrand and Piller Power Systems, without a published share figure.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "powell-industries",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Mordor Intelligence profiles Mitsubishi Electric Power Products and Powell Industries alongside each other in its North America medium-voltage switchgear company roster, and Straits Research lists both among gas-insulated switchgear participants.",
+     "context": "Both sit outside the five suppliers Mordor says control roughly 55-60% of the North American medium-voltage switchgear market, but they occupy that space differently. Powell's stated differentiator in the same report is speed from a domestic plant — tailored switchgear in ten weeks from Texas — while Mitsubishi Electric's is a vacuum and gas circuit-breaker portfolio to 800 kV backed by a new $86M Pennsylvania factory.\n\nThe overlap is real but partial: metal-clad switchgear, which is Powell's core product class, is not a named MEPPI product line, while gas-insulated switchgear at transmission voltages is not Powell's. They meet at the medium-voltage breaker rather than across the whole lineup.",
+     "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market",
+     "status": "active",
+     "via": "Medium-voltage switchgear"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Mitsubishi Electric Power Products and Powell Industries are profiled alongside each other in Mordor Intelligence's North America medium-voltage switchgear company roster, and both appear in Straits Research's gas-insulated switchgear participant list.",
+     "context": "Both sit outside the five suppliers Mordor says control roughly 55-60% of the North American medium-voltage switchgear market, and both are pursuing the same domestic-capacity argument — Powell through a Texas plant and a ten-week quoted lead time, Mitsubishi Electric through an $86M advanced switchgear factory in the Pittsburgh region announced in 2024.\n\nThe overlap is real but partial in a way worth stating: metal-clad switchgear, which is Powell's core product class, is not a named Mitsubishi Electric Power Products product line, and gas-insulated switchgear at transmission voltages is not Powell's. They meet at the medium-voltage breaker rather than across the whole lineup.",
+     "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market",
+     "status": "active",
+     "via": "Medium-voltage switchgear"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Gas-insulated switchgear and high-voltage circuit breakers",
+     "date": "",
+     "text": "Named among the gas-insulated switchgear majors by Straits Research and Mordor Intelligence alongside ABB, Siemens Energy, Hitachi Energy, GE Vernova and Toshiba Energy Systems, with a second participant list adding Eaton, Powell Industries, Schneider Electric and Hyosung Heavy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Medium-voltage vacuum circuit breakers",
+     "date": "",
+     "text": "Profiled alongside Powell Industries, ABB, Siemens, Schneider Electric, Eaton, GE Vernova, Hitachi Energy and Toshiba International in Mordor Intelligence's North America medium-voltage switchgear roster, where the top five are said to control roughly 55-60% of the market.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "QTS appears on Mitsubishi Electric's own published UPS customer roster.",
+     "context": "QTS is a hyperscale colocation landlord, so the entry places Mitsubishi Electric UPS inside a wholesale data-center estate. The roster also carries Sabey, CoreSite, CyrusOne, Flexential, TierPoint, Cologix, Serverfarm, Element Critical and Evocative among colocation operators.\n\nAs with every other roster entry, no capacity, site or date is published. The colocation cluster is nonetheless the clearest published evidence of where this UPS line actually sells.",
+     "source": "https://mitsubishicritical.com/our-customers/",
+     "status": "active",
+     "via": "Uninterruptible power supplies"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "samsung-sdi",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Samsung SDI lithium-ion battery product specifications and installation manuals are published by Mitsubishi Electric as 9900D peripherals, and the company hosts a dedicated article on Samsung SDI lithium-ion battery safety.",
+     "context": "The 9900D is marketed as Lithium Ready, and Samsung SDI is the lithium cell partner whose documentation the company publishes alongside its own. The relationship is a component-supply one at the battery-string level rather than a joint development.\n\nIt sits alongside VRLA, VLA, NiCad and pure-lead options from Narada, EnerSys, Deka/East Penn and C&D Technologies, so lithium is one path among several rather than the default. That matters commercially: the battery is the part of a UPS that ages and needs replacing, and the choice of chemistry is a maintenance and fire-code decision as much as an energy-density one.",
+     "source": "https://mitsubishicritical.com/uninterruptible-power-supplies/9900d/",
+     "status": "active",
+     "via": "Lithium-ion battery strings for the 9900D UPS"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS and in Straits Research's gas-insulated switchgear participant list.",
+     "context": "Global Market Insights puts Schneider Electric at 24.3% of the data-center UPS market in 2024 and the top five — Eaton, Schneider, Vertiv, ABB and Delta — at about 60% combined, with Mitsubishi Electric named in the top seven and given no percentage. That asymmetry is the relationship: a named major with no published share against a leader with one.\n\nMordor Intelligence also identifies Schneider's EcoStruxure Grid as part of a shift of competition toward software bundled with switchgear, which is the same direction Mitsubishi Electric's $1.4bn PCI Energy Solutions acquisition points.",
+     "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+     "status": "active",
+     "via": "Data-center UPS and gas-insulated switchgear"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS and in Straits Research's gas-insulated switchgear participant list.",
+     "context": "Global Market Insights puts Schneider Electric at 24.3% of the data-center UPS market in 2024, the largest single share it reports, with Mitsubishi Electric named in the top seven and given no percentage. That asymmetry is the relationship: a leader with a published share against a named major without one.\n\nMordor Intelligence also identifies Schneider's EcoStruxure Grid as part of a shift of competition toward software bundled with switchgear — the same direction Mitsubishi Electric's approximately $1.4bn acquisition of PCI Energy Solutions points.",
+     "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
+     "status": "active",
+     "via": "Data-center UPS and gas-insulated switchgear"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Large static UPS — 9900 Series",
+     "date": "",
+     "text": "Independent research places it in the leading data-center UPS vendor set alongside ABB, Eaton, Vertiv, Schneider Electric, Delta Electronics, Legrand and Piller Power Systems, without a published share figure.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Gas-insulated switchgear and high-voltage circuit breakers",
+     "date": "",
+     "text": "Named among the gas-insulated switchgear majors by Straits Research and Mordor Intelligence alongside ABB, Siemens Energy, Hitachi Energy, GE Vernova and Toshiba Energy Systems, with a second participant list adding Eaton, Powell Industries, Schneider Electric and Hyosung Heavy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Medium-voltage vacuum circuit breakers",
+     "date": "",
+     "text": "Profiled alongside Powell Industries, ABB, Siemens, Schneider Electric, Eaton, GE Vernova, Hitachi Energy and Toshiba International in Mordor Intelligence's North America medium-voltage switchgear roster, where the top five are said to control roughly 55-60% of the market.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Grid software, DERMS and energy management",
+     "date": "",
+     "text": "The acquisition moves Mitsubishi Electric from selling grid hardware to selling the software that dispatches it, in the same direction Schneider Electric and Siemens have taken with EcoStruxure Grid and Xcelerator.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "MEPPI announces it is developing 800 VDC power-delivery systems for next-generation AI factories through collaboration with NVIDIA — This is the company's entry into the rack-power architecture conversation, and it is visible only in a first-party release — independent coverage of NVIDIA's 800 VDC ecosystem names ABB, Hitachi Energy, Schneider Electric and Vertiv and does not name Mitsubishi Electric.",
+     "src": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "The two companies signed a memorandum of understanding in June 2021 to run a feasibility study on jointly developed high-voltage switching solutions with zero global-warming potential, beginning with a 245 kV dead-tank circuit breaker.",
+     "context": "This is a cooperation between two competitors in gas-insulated switchgear, aimed squarely at the regulation that threatens the product both of them sell: SF6 has a global warming potential the companies state as roughly 23,500 times that of carbon dioxide, and jurisdictions are moving to restrict it.\n\nThe two are simultaneously listed as competing majors in gas-insulated switchgear by Straits Research and Mordor Intelligence, and independent transformer rankings place Siemens Energy above Mitsubishi Electric. Cooperating on the technology that would obsolete the gas while competing on the equipment that uses it is the structure of the relationship, and no product from the MoU has been announced.",
+     "source": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou",
+     "status": "announced",
+     "since": "2021-06",
+     "via": "SF6-free high-voltage switching"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Siemens Energy and Mitsubishi Electric signed a memorandum of understanding in June 2021 to run a feasibility study on jointly developed high-voltage switching solutions with zero global-warming potential, beginning with a 245 kV dead-tank circuit breaker.",
+     "context": "This is cooperation between two competitors in gas-insulated switchgear, aimed at the regulation that threatens the product both of them sell: the announcement puts SF6's global warming potential at roughly 23,500 times that of carbon dioxide and notes that restrictions are being reviewed and implemented in various parts of the world.\n\nThe two are simultaneously listed as competing majors in gas-insulated switchgear by Straits Research and Mordor Intelligence, and independent transformer rankings place Siemens Energy above Mitsubishi Electric. No product from the memorandum has been announced.",
+     "source": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou",
+     "status": "announced",
+     "since": "2021-06",
+     "via": "SF6-free high-voltage switching"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Power transformers",
+     "date": "",
+     "text": "Where independent sources rank rather than list, Mitsubishi Electric falls outside the top five, which are led by Siemens Energy and Hitachi Energy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Gas-insulated switchgear and high-voltage circuit breakers",
+     "date": "",
+     "text": "Named among the gas-insulated switchgear majors by Straits Research and Mordor Intelligence alongside ABB, Siemens Energy, Hitachi Energy, GE Vernova and Toshiba Energy Systems, with a second participant list adding Eaton, Powell Industries, Schneider Electric and Hyosung Heavy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2021-06-08",
+     "text": "Mitsubishi Electric and Siemens Energy sign a memorandum of understanding on a feasibility study for jointly developed zero-global-warming-potential high-voltage switching, beginning with a 245 kV dead-tank circuit breaker — Two competitors in gas-insulated switchgear cooperating on the technology that would obsolete the gas both of them sell — a regulatory-risk hedge structured as a partnership.",
+     "src": "https://www.meppi.com/news/mitsubishi-electric-siemens-energy-sign-mou",
+     "from": "a"
+    }
+   ],
+   "last": "2021-06-08"
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Tesla appears on Mitsubishi Electric's own published UPS customer roster.",
+     "context": "The roster is company-published structured data listing several hundred named UPS customers. It establishes the fact of a customer relationship and nothing more — no product, capacity, site or date is disclosed for any entry.\n\nRead it as evidence of installed base rather than of a specific deployment. For a dossier the value is negative as well as positive: a vendor that publishes a customer list and does not publish a single data-center order value or reference capacity is telling you where its disclosure line sits.",
+     "source": "https://mitsubishicritical.com/our-customers/",
+     "status": "active",
+     "via": "Uninterruptible power supplies"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gap — no named data-center UPS deployment exists anywhere in the public record.** The company publishes a customer roster naming NVIDIA, Tesla, Oracle, QTS, Sabey, CoreSite, CyrusOne, Flexential and several hundred others, and publishes case studies for Element Critical, Sabey, UScellular and Grupo Salinas.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS, and set directly against MEPPI on North American switchgear capital investment in Manufacturing Dive's coverage of the Pennsylvania plant.",
+     "context": "The two compete in data-center UPS, and the same trade article that reported MEPPI's $86M Pennsylvania switchgear factory noted Vertiv expanding switchgear and busbar manufacturing in the US and internationally — putting the two in the same capacity race.\n\nVertiv is also inside NVIDIA's publicly named 800 VDC collaboration set, with an 800 VDC portfolio release stated for the second half of 2026, while Mitsubishi Electric's 800 VDC work is visible only through its own release. On the rack-power architecture the two are at different points of public commitment.",
+     "source": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/",
+     "status": "active",
+     "via": "Data-center UPS and switchgear manufacturing capacity"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS, and set directly against Mitsubishi Electric Power Products on North American switchgear capital investment in Manufacturing Dive's coverage of its Pennsylvania plant.",
+     "context": "The two compete in data-center UPS, and the same trade article that reported Mitsubishi Electric Power Products' $86M Pennsylvania switchgear factory noted Vertiv expanding switchgear and busbar manufacturing in the US and internationally — putting the two in the same domestic-capacity race.\n\nOn rack-power architecture they sit at different points of public commitment: Vertiv is inside NVIDIA's publicly named 800 VDC collaboration set with a portfolio release stated for the second half of 2026, while Mitsubishi Electric's 800 VDC work is visible only through its own release.",
+     "source": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/",
+     "status": "active",
+     "via": "Data-center UPS and switchgear manufacturing capacity"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Large static UPS — 9900 Series",
+     "date": "",
+     "text": "Independent research places it in the leading data-center UPS vendor set alongside ABB, Eaton, Vertiv, Schneider Electric, Delta Electronics, Legrand and Piller Power Systems, without a published share figure.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "MEPPI announces it is developing 800 VDC power-delivery systems for next-generation AI factories through collaboration with NVIDIA — This is the company's entry into the rack-power architecture conversation, and it is visible only in a first-party release — independent coverage of NVIDIA's 800 VDC ecosystem names ABB, Hitachi Energy, Schneider Electric and Vertiv and does not name Mitsubishi Electric.",
+     "src": "https://www.meppi.com/news/meppi-to-power-next-generation-ai-factories-with-800-vdc-infrastructure",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "mitsubishi-electric",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA's OCP Summit 800 VDC ecosystem list adds AOS, EPC, Power Integrations, Richtek, Bizlink, Flex, ABB, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric and Siemens; Vicor is absent — Second published list without Vicor.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "mitsubishi-power",
+   "b": "nvidia",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "MHI's participation in the NVIDIA Partner Network as a power and cooling partner is a parent-level cooling and power relationship, not a Mitsubishi Power gas turbine one, and no NVIDIA relationship is curated on this dossier for that reason.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-16",
+     "text": "MHI ships a 10 MW-class centrifugal chiller test unit to the US and states that it participates in the NVIDIA Partner Network as a Power and Cooling Partner, developing a Modular Chiller Plant aligned to NVIDIA DSX — Note the entity carefully: this is the MHI parent's data-center business, which moved into the Industrial Solutions segment on 2026-04-01 — it is not Mitsubishi Power's gas turbine business and no turbine relationship with NVIDIA is asserted anywhere.",
+     "src": "https://www.mhi.com/news/260716.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-16"
+  },
+  {
+   "a": "mitsubishi-power",
+   "b": "prevalon",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Prevalon was created in February 2024 from Mitsubishi Power Americas' battery energy storage business as a standalone legally separated company, and was sold to Nextpower in a transaction that closed in July 2026 — Mitsubishi Power has fully exited battery storage.",
+     "context": "The sequence matters. In February 2024 Mitsubishi Power Americas carved out its BESS business, carrying more than 30 projects and 3 GWh deployed globally, retaining the leadership team, technology, employees and other assets. Within weeks the ownership was restructured into a joint venture between Mitsubishi Power Americas and Emerald Energy Storage, an entity representing Prevalon's senior management plus some outside investment — its CEO stated explicitly that private equity was not involved.\n\nIn May 2026 Nextpower, the renamed Nextracker, agreed to acquire Prevalon from Mitsubishi Power Americas and Emerald Energy Storage for up to $365 million in cash and stock, and the deal closed in July 2026 with Prevalon then at more than 6 GWh deployed. Mitsubishi Power's post-close position is not stated in any source located — whether a stake, a supply agreement or a clean exit. Two of its own web pages still list Prevalon under behind-the-meter offerings weeks after the close.",
+     "source": "https://power.mhi.com/regions/amer/news/20240222.html",
+     "status": "historical",
+     "since": "2024-02",
+     "via": "Battery energy storage"
+    },
+    "b": {
+     "type": "other",
+     "note": "Prevalon was created in February 2024 out of Mitsubishi Power Americas' battery energy storage business as a standalone, legally separated company, and Mitsubishi Power Americas remained a co-owner until the July 2026 sale to Nextpower.",
+     "context": "The announcement described Mitsubishi Power Americas transforming and rebranding its BESS business into Prevalon, carrying over 30 projects and roughly 3 GWh of deployed utility-scale storage along with the leadership team, technology, employees and other assets. Within weeks the structure was restructured into a joint venture between Mitsubishi Power Americas and Emerald Energy Storage, an entity representing Prevalon's senior management plus outside investment.\n\nNextpower, the renamed Nextracker, acquired Prevalon from both Mitsubishi Power Americas and Emerald Energy Storage for up to $365 million in cash and stock, closing in July 2026. Mitsubishi Power has fully exited battery storage as a result, and its post-close position — whether any stake, supply agreement or clean exit — is not stated in any source located.",
+     "source": "https://power.mhi.com/regions/amer/news/20240222.html",
+     "status": "historical",
+     "since": "2024-02",
+     "via": "Battery energy storage carve-out"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "Nextpower, formerly Nextracker, closes its acquisition of Prevalon Energy from Mitsubishi Power Americas and Emerald Energy Storage for up to $365 million in cash and stock; Prevalon had deployed more than 6 GWh worldwide — Mitsubishi Power has exited utility-scale battery storage entirely, roughly two and a half years after carving the business out — and two of its own web pages still list Prevalon as a behind-the-meter offering, which is a live inconsistency rather than a strategy.",
+     "src": "https://www.power-technology.com/news/nextpower-finalises-prevalon-acquisition/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Prevalon is the US mid-tier BESS integrator moving hardest at the AI-data-center power problem — a Mitsubishi Power Americas spinout (Feb 2024) that built a purpose-built Hybrid Power Stabilizer for GPU load swings, holds 1.3 GW of firm supply contracts it says are exclusively for hyperscaler data-center projects, and pivoted its cell supply from Chinese sources to US-made AESC cells via Fixx Energy's Tennessee plant — before being acquired by Nextpower (formerly Nextracker) for up to $365M, completed 20 July 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: The company launched with Mitsubishi Power's entire energy-storage team, technology and ~3 GWh of installed base; an April 2024 restructuring made it a joint venture of Mitsubishi Power Americas and EES (management plus outside investors), and CEO Tom Cornell set a target of a $1B business within five years.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-21"
+  },
+  {
+   "a": "mitsubishi-power",
+   "b": "rolls-royce-power-systems",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against Rolls-Royce Power Systems and Caterpillar, both of which retain in-house storage, this is a narrowed proposition for exactly the swinging-load application data centers present.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-power",
+   "b": "samsung-ct",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Samsung C&T Engineering & Construction Group is the EPC contractor appointed by Ras Abu Fontas Power Company for Qatar's Facility E integrated water and power project, for which Mitsubishi Power supplies approximately 2.4 GW of M701JAC turbines.",
+     "context": "Facility E is the largest single award in Mitsubishi Power's recent order book — roughly 20% of Qatar's national grid capacity plus 495,000 tonnes per day of desalinated water, targeted for operation in 2028, with a long-term service agreement signed alongside the equipment.\n\nIt is also the first JAC-class machine in Qatar. Integrated water and power projects are among the longest-lived customer relationships in the sector, which is why the LTSA is part of the same announcement rather than a later negotiation.",
+     "source": "https://power.mhi.com/regions/mena/news/260114.html",
+     "status": "active",
+     "since": "2026-01",
+     "via": "EPC on Qatar Facility E"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-14",
+     "text": "Qatar's Facility E integrated water and power project awarded, with M701JAC turbines delivering approximately 2.4 GW — around 20% of Qatar's national grid capacity — plus 495,000 tonnes per day of desalinated water, with Samsung C&T as EPC and a long-term service agreement signed — The first JAC in Qatar and the largest single order in the recent book; an integrated water and power project is a twenty-year relationship rather than an equipment sale.",
+     "src": "https://power.mhi.com/regions/mena/news/260114.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-14"
+  },
+  {
+   "a": "mitsubishi-power",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "POWER Magazine ranks Siemens Energy at 95 GW of turbines under contract against Mitsubishi's 35 GW of large-frame backlog, and Global Energy Monitor names the two alongside GE Vernova as the three manufacturers supplying two-thirds of turbines in gas plants under construction.",
+     "context": "Siemens Energy's 95 GW comprises 69 GW firm backlog and 26 GW of slot reservations, with 22 GW tied to data centers — a far more data-center-weighted book than Mitsubishi's, which POWER describes as focused on large-frame projects for core utility customers. Siemens Energy's unit shipments nearly doubled from 100 in 2024 to 194 in 2025.\n\nGlobal Energy Monitor gives Siemens Energy 16% of Asian capacity under construction against Mitsubishi's 17% — the one market where the two are close — and notes the historical detail that Siemens once considered merging its gas turbine unit with Mitsubishi's. Neither company has a manufacturing joint venture in China; Mitsubishi's licensee Dongfang Electric accounts for roughly 25% of gas turbines under construction there.",
+     "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
+     "status": "active",
+     "via": "Heavy-duty gas turbines"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "POWER Magazine ranks Siemens Energy at 95 GW of turbines under contract against Mitsubishi Heavy Industries' 35 GW of large-frame backlog, and Global Energy Monitor names the two alongside GE Vernova as the three manufacturers supplying two-thirds of turbines in gas plants under construction.",
+     "context": "Siemens Energy's 95 GW comprises 69 GW of firm backlog plus 26 GW of slot reservations, with 22 GW tied to data centers — a far more data-center-weighted book than Mitsubishi's, which POWER describes as focused on large-frame projects for core utility customers. Siemens Energy's unit shipments nearly doubled from 100 in 2024 to 194 in 2025.\n\nGlobal Energy Monitor gives Siemens Energy 16% of Asian capacity under construction against Mitsubishi's 17%, the one market where the two are close, and records that Siemens once considered merging its gas turbine unit with Mitsubishi's.",
+     "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
+     "status": "active",
+     "via": "Heavy-duty gas turbines"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Mitsubishi Power is the third of the three manufacturers who build essentially all heavy-duty gas turbines for the Western market, and it is a distant third by order book — 35 GW of large-frame turbines under contract across 80 units at 2026-06-30, against GE Vernova's 116 GW and Siemens Energy's 95 GW per POWER Magazine's September 2026 comparison.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: POWER Magazine's September 2026 comparison describes its focus as large-frame projects for core utility customers, against GE Vernova's roughly 20% data-center mix across about 100 customers and Siemens Energy's 22 GW tied to data centers.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: POWER's figures for GE Vernova and Siemens Energy explicitly include slot reservations — 63 GW of GE Vernova's 116 GW and 26 GW of Siemens Energy's 95 GW — while Mitsubishi's 35 GW is stated as large-frame contract backlog with no reservation split disclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · M501 and M701 heavy-duty gas turbines",
+     "date": "",
+     "text": "Independent sources rank it third: POWER Magazine's September 2026 comparison puts GE Vernova at 116 GW under contract and Siemens Energy at 95 GW against Mitsubishi's 35 GW of large-frame backlog, though those figures are not perfectly like-for-like because the first two include slot reservations that Mitsubishi does not split out.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · M501 and M701 heavy-duty gas turbines",
+     "date": "",
+     "text": "Global Energy Monitor gives Mitsubishi 17% of Asian capacity under construction against GE Vernova's 38% and Siemens Energy's 16%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "POWER Magazine publishes a four-way comparison of turbines under contract: GE Vernova 116 GW, Siemens Energy 95 GW, Mitsubishi Heavy Industries 35 GW of large-frame backlog across 80 units, with Ansaldo Energia re-entering the US market — The cleanest independent ranking of the three, and it places Mitsubishi at roughly 30% of GE Vernova's book — while noting Mitsubishi's focus is large-frame projects for core utility customers rather than the direct data-center sales that make up 20% of GE Vernova's mix and 22 GW of Siemens Energy's.",
+     "src": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: a top-3 global gas-turbine position (with GE Vernova and Mitsubishi Power, roughly two-thirds of turbines for plants under construction; note Mitsubishi held #1 MW share in 2022-23 per McCoy), Grid Technologies backlog of €51B with transformers as the biggest growth driver, and the Eaton alliance packaging a repeatable 500 MW grid-independent block that 'eliminates diesel backup gensets' and claims two years off time-to-power.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) Siemens Energy (with GE Vernova and Mitsubishi Power) effectively sets the AIDC sector's time-to-power floor: large-frame slots nearly full through 2028, reservation fees back for the first time since the early-2000s boom, and a deliberate +30-50% (not maximal) capacity expansion.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Gas Services — turbine portfolio (2-593 MW)",
+     "date": "",
+     "text": "Top-3 globally with GE Vernova and Mitsubishi Power; the SGT-800 is the workhorse of the data-center onsite-power segment (620 installations, >20M operating hours, 99.1% reliability); SGT6-9000HL is the direct 7HA.03 rival at >64% combined-cycle efficiency.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-01"
+  },
+  {
+   "a": "mitsubishi-power",
+   "b": "southern-company",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Georgia Power, described in Mitsubishi Power's own releases as the largest electric subsidiary of Southern Company, took delivery of three M501JAC simple-cycle units totalling 1.3 GW and hosted the 50% hydrogen blending demonstration on an M501GAC at Plant McDonough-Atkinson.",
+     "context": "The two releases naming Georgia Power both identify it as Southern Company's largest electric subsidiary, and one states that Southern Company's research and development organisation served as technical consultants on the hydrogen project — so the parent is named directly in the hydrogen work rather than only through the subsidiary.\n\nGeorgia Power is also the customer Mitsubishi Power's own CEO cites as the clearest illustration of AI-driven demand: a 2022 integrated resource plan indicating a 400 MW need through 2030, updated a year later to 6.6 GW, with 80% of the increase attributed to data-center growth in the state.",
+     "source": "https://power.mhi.com/regions/amer/news/250616",
+     "status": "active",
+     "via": "M501JAC and M501GAC turbines at Georgia Power"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Certified generation build — the 2025 all-source certification (gas, storage, solar-plus-storage)",
+     "date": "",
+     "text": "The Yates simple-cycle units (three Mitsubishi Power M501JAC turbines with VP-X generators, about 1.3 GW) were certified in the 2023 IRP Update; the Unit 9 turbine and generator were delivered in December 2025 for operation by end-2027.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-15",
+     "text": "Yates Unit 9's Mitsubishi Power M501JAC turbine and generator delivered; Units 8–10 (1,300 MW) online by end-2027 — Ordered around the 2023 update, two years before the 2025 plan — the lead-time lesson in one delivery.",
+     "src": "https://www.prnewswire.com/news-releases/georgia-power-receives-turbine-and-generator-for-new-unit-9-at-plant-yates-302642442.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-15"
   },
   {
    "a": "mortenson",
@@ -20570,6 +21910,66 @@
     }
    ],
    "last": "2024-06-24"
+  },
+  {
+   "a": "powell-industries",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named in Powell's 10-K as a principal competitor, and a component supplier whose Masterpact MTZ draw-out air circuit breaker elements the FlexGear platform is built to accept.",
+     "context": "Same dual structure as the Eaton relationship: named competitor in the filing, breaker supplier in the product literature. Powell publishes a dedicated instruction bulletin for FlexGear low-voltage switchgear equipped with Schneider, Siemens and Eaton breakers.\n\nMordor Intelligence puts Schneider in the top five controlling roughly 55-60% of the North American medium-voltage switchgear market and separately identifies its EcoStruxure Grid platform as part of a shift of competition toward software bundled with switchgear — the axis on which Powell's answer is the Remsdaq acquisition and its SCADA-H asset-management software.",
+     "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
+     "status": "active",
+     "via": "Medium-voltage switchgear and low-voltage breaker elements"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Powell Industries' Form 10-K names Schneider among its principal competitors, and Powell's FlexGear platform is built to accept Schneider Masterpact MTZ draw-out air circuit breaker elements.",
+     "context": "Named competitor in the filing and breaker supplier in the product literature — Powell publishes a dedicated instruction bulletin for FlexGear low-voltage switchgear equipped with Schneider, Siemens and Eaton breakers.\n\nMordor Intelligence puts Schneider in the top five controlling roughly 55-60% of the North American medium-voltage switchgear market and identifies its EcoStruxure Grid platform as part of a shift toward software bundled with switchgear. Powell's answer on that axis is its 2025 acquisition of Remsdaq and its own SCADA-H asset-management software.",
+     "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
+     "status": "active",
+     "via": "Medium-voltage switchgear and low-voltage breaker elements"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The medium-voltage switchgear specialist in a market whose top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — control roughly 55-60% of North American volume.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Mordor Intelligence places the top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — at roughly 55-60% of the North America medium-voltage switchgear market and names Powell's differentiator explicitly as tailored switchgear in ten weeks from its Texas facility, credited with winning multiple 2025 data-center awards.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Integrated package solutions — Power Control Rooms, e-houses and modules",
+     "date": "",
+     "text": "SNS Insider names Powell among five companies shaping e-house technology alongside ABB, Siemens, Schneider Electric and Eaton, describing its position as designing custom-built systems requiring little site work.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "powell-industries",
+   "b": "siemens-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "That is the Siemens AG industrial business, not Siemens Energy AG, and no competitor link to the covered `siemens-energy` slug is asserted here on that basis.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "prevalon",

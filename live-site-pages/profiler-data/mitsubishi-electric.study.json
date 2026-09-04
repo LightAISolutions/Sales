@@ -1,0 +1,535 @@
+{
+ "schemaVersion": 2,
+ "slug": "mitsubishi-electric",
+ "title": "Mitsubishi Electric — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "inside-the-inverter",
+   "title": "Inside the inverter: why three levels beat two",
+   "kind": "prose",
+   "read": "7 min",
+   "intro": "Other guides in this library name the four blocks of a static UPS and explain what each one does. None of them opens the inverter. That is where the last three percentage points of efficiency were found, and it is the engineering behind every specification argument about a modern large UPS.",
+   "ps": [
+    "A two-level {{inverter}} has one job done crudely: each output phase is switched between the top and the bottom of the {{DC link}}, thousands of times a second, and a filter smooths the resulting square edges into something resembling a sine wave. It works, and it costs in two places at once. Each switch must block the full DC-link voltage, and the output is so far from a sine wave that the filter has to be large.",
+    "A **{{three-level inverter}}** splits the DC link in two and adds a path to the midpoint, so each phase can sit at the top, the bottom, or halfway. Two consequences follow immediately. Each switching device now blocks only half the voltage, so cheaper, faster devices with lower losses can be used. And the output waveform starts much closer to a sine wave before any filtering, so the filter shrinks — which saves size, weight and its own losses.",
+    "**The loss arithmetic is the reason this matters commercially.** A switching device wastes energy in two distinct ways. {{Switching loss}} is burned each time it turns on or off, because for a few hundred nanoseconds it is carrying current and holding voltage simultaneously; it scales with how often you switch. Conduction loss is burned while the device is fully on, because a real transistor still drops a small voltage; it scales with the current it carries — the same {{I²R loss}} idea that governs every conductor on a site. A designer trades these against each other, and the three-level topology relaxes the trade on both sides at once.",
+    "**{{SiC}} moves the same trade again.** Silicon carbide devices switch faster and with lower losses than silicon {{IGBT}}s at the same voltage, which buys either higher efficiency at the same switching frequency or a higher {{switching frequency}} — and therefore a smaller filter and a faster-responding control loop — at the same efficiency. In this vendor's catalogue that is the difference between a 97.0% flagship and a 98.2% silicon-carbide unit at half the power rating.",
+    "**Why a percentage point is worth arguing about.** At 2 MW of critical load, one point of efficiency is 20 kW burned continuously — about 175 MWh a year, plus the cooling to remove it, forever. That is why UPS datasheets quote efficiency to one decimal place while gen-set datasheets do not: a standby engine runs for hours a year and a UPS runs for all of them.",
+    "**And why the topology is a purchasing question, not a curiosity.** Two units quoted at the same kW can differ by two points of efficiency, several hundred kilograms, a metre of floor space and a materially different filter — and only one of those differences appears in the price. The datasheet line that reveals it is not the headline efficiency but the efficiency curve, which is the next section."
+   ]
+  },
+  {
+   "id": "where-the-losses-go",
+   "title": "The efficiency curve: why a UPS is rarely at its rated efficiency",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "A headline efficiency figure is a single point on a curve, quoted at the load where the machine is best. Real plants sit somewhere else on that curve, usually for structural reasons that nobody chose. Reading the curve rather than the headline is the single most useful datasheet skill in this section of the power room.",
+   "cols": [
+    "What you are reading",
+    "What it actually says",
+    "Why the plant ends up there"
+   ],
+   "rows": [
+    [
+     "**Peak efficiency**",
+     "The best point on the curve, typically somewhere between 50% and 75% load on a modern large unit — for example 97.0% at 50-75% load on a 2 MW class machine, or 98.2% at 50% on a silicon-carbide unit",
+     "It is the number on the brochure and the number the vendor optimised for. It is not the number your plant will run at unless the plant was sized to land there"
+    ],
+    [
+     "**Efficiency at 25% load**",
+     "Lower — commonly half a point to a point and a half below peak, and much worse below that",
+     "Fixed losses do not scale with load. The control electronics, the fans, the magnetics and the standing losses in the semiconductors are all there whether the machine is loaded or not, so at light load they are a larger fraction of a smaller output"
+    ],
+    [
+     "**Why every new hall lives at light load**",
+     "A hall is sized for its eventual capacity and fills over one to three years, so the {{UPS}} spends its early life well down the curve",
+     "This is structural, not a mistake. It is also the period when the operator is most sensitive to the running cost, because there is little revenue-earning IT load to spread it over"
+    ],
+    [
+     "**The redundancy tax**",
+     "{{N+1}} at the system level means every unit runs below its rating by construction; 2N means each side of the plant is loaded to at most half",
+     "Redundancy and efficiency pull in opposite directions and cannot both be maximised. A 2N plant at 40% IT utilisation has each UPS at roughly 20% load — near the worst part of the curve, permanently"
+    ],
+    [
+     "**{{Eco-mode}} as the usual answer**",
+     "Run the load on the bypass path in normal conditions and jump to the {{inverter}} on a disturbance, buying back most of the double-conversion loss",
+     "It works, and it introduces a detection-and-transfer event that did not previously exist. The argument is entirely about whether the detection is fast enough for every fault, not just the typical one"
+    ],
+    [
+     "**The refusal to use eco-mode**",
+     "One vendor publishes no eco-mode figure at all and states plainly that none is required, arguing that {{SiC}} and three-level topology make {{double conversion}} efficient enough to leave the load permanently on the inverter",
+     "A coherent position: it removes a failure mode rather than managing it. It is also a narrow one — it depends on the remaining efficiency gap being small enough that the customer stops caring, which is a claim about a moving target"
+    ],
+    [
+     "**{{Apparent power}} against real power**",
+     "A UPS is rated in both kVA and kW; modern units are often rated at unity {{power factor}} so the two are equal, but older specifications assume 0.8 or 0.9",
+     "A specification written against an old kVA-to-kW ratio and priced against a unity-rated machine is comparing two different products. Check which number the load list is in"
+    ]
+   ],
+   "note": "The practical reading order for a datasheet: find the efficiency at the load you will actually run at, not the peak; check whether the quoted curve is double conversion or eco-mode; and confirm whether kVA and kW are equal. Those three questions separate most competing quotes more than the headline number does."
+  },
+  {
+   "id": "transformer-based-or-transformerless",
+   "title": "Transformer-based or transformerless: what the missing iron used to do",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "Large UPS used to contain a substantial low-frequency transformer, and most modern ones do not. The transformer was not decoration — it was doing three jobs, and removing it handed all three back to whoever designs the system around the box. This is the decision that most often surprises people who have not read a one-line closely.",
+   "cards": [
+    {
+     "t": "Transformer-based UPS",
+     "meta": "A low-frequency transformer between the inverter and the load, the traditional architecture",
+     "adv": [
+      "**{{Galvanic isolation}}** between input and output as a physical property of the machine, not a claim about its control software",
+      "The transformer **derives the output neutral**, so the UPS defines a separately derived system and the earthing arrangement downstream is settled by the equipment",
+      "It contributes meaningful **{{fault current}}** and rides through disturbances with the inertia of iron and copper, which makes downstream breaker coordination straightforward",
+      "Tolerant of load imbalance and of DC content in the load without special measures"
+     ],
+     "dis": [
+      "Large, heavy and expensive — the transformer is often the single biggest component by mass",
+      "Its own losses run continuously, costing roughly a point or more of efficiency that the load never sees",
+      "Audible noise and a heat load that the room must remove for the life of the installation"
+     ]
+    },
+    {
+     "t": "Transformerless UPS",
+     "meta": "Higher-frequency switching and a split DC link in place of the iron — the current mainstream",
+     "adv": [
+      "Markedly smaller, lighter and more efficient; the floor space and the crane requirement both fall",
+      "Fewer standing losses, which is much of how modern units reach the high nineties in {{double conversion}}",
+      "Lower cost per kilowatt and easier to build in modular form, which is what makes hot-swappable {{modular UPS}} architectures practical"
+     ],
+     "dis": [
+      "**No inherent {{galvanic isolation}}** — if the design needs it, it becomes a separate transformer somewhere else on the one-line, at somebody else's cost",
+      "**The neutral question moves upstream.** Where the output neutral is derived and how the system is earthed become the designer's problem rather than the box's",
+      "**Fault-current contribution is limited by semiconductor ratings**, not by iron. This is why the {{static bypass}} exists: a downstream fault may need more current to clear a breaker than the inverter can legally supply, so the machine hands the load to the mains to let the protection work",
+      "Less tolerant of DC content and severe imbalance without design attention"
+     ]
+    }
+   ],
+   "note": "The commercially useful version of this: a {{transformerless}} UPS is a better machine and a slightly harder system. The savings are real and they are on the equipment line; the work it creates is real too and it lands on the electrical designer, the earthing study and the {{coordination study}}. When two quotes differ by a transformer, they are not quoting the same scope."
+  },
+  {
+   "id": "the-generators-hardest-customer",
+   "title": "The UPS is the generator's hardest customer",
+   "kind": "prose",
+   "read": "6 min",
+   "intro": "Guides elsewhere in this library teach how a gen-set is sized and why a big diesel cannot take everything at once. This is the same problem read from the other end of the cable — because the UPS is usually the worst-behaved load the generator will ever be asked to carry, and the reason is on the UPS datasheet.",
+   "ps": [
+    "**A rectifier is a non-linear load.** The front end of a UPS converts incoming alternating current to direct current, and a passive diode rectifier does that by conducting only near the peaks of the waveform — drawing current in gulps rather than smoothly. Those gulps are {{harmonics}}: current at multiples of the supply frequency that carries no useful power but heats transformers, overloads neutrals and distorts the voltage every other load on the bus is trying to use.",
+    "**The generator feels this far more than the utility does.** A utility connection is a stiff source backed by an enormous rotating system; a gen-set is a single alternator with comparatively high internal impedance. The same distorted current that the utility barely notices produces real voltage distortion at the generator's terminals — which the generator's own voltage regulator then tries to correct, and which the UPS's control loop then reacts to. That interaction is why UPS and generator are commissioned together and not separately.",
+    "**Three generations of answer.** A six-pulse rectifier is the crude original. A **{{12-pulse rectifier}}** feeds two rectifier bridges through transformer windings phase-shifted by thirty degrees so that much of the distortion cancels between them — better, at the cost of a transformer. An **{{active front end}}** replaces the diodes with switching devices under control, drawing a near-sinusoidal current at close to unity {{power factor}}. Modern large units use the third, which is why their datasheets quote input current distortion around 3% at full load and input power factor above 0.98.",
+    "**Why that number is a commercial number.** Historically a UPS with a poorly behaved front end forced the generator to be oversized — commonly by a factor well above one — purely to tolerate the distortion, not because the real load demanded it. A unit quoting low input distortion and near-unity input power factor is quoting a smaller generator, a smaller fuel system, a smaller air permit and a smaller pad. Vendors state this directly as a generator compatibility ratio, and a figure of 1.1 to 1 is a claim that the engine barely has to be oversized at all.",
+    "**{{IEEE 519}} is where this becomes contractual.** It sets limits on the distortion a customer may impose at the point of common coupling, and it is the standard a utility or a campus operator will cite. The UPS is usually the largest single contributor on the bus, so its front-end architecture decides whether the site complies as designed or needs mitigation added afterwards.",
+    "**The seam to watch.** The gen-set vendor sizes the machine, the UPS vendor specifies the front end, and the person who owns the consequence of getting the interaction wrong is usually neither of them. When the two come from different suppliers, the oversizing factor and the distortion limit belong in the same document or they will belong to nobody."
+   ]
+  },
+  {
+   "id": "vrla-or-lithium",
+   "title": "The battery under a large static UPS: VRLA or lithium",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Another guide in this library covers battery against flywheel — two different answers to how long you need to ride. This is the question one level down, and it is now the live one: given that the store is a battery, which chemistry, and what does the choice drag in behind it? The UPS is a power application, not an energy one, and that changes almost every answer from what a grid-storage reader would expect.",
+   "cols": [
+    "Dimension",
+    "{{VRLA}} lead-acid",
+    "Lithium ({{LFP}} or NMC)",
+    "Why it decides the purchase"
+   ],
+   "rows": [
+    [
+     "**Service life**",
+     "Commonly a few years before replacement, and it degrades with temperature — a room a few degrees warm shortens it materially",
+     "Typically two to three times longer, and far less punished by temperature",
+     "Replacement is a project, not a maintenance task: it is a scheduled window in which the plant's stored energy is reduced or absent. Halving the number of those windows over twenty years is much of the commercial case"
+    ],
+    [
+     "**Footprint and weight**",
+     "Large and very heavy; the battery room is often a structural design input",
+     "Substantially smaller and lighter for the same energy",
+     "In a retrofit this is sometimes the whole argument. Floor loading in an existing building has ended more lead-acid replacements than cost has"
+    ],
+    [
+     "**Up-front cost**",
+     "Lower",
+     "Higher, though the gap has narrowed",
+     "Lead-acid wins the capital line and loses the twenty-year line. Which matters depends on who is paying, and in a leased facility those are frequently different parties"
+    ],
+    [
+     "**{{C-rate}} — the ratio that actually governs sizing**",
+     "A UPS discharges hard and briefly: minutes, not hours. Lead-acid delivers high rates but its usable capacity falls sharply as the rate rises",
+     "Tolerates high discharge rates with much less capacity penalty",
+     "This is the single most misread point. A UPS battery is sized by **power** first and energy second, so the published amp-hour figure is not the number that matters — the figure at the actual discharge rate is"
+    ],
+    [
+     "**Monitoring**",
+     "Cell-level monitoring is an added system; the classic failure is a single weak cell in a long string discovered during a discharge",
+     "A {{BMS}} is intrinsic — the pack cannot operate without one, so cell-level state is known continuously",
+     "A string is only as good as its worst cell, and lead-acid's weakest property is that nobody knows which cell that is until the day it matters"
+    ],
+    [
+     "**Fire and code**",
+     "A long-understood risk profile; hydrogen evolution on charge means the room needs ventilation",
+     "{{Thermal runaway}} is the concern, and {{NFPA 855}} governs installation — spacing, enclosure, suppression, detection and sometimes {{UL 9540A}} test data for the specific product",
+     "The lithium answer is cheaper to buy and more expensive to permit. The authority having jurisdiction, not the vendor, decides how much room the battery needs"
+    ],
+    [
+     "**{{State of health}} at end of life**",
+     "Capacity fades and the fade is hard to see without testing",
+     "Fade is measured continuously and reported",
+     "Determines whether autonomy is a designed property or an assumed one. An untested lead-acid string is a claim, not a number"
+    ]
+   ],
+   "note": "The trap worth naming: a reader who knows grid-scale storage will reach for energy-density and cycle-life instincts that do not apply here. A UPS battery may see a handful of real discharges in its life and is sized for a few minutes at high power. Cycle life barely matters; discharge rate, footprint, monitoring and the fire code decide it."
+  },
+  {
+   "id": "the-transformer-you-order-first",
+   "title": "The transformer is the schedule: ordering before the design is finished",
+   "kind": "prose",
+   "read": "6 min",
+   "intro": "Guides elsewhere in this library explain why one large transformer takes years to build and why grid-equipment factories cannot simply scale up. Both are told from the factory's side. This is the buyer's side, which is a different problem: not why the lead time exists, but what a project has to do differently because of it.",
+   "ps": [
+    "**The ordering sequence inverts.** In a normal building, design is completed, equipment is specified, and then it is bought. When the equipment sets the critical path, the order goes first — a slot is reserved and a deposit posted against a specification that is deliberately kept coarse, and the detailed design catches up to it. That is uncomfortable for everyone: the buyer is committing money against an unfinished design, and any later change is a factory change order rather than a redline.",
+    "**Which is why standardisation becomes a procurement strategy rather than an engineering preference.** If every campus phase uses the same {{transformer}} rating, impedance and configuration, then units are fungible across phases and a slot bought for one is usable by another. The moment each phase is optimised individually, every unit becomes bespoke and every slot becomes single-purpose. Buyers who repeat a design are not being unimaginative; they are buying schedule optionality.",
+    "**Impedance is the specification line that ripples furthest.** A transformer's impedance sets how much fault current reaches the switchgear behind it. Order a lower-impedance unit than the design assumed — often the natural consequence of buying a bigger one — and the available fault current downstream rises, which can take existing switchgear past its {{withstand rating}} and invalidates the {{coordination study}} the settings came from. A transformer substitution is never only a transformer substitution.",
+    "**The spare is a real decision, not a contingency line.** If a failed unit takes years to replace, the only meaningful redundancy is a physical spare somewhere — on the pad, at another site, or shared under an agreement between owners. That is a large piece of capital doing nothing, and the alternative is accepting that a transformer failure is a multi-year outage of that capacity. Naming which of the two has been chosen is more useful than any reliability statistic.",
+    "**Two specification choices that look like details and are not.** A {{dry-type transformer}}, insulated by air or solid resin instead of oil, carries no fire load and no oil-containment requirement, so it can sit inside the building — which is why indoor unit substations on a campus are usually dry-type even though an oil-filled unit of the same rating would be smaller, quieter and more efficient. And the {{on-load tap changer}}, if fitted, is the only substantial moving part in the whole machine: it is what lets output voltage be corrected without interrupting the load, and it is correspondingly the part most likely to need maintenance and one of the more common causes of transformer outages. A transformer with no tap changer is simpler and less adjustable; that is a decision, not an omission.",
+    "**{{GOES}} is the reason the constraint does not resolve quickly.** Grain-oriented electrical steel is the core material, it is made by a small number of producers, and the plant that makes it is itself a multi-year build. Capacity added downstream — winding shops, test bays, skilled labour — does not help if the steel is short. This is why the shortage has outlasted several years of high prices, which normally cures shortages.",
+    "**The reading skill.** When a supplier quotes a lead time, ask what it is measured from: order placement, drawing approval, or release to manufacture. Those can differ by many months, and the difference is usually the buyer's own review cycle — the one part of the schedule the buyer controls and the one most often left out of their own plan."
+   ]
+  },
+  {
+   "id": "megawatts-per-machine",
+   "title": "The catalogue as a ladder — and where it crosses the fence",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "MVA or MW / MVA equivalent (UPS rated at unity power factor unless noted)",
+   "intro": "This is the only vendor in the corpus whose catalogue runs from a 6 kVA single-phase unit to an 800 kV circuit breaker, so plotting it on one axis shows something the others cannot: where a supplier's products sit relative to the service entrance. The UPS rows are inside the building; the switchgear and transformer rows are outside it.",
+   "items": [
+    {
+     "label": "7011B single-phase UPS",
+     "sub": "6-12 kVA, 208 V, transformerless — the small end of the same product family",
+     "v": 0.012
+    },
+    {
+     "label": "DiamondPlus 1100B",
+     "sub": "10-80 kVA modular, hot-swappable power modules",
+     "v": 0.08
+    },
+    {
+     "label": "9900AEGIS",
+     "sub": "80-225 kVA at 0.90 PF; parallels to 4 modules; UL 924 listed at 80-100 kVA",
+     "v": 0.225
+    },
+    {
+     "label": "9900B",
+     "sub": "300-750 kVA at unity PF; the first {{three-level inverter}} UPS in this line",
+     "v": 0.75
+    },
+    {
+     "label": "SUMMIT Series",
+     "sub": "500 and 750 kVA at unity PF, {{SiC}} devices, 98.2% peak in {{double conversion}}",
+     "v": 0.75
+    },
+    {
+     "label": "9900CX",
+     "sub": "1050 kVA / 1000 kW at 0.95 PF; parallels to 6 units",
+     "v": 1.05
+    },
+    {
+     "label": "9900D",
+     "sub": "1200-2000 kVA at unity PF, in 400 kVA modules, N or {{N+1}}; 97.0% peak",
+     "v": 2.0
+    },
+    {
+     "label": "Critical Load Cabinet — largest",
+     "sub": "Paralleling to 4 x 2100 kVA as a system",
+     "v": 8.4
+    },
+    {
+     "label": "MV vacuum circuit breaker, 15-38 kV",
+     "sub": "1200-3000 A at 25-31.5 kA — SF6-free, outside the building",
+     "v": 15.0
+    },
+    {
+     "label": "MV vacuum circuit breaker, 72 kV",
+     "sub": "31.5 kA at 2000 A, dry-air insulated",
+     "v": 72.0
+    },
+    {
+     "label": "Gas-insulated switchgear, 145 kV",
+     "sub": "3150-4000 A at 40-63 kA",
+     "v": 145.0
+    },
+    {
+     "label": "Gas-insulated switchgear, 550 kV",
+     "sub": "6300 A at 63 kA on the two-break design",
+     "v": 550.0
+    },
+    {
+     "label": "HV gas-insulated circuit breaker, 800 kV",
+     "sub": "Interrupting classes to 80 kA — transmission, not distribution",
+     "v": 800.0
+    }
+   ],
+   "note": "The axis deliberately mixes units — kVA for the UPS rows and kV for the switchgear rows — because the point is the span, not a like-for-like comparison. What it shows is a vendor present on both sides of the service entrance but absent in between: there is no {{metal-clad switchgear}} line and no data-centre-scale distribution transformer in the current North American catalogue."
+  },
+  {
+   "id": "where-mitsubishi-electrics-products-slot-in",
+   "title": "Where these products slot into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Trace the path from the transmission line to a server and mark which rows this vendor fills. The pattern is unusual and worth seeing plainly: it is present at the top of the chain and at the bottom, and absent through the middle.",
+   "cols": [
+    "Layer of the chain",
+    "The product",
+    "What is distinctive — or conspicuously missing"
+   ],
+   "rows": [
+    [
+     "Transmission substation",
+     "{{Gas-insulated switchgear}} 145-550 kV; gas-insulated circuit breakers 72.5-800 kV at 40-80 kA",
+     "A genuine transmission-class portfolio with more than 20,000 GIS bays installed and a heritage running to the world's first 550 kV fully gas-insulated switchyard in 1976"
+    ],
+    [
+     "Sub-transmission and the SF6 question",
+     "72 kV {{vacuum circuit breaker}} with dry-air insulation; 15-38 kV vacuum breakers",
+     "The SF6-free flagship. Vacuum interruption at 72 kV is the answer to a regulation that threatens the gas the rest of the catalogue depends on"
+    ],
+    [
+     "Stepping down",
+     "Core-form {{transformer}}s 69-275 kV and shell-form 115-765 kV; the transition at about 200 MVA",
+     "Special shell-form autotransformers whose transport size reduces to half a conventional three-phase unit — a direct answer to the shipping constraint that governs large transformers"
+    ],
+    [
+     "Campus medium-voltage distribution",
+     "**Not present.** {{Metal-clad switchgear}} is not a named product line in the North American catalogue",
+     "This is the gap. A campus buys its 5-38 kV metal-clad lineups from a different supplier, which means the seam — and the {{coordination study}} across it — belongs to the owner"
+    ],
+    [
+     "Uninterruptible supply",
+     "9900 Series {{static UPS}} 80 kVA to 2 MW; SUMMIT Series {{SiC}} at 500-750 kVA",
+     "{{Three-level inverter}} topology throughout, with a claim to be the only UPS brand designing and manufacturing its own semiconductors. Published efficiency 97.0% at 2 MW and 98.2% on silicon carbide, all in {{double conversion}}"
+    ],
+    [
+     "Paralleling and system redundancy",
+     "Critical Load Cabinets from a redundant 2 x 80 kVA to 4 x 2100 kVA; distributed-redundant static transfer architecture",
+     "All paralleling control sits inside the UPS modules rather than in a separate controller — fewer boxes to disagree with each other during an event"
+    ],
+    [
+     "Cooling the hall",
+     "CritiCool air-cooled chillers, a thermal wall and wall-mounted units at 10, 20 and 40 kW",
+     "Added to the UPS division in 2021, three years before the current build cycle — the cross-sell predates the demand rather than chasing it"
+    ],
+    [
+     "The rack itself",
+     "Stated development of 800 V and 1,500 V DC power supply systems, and a collaboration with a GPU vendor on 800 VDC delivery",
+     "Visible only in the vendor's own releases. Independent coverage of that 800 VDC ecosystem names other suppliers and does not name this one — a gap between first-party and third-party visibility worth knowing before repeating the claim"
+    ]
+   ],
+   "note": "The shape to carry away: strong at transmission voltage, strong inside the hall, and missing the medium-voltage tier in between that another vendor in this session's pair specialises in. Two suppliers, adjacent gaps — which is why they appear together in the same market-research rosters without competing across the whole lineup."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**A UPS parked at the wrong end of its efficiency curve, permanently.** Fixed losses do not scale with load, so a hall filling over two years and a {{N+1}} or 2N topology together put every unit well below its design point by construction. Nobody chose it and no alarm reports it; it simply costs money every hour for the life of the plant. Owned by whoever sized the plant, and visible only if someone reads the curve rather than the headline.",
+    "**Load exposed on {{static bypass}} while a transformerless machine waits for a specialist.** The bypass exists for good reasons, one of which is that a transformerless inverter cannot supply enough {{fault current}} to clear a downstream breaker and must hand the load to the mains to let the protection work. On bypass the load is on raw utility power with no conditioning and no store behind it — a predictable, scheduled, repeated window in which the plant is unprotected.",
+    "**The neutral and earthing question nobody owned.** Removing the output transformer removed the thing that derived the output neutral and defined a separately derived system. If that job was not explicitly reassigned to a transformer elsewhere on the {{single-line diagram}}, it was not done — and the symptom appears later as an earthing or protection problem that looks unrelated to the UPS purchase that caused it.",
+    "**The rectifier that made the generator too small.** A UPS front end drawing distorted current at a poor {{power factor}} forces the {{gen-set}} to be oversized for distortion rather than for load, and pushes the site's voltage distortion toward the {{IEEE 519}} limit. When the UPS and the generator come from different suppliers, the oversizing factor and the distortion limit belong in one document or they belong to nobody. Owned by the electrical designer, discovered at commissioning.",
+    "**A battery sized on amp-hours instead of on discharge rate.** A UPS discharges hard for minutes, and lead-acid capacity falls sharply as the rate rises, so the published capacity figure overstates what the string will actually deliver. The gap is found during the first real discharge, which is the worst possible moment to find it. Owned by whoever sized the battery; avoidable by testing.",
+    "**Transformer lead time discovered after the design was frozen.** Ordering after the design is complete is the normal sequence and the wrong one when the equipment sets the critical path. Worse, a late substitution to a larger, lower-impedance unit raises downstream fault current and can take existing switchgear past its {{withstand rating}} while quietly invalidating the {{coordination study}}. Owned by procurement, paid for by the schedule.",
+    "**A vendor's own claim that independent sources do not corroborate.** This company's 800 VDC collaboration appears in its own release and in no third-party coverage of that ecosystem; and it attributed recent growth to North American transformer business expansion having sold its only US transformer plant in 2019. Neither is evidence of anything false — first-party releases are legitimate sources — but a claim visible from only one side should be repeated as what it is."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does a three-level inverter change relative to a two-level design, and why does it improve efficiency?",
+     "a": "It splits the DC link and adds a path to the midpoint, so each phase can sit at the top, bottom or halfway. Each switching device then blocks only half the DC-link voltage, allowing faster lower-loss devices, and the output waveform starts much closer to a sine wave so the filter shrinks. Both switching losses and filter losses fall at once."
+    },
+    {
+     "q": "Distinguish switching loss from conduction loss in a converter.",
+     "a": "Switching loss is burned each time a device turns on or off, because for a few hundred nanoseconds it carries current while holding voltage; it scales with switching frequency. Conduction loss is burned while the device is fully on, because a real transistor still drops a small voltage; it scales with the current carried. Designers trade one against the other, and a three-level topology relaxes both."
+    },
+    {
+     "q": "What does silicon carbide buy in a UPS?",
+     "a": "SiC devices switch faster and with lower loss than silicon IGBTs at the same voltage. That buys either higher efficiency at the same switching frequency, or a higher switching frequency — and so a smaller filter and a faster control loop — at the same efficiency. In practice it is the difference between about 97% and about 98% in double conversion."
+    },
+    {
+     "q": "Why is a UPS almost never running at its published peak efficiency?",
+     "a": "Peak efficiency is one point on a curve, usually between 50% and 75% load. Fixed losses — controls, fans, magnetics, standing semiconductor losses — do not scale with load, so light load is less efficient. And two structural facts keep plants light: a hall fills over one to three years, and redundancy means N+1 or 2N units run below rating by construction."
+    },
+    {
+     "q": "Why do redundancy and efficiency pull against each other?",
+     "a": "Redundancy is achieved by having more capacity installed than the load needs, which by definition means every unit runs below its rating. A 2N plant at 40% IT utilisation has each UPS at roughly 20% load — near the worst part of the efficiency curve, permanently and by design rather than by mistake."
+    },
+    {
+     "q": "Name the three jobs a UPS output transformer used to do that a transformerless design hands back to the system designer.",
+     "a": "It provided galvanic isolation between input and output as a physical property; it derived the output neutral, defining a separately derived system and settling the downstream earthing; and it contributed substantial fault current, which made downstream breaker coordination straightforward. A transformerless unit does none of these, so each becomes a design task elsewhere."
+    },
+    {
+     "q": "Why does a transformerless UPS need a static bypass to clear a downstream fault?",
+     "a": "Its fault-current contribution is limited by the semiconductors' ratings rather than by iron, and a downstream breaker may need more current than the inverter can legally supply in order to trip. The static bypass hands the load to the raw mains for that moment so the protection has the current it needs to operate."
+    },
+    {
+     "q": "Why is a UPS the hardest load a standby generator has to carry?",
+     "a": "Its rectifier front end is non-linear — a passive design draws current only near the voltage peaks, injecting harmonics. A generator has far higher internal impedance than a utility connection, so the same distorted current produces real voltage distortion at its terminals, which its voltage regulator and the UPS control loop then both react to. That interaction is why the two are commissioned together."
+    },
+    {
+     "q": "Compare a 6-pulse rectifier, a 12-pulse rectifier and an active front end.",
+     "a": "Six-pulse is a plain diode bridge and the worst offender. Twelve-pulse feeds two bridges through windings phase-shifted by thirty degrees so much of the distortion cancels between them, at the cost of a transformer. An active front end replaces the diodes with controlled switching devices and draws near-sinusoidal current at close to unity power factor — hence datasheets quoting about 3% input current distortion."
+    },
+    {
+     "q": "Why is low input current distortion a commercial number rather than a technical one?",
+     "a": "A poorly behaved front end forces the standby generator to be oversized for distortion rather than for real load — which means a bigger engine, fuel system, air permit and pad. A vendor quoting a generator compatibility ratio near 1.1 to 1 is quoting a smaller generator, and IEEE 519 is where the distortion limit becomes contractual at the point of common coupling."
+    },
+    {
+     "q": "A UPS battery is sized by which quantity first, and why does that upset a grid-storage intuition?",
+     "a": "By power, not energy. It discharges hard for minutes rather than hours, so the published amp-hour capacity is not the governing figure — the capacity available at the actual discharge rate is, and lead-acid capacity falls sharply as that rate rises. Cycle life, which dominates grid-storage economics, barely matters because a UPS battery may see only a handful of real discharges in its life."
+    },
+    {
+     "q": "What does choosing lithium over VRLA in a UPS drag in behind it?",
+     "a": "A longer service life, a much smaller and lighter footprint, better tolerance of high discharge rates and an intrinsic battery management system reporting cell-level state. Against that: higher up-front cost and a different fire-code regime — NFPA 855 governs spacing, enclosure, suppression and detection, and the authority having jurisdiction rather than the vendor decides how much room the battery needs."
+    },
+    {
+     "q": "Why does standardising a transformer specification across campus phases buy schedule rather than just simplicity?",
+     "a": "Because units become fungible across phases, so a manufacturing slot bought for one phase can serve another. Optimising each phase individually makes every unit bespoke and every slot single-purpose, which removes the buyer's ability to re-allocate capacity when a phase moves."
+    },
+    {
+     "q": "Why is a transformer substitution never only a transformer substitution?",
+     "a": "Impedance sets how much fault current reaches the switchgear behind it. A larger unit usually has lower impedance, so available fault current downstream rises — potentially past the existing switchgear's withstand rating — and every relay setting derived from the old model is now describing a different system, invalidating the coordination study."
+    },
+    {
+     "q": "When a supplier quotes a lead time, what must you ask, and why?",
+     "a": "What it is measured from: order placement, drawing approval, or release to manufacture. Those can differ by many months, and the difference is largely the buyer's own submittal-review cycle — the part of the schedule the buyer controls and most often omits from their own plan."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A 2 MW UPS is quoted at 97.0% efficiency. The plant is 2N and the hall is at 40% of design IT load. The most likely actual operating efficiency is:",
+     "c": [
+      "Above 97%, because light load reduces losses",
+      "Below the quoted figure, because each unit is running at roughly 20% load",
+      "Exactly 97%, since that is the rating",
+      "Unknowable without the power factor"
+     ],
+     "a": 1,
+     "why": "Peak efficiency sits between roughly 50% and 75% load. A 2N topology halves the load on each side, and 40% IT utilisation halves it again, putting each unit near 20% — well down the curve where fixed losses are a large fraction of a small output. This is structural, not a fault, and it is why the curve matters more than the headline."
+    },
+    {
+     "q": "Which pair of losses does a three-level topology reduce simultaneously?",
+     "c": [
+      "Conduction loss and battery loss",
+      "Switching loss and output filter loss",
+      "Transformer loss and fan loss",
+      "Bypass loss and charger loss"
+     ],
+     "a": 1,
+     "why": "Each device blocks only half the DC-link voltage, so lower-loss faster devices can be used and switching loss falls; and the output waveform starts closer to a sine wave, so the filter — and its losses — shrink. That simultaneous relaxation is why the topology became standard on large units."
+    },
+    {
+     "q": "A transformerless UPS replaces a transformer-based one. Which question most urgently needs a new answer?",
+     "c": [
+      "Where the output neutral is derived and how the system is earthed",
+      "What colour the cabinet is",
+      "Whether the battery is VRLA or lithium",
+      "Whether the unit is ENERGY STAR rated"
+     ],
+     "a": 0,
+     "why": "The transformer derived the output neutral and defined a separately derived system. Remove it and that job does not disappear — it moves to whoever designs the system around the box. If it is not explicitly reassigned it is simply not done, and the symptom appears later as an earthing or protection problem that looks unrelated to the UPS."
+    },
+    {
+     "q": "Why does a transformerless UPS transfer to static bypass when a downstream fault occurs?",
+     "c": [
+      "To save energy during the fault",
+      "Because its fault-current contribution is limited by semiconductor ratings and the breaker needs more current to trip",
+      "To protect the battery from discharge",
+      "Because the control software cannot detect faults"
+     ],
+     "a": 1,
+     "why": "Without iron in the output, the inverter can supply only what its semiconductors are rated for — which may be less than the downstream protective device needs to operate. Handing the load to the raw mains gives the breaker the current it needs. It also means the load is briefly unprotected, which is the trade-off the bypass represents."
+    },
+    {
+     "q": "A site's standby generator has been specified at well over twice the connected UPS load. The most likely reason is:",
+     "c": [
+      "Future expansion only",
+      "Harmonic distortion and poor input power factor from the UPS rectifier front end",
+      "A regulatory requirement",
+      "An error in the load list"
+     ],
+     "a": 1,
+     "why": "A passive rectifier draws current in gulps at a poor power factor, and a generator's high internal impedance turns that distorted current into real voltage distortion. Historically that forced substantial oversizing for distortion rather than for load — which is why a modern unit quoting about 3% input distortion and a 1.1 to 1 generator compatibility ratio is quoting a smaller engine."
+    },
+    {
+     "q": "A UPS battery is quoted at a given amp-hour capacity. For sizing autonomy, that figure is:",
+     "c": [
+      "Directly usable",
+      "Misleading, because usable capacity falls as discharge rate rises and a UPS discharges hard for minutes",
+      "Only relevant for lithium",
+      "The same as the kW rating"
+     ],
+     "a": 1,
+     "why": "A UPS is a power application, not an energy one. Lead-acid in particular loses substantial usable capacity at high discharge rates, so the amp-hour number quoted at a slow rate overstates what the string delivers in a real event. The figure that matters is capacity at the actual discharge rate — which is why the first real discharge so often surprises people."
+    },
+    {
+     "q": "Which consideration most often decides against lithium in a UPS battery room, despite its technical advantages?",
+     "c": [
+      "Cycle life",
+      "Discharge rate capability",
+      "Fire code and permitting under NFPA 855",
+      "Weight"
+     ],
+     "a": 2,
+     "why": "Lithium wins on life, footprint, discharge rate and monitoring, and its cost gap has narrowed. What it drags in is a different fire-code regime governing spacing, enclosure, suppression and detection, sometimes with product-specific test data required. The authority having jurisdiction decides, and that decision is outside the vendor's control."
+    },
+    {
+     "q": "A campus standardises one transformer rating and impedance across all phases rather than optimising each phase. The main benefit is:",
+     "c": [
+      "Lower unit cost",
+      "Manufacturing slots become fungible across phases, preserving schedule optionality",
+      "Reduced losses",
+      "Simpler maintenance training"
+     ],
+     "a": 1,
+     "why": "When equipment lead time sets the critical path, the scarce asset is the factory slot. A standard unit can be re-allocated to whichever phase needs it; a bespoke one cannot. Cost and maintenance benefits are real but secondary — the buyer is purchasing the ability to move capacity between phases as the programme changes."
+    },
+    {
+     "q": "A larger transformer with lower impedance is substituted late in design. The most serious consequence is:",
+     "c": [
+      "Higher no-load losses",
+      "Available fault current downstream rises, possibly past the switchgear's withstand rating, and the coordination study is invalidated",
+      "A longer delivery time",
+      "Increased audible noise"
+     ],
+     "a": 1,
+     "why": "Impedance limits fault current. Lowering it raises the current the downstream assembly must survive and the breakers must interrupt, and every relay setting derived against the old model is now describing a different system. Nothing alarms — the gear is simply under-rated and mis-coordinated until someone re-runs the studies."
+    },
+    {
+     "q": "A vendor's 800 VDC collaboration appears in its own press release but in no independent coverage of that ecosystem. The correct handling is:",
+     "c": [
+      "Discard it as unreliable",
+      "Repeat it as an established industry position",
+      "Carry it as a sourced first-party claim, noting that independent coverage does not corroborate it",
+      "Wait for a competitor to confirm it"
+     ],
+     "a": 2,
+     "why": "A company's own release is a legitimate source for what the company is doing — it is not a rumour. But a claim visible from only one side is different in kind from one that independent reporting has picked up, and saying so is what separates a usable dossier from a press summary. Report the source and the silence together."
+    }
+   ]
+  }
+ ]
+}

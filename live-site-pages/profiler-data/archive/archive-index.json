@@ -11,6 +11,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "abb.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-03",
+   "supersededBy": 5
   }
  ],
  "aligned": [
@@ -329,6 +335,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "eaton.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-03",
+   "supersededBy": 5
   }
  ],
  "enchanted-rock": [
@@ -447,6 +459,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "ge-vernova.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-03",
+   "supersededBy": 5
   }
  ],
  "google": [
@@ -927,6 +945,12 @@
    "profileVersion": 2,
    "archivedAt": "2026-08-30",
    "supersededBy": 3
+  },
+  {
+   "file": "prevalon.profile.v3.json",
+   "profileVersion": 3,
+   "archivedAt": "2026-09-03",
+   "supersededBy": 4
   }
  ],
  "primoris": [
@@ -1027,6 +1051,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "schneider-electric.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-03",
+   "supersededBy": 5
   }
  ],
  "siemens-energy": [
@@ -1041,6 +1071,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "siemens-energy.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-03",
+   "supersededBy": 5
   }
  ],
  "sinexcel": [
@@ -1253,6 +1289,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "vertiv.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-03",
+   "supersededBy": 5
   }
  ],
  "voltagrid": [
@@ -1333,6 +1375,14 @@
    "profileVersion": 5,
    "archivedAt": "2026-08-30",
    "supersededBy": 6
+  }
+ ],
+ "piller": [
+  {
+   "file": "piller.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-03",
+   "supersededBy": 2
   }
  ]
 }

@@ -276,16 +276,6 @@
    "via": "Hybrid Power Stabilizer",
    "status": "active",
    "since": "2026-04"
-  },
-  {
-   "slug": "mitsubishi-power",
-   "type": "other",
-   "status": "historical",
-   "since": "2024-02",
-   "via": "Battery energy storage carve-out",
-   "note": "Prevalon was created in February 2024 out of Mitsubishi Power Americas' battery energy storage business as a standalone, legally separated company, and Mitsubishi Power Americas remained a co-owner until the July 2026 sale to Nextpower.",
-   "context": "The announcement described Mitsubishi Power Americas transforming and rebranding its BESS business into Prevalon, carrying over 30 projects and roughly 3 GWh of deployed utility-scale storage along with the leadership team, technology, employees and other assets. Within weeks the structure was restructured into a joint venture between Mitsubishi Power Americas and Emerald Energy Storage, an entity representing Prevalon's senior management plus outside investment.\n\nNextpower, the renamed Nextracker, acquired Prevalon from both Mitsubishi Power Americas and Emerald Energy Storage for up to $365 million in cash and stock, closing in July 2026. Mitsubishi Power has fully exited battery storage as a result, and its post-close position — whether any stake, supply agreement or clean exit — is not stated in any source located.",
-   "source": "https://power.mhi.com/regions/amer/news/20240222.html"
   }
  ],
  "policyExposure": [
@@ -488,6 +478,6 @@
    "url": "https://prevalonenergy.com/hybrid-power-stabilizer-for-data-centers/"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

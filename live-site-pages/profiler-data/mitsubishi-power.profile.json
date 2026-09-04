@@ -1,0 +1,1403 @@
+{
+ "schemaVersion": 7,
+ "slug": "mitsubishi-power",
+ "name": "Mitsubishi Power (a power solutions brand of Mitsubishi Heavy Industries, Ltd.)",
+ "shortName": "Mitsubishi Power",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://power.mhi.com/",
+ "headquarters": "Yokohama, Japan; Mitsubishi Power Americas headquartered in Lake Mary, Florida",
+ "founded": "Mitsubishi Heavy Industries founded 1884; the Mitsubishi Power brand established 2020",
+ "employees": "Mitsubishi Power Americas states more than 2,700 (2026); parent MHI reports 78,793 group-wide",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "TSE: 7011 (parent, Mitsubishi Heavy Industries, Ltd.)"
+ },
+ "sources": [
+  {
+   "label": "POWER Magazine — Ansaldo returns to the US gas turbine market as the equipment crunch widens the supplier field",
+   "url": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "Utility Dive — Mitsubishi gas turbine backlog reaches 35 GW",
+   "url": "https://www.utilitydive.com/news/mitsubishi-gas-turbine-backlog-earnings/827761/",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Simply Wall St — Mitsubishi Heavy Industries recorded a 67% EPS beat",
+   "url": "https://simplywall.st/stocks/jp/capital-goods/tse-7011/mitsubishi-heavy-industries-shares/news/mitsubishi-heavy-industries-ltd-just-recorded-a-67-eps-beat",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "MHI — Q1 FY2026 results presentation (quarter ended 2026-06-30)",
+   "url": "https://www.mhi.com/finance/library/result/pdf/fy20261q/presentation.pdf",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "MHI — Q1 FY2026 results announcement",
+   "url": "https://www.mhi.com/news/26080401.html",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Power Technology — Nextpower finalises the Prevalon acquisition",
+   "url": "https://www.power-technology.com/news/nextpower-finalises-prevalon-acquisition/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Gas Turbine World — Mitsubishi Power expands global business with gas turbine orders and technology initiatives",
+   "url": "https://gasturbineworld.com/mitsubishi-power-expands-global-business-with-gas-turbine-orders-and-technology-initiatives/",
+   "date": "2026-07-18"
+  },
+  {
+   "label": "MHI — 10 MW-class chiller shipped to the US; MHI in the NVIDIA Partner Network as a power and cooling partner",
+   "url": "https://www.mhi.com/news/260716.html",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Mitsubishi Power Americas — Entergy and MHI Group sign an MOU on integrated GTCC and carbon capture",
+   "url": "https://power.mhi.com/regions/amer/news/260715",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Mitsubishi Power — contract to supply boilers for heavy-oil to natural-gas fuel conversion in Saudi Arabia",
+   "url": "https://power.mhi.com/news/260713.html",
+   "date": "2026-07-13"
+  },
+  {
+   "label": "Mitsubishi Power Asia Pacific — long-term gas turbine parts and services agreement with LNGPH",
+   "url": "https://power.mhi.com/regions/apac/news/gro260622.html",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Mitsubishi Power Americas — PowerSouth Energy Cooperative expands Lowman Energy Center with a second M501JAC and a 25-year long-term service agreement",
+   "url": "https://power.mhi.com/regions/amer/news/260603",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "Nextracker / Nextpower — definitive agreement to acquire Prevalon Energy for up to $365 million",
+   "url": "https://investors.nextracker.com/news/news-details/2026/Nextpower-Announces-Entry-into-Battery-Energy-Storage-BESS-and-AI-Data-Center-Markets-with-Definitive-Agreement-to-Acquire-Prevalon-Energy-Increases-Fiscal-Year-2027-Outlook/default.aspx",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "Power Engineering — Wyoming data center power projects highlight new entrants and partnerships",
+   "url": "https://www.power-eng.com/gas/turbines/wyoming-data-center-power-projects-highlight-new-entrants-partnerships-in-power-generation-market/",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "MHI — 2026 business plan and medium-term business plan progress update",
+   "url": "https://www.mhi.com/finance/library/plan/pdf/260527presentation.pdf",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Mitsubishi Power Americas and Tallgrass — turbine allocation for the Cheyenne Power Hub",
+   "url": "https://power.mhi.com/regions/amer/news/260515",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "MHI — FY2025 full-year results presentation (year ended 2026-03-31)",
+   "url": "https://www.mhi.com/finance/library/result/pdf/fy20254q/presentation.pdf",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Mitsubishi Power Americas — CERAWeek 2026 leadership takeaways on power, policy and delivery timelines",
+   "url": "https://power.mhi.com/regions/amer/insights/ceraweek-leadership-takeaways-power-policy-and-delivery-timelines",
+   "date": "2026-04-03"
+  },
+  {
+   "label": "Wood Mackenzie — gas turbine prices soar 195% as the market faces a supply-demand crisis",
+   "url": "https://www.woodmac.com/press-releases/gas-turbine-prices-soar-195-as-market-faces-supply-demand-crisis/",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "POWER Magazine — Full throttle: five trends reshaping the gas power boom",
+   "url": "https://www.powermag.com/full-throttle-five-trends-reshaping-the-gas-power-boom/",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "Modern Power Systems — could a delivery backlog derail a gas turbine boom?",
+   "url": "https://www.modernpowersystems.com/data-centre-power/could-a-delivery-backlog-derail-a-gt-boom/",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "Mitsubishi Power MENA — Qatar Facility E integrated water and power project awarded with M701JAC turbines",
+   "url": "https://power.mhi.com/regions/mena/news/260114.html",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "Mitsubishi Power Americas — what utilities need to know about the power generation supply chain",
+   "url": "https://power.mhi.com/regions/amer/insights/what-utilities-need-know-about-power-generation-supply-chain",
+   "date": "2026-01-08"
+  },
+  {
+   "label": "Mitsubishi Power — next-generation gas turbine control system completes functional testing, jointly developed with Mitsubishi Electric",
+   "url": "https://power.mhi.com/news/251224.html",
+   "date": "2025-12-24"
+  },
+  {
+   "label": "Mitsubishi Electric — next-generation gas turbine control system announcement",
+   "url": "https://www.mitsubishielectric.com/en/pr/2025/pdf/1224.pdf",
+   "date": "2025-12-24"
+  },
+  {
+   "label": "MHI Report 2025 — Energy Systems chapter",
+   "url": "https://www.mhi.com/finance/library/annual/pdf/report_2025_14.pdf",
+   "date": "2025-11-28"
+  },
+  {
+   "label": "MHI Report 2025 — executive roundtable on data centers and power demand",
+   "url": "https://www.mhi.com/finance/library/annual/pdf/report_2025_10.pdf",
+   "date": "2025-11-28"
+  },
+  {
+   "label": "Mitsubishi Power — second H-25 order for Chang Chun Petrochemical, Taiwan",
+   "url": "https://power.mhi.com/news/251112.html",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "Mitsubishi Power APAC — PacificLight appoints a consortium of Mitsubishi Power and Jurong Engineering for a 670 MW CCGT in Singapore",
+   "url": "https://power.mhi.com/regions/apac/news/gro251023.html",
+   "date": "2025-10-23"
+  },
+  {
+   "label": "POWER Magazine — Google backs the first US gas-fired power plant with integrated CCS for data centers",
+   "url": "https://www.powermag.com/google-backs-first-u-s-gas-fired-power-plant-with-integrated-ccs-for-data-centers/",
+   "date": "2025-10-23"
+  },
+  {
+   "label": "Mitsubishi Power MENA — 60 years in Saudi Arabia and the first locally assembled JAC gas turbine at the Dammam facility",
+   "url": "https://power.mhi.com/regions/mena/news/251014.html",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "Mitsubishi Power — first order for the new M100S blast-furnace-gas-fired GTCC",
+   "url": "https://power.mhi.com/news/250930.html",
+   "date": "2025-09-30"
+  },
+  {
+   "label": "Mitsubishi Power APAC — contract to supply two M701JAC units to the O Mon 4 power plant, Vietnam",
+   "url": "https://power.mhi.com/regions/apac/news/gro250908.html",
+   "date": "2025-09-08"
+  },
+  {
+   "label": "Mitsubishi Power — Taiwan Tung Hsiao power plant, 2,800 MW with five M501JAC units jointly with CTCI",
+   "url": "https://power.mhi.com/news/250905.html",
+   "date": "2025-09-05"
+  },
+  {
+   "label": "Mitsubishi Power Americas — solving the data center power dilemma",
+   "url": "https://power.mhi.com/regions/amer/insights/solving-data-center-power-dilemma",
+   "date": "2025-08-27"
+  },
+  {
+   "label": "Utility Dive — Georgia Power receives the first of three M501JAC turbines as delays loom",
+   "url": "https://www.utilitydive.com/news/georgia-power-natural-gas-turbine-delivery-delays-mitsubishi/758252/",
+   "date": "2025-08-21"
+  },
+  {
+   "label": "Mitsubishi Power Americas — Georgia Power Plant Yates M501JAC delivery from Savannah Machinery Works",
+   "url": "https://power.mhi.com/regions/amer/news/250819",
+   "date": "2025-08-19"
+  },
+  {
+   "label": "Federal Register — repeal of greenhouse gas emissions standards for fossil-fuel-fired electric generating units",
+   "url": "https://www.federalregister.gov/documents/2025/06/17/2025-10991/repeal-of-greenhouse-gas-emissions-standards-for-fossil-fuel-fired-electric-generating-units",
+   "date": "2025-06-17"
+  },
+  {
+   "label": "Mitsubishi Power Americas — world's largest hydrogen fuel blending demonstration on an advanced-class gas turbine at Plant McDonough-Atkinson",
+   "url": "https://power.mhi.com/regions/amer/news/250616",
+   "date": "2025-06-16"
+  },
+  {
+   "label": "MHI — establishment of a data center business base in Dallas, Texas",
+   "url": "https://www.mhi.com/news/250516.html",
+   "date": "2025-05-16"
+  },
+  {
+   "label": "POWER Magazine — the POWER interview: Mitsubishi Power on turbine constraints, data center pressures and hydrogen readiness",
+   "url": "https://www.powermag.com/the-power-interview-mitsubishi-power-talks-turbine-constraints-data-center-pressures-and-hydrogen-readiness/",
+   "date": "2025-04-21"
+  },
+  {
+   "label": "Federal Register — final rule for the production of clean hydrogen (section 45V)",
+   "url": "https://www.federalregister.gov/documents/2025/01/10/2024-31513/credit-for-production-of-clean-hydrogen-and-energy-credit",
+   "date": "2025-01-10"
+  },
+  {
+   "label": "Energy-Storage.news — Mitsubishi Power's BESS spinout and ownership restructure",
+   "url": "https://www.energy-storage.news/mitsubishi-powers-bess-spinout-and-ownership-restructure-to-make-unit-more-nimble-and-fast-moving/",
+   "date": "2024-04-16"
+  },
+  {
+   "label": "Mitsubishi Power Americas — Prevalon announced as a standalone battery energy storage company",
+   "url": "https://power.mhi.com/regions/amer/news/20240222.html",
+   "date": "2024-02-22"
+  },
+  {
+   "label": "Mitsubishi Power Americas — Bill Newsom appointed President and CEO",
+   "url": "https://power.mhi.com/regions/amer/news/20211119.html",
+   "date": "2021-11-19"
+  },
+  {
+   "label": "Global Energy Monitor — leading three manufacturers provide two-thirds of turbines for gas-fired plants under construction",
+   "url": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-power-plants-under/"
+  },
+  {
+   "label": "Mitsubishi Power — M501J and M501JAC gas turbine product page",
+   "url": "https://power.mhi.com/products/gasturbines/lineup/m501j"
+  },
+  {
+   "label": "Mitsubishi Power — M701J and M701JAC gas turbine product page",
+   "url": "https://power.mhi.com/products/gasturbines/lineup/m701j"
+  },
+  {
+   "label": "Mitsubishi Power — M501G and M501GAC gas turbine product page",
+   "url": "https://power.mhi.com/products/gasturbines/lineup/m501g"
+  },
+  {
+   "label": "Mitsubishi Power — M701F gas turbine product page",
+   "url": "https://power.mhi.com/products/gasturbines/lineup/m701f"
+  },
+  {
+   "label": "Mitsubishi Power — M701D gas turbine product page",
+   "url": "https://power.mhi.com/products/gasturbines/lineup/m701d"
+  },
+  {
+   "label": "Mitsubishi Power — H-25 gas turbine product page",
+   "url": "https://power.mhi.com/products/gasturbines/lineup/h25"
+  },
+  {
+   "label": "Mitsubishi Power — H-100 gas turbine product page",
+   "url": "https://power.mhi.com/products/gasturbines/lineup/h100"
+  },
+  {
+   "label": "Mitsubishi Power — gas turbine lineup",
+   "url": "https://power.mhi.com/products/gasturbines/lineup"
+  },
+  {
+   "label": "Mitsubishi Power — T-Point 2 validation power plant",
+   "url": "https://power.mhi.com/products/gasturbines/technology/validate"
+  },
+  {
+   "label": "Mitsubishi Power — high-efficiency gas turbine technology",
+   "url": "https://power.mhi.com/products/gasturbines/technology/highlyefficiency-gas-turbine"
+  },
+  {
+   "label": "Mitsubishi Power — combustor technology",
+   "url": "https://power.mhi.com/products/gasturbines/technology/combustor"
+  },
+  {
+   "label": "Mitsubishi Power — global gas turbine experience and installed base",
+   "url": "https://power.mhi.com/products/gasturbines/global-experience"
+  },
+  {
+   "label": "Mitsubishi Power Americas — hydrogen gas turbines",
+   "url": "https://power.mhi.com/regions/amer/products/hydrogen-gas-turbine"
+  },
+  {
+   "label": "Mitsubishi Power Americas — Takasago Hydrogen Park",
+   "url": "https://power.mhi.com/regions/amer/success-stories/hydrogen-park"
+  },
+  {
+   "label": "Mitsubishi Power Americas — IPP Renewed success story",
+   "url": "https://power.mhi.com/regions/amer/success-stories/ipp-renewed"
+  },
+  {
+   "label": "Mitsubishi Power Americas — Advanced Clean Energy Storage project",
+   "url": "https://power.mhi.com/regions/amer/success-stories/advanced-clean-energy-storage-project"
+  },
+  {
+   "label": "Mitsubishi Power Americas — data centers solutions page",
+   "url": "https://power.mhi.com/regions/amer/solutions/data-centers"
+  },
+  {
+   "label": "Mitsubishi Power Americas — fast-track on-demand emergency power",
+   "url": "https://power.mhi.com/regions/amer/solutions/fast-track-on-demand-emergency-power"
+  },
+  {
+   "label": "Mitsubishi Power — FT4000 SWIFTPAC aeroderivative package",
+   "url": "https://power.mhi.com/products/aerogasturbines/lineup/ft4000sp"
+  },
+  {
+   "label": "Mitsubishi Power — FT8 SWIFTPAC aeroderivative package",
+   "url": "https://power.mhi.com/products/aerogasturbines/lineup/ft8sp"
+  },
+  {
+   "label": "Mitsubishi Power — FT8 MOBILEPAC aeroderivative package",
+   "url": "https://power.mhi.com/products/aerogasturbines/lineup/ft8mp"
+  },
+  {
+   "label": "Mitsubishi Power Americas — locations",
+   "url": "https://power.mhi.com/regions/amer/about-us/locations"
+  },
+  {
+   "label": "MHI — corporate officers",
+   "url": "https://www.mhi.com/company/overview/officers"
+  },
+  {
+   "label": "MHI — investor relations calendar",
+   "url": "https://www.mhi.com/finance/calendar"
+  },
+  {
+   "label": "StockAnalysis.com — Mitsubishi Heavy Industries (TYO: 7011) financials, S&P Global Market Intelligence data",
+   "url": "https://stockanalysis.com/quote/tyo/7011/financials/"
+  },
+  {
+   "label": "StockAnalysis.com — Mitsubishi Heavy Industries forecast and analyst ratings",
+   "url": "https://stockanalysis.com/quote/tyo/7011/forecast/"
+  },
+  {
+   "label": "Quartr — Mitsubishi Heavy Industries events and results",
+   "url": "https://quartr.com/companies/mitsubishi-heavy-industries-ltd_16819"
+  },
+  {
+   "label": "Harvard Environmental & Energy Law Program — tracker for greenhouse gas regulation of fossil-fuel power plants",
+   "url": "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/"
+  },
+  {
+   "label": "Congressional Research Service IF12602 — the section 45V clean hydrogen production credit",
+   "url": "https://www.congress.gov/crs-product/IF12602"
+  },
+  {
+   "label": "Phillips Lytle — administration restructures Section 232 tariffs on metal and derivative products",
+   "url": "https://phillipslytle.com/administration-restructures-section-232-tariffs-on-metal-and-derivative-products/"
+  },
+  {
+   "label": "MarketScreener — Nextpower acquired Prevalon Energy from Mitsubishi Power Americas and Emerald Energy Storage",
+   "url": "https://www.marketscreener.com/news/nextpower-inc-acquired-prevalon-energy-llc-from-mitsubishi-power-americas-inc-and-emerald-energy-ce7f51dbdb80f222"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1,
+ "summary": "BOTTOM LINE UP FRONT: Mitsubishi Power is the third of the three manufacturers who build essentially all heavy-duty gas turbines for the Western market, and it is a distant third by order book — 35 GW of large-frame turbines under contract across 80 units at 2026-06-30, against GE Vernova's 116 GW and Siemens Energy's 95 GW per POWER Magazine's September 2026 comparison. It has converted the AI power crunch into a compounding backlog while positioning deliberately toward core utility customers rather than chasing data-center volume, and it exited battery storage entirely in July 2026. ENTITY NOTE, WHICH GOVERNS EVERY FIGURE BELOW: Mitsubishi Power is a brand, not a listed company — its own site states that it is a power solutions brand of Mitsubishi Heavy Industries, Ltd. (TSE: 7011). MHI does not report Mitsubishi Power as a segment; the narrowest published line is GTCC within the Energy Systems segment, which excludes steam power, aero engines, boilers and control systems that Mitsubishi Power also sells. There is therefore no such thing as a disclosed Mitsubishi Power revenue or profit figure, and none is asserted here. MHI is also legally and operationally separate from Mitsubishi Electric (TSE: 6503); the two share only the keiretsu name.",
+ "ecosystemRole": "One of three suppliers who between them account for roughly two-thirds of the turbines in gas-fired plants under construction worldwide, in a market where global orders reached about 110 GW at end-2025 against 60-70 GW of manufacturing capacity. That gap is the ecosystem fact: turbine delivery, not construction, now sets when new gas generation can exist, and Mitsubishi Power's own executives confirm that customers are paying reservation fees to hold production slots for the first time in decades. Its data-center position is two-tier and explicit — trailer-mounted aeroderivative packages as a temporary bridge until a grid connection arrives, and H-25 industrial frames with absorption chillers as permanent behind-the-meter cogeneration.",
+ "productsAndServices": [
+  {
+   "name": "M501 and M701 heavy-duty gas turbines",
+   "category": "Heavy-duty gas turbines",
+   "description": "The large-frame line, split into an M501 series for 60 Hz grids and an M701 series for 50 Hz, spanning the D, F, G, GAC, J and JAC classes. Single-shaft, cold-end drive, sold as bare frames, power trains, power islands or full turnkey EPC, with the JAC class at a 1,650°C firing temperature and combined-cycle efficiency above 64%.",
+   "highlights": [
+    "The JAC class fires at 1,650°C — 100°C above the J series, using cooling technology from Japan's national 1,700°C-class gas turbine programme plus advanced thermal barrier coatings — and reaches better than 64% combined-cycle efficiency",
+    "Every new frame is validated for at least 8,000 grid-connected hours at T-Point 2 before commercial release, which the company describes as the only commercially operating power plant in the world built specifically for validation",
+    "J-series cumulative commercial operating hours passed 3.2 million as of December 2025; the F-series fleet has more than 24 million cumulative hours",
+    "All advanced-class frames are capable of 30% hydrogen co-firing by volume today, with a company plan to reach 100% by 2030",
+    "The air-cooled combustor on the GAC and JAC classes removes steam cooling from the bottoming cycle, shortening start-up and improving turndown",
+    "Company states the JAC reduces carbon dioxide emissions by approximately 65% against a conventional coal-fired plant"
+   ],
+   "positioning": "MHI claims world-leading market share in gas turbines above 100 MW across 2022-2024 in its own annual report. Independent sources rank it third: POWER Magazine's September 2026 comparison puts GE Vernova at 116 GW under contract and Siemens Energy at 95 GW against Mitsubishi's 35 GW of large-frame backlog, though those figures are not perfectly like-for-like because the first two include slot reservations that Mitsubishi does not split out. Global Energy Monitor gives Mitsubishi 17% of Asian capacity under construction against GE Vernova's 38% and Siemens Energy's 16%. All three now claim combined-cycle efficiency around 64%, so efficiency is not a differentiator.",
+   "soldThrough": "Direct OEM sales, turnkey EPC consortia with partners including CTCI in Taiwan, Samsung C&T in Qatar, Burns & McDonnell in Alabama and Jurong Engineering in Singapore, and licensee manufacture through Dongfang Electric in China.",
+   "targetSegments": [
+    "Independent power producers",
+    "Vertically integrated utilities",
+    "Generation and transmission cooperatives",
+    "State utilities and integrated water and power projects",
+    "Steel and petrochemical captive power",
+    "Behind-the-meter data-center power"
+   ],
+   "roadmap": "30% hydrogen today rising to 100% by 2030; MHI has line of sight to a 30% production-capacity increase across FY2024 to FY2030 via more than 1,000 kaizen actions and an upgraded precision casting facility, and is evaluating a further increase; the next-generation control system co-developed with Mitsubishi Electric targets market launch in fiscal 2026."
+  },
+  {
+   "name": "H-25 and H-100 mid-size industrial gas turbines",
+   "category": "Industrial gas turbines",
+   "description": "Industrial frames from about 40 MW to 120 MW aimed at cogeneration, island grids and — explicitly — permanent behind-the-meter data-center power. The H-100 is described by the company as the world's largest high-efficiency two-shaft gas turbine, reaching full load in ten minutes and available for both power generation and mechanical drive.",
+   "highlights": [
+    "H-25 delivers 41.0 MW simple cycle at 36.2% efficiency, 60.1 MW in a one-on-one combined cycle at 54.0%, and up to 70 metric tons of steam per hour",
+    "H-100 delivers 105.7 MW at 60 Hz and 116.4 MW at 50 Hz simple cycle, both at about 38.2-38.3% efficiency, with a fast start to full load in 10 minutes and fast ramp rates of 26-29 MW per minute",
+    "Combined heat and power efficiency above 80% overall, on fuels including natural gas, LPG, off gas, syngas, light oil, kerosene and bio-ethanol",
+    "The company frames the H-25 as a permanent behind-the-meter data-center solution paired with absorption chillers, providing what it describes as essentially emissions-free cooling capacity to server racks",
+    "H-25 100% hydrogen firing was validated at the Takasago Hydrogen Park with commercialisation targeted from 2025",
+    "The new M100S, a roughly 100 MW-class blast-furnace-gas-fired combined-cycle frame combining large BFG turbine technology with JAC technology, took its first order in September 2025 for operation in 2027"
+   ],
+   "positioning": "The industrial frames are where Mitsubishi Power's data-center argument is strongest, because a 40-120 MW machine matches a hall's load far better than a 450 MW frame and can be paired with absorption cooling. The company states it holds more than 60% global share of blast-furnace-gas-fired gas turbines by units, and separately about 70% on an output basis for steelworks by-product-gas combined-cycle plants.",
+   "soldThrough": "Direct and through EPC partners.",
+   "targetSegments": [
+    "Steel, petrochemical and refinery cogeneration",
+    "Island and industrial grids",
+    "Data centers as permanent behind-the-meter power"
+   ],
+   "roadmap": "H-25 100% hydrogen commercialisation; ammonia combustion testing on the H-25 combustor reported as promising with SCR control."
+  },
+  {
+   "name": "FT8 and FT4000 aeroderivative packages",
+   "category": "Aeroderivative gas turbines",
+   "description": "Fast-deploy, mobile and peaking packages from 29 MW to 140 MW sold through Mitsubishi Power Aero LLC — the products the company explicitly positions as the temporary bridge for data centers waiting on a grid connection.",
+   "highlights": [
+    "FT8 MOBILEPAC delivers 31 MW at 60 Hz and 29 MW at 50 Hz on two trailers with no foundation or concrete pad, in an 80 by 54 foot footprint, transportable by land, sea or air, with complete installation for emergency power within one day for pre-commissioned site-ready units",
+    "FT4000 SWIFTPAC is described by the company as the world's largest-capacity aeroderivative package at 70 MW and 140 MW, with better than 41% simple-cycle efficiency and a 10-minute cold start to full power",
+    "FT8 SWIFTPAC delivers 31 MW or 62 MW and can be producing power in under 30 days after site arrival, including barge and offshore applications",
+    "All packages are dual-fuel with water-injection NOx control and air cooling",
+    "Field proof point: five 30 MW MOBILEPAC units for CFEnergia at Mexicali went from contract to commercial operation in 110 days, later expanded to eight units and up to 240 MW",
+    "Under oil and gas applications the company reports relocations from shutdown to restart in as little as 48 hours"
+   ],
+   "positioning": "The company's own framing is that aeroderivatives are ideal as a temporary bridging solution allowing a data center to begin operation while it waits for grid connection, with a VP of business development noting that behind-the-meter siting challenges are addressed through redundancy across units plus a battery energy storage solution. The installed aeroderivative base is 614 units, overwhelmingly FT8.",
+   "soldThrough": "Direct through Mitsubishi Power Aero LLC, Glastonbury, Connecticut, with in-house EPC through Energy Services LLC.",
+   "targetSegments": [
+    "Data centers awaiting grid connection",
+    "Emergency and disaster response power",
+    "Peaking and grid support",
+    "Offshore and barge-mounted power"
+   ],
+   "roadmap": "Not separately stated beyond the data-center bridging positioning."
+  },
+  {
+   "name": "Steam power, boilers, environmental systems and controls",
+   "category": "Balance of plant",
+   "description": "Steam turbines for thermal, industrial, nuclear and geothermal service; boilers including once-through, drum, HRSG, bubbling fluidised bed and chemical recovery; air quality control systems covering SCR, flue gas desulphurisation and gas-gas heaters; generators; and the DIASYS control system family.",
+   "highlights": [
+    "DIASYS control systems have more than 3,000 units delivered to over 60 countries — the installed base the next-generation system co-developed with Mitsubishi Electric will enter",
+    "The company introduced what it describes as the world's first commercial dry low-NOx combustors on the D series in 1984",
+    "Steam turbines and generators for the IPP Renewed project were supplied from Hitachi Works while the gas turbines came from Takasago — the two-works split is how a full power island is assembled",
+    "Long-term service agreements are a standard part of the offer, including a 25-year LTSA at PowerSouth's Lowman Energy Center and a 20-year LTSA on IPP Renewed",
+    "TOMONI is the AI and intelligent-solutions suite, with TOMONI HUB analytics centres; off-site plant control has been demonstrated from the Takasago hub"
+   ],
+   "positioning": "The service tail is the economics of this business: a turbine sale is the entry point to a two-decade service agreement, and the company sells the power island rather than the machine.",
+   "soldThrough": "Direct, bundled with equipment sales.",
+   "targetSegments": [
+    "Utilities",
+    "Industrial cogeneration",
+    "Nuclear operators",
+    "Geothermal developers"
+   ],
+   "roadmap": "Next-generation gas turbine control system jointly developed with Mitsubishi Electric, market launch targeted fiscal 2026."
+  },
+  {
+   "name": "Hydrogen combustion and carbon capture integration",
+   "category": "Decarbonisation",
+   "description": "Hydrogen co-firing capability across the advanced-class fleet, the Takasago Hydrogen Park validation complex, and — through sister company Mitsubishi Heavy Industries America — carbon capture bundled with the gas turbines into an integrated offer.",
+   "highlights": [
+    "The company reports more than 3.5 million hours of operation on fuels containing hydrogen across 29 units, accumulated over four decades",
+    "50% hydrogen by volume was validated on an M501GAC at Georgia Power's Plant McDonough-Atkinson in June 2025 — described as the world's largest hydrogen blending demonstration on an advanced-class gas turbine to date — achieving approximately a 22% carbon dioxide reduction, following a 20% blend at the same plant in 2022",
+    "The multi-cluster combustor for 100% hydrogen uses more fuel nozzles each with a smaller opening, injecting fuel more finely to disperse the flame and avoid flashback",
+    "Takasago Hydrogen Park was created by modifying and expanding T-Point 2 and is described as the world's first complex able to validate the full hydrogen chain from production through storage to power generation",
+    "The Entergy MOU of July 2026 pairs M501JAC turbines from Mitsubishi Power Americas with carbon capture technology from MHIA, targeting a stated 50% reduction in overall costs",
+    "A VP of business development claims Mitsubishi is probably the only OEM able to integrate a gas turbine and carbon capture in-house"
+   ],
+   "positioning": "The honest reading of the hydrogen numbers matters commercially: a 50% blend by volume displaced only about 22% of the carbon dioxide, because hydrogen carries roughly a third of methane's energy per unit volume. The company reports this correctly; the risk is downstream readers treating a volumetric figure as a decarbonisation figure.",
+   "soldThrough": "Bundled with turbine sales; carbon capture through MHIA.",
+   "targetSegments": [
+    "Utilities under decarbonisation mandates",
+    "Hydrogen hub participants",
+    "Data-center offtakers seeking low-carbon firm power"
+   ],
+   "roadmap": "100% hydrogen capability across advanced-class frames by 2030; the Intermountain Power Project's 840 MW combined cycle starts at 30% hydrogen and targets 100% no later than 2045."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "M501JAC and M501GAC — 60 Hz large frame",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "M501JAC simple-cycle output",
+     "value": "453 MW at ISO conditions"
+    },
+    {
+     "band": "Power",
+     "label": "M501JAC simple-cycle efficiency",
+     "value": "44.0% LHV"
+    },
+    {
+     "band": "Power",
+     "label": "M501JAC combined cycle, one-on-one",
+     "value": "664 MW at better than 64.0% net efficiency"
+    },
+    {
+     "band": "Power",
+     "label": "M501JAC combined cycle, two-on-one",
+     "value": "1,332 MW at better than 64.2% net efficiency"
+    },
+    {
+     "band": "Power",
+     "label": "M501GAC simple-cycle output",
+     "value": "283 MW at 40.0% LHV"
+    },
+    {
+     "band": "Power",
+     "label": "M501GAC combined cycle, one-on-one",
+     "value": "427 MW at 60.5%; two-on-one 856 MW at 60.7%"
+    },
+    {
+     "band": "Electrical",
+     "label": "M501JAC heat rate",
+     "value": "8,182 kJ/kWh (7,755 Btu/kWh) LHV"
+    },
+    {
+     "band": "Electrical",
+     "label": "M501JAC exhaust flow",
+     "value": "815 kg/s (1,685 lb/s)"
+    },
+    {
+     "band": "Electrical",
+     "label": "M501JAC exhaust temperature",
+     "value": "649°C (1,193°F)"
+    },
+    {
+     "band": "Electrical",
+     "label": "M501JAC emissions",
+     "value": "25 ppm NOx and 9 ppm CO at 15% O2"
+    },
+    {
+     "band": "Electrical",
+     "label": "M501JAC turndown",
+     "value": "50%"
+    },
+    {
+     "band": "Electrical",
+     "label": "M501JAC ramp rate",
+     "value": "42 MW per minute"
+    },
+    {
+     "band": "Electrical",
+     "label": "M501JAC start time",
+     "value": "30 minutes"
+    },
+    {
+     "band": "Electrical",
+     "label": "M501GAC exhaust",
+     "value": "618 kg/s at 617°C; 15 ppm NOx, 9 ppm CO; 18 MW/min ramp"
+    },
+    {
+     "band": "Design",
+     "label": "M501JAC firing temperature",
+     "value": "1,650°C class — 100°C above the J series"
+    },
+    {
+     "band": "Design",
+     "label": "M501JAC configuration",
+     "value": "15 compressor stages, 16 combustor cans, 4 turbine stages, single rotor, cold-end drive"
+    },
+    {
+     "band": "Design",
+     "label": "M501JAC rated speed",
+     "value": "3,600 rpm — set by the 60 Hz grid and a two-pole generator"
+    },
+    {
+     "band": "Design",
+     "label": "M501JAC dimensions and weight",
+     "value": "15.0 by 5.6 by 5.6 m; approximately 347 tonnes"
+    },
+    {
+     "band": "Design",
+     "label": "Combustor cooling",
+     "value": "Air-cooled on GAC and JAC, removing steam cooling from the bottoming cycle"
+    },
+    {
+     "band": "Compliance",
+     "label": "Hydrogen capability",
+     "value": "30% by volume today on all advanced-class frames; 50% by volume validated on an M501GAC in commercial service"
+    },
+    {
+     "band": "Compliance",
+     "label": "Validation",
+     "value": "At least 8,000 grid-connected hours at T-Point 2 before commercial release"
+    }
+   ],
+   "notes": "Collection gap: compressor pressure ratio is not published for any frame. The specification tabs give output, efficiency, heat rate, exhaust flow and temperature, emissions, turndown, ramp rate and start time, but not pressure ratio."
+  },
+  {
+   "product": "M701JAC, M701F and M701D — 50 Hz large frame",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "M701JAC (2015 rating) simple cycle",
+     "value": "574 MW at 43.4% LHV; combined cycle one-on-one 840 MW at better than 64.0%"
+    },
+    {
+     "band": "Power",
+     "label": "M701JAC (2018 rating) simple cycle",
+     "value": "448 MW at 44.0% LHV; combined cycle one-on-one 650 MW at better than 64.0%"
+    },
+    {
+     "band": "Power",
+     "label": "M701F simple cycle",
+     "value": "385 MW at 41.9% LHV; combined cycle 566 MW one-on-one at 62.0% and 1,135 MW two-on-one at 62.2%"
+    },
+    {
+     "band": "Power",
+     "label": "M701DA simple cycle",
+     "value": "144.09 MW at 34.8% LHV; combined cycle 212.5 MW at 51.4% and 426.6 MW at 51.6%"
+    },
+    {
+     "band": "Electrical",
+     "label": "M701JAC (2015) exhaust",
+     "value": "1,024 kg/s (2,181 lb/s) at 646°C; 66 MW per minute ramp"
+    },
+    {
+     "band": "Electrical",
+     "label": "M701F exhaust",
+     "value": "748 kg/s at 630°C; 25 ppm NOx, 10 ppm CO; 45% turndown; 38 MW per minute ramp"
+    },
+    {
+     "band": "Electrical",
+     "label": "M701F combined-cycle start",
+     "value": "45 minutes; M701DA combined-cycle start 70 minutes"
+    },
+    {
+     "band": "Electrical",
+     "label": "Heat rates",
+     "value": "M701JAC 8,295 kJ/kWh (2015) and 8,182 kJ/kWh (2018); M701F 8,592 kJ/kWh; M701DA 10,350 kJ/kWh"
+    },
+    {
+     "band": "Design",
+     "label": "M701JAC rated speed",
+     "value": "3,000 rpm — set by the 50 Hz grid, which is why the 50 Hz frame is larger than its 60 Hz sibling"
+    },
+    {
+     "band": "Design",
+     "label": "M701JAC configuration",
+     "value": "15 compressor stages, 22 combustor cans, 4 turbine stages"
+    },
+    {
+     "band": "Design",
+     "label": "M701JAC dimensions and weight",
+     "value": "16.7 by 6.5 by 6.9 m; approximately 550 tonnes"
+    },
+    {
+     "band": "Design",
+     "label": "M701F configuration",
+     "value": "17 compressor stages, 20 cans; 14.3 by 5.8 by 6.1 m, approximately 415 tonnes"
+    },
+    {
+     "band": "Design",
+     "label": "M701DA configuration",
+     "value": "19 compressor stages, 18 cans; 11.9 by 5.0 by 5.3 m, approximately 240 tonnes"
+    }
+   ],
+   "notes": "The two published M701JAC ratings are not a contradiction — they are two frames in the same series, the larger dating from 2015 and the smaller from 2018. Compare a 50 Hz frame against a 60 Hz competitor only with the frequency stated: shaft speed is fixed by the grid, and a slower shaft permits a physically larger machine."
+  },
+  {
+   "product": "H-25 and H-100 industrial frames",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "H-25 simple cycle",
+     "value": "41.0 MW at 36.2% LHV"
+    },
+    {
+     "band": "Power",
+     "label": "H-25 combined cycle",
+     "value": "60.1 MW one-on-one at 54.0%; 121.4 MW two-on-one at 54.5%"
+    },
+    {
+     "band": "Power",
+     "label": "H-100 60 Hz simple cycle",
+     "value": "105.7 MW at 38.2% LHV"
+    },
+    {
+     "band": "Power",
+     "label": "H-100 60 Hz combined cycle",
+     "value": "150.0 MW at 55.1%; 305.7 MW two-on-one at 56.1%"
+    },
+    {
+     "band": "Power",
+     "label": "H-100 50 Hz simple cycle",
+     "value": "116.4 MW at 38.3% LHV"
+    },
+    {
+     "band": "Power",
+     "label": "H-100 50 Hz combined cycle",
+     "value": "171.0 MW at 57.4%; 346.0 MW two-on-one at 58.0%"
+    },
+    {
+     "band": "Power",
+     "label": "H-100 mechanical drive",
+     "value": "144,350 hp (107.7 MW) at 3,600 rpm; 160,780 hp (119.9 MW) at 3,000 rpm, both at 38.9% LHV"
+    },
+    {
+     "band": "Electrical",
+     "label": "H-25 exhaust",
+     "value": "114 kg/s at 569°C; 15 ppm NOx and 9 ppm CO; 3.4 MW per minute ramp; 22-minute start"
+    },
+    {
+     "band": "Electrical",
+     "label": "H-100 60 Hz exhaust",
+     "value": "293 kg/s at 534°C; 9 ppm NOx and 9 ppm CO"
+    },
+    {
+     "band": "Electrical",
+     "label": "H-100 fast start",
+     "value": "10 minutes to full load in fast mode, against 22 minutes normal; fast ramp 26 MW/min at 60 Hz and 29 MW/min at 50 Hz"
+    },
+    {
+     "band": "Electrical",
+     "label": "H-25 steam production",
+     "value": "Up to 70 metric tons per hour, which is what makes absorption cooling possible"
+    },
+    {
+     "band": "Design",
+     "label": "H-25 package weights",
+     "value": "Gas turbine 55 t; lube oil tank, reduction gear and auxiliaries 63 t; generator 83 t; air intake 36 t; exhaust 8 t"
+    },
+    {
+     "band": "Design",
+     "label": "Fuel flexibility",
+     "value": "Natural gas, LPG, off gas, syngas, light oil, kerosene and bio-ethanol"
+    },
+    {
+     "band": "Design",
+     "label": "Combined heat and power",
+     "value": "Overall efficiency above 80% in CHP configuration"
+    },
+    {
+     "band": "Compliance",
+     "label": "H-25 hydrogen",
+     "value": "100% hydrogen firing validated; commercialisation targeted from 2025"
+    },
+    {
+     "band": "Compliance",
+     "label": "Reliability",
+     "value": "Company states more than 99% reliability across mid and small frames on more than 13.7 million actual operating hours"
+    }
+   ],
+   "notes": "The H-100's two-shaft architecture with a free power turbine is what gives it both the fast start and the mechanical-drive capability; the H-25's steam output is the specific reason it is offered as permanent data-center cogeneration with absorption chillers."
+  },
+  {
+   "product": "Aeroderivative packages",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "FT4000 SWIFTPAC 70",
+     "value": "70 MW at 60 or 50 Hz"
+    },
+    {
+     "band": "Power",
+     "label": "FT4000 SWIFTPAC 140",
+     "value": "140 MW at 60 or 50 Hz"
+    },
+    {
+     "band": "Power",
+     "label": "FT4000 simple-cycle efficiency",
+     "value": "Better than 41%"
+    },
+    {
+     "band": "Power",
+     "label": "FT8 SWIFTPAC 30",
+     "value": "31 MW"
+    },
+    {
+     "band": "Power",
+     "label": "FT8 SWIFTPAC 60",
+     "value": "62 MW"
+    },
+    {
+     "band": "Power",
+     "label": "FT8 MOBILEPAC",
+     "value": "31 MW at 60 Hz; 29 MW at 50 Hz"
+    },
+    {
+     "band": "Design",
+     "label": "Start time",
+     "value": "10 minutes cold to full power across the range"
+    },
+    {
+     "band": "Design",
+     "label": "FT8 MOBILEPAC deployment",
+     "value": "Two trailers, no foundation or concrete pad, 80 by 54 foot footprint, road, sea or air transport; complete installation within one day for pre-commissioned site-ready units"
+    },
+    {
+     "band": "Design",
+     "label": "FT8 SWIFTPAC deployment",
+     "value": "Power in under 30 days after site arrival; barge and offshore capable"
+    },
+    {
+     "band": "Design",
+     "label": "Architecture",
+     "value": "Free power turbine with no reduction gear; 15 kV open-vent air-cooled generator on FT4000"
+    },
+    {
+     "band": "Design",
+     "label": "Fuel and emissions",
+     "value": "Dual fuel gas or oil, with water injection for NOx control"
+    },
+    {
+     "band": "Design",
+     "label": "Cooling",
+     "value": "Air cooled — no water demand, which is a siting advantage over combined cycle"
+    }
+   ],
+   "notes": "Installed aeroderivative base is 614 units, of which 600 are FT8 and 14 are FT4000. These are the products the company positions explicitly as the temporary data-center bridge."
+  },
+  {
+   "product": "Installed base and validation",
+   "specs": [
+    {
+     "band": "Design",
+     "label": "Total gas turbines ordered",
+     "value": "1,776 units as of the end of January 2025, including units manufactured by licensee"
+    },
+    {
+     "band": "Design",
+     "label": "Heavy duty total",
+     "value": "1,162 units — F series 335, H series 239, other 203, J series 148, D series 135, G series 102"
+    },
+    {
+     "band": "Design",
+     "label": "J series detail",
+     "value": "M501J 95 units and M701J 53 units, with more than 3.2 million cumulative commercial operating hours as of December 2025"
+    },
+    {
+     "band": "Design",
+     "label": "F series detail",
+     "value": "M501F 80 units and M701F 255 units, more than 24 million cumulative operating hours"
+    },
+    {
+     "band": "Design",
+     "label": "Aeroderivative total",
+     "value": "614 units — FT8 600 and FT4000 14"
+    },
+    {
+     "band": "Design",
+     "label": "T-Point 2 output",
+     "value": "566 MW at 5°C air temperature on an M501JAC at 1,650°C, in full commercial operation since July 2020"
+    },
+    {
+     "band": "Design",
+     "label": "T-Point lineage",
+     "value": "330 MW M501G at 1,500°C from 1997; 389 MW M501J at 1,600°C from 2011"
+    },
+    {
+     "band": "Design",
+     "label": "Validation standard",
+     "value": "At least 8,000 hours of grid-connected operation, equivalent to nearly one year"
+    }
+   ],
+   "notes": "T-Point 2 is the company's principal differentiation claim — it describes itself as the only gas turbine manufacturer operating a grid-connected combined-cycle power plant specifically to validate its products, and markets the position as buy proof, not promises."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-01",
+   "category": "market",
+   "headline": "POWER Magazine publishes a four-way comparison of turbines under contract: GE Vernova 116 GW, Siemens Energy 95 GW, Mitsubishi Heavy Industries 35 GW of large-frame backlog across 80 units, with Ansaldo Energia re-entering the US market",
+   "read": "The cleanest independent ranking of the three, and it places Mitsubishi at roughly 30% of GE Vernova's book — while noting Mitsubishi's focus is large-frame projects for core utility customers rather than the direct data-center sales that make up 20% of GE Vernova's mix and 22 GW of Siemens Energy's.",
+   "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "financial",
+   "headline": "Large-frame gas turbine backlog reaches 80 units and 35 GW at 2026-06-30, up from 53 units and 23 GW a year earlier, on 10 units booked in the quarter (4 Americas, 6 Asia); MHI's gas and nuclear orders reached ¥1.1 trillion for April to June",
+   "read": "Bookings taken now deliver in 2028 to 2030, and future projects in 2030 or 2031 — the backlog is a schedule statement as much as a financial one.",
+   "source": "https://www.utilitydive.com/news/mitsubishi-gas-turbine-backlog-earnings/827761/"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "MHI Q1 FY2026 (quarter ended 2026-06-30): consolidated revenue ¥1,194.2bn (+15.5%), business profit ¥159.6bn (+65.1%), net income ¥134.6bn (+97.4%); order backlog above ¥14.1 trillion",
+   "read": "Energy Systems segment business profit rose 80% to ¥101.3bn on revenue of ¥536.3bn, with GTCC orders of ¥930.0bn against ¥602.5bn a year earlier — the turbine business is carrying the parent.",
+   "source": "https://www.mhi.com/finance/library/result/pdf/fy20261q/presentation.pdf"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "ma",
+   "headline": "Nextpower, formerly Nextracker, closes its acquisition of Prevalon Energy from Mitsubishi Power Americas and Emerald Energy Storage for up to $365 million in cash and stock; Prevalon had deployed more than 6 GWh worldwide",
+   "read": "Mitsubishi Power has exited utility-scale battery storage entirely, roughly two and a half years after carving the business out — and two of its own web pages still list Prevalon as a behind-the-meter offering, which is a live inconsistency rather than a strategy.",
+   "source": "https://www.power-technology.com/news/nextpower-finalises-prevalon-acquisition/"
+  },
+  {
+   "date": "2026-07-16",
+   "category": "partnership",
+   "headline": "MHI ships a 10 MW-class centrifugal chiller test unit to the US and states that it participates in the NVIDIA Partner Network as a Power and Cooling Partner, developing a Modular Chiller Plant aligned to NVIDIA DSX",
+   "read": "Note the entity carefully: this is the MHI parent's data-center business, which moved into the Industrial Solutions segment on 2026-04-01 — it is not Mitsubishi Power's gas turbine business and no turbine relationship with NVIDIA is asserted anywhere.",
+   "source": "https://www.mhi.com/news/260716.html"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "partnership",
+   "headline": "Entergy and MHI Group sign a memorandum of understanding on integrated combined-cycle generation with carbon capture, targeting a stated 50% reduction in overall costs, bundling M501JAC turbines from Mitsubishi Power Americas with capture technology from Mitsubishi Heavy Industries America",
+   "read": "The integrated offer is the company's answer to a decarbonisation requirement that hydrogen has not been able to meet economically — and a VP claims Mitsubishi is probably the only OEM able to do turbine and capture in-house.",
+   "source": "https://power.mhi.com/regions/amer/news/260715"
+  },
+  {
+   "date": "2026-06-04",
+   "category": "order-win",
+   "headline": "PowerSouth Energy Cooperative expands the Lowman Energy Center with a second advanced-class M501JAC and a 25-year long-term service agreement, with Burns & McDonnell as EPC, taking winter capacity from 696 MW to over 1 GW",
+   "read": "A cooperative repeat order with a quarter-century service tail — the shape of business Mitsubishi Power says it is prioritising over data-center volume.",
+   "source": "https://power.mhi.com/regions/amer/news/260603"
+  },
+  {
+   "date": "2026-05-28",
+   "category": "order-win",
+   "headline": "Tallgrass and Mitsubishi Power Americas announce the first two M501JAC units allocated to the Cheyenne Power Hub, delivering approximately 1,150 MW of site-ready gas-fired power for a large-scale data center in the Switchgrass Industrial Park, Wyoming, in an investment exceeding $7 billion",
+   "read": "The company's flagship data-center project and the one place its turbines are publicly tied to an AI campus; Crusoe is the named AI infrastructure partner and fuel comes through Tallgrass's Rockies Express Pipeline, with turbine installation expected to begin as early as July 2026.",
+   "source": "https://power.mhi.com/regions/amer/news/260515"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "corporate",
+   "headline": "MHI's 2026 business plan reports line of sight to a 30% increase in GTCC production capacity across FY2024 to FY2030 via more than 1,000 kaizen actions and an upgraded precision casting facility, with further expansion in progress",
+   "read": "Note what this is not: it is not a doubling. Independent reporting has described MHI as planning to double capacity through 2028, and the company's own deck describes a 30% increase with line of sight and further expansion under evaluation.",
+   "source": "https://www.mhi.com/finance/library/plan/pdf/260527presentation.pdf"
+  },
+  {
+   "date": "2026-04-01",
+   "category": "market",
+   "headline": "Wood Mackenzie reports gas turbine prices up 195% since 2019 and heading toward US$600 per kW by end-2027, with global orders of 110 GW at end-2025 against 60-70 GW of global manufacturing capacity",
+   "read": "The structural fact behind every turbine conversation: the industry cannot build what has been ordered, which is what converted delivery slots into a traded asset and reservation fees into a market.",
+   "source": "https://www.woodmac.com/press-releases/gas-turbine-prices-soar-195-as-market-faces-supply-demand-crisis/"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "order-win",
+   "headline": "Qatar's Facility E integrated water and power project awarded, with M701JAC turbines delivering approximately 2.4 GW — around 20% of Qatar's national grid capacity — plus 495,000 tonnes per day of desalinated water, with Samsung C&T as EPC and a long-term service agreement signed",
+   "read": "The first JAC in Qatar and the largest single order in the recent book; an integrated water and power project is a twenty-year relationship rather than an equipment sale.",
+   "source": "https://power.mhi.com/regions/mena/news/260114.html"
+  },
+  {
+   "date": "2026-01-08",
+   "category": "market",
+   "headline": "Mitsubishi Power Americas states publicly that for the first time in decades customers are paying reservation fees to hold places in production queues, that prepaid reservation agreements with auxiliary equipment suppliers are used to guarantee a place, and that it is expanding US manufacturing through Savannah Machinery Works",
+   "read": "Confirmation from the manufacturer's side that capacity has become currency — and the clearest first-party statement that a project's date now tracks the pace of secured capacity rather than the pace of engineering.",
+   "source": "https://power.mhi.com/regions/amer/insights/what-utilities-need-know-about-power-generation-supply-chain"
+  },
+  {
+   "date": "2025-12-24",
+   "category": "product-launch",
+   "headline": "Next-generation gas turbine control system for thermal power plants completes functional testing, jointly developed by Mitsubishi Power and Mitsubishi Electric, with market launch targeted for fiscal 2026",
+   "read": "The one product the two separate Mitsubishi-named companies build together, entering an installed base of more than 3,000 DIASYS control units across over 60 countries.",
+   "source": "https://power.mhi.com/news/251224.html"
+  },
+  {
+   "date": "2025-10-23",
+   "category": "customer",
+   "headline": "Google backs the Broadwing Energy Center in Decatur, Illinois — a 400 MW cogeneration plant with more than 90% carbon capture employing a single Mitsubishi Power M501JAC, developed by Low Carbon Infrastructure with Kiewit Power Constructors as EPC and ADM as site host",
+   "read": "A hyperscaler taking corporate offtake from a gas plant with integrated capture is the template Mitsubishi Power's Entergy MOU is built for, and it is the second public link between its turbines and an AI-driven buyer.",
+   "source": "https://www.powermag.com/google-backs-first-u-s-gas-fired-power-plant-with-integrated-ccs-for-data-centers/"
+  },
+  {
+   "date": "2025-09-05",
+   "category": "order-win",
+   "headline": "Taiwan's Tung Hsiao power plant awarded — 2,800 MW across five M501JAC units, jointly with CTCI Corporation on a turnkey EPC basis of approximately ¥760 billion including CTCI's share, entering operation sequentially in 2030 and 2031",
+   "read": "The largest single award in the recent record and a repeat of a 2013 three-unit contract with the same partner; the 2030-2031 operation dates are the clearest illustration of how far out the queue now runs.",
+   "source": "https://power.mhi.com/news/250905.html"
+  },
+  {
+   "date": "2025-08-27",
+   "category": "market",
+   "headline": "Mitsubishi Power Americas publishes its data-center thesis, stating that grid connections for AI data centers requiring new substations are commonly pushed out five to eight years and that it is working with several data-center developers to evaluate industrial and aeroderivative turbines for on-site power",
+   "read": "The two-tier product answer stated plainly: FT8 MOBILEPAC as a temporary bridge until grid connection, H-25 with absorption chillers as permanent behind-the-meter cogeneration, with the turbines becoming backup once the grid arrives so the initial capital is protected.",
+   "source": "https://power.mhi.com/regions/amer/insights/solving-data-center-power-dilemma"
+  },
+  {
+   "date": "2025-08-21",
+   "category": "project",
+   "headline": "Georgia Power receives the first of three M501JAC simple-cycle units totalling 1.3 GW, assembled at Savannah Machinery Works, with the remaining two due in 2027; EPRI notes industry lead times as long as seven years with most in a five-year band",
+   "read": "Ordered around Georgia Power's 2023 integrated resource plan update and delivered from late 2026 — a roughly three-and-a-half-year cycle for a customer already in the queue, against five to seven years for one joining it now.",
+   "source": "https://www.utilitydive.com/news/georgia-power-natural-gas-turbine-delivery-delays-mitsubishi/758252/"
+  },
+  {
+   "date": "2025-06-16",
+   "category": "product-launch",
+   "headline": "World's largest hydrogen fuel blending demonstration to date on an advanced-class gas turbine: 50% hydrogen by volume validated on an M501GAC at Georgia Power's Plant McDonough-Atkinson, achieving approximately a 22% carbon dioxide reduction, with Certarus supplying hydrogen logistics",
+   "read": "The two figures together are the most useful hydrogen datapoint in the corpus: 50% by volume yields about 22% carbon reduction, because hydrogen carries roughly a third of methane's energy per unit volume. Any business case that reads a volumetric percentage as a carbon percentage overstates the benefit about threefold.",
+   "source": "https://power.mhi.com/regions/amer/news/250616"
+  },
+  {
+   "date": "2024-02-22",
+   "category": "corporate",
+   "headline": "Mitsubishi Power Americas announces Prevalon, transforming and legally separating its battery energy storage business as a standalone company carrying more than 30 projects and 3 GWh deployed globally",
+   "read": "The start of a two-and-a-half-year exit: a wholly owned carve-out in February 2024, restructured within weeks into a joint venture with Emerald Energy Storage representing management and outside investors, and sold outright in July 2026.",
+   "source": "https://power.mhi.com/regions/amer/news/20240222.html"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "ge-vernova",
+   "type": "competitor",
+   "status": "active",
+   "via": "Heavy-duty gas turbines",
+   "note": "POWER Magazine's September 2026 comparison ranks the two directly: GE Vernova at 116 GW of turbines under contract against Mitsubishi Heavy Industries' 35 GW of large-frame backlog across 80 units.",
+   "context": "GE Vernova leads on every published measure of order book. POWER puts its 116 GW as 53 GW firm backlog plus 63 GW of slot reservations, with a capacity path from 20 GW annualised in 2026 to 30 GW by 2030 and roughly 80% of its mix in traditional power against 20% data centers. Global Energy Monitor separately gives GE Vernova almost 55 GW of turbines in plants under construction globally and 38% of Asian capacity under construction, against Mitsubishi's 17%.\n\nThe comparison carries an important caveat the sources state themselves: GE Vernova's and Siemens Energy's figures include slot reservations, while Mitsubishi's 35 GW is stated as large-frame contract backlog with no reservation split disclosed. No source normalises them, so the gap is real but its exact size is uncertain. On efficiency the three are effectively tied at around 64% combined cycle, so the competition is decided by delivery slots and service rather than by a technical lead.",
+   "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/"
+  },
+  {
+   "slug": "siemens-energy",
+   "type": "competitor",
+   "status": "active",
+   "via": "Heavy-duty gas turbines",
+   "note": "POWER Magazine ranks Siemens Energy at 95 GW of turbines under contract against Mitsubishi's 35 GW of large-frame backlog, and Global Energy Monitor names the two alongside GE Vernova as the three manufacturers supplying two-thirds of turbines in gas plants under construction.",
+   "context": "Siemens Energy's 95 GW comprises 69 GW firm backlog and 26 GW of slot reservations, with 22 GW tied to data centers — a far more data-center-weighted book than Mitsubishi's, which POWER describes as focused on large-frame projects for core utility customers. Siemens Energy's unit shipments nearly doubled from 100 in 2024 to 194 in 2025.\n\nGlobal Energy Monitor gives Siemens Energy 16% of Asian capacity under construction against Mitsubishi's 17% — the one market where the two are close — and notes the historical detail that Siemens once considered merging its gas turbine unit with Mitsubishi's. Neither company has a manufacturing joint venture in China; Mitsubishi's licensee Dongfang Electric accounts for roughly 25% of gas turbines under construction there.",
+   "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/"
+  },
+  {
+   "slug": "prevalon",
+   "type": "other",
+   "status": "historical",
+   "since": "2024-02",
+   "via": "Battery energy storage",
+   "note": "Prevalon was created in February 2024 from Mitsubishi Power Americas' battery energy storage business as a standalone legally separated company, and was sold to Nextpower in a transaction that closed in July 2026 — Mitsubishi Power has fully exited battery storage.",
+   "context": "The sequence matters. In February 2024 Mitsubishi Power Americas carved out its BESS business, carrying more than 30 projects and 3 GWh deployed globally, retaining the leadership team, technology, employees and other assets. Within weeks the ownership was restructured into a joint venture between Mitsubishi Power Americas and Emerald Energy Storage, an entity representing Prevalon's senior management plus some outside investment — its CEO stated explicitly that private equity was not involved.\n\nIn May 2026 Nextpower, the renamed Nextracker, agreed to acquire Prevalon from Mitsubishi Power Americas and Emerald Energy Storage for up to $365 million in cash and stock, and the deal closed in July 2026 with Prevalon then at more than 6 GWh deployed. Mitsubishi Power's post-close position is not stated in any source located — whether a stake, a supply agreement or a clean exit. Two of its own web pages still list Prevalon under behind-the-meter offerings weeks after the close.",
+   "source": "https://power.mhi.com/regions/amer/news/20240222.html"
+  },
+  {
+   "slug": "mitsubishi-electric",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-12",
+   "via": "Next-generation gas turbine control system",
+   "note": "Mitsubishi Power and Mitsubishi Electric jointly developed a next-generation gas turbine control system for thermal power plants that completed functional testing in December 2025, with market launch targeted for fiscal 2026.",
+   "context": "These are two separate listed groups — Mitsubishi Power is a brand of Mitsubishi Heavy Industries (TSE: 7011) and Mitsubishi Electric is TSE: 6503 — that share the keiretsu name and nothing structural. Neither is a subsidiary of the other, and treating them as one company is the most common error made about either.\n\nThe control system is the single place in the public record where they build a product together, and both published it from their own newsrooms on the same day. It enters an installed base of more than 3,000 DIASYS control units across over 60 countries.",
+   "source": "https://power.mhi.com/news/251224.html"
+  },
+  {
+   "slug": "entergy",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-07",
+   "via": "M501JAC gas turbines with carbon capture",
+   "note": "Entergy and MHI Group signed a memorandum of understanding in July 2026 on integrated combined-cycle generation with carbon capture, bundling M501JAC turbines from Mitsubishi Power Americas with capture technology from Mitsubishi Heavy Industries America and targeting a stated 50% reduction in overall costs.",
+   "context": "The release describes the MOU as the result of a long collaboration between Entergy and Mitsubishi Power Americas, so this is an extension of an existing supplier relationship rather than a new one. Separately, Mitsubishi Power leads the EPC consortium for Entergy Texas's Orange County Advanced Power Station — a 1,215 MW hydrogen-capable combined-cycle plant near Bridge City supplying two M501JAC units, the steam turbine, the heat recovery steam generator and the control system, with first fire achieved.\n\nAn MOU is not an order. What it establishes is that the integrated turbine-plus-capture offer has a named utility counterparty willing to develop it, at a moment when the regulatory driver for capture has weakened.",
+   "source": "https://power.mhi.com/regions/amer/news/260715"
+  },
+  {
+   "slug": "crusoe",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-05",
+   "via": "Cheyenne Power Hub on-site generation",
+   "note": "Crusoe is the named AI infrastructure partner on Tallgrass's Cheyenne Power Hub in Wyoming, where Mitsubishi Power has allocated its first two M501JAC turbines for approximately 1,150 MW of Phase 1 site-ready power.",
+   "context": "This is Mitsubishi Power's flagship public data-center project and the clearest link between its turbines and an AI buyer. The campus sits in the Switchgrass Industrial Park in Laramie County with fuel supplied through Tallgrass's Rockies Express Pipeline, in an investment exceeding $7 billion, and the data center is reported at 1.8 GW initially and scalable to 10 GW.\n\nThe relationship is triangular rather than direct: Tallgrass is the developer and Mitsubishi Power's counterparty for the turbines, with Crusoe named as the AI infrastructure partner. Turbine installation was expected to begin as early as July 2026.",
+   "source": "https://www.power-eng.com/gas/turbines/wyoming-data-center-power-projects-highlight-new-entrants-partnerships-in-power-generation-market/"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "announced",
+   "since": "2025-10",
+   "via": "Broadwing Energy Center M501JAC",
+   "note": "Google is the corporate power offtaker for the Broadwing Energy Center in Decatur, Illinois, which POWER Magazine reports will employ a single Mitsubishi Power M501JAC gas turbine.",
+   "context": "Broadwing is a 400 MW cogeneration plant with more than 90% carbon capture, developed by Low Carbon Infrastructure, an I Squared Capital portfolio company, with ADM as site host and carbon sequestration partner and Kiewit Power Constructors as EPC. Commercial operation was targeted for end-2029 with carbon capture from early 2030, with final investment decision indicated for the second quarter of 2026.\n\nGoogle's relationship is as offtaker rather than as Mitsubishi Power's direct customer — the turbine is sold to the project. It is nonetheless one of only two public links between Mitsubishi Power turbines and a hyperscaler, and the only one involving integrated carbon capture.",
+   "source": "https://www.powermag.com/google-backs-first-u-s-gas-fired-power-plant-with-integrated-ccs-for-data-centers/"
+  },
+  {
+   "slug": "kiewit",
+   "type": "partner",
+   "status": "active",
+   "via": "EPC on Mitsubishi Power turbine projects",
+   "note": "Kiewit Power Constructors is the EPC on the Broadwing Energy Center alongside a Mitsubishi Power M501JAC, and TIC — The Industrial Company, a wholly owned Kiewit subsidiary — is the constructor in the EPC consortium with Mitsubishi Power for Entergy Texas's Orange County Advanced Power Station.",
+   "context": "Two separate projects place Kiewit and Mitsubishi Power on the same construction team, which makes this a working delivery relationship rather than a single co-mention. On Orange County the consortium is Mitsubishi Power, TIC and Sargent & Lundy, with Mitsubishi Power supplying the hydrogen-capable power train.\n\nThis is the seam where a turbine order becomes a plant. In a market where the manufacturer's slot is the binding constraint, an EPC that has already built with a given OEM's power island is part of what makes a delivery date credible.",
+   "source": "https://www.powermag.com/google-backs-first-u-s-gas-fired-power-plant-with-integrated-ccs-for-data-centers/"
+  },
+  {
+   "slug": "samsung-ct",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-01",
+   "via": "EPC on Qatar Facility E",
+   "note": "Samsung C&T Engineering & Construction Group is the EPC contractor appointed by Ras Abu Fontas Power Company for Qatar's Facility E integrated water and power project, for which Mitsubishi Power supplies approximately 2.4 GW of M701JAC turbines.",
+   "context": "Facility E is the largest single award in Mitsubishi Power's recent order book — roughly 20% of Qatar's national grid capacity plus 495,000 tonnes per day of desalinated water, targeted for operation in 2028, with a long-term service agreement signed alongside the equipment.\n\nIt is also the first JAC-class machine in Qatar. Integrated water and power projects are among the longest-lived customer relationships in the sector, which is why the LTSA is part of the same announcement rather than a later negotiation.",
+   "source": "https://power.mhi.com/regions/mena/news/260114.html"
+  },
+  {
+   "slug": "southern-company",
+   "type": "customer",
+   "status": "active",
+   "via": "M501JAC and M501GAC turbines at Georgia Power",
+   "note": "Georgia Power, described in Mitsubishi Power's own releases as the largest electric subsidiary of Southern Company, took delivery of three M501JAC simple-cycle units totalling 1.3 GW and hosted the 50% hydrogen blending demonstration on an M501GAC at Plant McDonough-Atkinson.",
+   "context": "The two releases naming Georgia Power both identify it as Southern Company's largest electric subsidiary, and one states that Southern Company's research and development organisation served as technical consultants on the hydrogen project — so the parent is named directly in the hydrogen work rather than only through the subsidiary.\n\nGeorgia Power is also the customer Mitsubishi Power's own CEO cites as the clearest illustration of AI-driven demand: a 2022 integrated resource plan indicating a 400 MW need through 2030, updated a year later to 6.6 GW, with 80% of the increase attributed to data-center growth in the state.",
+   "source": "https://power.mhi.com/regions/amer/news/250616"
+  },
+  {
+   "slug": "burns-mcdonnell",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-06",
+   "via": "EPC on Lowman Energy Center",
+   "note": "Burns & McDonnell provides EPC services on PowerSouth Energy Cooperative's Lowman Energy Center expansion, for which Mitsubishi Power supplies a second M501JAC with a 25-year long-term service agreement.",
+   "context": "The release quotes Burns & McDonnell's SVP and General Manager of its Power group directly alongside Mitsubishi Power, and the expansion takes the plant's winter capacity from 696 MW to over 1 GW, serving approximately 694,000 homes. The first Lowman M501JAC began operating in 2023, so this is a repeat pairing on the same site.\n\nIt is a cooperative rather than an investor-owned utility, which is the customer profile Mitsubishi Power says it is prioritising as it declines to chase data-center volume.",
+   "source": "https://power.mhi.com/regions/amer/news/260603"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Clean Air Act section 111 greenhouse gas standards",
+   "status": "proposed",
+   "effectiveDate": "2025-06-17",
+   "exposure": "The 2024 section 111 rule was the single largest regulatory driver of hydrogen-capable and carbon-capture-ready turbine specification, which is precisely where Mitsubishi Power differentiates. In June 2025 the EPA proposed to repeal all power-sector greenhouse gas standards under section 111 including those for new and reconstructed gas turbines; in February 2026 it finalised rescission of the endangerment finding, and in May 2026 it sent the final section 111 repeal to OMB for review. The effect on Mitsubishi Power is two-sided: more unabated gas plants get built, which is volume, but the willingness to pay a premium for hydrogen and capture optionality falls, which is margin and differentiation.",
+   "mitigation": "No Mitsubishi Power or MHI page located names section 111 or the 2024 rule. The nearest company positioning is its integrated turbine-plus-carbon-capture offer with MHIA and its published analysis of state-led carbon capture regulation.",
+   "source": "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/"
+  },
+  {
+   "regime": "Section 45V clean hydrogen production credit",
+   "status": "in-effect",
+   "effectiveDate": "2025-01-10",
+   "exposure": "The credit is worth up to $3.00 per kilogram across four carbon-intensity tiers for ten years, and under the revised law only facilities beginning construction before the end of 2027 are eligible. That deadline governs whether Mitsubishi Power's hydrogen-capable turbines have fuel to burn: the Advanced Clean Energy Storage project in Utah is already near complete and inside the window, but any follow-on hydrogen hub must break ground by 2027-12-31 to receive the subsidy that makes green hydrogen competitive against grey at roughly $1.50-2.50 per kilogram.",
+   "mitigation": "The company does not name 45V in any page located. Its closest statement is that with the support of tax credits and incentives, increased utility-scale hydrogen production and continued renewables additions, the cost of hydrogen will continue to decline.",
+   "source": "https://www.congress.gov/crs-product/IF12602"
+  },
+  {
+   "regime": "Section 232 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-04",
+   "exposure": "Mitsubishi Power manufactures heavily in Japan and ships large-frame turbines to the US. Under the 2026 framework, specified metal-intensive industrial-base and electrical-grid equipment carries a temporary capped rate of 15% until the end of 2027 rising to 25% from 2028 — a step-up that lands squarely inside the delivery window for turbines being booked now for 2028 to 2031. The company's own supply-chain leadership states it is constantly evaluating tariff impact and points customers to change-in-law provisions in contracts as the mechanism for allocating it.",
+   "mitigation": "Expanding US manufacturing through Savannah Machinery Works in Pooler, Georgia, explicitly to accommodate customer requests for Buy American sourcing; the first locally assembled JAC gas turbine outside Japan was unveiled at the Dammam facility in Saudi Arabia in October 2025.",
+   "source": "https://power.mhi.com/regions/amer/insights/what-utilities-need-know-about-power-generation-supply-chain"
+  },
+  {
+   "regime": "Build America, Buy America",
+   "status": "in-effect",
+   "exposure": "Mitsubishi Power Americas states that federally funded projects may require OEMs to buy American under the Build America, Buy America Act, applying to both equipment and transportation, and that projects with certain Department of Energy funding may additionally require the use of a US-flagged vessel — which the company says affects both capacity and cost.",
+   "mitigation": "Savannah Machinery Works expansion, and logistics planning owned by a named VP of logistics and supply-chain operational excellence.",
+   "source": "https://power.mhi.com/regions/amer/insights/what-utilities-need-know-about-power-generation-supply-chain"
+  },
+  {
+   "regime": "State integrated resource planning",
+   "status": "in-effect",
+   "exposure": "US utility turbine orders are approved through state commission processes, which sets the pace at which Mitsubishi Power's largest customer segment can commit. Georgia Power's new turbines at Plant Yates were approved in its 2023 integrated resource plan update, and further capacity has moved through subsequent plans and all-source requests for proposals. The company's own CEO cites Georgia Power's plan moving from a stated 400 MW need through 2030 to 6.6 GW one year later, with 80% attributed to data centers.",
+   "mitigation": "Not a mitigable exposure — it is the demand mechanism. The company's response is to prioritise repeat utility customers, whose planning cycles it can anticipate, over merchant data-center developers.",
+   "source": "https://power.mhi.com/regions/amer/news/250819"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "William A. \"Bill\" Newsom, Jr.",
+   "title": "President and Chief Executive Officer, Mitsubishi Power Americas, Inc.",
+   "photo": "images/execs/mitsubishi-power-newsom.jpg",
+   "background": [
+    "President & CEO, Mitsubishi Power Americas since 2021-12-01 — the senior-most executive for the region where the data-center demand sits",
+    "Executive Vice President of New Generation Systems, Mitsubishi Power — new turbomachinery and hydrogen value chain development",
+    "Leadership roles at Westinghouse Electric Corporation, Siemens Westinghouse Power Corporation and Calpine Corporation",
+    "More than twenty years with Mitsubishi Power and over thirty in the industry; credited by the company with leading the business to leading Americas market share in heavy-duty gas turbines and with starting the Delta, Utah green hydrogen storage project",
+    "Stated publicly in 2025 that the company is selling out through 2027, 2028 and 2029 and still taking orders for 2030, 2031 and 2032, with lead times moving from 16-20 months to 36-40 months",
+    "BS Mechanical Engineering, University of Florida; Advanced Management Program, Harvard Business School"
+   ]
+  },
+  {
+   "name": "Eisaku Ito (伊藤 栄作)",
+   "title": "President and CEO, Mitsubishi Heavy Industries, Ltd.; Member of the Board",
+   "photo": "images/execs/mitsubishi-power-ito.jpg",
+   "background": [
+    "President and CEO of the listed parent since April 2025",
+    "Introduced the Innovative Total Optimization management approach described in MHI Report 2025",
+    "Oversees a group that reported FY2025 consolidated revenue of ¥4,974.1bn and order backlog above ¥14 trillion at the latest quarter"
+   ]
+  },
+  {
+   "name": "Hiroshi Nishio (西尾 弘)",
+   "title": "Senior Vice President and CFO, Mitsubishi Heavy Industries, Ltd.; Member of the Board",
+   "photo": "images/execs/mitsubishi-power-nishio.jpg",
+   "background": [
+    "CFO of the listed parent; author of the CFO message in MHI Report 2025",
+    "Stated publicly that order pricing has not declined and that the profitability of newly booked gas turbine projects continues to improve gradually",
+    "Owns the FY2026 guidance of ¥5,400.0bn revenue and ¥540.0bn business profit, maintained at the August 2026 revision"
+   ]
+  },
+  {
+   "name": "Takuya Murase",
+   "title": "Executive Vice President; President and CEO, Energy Systems, Mitsubishi Heavy Industries",
+   "background": [
+    "Heads the MHI domain that contains Mitsubishi Power — the segment reported ¥2,062.6bn of revenue and ¥267.2bn of business profit in FY2025",
+    "Energy Systems order intake reached ¥3,936.7bn in FY2025, of which GTCC was ¥2,652.6bn",
+    "Collection gap: MHI publishes photographs only for Members of the Board, and no company-published headshot exists for this role"
+   ]
+  },
+  {
+   "name": "Masanori Yuri",
+   "title": "Senior Fellow; Senior General Manager, GTCC Business Division of Energy Systems; Head of Takasago Machinery Works",
+   "background": [
+    "Runs the gas turbine combined cycle business division and the Takasago works — the site housing T-Point 2 and the Takasago Hydrogen Park",
+    "Takasago is a one-square-kilometre campus combining research, design, manufacturing and full-scale validation in one place",
+    "Collection gap: no company-published headshot exists for this role"
+   ]
+  },
+  {
+   "name": "Mark Bissonnette",
+   "title": "Executive Vice President and Chief Operating Officer of Power Generation, Mitsubishi Power Americas",
+   "background": [
+    "Operating leadership for power generation in the Americas",
+    "Company spokesman on the 50% hydrogen blending milestone at Plant McDonough-Atkinson in June 2025",
+    "Collection gap: Mitsubishi Power Americas maintains no leadership page, so no company-published headshot exists"
+   ]
+  },
+  {
+   "name": "Peter Sawicki",
+   "title": "Vice President of Business Development for Emerging Technologies, Mitsubishi Power",
+   "background": [
+    "Started the Emerging Technologies Group role in about September 2024, owning the data-center and behind-the-meter product strategy across aeroderivative, small-frame and JAC machines",
+    "Stated the company is back to the days of reservation fees similar to the 2000s, and that behind-the-meter siting challenges are addressed with redundancy across units plus a battery energy storage solution",
+    "Described the H-25 as a permanent behind-the-meter solution paired with absorption chillers providing power and chilled water to data-center customers",
+    "Collection gap: no company-published headshot"
+   ]
+  },
+  {
+   "name": "Cheryl Boddiford",
+   "title": "Senior Vice President of North American Manufacturing and Supply Chain Management, Mitsubishi Power",
+   "background": [
+    "Owns North American manufacturing — the Savannah Machinery Works expansion that answers Buy American sourcing requests",
+    "Company spokeswoman on the Plant Yates M501JAC delivery and its assembly at Savannah",
+    "Collection gap: no company-published headshot"
+   ]
+  },
+  {
+   "name": "Seiji Izumisawa (泉澤 清次)",
+   "title": "Chairman of the Board, Mitsubishi Heavy Industries, Ltd.",
+   "photo": "images/execs/mitsubishi-power-izumisawa.jpg",
+   "background": [
+    "Chairman of the Board of the listed parent and predecessor as President and CEO",
+    "Presided over the cancellation of the SpaceJet programme in February 2023, the group's reference case for over-committing to a long-cycle capital programme"
+   ]
+  },
+  {
+   "name": "Masayuki Suematsu",
+   "title": "Executive Vice President and CSO, Mitsubishi Heavy Industries; President and CEO, Industrial Solutions; Member of the Board",
+   "photo": "images/execs/mitsubishi-power-suematsu.jpg",
+   "background": [
+    "Chief Strategy Officer of the parent and head of the Industrial Solutions segment",
+    "Relevant to this dossier for an entity reason: MHI's Data Center & Energy Management Department was transferred into Industrial Solutions on 2026-04-01, so the group's data-center business sits in his segment and not in Energy Systems where Mitsubishi Power's turbine business sits",
+    "Authored the Future Growth Areas message in MHI Report 2025 covering data-center acquisition strategy"
+   ]
+  },
+  {
+   "name": "Javier Cavada",
+   "title": "President and CEO, Mitsubishi Power EMEA",
+   "background": [
+    "Regional chief executive for Europe, the Middle East and Africa",
+    "Spoke at CERAWeek 2026 on integrating renewables with thermal power",
+    "Collection gap: no company-published headshot"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "JPY",
+  "type": "public",
+  "periods": [
+   {
+    "period": "MHI FY2024 (year ended 2025-03-31)",
+    "periodType": "annual",
+    "periodEnd": "2025-03-31",
+    "metrics": [
+     {
+      "name": "MHI consolidated revenue",
+      "kpi": "revenue",
+      "actual": "¥5,027,176m",
+      "expected": "No retrievable pre-print full-year consensus",
+      "verdict": "inline",
+      "result": "Parent-level figure per S&P Global Market Intelligence. Operating income ¥330,974m; net income ¥245,447m; EPS ¥73.02."
+     },
+     {
+      "name": "MHI Energy Systems segment revenue",
+      "actual": "¥1,815.7bn, with segment business profit ¥205.3bn at an 11.3% margin",
+      "expected": "",
+      "result": "Segment level, not unit level. Energy Systems contains GTCC, steam power, aero engines, nuclear power and others — it is wider than Mitsubishi Power."
+     },
+     {
+      "name": "GTCC business line",
+      "actual": "Order intake ¥1,474.4bn; revenue ¥790.7bn",
+      "expected": "",
+      "result": "The narrowest published line that approximates the gas turbine business, and still not a Mitsubishi Power figure."
+     },
+     {
+      "name": "Large-frame gas turbine backlog",
+      "actual": "53 units and 23 GW at 2025-06-30",
+      "expected": "",
+      "result": "The operating metric that matters most in this business, disclosed in MHI's quarterly appendix."
+     }
+    ],
+    "commentary": "Every line labelled by entity level. MHI's own year label for the twelve months ended 2025-03-31 is FY2024; several trackers label the same period FY2025, so the period-end date is the only safe identifier."
+   },
+   {
+    "period": "MHI FY2025 (year ended 2026-03-31)",
+    "periodType": "annual",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "MHI consolidated revenue",
+      "kpi": "revenue",
+      "actual": "¥4,974,168m — down 1.05% year on year despite sharply higher profit",
+      "expected": "No retrievable pre-print full-year consensus",
+      "verdict": "inline",
+      "result": "The revenue decline is deconsolidation rather than weakness: the Industrial Solutions segment fell from ¥1,314,500m in the year ended 2024-03-31 to ¥641,000m, consistent with the Logisnext share transfer. Operating income ¥460,111m; net income ¥332,129m; EPS ¥95.14. Net cash swung to a positive ¥458,634m from net debt of ¥473,458m a year earlier."
+     },
+     {
+      "name": "MHI Energy Systems segment",
+      "actual": "Revenue ¥2,062.6bn; business profit ¥267.2bn at a 13.0% margin; order intake ¥3,936.7bn",
+      "expected": "",
+      "result": "Segment level. Order intake rose 50% year on year, which is the clearest measure of the turbine cycle in MHI's own disclosure."
+     },
+     {
+      "name": "GTCC business line",
+      "actual": "Order intake ¥2,652.6bn against ¥1,474.4bn a year earlier; revenue ¥992.2bn",
+      "expected": "",
+      "result": "GTCC order intake has run ¥736.8bn, ¥1,259.3bn, ¥1,474.4bn and ¥2,652.6bn across four consecutive years. MHI states GTCC order backlog surpassed ¥5 trillion at year end, on 35 large-frame gas turbines booked in the year."
+     },
+     {
+      "name": "Large-frame gas turbine orders and backlog",
+      "actual": "35 units and 16 GW booked in the year — 19 Americas, 12 Asia, 4 EMEA — taking contract backlog to 74 units and 33 GW at year end",
+      "expected": "",
+      "result": "A separate China licensee order intake line shows 13 units in the year, reflecting Dongfang Electric's licensed manufacture."
+     },
+     {
+      "name": "MHI free cash flow",
+      "actual": "¥893.4bn",
+      "expected": "",
+      "result": "Against ¥300.0bn originally guided for the following year, later revised up to ¥600.0bn."
+     }
+    ],
+    "commentary": "MHI's own year label for the twelve months ended 2026-03-31 is FY2025. Read the consolidated revenue decline alongside the segment table: this is portfolio churn, not contraction, and the turbine business inside it grew sharply."
+   },
+   {
+    "period": "MHI Q1 FY2026 (quarter ended 2026-06-30)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "MHI consolidated revenue",
+      "kpi": "revenue",
+      "actual": "¥1,194.2bn (+15.5%)",
+      "expected": "Simply Wall St consensus of approximately JP¥1.16 trillion",
+      "verdict": "beat",
+      "result": "Simply Wall St scored the revenue beat at 3.6% above estimates on a panel of 16 analysts. No other outlet's consensus for this quarter was retrievable, so a single outlet is named rather than a blended figure."
+     },
+     {
+      "name": "Statutory EPS",
+      "kpi": "eps",
+      "actual": "JP¥40.08",
+      "expected": "Simply Wall St implied consensus of approximately JP¥24",
+      "verdict": "beat",
+      "result": "Simply Wall St reported a 67% EPS beat on a statutory basis. The actual reconciles cleanly against the company's own disclosure — ¥134.6bn of profit attributable to owners over roughly 3.36 billion shares gives ¥40.06 — so the print itself is solid even though the consensus figure is implied rather than printed."
+     },
+     {
+      "name": "MHI business profit",
+      "actual": "¥159.6bn (+65.1%) at a 13.4% margin; profit attributable to owners ¥134.6bn (+97.4%)",
+      "expected": "",
+      "result": "EBITDA ¥190.3bn at 15.9%; free cash flow ¥391.5bn against ¥64.3bn a year earlier; net interest-bearing debt of negative ¥1,164.2bn; equity ratio 38.9%."
+     },
+     {
+      "name": "MHI Energy Systems segment",
+      "actual": "Revenue ¥536.3bn; business profit ¥101.3bn at an 18.9% margin, up 80% year on year; order intake ¥1,359.3bn",
+      "expected": "",
+      "result": "GTCC order intake within it was ¥930.0bn against ¥602.5bn a year earlier, on GTCC revenue of ¥274.9bn."
+     },
+     {
+      "name": "Large-frame gas turbine backlog",
+      "actual": "80 units and 35 GW at 2026-06-30, up from 53 units and 23 GW a year earlier; 10 units booked in the quarter",
+      "expected": "",
+      "result": "Bookings in this quarter are generally scheduled for delivery between 2028 and 2030, with future projects delivered in 2030 or 2031."
+     },
+     {
+      "name": "MHI order backlog",
+      "kpi": "backlog",
+      "actual": "Above ¥14,103.0bn, up ¥865.3bn from the fiscal year end",
+      "expected": "",
+      "result": "Group-wide across all segments, not turbine-specific."
+     }
+    ],
+    "commentary": "MHI maintained FY2026 guidance of ¥5,400.0bn revenue (+8.6%) and ¥540.0bn business profit (+24.9%) at this print while raising the free cash flow forecast from ¥300.0bn to ¥600.0bn and trimming order intake guidance to ¥7,000.0bn. Consensus from S&P Global Market Intelligence sits above company guidance on both lines at ¥5.58 trillion of revenue and ¥594.96bn of operating income on 13 analysts. FX assumptions are ¥150 per US dollar and ¥180 per euro, and both decks state the forecast excludes any impact from the situation in the Middle East."
+   }
+  ],
+  "commentary": "THE ENTITY RULE GOVERNS THIS ENTIRE RECORD. Mitsubishi Power is an unlisted business unit inside MHI's Energy Systems segment with no separately reported profit and loss, so there is no such thing as a disclosed Mitsubishi Power revenue, profit or margin, and none is stated above. Every line is labelled as MHI consolidated, MHI Energy Systems segment, or the GTCC business line within that segment — and GTCC is still wider than the gas turbine business alone. There is likewise no analyst consensus for Mitsubishi Power; the consensus figures above are for MHI (TSE: 7011). Two further honesty notes. First, no normalized USD overlay is carried: converting these figures needs a citable fiscal-year average JPY/USD rate for April 2025 to March 2026, and the OECD quarterly series reachable in this research covers the June, September and December 2025 quarters but not the March 2026 quarter, so a full-year average would be fabricated precision — the company's ¥150 guidance assumption is a planning rate for a future year, not a conversion basis for reported results. Second, no retrievable outlet published a pre-print full-year consensus for either fiscal year, so the annual rows carry no beat-or-miss verdict against the street; only the latest quarter has a clean single-outlet comparison, and it is named as such."
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess that Mitsubishi Power is deliberately declining to compete for data-center volume on the terms its two rivals have accepted. Basis: POWER Magazine's September 2026 comparison describes its focus as large-frame projects for core utility customers, against GE Vernova's roughly 20% data-center mix across about 100 customers and Siemens Energy's 22 GW tied to data centers. Its own CEO framed the priority in 2025 as core utility-scale repeat customers, adding that this makes things challenging for power developers who must post a deposit very early. The recent order book corroborates it — a rural cooperative in Alabama, a Qatari integrated water and power project, Taiwan Power, Vietnamese and Singaporean utilities — with one flagship data-center exception in Wyoming.",
+  "**(High confidence)** We assess the binding constraint on this business is manufacturing capacity, not demand, and that the company is expanding conservatively into it. Basis: Wood Mackenzie puts global orders at 110 GW against 60-70 GW of manufacturing capacity, and Mitsubishi Power's own CEO puts the three-OEM total at roughly 60 GW a year. MHI's own 2026 business plan claims line of sight to a 30% capacity increase through more than 1,000 kaizen actions and an upgraded precision casting facility, with further expansion in progress — notably less than the doubling attributed to it in independent reporting. Given the SpaceJet write-off, a deliberate gap between what the company promises and what trade press attributes to it is a rational posture rather than an oversight.",
+  "**(Moderate confidence)** We assess the hydrogen proposition is technically genuine and commercially weakening. Basis: the technical record is strong — more than 3.5 million operating hours on hydrogen-containing fuels across 29 units, a 50% blend validated on a commercial M501GAC, 100% hydrogen validated on the H-25, and a multi-cluster combustor engineered specifically against flashback. But the same demonstration reported only a 22% carbon dioxide reduction from that 50% volumetric blend, roughly 60 major clean-hydrogen projects were cancelled in 2025, unsubsidised green hydrogen costs several times grey, the 45V credit requires construction to begin before the end of 2027, and the EPA rule that made hydrogen readiness a compliance asset is being repealed. The capability does not change when the rule does; the price a buyer will pay for it does.",
+  "**(Moderate confidence)** We assess the exit from battery storage leaves a real gap in the behind-the-meter offer that the company has not replaced. Basis: Prevalon was carved out in February 2024 and sold to Nextpower in July 2026 for up to $365 million, and Mitsubishi Power's own data-center page still lists Prevalon under behind-the-meter offerings. Its own VP of emerging technologies had described addressing behind-the-meter siting challenges with redundancy across aeroderivative units plus a battery energy storage solution — the storage half of that answer is now someone else's product. Against Rolls-Royce Power Systems and Caterpillar, both of which retain in-house storage, this is a narrowed proposition for exactly the swinging-load application data centers present.",
+  "**(Moderate confidence)** We assess that reservation fees have converted the manufacturer's order book from a backlog into a financing instrument, and that this favours incumbency. Basis: Mitsubishi Power states publicly that for the first time in decades customers are paying reservation fees to hold places in production queues, that prepaid reservation agreements with auxiliary suppliers guarantee a place, and that projects track to the pace of secured capacity. A buyer who can post a deposit years ahead of financial close gets a date; one who cannot does not. That structurally advantages utilities with regulated capital plans over merchant data-center developers — which is also the customer mix the company says it prefers.",
+  "**(Low confidence)** We assess the three-way backlog comparison understates Mitsubishi Power's relative position by an unknown margin. Basis: POWER's figures for GE Vernova and Siemens Energy explicitly include slot reservations — 63 GW of GE Vernova's 116 GW and 26 GW of Siemens Energy's 95 GW — while Mitsubishi's 35 GW is stated as large-frame contract backlog with no reservation split disclosed. No source located normalises them. The ranking is almost certainly correct in order; its magnitude is not established.",
+  "**Collection gap — no Mitsubishi Power unit-level financials exist and none can be derived.** MHI does not report the brand as a segment. The narrowest published line is GTCC within Energy Systems, which still excludes steam power, aero engines, boilers, environmental systems and control systems that Mitsubishi Power also sells. Any figure presented elsewhere as Mitsubishi Power revenue is a derivation, not a disclosure.",
+  "**Collection gap — the company publishes no slot-availability horizon.** It confirms reservation fees exist and discloses 80 units and 35 GW of contract backlog against 35 units booked in FY2025, but publishes no sold-out-through statement. The available figures — a CEO saying in 2025 that it was selling out through 2027 to 2029 while taking orders for 2030 to 2032, and current bookings delivering 2028 to 2030 — come from interviews and trade press rather than disclosure.",
+  "**Collection gap — compressor pressure ratio is not published for any frame.** The specification tabs give output, efficiency, heat rate, exhaust flow and temperature, emissions, turndown, ramp rate and start time. Pressure ratio, one of the two variables that set cycle efficiency, is absent across the entire lineup.",
+  "**Entity cautions that a reader will otherwise get wrong.** MHI's Data Center and Energy Management Department moved into the Industrial Solutions segment on 2026-04-01, so the group's data-center business does not sit in Energy Systems where the turbines do. MHI's participation in the NVIDIA Partner Network as a power and cooling partner is a parent-level cooling and power relationship, not a Mitsubishi Power gas turbine one, and no NVIDIA relationship is curated on this dossier for that reason. And Mitsubishi Power is not connected to Mitsubishi Electric other than through the jointly developed control system recorded in the relationships above — they are separate listed groups sharing a keiretsu name."
+ ]
+}

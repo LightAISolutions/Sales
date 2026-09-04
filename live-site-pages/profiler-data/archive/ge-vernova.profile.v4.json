@@ -190,15 +190,6 @@
    "context": "Eaton sits in the global transformer top tier with Hitachi Energy, Siemens Energy, GEV and Toshiba. With US transformer lead times at 2.5-4 years and prices up sharply, the two compete for the same data-center and utility electrification backlog — GEV's edge being the wholly owned Prolec GE North American footprint.",
    "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transfo",
    "status": "active"
-  },
-  {
-   "slug": "mitsubishi-power",
-   "type": "competitor",
-   "status": "active",
-   "via": "Heavy-duty gas turbines",
-   "note": "POWER Magazine's September 2026 comparison ranks the two directly: GE Vernova at 116 GW of turbines under contract against Mitsubishi Heavy Industries' 35 GW of large-frame backlog across 80 units.",
-   "context": "GE Vernova leads the heavy-duty gas turbine market on every published measure of order book — POWER puts its 116 GW as 53 GW of firm backlog plus 63 GW of slot reservations, on a capacity path from 20 GW annualised in 2026 to 30 GW by 2030. Global Energy Monitor separately gives it almost 55 GW of turbines in plants under construction globally and 38% of Asian capacity under construction, against Mitsubishi's 17%.\n\nTwo qualifications belong with the ranking. GE Vernova's and Siemens Energy's figures include slot reservations while Mitsubishi's is stated as contract backlog with no reservation split, and no source normalises them. And the three are effectively tied at around 64% combined-cycle efficiency, so the competition is decided by delivery slots, service and customer mix rather than by a technical lead — GE Vernova's book is roughly 20% data centers across about 100 customers, where Mitsubishi is described as focused on core utility customers.",
-   "source": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/"
   }
  ],
  "policyExposure": [
@@ -429,11 +420,6 @@
  },
  "sources": [
   {
-   "label": "POWER Magazine — Ansaldo returns to the US gas turbine market as the equipment crunch widens the supplier field",
-   "url": "https://www.powermag.com/ansaldo-us-gas-turbine-market-equipment-crunch/",
-   "date": "2026-09-01"
-  },
-  {
    "label": "GE Vernova Q2 2026 press release",
    "url": "https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_07222026.pdf",
    "date": "2026-07-22"
@@ -497,6 +483,6 @@
    "url": "https://www.gevernova.com/gas-power/industries/data-centers"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

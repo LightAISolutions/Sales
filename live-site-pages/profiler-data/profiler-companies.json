@@ -25,13 +25,13 @@
       "hq": "Zurich, Switzerland",
       "ticker": "SIX: ABBN",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-03",
       "domains": [
         "global.abb",
         "abb.com"
       ],
-      "srcTotal": 16,
-      "srcFirstPct": 69,
+      "srcTotal": 18,
+      "srcFirstPct": 72,
       "kpiNorm": true
     },
     {
@@ -492,12 +492,12 @@
       "hq": "Dublin, Ireland",
       "ticker": "NYSE: ETN",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-03",
       "domains": [
         "eaton.com"
       ],
-      "srcTotal": 13,
-      "srcFirstPct": 69,
+      "srcTotal": 15,
+      "srcFirstPct": 73,
       "kpiNorm": true
     },
     {
@@ -660,12 +660,12 @@
       "hq": "Cambridge, MA, USA",
       "ticker": "NYSE: GEV",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-03",
       "domains": [
         "gevernova.com"
       ],
-      "srcTotal": 13,
-      "srcFirstPct": 62,
+      "srcTotal": 14,
+      "srcFirstPct": 57,
       "kpiNorm": true
     },
     {
@@ -1067,6 +1067,50 @@
       "kpiNorm": true
     },
     {
+      "slug": "mitsubishi-electric",
+      "name": "Mitsubishi Electric",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Japanese electrical conglomerate whose large static UPS, transformers and gas-insulated switchgear sit on both sides of a data-center service entrance",
+      "hq": "Tokyo, Japan",
+      "ticker": "TSE: 6503",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "mitsubishielectric.com",
+        "mitsubishielectric.co.jp",
+        "mitsubishielectric.us",
+        "meppi.com",
+        "mitsubishicritical.com",
+        "agilitycms.cloud"
+      ],
+      "srcTotal": 76,
+      "srcFirstPct": 62,
+      "kpiNorm": false
+    },
+    {
+      "slug": "mitsubishi-power",
+      "name": "Mitsubishi Power",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The third heavy-duty gas turbine OEM — a brand of Mitsubishi Heavy Industries, with 35 GW of large-frame backlog and a two-tier data-center bridge-power offer",
+      "hq": "Yokohama, Japan; Americas in Lake Mary, Florida",
+      "ticker": "TSE: 7011 (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "power.mhi.com",
+        "mhi.com",
+        "mhi.co.jp",
+        "mitsubishipower.com"
+      ],
+      "srcTotal": 77,
+      "srcFirstPct": 68,
+      "kpiNorm": false
+    },
+    {
       "slug": "mortenson",
       "name": "Mortenson",
       "categories": [
@@ -1266,8 +1310,8 @@
         "activepower.com",
         "langleyholdings.com"
       ],
-      "srcTotal": 185,
-      "srcFirstPct": 64,
+      "srcTotal": 186,
+      "srcFirstPct": 65,
       "kpiNorm": true
     },
     {
@@ -1288,6 +1332,27 @@
       "kpiNorm": false
     },
     {
+      "slug": "powell-industries",
+      "name": "Powell Industries",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Houston engineer-to-order medium-voltage switchgear and factory-built power rooms, re-rated by a >$400M behind-the-meter data-center order",
+      "hq": "Houston, Texas, United States",
+      "ticker": "NASDAQ: POWL",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "powellind.com",
+        "powellindustriesinc.gcs-web.com",
+        "d2g0qum68t5ct7.cloudfront.net",
+        "nextron.ca"
+      ],
+      "srcTotal": 67,
+      "srcFirstPct": 75,
+      "kpiNorm": true
+    },
+    {
       "slug": "prevalon",
       "name": "Prevalon Energy",
       "categories": [
@@ -1297,7 +1362,7 @@
       "hq": "Heathrow, FL, US",
       "ticker": "NASDAQ: NXT (parent Nextpower)",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-03",
       "domains": [
         "prevalonenergy.com"
       ],
@@ -1480,12 +1545,12 @@
       "hq": "Rueil-Malmaison, France",
       "ticker": "EPA: SU",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-03",
       "domains": [
         "se.com"
       ],
-      "srcTotal": 13,
-      "srcFirstPct": 69,
+      "srcTotal": 15,
+      "srcFirstPct": 73,
       "kpiNorm": true
     },
     {
@@ -1498,12 +1563,12 @@
       "hq": "Munich, Germany",
       "ticker": "ETR: ENR",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-03",
       "domains": [
         "siemens-energy.com"
       ],
-      "srcTotal": 16,
-      "srcFirstPct": 56,
+      "srcTotal": 18,
+      "srcFirstPct": 50,
       "kpiNorm": true
     },
     {
@@ -1756,12 +1821,12 @@
       "hq": "Columbus, OH, USA",
       "ticker": "NYSE: VRT",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-03",
       "domains": [
         "vertiv.com"
       ],
-      "srcTotal": 12,
-      "srcFirstPct": 67,
+      "srcTotal": 13,
+      "srcFirstPct": 62,
       "kpiNorm": true
     },
     {

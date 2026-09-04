@@ -198,24 +198,6 @@
    "type": "other",
    "note": "Indirect exposure: ABB synchronous condensers ride VoltaGrid's 900 MW Vantage/OpenAI campus win.",
    "context": "No direct ABB–OpenAI engagement is documented; the link runs through VoltaGrid's distributed-generation fleet serving the campus."
-  },
-  {
-   "slug": "mitsubishi-electric",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-center UPS and gas-insulated switchgear",
-   "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS and among the gas-insulated switchgear majors by Straits Research.",
-   "context": "ABB meets Mitsubishi Electric in both UPS and gas-insulated switchgear, and is one of the five suppliers Mordor Intelligence says control roughly 55-60% of North American medium-voltage switchgear.\n\nABB is also the first name in NVIDIA's publicly announced 800 VDC collaborations, with Mordor citing its 800 V DC lineup as trimming cooling loads 10-15% in hyperscale facilities. Mitsubishi Electric announced 800 VDC development with NVIDIA in its own October 2025 release, but independent coverage of that ecosystem does not name it — so both companies are making the same architectural bet with very different public visibility.",
-   "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com"
-  },
-  {
-   "slug": "powell-industries",
-   "type": "competitor",
-   "status": "active",
-   "via": "Medium-voltage switchgear",
-   "note": "Powell Industries' Form 10-K names ABB first among its principal competitors, and Mordor Intelligence places ABB in the top five controlling roughly 55-60% of the North America medium-voltage switchgear market.",
-   "context": "This is a competitor link stated by the company itself rather than inferred from a market report: Powell's FY2025 10-K reads that its principal competitors include ABB, Eaton, Schneider and Siemens Industries, Inc.\n\nTwo further threads run through it. Powell publishes a replacement vacuum circuit breaker for the ABB type ITE-HK air circuit breaker, so it competes for the second half of an ABB installed base's life. And Powell's CEO Brett Cope spent twenty years at ABB, latterly as a Group Vice President responsible for ABB's global business with ExxonMobil.",
-   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
   }
  ],
  "technicalSpecs": [
@@ -558,11 +540,6 @@
    "date": "2025-11-25"
   },
   {
-   "label": "Powell Industries — FY2025 Form 10-K (year ended 2025-09-30)",
-   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
-   "date": "2025-11-19"
-  },
-  {
    "label": "ABB — VoltaGrid synchronous-condenser partnership (first order, 27 units)",
    "url": "https://new.abb.com/news/detail/130817/abb-and-voltagrid-partner-to-deliver-stable-data-center-power-to-support-ai-growth",
    "date": "2025-11"
@@ -583,11 +560,6 @@
    "date": "2025-10"
   },
   {
-   "label": "Research and Markets via Business Wire — data center UPS market outlook 2025-2030 names the dominant vendor set",
-   "url": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
-   "date": "2025-04-25"
-  },
-  {
    "label": "DOJ — ABB $315M coordinated foreign-bribery resolution (Kusile/Eskom, 2022)",
    "url": "https://www.justice.gov/opa/pr/abb-agrees-pay-over-315-million-resolve-coordinated-global-foreign-bribery-case",
    "date": "2022-12-02"
@@ -605,6 +577,6 @@
    "url": "https://www.investing.com/equities/abb-ltd-earnings"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

@@ -186,24 +186,6 @@
    "context": "Huawei holds a top-5 data-center UPS position and the #1 prefab-modular ranking globally, but its Western exclusion (Entity List, NDAA 889, FCC Covered List) makes Schneider — the North America prefab podium leader with Johnson Controls — a structural share beneficiary in exactly the geographies Huawei cannot enter.",
    "source": "Dossier competitive assessment — UPS oligopoly",
    "status": "active"
-  },
-  {
-   "slug": "mitsubishi-electric",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-center UPS and gas-insulated switchgear",
-   "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS and in Straits Research's gas-insulated switchgear participant list.",
-   "context": "Global Market Insights puts Schneider Electric at 24.3% of the data-center UPS market in 2024, the largest single share it reports, with Mitsubishi Electric named in the top seven and given no percentage. That asymmetry is the relationship: a leader with a published share against a named major without one.\n\nMordor Intelligence also identifies Schneider's EcoStruxure Grid as part of a shift of competition toward software bundled with switchgear — the same direction Mitsubishi Electric's approximately $1.4bn acquisition of PCI Energy Solutions points.",
-   "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com"
-  },
-  {
-   "slug": "powell-industries",
-   "type": "competitor",
-   "status": "active",
-   "via": "Medium-voltage switchgear and low-voltage breaker elements",
-   "note": "Powell Industries' Form 10-K names Schneider among its principal competitors, and Powell's FlexGear platform is built to accept Schneider Masterpact MTZ draw-out air circuit breaker elements.",
-   "context": "Named competitor in the filing and breaker supplier in the product literature — Powell publishes a dedicated instruction bulletin for FlexGear low-voltage switchgear equipped with Schneider, Siemens and Eaton breakers.\n\nMordor Intelligence puts Schneider in the top five controlling roughly 55-60% of the North American medium-voltage switchgear market and identifies its EcoStruxure Grid platform as part of a shift toward software bundled with switchgear. Powell's answer on that axis is its 2025 acquisition of Remsdaq and its own SCADA-H asset-management software.",
-   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
   }
  ],
  "policyExposure": [
@@ -444,11 +426,6 @@
    "date": "2026-02"
   },
   {
-   "label": "Powell Industries — FY2025 Form 10-K (year ended 2025-09-30)",
-   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
-   "date": "2025-11-19"
-  },
-  {
    "label": "800 VDC sidecar announcement",
    "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-innovation-in-800-vdc-power-systems-in-support-of-nvidia%E2%80%99s-next-generation-gpus-68ecb631098fd4ea49024353/",
    "date": "2025-10-13"
@@ -462,11 +439,6 @@
    "label": "GB300 NVL72 + Mission Control reference designs",
    "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-announces-new-reference-designs-featuring-integrated-power-management-and-liquid-cooling-controls-supporting-nvidia-mission-control-and-nvidia-gb300-nvl72-68ca8fdd5e6c6f9d3a096133/",
    "date": "2025-09-18"
-  },
-  {
-   "label": "Research and Markets via Business Wire — data center UPS market outlook 2025-2030 names the dominant vendor set",
-   "url": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
-   "date": "2025-04-25"
   },
   {
    "label": "US $700M investment plan",
@@ -494,6 +466,6 @@
    "date": "2024-10"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

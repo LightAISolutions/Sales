@@ -1,0 +1,1334 @@
+{
+ "schemaVersion": 7,
+ "slug": "powell-industries",
+ "name": "Powell Industries, Inc.",
+ "shortName": "Powell Industries",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.powellind.com/",
+ "headquarters": "Houston, Texas, United States",
+ "founded": "1947",
+ "employees": "3,143 full-time plus 315 contract (2025-09-30)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: POWL"
+ },
+ "sources": [
+  {
+   "label": "Investing.com — Cantor Fitzgerald cuts Powell Industries price target on capacity outlook",
+   "url": "https://www.investing.com/news/analyst-ratings/cantor-fitzgerald-cuts-powell-industries-stock-price-target-on-capacity-outlook-93CH-4861203",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "Mordor Intelligence — North America medium-voltage switchgear market forecasts to 2031",
+   "url": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Powell Industries — Q3 FY2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/10/powell-industries-powl-q3-2026-earnings-call-transcript/",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Powell Industries — Q3 FY2026 Form 10-Q (quarter ended 2026-06-30)",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Powell Industries — Q3 FY2026 earnings release (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000103/ex991-powlq3xfy2026earning.htm",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Powell Industries — quarterly cash dividend declared",
+   "url": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-declares-quarterly-cash-dividend-44",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Yahoo Finance / Zacks — Powell Industries misses Q3 earnings estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/powell-industries-powl-misses-q3-214505735.html",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Powell Industries — 8-K on special one-time RSU award to Brett A. Cope",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000095/powl-20260701.htm",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "C.H. Robinson — updates to Section 232 tariffs on steel, aluminum and copper",
+   "url": "https://www.chrobinson.com/en-us/resources/insights-and-advisories/client-advisories/2026q2/06-02-2026-client-advisory-updates-to-section-232-tariffs-on-steel-aluminum-copper/",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "Thompson Hine SmarTrade — President modifies Section 232 tariffs on aluminum, copper and steel imports",
+   "url": "https://www.thompsonhinesmartrade.com/2026/06/president-trump-modifies-section-232-tariffs-on-aluminum-copper-and-steel-imports/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Simply Wall St — why Powell Industries is up 10.3% after record Q2 backlog",
+   "url": "https://simplywall.st/stocks/us/capital-goods/nasdaq-powl/powell-industries/news/why-powell-industries-powl-is-up-103-after-record-q2-backlog",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Powell Industries — Q2 FY2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/05/05/powell-powl-q2-2026-earnings-call-transcript/",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Powell Industries — Q2 FY2026 earnings release (8-K Ex-99.1), first disclosure of the >$400M data center order",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000063/ex991-powlq2xfy2026earning.htm",
+   "date": "2026-05-04"
+  },
+  {
+   "label": "Powell Industries — 8-K, certificate of amendment increasing authorized shares for the three-for-one split",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000054/powl-20260331.htm",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Investing.com — Powell Industries at the Sidoti March small-cap conference",
+   "url": "https://www.investing.com/news/transcripts/powell-industries-at-sidoti-conference-strategic-growth-and-expansion-93CH-4569163",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "Powell Industries — announcement of three-for-one forward stock split",
+   "url": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-announces-three-one-stock-split",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "Powell Industries — Q1 FY2026 earnings release (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000013/ex991-powlq1xfy2026earning.htm",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "Powell Industries — DEF 14A proxy statement",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000114036126000342/ny20060559x1_def14a.htm",
+   "date": "2026-01-06"
+  },
+  {
+   "label": "Powell Industries — FY2025 Form 10-K (year ended 2025-09-30)",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
+   "date": "2025-11-19"
+  },
+  {
+   "label": "Powell Industries — Q4 and full-year FY2025 earnings release (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000145/ex991-powlq4xfy2025earning.htm",
+   "date": "2025-11-18"
+  },
+  {
+   "label": "Powell Industries — Q3 FY2025 earnings release (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000095/ex991-powlq3xfy2025earning.htm",
+   "date": "2025-08-05"
+  },
+  {
+   "label": "Powell Industries — $12.4 million investment to expand Houston production capacity",
+   "url": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-announces-124-million-investment-expand",
+   "date": "2025-08-01"
+  },
+  {
+   "label": "Powell Industries — Q2 FY2025 earnings release (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000057/ex991-powlq2xfy2025earning.htm",
+   "date": "2025-05-06"
+  },
+  {
+   "label": "Powell Industries — FY2024 Form 10-K (year ended 2024-09-30)",
+   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042024000086/powl-20240930.htm",
+   "date": "2024-11-19"
+  },
+  {
+   "label": "Zacks — Powell Industries beats Q4 FY2024 earnings estimates",
+   "url": "https://www.zacks.com/stock/news/2372427/powell-industries-powl-beats-q4-earnings-estimates",
+   "date": "2024-11-19"
+  },
+  {
+   "label": "Uptime Institute Journal — arc flash mitigation in the data center",
+   "url": "https://journal.uptimeinstitute.com/arc-flash/",
+   "date": "2015-12-01"
+  },
+  {
+   "label": "Powell Industries — acquisition of the GE medium-voltage ANSI switchgear product line",
+   "url": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-announces-acquisition-ge-medium-voltage-ansi",
+   "date": "2006-08-07"
+  },
+  {
+   "label": "Powell Industries — PowlVac metal-clad switchgear brochure 01077 Rev.8",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/images/01077-PowlVac-Metal-Clad-Switchgear.pdf"
+  },
+  {
+   "label": "Powell Industries — PowlVac-AR arc-resistant metal-clad switchgear brochure 01078 Rev.8",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/images/01078-PowlVac-AR-Metal-Clad-Switchgear.pdf"
+  },
+  {
+   "label": "Powell Industries — PowlVac-AR instruction bulletin 01.4IB.51200D",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/PIB-PowlVac-AR-Arc-Resistant-Switchgear-5kV-and-15kV.pdf"
+  },
+  {
+   "label": "Powell Industries — PowlVac-AR Type 2C supplemental instruction bulletin 01.SUP.51200B",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/PIB-PowlVac-AR-Switchgear-Type-2C-Supplemental-Instruction-Bulletin.pdf"
+  },
+  {
+   "label": "Powell Industries — PowlVac 38 kV AR Type 2C supplemental bulletin 01.SUP.65202B",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/PIB-PowlVac-38kV-AR-Switchgear-Accessibility-Type-2C-Supplemental-for-1200A-only.pdf"
+  },
+  {
+   "label": "Powell Industries — PowlVac 38 metal-clad switchgear brochure 01065 Rev.4",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/01065-PowlVac-38-Metal-Clad-Switchgear.pdf"
+  },
+  {
+   "label": "Powell Industries — PowlVac-ND narrow design metal-clad switchgear brochure 01058 Rev.4",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/images/01058-PowlVac-ND-Metal-Clad-Switchgear.pdf"
+  },
+  {
+   "label": "Powell Industries — Power/Vac metal-clad switchgear brochure 01095 Rev.3",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/01095-PowerVac-Metal-Clad-Switchgear.pdf"
+  },
+  {
+   "label": "Powell Industries — integrated arc-resistant solutions brochure 03029 Rev.3 (MVMCC-AR)",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/03029-Integrated-Arc-Resistant-Solutions.pdf"
+  },
+  {
+   "label": "Powell Industries — arc-resistant medium-voltage motor control brochure 03026",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/03026-Arc-Resistant-Medium-Voltage-Motor-Control.pdf"
+  },
+  {
+   "label": "Powell Industries — FlexGear low-voltage switchgear with Schneider, Siemens and Eaton breakers",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/PIB-FlexGear-Low-Voltage-Switchgear-with-Schnedier-Siemens-Eaton-breakers.pdf"
+  },
+  {
+   "label": "Powell Industries — Power Control Room instruction bulletin 01.4IB.27000C",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/PIB-Power-Control-Room-PCR.pdf"
+  },
+  {
+   "label": "Powell Industries — PCR-R E-House brochure 08163",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/08163-PCR-R-E-House-v1.pdf"
+  },
+  {
+   "label": "Powell Industries — non-segregated phase bus duct instruction bulletin 01.4IB.80000E",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/PIB-Non-Segregated-Phase-Bus-duct.pdf"
+  },
+  {
+   "label": "Powell Industries — traction power success story (REM Montreal)",
+   "url": "https://d2g0qum68t5ct7.cloudfront.net/files/Traction-Power-Success-Story-July-2023.pdf"
+  },
+  {
+   "label": "Powell Industries — PowlVac switchgear product page",
+   "url": "https://www.powellind.com/powlvac-switchgear"
+  },
+  {
+   "label": "Powell Industries — PowlVac circuit breakers product page",
+   "url": "https://www.powellind.com/powlvac-circuit-breakers"
+  },
+  {
+   "label": "Powell Industries — ANSI metal-enclosed switchgear product page",
+   "url": "https://www.powellind.com/ansi-metal-enclosed-switchgear"
+  },
+  {
+   "label": "Powell Industries — NEMA motor control product page",
+   "url": "https://www.powellind.com/nema-mcc"
+  },
+  {
+   "label": "Powell Industries — bus systems product page",
+   "url": "https://www.powellind.com/bus-systems"
+  },
+  {
+   "label": "Powell Industries — integrated package solutions (PCR, e-house, PCA, SCC)",
+   "url": "https://www.powellind.com/integrated-package-solutions"
+  },
+  {
+   "label": "Powell Industries — DC switchgear and rectifiers (traction power)",
+   "url": "https://www.powellind.com/traction-power-equipment"
+  },
+  {
+   "label": "Powell Industries — IEC switchgear and controlgear",
+   "url": "https://www.powellind.com/iec-switchgear-controlgear"
+  },
+  {
+   "label": "Powell Industries — electrical equipment services",
+   "url": "https://www.powellind.com/electrical-equipment-services"
+  },
+  {
+   "label": "Powell Industries — EPiC engineering, procurement, integration and construction",
+   "url": "https://www.powellind.com/epic"
+  },
+  {
+   "label": "Powell Industries — digital solutions and automation",
+   "url": "https://www.powellind.com/powell-digital-solutions-automation"
+  },
+  {
+   "label": "Powell Industries — Buy American and GSA",
+   "url": "https://www.powellind.com/buy-american-gsa"
+  },
+  {
+   "label": "Powell Industries — Powell Canada (Buy Canadian)",
+   "url": "https://www.powellind.com/buy-canadian"
+  },
+  {
+   "label": "Powell Industries — Powell UK division (formerly Switchgear & Instrumentation Ltd)",
+   "url": "https://www.powellind.com/powell-uk-division-formerly-switchgear-instrumentation-ltd"
+  },
+  {
+   "label": "Powell Industries — investor relations events and presentations",
+   "url": "https://powellindustriesinc.gcs-web.com/events-and-presentations"
+  },
+  {
+   "label": "Powell Industries — corporate governance and board of directors",
+   "url": "https://powellindustriesinc.gcs-web.com/corporate-governance"
+  },
+  {
+   "label": "Powell Industries — management: Brett Cope",
+   "url": "https://powellindustriesinc.gcs-web.com/management/brett-cope"
+  },
+  {
+   "label": "Powell Industries — management: Michael Metcalf",
+   "url": "https://powellindustriesinc.gcs-web.com/management/michael-metcalf"
+  },
+  {
+   "label": "SNS Insider — leading e-house companies transforming electrification",
+   "url": "https://www.snsinsider.com/blogs/e-house-industry"
+  },
+  {
+   "label": "StockAnalysis.com — Powell Industries statistics (S&P Global Market Intelligence data)",
+   "url": "https://stockanalysis.com/stocks/powl/statistics/"
+  },
+  {
+   "label": "StockAnalysis.com — Powell Industries analyst ratings",
+   "url": "https://stockanalysis.com/stocks/powl/ratings/"
+  },
+  {
+   "label": "MarketBeat — Powell Industries earnings history and estimates",
+   "url": "https://www.marketbeat.com/stocks/NASDAQ/POWL/earnings/"
+  },
+  {
+   "label": "IEEE — C37.20.7-2024 recommended practice for testing switchgear up to 52 kV for internal arcing faults",
+   "url": "https://ieeexplore.ieee.org/iel8/10930849/10930850/10930851.pdf"
+  },
+  {
+   "label": "Consulting-Specifying Engineer — mitigating arc flash hazards",
+   "url": "https://www.csemag.com/articles/mitigating-arc-flash-hazards-2/"
+  },
+  {
+   "label": "Powell Industries — SEC EDGAR company filings index",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080420&type=10-K"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1,
+ "summary": "BOTTOM LINE UP FRONT: Powell Industries is a Houston engineer-to-order manufacturer of medium-voltage switchgear and factory-built power rooms that has been re-rated by the AI data-center build — it booked roughly $800 million of data-center infrastructure awards in the first nine months of FY2026, including a single order exceeding $400 million that it calls the largest in its history, and its backlog rose 69% year on year to $2.4 billion at 2026-06-30 on a 3.0x book-to-bill in that quarter alone. BACKGROUND. Founded 1947, Delaware-incorporated, listed on Nasdaq (POWL), 3,143 full-time employees at 2025-09-30. FY2025 (year ended 2025-09-30) revenue was $1,104.3M (+9%) with gross margin 29.4% and net income $180.7M (+21%), per the Form 10-K. It executed a three-for-one forward stock split effective 2026-04-02, so pre-split and post-split per-share figures cannot be compared without adjustment. Powell gives no numeric guidance, discloses backlog only to the nearest $0.1 billion, and names no customers in any filing — the $400M-plus data-center counterparty is unidentified in every public source.",
+ "ecosystemRole": "The medium-voltage switchgear specialist in a market whose top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — control roughly 55-60% of North American volume. Mordor Intelligence places Powell outside that oligopoly, among the regional specialists eroding its share through rapid customization and domestic production, and names its differentiator explicitly: tailored switchgear in ten weeks from its Texas facility, credited with winning multiple 2025 data-center awards. In an equipment market where lead times run in the tens of weeks and longer, that is not a price advantage but a schedule one. Its data-center scope is explicitly the outside-the-building electrical kit for behind-the-meter on-site generation — the switchgear between a campus's own generation and its halls — rather than the UPS and distribution inside them.",
+ "productsAndServices": [
+  {
+   "name": "PowlVac and PowlVac-AR metal-clad switchgear",
+   "category": "Medium-voltage switchgear",
+   "description": "The core franchise: 5 kV and 15 kV class ANSI metal-clad switchgear combining Powell-designed and Powell-fabricated vacuum circuit breakers with Powell-built structures, in standard and arc-resistant construction. Built to ANSI C37.04, C37.06 and C37.20.2 with NEMA SG5, and arc-resistant variants tested to C37.20.7.",
+   "highlights": [
+    "Continuous ratings 1200 A to 3000 A, and 4000 A with compartment-mounted forced-air cooling; interrupting 25 kA to 63 kA; three-cycle vacuum breakers with a K factor of 1",
+    "Arc-resistant construction available to IEEE accessibility Type 2C — the company states Type 2C meets the Type 2B requirements and goes beyond them, rated 40 kA rms symmetrical maximum for 0.5 seconds at 5/15 kV",
+    "On-Board Racking places the operator entirely outside the arc-flash zone using a digital HMI, with no external racking device required",
+    "3000 A and 2000 A breakers are interchangeable in a 1200 A cell, so an operator stocks one spare rating instead of several",
+    "Main bus can be rated to 174 kA peak for generator applications; all PowlVac breakers carry UL and C-UL labels as standard",
+    "In Type 2C designs the main bus compartment is segregated into a full-height bolt-on component rather than forming part of the rear cell assembly as in Type 2B"
+   ],
+   "positioning": "The FY2025 10-K names the principal competitors as ABB, Eaton, Schneider and Siemens Industries, Inc. Mordor Intelligence places those same majors in a top five holding roughly 55-60% of North American medium-voltage switchgear and puts Powell in the specialist tier competing on customization and a ten-week lead time from Texas. Powell has no stated cost advantage and concedes competitors may have lower cost structures or a more favourable geographic footprint.",
+   "soldThrough": "Direct to the end user or to the EPC firm acting for the end user, typically on competitive bid.",
+   "targetSegments": [
+    "Oil and gas including LNG",
+    "Petrochemical",
+    "Electric utility",
+    "Commercial and other industrial including data centers",
+    "Light rail traction power",
+    "Universities and government"
+   ],
+   "roadmap": "The company states it is leveraging its vacuum circuit breaker expertise to develop new products for a broader range of applications and sectors, and names hydrogen production, carbon capture, biofuels and sustainable aviation fuel as expansion targets."
+  },
+  {
+   "name": "PowlVac-ND, PowlVac 38 and Power/Vac",
+   "category": "Medium-voltage switchgear",
+   "description": "Three further metal-clad families: PowlVac-ND narrow-design gear for space-constrained rooms and as a direct replacement for obsolete air-magnetic lineups; PowlVac 38 at 27 kV and 38 kV; and Power/Vac, the legacy ANSI medium-voltage line Powell acquired from GE Consumer & Industrial in 2006.",
+   "highlights": [
+    "PowlVac-ND is 26 inches wide at 5 kV with breakers at 1200 A or 2000 A and 36 kA or 50 kA interrupting, and 36 inches wide at 27/29.8 kV — against a 36-inch standard cell, the narrow design is what allows a retrofit into an existing room",
+    "PowlVac 38, introduced 1995, uses an axial-magnetic vacuum interrupter with copper-chrome contacts, fully qualified at KEMA for 40 kA interrupting duty and back-to-back capacitor switching",
+    "Power/Vac spans 5 kV, 8.25 kV and 15 kV at 20 kA to 63 kA and 1200 A to 4000 A, with 11-gauge steel compartment segregation and seismic qualification to IEEE 693 and IBC Zone 4 by shake-table test",
+    "Power/Vac safety options include reduced-energy let-through maintenance switches, arc-flash sensing relays, infrared thermal scanning windows, BriteSpot onboard thermal monitoring and onboard partial-discharge sensing",
+    "Roll-in vacuum replacement breakers exist for most major manufacturers' obsolete air-magnetic designs, including Westinghouse DH and DHP, Federal Pacific DST, Allis-Chalmers and Siemens type MA, ABB type ITE-HK, and GE Magneblast"
+   ],
+   "positioning": "The replacement-breaker and retrofit business is a structural annuity on an installed base Powell did not originally supply — it competes for the second half of a forty-year asset's life against the original manufacturer.",
+   "soldThrough": "Direct and through EPC firms; retrofit and replacement sold direct to owners and operators.",
+   "targetSegments": [
+    "Existing industrial and utility substations",
+    "Transit authorities",
+    "Owners of obsolete air-magnetic switchgear"
+   ],
+   "roadmap": "Not stated."
+  },
+  {
+   "name": "Integrated package solutions — Power Control Rooms, e-houses and modules",
+   "category": "Modular power buildings",
+   "description": "Factory-built, factory-tested electrical rooms shipped to site as walk-in enclosures: Power Control Rooms introduced in 1968, PCR-R e-houses on a rigid frame and structural steel skid, multi-story custom offshore power modules, Power Control Aisles, mobile substations and Substation Control Centers.",
+   "highlights": [
+    "Custom engineered modules, including multi-story offshore power modules, are built at Powell's 64-acre Jacintoport facility on the Houston Ship Channel — the shipping-channel frontage is what makes very large modules transportable at all",
+    "PCRs use an interlocking panel design on a structural skid base, insulated to site-specific seismic requirements, shipped as one piece or multi-split with power and control interconnects already installed",
+    "E-houses are factory tested to UL, IEEE, CSA and NEMA standards before shipment",
+    "Blast-resistant equipment rooms and a High-Velocity Hurricane Zone variant are offered — the enclosure is engineered to the site's hazard, not just to the equipment",
+    "Substation Control Centers cover relay rooms, SCADA panels, UPS and DC systems and server racks for utility substations including air-insulated, gas-insulated, battery-storage and solar sites",
+    "A $12.4 million Jacintoport expansion adds 335,000 sq ft of laydown yard — a 62% increase — and doubles the shoreline bulkhead to 1,150 feet for multiple ship lanes"
+   ],
+   "positioning": "SNS Insider names Powell among five companies shaping e-house technology alongside ABB, Siemens, Schneider Electric and Eaton, describing its position as designing custom-built systems requiring little site work. That framing is oil-and-gas-centric and predates the FY2026 data-center pivot.",
+   "soldThrough": "Direct and through EPC firms, usually as part of a larger electrical scope.",
+   "targetSegments": [
+    "Oil and gas and LNG",
+    "Petrochemical",
+    "Electric utility substations",
+    "Data centers",
+    "Mining",
+    "Offshore"
+   ],
+   "roadmap": "The Jacintoport expansion was to begin construction in Q1 FY2026 and complete in the second half of FY2026; management stated it represents roughly $100 million of incremental annualized revenue when fully utilized."
+  },
+  {
+   "name": "Low-voltage switchgear, switchboards and motor control",
+   "category": "Low-voltage and motor control",
+   "description": "FlexGear low-voltage metal-enclosed switchgear built as a universal platform accepting other manufacturers' draw-out breaker elements, FlexBoard UL 891 switchboards, PowlGear ME reduced-footprint metal-enclosed medium-voltage gear, and the FlexTrol and MVMCC-AR motor-control lines.",
+   "highlights": [
+    "FlexGear accommodates Eaton Magnum DS, Siemens WL or Schneider Masterpact MTZ draw-out air circuit breaker elements in one Powell-engineered structure — Powell sells the assembly and the engineering, and buys the interrupting element from the companies its 10-K names as competitors",
+    "FlexGear main bus to 5000 A with bus bracing to 100 kAIC, in standard and arc-resistant construction",
+    "FlexBoard is a UL 891 switchboard at 480 V maximum, 1600 A to 5000 A, with short-circuit ratings up to 150 kA",
+    "FlexTrol medium-voltage motor control accepts either Eaton draw-out or Allen-Bradley fixed-mounted contactors in the same cubicle, in 400 A two-high and 800 A one-high designs at 5 kV and 7.2 kV",
+    "MVMCC-AR integrated arc-resistant motor control is IEEE Type 2 rated at 2300 / 4160 / 7200 V with 400 A and 800 A vacuum contactors, main bus to 4000 A braced to 50 kA, and close-couples to the switchgear lineup with no transition section"
+   ],
+   "positioning": "The universal-platform strategy is unusual and commercially revealing: rather than compete on the breaker, Powell competes on the assembly, the engineering and the arc-resistant structure around whichever breaker the customer's standards already specify.",
+   "soldThrough": "Direct and through EPC firms.",
+   "targetSegments": [
+    "Industrial",
+    "Petrochemical",
+    "Utility",
+    "Commercial"
+   ],
+   "roadmap": "Not stated."
+  },
+  {
+   "name": "Bus systems and DC switchgear",
+   "category": "Distribution and traction",
+   "description": "Cable bus, non-segregated phase bus duct, segregated phase bus duct, isolated phase bus duct and DC duct; plus DC switchgear, high-speed DC breakers and semiconductor rectifiers for transit traction power, a market Powell entered in 1992.",
+   "highlights": [
+    "Cable bus carries insulated copper or aluminium conductors at up to 38,000 V and up to 5,000 A, CSA certified to C22.2 numbers 27 and 201",
+    "Isolated phase bus duct runs 600 A to 42 kA at up to 38 kV with 110-150 kV BIL, for direct generator-to-transformer connection at utility and cogeneration plants",
+    "DC switchgear is designed and tested to IEEE C37.14, C37.16, C37.20.1 and IEEE 693, rated 4000 A to 8000 A at 800 VDC to 1600 VDC",
+    "Powell uses the Brush type NDC high-speed circuit breaker in all its DC switchgear designs, with a stated service life design beyond 30 years and fully bi-directional interruption",
+    "Semiconductor rectifiers are offered in medium, heavy and extra-heavy duty cycles and the company states they are adaptable to electrolyzer designs for clean hydrogen production",
+    "The NDC remote racking device operates from 25 feet away on existing 125 VDC cubicle control power"
+   ],
+   "positioning": "Traction power is a small but genuinely differentiated line — Powell supplied more than 30 traction power substations with PowlVac-ND 27 kV arc-resistant switchgear and PCR e-houses for the 67-kilometre Réseau express métropolitain in Montreal, for CDPQ Infra and NouvLR.",
+   "soldThrough": "Direct to transit authorities and their contractors.",
+   "targetSegments": [
+    "Transit and light rail",
+    "Utility and cogeneration",
+    "Industrial"
+   ],
+   "roadmap": "Rectifier adaptation to electrolyzers is the stated hydrogen-adjacent path."
+  },
+  {
+   "name": "Services, automation and EPiC",
+   "category": "Services and software",
+   "description": "Powell Global Services covers retrofit, retrofill, equipment upgrades, bus duct repair and refurbishment, start-up and commissioning, breaker life-extension, training, spares and parts-on-demand. Powell EPiC provides engineering, procurement, integration and construction. The Powell Automation Division supplies protection settings, control schemes and SCADA.",
+   "highlights": [
+    "EPiC covers conceptual design, power-system analysis, relay coordination, procurement, demolition, logistics, lifting and setting in place, commissioning and start-up — the whole scope around the equipment",
+    "The Automation Division performs load-flow studies, short-circuit analysis and protection settings, and builds transfer, load-shed and paralleling control schemes",
+    "Power System Asset Management is delivered through Powell's own enterprise software with a single HMI combining SCADA and system health, which the company calls SCADA-H",
+    "Remsdaq Limited of Deeside, UK, maker of SCADA remote terminal units for substation control and automation, was acquired in August 2025 for £13.6 million / $18.4 million",
+    "Management stated on the Q3 FY2026 call that the Remsdaq integration has allowed the company to use its own automation boxes in data-center designs"
+   ],
+   "positioning": "The services and automation layer is what converts a switchgear sale into a relationship over a forty-year asset life, and the Remsdaq acquisition is the company buying the intelligence layer rather than partnering for it.",
+   "soldThrough": "Direct to owners and operators.",
+   "targetSegments": [
+    "Existing installed base across all end markets"
+   ],
+   "roadmap": "Expansion of the automation platform through Remsdaq is a stated direction."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "PowlVac and PowlVac-AR metal-clad switchgear, 5 kV class",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Nominal voltage",
+     "value": "4.16 kV; maximum design voltage 4.76 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "Symmetrical interrupting",
+     "value": "36 kA, 50 kA or 63 kA rms"
+    },
+    {
+     "band": "Electrical",
+     "label": "Continuous current",
+     "value": "1200 A, 2000 A, 3000 A; 4000 A with compartment-mounted forced-air cooling"
+    },
+    {
+     "band": "Electrical",
+     "label": "Power-frequency withstand",
+     "value": "19 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "Basic impulse level",
+     "value": "60 kV peak"
+    },
+    {
+     "band": "Electrical",
+     "label": "Momentary close and latch",
+     "value": "94 kA at 36 kA; 130 kA at 50 kA; 164 kA at 63 kA"
+    },
+    {
+     "band": "Electrical",
+     "label": "Short-time withstand",
+     "value": "36 / 50 / 63 kA for 2 seconds"
+    },
+    {
+     "band": "Electrical",
+     "label": "Interrupting time",
+     "value": "3 cycles (50 ms); 5-cycle breakers available at the same DC ratings"
+    },
+    {
+     "band": "Electrical",
+     "label": "Percent DC interrupting",
+     "value": "50%"
+    },
+    {
+     "band": "Electrical",
+     "label": "Back-to-back capacitor switching",
+     "value": "1800 A"
+    },
+    {
+     "band": "Design",
+     "label": "Cell width",
+     "value": "36 in (914 mm)"
+    },
+    {
+     "band": "Design",
+     "label": "Generator breaker",
+     "value": "05PV63GCB rated 173 kA crest close and latch"
+    },
+    {
+     "band": "Design",
+     "label": "Racking",
+     "value": "On-Board Racking via digital HMI, operator outside the arc-flash zone; no external racking device"
+    }
+   ],
+   "notes": "Breaker type designations at 5 kV include 05PV36CDR, 05PV50CDR, 05PV63CDR, 05PV63ARG, 05PV36ARM, 05PV50ARM, 05PV63ARM and 05PV63GCB."
+  },
+  {
+   "product": "PowlVac and PowlVac-AR metal-clad switchgear, 15 kV class",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Nominal voltage",
+     "value": "13.8 kV; maximum design voltage 15.0 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "Symmetrical interrupting",
+     "value": "25 kA, 36 kA, 50 kA or 63 kA rms"
+    },
+    {
+     "band": "Electrical",
+     "label": "Continuous current",
+     "value": "1200 A, 2000 A, 3000 A; 4000 A with forced-air cooling"
+    },
+    {
+     "band": "Electrical",
+     "label": "Power-frequency withstand",
+     "value": "36 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "Basic impulse level",
+     "value": "95 kV peak"
+    },
+    {
+     "band": "Electrical",
+     "label": "Momentary close and latch",
+     "value": "65 kA at 25 kA; 97 kA at 36 kA; 130 kA at 50 kA; 164 kA at 63 kA"
+    },
+    {
+     "band": "Electrical",
+     "label": "Short-time withstand",
+     "value": "25 / 36 / 50 / 63 kA for 2 seconds"
+    },
+    {
+     "band": "Electrical",
+     "label": "Interrupting time",
+     "value": "3 cycles (50 ms)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Main bus for generator applications",
+     "value": "Rated up to 174 kA peak"
+    },
+    {
+     "band": "Design",
+     "label": "One-high dimensions",
+     "value": "95 in high by 95 in deep at 1200-3000 A and 25-50 kA; 105 in by 105 in at 63 kA"
+    },
+    {
+     "band": "Design",
+     "label": "Two-high dimensions",
+     "value": "105 in high by 105 in deep at 1200-2000 A, all fault ratings"
+    },
+    {
+     "band": "Design",
+     "label": "4000 A forced-cooled",
+     "value": "105 in high by 105 in deep at all fault ratings"
+    },
+    {
+     "band": "Design",
+     "label": "Plenum",
+     "value": "Adds 24 in to total height"
+    },
+    {
+     "band": "Design",
+     "label": "Derate",
+     "value": "3000 A breaker derated to 2900 A when an upper rollout cell is used"
+    },
+    {
+     "band": "Compliance",
+     "label": "Arc-resistant accessibility",
+     "value": "IEEE C37.20.7 accessibility Type 2C — rated 40 kA rms symmetrical maximum for 0.5 seconds"
+    },
+    {
+     "band": "Compliance",
+     "label": "Construction standards",
+     "value": "ANSI/IEEE C37.04, C37.06, C37.20.2 and C37.20.7; NEMA SG5; tested per ANSI C37.09"
+    },
+    {
+     "band": "Compliance",
+     "label": "Listings",
+     "value": "UL and C-UL labels standard on all PowlVac breakers; assembly UL/C-UL classification label on request"
+    },
+    {
+     "band": "Compliance",
+     "label": "Internal arcing rating",
+     "value": "Equals the symmetrical short-circuit rating of the breaker unless otherwise specified"
+    }
+   ],
+   "notes": "Type 2C protection holds with the low-voltage control or instrumentation compartment door open, which is the condition a technician is most often in. Breaker designations at 15 kV include 15PV25CDR through 15PV63CDR, 15PV63ARG, the ARM arc-resistant family and the 15PV63GCB generator breaker at 173 kA crest."
+  },
+  {
+   "product": "PowlVac 38 and PowlVac-ND",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "PowlVac 38 voltage",
+     "value": "27 kV and 38 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "PowlVac 38 continuous",
+     "value": "1200 A, 2000 A and 3000 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "PowlVac 38 interrupting",
+     "value": "25 kAIC and 40 kAIC in the 40-inch design at 1200-2000 A; 40 kAIC in the 54-inch design at 3000 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "PowlVac 38 qualification",
+     "value": "Fully qualified at KEMA for 40 kA interrupting duty and back-to-back capacitor switching"
+    },
+    {
+     "band": "Electrical",
+     "label": "PowlVac 38-AR accessibility",
+     "value": "IEEE accessibility Type 2C at 31.5 kA rms symmetrical maximum for 0.5 seconds, 1200 A only"
+    },
+    {
+     "band": "Electrical",
+     "label": "PowlVac-ND 5 kV",
+     "value": "26 in wide; breaker 1200 A or 2000 A at 36 kA or 50 kA; main bus to 3000 A; minimum depth 74 in"
+    },
+    {
+     "band": "Electrical",
+     "label": "PowlVac-ND 27/29.8 kV",
+     "value": "36 in wide; 1200 A or 2000 A at 25 kA; minimum depth 104 in"
+    },
+    {
+     "band": "Design",
+     "label": "PowlVac 38 dimensions",
+     "value": "40 in wide by 92 in high by 116.5 in deep at 1200-2000 A; 54 in wide by 92 in high by 127.5 in deep at 3000 A"
+    },
+    {
+     "band": "Design",
+     "label": "Bus and insulation",
+     "value": "Silver-plated tubular copper main bus with fully rated 38 kV epoxy insulation; cycloaliphatic epoxy insulators; vinyl bus-joint cover boots qualified for 38 kV"
+    },
+    {
+     "band": "Design",
+     "label": "Breaker operation",
+     "value": "Type CDS breakers with true closed-door racking; optional remote electrical racking"
+    },
+    {
+     "band": "Design",
+     "label": "Mechanical endurance",
+     "value": "PowlVac-ND exceeds the ANSI 10,000-operation requirement"
+    }
+   ],
+   "notes": "The narrow designs exist for retrofit: replacing an obsolete air-magnetic lineup inside an existing building where a standard 36-inch cell will not fit. PowlVac-NDAR arc-resistant variants exist at both 26-inch 5 kV and 27/29.8 kV."
+  },
+  {
+   "product": "Power/Vac metal-clad switchgear",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Voltage classes",
+     "value": "5 kV, 8.25 kV and 15 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "Interrupting at 5 kV",
+     "value": "31.5, 40, 50 or 63 kA"
+    },
+    {
+     "band": "Electrical",
+     "label": "Interrupting at 8.25 kV",
+     "value": "40, 50 or 63 kA"
+    },
+    {
+     "band": "Electrical",
+     "label": "Interrupting at 15 kV",
+     "value": "20, 25, 31.5, 40, 50 or 63 kA"
+    },
+    {
+     "band": "Electrical",
+     "label": "Continuous current",
+     "value": "1200, 2000, 3000, 3500 and 4000 A; 4000 A is forced-air cooled and indoor only"
+    },
+    {
+     "band": "Electrical",
+     "label": "Bus bracing",
+     "value": "50 kA standard, 63 kA heavy duty"
+    },
+    {
+     "band": "Electrical",
+     "label": "Interrupting time",
+     "value": "3 or 5 cycles; K factor 1.0"
+    },
+    {
+     "band": "Design",
+     "label": "Cubicle depth",
+     "value": "82 in to 106 in; special 77-inch-high cubicles available for low ceilings"
+    },
+    {
+     "band": "Design",
+     "label": "Enclosures",
+     "value": "NEMA 1, NEMA 1 gasketed dust and rodent proof, indoor drip-proof, NEMA 3R non-walk-in, protected aisle and common aisle"
+    },
+    {
+     "band": "Design",
+     "label": "Compartment segregation",
+     "value": "11-gauge steel"
+    },
+    {
+     "band": "Design",
+     "label": "Seismic",
+     "value": "Qualified to IEEE 693 and IBC Zone 4 by shake-table testing"
+    }
+   ],
+   "notes": "Acquired from GE Consumer & Industrial in 2006 for $32 million in cash, together with an exclusive long-term commercial alliance to supply that channel's medium-voltage ANSI switchgear. That GE unit later became GE Industrial Solutions and was divested to ABB — it is not GE Vernova, and the two should not be conflated."
+  },
+  {
+   "product": "MVMCC-AR integrated arc-resistant motor control",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Voltage ratings",
+     "value": "2300 V, 4160 V and 7200 V; 7.2 kV maximum"
+    },
+    {
+     "band": "Electrical",
+     "label": "Contactors",
+     "value": "400 A and 800 A vacuum"
+    },
+    {
+     "band": "Electrical",
+     "label": "MCC continuous",
+     "value": "360 A one-high; 360 plus 360 A two-high; 720 A one-high with the 800 A contactor"
+    },
+    {
+     "band": "Electrical",
+     "label": "Main bus ampacity",
+     "value": "To 4000 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "Bracing",
+     "value": "Main and ground bus braced to 50 kA switchgear standards"
+    },
+    {
+     "band": "Electrical",
+     "label": "Internal arcing short-circuit",
+     "value": "50 kA"
+    },
+    {
+     "band": "Design",
+     "label": "Accessibility",
+     "value": "IEEE Type 2 arc-resistant construction"
+    },
+    {
+     "band": "Design",
+     "label": "Switchgear / MCC dimensions",
+     "value": "36 in wide each; 95 in / 92 in high; 95 in / 50 in deep"
+    },
+    {
+     "band": "Design",
+     "label": "Integration",
+     "value": "Close-couples to the switchgear lineup with no transition section; top-mounted plenum; front or rear accessible"
+    }
+   ],
+   "notes": "The no-transition-section coupling is the commercial point: motor control and switchgear share one arc-resistant plenum and one bus, so the arc-resistant rating is continuous across the lineup rather than stopping at a joint."
+  },
+  {
+   "product": "Bus systems and DC switchgear",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Cable bus",
+     "value": "Up to 38,000 V and up to 5,000 A; insulated copper or aluminium; CSA certified to C22.2 numbers 27 and 201"
+    },
+    {
+     "band": "Electrical",
+     "label": "Non-segregated phase bus duct",
+     "value": "Product page states 600 V to 38,000 V at up to 8000 A; the current instruction bulletin covers 1058 V to 15 kV at 1200 A to 5000 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "Isolated phase bus duct",
+     "value": "600 A to 42 kA, up to 38 kV, 110-150 kV BIL"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC switchgear",
+     "value": "4000 A to 8000 A at 800 VDC to 1600 VDC"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC breakers",
+     "value": "Brush type NDC high-speed, fully bi-directional interruption, service life design beyond 30 years"
+    },
+    {
+     "band": "Compliance",
+     "label": "DC standards",
+     "value": "IEEE C37.14-2002, C37.16-2000, C37.20.1-2002 and IEEE 693-2005"
+    },
+    {
+     "band": "Compliance",
+     "label": "Bus duct compliance",
+     "value": "Fire-rated wall penetrations, UL-approved designs, IEEE / IEC / CSA compliance, seismic certification available"
+    }
+   ],
+   "notes": "The bus duct rating is an unresolved first-party discrepancy: the website claims 38,000 V and 8000 A while the current instruction bulletin covers only 1058 V to 15 kV at 1200 A to 5000 A. Both are company-published; no datasheet covering the higher claim was located."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-14",
+   "category": "market",
+   "headline": "Cantor Fitzgerald cuts its price target to $235 from $320 and keeps a Neutral rating after a call with the CFO, reiterating $235 on 2026-09-02",
+   "read": "The de-rating logic is subtle and worth reading precisely: Cantor removed execution risk — stating that executing the $2.4bn backlog does not depend on the next major capacity addition — and in doing so removed the growth-capex optionality from the multiple.",
+   "source": "https://www.investing.com/news/analyst-ratings/cantor-fitzgerald-cuts-powell-industries-stock-price-target-on-capacity-outlook-93CH-4861203"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q3 FY2026 Form 10-Q discloses approximately $800 million of data-center infrastructure project awards in the first nine months of FY2026, and adds new risk-factor language that data-center work will likely require less custom engineered-to-order equipment",
+   "read": "The risk factor is the most important new sentence in the filing: the mix that is driving the order book is also the mix that is least like the engineered-to-order work carrying the 29-31% gross margin the whole re-rating rests on.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "financial",
+   "headline": "Q3 FY2026 (quarter ended 2026-06-30): revenue $311.7M (+8.9%), gross margin 30.6%, net income $52.2M, diluted EPS $1.42; record new orders $934M (+158%), book-to-bill 3.0x, record backlog $2.4bn (+69% year on year)",
+   "read": "Three mega orders landed in one quarter — the >$400M data center order, roughly $75M in petrochemical fertilizer and roughly $60M in US Gulf Coast LNG — while petrochemical revenue fell 49%, so the order book and the revenue line are telling different stories about which end market Powell is in.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000103/ex991-powlq3xfy2026earning.htm"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "corporate",
+   "headline": "Quarterly cash dividend of $0.09 per share declared, payable 2026-09-16 to holders of record 2026-08-19",
+   "read": "A post-split dividend on a debt-free balance sheet carrying $633.6M of cash and short-term investments — the capital return is immaterial next to the cash pile, which is being held for capacity.",
+   "source": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-declares-quarterly-cash-dividend-44"
+  },
+  {
+   "date": "2026-07-06",
+   "category": "leadership",
+   "headline": "Compensation and Human Capital Committee approves a special one-time award of 36,000 restricted stock units to CEO Brett A. Cope, vesting 25% / 25% / 50% on 2027-07-01, 2028-07-01 and 2029-07-01",
+   "read": "The 8-K states the award is designed to retain him past age-60 retirement eligibility under his 2016 employment agreement — a key-man retention action taken in the middle of the largest order cycle in the company's history.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000095/powl-20260701.htm"
+  },
+  {
+   "date": "2026-05-04",
+   "category": "order-win",
+   "headline": "First disclosure of a mega data-center order with a value exceeding $400 million, awarded after the fiscal second quarter ended and described by the CEO as the largest order in Powell history, related to a behind-the-meter design of on-site generation assets",
+   "read": "Powell won all of the outside electrical kit for the campus rather than sharing the scope, describes the configuration as a power island, and says the internal scope is not yet won — so the order is both a landmark and a bid for a second, larger one.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000063/ex991-powlq2xfy2026earning.htm"
+  },
+  {
+   "date": "2026-05-04",
+   "category": "financial",
+   "headline": "Q2 FY2026 (quarter ended 2026-03-31): revenue $296.6M (+6%), gross margin 29.6%, net income $45.9M, diluted EPS $1.25; new orders $490M (+97%), backlog $1.8bn (+33%), book-to-bill 1.7x",
+   "read": "Two mega orders were booked in the quarter itself, each above $75M, including what the company called the largest utility order it has ever recorded — the data-center order came after quarter-end and booked in Q3.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000063/ex991-powlq2xfy2026earning.htm"
+  },
+  {
+   "date": "2026-04-02",
+   "category": "corporate",
+   "headline": "Three-for-one forward stock split effected, with split-adjusted trading beginning 2026-04-06; authorized shares raised from 30 million to 90 million and shares outstanding from about 12.1 million to about 36.4 million",
+   "read": "The split is the single largest source of misreading in this dossier: FY2023 to FY2025 per-share figures are pre-split and FY2026 quarters are post-split, and Powell has not restated the FY2025 10-K.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000054/powl-20260331.htm"
+  },
+  {
+   "date": "2026-02-03",
+   "category": "financial",
+   "headline": "Q1 FY2026 (quarter ended 2025-12-31): revenue $251.2M (+4%), gross margin 28.4%, net income $41.4M, diluted EPS $3.40 pre-split; new orders $439M (+63%), backlog $1.6bn, book-to-bill 1.7",
+   "read": "This quarter contains the company's first megaproject booking in data centers at roughly $75M, with total data-center orders well in excess of $100M — the beginning of the mix shift that reshaped the backlog within three quarters.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000013/ex991-powlq1xfy2026earning.htm"
+  },
+  {
+   "date": "2025-11-18",
+   "category": "financial",
+   "headline": "FY2025 (year ended 2025-09-30): revenue $1,104.3M (+9%), gross profit $324.4M at 29.4% (+19%), net income $180.7M (+21%), diluted EPS $14.86 pre-split; new orders $1.2bn (+9%), backlog $1.4bn",
+   "read": "Q4 delivered record quarterly EPS of $4.22 pre-split on a 31.4% gross margin, and the stock fell more than 11% on the print — the first clear sign that expectations had moved ahead of the business.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000145/ex991-powlq4xfy2025earning.htm"
+  },
+  {
+   "date": "2025-08-15",
+   "category": "ma",
+   "headline": "Powell UK Limited acquires Remsdaq Limited of Deeside, UK, maker of SCADA remote terminal units for substation control and automation, for £13.6 million / $18.4 million including $4.6M of cash acquired",
+   "read": "Buying the automation layer rather than partnering for it; management stated on the Q3 FY2026 call that the integration lets Powell use its own automation boxes in data-center designs.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+  },
+  {
+   "date": "2025-08-05",
+   "category": "order-win",
+   "headline": "Q3 FY2025 brought a $60 million electric utility award described as the largest utility order in Powell history at the time, more than $80 million combined from two offshore custom-module awards, and a $30 million US traction power order",
+   "read": "Worth holding next to the FY2026 numbers: a $60M order was a company record in mid-2025, and nine months later a single data-center order exceeded $400M.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000095/ex991-powlq3xfy2025earning.htm"
+  },
+  {
+   "date": "2025-08-01",
+   "category": "capacity",
+   "headline": "$12.4 million Jacintoport investment announced, adding 335,000 sq ft of Power Control Room laydown yard — a 62% increase — and doubling the shoreline bulkhead to 1,150 feet for multiple ship lanes",
+   "read": "The stated justification was anticipated oil and gas and LNG activity over three to five years, which is notable because the capacity it created is now absorbing data-center work instead.",
+   "source": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-announces-124-million-investment-expand"
+  },
+  {
+   "date": "2024-11-19",
+   "category": "financial",
+   "headline": "FY2024 (year ended 2024-09-30): revenue $1,012.4M, gross profit $273.1M at 27.0%, net income $149.8M, diluted EPS $12.29 pre-split; new orders $1.1bn",
+   "read": "The base year for the current cycle, and the last one in which gross margin sat below 29% — the margin expansion from 27.0% to 29.4% to 30.6% is as much of the earnings story as the revenue growth.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042024000086/powl-20240930.htm"
+  },
+  {
+   "date": "2006-08-07",
+   "category": "ma",
+   "headline": "Powell acquires the medium-voltage ANSI switchgear product line from GE Consumer & Industrial for $32 million in cash, with an exclusive long-term commercial alliance to supply that channel's medium-voltage ANSI switchgear",
+   "read": "The origin of the Power/Vac line and of Powell's installed-base service annuity. The GE unit involved later became GE Industrial Solutions and was divested to ABB — it is not GE Vernova, and the two are routinely confused.",
+   "source": "https://powellindustriesinc.gcs-web.com/news-releases/news-release-details/powell-industries-announces-acquisition-ge-medium-voltage-ansi"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "abb",
+   "type": "competitor",
+   "status": "active",
+   "via": "Medium-voltage switchgear",
+   "note": "Powell's own Form 10-K names ABB first among its principal competitors, and Mordor Intelligence places ABB in the top five controlling roughly 55-60% of the North America medium-voltage switchgear market.",
+   "context": "This is one of the few competitor links in the corpus stated by the company itself rather than inferred from a market report: the FY2025 10-K reads that Powell's principal competitors include ABB, Eaton, Schneider and Siemens Industries, Inc.\n\nThe relationship has two further threads. Powell publishes a PowlVac-ND replacement vacuum circuit breaker for the ABB type ITE-HK air circuit breaker, so it competes for the second half of an ABB installed base's life. And CEO Brett Cope spent twenty years at ABB, latterly as a Group Vice President responsible for ABB's global business with ExxonMobil.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+  },
+  {
+   "slug": "eaton",
+   "type": "competitor",
+   "status": "active",
+   "via": "Medium-voltage switchgear and low-voltage breaker elements",
+   "note": "Named in Powell's 10-K as a principal competitor, and simultaneously a component supplier whose Magnum DS draw-out breakers and draw-out contactors Powell designs its FlexGear and FlexTrol platforms to accept.",
+   "context": "The dual relationship is the commercially interesting part. Powell's universal-platform strategy means it buys the interrupting element from a company it names as a competitor and sells the assembly, the engineering and the arc-resistant structure around it. FlexGear accommodates Eaton Magnum DS elements; FlexTrol medium-voltage motor control accepts Eaton draw-out contactors.\n\nThere is also a board-level link: director James W. McGill spent forty years at Eaton, retiring as President of the Electrical Sector for the Americas. Mordor Intelligence places Eaton inside the top five holding roughly 55-60% of North American medium-voltage switchgear, a tier Powell sits below.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "competitor",
+   "status": "active",
+   "via": "Medium-voltage switchgear and low-voltage breaker elements",
+   "note": "Named in Powell's 10-K as a principal competitor, and a component supplier whose Masterpact MTZ draw-out air circuit breaker elements the FlexGear platform is built to accept.",
+   "context": "Same dual structure as the Eaton relationship: named competitor in the filing, breaker supplier in the product literature. Powell publishes a dedicated instruction bulletin for FlexGear low-voltage switchgear equipped with Schneider, Siemens and Eaton breakers.\n\nMordor Intelligence puts Schneider in the top five controlling roughly 55-60% of the North American medium-voltage switchgear market and separately identifies its EcoStruxure Grid platform as part of a shift of competition toward software bundled with switchgear — the axis on which Powell's answer is the Remsdaq acquisition and its SCADA-H asset-management software.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "competitor",
+   "status": "active",
+   "via": "Medium-voltage switchgear",
+   "note": "Mordor Intelligence names General Electric (GE Vernova) among the five suppliers controlling roughly 55-60% of the North America medium-voltage switchgear market, in the same passage that places Powell in the specialist tier eroding that share.",
+   "context": "The ranking passage is the basis for this link and it is explicit: the top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — control roughly 55-60% of the market, yet regional specialists are eroding share by offering rapid customization and domestic production, with Powell leveraging its Texas facility to deliver tailored switchgear in ten weeks and winning multiple 2025 data-center awards.\n\nA caution that belongs with this link: Powell acquired its Power/Vac line from GE Consumer & Industrial in 2006, and that unit later became GE Industrial Solutions and was divested to ABB. It is not the GE Vernova business, and the 2006 transaction should never be read as a Powell–GE Vernova relationship.",
+   "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market"
+  },
+  {
+   "slug": "hitachi-energy",
+   "type": "competitor",
+   "status": "active",
+   "via": "Medium-voltage switchgear",
+   "note": "Profiled alongside Powell Industries in Mordor Intelligence's North America medium-voltage switchgear company roster.",
+   "context": "Both companies are profiled in the same market study, outside the named top five. Hitachi Energy competes from a very different position — a global grid-equipment franchise with a stated multi-billion-dollar investment programme against Powell's roughly $1.16bn of revenue and single-country manufacturing base.\n\nThe overlap is partial. Hitachi Energy's centre of gravity is transformers and high-voltage equipment; Powell's is medium-voltage metal-clad switchgear and factory-built power rooms. They meet on a data-center campus rather than across a catalogue.",
+   "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market"
+  },
+  {
+   "slug": "mitsubishi-electric",
+   "type": "competitor",
+   "status": "active",
+   "via": "Medium-voltage switchgear",
+   "note": "Mitsubishi Electric Power Products and Powell Industries are profiled alongside each other in Mordor Intelligence's North America medium-voltage switchgear company roster, and both appear in Straits Research's gas-insulated switchgear participant list.",
+   "context": "Both sit outside the five suppliers Mordor says control roughly 55-60% of the North American medium-voltage switchgear market, and both are pursuing the same domestic-capacity argument — Powell through a Texas plant and a ten-week quoted lead time, Mitsubishi Electric through an $86M advanced switchgear factory in the Pittsburgh region announced in 2024.\n\nThe overlap is real but partial in a way worth stating: metal-clad switchgear, which is Powell's core product class, is not a named Mitsubishi Electric Power Products product line, and gas-insulated switchgear at transmission voltages is not Powell's. They meet at the medium-voltage breaker rather than across the whole lineup.",
+   "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market"
+  },
+  {
+   "slug": "dominion-energy",
+   "type": "other",
+   "status": "historical",
+   "via": "Board membership",
+   "note": "Independent director Katheryn B. Curtis retired in 2022 as Senior Vice President, Generation at Dominion Energy Virginia, having previously served as Vice President Retail Operations and Vice President Merchant Operations at Dominion Energy.",
+   "context": "This is a board-biography link and not a commercial relationship. No source establishes Dominion Energy as a Powell customer, and Powell names no customers in any filing.\n\nIt is recorded because utility-sector governance experience is a real and sourced connection between the two covered companies, and because Powell's electric utility end market grew from 19% to 25% of revenue between FY2024 and FY2025 and accounted for 24% of backlog at 2026-06-30. Read it as domain experience on the board, nothing more.",
+   "source": "https://powellindustriesinc.gcs-web.com/corporate-governance"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Section 232 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-04",
+   "exposure": "Powell's raw materials are steel, copper and aluminium plus engineered electrical components, and material cost was 45% of revenue in FY2025, 47% in FY2024 and 49% in FY2023. Its own 10-K language states that ongoing and proposed changes to US trade policy, including the imposition of tariffs, could raise the cost of raw materials and engineered components and negatively affect margins, while saying it is not possible to predict the impact. Trade advisers describe a 2026 framework assessing duties on full customs value, with a capped 15% rate for specified metal-intensive industrial and electrical-grid equipment through 2027-12-31 rising to 25% from 2028. The exposure is two-sided: it raises Powell's input costs but penalises imported finished switchgear more heavily.",
+   "mitigation": "Powell markets an explicit domestic-content position as a certified US manufacturer and registered GSA contractor, with equipment engineered and assembled in ISO-certified Texas facilities aligned to Buy American standards, and maintains parallel Buy Canadian and Buy UK positions for those markets. Its fixed-price contracts limit the ability to pass increases through, which the 10-K states directly.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+  },
+  {
+   "regime": "IEEE C37.20.7 arc-resistant switchgear testing",
+   "status": "in-effect",
+   "exposure": "Arc-resistant construction is a type-tested rating rather than a design claim, and the standard grades enclosures by which sides are protected and whether protection holds with a low-voltage compartment door open. Powell's arc-resistant products are rated to IEEE accessibility Type 2C at 40 kA rms symmetrical for 0.5 seconds at 5 and 15 kV, and 31.5 kA for 0.5 seconds on the 1200 A 38 kV design. The 2024 edition of the standard reclassified the document from a Guide to a Recommended Practice and its voltage ceiling rose from 38 kV to 52 kV between the 2007 and 2017 editions.",
+   "mitigation": "The company states it actively participates in and chairs IEEE standards committees covering AC and DC switchgear, circuit breakers and arc resistance, and publishes its own technical bulletin series interpreting the standards, including comparisons of EEMAC and IEEE arc-resistant ratings.",
+   "source": "https://ieeexplore.ieee.org/iel8/10930849/10930850/10930851.pdf"
+  },
+  {
+   "regime": "OSHA 29 CFR 1910 Subpart S and NFPA 70E",
+   "status": "in-effect",
+   "exposure": "The workplace electrical-safety regime is the demand driver beneath Powell's arc-resistant franchise. NFPA 70E requires an energised-work justification, an arc-flash risk assessment, equipment labelling with incident energy and protective clothing matched to that number; OSHA revised its electrical standard to reference NFPA 70E and cites employers for non-compliance. Where switchgear is arc-resistant, the operating task's arc-flash PPE requirement changes materially — which is what converts arc-resistant construction from an option into a specification.",
+   "mitigation": "Not applicable — the regime is a demand driver for Powell rather than a cost to be mitigated. Powell's products reference NFPA 70E in their arc-resistant instruction bulletins.",
+   "source": "https://journal.uptimeinstitute.com/arc-flash/"
+  },
+  {
+   "regime": "Buy American and GSA federal procurement",
+   "status": "in-effect",
+   "exposure": "Powell holds federal registrations including DUNS 00-807-4387, CAGE code 2M091 and ISO-9001, with product service codes 5925, 6110, 6130 and 6150, and markets itself as a registered GSA contractor with a dedicated government team. Note the company says Buy American rather than the specific Build America, Buy America regime, which it does not cite by name.",
+   "mitigation": "Domestic manufacture in Texas is the mitigation and the marketing position simultaneously.",
+   "source": "https://www.powellind.com/buy-american-gsa"
+  },
+  {
+   "regime": "One Big Beautiful Bill Act",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "The FY2025 10-K notes the Act, signed 2025-07-04, and states that the company was evaluating its impact. Powell's effective tax rate was 23% in FY2025 and 24% in FY2024.",
+   "mitigation": "No company statement beyond the evaluation disclosure was located.",
+   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Brett A. Cope",
+   "title": "Chairman of the Board, President and Chief Executive Officer",
+   "photo": "images/execs/powell-industries-cope.jpg",
+   "background": [
+    "President & CEO since October 2016; elected Chairman of the Board in 2019; director since 2017-12-19",
+    "Chief Operating Officer, Powell Industries (2015-2016)",
+    "Vice President Sales & Marketing, Powell Industries — joined 2011",
+    "Group Vice President, ABB Ltd. — responsible for strategy and execution of ABB's global business with ExxonMobil Corporation",
+    "Twenty years at ABB from 1990 across engineering, project operations and sales management",
+    "BS Applied Science, Miami University (Oxford, Ohio)",
+    "Received a special one-time award of 36,000 RSUs in July 2026, disclosed as designed to retain him past age-60 retirement eligibility"
+   ]
+  },
+  {
+   "name": "Michael W. Metcalf",
+   "title": "Executive Vice President, Chief Financial and Principal Accounting Officer; Secretary and Treasurer",
+   "photo": "images/execs/powell-industries-metcalf.jpg",
+   "background": [
+    "EVP & CFO since December 2018; joined Powell as EVP in November 2018",
+    "CFO of Aeroderivative Products, General Electric",
+    "CFO of Artificial Lift Systems, Baker Hughes, a GE Company",
+    "Twenty years at General Electric from 1998 across project finance, FP&A, commercial finance and supply chain",
+    "Began his career at Dresser-Rand, a Siemens Business, in 1991",
+    "BS Finance, SUNY Buffalo; MBA, Syracuse University"
+   ]
+  },
+  {
+   "name": "Davide Tuninetti",
+   "title": "Vice President and Chief Human Resources Officer",
+   "background": [
+    "VP & CHRO effective 2025-02-03, succeeding Robert B. Callahan",
+    "Vice President Human Resources, Americas, GKN Powder Metallurgy (2019-2025)",
+    "One of only three executive officers named in Powell's Form 10-K",
+    "Collection gap: no company-published photograph exists for him on either powellind.com or the investor-relations site"
+   ]
+  },
+  {
+   "name": "Richard E. Williams",
+   "title": "Independent Director; Chair of the Nominating and Governance Committee; member of the Audit Committee",
+   "photo": "images/execs/powell-industries-williams.jpg",
+   "background": [
+    "Director since 2016-12-19",
+    "Thirty-six years at Royal Dutch Shell, twenty-eight of them in Shell Pipe Line Corporation",
+    "President of Shell Wind Energy (2008-2013); defined Shell's initial energy-transition framework for the Americas",
+    "President, CDM Partners LLC; former Chairman of the Houston Technology Center and interim CEO of Houston Exponential",
+    "BSEE Penn State; professional engineer in Texas, Louisiana and Pennsylvania"
+   ]
+  },
+  {
+   "name": "James W. McGill",
+   "title": "Independent Director; Chair of the Compensation Committee; member of the Audit Committee",
+   "photo": "images/execs/powell-industries-mcgill.jpg",
+   "background": [
+    "Director since 2018-01-01",
+    "Forty years at Eaton Corporation plc, retiring as President of the Electrical Sector for the Americas",
+    "Also served as President of Eaton Asia Pacific, EVP Human Resources and VP of the Eaton Business System",
+    "Board member, Badger Meter (NYSE: BMI)",
+    "BA Chemistry, Miami University"
+   ]
+  },
+  {
+   "name": "Katheryn B. Curtis",
+   "title": "Independent Director; member of the Compensation and Human Capital Committee and the Nominating and Governance Committee",
+   "photo": "images/execs/powell-industries-curtis.jpg",
+   "background": [
+    "Director since 2020-02-20",
+    "Senior Vice President, Generation, Dominion Energy Virginia (2014-2022)",
+    "Vice President Retail Operations and Vice President Merchant Operations, Dominion Energy",
+    "Trustee, Virginia Holocaust Museum; Executive Committee, UVA Wise",
+    "BA University of Virginia; MBA Virginia Commonwealth University"
+   ]
+  },
+  {
+   "name": "Mohit Singh",
+   "title": "Independent Director; member of the Audit Committee and the Compensation and Human Capital Committee",
+   "photo": "images/execs/powell-industries-singh.jpg",
+   "background": [
+    "Director since 2024",
+    "Senior Vice President and Chief Financial Officer, Archrock, Inc.",
+    "EVP & CFO, Expand Energy Corporation; previously the same role at Chesapeake Energy",
+    "Six years on the executive leadership team of BPX Energy, BP's US onshore subsidiary — led M&A, corporate land and reserves",
+    "Investment banker at Goldman Sachs (2008-2013) and RBC Capital Markets (2013-2014); began at Shell Exploration & Production",
+    "BTech IIT Kanpur; PhD Chemical Engineering, University of Houston; MBA University of Texas at Austin"
+   ]
+  },
+  {
+   "name": "Mark W. Smith",
+   "title": "Independent Director; Chair of the Audit Committee",
+   "photo": "images/execs/powell-industries-smith.jpg",
+   "background": [
+    "Director since 2025-08-01",
+    "Chief Financial Officer, Helmerich & Payne (2018-2024)",
+    "Chief Financial Officer, Chief Accounting Officer and VP Corporate Services, Atwood Oceanics (2009-2017)",
+    "Earlier career at Arthur Andersen and PricewaterhouseCoopers",
+    "Board member, Forum Energy Technologies (FET)",
+    "MBA and BBA, Baylor University; CPA (Texas)"
+   ]
+  },
+  {
+   "name": "John G. Stacey",
+   "title": "Independent Director; member of the Compensation Committee and the Nominating and Governance Committee",
+   "photo": "images/execs/powell-industries-stacey.jpg",
+   "background": [
+    "Director since 2022-03-10",
+    "EVP and Chief Human Resources Officer, Harman International Industries, a subsidiary of Samsung Electronics, since 2008",
+    "HR leadership at Labatt Brewing and Anheuser-Busch InBev (1990-2008), latterly VP People, InBev North America",
+    "Board member, Gentherm (NASDAQ: THRM)",
+    "B.Comm, Memorial University of Newfoundland"
+   ]
+  },
+  {
+   "name": "Alaina K. Brooks",
+   "title": "Independent Director; member of the Nominating and Governance Committee and the Audit Committee",
+   "photo": "images/execs/powell-industries-brooks.jpg",
+   "background": [
+    "Director since 2023",
+    "Chief Legal Officer and Secretary, S&S Activewear",
+    "EVP, Chief Legal and Administrative Officer and Secretary, EnLink Midstream LLC (2018-2023), with general-counsel roles at EnLink from 2008",
+    "Attorney at Weil, Gotshal & Manges from 2003 and at Baker Botts from 2000",
+    "BS and MS Accounting, Oklahoma State; JD, Duke; CPA (Oklahoma)"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024 (year ended 2024-09-30)",
+    "periodType": "annual",
+    "periodEnd": "2024-09-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "kpi": "revenue",
+      "actual": "$1,012.4M",
+      "usdMillions": 1012.4,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Gross profit $273.1M at a 27.0% margin; operating income $178.8M."
+     },
+     {
+      "name": "Net income",
+      "kpi": "net-income",
+      "actual": "$149.8M",
+      "usdMillions": 149.8,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Effective tax rate 24%. Diluted EPS $12.29 on 12.188 million pre-split weighted-average shares."
+     },
+     {
+      "name": "Q4 FY2024 diluted EPS",
+      "kpi": "eps",
+      "actual": "$3.77 pre-split, against $1.95 a year earlier",
+      "expected": "Zacks consensus $3.49 (adjusted basis)",
+      "verdict": "beat",
+      "result": "Beat by 8.02% on the Zacks adjusted basis while missing the same outlet's revenue consensus of roughly $277M by 0.59% on an actual of $275.06M. Zacks noted at the time that Powell had surpassed consensus EPS estimates in four of the prior four quarters."
+     },
+     {
+      "name": "New orders",
+      "kpi": "orders",
+      "actual": "$1.1bn; backlog $1.3bn at 2024-09-30",
+      "usdMillions": 1100.0,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Material cost was 47% of revenue in this year, against 49% in FY2023 and 45% in FY2025."
+     }
+    ],
+    "commentary": "The base year of the current cycle and the last with a gross margin below 29%. All per-share figures here are pre-split."
+   },
+   {
+    "period": "FY2025 (year ended 2025-09-30)",
+    "periodType": "annual",
+    "periodEnd": "2025-09-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "kpi": "revenue",
+      "actual": "$1,104.3M (+9%)",
+      "usdMillions": 1104.3,
+      "fxBasis": "as reported",
+      "expected": "No single-outlet full-year consensus was located for FY2025",
+      "verdict": "inline",
+      "result": "Domestic revenue $880.2M (+4%) and international $224.1M (+35%). By end market: oil and gas excluding petrochemical 37%, electric utility 25%, commercial and other industrial 16%, petrochemical 14%, light rail traction 4%."
+     },
+     {
+      "name": "Gross profit",
+      "kpi": "gross-margin",
+      "actual": "$324.4M, a 29.4% margin, up 19% on FY2024's 27.0%",
+      "usdMillions": 324.4,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Operating income $217.9M. Material cost fell to 45% of revenue."
+     },
+     {
+      "name": "Net income",
+      "kpi": "net-income",
+      "actual": "$180.7M (+21%)",
+      "usdMillions": 180.7,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Diluted EPS $14.86 pre-split — roughly $4.95 on a post-split basis — on 12.167 million pre-split weighted-average shares. Effective tax rate 23%."
+     },
+     {
+      "name": "New orders",
+      "kpi": "orders",
+      "actual": "$1.2bn (+9%); backlog $1.4bn at 2025-09-30, of which approximately $824M was expected to be recognized as revenue in FY2026",
+      "usdMillions": 1200.0,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Backlog composition at year-end: electric utility 33%, oil and gas excluding petrochemical 33%, commercial and other industrial 15%, petrochemical 8%, light rail traction 8%."
+     },
+     {
+      "name": "Q4 FY2025 diluted EPS",
+      "kpi": "eps",
+      "actual": "$4.22 pre-split — a record quarterly EPS — on revenue of $298.0M and a 31.4% gross margin",
+      "expected": "Investing.com consensus $3.72 on revenue $291.5M; 24/7 Wall St. consensus $3.76 on revenue $292.84M",
+      "verdict": "beat",
+      "result": "A double beat on both outlets' figures, reported separately and never blended — Investing.com scored the EPS beat at 13.4% and 24/7 Wall St. at 12.2%. The stock nonetheless fell more than 11% on the print."
+     }
+    ],
+    "commentary": "The strongest year in the company's history to that point, and the first in which the market's reaction diverged sharply from the result. Note the balance sheet: no borrowings under the $150.0M US revolver at year-end, $77.5M of letters of credit outstanding, and $475.5M of cash and short-term investments."
+   },
+   {
+    "period": "Q3 FY2026 (quarter ended 2026-06-30)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "kpi": "revenue",
+      "actual": "$311.7M (+8.9%)",
+      "usdMillions": 311.7,
+      "fxBasis": "as reported",
+      "expected": "Zacks consensus implying approximately $318.2M; TheFly $316.88M; MarketBeat $316.70M",
+      "verdict": "miss",
+      "result": "A miss on all three outlets' figures, which are reported separately here because they differ: Zacks scored the revenue shortfall at 2.05%. By end market the quarter was commercial and other industrial $76.3M, electric utility $88.6M, oil and gas excluding petrochemical $106.3M, and petrochemical $18.5M — petrochemical revenue fell 49% year on year."
+     },
+     {
+      "name": "Diluted EPS",
+      "kpi": "eps",
+      "actual": "$1.42 post-split",
+      "expected": "Zacks consensus $1.49 on an adjusted basis; TheFly $1.47, basis not stated; MarketBeat $1.49, basis not stated",
+      "verdict": "miss",
+      "result": "A miss on every basis, but the magnitude varies with the outlet — 4.70% against Zacks and TheFly's $1.47 implies 3.40%. Zacks stated at the time that Powell had surpassed consensus EPS estimates in only two of the prior four quarters and topped revenue estimates just once, against four of four as recently as November 2024."
+     },
+     {
+      "name": "Net income",
+      "kpi": "net-income",
+      "actual": "$52.2M",
+      "usdMillions": 52.2,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Gross profit $95.3M at a 30.6% margin, flat year on year, which the company attributed to favourable project mix, operating leverage and stable pricing. Operating income $64.1M."
+     },
+     {
+      "name": "New orders",
+      "kpi": "orders",
+      "actual": "$934M (+158%), a record, on a book-to-bill of 3.0x for the quarter and 2.2x fiscal year to date",
+      "usdMillions": 934.0,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Three mega orders — Powell defines a mega order as a contract exceeding $50M — comprising the data-center order exceeding $400M, roughly $75M in petrochemical fertilizer and roughly $60M for US Gulf Coast LNG liquefaction and export."
+     },
+     {
+      "name": "Backlog",
+      "kpi": "backlog",
+      "actual": "$2.4bn at 2026-06-30, of which approximately $1.3bn is expected to be recognized as revenue within the next twelve months — a 35% increase from $1.8bn at 2026-03-31 and 69% year on year",
+      "usdMillions": 2400.0,
+      "fxBasis": "as reported",
+      "expected": "",
+      "result": "Composition shifted decisively: commercial and other industrial, which contains data centers, rose to 40% of backlog from 15% at 2025-09-30, with oil and gas excluding petrochemical and electric utility at 24% each. Powell discloses backlog only to the nearest $0.1 billion; no more precise company-stated figure exists."
+     }
+    ],
+    "commentary": "The quarter that reframed the company: a revenue and EPS miss on every outlet's consensus alongside a record order intake and a 3.0x book-to-bill. All per-share figures from Q2 FY2026 onward are post-split and cannot be compared with the pre-split FY2023-FY2025 series without dividing the earlier figures by three. Cash and short-term investments reached $633.6M with total debt immaterial."
+   }
+  ],
+  "commentary": "Powell reports in US dollars, so the normalized overlay is as reported with no conversion. Three honesty notes govern this record. First, the three-for-one forward stock split effected 2026-04-02 means FY2023 to FY2025 per-share figures are pre-split and FY2026 quarterly figures are post-split, and the company has not restated the FY2025 10-K — a multi-year EPS series that ignores this shows a false collapse in FY2026. Second, Powell issues no numeric guidance of any kind; the closest management has come in FY2026 is a statement that gross margins are expected to hold at levels consistent with the trailing twelve months, so every annual comparison above that carries a verdict is against analyst consensus rather than company guidance, and where no consensus was retrievable the field is left empty. Third, the outlets disagree on consensus figures for the same print — for Q3 FY2026 the EPS consensus was $1.49 at Zacks and MarketBeat and $1.47 at TheFly, and the revenue consensus ranged from $316.70M to roughly $318.2M — so each is named with its basis and none are blended. Zacks is explicitly an adjusted-EPS basis; TheFly and MarketBeat do not state theirs."
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess that Powell's competitive advantage is schedule rather than price or technology. Basis: Mordor Intelligence places the top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — at roughly 55-60% of the North America medium-voltage switchgear market and names Powell's differentiator explicitly as tailored switchgear in ten weeks from its Texas facility, credited with winning multiple 2025 data-center awards. Powell's own 10-K concedes competitors may have lower cost structures or a more favourable geographic footprint. In a market where equipment delivery sets the project date, a supplier who compresses lead time is selling a power-on date the buyer cannot otherwise obtain.",
+  "**(High confidence)** We assess the company has been structurally repriced by one order rather than by a trend, and that the concentration is the risk. Basis: a single data-center order exceeding $400M is more than 16% of the $2.4bn backlog on its own; the company describes roughly $800M of data-center awards across the first nine months of FY2026; and commercial and other industrial moved from 15% to 40% of backlog in three quarters. Powell itself frames the order as phase one of a multi-phase behind-the-meter campus whose later phases depend on execution of the first.",
+  "**(Moderate confidence)** We assess the mix shift that produced the order book also threatens the margin that justified the re-rating. Basis: the Q3 FY2026 10-Q introduces new risk-factor language that data-center work will likely require less custom engineered-to-order equipment, and Powell's gross margin expanded from 27.0% in FY2024 to 29.4% in FY2025 to 30.6% in the latest quarter on precisely the custom, engineered content that language says is diluting. Management's only forward statement is that margins should hold at trailing-twelve-month levels — which is a claim about the next year, not about the mix now entering the backlog.",
+  "**(Moderate confidence)** We assess the universal-platform strategy is a deliberate refusal to compete where Powell cannot win. Basis: FlexGear low-voltage switchgear is engineered to accept Eaton Magnum DS, Siemens WL or Schneider Masterpact MTZ draw-out elements, and FlexTrol accepts either Eaton draw-out or Allen-Bradley fixed-mounted contactors — so Powell buys the interrupting element from the companies its own 10-K names as principal competitors and sells the assembly, the engineering and the arc-resistant structure around whichever breaker the customer's standards already specify. It monetises the part of the product that is engineered per project rather than the part that is a catalogue item.",
+  "**(Low confidence)** We assess the analyst de-rating reflects a change in what the multiple was paying for rather than a change in the business. Basis: Cantor Fitzgerald cut its target from $320 to $235 on 2026-08-14 after a call with the CFO, on reasoning that the existing leased capacity provides the footprint needed to execute the current backlog and that the larger 275,000-300,000 sq ft facility supports growth beyond it — de-risking execution while removing growth-capex optionality. Whether that is the correct read of a $70-100M capital decision is not establishable from public sources, and the analyst panel covering Powell is thin, with targets spanning roughly $217 to $427.",
+  "**Collection gap — the counterparty to the largest order in the company's history is unknown and deliberately withheld.** No hyperscaler, developer, EPC, site or generation OEM is named in the Q2 or Q3 FY2026 releases, the 10-Q, or either earnings call, and no 8-K material-contract filing exists for it. The order is described only as a behind-the-meter design of on-site generation assets at gigawatt scale across multiple phases, delivered from at least five North American facilities on a roughly two to two-and-a-half year burn. This is a structural disclosure practice, not a research failure: the 10-K states that no single customer exceeded 10% of consolidated revenues in either FY2025 or FY2024, and Powell names no customers anywhere.",
+  "**Collection gap — no on-site generation partner is identified.** An order covering the outside electrical scope for a couple of gigawatts of behind-the-meter generation necessarily implies a prime-power OEM on the same campus, and no source names one. That is the single most valuable missing link in this dossier, because it would connect Powell to the gen-set and turbine vendors already covered elsewhere in this corpus.",
+  "**Collection gap — Powell has no trade-press coverage.** Targeted searching found no coverage in T&D World, EC&M, Data Center Frontier, Data Center Knowledge, Reuters or the Houston Chronicle across eighteen months. Powell is covered as a stock by financial media and market-research vendors, and not as an industry actor. Any reader expecting independent operational reporting on this company should know it does not exist.",
+  "**Entity caution.** Powell's 10-K names \"Siemens Industries, Inc.\" as a principal competitor and its FlexGear literature cites Siemens WL breakers. That is the Siemens AG industrial business, not Siemens Energy AG, and no competitor link to the covered `siemens-energy` slug is asserted here on that basis. Separately, the Power/Vac line was acquired from GE Consumer & Industrial in 2006 — a unit that became GE Industrial Solutions and was divested to ABB, and is not GE Vernova."
+ ]
+}

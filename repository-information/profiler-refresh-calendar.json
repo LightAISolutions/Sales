@@ -496,6 +496,44 @@
       ]
     },
     {
+      "slug": "mitsubishi-electric",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "Tracker agreement on the date, no company confirmation. Mitsubishi Electric's own IR calendar (https://www.mitsubishielectric.com/investors/others/calendar/) publishes only a generic annual cadence chart as an image — full-year results in April, Q1 in July, Q2 in October/November, Q3 in February — with no specific dates, so nothing is company-confirmed. Investing.com lists 2026-10-29 as a hard date with consensus already populated (period end 09/2026, forecast EPS 64.08 JPY on revenue 1.53T JPY); MarketBeat carries the same 2026-10-29 but labels it explicitly an estimate based on past reporting schedules, and its 'After Market Closes' gloss is a US convention applied to a Tokyo listing and should not be relied on for session timing. 2026-10-29 is a Thursday (verified with date -d). The two prior Q2 prints landed 2025-10-31 and 2024-10-31, but 2026-10-31 is a Saturday, which independently corroborates a pull-forward to the Thursday rather than a schedule change. Confirmed cadence from the company's own results library: Q1 FY2027 2026-07-31, FY2026 2026-04-28, Q3 FY2026 2026-02-03, Q2 FY2026 2025-10-31. NOTE THE FISCAL LABELLING: the company labels the year ending 31 March 2026 as FY2026, and several trackers label the same periods one year lower - pin the period-end date, never the FY tag.",
+      "lastRefreshed": "2026-09-03",
+      "watch": [
+        "Whether Q2 FY2027 lands 2026-10-29 as both trackers say, and whether the company ever posts a dated IR calendar rather than the cadence image",
+        "Where the North American transformer capacity actually sits - the company attributed Q1 FY2027 Energy Systems growth to North American transformer business expansion, but it sold its only US transformer plant (Memphis) to Hyosung in 2019 and announced a distribution transformer business transfer in April 2024. This is the dossier's largest open question",
+        "Energy Systems orders after the +80% year-on-year quarter, and whether Public Utility Systems orders recover after falling 9% in FY2026 - the UPS-bearing sub-segment is the one not growing on orders",
+        "PCI Energy Solutions closing (expected before end-2026, approximately $1.4bn) and any disclosure of what it does to the Solutions revenue and margin targets",
+        "Next-Stage restructuring: FY2026 cost was raised from Y40.0bn to Y100.0bn: whether FY2027 carries a further charge, and whether reported and ex-restructuring operating profit converge",
+        "Any named data-center UPS order, reference capacity or hyperscaler deployment - there is currently none anywhere in the public record despite a published customer roster naming NVIDIA, Tesla, Oracle and QTS",
+        "Whether independent coverage of NVIDIA's 800 VDC ecosystem ever names Mitsubishi Electric; today the collaboration appears only in MEPPI's own October 2025 release",
+        "The $86M Pittsburgh-region switchgear factory: construction milestones, the transition to predominantly vacuum circuit breakers, and whether Section 232 derivative duties are quantified",
+        "Any post-2022 consequence of the 197-case quality-misconduct record, including the admitted four decades of falsified transformer test data - fines, claims, contract losses or monitoring are all unsourced",
+        "Whether an IEC 62040-3 classification code is ever published for the 9900 or SUMMIT lines; only IEC 62040-2 EMC appears today"
+      ]
+    },
+    {
+      "slug": "mitsubishi-power",
+      "nextReport": "2026-11-06",
+      "confirmed": false,
+      "source": "Unit-level: Mitsubishi Power is a brand of Mitsubishi Heavy Industries (TSE: 7011) with no separately reported profit and loss, so the clock tracked here is the listed parent's. MHI's own IR calendar (https://www.mhi.com/finance/calendar) listed nothing after 'Aug. 4, 2026 - Q1 FY2026 Financial Results' when checked on 2026-09-04, so no date is company-confirmed. Trackers conflict: StockAnalysis (S&P Global data) and Quartr both give 2026-11-06, while MarketBeat and TipRanks give 2026-11-11 - a five-day spread. 2026-11-06 is a Friday and 2026-11-11 a Wednesday (both verified with date -d). The prior-year pattern favours the earlier date: MHI announced 1H FY2025 results on 2025-11-07 and filed its semi-annual report on 2025-11-11, so the 11 November tracker figure most likely mirrors the FILING date rather than the results announcement. Use 2026-11-06 as primary and treat 2026-11-11 as a dissent. Cadence from MHI's own calendar: FY results mid-May (2026-05-12), Q1 early August (2026-08-04), 1H early November, Q1-3 early February (2026-02-04). NOTE THE FISCAL LABELLING: MHI calls the year ended 31 March 2026 'FY2025' while several trackers call it FY2026 - pin the period-end date.",
+      "lastRefreshed": "2026-09-03",
+      "watch": [
+        "MHI 1H FY2026 results on or about 2026-11-06, and whether the 11 November tracker date proves to be the semi-annual filing rather than the announcement",
+        "Large-frame gas turbine order intake and contract backlog, disclosed in MHI's quarterly appendix - 80 units and 35 GW at 2026-06-30 against 74 units and 33 GW at the fiscal year end",
+        "GTCC order intake after Y2,652.6bn in FY2025 and Y930.0bn in Q1 FY2026, and whether the stated backlog above Y5 trillion keeps compounding",
+        "Whether MHI ever publishes an explicit slot-availability or sold-out-through horizon; it confirms reservation fees exist but publishes no date. The analyst Q&A PDFs are the most likely place",
+        "Cheyenne Power Hub execution: turbine installation was expected to begin as early as July 2026 for approximately 1,150 MW of Phase 1, and it is the company's only public AI-campus turbine project",
+        "Whether the Entergy carbon-capture MOU converts to an order, and whether EPA's section 111 repeal changes willingness to pay for hydrogen and capture optionality",
+        "Prevalon aftermath: whether Mitsubishi Power re-enters storage or partners for it, and whether its own data-center and hydrogen pages are ever corrected - both still list Prevalon weeks after the July 2026 close",
+        "GTCC capacity: MHI's own deck claims line of sight to a 30% increase to 2030 while trade press has described a doubling; watch which figure the company repeats",
+        "Any Mitsubishi Power unit-level disclosure at all - there is none today, and the narrowest published line remains GTCC within Energy Systems",
+        "Section 232: the capped 15% rate on electrical-grid equipment rises to 25% from 2028, inside the delivery window for turbines being booked now for 2028-2031"
+      ]
+    },
+    {
       "slug": "mortenson",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
@@ -583,6 +621,25 @@
         "First published M+ Series order or hyperscaler customer; Nebius's 'much larger' US CleanSource order (2026 delivery); Active Power's four-fold output",
         "Leadership: successor as President of Piller Power Systems Inc after Dean Richards' move; whether Jack Pearce now leads Bergen Engines Inc",
         "Competitor moves in the rotary niche: Hitec (Air Water), Rolls-Royce Solutions Liège (mtu Kinetic PowerPack), Hitzinger; ABB HiPerGuard MV UPS deployments"
+      ]
+    },
+    {
+      "slug": "powell-industries",
+      "nextReport": "2026-11-17",
+      "confirmed": false,
+      "source": "Tracker estimate with no company confirmation and no second tracker to cross-check. Powell's own IR events page (https://powellindustriesinc.gcs-web.com/events-and-presentations) showed a Past Events list only, with no upcoming entry, when checked on 2026-09-04, and no date-announcement press release had been issued. MarketBeat estimates 2026-11-17 and states it is based on past reporting schedules; StockAnalysis publishes no forward date at all; Zacks and MarketChameleon were not retrievable. 2026-11-17 is a Tuesday (verified with date -d). Powell's cadence is unusually regular and supports it: a 'Date and Conference Call' press release roughly two weeks ahead, results after market close on a Monday or Tuesday, call at 11:00 a.m. Eastern the following morning. Observed FY2026: announced 20 Jan, results Tue 3 Feb, call 4 Feb; announced 20 Apr, results Mon 4 May, call 5 May; announced 20 Jul, results Mon 3 Aug, call 4 Aug. The Q4/full-year print runs about seven weeks after the 30 September year-end rather than five - FY2025 landed Tue 2025-11-18 and FY2024 Tue 2024-11-19 - so mid-to-late November is the right window. Expect the date-announcement release in the first week of November 2026.",
+      "lastRefreshed": "2026-09-03",
+      "watch": [
+        "Q4 and full-year FY2026 results in the second half of November 2026, and whether the date-announcement release appears in the first week of the month",
+        "Gross margin against the new risk-factor language: the Q3 FY2026 10-Q warns data-center work will likely require less custom engineered-to-order equipment, and the 27.0% to 29.4% to 30.6% margin expansion was built on that custom content",
+        "Backlog after $2.4bn and book-to-bill after 3.0x - the first quarter book-to-bill falls below 1.0x is the test of whether the order surge was a level shift or a pull-forward",
+        "Whether the >$400M data-center customer, the site, the EPC or the on-site generation OEM is ever named; nothing is disclosed today and the 10-K states no customer exceeded 10% of revenue",
+        "Phase two of the same campus, which the company says depends on execution of phase one, and whether Powell wins the inside-the-building scope it says it has not yet won",
+        "The capacity decision: a 250,000-300,000 sq ft greenfield factory at $70-100M of capital was described as evaluated, and Cantor's August 2026 downgrade turned on management saying the existing backlog does not depend on it",
+        "Petrochemical revenue after a 49% year-on-year fall in Q3 FY2026, against a $12.4M Jacintoport expansion justified by anticipated oil and gas and LNG activity",
+        "Section 232 exposure on steel, copper and aluminium - material cost is 45% of revenue and fixed-price contracts limit pass-through, but the company quantifies nothing",
+        "Insider selling under 10b5-1 plans and short interest, which stood at 6.86% of shares outstanding and 8.67% of float",
+        "Any restatement of pre-split per-share figures; the FY2025 10-K has not been restated for the 2026-04-02 three-for-one split"
       ]
     },
     {

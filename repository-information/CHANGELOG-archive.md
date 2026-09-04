@@ -77,6 +77,578 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v03.83r] — 2026-08-29 10:28:50 PM EST — [3fe30d4](https://github.com/LightAISolutions/Sales/commit/3fe30d4a4bcd875a8e3fc536a7d3744e839db8aa)
+
+> **Prompt:** "Picking up from my recent "Industry Guidance modules cleanup", finish the two remaining guidance improvements in one pass."
+
+### Added
+- Industry Guidance per-module revision notes (#5 of the module-audit improvements): every guidance module in `Profiler.gs` now carries a `revisions: [{date, note}]` meta field, seeded with the 2026-08-29 scrub/generalization as each module's first entry; `guidanceIndex_()` emits a `revised` date (latest entry) and `Profiler.html` renders a "Revision notes" block under the module header plus a "↻ revised" chip on library cards
+- Server-side reading-progress sync (#4): new role-gated `gop=progress` / `gop=setprogress` ops in `handleGuidanceOp_` store each account's section ticks in one Script Property (`gd_progress:<email>` — chosen over the Master ACL spreadsheet pattern: tiny per-user blobs, no cross-project consumers, no spreadsheet round-trip per tick), with doc/section ids validated against the registered modules and writes guarded by a script lock; `Profiler.html` prefers the server map once a sync succeeds, keeps localStorage as the offline fallback, migrates local-only ticks up in one batch on first sync, and repaints the open module when a sync lands. A response without a real `progress` object counts as "sync unavailable" — never an empty map — and a failed migration aborts adoption, so a legacy backend or network failure can never wipe local ticks (caught by `verify-profiler-roles.py`'s isolation test during development)
+
+### Changed
+- `repository-information/diagrams/profiler-diagram.md` — Industry Guidance transport bullet updated to the current op set (`index|doc|mentions|progress|setprogress`) and the real role gate (`guidanceAllowed_`: admin permission or `GUIDANCE_ROLES` tier), and documents the progress-sync storage
+
+## [v03.82r] — 2026-08-29 09:52:01 PM EST — [72bac51](https://github.com/LightAISolutions/Sales/commit/72bac513dd3b50fb033908363ff543114f7eb645)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Guidance search + unified glossary** (recommendation #6 from the v03.76r module audit, `Profiler.html` v01.67w — client-only, rides the existing role-gated `index`/`doc` ops): a search box atop the guidance library (`gdFetchAllDocs` one-time doc cache, `gdSecText` recursive string flattener so tables/cards/drills/notes/sales angles are all searchable, `gdSearchHits` ranking title/term matches first, highlighted snippets, hit click → `ovGuideLoadDoc` with a new scroll-to-section argument), and a "📖 Unified glossary" view merging all modules' terms alphabetically with duplicate terms grouped per-module (`gdShowGlossary`, source chips opening each module's glossary)
+- `.claude/rules/industry-guidance.md` step 4 documents both features
+
+## [v03.81r] — 2026-08-29 09:47:21 PM EST — [a7a4fc6](https://github.com/LightAISolutions/Sales/commit/a7a4fc6fa0febe716b5efe6f3a83a59a3336de43)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Company-chip cross-links** (recommendation #3 from the v03.76r module audit), completing the module ↔ dossier ↔ report triangle in both directions. Guidance → dossiers: `gdLinkCompanies` walks rendered module text nodes and wraps covered company names (registry name authority, `ovRelDerive`'s ambiguity guard via `ovRelFalseStart`, longest-name-first overlap resolution) as CVD-blue chips that close the overlay and open the dossier — excluding buttons, links, headings, glossary-term spans, and label rows; Admin lens panels get the same pass. Dossiers → guidance: new role-gated `gop=mentions` op (`guidanceMentions_` — registry fetched from Pages, mirrored ambiguity guard, `CacheService` 6h) feeds an "✦ Covered in guidance modules" chip line on dossiers for `guidance`-capable tiers only, each chip opening the module via `ovGuideOpenDoc`
+- `.claude/rules/industry-guidance.md` steps 4-5 document the chips, the mentions op, and the tier gate
+
+#### `Profiler.gs` — v01.26g
+##### Added
+- `guidanceMentions_()` + `gop=mentions` wired into `handleGuidanceOp_` behind the existing `guidanceAllowed_` gate
+
+#### `Profiler.html` — v01.66w
+##### Added
+- `gdLinkCompanies`/`gdOpenCompany` (guidance-side chips, called from `gdRenderDoc` and `gdApplyLens`), `ovGuideOpenDoc` (direct module open), `ovGuidanceMentionsLine` (dossier-side line, session-cached), `.gd-co`/`.ov-gd-mentions` styles
+
+## [v03.80r] — 2026-08-29 09:39:08 PM EST — [19fe11e](https://github.com/LightAISolutions/Sales/commit/19fe11e23525ba2663e30fbbe2da21f36318cbfe)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Freshness discipline for the Industry Guidance function** (recommendation #2 from the v03.76r module audit): every guidance module now carries a `reviewBy` date set from its own nearest dated gate (Bankability → 2026-10-01 PRC-029-1; Utility-AIDC and Power Infrastructure → 2026-12-10 Batch Zero; China Policy → 2026-12-31 Treasury PFE regs; NVIDIA 800 VDC → 2026-11-30 post-3Q26 shipments; BESS Tech → 2027-02-24 six-month default), emitted via `guidanceIndex_()` and rendered as library/header chips; report library entries and report pages show age-tier chips (fresh ≤45d / aging ≤120d / stale) from each report's date
+- **Quarterly guidance-review Routine armed** — `Industry Guidance quarterly review` (`trig_01CrhxzfBV6uKQNKpUXLLMSZ`, cron `0 13 15 1,4,7,10 *` UTC, fresh session per fire; first fire 2026-10-15): re-verifies each module's dated gates against primary sources, refreshes `updated`/`reviewBy`, validates report overlay anchors, and recommends superseding aged reports
+- `.claude/rules/industry-guidance.md` step 10 documents the field, chip thresholds, and the Routine; `.claude/rules/profiler-app.md` notes the report age chips
+
+#### `Profiler.gs` — v01.25g
+##### Added
+- `reviewBy` meta on all six guidance modules; `guidanceIndex_()` emits it
+
+#### `Profiler.html` — v01.65w
+##### Added
+- `gdReviewChip` (plain / gold ≤30d / red overdue) on guidance library cards and module headers; `rpAgeChip` (fresh/aging/stale, roster palette) on report library cards and the report view meta line
+
+## [v03.79r] — 2026-08-29 09:30:14 PM EST — [9ae80e5](https://github.com/LightAISolutions/Sales/commit/9ae80e503aa8df8378250324127ba770c565fbb3)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Generated the companion competitive report** — `aidc-power-conversion--competitive--2026-08-29` ("AIDC Power Conversion — The 800 VDC Race", intel-briefing style): the 8 covered power-conversion players (Delta, LITEON, Megmeet, Zhonhen, Sinexcel, Vertiv, Eaton, Schneider — all dossiers fresh 2026-08-29; Huawei DP excluded from scope as sanctions-fenced, Flex/BizLink uncovered, both recorded in gaps), 6 confidence-tagged judgments, 3 sections (position table, the three contested layers, the Zhonhen file), 6 indicators, 29 citations copied verbatim from dossier `sources[]`
+- **Three `guidanceOverlays[]` restore the Zhonhen-side admin lens** onto the NVIDIA 800 VDC module (`options`, `trusst`, `suppliers`) — carrying the current company-specific reads: the Aug 2026 white paper naming Panama, Kezhi's 31% China HVDC share, the CATL RMB 4.1B/49% holdco definitive agreements, absence from NVIDIA's partner rosters, the Enervell Western vehicle, the founder's Dec 2025 conviction, and the H1 2026 report checkpoint (due 31 Aug)
+- Verified: `check-profiler-reports.py` clean on the first pass (0 errors, all 3 anchors + 29 citations validated); Playwright render confirmed all three panels anchor in the NVIDIA module
+
+## [v03.78r] — 2026-08-29 09:22:40 PM EST — [2cbd82e](https://github.com/LightAISolutions/Sales/commit/2cbd82e319a606b39265a1d8046870698edcd08a)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Generated the first overlay-bearing industry report** — `s154-listed-bess-suppliers--risk--2026-08-29` ("§154-Listed BESS Suppliers — US Market-Access Risk", risk type, intel-briefing style): 5 covered §154(b)-listed makers (CATL, BYD, Envision, EVE, Hithium — all dossiers fresh 2026-08-29; Gotion recorded as a coverage gap), 6 confidence-tagged key judgments, 4 sections (exposure map, the policy fence, counterparty files, lanes-as-used), 6 indicators, 24 citations copied verbatim from dossier `sources[]`. Registered in `reports-index.json` with `overlayModules`
+- **Five `guidanceOverlays[]` restore the admin-only company lens** the v03.76r scrub removed from the shared modules — anchored to China Policy (`levers`, `interaction`), Bankability (`counterparty`), Power Infrastructure (`markets`), and Utility-AIDC (`channels`), carrying the current company-specific reads (Hithium's third listing lapse + equity freeze + ~10 CATL suits, EVE's reported §1260H addition and §337 action, the AESC/Fixx divest-to-comply lane, the Jupiter/Peak-Energy account defense)
+- Verified: `check-profiler-reports.py` clean (0 errors; overlay anchors validated against the live modules), plus a Playwright render of the real report overlays inside the China-policy module
+
+## [v03.77r] — 2026-08-29 09:12:08 PM EST — [c582ca7](https://github.com/LightAISolutions/Sales/commit/c582ca7bbf7b4ba6b9642e560e04177f3f17dd57)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Admin lens overlays** (the recommended next step from v03.76r): reports can now declare `guidanceOverlays[]` (`{moduleId, sectionId, title?, ps[]}`) anchoring company-specific analysis to Industry Guidance module sections. `Profiler.html`'s guidance renderer fetches overlay-bearing `current` reports (via the new `overlayModules` field on reports-index entries) for viewers with the `reports` capability only, and renders 🔒 "Admin lens" panels (rose-accent `.gd-lens`, distinct from the gold "Sales angle" notes) inside the anchored sections with a "View source report →" link into `#report/<id>`; a stale anchor falls back to the end of the module with an explanatory note instead of dropping the content. Non-admin tiers never fetch report data, so shared modules stay group-level
+- `scripts/check-profiler-reports.py` now validates overlays: `moduleId`/`sectionId` verified against the guidance modules parsed live from `Profiler.gs`, non-empty `ps`, no `[c:id]` citation tokens in overlay prose, and index `overlayModules` reconciliation
+
+### Changed
+- `repository-information/PROFILER-SCHEMA.md`: `guidanceOverlays[]` added to the Report schema table; `overlayModules` documented on the reports index
+- `.claude/rules/profiler-app.md` (Report Command step 3) and `.claude/rules/industry-guidance.md` (step 4): overlay authoring rules + the 2026-08-29 content-scope directive (modules address groups only; company-specific analysis reaches admins via the lens)
+
+## [v03.76r] — 2026-08-29 08:41:26 PM EST — [01e5cbb](https://github.com/LightAISolutions/Sales/commit/01e5cbb5e36938930c259478e7c327fe5f57a65f)
+
+> **Prompt:** "Picking up from my recent "Profiler report engine design", go through all my Industry Guidance modules and remove any company-specific guidance, like for Zhonhen and Hithium. Make sure all the modules are informative and objective. It is ok to give guidance to specific groups of companies, like "BESS suppliers", "SST suppliers", "Developers", "Integrators", "Hyperscalers", etc., but don't specifically give guidance to any one company in these modules. I want to reserve that level of specificity for Reports that are only accessible by me and other admins. While you go through the modules for the task above, also check each module to make sure it has no other issues. Also, recommend me ways to improve this Industry Guidance function to be more useful to myself and other users."
+
+### Changed
+- Scrubbed all six Industry Guidance modules of company-specific guidance (developer directive: modules address supplier/buyer groups only — "BESS suppliers", "TRU/SST suppliers", "§154-listed suppliers", developers, integrators, hyperscalers; single-company specificity is reserved for the admin-only Reports view). Statutory facts naming companies (the FY2024 NDAA §154(b) list) are retained as objective information
+- Renamed the guidance module per-section note field `zh` → `sales` across the renderer, the module content, and the schema note in `.claude/rules/industry-guidance.md` step 4
+- Repo CHANGELOG archive rotation: the 2026-08-22 date group (15 sections, v02.76r–v02.90r) moved to `CHANGELOG-archive.md` with SHA enrichment
+
+#### `Profiler.gs` — v01.24g
+##### Changed
+- NVIDIA 800 VDC module: "For the Zhonhen conversation" section retargeted to "For TRU and SST suppliers"; Zhonhen product ratings (Panama/SuperX 2.5/3.6 MW) and "your Zhonhen prep" references removed; the module `short` no longer says "tailored"
+- China Policy module: reframed from a single supplier's sales desk to "§154-listed suppliers" — first-person "we/us/our side" removed; the "Severity for Hithium" table column, "A developer buying Hithium" interaction map, Mesquite tariff-engineering lane, red lines, flashcards, quiz scenarios, and FIE/SFE glossary entries generalized; the Mesquite plant ledger row removed
+- Utility-AIDC module: Hithium parentheticals removed from the ERCOT merchant channel card and the procurement awards table
+- Bankability module: "Hithium's file — what an IE will say" (section id `hithium`) rewritten as the generic "The counterparty file" (id `counterparty`) with tailwind/headwind categories and the structural-answers toolkit; two Hithium ledger rows and the BNEF Tier 1 listing mentions removed; "Jupiter fleet" references generalized to "US fleet performance"
+- BESS Technology Fundamentals module: converted from a single-vendor product catalog (∞Block/∞Power/Flexsso/Desert Eagle specs, "The Hithium cell ladder", the Peak Energy anchor-account defense) to industry class-typical teaching — cross-vendor Ah-class cell ladder, generalized container landscape and sodium sections, sourcing repointed from `hithium.profile.json` to the covered supplier dossiers, quiz/flashcards rewritten to concept level
+- Power Infrastructure module: first-person "our lane / our fit / our containers" voice replaced with supplier-group framing; internal engagement references (team-lead playbook, S1 pipeline gates, `hithium-relationship-web.md` ledger pointer, "the Jupiter pattern") removed or generalized
+
+#### `Profiler.html` — v01.63w
+##### Changed
+- The guidance renderer's per-section note label changed from "For the Zhonhen conversation" to the neutral "Sales angle", reading the renamed `sales` field
+
+## [v03.75r] — 2026-08-29 08:19:11 PM EST — [f0bb7b1](https://github.com/LightAISolutions/Sales/commit/f0bb7b1ae981013ad92a895f87d6fc7842ebabd5)
+
+> **Prompt:** "Continue with your recommendation about the opener-gate miss. Then, remember session."
+
+### Changed
+- **Response Opener gate hardened (`.claude/rules/chat-bookends.md`)** — Step 1 is now a threefold combined command (timestamp + toggle rows + every tracked page's version file) so the page enumeration can no longer displace the timestamp capture; the Precedence Header and the Page Enumeration gate gained a "response-start coverage" note (the opener output satisfies PLANNED AFFECTED URLS; end-of-response URL sections still re-read post-bump state). Includes the 2026-08-29 incident note: a response opened with a standalone enumeration call in Step 1's place and wrote a fabricated opening timestamp
+- **Session context saved (`repository-information/SESSION-CONTEXT.md`)** — new Latest Session covering v03.63r–v03.75r (report engine + the complete Relationships build-out); the v03.62r Profiler quality build-out entry demoted to Previous Sessions; the Scraper v03.51r entry rotated out under the 2-session cap, with its Monday 2026-08-31 first-scheduled-run watch item carried into the new recommendation
+
+## [v03.74r] — 2026-08-29 08:14:28 PM EST — [af04ce9](https://github.com/LightAISolutions/Sales/commit/af04ce9a4287026b071d60b128d6f8a501959c9c)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Formation timeline on the dossier Relationships tab (`live-site-pages/Profiler.html` v01.62w)** — `ovRelTimeline` renders an SVG strip (viewBox 760×118) below the relationship map when a curated dossier has ≥2 links with `since` dates: year axis with adaptive tick step, category-colored dots at each formation date (`ovRelSinceX` maps YYYY/YYYY-MM to a year fraction), lane-based label placement (four near/far lanes above/below with per-lane extent tracking and edge clamping, added after the first Playwright pass showed same-year clusters overprinting), keyboard-accessible click-through to each counterparty. Respects the category chips (`frels`). Verified on Meta (7 dated links, 2024–2026): zero label overlaps, zero clipped labels, click-through navigates, zero page errors. **This completes the 2026-08-29 Relationships improvement list** (grouping+chips, graph+inbound, network explorer, common ground, recency feed, report wiring, one-pager export, category filters, formation timeline)
+
+## [v03.73r] — 2026-08-29 08:08:54 PM EST — [05298e3](https://github.com/LightAISolutions/Sales/commit/05298e39379b6548873fd6dc840796297be12f39)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Counterparty-category filter chips on the dossier Relationships tab (`live-site-pages/Profiler.html` v01.61w)** — on dossiers with ≥8 links and ≥2 counterparty categories, `ovRelPaint` renders an `.ov-rel-cats` chip bar ("All · N" + one chip per category present, frequency-sorted, category-colored borders via `ovRelColor`, `aria-pressed`); the selection filters the relationship map and every group (`fgroups`), state (`ovRelCatSel`/`ovRelCatSlug`) resets on dossier navigation, and the one-pager export always carries the full unfiltered view. Playwright on CATL: 21 links → Supplier chip filters to 16 with per-group recounts, toggle-off restores, filter resets after navigating to Tesla, zero page errors
+
+### Fixed
+- **`ovNxCatLabel`** — `ipp` now renders as "IPP" (was "Ipp") in the new chips and the Network explorer's category dropdown
+
+## [v03.72r] — 2026-08-29 07:58:17 PM EST — [58ede42](https://github.com/LightAISolutions/Sales/commit/58ede42a947ddfb909ec13d60094d022a50bac38)
+
+> **Prompt:** "continue with your recommendation. Also, a few other things:
+>
+> * Swap the positions of the "Reports" and "Network" buttons on the top right of Profiler's home page, so that contributors don't see an awkward empty spot where "Reports" is hidden.
+> * In the "Industry Guidance" library, organize the modules in a way that groups related topics together and makes it easier to find the information users are looking for."
+
+### Changed
+- **Archive rotation** — the Profiler page changelog was at capacity (50/50): the 2026-08-09 date group (v01.18w–v01.10w, nine sections, SHA-enriched) moved to `Profilerhtml.changelog-archive.md` (now 42/50)
+- **`.claude/rules/industry-guidance.md`** — step 4 now documents the module `group` meta field (topic-lane label consumed by the library renderer and `guidanceIndex_`)
+
+#### `Profiler.html` — v01.60w
+
+##### Added
+- **Relationship one-pager export** — `ovRelWordExport(p)` builds a compact .doc from the Relationships view (grouped links, Status/Since/Scale/Latest chips, note+context, source URLs; detected links as one-line mention counts), downloaded from a new export-gated button on the Relationships tab. The tab's data assembly was extracted into `ovRelData(p)` shared by `ovRelPaint` and the export
+- **Guidance library topic lanes** — `ovGuideOpen()` renders a `.gd-group` header whenever the module index's `group` label changes; ungrouped docs (older backend) render as before
+
+##### Changed
+- **Masthead stack** — ⛓ Network moved to the 44px slot (visible to every tier), admin-only ▤ Reports to the outer 84px slot, so contributor/analyst/viewer tiers see a contiguous stack with no gap
+
+#### `Profiler.gs` — v01.23g
+
+##### Added
+- **`group` labels on all six guidance modules** (Technology Foundations: BESS Tech Fundamentals, Power Infrastructure; The AI Data-Center Wave: NVIDIA 800 VDC, Utility Procurement; Market Access & Bankability: China Policy Stack, Bankability & Certification); `guidanceDocs_()` reordered into lane order and `guidanceIndex_()` now emits `group`
+
+## [v03.71r] — 2026-08-29 07:48:18 PM EST — [64630a9](https://github.com/LightAISolutions/Sales/commit/64630a98335c541beb1197bb1841d9de5d01b411)
+
+> **Prompt:** "I would prefer 30 days instead of 90 days. Then continue with your recommendation."
+
+### Added
+- **Relationship map in the report view (`live-site-pages/Profiler.html` v01.59w)** — `rpRelMap(rep)` renders between Limitations and the Source List in `#report/<id>`: every curated edge among the report's `coverage.companies` slugs (via `ovRelEdgeFor` over all pairs, curated-only — detected cross-mentions excluded), sorted working → competing → other then freshest first, reusing `ovNxRow` for consistency with the ⛓ Network explorer. Labeled as a live overlay ("reflects today's data, not the report's snapshot date") so it never misrepresents the immutable snapshot, and deliberately excluded from `rpWordExport` (the export stays deterministic report data only). Coverage names seed `bySlug` before the registry overlays categories, so deep links render before the roster loads. Self-hides when the scope has no curated links. Playwright: 41 curated links among the 12 in-scope companies on the grid-scale BESS report, zero page errors
+
+### Changed
+- **Recency window 90 → 30 days (developer preference)** — `ovNxCutoff()` now uses a trailing-30-day window; button label "✦ New in 30d · N", tooltip, and explorer explainer updated to match. 22 of 472 edges are fresh at 30 days (vs 77 at 90)
+
+## [v03.70r] — 2026-08-29 07:31:17 PM EST — [26d527a](https://github.com/LightAISolutions/Sales/commit/26d527a5903a6b1e5c87ac7ac6df628e3199daa8)
+
+> **Prompt:** "The two-company common ground mode works as intended. Continue with your recommendation."
+
+### Added
+- **"What's new" recency feed in the ⛓ Network explorer (`live-site-pages/Profiler.html` v01.58w)** — a `✦ New in 90d · N` toggle in the `#network` filter bar (`ovNxFresh` state + `ovNxCutoff()` trailing-90-day ISO cutoff) narrows the flat edge list to links whose `last` evidence date is inside the window, and in compare mode filters shared counterparties (kept when either connecting edge is fresh). Every fresh edge's meta line renders gold with a ✦ marker even when the toggle is off, so momentum reads at a glance. Playwright: 77/472 edges fresh, toggle isolates exactly those (zero stale rows), compare CATL + Tesla narrows 16 → 8 shared counterparties with the toggle on, zero page errors
+
+### Changed
+- **Archive rotation** — this CHANGELOG was at capacity (100/100): the 2026-08-21 date group (v02.75r–v02.70r, six sections, SHA-enriched) moved to `CHANGELOG-archive.md`
+
+## [v03.69r] — 2026-08-29 07:19:37 PM EST — [c11f873](https://github.com/LightAISolutions/Sales/commit/c11f87372c259b95065fb15389defe6b70c423de)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Common-ground compare mode in the ⛓ Network explorer (`live-site-pages/Profiler.html` v01.57w)** — picking a company in the `#network` filter bar now reveals a "Compare with…" selector; with two companies picked, `ovNxCommonPaint` renders their direct link (via `ovRelEdgeFor`) plus every shared counterparty found through `ovGraphBy`, each side's typed tie spelled out from both curated dossier sides (falling back to detected-mention counts), sorted by freshest evidence. Kind filter matches either connecting edge; category filter applies to the shared counterparty. The flat edge-row renderer was extracted into `ovNxRow` so the direct-link section reuses it. Verified with node --check and Playwright (CATL + Tesla: direct link yes, 16 shared counterparties, zero page errors)
+
+### Changed
+- **Archive rotations (both changelogs were at capacity)** — `Profilerhtml.changelog.md` moved its 2026-08-08 date group (v01.09w–v01.07w, SHA-enriched) to `Profilerhtml.changelog-archive.md` (now 48/50); this CHANGELOG moved v02.69r (2026-08-19, SHA-enriched) to `CHANGELOG-archive.md` (stays 100/100)
+- **README tree** — Profiler page-version link corrected from stale `v01.54w` to `v01.57w` (the v01.55w/v01.56w bumps missed the tree display)
+
+## [v03.68r] — 2026-08-29 07:03:56 PM EST — [a591ad8](https://github.com/LightAISolutions/Sales/commit/a591ad89ed2b3b6cfb3ed1667ec5ceed91af5d19)
+
+> So far, almost everything looks good. See the attached screenshot - This is the only relationship that I found that doesn't really look useful at all, so remove it. I think making the "Detected in other dossiers" group a collapsed-by-default group is a good idea since those connections are relatively weak, but still existing. Can you think of any other way to improve this Relationships function or build on it?
+
+### Changed
+
+#### `live-site-pages/Profiler.html` (v01.56w)
+- "Detected in other dossiers" group now collapsed by default with a click-to-expand header (▸ show / ▾ hide, keyboard-accessible with aria-expanded)
+
+#### `scripts/build-profiler-graph.py` + `live-site-pages/profiler-data/profiler-graph.json`
+- Added `EXCLUDED_PAIRS` to the graph builder for derived-only edges whose entire evidence is an anti-relationship sentence; excluded CATL–Terra-Gen (the flagged entry) and its identical twin Sungrow–Terra-Gen — both existed solely on Terra-Gen's "no CATL/EVE/Sungrow/Tesla ties found" line; graph rebuilt (472 edges, 1,499 evidence items)
+- Exclusion mechanism documented in `repository-information/PROFILER-SCHEMA.md` (Relationship graph section)
+
+## [v03.67r] — 2026-08-29 06:20:58 PM EST — [a5f7158](https://github.com/LightAISolutions/Sales/commit/a5f7158406516ab167808e8c1fd215dbcadabbee)
+
+> Understanding the relationships between all these different players in different functions is extremely important for me to understand which companies my targets are already working with and how. How can I optimize this Relationships tab to generate me genuinely useful information? If you need to run curated passes on any dossier or even conduct new targeted research, that's totally fine. I just want a legitimately structured way to analyze and display the information I need. Recommend me some ways to improve this Relationships function to approve.
+
+### Added
+
+#### Profiler data (`live-site-pages/profiler-data/`)
+- Curated `relationships[]` for **all 88 dossiers** — 485 typed links (customer/supplier/partner/competitor/investor/other) with note, expanded context, stated source, and the schema-v6 `status`/`since`/`scale` deal metadata; every dossier now at schemaVersion 6
+- Targeted relationship research on the 12 hyperscaler/neocloud dossiers (Oracle, Microsoft, Google, Amazon, Meta, OpenAI, xAI, Crusoe, CoreWeave, IREN, Lambda, Nebius) via 12 parallel research agents — real revisions with archival (12 superseded versions archived per the Archival Procedure), 18 new development entries and ~40 new sources covering the Stargate build web, neocloud offtakes, and energy-chain deals
+- `profiler-graph.json` — prebuilt ecosystem relationship graph merging both sides' curated links with full-sentence cross-mention evidence: 474 edges (372 carrying curated data), 1,501 evidence items
+- `scripts/build-profiler-graph.py` — graph builder, now REQUIRED after any profile write (documented in PROFILER-SCHEMA.md and the Profiler Command's register step)
+
+#### `live-site-pages/Profiler.html` (v01.55w)
+- Relationships tab grouping: Working with / Competing with / Other links / Detected in other dossiers, with deal chips (status, since, scale, latest activity)
+- Inbound evidence: each relationship shows what the counterparty's dossier says back, and graph-only counterparts surface as detected links
+- `#network` ecosystem explorer + ⛓ Network masthead button — the full graph as a filterable list (company / link kind / counterparty category), each edge spelled out from both curated sides with its freshest quote
+
+### Changed
+- `README.md` — structure-tree entries for `profiler-graph.json` and `build-profiler-graph.py`; archive listing regenerated to full completeness (98 archived dossier versions — backfilled 74 entries missing from prior passes plus the 12 new ones)
+- `.claude/rules/profiler-app.md` — Profiler Command step 5 now requires the graph rebuild alongside the registry sync
+
+## [v03.66r] — 2026-08-29 05:15:56 PM EST — [946299f](https://github.com/LightAISolutions/Sales/commit/946299f4b19ebbc3809b6e03907c2a28a28d112b)
+
+> **Prompt:** "For every dossier, make the \"Relationships\" section its own tab and then improve the explanation of each relationship below. Mention the source which explicitly states the relationship, then explain the context and the detailed nature of their relationship. Also, make sure that no words get cut off; Just expand the explanation and let me scroll down to read it all."
+
+### Added
+- **Relationships is now its own dossier tab** (`Profiler.html` v01.54w): new `rels` entry in `OV_SEC_LABELS` (all five styles) and `tabDefs`; the section moved out of the Summary pane into `paneFor('rels')` — the tab self-hides on dossiers with no links, and `#slug/rels` deep-links work via the existing tab router
+- **Expanded relationship explanations**: curated `relationships[]` entries now render their stated `source` as a linked "Source" line (resolved against the dossier's `sources[]` via new `ovRelSource()` — label + publication date when the URL is a cited source, hostname link otherwise), the one-line `note`, and the new multi-paragraph `context` field; derived evidence renders under curated rows as "Mentions across this dossier"
+- **Schema v5** (`repository-information/PROFILER-SCHEMA.md`): `relationships[].context` — 2–6 sentences on the nature, history, and mechanics of the relationship, grounded in the cited source; authoring guidance now asks research passes to fill `note`, `context`, and `source` per curated link. Backfill stays opportunistic per "Extending the schema"
+
+### Changed
+- **All truncation removed from relationship evidence** (`ovRelDerive` rework): mentions are extracted as complete sentences via new `ovRelSentences()` (sentence-boundary expansion; decimals like "14.5 MWh" survive), the 165-character clip and 2-evidence cap are gone, the 10-row list slice and "+ N more" note are gone — every relationship renders with every mention in full. Derivation now also mines product `description`/`positioning` fields, and development mentions carry the event's date and a resolved source link. The radial map alone stays capped at 10 spokes for legibility, with a caption pointing to the full list
+
+## [v03.65r] — 2026-08-29 05:03:13 PM EST — [b97ea15](https://github.com/LightAISolutions/Sales/commit/b97ea15a983fa50e040036e32b6378c4ed36891a)
+
+> **Prompt:** "continue with your recommendation" *(following the commit-message rule-contradiction analysis: apply Option A — align `gas-scripts.md` with [PC-COMMIT-MSG] #8)*
+
+### Changed
+- `.claude/rules/gas-scripts.md` "Commit Message Naming" rewritten to match [PC-COMMIT-MSG] #8 (the single source of truth). **Supersedes the older instruction that appended bumped `g`/`w` versions to push commits in `r`, `g`, `w` order and prefixed intermediate commits with bumped `g`/`w` versions — both contradicted #8 from the initial commit onward and are removed.** Push commits carry the repo version prefix only; intermediate commits use a plain descriptive message; the `r`/`g`/`w` suffix legend and the `Backfill CHANGELOG SHA` exemption are retained, plus a note that historical multi-version subjects remain valid (SHA-enrichment greps anchor on the leading `vXX.XXr ` and match both forms)
+- Repo CHANGELOG's first threshold-triggered archive rotation this file has seen at 100/100: the 2026-08-18 date group (v02.65r–v02.68r, four sections) moved to `CHANGELOG-archive.md` with SHA enrichment
+
+## [v03.64r] — 2026-08-29 04:56:45 PM EST — [4414e56](https://github.com/LightAISolutions/Sales/commit/4414e56332cff261efdcbe9a0dd8ce7dc293cd4f)
+
+> **Prompt:** "Make the entire \"Reports\" function only visible and accessible to admin level users."
+
+### Changed
+- **Reports surface is now admin-only** (`Profiler.html` v01.53w): added a `reports` capability to `OV_ROLE_CAPS` granted to `admin` alone; the masthead "▤ Reports" button is now created from the auth wall's `pass()` (like the guidance button) so other tiers and signed-out visitors never get it in the DOM; the `#reports` and `#report/<id>` routes render an "administrators only" notice via `rpDenied()` for any tier without the capability — `pass()`'s existing `ovRoute()` repaint means an admin deep link renders right after sign-in. Raw report JSONs remain public Pages data (UI-level gate, same caveat as dossiers), noted in the code comments and docs
+- `scripts/verify-profiler-roles.py`: Reports column added to the matrix oracle (`EXPECT`), the DOM probe, the per-tier assertion loop, and the printed summary table — full run passes (admin shown; contributor/analyst/viewer hidden)
+- `.claude/rules/profiler-app.md`: Role + Access matrix updated (contributor now loses Field Note, Versions, and Reports); Profiler Report Command wording changed from "all tiers" to admin-only. `repository-information/PROFILER-SCHEMA.md`: Report schema notes the admin-only app surface and the public-files caveat
+
+## [v03.63r] — 2026-08-29 04:45:35 PM EST — [d336073](https://github.com/LightAISolutions/Sales/commit/d3360739252135ece39d964065a8eae39b91f9b5)
+
+> **Prompt:** "Picking up from my recent \"Profiler app dossier Summary expansion\" session, design and build profiler report <topic> (roadmap #3, the last approved item) — the industry-report engine the whole quality build-out was for. Everything it needs now exists: normalized KPIs for cross-company figures, provenance for citation confidence, relationships for ecosystem structure, peer families for scoping, and coverage metadata for honesty about gaps. Start with a design pass (report types — macro, competitive, risk, opportunity; output format; how reports cite dossier sources) and get developer approval before building."
+
+### Added
+- **`profiler report <topic>` command — the industry-report engine (roadmap #3, developer-approved design).** Reports are immutable snapshot JSONs synthesized from covered dossiers only (no fresh research), citing the dossiers' own `sources[]` with data-driven provenance tiers. Report schema + reports-index schema added to `repository-information/PROFILER-SCHEMA.md`; the "Profiler Report Command" section added to `.claude/rules/profiler-app.md` (type/scope resolution, coverage preflight, authoring rules, verification, supersede-not-edit lifecycle); CLAUDE.md Profiler Command pointer updated. Four report types: macro, competitive, risk, opportunity. Field notes are excluded from report content by design (public Pages data)
+- Reports renderer in `Profiler.html` (v01.52w): `#reports` library + `#report/<id>` views, masthead "▤ Reports" button (all tiers, like dossiers), inline `[c:id]` citation superscripts with provenance badges, coverage block with pinned dossier versions + "since revised" drift badges, confidence-tagged key judgments, indicators/limitations sections, and a report Word export (gated by the existing `export` capability). Section bodies reuse the guidance renderer primitives — `gdTable`/`gdTimeline` gained an optional formatter parameter (backward compatible)
+- `scripts/check-profiler-reports.py` — mandatory verification after any report write: schema shape, citation resolution against each cited profile's `sources[]`, party-tier derivation match, bars-figure verification against the KPI overlay, coverage-pin drift, and index reconciliation. Pin/citation mismatches are errors while the cited profile sits at the pinned version, warnings once it has moved on
+- Seed report `grid-scale-bess--competitive--2026-08-29` (12 grid-scale BESS system players, 42 citations, 7 sections) + `reports-index.json` — validated end-to-end: check script 0 errors / 0 warnings, Playwright render test of both views passed with zero page errors
+
+### Changed
+- `live-site-pages/html-changelogs/Profilerhtml.changelog.md`: rotated the 2026-08-07 date group (v01.02w–v01.06w, five sections) to the archive with SHA enrichment — active file now 46/50
+
+## [v03.62r] — 2026-08-29 03:45:02 PM EST — [0cb75f1](https://github.com/LightAISolutions/Sales/commit/0cb75f1fda6eb81bb9d9c8683273e57419faf3b1)
+
+> **Prompt:** "continue with your recommendation, then remember session to prepare for profiler report as its own session with fresh context."
+
+### Changed
+- `.claude/rules/profiler-app.md`: running `scripts/sync-profiler-registry.py` after any profile write is now a required step of the Profiler Command (step 5) and of every data-only change — closing the drift gap before the ~30 armed October post-earnings triggers fire. Scheduled refreshes and quarterly sweeps inherit the requirement since they walk the full command
+- Saved session context to `SESSION-CONTEXT.md` (Remember Session): the Profiler quality build-out is complete through roadmap #5; next session picks up the `profiler report <topic>` design with fresh context
+
+## [v03.61r] — 2026-08-29 03:37:45 PM EST — [056c4eb](https://github.com/LightAISolutions/Sales/commit/056c4ebe2fbca2553f14639e8e27b946b4fb5f70)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- Roster freshness tints and coverage meters (roadmap #5) in `live-site-pages/Profiler.html`: every roster card carries a `cov` line — freshness dot (`ovFreshness`: fresh ≤45d, aging ≤120d, stale beyond — thresholds follow the post-earnings refresh cadence), visible age in days, source count, first-party share, and a `$ comparable` / `$ not normalized` tag from the schema-v4 overlay. An aggregate strip above the grid (`ovCovStrip`) totals dossiers, cited sources, comparable-revenue count, median first-party share, and the oldest update age
+- `scripts/sync-profiler-registry.py` — reconciliation for denormalized registry fields. The roster renders from the registry alone (recall design: one fetch, no per-card profile loads), so the new per-card facts are denormalized into `profiler-companies.json` as `srcTotal`, `srcFirstPct`, `kpiNorm` (all 88 populated), with `lastUpdated` sync folded in — replacing the one-off drift pass from v03.54r. `--check` reports drift without writing; the provenance logic mirrors `ovSourceParty` and both carry keep-in-sync comments
+- `PROFILER-SCHEMA.md`: the three denormalized fields documented as auto-maintained (never hand-edit), plus a "Denormalized fields & the sync script" note explaining the reconciliation contract
+
+### Changed
+- Roster cards show update age (`7d`) instead of the raw `as of` date — the cov line owns the date signal, and age scans faster across 88 cards
+
+### Fixed
+- `ovFreshness` initially computed age with `Math.round` over a datetime-minus-midnight delta, which flipped boundary dates between tiers over the course of a single day (caught by the 45d/120d edge checks in the new Playwright suite). Now whole-calendar-day arithmetic: both ends floored to UTC days
+
+## [v03.60r] — 2026-08-29 05:41:32 AM EST — [948548b](https://github.com/LightAISolutions/Sales/commit/948548b6b0a70e8d4436f483b7205a68f45103b2)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- Source provenance indicator (roadmap #4) across `live-site-pages/Profiler.html`: `ovSourceParty`, `ovProvenance`, `ovProvBlock`, `ovProvStrip` and `ovProvNote` classify every cited source as `company`, `disclosure` or `independent`, surfaced as a compact strip in the dossier header, a full breakdown with per-source tags in the Source List, and a Tier 0 "Sourcing" row in Compare
+- Registry schema v2 — `companies[].domains` in `profiler-data/profiler-companies.json` declares each company's own web domains (88/88 populated). Subdomains match implicitly, so `abb.com` covers `new.abb.com`. Curated beyond the profile's `website` host where the company publishes elsewhere: parent domains (`hitachi.com`, `huawei.com`), sub-brands and regional sites (`bydenergy.com`, `delta-americas.com`, `sunwodaess.com`, `mpinarada.com`, `samsungrenewableenergy.com`, `mastecprofessionalservices.com`, `hittyearinreview.com`), separate newsrooms (`about.fb.com`/`atmeta.com`, `news.panasonic.com`), brand TLDs (`blog.google`) and IR-platform hosts (`iren.gcs-web.com`)
+- Optional per-source `party` override, documented in `PROFILER-SCHEMA.md` alongside a new "Source provenance" section defining the three tiers and the classification contract
+
+### Changed
+- Provenance is deliberately **not** framed as a quality score. `ovProvNote` reads a low independent share as under-corroborated rather than well-sourced, matching the schema's own division of labour: first-party channels are ground truth for products, specs and leadership; independent sources supply what a company cannot credibly say about itself
+- `.claude`-adjacent test asset: `vt-family`'s row-order assertion was pinned to a positional index (`r[3] == 'revenue'`) and broke when the Sourcing row was inserted into Tier 0. Rewritten as order-semantic assertions (revenue precedes the as-reported row; sourcing precedes revenue) so future Tier 0 additions do not produce a false failure
+
+### Fixed
+- A token-matching prototype of this feature was discarded before shipping after an audit across all 88 dossiers showed systematic misclassification: Black & Veatch rendered 6% first-party despite `bv.com` supplying 14 of its 29 sources, and Google, Schneider Electric, QTS and xAI all rendered 0% company sources. The causes were structural, not tunable — domains too short to tokenize (`bv.com`, `q.com`, `se.com`), brand TLDs (`blog.google`, `x.ai`) and separate corporate domains (`about.fb.com`). Replaced with the declared-domain model above; Black & Veatch now reads 55% and Google 63%
+
+## [v03.59r] — 2026-08-29 05:21:35 AM EST — [80682eb](https://github.com/LightAISolutions/Sales/commit/80682eb3004cece33352d0222b1258b7e5188f6e)
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+- `Profiler.html` (v01.49w) — `ovCmpLatestRevenue()` selected the latest annual revenue by array position (`periods[periods.length - 1]`), but period ordering is not a contract: 49 dossiers are authored oldest-first and 22 newest-first. The Compare view was therefore showing the prior year for every newest-first dossier — Amazon rendered FY2024 $638.0B instead of FY2025 $716.9B, and Google, Microsoft, NVIDIA, Jinko, LG Energy Solution, Megmeet, Samsung SDI and Primoris were all affected. Selection is now by `periodEnd` (ISO dates sort lexicographically), with a comment recording why position cannot be trusted
+
+### Added
+- Normalized-KPI (schema v4) backfill extended from the 6 demo dossiers to 42 of 88 across `live-site-pages/profiler-data/`: `schemaVersion` → 4, `periodType`/`periodEnd` on the tagged annual period, and `kpi: "revenue"` + `usdMillions` + `fxBasis` on the revenue metric. 36 dossiers changed this push
+- FX bases recorded per dossier: 21 "as reported" (USD reporters), 13 converted at researched annual-average rates — CNY 7.1873 (2025), TWD 31.171 (2025), KRW 1421.48 (2025), EUR 1.1306 USD/EUR (2025) — and 2 using the dossier's own stated USD equivalent (Jinko $9.37B, Hithium ~$1.8B) in preference to any external rate. Per `PROFILER-SCHEMA.md`, rates were researched rather than recalled; the CNY rate was cross-validated against CATL's own stated USD figure (RMB 72.2B ÷ 7.1873 = $10.05B vs "~US$10B" in the dossier)
+- Deliberate exclusions, left rendering "Not normalized yet" rather than fabricating a comparable bar: Oracle (guidance, not an actual), Switch (quarterly splits with no annual total), Crusoe and Lambda (third-party estimates), OpenAI (press-reported, not company-disclosed)
+
+### Changed
+- Verification: a new 15-check coverage suite confirmed newest-first years resolve correctly, that every non-USD basis is present and correctly named, that the hardware peer-family unlock still holds, and that excluded companies still show an honest gap. An independent audit recomputed 12 conversions with zero mismatches and confirmed no segment figure was mistaken for a company total; three figures that resisted regex parsing were hand-verified. The `vt-kpi` regression suite was repointed off Eaton and Schneider (both now carry overlay data) onto Crusoe and Oracle/Switch as the no-overlay fixtures
+
+## [v03.58r] — 2026-08-29 04:52:54 AM EST — [0002d0e](https://github.com/LightAISolutions/Sales/commit/0002d0ee16e2df06bd7756fe030e0d900249baf7)
+
+> **Prompt:** "Judgment calls:
+>
+> 1. Agreed. I don't want six near-identical snapshots in the archive.
+> 2. Accepted too.
+>
+> Treat supplier and integrator as one family. I don't need the rules to be that rigid as the US BESS/AIDC industry changes a lot and build-in flexibility will be a big plus."
+
+### Added
+
+- `Profiler.html` (v01.48w) — **peer families** for Compare. New declarative `OV_PEER_FAMILIES` map with `ovPeerKey` / `ovPeerKeys` / `ovPeerLabel` / `ovPeerMembers`; the first entry groups `supplier` + `integrator` as **Hardware**. Both gates now resolve through it — the roster's dimming/selection rule and the Tier 2 unlock — so they can never disagree. Chosen declarative on the developer's reasoning that the US BESS/AIDC map keeps moving: adding or re-grouping a family is a one-line data edit, not a logic change
+
+### Changed
+
+- `Profiler.html` (v01.48w) — the Compare heading now prefers the **most specific accurate label**: an exact shared category still reads "Supplier — 3 companies", and only a family-level match falls back to "Hardware — 4 companies". When the match is family-level the subtitle says so outright ("suppliers and integrators are compared as one family") rather than leaving the reader to infer it from the tags. Tier 2's technical-row branch keys off the `hardware` family instead of a hardcoded supplier/integrator test
+
+### Notes
+
+- **A category named in no family remains its own family**, so future registry additions can never silently widen a comparison — verified by test: two IPPs still match as "IPP — 2 companies" and are not swept into Hardware
+- **The unlock is not cosmetic.** Sungrow/CATL/Fluence/Tesla previously rendered "Cross-space" with no technical rows; it now unlocks 7 shared attributes — including an **Integration** row that exists only because Fluence is in the selection, setting its Battery Pack integration beside Tesla's AC-coupled enclosure. That row was unreachable under the strict gate
+- Verified by a 22-check Playwright suite: the family unlock and its wording, exact-category precision preserved, unrelated spaces still gated (ABB vs Crusoe, Google vs Quanta), the identity rule for unfamilied categories, the roster gate accepting an integrator after a supplier while still refusing a neocloud, and the financials-only override unchanged. The KPI, Compare and role-matrix suites all re-run clean
+- **Test-authoring note (second occurrence this session):** a check failed against the legend text because `.ov-cmp-legend` is `text-transform: uppercase`, so Playwright's `inner_text()` returns "PEER GROUP: HARDWARE" while `textContent` returns "Peer group: Hardware". The app was correct both times; assertions against styled text must be case-insensitive or read `textContent`
+
+## [v03.57r] — 2026-08-29 04:43:21 AM EST — [65b3432](https://github.com/LightAISolutions/Sales/commit/65b34320c4ef6c39325217d92a04dd2f4d09db8c)
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(Standing recommendation from the previous response: add the normalized KPI fields — roadmap item #2 — so the Compare view's as-reported figures become comparable USD bars.)*
+
+### Added
+
+- `PROFILER-SCHEMA.md` — **profile schema v4: the normalized-KPI overlay.** New optional fields on `financials.periods[]` (`periodType` ∈ annual/half/quarter/other, `periodEnd` as `YYYY-MM-DD`) and on `financials.periods[].metrics[]` (`kpi` from a fixed nine-key set, `usdMillions`, `fxBasis`). Designed against a survey of the live data — **217 distinct metric names across 88 dossiers**, in 15 different currency spellings — which is why it is a thin opt-in overlay rather than a migration: the prose `name`/`actual` pair stays authoritative and unchanged, and `usdMillions` must be derivable from `actual`. Rules cover whole-company actuals only (no segments, no guidance), one `kpi` per key per period, and **`fxBasis` mandatory on any converted figure**
+- `Profiler.html` (v01.47w) — Compare's Tier 1 now opens with a **normalized revenue row**: each company's latest complete annual revenue in USD with a proportional magnitude bar (`ovCmpLatestRevenue` / `ovCmpUsd` / `.ov-cmp-mag`), the period and its end date beneath so differing fiscal years are visible at a glance, and a hover-revealed conversion basis on any figure that was converted. A company without the overlay renders "Not normalized yet" and **no bar** — the chart is never completed with an invented figure; the row is omitted entirely when no selected company carries the data
+- `profiler-data/` — backfilled six dossiers to schema v4 (`sungrow`, `catl`, `fluence`, `tesla`, `abb`, `vertiv`): `periodType`/`periodEnd` on every period, and FY2025 revenue tagged `kpi: "revenue"` with `usdMillions`
+
+### Notes
+
+- **FX was researched, not remembered.** Fluence, Tesla, ABB and Vertiv report in USD, so their figures are `"as reported"` with no conversion at all. Sungrow and CATL report in RMB and were converted at **7.1873 CNY/USD** (2025 calendar-year average, per exchange-rates.org and x-rates.com, which agree). The rate independently cross-checks against CATL's own dossier: RMB 72.2B net profit ÷ 7.1873 = US$10.05B, and the dossier states "~US$10B"
+- **No `profileVersion` bump and no archival on the six backfilled dossiers.** This is an additive metadata overlay — no fact, figure or prose changed — so treating it as a dossier *revision* would archive six near-identical snapshots and desynchronize `lastUpdated` from the registry that v03.53r just re-synced. `schemaVersion` is what moves; the schema's own "backfill opportunistically" rule is satisfied without a revision
+- **Only the latest complete annual period is normalized.** FY2024 was left alone because the verified rate is the 2025 average and applying it to 2024 figures would be a conversion with the wrong basis. Earlier years backfill when their own rate is verified
+- Verified by a 24-check Playwright suite: figures and bar proportions against the real dossiers, bars scaling to the selection maximum, the fiscal-year offset surfacing for Fluence's September year-end, conversion bases present on exactly the two converted figures and absent on the four as-reported ones, the honest-gap fallback, and the row disappearing when no company has the overlay. The Compare and ticker-render suites and `scripts/verify-profiler-roles.py` all re-run clean
+- **Uniform display precision** — `ovCmpUsd` renders two decimals on billions throughout. A column mixing `$12.4B` with `$2.30B` reads as sloppy and invites a false comparison; two decimals is $10M resolution, within the significant figures the sources carry
+- **Observed, not changed:** a Sungrow/CATL/Fluence/Tesla comparison renders as "Cross-space" because Fluence is categorized `integrator` while the others are `supplier` — no shared category, so Tier 2 stays suppressed per the approved gate. The gate behaves exactly as specified; whether `supplier` and `integrator` should count as one technical family for Tier 2 is a design question raised with the developer rather than decided here
+
+## [v03.56r] — 2026-08-29 04:19:16 AM EST — [dcedad0](https://github.com/LightAISolutions/Sales/commit/dcedad065378a47d3851de79562b98dbd46712a7)
+
+> **Prompt:** "Six Profiler dossiers put ownership prose in the `ticker` field, which makes `ovOwnership()` in `live-site-pages/Profiler.html` render duplicated text like "private · private (~$30B round in talks, July 2026)". This shows on the dossier Summary tab's Ownership fact, in Word/PDF exports, and in the new Compare view's Snapshot row.
+>
+> Affected files in `live-site-pages/profiler-data/`:
+> - `crusoe.profile.json` — ticker: "private (~$30B round in talks, July 2026)"
+> - `eve-energy.profile.json` — ticker: "SZSE ChiNext: 300014 (HKEX H-share listing twice-filed, unconfirmed)"
+> - `hitachi-energy.profile.json` — ticker: "private (parent Hitachi TYO: 6501; listed sub …)"
+> - `huawei-digital-power.profile.json` — ticker: "private (Huawei is employee-owned, unlisted)"
+> - `openai.profile.json` — ticker: "private (confidential S-1 filed June 2026)"
+> - `xai.profile.json` — ticker: "private (inside SpaceX; S-1 filed May 2026)"
+>
+> Per `repository-information/PROFILER-SCHEMA.md`, `ticker` is `EXCHANGE: SYMBOL` for public companies and `ownership` carries the type. The prose belongs in `ownership` (or the summary), not `ticker`.
+>
+> Task: for each of the six, move the parenthetical/prose into the `ownership` field (or drop it if the summary already says it) and either set `ticker` to a real `EXCHANGE: SYMBOL` (eve-energy, hitachi-energy's parent) or omit the field entirely for genuinely private companies. Keep `profiler-companies.json`'s matching `ticker` values consistent with the profiles. Then check the rendering: the dossier Summary's Ownership fact and the Compare Snapshot row should read cleanly with no duplication (serve `live-site-pages/` over localhost and open `Profiler.html#crusoe` and `Profiler.html#compare/abb,crusoe`).
+>
+> Consider also whether `ovOwnership()` should defensively skip a ticker that starts with the ownership type — surface that as a recommendation to the developer rather than applying it unasked, since it is shared rendering code.
+>
+> This is a data-only change: no Profiler page version bump (per `.claude/rules/profiler-app.md`), repo CHANGELOG entry + repo version bump on the push commit, full Pre-Commit/Pre-Push checklists, push to the session's designated claude/* branch. Note the repo CHANGELOG `Sections` counter (91/100 at time of writing) and rotate if the push exceeds 100."
+
+### Fixed
+
+- `profiler-data/` — six dossiers held ownership prose in `ticker`, so `ovOwnership()` (which renders `type · ticker`) produced duplications like "private · private (~$30B round in talks, July 2026)" on the dossier Summary's Ownership fact, in Word/PDF exports, and in the Compare Snapshot row. The prose moved into `ownership`, where the schema says it belongs:
+  - `crusoe` — ownership → `"private (~$30B round in talks, July 2026)"`; `ticker` removed
+  - `openai` — ownership → `"private (Microsoft ~27% as-converted; Foundation ~26%; confidential S-1 filed June 2026)"`; `ticker` removed
+  - `xai` — ownership → `"private (SpaceX subsidiary; Musk-controlled; S-1 filed May 2026)"`; `ticker` removed (also removed from `profiler-companies.json`, the only registry entry with a malformed ticker)
+  - `huawei-digital-power` — ownership → `"subsidiary (Huawei Technologies — employee-owned, unlisted)"`; `ticker` removed
+  - `hitachi-energy` — ownership → `"subsidiary (Hitachi, Ltd. — parent TYO: 6501; listed subsidiary Hitachi Energy India NSE: POWERINDIA)"`; `ticker` removed
+  - `eve-energy` — the only one that had a real symbol buried in the prose: `ticker` → `"SZSE ChiNext: 300014"`, ownership → `"public (HKEX H-share listing twice-filed, unconsummated as of Aug 2026)"`
+
+### Notes
+
+- **`hitachi-energy` keeps no ticker deliberately.** The task allowed setting the parent's symbol, but `ticker` renders as *this company's* ticker in the dossier header, the roster card and the Compare header column — `TYO: 6501` there would assert that Hitachi Energy trades under its parent's symbol, which is false. Both the parent's and the listed Indian subsidiary's symbols are preserved in the `ownership` prose instead
+- **`eve-energy`'s registry entry stays `SZSE: 300014`** while the profile carries `SZSE ChiNext: 300014`. That mirrors the existing `sinexcel` pattern (registry `SZSE: 300693`, profile `SZSE ChiNext: 300693`) — same exchange and symbol, board qualifier only in the profile — so this follows house convention rather than inventing a new one
+- Verified by rendering: 18 checks over the six dossiers' Ownership facts, the header meta line, the Compare Snapshot row (ABB vs Crusoe) and the Compare header column (EVE vs CATL) — no duplications, real tickers still shown where one exists, ownership prose kept out of the ticker position. A repo-wide re-survey finds **0** profiles and **0** registry entries with a malformed ticker, and **0** remaining type/ticker echoes across all 88 dossiers
+- **Recommendation surfaced, not applied** (shared rendering code, developer's call): `ovOwnership()` could defensively skip a ticker that starts with the ownership type. It would have masked this bug rather than surfacing it, and the data is now clean, so it is proposed as a guard against future drift only
+
+## [v03.55r] — 2026-08-29 04:13:49 AM EST — [4b29c40](https://github.com/LightAISolutions/Sales/commit/4b29c4095daeef0ce2e2924b0ea87817b1166a7d)
+
+> **Prompt:** "Build the approved Compare view for the Profiler app (`live-site-pages/Profiler.html`), per the developer's approved design (2026-08-29 session, repo v03.54r):
+>
+> **Design (developer-approved):**
+> - Compare mode on the roster: a toggle chip; selecting the first company establishes the peer group (registry `categories` are the grouping key) and dims companies sharing no category; up to 4 companies.
+> - **Tiered rows:** Tier 0 (always): dossier meta — profileVersion, lastUpdated, source count. Tier 1 (always): financials — latest reported periods as-reported, beat/miss/in-line record tallied from `financials.periods[].metrics[].verdict`. Tier 2 (only when ALL selected companies share a category): category-specific rows — suppliers/integrators: product-line counts, flagship names, spec rows whose band/label at least two companies share; other categories start with product lines + lead `strategyRead` judgment.
+> - Cross-space selections are allowed via an explicit "Financials only" override chip — matrix then shows only Tiers 0–1.
+> - A mockup of the intended look exists (artboard 2 of the "Profiler Future Vision" design canvas — dark ink/gold, `.ov-*` visual language, matrix grid with row-label column).
+>
+> **Constraints from repo rules:** renderer-only change in Profiler.html's PROJECT blocks (no schema change yet — normalized-USD bars wait for the approved `relationships`-style KPI field extension, roadmap #2); deep-linkable state if reasonable (e.g. `#compare/slug1,slug2`); Playwright visual verification before commit (`scripts/playwright-harness.py` pattern, serve `live-site-pages/` over localhost, remove `#ov-authwall`); page version bump + page changelog + full Pre-Commit/Pre-Push checklists; push to the session's designated claude/* branch. Note the repo CHANGELOG's `Sections` counter and rotate per rules if the push exceeds 100.
+>
+> Done looks like: Compare reachable from the roster, peer-gating and the financials-first tiers working against real profile JSONs, verified visually, committed and pushed."
+
+### Added
+
+- `Profiler.html` (v01.46w) — **Compare view**, renderer-only (no schema change). Roster gains a `⇄ Compare` toggle (`ovCompareMode`) that flips cards from navigate-on-click to select-on-click, with a sticky selection tray and a hard cap of 4 (`OV_COMPARE_MAX`). **Peer gating**: the first pick fixes the peer group from its registry `categories`; companies sharing no category are dimmed (`.ov-card.dim`) and their clicks are refused at the handler, not just visually — verified by test (a supplier pick dims 49 of 88 and rejects a neocloud click)
+- `Profiler.html` (v01.46w) — **tiered matrix** (`ovRenderCompare` / `ovPaintCompare`): Tier 0 dossier meta (profileVersion, lastUpdated, cited-source count) and Tier 1 financials (latest reported period with per-metric verdict chips, plus a beat/in-line/miss tally bar across every period from `financials.periods[].metrics[].verdict`) always render; Tier 2 unlocks only when `shared` categories across all picks is non-empty — suppliers/integrators get product-line counts, flagship names and the spec attributes at least two dossiers both record (`ovCmpSpecMap` label intersection, capped at 8), other categories get product lines + the lead `strategyRead` judgment. `Financials only` chip (`ovCompareFinOnly`) lifts the peer gate for cross-space work and pins the matrix to Tiers 0–1
+- `Profiler.html` (v01.46w) — deep-linkable as `#compare/slug1,slug2[,…]` (`compare` reserved as a first hash segment); unknown/insufficient slugs render an explanation instead of a broken matrix; a hashchange mid-fetch discards the stale render; company names in the header row open their dossiers; the matrix scrolls inside `.ov-mx-wrap` on narrow screens rather than stacking (stacking loses the label↔company pairing)
+
+### Notes
+
+- Verified with a 40-check Playwright interaction suite (peer gating incl. refusal of a dimmed card, deselect/reselect, tray state, deep links both same-space and cross-space, Tier-2 gating in both directions, the financials-only override, guard rails for 1-slug and unknown-slug hashes, full row population, and mobile containment). `scripts/verify-profiler-roles.py` re-run clean (matrix + isolation + 88/88 specs)
+- **Test-quality note:** the first suite run appeared to show a peer-gating bug; the root cause was the test's own selectors — `has_text='Sungrow'` matches Key Capture Energy (whose tagline names Sungrow) before Sungrow itself, so the peer group was accidentally set to IPP and the app *correctly* refused a supplier. Selectors now match card headings exactly. The app behavior was right throughout
+- **Pre-existing data issue observed, not fixed here** (out of scope, Chesterton's fence): 6 profiles (`crusoe`, `eve-energy`, `hitachi-energy`, `huawei-digital-power`, `openai`, `xai`) put ownership prose in the `ticker` field, so `ovOwnership()` renders "private · private (~$30B round…)" on the dossier Summary, in exports, and now in the Compare Snapshot row. A task card was queued for the data cleanup rather than patching the shared renderer
+
+## [v03.54r] — 2026-08-29 03:49:01 AM EST — [21be1bc](https://github.com/LightAISolutions/Sales/commit/21be1bc46967b748e8be0244786b66dd41ca9e41)
+
+> **Prompt:** "I have reviewed the mockups and have the following feedback:
+>
+> \* In the Compare screen, focus mostly on financials since those are the only metrics that can realistically be compared between companies that fulfill different functions (supplier vs developers vs hyperscalers). Alternatively, suggest a better way to limit comparisons to only those within the same space. If they are in the same space, then you can also suggest ways to compare technical specs and other metrics.
+> \* In the Dossier Summary, remove the "at a glance" cards that link to other tabs. I find they don't contain enough value to justify their existence. I would prefer you to spend more resources on finding ecosystem cross-links, figuring out their relationship with each other, and creating a "Relationships" field as that would be extremely useful. If possible, a visual mind-map diagram would be useful too.
+> \* Create a Settings icon in the bottom right of Profiler (cog icon) that has a "Command" option that goes over all of my Profiler commands along with detailed explanations of when/how to use them.
+> \* Otherwise, I approve of all your recommendations to improve the Profiler app.
+>
+> If you run out of my weekly Fable limit, continue working with Opus 5."
+
+### Added
+
+- `Profiler.html` (v01.45w) — **Relationships section** on the dossier Summary tab. Curated layer: new `relationships[]` field (schema v3 — see PROFILER-SCHEMA.md). Derived fallback: `ovRelDerive()` scans the dossier's own summary, developments, and judgments for other covered companies' names (registry as the name authority; word-boundary matching with a sentence-start ambiguity guard so "Switchgear" never matches Switch). Rendered as a clickable radial SVG mind-map (`ovRelMap()` — category-colored nodes, keyboard-accessible, transparent hit pads) plus per-company evidence rows showing the sentence behind each link. On ABB it detects 8 real cross-links (NVIDIA, VoltaGrid, Vertiv, Eaton, Hitachi Energy, Siemens Energy, OpenAI, Applied Digital)
+- `Profiler.html` (v01.45w) — the bottom-right ⚙ cog is now a **Settings menu** (`ovSettingsToggle()`): capability-gated entries for the new **Commands reference** overlay (`ovShowCommands()` + `OV_COMMANDS` — all seven Profiler commands with when/how/what-it-does cards, including the planned `profiler report`) and the existing Field-notes log. New `commands` capability in `OV_ROLE_CAPS` (admin-only); the cog now renders on dossier views as well as the roster
+- `repository-information/PROFILER-SCHEMA.md` — profile schema v3: `relationships[]` field definition (`slug`/`type`/`note`/`source`; slugs must be covered companies; curation supersedes render-time detection; opportunistic backfill on each dossier's next revision)
+
+### Removed
+
+- `Profiler.html` (v01.45w) — the v01.44w Summary signal board (`ovSignalBoard()` + `.ov-sigs` CSS) — developer review found the tab-teaser cards too low-value to keep; the Relationships section takes their place
+
+### Changed
+
+- `scripts/verify-profiler-roles.py` — cog oracle note updated for the Settings-menu change (matrix unchanged: both cog entries are admin-only, all tiers verified passing; specs audit still 88/88)
+
+## [v03.53r] — 2026-08-29 03:24:50 AM EST — [7ce6f1d](https://github.com/LightAISolutions/Sales/commit/7ce6f1db96194e284f604e6ab3ae5cc9f21f6a91)
+
+> **Prompt:** "While building a Profiler mockup, a data drift was found in `live-site-pages/profiler-data/`: many entries in `profiler-companies.json` carry `lastUpdated: "2026-08-09"` while their corresponding `<slug>.profile.json` files say `lastUpdated: "2026-08-22"` (confirmed for at least: abb, sungrow, catl, tesla, fluence, vertiv, crusoe, quanta-services, constellation-energy — likely more; the 2026-08-22 dossier-mining/refresh pass appears to have bumped profiles without updating the registry). `repository-information/PROFILER-SCHEMA.md` (Registry schema) requires `companies[].lastUpdated` to be kept in sync with the profile's `lastUpdated`, and the roster UI displays the registry value, so the app currently understates freshness. Task: write a small script or one-off pass that, for every company in `profiler-companies.json`, reads `<slug>.profile.json` and sets the registry `lastUpdated` to match. Report which entries changed. This is a data-only change: per `.claude/rules/profiler-app.md` ("Version & changelog interactions") there is no Profiler page version bump — repo CHANGELOG entry + repo version bump on the push commit per the normal Pre-Commit Checklist. Follow the repo's CLAUDE.md session protocols and push to the session's designated claude/* branch. Done looks like: every registry entry's lastUpdated equals its profile's lastUpdated, committed and pushed so the auto-merge workflow deploys it."
+
+### Fixed
+
+- `profiler-data/profiler-companies.json` — re-synced `lastUpdated` for **59 of 88** registry entries to match their `<slug>.profile.json` values (all landed on `2026-08-22`; stale values were `2026-08-09`, `2026-08-10`, `2026-08-14`, and `2026-08-21`). The 2026-08-22 dossier-mining pass had bumped every profile's `lastUpdated` without updating the registry, so the roster cards and "as of" lines understated freshness for two-thirds of the covered set. 29 entries were already in sync; every registry slug had a matching profile file. Data-only change — no Profiler page version bump per `.claude/rules/profiler-app.md`
+
+## [v03.52r] — 2026-08-29 02:50:58 AM EST — [786e5cf](https://github.com/LightAISolutions/Sales/commit/786e5cf1ddffa7f1f113c04f354a26bac906e3b8)
+
+> **Prompt:** "Picking up from my "Profiler app sign-in error" session, (see attached screenshot) I want each dossier's "Background" tab to be renamed to "Summary" and I want each dossier's Summary to contain more information. On the surface, my purpose for creating the Profiler app is just to get some high level stats of major players in the US BESS/AIDC market and essentially create a Sparknotes-like portfolio for myself and other users to quickly read and understand the target company. However, in the grand scheme of my app ecosystem, I am relying on the Profiler app to have the most factual information from 1st party sources and be able to cross-analyze major players of different aspects of the US BESS/AIDC industry in order to better understand the market as a whole, culminating in very high-value industry reports (macro, competitive analysis, risk analysis, opportunities, etc.). Thus, I would like to improve each dossier's Summary tab (and other tabs if possible) to show more high-value information, ideally enough that would make the user look through the other tabs for deeper understanding. Recommend me some ways to improve my Profiler app as a whole to approve."
+
+### Changed
+
+- `Profiler.html` (v01.44w) — renamed the dossier's opening tab from "Background" to "Summary" under the active `intel-briefing` display style (`OV_SEC_LABELS['intel-briefing'].snapshot`). The section heading, tab chip, deep-link labels, and Word/PDF export chapter list all follow automatically via `ovSecLabel()`; the other four styles keep their own idiomatic labels ("Snapshot", "1. Executive Summary", "Company Overview", "The Big Picture"), and the `BACKGROUND:` prose signpost inside dossier `summary` fields is untouched (it is authored prose, split by `ovAppendSummary()` as before)
+
+### Added
+
+- `Profiler.html` (v01.44w) — Summary signal board: `ovSignalBoard()` + `ovTrunc()` in the PROJECT JS block and `.ov-sigs`/`.ov-sig` styles in the PROJECT CSS block. Six clickable cards render under the BLUF prose on the opening tab, each derived entirely from the already-loaded profile JSON: lead key judgment (+ judgment count), financial beat/miss/in-line tally across all reported periods, newest recent development (schema orders newest first), first three product lines + spec-table count, top listed decision maker (+ count), and source count with newest publication date + dossier version/compile date. Each card calls `ovShowTab()` so the reader lands on the full tab. Data-only dossier revisions need no upkeep — the board recomputes from whatever the profile holds, and dossiers missing a section simply render fewer cards
+
+## [v03.51r] — 2026-08-29 01:30:10 AM EST — [545c6a4](https://github.com/LightAISolutions/Sales/commit/545c6a4c5677949472a384f764edd1cb22788be6)
+
+> **Prompt:** "7am ET is fine. I am currently testing the app so there will be weekend editions. Keep my scheduler on the Mon-Fri 7am ET schedule, but don't just ship out existing Editions. Run a new intake for each Edition 1 hour before it's scheduled to be shipped out. That should replace any same-day versions I may have created during my tests right? On every Monday 6am ET, you should run a new intake for news over the last 72 hours - I assume that will result in a similar number of relevant articles as these news sources shouldn't be working over the weekend most of the time. Then, Tue-Fri 6am ET, run a new intake for news over the last 24 hours instead of 72 to cover the entire week."
+
+### Fixed
+
+`Scraper.gs` (v01.83g)
+
+- **The 06:00 scheduled build skipped any edition that had already been built that day — including by hand.** `scDigestMorningRun` filtered on `ed.lastBuilt !== clock.date` and `scEditionDue_` repeated it, and `lastBuilt` is written by *every* build. So a manual "Run intake now" at 02:00 made the edition look already-built at 06:00; the scheduled run passed it over and 07:00 shipped the hand-built copy. That is the precise opposite of what the developer asked for, and it is what their current testing would have produced every weekday morning
+- **The scheduled build is now tracked separately from `lastBuilt`.** `scSchedBuiltToday_` / `scMarkSchedBuilt_` answer the narrower question the schedule actually needs — "has *today's scheduled* build run for this edition" — while `lastBuilt` keeps its original job of stopping the hourly tick rebuilding all day. The marker is written **only on completion**, in all three paths that can finish a build, so a run cut short by the execution budget resumes on its continuation trigger and is retried rather than silently counted as done
+- **A stale row can no longer ship while its replacement is being built.** The 06:00 build is chunked across continuation triggers and can still be working at 07:00; `scDigestBuildInFlight_` makes the send pass hold that edition instead of mailing the copy the rebuild exists to discard. Held, not stamped, so the pass after the finished build delivers it
+
+### Changed
+
+`Scraper.html` (v01.66w)
+
+- The Schedule panel stated only the send time. It now states the build hour, that the build replaces the day's existing edition, and the 72h/24h split — the half of the schedule the developer had to ask about because the UI never said it
+
+### Notes
+
+- **Already correct and left alone, verified rather than assumed:** `SCRAPER_DIGEST_BUILD_HOUR` is 6, `SCRAPER_DIGEST_SEND_HOUR` is 7, and `scEditionWindowH_` already returns 72 on `isoDay === 1` and 24 otherwise. `t24.js` now pins all of it, including that the two hours are exactly one apart, so the request is a standing test rather than a claim in a changelog
+- **Answering the developer's question precisely:** yes for same-day — `scDigestDropSameDayRows_` is keyed on (edition, date), so Monday's 06:00 build deletes and replaces any Monday-dated edition. Their **weekend** test editions are a different case: they persist in the sheet but can never be emailed, because delivery filters to rows dated `clock.date` and the weekend guard added in v03.50r refuses the day outright. Both are asserted
+- **One deliberate non-change:** `scEditionWindowH_` honours an explicit per-edition `windowH` ahead of the Monday rule. That is a setting, not a bug, so it stands — but it means an edition with a stored window would not get 72h on a Monday. Pinned by test and flagged to the developer rather than quietly overridden
+- **639 assertions pass** across 24 suites; new `t24.js` (32) covers the windows, the marker, the interrupted-build retry, and the in-flight delivery hold
+- `Scraperhtml.changelog.md` was at 50/50 and rotated — the 2026-08-04 group, twelve sections, to the archive with SHA enrichment
+
+## [v03.50r] — 2026-08-29 01:19:10 AM EST — [a548c32](https://github.com/LightAISolutions/Sales/commit/a548c3271ff12dd8170ca8586e9fc7ee013f9782)
+
+> **Prompt:** "I followed your call and everything looks good now. However, when I went to the Calendar (see screenshot), I noticed that it's showing a scheduled email out on Saturday when it should skip weekends. Evaluate the current scheduler and make sure it is set up to properly identify which editions should be sent out to which subscribers on weekdays (Mon-Fri) at 7am PST. It should also accurately sync with this Calendar tab."
+
+### Fixed
+
+`Scraper.gs` (v01.82g)
+
+- **`scDigestDeliverPending_` — the only function that can put an edition in a subscriber's inbox — checked the hour and never the day.** `SCRAPER_DIGEST_RUN_DAYS` was applied by `scDigestMorningRun` and `scDigestDeliveryRun`, but `scSchedulerTick` calls the sender directly as an hourly catch-up with no day check of its own. The developer built three editions by hand at ~00:30 on a Saturday; they were dated 2026-08-29 and undelivered, and at 07:00 that morning the tick would have mailed all three
+- **The guard now lives in the sender, not in three callers.** Three places each having to remember the same rule is how one of them forgets — and one of them had. The callers keep their checks (they gate expensive build work, not just the send), but nothing depends on them for correctness any more. A weekend edition stays pending and is still deliverable when the weekday returns, rather than being stamped and lost
+- **A comment I nearly shipped was wrong and was corrected before commit.** The first draft said `force` exists so "email me latest" can send on a Saturday. No caller passes `force`, and `emailLatestDigest` sends through `MailApp` directly without ever reaching this function. The comment now says what is actually true
+- **The timezone is one constant.** `scDigestClock_` formatted against a hardcoded `'America/New_York'` literal; it now reads `SCRAPER_DIGEST_TZ`, which already existed for the trigger installs. A second constant was nearly introduced alongside it — two names for one timezone is precisely the drift this was meant to end — so it was consolidated onto the existing one, with `SCRAPER_DIGEST_TZ_LABEL` for display
+
+### Changed
+
+`Scraper.html` (v01.65w)
+
+- **The Calendar was not lying, but it was answering a different question.** It plots editions that *exist* on a date — its own tooltip said "N editions" / "nothing built". The three Saturday pips were three manual builds, not three scheduled sends. It now distinguishes them: a filled pip is an edition that was **emailed**, a hollow one was built and never sent, and `wdNsDelivered_` treats the marker strings (`no-recipients`, `no-html`, `superseded`) as not-sent, so a superseded rebuild is not drawn as though it went out
+- Weekend cells are hatched and labelled "weekend, no scheduled send"; each day's tooltip separates built from emailed; a key under the grid explains the two pip styles. Built with `createElement`/`textContent`
+
+### Notes
+
+- **607 assertions pass** across 23 suites. New `t23.js` (39) walks all seven days at the send hour, pins the developer's exact case (built 00:30 Saturday, tick at 07:00 → nothing mailed, row left pending, still deliverable Monday), confirms the hour gate still binds on weekdays and that the weekend beats a late hour, and checks `force` bypasses both
+- **Rendered and measured**, not just asserted: 10 hatched weekend cells for August 2026, 4 hollow pips (three Saturday builds plus one superseded Friday edition), 3 filled, Saturday reading `weekend, no scheduled send · 3 editions built · none emailed` and Friday `2 editions built · 1 emailed`. The harness does not carry the app's edition-colour classes, so pip *colour* was not exercised — only the filled/hollow distinction
+- **⚠️ Unresolved and deliberately not guessed: the developer wrote "7am PST"; the app has always been 7:00 AM ET** and its Schedule panel says so. That is a three-hour difference. The send hour is unchanged at 7 ET; centralizing the timezone makes the switch a one-line edit once the developer confirms which they want
+
+## [v03.49r] — 2026-08-29 12:37:08 AM EST — [c7b67d8](https://github.com/LightAISolutions/Sales/commit/c7b67d81c03eee10713e01e654d9aeb92942b890)
+
+> **Prompt:** "I just rebuilt BESS and the Jackery article is still there."
+
+### Fixed
+
+`Scraper.gs` (v01.81g)
+
+- **v03.48r could not have worked, and the reason was in the comment directly above the code I edited.** Segment terms are not read from the source file at scoring time — they are read from the developer's **Interests sheet**. `scSyncInterests_` rewrites a row's terms only when the seed's `tv` is **greater than** the `seed-terms-vN` marker in that row's Notes, a mechanism that exists precisely so improved vocabulary can ship without clobbering the developer's own edits. `seg-bess-residential` was left at `tv: 1` and `seg-consumer` had no `tv` at all (defaults to 1). Their rows carry `seed-terms-v1`, so `1 < 1` is false: the sync read those rows and correctly concluded nothing needed doing. **The deploy was fine; the data never moved.** `seg-bess-utility`, `seg-ev` and `seg-ev-charging` are already at `tv: 2` — the convention was established and I did not follow it
+- Both bumped to `tv: 2`. `seg-bess-residential` also carries an in-code note that `tv` must move whenever its terms do
+
+### Added
+
+- **`t22.js` — a guard that makes this mistake unshippable.** It parses `SCRAPER_SEGMENT_SEEDS` out of the source, hashes each seed's terms, and locks that hash against the seed's `tv`. Change terms without bumping `tv` and the suite fails naming the seed. **Verified by injecting the exact v03.48r mistake** — added a term to `seg-bess-residential` leaving `tv` alone, watched the suite fail with `DRIFTED: seg-bess-residential`, then restored and watched it pass
+- The suite also simulates the sync's upgrade rule directly, pinning the four cases that matter: a `v1` row with `tv: 1` does **not** upgrade (the bug), a `v1` row with `tv: 2` does (the fix), an unversioned row always does, and a row whose Notes say anything else (e.g. `custom`) never does
+
+`.claude/rules/scraper-sources.md`
+
+- **A durable rule, because the test corpus is not committed and cannot protect a future session.** New section "Editing seed terms: bump `tv`, or the change never ships", written as a blocking gate on any edit to a seed's `terms:` array, with the three-step procedure (bump `tv`; tell the developer to Sync now *before* rebuilding, since the build path does not sync; say plainly that a customised row will never receive the new terms). The file is path-scoped to `Scraper.gs` and `Scraper.html`, so it auto-injects exactly when it is needed. Retitled to "Scraper Data Invariants" since it now holds two
+
+### Notes
+
+- **568 assertions pass** across 22 suites
+- Three defects of my own in the new suite, all fixed before it was trusted: a seed parser whose regex matched nothing (the suite would have asserted vacuously against an empty list, so it now also asserts the parser returned something); a simulation returning `null` rather than `false` where the real code relies on `if` coercion; and an assertion ending in `|| true`, which makes it pass unconditionally — the banned pattern, removed rather than repaired
+- **The developer must press "Sync now" before rebuilding.** The hourly tick calls `scSyncInterests_(false)`, which is throttled; the build path does not sync at all. Without it the sheet still holds `seed-terms-v1` and the rebuild behaves exactly as before — which is the same failure, one layer out
+
+## [v03.48r] — 2026-08-29 12:17:16 AM EST — [49032e5](https://github.com/LightAISolutions/Sales/commit/49032e5c368453133ed768879686fea940e72cd0)
+
+> **Prompt:** "A few things: • First screenshot: The Jackery article is talking about consumer level electronics, which should be filtered out by Tune. • Second screenshot: There are two identical articles on the same digest, both from Google News (backstop). I haven't seen any actually relevant articles from Google News yet (out of a small sample size of maybe 4-5 articles), so I would devalue articles from Google News relative to the listed sources in Tune. Fix both problems."
+
+### Fixed
+
+`Scraper.gs` (v01.80g)
+
+- **Why Tune did not catch the Jackery story.** The segment gate only fires when an article hits a **disabled** segment. `seg-consumer`'s terms were `smartphone, consumer electronics, appliance, laptop, tablet, wearable`; `seg-bess-residential`'s were `home battery, residential storage, residential battery, powerwall, home energy storage, rooftop storage`. A portable power station on an Amazon Labor Day sale matches none of them — so `excludedSegments` was empty, the gate never engaged, and the generic parent `seg-bess` (`energy storage`, `storage system`, `megawatt-hour`) matched and handed it segment evidence. The AI's own analysis said readers would "find zero actionable intelligence here"; the rubric had already admitted it by then
+- **Fixed by vocabulary, not by a new mechanism.** The portable/consumer-storage terms went into **`seg-bess-residential`** specifically because it is a **child of `seg-bess`** — a hit there demotes the parent under the existing specificity-beats-breadth rule, `independentOn` falls to 0, `gated` becomes true, and company, topic and clickBoost are all zeroed. Putting the same terms in the parentless `seg-consumer` would have left the parent's hit independent and gated nothing. `seg-consumer` was broadened too, for the non-storage gadget and retail-sale case
+- **Measured on the developer's actual headline**, with a model carrying the company and topic evidence that would have carried it in: **81 → 0**. Four genuine trade headlines were checked against the new terms and none is gated, including a utility bill *discount* and a combined-cycle *power station* — every retail marker added is a multi-word phrase a trade story would not write
+- **Two identical articles in one edition.** Intake dedupes on URL, and Google News issues a distinct URL per republication of a syndicated story, so the same headline arrived twice and both printed. **The obvious fix would have broken something:** deduping by title at ingest kills corroboration, which groups by title signature to reward a story two or more sources carried — dedupe first and no group can ever have two members. So the collapse happens in `scDigestItems_` **after** the boost is applied: both rows stay in the intake, the reader sees one, and because the list is score-sorted it is the higher-scoring copy — usually the roster source rather than the penalised backstop one
+- The collapse matches the **exact** normalized title, not the 8-word signature corroboration uses. That signature is deliberately loose because a false grouping there only nudges a score; here a false grouping deletes a story
+
+### Changed
+
+`Scraper.gs` (v01.80g)
+
+- `SCRAPER_DIGEST_BACKSTOP_PENALTY` **0.85 → 0.70**. A backstop item now needs roughly 79 raw to clear the bar where 65 sufficed. **Stated plainly because it matters:** this does not suppress the Oracle-class item in the developer's second screenshot. A covered-company match is worth 40 evidence on its own, so a story genuinely about one of their companies still clears the bar after the penalty — that is the backstop working as designed, and the weight only decides how much *else* rides in beside it
+
+### Notes
+
+- **551 assertions pass** across 21 suites; new `t21.js` (29) covers the gate, the false-positive guards, the dedupe (including that corroboration still fires first), and the penalty
+- **Two fixture errors of my own, both fixed in the test.** A company entry with no `weight` scores zero, because `company = w.company * min(1, bestCoWeight)` — so the before/after case scored 36 and never demonstrated what it claimed. Then, with a weight, it still failed: `scLoadInterestModel_` lowercases every term on the way in and `scTermsHit_` scans lowercased text, so a hand-built `'Jackery'` could never match. The fixture now mirrors the loader, and the before/after reads 81 → 0
+- **Both changelogs were at their caps and both rotated**: `CHANGELOG.md` 100 → 94 (the 2026-08-16 group, six sections) and `Scrapergs.changelog.md` 50 → 45 (2026-08-17, five). The rotation asserts a single date group, an exact SHA-link count, and that the trailing branding line is only treated as an anchor when it falls after the last version header. It **refused** the GAS rotation on the first attempt rather than writing wrong links — a GAS version never appears alone in a commit subject, so the SHA resolves through the repo version each header carries as a cross-reference
+
 ## [v03.47r] — 2026-08-28 11:43:43 PM EST — [4647ef5](https://github.com/LightAISolutions/Sales/commit/4647ef57ffd96e7934ab8a459f736705000f5efd)
 
 > **Prompt:** "I rebuilt BESS and it came back with 13 relevant articles, which is close to the sweet spot I'm looking for (assuming they are truly relevant). However, i pressed "Why thin?" just to see what happens and it stayed "Reading this edition's intake" for about 10 minutes. What happened?"

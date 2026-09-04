@@ -1,0 +1,451 @@
+{
+ "schemaVersion": 2,
+ "slug": "powell-industries",
+ "title": "Powell Industries — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "what-a-lineup-actually-is",
+   "title": "What a switchgear lineup actually is: cells, buses and three positions",
+   "kind": "prose",
+   "read": "6 min",
+   "intro": "Other guides in this library have taught how a breaker interrupts current and what a protection relay decides. Neither of them says what the room-sized object the breaker lives inside actually is, and that object — not the breaker — is what gets specified, priced, drawn, approved and shipped. Start there.",
+   "ps": [
+    "A {{switchgear}} lineup is a row of vertical steel sections bolted together, sharing one horizontal **main bus** that runs the length of the row behind the equipment. Each section is one *cell*, and a cell is subdivided by grounded steel barriers into separate compartments: the breaker sits in one, the cable or bus terminations in another, the main bus passes through a third, and the relays, meters and control wiring live in a low-voltage compartment on the door. The barriers are the design. They are what stops a fault inside one compartment from becoming a fault inside all of them.",
+    "**{{Metal-clad switchgear}}** is the strictest version of that idea, and it is a defined term, not a marketing one. IEEE C37.20.2 reserves it for gear with {{draw-out breaker}}s, grounded metal barriers between every major part, insulated primary bus, and automatic shutters that drop over the live stabs the moment a breaker is withdrawn. Metal-*enclosed* gear is a looser class — it may have fixed breakers and fewer barriers. On a drawing the two look similar; in an electrical room during maintenance they are not remotely the same product.",
+    "**The three positions are the reason for the whole architecture.** A draw-out breaker racks along rails between *connected* (main contacts engaged, carrying load), *test* (main contacts separated, control power still live so the breaker can be operated and its logic proven), and *disconnected* (fully withdrawn, shutters closed over the live stabs). That sequence is what allows a breaker to be exercised, tested or swapped while the bus behind it stays energised — which in a data centre is the difference between a maintenance window and an outage.",
+    "**Three numbers describe any lineup**, and a specification that is missing one of them is not yet a specification. The **voltage class** (5 kV, 15 kV, 27 kV, 38 kV) sets the insulation and the physical clearances. The **continuous current rating** of the main bus (commonly 1,200 A to 5,000 A and beyond) sets the copper cross-section and how much heat the enclosure must shed. And the **{{withstand rating}}** — how much fault current the assembly can survive without coming apart — sets the bus bracing, because the magnetic force trying to tear two parallel conductors apart goes with the *square* of the current flowing in them. Raising a lineup's fault rating is a structural redesign, not a paperwork change.",
+    "**Why any of this reaches a buyer's desk:** breakers are catalogue items, but a lineup is engineered to order. The one-line diagram, the cell arrangement, the relay schedule and the interlocking are drawn for one project, submitted, marked up, re-submitted and approved before a single piece of steel is cut. That approval cycle — not the factory — is usually the longest clock on the order, and it is the one the buyer actually controls."
+   ]
+  },
+  {
+   "id": "one-line-above-the-switchgear",
+   "title": "Main-tie-main: reading the one-line above the switchgear",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "Why a campus buys at {{medium voltage}} and steps down is settled elsewhere in this library — it is current, and copper. What is not taught anywhere is the shape the medium-voltage bus is arranged in, which is where the redundancy claim on a marketing sheet is either true or isn't. Two arrangements cover most of what gets built.",
+   "cards": [
+    {
+     "t": "Radial — one source, one path",
+     "meta": "A single service feeds a single bus feeding everything below it",
+     "adv": [
+      "Cheapest, simplest, and the easiest to protect: current only ever flows one way, so {{selective coordination}} is a straight line down the page",
+      "Fewest breakers, smallest lineup, shortest lead time",
+      "Perfectly appropriate below the critical bus, where the redundancy is provided by having two of everything rather than by the topology"
+     ],
+     "dis": [
+      "Any element between the source and the load is a single point of failure, including the transformer and the bus itself",
+      "Nothing can be taken out of service for maintenance without taking the load with it — the opposite of {{concurrent maintainability}}",
+      "It is what a low bid quietly becomes when the redundancy requirement is written loosely"
+     ]
+    },
+    {
+     "t": "Main-tie-main — two sources, one bus in two halves",
+     "meta": "Two incoming services, each feeding half the bus, with a normally-open tie breaker between the halves",
+     "adv": [
+      "Lose one source and the tie closes; the survivor carries everything. One transformer or one utility feed can also be taken out for maintenance with the load still up",
+      "It is the standard way a campus takes two utility feeds, and it is what most 'dual-fed' claims actually mean",
+      "The two halves can be operated independently, so a fault on one half need not disturb the other"
+     ],
+     "dis": [
+      "**Each source must be sized for the entire load**, because after the tie closes it is carrying all of it. Two half-sized feeds are not a main-tie-main, whatever the drawing is labelled",
+      "Closing the tie changes the available fault current on the surviving half, so the {{coordination study}} has to be run for both the normal and the tied configuration — and the relay settings must be correct in both",
+      "Closed-transition tie schemes briefly parallel two utility sources, which the utility may not permit and which raises fault duty further"
+     ]
+    }
+   ],
+   "note": "The reading skill: on any one-line, find the tie, ask whether it is normally open or closed, and then ask what each source is rated for. A drawing with two incoming lines is not evidence of redundancy until those two questions are answered."
+  },
+  {
+   "id": "arc-flash",
+   "title": "Arc flash: the hazard that arc-resistant construction answers",
+   "kind": "prose",
+   "read": "7 min",
+   "intro": "A fault through metal is an electrical problem. A fault through air is a physical one, and it is the reason medium-voltage rooms have a safety regime that low-voltage panelboards do not. This section is about the second kind, and about the three completely different ways the industry answers it.",
+   "ps": [
+    "**An arcing fault is not a short circuit.** In a bolted short, current runs through metal, the protection sees an unambiguous fault and clears it. In an arcing fault the current jumps a gap in air, and the air becomes a plasma at something like 20,000°C — several times the surface of the sun. Copper in that plasma vaporises and expands by a factor in the thousands, so the event is simultaneously a thermal burn, a pressure blast, a shrapnel launcher and an acoustic injury. It is also *less* obvious to a protection relay than a bolted fault, because arc current is lower and unstable.",
+    "**{{Incident energy}} is the number that governs everything downstream.** It is the thermal energy an arc would deliver to someone standing at a stated working distance, in calories per square centimetre, and {{IEEE 1584}} is the method for calculating it. The inputs are the available fault current, the gap between conductors, the enclosure geometry — and the **clearing time**. That last one is the only term an engineer can readily change, and it enters roughly linearly: halve the time the protection takes to clear, and you roughly halve the energy. Arc-flash mitigation is therefore, most of the time, a protection-settings problem wearing safety clothing.",
+    "**Three different answers to the same hazard, and they are not substitutes.** {{NFPA 70E}} is the *procedural* answer: justify energised work, assess the risk, label every piece of gear with its incident energy, and wear clothing rated above that number. The *settings* answer is a maintenance-mode switch — an energy-reducing function that temporarily makes the upstream protection much faster (and deliberately less selective) while someone is at the door, then puts it back. And the *equipment* answer is {{arc-resistant switchgear}}.",
+    "**What arc-resistant construction actually does — and does not do.** It does not stop the arc. It is type-tested, with an arc deliberately initiated inside the cell, to prove that the pressure and the hot gas go somewhere other than into the person standing at the front: reinforced doors and latches that stay shut, a relief flap that opens upward, and usually a plenum or duct that takes the exhaust out of the room. IEEE C37.20.7 grades the result by which sides are protected — front only, or all four sides — and, critically, by whether the protection still holds with a low-voltage instrument door open, which is the state a technician is most often in. The letter suffixes on an accessibility type are not decoration; they describe the exact circumstance the gear was proven in.",
+    "**The commercial reading.** Arc-resistant construction costs more steel, more testing and more room — the exhaust has to go somewhere, which is a building decision, not a switchgear decision. What the buyer is purchasing is not a lower probability of a fault; it is a much better outcome conditional on one. That trade is easy to justify where the equipment is operated by people rather than left alone, which is precisely the profile of a data-centre campus that is energising new halls for years while the first ones run."
+   ]
+  },
+  {
+   "id": "how-a-protection-study-is-built",
+   "title": "How a protection study is actually built — and why it goes stale",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Another guide in this library teaches {{selective coordination}} as an idea: one fault should trip one breaker. This is the deliverable that makes the idea real. It is three studies in a fixed order, each feeding the next, and its output is not a report — it is a set of numbers typed into relays and a label stuck on every door.",
+   "cols": [
+    "Stage",
+    "What is modelled",
+    "What comes out",
+    "What makes it wrong later"
+   ],
+   "rows": [
+    [
+     "**1 · {{Short-circuit study}}**",
+     "Every source that can push current into a fault: the utility's contribution at the service point, each on-site generator, and — for the first few cycles — every large motor, which briefly acts as a generator as it spins down. Then every cable, bus and transformer impedance between the sources and each point on the one-line",
+     "The available fault current at every bus, in kA. This is the number every breaker's interrupting rating and every assembly's {{withstand rating}} must exceed",
+     "A stronger utility service, an added generator, or a transformer swapped for a larger one with lower impedance — all of which raise available fault current and can silently take existing gear past its rating"
+    ],
+    [
+     "**2 · {{Coordination study}}**",
+     "The protective devices in series between each load and the source, plotted as {{time-current curve}}s on one log-log sheet — relay curve shape, pickup, time dial, instantaneous element, plus the fuse and breaker curves below them. {{Current transformer}} ratios are part of the model, because a relay only sees what its CT gives it",
+     "Relay settings and breaker trip-unit settings, chosen so each device clears about 0.2–0.3 s before the one upstream of it across the whole current range. That margin is not tidiness — it covers breaker operating time, relay overtravel and measurement error",
+     "Any load or source change that shifts the curves; a CT replaced with a different ratio; a device set 'temporarily' during commissioning and never put back. Curves also converge at high fault current, so a scheme that coordinates at moderate currents can lose selectivity exactly when it matters most"
+    ],
+    [
+     "**3 · Arc-flash study ({{IEEE 1584}})**",
+     "The outputs of both studies above: available fault current from stage 1, and clearing time from the settings chosen in stage 2, applied to each enclosure's geometry and working distance",
+     "{{Incident energy}} in cal/cm² at every point, the arc-flash boundary, and the printed label that goes on the door telling a worker what to wear",
+     "It inherits every error from the two stages above, and it is the one most visibly out of date — a label carries a date, and a five-year-old label on a system that has grown is an assertion nobody has re-checked"
+    ],
+    [
+     "**The property that matters most**",
+     "The study is true only for the one-line diagram it was built against",
+     "A living document, versioned with the electrical system, not a one-time deliverable filed at handover",
+     "**This is the failure mode.** Add a tap, energise a new hall, bring a second generator online, or close a tie that is normally open — and the model the settings were derived from no longer describes the plant. Nothing alarms. The system is simply mis-coordinated until someone re-runs it"
+    ]
+   ],
+   "note": "The practical consequence for a campus that energises in phases: the protection study is not finished at first energisation. Every phase that changes the sources, the topology or the load is a re-study, and whoever owns that obligation should be named in a contract rather than assumed."
+  },
+  {
+   "id": "buying-the-room",
+   "title": "The e-house: buying the power room instead of building it",
+   "kind": "prose",
+   "read": "5 min",
+   "intro": "The last section of this guide before the failure map is about a commercial decision that looks like a logistics decision. It is the one place where a switchgear manufacturer stops selling equipment and starts selling schedule.",
+   "ps": [
+    "An **{{e-house}}** is the power room, built and wired in a factory and shipped to site as a walk-in steel enclosure: switchgear lineups, transformers, protection and control, station battery, lighting, small-power, fire detection and its own HVAC, all installed and interconnected before it leaves the works. On site it is set on a foundation, and what remains is the incoming and outgoing cable, the earthing and the commissioning.",
+    "**What actually moves is labour and risk.** Skilled electrical field labour — the scarcest resource on a large campus, and the one whose productivity is worst because it is weather-exposed, congested and sequenced behind other trades — becomes factory labour under a roof with overhead cranes and fixed workstations. Work that would have been done at the end of the schedule, when every delay upstream has already compounded, is done in parallel with civil work instead.",
+    "**What is bought back is proven at the {{factory acceptance test}}.** The lineup is energised at the works with the customer present: relay settings loaded and verified by secondary injection, interlocks exercised, breakers racked through all three positions, control logic walked through every sequence the specification asks for. Finding a reversed CT polarity or a wrong interlock at the factory costs an afternoon; finding it during site commissioning costs a schedule.",
+    "**What it cannot buy.** A FAT proves what a factory can simulate. It cannot prove the plant — the interaction between this gear, the generators that will feed it, the UPS downstream of it and the building management system that thinks it knows what an emergency looks like. That is integrated testing under real load on site, and it remains the only thing that proves a power system. A programme that treats a successful FAT as commissioning has skipped the test that actually matters.",
+    "**And the constraints are physical.** An e-house is heavy and large: it must be routable from the works to the site, permitted for transport, and craned into position, which means the access route, the crane pad and the foundation are design inputs from the first week. The design also has to be frozen far earlier than a field-built room, because a change after fabrication starts is a factory change order rather than a redline on site. Prefabrication trades flexibility for certainty, and a buyer who wants both will get neither."
+   ]
+  },
+  {
+   "id": "kilovolts-and-kiloamps",
+   "title": "The ladder: what the ratings actually span",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "kV (maximum design voltage; interrupting rating named per row)",
+   "intro": "One vendor's catalogue plotted on the axis that matters most in a {{switchgear}} room — voltage class. Read the sub-lines for the two ratings that travel with it: continuous current, which sets the copper, and interrupting rating, which sets the bracing. This is the span a medium-voltage specialist covers, and where it stops.",
+   "items": [
+    {
+     "label": "PowlVac-ND, 5 kV narrow",
+     "sub": "26 in wide, 1200-2000 A at 36-50 kA — the retrofit width, for replacing an obsolete lineup in an existing room",
+     "v": 4.76
+    },
+    {
+     "label": "PowlVac / PowlVac-AR, 5 kV",
+     "sub": "1200-4000 A at 36, 50 or 63 kA; {{arc-resistant switchgear}} to Type 2C at 40 kA for 0.5 s",
+     "v": 4.76
+    },
+    {
+     "label": "Power/Vac, 8.25 kV",
+     "sub": "1200-4000 A at 40-63 kA — the ex-GE line, 11-gauge steel segregation",
+     "v": 8.25
+    },
+    {
+     "label": "PowlGear ME, 15 kV metal-enclosed",
+     "sub": "1200 A at 25 kA, 95 kV BIL, 26-inch cubicle — reduced footprint, not {{metal-clad switchgear}}",
+     "v": 15.0
+    },
+    {
+     "label": "PowlVac / PowlVac-AR, 15 kV",
+     "sub": "1200-4000 A at 25, 36, 50 or 63 kA; main bus to 174 kA peak for generator duty",
+     "v": 15.0
+    },
+    {
+     "label": "PowlVac-ND, 27/29.8 kV",
+     "sub": "36 in wide, 1200-2000 A at 25 kA — Type 2B, with Type 2C available",
+     "v": 29.8
+    },
+    {
+     "label": "PowlVac 38 / 38-AR",
+     "sub": "1200-3000 A at 25-40 kAIC; KEMA-qualified at 40 kA; Type 2C at 31.5 kA for 0.5 s, 1200 A only",
+     "v": 38.0
+    },
+    {
+     "label": "Load interrupter switchgear",
+     "sub": "Fused or non-fused metal-enclosed, 5 kV to 38 kV — a switch, not a breaker",
+     "v": 38.0
+    },
+    {
+     "label": "Cable bus",
+     "sub": "Up to 5,000 A — the conductor system, not the gear",
+     "v": 38.0
+    },
+    {
+     "label": "Isolated phase bus duct",
+     "sub": "600 A to 42 kA at 110-150 kV BIL — generator to transformer, the heaviest current path on a site",
+     "v": 38.0
+    }
+   ],
+   "note": "Where the ladder stops is as informative as where it runs. This is a medium-voltage house: nothing here reaches transmission voltage, and there is no gas-insulated switchgear at 145 kV and above. A campus taking utility service at 115 kV or higher buys that tier from someone else and buys this one here."
+  },
+  {
+   "id": "where-powells-products-slot-in",
+   "title": "Where these products slot into the power room",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Trace the path from the utility service to a hall and note which rows this vendor fills. The right-hand column names what is genuinely distinctive rather than what is merely present — which is the column that decides whether a supplier is being compared on price or on something else.",
+   "cols": [
+    "Layer of the plant",
+    "The product",
+    "What is distinctive about it here"
+   ],
+   "rows": [
+    [
+     "Incoming medium-voltage service",
+     "{{Metal-clad switchgear}} at 5, 15, 27 and 38 kV in standard and arc-resistant construction",
+     "{{Draw-out breaker}}s with grounded barriers between every compartment and shutters over the live stabs — this is the strict IEEE C37.20.2 class, not the looser metal-enclosed one"
+    ],
+    [
+     "Protecting the people who operate it",
+     "{{Arc-resistant switchgear}} to IEEE accessibility Type 2C, 40 kA for 0.5 seconds at 5 and 15 kV",
+     "Type 2C holds with the low-voltage instrument door open — the state a technician is actually in — and segregates the main bus into a full-height bolt-on component rather than leaving it in the rear cell"
+    ],
+    [
+     "Racking a breaker without a permit-level event",
+     "On-Board Racking from a digital HMI",
+     "The operator stands outside the arc-flash zone with no external racking device to fetch, connect or drop. The hazard is engineered out of the task rather than dressed for"
+    ],
+    [
+     "Generator connection",
+     "Main bus rated to 174 kA peak; 05PV63GCB and 15PV63GCB generator breakers at 173 kA crest close and latch",
+     "Generator duty is a different fault-current problem from utility duty, and most medium-voltage lineups are not braced for it. On a behind-the-meter campus this row is the whole point"
+    ],
+    [
+     "Stepping down to the building",
+     "FlexGear low-voltage switchgear, main bus to 5000 A braced to 100 kAIC",
+     "Built as a universal platform around Eaton Magnum DS, Siemens WL or Schneider Masterpact MTZ elements — the vendor sells the assembly and the engineering, not the breaker"
+    ],
+    [
+     "Motor loads",
+     "FlexTrol medium-voltage motor control and MVMCC-AR at 2300, 4160 and 7200 V",
+     "MVMCC-AR close-couples to the switchgear with no transition section, so the arc-resistant rating is continuous across the lineup instead of stopping at a joint"
+    ],
+    [
+     "Getting power between rooms",
+     "Cable bus to 38 kV and 5,000 A; non-segregated, segregated and isolated phase bus duct",
+     "{{Busway}} and bus duct are the alternative to hundreds of parallel cables — fewer terminations, and terminations are where installations fail"
+    ],
+    [
+     "The room itself",
+     "Power Control Rooms since 1968, PCR-R {{e-house}}s, custom modules built at a 64-acre Houston Ship Channel facility",
+     "Shipping-channel frontage is what makes a multi-story module transportable at all. This row is why the vendor competes on schedule"
+    ],
+    [
+     "Proving it before it ships",
+     "{{Factory acceptance test}} to UL, IEEE, CSA and NEMA standards",
+     "What a FAT proves is the lineup. What it cannot prove is the plant — that still needs integrated site testing under load"
+    ],
+    [
+     "Keeping it alive for forty years",
+     "Roll-in replacement breakers for obsolete air-magnetic designs, retrofit, retrofill, {{coordination study}} and relay-settings work, SCADA",
+     "The replacement-breaker business competes for the second half of an installed base's life against whoever originally supplied it — an annuity on somebody else's sale"
+    ]
+   ],
+   "note": "The row this vendor does not fill is as important as the ones it does: there is no UPS, no transformer above distribution class and no gas-insulated switchgear at transmission voltage. A campus buys those elsewhere, which is why the seams between suppliers — and who owns the {{coordination study}} across them — matter more here than in a single-vendor power room."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**Miscoordination: a downstream fault opens a main.** This is the medium-voltage room's signature failure, and it is almost never a broken device. It is a {{coordination study}} whose margins were tight, or a set of {{time-current curve}}s that separate nicely at moderate current and converge at the fault level that actually occurs. The symptom is disproportionate: one rack-level or feeder-level event, and a whole hall goes dark. Owned by the electrical contractor and the engineer who set the relays.",
+    "**Relay settings never re-checked after a load change.** Protection is a networked application now, and it drifts like software. A campus energises a second hall, adds a generator, closes a normally-open tie, or replaces a transformer with a lower-impedance one — and every setting derived from the old model is now approximately right rather than right. Nothing alarms. The gear is mis-coordinated, and the arc-flash labels on its doors are quietly wrong too, because they were computed from those clearing times. Owned by the operator, and usually by nobody in the contract.",
+    "**{{Incident energy}} treated as a label rather than a design output.** A label is the end of a calculation, not a substitute for one. When the calculation is stale, the number on the door understates the hazard for the one task — energised work at a live panel — where being wrong is measured in burn units. The mitigations are known and cheap relative to the exposure: faster upstream settings, a maintenance-mode function, {{arc-resistant switchgear}} where people will actually stand. What is expensive is discovering the gap during the event.",
+    "**A {{main-tie-main}} whose sources are each sized for half the load.** The drawing shows two incomings and a tie, and the redundancy claim is made from the drawing. It only holds if the surviving source can carry everything after the tie closes — and if the {{coordination study}} was run for the tied configuration as well as the normal one, because the available fault current is different in each. Two half-sized feeds are a capacity arrangement wearing a redundancy label. Owned by the designer.",
+    "**A {{factory acceptance test}} mistaken for commissioning.** A FAT proves the lineup: settings loaded, interlocks exercised, breakers racked through all three positions. It cannot prove the plant, because the generators, the UPS, the chillers and the building management system are not in the factory. Integrated testing at full load on site is the only thing that proves the sequence everyone has assumed — and it is the test most often shortened when a programme is late. Owned by the commissioning agent and the general contractor.",
+    "**The approval-drawing clock, treated as the manufacturer's problem.** An engineered-to-order lineup is not released to manufacture until the submittal package comes back approved. Every review cycle the owner's engineer takes is a cycle the factory is not building, and on a schedule where switchgear is already the long pole, the buyer's own review time is frequently the largest single controllable delay. Owned by the buyer, and almost never tracked as theirs."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What physically distinguishes metal-clad switchgear from metal-enclosed switchgear?",
+     "a": "Metal-clad is the stricter, defined class under IEEE C37.20.2: draw-out breakers, grounded metal barriers between every major compartment, insulated primary bus, and automatic shutters covering the live stabs when a breaker is withdrawn. Metal-enclosed is looser — it may have fixed breakers and fewer internal barriers. On a one-line they look alike; during maintenance they behave completely differently."
+    },
+    {
+     "q": "Name the three positions of a draw-out breaker and what each is for.",
+     "a": "Connected — main contacts engaged, carrying load. Test — main contacts separated but control power live, so the breaker can be operated and its logic proven without energising anything. Disconnected — fully withdrawn with the shutters closed over the live stabs. The sequence is what lets a breaker be tested or replaced while the bus behind it stays energised."
+    },
+    {
+     "q": "What are the three ratings that describe any switchgear lineup, and what does each one set?",
+     "a": "Voltage class (5/15/27/38 kV) sets insulation and physical clearances. Continuous current rating of the main bus sets the copper cross-section and the heat the enclosure must shed. Withstand rating — how much fault current the assembly survives without coming apart — sets the bus bracing, because the force pulling two conductors apart goes with current squared."
+    },
+    {
+     "q": "Why is an arcing fault more dangerous than a bolted short circuit?",
+     "a": "A bolted short runs through metal and the protection sees an unambiguous fault. An arcing fault jumps a gap in air; the air becomes a plasma around 20,000°C, copper in it vaporises and expands thousands-fold, so the event is a thermal burn, a pressure blast, a shrapnel launcher and an acoustic injury at once. It is also harder for a relay to see, because arc current is lower and unstable."
+    },
+    {
+     "q": "What is incident energy, and which of its inputs can an engineer most readily change?",
+     "a": "The thermal energy an arc would deliver to a worker at a stated working distance, in cal/cm², calculated per IEEE 1584. Its inputs are available fault current, conductor gap, enclosure geometry and clearing time — and clearing time is the one an engineer controls. Roughly halve the clearing time and you roughly halve the energy, which is why arc-flash mitigation is usually a protection-settings problem."
+    },
+    {
+     "q": "What does arc-resistant construction actually do, and what does it not do?",
+     "a": "It does not stop or prevent the arc. It is type-tested with an arc deliberately started inside the cell, to prove the pressure and hot gas vent away from the operator — reinforced doors that stay latched, an upward relief flap, usually a duct out of the room. IEEE C37.20.7 grades it by which sides are protected and whether protection holds with a low-voltage door open."
+    },
+    {
+     "q": "Distinguish the procedural, settings and equipment answers to arc flash.",
+     "a": "Procedural: NFPA 70E — justify energised work, assess the risk, label the gear, wear clothing rated above the incident energy. Settings: a maintenance-mode function that temporarily makes upstream protection faster and deliberately less selective while someone is at the door. Equipment: arc-resistant construction that redirects what the arc produces. They are complements, not substitutes."
+    },
+    {
+     "q": "Name the three studies that make up a protection study, in order, and what each produces.",
+     "a": "Short-circuit study — models every source including motors spinning down, and yields available fault current at every bus, which every breaker's interrupting rating must exceed. Coordination study — plots the series devices' time-current curves and yields relay and trip-unit settings with roughly a 0.2–0.3 s margin between tiers. Arc-flash study — takes fault current from the first and clearing time from the second and yields incident energy and the printed door label."
+    },
+    {
+     "q": "Why does a protection study go stale, and what makes that dangerous?",
+     "a": "It is only true for the one-line diagram it was built against. Energise a new hall, add a generator, close a normally-open tie, or swap a transformer for a lower-impedance one, and the model no longer describes the plant. Nothing alarms — the settings are simply wrong now, and the arc-flash labels derived from them are wrong too."
+    },
+    {
+     "q": "In a main-tie-main arrangement, what must each incoming source be rated for, and why?",
+     "a": "The entire load. The tie is normally open with each source carrying half; when one source is lost the tie closes and the survivor carries everything. Two half-sized feeds with a tie between them are a capacity arrangement, not redundancy — and because closing the tie changes available fault current, the coordination study has to be correct for both the normal and the tied configuration."
+    },
+    {
+     "q": "What does an e-house actually move, commercially?",
+     "a": "Labour and risk. Scarce, weather-exposed, badly sequenced skilled field electrical work becomes factory labour under a crane, done in parallel with civil work rather than at the end of the schedule behind every upstream delay. The cost is shipping weight, crane access, transport permits and a design frozen much earlier than a field-built room."
+    },
+    {
+     "q": "What can a factory acceptance test prove, and what can only site commissioning prove?",
+     "a": "A FAT proves the lineup: relay settings verified by secondary injection, interlocks exercised, breakers racked through all three positions, control logic walked through. It cannot prove the interaction between the gear and the generators, UPS and building management system that will actually surround it — that needs integrated testing at real load on site."
+    },
+    {
+     "q": "Why is a 10-week quoted lead time a categorically different product rather than an incremental advantage?",
+     "a": "Because the medium-voltage switchgear market's standard lead times run in the tens of weeks and stretch far longer for customised, higher-voltage or specialised orders. When equipment delivery is the schedule's long pole, a supplier who compresses it is not selling cheaper equipment — it is selling a project date the buyer cannot otherwise obtain, which is why schedule certainty rather than price is the axis this segment competes on."
+    },
+    {
+     "q": "What is a current transformer's role in a protection scheme, and how does it fail quietly?",
+     "a": "It wraps a conductor and produces a small proportional current the relay can read safely, with its ratio chosen so the relay sees a usable signal at both normal load and fault current. If the ratio is wrong — or replaced with a different one during a repair — the relay's settings no longer mean what the coordination study computed, and nothing about the installation looks wrong."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A campus energises its second hall. Nobody re-runs the electrical studies. Six months later a feeder fault opens the main breaker and darkens both halls. The most likely cause is:",
+     "c": [
+      "A defective main breaker",
+      "The protection settings were derived from a one-line the plant no longer matches",
+      "Insufficient arc-resistant construction",
+      "The fault current exceeded the bus withstand rating"
+     ],
+     "a": 1,
+     "why": "Adding a hall changes the sources, the topology and the load, so the available fault current and the coordination margins both move. The relay settings are still the ones computed against the old model. Nothing alarms — the system is simply mis-coordinated until someone re-runs the study, which is exactly why a protection study is a living document rather than a handover deliverable."
+    },
+    {
+     "q": "Which single change most reliably reduces the incident energy at a given panel?",
+     "c": [
+      "Specifying arc-resistant construction for that lineup",
+      "Issuing higher-rated arc-flash clothing",
+      "Reducing the time the upstream protection takes to clear the fault",
+      "Increasing the working distance in the calculation"
+     ],
+     "a": 2,
+     "why": "Incident energy scales roughly with arc duration, and clearing time is the input an engineer actually controls. Arc-resistant construction changes where the energy goes rather than how much there is; higher-rated clothing changes the consequence, not the hazard; and working distance is set by the task, not chosen. This is why arc-flash mitigation is usually a protection-settings exercise."
+    },
+    {
+     "q": "A specification says 'arc-resistant switchgear, IEEE C37.20.7.' A technician will routinely work at the open low-voltage instrument door. What is missing from the specification?",
+     "c": [
+      "The voltage class",
+      "The accessibility type, specifically whether protection holds with a low-voltage door open",
+      "The continuous current rating",
+      "The manufacturer's name"
+     ],
+     "a": 1,
+     "why": "C37.20.7 grades enclosures by which sides are protected and whether the arc-resistant performance survives with a control or instrumentation compartment door open. That is precisely the state the technician will be in, and it is the difference between a rating that covers the real task and one that covers a task nobody performs."
+    },
+    {
+     "q": "A one-line shows two utility services, a bus split in two halves, and a tie breaker. Each service transformer is rated for 60% of the campus load. The redundancy claim is:",
+     "c": [
+      "Valid — that is what main-tie-main means",
+      "Valid if the tie is normally closed",
+      "Overstated: after the tie closes, the surviving source is overloaded",
+      "Unknowable without the switchgear ratings"
+     ],
+     "a": 2,
+     "why": "Main-tie-main works because the survivor picks up everything when the tie closes. Sizing each source at 60% means that on the loss of one service the remaining transformer is carrying 100% of a load it is not rated for — the arrangement provides maintenance flexibility and nothing more. Sizing, not topology, is what makes the claim true."
+    },
+    {
+     "q": "Which is the correct order of the three studies, and why does it matter?",
+     "c": [
+      "Arc-flash, then short-circuit, then coordination",
+      "Short-circuit, then coordination, then arc-flash",
+      "Coordination, then short-circuit, then arc-flash",
+      "They are independent and can be run in any order"
+     ],
+     "a": 1,
+     "why": "The short-circuit study yields available fault current, which the coordination study needs to choose settings, and the arc-flash calculation needs both the fault current and the clearing time those settings produce. Running them out of order means the arc-flash numbers describe a protection scheme that was not the one installed."
+    },
+    {
+     "q": "A programme reports that the switchgear passed its factory acceptance test and treats the electrical system as proven. The gap is:",
+     "c": [
+      "FAT does not test breakers under load",
+      "FAT cannot prove the interaction between the gear and the generators, UPS and building controls around it",
+      "FAT is performed without the customer present",
+      "FAT does not cover relay settings"
+     ],
+     "a": 1,
+     "why": "A FAT does verify relay settings, interlocks and racking, with the customer there — that is its value. What it cannot contain is the plant: the generators that will feed the gear, the UPS downstream and the building management system that decides what an emergency is. Only integrated site testing at load proves that, and it is the test most often compressed when a programme runs late."
+    },
+    {
+     "q": "Raising a lineup's short-circuit withstand rating from 50 kA to 63 kA is best described as:",
+     "c": [
+      "A paperwork change to the nameplate",
+      "A structural redesign of the bus supports and bracing",
+      "A change to the protective relay settings",
+      "A change to the breakers only"
+     ],
+     "a": 1,
+     "why": "The magnetic force trying to tear parallel conductors apart scales with the square of the current, so a higher fault rating means the bus, its supports and the enclosure must physically hold together against substantially more force. The breakers' interrupting rating matters too, but the assembly's ability to survive the event is a mechanical property of how it is built."
+    },
+    {
+     "q": "Why is the approval-drawing cycle often the longest controllable clock on an engineered-to-order switchgear order?",
+     "c": [
+      "Because breakers are made to order",
+      "Because nothing is released to manufacture until the submittal package is approved, and the review time belongs to the buyer",
+      "Because the standards change annually",
+      "Because arc-resistant testing is performed per order"
+     ],
+     "a": 1,
+     "why": "Breakers are catalogue items; the lineup is not. The one-line, cell arrangement, relay schedule and interlocking are drawn for one project and must be submitted, marked up and approved before steel is cut. Every review cycle the owner's engineer takes is a cycle the factory is idle on that order — and it is the part of the lead time the buyer, not the manufacturer, controls."
+    },
+    {
+     "q": "A relay's current transformer is replaced during a repair with one of a different ratio. The most likely consequence is:",
+     "c": [
+      "The relay will fail to power up",
+      "The relay's settings no longer mean what the coordination study computed, with no visible symptom",
+      "The breaker will trip immediately",
+      "Nothing — CT ratio is a metering concern only"
+     ],
+     "a": 1,
+     "why": "The relay only sees what the CT gives it. Change the ratio and every pickup and time-dial setting derived against the old ratio is now describing a different primary current. The installation looks correct, the relay self-tests pass, and the scheme is silently mis-set — which is why CT ratios are part of the coordination model rather than an installation detail."
+    },
+    {
+     "q": "A data-centre campus buys at medium voltage and steps down close to each building. Which statement about the medium-voltage tier is a consequence rather than a cause?",
+     "c": [
+      "Distributing at higher voltage cuts the current for a given power",
+      "Lower current means far less copper for the same load",
+      "Medium-voltage equipment carries a distinct safety regime — arc-resistant construction, draw-out gear and qualified-person procedures",
+      "Local transformers step down near the load"
+     ],
+     "a": 2,
+     "why": "The cause is electrical: power is voltage times current, so raising the distribution voltage cuts the current and therefore the copper and the I²R loss. The safety regime is what follows from having chosen medium voltage — a different tier of equipment, different hazards and different procedures — rather than a reason to choose it."
+    }
+   ]
+  }
+ ]
+}

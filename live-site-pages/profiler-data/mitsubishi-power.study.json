@@ -1,0 +1,573 @@
+{
+ "schemaVersion": 2,
+ "slug": "mitsubishi-power",
+ "title": "Mitsubishi Power — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "half-the-output-drives-the-compressor",
+   "title": "The Brayton cycle: half the output never leaves the machine",
+   "kind": "prose",
+   "read": "6 min",
+   "intro": "Other guides in this library explain what a combined-cycle plant is and why turbine slots became a market. Neither says what actually distinguishes one machine from another, which is the question an OEM's catalogue is an answer to. Start inside the machine.",
+   "ps": [
+    "A {{heavy-duty gas turbine}} runs the {{Brayton cycle}} in four steps on one shaft: a compressor raises incoming air to high pressure, fuel is burned in that compressed air, the hot gas expands through turbine stages, and what is left goes out of the exhaust. The compressor and the turbine are bolted to the same shaft, and here is the fact that governs everything else — **the compressor consumes roughly half of what the turbine produces**. The machine's useful output is a difference between two much larger numbers.",
+    "That is why gas turbines are so sensitive to things that would barely register elsewhere. A one-percent change in compressor efficiency does not move net output by one percent; it moves it by roughly two, because the loss comes out of the small remainder. Fouled compressor blades, a dirty inlet filter or a hot day all attack the same narrow margin.",
+    "**Two numbers set the cycle's efficiency:** the {{pressure ratio}} the compressor achieves — high teens to low twenties on a modern machine — and the {{firing temperature}} at the turbine inlet. Raising either raises efficiency. Raising the pressure ratio costs compressor stages, which is why turbines get physically larger rather than simply better. Raising the temperature costs metallurgy, which is the subject of the next section and the real axis of competition between the three manufacturers who build these things.",
+    "**Why the exhaust matters as much as the shaft.** A large machine exhausts at something like 600°C, and in {{simple cycle}} all of that goes up the stack — which is why simple cycle converts only a third to two-fifths of the fuel's energy into electricity. The exhaust is not waste heat in the trivial sense; it is roughly as much energy as the generator produced. What a manufacturer does with it is the difference between a peaking machine and a baseload plant, and it is a separate purchase.",
+    "**The one-sentence version worth carrying into a meeting:** a gas turbine is a machine whose output is the small difference between two large numbers, whose efficiency is bought with temperature, and whose exhaust is worth about as much as its shaft."
+   ]
+  },
+  {
+   "id": "firing-temperature-is-the-whole-game",
+   "title": "Firing temperature: buying efficiency with metallurgy",
+   "kind": "prose",
+   "read": "7 min",
+   "intro": "Manufacturers grade heavy-duty turbines by class — F, G, H, J — and the class is shorthand for one number. This section is what that number costs, because it explains why turbine development is a materials programme wearing a thermodynamics label, and why a class step takes a decade rather than a model year.",
+   "ps": [
+    "**{{Firing temperature}} is the temperature of the gas where it first meets the turbine blades**, and cycle efficiency tracks it more closely than any other variable. The current frontier is described as the 1,600°C class and the 1,650°C class. The problem is immediate and physical: the nickel superalloys those blades are made from melt several hundred degrees *below* that. The blades survive because three techniques are stacked on top of each other, and each one costs something.",
+    "**{{Single-crystal blade}}s.** Ordinary cast metal is a mass of small crystals meeting at grain boundaries, and a grain boundary is where hot metal under sustained load slowly pulls apart — creep. Casting a blade as one continuous crystal removes the boundaries entirely and buys perhaps another fifty degrees of temperature. The cost is a slow, expensive, low-yield casting process, and it is one of the reasons turbine manufacturing capacity cannot be scaled by simply adding a shift.",
+    "**{{Thermal barrier coating}}s.** A thin ceramic layer sprayed on the blade and combustor surfaces holds a temperature gradient across itself, so the metal underneath runs a couple of hundred degrees cooler than the gas washing over it. A TBC is why the gas can exceed the metal's melting point at all. It is also consumable — checking its condition is much of what an overhaul is for, and its degradation is part of why a machine's output falls with running hours.",
+    "**{{Turbine cooling air}}, which is the expensive one.** Air is bled from the compressor and piped through hollow passages inside the blades and vanes, exiting through small holes to form a film between the metal and the gas. But that air was compressed at full cost and then bypassed the combustor, so it does no useful work. Every design is therefore a trade: fire hotter and take more efficiency, or spend more of your own air to allow it and give some back. A class step is only real if the temperature gain outruns the cooling-air penalty.",
+    "**What this means commercially.** A class step is not a product refresh — it is a validated combination of casting, coating, cooling and combustion that takes years and a full-scale demonstration to prove. That is why the three manufacturers who can do it are the three who do it, why their efficiency claims sit within a point or so of each other, and why the competition between them is decided by delivery slots and service rather than by a decisive technical lead."
+   ]
+  },
+  {
+   "id": "fifty-or-sixty-hertz",
+   "title": "Why 50 Hz machines are bigger: the frame families explained",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "A manufacturer's catalogue splits into two frame families and it is easy to read that as two products for two regions. It is not. It is one piece of physics that fixes the size of everything downstream, and it explains why the same class of machine has two quite different outputs depending on where it is sold.",
+   "cols": [
+    "The fact",
+    "Why it is true",
+    "What follows from it"
+   ],
+   "rows": [
+    [
+     "A large gas turbine drives its generator **directly**, with no gearbox",
+     "At tens or hundreds of megawatts a reduction gearbox becomes impractical — the torque is enormous and every gear tooth is a loss and a failure point",
+     "The turbine shaft therefore turns at whatever speed the generator needs, and that speed is set by the grid, not by the turbine designer"
+    ],
+    [
+     "A two-pole generator must turn at **3,000 rpm on a 50 Hz grid and 3,600 rpm on a 60 Hz grid**",
+     "Output frequency equals shaft speed times pole pairs. One pole pair, 50 revolutions a second, is 50 Hz — and 50 rev/s is 3,000 rpm",
+     "**The grid frequency dictates the shaft speed of the largest machine on the system.** Everything about the turbine's geometry follows from that one number"
+    ],
+    [
+     "A **slower** shaft permits a **physically larger** machine",
+     "Blade tip speed is rotational speed times radius, and tip speed is limited by the material's strength against centrifugal stress. Turn more slowly and you can afford a longer blade before hitting the same limit",
+     "The 50 Hz frame of a given class is **scaled up** from its 60 Hz sibling — the same aerodynamics and the same firing temperature, in a larger machine swallowing more air"
+    ],
+    [
+     "Output scales with the mass of air the machine swallows",
+     "A gas turbine is a volumetric machine: bigger swept volume at the same pressure and temperature means proportionally more mass flow, more fuel burned and more power",
+     "**A 50 Hz frame is substantially more powerful than the 60 Hz frame of the same class** — commonly on the order of forty percent — at broadly similar efficiency. That is a scaling consequence, not a better product"
+    ],
+    [
+     "Manufacturers therefore publish **two numbered families**",
+     "One series for 60 Hz markets (the Americas, Japan's eastern grid, Saudi Arabia, Korea) and one for 50 Hz markets (Europe, most of Asia, Australia, Japan's western grid)",
+     "Reading a catalogue means reading the frequency first. Comparing a 50 Hz frame's output against a 60 Hz competitor's is comparing two different sizes of the same idea"
+    ]
+   ],
+   "note": "The reading skill: when a spec sheet quotes an output, find the frequency before you find anything else. Japan is the instructive case — its grid is split at 50 Hz in the east and 60 Hz in the west, so a Japanese manufacturer must build and validate both families for its home market, which is part of why the two lineages developed in parallel rather than one being a derivative of the other."
+  },
+  {
+   "id": "simple-or-combined",
+   "title": "Simple or combined: what the second machine buys and costs",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "The combined-cycle idea is taught elsewhere in this library from the builder's side. This is the purchase decision from the equipment side — the same turbine sold two ways, and the reason a data-centre campus and a utility often reach opposite conclusions about it.",
+   "cards": [
+    {
+     "t": "Simple cycle — the turbine alone",
+     "meta": "Gas turbine, generator, stack. The ~600°C exhaust goes to atmosphere",
+     "adv": [
+      "Roughly a third to two-fifths of the fuel's energy reaches the wires — poor, but it is the whole plant",
+      "Far less equipment, far less land, no steam plant, no condenser, and usually no significant water demand",
+      "Fast to build and fast to start, which is what makes it the peaking and bridge machine — and increasingly the machine of choice where power is needed years before a combined-cycle plant could exist",
+      "Can often be built in phases and later converted, if the site was laid out for it from the start"
+     ],
+     "dis": [
+      "Fuel cost per megawatt-hour is roughly half again what a combined-cycle plant pays for the same electricity",
+      "The same fuel burned for the same output means proportionally more carbon dioxide and a larger air permit to obtain",
+      "It is an expensive way to run baseload, so a plant justified as a bridge can become a liability if it ends up running continuously"
+     ]
+    },
+    {
+     "t": "Combined cycle — the turbine plus a steam plant",
+     "meta": "The exhaust passes through an HRSG that raises steam for a second, steam turbine running the Rankine cycle",
+     "adv": [
+      "Efficiency past sixty percent on modern machines — the highest of any device that burns gas — because the second machine runs a {{Rankine cycle}} on heat the first one would have vented",
+      "Lower fuel cost and lower carbon per megawatt-hour, which is what makes gas a baseload proposition at all",
+      "The bottoming plant adds output without adding fuel, so the incremental megawatts are the cheapest on the site"
+     ],
+     "dis": [
+      "The HRSG, steam turbine, condenser, water treatment and cooling are most of the plant's equipment, cost, footprint and construction time",
+      "It needs cooling — either substantial water or air-cooled condensers that cost efficiency and land — which is a siting constraint in exactly the regions where new load is appearing",
+      "Starting is slow and thermally constrained: thick steam-turbine casings must be reheated gradually or they distort, so a {{hot start}} is much quicker than a cold one and neither is instant",
+      "It is the wrong machine for a load that swings, and much of the new demand swings"
+     ]
+    }
+   ],
+   "note": "The decision is usually made by the calendar rather than by the economics. A campus that needs power in eighteen months cannot have a combined-cycle plant, whatever the fuel cost says — which is why simple-cycle capacity is being bought at scale by buyers who would, given time, have bought the efficient machine."
+  },
+  {
+   "id": "reading-a-turbine-rating",
+   "title": "Reading a turbine rating: ISO conditions and the site you actually have",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The number on the catalogue page is a laboratory number, in the same way a gen-set's standby rating is. But a gas turbine's corrections are much larger than a reciprocating engine's, and they run the wrong way in exactly the places new load is being built. This is the arithmetic between the brochure and the plant.",
+   "cols": [
+    "Correction",
+    "Which way it runs",
+    "Roughly how much",
+    "Why"
+   ],
+   "rows": [
+    [
+     "**{{ISO rating}} — the baseline**",
+     "The reference, not a promise",
+     "15°C, sea level, 60% relative humidity, no inlet or exhaust pressure loss",
+     "Internationally agreed reference conditions so that machines can be compared. No real site has them, and no real plant has zero ducting"
+    ],
+    [
+     "**Ambient temperature**",
+     "Hotter air, less power",
+     "On the order of half a percent of output per degree Celsius above the reference",
+     "The turbine swallows a fixed *volume* per revolution. Hot air is less dense, so a fixed volume carries less mass, burns less fuel and makes less power. Efficiency falls too, because the compressor works harder per unit of mass delivered"
+    ],
+    [
+     "**Altitude**",
+     "Higher site, less power",
+     "Roughly with ambient pressure — a few percent per thousand metres",
+     "Same mechanism as temperature: thinner air is less mass through the same swept volume"
+    ],
+    [
+     "**Inlet and exhaust pressure loss**",
+     "Always negative",
+     "A percent or two, depending on filtration, silencing and — in combined cycle — the {{HRSG}} behind it",
+     "Filters, silencers and ducting all cost pressure, and pressure is what the cycle runs on. The HRSG that makes a combined-cycle plant efficient also puts back-pressure on the turbine that feeds it"
+    ],
+    [
+     "**Degradation**",
+     "Worsens with hours",
+     "A few percent recoverable by washing; some permanent between overhauls",
+     "Compressor blades foul and erode, tip clearances open up and {{thermal barrier coating}}s age. Guarantees are written at a stated condition, and 'new and clean' is a defined state a plant is in only briefly"
+    ],
+    [
+     "**{{Inlet air cooling}} — buying some of it back**",
+     "Recovers hot-day output",
+     "Several percent, at the cost of water or parasitic load",
+     "Evaporative cooling or fogging chills the incoming air toward the wet-bulb temperature; mechanical chilling goes further and costs more. It is a product line in its own right precisely because the hot-day derate is worst when demand is highest"
+    ],
+    [
+     "**Gross against net**",
+     "Net is always lower",
+     "The plant's own auxiliary load — fans, pumps, the cooling plant",
+     "A gross rating describes the generator terminals. The number that reaches a customer's meter is net of everything the plant consumes to run itself, and the gap widens with the size of the steam and cooling plant"
+    ]
+   ],
+   "note": "The practical consequence: a plant sized on ISO ratings for a hot, high site can be materially short on the afternoon it is most needed. This is the same trap as a gen-set's laboratory rating, but the corrections are larger and the hot-day loss coincides with peak demand rather than being spread across the year."
+  },
+  {
+   "id": "hydrogen-by-volume",
+   "title": "Hydrogen co-firing: why the percentage does not mean what it looks like",
+   "kind": "prose",
+   "read": "7 min",
+   "intro": "Every heavy-duty manufacturer now advertises a hydrogen capability as a percentage, and the percentage is almost always by volume. This is the single most misread number in the gas-power conversation, and the arithmetic that corrects it is short enough to do in a meeting.",
+   "ps": [
+    "**{{Hydrogen co-firing}} is quoted by volume, and volume percent is not energy percent — nor carbon percent.** Hydrogen carries roughly a third of methane's energy per unit volume. So if you replace three-tenths of the *volume* of the fuel with hydrogen, you have replaced only about a **ninth to a tenth of the energy** — and since the carbon dioxide comes from the energy-bearing carbon you displaced, you have cut carbon dioxide by about that same tenth. A 30 percent hydrogen machine is a ten percent decarbonisation.",
+    "**The arithmetic checks against the published demonstrations.** Independent analysis of the fleet puts a 30 percent volumetric blend at roughly a twelve percent carbon reduction, and a fifty-percent blend at a little over twenty. A manufacturer's own 50 percent blend demonstration on a utility unit reported about a twenty-two percent carbon reduction. Those two numbers come from different parties and agree with each other and with the calculation — which is the reassuring part. What is not reassuring is how often the volumetric figure is repeated as though it were the carbon figure.",
+    "**Getting to a genuinely large reduction means getting close to pure hydrogen**, and that is a different machine. Around three-quarters hydrogen by volume you are at roughly half the carbon; a real elimination needs essentially 100 percent, which changes the combustor, the fuel system, the safety case and the entire fuel supply chain rather than adjusting a blend ratio.",
+    "**Why the combustor is the hard part.** Modern machines use {{DLN combustor}}s: fuel and air are premixed before they burn so the flame is lean and cool enough to make little {{NOx}} without injecting water or steam. A lean premixed flame lives in a narrow window — too lean and it blows out, too reactive and it travels upstream. Hydrogen's {{flame speed}} is several times methane's, so adding hydrogen pushes the flame toward **{{flashback}}**: the flame outruns the mixture feeding it and travels back into hardware that was never designed to hold a flame. That hardware melts. Hydrogen also burns hotter, which pushes NOx back up — the thing the premixing was for.",
+    "**So the honest reading of a hydrogen-capable claim is a question, not a number:** what percentage, by volume or by energy, at what NOx, with what combustor, demonstrated at what scale and for how long, and requiring what modification when the fuel actually arrives? A machine sold as hydrogen-ready is buying the owner an option on a fuel that mostly does not exist yet at that scale or price, and the option's value depends entirely on whether the hydrogen ever shows up. That is a fuel-supply and policy judgment, not a turbine judgment — but it is priced into a turbine.",
+    "**And the value of the option is policy-sensitive in both directions.** Where a regulation requires new gas plants to have a decarbonisation pathway, hydrogen readiness is a compliance asset and buyers pay for it. Where that requirement is withdrawn, the same capability becomes a discretionary purchase — the machine still burns gas exactly as well, but the premium is harder to defend. A capability's technical merit does not change when the rule does; its price does."
+   ]
+  },
+  {
+   "id": "part-load-and-cycling",
+   "title": "The follower problem: why an efficient plant is a bad follower",
+   "kind": "prose",
+   "read": "6 min",
+   "intro": "A combined-cycle plant is the most efficient way to turn gas into electricity and one of the worst ways to chase a load that moves. That tension is why the on-site power conversation keeps splitting into two different machines, and it is worth understanding from the turbine's side rather than the buyer's.",
+   "ps": [
+    "**Efficiency is a full-load property.** A gas turbine is optimised for one operating point, and backing off from it costs disproportionately: the compressor is still turning at full speed and still consuming its share, while the useful output falls. Inlet guide vanes recover some of this by throttling the air the machine swallows, but there is a floor — a **minimum stable load** below which the {{DLN combustor}}'s lean premixed flame cannot be held, at which point the machine either switches to a dirtier combustion mode or shuts down.",
+    "**In combined cycle the penalty compounds**, because the steam plant behind the turbine is running on whatever exhaust it is given. Less exhaust at a lower temperature means less steam at worse conditions, so the bottoming cycle's contribution — the part that made the plant efficient in the first place — falls faster than the turbine's own output.",
+    "**Starting is a thermal problem, not a control problem.** The steam turbine's casings and rotor are thick metal; heat them too fast and differential expansion distorts clearances. So a plant is quoted with {{hot start}}, warm-start and cold-start times, and the difference between them is large. A machine that has been off overnight is a different proposition from one that has been off for a week.",
+    "**Every start is also maintenance.** Overhaul intervals for these machines are counted in equivalent operating hours, and a start counts for many hours of steady running because of the thermal cycling it imposes on hot-section parts. A plant run as a follower reaches its overhaul sooner in calendar terms than an identical plant run flat out — which means the way a plant is dispatched changes its service cost, not just its fuel bill.",
+    "**Which is why the on-site power answer is usually plural.** A load that swings tens of megawatts in milliseconds — the shape a training cluster makes — is not something any thermal machine follows. It is absorbed by stored energy first, smoothed by fast machines second, and only then does a large efficient plant supply the average underneath. Reciprocating engines and aeroderivative turbines exist in this conversation precisely because they start faster and tolerate cycling better, at the cost of efficiency and unit size. **The efficient machine is the base; it is not the buffer.**"
+   ]
+  },
+  {
+   "id": "the-third-oem",
+   "title": "The third OEM: reading Mitsubishi Power against GE Vernova and Siemens Energy",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Two of the three heavy-duty turbine manufacturers already have guides in this library, and another guide teaches why factory slots became the market. What none of them does is put the three side by side. Since all three arrive at roughly the same efficiency, the comparison is the lesson — these are the axes that actually separate them.",
+   "cols": [
+    "The axis",
+    "How the three compare",
+    "What it means for a buyer"
+   ],
+   "rows": [
+    [
+     "**Order book**",
+     "POWER Magazine's September 2026 comparison: GE Vernova 116 GW under contract, Siemens Energy 95 GW, Mitsubishi Heavy Industries 35 GW of large-frame backlog across 80 units",
+     "Order of rank is clear; magnitude is not. GE Vernova's and Siemens Energy's figures include slot reservations — 63 GW and 26 GW respectively — while Mitsubishi's is stated as contract backlog with no reservation split. No source normalises them, so treat the gap as real but imprecise"
+    ],
+    [
+     "**Customer mix**",
+     "GE Vernova roughly 80% traditional power and 20% data centers across about 100 customers; Siemens Energy 22 GW tied to data centers; Mitsubishi described as focused on large-frame projects for core utility customers",
+     "This is the sharpest genuine difference. A buyer who is a utility with a commission-approved resource plan is the customer Mitsubishi says it prioritises. A merchant data-center developer is competing for attention against that preference"
+    ],
+    [
+     "**Frame families**",
+     "All three build 50 Hz and 60 Hz families. Mitsubishi's split is M701 for 50 Hz and M501 for 60 Hz across D, F, G, GAC, J and JAC classes",
+     "Read the frequency before the output. The same class in the two families is a different size of machine, so a cross-vendor comparison that ignores it compares nothing"
+    ],
+    [
+     "**Efficiency**",
+     "All three now claim around 64% combined-cycle efficiency at the current class frontier",
+     "Effectively a tie, and therefore not a decision variable. When three suppliers are bounded by the same materials science, the frontier moves in steps and they all reach it at similar times"
+    ],
+    [
+     "**Validation**",
+     "Mitsubishi operates T-Point 2, a 566 MW grid-connected combined-cycle plant built specifically to validate new frames for at least 8,000 hours before release — it markets the position as buy proof, not promises",
+     "A genuine and unusual differentiator, and the one a risk-averse buyer should weigh most. It is an argument about the probability of first-of-a-kind problems, which is exactly what a first mover on a new class is exposed to"
+    ],
+    [
+     "**Hydrogen**",
+     "All three market hydrogen capability. Mitsubishi reports more than 3.5 million operating hours on hydrogen-containing fuels across 29 units, a 50 vol% blend validated on a commercial machine and 100% validated on the 40 MW-class H-25",
+     "The deepest operating record of the three on the evidence available here — but see the hydrogen section: 50% by volume bought about 22% of the carbon. Depth of experience and size of benefit are different questions"
+    ],
+    [
+     "**Storage**",
+     "Mitsubishi exited utility-scale battery storage in July 2026, selling the business it had carved out in February 2024",
+     "A narrowed behind-the-meter proposition. For a swinging data-center load the buffer matters, and here it is now a third party's product"
+    ],
+    [
+     "**Capacity path**",
+     "Wood Mackenzie puts global orders at about 110 GW against 60-70 GW of manufacturing capacity. MHI's own plan claims line of sight to a 30% capacity increase to 2030, with further expansion in progress",
+     "Note the gap between what the company claims and what trade press attributes to it — reporting has described a doubling; the company's own deck says 30% with line of sight. Believe the deck"
+    ]
+   ],
+   "note": "The honest summary a seller should be able to give: on order book Mitsubishi is a clear third; on efficiency the three are tied; on validation discipline it has the strongest published claim; and on customer preference it is the one of the three actively steering toward utilities rather than toward data centers. None of those is a price argument."
+  },
+  {
+   "id": "megawatts-per-machine",
+   "title": "Megawatts per machine — the catalogue as a ladder",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "MW (ISO base rating, simple cycle unless the row says otherwise)",
+   "intro": "One manufacturer's whole range on one axis, from a trailer you can fly to a site to a frame that weighs 550 tonnes. Read the sub-lines for frequency and for the job each machine is actually sold to do — the spread is the point, because the bridge-power machine and the baseload machine are at opposite ends of it.",
+   "items": [
+    {
+     "label": "FT8 MOBILEPAC",
+     "sub": "29 MW at 50 Hz / 31 MW at 60 Hz — two trailers, no foundation, installed in a day; the data-center bridge",
+     "v": 31
+    },
+    {
+     "label": "H-25",
+     "sub": "41.0 MW at 36.2%; 60.1 MW combined cycle; up to 70 t/hr steam for absorption cooling — permanent behind-the-meter",
+     "v": 41.0
+    },
+    {
+     "label": "FT8 SWIFTPAC 60",
+     "sub": "62 MW, power in under 30 days on site",
+     "v": 62
+    },
+    {
+     "label": "FT4000 SWIFTPAC 70",
+     "sub": "70 MW, >41% simple cycle, 10-minute cold start",
+     "v": 70
+    },
+    {
+     "label": "H-100 (60 Hz)",
+     "sub": "105.7 MW at 38.2%; full load in 10 minutes in fast mode",
+     "v": 105.7
+    },
+    {
+     "label": "H-100 (50 Hz)",
+     "sub": "116.4 MW at 38.3%; 171.0 MW combined cycle at 57.4%",
+     "v": 116.4
+    },
+    {
+     "label": "FT4000 SWIFTPAC 140",
+     "sub": "140 MW — the largest aeroderivative package in its class",
+     "v": 140
+    },
+    {
+     "label": "M701DA (50 Hz)",
+     "sub": "144.09 MW at 34.8%; the D class, 1984-era {{DLN combustor}} lineage",
+     "v": 144.09
+    },
+    {
+     "label": "M501GAC (60 Hz)",
+     "sub": "283 MW at 40.0%; 1,500°C class; the frame that validated 50% hydrogen",
+     "v": 283
+    },
+    {
+     "label": "M701F (50 Hz)",
+     "sub": "385 MW at 41.9%; 566 MW combined cycle at 62.0%",
+     "v": 385
+    },
+    {
+     "label": "M701JAC (2018 rating, 50 Hz)",
+     "sub": "448 MW at 44.0%; 650 MW combined cycle at >64%",
+     "v": 448
+    },
+    {
+     "label": "M501JAC (60 Hz)",
+     "sub": "453 MW at 44.0%; 1,650°C {{firing temperature}}; 664 MW combined cycle at >64%",
+     "v": 453
+    },
+    {
+     "label": "M701JAC (2015 rating, 50 Hz)",
+     "sub": "574 MW at 43.4% — the 50 Hz scaling advantage made visible; 840 MW combined cycle",
+     "v": 574
+    }
+   ],
+   "note": "Two things to read off this ladder. First, the 50 Hz frame at the top is larger than any 60 Hz machine below it for the reason the frequency section explains — a slower shaft permits a bigger machine. Second, the useful data-center range is the bottom third, not the top: the company's own guidance is that turbines in the 5-50 MW band have suited hyperscale sites, which is the H-25 and the aeroderivatives, not the JAC."
+  },
+  {
+   "id": "where-mitsubishi-power-products-slot-in",
+   "title": "Where these products slot into an on-site power plan",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The company's own data-center page splits its catalogue into front-of-meter and behind-the-meter columns. That split is the clearest statement of how a turbine OEM thinks a campus should be powered, and it is worth tracing against the timeline of a project rather than against the product list.",
+   "cols": [
+    "When in a project",
+    "The product",
+    "What it is actually solving"
+   ],
+   "rows": [
+    [
+     "Grid connection is five to eight years out and the shell is going up now",
+     "FT8 MOBILEPAC at 31 MW, on two trailers with no foundation",
+     "Time, not energy. The company's stated case is a temporary bridge that lets a hall begin operating while it waits for interconnection. It is expensive power bought to avoid a much more expensive delay"
+    ],
+    [
+     "Bridge power needs to survive an outage of its own",
+     "Multiple aeroderivative units plus a battery",
+     "Redundancy across small machines rather than reliability from one large one. Note that the storage half of this answer is no longer the company's own product after the 2026 divestiture"
+    ],
+    [
+     "Power is needed permanently, on site, and the hall also needs cooling",
+     "H-25 at 41 MW simple cycle or about 60 MW combined, with up to 70 t/hr of steam driving absorption chillers",
+     "{{Combined cycle}} thinking applied at hall scale: the exhaust that would be vented becomes chilled water instead of electricity, which is why the company quotes above 80% overall efficiency in {{CHP}} configuration"
+    ],
+    [
+     "The campus is at gigawatt scale and the grid will eventually arrive",
+     "M501JAC at 453 MW simple cycle, or 664 MW in combined cycle",
+     "Baseload economics. The Cheyenne Power Hub is the public example: two M501JAC units for approximately 1,150 MW of Phase 1 site-ready power, with a grid interconnection also incorporated"
+    ],
+    [
+     "The turbines become redundant once the grid connects",
+     "The same industrial frames, redeployed as the facility's main backup",
+     "The company's own argument for buying frames rather than renting bridge power — the initial capital is protected because the machine has a second job"
+    ],
+    [
+     "A decarbonisation commitment has to be answerable",
+     "30% hydrogen by volume across advanced-class frames today; integrated carbon capture through the sister MHI company",
+     "Two different answers to the same question, and they are not equivalent. Read the hydrogen section before pricing either"
+    ],
+    [
+     "The plant has to run for twenty-five years",
+     "Long-term service agreements, DIASYS controls with more than 3,000 units delivered, TOMONI analytics",
+     "The service tail is where the OEM's economics live. A turbine sale is the entry point to a two-decade agreement, which is also what makes the slot worth reserving"
+    ]
+   ],
+   "note": "The row that is missing is the one worth naming aloud: there is no battery in this catalogue any more. For a load that swings tens of megawatts in milliseconds, the buffer is the piece that actually absorbs it, and this vendor now sources it from someone else."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**A turbine specified at {{ISO rating}} and installed at a hot, high site.** The corrections are larger for a gas turbine than for anything else on the site and they all run the same way: hotter, higher and dirtier air means less mass through a fixed swept volume, and less power. The worst case is the afternoon of the hottest day, which is also when demand peaks. {{Inlet air cooling}} buys some of it back at the cost of water or parasitic load. Owned by whoever wrote the plant heat balance.",
+    "**A plant bought for efficiency and dispatched as a follower.** Part-load efficiency falls faster than output, the bottoming steam cycle degrades faster still, minimum stable load is a real floor, and every start consumes overhaul life measured in equivalent operating hours. A machine run against a swinging load reaches its outage sooner and burns more fuel per megawatt-hour than its brochure. Owned by the operator, and set years earlier by whoever chose the machine.",
+    "**A hydrogen percentage read as a carbon percentage.** Thirty percent by volume is about a tenth of the energy and about a tenth of the carbon dioxide. A project justified on the volumetric figure has promised roughly three times the decarbonisation it can deliver, and the gap surfaces in a regulatory filing or a customer's emissions report rather than in the plant. Owned by whoever wrote the business case.",
+    "**The air permit lagging the shell.** The permit governs what leaves the stack, not what the building needs, and it is written against a specific machine, a specific fuel and specific operating hours. Changing the machine, the blend or the run-hours after the application can restart a clock that is already longer than the construction schedule. Owned by the developer, and repeatedly discovered by whoever is holding the turbine.",
+    "**A slot reservation that slips, or was never firm.** Manufacturing capacity across the whole industry is a fraction of current order flow, delivery dates for machines ordered now run years out, and a reservation is a commercial instrument whose terms — what is firm, what is conditional, what happens if the project's own milestones move — decide whether it survives contact with a delayed permit. A campus whose power date rests on a reservation is exposed to the reservation's fine print, not to the manufacturer's factory. Owned by the developer and the power partner.",
+    "**Fuel supply treated as a commodity rather than as infrastructure.** A large plant needs firm gas: a pipeline with capacity, an interconnect, and a contract that survives a cold snap when everyone else wants the same molecules. The turbine is the visible purchase and the smaller problem. Owned by the developer, and the constraint most often discovered last."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "In a heavy-duty gas turbine, roughly how much of the turbine's output drives its own compressor, and why does that matter?",
+     "a": "About half. The machine's useful output is the difference between two much larger numbers, so a small percentage change in compressor or turbine efficiency produces a roughly doubled change in net output. It is why fouled blades, a dirty inlet filter or a hot day hit output harder than intuition suggests."
+    },
+    {
+     "q": "Which two cycle parameters set a gas turbine's efficiency, and what does raising each one cost?",
+     "a": "Pressure ratio and firing temperature. Raising the pressure ratio costs compressor stages, so machines get physically larger. Raising firing temperature costs metallurgy — single-crystal blades, thermal barrier coatings and cooling air — which is why a class step takes years and a full-scale demonstration rather than a model year."
+    },
+    {
+     "q": "Name the three techniques that let turbine blades survive gas hotter than their own melting point, and the hidden cost of the third.",
+     "a": "Single-crystal casting removes the grain boundaries where hot metal creeps. Thermal barrier coatings hold a temperature gradient so the metal runs cooler than the gas. Turbine cooling air is bled from the compressor through hollow blades — and that air was compressed at full cost then bypassed the combustor, so it is a direct efficiency loss. Every class step must gain more than the extra cooling air costs."
+    },
+    {
+     "q": "Why is a 50 Hz frame physically larger and more powerful than the 60 Hz frame of the same class?",
+     "a": "The turbine drives its generator directly with no gearbox, so a two-pole generator fixes shaft speed at 3,000 rpm on 50 Hz and 3,600 rpm on 60 Hz. The slower shaft allows longer blades within the same tip-speed limit, so the machine can be scaled up — more swept volume, more air mass, more fuel, more power at similar efficiency. It is a scaling consequence, not a better product."
+    },
+    {
+     "q": "What does an HRSG do, and what does adding one cost?",
+     "a": "It is the boiler in the turbine's exhaust that raises steam for a second, steam turbine running the Rankine cycle — recovering heat a simple-cycle plant vents and pushing plant efficiency past sixty percent. It costs most of the plant's equipment, footprint and construction time, plus cooling water or air-cooled condensers, and it puts back-pressure on the turbine feeding it."
+    },
+    {
+     "q": "What are ISO conditions, and name three corrections between an ISO rating and a site rating.",
+     "a": "15°C, sea level, 60% relative humidity and no inlet or exhaust pressure loss — internationally agreed reference conditions for comparing machines. Corrections include ambient temperature (hotter air is less dense, costing roughly half a percent of output per degree C), altitude (thinner air, same mechanism), inlet and exhaust pressure loss from filters, silencers and the HRSG, degradation with running hours, and the gross-to-net step for the plant's own auxiliary load."
+    },
+    {
+     "q": "A machine is rated for 30% hydrogen co-firing by volume. Approximately what carbon dioxide reduction does that deliver, and why?",
+     "a": "About ten to twelve percent. Hydrogen carries roughly a third of methane's energy per unit volume, so displacing 30% of the volume displaces only about a tenth of the energy — and the carbon dioxide comes from the energy-bearing carbon that was displaced. Reading the volumetric figure as a carbon figure overstates the decarbonisation roughly threefold."
+    },
+    {
+     "q": "Why does hydrogen make a dry low-NOx combustor harder to design?",
+     "a": "A DLN combustor premixes fuel and air so the flame burns lean and cool, making little NOx without water or steam injection. A lean premixed flame sits close to blow-out on one side and flashback on the other. Hydrogen's flame speed is several times methane's, so the flame can outrun the mixture feeding it and travel back into hardware not designed to hold a flame — and hydrogen also burns hotter, pushing NOx back up."
+    },
+    {
+     "q": "Why does a combined-cycle plant lose efficiency faster than output when it backs off full load?",
+     "a": "The compressor is still turning at full speed and consuming its share while useful output falls, and the steam plant behind the turbine gets less exhaust at a lower temperature — so the bottoming cycle's contribution, which is what made the plant efficient, falls faster than the turbine's own output. Below a minimum stable load the lean premixed flame cannot be held at all."
+    },
+    {
+     "q": "Why does running a plant as a follower cost more than fuel?",
+     "a": "Overhaul intervals are counted in equivalent operating hours, and a start counts for many hours of steady running because of the thermal cycling it imposes on hot-section parts. A plant dispatched to follow load reaches its overhaul sooner in calendar terms than an identical plant run flat out — dispatch pattern changes service cost, not just the fuel bill."
+    },
+    {
+     "q": "Why can't gas turbine manufacturing capacity simply be scaled up to meet demand?",
+     "a": "The bottlenecks are the slow, low-yield, capital-intensive steps: large forgings and castings, single-crystal blade production, coating lines and full-scale test capacity, plus the specialised labour to run them. These are multi-year investments in physical plant, which is why announced capacity expansions are described in years and in fractions rather than in multiples."
+    },
+    {
+     "q": "Why is a swinging AI training load a poor match for a large combined-cycle plant, and what fills the gap?",
+     "a": "Tens of megawatts moving in milliseconds is faster than any thermal machine responds, and cycling costs a combined-cycle plant both efficiency and overhaul life. The load is absorbed by stored energy first, smoothed by fast machines such as reciprocating engines or aeroderivative turbines second, and only then does the large efficient plant supply the average underneath. The efficient machine is the base, not the buffer."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A turbine's compressor efficiency falls by 1% because of blade fouling. The effect on net plant output is approximately:",
+     "c": [
+      "A 1% fall",
+      "A fall of roughly 2%, because the compressor consumes about half the turbine's output",
+      "No effect until the machine is washed",
+      "A 0.5% fall"
+     ],
+     "a": 1,
+     "why": "Net output is the difference between what the turbine produces and what the compressor consumes, and the compressor takes roughly half. A given percentage loss therefore comes out of the smaller remainder, so it is roughly doubled by the time it reaches the shaft. This is why compressor washing is an operational routine rather than an overhaul task."
+    },
+    {
+     "q": "A manufacturer offers the same class of machine at 240 MW in one series and 340 MW in another. The most likely explanation is:",
+     "c": [
+      "The larger one fires hotter",
+      "The larger one is the 50 Hz frame, scaled up because a slower shaft allows longer blades",
+      "The larger one is combined cycle",
+      "The smaller one is derated for hot climates"
+     ],
+     "a": 1,
+     "why": "Grid frequency fixes the shaft speed of a directly coupled machine — 3,000 rpm at 50 Hz, 3,600 rpm at 60 Hz. The slower shaft permits a larger radius within the same blade tip-speed limit, so the 50 Hz frame is a scaled-up version of the same aerodynamics and firing temperature. Read the frequency before you read the output."
+    },
+    {
+     "q": "A plant advertises 40% hydrogen co-firing by volume and a business case claiming a 40% carbon reduction. The claim is:",
+     "c": [
+      "Correct",
+      "Overstated roughly threefold — about 15% of the energy, and so about 15% of the CO₂",
+      "Understated, because hydrogen burns hotter",
+      "Correct only in combined cycle"
+     ],
+     "a": 1,
+     "why": "Hydrogen carries about a third of methane's energy per unit volume, so a volumetric blend displaces far less energy than its percentage suggests — and the carbon dioxide tracks the displaced energy-bearing carbon, not the displaced volume. Published demonstrations agree with the arithmetic: roughly 30% by volume gives about 12% carbon reduction, and 50% gives a little over 20%."
+    },
+    {
+     "q": "Which change would most increase the risk of flashback in a dry low-NOx combustor?",
+     "c": [
+      "Lowering the firing temperature",
+      "Raising the hydrogen fraction in the fuel",
+      "Adding inlet air cooling",
+      "Increasing the pressure ratio"
+     ],
+     "a": 1,
+     "why": "Flashback is the premixed flame travelling upstream into the burner because the mixture's flame speed has overtaken the flow feeding it. Hydrogen's flame speed is several times methane's, so raising the hydrogen fraction pushes the flame toward exactly that failure — which is why the combustor, not the turbine, is what limits a machine's hydrogen capability."
+    },
+    {
+     "q": "A campus needs firm power in eighteen months and is choosing between simple cycle and combined cycle. The decisive factor is most often:",
+     "c": [
+      "Fuel cost per megawatt-hour",
+      "The calendar — a combined-cycle plant cannot be built in that time",
+      "Carbon dioxide per megawatt-hour",
+      "The available hydrogen blend"
+     ],
+     "a": 1,
+     "why": "Combined cycle wins decisively on fuel cost and carbon per megawatt-hour, but the HRSG, steam turbine, condenser, water treatment and cooling are most of the plant's construction time. When power is needed years before that plant could exist, the efficient option is unavailable at any price — which is why simple-cycle capacity is being bought by buyers who would otherwise choose the efficient machine."
+    },
+    {
+     "q": "A plant's heat balance was written against ISO ratings. The site is at 900 m elevation and reaches 38°C in summer. The most likely outcome is:",
+     "c": [
+      "Slightly better than rated output, because dry air burns better",
+      "A material shortfall, worst on the hottest afternoon when demand peaks",
+      "No difference, because the rating includes a margin",
+      "A shortfall only in combined cycle"
+     ],
+     "a": 1,
+     "why": "A gas turbine swallows a fixed volume per revolution, so both altitude and high ambient temperature reduce the mass of air — and therefore the fuel burned and the power made. The corrections run several percent for altitude and roughly half a percent per degree C above the reference, and the hot-day loss coincides with peak demand rather than averaging out across the year."
+    },
+    {
+     "q": "Which best explains why running a combined-cycle plant as a load-follower raises its service cost?",
+     "c": [
+      "Fuel is more expensive at part load",
+      "Overhaul intervals count equivalent operating hours, and each start counts for many hours because of thermal cycling",
+      "Cycling voids the manufacturer's warranty",
+      "Part-load operation increases compressor fouling only"
+     ],
+     "a": 1,
+     "why": "Hot-section overhaul intervals are measured in equivalent operating hours, and a start is charged at a large multiple of an hour of steady running because of the thermal cycling it imposes on blades, coatings and casings. A plant dispatched to follow load therefore reaches its outage sooner in calendar terms — dispatch pattern changes maintenance cost, not just fuel."
+    },
+    {
+     "q": "Turbine cooling air is best described as:",
+     "c": [
+      "Free, since the compressor is already running",
+      "A direct efficiency loss that every firing-temperature increase must earn back",
+      "Only used in combined-cycle configurations",
+      "A substitute for thermal barrier coatings"
+     ],
+     "a": 1,
+     "why": "That air was compressed at full cost and then bypassed the combustor, so it does no useful work. It is spent specifically to let the machine fire hotter than its metal could otherwise survive, which means a class step is only real if the efficiency gained from the higher temperature exceeds the efficiency spent on the extra cooling air. It complements coatings and single-crystal casting rather than replacing them."
+    },
+    {
+     "q": "Why are the three heavy-duty manufacturers' headline combined-cycle efficiencies within about a point of each other?",
+     "c": [
+      "They share a common turbine design",
+      "They are all bounded by the same materials and cooling limits at the current firing-temperature class",
+      "Efficiency is set by the grid frequency",
+      "The figures are not independently verified"
+     ],
+     "a": 1,
+     "why": "Efficiency tracks firing temperature and pressure ratio, and the achievable firing temperature is set by the same materials science — single-crystal casting, thermal barrier coatings and cooling-air budgets — for everyone. That is why the class frontier moves in steps rather than continuously, why all three arrive at it at similar times, and why competition is decided by delivery slots and service rather than by a decisive technical lead."
+    },
+    {
+     "q": "A campus's power date rests on a manufacturer slot reservation. The main exposure is:",
+     "c": [
+      "The manufacturer's factory throughput",
+      "The reservation's own terms — what is firm, what is conditional, and what happens if the project's milestones slip",
+      "The turbine's efficiency guarantee",
+      "The grid interconnection queue"
+     ],
+     "a": 1,
+     "why": "A reservation is a commercial instrument, not a manufacturing fact. Whether it survives a permit delay or a financing slip is decided by its conditions and milestone triggers, and an industry whose order flow far exceeds its manufacturing capacity has no slack to absorb a missed condition. The factory is the constraint behind the market; the contract is the constraint on this project."
+    }
+   ]
+  }
+ ]
+}

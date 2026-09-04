@@ -453,15 +453,6 @@
    "note": "ABB's HiPerGuard medium-voltage static UPS (2.5 MW units, 25 MW parallel, to 34.5 kV) attacks the medium-voltage niche rotary UPS held; ABB's 2014 ring-bus release conceded that the ring topology 'has traditionally only been deployed with rotary UPS systems' for fault-current reasons.",
    "context": "ABB introduced a ring-bus (isolated-parallel-style) architecture for static UPS in 2014, stating the topology had been rotary-only because static units lacked fault-current capability and risked DC-link back-feed — an independent statement of the rotary machine's protection advantage from a static vendor. ABB's HiPerGuard, deployed at Applied Digital's Polaris Forge campuses in 25 MW blocks, is the static industry's move onto the medium-voltage ground where Piller's UNIBLOCK and UB-V have sold at 10–35 kV. ABB's guide also carries the corpus's one paragraph on flywheels as grid stabilizers.",
    "source": "https://new.abb.com/news/detail/16888/abbs-ring-bus-with-static-ups-for-critical-power-applications"
-  },
-  {
-   "slug": "mitsubishi-electric",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-center UPS",
-   "note": "Research and Markets names Piller Power Systems and Mitsubishi Electric together in the set of vendors it says dominate the data center UPS market for 2025-2030.",
-   "context": "This is the only source located that names the two in one defined market. It is a title-level ranking rather than a share table, and no percentage is attached to either party.\n\nThe two compete from opposite ends of the technology. Piller's franchise is rotary and diesel-rotary UPS with a flywheel store; Mitsubishi Electric's is large static UPS from 80 kVA to 2 MW with a battery store, built on three-level IGBT and silicon-carbide topologies. Where they meet is the same purchase decision at the same megawatt scale, so a buyer comparing them is comparing architectures rather than products.",
-   "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com"
   }
  ],
  "policyExposure": [
@@ -1579,11 +1570,6 @@
    "date": "2025-05"
   },
   {
-   "label": "Research and Markets via Business Wire — data center UPS market outlook 2025-2030 names the dominant vendor set",
-   "url": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
-   "date": "2025-04-25"
-  },
-  {
    "label": "Piller — Microgrid Solutions at Middle East Energy Dubai",
    "url": "https://www.piller.com/piller-power-systems-showcases-microgrid-solutions-for-remote-data-centres-at-middle-east-energy-dubai/",
    "date": "2025-04-10"
@@ -2170,5 +2156,5 @@
   }
  ],
  "lastUpdated": "2026-09-03",
- "profileVersion": 2
+ "profileVersion": 1
 }

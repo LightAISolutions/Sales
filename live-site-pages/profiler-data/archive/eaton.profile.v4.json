@@ -206,24 +206,6 @@
    "slug": "abb",
    "type": "competitor",
    "note": "Top-five UPS peer (the five hold ~40–42% of data-center UPS per MarketsandMarkets); ABB attacks from medium voltage while Eaton defends LV incumbency."
-  },
-  {
-   "slug": "mitsubishi-electric",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-center UPS and transformers",
-   "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS, and again among the top companies in the power transformer market by MarketsandMarkets.",
-   "context": "The two meet in two of Mitsubishi Electric's three relevant markets. Global Market Insights places the top five in data-center UPS — Eaton, Schneider Electric, Vertiv, ABB and Delta — at about 60% of the market combined, with Mitsubishi Electric named in the top seven and given no share figure.\n\nMordor Intelligence separately puts Eaton inside the five suppliers controlling roughly 55-60% of North American medium-voltage switchgear, a tier Mitsubishi Electric sits below. The pattern across all three markets is consistent: Eaton is ranked with a number, Mitsubishi Electric is named without one.",
-   "source": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com"
-  },
-  {
-   "slug": "powell-industries",
-   "type": "competitor",
-   "status": "active",
-   "via": "Medium-voltage switchgear and low-voltage breaker elements",
-   "note": "Powell Industries' Form 10-K names Eaton among its principal competitors, and Powell simultaneously designs its FlexGear and FlexTrol platforms to accept Eaton Magnum DS draw-out breakers and Eaton draw-out contactors.",
-   "context": "The dual relationship is the commercially interesting part. Powell's universal-platform strategy means it buys the interrupting element from a company it names as a competitor in its own filing, and sells the assembly, the engineering and the arc-resistant structure around it.\n\nThere is also a board-level link: Powell director James W. McGill spent forty years at Eaton, retiring as President of its Electrical Sector for the Americas. Mordor Intelligence places Eaton inside the top five holding roughly 55-60% of North American medium-voltage switchgear, with Powell in the specialist tier competing on a ten-week lead time from Texas.",
-   "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
   }
  ],
  "technicalSpecs": [
@@ -468,11 +450,6 @@
    "date": "2026-02"
   },
   {
-   "label": "Powell Industries — FY2025 Form 10-K (year ended 2025-09-30)",
-   "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
-   "date": "2025-11-19"
-  },
-  {
    "label": "Boyd Thermal acquisition announcement",
    "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-signs-agreement-to-acquire-boyd-thermal--expandin-solutio.html",
    "date": "2025-11"
@@ -498,11 +475,6 @@
    "date": "2025-06-03"
   },
   {
-   "label": "Research and Markets via Business Wire — data center UPS market outlook 2025-2030 names the dominant vendor set",
-   "url": "https://www.businesswire.com/news/home/20250425227920/en/Data-Center-UPS-Market-Outlook-Forecast-2025-2030---ABB-Eaton-Vertiv-Schneider-Electric-Delta-Electronics-Legrand-Piller-Power-Systems-and-Mitsubishi-Electric-Dominate---ResearchAndMarkets.com",
-   "date": "2025-04-25"
-  },
-  {
    "label": "GuruFocus Q4 2024 verdict",
    "url": "https://www.gurufocus.com/news/2676015/eaton-corp-plc-reports-q4-2024-earnings-adjusted-eps-of-283-beats-estimates-revenue-at-624-billion-misses-expectations",
    "date": "2025-01"
@@ -516,6 +488,6 @@
    "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }
