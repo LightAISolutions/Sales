@@ -25,13 +25,13 @@
       "hq": "Zurich, Switzerland",
       "ticker": "SIX: ABBN",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "global.abb",
         "abb.com"
       ],
-      "srcTotal": 18,
-      "srcFirstPct": 72,
+      "srcTotal": 19,
+      "srcFirstPct": 68,
       "kpiNorm": true
     },
     {
@@ -88,13 +88,13 @@
       "hq": "Seattle, WA, USA",
       "ticker": "NASDAQ: AMZN",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "aboutamazon.com",
         "amazon.com"
       ],
-      "srcTotal": 22,
-      "srcFirstPct": 55,
+      "srcTotal": 23,
+      "srcFirstPct": 57,
       "kpiNorm": true
     },
     {
@@ -434,13 +434,13 @@
       "hq": "Taipei, Taiwan",
       "ticker": "TWSE: 2308",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "deltaww.com",
         "delta-americas.com"
       ],
-      "srcTotal": 14,
-      "srcFirstPct": 57,
+      "srcTotal": 16,
+      "srcFirstPct": 50,
       "kpiNorm": true
     },
     {
@@ -492,12 +492,12 @@
       "hq": "Dublin, Ireland",
       "ticker": "NYSE: ETN",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "eaton.com"
       ],
-      "srcTotal": 15,
-      "srcFirstPct": 73,
+      "srcTotal": 16,
+      "srcFirstPct": 69,
       "kpiNorm": true
     },
     {
@@ -616,6 +616,34 @@
       "kpiNorm": true
     },
     {
+      "slug": "flex",
+      "name": "Flex",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Contract manufacturer that bought its way into owning the data-centre power train — Anord Mardix, Crown, JetCool, EP² and a .4bn EPC Power deal — then approved spinning the whole segment out for early 2027.",
+      "hq": "Austin, Texas, United States",
+      "ticker": "NASDAQ: FLEX",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "flex.com",
+        "anordmardix.com",
+        "jetcool.com",
+        "crowntechnicalsystems.com",
+        "ep2.com",
+        "flexcoreworks.com",
+        "farmpd.com",
+        "irumold.com",
+        "motioncontrols.com",
+        "sheldahl.com",
+        "sv.dk"
+      ],
+      "srcTotal": 91,
+      "srcFirstPct": 68,
+      "kpiNorm": true
+    },
+    {
       "slug": "flexgen",
       "name": "FlexGen",
       "categories": [
@@ -678,14 +706,14 @@
       "hq": "Mountain View, CA, USA",
       "ticker": "NASDAQ: GOOGL",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "abc.xyz",
         "google",
         "google.com"
       ],
-      "srcTotal": 22,
-      "srcFirstPct": 45,
+      "srcTotal": 23,
+      "srcFirstPct": 43,
       "kpiNorm": true
     },
     {
@@ -795,6 +823,25 @@
       "srcTotal": 26,
       "srcFirstPct": 38,
       "kpiNorm": false
+    },
+    {
+      "slug": "infineon",
+      "name": "Infineon Technologies",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The silicon layer of the 800 VDC chain — SiC, GaN and silicon from the solid-state transformer to the point of load; Gartner’s “company to beat” in AI data-centre power semiconductors, and one of fourteen NVIDIA silicon partners rather than a sole source.",
+      "hq": "Neubiberg, Germany",
+      "ticker": "FWB: IFX",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "infineon.com",
+        "infineon.cn"
+      ],
+      "srcTotal": 77,
+      "srcFirstPct": 53,
+      "kpiNorm": true
     },
     {
       "slug": "iren",
@@ -947,12 +994,12 @@
       "hq": "Taipei, Taiwan",
       "ticker": "TWSE: 2301",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "liteon.com"
       ],
-      "srcTotal": 14,
-      "srcFirstPct": 57,
+      "srcTotal": 15,
+      "srcFirstPct": 53,
       "kpiNorm": true
     },
     {
@@ -1020,12 +1067,12 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002851",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "megmeet.com"
       ],
-      "srcTotal": 29,
-      "srcFirstPct": 55,
+      "srcTotal": 30,
+      "srcFirstPct": 53,
       "kpiNorm": true
     },
     {
@@ -1076,7 +1123,7 @@
       "hq": "Tokyo, Japan",
       "ticker": "TSE: 6503",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "mitsubishielectric.com",
         "mitsubishielectric.co.jp",
@@ -1085,8 +1132,8 @@
         "mitsubishicritical.com",
         "agilitycms.cloud"
       ],
-      "srcTotal": 76,
-      "srcFirstPct": 62,
+      "srcTotal": 78,
+      "srcFirstPct": 60,
       "kpiNorm": false
     },
     {
@@ -1195,12 +1242,12 @@
       "hq": "Santa Clara, CA, USA",
       "ticker": "NASDAQ: NVDA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "nvidia.com"
       ],
-      "srcTotal": 15,
-      "srcFirstPct": 60,
+      "srcTotal": 16,
+      "srcFirstPct": 56,
       "kpiNorm": true
     },
     {
@@ -1341,15 +1388,15 @@
       "hq": "Houston, Texas, United States",
       "ticker": "NASDAQ: POWL",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "powellind.com",
         "powellindustriesinc.gcs-web.com",
         "d2g0qum68t5ct7.cloudfront.net",
         "nextron.ca"
       ],
-      "srcTotal": 67,
-      "srcFirstPct": 75,
+      "srcTotal": 68,
+      "srcFirstPct": 74,
       "kpiNorm": true
     },
     {
@@ -1545,12 +1592,12 @@
       "hq": "Rueil-Malmaison, France",
       "ticker": "EPA: SU",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "se.com"
       ],
-      "srcTotal": 15,
-      "srcFirstPct": 73,
+      "srcTotal": 16,
+      "srcFirstPct": 69,
       "kpiNorm": true
     },
     {
@@ -1821,12 +1868,12 @@
       "hq": "Columbus, OH, USA",
       "ticker": "NYSE: VRT",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "vertiv.com"
       ],
-      "srcTotal": 13,
-      "srcFirstPct": 62,
+      "srcTotal": 14,
+      "srcFirstPct": 57,
       "kpiNorm": true
     },
     {
@@ -1839,7 +1886,7 @@
       "hq": "Andover, MA, USA",
       "ticker": "NASDAQ: VICR",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "vicorpower.com",
         "vicorcorporation.gcs-web.com"

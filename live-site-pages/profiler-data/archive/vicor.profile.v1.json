@@ -486,15 +486,6 @@
    "note": "SemiAnalysis (2023) lists Tesla among Vicor's prior AI-accelerator power design wins; no current engagement is stated by either company.",
    "context": "SemiAnalysis's 2023 account includes Tesla in the roster of accelerator programs — with V100, A100, Google TPU, AMD MI300, Intel Gaudi3/PVC and Cerebras WSE2 — that used Vicor's Power-on-Package before the H100 design-out. Neither Vicor's releases nor Tesla's filings in this corpus mention the other, so the link is carried as historical on the strength of a single independent source.",
    "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition"
-  },
-  {
-   "slug": "infineon",
-   "type": "competitor",
-   "status": "active",
-   "via": "AI point-of-load power delivery",
-   "note": "SemiAnalysis's competitive analysis of AI power delivery names exactly six players in one market — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon.",
-   "context": "An explicit six-name competitive set for hyperscale data-centre power delivery, which is the layer where both sell point-of-load conversion into accelerator boards.\n\nInfineon publishes lumped power-delivery-network resistance figures for the same design problem Vicor's factorized architecture addresses — 90 to 140 microhms for a discrete lateral layout against 10 to 15 for a backside vertical module and 7 to 10 for a substrate-integrated regulator — and states mass production of its next-generation vertical modules for the first quarter of 2027.\n\nGartner named Infineon the company to beat in AI data-centre power semiconductors in May 2026 while noting in the same report that its lead is being tested by rivals focused on the compute board level. That is the layer this link describes, and it is the one where neither company won the H100 socket.",
-   "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition"
   }
  ],
  "policyExposure": [
@@ -1888,8 +1879,8 @@
    "url": "https://commons.wikimedia.org/wiki/Category:Vicor_Corporation"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 2,
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1,
  "founded": 1981,
  "employees": "1,092 full-time + 23 part-time (Dec 31, 2025)",
  "summary": "BOTTOM LINE UP FRONT: Vicor is the point-of-load and bus-converter silicon vendor for the 48 V and 800 V AI rack whose revenue has been re-based by patent enforcement — a February 2025 ITC exclusion order over its bus-converter patents turned royalties from 3.9% of revenue in 2023 into 21% of the June 2026 quarter, while its single Andover ChiP fab approaches capacity on a second-generation vertical-power-delivery ramp for a lead customer it will not name; the next verifiable tests are the Q3 2026 results expected around 20 October 2026 (unconfirmed), the second-fab site decision management said in July was weeks away, and the May 2027 initial determination in its second ITC case against Delta, Monolithic Power Systems and the server ODMs. BACKGROUND. Founded in Andover, Massachusetts in 1981 by Patrizio Vinciarelli, who remains chairman, president and CEO at 79 with ten-vote Class B shares; NASDAQ: VICR; 1,092 full-time employees at end-2025 per the 10-K; one reportable segment split between Advanced Products (the Factorized Power Architecture — PRM regulators, VTM current multipliers, Power-on-Package and vertical power delivery — plus BCM, NBM and DCM converters) and legacy Brick Products (39.0% of 2025 net revenues). FY2025 revenue was $452.7M including a $45.0M patent-litigation settlement (net revenues $407.7M: product $350.3M, royalty $57.4M), net income $118.6M; Q2 2026 revenue $143.4M with royalty $30.4M, backlog $380M and cash $453.6M, per SEC 8-K exhibits. Products are built on a proprietary panel-level 'ChiP' process in one company-owned 320,000-square-foot Andover building whose fab opened in May 2022; the company earned CHIPS Act advanced-manufacturing credits on it. The IP practice, headed by a General Counsel for Intellectual Property since October 2025, rests on 128 US patents; the ITC found a Section 337 violation on two of three patents in February 2025 (with Delta's redesigned products non-infringing and Foxconn affiliates licensed), a $45M settlement with unnamed parties followed in May 2025, an all-inclusive OEM licence structured as $60M over two years followed in May 2026, and a second investigation on a patent issued in August 2025 was instituted in February 2026 with a target date of September 2027. Vicor is absent from every NVIDIA 800 VDC partner list published since May 2025.",

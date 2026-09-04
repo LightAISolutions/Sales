@@ -100,6 +100,14 @@
       ]
     },
     {
+      "slug": "ampacity",
+      "term": "ampacity",
+      "def": "The current a conductor is allowed to carry continuously without exceeding its insulation's temperature limit. It falls when conductors are bundled, run hot, or run in a hot room — so the same cable is not the same rating everywhere.",
+      "aliases": [
+        "current-carrying capacity"
+      ]
+    },
+    {
       "slug": "anti-islanding",
       "term": "anti-islanding",
       "def": "Protection that stops an on-site generator from continuing to energize a utility line after the utility has disconnected. It exists to protect line workers, and it is why a set that runs in parallel with the grid needs more relaying than one that only ever runs on a dead bus.",
@@ -180,6 +188,15 @@
       ]
     },
     {
+      "slug": "avalanche",
+      "term": "avalanche",
+      "def": "What happens when a switch is pushed past its breakdown voltage and conducts anyway, dissipating the energy in the process. Some devices are rated to survive a stated amount of it; exceeding that rating destroys the part.",
+      "aliases": [
+        "avalanche energy",
+        "avalanche rating"
+      ]
+    },
+    {
       "slug": "balancing-authority",
       "term": "balancing authority",
       "def": "The entity that keeps generation and load matched second by second inside a defined area of the grid. In an RTO region the RTO is the balancing authority; outside one, a large vertically integrated utility can be its own — it dispatches its own plants, holds its own reserves and has no organized capacity market to buy from.",
@@ -231,6 +248,16 @@
       ]
     },
     {
+      "slug": "bipolar-device",
+      "term": "bipolar device",
+      "def": "A switch that floods its drift region with both kinds of charge carrier to conduct, like an IGBT. The flooding gives a low voltage drop at high current regardless of rating, but the stored charge has to be removed at turn-off, which costs time and energy.",
+      "aliases": [
+        "bipolar",
+        "minority carrier device",
+        "conductivity modulation"
+      ]
+    },
+    {
       "slug": "black-start",
       "term": "black start",
       "def": "Restarting a dead network with no outside power to draw on: small units boot first to energize controls and fuel systems, then larger machines and load return in stages. Rarely exercised on the grid and definitional for an island or a microgrid, which has nothing else to start from.",
@@ -259,11 +286,45 @@
       ]
     },
     {
+      "slug": "body-diode",
+      "term": "body diode",
+      "def": "A diode that exists inside every power MOSFET as a by-product of how it is built. It conducts current backwards through the device, which is useful in some circuits and a source of loss in others, because it takes time to stop conducting when the voltage reverses.",
+      "aliases": [
+        "intrinsic diode"
+      ]
+    },
+    {
+      "slug": "bom",
+      "term": "BOM",
+      "def": "Bill of materials — the itemised list of every part in a product with its manufacturer and part number. Who controls it decides who can substitute a part, who sees what each part costs, and how hard it is to move the product to another factory.",
+      "aliases": [
+        "bill of materials"
+      ]
+    },
+    {
+      "slug": "box-build",
+      "term": "box build",
+      "def": "Assembling finished units — enclosure, boards, wiring, cooling, labels and packaging — rather than just circuit boards. It is a step up the value chain from board assembly and puts the manufacturer in charge of the product the customer actually ships.",
+      "aliases": [
+        "box-build",
+        "systems integration build"
+      ]
+    },
+    {
       "slug": "brayton-cycle",
       "term": "Brayton cycle",
       "def": "The thermodynamic cycle a gas turbine runs on: compress air, add heat by burning fuel in it, expand the hot gas through a turbine, exhaust what is left. Roughly half the turbine's output is consumed driving its own compressor, and efficiency rises with both the pressure ratio and the temperature the machine can survive at — which is why turbine development is largely a materials problem.",
       "aliases": [
         "Brayton"
+      ]
+    },
+    {
+      "slug": "breakdown-voltage",
+      "term": "breakdown voltage",
+      "def": "The voltage a switch can hold off before it conducts uncontrollably. Designers never run a device near it: a bus voltage plus its switching overshoot is usually kept below about 80% of the rating, so an 800-volt bus needs a device rated well above 800 volts.",
+      "aliases": [
+        "voltage rating",
+        "blocking voltage"
       ]
     },
     {
@@ -478,6 +539,14 @@
       "def": "The property that any single component can be taken out of service for planned work without dropping the critical load — the defining requirement of Uptime Tier III. It is decided by topology rather than by equipment quality: there must be a second path, and the switch onto it must itself be safe."
     },
     {
+      "slug": "consignment",
+      "term": "consignment",
+      "def": "A manufacturing contract in which the customer supplies some or all of the parts and pays only for the work. It keeps component pricing visible to the customer and keeps the inventory on the customer's books.",
+      "aliases": [
+        "consigned material"
+      ]
+    },
+    {
       "slug": "construction-monitoring",
       "term": "construction monitoring",
       "def": "A recurring commission review of a certified project while it is being built — schedule, spend against the certified cost, and whether the money so far was prudent — so cost overruns are examined as they happen rather than in one prudence review at the end. Georgia adopted it for Vogtle 3 and 4.",
@@ -496,6 +565,15 @@
         "COP",
         "continuous operating power",
         "continuous duty"
+      ]
+    },
+    {
+      "slug": "contract-manufacturer",
+      "term": "contract manufacturer",
+      "def": "A firm that builds hardware to someone else's design and specification. The customer owns the design, the drawings and usually the tooling; the manufacturer sells labour, purchasing power and factory capacity.",
+      "aliases": [
+        "contract manufacturing",
+        "CM"
       ]
     },
     {
@@ -665,6 +743,14 @@
       ]
     },
     {
+      "slug": "customer-concentration",
+      "term": "customer concentration",
+      "def": "The share of a company's revenue coming from its largest customers. High concentration means the loss or slowdown of one relationship moves the whole company, which is why filings are required to disclose it.",
+      "aliases": [
+        "revenue concentration"
+      ]
+    },
+    {
       "slug": "cwip",
       "term": "CWIP",
       "def": "Construction work in progress: plant that is being built but is not yet in service. Normally it earns no return until it is finished; a legislature or commission that lets CWIP into rate base lets the utility charge customers for a plant before it produces anything, which lowers financing cost and shifts construction risk toward customers.",
@@ -722,6 +808,14 @@
       ]
     },
     {
+      "slug": "dead-time",
+      "term": "dead time",
+      "def": "A deliberate pause in which both switches of a half-bridge are off, inserted so they can never be on together across the supply. Too little risks a destructive shoot-through; too much forces current through a body diode and wastes energy.",
+      "aliases": [
+        "deadtime"
+      ]
+    },
+    {
       "slug": "decoupling",
       "term": "decoupling",
       "def": "A rate mechanism that separates a utility's revenue from the volume of energy it sells, so that selling less does not cut its earnings and selling more does not raise them — with a true-up each year. It removes the utility's incentive to oppose efficiency, and it changes what data-center load growth is worth to it: under full decoupling the growth pays for wires, not profit.",
@@ -763,6 +857,23 @@
       "aliases": [
         "derate",
         "derated"
+      ]
+    },
+    {
+      "slug": "design-authority",
+      "term": "design authority",
+      "def": "The party contractually entitled to approve a change to the product — a component substitution, a layout revision, a supplier swap. Confusion about who holds it is the most common cause of a manufacturing dispute.",
+      "aliases": [
+        "change control authority"
+      ]
+    },
+    {
+      "slug": "design-cycle",
+      "term": "design cycle",
+      "def": "The years between a component being chosen for a product and that product shipping in volume. In power semiconductors it means today's revenue was decided by decisions taken two or three years ago, and today's decisions will not show up in revenue for as long again.",
+      "aliases": [
+        "design-in cycle",
+        "qualification cycle"
       ]
     },
     {
@@ -880,6 +991,14 @@
       ]
     },
     {
+      "slug": "drift-region",
+      "term": "drift region",
+      "def": "The lightly doped layer inside a power transistor that absorbs the voltage when the device is off. It has to be thicker for a higher voltage rating, and every micron of thickness adds resistance when the device is on — the trade at the heart of power-device design.",
+      "aliases": [
+        "drift layer"
+      ]
+    },
+    {
       "slug": "droop",
       "term": "droop",
       "def": "A governor setting that lets an engine's speed fall slightly as its load rises, so several engines sharing a bus each take a predictable share of the load instead of fighting over it. Its partner is isochronous control, which holds speed exactly constant and is given to one machine or to the paralleling controller so the bus frequency stays put.",
@@ -909,6 +1028,16 @@
         "cast-resin transformer",
         "cast resin",
         "dry type transformer"
+      ]
+    },
+    {
+      "slug": "dual-sourcing",
+      "term": "dual sourcing",
+      "def": "Qualifying two suppliers for the same item so neither can hold the buyer hostage on price or availability. It costs money — two qualifications, two tool sets, split volume that raises unit cost — which is why it is an argued decision rather than a default.",
+      "aliases": [
+        "second source",
+        "dual-source",
+        "multi-sourcing"
       ]
     },
     {
@@ -986,6 +1115,15 @@
       ]
     },
     {
+      "slug": "electronics-manufacturing-services",
+      "term": "electronics manufacturing services",
+      "def": "The industry of building electronics for other companies, spanning bare circuit-board assembly through full product assembly, test, distribution and repair. Its economics are volume and purchasing scale, so margins are thin and the winners are large.",
+      "aliases": [
+        "EMS provider",
+        "electronic manufacturing services"
+      ]
+    },
+    {
       "slug": "emergency-generator",
       "term": "emergency generator",
       "def": "The regulatory class for a stationary engine that runs only when the normal supply fails, plus a small annual allowance of hours for testing and maintenance. The class is what lets a backup fleet be permitted quickly and without the strictest emission controls — and it is lost the moment the same engines are run for prime power, peak shaving or a demand-response payment.",
@@ -1060,6 +1198,16 @@
       "def": "Engineering, procurement, and construction: the contractor model that delivers a plant turnkey under one contract — and the label for the firms that do it.",
       "aliases": [
         "engineering, procurement, and construction"
+      ]
+    },
+    {
+      "slug": "epitaxial-layer",
+      "term": "epitaxial layer",
+      "def": "A thin crystal layer grown on top of a wafer to a precisely controlled thickness and doping. In a power device it is the drift region, so its quality sets both the voltage the part can hold off and how many good parts a wafer yields.",
+      "aliases": [
+        "epitaxy",
+        "epi layer",
+        "epi"
       ]
     },
     {
@@ -1179,6 +1327,14 @@
       ]
     },
     {
+      "slug": "figure-of-merit",
+      "term": "figure of merit",
+      "def": "A single number that multiplies a device's on-resistance by a switching-related charge, so two switches can be compared on conduction and switching cost together. Lower is better, and it is how a datasheet argument about one material beating another is usually settled.",
+      "aliases": [
+        "RDS(on) x Qg"
+      ]
+    },
+    {
       "slug": "firing-temperature",
       "term": "firing temperature",
       "def": "How hot the gas is where it first meets the turbine blades — the single number a gas turbine's efficiency and output track most closely. Every extra hundred degrees buys efficiency and costs materials science: single-crystal blades, ceramic coatings and cooling air bled from the compressor, which is itself a loss. Modern heavy-duty machines are described by class as 1,600°C or 1,650°C.",
@@ -1198,6 +1354,15 @@
         "energy emergency alert",
         "rotating outages",
         "load shed event"
+      ]
+    },
+    {
+      "slug": "first-article-inspection",
+      "term": "first article inspection",
+      "def": "A formal check of the first units off a production tool against every dimension and requirement on the drawing. Passing it is what turns a prototype process into an approved one, and it is a contractual milestone, not a courtesy.",
+      "aliases": [
+        "first article",
+        "FAI"
       ]
     },
     {
@@ -1326,6 +1491,15 @@
       ]
     },
     {
+      "slug": "gate-charge",
+      "term": "gate charge",
+      "def": "The amount of charge that has to be pushed into a transistor's gate to turn it on. A device with less gate charge switches faster and costs the driver less power, which matters more the more times per second the circuit switches.",
+      "aliases": [
+        "Qg",
+        "gate drive charge"
+      ]
+    },
+    {
       "slug": "gen-set",
       "term": "gen-set",
       "def": "Generator set: an engine or turbine coupled to an alternator on one frame, with its controls, cooling and fuel system — the packaged unit a data center buys, rather than a bare engine. Rated in kilowatts or kilovolt-amperes at a declared duty: standby, prime or continuous.",
@@ -1359,6 +1533,14 @@
       "def": "An inverter that sets its own voltage and frequency like a traditional generator, rather than following the grid's. It lets storage stabilize weak grids and restart dead ones (black start).",
       "aliases": [
         "grid-forming"
+      ]
+    },
+    {
+      "slug": "half-bridge",
+      "term": "half-bridge",
+      "def": "Two switches in series across a supply with the load taken from the point between them. Almost every power converter is built from one or more of these, and most of what can go wrong in one is about what happens at the instant the pair change over.",
+      "aliases": [
+        "half bridge"
       ]
     },
     {
@@ -1741,6 +1923,15 @@
       ]
     },
     {
+      "slug": "joint-design-manufacturer",
+      "term": "JDM",
+      "def": "Joint design manufacture — an arrangement in which buyer and manufacturer develop the product together, splitting the design work and, usually, arguing later about who owns which part of it.",
+      "aliases": [
+        "joint design manufacturing",
+        "joint development manufacturing"
+      ]
+    },
+    {
       "slug": "just-transition",
       "term": "just transition",
       "def": "The policy of retiring coal plants on a schedule while funding the workers and communities that depended on them. Colorado wrote it into law in 2019 with a 2030 carbon target and a state office; it is why the state's resource plans pair a coal retirement date with a replacement build and a community package in the same decision.",
@@ -1809,6 +2000,15 @@
       "aliases": [
         "lithium iron phosphate",
         "LiFePO4"
+      ]
+    },
+    {
+      "slug": "llc-converter",
+      "term": "LLC converter",
+      "def": "An isolated converter that uses a resonant tank so its switches turn on when the voltage across them is already near zero. That removes most of the switching loss and lets the stage run at high frequency, which is how a kilowatt supply fits in a small box.",
+      "aliases": [
+        "LLC",
+        "LLC resonant converter"
       ]
     },
     {
@@ -1990,6 +2190,15 @@
       ]
     },
     {
+      "slug": "mosfet",
+      "term": "MOSFET",
+      "def": "Metal-oxide-semiconductor field-effect transistor: a switch in which a voltage on an insulated gate opens or closes a conducting channel. It conducts with electrons only, so it stops conducting the instant the gate is pulled low and behaves like a resistor when on.",
+      "aliases": [
+        "metal-oxide-semiconductor field-effect transistor",
+        "power MOSFET"
+      ]
+    },
+    {
       "slug": "mtbf",
       "term": "MTBF",
       "aliases": [
@@ -2015,6 +2224,16 @@
         "MYRP",
         "multiyear rate plan",
         "multi-year plan"
+      ]
+    },
+    {
+      "slug": "multiphase-regulator",
+      "term": "multiphase regulator",
+      "def": "A point-of-load converter built from several identical stages that take turns delivering current into one output. Splitting the job spreads the heat, shrinks the filter each stage needs, and lets the controller shut stages off at light load.",
+      "aliases": [
+        "multiphase converter",
+        "multi-phase regulator",
+        "phase"
       ]
     },
     {
@@ -2118,6 +2337,14 @@
       ]
     },
     {
+      "slug": "npi",
+      "term": "NPI",
+      "def": "New product introduction — the phase between a working prototype and volume production, where the design is made buildable: tooling cut, test fixtures written, the line laid out and the first units built and torn down. It is where most of a manufacturing relationship's risk actually sits.",
+      "aliases": [
+        "new product introduction"
+      ]
+    },
+    {
       "slug": "nuclear-uprate",
       "term": "nuclear uprate",
       "def": "Raising an existing reactor's licensed output — by a few percent through better instrumentation, or by up to a fifth through new turbines and equipment — with the regulator's approval. It is the cheapest firm capacity a utility with a nuclear fleet can add, because the site, the licence and the operators already exist.",
@@ -2127,6 +2354,24 @@
         "uprates",
         "extended power uprate",
         "measurement uncertainty recapture"
+      ]
+    },
+    {
+      "slug": "obsolescence",
+      "term": "obsolescence",
+      "def": "A component going out of production while the product that uses it is still selling. Managing it — last-time buys, qualified replacements, redesign — is a standing cost of owning any electronic product for more than a few years.",
+      "aliases": [
+        "end-of-life notice",
+        "EOL notice",
+        "component obsolescence"
+      ]
+    },
+    {
+      "slug": "odm",
+      "term": "ODM",
+      "def": "Original design manufacturer — a firm that designs the product as well as building it, then sells it to a brand or a buyer who puts their own label on it. The design, and the ability to sell it again to the next customer, stays with the manufacturer.",
+      "aliases": [
+        "original design manufacturer"
       ]
     },
     {
@@ -2142,6 +2387,16 @@
         "OLTC",
         "tap changer",
         "tap-changer"
+      ]
+    },
+    {
+      "slug": "on-resistance",
+      "term": "on-resistance",
+      "def": "The resistance a switch shows while it is conducting, written R-DS(on). Multiply it by the square of the current to get the heat the device makes just by being on. It rises with temperature, so a hot device wastes more than a cold one carrying the same current.",
+      "aliases": [
+        "RDS(on)",
+        "R-DS(on)",
+        "Rds(on)"
       ]
     },
     {
@@ -2178,6 +2433,15 @@
       ]
     },
     {
+      "slug": "parasitic-inductance",
+      "term": "parasitic inductance",
+      "def": "The unwanted inductance of the wiring, leadframe and copper around a switch. It resists sudden changes in current, so it turns a fast turn-off into a voltage spike across the device — which is why package design, not silicon, often sets how fast a converter is allowed to switch.",
+      "aliases": [
+        "stray inductance",
+        "loop inductance"
+      ]
+    },
+    {
       "slug": "part-load",
       "term": "part load",
       "def": "Running a generating machine below its full rating. Efficiency and emissions both move with load — a large gas turbine is efficient only near full output, while a fleet of engines can shut units down and keep the rest at their sweet spot — so the shape of the load, not just its peak, decides which machine is cheaper to run.",
@@ -2185,6 +2449,15 @@
         "part-load",
         "part-load efficiency",
         "turndown"
+      ]
+    },
+    {
+      "slug": "pcba",
+      "term": "PCBA",
+      "def": "Printed circuit board assembly — a bare board with its components soldered on and tested. It is the unit most electronics manufacturing is priced and scheduled in, one level below a finished product.",
+      "aliases": [
+        "printed circuit board assembly",
+        "board assembly"
       ]
     },
     {
@@ -2219,6 +2492,16 @@
       "aliases": [
         "peak shave",
         "demand limiting"
+      ]
+    },
+    {
+      "slug": "pfc",
+      "term": "power factor correction",
+      "def": "A stage at the front of an AC supply that forces the current it draws to follow the shape of the mains voltage. Without it the supply draws current in short peaks, which wastes capacity in every transformer and cable upstream and is limited by standards.",
+      "aliases": [
+        "PFC",
+        "power-factor correction",
+        "totem-pole PFC"
       ]
     },
     {
@@ -2305,6 +2588,26 @@
       "aliases": [
         "power shelves",
         "rack power shelf"
+      ]
+    },
+    {
+      "slug": "power-skid",
+      "term": "power skid",
+      "def": "A factory-assembled block of electrical equipment — transformer, switchgear, distribution and controls — built and tested on a steel frame in a shop and delivered as one unit. It moves work off the construction site and into a factory, which is usually the faster of the two.",
+      "aliases": [
+        "prefabricated power module",
+        "power module skid",
+        "modular power skid"
+      ]
+    },
+    {
+      "slug": "power-stage",
+      "term": "power stage",
+      "def": "A single package holding a half-bridge of switches together with the driver that turns them on and off. Integrating them shortens the connections between driver and switch, which is what lets the pair switch fast enough and cleanly enough to be useful at high current.",
+      "aliases": [
+        "DrMOS",
+        "integrated power stage",
+        "smart power stage"
       ]
     },
     {
@@ -2535,6 +2838,15 @@
       ]
     },
     {
+      "slug": "remote-power-panel",
+      "term": "remote power panel",
+      "def": "A distribution cabinet placed out on the data-hall floor, fed from a larger upstream board, that breaks power out into the branch circuits serving racks. It shortens the runs to the load and puts metering and breakers where the equipment actually is.",
+      "aliases": [
+        "RPP",
+        "remote power panel (RPP)"
+      ]
+    },
+    {
       "slug": "retail-choice",
       "term": "retail choice",
       "def": "A restructured market in which the wires company delivers power but customers buy the energy from competing retailers, and generation is not in rate base. Most of Texas works this way inside ERCOT; the Southeast and MISO South do not, which is why a data center there signs with one integrated utility rather than a retailer and a wires company.",
@@ -2553,6 +2865,15 @@
       "def": "The total a utility is allowed to collect from customers over a period: operating costs plus depreciation plus taxes plus the allowed return on rate base. A rate case is an argument about this one number, and the tariffs are how it is divided among customer classes.",
       "aliases": [
         "revenue requirements"
+      ]
+    },
+    {
+      "slug": "reverse-recovery",
+      "term": "reverse recovery",
+      "def": "The brief backwards current a diode draws while it stops conducting, because stored charge has to be swept out first. That current flows through the opposite switch at full bus voltage, so it appears as heat and as a spike of electrical noise.",
+      "aliases": [
+        "reverse recovery charge",
+        "Qrr"
       ]
     },
     {
@@ -2689,6 +3010,16 @@
       ]
     },
     {
+      "slug": "secondary-fluid-network",
+      "term": "secondary fluid network",
+      "def": "The closed loop of clean coolant that runs between a distribution unit and the cold plates in the racks, kept separate from the building's own chilled-water loop. Separating them lets the rack loop be filtered, treated and pressure-controlled independently of the facility.",
+      "aliases": [
+        "technology cooling system",
+        "TCS loop",
+        "secondary loop"
+      ]
+    },
+    {
       "slug": "section-301",
       "term": "Section 301 tariffs",
       "def": "US tariffs on Chinese imports imposed under Section 301 of the Trade Act — including steep rates on lithium-ion batteries — that reshape the landed cost of China-sourced storage hardware.",
@@ -2784,6 +3115,14 @@
       ]
     },
     {
+      "slug": "shoot-through",
+      "term": "shoot-through",
+      "def": "The fault in which both switches of a half-bridge conduct at once, putting the full supply across two devices in series with almost nothing to limit the current. It is usually fatal to the devices and is what dead time exists to prevent.",
+      "aliases": [
+        "cross-conduction"
+      ]
+    },
+    {
       "slug": "short-circuit-study",
       "term": "short-circuit study",
       "def": "The calculation of how much current would flow at every point in an electrical system if it faulted there, given every source that can contribute — the utility, the generators, and the motors that briefly act as generators as they spin down. It sets the interrupting rating every breaker must meet and is the input both the coordination study and the arc-flash calculation run on.",
@@ -2791,6 +3130,15 @@
         "fault study",
         "short circuit study",
         "available fault current"
+      ]
+    },
+    {
+      "slug": "should-cost",
+      "term": "should-cost",
+      "def": "A buyer's own bottom-up estimate of what a product ought to cost to build, assembled from materials, labour, overhead and a fair margin. It exists so the buyer can negotiate against an analysis rather than against a quote.",
+      "aliases": [
+        "should cost",
+        "should-cost model"
       ]
     },
     {
@@ -3030,6 +3378,15 @@
       ]
     },
     {
+      "slug": "superjunction",
+      "term": "superjunction",
+      "def": "A silicon MOSFET structure that buries alternating columns of opposite doping in the drift region so it can be doped harder without losing its voltage rating. It buys several times lower on-resistance for a given area than plain silicon and is what keeps silicon competitive at 600–900 volts.",
+      "aliases": [
+        "super junction",
+        "superjunction MOSFET"
+      ]
+    },
+    {
       "slug": "supplemental-transmission",
       "term": "supplemental transmission",
       "def": "Transmission a utility builds for its own reliability, ageing-equipment or local service needs rather than to solve a regional problem the grid operator identified. It enters the regional plan without the competitive window or the benefit-cost test that regional projects face, which is why consumer advocates treat it as the least-reviewed large category of utility spending.",
@@ -3123,6 +3480,14 @@
       ]
     },
     {
+      "slug": "tail-current",
+      "term": "tail current",
+      "def": "The slow decay of current in an IGBT after its gate has been turned off, caused by charge stored in the device that has nowhere to go. It happens at full bus voltage, so it is a direct energy loss on every switching cycle and is the main reason IGBTs are run at low switching frequencies.",
+      "aliases": [
+        "current tail"
+      ]
+    },
+    {
       "slug": "take-or-pay",
       "term": "take-or-pay",
       "def": "A contract in which the buyer pays for a committed quantity whether or not it is used. It shifts utilization risk to the buyer and turns a speculative revenue line into one lenders will underwrite — the structure behind both colocation leases and the minimum-take terms in large-load utility tariffs.",
@@ -3130,6 +3495,16 @@
         "take or pay",
         "committed capacity",
         "minimum take"
+      ]
+    },
+    {
+      "slug": "tap-off-box",
+      "term": "tap-off box",
+      "def": "A plug-in unit that clamps onto an energised busway to take a circuit off it, usually carrying its own breaker or fuses. It is what makes busway reconfigurable, and it is also the point where a new load can be added without anyone re-checking the protection upstream.",
+      "aliases": [
+        "tap off box",
+        "plug-in unit",
+        "bus plug"
       ]
     },
     {
@@ -3246,6 +3621,24 @@
       ]
     },
     {
+      "slug": "tooling",
+      "term": "tooling",
+      "def": "The moulds, jigs, fixtures and test rigs made specifically to build one product. Who paid for it and who is named as its owner in the contract is often the single fact that decides how quickly production can be moved somewhere else.",
+      "aliases": [
+        "tooling ownership",
+        "hard tooling"
+      ]
+    },
+    {
+      "slug": "top-side-cooling",
+      "term": "top-side cooling",
+      "def": "A package that takes heat out through its upper face into a heatsink or cold plate instead of down into the board. It matters when the underside of the board is full or the board itself is a poor thermal path — increasingly the case as converters move under the processor.",
+      "aliases": [
+        "top-cooled",
+        "dual-side cooling"
+      ]
+    },
+    {
       "slug": "transfer-time",
       "term": "transfer time",
       "def": "The interval between the normal supply failing and the load being carried by the alternate source — sensing, engine start and stabilization, then the switch itself. Stored energy must cover all of it; the standards fix the outer bound and the design decides how much shorter it actually is.",
@@ -3291,6 +3684,14 @@
       ]
     },
     {
+      "slug": "turnkey",
+      "term": "turnkey",
+      "def": "A manufacturing contract in which the builder buys all the materials as well as doing the work, and sells a finished unit at one price. It hands the builder the purchasing margin and the inventory risk together — the opposite of a consignment deal.",
+      "aliases": [
+        "turnkey manufacturing"
+      ]
+    },
+    {
       "slug": "twelve-pulse-rectifier",
       "term": "12-pulse rectifier",
       "def": "A diode rectifier fed through two transformer windings phase-shifted by thirty degrees, so the two halves' distortion partly cancels and the current drawn is much closer to a sine wave than a plain six-pulse bridge manages. It was the standard way to make a large UPS or drive tolerable to its upstream supply before active front ends took over.",
@@ -3305,6 +3706,15 @@
       "slug": "ul-9540a",
       "term": "UL 9540A",
       "def": "The test method that characterizes how battery fires start and propagate at cell, module, unit, and installation level. Its data feeds fire-safety design and permitting for storage projects."
+    },
+    {
+      "slug": "unipolar-device",
+      "term": "unipolar device",
+      "def": "A switch that conducts with one kind of charge carrier only, like a MOSFET. It has no stored charge to clear when it turns off, so it switches quickly and cleanly, but its resistance climbs steeply with voltage rating.",
+      "aliases": [
+        "unipolar",
+        "majority carrier device"
+      ]
     },
     {
       "slug": "ups",
@@ -3341,6 +3751,12 @@
       "aliases": [
         "Virginia Clean Economy Act"
       ]
+    },
+    {
+      "slug": "vertical-integration",
+      "term": "vertical integration",
+      "def": "Owning more than one consecutive step of a supply chain — designing, building and servicing the same product, for instance. It shortens hand-offs and captures more margin, at the cost of concentrating risk and reducing the buyer's ability to compare.",
+      "aliases": []
     },
     {
       "slug": "vertical-power-delivery",
@@ -3402,6 +3818,27 @@
       "def": "Voltage regulator module: the last conversion stage on the server board, stepping the rack's supply down to roughly one volt at the processor die. It is the final link in a chain of conversions running from the transmission line to the chip, and every one of them costs efficiency.",
       "aliases": [
         "voltage regulator module"
+      ]
+    },
+    {
+      "slug": "wafer-diameter",
+      "term": "wafer diameter",
+      "def": "The size of the disc a chip fab processes at once. A larger wafer carries proportionally more die for roughly the same handling cost per wafer, so moving from 150 mm to 200 mm is one of the few ways to cut the cost of a power device without changing the device.",
+      "aliases": [
+        "200 mm wafer",
+        "150 mm wafer",
+        "wafer size",
+        "8-inch wafer"
+      ]
+    },
+    {
+      "slug": "wide-bandgap",
+      "term": "wide bandgap",
+      "def": "A semiconductor whose electrons need much more energy to jump into conduction than silicon's do. The wider gap lets the material hold off a high voltage across a much thinner layer, which is why silicon carbide and gallium nitride switch faster and waste less than silicon at the same rating.",
+      "aliases": [
+        "wide-bandgap",
+        "bandgap",
+        "wide bandgap semiconductor"
       ]
     },
     {

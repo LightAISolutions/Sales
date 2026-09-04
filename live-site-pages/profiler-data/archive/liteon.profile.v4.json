@@ -152,15 +152,6 @@
    "context": "Delta shares NVIDIA's 800 VDC power-components tier with LITEON and holds the incumbent position (GTC demos, an NVIDIA DC-DC exclusive per the dossier's basis). KGI-attributed data places LITEON as the lead second source — strongest at a US CSP with an aggressive ASIC timeline — sampling August 2026 toward mass production Q1 2027.",
    "source": "Dossier competitive assessment — NVIDIA 800 VDC component tier",
    "status": "active"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "800 VDC power shelves",
-   "note": "NVIDIA names LITEON and Flex Power in the same power-system-components tier of its 800 VDC ecosystem, and both build power shelves to the same platform reference.",
-   "context": "The most directly comparable pairing at the product level. LITEON announced an 800 VDC power rack and a 110 kW power shelf on NVIDIA's MGX reference architecture at GTC 2026; Flex's Vera Rubin power shelf is also 110 kW, in 3RU, with a stated hold-up above 20 milliseconds at full load.\n\nWhen a platform owner publishes the reference architecture, the products converge by design. What differentiates them is the silicon inside, serviceability, manufacturing location, and how much of the rest of the chain the vendor also sells — and on that last point Flex is unusual in the tier, because it also owns switchgear, busway and liquid cooling.\n\nBasis is same-tier categorisation by the platform owner plus matching product announcements. No ranking firm publishes shares for this product category.",
-   "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx"
   }
  ],
  "policyExposure": [
@@ -354,11 +345,6 @@
  },
  "sources": [
   {
-   "label": "Flex — launch of the 800 VDC Power Rack for next-generation NVIDIA AI infrastructure",
-   "url": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
-   "date": "2026-03-16"
-  },
-  {
    "label": "LITEON Q2 2026 results",
    "url": "https://www.liteon.com/en/news/press-center/content/quarterly-second-eps-2026",
    "date": "2026-07-31"
@@ -424,6 +410,6 @@
    "url": "https://simplywall.st/stocks/tw/tech/twse-2301/lite-on-technology-shares/news/analyst-estimates-heres-what-brokers-think-of-lite-on-techno"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

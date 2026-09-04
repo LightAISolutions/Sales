@@ -17,6 +17,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-09-03",
    "supersededBy": 5
+  },
+  {
+   "file": "abb.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 6
   }
  ],
  "aligned": [
@@ -57,6 +63,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-08-30",
    "supersededBy": 5
+  },
+  {
+   "file": "amazon.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 6
   }
  ],
  "applied-digital": [
@@ -301,6 +313,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "delta-electronics.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 5
   }
  ],
  "dpr": [
@@ -341,6 +359,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-09-03",
    "supersededBy": 5
+  },
+  {
+   "file": "eaton.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 6
   }
  ],
  "enchanted-rock": [
@@ -485,6 +509,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "google.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 5
   }
  ],
  "hitachi-energy": [
@@ -707,6 +737,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "liteon.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 5
   }
  ],
  "ls-energy-solutions": [
@@ -751,6 +787,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-08-30",
    "supersededBy": 5
+  },
+  {
+   "file": "megmeet.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 6
   }
  ],
  "meta": [
@@ -867,6 +909,12 @@
    "profileVersion": 3,
    "archivedAt": "2026-08-30",
    "supersededBy": 4
+  },
+  {
+   "file": "nvidia.profile.v4.json",
+   "profileVersion": 4,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 5
   }
  ],
  "on-energy": [
@@ -1057,6 +1105,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-09-03",
    "supersededBy": 5
+  },
+  {
+   "file": "schneider-electric.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 6
   }
  ],
  "siemens-energy": [
@@ -1295,6 +1349,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-09-03",
    "supersededBy": 5
+  },
+  {
+   "file": "vertiv.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 6
   }
  ],
  "voltagrid": [
@@ -1382,6 +1442,30 @@
    "file": "piller.profile.v1.json",
    "profileVersion": 1,
    "archivedAt": "2026-09-03",
+   "supersededBy": 2
+  }
+ ],
+ "vicor": [
+  {
+   "file": "vicor.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 2
+  }
+ ],
+ "mitsubishi-electric": [
+  {
+   "file": "mitsubishi-electric.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 2
+  }
+ ],
+ "powell-industries": [
+  {
+   "file": "powell-industries.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-04",
    "supersededBy": 2
   }
  ]

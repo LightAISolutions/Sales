@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
+Last updated: `2026-09-04 02:55:32 AM EST` · Repo version: `v04.50r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -138,6 +138,8 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eve-energy.study.json">eve-energy.study.json</a> — EVE Energy in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flexgen.profile.json">flexgen.profile.json</a>   — FlexGen dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flexgen.study.json">flexgen.study.json</a>     — FlexGen in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flex.profile.json">flex.profile.json</a> — Flex dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flex.study.json">flex.study.json</a> — Flex in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.profile.json">fluence.profile.json</a>   — Fluence dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.study.json">fluence.study.json</a>     — Fluence in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/ge-vernova.profile.json">ge-vernova.profile.json</a> — GE Vernova dossier profile
@@ -155,6 +157,8 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/huawei-digital-power.profile.json">huawei-digital-power.profile.json</a> — Huawei Digital Power dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/huawei-digital-power.study.json">huawei-digital-power.study.json</a> — Huawei Digital Power in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hyperstrong.profile.json">hyperstrong.profile.json</a> — HyperStrong dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/infineon.profile.json">infineon.profile.json</a> — Infineon Technologies dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/infineon.study.json">infineon.study.json</a> — Infineon Technologies in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/iren.profile.json">iren.profile.json</a> — IREN dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/iren.study.json">iren.study.json</a> — IREN in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/jinko.profile.json">jinko.profile.json</a>     — Jinko dossier profile
@@ -268,6 +272,8 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/named-project-bess-attach--opportunity--2026-08-30.report.json">named-project-bess-attach--opportunity--2026-08-30.report.json</a> — Opportunity report: BESS attach across the named-project web (baseline edition for the monthly drift check)
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/s154-listed-bess-suppliers--risk--2026-08-29.report.json">s154-listed-bess-suppliers--risk--2026-08-29.report.json</a> — Risk report: the five covered NDAA §154(b)-listed suppliers
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data/archive">archive/</a>                — Superseded dossier versions, archived on each profile revision
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/abb.profile.v5.json">abb.profile.v5.json</a> — Archived v5 dossier (ABB)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/amazon.profile.v5.json">amazon.profile.v5.json</a> — Archived v5 dossier (Amazon)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/archive-index.json">archive-index.json</a>  — Index of archived profile versions per company
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/abb.profile.v1.json">abb.profile.v1.json</a> — Archived v1 dossier (ABB)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/abb.profile.v3.json">abb.profile.v3.json</a> — Archived v3 dossier (ABB)
@@ -313,12 +319,14 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/crusoe.profile.v3.json">crusoe.profile.v3.json</a> — Archived v3 dossier (Crusoe)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v1.json">delta-electronics.profile.v1.json</a> — Archived v1 dossier (Delta Electronics)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v3.json">delta-electronics.profile.v3.json</a> — Archived v3 dossier (Delta Electronics)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v4.json">delta-electronics.profile.v4.json</a> — Archived v4 dossier (Delta Electronics)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v1.json">dpr.profile.v1.json</a> — Archived v1 dossier (DPR Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v3.json">dpr.profile.v3.json</a> — Archived v3 dossier (DPR Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v4.json">dpr.profile.v4.json</a> — Archived v4 dossier (DPR Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/eaton.profile.v1.json">eaton.profile.v1.json</a> — Archived v1 dossier (Eaton)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/eaton.profile.v3.json">eaton.profile.v3.json</a> — Archived v3 dossier (Eaton)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/eaton.profile.v4.json">eaton.profile.v4.json</a> — Archived v4 dossier (Eaton)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/eaton.profile.v5.json">eaton.profile.v5.json</a> — Archived v5 dossier (Eaton)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/enchanted-rock.profile.v2.json">enchanted-rock.profile.v2.json</a> — Archived v2 dossier (ERock (Enchanted Rock))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/envision-energy.profile.v2.json">envision-energy.profile.v2.json</a> — Archived v2 dossier (Envision Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/eolian.profile.v2.json">eolian.profile.v2.json</a> — Archived v2 dossier (Eolian)
@@ -340,6 +348,7 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/google.profile.v1.json">google.profile.v1.json</a> — Archived v1 dossier (Google)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/google.profile.v2.json">google.profile.v2.json</a> — Archived v2 dossier (Google)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/google.profile.v3.json">google.profile.v3.json</a> — Archived v3 dossier (Google)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/google.profile.v4.json">google.profile.v4.json</a> — Archived v4 dossier (Google)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitachi-energy.profile.v1.json">hitachi-energy.profile.v1.json</a> — Archived v1 dossier (Hitachi Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitachi-energy.profile.v3.json">hitachi-energy.profile.v3.json</a> — Archived v3 dossier (Hitachi Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v1.json">hithium.profile.v1.json</a> — Archived v1 dossier (Hithium)
@@ -372,12 +381,14 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/lightsource-bp.profile.v2.json">lightsource-bp.profile.v2.json</a> — Archived v2 dossier (Lightsource bp)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/liteon.profile.v1.json">liteon.profile.v1.json</a> — Archived v1 dossier (LITEON)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/liteon.profile.v3.json">liteon.profile.v3.json</a> — Archived v3 dossier (LITEON)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/liteon.profile.v4.json">liteon.profile.v4.json</a> — Archived v4 dossier (LITEON)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/ls-energy-solutions.profile.v2.json">ls-energy-solutions.profile.v2.json</a> — Archived v2 dossier (LS Energy Solutions)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mainspring-energy.profile.v2.json">mainspring-energy.profile.v2.json</a> — Archived v2 dossier (Mainspring Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mastec.profile.v2.json">mastec.profile.v2.json</a> — Archived v2 dossier (MasTec)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v1.json">megmeet.profile.v1.json</a> — Archived v1 dossier (Megmeet)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v2.json">megmeet.profile.v2.json</a> — Archived v2 dossier (Megmeet)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v4.json">megmeet.profile.v4.json</a> — Archived v4 dossier (Megmeet)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v5.json">megmeet.profile.v5.json</a> — Archived v5 dossier (Megmeet)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v1.json">meta.profile.v1.json</a> — Archived v1 dossier (Meta)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v2.json">meta.profile.v2.json</a> — Archived v2 dossier (Meta)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v3.json">meta.profile.v3.json</a> — Archived v3 dossier (Meta)
@@ -385,6 +396,7 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/microsoft.profile.v1.json">microsoft.profile.v1.json</a> — Archived v1 dossier (Microsoft)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/microsoft.profile.v2.json">microsoft.profile.v2.json</a> — Archived v2 dossier (Microsoft)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/microsoft.profile.v3.json">microsoft.profile.v3.json</a> — Archived v3 dossier (Microsoft)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mitsubishi-electric.profile.v1.json">mitsubishi-electric.profile.v1.json</a> — Archived v1 dossier (Mitsubishi Electric)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mortenson.profile.v1.json">mortenson.profile.v1.json</a> — Archived v1 dossier (Mortenson)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mortenson.profile.v3.json">mortenson.profile.v3.json</a> — Archived v3 dossier (Mortenson)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mortenson.profile.v4.json">mortenson.profile.v4.json</a> — Archived v4 dossier (Mortenson)
@@ -395,6 +407,7 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nextera-energy-resources.profile.v2.json">nextera-energy-resources.profile.v2.json</a> — Archived v2 dossier (NextEra Energy Resources)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nvidia.profile.v1.json">nvidia.profile.v1.json</a> — Archived v1 dossier (NVIDIA)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nvidia.profile.v3.json">nvidia.profile.v3.json</a> — Archived v3 dossier (NVIDIA)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nvidia.profile.v4.json">nvidia.profile.v4.json</a> — Archived v4 dossier (NVIDIA)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/on-energy.profile.v2.json">on-energy.profile.v2.json</a> — Archived v2 dossier (ON.energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/openai.profile.v1.json">openai.profile.v1.json</a> — Archived v1 dossier (OpenAI)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/openai.profile.v2.json">openai.profile.v2.json</a> — Archived v2 dossier (OpenAI)
@@ -406,6 +419,7 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/panasonic.profile.v3.json">panasonic.profile.v3.json</a> — Archived v3 dossier (Panasonic)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/piller.profile.v1.json">piller.profile.v1.json</a> — Archived v1 dossier (Piller Power Systems)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/plus-power.profile.v2.json">plus-power.profile.v2.json</a> — Archived v2 dossier (Plus Power)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/powell-industries.profile.v1.json">powell-industries.profile.v1.json</a> — Archived v1 dossier (Powell Industries)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/prevalon.profile.v2.json">prevalon.profile.v2.json</a> — Archived v2 dossier (Prevalon Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/prevalon.profile.v3.json">prevalon.profile.v3.json</a> — Archived v3 dossier (Prevalon Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/primoris.profile.v1.json">primoris.profile.v1.json</a> — Archived v1 dossier (Primoris)
@@ -423,6 +437,7 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/schneider-electric.profile.v1.json">schneider-electric.profile.v1.json</a> — Archived v1 dossier (Schneider Electric)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/schneider-electric.profile.v3.json">schneider-electric.profile.v3.json</a> — Archived v3 dossier (Schneider Electric)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/schneider-electric.profile.v4.json">schneider-electric.profile.v4.json</a> — Archived v4 dossier (Schneider Electric)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/schneider-electric.profile.v5.json">schneider-electric.profile.v5.json</a> — Archived v5 dossier (Schneider Electric)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/siemens-energy.profile.v1.json">siemens-energy.profile.v1.json</a> — Archived v1 dossier (Siemens Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/siemens-energy.profile.v3.json">siemens-energy.profile.v3.json</a> — Archived v3 dossier (Siemens Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/siemens-energy.profile.v4.json">siemens-energy.profile.v4.json</a> — Archived v4 dossier (Siemens Energy)
@@ -458,6 +473,8 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vertiv.profile.v1.json">vertiv.profile.v1.json</a> — Archived v1 dossier (Vertiv)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vertiv.profile.v3.json">vertiv.profile.v3.json</a> — Archived v3 dossier (Vertiv)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vertiv.profile.v4.json">vertiv.profile.v4.json</a> — Archived v4 dossier (Vertiv)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vertiv.profile.v5.json">vertiv.profile.v5.json</a> — Archived v5 dossier (Vertiv)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vicor.profile.v1.json">vicor.profile.v1.json</a> — Archived v1 dossier (Vicor)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/voltagrid.profile.v2.json">voltagrid.profile.v2.json</a> — Archived v2 dossier (VoltaGrid)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/wartsila.profile.v1.json">wartsila.profile.v1.json</a> — Archived v1 dossier (Wärtsilä)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/wartsila.profile.v2.json">wartsila.profile.v2.json</a> — Archived v2 dossier (Wärtsilä)
@@ -531,7 +548,7 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">Classroomgs.changelog.md</a>               — [template] Classroom GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog-archive.md">Classroomgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (304 images across 60 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (328 images across 62 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound
@@ -726,6 +743,8 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/dominion-energy/dominion-energy-lesson-plan.md">dominion-energy-lesson-plan.md</a> — Full-depth lesson plan: how a regulated utility buys — rate base and cost of service, IRP → CPCN → RFP, the rate case and the docket, the large-load tariff and its minimum-demand arithmetic, interconnecting a load, PJM capacity and transmission planning, why the clock is years
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/entergy">entergy/</a> — Entergy technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/entergy/entergy-lesson-plan.md">entergy-lesson-plan.md</a> — Full-depth lesson plan: one parent and five regulators, the formula rate plan, MISO South, buying generation for one named campus and the Louisiana order that names the customer, ratepayer protection in four state dialects, storms and securitization
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/flex">flex/</a> — Flex technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/flex/flex-lesson-plan.md">flex-lesson-plan.md</a> — Full-depth lesson plan: the last hundred metres from the low-voltage switchboard to the rack inlet, tracing two feeds to find where redundancy really ends, busway against panels and whips as a decision about change rather than efficiency, buying the whole power train from one firm as a procurement trade, the four manufacturing contracts and the three clauses that decide how hard it is to leave, and telling three power-shelf vendors apart when a platform owner specified all three
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/flexgen">flexgen/</a> — FlexGen technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/flexgen/flexgen-lesson-plan.md">flexgen-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/fluence">fluence/</a> — Fluence technology curriculum
@@ -743,6 +762,8 @@ Last updated: `2026-09-04 01:18:37 AM EST` · Repo version: `v04.49r`
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-TEAM-LEAD-PLAYBOOK.pdf">HITHIUM-TEAM-LEAD-PLAYBOOK.pdf</a> — The team-lead playbook typeset for print/download, BloombergNEF Research Report style (6 pages)
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-team-training-curriculum.md">hithium-team-training-curriculum.md</a> — Phase 5 team training: the four-week onboarding program sequencing the guidance modules, playbooks, and dossier base, with competency gates and the trainer's manual
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-TEAM-TRAINING-CURRICULUM.pdf">HITHIUM-TEAM-TRAINING-CURRICULUM.pdf</a> — The training curriculum typeset for print/download, BloombergNEF Research Report style (5 pages)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/infineon">infineon/</a> — Infineon Technologies technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/infineon/infineon-lesson-plan.md">infineon-lesson-plan.md</a> — Full-depth lesson plan: the compromise inside a power switch between blocking and conducting, the two losses and why anyone wants to switch faster, MOSFET against IGBT against SiC against GaN as a consequence of three numbers, what 800 volts does to the device selection and to protection, where the watts go from the room to the chip, why a converter ends up under the processor as a packaging problem, and the wafer-dominated economics that make a fab a three-year bet
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet">megmeet/</a> — Megmeet technology curriculum
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-lesson-plan.md">megmeet-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf">MEGMEET-LESSON-PLAN.pdf</a> — The lesson plan typeset for print/download, BloombergNEF Research Report style (5 pages)

@@ -204,15 +204,6 @@
    "note": "Powell Industries' Form 10-K names Schneider among its principal competitors, and Powell's FlexGear platform is built to accept Schneider Masterpact MTZ draw-out air circuit breaker elements.",
    "context": "Named competitor in the filing and breaker supplier in the product literature — Powell publishes a dedicated instruction bulletin for FlexGear low-voltage switchgear equipped with Schneider, Siemens and Eaton breakers.\n\nMordor Intelligence puts Schneider in the top five controlling roughly 55-60% of the North American medium-voltage switchgear market and identifies its EcoStruxure Grid platform as part of a shift toward software bundled with switchgear. Powell's answer on that axis is its 2025 acquisition of Remsdaq and its own SCADA-H asset-management software.",
    "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "Busway, switchgear and liquid cooling",
-   "note": "Busway market research ranks Schneider Electric among the leaders and categorises Flex's Anord Mardix business as an other player, and Schneider's control of Motivair placed it against Flex's JetCool in liquid cooling.",
-   "context": "The clearest ranked link available for this pairing, because the source explicitly separates a leader group — Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens — from the other players, and puts the two companies on opposite sides of that line.\n\nSchneider also appears in a third-party top-five grouping holding roughly 41 to 43% of the data-centre power market, a grouping Flex does not appear in, and took a controlling interest in Motivair in February 2025 — making it a named liquid-cooling leader in a market where Flex's JetCool is unranked.\n\nFlex is closing the gap by purchase rather than by growth: about $6.3bn committed across Anord Mardix, JetCool, Crown, a Polish plant, Electrical Power Products and a $4.4bn agreement for EPC Power, with the whole segment then scheduled to be separated into an independent company in early 2027.",
-   "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html"
   }
  ],
  "policyExposure": [
@@ -428,11 +419,6 @@
  },
  "sources": [
   {
-   "label": "MarketsandMarkets — data centre busway market report 2026-2032",
-   "url": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
-   "date": "2026-01"
-  },
-  {
    "label": "Schneider H1 2026 results release",
    "url": "https://www.se.com/ww/en/assets/pdf/release-hy-results-2026",
    "date": "2026-07-30"
@@ -508,6 +494,6 @@
    "date": "2024-10"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 5
 }

@@ -188,15 +188,6 @@
    "source": "Series F participation (Apr 2025)",
    "status": "active",
    "since": "2025-04"
-  },
-  {
-   "slug": "flex",
-   "type": "supplier",
-   "status": "active",
-   "since": "2025-08",
-   "note": "Flex issued a warrant to an Amazon subsidiary whose shares vest on qualifying payments for products and services purchased by or on behalf of Amazon and its affiliates.",
-   "context": "A supplier relationship established by a filed contract rather than by a press release, which makes it unusually well evidenced for a contract manufacturer. On 15 August 2025 Flex entered a transaction agreement with Amazon.com, Inc. and issued Amazon.com NV Investment Holdings LLC a warrant for up to 3,859,851 Flex ordinary shares at $51.29, expiring 15 August 2030.\n\nThe direction of trade is unambiguous in Flex's own accounting: the expense associated with the warrant shares is recorded as a deduction to revenue as the customer purchases products and services over the vesting period. Flex recorded $7m of warrant-related charges in FY2026, and the agreement contemplates negotiating a fresh two-year warrant at expiry if a commercial relationship continues.\n\nWhat Amazon buys is not disclosed and no source establishes whether it relates to Amazon Web Services. Raymond James read the structure as confirming existing long-lived business rather than signalling incremental near-term revenue.",
-   "source": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm"
   }
  ],
  "policyExposure": [
@@ -429,12 +420,6 @@
  },
  "sources": [
   {
-   "label": "Flex — Form 8-K on the Amazon transaction agreement and warrant",
-   "url": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm",
-   "date": "2025-08-18",
-   "party": "disclosure"
-  },
-  {
    "label": "Amazon — Louisiana data center investment and jobs",
    "url": "https://www.aboutamazon.com/news/company-news/amazon-data-center-louisiana-new-jobs",
    "date": "2026-08-18"
@@ -542,6 +527,6 @@
    "url": "https://www.aboutamazon.com/news/sustainability/amazon-renewable-energy-updates"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 5
 }

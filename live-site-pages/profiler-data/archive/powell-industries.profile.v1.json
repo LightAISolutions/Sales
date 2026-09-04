@@ -16,11 +16,6 @@
  },
  "sources": [
   {
-   "label": "IntelMarketResearch — data centre switchgear market outlook 2026-2034",
-   "url": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548",
-   "date": "2026-01"
-  },
-  {
    "label": "Investing.com — Cantor Fitzgerald cuts Powell Industries price target on capacity outlook",
    "url": "https://www.investing.com/news/analyst-ratings/cantor-fitzgerald-cuts-powell-industries-stock-price-target-on-capacity-outlook-93CH-4861203",
    "date": "2026-08-14"
@@ -316,8 +311,8 @@
    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080420&type=10-K"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 2,
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1,
  "summary": "BOTTOM LINE UP FRONT: Powell Industries is a Houston engineer-to-order manufacturer of medium-voltage switchgear and factory-built power rooms that has been re-rated by the AI data-center build — it booked roughly $800 million of data-center infrastructure awards in the first nine months of FY2026, including a single order exceeding $400 million that it calls the largest in its history, and its backlog rose 69% year on year to $2.4 billion at 2026-06-30 on a 3.0x book-to-bill in that quarter alone. BACKGROUND. Founded 1947, Delaware-incorporated, listed on Nasdaq (POWL), 3,143 full-time employees at 2025-09-30. FY2025 (year ended 2025-09-30) revenue was $1,104.3M (+9%) with gross margin 29.4% and net income $180.7M (+21%), per the Form 10-K. It executed a three-for-one forward stock split effective 2026-04-02, so pre-split and post-split per-share figures cannot be compared without adjustment. Powell gives no numeric guidance, discloses backlog only to the nearest $0.1 billion, and names no customers in any filing — the $400M-plus data-center counterparty is unidentified in every public source.",
  "ecosystemRole": "The medium-voltage switchgear specialist in a market whose top five suppliers — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — control roughly 55-60% of North American volume. Mordor Intelligence places Powell outside that oligopoly, among the regional specialists eroding its share through rapid customization and domestic production, and names its differentiator explicitly: tailored switchgear in ten weeks from its Texas facility, credited with winning multiple 2025 data-center awards. In an equipment market where lead times run in the tens of weeks and longer, that is not a price advantage but a schedule one. Its data-center scope is explicitly the outside-the-building electrical kit for behind-the-meter on-site generation — the switchgear between a campus's own generation and its halls — rather than the UPS and distribution inside them.",
  "productsAndServices": [
@@ -1003,15 +998,6 @@
    "note": "Independent director Katheryn B. Curtis retired in 2022 as Senior Vice President, Generation at Dominion Energy Virginia, having previously served as Vice President Retail Operations and Vice President Merchant Operations at Dominion Energy.",
    "context": "This is a board-biography link and not a commercial relationship. No source establishes Dominion Energy as a Powell customer, and Powell names no customers in any filing.\n\nIt is recorded because utility-sector governance experience is a real and sourced connection between the two covered companies, and because Powell's electric utility end market grew from 19% to 25% of revenue between FY2024 and FY2025 and accounted for 24% of backlog at 2026-06-30. Read it as domain experience on the board, nothing more.",
    "source": "https://powellindustriesinc.gcs-web.com/corporate-governance"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "Vertically integrated data-centre power rooms",
-   "note": "A data-centre switchgear survey names Powell Industries and Vertiv as specialised players carving out niches with vertically integrated switchgear, UPS and power distribution — the proposition Flex's Anord Mardix and Crown businesses together sell.",
-   "context": "A narrow but well-matched link. The source describes specialised players such as Vertiv and Powell Industries as having carved out significant niches in hyperscale data-centre deployments through vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution systems — which is the same niche Flex assembled by acquisition.\n\nThe difference is route and shape. Powell builds engineer-to-order switchgear from a Texas footprint and competes on schedule, with tailored switchgear in ten weeks as its published differentiator. Flex bought four businesses in five years and competes on breadth plus manufacturing scale, with roughly eight Anord Mardix sites across Ireland, the United Kingdom, the United States and Poland.\n\nBoth sit outside the ABB, Eaton, Schneider, Siemens and GE Vernova group that the same class of research places at 55 to 60% of North American medium-voltage switchgear.",
-   "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548"
   }
  ],
  "policyExposure": [

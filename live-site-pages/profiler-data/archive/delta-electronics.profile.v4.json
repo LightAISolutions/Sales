@@ -189,25 +189,6 @@
    "source": "https://www.trendforce.com/news/2026/06/15/news-nvidia-google-may-be-first-to-adopt-800v-hvdc-initial-3q26-shipments-may-boost-delta-and-infrastructure-suppliers/",
    "via": "800V HVDC",
    "status": "announced"
-  },
-  {
-   "slug": "infineon",
-   "type": "supplier",
-   "status": "active",
-   "since": "2023-03",
-   "via": "Vertical power delivery modules",
-   "note": "Infineon's own release of 28 August 2025 announces a strengthened collaboration with Delta on high-density power modules enabling vertical power delivery to AI processors.",
-   "context": "A bilateral, first-party announcement with a stated division of labour: Infineon contributes ultra-thin silicon MOSFET technology and embedded packaging expertise, Delta contributes power module design and manufacturing. Infineon quantifies the benefit as up to 150 tonnes of carbon dioxide saved over a three-year rack lifetime against a lateral discrete solution.\n\nThe relationship predates the AI cycle — the two signed a memorandum of understanding in March 2023 extending a long-term partnership from industrial into automotive applications.\n\nTyped supplier from Delta's side because Infineon supplies the silicon and the packaging technology into Delta's module. Note that the two also appear together in SemiAnalysis's six-name competitive set for AI power delivery, so they compete one level up at the module even as they collaborate on the silicon inside it.",
-   "source": "https://www.infineon.com/technology-news/2025/INFPSS202508-138"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "800 VDC power shelves and racks",
-   "note": "NVIDIA's own 800 VDC roster places Delta and Flex Power in the same named tier — power system components — and both announced 800 VDC racks for the same platform.",
-   "context": "The basis is a categorisation by the platform owner rather than a market-share ranking, and that limit is stated rather than glossed. NVIDIA assigns Delta, Flex Power, Bizlink, Lead Wealth, LITEON and Megmeet to one tier.\n\nThe products confirm the overlap. Delta announced 800 VDC in-row 660 kW power racks with 480 kW of battery backup, developed with NVIDIA, at GTC 2026; Flex launched an 800 VDC Power Rack with eight 110 kW shelves for the Vera Rubin platform in the same month.\n\nThe competition is not symmetrical. Delta appears in third-party top-five groupings of the data-centre power market where Flex does not, so Delta holds a facility-power position Flex has been acquiring its way toward — most recently through a $4.4bn agreement to buy EPC Power in September 2026.",
-   "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx"
   }
  ],
  "policyExposure": [
@@ -411,16 +392,6 @@
  },
  "sources": [
   {
-   "label": "Infineon — collaboration with Delta Electronics on high-density power modules for vertical power delivery",
-   "url": "https://www.infineon.com/technology-news/2025/INFPSS202508-138",
-   "date": "2025-08-28"
-  },
-  {
-   "label": "Flex — launch of the 800 VDC Power Rack for next-generation NVIDIA AI infrastructure",
-   "url": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
-   "date": "2026-03-16"
-  },
-  {
    "label": "Delta Q2 2026 results",
    "url": "https://www.deltaww.com/en-US/press/41046",
    "date": "2026-07-29"
@@ -489,6 +460,6 @@
    "url": "https://longportapp.com/en/news/227685286"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

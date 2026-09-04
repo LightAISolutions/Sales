@@ -202,15 +202,6 @@
    "note": "Named alongside Mitsubishi Electric in the Research and Markets dominant-vendor set for data center UPS, and set directly against Mitsubishi Electric Power Products on North American switchgear capital investment in Manufacturing Dive's coverage of its Pennsylvania plant.",
    "context": "The two compete in data-center UPS, and the same trade article that reported Mitsubishi Electric Power Products' $86M Pennsylvania switchgear factory noted Vertiv expanding switchgear and busbar manufacturing in the US and internationally — putting the two in the same domestic-capacity race.\n\nOn rack-power architecture they sit at different points of public commitment: Vertiv is inside NVIDIA's publicly named 800 VDC collaboration set with a portfolio release stated for the second half of 2026, while Mitsubishi Electric's 800 VDC work is visible only through its own release.",
    "source": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "Integrated switchgear, UPS and distribution",
-   "note": "A data-centre switchgear survey names Vertiv and Powell Industries as specialised players carving out niches with vertically integrated switchgear, UPS and power distribution — the proposition Flex's Anord Mardix business sells.",
-   "context": "The source names the strategy rather than only the market, which is what makes it usable: it describes specialised players such as Vertiv and Powell Industries carving out significant niches in hyperscale data-centre deployments through vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution systems.\n\nThat is what Flex assembled by acquisition — Anord Mardix for switchgear, busway and power pods, Crown Technical Systems for relay panels and control enclosures, Electrical Power Products for substation control, and JetCool for direct-to-chip cooling.\n\nThe competition runs across power and thermal at once: Vertiv is also a named leader in liquid cooling, a market where JetCool appears in no published ranking, and sits one tier above Flex in NVIDIA's 800 VDC ecosystem.",
-   "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548"
   }
  ],
  "technicalSpecs": [
@@ -424,11 +415,6 @@
  },
  "sources": [
   {
-   "label": "IntelMarketResearch — data centre switchgear market outlook 2026-2034",
-   "url": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548",
-   "date": "2026-01"
-  },
-  {
    "label": "Vertiv Q2 2026 results (8-K exhibit)",
    "url": "https://www.sec.gov/Archives/edgar/data/0001674101/000162828026050323/q22026exhibit991vrt07292026.htm",
    "date": "2026-07-29"
@@ -492,6 +478,6 @@
    "url": "https://rosenlegal.com/case/vertiv-holdings-co/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 5
 }

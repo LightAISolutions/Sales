@@ -233,15 +233,6 @@
    "context": "Megmeet chases a server-power market ~74% held by Taiwanese suppliers (Delta ~41%, plus Lite-On, AcBel, Chicony, Advanced Energy). Its wedge is architecture timing, not price: first mainland mover on the 800VDC sidecar/SST chain, deliberately sacrificing near-term profit for early position ahead of the projected 2027 rack transition.",
    "source": "Dossier competitive assessment — NVIDIA power-shelf tier",
    "status": "active"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "800 VDC power system components",
-   "note": "NVIDIA names Megmeet and Flex Power in the same power-system-components tier of its published 800 VDC ecosystem.",
-   "context": "Typed on the platform owner's own categorisation: both appear in one named tier of one named architecture, alongside Bizlink, Delta, Lead Wealth and LITEON.\n\nThe limit of the evidence is stated rather than glossed. There is no bilateral source, no matching product-announcement pair, and no ranking firm placing the two in a common share table.\n\nThe two are also differently shaped competitors. Megmeet contests the NVIDIA power-shelf socket as a power-electronics manufacturer; Flex arrives at the same socket as a contract manufacturer that has spent about $6.3bn since 2021 acquiring switchgear, cooling and power-conversion businesses, and has announced it will separate the whole segment into an independent company in early 2027.",
-   "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx"
   }
  ],
  "policyExposure": [
@@ -519,11 +510,6 @@
  },
  "sources": [
   {
-   "label": "Flex — launch of the 800 VDC Power Rack for next-generation NVIDIA AI infrastructure",
-   "url": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
-   "date": "2026-03-16"
-  },
-  {
    "label": "Sohu — July 2026 limit-down analyses (guarantees, dilution)",
    "url": "https://www.sohu.com/a/1050905187_122014422",
    "date": "2026-07-20"
@@ -658,6 +644,6 @@
    "url": "https://www.tradingview.com/symbols/SZSE-002851/forecast-actuals-and-estimates/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 5
 }

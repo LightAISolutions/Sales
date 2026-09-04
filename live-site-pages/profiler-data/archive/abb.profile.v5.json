@@ -216,15 +216,6 @@
    "note": "Powell Industries' Form 10-K names ABB first among its principal competitors, and Mordor Intelligence places ABB in the top five controlling roughly 55-60% of the North America medium-voltage switchgear market.",
    "context": "This is a competitor link stated by the company itself rather than inferred from a market report: Powell's FY2025 10-K reads that its principal competitors include ABB, Eaton, Schneider and Siemens Industries, Inc.\n\nTwo further threads run through it. Powell publishes a replacement vacuum circuit breaker for the ABB type ITE-HK air circuit breaker, so it competes for the second half of an ABB installed base's life. And Powell's CEO Brett Cope spent twenty years at ABB, latterly as a Group Vice President responsible for ABB's global business with ExxonMobil.",
    "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "Busway and data-centre switchgear",
-   "note": "Busway market research names ABB among the market leaders while categorising Flex's Anord Mardix business as an other player, and both are named in data-centre switchgear vendor surveys.",
-   "context": "Curated on a ranked basis: a busway survey separating a named leader group — Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens — from the other players, with Anord Mardix outside it.\n\nABB is separately named in a third-party top-five grouping of data-centre power suppliers at roughly 41 to 43% of that market, and in a North American grouping at roughly 62% with Schneider, Vertiv, Eaton and Mitsubishi Electric. Flex appears in neither.\n\nABB also appears in NVIDIA's data-centre power systems tier and in the solid-state transformer group at GTC 2026 — a category Flex is only now entering, through an EPC Power acquisition whose stated capabilities include planned solid-state transformer development.",
-   "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html"
   }
  ],
  "technicalSpecs": [
@@ -527,11 +518,6 @@
  },
  "sources": [
   {
-   "label": "MarketsandMarkets — data centre busway market report 2026-2032",
-   "url": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
-   "date": "2026-01"
-  },
-  {
    "label": "ABB — Q2 2026 press release (record orders, Rotork offer, HiPerGuard 34.5 kV)",
    "url": "https://resources.news.e.abb.com/attachments/published/137496/en-US/9123465FF532/ABB_Q2_2026_Press_release_English.pdf",
    "date": "2026-07-16"
@@ -619,6 +605,6 @@
    "url": "https://www.investing.com/equities/abb-ltd-earnings"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 5
 }

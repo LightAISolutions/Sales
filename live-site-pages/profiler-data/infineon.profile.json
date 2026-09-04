@@ -1,0 +1,1557 @@
+{
+ "schemaVersion": 7,
+ "slug": "infineon",
+ "name": "Infineon Technologies AG",
+ "shortName": "Infineon",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.infineon.com/",
+ "headquarters": "Neubiberg, Germany",
+ "founded": 1999,
+ "employees": "57,077 (30 September 2025)",
+ "ownership": {
+  "type": "public",
+  "ticker": "FWB: IFX"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Infineon is the largest power-semiconductor supplier in the world by its own published market data and, per a Gartner report of 18 May 2026, \"the company to beat\" in AI data-centre power semiconductors — but the AI business that carries the equity story is still roughly a tenth of revenue, the company has beaten on revenue and missed on Segment Result in three of its last four quarters against its own compiled consensus, and it is one of fourteen named silicon providers in NVIDIA's 800 VDC supplier alliance rather than a sole source. BACKGROUND. Neubiberg-based, carved out of Siemens AG in 1999, listed in Frankfurt (IFX) with an OTCQX ADR (IFNNY), 57,077 employees at 30 September 2025. FY2025 (ended 2025-09-30) revenue was €14,662m (−2%) with a Segment Result of €2,560m at a 17.5% margin, per the company's own results release. AI data-centre power revenue was €250m in FY2024, above €700m in FY2025, and is guided above €1.6bn in FY2026 against total FY2026 guidance of about €16.3bn. The €5bn Smart Power Fab in Dresden opened on 2 July 2026, about three months ahead of schedule, backed by up to €920m of EU-approved German state aid. Effective 1 July 2026 the four reporting segments were reduced to three — Automotive, Power Systems and Edge Systems — so every historical segment series in this file terminates at Q3 FY2026.",
+ "ecosystemRole": "The silicon layer of the AI data-centre power chain. Infineon supplies the switches, drivers, controllers and protection devices that every box in the chain is built from — the solid-state transformer at the room, the power-supply and battery-backup units in the shelf, the intermediate bus converters, and the point-of-load regulators millimetres from the processor — using silicon, silicon carbide and gallium nitride across the same chain. That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems. Gartner's assessment of Infineon as the front runner is paired in the same report with the observation that its lead is being tested at the compute-board level, where it is one of five rather than first.",
+ "productsAndServices": [
+  {
+   "name": "CoolSiC — silicon-carbide MOSFETs, modules and JFETs",
+   "category": "Power semiconductors",
+   "description": "Silicon-carbide switches in trench architecture across the 650 V, 750 V, 1200 V and 2000 V classes, as discretes, as 62 mm C-series modules, and as JFETs for protection and hot-swap. Infineon's own materials describe the trench structure as yielding 30% more chips per wafer than a planar structure, and the generation designation on the 1200 V and 2000 V families is M1H. The .XT interconnection technology appears on the datasheet feature list itself rather than only in marketing material.",
+   "highlights": [
+    "Discrete voltage classes 650 V, 750 V, 1200 V and 2000 V — the 1200 V class is the one an 800 VDC bus requires once switching overshoot and derating are accounted for",
+    "IMYH200R050M1H, quoted verbatim: V-DSS 2000 V at 25 °C, I-DCC 48 A at 25 °C case, R-DS(on) 50 mΩ at V-GS 18 V, gate threshold 4.5 V, in a PG-TO247-4-PLUS-NT14 package with a Kelvin sense contact",
+    "CoolSiC JFET, the device behind the NVIDIA hot-swap work: Infineon quotes ultra-low on-resistance of 1.5 mΩ at 750 V and 2.3 mΩ at 1200 V breakdown, in a Q-DPAK package",
+    "More than 20 named solid-state-circuit-breaker customers and first design wins on the CoolSiC JFET, per the company's own presentation",
+    "Manufacturing is converting to 200 mm at Kulim, Malaysia and Villach, Austria; Infineon describes Kulim as the most competitive 200 mm fab with an industry-leading cost position",
+    "More than six qualified SiC wafer and boule suppliers, which the company presents as supply resilience rather than as a cost claim"
+   ],
+   "positioning": "Infineon publishes its own share of power discretes and modules at 17.4% of a $32.8bn 2024 market, ahead of onsemi at 8.5%, STMicroelectronics at 6.9%, Mitsubishi at 4.6%, Fuji at 3.9% and Silan at 3.4%. In silicon carbide specifically the picture is less favourable and the data is stale: TrendForce's 2022 table put STMicroelectronics first at 36.5% and Infineon second at 17.9%, while Mordor's 2024 ordering places Infineon third behind STMicroelectronics and onsemi. No 2025 or 2026 SiC vendor share table could be sourced from any ranking firm.",
+   "soldThrough": "Direct to power-supply, module and system manufacturers, and through distribution; multi-year capacity reservation agreements with prepayments have been signed with unnamed AI-ecosystem customers",
+   "targetSegments": [
+    "AI data-centre power",
+    "Automotive traction inverters",
+    "Solar and energy storage",
+    "EV charging",
+    "Industrial drives"
+   ],
+   "roadmap": "200 mm conversion at Villach and Kulim continuing; Kulim Module Three was announced in 2023 with up to €5bn of second-phase investment. The €7bn end-of-decade SiC revenue potential attached to that announcement has not been restated since and is quoted here with its 2023 date rather than as current guidance."
+  },
+  {
+   "name": "CoolGaN — gallium-nitride transistors and bidirectional switches",
+   "category": "Power semiconductors",
+   "description": "Gallium-nitride devices in the 650 V class, as discrete transistors and as a monolithically integrated bidirectional switch, aimed at the highest-frequency conversion stages where the magnetics dominate the size of the box. Infineon states current production runs on 200 mm wafers and separately claims the world's first 300 mm GaN manufacturing process, without publishing a volume-production date for the latter.",
+   "highlights": [
+    "IGT65R055D2, quoted verbatim: V-DS max 650 V, transient 900 V, R-DS(on) max 66 mΩ, gate charge typically 4.7 nC, pulsed drain current 60 A, and reverse-recovery charge of 0 nC",
+    "The zero reverse-recovery figure is the whole commercial argument for GaN in a hard-switched bridge — there is no stored charge to sweep out of a body diode because there is no body diode in the silicon sense",
+    "IGLT65R110B2 bidirectional switch: a dual-gate device with independent bidirectional function in a TOLT top-side-cooling package, which Infineon says enables new single-stage isolated topologies and replaces back-to-back unidirectional pairs",
+    "Infineon claims GaN switching frequencies close to 1 MHz enable ultra-compact bus converters for the 800 VDC chain",
+    "Claimed portfolio position: around 350 GaN patent families and more than 400 GaN specialists",
+    "Produced on 200 mm wafers on fully automated lines, per the shipping datasheet — the 300 mm claim is a process claim, not a shipping one"
+   ],
+   "positioning": "The GaN share data available is 2023-vintage and second-hand: a Yole ordering relayed through trade press placed Innoscience first at about 31%, Power Integrations second at about 17% and Navitas third at about 16%, with Infineon outside the top three — it had acquired GaN Systems that year. Yole's own page could not be retrieved to verify. Infineon and Innoscience are simultaneously co-named NVIDIA 800 VDC silicon partners and opposing parties in a two-directional patent war.",
+   "soldThrough": "Direct and distribution, into power-supply and converter manufacturers",
+   "targetSegments": [
+    "AI data-centre power supplies and bus converters",
+    "Consumer and industrial fast chargers",
+    "Solar micro-inverters",
+    "Motor drives"
+   ],
+   "roadmap": "A 300 mm GaN-on-silicon manufacturing process is claimed as an industry first; no volume-production date has been published. Collection gap."
+  },
+  {
+   "name": "CoolMOS and OptiMOS — silicon superjunction and low-voltage MOSFETs",
+   "category": "Power semiconductors",
+   "description": "The silicon half of the portfolio: superjunction devices at 600 V and 650 V for the mains-facing side of power supplies, and low-voltage devices at 80 V and 100 V for the stages closer to the load. Superjunction is the structure that keeps silicon competitive up to roughly 900 V by burying columns of opposite doping in the drift region so it can be doped harder without losing its voltage rating.",
+   "highlights": [
+    "CoolMOS 8 is the current superjunction generation at 600 V and 650 V; Infineon's own comparison against the previous CFD7 generation claims 20% lower gate charge, 15% lower turn-off losses and up to 10% lower reverse-recovery charge with the lowest reverse-recovery time in the market",
+    "Applications Infineon names for CoolMOS 8 include servers, telecom, solid-state circuit breakers, solid-state relays and EV charging",
+    "OptiMOS 5 covers the 80 V and 100 V classes — the range a 48-volt rack bus actually operates in once transient headroom is allowed for",
+    "Ultra-thin silicon down to a stated 20 µm is the enabling technology behind the integrated smart power stages and the Delta vertical-power-delivery collaboration, because it allows signal routing from the front of the die to the back"
+   ],
+   "positioning": "Silicon remains the volume material below roughly 900 V and Infineon does not present it as displaced. Its own framing is a mix shift rather than a replacement: in automotive traction it shows IGBT and SiC scaling together in the same 750 V and 1200 V classes with the SiC share of traction inverters moving from about 25% to about 45%.",
+   "soldThrough": "Direct and distribution",
+   "targetSegments": [
+    "Server and telecom power supplies",
+    "Solid-state circuit breakers",
+    "EV charging",
+    "Consumer power"
+   ]
+  },
+  {
+   "name": "IGBTs and power modules",
+   "category": "Power semiconductors",
+   "description": "Insulated-gate bipolar transistors and the module families built from them, including the EasyPACK modules Infineon shows in its solid-state-transformer material and the HybridPACK Drive automotive traction platform, which ships in both IGBT and CoolSiC variants. An IGBT conducts by flooding its drift region with carriers, which gives a low fixed forward drop at high current and a slow, lossy turn-off — so it stays where switching frequency is low and current is high.",
+   "highlights": [
+    "HybridPACK Drive is offered in IGBT and second-generation CoolSiC versions, so the customer chooses the device without changing the module footprint",
+    "EasyPACK modules are the package family Infineon shows for solid-state transformers",
+    "Infineon does not position IGBT as displaced; its published automotive material shows IGBT and SiC scaling together in the same voltage classes",
+    "Collection gap: no first-party statement of a power, voltage or frequency crossover threshold between IGBT and SiC could be located — the company frames the choice as application and cost driven"
+   ],
+   "positioning": "This is the segment where Infineon's China position has already been lost. It led China power modules with 25% share in 2022; in 2023 BYD Semiconductor took first place at 28.9% and Infineon fell to second at 14.5%. On 2020 automotive IGBT data the ordering had been Infineon 49.2%, BYD 20.0%, StarPower 16.6%.",
+   "soldThrough": "Direct to automotive tier-one suppliers and industrial OEMs, and through distribution",
+   "targetSegments": [
+    "Automotive traction inverters",
+    "Industrial drives",
+    "Grid-tied inverters",
+    "Renewables"
+   ]
+  },
+  {
+   "name": "Integrated smart power stages, multiphase controllers and vertical power delivery",
+   "category": "AI data-centre power — board level",
+   "description": "The point-of-load layer: DrMOS-class packages that put a half-bridge and its gate driver in one part, the digital multiphase controllers that sequence them, and the module families that move the whole regulator from beside the processor to underneath it. This is the layer Infineon's own roadmap treats as the growth engine and the one a third-party analysis identifies as its weakest competitive position.",
+   "highlights": [
+    "TDA21240, quoted verbatim: maximum average current 40 A, input range +4.5 V to +16 V, power MOSFETs rated 25 V, fast switching for frequencies above 500 kHz, in a 4 × 4 × 1 mm PG-IQFN-30-2 package — about 60 W within 16 mm²",
+    "Infineon publishes lumped power-delivery-network resistance for three layouts: a discrete lateral arrangement at 90–140 µΩ, a backside vertical module at 10–15 µΩ, and a substrate-integrated voltage regulator at 7–10 µΩ — an 89% and 93% reduction respectively",
+    "The same material states that lateral PDN losses exceed 100 W once GPU currents pass 850–1000 A, which is the number that makes the vertical move an efficiency argument rather than a layout preference",
+    "The published current-density ladder runs from 1.0 A/mm² in 2024 to 2.0 A/mm² in 2025 to a stated 3.0 A/mm² dual-phase high-density vertical module in 2027 and above 4.0 A/mm² substrate-embedded in 2028, marked mass production Q1 2027",
+    "August 2026: acquisition of C2i Semiconductors of Bangalore, explicitly for software-defined multiphase controllers, smart power stages and vertical power delivery architectures",
+    "Collection gap: the digital multiphase controller part numbers could not be extracted from the 2026 portfolio release"
+   ],
+   "positioning": "The competitive weak point, and both the ranking firm and the company's own praise agree on it. Gartner's May 2026 report names Infineon the company to beat in AI data-centre power semiconductors while stating that its lead is being tested by rivals focused on the compute board level. SemiAnalysis names six players in AI power delivery — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon — and records Monolithic Power Systems taking the NVIDIA H100 socket from Vicor on cost and ease of lateral integration. Mordor places a top five of Texas Instruments, Renesas, Infineon, Monolithic Power Systems and Analog Devices at roughly 55–60% of the GPU and AI-server voltage-regulator market in 2025.",
+   "soldThrough": "Design-in with server and accelerator platform vendors, largely through the reference designs of the platform owner",
+   "targetSegments": [
+    "AI accelerator boards",
+    "Server CPU voltage regulation",
+    "Graphics and memory rails"
+   ],
+   "roadmap": "Mass production of the next-generation vertical regulator modules is stated for Q1 2027; substrate-attached and substrate-embedded modules are dated 2028."
+  },
+  {
+   "name": "800 VDC system products — solid-state transformers, PSUs, battery backup and bus converters",
+   "category": "AI data-centre power — rack and room level",
+   "description": "The semiconductor content and the reference designs for the boxes that make up an 800 VDC hall: the solid-state transformer that replaces the conventional transformer at the room, the power-supply and battery-backup units in the sidecar, and the intermediate bus converters that step 800 V down to 50 V and then to 12 V or 6 V. Infineon frames the whole portfolio as grid-to-core and states that AI rack power is moving from about 120 kW to 500 kW and to 1 MW by the end of the decade.",
+   "highlights": [
+    "Solid-state transformer, on Infineon's own comparison against a conventional transformer: about 40 times lighter, about 14 times smaller, about 50% faster to construct — roughly 20 tonnes down to about 500 kg",
+    "Its own sizing: a conventional transformer market above $15bn, of which it expects solid-state transformers to take a small-power slice above $1bn in 2030",
+    "Published PSU ladder with dates: 3.3 kW single-phase at 97.4% efficiency and 98 W/in³ available now, 8 kW and 12 kW at about 97.5% and 100–113 W/in³ available now, a 16 kW-plus three-phase reference board in Q2 2026, a 27 kW three-phase board at over 100 W/in³ in Q3 2026, and a 30 kW three-phase PFC topology board in Q2 2026",
+    "A CoolGaN-based high-voltage intermediate bus converter reference design converting 800 VDC or ±400 V to 50 V at more than 98% efficiency at full load",
+    "A 24 kW silicon-carbide battery-backup-unit DC-DC reference design at 450 W/in³ and above 99% efficiency, using 650 V and 1200 V devices",
+    "A published example three-phase HVDC sidecar architecture: 30 power-supply units, 30 battery-backup units, 10 power-capacitor systems and 288 smart network interface cards, plus hot-swap and e-fuse protection"
+   ],
+   "positioning": "One of fourteen silicon providers NVIDIA names in its 800 VDC supplier alliance, alongside Analog Devices, AOS, Efficient Power Conversion, Innoscience, Monolithic Power Systems, Navitas, onsemi, Power Integrations, Renesas, Richtek, ROHM, STMicroelectronics and Texas Instruments. The tiers above it — power system components, and data-centre power systems — are its customers rather than its competitors. Infineon's own summary of its position is that it is represented in almost all platforms across all relevant players.",
+   "soldThrough": "Semiconductors and reference designs sold to the power-shelf, module and facility-power manufacturers who build the boxes; early architecture work directly with unnamed electronics companies and hyperscalers",
+   "targetSegments": [
+    "AI data-centre power shelves and sidecars",
+    "Facility power distribution",
+    "Battery backup"
+   ],
+   "roadmap": "Reference boards dated Q2 and Q3 2026 for the three-phase PSU and PFC stages; full-scale 800 VDC production is tied by NVIDIA to its Kyber rack-scale systems in 2027."
+  },
+  {
+   "name": "Power-path protection — solid-state circuit breakers, e-fuses and hot-swap controllers",
+   "category": "AI data-centre power — protection",
+   "description": "The devices that open a direct-current circuit fast enough to matter. A DC fault has no zero crossing to help extinguish an arc, so protection cannot be inherited from an AC hall; Infineon's answer is a semiconductor that turns off rather than a contact that parts. The portfolio spans 48 V smart e-fuse integrated circuits and a 400 V/800 V hot-swap controller reference design.",
+   "highlights": [
+    "Infineon's own claim: solid-state circuit breakers interrupt current 1,000 times faster than conventional systems",
+    "The CoolSiC JFET hot-swap solution is the specific joint output of the NVIDIA work — it lets an operator exchange a server board in an 800 VDC rack while the other servers in the same rack keep running",
+    "Portfolio spans both bus voltages: 48 V smart e-fuses and a 400 V/800 V hot-swap controller",
+    "Market sizing is the company's own and moved between two of its own decks — about $800m in 2030 in the November 2025 deck, about $1bn by the end of the decade at a stated CAGR above 60% in the August 2026 deck. Both figures are quoted here rather than reconciled",
+    "More than 20 named solid-state-circuit-breaker key customers, of whom exactly one — Siemens — has been publicly named"
+   ],
+   "positioning": "Against an industrial electromechanical circuit-breaker market Infineon sizes at about $8bn growing at about 3%. The reference device illustrated in its own decks is Siemens' SENTRON 3QD2, credited to Siemens AG, and Infineon disclosed in August 2026 that it will supply 1.2 kV silicon-carbide modules into Siemens circuit breakers.",
+   "soldThrough": "Direct to switchgear and power-distribution manufacturers",
+   "targetSegments": [
+    "DC data-centre distribution",
+    "Industrial DC grids",
+    "Automotive"
+   ]
+  },
+  {
+   "name": "Automotive semiconductors",
+   "category": "Automotive",
+   "description": "The largest segment by revenue and the one this dossier deliberately does not centre on. AURIX TriCore microcontrollers, currently in the TC4x generation, plus TRAVEO and PSOC microcontrollers, MOTIX motor control, the HybridPACK Drive traction platform, OPTIREG power management, CAN transceivers, and the automotive Ethernet PHYs and switches acquired with Marvell's Brightlane portfolio.",
+   "highlights": [
+    "First in automotive semiconductors for a sixth consecutive year per TechInsights, at 12.8% of a $74.4bn 2025 market, down from 13.2% in 2024 — the share fell while the gap to second place widened",
+    "Automotive microcontroller share of 36.0% in 2025, up 3.9 points year on year",
+    "The Marvell automotive Ethernet acquisition completed in mid-August 2025 for the equivalent of €2,180m, bringing the 88Q-series PHYs and switches",
+    "FY2025 automotive revenue was €7,402m at a 20.7% Segment Result margin, down from €7,716m at 26.2% — the margin compression that the AI story has been offsetting"
+   ],
+   "positioning": "Infineon's own chart of the 2024 $68.4bn automotive semiconductor market puts it first at 13.5%, ahead of NXP at 10.5%, STMicroelectronics at 8.8%, Texas Instruments at 8.4% and Renesas at 6.9%. Note that this differs from the TechInsights figure for the same year, which is 13.2% — two vintages, two numbers, both recorded here rather than reconciled.",
+   "soldThrough": "Direct to automotive tier-one suppliers and OEMs",
+   "targetSegments": [
+    "Software-defined vehicles",
+    "Electromobility",
+    "Chassis and safety",
+    "Body power"
+   ]
+  },
+  {
+   "name": "Sensors, connectivity, security and memory",
+   "category": "Edge systems",
+   "description": "The remainder of the portfolio, enumerated for completeness. XENSIV sensors — radar, magnetic position and speed, current, pressure, MEMS microphones, time-of-flight imaging, gas and inductive position — expanded on 1 July 2026 by the ams OSRAM non-optical analog and mixed-signal sensor portfolio. OPTIGA and SECORA security, AIROC Wi-Fi, Bluetooth and ultra-wideband connectivity, and the SEMPER and related memory families.",
+   "highlights": [
+    "The ams OSRAM sensor portfolio completed on 1 July 2026 with an annualised revenue run rate of about €230m and around 230 R&D and management staff transferring",
+    "These businesses form the new Edge Systems segment created on 1 July 2026 by combining the former Connected Secure Systems with the sensor, RF and USB business of Power & Sensor Systems",
+    "FY2025 Connected Secure Systems revenue was €1,418m at a 10.9% Segment Result margin, the lowest-margin of the four former segments",
+    "Emerging content claim: about $500 of addressable Infineon content per humanoid robot, spanning microcontrollers, motor control, security, silicon and GaN switches, DC-DC, regulators, drivers and sensing"
+   ],
+   "soldThrough": "Direct and distribution",
+   "targetSegments": [
+    "Industrial automation",
+    "Robotics",
+    "IoT and smart home",
+    "Payment and identity"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "CoolGaN Transistor 650 V G5 — IGT65R055D2",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Drain-source voltage, maximum",
+     "value": "650 V"
+    },
+    {
+     "band": "Electrical",
+     "label": "Drain-source transient voltage, maximum",
+     "value": "900 V"
+    },
+    {
+     "band": "Electrical",
+     "label": "On-resistance, maximum",
+     "value": "66 mΩ"
+    },
+    {
+     "band": "Electrical",
+     "label": "Gate charge, typical",
+     "value": "4.7 nC"
+    },
+    {
+     "band": "Electrical",
+     "label": "Pulsed drain current",
+     "value": "60 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output charge at 400 V",
+     "value": "35 nC"
+    },
+    {
+     "band": "Electrical",
+     "label": "Reverse-recovery charge",
+     "value": "0 nC"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Thermal resistance, junction to case",
+     "value": "1.2 °C/W"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Package",
+     "value": "PG-HSOF-8"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Electrostatic discharge standard",
+     "value": "2 kV HBM"
+    },
+    {
+     "band": "Manufacturing",
+     "label": "Wafer technology",
+     "value": "Produced using 200 mm (8 inch) wafer technology and fully automated production lines"
+    }
+   ],
+   "notes": "Datasheet revision 1.1, dated 2026-03-05. The zero reverse-recovery charge is the line that matters commercially: it is the tax a silicon MOSFET's body diode pays in a hard-switched bridge and which this device does not."
+  },
+  {
+   "product": "CoolGaN bidirectional switch 650 V G5 — IGLT65R110B2",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Technology and surge immunity",
+     "value": "650 V CoolGaN technology with 850 V surge immunity"
+    },
+    {
+     "band": "Electrical",
+     "label": "Structure",
+     "value": "Superior rugged Gate Injection Transistor (GIT) structure"
+    },
+    {
+     "band": "Electrical",
+     "label": "Gate arrangement",
+     "value": "Dual-gate for independent bi-directional functionality"
+    },
+    {
+     "band": "Electrical",
+     "label": "Electrostatic discharge standard",
+     "value": "2 kV HBM"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Package",
+     "value": "TOLT, top-side cooling package specially designed to enable the highest power densities"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Thermal resistance, junction to case",
+     "value": "2.28 °C/W"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Maximum junction temperature",
+     "value": "150 °C"
+    },
+    {
+     "band": "Stated benefits",
+     "label": "Replacement claim",
+     "value": "Effective replacement of back-to-back uni-directional products"
+    },
+    {
+     "band": "Stated benefits",
+     "label": "Topology claim",
+     "value": "Enables new single stage isolated topologies"
+    }
+   ],
+   "notes": "Datasheet revision 1.0, dated 2025-10-02. A top-side-cooled package matters once a converter is placed where the board is not available as a thermal path — the same constraint that governs a regulator mounted under a processor."
+  },
+  {
+   "product": "CoolSiC 2000 V SiC Trench MOSFET — IMYH200R050M1H",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Drain-source breakdown voltage",
+     "value": "V-DSS = 2000 V at T-vj = 25 °C"
+    },
+    {
+     "band": "Electrical",
+     "label": "Continuous drain current",
+     "value": "I-DCC = 48 A at T-c = 25 °C"
+    },
+    {
+     "band": "Electrical",
+     "label": "On-resistance",
+     "value": "R-DS(on) = 50 mΩ at V-GS = 18 V, T-vj = 25 °C"
+    },
+    {
+     "band": "Electrical",
+     "label": "Gate threshold voltage",
+     "value": "Benchmark gate threshold voltage, V-GS(th) = 4.5 V"
+    },
+    {
+     "band": "Electrical",
+     "label": "Body diode",
+     "value": "Robust body diode for hard commutation"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Interconnect",
+     "value": ".XT interconnection technology for best-in-class thermal performance"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Package",
+     "value": "PG-TO247-4-PLUS-NT14"
+    },
+    {
+     "band": "Thermal & package",
+     "label": "Pinout",
+     "value": "1 – drain, 2 – source, 3 – Kelvin sense contact, 4 – gate"
+    },
+    {
+     "band": "Compliance",
+     "label": "Qualification",
+     "value": "Qualified for industrial applications according to the relevant tests of JEDEC47/20/22"
+    }
+   ],
+   "notes": "Datasheet revision 1.10, dated 2023-01-16. The fourth pin is the point of interest: a Kelvin sense contact separates the gate-drive return from the power current path, which is what lets a fast device be driven cleanly at high current."
+  },
+  {
+   "product": "Integrated smart power stage (DrMOS) — TDA21240",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Maximum average current",
+     "value": "Maximum average current of 40 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "Input voltage range",
+     "value": "Input voltage range +4.5 V to +16 V"
+    },
+    {
+     "band": "Electrical",
+     "label": "MOSFET rating",
+     "value": "Power MOSFETs rated 25 V"
+    },
+    {
+     "band": "Electrical",
+     "label": "Switching",
+     "value": "Fast switching technology for improved performance at high switching frequencies (> 500 kHz)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Gate drive",
+     "value": "+5 V high side and low side MOSFETs driving voltage"
+    },
+    {
+     "band": "Protection",
+     "label": "Included protection",
+     "value": "Undervoltage lockout; shoot through protection; thermal warning"
+    },
+    {
+     "band": "Protection",
+     "label": "Driver control",
+     "value": "Remote driver disable function; tri-state PWM input functionality"
+    },
+    {
+     "band": "Package",
+     "label": "Package",
+     "value": "Small package: PG-IQFN-30-2 (4 x 4 x 1 mm³)"
+    },
+    {
+     "band": "Package",
+     "label": "Power density, company figure",
+     "value": "Approximately 60 W within a 16 mm² area"
+    }
+   ],
+   "notes": "Shoot-through protection is inside the package because the driver and the switches are in the same package — which is the whole argument for buying an integrated stage rather than a driver and two MOSFETs."
+  },
+  {
+   "product": "Vertical power delivery — published power-delivery-network resistance by layout",
+   "specs": [
+    {
+     "band": "Lumped PDN resistance (total resistance of the power delivery network)",
+     "label": "Discrete lateral — power stages, inductors and capacitors beside the processor",
+     "value": "90–140 µΩ"
+    },
+    {
+     "band": "Lumped PDN resistance (total resistance of the power delivery network)",
+     "label": "Backside vertical module (BVM)",
+     "value": "10–15 µΩ, a stated 89% reduction"
+    },
+    {
+     "band": "Lumped PDN resistance (total resistance of the power delivery network)",
+     "label": "Substrate-integrated voltage regulator (SiVR)",
+     "value": "7–10 µΩ, a stated 93% reduction"
+    },
+    {
+     "band": "Why the layout changes",
+     "label": "Lateral loss threshold, company figure",
+     "value": "PDN losses exceed 100 W for GPU currents beyond 850-1000 A"
+    },
+    {
+     "band": "Why the layout changes",
+     "label": "BVM rationale, company wording",
+     "value": "Increases power density by eliminating required spacing between multiple smaller modules"
+    },
+    {
+     "band": "Why the layout changes",
+     "label": "SiVR rationale, company wording",
+     "value": "Removes substrate interconnect current limitations"
+    },
+    {
+     "band": "Current-density roadmap, company figures",
+     "label": "2024 — first-generation module, one phase",
+     "value": "1.0 A/mm²"
+    },
+    {
+     "band": "Current-density roadmap, company figures",
+     "label": "2025 — third-generation module, four phases",
+     "value": "2.0 A/mm²"
+    },
+    {
+     "band": "Current-density roadmap, company figures",
+     "label": "2027 — dual-phase high-density vertical module",
+     "value": "3.0 A/mm², marked mass production Q1 2027"
+    },
+    {
+     "band": "Current-density roadmap, company figures",
+     "label": "2028 — substrate-embedded module",
+     "value": "greater than 4.0 A/mm²"
+    }
+   ],
+   "notes": "All figures are Infineon's own, from its November 2025 divisional deck and its August 2026 investor presentation. The two decks were published eight months apart and the roadmap was revised upward between them; both versions are recorded rather than merged."
+  },
+  {
+   "product": "AI data-centre power-supply unit ladder — company-published efficiency and density",
+   "specs": [
+    {
+     "band": "Available now",
+     "label": "3.3 kW single-phase PSU",
+     "value": "Efficiency 97.4%, 98 W/in³"
+    },
+    {
+     "band": "Available now",
+     "label": "8 kW single-phase PSU",
+     "value": "Efficiency approximately 97.5%, 100 W/in³"
+    },
+    {
+     "band": "Available now",
+     "label": "12 kW single-phase PSU",
+     "value": "Efficiency approximately 97.5%, 113 W/in³"
+    },
+    {
+     "band": "Reference boards, dated",
+     "label": "16 kW-plus three-phase PSU",
+     "value": "Efficiency approximately 97.5%; reference board Q2 2026"
+    },
+    {
+     "band": "Reference boards, dated",
+     "label": "27 kW three-phase PSU",
+     "value": "Over 100 W/in³; reference board Q3 2026"
+    },
+    {
+     "band": "Reference boards, dated",
+     "label": "30 kW three-phase PFC",
+     "value": "Topology evaluation board Q2 2026"
+    },
+    {
+     "band": "Adjacent reference designs",
+     "label": "High-voltage intermediate bus converter",
+     "value": "800 VDC or ±400 V to 50 V, more than 98 percent efficiency at full load"
+    },
+    {
+     "band": "Adjacent reference designs",
+     "label": "Battery backup unit DC-DC",
+     "value": "24 kW, 450 W/in³, efficiency exceeding 99 percent, using 650 V and 1200 V silicon carbide"
+    }
+   ],
+   "notes": "Read the ladder as a statement about where the industry is going rather than about any one product: the move from single-phase to three-phase input is what a rack drawing hundreds of kilowatts forces, and it is the reason the reference boards carry dates rather than availability."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-03",
+   "category": "corporate",
+   "headline": "Consensus for the 10 or 11 November Q4 FY2026 print stands at €4,704m of revenue and a 23.2% Segment Result margin",
+   "read": "The forward bar is the highest of the year and the margin step is the largest: Segment Result would have to rise from €797m to €1,092m in one quarter. Vara's FY2027 line of €19,660m at a 24.8% margin is what the current valuation is discounting.",
+   "source": "https://www.infineon.com/assets/row/public/documents/corporate/investors/analyst-consensus/vara-consensus-on-infineon-as-of-2026-08-18-v01-00-en.pdf"
+  },
+  {
+   "date": "2026-08",
+   "category": "ma",
+   "headline": "Acquisition of C2i Semiconductors of Bangalore, announced for completion in Q3 2026",
+   "read": "The stated targets — software-defined multiphase controllers, smart power stages and vertical power delivery architectures — name precisely the layer where Gartner says Infineon's lead is being tested. This is a capability purchase at the compute board, not a capacity purchase.",
+   "source": "https://www.infineon.com/press-release/2026/infpr202608-129"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "financial",
+   "headline": "Q3 FY2026: record revenue of €4,172m, Segment Result €797m at 19.1%, FY2026 guidance set at about €16.3bn and AI data-centre revenue raised above €1.6bn",
+   "read": "Revenue beat the Vara consensus by 1.4% and Segment Result missed it by 1.1% — the fourth consecutive quarter of that shape. The shares fell about 3% on the print.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/press/2026/infpr202608-125e.pdf"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "customer",
+   "headline": "Disclosure of multi-year capacity reservation agreements with unnamed AI-ecosystem customers covering a high single-digit billion euro cumulative revenue volume, with prepayments",
+   "read": "A prepaid multi-year reservation is a harder demand signal than an order book because the counterparty has posted cash against it. That none of the counterparties is named is the largest collection gap in this file.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-intro-statement-analyst-call-v01-00-en.pdf"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "customer",
+   "headline": "Partnership with Siemens to supply 1.2 kV silicon-carbide power modules for use in Siemens circuit breakers",
+   "read": "The only named customer for the solid-state-circuit-breaker device family, against a stated base of more than twenty. Note the entity: this is Siemens AG's electrification business, not Siemens Energy AG.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-intro-statement-analyst-call-v01-00-en.pdf"
+  },
+  {
+   "date": "2026-07-02",
+   "category": "capacity",
+   "headline": "The €5bn Smart Power Fab opens in Dresden, roughly three months ahead of schedule, doubling 300 mm capacity at the site",
+   "read": "Ahead of schedule is the unusual part. Infineon attributes the pace to digital integration with Villach and says the method ramps roughly twice as fast as its previous approach — a claim about method, which is the transferable asset.",
+   "source": "https://www.infineon.com/press-release/2026/ifxpr202607-117"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "ma",
+   "headline": "Completion of the ams OSRAM non-optical analog and mixed-signal sensor acquisition, about €230m of annualised revenue and around 230 staff transferring",
+   "read": "Consolidated from the same day the new segment structure took effect, so it lands directly inside Edge Systems rather than having to be carved out of a predecessor.",
+   "source": "https://www.infineon.com/press-release/2026/infxx202607-113"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "corporate",
+   "headline": "The four reporting segments become three: Automotive, Power Systems and Edge Systems",
+   "read": "Power Systems combines Green Industrial Power with the power half of Power & Sensor Systems, so the AI data-centre business becomes separately visible for the first time from Q4 FY2026. Every historical segment series ends here.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/press/2026/infxx202605-082e.pdf"
+  },
+  {
+   "date": "2026-06-30",
+   "category": "market",
+   "headline": "Gartner names Infineon \"the company to beat\" in AI data-centre power semiconductors in a report dated 18 May 2026",
+   "read": "The strongest third-party leadership claim in the file — and the same report qualifies it, saying the position is being tested by SiC and GaN competition and by rivals focused on the compute board level.",
+   "source": "https://www.semiconductor-today.com/news_items/2026/jun/infineon2-300626.shtml"
+  },
+  {
+   "date": "2026-06-16",
+   "category": "legal",
+   "headline": "China's Supreme People's Court upholds a preliminary injunction obtained by Innoscience over two Chinese GaN patents; Infineon disputes the characterisation",
+   "read": "The GaN patent war runs in both directions and this is the direction that costs Infineon: the order covers sales, offers and imports of accused products in China, with damages of RMB 10m. Infineon says the ruling concerned preliminary relief, that the main proceedings continue, and that the impact is very limited.",
+   "source": "https://ipfray.com/infineon-disputes-innosciences-claim-of-final-chinese-gan-patent-victory/"
+  },
+  {
+   "date": "2026-06",
+   "category": "product-launch",
+   "headline": "A 24 kW silicon-carbide battery-backup-unit DC-DC reference design at 450 W/in³ and above 99% efficiency",
+   "read": "Battery backup at the rack is where the 800 VDC architecture puts the ride-through the UPS room used to provide, so a reference design here is a bid for the shelf's second-largest box after the power supply.",
+   "source": "https://www.infineon.com/market-news/2026/infpss202606-093"
+  },
+  {
+   "date": "2026-05-28",
+   "category": "partnership",
+   "headline": "Infineon joins NVIDIA's MGX AI Factory ecosystem, committing to the full 800 V to 50 V, 12 V and 6 V conversion flow",
+   "read": "Escalates the 2025 architecture collaboration into a named platform commitment, with GaN bus converters near 1 MHz and SiC JFET protection as the two differentiated pieces. Still one of many silicon partners.",
+   "source": "https://www.prnewswire.com/news-releases/infineon-joins-nvidias-mgx-ai-factory-ecosystem-to-transform-power-delivery-architecture-for-next-generation-ai-server-racks-302785037.html"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "financial",
+   "headline": "Q2 FY2026: revenue €3,812m, Segment Result €653m at 17.1%; guidance raised to significant revenue growth and about a 20% Segment Result margin",
+   "read": "The raise was partly a currency rebasing — the planning rate moved from US$1.15 to US$1.17 in the same release — and partly demand. Press coverage generally conflated the two.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/press/2026/infxx202605-082e.pdf"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "market",
+   "headline": "TechInsights ranks Infineon first in automotive power semiconductors for 2025, ahead of STMicroelectronics and Bosch, in a market that declined to about $13.2bn",
+   "read": "First place in a shrinking market. The automotive segment's Segment Result margin fell from 26.2% in FY2024 to 20.7% in FY2025, which is the drag the AI business has been offsetting.",
+   "source": "https://www.techinsights.com/blog/analysis-2025-automotive-power-semiconductor-vendor-share"
+  },
+  {
+   "date": "2026-04-13",
+   "category": "market",
+   "headline": "TechInsights ranks Infineon first in automotive semiconductors for a sixth consecutive year at 12.8% of a $74.4bn market, down from 13.2%",
+   "read": "Share fell while the gap to second place widened — both can be true when the field below fragments. Automotive microcontroller share rose 3.9 points to 36.0%.",
+   "source": "https://www.powersemiconductorsweekly.com/2026/04/13/infineon-retains-1-position-in-global-automotive-semiconductor-market/"
+  },
+  {
+   "date": "2026-03",
+   "category": "product-launch",
+   "headline": "A CoolGaN-based high-voltage intermediate bus converter reference design converting 800 VDC or ±400 V to 50 V at more than 98% efficiency at full load",
+   "read": "The first stage after the hall in an 800 VDC rack, and the one that has to be isolated. Publishing a reference design rather than only a device is a bid to set the topology the shelf builders adopt.",
+   "source": "https://www.infineon.com/technology-news/2026/infpss202603-067"
+  },
+  {
+   "date": "2026-02-04",
+   "category": "financial",
+   "headline": "Q1 FY2026: revenue €3,662m, Segment Result €655m at 17.9%; capital expenditure raised from about €2.2bn to about €2.7bn and the first FY2027 AI revenue figure given",
+   "read": "The only quarter in the last four where Segment Result beat consensus. The capex raise was explicitly to accelerate AI data-centre capacity, which is a supply-side answer to a demand the company describes as unmet.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/press/2026/infxx202602-042e.pdf"
+  },
+  {
+   "date": "2025-12-18",
+   "category": "market",
+   "headline": "Yole's Power SiC 2025 analysis reports an overcapacity correction persisting to 2027–2028, with upstream utilisation near 50%",
+   "read": "The demand story and the pricing story point in opposite directions for silicon carbide. Infineon's answer is the 200 mm conversion, which is a cost answer to a price problem and takes years.",
+   "source": "https://www.semiconductor-today.com/news_items/2025/dec/yole-181225.shtml"
+  },
+  {
+   "date": "2025-11-26",
+   "category": "corporate",
+   "headline": "\"We Power AI\" divisional update publishes the grid-to-core strategy, the solid-state-transformer comparison and the vertical-power-delivery resistance figures",
+   "read": "The single most substantive technical disclosure in the file, and the origin of the 90–140 µΩ lateral versus 7–15 µΩ vertical figures the whole point-of-load argument rests on.",
+   "source": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2025/2025-11-26-power-roadshow-v01-00-en.pdf"
+  },
+  {
+   "date": "2025-11-12",
+   "category": "financial",
+   "headline": "FY2025 closes at €14,662m of revenue, down 2%, with a Segment Result of €2,560m at 17.5%; the AI power revenue target is raised",
+   "read": "A second consecutive down year on revenue, with the AI line described as the offset. Infineon put its end-of-decade addressable market at €8–12bn in the same release.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/press/2025/infxx202511-021e.pdf"
+  },
+  {
+   "date": "2025-10",
+   "category": "partnership",
+   "headline": "The CoolSiC JFET hot-swap solution lets an operator exchange a server board in an 800 VDC rack while the rest of the rack keeps running",
+   "read": "Serviceability, not efficiency, is the differentiated claim — and it is the right one, because an 800 V bus that cannot be worked on live changes a data centre's whole maintenance model.",
+   "source": "https://www.infineon.com/press-release/2025/INFXX202510-003"
+  },
+  {
+   "date": "2025-08-28",
+   "category": "partnership",
+   "headline": "Collaboration with Delta Electronics on high-density power modules for vertical power delivery to AI processors",
+   "read": "The division of labour is stated: Infineon's ultra-thin silicon and embedded packaging, Delta's module design and manufacturing. It is also the clearest illustration of the tier structure — Delta is simultaneously a partner, a customer for the silicon and a competitor at the module.",
+   "source": "https://www.infineon.com/technology-news/2025/INFPSS202508-138"
+  },
+  {
+   "date": "2025-08",
+   "category": "ma",
+   "headline": "Completion of the acquisition of Marvell's automotive Ethernet business for the equivalent of €2,180m",
+   "read": "The single largest driver of FY2025's negative free cash flow of −€1,051m, against a business the seller described at roughly $225–250m of revenue. No analyst assessment of whether the roughly ten-times-revenue price was fair could be located.",
+   "source": "https://www.infineon.com/press-release/2025/INFXX202508-133"
+  },
+  {
+   "date": "2025-07",
+   "category": "leadership",
+   "headline": "Alexander Gorski appointed Chief Operations Officer effective 1 October 2025, with responsibility for operations, procurement, supply chain and quality",
+   "read": "The most consequential appointment for the AI thesis: he owns the Dresden ramp, the 200 mm silicon-carbide conversion and the allocation the company says it is in.",
+   "source": "https://www.infineon.com/press-release/2025/infxx202507-123"
+  },
+  {
+   "date": "2025-05-20",
+   "category": "partnership",
+   "headline": "NVIDIA names Infineon among the silicon providers for its 800 VDC data-centre architecture",
+   "read": "The founding document of the relationship — and of the correct scepticism about it, since the same post names thirteen other silicon vendors and assigns each partner to a tier.",
+   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+  },
+  {
+   "date": "2025-02-20",
+   "category": "policy",
+   "headline": "The European Commission approves up to €920m of German state aid for the Dresden Smart Power Fab under the European Chips Act",
+   "read": "About €1bn of total public support including IPCEI funding, against €5bn of private investment. Infineon later attributed part of a Q4 FY2025 operating cash-flow increase to the receipt of subsidies — the point at which industrial policy becomes a cash-flow line.",
+   "source": "https://www.infineon.com/press-release/2025/infxx202502-058"
+  },
+  {
+   "date": "2025-02",
+   "category": "capacity",
+   "headline": "First 200 mm silicon-carbide products released from Villach, Austria",
+   "read": "The wafer-size transition is the main lever on silicon-carbide cost, because SiC economics are dominated by the wafer rather than by lithography.",
+   "source": "https://www.infineon.com/press-release/2025/infxx202502-055"
+  },
+  {
+   "date": "2025-09-12",
+   "category": "corporate",
+   "headline": "The Austin, Texas production facility is sold to SkyWater Technology, contributing €149m to FY2025 results",
+   "read": "A correction to the common assumption that Infineon holds US front-end capacity. Americas headcount fell 19% in FY2025 and US headcount fell 19% to 3,012 — which sharpens the company's own warning about de facto exclusion from markets where it lacks local production.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819974/000181997425000037/skyt-20250912xex9901.htm"
+  },
+  {
+   "date": "2024-08",
+   "category": "corporate",
+   "headline": "FY2024 guidance is cut for the third time in one year and 1,400 jobs are cut with a further 1,400 relocated, under the Step Up programme",
+   "read": "The immediately preceding cycle, and worth holding beside the current one: the same company was cutting guidance and headcount two years before it was in allocation. Step Up targets about €1bn of annual savings by 2027.",
+   "source": "https://www.datacenterdynamics.com/en/news/chipmaker-infineon-to-cut-1400-jobs-will-offshore-a-further-1400-to-save-costs/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-05",
+   "via": "800 VDC power conversion silicon",
+   "note": "NVIDIA's own developer blog names Infineon among the silicon providers for its 800 VDC data-centre architecture, and Infineon joined NVIDIA's MGX AI Factory ecosystem in May 2026.",
+   "context": "The anchor relationship of this dossier, and it is bilateral rather than inferred: NVIDIA names Infineon on its own property and Infineon has issued two dedicated releases naming NVIDIA.\n\nThe differentiated engineering output is serviceability rather than efficiency. Infineon's October 2025 release describes a CoolSiC JFET solution that lets an operator exchange a server board in an 800 VDC rack while the other servers in the same rack keep running — a hot-swap function that an 800-volt bus does not otherwise permit. The May 2026 MGX commitment covers the full conversion flow from 800 V down to 50 V, 12 V and 6 V, using GaN bus converters near 1 MHz and SiC JFET protection.\n\nThe scope limit matters as much as the scope. NVIDIA's roster names fourteen silicon providers in total — Analog Devices, AOS, Efficient Power Conversion, Infineon, Innoscience, Monolithic Power Systems, Navitas, onsemi, Power Integrations, Renesas, Richtek, ROHM, STMicroelectronics and Texas Instruments — and assigns each partner to one of three tiers. Infineon is not a sole source and neither party has published a revenue figure, a volume commitment or an exclusivity term. Full-scale production is tied by NVIDIA to its Kyber rack-scale systems in 2027.",
+   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+  },
+  {
+   "slug": "delta-electronics",
+   "type": "partner",
+   "status": "active",
+   "since": "2023-03",
+   "via": "Vertical power delivery modules",
+   "note": "Infineon's own release of 28 August 2025 announces a strengthened collaboration with Delta Electronics on high-density power modules enabling vertical power delivery to AI processors.",
+   "context": "The strongest non-NVIDIA link in the file because it is a bilateral, first-party announcement with a stated division of labour: Infineon contributes its ultra-thin silicon MOSFET technology and embedded packaging expertise, Delta contributes power module design and manufacturing. Infineon quantifies the benefit as up to 150 tonnes of carbon dioxide saved over a three-year rack lifetime relative to a lateral discrete solution.\n\nThe relationship predates the AI cycle: the two signed a memorandum of understanding in March 2023 extending a long-term partnership from industrial into automotive applications.\n\nIt is also the clearest illustration of how the tier structure works in practice. Delta consumes Infineon silicon, so it is a customer; it builds the module, so it captures the integration value; and SemiAnalysis's competitive read of AI power delivery names Delta and Infineon among the same six players, so it is also a competitor one level up. All three are true simultaneously and the relationship is typed partner because that is what the bilateral source states.",
+   "source": "https://www.infineon.com/technology-news/2025/INFPSS202508-138"
+  },
+  {
+   "slug": "mitsubishi-electric",
+   "type": "competitor",
+   "status": "active",
+   "via": "Power discretes and modules",
+   "note": "Infineon's own published market-share chart for power discretes and modules ranks both parties in one market: Infineon 17.4% and Mitsubishi 4.6% of a $32.8bn 2024 market.",
+   "context": "This is the strongest form of competitor evidence available — a named, ranked, single-market table published by one of the two parties. The same chart places onsemi at 8.5%, STMicroelectronics at 6.9%, Fuji Electric at 3.9% and Silan at 3.4%, and Infineon uses it to claim the number-one position in power semiconductors.\n\nMordor Intelligence independently names both in a power-semiconductor top five alongside onsemi, Texas Instruments and STMicroelectronics.\n\nThe relationship is not purely adversarial. NVIDIA's 800 VDC roster places Mitsubishi Electric in the data-centre power systems tier while Infineon sits in the silicon tier, so in the AI data-centre context the two are ecosystem peers at different levels of the same chain rather than rivals for the same socket. The competitor type reflects the power-semiconductor market where they are ranked against each other, not the data-centre context where they are not.",
+   "source": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-investor-presentation-v01-00-en.pdf"
+  },
+  {
+   "slug": "vicor",
+   "type": "competitor",
+   "status": "active",
+   "via": "AI point-of-load power delivery",
+   "note": "SemiAnalysis's competitive analysis of AI power delivery names exactly six players in one market — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon.",
+   "context": "The curated basis is an explicit six-name competitive set for hyperscale data-centre power delivery, which is the layer where both companies sell point-of-load conversion into accelerator boards.\n\nThe same analysis records the outcome that defines the segment: Vicor held the 48-volt sockets through NVIDIA's V100 and A100 generations and then lost the H100 socket to Monolithic Power Systems on cost and on ease of lateral integration into standard server designs. Neither party won that contest, and it is the specific evidence behind Gartner's observation that Infineon's leadership is being tested at the compute board level.\n\nMordor Intelligence separately places a top five of Texas Instruments, Renesas, Infineon, Monolithic Power Systems and Analog Devices at roughly 55–60% of the GPU and AI-server voltage-regulator market in 2025 — a ranking that includes Infineon and excludes Vicor. Note that Vicor is absent from every NVIDIA 800 VDC partner list, which is a fact about Vicor recorded in its own dossier and not a claim about Infineon.",
+   "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition"
+  },
+  {
+   "slug": "byd",
+   "type": "competitor",
+   "status": "active",
+   "since": "2023",
+   "via": "Power modules in China",
+   "note": "A market-share ranking of China power modules places BYD Semiconductor first at 28.9% in 2023 and Infineon second at 14.5%, having reversed a 2022 ordering in which Infineon led at 25%.",
+   "context": "The only relationship in this file where Infineon is the party that lost a leadership position, and the mechanism is worth naming precisely: BYD is a large buyer of power semiconductors that funded its own device programme and then displaced its suppliers in its home market.\n\nThe scale of the reversal is the point. On 2020 automotive IGBT data the ordering had been Infineon at 49.2%, BYD at 20.0% and StarPower at 16.6%. Three years later Infineon was second in China power modules at a little over half BYD Semiconductor's share.\n\nThis is a competitor link rather than a customer one because the ranking source treats them as rivals in one market, and because BYD's vertical integration is specifically a move away from external supply. It is also the template most likely to repeat wherever a large Chinese buyer can fund a device programme of its own.",
+   "source": "https://autonews.gasgoo.com/china_news/70038045.html"
+  },
+  {
+   "slug": "tesla",
+   "type": "customer",
+   "status": "historical",
+   "note": "Trade press reported Infineon supplying power chips to Tesla under a higher-volume arrangement during the Model 3 production ramp.",
+   "context": "Curated as historical rather than active, and the reason is stated rather than hidden. The sourcing is a 2018-era trade-press report tied to the Model 3 ramp, and no current-vintage source confirms the relationship persists at scale.\n\nTwo things cut against assuming continuity. Tesla announced a programme to reduce silicon carbide content per vehicle by roughly three quarters, which directly reduces the content available to any SiC supplier. And Infineon names no automotive customer in any current disclosure.\n\nThe link is recorded because a source explicitly states it and because a reader tracing Infineon's automotive position should know it existed; it is typed historical, and no inference about present volumes should be drawn from it.",
+   "source": "https://www.eetimes.com/infineon-supplying-power-chips-to-tesla-says-report/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "EU Chips Act",
+   "status": "in-effect",
+   "effectiveDate": "2025-02-20",
+   "exposure": "The European Commission approved up to €920m of German state aid for Infineon's Smart Power Fab in Dresden under the European Chips Act in February 2025, with total public support for the Dresden site of about €1bn once IPCEI microelectronics funding is included, against €5bn of private investment. The fab opened on 2 July 2026 roughly three months ahead of schedule and doubles Infineon's 300 mm capacity at the site. Infineon disclosed that Q4 FY2025 operating cash flow rose to €1,380m and attributed part of the increase to the receipt of subsidies. Infineon is separately a minority partner in ESMC, the Dresden joint venture led by TSMC with Bosch and NXP, which received a separate €5bn German state-aid approval.",
+   "mitigation": "Infineon states it will have invested €2.3bn in innovation projects at its German and Austrian sites between 2022 and 2027.",
+   "source": "https://www.infineon.com/press-release/2025/infxx202502-058"
+  },
+  {
+   "regime": "Section 232 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-14",
+   "exposure": "Phase one of the Section 232 semiconductor action implemented a 25% tariff on certain imported semiconductors from 14 January 2026, but the scope is narrow: it covers only articles meeting defined technical parameters under HTSUS headings 8471.50, 8471.80 and 8473.30 — described as the highest-end semiconductors and associated assemblies, with NVIDIA H200-series and AMD Instinct MI325X named in the annex — and it exempts semiconductors imported for US data-centre buildout, research and development, repairs and public-sector applications. Power discretes and modules are not computing articles under those headings. No source was found stating that Infineon is in scope. The July 2025 EU–US trade arrangement secured a zero-for-zero exemption for semiconductor production equipment.",
+   "source": "https://www.whitecase.com/insight-alert/president-trump-orders-narrowly-targeted-25-section-232-tariff-certain-advanced"
+  },
+  {
+   "regime": "Trade tariff disputes and export controls",
+   "status": "in-effect",
+   "exposure": "Infineon's own FY2025 annual report names the risk in its own words: trade tariff disputes, export controls and export bans for advanced technology or critical basic materials, and trade restrictions between the United States, the European Union and China, may constrain global trade — and, in the sentence that matters most, that tariff conflicts \"could result in de facto exclusion from key markets if Infineon does not have local production\". It states that FY2025 tariff uncertainty weighed on demand and made customers more cautious in ordering. That warning is sharpened by a fact in the same report: Infineon sold its Austin, Texas production facility to SkyWater Technology during FY2025, and US headcount fell 19% to 3,012.",
+   "mitigation": "Infineon's stated answer is structural rather than programmatic — local production in the markets it serves, which is the reading its own \"de facto exclusion\" language invites. No separate first-party tariff mitigation plan was located.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/investors/annual-reports/2025/2025-annual-report-v01-00-en.pdf"
+  },
+  {
+   "regime": "US export controls on semiconductors",
+   "status": "in-effect",
+   "effectiveDate": "2024-12-02",
+   "exposure": "The Bureau of Industry and Security's December 2024 package added more than 140 Entity List designations and controls on 24 categories of semiconductor manufacturing equipment, three software tool types and high-bandwidth memory. The controls target advanced logic, memory and manufacturing equipment rather than power discretes, and no source was found naming Infineon in any export-control action, licence denial or Entity List matter. Infineon's own annual report treats this as a compliance rather than a market-access risk, stating that the complexity and frequency of change in export-control regulation creates a risk of not complying fully, which might result in fines and penalties or influence the availability of export permits.",
+   "mitigation": "Infineon states that a central Export Control department is responsible for implementing measures relating to export-control legislation and foreign trade, supported by locally appointed managers responsible for export control and by internal audits of export control across relevant processes.",
+   "source": "https://www.infineon.com/row/public/documents/corporate/investors/annual-reports/2025/2025-annual-report-v01-00-en.pdf"
+  },
+  {
+   "regime": "China gallium and germanium export controls",
+   "status": "in-effect",
+   "effectiveDate": "2023-08-01",
+   "exposure": "Gallium is the input to gallium nitride. China's Ministry of Commerce imposed export controls on gallium and germanium effective 1 August 2023 and announced an outright ban on exports of both to the United States in December 2024. The ban is currently suspended in favour of a licensing regime until 27 November 2026, with the military-end-user prohibition remaining in force; shipments of gallium and germanium to Japan have run at zero through 2026 under a separate state-controlled licensing regime announced in January 2026. Infineon acquired GaN Systems in 2023 and its GaN bus converters are a named part of the 800 VDC portfolio, so it sits downstream of a supply chain China controls and has repeatedly restricted. Infineon names \"critical basic materials\" as a risk in its own annual report but has published no gallium-specific statement.",
+   "mitigation": "The only relevant company statement is a general capability claim rather than a policy response: Infineon says it achieves superior customer supply stability in GaN through dual sourcing and scalability. No gallium-specific mitigation has been published.",
+   "source": "https://theoregongroup.com/commodities/gallium-germanium/china-lifts-export-ban-gallium-germanium-antimony/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Jochen Hanebeck",
+   "title": "Chief Executive Officer",
+   "photo": "images/execs/infineon-hanebeck.jpg",
+   "background": [
+    "Chief Executive Officer — Infineon Technologies AG; contract extension announced February 2026",
+    "Career Infineon operations and automotive executive; the annual report's board biographies record board members joining Infineon when it was still Siemens AG, before the 1999 carve-out",
+    "Signs every quarterly release and the annual report",
+    "Frames the AI thesis publicly: global investment in AI infrastructure continuing to rise rapidly, with considerable growth expected in demand for Infineon's power supply solutions for AI data centres",
+    "Collection gap: the dated curriculum vitae behind the leadership page was not retrieved, so the chronology of prior roles is not stated here"
+   ]
+  },
+  {
+   "name": "Dr. Sven Schneider",
+   "title": "Chief Financial Officer",
+   "photo": "images/execs/infineon-schneider.jpg",
+   "background": [
+    "Chief Financial Officer — Infineon Technologies AG",
+    "Previously held several positions at Linde AG, latterly at board level",
+    "Owner of the FY2026 guidance architecture: about €16.3bn of revenue, about a 20% Segment Result margin, about €2.7bn of investment and about €1.85bn of adjusted free cash flow",
+    "Holds a business degree and a doctorate in business administration"
+   ]
+  },
+  {
+   "name": "Alexander Gorski",
+   "title": "Chief Operations Officer",
+   "photo": "images/execs/infineon-gorski.jpg",
+   "background": [
+    "Chief Operations Officer — Infineon Technologies AG, effective 1 October 2025",
+    "Responsible for Operations, Procurement, Supply Chain and Quality Management",
+    "The most consequential appointment for the AI thesis: owns the Dresden ramp, the 200 mm silicon-carbide conversion at Villach and Kulim, and the allocation position the company has disclosed",
+    "Joined Infineon in 1998, when it was still part of Siemens AG",
+    "Publicly frames the demand case: AI data centres being built and planned worldwide will consume twice as much electricity in 2030 as today, equivalent to Germany's entire consumption"
+   ]
+  },
+  {
+   "name": "Andreas Urschitz",
+   "title": "Chief Marketing Officer",
+   "photo": "images/execs/infineon-urschitz.jpg",
+   "background": [
+    "Chief Marketing Officer — Infineon Technologies AG",
+    "Previously Division President of Power Management & Multimarket, the predecessor organisation to Power & Sensor Systems — making him the most power-native member of the Management Board",
+    "Long Infineon tenure with a connection to the Villach, Austria site"
+   ]
+  },
+  {
+   "name": "Elke Reichart",
+   "title": "Chief Digital and Sustainability Officer",
+   "photo": "images/execs/infineon-reichart.jpg",
+   "background": [
+    "Chief Digital and Sustainability Officer — Infineon Technologies AG",
+    "Graduate degree in applied computer science, 1991"
+   ]
+  },
+  {
+   "name": "Adam White",
+   "title": "Division President, Power & Sensor Systems",
+   "photo": "images/execs/infineon-white.jpg",
+   "background": [
+    "Division President, Power & Sensor Systems — the division that has carried the AI data-centre power business through FY2026",
+    "Named spokesperson on the NVIDIA MGX ecosystem commitment: working with NVIDIA to redefine power delivery systems from the grid to the processor core",
+    "Presented the division's AI and data-centre strategy to investors in May 2025 and again at the November 2025 \"We Power AI\" divisional update",
+    "From the 1 July 2026 reorganisation his division's power business forms the core of the new Power Systems segment"
+   ]
+  },
+  {
+   "name": "Dr. Peter Wawer",
+   "title": "Division President, Green Industrial Power",
+   "photo": "images/execs/infineon-wawer.jpg",
+   "background": [
+    "Division President, Green Industrial Power — the grid-facing division carrying solid-state transformers, solid-state circuit breakers and power and grid infrastructure",
+    "Co-presenter of the November 2025 \"We Power AI\" divisional update alongside Adam White",
+    "From 1 July 2026 Green Industrial Power merges with the power half of Power & Sensor Systems to form Power Systems"
+   ]
+  },
+  {
+   "name": "Peter Schiefer",
+   "title": "Division President, Automotive",
+   "photo": "images/execs/infineon-schiefer.jpg",
+   "background": [
+    "Division President, Automotive — the largest division by revenue at €7,402m in FY2025",
+    "Owns the segment whose Segment Result margin fell from 26.2% in FY2024 to 20.7% in FY2025, and into which the Marvell automotive Ethernet portfolio was integrated",
+    "Long-tenured Infineon executive; a published curriculum vitae dates his divisional leadership to at least 2018"
+   ]
+  },
+  {
+   "name": "Thomas Rosteck",
+   "title": "Division President, Connected Secure Systems",
+   "photo": "images/execs/infineon-rosteck.jpg",
+   "background": [
+    "Division President, Connected Secure Systems — security controllers, embedded security, connectivity and memory",
+    "From 1 July 2026 his division combines with the sensor, radio-frequency and USB business of Power & Sensor Systems to form the new Edge Systems segment",
+    "FY2025 divisional revenue was €1,418m at a 10.9% Segment Result margin, the lowest of the four former segments"
+   ]
+  },
+  {
+   "name": "Dr. Peter Friedrichs",
+   "title": "Vice President, Silicon Carbide",
+   "background": [
+    "Vice President, Silicon Carbide — the executive named alongside the Green Industrial Power division president in Infineon's silicon-carbide business updates",
+    "Owns the technology behind the 1200 V and 2000 V CoolSiC trench families and the CoolSiC JFET used in the NVIDIA hot-swap work",
+    "No photograph is published here: the leadership-page image path for this executive returns an access error, verified against a control request that succeeded for every other named leader, so the omission is a real absence rather than a retrieval failure"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "EUR",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2026 Q3 (three months ended 30 June 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "€4,172m, up 12.6% year on year — the highest quarterly revenue in Infineon's history to date",
+      "expected": "€4,116m (Vara Research consensus of 19 May 2026, the last vintage before the print)",
+      "verdict": "beat",
+      "result": "Beat by 1.4%. Vara compiles 18–20 named banks on Infineon's own commission and is the only consensus that publishes both earnings bases side by side.",
+      "kpi": "revenue",
+      "usdMillions": 4851.6,
+      "fxBasis": "EUR at 1.1629 USD/EUR (unweighted mean of European Central Bank daily reference rates over 2026-04-01 to 2026-06-30, 62 trading days; Infineon's own FY2026 planning rate of 1.17 corroborates the fiscal-year-to-date average within 0.6%)"
+     },
+     {
+      "name": "Segment Result and margin",
+      "actual": "€797m at 19.1%, up from 18.0% a year earlier",
+      "expected": "€806m at 19.6% (Vara Research, 19 May 2026)",
+      "verdict": "miss",
+      "result": "Missed by 1.1% on the absolute figure and by 50 basis points on the margin — the third such miss in four quarters."
+     },
+     {
+      "name": "Adjusted diluted earnings per share",
+      "actual": "€0.44, up from €0.37",
+      "expected": "€0.44 (Vara Research, 19 May 2026)",
+      "verdict": "inline",
+      "result": "In line on the adjusted basis. State the basis whenever quoting this figure: the same quarter's IFRS diluted EPS from continuing operations was €0.32, and third-party trackers mix the two."
+     },
+     {
+      "name": "IFRS diluted earnings per share from continuing operations",
+      "actual": "€0.32, up 45%",
+      "expected": "€0.34 (Vara Research, 19 May 2026)",
+      "verdict": "miss",
+      "result": "Missed by two cents on the IFRS basis. Reported here alongside the adjusted figure rather than instead of it, because the two are not interchangeable."
+     },
+     {
+      "name": "Gross margin",
+      "actual": "40.8% reported, 42.8% adjusted — up 210 basis points sequentially",
+      "expected": "",
+      "result": "No separate consensus is published for the reported gross-margin line."
+     },
+     {
+      "name": "Free cash flow",
+      "actual": "+€599m, against −€63m in the prior quarter",
+      "expected": "",
+      "result": "The swing follows the absence of an acquisition payment rather than an operational change."
+     }
+    ],
+    "commentary": "The record revenue print. The shares fell about 3% on the day, which is the clearest single data point for the judgment that the market is pricing conversion rather than headline growth."
+   },
+   {
+    "period": "FY2026 Q2 (three months ended 31 March 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "€3,812m",
+      "expected": "€3,816m (Vara Research, 23 April 2026)",
+      "verdict": "inline",
+      "result": "In line, 0.1% below consensus.",
+      "kpi": "revenue",
+      "usdMillions": 4461.2,
+      "fxBasis": "EUR at 1.1703 USD/EUR (unweighted mean of European Central Bank daily reference rates over 2026-01-01 to 2026-03-31, 63 trading days)"
+     },
+     {
+      "name": "Segment Result and margin",
+      "actual": "€653m at 17.1%",
+      "expected": "€677m (Vara Research, 23 April 2026)",
+      "verdict": "miss",
+      "result": "Missed by 3.5%, the largest of the four recent misses."
+     },
+     {
+      "name": "Adjusted diluted earnings per share",
+      "actual": "€0.34",
+      "expected": "€0.37 (Vara Research, 23 April 2026)",
+      "verdict": "miss",
+      "result": "Missed on the adjusted basis. The IFRS diluted figure was €0.23 against a €0.25 consensus — a miss on both bases, which is not always the case."
+     },
+     {
+      "name": "FY2026 guidance",
+      "actual": "Raised: revenue to rise significantly year on year; adjusted gross margin low-to-mid forties; Segment Result margin about 20%; adjusted free cash flow about €1.65bn",
+      "expected": "",
+      "result": "Guidance, not an actual. The planning rate moved from US$1.15 to US$1.17 in the same release, so part of the raise is a currency rebasing rather than a demand signal — a distinction most coverage did not draw."
+     }
+    ],
+    "commentary": "The quarter that announced the segment restructure effective 1 July 2026, and the point beyond which no historical segment series remains comparable."
+   },
+   {
+    "period": "FY2026 Q1 (three months ended 31 December 2025)",
+    "periodType": "quarter",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "€3,662m",
+      "expected": "€3,621m (Vara Research, 27 January 2026)",
+      "verdict": "beat",
+      "result": "Beat by 1.1%.",
+      "kpi": "revenue",
+      "usdMillions": 4260.4,
+      "fxBasis": "EUR at 1.1634 USD/EUR (unweighted mean of European Central Bank daily reference rates over 2025-10-01 to 2025-12-31, 64 trading days)"
+     },
+     {
+      "name": "Segment Result and margin",
+      "actual": "€655m at 17.9%",
+      "expected": "€607m (Vara Research, 27 January 2026)",
+      "verdict": "beat",
+      "result": "Beat by 7.9% — the only Segment Result beat in the last four quarters."
+     },
+     {
+      "name": "Adjusted diluted earnings per share",
+      "actual": "€0.35",
+      "expected": "€0.33 (Vara Research, 27 January 2026)",
+      "verdict": "beat",
+      "result": "Beat on the adjusted basis. On the IFRS basis the same quarter was €0.19 against a €0.22 consensus — a miss. This quarter is the clearest single illustration of why the basis has to be stated."
+     },
+     {
+      "name": "Capital expenditure guidance",
+      "actual": "Raised from about €2.2bn to about €2.7bn for FY2026, explicitly to accelerate AI data-centre capacity",
+      "expected": "",
+      "result": "Guidance. A supply-side response to a demand the company describes as unmet."
+     }
+    ],
+    "commentary": "Also the first quarter to carry an FY2027 AI data-centre revenue figure — about €2.5bn, after about €1.5bn in FY2026 as then guided."
+   },
+   {
+    "period": "FY2025 (year ended 30 September 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-09-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "€14,662m, down 2.0% year on year",
+      "expected": "€14,628m (Vara Research, 18 August 2025)",
+      "verdict": "inline",
+      "result": "Essentially in line with the consensus Infineon itself commissions.",
+      "kpi": "revenue",
+      "usdMillions": 16217.6,
+      "fxBasis": "EUR at 1.1061 USD/EUR (unweighted mean of European Central Bank daily reference rates over Infineon's FY2025, 2024-10-01 to 2025-09-30, 255 trading days)"
+     },
+     {
+      "name": "Segment Result and margin",
+      "actual": "€2,560m at 17.5%, down from €3,105m at 20.8%",
+      "expected": "€2,572m at 17.6% (Vara Research, 18 August 2025)",
+      "verdict": "inline",
+      "result": "In line. Q4 FY2025 standalone was €717m at 18.2% against a €729m and 18.7% consensus — a miss of 1.6% and 50 basis points."
+     },
+     {
+      "name": "Profit for the period",
+      "actual": "€1,015m, against €1,301m in FY2024",
+      "expected": "",
+      "result": "No separate consensus located for the bottom line on this basis."
+     },
+     {
+      "name": "Diluted earnings per share from continuing operations (IFRS)",
+      "actual": "€0.76, against €1.34 in FY2024",
+      "expected": "",
+      "result": "Adjusted diluted EPS was €1.39. Collection gap: no third-party consensus for Q4 FY2025 adjusted diluted EPS could be located, so no beat/miss verdict is stated at that line."
+     },
+     {
+      "name": "Free cash flow",
+      "actual": "−€1,051m; adjusted free cash flow +€1,803m",
+      "expected": "",
+      "result": "The negative headline figure is the Marvell automotive Ethernet purchase at €2,180m and nothing else. The adjusted line is the operating picture."
+     },
+     {
+      "name": "Segment revenue",
+      "actual": "Automotive €7,402m at 20.7%; Power & Sensor Systems €4,208m at 16.2%; Green Industrial Power €1,631m at 12.3%; Connected Secure Systems €1,418m at 10.9%",
+      "expected": "",
+      "result": "The AI data-centre business sat inside Power & Sensor Systems, which was the only one of the four to improve its margin year on year — from 12.7% to 16.2%. This structure ended on 1 July 2026."
+     },
+     {
+      "name": "AI data-centre power revenue",
+      "actual": "Above €700m, nearly tripling from about €250m in FY2024",
+      "expected": "",
+      "result": "The company's own figure and the only disclosed measure of the business the equity story rests on — about 5% of FY2025 revenue."
+     },
+     {
+      "name": "Dividend",
+      "actual": "€0.35 per share proposed, unchanged, a distribution of about €456m",
+      "expected": "",
+      "result": "Held flat through a down year."
+     }
+    ],
+    "commentary": "A second consecutive down year on revenue with a 330-basis-point Segment Result margin decline, offset in narrative by an AI line that was still under 5% of revenue. Gross cash was €2,102m against financial debt of €6,829m at year end, a net cash position of −€4,727m."
+   },
+   {
+    "period": "FY2024 (year ended 30 September 2024)",
+    "periodType": "annual",
+    "periodEnd": "2024-09-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "€14,955m, down 8.3% year on year",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Infineon cut its own FY2024 revenue guidance three times during the year — in February, in May and again at the Q3 print on 5 August 2024 — attributing about half of the August cut to a weakening automotive business and a continuing inventory correction. The relevant benchmark for this year is the company's own withdrawn guidance rather than a consensus figure.",
+      "kpi": "revenue",
+      "usdMillions": 16214.2,
+      "fxBasis": "EUR at 1.0842 USD/EUR (unweighted mean of European Central Bank daily reference rates over Infineon's FY2024, 2023-10-01 to 2024-09-30, 255 trading days)"
+     },
+     {
+      "name": "Segment Result and margin",
+      "actual": "€3,105m at 20.8%",
+      "expected": "",
+      "result": "The margin peak of the period covered here, and the level against which FY2025's 17.5% and FY2026's guided 20% should be read."
+     },
+     {
+      "name": "Diluted earnings per share from continuing operations (IFRS)",
+      "actual": "€1.34",
+      "expected": "",
+      "result": "No consensus located on a comparable basis."
+     },
+     {
+      "name": "AI data-centre power revenue",
+      "actual": "About €250m",
+      "expected": "",
+      "result": "The base from which the AI story is measured — under 2% of revenue."
+     },
+     {
+      "name": "Restructuring",
+      "actual": "Restructuring and closure costs of €232m; 1,400 jobs cut and a further 1,400 roles relocated under the Step Up programme announced May 2024",
+      "expected": "",
+      "result": "Step Up targets about €1bn of annual savings by 2027. Worth holding beside the current cycle: the same company was cutting guidance and headcount two years before it was in allocation."
+     }
+    ],
+    "commentary": "The trough of the preceding cycle, included because the shape of it — three guidance cuts and a cost programme inside twelve months — is the counterweight to the current run of records."
+   }
+  ],
+  "commentary": "Reported in EUR under IFRS; fiscal year ends 30 September. Two things make this record easy to misread and both are handled explicitly here. First, Infineon publishes TWO earnings-per-share figures per period — an IFRS diluted EPS and an adjusted diluted EPS — and they differ materially: Q3 FY2026 was €0.32 on the IFRS basis and €0.44 adjusted. Third-party trackers mix them. Investing.com recorded a 35.01% EPS miss on the 5 August 2025 print by comparing an IFRS actual of €0.22 against an adjusted-basis consensus of €0.339, while TipRanks recorded a beat on the same print (€0.37 actual against a €0.34 forecast) by staying on the adjusted basis throughout. The print was a beat on the adjusted basis and roughly in line on the IFRS basis; the 35% miss exists on neither. Every 'expected' value below is therefore drawn from the Vara Research consensus Infineon itself commissions and publishes, which compiles 18–20 named banks and prints both bases side by side, and each metric states its basis. Second, the segment structure changed on 1 July 2026 — the four segments ATV, GIP, PSS and CSS became Automotive, Power Systems and Edge Systems — and two smaller reclassifications preceded it (Sense & Control moved to PSS on 1 January 2025; Power Drivers & Signal ICs moved to PSS on 1 October 2025, with FY2025 quarters restated). Segment figures are not comparable across those boundaries. Collection gap: no third-party consensus was located for Infineon's Q4 FY2025 adjusted diluted EPS, so no beat/miss verdict is stated at the EPS line for the 12 November 2025 print; revenue and Segment Result are resolved. USD equivalents are computed from European Central Bank daily reference rates and the basis is stated on each; Infineon's own FY2026 planning rate of US$1.17 corroborates the fiscal-year-to-date average within 0.6%."
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess Infineon holds a genuine leadership position in AI data-centre power semiconductors, and that the position is portfolio breadth rather than any single device. Basis: Gartner named it \"the company to beat\" in AI data-centre power semiconductors on 18 May 2026, citing portfolio comprehensiveness, manufacturing capability and early investment; Infineon is the only vendor in NVIDIA's 800 VDC silicon tier that publishes products across the whole chain from the solid-state transformer to the point of load in all three materials; and its own reported AI data-centre revenue moved from €250m in FY2024 to above €700m in FY2025 to a guided €1.6bn-plus in FY2026.",
+  "**(High confidence)** We assess the NVIDIA relationship is real, product-level and bilateral, and that it is not exclusive. Basis: NVIDIA's own developer blog names Infineon among its 800 VDC silicon providers, Infineon joined NVIDIA's MGX ecosystem on 28 May 2026 with a stated 800V-to-50V/12V/6V conversion portfolio, and the October 2025 CoolSiC JFET hot-swap solution is a specific joint engineering output. But the same NVIDIA roster names thirteen other silicon providers, including Analog Devices, Monolithic Power Systems, onsemi, Renesas, ROHM, STMicroelectronics and Texas Instruments. Any reading of this as sole-source is unsupported.",
+  "**(High confidence)** We assess the market has been pricing the AI story ahead of the profit it has so far produced. Basis: against the Vara Research consensus Infineon itself commissions, Segment Result missed in Q4 FY2025, Q2 FY2026 and Q3 FY2026 and beat only in Q1 FY2026, while revenue beat or came in line in all four. Q3 FY2026 set a revenue record of €4,172m and the shares fell about 3% on the print. Valuation aggregators put the price-earnings ratio above 60 against a share price that had roughly doubled year to date. Consensus among 24 covering analysts nonetheless remains Buy with no sell ratings, so this is a pace-of-conversion judgment, not a thesis-break judgment.",
+  "**(Moderate confidence)** We assess the company's principal competitive exposure is at the compute board rather than at the grid end of the chain. Basis: Gartner's own report qualifies Infineon's lead as being tested by SiC and GaN competition and by \"rivals focused on the compute board level\"; SemiAnalysis's competitive read of AI power delivery names six players — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon — and records Monolithic Power Systems, not Infineon, taking the NVIDIA H100 socket from Vicor; and Mordor Intelligence places Infineon third in a GPU and AI-server voltage-regulator top five behind Texas Instruments. The vertical-power-delivery roadmap and the August 2026 acquisition of C2i Semiconductors are the company's answer, and neither has yet shipped in volume — mass production is stated for Q1 2027.",
+  "**(Moderate confidence)** We assess the capacity and demand signals are genuinely tight rather than promotional, and that the binding constraint is supply. Basis: the company states plainly that demand for its AI power solutions \"continues to outstrip available supply, we are in allocation\"; capital expenditure was raised from about €2.2bn to about €2.7bn for FY2026; and it disclosed multi-year capacity reservation agreements with unnamed leading AI-ecosystem customers covering \"a cumulative revenue volume of a high single-digit billion euro amount\" with prepayments. Prepaid multi-year reservations are a stronger demand signal than an order book because the counterparty has posted cash. The counterparties are not named, which is what holds this below high confidence.",
+  "**(Moderate confidence)** We assess the Dresden fab is the clearest evidence that European industrial policy can execute on this class of project, and that its economics are still unproven. Basis: the €5bn Smart Power Fab opened 2 July 2026, roughly three months ahead of schedule, doubling 300 mm capacity at the site, with up to €920m of German state aid approved by the European Commission and about €1bn of total public support including IPCEI funding; Infineon's Q4 FY2025 operating cash flow rose to €1,380m with the company attributing part of the increase to the receipt of subsidies. Set against that: coverage of the same event notes the EU's 20%-of-global-production target remains out of reach after Intel cancelled Magdeburg. Collection gap: no clawback provision or milestone condition attached to the aid could be sourced.",
+  "**(Moderate confidence)** We assess silicon carbide is a structurally weaker part of the story than gallium nitride or the integrated power stages, on price rather than on technology. Basis: Yole's Power SiC 2025 analysis reports an overcapacity correction persisting to 2027–2028, upstream utilisation near 50% and device-line utilisation near 70% in 2025, and Chinese manufacturers holding roughly 40% of SiC wafer and epiwafer capacity by 2024; substrate prices fell below $500 per wafer from mid-2024. Infineon's response is cost — the 200 mm conversion at Kulim and Villach, which it describes as an industry-leading cost position — which is the right answer to a price war and not a fast one. Ranking data is stale and inconsistent: TrendForce's 2022 SiC table put Infineon second at 17.9% behind STMicroelectronics at 36.5%, while Mordor's 2024 ordering places it third.",
+  "**(Moderate confidence)** We assess the China position has already been lost in the segment where Infineon was once dominant, and that this is a template rather than an isolated event. Basis: Infineon led China power modules with 25% share in 2022; in 2023 BYD Semiconductor took first place at 28.9% and Infineon fell to second at 14.5%. In automotive IGBT on 2020 data the ordering had been Infineon 49.2%, BYD 20.0%, StarPower 16.6%. The displacing party is a customer vertically integrating away from its suppliers, which is the mechanism most likely to repeat wherever a large Chinese buyer can fund its own device programme.",
+  "**(Low confidence)** Gallium is the input to gallium nitride and China controls it. China's export controls on gallium and germanium have been in force since August 2023, were extended to an outright ban on exports to the United States in December 2024, and are currently suspended under a licensing regime that expires on 27 November 2026 — seventeen days after Infineon's next scheduled report. Infineon names \"critical basic materials\" as a risk in its own annual report but has published no gallium-specific statement and no gallium-specific mitigation. Its only relevant claim is a general one about dual sourcing and scalability in GaN. This is flagged as an unquantified exposure rather than assessed as a probable disruption.",
+  "**Collection gaps.** No verifiable percentage exists for Infineon's share of the overall power-semiconductor market from any ranking firm's own page: Omdia's database is subscription-gated and covers CY2023–CY2024, Mordor names Infineon the leader without publishing a per-vendor figure, and a \"19.5% in 2025\" figure that circulates in search summaries could not be found at any named source and is inconsistent with Omdia's stated base year, so it is omitted here rather than attributed. Infineon's own published chart — power discretes and modules, 2024 market $32.8bn, Infineon 17.4% — is used instead and is labelled as the company's own. No 2025 or 2026 SiC vendor share table could be sourced from any ranking firm. No named hyperscaler has been established as an Infineon customer: the strongest sourced statement is class-level engagement with \"all hyperscalers\", and the capacity-reservation counterparties, the solid-state-transformer design partners and the twenty-plus solid-state-circuit-breaker customers are all anonymised by the company. No short interest figure, named short-seller report or activist campaign was located. No analyst assessment of whether the $2.5bn paid for Marvell's automotive Ethernet business — roughly ten times its stated revenue — was well priced could be found."
+ ],
+ "sources": [
+  {
+   "label": "Vara Research — analyst consensus on Infineon as of 18 August 2026 (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/analyst-consensus/vara-consensus-on-infineon-as-of-2026-08-18-v01-00-en.pdf",
+   "date": "2026-08-18",
+   "party": "disclosure"
+  },
+  {
+   "label": "Infineon — acquisition of C2i Semiconductors to expand AI data-centre power management",
+   "url": "https://www.infineon.com/press-release/2026/infpr202608-129",
+   "date": "2026-08"
+  },
+  {
+   "label": "Mordor Intelligence — power semiconductor market, industry leaders",
+   "url": "https://www.mordorintelligence.com/industry-reports/power-semiconductor-market",
+   "date": "2026-08"
+  },
+  {
+   "label": "Infineon — Q3 FY2026 results release, record revenue and FY2026 guidance (PDF)",
+   "url": "https://www.infineon.com/row/public/documents/corporate/press/2026/infpr202608-125e.pdf",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Infineon — Q3 FY2026 investor presentation: AI power, VRM roadmap, SiC/GaN, own market-share chart (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-investor-presentation-v01-00-en.pdf",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Infineon — Q3 FY2026 analyst-call intro statement: allocation, capacity reservation agreements, Siemens SiC modules (PDF)",
+   "url": "https://www.infineon.com/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-intro-statement-analyst-call-v01-00-en.pdf",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "RTTNews — Infineon Q3 profit up, sees revenue growth in Q4, updates FY26 view on AI demand; stock down",
+   "url": "https://www.rttnews.com/3675663/infineon-q3-profit-up-sees-revenue-growth-in-q4-updates-fy26-revenue-view-on-ai-demand-stock-down.aspx",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Investing.com — Infineon Q3 FY26 slides: AI revenue surge drives record results",
+   "url": "https://www.investing.com/news/company-news/infineon-q3-fy26-slides-ai-revenue-surge-drives-record-results-93CH-4836812",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Semiconductor Today — US ITC final determination on Infineon vs Innoscience upheld after review",
+   "url": "https://www.semiconductor-today.com/news_items/2026/jul/infineon-innoscience-070726.shtml",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Infineon — Smart Power Fab Dresden opens",
+   "url": "https://www.infineon.com/press-release/2026/ifxpr202607-117",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "Infineon — completion of the ams OSRAM sensor portfolio acquisition",
+   "url": "https://www.infineon.com/press-release/2026/infxx202607-113",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "Semiconductor Today — Gartner names Infineon the company to beat in AI data-centre power semiconductors",
+   "url": "https://www.semiconductor-today.com/news_items/2026/jun/infineon2-300626.shtml",
+   "date": "2026-06-30"
+  },
+  {
+   "label": "ip fray — Infineon disputes Innoscience's claim of a final Chinese GaN patent victory",
+   "url": "https://ipfray.com/infineon-disputes-innosciences-claim-of-final-chinese-gan-patent-victory/",
+   "date": "2026-06-16"
+  },
+  {
+   "label": "electrive — Infineon opens new Smart Power Fab in Dresden",
+   "url": "https://www.electrive.com/2026/07/03/infineon-opens-new-smart-power-fab-in-dresden/",
+   "date": "2026-07-03"
+  },
+  {
+   "label": "The Next Web — Infineon opens €5 billion Dresden fab, the EU Chips Act's first win",
+   "url": "https://thenextweb.com/news/infineon-dresden-chip-fab-eu-sovereignty-ai-power",
+   "date": "2026-06-12"
+  },
+  {
+   "label": "Infineon — 24 kW silicon-carbide battery-backup-unit DC-DC reference design for high-voltage DC bus architectures",
+   "url": "https://www.infineon.com/market-news/2026/infpss202606-093",
+   "date": "2026-06"
+  },
+  {
+   "label": "Infineon — 18 kW three-phase PSU reference design and 30 kW PFC evaluation board for 800 VDC rack architectures",
+   "url": "https://www.infineon.com/market-news/2026/infpss202606-094",
+   "date": "2026-06"
+  },
+  {
+   "label": "Infineon — joining NVIDIA's MGX AI Factory ecosystem for 800 VDC power delivery (PR Newswire verbatim mirror)",
+   "url": "https://www.prnewswire.com/news-releases/infineon-joins-nvidias-mgx-ai-factory-ecosystem-to-transform-power-delivery-architecture-for-next-generation-ai-server-racks-302785037.html",
+   "date": "2026-05-28",
+   "party": "disclosure"
+  },
+  {
+   "label": "Infineon — Infineon joins NVIDIA's MGX AI Factory ecosystem",
+   "url": "https://www.infineon.com/press-release/2026/infxx202605-092",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "Infineon — Q2 FY2026 results and the four-to-three segment restructure effective 1 July 2026 (PDF)",
+   "url": "https://www.infineon.com/row/public/documents/corporate/press/2026/infxx202605-082e.pdf",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "TechInsights — analysis: 2025 automotive power semiconductor vendor share",
+   "url": "https://www.techinsights.com/blog/analysis-2025-automotive-power-semiconductor-vendor-share",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "Power Semiconductors Weekly — Infineon retains the number-one position in automotive semiconductors (TechInsights data)",
+   "url": "https://www.powersemiconductorsweekly.com/2026/04/13/infineon-retains-1-position-in-global-automotive-semiconductor-market/",
+   "date": "2026-04-13"
+  },
+  {
+   "label": "Infineon — CoolGaN-based 800 VDC to 50 V high-voltage intermediate bus converter reference design at over 98% efficiency",
+   "url": "https://www.infineon.com/technology-news/2026/infpss202603-067",
+   "date": "2026-03"
+  },
+  {
+   "label": "Metal Tech News — China curbs tech-metal exports to Japan",
+   "url": "https://www.metaltechnews.com/story/2026/03/25/tech-metals/china-curbs-tech-metal-exports-to-japan/2695.html",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Infineon — Q1 FY2026 results, capex raised to about €2.7bn, first FY2027 AI revenue statement (PDF)",
+   "url": "https://www.infineon.com/row/public/documents/corporate/press/2026/infxx202602-042e.pdf",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "Infineon — contract extensions for CEO Jochen Hanebeck and other board members",
+   "url": "https://www.infineon.com/press-release/2026/infxx202602-050",
+   "date": "2026-02"
+  },
+  {
+   "label": "Tech Fund — power semis in the AI data center",
+   "url": "https://www.techinvestments.io/p/power-semis-in-the-ai-data-center",
+   "date": "2026-02-15"
+  },
+  {
+   "label": "White & Case — narrowly targeted 25% Section 232 tariff on certain advanced semiconductor articles",
+   "url": "https://www.whitecase.com/insight-alert/president-trump-orders-narrowly-targeted-25-section-232-tariff-certain-advanced",
+   "date": "2026-01"
+  },
+  {
+   "label": "C.H. Robinson — guidance on Section 232 semiconductor import duties for 2026",
+   "url": "https://www.chrobinson.com/en-us/resources/insights-and-advisories/client-advisories/2026q1/01-15-client-advisory-guidance-on-section-232-semiconductor-import-duties-for-2026/",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "Semiconductor Today — Yole Power SiC 2025: overcapacity correction persisting to 2027–2028",
+   "url": "https://www.semiconductor-today.com/news_items/2025/dec/yole-181225.shtml",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "Infineon — \"We Power AI\" divisional update deck: solid-state transformers, SSCBs, vertical power delivery, PSU roadmap (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2025/2025-11-26-power-roadshow-v01-00-en.pdf",
+   "date": "2025-11-26"
+  },
+  {
+   "label": "Infineon — FY2025 and Q4 FY2025 results; AI power revenue target raised (PDF)",
+   "url": "https://www.infineon.com/row/public/documents/corporate/press/2025/infxx202511-021e.pdf",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "Infineon — Annual Report 2025 (PDF)",
+   "url": "https://www.infineon.com/row/public/documents/corporate/investors/annual-reports/2025/2025-annual-report-v01-00-en.pdf",
+   "date": "2025-11"
+  },
+  {
+   "label": "Semiconductor Today — Yole: power GaN device market growing at 42% CAGR to $3bn by 2030",
+   "url": "https://www.semiconductor-today.com/news_items/2025/oct/yole-291025.shtml",
+   "date": "2025-10-29"
+  },
+  {
+   "label": "Infineon — advancing the 800 volt AI data-centre power architecture with CoolSiC JFET hot-swap",
+   "url": "https://www.infineon.com/press-release/2025/INFXX202510-003",
+   "date": "2025-10"
+  },
+  {
+   "label": "Semiconductor Today — Infineon supporting NVIDIA's 800 VDC power architecture",
+   "url": "https://www.semiconductor-today.com/news_items/2025/oct/infineon-161025.shtml",
+   "date": "2025-10-16"
+  },
+  {
+   "label": "Data Center Frontier — preparing for 800 VDC data centers: ABB and Eaton support NVIDIA's AI infrastructure evolution",
+   "url": "https://www.datacenterfrontier.com/energy/article/55323139/preparing-for-800-vdc-data-centers-abb-eaton-support-nvidias-ai-infrastructure-evolution",
+   "date": "2025-10-15"
+  },
+  {
+   "label": "Infineon — collaboration with Delta Electronics on high-density power modules for vertical power delivery",
+   "url": "https://www.infineon.com/technology-news/2025/INFPSS202508-138",
+   "date": "2025-08-28"
+  },
+  {
+   "label": "Infineon — completion of the Marvell automotive Ethernet acquisition",
+   "url": "https://www.infineon.com/press-release/2025/INFXX202508-133",
+   "date": "2025-08"
+  },
+  {
+   "label": "Vara Research — analyst consensus on Infineon as of 18 August 2025 (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/analyst-consensus/vara-consensus-on-infineon-as-of-2025-08-18-v01-00-en.pdf",
+   "date": "2025-08-18",
+   "party": "disclosure"
+  },
+  {
+   "label": "Infineon — Supervisory Board appoints Alexander Gorski as Chief Operations Officer",
+   "url": "https://www.infineon.com/press-release/2025/infxx202507-123",
+   "date": "2025-07"
+  },
+  {
+   "label": "NVIDIA — the 800 VDC architecture will power the next generation of AI factories; Infineon named among silicon providers",
+   "url": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+   "date": "2025-05-20"
+  },
+  {
+   "label": "NVIDIA — building the 800 VDC ecosystem for efficient, scalable AI factories (expanded partner roster)",
+   "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+   "date": "2025-10"
+  },
+  {
+   "label": "Marvell — sale of the automotive Ethernet business to Infineon for $2.5 billion in cash",
+   "url": "https://www.marvell.com/company/newsroom/marvell-sells-automotive-ethernet-business-to-infineon.html",
+   "date": "2025-04-07"
+  },
+  {
+   "label": "eeNews Europe — EU funding for the Infineon Dresden Smart Power Fab approved",
+   "url": "https://www.eenewseurope.com/en/eu-funding-for-infineon-dresden-smart-power-fab-approved/",
+   "date": "2025-02"
+  },
+  {
+   "label": "gasworld — Europe approves a €920m grant for the Infineon Dresden smart power fab",
+   "url": "https://www.gasworld.com/story/europe-approves-e920m-grant-for-infineon-dresden-smart-power-fab/2151573.article/",
+   "date": "2025-02"
+  },
+  {
+   "label": "Infineon — EU Chips Act funding approval for the Dresden Smart Power Fab",
+   "url": "https://www.infineon.com/press-release/2025/infxx202502-058",
+   "date": "2025-02-20"
+  },
+  {
+   "label": "Infineon — next milestone on 200 mm silicon carbide, first products from Villach",
+   "url": "https://www.infineon.com/press-release/2025/infxx202502-055",
+   "date": "2025-02"
+  },
+  {
+   "label": "SkyWater Technology — Form 8-K/A on the acquisition of Infineon's Austin, Texas production facility",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819974/000181997425000037/skyt-20250912xex9901.htm",
+   "date": "2025-09-12",
+   "party": "disclosure"
+  },
+  {
+   "label": "DataCenterDynamics — Infineon to cut 1,400 jobs and offshore a further 1,400 to save costs",
+   "url": "https://www.datacenterdynamics.com/en/news/chipmaker-infineon-to-cut-1400-jobs-will-offshore-a-further-1400-to-save-costs/",
+   "date": "2024-08"
+  },
+  {
+   "label": "MarketScreener — Infineon cuts guidance again amid the automotive market slowdown",
+   "url": "https://uk.marketscreener.com/quote/stock/INFINEON-TECHNOLOGIES-AG-436299/news/Infineon-Cuts-Guidance-Again-Amid-Automotive-Market-Slowdown-Update-46646016/",
+   "date": "2024-08"
+  },
+  {
+   "label": "The Oregon Group — China lifts the export ban on gallium, germanium and antimony",
+   "url": "https://theoregongroup.com/commodities/gallium-germanium/china-lifts-export-ban-gallium-germanium-antimony/",
+   "date": "2025-12"
+  },
+  {
+   "label": "Global Trade Alert — China announces export control measures for gallium and germanium",
+   "url": "https://globaltradealert.org/state-act/76184-china-government-announces-export-control-measures-for-gallium-and-germanium",
+   "date": "2023-07"
+  },
+  {
+   "label": "Infineon — building the world's largest 200 mm silicon carbide power fab in Kulim",
+   "url": "https://www.infineon.com/press-release/2023/infxx202308-140",
+   "date": "2023-08"
+  },
+  {
+   "label": "Infineon — TSMC, Bosch, Infineon and NXP establish the ESMC joint venture in Dresden",
+   "url": "https://www.infineon.com/press-release/2023/infxxx202308-144",
+   "date": "2023-08"
+  },
+  {
+   "label": "SemiAnalysis — energizing AI: power delivery competition heats up (Vicor, MPS, Delta, ADI, Renesas, Infineon)",
+   "url": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition",
+   "date": "2023-08-01"
+  },
+  {
+   "label": "Gasgoo — China power module market share: BYD Semiconductor overtakes Infineon",
+   "url": "https://autonews.gasgoo.com/china_news/70038045.html",
+   "date": "2024-06"
+  },
+  {
+   "label": "EE Times — Infineon supplying power chips to Tesla, says report",
+   "url": "https://www.eetimes.com/infineon-supplying-power-chips-to-tesla-says-report/",
+   "date": "2018-01"
+  },
+  {
+   "label": "Power Electronics News — the evolving landscape of SiC and GaN markets (TrendForce and Yole data)",
+   "url": "https://www.powerelectronicsnews.com/the-evolving-landscape-of-sic-and-gan-markets/",
+   "date": "2025-06"
+  },
+  {
+   "label": "Mordor Intelligence — power delivery module (VRM) market for GPU and AI servers",
+   "url": "https://www.mordorintelligence.com/industry-reports/power-delivery-module-vrm-market-for-gpu-and-ai-servers"
+  },
+  {
+   "label": "European Central Bank — euro foreign exchange reference rates, daily history",
+   "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip",
+   "party": "disclosure"
+  },
+  {
+   "label": "Infineon — leadership team",
+   "url": "https://www.infineon.com/about/company/leadership-team"
+  },
+  {
+   "label": "Infineon — CoolGaN Transistor 650 V G5 IGT65R055D2 datasheet (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-igt65r055d2-datasheet-en.pdf",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "Infineon — CoolGaN bidirectional switch 650 V G5 IGLT65R110B2 datasheet (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-iglt65r110b2-datasheet-en.pdf",
+   "date": "2025-10-02"
+  },
+  {
+   "label": "Infineon — CoolSiC 2000 V SiC Trench MOSFET IMYH200R050M1H datasheet (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/60/49/infineon-imyh200r050m1h-datasheet-en.pdf",
+   "date": "2023-01-16"
+  },
+  {
+   "label": "Infineon — CoolSiC 1200 V SiC Trench MOSFET IMW120R007M1H datasheet (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/60/49/infineon-imw120r007m1h-datasheet-en.pdf"
+  },
+  {
+   "label": "Infineon — FF5MR20KM1HP 62 mm C-Series CoolSiC Trench MOSFET module datasheet (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/60/49/infineon-ff5mr20km1hp-datasheet-en.pdf"
+  },
+  {
+   "label": "Infineon — TDA21240 integrated smart power stage datasheet (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-tda21240-ds-en.pdf"
+  },
+  {
+   "label": "Infineon — 600 V CoolMOS 8 superjunction MOSFET product page",
+   "url": "https://www.infineon.com/products/power/mosfet/n-channel/500v-950v/600-v-coolmos-8"
+  },
+  {
+   "label": "Infineon — OptiMOS 5 80 V and 100 V product page",
+   "url": "https://www.infineon.com/products/power/mosfet/n-channel/optimos-strongirfet/optimos-5/optimos-5-80v-100v"
+  },
+  {
+   "label": "Infineon — integrated smart power stages (DrMOS) product family page",
+   "url": "https://www.infineon.com/cms/en/product/power/dc-dc-converter/dc-dc-integrated-power-stage/drmos-integrated-power-stages/"
+  },
+  {
+   "label": "Infineon — data-centre power solutions application hub",
+   "url": "https://www.infineon.com/applications/information-communication-technologies/hyperscale-computing"
+  },
+  {
+   "label": "Infineon — investor relations, financial results hub",
+   "url": "https://www.infineon.com/about/investor/reports-presentations/financial-results"
+  },
+  {
+   "label": "StockAnalysis — Infineon Technologies (ETR:IFX) overview and financials",
+   "url": "https://stockanalysis.com/quote/etr/IFX/"
+  },
+  {
+   "label": "TipRanks — Infineon (DE:IFX) earnings dates and history",
+   "url": "https://www.tipranks.com/stocks/de:ifx/earnings"
+  },
+  {
+   "label": "Investing.com — Infineon earnings calendar and estimate-versus-actual history",
+   "url": "https://www.investing.com/equities/infineon-tech-earnings"
+  },
+  {
+   "label": "MarketBeat — Infineon (IFNNY) earnings date and reports",
+   "url": "https://www.marketbeat.com/stocks/OTCMKTS/IFNNY/earnings"
+  }
+ ],
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
+}

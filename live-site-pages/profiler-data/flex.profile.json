@@ -1,0 +1,1769 @@
+{
+ "schemaVersion": 7,
+ "slug": "flex",
+ "name": "Flex Ltd.",
+ "shortName": "Flex",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://flex.com/",
+ "headquarters": "Austin, Texas, United States (incorporated in Singapore)",
+ "founded": 1969,
+ "employees": "~149,686 including contractor workforce (31 March 2026)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: FLEX"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Flex is a contract manufacturer that has spent five years and roughly $6.3bn buying its way into owning the data-centre power train — and on 5 May 2026 its board approved separating that business out entirely, so the company this dossier describes has about two quarters left in its present shape. BACKGROUND. Founded 1969 in Silicon Valley, incorporated in the Republic of Singapore in May 1990, headquartered in Austin, Texas, listed on Nasdaq as FLEX and admitted to the S&P 500 on 22 June 2026; about 149,686 people including contractors across more than 100 facilities in roughly 30 countries at 31 March 2026. FY2026 (ended 2026-03-31) net sales were $27,914m, up 8%, with GAAP diluted earnings per share of $2.33 and adjusted of $3.30. In the fourth quarter of FY2026 Flex re-cut its reporting structure and created a dedicated data-centre segment, Cloud and Power Infrastructure, at $6,614m of FY2026 net sales — 24% of the company — with segment income of $610m at a 9.2% margin. That segment is what is being spun off, targeted for the first calendar quarter of 2027, with the current chief executive going with it. On 3 September 2026 Flex agreed to buy EPC Power for $4.4bn, into that same segment, months before it leaves.",
+ "ecosystemRole": "Two businesses in one company, and the distinction is the whole reading of the file. Flex OWNS a branded critical-power and cooling portfolio — Anord Mardix switchgear, busway and power pods, Crown Technical Systems relay panels and medium-voltage switchgear, Electrical Power Products substation control and protection, JetCool direct-to-chip liquid cooling, and Flex Power Modules — and it BUILDS hardware to other companies' designs at a scale few can match, including AMD's Instinct GPU platforms in Austin and Cerebras wafer-scale systems in Milpitas. NVIDIA's own 800 VDC roster places Flex Power in the power-system-components tier alongside Delta, LITEON and Megmeet — the tier that consumes the silicon Infineon and its peers supply and feeds the facility-power systems ABB, Eaton, Schneider Electric and Vertiv build. What makes Flex unusual in that tier is that it also owns the switchgear and the cooling, so it can quote a buyer everything from the medium-voltage room to the cold plate on the die. That vertically integrated proposition is the thing being separated out, and the separation is the reason it is worth understanding now.",
+ "productsAndServices": [
+  {
+   "name": "Anord Mardix — critical power (OWNED)",
+   "category": "Owned brand — critical power",
+   "description": "Flex's critical power business, acquired in December 2021, and the largest single block of what Flex owns rather than builds for others. Low- and medium-voltage switchgear, busway, power distribution units, remote power panels, static transfer switches, factory-built power pods and skids, plus monitoring software and field services. Roughly eight sites across Ireland, the United Kingdom, the United States and Poland.",
+   "highlights": [
+    "MDX switchgear to IEC 61439-2: main busbar up to 8000 A, incomer air circuit breakers 800–6300 A, short-time withstand of 50 kA for 3 seconds and up to 100 kA for 1 second, peak withstand up to 220 kA, internal separation to Form 4b Type 7",
+    "IBAR busbar rated 800 A to 6300 A with tap-offs up to 630 A from a single location, manufactured to BS EN 61439-6",
+    "DATABAR busway: 16 A to 630 A in the IEC model and 160 A to 630 A in the UL model, with DX Plus to 1250 A and 1000 A respectively; built to UL 857 in the UL variant, with IP2X finger-safe construction",
+    "Power pods carry transformers up to 36 kV at up to 6300 A, IP54, with a stated minimum 25-year lifespan and optional first-of-kind testing before shipment",
+    "The Bielsko-Biala plant in Poland, at 600,000 sq ft, doubled European power-product capacity from 616,000 to 1,200,000 sq ft when it came online in May 2025",
+    "Field services carry a stated 24-hour target response time, including third-party equipment upgrades — the service half of the vertical proposition"
+   ],
+   "positioning": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition. Note a live error in the public record: one of those reports lists the business as \"Anord Mardix (Legrand)\". It is Flex-owned. Legrand owns Starline, a competing busway brand.",
+   "soldThrough": "Direct to data-centre operators, developers and their electrical contractors, and inside Flex's integrated rack and modular offers",
+   "targetSegments": [
+    "Hyperscale and colocation data centres",
+    "Industrial and utility infrastructure",
+    "Healthcare and mission-critical facilities"
+   ]
+  },
+  {
+   "name": "Flex-branded data-centre power products (OWNED)",
+   "category": "Owned brand — rack and row power",
+   "description": "The Flex-badged rack and row power line, distinct from Anord Mardix's facility products: power shelves built to NVIDIA platform requirements, the 800 VDC Power Rack, a megawatt-class direct-current power distribution unit, battery and capacitor backup units, and a capacitive energy storage system. This is the layer that sits in NVIDIA's power-system-components tier alongside Delta, LITEON and Megmeet.",
+   "highlights": [
+    "800 VDC Power Rack, launched 16 March 2026, developed in collaboration with NVIDIA for the Vera Rubin platform: eight 110 kW power shelves plus up to 24 rack units for capacitive storage, battery backup and auxiliary equipment",
+    "Flex's own claim for the disaggregated architecture: moving power products out of the IT rack raises available compute per rack from approximately 125 kW to up to 880 kW",
+    "The 33 kW GB300 power shelf: six power supply units in a 3+3 redundant configuration, 97.5% peak efficiency at half load, which Flex says cuts conversion losses by more than 60% against conventional systems",
+    "1 MW+ direct-current power distribution unit: ten 110 kW shelves at ±400 V output, four 27 kW rectifier modules each, one shelf controller and six 18 kW battery or supercapacitor modules, deployable as a power sidecar",
+    "Capacitive Energy Storage System, which Flex describes as the first UL 1973-certified capacitor energy storage system, shown in a 30 kW version at COMPUTEX 2026",
+    "Flex states it plans full-scale production of 800 VDC power components to coincide with the release of NVIDIA Kyber rack-scale systems"
+   ],
+   "positioning": "NVIDIA's own 800 VDC roster names Flex Power in the power-system-components tier with Bizlink, Delta, Lead Wealth, LITEON and Megmeet. That is a categorisation by the platform owner rather than a share ranking, and it is the clearest available statement of who Flex competes with in this product line. Delta and LITEON both announced 800 VDC racks and shelves of their own at NVIDIA's GTC 2026, where Flex was not named in independent coverage of the ecosystem.",
+   "soldThrough": "Design-in with the platform owner's reference architecture, then direct to data-centre operators and integrators",
+   "targetSegments": [
+    "AI data-centre operators",
+    "Hyperscalers",
+    "Integrators building to NVIDIA reference architectures"
+   ],
+   "roadmap": "Full-scale 800 VDC production is stated to coincide with NVIDIA Kyber rack-scale systems; a dedicated in-row coolant distribution unit was scheduled for April 2026."
+  },
+  {
+   "name": "JetCool — direct-to-chip liquid cooling (OWNED)",
+   "category": "Owned brand — thermal",
+   "description": "Acquired in November 2024 for a total purchase price of $53m, JetCool sells single-phase direct-to-chip liquid cooling built on what it calls microconvective cooling — arrays of fluid jets aimed at the surface rather than flow passed over it. The line runs from cold plates through self-contained closed-loop server systems to in-rack and modular coolant distribution units.",
+   "highlights": [
+    "SmartSense in-rack coolant distribution unit, 6U: 160 kW in redundant mode at 280 litres per minute, 300 kW in boost mode at 400 litres per minute with a 7 °C approach temperature",
+    "Modular rack-level coolant distribution unit: two to six units per rack scaling from 600 kW to 1.8 MW, with 1,200 litres per minute at 35 psid redundant",
+    "SmartPlate System for the Dell PowerEdge R770: rated up to 1,500 W thermal design power in a 2U closed loop with an integrated liquid-to-air radiator, requiring no facility water",
+    "Technology claims: a heat-transfer coefficient ten times greater than competing approaches, a threefold reduction in thermal resistance against microchannel cold plates, support above 3,000 W in a cold plate and over 4 kW in a single socket with in-silicon cooling",
+    "Coolant inlet temperatures up to 70 °C, which Flex says cuts water use by up to 90% and cooling power by as much as 50%",
+    "A turnkey liquid-cooled Dell PowerEdge XE7745 launched June 2026 at up to 8 kW per server, claiming up to a 30% reduction in total server power"
+   ],
+   "positioning": "JetCool does not appear in any liquid-cooling market share table from Omdia, TrendForce, Dell'Oro, Gartner or IDC that could be located. Named leaders in that market are Alfa Laval, Vertiv, Schneider Electric through Motivair, and Rittal, alongside Boyd, CoolIT, Asetek, LiquidStack and Stulz. The sector consolidated violently around it: Schneider took control of Motivair in February 2025, Eaton completed a $9.5bn purchase of Boyd Thermal in March 2026, and Ecolab agreed to buy CoolIT for $4.75bn the same month. Against a $53m purchase price, JetCool is on the public record a technology tuck-in rather than a market position.",
+   "soldThrough": "Direct, and through server OEM programmes — Dell and Broadcom are both named collaborators",
+   "targetSegments": [
+    "Enterprise AI deployments",
+    "Hyperscale data centres",
+    "Server OEMs"
+   ]
+  },
+  {
+   "name": "Crown Technical Systems and Electrical Power Products (OWNED)",
+   "category": "Owned brand — utility-grade power",
+   "description": "The utility-facing half of the owned portfolio. Crown Technical Systems, acquired November 2024 for $319m, makes relay panels, switchgear and turn-key power control enclosures from three North American locations. Electrical Power Products, acquired 1 May 2026 for about $1.1bn, supplies utility-grade control, protection and monitoring systems including substation solutions. Both sit in the Power reporting unit of Cloud and Power Infrastructure.",
+   "highlights": [
+    "Crown markets medium-voltage metal-clad switchgear and turn-key power control enclosures specifically for data-centre projects, serving utilities, data centres, industrial, transportation and renewables",
+    "Electrical Power Products is described by Flex as a US leader in critical power solutions, acquired to enhance the scale of the US critical power portfolio",
+    "The two together are what lets Flex claim the utility end of a grid-to-chip proposition — Flex makes no generation equipment, no utility-scale transformers and no generator sets",
+    "Crown remains Flex-owned as of September 2026, with its own site carrying the Flex companies navigation"
+   ],
+   "positioning": "Neither business has a disclosed revenue line. Crown's purchase accounting recorded $128m of intangibles and $170m of goodwill against a $319m price, which is the only public window on its scale.",
+   "soldThrough": "Direct to utilities, data-centre developers and electrical contractors",
+   "targetSegments": [
+    "Utilities",
+    "Data centres",
+    "Industrial and transportation infrastructure"
+   ]
+  },
+  {
+   "name": "Flex Power Modules — embedded power (OWNED)",
+   "category": "Owned brand — board-level power",
+   "description": "The embedded power business bought from Ericsson in 2017: isolated and non-isolated DC-DC modules, digital intermediate bus converters, point-of-load regulators, integrated power stages, voltage regulator modules and vertical power delivery, up to 3 kW peak per module. This is the only part of Flex that competes at the board level, where Vicor, Monolithic Power Systems, Infineon and Analog Devices sell.",
+   "highlights": [
+    "Named part families include the BMR314, BMR316, BMR317, BMR321, BMR323, BMR352, BMR353, BMR480, BMR491, BMR684 and BMR720, plus the PKE8000A, PMR8000, PMG8000 and PMH8000 series",
+    "An 800 VDC and ±400 VDC module line exists with the BMR720 intermediate bus converter named on the landing page; full specifications sit behind an interactive product selector rather than on a public datasheet",
+    "The BMR317 intermediate bus converter was shown at COMPUTEX 2026 alongside the 110 kW power shelf",
+    "Supported by Flex Power Designer software — the tooling that makes a module family a design-in rather than a part sale",
+    "A partnership with Renesas on next-generation power management was announced September 2025"
+   ],
+   "positioning": "Flex names no competitors in any filing, so no first-party positioning exists for this line. Its natural competitive set is the board-level power vendors, where Flex is not named in any third-party ranking located.",
+   "soldThrough": "Direct and distribution, with design-in tooling",
+   "targetSegments": [
+    "Telecom and networking",
+    "Servers and AI compute boards",
+    "Industrial"
+   ]
+  },
+  {
+   "name": "Electronics manufacturing services (BUILT FOR OTHERS)",
+   "category": "Contract manufacturing",
+   "description": "The original business and still the majority of revenue: designing, building, supplying and servicing hardware that other companies own and brand. Flex's own service taxonomy runs design and engineering, supply chain, manufacturing, value-added fulfilment and forward logistics, aftermarket services, and — newly separated out — power, thermal and compute infrastructure capabilities.",
+   "highlights": [
+    "Manufacturing services generate the majority of revenues, spanning circuit-board assembly, systems and subsystems, enclosures, test, and materials procurement and inventory management",
+    "AMD's Instinct MI355X eight-GPU platform is manufactured in Austin, Texas — AMD owns the product; Flex assembles the GPUs with PCIe Gen 5 interfaces, high-bandwidth memory and interconnect fabric, tested with JetCool liquid cooling hardware",
+    "Cerebras CS-3 wafer-scale systems are built at Milpitas, California under a partnership expanded in July 2026 to raise capacity roughly sevenfold through 2026",
+    "Aftermarket services cover analytics, returns and screening, repair, refurbishment, asset recovery, resale and recycling, with the FreeFlow marketplace",
+    "Supply-chain visibility is sold as a product in its own right through Flex Pulse",
+    "The ten largest customers were 45% of FY2026 net sales with none above 10%; in Q1 FY2027 a single unnamed customer reached 12%, mostly inside Cloud and Power Infrastructure"
+   ],
+   "positioning": "Third-party industry data places Flex among the four US-headquartered providers — with Jabil, Celestica and Sanmina — that together represent around 85% of US-headquartered electronics manufacturing and original-design revenue above $100m, posting single to low double-digit growth in 2025 while Wistron, Wiwynn and Quanta grew 109%, 164% and 56%. Manufacturing Market Insider's 2024 data named Flex among the providers with double-digit revenue declines that year. Neither publisher's per-company rank for Flex is public.",
+   "soldThrough": "Direct, on multi-year manufacturing agreements",
+   "targetSegments": [
+    "Data centre",
+    "Healthcare",
+    "Industrial",
+    "Automotive",
+    "Communications",
+    "Lifestyle"
+   ]
+  },
+  {
+   "name": "Regulated and integrated manufacturing — automotive, healthcare, industrial, communications",
+   "category": "Contract manufacturing — end markets",
+   "description": "The two segments not being spun off, enumerated briefly. Regulated Manufacturing Solutions covers industrial, automotive and healthcare; Integrated Technology Solutions covers communications, high-speed networking, enterprise, satellite communications and lifestyle products.",
+   "highlights": [
+    "Regulated Manufacturing Solutions: FY2026 net sales $10,191m at a 6.0% segment margin, up from 5.2%",
+    "Integrated Technology Solutions: FY2026 net sales $11,109m at a 5.4% segment margin, up from 4.8%",
+    "Automotive includes the Jupiter design platform integrating NVIDIA DRIVE AGX Orin systems-on-chip, and a zone controller development kit built with Infineon microcontrollers and Vector software",
+    "FY2026 end-market movement: industrial up 13%, communications up 6%, healthcare up 5%, automotive down 2%, lifestyle down 9%",
+    "Flex holds no interest in Nextracker: its remaining stake was distributed to shareholders on 2 January 2024 and prior results are presented as discontinued operations"
+   ],
+   "soldThrough": "Direct, on multi-year manufacturing agreements",
+   "targetSegments": [
+    "Automotive OEMs and tier ones",
+    "Medical device makers",
+    "Networking and enterprise equipment vendors",
+    "Consumer brands"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Flex power shelf for NVIDIA Vera Rubin NVL72 — 110 kW, 3RU (OWNED)",
+   "specs": [
+    {
+     "band": "Configuration",
+     "label": "Part number",
+     "value": "NVD-R-11E4ADT00-101"
+    },
+    {
+     "band": "Configuration",
+     "label": "Build",
+     "value": "18.4kW PSU — 6; 110kW 3RU Power Shelf — 1; 1× PSC"
+    },
+    {
+     "band": "Configuration",
+     "label": "Maximum output",
+     "value": "110 kW"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC output",
+     "value": "52V @ full load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output current",
+     "value": "354 A at full load"
+    },
+    {
+     "band": "Electrical",
+     "label": "AC input",
+     "value": "346 VAC to 480 VAC (L-L), 3-phase"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency",
+     "value": "Titanium+ rated at 400 VAC, 415 VAC and 480 VAC (measured with fans)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Power factor",
+     "value": ">0.99 at full load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Hold-up",
+     "value": ">20ms at full load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Load range",
+     "value": "Supports 10% to 150% pulse power loading"
+    },
+    {
+     "band": "Mechanical & compliance",
+     "label": "Form factor",
+     "value": "3RU"
+    },
+    {
+     "band": "Mechanical & compliance",
+     "label": "Dimensions",
+     "value": "876.2 × 438 × 131.4mm"
+    },
+    {
+     "band": "Mechanical & compliance",
+     "label": "Cooling",
+     "value": "Front-to-back airflow, variable-speed fans"
+    },
+    {
+     "band": "Mechanical & compliance",
+     "label": "Safety",
+     "value": "UL/IEC 62368-1"
+    }
+   ],
+   "notes": "The hold-up figure is the one to read first: more than 20 milliseconds at full load is what carries the rack across a transfer, and it is the number the whole backup architecture is sized around."
+  },
+  {
+   "product": "Flex GB300 power shelf — 33 kW, 1RU (OWNED)",
+   "specs": [
+    {
+     "band": "Configuration",
+     "label": "Build",
+     "value": "Up to six 5.5kW PSUs"
+    },
+    {
+     "band": "Configuration",
+     "label": "Redundancy",
+     "value": "Six power supply units in a 3+3 redundant configuration"
+    },
+    {
+     "band": "Configuration",
+     "label": "Maximum output power",
+     "value": "33 kW"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output voltage and current",
+     "value": "50 V / 670 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency",
+     "value": "High efficiency up to 97.5% (peak)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Conversion-loss claim",
+     "value": "Reduces power conversion losses by more than 60 percent compared to conventional systems"
+    },
+    {
+     "band": "Electrical",
+     "label": "AC input",
+     "value": "AC input: 200-277V L-N, 346-480V L-L (3 W+N+PE) 50/60Hz"
+    },
+    {
+     "band": "Electrical",
+     "label": "Feed",
+     "value": "Single/dual AC feed possible"
+    },
+    {
+     "band": "Mechanical & control",
+     "label": "Form factor",
+     "value": "1RU power shelf"
+    },
+    {
+     "band": "Mechanical & control",
+     "label": "Dimensions",
+     "value": "43.6 x 465 x 718.5 mm / 1.73 x 18.3 x 30.1 in"
+    },
+    {
+     "band": "Mechanical & control",
+     "label": "Cooling",
+     "value": "Cooling by PSU fans"
+    },
+    {
+     "band": "Mechanical & control",
+     "label": "Control",
+     "value": "PSC with Redfish communication"
+    }
+   ],
+   "notes": "A 3+3 redundant shelf means each half carries the full load alone, so both halves normally run at about half load — which is why the efficiency figure is quoted at peak half-load rather than at full load."
+  },
+  {
+   "product": "Flex 800 VDC Power Rack (OWNED)",
+   "specs": [
+    {
+     "band": "Contents",
+     "label": "Power shelves",
+     "value": "8 110kW power shelves suitable for NVIDIA Vera Rubin platform"
+    },
+    {
+     "band": "Contents",
+     "label": "Auxiliary space",
+     "value": "Up to 24 RU space for CESS, BBUs and auxiliary equipment"
+    },
+    {
+     "band": "Contents",
+     "label": "Configurability",
+     "value": "Options to customize as per your power and compute needs"
+    },
+    {
+     "band": "Architecture and stated benefit",
+     "label": "Architecture",
+     "value": "Disaggregated architecture that shifts power products out of the IT rack"
+    },
+    {
+     "band": "Architecture and stated benefit",
+     "label": "Rack density claim",
+     "value": "When deployed with a future GPU platform, this disaggregated architecture increases available compute power per rack from approximately 125 kW to up to 880 kW"
+    },
+    {
+     "band": "Architecture and stated benefit",
+     "label": "Industry context, Flex's own footnote",
+     "value": "NVIDIA and partners are adopting 800 VDC architectures to support 400 kW to 1 MW racks, enabling end-to-end energy efficiency gains of 5 percent to 7 percent and reducing the amount of copper needed by up to 50 percent"
+    }
+   ],
+   "notes": "The density claim is an argument about floor space, not about conversion: moving the power out of the IT rack does not make the conversion more efficient, it frees the rack units the power used to occupy for compute."
+  },
+  {
+   "product": "Flex 1 MW+ DC power distribution unit (OWNED)",
+   "specs": [
+    {
+     "band": "Per PDU",
+     "label": "Power shelves",
+     "value": "10x 110 kW power shelves"
+    },
+    {
+     "band": "Per PDU",
+     "label": "Output",
+     "value": "+/-400 Vout"
+    },
+    {
+     "band": "Per PDU",
+     "label": "Rectifier modules",
+     "value": "Four 27 kW rectifier modules"
+    },
+    {
+     "band": "Per PDU",
+     "label": "Control",
+     "value": "One power shelf controller"
+    },
+    {
+     "band": "Per PDU",
+     "label": "Backup",
+     "value": "Six 18 kW BBU or SuperCap modules"
+    },
+    {
+     "band": "Available power modules",
+     "label": "Conversion",
+     "value": "+/-400 V to 50 V"
+    },
+    {
+     "band": "Available power modules",
+     "label": "Ratings",
+     "value": "7 kW; 10 kW"
+    },
+    {
+     "band": "Deployment",
+     "label": "Standards and topology",
+     "value": "OCP-compliant; support +/-400 VDC and enable the transition to 800 VDC power architectures"
+    },
+    {
+     "band": "Deployment",
+     "label": "Placement",
+     "value": "As a power sidecar in both one-to-one and one-to-many configurations"
+    }
+   ],
+   "notes": "Note the ±400 V wording. An architecture described as 800 VDC is commonly built as plus and minus 400 volts about a mid-point, which halves what any single conductor sits at relative to earth."
+  },
+  {
+   "product": "JetCool SmartSense in-rack coolant distribution unit — 6U (OWNED)",
+   "specs": [
+    {
+     "band": "Redundant mode",
+     "label": "Cooling capacity",
+     "value": "160 kW"
+    },
+    {
+     "band": "Redundant mode",
+     "label": "Flow",
+     "value": "280 LPM"
+    },
+    {
+     "band": "Redundant mode",
+     "label": "Available pressure",
+     "value": "28 psi"
+    },
+    {
+     "band": "Redundant mode",
+     "label": "Approach temperature",
+     "value": "4ºC"
+    },
+    {
+     "band": "Redundant mode",
+     "label": "Power",
+     "value": "2,800 W"
+    },
+    {
+     "band": "Boost mode — all pumps running",
+     "label": "Cooling capacity",
+     "value": "300 kW"
+    },
+    {
+     "band": "Boost mode — all pumps running",
+     "label": "Flow",
+     "value": "400 LPM"
+    },
+    {
+     "band": "Boost mode — all pumps running",
+     "label": "Available pressure",
+     "value": "22 psi"
+    },
+    {
+     "band": "Boost mode — all pumps running",
+     "label": "Approach temperature",
+     "value": "7ºC"
+    },
+    {
+     "band": "Boost mode — all pumps running",
+     "label": "Power",
+     "value": "5,100 W"
+    },
+    {
+     "band": "Physical and interface",
+     "label": "Form factor",
+     "value": "6U rack-mounted liquid-to-liquid CDU"
+    },
+    {
+     "band": "Physical and interface",
+     "label": "Length and weight",
+     "value": "950 mm / 160 kg"
+    },
+    {
+     "band": "Physical and interface",
+     "label": "Fluid temperature range",
+     "value": "10ºC to 70ºC"
+    },
+    {
+     "band": "Physical and interface",
+     "label": "Secondary-side fluid",
+     "value": "PG25"
+    },
+    {
+     "band": "Physical and interface",
+     "label": "Electrical supply",
+     "value": "200 - 250 VAC, Single-Phase"
+    },
+    {
+     "band": "Physical and interface",
+     "label": "Communications",
+     "value": "TCP / IP, Redfish, SSH, Webserver"
+    },
+    {
+     "band": "Physical and interface",
+     "label": "Flow targets",
+     "value": "1-1.5 LPM/kW Flow Targets"
+    }
+   ],
+   "notes": "Approach temperature is the number that governs everything downstream: it is how much warmer the secondary loop is than the facility water feeding it, and the boost mode buys 140 kW of extra capacity by allowing it to rise from 4 °C to 7 °C. Flex's product page quotes a slightly different pairing to this datasheet; the datasheet is used here."
+  },
+  {
+   "product": "Anord Mardix MDX switchgear and IBAR busbar (OWNED)",
+   "specs": [
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Main busbar",
+     "value": "up to 8000 A"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Incomer air circuit breaker",
+     "value": "800–6300 A"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Outgoing feeders",
+     "value": "160–4000 A MCCB"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Feeder density",
+     "value": "Up to 16 × 250A or 12 × 630A feeders per double-column section"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Operational voltage",
+     "value": "up to 690 V AC"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Insulation voltage",
+     "value": "up to 1000 V"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Short-time withstand",
+     "value": "50 kA/3s, up to 100 kA/1s"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Peak withstand",
+     "value": "up to 220 kA"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Internal separation",
+     "value": "Up to Form 4b Type 7 (IEC 61439-2)"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Seismic",
+     "value": "IEEE Std 344-2013, SDS 1g"
+    },
+    {
+     "band": "MDX switchgear — IEC 61439-2",
+     "label": "Protection",
+     "value": "IP31 indoor"
+    },
+    {
+     "band": "IBAR busbar",
+     "label": "Ratings",
+     "value": "busbar ratings ranging from 800A up to 6300A"
+    },
+    {
+     "band": "IBAR busbar",
+     "label": "Tap-offs",
+     "value": "up to 630A from a single location"
+    },
+    {
+     "band": "IBAR busbar",
+     "label": "Standard",
+     "value": "Manufactured to BS EN 61439-6"
+    },
+    {
+     "band": "IBAR busbar",
+     "label": "Trunking protection",
+     "value": "IP55 rated aluminium trunking"
+    },
+    {
+     "band": "Power pods",
+     "label": "Transformer",
+     "value": "Up to 36kV Transformer"
+    },
+    {
+     "band": "Power pods",
+     "label": "Current",
+     "value": "Up to 6300A"
+    },
+    {
+     "band": "Power pods",
+     "label": "Protection and ambient",
+     "value": "IP54; -25 to +40ºC"
+    },
+    {
+     "band": "Power pods",
+     "label": "Stated life",
+     "value": "minimum 25-year lifespan"
+    },
+    {
+     "band": "Power pods",
+     "label": "Factory test",
+     "value": "Full First of Kind (FoK) testing available prior to shipping"
+    }
+   ],
+   "notes": "Form 4b Type 7 is the highest internal separation in the standard — every functional unit, its terminals and its busbar segregated from every other. It is what lets one circuit be worked on while the lineup stays live, and it is the specification difference a data-centre buyer is actually paying for."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-03",
+   "category": "ma",
+   "headline": "Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
+   "read": "Roughly eight times the combined price of Anord Mardix, Crown and JetCool, funded with debt and equity, and landing inside the segment weeks before that segment is separated. EPC Power brings rectifiers, DC-DC conversion, planned solid-state transformers and grid-forming technology, at about $800m of calendar-2026 revenue with roughly 30% EBITDA margins expected in 2027.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-to-Acquire-EPC-Power-Adding-Leading-Power-Conversion-Capabilities-for-AI-Data-Centers-and-Grid-Applications/default.aspx"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "corporate",
+   "headline": "Leadership teams named for Flex and the planned spin-off",
+   "read": "The named allocation is the clearest signal of where the company thinks its future is: chief executive Revathi Advaithi goes with the separated business, and president Michael Hartung takes what remains.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "financial",
+   "headline": "Q1 FY2027: revenue $7,928m up 21%, record adjusted earnings per share of $1.00, FY2027 guidance raised — and the shares fell about 9%",
+   "read": "A beat-and-raise that the market marked down. Free cash flow was $41m on $7.9bn of revenue and management cut free-cash-flow conversion guidance to about 40% from about 60%. J.P. Morgan cut its target from $175 to $160 the next day while keeping a buy rating.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000026/flexex991-6262026.htm"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "financial",
+   "headline": "A significant customer accounted for 12% of net sales in Q1 FY2027, with the majority in Cloud and Power Infrastructure",
+   "read": "The first time any Flex customer has crossed 10%, and it is unnamed. Roughly $950m in one quarter from one counterparty, concentrated in the segment being separated — a concentration the spin-off inherits.",
+   "source": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000030/flex-20260626.htm"
+  },
+  {
+   "date": "2026-07-09",
+   "category": "customer",
+   "headline": "Expanded partnership with Cerebras to raise CS-3 production capacity roughly sevenfold through 2026 at Milpitas, California",
+   "read": "A contract-manufacturing win, not an owned-product win — Cerebras owns the system. It is the clearest example of the distinction this dossier holds throughout.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-and-Cerebras-Expand-Partnership-to-Scale-American-Manufacturing-of-Cerebras-AI-Supercomputers/default.aspx"
+  },
+  {
+   "date": "2026-06-25",
+   "category": "product-launch",
+   "headline": "JetCool launches a turnkey liquid-cooled Dell PowerEdge XE7745 at up to 8 kW per server",
+   "read": "Selling a cooled server rather than a cooling component, with unified warranty across server and cooling. That is a move up the stack and directly into the server OEM's own service relationship.",
+   "source": "https://investors.flex.com/news/news-details/2026/JetCool-Launches-Turnkey-Liquid-Cooled-Server-Solution-to-Accelerate-Enterprise-AI-Adoption/default.aspx"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "corporate",
+   "headline": "Flex admitted to the S&P 500 index effective before the open on 22 June 2026",
+   "read": "Index inclusion forces passive ownership and lowers the cost of the equity the EPC Power deal will partly be funded with. Note that it is an index-domicile judgment: Flex remains Singapore-incorporated.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-to-Join-SP-500-Index/default.aspx"
+  },
+  {
+   "date": "2026-06-01",
+   "category": "product-launch",
+   "headline": "COMPUTEX 2026: the 110 kW Vera Rubin power shelf, a 30 kW capacitive energy storage system, and the BMR317 intermediate bus converter",
+   "read": "The three products span the whole owned stack in one booth — rack power, energy storage and a board-level module — which is the vertically integrated pitch in physical form.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-Showcases-Scalable-Power-Solutions-for-Next-Generation-AI-Infrastructure-at-COMPUTEX-2026/default.aspx"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "corporate",
+   "headline": "The board unanimously approves separating the entire Cloud and Power Infrastructure segment into an independent public company, targeted for Q1 calendar 2027",
+   "read": "The governing fact of this dossier. Conditions include shareholder approval, a Form 10 declared effective, and approval from the High Court of the Republic of Singapore for a capital reduction and distribution — the same route the Nextracker separation took.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Intention-to-Spin-Off-its-Cloud-and-Power-Infrastructure-Segment-into-a-New-Independent-Publicly-Traded-Company/default.aspx"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "financial",
+   "headline": "FY2026: net sales $27,914m up 8%, adjusted earnings per share $3.30 up 25%, adjusted operating margin a record 6.3%",
+   "read": "The margin target was reached early. Cloud and Power Infrastructure contributed $6,614m of the total at a 9.2% segment margin, against 5.4% and 6.0% for the other two segments.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000009/flexex991-3312026.htm"
+  },
+  {
+   "date": "2026-05-04",
+   "category": "ma",
+   "headline": "Completion of the Electrical Power Products acquisition for about $1.1bn in cash",
+   "read": "The utility-grade control, protection and monitoring layer — the piece that lets the grid-to-chip claim reach the substation. It closed on 1 May 2026, four days before the spin-off was announced.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-Completes-Acquisition-of-Electrical-Power-Products-EP/default.aspx"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "product-launch",
+   "headline": "Launch of the 800 VDC Power Rack, developed in collaboration with NVIDIA for the Vera Rubin platform",
+   "read": "Flex's most substantial owned data-centre product. Its claim — that shifting power out of the IT rack raises available compute per rack from about 125 kW to up to 880 kW — is an argument about floor space rather than about efficiency, and it is the right one for a hall constrained by area.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "partnership",
+   "headline": "Reference designs published for NVIDIA's Omniverse DSX blueprint, claiming up to 30% faster deployment",
+   "read": "Prefabricated modular designs combining power, racks and cooling as factory-integrated systems. This is the manufacturing company selling its factory as the differentiator rather than the product.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-Accelerates-AI-Factory-Deployment-with-NVIDIA-Omniverse-DSX-Reference-Designs/default.aspx"
+  },
+  {
+   "date": "2026-03-11",
+   "category": "partnership",
+   "headline": "JetCool collaborates with Broadcom on liquid cooling for next-generation AI accelerators",
+   "read": "A second silicon-vendor cooling relationship after Dell and Intel, which is how a cooling business gets designed in early rather than specified late.",
+   "source": "https://investors.flex.com/news/news-details/2026/JetCool-Collaborates-with-Broadcom-to-Deliver-Innovative-Liquid-Cooling-for-Next-Generation-AI-XPUs/default.aspx"
+  },
+  {
+   "date": "2026-03-02",
+   "category": "customer",
+   "headline": "US manufacturing of AMD's Instinct MI355X eight-GPU platform goes live in Austin, Texas",
+   "read": "Contract manufacturing, explicitly: AMD owns the platform. Notable for the internal cross-sell — the platforms are tested using JetCool hardware, which is Flex selling its own product into its own manufacturing line.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-Announces-U-S--Manufacturing-Collaboration-with-AMD-to-Accelerate-Domestic-AI-Infrastructure/default.aspx"
+  },
+  {
+   "date": "2026-01-05",
+   "category": "partnership",
+   "headline": "Zone controller development kit launched with Infineon and Vector for software-defined vehicles",
+   "read": "The only Flex-Infineon link on the public record, and it is automotive rather than data centre: Flex designs and manufactures, Infineon supplies AURIX microcontrollers, Vector supplies the software stack.",
+   "source": "https://flex.com/resources/flex-collaborates-with-infineon-and-vector-to-launch-zone-controller-development-kit-for-software-defined-vehicles"
+  },
+  {
+   "date": "2025-11-12",
+   "category": "customer",
+   "headline": "Liquid cooling deployed at the Equinix Co-Innovation Facility in Ashburn, Virginia, in a single OCP ORv3 rack",
+   "read": "Flex's own framing names a longstanding collaboration with Equinix across power and cooling. The demonstration is the vertical pitch made concrete — rack, cooling and power all manufactured by Flex, interfacing directly with Equinix's own secondary loop.",
+   "source": "https://investors.flex.com/news/news-details/2025/Flex-Expands-Liquid-Cooling-Footprint-at-Equinix-Co-Innovation-Facility/default.aspx"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "partnership",
+   "headline": "Partnership with LG on advanced thermal management for gigawatt data centres",
+   "read": "LG brings computer-room air handling, chillers and coolant distribution units to the Flex platform — filling the facility-scale cooling gap that JetCool, which is a chip-level technology, does not cover.",
+   "source": "https://investors.flex.com/news/news-details/2025/Flex-and-LG-Partner-to-Develop-Advanced-Thermal-Management-Solutions-for-Gigawatt-Data-Centers/default.aspx"
+  },
+  {
+   "date": "2025-10-28",
+   "category": "capacity",
+   "headline": "Giga-scale AI factory collaboration with NVIDIA and a new 400,000 sq ft Dallas facility purpose-built for data-centre infrastructure",
+   "read": "The Dallas plant is where the prefabricated power modules are built, and prefabrication is the specific claim that moves a schedule: work done in a factory rather than on a construction site.",
+   "source": "https://investors.flex.com/news/news-details/2025/Flex-to-Accelerate-Deployment-of-Giga-Scale-AI-Factories-with-NVIDIA/default.aspx"
+  },
+  {
+   "date": "2025-10-13",
+   "category": "product-launch",
+   "headline": "AI infrastructure platform launched at the OCP Global Summit — 1 MW racks, a UL 1973-certified capacitor energy storage system, and a modular rack-level coolant distribution unit to 1.8 MW",
+   "read": "Flex's claim that prefabricated power pods and skids cut deployment from more than twelve months to six to twelve is the commercial argument for buying the power train from a manufacturer rather than building it on site.",
+   "source": "https://investors.flex.com/news/news-details/2025/Flex-announces-new-AI-infrastructure-platform-to-speed-deployment-by-up-to-30/default.aspx"
+  },
+  {
+   "date": "2025-08-21",
+   "category": "incident",
+   "headline": "A missile strike on Mukachevo, western Ukraine, hits a Flex facility; $51m of impairments, write-downs and other charges recognised",
+   "read": "Contingency plans were activated and production moved to alternative facilities. A reminder that a hundred-site manufacturing footprint carries geopolitical exposure that no financial hedge covers.",
+   "source": "https://investors.flex.com/news/news-details/2025/Missile-Strike-on-Ukraine-Hits-Flex-Facility/default.aspx"
+  },
+  {
+   "date": "2025-08-15",
+   "category": "customer",
+   "headline": "Warrant issued to an Amazon subsidiary for up to 3,859,851 Flex shares at $51.29, vesting on Amazon's purchases",
+   "read": "The hardest customer confirmation in the file, and it comes from accounting rather than marketing: the expense is recorded as a deduction to revenue as Amazon buys. Raymond James read it as confirming existing long-lived business rather than signalling new commitments.",
+   "source": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm"
+  },
+  {
+   "date": "2025-08-04",
+   "category": "product-launch",
+   "headline": "The 33 kW power shelf for NVIDIA's GB300 NVL72 platform, at 97.5% peak half-load efficiency",
+   "read": "The first shipped product of the NVIDIA relationship, and the release states the forward commitment: full-scale production of 800 VDC power components to coincide with NVIDIA Kyber rack-scale systems.",
+   "source": "https://investors.flex.com/news/news-details/2025/Flex-Delivers-Advanced-Power-Management-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx"
+  },
+  {
+   "date": "2025-05-13",
+   "category": "capacity",
+   "headline": "The critical power business doubles its European footprint with a 600,000 sq ft plant at Bielsko-Biala, Poland",
+   "read": "European power-product capacity went from 616,000 to 1,200,000 sq ft in one step, with more than 700 workers. Capacity, not technology, is the constraint in switchgear and busway — lead times are the product.",
+   "source": "https://investors.flex.com/news/news-details/2025/Flexs-Critical-Power-Business-Doubles-Its-European-Footprint-to-Meet-Growing-AI-Data-Center-Power-Demands/default.aspx"
+  },
+  {
+   "date": "2025-05-07",
+   "category": "financial",
+   "headline": "FY2025: net sales $25,813m, down about 2%, with GAAP earnings per share of $2.11 and adjusted of $2.65",
+   "read": "A down year at the company level while Cloud and Power Infrastructure grew from $3,244m to $4,799m — the divergence that produced the segment restructure a year later.",
+   "source": "https://investors.flex.com/news/news-details/2025/FLEX-REPORTS-FOURTH-QUARTER-AND-FISCAL-2025-RESULTS/default.aspx"
+  },
+  {
+   "date": "2025-04-28",
+   "category": "capacity",
+   "headline": "US capacity for data-centre critical power expanded at Columbia, South Carolina, with 134,000 sq ft dedicated to Flex-owned products",
+   "read": "The release is explicit that the capacity is for Flex-owned critical power products — Databar, power distribution units and remote power panels — rather than for contract manufacturing. It is the clearest first-party statement of the owned-versus-built distinction.",
+   "source": "https://investors.flex.com/news/news-details/2025/Flex-Further-Boosts-U-S--Manufacturing-Capacity-to-Meet-Growing-Demand-for-Data-Center-Critical-Power-Solutions/default.aspx"
+  },
+  {
+   "date": "2024-01-02",
+   "category": "corporate",
+   "headline": "Completion of the Nextracker separation; Flex holds no remaining interest",
+   "read": "The precedent for the separation now underway, executed through the same Singapore High Court process. Collection gap: no contemporaneous analyst verdict on whether it created value could be located, which is the missing evidence a reader would want before judging the current spin.",
+   "source": "https://investors.nextracker.com/news/news-details/2024/Nextracker-Announces-Completion-of-Its-Separation-from-Flex-2024-Xb1e-tddME/default.aspx"
+  },
+  {
+   "date": "2021-12-01",
+   "category": "ma",
+   "headline": "Completion of the $540m all-cash acquisition of Anord Mardix from Bertram Capital",
+   "read": "The foundation of everything that followed. Anord Mardix was projected at about $360m of calendar-2021 revenue at the time — the only standalone revenue figure ever published for any of the owned power businesses.",
+   "source": "https://investors.flex.com/news/news-details/2021/Flex-Completes-Acquisition-of-Anord-Mardix/default.aspx"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-05",
+   "via": "800 VDC power shelves and racks",
+   "note": "NVIDIA names Flex Power in the power-system-components tier of its own published 800 VDC ecosystem, and Flex has since shipped power shelves built to NVIDIA platform requirements.",
+   "context": "The deepest relationship in this file, and the only one where both parties have published. NVIDIA's own 800 VDC blog lists Flex Power among power-system-components partners with Bizlink, Delta, Lead Wealth, LITEON and Megmeet.\n\nFlex has shipped against it: a 33 kW power shelf for the GB300 NVL72 platform at 97.5% peak half-load efficiency in August 2025, then a 110 kW shelf and an 800 VDC Power Rack for the Vera Rubin platform in March 2026, together with reference designs for NVIDIA's Omniverse DSX blueprint. Flex states it plans full-scale production of 800 VDC power components to coincide with NVIDIA Kyber rack-scale systems. It is also an NVIDIA customer, deploying NVIDIA cuOpt for capacity planning in its own factories and integrating DRIVE AGX Orin into its automotive platform.\n\nOne observation belongs beside all of that. Flex is not named in NVIDIA's May 2026 DSX partner release, nor in independent coverage of NVIDIA's GTC 2026 800 VDC ecosystem which names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova. From 2026 onward the announcements are largely Flex's own. That is a visibility observation, not evidence of a design loss.",
+   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-08",
+   "note": "Flex issued a warrant to an Amazon subsidiary whose shares vest on qualifying payments for products and services purchased by or on behalf of Amazon and its affiliates.",
+   "context": "The hardest customer confirmation in this dossier, and it comes from accounting rather than from a press release. On 15 August 2025 Flex entered a transaction agreement with Amazon.com, Inc. and issued Amazon.com NV Investment Holdings LLC a warrant for up to 3,859,851 Flex ordinary shares at $51.29, cashless-exercisable, expiring 15 August 2030.\n\nThe direction of trade is unambiguous in Flex's own wording: the expense associated with the warrant shares is recorded as a deduction to revenue as the customer purchases products and services over the vesting period. Flex recorded $7m of warrant-related charges in FY2026. If unexercised shares remain at expiry and the two maintain a continued commercial relationship, Flex will negotiate a new two-year warrant; on a change of control the unvested portion vests in full.\n\nWhat Amazon buys is not disclosed, and no source establishes whether it relates to Amazon Web Services. Raymond James read the structure as confirming existing long-lived business rather than signalling meaningful incremental near-term revenue. This is also not established as the unnamed customer that reached 12% of net sales in Q1 FY2027.",
+   "source": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm"
+  },
+  {
+   "slug": "equinix",
+   "type": "customer",
+   "status": "active",
+   "via": "Liquid cooling and power",
+   "note": "Flex describes a longstanding collaboration with Equinix across power and cooling infrastructure, and deployed a full rack-level liquid cooling system at the Equinix Co-Innovation Facility in November 2025.",
+   "context": "Flex installed a single OCP ORv3 rack at Equinix's Co-Innovation Facility in Ashburn, Virginia, combining JetCool SmartPlate Systems on Dell PowerEdge servers with a SmartSense 6U liquid-to-liquid coolant distribution unit cooling up to 300 kW and interfacing directly with the Equinix technology cooling system secondary loop.\n\nFlex's own statement is that the entire system — rack, cooling solution and power products — is manufactured by Flex, and the quoted executive frames it as building on a longstanding collaboration with Equinix across power and cooling infrastructure. That phrasing is the basis for typing this a customer relationship rather than a demonstration.\n\nNo contract value, volume or duration is disclosed, and the deployment described is a single rack in a test facility. The relationship is real and stated; its commercial scale is not.",
+   "source": "https://investors.flex.com/news/news-details/2025/Flex-Expands-Liquid-Cooling-Footprint-at-Equinix-Co-Innovation-Facility/default.aspx"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "note": "Zacks reports Flex has secured substantial incremental business from hyperscaler and data-centre customers including Google, with those projects moving into the capital deployment phase.",
+   "context": "Curated on a single third-party source that names the counterparty explicitly, and flagged as such. Flex itself has never named Google as a customer; its own material mentions Google only in a sentence listing hyperscalers as participants in the data-centre market, which is commentary rather than a customer statement.\n\nThe distinction matters because Flex anonymises almost everything. Its annual report discloses that the ten largest customers were 45% of FY2026 net sales with none above 10%, and names none of them.\n\nThis link is recorded because a source states it plainly and because a reader tracing the hyperscaler side of the business should see it. It carries less weight than the Amazon link, which rests on a filed contract, and it should not be read as establishing the unnamed 12% customer.",
+   "source": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html"
+  },
+  {
+   "slug": "delta-electronics",
+   "type": "competitor",
+   "status": "active",
+   "via": "800 VDC power shelves and racks",
+   "note": "NVIDIA's own 800 VDC roster places Flex Power and Delta in the same named tier — power system components — and both announced 800 VDC racks for the same platform.",
+   "context": "The basis is a categorisation by the platform owner rather than a market-share ranking, and that limit is stated rather than glossed. NVIDIA's published ecosystem assigns Flex Power, Delta, Bizlink, Lead Wealth, LITEON and Megmeet to one tier, and Infineon and thirteen other silicon vendors to the tier below.\n\nThe products confirm the overlap. Flex launched an 800 VDC Power Rack with eight 110 kW shelves for the Vera Rubin platform in March 2026; Delta announced 800 VDC in-row 660 kW power racks with 480 kW of battery backup, developed in collaboration with NVIDIA, at the same event.\n\nDelta also appears in a third-party top-five grouping of data-centre power suppliers where Flex does not, so the competition is not symmetrical: Delta holds a facility-power position Flex is buying its way toward.",
+   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+  },
+  {
+   "slug": "liteon",
+   "type": "competitor",
+   "status": "active",
+   "via": "800 VDC power shelves",
+   "note": "NVIDIA names LITEON and Flex Power in the same power-system-components tier of its 800 VDC ecosystem, and both build power shelves to the same platform reference.",
+   "context": "The most directly comparable competitor in the file at the product level. LITEON announced an 800 VDC power rack and a 110 kW power shelf on NVIDIA's MGX reference architecture at GTC 2026; Flex's Vera Rubin shelf is also 110 kW in 3RU. These are two vendors building to one specification.\n\nAn independent rundown of NVIDIA's GTC 2026 ecosystem lists LITEON and Delta at the rack level and does not name Flex, which is the clearest available evidence on relative visibility inside the programme.\n\nAs with Delta, the basis is same-tier categorisation by the platform owner plus matching product announcements, not a published share ranking. No ranking firm publishes shares for this product category.",
+   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+  },
+  {
+   "slug": "megmeet",
+   "type": "competitor",
+   "status": "active",
+   "via": "800 VDC power system components",
+   "note": "NVIDIA names Megmeet and Flex Power in the same power-system-components tier of its published 800 VDC ecosystem.",
+   "context": "The weakest of the three same-tier competitor links, and typed on the same basis: NVIDIA's own categorisation places both in one named tier of one named architecture.\n\nNo bilateral source, no matching product announcement pair, and no ranking firm places the two in a common share table. Megmeet's own position in the corpus is as a Chinese power-electronics manufacturer contesting the NVIDIA power-shelf socket behind Delta.\n\nRecorded because the categorisation is explicit and published by the platform owner, and flagged here so a reader does not mistake it for evidence of a head-to-head contest that has been observed.",
+   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+  },
+  {
+   "slug": "vertiv",
+   "type": "competitor",
+   "status": "active",
+   "via": "Integrated switchgear, UPS and distribution",
+   "note": "A data-centre switchgear survey names Anord Mardix among its key players and separately describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, UPS and power distribution — the same proposition Anord Mardix sells.",
+   "context": "The competitive claim here is unusually precise: the source names the strategy, not just the market. It describes specialised players such as Vertiv and Powell Industries carving out significant niches in hyperscale data-centre deployments with vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution — which is exactly what Flex assembled by buying Anord Mardix, Crown and Electrical Power Products.\n\nVertiv also sits one tier above Flex in NVIDIA's 800 VDC ecosystem, in the data-centre-power-systems group with ABB, Eaton and Schneider Electric, and announced its own complete 800 V direct-current product line for NVIDIA's Rubin Ultra platform.\n\nVertiv is additionally a named leader in liquid cooling, a market where JetCool appears in no published ranking. The competition therefore runs across power and thermal at once, which is the whole basis of Flex's integrated pitch.",
+   "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548"
+  },
+  {
+   "slug": "eaton",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-centre switchgear and liquid cooling",
+   "note": "A data-centre switchgear survey names Eaton and Anord Mardix among the key players in the same market, and Eaton's $9.5bn purchase of Boyd Thermal placed it directly against JetCool in liquid cooling.",
+   "context": "Competition on two fronts, and both are quantified. In switchgear, third-party vendor surveys name Eaton in the leader group and Anord Mardix among key players or as an other player depending on the report. In liquid cooling, Eaton completed a $9.5bn acquisition of Boyd Thermal in March 2026, a business forecast at about $1.7bn of calendar-2026 sales of which about $1.5bn is liquid cooling — against the $53m Flex paid for JetCool.\n\nEaton also sits in the tier above Flex in NVIDIA's 800 VDC ecosystem and announced a co-design partnership with NVIDIA at GTC 2026.\n\nThere is a historical thread running the other way that is recorded rather than suppressed: JetCool and Eaton announced a collaboration on liquid cooling for high-power data-centre applications in December 2022, two years before Flex acquired JetCool, and no source confirms it continues under Flex ownership. Several of Flex's data-centre power leaders are also former Eaton executives, including the chief executive going to the spun-off company.",
+   "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "competitor",
+   "status": "active",
+   "via": "Busway, switchgear and liquid cooling",
+   "note": "Busway market research ranks Schneider Electric among the leaders and categorises Anord Mardix as an other player, and Schneider's control of Motivair placed it against JetCool in liquid cooling.",
+   "context": "The clearest ranked competitor link available for the Anord Mardix business, because the source explicitly separates leaders from other players and puts the two companies on opposite sides of that line. Schneider appears in the leader group for data-centre busway with Legrand's Starline, Eaton, ABB and Siemens; Anord Mardix is categorised outside it.\n\nSchneider is also named in a third-party top-five grouping holding roughly 41–43% of the data-centre power market, a grouping Flex does not appear in, and took a controlling interest in Motivair in February 2025 — making it a named liquid-cooling leader in a market where JetCool is unranked.\n\nSchneider sits in the data-centre-power-systems tier of NVIDIA's 800 VDC ecosystem, above Flex's tier, and has announced its own 800 VDC systems in support of NVIDIA's next-generation processors.",
+   "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html"
+  },
+  {
+   "slug": "abb",
+   "type": "competitor",
+   "status": "active",
+   "via": "Busway and data-centre switchgear",
+   "note": "Busway market research names ABB among the market leaders while categorising Anord Mardix as an other player, and both are named in data-centre switchgear vendor surveys.",
+   "context": "Curated on the same ranked basis as Schneider Electric: a busway survey that separates a named leader group — Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens — from the other players, with Anord Mardix outside it.\n\nABB is separately named in a third-party top-five grouping of data-centre power suppliers holding roughly 41–43% of that market, and in a North American grouping at roughly 62% with Schneider, Vertiv, Eaton and Mitsubishi Electric. Flex appears in neither.\n\nABB also appears in NVIDIA's data-centre-power-systems tier and in the solid-state-transformer group at GTC 2026 — a category Flex is only now entering through the EPC Power acquisition, which names planned solid-state transformer development among its capabilities.",
+   "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html"
+  },
+  {
+   "slug": "mitsubishi-electric",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-centre switchgear and power distribution",
+   "note": "A data-centre switchgear survey names Mitsubishi Electric and Anord Mardix among the key players in the same market, and a North American power grouping places Mitsubishi Electric in a top five holding roughly 62% of that market.",
+   "context": "The link rests on two third-party surveys naming both parties in one market. The switchgear survey lists Anord Mardix alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand, Toshiba, Kehua, Rittal, Socomec and Cummins.\n\nThe stronger of the two is a North American data-centre power grouping placing ABB, Schneider, Vertiv, Eaton and Mitsubishi Electric at roughly 62% combined — a ranking that includes Mitsubishi Electric and excludes Flex, which is itself the finding.\n\nBasis is co-naming in a defined market rather than a head-to-head figure. Flex names no competitors in any of its own filings, so every competitor link in this dossier is third-party sourced.",
+   "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market"
+  },
+  {
+   "slug": "powell-industries",
+   "type": "competitor",
+   "status": "active",
+   "via": "Vertically integrated data-centre power rooms",
+   "note": "A data-centre switchgear survey names Powell Industries and Vertiv as specialised players carving out niches with vertically integrated switchgear, UPS and power distribution — the proposition Anord Mardix and Crown together sell.",
+   "context": "A narrow but well-matched competitor link. The source describes specialised players such as Vertiv and Powell Industries as having carved out significant niches in hyperscale data-centre deployments through vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution systems.\n\nThat is the same niche Flex assembled by acquisition: Anord Mardix for low- and medium-voltage switchgear, busway and power pods, Crown Technical Systems for relay panels and turn-key control enclosures, and Electrical Power Products for substation control and protection.\n\nThe difference is route. Powell builds engineer-to-order switchgear from one Texas footprint and competes on schedule; Flex bought four businesses in five years and competes on breadth plus manufacturing scale. Both are outside the ABB-Eaton-Schneider-Siemens-GE oligopoly that the same class of research places at 55–60% of North American medium-voltage switchgear.",
+   "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-24",
+   "exposure": "The United States Trade Representative took action in July 2026 under the forced-labour Section 301 investigations covering 60 economies, and from 24 July 2026 Mexico faces an additional 10% tariff for failing to enforce its forced-labour import ban — with goods entering duty-free under the United States-Mexico-Canada Agreement exempt. Mexico is Flex's largest manufacturing country by both measures: 25% of FY2026 net sales at $6,994m and 36% of net property, plant and equipment at $891m. What share of that output qualifies under the agreement's rules of origin is not disclosed, and that share is the whole exposure. Notably, Flex does not use the phrase Section 301 anywhere in its FY2026 annual report; it describes the regimes it faces by other names.",
+   "mitigation": "Flex's stated response is pass-through plus regionalisation: as a contract manufacturer it expects to recover tariff costs by passing them to customers, and it presents its roughly nine million square feet in Mexico as supporting regionalised manufacturing strategies. It also names the limit — if it can no longer fully pass tariffs through, results and cash flows would be negatively affected.",
+   "source": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ustr-takes-action-forced-labor-section-301-investigations"
+  },
+  {
+   "regime": "US import tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-02-20",
+   "exposure": "Flex quantifies its own tariff exposure and the figure is small: during FY2026 tariff costs paid and recoveries from customers affected revenues and cost of goods by approximately one percent, with a negligible impact on profitability. The legal position moved twice in 2026 by Flex's own account — the US Supreme Court struck down certain tariffs imposed under the International Emergency Economic Powers Act on 20 February 2026 and a refund system opened on 20 April 2026, with Flex stating it does not expect any refunds received to be material; a replacement 10% global tariff under Section 122 of the Trade Act of 1974 was then ruled unauthorised by the Court of International Trade on 7 May 2026, a decision under appeal.",
+   "mitigation": "Flex states it will continue to monitor changes in global trade policy and employ measures to mitigate the impact of tariffs and leverage competitive opportunities, and points to its global footprint and diverse supply-chain network as letting customers adjust to changing regional and trade dynamics.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000012/flex-20260331.htm"
+  },
+  {
+   "regime": "USMCA",
+   "status": "in-effect",
+   "exposure": "Flex's own words: existing trade agreements including the United States-Mexico-Canada Agreement provide preferential tariff treatment for qualifying imports and exports subject to compliance with rules of origin and classification, and the agreement is subject to a joint review process in 2026 with no assurance it will not be amended, suspended or terminated. It states that any material modification or withdrawal, or additional North American trade restrictions, could produce increased costs, supply-chain disruption, shipment delays, compliance burdens or a need to change sourcing and manufacturing strategies. Given Mexico at 25% of net sales and 36% of net fixed assets, this is the largest single policy exposure in the file.",
+   "mitigation": "Flex points to the scale of its North American footprint — approximately nine million square feet in Mexico alongside its US capacity — as supporting regionalised manufacturing strategies.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000012/flex-20260331.htm"
+  },
+  {
+   "regime": "OECD Pillar Two global minimum tax",
+   "status": "in-effect",
+   "effectiveDate": "2025-01-01",
+   "exposure": "Singapore implemented the OECD Pillar Two rules for financial years beginning on or after 1 January 2025 under its Multinational Enterprise (Minimum Tax) Act 2024, administered by the Inland Revenue Authority of Singapore: a 15% minimum effective rate through a multinational enterprise top-up tax on low-taxed profits of group entities outside Singapore and a domestic top-up tax on low-taxed profits within it. The scope threshold is consolidated revenue of at least €750m in at least two of the four preceding years with a constituent entity in Singapore, so Flex at $27.9bn of revenue and Singapore-incorporated is unambiguously in scope; registration opened in May 2026. Flex's consolidated effective tax rate rose to 23.0% in FY2026 from 18.1% in FY2025, against a Singapore statutory rate of 17.0%, though the disclosed rate-differential drivers are Mexico, Luxembourg, the United States, Brazil and Malaysia rather than Pillar Two specifically. No third-party quantification of Flex's Pillar Two cash-tax impact could be located.",
+   "source": "https://www.iras.gov.sg/taxes/pillar-2-top-up-taxes/registration-for-multinational-enterprise-top-up-tax-and-domestic-top-up-tax"
+  },
+  {
+   "regime": "Singapore incorporation",
+   "status": "in-effect",
+   "exposure": "Flex's domicile is a structural feature with three disclosed consequences in its own annual report. There is no reciprocal income tax treaty between the United States and Singapore regarding withholding taxes on dividends and capital gains. Singapore operates a territorial system and generally does not tax foreign-sourced income until repatriated; the tax effect of income not repatriated was $49m in FY2026 and $96m in FY2025. And 62% of cash and cash equivalents were held by subsidiaries outside Singapore at 31 March 2026, with about $930m of undistributed earnings treated as indefinitely reinvested. The most immediate consequence is procedural: the Cloud and Power Infrastructure separation requires approval from the High Court of the Republic of Singapore for a capital reduction and distribution, on top of shareholder and Securities and Exchange Commission approvals — a step a Delaware-incorporated peer would not face. Singapore-sourced revenue was $194m of $27.9bn in FY2026, about 0.7%.",
+   "mitigation": "Flex has been through the same Singapore court process once before, for the Nextracker separation completed in January 2024, and maintains a public tax-policy disclosure.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000012/flex-20260331.htm"
+  },
+  {
+   "regime": "Data-centre siting and energy regulation",
+   "status": "in-effect",
+   "exposure": "A risk specific to the segment being separated, and stated in Flex's own words: certain jurisdictions have imposed or are considering moratoria or pauses on new data-centre development, enhanced permitting and environmental review, requirements for operators to fund or share the cost of grid or utility upgrades, and operational restrictions on energy efficiency, water consumption and noise. It adds that water scarcity, drought, competing demands and regulatory restrictions on water use may constrain data-centre cooling capacity. For a business selling power and cooling into that build-out, siting risk is demand risk.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000012/flex-20260331.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Revathi Advaithi",
+   "title": "Chief Executive Officer — becoming Chief Executive Officer of the spun-off Cloud and Power Infrastructure company",
+   "background": [
+    "Chief Executive Officer — Flex Ltd., since 2019",
+    "Named on 29 July 2026 as chief executive of the company being spun out of Flex, and non-executive chairman of what remains — the clearest single indication of where Flex's leadership believes the value now sits",
+    "President and Chief Operating Officer, Electrical Sector — Eaton; the origin of a data-centre power leadership team that is substantially ex-Eaton",
+    "No photograph is published here: the leadership page carries her name and biography but no image file, and three predictable asset paths returned page-not-found on 2026-09-04. The omission is recorded rather than filled from a source outside the photo policy"
+   ]
+  },
+  {
+   "name": "Michael Hartung",
+   "title": "President and Chief Commercial Officer — becoming Chief Executive Officer of Flex",
+   "photo": "images/execs/flex-hartung.jpg",
+   "background": [
+    "President and Chief Commercial Officer — Flex Ltd.",
+    "Named on 29 July 2026 as chief executive of Flex following the separation, taking the manufacturing services business without the data-centre segment",
+    "Inherits a business Flex guides to low-to-mid single-digit growth across more than 75 manufacturing and logistics sites in 30 countries"
+   ]
+  },
+  {
+   "name": "Kevin Krumm",
+   "title": "Chief Financial Officer — becoming Chief Financial Officer of the spun-off company",
+   "photo": "images/execs/flex-krumm.jpg",
+   "background": [
+    "Chief Financial Officer — Flex Ltd.",
+    "Named to the same role at the spun-off Cloud and Power Infrastructure company",
+    "Owns the FY2027 guidance architecture: $33.7–35.2bn of revenue, a 7.0–7.2% adjusted operating margin, $4.42–4.74 of adjusted earnings per share and $1.5–1.6bn of capital expenditure",
+    "Also owns the number that moved the shares: free-cash-flow conversion guidance cut to about 40% from about 60%"
+   ]
+  },
+  {
+   "name": "Christopher Butler",
+   "title": "President, Embedded and Critical Power — becoming Chief Technology and Strategy Officer of the spun-off company",
+   "photo": "images/execs/flex-butler.jpg",
+   "background": [
+    "President, Embedded and Critical Power — Flex Ltd.; the executive who runs Anord Mardix, Crown Technical Systems, Electrical Power Products and Flex Power Modules",
+    "President, Critical Power and Digital Infrastructure Division — Eaton",
+    "Named Chief Technology and Strategy Officer of the spun-off company",
+    "The single most relevant executive for this dossier's subject: everything Flex owns in power sits under him"
+   ]
+  },
+  {
+   "name": "Todd Hoover",
+   "title": "President, Critical Power at the spun-off company",
+   "photo": "images/execs/flex-hoover.jpg",
+   "background": [
+    "President, Critical Power — named to the spun-off Cloud and Power Infrastructure company in July 2026",
+    "A thirty-year career at Eaton, where he led major energy infrastructure businesses across the Americas",
+    "Joined Flex in 2026 — a hire made after the separation was announced, into the business being separated"
+   ]
+  },
+  {
+   "name": "Rob Campbell",
+   "title": "President, Communications, Enterprise and Cloud — becoming Chief Commercial Officer of the spun-off company",
+   "photo": "images/execs/flex-campbell.jpg",
+   "background": [
+    "President, Communications, Enterprise and Cloud — Flex Ltd.",
+    "Named Chief Commercial Officer of the spun-off company",
+    "The named spokesperson on the Equinix Co-Innovation Facility deployment, describing a longstanding collaboration with Equinix across power and cooling infrastructure"
+   ]
+  },
+  {
+   "name": "Hooi Tan",
+   "title": "Chief Operating Officer — becoming Chief Operating Officer of the spun-off company",
+   "photo": "images/execs/flex-tan.jpg",
+   "background": [
+    "Chief Operating Officer — Flex Ltd.",
+    "Named to the same role at the spun-off company, taking operations for a business Flex describes as 22 engineering and manufacturing centres"
+   ]
+  },
+  {
+   "name": "Mattias Jansson",
+   "title": "President, Embedded Power at the spun-off company",
+   "photo": "images/execs/flex-jansson.jpg",
+   "background": [
+    "President, Embedded Power — named to the spun-off Cloud and Power Infrastructure company in July 2026",
+    "Takes the Flex Power Modules business — the DC-DC, intermediate bus converter and vertical power delivery line acquired from Ericsson in 2017"
+   ]
+  },
+  {
+   "name": "Bill Watkins",
+   "title": "Non-Executive Chairman of the Board of the spun-off company",
+   "photo": "images/execs/flex-watkins.jpg",
+   "background": [
+    "Named Non-Executive Chairman of the Board of the spun-off Cloud and Power Infrastructure company in July 2026",
+    "Chairs the entity that will carry the data-centre power and cooling businesses as an independent public company"
+   ]
+  },
+  {
+   "name": "Rodrigo Dall'Oglio",
+   "title": "President, Operational Excellence and Transformation — becoming Chief Operating Officer of Flex",
+   "photo": "images/execs/flex-dalloglio.jpg",
+   "background": [
+    "President, Operational Excellence and Transformation — Flex Ltd.",
+    "Named Chief Operating Officer of Flex following the separation"
+   ]
+  },
+  {
+   "name": "Dennis Kirkpatrick",
+   "title": "President, Lifestyle, Consumer Devices and Core Industrial — becoming President, Integrated Technology Solutions at Flex",
+   "photo": "images/execs/flex-kirkpatrick.jpg",
+   "background": [
+    "President, Lifestyle, Consumer Devices and Core Industrial — Flex Ltd.",
+    "Named President of Integrated Technology Solutions after the separation — a segment at $11,109m of FY2026 net sales and a 5.4% margin"
+   ]
+  },
+  {
+   "name": "Mike Thoeny",
+   "title": "President, Automotive — becoming President, Regulated Manufacturing Solutions at Flex",
+   "photo": "images/execs/flex-thoeny.jpg",
+   "background": [
+    "President, Automotive — Flex Ltd.",
+    "Named President of Regulated Manufacturing Solutions after the separation — a segment at $10,191m of FY2026 net sales and a 6.0% margin",
+    "Owns the segment that houses the Jupiter automotive design platform and the Infineon and Vector zone controller collaboration"
+   ]
+  },
+  {
+   "name": "Ivan Brockman",
+   "title": "Chief Business Transformation Officer at Flex",
+   "photo": "images/execs/flex-brockman.jpg",
+   "background": [
+    "Named Chief Business Transformation Officer of Flex in July 2026, effective on the separation",
+    "A role created for the post-separation company rather than carried over from the current structure"
+   ]
+  },
+  {
+   "name": "Cameron Carr",
+   "title": "Chief Strategy Officer",
+   "photo": "images/execs/flex-carr.jpg",
+   "background": [
+    "Chief Strategy Officer — Flex Ltd.",
+    "Over a decade at Microsoft, latterly as head of competitive strategy for the US market",
+    "Note that this is a biographical fact about a Flex executive and not evidence of a Flex-Microsoft commercial relationship; no such relationship is stated in any source"
+   ]
+  },
+  {
+   "name": "Paul Baldassari",
+   "title": "President, Manufacturing and Services",
+   "photo": "images/execs/flex-baldassari.jpg",
+   "background": [
+    "President, Manufacturing and Services — Flex Ltd.",
+    "Owns the manufacturing services that generate the majority of revenues — the build-for-others half of the company"
+   ]
+  },
+  {
+   "name": "Scott Offer",
+   "title": "Executive Vice President and General Counsel",
+   "photo": "images/execs/flex-offer.jpg",
+   "background": [
+    "Executive Vice President and General Counsel — Flex Ltd.",
+    "Carries the legal work of a separation that requires shareholder approval, a Form 10 declared effective, and approval from the High Court of the Republic of Singapore for a capital reduction and distribution"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2027 Q1 (quarter ended 26 June 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-26",
+    "metrics": [
+     {
+      "name": "Net sales — Flex consolidated (a)",
+      "actual": "$7,928m, up 21% year on year",
+      "expected": "$7.58bn (Zacks); $7.52bn (StockStory); $7.52bn (Investing.com)",
+      "verdict": "beat",
+      "result": "Beat every outlet cited — 4.6% above Zacks and 5.4% above StockStory. Three outlets, three different consensus figures, reported separately and not averaged.",
+      "kpi": "revenue",
+      "usdMillions": 7928,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net sales — Cloud and Power Infrastructure segment (b)",
+      "actual": "$2,202m, up 35% year on year, at 28% of the company against 25% a year earlier",
+      "expected": "",
+      "result": "Flex attributes the increase to strong growth in Power, including a contribution from the Electrical Power Products acquisition, plus growth in Cloud and Cooling on increased demand. This is a segment figure, not a data-centre-only figure: it blends what Flex owns with integrated compute systems built on customers' designs."
+     },
+     {
+      "name": "Segment income — Cloud and Power Infrastructure (b)",
+      "actual": "$214m at a 9.7% margin, against $155m at 9.5%",
+      "expected": "",
+      "result": "The margin runs about 300 basis points above the consolidated adjusted operating margin and about 450 above Integrated Technology Solutions."
+     },
+     {
+      "name": "Adjusted diluted earnings per share",
+      "actual": "$1.00, a record, up 39%",
+      "expected": "$0.93 (Zacks); $0.92 (StockStory); $0.90 (Investing.com and MarketBeat)",
+      "verdict": "beat",
+      "result": "Beat on the adjusted basis at every outlet. GAAP diluted earnings per share for the same quarter was $0.76 — always state which."
+     },
+     {
+      "name": "Free cash flow (a)",
+      "actual": "$41m, from $276m of operating cash flow, after about $235m of net capital expenditure and $53m of separation costs",
+      "expected": "",
+      "result": "The number that mattered most. Management cut FY2027 free-cash-flow conversion guidance to about 40% from about 60%, and the shares fell about 9% the next trading day to close near $103."
+     },
+     {
+      "name": "Customer concentration (a)",
+      "actual": "A significant customer accounted for 12% of net sales, with the majority of that revenue in the Cloud and Power Infrastructure segment",
+      "expected": "",
+      "result": "The first time any Flex customer has crossed 10%, and the counterparty is not named. Roughly $950m in one quarter, concentrated in the segment being separated."
+     },
+     {
+      "name": "FY2027 guidance",
+      "actual": "Raised to $33.7–35.2bn of revenue, a 7.0–7.2% adjusted operating margin and $4.42–4.74 of adjusted earnings per share, from an initial $32.3–33.8bn and $4.21–4.51",
+      "expected": "$4.53 of FY2027 adjusted EPS (Yahoo Finance consensus at the print)",
+      "result": "Guidance, not an actual. The $4.58 midpoint sits above the consensus figure — a raise above the Street that the market marked down anyway."
+     }
+    ],
+    "commentary": "A beat-and-raise the market disliked, and the reason is legible: growth is being funded rather than harvested. J.P. Morgan cut its price target from $175 to $160 the following day while keeping a buy rating; the eleven-analyst consensus average target stood at $160.50 at the end of August, with Goldman Sachs at $154, Barclays at $144 and Baird at $142."
+   },
+   {
+    "period": "FY2026 (year ended 31 March 2026)",
+    "periodType": "annual",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Net sales — Flex consolidated (a)",
+      "actual": "$27,914m, up 8% from $25,813m",
+      "expected": "$6.92bn for Q4 alone (Zacks pre-print); $6.95bn for Q4 (Investing.com)",
+      "verdict": "beat",
+      "result": "Q4 came in at $7.48bn, up 17% year on year and 8.1% above the Zacks estimate. Full-year consensus is not published on a comparable basis.",
+      "kpi": "revenue",
+      "usdMillions": 27914,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net sales by segment (b)",
+      "actual": "Integrated Technology Solutions $11,109m (40%); Regulated Manufacturing Solutions $10,191m (36%); Cloud and Power Infrastructure $6,614m (24%)",
+      "expected": "",
+      "result": "Cloud and Power Infrastructure grew 38%, driven by a 29% increase in Cloud and Cooling and 61% growth in Power, with about $0.2bn from acquisitions in the United States and Poland. The sub-lines are disclosed only as growth rates; no dollar split exists."
+     },
+     {
+      "name": "Segment income (b)",
+      "actual": "Integrated Technology Solutions $596m at 5.4%; Regulated Manufacturing Solutions $611m at 6.0%; Cloud and Power Infrastructure $610m at 9.2%",
+      "expected": "",
+      "result": "All three improved. Cloud and Power Infrastructure's margin fell from 10.2% to 9.2% even as revenue grew 38% — the mix inside the segment is shifting toward lower-margin content, which is consistent with the analyst observation that Power is growing above 70% while facing muted margins."
+     },
+     {
+      "name": "Adjusted diluted earnings per share",
+      "actual": "$3.30, up 25%",
+      "expected": "$0.86 for Q4 alone (Zacks); $0.87 for Q4 (Investing.com)",
+      "verdict": "beat",
+      "result": "Q4 delivered $0.93, 8.1% above the Zacks estimate. GAAP diluted earnings per share for the year was $2.33 — a $0.97 gap to the adjusted figure, which is why the basis must always be stated. Simply Wall St reports a 5.3% EPS miss for this year on the statutory basis; that is a different metric, not a contradiction."
+     },
+     {
+      "name": "Adjusted operating margin (a)",
+      "actual": "6.3%, a record",
+      "expected": "",
+      "result": "The margin target was reached early, which is the substance behind the separation case: the segment being spun out runs materially above the company average."
+     },
+     {
+      "name": "Capital returns (a)",
+      "actual": "19.2 million shares repurchased for $944m; $1.1bn of a $1.7bn authorisation remaining at year end",
+      "expected": "",
+      "result": "Flex has never declared or paid a cash dividend and states it has no plans to in FY2027. Buybacks are the entire return-of-capital policy — and the EPC Power acquisition will be part-funded with equity."
+     },
+     {
+      "name": "Customer concentration (a)",
+      "actual": "The ten largest customers accounted for 45% of net sales; no customer accounted for greater than 10%",
+      "expected": "",
+      "result": "The position that changed one quarter later. Flex names none of the ten."
+     },
+     {
+      "name": "Tariff impact (a)",
+      "actual": "Tariff costs paid and recoveries from customers affected revenues and cost of goods by approximately one percent, with a negligible impact on profitability",
+      "expected": "",
+      "result": "The company's own quantification, and materially smaller than the Mexican and Chinese footprint would suggest. It rests on a pass-through mechanism Flex says it may not always be able to sustain."
+     },
+     {
+      "name": "Non-recurring charges (a)",
+      "actual": "$84m of restructuring, of which $47m in Q4; $51m of impairments, write-downs and other charges from the 21 August 2025 missile strike on the Mukachevo, Ukraine facility",
+      "expected": "",
+      "result": "The Ukraine charge is the cost of a hundred-site footprint in a world where some of those sites are in range."
+     }
+    ],
+    "commentary": "The year the company restructured itself around the data-centre business and then decided to let it go. Note that FY2026 is the first year reported on the three-segment basis: FY2025 was originally published as Flex Agility Solutions $14,074m and Flex Reliability Solutions $11,739m, and those figures do not reconcile to the recast series."
+   },
+   {
+    "period": "FY2025 (year ended 31 March 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-03-31",
+    "metrics": [
+     {
+      "name": "Net sales — Flex consolidated (a)",
+      "actual": "$25,813m, down about 2% from $26,415m",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Zacks recorded the Q4 FY2025 print as a beat on both lines — earnings 5.8% and revenue 2.7% above its estimates, with the shares rising 3.2% to $37.95. No full-year consensus is published on a comparable basis.",
+      "kpi": "revenue",
+      "usdMillions": 25813,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net sales by segment, recast (b)",
+      "actual": "Integrated Technology Solutions $11,336m (44%); Regulated Manufacturing Solutions $9,678m (37%); Cloud and Power Infrastructure $4,799m (19%)",
+      "expected": "",
+      "result": "Cloud and Power Infrastructure grew 48% year on year on a 58% increase in Cloud and Cooling and 26% growth in Power, with a partial-year contribution from the Crown Technical Systems acquisition."
+     },
+     {
+      "name": "Segment income, recast (b)",
+      "actual": "Integrated Technology Solutions $541m at 4.8%; Regulated Manufacturing Solutions $505m at 5.2%; Cloud and Power Infrastructure $492m at 10.2%",
+      "expected": "",
+      "result": "The 10.2% figure is the high-water mark for the data-centre segment's margin in the three years shown here."
+     },
+     {
+      "name": "Adjusted diluted earnings per share",
+      "actual": "$2.65, a fifth consecutive year of double-digit adjusted earnings growth",
+      "expected": "",
+      "result": "GAAP diluted earnings per share was $2.11. Simply Wall St reports a 5.5% EPS miss for this year on the statutory basis while Zacks reports beats every quarter on the adjusted basis; both are internally consistent and neither reconciles to the other."
+     },
+     {
+      "name": "Acquisitions (c)",
+      "actual": "JetCool Technologies for a total purchase price of $53m (14 November 2024) and Crown Technical Systems for $319m (19 November 2024)",
+      "expected": "",
+      "result": "Purchase accounting is the only public window on their scale: Crown recorded $128m of intangibles and $170m of goodwill; JetCool recorded $21m of developed technology and $31m of goodwill. Neither has a disclosed revenue line before or since."
+     }
+    ],
+    "commentary": "A down year for the company inside which the data-centre segment grew 48%. That divergence is what produced the FY2026 reporting change and, a year after that, the separation."
+   },
+   {
+    "period": "FY2024 (year ended 31 March 2024)",
+    "periodType": "annual",
+    "periodEnd": "2024-03-31",
+    "metrics": [
+     {
+      "name": "Net sales — Flex consolidated (a)",
+      "actual": "$26,415m",
+      "expected": "",
+      "result": "Included as the base year for the recast segment series.",
+      "kpi": "revenue",
+      "usdMillions": 26415,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net sales by segment, recast (b)",
+      "actual": "Integrated Technology Solutions $12,636m (48%); Regulated Manufacturing Solutions $10,535m (40%); Cloud and Power Infrastructure $3,244m (12%)",
+      "expected": "",
+      "result": "The measure of how fast the change happened: the data-centre segment doubled its share of the company in two years, from 12% to 24%."
+     },
+     {
+      "name": "Segment income, recast (b)",
+      "actual": "Integrated Technology Solutions $489m at 3.9%; Regulated Manufacturing Solutions $540m at 5.1%; Cloud and Power Infrastructure $306m at 9.4%",
+      "expected": "",
+      "result": "The data-centre segment already ran at nearly double the margin of the rest of the company in FY2024, before the AI build-out — the premium is structural to the products, not a cycle effect."
+     },
+     {
+      "name": "Nextracker separation",
+      "actual": "Flex distributed its remaining interest in Nextracker on 2 January 2024 and no longer consolidates it; prior results are presented as discontinued operations",
+      "expected": "",
+      "result": "The precedent for the separation now underway, executed through the same Singapore High Court process. Collection gap: no contemporaneous analyst assessment of whether it created value could be located."
+     }
+    ],
+    "commentary": "The base year, included because the whole argument for the separation rests on a three-year trajectory rather than on one result."
+   }
+  ],
+  "commentary": "Reported in US dollars; fiscal year ends 31 March on a 52/53-week convention, so FY2026 ended 2026-03-31 and Q1 FY2027 ended 2026-06-26. Three cautions govern every figure below. FIRST, THE BASIS. Flex reports GAAP and adjusted earnings per share and the gap is large — $2.33 against $3.30 in FY2026, and $2.11 against $2.65 in FY2025. Zacks, Investing.com, MarketBeat and StockStory all report every quarter of both years as a beat on the adjusted basis; Simply Wall St reports misses of 5.5% and 5.3% for the same two years on the statutory basis. Both are correct on their own basis and neither reconciles to the other. Every consensus below names its outlet and its basis, and no two outlets are blended. SECOND, THE SEGMENTS. In Q4 FY2026 Flex replaced Flex Agility Solutions and Flex Reliability Solutions with Integrated Technology Solutions, Regulated Manufacturing Solutions and the new Cloud and Power Infrastructure, and recast prior periods. FY2025 was ORIGINALLY reported as Flex Agility Solutions $14,074m and Flex Reliability Solutions $11,739m; those figures cannot be mixed with the recast three-segment series used here. THIRD, AND MOST IMPORTANT FOR THIS FILE: THERE IS NO DATA-CENTRE REVENUE FIGURE. The smallest disclosed dollar unit is the Cloud and Power Infrastructure segment, which contains both what Flex owns and integrated compute systems it builds on customers' designs. Within it, the Cloud and Cooling and Power sub-lines are disclosed only as growth rates, never as dollars. No revenue line exists anywhere in the public record for Anord Mardix, for JetCool, for Crown Technical Systems or for 'Flex's branded power and cooling products', and none is derived here. The only standalone figures available are pre-acquisition or forward: about $360m of calendar-2021 revenue for Anord Mardix at the time of its purchase, and about $800m of calendar-2026 revenue for EPC Power in its deal announcement. The spin-off's Form 10 will, for the first time, put standalone segment financials on the record."
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess the announced separation of Cloud and Power Infrastructure is the single fact that governs every other reading of this company. Basis: the board unanimously approved it on 5 May 2026, targeted for the first calendar quarter of 2027; the current chief executive Revathi Advaithi goes with the spun-off company and president Michael Hartung becomes chief executive of what remains; Flex targets the separated business at 65–75% revenue growth in FY2027 accelerating past 80% in FY2028, against low-to-mid single-digit growth for the remainder. A dossier written about 'Flex, the contract manufacturer with a power business' describes a structure with roughly two quarters of life left.",
+  "**(High confidence)** We assess the data-centre business is real, is growing faster than the company, and is measurably more profitable — and that its true size is not publicly knowable. Basis: Cloud and Power Infrastructure grew from $3,244m in FY2024 to $4,799m in FY2025 to $6,614m in FY2026 and ran at $2,202m in Q1 FY2027, up 35% year on year, at a 9.7% segment margin against 6.7% for the company. But the segment blends what Flex owns with integrated compute systems it builds on customers' designs, the Cloud and Cooling and Power sub-lines are disclosed only as growth rates, and no revenue line has ever been published for Anord Mardix, JetCool or Crown. Anyone quoting a 'Flex data centre revenue' figure is quoting an estimate.",
+  "**(High confidence)** We assess Flex has bought rather than built its position in data-centre power, and that the buying is accelerating rather than finishing. Basis: Anord Mardix for $540m in December 2021, JetCool for $53m in November 2024, Crown Technical Systems for $319m in November 2024, a Bielsko-Biala plant in Poland for $35m in April 2025, Electrical Power Products for about $1.1bn in May 2025, and EPC Power for $4.4bn agreed on 3 September 2026 — roughly $6.3bn, of which two thirds was committed in the sixteen months after the AI build-out began. The EPC Power deal is being funded with debt and equity and is expected to close in the fourth calendar quarter of 2026, which places it inside the segment weeks before that segment is separated.",
+  "**(Moderate confidence)** We assess the branded power and cooling businesses are technologically credible but commercially sub-scale against the named leaders, and that this is the gap the acquisitions are closing. Basis: market researchers naming key players in data-centre busway place Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens as leaders and categorise Anord Mardix as an other player; JetCool appears in no liquid-cooling league table from any named ranking firm, which is consistent with its $53m purchase price set against the $9.5bn Eaton paid for Boyd Thermal and the $4.75bn Ecolab agreed for CoolIT in the same quarter. Collection gap: no named ranking firm publishes a share figure for Anord Mardix or JetCool, so this is an inference from their absence rather than from a measured position.",
+  "**(Moderate confidence)** We assess the NVIDIA relationship is product-level and real, and that Flex's visibility inside NVIDIA's own communications has fallen rather than risen. Basis: NVIDIA named Flex Power in its own 800 VDC power-system-components tier in May 2025, and Flex has shipped against it — a 33 kW GB300 NVL72 power shelf at 97.5% peak half-load efficiency in August 2025, a 110 kW Vera Rubin shelf and an 800 VDC Power Rack in March 2026. Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova. The 2026 announcements are largely Flex's own. This is a visibility observation, not evidence of a design loss.",
+  "**(Moderate confidence)** We assess the cash quality of the growth is the weakest part of the financial record and the reason the shares fell on a beat-and-raise. Basis: Q1 FY2027 produced record adjusted earnings per share of $1.00 on $7,928m of revenue and $276m of operating cash flow, but only $41m of free cash flow after about $235m of net capital expenditure and $53m of separation costs; management cut FY2027 free-cash-flow conversion guidance to about 40% from about 60%; and the shares fell about 9% the next trading day. J.P. Morgan cut its target from $175 to $160 the day after the print while keeping a buy rating. The growth is being funded, not harvested.",
+  "**(Moderate confidence)** We assess customer concentration is rising in exactly the segment being separated, and that the counterparty is material and unnamed. Basis: the FY2026 annual report discloses that the ten largest customers were 45% of net sales with no single customer above 10%; the Q1 FY2027 quarterly report then discloses that a significant customer accounted for 12% of net sales with the majority of that revenue in Cloud and Power Infrastructure. That is roughly $950m in one quarter from one counterparty Flex declines to name. Amazon is the only data-centre-scale customer confirmed by filing, through a warrant whose vesting is driven by Amazon's purchases; Google is named only by an analyst. Neither is established as the 12% customer.",
+  "**(Moderate confidence)** We assess the Singapore domicile is a genuine structural feature rather than a formality, and that its clearest consequence is procedural. Basis: Flex's own annual report states there is no reciprocal income tax treaty between the United States and Singapore on dividends and capital gains; 62% of cash was held by subsidiaries outside Singapore at 31 March 2026 with about $930m of undistributed earnings treated as indefinitely reinvested; and the separation requires approval from the High Court of the Republic of Singapore for a capital reduction and distribution, on top of shareholder and Securities and Exchange Commission approvals. Flex has been through that court process once before, for the Nextracker separation completed in January 2024, which is why it reads as a known constraint rather than a novel risk. Singapore-sourced revenue was $194m of $27.9bn in FY2026, about 0.7%.",
+  "**(Low confidence)** Tariff exposure looks smaller than the footprint suggests, on the company's own quantification. Flex states that in FY2026 tariff costs paid and recoveries from customers affected revenues and cost of goods by approximately one percent with a negligible impact on profitability, and that as a contract manufacturer it expects to recover tariff costs by passing them to customers. It also names the limit: if it can no longer fully pass them through, results and cash flows would be negatively affected. Mexico is 25% of net sales and 36% of net property, plant and equipment, and the United States-Mexico-Canada Agreement is subject to a joint review in 2026 — so the low measured impact rests on a pass-through mechanism and a trade agreement, both of which are conditions rather than properties.",
+  "**Collection gaps.** No standalone revenue figure exists for Anord Mardix, JetCool, Crown Technical Systems or any 'data centre' line — only the blended segment. Flex names no competitors anywhere in its own filings: the annual report's entire competition disclosure is that the contract manufacturing services market is competitive and that Flex competes against numerous domestic and foreign providers as well as current and prospective customers, so every competitor link in this file is third-party sourced. Flex's individual rank in the Manufacturing Market Insider Top 50 and the in4ma Global 100 is paywalled. No named ranking firm publishes a share figure for Anord Mardix or JetCool. No contemporaneous analyst verdict on the Nextracker separation could be located, which matters because it is the only precedent for the separation now underway. Flex's insider ownership percentage was not obtainable. No US manufacturing incentive, CHIPS Act award or state credit is claimed anywhere in the annual report — a negative finding rather than a search failure, since the US expansion is presented as customer-funded. No export-control action naming Flex was found. Two first-party figures conflict and are not reconciled here: an April 2025 release puts the US footprint at over 13 million square feet across 17 facilities and a March 2026 release puts it at more than seven million square feet across 17 facilities. And the separation cost for the quarter is stated as $53m in the company's own filing against $24m in one third-party summary; the filing is used."
+ ],
+ "sources": [
+  {
+   "label": "Flex — agreement to acquire EPC Power for $4.4bn, adding power conversion for AI data centres and grid applications",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-to-Acquire-EPC-Power-Adding-Leading-Power-Conversion-Capabilities-for-AI-Data-Centers-and-Grid-Applications/default.aspx",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "PR Newswire — Flex to acquire EPC Power, adding leading power conversion capabilities",
+   "url": "http://www.prnewswire.com/news-releases/flex-to-acquire-epc-power-adding-leading-power-conversion-capabilities-for-ai-data-centers-and-grid-applications-302869402.html",
+   "date": "2026-09-03",
+   "party": "disclosure"
+  },
+  {
+   "label": "OilPrice — Flex to buy EPC Power for $4.4 billion in an AI data-centre push",
+   "url": "https://oilprice.com/Company-News/Flex-to-Buy-EPC-Power-for-44-Billion-in-AI-Data-Center-Push.html",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "StockAnalysis — Flex (FLEX) overview: price, market capitalisation, share count, trailing financials",
+   "url": "https://stockanalysis.com/stocks/flex/",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Flex versus Celestica: which AI infrastructure stock is the better buy",
+   "url": "https://finance.yahoo.com/technology/ai/articles/flex-vs-celestica-ai-infrastructure-122800063.html",
+   "date": "2026-08-19"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — is CPI the key catalyst behind Flex's strong FY27 outlook",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cpi-key-catalyst-behind-flexs-143100438.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Simply Wall St — Flex stock jumps after record EPS but cash risks linger",
+   "url": "https://simplywall.st/stocks/us/tech/nasdaq-flex/flex/news/flex-flex-stock-jumps-after-record-eps-but-cash-risks-linger",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Flex — Form 10-Q for the quarter ended 26 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/866374/000086637426000030/flex-20260626.htm",
+   "date": "2026-07-31",
+   "party": "disclosure"
+  },
+  {
+   "label": "StockStory via The Globe and Mail — Flex deep dive: AI infrastructure and spin-off strategy drive revenue growth, market reacts cautiously",
+   "url": "https://www.theglobeandmail.com/investing/markets/stocks/FLEX/pressreleases/3583871/flex-q2-deep-dive-ai-infrastructure-and-spin-off-strategy-drive-revenue-growth-market-reacts-cautiously/",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Flex — Form 8-K exhibit 99.1, Q1 FY2027 results and raised FY2027 guidance",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000026/flexex991-6262026.htm",
+   "date": "2026-07-29",
+   "party": "disclosure"
+  },
+  {
+   "label": "Flex — Q1 FY2027 results and the announcement of an Investor Day on 10 November 2026",
+   "url": "https://investors.flex.com/news/news-details/2026/FLEX-REPORTS-FIRST-QUARTER-FISCAL-2027-RESULTS/default.aspx",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Flex — leadership teams named for Flex and the planned Cloud and Power Infrastructure spin-off",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Leadership-Teams-for-Flex-and-Planned-Cloud-and-Power-Infrastructure-Spin-Off-SpinCo/default.aspx",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Flex Q1 earnings beat on CPI strength, FY27 view raised",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/flex-q1-earnings-beat-cpi-145700777.html",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Flex — expanded partnership with Cerebras to scale American manufacturing of Cerebras AI supercomputers",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-and-Cerebras-Expand-Partnership-to-Scale-American-Manufacturing-of-Cerebras-AI-Supercomputers/default.aspx",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — can Flex's hyperscaler wins drive sustained revenue growth (names Google)",
+   "url": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "Flex — JetCool launches a turnkey liquid-cooled server solution to accelerate enterprise AI adoption",
+   "url": "https://investors.flex.com/news/news-details/2026/JetCool-Launches-Turnkey-Liquid-Cooled-Server-Solution-to-Accelerate-Enterprise-AI-Adoption/default.aspx",
+   "date": "2026-06-25"
+  },
+  {
+   "label": "Flex — the scaling problem behind the AI data-centre boom",
+   "url": "https://flex.com/resources/the-scaling-problem-behind-the-ai-data-center-boom",
+   "date": "2026-06-25"
+  },
+  {
+   "label": "Flex — Flex to join the S&P 500 index",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-to-Join-SP-500-Index/default.aspx",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Flex — scalable power solutions for next-generation AI infrastructure at COMPUTEX 2026",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Showcases-Scalable-Power-Solutions-for-Next-Generation-AI-Infrastructure-at-COMPUTEX-2026/default.aspx",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Flex — Form 10-K for the fiscal year ended 31 March 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000012/flex-20260331.htm",
+   "date": "2026-05-20",
+   "party": "disclosure"
+  },
+  {
+   "label": "Flex — JetCool expands the SmartPlate System portfolio with closed-loop cooling",
+   "url": "https://investors.flex.com/news/news-details/2026/JetCool-Expands-SmartPlate-System-Portfolio-with-Closed-Loop-Cooling-for-Next-Generation-Compute/default.aspx",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Investing.com — Flex Q4 FY26 slides: spin-off announced, margins hit target early",
+   "url": "https://www.investing.com/news/company-news/flex-q4-fy26-slides-spinoff-announced-margins-hit-target-early-93CH-4681888",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Flex — intention to spin off the Cloud and Power Infrastructure segment into a new independent publicly traded company",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Intention-to-Spin-Off-its-Cloud-and-Power-Infrastructure-Segment-into-a-New-Independent-Publicly-Traded-Company/default.aspx",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Flex — Form 8-K exhibit 99.1, Q4 and FY2026 results with initial FY2027 guidance",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000009/flexex991-3312026.htm",
+   "date": "2026-05-05",
+   "party": "disclosure"
+  },
+  {
+   "label": "Flex — completion of the acquisition of Electrical Power Products",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Completes-Acquisition-of-Electrical-Power-Products-EP/default.aspx",
+   "date": "2026-05-04"
+  },
+  {
+   "label": "Flex — expanded partnership with Teradyne Robotics to scale intelligent automation",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-and-Teradyne-Robotics-Expand-Partnership-to-Scale-Intelligent-Automation-Across-Global-Manufacturing/default.aspx",
+   "date": "2026-04-22"
+  },
+  {
+   "label": "Flex — agreement to acquire Electrical Power Products",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Agreement-to-Acquire-Electrical-Power-Products-EP/default.aspx",
+   "date": "2026-03-30"
+  },
+  {
+   "label": "Flex — launch of the 800 VDC Power Rack for next-generation NVIDIA AI infrastructure",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "Flex — accelerating AI factory deployment with NVIDIA Omniverse DSX reference designs",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Accelerates-AI-Factory-Deployment-with-NVIDIA-Omniverse-DSX-Reference-Designs/default.aspx",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "Power Electronics News — NVIDIA GTC 2026: power from grid to GPU (800 VDC ecosystem rundown)",
+   "url": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Flex — JetCool collaborates with Broadcom on liquid cooling for next-generation AI XPUs",
+   "url": "https://investors.flex.com/news/news-details/2026/JetCool-Collaborates-with-Broadcom-to-Deliver-Innovative-Liquid-Cooling-for-Next-Generation-AI-XPUs/default.aspx",
+   "date": "2026-03-11"
+  },
+  {
+   "label": "Flex — US manufacturing collaboration with AMD to accelerate domestic AI infrastructure",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-U-S--Manufacturing-Collaboration-with-AMD-to-Accelerate-Domestic-AI-Infrastructure/default.aspx",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Flex — collaboration with Infineon and Vector on a zone controller development kit for software-defined vehicles",
+   "url": "https://flex.com/resources/flex-collaborates-with-infineon-and-vector-to-launch-zone-controller-development-kit-for-software-defined-vehicles",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "Flex — expanding the liquid cooling footprint at the Equinix Co-Innovation Facility",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-Expands-Liquid-Cooling-Footprint-at-Equinix-Co-Innovation-Facility/default.aspx",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "Flex — partnership with LG to develop advanced thermal management solutions for gigawatt data centres",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-and-LG-Partner-to-Develop-Advanced-Thermal-Management-Solutions-for-Gigawatt-Data-Centers/default.aspx",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Flex — accelerating deployment of giga-scale AI factories with NVIDIA, including a 400,000 sq ft Dallas facility",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-to-Accelerate-Deployment-of-Giga-Scale-AI-Factories-with-NVIDIA/default.aspx",
+   "date": "2025-10-28"
+  },
+  {
+   "label": "Flex — AI infrastructure platform announced at the OCP Global Summit, targeting up to 30% faster deployment",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-announces-new-AI-infrastructure-platform-to-speed-deployment-by-up-to-30/default.aspx",
+   "date": "2025-10-13"
+  },
+  {
+   "label": "Flex — modular rack-level coolant distribution unit launch, 600 kW to 1.8 MW",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-Expands-Data-Center-Cooling-Portfolio-with-Launch-of-Modular-Rack-Level-Coolant-Distribution-Unit/default.aspx",
+   "date": "2025-09-23"
+  },
+  {
+   "label": "Flex — Flex Power Modules partners with Renesas on next-generation power management solutions",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-Power-Modules-Partners-with-Renesas-to-Deliver-Next-gen-Power-Management-Solutions/default.aspx",
+   "date": "2025-09-16"
+  },
+  {
+   "label": "Flex — missile strike on Ukraine hits a Flex facility at Mukachevo",
+   "url": "https://investors.flex.com/news/news-details/2025/Missile-Strike-on-Ukraine-Hits-Flex-Facility/default.aspx",
+   "date": "2025-08-21"
+  },
+  {
+   "label": "Flex — Form 8-K on the Amazon transaction agreement and warrant",
+   "url": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm",
+   "date": "2025-08-18",
+   "party": "disclosure"
+  },
+  {
+   "label": "Investing.com — Flex stock warrants with Amazon signal a long-term partnership (Raymond James)",
+   "url": "https://www.investing.com/news/analyst-ratings/flex-stock-warrants-with-amazon-signal-longterm-partnership-93CH-4200550",
+   "date": "2025-08-19"
+  },
+  {
+   "label": "Flex — advanced power management for next-generation NVIDIA AI infrastructure, the 33 kW GB300 NVL72 power shelf",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-Delivers-Advanced-Power-Management-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+   "date": "2025-08-04"
+  },
+  {
+   "label": "Flex — collaboration with MIT to advance the future of manufacturing with AI and automation",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-Announces-Collaboration-with-MIT-to-Advance-the-Future-of-Manufacturing-with-AI-and-Automation/default.aspx",
+   "date": "2025-06-05"
+  },
+  {
+   "label": "Flex — JetCool launches liquid cooling systems delivering 15% IT power savings without facility upgrades",
+   "url": "https://investors.flex.com/news/news-details/2025/JetCool-a-Flex-Company-Launches-New-Liquid-Cooling-Systems-Delivering-15-IT-Power-Savings-Without-Facility-Upgrades/default.aspx",
+   "date": "2025-05-20"
+  },
+  {
+   "label": "Flex — the critical power business doubles its European footprint with a Bielsko-Biala plant in Poland",
+   "url": "https://investors.flex.com/news/news-details/2025/Flexs-Critical-Power-Business-Doubles-Its-European-Footprint-to-Meet-Growing-AI-Data-Center-Power-Demands/default.aspx",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "Flex — Q4 and FY2025 results",
+   "url": "https://investors.flex.com/news/news-details/2025/FLEX-REPORTS-FOURTH-QUARTER-AND-FISCAL-2025-RESULTS/default.aspx",
+   "date": "2025-05-07"
+  },
+  {
+   "label": "Flex — boosting US manufacturing capacity for data-centre critical power at Columbia, South Carolina",
+   "url": "https://investors.flex.com/news/news-details/2025/Flex-Further-Boosts-U-S--Manufacturing-Capacity-to-Meet-Growing-Demand-for-Data-Center-Critical-Power-Solutions/default.aspx",
+   "date": "2025-04-28"
+  },
+  {
+   "label": "Nextracker — completion of its separation from Flex",
+   "url": "https://investors.nextracker.com/news/news-details/2024/Nextracker-Announces-Completion-of-Its-Separation-from-Flex-2024-Xb1e-tddME/default.aspx",
+   "date": "2024-01-02"
+  },
+  {
+   "label": "Flex — completion of the acquisition of Anord Mardix",
+   "url": "https://investors.flex.com/news/news-details/2021/Flex-Completes-Acquisition-of-Anord-Mardix/default.aspx",
+   "date": "2021-12-01"
+  },
+  {
+   "label": "Flex — definitive agreement to acquire Anord Mardix for $540m",
+   "url": "https://investors.flex.com/news/news-details/2021/Flex-Announces-Definitive-Agreement-to-Acquire-Anord-Mardix/default.aspx",
+   "date": "2021-10-18"
+  },
+  {
+   "label": "JetCool — collaboration with Eaton on liquid cooling for high-power data-centre applications",
+   "url": "https://jetcool.com/post/jetcool-eaton-collaboration-data-centers/",
+   "date": "2022-12-06"
+  },
+  {
+   "label": "NVIDIA — the 800 VDC architecture will power the next generation of AI factories; Flex Power named among power system components",
+   "url": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+   "date": "2025-05-20"
+  },
+  {
+   "label": "NVIDIA — DSX gives infrastructure builders the playbook for AI factories",
+   "url": "https://nvidianews.nvidia.com/news/dsx-infrastructure-ai-factory",
+   "date": "2026-05-31"
+  },
+  {
+   "label": "IntelMarketResearch — data centre switchgear market outlook 2026-2034",
+   "url": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548",
+   "date": "2026-01"
+  },
+  {
+   "label": "Future Market Insights — switchgear for data centers market 2026-2036",
+   "url": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market",
+   "date": "2026-01"
+  },
+  {
+   "label": "MarketsandMarkets — data centre busway market report 2026-2032",
+   "url": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
+   "date": "2026-01"
+  },
+  {
+   "label": "MarketsandMarkets — top companies in the data centre power market",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp"
+  },
+  {
+   "label": "LITEON — 800 VDC and NVIDIA Vera Rubin platform solutions at NVIDIA GTC 2026",
+   "url": "https://www.liteon.com/en/news/press-center/content/liteon-nvidia-gtc-2026",
+   "date": "2026-03"
+  },
+  {
+   "label": "PR Newswire — Delta's power, cooling and microgrid solutions showcased at NVIDIA GTC to bolster the 800 VDC architecture",
+   "url": "https://www.prnewswire.com/news-releases/deltas-power-cooling-and-microgrid-solutions-showcased-at-nvidia-gtc-to-bolster-the-800-vdc-architecture-of-next-gen-ai-factories-302714372.html",
+   "date": "2026-03",
+   "party": "disclosure"
+  },
+  {
+   "label": "Evertiq — top 50 EMS firms grew 12.7% in 2024 to $477bn in assembly revenue (Manufacturing Market Insider data)",
+   "url": "https://evertiq.com/news/2025-04-18-top-50-ems-firms-grew-127-in-2024-reached-477b-in-assembly-revenue",
+   "date": "2025-04-18"
+  },
+  {
+   "label": "Evertiq — top 100 EMS and ODM providers grow 23% in 2025 as AI infrastructure drives the market (in4ma and EMSNOW data)",
+   "url": "https://evertiq.com/news/2026-03-06-top-100-ems-and-odm-providers-grow-23-in-2025-as-ai-infrastructure-drives-market",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "Dell'Oro Group — data centre physical infrastructure market reaches $10.9bn in 4Q 2025, up 20% year on year",
+   "url": "https://www.delloro.com/news/data-center-physical-infrastructure-market-reaches-10-9-billion-in-4q-2025-up-20-percent-y-y/",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Office of the United States Trade Representative — action in the forced labour Section 301 investigations",
+   "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ustr-takes-action-forced-labor-section-301-investigations",
+   "date": "2026-07",
+   "party": "disclosure"
+  },
+  {
+   "label": "Global Trade Alert — forced-labour Section 301 tariffs on 60 economies take effect on 24 July",
+   "url": "https://globaltradealert.org/blog/forced-labour-section-301-final-action",
+   "date": "2026-07"
+  },
+  {
+   "label": "Inland Revenue Authority of Singapore — registration for multinational enterprise top-up tax and domestic top-up tax",
+   "url": "https://www.iras.gov.sg/taxes/pillar-2-top-up-taxes/registration-for-multinational-enterprise-top-up-tax-and-domestic-top-up-tax",
+   "date": "2026-01",
+   "party": "disclosure"
+  },
+  {
+   "label": "RSM Singapore — Singapore BEPS 2.0 Pillar Two update: registration starts from May 2026",
+   "url": "https://www.rsm.global/singapore/insights/singapore-beps-20-pillar-two-update-registration-starts-may-2026",
+   "date": "2026-01"
+  },
+  {
+   "label": "StockAnalysis — Flex analyst forecasts and price targets",
+   "url": "https://stockanalysis.com/stocks/flex/forecast/",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "MarketBeat — Flex earnings history and estimated next reporting date",
+   "url": "https://www.marketbeat.com/stocks/NASDAQ/FLEX/earnings/"
+  },
+  {
+   "label": "Market Chameleon — Flex earnings dates and post-print share reaction",
+   "url": "https://marketchameleon.com/Overview/FLEX/Earnings/Earnings-Dates/"
+  },
+  {
+   "label": "Investing.com — Flex earnings calendar and estimate-versus-actual history",
+   "url": "https://www.investing.com/equities/flextronics-intl-ltd-earnings"
+  },
+  {
+   "label": "Fintel — Flex institutional ownership and short interest",
+   "url": "https://fintel.io/so/us/flex"
+  },
+  {
+   "label": "Flex — data centre industry page, the grid-to-chip and vertical integration claims",
+   "url": "https://flex.com/industries/data-center"
+  },
+  {
+   "label": "Flex — power and cooling products catalogue",
+   "url": "https://flex.com/products/power-and-cooling"
+  },
+  {
+   "label": "Flex — Flex companies and brands",
+   "url": "https://flex.com/company/brands"
+  },
+  {
+   "label": "Flex — about Flex, founding and history",
+   "url": "https://flex.com/company"
+  },
+  {
+   "label": "Flex — leadership team",
+   "url": "https://flex.com/company/leadership"
+  },
+  {
+   "label": "Flex — SpinCo and Flex leadership after the separation",
+   "url": "https://flex.com/company/spinco-flex-leadership"
+  },
+  {
+   "label": "Flex — power shelf for NVIDIA Vera Rubin NVL72 datasheet (PDF)",
+   "url": "https://flex.com/downloads/power-shelf-for-nvidia-vera-rubin-nvl72-datasheet"
+  },
+  {
+   "label": "Flex — GB300 33 kW power shelf datasheet (PDF)",
+   "url": "https://flex.com/downloads/flex-gb300-power-shelves-datasheet"
+  },
+  {
+   "label": "Flex — 800 VDC power rack solution brief (PDF)",
+   "url": "https://flex.com/downloads/800-vdc-power-rack-solution-brief"
+  },
+  {
+   "label": "Flex — 1 MW+ DC power distribution unit solution brief (PDF)",
+   "url": "https://flex.com/downloads/1-mw-dc-power-distribution-unit-pdu-solution-brief"
+  },
+  {
+   "label": "Anord Mardix — MDX switchgear to IEC 61439-2",
+   "url": "https://anordmardix.com/mdx-switchgear/"
+  },
+  {
+   "label": "Anord Mardix — IBAR busbar",
+   "url": "https://anordmardix.com/products/ibar/"
+  },
+  {
+   "label": "Anord Mardix — DATABAR busway",
+   "url": "https://anordmardix.com/products/databar/"
+  },
+  {
+   "label": "Anord Mardix — power pods",
+   "url": "https://anordmardix.com/products/power-pods/"
+  },
+  {
+   "label": "JetCool — SmartSense coolant distribution unit",
+   "url": "https://jetcool.com/coolant-distribution-units-smartsense-cdu/"
+  },
+  {
+   "label": "JetCool — microconvective cooling technology",
+   "url": "https://jetcool.com/technology/"
+  },
+  {
+   "label": "JetCool — NVIDIA processor cold plates",
+   "url": "https://jetcool.com/nvidia/"
+  },
+  {
+   "label": "Crown Technical Systems — a Flex company",
+   "url": "https://crowntechnicalsystems.com/"
+  },
+  {
+   "label": "Electrical Power Products — utility-grade control, protection and monitoring",
+   "url": "https://ep2.com/"
+  }
+ ],
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
+}

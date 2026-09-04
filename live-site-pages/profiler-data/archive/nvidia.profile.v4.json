@@ -223,26 +223,6 @@
    "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
    "via": "GB200 NVL72 power",
    "status": "active"
-  },
-  {
-   "slug": "infineon",
-   "type": "supplier",
-   "status": "active",
-   "since": "2025-05",
-   "via": "800 VDC power conversion silicon",
-   "note": "NVIDIA names Infineon among the silicon providers for its 800 VDC data-centre architecture on its own developer blog.",
-   "context": "NVIDIA's published 800 VDC ecosystem sorts partners into three tiers, and Infineon sits in the first: silicon providers, alongside Analog Devices, AOS, Efficient Power Conversion, Innoscience, Monolithic Power Systems, Navitas, onsemi, Power Integrations, Renesas, Richtek, ROHM, STMicroelectronics and Texas Instruments — fourteen names, so this is an ecosystem rather than a sole source.\n\nThe relationship went beyond listing. Infineon published a CoolSiC JFET hot-swap solution in October 2025 that lets an operator exchange a server board in an 800 VDC rack while the rest of the rack keeps running, and joined NVIDIA's MGX AI Factory ecosystem in May 2026 committing to the full 800 V to 50 V, 12 V and 6 V conversion flow with GaN bus converters near 1 MHz.\n\nNVIDIA ties full-scale production of the architecture to its Kyber rack-scale systems in 2027. Neither party has published a revenue figure, a volume commitment or an exclusivity term.",
-   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
-  },
-  {
-   "slug": "flex",
-   "type": "supplier",
-   "status": "active",
-   "since": "2025-05",
-   "via": "800 VDC power shelves and racks",
-   "note": "NVIDIA names Flex Power among the power system components vendors for its 800 VDC architecture, and Flex has shipped power shelves built to NVIDIA platform requirements.",
-   "context": "Flex sits in the second of NVIDIA's three published tiers — power system components — with Bizlink, Delta, Lead Wealth, LITEON and Megmeet. That tier consumes the silicon the first tier supplies and feeds the facility-power systems of the third.\n\nFlex has shipped against it: a 33 kW power shelf for the GB300 NVL72 platform at 97.5% peak half-load efficiency in August 2025, then a 110 kW shelf and an 800 VDC Power Rack for the Vera Rubin platform in March 2026, plus reference designs for NVIDIA's Omniverse DSX blueprint. Flex states it plans full-scale production of 800 VDC power components to coincide with NVIDIA Kyber rack-scale systems.\n\nOne observation belongs with it: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in independent coverage of NVIDIA's GTC 2026 800 VDC ecosystem. From 2026 the announcements are largely Flex's own.",
-   "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx"
   }
  ],
  "policyExposure": [
@@ -441,11 +421,6 @@
  },
  "sources": [
   {
-   "label": "Flex — launch of the 800 VDC Power Rack for next-generation NVIDIA AI infrastructure",
-   "url": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
-   "date": "2026-03-16"
-  },
-  {
    "label": "NVIDIA — Q1 FY2027 results",
    "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx",
    "date": "2026-05-20"
@@ -520,6 +495,6 @@
    "url": "https://insights.trendforce.com/p/ai-data-center-energy-storage-demand"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

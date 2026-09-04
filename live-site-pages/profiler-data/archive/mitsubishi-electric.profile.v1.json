@@ -16,16 +16,6 @@
  },
  "sources": [
   {
-   "label": "Future Market Insights — switchgear for data centers market 2026-2036",
-   "url": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market",
-   "date": "2026-01"
-  },
-  {
-   "label": "Infineon — Q3 FY2026 investor presentation, including its own power discretes and modules market-share chart",
-   "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-investor-presentation-v01-00-en.pdf",
-   "date": "2026-08-05"
-  },
-  {
    "label": "MELCO — Agreement to acquire PCI Energy Solutions",
    "url": "https://www.mitsubishielectric.com/en/pr/2026/pdf/0820_ei2.pdf",
    "date": "2026-08-20"
@@ -373,8 +363,8 @@
    "url": "https://www.congress.gov/crs-product/R48933"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 2,
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1,
  "summary": "BOTTOM LINE UP FRONT: Mitsubishi Electric is a ¥5.89 trillion Japanese electrical conglomerate whose relevance to AI data-center power sits in one segment — Infrastructure — and specifically in three product families: large static uninterruptible power supplies to 2 MW, power transformers to 765 kV, and gas-insulated switchgear and circuit breakers to 800 kV. That segment is where the company's growth now is: Infrastructure revenue rose 19% to ¥1,463.4bn in the year ended 2026-03-31 with operating profit up 73%, and Energy Systems orders rose 80% year on year in the quarter ended 2026-06-30 on what the company attributes to North American transformer business expansion. BACKGROUND. Founded 1921, listed in Tokyo (6503), roughly 150,000 employees across 200+ group companies. FY2026 (year ended 2026-03-31) revenue ¥5,894.7bn (+7%) and operating profit ¥433.1bn per company filings; net profit attributable to stockholders ¥407.8bn (+26%). The US arm is Mitsubishi Electric Power Products, Inc. (MEPPI), Warrendale, Pennsylvania, founded 1985 as a joint venture with Westinghouse Electric and wholly owned since 1989; its Critical Power Solutions Division in Pittsburgh has manufactured UPS since 1964 and is the entity that actually sells into data centers. Note the fiscal-year convention: the company labels the year ending 31 March 2026 as FY2026.",
  "ecosystemRole": "One of a small number of vendors that can supply the medium- and high-voltage equipment upstream of a data-center hall and the uninterruptible supply inside it from the same corporate parent — transformers, gas-insulated switchgear, vacuum circuit breakers and large static UPS. It is consistently named in the leading vendor set for data-center UPS, power transformers and gas-insulated switchgear by market-research firms, but no firm reachable in this research published a market-share percentage for it in any of those three markets, and where sources rank rather than list it falls below the top five in transformers. Its distinctive technical claim is vertical integration into its own power semiconductors, which underwrites both its silicon-carbide UPS line and its stated position against eco-mode.",
  "productsAndServices": [
@@ -1269,24 +1259,6 @@
    "note": "Mordor Intelligence profiles Mitsubishi Electric Power Products and Powell Industries alongside each other in its North America medium-voltage switchgear company roster, and Straits Research lists both among gas-insulated switchgear participants.",
    "context": "Both sit outside the five suppliers Mordor says control roughly 55-60% of the North American medium-voltage switchgear market, but they occupy that space differently. Powell's stated differentiator in the same report is speed from a domestic plant — tailored switchgear in ten weeks from Texas — while Mitsubishi Electric's is a vacuum and gas circuit-breaker portfolio to 800 kV backed by a new $86M Pennsylvania factory.\n\nThe overlap is real but partial: metal-clad switchgear, which is Powell's core product class, is not a named MEPPI product line, while gas-insulated switchgear at transmission voltages is not Powell's. They meet at the medium-voltage breaker rather than across the whole lineup.",
    "source": "https://www.mordorintelligence.com/industry-reports/north-america-medium-voltage-switchgear-market"
-  },
-  {
-   "slug": "infineon",
-   "type": "competitor",
-   "status": "active",
-   "via": "Power discretes and modules",
-   "note": "Infineon's own published market-share chart for power discretes and modules ranks both parties in one market: Infineon 17.4% and Mitsubishi 4.6% of a $32.8bn 2024 market.",
-   "context": "The strongest available form of competitor evidence — a named, ranked, single-market table published by one of the two parties. The same chart places onsemi at 8.5%, STMicroelectronics at 6.9%, Fuji Electric at 3.9% and Silan at 3.4%.\n\nMordor Intelligence independently names both in a power-semiconductor top five with onsemi, Texas Instruments and STMicroelectronics.\n\nThe relationship is not purely adversarial: NVIDIA's 800 VDC roster places Mitsubishi Electric in the data-centre power systems tier while Infineon sits in the silicon tier, so in the AI data-centre chain the two are peers at different levels rather than rivals for the same socket. The competitor type reflects the power-semiconductor market where they are ranked against each other.",
-   "source": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-investor-presentation-v01-00-en.pdf"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-centre switchgear and power distribution",
-   "note": "A data-centre switchgear survey names Mitsubishi Electric and Flex's Anord Mardix business among the key players in the same market.",
-   "context": "The link rests on third-party surveys naming both in one defined market. The switchgear survey lists Anord Mardix alongside Schneider Electric, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand, Toshiba, Kehua, Rittal, Socomec and Cummins.\n\nA separate North American data-centre power grouping places ABB, Schneider, Vertiv, Eaton and Mitsubishi Electric at roughly 62% combined — a ranking that includes Mitsubishi Electric and excludes Flex, which is itself informative about relative position.\n\nFlex acquired its way into this market: Anord Mardix in December 2021 for $540m, Crown Technical Systems in November 2024 for $319m and Electrical Power Products in May 2026 for about $1.1bn. Flex names no competitors in any of its own filings, so every competitor link involving it is third-party sourced.",
-   "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market"
   }
  ],
  "policyExposure": [

@@ -155,7 +155,7 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | A1 | `caterpillar` | Caterpillar | supplier | Fable 5.1 xhigh | G2 | v1 · v04.41r → v2 · v04.47r | ✓ · v04.41r |
 | A2 | `piller` | Piller Power Systems | supplier | Fable 5.1 xhigh | G3 | v1 · v04.42r → v2 · v04.48r | ✓ · v04.42r |
 | A3 | `dominion-energy` | Dominion Energy | utility (new) | Fable 5.1 xhigh | G5 | v1 · v04.43r | ✓ · v04.43r |
-| A4 | `vicor` | Vicor | supplier | Fable 5.1 xhigh | G9 | v1 · v04.44r | ✓ · v04.44r |
+| A4 | `vicor` | Vicor | supplier | Fable 5.1 xhigh | G9 | v1 · v04.44r → v2 · v04.50r | ✓ · v04.44r |
 | B1 | `southern-company` | Southern Company (Georgia Power) | utility | Fable 5.1 High | G5 | v1 · v04.45r | ✓ · v04.45r |
 | B1 | `entergy` | Entergy | utility | Fable 5.1 High | G5 | v1 · v04.45r | ✓ · v04.45r |
 | B2 | `oncor` | Oncor | utility | Fable 5.1 High → **Opus 5 xhigh** (weekly Fable cap bound mid-session; §2 substitution) | G5 | v1 · v04.46r | ✓ · v04.46r |
@@ -188,11 +188,11 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | C1 | `cummins` | Cummins | supplier | Opus 5 xhigh | G2 | v1 · v04.47r | ✓ · v04.47r |
 | C1 | `rolls-royce-power-systems` | Rolls-Royce Power Systems (mtu) | supplier | Opus 5 xhigh | G2 | v1 · v04.47r | ✓ · v04.47r |
 | C1 | `rehlko` | Rehlko (Kohler Energy) | supplier | Opus 5 xhigh | G2 | v1 · v04.47r | ✓ · v04.47r |
-| C2 | `mitsubishi-electric` | Mitsubishi Electric | supplier | Opus 5 xhigh | G3 | v1 · v04.48r | ✓ · v04.48r |
-| C2 | `powell-industries` | Powell Industries | supplier | Opus 5 xhigh | G4 | v1 · v04.48r | ✓ · v04.48r |
+| C2 | `mitsubishi-electric` | Mitsubishi Electric | supplier | Opus 5 xhigh | G3 | v1 · v04.48r → v2 · v04.50r | ✓ · v04.48r |
+| C2 | `powell-industries` | Powell Industries | supplier | Opus 5 xhigh | G4 | v1 · v04.48r → v2 · v04.50r | ✓ · v04.48r |
 | C2 | `mitsubishi-power` | Mitsubishi Power | supplier | Opus 5 xhigh | turbine gap | v1 · v04.48r | ✓ · v04.48r |
-| C3 | `infineon` | Infineon | supplier | Opus 5 xhigh | G9 | — | — |
-| C3 | `flex` | Flex | supplier | Opus 5 xhigh | rack power | — | — |
+| C3 | `infineon` | Infineon | supplier | Opus 5 xhigh | G9 | v1 · v04.50r | ✓ · v04.50r |
+| C3 | `flex` | Flex | supplier | Opus 5 xhigh | rack power | v1 · v04.50r | ✓ · v04.50r |
 | C4 | `talen-energy` | Talen Energy | ipp | Opus 5 xhigh | power partners | — | — |
 | C4 | `vistra` | Vistra | ipp | Opus 5 xhigh | power partners | — | — |
 | C4 | `nrg-energy` | NRG Energy | ipp | Opus 5 xhigh | power partners | — | — |

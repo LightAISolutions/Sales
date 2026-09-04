@@ -1,0 +1,514 @@
+{
+ "schemaVersion": 2,
+ "slug": "infineon",
+ "title": "Infineon Technologies — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "sections": [
+  {
+   "id": "what-this-guide-does-not-repeat",
+   "title": "Start here: the switch, not the chain",
+   "kind": "callout",
+   "tone": "info",
+   "read": "2 min",
+   "ps": [
+    "This app already teaches the rack power chain from several angles, and this guide deliberately does not teach it again. **Vicor's guide** covers why the voltage climbs, the 48-volt bus and the 60-volt safety line, the 800-to-48-to-one-volt stage list, the last centimetre and the power delivery network, and lateral against vertical layout. **Megmeet's and Zhonhen's guides** cover the legacy AC chain, the Chinese 240/336-volt precedent, and what each new box replaces. **Delta's guide** covers switch-mode conversion, the design-and-build supply chain, and climbing from component to system. **LITEON's guide** covers server supplies, redundancy and hot-swap, and the manufacturing line.",
+    "What none of them teaches is **the switch itself** — the piece of semiconductor that is actually opening and closing thousands or millions of times a second inside every one of those boxes. That is this guide's subject. Read it as the layer underneath the chain: the chain says a stage converts 800 volts to 48; this guide says what has to be true of the transistor doing it, why one material can and another cannot, and where the watts that the chain calls 'efficiency' physically go.",
+    "Three ideas carry the whole guide, and they are worth holding from the first page. **A power switch is a compromise between blocking and conducting** — the same layer that holds off the voltage when the device is off is the layer the current has to cross when it is on. **A switch wastes energy in two different ways** — while it is on, and while it is changing state — and the two trade against each other, so there is no single 'best' device, only a best device for a frequency and a voltage. And **the package now limits the silicon more often than the silicon limits the package**, which is why the interesting products are increasingly assemblies rather than transistors."
+   ]
+  },
+  {
+   "id": "how-a-power-switch-actually-works",
+   "title": "How a power switch actually works",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Start with the job. A power converter does not vary a voltage smoothly; it chops. A {{MOSFET}} or an {{IGBT}} is turned fully on, then fully off, tens of thousands to millions of times a second, and a filter of inductors and capacitors averages the chopped waveform into the smooth output the load sees. The reason for chopping rather than dividing is efficiency: a device that is fully on has almost no voltage across it and a device that is fully off has almost no current through it, and power is voltage times current, so in both states the device wastes almost nothing. All the loss lives in the two states' imperfections and in the journey between them.",
+    "Now the compromise. Inside the transistor is a lightly doped layer called the {{drift region}}. When the device is off, the electric field spreads across that layer and the voltage is held there. A material can only stand a certain field before it breaks down, so **to hold off twice the voltage you need roughly twice the thickness** — and because doping must fall as thickness rises, the resistance of the layer grows much faster than linearly, roughly with the {{breakdown voltage}} raised to a power between two and two and a half in plain silicon. That single relationship is why a 1200-volt silicon MOSFET is a poor device and a 100-volt one is an excellent one, and it is the relationship every other technology on this page exists to escape.",
+    "The number that summarises the on-state is {{on-resistance}}, written R-DS(on). Multiply it by the square of the current and you have the heat the device makes just by conducting — the same {{I²R loss}} that the rack guides describe in busbars, happening inside a component a few millimetres across. Two things about it repay attention. It is quoted at 25 °C and it rises substantially, often by half again, at the {{junction temperature}} a real converter runs at. And it is per device: paralleling four devices quarters the resistance but does nothing about the fact that each of them still has to be turned on and off.",
+    "The off-state is simpler and less forgiving. A datasheet's voltage rating is an absolute maximum, not an operating point. Every switching event throws a voltage spike on top of the bus voltage — that is the {{parasitic inductance}} of the loop resisting a fast change in current — so designers derate hard, typically running a device at no more than 70–80% of its rating. Push past the rating and the device goes into {{avalanche}}: it conducts anyway and absorbs the energy as heat, which some parts are rated to survive a specified number of joules of and none are rated to survive indefinitely."
+   ]
+  },
+  {
+   "id": "the-two-losses",
+   "title": "The two losses, and why they decide everything else",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "**Conduction loss** is what the device wastes while it is on. For a MOSFET it is the current squared times the on-resistance. For an IGBT it is roughly the current times a nearly fixed forward voltage of a volt or two, because an IGBT does not behave like a resistor at all. That difference has a consequence worth internalising: at low current a MOSFET wastes far less, because its loss falls with the square of the current while the IGBT's fixed volt-and-a-half is always there. At very high current the IGBT can win, because a fixed drop beats a resistance that the current is squaring.",
+    "**Switching loss** is what the device wastes while it is changing state. For the tens of nanoseconds in which the voltage across it is falling while the current through it is rising, the device is dissipating both at once. The energy lost in one such crossing is small; multiplied by the number of crossings per second it is often the larger of the two losses. This is {{hard switching}}, and its cost is directly proportional to {{switching frequency}}.",
+    "Two device-specific taxes sit inside switching loss and are worth naming, because they are the reason materials matter. A silicon MOSFET has a {{body diode}} built into it, and when that diode has been conducting and the opposite switch turns on, stored charge has to be swept out first — {{reverse recovery}}, a burst of backwards current at full bus voltage, appearing as heat in one device and as electrical noise everywhere. An IGBT has {{tail current}}: it conducts by flooding its drift region with charge carriers, which is what gives it that low fixed voltage drop, and at turn-off the flood takes microseconds to drain while the full bus voltage is already across the device.",
+    "Now the design consequence that explains the whole industry. **Why would anyone want to switch faster, if switching costs energy?** Because the magnetic components — the transformers and inductors that store energy between switching cycles — get smaller in almost direct proportion to frequency. Double the frequency and the transformer roughly halves. In a data centre where the constraint is watts per litre and watts per square centimetre, that trade is worth taking, right up to the point where switching loss overtakes what the smaller magnetics saved. **Every power-semiconductor product is a bid to move that crossover point.** A device with lower switching loss lets its user run faster, build smaller, and sell a denser box.",
+    "Two mechanisms move it. The first is device physics — a material or structure whose {{figure of merit}}, the product of on-resistance and the charge needed to switch it, is simply lower. The second is circuit design: arrange the converter so the device changes state when the voltage across it is already near zero. That is {{soft switching}}, and the {{LLC converter}} inside almost every modern server supply is the standard way of achieving it."
+   ]
+  },
+  {
+   "id": "four-switches-one-table",
+   "title": "Four switches, one table",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The device choice is not a preference. It falls out of three numbers: the voltage the switch must block, the current it must carry, and how often it must change state. Read the table across one row at a time and the reason each technology exists becomes a sentence rather than a list. Every figure here is a range that describes where the technology is used, not a specification of any one part — a datasheet is the only place a real number lives.",
+   "cols": [
+    "Device",
+    "How it conducts",
+    "Where it is strong",
+    "What it costs you",
+    "Typical duty in a data centre"
+   ],
+   "rows": [
+    [
+     "Silicon {{MOSFET}} (including {{superjunction}})",
+     "{{unipolar device}} — electrons only, behaves like a resistor",
+     "Low voltages, high frequency, clean turn-off. {{superjunction}} structures bury opposite-doped columns in the drift layer so silicon stays competitive to roughly 600–900 V",
+     "{{on-resistance}} climbs steeply with voltage rating, so above roughly 900 V a silicon die large enough to be efficient is too large to be affordable. The {{body diode}} is slow, so {{reverse recovery}} is a real tax in hard-switched bridges",
+     "The 48-volt and point-of-load stages; the primary side of server supplies at 600–650 V"
+    ],
+    [
+     "{{IGBT}}",
+     "{{bipolar device}} — floods the drift region with carriers to conduct",
+     "Very high current at high voltage, where a nearly fixed 1–2 V drop beats a resistance the current is squaring. Cheap per amp, and decades of field data behind it",
+     "{{tail current}} at turn-off makes switching expensive, which caps practical {{switching frequency}} in the low kilohertz — so the magnetics stay large. Does not conduct backwards, so it needs a separate diode",
+     "Large motor drives and grid-tied inverters; increasingly the thing being displaced rather than chosen in new data-centre designs"
+    ],
+    [
+     "{{SiC}} MOSFET",
+     "{{unipolar device}} in a {{wide bandgap}} material",
+     "Holds off roughly ten times the field of silicon, so the {{drift region}} for a given rating is about a tenth as thick. A 1200 V SiC MOSFET is a practical, low-resistance device where a silicon one is not. Conducts heat about three times better than silicon, and works hot",
+     "Expensive: the crystal is grown slowly and is hard to make defect-free, so wafer cost dominates. Switches so fast that {{parasitic inductance}} and gate-drive design become the limiting engineering",
+     "The high-voltage stages — anything standing off an 800 V bus, solid-state transformers, and the front end of high-power supplies"
+    ],
+    [
+     "{{GaN}} transistor",
+     "{{unipolar device}}, usually a lateral structure grown on a silicon wafer",
+     "The lowest switching charge of the four, so the highest practical frequency and the smallest magnetics. Grown on ordinary silicon wafers, so it can ride existing fab economics. No {{body diode}} in the silicon sense, so no {{reverse recovery}} charge",
+     "Available mainly at lower voltage classes — commonly to 650 V — so an 800 V bus cannot be blocked by one device and needs either a higher-voltage part, two in series, or a topology that halves the stress. Lateral devices spread heat sideways into the substrate rather than straight down",
+     "The high-frequency conversion stages inside server power supplies and power shelves, where density is the whole argument"
+    ]
+   ],
+   "note": "The row that most often surprises people is the fourth. GaN is the fastest of the four and yet the 800-volt architecture leans on SiC, because **speed does not help a device that cannot hold off the bus.** Voltage class is a gate you pass before frequency becomes an argument at all."
+  },
+  {
+   "id": "eight-hundred-volts-from-the-switch",
+   "title": "What 800 volts changes, seen from inside the switch",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The system-level case for {{800 VDC}} is settled and taught elsewhere in this app: at a fixed power, raising the voltage cuts the current proportionally, and loss in copper falls with the square of current, so a megawatt rack that would need a twenty-thousand-amp bar at 48 volts needs something like a twelfth of that at 800. What is not taught elsewhere is what that decision does to the semiconductor, and the answer is that it changes the device selection more than it changes the topology.",
+    "**First, the voltage class moves out of silicon's comfortable range.** An 800-volt bus is not an 800-volt requirement. Add the switching overshoot the loop inductance produces, add the tolerance band of a bus that is regulated but not perfectly, then derate to the customary 70–80% of rating, and the device needs a rating comfortably above 1000 volts — in practice the 1200-volt class. Plain silicon at 1200 volts has a drift region so thick that its {{on-resistance}} is uncompetitive; {{superjunction}} structures help but run out around 900 volts. That is not a preference for {{SiC}}; it is close to a requirement.",
+    "**Second, it puts a real safety engineering problem in the same box.** A direct-current fault has no {{zero crossing}} to help extinguish an arc, so protection cannot be inherited from the AC hall. At 48 volts a series arc is a local nuisance; at 800 volts it sustains and spreads. The answer is a semiconductor one — a {{SSCB}} that opens the circuit in microseconds by turning a transistor off rather than in milliseconds by pulling contacts apart — and that device has to carry the full continuous current with low enough resistance to be worth having, which is another argument that lands on wide-bandgap silicon.",
+    "**Third, and least obvious, it is a plus-and-minus arrangement rather than a single rail.** An architecture described as 800 V is commonly built as ±400 V about a mid-point, which halves the voltage any one conductor sits at relative to earth and therefore halves the insulation and clearance problem, while keeping the full 800 volts available between the rails. It also means an earth fault on one rail does not immediately present the full bus to the fault, which changes what the detection has to look for.",
+    "**Fourth, one high-voltage failure mode arrives that low-voltage designers never meet.** A high-energy particle from cosmic radiation striking a device that is holding off a large voltage can trigger a local breakdown that destroys it — a random, statistical failure whose rate climbs very steeply with the applied voltage. It is why datasheets for high-voltage parts carry a failure-in-time rate against bus voltage, and why the derating on an 800-volt bus is argued in reliability terms and not only in margin terms.",
+    "So the honest summary is this. Going to 800 volts deletes conversion stages and saves copper, and it does that by pushing the surviving stages into a voltage class where only a handful of device technologies are practical, where protection has to be re-engineered from semiconductors rather than inherited from breakers, and where a new statistical failure mode has to be designed against. **The architecture's saving is real and its cost is paid in silicon.**"
+   ]
+  },
+  {
+   "id": "the-loss-budget",
+   "title": "The loss budget: from the room to the chip, stage by stage",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "% of the power entering the stage that leaves it",
+   "intro": "Efficiencies multiply. A chain of five stages at 97% each delivers 86% of what it started with, and the missing 14% is not an abstraction — it is heat, in specific components, that the cooling system then has to remove and the utility has already been billed for. The bars below are the shape of a modern high-voltage direct-current chain at full load, using the class of figure vendors publish for good equipment rather than any one product's number; a lightly loaded stage does worse and a badly matched one does much worse. Read them for the ranking, not the decimals.",
+   "items": [
+    {
+     "label": "Medium-voltage transformer and rectification to the DC bus",
+     "v": 98.5,
+     "sub": "One conversion, done once, at the highest voltage in the chain — so the current is lowest and the copper loss smallest. A {{SST}} does this in one semiconductor stage where the AC chain used a transformer plus a UPS rectifier and inverter."
+    },
+    {
+     "label": "DC distribution to the rack",
+     "v": 99.3,
+     "sub": "Not a conversion at all — pure {{I²R loss}} in busbar and cable. This is the bar the whole 800 V argument exists to raise, and at 48 V it is the one that collapses."
+    },
+    {
+     "label": "800 V to 48 V {{bus converter}} in the shelf",
+     "v": 97.5,
+     "sub": "An isolated, fixed-ratio stage. Isolation costs a transformer and the transformer costs loss; running it {{soft switching}} in an {{LLC converter}} is what keeps this bar where it is."
+    },
+    {
+     "label": "48 V intermediate regulation",
+     "v": 97.0,
+     "sub": "The stage that actually holds a voltage steady, so it cannot be a fixed ratio and cannot be fully resonant. Often deleted entirely in newer designs — a stage that is not there wastes nothing."
+    },
+    {
+     "label": "{{point of load}} conversion to about 1 V",
+     "v": 91.0,
+     "sub": "The worst bar in the chain and the one that matters most. The output voltage is about one volt, so even a few tens of millivolts dropped across the switches is a few percent of the output, and the current is in the hundreds or thousands of amps."
+    },
+    {
+     "label": "The {{PDN}} between the last converter and the transistors",
+     "v": 96.0,
+     "sub": "Copper, vias, package balls and substrate. Not a conversion — just resistance at a thousand amps, which is why the last converter keeps moving closer to the die."
+    }
+   ],
+   "note": "Two conclusions fall out of the ranking. **The last two bars are where the watts are**, because loss scales with current and the current is highest where the voltage is lowest — which is why a company selling point-of-load silicon is selling into the largest single pool of waste in the building. And **the cheapest efficiency improvement is always a deleted stage**: removing the 48-volt regulation entirely saves its whole loss and its whole volume, at the price of making the surviving converter do a harder job. That is the same trade the 800-volt architecture makes one level up."
+  },
+  {
+   "id": "under-the-package",
+   "title": "Why anyone would put a converter under the processor",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Vicor's guide in this app makes the layout argument for {{vertical power delivery}} — that putting the last converter beneath the package instead of beside it shortens the last centimetre to the thickness of the board, cuts the resistance and inductance of the {{PDN}}, and frees the package perimeter for the memory and interconnect that also want that edge. That argument is correct and is not repeated here. What follows is the argument from the other side: what the move demands of the semiconductor and its package, and why it is a device problem before it is a layout problem.",
+    "**A converter under a package is a thermal orphan.** On the top of the board, a regulator shares the airflow or the cold plate that is already there for the processor. Underneath, it is on the far side of the board from all of that, dissipating tens of watts into a surface nobody planned to cool. Every watt it wastes now costs a second cooling path, so the efficiency of that stage stops being an operating-cost argument and becomes a mechanical-feasibility argument. A stage two points more efficient may be the difference between needing a backside cold plate and not.",
+    "**It has to be flat.** The vertical space under a board between it and whatever is beneath is small and is shared with the mechanical stack that holds the processor's own cooling in compression. A converter that is efficient but tall does not qualify. This is why the interesting products in this space are not transistors but assemblies — a {{power stage}} that puts a {{half-bridge}} and its driver in one low-profile package, or a whole multi-phase module, because the height budget is spent on interconnect otherwise.",
+    "**It has to answer instantly.** An accelerator can step hundreds of amps in a microsecond. No converter responds that fast; the first microseconds come from capacitance nearby, and how fast that charge arrives is decided by the inductance of the route. Placing the converter underneath cuts the route — but only if the package itself is low-inductance, which is a packaging problem: the loop that matters runs from the input capacitor through the two switches and back, and in a fast device that loop's {{parasitic inductance}} is measured in single-digit nanohenries or the device destroys itself on overshoot.",
+    "**And it has to be serviced by not being serviced.** A converter beneath a board cannot be replaced without pulling the board, so its failure rate has to be argued rather than tolerated. That pushes toward integration — fewer solder joints, fewer discrete parts, more of the circuit inside one package — which is the same conclusion the thermal and height constraints reach by different routes.",
+    "The pattern worth taking away is general. **When a converter moves, the constraint moves from efficiency to density, from density to thermal path, and from thermal path to package.** Each move makes the semiconductor vendor's product larger — less a transistor, more a subsystem — which is the commercial reason every power-semiconductor company is buying or building packaging and gate-driver capability rather than only shrinking die."
+   ]
+  },
+  {
+   "id": "the-package-is-the-product",
+   "title": "The package is the product now",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "For thirty years the way to make a better power converter was to make a better transistor. That is no longer reliably true: in fast, high-current circuits the wiring around the die often limits the design before the die does. This is the choice a power-supply designer now actually makes, and it is why a semiconductor company's catalogue keeps growing modules and shrinking loose parts.",
+   "cards": [
+    {
+     "t": "Discrete devices — buy transistors, design the rest",
+     "meta": "Separate switches, a separate gate driver, the designer's own board layout between them",
+     "adv": [
+      "Cheapest per amp, and the designer can mix vendors part by part as prices and lead times move",
+      "Total freedom of topology and of thermal design — the board is yours to lay out for your own airflow or cold plate",
+      "Second-sourcing is straightforward: a pin-compatible part from another maker is a purchasing decision, not a redesign",
+      "For low frequencies and modest currents the layout is forgiving and the integration would buy nothing"
+     ],
+     "dis": [
+      "The gate-drive loop and the power loop are now the designer's problem, and their {{parasitic inductance}} caps how fast the devices may be switched — often far below what the silicon could do",
+      "{{dead time}} has to be set conservatively because the driver cannot see what the switch is really doing, and every conservative nanosecond is loss",
+      "More solder joints and more parts is more to go wrong, in a place that is hard to service",
+      "Height and area are spent on interconnect that delivers no function"
+     ]
+    },
+    {
+     "t": "Integrated power stages and modules — buy a subsystem",
+     "meta": "Switches, driver and often sensing in one package, characterised as a unit by the vendor",
+     "adv": [
+      "The critical loop is inside the package, so its inductance is small, known and guaranteed — which is what actually unlocks high {{switching frequency}} and therefore small magnetics",
+      "The driver knows the switch, so {{dead time}} can be tuned tightly and adaptively; the recovered nanoseconds are recovered watts",
+      "Low profile and high {{power density}}, which is what makes placement under a package or in a crowded shelf feasible at all",
+      "One qualified part instead of a qualified layout: the vendor has already proven the hard part, which shortens the customer's own {{design cycle}}"
+     ],
+     "dis": [
+      "Vendor lock is real — an integrated module is rarely pin-compatible with anyone else's, so {{dual sourcing}} means qualifying a second design, not a second part",
+      "Higher price per amp, and the customer is paying for engineering they might have done themselves",
+      "Less thermal freedom: the heat comes out of the faces the package gives you, which may force {{top-side cooling}} and a mechanical redesign",
+      "A fault inside the package is unrepairable and often undiagnosable — the failure analysis belongs to the vendor"
+     ]
+    }
+   ],
+   "note": "The direction of travel is not in doubt: as frequencies rise and currents grow, more of the value moves into the package, and the buyer's decision moves from choosing components to choosing a partner. Notice what that does to the sale — an integrated stage is designed in once and shipped for years, so the vendor's revenue in any quarter was decided by design wins two or three years earlier, and today's wins will not appear in revenue for as long again."
+  },
+  {
+   "id": "a-fab-is-a-three-year-bet",
+   "title": "A fab is a three-year bet, and a crystal is the reason",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Power semiconductors are made in a different economy from processors, and understanding the difference explains most of what a power-semiconductor company's announcements actually mean. Processors chase the smallest possible feature size on the largest possible wafer, and their cost is dominated by lithography. Power devices are comparatively coarse — the features are large — and their cost is dominated by **the wafer itself and by how many good die come off it.**",
+    "That is most extreme in {{SiC}}. Silicon boules are pulled from a melt in hours; silicon-carbide crystals are grown from vapour at very high temperature over days, and the resulting material is hard enough to be difficult to slice and prone to crystal defects that kill any die sitting on top of one. So for SiC, wafer cost and defect density are the business. Two levers move them: growing bigger crystals, and growing cleaner ones. This is why the industry's move from 150 mm to 200 mm {{wafer diameter}} is treated as a headline event — a 200 mm wafer carries roughly 1.7 times the area of a 150 mm one for broadly similar handling cost per wafer, so it is one of the few ways to cut cost per device without changing the device at all.",
+    "{{GaN}} sits at the other end of that argument. It is grown as an {{epitaxial layer}} on an ordinary silicon wafer, so it can ride the depreciation of existing large-diameter silicon fabs rather than paying for exotic substrates. That is its structural cost advantage and the reason to expect its price to fall faster than SiC's — set against the voltage ceiling that keeps it out of the highest-voltage sockets.",
+    "Now the timing, which is the part outsiders consistently get wrong. A new fab is announced, permitted, built, equipped and qualified over something like three to five years, and the decision to build it has to be taken before the demand it serves is contracted. Meanwhile the customer side runs on its own clock: a power device is chosen during a system's design phase and ships in volume two or three years later, and once designed in it is expensive to displace. **Both sides of the business therefore run several years ahead of the revenue.** A capacity announcement is a statement about 2029; a design win announced today is 2028 revenue; and a quarter's results are the echo of decisions taken in 2023.",
+    "The practical reading skill: when a power-semiconductor company reports a weak quarter and simultaneously announces capacity, those are not contradictory signals. They are reports from two different clocks. The questions worth asking are which end market the weak quarter came from, whether the capacity is for the same one, and whether the design wins that would fill it have been named."
+   ]
+  },
+  {
+   "id": "where-products-slot-in",
+   "title": "Where Infineon's products slot into the chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "One row per stage from the room to the die, with the device technology the physics selects and the reason it selects it. Read the third column as the answer to \"why that material here\" rather than as a product list.",
+   "cols": [
+    "Stage",
+    "What it does",
+    "Device technology, and why",
+    "What decides the winner"
+   ],
+   "rows": [
+    [
+     "Solid-state transformer at the room",
+     "Takes medium-voltage AC and produces the 800 V DC bus in one semiconductor stage, replacing a transformer plus a rectifier plus an inverter",
+     "{{SiC}} modules. The stage stands off the highest voltage in the chain, so the 1200 V class is the floor, and only a {{wide bandgap}} device is efficient there",
+     "Efficiency and size together — the pitch is a unit roughly forty times lighter and fourteen times smaller than the transformer it replaces, so the argument is floor space as much as watts"
+    ],
+    [
+     "Power supply unit in the shelf",
+     "Converts three-phase AC to the rack's DC bus at 3 kW to 30 kW per unit",
+     "{{superjunction}} silicon or {{GaN}} on the mains side, in an {{LLC converter}} running {{soft switching}}; {{PFC}} at the front",
+     "Watts per cubic inch. The published ladder runs 98 to 113 W/in³ at about 97.5% efficiency, and the density is what the frequency buys"
+    ],
+    [
+     "Hot-swap and protection",
+     "Opens the circuit in microseconds on a fault, and lets a board be removed from a live 800 V bus",
+     "{{SiC}} JFET. It must carry full current with very low {{on-resistance}} and then turn off into a hazardous voltage — a duty a mechanical contact cannot perform on DC",
+     "Whether the rack can be serviced at all. On a DC bus there is no {{zero crossing}}, so this is not an optional refinement"
+    ],
+    [
+     "{{bus converter}}, 800 V to about 50 V",
+     "The isolated, fixed-ratio step between the hazardous bus and the {{SELV}} one",
+     "{{GaN}} near 1 MHz. Frequency shrinks the isolation transformer, which is the largest object in the stage",
+     "Efficiency at full load and volume. A published reference design claims over 98% at full load"
+    ],
+    [
+     "Intermediate conversion to 12 V or 6 V",
+     "The step that used to be the 48-volt tier, increasingly collapsed or deleted",
+     "Silicon or {{GaN}}, non-isolated — isolation was done upstream",
+     "Whether the stage survives at all. Deleting it saves its loss and volume and hands its duty to the survivor"
+    ],
+    [
+     "{{point of load}} at about one volt",
+     "Hundreds to thousands of amps into the processor, from a {{multiphase regulator}}",
+     "Low-voltage silicon in an integrated {{power stage}}; the constraint is package {{parasitic inductance}}, not silicon",
+     "{{current density}} in amps per square millimetre and the {{PDN}} resistance it achieves — the published ladder runs 1.0 A/mm² in 2024 to a stated 3.0 A/mm² in 2027"
+    ],
+    [
+     "The route from converter to die",
+     "Not a conversion — copper, vias, package balls and {{substrate}}",
+     "No device. The lever is geometry: {{vertical power delivery}} beneath the package rather than {{lateral power delivery}} beside it",
+     "Published lumped resistance: 90–140 µΩ lateral against 10–15 µΩ backside and 7–10 µΩ substrate-integrated"
+    ]
+   ],
+   "note": "Notice what the table says about the business. The stages at the top of the chain are won on device physics, where a wide-bandgap material is close to a requirement; the stages at the bottom are won on packaging and density, where the material matters less and the assembly matters more. A supplier strong at one end is not automatically strong at the other, and the same company can be the front runner at the room and one of five at the board."
+  },
+  {
+   "id": "who-buys-and-who-competes",
+   "title": "Who buys, who competes, and why the tier matters",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The buyer of a power semiconductor is almost never the operator of the data centre. It is the company building the box the device goes into — the power-shelf maker, the module maker, the server vendor — and above them the platform owner whose reference design decides which parts the box may contain. That three-level structure is published rather than inferred: NVIDIA's own 800 VDC ecosystem sorts its partners into silicon providers, power system components, and data-centre power systems, and the tiers do not overlap. Silicon sells to components; components sell into systems; systems are bought by operators.",
+    "The consequence is that a semiconductor vendor's real customer relationship is a **design-in** with the platform owner, and its real revenue relationship is with the middle tier. Winning the reference design is what makes the part specifiable; the shelf maker then buys it. Losing the reference design does not lose a sale, it loses a generation — which is why the {{design cycle}} matters more here than a quarterly order book.",
+    "Competition looks different at each level of the chain, and this is the part most readers get wrong. At the **high-voltage end** the field is narrow, because a 1200-volt device that is efficient and manufacturable is genuinely hard; the same handful of names appear on every list. At the **board end** the field is wide and the basis of competition is cost, density and ease of integration rather than device physics — and the outcome that defines it is that when one vendor's technically superior vertical solution met another's cheaper laterally-integrated one in an accelerator socket, the cheaper one won. Being first in power semiconductors overall says very little about which of those two contests you will win.",
+    "Three structural features are worth carrying away. **A large customer can become the competitor.** In China, a vehicle maker that had been buying power modules built its own and took the market's leading share from the incumbent within three years — the clearest illustration that vertical integration by a buyer is the sector's most consequential competitive move. **Rankings are stale and inconsistent, so treat every share figure as attributed rather than true**: the published silicon-carbide tables are two to four years old and disagree about who is second and who is third, and market sizes for nominally the same market differ between research houses by 15% or more. **And a vendor's own chart is evidence about the vendor.** When a company publishes a market-share table showing itself first, that is a real, checkable, named comparison — and it is also a selection of the market boundary that makes it first.",
+    "One last habit worth forming. When a supplier is named in a platform's partner list, read the tier and count the names. A partner list with fourteen names in one tier is an ecosystem, not an endorsement; a bilateral announcement in which each party states what it contributes is something else. Both are worth having. Only one of them is exclusive, and neither of them usually is."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "intro": "The corpus keeps one failure map for the whole chain from grid to chip. Rows 9, 10 and 11 of it — the server supply, the 48-volt bus and the last centimetre, and 800 V DC distribution — all resolve, at the bottom, to a semiconductor doing something it was not specified for. These are those failures written at device level, with the owner named.",
+   "ps": [
+    "**A rating read as an operating point.** A datasheet's continuous current is a statement about {{junction temperature}}, quoted with the case held at 25 °C by a laboratory heatsink that does not exist in the product. Put the same part in a real thermal path and its honest continuous rating can be half the headline. The same trap sits on {{on-resistance}}, quoted cold and typically half again higher hot — so a converter designed on the 25 °C number is designed to lose more heat than it was budgeted for, which raises the temperature, which raises the resistance. Owned by the power-supply designer; it surfaces as a shelf that passes at bench temperature and derates in the hall.",
+    "**Overshoot that eats the derating margin.** A fast device turned off into a loop with more {{parasitic inductance}} than the layout assumed throws a voltage spike on top of the bus. The margin between an 800-volt bus and a 1200-volt part sounds generous until a few tens of nanohenries of stray inductance and a hundred amps of turn-off current put a few hundred volts of spike on top of it, occasionally, at a corner nobody probed. The device goes into {{avalanche}}; it survives most of them and one day does not. Owned by whoever laid out the board, and invisible without a wide-bandwidth probe across the actual device.",
+    "**Dead time set by copying.** {{dead time}} inherited from a slower design leaves both switches off for far longer than the new ones need, so current is forced through a {{body diode}} that then has to recover — every cycle, at full bus voltage. Nothing fails; the converter is simply several points less efficient than its bill of materials should deliver, and the missing watts show up in the thermal budget rather than in any alarm. The opposite error, dead time trimmed too fine, produces {{shoot-through}}, which is not a degradation but a hole in the package.",
+    "**Paralleled devices that do not share.** Four switches in parallel are assumed to take a quarter of the current each. They do not, unless the layout is symmetric and the parts are matched: the one with the lowest resistance takes the most current, and since resistance rises with temperature, it may or may not push current back to its neighbours as it heats — a MOSFET's positive coefficient is stabilising, and it is one of the quiet reasons the industry prefers them for paralleling. Where sharing fails, the hottest device fails first and the remainder inherit its current. Owned by the module designer.",
+    "**A DC bus protected as though it were AC.** A fuse or a mechanical breaker chosen from an AC catalogue and asked to interrupt a fault on an 800 V DC bus has no {{zero crossing}} to help it, so the arc it draws sustains rather than extinguishing. The correct device is an {{SSCB}} that opens in microseconds by turning a transistor off — and it has to be specified for the fault energy, not just the continuous current, because what it is really rated for is how quickly it can stop one. Owned by whoever wrote the electrical specification, and this is failure-map row 11 in its device form.",
+    "**A stage deleted without its fault duty being re-homed.** Every simplification of the chain — 12 volts gone, then 48 volts gone, then the whole AC front end gone — removes a converter that was also, quietly, a current limit and an isolation barrier. Deleting it saves its loss and its volume and hands its protective duty to whatever is left, usually without anyone writing that down. This is the most expensive failure on this list because it is architectural: it is found in commissioning or later, and the fix is a redesign rather than a part change.",
+    "**The reliability failure with no cause you can point at.** A high-voltage device holding off a large bus voltage will occasionally be destroyed by a single cosmic-ray particle. The rate is statistical, it climbs steeply with applied voltage, and it produces field returns that look random because they are. It is designed against only by derating harder — which is why the sensible answer to 'why not run the 1200-volt part at 1000 volts?' is a reliability number, not a bravery one."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "6 min",
+   "cards": [
+    {
+     "q": "Why does a power converter chop the supply on and off instead of dividing it down smoothly?",
+     "a": "Because a fully-on switch has almost no voltage across it and a fully-off switch has almost no current through it, and power is voltage times current. In both steady states the device wastes almost nothing. All the loss lives in the imperfections of those two states and in the transition between them."
+    },
+    {
+     "q": "Why does a higher voltage rating make a transistor a worse conductor?",
+     "a": "The drift region holds off the voltage when the device is off, and a material only withstands a certain electric field, so a higher rating needs a thicker and more lightly doped layer. That same layer is what the current has to cross when the device is on, so on-resistance rises much faster than the voltage rating does."
+    },
+    {
+     "q": "What are the two distinct kinds of loss in a switch, and what does each one depend on?",
+     "a": "Conduction loss, while the device is on, which depends on load current and not on frequency. Switching loss, during each change of state, which depends on frequency and hardly at all on how long the device stays on."
+    },
+    {
+     "q": "If switching wastes energy, why does anyone want to switch faster?",
+     "a": "Because the transformers and inductors shrink almost in proportion to frequency. In a data centre the binding constraint is watts per litre, so trading a little extra switching loss for a much smaller magnetic component is usually worth it — until switching loss overtakes what was saved."
+    },
+    {
+     "q": "What does a wide-bandgap material actually buy you?",
+     "a": "It withstands roughly ten times the electric field of silicon, so the drift region for a given voltage rating is about a tenth as thick. That is a much lower on-resistance at high voltage, and it is what makes a practical 1200-volt MOSFET possible."
+    },
+    {
+     "q": "Why does an IGBT beat a MOSFET at very high current, and lose at high frequency?",
+     "a": "It floods its drift region with charge carriers, giving a nearly fixed one-to-two-volt drop rather than a resistance the current is squaring. But that stored charge has to drain at turn-off — the tail current — which costs energy on every switching event, so its practical frequency is low."
+    },
+    {
+     "q": "GaN is the fastest of the common power devices. Why does the 800-volt architecture lean on SiC instead?",
+     "a": "Because GaN is mostly available in lower voltage classes, commonly to 650 volts, and speed does not help a device that cannot block the bus. Voltage class is a gate you pass before frequency becomes an argument."
+    },
+    {
+     "q": "An 800-volt bus needs a device rated for how much, and why?",
+     "a": "Comfortably above 1000 volts — in practice the 1200-volt class. The bus voltage plus switching overshoot plus regulation tolerance is derated to roughly 70–80% of the device rating, and at high voltage the derating is also a reliability argument against radiation-induced failures."
+    },
+    {
+     "q": "Where in the room-to-chip chain are the largest conversion losses, and why there?",
+     "a": "At the final conversion to about one volt and in the network between it and the die. Loss scales with current, current is highest where voltage is lowest, and a few tens of millivolts dropped is a large fraction of a one-volt output."
+    },
+    {
+     "q": "What is the cheapest way to improve the efficiency of a conversion chain?",
+     "a": "Delete a stage. A stage that is not there wastes nothing and occupies nothing. The price is that the surviving converter has to span a wider ratio and inherits the deleted stage's protective duty."
+    },
+    {
+     "q": "Why is putting a converter underneath the processor a packaging problem before it is a layout one?",
+     "a": "Because underneath there is no cooling path already there, almost no height, no possibility of service, and a hard requirement for very low loop inductance. Those four constraints are all properties of the package, not of the die."
+    },
+    {
+     "q": "What does an integrated power stage buy over discrete switches plus a driver?",
+     "a": "The critical switching loop is inside the package, so its inductance is small and guaranteed; the driver knows the switch, so dead time can be tuned tightly; and it is low and dense. The cost is price, lock-in, and less thermal freedom."
+    },
+    {
+     "q": "Why is moving silicon carbide from 150 mm to 200 mm wafers treated as a major event?",
+     "a": "SiC economics are dominated by the wafer, because the crystal grows slowly and defects kill die. A 200 mm wafer carries about 1.7 times the area for broadly similar handling cost per wafer, so it cuts cost per device without changing the device."
+    },
+    {
+     "q": "A power-semiconductor company reports a weak quarter and announces new capacity the same day. Is that a contradiction?",
+     "a": "No — they are two different clocks. A fab is a three-to-five-year decision and a design win is two-to-three-year revenue, so a quarter's result reflects choices made years ago while the capacity is aimed years ahead. Ask which end market each one refers to."
+    },
+    {
+     "q": "Why can a converter that passed on the bench derate in the hall?",
+     "a": "Because the datasheet current assumed a case temperature a laboratory heatsink provided, and on-resistance rises with temperature. In a real thermal path the device runs hotter, wastes more, and heats further — so its honest continuous rating can be far below the headline."
+    },
+    {
+     "q": "Why can a mechanical breaker from an AC catalogue be the wrong device on an 800-volt DC bus?",
+     "a": "An AC arc is extinguished by the current passing through zero a hundred or a hundred and twenty times a second. Direct current never does, so the arc sustains and spreads. DC protection is built from semiconductors that open in microseconds, and it is rated for fault energy rather than only continuous current."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 min",
+   "items": [
+    {
+     "q": "A designer doubles the switching frequency of a converter and the magnetics halve in size. What has almost certainly gone up?",
+     "c": [
+      "Conduction loss",
+      "Switching loss",
+      "The device's voltage rating",
+      "The output ripple"
+     ],
+     "a": 1,
+     "e": "Switching loss is paid per event and is directly proportional to frequency. Conduction loss depends on load current, not on how often the device changes state."
+    },
+    {
+     "q": "Why is a 1200-volt plain-silicon MOSFET a poor product?",
+     "c": [
+      "It switches too slowly to be useful",
+      "Its drift region must be so thick that on-resistance is uncompetitive",
+      "It cannot be packaged",
+      "Silicon cannot be doped above 900 volts"
+     ],
+     "a": 1,
+     "e": "Holding off a higher voltage needs a thicker, more lightly doped drift region, and on-resistance rises far faster than linearly with the rating. Superjunction structures push the practical limit to roughly 900 V; beyond that wide-bandgap materials win."
+    },
+    {
+     "q": "A design must block an 800-volt bus. Which single fact rules out most GaN parts before efficiency is even discussed?",
+     "c": [
+      "GaN switches too fast for the gate driver",
+      "GaN parts are commonly rated to 650 V",
+      "GaN cannot be soldered to a normal board",
+      "GaN has a slow body diode"
+     ],
+     "a": 1,
+     "e": "Voltage class is a gate you pass before frequency becomes an argument. A device that cannot block the bus is not a candidate, however fast it is — and GaN has no body diode in the silicon sense, so the last option is wrong twice."
+    },
+    {
+     "q": "Five stages each run at 97%. What fraction of the input power reaches the load?",
+     "c": [
+      "About 97%",
+      "About 95%",
+      "About 86%",
+      "About 85% only at full load and more at part load"
+     ],
+     "a": 2,
+     "e": "Efficiencies multiply: 0.97 to the fifth power is about 0.859. Part load is worse, not better, which is why the fourth option is wrong as well as the arithmetic in the first two."
+    },
+    {
+     "q": "Which stage of the room-to-chip chain typically wastes the largest share of the power passing through it?",
+     "c": [
+      "The medium-voltage rectification to the DC bus",
+      "The 800-to-48-volt bus converter",
+      "The final conversion to about one volt",
+      "DC distribution along the busbar"
+     ],
+     "a": 2,
+     "e": "Loss scales with current, and current is highest where voltage is lowest. At a one-volt output even tens of millivolts of drop is a few percent, and the current is in the hundreds or thousands of amps."
+    },
+    {
+     "q": "What does a designer gain by deleting the 48-volt regulation stage entirely?",
+     "c": [
+      "Its loss and its volume, at the cost of a harder job for the surviving converter",
+      "Lower cost with no engineering consequence",
+      "A lower bus voltage",
+      "Better transient response automatically"
+     ],
+     "a": 0,
+     "e": "A stage that is not there wastes nothing and occupies nothing — the cheapest efficiency there is. But it also removes a current limit and a regulation point, and whatever survives has to span a wider ratio and inherit the deleted stage's duties."
+    },
+    {
+     "q": "A converter is moved from beside the processor to underneath the board. Which new problem is the hardest?",
+     "c": [
+      "Longer copper to the die",
+      "It is on the far side of the board from all the cooling",
+      "It can no longer be soldered",
+      "The processor's signals interfere with it"
+     ],
+     "a": 1,
+     "e": "The move shortens the copper — that is its whole point. What it creates is a thermal orphan dissipating tens of watts into a surface nobody planned to cool, alongside a hard height limit and no possibility of service."
+    },
+    {
+     "q": "A gate-drive dead time is copied unchanged from an older, slower design into a fast one. What is the most likely result?",
+     "c": [
+      "Shoot-through destroys the devices",
+      "The converter is measurably less efficient with nothing appearing to be wrong",
+      "The output voltage rises",
+      "The devices avalanche"
+     ],
+     "a": 1,
+     "e": "Too much dead time forces current through the body diode, which then has to recover — every cycle, at full bus voltage. Nothing fails; the missing watts appear in the thermal budget rather than in an alarm. Too little dead time is what causes shoot-through."
+    },
+    {
+     "q": "Four MOSFETs are paralleled to share 400 amps. What actually decides whether they share it?",
+     "c": [
+      "The datasheet current rating",
+      "Layout symmetry and device matching",
+      "The gate driver's output current",
+      "The ambient temperature"
+     ],
+     "a": 1,
+     "e": "The lowest-resistance device in the least resistive path takes the most current. Symmetric layout and matched parts are what make sharing real; a MOSFET's on-resistance rising with temperature then helps to stabilise what is left."
+    },
+    {
+     "q": "A team specifies a mechanical breaker from an AC catalogue for an 800-volt DC bus. What is the specific physical problem?",
+     "c": [
+      "Direct current has no zero crossing to help extinguish the arc",
+      "DC current is higher for the same power",
+      "The breaker's contacts corrode faster on DC",
+      "DC cannot be measured by a current transformer"
+     ],
+     "a": 0,
+     "e": "An AC arc is quenched by the current passing through zero every half cycle. On DC it never does, so the arc sustains and spreads. That is why 800-volt protection is built from semiconductors that open in microseconds and are rated for fault energy."
+    },
+    {
+     "q": "Why is a 200 mm silicon-carbide wafer transition treated as a headline event rather than a process detail?",
+     "c": [
+      "It allows smaller transistor features",
+      "It cuts cost per device without changing the device, because SiC economics are dominated by the wafer",
+      "It removes the need for epitaxy",
+      "It raises the achievable voltage rating"
+     ],
+     "a": 1,
+     "e": "SiC crystals grow slowly and defects kill die, so wafer cost and defect density are the business. A larger wafer carries proportionally more area for broadly similar handling cost per wafer."
+    },
+    {
+     "q": "A power-semiconductor firm posts a weak quarter and announces a new fab on the same day. What is the right reading?",
+     "c": [
+      "The announcement is a distraction from the result",
+      "The two refer to different time horizons and may both be true",
+      "The fab must be for the segment that was weak",
+      "The weak quarter proves the capacity is unneeded"
+     ],
+     "a": 1,
+     "e": "A fab is a three-to-five-year decision and a design win is two-to-three-year revenue, so a quarter reflects choices made years ago. The useful questions are which end market each refers to, and whether the design wins that would fill the capacity have been named."
+    }
+   ]
+  }
+ ]
+}

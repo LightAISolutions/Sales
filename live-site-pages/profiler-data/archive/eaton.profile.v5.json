@@ -224,15 +224,6 @@
    "note": "Powell Industries' Form 10-K names Eaton among its principal competitors, and Powell simultaneously designs its FlexGear and FlexTrol platforms to accept Eaton Magnum DS draw-out breakers and Eaton draw-out contactors.",
    "context": "The dual relationship is the commercially interesting part. Powell's universal-platform strategy means it buys the interrupting element from a company it names as a competitor in its own filing, and sells the assembly, the engineering and the arc-resistant structure around it.\n\nThere is also a board-level link: Powell director James W. McGill spent forty years at Eaton, retiring as President of its Electrical Sector for the Americas. Mordor Intelligence places Eaton inside the top five holding roughly 55-60% of North American medium-voltage switchgear, with Powell in the specialist tier competing on a ten-week lead time from Texas.",
    "source": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
-  },
-  {
-   "slug": "flex",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-centre switchgear and liquid cooling",
-   "note": "A data-centre switchgear survey names Eaton and Flex's Anord Mardix business among the key players in the same market, and Eaton's $9.5bn purchase of Boyd Thermal placed it directly against Flex's JetCool in liquid cooling.",
-   "context": "Competition on two fronts, and both are quantified. In switchgear, third-party vendor surveys name Eaton in the leader group and Anord Mardix among key players or as an other player depending on the report. In liquid cooling, Eaton completed a $9.5bn acquisition of Boyd Thermal in March 2026 — a business forecast at about $1.7bn of calendar-2026 sales of which about $1.5bn is liquid cooling — against the $53m Flex paid for JetCool in November 2024.\n\nEaton also sits one tier above Flex in NVIDIA's published 800 VDC ecosystem, in data-centre power systems rather than power system components.\n\nTwo threads run the other way and are recorded rather than suppressed. JetCool and Eaton announced a collaboration on liquid cooling for high-power data-centre applications in December 2022, two years before Flex acquired JetCool, and no source confirms it continues. And several of Flex's data-centre power leaders are former Eaton executives, including the chief executive named to lead the business Flex is spinning out.",
-   "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market"
   }
  ],
  "technicalSpecs": [
@@ -452,11 +443,6 @@
  },
  "sources": [
   {
-   "label": "Future Market Insights — switchgear for data centers market 2026-2036",
-   "url": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market",
-   "date": "2026-01"
-  },
-  {
    "label": "Eaton Q2 2026 results release",
    "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-second-quarter-2026-results.html",
    "date": "2026-07-31"
@@ -530,6 +516,6 @@
    "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 5
 }

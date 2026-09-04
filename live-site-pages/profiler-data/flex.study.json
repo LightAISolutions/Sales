@@ -1,0 +1,464 @@
+{
+ "schemaVersion": 2,
+ "slug": "flex",
+ "title": "Flex — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "sections": [
+  {
+   "id": "what-this-guide-does-not-repeat",
+   "title": "Start here: the last hundred metres, and the contract",
+   "kind": "callout",
+   "tone": "info",
+   "read": "2 min",
+   "ps": [
+    "Two subjects in this app are close to this one and are not repeated here. **Powell's guide** teaches the medium-voltage room — what a switchgear lineup is, arc-resistant construction, how a protection study is built, and buying a power room as a factory-tested product. **Rehlko's guide** teaches single-line-diagram literacy, the static UPS, and paralleling switchgear. Between them the corpus already covers everything from the utility service down to the output of the UPS. **Delta's guide** covers the design-and-build supply chain in the abstract — who really builds branded hardware — and **LITEON's** covers the manufacturing line and the design-win. **Vicor's** and **Megmeet's** cover the rack power chain and the 800-volt transition.",
+    "What is missing from all of them is the stretch in between and the paperwork around it. **This guide teaches two things.** The first is the **last hundred metres of electrical distribution** — everything between the low-voltage switchboard and the plug on the back of a rack, which is where the largest number of physical connections in the building are and where a surprising share of its outages originate. The second is **the contract-manufacturing model read as a procurement decision** — what a buyer gains and gives up when one firm designs the hardware, builds it, and services it.",
+    "Those two subjects are joined, and the join is the reason they sit in one guide. A firm that both manufactures for others and sells its own power and cooling equipment is asking a buyer to accept both arrangements at once: to buy a product, and to buy a factory. Working out what that is worth requires understanding the equipment and the contract, which is what follows."
+   ]
+  },
+  {
+   "id": "the-last-hundred-metres",
+   "title": "The last hundred metres: from the switchboard to the plug",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Pick up the chain where the other guides put it down. A transformer has stepped the campus's {{medium voltage}} down to a {{low voltage}} of a few hundred volts. A {{static UPS}} or its equivalent has conditioned it. What now stands between that and a server is a distribution system, and it is worth naming its parts because a data-hall electrical drawing is mostly these four things repeated.",
+    "**The switchboard** is the first assembly downstream, holding a main breaker and a row of feeder breakers. Everything below it is fed from one of those feeders, and its {{withstand rating}} — the fault current it is braced to survive — sets what everything downstream is allowed to be. **The {{PDU}}** takes a feeder and breaks it into branch circuits, historically with a transformer inside it, and meters them. **The {{remote power panel}}** does the PDU's distribution job without the transformer, out on the floor, close to the racks it serves — the point being that a branch circuit run three metres is cheaper and less lossy than one run forty. And **the whip** is the flexible final connection from a breaker to a rack's inlet: the least glamorous item in the building and, by count, the most numerous.",
+    "Two properties of this stretch explain why it gets its own guide. **It is where the connections are.** A hall with three thousand racks and two feeds each has six thousand terminations in its final tier alone, every one of them made by hand, every one of them a potential high-resistance joint that heats under load. No amount of upstream redundancy protects a rack from a bad crimp on its own whip. **And it is where redundancy is most often imaginary.** Two power feeds to a rack are only redundant if they stay separate all the way back to two different sources. Drawings routinely show an A feed and a B feed that meet, four tiers up, at one switchboard — which is a single point of failure wearing a redundant costume. The reading skill is to trace both feeds upward until they either reach different transformers or meet; where they meet is the real redundancy boundary.",
+    "There is also a capacity question that the last hundred metres decides. A conductor's {{ampacity}} is not a fixed number: it falls when cables are bundled together, when the room is hot, and when the load is continuous rather than intermittent — which in a data hall it always is. The common convention is to load a continuously-loaded circuit to no more than 80% of its rating. A hall specified without that derating in mind runs out of usable amps well before it runs out of nameplate."
+   ]
+  },
+  {
+   "id": "busway-or-conduit",
+   "title": "Busway or conduit: the choice that decides how a hall changes",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "Between the last distribution board and the racks, a hall is wired one of two ways. The decision is usually made before the first tenant is known, and it sets how expensive it is to change the hall later — which in a building whose rack density doubles every few years is the decision that ages worst or best.",
+   "cards": [
+    {
+     "t": "Overhead {{busway}} with {{tap-off box}}es",
+     "meta": "A rigid enclosed conductor run above the rows; each rack's circuit clips on wherever it is needed",
+     "adv": [
+      "Reconfigurable: a new rack takes a new tap-off box on an existing bar rather than a new cable pulled from a panel",
+      "High capacity in a small envelope — a bar rated in the thousands of amps occupies far less space than the equivalent conduit bank, and leaves the ceiling clear for cooling",
+      "Fewer terminations per kilowatt delivered, and every termination avoided is a joint that cannot heat",
+      "Metering and monitoring can live in the tap-off box, so per-circuit data comes from the connection rather than from an added device"
+     ],
+     "dis": [
+      "The whole run is a common asset: a fault or a maintenance operation on the bar affects everything fed from it",
+      "Higher cost per metre and a longer lead time, and the run has to be engineered before the loads on it are known",
+      "A tap-off box added later is a load added without a coordination re-check — the failure that shows up years after commissioning",
+      "Ratings are fixed once installed; a hall that outgrows its bar has to add another"
+     ]
+    },
+    {
+     "t": "{{remote power panel}}s and whips",
+     "meta": "Distribution cabinets on the floor feeding flexible cables to each rack",
+     "adv": [
+      "Cheap, familiar, and buildable by any electrical contractor without specialist product knowledge",
+      "Circuits are genuinely independent — work on one whip and nothing else is affected",
+      "Capacity is added by adding panels, so the design does not have to anticipate the final load",
+      "Lead times are short: panels and cable are commodities in a way that a busway run is not"
+     ],
+     "dis": [
+      "The number of hand-made terminations scales with the number of racks, and terminations are where the heat is",
+      "Cables in bundles derate: the same conductor carries less current in a full tray than it does alone, so the {{ampacity}} on the drawing is optimistic unless the derating was applied",
+      "Reconfiguration means pulling cable, which means work in an occupied hall",
+      "The cable mass itself consumes space and blocks air"
+     ]
+    }
+   ],
+   "note": "Neither is wrong; the question is what the building is for. A hall built for one known tenant at a fixed density is well served by panels and whips. A hall that will be re-tenanted at rising density is the case busway was invented for, and it is why the AI build-out has pushed the mix toward it. Notice that the argument is about **change**, not about efficiency — the losses in the two are comparable, and the difference is what it costs to move a rack."
+  },
+  {
+   "id": "buying-the-power-train-from-one-firm",
+   "title": "Buying the whole power train from one firm",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A buyer assembling a data hall can source the medium-voltage switchgear from one vendor, the transformer from another, the low-voltage boards from a third, the {{busway}} from a fourth, the rack power from a fifth and the cooling from a sixth — or can ask one firm to supply the lot. The second option is now genuinely available, because several suppliers have spent the last five years acquiring their way across the chain. It is worth understanding what it buys and what it costs, because the pitch is usually made in terms of speed and the price is usually paid somewhere else.",
+    "**What integration actually buys is the elimination of interfaces.** Every seam between two vendors is a place where a specification can be read two ways, where a delivery date can slip independently, and where a fault can be blamed in both directions. Collapse the seams and you collapse the arguments. That matters most on schedule: the pitch for a factory-built {{power skid}} or power pod is that the wiring, the testing and the inspection happen in a shop where they are repeatable, rather than on a construction site where they are not — and the claim that this cuts a deployment from more than a year to six to twelve months is a claim about moving work indoors, not about better engineering.",
+    "**The second thing it buys is a single test.** A lineup, its distribution and its monitoring can be assembled and proven together before it ships, which is the only way to find an integration fault while it is still cheap. A buyer sourcing six vendors discovers integration faults during commissioning, which is the most expensive place to discover anything.",
+    "**What it costs is optionality, and the loss is asymmetric.** A single-source buyer cannot benchmark the price of any individual item, because the quote is for a system; cannot swap a laggard without unpicking the design; and inherits the supplier's lead times as a single point of failure rather than as six independent ones. If the supplier's switchgear plant is full, the whole order waits — where a six-vendor buyer would have five items arriving on time.",
+    "**And it concentrates counterparty risk in a way that shows up years later.** The service relationship, the spares, the firmware for the monitoring, and the person who knows how the thing was commissioned all sit with one company. That is fine while the company is stable. It is a real exposure when the company is acquired, reorganised, or — as has happened repeatedly in this sector — separates the business you bought from into a different corporate entity with a different balance sheet and a different owner.",
+    "**The practical middle path** most sophisticated buyers actually take: integrate where the interfaces are genuinely painful and the product is genuinely a system — the factory-built power room, the rack and its power together — and keep competitive tension where the item is a commodity with a published rating, which is most cable, most panels and most transformers. Then write the contract so that the integrated scope has a defined boundary, an agreed test, and a named party responsible for anything that crosses it."
+   ]
+  },
+  {
+   "id": "the-contract-that-is-actually-being-signed",
+   "title": "The contract that is actually being signed",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Four ways to have hardware built, and what each one does to who owns the design, who controls the cost, and how hard it is to leave. The rows are a spectrum, not a menu — most real relationships sit between two of them, and the useful skill is knowing which row a given quote actually belongs to.",
+   "cols": [
+    "Arrangement",
+    "Who owns the design",
+    "How cost is visible",
+    "How hard it is to move",
+    "When it is the right answer"
+   ],
+   "rows": [
+    [
+     "{{contract manufacturer}}, {{consignment}}",
+     "The buyer. The buyer supplies drawings and often the parts",
+     "Fully visible — the buyer buys the components and pays only for labour and overhead",
+     "Easiest. The {{BOM}}, the drawings and usually the {{tooling}} are the buyer's, so a second factory can be qualified",
+     "High-value, low-volume, or where component pricing is the buyer's own negotiated advantage"
+    ],
+    [
+     "{{contract manufacturer}}, {{turnkey}}",
+     "The buyer",
+     "Opaque at the component line — the manufacturer buys the parts and quotes a finished price, keeping the purchasing margin",
+     "Moderate. Design ownership makes a move possible; rebuilding the supply relationships makes it slow",
+     "Volume production where the manufacturer's purchasing scale genuinely beats the buyer's, which is most consumer and most infrastructure hardware"
+    ],
+    [
+     "{{JDM}} — joint design",
+     "Contested, and this is the row where disputes live. Some of the design is the buyer's, some is the manufacturer's",
+     "Partly visible, and argued",
+     "Hard. Untangling shared design ownership is a legal exercise before it is an engineering one",
+     "When the buyer has the requirement and the manufacturer has the domain expertise — and only with the ownership boundary written down first"
+    ],
+    [
+     "{{ODM}}",
+     "The manufacturer. The buyer specifies and brands",
+     "Least visible — the buyer sees one price for a product it did not design",
+     "Hardest at the design level, easiest at the catalogue level: you cannot take the design elsewhere, but you can often buy a similar one from a competing ODM",
+     "When the product is not the buyer's differentiator and time to market beats control"
+    ]
+   ],
+   "note": "Three questions settle which row you are in, and they are worth asking of any manufacturing quote. **Who is named as the owner of the tooling in the contract?** That single clause usually decides how fast production can be moved. **Who holds the {{design authority}} — who has to approve a component substitution?** If the answer is the manufacturer, the buyer will discover changes rather than authorise them. **And can the buyer see the {{BOM}} at line-item cost?** If not, no {{should-cost}} analysis is possible and every future negotiation is a negotiation about one number."
+  },
+  {
+   "id": "reading-a-third-party-shelf-against-vicor-and-megmeet",
+   "title": "Reading a third-party power shelf against the vendors this app already covers",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "This app already carries two guides that teach the rack power chain from the inside — one on the converter silicon and the topology, one on the 800-volt transition and the boxes it creates. What neither teaches is how to tell three shelf vendors apart when all three are building to the same platform reference. That is the practical question, because a modern power shelf is not a design competition: the platform owner publishes a reference architecture, several manufacturers build to it, and the buyer chooses between things that are deliberately similar.",
+    "**Start by locating the vendor on the chain, because the tiers are published and they are not symmetric.** A silicon vendor sells the switches; a shelf vendor buys those switches and sells an assembly; a facility-power vendor buys or builds shelves and sells a room. A vendor in the middle tier is a customer of the first and a supplier to the third, and it competes only with the other members of its own tier. Getting this wrong is the most common error in the sector: a company named in a platform's ecosystem is not thereby a competitor of everyone else named in it.",
+    "**Then compare the four numbers that are actually comparable.** Efficiency, and at what load — a redundant shelf spends its life near half load, so a figure quoted at peak half-load is more honest than one quoted at full load, and a vendor quoting only the full-load number is telling you something. {{hold-up time}}, in milliseconds at full load, because that is what carries the rack across a transfer and it is the number the whole backup architecture is sized around. Power per rack unit, which is the density the buyer is really paying for. And input flexibility — whether the shelf takes a range of three-phase voltages, and whether it accepts a single or a dual feed, because that decides whether one part number works across a global estate.",
+    "**Then ask the questions the datasheet does not answer, which is where the vendors genuinely differ.** Who made the silicon inside, and is it single-sourced? Can the shelf be serviced live, and what happens electrically when a unit is drawn out of a shared bus? Is the controller's management interface an open standard or a private one — because a shelf that cannot be read by the building's existing monitoring is a shelf that needs its own. And where is it built, which in a tariff regime is a commercial question rather than a logistical one.",
+    "**Finally, ask what else the vendor sells you, because that is the real differentiator among assemblers.** A pure shelf maker competes on the four numbers. A vendor that also owns the switchgear upstream and the cooling downstream is not competing on the shelf at all — it is competing on the proposition that one firm can quote, build, test and service the whole run from the medium-voltage room to the cold plate. Whether that is worth a premium is the procurement question the previous section works through, and it is decided by how much the buyer values eliminating interfaces against how much it values being able to benchmark each item.",
+    "The honest summary for a reader comparing vendors: **at the shelf level the products converge, because the platform owner specified them.** The differences that survive are the silicon inside, the serviceability, the manufacturing location, and how much of the rest of the chain comes with it."
+   ]
+  },
+  {
+   "id": "where-products-slot-in",
+   "title": "Where the products slot in, and which are owned",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The distinction this guide keeps throughout, laid out as a table: what a firm like this OWNS and sells under its own name, against what it BUILDS to a customer's design. The two are priced differently, are worth different multiples, and carry completely different risk — and in a company that does both, a single revenue figure tells you almost nothing without knowing the mix.",
+   "cols": [
+    "Stage of the chain",
+    "The product",
+    "Owned or built for others",
+    "What the buyer is really paying for"
+   ],
+   "rows": [
+    [
+     "Utility service and substation",
+     "Substation control, protection and monitoring systems",
+     "Owned brand",
+     "Utility-grade equipment and the engineering to interface with the utility — a specialised business bought rather than built"
+    ],
+    [
+     "The {{medium voltage}} room",
+     "MV switchgear from 11 kV to 36 kV, packaged substations, relay panels, turn-key control enclosures",
+     "Owned brand",
+     "A room that arrives tested. The specification difference is the internal separation — Form 4b Type 7 means a circuit can be worked on while the lineup stays live"
+    ],
+    [
+     "The {{low voltage}} board",
+     "Switchboards to UL 891 and IEC 61439-2, main busbars to 8000 A, withstand ratings to 100 kA for one second",
+     "Owned brand",
+     "The {{withstand rating}}, which is a structural property. Raising it is a redesign, not a paperwork change"
+    ],
+    [
+     "Distribution to the rows",
+     "{{busway}} rated 800 A to 6300 A with {{tap-off box}}es to 630 A, plus {{PDU}}s and {{remote power panel}}s",
+     "Owned brand",
+     "Reconfigurability — the ability to move a rack without pulling cable"
+    ],
+    [
+     "The factory-built room",
+     "{{power skid}}s and power pods with transformers to 36 kV, factory-tested before shipment",
+     "Owned brand",
+     "Schedule. Work moved off a construction site into a shop, with a {{first article inspection}}-style test before it ships"
+    ],
+    [
+     "Rack and row power",
+     "Power shelves at 33 kW and 110 kW, an 800 VDC power rack, a megawatt-class DC distribution unit, battery and capacitor backup units",
+     "Owned brand, built to a platform owner's reference architecture",
+     "Compliance with the platform reference, plus density and {{hold-up time}}. The design freedom here is small by intent"
+    ],
+    [
+     "Board-level power",
+     "Isolated and non-isolated DC-DC modules, {{bus converter}}s, point-of-load regulators, {{vertical power delivery}} modules",
+     "Owned brand",
+     "A qualified module rather than a qualified layout — the customer buys someone else's proven design-in"
+    ],
+    [
+     "The thermal path",
+     "Cold plates, self-contained closed-loop server systems, in-rack and modular {{CDU}}s from 160 kW to 1.8 MW",
+     "Owned brand",
+     "Cooling that reaches the die. The number that governs the specification is the approach temperature — how much warmer the rack loop runs than the facility water feeding it"
+    ],
+    [
+     "The compute itself",
+     "Accelerator platforms, wafer-scale systems, integrated racks",
+     "BUILT FOR OTHERS — the customer owns the design and the brand",
+     "Manufacturing capacity, test capability and location. This is capacity sold by the hour, not a product sold by the unit"
+    ]
+   ],
+   "note": "Read the last row against all the others. A firm that both owns power products and manufactures other companies' compute can put a whole rack on a loading dock — but only one of those two activities is a product business with a defensible margin, and the other is a capacity business. When such a company reports a single segment covering both, the reported margin is a blend, and no public figure separates them. That is not an accounting quirk; it is the central thing a reader has to hold in mind."
+  },
+  {
+   "id": "who-buys-and-who-competes",
+   "title": "Who buys, who competes, and why the tiers do not line up",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The buyers of this equipment fall into three groups that behave completely differently. **Hyperscalers** design their own halls, publish their hardware standards, and buy to a specification they wrote — so the vendor's job is to comply and to be manufacturable at volume, not to differentiate. **Colocation and wholesale operators** build shells for tenants they may not have signed, so they value reconfigurability and lead time above almost everything, which is what makes {{busway}} and factory-built rooms an easy sell to them. **Enterprises** buy one hall at a time through a contractor, and price competition is sharpest there because the specification is usually someone else's catalogue.",
+    "The competitive map is easiest to read as three tiers that a platform owner's own published ecosystem makes explicit. **Silicon** vendors supply the switches. **Power system components** vendors build the shelves, converters and racks. **Data-centre power systems** vendors supply the facility-scale equipment. A company competes with the other members of its own tier, buys from the tier below, and sells into the tier above. Being named in the same ecosystem as another company is not evidence of competition between them — it is evidence of a relationship each has with the platform owner.",
+    "The genuinely useful observation is that **the tiers do not line up with corporate boundaries.** The large electrical OEMs sit in the top tier and are moving down into rack power. The contract manufacturers sit in the middle tier and are buying their way up into switchgear and cooling. The silicon vendors sit at the bottom and are buying their way up into modules. Everyone is climbing toward the middle, which is where the AI build-out put the money — and that is the honest explanation for a wave of acquisitions that otherwise looks like a series of unrelated deals.",
+    "**Watch three signals rather than the announcements.** First, whether a vendor is named by the platform owner or only by itself — a partner list published by the platform is a different quality of evidence from a press release, and a vendor that appears in one year's list and not the next has told you something without saying it. Second, what it paid: acquisition prices in this sector have ranged from tens of millions to nearly ten billion for adjacent capabilities, and a purchase price is a fair proxy for whether the buyer bought a market position or a technology. Third, whether a company keeps a business or separates it — a firm that assembles a portfolio and then spins it out is telling you the two halves have different growth rates, different multiples and different natural owners, and that is usually a truer statement about the businesses than anything in the pitch.",
+    "One caution to carry into any market-share discussion here. **Almost none of this is measured.** Research houses publish leader groups and other-player categories rather than per-vendor percentages for busway, switchgear and liquid cooling, and the numbers that do circulate frequently disagree or turn out not to exist on the page they are attributed to. Treat every share figure as attributed to whoever published it, and treat a vendor's absence from a league table as weak evidence rather than as proof of anything."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "intro": "The corpus keeps one failure map from grid to chip. Three of its rows land in this guide's territory — distribution and busway, the rack whip and the PDU, and commissioning — and to those this guide adds the failures that belong to the contract rather than to the copper, because a procurement decision fails in ways an electrical drawing cannot show.",
+   "ps": [
+    "**A tap-off box added without a coordination re-check.** {{busway}} is reconfigurable, which is its whole value and also its trap: a new rack's circuit clips onto a live bar in an afternoon, and the protection study that decided the upstream settings was drawn against a hall that no longer exists. Nothing fails on the day. It fails the first time a fault downstream of the new tap opens a breaker further upstream than it should, taking rows that had nothing to do with it. Owned by whoever authorised the addition, which is often nobody in particular.",
+    "**Termination quality at scale.** A hall with thousands of racks on two feeds each has thousands of hand-made connections in its final tier. A crimp that is slightly loose is a resistance, a resistance under continuous load is heat, and heat loosens the joint further. No amount of upstream redundancy protects a rack from a bad joint on its own whip, and the defect is invisible to every test that does not involve either a torque wrench or a thermal camera under load. Owned by the electrical contractor and found, if at all, by the commissioning agent.",
+    "**A and B feeds that meet upstream.** Two power paths to a rack are redundant only if they stay separate all the way back to two sources. Drawings routinely show an A and a B feed that converge four tiers up at a single board — a single point of failure wearing a redundant costume. The reading skill is to trace both feeds upward until they either reach different transformers or meet; where they meet is the real boundary, and it is frequently not where the tenant was told it was.",
+    "**{{ampacity}} taken from the table rather than from the installation.** A conductor's rating falls when cables are bundled, when the room runs hot, and when the load is continuous — which in a data hall it always is, so the convention is to load a continuously-loaded circuit to no more than 80% of its rating. A hall designed without those derations runs out of usable amps well before it runs out of nameplate, and the discovery arrives as an unexplained inability to fill the last rows.",
+    "**Commissioning that proved the parts and not the system.** Equipment tested individually and signed off, with the integrated test skipped for schedule or run on temporary power, means the seams between vendors were never loaded. \"Rated for\" gets read as \"operating at\". The whole argument for buying a factory-tested room is that this test happens in a shop where it is repeatable — which only helps if the buyer insists the test actually happened and reads what it covered.",
+    "**Tooling the buyer does not own.** The clause nobody reads until they need it. If the moulds, jigs and test fixtures for a product are named as the manufacturer's property, moving production means paying to have them made again and re-qualifying everything that comes off them — months, not weeks. A buyer who assumed the {{tooling}} was theirs because they paid for it finds out at exactly the moment they have least leverage. Owned by whoever negotiated the contract, and unfixable afterwards.",
+    "**A component substituted under someone else's {{design authority}}.** A part goes end-of-life, the manufacturer cross-references an equivalent, and the equivalent is equivalent on the parameters the datasheet compares and not on the one that mattered. In power hardware that parameter is usually thermal or a transient rating, and the failure appears in the field months later across a whole build lot. The defence is not vigilance; it is a contract clause that says which party approves a change and a {{BOM}} the buyer can actually see.",
+    "**A supplier that becomes a different company.** The service relationship, the spares, the monitoring firmware and the engineer who commissioned the room all sit with one vendor — which is the point of buying integrated, and the exposure. When that vendor is acquired, restructured, or separates the business you bought from into a new corporate entity, the counterparty on your service agreement changes without your having done anything. This is not hypothetical in this sector, and it is the strongest argument for writing a defined scope boundary and a named responsible party into an integrated contract at the outset."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "5 min",
+   "cards": [
+    {
+     "q": "What sits between the low-voltage switchboard and a rack's power inlet?",
+     "a": "A power distribution unit or a remote power panel breaking a feeder into branch circuits, then a whip — the flexible final connection from a breaker to the rack. In a busway hall the panel is replaced by a tap-off box clipped onto an overhead bar."
+    },
+    {
+     "q": "Why is the last hundred metres where a disproportionate share of outages starts?",
+     "a": "Because that is where the connections are. A hall with thousands of racks on two feeds each has thousands of hand-made terminations, every one a potential high-resistance joint that heats under load — and no upstream redundancy protects a rack from a bad joint on its own whip."
+    },
+    {
+     "q": "How do you tell whether two feeds to a rack are genuinely redundant?",
+     "a": "Trace both upward until they either reach different sources or meet. Wherever they meet is the real redundancy boundary. Two feeds that converge on one switchboard four tiers up are a single point of failure that looks like redundancy on the drawing."
+    },
+    {
+     "q": "Why is a cable's ampacity not a fixed number?",
+     "a": "It falls when conductors are bundled, when the ambient is hot, and when the load is continuous rather than intermittent. Data-hall loads are continuous, so the convention is to load a circuit to no more than 80% of its rating."
+    },
+    {
+     "q": "What does busway buy that panels and whips do not?",
+     "a": "Reconfigurability and density. A new rack takes a tap-off box on an existing bar rather than a cable pulled from a panel, and a bar rated in the thousands of amps takes far less space than the equivalent conduit. The cost is a shared asset and a higher price per metre."
+    },
+    {
+     "q": "What is the specific risk created by busway's greatest advantage?",
+     "a": "That a load can be added in an afternoon without anyone re-running the protection study. The coordination that set the upstream breaker settings was drawn against a hall that no longer exists."
+    },
+    {
+     "q": "What does a contract manufacturer sell, as distinct from an ODM?",
+     "a": "A contract manufacturer builds to the customer's design and specification — the customer owns the drawings and usually the tooling, and buys labour, purchasing power and factory capacity. An ODM designs the product as well as building it and keeps the design."
+    },
+    {
+     "q": "What is the difference between a turnkey and a consignment manufacturing arrangement?",
+     "a": "Under turnkey the manufacturer buys the materials and quotes a finished price, taking the purchasing margin and the inventory risk. Under consignment the customer supplies parts and pays only for the work, keeping component pricing visible and the inventory on its own books."
+    },
+    {
+     "q": "Which single contract clause most often decides how quickly production can be moved?",
+     "a": "The one naming the owner of the tooling. If the moulds, jigs and test fixtures belong to the manufacturer, moving means having them made again and re-qualifying everything that comes off them."
+    },
+    {
+     "q": "What is design authority and why does it matter?",
+     "a": "It is the contractual right to approve a change — a component substitution, a layout revision, a supplier swap. If the manufacturer holds it, the buyer discovers changes rather than authorising them, and a substituted part that is equivalent on the compared parameters but not on the one that mattered fails in the field months later."
+    },
+    {
+     "q": "What does a buyer gain by taking the whole power train from one firm?",
+     "a": "The elimination of interfaces: fewer specification ambiguities, fewer independent delivery dates, no blame in two directions, and a single integrated test done in a factory rather than on a construction site."
+    },
+    {
+     "q": "What does that buyer give up?",
+     "a": "The ability to benchmark any individual item, the ability to swap a laggard without unpicking the design, independent lead times, and diversification of counterparty risk — the service relationship, spares and firmware all sit with one company."
+    },
+    {
+     "q": "Two shelf vendors quote efficiency figures. Why is the load point more informative than the number?",
+     "a": "A redundant shelf splits the load between two halves, so it spends its working life near half load. A figure quoted at peak half-load describes how the shelf will actually run; a figure quoted only at full load describes a condition it rarely sees."
+    },
+    {
+     "q": "What is hold-up time and why is it the number a backup architecture is sized around?",
+     "a": "It is how long a supply keeps its output within specification after its input disappears — typically tens of milliseconds. It is the window that has to be covered before another source takes over, so it sets what the battery or capacitor backup has to do and how fast."
+    },
+    {
+     "q": "Why do vendors building to the same platform reference architecture converge?",
+     "a": "Because the platform owner specified the form factor, the voltages and the interfaces. The design freedom is small by intent, so the surviving differences are the silicon inside, serviceability, manufacturing location, and how much of the rest of the chain the vendor also sells."
+    },
+    {
+     "q": "A company appears in a platform owner's published partner ecosystem alongside twenty others. What does that establish?",
+     "a": "That each named company has a relationship with the platform owner. It does not establish a relationship — or a competition — between any two of the named partners, particularly when they sit in different tiers of the same list."
+    },
+    {
+     "q": "Why should a share figure for busway, switchgear or liquid cooling be treated as attributed rather than true?",
+     "a": "Because research houses in these categories publish leader groups and other-player categories rather than per-vendor percentages, the numbers that circulate often disagree, and some cannot be found on the page they are attributed to."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 min",
+   "items": [
+    {
+     "q": "A hall is being designed for a tenant who has not yet been signed, at a density expected to rise. Which distribution approach does that argue for?",
+     "c": [
+      "Remote power panels and whips, because they are cheaper",
+      "Busway, because reconfiguring means adding a tap-off box rather than pulling cable",
+      "Either — the choice is purely a cost decision",
+      "Neither; the decision waits until the tenant is known"
+     ],
+     "a": 1,
+     "e": "The busway argument is about change, not efficiency. Losses in the two are comparable; what differs is what it costs to move a rack once the hall is occupied."
+    },
+    {
+     "q": "A drawing shows an A feed and a B feed to every rack. What must you check before calling it redundant?",
+     "c": [
+      "That both feeds are the same rating",
+      "That both feeds use the same cable type",
+      "Where the two feeds meet as you trace them upstream",
+      "That the racks have dual power supplies"
+     ],
+     "a": 2,
+     "e": "Redundancy ends wherever the two paths converge. Two feeds that meet at one switchboard four tiers up are a single point of failure that looks redundant on the drawing."
+    },
+    {
+     "q": "A hall is specified with circuits loaded to their full table ampacity. What goes wrong?",
+     "c": [
+      "Nothing — the table rating is the rating",
+      "The conductors carry less than the table says once bundled, hot and continuously loaded, so the hall runs out of usable amps early",
+      "The breakers will not close",
+      "Power factor falls"
+     ],
+     "a": 1,
+     "e": "Ampacity falls with bundling, ambient temperature and continuous duty. The 80% convention for continuously-loaded circuits exists precisely to prevent this, and the failure shows up as an unexplained inability to fill the last rows."
+    },
+    {
+     "q": "A rack is added to an existing busway run in an afternoon. What is the specific risk?",
+     "c": [
+      "The bar will overheat immediately",
+      "A load has been added without the protection coordination being re-checked",
+      "The tap-off box will not fit",
+      "The rack will draw from the wrong phase"
+     ],
+     "a": 1,
+     "e": "The coordination study that set the upstream breaker settings was drawn against a hall that no longer exists. Nothing fails on the day; it fails the first time a downstream fault opens a breaker further upstream than it should."
+    },
+    {
+     "q": "Under a consignment manufacturing arrangement, who buys the components?",
+     "c": [
+      "The manufacturer, keeping the purchasing margin",
+      "The customer, so component pricing stays visible and the inventory stays on the customer's books",
+      "A third-party distributor",
+      "It varies contract by contract with no convention"
+     ],
+     "a": 1,
+     "e": "That is the definition, and it is the opposite of turnkey, where the manufacturer buys the materials and quotes a finished price."
+    },
+    {
+     "q": "A buyer wants the option to move production to a second factory quickly. Which contract term matters most?",
+     "c": [
+      "The payment terms",
+      "The named owner of the tooling",
+      "The volume commitment",
+      "The warranty period"
+     ],
+     "a": 1,
+     "e": "If the moulds, jigs and test fixtures are named as the manufacturer's property, moving means having them made again and re-qualifying everything that comes off them — months, and discovered at the moment the buyer has least leverage."
+    },
+    {
+     "q": "A part goes end-of-life and the manufacturer substitutes an equivalent without asking. What failed?",
+     "c": [
+      "The component",
+      "The buyer's forecasting",
+      "The allocation of design authority in the contract",
+      "The manufacturer's purchasing"
+     ],
+     "a": 2,
+     "e": "Design authority is the contractual right to approve a change. If the manufacturer holds it, the buyer discovers substitutions rather than authorising them — and an equivalent on the compared parameters may not be equivalent on the thermal or transient rating that mattered."
+    },
+    {
+     "q": "What is the strongest argument for buying an integrated power train from a single supplier?",
+     "c": [
+      "It is always cheaper",
+      "It eliminates the interfaces between vendors, which is where schedule slips and blame both live",
+      "It removes the need for commissioning",
+      "It guarantees better components"
+     ],
+     "a": 1,
+     "e": "The pitch is schedule and accountability: fewer seams to argue about, and a single integrated test done in a factory rather than on a site. It is not a claim about component quality and it is rarely a claim about price."
+    },
+    {
+     "q": "What is the least obvious cost of that integration?",
+     "c": [
+      "Higher energy losses",
+      "Longer lead times on every item",
+      "Counterparty concentration — service, spares, firmware and institutional knowledge all sit with one company",
+      "Reduced equipment ratings"
+     ],
+     "a": 2,
+     "e": "It is fine while the supplier is stable, and it is a real exposure when that supplier is acquired, restructured, or separates the business you bought from into a different corporate entity."
+    },
+    {
+     "q": "Two vendors quote power shelves at 97.5% efficiency. One states it at peak half-load and the other at full load. Which is more informative?",
+     "c": [
+      "Full load, because it is the harder condition",
+      "Half load, because a redundant shelf spends its working life near half load",
+      "They are equivalent",
+      "Neither without knowing the input voltage"
+     ],
+     "a": 1,
+     "e": "A 3+3 redundant shelf splits the load between halves that must each be able to carry it alone, so both normally run near half load. A vendor quoting only the full-load figure is describing a condition the shelf rarely sees."
+    },
+    {
+     "q": "Company A is named as a silicon provider and company B as a power-system-components vendor in the same platform ecosystem. What follows?",
+     "c": [
+      "They compete directly",
+      "Each has a relationship with the platform owner; A is structurally a supplier to B's tier, and no relationship between them is thereby established",
+      "They are partners with a contract",
+      "B owns A"
+     ],
+     "a": 1,
+     "e": "The list states each party's relationship to the platform owner. Reading co-membership in different tiers as either a partnership or a competition between the two is the most common error in this sector."
+    },
+    {
+     "q": "A company assembles a portfolio of power and cooling businesses over five years and then announces it will spin them out. What is that most likely telling you?",
+     "c": [
+      "The businesses are failing",
+      "The two halves have different growth rates, different multiples and different natural owners",
+      "Regulators required it",
+      "The acquisitions were mistakes"
+     ],
+     "a": 1,
+     "e": "A separation is usually a statement that one set of assets is valued differently from the other and is held back by being inside the same company — which is often a truer statement about the businesses than anything in the original acquisition pitch."
+    }
+   ]
+  }
+ ]
+}

@@ -239,14 +239,6 @@
    "context": "Reuters reported (June 2025) OpenAI adding Google Cloud as a compute provider, and the April 2026 Microsoft restructuring formally freed OpenAI to buy Google capacity — no primary announcement or terms. Simultaneously Gemini's chief rival: supplier economics and existential competition in one relationship.",
    "source": "Reuters-reported (Jun 2025) — unverified",
    "status": "announced"
-  },
-  {
-   "slug": "flex",
-   "type": "supplier",
-   "status": "active",
-   "note": "Zacks reports Flex has secured substantial incremental business from hyperscaler and data-centre customers including Google, with those projects moving into the capital deployment phase.",
-   "context": "Curated on a single third-party source that names the counterparty explicitly, and flagged as such rather than presented as firmly established.\n\nFlex itself has never named Google as a customer. Its own material mentions Google only in a sentence listing hyperscalers as participants in the data-centre market, which is commentary and not a customer statement — and Flex's annual report discloses that its ten largest customers were 45% of FY2026 net sales while naming none of them.\n\nThe link carries less weight than Flex's Amazon relationship, which rests on a filed warrant agreement. It should not be read as establishing the unnamed customer that reached 12% of Flex's net sales in the quarter ended June 2026.",
-   "source": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html"
   }
  ],
  "policyExposure": [
@@ -436,11 +428,6 @@
  },
  "sources": [
   {
-   "label": "Zacks via Yahoo Finance — can Flex's hyperscaler wins drive sustained revenue growth (names Google)",
-   "url": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html",
-   "date": "2026-07-01"
-  },
-  {
    "label": "Alphabet — Q2 2026 earnings (8-K exhibit)",
    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
    "date": "2026-07-22"
@@ -549,6 +536,6 @@
    "url": "https://lightsourcebp.com/news/honeysuckle-solar-goes-online/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

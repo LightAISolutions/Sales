@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-04",
- "companies": 104,
+ "companies": 106,
  "edges": [
   {
    "a": "abb",
@@ -154,6 +154,59 @@
   },
   {
    "a": "abb",
+   "b": "flex",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Busway market research names ABB among the market leaders while categorising Flex's Anord Mardix business as an other player, and both are named in data-centre switchgear vendor surveys.",
+     "context": "Curated on a ranked basis: a busway survey separating a named leader group — Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens — from the other players, with Anord Mardix outside it.\n\nABB is separately named in a third-party top-five grouping of data-centre power suppliers at roughly 41 to 43% of that market, and in a North American grouping at roughly 62% with Schneider, Vertiv, Eaton and Mitsubishi Electric. Flex appears in neither.\n\nABB also appears in NVIDIA's data-centre power systems tier and in the solid-state transformer group at GTC 2026 — a category Flex is only now entering, through an EPC Power acquisition whose stated capabilities include planned solid-state transformer development.",
+     "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
+     "status": "active",
+     "via": "Busway and data-centre switchgear"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Busway market research names ABB among the market leaders while categorising Anord Mardix as an other player, and both are named in data-centre switchgear vendor surveys.",
+     "context": "Curated on the same ranked basis as Schneider Electric: a busway survey that separates a named leader group — Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens — from the other players, with Anord Mardix outside it.\n\nABB is separately named in a third-party top-five grouping of data-centre power suppliers holding roughly 41–43% of that market, and in a North American grouping at roughly 62% with Schneider, Vertiv, Eaton and Mitsubishi Electric. Flex appears in neither.\n\nABB also appears in NVIDIA's data-centre-power-systems tier and in the solid-state-transformer group at GTC 2026 — a category Flex is only now entering through the EPC Power acquisition, which names planned solid-state transformer development among its capabilities.",
+     "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
+     "status": "active",
+     "via": "Busway and data-centre switchgear"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster places Flex Power in the power-system-components tier alongside Delta, LITEON and Megmeet — the tier that consumes the silicon Infineon and its peers supply and feeds the facility-power systems ABB, Eaton, Schneider Electric and Vertiv build.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: market researchers naming key players in data-centre busway place Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens as leaders and categorise Anord Mardix as an other player; JetCool appears in no liquid-cooling league table from any named ranking firm, which is consistent with its $53m purchase price set against the $9.5bn Eaton paid for Boyd Thermal and the $4.75bn Ecolab agreed for CoolIT in the same quarter.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Anord Mardix — critical power (OWNED)",
+     "date": "",
+     "text": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "abb",
    "b": "hitachi-energy",
    "curated": {
     "a": {
@@ -240,6 +293,20 @@
      "where": "Summary",
      "date": "",
      "text": "Basis: it competes at the integrated-solution tier (with Schneider, Vertiv, Eaton, ABB) rather than the component tier, its prefabricated PowerPOD (2.4-3.2 MW containerized power blocks, 18-week delivery) is the pattern the industry is converging on, and Chinese brokerages map it as the anchor of the domestic AIDC power ecosystem above component players like Kehua, Kstar, Megmeet, and Sinexcel.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "abb",
+   "b": "infineon",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
      "src": "",
      "from": "b"
     }
@@ -1910,6 +1977,45 @@
     }
    ],
    "last": "2026-07-10"
+  },
+  {
+   "a": "amazon",
+   "b": "flex",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Flex issued a warrant to an Amazon subsidiary whose shares vest on qualifying payments for products and services purchased by or on behalf of Amazon and its affiliates.",
+     "context": "A supplier relationship established by a filed contract rather than by a press release, which makes it unusually well evidenced for a contract manufacturer. On 15 August 2025 Flex entered a transaction agreement with Amazon.com, Inc. and issued Amazon.com NV Investment Holdings LLC a warrant for up to 3,859,851 Flex ordinary shares at $51.29, expiring 15 August 2030.\n\nThe direction of trade is unambiguous in Flex's own accounting: the expense associated with the warrant shares is recorded as a deduction to revenue as the customer purchases products and services over the vesting period. Flex recorded $7m of warrant-related charges in FY2026, and the agreement contemplates negotiating a fresh two-year warrant at expiry if a commercial relationship continues.\n\nWhat Amazon buys is not disclosed and no source establishes whether it relates to Amazon Web Services. Raymond James read the structure as confirming existing long-lived business rather than signalling incremental near-term revenue.",
+     "source": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm",
+     "status": "active",
+     "since": "2025-08"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Flex issued a warrant to an Amazon subsidiary whose shares vest on qualifying payments for products and services purchased by or on behalf of Amazon and its affiliates.",
+     "context": "The hardest customer confirmation in this dossier, and it comes from accounting rather than from a press release. On 15 August 2025 Flex entered a transaction agreement with Amazon.com, Inc. and issued Amazon.com NV Investment Holdings LLC a warrant for up to 3,859,851 Flex ordinary shares at $51.29, cashless-exercisable, expiring 15 August 2030.\n\nThe direction of trade is unambiguous in Flex's own wording: the expense associated with the warrant shares is recorded as a deduction to revenue as the customer purchases products and services over the vesting period. Flex recorded $7m of warrant-related charges in FY2026. If unexercised shares remain at expiry and the two maintain a continued commercial relationship, Flex will negotiate a new two-year warrant; on a change of control the unvested portion vests in full.\n\nWhat Amazon buys is not disclosed, and no source establishes whether it relates to Amazon Web Services. Raymond James read the structure as confirming existing long-lived business rather than signalling meaningful incremental near-term revenue. This is also not established as the unnamed customer that reached 12% of net sales in Q1 FY2027.",
+     "source": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm",
+     "status": "active",
+     "since": "2025-08"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Amazon is the only data-centre-scale customer confirmed by filing, through a warrant whose vesting is driven by Amazon's purchases; Google is named only by an analyst.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-15",
+     "text": "Warrant issued to an Amazon subsidiary for up to 3,859,851 Flex shares at $51.29, vesting on Amazon's purchases — The hardest customer confirmation in the file, and it comes from accounting rather than marketing: the expense is recorded as a deduction to revenue as Amazon buys. Raymond James read it as confirming existing long-lived business rather than signalling new commitments.",
+     "src": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2025-08-15"
   },
   {
    "a": "amazon",
@@ -4503,6 +4609,52 @@
     }
    ],
    "last": "2025-12-18"
+  },
+  {
+   "a": "byd",
+   "b": "infineon",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "A market-share ranking of China power modules places BYD Semiconductor first at 28.9% in 2023 and Infineon second at 14.5%, having reversed a 2022 ordering in which Infineon led at 25%.",
+     "context": "The only relationship in this file where Infineon is the party that lost a leadership position, and the mechanism is worth naming precisely: BYD is a large buyer of power semiconductors that funded its own device programme and then displaced its suppliers in its home market.\n\nThe scale of the reversal is the point. On 2020 automotive IGBT data the ordering had been Infineon at 49.2%, BYD at 20.0% and StarPower at 16.6%. Three years later Infineon was second in China power modules at a little over half BYD Semiconductor's share.\n\nThis is a competitor link rather than a customer one because the ranking source treats them as rivals in one market, and because BYD's vertical integration is specifically a move away from external supply. It is also the template most likely to repeat wherever a large Chinese buyer can fund a device programme of its own.",
+     "source": "https://autonews.gasgoo.com/china_news/70038045.html",
+     "status": "active",
+     "since": "2023",
+     "via": "Power modules in China"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Infineon led China power modules with 25% share in 2022; in 2023 BYD Semiconductor took first place at 28.9% and Infineon fell to second at 14.5%.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "In automotive IGBT on 2020 data the ordering had been Infineon 49.2%, BYD 20.0%, StarPower 16.6%.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · IGBTs and power modules",
+     "date": "",
+     "text": "It led China power modules with 25% share in 2022; in 2023 BYD Semiconductor took first place at 28.9% and Infineon fell to second at 14.5%.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · IGBTs and power modules",
+     "date": "",
+     "text": "On 2020 automotive IGBT data the ordering had been Infineon 49.2%, BYD 20.0%, StarPower 16.6%.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023"
   },
   {
    "a": "byd",
@@ -8471,6 +8623,20 @@
   },
   {
    "a": "cummins",
+   "b": "flex",
+   "evid": [
+    {
+     "where": "Capabilities · Anord Mardix — critical power (OWNED)",
+     "date": "",
+     "text": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cummins",
    "b": "ge-vernova",
    "evid": [
     {
@@ -8741,6 +8907,38 @@
   },
   {
    "a": "delta-electronics",
+   "b": "flex",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "NVIDIA's own 800 VDC roster places Delta and Flex Power in the same named tier — power system components — and both announced 800 VDC racks for the same platform.",
+     "context": "The basis is a categorisation by the platform owner rather than a market-share ranking, and that limit is stated rather than glossed. NVIDIA assigns Delta, Flex Power, Bizlink, Lead Wealth, LITEON and Megmeet to one tier.\n\nThe products confirm the overlap. Delta announced 800 VDC in-row 660 kW power racks with 480 kW of battery backup, developed with NVIDIA, at GTC 2026; Flex launched an 800 VDC Power Rack with eight 110 kW shelves for the Vera Rubin platform in the same month.\n\nThe competition is not symmetrical. Delta appears in third-party top-five groupings of the data-centre power market where Flex does not, so Delta holds a facility-power position Flex has been acquiring its way toward — most recently through a $4.4bn agreement to buy EPC Power in September 2026.",
+     "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+     "status": "active",
+     "via": "800 VDC power shelves and racks"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "NVIDIA's own 800 VDC roster places Flex Power and Delta in the same named tier — power system components — and both announced 800 VDC racks for the same platform.",
+     "context": "The basis is a categorisation by the platform owner rather than a market-share ranking, and that limit is stated rather than glossed. NVIDIA's published ecosystem assigns Flex Power, Delta, Bizlink, Lead Wealth, LITEON and Megmeet to one tier, and Infineon and thirteen other silicon vendors to the tier below.\n\nThe products confirm the overlap. Flex launched an 800 VDC Power Rack with eight 110 kW shelves for the Vera Rubin platform in March 2026; Delta announced 800 VDC in-row 660 kW power racks with 480 kW of battery backup, developed in collaboration with NVIDIA, at the same event.\n\nDelta also appears in a third-party top-five grouping of data-centre power suppliers where Flex does not, so the competition is not symmetrical: Delta holds a facility-power position Flex is buying its way toward.",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "status": "active",
+     "via": "800 VDC power shelves and racks"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Chinese-press reporting that Megmeet displaced LITEON as the #2 NVL72 shelf supplier and holds first-mover position in the power-rack segment Morgan Stanley sizes at >RMB30B for 2026; Delta was pressed on Megmeet, Vertiv, and Flex by analysts on its own Q2 call.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "delta-electronics",
    "b": "ge-vernova",
    "curated": {
     "a": {
@@ -8797,6 +8995,40 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "delta-electronics",
+   "b": "infineon",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Infineon's own release of 28 August 2025 announces a strengthened collaboration with Delta on high-density power modules enabling vertical power delivery to AI processors.",
+     "context": "A bilateral, first-party announcement with a stated division of labour: Infineon contributes ultra-thin silicon MOSFET technology and embedded packaging expertise, Delta contributes power module design and manufacturing. Infineon quantifies the benefit as up to 150 tonnes of carbon dioxide saved over a three-year rack lifetime against a lateral discrete solution.\n\nThe relationship predates the AI cycle — the two signed a memorandum of understanding in March 2023 extending a long-term partnership from industrial into automotive applications.\n\nTyped supplier from Delta's side because Infineon supplies the silicon and the packaging technology into Delta's module. Note that the two also appear together in SemiAnalysis's six-name competitive set for AI power delivery, so they compete one level up at the module even as they collaborate on the silicon inside it.",
+     "source": "https://www.infineon.com/technology-news/2025/INFPSS202508-138",
+     "status": "active",
+     "since": "2023-03",
+     "via": "Vertical power delivery modules"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Infineon's own release of 28 August 2025 announces a strengthened collaboration with Delta Electronics on high-density power modules enabling vertical power delivery to AI processors.",
+     "context": "The strongest non-NVIDIA link in the file because it is a bilateral, first-party announcement with a stated division of labour: Infineon contributes its ultra-thin silicon MOSFET technology and embedded packaging expertise, Delta contributes power module design and manufacturing. Infineon quantifies the benefit as up to 150 tonnes of carbon dioxide saved over a three-year rack lifetime relative to a lateral discrete solution.\n\nThe relationship predates the AI cycle: the two signed a memorandum of understanding in March 2023 extending a long-term partnership from industrial into automotive applications.\n\nIt is also the clearest illustration of how the tier structure works in practice. Delta consumes Infineon silicon, so it is a customer; it builds the module, so it captures the integration value; and SemiAnalysis's competitive read of AI power delivery names Delta and Infineon among the same six players, so it is also a competitor one level up. All three are true simultaneously and the relationship is typed partner because that is what the bilateral source states.",
+     "source": "https://www.infineon.com/technology-news/2025/INFPSS202508-138",
+     "status": "active",
+     "since": "2023-03",
+     "via": "Vertical power delivery modules"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-28",
+     "text": "Collaboration with Delta Electronics on high-density power modules for vertical power delivery to AI processors — The division of labour is stated: Infineon's ultra-thin silicon and embedded packaging, Delta's module design and manufacturing. It is also the clearest illustration of the tier structure — Delta is simultaneously a partner, a customer for the silicon and a competitor at the module.",
+     "src": "https://www.infineon.com/technology-news/2025/INFPSS202508-138",
+     "from": "b"
+    }
+   ],
+   "last": "2025-08-28"
   },
   {
    "a": "delta-electronics",
@@ -9537,6 +9769,66 @@
   },
   {
    "a": "eaton",
+   "b": "flex",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A data-centre switchgear survey names Eaton and Flex's Anord Mardix business among the key players in the same market, and Eaton's $9.5bn purchase of Boyd Thermal placed it directly against Flex's JetCool in liquid cooling.",
+     "context": "Competition on two fronts, and both are quantified. In switchgear, third-party vendor surveys name Eaton in the leader group and Anord Mardix among key players or as an other player depending on the report. In liquid cooling, Eaton completed a $9.5bn acquisition of Boyd Thermal in March 2026 — a business forecast at about $1.7bn of calendar-2026 sales of which about $1.5bn is liquid cooling — against the $53m Flex paid for JetCool in November 2024.\n\nEaton also sits one tier above Flex in NVIDIA's published 800 VDC ecosystem, in data-centre power systems rather than power system components.\n\nTwo threads run the other way and are recorded rather than suppressed. JetCool and Eaton announced a collaboration on liquid cooling for high-power data-centre applications in December 2022, two years before Flex acquired JetCool, and no source confirms it continues. And several of Flex's data-centre power leaders are former Eaton executives, including the chief executive named to lead the business Flex is spinning out.",
+     "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market",
+     "status": "active",
+     "via": "Data-centre switchgear and liquid cooling"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A data-centre switchgear survey names Eaton and Anord Mardix among the key players in the same market, and Eaton's $9.5bn purchase of Boyd Thermal placed it directly against JetCool in liquid cooling.",
+     "context": "Competition on two fronts, and both are quantified. In switchgear, third-party vendor surveys name Eaton in the leader group and Anord Mardix among key players or as an other player depending on the report. In liquid cooling, Eaton completed a $9.5bn acquisition of Boyd Thermal in March 2026, a business forecast at about $1.7bn of calendar-2026 sales of which about $1.5bn is liquid cooling — against the $53m Flex paid for JetCool.\n\nEaton also sits in the tier above Flex in NVIDIA's 800 VDC ecosystem and announced a co-design partnership with NVIDIA at GTC 2026.\n\nThere is a historical thread running the other way that is recorded rather than suppressed: JetCool and Eaton announced a collaboration on liquid cooling for high-power data-centre applications in December 2022, two years before Flex acquired JetCool, and no source confirms it continues under Flex ownership. Several of Flex's data-centre power leaders are also former Eaton executives, including the chief executive going to the spun-off company.",
+     "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market",
+     "status": "active",
+     "via": "Data-centre switchgear and liquid cooling"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster places Flex Power in the power-system-components tier alongside Delta, LITEON and Megmeet — the tier that consumes the silicon Infineon and its peers supply and feeds the facility-power systems ABB, Eaton, Schneider Electric and Vertiv build.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: market researchers naming key players in data-centre busway place Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens as leaders and categorise Anord Mardix as an other player; JetCool appears in no liquid-cooling league table from any named ranking firm, which is consistent with its $53m purchase price set against the $9.5bn Eaton paid for Boyd Thermal and the $4.75bn Ecolab agreed for CoolIT in the same quarter.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Anord Mardix — critical power (OWNED)",
+     "date": "",
+     "text": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · JetCool — direct-to-chip liquid cooling (OWNED)",
+     "date": "",
+     "text": "The sector consolidated violently around it: Schneider took control of Motivair in February 2025, Eaton completed a $9.5bn purchase of Boyd Thermal in March 2026, and Ecolab agreed to buy CoolIT for $4.75bn the same month.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eaton",
    "b": "ge-vernova",
    "curated": {
     "b": {
@@ -9640,6 +9932,20 @@
      "where": "Capabilities · Data Center Facility & Critical Power (PowerPOD, UPS5000, SmartLi)",
      "date": "",
      "text": "#1 in prefabricated modular data centers per Omdia (though absent from the North America and Western Europe regional podiums, led by Johnson Controls/Schneider and Vertiv/Rittal respectively); top-5 in data-center UPS (behind Schneider, Vertiv, Eaton per MarketsandMarkets); the 41.9% modular-UPS #1 claim is a dated 2020 Frost & Sullivan figure.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eaton",
+   "b": "infineon",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
      "src": "",
      "from": "b"
     }
@@ -11529,6 +11835,30 @@
   },
   {
    "a": "equinix",
+   "b": "flex",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Flex describes a longstanding collaboration with Equinix across power and cooling infrastructure, and deployed a full rack-level liquid cooling system at the Equinix Co-Innovation Facility in November 2025.",
+     "context": "Flex installed a single OCP ORv3 rack at Equinix's Co-Innovation Facility in Ashburn, Virginia, combining JetCool SmartPlate Systems on Dell PowerEdge servers with a SmartSense 6U liquid-to-liquid coolant distribution unit cooling up to 300 kW and interfacing directly with the Equinix technology cooling system secondary loop.\n\nFlex's own statement is that the entire system — rack, cooling solution and power products — is manufactured by Flex, and the quoted executive frames it as building on a longstanding collaboration with Equinix across power and cooling infrastructure. That phrasing is the basis for typing this a customer relationship rather than a demonstration.\n\nNo contract value, volume or duration is disclosed, and the deployment described is a single rack in a test facility. The relationship is real and stated; its commercial scale is not.",
+     "source": "https://investors.flex.com/news/news-details/2025/Flex-Expands-Liquid-Cooling-Footprint-at-Equinix-Co-Innovation-Facility/default.aspx",
+     "status": "active",
+     "via": "Liquid cooling and power"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-12",
+     "text": "Liquid cooling deployed at the Equinix Co-Innovation Facility in Ashburn, Virginia, in a single OCP ORv3 rack — Flex's own framing names a longstanding collaboration with Equinix across power and cooling. The demonstration is the vertical pitch made concrete — rack, cooling and power all manufactured by Flex, interfacing directly with Equinix's own secondary loop.",
+     "src": "https://investors.flex.com/news/news-details/2025/Flex-Expands-Liquid-Cooling-Footprint-at-Equinix-Co-Innovation-Facility/default.aspx",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-12"
+  },
+  {
+   "a": "equinix",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -11994,6 +12324,556 @@
      "text": "Directly targets the AI load-volatility problem (the same physics behind xAI's Megapack buffering and ABB's synchronous condensers) at the cell/cabinet level — competing with LG, Samsung SDI, and Panasonic BBU lines in the NVIDIA 800 VDC ecosystem.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "ge-vernova",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Zacks reports Flex has secured substantial incremental business from hyperscaler and data-centre customers including Google, with those projects moving into the capital deployment phase.",
+     "context": "Curated on a single third-party source that names the counterparty explicitly, and flagged as such. Flex itself has never named Google as a customer; its own material mentions Google only in a sentence listing hyperscalers as participants in the data-centre market, which is commentary rather than a customer statement.\n\nThe distinction matters because Flex anonymises almost everything. Its annual report discloses that the ten largest customers were 45% of FY2026 net sales with none above 10%, and names none of them.\n\nThis link is recorded because a source states it plainly and because a reader tracing the hyperscaler side of the business should see it. It carries less weight than the Amazon link, which rests on a filed contract, and it should not be read as establishing the unnamed 12% customer.",
+     "source": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html",
+     "status": "active"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Zacks reports Flex has secured substantial incremental business from hyperscaler and data-centre customers including Google, with those projects moving into the capital deployment phase.",
+     "context": "Curated on a single third-party source that names the counterparty explicitly, and flagged as such rather than presented as firmly established.\n\nFlex itself has never named Google as a customer. Its own material mentions Google only in a sentence listing hyperscalers as participants in the data-centre market, which is commentary and not a customer statement — and Flex's annual report discloses that its ten largest customers were 45% of FY2026 net sales while naming none of them.\n\nThe link carries less weight than Flex's Amazon relationship, which rests on a filed warrant agreement. It should not be read as establishing the unnamed customer that reached 12% of Flex's net sales in the quarter ended June 2026.",
+     "source": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Amazon is the only data-centre-scale customer confirmed by filing, through a warrant whose vesting is driven by Amazon's purchases; Google is named only by an analyst.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "hitachi-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Anord Mardix — critical power (OWNED)",
+     "date": "",
+     "text": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "infineon",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "liteon",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "NVIDIA names LITEON and Flex Power in the same power-system-components tier of its 800 VDC ecosystem, and both build power shelves to the same platform reference.",
+     "context": "The most directly comparable competitor in the file at the product level. LITEON announced an 800 VDC power rack and a 110 kW power shelf on NVIDIA's MGX reference architecture at GTC 2026; Flex's Vera Rubin shelf is also 110 kW in 3RU. These are two vendors building to one specification.\n\nAn independent rundown of NVIDIA's GTC 2026 ecosystem lists LITEON and Delta at the rack level and does not name Flex, which is the clearest available evidence on relative visibility inside the programme.\n\nAs with Delta, the basis is same-tier categorisation by the platform owner plus matching product announcements, not a published share ranking. No ranking firm publishes shares for this product category.",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "status": "active",
+     "via": "800 VDC power shelves"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "NVIDIA names LITEON and Flex Power in the same power-system-components tier of its 800 VDC ecosystem, and both build power shelves to the same platform reference.",
+     "context": "The most directly comparable pairing at the product level. LITEON announced an 800 VDC power rack and a 110 kW power shelf on NVIDIA's MGX reference architecture at GTC 2026; Flex's Vera Rubin power shelf is also 110 kW, in 3RU, with a stated hold-up above 20 milliseconds at full load.\n\nWhen a platform owner publishes the reference architecture, the products converge by design. What differentiates them is the silicon inside, serviceability, manufacturing location, and how much of the rest of the chain the vendor also sells — and on that last point Flex is unusual in the tier, because it also owns switchgear, busway and liquid cooling.\n\nBasis is same-tier categorisation by the platform owner plus matching product announcements. No ranking firm publishes shares for this product category.",
+     "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+     "status": "active",
+     "via": "800 VDC power shelves"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster places Flex Power in the power-system-components tier alongside Delta, LITEON and Megmeet — the tier that consumes the silicon Infineon and its peers supply and feeds the facility-power systems ABB, Eaton, Schneider Electric and Vertiv build.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "This is the layer that sits in NVIDIA's power-system-components tier alongside Delta, LITEON and Megmeet.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster names Flex Power in the power-system-components tier with Bizlink, Delta, Lead Wealth, LITEON and Megmeet.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "Delta and LITEON both announced 800 VDC racks and shelves of their own at NVIDIA's GTC 2026, where Flex was not named in independent coverage of the ecosystem.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A member of NVIDIA's 800 VDC power-components tier alongside Delta, Megmeet, Flex, and BizLink.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "megmeet",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "NVIDIA names Megmeet and Flex Power in the same power-system-components tier of its published 800 VDC ecosystem.",
+     "context": "The weakest of the three same-tier competitor links, and typed on the same basis: NVIDIA's own categorisation places both in one named tier of one named architecture.\n\nNo bilateral source, no matching product announcement pair, and no ranking firm places the two in a common share table. Megmeet's own position in the corpus is as a Chinese power-electronics manufacturer contesting the NVIDIA power-shelf socket behind Delta.\n\nRecorded because the categorisation is explicit and published by the platform owner, and flagged here so a reader does not mistake it for evidence of a head-to-head contest that has been observed.",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "status": "active",
+     "via": "800 VDC power system components"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "NVIDIA names Megmeet and Flex Power in the same power-system-components tier of its published 800 VDC ecosystem.",
+     "context": "Typed on the platform owner's own categorisation: both appear in one named tier of one named architecture, alongside Bizlink, Delta, Lead Wealth and LITEON.\n\nThe limit of the evidence is stated rather than glossed. There is no bilateral source, no matching product-announcement pair, and no ranking firm placing the two in a common share table.\n\nThe two are also differently shaped competitors. Megmeet contests the NVIDIA power-shelf socket as a power-electronics manufacturer; Flex arrives at the same socket as a contract manufacturer that has spent about $6.3bn since 2021 acquiring switchgear, cooling and power-conversion businesses, and has announced it will separate the whole segment into an independent company in early 2027.",
+     "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+     "status": "active",
+     "via": "800 VDC power system components"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster places Flex Power in the power-system-components tier alongside Delta, LITEON and Megmeet — the tier that consumes the silicon Infineon and its peers supply and feeds the facility-power systems ABB, Eaton, Schneider Electric and Vertiv build.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "This is the layer that sits in NVIDIA's power-system-components tier alongside Delta, LITEON and Megmeet.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster names Flex Power in the power-system-components tier with Bizlink, Delta, Lead Wealth, LITEON and Megmeet.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "mitsubishi-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A data-centre switchgear survey names Mitsubishi Electric and Anord Mardix among the key players in the same market, and a North American power grouping places Mitsubishi Electric in a top five holding roughly 62% of that market.",
+     "context": "The link rests on two third-party surveys naming both parties in one market. The switchgear survey lists Anord Mardix alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand, Toshiba, Kehua, Rittal, Socomec and Cummins.\n\nThe stronger of the two is a North American data-centre power grouping placing ABB, Schneider, Vertiv, Eaton and Mitsubishi Electric at roughly 62% combined — a ranking that includes Mitsubishi Electric and excludes Flex, which is itself the finding.\n\nBasis is co-naming in a defined market rather than a head-to-head figure. Flex names no competitors in any of its own filings, so every competitor link in this dossier is third-party sourced.",
+     "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market",
+     "status": "active",
+     "via": "Data-centre switchgear and power distribution"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A data-centre switchgear survey names Mitsubishi Electric and Flex's Anord Mardix business among the key players in the same market.",
+     "context": "The link rests on third-party surveys naming both in one defined market. The switchgear survey lists Anord Mardix alongside Schneider Electric, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand, Toshiba, Kehua, Rittal, Socomec and Cummins.\n\nA separate North American data-centre power grouping places ABB, Schneider, Vertiv, Eaton and Mitsubishi Electric at roughly 62% combined — a ranking that includes Mitsubishi Electric and excludes Flex, which is itself informative about relative position.\n\nFlex acquired its way into this market: Anord Mardix in December 2021 for $540m, Crown Technical Systems in November 2024 for $319m and Electrical Power Products in May 2026 for about $1.1bn. Flex names no competitors in any of its own filings, so every competitor link involving it is third-party sourced.",
+     "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market",
+     "status": "active",
+     "via": "Data-centre switchgear and power distribution"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Anord Mardix — critical power (OWNED)",
+     "date": "",
+     "text": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "NVIDIA names Flex Power in the power-system-components tier of its own published 800 VDC ecosystem, and Flex has since shipped power shelves built to NVIDIA platform requirements.",
+     "context": "The deepest relationship in this file, and the only one where both parties have published. NVIDIA's own 800 VDC blog lists Flex Power among power-system-components partners with Bizlink, Delta, Lead Wealth, LITEON and Megmeet.\n\nFlex has shipped against it: a 33 kW power shelf for the GB300 NVL72 platform at 97.5% peak half-load efficiency in August 2025, then a 110 kW shelf and an 800 VDC Power Rack for the Vera Rubin platform in March 2026, together with reference designs for NVIDIA's Omniverse DSX blueprint. Flex states it plans full-scale production of 800 VDC power components to coincide with NVIDIA Kyber rack-scale systems. It is also an NVIDIA customer, deploying NVIDIA cuOpt for capacity planning in its own factories and integrating DRIVE AGX Orin into its automotive platform.\n\nOne observation belongs beside all of that. Flex is not named in NVIDIA's May 2026 DSX partner release, nor in independent coverage of NVIDIA's GTC 2026 800 VDC ecosystem which names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova. From 2026 onward the announcements are largely Flex's own. That is a visibility observation, not evidence of a design loss.",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "status": "active",
+     "since": "2025-05",
+     "via": "800 VDC power shelves and racks"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "NVIDIA names Flex Power among the power system components vendors for its 800 VDC architecture, and Flex has shipped power shelves built to NVIDIA platform requirements.",
+     "context": "Flex sits in the second of NVIDIA's three published tiers — power system components — with Bizlink, Delta, Lead Wealth, LITEON and Megmeet. That tier consumes the silicon the first tier supplies and feeds the facility-power systems of the third.\n\nFlex has shipped against it: a 33 kW power shelf for the GB300 NVL72 platform at 97.5% peak half-load efficiency in August 2025, then a 110 kW shelf and an 800 VDC Power Rack for the Vera Rubin platform in March 2026, plus reference designs for NVIDIA's Omniverse DSX blueprint. Flex states it plans full-scale production of 800 VDC power components to coincide with NVIDIA Kyber rack-scale systems.\n\nOne observation belongs with it: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in independent coverage of NVIDIA's GTC 2026 800 VDC ecosystem. From 2026 the announcements are largely Flex's own.",
+     "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+     "status": "active",
+     "since": "2025-05",
+     "via": "800 VDC power shelves and racks"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster places Flex Power in the power-system-components tier alongside Delta, LITEON and Megmeet — the tier that consumes the silicon Infineon and its peers supply and feeds the facility-power systems ABB, Eaton, Schneider Electric and Vertiv build.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess the NVIDIA relationship is product-level and real, and that Flex's visibility inside NVIDIA's own communications has fallen rather than risen.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: NVIDIA named Flex Power in its own 800 VDC power-system-components tier in May 2025, and Flex has shipped against it — a 33 kW GB300 NVL72 power shelf at 97.5% peak half-load efficiency in August 2025, a 110 kW Vera Rubin shelf and an 800 VDC Power Rack in March 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "The Flex-badged rack and row power line, distinct from Anord Mardix's facility products: power shelves built to NVIDIA platform requirements, the 800 VDC Power Rack, a megawatt-class direct-current power distribution unit, battery and capacitor backup units, and a capacitive energy storage system.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "This is the layer that sits in NVIDIA's power-system-components tier alongside Delta, LITEON and Megmeet.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster names Flex Power in the power-system-components tier with Bizlink, Delta, Lead Wealth, LITEON and Megmeet.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Flex-branded data-centre power products (OWNED)",
+     "date": "",
+     "text": "Delta and LITEON both announced 800 VDC racks and shelves of their own at NVIDIA's GTC 2026, where Flex was not named in independent coverage of the ecosystem.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-16",
+     "text": "Launch of the 800 VDC Power Rack, developed in collaboration with NVIDIA for the Vera Rubin platform — Flex's most substantial owned data-centre product. Its claim — that shifting power out of the IT rack raises available compute per rack from about 125 kW to up to 880 kW — is an argument about floor space rather than about efficiency, and it is the right one for a hall constrained by area.",
+     "src": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-16",
+     "text": "Reference designs published for NVIDIA's Omniverse DSX blueprint, claiming up to 30% faster deployment — Prefabricated modular designs combining power, racks and cooling as factory-integrated systems. This is the manufacturing company selling its factory as the differentiator rather than the product.",
+     "src": "https://investors.flex.com/news/news-details/2026/Flex-Accelerates-AI-Factory-Deployment-with-NVIDIA-Omniverse-DSX-Reference-Designs/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-28",
+     "text": "Giga-scale AI factory collaboration with NVIDIA and a new 400,000 sq ft Dallas facility purpose-built for data-centre infrastructure — The Dallas plant is where the prefabricated power modules are built, and prefabrication is the specific claim that moves a schedule: work done in a factory rather than on a construction site.",
+     "src": "https://investors.flex.com/news/news-details/2025/Flex-to-Accelerate-Deployment-of-Giga-Scale-AI-Factories-with-NVIDIA/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-04",
+     "text": "The 33 kW power shelf for NVIDIA's GB300 NVL72 platform, at 97.5% peak half-load efficiency — The first shipped product of the NVIDIA relationship, and the release states the forward commitment: full-scale production of 800 VDC power components to coincide with NVIDIA Kyber rack-scale systems.",
+     "src": "https://investors.flex.com/news/news-details/2025/Flex-Delivers-Advanced-Power-Management-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its 800VDC ecosystem list names the power vendors (Delta, LITEON, Megmeet, Flex among components; Vertiv, Eaton, Schneider, Siemens, ABB, GE Vernova, Hitachi Energy at the grid tier) who will carry the 2027 transition.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-16"
+  },
+  {
+   "a": "flex",
+   "b": "powell-industries",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A data-centre switchgear survey names Powell Industries and Vertiv as specialised players carving out niches with vertically integrated switchgear, UPS and power distribution — the proposition Anord Mardix and Crown together sell.",
+     "context": "A narrow but well-matched competitor link. The source describes specialised players such as Vertiv and Powell Industries as having carved out significant niches in hyperscale data-centre deployments through vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution systems.\n\nThat is the same niche Flex assembled by acquisition: Anord Mardix for low- and medium-voltage switchgear, busway and power pods, Crown Technical Systems for relay panels and turn-key control enclosures, and Electrical Power Products for substation control and protection.\n\nThe difference is route. Powell builds engineer-to-order switchgear from one Texas footprint and competes on schedule; Flex bought four businesses in five years and competes on breadth plus manufacturing scale. Both are outside the ABB-Eaton-Schneider-Siemens-GE oligopoly that the same class of research places at 55–60% of North American medium-voltage switchgear.",
+     "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548",
+     "status": "active",
+     "via": "Vertically integrated data-centre power rooms"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A data-centre switchgear survey names Powell Industries and Vertiv as specialised players carving out niches with vertically integrated switchgear, UPS and power distribution — the proposition Flex's Anord Mardix and Crown businesses together sell.",
+     "context": "A narrow but well-matched link. The source describes specialised players such as Vertiv and Powell Industries as having carved out significant niches in hyperscale data-centre deployments through vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution systems — which is the same niche Flex assembled by acquisition.\n\nThe difference is route and shape. Powell builds engineer-to-order switchgear from a Texas footprint and competes on schedule, with tailored switchgear in ten weeks as its published differentiator. Flex bought four businesses in five years and competes on breadth plus manufacturing scale, with roughly eight Anord Mardix sites across Ireland, the United Kingdom, the United States and Poland.\n\nBoth sit outside the ABB, Eaton, Schneider, Siemens and GE Vernova group that the same class of research places at 55 to 60% of North American medium-voltage switchgear.",
+     "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548",
+     "status": "active",
+     "via": "Vertically integrated data-centre power rooms"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Anord Mardix — critical power (OWNED)",
+     "date": "",
+     "text": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Busway market research ranks Schneider Electric among the leaders and categorises Anord Mardix as an other player, and Schneider's control of Motivair placed it against JetCool in liquid cooling.",
+     "context": "The clearest ranked competitor link available for the Anord Mardix business, because the source explicitly separates leaders from other players and puts the two companies on opposite sides of that line. Schneider appears in the leader group for data-centre busway with Legrand's Starline, Eaton, ABB and Siemens; Anord Mardix is categorised outside it.\n\nSchneider is also named in a third-party top-five grouping holding roughly 41–43% of the data-centre power market, a grouping Flex does not appear in, and took a controlling interest in Motivair in February 2025 — making it a named liquid-cooling leader in a market where JetCool is unranked.\n\nSchneider sits in the data-centre-power-systems tier of NVIDIA's 800 VDC ecosystem, above Flex's tier, and has announced its own 800 VDC systems in support of NVIDIA's next-generation processors.",
+     "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
+     "status": "active",
+     "via": "Busway, switchgear and liquid cooling"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Busway market research ranks Schneider Electric among the leaders and categorises Flex's Anord Mardix business as an other player, and Schneider's control of Motivair placed it against Flex's JetCool in liquid cooling.",
+     "context": "The clearest ranked link available for this pairing, because the source explicitly separates a leader group — Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens — from the other players, and puts the two companies on opposite sides of that line.\n\nSchneider also appears in a third-party top-five grouping holding roughly 41 to 43% of the data-centre power market, a grouping Flex does not appear in, and took a controlling interest in Motivair in February 2025 — making it a named liquid-cooling leader in a market where Flex's JetCool is unranked.\n\nFlex is closing the gap by purchase rather than by growth: about $6.3bn committed across Anord Mardix, JetCool, Crown, a Polish plant, Electrical Power Products and a $4.4bn agreement for EPC Power, with the whole segment then scheduled to be separated into an independent company in early 2027.",
+     "source": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
+     "status": "active",
+     "via": "Busway, switchgear and liquid cooling"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster places Flex Power in the power-system-components tier alongside Delta, LITEON and Megmeet — the tier that consumes the silicon Infineon and its peers supply and feeds the facility-power systems ABB, Eaton, Schneider Electric and Vertiv build.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: market researchers naming key players in data-centre busway place Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens as leaders and categorise Anord Mardix as an other player; JetCool appears in no liquid-cooling league table from any named ranking firm, which is consistent with its $53m purchase price set against the $9.5bn Eaton paid for Boyd Thermal and the $4.75bn Ecolab agreed for CoolIT in the same quarter.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Anord Mardix — critical power (OWNED)",
+     "date": "",
+     "text": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · JetCool — direct-to-chip liquid cooling (OWNED)",
+     "date": "",
+     "text": "Named leaders in that market are Alfa Laval, Vertiv, Schneider Electric through Motivair, and Rittal, alongside Boyd, CoolIT, Asetek, LiquidStack and Stulz.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "sungrow",
+   "evid": [
+    {
+     "where": "Capabilities · Utility-scale BESS — PowerTitan 1.0 / 2.0 / 3.0",
+     "date": "",
+     "text": "PowerTitan 3.0 (June 2025): built on the first mass-producible 684 Ah LFP cell with silicon-carbide PCS, in Flex 3.45 MWh / Class 6.9 MWh (20-ft) / Plus 12.5 MWh (30-ft) versions, scaling to 27.6 MWh per four-block configuration; a European 4-hour variant (Madrid launch, January 2026) packages 1.78 MW PCS with 7.14 MWh per 20-ft container, one block reaching 7.2 MW / 28.5 MWh.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A data-centre switchgear survey names Anord Mardix among its key players and separately describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, UPS and power distribution — the same proposition Anord Mardix sells.",
+     "context": "The competitive claim here is unusually precise: the source names the strategy, not just the market. It describes specialised players such as Vertiv and Powell Industries carving out significant niches in hyperscale data-centre deployments with vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution — which is exactly what Flex assembled by buying Anord Mardix, Crown and Electrical Power Products.\n\nVertiv also sits one tier above Flex in NVIDIA's 800 VDC ecosystem, in the data-centre-power-systems group with ABB, Eaton and Schneider Electric, and announced its own complete 800 V direct-current product line for NVIDIA's Rubin Ultra platform.\n\nVertiv is additionally a named leader in liquid cooling, a market where JetCool appears in no published ranking. The competition therefore runs across power and thermal at once, which is the whole basis of Flex's integrated pitch.",
+     "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548",
+     "status": "active",
+     "via": "Integrated switchgear, UPS and distribution"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A data-centre switchgear survey names Vertiv and Powell Industries as specialised players carving out niches with vertically integrated switchgear, UPS and power distribution — the proposition Flex's Anord Mardix business sells.",
+     "context": "The source names the strategy rather than only the market, which is what makes it usable: it describes specialised players such as Vertiv and Powell Industries carving out significant niches in hyperscale data-centre deployments through vertically integrated solutions combining switchgear with uninterruptible power supply and power distribution systems.\n\nThat is what Flex assembled by acquisition — Anord Mardix for switchgear, busway and power pods, Crown Technical Systems for relay panels and control enclosures, Electrical Power Products for substation control, and JetCool for direct-to-chip cooling.\n\nThe competition runs across power and thermal at once: Vertiv is also a named leader in liquid cooling, a market where JetCool appears in no published ranking, and sits one tier above Flex in NVIDIA's 800 VDC ecosystem.",
+     "source": "https://www.intelmarketresearch.com/data-center-switchgear-market-36548",
+     "status": "active",
+     "via": "Integrated switchgear, UPS and distribution"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NVIDIA's own 800 VDC roster places Flex Power in the power-system-components tier alongside Delta, LITEON and Megmeet — the tier that consumes the silicon Infineon and its peers supply and feeds the facility-power systems ABB, Eaton, Schneider Electric and Vertiv build.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in an independent rundown of NVIDIA's GTC 2026 800 VDC ecosystem that names Delta, LITEON, ABB, Eaton, Schneider Electric, Vertiv, Siemens, Hitachi Energy and GE Vernova.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Anord Mardix — critical power (OWNED)",
+     "date": "",
+     "text": "Third-party researchers naming key players in data-centre busway put Schneider Electric, Legrand's Starline, Eaton, ABB and Siemens in the leader group and categorise Anord Mardix as an other player; a separate switchgear survey names Anord Mardix among the key players alongside Schneider, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand and Cummins, and describes Vertiv and Powell Industries as having carved out niches with vertically integrated switchgear, uninterruptible power supply and distribution — which is precisely Anord Mardix's own proposition.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · JetCool — direct-to-chip liquid cooling (OWNED)",
+     "date": "",
+     "text": "Named leaders in that market are Alfa Laval, Vertiv, Schneider Electric through Motivair, and Rittal, alongside Boyd, CoolIT, Asetek, LiquidStack and Stulz.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flex",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Capabilities · Flex Power Modules — embedded power (OWNED)",
+     "date": "",
+     "text": "This is the only part of Flex that competes at the board level, where Vicor, Monolithic Power Systems, Infineon and Analog Devices sell.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · DCM™ regulated DC-DC converters — isolated wide-input DCMs and the non-isolated 48 V-to-12 V DCM3717/DCM3735",
+     "date": "",
+     "text": "Competes with the isolated brick and quarter-brick converters from Flex Power Modules, Advanced Energy, Delta and Murata, and with regulated 48 V-to-12 V modules from MPS and Infineon; Vicor's claim is density (5 kW/in³) and the ZVS efficiency of its regulator stage rather than price.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA's OCP Summit 800 VDC ecosystem list adds AOS, EPC, Power Integrations, Richtek, Bizlink, Flex, ABB, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric and Siemens; Vicor is absent — Second published list without Vicor.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-20",
+     "text": "NVIDIA's Computex 800 VDC architecture blog names its silicon partners (Analog Devices, Infineon, Innoscience, MPS, Navitas, onsemi, Renesas, ROHM, STMicroelectronics, Texas Instruments), component partners (Delta, Flex Power, Lead Wealth, LiteOn, Megmeet) and system partners (Eaton, Schneider Electric, Vertiv); Vicor is not among them — The architecture Vicor's 800 V bus converters were built for was announced with a partner list that omits it.",
+     "src": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "flex",
+   "b": "zhonhen",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For US-facing AIDC work its relevance is prospective, not present: exports are 4.1% of revenue, no US entity is on record, it is absent from NVIDIA's published 800VDC partner rosters (whose power-component tier names Delta, Flex Power, Lead Wealth, LiteOn and Megmeet — Hopewind, contrary to Chinese trade coverage, is not on NVIDIA's lists either), and the company itself denied signed agreements with NVIDIA, Meta or Google in August 2025.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -12689,6 +13569,20 @@
      "where": "Capabilities · HVDC & grid integration (market leader)",
      "date": "",
      "text": "~15.3% share in HVDC converter stations (#1 per Mordor); Hitachi + Siemens Energy + GE Vernova took ~60-65% of 2025 HVDC order intake.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "ge-vernova",
+   "b": "infineon",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
      "src": "",
      "from": "b"
     }
@@ -14086,6 +14980,20 @@
     }
    ],
    "last": "2025-08-19"
+  },
+  {
+   "a": "hitachi-energy",
+   "b": "infineon",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "hitachi-energy",
@@ -16013,6 +16921,273 @@
     }
    ],
    "last": "2026-01-20"
+  },
+  {
+   "a": "infineon",
+   "b": "liteon",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "infineon",
+   "b": "megmeet",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "infineon",
+   "b": "mitsubishi-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Infineon's own published market-share chart for power discretes and modules ranks both parties in one market: Infineon 17.4% and Mitsubishi 4.6% of a $32.8bn 2024 market.",
+     "context": "This is the strongest form of competitor evidence available — a named, ranked, single-market table published by one of the two parties. The same chart places onsemi at 8.5%, STMicroelectronics at 6.9%, Fuji Electric at 3.9% and Silan at 3.4%, and Infineon uses it to claim the number-one position in power semiconductors.\n\nMordor Intelligence independently names both in a power-semiconductor top five alongside onsemi, Texas Instruments and STMicroelectronics.\n\nThe relationship is not purely adversarial. NVIDIA's 800 VDC roster places Mitsubishi Electric in the data-centre power systems tier while Infineon sits in the silicon tier, so in the AI data-centre context the two are ecosystem peers at different levels of the same chain rather than rivals for the same socket. The competitor type reflects the power-semiconductor market where they are ranked against each other, not the data-centre context where they are not.",
+     "source": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-investor-presentation-v01-00-en.pdf",
+     "status": "active",
+     "via": "Power discretes and modules"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Infineon's own published market-share chart for power discretes and modules ranks both parties in one market: Infineon 17.4% and Mitsubishi 4.6% of a $32.8bn 2024 market.",
+     "context": "The strongest available form of competitor evidence — a named, ranked, single-market table published by one of the two parties. The same chart places onsemi at 8.5%, STMicroelectronics at 6.9%, Fuji Electric at 3.9% and Silan at 3.4%.\n\nMordor Intelligence independently names both in a power-semiconductor top five with onsemi, Texas Instruments and STMicroelectronics.\n\nThe relationship is not purely adversarial: NVIDIA's 800 VDC roster places Mitsubishi Electric in the data-centre power systems tier while Infineon sits in the silicon tier, so in the AI data-centre chain the two are peers at different levels rather than rivals for the same socket. The competitor type reflects the power-semiconductor market where they are ranked against each other.",
+     "source": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-investor-presentation-v01-00-en.pdf",
+     "status": "active",
+     "via": "Power discretes and modules"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "infineon",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "NVIDIA's own developer blog names Infineon among the silicon providers for its 800 VDC data-centre architecture, and Infineon joined NVIDIA's MGX AI Factory ecosystem in May 2026.",
+     "context": "The anchor relationship of this dossier, and it is bilateral rather than inferred: NVIDIA names Infineon on its own property and Infineon has issued two dedicated releases naming NVIDIA.\n\nThe differentiated engineering output is serviceability rather than efficiency. Infineon's October 2025 release describes a CoolSiC JFET solution that lets an operator exchange a server board in an 800 VDC rack while the other servers in the same rack keep running — a hot-swap function that an 800-volt bus does not otherwise permit. The May 2026 MGX commitment covers the full conversion flow from 800 V down to 50 V, 12 V and 6 V, using GaN bus converters near 1 MHz and SiC JFET protection.\n\nThe scope limit matters as much as the scope. NVIDIA's roster names fourteen silicon providers in total — Analog Devices, AOS, Efficient Power Conversion, Infineon, Innoscience, Monolithic Power Systems, Navitas, onsemi, Power Integrations, Renesas, Richtek, ROHM, STMicroelectronics and Texas Instruments — and assigns each partner to one of three tiers. Infineon is not a sole source and neither party has published a revenue figure, a volume commitment or an exclusivity term. Full-scale production is tied by NVIDIA to its Kyber rack-scale systems in 2027.",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "status": "active",
+     "since": "2025-05",
+     "via": "800 VDC power conversion silicon"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "NVIDIA names Infineon among the silicon providers for its 800 VDC data-centre architecture on its own developer blog.",
+     "context": "NVIDIA's published 800 VDC ecosystem sorts partners into three tiers, and Infineon sits in the first: silicon providers, alongside Analog Devices, AOS, Efficient Power Conversion, Innoscience, Monolithic Power Systems, Navitas, onsemi, Power Integrations, Renesas, Richtek, ROHM, STMicroelectronics and Texas Instruments — fourteen names, so this is an ecosystem rather than a sole source.\n\nThe relationship went beyond listing. Infineon published a CoolSiC JFET hot-swap solution in October 2025 that lets an operator exchange a server board in an 800 VDC rack while the rest of the rack keeps running, and joined NVIDIA's MGX AI Factory ecosystem in May 2026 committing to the full 800 V to 50 V, 12 V and 6 V conversion flow with GaN bus converters near 1 MHz.\n\nNVIDIA ties full-scale production of the architecture to its Kyber rack-scale systems in 2027. Neither party has published a revenue figure, a volume commitment or an exclusivity term.",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "status": "active",
+     "since": "2025-05",
+     "via": "800 VDC power conversion silicon"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Infineon is the largest power-semiconductor supplier in the world by its own published market data and, per a Gartner report of 18 May 2026, \"the company to beat\" in AI data-centre power semiconductors — but the AI business that carries the equity story is still roughly a tenth of revenue, the company has beaten on revenue and missed on Segment Result in three of its last four quarters against its own compiled consensus, and it is one of fourteen named silicon providers in NVIDIA's 800 VDC supplier alliance rather than a sole source.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Gartner named it \"the company to beat\" in AI data-centre power semiconductors on 18 May 2026, citing portfolio comprehensiveness, manufacturing capability and early investment; Infineon is the only vendor in NVIDIA's 800 VDC silicon tier that publishes products across the whole chain from the solid-state transformer to the point of load in all three materials; and its own reported AI data-centre revenue moved from €250m in FY2024 to above €700m in FY2025 to a guided €1.6bn-plus in FY2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess the NVIDIA relationship is real, product-level and bilateral, and that it is not exclusive.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: NVIDIA's own developer blog names Infineon among its 800 VDC silicon providers, Infineon joined NVIDIA's MGX ecosystem on 28 May 2026 with a stated 800V-to-50V/12V/6V conversion portfolio, and the October 2025 CoolSiC JFET hot-swap solution is a specific joint engineering output.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "But the same NVIDIA roster names thirteen other silicon providers, including Analog Devices, Monolithic Power Systems, onsemi, Renesas, ROHM, STMicroelectronics and Texas Instruments.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Gartner's own report qualifies Infineon's lead as being tested by SiC and GaN competition and by \"rivals focused on the compute board level\"; SemiAnalysis's competitive read of AI power delivery names six players — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon — and records Monolithic Power Systems, not Infineon, taking the NVIDIA H100 socket from Vicor; and Mordor Intelligence places Infineon third in a GPU and AI-server voltage-regulator top five behind Texas Instruments.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · CoolGaN — gallium-nitride transistors and bidirectional switches",
+     "date": "",
+     "text": "Infineon and Innoscience are simultaneously co-named NVIDIA 800 VDC silicon partners and opposing parties in a two-directional patent war.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Integrated smart power stages, multiphase controllers and vertical power delivery",
+     "date": "",
+     "text": "SemiAnalysis names six players in AI power delivery — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon — and records Monolithic Power Systems taking the NVIDIA H100 socket from Vicor on cost and ease of lateral integration.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · 800 VDC system products — solid-state transformers, PSUs, battery backup and bus converters",
+     "date": "",
+     "text": "One of fourteen silicon providers NVIDIA names in its 800 VDC supplier alliance, alongside Analog Devices, AOS, Efficient Power Conversion, Innoscience, Monolithic Power Systems, Navitas, onsemi, Power Integrations, Renesas, Richtek, ROHM, STMicroelectronics and Texas Instruments.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-28",
+     "text": "Infineon joins NVIDIA's MGX AI Factory ecosystem, committing to the full 800 V to 50 V, 12 V and 6 V conversion flow — Escalates the 2025 architecture collaboration into a named platform commitment, with GaN bus converters near 1 MHz and SiC JFET protection as the two differentiated pieces. Still one of many silicon partners.",
+     "src": "https://www.prnewswire.com/news-releases/infineon-joins-nvidias-mgx-ai-factory-ecosystem-to-transform-power-delivery-architecture-for-next-generation-ai-server-racks-302785037.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-20",
+     "text": "NVIDIA names Infineon among the silicon providers for its 800 VDC data-centre architecture — The founding document of the relationship — and of the correct scepticism about it, since the same post names thirteen other silicon vendors and assigns each partner to a tier.",
+     "src": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05-28"
+  },
+  {
+   "a": "infineon",
+   "b": "schneider-electric",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "infineon",
+   "b": "siemens-energy",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-05",
+     "text": "Partnership with Siemens to supply 1.2 kV silicon-carbide power modules for use in Siemens circuit breakers — The only named customer for the solid-state-circuit-breaker device family, against a stated base of more than twenty. Note the entity: this is Siemens AG's electrification business, not Siemens Energy AG.",
+     "src": "https://www.infineon.com/row/public/documents/corporate/investors/presentations/2026/2026-08-05-q3-fy26-intro-statement-analyst-call-v01-00-en.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-05"
+  },
+  {
+   "a": "infineon",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Trade press reported Infineon supplying power chips to Tesla under a higher-volume arrangement during the Model 3 production ramp.",
+     "context": "Curated as historical rather than active, and the reason is stated rather than hidden. The sourcing is a 2018-era trade-press report tied to the Model 3 ramp, and no current-vintage source confirms the relationship persists at scale.\n\nTwo things cut against assuming continuity. Tesla announced a programme to reduce silicon carbide content per vehicle by roughly three quarters, which directly reduces the content available to any SiC supplier. And Infineon names no automotive customer in any current disclosure.\n\nThe link is recorded because a source explicitly states it and because a reader tracing Infineon's automotive position should know it existed; it is typed historical, and no inference about present volumes should be drawn from it.",
+     "source": "https://www.eetimes.com/infineon-supplying-power-chips-to-tesla-says-report/",
+     "status": "historical"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "infineon",
+   "b": "vertiv",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That position sits one tier below the covered power-shelf and rack vendors and two tiers below the facility-power OEMs: NVIDIA's own 800 VDC ecosystem roster places Infineon among silicon providers, Delta, Flex, LITEON and Megmeet among power system components, and ABB, Eaton, Schneider Electric, Vertiv, Hitachi Energy, GE Vernova and Mitsubishi Electric among data-centre power systems.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "infineon",
+   "b": "vicor",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "SemiAnalysis's competitive analysis of AI power delivery names exactly six players in one market — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon.",
+     "context": "The curated basis is an explicit six-name competitive set for hyperscale data-centre power delivery, which is the layer where both companies sell point-of-load conversion into accelerator boards.\n\nThe same analysis records the outcome that defines the segment: Vicor held the 48-volt sockets through NVIDIA's V100 and A100 generations and then lost the H100 socket to Monolithic Power Systems on cost and on ease of lateral integration into standard server designs. Neither party won that contest, and it is the specific evidence behind Gartner's observation that Infineon's leadership is being tested at the compute board level.\n\nMordor Intelligence separately places a top five of Texas Instruments, Renesas, Infineon, Monolithic Power Systems and Analog Devices at roughly 55–60% of the GPU and AI-server voltage-regulator market in 2025 — a ranking that includes Infineon and excludes Vicor. Note that Vicor is absent from every NVIDIA 800 VDC partner list, which is a fact about Vicor recorded in its own dossier and not a claim about Infineon.",
+     "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition",
+     "status": "active",
+     "via": "AI point-of-load power delivery"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "SemiAnalysis's competitive analysis of AI power delivery names exactly six players in one market — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon.",
+     "context": "An explicit six-name competitive set for hyperscale data-centre power delivery, which is the layer where both sell point-of-load conversion into accelerator boards.\n\nInfineon publishes lumped power-delivery-network resistance figures for the same design problem Vicor's factorized architecture addresses — 90 to 140 microhms for a discrete lateral layout against 10 to 15 for a backside vertical module and 7 to 10 for a substrate-integrated regulator — and states mass production of its next-generation vertical modules for the first quarter of 2027.\n\nGartner named Infineon the company to beat in AI data-centre power semiconductors in May 2026 while noting in the same report that its lead is being tested by rivals focused on the compute board level. That is the layer this link describes, and it is the one where neither company won the H100 socket.",
+     "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition",
+     "status": "active",
+     "via": "AI point-of-load power delivery"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Gartner's own report qualifies Infineon's lead as being tested by SiC and GaN competition and by \"rivals focused on the compute board level\"; SemiAnalysis's competitive read of AI power delivery names six players — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon — and records Monolithic Power Systems, not Infineon, taking the NVIDIA H100 socket from Vicor; and Mordor Intelligence places Infineon third in a GPU and AI-server voltage-regulator top five behind Texas Instruments.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Integrated smart power stages, multiphase controllers and vertical power delivery",
+     "date": "",
+     "text": "SemiAnalysis names six players in AI power delivery — Vicor, Monolithic Power Systems, Delta, Analog Devices, Renesas and Infineon — and records Monolithic Power Systems taking the NVIDIA H100 socket from Vicor on cost and ease of lateral integration.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "iren",
