@@ -6,6 +6,42 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-04 04:28 PM EST
+**Repo version:** v04.56r (no bump — this session made no code or data change; one housekeeping commit `Remember session context`)
+**Branch:** `claude/profiler-coverage-phase-b-3jimh8`
+**Model:** Fable 5.1 (this session), used only for planning — no dossier, guide or module was authored, so no §8 row and no §2 note changed.
+
+### What was done
+
+- **Audited `PROFILER-COVERAGE-PLAN.md` §8 against the filesystem.** Every row matches the files on `main`: 20 of 65 new companies landed (A1–A4 · B1–B2 · C1, C2, C3, C11), 4 of 30 guide passes (Vertiv, Schneider, Siemens Energy revisions + the Narada backfill). Register §6: G2, G3, G4, G5, G8, G9 closed; G7 Partial (CoolIT); G10 Open (DNV, S&L); G6 Open (guidance module); G11/G12 standing.
+- **Recommended a Fable-first action plan** (in chat, 04:20 PM EST): no Fable xhigh work remains; the Phase B remainder (24 companies) runs on Fable 5.1 High as eight sessions **F1–F8**, reordered so register closers and the most opaque subjects go first — F1 DNV · Sargent & Lundy · CoolIT (closes G10 + G7, first `advisor` chip, re-check and flip both rows in-session) · F2 Fluidstack · Nscale · Anthropic · F3 Aypa · Spearmint · Intersect · F4 Invenergy · Gridstor · Available Power · F5 esVolta · Strata · Hunt · F6 MGX · Excelsior Energy Capital · X-energy (first `investor` chips; Excelsior moved here from B6, B10 split in two) · F7 Compass · EdgeCore · PowerHouse · F8 Fermi America · Tract · Prime Data Centers · **F9** the Xcel head-to-head (the active reminder) as the leftover-credit filler. Opus 5 xhigh afterwards: G6 module first, then C4–C10, C12, the 26 backfills, then Phase D. **§8 and §4 were NOT edited** — the regrouping is a chat recommendation; the F1 session should note it in §4 when it flips its rows.
+- **Wrote the paste-ready prompt for the Xcel head-to-head** (in chat, this turn) — Fable 5.1 High, dossier-only, written blind to the Opus version, reported by section with every difference classed *same-fact-different-treatment* vs *search luck*, verdict into §2's confidence note, §8 `xcel-energy` row flipped, reminder moved to Completed (developer authorised the completion by commissioning the session on 2026-09-04).
+
+### Where we left off
+
+Nothing is in flight. Working tree clean, branch at `origin/main` plus this commit. The developer's Fable window (~14 h from 04:19 PM EST 2026-09-04) is open and unspent; the intended order is the Xcel head-to-head first (developer's choice, ahead of F1), then F1–F8.
+
+### Key decisions and findings
+
+- **Baseline facts for the head-to-head, verified this session:** `xcel-energy.profile.json` on `main` is byte-identical to commit `2652d30` (v04.46r), profileVersion 1, schema 7, 101 sources, 6 relationships, 13 decision makers, 7 strategyRead judgments; **never archived** (no `archive/xcel-energy.*` entry), so the Fable re-run is a normal revision — v1 goes to `archive/xcel-energy.profile.v1.json` with an archive-index entry and the new file is profileVersion 2. `xcel-energy.study.json` stays untouched — the comparison is dossier-only.
+- **Write-blind rule (added to the prompt, not in the reminder):** the Fable session must not open the Opus dossier until its own v2 is written, or the comparison measures editing rather than authoring.
+- **The head-to-head verdict has a consequence beyond the reminder:** if Fable High is materially better on the (a)-class evidence, Oncor and AEP (the other two B2 Opus substitutions) become Fable make-good candidates; if not, §2 can send the rest of Phase B to Opus without regret.
+- CHANGELOG counter 73/100 — no archive rotation due during the remaining program.
+
+### Active context
+
+- Branch `claude/profiler-coverage-phase-b-3jimh8`; repo version **v04.56r**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md` still carries the one active reminder (Xcel head-to-head) — it is the spec for the next session and is closed by that session, not this one.
+- Still owed elsewhere: G6 guidance module (Opus 5 xhigh), Phase B F1–F8, Phase C C4–C10 + C12, 26 guide backfills, Phase D.
+
+### Recommendation for next session
+
+- **Run the Xcel Energy head-to-head as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at 04:26 PM EST** (spec: the active reminder in `REMINDERS.md`; baseline commit `2652d30`; archive v1, write v2 blind, report by section, weight same-fact-different-treatment differences only, verdict into §2's confidence note, flip the §8 `xcel-energy` row, move the reminder to Completed). Then proceed to F1 (DNV · Sargent & Lundy · CoolIT) with the F1 prompt from the same chat.
+**To continue:** type `run the Xcel Energy head-to-head on Fable 5.1 High`
+
+## Previous Sessions
+
 **Date:** 2026-09-04 04:10 PM EST
 **Repo version:** v04.56r (started at v04.54r — **two** push commits this session: `58e756b` v04.55r, plus this one)
 **Branch:** `claude/eloquent-cerf-horsm0`
@@ -44,41 +80,3 @@ Both commits are pushed and merged; the working tree is clean and the branch is 
 - **Commission the G6 guidance module — "Interconnection for large loads" — as a fresh Opus 5 xhigh session, briefed on the corrected split rather than on the row's own words.** It is the last structural row in the register and the only thing §6 still asks anyone to commission. Brief it to **compose against** the state-side material already in the corpus (six utility guides, `burns-mcdonnell`, and the requester-side guides) rather than restate it, and to spend its original research on the two things genuinely absent: **the federal interconnection-rule layer** (FERC Order 2023 appears nowhere in the corpus, and large loads are governed differently from generators — that distinction is the module's spine) and **study-fee and deposit regimes**. The full paste-ready prompt was written out in chat on 2026-09-04 at 04:10 PM EST; re-derive it from `.claude/rules/industry-guidance.md` steps 1–10 and §6's corrected G6 row if it is not to hand. **The session must also re-check G6 and flip the row in the same commit**, and update the Standings block — which will then read "nothing left to commission" for the first time in the register's history.
 **To continue:** type `commission the G6 interconnection guidance module`
 
-## Previous Sessions
-
-**Date:** 2026-09-04 03:19 PM EST
-**Repo version:** v04.54r (started at v04.51r — **three** push commits this session: `966da36` v04.52r, `2eeccde` v04.53r, `2d5ff01` v04.54r, plus this context write)
-**Branch:** `claude/phase-c11-profiler-coverage-49yg1c`
-**Model:** **Opus 5 xhigh — §2 assigns Phase C to Opus natively, so there is NO substitution to record.** The three C11 rows in §8 read plain `Opus 5 xhigh`
-
-### What was done
-
-- **Phase C11 (v04.52r)** — `oklo`, `trane-technologies` and `mccarthy`: three schema-v7 dossiers at profileVersion 1, three schema-v2 study guides, 145 net new shared concepts (465 → 610), 18 relationship backfills with archival, 20 exec headshots, three lesson plans, three calendar rows, README tree entries and the three §8 rows flipped. Verified with `sync-profiler-registry.py --check` (0 of 109 out of sync), `check-profiler-study.py` (0 errors / 0 warnings, 83 guides, 610 concepts), `build-profiler-graph.py` (706 edges, 534 curated) and Playwright across all three plus a control slug with zero page errors and zero unresolved `{{term}}` markers.
-- **§6 bookkeeping, first pass (v04.53r)** — **G8 closed** and **G7 moved to Partial**, both dated `v04.52r`, plus a "Targeted re-run of G7 and G8" paragraph in the v04.51r form.
-- **§6 full re-run (v04.54r)** — the re-run the register said was owed at the close of Phase B, run one phase late. Writing an honest standings note meant re-checking every row first, and **that found two rows sitting at Partial after the work that closes them had already landed**: **G2 closed** (the corpus holds all four gen-set OEMs — `caterpillar`, `cummins`, `rolls-royce-power-systems` and `rehlko`, Rehlko being the carved-out Kohler Energy business, against an ask of two of four) and **G5 closed, over-satisfied** (six `utility` dossiers with guides against an ask of four). G4, G6 and G10 re-checked and dated unchanged. A **Standings block** was inserted directly under the table, ahead of the four dated re-check paragraphs, sorting what is left by **scheduled** (G7, G10 — both coverage-plan §8 row B10) versus **structural** (G4, G6 — no ledger row can produce them).
-
-### Where we left off
-
-All three commits are pushed and merged; the working tree is clean and the branch is at `origin/main`. The register now stands at **six closed** (G1, G2, G3, G5, G8, G9), **two Partial** (G4, G7), **two Open** (G6, G10), **two standing judgments** (G11, G12). The developer asked for a paste-ready commissioning prompt for the **G4 guidance module**, which was delivered in chat this turn and is reproduced in the recommendation below.
-
-### Key decisions and findings
-
-- **The recommendation to "rewrite the stale commission-first paragraph" was deliberately not followed.** That paragraph is a dated record in an append-only trail; rewriting it would have made §6 lie about its own history. The real problem was the **order** a top-down reader met things in, so current standings were inserted **above** the trail and all four historical paragraphs were left untouched.
-- **The register's staleness is a structural failure mode, not a one-off.** G2 and G5 sat wrong for four and five repo versions because their own text named the sessions that would close them and nobody re-ran the check afterwards. Nothing in the repo fires that check automatically.
-- **A prior session's assumption about G4 was wrong and is corrected here.** The v04.51r entry said G4's module "needs a source document from the developer". It does not: **five of the seven existing guidance modules have no ingested source at all** — only `nvidia-800vdc-white-paper-2026-08.pdf` and the EO 14420 HTML/txt exist under `industry-guidance/sources/`. The other five are teaching syntheses that declare provenance in a `**Provenance:**` line (see `power-infrastructure-aidc-analysis.md`). A G4 session can be commissioned today with no upload.
-- **G10 was deliberately left Open on a judgment call.** `black-veatch` is covered but as an EPC, and the row names it among the independent engineers; whether an EPC dossier can occupy the IE seat is the developer's call, not a re-check's.
-- **`powell-industries`, not `powell`.** An early probe on the short slug returned a false negative that would have contradicted G4's v04.51r text.
-- Six curly apostrophes written earlier in the session were normalised to straight, matching the file's 84-to-0 convention.
-
-### Active context
-
-- Branch `claude/phase-c11-profiler-coverage-49yg1c`; repo version **v04.54r**; CHANGELOG counter **71/100**.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- Registry at **109 companies**, concepts at **610**, study guides at **83**, graph at **706 edges**.
-- `REMINDERS.md` still carries one active reminder: the **Fable 5.1 High vs Opus 5 xhigh head-to-head on the Xcel Energy dossier** (baseline is `xcel-energy.profile.json` at `v04.46r`, commit `2652d30`).
-- Still owed elsewhere: Fable session **B10** (`coolit` closes G7, `dnv`/`sargent-lundy` close G10, plus `mgx`, `x-energy`), and a guidance session for **G6** ("Interconnection for large loads").
-
-### Recommendation for next session
-
-- **Commission the G4 guidance module — "The grid-equipment shortage: GOES, bushings, test bays, lead times" — as a fresh Opus 5 xhigh session.** It is the top of the register's own restated list, it is the only remaining gap whose public sources are already in the corpus (the Siemens Energy Grid Technologies spine, `powell-industries`, plus `hitachi-energy`, `ge-vernova`, `abb`, `mitsubishi-electric`), and no scheduled Profiler session will ever close it. The full paste-ready prompt was written out in chat on 2026-09-04 at 03:19 PM EST; re-derive it from `.claude/rules/industry-guidance.md` steps 1–10 if it is not to hand. **The session must also flip §6's G4 row to Closed with a dated re-check AND update the Standings block in the same commit** — that block names G4 and G6 as the two structural rows and goes stale the moment the module lands, which is precisely the failure this session spent a commit repairing.
-**To continue:** type `commission the G4 grid-equipment-shortage guidance module on Opus 5 xhigh`
