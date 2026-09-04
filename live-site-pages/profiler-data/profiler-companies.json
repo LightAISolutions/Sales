@@ -2011,11 +2011,11 @@
       "categories": [
         "utility"
       ],
-      "tagline": "The eight-state utility whose balance sheet is organized around wildfire and whose supply chain is contracted upstream rather than project by project — a $640M Marshall Fire settlement and an unbounded Smokehouse Creek exposure, GE Vernova turbine and wind reservations plus a NextEra joint development agreement both signed before the tariffs that price the load, a 1,900 MW Google package recovered through a proposed Clean Energy Accelerator Charge, and ~2 GW contracted against a 20 GW-plus pipeline it keeps deliberately apart.",
+      "tagline": "The eight-state utility whose AI-load story is gated by commissions rather than demand — ~2 GW contracted against a 20 GW-plus pipeline, one approved large-load tariff (Minnesota) and two pending (Colorado, Wisconsin), a 1,900 MW Google package recovered through a customer-specific Clean Energy Accelerator Charge, turbines and wind reserved with GE Vernova, Siemens Energy and NextEra before the tariffs were decided, and a Smokehouse Creek liability the company says it cannot cap.",
       "hq": "Minneapolis, MN, USA",
       "ticker": "NASDAQ: XEL",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "xcelenergy.com",
         "investors.xcelenergy.com",
@@ -2025,8 +2025,8 @@
         "xcelenergytransmission.com",
         "coloradospowerpathway.com"
       ],
-      "srcTotal": 101,
-      "srcFirstPct": 46,
+      "srcTotal": 140,
+      "srcFirstPct": 54,
       "kpiNorm": true
     },
     {

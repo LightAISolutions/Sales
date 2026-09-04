@@ -1802,18 +1802,6 @@
   {
    "a": "aligned",
    "b": "xcel-energy",
-   "curated": {
-    "b": {
-     "type": "customer",
-     "note": "Third-party attribution only, and the largest single third-party-attributed project in the Southwestern Public Service territory.",
-     "context": "The Edison Electric Institute's August 28, 2026 compilation lists a 600 MW Aligned Data Centers project at Abernathy, Texas under Xcel Energy. Abernathy is in the Texas Panhandle inside Southwestern Public Service's territory — the operating company with the highest rate-base growth rate in the group and no large-load tariff of its own in either of its states.",
-     "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues-and-Policy/Large-Load-Projects-and-Tariffs.pdf",
-     "status": "active",
-     "since": "2026",
-     "scale": "600 MW",
-     "via": "Large-load service listed under Xcel Energy in the Edison Electric Institute's large-customer compilation"
-    }
-   },
    "evid": [
     {
      "where": "Capabilities · Gigascale AI campuses / powered land (Project Caprock)",
@@ -1828,13 +1816,6 @@
      "text": "Project Caprock breaks ground — 540 MW, 313-acre, ~1.65M sq ft six-building campus in Hale County (Abernathy), Northwest Texas on Aligned-funded Xcel Energy infrastructure; first facility LBB-01 targeted Q1 2027 — Aligned's first true gigascale greenfield — sited where power and land are unconstrained rather than where data-center clusters already exist, with the utility build funded by the developer to control the timeline.",
      "src": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
      "from": "a"
-    },
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "And for the hyperscalers and developers here — Google by name from the company, and Meta, QTS and Aligned Data Centers from the Edison Electric Institute's project list — it is the utility whose Minnesota tariff is already approved at a 75 percent minimum demand charge over fifteen years, and whose Colorado version, filed at a 50 MW threshold and 80 percent, will be decided in early 2027.",
-     "src": "",
-     "from": "b"
     }
    ],
    "last": "2026-04-09"
@@ -2569,6 +2550,23 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "amazon",
+   "b": "xcel-energy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Amazon halted its planned Becker, Minnesota data center in May 2025 'during a fight over state regulations', per the Star Tribune — a lost prospect, not a customer.",
+     "context": "The Star Tribune describes Amazon's retreat as the 'latest gut punch for Becker', the town hosting Xcel's Sherco site and the Microsoft parcel. The episode is recorded because it is the one public case of a hyperscaler leaving Xcel's queue, and because it happened in the session that produced Minnesota's data-center cost-protection law. No Xcel first-party source names Amazon.",
+     "source": "https://www.startribune.com/amazon-retreat-from-its-planned-minnesota-data-center-is-latest-gut-punch-for-becker/601371681",
+     "status": "historical",
+     "since": "2025-05",
+     "scale": "planned Becker, MN data center halted"
+    }
+   },
+   "evid": [],
+   "last": "2025-05"
   },
   {
    "a": "apex-clean-energy",
@@ -11308,27 +11306,6 @@
    "last": "2026-07-15"
   },
   {
-   "a": "entergy",
-   "b": "xcel-energy",
-   "evid": [
-    {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "Basis: rather than certifying gas plant for a named customer as Entergy does, Xcel filed a 1,900 MW clean-energy package — 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration storage — for approval through a proposed Clean Energy Accelerator Charge, under which 'Google will pay all costs for its new service for the duration of the contract' and the company projects approximately $1.1B of benefits to other Minnesota customers.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Capabilities · Large-load and data-center service — the three-state tariff programme and the Google agreement",
-     "date": "",
-     "text": "Against Entergy's sealed single-customer certificates and AEP's 69 GW of contracted load, Xcel's ~2 GW is small; against the Colorado tariff's 50 MW threshold, it is also the widest net.",
-     "src": "",
-     "from": "b"
-    }
-   ],
-   "last": ""
-  },
-  {
    "a": "envision-energy",
    "b": "fluence",
    "curated": {
@@ -14372,35 +14349,49 @@
    "curated": {
     "b": {
      "type": "supplier",
-     "note": "Equipment contracted upstream of any specific project, and before the tariffs that would price the load were approved.",
-     "context": "Xcel's February 3, 2026 release describes a reservation agreement for five F-class gas turbines manufactured at GE Vernova's United States facilities, a capacity reservation agreement for multiple gigawatts of wind projects, collaboration on grid equipment including synchronous condenser technology, and a joint technology and innovation collaboration agreement. GE Vernova chief executive Scott Strazik is quoted. The Q1 and Q2 2026 decks restate the scope as twelve gas combustion-turbine reservations with options for additional slots into the 2030s, and note that Xcel is bidding several gigawatts of wind projects into near-term solicitations using GE Vernova turbines. POWER Magazine reports the five turbines bring Xcel's total to 24 across vendors.",
-     "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-GE-Vernova-Announce-Strategic-Alliance-Agreement-to-Advance-the-Future-of-Energy/default.aspx",
+     "note": "A February 3, 2026 alliance reserving five F-class gas turbines and multi-gigawatt wind turbine capacity into the 2030s, building on a 2025 synchronous-condenser order.",
+     "context": "The company's release describes 'a Reservation Agreement for five F-class gas turbines' and 'a Capacity Reservation Agreement for multiple gigawatts of wind turbines'. POWER magazine adds that the five turbines are 'incremental to GE Vernova's existing backlog' and bring Xcel's total gas combustion-turbine orders to 24 across all vendors, and that Xcel intends to bid several gigawatts of wind projects with GE Vernova turbines into pending RFPs. The Q2 2026 deck counts '12 gas CT reservations with options for additional slots into 2030s'. All of this precedes the Colorado and Wisconsin tariff decisions, which is the point: supply was locked before load was.",
+     "source": "https://newsroom.xcelenergy.com/news/xcel-energy-and-ge-vernova-announce-strategic-alliance-agreement-to-advance-the-future-of-energy",
      "status": "active",
-     "since": "2026",
-     "scale": "Five F-class gas turbines reserved (twelve combustion-turbine reservations in the restated figure, with options into the 2030s) plus a capacity reservation for multiple gigawatts of wind turbines",
-     "via": "Strategic alliance agreement signed February 2026"
+     "since": "2026-02",
+     "scale": "five F-class gas turbines reserved; multiple gigawatts of wind turbine capacity",
+     "via": "Strategic Alliance Agreement — gas turbines, wind turbines, synchronous condensers"
     }
    },
    "evid": [
     {
      "where": "Summary",
      "date": "",
-     "text": "Basis: about $5B of the $60B base capital plan is wildfire mitigation, a planned 2029 Colorado securitization is already embedded in the plan's own capital tables, and excess liability insurance costs about $135M a year for $450M of coverage after the market repriced; against that, the company signed two named framework agreements in the same week of February 2026 — a strategic alliance with GE Vernova reserving five F-class gas turbines and multiple gigawatts of wind turbines, and a memorandum of understanding with a NextEra Energy subsidiary to co-develop generation for large loads — and closed a 1,900 MW clean-energy package for a single Google campus.",
+     "text": "It has already reserved the equipment (five GE Vernova F-class turbines within twelve gas-turbine reservations, ten Siemens Energy turbines, multi-gigawatt wind reservations, a 2 GW NextEra joint development agreement) and 85 percent of the $7 billion equity the $60 billion base plan needs.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For suppliers, the actionable fact is that generation and turbine supply have been reserved at the alliance level (GE Vernova, Siemens Energy, NextEra) ahead of project awards, so entry runs through those partners or through the Colorado, Upper Midwest and SPS all-source solicitations.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: within one week of February 2026 it signed a strategic alliance with GE Vernova — a reservation agreement for five F-class gas turbines, a capacity reservation for multiple gigawatts of wind turbines, and collaboration on grid equipment including synchronous condensers, later restated as twelve gas combustion-turbine reservations with options into the 2030s — and a memorandum of understanding with a NextEra Energy subsidiary, converted to a joint development agreement in April 2026, to co-develop generation for approximately 2 GW of data-center capacity under a fully regulated ownership structure mixing power purchase agreements, build-own-transfer projects and self-builds.",
+     "text": "(High confidence) We assess that the company has deliberately bought supply optionality ahead of load: five GE Vernova F-class turbines inside twelve gas-turbine reservations, ten Siemens Energy turbines (2,088 MW), multi-gigawatt wind reservations and a 2 GW NextEra joint development agreement were all executed before any tariff outside Minnesota was approved.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Recent Reporting",
      "date": "2026-02-03",
-     "text": "Xcel and GE Vernova announced a strategic alliance reserving five F-class gas turbines and multiple gigawatts of wind turbine capacity — Supply chain contracted upstream rather than project by project — later restated as twelve gas combustion-turbine reservations with options into the 2030s.",
-     "src": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-GE-Vernova-Announce-Strategic-Alliance-Agreement-to-Advance-the-Future-of-Energy/default.aspx",
+     "text": "GE Vernova Strategic Alliance: reservation for five F-class gas turbines, capacity reservation for 'multiple gigawatts' of wind turbines, synchronous condensers, running into the 2030s — Equipment was reserved before the Colorado or Wisconsin tariffs existed — supply is the constraint Xcel chose to solve first.",
+     "src": "https://newsroom.xcelenergy.com/news/xcel-energy-and-ge-vernova-announce-strategic-alliance-agreement-to-advance-the-future-of-energy",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-01",
+     "text": "Siemens Energy to supply ten SGT6-5000F turbines and generators (2,088 MW) for Tolk Station and a new Gaines County peaker in Texas, first deliveries early 2026 — The larger of Xcel's two turbine commitments is with Siemens, not GE Vernova — SPS's gas build is already equipment-secured.",
+     "src": "https://www.power-eng.com/gas/turbines/with-power-demand-growing-xcel-energy-buys-10-large-gas-turbines-from-siemens-energy/",
      "from": "b"
     }
    ],
@@ -15086,74 +15077,95 @@
    "curated": {
     "b": {
      "type": "customer",
-     "note": "The only large-load customer Xcel names itself, and the only one whose cost-recovery vehicle is disclosed.",
-     "context": "Xcel's February 24, 2026 release states Google 'will pay all costs for its new service for the duration of the contract' and projects approximately $1.1 billion of benefits to other Minnesota customers, with $50 million directed to Xcel's Capacity*Connect programme. The Q2 2026 deck records that roughly two thirds of the generation and storage is contracted by Google. The storage inside the package is a 300 MW, 30 GWh Form Energy iron-air system — a hundred-hour duration procured inside a customer's service agreement rather than through a resource plan. Amanda Peterson Corio, Google's head of data center energy, is quoted in the release. A commission decision on the charge is expected in early 2027.",
-     "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota/default.aspx",
-     "status": "active",
-     "since": "2026",
-     "scale": "1,900 MW clean-energy package at Pine Island, Minnesota — 1,400 MW wind, 200 MW solar, 300 MW long-duration storage",
-     "via": "Electric service agreement with a proposed Clean Energy Accelerator Charge"
+     "note": "NSP-Minnesota will serve Google's Pine Island data center under an ESA that recovers 1,400 MW of wind, 200 MW of solar and a 300 MW / 30 GWh iron-air battery from Google through a Clean Energy Accelerator Charge, pending Minnesota PUC approval.",
+     "context": "The company's February 23, 2026 release states the agreement 'will provide for 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration energy storage, along with a $50 million investment towards Xcel Energy's Capacity*Connect Program', that Google will cover new grid infrastructure costs, and that the ESA requires MPUC approval. The Q2 2026 8-K adds the counterparty name (Echo Zone, LLC, a Google subsidiary), the April 2026 filing date and the claim of approximately $1.1 billion of customer benefits. Utility Dive quotes CEO Frenzel calling the deal the template for the company's large-load tariff strategy. The comment period closes September 8, 2026 with a decision expected in early 2027; the relationship is recorded as announced rather than active because the ESA is not yet approved.",
+     "source": "https://newsroom.xcelenergy.com/news/xcel-energy-to-power-new-google-data-center-in-minnesota",
+     "status": "announced",
+     "since": "2026-02",
+     "scale": "1,900 MW of new clean energy and storage capacity",
+     "via": "Electric Service Agreement with Clean Energy Accelerator Charge — Pine Island, MN"
     }
    },
    "evid": [
     {
      "where": "Summary",
      "date": "",
-     "text": "It has approximately 2 GW of data-center load contracted or under construction against more than 20 GW of additional pipeline, one named customer — Google, at Pine Island, Minnesota, under a 1,900 MW clean-energy package including a 300 MW / 30 GWh iron-air battery — and, on the other side of the ledger, roughly $640M paid to settle the 2021 Marshall Fire with none of it from customers, plus a Texas Panhandle fire its own regulator's forest service attributed to its poles, on which about $404M of settlements have been reached against insurance that is nearly exhausted.",
+     "text": "It has roughly 2 GW of data-center load contracted or under construction against a pipeline it states at more than 20 GW, and the instruments that decide whether that load pays for itself — the Colorado and Wisconsin large-load tariffs and the Google Clean Energy Accelerator Charge — are all pending commission decisions in early 2027; only Minnesota's tariff is approved.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "Collection gap: Xcel names only one data-center customer and redacts the fifth row of its own pipeline slide; no supplier is named on any storage project except the Form Energy system inside the Google package, and the company states the omission is deliberate — 'additional strategic partnerships across supply chain in place but disclosure limited due to confidentiality'; no Colorado wildfire-liability statute exists in its own account of which states passed legislation; and the Q3 2026 earnings date was unposted by the company, with trackers disagreeing.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "Basis: about $5B of the $60B base capital plan is wildfire mitigation, a planned 2029 Colorado securitization is already embedded in the plan's own capital tables, and excess liability insurance costs about $135M a year for $450M of coverage after the market repriced; against that, the company signed two named framework agreements in the same week of February 2026 — a strategic alliance with GE Vernova reserving five F-class gas turbines and multiple gigawatts of wind turbines, and a memorandum of understanding with a NextEra Energy subsidiary to co-develop generation for large loads — and closed a 1,900 MW clean-energy package for a single Google campus.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "And for the hyperscalers and developers here — Google by name from the company, and Meta, QTS and Aligned Data Centers from the Edison Electric Institute's project list — it is the utility whose Minnesota tariff is already approved at a 75 percent minimum demand charge over fifteen years, and whose Colorado version, filed at a 50 MW threshold and 80 percent, will be decided in early 2027.",
+     "text": "We assess Xcel Energy as the utility whose value to this ecosystem is the tariff design rather than the megawatts: it is the first utility to put a hyperscaler's full incremental cost — 1,400 MW of wind, 200 MW of solar and a 300 MW / 30 GWh iron-air battery — into a customer-specific charge (the Google Clean Energy Accelerator Charge) and to file large-load tariffs in three states with published minimum-demand, term and exit-fee parameters.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "(High confidence) We assess that the Google agreement is a materially different commercial template from anything else in this corpus, and that its significance is the charge rather than the megawatts.",
+     "text": "Basis: the company's own slide shows ~2 GW contracted against more than 20 GW of pipeline and states it expects only ~1 GW signed in 2026; the Colorado and Wisconsin tariffs, the Google CEAC and the SPS portfolio certificates all decide in late 2026 or early 2027, and only Minnesota's tariff is approved.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: rather than certifying gas plant for a named customer as Entergy does, Xcel filed a 1,900 MW clean-energy package — 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration storage — for approval through a proposed Clean Energy Accelerator Charge, under which 'Google will pay all costs for its new service for the duration of the contract' and the company projects approximately $1.1B of benefits to other Minnesota customers.",
+     "text": "(Low confidence) We assess that the Google package is Xcel's bid to be the tariff designer of record for hyperscalers in MISO — a customer-funded 1,900 MW clean-energy build with a 100-hour iron-air battery.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "INDICATORS TO WATCH — September 8, 2026: Minnesota comment period closes on the Google ESA/CEAC; a decision in early 2027 approving 1,900 MW on one contract would confirm Judgment 7.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Google Pine Island package — Electric Service Agreement plus Clean Energy Accelerator Charge",
+     "date": "",
+     "text": "A February 2026 agreement under which NSP-Minnesota serves Google's Pine Island, Minnesota data center and adds 1,900 MW of new resources — 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration storage including a 300 MW / 30 GWh Form Energy iron-air battery — recovered from Google through a Clean Energy Accelerator Charge, with Google also funding $50 million of the Capacity*Connect distributed-storage program and paying all new grid infrastructure costs, per the company's February 23–24, 2026 releases.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Google Pine Island package — Electric Service Agreement plus Clean Energy Accelerator Charge",
+     "date": "",
+     "text": "The first hyperscaler contract in this corpus to recover a named clean-energy build from one customer outside a resource plan; Latitude Media frames it as the maturing of Google's clean transition tariff concept.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Recent Reporting",
-     "date": "2026-02-24",
-     "text": "Xcel filed a 1,900 MW clean-energy package to serve a Google data center at Pine Island, Minnesota, recovered through a proposed Clean Energy Accelerator Charge — The most distinctive commercial structure in this file: 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration storage, with Google paying all costs for the duration of the contract and roughly $1.1B of projected benefit to other customers.",
-     "src": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota/default.aspx",
+     "date": "2026-08-31",
+     "text": "Minnesota Attorney General Ellison and the Citizens Utility Board file reconsideration petitions against the PUC's 3–2 verbal decision granting NSP-Minnesota ~$211 million over two years at a 9.6 percent ROE; the PUC's response is due mid-October — The commission that approved Xcel's large-load tariff is the same one now being asked to reopen its base-rate ROE — the Google decision in early 2027 arrives into a contested record.",
+     "src": "https://minnesotareformer.com/2026/08/24/attorney-general-keith-ellison-consumer-advocates-urge-state-board-to-reconsider-xcels-hefty-increase/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "Q1 2026: ongoing EPS $0.91 matches the Zacks consensus; revenue $4.02 billion misses by 4.8 percent; guidance reaffirmed; Google agreement filed with the PUC with '$1.1 billion of benefits' claimed for customers — The first quarter in which the Google package was a filed proceeding rather than an announcement.",
+     "src": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-First-Quarter-2026-Earnings-Report/default.aspx",
      "from": "b"
     },
     {
      "where": "Recent Reporting",
      "date": "2025-10-21",
-     "text": "Bria Shea named president of Xcel Energy Minnesota, North Dakota and South Dakota — A regulatory-side career — she led government affairs and regulatory strategy for resource, transmission and distribution planning — installed over the state that would approve the large-load tariff and sign the Google agreement.",
-     "src": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2025/Bria-Shea-named-President-Xcel-Energy--Minnesota-North-and-South-Dakota/default.aspx",
+     "text": "Bria Shea named President, Xcel Energy – Minnesota, North Dakota and South Dakota, reporting to the CEO — The executive who signed the Google release four months later; her prior role was regional planning and policy, which is the skill the CEAC proceeding needs.",
+     "src": "https://newsroom.xcelenergy.com/news/bria-shea-named-president-xcel-energy-minnesota-north-and-south-dakota",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-02-20",
+     "text": "Minnesota PUC approves the Upper Midwest Energy Plan: 3,430 MW wind, 550 MW solar, 600 MW storage by 2030, the Lyon County peaker, all coal retired by 2030 and an 80-percent-plus carbon reduction — The resource plan that the Google package sits on top of — 1,900 MW more, outside the plan, on one contract.",
+     "src": "https://newsroom.xcelenergy.com/news/xcel-energy-gains-approval-for-new-energy-resources-to-deliver-reliable-clean-energy-in-the-upper-midwest",
      "from": "b"
     }
    ],
-   "last": "2026-02-24"
+   "last": "2026-08-31"
   },
   {
    "a": "google",
@@ -20151,25 +20163,25 @@
    "curated": {
     "b": {
      "type": "customer",
-     "note": "Third-party attribution only — Xcel does not name this customer in any first-party source reviewed.",
-     "context": "The Edison Electric Institute's August 28, 2026 compilation lists an $800 million Meta data center project at Rosemount, Minnesota under Xcel Energy. Xcel's own Minnesota disclosure names only Google, so the Rosemount project sits in the unnamed portion of the roughly 2 GW contracted block or in the pipeline behind it; the sources reviewed do not say which.",
-     "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues-and-Policy/Large-Load-Projects-and-Tariffs.pdf",
+     "note": "NSP-Minnesota supplies Meta's Rosemount data center under three ESAs the Minnesota PUC approved in October 2023; Meta pays for its transmission upgrades per the company.",
+     "context": "The company's March 15, 2024 story states Meta is investing more than $800 million at UMore Park with about 1,000 construction and 100 permanent jobs, that 'Meta pays transmission upgrades', and that the supply agreement was approved by the MPUC. KSTP and the Star Tribune reported the October 2023 approval of three ESAs for a $700 million facility at a discounted rate. Utility Dive's August 2024 report listed Meta among the confirmed interests in Xcel's 6.7 GW queue. This is the only hyperscaler contract on the system that is both approved and in service.",
+     "source": "https://stories.xcelenergy.com/ArticlePage/?id=Building-the-21st-century-economy--Xcel-Energy-to-power-new-Meta-data-center",
      "status": "active",
-     "since": "2026",
-     "scale": "$800 million project",
-     "via": "Large-load service listed under Xcel Energy in the Edison Electric Institute's large-customer compilation"
+     "since": "2023-10",
+     "scale": ">$800 million investment; MPUC-approved supply agreement",
+     "via": "Electric service agreements — UMore Park, Rosemount, MN"
     }
    },
    "evid": [
     {
-     "where": "Summary",
-     "date": "",
-     "text": "And for the hyperscalers and developers here — Google by name from the company, and Meta, QTS and Aligned Data Centers from the Edison Electric Institute's project list — it is the utility whose Minnesota tariff is already approved at a 75 percent minimum demand charge over fifteen years, and whose Colorado version, filed at a 50 MW threshold and 80 percent, will be decided in early 2027.",
-     "src": "",
+     "where": "Recent Reporting",
+     "date": "2024-08-05",
+     "text": "Utility Dive: Xcel reports 6.7 GW of data-center project requests with confirmed interest from Meta and Microsoft in Minnesota and QTS in Colorado; 'nearly half' of growth now from tech companies — The earliest public sizing of the queue — the 20 GW-plus figure of 2026 is three times this.",
+     "src": "https://www.utilitydive.com/news/xcel-energy-data-center-meta-wildfire-earnings/723239/",
      "from": "b"
     }
    ],
-   "last": "2026"
+   "last": "2024-08-05"
   },
   {
    "a": "meta",
@@ -20589,6 +20601,31 @@
    },
    "evid": [],
    "last": "2025-05"
+  },
+  {
+   "a": "microsoft",
+   "b": "xcel-energy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Xcel sold Microsoft 295 acres near its Becker, Minnesota Sherco site for a data center, per the Star Tribune; Microsoft was a confirmed interest in the 2024 queue per Utility Dive. No ESA, tariff filing or load figure has been published, so the link is recorded as a land sale rather than a supply relationship.",
+     "context": "The Star Tribune reports that 'Xcel sold 295 acres near Becker to Microsoft' alongside a 348-acre sale to Elk River Technologies; Utility Dive's August 5, 2024 article lists Microsoft among the companies with 'confirmed interest' in Xcel's 6.7 GW of data-center requests in Minnesota. Neither source states a signed electric service agreement, and Xcel's own channels do not name Microsoft as a customer. Collection gap: whether Microsoft is one of the undisclosed contracts on the company's pipeline slide cannot be established from public sources.",
+     "source": "https://www.startribune.com/microsoft-building-data-center-in-becker-xcel-stress-on-grids/600344079",
+     "status": "active",
+     "since": "2024",
+     "scale": "295 acres near Becker, MN"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-08-05",
+     "text": "Utility Dive: Xcel reports 6.7 GW of data-center project requests with confirmed interest from Meta and Microsoft in Minnesota and QTS in Colorado; 'nearly half' of growth now from tech companies — The earliest public sizing of the queue — the 20 GW-plus figure of 2026 is three times this.",
+     "src": "https://www.utilitydive.com/news/xcel-energy-data-center-meta-wildfire-earnings/723239/",
+     "from": "b"
+    }
+   ],
+   "last": "2024-08-05"
   },
   {
    "a": "mitsubishi-electric",
@@ -21418,6 +21455,32 @@
    "last": ""
   },
   {
+   "a": "mortenson",
+   "b": "xcel-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Mortenson is building the company-owned High Plains Solar + BESS project (250 MW / 200 MW, $685 million, December 2027), per the company's June 30, 2026 release.",
+     "context": "The release names Mortenson as the builder of one of the two company-owned projects approved in Colorado's Near-Term Procurement. It is the only EPC Xcel names in the research window; the Q2 2026 call refers to 'program-level top-tier EPCs secured across entire portfolio' without naming them, and the company states that other supply-chain partnerships are undisclosed for confidentiality.",
+     "source": "https://newsroom.xcelenergy.com/news/xcel-energy-announces-high-plains-solar-+-battery-energy-storage-project-in-morgan-county",
+     "status": "announced",
+     "since": "2026-06",
+     "scale": "250 MW solar + 200 MW BESS, $685 million",
+     "via": "High Plains Solar + Battery Energy Storage, Morgan County, CO"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-30",
+     "text": "High Plains Solar + BESS in Morgan County, Colorado: 250 MW solar and 200 MW storage, $685 million, company-owned, built with Mortenson, in service December 2027 — One of only two company-owned projects in the Colorado NTP — the EPC is named, which is rarer than it should be in Xcel's disclosures.",
+     "src": "https://newsroom.xcelenergy.com/news/xcel-energy-announces-high-plains-solar-+-battery-energy-storage-project-in-morgan-county",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-30"
+  },
+  {
    "a": "narada",
    "b": "nvidia",
    "curated": {
@@ -21689,17 +21752,17 @@
    "curated": {
     "b": {
      "type": "partner",
-     "note": "Entity granularity is a stated limit: Xcel names only 'a NextEra Energy subsidiary', and NextEra chairman and chief executive John Ketchum is the quoted principal. The specific subsidiary is not identified in any source reviewed, so the covered node here stands for the NextEra development franchise rather than a named counterparty.",
-     "context": "Xcel's February 4, 2026 release announces a memorandum of understanding with a NextEra Energy subsidiary to deliver generation solutions and enable large load across Xcel's service territories; the Q1 2026 deck records the joint development agreement as signed in April 2026 and describes co-developing generation solutions for 2 GW of data-center capacity under a fully regulated ownership structure mixing power purchase agreements, build-own-transfer projects and self-builds, with the partner engaged across the data-center lifecycle from system planning to operation. POWER Magazine reports the memorandum covers generation, storage and transmission with Colorado, Texas and New Mexico highlighted, and quotes Bob Frenzel on engaging early with leading developers to anticipate system needs.",
-     "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-NextEra-Energy-Agree-to-Deliver-Generation-Solutions-and-Enable-Large-Load-Across-Xcel-Energys-Service-Territories/default.aspx",
+     "note": "A February 2026 MOU, converted to a joint development agreement in April 2026, to co-develop generation for 2 GW of data-center capacity across Xcel's eight states under a fully regulated ownership structure.",
+     "context": "The company's February 4, 2026 release states the MOU covers accelerating generation, storage and transmission for large load 'across Xcel Energy's service territories' with a formal joint development agreement 'expected in the coming months'. The Q1 2026 investor slides, per Investing.com, describe the JDA as 'co-developing generation solutions for 2 GW of data center capacity, with plans to expand' using 'a mix of power purchase agreements, build-operate-transfer arrangements, and self-build projects'. RTO Insider quotes Frenzel on combining the two companies' sales, development and analytical teams. Registered here against the NextEra Energy Resources slug because the development counterparty is NextEra's competitive arm; the corporate signatory is NextEra Energy, Inc.",
+     "source": "https://newsroom.xcelenergy.com/news/xcel-energy-and-nextera-energy-agree-to-deliver-generation-solutions-and-enable-large-load-across-xcel-energys-service-territories",
      "status": "active",
-     "since": "2026",
-     "scale": "Approximately 2 GW of data-center capacity co-developed, with plans to expand",
-     "via": "Memorandum of understanding February 2026, converted to a joint development agreement in April 2026"
+     "since": "2026-02",
+     "scale": "2 GW of data center capacity (joint development agreement)",
+     "via": "Joint development agreement — generation, storage and interconnection for large load"
     }
    },
    "evid": [],
-   "last": "2026"
+   "last": "2026-02"
   },
   {
    "a": "nvidia",
@@ -24331,17 +24394,17 @@
    "curated": {
     "b": {
      "type": "customer",
-     "note": "Third-party attribution only — Xcel does not name this customer in any first-party source reviewed.",
-     "context": "The Edison Electric Institute's August 28, 2026 Large Load Projects and Tariffs compilation lists a 177 MW QTS data center project in Aurora, Colorado under Xcel Energy. Neither the 10-K, the quarterly releases, the earnings decks nor any Xcel press release reviewed names QTS, so the relationship rests on the trade-association list rather than on the utility's own disclosure.",
-     "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues-and-Policy/Large-Load-Projects-and-Tariffs.pdf",
+     "note": "QTS's Aurora, Colorado campus is Xcel's single largest customer at 177 MW, per CPR.",
+     "context": "CPR's July 8, 2026 report states the campus has '177-megawatt capacity, making it Xcel Energy's single largest customer', is served by 'a $28 million, 230-kilovolt transmission line', and is seeking permits for 98 additional diesel backup generators. Utility Dive's August 2024 report named QTS as a confirmed Colorado interest in the queue. The 'since' year is the queue disclosure, not a contract date, which the sources do not give.",
+     "source": "https://www.cpr.org/2026/07/08/qts-aurora-data-center-diesel-generators/",
      "status": "active",
-     "since": "2026",
-     "scale": "177 MW",
-     "via": "Large-load service listed under Xcel Energy in the Edison Electric Institute's large-customer compilation"
+     "since": "2024",
+     "scale": "177-megawatt capacity",
+     "via": "Aurora, CO campus served by a $28 million 230 kV line"
     }
    },
    "evid": [],
-   "last": "2026"
+   "last": "2024"
   },
   {
    "a": "quanta-services",
@@ -24956,6 +25019,18 @@
   {
    "a": "siemens-energy",
    "b": "xcel-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Siemens Energy is supplying ten SGT6-5000F turbines and ten SGen6-1000A generators totaling 2,088 MW for SPS's Tolk conversion and a new Gaines County plant, per Power Engineering.",
+     "context": "Power Engineering's October 1, 2025 report states '10 total' SGT6-5000F turbines and generators of '2,088 MW total' split between Tolk Station in Muleshoe (five turbines, 928 MW, replacing coal) and a new Gaines County peaker (1,160 MW), with 'first turbine deliveries scheduled for early 2026'. It quotes then-SPS president Adrian Rodriguez on '17 new power initiatives and more than 5,000 megawatts of added capacity by 2030'. The order is larger than the GE Vernova gas reservation and is the equipment behind SPS's ~2,600 MW company-owned recommendation; Xcel's own channels did not announce it.",
+     "source": "https://www.power-eng.com/gas/turbines/with-power-demand-growing-xcel-energy-buys-10-large-gas-turbines-from-siemens-energy/",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "10 SGT6-5000F turbines, 2,088 MW",
+     "via": "Gas turbines and generators for Tolk Station and a Gaines County peaker (Texas)"
+    }
+   },
    "evid": [
     {
      "where": "Recent Reporting",
@@ -24963,6 +25038,34 @@
      "text": "Xcel Energy orders 10× SGT6-5000F (2,088 MW) for Texas — 'dispatchable power is no longer optional' — Utility-scale validation of the F-class in the exact geography (Texas Panhandle) where data-center load growth is straining the grid; replaces retired coal with first deliveries in early 2026.",
      "src": "https://www.siemens-energy.com/us/en/home/press-releases/Siemens-Energy-to-supply-ten-gas-turbines-to-Xcel-Energy.html",
      "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It has already reserved the equipment (five GE Vernova F-class turbines within twelve gas-turbine reservations, ten Siemens Energy turbines, multi-gigawatt wind reservations, a 2 GW NextEra joint development agreement) and 85 percent of the $7 billion equity the $60 billion base plan needs.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For suppliers, the actionable fact is that generation and turbine supply have been reserved at the alliance level (GE Vernova, Siemens Energy, NextEra) ahead of project awards, so entry runs through those partners or through the Colorado, Upper Midwest and SPS all-source solicitations.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the company has deliberately bought supply optionality ahead of load: five GE Vernova F-class turbines inside twelve gas-turbine reservations, ten Siemens Energy turbines (2,088 MW), multi-gigawatt wind reservations and a 2 GW NextEra joint development agreement were all executed before any tariff outside Minnesota was approved.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-01",
+     "text": "Siemens Energy to supply ten SGT6-5000F turbines and generators (2,088 MW) for Tolk Station and a new Gaines County peaker in Texas, first deliveries early 2026 — The larger of Xcel's two turbine commitments is with Siemens, not GE Vernova — SPS's gas build is already equipment-secured.",
+     "src": "https://www.power-eng.com/gas/turbines/with-power-demand-growing-xcel-energy-buys-10-large-gas-turbines-from-siemens-energy/",
+     "from": "b"
     }
    ],
    "last": "2025-10-01"
@@ -25262,6 +25365,20 @@
     }
    ],
    "last": "2024-11"
+  },
+  {
+   "a": "southern-company",
+   "b": "xcel-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Large-load service framework — Minnesota (approved), Colorado and Wisconsin (filed)",
+     "date": "",
+     "text": "Colorado's 50 MW threshold and 80 percent minimum demand are the strictest of Xcel's three filings; Georgia Power's PSC rule (100 MW, per the Southern Company dossier) and Dominion Virginia's GS-5 class are the corpus comparators.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "stack-infrastructure",
@@ -25843,6 +25960,31 @@
     }
    ],
    "last": "2026-02-02"
+  },
+  {
+   "a": "tesla",
+   "b": "xcel-energy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Tesla Powerwall owners in Colorado can enroll in Xcel's Renewable Battery Connect VPP, per Tesla's own program page; no Megapack or utility-scale supply link was found.",
+     "context": "Tesla's support page describes Powerwall participation in Xcel Energy's Colorado program, and Itron's release describes the platform that aggregates Tesla and Enphase batteries. The link is deliberately typed as a residential-program partnership: no source connects Tesla to Xcel's utility-scale storage build (Sherco, Blue Lake, High Plains), whose integrators are undisclosed.",
+     "source": "https://www.tesla.com/support/energy/virtual-power-plant/xcel-energy",
+     "status": "active",
+     "scale": "residential Powerwall enrollment (no stated MW)",
+     "via": "Renewable Battery Connect virtual power plant (Colorado)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Customer-side capacity and flexibility — Capacity*Connect, virtual power plants, demand response and EV programs",
+     "date": "",
+     "text": "Capacity*Connect is a first-in-the-nation distributed capacity procurement: up to 200 MW of company-owned batteries at host sites (1–3 MW each) by end-2028 with Sparkfund, phase 1 of 3–5 MW in 2025–26; Colorado's Renewable Battery Connect virtual power plant enrolls Tesla Powerwall and Enphase batteries on Itron's platform; business demand response pays $1.35/kWh credits under Peak Partner Rewards — per company releases and information sheets.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "trane-technologies",

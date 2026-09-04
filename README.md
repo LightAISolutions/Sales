@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-04 04:28:12 PM EST` · Repo version: `v04.56r`
+Last updated: `2026-09-04 05:11:11 PM EST` · Repo version: `v04.57r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -508,6 +508,7 @@ Last updated: `2026-09-04 04:28:12 PM EST` · Repo version: `v04.56r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/xai.profile.v1.json">xai.profile.v1.json</a> — Archived v1 dossier (xAI)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/xai.profile.v2.json">xai.profile.v2.json</a> — Archived v2 dossier (xAI)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/xai.profile.v3.json">xai.profile.v3.json</a> — Archived v3 dossier (xAI)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/xcel-energy.profile.v1.json">xcel-energy.profile.v1.json</a> — Archived v1 dossier (Xcel Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v1.json">zhonhen.profile.v1.json</a> — Archived v1 dossier (Zhonhen Electric)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v2.json">zhonhen.profile.v2.json</a> — Archived v2 dossier (Zhonhen Electric)
 │   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v3.json">zhonhen.profile.v3.json</a> — Archived v3 dossier (Zhonhen Electric)

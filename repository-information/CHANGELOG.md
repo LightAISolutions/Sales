@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 73/100`
+`Sections: 74/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.57r] — 2026-09-04 05:11:11 PM EST
+
+> Fresh session on Fable 5.1 High. Resolve the one active reminder in repository-information/REMINDERS.md: a head-to-head model comparison, Fable 5.1 High against Opus 5 xhigh, on the Xcel Energy dossier.
+> READ FIRST: repository-information/SESSION-CONTEXT.md; repository-information/REMINDERS.md (the active reminder is the spec); repository-information/PROFILER-COVERAGE-PLAN.md §2 (the model rule and its confidence note) and the §8 `xcel-energy` row; .claude/rules/profiler-app.md (Profiler Command, Archival Procedure); repository-information/PROFILER-SCHEMA.md; repository-information/PROFILER-STYLES.md (active style: intel-briefing).
+> BASELINE: live-site-pages/profiler-data/xcel-energy.profile.json is the Opus 5 xhigh version — profileVersion 1, written at v04.46r in commit 2652d30 and unchanged since (confirm with `git diff 2652d30 -- live-site-pages/profiler-data/xcel-energy.profile.json`, which must be empty). Before anything else, copy it to the scratchpad as the diff anchor. Do NOT touch xcel-energy.study.json — this is dossier-only.
+> WRITE BLIND: do not read the Opus dossier while researching or writing. Note only its slug and categories, run the research and author profileVersion 2 from your own research, and open the baseline only after v2 is written. Otherwise the comparison measures editing, not authoring.
+> THE TASK: run `profiler Xcel Energy` as a normal revision — archive v1 to profiler-data/archive/xcel-energy.profile.v1.json with its archive-index entry, write profileVersion 2 with the two parallel research subagents and the Source Priority Protocol, then sync-profiler-registry.py and build-profiler-graph.py.
+> THE REPORT — in chat, section by section, never as a raw patch: sources (count, first-party share, which sources each model found that the other did not); productsAndServices; technicalSpecs; financials and the KPI overlay; recentDevelopments; relationships (which links each model was willing to assert, and on what source); policyExposure; decisionMakers; strategyRead judgment by judgment. Classify EVERY difference as either (a) SAME FACT, DIFFERENT TREATMENT — both versions had the fact and one hedged where the other asserted, declined a relationship for want of a source, kept a figure separate where the other blended it, or stated a gap the other filled — or (b) SEARCH LUCK — a source one pass found and the other did not. Weight (a); discount (b). Two research passes never see the same web, so a large diff is not by itself evidence of a model gap. End with one verdict on the §2 claim that Fable is better at the judgments and the relationship discipline — confirmed, not confirmed, or inconclusive — citing the (a)-class evidence that decides it.
+> BOOKKEEPING, same commit: flip the §8 `xcel-energy` row to record the re-run (keep the Opus v1 substitution note and append `→ v2 · vXX.XXr` on Fable 5.1 High, head-to-head); write the verdict as a dated paragraph in §2's confidence note so the model rule keeps its evidence trail; move the reminder to Completed Reminders in REMINDERS.md with a completion timestamp (the developer authorised this when commissioning the session on 2026-09-04); repo CHANGELOG entry mentions the archived v1 and the verdict. One push commit.
+> VERIFY: sync-profiler-registry.py --check clean, the dossier renders (Playwright), zero page errors. Normal Pre-Commit and Pre-Push checklists; push on a claude/* branch.
+
+### Changed
+
+**Profiler dossier — Xcel Energy head-to-head (data-only)**
+
+- **`live-site-pages/profiler-data/xcel-energy.profile.json` refreshed to profileVersion 2 on Fable 5.1 High; v1 (the Opus 5 xhigh version, v04.46r) archived to `archive/xcel-energy.profile.v1.json` with its archive-index entry.** Written blind to v1 from two parallel research subagents (156 first-party and 139 third-party source entries evaluated) under the Source Priority Protocol: 140 sources at 54 percent first-party (v1: 101 at 46 percent), 9 product lines, 6 spec groups with 79 banded rows, 4 financial periods with Zacks-attributed consensus and GAAP/ongoing kept separate, 50 developments, 10 relationships, 6 policy regimes, 15 decision makers (existing company-published headshots reused for 11), 7 confidence-tagged judgments plus a dated indicator list. New in v2 against v1: the Siemens Energy 2,088 MW turbine order, the Fermi America 200 MW ESA, the Mortenson EPC on High Plains Solar + BESS, the Texas AG injunction terms and April 2027 trial date, the interim SPS presidency recorded as a stated collection gap, the Meta link dated to its 2023 MPUC approval from Xcel's own newsroom, and the Google ESA carried as `announced` pending approval. Withheld: a Moody's negative-outlook claim found only on an aggregator and asserted in v1 without a resolvable source; the `aligned` link v1 drew from the EEI project list, which this pass did not retrieve.
+- **Head-to-head verdict on the §2 model rule: inconclusive.** Narrow Fable edge on relationship and sourcing discipline (status and date precision, the withheld rating claim, the stated SPS gap); no gap on the judgments in either direction — v1 read the pipeline slide more closely and found the PSCo-not-in-an-RTO structural point, v2 added the ownership-ratio judgment and indicators; v1's 10-K extraction was materially deeper on the same document. No Fable make-good warranted for Oncor or AEP. Recorded as a dated paragraph in `PROFILER-COVERAGE-PLAN.md` §2's confidence note; the §8 `xcel-energy` row now reads `v1 · v04.46r → v2 · v04.57r` with the re-run noted beside the Opus substitution.
+- `profiler-companies.json`: tagline rewritten for v2; `sync-profiler-registry.py` reconciled `lastUpdated`, `srcTotal` 101 → 140 and `srcFirstPct` 46 → 54. `profiler-graph.json` rebuilt (710 edges, 538 curated). `profiler-refresh-calendar.json`: `lastRefreshed` advanced to 2026-09-04 and the SPS-leadership watch item rewritten to what v2 established.
+- `repository-information/REMINDERS.md`: the Xcel head-to-head reminder moved to Completed Reminders (developer-authorised on commissioning the session).
+- README tree: archived `xcel-energy.profile.v1.json` entry added; `Last updated:` and `Repo version:`; repo version v04.56r → **v04.57r**.
 
 ## [v04.56r] — 2026-09-04 04:09:00 PM EST
 

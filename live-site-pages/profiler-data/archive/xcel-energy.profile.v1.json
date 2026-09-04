@@ -1,0 +1,1522 @@
+{
+  "schemaVersion": 7,
+  "slug": "xcel-energy",
+  "name": "Xcel Energy Inc.",
+  "shortName": "Xcel Energy",
+  "categories": [
+    "utility"
+  ],
+  "website": "https://www.xcelenergy.com",
+  "headquarters": "Minneapolis, MN, USA",
+  "ownership": {
+    "type": "public",
+    "ticker": "NASDAQ: XEL"
+  },
+  "employees": "11,534 full-time employees at December 31, 2025, of whom approximately 44 percent (5,036) were covered by collective bargaining agreements (FY2025 Form 10-K)",
+  "summary": "BOTTOM LINE UP FRONT: Xcel Energy is the utility whose data-center opportunity and whose largest liability arrived in the same decade, and it is financing both out of one $60B five-year plan that carries about $5B of wildfire mitigation inside it. It has approximately 2 GW of data-center load contracted or under construction against more than 20 GW of additional pipeline, one named customer — Google, at Pine Island, Minnesota, under a 1,900 MW clean-energy package including a 300 MW / 30 GWh iron-air battery — and, on the other side of the ledger, roughly $640M paid to settle the 2021 Marshall Fire with none of it from customers, plus a Texas Panhandle fire its own regulator's forest service attributed to its poles, on which about $404M of settlements have been reached against insurance that is nearly exhausted. BACKGROUND. Minneapolis; NASDAQ: XEL. Per the FY2025 Form 10-K the company serves 3.9 million electric and 2.2 million natural gas customers across eight states through four operating companies — Northern States Power Minnesota, Northern States Power Wisconsin, Public Service Company of Colorado and Southwestern Public Service — owns 20,800 MW of generation, operates 115,000 conductor-miles of electric transmission and 225,000 of distribution, holds $81.4B of assets, employs 11,534 and reported 2025 revenue of $14,669M with ongoing earnings of $3.80 per share; 2026 guidance of $4.04–$4.16 has been reaffirmed six times and never revised. The three operating regions sit in three different market structures: the Minnesota and Wisconsin companies are in MISO, Southwestern Public Service is in SPP, and the Colorado company belongs to no regional transmission organization at all. Collection gap: Xcel names only one data-center customer and redacts the fifth row of its own pipeline slide; no supplier is named on any storage project except the Form Energy system inside the Google package, and the company states the omission is deliberate — 'additional strategic partnerships across supply chain in place but disclosure limited due to confidentiality'; no Colorado wildfire-liability statute exists in its own account of which states passed legislation; and the Q3 2026 earnings date was unposted by the company, with trackers disagreeing.",
+  "ecosystemRole": "We assess Xcel as the utility in this file where the wildfire question and the load-growth question are the same balance-sheet question — and as the one that has responded by contracting its supply chain rather than its customers. Basis: about $5B of the $60B base capital plan is wildfire mitigation, a planned 2029 Colorado securitization is already embedded in the plan's own capital tables, and excess liability insurance costs about $135M a year for $450M of coverage after the market repriced; against that, the company signed two named framework agreements in the same week of February 2026 — a strategic alliance with GE Vernova reserving five F-class gas turbines and multiple gigawatts of wind turbines, and a memorandum of understanding with a NextEra Energy subsidiary to co-develop generation for large loads — and closed a 1,900 MW clean-energy package for a single Google campus. For the sellers in this corpus it is four counterparties. For turbine makers, a buyer that has converted volume into reserved manufacturing slots, at 12 gas combustion-turbine reservations with options into the 2030s. For long-duration storage, the most consequential single order in the corpus: 300 MW and 30 GWh of iron-air, procured not through a resource plan but inside a hyperscaler's service agreement. For lithium-ion storage sellers, roughly 2,200 MW of storage in the base plan with exactly one supplier named anywhere and a 300 MW four-hour company-owned battery in Minnesota whose vendor is not disclosed. And for the hyperscalers and developers here — Google by name from the company, and Meta, QTS and Aligned Data Centers from the Edison Electric Institute's project list — it is the utility whose Minnesota tariff is already approved at a 75 percent minimum demand charge over fifteen years, and whose Colorado version, filed at a 50 MW threshold and 80 percent, will be decided in early 2027.",
+  "productsAndServices": [
+    {
+      "name": "Regulated electric service — four operating companies, eight states, three market structures",
+      "category": "Regulated utility service",
+      "description": "Xcel serves 3.9 million electric customers across Minnesota, Colorado, Wisconsin, Michigan, North Dakota, South Dakota, New Mexico and Texas through four regulated operating companies: Northern States Power Minnesota (serving Minnesota, North Dakota and South Dakota), Northern States Power Wisconsin (Wisconsin and Michigan), Public Service Company of Colorado, and Southwestern Public Service (Texas and New Mexico). The Minnesota and Wisconsin companies are managed together as the NSP System. What distinguishes the structure from the other utilities in this file is the wholesale layer: the NSP companies are MISO members, Southwestern Public Service is in SPP, and Public Service Company of Colorado is, in the Form 10-K's words, 'not presently a member of an RTO' — it sells into other regional markets and participates in SPP's Western Energy Imbalance Service, but no regional operator runs its capacity or plans its transmission. FY2025 rate base was approximately $56B, weighted Colorado 43 percent, Minnesota 35 percent, Southwestern Public Service 16 percent and Wisconsin 6 percent.",
+      "highlights": [
+        "FY2025 electric revenue $12,160M on electric sales volume of 109,401 million kWh; 2025 peak demand was 8,445 MW on the NSP System (July 15), 7,010 MW at Public Service Company of Colorado (July 28) and 4,519 MW at Southwestern Public Service (August 8)",
+        "Weather-normalized retail electric sales for the first half of 2026 rose 2.1 percent system-wide, with commercial and industrial up 3.0 percent — driven by Southwestern Public Service at 6.2 percent and Minnesota at 2.4 percent, which the company attributes to the energy sector in Texas and New Mexico and to manufacturing across all jurisdictions",
+        "Trailing-twelve-month ongoing return on equity at June 30, 2026 was 10.96 percent at the parent but only 8.43 percent across the operating companies — Minnesota 9.59 percent, Wisconsin 10.31 percent, Southwestern Public Service 8.51 percent and Colorado 7.22 percent, the lowest in the group and the reason Colorado's rate case mattered",
+        "The Colorado Public Utilities Commission's August 2026 decision cut the electric increase to $157M, 4.4 percent, from the $225M the parties had settled, on a 9.3 percent return and a 13-month average historical test year, with rates effective August 29, 2026",
+        "Other 2026 rate outcomes: Minnesota electric approximately $211M over two years at a 9.60 percent return, up from 9.25 percent; a Southwestern Public Service New Mexico stipulation at $90M and 9.5 percent; and a Colorado gas settlement at $123M and 9.2 percent"
+      ],
+      "positioning": "The only major utility in this file with an operating company outside any regional transmission organization, and the only one whose regulatory footprint spans eight states with four commissions plus North Dakota, South Dakota and Michigan. Against AEP, which is in three RTOs, Xcel is in two and a half — and the Colorado company's absence from an RTO means no capacity auction sets a price there and no regional planner allocates its transmission cost.",
+      "soldThrough": "Direct regulated retail service under each state commission's tariffs, with capital riders and trackers between rate cases.",
+      "targetSegments": [
+        "Residential and commercial customers across eight states",
+        "Industrial customers, notably the energy sector in the Texas and New Mexico panhandle territory",
+        "Hyperscale and colocation data centers under the large-load tariffs"
+      ],
+      "roadmap": "Colorado large-load tariff decision expected early 2027; Wisconsin large-load tariff decision early 2027; the Colorado gas rate case decision expected in Q4 2026; the New Mexico decision in Q4 2026 with rates in December 2026."
+    },
+    {
+      "name": "Large-load and data-center service — the three-state tariff programme and the Google agreement",
+      "category": "Regulated utility service",
+      "description": "Xcel reports its data-center position in three explicit tiers and does not merge them: approximately 2 GW contracted or under construction, approximately 4 GW contracted by year-end 2027, and more than 20 GW of additional pipeline. The supporting terms it states are 15-year-plus contracts, individual projects of 200 MW to more than 1 GW, online dates from 2027 to beyond 2030 with ramps running through the mid-2030s, and an expectation of about 1 GW signed in 2026 and about 3 GW more by the end of 2027. The commercial instrument is a large-load tariff filed in three states on a common template. Minnesota's is approved; Colorado's and Wisconsin's were filed in April and June 2026 with decisions expected in early 2027. Only one customer is named by the company: Google.",
+      "highlights": [
+        "Minnesota tariff (Proceeding E-002/M-25-289), approved: applies to 100 MW and above, 15-year minimum term, 75 percent minimum demand charge, biannual five-year forecast updates, an incremental cost test, credit requirements, 12 months' notice for a capacity reduction and 24 for termination, and an exit fee of the minimum bill multiplied by the lesser of the remaining term or ten years",
+        "Colorado tariff (Proceeding 26AL-0137E), filed April 2026: a 50 MW threshold — the lowest of the three — with an 80 percent minimum demand charge and 24 months' notice for either a reduction or a termination",
+        "Wisconsin tariff (Proceeding 4220-TE-119), filed June 2026: 100 MW, 15 years, 75 percent, on the same exit-fee formula",
+        "The Google agreement at Pine Island, Minnesota: an electric service agreement under which, per the Form 10-K, 'Google will pay all costs for its new service for the duration of the contract, in accordance with Minnesota's regulatory and legislative requirements for large loads', expected to produce approximately $1.1B of benefits to Minnesota customers, filed for approval in April 2026 with a decision expected in early 2027",
+        "The package behind it: 1,900 MW of new clean energy — 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration storage delivered as a 300 MW, 30 GWh Form Energy iron-air battery system — plus $50M toward the company's Capacity*Connect programme, sought through a proposed Clean Energy Accelerator Charge; approvals for 1,000 MW of the resources were pending inside existing acquisition processes as of July 2026",
+        "The company's own sizing rule for the opportunity: '1 GW data center, assuming balance of renewable, storage and natural gas generation, could require $6-8 billion of investment (including third-party generation)'",
+        "No large-load tariff exists for Southwestern Public Service in Texas or New Mexico, and Xcel does not mention Texas SB 6 anywhere in its own materials — that statute governs ERCOT, and Southwestern Public Service is an SPP participant"
+      ],
+      "positioning": "The most conservative tier disclosure of the four utilities in this file — Xcel publishes a contracted figure roughly a tenth the size of its pipeline and redacts one of its own five project rows — and the only one whose flagship agreement is structured as a clean-energy package rather than as gas capacity. Against Entergy's sealed single-customer certificates and AEP's 69 GW of contracted load, Xcel's ~2 GW is small; against the Colorado tariff's 50 MW threshold, it is also the widest net.",
+      "soldThrough": "Negotiated electric service agreements filed for commission approval, under state large-load tariffs where approved.",
+      "targetSegments": [
+        "Hyperscalers and large developers, per the company's own slide",
+        "Colocation operators, with QTS in Aurora, Colorado and Aligned Data Centers in Abernathy, Texas named on the Edison Electric Institute's project list",
+        "Industrial loads in the Panhandle energy sector"
+      ],
+      "roadmap": "Approximately 1 GW expected to be signed during 2026 and about 3 GW more by the end of 2027; Colorado and Wisconsin tariff decisions in early 2027; the Google service agreement and its Clean Energy Accelerator Charge decided in early 2027."
+    },
+    {
+      "name": "Generation — 20,800 MW owned, the coal exit, and the build behind the load",
+      "category": "Generation",
+      "description": "Xcel owns 20,800 MW of generating capacity and states it has reduced carbon emissions from generation serving customers by an estimated 58 percent from 2005 levels while remaining on track to exit coal entirely by the end of 2030 — Comanche Unit 3 in Colorado carries a published 2030 retirement year. Its wind capacity is approximately 11,000 MW including nearly 4,500 MW owned. The 2026–2030 base capital plan adds approximately 11,400 MW of renewable generation, 3,400 MW of natural gas and 2,200 MW of energy storage; the incremental plan would add 2,000 MW of wind, 1,900 MW of solar, 400 MW of gas and 300 MW of storage on top. The build is unevenly distributed in time: Colorado front-loads, with 1,585 MW entering service in 2026 and nothing after 2028, while Southwestern Public Service back-loads hard, at roughly 2,490 MW in 2028 and 1,740 MW across 2029 and 2030.",
+      "highlights": [
+        "Minnesota: the Upper Midwest Resource Plan settlement approved by the commission in February 2025 selected a company-owned 420 MW Lyon County combustion turbine and a company-owned 300 MW four-hour Sherco battery, plus 3,200 MW of wind, 400 MW of solar and 600 MW of storage through 2030, and extended the nuclear units' lives into the early 2050s — the Monticello plant received federal approval in January 2025 to operate to 2050",
+        "Colorado: the 2024 Electric Resource Plan's Phase I was approved in November 2025 on a load forecast of 3 percent compound annual sales growth through 2031 and a capacity need of approximately 5,400 MW; the Phase II competitive solicitation had not been run as of mid-2026, so no Phase II winners exist. What Colorado awarded in February 2026 was the separate Near-Term Procurement — 3,200 MW approved immediately across ten projects, including a 200 MW company-owned gas combustion turbine, with 600 to 1,500 MW of company-owned wind, solar and storage conditionally approved",
+        "Southwestern Public Service: a July 2025 portfolio of 17 new projects totalling 5,168 MW nameplate by 2030 (3,121 MW accredited) — 1,273 MW of wind, 695 MW of solar, 1,112 MW of storage and 2,088 MW of gas — plus 521 MW of life extensions at Nichols, Maddox and Plant X; the company puts its projected resource need at 5,300 to 10,200 MW of nameplate capacity by 2030",
+        "Coal conversions rather than pure retirements where the site is useful: Pawnee in Colorado retired in 2025 and completed conversion to natural gas in 2026; the Harrington plant in Amarillo converted three units to gas across 2024–2025 at 1,018 MW; Wisconsin retired four combustion turbines in 2025 and replaced them with one 206 MW turbine and five reciprocating units",
+        "The only storage supplier Xcel names anywhere is Form Energy, for the 300 MW / 30 GWh iron-air system inside the Google package — a 100-hour duration implied by the ratio, and by the trade press's account the largest battery project by energy capacity announced anywhere to date. No supplier is named for the company-owned 300 MW four-hour Sherco battery or for any other storage in the plan"
+      ],
+      "positioning": "A buyer that has moved its supply-chain risk upstream into reservation agreements rather than project-by-project procurement, and the only utility in this file with a utility-scale long-duration storage order. Its storage volume — about 2,200 MW in the base plan — is the largest of the four utilities here, and its supplier disclosure is the thinnest.",
+      "soldThrough": "Company-owned self-builds and power purchase agreements selected through state resource-plan solicitations, plus direct multi-year equipment reservation agreements with manufacturers.",
+      "targetSegments": [
+        "Its own four operating companies' native load",
+        "Large-load customers whose service agreements underwrite specific resources, as in the Clean Energy Accelerator Charge structure"
+      ],
+      "roadmap": "Base-plan generation entering service at approximately 2,100 MW in 2026, 2,640 MW in 2027, 3,815 MW in 2028 and 2,840 MW across 2029–2030; Colorado's Phase II RFP was due in the third quarter of 2026; a Southwestern Public Service recommendation for approximately 2,600 MW of company-owned generation and a Minnesota RFP for approximately 4,100 MW of renewables and storage by 2030 sit in the incremental plan."
+    },
+    {
+      "name": "Transmission — 115,000 conductor-miles, and the 765 kV question in SPP",
+      "category": "Regulated utility service",
+      "description": "Electric transmission carries $15,440M of the 2026–2030 base capital plan, the largest single functional line, against 115,000 conductor-miles in service. The regional context differs by company: the NSP companies build inside MISO's long-range plans, Southwestern Public Service inside SPP's Integrated Transmission Plan, and Public Service Company of Colorado outside any regional planning process. Xcel was selected in February 2025 to construct the first 765 kV lines within SPP, and a further Crawfish Draw to Phantom 765 kV line at approximately $2B sits in the company's stated line-of-sight capital alongside additional 765 kV lines from the 2025 SPP portfolio, which are competitively bid.",
+      "highlights": [
+        "Named MISO projects: the long-range transmission plan's 'Grid Forward' and 'Western Wisconsin Transmission Connection'; MISO Tranche 2.2, dated 2030 and beyond, sits in the incremental plan rather than the base",
+        "The base capital forecast explicitly excludes 'additional generation investment associated with resource plans and SPP and MISO Tranche 2 transmission projects' — so the transmission line in the plan understates the company's own view of the opportunity",
+        "Approximately 1,700 new transmission line miles are in the 2026–2030 plan",
+        "Xcel is one of the Grid North Partners in MISO's Tranche 2.1 portfolio, per the consortium's other members",
+        "The Colorado Transmission Cost Adjustment recovers, between rate cases, transmission projects that increase capacity or that form part of an approved wildfire mitigation plan — a mechanism that makes the wildfire programme and the transmission programme share a recovery channel"
+      ],
+      "positioning": "A transmission owner in two regional processes and none in its largest rate-base state — the mirror image of AEP, whose entire strategy is a transmission franchise monetized across four planning processes. Xcel's 765 kV work is bid competitively rather than held as an incumbent franchise.",
+      "soldThrough": "Regional planning processes in MISO and SPP; state certificates in Colorado.",
+      "targetSegments": [
+        "Regional load in MISO and SPP",
+        "Generation interconnection for the resource-plan build"
+      ],
+      "roadmap": "The Crawfish Draw to Phantom 765 kV line at approximately $2B and additional 2025 SPP portfolio lines are competitive bids in the line-of-sight plan; MISO Tranche 2.2 is dated 2030 and beyond."
+    },
+    {
+      "name": "Wildfire mitigation as a capital programme",
+      "category": "Regulated utility service",
+      "description": "Approximately $5B of the $60B base capital plan is wildfire mitigation — a line item of a size that has no counterpart in the other three utility dossiers in this file. The Colorado Public Utilities Commission unanimously approved the 2025–2027 Wildfire Mitigation Plan, and the company states it has public-facing mitigation plans in every state with approved plans in Colorado, New Mexico and Texas. The programme is the company's operational answer to a liability the same commission will also decide how to price.",
+      "highlights": [
+        "The stated strategy: deploying weather stations and AI cameras, building meteorology, fire science and risk-modelling capability, hardening the system with enhanced powerline safety settings and system segmentation to reduce the scope of public safety power shutoffs, materially increasing shutoff drills, and investigating every ignition",
+        "Recovery runs through four named channels: Colorado's Transmission Cost Adjustment for qualifying projects; a planned 2029 Colorado securitization, whose effect is already visible in the capital plan's own footnotes as a reduction in 2029 distribution spend; base rate cases, with the 2025 Colorado electric case naming $65M of liability insurance as a driver; and deferral orders for excess liability insurance premiums in Colorado, Wisconsin and New Mexico, with Texas pending",
+        "Insurance economics moved sharply: through the third quarter of 2024 the company carried approximately $600M of excess liability coverage including $520M of wildfire coverage at a premium of about $40M a year; from October 2024 it carries $450M of total coverage at a premium of approximately $130M, renewed in October 2025 at about $135M — roughly a threefold premium increase for less coverage",
+        "The company's own reading of the legal landscape: neither inverse condemnation nor strict liability has been applied in utility wildfire cases in any of its states, and supportive legislation passed in 2025 in Texas, North Dakota and South Dakota — but not in Colorado, which is not checked under 'Legislation Passed' on the company's own framework grid"
+      ],
+      "positioning": "The only utility in this corpus running wildfire mitigation as a multi-billion-dollar capital programme with its own securitization plan. It is simultaneously the company's largest operational risk and, because the spending enters rate base and riders, a material component of its rate-base growth.",
+      "soldThrough": "Commission-approved mitigation plans recovered through riders, base rates, deferrals and a planned securitization.",
+      "targetSegments": [
+        "All customers in the high-risk service territories, principally Colorado and the Texas and New Mexico panhandle"
+      ],
+      "roadmap": "The 2025–2027 Colorado plan is in execution; a planned 2029 Colorado securitization is embedded in the capital plan; the company states it continues to explore legislative structures in the states that have not passed them."
+    },
+    {
+      "name": "Natural gas distribution and the customer programmes",
+      "category": "Regulated utility service",
+      "description": "Xcel serves 2.2 million natural gas customers with 2,100 miles of transmission and 38,000 miles of distribution pipeline and 53.3 Bcf of storage, generating $2,452M of gas revenue in 2025 on deliveries of 400,982 thousand MMBtu. Gas carries $3,720M of the 2026–2030 capital plan. Alongside it sit the demand-side programmes: energy efficiency and conservation, electric-vehicle infrastructure with a stated 2035 goal of supporting 1.5 million vehicles, distributed generation interconnection, and a Colorado virtual power plant procurement of up to 125 MW.",
+      "highlights": [
+        "Gas carbon commitments: net-zero greenhouse gas from natural gas use in buildings by 2050 and net-zero methane gas service by 2030",
+        "Colorado's gas rate case settled at $123M and a 9.2 percent return in July 2026, with a commission decision expected in the fourth quarter; Minnesota's settled at $38M",
+        "Colorado's fuel-cost mechanism under Senate Bill 23-291 took effect for gas in January 2026, sharing 4 percent of the price change against a three-year average and capped at roughly $7M, with an electric version capped near $3M expected during 2026",
+        "First-half 2026 weather-normalized firm gas sales fell 1.5 percent system-wide"
+      ],
+      "positioning": "A conventional gas utility attached to an electric business whose growth story it does not share — gas is 25 percent of customers and 6 percent of the capital plan.",
+      "soldThrough": "Regulated retail gas service under state tariffs.",
+      "targetSegments": [
+        "Residential and commercial gas customers in Minnesota, Colorado, Wisconsin and the Dakotas"
+      ],
+      "roadmap": "Colorado gas decision expected Q4 2026; the Colorado electric fuel-cost mechanism expected during 2026."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Xcel Energy at a glance (FY2025 Form 10-K, Item 1 — verbatim)",
+      "specs": [
+        {
+          "band": "Customers",
+          "label": "Electric customers",
+          "value": "3.9 million"
+        },
+        {
+          "band": "Customers",
+          "label": "Natural gas customers",
+          "value": "2.2 million"
+        },
+        {
+          "band": "Scale",
+          "label": "Total assets",
+          "value": "$81.4 billion"
+        },
+        {
+          "band": "Generation",
+          "label": "Electric generating capacity (owned)",
+          "value": "20,800 MW"
+        },
+        {
+          "band": "Wires",
+          "label": "Electric transmission lines (conductor miles)",
+          "value": "115,000 miles"
+        },
+        {
+          "band": "Wires",
+          "label": "Electric distribution lines (conductor miles)",
+          "value": "225,000 miles"
+        },
+        {
+          "band": "Gas",
+          "label": "Natural gas storage capacity",
+          "value": "53.3 Bcf"
+        },
+        {
+          "band": "Gas",
+          "label": "Natural gas transmission / distribution lines",
+          "value": "2,100 miles / 38,000 miles"
+        },
+        {
+          "band": "Volumes",
+          "label": "Electric sales",
+          "value": "Electric sales volume of 109,401 (millions of KWh), 3.9 million customers and electric revenues of $12,160 million for 2025"
+        },
+        {
+          "band": "Volumes",
+          "label": "Natural gas deliveries",
+          "value": "400,982 (thousands of MMBtu), 2.2 million customers and natural gas revenues of $2,452 million for 2025"
+        },
+        {
+          "band": "People",
+          "label": "Employees",
+          "value": "11,534 full-time employees; approximately 44% of our employees (5,036) were covered by collective bargaining agreements (12/31/2025)"
+        },
+        {
+          "band": "Peak demand 2025",
+          "label": "By system",
+          "value": "NSP System 8,445 MW (July 15); PSCo 7,010 MW (July 28); SPS 4,519 MW (Aug. 8)"
+        }
+      ]
+    },
+    {
+      "product": "Large-load tariff filings (Q2 2026 earnings deck, 'LARGE LOAD TARIFF FILINGS')",
+      "specs": [
+        {
+          "band": "Minnesota — Proceeding M-25-289",
+          "label": "Status and threshold",
+          "value": "Approved; applies to 100 MW+ new or expanded load"
+        },
+        {
+          "band": "Minnesota — Proceeding M-25-289",
+          "label": "Terms",
+          "value": "15-year minimum term; 75% minimum demand charge; biannual 5-year forecast updates; incremental cost test; credit requirements; capacity reduction requires 12 months notice, ESA termination 24 months; exit fee = minimum bill multiplied by lesser of remaining contract term or 10 years"
+        },
+        {
+          "band": "Colorado — Proceeding 26AL-0137E",
+          "label": "Status and threshold",
+          "value": "Filed April 2026, decision expected early 2027; applies to 50 MW+ new or newly expanded load — the lowest threshold of the three"
+        },
+        {
+          "band": "Colorado — Proceeding 26AL-0137E",
+          "label": "Terms",
+          "value": "15-year minimum term; 80% minimum demand charge; biannual 5-year forecast updates; incremental cost test; credit requirements; capacity reduction or ESA termination requires 24 months notice; exit fee = minimum bill × lesser of remaining contract term or 10 years (the Q1 2026 deck stated 'remainder of contract term'; both are quoted as published)"
+        },
+        {
+          "band": "Wisconsin — Proceeding 4220-TE-119",
+          "label": "Status and terms",
+          "value": "Filed June 2026, decision expected early 2027; 100 MW+; 15-year minimum term; 75% minimum demand charge; 24 months notice for capacity reduction or termination; same exit-fee formula"
+        },
+        {
+          "band": "SPS (Texas and New Mexico)",
+          "label": "Status",
+          "value": "No large-load tariff filing, minimum-demand term, ramp schedule, collateral requirement or exit fee is described in any Xcel first-party source. Xcel does not mention Texas SB 6 anywhere; SPS is described as an SPP participant"
+        },
+        {
+          "band": "Origin",
+          "label": "Minnesota mandate",
+          "value": "The MPUC 'ordered NSP-Minnesota to file a proposed tariff for customers with super-large load, largely data centers, by July 15, 2025'"
+        }
+      ]
+    },
+    {
+      "product": "Data-center pipeline, in the company's own three tiers (Q1 and Q2 2026 decks, identical slide)",
+      "specs": [
+        {
+          "band": "Tiers",
+          "label": "Contracted / under construction",
+          "value": "~2 GW"
+        },
+        {
+          "band": "Tiers",
+          "label": "Contracted by year end 2027",
+          "value": "~4 GW"
+        },
+        {
+          "band": "Tiers",
+          "label": "Additional pipeline",
+          "value": "> 20 GW"
+        },
+        {
+          "band": "Terms stated on the same slide",
+          "label": "Counterparties and shape",
+          "value": "'Hyperscalers and large developers'; 'Opportunities to upsize existing contracts'; 'Align with large load tariff filings'; '15+ year terms'; 'Total capacity ranging from 200 MW – 1+ GW'; 'Online by 2027 – 2030+ with ramps through mid 2030s'"
+        },
+        {
+          "band": "Terms stated on the same slide",
+          "label": "Signing expectation",
+          "value": "'Expect ~1 GW signed in 2026; Additional ~3 GW by end of 2027'"
+        },
+        {
+          "band": "Individual projects (Q2 2026 slide)",
+          "label": "Disclosed rows",
+          "value": "200 MW online, full ramp 2035; 250 MW online, full ramp 2035; 200 MW online 2027, ramp 2028; 600 MW online 2026, ramp 2029; a fifth row marked 'Not publicly disclosed'"
+        },
+        {
+          "band": "Individual projects (Q2 2026 slide)",
+          "label": "Movement between decks",
+          "value": "In the Q1 2026 deck the third row read '200 MW / 2026 / 2028'; by the Q2 2026 deck it had slipped to '2027 / 2028'. Every other row is identical, so the ~2 GW contracted block did not grow between April and July 2026 and one project's online date moved out a year"
+        },
+        {
+          "band": "Company sizing rule",
+          "label": "Investment per gigawatt",
+          "value": "'1 GW data center, assuming balance of renewable, storage and natural gas generation, could require $6-8 billion of investment (including third-party generation)'"
+        }
+      ]
+    },
+    {
+      "product": "Capital plan 2026–2030 — $60B base plus $10+B line of sight",
+      "specs": [
+        {
+          "band": "By function ($M)",
+          "label": "Electric transmission",
+          "value": "$15,440 — 2026 $3,060; 2027 $2,930; 2028 $2,890; 2029 $3,190; 2030 $3,370"
+        },
+        {
+          "band": "By function ($M)",
+          "label": "Renewables",
+          "value": "$13,920 — 2026 $3,560; 2027 $4,620; 2028 $3,380; 2029 $1,150; 2030 $1,210"
+        },
+        {
+          "band": "By function ($M)",
+          "label": "Electric distribution",
+          "value": "$13,710 — with a footnote that 2029 is $2,890M 'before recognizing impact of securitization of Colorado wildfire mitigation plan spend'"
+        },
+        {
+          "band": "By function ($M)",
+          "label": "Electric generation / natural gas / other",
+          "value": "$9,540 / $3,720 / $3,670; total $60,000"
+        },
+        {
+          "band": "By operating company ($M)",
+          "label": "2026–2030",
+          "value": "NSP-Minnesota $20,130; SPS $19,030; PSCo $17,600; NSP-Wisconsin $4,030; Other $(790); total $60,000"
+        },
+        {
+          "band": "What the plan buys",
+          "label": "Physical additions",
+          "value": "~11,400 MW renewable generation; ~3,400 MW natural gas generation; ~2,200 MW energy storage; ~1,700 new transmission line miles; ~$5 billion for wildfire mitigation"
+        },
+        {
+          "band": "Line of sight (excluded from the base)",
+          "label": "Four named buckets",
+          "value": "10–12+ GW in RFPs; ~3 GW additional data-center demand with generation ramping through the mid-2030s; the Crawfish Draw–Phantom 765 kV line in SPP at ~$2 billion; and additional SPP and MISO transmission including Tranche 2.2 for 2030 and beyond"
+        },
+        {
+          "band": "Rate base",
+          "label": "Trajectory",
+          "value": "$56B (2025) → $66B (2026) → $77B (2027) → $86B (2028) → $90B (2029) → $94B (2030); 2025–2030 CAGR ~11%, rising to ~13+% with the line-of-sight capital. Operating-company CAGRs: SPS ~22%, NSP-Wisconsin ~13%, NSP-Minnesota ~10%, PSCo ~7%"
+        },
+        {
+          "band": "Financing",
+          "label": "2026–2030 plan",
+          "value": "Cash from operations $30,180M net of dividends and pension funding; new debt $22,820M; equity issuances $7,000M against base capex $60,000M; maturing long-term debt $3,580M. 'Additional capital investment above the Base Plan would be funded with approximately 40% equity and 60% debt'; the equity plan was 85% complete at June 30, 2026"
+        }
+      ]
+    },
+    {
+      "product": "Wildfire — the two fires, the money and the legal frame",
+      "specs": [
+        {
+          "band": "Marshall Fire (Colorado, December 30, 2021)",
+          "label": "Settlement",
+          "value": "'Xcel Energy [subsidiary Public Service Company of Colorado] expects to pay approximately $640 million related to these settlements – with approximately $350 million funded by its remaining insurance coverage and none from its customers'"
+        },
+        {
+          "band": "Marshall Fire (Colorado, December 30, 2021)",
+          "label": "Accounting",
+          "value": "A non-recurring $287M charge in Q3 2025 plus $12M in Q4 2025; insurance receivables of $353M at 12/31/2025; remaining estimated liability $5M; an EPS impact of $(0.38) in FY2025 — the sole 2025 GAAP-to-ongoing reconciling item — and a $19M net credit in the first half of 2026"
+        },
+        {
+          "band": "Marshall Fire (Colorado, December 30, 2021)",
+          "label": "Position and scale",
+          "value": "'Xcel Energy does not admit any fault, wrongdoing or negligence.' 307 complaints on behalf of at least 4,087 plaintiffs; Qwest Corporation and Teleport Communications America settled jointly and 'will contribute to the settlements' in an undisclosed amount; Xcel Energy Inc. itself was dismissed for lack of jurisdiction in June 2025"
+        },
+        {
+          "band": "Smokehouse Creek Fire Complex (Texas, February 26, 2024)",
+          "label": "Cause and scale",
+          "value": "'The Texas A&M Forest Service issued incident reports that determined that the Smokehouse Creek Fire and the 687 Reamer Fire were caused by power lines owned by SPS after wooden poles near each fire origin failed'; the complex burned approximately 1,055,000 acres"
+        },
+        {
+          "band": "Smokehouse Creek Fire Complex (Texas, February 26, 2024)",
+          "label": "Settlements to date",
+          "value": "At June 30, 2026: approximately 73 complaints of which 28 resolved; $404M of settlements reached and $398M paid; $460M accrued as the low end of the range. Claims process: 237 of 304 claims resolved, plus 79 of 107 presented through attorneys. Settlements reached on both fatalities, with the subrogated insurers, and on the three largest claims by acreage"
+        },
+        {
+          "band": "Smokehouse Creek Fire Complex (Texas, February 26, 2024)",
+          "label": "Open exposure",
+          "value": "'Resolution of remaining complaints and claims … could exceed our insurance coverage of $525 million for the annual policy period (of which approximately $80 million of coverage remains …) and could have a material adverse effect'; 'Xcel Energy remains unable to reasonably estimate any additional loss or the upper end of the range.' The Texas Attorney General sued SPS in December 2025; a February 2026 joint temporary injunction set distribution pole replacement procedures"
+        },
+        {
+          "band": "Insurance",
+          "label": "Coverage and premium",
+          "value": "Through Q3 2024: approximately $600M of excess liability coverage including $520M of wildfire coverage at an annual premium of approximately $40M. From October 2024: $450M of total coverage — $450M wildfire for the NSP System and $300M for PSCo and SPS — at approximately $130M, renewed October 2025 at approximately $135M"
+        },
+        {
+          "band": "Legal frame (company's own framework grid)",
+          "label": "Legislation passed",
+          "value": "North Dakota, South Dakota and Texas only. Colorado, Minnesota, New Mexico and Wisconsin are NOT checked. 'No Strict Liability' is checked in all seven states, with the footnote 'Neither inverse condemnation nor strict liability have been applied in utility wildfire cases'; 'Limits on Liability' — limits on punitive and/or non-economic damages — is checked in Colorado, North Dakota, Texas and Wisconsin"
+        }
+      ]
+    },
+    {
+      "product": "Credit and clean-energy position",
+      "specs": [
+        {
+          "band": "Ratings (as of 2026-07-28)",
+          "label": "Xcel Energy Inc. unsecured",
+          "value": "Moody's Baa1 (Negative) · S&P BBB (Stable) · Fitch BBB+ (Stable)"
+        },
+        {
+          "band": "Ratings (as of 2026-07-28)",
+          "label": "Operating companies, secured",
+          "value": "NSP-Minnesota Aa3 / A / A+; NSP-Wisconsin A1 / A / A+; PSCo A1 (Negative) / A (Negative) / A+ (Stable); SPS A3 / A- / A-"
+        },
+        {
+          "band": "Credit metrics",
+          "label": "Trajectory",
+          "value": "FFO/Debt approximately 16% for 2025A–2028E rising to ~17% for 2029E–2030E; Debt/EBITDA 6.0x in 2025 declining to 5.0x by 2030; capital structure at 6/30/2026 was $39,457M debt (62%) against $24,057M equity (38%)"
+        },
+        {
+          "band": "Carbon",
+          "label": "Progress and targets",
+          "value": "'Through 2025, we reduced carbon emissions from generation serving customers by an estimated 58% (from 2005 levels) and remain on track to fully exit coal by the end of 2030'; 'Zero-Carbon Electricity by 2050'; net-zero greenhouse gas from natural gas use in buildings by 2050; net-zero methane gas service by 2030; charging infrastructure for 1.5 million electric vehicles by 2035"
+        },
+        {
+          "band": "Carbon",
+          "label": "Fleet position",
+          "value": "'Xcel Energy's wind capacity is now approximately 11,000 MW, including nearly 4,500 MW of owned wind.' Comanche Unit 3 carries a published 2030 retirement year"
+        },
+        {
+          "band": "Tax",
+          "label": "Credit position",
+          "value": "Federal tax credit carryforwards of $1,474 million at 12/31/2025; financing plans reflect tax credit transferability, with a valuation consideration of 'whether tax credits are expected to be sold at a discount'"
+        }
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "public",
+    "periods": [
+      {
+        "period": "FY2024",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Total operating revenues",
+            "actual": "$13,441M — electric $11,147M, natural gas $2,230M, other $64M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "No outlet-attributed full-year 2024 revenue consensus was located",
+            "kpi": "revenue",
+            "usdMillions": 13441,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Ongoing diluted earnings per share",
+            "actual": "$3.50 (ongoing earnings $1.97B)",
+            "expected": "Company guidance $3.50–$3.60; no outlet-attributed full-year consensus found",
+            "verdict": "inline",
+            "result": "Landed at the bottom of its own guidance range. GAAP EPS was $3.44, the reconciling item being $(0.06) of Sherco Unit 3 outage refunds",
+            "kpi": "eps"
+          },
+          {
+            "name": "Capital expenditures",
+            "actual": "$7,364M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "The base year before the plan stepped up; 2025 capex was nearly half as large again",
+            "kpi": "capex",
+            "usdMillions": 7364,
+            "fxBasis": "as reported"
+          }
+        ],
+        "commentary": "The last year before both the wildfire settlement and the data-center pipeline entered the numbers. Net income was $1,936M and the company met guidance for a twentieth consecutive year."
+      },
+      {
+        "period": "FY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Total operating revenues",
+            "actual": "$14,669M — electric $12,160M, natural gas $2,452M, other $57M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "No outlet-attributed full-year consensus was located",
+            "kpi": "revenue",
+            "usdMillions": 14669,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Ongoing diluted earnings per share",
+            "actual": "$3.80 (ongoing earnings $2.24B)",
+            "expected": "Company guidance $3.75–$3.85; Q4 2025 alone: $0.96 (MarketBeat and Investing.com), $0.97 (Zacks via Nasdaq)",
+            "verdict": "inline",
+            "result": "Above the midpoint of guidance and a twenty-first consecutive year of meeting it. Q4 2025 actual was $0.96 — in line with two trackers and a cent short of the third",
+            "kpi": "eps"
+          },
+          {
+            "name": "GAAP diluted earnings per share",
+            "actual": "$3.42 (net income $2,018M)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "GAAP fell below ongoing for only the third time in a decade. The sole reconciling item was the Marshall Wildfire settlement at $(0.38) per share — a $287M charge in Q3 2025 plus $12M in Q4"
+          },
+          {
+            "name": "Capital expenditures",
+            "actual": "$10,908M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Up 48 percent year over year as the resource-plan build and the wildfire mitigation programme ramped together",
+            "kpi": "capex",
+            "usdMillions": 10908,
+            "fxBasis": "as reported"
+          }
+        ],
+        "commentary": "The year the two stories arrived at once: ongoing earnings grew 8.6 percent and GAAP earnings fell, because the Marshall Fire settlement landed in the third quarter. Rate base reached approximately $56B and the 2026–2030 capital plan was set at $60B base plus $10B-plus of line of sight."
+      },
+      {
+        "period": "Q1 2026",
+        "periodType": "quarter",
+        "periodEnd": "2026-03-31",
+        "metrics": [
+          {
+            "name": "Total operating revenues",
+            "actual": "$4,021M (derived: six-month revenue of $7,140M less Q2's $3,119M)",
+            "expected": "$4.17B (Investing.com)",
+            "verdict": "miss",
+            "result": "Revenue has missed even in quarters where earnings beat",
+            "kpi": "revenue",
+            "usdMillions": 4021,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Ongoing diluted earnings per share",
+            "actual": "$0.91 (GAAP $0.89)",
+            "expected": "$0.907 (MarketBeat); $0.93 (Investing.com); $0.91 (TipRanks)",
+            "verdict": "inline",
+            "result": "The trackers genuinely disagree and the quarter flips on which is used — a beat of three tenths of a cent on MarketBeat's number, a 2.15 percent miss on Investing.com's, and exactly in line on TipRanks'. Recorded as inline rather than resolved either way. Guidance was reaffirmed",
+            "kpi": "eps"
+          },
+          {
+            "name": "Data-center load contracted or under construction",
+            "actual": "'~2 GW — Contracted / Under Construction', against '~4 GW — Contracted by Year End 2027' and '> 20 GW — Additional Pipeline'",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "The first appearance of the three-tier pipeline slide. Four of the five project rows are disclosed and the fifth is marked 'Not publicly disclosed'",
+            "kpi": "mw-contracted",
+            "qty": 2000
+          }
+        ],
+        "commentary": "Over $3B invested in the quarter, nearly 500 MW of solar and utility-scale storage placed in service, and roughly $1.5B of equity issued — about half the five-year plan. The company reported line of sight on $7B-plus of the incremental $10B-plus."
+      },
+      {
+        "period": "Q2 2026 (latest interim)",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Total operating revenues",
+            "actual": "$3,119M (vs $3,287M in Q2 2025); six-month revenue $7,140M",
+            "expected": "$3.61B (Investing.com)",
+            "verdict": "miss",
+            "result": "A roughly 13.6 percent revenue shortfall against the tracker forecast, in a quarter whose earnings beat by 18 percent — the gap between a rate-driven earnings story and a volume-driven revenue forecast",
+            "kpi": "revenue",
+            "usdMillions": 3119,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Ongoing diluted earnings per share",
+            "actual": "$0.93 (GAAP also $0.93; earnings $589M ongoing, $586M GAAP)",
+            "expected": "$0.79 (MarketBeat and Investing.com)",
+            "verdict": "beat",
+            "result": "A 17.7 percent beat. Year to date, GAAP $1.82 and ongoing $1.84 against $1.59 in 2025. Guidance of $4.04–$4.16 was reaffirmed for the sixth time and has never been revised. Note that TipRanks renders this quarter with its actual and consensus columns transposed",
+            "kpi": "eps"
+          },
+          {
+            "name": "Data-center load contracted or under construction",
+            "actual": "'~2 GW — Contracted / Under Construction' — unchanged from Q1 2026",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "The contracted block did not grow between April and July 2026, and one 200 MW project's planned online date moved from 2026 to 2027 between the two decks. The company nonetheless expects about 1 GW signed during 2026 and about 3 GW more by the end of 2027",
+            "kpi": "mw-contracted",
+            "qty": 2000
+          }
+        ],
+        "commentary": "Earnings by operating company for the quarter: Colorado $0.32, Minnesota $0.37, Southwestern Public Service $0.19, Wisconsin $0.06. The Minnesota large-load tariff was approved in the quarter, with Colorado and Wisconsin filed. Consensus for 2026 stands at $4.11, the guidance midpoint (StockAnalysis, accessed September 3, 2026)."
+      }
+    ]
+  },
+  "strategyRead": [
+    "(High confidence) We assess that wildfire is the organizing fact of this company's balance sheet, and that it has been priced rather than resolved. Basis: the Marshall Fire settled at approximately $640M with roughly $350M from insurance and, in the company's own words, 'none from its customers' — leaving about $298M of shareholder charges and the only GAAP-to-ongoing reconciling item of 2025; the Smokehouse Creek complex, which the Texas A&M Forest Service attributed to SPS-owned power lines after wooden poles failed, has produced $404M of settlements against a $525M policy period with approximately $80M of coverage remaining at June 30, 2026, and the company states it 'remains unable to reasonably estimate any additional loss or the upper end of the range'; excess liability insurance now costs roughly $135M a year for $450M of coverage against about $40M for $520M two years earlier; and approximately $5B of the $60B base capital plan is wildfire mitigation, with a planned 2029 Colorado securitization already embedded in the plan's own capital tables. The exposure is bounded by settlements reached, not by a liability regime.",
+    "(High confidence) We assess that Xcel has responded to the load-growth problem by contracting its supply chain upstream rather than procuring project by project, and that this is the clearest strategic differentiator in its file. Basis: within one week of February 2026 it signed a strategic alliance with GE Vernova — a reservation agreement for five F-class gas turbines, a capacity reservation for multiple gigawatts of wind turbines, and collaboration on grid equipment including synchronous condensers, later restated as twelve gas combustion-turbine reservations with options into the 2030s — and a memorandum of understanding with a NextEra Energy subsidiary, converted to a joint development agreement in April 2026, to co-develop generation for approximately 2 GW of data-center capacity under a fully regulated ownership structure mixing power purchase agreements, build-own-transfer projects and self-builds. Both were announced before the tariffs that would price the load were approved.",
+    "(High confidence) We assess that the Google agreement is a materially different commercial template from anything else in this corpus, and that its significance is the charge rather than the megawatts. Basis: rather than certifying gas plant for a named customer as Entergy does, Xcel filed a 1,900 MW clean-energy package — 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration storage — for approval through a proposed Clean Energy Accelerator Charge, under which 'Google will pay all costs for its new service for the duration of the contract' and the company projects approximately $1.1B of benefits to other Minnesota customers. The storage inside it is a 300 MW, 30 GWh Form Energy iron-air system, a hundred-hour duration procured inside a customer's service agreement rather than through a resource plan. A decision is expected in early 2027.",
+    "(Moderate confidence) We assess that the gap between Xcel's contracted and pipeline figures is the widest of the four utilities in this file, and that the company keeps it that way deliberately rather than conservatively. Basis: the same three-tier slide appears unchanged in the Q1 and Q2 2026 decks — approximately 2 GW contracted or under construction, approximately 4 GW contracted by the end of 2027, more than 20 GW of additional pipeline — the contracted block did not grow between April and July 2026, one 200 MW project's online date slipped a year between the two decks, and the fifth project row is redacted in Xcel's own slide. Against AEP's 69 GW of contracted load and Oncor's 298 GW queue, a 2 GW contracted figure held flat for two quarters is either unusual discipline or unusual slowness, and the evidence does not yet separate the two.",
+    "(Moderate confidence) We assess that Colorado is simultaneously the company's largest rate base, its widest large-load net and its thinnest regulatory room, and that this combination is the principal near-term risk to the plan. Basis: Colorado is 43 percent of 2025 rate base and earned the lowest return of any operating company at 7.22 percent on a trailing basis; its August 2026 electric order cut the increase to $157M from the $225M the parties had settled and adopted a 13-month average historical test year; Moody's and S&P both carry negative outlooks on the Colorado utility, and Moody's carries one on the parent; the state's proposed large-load tariff sets the lowest threshold of the three at 50 MW with the highest minimum demand charge at 80 percent, and is not decided until early 2027; and the state is not checked under 'Legislation Passed' on the company's own wildfire framework grid, unlike Texas, North Dakota and South Dakota.",
+    "(Moderate confidence) We assess that Public Service Company of Colorado's absence from any regional transmission organization is an underappreciated structural feature of this company, and that it changes what can be sold there. Basis: the Form 10-K states the Colorado utility 'is not presently a member of an RTO' while making sales into other regional markets and participating in SPP's Western Energy Imbalance Service. There is therefore no capacity auction setting a price in Colorado, no regional planner allocating its transmission cost, and no independent load forecast to check the utility's own — the commission's approval of a 3 percent compound growth forecast and a 5,400 MW need is the only such finding. Every megawatt of Colorado supply is procured through a state resource-plan solicitation, which makes the commission the effective buyer in the company's largest state.",
+    "(Low confidence) We assess that Southwestern Public Service is being positioned as the growth engine and is simultaneously the concentration of the company's unresolved liability, and that the two have not been reconciled in public. Basis: the Texas and New Mexico utility carries the highest rate-base growth rate in the group at approximately 22 percent, $19.0B of five-year capital second only to Minnesota, a build that back-loads hard at roughly 2,490 MW entering service in 2028 and 1,740 MW across 2029–2030, a July 2025 portfolio of 17 projects totalling 5,168 MW nameplate, and a stated resource need of 5,300 to 10,200 MW by 2030 — and it is also the company that owned the poles the state forest service says caused the Smokehouse Creek complex, faces a Texas Attorney General suit filed in December 2025, and has no large-load tariff of its own in either of its states."
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-20",
+      "category": "regulatory",
+      "headline": "Colorado regulators cut the electric rate increase to $157M from the $225M the parties had settled, and imposed a 13-month average historical test year",
+      "read": "The commission rejected the settled number in Xcel's largest state and changed the test-year convention against it — the clearest signal in the file that Colorado is the thinnest regulatory room in the portfolio.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000160/xel-20260819.htm"
+    },
+    {
+      "date": "2026-07-30",
+      "category": "financial",
+      "headline": "Q2 2026: ongoing EPS $0.93 against a $0.79 consensus, guidance reaffirmed for the sixth time, and the Minnesota large-load tariff approved",
+      "read": "An 18 percent earnings beat on a 13.6 percent revenue miss — the shape of a rate-driven quarter — with the tariff that prices the load now in force in one of three states.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000149/xel-20260730.htm"
+    },
+    {
+      "date": "2026-07-29",
+      "category": "leadership",
+      "headline": "Peter Carter, president of Delta Air Lines, elected to the board, taking it to eleven members",
+      "read": "The third outside director added in eighteen months, and the second from a regulated-adjacent industry.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000147/xel-20260729.htm"
+    },
+    {
+      "date": "2026-07-14",
+      "category": "regulatory",
+      "headline": "Colorado gas rate case settled at $123M with a 9.2 percent return on equity, decision expected in the fourth quarter",
+      "read": "The gas case settled while the electric case was being cut — the two Colorado dockets are moving on different tracks.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000144/xel-20260713.htm"
+    },
+    {
+      "date": "2026-06-23",
+      "category": "regulatory",
+      "headline": "Southwestern Public Service stipulated to a $90M New Mexico increase, down from the $175M filed",
+      "read": "A roughly 49 percent haircut on the filed request in the state carrying the company's highest rate-base growth rate.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000109/xel-20260622.htm"
+    },
+    {
+      "date": "2026-06-22",
+      "category": "regulatory",
+      "headline": "Minnesota regulators verbally approved roughly $211M over two years with the return on equity raised to 9.60 percent",
+      "read": "The one 2026 rate outcome that moved the allowed return up rather than down, in the state that also approved the large-load tariff.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000107/xel-20260618.htm"
+    },
+    {
+      "date": "2026-04-30",
+      "category": "financial",
+      "headline": "Q1 2026: ongoing EPS $0.91, over $3B invested, roughly 500 MW of solar and storage placed in service and about $1.5B of equity issued",
+      "read": "Half the five-year equity plan was executed in a single quarter, which is what funding a $60B base plan on schedule looks like.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000070/xel-20260430.htm"
+    },
+    {
+      "date": "2026-02-25",
+      "category": "financial",
+      "headline": "The board raised the dividend 4.0 percent, the 23rd consecutive annual increase",
+      "read": "The dividend record is the company's answer to the wildfire question, and it has not been interrupted by either fire.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/default.aspx"
+    },
+    {
+      "date": "2026-02-24",
+      "category": "partnership",
+      "headline": "Xcel filed a 1,900 MW clean-energy package to serve a Google data center at Pine Island, Minnesota, recovered through a proposed Clean Energy Accelerator Charge",
+      "read": "The most distinctive commercial structure in this file: 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration storage, with Google paying all costs for the duration of the contract and roughly $1.1B of projected benefit to other customers.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota/default.aspx"
+    },
+    {
+      "date": "2026-02-23",
+      "category": "leadership",
+      "headline": "Rob Cain named senior vice president and chief technology officer, succeeding Tim Peterson",
+      "read": "The fourth officer change in twelve months, following the elimination of the chief operations officer role.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-Names-Rob-Cain-Senior-Vice-President-Chief-Technology-Officer/default.aspx"
+    },
+    {
+      "date": "2026-02-05",
+      "category": "financial",
+      "headline": "FY2025: ongoing EPS $3.80 against GAAP $3.42, revenue $14,669M, and a 21st consecutive year of meeting guidance",
+      "read": "The 38-cent gap between the two figures is entirely the Marshall Fire settlement — the only reconciling item of the year.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000006/xel-20260205.htm"
+    },
+    {
+      "date": "2026-02-04",
+      "category": "partnership",
+      "headline": "Xcel signed a memorandum of understanding with a NextEra Energy subsidiary to co-develop generation for large-load customers, converted to a joint development agreement in April 2026",
+      "read": "About 2 GW of data-center capacity co-developed under a fully regulated ownership structure mixing purchase agreements, build-own-transfer projects and self-builds — a partner sourced before the tariffs that would price the load existed.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-NextEra-Energy-Agree-to-Deliver-Generation-Solutions-and-Enable-Large-Load-Across-Xcel-Energys-Service-Territories/default.aspx"
+    },
+    {
+      "date": "2026-02-03",
+      "category": "partnership",
+      "headline": "Xcel and GE Vernova announced a strategic alliance reserving five F-class gas turbines and multiple gigawatts of wind turbine capacity",
+      "read": "Supply chain contracted upstream rather than project by project — later restated as twelve gas combustion-turbine reservations with options into the 2030s.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-GE-Vernova-Announce-Strategic-Alliance-Agreement-to-Advance-the-Future-of-Energy/default.aspx"
+    },
+    {
+      "date": "2026-01-02",
+      "category": "regulatory",
+      "headline": "Public Service Company of Colorado filed a $190M natural gas rate case, an 11.6 percent increase on a $4.7B rate base",
+      "read": "Filed nine days after the electric case, so both Colorado dockets ran through 2026 at once.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000002/xel-20251229.htm"
+    },
+    {
+      "date": "2025-12-17",
+      "category": "leadership",
+      "headline": "Maria Demaree, Lockheed Martin's chief information officer, elected to the board",
+      "read": "Added to the audit committee and the operations, nuclear, environmental and safety committee.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000273/xel-20251217.htm"
+    },
+    {
+      "date": "2025-11-24",
+      "category": "regulatory",
+      "headline": "Public Service Company of Colorado filed a $356M electric rate case, $526M including rider roll-ins, seeking a 9.8 percent return on a $13B rate base",
+      "read": "The case the commission would cut to $157M nine months later, and the vehicle for recovering the Comanche Unit 2 extension.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000264/xel-20251121.htm"
+    },
+    {
+      "date": "2025-11-21",
+      "category": "regulatory",
+      "headline": "Southwestern Public Service filed a $175M New Mexico rate case and disclosed a 100 MW wholesale load roll-off in 2026",
+      "read": "A 16.7 percent increase request in a state where the company is simultaneously losing a wholesale customer.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000261/xel-20251120.htm"
+    },
+    {
+      "date": "2025-11-07",
+      "category": "regulatory",
+      "headline": "Wisconsin regulators verbally approved a multi-year plan of roughly $126M electric and $22M gas at a 9.8 percent return",
+      "read": "The highest allowed return in the portfolio, in the smallest operating company.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000259/xel-20251106.htm"
+    },
+    {
+      "date": "2025-10-21",
+      "category": "leadership",
+      "headline": "Bria Shea named president of Xcel Energy Minnesota, North Dakota and South Dakota",
+      "read": "A regulatory-side career — she led government affairs and regulatory strategy for resource, transmission and distribution planning — installed over the state that would approve the large-load tariff and sign the Google agreement.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2025/Bria-Shea-named-President-Xcel-Energy--Minnesota-North-and-South-Dakota/default.aspx"
+    },
+    {
+      "date": "2025-09-24",
+      "category": "legal",
+      "headline": "Agreements in principle resolved all Marshall Fire litigation at approximately $640M, with roughly $350M from insurance and none from customers",
+      "read": "The largest single liability event in the file, settled without an admission of fault and without a customer contribution — and the sole GAAP-to-ongoing reconciling item of 2025.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000242/xel-20250923.htm"
+    },
+    {
+      "date": "2025-07-18",
+      "category": "procurement",
+      "headline": "Southwestern Public Service announced 17 new projects totalling 5,168 MW nameplate for Texas and New Mexico by 2030",
+      "read": "1,273 MW of wind, 695 MW of solar, 1,112 MW of storage and 2,088 MW of gas, plus 521 MW of extensions at three existing plants — the largest single procurement announcement in the file.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000218/xel-20250717.htm"
+    },
+    {
+      "date": "2025-06-16",
+      "category": "leadership",
+      "headline": "Ryan Long named executive vice president and chief legal and compliance officer, succeeding Rob Berntsen",
+      "read": "The general counsel seat changed hands in the middle of two wildfire liability matters, with Long retaining the Minnesota presidency on an interim basis until October.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000153/xel-20250613.htm"
+    },
+    {
+      "date": "2025-03-03",
+      "category": "leadership",
+      "headline": "The chief operations officer role was eliminated on Tim O'Connor's retirement and split between a chief generation officer and a chief delivery officer",
+      "read": "Scott Sharp took generation and nuclear, Michael Lamb took distribution, transmission, wildfire risk management and major projects — a structure that puts wildfire and the build programme under one officer.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000050/xel-20250225.htm"
+    },
+    {
+      "date": "2025-02-21",
+      "category": "regulatory",
+      "headline": "Minnesota regulators verbally approved the 2024 Upper Midwest Resource Plan settlement and ordered a super-large-load tariff filing by July 15, 2025",
+      "read": "The order that both authorised the build — a 420 MW combustion turbine, a 300 MW four-hour battery at Sherco, 3,200 MW of wind, nuclear life extensions to the early 2050s — and created the tariff obligation the company met eighteen months later.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000025/xel-20250220.htm"
+    },
+    {
+      "date": "2025-02-06",
+      "category": "financial",
+      "headline": "FY2024: ongoing EPS $3.50 on revenue of $13,441M, a 20th consecutive year of meeting guidance",
+      "read": "The last clean year before the Marshall settlement split GAAP from ongoing earnings.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000023/xel-20250206.htm"
+    },
+    {
+      "date": "2025-01-02",
+      "category": "regulatory",
+      "headline": "The Monticello nuclear plant received federal approval to operate to 2050",
+      "read": "A licence extension that turns an existing asset into carbon-free capacity for another quarter century without a resource-plan solicitation.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2025/Xcel-Energys-Monticello-Nuclear-Plant-Receives-Federal-Approval-to-Extend-Operations/default.aspx"
+    },
+    {
+      "date": "2024-12-03",
+      "category": "product-launch",
+      "headline": "Xcel deployed AI wildfire-detection technology in the Texas Panhandle",
+      "read": "Nine months after the Smokehouse Creek complex, in the territory where it started.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2024/Xcel-Energy-Using-AI-Technology-to-Detect-Wildfires-in-Texas-Panhandle/default.aspx"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "google",
+      "type": "customer",
+      "status": "active",
+      "since": "2026",
+      "scale": "1,900 MW clean-energy package at Pine Island, Minnesota — 1,400 MW wind, 200 MW solar, 300 MW long-duration storage",
+      "via": "Electric service agreement with a proposed Clean Energy Accelerator Charge",
+      "note": "The only large-load customer Xcel names itself, and the only one whose cost-recovery vehicle is disclosed.",
+      "context": "Xcel's February 24, 2026 release states Google 'will pay all costs for its new service for the duration of the contract' and projects approximately $1.1 billion of benefits to other Minnesota customers, with $50 million directed to Xcel's Capacity*Connect programme. The Q2 2026 deck records that roughly two thirds of the generation and storage is contracted by Google. The storage inside the package is a 300 MW, 30 GWh Form Energy iron-air system — a hundred-hour duration procured inside a customer's service agreement rather than through a resource plan. Amanda Peterson Corio, Google's head of data center energy, is quoted in the release. A commission decision on the charge is expected in early 2027.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota/default.aspx"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026",
+      "scale": "Five F-class gas turbines reserved (twelve combustion-turbine reservations in the restated figure, with options into the 2030s) plus a capacity reservation for multiple gigawatts of wind turbines",
+      "via": "Strategic alliance agreement signed February 2026",
+      "note": "Equipment contracted upstream of any specific project, and before the tariffs that would price the load were approved.",
+      "context": "Xcel's February 3, 2026 release describes a reservation agreement for five F-class gas turbines manufactured at GE Vernova's United States facilities, a capacity reservation agreement for multiple gigawatts of wind projects, collaboration on grid equipment including synchronous condenser technology, and a joint technology and innovation collaboration agreement. GE Vernova chief executive Scott Strazik is quoted. The Q1 and Q2 2026 decks restate the scope as twelve gas combustion-turbine reservations with options for additional slots into the 2030s, and note that Xcel is bidding several gigawatts of wind projects into near-term solicitations using GE Vernova turbines. POWER Magazine reports the five turbines bring Xcel's total to 24 across vendors.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-GE-Vernova-Announce-Strategic-Alliance-Agreement-to-Advance-the-Future-of-Energy/default.aspx"
+    },
+    {
+      "slug": "nextera-energy-resources",
+      "type": "partner",
+      "status": "active",
+      "since": "2026",
+      "scale": "Approximately 2 GW of data-center capacity co-developed, with plans to expand",
+      "via": "Memorandum of understanding February 2026, converted to a joint development agreement in April 2026",
+      "note": "Entity granularity is a stated limit: Xcel names only 'a NextEra Energy subsidiary', and NextEra chairman and chief executive John Ketchum is the quoted principal. The specific subsidiary is not identified in any source reviewed, so the covered node here stands for the NextEra development franchise rather than a named counterparty.",
+      "context": "Xcel's February 4, 2026 release announces a memorandum of understanding with a NextEra Energy subsidiary to deliver generation solutions and enable large load across Xcel's service territories; the Q1 2026 deck records the joint development agreement as signed in April 2026 and describes co-developing generation solutions for 2 GW of data-center capacity under a fully regulated ownership structure mixing power purchase agreements, build-own-transfer projects and self-builds, with the partner engaged across the data-center lifecycle from system planning to operation. POWER Magazine reports the memorandum covers generation, storage and transmission with Colorado, Texas and New Mexico highlighted, and quotes Bob Frenzel on engaging early with leading developers to anticipate system needs.",
+      "source": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-NextEra-Energy-Agree-to-Deliver-Generation-Solutions-and-Enable-Large-Load-Across-Xcel-Energys-Service-Territories/default.aspx"
+    },
+    {
+      "slug": "qts",
+      "type": "customer",
+      "status": "active",
+      "since": "2026",
+      "scale": "177 MW",
+      "via": "Large-load service listed under Xcel Energy in the Edison Electric Institute's large-customer compilation",
+      "note": "Third-party attribution only — Xcel does not name this customer in any first-party source reviewed.",
+      "context": "The Edison Electric Institute's August 28, 2026 Large Load Projects and Tariffs compilation lists a 177 MW QTS data center project in Aurora, Colorado under Xcel Energy. Neither the 10-K, the quarterly releases, the earnings decks nor any Xcel press release reviewed names QTS, so the relationship rests on the trade-association list rather than on the utility's own disclosure.",
+      "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues-and-Policy/Large-Load-Projects-and-Tariffs.pdf"
+    },
+    {
+      "slug": "meta",
+      "type": "customer",
+      "status": "active",
+      "since": "2026",
+      "scale": "$800 million project",
+      "via": "Large-load service listed under Xcel Energy in the Edison Electric Institute's large-customer compilation",
+      "note": "Third-party attribution only — Xcel does not name this customer in any first-party source reviewed.",
+      "context": "The Edison Electric Institute's August 28, 2026 compilation lists an $800 million Meta data center project at Rosemount, Minnesota under Xcel Energy. Xcel's own Minnesota disclosure names only Google, so the Rosemount project sits in the unnamed portion of the roughly 2 GW contracted block or in the pipeline behind it; the sources reviewed do not say which.",
+      "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues-and-Policy/Large-Load-Projects-and-Tariffs.pdf"
+    },
+    {
+      "slug": "aligned",
+      "type": "customer",
+      "status": "active",
+      "since": "2026",
+      "scale": "600 MW",
+      "via": "Large-load service listed under Xcel Energy in the Edison Electric Institute's large-customer compilation",
+      "note": "Third-party attribution only, and the largest single third-party-attributed project in the Southwestern Public Service territory.",
+      "context": "The Edison Electric Institute's August 28, 2026 compilation lists a 600 MW Aligned Data Centers project at Abernathy, Texas under Xcel Energy. Abernathy is in the Texas Panhandle inside Southwestern Public Service's territory — the operating company with the highest rate-base growth rate in the group and no large-load tariff of its own in either of its states.",
+      "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues-and-Policy/Large-Load-Projects-and-Tariffs.pdf"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Minnesota's super-large-load tariff and the statutory requirement behind it",
+      "status": "in-effect",
+      "effectiveDate": "2026-07",
+      "exposure": "The Minnesota Public Utilities Commission ordered NSP-Minnesota to file a proposed tariff for customers with super-large load — largely data centers — by July 15, 2025, and approved the resulting tariff in the second quarter of 2026. Xcel structures the Google agreement 'in accordance with Minnesota's regulatory and legislative requirements for large loads', under which the customer 'will pay all costs for its new service for the duration of the contract'. The tariff is the mechanism by which a 1,900 MW package can be added without the cost falling to other customers, and its approval is what allowed the Google filing to advance to a decision expected in early 2027. Xcel does not cite the underlying statute by bill number in any first-party source reviewed.",
+      "mitigation": "The company filed the tariff on the commission's schedule and built the Google agreement to sit inside it, with a Clean Energy Accelerator Charge as the recovery vehicle and roughly $1.1 billion of projected benefit to other customers as the public case for approval.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000025/xel-20250220.htm"
+    },
+    {
+      "regime": "Colorado's proposed large-load tariff, Proceeding No. 26AL-0137E",
+      "status": "proposed",
+      "effectiveDate": "2027-01",
+      "exposure": "Colorado's proposed tariff sets the lowest applicability threshold of the three states at 50 MW and the highest minimum demand charge at 80 percent, and it is not decided until early 2027. Colorado is 43 percent of 2025 rate base and earned the lowest return of any operating company at 7.22 percent on a trailing basis, so the state that most needs a working large-load mechanism is the one that does not yet have one. Until the proceeding concludes, Colorado large-load service is negotiated against a commission that in August 2026 reduced the settled electric increase from $225 million to $157 million and changed the test-year convention.",
+      "mitigation": "Xcel filed the tariff rather than waiting to be ordered to, and paired it with the NextEra joint development agreement, which names Colorado among the states where co-developed generation would serve large load.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000160/xel-20260819.htm"
+    },
+    {
+      "regime": "Wildfire liability in Colorado and Texas, and the state legislation Xcel does and does not claim",
+      "status": "in-effect",
+      "effectiveDate": "2025-06",
+      "exposure": "Two fires define the exposure. The Marshall Fire settled at approximately $640 million, with roughly $350 million from insurance and, in the company's words, none from customers, leaving about $298 million of shareholder charges and the only GAAP-to-ongoing reconciling item of 2025. The Smokehouse Creek complex, which the Texas A&M Forest Service attributed to Southwestern Public Service-owned power lines after wooden poles failed, has produced $404 million of settlements against a $525 million policy period with approximately $80 million of coverage remaining at June 30, 2026, and the company states it remains unable to reasonably estimate any additional loss or the upper end of the range. Xcel's own wildfire framework credits legislative wins in Texas, North Dakota and South Dakota only; Colorado is not checked under Legislation Passed, and no Colorado utility wildfire-liability statute is named in any source reviewed. Excess liability insurance now costs roughly $135 million a year for $450 million of coverage, against about $40 million for $520 million two years earlier.",
+      "mitigation": "Approximately $5 billion of the $60 billion base capital plan is wildfire mitigation; the Colorado wildfire mitigation plan for 2025 to 2027 is approved with a transmission cost adjustment and a planned 2029 securitization already embedded in the plan's capital tables; insurance costs are deferred for recovery; and AI-based wildfire detection has been deployed in the Texas Panhandle since December 2024.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000242/xel-20250923.htm"
+    },
+    {
+      "regime": "Public Law 119-21, the One Big Beautiful Bill, and the clean-energy tax credit wind-down",
+      "status": "in-effect",
+      "effectiveDate": "2025-07",
+      "exposure": "The law eliminates production and investment tax credits for wind and solar facilities placed in service after 2027 where construction begins after July 4, 2026, and adds foreign-entity-of-concern rules for projects commencing construction after 2025. Xcel's financing plans depend on tax credit transferability — cash transfers of $652 million in 2025 and $689 million in 2024 — and on federal tax credit carryforwards of $1,474 million at December 31, 2025, with a stated valuation consideration of whether credits are expected to be sold at a discount. Treasury issued beginning-of-construction guidance in August 2025 and initial foreign-entity guidance in February 2026, with more expected through 2026.",
+      "mitigation": "The company states it does not expect these provisions to affect the 2026 to 2030 base capital plan, 'as steps have been taken to begin construction under the IRS' safe harbor guidance' — the GE Vernova wind capacity reservation is consistent with securing equipment early enough to qualify.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000009/xel-20251231.htm"
+    },
+    {
+      "regime": "Large-load customer concentration as a named 10-K risk factor",
+      "status": "in-effect",
+      "effectiveDate": "2026-02",
+      "exposure": "Xcel added a risk factor stating that growth in large-load customers may increase customer concentration, capital requirements and revenue variability, that additional demand from a limited number of customers may increase credit risk exposure and require incremental infrastructure investment, and that if anticipated load growth does not materialise as expected or regulatory cost allocation mechanisms evolve, results of operations, financial condition or cash flows could be affected. It is now a standing forward-looking-statement factor in every release. The company's own disclosure supports the concern: the contracted block held flat at roughly 2 GW between the Q1 and Q2 2026 decks, one 200 MW project's online date slipped a year between them, and the fifth project row is redacted in Xcel's own slide.",
+      "mitigation": "The tariffs are the mitigation: minimum demand charges, contract terms and cost-causation provisions in Minnesota, Colorado and Wisconsin are designed so that a customer that does not arrive still pays for what was built. Xcel also holds the contracted figure conservative and reports pipeline separately rather than blending the two.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000009/xel-20251231.htm"
+    },
+    {
+      "regime": "Credit-rating pressure from regulatory outcomes",
+      "status": "in-effect",
+      "effectiveDate": "2026-08",
+      "exposure": "The 10-K states that significant events including disallowance of costs, use of historic test years, elimination of riders or interim rates, increasing depreciation lives, lower returns on equity and changes to equity ratios may affect cash flows and credit metrics. Three of those six occurred in Colorado in August 2026 at once: a historic test year was adopted, the increase was cut from the settled amount, and the outcome landed while Moody's carries negative outlooks on both Public Service Company of Colorado and the parent, and S&P carries one on the Colorado utility. The company is funding a $60 billion base plan plus more than $10 billion of line-of-sight capital against that backdrop.",
+      "mitigation": "Equity has been issued well ahead of need — roughly $1.5 billion in the first quarter of 2026, about half the five-year plan, with 69.7 million forward shares unsettled at June 30, 2026 representing $5.2 billion of minimum proceeds — and liability management has included tender offers for first mortgage bonds.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000009/xel-20251231.htm"
+    },
+    {
+      "regime": "Resource-plan approval as the procurement gate in a state with no regional transmission organization",
+      "status": "in-effect",
+      "effectiveDate": "2026-02",
+      "exposure": "Public Service Company of Colorado 'is not presently a member of an RTO', though it makes sales into other regional markets and participates in the Southwest Power Pool's Western Energy Imbalance Service. There is therefore no capacity auction setting a price in Colorado, no regional planner allocating its transmission cost and no independent load forecast to check the utility's own. Every megawatt of Colorado supply is procured through a state resource-plan solicitation, which makes the commission the effective buyer in the company's largest state. The current cycle is Proceeding No. 24A-0442E; the Phase II competitive solicitation has selected nothing, with bids due in the third quarter of 2026.",
+      "mitigation": "The company runs procurement through separate near-term and resource-plan tracks so that near-term need can be met while the main solicitation runs, and it secured turbine and wind capacity through the GE Vernova alliance ahead of the solicitations that will use them.",
+      "source": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000009/xel-20251231.htm"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Robert C. (Bob) Frenzel",
+      "title": "Chairman of the Board, President and Chief Executive Officer",
+      "photo": "images/execs/xcel-energy-frenzel.jpg",
+      "background": [
+        "Chairman since December 2021; president and chief executive since August 2021 — Xcel has no separate independent chair",
+        "Also chief executive of all four operating companies: NSP-Minnesota, NSP-Wisconsin, Public Service Company of Colorado and Southwestern Public Service",
+        "President and chief operating officer of Xcel Energy, March 2020 to August 2021",
+        "Executive vice president and chief financial officer of Xcel Energy, May 2016 to March 2020",
+        "Quoted on both the GE Vernova alliance and the NextEra agreement — the upstream supply-chain strategy is his to defend"
+      ]
+    },
+    {
+      "name": "Brian J. Van Abel",
+      "title": "Executive Vice President and Chief Financial Officer",
+      "photo": "images/execs/xcel-energy-van-abel.jpg",
+      "background": [
+        "Chief financial officer since March 2020; the signing officer on Xcel's 8-K filings and the 10-K",
+        "Senior vice president, finance and corporate development, Xcel Energy Services, September 2018 to March 2020",
+        "With Xcel Energy since 2010",
+        "Owns the $60 billion base capital plan plus more than $10 billion of line-of-sight capital, and the equity programme funding it — roughly $1.5 billion issued in Q1 2026 and 69.7 million forward shares unsettled at mid-year"
+      ]
+    },
+    {
+      "name": "Amanda Rome",
+      "title": "Executive Vice President, Group President, Utilities, and Chief Customer Officer",
+      "photo": "images/execs/xcel-energy-rome.jpg",
+      "background": [
+        "The role that owns the customer franchise and to which the four operating-company presidents report — the closest thing Xcel has to a large-load owner at the executive vice president level",
+        "In post since October 2023; interim general counsel January to May 2024",
+        "Executive vice president and chief legal and compliance officer, June 2022 to October 2023; executive vice president and general counsel, June 2020 to June 2022",
+        "With Xcel Energy since 2015 — a legal career converted into the commercial seat"
+      ]
+    },
+    {
+      "name": "Scott Sharp",
+      "title": "Executive Vice President and Chief Generation Officer",
+      "background": [
+        "One of the two officers who absorbed the chief operations officer role when it was eliminated in May 2025",
+        "Holds energy supply and commercial operations, and added oversight of nuclear on promotion",
+        "Senior vice president, energy supply and commercial operations, April 2023 to April 2025; vice president, energy supply operations, October 2020 to April 2023",
+        "With Xcel Energy since 2014. No company-published headshot exists — his biography page is JavaScript-rendered and he is absent from the newsroom leadership gallery"
+      ]
+    },
+    {
+      "name": "Michael Lamb",
+      "title": "Executive Vice President and Chief Delivery Officer",
+      "background": [
+        "The other half of the split chief operations officer role, and the officer under whom wildfire and the build programme sit together",
+        "Scope is electric distribution and transmission, gas distribution and transmission, wildfire risk management, operations process and performance, and the major projects group",
+        "Senior vice president, customer delivery, September 2024 to April 2025; distribution and gas, June 2023 to August 2024; transmission, April 2018 to May 2023",
+        "With Xcel Energy since 1985 — 41 years, the longest tenure on the executive team. Coordinating officer for the board's operations, nuclear, environmental and safety committee. No company-published headshot exists"
+      ]
+    },
+    {
+      "name": "Ryan Long",
+      "title": "Executive Vice President, Chief Legal and Compliance Officer",
+      "photo": "images/execs/xcel-energy-long.jpg",
+      "background": [
+        "Took the general counsel seat in June 2025, in the middle of both wildfire liability matters, succeeding Rob Berntsen",
+        "Interim president of NSP-Minnesota June to October 2025; president of NSP-Minnesota January 2024 to June 2025 — an operating-company president who moved to legal rather than the reverse",
+        "Interim general counsel October 2023 to January 2024; vice president and deputy general counsel from May 2021",
+        "Previously a lawyer at Faegre Baker Daniels in Minneapolis and Cravath, Swaine & Moore in New York; serves on the board of the Guthrie Theater. Oversees legal, compliance and federal affairs"
+      ]
+    },
+    {
+      "name": "Bria Shea",
+      "title": "President, Xcel Energy – Minnesota, North Dakota and South Dakota",
+      "photo": "images/execs/xcel-energy-shea.jpg",
+      "background": [
+        "Named October 2025, succeeding Ryan Long, over the operating company that approved the large-load tariff and signed the Google agreement",
+        "Previously regional vice president, planning and policy — led government affairs and regulatory strategy for resource, transmission and distribution planning across the Upper Midwest systems",
+        "Joined Xcel Energy in 2008 and held several leadership positions on the regulatory team",
+        "The named Xcel spokesperson on the February 2026 Google agreement. BA, Gustavus Adolphus College; law degree, William Mitchell College of Law; board member, Minneapolis Clean Energy Partnership"
+      ]
+    },
+    {
+      "name": "Robert Kenney",
+      "title": "President, Xcel Energy – Colorado",
+      "photo": "images/execs/xcel-energy-kenney.jpg",
+      "background": [
+        "Runs Public Service Company of Colorado — 43 percent of 2025 rate base, the lowest trailing earned return in the group at 7.22 percent, and the only operating company in no regional transmission organization",
+        "Owns the two 2026 Colorado rate cases, the proposed large-load tariff in Proceeding No. 26AL-0137E and the resource plan in Proceeding No. 24A-0442E",
+        "Career detail beyond the title is not published in the first-party sources reviewed"
+      ]
+    },
+    {
+      "name": "Karl Hoesly",
+      "title": "President, Xcel Energy – Wisconsin and Michigan",
+      "photo": "images/execs/xcel-energy-hoesly.jpg",
+      "background": [
+        "Runs NSP-Wisconsin, the smallest operating company and the one with the highest allowed return at 9.8 percent",
+        "Delivered the November 2025 multi-year outcome of roughly $126 million electric and $22 million gas across 2026 and 2027",
+        "Career detail beyond the title is not published in the first-party sources reviewed"
+      ]
+    },
+    {
+      "name": "Alice Jackson",
+      "title": "Senior Vice President, System Strategy and Chief Planning Officer",
+      "photo": "images/execs/xcel-energy-jackson.jpg",
+      "background": [
+        "The planning-side counterpart to the customer organisation — owns system strategy across the eight states",
+        "Listed in Xcel's newsroom leadership gallery; not among the named executive officers in the 10-K",
+        "The resource plans in Colorado, Minnesota and the Southwestern Public Service territory all run through this function"
+      ]
+    },
+    {
+      "name": "Patricia Correa",
+      "title": "Senior Vice President and Chief Human Resources Officer",
+      "photo": "images/execs/xcel-energy-correa.jpg",
+      "background": [
+        "In post since February 2022",
+        "Previously senior vice president, human resources, at Eaton Corporation, July 2019 to January 2022",
+        "Owns a workforce of 11,534 full-time employees at December 2025, about 44 percent of whom are under collective bargaining agreements"
+      ]
+    },
+    {
+      "name": "Rob Clark",
+      "title": "Senior Vice President and Chief Communications Officer",
+      "photo": "images/execs/xcel-energy-clark.jpg",
+      "background": [
+        "Owns external communications through two wildfire liability matters and the Google announcement",
+        "Listed in Xcel's newsroom leadership gallery"
+      ]
+    },
+    {
+      "name": "Amy Schneider",
+      "title": "Vice President, Corporate Secretary and Securities",
+      "photo": "images/execs/xcel-energy-schneider.jpg",
+      "background": [
+        "Corporate secretary through a period of unusual board turnover — the board moved from 14 members to 12 to 11 between January 2025 and July 2026",
+        "Listed in Xcel's newsroom leadership gallery"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Edison Electric Institute — Large Load Projects and Tariffs (Xcel projects; CO 26AL-0137E; MN 25-289; WI 4220-TE-119)",
+      "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues-and-Policy/Large-Load-Projects-and-Tariffs.pdf",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Colorado Public Radio — Xcel data center plan faces pushback from residents and advocates",
+      "url": "https://www.cpr.org/2026/08/26/xcel-data-center-pushback/",
+      "date": "2026-08-26"
+    },
+    {
+      "label": "8-K — Colorado PUC verbal decision, 2025 electric rate case ($157M, 13-month average historical test year, rates effective Aug. 29, 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000160/xel-20260819.htm",
+      "date": "2026-08-20"
+    },
+    {
+      "label": "Colorado Sun — Colorado regulators take swipe at Xcel Energy's claims that increases aren't that impactful",
+      "url": "https://coloradosun.com/2026/08/06/colorado-utilities-xcel-electric-rate-increase-proposal/",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Press release — Xcel Energy Foundation Celebrates 25 Years of Community Investment",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-Foundation-Celebrates-25-Years-of-Community-Investment/default.aspx",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Energy and Policy Institute — Minnesota regulators approve higher Xcel profits at customers' expense",
+      "url": "https://energyandpolicy.org/minnesota-regulators-approve-higher-xcel-profits-at-customers-expense/",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "KFDA NewsChannel 10 — Xcel files plan to reduce wildfire risk in Panhandle, South Plains with state regulators",
+      "url": "https://www.newschannel10.com/2026/08/05/xcel-files-plan-reduce-wildfire-risk-with-state-regulators/",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Utility Dive — Xcel Energy on track for 3% retail sales growth this year, executives say",
+      "url": "https://www.utilitydive.com/news/xcel-energy-on-track-retail-sales-growth-this-year-executives-say/826705/",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Q2 2026 earnings report (8-K Item 2.02 and Exhibit 99.01)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000149/xel-20260730.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Form 10-Q, quarter ended June 30, 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000154/xel-20260630.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Investing.com — Xcel Energy Q2 2026 slides: $70B capital plan drives 24% EPS growth",
+      "url": "https://www.investing.com/news/company-news/xcel-energy-q2-2026-slides-70b-capital-plan-drives-24-eps-growth-93CH-4825617",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "8-K and press release — Peter Carter elected to the board of directors",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000147/xel-20260729.htm",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "8-K — Colorado natural gas rate case settlement ($123M, ROE 9.2%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000144/xel-20260713.htm",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "Utility Dive — Southwestern Public Service wins $113M reliability grant from Texas",
+      "url": "https://www.utilitydive.com/news/southwestern-public-service-reliability-grant-texas-puc/824464/",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "The Globe and Mail (wire) — Xcel Energy Subsidiary Reaches New Mexico Rate Settlement",
+      "url": "https://www.theglobeandmail.com/investing/markets/stocks/XEL-Q/pressreleases/2621798/xcel-energy-subsidiary-reaches-new-mexico-rate-settlement/",
+      "date": "2026-06-24"
+    },
+    {
+      "label": "8-K — SPS New Mexico electric rate case stipulation ($90M, ROE 9.5%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000109/xel-20260622.htm",
+      "date": "2026-06-23"
+    },
+    {
+      "label": "8-K — MPUC verbal order, 2024 Minnesota electric rate case (~$211M over two years, ROE 9.60%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000107/xel-20260618.htm",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "Colorado Public Radio — Xcel's rate hike runs into consumer opposition in Colorado",
+      "url": "https://www.cpr.org/2026/06/11/xcel-big-rate-hike-opposition/",
+      "date": "2026-06-11"
+    },
+    {
+      "label": "Colorado Sun — Xcel Energy customers may be hit with the largest electric rate increase ever",
+      "url": "https://coloradosun.com/2026/06/04/xcel-energy-electric-rate-increase-colorado/",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "8-K — Colorado electric rate case settlement ($225M, Comanche 3 performance framework)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000101/xel-20260602.htm",
+      "date": "2026-06-03"
+    },
+    {
+      "label": "Denver Gazette — Colorado lawmakers kill both major data center bills this year",
+      "url": "https://www.denvergazette.com/2026/05/12/colorado-lawmakers-kill-both-major-data-center-bills/",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "8-K — Minnesota natural gas rate case settlement ($38M, WACC 7.21%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000077/xel-20260508.htm",
+      "date": "2026-05-11"
+    },
+    {
+      "label": "TipRanks — Xcel Energy establishes $4.3 billion equity distribution program",
+      "url": "https://www.tipranks.com/news/company-announcements/xcel-energy-establishes-4-3-billion-equity-distribution-program",
+      "date": "2026-05-01"
+    },
+    {
+      "label": "Q1 2026 earnings report (8-K Item 2.02 and Exhibit 99.01)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000070/xel-20260430.htm",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "Form 10-Q, quarter ended March 31, 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000073/xel-20260331.htm",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "Utility Dive — Colorado governor signs advanced transmission technology bill",
+      "url": "https://www.utilitydive.com/news/colorado-advanced-transmission-technology-gets-bill/817545/",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Colorado Sun — Elbert County effort to block Xcel's $1.7B Power Pathway upended by the PUC",
+      "url": "https://coloradosun.com/2026/04/15/power-pathway-elbert-el-paso-puc-transmission-electricity/",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Colorado Public Radio — Xcel releases new plan to charge data centers for its power and reduce bill impacts for Coloradans",
+      "url": "https://www.cpr.org/2026/04/07/xcel-colorado-data-center-power-prices/",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "Colorado Sun — Xcel proposes new rate scale for data centers to shield consumers from added power costs",
+      "url": "https://coloradosun.com/2026/04/02/data-centers-xcel-energy-colorado-rate-tariff-consumers/",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "Colorado Public Radio — Ten projects, 122 days: Xcel and energy developers race to lock down billions in tax credits",
+      "url": "https://www.cpr.org/2026/03/04/xcel-clean-energy-developments-colorado-tax-credits/",
+      "date": "2026-03-04"
+    },
+    {
+      "label": "Monticello Times — Xcel-Google power agreement offers glimpse of model for large data centers",
+      "url": "https://www.hometownsource.com/monticello_times/xcel-google-power-agreement-offers-glimpse-of-model-for-large-data-centers/article_2d1c0584-3617-4dc3-adf6-b78338b18587.html",
+      "date": "2026-02-27"
+    },
+    {
+      "label": "Form 10-K for fiscal year ended December 31, 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000009/xel-20251231.htm",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "Press release — Board increases the 2026 common dividend (+9 cents, +4.0%)",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/default.aspx",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "Press release — Xcel Energy to Power New Google Data Center in Minnesota (Pine Island; 1,900 MW; Form Energy 300 MW / 30 GWh)",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota/default.aspx",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Renewable Energy World — Data centers done right? Xcel and Form Energy team up to power Google operation in Minnesota",
+      "url": "https://www.renewableenergyworld.com/energy-business/new-project-development/data-centers-done-right-xcel-and-form-energy-team-up-to-power-google-operation-in-minnesota/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Press release — Xcel Energy names Rob Cain senior vice president, chief technology officer",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-Names-Rob-Cain-Senior-Vice-President-Chief-Technology-Officer/default.aspx",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "Colorado PUC — Commission approves new energy resources for Xcel Energy (Near-Term Procurement, ten projects, up to 4,100 MW)",
+      "url": "https://puc.colorado.gov/press-release/colorado-public-utilities-commission-approves-new-energy-resources-for-xcel-energy",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "Renewable Energy Magazine — Xcel Energy and GE Vernova announce strategic alliance agreement",
+      "url": "https://www.renewableenergymagazine.com/panorama/xcel-energy-and-ge-vernova-announce-strategic-20260206",
+      "date": "2026-02-06"
+    },
+    {
+      "label": "POWER Magazine — Xcel Energy inks dual alliances with GE Vernova and NextEra to support a 6 GW data center outlook",
+      "url": "https://www.powermag.com/xcel-energy-inks-dual-alliances-with-ge-vernova-nextera-to-support-6-gw-data-center-outlook-generation-expansion/",
+      "date": "2026-02-05"
+    },
+    {
+      "label": "FY2025 year-end earnings report (8-K and Exhibit 99.01)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000006/xel-20260205.htm",
+      "date": "2026-02-05"
+    },
+    {
+      "label": "Press release — Xcel Energy and NextEra Energy agree to deliver generation solutions and enable large load",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-NextEra-Energy-Agree-to-Deliver-Generation-Solutions-and-Enable-Large-Load-Across-Xcel-Energys-Service-Territories/default.aspx",
+      "date": "2026-02-04"
+    },
+    {
+      "label": "Press release — Xcel Energy and GE Vernova announce strategic alliance agreement",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2026/Xcel-Energy-and-GE-Vernova-Announce-Strategic-Alliance-Agreement-to-Advance-the-Future-of-Energy/default.aspx",
+      "date": "2026-02-03"
+    },
+    {
+      "label": "8-K — PSCo files Colorado natural gas rate case ($190M, 11.6%)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290326000002/xel-20251229.htm",
+      "date": "2026-01-02"
+    },
+    {
+      "label": "NPR — Texas sues Minnesota-based electric company for causing the 2024 Smokehouse Creek Fire",
+      "url": "https://www.npr.org/2025/12/17/nx-s1-5646552/texas-sues-minnesota-based-electric-company-for-causing-2024-smokehouse-creek-fire",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "8-K and press release — Maria Demaree elected to the board of directors",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000273/xel-20251217.htm",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Texas Attorney General — Paxton sues electric company for causing the Smokehouse Creek Fire",
+      "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-sues-electric-company-causing-devastating-smokehouse",
+      "date": "2025-12-16"
+    },
+    {
+      "label": "Colorado Sun — More data centers are coming to Colorado, demanding more power than they'll need",
+      "url": "https://coloradosun.com/2025/12/10/data-center-power-demands-colorado-xcel-tri-state/",
+      "date": "2025-12-10"
+    },
+    {
+      "label": "8-K — PSCo files Colorado electric rate case ($356M, $526M including rider roll-ins)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000264/xel-20251121.htm",
+      "date": "2025-11-24"
+    },
+    {
+      "label": "8-K — SPS files New Mexico electric rate case ($175M; 100 MW wholesale roll-off)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000261/xel-20251120.htm",
+      "date": "2025-11-21"
+    },
+    {
+      "label": "Utility Dive — Southwest Power Pool to develop a 765 kV regional transmission backbone",
+      "url": "https://www.utilitydive.com/news/spp-to-develop-765-kv-regional-backbone/804981/",
+      "date": "2025-11-07"
+    },
+    {
+      "label": "8-K — PSCW verbal decision, NSP-Wisconsin multi-year rate case (electric ~$126M, gas ~$22M)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000259/xel-20251106.htm",
+      "date": "2025-11-07"
+    },
+    {
+      "label": "RTO Insider — SPP board approves the 2025 ITP with four 765 kV projects",
+      "url": "https://www.rtoinsider.com/119101-spp-board-approves-2025-itp-765kv-projects/",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "Utility Dive — Xcel Energy rolls out a $60 billion capital spending plan",
+      "url": "https://www.utilitydive.com/news/xcel-energy-rolls-out-60-billion-capital-spending-plan/804355/",
+      "date": "2025-10-31"
+    },
+    {
+      "label": "Q3 2025 earnings report (8-K and Exhibit 99.01)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000254/xel-20251030.htm",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "CUB Minnesota — Data Centers in MN: CUB's work to protect ratepayers",
+      "url": "https://cubminnesota.org/data-centers-mn-cubs-work-protect-ratepayers",
+      "date": "2025-10-23"
+    },
+    {
+      "label": "Press release — Bria Shea named president, Xcel Energy Minnesota, North and South Dakota",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2025/Bria-Shea-named-President-Xcel-Energy--Minnesota-North-and-South-Dakota/default.aspx",
+      "date": "2025-10-21"
+    },
+    {
+      "label": "Tract — comments in Xcel's Minnesota large-load tariff docket M-25-289",
+      "url": "https://legalectric.org/f/2025/10/Tract-Comments-re-Xcel-Large-Load-Tariff-10.13.205232560586.7-2-202510-223860-02-Public.pdf",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "Minnesota Office of the Attorney General — comments in Docket M-25-289",
+      "url": "https://legalectric.org/f/2025/10/Docket-M-25-289_OAG-RUD_202510-223857-02.pdf",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "Investing.com — S&P revises the Xcel Energy outlook to stable after the wildfire settlements",
+      "url": "https://www.investing.com/news/stock-market-news/sp-revises-xcel-energy-outlook-to-stable-after-wildfire-settlements-93CH-4258485",
+      "date": "2025-09-26"
+    },
+    {
+      "label": "8-K and press release — agreements in principle resolve all Marshall Fire litigation (~$640M; ~$350M insurance; none from customers)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000242/xel-20250923.htm",
+      "date": "2025-09-24"
+    },
+    {
+      "label": "8-K — 2024 Minnesota electric rate case intervenor testimony",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000233/xel-20250822.htm",
+      "date": "2025-08-25"
+    },
+    {
+      "label": "Colorado Sun — Xcel says it needs to spend $22 billion to keep up with potential Colorado data center demand by 2040",
+      "url": "https://coloradosun.com/2025/08/18/colorado-xcel-data-center-demand-spending/",
+      "date": "2025-08-18"
+    },
+    {
+      "label": "Baker Botts — Texas Senate Bill 6: understanding the impacts to large loads and co-located generation",
+      "url": "https://www.bakerbotts.com/thought-leadership/publications/2025/july/texas-senate-bill-6-understanding-the-impacts-to-large-loads-and-co-located-generation",
+      "date": "2025-07-18"
+    },
+    {
+      "label": "8-K and press release — SPS portfolio of new power projects for Texas and New Mexico (17 projects, 5,168 MW)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000218/xel-20250717.htm",
+      "date": "2025-07-18"
+    },
+    {
+      "label": "NSP-Minnesota — petition for Large General Time of Day Service and Large Peak Controlled Time of Day Service tariffs, MPUC Docket E002/M-25-289",
+      "url": "https://legalectric.org/f/2025/10/Xcel-Tariff-Petition_20257-221060-01.pdf",
+      "date": "2025-07-16"
+    },
+    {
+      "label": "Kiowa County Press — Colorado PUC approves Xcel Energy's wildfire mitigation plan",
+      "url": "https://kiowacountypress.net/content/colorado-puc-approves-xcel-energys-wildfire-mitigation-plan",
+      "date": "2025-07-06"
+    },
+    {
+      "label": "8-K — NSP-Minnesota files a South Dakota electric rate case ($44M)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000191/xel-20250630.htm",
+      "date": "2025-06-30"
+    },
+    {
+      "label": "8-K and press release — Ryan Long named executive vice president and chief legal and compliance officer",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000153/xel-20250613.htm",
+      "date": "2025-06-16"
+    },
+    {
+      "label": "Colorado Public Radio — Colorado ditches plan to reduce utilities' wildfire liability (HB25-1302)",
+      "url": "https://www.cpr.org/2025/04/09/colorado-homeowners-insurance-bill-utilities-wildfires/",
+      "date": "2025-04-09"
+    },
+    {
+      "label": "8-K — NSP-Wisconsin files a multi-year electric and natural gas rate case ($151M / $24M)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000070/xel-20250331.htm",
+      "date": "2025-04-01"
+    },
+    {
+      "label": "8-K and press release — chief operations officer to retire; Scott Sharp and Michael Lamb promoted",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000050/xel-20250225.htm",
+      "date": "2025-03-03"
+    },
+    {
+      "label": "8-K — MPUC verbally approves the 2024 Upper Midwest Resource Plan settlement and orders a super-large-load tariff filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000025/xel-20250220.htm",
+      "date": "2025-02-21"
+    },
+    {
+      "label": "Fresh Energy — Regulators approve more renewables in Xcel Energy's final long-range plan (MPUC Docket 24-67)",
+      "url": "https://fresh-energy.org/regulators-approve-more-renewables-in-xcel-energys-final-long-range-plan",
+      "date": "2025-02-20"
+    },
+    {
+      "label": "FY2024 year-end earnings report (8-K and Exhibit 99.01)",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000023/xel-20250206.htm",
+      "date": "2025-02-06"
+    },
+    {
+      "label": "8-K and press release — Devin Stockfish elected to the board of directors",
+      "url": "https://www.sec.gov/Archives/edgar/data/72903/000007290325000017/xel-20250120.htm",
+      "date": "2025-01-23"
+    },
+    {
+      "label": "Press release — Monticello nuclear plant receives federal approval to extend operations to 2050",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2025/Xcel-Energys-Monticello-Nuclear-Plant-Receives-Federal-Approval-to-Extend-Operations/default.aspx",
+      "date": "2025-01-02"
+    },
+    {
+      "label": "Press release — Xcel Energy using AI technology to detect wildfires in the Texas Panhandle",
+      "url": "https://investors.xcelenergy.com/news-events/news-releases/news-details/2024/Xcel-Energy-Using-AI-Technology-to-Detect-Wildfires-in-Texas-Panhandle/default.aspx",
+      "date": "2024-12-03"
+    },
+    {
+      "label": "Boulder Reporting Lab — Colorado PUC to investigate Xcel Energy's wildfire safety outage",
+      "url": "https://boulderreportinglab.org/2024/04/10/colorado-puc-to-investigate-xcel-energys-wildfire-safety-outage-amid-confusion-revenue-loss/",
+      "date": "2024-04-10"
+    },
+    {
+      "label": "Utility Dive — Colorado cities urge FERC to reject cost allocation for Xcel's $2B Power Pathway project",
+      "url": "https://www.utilitydive.com/news/colorado-cities-mean-ferc-xcel-psco-cost-allocation-transmission-power-pathway/708035/",
+      "date": "2024-02-21"
+    },
+    {
+      "label": "Utility Dive — Colorado PUC delays 2.1 GW of Xcel wind and solar, citing cost concerns (2021 ERP Phase II)",
+      "url": "https://www.utilitydive.com/news/colorado-approves-xcel-clean-energy-plan-delays-renewables/702769/",
+      "date": "2023-12-18"
+    },
+    {
+      "label": "Minnesota PUC — order approving the 2020–2034 Upper Midwest integrated resource plan with modifications, Docket E-002/RP-19-368",
+      "url": "https://mn.gov/puc/",
+      "date": "2022-04-15"
+    },
+    {
+      "label": "Minnesota PUC — Very large electric customers (Minn. Stat. section 216B.1622; dockets 25-289, 26-126, 26-211, 25-178, 26-243)",
+      "url": "https://mn.gov/puc/activities/v-l-e-c/"
+    },
+    {
+      "label": "Colorado PUC — Electric Resource Plans and Clean Energy Plan (Proceeding No. 24A-0442E)",
+      "url": "https://puc.colorado.gov/puc-home/energy-and-water/electric-resource-plans/clean-energy-plan"
+    },
+    {
+      "label": "Colorado PUC — Xcel Energy's electric rate increase proposal, Proceeding No. 25AL-0494E",
+      "url": "https://puc.colorado.gov/press-release/xcel-energys-electric-rate-increase-proposal-proceeding-no-25al-0494e"
+    },
+    {
+      "label": "Colorado's Power Pathway — project description (560 miles of 345 kV plus the May Valley–Longhorn extension)",
+      "url": "https://www.coloradospowerpathway.com/project-description/"
+    },
+    {
+      "label": "Xcel Energy Transmission — Potter–Crossroads–Phantom 765/345 kV transmission line project",
+      "url": "https://xcelenergytransmission.com/projects/potter-crossroads-phantom/"
+    },
+    {
+      "label": "Xcel Energy Transmission — Colorado's Power Pathway project page",
+      "url": "https://xcelenergytransmission.com/projects/colorados-power-pathway/"
+    },
+    {
+      "label": "MISO — Long Range Transmission Planning (Tranche 2.1: $21.8B, 24 projects, 3,631-mile 765 kV backbone)",
+      "url": "https://www.misoenergy.org/planning/long-range-transmission-planning/"
+    },
+    {
+      "label": "Great River Energy — MISO approves a historic portfolio of high-voltage transmission lines (Xcel among Grid North Partners)",
+      "url": "https://greatriverenergy.com/company-news/miso-approves-historic-portfolio-of-high-voltage-electric-transmission-lines/"
+    },
+    {
+      "label": "Colorado General Assembly — SB26-102, Large-Load Data Centers",
+      "url": "https://leg.colorado.gov/bills/sb26-102"
+    },
+    {
+      "label": "Colorado General Assembly — HB25-1302, utility wildfire liability",
+      "url": "https://leg.colorado.gov/bills/hb25-1302"
+    },
+    {
+      "label": "Xcel Energy Investor Relations — events and presentations (earnings-date cadence; no Q3 2026 event posted)",
+      "url": "https://investors.xcelenergy.com/news-events/events-and-presentations/default.aspx"
+    },
+    {
+      "label": "Xcel Energy Newsroom — leadership headshot gallery (company-published portraits)",
+      "url": "https://newsroom.xcelenergy.com/multimedia/gallery/leadership"
+    },
+    {
+      "label": "Xcel Energy — corporate leadership index",
+      "url": "https://corporate.my.xcelenergy.com/s/about/leadership-governance/company"
+    },
+    {
+      "label": "Xcel Energy — board of directors",
+      "url": "https://corporate.my.xcelenergy.com/s/about/leadership-governance/board"
+    },
+    {
+      "label": "MarketBeat — XEL earnings history and next-date estimate",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/XEL/earnings/"
+    },
+    {
+      "label": "Investing.com — XEL earnings history and next date",
+      "url": "https://www.investing.com/equities/xcel-energy-earnings"
+    },
+    {
+      "label": "TipRanks — XEL earnings",
+      "url": "https://www.tipranks.com/stocks/xel/earnings"
+    },
+    {
+      "label": "StockAnalysis — XEL overview and forecast",
+      "url": "https://stockanalysis.com/stocks/xel/"
+    },
+    {
+      "label": "American Public Power Association — Colorado PUC investigates a utility's use of public safety power shutoff",
+      "url": "https://www.publicpower.org/periodical/article/colorado-puc-investigates-utilitys-use-public-safety-power-shutoff"
+    },
+    {
+      "label": "SEC EDGAR — Xcel Energy Inc. (CIK 0000072903) filing index",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000072903&type=8-K"
+    }
+  ],
+  "lastUpdated": "2026-09-03",
+  "profileVersion": 1
+}

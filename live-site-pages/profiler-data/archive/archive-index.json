@@ -1576,5 +1576,13 @@
    "archivedAt": "2026-09-04",
    "supersededBy": 2
   }
+ ],
+ "xcel-energy": [
+  {
+   "file": "xcel-energy.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-04",
+   "supersededBy": 2
+  }
  ]
 }
