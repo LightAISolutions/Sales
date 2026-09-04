@@ -1,0 +1,580 @@
+{
+ "schemaVersion": 2,
+ "slug": "cummins",
+ "title": "Cummins — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "sections": [
+  {
+   "id": "five-things-on-one-frame",
+   "title": "Five things on one frame: what a gen-set actually is",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A {{gen-set}} is not one product. It is a {{prime mover}} (the engine), an {{alternator}} (the rotating machine that makes the electricity), a control system, a cooling system and a fuel system, bolted to a common skid and sold as one part number. Each of the five is specified separately, and a buyer who reads only the kilowatt number on the front has read one line of a five-page contract.",
+    "**The engine** decides how fast the set can start, how much load it can swallow in one bite, what comes out of the stack, and how often it needs a technician. Displacement, cylinder count and whether the fuel is injected by a common rail or a unit pump are not trivia — they are why two sets with the same kilowatt rating behave differently when a data hall lands on them.",
+    "**The alternator** is where the engine's shaft power becomes volts and amps. Its winding pitch, its insulation class and its subtransient reactance set how far voltage sags when a large motor starts, how much heat it tolerates in a hot enclosure, and how much fault current it can push into a downstream breaker so that breaker trips instead of the whole plant collapsing. A set can be ordered with a bigger alternator on the same engine precisely to fix a voltage-dip problem.",
+    "**The controls** are two loops arguing with each other in real time. The governor holds engine speed — and therefore frequency. The {{AVR}} holds output voltage by adjusting the alternator's field current. When a hall lands in one step, both loops are disturbed at once, and the published recovery figures are a statement about those two loops, not about the engine's brute strength.",
+    "**Cooling and fuel** are the two systems that decide whether the set can be installed where the drawing puts it. A radiator sized for a 40 °C day is a different radiator from one sized for 50 °C, and the fuel system — {{day tank}}, transfer pumps, bulk storage — is what turns a machine that can run for hours into a plant that can run for days."
+   ],
+   "note": "The useful habit: when a vendor quotes a kilowatt number, ask which of the five it belongs to. Ratings belong to the set; block-load behaviour belongs to the engine and the controls together; voltage dip belongs to the alternator."
+  },
+  {
+   "id": "reading-the-datasheet",
+   "title": "Reading the datasheet: what each number on the page is promising",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "A large gen-set spec sheet is a dense page, and most of the confusion in a power-room conversation comes from three or four lines on it being read as if they meant something else. This is what each one is actually claiming.",
+   "cols": [
+    "What the sheet says",
+    "What it means",
+    "The trap"
+   ],
+   "rows": [
+    [
+     "**ekW** (or kWe)",
+     "Electrical kilowatts at the alternator terminals — the useful output after the alternator's own losses",
+     "Engine makers sometimes quote bkW (brake kilowatts at the shaft), which is a larger number for the same machine. Compare ekW with ekW."
+    ],
+    [
+     "**kVA** beside kW",
+     "Apparent power. kW = kVA × {{power factor}}, and gen-set ratings are conventionally quoted at 0.8 power factor",
+     "A set rated 2500 kW / 3125 kVA cannot deliver 3125 kW. If the site's real power factor is better than 0.8, the alternator, not the engine, becomes the limit."
+    ],
+    [
+     "**{{standby rating}} / {{prime power}} / {{continuous rating}}**",
+     "Three different promises about *hours per year and average load*, not three different machines",
+     "The standby number is the biggest one the engine will ever wear and it comes with no overload allowance. Sizing a bridge-power plant off a standby number is the classic error."
+    ],
+    [
+     "**with fan / without fan**",
+     "Whether the radiator fan's parasitic load has been subtracted",
+     "The difference on a multi-megawatt set is often 100 kW or more — enough to swallow a redundancy margin."
+    ],
+    [
+     "**50 Hz / 60 Hz**",
+     "Which grid the set is built for. A four-pole alternator turns 1,500 rpm for 50 Hz and 1,800 rpm for 60 Hz",
+     "The same engine block makes roughly 20 percent more power at 1,800 rpm. European and North American versions of one product are not interchangeable."
+    ],
+    [
+     "**Load acceptance / {{block load}}**",
+     "How much of the rating can arrive in a single step, and how long voltage and frequency take to recover",
+     "Quoted per step and against a stated recovery band. '100 percent in one step' and '100 percent in three steps' are different machines for a data hall."
+    ],
+    [
+     "**Emissions certification**",
+     "Which regulatory class the engine is certified in — see the emissions section below",
+     "A {{EPA Tier 2}} certification usually carries the words *stationary emergency*. That phrase is a legal limit on how the machine may be used, not a description of its capability."
+    ],
+    [
+     "**Ambient / altitude reference**",
+     "The conditions the rating was measured at, typically 25 °C at sea level",
+     "Every real site is worse. See derating."
+    ]
+   ],
+   "note": "A working rule: two quotes are only comparable when they agree on rating class, power factor, fan, frequency and ambient. Getting those five aligned is most of what a technical evaluation of gen-set bids consists of."
+  },
+  {
+   "id": "the-cummins-ladder",
+   "title": "Megawatts per machine — one catalogue, several promises",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW (company ratings; the rating class differs by row on purpose)",
+   "intro": "The same portfolio read as a scale. Note that the rows are not strictly comparable, and that is the lesson: a standby number, a prime number, a Data Center Continuous number and a gas continuous number are four different promises, and vendors quote whichever flatters the machine.",
+   "items": [
+    {
+     "label": "HSK78G C1600 N6CD",
+     "sub": "gas, prime and continuous duty",
+     "v": 1.6
+    },
+    {
+     "label": "HSK78G C2000 N6CD",
+     "sub": "gas, prime and continuous duty",
+     "v": 2.0
+    },
+    {
+     "label": "DQKAM",
+     "sub": "Data Center Continuous rating",
+     "v": 2.0
+    },
+    {
+     "label": "Centum Force C2750D5B-PB",
+     "sub": "containerized, 2,750 kVA at 0.8 power factor",
+     "v": 2.2
+    },
+    {
+     "label": "DQLF",
+     "sub": "Data Center Continuous rating",
+     "v": 2.5
+    },
+    {
+     "label": "DQLF",
+     "sub": "standby rating, same machine",
+     "v": 2.75
+    },
+    {
+     "label": "QSK95-G5",
+     "sub": "50 Hz standby",
+     "v": 2.8
+    },
+    {
+     "label": "QSK95-G10",
+     "sub": "50 Hz standby",
+     "v": 3.01
+    },
+    {
+     "label": "QSK95-G9",
+     "sub": "60 Hz standby",
+     "v": 3.5
+    }
+   ],
+   "note": "Two comparisons are worth holding onto. The DQLF appears twice — 2.75 MW as a standby machine and 2.5 MW as a Data Center Continuous one, the same steel derated by about nine percent to buy unlimited hours. And the QSK95 appears twice — 3.01 MW at 1,500 rpm and 3.5 MW at 1,800 rpm, the same engine turning faster for a different grid."
+  },
+  {
+   "id": "the-arithmetic-of-a-plant",
+   "title": "The arithmetic: from a load list to a number of engines",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Sizing a standby plant is four multiplications and one decision, and the order matters. Doing them in the wrong order is how a campus ends up with either an eight-figure stranded asset or a plant that trips on the first real outage.",
+    "**Step one — the connected load.** Add up everything the generators must carry: the IT load, the mechanical plant (chillers, pumps, air handlers), lighting, life safety. This number is always the largest one in the exercise and it is never the one you buy against.",
+    "**Step two — {{diversity factor}}.** Not everything peaks at once. Chillers stage, air handlers modulate, and a traditional enterprise hall never ran all its servers flat out simultaneously. The diversity factor is the ratio that lets a designer buy less than the arithmetic sum. **This is the step an AI training hall attacks.** Thousands of accelerators executing the same synchronized job step in lockstep can rise and fall together, which pushes the diversity factor toward one and can make the load swing by tens of percent in seconds — a behaviour a plant sized on enterprise assumptions never saw.",
+    "**Step three — derating.** The rating on the sheet was measured in a laboratory. Correct it for the site's altitude, its design ambient temperature, the fuel it will actually burn and the exhaust backpressure the silencer imposes. See the derating table below; on a hot high site the correction can be a fifth of the nameplate.",
+    "**Step four — redundancy.** Divide the derated load by the derated rating of one machine to get N, the number of sets needed to carry it. Then choose a redundancy: {{N+1}} adds one spare so any single set can be out for maintenance or failure; 2N doubles the plant. **Redundancy is applied to the derated standby capacity, not to the nameplate** — this is the single most common arithmetic error in the exercise, and it silently eats the spare.",
+    "**The decision left over: how many machines?** The same 20 MW can be built from five 4 MW sets or ten 2 MW sets. Fewer, larger sets cost less per kilowatt, occupy less yard and need fewer maintenance visits — but each one is a bigger share of the plant, so N+1 on five machines buys 25 percent spare capacity while N+1 on ten buys 11 percent. More, smaller sets are more forgiving of a failure and of a phased build, and they let a half-built hall run on a half-built plant. Neither answer is right in general; the answer follows the campus's growth plan."
+   ],
+   "note": "The same four steps run for a prime-power or bridge plant, with two differences: the rating used is the prime or continuous one, not standby, and the fuel and maintenance arithmetic dominates the capital cost instead of trailing it."
+  },
+  {
+   "id": "derating",
+   "title": "Derating: why the nameplate is a laboratory number",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Published ratings are measured at a reference condition, conventionally around 25 °C at sea level on reference fuel. Every real site departs from it, and the corrections multiply rather than add. These are the four that decide the number.",
+   "cols": [
+    "Condition",
+    "Why it costs power",
+    "Rough behaviour"
+   ],
+   "rows": [
+    [
+     "**Altitude**",
+     "Thinner air means less oxygen per stroke, so less fuel can be burned. A turbocharger recovers some of it, which is why a modern turbocharged engine derates far more gently than a naturally aspirated one — but the turbo itself eventually runs out of margin",
+     "Negligible to roughly a thousand metres on many turbocharged sets, then a steady percentage per further increment stated by the maker"
+    ],
+    [
+     "**Ambient temperature**",
+     "Hot intake air is less dense (the altitude problem again) and hot ambient air makes the radiator less effective, so the engine hits a coolant-temperature limit before it hits a power limit",
+     "Usually free to a stated ambient, then a percentage per degree above it. The design day, not the average day, is what matters"
+    ],
+    [
+     "**Fuel**",
+     "Ratings assume a reference fuel of a stated energy content and cetane number. A different diesel, a biodiesel blend or a gas of different composition changes what the engine can make",
+     "Small for like-for-like diesel; potentially significant for gas, where the {{heat rate}} depends on gas composition"
+    ],
+    [
+     "**Exhaust backpressure and intake restriction**",
+     "The engine has to push exhaust out and pull air in. A long duct run, a hospital-grade silencer or a clogged {{diesel particulate filter}} makes it do more work for the same output",
+     "Stated as a maximum allowable backpressure on the datasheet; exceeding it costs power and shortens life"
+    ]
+   ],
+   "note": "Derating is why a set specified for Phoenix at 4,000 feet is a physically bigger machine than one specified for Dublin at sea level, for the same delivered kilowatts. It is also why 'we will just add another one later' is often cheaper than buying margin up front — the margin has to survive the worst hour of the worst day, and it is idle for every other hour of the machine's life."
+  },
+  {
+   "id": "why-not-all-at-once",
+   "title": "Why a big diesel cannot take everything at once",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A data hall arriving on a cold engine is the hardest thing a standby set is ever asked to do, and the reason is not that the engine lacks power. It is that the engine cannot make its power *instantly*, and three separate delays stack up inside the same half-second.",
+    "**{{Turbo lag}}.** A large diesel is turbocharged: exhaust gas spins a turbine that drives a compressor that stuffs more air into the cylinders. More air is what permits more fuel. When load lands, the controls can inject more fuel immediately, but until the turbocharger spools up there is not enough air to burn it — inject it anyway and you get smoke, heat and no torque. The turbo has rotational inertia, and that inertia is a hard physical floor under how fast the engine can respond.",
+    "**The governor.** While the turbo spools, the engine slows. Frequency is engine speed, so the hall sees frequency dip. The governor's job is to catch it and bring speed back, and how deep the dip goes and how long recovery takes is a control-loop property that manufacturers publish per load step.",
+    "**The {{AVR}}.** Adding load also drags voltage down at the alternator terminals; the AVR responds by pushing more field current. Voltage recovery and frequency recovery interact — a governor fighting a sag while the AVR is pushing field is why real recovery curves are not the smooth exponentials the brochure draws.",
+    "**Hence load steps.** {{ISO 8528}} standardizes this: a set is classified by how far frequency and voltage may deviate and how quickly they must return, and load acceptance is quoted as a percentage per step with a recovery interval between steps. A set that accepts 100 percent {{block load}} in one step can pick up a whole hall; a set that accepts it in three steps needs the load applied in three bites, which means the design needs somewhere to put the load that has not been picked up yet — a UPS with enough autonomy, or a load-shed scheme that adds the mechanical plant back in sequence.",
+    "**Gas is slower, turbines slower still.** A lean-burn gas engine has to get fuel and air mixed in the right ratio before it burns, so its step acceptance is a fraction of a comparable diesel's. This is the whole reason standby fleets remain diesel even on campuses whose prime power is gas — the diesel is not there because it is cheap or clean, it is there because it can catch a falling hall."
+   ],
+   "note": "The practical consequence: a UPS's autonomy is not just insurance against a failed start. It is also the time budget the load-step plan spends."
+  },
+  {
+   "id": "governing-modes",
+   "title": "Isochronous or droop: how machines share a load without arguing",
+   "kind": "proscons",
+   "read": "4 min",
+   "intro": "Two engines connected to the same bus are mechanically coupled through the electricity. If both are told 'hold exactly 60.00 Hz', each will keep adding fuel to correct an error the other is also correcting, and they will fight. Governing mode is how that is resolved.",
+   "cards": [
+    {
+     "t": "{{Droop}} — speed falls slightly as load rises",
+     "meta": "Each machine has a fixed, published relationship between load and speed, typically a few percent from no load to full load",
+     "adv": [
+      "Machines share load automatically and stably with no communication between them — the physics does the arbitration",
+      "The natural mode for running in parallel with a utility, which is an infinitely stiff machine that sets the frequency",
+      "Simple, robust, and the failure of one controller does not destabilize the others"
+     ],
+     "dis": [
+      "Frequency is no longer constant — it sits lower at high load, so something must trim it back if the site needs nominal frequency",
+      "Load sharing depends on every machine's droop setting matching; one set commissioned with a different curve quietly takes more or less than its share"
+     ]
+    },
+    {
+     "t": "{{Isochronous}} — speed held exactly at setpoint",
+     "meta": "The governor corrects to nominal frequency regardless of load",
+     "adv": [
+      "Frequency stays at nominal at any load, which is what an islanded critical facility wants",
+      "The right mode for a single machine carrying a site alone"
+     ],
+     "dis": [
+      "Two isochronous machines on one bus will fight over the load unless a load-sharing line or a master controller coordinates them",
+      "Introduces a dependency on that coordination layer — its failure mode is machines swinging load between each other rather than a clean trip"
+     ]
+    }
+   ],
+   "note": "In practice a paralleled standby plant runs isochronous *as a plant*: the {{paralleling switchgear}} coordinates the individual governors so the bus holds nominal frequency while load is shared in proportion to rating. The mode is a property of the control scheme, not of the engine — which is why the switchgear vendor and the engine vendor have to agree, and why mixing engine brands on one bus is a commissioning problem rather than a purchasing one."
+  },
+  {
+   "id": "the-emissions-class-is-a-purchase",
+   "title": "The emissions class is a purchase decision, not a specification detail",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The same engine block is sold into wildly different regulatory classes, and the class — not the hardware — is usually what decides the price, the lead time and what the machine is legally allowed to do. This is the part of the buying decision that most often surprises people coming from IT rather than from plant engineering.",
+   "cols": [
+    "Class",
+    "What it requires",
+    "What it permits",
+    "What it costs"
+   ],
+   "rows": [
+    [
+     "**{{EPA Tier 2}}, stationary emergency**",
+     "Comparatively loose nitrogen-oxide and particulate limits; usually no exhaust after-treatment",
+     "Running only during a genuine loss of the normal supply, plus a limited annual allowance — commonly around 100 hours — for maintenance and testing under {{RICE NESHAP}}",
+     "The cheapest and by far the most common class for data-center standby fleets. The cost is the legal ceiling on use"
+    ],
+    [
+     "**{{Tier 4}} Final**",
+     "{{Selective catalytic reduction}} with {{DEF}} dosing, usually a {{diesel particulate filter}}, and the whole after-treatment train that goes with them",
+     "Non-emergency operation: {{peak shaving}}, demand response, prime duty, bridge power — anything that needs hours the emergency class will not give",
+     "Materially more capital, a DEF supply chain and freeze protection, more backpressure, more maintenance, and a longer lead time"
+    ],
+    [
+     "**{{EU Stage V}}**",
+     "The European stage — stricter than Tier 4 on particle *number*, which effectively mandates a filter",
+     "Sale and operation inside the EU",
+     "A separately certified variant of the same product; European and US versions of one model are not the same machine"
+    ],
+    [
+     "**Local overlays**",
+     "State or county limits that sit on top of the federal class — Northern Virginia's nitrogen-oxide restrictions are the best-known example in this industry",
+     "Whatever the local {{air permit}} says, which is often stricter than the federal floor",
+     "A model variant, a different after-treatment, or a cap on the site's total installed generation"
+    ]
+   ],
+   "note": "The strategic point: emissions class and business model are the same decision. A fleet certified as emergency-only is a pure insurance asset — it can never earn. Certifying it for unrestricted running turns the same steel into a plant that can shave peaks, sell demand response or bridge a late grid connection, and that is why the {{air permit}}, not the engine catalogue, is usually the binding constraint on where a campus can be built and how big it can be."
+  },
+  {
+   "id": "fuel-is-logistics",
+   "title": "Fuel is a logistics problem wearing an engineering costume",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A standby plant's runtime is not an engine property. It is a tank-farm property, and the whole fuel system is designed around one awkward fact: the fuel sits still for years and then has to work perfectly on the worst day.",
+    "**Two tanks, not one.** A {{day tank}} at each set holds a few hours of fuel and feeds the engine directly; bulk storage holds the rest and pumps into the day tanks. The split exists because codes limit how much fuel may sit inside or beside a building, and because a small local reserve means the plant survives a transfer-pump failure. The day tank's size is therefore a code question and a reliability question at once.",
+    "**Diesel goes off.** Stored diesel degrades: water condenses into the tank and microbes grow at the fuel–water interface, heavy fractions drop out of solution, and the resulting sludge clogs filters — very often at exactly the moment the fleet is finally asked to run. {{Fuel polishing}} — circulating the stored fuel through filters and water separators on a schedule — is the maintenance regime that prevents this, and it is a line item that quietly disappears from budgets.",
+    "**Resupply is the real runtime.** A plant with 48 hours of on-site fuel does not have a 48-hour runtime; it has a 48-hour window in which tankers must arrive. During a regional event — the hurricane or the ice storm that caused the outage — roads, ports and the fuel distributors themselves are affected, and every other critical facility in the region is calling the same suppliers. Contracts with priority-of-supply terms are part of the design, not an afterthought.",
+    "**Which is why fuel choice is strategy.** Natural gas by pipeline has no tank farm and no polishing regime, but it also has no on-site reserve — the pipeline is a lifeline that can itself be curtailed, and gas sets accept load more slowly. {{HVO}} drops into most diesel engines with little or no hardware change and cuts lifecycle carbon, at a price premium and with its own supply-chain questions. There is no free option: each fuel trades a supply risk for a different supply risk."
+   ]
+  },
+  {
+   "id": "the-engine-is-not-the-order",
+   "title": "The engine is not the order: where the scope boundaries fall",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "A conversation about 'buying generators' is usually a conversation about six or seven separate scopes that different parties supply, and the arguments on a project are almost always about the seams between them. A {{single-line diagram}} is the document where those seams are visible.",
+   "cols": [
+    "Scope",
+    "What it is",
+    "Who typically supplies it"
+   ],
+   "rows": [
+    [
+     "**The gen-set package**",
+     "Engine, alternator, controls, radiator, base tank, enclosure, silencer",
+     "The gen-set OEM, through a dealer or distributor"
+    ],
+    [
+     "**{{ATS}}**",
+     "The automatic transfer switch that senses the failure, calls for a start and moves the load",
+     "Sometimes the gen-set OEM, sometimes the switchgear vendor, sometimes an electrical OEM — this seam is a frequent source of finger-pointing"
+    ],
+    [
+     "**{{Paralleling switchgear}}**",
+     "The lineup that synchronizes the machines to one bus, shares load between them, sheds and restores load in priority, and manages the return to utility",
+     "Switchgear specialist or the gen-set OEM's switchgear arm; the control sequence is written for the specific site"
+    ],
+    [
+     "**Fuel system**",
+     "Bulk tanks, transfer pumps, piping, polishing, containment",
+     "Mechanical contractor, to the fuel-system designer's specification"
+    ],
+    [
+     "**Installation and commissioning**",
+     "Setting the sets, cable, exhaust, load-bank testing the plant as a system",
+     "Electrical contractor and a commissioning agent"
+    ],
+    [
+     "**Service**",
+     "Scheduled maintenance, parts, emergency response, load-bank testing over the plant's life",
+     "The OEM's dealer network, usually under a multi-year agreement"
+    ]
+   ],
+   "note": "The commercial significance: the gen-set is the visible line item, but the switchgear sequence and the service agreement are where the long-term relationship and much of the lifetime margin sit. Which is also why the OEMs that own a dealer network guard it — the network is what converts a one-time equipment sale into twenty years of revenue, and it is the part a competitor cannot copy quickly."
+  },
+  {
+   "id": "where-cummins-products-slot-in",
+   "title": "Where Cummins' products slot into the power room",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Read down the single-line diagram from the utility service to the rack, and note how many rows one vendor can fill. The right-hand column is what a buyer would otherwise have to source separately — which is the whole commercial argument for a broad catalogue.",
+   "cols": [
+    "Layer of the plant",
+    "The product",
+    "What it competes with, or replaces"
+   ],
+   "rows": [
+    [
+     "The prime mover",
+     "QSK95, Centum Series and QSK78 diesel gen-sets; HSK78G lean-burn gas",
+     "Caterpillar's C175 and G3516, mtu's Series 4000, Rehlko's KD3250 and KD4000 — the four-way standby field"
+    ],
+    [
+     "The generating end",
+     "STAMFORD, AvK and MARKON alternators, 7.5 to 11,200 kVA",
+     "A merchant franchise sold to other gen-set packagers, so Cummins supplies part of its own competitive set"
+    ],
+    [
+     "The {{transfer time}} decision",
+     "PowerCommand X-Series, B-Series CBL, BTPC, OTEC and GTEC {{ATS}}, 40 A to 4,000 A, open through bypass-isolation",
+     "A seam usually filled by a separate electrical OEM, and a frequent source of finger-pointing on a project"
+    ],
+    [
+     "Making a yard of engines one plant",
+     "PowerCommand {{paralleling switchgear}} and the DMC8000 digital master control",
+     "A switchgear specialist's scope, with the site-specific control sequence that goes with it"
+    ],
+    [
+     "Absorbing the load swings",
+     "Battery energy storage, 211 kWh to 2,280 kWh catalogue and a 5 MWh data-center block",
+     "A {{BESS}} integrator's scope; a capability Rehlko does not have at all"
+    ],
+    [
+     "Keeping it running for twenty years",
+     "The Distribution segment: roughly 600 distributor and 6,000 dealer locations, PowerCare support plans, load-bank testing, rental",
+     "The part a competitor cannot copy quickly, and where the lifetime margin sits"
+    ],
+    [
+     "Not in the catalogue",
+     "No {{static UPS}}, no {{rotary UPS}}, no transformers, no MV switchgear above the paralleling lineup",
+     "Bought from Vertiv, Schneider, Eaton, ABB, Piller or Hitachi Energy — the rows one vendor still cannot fill"
+    ]
+   ],
+   "note": "The pattern to notice: Cummins covers the generation side of the drawing almost completely and stops at the UPS. Rehlko's catalogue crosses that line and Rolls-Royce's crosses it differently, with a rotary machine. Where a vendor's catalogue stops is where the integration risk starts."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The rating read as capability rather than permission.** A fleet certified {{EPA Tier 2}} in the stationary-emergency class is legally allowed to run during a genuine outage plus a small annual allowance — commonly about 100 hours under {{RICE NESHAP}} — and no more. Every business case that assumes the backup fleet can shave peaks, sell demand response or bridge a late grid connection dies here, and it dies after the steel has been bought. Owned by whoever wrote the specification without reading the air permit.",
+    "**Redundancy applied to the nameplate instead of the derated rating.** The correct order is connected load, then {{diversity factor}}, then derating for altitude, ambient, fuel and backpressure, then {{N+1}}. Applying the spare to the laboratory number silently consumes it: on a hot high site the derate alone can be a fifth of the plate, so the plant that was specified as N+1 is running as N. It shows up only on the first outage that coincides with a design-day afternoon. Owned by the electrical designer.",
+    "**An enterprise diversity factor applied to an AI hall.** Diversity exists because loads do not peak together. Thousands of accelerators executing a synchronized job step do peak together, and the load can swing tens of percent in seconds. A plant sized on the old assumption is undersized for the new behaviour, and the symptom is not a failure to start but frequency and voltage wandering under a load that will not sit still. Owned by whoever supplied the load forecast.",
+    "**Block load taken on trust.** \"100 percent in one step\" and \"100 percent in three steps\" are different machines. If the set needs three bites, two thirds of the hall has to be somewhere else for several seconds — carried by {{UPS}} {{autonomy}} or deliberately shed and restored in priority. A design that quietly assumes one step and buys a three-step machine has a gap it never wrote down. Owned by the specifier, and discovered in commissioning if you are lucky.",
+    "**Fuel that was bought once and never maintained.** Standby diesel sits for years while water condenses in, microbes grow at the interface and heavy fractions drop out. {{Fuel polishing}} is the maintenance regime that prevents it and the line item that disappears from budgets. The failure mode is clogged filters on the first real run — the plant starts, loads, and then starves. Owned by the operator.",
+    "**The seam between the gen-set order and the switchgear sequence.** {{Paralleling switchgear}} is a hand-written control sequence — synchronize, share load, shed in priority, restore in priority, return to utility — and it has to agree with each engine's governor {{droop}} and {{AVR}} settings and with the protection relays. When the engines and the switchgear come from different suppliers, that agreement is nobody's warranty. Owned, in practice, by the commissioning agent at three in the morning.",
+    "**A load-shed priority table that has aged.** The table was written for the plant as commissioned. The hall has since been re-tenanted, re-cooled and grown. During the one event that tests it, the plant sheds the wrong things in the wrong order. Owned by the operator, and almost never reviewed."
+   ],
+   "note": "Five of these seven are procurement and paperwork failures rather than engineering ones, and none of them is visible on a datasheet. That is the argument for reading the rating class, the reference conditions and the air permit before reading the kilowatt number."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "A set is quoted at 2,500 kW / 3,125 kVA. Why can it not deliver 3,125 kW?",
+     "a": "kVA is apparent power and kW is real power; kW = kVA x power factor. Gen-set ratings are conventionally quoted at 0.8 power factor, so the kVA number is the kW number divided by 0.8. If the site's real power factor is better than 0.8, the alternator's current limit — not the engine — becomes the binding constraint."
+    },
+    {
+     "q": "What is the difference between the standby, prime and continuous ratings of one engine?",
+     "a": "Nothing about the hardware — they are three promises about hours per year and average load. Standby is the biggest number, for limited hours only while the normal supply is out, with no overload allowance. Prime allows unlimited hours at a varying load. Continuous allows unlimited hours at constant full output and is the most conservative. Sizing a plant that will actually run against the standby number is the classic error."
+    },
+    {
+     "q": "Why does the same engine make roughly 20 percent more power at 60 Hz than at 50 Hz?",
+     "a": "Frequency is shaft speed times pole pairs, so a four-pole alternator turns 1,800 rpm for 60 Hz and 1,500 rpm for 50 Hz. Power is torque times speed, so the faster machine makes proportionally more power. There is no gearbox to change, which is why the two are separate products."
+    },
+    {
+     "q": "In what order do you apply diversity, derating and redundancy when sizing a plant?",
+     "a": "Connected load, then diversity factor to get the real coincident demand, then derating for altitude, ambient, fuel and backpressure to get what a machine actually delivers on that site, then divide to get N, then add redundancy. Redundancy is applied to the derated capacity, never to the nameplate — reversing those last two silently eats the spare."
+    },
+    {
+     "q": "Why does an AI training hall attack the diversity factor?",
+     "a": "Diversity exists because loads do not peak together. Thousands of accelerators running the same synchronized job step rise and fall in lockstep, pushing the diversity factor toward one and producing load swings of tens of percent in seconds. A plant sized on enterprise diversity assumptions is undersized for that behaviour."
+    },
+    {
+     "q": "Name the four conditions that derate a published rating, and say which one usually bites hardest on a data-center site.",
+     "a": "Altitude (less oxygen per stroke), ambient temperature (less dense intake air and a less effective radiator), fuel (energy content and cetane against the reference fuel), and exhaust backpressure or intake restriction. On most data-center sites the design-day ambient bites hardest, because the plant must be sized for the worst hour of the worst day rather than the average."
+    },
+    {
+     "q": "Physically, why can a large turbocharged diesel not always take 100 percent of its rating in one step?",
+     "a": "Turbo lag. More fuel can be injected instantly, but until the turbocharger spools up there is not enough air to burn it. The turbocharger has rotational inertia, so it is a hard physical floor on response. While it spools, engine speed falls (frequency dips) and terminal voltage sags, so the governor and the AVR are both recovering at once."
+    },
+    {
+     "q": "What does ISO 8528 standardize, and why does a buyer care?",
+     "a": "It defines performance classes for generating sets — how far frequency and voltage may deviate under a load step and how quickly they must return. It is what makes one maker's load-acceptance claim comparable with another's, so 'accepts 100 percent in one step' and 'in three steps' become a specification rather than marketing."
+    },
+    {
+     "q": "Two engines are on one bus. Why can they not both be governed isochronously without help?",
+     "a": "Isochronous governing holds speed exactly at setpoint regardless of load, so each machine keeps correcting an error the other is also correcting and they swing load between each other. Either one machine governs isochronously and the rest run on droop, or a paralleling control layer coordinates them so the bus holds nominal frequency while load is shared in proportion to rating."
+    },
+    {
+     "q": "What does the phrase 'stationary emergency' on a Tier 2 certification actually restrict?",
+     "a": "Use, not capability. It is a legal class permitting operation only during a genuine loss of the normal supply, plus a limited annual allowance — commonly around 100 hours under RICE NESHAP — for maintenance and testing. Peak shaving, demand response and prime duty are outside it, which is why an asset intended to earn must be certified to Tier 4 instead."
+    },
+    {
+     "q": "What does a Tier 4 Final certification add to the machine, and what does it buy the owner?",
+     "a": "It adds after-treatment — selective catalytic reduction with DEF dosing, usually a diesel particulate filter — plus backpressure, a DEF supply chain with freeze protection, more maintenance and a longer lead time. It buys unrestricted running hours: peak shaving, demand response, prime and bridge duty."
+    },
+    {
+     "q": "Why does a standby fleet need fuel polishing?",
+     "a": "Standby diesel sits for years. Water condenses into the tank, microbes grow at the fuel-water interface and heavy fractions drop out of solution, producing sludge that clogs filters — typically at the moment the fleet is finally asked to run. Polishing circulates the stored fuel through filters and separators on a schedule to prevent it."
+    },
+    {
+     "q": "A site has 48 hours of on-site fuel. Does it have a 48-hour runtime?",
+     "a": "No — it has a 48-hour window in which tankers must arrive. During the regional event that caused the outage, roads, ports and distributors are affected and every other critical facility is calling the same suppliers. Priority-of-supply contracts are part of the design, not an afterthought."
+    },
+    {
+     "q": "Why does an OEM's dealer and service network matter more than the equipment margin?",
+     "a": "The gen-set is a one-time sale; scheduled maintenance, parts, emergency response and load-bank testing run for the plant's whole life. The network converts an equipment transaction into decades of revenue, and unlike a product feature it cannot be copied quickly by a competitor."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "Two bids for the same 3 MW duty. Bid A quotes 3,000 ekW standby without fan at 25 C and sea level; bid B quotes 3,000 ekW prime with fan at the site's 45 C design day and 1,200 m. Which is the bigger machine?",
+     "c": [
+      "A, because standby is the higher rating",
+      "B, by a wide margin",
+      "They are the same machine quoted two ways",
+      "Cannot be determined without the power factor"
+     ],
+     "a": 1,
+     "why": "B is quoting a lower rating class (prime), with the fan's parasitic load already subtracted, at a hot high site that derates it further. To reach the same 3,000 ekW under all three penalties, B must be a substantially larger machine. A's number is the most flattering possible statement of the same steel."
+    },
+    {
+     "q": "A campus needs 18 MW of derated standby capacity with N+1 redundancy. Which build carries more spare margin?",
+     "c": [
+      "Five 4.5 MW sets",
+      "Ten 2 MW sets",
+      "Both carry the same margin",
+      "Depends on the diversity factor"
+     ],
+     "a": 0,
+     "why": "N+1 buys one spare machine, so the margin is one machine's share of the plant. On five machines the spare is 25 percent of the required capacity; on ten it is about 11 percent. Fewer, larger machines give more redundancy margin per spare — at the cost of a larger single-failure bite and a coarser phased build."
+    },
+    {
+     "q": "A hall's frequency dipped to 57 Hz and took four seconds to recover when the generators picked it up. The most likely cause is:",
+     "c": [
+      "A failed AVR",
+      "The load exceeded the set's per-step block-load capability",
+      "Fuel contamination",
+      "An open-transition transfer"
+     ],
+     "a": 1,
+     "why": "Frequency is engine speed, so a deep, slow frequency recovery is a torque problem — the step was bigger than the engine and turbocharger could answer. An AVR fault shows in voltage, not frequency; contamination shows as filter restriction over time; an open transition produces a total gap, not a sag."
+    },
+    {
+     "q": "An operator wants to run the backup fleet for demand response, earning revenue during summer peaks. The fleet is certified EPA Tier 2 stationary emergency. What is the binding obstacle?",
+     "c": [
+      "The engines lack the mechanical durability",
+      "The regulatory class caps non-emergency hours",
+      "The alternators cannot sustain continuous load",
+      "The transfer switches only support open transition"
+     ],
+     "a": 1,
+     "why": "The steel is perfectly capable; the certification class is the constraint. Emergency-class engines get a limited annual allowance for testing and maintenance, and only a small share of that may be non-emergency. Earning revenue requires re-certifying to Tier 4 with the after-treatment and cost that implies."
+    },
+    {
+     "q": "Which pair of numbers on a datasheet must match before two vendors' quotes are comparable at all?",
+     "c": [
+      "Displacement and cylinder count",
+      "Rating class and reference ambient",
+      "Warranty term and service interval",
+      "Enclosure rating and sound level"
+     ],
+     "a": 1,
+     "why": "Rating class (standby/prime/continuous) and the reference condition the rating was measured at are the two that change the headline kilowatt number most. Power factor, fan and frequency come next. Displacement and warranty are real considerations but they do not make one kilowatt number mean something different from another."
+    },
+    {
+     "q": "A design uses a set rated to accept 100 percent block load in three steps rather than one. What must the design provide?",
+     "c": [
+      "A larger day tank",
+      "Somewhere to hold the load not yet picked up — UPS autonomy or a sequenced load-shed scheme",
+      "A Tier 4 certification",
+      "Closed-transition transfer"
+     ],
+     "a": 1,
+     "why": "If the machine can only take a third at a time, two thirds of the load has to be somewhere else during the intervening seconds. That is either carried by stored energy or deliberately shed and restored in priority. Fuel, emissions class and transfer style are unrelated to the load-step budget."
+    },
+    {
+     "q": "Why is the alternator, not the engine, sometimes the reason a plant cannot start a large chiller?",
+     "c": [
+      "The engine cannot make enough torque",
+      "Motor starting inrush is a current problem, and the alternator's reactance sets the voltage dip",
+      "The governor is set to droop",
+      "The fuel is degraded"
+     ],
+     "a": 1,
+     "why": "Starting a large motor draws several times running current at poor power factor for a few seconds. That is an alternator question — winding design and subtransient reactance decide how far voltage sags. Ordering a larger alternator on the same engine is a standard fix, which is only possible if you know the two are specified separately."
+    },
+    {
+     "q": "A site is at 2,000 m in a hot climate. Which statement about derating is right?",
+     "c": [
+      "Corrections for altitude and temperature are added and applied once",
+      "The corrections multiply, and the design-day ambient matters more than the annual average",
+      "Turbocharging removes the altitude penalty entirely",
+      "Derating only affects fuel consumption, not output"
+     ],
+     "a": 1,
+     "why": "The corrections compound rather than sum, and the plant must carry the load on the worst hour of the worst day, so the design ambient governs. Turbocharging softens the altitude penalty but does not remove it — the turbocharger eventually runs out of margin itself."
+    },
+    {
+     "q": "What is the practical difference between buying a gen-set and buying a generating plant?",
+     "c": [
+      "Only the number of units",
+      "The plant includes the paralleling switchgear control sequence, the fuel system, installation, commissioning and service — the seams between them are where projects fail",
+      "A plant must be Tier 4 certified",
+      "A plant is always single-vendor"
+     ],
+     "a": 1,
+     "why": "The gen-set package is one of six or seven scopes. The transfer switch, the paralleling switchgear and its site-specific control sequence, the fuel system, installation and commissioning, and the multi-year service agreement are the rest — and the arguments on a real project are almost always about the seams between them."
+    },
+    {
+     "q": "Which of these is a fuel-logistics decision disguised as an engineering one?",
+     "c": [
+      "Choosing a four-pole alternator",
+      "Choosing the day-tank capacity",
+      "Choosing between droop and isochronous governing",
+      "Choosing the enclosure sound rating"
+     ],
+     "a": 1,
+     "why": "The day tank's size is set by code limits on how much fuel may sit near the building and by how long the plant must survive a transfer-pump failure — a logistics and code question. The other three are genuine machine or control specifications."
+    }
+   ]
+  }
+ ]
+}

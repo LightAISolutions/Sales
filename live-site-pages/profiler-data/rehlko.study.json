@@ -1,0 +1,509 @@
+{
+ "schemaVersion": 2,
+ "slug": "rehlko",
+ "title": "Rehlko — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "sections": [
+  {
+   "id": "the-power-room-on-one-page",
+   "title": "The power room on one page: reading a single-line diagram",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Every argument about data-center resilience is, underneath, an argument about one drawing. A {{single-line diagram}} shows the whole electrical path as single lines rather than individual conductors, and it is the document on which every redundancy claim is either visible or absent.",
+    "**The path, in order.** The utility service arrives at {{medium voltage}} and lands in a {{switchgear}} lineup. {{Transformer}}s step it down to {{low voltage}} for distribution. On the way, {{ATS}} or paralleling gear decides whether the source is the utility or the generator plant. Downstream of that, the {{UPS}} takes the critical branch. Below the UPS sit the {{PDU}}s, the {{busway}} and finally the rack whips. Mechanical plant — chillers, pumps, air handlers — hangs off the same generator-backed bus but usually *not* off the UPS, which is why a hall can survive a transfer while its cooling briefly does not.",
+    "**What to look for.** Three questions answer most of it. Where does the drawing branch into A and B feeds, and — the question that catches people — where do those two branches *meet again* upstream? A pair of feeds that share a single transformer, a single switchboard or a single earthing point is not two feeds. Second: which loads are on the UPS and which are only on the generator? Third: what happens on a maintenance day — can each piece be taken out of service with the load still protected, or does maintenance force the load onto bypass? That last property is called {{concurrent maintainability}} and it is the difference between the {{Uptime tier}} levels people quote at each other.",
+    "**Why one vendor's scope matters here.** The seams on this drawing — generator to switchgear, switchgear to transfer switch, transfer switch to UPS — are where specifications get written by different companies and where commissioning surprises live. A supplier whose scope covers several boxes on the same drawing is selling the elimination of a seam, and that is a genuine product even though nothing on the datasheet describes it."
+   ]
+  },
+  {
+   "id": "inside-a-static-ups",
+   "title": "Inside a static UPS: four blocks and one decision",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A {{static UPS}} has no moving parts except fans, and it is built from four blocks that are worth naming individually because almost every specification argument is about one of them.",
+    "**The {{rectifier}}** converts incoming alternating current to direct current. Modern units use switching devices ({{IGBT}}s) rather than passive diodes, which lets the UPS draw a near-sinusoidal current at close to unity {{power factor}} instead of dumping {{harmonics}} back into the building — a real consideration when the upstream source is a generator rather than a stiff utility, because a generator's alternator heats up on distorted current.",
+    "**The {{DC link}}** is the internal direct-current bus. The battery — or a {{flywheel}}, or a {{supercapacitor}} — connects here. This is the single most important architectural fact about a double-conversion UPS: the store sits on the DC link, permanently connected, so when the input fails there is no transfer and no gap. Energy simply stops arriving from one side and starts arriving from the other.",
+    "**The {{inverter}}** rebuilds a clean alternating waveform from the DC link and feeds the load. Because the load is always fed from the inverter and never directly from the mains, the output is isolated from input voltage sags, surges, frequency wander and waveform distortion. That is what {{double conversion}} means, and it is why the topology is the data-center default.",
+    "**The {{static bypass}}** is a solid-state switch that can connect the load directly to the raw mains in about a quarter of a cycle. It exists for two events: a fault current large enough that the inverter's semiconductors cannot supply it (a downstream breaker must be given enough current to trip), and an internal UPS failure. Bypass is the UPS's confession that it cannot help — and a load sitting on bypass is a load with no protection at all, which is exactly the state a monthly maintenance window can put it in.",
+    "**{{Eco-mode}} and the efficiency argument.** Double conversion costs a few percent in losses, all the time, forever. Eco-mode runs the load on the bypass path during normal conditions and jumps to the inverter when it detects a problem, buying back most of that loss. The debate is entirely about detection: for a clean total loss of supply the transfer is comfortably inside a server's {{hold-up time}}; for an ambiguous disturbance — a slow sag, a distorted waveform, an upstream fault that clears itself — detection takes longer and the margin narrows. Modern implementations are much better than their reputation, and the honest position is that eco-mode trades a small, quantified reliability margin for a large, certain energy saving."
+   ],
+   "note": "The vocabulary that makes vendor sheets legible: {{IEC 62040-3}} classifies UPS topologies as VFI (output independent of input voltage and frequency — double conversion), VI (voltage independent — line-interactive) and VFD (voltage and frequency dependent — offline). A data center specifies VFI, and 'VFI' on a datasheet is the compact way of asserting the topology described above."
+  },
+  {
+   "id": "three-clocks-one-bus",
+   "title": "Three clocks on one bus: hold-up, ride-through, autonomy, transfer",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Four different time constants get quoted in the same conversation and mean quite different things. Confusing them is how a design ends up with a gap nobody budgeted for. Read this as one continuous timeline from the moment the supply fails.",
+   "cols": [
+    "Term",
+    "Whose property it is",
+    "Typical order of magnitude",
+    "What it decides"
+   ],
+   "rows": [
+    [
+     "**{{hold-up time}}**",
+     "The server's own power supply",
+     "10–20 ms",
+     "How long the IT load coasts on its internal capacitors with no supply at all. It is the hard deadline everything upstream is designed around, and nothing with a crankshaft can meet it"
+    ],
+    [
+     "**{{ride-through}}**",
+     "The UPS, and increasingly the whole facility",
+     "Cycles to seconds",
+     "Whether a disturbance is absorbed rather than escalated. In a double-conversion UPS this is free — the load is never on the mains. In eco-mode it is a detection-and-transfer budget"
+    ],
+    [
+     "**{{autonomy}}**",
+     "The UPS battery or flywheel",
+     "Seconds (flywheel) to minutes (battery)",
+     "How long the critical load can be held with no generator. This is the time budget the whole generator start, synchronize and load sequence has to fit inside — including a failed first start attempt"
+    ],
+    [
+     "**{{transfer time}}**",
+     "The {{ATS}} and the generator plant",
+     "Up to about 10 s for the standard emergency class",
+     "How long from loss of supply to the load being carried by the engine. {{NFPA 110}} classes systems by exactly this number"
+    ]
+   ],
+   "note": "The design relationship in one sentence: **autonomy must exceed transfer time with enough margin to survive a failed start and a restart attempt.** A five-minute battery against a ten-second transfer looks generous until the first engine fails to start, the sequence times out, the second is called, and the mechanical plant has to be restored in stages behind it. This is why the arithmetic is done against the whole recovery sequence rather than against the transfer figure alone."
+  },
+  {
+   "id": "the-rehlko-ladder",
+   "title": "Megawatts per machine — and where the UPS sits on the same scale",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW / MVA (company ratings; class named per row)",
+   "intro": "The KD ladder with the UPS range plotted on the same axis, which is the point: this is the only catalogue in the corpus where the engine and the uninterruptible supply come from one vendor, so they can be compared directly. Standby unless the row says otherwise.",
+   "items": [
+    {
+     "label": "KD300",
+     "sub": "60 Hz standby, EPA Tier 3",
+     "v": 0.3
+    },
+    {
+     "label": "PW 9500DPA",
+     "sub": "modular {{static UPS}}, 500 kVA per system",
+     "v": 0.5
+    },
+    {
+     "label": "PW 6000",
+     "sub": "standalone transformerless UPS, 500 kW",
+     "v": 0.5
+    },
+    {
+     "label": "KD1000",
+     "sub": "60 Hz standby",
+     "v": 1.0
+    },
+    {
+     "label": "KD2000",
+     "sub": "60 Hz standby",
+     "v": 2.0
+    },
+    {
+     "label": "KD2800",
+     "sub": "60 Hz standby",
+     "v": 2.8
+    },
+    {
+     "label": "KD3250",
+     "sub": "60 Hz standby — against the Caterpillar C175",
+     "v": 3.25
+    },
+    {
+     "label": "KD4000",
+     "sub": "60 Hz prime, same machine",
+     "v": 3.64
+    },
+    {
+     "label": "KD4000",
+     "sub": "60 Hz standby — the largest single-set node in this corpus",
+     "v": 4.0
+    }
+   ],
+   "note": "Two things to read off it. The KD4000 appears twice, 4.0 MW standby and 3.64 MW prime — about a nine percent haircut to buy unlimited hours at a varying load. And the UPS rows sit an order of magnitude below the top engine: a single PW 9500DPA system covers 500 kVA, so a hall backed by a 4 MW gen-set needs eight of them paralleled, which is exactly the sizing conversation the modular-versus-monolithic section is about."
+  },
+  {
+   "id": "monolithic-or-modular",
+   "title": "Monolithic or modular: the UPS form-factor decision",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "Two ways to build the same megawatts, and the choice reaches into how the hall is financed, maintained and grown — not just into the electrical room's floor plan.",
+   "cards": [
+    {
+     "t": "Monolithic — one large unit per block of capacity",
+     "meta": "A single cabinet lineup rated for the whole block, repaired by a specialist on site",
+     "adv": [
+      "Lowest cost per kilowatt at full load, and the highest efficiency at the design point",
+      "Fewer parts, fewer control interactions, a simpler {{single-line diagram}}",
+      "Proven, conservative, and the incumbent form in large purpose-built halls"
+     ],
+     "dis": [
+      "Repair means a specialist visit measured in hours, and the load spends that time on {{static bypass}} — unprotected — unless the topology has a spare unit",
+      "Capacity is bought in large indivisible steps, so a half-full hall runs its UPS at part load where efficiency is worst",
+      "The failure of one unit is a large share of the block"
+     ]
+    },
+    {
+     "t": "{{Modular UPS}} — hot-swappable power modules in a frame",
+     "meta": "Capacity added a module at a time; a failed module is pulled and replaced with the load still protected",
+     "adv": [
+      "Repair time collapses from hours to minutes and does not require putting the load on bypass",
+      "Capacity and redundancy are bought incrementally as the hall fills, which matches how halls are actually leased",
+      "{{N+1}} costs one module rather than one whole unit, so redundancy is far cheaper in small blocks"
+     ],
+     "dis": [
+      "Higher cost per kilowatt, and more control complexity — modules must share load and fail gracefully",
+      "More connectors, more fans, more things that can be inserted incorrectly; the {{hot-swap}} promise depends on disciplined procedure",
+      "Redundancy taxes efficiency: modules parked well below their best operating point to hold a spare margin"
+     ]
+    }
+   ],
+   "note": "The pattern in practice: modular has taken the incremental and colocation build, where capacity arrives with tenants and repair time is a contractual matter; monolithic holds where a single owner builds a full block at once and staffs it. Both are correct answers to different financing structures, which is the more useful way to hear the argument than as a technical one."
+  },
+  {
+   "id": "sizing-a-ups",
+   "title": "Sizing a UPS: three numbers people get wrong",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "**kVA is not kW.** A UPS is rated in both, and historically the kW rating was around 0.8 or 0.9 of the kVA rating because loads were less well behaved. Modern IT power supplies run at close to unity {{power factor}}, so most current units are rated 1.0 — but a specification written against an old kVA number, or a comparison between a unity-rated unit and a 0.9-rated one, silently mis-sizes the plant by ten percent or more. Always compare kW.",
+    "**Autonomy is a battery decision, and batteries are the maintenance liability.** Runtime is bought in cells, and the cells are the part of a UPS that ages, needs monitoring and eventually fails. {{VRLA}} strings are cheap and have a service life measured in a few years; lithium strings cost more, last longer, weigh far less, run warmer without complaint and report their own {{state of health}}, which is why they have taken over new builds despite the price. A {{flywheel}} stores seconds rather than minutes, has no chemistry to age and is entirely adequate when the generator start sequence is trusted — and entirely inadequate when it is not.",
+    "**Redundancy is bought at a level, and the level must be named.** 'N+1' means nothing until you say N+1 of *what*: of modules inside one frame, of frames inside one system, or of whole systems feeding independent A and B paths. Each is a different amount of money and a different set of surviving failures. A hall with N+1 modules in a single frame still has one frame, one output breaker and one point of common failure — which is a perfectly reasonable design, but not the same as the 2N most people picture when they hear the phrase.",
+    "**And the part-load trap.** A UPS is most efficient near its design load. A plant sized for the hall's eventual capacity and running at a quarter of it — which is every new hall for its first year or two — sits well down its efficiency curve, and redundancy pushes it further down by construction, because a spare unit's whole purpose is to be under-used. This is the real argument behind modular architectures and behind eco-mode, and it is measured in {{PUE}}."
+   ]
+  },
+  {
+   "id": "switchgear-as-a-product",
+   "title": "Paralleling switchgear: the product that makes engines into a plant",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Individual generators do not add up to a generating plant. The thing that makes them one is a lineup of {{paralleling switchgear}} and the control sequence written into it — and that sequence, not the engines, is where most multi-megawatt standby plants actually fail.",
+    "**What it does.** It starts the machines on a signal and watches each one come up to speed and voltage. It {{synchronization}}-checks each set against the bus — voltage, frequency, phase angle and rotation all matched — before closing its breaker, because closing out of phase can wreck a crankshaft. It shares load between the machines in proportion to their ratings. It sheds load in a priority order if the plant is short of capacity, and restores it in a priority order as capacity arrives. And it manages the return to utility when the outage ends, either as an {{open transition}} or a {{closed transition}} depending on what the utility has permitted.",
+    "**{{Load shedding}} is the part people underestimate.** During a start sequence the plant's capacity is arriving in steps while the load is already present. Something has to decide, in order, what gets dropped and what comes back — critical distribution first, then chillers, then air handlers, then everything else, and each restoration is another {{block load}} the running machines must absorb. The priority table is site-specific, written by hand, and it ages badly: a hall that has been re-tenanted or re-cooled since the table was written will shed the wrong things.",
+    "**Why it is a genuine seam.** The switchgear must agree with each engine's governor and {{AVR}} about {{droop}} settings, with the protection relays about coordination, and with the building-management system about what an emergency looks like. When the engines and the switchgear come from one supplier, that agreement is the supplier's problem. When they do not, it is the commissioning agent's problem — and the reason commissioning of a paralleled plant is measured in weeks rather than days.",
+    "**The commercial reading.** Switchgear looks like a commodity metal enclosure and is in fact a software product with a long service tail. An OEM that supplies engines *and* switchgear is selling the integration, and the integration is what the buyer is least equipped to verify at bid time and most exposed to at 3 a.m."
+   ]
+  },
+  {
+   "id": "one-vendor-or-best-of-breed",
+   "title": "One vendor or best-of-breed: the procurement question underneath",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "A supplier that can quote generation, transfer, UPS and switchgear is proposing something structurally different from a supplier that quotes the best box in one category. The decision belongs to the buyer's engineering capacity, not to the equipment.",
+   "cards": [
+    {
+     "t": "Single-source power room",
+     "meta": "One supplier's scope crosses several boxes on the {{single-line diagram}}",
+     "adv": [
+      "The seams are inside one company. Control-sequence disagreements between engine, switchgear and transfer become a warranty matter rather than a dispute",
+      "One commissioning programme, one service agreement, one number to call during an event",
+      "Faster to specify, and materially less engineering effort on the owner's side"
+     ],
+     "dis": [
+      "Price leverage is lost once the architecture is committed — the second and third phases of a campus are captive",
+      "The buyer inherits the supplier's weakest category. Very few vendors are best in class at engines, UPS and switchgear simultaneously",
+      "Roadmap risk: a supplier that exits or de-prioritizes one product line strands part of the installed base"
+     ]
+    },
+    {
+     "t": "Best-of-breed",
+     "meta": "Each category competitively bid on its own merits",
+     "adv": [
+      "Each box is the strongest available, and every category stays competitively tendered across phases",
+      "No architectural lock-in; a category can be re-bid at the next build without disturbing the others",
+      "Failures of a single supplier are contained to one layer of the plant"
+     ],
+     "dis": [
+      "The owner owns every seam — and the seams are where paralleled plants fail",
+      "Commissioning is longer and the integration engineering is real work that has to be staffed or bought",
+      "During an incident, responsibility is genuinely ambiguous until someone proves where the fault was"
+     ]
+    }
+   ],
+   "note": "The pattern worth recognising: hyperscalers, who employ large in-house power-engineering teams and build the same design dozens of times, overwhelmingly buy best-of-breed and own the seams deliberately — the repetition amortises the engineering. Enterprise and smaller colocation buyers, who build once and staff thinly, are the natural market for a single-source power room. Vendors position themselves against exactly this split."
+  },
+  {
+   "id": "gas-for-continuous-duty",
+   "title": "Gas engines for continuous duty: a different machine for a different job",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A reciprocating gas engine and a standby diesel look alike and are sold into opposite duties. Understanding why keeps the {{bridge power}} conversation honest.",
+    "**Gas is slow to accept load.** A {{lean-burn}} gas engine burns a carefully controlled fuel–air mixture; asking it for a sudden step means getting fuel and air right before the extra energy can be released. Its step-load acceptance is a fraction of a comparable diesel's, which disqualifies it from catching a falling hall and is why standby fleets remain diesel even where the campus's main supply is gas.",
+    "**Gas is cheap to run.** Where a diesel's fuel arrives by truck and sits in tanks degrading, gas arrives by pipeline continuously. Once a machine is expected to run for thousands of hours a year rather than tens, fuel cost dominates capital cost and the arithmetic inverts completely. This is the whole economic basis of {{prime power}} and bridge plants.",
+    "**Gas can make heat worth having.** In {{combined cycle}}'s smaller cousin, cogeneration, the engine's jacket water and exhaust heat are recovered for process heat, hot water or an absorption chiller. The combined efficiency is far above what either output achieves alone, and it is why gas-engine specialists are usually also heat-recovery specialists — the {{heat rate}} argument is what they sell.",
+    "**And gas has a different permit.** A machine that runs continuously is not an {{emergency generator}} in any regulatory sense. It needs an {{air permit}} written for continuous operation, {{Tier 4}}-equivalent or better controls, and it counts fully toward whether a site is a {{major source}}. The permit, not the equipment, is usually what sets the schedule for a bridge-power project — which is the same lesson the standby side teaches from the other direction.",
+    "**Where the boundary sits.** A backup fleet is insurance: sized for peak, permitted for emergencies, idle by design. A bridge plant is a power station that happens to be privately owned: sized for average load with redundancy, permitted for continuous running, fuelled by pipeline, and financed as generation rather than as facilities. The moment a data center's grid connection is late by years rather than months, the second machine is the one it needs — and that is a different purchase, a different regulator and a different vendor conversation, even when the badge on the enclosure is the same."
+   ]
+  },
+  {
+   "id": "where-rehlko-products-slot-in",
+   "title": "Where Rehlko's products slot into the power room",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Trace the same single-line diagram again and note which rows this vendor fills that the other gen-set OEMs do not. The right-hand column names what is genuinely distinctive rather than what is merely present.",
+   "cols": [
+    "Layer of the plant",
+    "The product",
+    "What is distinctive about it here"
+   ],
+   "rows": [
+    [
+     "Medium-voltage switchgear",
+     "PD-4000 metal-clad {{switchgear}} to 15 kV and 150 kA",
+     "Very few gen-set OEMs carry {{medium voltage}} metal-clad gear at all — this is the row that makes the single-source claim more than marketing"
+    ],
+    [
+     "Low-voltage paralleling",
+     "PD-2000 switchboard to 10,000 A and 200 kA; PD-3000 switchgear to 9,200 A; both parallel up to 32 generators",
+     "Open, closed and soft (ramp) transitions in one product family, with a 15-inch touchscreen and the same APM control family as the engines"
+    ],
+    [
+     "The transfer decision",
+     "{{ATS}} from 30 A to 4,000 A in standard, bypass-isolation and service-entrance forms",
+     "Bypass isolation matters: it is how a transfer switch is maintained without dropping the load"
+    ],
+    [
+     "Uninterruptible power",
+     "Kohler Uninterruptible Power PW 5000 through PW 9500DPA, to 500 kVA per system and 5 MVA paralleled",
+     "The only gen-set OEM in this corpus that manufactures a three-phase {{static UPS}}. Also the weakest link commercially — it appears in no published data-center UPS ranking"
+    ],
+    [
+     "The prime mover",
+     "KD Series, 60 kW to 4,000 kW, EPA Tier 2 above 700 kW",
+     "The largest single-set node in this corpus at 4 MW; the engines are built by Liebherr at Colmar, so the capacity ceiling is a partner's decision"
+    ],
+    [
+     "Getting it to site and permitted",
+     "eFRAME walk-in enclosures to 4 MW with AQMD options; Skin-Tight at 186 mph wind and OSHPD pre-approval to 2,500 kW",
+     "Enclosure engineering is where Rehlko competes on repeatable architectures and standardised delivery rather than on the engine"
+    ],
+    [
+     "Gas prime power",
+     "Clarke Energy as INNIO Jenbacher's largest authorised distributor in 27 countries; a 1.25 GW three-year engine framework",
+     "The structural difference from the other three: Rehlko does not manufacture a data-center-scale gas engine, it distributes one"
+    ],
+    [
+     "Absorbing load swings",
+     "Nothing",
+     "There is no Rehlko-manufactured {{BESS}}. Heila is microgrid control software, Clarke integrates third-party batteries, and the UPS resells nickel-zinc cells"
+    ]
+   ],
+   "note": "The catalogue crosses the line the other gen-set OEMs stop at — it reaches up into medium-voltage switchgear and across into the UPS — and stops short of the line they have crossed, which is battery storage. Where each vendor's catalogue begins and ends is a better guide to what it is really selling than any product datasheet."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The load on {{static bypass}} during maintenance.** On a monolithic UPS, servicing means transferring the load to raw mains with no conditioning and no stored energy behind it. If a disturbance arrives inside that window, the hall drops — and the window is scheduled, predictable and repeated monthly. This is the single most common UPS-layer failure in the corpus's failure map, and it is the reason {{modular UPS}} architectures exist. Owned by the operator and whoever wrote the maintenance procedure.",
+    "**{{Autonomy}} sized against transfer time instead of against the whole recovery.** Five minutes of battery against a ten-second transfer looks generous until the first engine fails to start, the sequence times out, a second is called, and the mechanical plant is restored in stages behind it — each restoration another {{block load}}. The arithmetic has to run against the worst credible sequence, not the nominal one. Owned by the designer.",
+    "**Redundancy claimed at an unstated level.** {{N+1}} of modules inside one frame, of frames inside one system, and of whole systems on independent A and B paths are three different purchases surviving three different failures. A hall with N+1 modules in a single frame still has one frame, one output breaker and one common point — a perfectly reasonable design, and not the 2N most people picture when they hear the phrase. Owned by whoever wrote the marketing sheet, and discovered by whoever reads the {{single-line diagram}}.",
+    "**A and B feeds that meet upstream.** The drawing branches, and then both branches trace back to one transformer, one switchboard or one earthing point. Everything downstream is genuinely redundant and the common-mode failure is upstream of where anyone looked. Owned by the designer; visible to anyone who reads the diagram all the way to the service.",
+    "**A load-shed priority table written for a hall that no longer exists.** {{Paralleling switchgear}} sheds and restores in a hand-written order. Re-tenant the hall, re-cool it, or grow it, and the table drops the wrong things during the one event that tests it. Owned by the operator, and almost never reviewed after commissioning.",
+    "**Mixed-brand paralleling that was a purchasing decision, not an engineering one.** Adding a machine from a different OEM to an existing bus means the new governor {{droop}} and {{AVR}} settings, the sync-check window, the load-share behaviour and the protection coordination all have to agree with a control sequence written for other machines. It is a commissioning problem, and it lands on whoever is holding the schedule.",
+    "**Single-source scope treated as single-source competence.** Buying engines, switchgear, transfer and UPS from one vendor removes the seams between them and hands the buyer that vendor's weakest category. Here that is the UPS: KUP is a real product that appears in no published data-center UPS market-share ranking, in a segment where Schneider Electric alone holds more than a quarter. The seam is gone; the capability question is not. Owned by whoever made the architecture decision.",
+    "**{{Peak shaving}} planned on an emergency-class fleet.** The KD range above 700 kW is EPA Tier 2 stationary emergency. Rehlko's own specification guidance warns that California, Florida, New York and Texas — three of them top-five data-center markets — require exhaust conditioning regardless of tier. A business case built on running the fleet for revenue meets the permit, not the machine. Owned by whoever wrote the case."
+   ],
+   "note": "Half of these are UPS-layer and single-line-diagram failures rather than engine failures, which is the part of the chain this corpus has been thinnest on. The other half are the same procurement and permitting traps the engine makers' guides describe — they do not change because the vendor's catalogue got wider."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What are the three questions that read most of a data center's single-line diagram?",
+     "a": "Where does the drawing branch into A and B feeds, and where do those branches meet again upstream? Which loads sit on the UPS and which are only on the generator? And can each piece be taken out of service for maintenance with the load still protected — concurrent maintainability? Two feeds that share a transformer, a switchboard or an earthing point are not two feeds."
+    },
+    {
+     "q": "Name the four blocks of a static UPS and what each one does.",
+     "a": "The rectifier converts incoming AC to DC. The DC link is the internal DC bus where the battery, flywheel or supercapacitor connects. The inverter rebuilds a clean AC waveform for the load. The static bypass is a solid-state switch that can put the load straight onto raw mains in about a quarter of a cycle."
+    },
+    {
+     "q": "Why does a double-conversion UPS have no transfer gap when the input fails?",
+     "a": "Because the store sits permanently on the DC link and the load is always fed from the inverter, never from the mains. When the input fails, energy simply stops arriving from one side and starts arriving from the other. There is nothing to switch, so there is nothing to switch late."
+    },
+    {
+     "q": "What are the two events a static bypass exists for?",
+     "a": "A downstream fault drawing more current than the inverter's semiconductors can supply — the breaker must be given enough current to trip — and an internal UPS failure or maintenance. In both cases the load is running on raw mains with no protection, which is why a maintenance window is a genuine exposure and not merely paperwork."
+    },
+    {
+     "q": "What does eco-mode actually trade?",
+     "a": "It runs the load on the bypass path in normal conditions and jumps to the inverter on a disturbance, buying back the few percent that double conversion costs continuously. The trade is entirely about detection: a clean total loss is caught comfortably inside a server's hold-up time, while an ambiguous disturbance — a slow sag, a distorted waveform, a fault that clears itself — narrows the margin."
+    },
+    {
+     "q": "Distinguish hold-up time, ride-through, autonomy and transfer time.",
+     "a": "Hold-up time (10-20 ms) is the server's own coasting on its capacitors. Ride-through (cycles to seconds) is absorbing a disturbance rather than escalating it. Autonomy (seconds to minutes) is how long the UPS store can hold the load with no generator. Transfer time (up to about 10 s for the standard emergency class) is loss of supply to load on the engine."
+    },
+    {
+     "q": "State the design relationship between autonomy and transfer time.",
+     "a": "Autonomy must exceed transfer time with enough margin to survive a failed first start, the sequence timing out, a second engine being called, and the mechanical plant being restored in stages behind it. Sizing against the transfer figure alone is how a plant that looks generous on paper runs out of battery in a real event."
+    },
+    {
+     "q": "What does a modular UPS buy, and what does it cost?",
+     "a": "It buys minutes rather than hours of repair time with the load still protected, and it lets capacity and redundancy be bought a module at a time as a hall fills — so N+1 costs one module rather than one whole unit. It costs more per kilowatt, adds control complexity and connectors, and its hot-swap promise depends on disciplined procedure."
+    },
+    {
+     "q": "Why is comparing two UPS quotes in kVA misleading?",
+     "a": "Because kW = kVA x power factor, and the rated power factor has moved. Older units were rated 0.8 or 0.9; modern IT loads run near unity so most current units are rated 1.0. Comparing a unity-rated unit with a 0.9-rated one on kVA silently mis-sizes the plant by ten percent or more. Always compare kW."
+    },
+    {
+     "q": "'N+1' on a UPS — what has to be specified before the phrase means anything?",
+     "a": "The level. N+1 of modules inside one frame, of frames inside one system, or of whole systems feeding independent A and B paths are three different amounts of money surviving three different sets of failures. N+1 modules in a single frame still leaves one frame, one output breaker and one common point."
+    },
+    {
+     "q": "Why does a new hall's UPS run at its worst efficiency, and what makes it worse?",
+     "a": "A UPS is most efficient near its design load, and a plant sized for eventual capacity spends its first year or two at a fraction of it. Redundancy pushes it further down the curve by construction, because a spare unit's whole job is to be under-used. It shows up in PUE, and it is the real argument behind modular architectures and eco-mode."
+    },
+    {
+     "q": "List four things paralleling switchgear does that the generators cannot do for themselves.",
+     "a": "It synchronization-checks each set against the bus — voltage, frequency, phase angle and rotation — before closing its breaker; it shares load between machines in proportion to rating; it sheds and restores load in a priority order as capacity arrives; and it manages the return to utility as an open or closed transition."
+    },
+    {
+     "q": "Why does a load-shed priority table age badly?",
+     "a": "It is written by hand for the plant as it was at commissioning. A hall that has since been re-tenanted, re-cooled or grown has different loads and different criticality, so the table will drop the wrong things during the one event that tests it. It is a maintenance item that looks like documentation."
+    },
+    {
+     "q": "When is a single-source power room the right buy, and when is best-of-breed?",
+     "a": "Single-source suits buyers who build once and staff thinly: the seams between engine, switchgear, transfer and UPS become the supplier's warranty problem rather than the owner's engineering problem. Best-of-breed suits buyers who build the same design repeatedly and employ power engineers — the repetition amortises the integration work, and each category stays competitively tendered."
+    },
+    {
+     "q": "Why can a lean-burn gas engine not replace a standby diesel in the backup role?",
+     "a": "Its step-load acceptance is a fraction of the diesel's, because it must get the fuel-air mixture right before releasing extra energy. It cannot catch a falling hall. Gas wins where the machine runs for thousands of hours a year and fuel cost dominates capital cost — prime and bridge power — not where it must arrive in ten seconds."
+    },
+    {
+     "q": "What is the regulatory difference between a backup fleet and a bridge-power plant?",
+     "a": "A backup fleet is an emergency-class installation: permitted to run only during a loss of supply plus a small testing allowance, and sized for peak. A bridge plant runs continuously, needs an air permit written for continuous operation and Tier 4-equivalent controls, and counts fully toward whether the site is a major source. The permit, not the equipment, usually sets its schedule."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A hall advertises 2N power. On the single-line diagram, both the A and B paths trace back to one utility service transformer. The claim is:",
+     "c": [
+      "Correct — 2N refers to the UPS and downstream only",
+      "Overstated: the paths share an upstream single point of failure",
+      "Correct if the transformer is rated for the full load",
+      "Unknowable without the UPS ratings"
+     ],
+     "a": 1,
+     "why": "Redundancy that meets upstream is not redundancy against everything upstream of the meeting point. A shared transformer, switchboard or earthing point is a common-mode failure that the 2N label conceals — which is exactly why the drawing, not the marketing, is the document to read."
+    },
+    {
+     "q": "A UPS shows a five-minute battery autonomy and the site's transfer time is ten seconds. The design margin is:",
+     "c": [
+      "Thirty-fold and therefore ample",
+      "Adequate only if the first engine start succeeds and nothing else is queued",
+      "Irrelevant — the generator makes autonomy unnecessary",
+      "Determined by the servers' hold-up time"
+     ],
+     "a": 1,
+     "why": "The ten-second figure is a successful first start. Autonomy has to cover a failed start, the sequence timing out, a second engine being called, and mechanical plant being restored in stages behind it — each restoration another block load on running machines. Five minutes may well be enough; thirty-fold is not the calculation."
+    },
+    {
+     "q": "A load dropped during a scheduled UPS maintenance window. The most likely explanation is:",
+     "c": [
+      "The battery had degraded",
+      "The load was on static bypass — raw mains, no protection — when a mains disturbance occurred",
+      "The rectifier failed",
+      "The generator failed to start"
+     ],
+     "a": 1,
+     "why": "Maintenance on a monolithic unit puts the load on static bypass, and on bypass the UPS is not protecting anything. That is the standard exposure the modular architecture exists to remove, and it is why repair time — not just failure rate — belongs in a reliability argument."
+    },
+    {
+     "q": "Two UPS quotes: one 1,000 kVA / 1,000 kW, one 1,000 kVA / 900 kW. Which is the fair comparison?",
+     "c": [
+      "They are equivalent — both are 1,000 kVA",
+      "The second delivers 10 percent less real power and must be compared on kW",
+      "The first is less efficient because of its higher power factor",
+      "kVA is the only rating that matters for IT loads"
+     ],
+     "a": 1,
+     "why": "kW = kVA x power factor. A 0.9-rated unit delivers 900 kW of real power against the other's 1,000 kW. Modern IT loads run near unity, so specifying in kVA against a mixed field of rated power factors silently mis-sizes the plant."
+    },
+    {
+     "q": "Which statement about eco-mode is the honest one?",
+     "c": [
+      "It is unsafe and should never be used in a data center",
+      "It trades a small, quantified detection margin for a large, certain energy saving",
+      "It eliminates double-conversion losses with no trade at all",
+      "It only works with lithium batteries"
+     ],
+     "a": 1,
+     "why": "Double conversion costs a few percent continuously and eco-mode buys most of that back. The residual risk is confined to ambiguous disturbances where detection takes longer than a clean total loss. Modern implementations are much better than the topology's reputation, and pretending either that the risk is zero or that it is disqualifying is the unhelpful position."
+    },
+    {
+     "q": "A campus is adding a fourth generator to an existing three-machine paralleled plant, from a different OEM. The largest technical risk is:",
+     "c": [
+      "The new engine's fuel consumption",
+      "Agreement between the new governor and AVR settings and the existing switchgear control sequence",
+      "The alternator's insulation class",
+      "The day tank's capacity"
+     ],
+     "a": 1,
+     "why": "Paralleling is a control problem with a hand-written, site-specific sequence. Droop settings, sync-check windows, load-share behaviour and protection coordination all have to agree across machines. Mixing brands on one bus is a commissioning problem, not a purchasing one — and it is why the switchgear seam matters more than the engine badge."
+    },
+    {
+     "q": "A hyperscaler with a large in-house power-engineering team is most likely to buy:",
+     "c": [
+      "A single-source power room, to reduce vendor count",
+      "Best-of-breed, owning the integration seams deliberately",
+      "Whichever vendor offers the shortest lead time regardless of architecture",
+      "Only modular UPS, on principle"
+     ],
+     "a": 1,
+     "why": "The repetition of building the same design dozens of times amortises the integration engineering, and owning the seams preserves price leverage across every phase. The natural market for a single-source power room is the buyer who builds once and staffs thinly, and vendors position against exactly that split."
+    },
+    {
+     "q": "Which item on this list is a software product wearing a metal enclosure?",
+     "c": [
+      "The day tank",
+      "The paralleling switchgear",
+      "The alternator",
+      "The radiator"
+     ],
+     "a": 1,
+     "why": "The lineup looks like a commodity enclosure and is in fact a site-specific control sequence with a long service tail — synchronizing, load sharing, shed and restore priority, and the return to utility. It is the part a buyer is least able to verify at bid time and most exposed to during an event."
+    },
+    {
+     "q": "A colocation operator wants to add UPS capacity in 250 kW steps as tenants arrive. The architecture that fits is:",
+     "c": [
+      "A monolithic unit sized for the full block",
+      "Modular, with capacity and redundancy added a module at a time",
+      "A rotary UPS",
+      "Eco-mode on a monolithic unit"
+     ],
+     "a": 1,
+     "why": "The requirement is incremental capital matched to incremental revenue, which is exactly what modular buys — and it also keeps the plant closer to its efficient operating point while half-full. Monolithic wins where a single owner commissions a whole block at once."
+    },
+    {
+     "q": "Cogeneration on a gas engine raises combined efficiency well above either output alone because:",
+     "c": [
+      "The engine burns less fuel per kilowatt-hour",
+      "Jacket water and exhaust heat that would be rejected are recovered as useful heat or cooling",
+      "Gas has a higher energy content than diesel",
+      "The alternator is more efficient at continuous load"
+     ],
+     "a": 1,
+     "why": "The electrical efficiency of the engine is unchanged. What improves is the total useful output per unit of fuel, because heat that would otherwise go up the stack or into a radiator is captured for process heat, hot water or an absorption chiller. It is an accounting of what is thrown away, not a change in the engine."
+    }
+   ]
+  }
+ ]
+}

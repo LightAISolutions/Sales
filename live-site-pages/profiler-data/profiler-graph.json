@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-03",
- "companies": 98,
+ "built": "2026-09-04",
+ "companies": 101,
  "edges": [
   {
    "a": "abb",
@@ -395,6 +395,20 @@
      "where": "Capabilities · Isolated Parallel (IP) bus system",
      "date": "",
      "text": "Its home is the operator who wants Tier IV without 2N and without a battery room; the static majors answer with ring-bus variants of their own (ABB, 2014) and, at medium voltage, ABB's HiPerGuard.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "abb",
+   "b": "rehlko",
+   "evid": [
+    {
+     "where": "Capabilities · Kohler Uninterruptible Power (KUP) — three-phase static UPS to 500 kVA per system",
+     "date": "",
+     "text": "Across four independent vendor sets covering data-center UPS — MarketsandMarkets, ResearchAndMarkets, GMInsights and a 2025 restatement — the named leaders are Schneider Electric, Vertiv, Eaton, ABB, Huawei and Delta, with Schneider alone above 24 percent share; Piller appears in these rankings and Kohler does not.",
      "src": "",
      "from": "b"
     }
@@ -2825,6 +2839,20 @@
   },
   {
    "a": "applied-digital",
+   "b": "cummins",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Dallas-based; founded 2021 out of Applied Blockchain; CEO Wes Cummins (ex-B.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "applied-digital",
    "b": "iren",
    "curated": {
     "a": {
@@ -4866,6 +4894,96 @@
   },
   {
    "a": "caterpillar",
+   "b": "cummins",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The nearest competitor in data-center standby generation, ranked second where Caterpillar is ranked first.",
+     "context": "MarketsandMarkets ranks the 2025 data-center generator field Caterpillar, Cummins, Rolls-Royce, Rehlko, Mitsubishi. Fortune Business Insights separately estimates Caterpillar at 18 percent and Cummins at 16 percent on 2026 data; that estimate should be attributed to Fortune Business Insights rather than treated as measured, because vendor market-size estimates for nominally the same market vary by more than twentyfold across firms. Trade coverage puts it qualitatively: Caterpillar \"sits first and Cummins a clear second, together accounting for much of the installed base at hyperscale sites.\"\n\nThe two are running parallel capacity races into the same demand: Caterpillar targeting 65 GW a year of large-engine output by 2030 from a 2024 baseline near 25 GW, and Cummins committing $450M to add 20 GW for 55 GW total by 2030. Caterpillar's advantage is most visible in named prime-power awards, where Cummins has one campus (Circe Energy) against Caterpillar's Monarch and Joule programmes.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "scale": "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+     "via": "Data-center generator sets"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other pole of the data-center standby duopoly, and the only vendor consistently ranked above Cummins.",
+     "context": "MarketsandMarkets ranks the 2025 data-center generator field Caterpillar first, Cummins second, Rolls-Royce third, Rehlko fourth and Mitsubishi fifth, without publishing shares. Fortune Business Insights separately estimates Caterpillar at 18 percent and Cummins at 16 percent on 2026 data; that estimate should be attributed to Fortune Business Insights and not treated as a measured figure, because vendor market-size estimates for nominally the same market range from $433M to $10.34B across firms. Trade coverage puts it qualitatively: Caterpillar \"sits first and Cummins a clear second, together accounting for much of the installed base at hyperscale sites.\" The two are also running parallel capacity races — Caterpillar targeting 65 GW/yr of large-engine output by 2030 against Cummins' 55 GW.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "scale": "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+     "via": "Data-center standby generator sets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Third-party market data put Caterpillar at about 18% of the data-center generator market (Cummins ~16%) and, with Solar Turbines, at 33% of tracked permitted behind-the-meter data-center capacity.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Natural-gas generator sets — G3520 Fast Response, G3500K/H series, CG260/CG170 (MWM), medium-speed 10 MW restart",
+     "date": "",
+     "text": "Contests the prime-power segment against Wärtsilä's medium-speed engines (more than 1.6 GW across four US data-center projects), INNIO's Jenbacher J920 (VoltaGrid's supplier) and Cummins, and against fuel cells (Bloom) on emissions.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Cummins is the second-largest supplier of data-center standby generation behind Caterpillar, and its Power Systems segment has been rebuilt around that demand — from 16 percent of company sales and 18.4 percent segment margin in FY2024 to 18 percent of sales and 22.7 percent margin in FY2025, with Q1 2026 setting a record 29.5 percent; the constraint is factory capacity rather than demand, with high-horsepower gen-sets sold out into the second half of 2028 and a $450M programme adding 20 GW of capacity to reach 55 GW by 2030.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gap: the corpus can name Caterpillar's hyperscale customers from permit records and campus announcements and cannot name Cummins' — its two disclosed multi-gigawatt data-center commitments, the hyperscaler framework agreement and the record battery order, both leave the counterparty unnamed, so no relationship to a covered hyperscaler, colocation landlord or neocloud can be asserted from any source.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: in the trade coverage of gigawatt-scale behind-the-meter awards, the named winners are Caterpillar, INNIO/Jenbacher with VoltaGrid, Wartsila and ProEnergy; Cummins appears mainly in the capacity-expansion paragraph, with Circe Energy as its single named prime-power campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · QSK95 Series generator sets — up to 3.5 MW (60 Hz) / 3.75 MVA (50 Hz)",
+     "date": "",
+     "text": "Sits directly against Caterpillar's C175-20 and C175-16 and Rehlko's KD3250 and KD4000 at the top of the hyperscale node band.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · QSK95 Series generator sets — up to 3.5 MW (60 Hz) / 3.75 MVA (50 Hz)",
+     "date": "",
+     "text": "Fortune Business Insights estimates Caterpillar at 18 percent and Cummins at 16 percent of the data-center generator market on 2026 data; MarketsandMarkets ranks the 2025 field Caterpillar, Cummins, Rolls-Royce, Rehlko, Mitsubishi without publishing shares.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · HSK78G Series lean-burn natural gas generator sets — 1,600–2,000 kW",
+     "date": "",
+     "text": "The prime-power line, and the segment where Cummins is least visible in named awards: trade coverage of the gigawatt-scale behind-the-meter deals names Caterpillar, INNIO/Jenbacher, Wärtsilä and ProEnergy far more often, with Circe Energy as Cummins' one named prime-power campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Battery energy storage systems — 211 kWh to 2,280 kWh catalogue, 5 MWh data-center block",
+     "date": "",
+     "text": "Puts Cummins in the same architectural conversation as Caterpillar, which pairs gas gen-sets with grid-forming batteries on named campuses, and separates it from Rehlko, which manufactures no battery product.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "caterpillar",
    "b": "eaton",
    "evid": [
     {
@@ -5079,6 +5197,133 @@
     }
    ],
    "last": "2026-03-10"
+  },
+  {
+   "a": "caterpillar",
+   "b": "rehlko",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ranked fourth in data-center generators; its KD3250 is positioned directly against the Caterpillar C175.",
+     "context": "MarketsandMarkets ranks Rehlko — the former Kohler Energy, majority-owned by Platinum Equity since 2024 — fourth in data-center generators for 2025. Trade press positions the KD3250 at 3,250 kW standby against the Caterpillar C175 and the Cummins QSK60 at the hyperscale node, and Rehlko announced approximately 1.7 GW of hyperscale backup awards in a 60-day window in April 2026.\n\nOne conflation to avoid: some coverage has attributed the Monarch Compute Campus award to Rehlko because a single trade article discussed Caterpillar, Cummins and Rehlko together. The Monarch award of 2 GW of G3516 natural-gas gen-sets is Caterpillar's, with Boyd CAT as the local dealer, per Caterpillar's own release.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "via": "Data-center generator sets"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The market leader, described by trade press as sitting first in what it calls an effective oligopoly in which Rehlko is fourth.",
+     "context": "MarketsandMarkets ranks the 2025 data-center generator field Caterpillar, Cummins, Rolls-Royce, Rehlko, Mitsubishi. Rehlko's KD3250 at 3,250 kW standby is positioned directly against the Caterpillar C175. The gap is clearest in prime power: Caterpillar holds named gigawatt-scale gas awards including 2 GW at the Monarch Compute Campus, while Rehlko's gas prime-power route runs through Clarke Energy's INNIO distributorship rather than through engines it manufactures. A trap worth naming: some coverage conflates Rehlko with the Monarch award because one trade article discussed Caterpillar, Cummins and Rehlko together; the Monarch power award is Caterpillar's, with Boyd CAT as dealer.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "via": "Data-center generator sets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Diesel generator sets for standby and mission-critical duty — C175-20, C175-16, 3516E (and D1500, 3512C, C32B)",
+     "date": "",
+     "text": "The incumbent in the standby segment: Cummins (Centum Force containerized sets) and Rolls-Royce Power Systems' mtu Series 4000 are the named rivals in trade press, with Rehlko and Mitsubishi behind them.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Meanwhile Caterpillar pairs gas gen-sets with grid-forming batteries on named campuses and Cummins took its largest-ever storage order to meet utility-defined requirements for AI load oscillation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The only figures available come from trade press relaying S&P Global Ratings at the time of the buyout — a 'B' issuer credit rating with a stable outlook, leverage in the mid-4x area, interest coverage in the mid-2x area and an EBITDA margin around 10 percent in 2024 — which is materially below what Caterpillar and Cummins earn.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · KD Series industrial generator sets — 700 to 4,000 kW (60 Hz)",
+     "date": "",
+     "text": "Ranked fourth in data-center generators for 2025 by MarketsandMarkets, behind Caterpillar, Cummins and Rolls-Royce.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Clarke Energy — gas-engine EPC and INNIO Jenbacher distribution",
+     "date": "",
+     "text": "Gives Rehlko a gas prime-power route into data centers without manufacturing the engines — the structural difference from Caterpillar, Cummins and Rolls-Royce, all of which build their own",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Service, aftermarket and connected monitoring",
+     "date": "",
+     "text": "The service depth that a #4 must build to compete with Caterpillar's and Cummins' dealer networks, assembled partly by acquisition rather than organically",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "Rehlko Power Plus connected services expanded — 24/7 remote monitoring, real-time alerts, advanced diagnostics, reporting and fleet-wide asset visibility across generators and automatic transfer switches — Extending monitoring to the transfer switches as well as the engines is what makes a fleet-level service contract sellable against Caterpillar's and Cummins' dealer networks.",
+     "src": "https://www.rehlko.com/newsroom-rehlko-expands-power-plus-connected-services-capabilities",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "caterpillar",
+   "b": "rolls-royce-power-systems",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ranked third in data-center generators, and the vendor grouped with Caterpillar as having the shortest lead times at hyperscale nodes.",
+     "context": "MarketsandMarkets places Rolls-Royce third for 2025, crediting its mtu brand with traction in high-density AI and hyperscale environments. A 2026 lead-time survey by Terrapin Consulting Group states that \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" while placing Cummins and Kohler at the 1,000-2,000 kW band — the clearest published statement that Caterpillar's nearest rival at the top of the range is Rolls-Royce rather than Cummins.\n\nThe competitive gap runs the other way in prime power. POWER Magazine's March 2026 survey lists Caterpillar with 2 GW at the Monarch Compute Campus and up to 4 GW with Joule Capital Partners, and quotes the G3516 ramping \"zero to full load in approximately seven seconds\"; mtu appears on product attributes and installed base, with its new fast-start gas set reaching 2.8 MW in 45 seconds.",
+     "source": "https://www.powermag.com/engine-power-plants-surge-as-data-centers-drive-unprecedented-demand/",
+     "status": "active",
+     "via": "Data-center generator sets"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The market leader in data-center generators, ranked first where Rolls-Royce is ranked third.",
+     "context": "MarketsandMarkets ranks the 2025 data-center generator field Caterpillar, Cummins, Rolls-Royce, Rehlko, Mitsubishi. The competition is sharpest in prime power: POWER Magazine's March 2026 survey lists Caterpillar with 2 GW at the Monarch Compute Campus and up to 4 GW with Joule Capital Partners, against no named gigawatt-scale award for mtu, and quotes Caterpillar's G3516 ramping \"zero to full load in approximately seven seconds\" against mtu's 45 seconds on the new fast-start gas set. In standby the ordering is closer, and a lead-time survey places Caterpillar and mtu together as having the shortest lead times for large hyperscale units.",
+     "source": "https://www.powermag.com/engine-power-plants-surge-as-data-centers-drive-unprecedented-demand/",
+     "status": "active",
+     "via": "Data-center generator sets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Diesel generator sets for standby and mission-critical duty — C175-20, C175-16, 3516E (and D1500, 3512C, C32B)",
+     "date": "",
+     "text": "The incumbent in the standby segment: Cummins (Centum Force containerized sets) and Rolls-Royce Power Systems' mtu Series 4000 are the named rivals in trade press, with Rehlko and Mitsubishi behind them.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: POWER Magazine's March 2026 survey of reciprocating-engine data-center power tabulates named gigawatt-scale wins for Caterpillar (2 GW at Monarch, 4 GW with Joule), INNIO/Jenbacher (2.3 GW with VoltaGrid) and Wartsila (429 MW plus a 790 MW Texas order), and lists Rolls-Royce on product attributes and installed base with no named deal.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · mtu Series 4000 diesel generator sets — 1,600 to 4,000 kVA (50 Hz) / 1,125 to 3,250 kWe (60 Hz)",
+     "date": "",
+     "text": "Ranked third in data-center generators for 2025 by MarketsandMarkets behind Caterpillar and Cummins, credited with traction \"in high-density AI and hyperscale environments.\" A lead-time survey by Terrapin Consulting Group states that \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" — which is the company's own claimed differentiator: it says it competes \"on power density, speed of back-up and service.\"",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Modular Engine Power Plants (MEPP) — 5 MW to 100 MW and beyond",
+     "date": "",
+     "text": "The answer to a grid-connection queue measured in years; competes with Wartsila, INNIO/Jenbacher and Caterpillar's gas fleets for bridge duty",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "caterpillar",
@@ -5789,6 +6034,32 @@
     }
    ],
    "last": "2024-12-10"
+  },
+  {
+   "a": "catl",
+   "b": "rolls-royce-power-systems",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "CATL cells are used in the mtu EnergyPack system for the Voltaria Helios battery facility at Falkirk, Scotland.",
+     "context": "Announced 2026-03-31, the 43 MW / 86 MWh project is delivered by Rolls-Royce as EPC with a 15-year service agreement, with grid connection in 2026 and commissioning in 2027, and the cells identified as CATL's. This is the clearest published statement of the EnergyPack's cell sourcing; the QG datasheet otherwise describes only \"modular, Tier 1 components\" and \"latest LFP cell chemistry.\" Whether CATL supplies other EnergyPack projects is not stated in any source found.",
+     "source": "https://www.rolls-royce.com/media/press-releases/2026/31-03-2026-rr-and-voltaria-to-build-a-43-mw-large-scale-battery-storage-facility-in-scotland.aspx",
+     "status": "announced",
+     "since": "2026",
+     "scale": "43 MW / 86 MWh Voltaria Helios project",
+     "via": "mtu EnergyPack cells"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-31",
+     "text": "Voltaria Helios battery storage facility at Falkirk, Scotland — 43 MW / 86 MWh on mtu EnergyPack with CATL cells, delivered as EPC with a 15-year service agreement, grid connection 2026 and commissioning 2027 — The clearest statement of the battery commercial model: turnkey delivery plus a long service tail, on third-party cells.",
+     "src": "https://www.rolls-royce.com/media/press-releases/2026/31-03-2026-rr-and-voltaria-to-build-a-43-mw-large-scale-battery-storage-facility-in-scotland.aspx",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-31"
   },
   {
    "a": "catl",
@@ -7973,6 +8244,277 @@
    "last": ""
   },
   {
+   "a": "cummins",
+   "b": "enchanted-rock",
+   "evid": [
+    {
+     "where": "Capabilities · RockBlock + ERT500 modular gas gensets (the AIDC product)",
+     "date": "",
+     "text": "Direct competitor to diesel backup (Cat/Cummins/MTU) on emissions and grid value, to VoltaGrid and ProEnergy on AIDC bridge power (smaller unit granularity, deeper utility integration), and to grid-plus-BESS at the architecture level.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cummins",
+   "b": "eve-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It supplies Tesla (6th cell supplier, ESS cells from Malaysia starting 2026) and American Battery Solutions, and its Malaysia/Hungary plants plus the 10%-stake Amplify Cell Technologies JV (Cummins/Daimler/PACCAR, Mississippi) are its tariff-and-sanctions insulation.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cummins",
+   "b": "ge-vernova",
+   "evid": [
+    {
+     "where": "Capabilities · Aeroderivative turbines & bridging power (LM2500/LM6000/TM2500)",
+     "date": "",
+     "text": "The 'two weeks to power generation' pitch versus multi-year interconnection queues — competing against Bloom fuel cells, Caterpillar/Cummins gensets, and Solaris mobile turbines for the bridge-power wedge.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cummins",
+   "b": "mainspring-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Ex-Cummins chairman/CEO Tom Linebarger took the CEO seat in June 2026 with founder Shannon Miller as President.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Tom Linebarger (ex-Cummins chairman/CEO) becomes CEO; founder Shannon Miller becomes President — Hiring the man who ran the recip incumbent for a decade is a declaration of which war Mainspring intends to fight — and a classic pre-IPO operator installation.",
+     "src": "PRNewswire",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
+  },
+  {
+   "a": "cummins",
+   "b": "proenergy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: in the trade coverage of gigawatt-scale behind-the-meter awards, the named winners are Caterpillar, INNIO/Jenbacher with VoltaGrid, Wartsila and ProEnergy; Cummins appears mainly in the capacity-expansion paragraph, with Circe Energy as its single named prime-power campus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · HSK78G Series lean-burn natural gas generator sets — 1,600–2,000 kW",
+     "date": "",
+     "text": "The prime-power line, and the segment where Cummins is least visible in named awards: trade coverage of the gigawatt-scale behind-the-meter deals names Caterpillar, INNIO/Jenbacher, Wärtsilä and ProEnergy far more often, with Circe Energy as Cummins' one named prime-power campus.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cummins",
+   "b": "rehlko",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The fourth-ranked gen-set OEM, competing directly at the 1,000-2,000 kW band and at the top node with the KD3250 and KD4000.",
+     "context": "MarketsandMarkets ranks Rehlko fourth in data-center generators for 2025. Terrapin's lead-time survey groups Cummins and Kohler together as \"competitive at the 1,000-2,000 kW range,\" which is where the two most directly overlap. Rehlko's KD3250 at 3,250 kW standby is positioned against the Caterpillar C175 and the Cummins QSK60 at the hyperscale node. Rehlko announced approximately 1.7 GW of hyperscale backup awards in a 60-day window in April 2026, on the same anonymised basis as Cummins' own hyperscaler framework.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "via": "Data-center standby generator sets"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Ranked second where Rehlko is fourth, and the most direct overlap at the 1,000 to 2,000 kW node band.",
+     "context": "Terrapin Consulting Group's 2026 lead-time survey states that \"Cummins and Kohler tend to be competitive at the 1,000-2,000 kW range\" while placing Caterpillar and mtu at the top of the hyperscale band — the sharpest published statement of where the two actually meet. Both also announced anonymised multi-gigawatt hyperscale commitments within months of each other: Rehlko's approximately 1.7 GW of awards in a 60-day window in April 2026, and Cummins' multi-year framework giving visibility into several gigawatts, disclosed on its Q2 2026 call. Neither names a counterparty. Cummins additionally has a battery product; Rehlko does not.",
+     "source": "https://terrapincg.com/news/switchgear-transformer-generator-lead-times-2026",
+     "status": "active",
+     "via": "Data-center generator sets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · QSK95 Series generator sets — up to 3.5 MW (60 Hz) / 3.75 MVA (50 Hz)",
+     "date": "",
+     "text": "Sits directly against Caterpillar's C175-20 and C175-16 and Rehlko's KD3250 and KD4000 at the top of the hyperscale node band.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · QSK95 Series generator sets — up to 3.5 MW (60 Hz) / 3.75 MVA (50 Hz)",
+     "date": "",
+     "text": "Fortune Business Insights estimates Caterpillar at 18 percent and Cummins at 16 percent of the data-center generator market on 2026 data; MarketsandMarkets ranks the 2025 field Caterpillar, Cummins, Rolls-Royce, Rehlko, Mitsubishi without publishing shares.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery energy storage systems — 211 kWh to 2,280 kWh catalogue, 5 MWh data-center block",
+     "date": "",
+     "text": "Puts Cummins in the same architectural conversation as Caterpillar, which pairs gas gen-sets with grid-forming batteries on named campuses, and separates it from Rehlko, which manufactures no battery product.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Caterpillar, Cummins and Rolls-Royce all build their own prime movers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Meanwhile Caterpillar pairs gas gen-sets with grid-forming batteries on named campuses and Cummins took its largest-ever storage order to meet utility-defined requirements for AI load oscillation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The only figures available come from trade press relaying S&P Global Ratings at the time of the buyout — a 'B' issuer credit rating with a stable outlook, leverage in the mid-4x area, interest coverage in the mid-2x area and an EBITDA margin around 10 percent in 2024 — which is materially below what Caterpillar and Cummins earn.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · KD Series industrial generator sets — 700 to 4,000 kW (60 Hz)",
+     "date": "",
+     "text": "Ranked fourth in data-center generators for 2025 by MarketsandMarkets, behind Caterpillar, Cummins and Rolls-Royce.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Clarke Energy — gas-engine EPC and INNIO Jenbacher distribution",
+     "date": "",
+     "text": "Gives Rehlko a gas prime-power route into data centers without manufacturing the engines — the structural difference from Caterpillar, Cummins and Rolls-Royce, all of which build their own",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Service, aftermarket and connected monitoring",
+     "date": "",
+     "text": "The service depth that a #4 must build to compete with Caterpillar's and Cummins' dealer networks, assembled partly by acquisition rather than organically",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "Rehlko Power Plus connected services expanded — 24/7 remote monitoring, real-time alerts, advanced diagnostics, reporting and fleet-wide asset visibility across generators and automatic transfer switches — Extending monitoring to the transfer switches as well as the engines is what makes a fleet-level service contract sellable against Caterpillar's and Cummins' dealer networks.",
+     "src": "https://www.rehlko.com/newsroom-rehlko-expands-power-plus-connected-services-capabilities",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-08",
+     "text": "Rehlko and Liebherr expanded their strategic partnership on next-generation KD Series generators, with the KD700 and KD750 using the 18-litre Liebherr KD18L06 diesel; the partnership dates to the KD Series launch in 2016 and the engines have endured 100,000 hours of laboratory and field testing — The engine dependency is the structural fact about Rehlko that distinguishes it from the other three: Caterpillar, Cummins and Rolls-Royce all build their own prime movers.",
+     "src": "https://www.rehlko.com/rehlko-liebherr-expand-partnership-of-kd-series-generators",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "cummins",
+   "b": "rolls-royce-power-systems",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ranked immediately below Cummins in the data-center generator field, and the vendor most often credited with the shortest lead times at hyperscale nodes.",
+     "context": "MarketsandMarkets places Rolls-Royce third for 2025, behind Caterpillar and Cummins, crediting it with traction \"in high-density AI and hyperscale environments.\" A lead-time survey by Terrapin Consulting Group states that \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" while \"Cummins and Kohler tend to be competitive at the 1,000-2,000 kW range\" — a segmentation that puts Rolls-Royce, not Cummins, as Caterpillar's nearest rival at the top of the range. Both are also expanding US capacity concurrently: Cummins with $450M for 20 GW, Rolls-Royce by doubling Series 4000 gen-set output at Mankato, Minnesota.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "via": "Data-center standby generator sets"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Ranked second in data-center generators, immediately above Rolls-Royce.",
+     "context": "MarketsandMarkets places Cummins second and Rolls-Royce third for 2025. Terrapin Consulting Group's 2026 lead-time survey splits the two by node band: \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" while \"Cummins and Kohler tend to be competitive at the 1,000-2,000 kW range.\" Both are expanding US capacity concurrently — Cummins committing $450M for 20 GW of high-horsepower output, Rolls-Royce doubling Series 4000 gen-set assembly at Mankato and adding engine machining at Aiken.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "via": "Data-center generator sets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · mtu Series 4000 diesel generator sets — 1,600 to 4,000 kVA (50 Hz) / 1,125 to 3,250 kWe (60 Hz)",
+     "date": "",
+     "text": "Ranked third in data-center generators for 2025 by MarketsandMarkets behind Caterpillar and Cummins, credited with traction \"in high-density AI and hyperscale environments.\" A lead-time survey by Terrapin Consulting Group states that \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" — which is the company's own claimed differentiator: it says it competes \"on power density, speed of back-up and service.\"",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · mtu Series 2000 and Series 1600 diesel generator sets — 590 to 1,270 kVA",
+     "date": "",
+     "text": "The edge and smaller-hall range, and the node band where Cummins and Rehlko are described as most competitive",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cummins",
+   "b": "voltagrid",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: in the trade coverage of gigawatt-scale behind-the-meter awards, the named winners are Caterpillar, INNIO/Jenbacher with VoltaGrid, Wartsila and ProEnergy; Cummins appears mainly in the capacity-expansion paragraph, with Circe Energy as its single named prime-power campus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The corollary: the moat is time-limited — recip capacity is scaling industry-wide (Cat, Cummins, Wärtsilä) and interconnection reform would collapse the speed premium that justifies ~$1,700-2,000/kW gas at 55-65% overbuild.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cummins",
+   "b": "wartsila",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A reciprocating-engine competitor in the prime-power segment where Cummins is least represented by named awards.",
+     "context": "Natural Gas Intelligence's May 2026 survey of the reciprocating-engine capacity race tabulates Cummins adding 20 GW to reach 55 GW by 2030 alongside Wartsila's 2 GW of US orders since 2025, including a 790 MW Texas data-center order in April 2026 and a 412 MW Ohio project. In that same coverage Cummins appears mainly in the capacity paragraph while Wartsila, Caterpillar and INNIO carry the named gigawatt awards — which is the competitive asymmetry the dossier's third key judgment describes.",
+     "source": "https://naturalgasintel.com/news/no-turbine-data-centers-find-faster-path-with-natural-gas-reciprocating-engines/",
+     "status": "active",
+     "scale": "Wartsila: 2 GW of US orders since 2025 against Cummins' 20 GW capacity addition",
+     "via": "Behind-the-meter prime power"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · HSK78G Series lean-burn natural gas generator sets — 1,600–2,000 kW",
+     "date": "",
+     "text": "The prime-power line, and the segment where Cummins is least visible in named awards: trade coverage of the gigawatt-scale behind-the-meter deals names Caterpillar, INNIO/Jenbacher, Wärtsilä and ProEnergy far more often, with Circe Energy as Cummins' one named prime-power campus.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "delta-electronics",
    "b": "eaton",
    "curated": {
@@ -9053,6 +9595,20 @@
      "where": "Capabilities · Static UPS and static transfer switches — M+ Series (M+500, M+1200), APOSTAR, APOTRANS",
      "date": "",
      "text": "Head-on with Schneider Electric Galaxy VXL (500–1,250 kW frames, 125 kW modules), Vertiv Trinergy (1.5–2.5 MW blocks to 20 MW) and Eaton 9395X (to 1,700 kVA) — a late entrant at 500–1,200 kW per unit whose stated edge is Piller's service network and short-circuit capacity, and whose hardware provenance the company has not disclosed.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eaton",
+   "b": "rehlko",
+   "evid": [
+    {
+     "where": "Capabilities · Kohler Uninterruptible Power (KUP) — three-phase static UPS to 500 kVA per system",
+     "date": "",
+     "text": "Across four independent vendor sets covering data-center UPS — MarketsandMarkets, ResearchAndMarkets, GMInsights and a 2025 restatement — the named leaders are Schneider Electric, Vertiv, Eaton, ABB, Huawei and Delta, with Schneider alone above 24 percent share; Piller appears in these rankings and Kohler does not.",
      "src": "",
      "from": "b"
     }
@@ -17338,6 +17894,31 @@
   },
   {
    "a": "microsoft",
+   "b": "rolls-royce-power-systems",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Co-authored a position paper with Microsoft on hydrotreated vegetable oil for backup power in Singapore's data-centre sector.",
+     "context": "Published 2025-08-28, the paper argues for HVO in data-centre standby fleets against the Singapore Green Data Centre Roadmap, which allocates about 300 MW of near-term capacity with 200 MW reserved for operators using green energy options. Microsoft's Cloud ESG Planning Director for Asia Pacific is quoted in the release alongside Rolls-Royce's President Global Markets.\n\nThis is policy advocacy, not an equipment order. No source in this research names Microsoft, or any other hyperscaler, as a purchaser of mtu gen-sets, and Rolls-Royce's own H1 2026 results refer only to unnamed \"framework agreements with data centre customers.\" The link is recorded at the strength the source supports and no further.",
+     "source": "https://www.rolls-royce.com/media/press-releases/2025/28-08-2025-rr-publishes-position-paper-with-microsoft-on-the-use-of-hydrotreated-vegetable-oil-hvo-for-the-singapore-data-centre-sector.aspx",
+     "status": "active",
+     "since": "2025",
+     "via": "HVO backup-power policy advocacy"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-28",
+     "text": "Position paper published jointly with Microsoft on the use of hydrotreated vegetable oil for backup power in Singapore's data-centre sector, referencing the Singapore Green Data Centre Roadmap's near-term 300 MW allocation and the 200 MW reserved for operators using green energy options — The only named engagement with a hyperscaler in this corpus, and it is policy advocacy rather than an equipment order — worth stating plainly in both directions.",
+     "src": "https://www.rolls-royce.com/media/press-releases/2025/28-08-2025-rr-publishes-position-paper-with-microsoft-on-the-use-of-hydrotreated-vegetable-oil-hvo-for-the-singapore-data-centre-sector.aspx",
+     "from": "b"
+    }
+   ],
+   "last": "2025-08-28"
+  },
+  {
+   "a": "microsoft",
    "b": "rosendin",
    "evid": [
     {
@@ -20251,6 +20832,153 @@
      "from": "a"
     }
    ],
+   "last": ""
+  },
+  {
+   "a": "rehlko",
+   "b": "rolls-royce-power-systems",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ranked third, immediately above Rehlko, and structurally the closest comparison in the set.",
+     "context": "MarketsandMarkets places Rolls-Royce third and Rehlko fourth for 2025. The two are alike in ways the American vendors are not: both manufacture their highest-value data-center product in continental Europe and ship it into the American market — Rehlko's G-Drive engines from Liebherr at Colmar and its switchgear from Cholet, Rolls-Royce's Series 4000 from Friedrichshafen with US assembly at Mankato — and both are expanding capacity hard into the same demand, Rehlko by more than 400 percent through the decade and Rolls-Royce by more than doubling Series 4000 gen-set output. Both also sell a UPS alongside the engines, though Rolls-Royce's is a diesel rotary machine and Rehlko's a static one.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "via": "Data-center generator sets"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Ranked fourth in data-center generators, immediately below Rolls-Royce, and the other European-manufacturing-dependent vendor in the set.",
+     "context": "MarketsandMarkets places Rehlko fourth for 2025. The two are structurally similar in a way the American vendors are not: Rehlko's G-Drive engines for the whole 700-4000 kW range are built by Liebherr at Colmar in France and its power-control business manufactures at Cholet, while Rolls-Royce assembles at Friedrichshafen and Kluftern — both therefore run a Europe-to-US supply chain into the American data-center market. Both are also expanding capacity into the same demand: Rehlko states a plan to lift capacity by more than 400 percent through the decade, Rolls-Royce to more than double Series 4000 output at Mankato.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+     "status": "active",
+     "via": "Data-center generator sets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Rehlko as the widest single-vendor electrical scope in the standby power room after Rolls-Royce Power Systems, and the only gen-set OEM in this corpus that also manufactures a three-phase static UPS: gen-sets from 60 kW to 4 MW, PD-Series paralleling switchgear to 15 kV and 10,000 A, automatic transfer switches to 4,000 A, the APM controller family, eFRAME integrated enclosures, and the Kohler Uninterruptible Power modular UPS range to 500 kVA per system.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · mtu Series 2000 and Series 1600 diesel generator sets — 590 to 1,270 kVA",
+     "date": "",
+     "text": "The edge and smaller-hall range, and the node band where Cummins and Rehlko are described as most competitive",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "rehlko",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-established the Infrastructure Masons \"Data Centers As A Good Neighbor\" working group with Schneider Electric and other stakeholders.",
+     "context": "Reported 2026-02-11. The working group addresses the community and siting side of data-center development — the ground on which Rehlko also joined the Wisconsin Data Center Coalition in August 2026 as an energy-resilience member.\n\nThis is an industry-body collaboration rather than a commercial relationship, and it is the only link between Rehlko and any other company in this corpus that a source explicitly states. No supply, distribution or customer relationship between the two is asserted anywhere.",
+     "source": "https://www.datacenterdynamics.com/en/product-news/driving-energy-resilience-rehlkos-commitment-to-sustainable-power-solutions-for-data-centers/",
+     "status": "active",
+     "since": "2026",
+     "via": "Infrastructure Masons working group"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: KUP sells a genuine modular three-phase range with a nickel-zinc battery option, and across four independent market-research vendor sets covering data-center UPS — MarketsandMarkets, ResearchAndMarkets, GMInsights and a 2025 restatement — Kohler and Rehlko appear in none of them, while Schneider Electric alone holds more than 24 percent share and the top five hold roughly 60 percent.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Kohler Uninterruptible Power (KUP) — three-phase static UPS to 500 kVA per system",
+     "date": "",
+     "text": "Across four independent vendor sets covering data-center UPS — MarketsandMarkets, ResearchAndMarkets, GMInsights and a 2025 restatement — the named leaders are Schneider Electric, Vertiv, Eaton, ABB, Huawei and Delta, with Schneider alone above 24 percent share; Piller appears in these rankings and Kohler does not.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-11",
+     "text": "Rehlko co-established the Infrastructure Masons \"Data Centers As A Good Neighbor\" working group with Schneider Electric and other stakeholders — The only sourced link between Rehlko and any other company covered in this corpus, and it is an industry-body collaboration rather than a commercial relationship.",
+     "src": "https://www.datacenterdynamics.com/en/product-news/driving-energy-resilience-rehlkos-commitment-to-sustainable-power-solutions-for-data-centers/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-11"
+  },
+  {
+   "a": "rehlko",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Rehlko's board and strategic advisory council carry two senior Vertiv figures, and both companies have been Platinum Equity portfolio companies.",
+     "context": "Rehlko's own strategic advisory council page identifies Rob Johnson as a \"Rehlko Board Member\" and the former Chief Executive of Vertiv, describing Vertiv as \"a Platinum Equity company\" and crediting Johnson with leading that 20,000-person business through divestitures, acquisitions and an initial public offering. The same council seats Edward Monser, a current Director of Vertiv Holdings Co. and former President of Emerson Electric.\n\nThe link is governance and sponsor lineage, not commerce: no supply, distribution or joint-development relationship between Rehlko and Vertiv is stated in any source found. It is recorded because a private-equity sponsor reusing operating talent across two companies in the same ecosystem is a real structural connection, and because both figures sit where Rehlko's data-center strategy is set.",
+     "source": "https://www.rehlko.com/strategic-advisory-council",
+     "status": "active",
+     "via": "Shared sponsor and board or advisory ties"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Kohler Uninterruptible Power (KUP) — three-phase static UPS to 500 kVA per system",
+     "date": "",
+     "text": "Across four independent vendor sets covering data-center UPS — MarketsandMarkets, ResearchAndMarkets, GMInsights and a 2025 restatement — the named leaders are Schneider Electric, Vertiv, Eaton, ABB, Huawei and Delta, with Schneider alone above 24 percent share; Piller appears in these rankings and Kohler does not.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "rehlko",
+   "b": "voltagrid",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-09",
+     "text": "Multi-year framework agreement with INNIO for approximately 1.25 GW of gas-engine capacity over three years, delivered through Clarke Energy as INNIO's authorised distributor, with a significant proportion intended for hyperscale, colocation and enterprise data-center operators — Buys Rehlko a gas prime-power position it does not manufacture — and puts it on the same INNIO platform that VoltaGrid used for its own 2.3 GW order, which is a shared dependency rather than an exclusive advantage.",
+     "src": "https://www.prnewswire.com/news-releases/rehlko-and-innio-enter-into-multiyear-1-25-gw-engine-framework-agreement-to-support-accelerating-global-data-center-and-flexible-generation-demand-302737699.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-04-09"
+  },
+  {
+   "a": "rolls-royce-power-systems",
+   "b": "voltagrid",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: POWER Magazine's March 2026 survey of reciprocating-engine data-center power tabulates named gigawatt-scale wins for Caterpillar (2 GW at Monarch, 4 GW with Joule), INNIO/Jenbacher (2.3 GW with VoltaGrid) and Wartsila (429 MW plus a 790 MW Texas order), and lists Rolls-Royce on product attributes and installed base with no named deal.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "rolls-royce-power-systems",
+   "b": "wartsila",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A reciprocating-engine competitor holding named gigawatt-scale prime-power awards where Rolls-Royce holds none.",
+     "context": "POWER Magazine's March 2026 survey of engine power plants for data centers tabulates Wartsila with 24 Wartsila 50SG units totalling 429 MW, a 123 MW Odessa Texas project and 75 MW in Kentucky, alongside separate 790 MW Texas and Liberty Energy orders in April and June 2026; mtu appears in the same table on technology and installed base, with no named deal. Wartsila is also investing 140 million euros to expand Vaasa capacity by 35 percent, with new capacity in the first quarter of 2028 — the same capacity race Rolls-Royce is running at Friedrichshafen, Mankato and Aiken.",
+     "source": "https://www.powermag.com/engine-power-plants-surge-as-data-centers-drive-unprecedented-demand/",
+     "status": "active",
+     "scale": "Wartsila 790 MW Texas data-center order, April 2026",
+     "via": "Behind-the-meter prime power"
+    }
+   },
+   "evid": [],
    "last": ""
   },
   {

@@ -80,6 +80,25 @@
       ]
     },
     {
+      "slug": "alternator",
+      "term": "alternator",
+      "def": "The generating end of a gen-set: the rotating machine that turns the engine's mechanical power into alternating current. It is specified separately from the engine — its winding pitch, insulation class and reactance decide how far voltage dips when a large load lands and how much fault current it can push to trip a breaker.",
+      "aliases": [
+        "generator end",
+        "gen end",
+        "genend"
+      ]
+    },
+    {
+      "slug": "anti-islanding",
+      "term": "anti-islanding",
+      "def": "Protection that stops an on-site generator from continuing to energize a utility line after the utility has disconnected. It exists to protect line workers, and it is why a set that runs in parallel with the grid needs more relaying than one that only ever runs on a dead bus.",
+      "aliases": [
+        "islanding protection",
+        "anti islanding"
+      ]
+    },
+    {
       "slug": "arc-flash",
       "term": "arc flash",
       "def": "The explosive release of energy when current jumps through the air between conductors — a blast hot enough to be lethal at a panel door. An arc-flash study calculates that energy at every piece of gear so the right protective clothing and breaker settings can be specified, and it has to be redone whenever the electrical system changes.",
@@ -100,6 +119,15 @@
       "slug": "augmentation",
       "term": "augmentation",
       "def": "Adding new battery capacity to an operating storage plant to offset degradation, keeping the plant at its contracted capacity over its life."
+    },
+    {
+      "slug": "automatic-voltage-regulator",
+      "term": "AVR",
+      "def": "The automatic voltage regulator: the controller that adjusts the alternator's field current to hold output voltage steady as load changes. When a data hall lands in one step, the AVR's speed of response is what decides whether the voltage dip stays inside what the IT load and the UPS will accept.",
+      "aliases": [
+        "automatic voltage regulator",
+        "AVR regulator"
+      ]
     },
     {
       "slug": "autonomy",
@@ -588,6 +616,16 @@
       ]
     },
     {
+      "slug": "day-tank",
+      "term": "day tank",
+      "def": "The small fuel tank mounted at or near the gen-set, kept full by pumps from the bulk storage tank, that feeds the engine directly. Sizing it is a code and permit question as much as an engineering one, because the tank's capacity sets how long the set can run if the transfer pumps fail.",
+      "aliases": [
+        "belly tank",
+        "base tank",
+        "sub-base tank"
+      ]
+    },
+    {
       "slug": "dc-dc-converter",
       "term": "DC-DC converter",
       "def": "A converter that changes one DC voltage to another without passing through AC. It is the stage that does the work once power has arrived as direct current — inside a rack, inside a vehicle, or on a server board — and it is what lets a high-voltage DC bus feed low-voltage electronics.",
@@ -672,6 +710,26 @@
       ]
     },
     {
+      "slug": "diesel-exhaust-fluid",
+      "term": "DEF",
+      "def": "Diesel exhaust fluid: the urea-and-water solution injected into the exhaust ahead of an SCR catalyst, where it converts nitrogen oxides into nitrogen and water. A Tier 4 engine cannot meet its emissions limit without it, so DEF supply and freeze protection become part of the site's operating plan.",
+      "aliases": [
+        "diesel exhaust fluid",
+        "urea",
+        "AdBlue"
+      ]
+    },
+    {
+      "slug": "diesel-particulate-filter",
+      "term": "diesel particulate filter",
+      "def": "A filter in the exhaust that traps soot and is periodically burned clean. Together with SCR it is the after-treatment that separates a Tier 4 engine from a Tier 2 one, and it adds backpressure, heat and maintenance the standby duty cycle does not otherwise need.",
+      "aliases": [
+        "DPF",
+        "particulate filter",
+        "soot filter"
+      ]
+    },
+    {
       "slug": "digital-twin",
       "term": "digital twin",
       "def": "A simulated copy of a real asset, fed by its live data, used to rehearse changes before they touch the hardware — testing a control strategy, forecasting degradation, or learning what normal looks like so anomalies stand out. It is how an operator tries something on a plant without trying it on the plant.",
@@ -702,6 +760,15 @@
         "catcher"
       ],
       "def": "UPS topologies that reach N+1 or better without doubling everything. In a block-redundant or catcher design a spare UPS system stands ready to take any block's load through static transfer switches; in a distributed-redundant design each load is fed from two of several systems so any one can fail. Both cost less than 2N, and both place the redundancy in a switching event that has to work."
+    },
+    {
+      "slug": "diversity-factor",
+      "term": "diversity factor",
+      "def": "The ratio between the sum of a facility's individual maximum demands and the maximum demand of the whole facility, which is always lower because loads do not all peak together. It is the number that lets a designer buy less generation than the nameplate sum of everything connected — and the number an AI training hall attacks, because thousands of accelerators can peak in step.",
+      "aliases": [
+        "load diversity",
+        "diversity"
+      ]
     },
     {
       "slug": "docket",
@@ -868,6 +935,16 @@
       ]
     },
     {
+      "slug": "epa-tier-2",
+      "term": "EPA Tier 2",
+      "def": "The US emission stage most large standby data-center engines are certified to, available because an engine that only runs in emergencies is regulated far more loosely than one that runs for a living. It is why the same engine block is sold as a cheap Tier 2 standby set and an expensive Tier 4 prime set.",
+      "aliases": [
+        "Tier 2",
+        "stationary emergency Tier 2",
+        "Tier 2 emergency"
+      ]
+    },
+    {
       "slug": "epc",
       "term": "EPC",
       "def": "Engineering, procurement, and construction: the contractor model that delivers a plant turnkey under one contract — and the label for the firms that do it.",
@@ -890,6 +967,16 @@
       "slug": "ercot",
       "term": "ERCOT",
       "def": "The Texas grid operator. An energy-only market with its own interconnection process — faster to connect, more volatile to operate in — which is why so much US storage and data-center buildout lands in Texas."
+    },
+    {
+      "slug": "eu-stage-v",
+      "term": "EU Stage V",
+      "def": "The European Union's emission stage for non-road and stationary engines — the counterpart to the US EPA tiers, and stricter than Tier 4 on particle number. A gen-set sold into both markets is certified twice, which is one reason European and American versions of the same product carry different after-treatment.",
+      "aliases": [
+        "Stage V",
+        "Stage 5",
+        "EU Stage 5"
+      ]
     },
     {
       "slug": "excitation",
@@ -1053,6 +1140,15 @@
       ]
     },
     {
+      "slug": "fuel-polishing",
+      "term": "fuel polishing",
+      "def": "Circulating stored diesel through filters and water separators so it stays usable. Standby fuel can sit for years, and diesel degrades — microbial growth, water ingress and asphaltene drop-out will clog filters at exactly the moment the set is finally asked to run.",
+      "aliases": [
+        "fuel conditioning",
+        "polishing"
+      ]
+    },
+    {
       "slug": "galvanic-isolation",
       "term": "galvanic isolation",
       "def": "An electrical barrier — usually a transformer — that lets power cross from one circuit to another with no conducting path between them, so a fault on one side cannot reach people or equipment on the other. A non-isolated converter drops the barrier for simplicity and density where the chain already provides one upstream.",
@@ -1179,6 +1275,16 @@
       "def": "High-voltage direct current: moving power as DC instead of AC — over long transmission links, and now inside the data center as the 800 VDC rack architecture. Fewer conversion stages and far less copper, at the cost of protection that cannot wait for an AC waveform to cross zero and extinguish the arc for it.",
       "aliases": [
         "high-voltage direct current"
+      ]
+    },
+    {
+      "slug": "hvo",
+      "term": "HVO",
+      "def": "Hydrotreated vegetable oil: a renewable diesel made by hydrogen-treating fats and oils, chemically close enough to fossil diesel that many engines burn it with no hardware change. It is the lowest-friction way a standby fleet cuts lifecycle carbon, because the change is in the tank rather than the machine.",
+      "aliases": [
+        "hydrotreated vegetable oil",
+        "renewable diesel",
+        "EN 15940"
       ]
     },
     {
@@ -1354,6 +1460,15 @@
       "aliases": [
         "ISO 8528-1",
         "ISO-8528"
+      ]
+    },
+    {
+      "slug": "isochronous",
+      "term": "isochronous",
+      "def": "A governor mode that holds engine speed — and therefore frequency — at exactly its setpoint regardless of load, as opposed to droop, which lets speed fall slightly as load rises. An islanded plant needs one machine or one control loop holding frequency isochronously; paralleled machines otherwise fight each other for the load.",
+      "aliases": [
+        "isochronous governing",
+        "isochronous mode"
       ]
     },
     {
@@ -1607,6 +1722,15 @@
       ]
     },
     {
+      "slug": "modular-ups",
+      "term": "modular UPS",
+      "def": "A UPS built from hot-swappable power modules in a common frame, so capacity is added a module at a time and a failed module is replaced without dropping the load. It trades a slightly higher cost per kilowatt for the ability to buy redundancy and capacity in small increments as a hall fills.",
+      "aliases": [
+        "scalable UPS",
+        "modular uninterruptible power supply"
+      ]
+    },
+    {
       "slug": "mtbf",
       "term": "MTBF",
       "aliases": [
@@ -1812,6 +1936,15 @@
       ]
     },
     {
+      "slug": "peak-shaving",
+      "term": "peak shaving",
+      "def": "Running on-site generation or storage during the hours that set a site's demand charge, so the meter never records the peak. It turns a backup asset into an earning one, but it also moves the engine out of the emergency-only regulatory class and into a permit that counts its hours.",
+      "aliases": [
+        "peak shave",
+        "demand limiting"
+      ]
+    },
+    {
       "slug": "pjm",
       "term": "PJM",
       "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
@@ -1931,6 +2064,14 @@
         "precharge circuit",
         "soft-start",
         "soft start"
+      ]
+    },
+    {
+      "slug": "prime-mover",
+      "term": "prime mover",
+      "def": "The machine that turns fuel into shaft power — a reciprocating engine, a gas turbine or a fuel cell stack driving a generator. Naming it separately matters because the prime mover sets the start time, the load-acceptance behaviour, the emissions profile and the maintenance interval, while the electrical end is comparatively interchangeable.",
+      "aliases": [
+        "primemover"
       ]
     },
     {
@@ -2128,6 +2269,16 @@
         "solicitation",
         "RFPs",
         "request for proposal"
+      ]
+    },
+    {
+      "slug": "rice-neshap",
+      "term": "RICE NESHAP",
+      "def": "The US federal air-toxics rule for stationary reciprocating internal combustion engines, which sets what an engine may emit and how many hours a year an emergency unit may run outside a genuine outage — commonly 100 hours for maintenance and testing, of which only a limited share may be non-emergency demand response. It is the rule that decides whether a backup fleet can be monetised.",
+      "aliases": [
+        "NESHAP ZZZZ",
+        "Subpart ZZZZ",
+        "40 CFR 63 ZZZZ"
       ]
     },
     {
@@ -2375,6 +2526,16 @@
         "SAC",
         "Sine Amplitude Converter",
         "sine-amplitude converter"
+      ]
+    },
+    {
+      "slug": "single-line-diagram",
+      "term": "single-line diagram",
+      "def": "The one-page electrical drawing that shows a facility's power path — utility service, transformers, switchgear, transfer switches, UPS and distribution — as single lines rather than individual conductors. It is the document a power-room conversation actually happens over, because every redundancy claim is visible on it.",
+      "aliases": [
+        "one-line diagram",
+        "one line",
+        "SLD"
       ]
     },
     {
@@ -2743,6 +2904,15 @@
       "def": "A device that changes AC voltage through two magnetically coupled windings, stepping transmission voltage down through substation, medium-voltage, and unit tiers until equipment can use it. Every step costs a little efficiency, a data-center power chain passes through several, and the lead time on large units is one of the buildout's hardest constraints.",
       "aliases": [
         "transformers"
+      ]
+    },
+    {
+      "slug": "turbo-lag",
+      "term": "turbo lag",
+      "def": "The delay between asking a turbocharged engine for more power and the turbocharger spooling up enough air to burn the extra fuel. It is the physical reason a large diesel cannot always take its full rating in one step, and the reason load-acceptance figures are quoted per step with a recovery time.",
+      "aliases": [
+        "turbocharger lag",
+        "turbo response"
       ]
     },
     {

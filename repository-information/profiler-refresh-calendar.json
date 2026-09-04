@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
   "companies": [
     {
@@ -200,6 +200,23 @@
         "Funding/valuation",
         "Energy-stack partnerships",
         "IPO signals"
+      ]
+    },
+    {
+      "slug": "cummins",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "Cadence inference with a tracker conflict. Cummins' own IR calendar (https://investor.cummins.com/events-presentations/ir-calendar) read verbatim \"no upcoming events scheduled at this time\" when checked on 2026-09-04, so nothing is company-confirmed. TipRanks shows 2026-10-29 before open and labels it 'Confirmed'; Investing.com carries the same date with consensus EPS $8.20 on revenue $9.82B; Market Chameleon shows 2026-11-05 to 2026-11-06 and states explicitly that it is a projection because the company has not announced. The historical Q3 pattern favours Market Chameleon: Q3 2025 landed 2025-11-06 and Q3 2024 landed 2024-11-05, so 2026-10-29 would be a week's pull-forward. Cummins releases pre-market around 7:30 a.m. ET with a 10:00 a.m. call. Verify at the IR calendar or the 8-K feed (CIK 26172) before the desk fires. Note cummins.com and investor.cummins.com are Cloudflare-challenged to scripted fetches — investor.cummins.com HTML and RSS worked in this pass, www.cummins.com did not, but its PDF assets under /sites/default/files/ do.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "Whether Q3 2026 lands 2026-10-29 or in the first week of November - two trackers disagree and the company has announced neither",
+        "Power Systems segment margin: 29.5% in Q1 2026 and 24.5% in Q2; FY2026 guidance is 25.0-25.75%, so a third consecutive print above guidance would be the story",
+        "Any naming of the multi-gigawatt hyperscaler framework counterparty disclosed on the Q2 2026 call, or of the August 2026 record BESS customer - both are currently unnamed",
+        "Progress on the $450M / 20 GW capacity programme: step-ups were guided for 2027 with larger increases in 2028; watch for named plant locations, which have never been disclosed",
+        "Whether data-center revenue is ever broken out. The ~$5B for 2026 figure is cross-segment (Power Systems plus Distribution) and the 10-K breaks out nothing",
+        "The unverified $150M Fridley, Minnesota QSK95 expansion attributed to Mordor Intelligence - no Cummins release, IR item or filing corroborates it",
+        "Accelera: with new electrolyzer activity stopped, whether FY2026 is the first year in three without a segment charge distorting GAAP EPS",
+        "Emissions consent-decree residuals: the 85%-in-three-years recall obligation and the company's stated communications with non-US regulators"
       ]
     },
     {
@@ -610,6 +627,40 @@
         "Technology & Load Centers end-market growth vs the 220-240% guide",
         "New acquisitions; HV transformer manufacturing program and Hyosung HICO breaker JV progress",
         "LUMA Energy/Puerto Rico developments"
+      ]
+    },
+    {
+      "slug": "rehlko",
+      "cadence": "quarterly",
+      "source": "Private and unit-level: majority-owned by Platinum Equity since 2024-05-06 with Kohler Co. retaining a minority stake, no SEC registrant, no investor-relations page and no earnings calendar. Revenue, EBITDA, backlog and headcount are not disclosed in any first-party source. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). The only scheduled first-party publication is the annual Powering Impact sustainability report (2025-07-15, 2026-06-23), which carries operational ESG metrics and no financial statements. Event-driven disclosure that does exist: S&P Global Ratings actions on Discovery Energy Holdings IV L.P. (initial 'B' assignment in 2024, a proposed term-loan repricing indexed 2026-01-28) - spglobal.com returns 403 to every retrieval method attempted, so those figures reach the dossier only through trade press; and UK statutory accounts filed at Companies House for Clarke Energy Limited (01341453) and Rehlko Uninterruptible Power Ltd (03150129), filed roughly 9-10 months after each 31 December year-end. Note for a future refresh: the FY2024 accounts for both are already filed but are scanned images without a text layer, so OCR would yield the only audited financial data available for any part of this group.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "OCR the Companies House FY2024 accounts for Clarke Energy and Rehlko Uninterruptible Power - the single best untapped source of hard subsidiary financials",
+        "Any S&P or Moody's rating action that becomes readable, particularly the term-loan repricing indexed January 2026; current figures are all secondary-sourced through trade press",
+        "The prior gigawatt award implied by 'another 1.7 gigawatts' in the April 2026 release, which appears nowhere in the press-release archive; and the 1.7 vs 1.8 GW discrepancy against trade press",
+        "Whether any hyperscale customer is ever named. Every gigawatt figure to date is deliberately anonymised",
+        "Kenosha ramp: production from late 2026 and full capacity early 2027, with the dollar figure and job count explicitly withheld at announcement",
+        "Whether a Rehlko-manufactured battery product appears. There is none today, which is a live gap against Caterpillar and Cummins",
+        "Heila Technologies' status: the standalone site now redirects and it has been dropped from current boilerplate and the 'Who we are' business list, without explanation",
+        "Any Tier 4 Final node in the 700-4000 kW KD range, which is published as Tier 2 only, against Rehlko's own warning that California, Florida, New York and Texas require exhaust conditioning regardless of tier",
+        "Tariff exposure on the France-to-US supply chain (Liebherr Colmar engines, Cholet switchgear), on which the company publishes nothing"
+      ]
+    },
+    {
+      "slug": "rolls-royce-power-systems",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "source": "Cadence inference. Rolls-Royce Holdings reports half-yearly with two trading updates, and its own financial calendar (https://www.rolls-royce.com/investors/financial-calendar.aspx), checked 2026-09-04, listed only three September 2026 investor conferences and no forward results date. The November trading update is the next scheduled disclosure by pattern: 2025-11-13, and a November update in 2024. The substantive divisional disclosure is the FY2026 result, which TipRanks labels 'February 25, 2027 - Before Open (Confirmed)' and Investing.com carries with consensus EPS 0.209 on revenue 12.59B GBP - neither backed by a Rolls-Royce announcement. Rolls-Royce Power Systems AG also publishes its own euro-denominated annual results roughly a week after the group (FY2025 landed 2026-02-27). Rolls-Royce publishes a company-compiled analyst consensus on its IR site, annual only, which is the correct benchmark for this dossier - consumer trackers carry half-year-shaped splits that do not reconcile to reported figures.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "Whether the November 2026 trading update carries a divisional data-centre figure, or whether the next real disclosure is the FY2026 result in late February 2027",
+        "Power Systems margin against the raised 18-20% mid-term target: H1 2026 came in at 20.3%, already above it, and Citi forecasts 23.5% long term",
+        "The hyperscaler deal the CEO said on 2026-07-30 would go to investment committee in early August 2026 - no announcement was found through 2026-09-04",
+        "Any named hyperscaler, colocation or neocloud gen-set customer. The framework agreements are unnamed in every disclosure; the only named data-centre counterparties are EdgeConneX (2016), NOVVA (2024) and AVK as integrator",
+        "The trade-press figure of more than 80% of power-generation revenue from data centres - it does not appear in the results release or transcript and needs confirming or dropping",
+        "The next-generation Series 4000, due 2028, which had completed 500 hours of test-bench running at FY2025; any published power-density figure",
+        "Whether mtu EnergyPack ever lands a data-centre deployment - every located project to date is grid or utility scale",
+        "Whether Power Systems backlog is ever disclosed. The group publishes backlog for Defence only, so order intake and OE order coverage are the sole forward measures"
       ]
     },
     {

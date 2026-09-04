@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-03 08:42:45 PM EST` · Repo version: `v04.46r`
+Last updated: `2026-09-03 09:58:27 PM EST` · Repo version: `v04.47r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -115,6 +115,8 @@ Last updated: `2026-09-03 08:42:45 PM EST` · Repo version: `v04.46r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/coreweave.profile.json">coreweave.profile.json</a> — CoreWeave dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/coreweave.study.json">coreweave.study.json</a> — CoreWeave in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/crrc-zhuzhou.profile.json">crrc-zhuzhou.profile.json</a> — CRRC Zhuzhou Institute dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/cummins.profile.json">cummins.profile.json</a> — Cummins dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/cummins.study.json">cummins.study.json</a> — Cummins in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/crusoe.profile.json">crusoe.profile.json</a>    — Crusoe dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/crusoe.study.json">crusoe.study.json</a> — Crusoe in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/delta-electronics.profile.json">delta-electronics.profile.json</a> — Delta Electronics dossier profile
@@ -205,6 +207,10 @@ Last updated: `2026-09-03 08:42:45 PM EST` · Repo version: `v04.46r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/qts.study.json">qts.study.json</a> — QTS Data Centers in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/quanta-services.profile.json">quanta-services.profile.json</a> — Quanta Services dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/quanta-services.study.json">quanta-services.study.json</a> — Quanta Services in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rehlko.profile.json">rehlko.profile.json</a> — Rehlko (formerly Kohler Energy) dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rehlko.study.json">rehlko.study.json</a> — Rehlko in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rolls-royce-power-systems.profile.json">rolls-royce-power-systems.profile.json</a> — Rolls-Royce Power Systems (mtu) dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rolls-royce-power-systems.study.json">rolls-royce-power-systems.study.json</a> — Rolls-Royce Power Systems (mtu) in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rosendin.profile.json">rosendin.profile.json</a>  — Rosendin dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rosendin.study.json">rosendin.study.json</a> — Rosendin in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/samsung-ct.profile.json">samsung-ct.profile.json</a> — Samsung C&T dossier profile
@@ -283,6 +289,7 @@ Last updated: `2026-09-03 08:42:45 PM EST` · Repo version: `v04.46r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/byd.profile.v3.json">byd.profile.v3.json</a> — Archived v3 dossier (BYD)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/byd.profile.v5.json">byd.profile.v5.json</a> — Archived v5 dossier (BYD)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/canadian-solar.profile.v2.json">canadian-solar.profile.v2.json</a> — Archived v2 dossier (Canadian Solar (e-STORAGE))
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/caterpillar.profile.v1.json">caterpillar.profile.v1.json</a> — Archived v1 dossier (Caterpillar)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v1.json">catl.profile.v1.json</a> — Archived v1 dossier (CATL)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v2.json">catl.profile.v2.json</a> — Archived v2 dossier (CATL)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v3.json">catl.profile.v3.json</a> — Archived v3 dossier (CATL)
@@ -510,7 +517,7 @@ Last updated: `2026-09-03 08:42:45 PM EST` · Repo version: `v04.46r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">Classroomgs.changelog.md</a>               — [template] Classroom GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog-archive.md">Classroomgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (249 images across 54 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (281 images across 57 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound
@@ -699,6 +706,8 @@ Last updated: `2026-09-03 08:42:45 PM EST` · Repo version: `v04.46r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/caterpillar/caterpillar-lesson-plan.md">caterpillar-lesson-plan.md</a> — Full-depth lesson plan: the grid-drops-to-load-is-back concept chain, gas versus diesel, the air permit, where a gen-set ends and a bridge plant begins
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/catl">catl/</a> — CATL technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/catl/catl-lesson-plan.md">catl-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/cummins">cummins/</a> — Cummins technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/cummins/cummins-lesson-plan.md">cummins-lesson-plan.md</a> — Full-depth lesson plan: five separately-specified things on one frame, reading a gen-set datasheet line by line, the four multiplications that size a plant and the one decision left over, derating as a laboratory-to-site correction, the emissions class as a purchase rather than a specification, fuel as a logistics problem, and where the order stops being an engine
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/dominion-energy">dominion-energy/</a> — Dominion Energy technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/dominion-energy/dominion-energy-lesson-plan.md">dominion-energy-lesson-plan.md</a> — Full-depth lesson plan: how a regulated utility buys — rate base and cost of service, IRP → CPCN → RFP, the rate case and the docket, the large-load tariff and its minimum-demand arithmetic, interconnecting a load, PJM capacity and transmission planning, why the clock is years
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/entergy">entergy/</a> — Entergy technology curriculum
@@ -729,6 +738,10 @@ Last updated: `2026-09-03 08:42:45 PM EST` · Repo version: `v04.46r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/oncor/oncor-lesson-plan.md">oncor-lesson-plan.md</a> — Full-depth lesson plan: the wires-only utility and what is left when a state takes the utility apart, the energy-only market where nobody is obliged to serve, connecting a gigawatt under the 2025 statute, requests against approvals against metered load, the wires rate case with no fuel line, and who builds the generation when the utility may not
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/piller">piller/</a> — Piller Power Systems technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/piller/piller-lesson-plan.md">piller-lesson-plan.md</a> — Full-depth lesson plan: who owns the seconds, battery versus flywheel, static versus rotary versus diesel-rotary UPS, the isolated-parallel ring, the UPS room as the island's stabilizer
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/rehlko">rehlko/</a> — Rehlko technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/rehlko/rehlko-lesson-plan.md">rehlko-lesson-plan.md</a> — Full-depth lesson plan: reading a single-line diagram and the three questions that answer most of it, the four blocks of a static UPS and the honest case for eco-mode, four time constants that get confused in one conversation, paralleling switchgear as a software product with a long service tail, gas for continuous duty, and single-source against best-of-breed as a question about the buyer rather than the equipment
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/rolls-royce-power-systems">rolls-royce-power-systems/</a> — Rolls-Royce Power Systems (mtu) technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/rolls-royce-power-systems/rolls-royce-power-systems-lesson-plan.md">rolls-royce-power-systems-lesson-plan.md</a> — Full-depth lesson plan: one machine certified twice for two grids, what a megawatt-scale battery changes about the ten-second start, grid-forming against grid-following and why the distinction decides protection settings, power and energy as two separate purchases, HVO as a procurement answer to a carbon question, and the controller as the actual product
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sinexcel">sinexcel/</a> — Sinexcel technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/sinexcel/sinexcel-lesson-plan.md">sinexcel-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/southern-company">southern-company/</a> — Southern Company technology curriculum

@@ -396,34 +396,6 @@
    "scale": "$25.5M Series A (with Altira and GE Ventures)",
    "note": "Caterpillar Ventures joined FlexGen's $25.5M Series A in 2015; no Caterpillar participation is recorded in FlexGen's later rounds and no current commercial tie was found.",
    "source": "https://www.altiragroup.com/news/flexgenr-power-systems-announces-255-million-series-funding-altira-group-ge-ventures-and/"
-  },
-  {
-   "slug": "cummins",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-center generator sets",
-   "scale": "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
-   "note": "The nearest competitor in data-center standby generation, ranked second where Caterpillar is ranked first.",
-   "context": "MarketsandMarkets ranks the 2025 data-center generator field Caterpillar, Cummins, Rolls-Royce, Rehlko, Mitsubishi. Fortune Business Insights separately estimates Caterpillar at 18 percent and Cummins at 16 percent on 2026 data; that estimate should be attributed to Fortune Business Insights rather than treated as measured, because vendor market-size estimates for nominally the same market vary by more than twentyfold across firms. Trade coverage puts it qualitatively: Caterpillar \"sits first and Cummins a clear second, together accounting for much of the installed base at hyperscale sites.\"\n\nThe two are running parallel capacity races into the same demand: Caterpillar targeting 65 GW a year of large-engine output by 2030 from a 2024 baseline near 25 GW, and Cummins committing $450M to add 20 GW for 55 GW total by 2030. Caterpillar's advantage is most visible in named prime-power awards, where Cummins has one campus (Circe Energy) against Caterpillar's Monarch and Joule programmes.",
-   "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp"
-  },
-  {
-   "slug": "rolls-royce-power-systems",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-center generator sets",
-   "note": "Ranked third in data-center generators, and the vendor grouped with Caterpillar as having the shortest lead times at hyperscale nodes.",
-   "context": "MarketsandMarkets places Rolls-Royce third for 2025, crediting its mtu brand with traction in high-density AI and hyperscale environments. A 2026 lead-time survey by Terrapin Consulting Group states that \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" while placing Cummins and Kohler at the 1,000-2,000 kW band — the clearest published statement that Caterpillar's nearest rival at the top of the range is Rolls-Royce rather than Cummins.\n\nThe competitive gap runs the other way in prime power. POWER Magazine's March 2026 survey lists Caterpillar with 2 GW at the Monarch Compute Campus and up to 4 GW with Joule Capital Partners, and quotes the G3516 ramping \"zero to full load in approximately seven seconds\"; mtu appears on product attributes and installed base, with its new fast-start gas set reaching 2.8 MW in 45 seconds.",
-   "source": "https://www.powermag.com/engine-power-plants-surge-as-data-centers-drive-unprecedented-demand/"
-  },
-  {
-   "slug": "rehlko",
-   "type": "competitor",
-   "status": "active",
-   "via": "Data-center generator sets",
-   "note": "Ranked fourth in data-center generators; its KD3250 is positioned directly against the Caterpillar C175.",
-   "context": "MarketsandMarkets ranks Rehlko — the former Kohler Energy, majority-owned by Platinum Equity since 2024 — fourth in data-center generators for 2025. Trade press positions the KD3250 at 3,250 kW standby against the Caterpillar C175 and the Cummins QSK60 at the hyperscale node, and Rehlko announced approximately 1.7 GW of hyperscale backup awards in a 60-day window in April 2026.\n\nOne conflation to avoid: some coverage has attributed the Monarch Compute Campus award to Rehlko because a single trade article discussed Caterpillar, Cummins and Rehlko together. The Monarch award of 2 GW of G3516 natural-gas gen-sets is Caterpillar's, with Boyd CAT as the local dealer, per Caterpillar's own release.",
-   "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp"
   }
  ],
  "policyExposure": [
@@ -950,11 +922,6 @@
   ]
  },
  "sources": [
-  {
-   "label": "Terrapin Consulting Group — switchgear, transformer and generator lead times 2026",
-   "url": "https://terrapincg.com/news/switchgear-transformer-generator-lead-times-2026",
-   "date": "2026-06-10"
-  },
   {
    "label": "Manufacturing Today — Lafayette $890M expansion",
    "url": "https://manufacturing-today.com/news/caterpillar-targets-890-million-boost-to-manufacturing-capacity/",
@@ -1553,6 +1520,6 @@
    "url": "https://theorg.com/org/caterpillar-inc/org-chart/derrick-york"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 2
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1
 }

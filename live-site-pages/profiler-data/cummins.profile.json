@@ -1,0 +1,1634 @@
+{
+ "schemaVersion": 7,
+ "slug": "cummins",
+ "name": "Cummins Inc.",
+ "shortName": "Cummins",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.cummins.com",
+ "headquarters": "Columbus, IN, USA",
+ "founded": 1919,
+ "employees": "~67,400 worldwide at 2025-12-31, about 20,000 union-represented under agreements expiring 2026–2030 (FY2025 10-K)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: CMI"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Cummins is the second-largest supplier of data-center standby generation behind Caterpillar, and its Power Systems segment has been rebuilt around that demand — from 16 percent of company sales and 18.4 percent segment margin in FY2024 to 18 percent of sales and 22.7 percent margin in FY2025, with Q1 2026 setting a record 29.5 percent; the constraint is factory capacity rather than demand, with high-horsepower gen-sets sold out into the second half of 2028 and a $450M programme adding 20 GW of capacity to reach 55 GW by 2030. BACKGROUND. Founded 1919 as Cummins Engine Company, renamed Cummins Inc. in 2001, headquartered in Columbus, Indiana, listed NYSE: CMI. Five reportable segments — Engine, Components, Distribution, Power Systems and Accelera. FY2025 revenue $33.7B (−1%), EBITDA $5.4B (16.0% of sales), diluted EPS $20.50 after $458M of electrolyzer charges; Q2 2026 was a record quarter at $9.5B (+9%) with EBITDA of 17.5% and full-year guidance raised twice. Power Systems spans standby and prime gen-sets, engines of 16 litres and larger, alternators (STAMFORD, AvK, MARKON) and, since May 2025, battery energy storage. Per the 2026 Analyst Day, data centers were 26 percent of the segment's $7.5B FY2025 revenue, and company-wide data-center revenue — which spans Power Systems and Distribution together — is targeted at about $5B in 2026 rising to more than $9B by 2030.",
+ "ecosystemRole": "We assess Cummins as the second pole of the data-center standby duopoly this corpus tracks, and the vendor whose scope reaches furthest down the electrical chain from the engine — gen-set, alternator, paralleling switchgear, digital master control, transfer switch and now battery storage, all under one part-number tree and serviced by a distribution arm that is itself a $12.4B business. Basis: the FY2025 10-K's segment definition, the January 2026 data-center brochure and the PowerCommand switchgear and transfer-switch literature, each of which describes a different layer of the same plant. Collection gap: the corpus can name Caterpillar's hyperscale customers from permit records and campus announcements and cannot name Cummins' — its two disclosed multi-gigawatt data-center commitments, the hyperscaler framework agreement and the record battery order, both leave the counterparty unnamed, so no relationship to a covered hyperscaler, colocation landlord or neocloud can be asserted from any source.",
+ "productsAndServices": [
+  {
+   "name": "QSK95 Series generator sets — up to 3.5 MW (60 Hz) / 3.75 MVA (50 Hz)",
+   "category": "Backup generation",
+   "description": "The flagship high-horsepower standby line: a 16-cylinder, 95.3-litre, quad-turbocharged 60-degree V diesel with Cummins Modular Common Rail fuel injection at 2,500 bar, three standard electric starters and an optional fourth, and an optional redundant fuel filter. Per the G9 spec sheet the 60 Hz set is rated 3,500 ekW standby, 3,000 ekW prime and 2,750 ekW base; the G10 at 50 Hz is 3,010 / 2,690 / 2,410 ekW with published fuel consumption of 197.3 g/kWh at full standby load. Cummins builds the engine, the alternator and the controls in-house.",
+   "highlights": [
+    "\"100% Load Acceptance in a Single Step\" and \"Accepts Load in under 10 seconds\" per the QSK95 Series brochure — the two claims that decide whether a hall can be caught in one bite",
+    "The G-Drive spec sheet states the engine is \"capable of meeting ISO 8528-G3 and NFPA 110\" and \"capable of accepting 100% of rated load in one step\"",
+    "\"25,000 Hours to Major Overhauls\" and \"20% More Power Density… Highest kilowatt-per-square-foot in its class\" per the same brochure",
+    "US EPA Tier 2 certification across the G5, G9 and G10 variants — the stationary-emergency class that is cheapest to buy and most restricted in use",
+    "Deployed as 18 sets of 3,750 kVA plus a DMC8000 digital master control at Naver's hyperscale campus in Sejong, South Korea, per Cummins' own data-center brochure"
+   ],
+   "positioning": "Sits directly against Caterpillar's C175-20 and C175-16 and Rehlko's KD3250 and KD4000 at the top of the hyperscale node band. Fortune Business Insights estimates Caterpillar at 18 percent and Cummins at 16 percent of the data-center generator market on 2026 data; MarketsandMarkets ranks the 2025 field Caterpillar, Cummins, Rolls-Royce, Rehlko, Mitsubishi without publishing shares.",
+   "soldThrough": "The Distribution segment — approximately 600 distributor locations and more than 6,000 dealer locations across 190-plus countries",
+   "targetSegments": "Hyperscale and colocation data centers, healthcare, water treatment, telecom, rail and locomotive",
+   "roadmap": "Covered by the $450M capacity programme announced at the 2026 Analyst Day, adding 20 GW of high-horsepower output to reach 55 GW by 2030"
+  },
+  {
+   "name": "Centum™ Series generator sets — approximately 600 kW to 3,750 kVA",
+   "category": "Backup generation",
+   "description": "The current-generation high-horsepower family, described by Cummins as \"a new and evolving line designed to deliver a complete spectrum of power.\" Members include the C1250D6E through C3500D5EB, the Centum S17 at 600–1,000 kW and the Centum Series 78L. The C3300D5EB and C3500D5EB carry what Cummins calls the Centum Transmission Drive, support ISO 8528-G3, meet US EPA Tier 2 with a low-NOx option and carry a three-year warranty. In June 2026 the QSK78 platform — a 78-litre V18 — was introduced to the 50 Hz market at up to 3,500 kVA and 3,300 kVA standby in both Tier 2 and low-NOx configurations.",
+   "highlights": [
+    "The Centum Series 78L is the data-center variant, sold on the Data Center Continuous (DCC)™ rating and paired with a STAMFORD S-Range alternator using 2/3-pitch windings and class H insulation",
+    "PowerCommand® 3300 digital control with AmpSentry™ protective relay and NFPA 110 Level 1 compliance",
+    "Approved for paraffinic fuels to EN 15940, including hydrotreated vegetable oil",
+    "High-ambient and enhanced high-ambient integral radiators offered as catalogue options rather than engineered specials",
+    "Gold in the 2025 Consulting-Specifying Engineer Product of the Year for the 1,750–2,000 kW and 2,750–3,000 kW sets; Silver in 2026 for the Centum S17"
+   ],
+   "positioning": "The volume replacement for the older DQ-prefixed catalogue, and the platform on which the DCC rating is now sold",
+   "soldThrough": "Distribution segment and the dealer network",
+   "targetSegments": "Data centers, healthcare, industrial and commercial standby"
+  },
+  {
+   "name": "Centum™ Force — containerized, stackable gen-sets, 2,000–2,750 kVA",
+   "category": "Backup generation",
+   "description": "A containerized QSK60-based product in a 40-foot (12.192 m) container, offered at 50 Hz as the C2000D5-PB, C2250D5-PB, C2500D5A-PB and C2750D5B-PB. Cummins describes it as \"a containerized generator solution with integrated systems and a modular design\" enabling \"rapid deployment, space efficiency and reliable power.\"",
+   "highlights": [
+    "\"Stackable design allows for smaller footprint, effortless transportation and lower cost of ownership\" — up to 34 percent space-utilisation saving against a traditional build, per Cummins",
+    "\"Accelerated startup\" with an advanced paralleling control module for quick start of multiple units in parallel",
+    "Designed to comply with ISO 8528 and CE, manufactured to ISO 9001",
+    "Launched May 2025, following a containerized stackable line introduced June 2024"
+   ],
+   "positioning": "Answers the same schedule pressure that drives modular electrical rooms — the plant arrives as freight rather than as a construction package",
+   "soldThrough": "Distribution segment",
+   "targetSegments": "Fast-build data centers, rental and bridge deployments, remote sites"
+  },
+  {
+   "name": "HSK78G Series lean-burn natural gas generator sets — 1,600–2,000 kW",
+   "category": "Prime and continuous generation",
+   "description": "A 78-litre V12 lean-burn gas platform, bore 190 mm and stroke 230 mm, sold as the C1600/C1800/C2000 N5CD at 50 Hz on a four-pole direct drive and the N6CD equivalents at 60 Hz through a gearbox. Cummins describes the family as \"fully integrated power generation systems… for prime and continuous duty, CHP and peaking applications.\" Governing is ISO 8528 Part 5 class with isochronous frequency regulation and ±0.25 percent voltage regulation from no load to full load.",
+   "highlights": [
+    "NOx as low as 250 mg/Nm³ (0.5 g/hp-hr), with a 500 mg/Nm³ option — the number that decides what an air permit will allow",
+    "Methane number capability as low as 40 on some models, plus low-BTU gas capability",
+    "Alternator waveform total harmonic distortion below 5 percent from no load to full linear load and below 3 percent for any single harmonic",
+    "Medium-voltage output offered directly at 2400/4160 V through 7970/13800 V at 60 Hz",
+    "Step-load acceptance is explicitly not published: the spec sheet states \"Single step load pickup: Generator set configuration dependent – consult factory for details\"",
+    "The C2000 N6CD is one of the two platforms in the Circe Energy behind-the-meter prime-power microgrid in West Texas"
+   ],
+   "positioning": "The prime-power line, and the segment where Cummins is least visible in named awards: trade coverage of the gigawatt-scale behind-the-meter deals names Caterpillar, INNIO/Jenbacher, Wärtsilä and ProEnergy far more often, with Circe Energy as Cummins' one named prime-power campus.",
+   "soldThrough": "Distribution segment and packagers",
+   "targetSegments": "Behind-the-meter data-center microgrids, cogeneration, peaking, industrial prime power"
+  },
+  {
+   "name": "PowerCommand® paralleling systems, switchgear and digital master control",
+   "category": "Power distribution and controls",
+   "description": "The layer that turns a yard of engines into one plant. Cummins states that \"PowerCommand® paralleling systems integrate paralleling controls on generator sets, low or medium voltage power sections, automatic transfer switches and a digital master control (DMC) for supervisory functions,\" and that \"a distributed logic concept is critical for meeting data center redundancy requirements; ensuring generators continue to function under multiple failure response modes.\" The company says it has \"designed, manufactured and tested switchgear and paralleling controls for over 60 years.\"",
+   "highlights": [
+    "DMC8000 digital master control is described as \"completely customizable\" and able to \"control an unlimited number of gensets, utilities, and loads\"",
+    "Cummins states the DMC8000 was validated against \"more than 1,200 factory tested failure scenarios\" — the control sequence, not the engine, being the usual failure mode",
+    "Genset-level PowerCommand control provides automatic remote start and stop, frequency and voltage regulation, the AmpSentry™ protective relay and NFPA 110 Level 1 compliance",
+    "PowerCommand Cloud™ provides 24/7 remote monitoring across the fleet"
+   ],
+   "positioning": "The seam a single-source buyer is paying to remove: engine governors, switchgear sequence and transfer switch supplied and commissioned by one vendor",
+   "soldThrough": "Distribution segment, engineered to the site's sequence of operation",
+   "targetSegments": "Multi-megawatt paralleled standby plants, campuses, microgrids"
+  },
+  {
+   "name": "PowerCommand® automatic transfer switches — 40 A to 4,000 A",
+   "category": "Power distribution and controls",
+   "description": "Six families spanning open, closed, programmed and bypass-isolation transitions. The X-Series covers 40 A to 3,000 A with withstand and closing ratings of 25–42 kA, 200 kA with current-limiting fuses, and three-cycle ratings of 25–150 kA; the B-Series CBL adds bypass isolation from 150 A to 3,000 A. The transfer-switch brochure lists data centers first among mission-critical applications.",
+   "highlights": [
+    "Cummins claims \"the highest UL1008 0.05s (three-cycle) time duration and 0.5s (30-cycle) short-time ratings in the industry\" for the X-Series",
+    "A blow-on high-endurance mechanism \"designed to enable the X-Series to carry up to 100% of its rated load after withstanding fault current\" — the property that decides whether a transfer switch survives the fault it just passed",
+    "Closed-transition families connect both sources \"for 100 msec or less\", the window that removes the open-transition gap",
+    "Thermal cycling qualified −40 to 122 °F and shaker-table seismic tested; Modbus TCP/IP and RTU over RS485"
+   ],
+   "positioning": "One of the seams most often supplied by a third party; Cummins offers it inside the same order as the engines and the switchgear",
+   "soldThrough": "Distribution segment",
+   "targetSegments": "Data centers, healthcare, industrial and commercial standby"
+  },
+  {
+   "name": "Battery energy storage systems — 211 kWh to 2,280 kWh catalogue, 5 MWh data-center block",
+   "category": "Energy storage",
+   "description": "Launched in March 2025 and containerized from June 2025. The catalogue line runs at 211, 422, 633, 1,056, 1,520 and 2,280 kWh in 10-foot and 20-foot high-cube containers on lithium iron phosphate cells at a 0.5C rate, IP55, 380–415 V AC at 50 Hz, glycol liquid cooling and a three-tier fire-safety scheme running from per-cell monitoring through an FK-5-1-12 extinguishing system to a built-in water-spray pipe for external hose connection. The data-center product announced in August 2026 is a separate, larger 5 MWh nominal block with a flexible DC block design compatible with multiple power-conversion and energy-management ecosystems. It sits in the Power Generation business inside Power Systems — not in Accelera.",
+   "highlights": [
+    "The August 2026 award is Cummins' largest battery deployment to date and was written to \"utility-defined requirements\" for managing AI-driven load fluctuations, mitigating load oscillations and improving ride-through",
+    "Data-center block certified or listed to UL 9540A, UL 9540, UL 1973, NFPA 855, NFPA 68, IEEE 1547 and UL 1741 SA/SB",
+    "Catalogue units carry IEC 62619, IEC 60536, UL 1973, UL 9540A, UN 38.3 and EU Battery Regulation 2023/1542",
+    "Containers integrate the power conversion system and isolation transformers alongside the cells, cooling, fire suppression and site controls",
+    "A 5 MW battery system was shown at the May 2026 Analyst Day alongside a large natural-gas platform and a Tier 4-certified diesel line as the three capabilities being added for prime power"
+   ],
+   "positioning": "Puts Cummins in the same architectural conversation as Caterpillar, which pairs gas gen-sets with grid-forming batteries on named campuses, and separates it from Rehlko, which manufactures no battery product.",
+   "soldThrough": "Distribution segment; the flexible DC block is explicitly designed to work with third-party power conversion and energy management",
+   "targetSegments": "Hyperscale data centers managing AI load steps, utility interconnection compliance, microgrids"
+  },
+  {
+   "name": "Alternators — Cummins Generator Technologies (STAMFORD®, AvK®, MARKON®)",
+   "category": "Components",
+   "description": "The generating end, sold both inside Cummins gen-sets and to third-party packagers, spanning 7.5 to 11,200 kVA. STAMFORD covers the low-voltage range — the PI7H is a 2,500 kVA machine Cummins describes as \"specifically designed for standby power, UPS and data centres\" — while AvK's DSG and DIG ranges reach medium and high voltage. Reported inside Power Systems as Generator Technologies, about 9 percent of the segment's FY2025 revenue.",
+   "highlights": [
+    "The business traces to 1904; MARKON was acquired in 1987",
+    "Alternator choice is what sets voltage dip on a large step, and Cummins sells the same machines to competitors' packagers",
+    "Models used across the DCC-rated range include the HC/HCI series, PI734 series, LVSI804R/S, MVSI804S and LVSI824G"
+   ],
+   "positioning": "One of the few merchant alternator franchises at data-center scale, which makes Cummins a supplier to parts of its own competitive set",
+   "soldThrough": "OEM-merchant to genset packagers, and captive into Cummins sets",
+   "targetSegments": "Genset OEMs and packagers, UPS makers, data centers"
+  },
+  {
+   "name": "Distribution, service and aftermarket",
+   "category": "Services",
+   "description": "The $12.405B Distribution segment — about 15,000 people across more than 190 countries — is both the channel through which data-center gen-sets are sold and the business that services them for life. Its power-generation sales rose from $3,972M in 2024 to $4,932M in 2025, an increase Cummins attributes principally to North American demand \"especially data center and commercial markets.\" Offerings include the PowerCare® support plan, rental power and a standard two-year warranty, extended to three years on the Centum C3300D5EB and C3500D5EB.",
+   "highlights": [
+    "Distribution power-generation revenue grew $1.0B year on year, all of it in North America",
+    "DCC-rated units carry two-year coverage contingent on the set being registered in the warranty system as a data-center application — the rating is a commercial contract as well as a technical one",
+    "Cummins' company-wide data-center revenue target spans Power Systems and Distribution together, which is why the ~$5B figure for 2026 exceeds the whole Power Systems segment's FY2025 revenue"
+   ],
+   "positioning": "The asset a competitor cannot replicate quickly, and the reason an equipment sale becomes a twenty-year relationship",
+   "soldThrough": "Owned distributors and independent dealers",
+   "targetSegments": "Every installed base Cummins sells into"
+  },
+  {
+   "name": "Accelera™ by Cummins — zero-emissions segment",
+   "category": "Adjacent",
+   "description": "Battery systems, electric powertrains, fuel cells, electrolyzers and e-axles. FY2025 revenue $460M against a segment EBITDA loss; 2026 guidance is $350–400M of revenue and a $260–290M EBITDA loss. Following a Q4 2025 strategic review Cummins said it \"intends to stop new commercial activity in the electrolyzer space\" while fulfilling existing commitments, taking FY2025 charges of $458M, or $3.28 per diluted share, of which $415M was non-cash. Amplify Cell Technologies, the cell joint venture with Daimler Truck and PACCAR, targets production from 2027.",
+   "highlights": [
+    "Accelera has no data-center product — the battery energy storage line sits in Power Systems and the August 2026 data-center award was announced by the Power Systems president",
+    "The FY2024 comparison carries a separate $312M ($2.14 per diluted share) Accelera reorganization charge",
+    "Recorded here because two consecutive years of segment charges are what the EPS line is reacting to, not because it touches this ecosystem"
+   ],
+   "positioning": "A retrenchment in progress; relevant to the dossier as an earnings distortion rather than as a data-center capability",
+   "soldThrough": "Direct and OEM",
+   "targetSegments": "Commercial vehicle, industrial, hydrogen"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "QSK95-G9 gen-set (60 Hz, EPA Tier 2)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Typical genset output — standby / prime / base",
+     "value": "3500 ekW / 4375 kVA; 3000 ekW / 3750 kVA; 2750 ekW / 3435 kVA"
+    },
+    {
+     "band": "Ratings",
+     "label": "Gross engine output — standby / prime / base",
+     "value": "3767 kWm / 5051 BHP; 3213 kWm / 4309 BHP; 2955 kWm / 3963 BHP"
+    },
+    {
+     "band": "Engine",
+     "label": "Design",
+     "value": "Four Cycle; Vee; 16 Cylinder; Turbocharged and Low Temperature Aftercooled"
+    },
+    {
+     "band": "Engine",
+     "label": "Bore / stroke / displacement",
+     "value": "190 mm; 210 mm; 95.3 litre"
+    },
+    {
+     "band": "Engine",
+     "label": "Cylinder block",
+     "value": "Ductile iron, 60-degree V"
+    },
+    {
+     "band": "Engine",
+     "label": "Lube oil capacity",
+     "value": "647 L"
+    },
+    {
+     "band": "Fuel",
+     "label": "Fuel system",
+     "value": "Cummins Modular Common Rail System (MCRS); triple-element on-engine filter, 5 micron primary with water separators, 3 micron / 2 micron filter-in-filter secondary"
+    },
+    {
+     "band": "Electrical",
+     "label": "Battery charging alternator / starting voltage",
+     "value": "140 amps; 24 V negative ground"
+    },
+    {
+     "band": "Performance",
+     "label": "Load acceptance",
+     "value": "100% Load Acceptance in a Single Step"
+    },
+    {
+     "band": "Performance",
+     "label": "Time to load",
+     "value": "Accepts Load in under 10 seconds"
+    },
+    {
+     "band": "Performance",
+     "label": "Transient class",
+     "value": "Capable of meeting ISO 8528-G3 and NFPA 110"
+    },
+    {
+     "band": "Performance",
+     "label": "Overhaul interval",
+     "value": "25,000 Hours to Major Overhauls"
+    },
+    {
+     "band": "Compliance",
+     "label": "Emissions",
+     "value": "EPA Tier 2"
+    },
+    {
+     "band": "Compliance",
+     "label": "Certification",
+     "value": "CE (subject to EU RoHS exclusion per EU 2011/65); designed in ISO9001-certified facilities"
+    }
+   ],
+   "notes": "Ratings and design data as published on the QSK95-G9 spec sheet; the load-acceptance and time-to-load claims are from the QSK95 Series brochure and the G-Drive spec sheet."
+  },
+  {
+   "product": "QSK95-G10 gen-set (50 Hz, EPA Tier 2)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Typical genset output — standby / prime / base",
+     "value": "3010 ekW / 3760 kVA; 2690 ekW / 3360 kVA; 2410 ekW / 3010 kVA"
+    },
+    {
+     "band": "Ratings",
+     "label": "Gross engine output — standby / prime / base",
+     "value": "3245 kWm / 4352 BHP; 2883 kWm / 3866 BHP; 2593 kWm / 3477 BHP"
+    },
+    {
+     "band": "Fuel",
+     "label": "Consumption — standby 100%",
+     "value": "748 L/ph, 197.3 g/kWh"
+    },
+    {
+     "band": "Fuel",
+     "label": "Consumption — prime 100% / 75% / 50% / 25%",
+     "value": "666 L/ph, 175.7 g/kWh; 515 L/ph, 135.9; 367 L/ph, 97.0; 203 L/ph, 53.5"
+    },
+    {
+     "band": "Fuel",
+     "label": "Consumption — continuous 100%",
+     "value": "602 L/ph, 159.0 g/kWh"
+    },
+    {
+     "band": "Design",
+     "label": "Engine dimensions (L x W x H)",
+     "value": "3654 mm x 1372 mm x 2359 mm"
+    },
+    {
+     "band": "Design",
+     "label": "Engine dry weight",
+     "value": "12,784 kg"
+    },
+    {
+     "band": "Performance",
+     "label": "Load acceptance",
+     "value": "Capable of accepting 100% of rated load in one step"
+    }
+   ],
+   "notes": "The 50 Hz sister of the G9. Note the rating gap between the two: the same platform at 1,500 rpm delivers roughly 14 percent less standby output than at 1,800 rpm."
+  },
+  {
+   "product": "HSK78G Series lean-burn gas gen-set",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Models and outputs",
+     "value": "50 Hz C1600/C1800/C2000 N5CD (4-pole direct drive); 60 Hz C1600/C1800/C2000 N6CD (4-pole alternator through gearbox); 1600 / 1800 / 2000 kW"
+    },
+    {
+     "band": "Ratings",
+     "label": "Power factor",
+     "value": "Capable of operating between 0.8 lagging and 1.0 power factor"
+    },
+    {
+     "band": "Engine",
+     "label": "Design",
+     "value": "4 cycle, V-block, turbocharged low-temperature aftercooled; cast iron V12; lean burn fuel system; individual coil-on-plug ignition"
+    },
+    {
+     "band": "Engine",
+     "label": "Bore / stroke / displacement",
+     "value": "190 mm (7.48 in); 230 mm (9.06 in); 78 litres (4778 cu in)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Alternator",
+     "value": "Brushless, 4-pole, revolving field; 2/3 pitch stator; two-bearing rotor; Class F or H insulation; PMG exciter"
+    },
+    {
+     "band": "Electrical",
+     "label": "Waveform quality",
+     "value": "AC waveform THD below 5% no load to full linear load, below 3% for any single harmonic; TIF below 50 per NEMA MG1-22.43; THF below 3"
+    },
+    {
+     "band": "Electrical",
+     "label": "Voltages (60 Hz)",
+     "value": "220/380, 240/416, 254/440, 277/480, 347/600, 2400/4160, 7200/12470, 7620/13200, 7970/13800"
+    },
+    {
+     "band": "Performance",
+     "label": "Governor class",
+     "value": "ISO 8528 Part 5"
+    },
+    {
+     "band": "Performance",
+     "label": "Voltage regulation",
+     "value": "No-load to full-load plus/minus 0.25%; random voltage variation plus/minus 0.25%"
+    },
+    {
+     "band": "Performance",
+     "label": "Frequency regulation",
+     "value": "Isochronous; random frequency variation plus/minus 0.25%"
+    },
+    {
+     "band": "Performance",
+     "label": "Single step load pickup",
+     "value": "Generator set configuration dependent - consult factory for details"
+    },
+    {
+     "band": "Compliance",
+     "label": "NOx",
+     "value": "As low as 250 mg/Nm3 (0.5 g/hp-hr); 500 mg/Nm3 (1.2 g/hp-hr) option"
+    },
+    {
+     "band": "Compliance",
+     "label": "Standards",
+     "value": "EN61000-6-2, EN61000-6-4, FCC Part 15, ICES-002, AS/NZS 2557; CE and grid-code compliant options"
+    }
+   ],
+   "notes": "The step-load line is quoted verbatim and is the notable absence on this sheet: Cummins publishes a single-step figure for its diesels and defers to the factory for the gas platform."
+  },
+  {
+   "product": "Battery energy storage — catalogue line and data-center block",
+   "specs": [
+    {
+     "band": "Catalogue line",
+     "label": "Energy nodes",
+     "value": "211, 422, 633, 1,056, 1,520 and 2,280 kWh"
+    },
+    {
+     "band": "Catalogue line",
+     "label": "Form factors",
+     "value": "10-ft container (211 / 422 kWh); 20-ft high-cube (633 / 1,056 / 1,520 / 2,280 kWh)"
+    },
+    {
+     "band": "Catalogue line",
+     "label": "Chemistry and rate",
+     "value": "Lithium iron phosphate (LFP); 0.5C rate; IP55"
+    },
+    {
+     "band": "Catalogue line",
+     "label": "Electrical and environment",
+     "value": "380-415 V AC, 50 Hz; operating -30 to 50 degrees C; 2,000 m altitude without derate"
+    },
+    {
+     "band": "Catalogue line",
+     "label": "Cooling",
+     "value": "Glycol liquid-cooled batteries plus HVAC"
+    },
+    {
+     "band": "Catalogue line",
+     "label": "Fire safety",
+     "value": "Level 1 per-cell real-time monitoring; Level 2 FK-5-1-12 extinguishing system; Level 3 built-in water spray pipe for external hose connection"
+    },
+    {
+     "band": "Catalogue line",
+     "label": "Certifications",
+     "value": "IEC62619, IEC60536, UL1973, UL9540A, UN38.3, EU Battery Regulation 2023/1542"
+    },
+    {
+     "band": "Data-center block",
+     "label": "Capacity and chemistry",
+     "value": "5 MWh nominal, LFP, liquid-cooled"
+    },
+    {
+     "band": "Data-center block",
+     "label": "Architecture",
+     "value": "Flexible DC block design compatible with multiple power conversion and energy management ecosystems"
+    },
+    {
+     "band": "Data-center block",
+     "label": "Certifications",
+     "value": "UL 9540A, UL 9540, UL 1973, NFPA 855, NFPA 68, IEEE 1547, UL 1741 SA/SB"
+    }
+   ],
+   "notes": "Two distinct products: a 50 Hz catalogue range launched March 2025 and containerized in June 2025, and the larger 5 MWh data-center block behind the August 2026 award. Both sit in the Power Generation business inside Power Systems, not in Accelera."
+  },
+  {
+   "product": "PowerCommand transfer switches",
+   "specs": [
+    {
+     "band": "X-Series",
+     "label": "Amp range",
+     "value": "40 A - 3,000 A"
+    },
+    {
+     "band": "X-Series",
+     "label": "Withstand and closing rating",
+     "value": "25-42 kA; 200 kA with current-limiting fuses; three-cycle 25-150 kA"
+    },
+    {
+     "band": "X-Series",
+     "label": "Transitions",
+     "value": "Open delayed, open fast (sync), open fast (no sync), hard-closed, non-automatic"
+    },
+    {
+     "band": "X-Series",
+     "label": "Control and environment",
+     "value": "PowerCommand 80 microprocessor control; thermal cycling -40 to 122 degrees F; shaker-table seismic tested; Modbus TCP/IP and RTU RS485"
+    },
+    {
+     "band": "B-Series CBL",
+     "label": "Amp range and ratings",
+     "value": "150 A - 3,000 A; 25-65 kA; 200 kA with CL fuses; three-cycle 25-150 kA; open, closed, programmed and bypass isolation"
+    },
+    {
+     "band": "BTPC",
+     "label": "Amp range and ratings",
+     "value": "150 A - 1,000 A; 14-85 kA; 200 kA with CL fuses; three-cycle 25-42 kA"
+    },
+    {
+     "band": "OTEC / GTEC",
+     "label": "Amp range",
+     "value": "OTEC 40 A - 1,200 A (open transition); GTEC 40 A - 2,000 A (open transition)"
+    },
+    {
+     "band": "Closed transition",
+     "label": "Parallel window",
+     "value": "Briefly connects both sources for 100 msec or less"
+    }
+   ],
+   "notes": "The transfer-switch brochure lists data centers first among mission-critical applications."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-24",
+   "category": "leadership",
+   "headline": "James Hopkins promoted to VP, Financial Planning, Capital Management and Investor Relations effective 2026-09-01, reporting to CFO Mark Smith; Nick Arens now reports to Hopkins",
+   "read": "An IR reorganisation in the middle of a capacity-investment cycle usually means the equity story is being managed more tightly, not that anything is wrong.",
+   "source": "https://investor.cummins.com/news/detail/703/cummins-investor-relations-announces-organizational-updates"
+  },
+  {
+   "date": "2026-08-18",
+   "category": "order-win",
+   "headline": "Selected to supply battery energy storage for a large US data-center project — 5 MWh nominal LFP blocks, the largest BESS deployment in company history; customer, location and value undisclosed",
+   "read": "The award was written to utility-defined requirements for load oscillation and ride-through, which places the battery at the interconnection rather than beside the UPS — a grid-compliance product, not a backup one.",
+   "source": "https://investor.cummins.com/news/detail/702/cummins-selected-to-supply-battery-energy-storage-systems"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026: record revenue $9.5B (+9%), EBITDA $1.7B (17.5%), net income $932M, diluted EPS $6.73; full-year guidance raised a second time to +10-13% revenue and 18.0-18.5% EBITDA",
+   "read": "Revenue beat and EPS missed on every outlet's basis and the stock fell 7.6 percent — the market is pricing the capacity build, not the quarter.",
+   "source": "https://investor.cummins.com/news/detail/701/cummins-reports-strong-second-quarter-2026-results-raises"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "customer",
+   "headline": "On the Q2 call, CEO Jennifer Rumsey disclosed a multi-year agreement with an unnamed global hyperscaler giving visibility into several gigawatts of future backup-power gen-set demand",
+   "read": "Disclosed on a call rather than in a release, and the counterparty is unnamed — the commitment is real but unverifiable from outside.",
+   "source": "https://www.investing.com/news/transcripts/earnings-call-transcript-cummins-q2-2026-revenue-beats-eps-misses-as-shares-fall-93CH-4835083"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "regulatory",
+   "headline": "Phased Model Year 2027 product launch plan announced in response to EPA's proposed changes to 2027 on-highway emissions rules: X15 and X10 limited production January 2027, full production Q4 and Q3 2027; next-generation B platform January 2028",
+   "read": "Rumsey framed it as \"about improving the transition, not changing the destination\" — an on-highway matter that does not touch the gen-set line but does consume engineering capacity.",
+   "source": "https://investor.cummins.com/news/detail/700/cummins-announces-phased-model-year-2027-product-launch-plan"
+  },
+  {
+   "date": "2026-07-13",
+   "category": "corporate",
+   "headline": "Quarterly common stock dividend increased",
+   "read": "Capital returns continuing alongside a $1.35-1.45B capex year — the balance sheet is not being stretched by the capacity programme.",
+   "source": "https://investor.cummins.com/news/detail/699/cummins-inc-increases-quarterly-common-stock-dividend"
+  },
+  {
+   "date": "2026-06-18",
+   "category": "product-launch",
+   "headline": "Centum Series QSK78 introduced to the 50 Hz market — a 78-litre V18 rated up to 3,500 kVA and 3,300 kVA standby, in Tier 2 and low-NOx configurations, for standby and Data Center Continuous duty",
+   "read": "Extends the DCC rating into the 50 Hz world, which is where the European and Asian hyperscale build sits.",
+   "source": "https://www.cummins.com/en-na/news/releases/2026/06/18/cummins-power-generation-introduces-latest-its-high-horse-power-centum"
+  },
+  {
+   "date": "2026-06-16",
+   "category": "order-win",
+   "headline": "Circe Energy selected Cummins HSK78 (C2000N6CD) and QSK60 (C1400N6) natural-gas gen-sets for a behind-the-meter prime-power microgrid serving AI and HPC data centers on a 1,950-acre West Texas campus — 10 MW from 2026 ramping to 1.1 GW by 2030 against a 2 GW platform target, deliveries 2026-2030",
+   "read": "Cummins' one named prime-power data-center campus, and the answer to a competitive set that has been announcing gigawatt gas awards for a year.",
+   "source": "https://investor.cummins.com/news/detail/697/cummins-natural-gas-generators-to-power-large-scale-data"
+  },
+  {
+   "date": "2026-05-21",
+   "category": "capacity",
+   "headline": "2026 Analyst Day: $450M investment adding 20 GW of high-horsepower capacity for 55 GW total by 2030, on top of $200M and 9 GW already delivered; 2030 targets raised to 6-9% revenue CAGR and more than 250 bps of EBITDA margin expansion; data-center revenue path of about $5B in 2026 to more than $9B by 2030",
+   "read": "The capacity number is the whole thesis: Cummins is answering a demand it cannot currently serve, and is saying so in capital rather than in price.",
+   "source": "https://investor.cummins.com/news/detail/696/cummins-raises-2030-financial-targets-announces"
+  },
+  {
+   "date": "2026-05-21",
+   "category": "product-launch",
+   "headline": "Analyst Day named three capabilities being added for prime power: emissions-certified aftertreatment, battery storage and hybrid integration, and a large megawatt natural-gas platform; a 5 MW battery system and a Tier 4-certified diesel line were shown",
+   "read": "An explicit acknowledgement that behind-the-meter prime power faces a stricter permitting regime than emergency standby, and that the current Tier 2 catalogue cannot serve it.",
+   "source": "https://d1io3yog0oux5.cloudfront.net/_140fb24bd426158bbc4d7e1b7f361baa/cummins/db/784/8364/pdf/2026+Analyst+Day+Slides+-+Final+v2.pdf"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "corporate",
+   "headline": "Indianapolis Regional Distribution Center in Whitestown, Indiana closed permanently, 59 workers laid off between 2026-07-31 and 2026-08-31, consolidating into multi-RDCs",
+   "read": "A distribution-network consolidation, not a manufacturing retrenchment — the capacity story and the footprint story are running in opposite directions on purpose.",
+   "source": "https://www.therepublic.com/2026/05/06/cummins-to-close-warehouse-lay-off-59-workers/"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "financial",
+   "headline": "Q1 2026: revenue $8.398B (+3%), EBITDA $1.290B reported (15.4%) and $1.489B adjusted (17.7%), net income $654M, diluted EPS $4.71; guidance raised to +8-11% revenue; $519M returned to shareholders",
+   "read": "Power Systems posted a record 29.5 percent segment EBITDA margin on 19 percent revenue growth — the single clearest datapoint that data-center demand is repricing the business.",
+   "source": "https://investor.cummins.com/news/detail/694/cummins-delivered-strong-operating-results-and-returned"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "legal",
+   "headline": "$500 offered to owners under Emissions Recall 67A on Ram diesel trucks",
+   "read": "The consumer-facing tail of the 2023 settlement, still running more than two years later.",
+   "source": "https://investor.cummins.com/news/detail/691/cummins-offers-500-for-emissions-recall-67a-on-ram-diesel"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "financial",
+   "headline": "FY2025: revenue $33.7B (-1%), EBITDA $5.4B (16.0%), net income $2.8B, diluted EPS $20.50 after $458M ($3.28 per diluted share) of electrolyzer charges; Distribution and Power Systems both set record full-year sales and profitability",
+   "read": "The headline EPS decline is an Accelera story; the operating businesses that touch this ecosystem had their best year.",
+   "source": "https://investor.cummins.com/news/detail/689/cummins-reports-strong-fourth-quarter-and-full-year-2025"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "corporate",
+   "headline": "Following a strategic review, Cummins said it intends to stop new commercial activity in the electrolyzer space while fulfilling existing customer commitments",
+   "read": "A clean exit from the hydrogen production business, and the second consecutive year of Accelera charges distorting reported EPS.",
+   "source": "https://www.gasworld.com/story/cummins-to-stop-new-electrolyser-activity-after-458m-hydrogen-related-charges/2244189.article/"
+  },
+  {
+   "date": "2026-01-15",
+   "category": "product-launch",
+   "headline": "Data Center Brochure 5600261_0126 published, stating a presence in 52 countries, more than 33 GW of installed capacity and more than 300 unique data-center customers, with power solutions from 15 kVA to 3750 kVA",
+   "read": "The installed-base claim is the credential Cummins leads with, and it is the closest thing to a market-share statement the company itself makes.",
+   "source": "https://mart.cummins.com/imagelibrary/data/assetfiles/0059090.pdf"
+  },
+  {
+   "date": "2025-11-06",
+   "category": "financial",
+   "headline": "Q3 2025: revenue $8.30B against a $7.99B consensus, GAAP diluted EPS $3.86 against $4.87, driven by a $240M electrolyzer charge including $210M of goodwill impairment and a $30M inventory write-down",
+   "read": "The pattern of the year: revenue ahead, GAAP earnings behind, the gap explained by a business being wound down.",
+   "source": "https://investor.cummins.com/news/detail/687/cummins-reports-strong-third-quarter-operating-results"
+  },
+  {
+   "date": "2025-09-16",
+   "category": "partnership",
+   "headline": "Collaboration with Komatsu on joint mining hybrid development and deployment",
+   "read": "Mining is 18 percent of Power Systems revenue and the hybrid work is transferable to the stationary side, but this is not a data-center event.",
+   "source": "https://investor.cummins.com/news/detail/685/cummins-and-komatsu-to-collaborate-on-joint-mining-hybrid"
+  },
+  {
+   "date": "2025-08-06",
+   "category": "financial",
+   "headline": "Full-year 2025 guidance was not reinstated after the Q2 beat; Cummins cited continuing economic uncertainty and warned North American truck demand would sharply decline in Q3",
+   "read": "Three months after withdrawing guidance the company still would not give one — the tariff environment, not the data-center business, was the reason.",
+   "source": "https://www.therepublic.com/2025/08/06/exceeding-expectations-cummins-cites-increasing-economic-uncertainty-after-withdrawing-guidance/"
+  },
+  {
+   "date": "2025-07-14",
+   "category": "leadership",
+   "headline": "Matthew Tsien elected to the Board of Directors",
+   "read": "Board refresh during the capacity build.",
+   "source": "https://investor.cummins.com/news/detail/682/cummins-elects-matthew-tsien-to-its-board-of-directors"
+  },
+  {
+   "date": "2025-06-04",
+   "category": "product-launch",
+   "headline": "Centum Series generator sets at 1,750-2,000 kW and 2,750-3,000 kW won Gold in the 2025 Consulting-Specifying Engineer Product of the Year; the Centum S17 at 600-1,000 kW took Silver in 2026",
+   "read": "Specifier recognition matters in a market where the consulting engineer writes the basis of design.",
+   "source": "https://www.cummins.com/en-na/news/releases/2025/06/04/centumtm-series-generators-1750-2000-kw-2750-3000-kw-secure-latest-product"
+  },
+  {
+   "date": "2025-06-03",
+   "category": "product-launch",
+   "headline": "Containerized battery energy storage product line launched",
+   "read": "The delivery format that lets storage arrive on the same schedule as a containerized gen-set.",
+   "source": "https://www.cummins.com/news/2025/06/03/cummins-launches-containerised-bess-product-line"
+  },
+  {
+   "date": "2025-05-27",
+   "category": "product-launch",
+   "headline": "Centum Force containerized, stackable gen-set launched on the QSK60 platform at 2,000-2,750 kVA in a 40-foot container, claiming up to 34 percent space-utilisation saving",
+   "read": "Speed of deployment is now a product feature rather than a logistics outcome.",
+   "source": "https://www.cummins.com/news/2025/05/27/cummins-centum-force-redefines-containerized-power"
+  },
+  {
+   "date": "2025-05-06",
+   "category": "financial",
+   "headline": "Full-year 2025 guidance withdrawn entirely, citing tariff uncertainty; prior February guidance had been revenue down 2% to up 3%",
+   "read": "Rumsey: the company was \"unable to predict with confidence our expected performance for the year\" — an unusual step for an industrial of this size, and one taken alongside GM, Ford, Volvo, Mercedes-Benz and Stellantis.",
+   "source": "https://www.ibj.com/articles/cummins-withdraws-2025-financial-guidance-amidst-tariff-uncertainty"
+  },
+  {
+   "date": "2025-04-09",
+   "category": "leadership",
+   "headline": "John Gaidoo appointed Vice President and Chief Legal Officer effective 2025-06-01",
+   "read": "Legal leadership change while the emissions consent decree is still being administered.",
+   "source": "https://investor.cummins.com/news/detail/679/cummins-announces-appointment-of-john-gaidoo-as-vice"
+  },
+  {
+   "date": "2025-04-02",
+   "category": "leadership",
+   "headline": "Nicole Y. Lamb-Hale appointed Chief Administrative Officer and Corporate Secretary; Sharon Barner retired from the role",
+   "read": "A former US Assistant Secretary for Manufacturing and Services takes the administrative seat as trade policy becomes the company's largest reported uncertainty.",
+   "source": "https://investor.cummins.com/news/detail/677/cummins-announces-appointment-of-nicole-y-lamb-hale-as"
+  },
+  {
+   "date": "2025-03-11",
+   "category": "product-launch",
+   "headline": "Battery energy storage added to the power generation portfolio at 200 kWh to 2 MWh",
+   "read": "The entry point for a line that eighteen months later took the company's largest-ever storage order.",
+   "source": "https://www.cummins.com/news/releases/2025/03/11/cummins-expands-their-power-generation-portfolio-addition-state-art-zero"
+  },
+  {
+   "date": "2025-02-04",
+   "category": "financial",
+   "headline": "FY2024: revenue $34.1B, EBITDA $6.3B (18.6%), net income $3.9B, diluted EPS $28.37; Q4 carried $312M ($2.14 per diluted share) of Accelera reorganization charges; Power Systems revenue up 22% year on year on data-center demand",
+   "read": "The starting point for the Power Systems re-rating: 18.4 percent segment margin, 16 percent of sales, 23 percent of company EBITDA.",
+   "source": "https://investor.cummins.com/news/detail/666/cummins-reports-strong-fourth-quarter-and-full-year-2024"
+  },
+  {
+   "date": "2024-01-10",
+   "category": "regulatory",
+   "headline": "EPA, CARB and DOJ settlement finalised in April 2024 — a $1.675B civil penalty (the largest in Clean Air Act history), covering approximately one million pick-up truck applications, with more than $326M of injunctive relief including about $70M of federal locomotive projects and a $175M payment to CARB",
+   "read": "Recorded as a $2.0B charge in Q4 2023 with $1.9B paid in Q2 2024; the residual obligation is a recall Cummins must complete to at least 85 percent within three years or face stipulated penalties.",
+   "source": "https://www.epa.gov/enforcement/2024-cummins-inc-vehicle-emission-control-violations-settlement"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Cummins' data-center exposure is a capacity problem rather than a demand problem, and that the company is answering it with irreversible capital. Basis: per company filings and the 2026 Analyst Day, $200M and 9 GW of high-horsepower capacity have already been added and a further $450M is committed to add 20 GW for 55 GW total by 2030, with the CFO stating on the Q2 2026 call that the business is \"selling out into the second half of 2028\" and the 95-litre platform booked into that period. Power Systems revenue grew 19 percent in both Q1 and Q2 2026 while segment EBITDA margin reached a record 29.5 percent. A company that could sell more would not be posting record margins on a sold-out book.",
+  "(High confidence) We assess that the reported earnings line understates the operating business, and that this gap is closing. Basis: FY2024 carried $312M ($2.14 per diluted share) of Accelera reorganization charges and FY2025 carried $458M ($3.28 per diluted share) of electrolyzer charges, of which $415M was non-cash. Adjusted FY2025 EPS was $23.78 against GAAP $20.50. The divergence is large enough that outlets quoting GAAP and outlets quoting adjusted figures reached opposite verdicts on the same quarter — a 16 percent miss and a 10 percent beat on Q1 2026. With new electrolyzer activity stopped, the distortion should not repeat at this scale.",
+  "(Moderate confidence) We assess that prime power, not standby, is where Cummins' data-center position is most contestable, and that the company knows it. Basis: in the trade coverage of gigawatt-scale behind-the-meter awards, the named winners are Caterpillar, INNIO/Jenbacher with VoltaGrid, Wartsila and ProEnergy; Cummins appears mainly in the capacity-expansion paragraph, with Circe Energy as its single named prime-power campus. The Analyst Day response names exactly the three gaps — emissions-certified aftertreatment, a large megawatt gas platform, and battery and hybrid integration — which is a company describing its own weakness in a slide deck.",
+  "(Moderate confidence) We assess that the battery line is being positioned as a grid-compliance product rather than a backup product, and that this is the more defensible position. Basis: the August 2026 award is described as meeting \"utility-defined requirements\" for managing AI-driven load fluctuations, mitigating load oscillations and improving ride-through — duties performed at the interconnection, not behind the UPS. A 5 MWh block with a flexible DC architecture explicitly compatible with third-party power conversion and energy management is a product designed to be specified by a utility engineer and integrated by someone else, which is a different sale from the gen-set.",
+  "(Moderate confidence) We assess that the Distribution segment, not Power Systems, is the part of Cummins that competitors find hardest to attack. Basis: Distribution is a $12.4B business of roughly 15,000 people in more than 190 countries, its power-generation sales rose from $3,972M to $4,932M in a single year with the whole increase in North America, and the company's own data-center revenue target of about $5B in 2026 spans Power Systems and Distribution together — which is why that figure exceeds the entire Power Systems segment's FY2025 revenue. The equipment is contestable; twenty years of service on the installed base is not.",
+  "(Moderate confidence) We assess that the 2023 emissions settlement is now a compliance-administration matter rather than a financial one, but that it retains reputational weight in procurement diligence. Basis: the $2.0B charge was taken in Q4 2023 and $1.9B was paid in Q2 2024; the FY2025 10-K records only \"immaterial amounts related to stipulated penalties.\" The residual exposures are the obligation to repair at least 85 percent of affected vehicles within three years and the company's own disclosure that it \"has also been in communication with other non-US regulators.\" A separate securities class action settled for $1.6 million, approximately $0.22 per damaged share — an unusually small recovery that bounds the legal tail.",
+  "(Low confidence) We assess that Cummins' exposure to a hyperscaler pullback is concentrated but not measurable from outside. Basis: the multi-gigawatt hyperscaler framework and the record battery order both leave the counterparty unnamed, so the customer concentration behind a book sold into 2028 cannot be tested. Collection gap: Cummins does not break out data-center revenue in its 10-K, no third party publishes it as a share of Power Systems, and the company's own figure is cross-segment. UBS's October 2025 estimate that US data-center generator revenue \"could come close to doubling\" for roughly $1.5B over three years is the only sized external estimate found."
+ ],
+ "relationships": [
+  {
+   "slug": "caterpillar",
+   "type": "competitor",
+   "status": "active",
+   "scale": "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+   "via": "Data-center standby generator sets",
+   "note": "The other pole of the data-center standby duopoly, and the only vendor consistently ranked above Cummins.",
+   "context": "MarketsandMarkets ranks the 2025 data-center generator field Caterpillar first, Cummins second, Rolls-Royce third, Rehlko fourth and Mitsubishi fifth, without publishing shares. Fortune Business Insights separately estimates Caterpillar at 18 percent and Cummins at 16 percent on 2026 data; that estimate should be attributed to Fortune Business Insights and not treated as a measured figure, because vendor market-size estimates for nominally the same market range from $433M to $10.34B across firms. Trade coverage puts it qualitatively: Caterpillar \"sits first and Cummins a clear second, together accounting for much of the installed base at hyperscale sites.\" The two are also running parallel capacity races — Caterpillar targeting 65 GW/yr of large-engine output by 2030 against Cummins' 55 GW.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp"
+  },
+  {
+   "slug": "rolls-royce-power-systems",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center standby generator sets",
+   "note": "Ranked immediately below Cummins in the data-center generator field, and the vendor most often credited with the shortest lead times at hyperscale nodes.",
+   "context": "MarketsandMarkets places Rolls-Royce third for 2025, behind Caterpillar and Cummins, crediting it with traction \"in high-density AI and hyperscale environments.\" A lead-time survey by Terrapin Consulting Group states that \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" while \"Cummins and Kohler tend to be competitive at the 1,000-2,000 kW range\" — a segmentation that puts Rolls-Royce, not Cummins, as Caterpillar's nearest rival at the top of the range. Both are also expanding US capacity concurrently: Cummins with $450M for 20 GW, Rolls-Royce by doubling Series 4000 gen-set output at Mankato, Minnesota.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp"
+  },
+  {
+   "slug": "rehlko",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center standby generator sets",
+   "note": "The fourth-ranked gen-set OEM, competing directly at the 1,000-2,000 kW band and at the top node with the KD3250 and KD4000.",
+   "context": "MarketsandMarkets ranks Rehlko fourth in data-center generators for 2025. Terrapin's lead-time survey groups Cummins and Kohler together as \"competitive at the 1,000-2,000 kW range,\" which is where the two most directly overlap. Rehlko's KD3250 at 3,250 kW standby is positioned against the Caterpillar C175 and the Cummins QSK60 at the hyperscale node. Rehlko announced approximately 1.7 GW of hyperscale backup awards in a 60-day window in April 2026, on the same anonymised basis as Cummins' own hyperscaler framework.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp"
+  },
+  {
+   "slug": "wartsila",
+   "type": "competitor",
+   "status": "active",
+   "via": "Behind-the-meter prime power",
+   "scale": "Wartsila: 2 GW of US orders since 2025 against Cummins' 20 GW capacity addition",
+   "note": "A reciprocating-engine competitor in the prime-power segment where Cummins is least represented by named awards.",
+   "context": "Natural Gas Intelligence's May 2026 survey of the reciprocating-engine capacity race tabulates Cummins adding 20 GW to reach 55 GW by 2030 alongside Wartsila's 2 GW of US orders since 2025, including a 790 MW Texas data-center order in April 2026 and a 412 MW Ohio project. In that same coverage Cummins appears mainly in the capacity paragraph while Wartsila, Caterpillar and INNIO carry the named gigawatt awards — which is the competitive asymmetry the dossier's third key judgment describes.",
+   "source": "https://naturalgasintel.com/news/no-turbine-data-centers-find-faster-path-with-natural-gas-reciprocating-engines/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "EPA / CARB / DOJ emissions Settlement Agreements",
+   "status": "in-effect",
+   "effectiveDate": "2024-04",
+   "exposure": "Resolves civil claims over the emissions certification and compliance process for engines primarily used in pick-up truck applications in the US. A $2.0B charge was recorded in Q4 2023 covering approximately one million applications, on top of $59M previously announced for MY2013-2018 RAM 2500/3500 recalls; $1.9B of payments were made in Q2 2024. The civil penalty of $1.675B is the largest in Clean Air Act history. Obligations include completing recall requirements, mitigation projects, extended warranties, testing and corporate compliance measures, with stipulated penalties for non-compliance. Per the FY2025 10-K, Cummins has since recorded only immaterial amounts related to stipulated penalties, and states it \"has also been in communication with other non-U.S. regulators regarding matters related to the emission systems in our engines.\"",
+   "mitigation": "Cummins agreed to corporate compliance measures and enhanced testing under the consent decrees, and offered $500 to owners under Emissions Recall 67A in February 2026.",
+   "source": "https://www.epa.gov/enforcement/2024-cummins-inc-vehicle-emission-control-violations-settlement"
+  },
+  {
+   "regime": "US import tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2025",
+   "exposure": "Cummins withdrew full-year 2025 guidance entirely on 2025-05-05, with CEO Jennifer Rumsey stating the company was \"unable to predict with confidence our expected performance for the year\"; guidance was still not reinstated after the Q2 2025 beat. The quantified impact was $22M in Q2 2025. Per the FY2025 10-K, \"tariff costs and related recoveries was immaterial for the year ended December 31, 2025\" and immaterial to each reportable segment's EBITDA. For 2026 the CFO described the net EBITDA impact as immaterial, with a gross burden of 20-30 basis points of full-year EBITDA offset by mitigation.",
+   "mitigation": "Pricing and supply-chain mitigation; the 10-K frames the exposure through reliance on \"a global supply chain to deliver the raw materials, components, systems and parts.\"",
+   "source": "https://www.sec.gov/Archives/edgar/data/26172/000002617226000009/cmi-20251231.htm"
+  },
+  {
+   "regime": "EPA stationary emissions tiers (40 CFR 60)",
+   "status": "in-effect",
+   "exposure": "The data-center gen-set catalogue is certified across classes: EPA Tier 2 on the QSK95-G5/G9/G10, the Centum C3300D5EB and C3500D5EB (with a low-NOx option) and the QSK78-G12; Tier 4 interim and Tier 4 Final on the DQGAR, DQGAS, DQKAK, DQKAL, DQKAM, DQLG and DQLH built on the QSK50-G8 and QSK60-G16/G17. European and German-market variants carry EU Stage II and TA-Luft 2g/4g. The HSK78G gas platform is offered at NOx of 250 mg/Nm3 (0.5 g/hp-hr) or 500 mg/Nm3 (1.2 g/hp-hr). The certification class, not the hardware, is what determines whether a fleet may run outside a genuine outage.",
+   "mitigation": "The 2026 Analyst Day names \"emissions certified aftertreatment solutions\" as one of three capabilities being added specifically to serve prime power, an explicit acknowledgement that the current large-node catalogue is predominantly Tier 2.",
+   "source": "https://mart.cummins.com/imagelibrary/data/assetfiles/0058394.pdf"
+  },
+  {
+   "regime": "EPA 2027 on-highway emissions rules",
+   "status": "proposed",
+   "effectiveDate": "2027-01",
+   "exposure": "EPA's proposed changes to the 2027 emissions regulations, with implementation flexibilities, prompted a phased Model Year 2027 launch: X15 and X10 in limited production from January 2027 with full production in Q4 2027 and Q3 2027 respectively, and a next-generation B platform from January 2028. Legacy X15, X12, L9 and B6.7 remain available through the transitions. This affects the on-highway HELM platforms, not the high-horsepower gen-set line.",
+   "mitigation": "Rumsey: \"This is about improving the transition, not changing the destination.\"",
+   "source": "https://investor.cummins.com/news/detail/700/cummins-announces-phased-model-year-2027-product-launch-plan"
+  },
+  {
+   "regime": "Alternative-fuel approvals (EN 15940 / HVO)",
+   "status": "in-effect",
+   "exposure": "The Centum Series 78L is \"approved for use with paraffinic fuels (EN15940), including Hydrotreated Vegetable Oil (HVO)\" per the January 2026 data-center brochure. Fuel approval changes a fleet's lifecycle carbon accounting without changing its emissions certification or the pollutants an air permit regulates.",
+   "source": "https://mart.cummins.com/imagelibrary/data/assetfiles/0059090.pdf"
+  },
+  {
+   "regime": "FEOC / NDAA Section 889 / UFLPA",
+   "status": "proposed",
+   "exposure": "Collection gap rather than an assessed exposure. A full-text search of the FY2025 10-K returns no reference to the Inflation Reduction Act, section 45X, foreign entity of concern, the National Defense Authorization Act, or the Uyghur Forced Labor Prevention Act. Cummins is now shipping lithium iron phosphate battery systems into US data centers and discloses no cell-supply-chain policy exposure. The absence is recorded here because a buyer conducting bankability diligence on the battery line will ask, and the public record does not answer.",
+   "source": "https://www.sec.gov/Archives/edgar/data/26172/000002617226000009/cmi-20251231.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Jennifer Rumsey",
+   "title": "Chair and Chief Executive Officer",
+   "photo": "images/execs/cummins-rumsey.jpg",
+   "background": [
+    "Chair and CEO since 2023-08-01; President and CEO from 2022-08-01; President and COO from March 2021",
+    "Vice President and President, Components; earlier Vice President and Chief Technical Officer, leading roughly 11,000 technical staff",
+    "Joined Cummins in 2000 from a fuel-cell startup in Cambridge, Massachusetts; BSME Purdue, MSME MIT",
+    "Owns the capacity decision: the 2026 Analyst Day targets and the disclosed multi-gigawatt hyperscaler framework"
+   ]
+  },
+  {
+   "name": "Jenny Bush",
+   "title": "President, Power Systems Business",
+   "photo": "images/execs/cummins-bush.jpg",
+   "background": [
+    "Runs the segment that owns gen-sets, high-horsepower engines, alternators and battery storage — the primary data-center decision maker",
+    "Previously Vice President, Cummins Sales and Service North America; Six Sigma Black Belt in Power Systems; led the Global Commercial Marine Engine business",
+    "Joined Cummins in 1997 as a parts writer after a Shell Oil apprenticeship, its first female graduate; BEng Wirral Metropolitan College, MBA Leicester",
+    "Named spokesperson on the August 2026 data-center battery award and the Analyst Day Power Systems strategy; board member, Century Aluminum (HSE chair) and Youth Villages"
+   ]
+  },
+  {
+   "name": "Mark Smith",
+   "title": "Vice President and Chief Financial Officer",
+   "photo": "images/execs/cummins-smith.jpg",
+   "background": [
+    "Also leads Investor Relations, Business Planning and Analysis, and Capital Management",
+    "Joined 1995: VP Investor Relations; Controller, Components; Controller, Filtration; finance and strategy roles in Engine and Power Generation in the US and UK",
+    "Stated on the Q2 2026 call that the business is selling out into the second half of 2028 and that 2026 tariff impact is immaterial",
+    "BA Economics, University of Kent; MBA Kellogg; ICAEW chartered accountant; six years at Ernst and Young UK"
+   ]
+  },
+  {
+   "name": "Bonnie Fetch",
+   "title": "Executive Vice President and President, Operations",
+   "photo": "images/execs/cummins-fetch.jpg",
+   "background": [
+    "Oversees supply chain, IT, Cummins Services, digital and analytics and quality — the delivery side of the 20 GW capacity programme",
+    "Previously Vice President and President, Distribution (approximately 16,000 employees); Vice President, Global Supply Chain and Manufacturing",
+    "Joined 2018 after 20 years at Caterpillar",
+    "BS Applied Organizational Management; Stanford and Singularity executive programmes"
+   ]
+  },
+  {
+   "name": "Shon Wright",
+   "title": "President, Distribution Business",
+   "photo": "images/execs/cummins-wright.jpg",
+   "background": [
+    "Runs the $12.4B, roughly 15,000-person global sales and service arm across more than 190 countries — the channel through which data-center gen-sets are sold and serviced",
+    "Previously led Components and Software ($2.5B, 8,000 employees, 17 sites); drove 60 percent growth in the global turbo business; integrated the $325M Jacobs Vehicle Systems acquisition in 2022",
+    "Founded the Cummins CARE programme in 2020; roughly 30 years across chemical, automotive and industrial",
+    "BS Chemical Engineering, University of South Carolina; MBA Harvard; board member, Ingevity"
+   ]
+  },
+  {
+   "name": "Jonathan Wood",
+   "title": "Chief Technical Officer",
+   "photo": "images/execs/cummins-wood.jpg",
+   "background": [
+    "Leads the global Technical organization and the Technical Leadership Team",
+    "At Cummins since 1994; previously VP New Power Engineering, VP Components Engineering, Executive Director Engineering for Turbo Technologies and for Emission Solutions",
+    "Led the Components effort to meet Global VI emissions standards",
+    "MEng University of Sheffield; Chartered Engineer (IMechE); Fellow of the RSA"
+   ]
+  },
+  {
+   "name": "Amy Davis",
+   "title": "President, Accelera by Cummins and Components",
+   "photo": "images/execs/cummins-davis.jpg",
+   "background": [
+    "Leads Accelera, the zero-emissions segment that took $458M of electrolyzer charges in FY2025, and Components, the largest segment by revenue",
+    "Joined 1994; previously VP of the $1.2B Filtration business; President of Cummins Northeast; Executive Director of a global medium-duty truck business of more than $3B",
+    "Prior: AT&T, Alcan",
+    "Northwestern; University of Chicago Booth executive programme; board member, Manitowoc"
+   ]
+  },
+  {
+   "name": "Brett Merritt",
+   "title": "President, Engine Business",
+   "photo": "images/execs/cummins-merritt.jpg",
+   "background": [
+    "Leads the Engine Business Unit and, since 2023, strategic customer relations across Cummins",
+    "Joined 2008 as On-Highway Sales Director; led Global Medium Duty On-Highway; General Manager On-Highway; Vice President from 2018",
+    "Prior: Arvin/ArvinMeritor, Valspar, Columbus Components Group",
+    "BA Indiana University; MBA Harvard"
+   ]
+  },
+  {
+   "name": "Nicole Y. Lamb-Hale",
+   "title": "Chief Administrative Officer and Corporate Secretary",
+   "photo": "images/execs/cummins-lamb-hale.jpg",
+   "background": [
+    "Chief Administrative Officer since June 2025; previously Cummins Chief Legal Officer",
+    "Prior: Managing Director at Kroll, heading its Washington DC office; Senior Vice President, Albright Stonebridge Group",
+    "US Assistant Secretary for Manufacturing and Services at the Department of Commerce, and Deputy General Counsel of the Department of Commerce; equity partner, Foley and Lardner",
+    "AB University of Michigan; JD Harvard Law; boards include Federal Realty and the US Chamber Foundation"
+   ]
+  },
+  {
+   "name": "Marvin Boakye",
+   "title": "Chief Human Resources Officer",
+   "photo": "images/execs/cummins-boakye.jpg",
+   "background": [
+    "Since 2022; HR for roughly 67,400 employees across more than 190 countries and territories",
+    "Prior: Chief People and Diversity Officer, Papa John's International; CHRO roles at MTS Allstream, Andeavor, Goodyear, PulteGroup and Home Depot",
+    "BA University of Winnipeg; MA Royal Roads University"
+   ]
+  },
+  {
+   "name": "Nathan Stoner",
+   "title": "Vice President, China Area Business Organization",
+   "photo": "images/execs/cummins-stoner.jpg",
+   "background": [
+    "Regional responsibility across Engine, Components, Power Systems, Distribution and New Power in China — relevant because Q2 2026 cited data-center demand in the United States, China and Asia Pacific",
+    "Previously General Manager, Engine Joint Ventures and Partnerships; General Manager, Power Systems China; Executive Director, Global Corporate Development; Partnership Director, Dongfeng Motors",
+    "BS Architecture and Mechanical Engineering, Yale; MBA Yale School of Management"
+   ]
+  },
+  {
+   "name": "Jeff Wiltrout",
+   "title": "Vice President, Corporate Strategy",
+   "photo": "images/execs/cummins-wiltrout.jpg",
+   "background": [
+    "Business development, partnerships, mergers and acquisitions and divestitures",
+    "Previously Executive Director, Corporate Development; joined 2009 into strategy roles supporting Power Systems and Cummins Generator Technologies",
+    "BA Notre Dame; MBA Indiana Kelley"
+   ]
+  },
+  {
+   "name": "Susan Cleaver",
+   "title": "Executive Director, Cummins Global Power Generation",
+   "background": [
+    "Named spokesperson on the Circe Energy West Texas prime-power data-center agreement of June 2026",
+    "Leads the global power generation organisation inside Power Systems",
+    "No company-published headshot was found on the investor leadership page; the entry renders an initials avatar"
+   ]
+  },
+  {
+   "name": "Zach Gillen",
+   "title": "Vice President, Distribution Business Sales and Service North America",
+   "background": [
+    "Named spokesperson on the Circe Energy agreement; owns the North American channel through which data-center power is sold and serviced",
+    "No company-published headshot was found on the investor leadership page"
+   ]
+  },
+  {
+   "name": "David Matuseski",
+   "title": "Engineering Director, Distributed Generation",
+   "background": [
+    "Author of the Data Center Continuous (DCC) ratings white paper (Bulletin 5600406) and formerly Cummins' Mission Critical Technical Leader — the technical authority behind the rating the data-center catalogue is sold on",
+    "Registered Professional Engineer, Minnesota",
+    "No company-published headshot was found"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "Reported 2025-02-04. Power Systems revenue rose 22 percent year on year on data-center demand, closing the year at 18.4 percent segment EBITDA — 16 percent of consolidated sales and 23 percent of consolidated EBITDA. Q4 GAAP EPS was depressed by $312M ($2.14 per diluted share) of Accelera reorganization charges, which is why outlets quoting adjusted and GAAP figures reached opposite verdicts on the same quarter.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$34.1B",
+      "expected": "$33.78B (annual estimate, GuruFocus; provider not named)",
+      "verdict": "beat",
+      "result": "No FY2024 consensus attributable to a named provider was found. GuruFocus's estimate carries no attributed source and is the only annual figure located.",
+      "kpi": "revenue",
+      "usdMillions": 34100,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "EBITDA",
+      "actual": "$6.3B (18.6% of sales)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per company release; no consensus located."
+     },
+     {
+      "name": "Net income",
+      "actual": "$3.9B",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per company release.",
+      "kpi": "net-income",
+      "usdMillions": 3900,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS (GAAP)",
+      "actual": "$28.37",
+      "expected": "$28.14 (GuruFocus; provider not named)",
+      "verdict": "beat",
+      "result": "GAAP EPS is inflated by the gain on the Atmus Filtration split-off completed in March 2024, so FY2024 and FY2025 GAAP EPS are not directly comparable.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Q4 2024 diluted EPS",
+      "actual": "$3.02 GAAP / $5.16 adjusted",
+      "expected": "$4.71 (Investing.com, GAAP basis) / $4.68 (Zacks, adjusted basis)",
+      "verdict": "miss",
+      "result": "The same quarter reads as a 35.9 percent miss on Investing.com's GAAP basis and a beat on Zacks' adjusted basis. The gap is the $312M / $2.14 per share Accelera charge. Both figures are reported; neither is blended."
+     },
+     {
+      "name": "Q4 2024 revenue",
+      "actual": "$8.45B",
+      "expected": "$8.13B (Zacks) / $8.08B (Investing.com)",
+      "verdict": "beat",
+      "result": "Revenue beat on both outlets' figures."
+     },
+     {
+      "name": "Power Systems segment",
+      "actual": "$6.408B revenue, $1.180B EBITDA (18.4%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "16 percent of consolidated sales and 23 percent of consolidated EBITDA; Q4 segment revenue $1.7B, up 22 percent."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "Reported 2026-02-05. Distribution and Power Systems both set record full-year sales and profitability on data-center backup demand while consolidated revenue fell 1 percent. No pre-print annual consensus from any named provider was found for FY2025; a search-summarised claim of a 6 percent EPS miss could not be verified and does not reconcile with the reported $20.50, so it is not carried. Adjusted EPS was $23.78 against GAAP $20.50, the gap being $458M ($3.28 per diluted share) of electrolyzer charges, $415M of it non-cash.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$33.7B (−1%)",
+      "expected": "no published consensus found",
+      "verdict": "inline",
+      "result": "No FY2025 annual revenue consensus from a named provider was located.",
+      "kpi": "revenue",
+      "usdMillions": 33700,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "EBITDA",
+      "actual": "$5.4B (16.0% of sales)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per company release."
+     },
+     {
+      "name": "Net income",
+      "actual": "$2.8B",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per company release.",
+      "kpi": "net-income",
+      "usdMillions": 2800,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS (GAAP)",
+      "actual": "$20.50 GAAP / $23.78 adjusted",
+      "expected": "no published consensus found",
+      "verdict": "inline",
+      "result": "The $3.28 gap is the electrolyzer charge. No named-provider annual consensus was found for either basis.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Q4 2025 diluted EPS",
+      "actual": "$4.27 GAAP / $5.81 adjusted",
+      "expected": "$5.01 (Investing.com, GAAP basis) / $5.20 (Zacks, adjusted basis)",
+      "verdict": "miss",
+      "result": "A 14.8 percent miss on the GAAP basis and an 11.7 percent beat on the adjusted basis. The stock fell 6.35 percent pre-market on the GAAP figure. The Zacks numbers come from a secondary recap; the primary host returned an error, so they carry lower confidence than the Investing.com set, which reconciles exactly to the 8-K."
+     },
+     {
+      "name": "Q4 2025 revenue",
+      "actual": "$8.5B (+1%)",
+      "expected": "$8.08B (Investing.com) / $8.15B (Zacks)",
+      "verdict": "beat",
+      "result": "Revenue beat on both bases."
+     },
+     {
+      "name": "Q3 2025 diluted EPS",
+      "actual": "$3.86 GAAP",
+      "expected": "$4.87 (Investing.com) / $4.86 (GuruFocus)",
+      "verdict": "miss",
+      "result": "A 20.7 percent GAAP miss driven by the $240M electrolyzer charge, including $210M of goodwill impairment. The stock nonetheless rose 6.99 percent pre-market."
+     },
+     {
+      "name": "Power Systems segment",
+      "actual": "$7.463B revenue, $1.694B EBITDA (22.7%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "18 percent of consolidated sales and 31 percent of consolidated EBITDA, up from 16 percent and 23 percent a year earlier. Per the 2026 Analyst Day, data centers were 26 percent of the segment's revenue."
+     },
+     {
+      "name": "Distribution segment power generation sales",
+      "actual": "$4,932M (from $3,972M in 2024)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "A $1.0B increase, all in North America, which the company attributes principally to higher demand in power generation markets, especially data center and commercial."
+     }
+    ]
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "commentary": "Reported 2026-05-05. The clearest illustration of the reporting-basis problem: Zacks scored the quarter a 9.8 percent adjusted EPS beat and Investing.com a 16.0 percent GAAP miss on the identical print. The adjustment is a $199M loss on the sale of the low-pressure Fuel Cell business plus the settlement of customer obligations. Power Systems posted a record 29.5 percent segment EBITDA margin. Guidance was raised to +8-11 percent revenue and 17.75-18.50 percent EBITDA, with Power Systems guided to 14-19 percent revenue growth and 25.0-26.0 percent EBITDA.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$8.398B (+3%)",
+      "expected": "$8.34B (Investing.com); approximately $8.33B implied (Zacks)",
+      "verdict": "beat",
+      "result": "Beat on both outlets' figures.",
+      "kpi": "revenue",
+      "usdMillions": 8398,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$4.71 GAAP / $6.15 adjusted",
+      "expected": "$5.61 (Investing.com, GAAP basis) / $5.60 (Zacks, adjusted basis)",
+      "verdict": "miss",
+      "result": "Miss on the GAAP basis, beat on the adjusted basis. The two outlets' estimates are within a cent of each other; only the actual they compare against differs.",
+      "kpi": "eps"
+     },
+     {
+      "name": "EBITDA",
+      "actual": "$1.290B reported (15.4%) / $1.489B adjusted (17.7%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per company release."
+     },
+     {
+      "name": "Net income",
+      "actual": "$654M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per the 8-K.",
+      "kpi": "net-income",
+      "usdMillions": 654,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Power Systems segment",
+      "actual": "$1.956B revenue (+19%), $577M adjusted EBITDA (29.5%)",
+      "expected": "—",
+      "verdict": "beat",
+      "result": "A record segment margin, against $1.649B and 23.6 percent in Q1 2025. Cummins attributes it to accelerating data center demand."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "Reported 2026-08-04. A record revenue quarter that missed on EPS on every outlet's basis — adjusted, GAAP and the S&P Global Market Intelligence / Visible Alpha set carried by StockStory — and the stock fell 7.6 percent to $599.50. Guidance was raised a second time to +10-13 percent revenue and 18.0-18.5 percent EBITDA, with Power Systems guided to 14-19 percent revenue growth and 25.0-25.75 percent segment EBITDA against 22.7 percent in 2025. Power generation as a market is guided up 15 to 25 percent.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$9.46B / $9.5B (+9.4%)",
+      "expected": "$9.33B (Zacks and Investing.com) / $9.31B (StockStory, sourcing S&P Global Market Intelligence and Visible Alpha)",
+      "verdict": "beat",
+      "result": "A record quarter, beating on every published basis by 1.6 to 1.8 percent.",
+      "kpi": "revenue",
+      "usdMillions": 9460,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$6.73 GAAP / $6.94 adjusted",
+      "expected": "$7.26 (Investing.com, GAAP) / $7.33 (Zacks, adjusted) / $7.17 (StockStory) / $7.34 (Barchart, pre-print)",
+      "verdict": "miss",
+      "result": "A miss on all four published estimates and on both accounting bases — the first quarter in the window where the two camps agree. Zacks noted consensus had moved down 15 cents in the prior 30 days.",
+      "kpi": "eps"
+     },
+     {
+      "name": "EBITDA",
+      "actual": "$1.7B (17.5% of sales)",
+      "expected": "$1.70B adjusted (StockStory)",
+      "verdict": "miss",
+      "result": "Adjusted EBITDA of $1.65B missed the $1.70B estimate by 2.6 percent per StockStory."
+     },
+     {
+      "name": "Net income",
+      "actual": "$932M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per the 8-K; free cash flow margin 13.2 percent against 6.4 percent a year earlier, operating margin 13.5 percent.",
+      "kpi": "net-income",
+      "usdMillions": 932,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Power Systems segment",
+      "actual": "$2.3B revenue (+19%), $552M EBITDA (24.5%)",
+      "expected": "—",
+      "verdict": "beat",
+      "result": "Record segment revenue, with North America and international both up 19 percent, driven primarily by increased power generation demand, particularly for data center markets."
+     }
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "label": "Cummins IR — organizational updates",
+   "url": "https://investor.cummins.com/news/detail/703/cummins-investor-relations-announces-organizational-updates",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "Cummins — selected to supply BESS for large US data center project",
+   "url": "https://investor.cummins.com/news/detail/702/cummins-selected-to-supply-battery-energy-storage-systems",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "Businesswire — Cummins selected to supply BESS",
+   "url": "https://www.businesswire.com/news/home/20260818513062/en/Cummins-selected-to-supply-battery-energy-storage-systems-for-large-U.S.-data-center-project",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "Interesting Engineering — Cummins BESS 5 MWh LFP detail",
+   "url": "https://interestingengineering.com/energy/cummins-bess-ai-data-centers-power-fluctuations",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "Zacks via Yahoo — Q2 2026 recap, adjusted basis",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cmi-q2-earnings-call-points-140000006.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Cummins — Q2 2026 results",
+   "url": "https://investor.cummins.com/news/detail/701/cummins-reports-strong-second-quarter-2026-results-raises",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "SEC Form 8-K exhibit — Q2 2026 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/26172/000002617226000026/cmi2026q28-kex99.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Investing.com — Q2 2026 earnings call transcript (hyperscaler framework, 2028 sell-out)",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-cummins-q2-2026-revenue-beats-eps-misses-as-shares-fall-93CH-4835083",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "StockStory — Q2 CY2026, S&P Global Market Intelligence and Visible Alpha consensus",
+   "url": "https://stockstory.org/us/stocks/nyse/cmi/news/earnings/cummins-nysecmi-posts-better-than-expected-sales-in-q2-cy2026-but-stock-drops",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Cummins — phased Model Year 2027 product launch plan",
+   "url": "https://investor.cummins.com/news/detail/700/cummins-announces-phased-model-year-2027-product-launch-plan",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Zacks via Yahoo — Q2 2026 preview",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cummins-gears-report-q2-earnings-150900708.html",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Barchart via Yahoo — FY2026 and FY2027 consensus",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heres-expect-cummins-next-earnings-092800298.html",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Cummins — quarterly dividend increase",
+   "url": "https://investor.cummins.com/news/detail/699/cummins-inc-increases-quarterly-common-stock-dividend",
+   "date": "2026-07-13"
+  },
+  {
+   "label": "EPA — Cummins settlement nationwide recall program overview",
+   "url": "https://www.epa.gov/enforcement/cummins-settlement-nationwide-recall-program-overview",
+   "date": "2026-07-10"
+  },
+  {
+   "label": "Cummins — DEF inducement calibrations",
+   "url": "https://investor.cummins.com/news/detail/698/cummins-supports-customers-with-updated-def-inducement",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "Cummins — Centum QSK78 introduced to the 50 Hz market",
+   "url": "https://www.cummins.com/en-na/news/releases/2026/06/18/cummins-power-generation-introduces-latest-its-high-horse-power-centum",
+   "date": "2026-06-18"
+  },
+  {
+   "label": "Cummins — natural gas gen-sets for West Texas data centers (Circe Energy)",
+   "url": "https://investor.cummins.com/news/detail/697/cummins-natural-gas-generators-to-power-large-scale-data",
+   "date": "2026-06-16"
+  },
+  {
+   "label": "Power Engineering — Cummins gas generators for Circe Energy microgrid",
+   "url": "https://www.power-eng.com/onsite-power/cummins-to-provide-gas-generators-for-texas-data-center-microgrid/",
+   "date": "2026-06-16"
+  },
+  {
+   "label": "mgrid.org — Circe Energy 2 GW behind-the-meter detail",
+   "url": "https://mgrid.org/2026/06/16/cummins-to-power-circe-energys-west-texas-ai-data-centers-with-2-gw-of-behind-the-meter-gas-generation/",
+   "date": "2026-06-16"
+  },
+  {
+   "label": "TIKR — 2026 Analyst Day, $450M and 20 GW",
+   "url": "https://www.tikr.com/blog/cummins-analyst-day-raises-2030-revenue-target-to-50-billion-heres-the-fuller-picture",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "TheStreet via Yahoo — Analyst Day product roadmap and Morgan Stanley view",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-sends-clear-cummins-202300551.html",
+   "date": "2026-05-23"
+  },
+  {
+   "label": "Cummins — 2026 Analyst Day slide deck (PDF)",
+   "url": "https://d1io3yog0oux5.cloudfront.net/_140fb24bd426158bbc4d7e1b7f361baa/cummins/db/784/8364/pdf/2026+Analyst+Day+Slides+-+Final+v2.pdf",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "Cummins — raises 2030 financial targets, announces capacity and product investments",
+   "url": "https://investor.cummins.com/news/detail/696/cummins-raises-2030-financial-targets-announces",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "The Republic — Whitestown distribution centre closure, 59 workers",
+   "url": "https://www.therepublic.com/2026/05/06/cummins-to-close-warehouse-lay-off-59-workers/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Cummins — Q1 2026 results",
+   "url": "https://investor.cummins.com/news/detail/694/cummins-delivered-strong-operating-results-and-returned",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "SEC Form 8-K exhibit — Q1 2026 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000026172/000002617226000013/cmi2026q18-kex99.htm",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Zacks via Yahoo Canada — Q1 2026 adjusted EPS beat",
+   "url": "https://ca.finance.yahoo.com/news/cummins-cmi-q1-earnings-revenues-131504570.html",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "SEC Form 10-Q — Q1 2026 (tariff commentary)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000026172/000002617226000016/cmi-20260331.htm",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Mordor Intelligence — data center generator market, concentration and lead times",
+   "url": "https://www.mordorintelligence.com/industry-reports/data-center-generator-market",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Rehlko — secures another 1.7 GW of hyperscale backup power orders",
+   "url": "https://www.prnewswire.com/news-releases/rehlko-secures-another-1-7-gigawatts-of-backup-power-orders-supporting-hyperscale-data-center-growth-302757225.html",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Cummins — America250 sponsorship",
+   "url": "https://investor.cummins.com/news/detail/693/cummins-announces-sponsorship-of-america250-to-support",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "Cummins — $500 offer under Emissions Recall 67A",
+   "url": "https://investor.cummins.com/news/detail/691/cummins-offers-500-for-emissions-recall-67a-on-ram-diesel",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "SEC Form 10-K — FY2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/26172/000002617226000009/cmi-20251231.htm",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Cummins — Q4 and FY2025 results",
+   "url": "https://investor.cummins.com/news/detail/689/cummins-reports-strong-fourth-quarter-and-full-year-2025",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Investing.com — Q4 2025 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-cummins-q4-2025-misses-eps-forecast-stock-drops-93CH-4488438",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "gasworld — Cummins to stop new electrolyzer activity after $458M of charges",
+   "url": "https://www.gasworld.com/story/cummins-to-stop-new-electrolyser-activity-after-458m-hydrogen-related-charges/2244189.article/",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Cummins — Data Center Brochure, Bulletin 5600261_0126 (PDF)",
+   "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0059090.pdf",
+   "date": "2026-01"
+  },
+  {
+   "label": "Rosen Law Firm — proposed class action settlement notice, Baker v. Cummins",
+   "url": "https://www.globenewswire.com/news-release/2026/01/15/3219580/0/en/the-rosen-law-firm-p-a-announces-proposed-class-action-settlement-on-behalf-of-purchasers-of-cummins-inc-publicly-traded-common-stock-cmi.html",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "Cummins — Battery Energy Storage Systems brochure, Bulletin 6603667_0226 (PDF)",
+   "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0079941.pdf",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "The Republic — guidance not reinstated after the Q2 2025 beat",
+   "url": "https://www.therepublic.com/2025/08/06/exceeding-expectations-cummins-cites-increasing-economic-uncertainty-after-withdrawing-guidance/",
+   "date": "2025-08-06"
+  },
+  {
+   "label": "SEC Form 10-Q — Q2 2025 (tariff cost $22M)",
+   "url": "https://www.sec.gov/Archives/edgar/data/26172/000002617225000031/cmi-20250630.htm",
+   "date": "2025-08-05"
+  },
+  {
+   "label": "Cummins — Q2 2025 results",
+   "url": "https://investor.cummins.com/news/detail/684/cummins-reports-second-quarter-2025-results",
+   "date": "2025-08-05"
+  },
+  {
+   "label": "Cummins — Q3 2025 results",
+   "url": "https://investor.cummins.com/news/detail/687/cummins-reports-strong-third-quarter-operating-results",
+   "date": "2025-11-06"
+  },
+  {
+   "label": "GuruFocus — Q3 2025 consensus and actual",
+   "url": "https://www.gurufocus.com/news/3190179/cummins-inc-cmi-q3-2025-earnings-revenue-beats-at-83b-eps-misses-at-386",
+   "date": "2025-11-06"
+  },
+  {
+   "label": "Transport Topics — UBS estimate of data-center generator revenue",
+   "url": "https://www.ttnews.com/articles/cummins-caterpillar-data",
+   "date": "2025-10-28"
+  },
+  {
+   "label": "POWER Magazine — gas generators for prime power and grid interconnection waits",
+   "url": "https://www.powermag.com/data-centers-are-turning-to-gas-generators-for-prime-power-to-eliminate-long-lead-times-for-grid-connections/",
+   "date": "2025-10-28"
+  },
+  {
+   "label": "Cummins — Komatsu mining hybrid collaboration",
+   "url": "https://investor.cummins.com/news/detail/685/cummins-and-komatsu-to-collaborate-on-joint-mining-hybrid",
+   "date": "2025-09-16"
+  },
+  {
+   "label": "Cummins — Matthew Tsien elected to the Board",
+   "url": "https://investor.cummins.com/news/detail/682/cummins-elects-matthew-tsien-to-its-board-of-directors",
+   "date": "2025-07-14"
+  },
+  {
+   "label": "Cummins — Centum Series wins 2025 Product of the Year Gold",
+   "url": "https://www.cummins.com/en-na/news/releases/2025/06/04/centumtm-series-generators-1750-2000-kw-2750-3000-kw-secure-latest-product",
+   "date": "2025-06-04"
+  },
+  {
+   "label": "Cummins — containerised BESS product line launch",
+   "url": "https://www.cummins.com/news/2025/06/03/cummins-launches-containerised-bess-product-line",
+   "date": "2025-06-03"
+  },
+  {
+   "label": "Cummins — Centum Force containerized power",
+   "url": "https://www.cummins.com/news/2025/05/27/cummins-centum-force-redefines-containerized-power",
+   "date": "2025-05-27"
+  },
+  {
+   "label": "Morningstar — fantastic quarter but guidance withdrawn amid tariff uncertainty",
+   "url": "https://www.morningstar.com/company-reports/1282389-cummins-earnings-fantastic-quarter-but-guidance-withdrawn-amid-tariff-uncertainty",
+   "date": "2025-05-06"
+  },
+  {
+   "label": "Indianapolis Business Journal — Cummins withdraws 2025 guidance",
+   "url": "https://www.ibj.com/articles/cummins-withdraws-2025-financial-guidance-amidst-tariff-uncertainty",
+   "date": "2025-05-06"
+  },
+  {
+   "label": "Cummins — Q1 2025 results",
+   "url": "https://investor.cummins.com/news/detail/680/cummins-reports-first-quarter-2025-results",
+   "date": "2025-05-05"
+  },
+  {
+   "label": "Cummins — John Gaidoo appointed Chief Legal Officer",
+   "url": "https://investor.cummins.com/news/detail/679/cummins-announces-appointment-of-john-gaidoo-as-vice",
+   "date": "2025-04-09"
+  },
+  {
+   "label": "Cummins — Nicole Y. Lamb-Hale appointed Chief Administrative Officer",
+   "url": "https://investor.cummins.com/news/detail/677/cummins-announces-appointment-of-nicole-y-lamb-hale-as",
+   "date": "2025-04-02"
+  },
+  {
+   "label": "Cummins — retirement of Sharon Barner",
+   "url": "https://investor.cummins.com/news/detail/674/cummins-announces-retirement-of-sharon-barner-chief",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "Cummins — BESS added to the power generation portfolio",
+   "url": "https://www.cummins.com/news/releases/2025/03/11/cummins-expands-their-power-generation-portfolio-addition-state-art-zero",
+   "date": "2025-03-11"
+  },
+  {
+   "label": "SEC Form 10-K — FY2024",
+   "url": "https://www.sec.gov/Archives/edgar/data/26172/000002617225000007/cmi-20241231.htm",
+   "date": "2025-02-11"
+  },
+  {
+   "label": "Cummins — Q4 and FY2024 results",
+   "url": "https://investor.cummins.com/news/detail/666/cummins-reports-strong-fourth-quarter-and-full-year-2024",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "Zacks via Yahoo — Q4 2024 adjusted EPS beat",
+   "url": "https://finance.yahoo.com/news/cummins-q4-earnings-surpass-expectations-165600166.html",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "GuruFocus — Q4 2024 and FY2024 estimates",
+   "url": "https://www.gurufocus.com/news/2679692/cummins-inc-q4-2024-earnings-revenue-surpasses-estimates-at-84-billion-eps-falls-short-at-302",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "SEC Form 8-K exhibit — Q4 2024 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/26172/000002617225000003/cmi2024q48-kex99.htm",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "Cummins — Liberty Energy variable-speed HSK78G partnership",
+   "url": "https://investor.cummins.com/news/detail/665/cummins-and-liberty-energy-partner-to-develop-and-deploy",
+   "date": "2025-01-29"
+  },
+  {
+   "label": "NHTSA recall 24E-078 — X15 fuel pump barrels (PDF)",
+   "url": "https://static.nhtsa.gov/odi/rcl/2024/RCMN-24E078-1468.pdf",
+   "date": "2025-01-15"
+  },
+  {
+   "label": "Businesswire — Atmus Filtration separation final results",
+   "url": "https://www.businesswire.com/news/home/20240318925736/en/Cummins-Announces-Final-Results-of-Exchange-Offer-and-Finalizes-Separation-of-Atmus-Filtration-Technologies-Inc.",
+   "date": "2024-03-18"
+  },
+  {
+   "label": "EPA — 2024 Cummins vehicle emission control violations settlement",
+   "url": "https://www.epa.gov/enforcement/2024-cummins-inc-vehicle-emission-control-violations-settlement",
+   "date": "2024-01-10"
+  },
+  {
+   "label": "Cummins — DMC8000 digital master controls launch",
+   "url": "https://investor.cummins.com/news/detail/485/cummins-launches-new-digital-master-controls-for-total",
+   "date": "2020-10-18"
+  },
+  {
+   "label": "Cummins — QSK95 Series brochure, 5410916 (PDF)",
+   "url": "https://www.cummins.com/sites/default/files/2024-08/QSK95-Gen-sets-5410916_0420.pdf",
+   "date": "2020-04"
+  },
+  {
+   "label": "Natural Gas Intelligence — reciprocating-engine capacity race",
+   "url": "https://naturalgasintel.com/news/no-turbine-data-centers-find-faster-path-with-natural-gas-reciprocating-engines/",
+   "date": "2026-05-29"
+  },
+  {
+   "label": "Power Engineering — engines and aeroderivatives take a larger role",
+   "url": "https://www.power-eng.com/gas/data-center-power-crunch-lifts-engines-aeroderivatives-into-larger-role/",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "highways.today — standby power and the AI data-centre buildout",
+   "url": "https://highways.today/2026/08/12/standby-power-ai-data-centre/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "savrn.com — data-center supply chain, gen-set lead times",
+   "url": "https://savrn.com/research/data-center-supply-chain-crisis",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "Terrapin Consulting Group — switchgear, transformer and generator lead times 2026",
+   "url": "https://terrapincg.com/news/switchgear-transformer-generator-lead-times-2026",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Fortune Business Insights — data center generator market (Caterpillar 18% / Cummins 16%)",
+   "url": "https://www.fortunebusinessinsights.com/data-center-generator-market-114458",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "allaboutlawyer — Baker v. Cummins $1.6M securities settlement detail",
+   "url": "https://allaboutlawyer.com/cummins-inc-1-6-million-securities-class-action-settlement-shareholders-who-bought-stock-during-epa-emissions-scandal-get-0-22-per-share/",
+   "date": "2026-01-19"
+  },
+  {
+   "label": "Cummins — PowerCommand Transfer Switches brochure, Bulletin 6317704 (PDF)",
+   "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0070965.pdf",
+   "date": "2025-01"
+  },
+  {
+   "label": "Cummins — Data Center Continuous (DCC) ratings white paper, Bulletin 5600406 (PDF)",
+   "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0059642.pdf",
+   "date": "2025-02"
+  },
+  {
+   "label": "Cummins — Centum Series brochure, Bulletin 6398428 (PDF)",
+   "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0071487.pdf",
+   "date": "2024-12"
+  },
+  {
+   "label": "Cummins — PowerHour: specifying standby generator set requirements for data centers (PDF)",
+   "url": "https://www.cummins.com/sites/default/files/2023-04/Specifying%20Standby%20Generator%20Set%20Requirements%20for%20Data%20Centers%202022-08-10.pdf",
+   "date": "2022-08-10"
+  },
+  {
+   "label": "Cummins — Data Center Continuous (DCC) Generator Set Ratings Guide, Bulletin 5410875 (PDF)",
+   "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0058394.pdf",
+   "date": "2014-03"
+  },
+  {
+   "label": "MarketsandMarkets — data center generators companies ranking",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp"
+  },
+  {
+   "label": "Cummins — QSK95-G9 specification sheet, 60 Hz (PDF)",
+   "url": "https://www.cummins.com/sites/default/files/2019-06/QSK95G9.pdf"
+  },
+  {
+   "label": "Cummins — QSK95-G10 specification sheet, 50 Hz (PDF)",
+   "url": "https://www.cummins.com/sites/default/files/2019-06/QSK95G10.pdf"
+  },
+  {
+   "label": "Cummins — QSK95-G5 specification sheet, 50 Hz (PDF)",
+   "url": "https://www.cummins.com/sites/default/files/2019-06/QSK95G5.pdf"
+  },
+  {
+   "label": "Cummins — HSK78G specification sheet, NAS-6109-EN (PDF)",
+   "url": "https://www.cummins.com/sites/default/files/2019-08/Spec-Sheet-HSK78G-50Hz_2.pdf"
+  },
+  {
+   "label": "Cummins — BESS key advantages sheet (PDF)",
+   "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0079939.pdf"
+  },
+  {
+   "label": "Cummins — DMC8000 product page",
+   "url": "https://www.cummins.com/generators/dmc8000"
+  },
+  {
+   "label": "Cummins — investor leadership team",
+   "url": "https://investor.cummins.com/company-info/leadership-team"
+  },
+  {
+   "label": "Cummins — investor relations calendar",
+   "url": "https://investor.cummins.com/events-presentations/ir-calendar"
+  },
+  {
+   "label": "SEC EDGAR — Cummins submissions metadata",
+   "url": "https://data.sec.gov/submissions/CIK0000026172.json"
+  },
+  {
+   "label": "STAMFORD | AvK — alternator downloads",
+   "url": "https://www.stamford-avk.com/downloads"
+  },
+  {
+   "label": "Investing.com — Cummins earnings calendar and consensus history",
+   "url": "https://www.investing.com/equities/cummins-inc-earnings"
+  },
+  {
+   "label": "TipRanks — Cummins earnings page (next date listed as confirmed)",
+   "url": "https://www.tipranks.com/stocks/cmi/earnings"
+  },
+  {
+   "label": "Market Chameleon — Cummins projected earnings dates",
+   "url": "https://marketchameleon.com/Overview/CMI/Earnings/Earnings-Dates/"
+  },
+  {
+   "label": "Strategic Claims Services — Baker v. Cummins case page",
+   "url": "https://www.strategicclaims.net/case/cummins/"
+  }
+ ],
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
+}

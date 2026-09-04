@@ -57,8 +57,8 @@
         "swepco.com",
         "aepenergy.com"
       ],
-      "srcTotal": 142,
-      "srcFirstPct": 51,
+      "srcTotal": 143,
+      "srcFirstPct": 50,
       "kpiNorm": true
     },
     {
@@ -284,13 +284,13 @@
       "hq": "Irving, TX, USA",
       "ticker": "NYSE: CAT",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-04",
       "domains": [
         "caterpillar.com",
         "cat.com",
         "solarturbines.com"
       ],
-      "srcTotal": 127,
+      "srcTotal": 128,
       "srcFirstPct": 46,
       "kpiNorm": true
     },
@@ -403,6 +403,26 @@
       "srcTotal": 17,
       "srcFirstPct": 47,
       "kpiNorm": false
+    },
+    {
+      "slug": "cummins",
+      "name": "Cummins",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Number-two data-center gen-set OEM; Power Systems spans engines, alternators, paralleling switchgear and battery storage",
+      "hq": "Columbus, IN, USA",
+      "ticker": "NYSE: CMI",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "cummins.com",
+        "stamford-avk.com",
+        "d1io3yog0oux5.cloudfront.net"
+      ],
+      "srcTotal": 96,
+      "srcFirstPct": 60,
+      "kpiNorm": true
     },
     {
       "slug": "delta-electronics",
@@ -1354,6 +1374,47 @@
       "srcTotal": 14,
       "srcFirstPct": 50,
       "kpiNorm": true
+    },
+    {
+      "slug": "rehlko",
+      "name": "Rehlko",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Formerly Kohler Energy; the only gen-set OEM that also builds a three-phase static UPS and MV paralleling switchgear",
+      "hq": "Glendale, WI, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "rehlko.com",
+        "ups.rehlko.co.uk",
+        "clarke-energy.com",
+        "heilatech.com",
+        "kohlerpower.com",
+        "kohlerenergy.com"
+      ],
+      "srcTotal": 91,
+      "srcFirstPct": 66,
+      "kpiNorm": false
+    },
+    {
+      "slug": "rolls-royce-power-systems",
+      "name": "Rolls-Royce Power Systems",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The mtu brand: diesel and gas gen-sets, a diesel-rotary UPS, grid-scale batteries and modular gas power plants",
+      "hq": "Friedrichshafen, Germany",
+      "ticker": "LSE: RR. (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "rolls-royce.com",
+        "mtu-solutions.com"
+      ],
+      "srcTotal": 103,
+      "srcFirstPct": 71,
+      "kpiNorm": false
     },
     {
       "slug": "rosendin",

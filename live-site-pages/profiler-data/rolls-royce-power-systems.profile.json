@@ -1,0 +1,1700 @@
+{
+ "schemaVersion": 7,
+ "slug": "rolls-royce-power-systems",
+ "name": "Rolls-Royce Power Systems AG",
+ "shortName": "Rolls-Royce Power Systems",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.mtu-solutions.com",
+ "headquarters": "Friedrichshafen, Germany",
+ "employees": "More than 11,000 (division; Rolls-Royce press-release boilerplate, 2026)",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "LSE: RR. (parent, Rolls-Royce Holdings plc)"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Rolls-Royce Power Systems is the third-ranked data-center gen-set OEM and the fastest-growing of the four, with divisional revenue up 19 percent in FY2025 and 28 percent in the first half of 2026, an operating margin that went from 13.1 to 20.3 percent in eighteen months, and a book-to-bill of 1.8 times — a re-rating driven so heavily by data centers that Citigroup's August 2026 sum-of-the-parts makes Power Systems the largest single contributor to the value of the listed parent, ahead of Civil Aerospace. BACKGROUND. The Friedrichshafen-based division of Rolls-Royce Holdings plc (LSE: RR.), selling under the mtu brand, with Rolls-Royce Solutions GmbH as its largest subsidiary and MTU Friedrichshafen GmbH as the legal entity. More than 11,000 employees; the group is represented in 48 countries and supplies customers in more than 100. The division reports twice: inside the parent's segment accounts in sterling (FY2025 revenue £4,892m, underlying operating profit £852m, order intake £6.1bn) and on its own account in euros (FY2025 adjusted revenue €5.72bn, adjusted operating profit €995m, order intake €7.14bn) — the company itself cross-walks the two. Five strategic initiatives: energy generation, defence, marine, battery storage and service.",
+ "ecosystemRole": "We assess Rolls-Royce Power Systems as the widest single-vendor product span in on-site data-center power that this corpus tracks: diesel gen-sets to 4,000 kVA, gas gen-sets and CHP, a diesel-rotary uninterruptible power supply in the mtu Kinetic PowerPack, a grid-scale battery line in the mtu EnergyPack, a microgrid controller in mtu EnergetIQ, and, since February 2026, prefabricated 10, 20 and 30 MW gas power-plant modules aimed explicitly at bridge power. Its own commercial framing is the same: the VP of powergen sales for the Americas states that this makes it \"the only major and experienced player offering diesel and gas gensets plus dynamic UPS systems.\" Basis: the mtu data-center landing page, the Kinetic PowerPack product data, the EnergyPack QS/QL/QG datasheets and the MEPP launch. Collection gap: the breadth is verifiable and the customer list is not — no hyperscaler, colocation landlord or neocloud in this corpus is named as a gen-set customer in any first-party or third-party source, and the company's own H1 2026 results refer only to unnamed \"framework agreements with data centre customers.\"",
+ "productsAndServices": [
+  {
+   "name": "mtu Series 4000 diesel generator sets — 1,600 to 4,000 kVA (50 Hz) / 1,125 to 3,250 kWe (60 Hz)",
+   "category": "Backup generation",
+   "description": "The flagship data-center line. Per the product brochure the family is \"available in six different power ratings, including standby, prime and continuous\" across 12V, 16V and 20V engines on a 90-degree V with a 170/210 mm bore and stroke, 4.77 litres per cylinder — 57.2 L on the 12V, 76.3 L on the 16V and 95.4 L on the 20V — at a 16.4:1 compression ratio with common rail to 1,800 bar. The 50 Hz ladder runs 12V4000 DS1650 through 20V4000 DS4000; the 60 Hz ladder runs DS1250 to DS3250, the highest published 60 Hz node at 3,250 kWe standby.",
+   "highlights": [
+    "Certified \"for ISO 8528, CE/IEC, NFPA 110 and German Grid Code (VDE-AR-4110)\" — and \"the first generator set in its performance class to be certified by the VDE-AR-4110 according to code MSR2008\"",
+    "Rated across five duties, of which Data center continuous power (3F) carries a 100 percent load factor, unlimited annual hours, 10 percent overload and Uptime Institute Tier III and Tier IV compliance",
+    "\"In case of an emergency, our mtu Series 4000 generator sets will provide their full electrical power within a few seconds\"; the hardest published number is 15 seconds to full electrical output, from the EdgeConneX Amsterdam reference",
+    "Overhaul interval up to 48,000 hours; voltages from 380 V to 11,000 V; radiator packages for 40 and 50 degrees C ambient; circuit breakers to 5,000 A",
+    "\"Fuels according to EN15940 are approved for all Series 4000 system configurations and emission calibrations\" — HVO across the whole range, not a variant",
+    "More than 50,000 units sold and more than 180 million operating hours since 1996"
+   ],
+   "positioning": "Ranked third in data-center generators for 2025 by MarketsandMarkets behind Caterpillar and Cummins, credited with traction \"in high-density AI and hyperscale environments.\" A lead-time survey by Terrapin Consulting Group states that \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" — which is the company's own claimed differentiator: it says it competes \"on power density, speed of back-up and service.\"",
+   "soldThrough": "Direct plus a distributor network of more than 420 sales and service partners, and system integrators — AVK holds exclusivity for mtu emergency-power gen-sets in the UK and Ireland to 2031",
+   "targetSegments": "Data centers and mission-critical, healthcare, airports, industrial plants, decentralised power stations, microgrids",
+   "roadmap": "\"Our next generation Series 4000 engine, to be released in 2028, which targets the data centre market with a significantly improved power density\" — reported at more than 20 percent additional power output, having completed 500 hours of test-bench running by FY2025 results"
+  },
+  {
+   "name": "mtu Series 2000 and Series 1600 diesel generator sets — 590 to 1,270 kVA",
+   "category": "Backup generation",
+   "description": "The mid and lower nodes. Series 2000 covers 770 to 1,270 kVA at 50 Hz and 680 to 1,250 kWe at 60 Hz; Series 1600, upgraded for the 50 Hz market in February 2025, covers 590 to 1,000 kVA on a 12V1600 Gx1 engine delivering up to 996 kWm — 40 percent more power than its predecessor.",
+   "highlights": [
+    "Series 2000 accepts \"extremely high load steps without significant frequency and voltage deviations, overachieving ISO 8528-5 performance class G2 and G3\", with \"100% block load acceptance according to NFPA 110 requirements\"",
+    "Series 2000 was \"the first genset in its performance class to be certified according to grid code VDE-AR-N 4110\"",
+    "Series 1600 is compliant with \"ISO 8528 DCP (Data Center Power)\" and the Uptime Institute Tier III and Tier IV topology levels, with load factors up to 100 percent",
+    "\"All mtu Series 1600 generator sets are approved for synthetic fuels such as hydrogenated/hydrotreated vegetable oil (HVO)\"",
+    "Series 2000 engine assembly was relocated to the Kluftern plant, opened in 2023 at roughly 30 million euros with 110 staff, to free Friedrichshafen Plant 2 for Series 4000"
+   ],
+   "positioning": "The edge and smaller-hall range, and the node band where Cummins and Rehlko are described as most competitive",
+   "soldThrough": "Distributors and system integrators",
+   "targetSegments": "Edge and enterprise data centers, healthcare, commercial standby"
+  },
+  {
+   "name": "mtu Series 4000 gas generator sets and CHP — 776 to 2,547 kWe",
+   "category": "Prime and continuous generation",
+   "description": "The lean-burn gas line, offered as combined heat and power and combined heat, power and cooling. The 60 Hz natural-gas table runs the 8V4000 GS at 997 kWel through the 20V4000 GS at 2,520 kWel, all on the L64FNER engine at 43.6 to 43.9 percent electrical efficiency and 88.6 to 89.0 percent total efficiency with a methane number requirement of 72 or better. Time before overhaul is 84,000 hours.",
+   "highlights": [
+    "Existing units reach full load in 120 seconds; the new 20V4000 L64 for 60 Hz delivers 2.8 MW in 45 seconds from 2026, a 10 percent output increase on the previous version and a gearbox-free design",
+    "The 45-second figure is the company's answer to the load-acceptance objection that normally disqualifies gas from data-center duty — against Caterpillar's roughly seven seconds on the G3516 and Jenbacher's two minutes on the J920",
+    "H2-ready certificate from TUV Sud for the current Series 4000 FNER and FV gas engines; 100 percent hydrogen CHP plants operational since summer 2025",
+    "Deployed in a 10 MW UK plant at Worksop with carbon-dioxide recovery of up to 30,000 tonnes a year, and in 24 containerised 10 MW units totalling 60 MW for the Dutch grid operator Stedin to relieve grid bottlenecks from 2026 to 2036"
+   ],
+   "positioning": "The prime-power line, historically less than 10 percent of the division's power-generation business and targeted at 15 to 20 percent by 2030",
+   "soldThrough": "Direct, EPC and distributor",
+   "targetSegments": "Data-center bridge and prime power, cogeneration, grid support, industrial"
+  },
+  {
+   "name": "mtu Kinetic PowerPack — diesel rotary uninterruptible power supply, 480 to 3,000 kVA",
+   "category": "Uninterruptible power",
+   "description": "A battery-free dynamic UPS: an mtu diesel engine, a four-pole synchronous machine, a kinetic energy accumulator and an electromagnetic clutch on a single base frame with redundant start, manufactured in Liege, Belgium. Sold as the KP5 and KP7 from 480 kVA / 400 kW to 2,750 kVA / 2,640 kW, with solution-guide tables reaching 3,000 kVA / 2,400 kW at 60 Hz. It is the reason the division can claim diesel, gas and UPS from one supplier.",
+   "highlights": [
+    "\"Reducing its footprint to 40% of an equivalently rated static UPS system - making it the smallest in the market\"",
+    "20-plus years' design life and a 10-year bearing life, with vibration reduced by more than 97 percent",
+    "Conditions supply to within plus or minus 0.4 Hz and plus or minus 10 percent, and delivers 17 times nominal current into a short circuit — a fault-current contribution a static UPS cannot match",
+    "Published in both Standby power (3D) and Data center continuous power (3F) ratings at 50 and 60 Hz",
+    "Emissions options include US EPA stationary emergency Tier 2 (40 CFR 60), US Nonroad Tier 2 and Tier 3, EU Nonroad Stage II and NEA Singapore",
+    "Two 1,500 kW units supplied to NOVVA Data Centers in Colorado Springs in June 2024"
+   ],
+   "positioning": "The rotary UPS is a small and specialised segment where Piller is the corpus's other covered vendor; Rolls-Royce is unusual in selling it alongside the engines rather than as a standalone franchise.",
+   "soldThrough": "Direct and through regional distributors",
+   "targetSegments": "Colocation and hyperscale data centers, semiconductor fabs, broadcast"
+  },
+  {
+   "name": "mtu EnergyPack — battery energy storage, cabinet to grid scale",
+   "category": "Energy storage",
+   "description": "Three current products. The QS outdoor cabinet runs to 625 kWh and 400 kVA on NMC cells; the QL, a complete system inside a 40-foot high-cube container, runs to 2,084 kWh and 2,000 kVA on NCM with 50 kA short-circuit capability; the QG is the grid-scale line, scaling from base units of 3 to 36 MWh and 3 to 9 MVA on \"latest LFP cell chemistry with zero degradation as an option,\" delivered at 10 to 33 kV as an all-in-one solution with medium and high-voltage integration. All three are controlled by mtu EnergetIQ.",
+   "highlights": [
+    "QS and QL both offer \"grid-supporting & grid-forming mode\" with controlled switching between them, plus black start — the capability that lets a battery hold an islanded site while engines start",
+    "QG publishes a system response time of about 150 ms with \"grid-forming capability, virtual inertia, and black start functionality\", 1 to 4 hour discharge (0.25 to 1 C), and cells claimed to give \"zero degradation for up to five years and up to 15,000+ cycle lifetime\"",
+    "Extended warranties to 15 years, with long-term service agreements carrying performance and availability guarantees",
+    "More than 150 projects in 45 countries and more than 635 MWh installed; the business reached breakeven in FY2025",
+    "Largest order to date: 582 MWh / 291 MW for Ignitis Group across three Lithuanian sites from 2027. Also 490 MWh for Sunly in Latvia and 43 MW / 86 MWh for Voltaria in Falkirk, Scotland on CATL cells with a 15-year service agreement",
+    "The deployments are grid and utility scale: no data-center EnergyPack installation was found in any source. The data-center storage product is the Kinetic PowerPack, which is a rotary UPS, not a battery"
+   ],
+   "positioning": "Positioned as \"the leading supplier of battery storage in the Baltic states\" with more than 1,500 MWh contracted there; front-of-meter grid firming rather than behind-the-meter data-center storage",
+   "soldThrough": "EPC and turnkey, including planning, permitting support, construction, commissioning and long-term service",
+   "targetSegments": "Utilities, IPPs, renewables firming, grid stability",
+   "roadmap": "Guidance is for double-digit original-equipment revenue growth in BESS to the mid-term"
+  },
+  {
+   "name": "mtu EnergetIQ — microgrid and BESS control",
+   "category": "Controls and software",
+   "description": "Two products: the EnergetIQ BESS Controller for battery control, protection and analytics, and the EnergetIQ Manager, described as a \"SCADA system, switch gear- and power plant controller, application manager, microgrid controller.\" The Manager carries twelve modules spanning data management, a group controller, a system optimizer using model-predictive control with AI load prediction and weather and price forecasts, and asset controllers for fuel cells, electrolyzers, BESS, renewables, gen-sets and CHP, dynamic UPS, fuel storage and switchgear.",
+   "highlights": [
+    "Operates \"on-grid, off-grid, on- & off-grid\" with controller, ethernet and I/O redundancy options",
+    "Speaks OPC-UA, Modbus TCP and RTU, Profibus DP, ProfiNet, DNP3, IEC 60870-5-101/103/104 and IEC 61850 — the protocol list is the measure of how many third-party seams it has to cross",
+    "\"Certified according to IEC 62443-4-1 ML2 and aligned with ISO 27001 and NIST2 requirements\"",
+    "Names switchgear as \"the electrical backbone\" of the controlled plant"
+   ],
+   "positioning": "The layer that makes a diesel, gas, battery and UPS portfolio behave as one plant — and the differentiation a single-source buyer is actually purchasing",
+   "soldThrough": "Bundled with EnergyPack and MEPP scopes, and sold into microgrid projects",
+   "targetSegments": "Microgrids, islanded campuses, hybrid data-center plants"
+  },
+  {
+   "name": "Modular Engine Power Plants (MEPP) — 5 MW to 100 MW and beyond",
+   "category": "Prime and continuous generation",
+   "description": "Launched February 2026: prefabricated gas power-plant modules in 10 MW and 20 MW \"Power Squad\" and 30 MW \"Power Tower\" configurations, scaling from 5 MW to several hundred megawatts, with a stated lead time of 12 to 18 months from order placement. Hydrogen-ready and capable on biomethane and biogas.",
+   "highlights": [
+    "Applications named at launch include grid backup, renewables firming, data centres and bridge power \"until grid or alternative power source connection\" — the first time the division has productised the bridge-power case",
+    "Reference plants cited: Ahlen Germany 12 MW, Chatterley Whitfield UK 20 MW, Pekanbaru Indonesia 33 MW, Myingyan Myanmar 150 MW, Atacama Chile 294 MW",
+    "Senior VP Strategy Michael Stipa at launch: \"True resilience comes from decentralization, not centralization\"",
+    "Business Unit president Tobias Ostermaier framed it as implementing the German Government's Power Plant Strategy \"quickly and economically\" — a policy-driven demand channel alongside the data-center one"
+   ],
+   "positioning": "The answer to a grid-connection queue measured in years; competes with Wartsila, INNIO/Jenbacher and Caterpillar's gas fleets for bridge duty",
+   "soldThrough": "EPC and turnkey",
+   "targetSegments": "Data centers awaiting grid connection, grid operators, renewables firming"
+  },
+  {
+   "name": "Gendrive engines sold to gen-set packagers",
+   "category": "Components",
+   "description": "Series 4000 Gx4 engines sold bare to third-party gen-set builders with published 3D, 3E and 3F ratings. At 1,500 rpm the range runs from the 12V G74F at 1,575 kW to the 20V4000 G94LF at 3,308 kW; at 1,800 rpm from the 12V G74S at 1,736 kW to the 20V4000 G94S at 3,490 kW.",
+   "highlights": [
+    "The Gendrive spec sheet carries the division's cleanest rating-definition table, distinguishing standby (3D), prime for stationary emergency (3E) and data center continuous power (3F) by load factor, annual hours and overload capability",
+    "Emission optimisations offered include US EPA Nonroad Tier 2 stationary (40 CFR 60), US EPA Nonroad Tier 2 (40 CFR 89), NEA Singapore for ORDE and China NRMM Stage III",
+    "Selling engines to packagers puts mtu inside competitors' gen-sets, the mirror image of Cummins' alternator business"
+   ],
+   "positioning": "A merchant engine franchise beneath the branded gen-set business",
+   "soldThrough": "OEM-merchant to gen-set packagers",
+   "targetSegments": "Gen-set OEMs and packagers worldwide"
+  },
+  {
+   "name": "Service and aftermarket — mtu ValueCare Agreements",
+   "category": "Services",
+   "description": "Maintenance, repair and overhaul, annual checks, technical documentation, training, commissioning, genuine parts, consumables and remanufactured products, delivered through more than 350 service partners. Services revenue was £1,459m in FY2025, up 12 percent, and 70 percent of divisional revenue in the first half of 2026.",
+   "highlights": [
+    "Services were 70 percent of H1 2026 divisional revenue and grew 17 percent, against original equipment at 30 percent growing 33 percent",
+    "The installed base the service business runs against is stated as more than 85,000 mtu emergency power systems and more than 17 GW of installed capacity with mtu engines",
+    "The AVK framework is an integrator relationship rather than a service one: more than 600 mtu gen-sets supplied to AVK over the past decade"
+   ],
+   "positioning": "The margin ballast under a cyclical equipment business, and the reason divisional margin held up through the transition",
+   "soldThrough": "Service partner network and direct",
+   "targetSegments": "The entire mtu installed base"
+  },
+  {
+   "name": "Governmental, marine and rail",
+   "category": "Adjacent",
+   "description": "The non-power-generation majority of the division's original-equipment mix. Governmental covers the mtu Series 199 for land vehicles and PowerPacks, with a 2025 order for more than 300 Leopard 2 engines and, in the first half of 2026, 350 Series 199 engines for Boxer and roughly 200 compact PowerPacks for Puma. Marine covers Series 2000, 4000 and 8000 propulsion and gen-sets, with methanol-ready certification in August 2026. Rail covers PowerPacks and the Series 4000 R03.",
+   "highlights": [
+    "Governmental original-equipment revenue is guided to grow about 20 percent a year to 2030, marine at 5 to 7 percent",
+    "Recorded here because the division's data-center growth is riding on a business whose defence order book is expanding at a similar rate — capacity is being competed for internally as well as externally"
+   ],
+   "positioning": "Context for the capacity constraint rather than an ecosystem capability",
+   "soldThrough": "Direct and government contracting",
+   "targetSegments": "Defence ministries, shipyards, rail operators"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "mtu 20V4000 DS3000 (60 Hz, Data Center Continuous Power, 50 degrees C)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Output",
+     "value": "2,790 kW / 3,487 kVA at 480 V through 13,800 V; 4,195 A at 480 V"
+    },
+    {
+     "band": "Ratings",
+     "label": "Rating class",
+     "value": "Data Center Continuous Power (3F): unlimited operating hours, 10% overload available for one hour in twelve, average load factor up to 100%"
+    },
+    {
+     "band": "Ratings",
+     "label": "Uptime compliance",
+     "value": "Uptime Institute Tier III and Tier IV requirements"
+    },
+    {
+     "band": "Ratings",
+     "label": "Reference conditions",
+     "value": "Nominal ratings at 25 degrees C and 300 metres (77 degrees F and 1,000 feet)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Regulation and quality",
+     "value": "Plus/minus 0.25% voltage regulation no load to full load; 5% maximum total harmonic distortion"
+    },
+    {
+     "band": "Electrical",
+     "label": "Load acceptance",
+     "value": "100% of rated load - one step; accepts rated load in one step per NFPA 110"
+    },
+    {
+     "band": "Electrical",
+     "label": "Short-circuit capability",
+     "value": "Sustained short circuit current of up to 300% of the rated current for up to 10 seconds"
+    },
+    {
+     "band": "Electrical",
+     "label": "Short-circuit kVA at 30% voltage dip",
+     "value": "7,240 (480 V) to 9,163 (13,800 V)"
+    },
+    {
+     "band": "Engine",
+     "label": "Model and configuration",
+     "value": "mtu 20V4000G44S; 4-cycle, 20-V, 95.4 litre (5,822 cu in); bore 17 cm, stroke 21 cm; compression 16.4:1; 1,800 rpm"
+    },
+    {
+     "band": "Engine",
+     "label": "Maximum power and governing",
+     "value": "3,010 kWm (4,036 bhp); electronic isochronous governor (ADEC); steady-state frequency band plus/minus 0.25%"
+    },
+    {
+     "band": "Fuel",
+     "label": "Recommended fuel",
+     "value": "Diesel #2 / HVO"
+    },
+    {
+     "band": "Fuel",
+     "label": "Consumption at 100% / 75% / 50%",
+     "value": "707 L/hr (187 gal/hr); 515 L/hr (136); 361 L/hr (95)"
+    },
+    {
+     "band": "Cooling and exhaust",
+     "label": "Heat rejection",
+     "value": "To coolant 1,070 kW; to after-cooler 720 kW; radiated to ambient 253 kW; fan power 115 kW"
+    },
+    {
+     "band": "Cooling and exhaust",
+     "label": "Air and exhaust",
+     "value": "Aspirating air 246 m3/min; radiator air 3,453 m3/min; exhaust stack 460 degrees C, 612 m3/min; maximum back pressure 8.5 kPa"
+    },
+    {
+     "band": "Design",
+     "label": "Footprint and weight (open power unit)",
+     "value": "7,335 x 3,345 x 3,807 mm (288.8 x 131.7 x 149.9 in); 25,498 kg (56,224 lb)"
+    },
+    {
+     "band": "Design",
+     "label": "Sound",
+     "value": "97.5 dB(A) at 7 m, DCCP full load, Level 0 open power unit"
+    },
+    {
+     "band": "Compliance",
+     "label": "Certification",
+     "value": "Fuel-consumption optimised emissions; ISO 9001:2008 / ISO 14001:2004 facilities; optional seismic (2021 IBC, HCAI pre-approval); optional UL 2200 and CSA C22.2 No.100 / No.14; Performance Assurance Certification tested to ISO 8528-5 for transient response"
+    }
+   ],
+   "notes": "Spec sheet 231245, dated 2026-03. The Data Center Continuous Power rating is the commercial product: same engine, different promise about hours and load factor."
+  },
+  {
+   "product": "mtu 20V4000 DS3250 (60 Hz, Standby, 43 degrees C) — highest published 60 Hz node",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Output",
+     "value": "3,250 kW / 4,062 kVA at 480 V through 13,800 V; 4,886 A at 480 V"
+    },
+    {
+     "band": "Ratings",
+     "label": "Rating class",
+     "value": "Standby: applicable to varying loads for the duration of a power outage; no overload capability; average load factor up to 85%"
+    },
+    {
+     "band": "Ratings",
+     "label": "Permissible duty",
+     "value": "Permissible average power output during 24 hours of operation is approved up to 85%"
+    },
+    {
+     "band": "Engine",
+     "label": "Model and power",
+     "value": "mtu 20V4000G94S; maximum power 3,490 kWm (4,680 bhp) at 1,800 rpm"
+    },
+    {
+     "band": "Fuel",
+     "label": "Consumption at 100% / 75% / 50%",
+     "value": "844 L/hr (223 gal/hr); 644 L/hr; 447 L/hr; fuel diesel #2 / HVO"
+    },
+    {
+     "band": "Cooling",
+     "label": "Heat rejection",
+     "value": "To coolant 1,300 kW; after-cooler 970 kW; radiator ambient capacity 43 degrees C"
+    },
+    {
+     "band": "Design",
+     "label": "Footprint and weight",
+     "value": "7,756 x 3,072 x 3,590 mm; 27,340 kg (60,284 lb); 95.1 dB(A) at 7 m"
+    },
+    {
+     "band": "Compliance",
+     "label": "Emissions",
+     "value": "EPA Tier 2 certified; South Coast Air Quality Management District (SCAQMD)"
+    }
+   ],
+   "notes": "Spec sheet 231221, dated 2026-03. Read against the DS3000 sheet, the pair shows the rating trade directly: 3,250 kW standby at 85 percent load factor, or 2,790 kW continuous at 100 percent with unlimited hours, from the same platform."
+  },
+  {
+   "product": "mtu 20V4000 DS4000 (50 Hz, Standby, fuel-consumption optimised) — highest published 50 Hz node",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "System ratings",
+     "value": "3,950 to 4,000 kVA; 400 V low voltage 3,200 kWel / 4,000 kVA / 5,774 A; 11 kV medium voltage 3,160 kWel / 3,950 kVA / 207 A"
+    },
+    {
+     "band": "Engine",
+     "label": "Model and power",
+     "value": "20V4000G94LF, water charge-air cooling, 1,500 rpm; maximum power 3,308 kWm; 95.4 litre; compression 16.4:1"
+    },
+    {
+     "band": "Fuel",
+     "label": "Approved fuels",
+     "value": "EN 590, Grade No.1-D/2-D (ASTM D975-00), EN 15940 (e.g. HVO)"
+    },
+    {
+     "band": "Fuel",
+     "label": "Consumption at 100% / 75% / 50%",
+     "value": "806 L/hr (202 g/kWh); 565 L/hr (189 g/kWh); 403 L/hr (202 g/kWh)"
+    },
+    {
+     "band": "Cooling and exhaust",
+     "label": "Air and heat",
+     "value": "Combustion air 4.5 m3/s; exhaust after engine 481 degrees C, before turbo 693 degrees C, 11.5 m3/s; maximum back pressure 50 mbar; heat to coolant 1,220 kW; charge-air 840 kW; electric radiator fan power 105 kW at 40 degrees C"
+    },
+    {
+     "band": "Design",
+     "label": "Footprint and weight",
+     "value": "6,343 x 1,810 x 2,421 mm; 20,810 kg dry, less tank"
+    },
+    {
+     "band": "Compliance",
+     "label": "Certification",
+     "value": "CE certification option; unit certificate according to VDE-AR-N 4110; NFPA 110; class G3 per ISO 8528-5; 85% load factor"
+    },
+    {
+     "band": "Performance",
+     "label": "Load-step caveat",
+     "value": "Generator set exceeds load steps according to ISO 8528-5, where changes to the standard parameter sets (alternator-regulator and genset-controller) are necessary"
+    }
+   ],
+   "notes": "Spec sheet 32310781, Edition 01/25. The load-step footnote is worth reading: the headline claim holds only with non-default regulator and controller settings."
+  },
+  {
+   "product": "mtu EnergyPack QG — grid-scale battery energy storage",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "System capacity and power",
+     "value": "Scaleable from MWh to GWh on base units of 3 to 36 MWh; from MW to GW on base units of 3 to 9 MVA"
+    },
+    {
+     "band": "Capacity",
+     "label": "Discharge duration",
+     "value": "1 to 4 hours (0.25 to 1 C)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output voltage and frequency",
+     "value": "10 to 33 kV (other voltages on request); 50 Hz / 60 Hz; power factor 1 / 0.8 overexcited to 0.8 underexcited"
+    },
+    {
+     "band": "Electrical",
+     "label": "System response time",
+     "value": "About 150 ms depending on application"
+    },
+    {
+     "band": "Electrical",
+     "label": "Grid support",
+     "value": "Grid-forming capability, virtual inertia, and black start functionality (black start optional in the spec table)"
+    },
+    {
+     "band": "Battery",
+     "label": "Chemistry and life",
+     "value": "Latest LFP cell chemistry with zero degradation as an option; self-repair feature claimed for zero degradation for up to five years and 15,000-plus cycle lifetime"
+    },
+    {
+     "band": "Battery",
+     "label": "Cooling",
+     "value": "Battery liquid cooling; inverter forced air or liquid cooling"
+    },
+    {
+     "band": "Design",
+     "label": "Mechanical",
+     "value": "Transported in 20 to 40 ft containers; battery rack about 3.5 t, container 36 to 50 t; MV station skid 13 to 23 t; IP54 to IP56; C4 (C5) corrosion"
+    },
+    {
+     "band": "Design",
+     "label": "Environment",
+     "value": "-20 to +40 degrees C (-30 to +55 degrees C); below 95% non-condensing; up to 1,000 m (2,000 m)"
+    },
+    {
+     "band": "Compliance",
+     "label": "Standards",
+     "value": "UN38.3, UL1973, IEC62619, UL9540A, NFPA855, IEC 62477, IEC 62933-5-2, IEC 61000-6-2/6-4; site clearances per NFPA 855"
+    },
+    {
+     "band": "Commercial",
+     "label": "Warranty and scope",
+     "value": "Extended warranties up to 15 years; all-in-one solution with MV/HV integration covering planning, permitting support, procurement, construction and commissioning, O&M, augmentation and battery recycling"
+    }
+   ],
+   "notes": "Datasheet Edition 01/25. The QS and QL cabinet and container products use NMC/NCM chemistry to 625 kWh and 2,084 kWh respectively; the QG is the LFP grid-scale line."
+  },
+  {
+   "product": "mtu Kinetic PowerPack — diesel rotary UPS",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Range and models",
+     "value": "480 kVA / 400 kW to 2,750 kVA / 2,640 kW at 50 and 60 Hz; solution-guide tables to 3,000 kVA / 2,400 kW at 60 Hz; models KP5 and KP7"
+    },
+    {
+     "band": "Ratings",
+     "label": "Rating classes published",
+     "value": "Standby power (3D) and Data center continuous power (3F), both at 50 and 60 Hz"
+    },
+    {
+     "band": "Architecture",
+     "label": "Configuration",
+     "value": "Single base frame carrying an mtu diesel engine, a four-pole synchronous machine, a kinetic energy accumulator and an electromagnetic clutch; redundant start"
+    },
+    {
+     "band": "Performance",
+     "label": "Footprint",
+     "value": "Reducing its footprint to 40% of an equivalently rated static UPS system - making it the smallest in the market"
+    },
+    {
+     "band": "Performance",
+     "label": "Power conditioning",
+     "value": "Up to plus/minus 0.4 Hz and plus/minus 10% conditioning"
+    },
+    {
+     "band": "Performance",
+     "label": "Short-circuit contribution",
+     "value": "17 times nominal current"
+    },
+    {
+     "band": "Design",
+     "label": "Service life",
+     "value": "20-plus years design life; designed for a 10-year bearing life; vibrations reduced by more than 97%"
+    },
+    {
+     "band": "Compliance",
+     "label": "Emissions options",
+     "value": "US EPA Tier 2 compliant; US EPA stationary EMERG Tier 2 (40 CFR 60); US Nonroad Tier 2 / Tier 3; EU Nonroad Stage II (97/68/EC); NEA Singapore for ORDE"
+    }
+   ],
+   "notes": "Product data Edition 1/24, valid from 02/2024. Manufactured in Liege, Belgium."
+  },
+  {
+   "product": "mtu Series 4000 gas gen-sets — 60 Hz natural gas, NOx below 500 mg/Nm3",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "8V4000 GS",
+     "value": "997 kWel; 540 kWth; exhaust 494 kWth at 120 degrees C; energy input 2,287 kW; 43.6% electrical / 88.8% total efficiency"
+    },
+    {
+     "band": "Ratings",
+     "label": "12V4000 GS",
+     "value": "1,507 kWel; 801 kWth; exhaust 742 kWth; energy input 3,443 kW; 43.8% / 88.6%"
+    },
+    {
+     "band": "Ratings",
+     "label": "16V4000 GS",
+     "value": "2,014 kWel; 1,072 kWth; exhaust 995 kWth; energy input 4,583 kW; 43.9% / 89.0%"
+    },
+    {
+     "band": "Ratings",
+     "label": "20V4000 GS",
+     "value": "2,520 kWel; 1,400 kWth; exhaust 1,197 kWth; energy input 5,781 kW; 43.6% / 88.6%"
+    },
+    {
+     "band": "Fuel",
+     "label": "Methane number requirement",
+     "value": "72 or better on all four nodes (80 or better on the hot-ambient variant)"
+    },
+    {
+     "band": "Design",
+     "label": "Dimensions (L x W x H)",
+     "value": "8V 5,000 x 2,000 x 2,500 mm; 12V 5,850 x 2,000 x 2,500; 16V 6,800 x 2,000 x 2,600; 20V 7,250 x 2,000 x 2,600"
+    },
+    {
+     "band": "Design",
+     "label": "Engine",
+     "value": "90-degree V, bore/stroke 170/210 mm, 4.77 L/cyl, rated speed 1,500 rpm with a 1,500-1,800 rpm gearbox for the 60 Hz version"
+    },
+    {
+     "band": "Performance",
+     "label": "Time to full load",
+     "value": "120 seconds on existing units; 45 seconds for 2.8 MW on the new 20V4000 L64 for 60 Hz from 2026"
+    },
+    {
+     "band": "Performance",
+     "label": "Overhaul interval",
+     "value": "84,000 hours"
+    }
+   ],
+   "notes": "Spec Edition 01/24. The 45-second figure is the load-acceptance claim that decides whether gas can be considered for anything but prime duty."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-31",
+   "category": "product-launch",
+   "headline": "Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
+   "read": "Marine rather than data-center news, but the variable-speed architecture is the same one that decouples engine speed from output frequency in a hybrid plant.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/31-08-2026-rr-reaches-another-milestone-with-methanol-ready-certification-for-mtu-marine-engines.aspx"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "order-win",
+   "headline": "33 mtu engines ordered for the modernisation of the Korean freight locomotive fleet",
+   "read": "Rail volume competing for the same Friedrichshafen assembly capacity the data-center book needs.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/12-08-2026-rr-to-supply-33-mtu-engines-for-the-modernisation-of-the-korean-freight-locomotive-fleet.aspx"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "financial",
+   "headline": "H1 2026: Power Systems revenue £2,604m (+28%), underlying operating profit £528m (+72%), margin 20.3% (+5.3 points), order intake £4.6bn with a book-to-bill of 1.8x; power generation was 58% of original-equipment revenue and grew 41%, with power-generation order intake up 55%",
+   "read": "The strongest half the division has reported, and the point at which management raised the power-generation growth target from 20 to 25 percent a year to 2030.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/30-07-2026-rr-holdings-plc-2026-half-year-results.aspx"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "market",
+   "headline": "CFO Helen McCabe told CNBC that data-centre power orders rose more than 50 percent in the first half of 2026; CEO Tufan Erginbilgic said the company was already taking orders for data centers for 2028 and holds framework agreements with penalties running to 2030",
+   "read": "Order growth and contract length are the disclosure; the counterparties are not. The penalties clause is the only stated protection against a hyperscaler pullback.",
+   "source": "https://www.marketscale.com/industries/energy/rolls-royce-reports-50-plus-order-surge-in-data-center-energy-as-ai-infrastructure-demand-reshapes-power-procurement"
+  },
+  {
+   "date": "2026-07-09",
+   "category": "capacity",
+   "headline": "Ribbon cut on the $24M Mankato, Minnesota expansion — a 250,000 sq ft Logistics Operations Center adding more than 23,000 m2, stated to more than double production capacity for mtu Series 4000 generator sets by the end of 2026, with more than 100 new jobs",
+   "read": "The only quantified capacity figure the division publishes, and it is a doubling rather than an absolute number — no units or megawatts per year are disclosed.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/09-07-2026-rr-cuts-ribbon-on-new-usd-24m-expansion-in-mankato-minnesota.aspx"
+  },
+  {
+   "date": "2026-06-04",
+   "category": "order-win",
+   "headline": "Sunly contract for 490 MWh of battery storage across four systems in Latvia, with the Valmiera site due in Q1 2027; more than 1,500 MWh now contracted in the Baltics, plus a 300 MWh memorandum for Risti in Estonia",
+   "read": "Confirms the battery business as a Baltic utility franchise rather than a data-center one — the geography and the counterparty type are both consistent across every EnergyPack award found.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/04-06-2026-rr-wins-contract-from-sunly-for-large-scale-battery-storage-in-latvia-and-strengthens-its-position-as-the-leading-supplier-of-battery-storage.aspx"
+  },
+  {
+   "date": "2026-05-07",
+   "category": "capacity",
+   "headline": "Tens of millions of euros invested in three new single-cylinder test benches at Friedrichshafen, completed in early May 2026, enabling next-generation diesel and methanol development; energy recovery cuts site carbon dioxide by about 5 percent",
+   "read": "Test-bench capacity is the gate on the 2028 Series 4000 replacement, which is the product the data-center roadmap depends on.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/07-05-2026-rr-invests-tens-of-millions-in-new-test-benches-in-friedrichshafen.aspx"
+  },
+  {
+   "date": "2026-03-31",
+   "category": "order-win",
+   "headline": "Voltaria Helios battery storage facility at Falkirk, Scotland — 43 MW / 86 MWh on mtu EnergyPack with CATL cells, delivered as EPC with a 15-year service agreement, grid connection 2026 and commissioning 2027",
+   "read": "The clearest statement of the battery commercial model: turnkey delivery plus a long service tail, on third-party cells.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/31-03-2026-rr-and-voltaria-to-build-a-43-mw-large-scale-battery-storage-facility-in-scotland.aspx"
+  },
+  {
+   "date": "2026-03-26",
+   "category": "order-win",
+   "headline": "Another major defence contract secured by Rolls-Royce Power Systems",
+   "read": "Defence order intake is compounding alongside power generation, which is why the capacity programme is spread across Friedrichshafen, Magdeburg, Ruhstorf, Mankato and Aiken rather than concentrated.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/26-03-2026-rr-power-systems-secures-another-major-defence-contract.aspx"
+  },
+  {
+   "date": "2026-02-27",
+   "category": "financial",
+   "headline": "Rolls-Royce Power Systems AG reported its own FY2025 figures in euros: adjusted revenue €5.72bn (+19%), return on sales 17.4% against 13.1%, adjusted operating profit €995m against €662m, order intake €7.14bn (+21%) including a December order for 300 Leopard tank engines",
+   "read": "CEO Jorg Stratmann: \"Over the past three years, we have increased revenue by 50 per cent, more than doubled our return on sales and tripled our profit.\" The euro and sterling accounts describe the same business and should never be added together.",
+   "source": "https://www.mtu-solutions.com/na/en/pressreleases/2026/Strong-results-and-record-investments-Rolls-Royce-Power-Systems-continues-on-growth-path.html"
+  },
+  {
+   "date": "2026-02-27",
+   "category": "capacity",
+   "headline": "A new Friedrichshafen Plant 3 announced, with Series 4000 assembly from 2028, as part of a high three-digit million euro global investment programme; Plants 1 and 2 reorganised and modernised; 700 new employees hired in 2025 with more than 1,000 roles to fill in 2026",
+   "read": "The euro figure is stated only at global programme level — no site-specific investment or output number is published for Plant 3.",
+   "source": "https://www.mtu-solutions.com/na/en/pressreleases/2026/Strong-results-and-record-investments-Rolls-Royce-Power-Systems-continues-on-growth-path.html"
+  },
+  {
+   "date": "2026-02-26",
+   "category": "financial",
+   "headline": "FY2025: Power Systems revenue £4,892m (+19% organic), underlying operating profit £852m (+60% organic), margin 17.4%, order intake £6.1bn (+21%), book-to-bill 1.2x; power generation revenue grew 30 percent including data centre revenue growth of 35 percent; the BESS business reached breakeven; the divisional mid-term margin target was raised to 18-20 percent from 14-16 percent",
+   "read": "Power Systems produced an 18.8 percent beat against the company-compiled consensus on divisional operating profit, against 5.7 percent at group level — the division, not the group, was the surprise.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx"
+  },
+  {
+   "date": "2026-02-10",
+   "category": "product-launch",
+   "headline": "Modular Engine Power Plants launched: preconfigured 10, 20 and 30 megawatt gas modules scaling from 5 MW to several hundred MW, with a 12 to 18 month lead time, targeted explicitly at data centres and at bridge power until a grid connection arrives",
+   "read": "Productises the bridge-power case the division had previously served project by project, and puts a published lead time against a grid queue measured in years.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/10-02-2026-rr-launches-modular-gas-engine-power-plants.aspx"
+  },
+  {
+   "date": "2025-12-11",
+   "category": "product-launch",
+   "headline": "First emergency-power gen-sets for data centres delivered with Environmental Product Declarations — an mtu 16V4000 DS2500 and a 10V1600 to an unnamed European data-centre operator, verified through Environdec with Sphera to ISO 14025 and EN 50693",
+   "read": "A procurement credential rather than a technical one: the EPD is what a customer's own carbon disclosure needs, and Rolls-Royce claims to be first to publish one for this product class.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/11-12-2025-rr-delivers-first-emergency-power-generators-for-data-centres-with-environmental-product.aspx"
+  },
+  {
+   "date": "2025-12-04",
+   "category": "partnership",
+   "headline": "Partnership with AVK extended: five years of guaranteed production capacity for mtu Series 4000 gen-sets, and a six-year master framework keeping AVK the exclusive mtu system integrator for the UK and Ireland to 2031; more than 600 mtu gen-sets supplied to AVK over the past decade",
+   "read": "Capacity, not price, is what is being contracted — Rolls-Royce commits supply slots and AVK commits order volumes, which is how a constrained market allocates output.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/04-12-2025-rr-and-avk-strengthen-partnership-5-years-of-guaranteed-capacity-for-emergency-power.aspx"
+  },
+  {
+   "date": "2025-11-13",
+   "category": "financial",
+   "headline": "Rolls-Royce Holdings trading update",
+   "read": "The November trading update is the division's third disclosure point in a half-yearly reporting cadence.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/13-11-2025-rr-holdings-plc-trading-update.aspx"
+  },
+  {
+   "date": "2025-10-02",
+   "category": "product-launch",
+   "headline": "Fast-start mtu gas gen-sets introduced for data centers: the 20V4000 L64 delivering 2.8 MW in 45 seconds at 60 Hz from 2026, a 10 percent output increase, gearbox-free, against 120 seconds on existing units",
+   "read": "Directly attacks the reason gas has been excluded from anything but prime duty; still far from a diesel's ten seconds, but inside the window a battery or UPS can bridge.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/02-10-2025-rr-introduces-fast-start-mtu-gas-gensets-for-powering-data-centers.aspx"
+  },
+  {
+   "date": "2025-09-24",
+   "category": "project",
+   "headline": "A 10 MW UK gas engine power plant with carbon dioxide recovery commissioned at Worksop on six mtu Series 4000 L64FNER combined heat and power units, capturing up to 30,000 tonnes of carbon dioxide a year, with Landmark Power Holdings, ASCO and Victory Hill",
+   "read": "A demonstration that the gas fleet can carry a carbon-capture story, which matters more in Europe than in the US market where the same engines are sold.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/24-09-2025-rr-landmark-and-asco-commission-uk-gas-engine-power-plant-with-co2-recovery.aspx"
+  },
+  {
+   "date": "2025-09-23",
+   "category": "order-win",
+   "headline": "Stedin in the Netherlands ordered 60 MW of mobile gas gen-sets — 24 containerised mtu Series 4000 L64 FNER units in six 10 MW blocks — to counter grid bottlenecks, deploying in Q3 2026 and operating from 2026 to 2036, as EPC with a ten-year availability guarantee",
+   "read": "A grid operator buying engines to defer network reinforcement is the same economic logic as a data center buying them to defer a connection date, and it competes for the same slots.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/23-09-2025-netherlands-uses-mtu-gas-gensets-from-rolls-royce-to-counter-grid-bottlenecks.aspx"
+  },
+  {
+   "date": "2025-09-16",
+   "category": "order-win",
+   "headline": "Largest battery order in Rolls-Royce history: 582 MWh / 291 MW for Ignitis Group across the Kelme and Mazeikiai wind farms and the Kruonis pumped-storage site in Lithuania, contributing to the grid from 2027",
+   "read": "Establishes the EnergyPack as a real utility-scale franchise, and confirms that its market is grid firming rather than data-center backup.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/16-09-2025-rr-biggest-battery-order-for-rolls-royce-large-scale-energy-storage-system-in-lithuania.aspx"
+  },
+  {
+   "date": "2025-08-28",
+   "category": "partnership",
+   "headline": "Position paper published jointly with Microsoft on the use of hydrotreated vegetable oil for backup power in Singapore's data-centre sector, referencing the Singapore Green Data Centre Roadmap's near-term 300 MW allocation and the 200 MW reserved for operators using green energy options",
+   "read": "The only named engagement with a hyperscaler in this corpus, and it is policy advocacy rather than an equipment order — worth stating plainly in both directions.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/28-08-2025-rr-publishes-position-paper-with-microsoft-on-the-use-of-hydrotreated-vegetable-oil-hvo-for-the-singapore-data-centre-sector.aspx"
+  },
+  {
+   "date": "2025-07-31",
+   "category": "financial",
+   "headline": "H1 2025: Power Systems revenue £2,042m, underlying operating profit £313m, margin 15.3%",
+   "read": "The base against which the 2026 half looks like a step change rather than a continuation.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/31-07-2025-rr-holdings-plc-2025-half-year-results.aspx"
+  },
+  {
+   "date": "2025-07-15",
+   "category": "capacity",
+   "headline": "$75M expansion announced at Aiken, South Carolina for mtu Series 4000 engine machining — phase one adding 37,000 sq ft with a further 22,000 sq ft optional on a 395,000 sq ft campus, construction from Q1 2026, production from July 2027, 60 new jobs taking the site to 434",
+   "read": "Onshores machining that currently happens in Germany and ships to the US, which shortens the chain feeding Mankato assembly.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/15-07-2025-rr-increases-us-manufacturing-capabilities-in-south-carolina.aspx"
+  },
+  {
+   "date": "2025-07-08",
+   "category": "project",
+   "headline": "Carbon-neutral self-sufficient energy system launched with duisport for a new port terminal",
+   "read": "A microgrid reference outside the data-center market that exercises the same EnergetIQ control layer.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/08-07-2025-rr-and-duisport-launch-co2-neutral-self-sufficient-energy-system-for-new-port-terminal.aspx"
+  },
+  {
+   "date": "2025-06-20",
+   "category": "leadership",
+   "headline": "The Supervisory Board extended CEO Dr Jorg Stratmann's contract to 14 November 2027",
+   "read": "Continuity through the capacity programme and the 2028 engine launch.",
+   "source": "https://www.mtu-solutions.com/eu/en/pressreleases/2025/rolls-royce-power-systems-ag-supervisory-board-extends-the-contract-of-the-chairman-of-the-board-of-management-dr-jorg-stratmann.html"
+  },
+  {
+   "date": "2025-06-03",
+   "category": "capacity",
+   "headline": "$24M Mankato, Minnesota investment announced, stating that production would more than double by 2026 and that data center power generation sales grew nearly 50 percent in the prior year",
+   "read": "The announcement that opened the US capacity sequence completed by the July 2026 ribbon-cutting.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/03-06-2025-rr-powers-data-center-growth-with-increased-investment-in-us-manufacturing.aspx"
+  },
+  {
+   "date": "2025-04-30",
+   "category": "product-launch",
+   "headline": "Battery analytics introduced for mtu battery solutions",
+   "read": "Analytics is the service tail on an asset class whose economics depend on degradation management.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/30-04-2025-rr-introduces-battery-analytics-for-mtu-battery-solutions.aspx"
+  },
+  {
+   "date": "2025-03-12",
+   "category": "order-win",
+   "headline": "mtu emergency power systems supplied for the European Commission",
+   "read": "A public-sector reference in the same product class as the data-center fleet.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/12-03-2025-rr-supplies-mtu-emergency-power-systems-for-the-european-commission.aspx"
+  },
+  {
+   "date": "2025-02-27",
+   "category": "financial",
+   "headline": "FY2024: Power Systems revenue £4,271m, underlying operating profit £560m, margin 13.1%, order intake £5.1bn (+19%), book-to-bill 1.2x; data centre orders up 42 percent year on year and data centre revenues up 46 percent",
+   "read": "The company also stated it had \"restructured our business model to achieve a double-digit operating margin\" in data centres, \"competing on power density, speed of back-up and service\" — a rare explicit statement of competitive basis.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/27-02-2025-rr-holdings-plc-2024-full-year-results.aspx"
+  },
+  {
+   "date": "2025-02-13",
+   "category": "product-launch",
+   "headline": "Upgraded mtu Series 1600 generator sets introduced for the 50 Hz market at 590 to 1,000 kVA, 40 percent more power than the predecessor, compliant with ISO 8528 Data Center Power and Uptime Tier III and IV, and approved for HVO",
+   "read": "Extends the data-center rating vocabulary down into the edge node band, where the volume of smaller halls is.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/13-02-2025-rolls-royce-introduces-upgraded-mtu-series-1600-generator-sets-for-50-hertz-market.aspx"
+  },
+  {
+   "date": "2024-08-01",
+   "category": "ma",
+   "headline": "Sale of the Power Systems lower-power-range off-highway engine business, covering engines up to 480 kW, to DEUTZ AG completed for a price in the high double-digit millions of euros",
+   "read": "A deliberate narrowing of the division to Series 1600 and above — the perimeter change that precedes the data-center concentration.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2024/01-08-2024-rr-completes-sale-of-lower-power-range-engine-business-to-deutz-ag.aspx"
+  },
+  {
+   "date": "2024-06-06",
+   "category": "order-win",
+   "headline": "Two mtu Kinetic PowerPacks of 1,500 kW each secured for a NOVVA Data Centers colocation expansion in Colorado Springs",
+   "read": "The only named US data-center customer for the rotary UPS line found in any source.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2024/06-06-2024-rr-secures-emergency-backup-power-for-co-location-data-centre-in-colorado.aspx"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Rolls-Royce Power Systems has been re-rated by data centers more completely than any other gen-set OEM in this corpus, and that the parent's equity story now depends on it. Basis: divisional margin moved from 13.1 percent in FY2024 to 17.4 percent in FY2025 to 20.3 percent in H1 2026, against a mid-term target that was itself raised from 14-16 to 18-20 percent; order intake reached £6.1bn in FY2025 and £4.6bn in the first half of 2026 alone, a book-to-bill of 1.8 times; and Citigroup's note of 2026-08-17 makes Power Systems the largest single contributor to its sum-of-the-parts at 504 pence against Civil Aerospace's 353 pence, explicitly \"boosted by surging data centre demand.\" Citi forecasts a long-term divisional margin of 23.5 percent, above the company's own 18-20 percent target.",
+  "(High confidence) We assess that the division's differentiation is breadth of the on-site power stack, not any single product's superiority. Basis: it is the only vendor in this corpus selling diesel gen-sets, gas gen-sets, a rotary UPS, a grid-scale battery, a microgrid controller and prefabricated power-plant modules under one brand, and its own VP of powergen sales for the Americas states the diesel-plus-gas-plus-dynamic-UPS combination makes it \"the only major and experienced player\" doing so. The corollary is that the breadth is only worth what the integration is worth, which is why mtu EnergetIQ — a controller speaking eleven industrial protocols and certified to IEC 62443-4-1 — is the piece to examine, not the engines.",
+  "(Moderate confidence) We assess that the battery business is not a data-center business and should not be counted as one. Basis: every EnergyPack deployment located is grid or utility scale — 582 MWh for Ignitis in Lithuania, 490 MWh for Sunly in Latvia, 43 MW for Voltaria in Scotland, systems for Eleqtis in the Netherlands — and the company's own positioning claim is that it is \"the leading supplier of battery storage in the Baltic states.\" No data-centre EnergyPack installation was found in first-party or third-party sources. The division's data-center storage product is the Kinetic PowerPack, a diesel rotary UPS, which is a different machine solving a different problem. Conflating the two overstates the AIDC franchise.",
+  "(Moderate confidence) We assess that the division is strong in standby and weak in the gigawatt prime-power awards that are currently being written, and that the fast-start gas engine is the response. Basis: POWER Magazine's March 2026 survey of reciprocating-engine data-center power tabulates named gigawatt-scale wins for Caterpillar (2 GW at Monarch, 4 GW with Joule), INNIO/Jenbacher (2.3 GW with VoltaGrid) and Wartsila (429 MW plus a 790 MW Texas order), and lists Rolls-Royce on product attributes and installed base with no named deal. The CEO's own figure is that prime power is \"less than 10%\" of the power-generation business today, targeted at 15-20 percent by 2030. The 45-second, 2.8 MW 20V4000 L64 and the MEPP modular plants are both dated 2026 and both aimed squarely at that gap.",
+  "(Moderate confidence) We assess that supply, not demand, is the binding constraint, and that the division is contracting capacity rather than price. Basis: the AVK agreement is explicitly a guarantee of production slots in exchange for committed order volumes; the CEO states orders are being taken for 2028 and framework agreements run to 2030 with penalties; Mankato is stated to more than double Series 4000 gen-set output; Aiken adds engine machining; Friedrichshafen Plant 3 adds Series 4000 assembly from 2028. A third party puts mtu among the shortest lead times for large hyperscale units, which if true is a commercial weapon in a market where the industry runs 50 to 110 weeks.",
+  "(Moderate confidence) We assess that the ownership question that hung over this division for a decade is settled in the opposite direction from where it started. Basis: Bloomberg reported in November 2023 that Rolls-Royce would keep a Power Systems business \"that some analysts had seen as a disposal candidate\"; the 2023 Capital Markets Day placed it in the invest-and-grow rather than the exit bucket; the only perimeter change since was the disposal of the sub-480 kW engine business to DEUTZ, completed August 2024. No 2025 or 2026 source reports an active sale or strategic review. A division that is now the parent's largest sum-of-the-parts contributor is not a disposal candidate.",
+  "(Low confidence) We assess that customer concentration is the material unpriced risk, and that it cannot be sized from public information. Basis: trade press attributes to Rolls-Royce a figure of more than 80 percent of Power Systems power-generation revenue coming from data centres, which sits alongside the company's own H1 2026 disclosure that power generation is 58 percent of divisional original-equipment revenue — different denominators, and the 80 percent figure does not appear in the transcript or the results release. Collection gap: no hyperscaler, colocation landlord or neocloud is named as a customer in any source, the framework agreements are unnamed, and no named-broker note warning specifically on this concentration was found. The penalties clause the CEO describes is the only stated mitigation, and its terms are not public."
+ ],
+ "relationships": [
+  {
+   "slug": "microsoft",
+   "type": "partner",
+   "status": "active",
+   "since": "2025",
+   "via": "HVO backup-power policy advocacy",
+   "note": "Co-authored a position paper with Microsoft on hydrotreated vegetable oil for backup power in Singapore's data-centre sector.",
+   "context": "Published 2025-08-28, the paper argues for HVO in data-centre standby fleets against the Singapore Green Data Centre Roadmap, which allocates about 300 MW of near-term capacity with 200 MW reserved for operators using green energy options. Microsoft's Cloud ESG Planning Director for Asia Pacific is quoted in the release alongside Rolls-Royce's President Global Markets.\n\nThis is policy advocacy, not an equipment order. No source in this research names Microsoft, or any other hyperscaler, as a purchaser of mtu gen-sets, and Rolls-Royce's own H1 2026 results refer only to unnamed \"framework agreements with data centre customers.\" The link is recorded at the strength the source supports and no further.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/28-08-2025-rr-publishes-position-paper-with-microsoft-on-the-use-of-hydrotreated-vegetable-oil-hvo-for-the-singapore-data-centre-sector.aspx"
+  },
+  {
+   "slug": "catl",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026",
+   "via": "mtu EnergyPack cells",
+   "scale": "43 MW / 86 MWh Voltaria Helios project",
+   "note": "CATL cells are used in the mtu EnergyPack system for the Voltaria Helios battery facility at Falkirk, Scotland.",
+   "context": "Announced 2026-03-31, the 43 MW / 86 MWh project is delivered by Rolls-Royce as EPC with a 15-year service agreement, with grid connection in 2026 and commissioning in 2027, and the cells identified as CATL's. This is the clearest published statement of the EnergyPack's cell sourcing; the QG datasheet otherwise describes only \"modular, Tier 1 components\" and \"latest LFP cell chemistry.\" Whether CATL supplies other EnergyPack projects is not stated in any source found.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/31-03-2026-rr-and-voltaria-to-build-a-43-mw-large-scale-battery-storage-facility-in-scotland.aspx"
+  },
+  {
+   "slug": "caterpillar",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center generator sets",
+   "note": "The market leader in data-center generators, ranked first where Rolls-Royce is ranked third.",
+   "context": "MarketsandMarkets ranks the 2025 data-center generator field Caterpillar, Cummins, Rolls-Royce, Rehlko, Mitsubishi. The competition is sharpest in prime power: POWER Magazine's March 2026 survey lists Caterpillar with 2 GW at the Monarch Compute Campus and up to 4 GW with Joule Capital Partners, against no named gigawatt-scale award for mtu, and quotes Caterpillar's G3516 ramping \"zero to full load in approximately seven seconds\" against mtu's 45 seconds on the new fast-start gas set. In standby the ordering is closer, and a lead-time survey places Caterpillar and mtu together as having the shortest lead times for large hyperscale units.",
+   "source": "https://www.powermag.com/engine-power-plants-surge-as-data-centers-drive-unprecedented-demand/"
+  },
+  {
+   "slug": "cummins",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center generator sets",
+   "note": "Ranked second in data-center generators, immediately above Rolls-Royce.",
+   "context": "MarketsandMarkets places Cummins second and Rolls-Royce third for 2025. Terrapin Consulting Group's 2026 lead-time survey splits the two by node band: \"Caterpillar and MTU often have the shortest lead times for larger hyperscale tier units\" while \"Cummins and Kohler tend to be competitive at the 1,000-2,000 kW range.\" Both are expanding US capacity concurrently — Cummins committing $450M for 20 GW of high-horsepower output, Rolls-Royce doubling Series 4000 gen-set assembly at Mankato and adding engine machining at Aiken.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp"
+  },
+  {
+   "slug": "rehlko",
+   "type": "competitor",
+   "status": "active",
+   "via": "Data-center generator sets",
+   "note": "Ranked fourth in data-center generators, immediately below Rolls-Royce, and the other European-manufacturing-dependent vendor in the set.",
+   "context": "MarketsandMarkets places Rehlko fourth for 2025. The two are structurally similar in a way the American vendors are not: Rehlko's G-Drive engines for the whole 700-4000 kW range are built by Liebherr at Colmar in France and its power-control business manufactures at Cholet, while Rolls-Royce assembles at Friedrichshafen and Kluftern — both therefore run a Europe-to-US supply chain into the American data-center market. Both are also expanding capacity into the same demand: Rehlko states a plan to lift capacity by more than 400 percent through the decade, Rolls-Royce to more than double Series 4000 output at Mankato.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp"
+  },
+  {
+   "slug": "wartsila",
+   "type": "competitor",
+   "status": "active",
+   "via": "Behind-the-meter prime power",
+   "scale": "Wartsila 790 MW Texas data-center order, April 2026",
+   "note": "A reciprocating-engine competitor holding named gigawatt-scale prime-power awards where Rolls-Royce holds none.",
+   "context": "POWER Magazine's March 2026 survey of engine power plants for data centers tabulates Wartsila with 24 Wartsila 50SG units totalling 429 MW, a 123 MW Odessa Texas project and 75 MW in Kentucky, alongside separate 790 MW Texas and Liberty Energy orders in April and June 2026; mtu appears in the same table on technology and installed base, with no named deal. Wartsila is also investing 140 million euros to expand Vaasa capacity by 35 percent, with new capacity in the first quarter of 2028 — the same capacity race Rolls-Royce is running at Friedrichshafen, Mankato and Aiken.",
+   "source": "https://www.powermag.com/engine-power-plants-surge-as-data-centers-drive-unprecedented-demand/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US EPA stationary emissions tiers (40 CFR 60)",
+   "status": "in-effect",
+   "exposure": "The 60 Hz data-center catalogue is published across classes: EPA Tier 2 certified sheets, frequently annotated with South Coast Air Quality Management District compliance (for example the 20V4000 DS3250 at 3,250 kWe); an EPA Tier 4 certified 20V4000 DS3000 at 3,000 kWe; and fuel-consumption-optimised variants that carry no emissions certification. The Kinetic PowerPack adds US EPA stationary emergency Tier 2 (40 CFR 60), US Nonroad Tier 2 (40 CFR 89) and US Nonroad Tier 3. Gendrive engines add NEA Singapore for ORDE and China NRMM Stage III (GB20981-2014).",
+   "source": "https://www.mtu-solutions.com/content/dam/mtu/products/power-generation/powergeneration-product-list-latest/231221_PG_Spec_20V4000DS3250G04_3250kW_3D_T2_SCAQMD_60Hz_43C.pdf/_jcr_content/renditions/original./231221_PG_Spec_20V4000DS3250G04_3250kW_3D_T2_SCAQMD_60Hz_43C.pdf"
+  },
+  {
+   "regime": "German grid code VDE-AR-N 4110",
+   "status": "in-effect",
+   "exposure": "Certification to the German grid code is a published product feature rather than a compliance footnote. The Series 4000 is stated to be \"the first generator set in its performance class to be certified by the VDE-AR-4110 according to code MSR2008\", and the Series 2000 \"the first genset in its performance class to be certified according to grid code VDE-AR-N 4110.\" Sets are described as \"suitable for grid parallel operation for monthly test runs or to gain additional revenues through grid services such as frequency control reserve.\" The 50 Hz DS4000 sheet carries a unit certificate to VDE-AR-N 4110.",
+   "mitigation": "Grid-code certification is what converts an emergency-only asset into one that can earn from frequency services, and the company markets it that way alongside German Renewable Energy Act levy and formaldehyde-bonus support for customers.",
+   "source": "https://www.mtu-solutions.com/content/dam/mtu/download/applications/power-generation/16120753_PowerGeneration_S4000_Diesel_brochure.pdf/_jcr_content/renditions/original./16120753_PowerGeneration_S4000_Diesel_brochure.pdf"
+  },
+  {
+   "regime": "Uptime Institute Tier standards",
+   "status": "in-effect",
+   "exposure": "The rating structure is mapped explicitly to certification outcomes: standby (3D), prime for stationary emergency (3E), prime (3B) and grid stability (3G) map to Uptime Tier I and II, while data center continuous power (3F) maps to Tier III and Tier IV. The company also publishes a comparison showing where its own definitions are more generous than ISO 8528-1 — a 3D load factor of 85 percent against ISO's 70 percent for emergency standby power, and 500 annual hours against ISO's 200.",
+   "source": "https://www.mtu-solutions.com/content/dam/mtu/download/applications/power-generation/16120885_Product_data_mtu_Kinetic_PowerPack_202402.pdf/_jcr_content/renditions/original./16120885_Product_data_mtu_Kinetic_PowerPack_202402.pdf"
+  },
+  {
+   "regime": "NFPA 110 and NFPA 855",
+   "status": "in-effect",
+   "exposure": "Gen-set sheets state that the unit \"accepts rated load in one step per NFPA 110\"; battery site clearances are specified \"according to NFPA 855\" in the EnergyPack QG datasheet, alongside UN38.3, UL1973, IEC 62619, UL9540A, IEC 62477, IEC 62933-5-2 and IEC 61000-6-2/6-4. Seismic certification to the 2021 IBC and HCAI pre-approval, UL 2200 and CSA C22.2 are offered as options on the 60 Hz gen-sets.",
+   "source": "https://www.mtu-solutions.com/content/dam/mtu/application/power-generation/energy-storage-system/mtu-energypack-qg/Energypack_QG_en.pdf/_jcr_content/renditions/original./Energypack_QG_en.pdf"
+  },
+  {
+   "regime": "Renewable fuel approvals (EN 15940 / HVO)",
+   "status": "in-effect",
+   "exposure": "\"Fuels according to EN15940 are approved for all Series 4000 system configurations and emission calibrations\", and all Series 1600 gen-sets are approved for HVO. The company publishes reductions of up to 90 percent in lifecycle carbon dioxide, about 80 percent in particulate matter and up to 8 percent in nitrogen oxides on HVO, and states that \"no engine hard- or software adaptions\" are necessary and that standard warranty conditions apply. In December 2025 it published the first Environmental Product Declarations for data-centre emergency gen-sets, through Environdec with Sphera, to ISO 14025 and EN 50693.",
+   "mitigation": "A published EPD gives a data-centre customer the cradle-to-grave figure its own carbon disclosure requires — a procurement credential rather than an emissions one.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/11-12-2025-rr-delivers-first-emergency-power-generators-for-data-centres-with-environmental-product.aspx"
+  },
+  {
+   "regime": "Cybersecurity regulation (IEC 62443 / NIS2)",
+   "status": "in-effect",
+   "exposure": "The EnergetIQ and EnergyPack QG control layer is \"certified according to IEC 62443-4-1 ML2 and aligned with ISO 27001 and NIST2 requirements\", and the modular power-plant flyer lists \"certified cybersecurity\" as a feature. This matters because the controller speaks eleven industrial protocols and sits between the utility interface and the plant.",
+   "source": "https://www.mtu-solutions.com/content/dam/mtu/application/power-generation/energy-storage-system/mtu-energypack-qg/Energypack_QG_en.pdf/_jcr_content/renditions/original./Energypack_QG_en.pdf"
+  },
+  {
+   "regime": "German Power Plant Strategy",
+   "status": "announced",
+   "effectiveDate": "2026-02",
+   "exposure": "At the launch of the Modular Engine Power Plants, Business Unit president Tobias Ostermaier framed the product as implementing the German Government's Power Plant Strategy \"quickly and economically.\" This is a policy-created demand channel for the same gas modules being sold into data-center bridge power, and it competes for the same manufacturing slots.",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/10-02-2026-rr-launches-modular-gas-engine-power-plants.aspx"
+  },
+  {
+   "regime": "US import tariffs",
+   "status": "in-effect",
+   "exposure": "Collection gap rather than an assessed exposure. Rolls-Royce discloses tariffs only at group level — the CEO refers to having \"navigated challenges from supply chain to tariffs\" and the going-concern assessment cites \"the uncertainty introduced by tariffs\" — with no quantified Power Systems figure. The division's structural exposure is real and undisclosed: Series 4000 engines are machined in Germany and assembled at Mankato, Minnesota, and the Aiken, South Carolina investment is explicitly described as onshoring machining that currently happens in Germany.",
+   "source": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/results/2025-full-year-results/rr-holdings-plc-2025-full-year-results-press-release.pdf"
+  },
+  {
+   "regime": "EU Stage V",
+   "status": "proposed",
+   "exposure": "Recorded as a negative finding. No mtu power-generation specification sheet reviewed references EU Stage V. The European emissions level that does appear on 50 Hz power-generation gear is EU Nonroad Stage II (97/68/EC), on the Kinetic PowerPack sheets. Stage V under Regulation (EU) 2016/1628 governs non-road mobile machinery rather than stationary emergency gen-sets, which are regulated nationally in the EU — which is consistent with what the company publishes, but the absence is stated here because a buyer comparing a European and an American vendor will expect to see it.",
+   "source": "https://www.mtu-solutions.com/content/dam/mtu/download/applications/power-generation/16120885_Product_data_mtu_Kinetic_PowerPack_202402.pdf/_jcr_content/renditions/original./16120885_Product_data_mtu_Kinetic_PowerPack_202402.pdf"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Dr Jorg Stratmann",
+   "title": "Chief Executive Officer, Rolls-Royce Power Systems AG; President, Power Systems",
+   "photo": "images/execs/rolls-royce-power-systems-stratmann.jpg",
+   "background": [
+    "Chairman of the Board of Management of Rolls-Royce Power Systems AG and Managing Director of Rolls-Royce Solutions GmbH; member of the Rolls-Royce Group management team",
+    "In post since mid-November 2022; contract extended by the Supervisory Board to 14 November 2027",
+    "Born 1969; industrial engineer, studied and took his doctorate at TU Berlin; international management roles with Siemens in the USA, Italy, Romania and Germany",
+    "Previously in leading positions at Mahle, most recently as Chief Executive Officer",
+    "On the FY2025 result: \"Over the past three years, we have increased revenue by 50 per cent, more than doubled our return on sales and tripled our profit\""
+   ]
+  },
+  {
+   "name": "Dr Andreas Strecker",
+   "title": "Chief Financial Officer, Rolls-Royce Power Systems AG",
+   "photo": "images/execs/rolls-royce-power-systems-strecker.jpg",
+   "background": [
+    "On the Board of Management since 1 December 2022, responsible for finance, IT and procurement; Managing Director of Rolls-Royce Solutions GmbH",
+    "Contract extended to 29 February 2028",
+    "Previously President Europe and Asia at Accuride Wheels; Chief Financial Officer of Deutz AG; Chief Executive Officer of Solaris Bus and Coach"
+   ]
+  },
+  {
+   "name": "Dr Thelse Godewerth",
+   "title": "Chief People Officer and Labour Director, Rolls-Royce Power Systems",
+   "photo": "images/execs/rolls-royce-power-systems-godewerth.jpg",
+   "background": [
+    "In post since 14 January 2022, having taken over global HR and organisational development for the division in January 2021",
+    "Fifteen-plus years in HR, corporate and organisational development, with responsibility also spanning finance, health and safety, real estate and communications",
+    "Previously global HR and organisational development lead at an international life-sciences products and services provider; Managing Partner of an international consultancy; Head of Corporate and HR Development at a German media group; Strategy Department, State Chancellery of Lower Saxony",
+    "Studied politics, economics and psychology at Heinrich Heine University Dusseldorf, with a doctorate from the same institution",
+    "Owns the hiring programme behind the capacity build: 700 new employees in 2025 and more than 1,000 roles to fill in 2026"
+   ]
+  },
+  {
+   "name": "Tobias Ostermaier",
+   "title": "President, Business Unit Stationary Power Solutions",
+   "background": [
+    "The single most important operating name for the data-center business — the business unit that owns diesel and gas gen-sets, the Kinetic PowerPack and the modular power plants",
+    "Named spokesperson on the Series 1600 launch, the HVO position paper with Microsoft, the fast-start gas gen-sets, the Environmental Product Declaration launch and the Modular Engine Power Plants launch",
+    "On the MEPP launch, framed the product as implementing the German Government's Power Plant Strategy quickly and economically",
+    "No company-published headshot was found in any mtu press-asset gallery or on rolls-royce.com; the entry renders an initials avatar"
+   ]
+  },
+  {
+   "name": "Andreas Gortz",
+   "title": "President, Business Unit Mobile and Sustainable",
+   "background": [
+    "Owns the battery energy storage business — the mtu EnergyPack line and the EnergetIQ control layer",
+    "Named spokesperson on the Ignitis order in Lithuania, the Voltaria project in Scotland and the Sunly contract in Latvia",
+    "Stated in March 2026 that the company had delivered more than 200 battery projects worldwide",
+    "No company-published headshot was found"
+   ]
+  },
+  {
+   "name": "Vittorio Pierangeli",
+   "title": "Senior Vice President Power Generation, Rolls-Royce Power Systems",
+   "background": [
+    "Named spokesperson on the AVK framework agreement of December 2025, the capacity-guarantee deal that allocates Series 4000 production slots to the UK and Ireland integrator",
+    "On that agreement: \"both partners are reaffirming their commitment to leveraging their combined strengths to serve the booming European data centre market\"",
+    "No company-published headshot was found"
+   ]
+  },
+  {
+   "name": "Kevin McKinney",
+   "title": "Vice President Powergen Sales, Americas",
+   "background": [
+    "The US commercial lead for the data-center business",
+    "Source of the division's central positioning claim: the diesel, gas and dynamic UPS combination makes it \"the only major and experienced player offering diesel and gas gensets plus dynamic UPS systems\"",
+    "No company-published headshot was found"
+   ]
+  },
+  {
+   "name": "Giovanni Spadaro",
+   "title": "President Global Markets, Rolls-Royce Power Systems",
+   "background": [
+    "Named spokesperson on the Singapore HVO position paper published jointly with Microsoft",
+    "One of the three business-unit and market presidents named in the division's structure alongside Stationary Power Solutions and Mobile and Sustainable",
+    "No company-published headshot was found"
+   ]
+  },
+  {
+   "name": "Martin Urban",
+   "title": "Executive Vice President Engineering, Rolls-Royce Power Systems",
+   "background": [
+    "Named spokesperson on the Friedrichshafen single-cylinder test-bench investment of May 2026",
+    "Owns the engineering programme behind the next-generation Series 4000 due in 2028, which had completed 500 hours of test-bench running by the FY2025 results",
+    "No company-published headshot was found"
+   ]
+  },
+  {
+   "name": "Michael Stipa",
+   "title": "Senior Vice President Strategy",
+   "background": [
+    "Also titled Senior Vice President Business Development in the September 2025 carbon-recovery release",
+    "Named spokesperson on the Worksop carbon-dioxide recovery plant and on the Modular Engine Power Plants launch",
+    "On MEPP: \"True resilience comes from decentralization, not centralization\"",
+    "No company-published headshot was found"
+   ]
+  },
+  {
+   "name": "Adam Wood",
+   "title": "Managing Director, Rolls-Royce in America",
+   "background": [
+    "Named spokesperson on the $75M Aiken, South Carolina expansion and the $24M Mankato, Minnesota ribbon-cutting",
+    "Owns the US manufacturing footprint that supplies the American data-center market",
+    "No company-published headshot was found"
+   ]
+  },
+  {
+   "name": "Tufan Erginbilgic",
+   "title": "Chief Executive, Rolls-Royce Holdings plc",
+   "photo": "images/execs/rolls-royce-power-systems-erginbilgic.jpg",
+   "background": [
+    "Chief executive of the listed parent; ran the 2023 portfolio review that placed Power Systems in the invest-and-grow rather than the exit category",
+    "On the H1 2026 call disclosed that the company was already taking data-center orders for 2028 and holds framework agreements with penalties running to 2030",
+    "Raised the power-generation original-equipment growth target from 20 to 25 percent a year to 2030 at the same results"
+   ]
+  },
+  {
+   "name": "Helen McCabe",
+   "title": "Chief Financial Officer, Rolls-Royce Holdings plc",
+   "photo": "images/execs/rolls-royce-power-systems-mccabe.jpg",
+   "background": [
+    "Chief financial officer of the listed parent; also sits on the Rolls-Royce Power Systems AG Supervisory Board",
+    "Disclosed to CNBC on 2026-07-30 that data-centre power orders rose more than 50 percent in the first half of 2026",
+    "Stated at the same results that order cover is growing for 2027 and 2028 with increasing visibility to 2030"
+   ]
+  },
+  {
+   "name": "Adam Riddle",
+   "title": "President, Defence; Chairman and Chief Executive, Rolls-Royce North America",
+   "photo": "images/execs/rolls-royce-power-systems-riddle.jpg",
+   "background": [
+    "Relevant to Power Systems through the US manufacturing investments at Mankato and Aiken and through the defence order book competing for the same assembly capacity",
+    "Rolls-Royce reports more than $1.5bn invested in the US over the past decade across more than 5,000 employees at 34 locations in 26 states"
+   ]
+  },
+  {
+   "name": "Jasmin Staiblin",
+   "title": "Chairwoman of the Supervisory Board, Rolls-Royce Power Systems AG",
+   "background": [
+    "Shareholder representative and chair of the division's Supervisory Board, the body that extended the CEO's and CFO's contracts",
+    "The Supervisory Board also seats the parent's Chief People Officer Sarah Armstrong and Chief Financial Officer Helen McCabe as shareholder representatives, alongside employee representatives led by co-chairman Thomas Bittelmeyer",
+    "No company-published headshot was found"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "GBP",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "Reported 2025-02-27. Figures are the Power Systems segment inside Rolls-Royce Holdings plc's underlying accounts. Rolls-Royce Power Systems AG separately reported adjusted revenue of EUR 5.05bn (+11%) with an adjusted operating profit of EUR 662m and a 13.1 percent return on sales; the euro and sterling accounts describe the same business and must never be added. Consensus is the company-compiled analyst consensus Rolls-Royce publishes on its own IR site — a precise mean of submitted estimates, which the company states it does not alter or endorse; there is no third-party half-year consensus for the division. No USD overlay is carried on this dossier: converting a divisional sterling line would require a rate the company does not publish for the segment, and an unsourced conversion is fabricated precision.",
+    "metrics": [
+     {
+      "name": "Power Systems revenue",
+      "actual": "£4,271m",
+      "expected": "£4,189m (range £4,094-4,365m, 16 analysts; Rolls-Royce company-compiled analyst consensus, January 2025)",
+      "verdict": "beat",
+      "result": "Beat by 2.0 percent."
+     },
+     {
+      "name": "Power Systems underlying operating profit",
+      "actual": "£560m",
+      "expected": "£487m (range £454-531m, 16 analysts; company-compiled consensus, January 2025)",
+      "verdict": "beat",
+      "result": "Beat by 15.0 percent — three times the group-level beat."
+     },
+     {
+      "name": "Power Systems underlying operating margin",
+      "actual": "13.1%",
+      "expected": "11.6% (range 11.1-12.2%; company-compiled consensus, January 2025)",
+      "verdict": "beat",
+      "result": "150 basis points ahead of consensus."
+     },
+     {
+      "name": "Power Systems order intake",
+      "actual": "£5.1bn (+19%), book-to-bill 1.2x",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "No consensus is published for divisional order intake."
+     },
+     {
+      "name": "Power Systems data-centre disclosure",
+      "actual": "Data centre orders up 42% year on year; power generation revenue up 25%, and up 46% for data centres",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "A rare division-level data-centre disclosure. The company also stated it had restructured the data-centre business model to achieve a double-digit operating margin, competing on power density, speed of back-up and service."
+     },
+     {
+      "name": "Group underlying revenue",
+      "actual": "£17,848m",
+      "expected": "£17,341m (median £17,277m, range £16,918-18,085m, 16 analysts; company-compiled consensus, January 2025)",
+      "verdict": "beat",
+      "result": "Beat by 2.9 percent. Investing.com separately characterised the print as 3 percent above consensus without naming its data provider; those figures are close but separately sourced and are not blended here."
+     },
+     {
+      "name": "Group underlying operating profit",
+      "actual": "£2,464m (13.8% margin)",
+      "expected": "£2,287m, 13.2% margin (company-compiled consensus, January 2025)",
+      "verdict": "beat",
+      "result": "Beat by 7.7 percent; 2025 guidance was set about 8 percent above consensus."
+     },
+     {
+      "name": "Group underlying EPS",
+      "actual": "20.3p",
+      "expected": "18.6p (median 18.4p, range 16.3-23.0p, 16 analysts; company-compiled consensus, January 2025)",
+      "verdict": "beat",
+      "result": "Beat by 9.1 percent."
+     },
+     {
+      "name": "Group free cash flow",
+      "actual": "£2,425m",
+      "expected": "£2,232m (16 analysts; company-compiled consensus, January 2025)",
+      "verdict": "beat",
+      "result": "Beat by 8.6 percent."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "Reported 2026-02-26. Power Systems was the single largest source of the group's beat: 18.8 percent ahead of consensus on divisional operating profit against 5.7 percent at group level. Rolls-Royce Power Systems AG separately reported adjusted revenue of EUR 5.72bn (+19%), adjusted operating profit of EUR 995m and a 17.4 percent return on sales, with order intake of EUR 7.14bn (+21%) including a December order for 300 Leopard tank engines. The divisional mid-term margin target was raised to 18-20 percent from 14-16 percent. Two consumer trackers disagree on whether the group EPS line beat: Investing.com scores it +17.5 percent and TipRanks in line; both use half-year-shaped splits that do not reconcile to the reported full-year figures, so the company-compiled consensus is the figure carried here.",
+    "metrics": [
+     {
+      "name": "Power Systems revenue",
+      "actual": "£4,892m (+19% organic)",
+      "expected": "£4,760m (median £4,781m, range £4,507-4,961m, 15 analysts; Rolls-Royce company-compiled analyst consensus, January 2026)",
+      "verdict": "beat",
+      "result": "Beat by 2.8 percent."
+     },
+     {
+      "name": "Power Systems underlying operating profit",
+      "actual": "£852m (+60% organic, +52% reported)",
+      "expected": "£717m (median £720m, range £631-821m, 15 analysts; company-compiled consensus, January 2026)",
+      "verdict": "beat",
+      "result": "Beat by 18.8 percent — the largest single contributor to the group's outperformance."
+     },
+     {
+      "name": "Power Systems underlying operating margin",
+      "actual": "17.4%",
+      "expected": "15.1% (range 13.8-17.0%; company-compiled consensus, January 2026)",
+      "verdict": "beat",
+      "result": "230 basis points ahead, and above the top of the analyst range."
+     },
+     {
+      "name": "Power Systems order intake",
+      "actual": "£6.1bn (+21%), book-to-bill 1.2x, OE order coverage 79% for 2026",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "No consensus is published for divisional order intake. Rolls-Royce does not disclose a Power Systems backlog figure at all — only Defence backlog is published — so order intake and coverage are the only forward measures available."
+     },
+     {
+      "name": "Power Systems data-centre disclosure",
+      "actual": "Power generation revenue growth 30%, including data centre revenue growth of 35%; the BESS business reached breakeven",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Data-centre growth decelerated from 46 percent to 35 percent while the absolute base grew — the company does not publish the underlying revenue figure."
+     },
+     {
+      "name": "Group underlying revenue",
+      "actual": "£20,059m (+14%)",
+      "expected": "£19,610m (median £19,653m, range £19,101-20,201m, 15 analysts; company-compiled consensus, January 2026)",
+      "verdict": "beat",
+      "result": "Beat by 2.3 percent."
+     },
+     {
+      "name": "Group underlying operating profit",
+      "actual": "£3,462m (17.3% margin)",
+      "expected": "£3,274m, 16.7% margin (company-compiled consensus, January 2026)",
+      "verdict": "beat",
+      "result": "Beat by 5.7 percent."
+     },
+     {
+      "name": "Group underlying EPS",
+      "actual": "29.55p",
+      "expected": "29.0p (median 28.9p, range 25.8-31.8p, 15 analysts; company-compiled consensus, January 2026)",
+      "verdict": "beat",
+      "result": "A narrow beat of about 1.9 percent. The headline was an operating-profit and Power Systems story, not an EPS one — which is why the consumer trackers disagree so widely on this line."
+     },
+     {
+      "name": "Group free cash flow",
+      "actual": "£3,270m",
+      "expected": "£3,189m (median £3,226m, range £2,799-3,398m; company-compiled consensus, January 2026)",
+      "verdict": "beat",
+      "result": "Beat by 2.5 percent; group net cash closed the year at £1,900m against £475m."
+     }
+    ]
+   },
+   {
+    "period": "H1 2026",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "commentary": "Reported 2026-07-30. The company-compiled consensus is annual only, so there is no divisional half-year benchmark — the group figures below are measured against S&P Global Visible Alpha estimates cited by Alliance News, and no consensus of any kind was found for Power Systems at the half. Guidance was raised above the standing analyst consensus: the July 2026 company-compiled consensus had FY2026 group operating profit at £4,198m and Power Systems at £1,080m on £5,763m of revenue, and management guided to £4.7-4.9bn of group operating profit and £3.8-4.0bn of free cash flow. The power-generation original-equipment growth target was raised from 20 to 25 percent a year to 2030.",
+    "metrics": [
+     {
+      "name": "Power Systems revenue",
+      "actual": "£2,604m (+28%)",
+      "expected": "no published consensus found",
+      "verdict": "inline",
+      "result": "No divisional half-year consensus exists from any source. Original equipment was £1,824m (+33%) and services £780m (+17%)."
+     },
+     {
+      "name": "Power Systems underlying operating profit",
+      "actual": "£528m (+72%), margin 20.3% (+5.3 points)",
+      "expected": "no published consensus found",
+      "verdict": "inline",
+      "result": "The highest divisional margin on record and above the raised 18-20 percent mid-term target."
+     },
+     {
+      "name": "Power Systems order intake",
+      "actual": "£4.6bn, up more than 50%, book-to-bill 1.8x",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Original-equipment order coverage is about 100 percent for 2026 and more than 50 percent for 2027."
+     },
+     {
+      "name": "Power Systems data-centre disclosure",
+      "actual": "Power generation was 58% of original-equipment revenue and grew 41%; power generation order intake rose 55%; the CFO separately told CNBC that data-centre power orders rose more than 50%",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Trade press attributes to Rolls-Royce a figure of more than 80 percent of power-generation revenue coming from data centres; that figure does not appear in the results release or the transcript and is carried as trade-press attribution only."
+     },
+     {
+      "name": "Group underlying revenue",
+      "actual": "£11,279m",
+      "expected": "£11bn (S&P Global Visible Alpha, cited by Alliance News)",
+      "verdict": "beat",
+      "result": "Beat by about 2.5 percent."
+     },
+     {
+      "name": "Group underlying operating profit",
+      "actual": "£2,534m",
+      "expected": "£2.37bn (S&P Global Visible Alpha, cited by Alliance News)",
+      "verdict": "beat",
+      "result": "Beat by about 6.9 percent; group free cash flow £1,964m."
+     }
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "label": "Rolls-Royce — methanol-ready certification for mtu marine engines",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/31-08-2026-rr-reaches-another-milestone-with-methanol-ready-certification-for-mtu-marine-engines.aspx",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Rolls-Royce — portfolio of variable-speed marine generator sets expanded",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/31-08-2026-more-flexible-more-efficient-electric-rr-expands-its-portfolio-of-variable-speed-marine-generator-sets.aspx",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Investing.com — Citi lifts Rolls-Royce target on data-centre demand (Power Systems 504p SOTP)",
+   "url": "https://www.investing.com/news/stock-market-news/citi-lifts-rollsroyce-target-on-data-centre-demand-stronger-cash-flow-4863296",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "AskTraders — Citi and Morgan Stanley lift Rolls-Royce targets as Power Systems demand surges",
+   "url": "https://www.asktraders.com/analysis/citi-and-morgan-stanley-lift-rolls-royce-targets-as-power-systems-demand-surges/",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "highways.today — standby power and the AI data-centre buildout",
+   "url": "https://highways.today/2026/08/12/standby-power-ai-data-centre/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Rolls-Royce — 33 mtu engines for the Korean freight locomotive fleet",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/12-08-2026-rr-to-supply-33-mtu-engines-for-the-modernisation-of-the-korean-freight-locomotive-fleet.aspx",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "MarketScale — data-centre order surge reported by the CFO",
+   "url": "https://www.marketscale.com/industries/energy/rolls-royce-reports-50-plus-order-surge-in-data-center-energy-as-ai-infrastructure-demand-reshapes-power-procurement",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "Rolls-Royce Holdings — 2026 Half Year Results",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/30-07-2026-rr-holdings-plc-2026-half-year-results.aspx",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Rolls-Royce Holdings — 2026 Half Year Results press release (PDF)",
+   "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Investing.com — H1 2026 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-rollsroyce-lifts-h1-2026-outlook-on-profit-surge-93CH-4823055",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Investing.com — H1 2026 results slides, profit up 46 percent, guidance raised",
+   "url": "https://www.investing.com/news/company-news/rollsroyce-h1-2026-slides-profit-surges-46-guidance-raised-93CH-4823078",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Yahoo Finance / Alliance News — H1 2026 beat against S&P Global Visible Alpha consensus",
+   "url": "https://uk.finance.yahoo.com/news/rolls-royce-beats-first-half-081126365.html",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Rolls-Royce — company-compiled analyst consensus, July 2026 (PDF)",
+   "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rolls-royce-detailed-consensus-by-business-jul-2026.pdf",
+   "date": "2026-07"
+  },
+  {
+   "label": "Rolls-Royce — ribbon cut on the $24M Mankato, Minnesota expansion",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/09-07-2026-rr-cuts-ribbon-on-new-usd-24m-expansion-in-mankato-minnesota.aspx",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "Terrapin Consulting Group — switchgear, transformer and generator lead times 2026",
+   "url": "https://terrapincg.com/news/switchgear-transformer-generator-lead-times-2026",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Rolls-Royce — Sunly contract for large-scale battery storage in Latvia",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/04-06-2026-rr-wins-contract-from-sunly-for-large-scale-battery-storage-in-latvia-and-strengthens-its-position-as-the-leading-supplier-of-battery-storage.aspx",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "Natural Gas Intelligence — reciprocating-engine capacity race",
+   "url": "https://naturalgasintel.com/news/no-turbine-data-centers-find-faster-path-with-natural-gas-reciprocating-engines/",
+   "date": "2026-05-29"
+  },
+  {
+   "label": "MarketsandMarkets — data center generators companies ranking",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "Rolls-Royce — tens of millions invested in new test benches in Friedrichshafen",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/07-05-2026-rr-invests-tens-of-millions-in-new-test-benches-in-friedrichshafen.aspx",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "Rolls-Royce Holdings — AGM statement and trading update",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/30-04-2026-rr-holdings-plc-agm-statement-and-trading-update.aspx",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Mordor Intelligence — data center generator market",
+   "url": "https://www.mordorintelligence.com/industry-reports/data-center-generator-market",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Rolls-Royce — switching engine test fuel to sustainable fuel",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/16-04-2026-rolls-royce-power-systems-reduces-emissions-by-switching-to-sustainable-fuel-for-engine-tests.aspx",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "Rolls-Royce — Voltaria 43 MW battery storage facility in Scotland (CATL cells)",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/31-03-2026-rr-and-voltaria-to-build-a-43-mw-large-scale-battery-storage-facility-in-scotland.aspx",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Rolls-Royce — another major defence contract secured",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/26-03-2026-rr-power-systems-secures-another-major-defence-contract.aspx",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "Rolls-Royce — two new members appointed to the North American board",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/03-03-2026-rr-appoints-two-new-members-to-north-american-board.aspx",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "POWER Magazine — engine power plants surge as data centers drive demand",
+   "url": "https://www.powermag.com/engine-power-plants-surge-as-data-centers-drive-unprecedented-demand/",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Marine Industry News — Rolls-Royce Power Systems posts strong 2025 results",
+   "url": "https://marineindustrynews.co.uk/rolls-royce-power-systems-posts-strong-2025-results/",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Schwaebische — Rolls-Royce Power Systems builds Kluftern into Plant 3",
+   "url": "https://www.schwaebische.de/regional/bodensee/friedrichshafen/rolls-royce-power-sytems-baut-kluftern-zum-werk-3-aus-4250035",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "mtu — Rolls-Royce Power Systems FY2025 results in euros",
+   "url": "https://www.mtu-solutions.com/na/en/pressreleases/2026/Strong-results-and-record-investments-Rolls-Royce-Power-Systems-continues-on-growth-path.html",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "LOK Report — Rolls-Royce Power Systems strong result and record investments",
+   "url": "https://www.lok-report.de/news/deutschland/industrie/65472-rolls-royce-power-systems-starkes-ergebnis-und-rekordinvestitionen.html",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "Rolls-Royce Holdings — 2025 Full Year Results",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Rolls-Royce Holdings — 2025 Full Year Results press release (PDF)",
+   "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/results/2025-full-year-results/rr-holdings-plc-2025-full-year-results-press-release.pdf",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Investegate — Rolls-Royce Holdings full year results 2025 (RNS)",
+   "url": "https://www.investegate.co.uk/announcement/rns/rolls-royce-holdings--rr./full-year-results-2025/9447626",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "IG — Rolls-Royce FY2025 earnings preview",
+   "url": "https://www.ig.com/uk/news-and-trade-ideas/rolls-royce-earnings-preview--can-the-aerospace-giant-sustain-tr-260220",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "Rolls-Royce — launch of modular gas engine power plants (MEPP)",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/10-02-2026-rr-launches-modular-gas-engine-power-plants.aspx",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "mtu — Modular Engine Power Plants flyer (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/application/power-generation/power_resilience/202601_Flyer_MEPP_GB.pdf/_jcr_content/renditions/original.media_file.download_attachment.file/202601_Flyer_MEPP_GB.pdf",
+   "date": "2026-01"
+  },
+  {
+   "label": "Rolls-Royce — company-compiled analyst consensus, January 2026 (PDF)",
+   "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-detailed-consensus-by-business-jan-2026.pdf",
+   "date": "2026-01"
+  },
+  {
+   "label": "Rolls-Royce — first data-centre emergency power generators with Environmental Product Declarations",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/11-12-2025-rr-delivers-first-emergency-power-generators-for-data-centres-with-environmental-product.aspx",
+   "date": "2025-12-11"
+  },
+  {
+   "label": "Rolls-Royce — AVK partnership, five years of guaranteed capacity",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/04-12-2025-rr-and-avk-strengthen-partnership-5-years-of-guaranteed-capacity-for-emergency-power.aspx",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "Data Centre Review — AVK and Rolls-Royce agree multi-year capacity deal",
+   "url": "https://datacentrereview.com/2025/12/avk-and-rolls-royce-agree-multi-year-capacity-deal-for-mtu-generator-sets/",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "Rolls-Royce Holdings — trading update",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/13-11-2025-rr-holdings-plc-trading-update.aspx",
+   "date": "2025-11-13"
+  },
+  {
+   "label": "Rolls-Royce — emergency power for the new Kuwait airport terminal",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/05-11-2025-rr-secures-emergency-power-supply-at-new-airport-terminal-in-kuwait-with-mtu-gensets.aspx",
+   "date": "2025-11-05"
+  },
+  {
+   "label": "Rolls-Royce — fast-start mtu gas gensets for powering data centers",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/02-10-2025-rr-introduces-fast-start-mtu-gas-gensets-for-powering-data-centers.aspx",
+   "date": "2025-10-02"
+  },
+  {
+   "label": "mtu — AI boom: how combustion engines secure data-centre power",
+   "url": "https://www.mtu-solutions.com/na/en/stories/power-generation/KI-Boom-Wie-Verbrennungsmotoren-die-Stromversorgung-von-Rechenzentren-sichern-und-was-Rolls-Royce-als-naechstes-plant.html",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "Rolls-Royce — UK gas engine power plant with CO2 recovery commissioned",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/24-09-2025-rr-landmark-and-asco-commission-uk-gas-engine-power-plant-with-co2-recovery.aspx",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "Rolls-Royce — Netherlands uses mtu gas gensets to counter grid bottlenecks (Stedin, 60 MW)",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/23-09-2025-netherlands-uses-mtu-gas-gensets-from-rolls-royce-to-counter-grid-bottlenecks.aspx",
+   "date": "2025-09-23"
+  },
+  {
+   "label": "Rolls-Royce — biggest battery order, Ignitis Group, Lithuania (582 MWh / 291 MW)",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/16-09-2025-rr-biggest-battery-order-for-rolls-royce-large-scale-energy-storage-system-in-lithuania.aspx",
+   "date": "2025-09-16"
+  },
+  {
+   "label": "Rolls-Royce — HVO position paper published with Microsoft for Singapore data centres",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/28-08-2025-rr-publishes-position-paper-with-microsoft-on-the-use-of-hydrotreated-vegetable-oil-hvo-for-the-singapore-data-centre-sector.aspx",
+   "date": "2025-08-28"
+  },
+  {
+   "label": "Rolls-Royce Holdings — 2025 Half Year Results",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/31-07-2025-rr-holdings-plc-2025-half-year-results.aspx",
+   "date": "2025-07-31"
+  },
+  {
+   "label": "Rolls-Royce — $75M South Carolina (Aiken) manufacturing expansion",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/15-07-2025-rr-increases-us-manufacturing-capabilities-in-south-carolina.aspx",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Manufacturing Dive — Rolls-Royce invests $75M in Aiken, South Carolina",
+   "url": "https://www.manufacturingdive.com/news/rolls-royce-invests-75-million-aiken-south-carolina-engine-plant/753189/",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Environment+Energy Leader — Mankato backup power production capacity expanded",
+   "url": "https://environmentenergyleader.com/stories/rolls-royce-expands-mankato-backup-power-production-capacity,133307",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "Rolls-Royce — carbon-neutral self-sufficient energy system with duisport",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/08-07-2025-rr-and-duisport-launch-co2-neutral-self-sufficient-energy-system-for-new-port-terminal.aspx",
+   "date": "2025-07-08"
+  },
+  {
+   "label": "mtu — Supervisory Board extends the contract of CEO Dr Jorg Stratmann",
+   "url": "https://www.mtu-solutions.com/eu/en/pressreleases/2025/rolls-royce-power-systems-ag-supervisory-board-extends-the-contract-of-the-chairman-of-the-board-of-management-dr-jorg-stratmann.html",
+   "date": "2025-06-20"
+  },
+  {
+   "label": "Schwaebische — data-centre boom continues at Rolls-Royce Power Systems",
+   "url": "https://www.schwaebische.de/wirtschaft/rolls-royce-massiver-boom-durch-rechenzentren-geht-weiter-news-3644978",
+   "date": "2025-06-06"
+  },
+  {
+   "label": "Rolls-Royce — powers data center growth with increased investment in US manufacturing (Mankato)",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/03-06-2025-rr-powers-data-center-growth-with-increased-investment-in-us-manufacturing.aspx",
+   "date": "2025-06-03"
+  },
+  {
+   "label": "POWER Magazine — Rolls-Royce commits $24 million for US data center power systems",
+   "url": "https://www.powermag.com/rolls-royce-commits-24-million-for-u-s-data-center-power-systems/",
+   "date": "2025-06-03"
+  },
+  {
+   "label": "ess-news — Rolls-Royce to deliver second large-scale battery system to Battery Park Zeewolde",
+   "url": "https://www.ess-news.com/2025/06/02/rolls-royce-to-deliver-second-large-scale-battery-system-to-battery-park-zeewolde/",
+   "date": "2025-06-02"
+  },
+  {
+   "label": "mtu — enabling data center operators to bridge the grid capacity gap with self-generation",
+   "url": "https://www.mtu-solutions.com/seai/en/technical-articles/2025/enabling-data-center-operators-to-bridge-the-grid-capacity-gap-with-self-generation-solutions.html",
+   "date": "2025-05-28"
+  },
+  {
+   "label": "Rolls-Royce — battery analytics introduced for mtu battery solutions",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/30-04-2025-rr-introduces-battery-analytics-for-mtu-battery-solutions.aspx",
+   "date": "2025-04-30"
+  },
+  {
+   "label": "Rolls-Royce — Avacon and Rolls-Royce test battery storage and PV contribution",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/15-04-25-avacon-and-rr-are-testing-the-contribution-of-battery-storage-and-pv-systems.aspx",
+   "date": "2025-04-15"
+  },
+  {
+   "label": "Rolls-Royce — mtu emergency power systems for the European Commission",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/12-03-2025-rr-supplies-mtu-emergency-power-systems-for-the-european-commission.aspx",
+   "date": "2025-03-12"
+  },
+  {
+   "label": "Rolls-Royce Holdings — 2024 Full Year Results",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/27-02-2025-rr-holdings-plc-2024-full-year-results.aspx",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "Investegate — Rolls-Royce Holdings full year results 2024 (RNS)",
+   "url": "https://www.investegate.co.uk/announcement/rns/rolls-royce-holdings--rr./full-year-results-2024/8754593",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "Investing.com — Rolls-Royce beats 2024 targets, raises forecasts",
+   "url": "https://www.investing.com/news/stock-market-news/rollsroyce-beats-2024-targets-amid-strong-growth-3895032",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "Rolls-Royce — upgraded mtu Series 1600 generator sets for the 50 Hz market",
+   "url": "https://www.rolls-royce.com/media/press-releases/2025/13-02-2025-rolls-royce-introduces-upgraded-mtu-series-1600-generator-sets-for-50-hertz-market.aspx",
+   "date": "2025-02-13"
+  },
+  {
+   "label": "mtu — Rolls-Royce Power Systems extends Dr Andreas Strecker's contract",
+   "url": "https://www.mtu-solutions.com/lasa/en/pressreleases/2025/rolls-royce-power-systems-extends-dr-andreas-strecker-s-contract.html",
+   "date": "2025-01-27"
+  },
+  {
+   "label": "Rolls-Royce — company-compiled analyst consensus, January 2025 (PDF)",
+   "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rolls-royce-detailed-consensus-by-business-january-2025.pdf",
+   "date": "2025-01"
+  },
+  {
+   "label": "Rolls-Royce — completes sale of the lower-power-range engine business to DEUTZ AG",
+   "url": "https://www.rolls-royce.com/media/press-releases/2024/01-08-2024-rr-completes-sale-of-lower-power-range-engine-business-to-deutz-ag.aspx",
+   "date": "2024-08-01"
+  },
+  {
+   "label": "Rolls-Royce — H2-ready certificate from TUV Sud for mtu gas engines",
+   "url": "https://www.rolls-royce.com/media/press-releases/2024/11-7-2024-energy-transition-rr-reaches-milestone-with-h2-ready-certificate-for-mtu-engines.aspx",
+   "date": "2024-07-11"
+  },
+  {
+   "label": "Rolls-Royce — emergency backup power for a colocation data centre in Colorado (NOVVA)",
+   "url": "https://www.rolls-royce.com/media/press-releases/2024/06-06-2024-rr-secures-emergency-backup-power-for-co-location-data-centre-in-colorado.aspx",
+   "date": "2024-06-06"
+  },
+  {
+   "label": "Bloomberg — Rolls-Royce moves to keep Power Systems unit with an eye on costs",
+   "url": "https://www.bloomberg.com/news/articles/2023-11-24/rolls-royce-moves-to-keep-power-systems-unit-with-eye-on-costs",
+   "date": "2023-11-24"
+  },
+  {
+   "label": "Rolls-Royce — 2023 Capital Markets Day",
+   "url": "https://www.rolls-royce.com/media/press-releases/2023/28-11-2023-capital-markets-day.aspx",
+   "date": "2023-11-28"
+  },
+  {
+   "label": "Microgrid Knowledge — 31 mtu diesel gen-sets for a Japanese hyperscale data-centre microgrid",
+   "url": "https://www.microgridknowledge.com/data-center-microgrids/article/33013580/rolls-royce-supplying-31-mtu-diesel-gen-sets-microgrid-to-backup-japan-hyperscale-data-center",
+   "date": "2023-10-23"
+  },
+  {
+   "label": "mtu — Rolls-Royce to supply 23 mtu Onsite Energy diesel gensets to a data centre in Amsterdam (EdgeConneX)",
+   "url": "https://www.mtu-solutions.com/eu/en/pressreleases/2016/rolls-royce_to_supply_23_mtu_onsite_energy_diesel_gensets_to_data_centre_in_amsterdam.html",
+   "date": "2016-06-07"
+  },
+  {
+   "label": "mtu — Series 4000 diesel generator sets",
+   "url": "https://www.mtu-solutions.com/eu/en/applications/power-generation/power-generation-products/diesel-generator-sets/series/4000.html"
+  },
+  {
+   "label": "mtu — Series 4000 diesel gen-set brochure (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/download/applications/power-generation/16120753_PowerGeneration_S4000_Diesel_brochure.pdf/_jcr_content/renditions/original./16120753_PowerGeneration_S4000_Diesel_brochure.pdf"
+  },
+  {
+   "label": "mtu — Series 2000 diesel generator sets",
+   "url": "https://www.mtu-solutions.com/eu/en/applications/power-generation/power-generation-products/diesel-generator-sets/series/2000.html"
+  },
+  {
+   "label": "mtu — Series 1600 diesel generator sets",
+   "url": "https://www.mtu-solutions.com/eu/en/applications/power-generation/power-generation-products/diesel-generator-sets/series/1600.html"
+  },
+  {
+   "label": "mtu — gas generator sets",
+   "url": "https://www.mtu-solutions.com/eu/en/applications/power-generation/power-generation-products/gas-generator-sets.html"
+  },
+  {
+   "label": "mtu — data centers application page",
+   "url": "https://www.mtu-solutions.com/eu/en/applications/power-generation/power-generation-applications/data-centers.html"
+  },
+  {
+   "label": "mtu — energy storage systems (EnergyPack)",
+   "url": "https://www.mtu-solutions.com/eu/en/applications/power-generation/power-generation-products/energy-storage-system.html"
+  },
+  {
+   "label": "mtu — EnergetIQ control platform",
+   "url": "https://www.mtu-solutions.com/eu/en/applications/power-generation/power-generation-products/energy-storage-system/mtu-energetiq.html"
+  },
+  {
+   "label": "mtu — EnergyPack QG datasheet (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/application/power-generation/energy-storage-system/mtu-energypack-qg/Energypack_QG_en.pdf/_jcr_content/renditions/original./Energypack_QG_en.pdf"
+  },
+  {
+   "label": "mtu — EnergyPack QL datasheet (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/application/power-generation/energy-storage-system/mtu-energypack-ql/Energypack_QL_en.pdf/_jcr_content/renditions/original./Energypack_QL_en.pdf"
+  },
+  {
+   "label": "mtu — EnergyPack QS datasheet (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/application/power-generation/energy-storage-system/mtu-energypack-qs/Energypack_QS_en.pdf/_jcr_content/renditions/original./Energypack_QS_en.pdf"
+  },
+  {
+   "label": "mtu — Kinetic PowerPack product data (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/download/applications/power-generation/16120885_Product_data_mtu_Kinetic_PowerPack_202402.pdf/_jcr_content/renditions/original./16120885_Product_data_mtu_Kinetic_PowerPack_202402.pdf"
+  },
+  {
+   "label": "mtu — spec 20V4000 DS3000, 2,790 kWe, DCCP, 60 Hz, 50 C (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/products/power-generation/powergeneration-product-list-latest/231245_PG_Spec_20V4000DS3000G04_2790kW_3F_FC_60Hz_50C.pdf/_jcr_content/renditions/original./231245_PG_Spec_20V4000DS3000G04_2790kW_3F_FC_60Hz_50C.pdf"
+  },
+  {
+   "label": "mtu — spec 20V4000 DS3250, 3,250 kWe, standby, Tier 2 SCAQMD, 60 Hz (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/products/power-generation/powergeneration-product-list-latest/231221_PG_Spec_20V4000DS3250G04_3250kW_3D_T2_SCAQMD_60Hz_43C.pdf/_jcr_content/renditions/original./231221_PG_Spec_20V4000DS3250G04_3250kW_3D_T2_SCAQMD_60Hz_43C.pdf"
+  },
+  {
+   "label": "mtu — spec 20V4000 DS3000, 3,000 kWe, standby, Tier 4, 60 Hz (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/products/power-generation/powergeneration-product-list-latest/231313_PG_Spec_20V4000DS3000G04_3000kW_3D_T4_60Hz_50C.pdf/_jcr_content/renditions/original./231313_PG_Spec_20V4000DS3000G04_3000kW_3D_T4_60Hz_50C.pdf"
+  },
+  {
+   "label": "mtu — spec 20V4000 DS4000, 4,000 kVA, standby, 50 Hz (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/products/power-generation/powergeneration-product-list-latest/32310781_PG_spec_20V4000DS4000_4000kVA_3D_FC_50Hz.pdf/_jcr_content/renditions/original./32310781_PG_spec_20V4000DS4000_4000kVA_3D_FC_50Hz.pdf"
+  },
+  {
+   "label": "mtu — Gendrive Series 4000 Gx4 specification, 3D/3E/3F rating definitions (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/products/power-generation/powergeneration-product-list-latest/32311361_MTU_Gendrive_spec_12V16V20V4000Gx4_3D_3E_3F_W2A.pdf/_jcr_content/renditions/original./32311361_MTU_Gendrive_spec_12V16V20V4000Gx4_3D_3E_3F_W2A.pdf"
+  },
+  {
+   "label": "mtu — spec 8V/12V/16V/20V4000 GS natural gas, 60 Hz, NOx below 500 (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/products/power-generation/powergeneration-product-list-latest/3237291_PG_spec_8V12V16V20V4000GS_3A_NG_NOx500_60Hz.pdf/_jcr_content/renditions/original./3237291_PG_spec_8V12V16V20V4000GS_3A_NG_NOx500_60Hz.pdf"
+  },
+  {
+   "label": "mtu — HVO data-centre use case (PDF)",
+   "url": "https://www.mtu-solutions.com/content/dam/mtu/download/applications/power-generation/PG_UseCase_HVO_Datacenter.pdf/_jcr_content/renditions/original./PG_UseCase_HVO_Datacenter.pdf"
+  },
+  {
+   "label": "mtu — power generation product finder",
+   "url": "https://www.mtu-solutions.com/na/en/products/power-generation-products-list.html"
+  },
+  {
+   "label": "mtu — about Rolls-Royce Power Systems (board and supervisory board)",
+   "url": "https://www.mtu-solutions.com/eu/en/about-us/about-rolls-royce-power-systems.html"
+  },
+  {
+   "label": "Rolls-Royce — executive leadership team",
+   "url": "https://www.rolls-royce.com/about/leadership/executive-leadership-team.aspx"
+  },
+  {
+   "label": "Rolls-Royce — Power Systems division page",
+   "url": "https://www.rolls-royce.com/products-and-services/power-systems.aspx"
+  },
+  {
+   "label": "Rolls-Royce — analyst consensus landing page",
+   "url": "https://www.rolls-royce.com/investors/analyst-consensus.aspx"
+  },
+  {
+   "label": "Rolls-Royce — investor financial calendar",
+   "url": "https://www.rolls-royce.com/investors/financial-calendar.aspx"
+  },
+  {
+   "label": "TipRanks — Rolls-Royce earnings page (next results date)",
+   "url": "https://www.tipranks.com/stocks/gb:rr/earnings"
+  },
+  {
+   "label": "Investing.com — Rolls-Royce earnings calendar and history",
+   "url": "https://www.investing.com/equities/rolls-royce-earnings"
+  },
+  {
+   "label": "Arizton — data center generator market vendor list",
+   "url": "https://www.arizton.com/market-reports/data-center-generator-market"
+  }
+ ],
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
+}

@@ -152,7 +152,7 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 
 | Session | Slug | Company | Categories | Model | Closes | Dossier | Guide |
 |---------|------|---------|------------|-------|--------|---------|-------|
-| A1 | `caterpillar` | Caterpillar | supplier | Fable 5.1 xhigh | G2 | v1 · v04.41r | ✓ · v04.41r |
+| A1 | `caterpillar` | Caterpillar | supplier | Fable 5.1 xhigh | G2 | v1 · v04.41r → v2 · v04.47r | ✓ · v04.41r |
 | A2 | `piller` | Piller Power Systems | supplier | Fable 5.1 xhigh | G3 | v1 · v04.42r | ✓ · v04.42r |
 | A3 | `dominion-energy` | Dominion Energy | utility (new) | Fable 5.1 xhigh | G5 | v1 · v04.43r | ✓ · v04.43r |
 | A4 | `vicor` | Vicor | supplier | Fable 5.1 xhigh | G9 | v1 · v04.44r | ✓ · v04.44r |
@@ -185,9 +185,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | B10 | `sargent-lundy` | Sargent & Lundy | advisor | Fable 5.1 High | G10 | — | — |
 | B10 | `coolit` | CoolIT Systems | supplier | Fable 5.1 High | G7 | — | — |
 | B10 | `x-energy` | X-energy | supplier | Fable 5.1 High | G8 | — | — |
-| C1 | `cummins` | Cummins | supplier | Opus 5 xhigh | G2 | — | — |
-| C1 | `rolls-royce-power-systems` | Rolls-Royce Power Systems (mtu) | supplier | Opus 5 xhigh | G2 | — | — |
-| C1 | `rehlko` | Rehlko (Kohler Energy) | supplier | Opus 5 xhigh | G2 | — | — |
+| C1 | `cummins` | Cummins | supplier | Opus 5 xhigh | G2 | v1 · v04.47r | ✓ · v04.47r |
+| C1 | `rolls-royce-power-systems` | Rolls-Royce Power Systems (mtu) | supplier | Opus 5 xhigh | G2 | v1 · v04.47r | ✓ · v04.47r |
+| C1 | `rehlko` | Rehlko (Kohler Energy) | supplier | Opus 5 xhigh | G2 | v1 · v04.47r | ✓ · v04.47r |
 | C2 | `mitsubishi-electric` | Mitsubishi Electric | supplier | Opus 5 xhigh | G3 | — | — |
 | C2 | `powell-industries` | Powell Industries | supplier | Opus 5 xhigh | G4 | — | — |
 | C2 | `mitsubishi-power` | Mitsubishi Power | supplier | Opus 5 xhigh | turbine gap | — | — |
