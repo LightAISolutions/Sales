@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 70/100`
+`Sections: 71/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.54r] — 2026-09-04 03:07:23 PM EST
+
+> continue with your recommendation
+
+### Changed
+
+- **`CLASSROOM-CURRICULUM-PLAN.md` §6 — the full re-run the register said was owed at the close of Phase B, run one phase late.** The task began as "rewrite the stale commission-first paragraph", but writing an honest standings note meant re-checking every row against the corpus first, and that check found the paragraph was not the only stale thing in §6: **two rows had been sitting at Partial after the work that closes them had already landed.**
+  - **G2 (backup-generation OEM) — `Partial v04.41r` → `Closed` v04.53r.** The row asks for dossiers and study guides for **two of** Caterpillar, Cummins, Kohler and Rolls-Royce Power Systems; the corpus holds **all four** — `caterpillar` (16-section guide), `cummins` (14), `rolls-royce-power-systems` (13) and `rehlko` (13), Rehlko being the Kohler Energy business carved out to Platinum Equity in 2024 and renamed, so the row's fourth name is covered under its current one. It stayed Partial because its v04.44r text named session C1 as what would close it and nobody re-ran the check after C1 landed.
+  - **G5 (utility dossiers) — `Partial v04.43r` → `Closed` v04.53r.** The row asks for **four** utility dossiers with study guides; the corpus holds **six** under the `utility` category — `dominion-energy`, `xcel-energy`, `southern-company`, `entergy`, `oncor` and `aep`. Same cause: the v04.44r text named B1–B2 as the closers and the check was never re-run. `how-a-utility-buys` can now be authored as a **public** lesson against six sources rather than one.
+  - **G4, G6 and G10 re-checked and dated `v04.53r` as unchanged.** `guidanceDocs_()` still returns the same seven modules, so G4's grid-equipment-shortage module and G6's interconnection module are both still absent; `dnv` and `sargent-lundy` are both still absent from the 109-company registry.
+- **A "Standings — read this before the trail below" block inserted directly under the register table**, ahead of the four dated re-check paragraphs. It gives the current counts (six closed, two Partial, two Open, two standing judgments) and then sorts what is left by **whether anything is scheduled to do it**: G7 and G10 are *scheduled* (both are coverage-plan §8 row B10), while **G4 and G6 are *structural*** — `PROFILER-COVERAGE-PLAN.md` §8 carries no guidance-module row at all, so no Profiler session will ever move them. The commission-first recommendation is restated accordingly: **G4 then G6, and nothing else.**
+- **The four historical paragraphs were left exactly as written** and are now labelled as the dated re-check trail that produced the standings. The recommendation this session acted on was to *rewrite* the v04.39r commission-first paragraph; it is instead superseded in place by a paragraph above it, because that paragraph is a dated historical record in an append-only trail and rewriting it would have made the file lie about its own history. The problem was ordering, not content.
+- **Six curly apostrophes normalised to straight** in the G7, G8 and targeted-re-run text written earlier today — the file runs 84 straight to zero curly otherwise.
+
+### Verified
+
+- All twelve rows re-parse at **8 cells each** after the edit, so the table is structurally intact, and zero curly apostrophes remain in the file.
+- Every status claim was taken from the filesystem, not from the rows: `caterpillar`, `cummins`, `rehlko`, `rolls-royce-power-systems` all carry dossier **and** guide; the six `utility` dossiers all carry guides; `powell-industries` exists (an earlier probe on the slug `powell` returned a false negative and was corrected); `kohler`, `georgia-power`, `dnv`, `sargent-lundy` and `mgx` are absent; and `guidanceDocs_()` returns exactly seven modules — BessTech, PowerInfra, Nvidia800, UtilityAidc, ChinaPolicy, Bankability, Eo14420.
+- Rehlko's identity as the carved-out Kohler Energy business was read out of `rehlko.profile.json` rather than assumed, since G2 closing turns on it.
+
+### Worth noting
+
+- **G10 was deliberately not closed on a judgment call.** `black-veatch` is covered but as an EPC, and the row names it among the independent engineers. Whether an EPC dossier can stand in for the IE seat is the developer's call, not a re-check's — the row says so and stays Open.
 
 ## [v04.53r] — 2026-09-04 01:30:23 PM EST
 
