@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-04 04:10 PM EST
+**Repo version:** v04.56r (started at v04.54r — **two** push commits this session: `58e756b` v04.55r, plus this one)
+**Branch:** `claude/eloquent-cerf-horsm0`
+**Model:** **Opus 5 xhigh.** This was an **Industry Guidance** session, not a Profiler session — `PROFILER-COVERAGE-PLAN.md` §2 assigns models for Profiler sessions only and §8 has no guidance-module row, so **there is no model rule to record and no §8 row was added.** That absence is the whole reason G4 was "structural".
+
+### What was done
+
+- **The G4 guidance module (v04.55r)** — `guidanceDocGridEquipment_()` in `Profiler.gs`, module id `grid-equipment-shortage-2026-09`, *The Grid-Equipment Shortage: GOES, Bushings, Test Bays, Lead Times*, lane **The AI Data-Center Wave**, registered in `guidanceDocs_()` immediately after `guidanceDocUtilityAidc_()` as its supply-side counterpart (`guidanceDocs_()` now returns **eight** modules). Sixteen sections, 14 glossary terms all used and all resolving, 4 `sales` notes. `reviewBy: 2027-03-31`. Plus `repository-information/industry-guidance/grid-equipment-shortage-analysis.md` (12 sections, ~60 sourced claims) and the Scraper seed `topic-grid-equipment-shortage` (Scraper GAS v01.99g → **v02.00g**; Profiler GAS v01.34g → **v01.35g**; `Profiler.html` deliberately **not** bumped — the renderer was untouched).
+- **§6 bookkeeping in the same commit (v04.55r)** — all three of G4's asks re-checked against the corpus and the row flipped to **Closed v04.55r**; the Standings block rewritten from "G4 then G6" to "G6, and nothing else"; a fifth append-only trail paragraph added without rewriting any of the four earlier ones.
+- **A self-correction (v04.56r)** — writing the G6 commissioning prompt meant grounding it, and the grounding found that **the v04.55r Standings text about G6 was wrong**: it said G6's sources "exist in the corpus only as fragments", which it inherited from the G6 row's own v04.44r text rather than checking the corpus. Corrected in both the Standings block and as a dated re-check parenthetical on the G6 row.
+
+### Where we left off
+
+Both commits are pushed and merged; the working tree is clean and the branch is at `origin/main`. The register stands at **seven closed** (G1, G2, G3, G4, G5, G8, G9), **one Partial** (G7), **two Open** (G6, G10), **two standing judgments** (G11, G12). **The commissioning backlog is G6 alone.** The paste-ready G6 commissioning prompt was delivered in chat this turn.
+
+### Key decisions and findings
+
+- **The "needs a source document" assumption was wrong and is now corrected in the trail.** Only two of the eight modules have an ingested source under `industry-guidance/sources/`; the other six declare what they are in a `**Provenance:**` line. This module's line reads *research-based synthesis over public sources plus already-verified internal material — neither a document ingest nor a pure internal synthesis*. **Step 1 of the Industry Guidance Command does not apply to a module like this.**
+- **`reviewBy` came from the module's own nearest dated gate**, per step 10: **2027-03-31**, Siemens Energy's Charlotte plant beginning LPT production ("by early 2027"). It carries the module's central arithmetic — 24 units initially rising to 57/year at full capacity, against ~900 units/year of US demand, about 6%. Rejected alternatives (Hitachi 2028, Eaton 2027-no-month, Butler Works 2029-and-disputed, Wood Mackenzie's continuous quarterly series) are recorded in the analysis's §12.
+- **"Do not invent a number" cost nine items**, all moved to *what the record does NOT say* rather than hedged into the module. The largest: **no public register of high-voltage test-bay capacity, utilisation or queue time exists anywhere**, so the bay is taught as a mechanism sourced to IEC 60076-3 (lightning impulse is a **routine** test above 72.5 kV — every unit) and IEC 60076-2 (heat run is a **type** test) with no number on the queue. Also omitted: the vendor-blog-only "bushings run up to 130 weeks", the unverifiable "single US OLTC producer", and any forecast crossover year.
+- **The register's staleness failure mode caught me too, one commit after I wrote a paragraph about it.** The v04.54r session found G2 and G5 stale for four and five repo versions; I then wrote a Standings sentence about G6 from the row's text rather than the corpus. **The rule that works is mechanical: before writing anything about a row's premise, scan the corpus for it.** A `glob` over `*.study.json` section titles took about ten seconds and returned a dozen guides where the row claimed fragments.
+- **G6's real shape, established by that scan.** The **state/utility half is well covered publicly** — `dominion-energy`, `aep`, `oncor`, `southern-company`, `xcel-energy`, `entergy`, plus `burns-mcdonnell` and the requester-side guides `stack-infrastructure`, `aligned`, `switch`, `amazon`, `meta`, `core-scientific`. **The genuine gap is the federal layer**: the string `"Order 2023"` appears **nowhere** in the corpus, and study-fee regimes are no one's subject.
+- **Playwright harness notes still hold** and were re-confirmed: threaded HTTP server, `bypass_csp`, `add_init_script` setting `localStorage ov_note_role='admin'`, injected style hiding `#ov-authwall`, `executable_path` into `/opt/pw-browsers/chromium-*` (`playwright install` is **not** the fix). `pip install playwright` and `pip install pymupdf` were both needed in a fresh container. The module rendered at 46,785 chars of text, 0 unresolved `{{term}}` markers, 0 page errors.
+- **One pre-existing failure, not caused by this work**: `playwright-harness.py Scraper` fails on a CSP image-load refusal for a `lightaisolutions.github.io` logo when served from `127.0.0.1`. `Scraper.html` was never touched.
+
+### Active context
+
+- Branch `claude/eloquent-cerf-horsm0`; repo version **v04.56r**; CHANGELOG counter **73/100**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- Guidance modules: **8**. Profiler GAS **v01.35g**, Scraper GAS **v02.00g**, `Profiler.html` unchanged at **v01.82w**.
+- `REMINDERS.md` still carries one active reminder: the **Fable 5.1 High vs Opus 5 xhigh head-to-head on the Xcel Energy dossier** (baseline `xcel-energy.profile.json` at `v04.46r`, commit `2652d30`).
+- Still owed elsewhere: Fable session **B10** (`coolit` closes G7, `dnv`/`sargent-lundy` close G10, plus `mgx`, `x-energy`) — both remaining gap rows are **scheduled**, not structural.
+
+### Recommendation for next session
+
+- **Commission the G6 guidance module — "Interconnection for large loads" — as a fresh Opus 5 xhigh session, briefed on the corrected split rather than on the row's own words.** It is the last structural row in the register and the only thing §6 still asks anyone to commission. Brief it to **compose against** the state-side material already in the corpus (six utility guides, `burns-mcdonnell`, and the requester-side guides) rather than restate it, and to spend its original research on the two things genuinely absent: **the federal interconnection-rule layer** (FERC Order 2023 appears nowhere in the corpus, and large loads are governed differently from generators — that distinction is the module's spine) and **study-fee and deposit regimes**. The full paste-ready prompt was written out in chat on 2026-09-04 at 04:10 PM EST; re-derive it from `.claude/rules/industry-guidance.md` steps 1–10 and §6's corrected G6 row if it is not to hand. **The session must also re-check G6 and flip the row in the same commit**, and update the Standings block — which will then read "nothing left to commission" for the first time in the register's history.
+**To continue:** type `commission the G6 interconnection guidance module`
+
+## Previous Sessions
+
 **Date:** 2026-09-04 03:19 PM EST
 **Repo version:** v04.54r (started at v04.51r — **three** push commits this session: `966da36` v04.52r, `2eeccde` v04.53r, `2d5ff01` v04.54r, plus this context write)
 **Branch:** `claude/phase-c11-profiler-coverage-49yg1c`
@@ -42,54 +82,3 @@ All three commits are pushed and merged; the working tree is clean and the branc
 
 - **Commission the G4 guidance module — "The grid-equipment shortage: GOES, bushings, test bays, lead times" — as a fresh Opus 5 xhigh session.** It is the top of the register's own restated list, it is the only remaining gap whose public sources are already in the corpus (the Siemens Energy Grid Technologies spine, `powell-industries`, plus `hitachi-energy`, `ge-vernova`, `abb`, `mitsubishi-electric`), and no scheduled Profiler session will ever close it. The full paste-ready prompt was written out in chat on 2026-09-04 at 03:19 PM EST; re-derive it from `.claude/rules/industry-guidance.md` steps 1–10 if it is not to hand. **The session must also flip §6's G4 row to Closed with a dated re-check AND update the Standings block in the same commit** — that block names G4 and G6 as the two structural rows and goes stale the moment the module lands, which is precisely the failure this session spent a commit repairing.
 **To continue:** type `commission the G4 grid-equipment-shortage guidance module on Opus 5 xhigh`
-
-## Previous Sessions
-
-
-**Date:** 2026-09-04 04:40 AM EST
-**Repo version:** v04.51r (started at v04.50r — one push commit, `4a371aa`, plus this context write)
-**Branch:** `claude/section8-guide-revisions-opus5-7y6n3p`
-**Model:** **Opus 5 xhigh — §2 assigns ALL study-guide work on existing dossiers to Opus natively, so there is NO substitution to record.** The §8 Guide column reads plain `✓ · v04.51r` on all four rows
-
-**What we worked on — the three §8 guide revisions plus the `narada` backfill, landed as v04.51r in one data-only push. This was a GUIDE session: no new dossiers, no new companies, no profile writes.**
-
-- **`vertiv.study.json` 6 → 18 sections.** The guide was cooling-only. Ten new sections teach the UPS as **the machine and the transaction**: what a `power module` physically is and the three things engineered into the *slot* (current sharing by droop, precharge/isolation decoupling, touch safety); module/frame/unit/system/path as five different purchases; capacity-on-demand, which defers about a third of the cost rather than most of it; the ratings ladder from a 33 kW rack shelf to a 50 MW prefab block; a twelve-row datasheet reading (overload rating, short-circuit contribution, THDi, battery charge-current limit, floor loading, IEC 62443); the eleven-step procurement sequence with **submittal approval named as the silent schedule killer**; and what moving the store into the rack distributes
-- **`schneider-electric.study.json` 6 → 17 sections.** Nine new sections on the deliberately different axis — **the system and the ladder**: the five redundancy arrangements above the machine, the installed-MW-per-protected-MW arithmetic (N = 1.0 · block-redundant and N+1 at 4+1 = 1.25 · distributed redundant = 1.5 · 2N = 2.0), the maintenance day as the real design case, the distribution between the UPS output and the server's two cords read as a *redundancy* problem, one UPS idea across four orders of magnitude, and the battery that earns
-- **`siemens-energy.study.json` 6 → 18 sections.** Ten new Grid Technologies sections teaching **the network as a system**: why the wire not the plant is the constraint and the three limits that bind under N-1; terminals → GCB → GSU → bay → switchyard → point of interconnection as a procurement sequence, read twice (once for a plant, once for a campus); AIS vs GIS vs SF6-free; the four reasons to build a DC link; inertia and system strength with the synchronous condenser against the STATCOM; and the buyer's six instruments against a 36-month transformer
-- **`narada.study.json` new, 13 sections** — the backup battery from the **cell's** side: the sprinter and the distance runner, electrode thickness as the choice that splits them, the constant-power specification (watts per cell, to an end voltage, at a temperature) and why amp-hour sizing comes up short, AGM/lead-carbon and why lead survived partial-state-of-charge duty, the string and its worst cell (conductance screening vs a real capacity test), and the 500 ms pulse duty
-- **Lesson plans** under `study-prep/vertiv/`, `.../schneider-electric/`, `.../siemens-energy/` and `.../narada/` — **four new folders; none of these four companies had one before**
-- **Concepts 401 → 464** (+62, plus 2 added on validator feedback = 465 final)
-
-**The register answer, verified against the corpus rather than remembered:**
-
-- **G3 CLOSES** (v04.51r). Both revisions landed; the dossier half was already satisfied twice over by Piller (v04.42r) and Mitsubishi Electric (v04.48r)
-- **G9 CLOSES** (v04.51r). The Narada guide is the battery half of the DC bus; Vicor (v04.44r) was the silicon/shelf half. `inside-the-rack` and `the-800-vdc-shift` can now pin `study:narada`
-- **G4 is TWO OF THREE and cannot close from Profiler work at all.** Siemens Energy revision ✓, Powell dossier ✓ (v04.48r). The third ask is a guidance module *"The grid-equipment shortage: GOES, bushings, test bays, lead times"*. Verified: `guidanceDocs_()` still returns the same seven modules, and **§8 of the coverage plan contains no guidance-module row anywhere**. §5 of that plan predicts G4 will close at the phase re-run — that prediction is wrong, and the §6 register note now says so. **The Industry Guidance Command's step 1 requires an UPLOADED source document**, so this cannot be handed to an unattended session; the developer has to bring a document
-- Only G3, G4 and G9 were re-run. G2, G5, G6, G7, G8, G10, G11, G12 keep their Phase-A dates; the full re-run is still owed at the close of Phase B
-
-**Key decisions and positions taken:**
-
-- **The vertiv/schneider split was decided explicitly and stated in both guides' opening callouts**, as the brief required: Vertiv = the machine and the transaction, Schneider = the system and the ladder. The split was chosen *after* reading Rehlko, Piller, Mitsubishi Electric and Eaton in full — Rehlko already owns monolithic-vs-modular, the four clocks and the three sizing numbers, and Mitsubishi Electric owns the efficiency curve and the VRLA/lithium table, so neither revision re-argues any of it
-- **Nothing was deleted from the three revised guides.** All six pre-existing sections in each are byte-identical (verified with `git show HEAD:`), and all 36 legacy top-level `flashcards[]` cards were preserved by folding them into the new inline `drill` sections. Chesterton's Fence held: the temptation was to rewrite the mechanically-lifted v1 prose, and it was resisted because the brief asked for an addition, not a rewrite
-- **Three concept candidates were dropped as alias collisions rather than added**: `maintenance bypass` and `wrap-around bypass` already resolve through `static bypass`, `switchyard` through `substation`, `reactive power` through `power factor`. The existing definitions were checked and found adequate; the distinctions that mattered (a manual wrap-around cabinet vs the automatic static switch) are taught in plain prose instead
-- **No registry sync and no graph rebuild were run, deliberately** — no `*.profile.json` was touched, so both would have been no-ops. Reported as a decision rather than silently skipped, because the brief asked for exactly that. No calendar rows, no Profiler page or GAS bump
-
-**Environment notes — TWO NEW CORRECTIONS beyond the inherited C3 set:**
-
-- **The Profiler route is `#<slug>`, NOT `#/company/<slug>`.** The C3 notes never recorded the hash format and the first harness run timed out waiting for `#ov-study-btn`
-- **The image's Playwright browser build is 1194; the pip package (1.62) expects 1234.** Launch with `executable_path='/opt/pw-browsers/chromium'` (plus `--no-sandbox`). **`playwright install` is not the fix** and should not be attempted
-- Everything else from C3 held exactly and should be carried forward: threaded HTTP server or `page.reload()` deadlocks; `add_init_script` setting `localStorage ov_note_role='admin'`; an injected style hiding `#ov-authwall`; `accounts.google.com` fulfilled with an empty script; `ensure_ascii=False` for marker comparison; tabs are `id="ov-tab-<key>"`; assert `.ov-rel-src` against *sourced* relationships only; control-test an untouched slug first to set the console baseline
-- **NEW AUTHORING TRAP: a `{{term}}` marker must carry the concept's TERM, not its slug.** `{{mobile-substation}}` does not resolve where the registry holds `mobile substation`. It is completely silent while authoring — a slug reads like a plausible marker — and it produced **48 errors across 25 distinct terms in two guides**. `check-profiler-study.py` catches every one, and a slug→term repair pass fixes them mechanically
-- The indent trap did not repeat: `*.profile.json` / `*.study.json` at indent=1 with **no** trailing newline, `profiler-concepts.json` at indent=2 **with** one — verified against live files before writing. `repository.version.txt` **does** carry a trailing newline (caught at the pre-stage diff review)
-- **Authoring the guides as one Python builder script each** (12–18 sections per tool call) rather than many small Edits is why the session ran 41m against a 75m estimate. The per-tool-call heuristics do not model this pattern
-
-**Verification, all green at close:** study checker `0 errors, 80 guides / 465 concepts` · Playwright across all four guides plus an untouched control slug (`rehlko`) — zero page errors, zero new console errors, zero literal `{{markers}}` rendered, every `{{term}}` resolving in the DOM (145 distinct concepts; 204 counted per guide) and every section title present, 18/18 · 17/17 · 18/18 · 13/13 sections rendered
-
-**Where we left off:** `4a371aa` is merged to `main` (v04.51r) and the branch was deleted by the auto-merge workflow. The developer then asked for the next paste-in prompt, which was delivered in chat for **C11** — Oklo · Trane Technologies · McCarthy — with its own entity-discipline notes (Oklo is pre-revenue and no Aurora is operating; Trane Technologies is not just Trane and the data-centre line is a minority of revenue; McCarthy is private and employee-owned, so expect a collection gap on revenue and mix).
-
-**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · `START_OF_RESPONSE_BLOCK` On · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · Profiler `v01.82w` / `v01.34g` (untouched — data-only session) · **106 dossiers · 80 study guides · concepts 465 · graph 678 edges (unchanged) · calendar 67 rows (unchanged) · execs 328 images / 62 companies · CHANGELOG 68/100** · 1 active reminder (the Xcel Fable-vs-Opus model test) · TODO empty
-
-**Recommendation for next session:**
-
-- **Run C11 — Oklo, Trane Technologies and McCarthy — as one Opus 5 xhigh dossier session.** It is the only remaining Opus session that closes a register row: Oklo closes **G8** outright if its guide teaches what is genuinely new about an SMR as engineering (factory fabrication vs site construction, HALEU, the licensing path as the schedule, load-following, build-own-operate) rather than telling a company story, and Trane delivers the chiller half of **G7** — whose CDU half is CoolIT in Fable session **B10**, so G7 cannot close this session and the report at the end should say so plainly. After C11, every register row Opus can close is closed, and the remaining blockers are Fable's B10 (G7, G10) and a **guidance session** for G4's grid-equipment-shortage module, which needs a source document from the developer.
-**To continue:** type `run Phase C11 on Opus 5 xhigh`

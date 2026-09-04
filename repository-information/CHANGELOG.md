@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 72/100`
+`Sections: 73/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.56r] — 2026-09-04 04:09:00 PM EST
+
+> Give me the prompt to paste into a new Opus 5 xhigh session to commission the G6 guidance module, then remember session.
+
+### Fixed
+
+- **`repository-information/CLASSROOM-CURRICULUM-PLAN.md` §6 — the v04.55r Standings text about G6 was wrong and is corrected in two places.** It said G6's subjects "exist in the corpus only as fragments inside Burns & McDonnell's guide, Dominion's guide and the procurement module" and advised that a G6 session "should expect to do more of its own research than the G4 session did." Both claims were inherited from the G6 row's own v04.44r text rather than checked against the corpus — **which is precisely the failure the Standings block exists to prevent, reproduced one commit after the trail paragraph describing it.** Grounding the G6 commissioning prompt surfaced it: a scan of every `*.study.json` section title for interconnection, tariff, queue, cost-causation and co-location content returns **at least a dozen guides**, not fragments — the six `utility` guides (`dominion-energy`, `aep`, `oncor`, `southern-company`, `xcel-energy`, `entergy`), `burns-mcdonnell`, and the requester-side guides `stack-infrastructure`, `aligned`, `switch`, `amazon`, `meta` and `core-scientific`. Five of the six utility guides landed at v04.53r, *after* the row's last substantive re-check, which is why its text is stale.
+- **The genuine G6 gap is narrower and sharper than the row states, and both the Standings block and a new dated re-check parenthetical on the row now say so.** The **state and utility half is well covered publicly** — large-load tariff anatomy, the load-interconnection study sequence, cost-causation against socialization, SB 6 clause by clause, Georgia's January 2025 large-load rule, one tariff in three state drafts, the 80 percent minimum-demand arithmetic, and queue-gaming and power-banking from the requester's side. **What is absent is the federal layer**: the string `"Order 2023"` appears **nowhere** in the corpus, and study-fee and deposit regimes are no one's subject. A session commissioned against the row's own words would over-research the state side and under-research the federal one. **G6 stays Open** — `guidanceDocs_()` still has no interconnection module — but its premise is now accurate.
+
+### Changed
+
+- **`repository-information/SESSION-CONTEXT.md`** — Remember Session. Latest Session rotated into Previous Sessions under the 2-session cap; the new entry records the G4 module, the §6 bookkeeping, the self-correction above, the `reviewBy` gate rationale, the nine items that went into *what the record does NOT say* rather than into the module, the re-confirmed Playwright harness notes (plus that `pip install playwright` and `pip install pymupdf` are both needed in a fresh container), and a G6 recommendation briefed on the corrected split rather than on the row's words.
+- README `Last updated:` and `Repo version:`; repo version v04.55r → **v04.56r**.
+
+### Notes
+
+- **No code, page or GAS changes** — this commit touches three markdown files only, so no page or GAS version was bumped and no page or GAS changelog gained an entry.
+- **The mechanical rule that would have prevented this**, recorded in the session context for the next session: before writing anything about a register row's premise, scan the corpus for it. The `glob` over `*.study.json` section titles that found the dozen guides took about ten seconds.
 
 ## [v04.55r] — 2026-09-04 04:01:12 PM EST
 
