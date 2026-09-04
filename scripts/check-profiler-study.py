@@ -121,11 +121,38 @@ def check_cards(where, cards):
             err("%s cards[%d]: needs string q and a" % (where, j))
 
 
+# Fields the guide renderer sets with textContent rather than through its
+# {{term}} formatter. A marker placed in one of these is shown to the reader as
+# literal braces. Every other authored field resolves markers correctly, so the
+# trap is invisible while authoring — hence the check.
+# (Found 2026-09-04: 18 markers across 10 guides were rendering as raw braces in
+# comparison-card headings and chart sub-labels. The renderer was fixed for
+# those two; these are the fields that remain plain by design.)
+UNFORMATTED_FIELDS = (
+    ("title", lambda s: s.get("title")),
+    ("read", lambda s: s.get("read")),
+)
+
+
+def check_unformatted(where, sec):
+    for name, get in UNFORMATTED_FIELDS:
+        v = get(sec)
+        if isinstance(v, str) and "{{" in v:
+            err("%s: %s is rendered as plain text — a {{term}} here shows literal "
+                "braces to the reader; move it into intro/ps/note" % (where, name))
+    if sec.get("kind") == "timeline":
+        for k, v in (sec.get("lanes") or {}).items():
+            if isinstance(v, str) and "{{" in v:
+                err("%s: lanes.%s is a plain-text legend label — a {{term}} here "
+                    "shows literal braces to the reader" % (where, k))
+
+
 def check_section(where, sec):
     kind = sec.get("kind")
     if kind not in STUDY_KINDS:
         err("%s: unknown kind '%s'" % (where, kind))
         return
+    check_unformatted(where, sec)
     if kind in ("prose", "callout"):
         ps = sec.get("ps")
         if not (isinstance(ps, list) and all(isinstance(p, str) for p in ps or [])):

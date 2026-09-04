@@ -6,6 +6,66 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-04 01:20 AM EST
+**Repo version:** v04.49r (started at v04.47r — two push commits: `97a42db` = v04.48r, the C2 data push; then v04.49r, the renderer fix + this context write)
+**Branch:** `claude/phase-c2-profiler-coverage-hu3e60`
+**Model:** **Opus 5 xhigh — the plan's own assignment for Phase C, so there is NO substitution to record.** §2 assigns Phase C to Opus natively; the §8 Model column reads plain `Opus 5 xhigh` on all three C2 rows
+
+**What we worked on — Phase C2 of `PROFILER-COVERAGE-PLAN.md`, then a page-layer bug the verification surfaced:**
+
+**Push 1 — v04.48r (`97a42db`), the C2 deliverable, data-only:**
+
+- **Three `supplier` dossiers** (schema v7, profileVersion 1, intel-briefing prose): `mitsubishi-electric` (76 sources, 62% first-party, 17 relationships, 11 decision makers, 8 key judgments), `powell-industries` (67 sources, 75% first-party, 7 relationships, 10 people, 9 judgments), `mitsubishi-power` (77 sources, 68% first-party, 11 relationships, 11 people, 10 judgments)
+- **Three study guides** with `where-it-fails` sections: the static UPS as a machine (ME), the medium-voltage room (POWL), the gas turbine read *against* GE Vernova and Siemens Energy rather than taught as a new category (MPower). Each opens with an explicit "what this deliberately does NOT repeat" list naming the adjacent guides
+- **41 new shared concepts** in `profiler-concepts.json` (311 → 352). No local glossaries
+- **Eight backfilled dossiers** whose links became curatable once the C2 slugs existed, each with a source that states the link explicitly: `ge-vernova`, `siemens-energy` (v4→v5) to mitsubishi-power; `eaton`, `abb`, `schneider-electric`, `vertiv` (v4→v5) and `piller` (v1→v2) to the C2 suppliers; `prevalon` (v3→v4). Prior versions archived and indexed
+- **CHANGELOG rotation fired** at 101 sections — the whole 2026-08-29 group (36 sections) moved with SHA enrichment on every header; `Sections: 100/100` → `65/100`
+
+**Push 2 — v04.49r, a real reader-facing bug the Playwright verification exposed:**
+
+- `gdProsCons` set `card.t` / `card.meta` and `gdBars` set `it.label` / `it.sub` with **`textContent`**, not the `gdFmt` formatter every sibling field uses. A `{{term}}` in any of those four fields rendered to the reader as **literal braces**. A DOM probe confirmed it visibly on **10 guides / 18 markers** — `aep`, `cummins`, `dominion-energy`, `entergy`, `oncor`, `piller`, `rehlko`, `rolls-royce-power-systems`, `southern-company` and (before the fix) `mitsubishi-electric`
+- **Fixed at the page layer, not in the data** — four edits in `Profiler.html` (v01.81w → **v01.82w**), plus a new `gdPlain()` helper for attribute contexts (`title=`) that cannot hold the markup `gdFmt` emits. One change repaired all ten guides; no other session's data was touched
+- **Added a `check-profiler-study.py` rule** (`check_unformatted`) rejecting `{{` in the fields that remain plain by design — `sec.title`, `sec.read`, `timeline.lanes` — and negative-tested it: injecting a marker produces exactly one error, removing it returns to clean
+- Reverted the data workaround from push 1: the C2 markers were **restored**, because the data was never wrong — the renderer was
+
+**Where we left off:** both pushes merged; C2 is closed. C3 (Infineon, Flex) is the next session and is the one that owes the developer the **Phase-B-vs-Phase-C recommendation**.
+
+**Key decisions and findings worth carrying forward:**
+
+- **G3 and G4 are HALF-closed, not closed.** G3 wants two guide revisions (`vertiv`, `schneider-electric` — add a UPS section) plus a dossier for Piller *or* Mitsubishi Electric. The dossier half was already satisfied by Piller at v04.42r; ME over-satisfies it. **Both revisions remain untouched — verified, zero UPS content in either guide.** G4 wants a `siemens-energy` grid-technology revision, a Powell dossier, and a guidance module on the grid-equipment shortage (GOES, bushings, test bays, lead times). Powell closes exactly one of three. **The three guide revisions in §8's "Study guides on existing dossiers" table are the real blockers for both rows**
+- **Entity discipline held for Mitsubishi Power**: every financial line is labelled MHI consolidated / MHI Energy Systems segment / GTCC business line, with an explicit statement that no unit-level figure exists or can be derived
+- **No FX published for either Japanese company.** No defensible fiscal-year average JPY/USD rate could be sourced, so `usdMillions` is omitted and the reason is stated in `financials.commentary`; `kpiNorm` false for both. Powell is "as reported"
+- **One headshot was deleted rather than published** — two readings of Mitsubishi Electric's leadership page disagreed on whose face `img_32`/`img_39` was; the omission is recorded in that person's `background[]`
+- **Deliberate non-curations, all recorded in the dossiers**: `powell-industries ↔ siemens-energy` (Powell's 10-K names *Siemens Industries, Inc.* = Siemens AG, not Siemens Energy AG), the 2006 GE Consumer & Industrial route to `ge-vernova` (that unit became GE Industrial Solutions and went to ABB — the ge-vernova link is instead carried on an explicit market ranking), and `mitsubishi-power ↔ nvidia` (a parent-level cooling/power partnership, not a turbine relationship)
+- **An agent premise of mine was wrong and the agent corrected it**: I told the ME agent the Memphis TN transformer plant was relevant; it established MELCO *sold* it to Hyosung in 2019 for $46.5M. That became the dossier's headline collection gap
+- **JSON indentation trap**: the backfill script wrote `indent=2` where the repo convention for `*.profile.json` / `*.study.json` is **`indent=1`**. It reformatted every line of nine files — 9,375 insertions before normalisation, 2,863 after. Caught at the pre-stage `git diff --stat` review. **Any future backfill script must serialize at `indent=1`.** (`profiler-concepts.json` and `profiler-companies.json` are genuinely `indent=2`; archive snapshots match whatever the file they snapshot used)
+
+**Environment notes (carried forward from C1, all re-confirmed this session):**
+
+- **The Playwright HTTP server MUST be threaded.** `Profiler.html` fetches ~100 JSON files on load, so a single-threaded `socketserver.TCPServer` deadlocks on `page.reload()`. Use `socketserver.ThreadingMixIn` + `http.server.HTTPServer` with `daemon_threads`, swallow `BrokenPipeError`/`ConnectionResetError` in `handle_one_request`, add a no-op `handle_error`, and install a flushing `print` shim (output is otherwise lost when a run dies)
+- `page.reload()` between dossiers — the Study Guide overlay persists across hash navigation
+- The Relationships tab id is **`rels`**, not `relationships`
+- `#ov-guide-overlay` is `position:fixed`, so `offsetParent` is always null — test visibility with `getComputedStyle(ov).display !== 'none'`
+- Wait for `#ov-guide-overlay .gd-title` after clicking `#ov-study-btn` (concepts load asynchronously)
+- **Fulfill** `accounts.google.com` with an empty script rather than aborting — an aborted GIS load logs a network failure the console-error assertion correctly counts
+- Derived "Detected" relationship cards render alongside curated ones, so "every card has a source link" fails wrongly. Assert instead: cards carrying `.ov-rel-src` ≥ `len(relationships[])`
+- No JS regex literals inside `page.evaluate` strings — Python eats the escapes
+- **Console 404s map exactly to companies with no study guide** (27 of 104). Not a defect. Before blaming a change, control-test an untouched slug
+- Research subagents exhaust the WebSearch budget — **every must-find item goes in the agent prompt**, because nothing can be searched after they return
+
+**Verification gates, all green at close:** registry sync `0 of 104 out of sync` · study checker `0 errors, 77 guides / 352 concepts` (with the new rule active) · local schema-v7 validator `0 errors` on the three new profiles and `0 new` on the eight backfilled ones (compared against their archived pre-edit files) · graph `643 edges (493 curated), 1,921 evidence items` · Playwright: zero page errors and zero console errors, every `relationships[]` slug and every `{{term}}` resolving, and `0 guides showing literal braces`
+
+**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · `START_OF_RESPONSE_BLOCK` On · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · Profiler `v01.82w` / `v01.34g` · Classroom `v01.07w` / `v01.16g` · **104 dossiers · 77 study guides · concepts 352 · graph 643 edges · calendar 65 rows · execs 304 images / 60 companies · CHANGELOG 65/100 · Profiler page changelog 50/50** · 1 active reminder (the Xcel Fable-vs-Opus test) · TODO empty
+
+**Known open item, not fixed here:** `xcel-energy.study.json` section `what-a-minimum-demand-charge-buys` carries section-level `pros`/`cons` arrays that the renderer never reads — that content is invisible to the reader. Different bug class from the brace defect (missing content, not wrong markup) and it belongs to another session's row, so it is reported rather than edited.
+
+**Recommendation for next session:**
+
+- **Run Phase C3 — Infineon and Flex — on Opus 5 xhigh** as a fresh session, using the paste-in prompt handed over at this session's close. It is the last group before the developer's Phase-B-vs-Phase-C decision is owed, neither company depends on an uncovered Phase B slug, and it closes G9 (rack/board power) plus the rack-power gap.
+**To continue:** type `run Phase C3 of PROFILER-COVERAGE-PLAN.md — Infineon and Flex — on Opus 5 xhigh`
+
+## Previous Sessions
+
 **Date:** 2026-09-03 10:00 PM EST
 **Repo version:** v04.47r (started at v04.46r — one push commit, `abf6c71`, merged to `main` as `e269928`; plus this context write)
 **Branch:** `claude/profiler-coverage-phase-c-g47apv` — restarted from `origin/main` (`git checkout -B … origin/main`) before this context commit, because the workflow had already merged and swept it
@@ -64,57 +124,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - **Run Phase C2 — Mitsubishi Electric, Powell Industries and Mitsubishi Power — on Opus 5 xhigh** as a fresh session, using the corrected paste-in prompt handed over at this session's close. It closes G3 (large static UPS) and G4 (MV switchgear) and fills the third gas-turbine OEM gap, none of its three companies depends on an uncovered Phase B slug, and CHANGELOG archive rotation will fire on that push at 101 sections — budget ~10 minutes for it.
 **To continue:** type `run Phase C2 of PROFILER-COVERAGE-PLAN.md — Mitsubishi Electric, Powell Industries and Mitsubishi Power — on Opus 5 xhigh`
-
-## Previous Sessions
-
-**Date:** 2026-09-03 08:40 PM EST
-**Repo version:** v04.46r (started at v04.45r — one push commit, `2652d30`, merged to `main`; plus this context write)
-**Branch:** `claude/phase-b2-oncor-aep-xcel-bldup5`
-**Model:** **Fable 5.1 High → Opus 5 xhigh — a mid-session substitution.** The weekly Fable cap bound while the six research agents were running; §2 permits Opus 5 xhigh for any Phase B company when it does, and the substitution is recorded in all three §8 rows. Oncor's and AEP's dossiers and guides were authored on Fable; the Xcel dossier, the Xcel guide and all bookkeeping on Opus
-
-**What we worked on — Phase B2 of `PROFILER-COVERAGE-PLAN.md`: Oncor, AEP and Xcel Energy, three `utility` dossiers + three study guides in one data-only commit (v04.46r):**
-
-- **`oncor.profile.json`** — 113 sources, 8 product lines, 8 spec bands, 28 developments, **2 relationships**, 8 policy regimes, 13 decision makers, 4 periods. The wires-only ERCOT case: the large-load funnel in three strictly separated tiers as Oncor reports them (737 requests / 298 GW at 2026-06-30 → 44 GW Batch Zero as 27 GW base + 17 GW studied → ~8 GW energized and ramping); collateral $2.8B → $3.5B → $4.0B → $5.9B as the real commitment metric; the four 765 kV certificate dockets (59029, 59182, 59315, 59475) with lengths, counties, decision dates and energization targets; the April 2026 rate order ($6.97B revenue requirement, 9.75% ROE, 43.5% equity, $200M self-insurance accrual); HB 5247 and the Unified Tracker Mechanism (Docket 59249, ~$4.4B); the $24.2B → $36B → $47.5B capital-plan history; Sempra ring-fencing as a constraint on the *owner*. **There is no analyst consensus on Oncor** — no listed equity — so the `expected` column uses Sempra's Sempra Texas Utilities segment guidance and marks the rest `n/a`
-- **`aep.profile.json`** — 143 sources, 6 products, 6 spec bands, 62 developments, **14 relationships**, 6 policy regimes, 15 decision makers. 69 GW of incremental load by 2030 under fully executed service agreements (ERCOT 45 / PJM 18 / SPP 6), eight commission-approved large-load tariffs, ~90% of the national 765 kV network
-- **`xcel-energy.profile.json`** — 101 sources, 6 products, 6 spec bands, 27 developments, **6 relationships**, 7 policy regimes, 13 decision makers. Wildfire as the organizing balance-sheet fact (Marshall settled ~$640M, the sole 2025 GAAP-to-ongoing reconciling item; Smokehouse Creek $404M against a $525M policy period with the company "unable to reasonably estimate … the upper end of the range"); the GE Vernova and NextEra agreements signed *before* any tariff was approved; the 1,900 MW Google package on a proposed Clean Energy Accelerator Charge with a 300 MW / 30 GWh Form Energy iron-air system inside it; the three-tier slide (~2 GW contracted / ~4 GW by end-2027 / >20 GW pipeline) with the contracted block **flat across two consecutive decks**
-- **Study guides** — `oncor.study.json` (15 sections: the wires-only utility, who decides in Texas, the energy-only market, connecting a gigawatt as a `timeline`, SB 6 clause by clause, `three-numbers-not-one` as a warn `callout`, the wires rate case, who pays for the substation as `proscons`, the 765 kV decision, who builds the generation, `bars`, where Oncor slots in, `where-it-fails`, 14 flashcards, 10-item quiz); `aep.study.json` (15 sections, the eight-tariffs-one-argument frame); `xcel-energy.study.json` (16 sections: eight states four utilities, what a resource plan decides, the approval sequence as a `timeline`, two states two plans, procuring outside the plan, a tariff in three drafts, the 80% minimum as `proscons`, paying for your own supply, contracted-is-not-pipeline, wildfire as a balance-sheet item, no RTO above Colorado, `bars`, where Xcel slots in, `where-it-fails`, 15 flashcards, 10-item quiz)
-- **Three lesson plans** under `study-prep/{oncor,aep,xcel-energy}/`, each naming the Dominion plan as prerequisite and teaching against the Southern, Entergy and Dominion stories rather than repeating them
-- **10 shared concepts** (283 → 293): `test-year`, `equity-ratio`, `settlement`, `intervenor`, `build-own-transfer`, `tax-credit-transferability`, `ptc`, `strict-liability`, `regulatory-asset`, `nameplate-capacity`
-- **Bookkeeping**: 12 Oncor headshots (237 → 249 images across 54 companies); registry 95 → 98 with the **Utility chip at 6**; graph 581 edges (448 curated), 1,768 evidence items; calendar 56 → 59 rows; README tree (6 data files, 3 study-prep folders, execs count); §8 rows flipped to `v1 · v04.46r` / `✓ · v04.46r` with the substitution recorded; **CHANGELOG 98 → 99/100**
-- **Verification**: registry `--check` 0 of 98 out of sync; study checker 0 errors across 71 guides / 293 concepts; a local schema-v7 validator; Playwright — nine tabs each, every relationship card with a resolving source link, **all 126 unique `{{term}}` spans resolving**, zero page errors, zero console errors
-
-**Where we left off:**
-
-- **Phase B is paused after B2 by developer decision.** The weekly Fable cap is out for ~2 days, and the next session is **Phase C1–C3 on Opus 5 xhigh** — C1 Cummins / Rolls-Royce Power Systems (mtu) / Rehlko, C2 Mitsubishi Electric / Powell Industries / Mitsubishi Power, C3 Infineon / Flex. The full paste-in prompt was handed to the developer in chat at the close of this session; its shape is one session per group, `profiler <Company>` + `profiler prep <Company>` each, one push commit per session, and a **closing recommendation on whether to continue Phase C or return to Phase B first**
-- **A reminder is now active** (`REMINDERS.md`): have Fable 5.1 High re-run `profiler Xcel Energy` and report every change against the Opus 5 xhigh baseline at `v04.46r` (commit `2652d30`), as a head-to-head model test for §2. The reminder carries the recovery command (`git show v04.46r:…`), the by-section reporting requirement, and the caveat that a large diff is partly search luck rather than model quality
-- **CHANGELOG is at 99/100** — archive rotation is **mandatory above 100 and fires on the very next push**, whichever phase it belongs to. Budget ~10 minutes and follow `CHANGELOG-archive.md`'s rotation logic with SHA enrichment
-- **The §6 register re-check is still owed at the Phase B close**, not per session. Worth knowing: **G5's evidence requirement is already over-satisfied** — it asks for four utility dossiers with guides and six now exist (Dominion from A3, Southern and Entergy from B1, Oncor, AEP and Xcel from B2). Pausing Phase B delays G5's *bookkeeping*, not its evidence
-- The earnings-desk Routine and the weekly C2 pipeline remain live and unreviewed; sessions D and E of `IMPROVEMENT-PLAN.md` not started
-
-**Key decisions and positions taken:**
-
-- **The three tiers are never blended, and the missing tier is named.** Oncor publishes no signed-or-executed interconnection-agreement figure anywhere; that is recorded as the dossier's headline collection gap rather than estimated from the 44 GW and the ~8 GW. The same discipline drove a dedicated `three-numbers-not-one` guide section and a `contracted-is-not-pipeline` section
-- **A relationship is asserted only where a source states the link, even when the absence is conspicuous.** Oncor has 2 relationships against AEP's 14 because Oncor names no data-center customer, EPC or transformer OEM in any first-party document — only Landis+Gyr (meters) and Toyota (vehicle-to-grid). Texas law restricts customer-information disclosure, so the silence is **structural and will not resolve on a later refresh**; both Oncor links came from third parties (Meta's own site; an ERCOT Regional Planning Group filing)
-- **Entity granularity is disclosed when the source is coarser than the slug.** Xcel names only "a NextEra Energy subsidiary" and quotes the parent's CEO, so the `nextera-energy-resources` link carries a note saying the covered node stands for the development franchise rather than a named counterparty
-- **A newly covered slug makes an existing dossier's link curatable, and that is done in the same commit.** `aep.profile.json` gained a curated `oncor` relationship once `oncor` existed, so the 765 kV eastern-backbone co-sponsorship is symmetric from both sides
-- **A cross-check between two dossiers in the same session beats either company's own page.** Xcel's newsroom gallery still lists Adrian Rodriguez as SPS president; AEP's own release shows he became President/COO of AEP Texas effective 2026-03-30. He is in AEP's decision makers, excluded from Xcel's, and who runs SPS after March 2026 is a stated gap in the dossier, the calendar row and the guide
-- **Research corrected several premises and the corrections were carried, not smoothed over**: Colorado's resource plan is Proceeding 24A-0442E (not 24A-0470E); its Phase II has selected **nothing** (bids due Q3 2026) and the February 2026 award came from the separate Near-Term Procurement; Colorado passed **no** utility wildfire-liability cap; PSCo belongs to **no** RTO; Texas SB 6 does **not** reach SPS and Xcel never mentions it
-- **Officers without a company-published headshot are still included**, with the absence noted — Scott Sharp, Michael Lamb and Robert Shapard render as initials avatars, which the schema supports
-
-**Environment notes for the next session:**
-
-- **The Playwright harness's HTTP server must be threaded.** A single-threaded `socketserver.TCPServer` deadlocks on `page.reload()` because Profiler.html fetches ~100 JSON files at once; the fix is `class Server(socketserver.ThreadingMixIn, http.server.HTTPServer)` with `daemon_threads`, plus swallowing `BrokenPipeError` in `handle_one_request` and a no-op `handle_error`. Also add a flushing `print` shim — output is otherwise lost when the run dies
-- `page.reload()` between dossiers is still required (the Study Guide overlay persists across hash navigation); the tooltip probe reads `#gd-tip` and needs a 3-attempt retry with `page.mouse.move(0,0)` between tries — hover timing flakes on known-good guides
-- **`oncor.com` returns 503 to WebFetch but serves normally over `curl` with a browser User-Agent.** That unlocked ~30 first-party pages, PDFs and all 12 executive headshots. Its investor document tables are JS-rendered from a DAM folder exposed by a JSON feed (`jcr:content.getFileList.html?dampath=…`), which is where Q3 results will post
-- **Six research agents were killed mid-run by a Fable session rate limit (429).** Recovery that worked: after the limit reset, resume partially-complete agents via `SendMessage` telling them to finish from material already in context with no new searches, and launch fresh agents only for the missing reports
-- Profile-shape traps hit this session: `productsAndServices[]` needs `name`/`category`/`description`/`highlights[]` (not what/who/scale/terms); `technicalSpecs[]` is `{product, specs:[{band,label,value}]}`; study `timeline` items need numeric `x` + `lane` + `label` + `sub` with a `lanes` map; `proscons` needs `cards[]` of `{t, meta, adv[], dis[]}`; sections render `intro` and `note` but **not** `outro`; profile `financials` renders `commentary`, not `note`; `relationships[].project` must be a slug already in `profiler-projects.json`; and no two metrics in one period may share a `kpi`
-- Blocked/awkward hosts: `linkedin.com` (no LinkedIn URL verified for any of the 41 decision makers), `datacenterdynamics.com` (403 on every attempt), `interchange.puc.texas.gov` (503), `spglobal.com`, `moodys.com`, `businesswire.com`, `zacks.com`, `nasdaq.com`, plus `coloradosun.com`, `cpr.org`, `wbap.com`, `wfaa.com` and several Colorado outlets
-
-**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · `START_OF_RESPONSE_BLOCK` On · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · Profiler `v01.81w` / `v01.34g` · Classroom `v01.07w` / `v01.16g` · **98 dossiers · 71 study guides · concepts 293 · graph 581 edges · calendar 59 rows · CHANGELOG 99/100** · 1 active reminder (the Xcel Fable-vs-Opus test) · TODO empty
-
-**Recommendation for next session:**
-
-- **Run Phase C1 — Cummins, Rolls-Royce Power Systems (mtu) and Rehlko — on Opus 5 xhigh**, then C2 and C3 as separate sessions, using the paste-in prompt handed over at this session's close. C1–C3 are the register closers (G2, G3, G4, G9), they are natively Opus work under §2 rather than a substitution, and none of them needs a relationship to an uncovered Phase B slug. Expect CHANGELOG archive rotation to fire on this push. The C3 session owes a closing recommendation on whether to continue Phase C or return to the paused Phase B first.
-**To continue:** type `run Phase C1 of PROFILER-COVERAGE-PLAN.md — Cummins, Rolls-Royce Power Systems and Rehlko — on Opus 5 xhigh`
-
-Developed by: LightAISolutions

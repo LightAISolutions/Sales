@@ -92,7 +92,7 @@
      ]
     },
     {
-     "t": "Transformerless UPS",
+     "t": "{{Transformerless UPS}}",
      "meta": "Higher-frequency switching and a split DC link in place of the iron — the current mainstream",
      "adv": [
       "Markedly smaller, lighter and more efficient; the floor space and the crane requirement both fall",
@@ -107,7 +107,7 @@
      ]
     }
    ],
-   "note": "The commercially useful version of this: a {{transformerless}} UPS is a better machine and a slightly harder system. The savings are real and they are on the equipment line; the work it creates is real too and it lands on the electrical designer, the earthing study and the {{coordination study}}. When two quotes differ by a transformer, they are not quoting the same scope."
+   "note": "The commercially useful version of this: a transformerless UPS is a better machine and a slightly harder system. The savings are real and they are on the equipment line; the work it creates is real too and it lands on the electrical designer, the earthing study and the {{coordination study}}. When two quotes differ by a transformer, they are not quoting the same scope."
   },
   {
    "id": "the-generators-hardest-customer",

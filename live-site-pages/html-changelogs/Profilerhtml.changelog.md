@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.82w] — 2026-09-04 01:15:19 AM EST — v04.49r
+
+### Fixed
+- **Glossary tooltips now work everywhere in a Study Guide.** In comparison cards and in chart labels, defined terms were showing their raw markers instead of becoming hoverable definitions. Ten guides were affected, including the guides on generator speed control, grid-forming inverters, UPS energy storage, cost allocation and rate base. Those terms now underline and explain themselves the same way they already did in the body text beside them
 
 ## [v01.81w] — 2026-09-03 05:23:31 AM EST — v04.43r
 

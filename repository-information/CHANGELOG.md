@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 65/100`
+`Sections: 66/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.49r] — 2026-09-04 01:18:37 AM EST
+
+> Figure out a way to resolve the literal-brace defect if it is a visible reader-facing bug. Then, continue with your recommendation and give me the prompt to paste into a new Opus 5 session to run C3 and remember session.
+
+### Fixed
+
+- **Study Guide glossary tooltips were rendering as raw `{{markers}}` in two places.** The guide renderer sets comparison-card headings and subtitles (`gdProsCons`) and bar-chart labels and sub-labels (`gdBars`) with `textContent` rather than through `gdFmt`, the formatter every sibling field uses. A term marker in any of those four fields reached the reader as literal braces. A DOM probe confirmed it visibly on **10 guides / 18 markers** — `aep`, `cummins`, `dominion-energy`, `entergy`, `oncor`, `piller`, `rehlko`, `rolls-royce-power-systems`, `southern-company` and `mitsubishi-electric`.
+- Fixed **at the page layer rather than in the data**: four edits in `Profiler.html` (v01.81w → v01.82w) route those fields through `gdFmt`, plus a new `gdPlain()` helper that strips authoring markers for attribute contexts (`title=`) which cannot hold the markup `gdFmt` emits. One change repaired all ten guides without editing nine other sessions' data files.
+- The v04.48r data workaround is reverted — the `{{term}}` markers removed from three C2 card headings are **restored**, because the data was never wrong. Verified after the fix: `piller` renders 71 terms (was 69, with `LFP` and `magnetic bearings` previously unrendered), `powell-industries` 25 (was 23), `mitsubishi-power` 23 (was 22), and the DOM probe reports **0 guides showing literal braces**.
+
+### Added
+
+- **`scripts/check-profiler-study.py` now rejects `{{term}}` in the fields that remain plain text by design** — a section's `title` and `read`, and a timeline's `lanes` legend labels — with an error naming the field and pointing the author at `intro`/`ps`/`note` instead. Negative-tested: injecting a marker produces exactly one error and removing it returns the checker to clean, so the rule cannot silently stop working.
+
+### Changed
+
+- `repository-information/SESSION-CONTEXT.md` — session context written for the next session, including the Phase C2 outcome, the G3/G4 half-closed assessment, the re-confirmed Playwright environment notes, and the `indent=1` JSON serialization trap that cost a diff review this session.
+
+### Notes
+
+- One pre-existing issue is reported rather than fixed: `xcel-energy.study.json`'s `what-a-minimum-demand-charge-buys` section carries section-level `pros`/`cons` arrays the renderer never reads, so that content is invisible to the reader. Different bug class from the brace defect — missing content rather than wrong markup — and it belongs to another session's ledger row.
 
 ## [v04.48r] — 2026-09-04 12:17:58 AM EST
 

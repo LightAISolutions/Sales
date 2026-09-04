@@ -80,7 +80,7 @@
    "intro": "The combined-cycle idea is taught elsewhere in this library from the builder's side. This is the purchase decision from the equipment side — the same turbine sold two ways, and the reason a data-centre campus and a utility often reach opposite conclusions about it.",
    "cards": [
     {
-     "t": "Simple cycle — the turbine alone",
+     "t": "{{Simple cycle}} — the turbine alone",
      "meta": "Gas turbine, generator, stack. The ~600°C exhaust goes to atmosphere",
      "adv": [
       "Roughly a third to two-fifths of the fuel's energy reaches the wires — poor, but it is the whole plant",
@@ -96,9 +96,9 @@
     },
     {
      "t": "Combined cycle — the turbine plus a steam plant",
-     "meta": "The exhaust passes through an HRSG that raises steam for a second, steam turbine running the Rankine cycle",
+     "meta": "The exhaust passes through an {{HRSG}} that raises steam for a second, steam turbine running the {{Rankine cycle}}",
      "adv": [
-      "Efficiency past sixty percent on modern machines — the highest of any device that burns gas — because the second machine runs a {{Rankine cycle}} on heat the first one would have vented",
+      "Efficiency past sixty percent on modern machines — the highest of any device that burns gas — because the second machine runs on heat the first one would have vented",
       "Lower fuel cost and lower carbon per megawatt-hour, which is what makes gas a baseload proposition at all",
       "The bottoming plant adds output without adding fuel, so the incremental megawatts are the cheapest on the site"
      ],

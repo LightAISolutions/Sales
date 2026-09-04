@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.81w">
+  <meta name="build-version" content="v01.82w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -6719,6 +6719,15 @@ function ovReloadFresh() {
       return t;
     }
 
+    // Attribute contexts (title=, aria-label=) cannot hold the markup gdFmt
+    // emits, so strip the authoring markers instead of leaving them visible.
+    function gdPlain(s) {
+      return String(s == null ? '' : s)
+        .replace(/\{\{([^}]+)\}\}/g, '$1')
+        .replace(/\*\*([^*]+)\*\*/g, '$1')
+        .replace(/\*([^*\n]+)\*/g, '$1');
+    }
+
     function gdP(html) { var p = document.createElement('p'); p.innerHTML = html; return p; }
 
     // Reading progress is per account per device (v01.40w). Before this the key
@@ -7165,8 +7174,10 @@ function ovReloadFresh() {
 
     function gdProsCons(card) {
       var el = ovEl('div', 'gd-pc');
-      el.appendChild(ovEl('div', 't', card.t));
-      if (card.meta) el.appendChild(ovEl('div', 'm', card.meta));
+      var pct = ovEl('div', 't'); pct.innerHTML = gdFmt(card.t); el.appendChild(pct);
+      if (card.meta) {
+        var pcm = ovEl('div', 'm'); pcm.innerHTML = gdFmt(card.meta); el.appendChild(pcm);
+      }
       var cols = ovEl('div', 'cols');
       var mk = function(cls, hd, items) {
         var box = ovEl('div', cls);
@@ -7228,13 +7239,14 @@ function ovReloadFresh() {
       for (i = 0; i < (sec.items || []).length; i++) {
         var it = sec.items[i], row = ovEl('div', 'gd-bar');
         var lb = ovEl('div', 'lb');
-        lb.appendChild(document.createTextNode(it.label));
-        var sm = document.createElement('small'); sm.textContent = it.sub || ''; lb.appendChild(sm);
+        var lbt = document.createElement('span'); lbt.innerHTML = gdFmt(it.label);
+        lb.appendChild(lbt);
+        var sm = document.createElement('small'); sm.innerHTML = gdFmt(it.sub || ''); lb.appendChild(sm);
         row.appendChild(lb);
         var track = ovEl('div', 'track');
         var fill = ovEl('div', 'fill');
         fill.style.width = 'calc(' + Math.max(2, Math.round(it.v / max * 100)) + '% - 4px)';
-        track.title = it.label + ' — ' + it.v + ' ' + (sec.unit || '');
+        track.title = gdPlain(it.label) + ' — ' + it.v + ' ' + (sec.unit || '');
         track.appendChild(fill);
         row.appendChild(track);
         row.appendChild(ovEl('div', 'val', String(it.v) + (sec.unit ? ' ' + sec.unit.split(' ')[0] : '')));

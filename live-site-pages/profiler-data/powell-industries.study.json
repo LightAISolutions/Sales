@@ -40,7 +40,7 @@
      ]
     },
     {
-     "t": "Main-tie-main — two sources, one bus in two halves",
+     "t": "{{Main-tie-main}} — two sources, one bus in two halves",
      "meta": "Two incoming services, each feeding half the bus, with a normally-open tie breaker between the halves",
      "adv": [
       "Lose one source and the tie closes; the survivor carries everything. One transformer or one utility feed can also be taken out for maintenance with the load still up",
