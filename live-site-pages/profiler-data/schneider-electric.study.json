@@ -1,18 +1,300 @@
 {
  "schemaVersion": 2,
  "slug": "schneider-electric",
- "title": "Schneider Electric \u2014 Study Guide",
- "lastUpdated": "2026-08-21",
+ "title": "Schneider Electric — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
  "sections": [
+  {
+   "id": "what-this-guide-adds",
+   "title": "Start here: how many machines, and in what arrangement",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "This guide previously taught the software and blueprint layer — {{DCIM}}, prefabrication, energy accounting, building automation, the platform model, reference designs. All six of those sections are still here, further down. What has been added in front of them is the product line the guide was missing entirely: **the {{UPS}}, taught at the level above the machine**.",
+    "**What this section deliberately does not repeat.** The physics is covered four times over in this app and is not re-argued below. **Rehlko's guide** opens the machine — {{rectifier}}, {{DC link}}, {{inverter}}, {{static bypass}}, {{double conversion}} against {{eco-mode}}, the four clocks, monolithic against {{modular UPS}}, and the three numbers people get wrong when sizing. **Piller's guide** covers the {{IEC 62040-3}} grades, rotary and {{DRUPS}} machines, the stiff source and the {{isolated parallel bus}}. **Mitsubishi Electric's guide** covers the {{three-level inverter}}, the efficiency curve and the redundancy tax on it, and {{VRLA}} against lithium underneath the machine. **Eaton's guide** covers {{selective coordination}}, {{busway}} against cable, and the choreography of an outage.",
+    "**The split with Vertiv's guide, which was revised in the same pass.** The two revisions were written to interlock rather than overlap. **Vertiv's guide is the machine and the transaction**: what a {{power module}} physically is, how a frame is populated over time, what each line of a UPS datasheet commits you to, and the eleven-step sequence from {{basis of design}} to service contract by which a UPS becomes a load-carrying asset. **This guide is the system and the ladder**: how many machines and in what arrangement, what fraction of what you bought you can actually use, how the plant is worked on while it runs, what sits between the UPS output and the server's two cords, how the same four blocks change character from a desk-side box to a megawatt frame — and what happens when the battery is allowed to earn its keep instead of floating.",
+    "One idea runs through all of it. **A UPS is bought as a machine and lives as a system.** Almost every disappointing outcome in this layer — capacity that cannot be used, redundancy that does not survive the failure it was bought for, a maintenance window that turns into an outage — is a system property that no datasheet comparison could have surfaced."
+   ]
+  },
+  {
+   "id": "how-many-machines",
+   "title": "The arrangement above the machine: five topologies",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "Redundancy is a property of the arrangement, not of the equipment. These are the five arrangements the industry actually builds, in rising order of cost. Read the third column as the honest answer to 'how much of what I bought can I use', and the fourth as what the extra money is really being spent on — which is more often maintenance than failure.",
+   "cols": [
+    "Arrangement",
+    "What it physically is",
+    "Usable share of installed capacity",
+    "What the money buys"
+   ],
+   "rows": [
+    [
+     "**N** — capacity only",
+     "Exactly enough UPS to carry the load, on one path",
+     "All of it, in principle",
+     "Nothing beyond conditioning. Any UPS fault or any maintenance puts the load on {{static bypass}} — raw mains, no store. Legitimate where the load can take it, and much more common in enterprise rooms than the industry likes to admit"
+    ],
+    [
+     "**{{N+1}}** — one spare unit",
+     "One extra unit, module or frame paralleled onto the same bus, sharing load with the rest",
+     "N of N+1 — so 80 percent at 4+1, 67 percent at 2+1",
+     "Survival of one unit's failure, and the ability to take one unit out for work with the load still protected. It does **not** survive a fault on the common output bus, which is still single"
+    ],
+    [
+     "**2N** — two of everything",
+     "Two complete independent paths, each able to carry the whole load, feeding {{dual-corded}} equipment from both sides",
+     "Half. Each side is loaded to at most 50 percent by construction",
+     "A whole side can be lost or worked on with no loss of protection. This is what most people mean when they say redundant, and the reason it is bought is usually the maintenance day, not the failure"
+    ],
+    [
+     "**{{distributed redundant}}** — three to make two",
+     "Three (or more) systems arranged so any two can carry the load, with the distribution cross-tied so each load draws from two of the three",
+     "Two of three — about 67 percent, against 50 percent for 2N",
+     "Close to 2N's survivability at materially less installed capacity. The price is a far more complex distribution arrangement and a much harder failure analysis: the cross-ties are the new thing that can be got wrong"
+    ],
+    [
+     "**Block redundant** — the catcher",
+     "Each load block has its own UPS, plus one shared spare system standing by to catch whichever block loses its own, through {{static transfer switch}}es",
+     "N of N+1 at the system level — better than 2N and roughly N+1's arithmetic",
+     "Cheap redundancy across many blocks, at the cost of a transfer event: the catcher takes over through a switch, so the load experiences the transfer that 2N would never have produced"
+    ]
+   ],
+   "note": "Two things worth carrying away. **The usable-capacity column is the real price of redundancy** — a 2N plant is not twice as expensive, it is twice as expensive *and* runs permanently at the bad end of the efficiency curve, which Mitsubishi Electric's guide quantifies. And **every one of these arrangements can be defeated by paths that meet upstream**: two feeds that share a transformer, a switchboard or an earthing point are one feed with extra copper. Rehlko's guide teaches how to spot that on a {{single-line diagram}}, and it is the single most valuable half-hour in this whole subject. Piller's guide adds a sixth arrangement — the {{isolated parallel bus}} — which reaches this kind of redundancy without the cross-tied distribution."
+  },
+  {
+   "id": "the-utilisation-arithmetic",
+   "title": "What a protected megawatt actually costs in installed megawatts",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "MW of UPS installed per MW of protected load",
+   "intro": "The same table as a single number. This is the arithmetic that decides how much equipment, floor, cooling and capital a redundancy level consumes — and it is the number that gets left out when topologies are compared on reliability alone.",
+   "items": [
+    {
+     "label": "N",
+     "sub": "capacity only, no spare",
+     "v": 1.0
+    },
+    {
+     "label": "Block redundant",
+     "sub": "four blocks plus one shared catcher",
+     "v": 1.25
+    },
+    {
+     "label": "N+1 at 4+1",
+     "sub": "four units carrying, one spare",
+     "v": 1.25
+    },
+    {
+     "label": "Distributed redundant",
+     "sub": "three systems, any two carry the load",
+     "v": 1.5
+    },
+    {
+     "label": "N+1 at 2+1",
+     "sub": "two units carrying, one spare — small halls",
+     "v": 1.5
+    },
+    {
+     "label": "2N",
+     "sub": "two fully independent paths",
+     "v": 2.0
+    }
+   ],
+   "note": "Read it as a budget rather than a ranking. Going from N+1 at 4+1 to 2N costs 60 percent more installed capacity **and** halves the load each machine sees, which pushes the whole plant down the efficiency curve permanently. That is why {{distributed redundant}} and block-redundant arrangements exist at all: they are attempts to buy most of 2N's maintainability without 2N's stranded half. The counter-argument is that both add cross-ties and transfer events — complexity in the place where complexity is least welcome."
+  },
+  {
+   "id": "working-on-it-while-it-runs",
+   "title": "The maintenance day is the design case",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Ask why a hall is 2N and the answer given is usually 'in case the UPS fails'. Ask how often the redundancy is actually *used*, and the answer is: on a schedule, several times a year, by a maintenance crew. **{{concurrent maintainability}} — the ability to take any single element out of service for planned work without dropping the critical load — is what most of the money in this layer is really buying**, and it is the property the {{Uptime tier}} definitions are built around.",
+    "**The exposure the arrangement exists to remove.** Rehlko's guide makes the point sharply: servicing a single unit means putting its load on {{static bypass}}, which is raw mains with no store behind it, for a scheduled and repeated window. A system-level arrangement removes that window — in 2N by working on one whole path while the other carries everything, in {{N+1}} by taking one unit out while the spare covers, in a block-redundant scheme by letting the catcher hold the block. The exposure does not disappear; it moves from *every maintenance event* to *the rarer case where a second thing goes wrong during one*.",
+    "**The manual bypass, and why it is a separate cabinet.** Underneath the automatic {{static bypass}} sits a manually operated wrap-around path — often in its own cabinet with a make-before-break interlock sequence — whose purpose is to let the UPS be completely de-energised, isolated and opened up. It is the difference between servicing a machine and replacing one. The interlock sequence is written by a human and executed by a human under pressure, which is why the procedure, not the switchgear, is the thing that fails.",
+    "**Where the module level changes the argument.** A {{modular UPS}} moves the most frequent maintenance action — replacing a failed {{power module}} — inside the machine, where it needs no bypass at all: pull the drawer, insert another, the load never notices. Schneider markets this as a touch-safe live exchange on the Galaxy VXL and Vertiv's guide explains what has to be engineered into the slot for it to be true. It does not remove the need for a system arrangement, because frames, breakers, batteries and switchboards still need working on — but it converts the commonest event from a plant-level procedure into a technician's task, and that is most of the practical difference between plants that get maintained and plants that do not.",
+    "**The honest cost.** Every arrangement above N is bought with capacity that runs below its efficient point permanently, extra floor, extra cooling for the electrical room, and more places for a control interaction to go wrong. The correct question is not 'how redundant should we be' but 'what do we need to be able to work on while the hall is live, and how often' — and that question has a different answer for a single-tenant AI training hall that can be scheduled down than for a colocation floor with forty tenants and forty contracts."
+   ]
+  },
+  {
+   "id": "from-the-ups-to-the-rack",
+   "title": "Between the UPS and the two cords: the distribution the redundancy claim lives in",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Redundancy bought upstream is delivered — or lost — in the twenty metres between the UPS output and the server's power supplies. Eaton's guide teaches this layer as an electrical problem ({{busway}} against cable, {{selective coordination}}, harmonics); this table reads the same layer as a **redundancy problem**: at each element, ask whether the A path and the B path are still two things.",
+   "cols": [
+    "Element",
+    "What it does",
+    "Where the redundancy is won or lost"
+   ],
+   "rows": [
+    [
+     "UPS output switchboard",
+     "Collects the UPS system's output and breaks it into feeders",
+     "In {{N+1}} this board is the common point everything shares. It is the reason unit-level N+1 and path-level 2N are different purchases"
+    ],
+    [
+     "{{PDU}} — power distribution unit",
+     "A floor-standing cabinet, often with its own transformer, breaking a feeder into branch circuits and metering them",
+     "Its transformer is a single element serving many racks. Two PDUs fed from one board are two cabinets, not two paths"
+    ],
+    [
+     "{{remote power panel}}",
+     "A distribution cabinet out on the floor, shortening the branch runs to the racks",
+     "Cheap to add and easy to add badly: a panel spliced into an existing feeder without a fresh {{coordination study}} is row 7 of this app's failure map"
+    ],
+    [
+     "{{busway}} and {{tap-off box}}",
+     "Overhead bus running the length of a row, with tap-offs dropped where racks land",
+     "A tap-off added after commissioning changes the {{selective coordination}} everyone assumed. Reconfigurability is the product's virtue and its risk"
+    ],
+    [
+     "{{static transfer switch}}",
+     "Picks between the A and B supplies in milliseconds so a **single-corded** load can be fed from both",
+     "The device that lets legacy or cheap equipment live in a 2N hall — and a shared single point for everything downstream of it. Two STS units fed from the same pair of paths are fine; one STS feeding many racks is a new common element"
+    ],
+    [
+     "Rack {{PDU}} and the whips",
+     "The metered strips in the cabinet and the cords to the equipment",
+     "Thousands of terminations proven only once, at commissioning. Row 8 of the failure map"
+    ],
+    [
+     "{{dual-corded}} server power supplies",
+     "Two supplies, one per path, each able to carry the machine alone",
+     "This is where the whole arrangement finally pays off — provided each supply is genuinely on a different path and each can carry the full load. Two supplies each at half load on one path is a common and worthless configuration"
+    ]
+   ],
+   "note": "The discipline that catches most errors is embarrassingly simple: **trace both paths back from a single server and see where they first touch**. Whatever that element is — a switchboard, a transformer, a transfer switch, an earthing point — is the real redundancy level of everything downstream of it, regardless of what the tier claim says."
+  },
+  {
+   "id": "one-idea-at-four-scales",
+   "title": "One idea at four scales: from the desk to the megawatt",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Schneider is unusual in selling the same fundamental machine across four orders of magnitude — APC at the small end, Galaxy at the large. Reading the ladder as one product idea shows what is intrinsic to a UPS and what is an artefact of scale, and it explains why two parts of the same company behave like completely different businesses.",
+   "cols": [
+    "Scale",
+    "What the machine is",
+    "What is genuinely different",
+    "How it is sold"
+   ],
+   "rows": [
+    [
+     "**Desk and closet** — hundreds of VA to a few kVA",
+     "A single-phase box with a sealed battery inside it, protecting a workstation, a till or a small network cabinet",
+     "Usually {{line-interactive}} rather than {{double conversion}}: the supply passes through while a transformer trims voltage, and the inverter only takes over on failure. The load must tolerate a short break — which almost everything with a modern switch-mode supply does, thanks to its own {{hold-up time}}",
+     "Retail and distribution. Bought like a component, never specified, replaced rather than serviced"
+    ],
+    [
+     "**Rack and edge** — a few kVA to tens of kVA",
+     "A rack-mounted single- or three-phase unit with an internal or matching external battery pack",
+     "Online conversion becomes normal, and the battery becomes a separately purchased extension. Runtime is quoted per pack rather than designed",
+     "Through IT channels and integrators, alongside the servers. The buyer is an IT manager, not an electrical engineer"
+    ],
+    [
+     "**Room** — tens to a few hundred kW",
+     "A three-phase floor-standing machine, increasingly {{modular UPS}} in form, feeding a room's worth of racks",
+     "The battery leaves the cabinet and becomes a room with its own {{floor loading}}, ventilation and fire-code questions. Maintenance becomes a contract rather than a replacement",
+     "Project procurement with a consulting engineer in the loop. A specification exists, and an {{or-equal}} clause matters for the first time"
+    ],
+    [
+     "**Hall** — hundreds of kW to megawatts",
+     "A populated frame — Galaxy VXL is quoted at 500 to 1,250 kW per frame from 125 kW three-rack-unit modules, at 1,042 kW/m², parallelable to about 5 MW",
+     "The machine is now one element of a system, and the arrangement above it (the topologies table) matters more than the machine. {{footprint density}} becomes a commercial argument because it converts plant room into {{white space}}",
+     "Full construction procurement: {{basis of design}}, tender, {{submittal}}, factory test, {{integrated systems test}}. Vertiv's guide walks the whole sequence"
+    ]
+   ],
+   "note": "What is intrinsic across all four rows: a store, a converter, a bypass and a decision about how much break the load can take. What is purely scale: whether the battery is inside the box or inside a room, whether the buyer is a person or a specification, and whether the machine is a product or an element of a system. The commercial consequence is that the small end is a **channel** business — margin per unit, volume, no engineering — and the large end is a **project** business with a two-year sales cycle, which is why the two are usually run as different divisions with different brands."
+  },
+  {
+   "id": "the-battery-that-earns",
+   "title": "The battery that earns: when a UPS stops only waiting",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A UPS battery spends essentially all of its life at {{float charge}}, doing nothing, ageing anyway. In a large hall that is several megawatt-hours of installed, maintained, insured storage that produces no revenue and is replaced on a schedule. The {{grid-interactive UPS}} proposition is to let it work — shave the building's {{coincident peak}}, answer a {{demand response}} call, hold frequency for the network, or soak the training-step swings the hall itself creates.",
+    "**What has to change in the machine.** The conversion has to run backwards, which means a genuinely bidirectional front end rather than a rectifier with a charger bolted to it. Metering has to be revenue-grade if the energy is going to be paid for. The control layer has to hold a **reserve floor** — a state of charge below which no market signal is allowed to draw, because the backup duty is not negotiable — and it has to prove it holds it, to an insurer and to an authority. And the protection has to handle export, including {{anti-islanding}}, which a conventional UPS never had to think about.",
+    "**What the operator has to accept.** Three things, and they are the reasons this remains a small business relative to the noise it makes. The store now cycles, and cycles consume {{cycle life}} that the warranty counted; the economics only work if the earnings exceed the accelerated replacement, which depends entirely on the local tariff. The {{state of charge}} is no longer always 100 percent, so the honest {{autonomy}} figure becomes the reserve floor rather than the nameplate. And a battery that discharges deliberately is a different fire-code conversation — {{NFPA 855}}, {{UL 9540A}} data, spacing and suppression — which the authority having jurisdiction, not the vendor, decides.",
+    "**Where it actually lands commercially.** The pattern in this corpus is that operators buy a *separate* {{BESS}} rather than convert the UPS: Vertiv sells DynaFlex at 1.5 to 6 MW and EnergyCore Grid from 1 MW to 200 MW-plus for exactly these duties, and Schneider sells the same outcome as an energy-as-a-service microgrid rather than as a UPS feature. The reason is governance more than engineering — the person who owns uptime and the person who owns the energy bill are rarely the same person, and a separate asset lets each keep their own risk. The exception is the rack-level store, where the {{BBU}} shelf is already sitting on a DC bus and is already being asked to absorb load swings; Narada's guide covers what that duty does to the cell, and Vicor's covers what it does to the converter beside it.",
+    "**The adjacent roadmap item.** Both Schneider and Vertiv have published 800-volt DC conversion products aimed at racks approaching a megawatt, with storage integrated into the conversion shelf rather than sitting in a battery room. That is the same idea — the store moving to where the load is — arriving from the architecture side rather than the revenue side. Vertiv's guide treats what it does to the UPS product category; the point to carry here is that both routes end with the store closer to the load and further from the electrical room."
+   ]
+  },
+  {
+   "id": "where-schneider-slots-in",
+   "title": "Where Schneider's products slot into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "One row per published product family along the path from the utility fence to the silicon. The company's commercial argument is that the design layer — the blueprints and the software the second half of this guide teaches — decides most of these rows before any of them is tendered.",
+   "cols": [
+    "Where in the chain",
+    "Schneider's product",
+    "What it is doing there"
+   ],
+   "rows": [
+    [
+     "Fence to electrical room",
+     "MV and LV switchgear, transformers, panels, {{busway}}",
+     "The distribution backbone. ABB's, Eaton's and Powell's guides teach this layer's physics from three different angles"
+    ],
+    [
+     "Electrical room — protected power",
+     "Galaxy VXL: 500–1,250 kW per frame, 125 kW/3U {{power module}}s, to about 5 MW paralleled, up to 99 percent in its economy mode, {{IEC 62443}}-4-2 certified",
+     "The machine the first half of this guide arranges into systems. Vertiv's guide opens the module itself"
+    ],
+    [
+     "Small and edge",
+     "APC Smart-UPS and the single-phase base",
+     "The other end of the ladder — the same idea sold through a completely different motion"
+    ],
+    [
+     "Room to rack",
+     "{{PDU}}s, {{remote power panel}}s, {{static transfer switch}}es, rack PDUs",
+     "Where the redundancy claim is delivered or quietly lost — the distribution table above"
+    ],
+    [
+     "Chip to plant — heat",
+     "Motivair {{CDU}}s (105 kW to 2.5 MW), ChilledDoor rear-door exchangers, liquid-to-air units, chillers",
+     "Vertiv's guide carries the deepest treatment of the thermal chain in this app; Schneider's differentiator here is the silicon-level co-design rather than the box"
+    ],
+    [
+     "The building",
+     "EcoStruxure Pod and prefabricated modular builds in 8–12 rack increments",
+     "The prefabrication section further down this guide explains why the factory beats the field, and what the road does to the design"
+    ],
+    [
+     "Above all of it",
+     "NVIDIA reference designs, ETAP electrical digital twin, AVEVA, {{DCIM}}",
+     "The {{basis of design}} as a product. The reference-designs section further down is the strategic argument; the topologies table above is what those designs are actually choosing between"
+    ]
+   ],
+   "note": "The row that explains the company: the reference design sits *above* every other row. Whoever writes the {{basis of design}} has chosen the arrangement, and the arrangement has chosen most of the equipment. That is why a hardware company invests in free engineering and in a {{digital twin}} — and it is the same mechanism, one level up, as an {{or-equal}} clause written around a unique feature."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The two paths meet upstream.** The arrangement is 2N on the drawing and both sides trace back to one transformer, one switchboard or one earthing point. Everything downstream is genuinely duplicated and the common-mode failure sits above where anyone looked. This is the most expensive error in this whole subject because it is invisible in operation and only appears on the day it matters. Owned by the designer; visible to anyone who reads the {{single-line diagram}} all the way to the service.",
+    "**Dual-corded equipment with both cords on one path.** A rack gets moved, a whip gets re-plugged, a single-corded appliance gets installed on the A side only. The plant is still 2N and this cabinet is not. It is discovered during the maintenance window that the 2N was bought for. Owned by the operator, and the reason A/B colour discipline and per-outlet metering exist.",
+    "**{{stranded capacity}}: power, cooling, space and redundancy that do not line up.** A row with spare amps and no cooling takes no more racks; a hall with spare UPS capacity in the wrong path takes no more {{dual-corded}} load. The {{DCIM}} section further down this guide is about finding exactly this, and the reason it is worth finding is that the alternative is buying capacity that already exists.",
+    "**The catcher's transfer is a real event.** A block-redundant arrangement is cheap redundancy precisely because the spare is shared, and the price is that recovery happens through a {{static transfer switch}} rather than by continuing uninterrupted. That transfer is fast and it is not nothing: it is a disturbance the 2N arrangement would never have produced. Owned by whoever chose the arrangement, and worth stating plainly when the arrangement is chosen for cost.",
+    "**Cross-ties nobody has analysed since the load changed.** {{distributed redundant}} arrangements achieve their efficiency through cross-connection, and every cross-connection is a path a fault can take. Re-tenant the hall, change the densities, add a {{remote power panel}}, and the analysis that proved any-two-of-three is no longer about this building. Owned by the operator, and almost never re-run after commissioning.",
+    "**The reserve floor that was only a setting.** In a {{grid-interactive UPS}}, the state of charge below which market signals may not draw is the entire safety case. If it lives as a configurable parameter with no interlock, no alarm and no audit, then the backup duty is protected by somebody's memory. Owned jointly by the operator and whoever wrote the {{sequence of operations}}.",
+    "**And the one that is not electrical at all.** A {{sequence of operations}} written for a hall that no longer exists — restarting plant in the wrong order after an event, or heating and cooling at once during recovery. It presents as a power problem and is a controls problem. Rows 13 and 14 of this app's failure map, and the building-automation section further down this guide is the reference."
+   ]
+  },
   {
    "id": "dcim-running-power-and-cooling-as-a-data-problem",
    "title": "DCIM: running power and cooling as a data problem",
    "kind": "prose",
    "ps": [
-    "Data Center Infrastructure Management (DCIM) software inventories the physical plant \u2014 racks, circuits, cooling units, sensors \u2014 and monitors it as one live system, bridging two teams that historically didn't share tools: facilities engineers and IT operators",
+    "Data Center Infrastructure Management (DCIM) software inventories the physical plant — racks, circuits, cooling units, sensors — and monitors it as one live system, bridging two teams that historically didn't share tools: facilities engineers and IT operators",
     "Its raw material is measurement: branch-circuit monitors, metered rack outlets, and temperature sensors feed per-rack, per-circuit data upward, so an operator sees exactly which cabinet is nearing its power or thermal limit",
-    "The killer application is capacity planning: facilities strand capacity when power, cooling, space, and redundancy don't line up \u2014 a row with spare power but exhausted cooling can't take another rack. DCIM exists to find and unlock that stranded capacity",
-    "The category is converging with simulation: modern platforms model what happens if a rack lands here rather than there before anything moves, and fleet operators run dozens of sites from one console \u2014 the software becomes the operating experience of the building"
+    "The killer application is capacity planning: facilities strand capacity when power, cooling, space, and redundancy don't line up — a row with spare power but exhausted cooling can't take another rack. DCIM exists to find and unlock that stranded capacity",
+    "The category is converging with simulation: modern platforms model what happens if a rack lands here rather than there before anything moves, and fleet operators run dozens of sites from one console — the software becomes the operating experience of the building"
    ]
   },
   {
@@ -20,10 +302,10 @@
    "title": "Prefabricated modular data centers: the factory-built building",
    "kind": "prose",
    "ps": [
-    "The product: power skids, cooling modules, and even complete data halls assembled and wired in a factory, tested, then shipped to site as blocks that bolt together \u2014 construction converted into manufacturing",
+    "The product: power skids, cooling modules, and even complete data halls assembled and wired in a factory, tested, then shipped to site as blocks that bolt together — construction converted into manufacturing",
     "Factory beats field for three reasons: module fabrication and site work run in parallel, compressing the schedule; factory labor is more productive and repeatable than construction labor; and quality problems surface indoors before shipment rather than during commissioning",
     "Factory acceptance testing is the quiet superpower: a power module leaves having already run at load with its controls proven, so site commissioning verifies interconnection rather than debugging a first assembly",
-    "The design constraint is the road: shipping envelopes \u2014 lane widths, bridge heights, crane limits \u2014 dictate module dimensions, forcing standardized interfaces and early design freezes. The vendor's prize is turning one-off projects into repeatable products with a learning curve"
+    "The design constraint is the road: shipping envelopes — lane widths, bridge heights, crane limits — dictate module dimensions, forcing standardized interfaces and early design freezes. The vendor's prize is turning one-off projects into repeatable products with a learning curve"
    ]
   },
   {
@@ -31,9 +313,9 @@
    "title": "Energy accounting: metering, Scope 2, and what renewable claims mean",
    "kind": "prose",
    "ps": [
-    "Corporate carbon accounting sorts emissions into scopes: Scope 1 is fuel you burn, Scope 2 is electricity you buy, Scope 3 is your value chain. For a data-center operator Scope 2 dominates \u2014 the building's carbon is mostly its power purchases",
-    "Scope 2 has two answers for the same year: location-based (your grid's average emissions) and market-based (what your contracts say \u2014 renewable certificates and power purchase agreements). Claims of 100% renewable operation live in the market-based column",
-    "The stricter frontier is hourly matching: annual accounting lets midnight consumption claim noon solar certificates, while 24/7 carbon-free accounting matches every hour of consumption to carbon-free generation \u2014 much harder, and it changes what operators must buy",
+    "Corporate carbon accounting sorts emissions into scopes: Scope 1 is fuel you burn, Scope 2 is electricity you buy, Scope 3 is your value chain. For a data-center operator Scope 2 dominates — the building's carbon is mostly its power purchases",
+    "Scope 2 has two answers for the same year: location-based (your grid's average emissions) and market-based (what your contracts say — renewable certificates and power purchase agreements). Claims of 100% renewable operation live in the market-based column",
+    "The stricter frontier is hourly matching: annual accounting lets midnight consumption claim noon solar certificates, while 24/7 carbon-free accounting matches every hour of consumption to carbon-free generation — much harder, and it changes what operators must buy",
     "None of it works without metering: auditable reporting requires utility-grade interval data across the whole estate, which is why energy-management platforms and submetering hardware became compliance infrastructure as disclosure regulation hardened"
    ]
   },
@@ -42,10 +324,10 @@
    "title": "Building automation: the BMS runs the building",
    "kind": "prose",
    "ps": [
-    "A building management system (BMS) is the building's autopilot: sensors feed controllers running continuous control loops that hold setpoints \u2014 temperatures, pressures, flows \u2014 by commanding valves, dampers, and fan speeds",
-    "Its real product is the sequence of operations: the written logic for how equipment stages, ramps, and recovers. Two identical plants with different sequences can differ enormously in energy use \u2014 programming quality is invisible and decisive",
-    "Open protocols like BACnet and Modbus let equipment interoperate on the wire, but integration is still where projects live or die \u2014 and in data centers the BMS splits duties with electrical power monitoring, each watching half the building's life",
-    "Fault detection and diagnostics is the analytics layer on top: software scanning BMS data for signatures like simultaneous heating and cooling, stuck dampers, or drifting sensors \u2014 continuous automated commissioning that recovers efficiency humans stopped noticing"
+    "A building management system (BMS) is the building's autopilot: sensors feed controllers running continuous control loops that hold setpoints — temperatures, pressures, flows — by commanding valves, dampers, and fan speeds",
+    "Its real product is the sequence of operations: the written logic for how equipment stages, ramps, and recovers. Two identical plants with different sequences can differ enormously in energy use — programming quality is invisible and decisive",
+    "Open protocols like BACnet and Modbus let equipment interoperate on the wire, but integration is still where projects live or die — and in data centers the BMS splits duties with electrical power monitoring, each watching half the building's life",
+    "Fault detection and diagnostics is the analytics layer on top: software scanning BMS data for signatures like simultaneous heating and cooling, stuck dampers, or drifting sensors — continuous automated commissioning that recovers efficiency humans stopped noticing"
    ]
   },
   {
@@ -53,9 +335,9 @@
    "title": "The platform model: hardware companies becoming ecosystems",
    "kind": "prose",
    "ps": [
-    "The model: sell the hardware once, then attach software subscriptions, monitoring, and services that recur for the asset's life \u2014 the installed base stops being a past sale and becomes a distribution channel",
-    "Software changes the economics: gross margins far above hardware, revenue that persists through construction downturns, and valuation multiples that reward recurring streams \u2014 which is why electrical incumbents keep acquiring software firms",
-    "Ecosystem lock-in is soft but real: open protocols keep the wire neutral, while engineering tools, design libraries, certified-partner networks, and installer training accumulate around one vendor \u2014 switching costs made of habit and expertise rather than connectors",
+    "The model: sell the hardware once, then attach software subscriptions, monitoring, and services that recur for the asset's life — the installed base stops being a past sale and becomes a distribution channel",
+    "Software changes the economics: gross margins far above hardware, revenue that persists through construction downturns, and valuation multiples that reward recurring streams — which is why electrical incumbents keep acquiring software firms",
+    "Ecosystem lock-in is soft but real: open protocols keep the wire neutral, while engineering tools, design libraries, certified-partner networks, and installer training accumulate around one vendor — switching costs made of habit and expertise rather than connectors",
     "The channel is a moat of its own: hundreds of thousands of electricians, integrators, and distributors specify what they know. A vendor whose products the whole trade is trained on wins projects no salesperson ever visits"
    ]
   },
@@ -64,61 +346,189 @@
    "title": "Reference designs: selling the blueprint before the hardware",
    "kind": "prose",
    "ps": [
-    "A reference design is a validated facility blueprint \u2014 electrical one-lines, cooling schematics, control architectures, bills of material \u2014 published for customers to adapt. It is free engineering, and it is not altruism",
+    "A reference design is a validated facility blueprint — electrical one-lines, cooling schematics, control architectures, bills of material — published for customers to adapt. It is free engineering, and it is not altruism",
     "The strategy: whoever authors the design shapes procurement before bidding starts. A blueprint drawn around the vendor's own equipment makes that equipment the default, and competitors must argue their way in against a validated baseline",
-    "Chip-vendor co-design made this urgent: rack platforms now change faster than buildings get built, so designs validated against a specific GPU generation give operators something buildable against a moving target \u2014 and put the design author inside every conversation",
-    "The endgame is simulation-first: full digital twins where a campus is designed, simulated, and optimized in software \u2014 electrical models, thermal models, performance-per-megawatt tuning \u2014 before ground breaks. Selling the simulation is selling the design; the hardware follows"
+    "Chip-vendor co-design made this urgent: rack platforms now change faster than buildings get built, so designs validated against a specific GPU generation give operators something buildable against a moving target — and put the design author inside every conversation",
+    "The endgame is simulation-first: full digital twins where a campus is designed, simulated, and optimized in software — electrical models, thermal models, performance-per-megawatt tuning — before ground breaks. Selling the simulation is selling the design; the hardware follows"
    ]
-  }
- ],
- "flashcards": [
-  {
-   "q": "What is DCIM software, and what gap does it bridge?",
-   "a": "Data Center Infrastructure Management \u2014 a platform that inventories and monitors the physical plant (power, cooling, space, racks) as one live system. It bridges facilities engineering and IT operations, two teams with historically separate tools, giving both a shared view of what the building can actually support."
   },
   {
-   "q": "What is stranded capacity?",
-   "a": "Capacity you paid for but cannot use because power, cooling, space, and redundancy do not line up \u2014 a row with spare power but exhausted cooling cannot take another rack. Finding and unlocking stranded capacity is DCIM's highest-value job, since it defers building anything new."
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is 2N usually bought, if UPS units rarely fail?",
+     "a": "For the maintenance day. Concurrent maintainability — taking any element out of service for planned work without dropping the load — is what most of the money above N is buying, and it is used on a schedule several times a year rather than once a decade."
+    },
+    {
+     "q": "What fraction of installed UPS capacity can you actually load in 2N, N+1 at 4+1, and distributed redundant?",
+     "a": "2N: half, by construction, because each side must be able to carry everything alone. N+1 at 4+1: four-fifths. Distributed redundant (any two of three): two-thirds. The unusable share is the real price of the redundancy level, and it pushes the whole plant permanently down its efficiency curve."
+    },
+    {
+     "q": "What does a block-redundant or catcher arrangement trade for its cheaper redundancy?",
+     "a": "A transfer event. The shared spare system catches whichever block loses its own UPS through a static transfer switch, so the load experiences a fast transfer that a 2N arrangement would never have produced. Cheap redundancy across many blocks, at the cost of a disturbance."
+    },
+    {
+     "q": "What is the single most useful check on any redundancy claim?",
+     "a": "Trace both paths back from one server and find where they first touch. Whatever that element is — switchboard, transformer, transfer switch, earthing point — is the true redundancy level of everything downstream of it, whatever the tier claim says."
+    },
+    {
+     "q": "What is a static transfer switch for, and what does it cost you?",
+     "a": "It picks between an A and a B supply in milliseconds so a single-corded load can live in a dual-path hall. The cost is that it becomes a new shared element: one STS feeding many racks is a common point that the 2N arrangement upstream of it does not protect against."
+    },
+    {
+     "q": "What is the difference between the automatic static bypass and the manual maintenance path?",
+     "a": "The static bypass is a solid-state switch that acts automatically on overload or failure. The manual wrap-around path, usually in its own cabinet with an interlock sequence, exists so the UPS can be fully de-energised and opened. One is the difference between servicing a machine and replacing one — and the interlock sequence is executed by a human under pressure, which is what actually fails."
+    },
+    {
+     "q": "What is genuinely different about a line-interactive UPS at the small end of the ladder?",
+     "a": "The supply normally passes through while a transformer or inverter trims voltage; the inverter takes over fully only on failure, so the load sees a short break. Modern switch-mode supplies ride it on their own hold-up time, which is why the topology is acceptable at desk scale and not at hall scale."
+    },
+    {
+     "q": "Why do the small and large ends of a UPS catalogue behave like different companies?",
+     "a": "The small end is a channel business — retail and distribution, volume, no engineering, replaced rather than serviced. The large end is a project business with a consulting engineer, a specification, an or-equal clause, factory testing and a two-year sales cycle. Same machine idea, entirely different motion."
+    },
+    {
+     "q": "What must change inside a UPS before its battery can earn?",
+     "a": "A genuinely bidirectional front end rather than a rectifier plus charger; revenue-grade metering; a control layer that holds and can prove a reserve floor of state of charge that no market signal may cross; and export protection including anti-islanding, which a conventional UPS never needed."
+    },
+    {
+     "q": "Why do operators usually buy a separate BESS instead of making the UPS grid-interactive?",
+     "a": "Governance more than engineering. The person who owns uptime and the person who owns the energy bill are rarely the same person, and a separate asset lets each keep their own risk. Cycling the backup store also consumes warranty cycle life and turns the honest autonomy figure into the reserve floor rather than the nameplate."
+    },
+    {
+     "q": "What is stranded capacity?",
+     "a": "Capacity that has been paid for but cannot be used because power, cooling, space and redundancy do not line up — spare amps in a row with no cooling left, or spare UPS capacity in the wrong path. Finding it is cheaper than buying more of it, which is the entire commercial case for DCIM."
+    },
+    {
+     "q": "Why does whoever writes the basis of design effectively choose the equipment?",
+     "a": "Because the basis of design fixes the arrangement, and the arrangement fixes most of the equipment before anything is tendered. That is the mechanism a published reference design industrialises: free validated engineering that makes one vendor's products the default a competitor has to argue against."
+    },
+    {
+     "q": "What is DCIM software, and what gap does it bridge?",
+     "a": "Data Center Infrastructure Management — a platform that inventories and monitors the physical plant (power, cooling, space, racks) as one live system. It bridges facilities engineering and IT operations, two teams with historically separate tools, giving both a shared view of what the building can actually support."
+    },
+    {
+     "q": "What is stranded capacity?",
+     "a": "Capacity you paid for but cannot use because power, cooling, space, and redundancy do not line up — a row with spare power but exhausted cooling cannot take another rack. Finding and unlocking stranded capacity is DCIM's highest-value job, since it defers building anything new."
+    },
+    {
+     "q": "Why does factory prefabrication beat field construction?",
+     "a": "Three compounding reasons: module fabrication and site work run in parallel, compressing the schedule; factory labor is more productive and repeatable than field labor; and factory acceptance testing proves modules at load before shipment, so site commissioning verifies connections instead of debugging a first assembly."
+    },
+    {
+     "q": "What physically constrains prefab module design?",
+     "a": "The road. Shipping envelopes — lane widths, bridge clearances, weight and crane limits — set the maximum module dimensions, which forces standardized interfaces and early design freezes. The building is effectively designed backward from what a truck can legally carry."
+    },
+    {
+     "q": "What are Scopes 1, 2, and 3 for a data-center operator?",
+     "a": "Scope 1 is fuel burned on site, like generators. Scope 2 is purchased electricity — the dominant category for data centers. Scope 3 is the value chain, from construction materials to suppliers. Most operator climate claims are really Scope 2 claims, which makes electricity accounting the battleground."
+    },
+    {
+     "q": "Location-based versus market-based Scope 2 — and what does 24/7 matching add?",
+     "a": "Location-based uses your grid's average emissions; market-based uses your contracts — certificates and power purchase agreements — which is where 100%-renewable claims live. Hourly (24/7) matching is stricter: every hour's consumption must match carbon-free generation in that same hour, not just annually."
+    },
+    {
+     "q": "What is a sequence of operations, and why does it matter more than the equipment?",
+     "a": "The programmed logic for how a building's systems stage, ramp, and recover — the BMS's actual behavior. Two identical plants with different sequences can differ enormously in energy use. It is the invisible software layer that determines whether good hardware performs well."
+    },
+    {
+     "q": "What does fault detection and diagnostics (FDD) find?",
+     "a": "Signatures of waste hiding in BMS data: zones heating and cooling simultaneously, stuck dampers, drifting sensors, short-cycling equipment. It is continuous automated commissioning — recovering the efficiency that decays quietly after handover, usually the cheapest energy savings available in a building."
+    },
+    {
+     "q": "Why do electrical hardware incumbents keep buying software companies?",
+     "a": "Software carries higher gross margins, recurs through construction downturns, and earns better valuation multiples — and the installed hardware base becomes a distribution channel for it. Each acquisition deepens the platform: design tools, monitoring, and analytics layered onto equipment already in the field."
+    },
+    {
+     "q": "What makes platform lock-in soft — and still effective?",
+     "a": "The wire stays open (BACnet, Modbus), so nothing physically blocks switching. But engineering tools, design libraries, certified partners, and a trade trained on one vendor's ecosystem accumulate into switching costs made of expertise and habit. The vendor wins specifications it never had to sell."
+    },
+    {
+     "q": "Why do vendors publish reference designs — free, validated engineering?",
+     "a": "Because the design author shapes procurement before bidding starts: a validated blueprint drawn around the vendor's equipment makes that equipment the default, and competitors must argue against a proven baseline. Giving away engineering buys the highest-leverage position in the sale."
+    },
+    {
+     "q": "Why did chip-vendor co-designed blueprints become necessary?",
+     "a": "Rack platforms now change generations faster than buildings get built, so an operator designing a facility risks obsolescence before energization. Designs validated against a specific chip generation — increasingly as digital twins simulated before ground breaks — keep facilities buildable against a moving target."
+    }
+   ]
   },
   {
-   "q": "Why does factory prefabrication beat field construction?",
-   "a": "Three compounding reasons: module fabrication and site work run in parallel, compressing the schedule; factory labor is more productive and repeatable than field labor; and factory acceptance testing proves modules at load before shipment, so site commissioning verifies connections instead of debugging a first assembly."
-  },
-  {
-   "q": "What physically constrains prefab module design?",
-   "a": "The road. Shipping envelopes \u2014 lane widths, bridge clearances, weight and crane limits \u2014 set the maximum module dimensions, which forces standardized interfaces and early design freezes. The building is effectively designed backward from what a truck can legally carry."
-  },
-  {
-   "q": "What are Scopes 1, 2, and 3 for a data-center operator?",
-   "a": "Scope 1 is fuel burned on site, like generators. Scope 2 is purchased electricity \u2014 the dominant category for data centers. Scope 3 is the value chain, from construction materials to suppliers. Most operator climate claims are really Scope 2 claims, which makes electricity accounting the battleground."
-  },
-  {
-   "q": "Location-based versus market-based Scope 2 \u2014 and what does 24/7 matching add?",
-   "a": "Location-based uses your grid's average emissions; market-based uses your contracts \u2014 certificates and power purchase agreements \u2014 which is where 100%-renewable claims live. Hourly (24/7) matching is stricter: every hour's consumption must match carbon-free generation in that same hour, not just annually."
-  },
-  {
-   "q": "What is a sequence of operations, and why does it matter more than the equipment?",
-   "a": "The programmed logic for how a building's systems stage, ramp, and recover \u2014 the BMS's actual behavior. Two identical plants with different sequences can differ enormously in energy use. It is the invisible software layer that determines whether good hardware performs well."
-  },
-  {
-   "q": "What does fault detection and diagnostics (FDD) find?",
-   "a": "Signatures of waste hiding in BMS data: zones heating and cooling simultaneously, stuck dampers, drifting sensors, short-cycling equipment. It is continuous automated commissioning \u2014 recovering the efficiency that decays quietly after handover, usually the cheapest energy savings available in a building."
-  },
-  {
-   "q": "Why do electrical hardware incumbents keep buying software companies?",
-   "a": "Software carries higher gross margins, recurs through construction downturns, and earns better valuation multiples \u2014 and the installed hardware base becomes a distribution channel for it. Each acquisition deepens the platform: design tools, monitoring, and analytics layered onto equipment already in the field."
-  },
-  {
-   "q": "What makes platform lock-in soft \u2014 and still effective?",
-   "a": "The wire stays open (BACnet, Modbus), so nothing physically blocks switching. But engineering tools, design libraries, certified partners, and a trade trained on one vendor's ecosystem accumulate into switching costs made of expertise and habit. The vendor wins specifications it never had to sell."
-  },
-  {
-   "q": "Why do vendors publish reference designs \u2014 free, validated engineering?",
-   "a": "Because the design author shapes procurement before bidding starts: a validated blueprint drawn around the vendor's equipment makes that equipment the default, and competitors must argue against a proven baseline. Giving away engineering buys the highest-leverage position in the sale."
-  },
-  {
-   "q": "Why did chip-vendor co-designed blueprints become necessary?",
-   "a": "Rack platforms now change generations faster than buildings get built, so an operator designing a facility risks obsolescence before energization. Designs validated against a specific chip generation \u2014 increasingly as digital twins simulated before ground breaks \u2014 keep facilities buildable against a moving target."
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A hall is built 2N and runs at 40 percent IT utilisation. Each UPS is loaded to roughly:",
+     "c": [
+      "40 percent",
+      "20 percent",
+      "80 percent",
+      "It depends on the module count"
+     ],
+     "a": 1,
+     "why": "2N halves the load by construction — each side must be able to carry everything alone — so 40 percent of the hall's capacity spread over two full paths puts each machine near 20 percent. That is close to the worst part of the efficiency curve, permanently, and it is the arithmetic behind the whole distributed-redundant idea."
+    },
+    {
+     "q": "An operator wants near-2N maintainability at less installed capacity. Distributed redundant delivers that by:",
+     "c": [
+      "Using larger modules",
+      "Cross-tying three systems so any two can carry the load",
+      "Running the UPS in economy mode",
+      "Adding a second battery string"
+     ],
+     "a": 1,
+     "why": "Any-two-of-three needs 1.5 MW installed per protected MW rather than 2.0. The price is the cross-tied distribution: the cross-ties are extra paths a fault can take, and the analysis that proved any-two-of-three stops being about the building as soon as the loads change."
+    },
+    {
+     "q": "During a scheduled maintenance window on the A path, one cabinet drops. The most likely cause is:",
+     "c": [
+      "The B-side UPS was undersized",
+      "Both of that cabinet's cords were on the A path",
+      "The static transfer switch failed",
+      "The battery had degraded"
+     ],
+     "a": 1,
+     "why": "A moved rack, a re-plugged whip, or a single-corded appliance installed on one side only. The plant is still 2N and that cabinet is not — and the maintenance window the 2N was bought for is exactly when it is discovered."
+    },
+    {
+     "q": "A single-corded appliance must live in a dual-path hall. The correct answer is a static transfer switch, and the new risk it creates is:",
+     "c": [
+      "It halves the available capacity",
+      "It is a shared element downstream of the redundancy",
+      "It prevents concurrent maintainability",
+      "It requires the load to be dual-corded anyway"
+     ],
+     "a": 1,
+     "why": "The STS solves the single-cord problem by becoming the point where A and B meet. Everything downstream of it depends on one device, which the 2N arrangement upstream does not protect against — fine for one appliance, a real exposure when one STS feeds many racks."
+    },
+    {
+     "q": "A UPS is made grid-interactive to shave peaks. The honest autonomy figure afterwards is:",
+     "c": [
+      "The nameplate runtime",
+      "The runtime available at the reserve floor state of charge",
+      "Unchanged, because the battery recharges quickly",
+      "Half the nameplate"
+     ],
+     "a": 1,
+     "why": "Once market signals can draw on the store, the guaranteed backup is whatever the reserve floor protects, not the full charge. If that floor is only a configurable setting with no interlock or audit, the backup duty is protected by somebody's memory."
+    },
+    {
+     "q": "Which of these is a system property that no datasheet comparison would have surfaced?",
+     "c": [
+      "Efficiency at 50 percent load",
+      "Whether the A and B paths share an upstream transformer",
+      "The output power factor",
+      "The acoustic level"
+     ],
+     "a": 1,
+     "why": "It is the defining example. Every machine on the shortlist can be perfect and the arrangement still fail, because redundancy is a property of the arrangement rather than the equipment. A UPS is bought as a machine and lives as a system."
+    }
+   ]
   }
  ]
 }

@@ -222,9 +222,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 
 | Kind | Slug | Company | Why | Guide |
 |------|------|---------|-----|-------|
-| revision | `vertiv` | Vertiv | add a UPS section (G3) | — |
-| revision | `schneider-electric` | Schneider Electric | add a UPS section (G3) | — |
-| revision | `siemens-energy` | Siemens Energy | add a grid-technology section (G4) | — |
+| revision | `vertiv` | Vertiv | add a UPS section (G3) | ✓ · v04.51r — the machine and the transaction |
+| revision | `schneider-electric` | Schneider Electric | add a UPS section (G3) | ✓ · v04.51r — the system and the ladder |
+| revision | `siemens-energy` | Siemens Energy | add a grid-technology section (G4) | ✓ · v04.51r — the network as a system |
 | backfill | `apex-clean-energy` | Apex Clean Energy | IPP — buyer side has no guides | — |
 | backfill | `arevon` | Arevon | IPP — buyer side has no guides | — |
 | backfill | `eolian` | Eolian | IPP — buyer side has no guides | — |
@@ -240,7 +240,7 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | backfill | `mainspring-energy` | Mainspring Energy | bridge-power supplier | — |
 | backfill | `on-energy` | ON.energy | bridge-power supplier | — |
 | backfill | `prevalon` | Prevalon | bridge-power supplier | — |
-| backfill | `narada` | Narada | G9 — the backup-power incumbent | — |
+| backfill | `narada` | Narada | G9 — the backup-power incumbent | ✓ · v04.51r — the cell, not the shelf |
 | backfill | `canadian-solar` | Canadian Solar | integrator | — |
 | backfill | `crrc-zhuzhou` | CRRC Zhuzhou | integrator | — |
 | backfill | `envision-energy` | Envision Energy | integrator | — |

@@ -67,6 +67,22 @@
       ]
     },
     {
+      "slug": "agm",
+      "term": "AGM",
+      "def": "Absorbent glass mat: the construction that made lead-acid sealed. The electrolyte is held in a glass-fibre mat between the plates and the oxygen made at one plate recombines at the other instead of escaping, so the cell never needs topping up.",
+      "aliases": [
+        "absorbent glass mat"
+      ]
+    },
+    {
+      "slug": "air-insulated-switchgear",
+      "term": "air-insulated switchgear",
+      "def": "High-voltage switchgear whose live parts are separated by open air, so the clearances — and therefore the land — grow with the voltage. Cheap per bay and expensive per hectare.",
+      "aliases": [
+        "AIS"
+      ]
+    },
+    {
       "slug": "air-permit",
       "term": "air permit",
       "def": "The authorization from a state or local air agency that a combustion source needs before it can be built and run, written around what leaves the stack — chiefly nitrogen oxides and particulates — and around how many hours it may run. For an on-site power plant it is usually the longest lead item after the machines themselves, and its terms decide whether the same engine may be used as backup only or as prime power.",
@@ -146,6 +162,14 @@
       ]
     },
     {
+      "slug": "asynchronous-tie",
+      "term": "asynchronous tie",
+      "def": "A DC link joining two AC networks that are not — and need not be — in step with one another. It moves power between them while keeping their disturbances on their own sides.",
+      "aliases": [
+        "asynchronous interconnection"
+      ]
+    },
+    {
       "slug": "ats",
       "term": "ATS",
       "def": "Automatic transfer switch: the device that senses utility failure, signals the generators to start, and moves the load onto them once generation is stable — then manages the return trip when utility power comes back. It is the conductor of a data center's outage choreography.",
@@ -213,6 +237,14 @@
       "def": "Whether lenders and investors will finance a project or accept a supplier — a function of certifications, warranties, balance-sheet strength, track record, and policy exposure rather than spec-sheet performance."
     },
     {
+      "slug": "basis-of-design",
+      "term": "basis of design",
+      "def": "The engineering document that fixes a project's architecture, ratings and equipment choices before anything is tendered. Whoever writes it decides what the bidders are allowed to offer.",
+      "aliases": [
+        "BOD"
+      ]
+    },
+    {
       "slug": "batch-study",
       "term": "batch study",
       "def": "Studying a group of interconnection requests together rather than one at a time, so the effect of all of them on the same corridor is modelled at once. ERCOT proposed batching large-load requests in 2025 after serial studies could not keep up; the price is that every request in the batch waits for the slowest.",
@@ -221,6 +253,14 @@
         "cluster study",
         "batch studies",
         "large load batch study"
+      ]
+    },
+    {
+      "slug": "battery-string",
+      "term": "battery string",
+      "def": "Cells or blocks wired in series to make the voltage a UPS needs. The same current passes through all of them, so the string's runtime is set by its weakest cell — which is the entire reason cell monitoring exists.",
+      "aliases": [
+        "string"
       ]
     },
     {
@@ -319,6 +359,11 @@
       ]
     },
     {
+      "slug": "break-even-distance",
+      "term": "break-even distance",
+      "def": "The route length beyond which a DC link's cheaper conductors and lower losses outweigh the cost of its two converter stations. Below it AC wins on cost; above it DC does."
+    },
+    {
       "slug": "breakdown-voltage",
       "term": "breakdown voltage",
       "def": "The voltage a switch can hold off before it conducts uncontrollably. Designers never run a device near it: a bus voltage plus its switching overshoot is usually kept below about 80% of the rating, so an 800-volt bus needs a device rated well above 800 volts.",
@@ -405,6 +450,11 @@
       "def": "How fast a battery charges or discharges relative to its capacity: 1C empties it in one hour, 0.25C in four. Grid storage typically runs at low C-rates — multi-hour durations rather than sprints."
     },
     {
+      "slug": "cable-charging-current",
+      "term": "cable charging current",
+      "def": "The current an AC cable draws simply to charge its own capacitance, growing with length and voltage. Beyond roughly a hundred kilometres of subsea cable it consumes the whole rating, which is why long submarine links are direct current."
+    },
+    {
       "slug": "capacity-factor",
       "term": "capacity factor",
       "def": "The energy a plant actually produced over a period divided by what it would have produced running flat out the whole time. A nuclear unit near 90 percent runs almost continuously; a solar farm in the 20s runs only when the sun does; a peaker in single digits runs only on the hardest days.",
@@ -424,6 +474,14 @@
         "capacity price",
         "capacity markets",
         "capacity payment"
+      ]
+    },
+    {
+      "slug": "capacity-test",
+      "term": "capacity test",
+      "def": "A real timed discharge into a load bank, measured against the rating — the only measurement that proves what a string will actually do. The IEEE stationary-battery practices set the method and the interval, and the industry retires a string at eighty percent of rated capacity.",
+      "aliases": [
+        "discharge test"
       ]
     },
     {
@@ -539,11 +597,33 @@
       "def": "The property that any single component can be taken out of service for planned work without dropping the critical load — the defining requirement of Uptime Tier III. It is decided by topology rather than by equipment quality: there must be a second path, and the switch onto it must itself be safe."
     },
     {
+      "slug": "conductance-testing",
+      "term": "conductance testing",
+      "def": "Measuring each cell's internal resistance or conductance as a fast proxy for its health, without discharging the string. It reliably finds the cell that has already failed; it does not prove how many minutes the string still holds.",
+      "aliases": [
+        "impedance testing"
+      ]
+    },
+    {
+      "slug": "congestion",
+      "term": "congestion",
+      "def": "What happens when the cheapest generation cannot reach the load because the wires between them are full. In most US markets it is priced rather than rationed, and it is the everyday form the transmission shortage takes."
+    },
+    {
       "slug": "consignment",
       "term": "consignment",
       "def": "A manufacturing contract in which the customer supplies some or all of the parts and pays only for the work. It keeps component pricing visible to the customer and keeps the inventory on the customer's books.",
       "aliases": [
         "consigned material"
+      ]
+    },
+    {
+      "slug": "constant-power-rating",
+      "term": "constant-power rating",
+      "def": "How a standby battery is really specified: the watts per cell it will hold for a stated time down to a stated end voltage at a stated temperature. Amp-hours describe a slow discharge and mislead badly at the rates a UPS actually uses.",
+      "aliases": [
+        "watts per cell",
+        "W/cell"
       ]
     },
     {
@@ -779,6 +859,14 @@
       ]
     },
     {
+      "slug": "dc-circuit-breaker",
+      "term": "DC circuit breaker",
+      "def": "A breaker for direct current, which offers no zero crossing to help it. It has to force the current to zero itself — with a resonant circuit or with semiconductors — which is why DC breakers arrived decades after AC ones and still cost far more.",
+      "aliases": [
+        "DC breaker"
+      ]
+    },
+    {
       "slug": "dc-dc-converter",
       "term": "DC-DC converter",
       "def": "A converter that changes one DC voltage to another without passing through AC. It is the stage that does the work once power has arrived as direct current — inside a rack, inside a vehicle, or on a server board — and it is what lets a high-voltage DC bus feed low-voltage electronics.",
@@ -797,6 +885,15 @@
         "DC-link"
       ],
       "def": "The direct-current stage inside a static UPS between the rectifier and the inverter, where the battery connects. Every watt the load draws in double conversion passes through it as DC, which is why the batteries can take over without any switching event — they are already on the bus."
+    },
+    {
+      "slug": "dcim",
+      "term": "DCIM",
+      "def": "Data centre infrastructure management: software that inventories the physical plant — racks, circuits, cooling units, sensors — and monitors it as one live system. Its practical purpose is capacity planning: finding the power, cooling, space and redundancy that have been paid for and cannot currently be used.",
+      "aliases": [
+        "data center infrastructure management",
+        "data centre infrastructure management"
+      ]
     },
     {
       "slug": "dcrf",
@@ -875,6 +972,11 @@
         "design-in cycle",
         "qualification cycle"
       ]
+    },
+    {
+      "slug": "design-life",
+      "term": "design life",
+      "def": "The life a battery is designed to reach under ideal float conditions, quoted in years. It is not the life it will get: temperature, cycling and ripple decide the service life, which is routinely a fraction of the design figure."
     },
     {
       "slug": "design-win",
@@ -1031,6 +1133,15 @@
       ]
     },
     {
+      "slug": "dual-corded",
+      "term": "dual-corded",
+      "def": "Equipment with two power supplies fed from two independent paths, so either path can be lost or worked on without the load noticing. It is what makes a whole side of a data hall maintainable at once.",
+      "aliases": [
+        "dual corded",
+        "dual-cord"
+      ]
+    },
+    {
       "slug": "dual-sourcing",
       "term": "dual sourcing",
       "def": "Qualifying two suppliers for the same item so neither can hold the buyer hostage on price or availability. It costs money — two qualifications, two tool sets, split volume that raises unit cost — which is why it is an argued decision rather than a default.",
@@ -1115,6 +1226,14 @@
       ]
     },
     {
+      "slug": "electrode-thickness",
+      "term": "electrode thickness",
+      "def": "How thickly the active material is coated onto a cell's current collectors. Thick electrodes hold more energy per litre and make the ions travel further; thin ones deliver current hard and store less. It is the single design choice that separates a power cell from an energy cell.",
+      "aliases": [
+        "electrode coating thickness"
+      ]
+    },
+    {
       "slug": "electronics-manufacturing-services",
       "term": "electronics manufacturing services",
       "def": "The industry of building electronics for other companies, spanning bare circuit-board assembly through full product assembly, test, distribution and repair. Its economics are volume and purchasing scale, so margins are thin and the winners are large.",
@@ -1139,6 +1258,15 @@
       "def": "Energy management system: the supervisory software that decides when a storage plant charges and discharges — following price signals, grid instructions, or a contract — and coordinates the PCS and BMS to do it.",
       "aliases": [
         "energy management system"
+      ]
+    },
+    {
+      "slug": "end-of-discharge-voltage",
+      "term": "end-of-discharge voltage",
+      "def": "The voltage at which a discharge is declared over — chosen by the system rather than by the chemistry, because below it the inverter can no longer work with what the string is delivering. Set it lower and you buy minutes at the cost of life.",
+      "aliases": [
+        "EODV",
+        "end voltage"
       ]
     },
     {
@@ -1168,6 +1296,15 @@
         "kWh charge",
         "volumetric charge",
         "energy rate"
+      ]
+    },
+    {
+      "slug": "energy-density",
+      "term": "energy density",
+      "def": "How much energy a cell stores per litre — or per kilogram — of itself. It is the figure of merit for a grid or vehicle cell, and it trades directly against the electrode design that lets a cell deliver current hard.",
+      "aliases": [
+        "Wh/L",
+        "watt-hours per litre"
       ]
     },
     {
@@ -1278,6 +1415,11 @@
       ]
     },
     {
+      "slug": "facts",
+      "term": "FACTS",
+      "def": "Flexible AC transmission systems: the family of power-electronic devices — shunt and series compensation, STATCOMs, phase shifters — that make power flow in an AC network controllable instead of merely the arithmetic consequence of impedance."
+    },
+    {
       "slug": "fault-current",
       "term": "fault current",
       "aliases": [
@@ -1384,6 +1526,28 @@
       ]
     },
     {
+      "slug": "flicker",
+      "term": "flicker",
+      "def": "Measurable — sometimes visible — fluctuation of voltage caused by a load that changes fast and repeatedly. It is the classic symptom of a large swinging load connected at a point that is not strong enough for it.",
+      "aliases": [
+        "voltage flicker"
+      ]
+    },
+    {
+      "slug": "float-charge",
+      "term": "float charge",
+      "def": "The small continuous voltage held across a standby battery to keep it full without overcharging it. Nearly all of a UPS battery's life is spent floating, and the float voltage together with the room temperature decides how long that life is.",
+      "aliases": [
+        "float voltage",
+        "floating"
+      ]
+    },
+    {
+      "slug": "floor-loading",
+      "term": "floor loading",
+      "def": "The weight per unit area a floor is allowed to carry. It decides where battery strings, large UPS frames and transformers may stand, and in retrofits it settles more equipment arguments than price does."
+    },
+    {
       "slug": "flywheel",
       "term": "flywheel",
       "aliases": [
@@ -1394,6 +1558,14 @@
         "flywheels"
       ],
       "def": "Energy stored as rotation — half the moment of inertia times speed squared — in a heavy rotor or a fast light one on low-friction bearings, sometimes in a vacuum. It gives very high power for seconds, essentially unlimited cycles and no chemical aging, and its state of charge is simply its speed. In a UPS it covers a generator start; as a battery for hours it is the wrong tool."
+    },
+    {
+      "slug": "footprint-density",
+      "term": "footprint density",
+      "def": "How much protected power a machine delivers per square metre of floor it stands on. Where saleable white space is the scarce good, it is a commercial argument written as a specification.",
+      "aliases": [
+        "power density per square metre"
+      ]
     },
     {
       "slug": "formula-rate-plan",
@@ -1511,6 +1683,23 @@
       ]
     },
     {
+      "slug": "generator-circuit-breaker",
+      "term": "generator circuit breaker",
+      "def": "A breaker between the generator and its step-up transformer, rated for the very large currents a machine produces close up. It lets one unit be taken off and put back on the network without switching the whole high-voltage bay.",
+      "aliases": [
+        "GCB"
+      ]
+    },
+    {
+      "slug": "generator-step-up-transformer",
+      "term": "generator step-up transformer",
+      "def": "The transformer that lifts a generator's terminal voltage — usually tens of kilovolts — to transmission voltage. It is dedicated to one machine, sized to it, and its lead time is frequently the whole plant's.",
+      "aliases": [
+        "GSU",
+        "step-up transformer"
+      ]
+    },
+    {
       "slug": "goes",
       "term": "GOES",
       "def": "Grain-oriented electrical steel: the specialty magnetic steel every transformer core requires. Only a handful of mills worldwide produce it, and every announced transformer plant bids for the same tonnage — which is why transformer lead times, not capital, gate so many projects.",
@@ -1533,6 +1722,14 @@
       "def": "An inverter that sets its own voltage and frequency like a traditional generator, rather than following the grid's. It lets storage stabilize weak grids and restart dead ones (black start).",
       "aliases": [
         "grid-forming"
+      ]
+    },
+    {
+      "slug": "grid-interactive-ups",
+      "term": "grid-interactive UPS",
+      "def": "A UPS whose battery is also allowed to work for the building or the grid — shaving a peak, answering a demand-response call, holding frequency — rather than sitting at float. It turns a stranded asset into an earning one and puts the backup duty into competition with the earning duty.",
+      "aliases": [
+        "grid-interactive"
       ]
     },
     {
@@ -1708,6 +1905,16 @@
       "def": "The international standard that classifies a UPS by how much of the supply's misbehavior reaches the load: VFD (voltage and frequency dependent — the supply passes through until it fails), VI (voltage independent — line-interactive, voltage corrected), and VFI (voltage and frequency independent — the load is fully isolated, as in double conversion or a rotary machine). Codes such as VFI-SS-111 add the output-waveform and transient grades so two makers' promises can be compared."
     },
     {
+      "slug": "iec-62443",
+      "term": "IEC 62443",
+      "def": "The international standard family for industrial control-system cyber security. A certification level against it states what a device's own defences were audited to — not that the network around it is safe."
+    },
+    {
+      "slug": "iec-62619",
+      "term": "IEC 62619",
+      "def": "The international safety standard for industrial lithium cells and batteries, stationary storage included. A certificate against it is the common passport for selling cells into other markets."
+    },
+    {
       "slug": "ieee-1584",
       "term": "IEEE 1584",
       "def": "The standard method for calculating arc-flash incident energy: given the available fault current, the gap between conductors, the enclosure and — critically — how long the protective device takes to clear, it returns the energy a worker at a stated distance would receive. Clearing time is the term the engineer can actually change, which is why arc-flash mitigation is usually a protection-settings problem.",
@@ -1774,12 +1981,30 @@
       ]
     },
     {
+      "slug": "input-current-distortion",
+      "term": "THDi",
+      "def": "Total harmonic distortion of the current a converter draws from its supply, as a percentage. A low figure means the machine looks like a plain resistor to the generator and the transformer upstream; a high one means that upstream plant has to be oversized to feed it.",
+      "aliases": [
+        "input current distortion",
+        "current THD"
+      ]
+    },
+    {
       "slug": "inrush",
       "term": "inrush",
       "def": "The brief surge of current a device draws at the instant it is connected, as its empty capacitors charge in a rush. Uncontrolled, it can sag a shared bus, trip protection or pit a connector; precharge circuits exist to tame it.",
       "aliases": [
         "inrush current",
         "inrush surge"
+      ]
+    },
+    {
+      "slug": "integrated-systems-test",
+      "term": "integrated systems test",
+      "def": "The commissioning stage in which the finished plant is failed on purpose under artificial load — utility dropped, engines started, transfers made, cooling recovered — to prove the pieces behave as one system rather than as a set of correct machines.",
+      "aliases": [
+        "Level 5 commissioning",
+        "IST"
       ]
     },
     {
@@ -1975,12 +2200,29 @@
       ]
     },
     {
+      "slug": "large-power-transformer",
+      "term": "large power transformer",
+      "def": "A transformer at transmission scale — hundreds of megavolt-amperes, custom-designed, built to order, shipped in pieces and assembled on site. Lead times run to years, and the binding constraint is test bays and skilled winders rather than steel.",
+      "aliases": [
+        "LPT"
+      ]
+    },
+    {
       "slug": "lateral-power-delivery",
       "term": "lateral power delivery",
       "def": "Feeding a processor from converters mounted on the board beside the package, with the current running sideways through the board's copper for the last centimetre. It is the conventional arrangement, and the one that runs out of room and out of copper as chip currents climb.",
       "aliases": [
         "LPD",
         "lateral power"
+      ]
+    },
+    {
+      "slug": "lead-carbon",
+      "term": "lead-carbon",
+      "def": "A lead-acid battery with carbon added to the negative plate. The carbon slows the sulphation that kills ordinary lead cells in partial-state-of-charge duty and lets them accept charge faster — which is why the chemistry survived in telecom and off-grid work rather than dying with the rest.",
+      "aliases": [
+        "lead carbon",
+        "advanced lead-acid"
       ]
     },
     {
@@ -2003,6 +2245,19 @@
       ]
     },
     {
+      "slug": "line-commutated-converter",
+      "term": "line-commutated converter",
+      "def": "The older HVDC converter type, built from thyristors that need the AC network's own voltage to turn them off. Rugged and efficient at very high power, but it cannot energise a dead network and it consumes reactive power while working.",
+      "aliases": [
+        "LCC"
+      ]
+    },
+    {
+      "slug": "line-interactive",
+      "term": "line-interactive",
+      "def": "A UPS that normally passes the supply through while a transformer or inverter trims the voltage, stepping in fully only when the supply fails. Cheaper and more efficient than double conversion, at the cost of a short break the load must be able to ride."
+    },
+    {
       "slug": "llc-converter",
       "term": "LLC converter",
       "def": "An isolated converter that uses a resonant tank so its switches turn on when the voltage across them is already near zero. That removes most of the switching loss and lets the stage run at high frequency, which is how a kilowatt supply fits in a small box.",
@@ -2010,6 +2265,11 @@
         "LLC",
         "LLC resonant converter"
       ]
+    },
+    {
+      "slug": "load-bank",
+      "term": "load bank",
+      "def": "A bank of resistors that turns electricity into heat on demand, used to load generators, UPS and batteries during testing when there is no real IT load to use."
     },
     {
       "slug": "load-factor",
@@ -2181,6 +2441,15 @@
       ]
     },
     {
+      "slug": "mobile-substation",
+      "term": "mobile substation",
+      "def": "A transformer, switchgear and protection package built onto trailers so it can be delivered and energised in weeks. Bought as insurance against a failure, or as a schedule instrument when the permanent substation is late.",
+      "aliases": [
+        "containerized substation",
+        "containerised substation"
+      ]
+    },
+    {
       "slug": "modular-ups",
       "term": "modular UPS",
       "def": "A UPS built from hot-swappable power modules in a common frame, so capacity is added a module at a time and a failed module is replaced without dropping the load. It trades a slightly higher cost per kilowatt for the ability to buy redundancy and capacity in small increments as a hall fills.",
@@ -2234,6 +2503,15 @@
         "multiphase converter",
         "multi-phase regulator",
         "phase"
+      ]
+    },
+    {
+      "slug": "n-minus-1",
+      "term": "N-1",
+      "def": "The planning rule that a network must survive losing any single element without shedding load. It is why transmission looks over-built on a normal day, and why one outage can make a region's apparent spare capacity vanish at once.",
+      "aliases": [
+        "N-1 criterion",
+        "single contingency"
       ]
     },
     {
@@ -2410,6 +2688,15 @@
       ]
     },
     {
+      "slug": "or-equal",
+      "term": "or-equal",
+      "def": "A specification that names a product and permits alternatives judged equivalent. It is the clause by which a second and third vendor get into a bid — and the clause all three of them argue about.",
+      "aliases": [
+        "three-name specification",
+        "approved equal"
+      ]
+    },
+    {
       "slug": "oring",
       "term": "ORing",
       "def": "Joining two or more sources to one bus through devices that let current flow only out of each source — an OR gate for power. A source that fails or is unplugged cannot drag the bus down or draw current from its neighbours, which is what makes redundant supplies and live swaps safe.",
@@ -2419,6 +2706,14 @@
         "ORing FET",
         "ORing controller",
         "oring"
+      ]
+    },
+    {
+      "slug": "overload-rating",
+      "term": "overload rating",
+      "def": "How much more than its nameplate a UPS will carry and for how long — commonly a few tens of percent for minutes, and a large multiple for a fraction of a second. It is what lets a downstream breaker clear a fault instead of the inverter folding back and the whole bus collapsing.",
+      "aliases": [
+        "overload withstand"
       ]
     },
     {
@@ -2449,6 +2744,14 @@
         "part-load",
         "part-load efficiency",
         "turndown"
+      ]
+    },
+    {
+      "slug": "partial-state-of-charge",
+      "term": "partial state of charge",
+      "def": "Duty in which a battery is cycled without ever being returned to full. It is normal in solar, telecom and grid work, and it is precisely the condition ordinary lead-acid tolerates worst.",
+      "aliases": [
+        "PSoC"
       ]
     },
     {
@@ -2519,6 +2822,14 @@
         "planning reserve",
         "resource adequacy",
         "target reserve margin"
+      ]
+    },
+    {
+      "slug": "point-of-interconnection",
+      "term": "point of interconnection",
+      "def": "The exact physical place where a customer's or a generator's equipment meets the utility's. Every study, tariff, protection setting and argument about who pays refers back to it.",
+      "aliases": [
+        "POI"
       ]
     },
     {
@@ -2738,6 +3049,14 @@
       ]
     },
     {
+      "slug": "pulse-cycle",
+      "term": "pulse cycle",
+      "def": "A very short discharge and recovery — hundreds of milliseconds rather than hours. Rack-level backup cells are rated in hundreds of thousands of them, which is a different life metric from the cycle count quoted on a grid battery.",
+      "aliases": [
+        "pulse cycles"
+      ]
+    },
+    {
       "slug": "pwm",
       "term": "PWM",
       "def": "Pulse-width modulation: controlling a converter by switching fully on and fully off at a fixed rate and varying only the fraction of each cycle spent on — the duty cycle. A switch that is either fully on or fully off wastes little, which is the basic reason switching converters beat the old linear ones.",
@@ -2918,6 +3237,19 @@
         "RAC",
         "cost recovery rider",
         "rate rider"
+      ]
+    },
+    {
+      "slug": "ripple-current",
+      "term": "ripple current",
+      "def": "The small alternating current superimposed on a battery's direct current by the charger or the inverter. It heats the cell from the inside and ages it, which is why the acceptable level is a published specification rather than an afterthought."
+    },
+    {
+      "slug": "rocof",
+      "term": "RoCoF",
+      "def": "Rate of change of frequency: how fast grid frequency falls in the seconds after generation is suddenly lost. A grid with plenty of spinning mass falls slowly; one dominated by inverters falls fast enough that protection settings written for the old world mis-trip in the new one.",
+      "aliases": [
+        "rate of change of frequency"
       ]
     },
     {
@@ -3104,6 +3436,24 @@
       ]
     },
     {
+      "slug": "semi-solid",
+      "term": "semi-solid",
+      "def": "A cell whose electrolyte is a gel or a hybrid of solid and liquid rather than a free liquid. It is a step toward solid-state rather than the arrival of it — and vendors' 'solid-state' branding frequently means exactly this, which is worth checking.",
+      "aliases": [
+        "semi-solid electrolyte",
+        "hybrid solid-liquid electrolyte"
+      ]
+    },
+    {
+      "slug": "sequence-of-operations",
+      "term": "sequence of operations",
+      "def": "The written control logic for how a building's plant stages, ramps and recovers — which machine starts when, to what setpoint, and in what order after an event. Two identical plants with different sequences differ enormously in energy use and in how they behave during an outage; it is the most consequential invisible thing in a facility.",
+      "aliases": [
+        "SOO",
+        "sequence of operation"
+      ]
+    },
+    {
       "slug": "settlement",
       "term": "settlement",
       "def": "A negotiated resolution of a regulatory proceeding, signed by the utility and some or all intervening parties and submitted to the commission for approval. A settlement can be unopposed, meaning every party signed, or contested. Commissions are not bound by settlements and can modify or reject them, which is the difference between agreeing with your opponents and winning.",
@@ -3112,6 +3462,24 @@
         "settlement agreement",
         "unopposed settlement",
         "black-box settlement"
+      ]
+    },
+    {
+      "slug": "sf6",
+      "term": "SF6",
+      "def": "Sulphur hexafluoride: an exceptionally good electrical insulator and arc quencher, and one of the most potent greenhouse gases known. That combination is why it is used at all and why its leak rate is regulated.",
+      "aliases": [
+        "sulphur hexafluoride",
+        "sulfur hexafluoride"
+      ]
+    },
+    {
+      "slug": "sf6-free-switchgear",
+      "term": "SF6-free switchgear",
+      "def": "Switchgear that replaces sulphur hexafluoride with dried natural-origin air or a lower-warming fluorinated gas, usually paired with vacuum interruption because clean air is a much poorer arc quencher on its own.",
+      "aliases": [
+        "SF6-free",
+        "clean air switchgear"
       ]
     },
     {
@@ -3203,6 +3571,23 @@
       ]
     },
     {
+      "slug": "site-acceptance-test",
+      "term": "site acceptance test",
+      "def": "Testing the installed equipment on site, energised and in its final configuration, before the owner accepts it. It proves the installation, where the works test proved the machine.",
+      "aliases": [
+        "SAT"
+      ]
+    },
+    {
+      "slug": "slot-reservation",
+      "term": "slot reservation",
+      "def": "A payment that holds a place in a manufacturer's production schedule before the equipment has been specified, sometimes before it has been designed. In a shortage it is the queue position, not the price, that is being bought.",
+      "aliases": [
+        "production slot",
+        "reservation fee"
+      ]
+    },
+    {
       "slug": "smr",
       "term": "SMR",
       "def": "Small modular reactor: a nuclear plant designed as factory-built units of roughly 50 to 300 MW each rather than one gigawatt-class build, meant to be licensed once and repeated. None is yet operating commercially in the United States; for a utility and a hyperscaler the attraction is clean, dispatchable power on an existing nuclear site, and the constraint is a licensing and construction clock measured in a decade.",
@@ -3240,6 +3625,15 @@
       "aliases": [
         "SOFC",
         "solid oxide fuel cell"
+      ]
+    },
+    {
+      "slug": "specific-power",
+      "term": "specific power",
+      "def": "How much power a cell delivers per kilogram of itself, in watts per kilogram. It is the figure of merit for a backup cell, where energy per litre is the figure of merit for a grid cell.",
+      "aliases": [
+        "W/kg",
+        "power per kilogram"
       ]
     },
     {
@@ -3289,6 +3683,15 @@
       ]
     },
     {
+      "slug": "statcom",
+      "term": "STATCOM",
+      "def": "A power-electronic device that injects or absorbs reactive power within milliseconds to hold voltage steady. Far faster than switched capacitors, and it supplies no inertia and almost no fault current of its own.",
+      "aliases": [
+        "static synchronous compensator",
+        "E-STATCOM"
+      ]
+    },
+    {
       "slug": "state-of-charge",
       "term": "state of charge",
       "def": "The fuel gauge: how much energy is on board right now, as a percentage of what the plant can hold. Operators run a narrower window than the physical one because cells age faster held near either extreme, and every dispatch decision is planned around this number.",
@@ -3318,6 +3721,14 @@
       "def": "The path around a UPS's conversion stages that connects the load straight to the raw supply — automatically, through a solid-state static switch, when the UPS overloads or fails, or manually, through a maintenance bypass, so the unit can be serviced. While the load is on bypass it is unprotected: the stored seconds are not available."
     },
     {
+      "slug": "static-transfer-switch",
+      "term": "static transfer switch",
+      "def": "A solid-state switch that picks between two independent supplies in a few milliseconds, so a load with only one cord can still be fed from both an A and a B path.",
+      "aliases": [
+        "STS"
+      ]
+    },
+    {
       "slug": "static-ups",
       "term": "static UPS",
       "aliases": [
@@ -3327,6 +3738,11 @@
         "electronic UPS"
       ],
       "def": "A UPS built from power electronics — a rectifier, a DC link with batteries on it and an inverter — with no moving parts except fans. It is the incumbent form in data centers: modular, efficient, factory-built at low voltage, and dependent on a battery room whose chemistry, life and fire code are a design in themselves."
+    },
+    {
+      "slug": "stranded-capacity",
+      "term": "stranded capacity",
+      "def": "Capacity that has been paid for but cannot be used because power, cooling, space and redundancy do not line up — a row with spare amps and no cooling takes no more racks."
     },
     {
       "slug": "stranded-cost",
@@ -3349,6 +3765,14 @@
       ]
     },
     {
+      "slug": "submittal",
+      "term": "submittal",
+      "def": "The package a supplier sends after award — drawings, ratings, test reports, wiring diagrams — for the engineer of record to approve before manufacturing starts. Approval, not the purchase order, is usually what releases the factory slot.",
+      "aliases": [
+        "submittals"
+      ]
+    },
+    {
       "slug": "substation",
       "term": "substation",
       "def": "The fenced yard where transmission voltage is stepped down through large transformers and routed through switchgear onto distribution or onto a customer's own feeders. A data-center campus gets one — often several — and the transformer lead time, the land and the transmission line feeding it are what a utility means when it says it cannot connect a load before a given year.",
@@ -3359,12 +3783,28 @@
       ]
     },
     {
+      "slug": "substation-bay",
+      "term": "bay",
+      "def": "One complete switching position in a substation: the breaker, the disconnects, the earthing switches, the instrument transformers and the protection belonging to a single circuit. Substations are counted, priced and extended in bays.",
+      "aliases": [
+        "substation bay"
+      ]
+    },
+    {
       "slug": "substrate",
       "term": "substrate",
       "def": "The layered board a processor die is mounted on inside its package, carrying the die's thousands of connections out to the pins or balls beneath. It is where the power delivery network ends — and, increasingly, where the last converter is asked to sit.",
       "aliases": [
         "package substrate",
         "interposer"
+      ]
+    },
+    {
+      "slug": "sulphation",
+      "term": "sulphation",
+      "def": "The growth of hard lead-sulphate crystals on a lead-acid plate left partly discharged. The crystals do not dissolve back on charge, so the capacity is gone for good — the dominant ageing mechanism in any lead battery that is cycled.",
+      "aliases": [
+        "sulfation"
       ]
     },
     {
@@ -3477,6 +3917,15 @@
         "resiliency plan",
         "system resiliency plans",
         "HB 2555"
+      ]
+    },
+    {
+      "slug": "system-strength",
+      "term": "system strength",
+      "def": "How firmly a point on the network holds its voltage, and how much fault current it can supply. Strong points tolerate large converters; weak ones make them unstable — and a large new plant or load can itself weaken the point it connects to.",
+      "aliases": [
+        "short-circuit strength",
+        "short-circuit ratio"
       ]
     },
     {
@@ -3639,6 +4088,11 @@
       ]
     },
     {
+      "slug": "transfer-limit",
+      "term": "transfer limit",
+      "def": "The most power a corridor can actually carry, set by whichever constraint binds first — conductor heating, voltage collapse, or the stability of the machines at each end. It usually sits well below the sum of the lines' thermal ratings."
+    },
+    {
       "slug": "transfer-time",
       "term": "transfer time",
       "def": "The interval between the normal supply failing and the load being carried by the alternate source — sensing, engine start and stabilization, then the switch itself. Stored energy must cover all of it; the standards fix the outer bound and the design decides how much shorter it actually is.",
@@ -3703,6 +4157,11 @@
       ]
     },
     {
+      "slug": "ul-1973",
+      "term": "UL 1973",
+      "def": "The North American safety standard for stationary batteries — construction, protection and abuse testing for a battery meant to live in a building or a container. Listing to it is usually the first thing a fire marshal asks for."
+    },
+    {
       "slug": "ul-9540a",
       "term": "UL 9540A",
       "def": "The test method that characterizes how battery fires start and propagate at cell, module, unit, and installation level. Its data feeds fire-safety design and permitting for storage projects."
@@ -3722,6 +4181,23 @@
       "def": "Uninterruptible power supply: a power stage backed by stored energy — a battery string or a spinning flywheel — that carries the load through grid disturbances until generators start. In data centers it sits between utility power and the IT load.",
       "aliases": [
         "uninterruptible power supply"
+      ]
+    },
+    {
+      "slug": "ups-frame",
+      "term": "UPS frame",
+      "def": "The cabinet a modular UPS's power modules plug into — internal busbars, input and output breakers, controls, and empty slots. Buying the frame fixes the maximum capacity; populating it decides today's.",
+      "aliases": [
+        "UPS cabinet"
+      ]
+    },
+    {
+      "slug": "ups-power-module",
+      "term": "power module",
+      "def": "A self-contained UPS building block: rectifier, inverter, control and cooling in one chassis that slides into a shared frame and shares the load with its neighbours. Capacity is bought a module at a time, and a failed one is exchanged while the rest keep carrying the load.",
+      "aliases": [
+        "UPS power module",
+        "power core"
       ]
     },
     {
@@ -3802,6 +4278,15 @@
       ]
     },
     {
+      "slug": "voltage-source-converter",
+      "term": "voltage source converter",
+      "def": "The modern HVDC converter type, built from transistors that switch off on command. It controls real and reactive power independently, can feed a weak or dead network, and is built as a stack of small identical submodules.",
+      "aliases": [
+        "VSC",
+        "modular multilevel converter"
+      ]
+    },
+    {
       "slug": "vrla",
       "term": "VRLA",
       "aliases": [
@@ -3830,6 +4315,11 @@
         "wafer size",
         "8-inch wafer"
       ]
+    },
+    {
+      "slug": "white-space",
+      "term": "white space",
+      "def": "The floor area of a data hall where racks actually stand, as distinct from the plant rooms, switchrooms and battery rooms that serve it. It is what gets leased, so every square metre spent on plant is measured against it."
     },
     {
       "slug": "wide-bandgap",

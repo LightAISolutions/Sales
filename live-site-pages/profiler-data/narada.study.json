@@ -1,0 +1,509 @@
+{
+ "schemaVersion": 2,
+ "slug": "narada",
+ "title": "Narada — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
+ "sections": [
+  {
+   "id": "what-this-guide-does-not-repeat",
+   "title": "Start here: the cell, not the shelf",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "This app already teaches batteries from four directions, and this guide deliberately teaches none of them again. **Hithium's and CATL's guides** cover the cell in sixty seconds, how cells become a grid {{BESS}} block, the big-cell bet, sodium and long duration, and the system layer above the cell. **Samsung SDI's guide** covers high-nickel cathodes, solid-state as a chemistry programme, and breaking the {{thermal runaway}} chain. **Mitsubishi Electric's guide** covers {{VRLA}} against lithium as a *purchasing* decision under a large {{static UPS}} — the head-to-head table, and the best place to start if that is the question you have. **Rehlko's guide** covers battery against {{flywheel}} — the prior question of how long you need to ride. And **Vicor's guide** covers the {{BBU}} shelf on a rack's DC bus from the **converter's** side: {{hold-up time}}, {{ORing}}, {{precharge}}, and living on a shared bus.",
+    "**What none of them teaches is the backup cell itself.** That is this guide's subject: the cell whose job is not to store much but to deliver hard, for a short time, after years of doing nothing at all. Vicor's guide describes the shelf that the cell sits in; this one describes what has to be true of the cell inside it, and why that cell is a different part number from the one in the container outside the fence — even when both say LFP on the label.",
+    "**Three ideas carry the whole guide.** First, **a backup battery is a sprinter and a grid battery is a distance runner**, and almost every specification difference between them follows from that one sentence. Second, **a backup battery is specified in watts, not amp-hours** — the amp-hour figure is a slow-discharge number that misleads badly at the rates a {{UPS}} actually uses. Third, **the string is only as good as its worst cell**, which is why an entire industry of monitoring, testing and replacement scheduling exists around a component that appears to do nothing.",
+    "Read it against Narada's own catalogue, which is unusually useful for this purpose because the same company sells both ends: 2-volt lead blocks with a fifteen-year design life at one extreme, and a rack cabinet built on a 55 Ah cell rated for ten times its own capacity in current at the other. The distance between those two products is the entire lesson."
+   ]
+  },
+  {
+   "id": "power-not-energy",
+   "title": "The sprinter and the distance runner",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A grid battery and a UPS battery are asked completely different questions. The grid battery is asked *how much*: charge it slowly over four hours, discharge it slowly over four hours, do that once or twice a day for fifteen years. The backup battery is asked *how hard*: sit fully charged and untouched for years, then deliver everything it has in five minutes — or, in a rack, in half a second — and then be ready to do it again. The industry has words for the two: an {{energy battery}} and a {{power battery}}. They are not marketing categories; they are different objects.",
+    "**{{C-rate}} is the number that separates them.** C-rate expresses discharge speed relative to capacity: 1C empties a cell in an hour, 0.25C in four hours, 10C in six minutes. Narada's own published range spans essentially the whole scale — its containerised grid cells run at 0.25C to 0.5C, its high-voltage UPS cabinets are offered in 1C, 2C, 5C and 6C rate models, and its AIOn platform is published from 1C to 10C, with the X-Rate cabinet launched in April 2026 at 10C on a 55 Ah cell. That is a fortyfold span in the single number that governs cell design, inside one catalogue.",
+    "**Why the ratio changes the cell physically.** The active material is coated onto thin metal foils, and {{electrode thickness}} is the design choice that resolves the whole argument. A thick coating stores a great deal of energy per litre, and makes every lithium ion travel further through it — fine at 0.25C, hopeless at 10C, because at high current the interior of the coating simply cannot keep up and the cell's usable capacity collapses. A thin coating delivers current hard, has far more surface area per amp-hour, and stores much less. So a power cell is thin-coated, has many more current collector tabs, more separator and more foil per unit of stored energy — which is exactly why it costs more per stored kilowatt-hour and why nobody builds a grid container out of one.",
+    "**What each is judged on.** The grid cell is judged on {{energy density}} — Narada publishes 390 Wh/L on its 314 Ah cell and above 430 Wh/L on its 783 Ah cell — and on {{cycle life}}, quoted in thousands of full cycles. The backup cell is judged on {{specific power}}, watts per kilogram: Narada's published claim for the X-Rate cell is above 1,900 W/kg, and its life figure is not cycles at all but {{pulse cycle}}s — above 200,000 discharges of 500 milliseconds, on the company's own numbers. Those are two different figures of merit and two different warranties.",
+    "**The consequence for anyone buying one.** A vendor's grid-storage credentials tell you very little about its backup products and vice versa. They share a chemistry name, a factory and a brand, and almost nothing else that matters — the electrode design, the cell format, the failure modes, the standards, the sales channel and the service model all differ. Narada is a clean case in point: a thirty-year telecom and data-centre backup specialist that later built a grid line, and the two halves of the catalogue have essentially independent engineering."
+   ]
+  },
+  {
+   "id": "the-c-rate-ladder",
+   "title": "The same catalogue, from a quarter C to ten C",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "C-rate (discharge current as a multiple of capacity; company-published ratings)",
+   "intro": "One axis, one company. Every rung is a real published product line, and the fortyfold span between the bottom and the top is the reason a 'battery company' is really several businesses. Read the labels as duties rather than as models.",
+   "items": [
+    {
+     "label": "Center L Ultra",
+     "sub": "20-ft grid container on 587/783 Ah cells — four-hour duty",
+     "v": 0.25
+    },
+    {
+     "label": "Larger-format grid cells",
+     "sub": "565/752 Ah variants at the higher published rate",
+     "v": 0.5
+    },
+    {
+     "label": "AIOn 1C model",
+     "sub": "long-runtime UPS duty — tens of minutes",
+     "v": 1.0
+    },
+    {
+     "label": "512 V cabinet, 2C model",
+     "sub": "conventional data-hall UPS autonomy",
+     "v": 2.0
+    },
+    {
+     "label": "512 V cabinet, 5C model",
+     "sub": "short autonomy, generator start assumed",
+     "v": 5.0
+    },
+    {
+     "label": "512 V cabinet, 6C model",
+     "sub": "the top of the conventional UPS range",
+     "v": 6.0
+    },
+    {
+     "label": "AIOn X-Rate",
+     "sub": "rack-level AI backup on a 55 Ah cell, >600 kW per cabinet",
+     "v": 10.0
+    }
+   ],
+   "note": "Two readings. Going down the ladder, **duration buys itself with mass**: the four-hour container needs no exotic cell, only a lot of ordinary ones. Going up, **every rung removes runtime and adds cost per stored kilowatt-hour**, and the top rung is not a battery in the usual sense at all — a 10C cabinet holds roughly six minutes of its own rated power and is bought for the six *seconds* it will actually be asked for. The 512 V line's four rate models are the clearest illustration in this corpus of a single mechanical product sold as four different machines by changing only the cell inside it."
+  },
+  {
+   "id": "two-cells-one-company",
+   "title": "Two cells, one company: what changes and why",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "The grid cell and the AI-rack backup cell, side by side, from Narada's own published figures. Both are lithium; both come from the same manufacturer. Almost nothing else about them is the same, and the right-hand column is the reason.",
+   "cols": [
+    "Dimension",
+    "The grid cell (0.25C container duty)",
+    "The backup cell (10C rack duty)",
+    "Why they diverge"
+   ],
+   "rows": [
+    [
+     "**Capacity per cell**",
+     "314 Ah, 587 Ah, 783 Ah — and climbing. Above 1,000 Wh in a single cell",
+     "55 Ah on the AIDC-specific cell",
+     "A big cell means fewer welds, fewer connections and fewer things to monitor per megawatt-hour. A power cell cannot be big, because the current a 10C discharge implies would be unmanageable in one package"
+    ],
+    [
+     "**Figure of merit**",
+     "{{energy density}}: 390 Wh/L on the 314 Ah cell, above 430 Wh/L on the 783 Ah",
+     "{{specific power}}: above 1,900 W/kg, on the company's published claim",
+     "One is bought by the kilowatt-hour and one by the kilowatt. The two figures pull the electrode design in opposite directions and cannot both be maximised"
+    ],
+    [
+     "**{{electrode thickness}}**",
+     "Thick coating — maximum active material per litre; ions travel a long way, which is fine over four hours",
+     "Thin coating, far more foil, separator and tab area per amp-hour",
+     "This single choice produces most of the other rows. At 10C a thick electrode's interior cannot supply the surface, and the usable capacity collapses"
+    ],
+    [
+     "**Life metric**",
+     "{{cycle life}}: 8,000 cycles at 25 °C and 80 percent depth on the Ultra, up to 12,000 and 15,000 claimed on individual cells",
+     "{{pulse cycle}}s: above 200,000 discharges of 500 ms, claimed",
+     "Full cycles and half-second pulses age a cell through different mechanisms, so they are counted separately and warranted separately"
+    ],
+    [
+     "**Duty between events**",
+     "Cycling every day, deliberately, at a controlled temperature",
+     "{{float charge}} — sitting full and untouched for years, ageing calendrically rather than cyclically",
+     "The dominant ageing mechanism differs. A grid cell dies from use; a backup cell mostly dies from time and temperature while doing nothing"
+    ],
+    [
+     "**Where the heat goes**",
+     "Liquid cooling, with published module temperature spreads under 2.5–3 °C across a 20-ft container",
+     "Short bursts, so the heat is transient — but it arrives all at once and inside a rack that is already thermally full",
+     "Steady-state cooling against peak-transient cooling. The rack case is harder per watt even though the total energy is trivial"
+    ],
+    [
+     "**Standards it is sold against**",
+     "{{IEC 62619}} certification on the cell, {{UL 9540A}} test data and {{NFPA 855}} for the installation",
+     "{{UL 1973}} listing for the stationary battery, plus whatever the rack integrator and the fire authority require",
+     "The container is an outdoor installation the fire marshal treats as a structure. The rack cabinet is inside an occupied building, next to people, which the codes treat differently"
+    ],
+    [
+     "**How it is sold**",
+     "Project procurement with a 10- to 20-year warranty and an O&M contract behind it",
+     "Design-in with the rack or the UPS vendor, then volume supply",
+     "One is a capital project with a bankability question; the other is a component in someone else's product. Different buyers, different cycle, different risk"
+    ]
+   ],
+   "note": "One caution worth carrying, and it applies well beyond this company. Narada markets its largest cells as 'solid-state', and its own product descriptions place them as oxide {{semi-solid}} — a hybrid solid-liquid electrolyte — rather than a true all-solid-state cell, of which it has shown only a 30 Ah prototype. Samsung SDI's guide covers what genuine solid-state would change. When a datasheet says solid-state, the useful question is what the electrolyte physically is, because the word is doing commercial work in this market as often as technical work."
+  },
+  {
+   "id": "how-a-backup-battery-is-specified",
+   "title": "How a backup battery is actually specified",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "This is the part that is easiest to get wrong, because the number on the front of the datasheet is almost never the number that matters. Every line below is a field on a real standby-battery specification, in roughly the order it decides things. Mitsubishi Electric's guide covers the chemistry choice; this is the layer beneath — what you write down once the chemistry is settled.",
+   "cols": [
+    "What is specified",
+    "What it means",
+    "What goes wrong"
+   ],
+   "rows": [
+    [
+     "**{{constant-power rating}} — watts per cell, for a stated time, to a stated end voltage, at a stated temperature**",
+     "The real specification. A cell rated at so many watts per cell for 5 minutes to a given end voltage at 25 °C. Every one of those four qualifiers is load-bearing",
+     "Sizing on amp-hours instead. The amp-hour figure describes a slow discharge; at UPS rates the usable capacity is materially lower, so an amp-hour-sized string comes up short in exactly the event it was bought for"
+    ],
+    [
+     "**{{end-of-discharge voltage}}**",
+     "The voltage at which the discharge is declared over — set by the {{inverter}}'s input window, not by the chemistry",
+     "Lowering it to win minutes on a comparison. Deeper discharges shorten life, and the string that quoted best may be the one that ages fastest"
+    ],
+    [
+     "**{{autonomy}} and the rate implied by it**",
+     "The runtime the design needs, which together with the load fixes the {{C-rate}} and therefore the cell type",
+     "Specifying runtime without specifying the load profile. Five minutes at a swinging AI load is not five minutes at a flat one"
+    ],
+    [
+     "**{{design life}}, and the service life it is not**",
+     "Years at {{float charge}} under ideal conditions — Narada's HRL and HRXL lead series are published at a fifteen-year design life",
+     "Reading it as the replacement interval. Temperature is the dominant variable: the standard rule of thumb is that every 10 °C above the design temperature roughly halves the life, so a battery room running a few degrees warm consumes years quietly"
+    ],
+    [
+     "**Float voltage and temperature compensation**",
+     "The voltage held across the string continuously, adjusted for room temperature",
+     "A float set high 'to be safe' cooks the string; set low, it never fully recharges. Almost all of a battery's life is spent here, so this setting matters more than any event"
+    ],
+    [
+     "**Recharge time and charge-current limit**",
+     "How fast the UPS will put the energy back after a discharge",
+     "The second outage. A string that takes many hours to recharge is not available for a repeat event, and the charger's limit — a UPS datasheet line, per Vertiv's guide — often sets this rather than the battery"
+    ],
+    [
+     "**{{ripple current}} tolerance**",
+     "How much alternating current the charger and inverter superimpose on the DC, which heats the cell internally",
+     "Silently shortens life on a machine whose ripple exceeds what the cell was rated for. It never appears as a fault, only as a string that ages faster than the others"
+    ],
+    [
+     "**Cell count, string voltage and configuration**",
+     "How many cells in series to reach the DC bus voltage — Narada's high-voltage lithium line is built at 512 V, against long strings of 2 V or 12 V blocks in the lead world",
+     "More cells means more connections, more monitoring points and more chances for one weak unit. Fewer, larger blocks means less granular information about what is failing"
+    ],
+    [
+     "**Footprint, weight and {{floor loading}}**",
+     "Where it is allowed to stand. Narada publishes roughly 60 percent less weight and 50 percent less footprint for its 512 V lithium line against lead, and 70 percent less footprint for the X-Rate cabinet",
+     "In a retrofit this settles more selections than price does — and in a rack, floor loading is replaced by rack units, which are scarcer still"
+    ],
+    [
+     "**Fire, code and listing**",
+     "{{UL 1973}} listing, {{UL 9540A}} test data, {{NFPA 855}} installation rules; {{IEC 62619}} for international cell certification",
+     "The authority having jurisdiction, not the vendor, decides what is acceptable. A product with no named certification at launch — which the X-Rate cabinet had none published at announcement — is not yet a specifiable product for many buyers"
+    ],
+    [
+     "**Monitoring**",
+     "A {{BMS}} is intrinsic to lithium; on lead it is an added system with its own cost and cabling",
+     "A lead string with no monitoring is a string whose weakest cell is discovered on the day it matters"
+    ]
+   ],
+   "note": "A worked example, using a published Narada channel product: a cabinet rated 352 kW for 5 minutes. That is roughly 29 kWh actually delivered — a trivial amount of energy by grid standards, from a cabinet that must supply a third of a megawatt while doing it. Read that pair of numbers together and the whole discipline becomes obvious: **you are not buying stored energy, you are buying a rate, and the energy is whatever the rate multiplied by the runtime happens to require.**"
+  },
+  {
+   "id": "lead-did-not-die",
+   "title": "Lead did not die: VRLA, AGM and what carbon changed",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Lithium has taken the new builds, and lead-acid remains a live, large business — Narada still sells 2-volt and 12-volt {{VRLA}} blocks into US data centres through its North American channel, decades after the chemistry was supposedly finished. Understanding why is worth more than another lithium-versus-lead table, and this section is about the lead chemistry itself, which nothing else in this app covers.",
+    "**What 'sealed' actually means.** A flooded lead-acid cell loses water: charging splits some of it, hydrogen leaves at one plate and oxygen at the other, and somebody has to top it up. The {{AGM}} construction fixed this by holding the electrolyte in a glass-fibre mat pressed between the plates, with just enough gas space that the oxygen made at the positive plate travels across and recombines at the negative one instead of escaping. That recombination is why a {{VRLA}} cell is 'valve-regulated' rather than sealed: there is still a valve, and it opens if the cell is abused. Ventilation is still required, because the recombination is efficient and not perfect.",
+    "**How a lead battery actually dies.** Discharging converts the plates' active material to lead sulphate; charging converts it back. Leave a lead cell sitting partly discharged and the sulphate crystals coarsen into a hard form that does not convert back — {{sulphation}}, and it is permanent capacity loss. In classic standby duty this barely matters, because the cell lives at {{float charge}}, full, almost all of the time. It matters enormously in {{partial state of charge}} duty, where the cell is cycled and never fully returned — which is exactly the duty telecom sites, off-grid systems and solar hybrids impose. In that world ordinary lead-acid fails in a year or two.",
+    "**What the carbon does.** Adding carbon to the negative plate — the {{lead-carbon}} family — changes this. The carbon gives the negative plate a much larger effective surface and a conductive network through it, which suppresses the coarsening of the sulphate and lets the plate accept charge far faster. The result is a lead battery that tolerates partial-state-of-charge cycling and fast charging in a way its ancestors could not. It is not a lithium substitute; it is the reason lead survived in the applications where it was supposedly most vulnerable, and it is the technical basis of the telecom backup business that companies like Narada were built on.",
+    "**Where lead still wins on the merits, honestly stated.** Its capital cost is lower. Its recycling infrastructure is genuinely mature — a lead battery has real scrap value and an established route, which lithium is still building. It needs no {{BMS}} to function, so its failure modes are simple and well understood by generations of technicians. It is not subject to {{NFPA 855}} in the way lithium is, so the permitting conversation is shorter. And it tolerates float duty at a modest cost for decades of accumulated field experience. Where it loses is everything to do with weight, footprint, temperature tolerance, {{C-rate}} performance and knowing anything about its own condition — which is precisely why data halls, where floor and rack space is money, have moved and telecom cabinets have moved more slowly.",
+    "**The honest summary for a seller.** The lead-to-lithium transition in backup power is not a technology argument that lithium won; it is a **space, weight and instrumentation** argument that lithium won in buildings where those are expensive. Mitsubishi Electric's guide sets out the head-to-head as a purchase decision. What this section adds is why the losing side is still shipping in volume, and why a thirty-year lead franchise is a real asset rather than a legacy liability."
+   ]
+  },
+  {
+   "id": "the-string-and-its-worst-cell",
+   "title": "The string and its worst cell",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A UPS needs a few hundred volts of direct current, and a cell produces about two (lead) or a little over three (lithium iron phosphate). So cells are wired in series into a {{battery string}} — dozens or hundreds of them. The same current passes through every one, which produces the defining property of the whole subject: **the string delivers what its weakest cell will allow, and no more**. A single cell that has lost half its capacity does not reduce the string's runtime by its own share; it ends the discharge for everyone when it hits its {{end-of-discharge voltage}} first.",
+    "**Why this is a monitoring problem rather than a design problem.** Nothing in the string's terminal voltage reveals the weak cell while it is floating. A string of a hundred healthy cells and a string with two dying ones read almost identically at the terminals until the moment they are asked to work. The industry's answer is measurement at the cell level, and there are two kinds, which get confused.",
+    "**{{conductance testing}}** measures each cell's internal resistance or conductance, quickly, without discharging anything. It is cheap, it can be done on a live string, and it reliably identifies a cell that has already substantially failed — a dried-out cell, a corroded post, an open connection. What it does not do is tell you how many minutes the string still has. It is a screening tool, and treating its output as a capacity figure is a common and consequential mistake.",
+    "**A {{capacity test}}** is a real timed discharge into a {{load bank}}, measured against the rating. It is the only measurement that answers the actual question, and it is disruptive: the string is unavailable while it runs, and the test itself consumes a little of the life it is measuring. The IEEE stationary-battery practices define the method and the interval, and the industry convention is to retire a string when it reaches **80 percent of rated capacity**, because degradation past that point accelerates rather than continuing linearly.",
+    "**What lithium changes here.** A lithium string cannot operate without a {{BMS}}, so cell-level voltage, temperature and {{state of health}} are known continuously by construction rather than as an added system. That is a genuine advance and it is not a complete substitute: a BMS reports what it measures and models, and the model was built from cells that were new. The capacity test does not disappear; it becomes less frequent and better targeted.",
+    "**And the practical consequence nobody budgets for.** Every string reaches the end of its service life inside the machine's life, and replacing it is a project rather than a maintenance task: the plant runs with reduced or absent {{autonomy}} while it happens, which means a temporary arrangement, an accepted risk, or a scheduled window of lower protection. Vertiv's guide lists this as the eleventh and last step of a UPS procurement for exactly this reason. It is the most predictable exposure in the whole power room and among the least planned."
+   ]
+  },
+  {
+   "id": "the-cell-behind-the-bbu",
+   "title": "The cell behind the BBU: half a second, two hundred thousand times",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Vicor's guide describes the {{BBU}} shelf as the converter sees it: a store sitting on the rack's DC bus, joined through {{ORing}} devices, covering {{hold-up time}} and smoothing the swings a training job produces. This section is the same shelf from underneath — what the cell inside it is being asked for, and why it is not the cell in the UPS room downstairs.",
+    "**The duty is a pulse, not a discharge.** A rack-level store is not there to carry the load until a generator starts; the machine downstairs does that. It is there to cover a transfer, absorb a step, or hold the bus for the fraction of a second before something upstream reacts. Narada publishes its X-Rate cell life as **more than 200,000 pulse cycles at 500 milliseconds**, which is a life metric that would be meaningless for any other kind of battery. Two hundred thousand half-second events is not backup duty. It is a component being exercised as part of normal operation.",
+    "**Why the AI load creates this in the first place.** A training cluster does not draw a flat load; it draws a rhythm — tens of megawatts appearing and disappearing in milliseconds as steps synchronise across thousands of accelerators. Seen from the grid this is a stability problem, which is row 12 of this app's failure map and the reason grid-stability equipment is now marketed at data centres by name. Seen from the rack it is a cycling duty imposed on a component that was historically a passive insurance policy. The store's job quietly changed from *backup* to *buffer*, and buffering is a duty with a life cost attached.",
+    "**What that does to the cell.** It has to be a {{power battery}} in the strictest sense: thin electrodes, very high {{specific power}}, minimal internal resistance so it does not heat itself during the pulse, and a chemistry that tolerates being worked constantly rather than left at {{float charge}}. Narada's answer is a small 55 Ah cell on a hybrid solid-liquid ({{semi-solid}}) electrolyte, and the reason to reach for an unusual electrolyte in a small cell is that internal resistance dominates everything at 10C. The tradeoff is stored energy: a cabinet built this way is quoted in hundreds of kilowatts and holds minutes, not hours.",
+    "**Why it goes in the rack rather than the room.** Three reasons, and only one is technical. Distance: the store must be electrically close to the load for a half-second response to be useful, and the {{DC link}} it sits on is right there. Architecture: with an 800-volt DC rack there may be no room UPS to fall back on — the store *is* the ride-through, which is what Vertiv's guide treats as the threat to the room-UPS category. And commerce: a shelf is a component sold into a rack design at volume, on a design-in cycle, rather than a project sold to a facilities organisation over two years. Narada's own positioning names 800-volt architecture products alongside the X-Rate line, and Chinese industry bodies count it among the companies in that supply chain.",
+    "**The honest limit.** Distributing the store distributes the problem. Instead of one battery room with one monitoring system, one fire strategy and one maintenance procedure, there are hundreds of small stores inside occupied racks, each with its own state of health, each in the airflow path of equipment it must not heat, and each a fire-code object in a room full of people. That is a genuinely harder operational problem than a battery room, and it is not yet solved by anybody — which is why both architectures are being built at once."
+   ]
+  },
+  {
+   "id": "the-battery-that-does-two-jobs",
+   "title": "Making the backup battery earn: two answers",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "A backup store is capital that sits idle, ages anyway, and is replaced on a schedule. There are two ways to make it earn, and they are genuinely different products rather than two settings of one. Schneider Electric's guide covers what the *UPS* has to become for either to work; this is the question from the cell's side — what the duty does to the thing storing the energy.",
+   "cards": [
+    {
+     "t": "Let the backup store work",
+     "meta": "The existing UPS or rack battery also shaves peaks, answers a {{demand response}} call, or buffers the hall's own swings. Narada's data-centre storage line claims grid formation across the full state of charge, millisecond switchover, 20 ms frequency response and 1.5–3× overload",
+     "adv": [
+      "No new asset, no new floor space, no new fire compartment — the cells are already installed, cooled, monitored and insured",
+      "The store is electrically in exactly the right place to absorb the hall's own load swings, which is the duty most likely to be needed anyway",
+      "For a rack-level {{BBU}}, buffering is arguably the duty it is really there for — the {{pulse cycle}} life metric already assumes constant exercise"
+     ],
+     "dis": [
+      "It consumes {{cycle life}} the backup warranty counted on not being consumed, and a power cell has less of it to give than a grid cell does",
+      "The honest {{autonomy}} figure becomes whatever the reserve floor protects, not the nameplate — and if that floor is only a configurable setting, the backup duty is protected by somebody's memory",
+      "A cell chosen for {{specific power}} is a poor energy store: shaving a meaningful peak needs energy, and this store is deliberately short of it"
+     ]
+    },
+    {
+     "t": "Buy a separate energy store",
+     "meta": "A containerised or skid {{BESS}} on {{energy battery}} cells, doing the earning while the backup store keeps doing only backup — the pattern in Vertiv's DynaFlex and EnergyCore lines and in Narada's own Center L containers",
+     "adv": [
+      "Right cell for each job: thick-electrode, high-{{energy density}} cells for the earning, thin-electrode power cells for the protecting",
+      "The uptime risk and the energy-arbitrage risk stay in separate assets, which matters because they are usually owned by different people with different incentives",
+      "Sized for the revenue rather than for the load, so the business case can be made on its own terms and financed on its own terms"
+     ],
+     "dis": [
+      "A new asset: land or floor, an interconnection conversation at its own {{point of interconnection}}, {{NFPA 855}} compliance, its own monitoring and its own O&M contract",
+      "Duplicated capital where the backup store is already sitting idle a few metres away",
+      "It does nothing for the millisecond swings inside the hall, which is a rack-level problem no container can reach"
+     ]
+    }
+   ],
+   "note": "The pattern in this corpus is that operators buy the second and talk about the first. The reason is not engineering but governance — the person who owns uptime and the person who owns the energy bill are rarely the same person, and a separate asset lets each keep their own risk. The exception is the rack, where the store is already being exercised as a buffer whether anyone decided that or not, and where the interesting design question is no longer whether to cycle the backup battery but how to warrant a cell that is cycled by the workload itself."
+  },
+  {
+   "id": "where-naradas-products-slot-in",
+   "title": "Where these products slot into the chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "One row per published product family, from the cell in the rack outward to the container beyond the fence. Read the right-hand column as the duty; it is the duty, not the chemistry, that decides which row a buyer is in.",
+   "cols": [
+    "Where in the chain",
+    "The product",
+    "The duty it is designed for"
+   ],
+   "rows": [
+    [
+     "Inside the rack, on the DC bus",
+     "AIOn X-Rate: 10C cabinet above 600 kW on a 55 Ah hybrid solid-liquid cell, launched April 2026",
+     "Half-second pulses, hundreds of thousands of them — buffering a swinging AI load and covering a transfer. Vicor's guide has the converter side of the same shelf"
+    ],
+    [
+     "The 800-volt DC rack architecture",
+     "AIOn 800 V HVDC products and pod-level offerings",
+     "Storage native to a DC rack rather than adapted to it — the architecture Vertiv's and Vicor's guides both treat"
+    ],
+    [
+     "The data-hall UPS, lithium",
+     "512 V high-voltage lithium cabinets in 1C, 2C, 5C and 6C rate models; the AIOn platform at 300–1,200 kW per system",
+     "Conventional {{UPS}} {{autonomy}} — minutes, sized against the generator start sequence. The four rate models are one cabinet sold as four machines"
+    ],
+    [
+     "The data-hall and telecom UPS, lead",
+     "HRL and HRXL {{VRLA}} 2 V and 12 V blocks at a published fifteen-year {{design life}}",
+     "The classic float-duty standby string. Still the incumbent where floor space is cheap and the technicians are trained on it"
+    ],
+    [
+     "The US channel",
+     "MPI Energy (the long-standing North American operation, renamed in May 2026): lead and LFP UPS series, including a 352 kW five-minute cabinet",
+     "Local inventory, local engineering and local support — the part of a backup business that a datasheet cannot express and a new entrant cannot buy"
+    ],
+    [
+     "Outside the fence",
+     "Center L containers: 5 MWh 20-ft DC blocks on 314 Ah cells, a 6.25 MWh AC/DC-integrated variant with the {{PCS}} inside, and an 8.338 MWh design announced but undelivered",
+     "Four-hour grid duty at 0.25C to 0.5C. Hithium's and CATL's guides teach this layer; it is here only to mark the far end of the same catalogue"
+    ]
+   ],
+   "note": "The row worth pausing on is the channel. Thirty years of relationships, local stock and technicians who already know the product is the part of a backup-power business that is hardest to replicate and easiest to underrate from a specification sheet — and it is the asset that outlives any particular cell chemistry. Read the ladder as a whole and the strategic shape is clear: a company that already sells the battery under the UPS is positioned to sell the battery that *replaces* the UPS, which is exactly the transition the 800-volt architecture is producing."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**Sized on amp-hours instead of watts.** The single most common error in this subject. The amp-hour rating describes a slow discharge; at UPS rates the usable capacity is materially lower, so a string sized from it comes up short in precisely the event it exists for. The correct specification is watts per cell, for a stated time, to a stated end voltage, at a stated temperature — and all four qualifiers have to travel together. Owned by the designer, discovered during the first real discharge or the first {{capacity test}}.",
+    "**The room ran a few degrees warm for five years.** Life at {{float charge}} is dominated by temperature — roughly halving for every 10 °C above the design point, on the standard rule of thumb — and nothing about a warm battery room looks like a fault. The string simply reaches 80 percent of rating years early. Owned by the operator, and invisible without either a temperature record or a capacity test.",
+    "**{{conductance testing}} read as a capacity figure.** Screening a string tells you which cell has already failed; it does not tell you how many minutes remain. A site that has replaced conductance screening for capacity testing has substituted a fast measurement of the wrong quantity, and will find out during an event. Owned by whoever wrote the maintenance regime.",
+    "**One weak cell in a long string.** The whole discharge ends when the first cell reaches its {{end-of-discharge voltage}}, so a single degraded unit costs the entire string's runtime rather than its own share. This is row 6 of this app's failure map arriving from the battery's side, and it is the reason cell-level monitoring exists at all. On lead it is an added system that is sometimes omitted; on lithium a {{BMS}} makes it structural.",
+    "**The recharge was never in the arithmetic.** After a discharge the string has to be refilled before it can protect anything again, and the charger's current limit — a UPS datasheet line — often decides that, not the battery. A plant that takes many hours to recover is unprotected against the repeat event, which is the event most likely to happen. Owned jointly by whoever specified the UPS and whoever specified the string.",
+    "**The replacement was budgeted as maintenance.** Every store's {{design life}} is shorter than its machine's, and replacing it means running with reduced or absent {{autonomy}} for the duration. As a line item it is cheap; as a scheduled period of degraded protection it needs a plan. Owned by the operator, and the most predictable exposure in the entire power room.",
+    "**A rack store that is quietly being cycled by the workload.** The {{BBU}} was warranted as backup and is being used as a buffer, absorbing a training rhythm nobody wrote into the specification. It is not a fault — it may be exactly what the shelf is for — but it consumes a life budget that was priced against a different duty, and it is invisible unless somebody is counting pulses. Owned by nobody, currently, which is the point.",
+    "**And a labelling caution.** 'Solid-state' on a large-format cell frequently means {{semi-solid}} — a hybrid solid-liquid electrolyte — which is a real and useful technology and not the thing the phrase implies. Ask what the electrolyte physically is. Samsung SDI's guide covers what genuine solid-state would actually change."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "State the difference between a power battery and an energy battery in one sentence each.",
+     "a": "An energy battery is asked how much: charged and discharged slowly over hours, judged on energy density and cycle life. A power battery is asked how hard: it sits full for years and then delivers everything it has in minutes or milliseconds, judged on specific power and — for rack cells — on pulse-cycle count."
+    },
+    {
+     "q": "What is C-rate, and what span does one backup-battery catalogue cover?",
+     "a": "Discharge current as a multiple of capacity: 1C empties the cell in an hour, 0.25C in four hours, 10C in six minutes. Narada's published range runs from 0.25C grid containers through 1C, 2C, 5C and 6C UPS cabinets to a 10C rack cabinet — a fortyfold span in the number that governs cell design."
+    },
+    {
+     "q": "Why does electrode thickness decide whether a cell is a power cell or an energy cell?",
+     "a": "A thick coating stores more energy per litre and makes ions travel further through it — fine at 0.25C, hopeless at 10C, because the interior cannot supply the surface and usable capacity collapses. A thin coating has far more surface and foil per amp-hour: it delivers current hard and stores much less. Almost every other difference follows from this one choice."
+    },
+    {
+     "q": "How is a standby battery actually specified, and what is the classic mistake?",
+     "a": "In watts per cell, for a stated time, down to a stated end-of-discharge voltage, at a stated temperature — all four qualifiers together. The classic mistake is sizing from the amp-hour rating, which describes a slow discharge and overstates what the string will deliver at UPS rates."
+    },
+    {
+     "q": "A cabinet is rated 352 kW for 5 minutes. How much energy is that, and what does the pair of numbers teach?",
+     "a": "About 29 kWh — trivial by grid standards, from a cabinet that must supply a third of a megawatt while delivering it. You are buying a rate; the energy is simply the rate multiplied by the runtime."
+    },
+    {
+     "q": "Why does a lead-acid battery in partial-state-of-charge duty fail so fast, and what does carbon change?",
+     "a": "Sulphate crystals formed on discharge coarsen into a hard form that will not convert back if the cell is left partly discharged — sulphation, which is permanent capacity loss. Adding carbon to the negative plate gives it a much larger effective surface and a conductive network, suppressing the coarsening and letting the plate accept charge faster. That is why lead survived in telecom and off-grid work."
+    },
+    {
+     "q": "What does 'valve-regulated' actually mean?",
+     "a": "The AGM construction holds the electrolyte in a glass-fibre mat with just enough gas space that oxygen made at the positive plate recombines at the negative one instead of escaping, so the cell never needs topping up. It is not sealed — there is still a valve that opens under abuse, and the room still needs ventilation because recombination is efficient rather than perfect."
+    },
+    {
+     "q": "Where does lead-acid still genuinely win?",
+     "a": "Lower capital cost, a mature recycling route with real scrap value, no BMS required so the failure modes are simple and familiar, a shorter permitting conversation than lithium, and decades of field experience in float duty. It loses on weight, footprint, temperature tolerance, C-rate performance and self-knowledge — which is why buildings where floor space is money moved first."
+    },
+    {
+     "q": "Why is a battery string only as good as its worst cell?",
+     "a": "The same current passes through every series cell, so the discharge ends when the first cell reaches its end-of-discharge voltage. One degraded cell costs the whole string's runtime rather than its own share — and nothing in the terminal voltage reveals it while the string floats."
+    },
+    {
+     "q": "Distinguish conductance testing from a capacity test.",
+     "a": "Conductance testing measures each cell's internal resistance quickly on a live string and reliably finds cells that have already failed — it is screening, and it does not say how many minutes remain. A capacity test is a real timed discharge into a load bank; it is the only measurement that answers the real question, it is disruptive, and the convention is to retire a string at 80 percent of rated capacity."
+    },
+    {
+     "q": "What is a pulse cycle and why is it the life metric for a rack backup cell?",
+     "a": "A discharge and recovery measured in hundreds of milliseconds rather than hours. A rack store covers transfers and absorbs the millisecond swings of a training workload, so it is exercised constantly — Narada publishes above 200,000 pulses at 500 ms for its AIDC cell. Counting full cycles would say nothing useful about that duty."
+    },
+    {
+     "q": "Why must a rack-level store sit in the rack rather than in the battery room?",
+     "a": "Distance — a half-second response is only useful if the store is electrically next to the load, on the DC bus that is already there. Architecture — in an 800 VDC rack there may be no room UPS to fall back on, so the store is the ride-through. And commerce — a shelf is designed into a rack at volume, not sold to a facilities organisation over two years."
+    },
+    {
+     "q": "What does distributing the store cost operationally?",
+     "a": "One battery room with one monitoring system, one fire strategy and one procedure becomes hundreds of small stores inside occupied racks — each with its own state of health, each in the airflow of equipment it must not heat, and each a fire-code object in a room with people in it. Harder, and not yet solved by anyone, which is why both architectures are being built at once."
+    },
+    {
+     "q": "Why do operators usually buy a separate BESS rather than letting the UPS battery earn?",
+     "a": "Governance rather than engineering: uptime and the energy bill are owned by different people, and separate assets keep the risks separate. It also puts the right cell on each job — thick-electrode energy cells for earning, thin-electrode power cells for protecting — and avoids spending backup warranty cycle life on arbitrage."
+    },
+    {
+     "q": "A large-format cell is marketed as 'solid-state'. What should you ask?",
+     "a": "What the electrolyte physically is. In this market the phrase frequently covers semi-solid or hybrid solid-liquid electrolytes, which are real and useful and are not all-solid-state. The distinction matters because the claimed safety and energy benefits belong to the genuine article."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A UPS string is sized from the cells' published amp-hour rating and comes up short on its first real discharge. The cause is:",
+     "c": [
+      "The cells were defective",
+      "Amp-hours describe a slow discharge; usable capacity falls at UPS discharge rates",
+      "The end-of-discharge voltage was set too high",
+      "The float voltage was wrong"
+     ],
+     "a": 1,
+     "why": "A standby battery is specified in watts per cell for a stated time to a stated end voltage at a stated temperature. The amp-hour figure is a slow-rate number and overstates what the string delivers when it is emptied in minutes — the most common error in the whole subject."
+    },
+    {
+     "q": "Two lithium cells from the same maker: 783 Ah at over 430 Wh/L, and 55 Ah at over 1,900 W/kg. The difference is mainly:",
+     "c": [
+      "Different cathode chemistries",
+      "Electrode thickness and the current-collector design",
+      "One is new and one is legacy",
+      "The 55 Ah cell is a prototype"
+     ],
+     "a": 1,
+     "why": "Thick electrodes maximise energy per litre and make ions travel far, which is fine at a quarter C. Thin electrodes with far more foil and tab area deliver current hard and store much less. That single design choice separates a grid cell from a backup cell, whatever the chemistry label says."
+    },
+    {
+     "q": "A battery room has run about 10 °C above its design temperature since installation. The most likely consequence is:",
+     "c": [
+      "Increased risk of thermal runaway",
+      "The string reaches its retirement capacity in roughly half the expected time",
+      "Higher internal resistance only",
+      "Nothing measurable at float"
+     ],
+     "a": 1,
+     "why": "Float life is dominated by temperature, roughly halving for every 10 °C above the design point on the standard rule of thumb. Nothing about a warm room looks like a fault, which is why it is discovered by a capacity test years later or by an event."
+    },
+    {
+     "q": "A site replaced its annual capacity test with quarterly conductance screening. What has it given up?",
+     "c": [
+      "Nothing — conductance is the modern method",
+      "Any measurement of how many minutes the string will actually deliver",
+      "The ability to find a failed cell",
+      "Compliance with the fire code"
+     ],
+     "a": 1,
+     "why": "Conductance screening finds cells that have already failed and does it cheaply on a live string, which is genuinely valuable. It measures a proxy, not runtime. Only a timed discharge into a load bank answers the question the string exists to answer."
+    },
+    {
+     "q": "A rack backup cell is published at more than 200,000 pulse cycles of 500 ms. That tells you the cell is expected to:",
+     "c": [
+      "Sit unused and be replaced on a calendar",
+      "Be exercised constantly as a buffer, not merely wait as backup",
+      "Last 200,000 hours",
+      "Support a four-hour discharge"
+     ],
+     "a": 1,
+     "why": "Two hundred thousand half-second events is a duty cycle, not an insurance policy. The AI load's millisecond rhythm turned the rack store from backup into a buffer, which consumes a life budget priced against a different job — and is invisible unless someone counts pulses."
+    },
+    {
+     "q": "An operator wants the UPS battery to shave the building's peak. The most important control requirement is:",
+     "c": [
+      "A faster charger",
+      "An enforced reserve floor of state of charge that market signals cannot cross",
+      "A larger inverter",
+      "A separate meter"
+     ],
+     "a": 1,
+     "why": "Once anything else can draw on the store, the guaranteed backup is whatever the reserve floor protects rather than the nameplate. If the floor is only a configurable setting with no interlock, alarm or audit, the backup duty is protected by somebody's memory."
+    },
+    {
+     "q": "Why is a thirty-year lead-acid backup channel a real asset rather than a legacy liability?",
+     "c": [
+      "Lead-acid is cheaper than lithium in every application",
+      "Local stock, local engineering and trained technicians are the hardest part of a backup business to replicate, and they outlive any chemistry",
+      "Lead-acid is exempt from fire codes",
+      "Lithium cannot be used in telecom cabinets"
+     ],
+     "a": 1,
+     "why": "The specification sheet cannot express the channel, and a new entrant cannot buy it quickly. A company already supplying the battery under the UPS is also positioned to supply the battery that replaces the UPS as the architecture moves the store into the rack."
+    }
+   ]
+  }
+ ]
+}

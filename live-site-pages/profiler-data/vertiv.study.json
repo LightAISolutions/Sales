@@ -1,18 +1,394 @@
 {
  "schemaVersion": 2,
  "slug": "vertiv",
- "title": "Vertiv \u2014 Study Guide",
- "lastUpdated": "2026-08-21",
+ "title": "Vertiv — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
  "sections": [
+  {
+   "id": "what-this-guide-adds",
+   "title": "Start here: the machine you buy, and the transaction around it",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "This guide used to teach cooling only. Those six cooling sections are still here, further down, and they are still the best account in this app of the thermal chain from chip to atmosphere. What has been added in front of them is the other half of Vertiv's business — **the {{UPS}}, taught as a product rather than as a principle**.",
+    "**What this section deliberately does not repeat.** Four guides already teach the uninterruptible supply, and between them they have the physics covered. **Rehlko's guide** opens the machine: the four blocks — {{rectifier}}, {{DC link}}, {{inverter}}, {{static bypass}} — {{double conversion}} against {{eco-mode}}, the four clocks ({{hold-up time}}, {{ride-through}}, {{autonomy}}, {{transfer time}}), the monolithic-against-{{modular UPS}} form-factor argument, and the three numbers people get wrong when sizing. **Piller's guide** covers the {{IEC 62040-3}} grades, rotary and {{DRUPS}} machines, the stiff source, and the {{isolated parallel bus}}. **Mitsubishi Electric's guide** covers the {{three-level inverter}}, the efficiency curve and why a UPS is almost never at its rated efficiency, {{transformerless UPS}} design, and {{VRLA}} against lithium underneath it. **Eaton's guide** covers {{selective coordination}}, {{busway}}, and the choreography of an outage. None of that is repeated below.",
+    "**What this guide adds instead** is the part a seller and a buyer actually transact over. What a {{power module}} physically *is* as a purchasable object and what you are buying when you buy a frame full of them. How capacity is bought once and populated over years, and what that does to the cheque. What every line of a UPS datasheet commits you to, including the four lines people never read. And the sequence — {{basis of design}}, {{or-equal}}, {{submittal}}, {{slot reservation}}, {{factory acceptance test}}, {{site acceptance test}}, {{integrated systems test}}, service contract — by which a UPS travels from a drawing to a load-carrying asset, because that sequence, not the specification, is where most UPS projects lose their schedule.",
+    "**The split with Schneider Electric's guide, which was revised in the same pass.** The two do not overlap, by design. **This guide is the machine and the transaction**: what a module is, how a frame is populated, what the datasheet says, and how the thing is specified, tested and accepted. **Schneider's guide is the system and the ladder**: how many machines and in what arrangement — the redundancy topologies *above* the machine and the usable-capacity arithmetic they impose — what sits between the UPS and the rack, and how the same four blocks change character from a single-phase desk unit to a megawatt frame, including what happens when the battery is allowed to earn."
+   ]
+  },
+  {
+   "id": "what-a-ups-module-is",
+   "title": "Open the box: what a UPS power module actually is",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "People say 'modular UPS' as though the modularity were a packaging decision. It is not. A {{power module}} is **a complete, independently operable UPS in a drawer** — its own {{rectifier}}, its own {{DC link}} capacitors, its own {{inverter}}, its own control processor, its own fans and its own protection — sharing only the frame's busbars, the frame's input and output breakers, and a supervisory controller that tells it nothing more than what share of the load to take. Pull one out and the remaining modules do not reconfigure; they simply each pick up a slightly larger fraction of the same load.",
+    "**Why that matters for the thing being sold.** The unit of purchase becomes the module, not the machine. Schneider's Galaxy VXL, to take the clearest published example in this corpus, is built from 125 kW modules three rack units high, and a frame carries them up to 1,250 kW; Vertiv's Trinergy is sold instead in large blocks of 1,500 to 2,500 kVA-kW that parallel up to about 20 MW. Those are two genuinely different products, and the difference is not the electronics inside — both are transformer-free {{IGBT}} {{double conversion}} — but **the granularity in which capacity is bought and repaired**.",
+    "**What has to be true for a module to be removable while the load is live.** Three things, and each of them is engineering the datasheet does not advertise. First, {{current sharing}}: every module has to take its own share of a common bus without any of them trying to drive the others, which is done by deliberately giving each one a slight {{droop}} so that a module running high naturally backs off. Second, decoupling: pulling a module must not present the remaining bus with a transient it cannot absorb, so the connection is made and broken through a defined {{precharge}} and isolation sequence rather than a plug. Third, touch safety: because the frame stays live, the module's own connections have to be shrouded so a human hand can be in the frame while several hundred kilowatts flow a few centimetres away. Vendors give this last property brand names; the underlying property is that {{hot-swap}} is a designed-in behaviour of the slot, not a property of the module alone.",
+    "**The vocabulary trap.** 'Module', 'unit', 'system' and 'block' are used interchangeably in marketing and mean four different things in a specification — which is how a redundancy claim gets made at one level and read at another. The next section fixes the vocabulary, and it is worth fixing before reading any quotation."
+   ]
+  },
+  {
+   "id": "module-frame-system",
+   "title": "Module, frame, unit, system: four words, four purchases",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Every one of these is a level at which redundancy can be claimed, capacity can be counted, and a price can be quoted. Rehlko's guide makes the point that {{N+1}} means nothing until you say N+1 of what; this table is the *what*. Read the middle column as the physical object and the right-hand column as what the buyer is actually committing to.",
+   "cols": [
+    "Level",
+    "What it physically is",
+    "What buying one commits you to"
+   ],
+   "rows": [
+    [
+     "**{{power module}}**",
+     "A complete small UPS in a slide-in chassis — rectifier, inverter, control, cooling. Typically tens to a couple of hundred kilowatts",
+     "The smallest step in which capacity or redundancy can be added later. Its rating sets the granularity of every future decision, and it is the number that decides what {{N+1}} costs"
+    ],
+    [
+     "**{{UPS frame}}**",
+     "The cabinet the modules live in: internal busbars, input and output breakers, controls, and a fixed number of slots",
+     "The **maximum** capacity of that position in the room, permanently. Populating it later is cheap; replacing it is a construction project, so the frame is the decision that cannot be deferred"
+    ],
+    [
+     "**Unit or block**",
+     "One complete UPS as the single-line diagram sees it — a populated frame, or a large monolithic machine, with one output breaker",
+     "One point of common failure and one maintenance event. Everything inside it shares that output breaker, which is why module-level N+1 and unit-level N+1 are different purchases"
+    ],
+    [
+     "**System**",
+     "Several units paralleled onto a common output bus with load sharing and a common control",
+     "A capacity ceiling set by the vendor's parallel limit — commonly four to eight units — and a shared control layer whose failure modes are now yours to think about"
+    ],
+    [
+     "**Plant or path**",
+     "The whole A side or B side, from its own switchboard through its own UPS system to its own distribution",
+     "Genuine independence — if and only if the paths do not meet upstream. This is the level most people *mean* when they say 2N, and the level least often verified"
+    ]
+   ],
+   "note": "The useful discipline when reading a quotation: write the redundancy claim as a sentence with the level in it. '{{N+1}} modules within a single frame' and 'N+1 frames within a system' differ by roughly an order of magnitude in price and by an entire class of failure in what they survive — and both are correct designs for different buildings."
+  },
+  {
+   "id": "capacity-on-demand",
+   "title": "Pay now or pay later: the capacity-on-demand argument",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "This is not the monolithic-versus-modular argument Rehlko's guide makes — that one is about form factor and repair time. This one is about **when the money leaves**, and it is the argument that actually gets had in the room, because a hall's capacity is bought against a lease-up curve nobody can predict.",
+   "cards": [
+    {
+     "t": "Buy the megawatts on day one",
+     "meta": "Full rated capacity installed and commissioned before the first tenant arrives",
+     "adv": [
+      "One design, one {{submittal}} cycle, one {{commissioning}} programme, one disruption. Every later fit-out is tenant work rather than electrical work",
+      "Prices and factory slots are locked at today's terms. In a shortage this is worth more than the interest on the money",
+      "The plant is proven once, under {{load bank}}, at full rating — which is the only condition under which the {{integrated systems test}} means what it claims"
+     ],
+     "dis": [
+      "Capital sits idle for one to three years, and the UPS spends that period well down its efficiency curve — Mitsubishi Electric's guide has the curve",
+      "The forecast is usually wrong. A hall built for a density that never arrives has bought the wrong machines, not merely too many",
+      "Battery {{design life}} starts at energisation, not at first load — so a portion of the store's life is consumed protecting nothing"
+     ]
+    },
+    {
+     "t": "Buy the frame, add the modules",
+     "meta": "Frames, breakers, cabling and the battery room sized for the end state; {{power module}}s added as the hall fills",
+     "adv": [
+      "Capital tracks revenue. In colocation, where capacity arrives with signed tenants, this is the single strongest financial argument for {{modular UPS}}",
+      "Redundancy is bought one module at a time, so {{N+1}} in a lightly loaded hall costs a fraction of a spare unit",
+      "The plant runs closer to its efficient band throughout, because installed capacity roughly tracks connected load"
+     ],
+     "dis": [
+      "Every addition is live work on an energised frame, which means a procedure, a competent person and an accepted risk — not a delivery",
+      "The parts you cannot defer are the expensive, disruptive ones: the frame, the breakers, the {{floor loading}}, the battery room, the cooling for the electrical room. Deferring modules defers perhaps a third of the cost",
+      "Later modules are bought at future prices and future lead times, and the vendor knows the frame is captive"
+     ]
+    }
+   ],
+   "note": "The question that settles it is not technical: **who signs the lease, and when?** An owner-operator building a full block against a committed load has already sold the capacity and should buy it. A colocation provider filling a hall over three years is buying an option on capacity, and the frame is the option. Vertiv sells both shapes — Trinergy as large parallelable blocks, and prefabricated OneCore blocks of 5 to 50 MW that move the whole argument up a level to the *building*."
+  },
+  {
+   "id": "the-ups-ladder",
+   "title": "The ladder: what a megawatt of protected power looks like at each scale",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "MW of protected load (company-published ratings)",
+   "intro": "Vertiv's published power ratings on one axis. The point of putting the rack shelf and the room machine on the same scale is the gap between them — roughly an order of magnitude — because that gap is exactly the territory the 800-volt DC architecture is trying to occupy.",
+   "items": [
+    {
+     "label": "PowerDirect Rack",
+     "sub": "ORv3 50 V DC shelf, low end of the range",
+     "v": 0.033
+    },
+    {
+     "label": "PowerDirect Rack",
+     "sub": "ORv3 50 V DC shelf, top of the range, N+N",
+     "v": 0.132
+    },
+    {
+     "label": "Trinergy block",
+     "sub": "smallest published block, 1,500 kVA-kW",
+     "v": 1.5
+    },
+    {
+     "label": "Trinergy block",
+     "sub": "1,600 kVA-kW",
+     "v": 1.6
+    },
+    {
+     "label": "Trinergy block",
+     "sub": "2,000 kVA-kW",
+     "v": 2.0
+    },
+    {
+     "label": "Trinergy block",
+     "sub": "largest published block, 2,500 kVA-kW",
+     "v": 2.5
+    },
+    {
+     "label": "Trinergy system",
+     "sub": "blocks paralleled to the published system maximum",
+     "v": 20.0
+    },
+    {
+     "label": "OneCore block",
+     "sub": "prefabricated data center, top of the published range",
+     "v": 50.0
+    }
+   ],
+   "note": "Two things to read off it. First, the Trinergy blocks are quoted as **kVA-kW** — the two numbers are equal, which means unity {{power factor}} and no hidden ten percent between the rating and the useful output. Rehlko's guide explains why that has become normal and why comparing a unity-rated machine against a 0.9-rated one silently mis-sizes a plant. Second, the ladder does not stop at the machine: OneCore sells 5 to 50 MW blocks with the UPS, the {{CDU}}s and the chillers already inside, which is the same capacity-on-demand argument moved from the frame to the building."
+  },
+  {
+   "id": "reading-a-ups-datasheet",
+   "title": "Reading a UPS datasheet: what each line commits you to",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "A UPS datasheet is perhaps thirty lines, of which four get read. This is the rest of them. Efficiency and the kVA-against-kW trap are covered better elsewhere — Mitsubishi Electric's guide has the curve, Rehlko's has the sizing arithmetic — so they are noted here and not re-argued. What follows is what the other lines actually decide once the machine is in a building.",
+   "cols": [
+    "Datasheet line",
+    "What it is really telling you",
+    "What goes wrong when it is skipped"
+   ],
+   "rows": [
+    [
+     "**Output kW and kVA**",
+     "Real power and apparent power. When they are equal the machine is unity-rated; when they differ, the smaller number is what you can use",
+     "A specification written against kVA and filled with a 0.9-rated machine delivers ten percent less than the design. Rehlko's guide treats this at length"
+    ],
+    [
+     "**{{overload rating}}**",
+     "How far above nameplate the machine goes and for how long — some tens of percent for minutes, a large multiple for a fraction of a second",
+     "This is the line that decides whether a downstream fault clears. An inverter that folds back to its rating instead of feeding the fault leaves the breaker unable to trip and takes out the whole bus instead of one circuit"
+    ],
+    [
+     "**Short-circuit contribution**",
+     "How much {{fault current}} the machine will supply into a bolted fault, which is usually far less than the transformer upstream of it",
+     "The {{coordination study}} is done against this number. Piller's guide makes the same point from the rotary side, where the stiff source is the product"
+    ],
+    [
+     "**{{THDi}} and input {{power factor}}**",
+     "How cleanly the machine draws its own supply. A modern {{active front end}} is close to a plain resistor; older {{12-pulse rectifier}} designs are not",
+     "It sizes the generator and the upstream transformer. A UPS that draws distorted current forces the engine to be oversized for a load it never sees as real power"
+    ],
+    [
+     "**Input voltage window and frequency tolerance**",
+     "How far the supply may wander before the machine stops accepting it and starts spending the battery",
+     "A narrow window on a site with a weak supply or a generator that hunts means the battery discharges during events that were never outages"
+    ],
+    [
+     "**Battery interface: DC voltage window, block count, charge current limit, {{ripple current}}**",
+     "The contract between the machine and the store — what string voltages it accepts, how fast it will recharge, and how much AC it puts back through the cells",
+     "It silently constrains the chemistry choice. Narada's guide takes this from the battery's side; a charge-current limit that recharges a depleted string slowly is a second outage waiting for the first one to repeat"
+    ],
+    [
+     "**Efficiency at 25 / 50 / 75 / 100 percent, in each mode**",
+     "A curve, quoted at one point. Vertiv publishes ≥97 percent in {{double conversion}} and ≥99 percent in its dynamic online mode",
+     "Every new hall lives at the light-load end of the curve for its first year or two. Mitsubishi Electric's guide is the reference for why, and for what redundancy costs on top"
+    ],
+    [
+     "**Footprint, weight and {{floor loading}}**",
+     "Square metres, kilograms, and kilograms per square metre — the last of which is a building property, not an equipment one",
+     "In a retrofit this ends more equipment selections than price does. Schneider quotes 1,042 kW/m² for the Galaxy VXL precisely because {{white space}} is the thing being displaced"
+    ],
+    [
+     "**Ambient range, altitude derating, ingress rating**",
+     "The conditions under which every other number on the page is true",
+     "A machine derated for altitude or for a hot electrical room is a smaller machine than the one that was priced. Vertiv's OneCore is published at −20 °C to 55 °C for the same reason"
+    ],
+    [
+     "**Acoustic level**",
+     "Decibels at a stated distance, driven mostly by fans",
+     "It is a planning-permission and a labour-law matter in urban and mixed-use sites, and it is discovered late because nobody reads it"
+    ],
+    [
+     "**{{IEC 62040-3}} classification and safety listing**",
+     "What class of supply misbehaviour the machine actually isolates the load from, and to which safety standard it was built",
+     "The classification is the honest version of the marketing. Piller's guide teaches the three grades; a machine sold as 'online' that classifies as voltage-and-frequency-dependent is not the same purchase"
+    ],
+    [
+     "**{{IEC 62443}} certification level**",
+     "What the machine's own network defences were audited against — Schneider publishes IEC 62443-4-2 on the Galaxy VXL",
+     "A UPS is a networked device with a supervisory controller. The certificate says what the device withstands; it says nothing about the network it is put on"
+    ]
+   ],
+   "note": "The four lines that most often produce a surprise on site: {{overload rating}}, short-circuit contribution, {{floor loading}}, and the battery charge-current limit. None of them appears in a headline comparison, and each of them can invalidate a design that compared well on the numbers that did."
+  },
+  {
+   "id": "how-a-ups-is-bought",
+   "title": "How a UPS is actually bought: eleven steps and where the schedule dies",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "This is the sequence between a decision and a load-carrying machine. It is worth learning as a sequence rather than a list, because each step's output is the next step's input, and the failures are almost always a step that finished late rather than a step that finished wrong. Rehlko's guide covers the *upstream* question of whether to buy the whole power room from one supplier; this is what happens after that question is settled.",
+   "cols": [
+    "Step",
+    "What happens",
+    "Where it goes wrong"
+   ],
+   "rows": [
+    [
+     "1 · **{{basis of design}}**",
+     "The owner's engineer fixes the architecture, the redundancy level and the ratings, usually with one manufacturer's product in mind",
+     "Whoever gets here first has effectively chosen the vendor. Schneider's reference-design franchise, taught further down this app in its own guide, is this step turned into a business model"
+    ],
+    [
+     "2 · **Specification and {{or-equal}}**",
+     "The named product plus the alternatives permitted to compete, and the clauses each has to satisfy",
+     "An or-equal clause written around one vendor's unique feature is a sole-source specification with a fig leaf, and everyone in the bid knows it"
+    ],
+    [
+     "3 · **Tender and award**",
+     "Bids, technical clarification, commercial negotiation",
+     "The comparison is run on price and headline efficiency, which are the two lines least likely to differ meaningfully"
+    ],
+    [
+     "4 · **{{slot reservation}}**",
+     "A payment holds a place in the factory schedule, often before the design is finished",
+     "In a shortage this is the real purchase. Buyers who wait for a complete design to place the reservation buy a later slot with a fully specified machine, and the slot is what was scarce"
+    ],
+    [
+     "5 · **{{submittal}} and approval**",
+     "Drawings, ratings, protection data and wiring go to the engineer of record; approval releases manufacturing",
+     "This is the most common silent schedule killer: manufacturing does not start on the purchase order, it starts on the approval, and approvals sit in queues"
+    ],
+    [
+     "6 · **Manufacture**",
+     "Build to the approved submittal",
+     "Any change after approval is a variation, priced accordingly, and often re-enters the queue at step 5"
+    ],
+    [
+     "7 · **{{factory acceptance test}}**",
+     "The machine is run at the works, under {{load bank}}, with the customer present — full load, step loads, transfers, alarms",
+     "Skipping it to save a trip is a false economy: a wiring or logic error found here costs a day, and the same error on site costs a week and a crane"
+    ],
+    [
+     "8 · **Delivery, rigging and installation**",
+     "Route survey, crane, {{floor loading}} check, cabling, battery installation",
+     "The route is a design input nobody owns. A frame that will not fit the lift or the door is discovered at the door"
+    ],
+    [
+     "9 · **{{site acceptance test}}**",
+     "The installed machine energised and proven in its final configuration",
+     "It proves the installation, not the machine — the machine was proven at step 7. Conflating the two is how sites accept an untested installation"
+    ],
+    [
+     "10 · **{{integrated systems test}}**",
+     "The whole plant failed on purpose under load banks: utility dropped, engines started, transfers made, cooling recovered, UPS on battery and back",
+     "The last and most expensive step, and the first one cut when the schedule slips. It is also the only step that tests the *seams*, which is where paralleled plants fail"
+    ],
+    [
+     "11 · **Service contract and the mid-life battery**",
+     "Response times, preventive maintenance, spares, and the battery replacement that will land inside the machine's life",
+     "The battery replacement is a project, not a maintenance task — the store is reduced or absent while it happens. Budgeting it as a line item rather than an outage is the usual mistake"
+    ]
+   ],
+   "note": "Two structural observations. **The buyer's real leverage is spent between steps 1 and 3 and never returns** — after award, every conversation is about variations. And **steps 7, 9 and 10 are three different tests that get called 'commissioning' interchangeably**: the works test proves the machine, the site test proves the installation, and the integrated test proves the system. A project that ran only the first two has never once seen its plant fail."
+  },
+  {
+   "id": "the-shelf-in-the-rack",
+   "title": "The threat to the category: when the UPS moves into the rack",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Everything above describes a machine that lives in an electrical room, feeds a {{busway}} and protects a hall. The 800-volt DC rack architecture proposes something else: **put the store on a DC bus inside the rack and delete the room machine's job**. Vertiv sells both sides of that argument, which makes its catalogue the clearest place in this app to see the category question — Trinergy is the room machine, and PowerDirect Rack is an Open Compute {{power shelf}} delivering 50 volts DC at 33 to 132 kW per rack with N+N redundancy, accepting either an AC or a high-voltage DC input.",
+    "**Why the argument is not settled by efficiency.** Each {{conversion stage}} costs something, and the room UPS is a stage the rack shelf can in principle remove. But a room UPS is not only a converter — it is a place where the {{autonomy}} lives, where the {{fault current}} for downstream {{selective coordination}} comes from, and where a single maintenance action protects a whole hall. Moving the store into the rack distributes all three of those. The stored energy becomes hundreds of small {{BBU}} shelves instead of one battery room; the fault duty moves to devices with no {{zero crossing}} to help them, which is why {{SSCB}}s appear in these designs; and maintenance becomes a per-rack activity.",
+    "**Read this against the two guides that teach the other sides of it.** Vicor's guide teaches the rack's DC bus from the *converter's* side — the {{BBU}} shelf, {{hold-up time}}, {{ORing}}, and why the voltage climbed in the first place. Narada's guide teaches it from the *cell's* side — what a backup cell must do when the duty is half-second pulses rather than minutes of runtime. This section is the third view: what it does to the **product category** a company like Vertiv has sold for thirty years, and why the same firm ships a machine that threatens its own franchise.",
+    "**The honest position for a reader.** Both architectures are being built right now, and the room UPS is not disappearing from anything already under construction — the installed base alone guarantees decades of service revenue, which the aftermarket section further down this guide explains. What is genuinely in play is the *marginal* megawatt in new AI halls, and there the question is not which is more efficient but which the operator can maintain, insure and staff. That is a very different sales conversation from the one the datasheet supports."
+   ]
+  },
+  {
+   "id": "where-vertiv-slots-in",
+   "title": "Where Vertiv's products slot into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "One row per published product family, placed on the path from the utility fence to the silicon. The point of reading it as a path is that Vertiv's commercial argument is adjacency: each box is sold partly because the buyer already bought the one next to it.",
+   "cols": [
+    "Where in the chain",
+    "Vertiv's product",
+    "What it is doing there"
+   ],
+   "rows": [
+    [
+     "Electrical room — protected power",
+     "Trinergy {{UPS}} (1,500–2,500 kVA-kW blocks, to about 20 MW)",
+     "Transformer-free {{IGBT}} {{double conversion}}, published at ≥97 percent and ≥99 percent in its dynamic online mode, pitched explicitly at loads that swing"
+    ],
+    [
+     "Electrical room — distribution",
+     "Switchgear, {{busway}}, {{static transfer switch}}es, {{PDU}}",
+     "Getting the protected power to the row. Eaton's guide teaches this layer in depth; Vertiv's argument here is that it comes from the same order book as the UPS"
+    ],
+    [
+     "Inside the rack",
+     "PowerDirect Rack (ORv3 shelf, 50 V DC, 33–132 kW, N+N)",
+     "The hedge against its own room-UPS franchise — see the section above"
+    ],
+    [
+     "Chip to plant — heat",
+     "CoolChip {{CDU}}s (70 kW to 2,300 kW), CoolLoop rear-door exchangers, Liebert chillers",
+     "The thermal chain the second half of this guide teaches. The CDU is the isolation point between facility water and the technology loop"
+    ],
+    [
+     "The building itself",
+     "OneCore prefabricated data centers (5–50 MW), SmartRun overhead prefab",
+     "Capacity-on-demand moved from the frame to the building: UPS, CDUs and chillers integrated and factory-tested before delivery"
+    ],
+    [
+     "Outside the fence and behind the meter",
+     "DynaFlex {{BESS}} (1.5–6 MW), EnergyCore Grid (1 MW to 200+ MW)",
+     "{{peak shaving}}, {{demand response}}, generator displacement and — at grid scale — {{black start}} and interconnection support"
+    ],
+    [
+     "Across the whole life",
+     "Unify, Avocent, and a field-service organisation of 4,000+ engineers",
+     "The annuity. The aftermarket section further down explains why this, not the hardware, is the durable business"
+    ]
+   ],
+   "note": "The pattern worth noticing: Vertiv sells at every level of granularity in this table — a shelf, a machine, a room, a building and a grid asset — and the sales motion differs completely at each. A shelf is a design win with a server OEM; a building is a construction procurement. Very few competitors span that whole range, and spanning it is also why the company's order book amplifies its customers' capex swings, which is the subject of the last section of this guide."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The frame was sized for the wrong end state.** Modules are cheap to add and frames are not. A hall that fills at a higher density than planned reaches the frame's ceiling with slots still empty in the *wrong* rooms, and the fix is a construction project inside a live building. Owned by whoever wrote the {{basis of design}}, and discovered two years later by whoever is leasing the space.",
+    "**Manufacturing started on the purchase order in someone's head, and on the {{submittal}} approval in reality.** The single most common schedule failure in this sequence is not a factory delay; it is an approval queue. Owned by the owner's engineer, and invisible until the delivery date moves.",
+    "**The {{integrated systems test}} was cut for schedule.** The works test proved the machine and the site test proved the installation, so on paper the plant is commissioned. Nothing has ever failed the utility on purpose, started the engines against a real {{block load}}, watched the transfer, and confirmed the cooling recovered before the hall got hot. The first time that sequence runs is then a real event. This is row 14 of this app's failure map, and it is owned by the commissioning agent and the general contractor jointly.",
+    "**{{overload rating}} read as a headline rather than a coordination input.** A UPS that limits its output current to protect its semiconductors will not feed a downstream fault hard enough for the branch breaker to clear it, so the fault stays and the bus goes instead of the circuit. Owned by whoever ran the {{coordination study}}, and it is row 3 of the failure map arriving from an unexpected direction.",
+    "**The battery replacement was budgeted as maintenance.** Every store has a {{design life}} shorter than the machine's, and replacing it means the plant runs with reduced or absent {{autonomy}} for the duration. Treated as a line item it is cheap; treated as a scheduled period of reduced protection it needs a plan, a temporary arrangement, or an accepted risk. Owned by the operator. Narada's guide covers what actually decides that life.",
+    "**And the failure that presents as a power failure and is not: the thermal chain.** Heat flows in series and the worst stage limits the path — one pinched exchanger approach, one row without blanking panels, one {{sequence of operations}} heating and cooling at once. Rows 13 of the failure map, and the second half of this guide is the reference for all of it. When a hall throttles, the electrical room is the first place people look and the second place the fault usually is."
+   ]
+  },
   {
    "id": "precision-cooling-machines-cracs-crahs-and-chillers",
    "title": "Precision cooling machines: CRACs, CRAHs, and chillers",
    "kind": "prose",
    "ps": [
     "A CRAC (computer room air conditioner) is a self-contained refrigeration machine, compressor and all; a CRAH (computer room air handler) is just a coil and fans fed chilled water from a central plant. Small sites run CRACs; big facilities centralize with chillers feeding many CRAHs",
-    "The chiller is the plant's engine: a vapor-compression cycle where refrigerant absorbs heat by evaporating, gets compressed to raise its temperature, and rejects the heat outdoors \u2014 pumping heat uphill from a cool room to a warm sky at the cost of compressor power",
-    "Economizers are the profit center: when outdoor conditions are cool enough, the plant bypasses or unloads mechanical cooling and rejects heat almost free \u2014 air-side or water-side. How many hours per year that works is a function of climate, which is why cooling design starts with a weather file",
-    "Precision cooling differs from comfort cooling in its diet: IT heat is dry (sensible) heat, so the machines are engineered for high sensible ratios, tight temperature bands, and continuous year-round duty \u2014 a different animal from an office rooftop unit"
+    "The chiller is the plant's engine: a vapor-compression cycle where refrigerant absorbs heat by evaporating, gets compressed to raise its temperature, and rejects the heat outdoors — pumping heat uphill from a cool room to a warm sky at the cost of compressor power",
+    "Economizers are the profit center: when outdoor conditions are cool enough, the plant bypasses or unloads mechanical cooling and rejects heat almost free — air-side or water-side. How many hours per year that works is a function of climate, which is why cooling design starts with a weather file",
+    "Precision cooling differs from comfort cooling in its diet: IT heat is dry (sensible) heat, so the machines are engineered for high sensible ratios, tight temperature bands, and continuous year-round duty — a different animal from an office rooftop unit"
    ]
   },
   {
@@ -20,10 +396,10 @@
    "title": "Liquid-cooling hardware: the equipment layer between chip and plant",
    "kind": "prose",
    "ps": [
-    "The coolant distribution unit (CDU) is liquid cooling's central appliance: a heat exchanger plus pumps that isolates the facility's water from the pristine technology loop touching the servers \u2014 separating chemistry, pressure, and cleanliness domains that must never mix",
-    "Sizing spans an order of magnitude: in-rack CDUs serve one cabinet, in-row units serve a pod, facility-scale skids serve megawatts \u2014 and liquid-to-air variants reject heat into room air where no facility water exists, trading capacity for retrofit simplicity",
-    "Downstream of the CDU lives a plumbing product family: manifolds distributing coolant vertically through racks, cold plates bolted to each processor, drip-free quick disconnects allowing live service, and leak detection woven throughout \u2014 reliability engineering expressed in fittings",
-    "The rear-door heat exchanger is the transitional species: a radiator replacing the rack's back door, neutralizing exhaust heat with liquid while the servers themselves stay air-cooled \u2014 a middle step that brings liquid to the rack without touching the IT hardware"
+    "The coolant distribution unit (CDU) is liquid cooling's central appliance: a heat exchanger plus pumps that isolates the facility's water from the pristine technology loop touching the servers — separating chemistry, pressure, and cleanliness domains that must never mix",
+    "Sizing spans an order of magnitude: in-rack CDUs serve one cabinet, in-row units serve a pod, facility-scale skids serve megawatts — and liquid-to-air variants reject heat into room air where no facility water exists, trading capacity for retrofit simplicity",
+    "Downstream of the CDU lives a plumbing product family: manifolds distributing coolant vertically through racks, cold plates bolted to each processor, drip-free quick disconnects allowing live service, and leak detection woven throughout — reliability engineering expressed in fittings",
+    "The rear-door heat exchanger is the transitional species: a radiator replacing the rack's back door, neutralizing exhaust heat with liquid while the servers themselves stay air-cooled — a middle step that brings liquid to the rack without touching the IT hardware"
    ]
   },
   {
@@ -31,10 +407,10 @@
    "title": "The thermal chain: chip to atmosphere as one engineered path",
    "kind": "prose",
    "ps": [
-    "Heat flows in series: silicon die, cold plate, technology coolant, CDU exchanger, facility water, chiller or economizer, and finally outdoor air. Each interface needs a temperature difference \u2014 an approach \u2014 to drive heat across it",
+    "Heat flows in series: silicon die, cold plate, technology coolant, CDU exchanger, facility water, chiller or economizer, and finally outdoor air. Each interface needs a temperature difference — an approach — to drive heat across it",
     "That makes cooling design a temperature budget: the chip's junction limit minus the hottest outdoor day is the total, and every stage in between spends part of it. Waste too many degrees in one exchanger and nothing is left to drive the rest",
-    "The budget explains the warm-water movement: if servers accept 40-45\u00b0C supply water, most climates can reject the heat without running compressors for most of the year \u2014 chiller-free hours are found by giving each stage fewer degrees to consume",
-    "Integration is the sale: one mismatched stage \u2014 an undersized CDU, a plant pinched at a single exchanger \u2014 throttles the entire chain, so vendors increasingly sell the chip-to-atmosphere path as one engineered, guaranteed system rather than parts in a catalog"
+    "The budget explains the warm-water movement: if servers accept 40-45°C supply water, most climates can reject the heat without running compressors for most of the year — chiller-free hours are found by giving each stage fewer degrees to consume",
+    "Integration is the sale: one mismatched stage — an undersized CDU, a plant pinched at a single exchanger — throttles the entire chain, so vendors increasingly sell the chip-to-atmosphere path as one engineered, guaranteed system rather than parts in a catalog"
    ]
   },
   {
@@ -42,10 +418,10 @@
    "title": "Rack and enclosure engineering: airflow and structure at the cabinet",
    "kind": "prose",
    "ps": [
-    "A rack is an airflow device before it is furniture: servers pull air front to back, and the cabinet's job is ensuring air arrives cold and leaves without sneaking back \u2014 blanking panels sealing empty slots are the cheapest cooling fix in the industry",
-    "The physics is bookkeeping: heat removed equals airflow times temperature rise, so a rack's power ceiling is set by how much air its servers can pull and how much rise the equipment tolerates \u2014 air runs out of headroom somewhere in the tens of kilowatts per cabinet",
-    "Internal discipline matters: cable bundles blocking exhaust, unsealed cutouts, and mixed airflow directions quietly tax every server's fans \u2014 rack-level engineering is mostly the disciplined prevention of small leaks and obstructions at scale",
-    "Liquid cooling turned the cabinet into infrastructure: manifolds, busbars, and heavier gear push racks past a tonne, with millimeter tolerances for rail-mounted hardware, seismic bracing, and floor-loading calculations \u2014 the enclosure became a structural, plumbed, powered machine"
+    "A rack is an airflow device before it is furniture: servers pull air front to back, and the cabinet's job is ensuring air arrives cold and leaves without sneaking back — blanking panels sealing empty slots are the cheapest cooling fix in the industry",
+    "The physics is bookkeeping: heat removed equals airflow times temperature rise, so a rack's power ceiling is set by how much air its servers can pull and how much rise the equipment tolerates — air runs out of headroom somewhere in the tens of kilowatts per cabinet",
+    "Internal discipline matters: cable bundles blocking exhaust, unsealed cutouts, and mixed airflow directions quietly tax every server's fans — rack-level engineering is mostly the disciplined prevention of small leaks and obstructions at scale",
+    "Liquid cooling turned the cabinet into infrastructure: manifolds, busbars, and heavier gear push racks past a tonne, with millimeter tolerances for rail-mounted hardware, seismic bracing, and floor-loading calculations — the enclosure became a structural, plumbed, powered machine"
    ]
   },
   {
@@ -53,10 +429,10 @@
    "title": "Aftermarket annuities: the economics of the installed base",
    "kind": "prose",
    "ps": [
-    "Critical-facility customers buy uptime, not machines: equipment ships with service contracts carrying response-time commitments, preventive-maintenance calendars, and guaranteed parts availability \u2014 the contract is often as hard-negotiated as the hardware price",
-    "The annuity math compounds: every unit shipped adds contract-years of recurring revenue that persists through construction downturns, at margins typically better and steadier than the equipment sale \u2014 the installed base is a balance sheet the income statement doesn't show",
+    "Critical-facility customers buy uptime, not machines: equipment ships with service contracts carrying response-time commitments, preventive-maintenance calendars, and guaranteed parts availability — the contract is often as hard-negotiated as the hardware price",
+    "The annuity math compounds: every unit shipped adds contract-years of recurring revenue that persists through construction downturns, at margins typically better and steadier than the equipment sale — the installed base is a balance sheet the income statement doesn't show",
     "A field-service network is a moat measured in decades: thousands of trained engineers, regional spare depots, and emergency-response coverage cannot be replicated by a challenger with a better product and a two-year head start",
-    "New technologies mint new service lines: liquid cooling created fluid commissioning, coolant chemistry management, and flushing services that didn't exist five years ago \u2014 each equipment transition seeds the next generation of annuities"
+    "New technologies mint new service lines: liquid cooling created fluid commissioning, coolant chemistry management, and flushing services that didn't exist five years ago — each equipment transition seeds the next generation of annuities"
    ]
   },
   {
@@ -65,60 +441,188 @@
    "kind": "prose",
    "ps": [
     "Equipment vendors live downstream of operator capital budgets: an order today becomes revenue over the quarters or years it takes to build, so the income statement always describes the past while the order book describes the future",
-    "Book-to-bill is the pulse: orders divided by revenue in a period \u2014 above 1.0 the future is growing, below it the backlog is draining. Backlog duration, expressed in months of forward revenue, tells you how far ahead the vendor can actually see",
-    "The cycle amplifies at the vendor: when operators accelerate, orders spike far faster than revenue can follow; when operators pause, orders vanish while factories keep their costs \u2014 a pure-play vendor experiences its customers' capex mood swings with leverage",
-    "Capacity is the standing bet: build plants for the boom and eat underutilization if it fades, or stay lean and forfeit share to whoever invested. Reading a vendor means holding orders and revenue apart in your head \u2014 one measures appetite, the other digestion, and they routinely diverge"
+    "Book-to-bill is the pulse: orders divided by revenue in a period — above 1.0 the future is growing, below it the backlog is draining. Backlog duration, expressed in months of forward revenue, tells you how far ahead the vendor can actually see",
+    "The cycle amplifies at the vendor: when operators accelerate, orders spike far faster than revenue can follow; when operators pause, orders vanish while factories keep their costs — a pure-play vendor experiences its customers' capex mood swings with leverage",
+    "Capacity is the standing bet: build plants for the boom and eat underutilization if it fades, or stay lean and forfeit share to whoever invested. Reading a vendor means holding orders and revenue apart in your head — one measures appetite, the other digestion, and they routinely diverge"
    ]
-  }
- ],
- "flashcards": [
-  {
-   "q": "What is the difference between a CRAC and a CRAH?",
-   "a": "A CRAC is a self-contained refrigeration machine with its own compressor. A CRAH is just a chilled-water coil and fans \u2014 the refrigeration happens at a central chiller plant. Small and edge sites run CRACs; large facilities centralize with chillers feeding many CRAHs for efficiency."
   },
   {
-   "q": "What does an economizer do, and why does climate drive cooling design?",
-   "a": "When outdoor conditions are cool enough, the plant bypasses or unloads mechanical refrigeration and rejects heat nearly free \u2014 air-side or water-side free cooling. The hours per year this works depend entirely on local weather, so cooling design begins with a climate file, not an equipment catalog."
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is a UPS power module, physically?",
+     "a": "A complete small UPS in a slide-in chassis: its own rectifier, DC-link capacitors, inverter, control processor, fans and protection. It shares only the frame's busbars, breakers and a supervisory controller. Pull one and the others simply each take a larger share of the same load."
+    },
+    {
+     "q": "What three things must be engineered for a module to be swapped while the frame is live?",
+     "a": "Current sharing — usually by giving each module a slight droop so a high-running module backs off. Decoupling — a defined precharge and isolation sequence so removal presents no transient the remaining bus cannot absorb. And touch safety, because a hand is in a frame carrying hundreds of kilowatts. Hot-swap is a property of the slot, not of the module."
+    },
+    {
+     "q": "Module, frame, unit, system, path — which one does 'N+1' usually refer to, and why does it matter?",
+     "a": "It is never stated, which is the problem. N+1 of modules inside one frame still leaves one frame, one output breaker and one common point. N+1 of whole systems on independent paths is a different order of money and survives a different class of failure. Write the claim as a sentence with the level in it before pricing it."
+    },
+    {
+     "q": "What does buying a frame commit you to that buying modules does not?",
+     "a": "The permanent maximum capacity of that position in the room. Modules are added cheaply later; a frame is replaced only as a construction project inside a live building. It is the decision that cannot be deferred, which is why capacity-on-demand defers roughly a third of the cost, not most of it."
+    },
+    {
+     "q": "A UPS is quoted as '2,000 kVA-kW'. What does the hyphenated form tell you?",
+     "a": "That the apparent-power and real-power ratings are equal — a unity power factor machine, with no hidden margin between the rating and the usable output. Comparing it against a 0.9-rated unit of the same kVA silently mis-sizes the plant by ten percent."
+    },
+    {
+     "q": "Why is a UPS's overload rating a coordination input rather than a marketing line?",
+     "a": "Because a downstream breaker clears a fault only if it is given enough current to trip. An inverter that folds back to its rating to protect its semiconductors starves the breaker, so the fault persists and the whole bus is lost instead of one circuit."
+    },
+    {
+     "q": "Which datasheet lines most often produce a surprise on site?",
+     "a": "Overload rating, short-circuit contribution, floor loading, and the battery charge-current limit. None appears in a headline comparison, and each can invalidate a design that compared well on the lines that did."
+    },
+    {
+     "q": "What actually releases a UPS into manufacturing?",
+     "a": "Submittal approval by the engineer of record — not the purchase order. Approvals sit in queues, which makes this the most common silent schedule killer in the whole procurement sequence."
+    },
+    {
+     "q": "Distinguish the factory acceptance test, the site acceptance test and the integrated systems test.",
+     "a": "The works test proves the machine, with the customer present under load bank. The site test proves the installation in its final configuration. The integrated systems test fails the whole plant on purpose — utility dropped, engines started, transfers made, cooling recovered — and is the only one that tests the seams. A project that ran only the first two has never seen its plant fail."
+    },
+    {
+     "q": "What is a slot reservation buying in a shortage?",
+     "a": "Queue position, before the equipment is fully specified and sometimes before it is designed. A buyer who waits for a complete design gets a later slot with a better-specified machine — and the slot was the scarce thing."
+    },
+    {
+     "q": "What does moving the store from the electrical room into the rack distribute?",
+     "a": "Three things at once: the stored energy becomes hundreds of small BBU shelves rather than one battery room; the fault duty moves onto a DC bus with no zero crossing, which is why solid-state breakers appear; and maintenance becomes a per-rack activity rather than one action protecting a whole hall."
+    },
+    {
+     "q": "Why does Vertiv sell a rack power shelf that undercuts its own large-UPS franchise?",
+     "a": "Because the marginal megawatt in new AI halls is where the architecture question is live, and the installed base guarantees the room-UPS service annuity regardless. Selling both is a hedge on which architecture wins the next build, not a prediction."
+    },
+    {
+     "q": "What is the difference between a CRAC and a CRAH?",
+     "a": "A CRAC is a self-contained refrigeration machine with its own compressor. A CRAH is just a chilled-water coil and fans — the refrigeration happens at a central chiller plant. Small and edge sites run CRACs; large facilities centralize with chillers feeding many CRAHs for efficiency."
+    },
+    {
+     "q": "What does an economizer do, and why does climate drive cooling design?",
+     "a": "When outdoor conditions are cool enough, the plant bypasses or unloads mechanical refrigeration and rejects heat nearly free — air-side or water-side free cooling. The hours per year this works depend entirely on local weather, so cooling design begins with a climate file, not an equipment catalog."
+    },
+    {
+     "q": "Why does a CDU keep two liquid loops strictly separate?",
+     "a": "Facility water is dirty, high-volume, and variable; the technology loop touching servers must be chemically treated, filtered, and precisely controlled. The coolant distribution unit's heat exchanger passes heat between them while isolating chemistry, pressure, and cleanliness — protecting thousands of cold plates from the building's plumbing."
+    },
+    {
+     "q": "What niche does a rear-door heat exchanger fill?",
+     "a": "It replaces a rack's back door with a liquid-fed radiator that neutralizes exhaust heat while the servers stay air-cooled internally. It is the retrofit middle step: liquid reaches the rack and densities rise, but the IT hardware itself is untouched."
+    },
+    {
+     "q": "What is 'approach' in a cooling chain?",
+     "a": "The temperature difference across a heat exchanger that drives heat through it. Every stage from chip to atmosphere consumes some approach, and the total budget is fixed: chip temperature limit minus the hottest outdoor day. Cooling design is the art of spending those degrees wisely."
+    },
+    {
+     "q": "Why does warm-water cooling unlock chiller-free operation?",
+     "a": "If servers accept 40-45°C supply water, the return water is hot enough to reject heat to outdoor air in most climates without running compressors. Raising the acceptable coolant temperature hands the design more spare degrees — and each spare degree converts into free-cooling hours."
+    },
+    {
+     "q": "Why are blanking panels called the cheapest cooling fix in the industry?",
+     "a": "Empty rack slots let hot exhaust recirculate to server intakes, so equipment inhales its own heat and fans spin harder. A sheet-metal panel sealing the gap stops it. Rack cooling is mostly the disciplined prevention of small airflow leaks and short circuits, multiplied across thousands of cabinets."
+    },
+    {
+     "q": "What sets the power ceiling of an air-cooled rack?",
+     "a": "Bookkeeping: heat removed equals airflow times air temperature rise. Servers can only pull so much air, and equipment tolerates only so much rise, so air cooling runs out of headroom in the tens of kilowatts per cabinet — the physical driver of the shift to liquid."
+    },
+    {
+     "q": "Why are service contracts the steadiest business in critical infrastructure?",
+     "a": "Customers are buying uptime: response-time commitments, preventive maintenance, guaranteed parts. Every shipped unit adds contract-years that recur regardless of whether anyone is building new capacity — at margins typically better and far steadier than equipment sales."
+    },
+    {
+     "q": "Why is a field-service network a moat?",
+     "a": "Thousands of trained engineers, regional spare depots, and 24/7 emergency coverage take decades and an installed base to justify economically. A challenger can match a product specification in two years; it cannot match twenty years of service footprint — and critical-facility buyers weigh that footprint heavily."
+    },
+    {
+     "q": "What do book-to-bill and backlog duration tell you about an equipment vendor?",
+     "a": "Book-to-bill — orders divided by revenue — above 1.0 means the future is growing faster than the present; below 1.0, the backlog is draining. Backlog duration, the months of forward revenue already booked, measures how far ahead the vendor can actually see."
+    },
+    {
+     "q": "Why do equipment vendors amplify their customers' capex cycles?",
+     "a": "Orders react instantly to customer mood while revenue and costs move slowly: in a boom, orders spike years ahead of deliverable capacity; in a pause, orders vanish while factories keep running. A pure-play vendor experiences the cycle with leverage — in its factories and in its stock price."
+    }
+   ]
   },
   {
-   "q": "Why does a CDU keep two liquid loops strictly separate?",
-   "a": "Facility water is dirty, high-volume, and variable; the technology loop touching servers must be chemically treated, filtered, and precisely controlled. The coolant distribution unit's heat exchanger passes heat between them while isolating chemistry, pressure, and cleanliness \u2014 protecting thousands of cold plates from the building's plumbing."
-  },
-  {
-   "q": "What niche does a rear-door heat exchanger fill?",
-   "a": "It replaces a rack's back door with a liquid-fed radiator that neutralizes exhaust heat while the servers stay air-cooled internally. It is the retrofit middle step: liquid reaches the rack and densities rise, but the IT hardware itself is untouched."
-  },
-  {
-   "q": "What is 'approach' in a cooling chain?",
-   "a": "The temperature difference across a heat exchanger that drives heat through it. Every stage from chip to atmosphere consumes some approach, and the total budget is fixed: chip temperature limit minus the hottest outdoor day. Cooling design is the art of spending those degrees wisely."
-  },
-  {
-   "q": "Why does warm-water cooling unlock chiller-free operation?",
-   "a": "If servers accept 40-45\u00b0C supply water, the return water is hot enough to reject heat to outdoor air in most climates without running compressors. Raising the acceptable coolant temperature hands the design more spare degrees \u2014 and each spare degree converts into free-cooling hours."
-  },
-  {
-   "q": "Why are blanking panels called the cheapest cooling fix in the industry?",
-   "a": "Empty rack slots let hot exhaust recirculate to server intakes, so equipment inhales its own heat and fans spin harder. A sheet-metal panel sealing the gap stops it. Rack cooling is mostly the disciplined prevention of small airflow leaks and short circuits, multiplied across thousands of cabinets."
-  },
-  {
-   "q": "What sets the power ceiling of an air-cooled rack?",
-   "a": "Bookkeeping: heat removed equals airflow times air temperature rise. Servers can only pull so much air, and equipment tolerates only so much rise, so air cooling runs out of headroom in the tens of kilowatts per cabinet \u2014 the physical driver of the shift to liquid."
-  },
-  {
-   "q": "Why are service contracts the steadiest business in critical infrastructure?",
-   "a": "Customers are buying uptime: response-time commitments, preventive maintenance, guaranteed parts. Every shipped unit adds contract-years that recur regardless of whether anyone is building new capacity \u2014 at margins typically better and far steadier than equipment sales."
-  },
-  {
-   "q": "Why is a field-service network a moat?",
-   "a": "Thousands of trained engineers, regional spare depots, and 24/7 emergency coverage take decades and an installed base to justify economically. A challenger can match a product specification in two years; it cannot match twenty years of service footprint \u2014 and critical-facility buyers weigh that footprint heavily."
-  },
-  {
-   "q": "What do book-to-bill and backlog duration tell you about an equipment vendor?",
-   "a": "Book-to-bill \u2014 orders divided by revenue \u2014 above 1.0 means the future is growing faster than the present; below 1.0, the backlog is draining. Backlog duration, the months of forward revenue already booked, measures how far ahead the vendor can actually see."
-  },
-  {
-   "q": "Why do equipment vendors amplify their customers' capex cycles?",
-   "a": "Orders react instantly to customer mood while revenue and costs move slowly: in a boom, orders spike years ahead of deliverable capacity; in a pause, orders vanish while factories keep running. A pure-play vendor experiences the cycle with leverage \u2014 in its factories and in its stock price."
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A vendor quotes 'N+1 redundancy' on a modular UPS. The single most useful follow-up question is:",
+     "c": [
+      "What is the efficiency at 50 percent load?",
+      "N+1 of what — modules in a frame, frames in a system, or systems on independent paths?",
+      "Is the machine unity power factor?",
+      "What is the mean time between failures?"
+     ],
+     "a": 1,
+     "why": "All three levels are legitimate designs and all three get called N+1. They differ by roughly an order of magnitude in price and by an entire class of surviving failure. Until the level is named the claim carries no information."
+    },
+    {
+     "q": "A colocation operator will fill a 6 MW hall over about three years. Buying frames now and modules as tenants sign defers approximately:",
+     "c": [
+      "Most of the electrical cost",
+      "About a third of the cost — the modules only",
+      "Nothing, because the frames are the expensive part of the modules",
+      "The commissioning cost as well as the equipment cost"
+     ],
+     "a": 1,
+     "why": "Frames, breakers, cabling, the battery room, the electrical-room cooling and the floor loading are all sized for the end state on day one. Capacity-on-demand is a real financial instrument, but it defers the modules, not the room."
+    },
+    {
+     "q": "A UPS project's delivery date slipped by ten weeks with no factory problem reported. The most likely cause is:",
+     "c": [
+      "The factory acceptance test failed",
+      "Submittal approval sat in the engineer's queue",
+      "The load bank was unavailable",
+      "The static bypass was mis-specified"
+     ],
+     "a": 1,
+     "why": "Manufacturing starts on submittal approval, not on the purchase order. It is the least visible step in the sequence and the most common source of schedule loss, because the delay accrues on someone else's desk."
+    },
+    {
+     "q": "Two 1,000 kW UPS quotes differ mainly in their published overload rating. The one with the lower figure is riskier because:",
+     "c": [
+      "It will run hotter at full load",
+      "It may not feed a downstream fault hard enough for the branch breaker to clear",
+      "Its efficiency curve will be worse at light load",
+      "It cannot be paralleled"
+     ],
+     "a": 1,
+     "why": "Selective coordination depends on the source being able to deliver fault current for long enough that the nearest protective device operates. An inverter that current-limits to protect itself protects the wrong thing: the fault stays and the bus is lost instead of the circuit."
+    },
+    {
+     "q": "A hall was commissioned with a witnessed works test and a site acceptance test, and the integrated systems test was cut. What has not been proven?",
+     "c": [
+      "That the UPS meets its efficiency figures",
+      "That the plant's pieces behave as one system when the utility is lost",
+      "That the installation matches the drawings",
+      "That the battery meets its autonomy"
+     ],
+     "a": 1,
+     "why": "The works test proves the machine and the site test proves the installation. Only the integrated test drops the supply on purpose under load and watches the engines start, the transfers happen and the cooling recover — the seams, which is where paralleled plants actually fail."
+    },
+    {
+     "q": "Which of these is genuinely new about an 800 VDC rack architecture, as opposed to a repackaging?",
+     "c": [
+      "It removes the need for redundancy in the power path",
+      "It distributes the stored energy, the fault duty and the maintenance action that a room UPS concentrated",
+      "It eliminates conversion losses entirely",
+      "It makes the UPS unnecessary in the electrical room for existing halls"
+     ],
+     "a": 1,
+     "why": "A room UPS concentrates three separate jobs — the store, the fault-current source for downstream coordination, and a single maintenance action covering a whole hall. Moving to the rack distributes all three, which is a design change with real consequences, not merely a different place to put a converter."
+    }
+   ]
   }
  ]
 }

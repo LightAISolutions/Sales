@@ -1,18 +1,354 @@
 {
  "schemaVersion": 2,
  "slug": "siemens-energy",
- "title": "Siemens Energy \u2014 Study Guide",
- "lastUpdated": "2026-08-21",
+ "title": "Siemens Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-04",
  "sections": [
+  {
+   "id": "what-this-guide-adds",
+   "title": "Start here: the wire between the generator and the load",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "This guide previously taught Siemens Energy through its turbines: the conglomerate argument, backlog economics, an industrial turnaround, electrolyzer manufacturing, service fleets, and energy security as industrial policy. Those six sections are still here, further down, and the backlog and policy sections in particular are the best account in this app of how a long-cycle equipment order book actually behaves. What has been added in front of them is the division that was missing entirely: **Grid Technologies — the equipment that connects generation to load**.",
+    "**What this section deliberately does not repeat.** Four guides already teach parts of the grid, and the gaps between them are where this one sits. **Hitachi Energy's guide** teaches the transformer *factory* and why one big unit takes years, the HVDC converter's internals (thyristors against transistors), grid-forming inverters, and the geography of heavy manufacturing. **GE Vernova's guide** teaches the power-OEM business model, the installed-base flywheel, why grid-equipment factories cannot simply scale up, and generator physics from spinning shaft to grid current. **ABB's guide** teaches medium against low voltage, arc interruption in a breaker, and protection relays as the network's reflexes. **Powell Industries' guide** teaches the switchgear lineup itself, main-tie-main, arc flash, and the protection study.",
+    "**What this guide adds** is the layer none of them covers: **the network as a system rather than as equipment**. Why the wire, not the plant, is usually what limits how much power a load can get. What physically happens between a generator's terminals and a transmission line — the {{generator circuit breaker}}, the {{generator step-up transformer}}, the {{bay}}, the {{switchyard}}. Why a high-voltage substation is increasingly a sealed gas-filled box, what {{SF6}} is doing in it, and what replaces it. Why anyone builds a direct-current link at all, which is a completely different question from how the converter works. What {{inertia}}, {{system strength}} and {{RoCoF}} actually mean and the two very different machines sold to supply them. And what a 36-month transformer lead time does to a project, read from the *buyer's* side rather than the factory's.",
+    "One idea holds the whole section together. **A grid does not fail by running out of generation; it fails by running out of the ability to move it, hold it steady, or connect to it.** Every product in Siemens Energy's Grid Technologies catalogue is an answer to one of those three, and reading the catalogue that way makes it a syllabus rather than a list."
+   ]
+  },
+  {
+   "id": "the-wire-is-the-constraint",
+   "title": "Why the wire, not the plant, is usually the constraint",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "The intuitive model of a power system is a tank and a tap: build enough generation and the load is served. The real constraint is almost always the network in between, and the reason is arithmetic that a high-school physics class already contains. Power is volts times amps, and the loss in a conductor is {{I²R loss}} — proportional to the *square* of the current. Move a given amount of power at ten times the voltage and you need a tenth of the current, and you lose a hundredth of the power. That single relationship is why transmission exists, why it runs at hundreds of kilovolts, and why every step of a power system is a voltage change: Siemens Energy's own transformer range runs from 10 kV to {{765 kV}}-class and beyond, to 800 kV.",
+    "**What actually limits a line.** Three different things, and which one binds depends on the line, which is why 'capacity' is a slippery word here. **Thermal**: current heats the conductor, it expands and sags, and the clearance to whatever is beneath it is a legal limit — this is {{ampacity}}, and it is the limit on short lines. **Voltage**: pushing power along a long line drops voltage at the far end, and past a point the drop runs away and the system collapses — this binds on long lines and weak corridors, and it is a {{reactive power}} problem rather than a heat problem. **Stability**: the generators at each end must stay in step with one another; push too much power across and a disturbance leaves them unable to re-synchronise. The real number is the {{transfer limit}}, which is whichever of the three binds first, and it usually sits well below the sum of the lines' thermal ratings.",
+    "**Then subtract one of everything.** Networks are planned to the {{N-1}} rule: the system must survive losing any single element — a line, a transformer, a generator — without shedding load. So the usable transfer limit is not what the corridor carries today but what it can carry with its largest element out. This is why transmission looks over-built on an ordinary day and why one outage can make a region's apparent spare capacity vanish at once. It is also why a new large load is not evaluated against average conditions but against the worst credible single failure while it is connected.",
+    "**{{congestion}} is what this feels like from the market.** When the cheapest generation cannot reach the load because the wires between are full, most US markets do not ration — they price. The load pays more, the constrained generator is paid less, and the difference is the everyday, monetised form of the transmission shortage. For a data-centre developer this shows up as a location decision long before it shows up as an engineering one: two sites twenty miles apart can differ by years of connection date and by a large multiple in interconnection cost, entirely because of what the wires between them can do.",
+    "**Where this leaves the equipment.** Everything Grid Technologies sells is an answer to one of the three limits. Transformers change the voltage so the current can be small. {{gas-insulated switchgear}} and {{air-insulated switchgear}} make the connection points switchable and protectable. {{HVDC}} sidesteps the stability and voltage limits entirely by not being alternating current. And {{STATCOM}}s and {{synchronous condenser}}s hold the voltage and the frequency steady when the machines that used to do it for free have retired. Burns & McDonnell's and Stack Infrastructure's guides in this app cover the *queue* — what it takes to get a connection agreement; this guide is about what has to exist physically once you have one."
+   ]
+  },
+  {
+   "id": "from-terminals-to-the-line",
+   "title": "From the generator's terminals to the transmission line",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "GE Vernova's guide takes a spinning shaft and produces current at the generator's terminals. This table picks up at exactly that point and follows the power out to the network. It is the physical meaning of the phrase 'connecting generation to load', and every row is a separately procured object with its own lead time.",
+   "cols": [
+    "Element",
+    "What it physically is",
+    "What it decides"
+   ],
+   "rows": [
+    [
+     "**Generator terminals**",
+     "The machine's output at its own voltage — for large plant, typically in the tens of kilovolts, chosen so the conductors inside the machine stay a sane size",
+     "Nothing on the network runs at this voltage, which is why the very next object exists. Generator voltage is an internal machine decision, not a system one"
+    ],
+    [
+     "**{{generator circuit breaker}}**",
+     "A breaker between the machine and its step-up transformer, rated for the enormous currents available right at a generator's terminals",
+     "Whether one unit can be taken off and returned without switching the whole high-voltage {{bay}}. It also protects the machine from faults on its own transformer, which is the fault it is least able to survive"
+    ],
+    [
+     "**{{generator step-up transformer}}**",
+     "A transformer dedicated to one machine, lifting terminal voltage to transmission voltage. Sized to the unit, custom, and shipped in pieces",
+     "Frequently the whole plant's schedule. It is a {{large power transformer}} in every commercial sense — years of lead time — and it is useless to any other project if the plant is cancelled"
+    ],
+    [
+     "**Auxiliary transformer**",
+     "A much smaller transformer taking station service off the same connection to run the plant's own pumps, fans and controls",
+     "How the plant starts and how it survives a trip. A station that cannot power itself cannot restart itself, which is the practical content of {{black start}}"
+    ],
+    [
+     "**The {{bay}}**",
+     "One complete switching position: breaker, disconnects, earthing switches, {{current transformer}}s and voltage transformers, and the protection that belongs to that circuit",
+     "The unit in which substations are counted, priced and extended. Adding a circuit means adding a bay, and a yard laid out without spare bays is expensive to extend"
+    ],
+    [
+     "**The {{switchyard}} or substation**",
+     "The whole fenced arrangement of bays and busbars where the plant's output is gathered and handed to the network. Air-insulated in the open, or gas-insulated in a building",
+     "Where the plant meets everyone else. Its layout — single bus, double bus, breaker-and-a-half — is a redundancy decision exactly like the ones in the data hall, and made for the same reason: to work on it while it runs"
+    ],
+    [
+     "**The {{point of interconnection}}**",
+     "The exact physical spot where the owner's equipment ends and the network's begins",
+     "Every study, tariff, protection setting and argument about who pays refers to it. It is a commercial boundary drawn on an electrical drawing"
+    ]
+   ],
+   "note": "Read the table twice — once for a power plant, once for a large data-centre campus, because the objects are the same and only the direction of the power differs. A campus taking 500 MW needs the same bays, the same breakers and the same transformers as a plant delivering it, which is exactly why the two are competing for the same factory slots. The Eaton alliance in Siemens Energy's own catalogue makes that explicit: a standard 500 MW on-site block pairs the generation with the whole electrical stack, because delivering one without the other delivers nothing."
+  },
+  {
+   "id": "the-substation-in-a-box",
+   "title": "Open air or sealed gas: the substation as a footprint decision",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "At high voltage, insulation is mostly distance — air breaks down at a fairly poor voltage per millimetre, so clearances, and therefore land, grow with the voltage. A gas-insulated substation buys that distance back chemically. ABB's guide teaches how a breaker actually interrupts an arc; this table is one level up, about what the live parts sit *in* and what that choice costs.",
+   "cols": [
+    "Dimension",
+    "{{air-insulated switchgear}}",
+    "{{gas-insulated switchgear}} with {{SF6}}",
+    "{{SF6-free switchgear}}"
+   ],
+   "rows": [
+    [
+     "**How the insulation works**",
+     "Open air and physical clearance. Free, abundant, and needs a great deal of space per kilovolt",
+     "Sulphur hexafluoride under pressure in a sealed earthed enclosure — several times better than air as an insulator and far better at quenching an arc",
+     "Dried natural-origin air or a lower-warming fluorinated gas, usually paired with **vacuum interruption**, because clean air alone is a much poorer arc quencher"
+    ],
+    [
+     "**Footprint**",
+     "Largest. A high-voltage yard is measured in hectares",
+     "A small fraction of the AIS footprint for the same voltage — the reason it exists at all",
+     "Close to conventional GIS, sometimes slightly larger for the same rating"
+    ],
+    [
+     "**Where it wins**",
+     "Rural sites with cheap land, and anywhere maintenance access matters more than area",
+     "Urban and constrained sites, offshore platforms, and anywhere land, salt, dust or seismic exposure makes an open yard impractical",
+     "Any of the above where the operator has an emissions commitment or a regulator with a view"
+    ],
+    [
+     "**Maintenance and diagnosis**",
+     "Everything is visible and reachable. Faults can often be found by looking",
+     "Sealed. Diagnosis is by gas density, partial-discharge monitoring and instrumentation, and an internal fault is a major intervention",
+     "Same sealed logic, with the added consideration that vacuum interrupters are a different wear item from a puffer"
+    ],
+    [
+     "**The environmental line**",
+     "None to speak of",
+     "SF6 is among the most potent greenhouse gases known and persists for millennia. Leak rates are regulated, inventories are reported, and the gas is tracked over the asset's life",
+     "The reason the portfolio exists. Siemens Energy markets its 'Blue' range on exactly this, and the same technology extends to DC applications — its DC-GIS is published to ±550 kV and 5 kA"
+    ],
+    [
+     "**The honest catch**",
+     "Land is not always available at any price",
+     "It works extremely well, which is precisely the problem: the incumbent is technically excellent and environmentally indefensible at scale",
+     "Newer fleet, less field history, and a supply chain that is still being built out. The buyer is trading proven service life for a regulatory position"
+    ]
+   ],
+   "note": "The commercial shape of this is worth noticing because it recurs across the whole energy-equipment industry. A gas that is nearly ideal on every engineering axis is being displaced for a reason that appears on none of them — and the replacement is not one substance but a **combination**: a weaker insulating medium plus a different interruption technology, doing together what one gas used to do alone. That is why SF6-free is a portfolio and not a substitution, and why it arrives voltage class by voltage class rather than all at once."
+  },
+  {
+   "id": "why-build-a-dc-link",
+   "title": "Why build a DC link at all",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Hitachi Energy's guide answers *how* an {{HVDC}} converter works — thyristor-based {{line-commutated converter}} designs against transistor-based {{voltage source converter}} ones. This section answers the prior question, which is the one a buyer actually faces: **why would anyone convert to direct current, run it, and convert it back?** Every DC link pays for two expensive converter stations. Something has to be worth that.",
+    "**Reason one: distance.** DC needs fewer conductors for the same power and has no reactive component to carry, so the line itself is cheaper per kilometre and loses less. Below some route length the two converter stations dominate and AC wins; above it DC does. That crossover is the {{break-even distance}}, and it is a real number for each project rather than a constant — it moves with terrain, with land cost, and with how much the converters cost that year.",
+    "**Reason two: cable, which is not the same as distance.** An AC cable is a long capacitor, and it draws {{cable charging current}} simply to charge itself, growing with length and voltage. Past roughly a hundred kilometres of subsea cable that charging current consumes the entire rating and the cable delivers nothing useful at the far end. There is no engineering around this within AC. It is the reason essentially every long offshore wind connection and every long submarine interconnector in the world is direct current — not a preference, a hard boundary.",
+    "**Reason three: control.** An AC line is a pipe: power flows through it according to impedance, and where it goes is the network's arithmetic rather than anyone's decision. A DC link is a **valve**. The converters set exactly how much power flows and in which direction, continuously. That is worth paying for even over a short distance, because it lets an operator route power around a congested corridor rather than reinforcing the corridor — the same reason {{FACTS}} devices exist on the AC side, taken to its conclusion.",
+    "**Reason four: keeping two networks apart.** An {{asynchronous tie}} joins two AC systems that are not in step, and need not be. Power crosses; disturbances do not. This is why the major North American interconnections are joined by DC rather than by wires, and why a DC link is sometimes chosen for a short distance purely as a firewall.",
+    "**What it costs, honestly.** Two converter stations, each a building rather than a bay, each with converter transformers that are themselves {{large power transformer}}s with their own lead time — Siemens Energy's transformer range explicitly includes HVDC converter transformers for this reason. Each station loses something in the region of a percent of the power passing through it, so short links spend twice what a line would have lost. And a fault on a DC system is genuinely harder to clear: direct current has no {{zero crossing}} to help a breaker, so a {{DC circuit breaker}} must force the current to zero itself, which is why DC breakers arrived decades after AC ones and why many links are still protected by tripping the converters instead. That same physics — the arc that will not go out on its own — appears at four hundred thousand times smaller scale inside an 800-volt rack, which is why {{SSCB}}s show up in Vicor's and Zhonhen's guides. It is the same problem.",
+    "**The shape of the decision.** Long overhead route, or any long cable, or a need to control the flow, or a need to join two systems without joining their problems — DC. Anything else — AC, and spend the money on the corridor instead."
+   ]
+  },
+  {
+   "id": "holding-the-grid-up",
+   "title": "Holding it steady: inertia, strength, and the two machines that supply them",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "A synchronous generator gives a grid three things for free while it sells electricity: **{{inertia}}** (heavy spinning mass that resists sudden frequency change), **{{system strength}}** (a stiff voltage and plenty of {{fault current}} so protection can operate and converters can stay stable), and {{reactive power}} on demand. Retire the machine and all three leave with it — which is why {{RoCoF}} rises as inverters displace generators, and why protection settings written for the old world mis-trip in the new one. Hitachi Energy's guide covers the third answer to this, the {{grid-forming inverter}}. These are the other two, and Siemens Energy sells both.",
+   "cards": [
+    {
+     "t": "{{synchronous condenser}} — a generator with nothing to turn it",
+     "meta": "A large synchronous machine spinning in step with the grid, burning no fuel and driving no load. Frequently a retired generator with its turbine removed",
+     "adv": [
+      "Supplies genuine {{inertia}}. It is physical stored rotational energy, and it responds because physics responds — with no control loop, no firmware and nothing to configure",
+      "Supplies real {{fault current}}, which is what {{system strength}} actually means and what protection relays need in order to see a fault at all",
+      "Supplies {{reactive power}} continuously and rides through disturbances that would take a converter offline",
+      "Occasionally the cheapest option available: a closing coal or gas unit can be converted rather than demolished, keeping its connection, its transformer and its bay"
+     ],
+     "dis": [
+      "It is a large rotating machine with bearings, cooling and an overhaul cycle — real operations and maintenance for an asset that generates no revenue by itself",
+      "Its response to a voltage event is fast by mechanical standards and slow by electronic ones",
+      "It consumes a little power continuously just to keep spinning",
+      "Siting is a construction project, not a delivery"
+     ]
+    },
+    {
+     "t": "{{STATCOM}} — reactive power from semiconductors",
+     "meta": "A converter that injects or absorbs {{reactive power}} in milliseconds to hold voltage. Siemens Energy markets its E-STATCOM specifically at data-centre load fluctuation",
+     "adv": [
+      "Very fast — the response is a switching decision, so it answers a voltage swing far quicker than any mechanical alternative",
+      "Its full range is available at low voltage, exactly when the grid needs it most, where a switched capacitor's output collapses just as it is needed",
+      "Compact, factory-built and containerisable; it can be placed where the problem is rather than where a machine will fit",
+      "Controllable and tunable, including against a specific disturbance signature such as a repetitive load swing"
+     ],
+     "dis": [
+      "It supplies **no {{inertia}}** — nothing physical is stored, so it cannot slow a frequency fall, only support voltage",
+      "It supplies very little {{fault current}}, so it does not raise {{system strength}} in the way protection engineers mean",
+      "It is itself a converter, and converters need a reasonably strong grid to remain stable — which is uncomfortable when the reason it was bought is that the grid is weak",
+      "Its behaviour is firmware, which means settings, versions, and interactions with the other converters nearby"
+     ]
+    }
+   ],
+   "note": "The two are not competitors so much as answers to different words in the same sentence. If the problem is **frequency falling too fast**, only stored mechanical energy — or a very fast {{grid-forming inverter}} with energy behind it — helps. If the problem is **voltage moving too fast**, the STATCOM is better at it than the machine. Large AI campuses generate exactly the second problem: tens of megawatts swinging in milliseconds, repetitively, which is row 12 of this app's failure map and the reason a grid-stability product is being marketed at data centres at all. Piller's guide teaches that swing from inside the fence, where the UPS sees it; this is the same event seen from the network, where it shows up as {{flicker}} and as an interconnection condition."
+  },
+  {
+   "id": "the-queue-and-the-lead-time",
+   "title": "What a three-year transformer does to a project",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Hitachi Energy's guide explains why one large transformer takes years to build, and GE Vernova's explains why the factories cannot simply be scaled up. Neither answers the question a buyer has: **given that, what do I do?** This table is the buyer's side. The context, from Siemens Energy's own published position: US Southeast lead times for large power transformers running past 36 months, roughly four-fifths of US large power transformers imported, and the company adding domestic capacity — a $150M Charlotte transformer plant and a new Mississippi high-voltage switchgear plant — while lifting transformer capacity by 30 to 50 percent across FY26–28.",
+   "cols": [
+    "The instrument",
+    "What it actually is",
+    "What it costs you"
+   ],
+   "rows": [
+    [
+     "**{{slot reservation}}**",
+     "Paying to hold a place in the production schedule before the equipment is specified, sometimes before the project is financed",
+     "Money at risk on a project that may not happen, and a specification that must be frozen earlier than the design is ready. In a shortage the queue position is the thing being bought, not the transformer"
+    ],
+    [
+     "**Standardisation**",
+     "Choosing a rating and configuration the factory already builds, instead of the optimal one for this site",
+     "A less efficient or slightly oversized unit, in exchange for a place in a repeat production run. This is the single largest lever, and it is an engineering concession made for schedule"
+    ],
+    [
+     "**{{mobile substation}}**",
+     "Transformer, switchgear and protection on trailers, deliverable and energisable in weeks",
+     "Lower rating, higher cost per MVA, and a temporary arrangement to unwind later — bought as a schedule instrument or as insurance, not as a permanent asset"
+    ],
+    [
+     "**Re-using an existing connection**",
+     "Siting at a retired plant, an industrial site or an existing yard whose bays, transformer and line already exist",
+     "You inherit someone else's ratings and someone else's condition. It is the fastest route to power and the least controllable one"
+    ],
+    [
+     "**Generating on site instead**",
+     "Building the power at the campus rather than importing it — the standard 500 MW on-site block in the Eaton alliance is exactly this product",
+     "Fuel supply, air permits and the whole on-site generation risk set (rows 4 and 5 of this app's failure map) in exchange for not waiting on the network. It converts a queue problem into a permitting problem"
+    ],
+    [
+     "**Simply waiting**",
+     "Accepting the connection date and building to it",
+     "Often the cheapest answer and almost never the chosen one, because the value of being early in an AI build cycle is larger than the cost of every alternative in this table"
+    ]
+   ],
+   "note": "Two consequences worth carrying. **The shortage is upstream of the design**, so it shapes what gets specified rather than merely when it arrives — standard ratings, repeat configurations, factory-built blocks. And it explains the backlog behaviour the section further down this guide teaches: when a factory is sold out for years, new orders enter at current prices while old cheaply-priced ones deliver first, so reported margins improve mechanically for years. The equipment shortage and the OEM's margin expansion are the same fact seen from two sides. What this app does **not** yet have is a proper treatment of the supply side of that shortage — {{GOES}} availability, bushings, test bays and the people who wind coils — which remains an open gap in the curriculum's own register."
+  },
+  {
+   "id": "how-big-the-pieces-are",
+   "title": "How big the pieces are: one axis, generation and grid together",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "MW or MVA (published company ratings)",
+   "intro": "Siemens Energy is one of very few companies that sells both ends of the connection, so its own catalogue can be plotted on a single axis. The useful comparison is the top of the grid range against the top of the generation range: the largest single transformer is bigger than the largest single machine, which is why one transformer can be a whole plant's schedule.",
+   "items": [
+    {
+     "label": "Distribution transformer",
+     "sub": "GEAFOL dry-type, top of published range",
+     "v": 10
+    },
+    {
+     "label": "SGT-800",
+     "sub": "industrial turbine, low rating — the on-site data-centre workhorse",
+     "v": 45.3
+    },
+    {
+     "label": "SGT-800",
+     "sub": "industrial turbine, top rating",
+     "v": 62.5
+    },
+    {
+     "label": "Modular on-site block",
+     "sub": "standard configuration with Eaton, redundant turbines plus storage",
+     "v": 500
+    },
+    {
+     "label": "SGT6-9000HL",
+     "sub": "60 Hz heavy-duty machine, simple cycle",
+     "v": 440
+    },
+    {
+     "label": "SGT5-9000HL",
+     "sub": "50 Hz heavy-duty machine, simple cycle",
+     "v": 593
+    },
+    {
+     "label": "Power transformer",
+     "sub": "top of the published range, to 800 kV",
+     "v": 1300
+    }
+   ],
+   "note": "Read the gap between the 45 MW industrial machine and the 593 MW heavy-duty one: those are not two sizes of the same product but two businesses, one sold to campuses and industrial sites and one sold to utilities and independent power producers. And read the transformer at the top: a single {{large power transformer}} moves more apparent power than the largest machine in the catalogue produces, which is the physical reason the grid is a shared asset and generation is not."
+  },
+  {
+   "id": "where-siemens-grid-slots-in",
+   "title": "Where the Grid Technologies catalogue slots into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The division read as a syllabus: each product answers one of the three ways a grid runs out — the ability to move power, to hold it steady, or to connect to it.",
+   "cols": [
+    "Where in the chain",
+    "The product",
+    "Which limit it answers"
+   ],
+   "rows": [
+    [
+     "Generator to network",
+     "{{generator step-up transformer}}s and HVDC converter transformers, to 800 kV and 1,300 MVA",
+     "Moving power: raising the voltage so the current, and therefore the {{I²R loss}}, is small"
+    ],
+    [
+     "The connection point",
+     "GIS and AIS {{switchgear}} including the SF6-free 'Blue' portfolio; containerised and {{mobile substation}} packages",
+     "Connecting: making the point switchable, protectable and — in the mobile case — available on a schedule"
+    ],
+    [
+     "Long-distance and offshore",
+     "HVDC in its voltage-source form, and DC-GIS to ±550 kV / 5 kA",
+     "Moving power past the {{break-even distance}}, past the cable-charging limit, and between systems that are not in step"
+    ],
+    [
+     "The weak or swinging point",
+     "E-STATCOM, {{synchronous condenser}}s",
+     "Holding it steady: voltage in milliseconds from the converter, {{inertia}} and {{fault current}} from the machine"
+    ],
+    [
+     "Behind the meter and beside the plant",
+     "Qstor and BlueVault storage lines",
+     "All three, partially — storage is the one asset that can shift energy in time, support voltage and provide fast frequency response from the same box"
+    ],
+    [
+     "The campus, as one purchase",
+     "The Eaton alliance's standard 500 MW on-site block: redundant turbines plus storage, with Eaton supplying the electrical stack from grid to chip",
+     "Sidestepping the network entirely — the last row of the lead-time table above, sold as a product"
+    ]
+   ],
+   "note": "The strategic point the older sections of this guide make about conglomerates lands hardest here. A campus needs generation, a step-up, a switchyard, stability equipment and the electrical stack inside the building, and it needs them in the same window. A vendor holding several of those scarce lines can sell scope that a single-product rival cannot even bid — and in a shortage, that advantage compounds, because the customer who has secured one scarce line has an interest in securing the rest from the same order book."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The connection date moves.** The study modelled the grid as it will be, and the grid keeps changing: a re-study, a queue re-pricing, a neighbouring project withdrawing, an upgrade the requester funds but does not control. Row 1 of this app's failure map, owned jointly by the developer and the utility, and the reason every instrument in the lead-time table above exists.",
+    "**The transformer is the project.** A {{large power transformer}} is custom, built to order, shipped in pieces and — for a {{generator step-up transformer}} — useless to anyone else. Bushings fail, paper that was not dried enough ages fast, a tap-changer wears, and a delivery slot slips. Row 2 of the failure map. Hitachi Energy's guide covers why the factory cannot go faster; the exposure here is that a single unit with no spare sits between a finished plant and any revenue at all.",
+    "**Protection that was correct for a different network.** Settings are coordinated against the fault current available when the study was done. Add a converter-dominated resource, retire a synchronous machine nearby, or connect a large load, and the available {{fault current}} changes — so a relay that used to see a fault may no longer see it, and one set for a fast {{RoCoF}} may trip on an event it should have ridden. Row 3 of the failure map. Owned by the protection engineer, and it goes stale silently because nothing about it looks different.",
+    "**Weak-point instability.** A converter — a {{STATCOM}}, a battery inverter, a wind farm — needs a certain {{system strength}} to remain stable, and connecting it can itself weaken the point it connects to. Several converters at one weak point can interact in ways none of them shows alone. This is the failure mode that has no equivalent in the synchronous era, and it is why {{system strength}} appears as an interconnection requirement rather than as a courtesy.",
+    "**The DC fault that has nowhere to go.** Direct current offers no {{zero crossing}}, so protecting a DC link means forcing the current to zero with a purpose-built {{DC circuit breaker}} or tripping the converters and de-energising the whole link. A design that assumed AC-style selectivity on a DC system has assumed a device it may not have bought. Row 11 of the failure map at grid scale — and the identical physics inside an 800-volt rack.",
+    "**A swinging load on a point that was strong enough for a factory.** Tens of megawatts moving in milliseconds, repetitively, exciting resonances below line frequency. It shows up as {{flicker}}, as harmonic distortion, and as an interconnection condition the developer did not price. Row 12 of the failure map, owned by the operator, the utility and whoever sold the buffer — and the reason a grid-stability product is now marketed by name at data centres."
+   ]
+  },
   {
    "id": "why-energy-conglomerates-persist-the-whole-chain-argument",
    "title": "Why energy conglomerates persist: the whole-chain argument",
    "kind": "prose",
    "ps": [
-    "A diversified energy OEM spans gas turbines, grid equipment, wind, and industrial machinery. The case for the bundle: a gigawatt campus needs turbines, transformers, switchgear, and stability gear together \u2014 a vendor delivering the whole electrical chain from one order book wins scope rivals must assemble piecemeal",
-    "In a shortage the bundle compounds: the customer who secures one scarce product line from a vendor gains an inside track on its other scarce lines \u2014 cross-selling works best precisely when everything is sold out",
-    "Shared technology deepens the logic: turbines, compressors, and generators are all rotating machinery drawing on common aerodynamics, materials science, and manufacturing; grid products share power-electronics and high-voltage engineering \u2014 R&D compounds across divisions",
-    "The standing counterargument is focus: a struggling division consumes the winners' cash and management attention, and investors apply a conglomerate discount when they cannot price the parts \u2014 the bundle survives only while shared customers and engineering demonstrably beat separation"
+    "A diversified energy OEM spans gas turbines, grid equipment, wind, and industrial machinery. The case for the bundle: a gigawatt campus needs turbines, transformers, switchgear, and stability gear together — a vendor delivering the whole electrical chain from one order book wins scope rivals must assemble piecemeal",
+    "In a shortage the bundle compounds: the customer who secures one scarce product line from a vendor gains an inside track on its other scarce lines — cross-selling works best precisely when everything is sold out",
+    "Shared technology deepens the logic: turbines, compressors, and generators are all rotating machinery drawing on common aerodynamics, materials science, and manufacturing; grid products share power-electronics and high-voltage engineering — R&D compounds across divisions",
+    "The standing counterargument is focus: a struggling division consumes the winners' cash and management attention, and investors apply a conglomerate discount when they cannot price the parts — the bundle survives only while shared customers and engineering demonstrably beat separation"
    ]
   },
   {
@@ -20,10 +356,10 @@
    "title": "Backlog economics: reading an OEM's future in its order book",
    "kind": "prose",
    "ps": [
-    "Backlog is contracted future revenue \u2014 orders signed but not yet delivered. For long-cycle equipment it stretches years ahead, giving OEMs something rare in industry: visibility. A backlog worth multiple years of revenue means the factories are sold out regardless of next quarter's news",
-    "Book-to-bill is the pulse: orders divided by revenue in a period. Above 1.0, the future is growing faster than the present; sustained far above it signals a demand shock \u2014 and as capacity fills, the seller starts choosing its customers instead of the reverse",
-    "Scarcity converts to pricing power mechanically: new orders enter backlog at today's higher prices while old, cheaply-priced orders deliver first \u2014 so reported margins improve for years as the backlog rolls over into the better vintage. Analysts track 'margin in backlog' for exactly this reason",
-    "Quality caveats: backlog can include frameworks and estimates; escalation clauses matter enormously in inflation (fixed-price backlog is a liability when costs spike); and reservation fees \u2014 paid deposits for future factory slots \u2014 sit upstream of backlog entirely. The number is a forecast input, not a guarantee"
+    "Backlog is contracted future revenue — orders signed but not yet delivered. For long-cycle equipment it stretches years ahead, giving OEMs something rare in industry: visibility. A backlog worth multiple years of revenue means the factories are sold out regardless of next quarter's news",
+    "Book-to-bill is the pulse: orders divided by revenue in a period. Above 1.0, the future is growing faster than the present; sustained far above it signals a demand shock — and as capacity fills, the seller starts choosing its customers instead of the reverse",
+    "Scarcity converts to pricing power mechanically: new orders enter backlog at today's higher prices while old, cheaply-priced orders deliver first — so reported margins improve for years as the backlog rolls over into the better vintage. Analysts track 'margin in backlog' for exactly this reason",
+    "Quality caveats: backlog can include frameworks and estimates; escalation clauses matter enormously in inflation (fixed-price backlog is a liability when costs spike); and reservation fees — paid deposits for future factory slots — sit upstream of backlog entirely. The number is a forecast input, not a guarantee"
    ]
   },
   {
@@ -31,10 +367,10 @@
    "title": "Industrial turnarounds: fixing a broken machinery business",
    "kind": "prose",
    "ps": [
-    "Fleet products fail in fleets: one flawed component design ships in thousands of units before the problem surfaces, and the maker then owes inspection, repair, or replacement across every affected machine \u2014 which is why a single quality crisis can produce billions in provisions and years of losses",
-    "Triage comes first: stop selling the defective platforms (halting revenue deliberately), quantify exposure honestly \u2014 a provision books tomorrow's estimated repair costs as today's loss \u2014 and re-baseline contracts that can no longer be delivered profitably",
-    "The trust rebuild is financial as much as technical: machinery buyers demand performance guarantees backed by bonds, and a maker in crisis struggles to obtain them \u2014 which is when banks, insurers, or in extremes the state must backstop the guarantee book so the company can keep taking orders",
-    "Recovery is proven, not announced: watch for the drag segment reaching break-even, guarantees returning to private markets, and several consecutive quarters without new charges \u2014 a turnaround completes when the repaired business survives contact with its own installed base"
+    "Fleet products fail in fleets: one flawed component design ships in thousands of units before the problem surfaces, and the maker then owes inspection, repair, or replacement across every affected machine — which is why a single quality crisis can produce billions in provisions and years of losses",
+    "Triage comes first: stop selling the defective platforms (halting revenue deliberately), quantify exposure honestly — a provision books tomorrow's estimated repair costs as today's loss — and re-baseline contracts that can no longer be delivered profitably",
+    "The trust rebuild is financial as much as technical: machinery buyers demand performance guarantees backed by bonds, and a maker in crisis struggles to obtain them — which is when banks, insurers, or in extremes the state must backstop the guarantee book so the company can keep taking orders",
+    "Recovery is proven, not announced: watch for the drag segment reaching break-even, guarantees returning to private markets, and several consecutive quarters without new charges — a turnaround completes when the repaired business survives contact with its own installed base"
    ]
   },
   {
@@ -42,10 +378,10 @@
    "title": "Industrializing the electrolyzer: hydrogen's factory problem",
    "kind": "prose",
    "ps": [
-    "An electrolyzer plant's heart is the stack \u2014 layered cells where electricity splits water. Stacks have historically been built like laboratory equipment: hand-assembled, low-volume, expensive. Making green hydrogen cheap is less about new science than about manufacturing stacks like industrial products",
-    "The scale-up playbook is borrowed from batteries and solar: automated gigawatt-scale factories, standardized stack designs produced in volume, dedicated supplier chains for membranes and catalysts \u2014 chasing the learning curve where each doubling of cumulative production predictably cuts unit cost",
-    "The materials problem is real but engineerable: PEM (proton exchange membrane) stacks lean on scarce iridium and platinum catalysts, so manufacturers race to thrift precious-metal loadings and recycle end-of-life stacks \u2014 materials engineering as cost strategy",
-    "The chicken-and-egg is the business risk: factories need volume to hit target costs, but buyers wait for costs to fall before ordering volume \u2014 so electrolyzer capacity runs ahead of demand, and makers survive on subsidy programs and anchor projects until the flywheel catches"
+    "An electrolyzer plant's heart is the stack — layered cells where electricity splits water. Stacks have historically been built like laboratory equipment: hand-assembled, low-volume, expensive. Making green hydrogen cheap is less about new science than about manufacturing stacks like industrial products",
+    "The scale-up playbook is borrowed from batteries and solar: automated gigawatt-scale factories, standardized stack designs produced in volume, dedicated supplier chains for membranes and catalysts — chasing the learning curve where each doubling of cumulative production predictably cuts unit cost",
+    "The materials problem is real but engineerable: PEM (proton exchange membrane) stacks lean on scarce iridium and platinum catalysts, so manufacturers race to thrift precious-metal loadings and recycle end-of-life stacks — materials engineering as cost strategy",
+    "The chicken-and-egg is the business risk: factories need volume to hit target costs, but buyers wait for costs to fall before ordering volume — so electrolyzer capacity runs ahead of demand, and makers survive on subsidy programs and anchor projects until the flywheel catches"
    ]
   },
   {
@@ -53,10 +389,10 @@
    "title": "Service fleets: monitoring thousands of machines from one room",
    "kind": "prose",
    "ps": [
-    "Modern turbine OEMs run remote monitoring centers where thousands of installed machines stream sensor data \u2014 vibration, temperatures, pressures, combustion dynamics \u2014 watched by algorithms and engineers who often flag a developing problem before the operator's own crew sees it",
-    "Maintenance is metered in equivalent operating hours (EOH): a schedule currency in which hard running \u2014 starts, trips, load swings \u2014 consumes hours faster than steady operation, determining when each machine reaches its minor and major overhauls",
-    "Overhauls are logistics ballets: a major inspection strips the machine to its rotor, and OEMs offer exchange programs \u2014 a refurbished core engine swapped in within days \u2014 because every idle day of a large plant means hundreds of thousands of dollars of lost generation",
-    "The installed fleet is also an upgrade market: OEMs sell performance packages back into old machines \u2014 improved blades, coatings, and controls that add output and efficiency to a 20-year-old unit \u2014 monetizing R&D twice while deepening the service lock-in"
+    "Modern turbine OEMs run remote monitoring centers where thousands of installed machines stream sensor data — vibration, temperatures, pressures, combustion dynamics — watched by algorithms and engineers who often flag a developing problem before the operator's own crew sees it",
+    "Maintenance is metered in equivalent operating hours (EOH): a schedule currency in which hard running — starts, trips, load swings — consumes hours faster than steady operation, determining when each machine reaches its minor and major overhauls",
+    "Overhauls are logistics ballets: a major inspection strips the machine to its rotor, and OEMs offer exchange programs — a refurbished core engine swapped in within days — because every idle day of a large plant means hundreds of thousands of dollars of lost generation",
+    "The installed fleet is also an upgrade market: OEMs sell performance packages back into old machines — improved blades, coatings, and controls that add output and efficiency to a 20-year-old unit — monetizing R&D twice while deepening the service lock-in"
    ]
   },
   {
@@ -64,61 +400,193 @@
    "title": "Energy security as industrial policy: politics reshaping order books",
    "kind": "prose",
    "ps": [
-    "Europe's 2022 gas shock turned energy from a market question into a security question: dependence on a single supplier proved weaponizable, and the policy response \u2014 accelerate renewables, interconnect grids, rebuild dispatchable capacity \u2014 translates directly into equipment orders",
-    "Grid buildout became statecraft: cross-border interconnectors and offshore-wind connections are planned by governments and transmission operators on decade horizons and tendered in multi-billion frameworks \u2014 demand driven by policy commitments rather than price signals, and unusually durable for it",
-    "Manufacturing itself became policy: governments subsidize domestic factories for turbines, transformers, and electrolyzers, weight tenders toward local content, and treat industrial capacity as strategic reserve \u2014 vendors site plants to qualify for markets, not merely to minimize cost",
-    "The caveat: policy demand can pivot \u2014 subsidy programs lapse, elections change priorities \u2014 so a business built on mandated orders carries political risk in place of market risk. The analyst's question is always which part of the backlog survives a policy reversal"
+    "Europe's 2022 gas shock turned energy from a market question into a security question: dependence on a single supplier proved weaponizable, and the policy response — accelerate renewables, interconnect grids, rebuild dispatchable capacity — translates directly into equipment orders",
+    "Grid buildout became statecraft: cross-border interconnectors and offshore-wind connections are planned by governments and transmission operators on decade horizons and tendered in multi-billion frameworks — demand driven by policy commitments rather than price signals, and unusually durable for it",
+    "Manufacturing itself became policy: governments subsidize domestic factories for turbines, transformers, and electrolyzers, weight tenders toward local content, and treat industrial capacity as strategic reserve — vendors site plants to qualify for markets, not merely to minimize cost",
+    "The caveat: policy demand can pivot — subsidy programs lapse, elections change priorities — so a business built on mandated orders carries political risk in place of market risk. The analyst's question is always which part of the backlog survives a policy reversal"
    ]
-  }
- ],
- "flashcards": [
-  {
-   "q": "What's the case for one company selling turbines, grid equipment, and wind together?",
-   "a": "A gigawatt campus needs generation and the entire electrical chain \u2014 turbines, transformers, switchgear, stability equipment \u2014 and a vendor with all of it on one order book can sell whole scopes rivals must assemble. The businesses also share engineering DNA: rotating machinery on one side, power electronics and high-voltage design on the other."
   },
   {
-   "q": "What is the conglomerate discount, and when does a diversified OEM deserve it?",
-   "a": "Investors price a bundle of businesses below the sum of its parts when the pieces do not visibly reinforce each other \u2014 a struggling division draining the winners' cash and attention is the classic trigger. The bundle earns its keep only while shared customers, cross-selling, and shared engineering demonstrably beat what focused pure-plays would achieve apart."
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why does transmission run at hundreds of kilovolts?",
+     "a": "Because loss is I²R — proportional to the square of the current. Moving the same power at ten times the voltage needs a tenth of the current and loses a hundredth of the power. Every voltage change in a power system exists to keep current, and therefore loss, small."
+    },
+    {
+     "q": "Name the three things that can limit a transmission line, and which binds when.",
+     "a": "Thermal — current heats the conductor, it sags, and clearance is a legal limit; this binds on short lines. Voltage — the drop along a long line runs away past a point and the system collapses; this binds on long or weak corridors. Stability — the machines at each end must stay in step. The transfer limit is whichever binds first, and it is usually well below the sum of the thermal ratings."
+    },
+    {
+     "q": "What is the N-1 rule and why does it make networks look over-built?",
+     "a": "The network must survive losing any single element without shedding load, so the usable transfer limit is what the corridor carries with its largest element out. On an ordinary day that looks like spare capacity; the day something trips, the apparent spare vanishes at once."
+    },
+    {
+     "q": "What is a generator step-up transformer, and why is it so often the schedule?",
+     "a": "The transformer dedicated to one machine that lifts terminal voltage — tens of kilovolts — to transmission voltage. It is custom, built to order, shipped in pieces, has years of lead time, and is useless to another project if this one is cancelled."
+    },
+    {
+     "q": "Why is a gas-insulated substation so much smaller than an air-insulated one?",
+     "a": "Because at high voltage insulation is mostly distance, and air is a fairly poor insulator per millimetre. SF6 under pressure in a sealed earthed enclosure insulates several times better and quenches arcs far better, so the same rating fits in a small fraction of the footprint."
+    },
+    {
+     "q": "Why is SF6-free switchgear a portfolio rather than a substitution?",
+     "a": "Because clean air replaces the insulating job but not the arc-quenching one, so the design also has to change the interruption technology — usually to vacuum. Two changes doing together what one gas did alone, which is why it arrives voltage class by voltage class rather than all at once."
+    },
+    {
+     "q": "Give the four reasons to build an HVDC link.",
+     "a": "Distance past the break-even point, where cheaper conductors and lower losses outweigh two converter stations. Cable length, because an AC cable's own charging current consumes its whole rating past roughly a hundred kilometres subsea. Control, because a DC link is a valve while an AC line is a pipe. And asynchronous connection, joining two systems that are not in step so power crosses while disturbances do not."
+    },
+    {
+     "q": "Why is a DC fault harder to clear than an AC fault?",
+     "a": "An AC waveform passes through zero twice a cycle, and an arc drawn on AC tends to go out at that instant. Direct current has no zero crossing, so a DC breaker must force the current to zero itself — with a resonant circuit or semiconductors. The same physics appears inside an 800-volt rack, which is why solid-state breakers show up there."
+    },
+    {
+     "q": "What three things does a synchronous generator supply for free while it sells electricity?",
+     "a": "Inertia — stored rotational energy that resists sudden frequency change; system strength — a stiff voltage and real fault current so protection can see a fault and converters stay stable; and reactive power on demand. Retiring the machine removes all three at once."
+    },
+    {
+     "q": "A synchronous condenser and a STATCOM both hold a grid up. What can each not do?",
+     "a": "A STATCOM supplies no inertia and almost no fault current — it supports voltage in milliseconds and nothing else, and being a converter it needs a reasonably strong grid to stay stable. A synchronous condenser supplies genuine inertia and fault current but responds slowly by electronic standards, needs bearings, cooling and overhauls, and consumes power just to keep spinning."
+    },
+    {
+     "q": "Why is a grid-stability product being marketed at data centres by name?",
+     "a": "Because a large AI campus produces exactly the disturbance a fast reactive-power device answers: tens of megawatts swinging in milliseconds, repetitively. Seen from inside the fence it is the load swing a UPS must absorb; seen from the network it is flicker, harmonic distortion, and an interconnection condition."
+    },
+    {
+     "q": "In a transformer shortage, what is the single largest lever a buyer actually has?",
+     "a": "Standardisation — choosing a rating and configuration the factory already builds rather than the one optimal for the site, in exchange for a place in a repeat production run. It is an engineering concession made purely for schedule, and it beats every other instrument in the table including paying more."
+    },
+    {
+     "q": "How are an equipment shortage and an OEM's margin expansion the same fact?",
+     "a": "When a factory is sold out for years, new orders enter the backlog at today's higher prices while old, cheaply-priced orders deliver first. As delivery works through to the richer vintage, reported margins rise mechanically — which is why analysts track margin in backlog rather than margin today."
+    },
+    {
+     "q": "What's the case for one company selling turbines, grid equipment, and wind together?",
+     "a": "A gigawatt campus needs generation and the entire electrical chain — turbines, transformers, switchgear, stability equipment — and a vendor with all of it on one order book can sell whole scopes rivals must assemble. The businesses also share engineering DNA: rotating machinery on one side, power electronics and high-voltage design on the other."
+    },
+    {
+     "q": "What is the conglomerate discount, and when does a diversified OEM deserve it?",
+     "a": "Investors price a bundle of businesses below the sum of its parts when the pieces do not visibly reinforce each other — a struggling division draining the winners' cash and attention is the classic trigger. The bundle earns its keep only while shared customers, cross-selling, and shared engineering demonstrably beat what focused pure-plays would achieve apart."
+    },
+    {
+     "q": "What are backlog and book-to-bill?",
+     "a": "Backlog is signed-but-undelivered future revenue; for long-cycle equipment it can cover several years of production. Book-to-bill divides a period's new orders by its revenue: above 1.0 the future is growing faster than the present, and a sustained ratio far above it signals a demand shock filling factories years ahead."
+    },
+    {
+     "q": "Why do OEM margins keep improving for years during an equipment shortage?",
+     "a": "Backlog rolls over by vintage: old orders priced in the lean years deliver first, while new orders enter at shortage prices. As delivery reaches the richer vintage, reported margins rise mechanically for years — which is why analysts track margin-in-backlog, and why today's income statement lags today's pricing power."
+    },
+    {
+     "q": "Why can a single design flaw cost a machinery maker billions?",
+     "a": "Fleet products fail in fleets: a flawed component ships in thousands of units before the failure mode surfaces, and the maker then owes inspection, repair, or replacement across every affected machine — booked upfront as provisions. One engineering decision multiplies across an installed base, which is why quality escapes dwarf ordinary project losses."
+    },
+    {
+     "q": "Why might a crisis-hit equipment maker need banks or the state to backstop its guarantees?",
+     "a": "Buyers of long-lived machinery demand performance guarantees backed by bonds before they will sign. A maker in visible distress struggles to obtain that backing at exactly the moment it needs new orders to recover — so banks, insurers, or in extreme cases a government must stand behind the guarantee book to keep the order intake alive."
+    },
+    {
+     "q": "What signals that an industrial turnaround is actually complete?",
+     "a": "Proof, not announcements: the drag segment reaching sustained break-even, external guarantees returning to private markets on normal terms, and several consecutive quarters without fresh charges from the installed base. A turnaround ends when the repaired business survives contact with its own fleet — not when management declares victory."
+    },
+    {
+     "q": "Why is cheap green hydrogen mostly a manufacturing problem?",
+     "a": "The core science of electrolysis is old; the cost sits in stacks historically hand-built like lab equipment. The path down is the battery/solar playbook — automated gigawatt factories, standardized designs, volume supply chains — riding the learning curve where each doubling of cumulative production predictably cuts unit cost."
+    },
+    {
+     "q": "What is the chicken-and-egg problem in electrolyzer scale-up?",
+     "a": "Factories need volume to reach target costs, but buyers wait for those costs before ordering volume — so manufacturing capacity runs ahead of demand and makers lean on subsidies and anchor projects until the flywheel catches. Add scarce iridium and platinum in PEM stacks, and thrifting catalysts becomes part of the cost strategy."
+    },
+    {
+     "q": "What are equivalent operating hours (EOH)?",
+     "a": "The schedule currency of turbine maintenance: hard running — starts, trips, rapid load swings — consumes hours faster than steady operation, so two machines with equal calendar time can be far apart in wear. EOH determines when each unit reaches its minor and major overhauls, and service contracts are priced around it."
+    },
+    {
+     "q": "What does an OEM's remote monitoring center actually do?",
+     "a": "It ingests live sensor streams — vibration, temperatures, pressures, combustion dynamics — from thousands of installed machines and flags developing problems, often before the operator's own crew notices. That data drives overhaul planning, feeds upgrade sales into old units, and turns the installed fleet into a continuously monetized asset."
+    },
+    {
+     "q": "How does energy-security policy turn into equipment orders — and what's the risk?",
+     "a": "After the 2022 gas shock, governments began planning interconnectors, offshore-wind links, and domestic manufacturing on decade horizons, tendering in multi-billion frameworks — demand anchored in policy commitments rather than price signals. The durability cuts both ways: subsidy lapses and election swings can pivot that demand, replacing market risk with political risk."
+    }
+   ]
   },
   {
-   "q": "What are backlog and book-to-bill?",
-   "a": "Backlog is signed-but-undelivered future revenue; for long-cycle equipment it can cover several years of production. Book-to-bill divides a period's new orders by its revenue: above 1.0 the future is growing faster than the present, and a sustained ratio far above it signals a demand shock filling factories years ahead."
-  },
-  {
-   "q": "Why do OEM margins keep improving for years during an equipment shortage?",
-   "a": "Backlog rolls over by vintage: old orders priced in the lean years deliver first, while new orders enter at shortage prices. As delivery reaches the richer vintage, reported margins rise mechanically for years \u2014 which is why analysts track margin-in-backlog, and why today's income statement lags today's pricing power."
-  },
-  {
-   "q": "Why can a single design flaw cost a machinery maker billions?",
-   "a": "Fleet products fail in fleets: a flawed component ships in thousands of units before the failure mode surfaces, and the maker then owes inspection, repair, or replacement across every affected machine \u2014 booked upfront as provisions. One engineering decision multiplies across an installed base, which is why quality escapes dwarf ordinary project losses."
-  },
-  {
-   "q": "Why might a crisis-hit equipment maker need banks or the state to backstop its guarantees?",
-   "a": "Buyers of long-lived machinery demand performance guarantees backed by bonds before they will sign. A maker in visible distress struggles to obtain that backing at exactly the moment it needs new orders to recover \u2014 so banks, insurers, or in extreme cases a government must stand behind the guarantee book to keep the order intake alive."
-  },
-  {
-   "q": "What signals that an industrial turnaround is actually complete?",
-   "a": "Proof, not announcements: the drag segment reaching sustained break-even, external guarantees returning to private markets on normal terms, and several consecutive quarters without fresh charges from the installed base. A turnaround ends when the repaired business survives contact with its own fleet \u2014 not when management declares victory."
-  },
-  {
-   "q": "Why is cheap green hydrogen mostly a manufacturing problem?",
-   "a": "The core science of electrolysis is old; the cost sits in stacks historically hand-built like lab equipment. The path down is the battery/solar playbook \u2014 automated gigawatt factories, standardized designs, volume supply chains \u2014 riding the learning curve where each doubling of cumulative production predictably cuts unit cost."
-  },
-  {
-   "q": "What is the chicken-and-egg problem in electrolyzer scale-up?",
-   "a": "Factories need volume to reach target costs, but buyers wait for those costs before ordering volume \u2014 so manufacturing capacity runs ahead of demand and makers lean on subsidies and anchor projects until the flywheel catches. Add scarce iridium and platinum in PEM stacks, and thrifting catalysts becomes part of the cost strategy."
-  },
-  {
-   "q": "What are equivalent operating hours (EOH)?",
-   "a": "The schedule currency of turbine maintenance: hard running \u2014 starts, trips, rapid load swings \u2014 consumes hours faster than steady operation, so two machines with equal calendar time can be far apart in wear. EOH determines when each unit reaches its minor and major overhauls, and service contracts are priced around it."
-  },
-  {
-   "q": "What does an OEM's remote monitoring center actually do?",
-   "a": "It ingests live sensor streams \u2014 vibration, temperatures, pressures, combustion dynamics \u2014 from thousands of installed machines and flags developing problems, often before the operator's own crew notices. That data drives overhaul planning, feeds upgrade sales into old units, and turns the installed fleet into a continuously monetized asset."
-  },
-  {
-   "q": "How does energy-security policy turn into equipment orders \u2014 and what's the risk?",
-   "a": "After the 2022 gas shock, governments began planning interconnectors, offshore-wind links, and domestic manufacturing on decade horizons, tendering in multi-billion frameworks \u2014 demand anchored in policy commitments rather than price signals. The durability cuts both ways: subsidy lapses and election swings can pivot that demand, replacing market risk with political risk."
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A 200 km subsea connection to an offshore wind farm must be DC because:",
+     "c": [
+      "DC cables are cheaper to manufacture",
+      "An AC cable's own charging current would consume its entire rating over that length",
+      "Offshore turbines generate DC natively",
+      "AC cables cannot be laid on the seabed"
+     ],
+     "a": 1,
+     "why": "A long AC cable is a long capacitor. The current it draws simply to charge itself grows with length and voltage, and past roughly a hundred kilometres subsea it leaves nothing for the load. There is no way around this within AC — it is a hard boundary, not an economic preference."
+    },
+    {
+     "q": "A region shows plenty of generating capacity and still cannot connect a new 500 MW load quickly. The most likely explanation is:",
+     "c": [
+      "Not enough fuel",
+      "The transfer limit under N-1, plus the equipment lead time to reinforce it",
+      "Insufficient reactive power at the generators",
+      "The load factor is too high"
+     ],
+     "a": 1,
+     "why": "Generation and delivery are different problems. The usable corridor capacity is what remains with the largest element out, and raising it means transformers, bays and lines with multi-year lead times. This is the ordinary form the interconnection queue takes."
+    },
+    {
+     "q": "An inverter-dominated area suffers protection mis-operation after a synchronous plant retires. The underlying cause is:",
+     "c": [
+      "Harmonic distortion from the inverters",
+      "Less available fault current and faster RoCoF than the settings assumed",
+      "The inverters draw too much reactive power",
+      "The transformers were not re-tapped"
+     ],
+     "a": 1,
+     "why": "Protection is coordinated against the fault current available when the study was done, and frequency settings assume a rate of change the old machines guaranteed. Remove the machines and a relay may no longer see a fault it used to, and may trip on a frequency excursion it should have ridden. Nothing about the installation looks different, which is why it goes stale silently."
+    },
+    {
+     "q": "A network operator needs to slow the rate at which frequency falls after a generator trips. The right purchase is:",
+     "c": [
+      "A STATCOM",
+      "Stored rotational energy — a synchronous condenser — or a grid-forming resource with energy behind it",
+      "More switched capacitors",
+      "A larger step-up transformer"
+     ],
+     "a": 1,
+     "why": "A STATCOM supports voltage in milliseconds and supplies no inertia at all. Slowing a frequency fall requires energy that is physically stored and released without being asked — spinning mass, or an inverter deliberately programmed to behave like it with a store behind it."
+    },
+    {
+     "q": "A developer facing a 36-month transformer lead time takes the single most effective schedule action available. It is most likely:",
+     "c": [
+      "Paying a premium for expedited delivery",
+      "Specifying a standard rating the factory already builds in repeat runs",
+      "Ordering two transformers instead of one",
+      "Switching to a different insulating technology"
+     ],
+     "a": 1,
+     "why": "The constraint is production capacity and skilled labour, not price, so paying more mostly buys the same queue. Fitting the site to a configuration already in repeat production is an engineering concession that actually moves the date — which is why the shortage shapes what gets specified, not just when it arrives."
+    },
+    {
+     "q": "What does an SF6-free gas-insulated substation change besides the gas?",
+     "c": [
+      "Nothing else — it is a drop-in replacement",
+      "The interruption technology, usually to vacuum, because clean air quenches arcs poorly",
+      "The voltage class it can serve",
+      "The need for a sealed enclosure"
+     ],
+     "a": 1,
+     "why": "Clean air replaces the insulating duty acceptably and the arc-quenching duty badly, so the breaker technology has to change too. Two changes doing together what one gas did alone — which is why the replacement is a portfolio rolled out class by class, not a substitution."
+    }
+   ]
   }
  ]
 }
