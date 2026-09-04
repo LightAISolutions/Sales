@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 69/100`
+`Sections: 70/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.53r] — 2026-09-04 01:30:23 PM EST
+
+> continue with your recommendation.
+
+### Changed
+
+- **`CLASSROOM-CURRICULUM-PLAN.md` §6 gap register — G8 closed, G7 moved to Partial.** Both rows were re-checked against the corpus rather than against memory, per the register's own rule that *a row is not closed until someone re-runs its check and dates it here*. Both carry `v04.52r` — the version of the corpus that was checked, not the version that records the check.
+  - **G8 (Nuclear and SMRs) — `Open` → `Closed` v04.52r.** The row asked for a dossier for one SMR vendor **and** a study guide on what is actually new about SMRs; `oklo.profile.json` and the nineteen-section `oklo.study.json` landed together at v04.52r and satisfy both. The re-check text records what the dossier keeps apart (first-ever revenue of $1.210M in Q2 2026 from engineering, consulting and fabrication — no power and no isotopes; the 2020 combined licence application denied without prejudice in January 2022 and the first Aurora proceeding under a DOE authorization pathway rather than an NRC licence) and what the guide teaches as engineering rather than as a company story. `clean-firm-power` in `aidc-campus` can now pin `study:oklo`.
+  - **G7 (Cooling equipment vendors) — `Open` → `Partial` v04.52r, at one of two.** Trane Technologies is the chiller OEM half; `the-cooling-plant-and-water` can now pin `study:trane-technologies` for the equipment side. **The CDU-specialist ask is explicitly not treated as satisfied** — Trane sells CDUs (GigaModular, CDU-1MW) and has owned LiquidStack since March 2026, so the technology is no longer absent from the corpus, but the row asks for a *specialist* dossier and a chiller OEM with a liquid-cooling line is a different subject. CoolIT, Motivair and Boyd remain absent from the registry.
+- **A "Targeted re-run of G7 and G8 (2026-09-04, v04.52r)" paragraph** appended to §6's trailing notes, in the form the v04.51r targeted re-run established. It draws the distinction that matters now that G4 and G7 both read as "one ask left": **G7's remainder is scheduled** (CoolIT is §8 row B10 with a model assigned), **G4's is structural** (its guidance module appears nowhere in the coverage ledger). It also records that `mccarthy` moved no row and was not expected to — §6 carries no general-contractor gap — and that G2, G5, G6, G10, G11, G12 and G4 keep their prior dates, the full re-run still being owed at the close of Phase B.
+
+### Verified
+
+- All twelve register rows re-parsed after the edit: **8 cells per row on all twelve**, so the table is structurally intact; statuses read G1 Closed · G2 Partial · G3 Closed · G4 Partial · G5 Partial · G6 Open · **G7 Partial v04.52r** · **G8 Closed v04.52r** · G9 Closed · G10 Open · G11 Deferred · G12 By design.
+- Every factual claim added to the two rows was checked against a file rather than recalled: the six C11 data files exist; `trane-technologies` and `oklo` are registered under `supplier` and `mccarthy` under `gc`; **`coolit`, `motivair`, `boyd`, `carrier`, `johnson-controls`, `nuscale`, `x-energy` and `kairos` are all absent from the 109-company registry**; CoolIT is `PROFILER-COVERAGE-PLAN.md` §8 row B10 assigned to Fable 5.1 High against G7; and the guide section content quoted in each re-check (the compressor table, IPLV, the refrigerant calendar, low delta-T syndrome, HALEU, the temperature coefficient, both `where-it-fails` sections) was read back out of the two `.study.json` files.
+
+### Worth noting
+
+- **One ledger consequence is recorded but not acted on.** `PROFILER-COVERAGE-PLAN.md` §8 row B10 lists `x-energy` with G8 as its motivating gap. G8 is now closed by Oklo, so that entry is no longer gap-driven — its motivation is ecosystem coverage. The register says so; **the coverage plan was deliberately left unedited**, because whether to keep, re-motivate or drop a scheduled session is the developer's scheduling call, not a bookkeeping correction.
 
 ## [v04.52r] — 2026-09-04 06:32:28 AM EST
 
