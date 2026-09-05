@@ -165,9 +165,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | B2 | `oncor` | Oncor | utility | Fable 5.1 High → **Opus 5 xhigh** (weekly Fable cap bound mid-session; §2 substitution) | G5 | v1 · v04.46r | ✓ · v04.46r |
 | B2 | `aep` | AEP | utility | Fable 5.1 High → **Opus 5 xhigh** (weekly Fable cap bound mid-session; §2 substitution) | G5 | v1 · v04.46r | ✓ · v04.46r |
 | B2 | `xcel-energy` | Xcel Energy | utility | Fable 5.1 High → **Opus 5 xhigh** (weekly Fable cap bound mid-session; §2 substitution); v2 re-run on **Fable 5.1 High** (head-to-head, 2026-09-04 — verdict in the §2 confidence note) | G5 | v1 · v04.46r → v2 · v04.57r | ✓ · v04.46r |
-| B3 | `aypa-power` | Aypa Power | developer · ipp | Fable 5.1 High | buyer side | — | — |
-| B3 | `spearmint-energy` | Spearmint Energy | developer · ipp | Fable 5.1 High | buyer side | — | — |
-| B3 | `intersect-power` | Intersect Power | developer · ipp | Fable 5.1 High | buyer side | — | — |
+| B3 → F3 | `aypa-power` | Aypa Power | developer · ipp | Fable 5.1 High | buyer side | v1 · v04.60r | ✓ · v04.60r |
+| B3 → F3 | `spearmint-energy` | Spearmint Energy | developer · ipp | Fable 5.1 High | buyer side | v1 · v04.60r | ✓ · v04.60r |
+| B3 → F3 | `intersect-power` | Intersect Power | developer · ipp | Fable 5.1 High | buyer side | v1 · v04.60r | ✓ · v04.60r |
 | B4 | `invenergy` | Invenergy | developer · ipp | Fable 5.1 High | buyer side | — | — |
 | B4 | `gridstor` | Gridstor | developer · ipp | Fable 5.1 High | buyer side | — | — |
 | B4 | `available-power` | Available Power | developer · ipp | Fable 5.1 High | buyer side | — | — |

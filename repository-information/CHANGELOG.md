@@ -3,11 +3,129 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 76/100`
+`Sections: 77/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.60r] — 2026-09-04 11:08:01 PM EST
+
+> Fresh session on Fable 5.1 High. Run Phase B session F3 of repository-information/PROFILER-COVERAGE-PLAN.md:
+> Aypa Power, Spearmint Energy, Intersect Power — the §8 rows `aypa-power`, `spearmint-energy`,
+> `intersect-power` (all `developer · ipp`), listed under B3 in §4/§8. F3 is the third of the F1–F8
+> regrouping recorded in §4 (dated paragraph, 2026-09-04, v04.58r); F1 landed DNV, Sargent & Lundy and
+> CoolIT at v04.58r, F2 landed Fluidstack, Nscale and Anthropic at v04.59r. When you flip the three §8
+> rows, record `B3 → F3` in the Group column exactly as F1 recorded `B10 → F1` and F2 recorded `B9 → F2`.
+> READ FIRST: repository-information/SESSION-CONTEXT.md (both entries — the Latest has the F2 lessons and
+> environment notes); PROFILER-COVERAGE-PLAN.md §2 (the model rule — no substitution to record, F3 is
+> natively Fable High), §4 row B-D / B3 and the regrouping paragraph, §7, and the three §8 rows;
+> .claude/rules/profiler-app.md (Profiler Command, Profiler Prep Command); repository-information/
+> PROFILER-SCHEMA.md; PROFILER-STYLES.md (active style: intel-briefing). CLASSROOM-CURRICULUM-PLAN.md §6
+> is NOT in scope — F3 closes no register row (the §8 "Closes" column reads "buyer side"); do not edit it.
+> .claude/rules/classroom-app.md is NOT needed.
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, categories per the §8 row, intel-briefing prose with confidence-tagged key judgments
+> and an indicators-to-watch bullet) and study guide (schema v2, a where-it-fails section, {{term}} tooltips
+> against profiler-concepts.json, new shared concepts registered there rather than in local glossaries,
+> flashcards and quiz on how the business model and the buying process work, never company trivia).
+> All three are private or subsidiaries: disclose revenue, headcount, pipeline GW/GWh, backlog or funding
+> only where a source states it (a sponsor's or acquirer's release or filing, a lender's release, a
+> regulator — ERCOT, CAISO, PUCT, CPUC, FERC — a court record, a county permit, the company's own release);
+> leave `expected` empty and say so; calendar rows carry `cadence: "quarterly"`.
+> PREMISES TO RE-VERIFY FIRST (all three are dated facts from the §4 row and the §5 C10 row, written
+> 2026-09-03): Aypa Power — "Blackstone → Brookfield" and "Brookfield is buying Aypa": has the sale
+> signed, closed, or neither, at what stated value, and who owns it today; the "~6.5 GW" platform figure —
+> whose number, operating vs under construction vs pipeline. Intersect Power — "Google-owned since 2026":
+> the acquisition's announcement date, close date and stated value from Google's or Intersect's own
+> release, what Google actually bought (the development platform, named projects, the TPG/CAI investors'
+> exits), and whether Intersect still develops for third parties. Spearmint Energy — "ERCOT merchant with
+> 15 GWh in development": whose figure, what is operating (Revolution and any others by MW/MWh and COD),
+> funding and lenders as released. Record every correction in the dossier's summary and judgments.
+> RESEARCH PRIORITIES. Aypa: the operating fleet and the pipeline by ISO with MW/MWh and CODs only as
+> released; the financing stack (portfolio revolvers, project loans, tax-credit transfers — amounts and
+> lenders as released); named offtakers and tolling/RA contracts with covered counterparties; the
+> Blackstone Energy Transition Partners history and the Brookfield transaction; equipment suppliers named
+> in releases (integrators and cell makers among covered slugs); leadership. Spearmint: the ERCOT and
+> other-ISO project list with status; how a merchant developer finances without a PPA (revenue puts,
+> hedges, tax-credit transfer, construction loans — as released); asset sales to IPPs; the Blackstone/
+> other sponsor relationships; supplier names as released; leadership. Intersect: the co-located energy
+> park model — named projects (Texas and Wyoming campuses and any others) with generation, storage and
+> data-centre MW as released; the Google acquisition and the pre-acquisition TPG Rise Climate / CAI /
+> Google investment rounds; the surplus-interconnection and behind-the-meter structures it uses and any
+> FERC or ERCOT filings; supplier and EPC relationships among covered slugs (Tesla, Fluence, Sungrow,
+> Mortenson, Blattner, SOLV, Quanta, Primoris — only where a source states the link); leadership and who
+> stayed after the deal. For every company: two research agents (first-party exhaustive, then third-party
+> — sponsors' and acquirers' releases and filings, lenders, ISO and PUC records, county permits, court
+> records, trade press), a URL for every relationship claim, relationships[] resolving only to covered
+> slugs with a source that states the link. Put every must-find item in the agent prompts — nothing can
+> be searched after they return.
+> STUDY GUIDES: one guide each, do not duplicate. Check the existing plus-power, jupiter-power,
+> key-capture-energy, eolian, arevon, terra-gen and nextera-energy-resources guides first and do not
+> repeat their IPP material (tolling franchises, ERCOT ancillary revenue stacking, dual-sourcing,
+> safe-harboured fleets, the market-maker IPP); check the crusoe, xai and google guides and do not repeat
+> their energy-first siting, islanded-campus or TPU material; the Classroom's duration-and-degradation
+> material (revenue shapes) is also owned elsewhere. Aypa: the standalone storage platform as a financed
+> asset base — what a buyer of a multi-GW platform is paying for (queue positions, land, contracted
+> revenue, the team), pipeline-to-operating conversion, portfolio financing and tax-credit transfer, how a
+> sponsor exits, where it fails. Spearmint: the merchant developer — develop-to-sell against
+> develop-to-hold, the development-stage ladder and what each stage is worth, financing a merchant project
+> without a PPA, the pre-COD project M&A market, where it fails. Intersect: the co-located energy park —
+> generation, storage and load behind one interconnection, what surplus interconnection service and
+> behind-the-meter structures buy and what they forbid, why a hyperscaler bought a developer instead of
+> signing PPAs, how the park is contracted and financed, where it fails.
+> BOOKKEEPING, same commit: `python3 scripts/sync-profiler-registry.py`, `build-profiler-graph.py`,
+> `check-profiler-study.py`; three calendar rows; README tree entries for every profile, study file and
+> study-prep folder plus the execs count (recount the files by registry slug; currently 407 across 69
+> companies — the F2 recount found the earlier 68 baseline one high); flip the three §8 rows; CHANGELOG
+> entry (counter at 76/100 — no rotation). One push commit with repo version bump (v04.59r → v04.60r).
+> ENVIRONMENT (confirmed by F1 and F2, 2026-09-04): pip install playwright and pip install pymupdf are
+> both needed; never run playwright install — use the /opt/pw-browsers/chromium-*/chrome-linux/chrome
+> executable; the HTTP server for the harness must be threaded (ThreadingMixIn, daemon threads, swallow
+> BrokenPipeError); route script.google.com to the roles stub in scripts/verify-profiler-roles.py and
+> fulfill accounts.google.com with an empty script; reload between dossiers; dry-run the harness on a
+> known-good slug first. Tool output above ~30 KB is persisted to a file — read agent reports in chunks
+> of ≤40 lines. Foreground sleep is blocked — use the Monitor tool to wait for agent report files. The
+> shell cwd resets to the repo root after every Bash call — use absolute paths. A stop hook fires on
+> uncommitted edits while agents run — `git stash` plan edits and pop them before the commit. If agents
+> die on an HTTP 429 usage limit, resume them by SendMessage after the reset rather than respawning.
+> THREE LESSONS FROM F1 AND F2, ALL MANDATORY: (1) have each agent report end in a `## ALL URLS` list,
+> build a URL index from the reports programmatically, and make the assembler refuse any sources[],
+> relationships[], policyExposure[] or recentDevelopments[] URL not in the index — 0 unmatched per
+> dossier before writing; cite another covered dossier's source (corpus tier) rather than memory when a
+> release times out; (2) treat every ownership, transaction and funding premise in this brief as a dated
+> fact to re-verify first — see PREMISES above; (3) keep press-reported contract or transaction values
+> as `announced` with the reporter named, never `active`. Do not read other dossiers' prose as a template
+> for judgments. Estimate ~90 minutes; F2 ran ~72 minutes net of a usage-limit stall.
+> VERIFY BEFORE COMMIT: sync-profiler-registry.py --check clean, check-profiler-study.py clean, every
+> dossier and guide renders with zero page errors and zero console errors (Playwright, per-slug tabs
+> including Relationships, sources count matches the file, no literal {{}} and no unresolved term spans),
+> every relationships[] slug and every {{term}} resolving. Normal Pre-Commit and Pre-Push checklists;
+> push on a claude/* branch.
+> If a capacity, a contract value, a transaction value or a customer cannot be sourced from a filing, a
+> regulator, a court record or the party's own release, leave it out and say so.
+
+### Added
+
+- **`live-site-pages/profiler-data/aypa-power.profile.json`** — Aypa Power, `developer · ipp`, schema v7, profileVersion 1, intel-briefing style: 91 sources (71 dated; 44% first-party), 5 products, two spec groups (a 22-row project ledger by market and status; a financing ledger from the USD 320m 2023 corporate facility to the USD 1.55bn March 2026 facility, the USD 1.5bn warehouse and seven project packages), 30 developments, 4 relationships (canadian-solar, sungrow, eolian, key-capture-energy), 7 policy regimes, 12 decision makers from Aypa's own SC PSC testimony exhibit (no company-published headshots exist — aypa.com has no leadership page), private financials with a `mw-contracted` KPI of 6,500 MW; 6 confidence-tagged judgments, a collection-gaps paragraph and an indicators-to-watch bullet. **Premises re-verified as dated facts:** the Brookfield sale is **signed, not closed** (22 July 2026; about USD 7bn EV / USD 3bn equity per the joint release and Brookfield Asset Management's 8-K; 'subject to customary regulatory approvals'; no closing by 5 September 2026; aypa.com still reads 'A Blackstone Portfolio Company'); the '~6.5 GW' is Brookfield's figure, split by Brookfield Renewable as about 3,000 MW operating and under construction plus about 3,500 MW contracted — Aypa has never published the split. The Yadkins PPA counterparty, the Bypass offtaker and the tax-credit-transfer buyers are undisclosed and left out.
+- **`live-site-pages/profiler-data/spearmint-energy.profile.json`** — Spearmint Energy, `developer · ipp`, profileVersion 1: 114 sources (77 dated; 23% first-party — Business Wire returns 403 from this environment, so every release was read through Yahoo Finance, SFNet, 01net, Pulse 2.0, IREI and Energy Global mirrors), 4 products, two spec groups (an 11-row project ledger across ERCOT, MISO and SPP; a financing ledger from the USD 200m Aiga term loan to the USD 325m June 2026 facility and the about USD 450m Red Egret package), 23 developments, 5 relationships (sungrow, mortenson, tesla `announced` as a permit design basis, jupiter-power and intersect-power as Modo-ranked competitors), 7 policy regimes, 20 decision makers with 19 company-published headshots (the board included; one board photo omitted because its filename indicates a LinkedIn origin), private financials with a `mw-energized` KPI of 350 MW; 6 judgments. **Premises re-verified:** no Blackstone or any other sponsor relationship exists in any source — lender Elda River states the company is 'controlled by Roscommon Analytics'; the '15 GWh' is the company's own boilerplate (January and May 2026), dropped from 21 May 2026 onward; the operating fleet is 350 MW / 700 MWh (Revolution COD January 2024; Tierra Seca and Seven Flags late December 2025) with Red Egret 300 MW / 600 MWh under construction; the model is develop-to-own, not develop-to-sell. No offtaker, hedge or revenue put is named for any project; FERC MBR/QSE records were unreadable (403) and are recorded as unverified, not absent.
+- **`live-site-pages/profiler-data/intersect-power.profile.json`** — Intersect (formerly Intersect Power), `developer · ipp`, `ownership.type: subsidiary`, profileVersion 1: 116 sources (92 dated; 51% first-party — Google/Alphabet channels count as the parent's), 5 products, two spec groups (the three named Texas energy parks — Quantum, Meitner, Roman — and the transaction-and-fleet ledger), 27 developments, 6 relationships (google investor/owner, tesla, microsoft and constellation-energy `historical` via Oberon, equinix, crusoe), 6 policy regimes, 9 decision makers with 7 company-published headshots; financials from Alphabet's 10-Qs. **Premises re-verified:** the Google acquisition was **announced 22 December 2025 and closed 10 March 2026** (USD 4.75bn cash plus debt per Alphabet; USD 5,868m final purchase price with USD 1,214m of debt assumed and USD 2,174m of goodwill per Alphabet's Q2 2026 10-Q); Google bought the development platform, team and Texas parks only — the grid-tied fleet (about 4.4 GW solar / 8.8 GWh storage) was carved out to IPX Power under TPG Rise Climate, CAI and Greenbelt with the former CFO, COO and CCO; no source says Intersect develops for third parties; **there is no Wyoming campus** in any source. Data-centre MW, gas capacity and every FERC/ERCOT/PUCT filing are recorded as collection gaps.
+- **`aypa-power.study.json`, `spearmint-energy.study.json`, `intersect-power.study.json`** (schema v2 — 13 / 12 / 12 sections, each with a start-here callout naming what it does not repeat, a where-it-fails callout, a where-X-slots-in table, ten flashcards and an eight-item self-test on the business model and the buying process, never company trivia). Aypa teaches the standalone storage platform as a financed asset base: four things inside the price, the pipeline-to-operating conversion ladder (Pediment as the worked example), who holds the dispatch rights across five contract forms, the financing stack layer by layer, two ways to sell a tax credit, how a sponsor exits, contracted against merchant from the buyer's chair. Spearmint teaches the merchant developer: sell the project or keep it, the development ladder as a price list, financing a battery with no PPA, the pre-COD project market, the desk as the collateral, what the fleet earned when the market turned. Intersect teaches the co-located energy park: three assets behind one interconnection, what surplus interconnection service, behind-the-meter load and SB 6 net metering buy and forbid, why a hyperscaler bought the developer, how the park is contracted and financed across three eras, what Google bought and left. The brief's list of existing IPP guides to avoid (plus-power, jupiter-power, key-capture-energy, eolian, arevon, terra-gen, nextera-energy-resources) does not exist — none of those dossiers has a study guide (the Phase C backfills) — so the guides instead name the Classroom's tolling / ancillary-stacking / duration-and-degradation material and the crusoe / xai / google guides as what they do not repeat.
+- **`repository-information/study-prep/{aypa-power,spearmint-energy,intersect-power}/*-lesson-plan.md`** — three five-module lesson plans from the Profiler Prep Command.
+- **`live-site-pages/images/execs/`** — 26 new company-published headshots (intersect-power-* 7, spearmint-energy-* 19).
+- **`profiler-concepts.json`** — 46 new shared concepts registered (684 → 730): ancillary-services, energy-arbitrage, merchant, develop-to-own, develop-to-sell, development-stage-ladder, site-control, queue-position, ntp, cod, ready-to-build, pre-cod-ma, platform-sale, enterprise-value, moic, financial-sponsor, carve-out, purchase-price-allocation, goodwill, variable-interest-entity, captive-developer, tax-equity, partnership-flip, tax-equity-bridge-loan, construction-to-term-loan, back-leverage, warehouse-facility, letter-of-credit-facility, preferred-equity, revenue-put, hedge, in-house-optimisation, energy-storage-service-agreement, dispatch-rights, average-remaining-contract-life, percent-contracted, solar-plus-storage, surplus-interconnection-service, energy-park, firming, powered-land, co-location-net-metering, conditional-use-permit, energy-community-bonus, chapter-312-abatement, interconnection-agreement. Two aliases dropped for collisions with existing entries (`build-own-operate`, `letter of credit`). No local glossaries.
+
+### Changed
+
+- **`profiler-companies.json`** — three registry entries under `developer · ipp`, 115 → 118 companies; `sync-profiler-registry.py` wrote `srcTotal`/`srcFirstPct`/`kpiNorm`. **`profiler-graph.json`** rebuilt: 810 edges (609 curated), built 2026-09-05. **`repository-information/profiler-refresh-calendar.json`** — three private rows with `cadence: "quarterly"`, a source note naming each company's real disclosure channels (counterparty and regulator records for Aypa; release mirrors, lender and counsel releases and MPUC dockets for Spearmint; Alphabet filings, sellers' releases and county minutes for Intersect), and watch lists ending in a Chesterton check (76 → 79 rows); `updated` 2026-09-05.
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — the three §8 rows flipped to `B3 → F3 … v1 · v04.60r | ✓ · v04.60r`, exactly as F1 recorded `B10 → F1` and F2 recorded `B9 → F2`. No model substitution to record. `CLASSROOM-CURRICULUM-PLAN.md` §6 not touched (F3 closes no register row).
+- README tree: entries for the three profiles, three study guides, three study-prep folders and lesson plans; execs line recounted from the files by registry slug — 407 → **433 images across 71 companies** (two companies gained headshots; Aypa publishes none); `Last updated:` and `Repo version:`; repo version v04.59r → **v04.60r**.
+
+### Verified
+
+- Every URL in `sources[]`, `relationships[]`, `policyExposure[]` and `recentDevelopments[]` of all three dossiers was asserted programmatically against a URL index extracted from the six research-agent reports (each ending in `## ALL URLS`) with other covered dossiers' sources as a second tier: 0 unmatched per dossier before writing (two label typos and one parenthesised URL caught by the check and corrected; no corpus-tier citation was needed). Every relationship carries a source that states the link; press-reported values and design-basis links are `announced`, never `active`.
+- `sync-profiler-registry.py --check`: 0 of 118 out of sync. `check-profiler-study.py`: 92 guides + 730 concepts, 0 errors, 0 warnings. `build-profiler-graph.py`: no unresolved slugs.
+- Playwright (threaded server, GAS stubbed as admin, accounts.google.com fulfilled empty, dry-run on `fluidstack` first): each of the three dossiers renders all nine tabs including Relationships (4 / 6 / 11 rendered links), every `sources[]` entry renders (91 / 114 / 116), no literal `{{`, each study guide opens from `#ov-study-btn` with every `.gd-term` resolving against the concepts registry (40 / 30 / 27 term spans), zero page errors, zero console errors.
 
 ## [v04.59r] — 2026-09-04 10:05:27 PM EST
 

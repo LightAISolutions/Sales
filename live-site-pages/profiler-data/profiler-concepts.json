@@ -182,6 +182,18 @@
       ]
     },
     {
+      "slug": "ancillary-services",
+      "term": "ancillary services",
+      "def": "Grid services beyond plain energy — holding capacity in reserve, correcting frequency second by second — that a system operator buys from fast resources such as batteries. In ERCOT they were most of a battery's income until so many batteries arrived that the prices collapsed.",
+      "aliases": [
+        "ancillary service",
+        "ancillary",
+        "regulation service",
+        "responsive reserve",
+        "ECRS"
+      ]
+    },
+    {
       "slug": "anti-islanding",
       "term": "anti-islanding",
       "def": "Protection that stops an on-site generator from continuing to energize a utility line after the utility has disconnected. It exists to protect line workers, and it is why a set that runs in parallel with the grid needs more relaying than one that only ever runs on a dead bus.",
@@ -310,6 +322,26 @@
       "aliases": [
         "avalanche energy",
         "avalanche rating"
+      ]
+    },
+    {
+      "slug": "average-remaining-contract-life",
+      "term": "average remaining contract life",
+      "def": "The capacity-weighted number of years left on a portfolio's contracts. A buyer of a contracted platform is buying those years of fixed cash flow; the shorter the average, the sooner the assets become merchant.",
+      "aliases": [
+        "remaining contract life",
+        "weighted average contract term",
+        "contract tenor"
+      ]
+    },
+    {
+      "slug": "back-leverage",
+      "term": "back-leverage",
+      "def": "Debt raised above the project, at the developer's holding company, secured on the developer's share of project cash flows rather than on the project itself. It lets an owner borrow again without disturbing the project-level lenders.",
+      "aliases": [
+        "back leverage",
+        "holdco debt",
+        "holding-company debt"
       ]
     },
     {
@@ -627,6 +659,27 @@
       ]
     },
     {
+      "slug": "captive-developer",
+      "term": "captive developer",
+      "def": "A developer that builds only for its parent or one customer rather than for the market. It trades the ability to sell to anyone for a guaranteed buyer and the parent's balance sheet.",
+      "aliases": [
+        "captive",
+        "in-house developer",
+        "internal developer"
+      ]
+    },
+    {
+      "slug": "carve-out",
+      "term": "carve-out",
+      "def": "Splitting a business so a buyer takes one part and the sellers keep the rest as a separate company. What goes with which side — assets, contracts, people, supply orders — is the whole negotiation.",
+      "aliases": [
+        "carved out",
+        "spin-out",
+        "spun off",
+        "spin-off"
+      ]
+    },
+    {
       "slug": "ccn",
       "term": "CCN",
       "def": "Certificate of convenience and necessity: Texas's name for the commission order that lets a utility build a specific line or, outside ERCOT, a plant. In ERCOT it is issued for transmission — a wires-only utility's CCN case decides the route and the need for a 345 kV or 765 kV line, never a generator.",
@@ -684,6 +737,17 @@
       "slug": "change-order",
       "term": "change order",
       "def": "A formal amendment to the contract's scope, price or schedule. Their number and cause is the honest measure of how complete a design was when construction started."
+    },
+    {
+      "slug": "chapter-312-abatement",
+      "term": "Chapter 312 abatement",
+      "def": "A Texas county or city agreement to waive most of a new project's property taxes for up to ten years in exchange for the investment and jobs. Counties attach conditions — cooling technology, water use, road repairs — and can claw the taxes back if they are broken.",
+      "aliases": [
+        "Chapter 312",
+        "property-tax abatement",
+        "tax abatement",
+        "reinvestment zone"
+      ]
     },
     {
       "slug": "chilled-water-supply-temperature",
@@ -751,6 +815,26 @@
       "aliases": [
         "construction manager at risk",
         "CMAR"
+      ]
+    },
+    {
+      "slug": "co-location-net-metering",
+      "term": "co-location net metering",
+      "def": "The Texas rule under which a generator and a large customer on the same site settle only the net flow with the grid — generation minus load — subject to regulator review. It decides whether a campus can use its own power before the grid sees it.",
+      "aliases": [
+        "net-metering arrangement",
+        "co-located net metering",
+        "SB 6 net metering"
+      ]
+    },
+    {
+      "slug": "cod",
+      "term": "commercial operation date",
+      "def": "The date a project is declared complete, tested and delivering to the grid under its contracts. Debt converts from construction to term, revenue starts, and the developer's delivery promise is either kept or late.",
+      "aliases": [
+        "COD",
+        "commercial operation",
+        "commercially operational"
       ]
     },
     {
@@ -852,6 +936,18 @@
       "def": "Letting condenser water get colder when the weather allows, which lowers the lift and so the compressor work. It is most of why a chiller's part-load efficiency beats its full-load efficiency."
     },
     {
+      "slug": "conditional-use-permit",
+      "term": "conditional use permit",
+      "def": "Local government's permission to build something a zoning code does not allow by right. For a battery it is usually decided by a county board or city commission after a public hearing, and it is where community opposition can stop a project outright.",
+      "aliases": [
+        "CUP",
+        "special use permit",
+        "special exception",
+        "rezoning",
+        "zoning variance"
+      ]
+    },
+    {
       "slug": "conditions-precedent",
       "term": "conditions precedent",
       "def": "The list of things that must be true before a lender's money can flow: signed contracts, permits in hand, insurance bound, the independent engineer's report delivered. Financial close is the day the last one is ticked.",
@@ -911,6 +1007,17 @@
       "slug": "construction-permit",
       "term": "construction permit",
       "def": "Under the older two-step US licensing route, the authorisation to build a reactor. A separate operating licence is applied for later, once the plant is largely built."
+    },
+    {
+      "slug": "construction-to-term-loan",
+      "term": "construction-to-term loan",
+      "def": "Bank debt drawn during construction that converts into a long-term loan once the project is operating and its revenue can be measured. The conversion is where lenders re-test every assumption.",
+      "aliases": [
+        "construction loan",
+        "construction financing",
+        "C2T",
+        "construction-to-term"
+      ]
     },
     {
       "slug": "contingency",
@@ -1422,6 +1529,38 @@
       ]
     },
     {
+      "slug": "develop-to-own",
+      "term": "develop-to-own",
+      "def": "A developer that keeps the projects it builds and earns the operating cash flow for decades. Needs long-term capital and an operations team; the reward is the whole life of the asset rather than one sale.",
+      "aliases": [
+        "develop-to-hold",
+        "own and operate",
+        "develop, own and operate"
+      ]
+    },
+    {
+      "slug": "develop-to-sell",
+      "term": "develop-to-sell",
+      "def": "A developer that carries a project through permits, interconnection and contracts, then sells it to an owner before or at construction. Capital-light and quick; the price depends on which development stage the project has reached.",
+      "aliases": [
+        "develop and sell",
+        "build-transfer",
+        "flip the project"
+      ]
+    },
+    {
+      "slug": "development-stage-ladder",
+      "term": "development stage ladder",
+      "def": "The sequence a project climbs from idea to operation: site control, interconnection request, permits, offtake, notice to proceed, financial close, construction, commercial operation. Each rung retires a risk, so each rung raises what a buyer will pay.",
+      "aliases": [
+        "development stages",
+        "early-stage",
+        "mid-stage",
+        "late-stage",
+        "stage-gate"
+      ]
+    },
+    {
       "slug": "dew-point",
       "term": "dew point",
       "def": "The temperature at which the room's air begins to condense water on a surface. Coolant supplied below it sweats every hose and cold plate onto the boards beneath, so a CDU holds its supply temperature above the data hall's dew point — one reason warm-water cooling is safer than cold.",
@@ -1480,6 +1619,16 @@
       "slug": "disinfection",
       "term": "disinfection",
       "def": "The final treatment step that inactivates pathogens — chlorine, ozone or ultraviolet light. Which method is used changes what residual protection the water carries downstream."
+    },
+    {
+      "slug": "dispatch-rights",
+      "term": "dispatch rights",
+      "def": "Who decides when a battery charges and discharges. Under a toll or service agreement the buyer holds them; under a merchant model the owner does — and the holder of dispatch rights holds most of the revenue risk.",
+      "aliases": [
+        "exclusive dispatch",
+        "dispatch control",
+        "scheduling rights"
+      ]
     },
     {
       "slug": "dispatchable",
@@ -1786,6 +1935,16 @@
       ]
     },
     {
+      "slug": "energy-arbitrage",
+      "term": "energy arbitrage",
+      "def": "Buying electricity when it is cheap (midday solar, overnight) to sell it when it is dear (evening peak). For a battery the profit is the price spread minus round-trip losses, and it is the revenue left once ancillary-service prices fall.",
+      "aliases": [
+        "arbitrage",
+        "charge-discharge spread",
+        "price spread"
+      ]
+    },
+    {
       "slug": "energy-battery",
       "term": "energy battery",
       "def": "A battery optimized for how much it holds and how many times it can be emptied and refilled — sized by hours of duration and judged on cycle life and cost per stored unit. A grid storage container is the archetype, and it is the near-inverse of a power battery in almost every design choice.",
@@ -1802,6 +1961,16 @@
         "kWh charge",
         "volumetric charge",
         "energy rate"
+      ]
+    },
+    {
+      "slug": "energy-community-bonus",
+      "term": "energy community bonus",
+      "def": "An extra federal tax credit for projects sited in places with closed coal plants or mines or high fossil-fuel employment. Building a battery on a retired coal station earns it.",
+      "aliases": [
+        "energy communities",
+        "energy community adder",
+        "brownfield adder"
       ]
     },
     {
@@ -1826,6 +1995,26 @@
       ]
     },
     {
+      "slug": "energy-park",
+      "term": "energy park",
+      "def": "A site where large generation, storage and a large customer — a data centre, a hydrogen plant — are built together behind one grid connection, so most of the power never crosses the public grid. The developer sells the whole package rather than power alone.",
+      "aliases": [
+        "co-located energy park",
+        "industrial park",
+        "power-and-load campus"
+      ]
+    },
+    {
+      "slug": "energy-storage-service-agreement",
+      "term": "energy storage service agreement",
+      "def": "A contract in which a utility or public power agency pays a fixed fee for the right to use a battery's capacity for a term of years, leaving dispatch to the buyer. It is the public-power form of a tolling agreement.",
+      "aliases": [
+        "ESSA",
+        "storage service agreement",
+        "capacity-and-energy agreement"
+      ]
+    },
+    {
       "slug": "engineer-of-record",
       "term": "engineer of record",
       "def": "The licensed engineer who signs and seals a project's design and carries legal responsibility for it. On a turnkey EPC job it works for the contractor; on a multi-contract job the owner's engineer may hold the seal — which decides who answers when the design is wrong.",
@@ -1837,6 +2026,16 @@
       "slug": "enrichment",
       "term": "enrichment",
       "def": "Raising the share of the fissile isotope uranium-235 above the 0.7% found in nature. The higher the enrichment, the more compact a core can be — and the tighter the security and transport rules become."
+    },
+    {
+      "slug": "enterprise-value",
+      "term": "enterprise value",
+      "def": "What a whole business is worth including its debt. Equity value is what the owners receive after the debt is counted, so a USD 7 billion enterprise value with USD 3 billion of equity value implies about USD 4 billion of debt.",
+      "aliases": [
+        "EV",
+        "equity value",
+        "enterprise value versus equity value"
+      ]
     },
     {
       "slug": "epa-tier-2",
@@ -2074,6 +2273,17 @@
       ]
     },
     {
+      "slug": "financial-sponsor",
+      "term": "financial sponsor",
+      "def": "The fund or firm that owns a company's equity and can write the next cheque. Lenders price a project partly on who the sponsor is, and a change of sponsor can change the terms of every loan.",
+      "aliases": [
+        "sponsor",
+        "private-equity sponsor",
+        "sponsor equity",
+        "backer"
+      ]
+    },
+    {
       "slug": "fire-compartmentation",
       "term": "fire compartmentation",
       "def": "Dividing a building with rated walls and floors so that a fire and its smoke stay in one part of it for a stated number of hours. Every penetration through such a wall has to be sealed to the same rating."
@@ -2098,6 +2308,16 @@
         "energy emergency alert",
         "rotating outages",
         "load shed event"
+      ]
+    },
+    {
+      "slug": "firming",
+      "term": "firming",
+      "def": "Adding a controllable resource — gas engines, turbines or a long-duration battery — to a renewable site so the customer's load is met in the hours the sun and wind cannot cover. It is what turns a solar-and-wind campus into round-the-clock supply.",
+      "aliases": [
+        "gas firming",
+        "firming generation",
+        "firmed renewables"
       ]
     },
     {
@@ -2370,6 +2590,14 @@
       ]
     },
     {
+      "slug": "goodwill",
+      "term": "goodwill",
+      "def": "The part of a purchase price above the value of the identifiable assets — paid for the team, the relationships and the expected future business rather than for anything on a balance sheet.",
+      "aliases": [
+        "acquisition goodwill"
+      ]
+    },
+    {
       "slug": "grid-capacity-reservation",
       "term": "grid capacity reservation",
       "def": "A commitment by a grid operator to hold a stated amount of connection capacity for a customer at a named substation. It is the scarce asset behind a power-first site: without it the site is land.",
@@ -2491,6 +2719,17 @@
         "industrial frame gas turbine",
         "frame turbine",
         "heavy duty gas turbine"
+      ]
+    },
+    {
+      "slug": "hedge",
+      "term": "hedge",
+      "def": "A financial contract that fixes part of a project's future price without a physical buyer — the project sells power to the market and settles the difference with a bank or trader. It is how merchant solar and batteries create a bankable revenue line.",
+      "aliases": [
+        "power hedge",
+        "commodity hedge",
+        "fixed-for-floating swap",
+        "heat-rate call option"
       ]
     },
     {
@@ -2682,6 +2921,17 @@
       "def": "Insulated-gate bipolar transistor: the silicon switch that static UPS inverters, drives and grid inverters have been built on for three decades — fast enough to chop DC into a clean sine wave thousands of times a second and rugged enough for megawatts. Silicon carbide is displacing it where the last points of efficiency matter."
     },
     {
+      "slug": "in-house-optimisation",
+      "term": "in-house optimisation",
+      "def": "Running a battery's bidding and dispatch with the owner's own traders and software rather than handing it to a third-party optimiser or toller. The owner keeps the margin and carries the risk of being wrong about prices.",
+      "aliases": [
+        "optimization team",
+        "dispatch desk",
+        "in-house trading",
+        "self-dispatch"
+      ]
+    },
+    {
       "slug": "in-rack-cdu",
       "term": "in-rack CDU",
       "def": "A coolant distribution unit built into the server rack itself — a few rack units of pumps, exchanger and filters serving that one cabinet. Its fault domain is one rack and it can be filled and tested off-site, at the cost of rack space, a pump per rack and a capacity ceiling.",
@@ -2763,6 +3013,17 @@
       "aliases": [
         "Level 5 commissioning",
         "IST"
+      ]
+    },
+    {
+      "slug": "interconnection-agreement",
+      "term": "interconnection agreement",
+      "def": "The signed contract between a project and the grid operator or utility that fixes the connection point, the capacity allowed, the upgrades the project must pay for and the date it must be ready. Signing it ends the study phase and is one of the rungs a buyer pays most for.",
+      "aliases": [
+        "IA",
+        "generator interconnection agreement",
+        "GIA",
+        "standard generator interconnection agreement"
       ]
     },
     {
@@ -3072,6 +3333,16 @@
       "def": "A bacterium that grows in warm stagnant water and can be dispersed in aerosols, which is why open cooling towers carry a mandated water-treatment and testing regime."
     },
     {
+      "slug": "letter-of-credit-facility",
+      "term": "letter-of-credit facility",
+      "def": "Bank guarantees a developer posts instead of cash — to a grid operator for interconnection deposits, to a customer as contract security, to a supplier. A large LC facility is a sign of a large pipeline, because every queue position and contract needs one.",
+      "aliases": [
+        "LC facility",
+        "letters of credit",
+        "LC"
+      ]
+    },
+    {
       "slug": "letter-of-intent",
       "term": "letter of intent",
       "def": "A signed statement that two parties intend to do a deal on outlined terms, usually non-binding. It reserves capacity and starts diligence; it is not a contract, and either side can walk away — as anchor tenants do.",
@@ -3315,6 +3586,17 @@
       ]
     },
     {
+      "slug": "merchant",
+      "term": "merchant",
+      "def": "A power project with no long-term contract: it sells into the wholesale market at whatever prices turn out to be. Higher upside, no floor — which is why lenders ask what else backs the debt.",
+      "aliases": [
+        "merchant project",
+        "merchant revenue",
+        "merchant risk",
+        "fully merchant"
+      ]
+    },
+    {
       "slug": "metal-clad-switchgear",
       "term": "metal-clad switchgear",
       "def": "The most rigorously defined class of medium-voltage switchgear (IEEE C37.20.2): draw-out breakers, grounded metal barriers between every major compartment, insulated bus, and shutters that cover the live stabs when a breaker is withdrawn. The compartmentalisation is the point — it limits how far a fault inside one cell can propagate and lets a breaker be pulled with the bus alive.",
@@ -3428,6 +3710,16 @@
       "aliases": [
         "scalable UPS",
         "modular uninterruptible power supply"
+      ]
+    },
+    {
+      "slug": "moic",
+      "term": "MOIC",
+      "def": "The simplest private-equity scorecard: money out divided by money in. A 3x means the investor got three dollars back for each one put in, regardless of how long it took.",
+      "aliases": [
+        "multiple on invested capital",
+        "money multiple",
+        "return multiple"
       ]
     },
     {
@@ -3656,6 +3948,15 @@
       ]
     },
     {
+      "slug": "ntp",
+      "term": "notice to proceed",
+      "def": "The formal instruction to the contractor to start building, given once financing, permits and equipment are in place. It is the moment a development project becomes a construction project.",
+      "aliases": [
+        "NTP",
+        "full notice to proceed"
+      ]
+    },
+    {
       "slug": "nuclear-uprate",
       "term": "nuclear uprate",
       "def": "Raising an existing reactor's licensed output — by a few percent through better instrumentation, or by up to a fifth through new turbines and equipment — with the regulator's approval. It is the cheapest firm capacity a utility with a nuclear fleet can add, because the site, the licence and the operators already exist.",
@@ -3807,6 +4108,16 @@
       ]
     },
     {
+      "slug": "partnership-flip",
+      "term": "partnership flip",
+      "def": "The usual tax-equity structure: the investor holds most of the partnership's tax benefits and some cash until it reaches a target return, then its share 'flips' down to a small residual and the developer keeps the rest. A hybrid flip mixes this with a credit transfer.",
+      "aliases": [
+        "flip structure",
+        "hybrid partnership flip",
+        "flip"
+      ]
+    },
+    {
       "slug": "pass-through-costs",
       "term": "pass-through costs",
       "def": "Operating costs the landlord incurs and bills straight to the tenant — power, water, taxes, insurance — without markup. In a backstopped lease the guarantor often covers pass-throughs as well as base rent.",
@@ -3873,6 +4184,16 @@
       ]
     },
     {
+      "slug": "percent-contracted",
+      "term": "percent contracted",
+      "def": "The share of a portfolio's capacity or revenue covered by long-term contracts. It is the first number an infrastructure fund asks for, because it sets how much debt the portfolio can carry.",
+      "aliases": [
+        "contracted share",
+        "95% contracted",
+        "contracted versus merchant"
+      ]
+    },
+    {
       "slug": "pfc",
       "term": "power factor correction",
       "def": "A stage at the front of an AC supply that forces the current it draws to follow the shape of the mains voltage. Without it the supply draws current in short peaks, which wastes capacity in every transformer and cable upstream and is limited by standards.",
@@ -3915,6 +4236,16 @@
       "def": "A stack of thin corrugated metal plates through which two fluids flow in alternate channels, so heat crosses the metal while the fluids never mix. It is the boundary inside a liquid-to-liquid CDU between facility water and rack coolant; more plate area buys a lower approach temperature.",
       "aliases": [
         "brazed plate heat exchanger"
+      ]
+    },
+    {
+      "slug": "platform-sale",
+      "term": "platform sale",
+      "def": "Selling the whole developer — its projects at every stage, its pipeline, land and queue positions, and its team — rather than one project. The buyer pays for the machine that makes projects, not just the projects.",
+      "aliases": [
+        "platform acquisition",
+        "sale of the platform",
+        "platform deal"
       ]
     },
     {
@@ -4036,6 +4367,16 @@
       ]
     },
     {
+      "slug": "powered-land",
+      "term": "powered land",
+      "def": "A parcel that already has a grid connection or on-site generation secured, sold or leased to a customer who brings the building and the load. In the AI build-out the power is the scarce part, so powered land is priced on megawatts, not acres.",
+      "aliases": [
+        "powered land lease",
+        "powered shell site",
+        "land with power"
+      ]
+    },
+    {
       "slug": "ppa",
       "term": "PPA",
       "def": "Power purchase agreement: a long-term contract to buy a project's power or capacity at agreed terms — the bankable revenue stream that lets developers finance construction.",
@@ -4061,6 +4402,17 @@
       ]
     },
     {
+      "slug": "pre-cod-ma",
+      "term": "pre-COD M&A",
+      "def": "The market in which developers sell projects to owners before commercial operation. Prices are quoted per megawatt and rise with development stage; the buyer is usually an IPP or fund that finances and builds.",
+      "aliases": [
+        "pre-COD sale",
+        "late-stage acquisition",
+        "project M&A",
+        "asset sale"
+      ]
+    },
+    {
       "slug": "precast-concrete",
       "term": "precast concrete",
       "def": "Structural elements cast in a factory under controlled conditions and delivered to site to be erected. It moves work off the critical path and out of the weather, at the cost of transport limits and long lead times."
@@ -4080,6 +4432,15 @@
       "slug": "preconstruction",
       "term": "preconstruction",
       "def": "The estimating, planning, constructability review and procurement work done before construction starts. It is where a schedule is either made possible or quietly made impossible."
+    },
+    {
+      "slug": "preferred-equity",
+      "term": "preferred equity",
+      "def": "Capital that sits between debt and ordinary equity: it is paid a fixed return before the owners receive anything, but it has no fixed maturity like a loan. Projects use it to take out construction debt when a long-term loan is not available or wanted.",
+      "aliases": [
+        "pref equity",
+        "preferred"
+      ]
     },
     {
       "slug": "prepayment",
@@ -4217,6 +4578,15 @@
       ]
     },
     {
+      "slug": "purchase-price-allocation",
+      "term": "purchase price allocation",
+      "def": "How an acquirer's accountants split what it paid among the things it bought — property and equipment, debt taken on, and the remainder called goodwill. It is the one audited statement of what a private company was worth.",
+      "aliases": [
+        "PPA allocation",
+        "acquisition accounting"
+      ]
+    },
+    {
       "slug": "pwm",
       "term": "PWM",
       "def": "Pulse-width modulation: controlling a converter by switching fully on and fully off at a fixed rate and varying only the fraction of each cycle spent on — the duty cycle. A switch that is either fully on or fully off wastes little, which is the basic reason switching converters beat the old linear ones.",
@@ -4230,6 +4600,16 @@
       "slug": "pyroprocessing",
       "term": "pyroprocessing",
       "def": "An electrochemical route to separating usable material from spent metallic fuel in molten salt, developed alongside metallic-fuel fast reactors. It recovers fuel without the aqueous chemistry of conventional reprocessing."
+    },
+    {
+      "slug": "queue-position",
+      "term": "queue position",
+      "def": "A project's place in line for a grid connection, fixed by the date it applied. Earlier positions get studied first and face fewer upgrade costs, so a good queue position is a tradable asset in its own right.",
+      "aliases": [
+        "queue slot",
+        "interconnection position",
+        "queue date"
+      ]
     },
     {
       "slug": "quick-disconnect",
@@ -4318,6 +4698,16 @@
         "rate moratorium",
         "frozen rates",
         "rate stay-out"
+      ]
+    },
+    {
+      "slug": "ready-to-build",
+      "term": "ready-to-build",
+      "def": "A project with land, permits, interconnection and (where needed) offtake all in hand, lacking only money and a contractor. It is the most valuable point for a developer to sell, because the buyer takes construction risk and little else.",
+      "aliases": [
+        "RTB",
+        "shovel-ready",
+        "construction-ready"
       ]
     },
     {
@@ -4410,6 +4800,17 @@
         "deregulation",
         "retail electric provider",
         "REP"
+      ]
+    },
+    {
+      "slug": "revenue-put",
+      "term": "revenue put",
+      "def": "A contract in which a counterparty guarantees a merchant project a minimum annual revenue in exchange for a fee, leaving the upside with the owner. It is the instrument that lets a battery with no offtaker borrow, because the lender can size debt to the floor.",
+      "aliases": [
+        "revenue floor",
+        "floor hedge",
+        "floor contract",
+        "insurance-backed floor"
       ]
     },
     {
@@ -4863,6 +5264,16 @@
       ]
     },
     {
+      "slug": "site-control",
+      "term": "site control",
+      "def": "Having the legal right to build on a parcel — an option, a lease or ownership — before spending on studies and permits. Without it a project is a drawing; with it the interconnection request can be filed.",
+      "aliases": [
+        "land control",
+        "option to lease",
+        "land option"
+      ]
+    },
+    {
       "slug": "slab-on-grade",
       "term": "slab on grade",
       "def": "A concrete floor cast directly on prepared ground rather than spanning between supports. It is the working surface of a data hall, and its flatness and load rating are specifications, not by-products.",
@@ -4921,6 +5332,17 @@
         "ZCS",
         "resonant switching",
         "hard switching"
+      ]
+    },
+    {
+      "slug": "solar-plus-storage",
+      "term": "solar-plus-storage",
+      "def": "A solar plant and a battery sharing one site and one grid connection, so midday solar can be shifted into the evening. The pairing raises the value of both and lets one interconnection serve two assets.",
+      "aliases": [
+        "hybrid project",
+        "co-located solar and storage",
+        "PV-plus-storage",
+        "solar and storage hybrid"
       ]
     },
     {
@@ -5211,6 +5633,16 @@
       "def": "The flow breakdown that occurs when a centrifugal compressor is asked for more pressure rise than its current flow can sustain: the gas momentarily reverses. It is noisy, damaging, and the reason a centrifugal chiller has a minimum load."
     },
     {
+      "slug": "surplus-interconnection-service",
+      "term": "surplus interconnection service",
+      "def": "A federal rule that lets a new resource — typically a battery — use the part of an existing generator's grid connection that the generator does not use, without joining the queue from scratch. It is one of the fastest ways to add storage to an operating solar or wind site.",
+      "aliases": [
+        "surplus interconnection",
+        "SIS",
+        "unused interconnection capacity"
+      ]
+    },
+    {
       "slug": "switchgear",
       "term": "switchgear",
       "def": "The assemblies of breakers, switches, and protective relays that route power and isolate faults at a substation or in a power room. It is where the electrical system decides which circuits go dark when something fails — and, built into factory-tested skids, it is how much of a data center's power room now arrives on site.",
@@ -5339,6 +5771,28 @@
         "credit transfer",
         "tax credit transfer",
         "transferable tax credits"
+      ]
+    },
+    {
+      "slug": "tax-equity",
+      "term": "tax equity",
+      "def": "Capital from an investor — usually a bank — that owns part of a project so it can use the project's federal tax credits and depreciation against its own tax bill. The project gets cash up front; the investor gets tax benefits it could not otherwise use.",
+      "aliases": [
+        "tax-equity investor",
+        "tax equity investment",
+        "tax-equity partnership"
+      ]
+    },
+    {
+      "slug": "tax-equity-bridge-loan",
+      "term": "tax-equity bridge loan",
+      "def": "A short loan that advances the money a tax-equity investor or credit buyer will pay at commercial operation, so the project can be built first. It is repaid the day the tax equity or credit-transfer proceeds arrive.",
+      "aliases": [
+        "TEBL",
+        "tax equity bridge",
+        "bridge to tax equity",
+        "ITC bridge loan",
+        "tax credit transfer bridge loan"
       ]
     },
     {
@@ -5694,6 +6148,16 @@
       ]
     },
     {
+      "slug": "variable-interest-entity",
+      "term": "variable interest entity",
+      "def": "An accounting label for a company that another company controls and must consolidate into its own accounts even without owning it outright. Seeing a subsidiary described this way tells you the parent reports its results as its own.",
+      "aliases": [
+        "VIE",
+        "consolidated VIE",
+        "primary beneficiary"
+      ]
+    },
+    {
       "slug": "variable-primary-flow",
       "term": "variable primary flow",
       "def": "A plant with one variable-flow pumping loop that runs through the chillers themselves, saving pumping energy at the cost of having to respect each machine's minimum flow."
@@ -5800,6 +6264,17 @@
         "150 mm wafer",
         "wafer size",
         "8-inch wafer"
+      ]
+    },
+    {
+      "slug": "warehouse-facility",
+      "term": "warehouse facility",
+      "def": "A large revolving loan that funds several projects through construction at once, each one leaving the warehouse when it is refinanced at commercial operation. It is how a private developer builds a portfolio without raising a separate loan for every site.",
+      "aliases": [
+        "warehouse financing",
+        "construction warehouse",
+        "warehouse line",
+        "warehouse revolver"
       ]
     },
     {

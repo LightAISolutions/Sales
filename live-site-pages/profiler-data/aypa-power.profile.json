@@ -1,0 +1,1214 @@
+{
+  "schemaVersion": 7,
+  "slug": "aypa-power",
+  "name": "Aypa Power (Aypa Power Development LLC; formerly NRStor C&I L.P.)",
+  "shortName": "Aypa Power",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://www.aypa.com/",
+  "headquarters": "Austin, Texas (US headquarters, 11801 Domain Blvd, Suite 525) and Toronto, Ontario (Canadian headquarters, 8 King Street East), per aypa.com",
+  "founded": 2016,
+  "employees": "'Approximately 200-person team' per the Brookfield acquisition release (22 July 2026); 'more than 200 full-time employees' per Aypa's own South Carolina PSC application (20 November 2025). No annual headcount series is published.",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Aypa Power is a Blackstone-owned standalone battery-storage platform under a signed but unclosed sale to Brookfield — announced 22 July 2026 at about USD 7 billion enterprise value and USD 3 billion of equity, 'subject to customary regulatory approvals', with no closing announced as of 4 September 2026 — and what Brookfield is buying is a contracted asset base (about 6.5 GW operating, under construction and contracted, '95% contracted' with an average 17 years remaining, per the buyer) plus a 20 GW-plus pipeline and about 200 people; the premise 'Brookfield is buying Aypa' is confirmed as a pending transaction and the '~6.5 GW' figure is Brookfield's, split by Brookfield Renewable as about 3,000 MW operating and under construction and about 3,500 MW contracted, a split Aypa itself has never published.\n\nBACKGROUND. Founded in Toronto as NRStor C&I (2016 per the company's bio, 2017 per its South Carolina PSC filing), acquired by funds managed by Blackstone Energy Partners in March 2020 with about 200 MWh of Ontario behind-the-meter projects, and relaunched as Aypa Power in August 2020 with a US headquarters in Austin. The company describes itself as an energy storage-focused independent power producer that develops, owns and operates utility-scale storage and hybrid projects; its own boilerplate has carried a '22+ GW' development pipeline since November 2023 and a project count that moved from 30 (February 2026) to 42 (March–June 2026). Named counterparties per company or counterparty releases and filings: SDG&E, Idaho Power, Salt River Project, San Diego Community Power, Northern California Power Agency, PG&E (CPUC Resolution E-5437), Santee Cooper, United Power, DTE Electric (Michigan PSC), the Ontario IESO (LT1) and two California CCAs. Disclosed financing exceeds USD 4.5 billion of facilities since 2022: a USD 1.55 billion corporate facility, a USD 1.5 billion construction warehouse with a USD 500 million accordion, and seven project-level packages using both partnership-flip tax equity and a tax-credit-transfer bridge. The only named battery supplier is Canadian Solar's e-STORAGE (about 3.9 GWh cumulative per ESS News); Energy-Storage.news describes Sungrow units at Borden County. Two local permit denials (Hamilton County IN, July 2025; Chino CA, July 2026) are the documented setbacks.\n\nCollection gaps: Aypa publishes no project list, no leadership page, no financial statements and no operating-versus-under-construction capacity; the roster below comes from its own PSC testimony exhibit. The counterparty to the Bypass offtake, the tax-credit-transfer buyers, the Yadkins PPA counterparty and the EPCs on the US projects are not stated in any source read. No independent ranking of standalone storage developers places Aypa; 'largest standalone battery energy storage platform in North America' is the parties' claim.",
+  "ecosystemRole": "Aypa is the buyer side of this corpus's storage supply chain: a multi-GW owner-operator that contracts with utilities, public power and CCAs, finances through a recurring group of project-finance banks and tax-equity investors, and procures batteries from Canadian Solar's e-STORAGE (with Sungrow units at one ERCOT site). Its Brookfield sale is the clearest recent mark of what a contracted standalone-storage platform is worth to an infrastructure fund; its Indiana and Chino denials are the clearest recent marks of where the pipeline-to-operating conversion breaks.",
+  "productsAndServices": [
+    {
+      "name": "Contracted utility-scale storage fleet (tolling, energy-storage service and RA agreements)",
+      "category": "Owned and operated BESS — contracted",
+      "description": "Standalone lithium-ion battery projects that Aypa develops, finances, constructs, owns and operates under long-term agreements with utilities, public power agencies and community-choice aggregators. Named contracted projects per Aypa's own releases and counterparty filings: Cald (100 MW / 400 MWh, Los Angeles, SDG&E tolling agreement, COD 2024), Kuna (150 MW / 600 MWh, Idaho, Idaho Power energy-storage agreement, COD stated as mid-2025), Pediment (250 MW / 1,000 MWh, Mesa AZ, 20-year SRP tolling agreement, online June 2026), a second SRP project (250 MW / 2,000 MWh, due December 2028), Bypass (200 MW / 400 MWh, Fort Bend County TX, 'long-term offtake arrangement' with an unnamed counterparty), Trolley (400 MW / 1,600 MWh, San Bernardino County, 20-year NCPA energy-storage service agreement, COD mid-2029), Dirac (225 MW, PG&E mid-term-reliability RA agreement with energy settlement, 15 years from August 2028), Pinopolis (300 MW / 1,200 MWh, Moncks Corner SC, Santee Cooper battery energy storage agreement, COD 1 December 2027) and Elora plus Hedley (422 MW / 1,688 MWh, Ontario, IESO LT1 contracts, COD mid-2027, in joint venture with Six Nations of the Grand River Development Corporation).",
+      "highlights": [
+        "Brookfield's acquisition release (22 July 2026) describes the portfolio as '95% contracted under long-term agreements with investment-grade customers for an average remaining contract life of 17 years' — a buyer's characterisation, not an Aypa disclosure.",
+        "Contract forms seen in the record: utility tolling agreements (SDG&E, SRP), an energy-storage agreement (Idaho Power), an energy-storage service agreement with a joint-action agency (NCPA), a CPUC-approved mid-term-reliability RA-plus-energy-settlement contract (PG&E, Resolution E-5437), a public-power build-own-operate agreement in which the utility 'retains exclusive dispatch control' (Santee Cooper) and Ontario LT1 capacity contracts (IESO).",
+        "Aypa's own site lists the products it sells as 'PPAs, tolls, and 7×16 or 24/7 firm products' to 'transmission and system operators, utilities, municipalities, cooperatives, and corporate customers'.",
+        "Pinopolis is sited on about 22 acres of the retired Jefferies coal station; Santee Cooper states the location 'qualifies it for federal incentives that help lower the project cost' (energy-community bonus, per the utility's words)."
+      ],
+      "positioning": "Brookfield calls Aypa 'the largest standalone battery energy storage platform in North America' (about 6.5 GW operating, under construction and contracted) — a claim by the buyer. Against the other contracted-storage IPPs in this corpus — Plus Power's tolling franchise, Jupiter Power's ERCOT merchant fleet, Eolian's PJM position — Aypa's distinguishing record is breadth of counterparty type (investor-owned utilities, public power, CCAs, a provincial system operator) and the Canadian leg (Ontario LT1, Six Nations JV) that none of the US-only peers holds.",
+      "soldThrough": "Direct bilateral contracting with load-serving entities and system operators; projects held in project companies (e.g. Kuna BESS LLC, Balsam Project LLC, Pinopolis Reliability Project LLC, Elora BESS LP) under Aypa Power Development LLC.",
+      "targetSegments": [
+        "Investor-owned utilities (SDG&E, PG&E, Idaho Power)",
+        "Public power and joint-action agencies (SRP, Santee Cooper, NCPA)",
+        "Community-choice aggregators (San Diego Community Power)",
+        "Provincial system operators (IESO Ontario)"
+      ],
+      "roadmap": "Dated CODs in the record: Vidal 2026; Elora and Hedley mid-2027; Pinopolis December 2027; Dirac by May 2028; second SRP project December 2028; Trolley mid-2029. Aypa's February 2026 warehouse release says the facility funds projects 'expected to reach commercial operation through 2028'; the March 2026 corporate facility is 'structured to support activities beyond 2028'."
+    },
+    {
+      "name": "Hybrid solar-plus-storage and merchant projects",
+      "category": "Owned and operated — hybrid and merchant",
+      "description": "Co-located solar-plus-storage projects and merchant standalone storage, the latter concentrated in ERCOT. Vidal (San Bernardino County) pairs 160 MW of solar PV with a 160 MW / 640 MWh battery under a long-term PPA with San Diego Community Power for energy, resource adequacy and renewable energy certificates (COD 2026; USD 535 million debt closed May 2025). In ERCOT, Wolf Tank (173 MWh, Webb County, COD 2023) and Borden County (150 MW / 300 MWh, COD 2024) were financed without a named offtaker; Bypass is the project Aypa calls 'one of the first fully contracted energy storage projects in ERCOT'. Aypa's M&A page states it underwrites 'merchant and contracted revenues for both behind-the-meter and front-of-the-meter projects'.",
+      "highlights": [
+        "Vidal is the one hybrid in the public record; the release attributes up to 260 construction jobs and a Santander-led lender group.",
+        "The ERCOT projects financed in 2022–2023 (Wolf Tank, Borden County) carry no named offtaker in Aypa's releases — merchant exposure is inferred from the absence, not stated.",
+        "The March 2020 Blackstone acquisition release described a 'turn-key build, own, and operate business model'; the merchant leg is a US-era addition."
+      ],
+      "positioning": "Hybrid and merchant projects are the minority of the platform by the buyer's own count (95% contracted). The merchant ERCOT assets sit in the same market as Jupiter Power's and Spearmint Energy's fleets, but Aypa's public statements do not describe a trading or optimisation arm of its own.",
+      "soldThrough": "Direct PPAs with load-serving entities (Vidal); ERCOT market participation for the merchant assets (counterparties and hedges not disclosed).",
+      "targetSegments": [
+        "Community-choice aggregators",
+        "ERCOT wholesale market"
+      ],
+      "roadmap": "No announced hybrid beyond Vidal; Canadian Solar's 6-K of March 2025 references a 160 MW AC California battery and a 200 MW AC Texas battery under supply agreements whose project names Aypa has not published."
+    },
+    {
+      "name": "Development platform (pipeline, co-development, M&A)",
+      "category": "Development and origination",
+      "description": "A development pipeline Aypa has described as 'exceeding 22 gigawatts' since November 2023 (10 GW in January 2022, 12 GW in July 2022, 15 GW in early 2023), sourced by greenfield development, co-development with third-party developers and pipeline buy-outs. Acquisitions in the record: Cald (from Eolus Project Holdings, January 2022), Yadkins (100 MW, Chesapeake VA, from East Point Energy, March 2022) and Williams (150 MW) plus Fletcher (118 MW) in Indiana (from Blue Steel Power, a joint venture of Open Road Renewables and Eolian, March 2023). The South Carolina PSC application describes 'in excess of 22 gigawatts of qualified development projects'; Brookfield's release calls it 'a >20 GW development pipeline'.",
+      "highlights": [
+        "Aypa's Developers page offers 'flexible capital to seed emerging opportunities', co-development and pipeline buy-outs; its M&A page offers 'partnerships, joint ventures, project ownership, co-development, and buy-out opportunities'.",
+        "The company states it manages 'all major development, construction, and operational responsibilities in-house' (Exhibit FF-2 to its SC PSC testimony), naming transmission-and-market analytics, pre-construction and procurement, and O&M functions.",
+        "Project counts in Aypa's boilerplate moved from 30 (February 2026) to 42 (March–June 2026); Brookfield's July 2026 release says 35 'in operation or under construction'. The definitions differ and the company has not reconciled them."
+      ],
+      "positioning": "The pipeline figure is the platform's headline asset in the sale: Brookfield Renewable's Q2 2026 release separates '~3,000 megawatts of highly contracted operating and under construction battery storage assets, an additional ~3,500 megawatts of contracted projects and a further +20-gigawatt development pipeline'. Aypa itself has never published an operating-versus-under-construction split.",
+      "soldThrough": "In-house development; acquisitions of single projects from developers (Eolus, East Point Energy, Blue Steel Power); joint venture with Six Nations of the Grand River Development Corporation in Ontario.",
+      "targetSegments": [
+        "Third-party developers selling late-stage projects",
+        "Landowners (fixed lease payments)",
+        "Indigenous development partners (Ontario)"
+      ],
+      "roadmap": "Aypa stated in January 2023 a 'goal of 1,500+ megawatts to notice-to-proceed within 24 months' and in July 2024 'over 3 gigawatts of projects targeted for completion within 24 months'. Whether either was met is not stated by the company."
+    },
+    {
+      "name": "Corporate and project financing programme",
+      "category": "Financing",
+      "description": "The financing stack disclosed in Aypa's own releases: a corporate facility (revolver, term loan, letter-of-credit facility) grown from USD 320 million (January 2023) to USD 650 million (July 2024), USD 1.05 billion (May 2025) and USD 1.55 billion (March 2026); a USD 1.5 billion three-year construction warehouse revolving facility with a USD 500 million accordion (February 2026, CIBC and Wells Fargo led, 19 named lenders); and project-level packages — Wolf Tank USD 88 million (2022), Cald plus Borden County USD 550 million portfolio debt and tax equity (2023), Kuna USD 323 million including USD 90 million of tax equity (2024), Pediment USD 398 million with a tax-credit-transfer bridge loan (2024), Bypass USD 190 million including USD 94 million of Morgan Stanley tax equity in a 'hybrid partnership flip' (2024), Vidal USD 535 million (2025) and Elora plus Hedley CAD 700 million with Canadian investment-tax-credit bridge loans (2026).",
+      "highlights": [
+        "Aypa calls the corporate facility 'among the largest corporate credit facilities in renewable energy and the largest for energy storage' and the warehouse 'the largest warehouse financing executed for a storage-focused IPP' — company claims.",
+        "Recurring lenders across the deals: Santander, Société Générale, ING, SMBC, Siemens Financial Services, U.S. Bank / U.S. Bancorp Impact Finance (tax equity on Cald–Borden, Kuna), Zions, RBC, Desjardins, National Bank of Canada, CIBC, Nomura, ICBC, MUFG, First Citizens/CIT, Bank of America; Morgan Stanley Renewables (Bypass tax equity).",
+        "Tax-credit monetisation appears in both forms: partnership-flip tax equity (Cald–Borden, Kuna, Bypass) and a tax-credit-transfer bridge loan (Pediment)."
+      ],
+      "positioning": "The warehouse-plus-corporate-facility structure is what a multi-GW private platform uses in place of a public balance sheet; no bond issuance, rating or public financial statement exists for Aypa.",
+      "soldThrough": "Bank syndicates arranged by the recurring lender group; tax equity from U.S. Bancorp Impact Finance and Morgan Stanley Renewables.",
+      "targetSegments": [
+        "Project-finance banks",
+        "Tax-equity and tax-credit-transfer investors"
+      ],
+      "roadmap": "Aypa says the March 2026 corporate facility is 'the third consecutive year the facility has been expanded'. Whether the facilities survive the Brookfield closing unchanged is not stated."
+    },
+    {
+      "name": "Commercial and industrial behind-the-meter storage (NRStor C&I legacy)",
+      "category": "Behind-the-meter storage-as-a-service",
+      "description": "The Ontario business Blackstone acquired in March 2020 as NRStor C&I: behind-the-meter storage for commercial and industrial customers, sold as a 'turn-key solution that requires no capital outlay and no operational experience from you'. Named programmes: eight C&I projects totalling 42 MWh with IHI (2018) and a '300 MW' behind-the-meter programme with Honeywell announced in September 2019. Aypa's site still carries a Commercial & Industrial page.",
+      "highlights": [
+        "At acquisition, Blackstone described NRStor C&I as holding 'over 200 MWh of operational, in-construction, and contracted projects' and being the 'market leader in Ontario'.",
+        "No C&I project or programme has been announced since 2019; the utility-scale fleet is where every release since 2022 has been."
+      ],
+      "positioning": "Historical origin rather than a growth line; it explains the Toronto headquarters and the Ontario relationships behind Elora and Hedley.",
+      "soldThrough": "Storage-as-a-service contracts with C&I hosts; equipment and controls partners (IHI, Honeywell) in the 2018–2019 programmes.",
+      "targetSegments": [
+        "Ontario commercial and industrial electricity customers (Global Adjustment exposure)"
+      ],
+      "roadmap": "None announced."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Project ledger — every project a source names, with MW / MWh, market, counterparty and status as stated (sources: Aypa releases, counterparty releases, regulator and county records)",
+      "specs": [
+        {
+          "band": "Operating (source states online)",
+          "label": "Pediment — Mesa, AZ (SRP)",
+          "value": "250 MW / 1,000 MWh; 20-year tolling agreement with Salt River Project; 'now online and serving customers' per SRP, 16 June 2026; USD 398 million financing (December 2024)"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "Bypass — Fort Bend County, TX (ERCOT)",
+          "value": "200 MW / 400 MWh; ERCOT queue 23INR0336 actual completion 6 February 2026 (projected 14 December 2025) per interconnection.fyi; 'long-term offtake arrangement' with an undisclosed counterparty; USD 190 million package"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "Borden County ('BoCo') — Borden County, TX (ERCOT)",
+          "value": "150 MW / 300 MWh per Aypa (330 MWh per Energy-Storage.news); ERCOT COD approval first half of August 2024; EIA operating date 1 August 2024; '90 Sungrow individual battery units' delivered via e-STORAGE, Linxon balance of plant (Energy-Storage.news)"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "Wolf Tank — Webb County, TX (ERCOT)",
+          "value": "173 MWh standalone; COD 2023 per Aypa; USD 88 million CIT / Siemens Financial Services loan (July 2022); no offtaker named"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Cald — Los Angeles, CA (CAISO)",
+          "value": "100 MW / 400 MWh; long-term tolling agreement with SDG&E; COD 2024 per the November 2023 financing release (no source read confirms the date achieved); 487 MWh SolBank supply (Canadian Solar, February 2023)"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Kuna — Kuna, ID (Idaho Power)",
+          "value": "150 MW / 600 MWh; long-term energy storage agreement with Idaho Power secured April 2023; COD 'mid-2025' per the August 2024 financing release; USD 323 million financing; no COD-achieved release found"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Vidal — San Bernardino County, CA (CAISO)",
+          "value": "160 MW solar PV + 160 MW / 640 MWh BESS; long-term PPA with San Diego Community Power (energy, RA, RECs); COD 2026; USD 535 million debt (May 2025)"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Elora and Hedley — Wellington and Haldimand Counties, ON (IESO)",
+          "value": "211 MW each, 422 MW / 1,688 MWh combined per Aypa (420 MW / 2,122 MWh DC per Canadian Solar); IESO LT1 contracts; joint venture with Six Nations of the Grand River Development Corporation; COD mid-2027; CAD 700 million financing (March 2026)"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Pinopolis — Moncks Corner, SC (Santee Cooper)",
+          "value": "300 MW / 1,200 MWh, four-hour LFP, about 22 acres at the retired Jefferies station; Santee Cooper retains exclusive dispatch; COD 1 December 2027; SC PSC docket 2025-318-E application filed 20 November 2025"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Gabriel (San Gabriel) — Irwindale, CA (CAISO)",
+          "value": "400 MW total on 15.94 acres; Ava Community Energy 100 MW / 400 MWh 20 years from 1 June 2027; Central Coast Community Energy 125 MW / 500 MWh 15 years from 1 June 2027; PG&E 100 MW / 400 MWh 15-year RA from 1 September 2027; CEQA notice of determination 3 December 2025"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Marici — City of Industry, CA (CAISO)",
+          "value": "400 MW / 1,600 MWh; PG&E 15-year RA agreement with energy settlement from 1 September 2027; CAISO Cluster 14 queue COD 2031 versus the contracted 2027 delivery (PG&E's independent evaluator flagged the gap)"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Dirac — Chino, CA (CAISO)",
+          "value": "225 MW nameplate under a PG&E mid-term-reliability RA agreement (CPUC Resolution E-5437, 15 years from 1 August 2028) per Stoel Rives; local press describes a 400 MW project; Chino Planning Commission rejected it 4–3 on 15 July 2026"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Trolley — San Bernardino County, CA (CAISO)",
+          "value": "400 MW / 1,600 MWh; 20-year energy storage service agreement with Northern California Power Agency; COD mid-2029"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Second SRP project — Arizona",
+          "value": "250 MW / 2,000 MWh lithium-ion under contract with SRP; expected online December 2028 (SRP release, June 2026)"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Fortress — Morgan County, CO (United Power)",
+          "value": "200 MW solar + 150 MW / 600 MWh BESS; long-term PPA with United Power (cooperative); COD 2027 (United Power release, October 2025)"
+        },
+        {
+          "band": "Contracted — under construction or in development",
+          "label": "Big Mitten Energy Center — Huron County, MI (DTE)",
+          "value": "450 MW BESS; 20-year agreement with DTE Electric approved by the Michigan PSC 27 March 2026 (local press citing the commission)"
+        },
+        {
+          "band": "Development — permitted or in process",
+          "label": "Williams and Fletcher — Indiana (MISO)",
+          "value": "150 MW (Jefferson County) and 118 MW (Decatur County); acquired March 2023 from Blue Steel Power (Open Road Renewables and Eolian JV); conditional use permits granted late 2022; MWh and COD not stated"
+        },
+        {
+          "band": "Development — permitted or in process",
+          "label": "Sellersburg — Clark County, IN (MISO)",
+          "value": "20-acre BESS; Clark County BZA favourable vote 3–0 (May 2025); construction expected end-2025, operation 2026 per local press"
+        },
+        {
+          "band": "Development — permitted or in process",
+          "label": "Summit Township — Jackson County, MI",
+          "value": "13-acre BESS next to a Consumers Energy substation; planning commission approval 14 October 2025, township board final approval pending"
+        },
+        {
+          "band": "Development — permitted or in process",
+          "label": "Stargazer — Brazoria County, TX (ERCOT)",
+          "value": "158 MW solar (Cleanview) paired with a 100 MW / 200 MWh BESS; Fort Bend County 10-year property-tax exemption; construction start Q2 2025, online Q4 2026 per Energy-Storage.news"
+        },
+        {
+          "band": "Development — permitted or in process",
+          "label": "Yadkins — Chesapeake, VA (PJM)",
+          "value": "100 MW standalone acquired March 2022 from East Point Energy; microsite retired; no later status found"
+        },
+        {
+          "band": "Development — denied",
+          "label": "Kingfisher Reserve — Hamilton County, IN (MISO)",
+          "value": "200 MW / 800 MWh LFP (SolBank 3.0); Hamilton County BZA denied the variance unanimously 23 July 2025"
+        }
+      ],
+      "notes": "Aypa publishes no project list. Counts in its own boilerplate moved from 30 (February 2026) to 42 (March–June 2026); Brookfield's release says 35 in operation or under construction. Cleanview's free tier lists 12 planned projects totalling 2,108 MW across eight states, including Louisiana solar (Goos Ferry 325 MW) not confirmed by any Aypa source. Alberta, SPP and APS projects: none found."
+    },
+    {
+      "product": "Financing ledger — every facility disclosed by Aypa or its lenders (USD unless stated)",
+      "specs": [
+        {
+          "band": "Corporate",
+          "label": "Corporate credit facility",
+          "value": "USD 320 million (January 2023: USD 250 million LC + USD 70 million revolver; Santander, Investec, Nomura) → USD 650 million (July 2024: USD 350 million LC, USD 100 million revolver, USD 200 million term loan; Apterra, Santander, ING, Nomura, Société Générale, SMBC) → USD 1.05 billion (May 2025: USD 300 million term loan, USD 200 million revolver, USD 550 million LC) → USD 1.55 billion (March 2026, +USD 500 million, 'six new domestic and international institutions', lenders not named)"
+        },
+        {
+          "band": "Corporate",
+          "label": "Construction warehouse facility",
+          "value": "USD 1.5 billion revolving credit facility + USD 500 million accordion, three-year tenor (3 February 2026); CIBC (administrative and collateral agent, co-lead structuring agent), Wells Fargo (co-lead structuring agent, left lead arranger); six coordinating lead arrangers, nine joint lead arrangers, Regions Bank MLA; funds projects reaching COD through 2028"
+        },
+        {
+          "band": "Project",
+          "label": "Elora + Hedley (Ontario)",
+          "value": "About CAD 700 million (USD 512 million): construction-to-term loans, investment-tax-credit bridge loans, letters of credit (10 March 2026); CIBC left lead, SMBC Canada right lead; Desjardins, National Bank, RBC (administrative agent), Société Générale; ICBC Canada, Siemens Financial Services"
+        },
+        {
+          "band": "Project",
+          "label": "Vidal (California hybrid)",
+          "value": "USD 535 million debt (12 May 2025); Santander CIB coordinating lead arranger; U.S. Bank / U.S. Bancorp Impact Finance and Zions MLAs; Siemens Financial Services and Associated Bank managing agents"
+        },
+        {
+          "band": "Project",
+          "label": "Bypass (Texas)",
+          "value": "USD 190 million (31 December 2024): USD 68 million construction-to-term loan, USD 91 million tax-equity bridge loan, USD 31 million LCs; plus USD 94 million tax equity from Morgan Stanley Renewables in a 'hybrid partnership flip'; SMBC administrative agent, Santander, Siemens Financial Services"
+        },
+        {
+          "band": "Project",
+          "label": "Pediment (Arizona)",
+          "value": "USD 398 million (11 December 2024): construction-to-back-leverage loan, tax-credit-transfer bridge loan, LCs; Société Générale, ING, Bank of America coordinating lead arrangers; Zions administrative agent; RBC, Desjardins"
+        },
+        {
+          "band": "Project",
+          "label": "Kuna (Idaho)",
+          "value": "USD 323 million (6 August 2024): USD 233 million green loan (construction/term, tax-equity bridge, LC) + USD 90 million tax equity from U.S. Bancorp Impact Finance; ING, Société Générale, ICBC NY; Deutsche Bank Trust Company Americas administrative agent"
+        },
+        {
+          "band": "Project",
+          "label": "Cald + Borden County portfolio",
+          "value": "USD 550 million debt and tax equity (8 November 2023): First Citizens, Nomura, National Bank of Canada, MUFG (administrative agent); tax equity U.S. Bancorp Impact Finance"
+        },
+        {
+          "band": "Project",
+          "label": "Wolf Tank (Texas)",
+          "value": "USD 88 million construction and term loan (19 July 2022): CIT (First Citizens) lead arranger, Siemens Financial Services"
+        },
+        {
+          "band": "Transaction",
+          "label": "Sale to Brookfield",
+          "value": "'Approximately $7 billion enterprise value at closing, or an equity value of $3 billion' (joint release, 22 July 2026); Brookfield Renewable's share 'approximately $420 million net' per its results release and 'approximately $760 million' per its Q2 2026 MD&A — both as stated; Enerdatics derives about USD 4 billion of net debt, 'largely non-recourse project debt' (analyst, unconfirmed)"
+        }
+      ],
+      "notes": "Tax-credit-transfer buyers are never named; only the Pediment 'tax credit transfer bridge loan' structure is disclosed. Infralogic reported in February 2026 that holdco financing had reached about USD 1.55 billion and an opco facility of USD 1–1.5 billion was being raised — press-reported, later matched by the March 2026 and February 2026 releases respectively."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-07-31",
+      "category": "ma",
+      "headline": "Brookfield Renewable's Q2 2026 results split the Aypa acquisition: about 3,000 MW operating and under construction, about 3,500 MW contracted, a 20 GW-plus pipeline; 'approximately $420 million net to Brookfield Renewable' (its MD&A says about USD 760 million)",
+      "read": "The buyer's own numbers are the only published operating-versus-contracted split; the two net-equity figures are both Brookfield's and are carried as stated.",
+      "source": "https://www.globenewswire.com/news-release/2026/07/31/3336706/0/en/Brookfield-Renewable-Reports-Strong-Second-Quarter-Results.html"
+    },
+    {
+      "date": "2026-07-22",
+      "category": "ma",
+      "headline": "Brookfield agrees to acquire Aypa from funds managed by Blackstone Energy Transition Partners at about USD 7 billion enterprise value and USD 3 billion equity value, 'subject to customary regulatory approvals'; the whole platform plus about 200 staff, through the second vintage of Brookfield's global transition strategy with Brookfield Renewable",
+      "read": "Signed, not closed: as of the newest source Aypa is still Blackstone-owned and its own site still reads 'A Blackstone Portfolio Company'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1937926/000117184326004839/exh_991.htm"
+    },
+    {
+      "date": "2026-07-15",
+      "category": "regulatory",
+      "headline": "Chino Planning Commission rejects the Dirac battery project 4–3, citing the absence of a city BESS ordinance and proximity to Ayala Park",
+      "read": "The PG&E-contracted, CPUC-approved project now lacks its local permit; appeal status is not in the record.",
+      "source": "https://sbcsentinel.com/2026/07/chino-planning-commission-nixes-huge-battery-energy-storage-project/"
+    },
+    {
+      "date": "2026-06-16",
+      "category": "project",
+      "headline": "Pediment (250 MW / 1,000 MWh, Mesa, Arizona) online under a 20-year SRP tolling agreement; SRP confirms a second 250 MW / 2,000 MWh Aypa project due December 2028",
+      "read": "The first Aypa asset a utility has publicly declared online in 2026, and the first eight-hour-class contract in the record.",
+      "source": "https://media.srpnet.com/srp-and-aypa-power-bring-new-battery-storage-system-online-to-strengthen-grid-reliability/"
+    },
+    {
+      "date": "2026-03-31",
+      "category": "financial",
+      "headline": "Corporate credit facility upsized by USD 500 million to USD 1.55 billion with six new lenders; boilerplate now reads '42 projects currently in operation or under construction'",
+      "read": "Third consecutive annual expansion; the company's project count has risen from 30 to 42 in two months without a published reconciliation.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-closes-500-million-upsizing-of-its-corporate-credit-facility-increasing-total-to-1-55-billion-302729153.html"
+    },
+    {
+      "date": "2026-03-27",
+      "category": "regulatory",
+      "headline": "Michigan PSC approves the 450 MW Big Mitten Energy Center (Huron County) with a 20-year DTE Electric agreement",
+      "read": "A second Michigan utility contract in the record, reported by local press citing the commission — no Aypa release.",
+      "source": "https://huroncountyview.com/articles/state-approves-major-battery-projects-including-one-in-huron-county/"
+    },
+    {
+      "date": "2026-03-10",
+      "category": "financial",
+      "headline": "About CAD 700 million (USD 512 million) financing closes for Elora and Hedley (422 MW / 1,688 MWh, Ontario) with Six Nations of the Grand River Development Corporation; eight-bank syndicate led by CIBC and SMBC",
+      "read": "The Canadian leg is financed with ITC bridge loans and an Indigenous joint-venture partner — a structure none of the US-only storage IPPs in this corpus has.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-and-six-nations-of-the-grand-river-development-corporation-secure-ca700-million-financing-close-for-ontario-battery-energy-storage-projects-302708425.html"
+    },
+    {
+      "date": "2026-02-19",
+      "category": "ma",
+      "headline": "Infralogic reports Blackstone exploring a sale of Aypa ('Project Alpha'), with Bank of America and Cantor Fitzgerald advising",
+      "read": "Press-reported; matched five months later by the Brookfield signing with the same advisors.",
+      "source": "https://ionanalytics.com/insights/infralogic/blackstone-explores-sale-of-aypa-power/"
+    },
+    {
+      "date": "2026-02-06",
+      "category": "project",
+      "headline": "Bypass (200 MW / 400 MWh, Fort Bend County) reaches commercial operation per ERCOT queue data, eight weeks after its projected 14 December 2025 date",
+      "read": "The contracted ERCOT asset slipped by two months; the offtaker remains undisclosed.",
+      "source": "https://www.interconnection.fyi/project/ercot-23inr0336"
+    },
+    {
+      "date": "2026-02-03",
+      "category": "financial",
+      "headline": "USD 1.5 billion three-year construction warehouse facility with a USD 500 million accordion, CIBC and Wells Fargo led, funding projects reaching COD through 2028",
+      "read": "A warehouse is what a private platform uses to build several projects at once before each is refinanced — the financing form of the pipeline-to-operating conversion the buyer paid for.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-secures-1-5-billion-in-warehouse-facility-financing-to-accelerate-construction-of-utility-scale-energy-storage-projects-302676673.html"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "regulatory",
+      "headline": "CPUC Resolution E-5437 approves PG&E's mid-term-reliability RA agreement with Balsam Project LLC (Aypa's Dirac, 225 MW, 15 years from August 2028)",
+      "read": "Contract approved six months before the local permit was refused — the California sequence runs commission first, city second.",
+      "source": "https://www.stoel.com/insights/reports/energy-regulatory-updates/january-7-2026"
+    },
+    {
+      "date": "2025-12-03",
+      "category": "regulatory",
+      "headline": "City of Irwindale files the CEQA notice of determination for the 400 MW Gabriel (San Gabriel) battery project",
+      "read": "State-level environmental clearance for the project carrying the Ava, Central Coast and PG&E contracts from mid-2027.",
+      "source": "https://ceqanet.lci.ca.gov/2023020290/5"
+    },
+    {
+      "date": "2025-11-20",
+      "category": "regulatory",
+      "headline": "Pinopolis Reliability Project LLC files its certificate application at the South Carolina PSC: 300 MW / 1,200 MWh LFP at the retired Jefferies station, COD 1 December 2027, Santee Cooper holding dispatch",
+      "read": "The filing doubles as Aypa's fullest first-party disclosure — headcount, in-house functions and the leadership roster are all in its exhibits.",
+      "source": "https://dms.psc.sc.gov/Attachments/Matter/d622c902-2ae5-4351-a79d-329a554538e9"
+    },
+    {
+      "date": "2025-11-04",
+      "category": "customer",
+      "headline": "Northern California Power Agency signs a 20-year energy storage service agreement for Trolley (400 MW / 1,600 MWh, San Bernardino County), COD mid-2029",
+      "read": "A joint-action agency for eight municipal utilities joins the counterparty list — public power is now a third of Aypa's named customers.",
+      "source": "https://www.publicpower.org/periodical/article/ncpa-enters-new-400-mw1600-mwh-energy-storage-service-agreement"
+    },
+    {
+      "date": "2025-10-24",
+      "category": "customer",
+      "headline": "Santee Cooper's board approves the Pinopolis build-own-operate battery agreement, 'largest battery storage installation in South Carolina'",
+      "read": "A non-ISO Southeastern utility contracting storage from a private IPP rather than self-building it.",
+      "source": "https://newsroom.santeecooper.com/news/Santee-Cooper-Board-Approves-Key-Projects-To-Meet-Future-Electric-Demands/"
+    },
+    {
+      "date": "2025-10-14",
+      "category": "customer",
+      "headline": "United Power (Colorado cooperative) signs a long-term PPA for Fortress — 200 MW solar plus 150 MW / 600 MWh storage in Morgan County, COD 2027",
+      "read": "The second hybrid in the record, and the first cooperative counterparty.",
+      "source": "https://www.unitedpower.com/united-power-enters-agreement-aypa-power-fortress-solar-plus-storage-project-morgan-county"
+    },
+    {
+      "date": "2025-10-01",
+      "category": "procurement",
+      "headline": "Canadian Solar's e-STORAGE signs battery supply agreements and 20-year LTSAs with Aypa for Elora and Hedley — 420 MW / 2,122 MWh of SolBank, deliveries from Q1 2026",
+      "read": "Supplier concentration is now explicit: e-STORAGE is the only battery vendor any Aypa-side source names, across at least three deals.",
+      "source": "https://www.prnewswire.com/news-releases/canadian-solars-e-storage-expands-partnership-with-aypa-power-through-2-1-gwh-of-ontario-battery-storage-projects-302570479.html"
+    },
+    {
+      "date": "2025-07-23",
+      "category": "regulatory",
+      "headline": "Hamilton County, Indiana BZA unanimously denies the 200 MW / 800 MWh Kingfisher Reserve variance after a two-hour hearing",
+      "read": "The MISO pipeline's first documented loss to local opposition; the local press's claim that Aypa had a prior facility fire is unsupported by any source read.",
+      "source": "https://www.energy-storage.news/indiana-county-officials-reject-800mwh-lfp-bess-proposal-despite-miso-capacity-warnings/"
+    },
+    {
+      "date": "2025-05-29",
+      "category": "regulatory",
+      "headline": "Clark County, Indiana zoning board gives a 3–0 favourable vote to the 20-acre Sellersburg battery project",
+      "read": "One MISO approval against one denial in the same summer — county-level permitting is now the binding step for the Indiana pipeline.",
+      "source": "https://www.newsandtribune.com/news/clark-zoning-board-gives-favorable-vote-to-20-acre-battery-storage-system/article_294c6897-0511-4bcb-b49b-0f28ae987969.html"
+    },
+    {
+      "date": "2025-05-12",
+      "category": "financial",
+      "headline": "USD 535 million debt closes for Vidal (160 MW solar + 160 MW / 640 MWh, San Diego Community Power PPA), Santander-led",
+      "read": "The hybrid is financed on a CCA contract, the first CCA counterparty in the record.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-closes-535-million-to-advance-california-solar-and-energy-storage-hybrid-project-302452661.html"
+    },
+    {
+      "date": "2025-05-01",
+      "category": "financial",
+      "headline": "Corporate credit facility upsized by USD 400 million to USD 1.05 billion (USD 300 million term loan, USD 200 million revolver, USD 550 million LC facility)",
+      "read": "The letter-of-credit tranche — half the facility — is the collateral behind interconnection deposits and contract security across the pipeline.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-closes-upsizing-of-existing-credit-facility-to-1-05-billion-302444404.html"
+    },
+    {
+      "date": "2025-03-06",
+      "category": "procurement",
+      "headline": "Canadian Solar's 6-K reports battery supply agreements and 20-year LTSAs for two Aypa US projects totalling 1.2 GWh, construction from Q3 2025 (the supplier's own release title reads 1.8 GWh DC)",
+      "read": "Project names are not published by Aypa; the DC-versus-AC framing explains the 1.2 / 1.8 GWh discrepancy only partly. Collection gap.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465925027542/tm2510215d1_ex99-1.htm"
+    },
+    {
+      "date": "2024-12-31",
+      "category": "financial",
+      "headline": "USD 190 million Bypass package: USD 159 million of construction financing plus USD 94 million of Morgan Stanley tax equity in a 'hybrid partnership flip'; Aypa calls it 'one of the first fully contracted energy storage projects in ERCOT'",
+      "read": "A contracted ERCOT battery is rare enough that Aypa says so; the counterparty is still unnamed.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-secures-190-million-financing-for-the-bypass-battery-storage-project-in-texas-302340512.html"
+    },
+    {
+      "date": "2024-12-11",
+      "category": "financial",
+      "headline": "USD 398 million Pediment financing with a 'tax credit transfer bridge loan' — Société Générale, ING and Bank of America coordinating",
+      "read": "First disclosed use of credit transfer rather than tax equity in Aypa's stack.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-secures-398-million-financing-for-energy-storage-project-in-arizona-302329224.html"
+    },
+    {
+      "date": "2024-11-07",
+      "category": "customer",
+      "headline": "PG&E files 15-year RA agreements with Aypa for Marici (400 MW / 1,600 MWh) and Gabriel (100 MW / 400 MWh), deliveries from September 2027; the independent evaluator notes queue CODs of 2031 and 2033",
+      "read": "Two gigawatt-hours of utility RA contracted ahead of interconnection dates — the California model is contract first, queue second.",
+      "source": "https://www.energy-storage.news/aypa-power-secures-california-ra-agreements-with-investor-owned-utility-totalling-2gwh/"
+    },
+    {
+      "date": "2024-09-19",
+      "category": "project",
+      "headline": "ERCOT clears Borden County (150 MW / 330 MWh) for operation in August 2024; Energy-Storage.news describes 90 Sungrow battery units delivered via e-STORAGE with Linxon balance of plant",
+      "read": "The one public description of what is inside an Aypa ERCOT battery.",
+      "source": "https://www.energy-storage.news/ercot-clears-480mw-of-bess-for-operations-in-august-including-tesla-owned-unit-at-factory/"
+    },
+    {
+      "date": "2024-08-06",
+      "category": "financial",
+      "headline": "USD 323 million Kuna financing: USD 233 million green loan plus USD 90 million of U.S. Bancorp tax equity; Idaho Power energy storage agreement",
+      "read": "Idaho's largest battery, financed on a vertically integrated utility's contract outside any ISO.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-secures-323-million-in-financing-for-major-energy-storage-project-in-idaho-302215751.html"
+    },
+    {
+      "date": "2024-07-23",
+      "category": "financial",
+      "headline": "Corporate facility upsized from USD 320 million to USD 650 million; Hajabed targets 'over 3 gigawatts of projects targeted for completion within 24 months'",
+      "read": "A dated target: 3 GW complete by July 2026. Brookfield's July 2026 figure of about 3 GW operating and under construction is the nearest public test of it.",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-secures-650m-in-upsized-corporate-facility-the-largest-in-the-energy-storage-industry-302203940.html"
+    },
+    {
+      "date": "2024-07-18",
+      "category": "customer",
+      "headline": "SRP announces the Pediment (then Signal Butte) agreement — a project Eolian originated in 2018 and jointly bid with Aypa into SRP's 2023 all-source RFP",
+      "read": "Late-stage acquisition from a peer IPP, then contract, then financing, then COD in 23 months — the conversion ladder in one project.",
+      "source": "https://media.srpnet.com/srp-and-aypa-power-announce-new-battery-storage-system-to-help-meet-growing-energy-demand/"
+    },
+    {
+      "date": "2024-06-28",
+      "category": "customer",
+      "headline": "Ava Community Energy (100 MW / 400 MWh, 20 years) and Central Coast Community Energy (125 MW / 500 MWh, 15 years) contract Gabriel from June 2027; Fort Bend County grants Stargazer a 10-year property-tax exemption",
+      "read": "CCAs contract a single urban battery in tranches; Texas counties abate it.",
+      "source": "https://www.energy-storage.news/blackstones-aypa-power-secures-california-bess-agreement-texas-tax-exemption/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "canadian-solar",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023-02",
+      "scale": "420 MW / 2,122 MWh (Ontario); 1.2–1.8 GWh (US, 2025); 498 MWh DC (Bypass); about 3.9 GWh cumulative per ESS News",
+      "via": "e-STORAGE SolBank / SolBank 3.0 with 20-year LTSAs",
+      "note": "Canadian Solar's e-STORAGE is the only battery supplier any Aypa-side source names: Cald (487 MWh, 2023), Bypass (498 MWh DC, 2024), two US projects totalling 1.2 GWh (March 2025) and Elora plus Hedley (2,122 MWh, October 2025).",
+      "context": "The relationship runs through CSI Solar's 6-Ks and e-STORAGE's own releases rather than Aypa's. The August 2024 6-K records a battery supply agreement and long-term service agreement for Bypass 'scheduled for completion in Q3 2025'; the March 2025 6-K records BSAs and 20-year LTSAs for two US projects with construction from Q3 2025; the October 2025 release records 420 MW / 2,122 MWh of SolBank for Elora and Hedley with deliveries from Q1 2026, e-STORAGE's Colin Parkin describing it as expanding 'our partnership with Aypa Power'. Energy-Storage.news separately describes Borden County as built from Sungrow units delivered via e-STORAGE. Kingfisher Reserve, denied in Indiana, was designed around SolBank 3.0.",
+      "source": "https://www.prnewswire.com/news-releases/canadian-solars-e-storage-expands-partnership-with-aypa-power-through-2-1-gwh-of-ontario-battery-storage-projects-302570479.html"
+    },
+    {
+      "slug": "sungrow",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024-08",
+      "scale": "150 MW / 330 MWh (Borden County)",
+      "via": "battery units delivered via e-STORAGE",
+      "note": "Energy-Storage.news states Aypa's Borden County battery 'consists of 90 Sungrow individual battery units' delivered by e-STORAGE, with Linxon providing balance of plant and commissioning.",
+      "context": "The statement is the trade outlet's description of the project cleared by ERCOT in August 2024, not a supplier release; neither Sungrow nor Aypa has announced the link. It is the only public account of the equipment inside an Aypa ERCOT project, and it places a second Chinese-headquartered supplier in the fleet alongside Canadian Solar.",
+      "source": "https://www.energy-storage.news/ercot-clears-480mw-of-bess-for-operations-in-august-including-tesla-owned-unit-at-factory/"
+    },
+    {
+      "slug": "eolian",
+      "type": "partner",
+      "status": "historical",
+      "since": "2023-03",
+      "scale": "268 MW (Williams + Fletcher); 250 MW / 1,000 MWh (Pediment)",
+      "via": "late-stage project sales",
+      "note": "Eolian sold Aypa two Indiana projects (through the Blue Steel Power JV with Open Road Renewables, March 2023) and the late-stage Pediment project it had originated in 2018 and jointly bid into SRP's 2023 all-source RFP.",
+      "context": "Eolian is the peer that fed Aypa's conversion ladder twice. In March 2023 Aypa bought Williams (150 MW) and Fletcher (118 MW) from Blue Steel Power, with Eolian's Aaron Zubaty quoted in Aypa's release. SRP's July 2024 announcement records that Pediment (then Signal Butte) was originated by Eolian in 2018 and jointly bid with Aypa; Aypa then financed it (USD 398 million, December 2024) and SRP declared it online in June 2026. The pattern — a developer-IPP selling permitted, contracted projects to a platform that finances and builds them — is the pre-COD M&A market this corpus's Spearmint dossier describes from the seller's side.",
+      "source": "https://media.srpnet.com/srp-and-aypa-power-announce-new-battery-storage-system-to-help-meet-growing-energy-demand/"
+    },
+    {
+      "slug": "key-capture-energy",
+      "type": "competitor",
+      "status": "active",
+      "scale": "about 0.7 GW operating / 3.6 GW total (Enerdatics)",
+      "note": "Enerdatics' note on the Brookfield deal lists Key Capture Energy (SK) and esVolta as the comparable standalone storage platforms against which it benchmarks Aypa's implied about USD 1.1 million per MW.",
+      "context": "The comparison is an analyst's, not a party's. Enerdatics derives the per-MW value from the USD 7 billion enterprise value and Brookfield's about 6.5 GW, and sets it 'just below the ~$1.27mn/MW median for comparable US standalone battery assets at build-ready or construction stage since 2023'. No independent ranking of standalone storage developers placing Aypa was found.",
+      "source": "https://www.enerdatics.com/flashnotes-updates-brookfield-aypa"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "effectiveDate": "2023-01",
+      "exposure": "Aypa monetises the storage investment tax credit in both available forms: partnership-flip tax equity from U.S. Bancorp Impact Finance (Cald–Borden County 2023, Kuna 2024) and Morgan Stanley Renewables (Bypass, December 2024, a 'hybrid partnership flip'), and a 'tax credit transfer bridge loan' inside the December 2024 Pediment financing. Santee Cooper states that Pinopolis's siting at the retired Jefferies coal station 'qualifies it for federal incentives that help lower the project cost', and Energy-Storage.news reports the utility accelerated the award partly because of the 'potential phase-out of Inflation Reduction Act tax credits under HR1'.",
+      "mitigation": "",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-secures-398-million-financing-for-energy-storage-project-in-arizona-302329224.html"
+    },
+    {
+      "regime": "OBBBA (HR1) credit phase-down and FEOC restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2025-07",
+      "exposure": "Aypa's only named battery supplier is Canadian Solar's e-STORAGE (SolBank, about 3.9 GWh cumulative per ESS News), and Energy-Storage.news describes Borden County as built from '90 Sungrow individual battery units' — both Chinese-headquartered supply chains. No source read quantifies Aypa's FEOC or tariff exposure, and the company has made no statement on domestic content, FEOC or tariffs. Collection gap.",
+      "mitigation": "",
+      "source": "https://www.energy-storage.news/aypa-power-to-build-own-and-operate-1200mwh-south-carolina-bess/"
+    },
+    {
+      "regime": "Canadian Clean Technology ITC (Ontario projects)",
+      "status": "in-effect",
+      "effectiveDate": "2026-03",
+      "exposure": "The CAD 700 million Elora and Hedley financing (10 March 2026) includes 'investment tax credit bridge loans', per Aypa's release — the Canadian federal clean-technology credit bridged by the lender syndicate. The projects hold IESO LT1 capacity contracts and are developed in joint venture with Six Nations of the Grand River Development Corporation.",
+      "mitigation": "",
+      "source": "https://www.prnewswire.com/news-releases/aypa-power-and-six-nations-of-the-grand-river-development-corporation-secure-ca700-million-financing-close-for-ontario-battery-energy-storage-projects-302708425.html"
+    },
+    {
+      "regime": "CPUC mid-term-reliability procurement and RA rules",
+      "status": "in-effect",
+      "effectiveDate": "2026-01-15",
+      "exposure": "PG&E's mid-term-reliability RA agreement with Balsam Project LLC (Dirac, 225 MW, 15 years from August 2028) was approved by CPUC Resolution E-5437 at the 15 January 2026 meeting; PG&E's November 2024 advice letter for the Marici and Gabriel RA agreements disclosed that its independent evaluator flagged CAISO Cluster 14 queue CODs of 2031 and 2033 against contracted 2027 deliveries while finding a 'reasonable probability' of completion. Aypa's California revenue therefore depends on CPUC contract approvals and on interconnection dates that sit inside the utility's own filings.",
+      "mitigation": "",
+      "source": "https://www.stoel.com/insights/reports/energy-regulatory-updates/january-7-2026"
+    },
+    {
+      "regime": "Local BESS zoning and fire-code approvals (NFPA 855 / UL 9540A)",
+      "status": "in-effect",
+      "effectiveDate": "2025-07",
+      "exposure": "Two denials in twelve months: Hamilton County, Indiana rejected the 200 MW / 800 MWh Kingfisher Reserve variance unanimously on 23 July 2025 (Aypa's Brandon Gahman cited a 437-page application and NFPA 855 / UL 9540A compliance), and Chino's planning commission rejected Dirac 4–3 on 15 July 2026 with no city BESS ordinance in place. Approvals with conditions in the same period: Clark County IN (May 2025), Summit Township MI (October 2025), Irwindale CEQA (December 2025), Michigan PSC for Big Mitten (March 2026).",
+      "mitigation": "",
+      "source": "https://www.energy-storage.news/indiana-county-officials-reject-800mwh-lfp-bess-proposal-despite-miso-capacity-warnings/"
+    },
+    {
+      "regime": "South Carolina Utility Facility Siting and Environmental Protection Act (CECPCN)",
+      "status": "in-effect",
+      "effectiveDate": "2025-11-20",
+      "exposure": "Pinopolis Reliability Project LLC filed a certificate application at the South Carolina PSC on 20 November 2025 (docket 2025-318-E) with a merits hearing set for 19 March 2026, alongside a declaratory-order petition on the Siting Act; the contractual COD is 1 December 2027. Aypa's own testimony exhibit is the fullest first-party account of the company's team and in-house model.",
+      "mitigation": "",
+      "source": "https://dms.psc.sc.gov/Attachments/Matter/d622c902-2ae5-4351-a79d-329a554538e9"
+    },
+    {
+      "regime": "Texas Chapter 312 property-tax abatements",
+      "status": "in-effect",
+      "effectiveDate": "2024-06",
+      "exposure": "Fort Bend County granted the Stargazer solar-plus-storage project a 10-year property-tax exemption (minimum capex USD 46.8 million; annual payments in lieu of about USD 74,000), per Energy-Storage.news, June 2024.",
+      "mitigation": "",
+      "source": "https://www.energy-storage.news/blackstones-aypa-power-secures-california-bess-agreement-texas-tax-exemption/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Moe Hajabed",
+      "title": "Founder and Chief Executive Officer",
+      "background": [
+        "Founded NRStor C&I in 2016 (Aypa bio; 'founded in 2017' per the SC PSC application) and led the March 2020 Blackstone Energy Partners acquisition and the August 2020 rebranding as Aypa Power",
+        "Senior Vice President, Active Energy (prior)",
+        "Quoted as 'Founder and CEO' in the 22 July 2026 Brookfield acquisition release",
+        "B.A.Sc. Engineering Chemistry, Queen's University; Master of Chemical Engineering, McMaster University"
+      ]
+    },
+    {
+      "name": "João Metelo",
+      "title": "President",
+      "background": [
+        "Chief Executive Officer — Principle Power Inc.",
+        "Executive Vice President and Chief Financial Officer — EDP Renewables North America",
+        "Senior Advisor — Global Infrastructure Partners",
+        "B.S. Nova SBE; MBA University of Chicago Booth. Listed in Aypa's Exhibit FF-2 (SC PSC, November 2025); appointment date not published"
+      ]
+    },
+    {
+      "name": "Marc Atlas",
+      "title": "Chief Financial Officer",
+      "background": [
+        "Quoted as CFO in Aypa financing releases from July 2022 to March 2026; Aypa's exhibit states he has financed, acquired or divested more than 3,000 MW",
+        "Managing Director — FTI Consulting; President — NextGen Finance & Strategy",
+        "Chief Financial Officer — 8minutenergy Renewables",
+        "VP Finance and Director of International Development — Invenergy",
+        "MBA University of Chicago Booth"
+      ]
+    },
+    {
+      "name": "Dan Santelli",
+      "title": "Chief Commercial Officer",
+      "background": [
+        "Quoted as CCO in the Yadkins acquisition (March 2022) and NCPA Trolley (November 2025) releases",
+        "Aypa's exhibit credits him with more than 2,300 MWh of storage sales and storage work in PJM, CAISO, New York and ERCOT since 2010",
+        "B.S. Computer Science, Binghamton University"
+      ]
+    },
+    {
+      "name": "Sam Littlefield",
+      "title": "Chief Development Officer",
+      "background": [
+        "Leads western US development; executive sponsor for Pinopolis per the SC PSC exhibit",
+        "Directed EDP Renewables' western region (10 GW pipeline; 600+ MW built) — prior",
+        "B.S. Cal Poly San Luis Obispo; M.S. Geography, Oregon State University"
+      ]
+    },
+    {
+      "name": "Christie Kneteman",
+      "title": "Executive Vice President and General Counsel",
+      "background": [
+        "Joined Aypa in 2019; leads legal, regulatory and HR",
+        "Structured the Honeywell partnership (2019) and the Blackstone acquisition (2020) per Aypa's exhibit",
+        "J.D. (Hons.), University of Toronto"
+      ]
+    },
+    {
+      "name": "Timothy Fagan",
+      "title": "Executive Vice President, Asset Performance",
+      "background": [
+        "SVP Performance Management and Engineering and VP Asset Management — RWE Clean Energy / Con Edison Clean Energy Businesses (3,500+ MW)",
+        "Degrees from Manhattan College"
+      ]
+    },
+    {
+      "name": "Bill Nguyen",
+      "title": "Executive Vice President, Finance",
+      "background": [
+        "Quoted in the Pediment (11 December 2024) and Bypass (31 December 2024) financing releases"
+      ]
+    },
+    {
+      "name": "Forrest Forster",
+      "title": "Senior Vice President, Development Central",
+      "background": [
+        "Witness for Aypa's Pinopolis application at the South Carolina PSC (November 2025)",
+        "Prior roles at Longroad Energy, First Solar, NRG (Gulf region) and TVA per the exhibit"
+      ]
+    },
+    {
+      "name": "Luke Cummings",
+      "title": "Senior Vice President, Structured Products",
+      "background": [
+        "Prior roles at AES and sPower per Aypa's SC PSC exhibit"
+      ]
+    },
+    {
+      "name": "Drew Silverman",
+      "title": "Senior Vice President, Pre-Construction and Procurement",
+      "background": [
+        "Aypa's exhibit states he 'led the contracting of EPC and operating agreements for the 600 MW in operation in the U.S.'",
+        "Prior roles at ContourGlobal, New Energy Solar and Apex Clean Energy"
+      ]
+    },
+    {
+      "name": "Shane O'Brien",
+      "title": "Vice President, Transmission and Market Analytics",
+      "background": [
+        "Principal Engineer — MISO (prior), per Aypa's SC PSC exhibit"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Capital formation and disclosed facilities (2020–2026)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Aypa publishes no financial statements. No revenue, EBITDA or net-debt figure has been released by the company or its owner; aggregator estimates are excluded."
+          },
+          {
+            "name": "Sale price (Brookfield, signed 22 July 2026)",
+            "actual": "'Approximately $7 billion enterprise value at closing, or an equity value of $3 billion' per the joint Brookfield–Blackstone–Aypa release and Brookfield Asset Management's 8-K",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The parties' own figure. Enerdatics' derived about USD 4 billion of net debt and 6.2x Blackstone multiple are analyst statements, not confirmed."
+          },
+          {
+            "name": "Contracted and operating capacity (Brookfield Renewable, 31 July 2026)",
+            "actual": "'~3,000 megawatts of highly contracted operating and under construction battery storage assets, an additional ~3,500 megawatts of contracted projects and a further +20-gigawatt development pipeline'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Buyer's split of the 6.5 GW headline; Aypa has never published an operating-versus-under-construction split.",
+            "kpi": "mw-contracted",
+            "qty": 6500
+          },
+          {
+            "name": "Corporate credit facility",
+            "actual": "USD 1.55 billion after the 31 March 2026 upsizing (from USD 320 million in January 2023)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Revolver, term loan and letter-of-credit facility; lenders in the 2026 upsizing not named."
+          },
+          {
+            "name": "Construction warehouse facility",
+            "actual": "USD 1.5 billion plus USD 500 million accordion, three-year tenor (3 February 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "CIBC and Wells Fargo led; 19 lenders named in the release."
+          },
+          {
+            "name": "Project financings closed",
+            "actual": "USD 88 million (Wolf Tank, 2022); USD 550 million (Cald + Borden County, 2023); USD 323 million (Kuna, 2024); USD 398 million (Pediment, 2024); USD 190 million (Bypass, 2024); USD 535 million (Vidal, 2025); about CAD 700 million (Elora + Hedley, 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Each per Aypa's own release; tax equity from U.S. Bancorp Impact Finance (three deals) and Morgan Stanley Renewables (Bypass)."
+          },
+          {
+            "name": "Headcount",
+            "actual": "'Approximately 200-person team' (Brookfield release, July 2026); 'more than 200 full-time employees' (Aypa's SC PSC application, November 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No series published."
+          }
+        ],
+        "commentary": "Aypa is a private portfolio company and has never released a financial statement; every figure above is a facility size or a transaction value stated by Aypa, its lenders or the buyer. There is no consensus or guidance to compare against, so 'expected' is left empty throughout. The one valuation datum is the buyer's: USD 7 billion enterprise value against USD 3 billion of equity, which by subtraction carries about USD 4 billion of debt at the project and holding-company level — an inference the parties have not confirmed."
+      }
+    ],
+    "commentary": "The financial record is a lender's record, not an accountant's. What can be said with confidence: the platform has raised more than USD 4.5 billion of disclosed debt facilities since 2022, with the same fifteen or so banks recurring, and monetises tax credits through both partnership-flip tax equity and a tax-credit-transfer bridge. What cannot be said: revenue, margin, leverage at the holding company, or the operating fleet's realised contract prices. The Brookfield sale price is the only external mark, and it is a signed, not closed, transaction."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that the Brookfield transaction is signed and pending, not closed, and that Aypa remains owned by funds managed by Blackstone Energy Transition Partners until it closes. Basis: the 22 July 2026 joint release and Brookfield Asset Management's 8-K say 'entered into an agreement' and 'subject to customary regulatory approvals'; Brookfield Renewable's 31 July results and call give no closing date; Aypa has issued no release of its own and its site still reads 'A Blackstone Portfolio Company'. The premise 'Blackstone → Brookfield' is correct as a transaction; 'Brookfield-owned' is not yet.",
+    "(High confidence) We assess that what Brookfield is paying USD 7 billion of enterprise value for is a contracted book rather than a merchant fleet. Basis: the buyer's own description — '95% contracted under long-term agreements with investment-grade customers for an average remaining contract life of 17 years' — and the named counterparties in the record (SDG&E, SRP, PG&E, Santee Cooper, NCPA, Idaho Power, IESO, DTE, United Power, two CCAs). Enerdatics' about USD 1.1 million per MW and about USD 4 billion of net debt are analyst derivations and are carried as such.",
+    "(Moderate confidence) We assess that the '~6.5 GW' headline overstates what is operating today by a wide margin, and that operating capacity is in the low single-digit gigawatts. Basis: Brookfield Renewable's split (about 3,000 MW operating and under construction; about 3,500 MW contracted) and the projects any source states are online — Pediment 250 MW, Bypass 200 MW, Borden County 150 MW, Wolf Tank (173 MWh) — plus Aypa's own 2025 exhibit citing '600 MW in operation in the U.S.'. Aypa has never published the split; the judgment rests on the buyer's numbers and on release-by-release counting.",
+    "(Moderate confidence) We assess that Aypa's binding constraint has moved from capital to local permitting. Basis: capital is abundant on the record — three consecutive annual corporate-facility expansions to USD 1.55 billion, a USD 1.5 billion warehouse, and seven project financings with the same fifteen banks — while the two documented failures in twelve months are county and city permit denials (Kingfisher Reserve, Dirac), and PG&E's own evaluator flagged CAISO queue dates of 2031–2033 against 2027 contracted deliveries. Dirac now holds a CPUC-approved contract and no local permit.",
+    "(Moderate confidence) We assess that supplier concentration in Canadian Solar's e-STORAGE, with Sungrow units at Borden County, leaves the fleet exposed to FEOC and tariff rules that neither Aypa nor its buyer has addressed publicly. Basis: e-STORAGE is the only battery vendor any Aypa-side source names, across at least three deals totalling about 3.9 GWh; no Aypa statement on domestic content, FEOC or tariffs exists; the Santee Cooper award was accelerated, per Energy-Storage.news, because of HR1's credit phase-down. Whether Brookfield's diligence priced this is not knowable from the record.",
+    "(Low confidence) We assess that the July 2024 target of 'over 3 gigawatts of projects targeted for completion within 24 months' was not met on the plain reading of the buyer's July 2026 figures. Basis: Brookfield Renewable's about 3,000 MW is 'operating and under construction' combined, not complete; the counting definitions differ and Aypa has not reconciled its 30 → 35 → 42 project counts. Treat as an indicator, not a finding.",
+    "Indicators to watch: (1) a closing announcement from Brookfield or Blackstone, and any FERC Section 203 or HSR record naming the Aypa entities — closing converts the ownership judgment; a lapse past Q1 2027 would indicate a regulatory or financing problem the parties have not disclosed; (2) whether the USD 1.55 billion corporate facility and the USD 1.5 billion warehouse survive the change of control unchanged, or are refinanced under Brookfield — a refinancing would show the debt was priced on Blackstone's sponsorship; (3) Dirac's appeal in Chino and the Pinopolis certificate decision at the South Carolina PSC (hearing set 19 March 2026; COD 1 December 2027) — a second California loss would confirm the permitting judgment; (4) CODs for Kuna (stated 'mid-2025'), Cald (stated 2024) and Vidal (2026), none confirmed by any source read — silence past those dates would indicate slippage the releases do not admit; (5) a supplier announcement naming anyone other than e-STORAGE, or an Aypa statement on FEOC-compliant supply, which would refute the concentration judgment."
+  ],
+  "sources": [
+    {
+      "label": "Brookfield Renewable Q2 2026 results release — Aypa 'for ~$3 billion (~$420 million net)', 3,000 MW + 3,500 MW + 20 GW",
+      "url": "https://www.globenewswire.com/news-release/2026/07/31/3336706/0/en/Brookfield-Renewable-Reports-Strong-Second-Quarter-Results.html",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Brookfield Renewable Q2 2026 MD&A (6-K Ex. 99.3) — Aypa split; '~$760 million' net equity",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001533232/000153323226000026/bepq22026-ex993.htm",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Investing.com — Brookfield Renewable Q2 2026 earnings-call transcript (Aypa: no closing timing)",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-brookfield-renewable-posts-record-q2-2026-ffo-93CH-4828553",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Energy-Storage.news — Brookfield buys BESS developer Aypa Power from Blackstone",
+      "url": "https://www.energy-storage.news/brookfield-buys-bess-developer-aypa-power-from-blackstone/",
+      "date": "2026-07-23"
+    },
+    {
+      "label": "ESG Today — Brookfield acquires Aypa from Blackstone at USD 7 billion valuation",
+      "url": "https://www.esgtoday.com/brookfield-acquires-battery-storage-giant-aypa-from-blackstone-at-7-billion-valuation/",
+      "date": "2026-07-23"
+    },
+    {
+      "label": "Solar Power World — Brookfield to buy energy storage developer Aypa for USD 7 billion",
+      "url": "https://www.solarpowerworldonline.com/2026/07/brookfield-to-buy-energy-storage-developer-aypa-for-7-billion/",
+      "date": "2026-07-23"
+    },
+    {
+      "label": "Brookfield / Blackstone / Aypa joint release (GlobeNewswire) — Brookfield to acquire Aypa Power",
+      "url": "https://www.globenewswire.com/news-release/2026/07/22/3331786/0/en/brookfield-to-acquire-aypa-power-the-leading-north-american-battery-storage-platform-from-blackstone-energy-transition-partners.html",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "Brookfield Asset Management 8-K Exhibit 99.1 — joint release text",
+      "url": "https://www.sec.gov/Archives/edgar/data/1937926/000117184326004839/exh_991.htm",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "Kirkland & Ellis — advises Blackstone Energy Transition Partners-backed Aypa Power on sale to Brookfield",
+      "url": "https://www.kirkland.com/news/press-release/2026/07/kirkland-advises-blackstone-energy-transition-partners-backed-aypa-power-on-sale-to-brookfield",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "San Bernardino County Sentinel — Chino planning commission rejects Dirac 4–3",
+      "url": "https://sbcsentinel.com/2026/07/chino-planning-commission-nixes-huge-battery-energy-storage-project/",
+      "date": "2026-07-17"
+    },
+    {
+      "label": "Blackstone 8-K Exhibit 99.1 — intra-quarter realization update (no Aypa mention)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001393818/000119312526279498/d122067dex991.htm",
+      "date": "2026-06-23"
+    },
+    {
+      "label": "Energy-Storage.news — Aypa brings 1,000 MWh Arizona BESS online in SRP's busy June",
+      "url": "https://www.energy-storage.news/aypa-power-brings-1000mwh-arizona-bess-online-in-utility-salt-river-projects-busy-june/",
+      "date": "2026-06-18"
+    },
+    {
+      "label": "Salt River Project / Aypa — Pediment online; second 250 MW / 2,000 MWh project due December 2028",
+      "url": "https://media.srpnet.com/srp-and-aypa-power-bring-new-battery-storage-system-online-to-strengthen-grid-reliability/",
+      "date": "2026-06-16"
+    },
+    {
+      "label": "Lexpert — Aypa and SNGRDC secure USD 512 million debt financing for Hedley and Elora",
+      "url": "https://www.lexpert.ca/big-deals/aypa-power-sngrdc-secure-us512m-debt-financing-for-hedley-and-elora-battery-storage-projects/394197",
+      "date": "2026-05-01"
+    },
+    {
+      "label": "Huron County View — Michigan PSC approves Big Mitten Energy Center (450 MW, DTE agreement)",
+      "url": "https://huroncountyview.com/articles/state-approves-major-battery-projects-including-one-in-huron-county/",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — corporate credit facility upsized USD 500 million to USD 1.55 billion",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-closes-500-million-upsizing-of-its-corporate-credit-facility-increasing-total-to-1-55-billion-302729153.html",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "Energy-Storage.news — Aypa closes USD 512 million financing for two Ontario BESS projects",
+      "url": "https://www.energy-storage.news/aypa-power-closes-us512-million-financing-for-two-ontario-bess-projects/",
+      "date": "2026-03-11"
+    },
+    {
+      "label": "Aypa / SNGRDC release (PR Newswire) — CAD 700 million financing close for Elora and Hedley",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-and-six-nations-of-the-grand-river-development-corporation-secure-ca700-million-financing-close-for-ontario-battery-energy-storage-projects-302708425.html",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "SNGRDC — Aypa and Six Nations financing close (release copy)",
+      "url": "https://sndevcorp.ca/aypa-power-and-six-nations-of-the-grand-river-development-corporation-secure-ca700-million-financing-close-for-ontario-battery-energy-storage-projects/",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "Infralogic (ION Analytics) — Blackstone explores sale of Aypa Power ('Project Alpha')",
+      "url": "https://ionanalytics.com/insights/infralogic/blackstone-explores-sale-of-aypa-power/",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Mercom Capital — project finance brief: Aypa secures USD 1.5 billion",
+      "url": "https://mercomcapital.com/project-finance-brief-aypa-power-secures-1-5-b-energy-storage-projects/",
+      "date": "2026-02-11"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — USD 1.5 billion construction warehouse facility",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-secures-1-5-billion-in-warehouse-facility-financing-to-accelerate-construction-of-utility-scale-energy-storage-projects-302676673.html",
+      "date": "2026-02-03"
+    },
+    {
+      "label": "Stoel Rives — energy regulatory update: CPUC Resolution E-5437 (PG&E–Balsam Project LLC MTR contract)",
+      "url": "https://www.stoel.com/insights/reports/energy-regulatory-updates/january-7-2026",
+      "date": "2026-01-07"
+    },
+    {
+      "label": "CEQAnet — City of Irwindale notice of determination, San Gabriel BESS (400 MW)",
+      "url": "https://ceqanet.lci.ca.gov/2023020290/5",
+      "date": "2025-12-03"
+    },
+    {
+      "label": "Energy-Storage.news — Aypa to build, own and operate 1,200 MWh South Carolina BESS",
+      "url": "https://www.energy-storage.news/aypa-power-to-build-own-and-operate-1200mwh-south-carolina-bess/",
+      "date": "2025-12-02"
+    },
+    {
+      "label": "South Carolina PSC — Pinopolis Reliability Project LLC certificate application (docket 2025-318-E)",
+      "url": "https://dms.psc.sc.gov/Attachments/Matter/d622c902-2ae5-4351-a79d-329a554538e9",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "South Carolina PSC — Exhibit FF-2 to direct testimony of Forrest Forster (Aypa team roster)",
+      "url": "https://dms.psc.sc.gov/Attachments/Matter/d5ef0dc5-5841-4710-874f-d940a049f00f",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "South Carolina PSC — Pinopolis declaratory-order petition (Siting Act)",
+      "url": "https://dms.psc.sc.gov/Attachments/Matter/f75a5fb7-69b7-4c8a-852c-854e784ce103",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "American Public Power Association — NCPA enters 400 MW / 1,600 MWh energy storage service agreement (Trolley)",
+      "url": "https://www.publicpower.org/periodical/article/ncpa-enters-new-400-mw1600-mwh-energy-storage-service-agreement",
+      "date": "2025-11-04"
+    },
+    {
+      "label": "Santee Cooper — board approves key projects to meet future electric demands (Pinopolis)",
+      "url": "https://newsroom.santeecooper.com/news/Santee-Cooper-Board-Approves-Key-Projects-To-Meet-Future-Electric-Demands/",
+      "date": "2025-10-24"
+    },
+    {
+      "label": "United Power — agreement with Aypa Power for Fortress solar-plus-storage, Morgan County",
+      "url": "https://www.unitedpower.com/united-power-enters-agreement-aypa-power-fortress-solar-plus-storage-project-morgan-county",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "Fort Lupton Press — United Power unveils Morgan County solar-storage project",
+      "url": "https://www.ftluptonpress.com/news/united-power-unveils-new-morgan-county-solar-storage-project/article_78b665ac-e754-4cfa-84a5-df025ceeec50.html",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "WILX — Summit Township commission advances battery storage project",
+      "url": "https://www.wilx.com/2025/10/15/summit-township-commission-advances-battery-storage-project/",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "Canadian Solar release (PR Newswire) — e-STORAGE expands partnership with Aypa through 2.1 GWh of Ontario projects",
+      "url": "https://www.prnewswire.com/news-releases/canadian-solars-e-storage-expands-partnership-with-aypa-power-through-2-1-gwh-of-ontario-battery-storage-projects-302570479.html",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "e-STORAGE (csestorage.com) — expands partnership with Aypa Power (release copy)",
+      "url": "https://csestorage.com/e-storage-expands-partnership-with-aypa-power-through-2-1-gwh-of-ontario-battery-storage-projects/",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "ESS News — Aypa selects Canadian Solar's e-STORAGE for 2.12 GWh in Canada",
+      "url": "https://www.ess-news.com/2025/10/01/aypa-power-selects-canadian-solars-e-storage-for-2-12-gwh-of-battery-storage-in-canada/",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "Energy-Storage.news — Indiana county officials reject 800 MWh LFP BESS proposal (Kingfisher Reserve)",
+      "url": "https://www.energy-storage.news/indiana-county-officials-reject-800mwh-lfp-bess-proposal-despite-miso-capacity-warnings/",
+      "date": "2025-08-08"
+    },
+    {
+      "label": "WISH-TV — Hamilton County BZA denies Aypa Power's battery storage project",
+      "url": "https://www.wishtv.com/news/politics/hamilton-county-bza-denies-aypa-powers-battery-storage-project/",
+      "date": "2025-07-26"
+    },
+    {
+      "label": "Hamilton County Reporter — 'Farmland beats batteries'",
+      "url": "https://readthereporter.com/farmland-beats-batteries/",
+      "date": "2025-07-25"
+    },
+    {
+      "label": "News and Tribune — Clark County zoning board favourable vote, 20-acre battery storage system",
+      "url": "https://www.newsandtribune.com/news/clark-zoning-board-gives-favorable-vote-to-20-acre-battery-storage-system/article_294c6897-0511-4bcb-b49b-0f28ae987969.html",
+      "date": "2025-05-29"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — USD 535 million closes for California solar and storage hybrid (Vidal)",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-closes-535-million-to-advance-california-solar-and-energy-storage-hybrid-project-302452661.html",
+      "date": "2025-05-12"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — corporate credit facility upsized to USD 1.05 billion",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-closes-upsizing-of-existing-credit-facility-to-1-05-billion-302444404.html",
+      "date": "2025-05-01"
+    },
+    {
+      "label": "Canadian Solar 6-K Exhibit 99.1 — e-STORAGE BSAs and LTSAs for two Aypa US projects",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465925027542/tm2510215d1_ex99-1.htm",
+      "date": "2025-03"
+    },
+    {
+      "label": "Energy-Storage.news — Aypa secures USD 190 million for 200 MW / 400 MWh BESS (Bypass)",
+      "url": "https://www.energy-storage.news/aypa-power-secures-us190-million-for-200mw-400mwh-bess/",
+      "date": "2025-01-03"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — USD 190 million financing for the Bypass battery storage project",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-secures-190-million-financing-for-the-bypass-battery-storage-project-in-texas-302340512.html",
+      "date": "2024-12-31"
+    },
+    {
+      "label": "Energy-Storage.news — Aypa closes USD 398 million for 250 MW / 1,000 MWh BESS (Pediment)",
+      "url": "https://www.energy-storage.news/aypa-power-closes-us398-million-for-250mw-1000mwh-bess/",
+      "date": "2024-12-13"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — USD 398 million financing for energy storage project in Arizona (Pediment)",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-secures-398-million-financing-for-energy-storage-project-in-arizona-302329224.html",
+      "date": "2024-12-11"
+    },
+    {
+      "label": "Energy-Storage.news — Aypa secures California RA agreements with PG&E totalling 2 GWh (Marici, Gabriel)",
+      "url": "https://www.energy-storage.news/aypa-power-secures-california-ra-agreements-with-investor-owned-utility-totalling-2gwh/",
+      "date": "2024-11-07"
+    },
+    {
+      "label": "Energy-Storage.news — ERCOT clears 480 MW of BESS for operations in August (Borden County)",
+      "url": "https://www.energy-storage.news/ercot-clears-480mw-of-bess-for-operations-in-august-including-tesla-owned-unit-at-factory/",
+      "date": "2024-09-19"
+    },
+    {
+      "label": "Canadian Solar 6-K Exhibit 99.1 — e-STORAGE to deliver 498 MWh DC for Bypass",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465924091842/tm2422427d1_ex99-1.htm",
+      "date": "2024-08-22"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — USD 323 million financing for Kuna BESS, Idaho",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-secures-323-million-in-financing-for-major-energy-storage-project-in-idaho-302215751.html",
+      "date": "2024-08-06"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — USD 650 million upsized corporate facility",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-secures-650m-in-upsized-corporate-facility-the-largest-in-the-energy-storage-industry-302203940.html",
+      "date": "2024-07-23"
+    },
+    {
+      "label": "Salt River Project / Aypa — new battery storage system to meet growing demand (Pediment / Signal Butte)",
+      "url": "https://media.srpnet.com/srp-and-aypa-power-announce-new-battery-storage-system-to-help-meet-growing-energy-demand/",
+      "date": "2024-07-18"
+    },
+    {
+      "label": "Energy-Storage.news — Aypa secures California BESS agreements (Ava, 3CE) and Texas tax exemption",
+      "url": "https://www.energy-storage.news/blackstones-aypa-power-secures-california-bess-agreement-texas-tax-exemption/",
+      "date": "2024-06-28"
+    },
+    {
+      "label": "SNGRDC — SNGRDC and Aypa to conduct community investment review on two battery projects",
+      "url": "https://sndevcorp.ca/sngrdc-and-aypa-power-to-conduct-community-investment-review-on-two-battery-storage-projects/",
+      "date": "2024-07-02"
+    },
+    {
+      "label": "Energy-Storage.news — Blackstone's Aypa secures USD 550 million debt and tax equity for 700 MWh (Cald, Borden County)",
+      "url": "https://www.energy-storage.news/blackstones-aypa-secures-us550-million-debt-and-tax-equity-for-700mwh-california-and-texas-projects/",
+      "date": "2023-11-09"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — USD 550 million portfolio financing for Borden County and Cald",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-secures-550-million-portfolio-financing-for-borden-county-and-cald-battery-storage-projects-301980918.html",
+      "date": "2023-11-08"
+    },
+    {
+      "label": "Energy-Storage.news — Blackstone-owned Aypa acquires 268 MW BESS projects in Indiana (MISO)",
+      "url": "https://www.energy-storage.news/blackstone-owned-aypa-power-acquires-268mw-bess-projects-in-indiana-miso-territory/",
+      "date": "2023-03-03"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — acquires Williams and Fletcher energy storage projects in Indiana",
+      "url": "https://www.prnewswire.com/news-releases/aypa-power-acquires-williams-and-fletcher-energy-storage-projects-in-indiana-301758942.html",
+      "date": "2023-03-01"
+    },
+    {
+      "label": "Energy-Storage.news — Canadian Solar secures 487 MWh supply deal with Aypa for California project (Cald)",
+      "url": "https://www.energy-storage.news/canadian-solar-secures-487mwh-supply-deal-with-blackstones-aypa-power-for-california-project/",
+      "date": "2023-02-27"
+    },
+    {
+      "label": "Energy-Storage.news — Blackstone-owned Aypa secures USD 320 million credit",
+      "url": "https://www.energy-storage.news/blackstone-owned-energy-storage-developer-aypa-power-secures-us320-million-credit/",
+      "date": "2023-01-24"
+    },
+    {
+      "label": "Aypa release — secures USD 320 million corporate credit facility",
+      "url": "https://www.aypa.com/aypa-power-secures-320m-corporate-credit-facility/",
+      "date": "2023-01-23"
+    },
+    {
+      "label": "First Citizens — CIT serves as lead arranger of USD 88 million financing for Texas BESS (Wolf Tank)",
+      "url": "https://newsroom.firstcitizens.com/2022-07-20-CIT-Serves-as-Lead-Arranger-of-88-Million-Financing-for-Texas-Battery-Energy-Storage-System",
+      "date": "2022-07-20"
+    },
+    {
+      "label": "Aypa release — finances Wolf Tank energy storage project in Texas",
+      "url": "https://www.aypa.com/aypa-power-finances-wolf-tank-energy-storage-project-in-texas/",
+      "date": "2022-07-19"
+    },
+    {
+      "label": "Aypa release — acquires Yadkins energy storage project (Virginia)",
+      "url": "https://www.aypa.com/aypa-power-acquires-yadkins-energy-storage-project/",
+      "date": "2022-03-02"
+    },
+    {
+      "label": "Aypa release — acquires Cald energy storage project (Los Angeles)",
+      "url": "https://www.aypa.com/aypa-power-acquires-cald-energy-storage-project/",
+      "date": "2022-01-04"
+    },
+    {
+      "label": "Aypa release (PR Newswire) — NRStor C&I relaunches as Aypa Power",
+      "url": "https://www.prnewswire.com/news-releases/nrstor-ci-relaunches-as-aypa-power-continues-to-lead-deployment-of-energy-storage-and-hybrid-renewables-across-north-america-301105200.html",
+      "date": "2020-08-04"
+    },
+    {
+      "label": "Marathon Capital announcement (aypa.com repost) — advisor on the NRStor C&I sale",
+      "url": "https://www.aypa.com/marathon-capital/",
+      "date": "2020-03-31"
+    },
+    {
+      "label": "Blackstone release (aypa.com repost) — Blackstone acquires battery energy storage pioneer NRStor C&I",
+      "url": "https://www.aypa.com/blackstone-acquires-battery-energy-storage-pioneer-nrstor-ci/",
+      "date": "2020-03-04"
+    },
+    {
+      "label": "NRStor C&I release (aypa.com repost) — Honeywell and NRStor C&I launch behind-the-meter storage programme",
+      "url": "https://www.aypa.com/honeywell-and-nrstor-ci-launch-largest-behind-the-meter-battery-energy-storage-program-in-the-world/",
+      "date": "2019-09-20"
+    },
+    {
+      "label": "NRStor C&I release (aypa.com repost) — NRStor C&I and IHI execute agreements for eight projects",
+      "url": "https://www.aypa.com/nrstor-ci-and-ihi-inc-execute-agreements-for-eight-projects/",
+      "date": "2018-07-19"
+    },
+    {
+      "label": "Enerdatics — flashnote: Brookfield–Aypa (implied USD 1.1 million per MW; analyst)",
+      "url": "https://www.enerdatics.com/flashnotes-updates-brookfield-aypa"
+    },
+    {
+      "label": "interconnection.fyi — ERCOT queue 23INR0336 Bypass Battery Storage (completion 2026-02-06)",
+      "url": "https://www.interconnection.fyi/project/ercot-23inr0336"
+    },
+    {
+      "label": "interconnection.fyi — EIA plant 66804 Borden County Battery Energy Storage System",
+      "url": "https://www.interconnection.fyi/eia/project/66804-1"
+    },
+    {
+      "label": "Cleanview — Bypass BESS (operating, February 2026)",
+      "url": "https://cleanview.co/power-projects/operating/battery-storage-projects/texas/67761/bypass-bess"
+    },
+    {
+      "label": "Cleanview — Aypa Power developer page (planned projects)",
+      "url": "https://cleanview.co/power-projects/developers/aypa-power"
+    },
+    {
+      "label": "Santee Cooper — generation projects page (Pinopolis, December 2027)",
+      "url": "https://www.santeecooper.com/community/generation-projects/"
+    },
+    {
+      "label": "Six Nations Future — Elora BESS project page",
+      "url": "https://www.snfuture.com/projects/elora-bess-project/"
+    },
+    {
+      "label": "Aypa — Elora BESS project microsite",
+      "url": "https://elora.aypa.com/"
+    },
+    {
+      "label": "Aypa — Hedley BESS project microsite",
+      "url": "https://hedley.aypa.com/"
+    },
+    {
+      "label": "Aypa — home page ('A Blackstone Portfolio Company'; 22 GW; 33 projects)",
+      "url": "https://www.aypa.com/"
+    },
+    {
+      "label": "Aypa — Who We Are / Our Mission (headquarters)",
+      "url": "https://www.aypa.com/who-we-are/"
+    },
+    {
+      "label": "Aypa — What We Do (products: PPAs, tolls, 7×16 and 24/7 firm products)",
+      "url": "https://www.aypa.com/what-we-do/"
+    },
+    {
+      "label": "Aypa — M&A page (merchant and contracted underwriting)",
+      "url": "https://www.aypa.com/ma/"
+    },
+    {
+      "label": "Aypa — Developers page (co-development, pipeline buy-outs)",
+      "url": "https://www.aypa.com/developers/"
+    },
+    {
+      "label": "Aypa — Partnership Opportunities page",
+      "url": "https://www.aypa.com/partnership-opportunities/"
+    },
+    {
+      "label": "Aypa — Landowners page",
+      "url": "https://www.aypa.com/landowners/"
+    },
+    {
+      "label": "Aypa — Utility-Scale page (applications)",
+      "url": "https://www.aypa.com/utility-scale/"
+    },
+    {
+      "label": "Aypa — Commercial & Industrial page",
+      "url": "https://www.aypa.com/commercial-industrial/"
+    },
+    {
+      "label": "Aypa — News page (newest company release 31 March 2026)",
+      "url": "https://www.aypa.com/news/"
+    },
+    {
+      "label": "Greenhouse — Aypa Power job board (14 open roles, September 2026)",
+      "url": "https://job-boards.greenhouse.io/aypapower"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

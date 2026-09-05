@@ -1,0 +1,1280 @@
+{
+  "schemaVersion": 7,
+  "slug": "intersect-power",
+  "name": "Intersect (Intersect Power, LLC; Intersect Power Holdings, LLC) — a Google subsidiary since 10 March 2026",
+  "shortName": "Intersect",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://www.intersect.com/",
+  "headquarters": "San Francisco, California (140 New Montgomery Street, announced May 2025); collaboration hubs in San Diego, New York, Denver, Austin, Calgary and Toronto per the company; earlier releases gave Houston (2023) and Oakland (2022)",
+  "founded": 2016,
+  "employees": "Not stated by the company. Proxies only: the 2019 portfolio release described 'roughly 20 people'; Forbes' 2025 Best Startup Employers list requires at least 50 employees; the 2025 headquarters release says about a quarter of staff are Bay Area-based. Collection gap.",
+  "ownership": {
+    "type": "subsidiary"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Intersect is a Google subsidiary — Alphabet announced the acquisition on 22 December 2025 at USD 4.75 billion in cash plus assumed debt, closed it on 10 March 2026, and books it at USD 5,868 million in its Q2 2026 10-Q — but Google bought only the 'digital power' development platform, its team and the Texas energy parks; the grid-tied fleet Intersect had built (about 4.4 GW of solar and 8.8 GWh of storage in construction or operation, per TPG) was carved out at closing into IPX Power under TPG Rise Climate, CAI and Greenbelt, and no source says Intersect develops for anyone but its parent now. The premise 'Google-owned since 2026' is correct on the close date; the premise of a Wyoming campus is unsupported — the named parks are Quantum (Haskell County), Meitner (Gray and Roberts Counties) and Roman (Deaf Smith County), all in Texas.\n\nBACKGROUND. Founded in 2016 by Sheldon Kimber (ex-COO of Recurrent Energy), Intersect developed and sold 1.7 GWdc of solar by 2019, then raised USD 127 million (2021), USD 750 million led by TPG Rise Climate (2022) and 'over $800 million' led by TPG and Google (December 2024) to build and own Athos III, Radian, Oberon and Lumina — 2.2 GWdc of solar and 2.4 GWh of storage financed in USD 2.6 billion (2021), USD 3.075 billion (2022) and USD 837 million (2024) rounds with HPS Investment Partners, MUFG and Santander, on hedges, corporate offtake and merchant batteries rather than utility PPAs. The December 2024 partnership made Google 'anchor tenant' of co-located parks; a year later Google bought the developer. Quantum's 640 MW of solar and 1.3 GWh of storage began operating in June 2026 with the Google data centre under construction; Meitner — 'more than a gigawatt of wind, solar, and battery storage' with 'a minority share' of demand from on-site gas — launched construction on 4 June 2026 after Gray County replaced a hydrogen abatement with a data-centre abatement conditioned on air cooling. Supply is concentrated in First Solar (11.4 GWdc ordered by 2029) and Tesla (15.3 GWh of Megapacks). Kimber, Ross, Rymill, Spicer, Hanson, Bain and Antonopoulos lead the Google-era company; the former CFO, COO and CCO went to IPX.\n\nCollection gaps: data-centre megawatts, gas capacity and contract values at every park (the 840 MW Meitner load figure is New Project Media's reading of filings); any FERC Section 203, ERCOT large-load or PUCT SB 6 record naming an Intersect or Google entity; headcount; the split of the First Solar and Tesla frameworks between Intersect and IPX; and any post-acquisition project financing.",
+  "ecosystemRole": "Intersect is the clearest case in this corpus of storage attaching to AI load behind one interconnection: a developer that put solar, wind, batteries and gas on the same site as a hyperscaler's data centre, then became part of the hyperscaler. For a supplier or EPC it is now a Google procurement channel with its own engineering, construction and procurement heads; for the utilities and ISOs it is an ERCOT co-located load governed by SB 6; for the sponsors it was a USD 12 billion combined exit.",
+  "productsAndServices": [
+    {
+      "name": "Co-located energy parks for Google (Quantum, Meitner, Roman)",
+      "category": "Development, construction and operation — behind-the-meter campuses",
+      "description": "The business Google bought: development, construction and operation of campuses where a Google data centre sits behind one fence with dedicated generation and storage. Named sites, all in Texas, per Intersect's portfolio pages and the June 2026 Google–Intersect release: Quantum (Haskell County — 640 MW of solar and 1.3 GWh of storage across two facilities, generation 'will begin operations this month' in June 2026, the Google data centre 'recently began construction'); Meitner Energy Center (Gray and Roberts Counties — 'a data center co-located with more than a gigawatt of wind, solar, and battery storage systems', 'a minority share of the site's demand met by firming on-site gas', air-cooled, construction launched 4 June 2026); and Roman (Deaf Smith County — 'in development', wind, solar, storage, natural-gas firming and an air-cooled data centre). Intersect describes the model as 'co-locating industrial demand with dedicated gas and renewable power generation'.",
+      "highlights": [
+        "Google is the customer at every named park; Alphabet's acquisition release says the sites are 'multiple gigawatts of energy and data center projects currently in development or under construction' from the December 2024 partnership.",
+        "Data-centre megawatts are not published by either party for any site. The only load figure in the record is New Project Media's reading of Meitner filings — 840 MW of behind-the-meter data-centre load in up to three phases, replacing a 400 MW electrolysis plan.",
+        "Gray County's abatement (15 October 2025) is conditioned on an air-cooled data centre with a claw-back of abated taxes if cooling changes, and the county abolished the 2024 hydrogen abatement the same day.",
+        "Meitner is the first named Intersect project to add on-site gas generation; the 2022–2024 releases described the same site as solar, wind and green hydrogen."
+      ],
+      "positioning": "Against the other AI-campus developers in this corpus — Crusoe's flare-gas and islanded model, the neocloud landlords' leased shells — Intersect's distinguishing feature is ownership: since March 2026 the developer and the tenant are the same corporate group, so the campus is neither leased nor contracted but built for the parent. Intersect's founder had argued since 2021 that 'long-term offtake contracts actually destroy value' and since 2024 that 'load will come to the location of power generation'.",
+      "soldThrough": "Built for the parent after 10 March 2026; before that, under a December 2024 partnership in which 'Google will serve as anchor tenant in newly constructed industrial parks' and Greenbelt describes 'a 20-year off-take and powered-land lease' for Quantum.",
+      "targetSegments": [
+        "Google's technical infrastructure organisation (the sole named customer)"
+      ],
+      "roadmap": "Quantum generation operating from June 2026 with the data centre under construction; Meitner Phase 1 'operational late 2028' with wind and solar in service October 2027 per New Project Media's reading of filings; Roman in development with no dates. Alphabet's 2025 release: 10.8 GW of projects expected by 2028 per Reuters; the December 2024 partnership targeted 'USD 20 billion in renewable power infrastructure investment by the end of the decade'."
+    },
+    {
+      "name": "Grid-tied solar and storage fleet (developed by Intersect; owned by IPX Power since March 2026)",
+      "category": "Development track record — carved out at the sale",
+      "description": "The projects Intersect developed, financed and operated as an independent power producer before the sale, which Alphabet's release says 'will remain independent, backed by existing investors TPG Rise Climate, Climate Adaptive Infrastructure, and Greenbelt Capital Partners' and which launched as IPX Power on 10 March 2026 with 'approximately 4.4 GW of solar PV and 8.8 GWh of battery storage in construction or operation'. Per Intersect's own COD releases: Athos III (Riverside County, 310 MWp / 224 MWac plus 448 MWh, COD 22 December 2022), Radian (Brown County TX, 415 MWp / 320 MWac, COD 16 May 2023, Merrill Lynch Commodities hedge), Oberon I and II (Riverside County, 679 MWp / 500 MWac plus 250 MW / 1 GWh, COD November 2023, offtake to Calpine Energy Solutions, Constellation, Ava Community Energy, Microsoft and San Diego Community Power), Lumina I and II (Scurry County TX, 828 MWp / 640 MWac, COD 3 January 2024, RECs to 'two Fortune 100 companies') and three 160 MW / 320 MWh standalone Texas batteries (Lumina I, Lumina II, Radian BESS — 86 Tesla Megapacks each, Autobidder on two, operational 2024). Darden (Fresno County, 1.15 GWac / 4.6 GWh, COD 2028) went to IPX with the fleet.",
+      "highlights": [
+        "Every project used First Solar modules and, where storage was included, Tesla Megapacks; Intersect's about page states '17.7 GWh of Tesla Megapacks secured' and 'a multi-billion dollar commitment with First Solar'.",
+        "The fleet was financed in three portfolio rounds — USD 2.6 billion (November 2021), USD 3.075 billion (September 2022) and USD 837 million for the Texas batteries (July 2024) — with HPS Investment Partners as term lender throughout and MUFG and Santander as construction leads.",
+        "TPG's closing release puts the combined enterprise value of the Google sale and the IPX spin-out at USD 12 billion; Greenbelt's page lists IPX at seven projects with Darden the largest.",
+        "The 1.7 GWdc of projects Intersect developed and sold before 2021 (Juno, Titan, Aragorn, Athos I and II) is the develop-to-sell chapter; the 2021–2024 fleet is develop-to-own."
+      ],
+      "positioning": "This is the record that made the platform saleable: a developer that took 2.2 GWdc of solar and 2.4 GWh of storage from financing to COD in three years, largely on hedges and merchant batteries rather than utility PPAs. Since March 2026 it belongs to IPX Power and is described here as Intersect's history, not its holdings.",
+      "soldThrough": "Held in project companies under Intersect Power Holdings until the carve-out; power sold through hedges (Radian), CCA and corporate offtake (Oberon), RECs (Lumina) and merchant dispatch with Tesla Autobidder (Texas batteries).",
+      "targetSegments": [
+        "Community-choice aggregators and retailers (Ava, San Diego Community Power, Calpine Energy Solutions)",
+        "Corporate buyers (Microsoft, Constellation, two unnamed Fortune 100 companies)",
+        "ERCOT wholesale market (merchant batteries)"
+      ],
+      "roadmap": "None for Intersect — the fleet and its pipeline are IPX Power's. IPX closed USD 4.95 billion for Darden (May 2026) and an USD 800 million corporate facility (August 2026)."
+    },
+    {
+      "name": "Power-first siting and the hybrid generation stack",
+      "category": "Development capability",
+      "description": "Intersect's stated method: site the load where large, cheap generation can be built rather than where transmission already exists ('the grid is broken'; 'load will come to the location of power generation'), and serve it with 'extremely cheap solar and wind' for '50–70% of the hours in a year', batteries, and 'peaking gas generation' with 'lower up front capital cost than combined cycle gas turbine (CCGT) baseload' — the founder's 2025 phrase is 'not your grandparents' baseload power'. The founder claimed in September 2024 that Intersect 'has fully developed single projects capable of hosting loads as large as 3GW+'. Its FERC filing, quoted by Utility Dive, complained that 'the lack of standard rules, practices and procedures for integrating co-located [load] with new and existing generation means co-location configurations must go through a laborious, unpredictable semi-discretionary process to interconnect'.",
+      "highlights": [
+        "Meitner's county record shows the method in practice: a 2023 presentation of 340 MW solar plus 460 MW wind with 400 MW of electrolysis became, by mid-2025 filings, 840 MW of behind-the-meter data-centre load with amended interconnection agreements with Cross Texas Transmission.",
+        "The Gray County presentation stated 'most of the power produced by the project will be used onsite, reducing reliance on the transmission grid', with grid export 'when the system needs power'.",
+        "No FERC surplus-interconnection request, ERCOT large-load queue entry, PUCT Project 55999 filing or private-use-network registration naming an Intersect entity was found — the structures are described in county records and press, not in a regulator's docket. Collection gap.",
+        "Intersect's about page lists a Head of Microgrids among fifteen department heads, and its site claims '11.5+ GW of clean energy capacity across 14 facilities'."
+      ],
+      "positioning": "The claim Intersect sells to its parent is speed: Alphabet's June 2026 investor presentation says the acquisition 'will help us come to market even faster', and Sundar Pichai's release quote is 'operate more nimbly in building new power generation in lockstep with new data center load'.",
+      "soldThrough": "Internal to Google after the sale.",
+      "targetSegments": [
+        "Google data-centre siting in ERCOT (Haskell, Gray, Roberts and Deaf Smith Counties)"
+      ],
+      "roadmap": "Google's data-centre location pages list Pampa, Texas 'in development' and new campuses in Armstrong, Haskell, Pampa and Wilbarger Counties; only Haskell and Pampa are tied to Intersect in any source."
+    },
+    {
+      "name": "Procurement programme — First Solar modules and Tesla Megapacks",
+      "category": "Supply chain",
+      "description": "Multi-year framework orders that pre-date the sale and now sit partly with IPX Power and partly with Google-owned Intersect (the split is not published): First Solar — 1.7 GW of Series 6 (September 2019), 2.4 GWdc for 2024–2026 delivery (July 2022) and 4.9 GWdc of Series 6 Plus and Series 7 for 2025–2029 (November 2022), which Intersect said took its 2022 orders to 7.3 GWdc and its cumulative First Solar procurement to 11.4 GWdc by 2029; Tesla — 15.3 GWh of Megapacks announced 18 July 2024, 'more than half' for four California and Texas projects by end-2027 and the rest for 2028–2030 from the Lathrop Megafactory, with the about page now citing 17.7 GWh secured.",
+      "highlights": [
+        "Intersect framed the First Solar orders as domestic-content positioning: Athos III used 'American-made components to meet IRA domestic content requirements' and Oberon used Ohio-made modules, Lathrop-made Megapacks and American steel with union labour.",
+        "The founder's 2024 blog said battery cells were 'mostly' from China and expected that to shift under policy pressure — the one FEOC-adjacent statement in the record.",
+        "EPCs on the operating fleet were Signal Energy (2019–2023 projects); no EPC, integrator or gas-turbine supplier is named for Quantum, Meitner or Roman."
+      ],
+      "positioning": "Two-vendor concentration by design — one module maker, one battery integrator — which is the opposite of the dual-sourcing pattern this corpus's Plus Power dossier describes.",
+      "soldThrough": "Direct framework supply agreements.",
+      "targetSegments": [
+        "Intersect's own projects"
+      ],
+      "roadmap": "Tesla deliveries 2028–2030 under the 2024 order; First Solar deliveries to 2029."
+    },
+    {
+      "name": "Corporate capital formation (2020–2026)",
+      "category": "Financing",
+      "description": "Equity per Intersect's own releases: USD 127 million from Climate Adaptive Infrastructure and Trilantic North America (January 2021, with a USD 482 million Generate Capital and CarVal debt facility); USD 750 million led by TPG Rise Climate with CAI and Trilantic Energy Partners North America (June 2022); 'over USD 800 million' led by TPG Rise Climate and Google with CAI and Greenbelt Capital Partners (10 December 2024 — Greenbelt's page splits it as USD 879 million, USD 250 million from Google, unconfirmed by Google); 'over USD 2.1 billion in corporate equity raised' cumulative (October 2025). Corporate debt: an up-to-USD 800 million revolving credit facility (June 2023; Deutsche Bank, Nomura, Santander CIB). Then the sale: USD 4.75 billion in cash plus assumed debt (Alphabet, 22 December 2025), USD 4.8 billion in Alphabet's 10-K, USD 5.9 billion 'after purchase price adjustments' with USD 1,214 million of debt assumed in Alphabet's Q1 2026 10-Q (final allocation USD 5,868 million in the Q2 10-Q).",
+      "highlights": [
+        "Alphabet consolidates Intersect as a variable-interest entity with goodwill of USD 2,174 million and property and equipment of USD 5,129 million, allocated across Google Services and Google Cloud.",
+        "TPG 'initially invested in Intersect in 2022' and sold its stake at closing while taking majority ownership of IPX Power; Greenbelt dates its own investment to December 2020 and calls the position 'realized'.",
+        "The founder said in December 2023 that Intersect had raised USD 1.3 billion of equity and USD 5–6 billion of project finance and expected about USD 200 million of EBITDA to triple by early 2027 — a podcast statement, not a filing."
+      ],
+      "positioning": "The one private developer in this corpus whose exit is priced in an acquirer's 10-Q rather than a press report.",
+      "soldThrough": "Growth-equity rounds, then a strategic sale.",
+      "targetSegments": [
+        "Climate-infrastructure growth funds (TPG Rise Climate, CAI, Greenbelt)",
+        "The strategic buyer (Alphabet)"
+      ],
+      "roadmap": "None — the company is now funded by its parent; no Google-era project financing for Quantum or Meitner was found."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Energy-park ledger — the three named Google campuses, as the parties, counties and press state them",
+      "specs": [
+        {
+          "band": "Quantum — Haskell County, TX",
+          "label": "Generation and storage",
+          "value": "'640 MW solar and 1.3 GWh storage facility' across Quantum I and II (Intersect portfolio page; Google–Intersect release, 4 June 2026)"
+        },
+        {
+          "band": "Quantum — Haskell County, TX",
+          "label": "Status",
+          "value": "Generation: 'will begin operations this month' (June 2026); Google data centre: 'recently began construction'; Alphabet (December 2025): 'first announced co-located data center and power site under construction'"
+        },
+        {
+          "band": "Quantum — Haskell County, TX",
+          "label": "Data-centre load",
+          "value": "Not stated by either party. Collection gap."
+        },
+        {
+          "band": "Quantum — Haskell County, TX",
+          "label": "Commercial structure",
+          "value": "Greenbelt describes the December 2024 partnership as including 'a 20-year off-take and powered-land lease' for the Quantum projects; Intersect's 2024 release: 'Google will serve as anchor tenant'. Post-acquisition the campus is built for the parent"
+        },
+        {
+          "band": "Quantum — Haskell County, TX",
+          "label": "Community",
+          "value": "1,200 construction jobs, up to 11 full-time jobs, 'USD 140M taxes and public fees over its lifetime' (Intersect portfolio page)"
+        },
+        {
+          "band": "Meitner Energy Center — Gray and Roberts Counties, TX",
+          "label": "Generation and storage",
+          "value": "'More than a gigawatt of wind, solar, and battery storage systems' with 'a minority share of the site's demand met by firming on-site gas' (Google–Intersect release, 4 June 2026); 340 MW solar + 460 MW wind per the December 2023 county presentation and mid-2025 filings read by New Project Media"
+        },
+        {
+          "band": "Meitner Energy Center — Gray and Roberts Counties, TX",
+          "label": "Data-centre load",
+          "value": "840 MW behind-the-meter in up to three phases at about USD 1 billion of capital each, per New Project Media's reading of Intersect's filings (not stated by Google or Intersect); Gray County's judge referred to 'USD 3 billion' of data-centre scale"
+        },
+        {
+          "band": "Meitner Energy Center — Gray and Roberts Counties, TX",
+          "label": "Dates",
+          "value": "Construction launched 4 June 2026; Phase 1 operational late 2028 and wind/solar in service 26 October 2027 per New Project Media; county presentation (2023) anticipated construction 2026–2028"
+        },
+        {
+          "band": "Meitner Energy Center — Gray and Roberts Counties, TX",
+          "label": "Abatements and conditions",
+          "value": "Gray County approved a data-centre abatement in the Meitner Reinvestment Zone and a road-use agreement on 15 October 2025 and abolished the 15 January 2024 hydrogen abatement; the abatement is conditioned on an air-cooled data centre with back taxes owed if cooling changes (Commissioner Hudson, per The Pampa News)"
+        },
+        {
+          "band": "Meitner Energy Center — Gray and Roberts Counties, TX",
+          "label": "Interconnection",
+          "value": "Amended interconnection agreements with Cross Texas Transmission per New Project Media; 'most of the power produced by the project will be used onsite' with export 'when the system needs power' (county presentation)"
+        },
+        {
+          "band": "Meitner Energy Center — Gray and Roberts Counties, TX",
+          "label": "Workforce",
+          "value": "'Caprock Workforce Hub' — 800 acres in Wheeler County housing up to 3,500 workers (Google–Intersect release)"
+        },
+        {
+          "band": "Roman — Deaf Smith County, TX",
+          "label": "Scope",
+          "value": "'In development': wind, solar, battery storage, natural gas firming and an air-cooled co-located data centre; no MW, customer or dates stated (Intersect portfolio page); Cleanview lists 'IP Roman Wind 671 MW' in Texas"
+        }
+      ],
+      "notes": "No Wyoming, Nevada or Utah Intersect campus exists in any source read; the brief's 'Wyoming campus' premise is not supported. Cleanview's dataset lists 54 planned Intersect projects totalling 25,269 MW in California and Texas, including Aurelius Solar 1,124 MW and Ross Solar 1,026 MW — a dataset, not a regulator or party statement."
+    },
+    {
+      "product": "Transaction and fleet ledger — the Google acquisition and the IPX carve-out, as filed and released",
+      "specs": [
+        {
+          "band": "Google acquisition",
+          "label": "Announcement",
+          "value": "22 December 2025 — Alphabet: 'definitive agreement to acquire Intersect … for $4.75 billion in cash plus debt assumption'; 'Google previously obtained a minority stake through an earlier funding round'; close expected 'first half of 2026, subject to customary closing conditions including regulatory approvals'"
+        },
+        {
+          "band": "Google acquisition",
+          "label": "Closing",
+          "value": "10 March 2026 — TPG: 'completed the sale of its Intersect stake to Google for $4.75 billion plus debt assumption'; Alphabet Q1 2026 10-Q: 'On March 10, 2026, we completed our acquisition of Intersect … for $5.9 billion, after purchase price adjustments'"
+        },
+        {
+          "band": "Google acquisition",
+          "label": "Purchase-price allocation (Alphabet Q2 2026 10-Q, USD million)",
+          "value": "Goodwill 2,174; property and equipment 5,129; debt (1,214); net liabilities assumed (221); total purchase price 5,868 (Q1 10-Q preliminary: 2,170 / 5,111 / (1,214) / (205) / 5,862, including USD 410 million of acquired cash)"
+        },
+        {
+          "band": "Google acquisition",
+          "label": "What was bought",
+          "value": "'Intersect's team and multiple gigawatts of energy and data center projects currently in development or under construction' (Alphabet); TPG calls it the 'digital power business'; trade press: about 3.6 GW of Texas solar and wind and 3.1 GWh of storage in development (Utility Dive, ESG Dive)"
+        },
+        {
+          "band": "Google acquisition",
+          "label": "What was excluded",
+          "value": "'Intersect's current Texas operating assets and California properties will remain independent, backed by existing investors TPG Rise Climate, Climate Adaptive Infrastructure, and Greenbelt Capital Partners' (Alphabet) — launched as IPX Power at closing: 'approximately 4.4 GW of solar PV and 8.8 GWh of battery storage in construction or operation', USD 10 billion invested, TPG Rise Climate majority; combined enterprise value 'USD 12 billion' (TPG)"
+        },
+        {
+          "band": "Google acquisition",
+          "label": "Advisers",
+          "value": "Cleary Gottlieb (Alphabet); Kirkland & Ellis (TPG Rise Climate, CAI, Greenbelt); no FERC Section 203 order or HSR record found — collection gap"
+        },
+        {
+          "band": "Pre-sale fleet (now IPX Power)",
+          "label": "Athos III — Riverside County, CA",
+          "value": "310 MWp / 224 MWac solar + 448 MWh storage; COD 22 December 2022; term debt HPS; tax equity Morgan Stanley Renewables; construction debt MUFG, Santander, CoBank, KeyBanc, Helaba, NORD/LB"
+        },
+        {
+          "band": "Pre-sale fleet (now IPX Power)",
+          "label": "Radian — Brown County, TX",
+          "value": "415 MWp / 320 MWac solar; COD 16 May 2023; Merrill Lynch Commodities hedge; tax equity Bank of America and Apple; plus Radian BESS 160 MW / 320 MWh (86 Megapacks, Autobidder), 2024"
+        },
+        {
+          "band": "Pre-sale fleet (now IPX Power)",
+          "label": "Oberon I and II — Riverside County, CA",
+          "value": "679 MWp / 500 MWac solar + 250 MW / 1 GWh storage; COD 14 November 2023; offtake Calpine Energy Solutions, Constellation, Ava Community Energy, Microsoft, San Diego Community Power; First Solar (Ohio) modules, Tesla Megapacks (Lathrop), Nextracker; first project under BLM's Desert Renewable Energy Conservation Plan"
+        },
+        {
+          "band": "Pre-sale fleet (now IPX Power)",
+          "label": "Lumina I and II — Scurry County, TX",
+          "value": "828 MWp / 640 MWac solar; COD 3 January 2024; RECs to 'two Fortune 100 companies'; tax equity U.S. Bancorp Impact Finance and a 'Fortune 100 technology company'; plus Lumina I and II BESS, 2 × 160 MW / 320 MWh (86 Megapacks each), 2024"
+        },
+        {
+          "band": "Pre-sale fleet (now IPX Power)",
+          "label": "Darden — Fresno County, CA",
+          "value": "1,150 MW PV / 4,600 MWh BESS on about 9,500 acres; CEC final order 13 June 2025 (docket 23-OPT-02, AB 205 opt-in) with the 800 MW hydrogen facility removed in October 2024; USD 4.95 billion debt closed by IPX on 21 May 2026 with USD 2.13 billion of ITC purchase agreements; COD 2028"
+        },
+        {
+          "band": "Pre-sale fleet (now IPX Power)",
+          "label": "Aramis — Alameda County, CA",
+          "value": "100 MW solar; county approval 4 March 2021; petition by Save North Livermore Valley and others denied 31 May 2022 and appeal rejected 9 August 2023; USFWS habitat conservation plan July 2024; construction from 2025"
+        },
+        {
+          "band": "Developed and sold (2019)",
+          "label": "Juno, Titan, Aragorn (TX); Athos I and II (CA)",
+          "value": "1.7 GWdc, First Solar Series 6, Nextracker, Signal Energy EPC — 'previously developed and sold to third-party investors' per the January 2021 release"
+        }
+      ],
+      "notes": "Intersect's site claims '$20 billion+ in infrastructure operating or under construction' and '11.5+ GW of clean energy capacity across 14 facilities'; the dated releases say USD 15 billion. Neither figure is reconciled to the post-carve-out perimeter."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-06",
+      "category": "financial",
+      "headline": "IPX Power — the carved-out grid-tied fleet, not Intersect — closes an USD 800 million corporate facility (USD 600 million revolver, USD 200 million LC)",
+      "read": "The former Intersect fleet now finances itself independently; nothing comparable has been published for the Google-owned entity.",
+      "source": "https://ipxpower.com/ipx-power-secures-800-million-corporate-credit-facility-to-support-expansion-of-its-clean-energy-platform/"
+    },
+    {
+      "date": "2026-07-23",
+      "category": "financial",
+      "headline": "Alphabet's Q2 2026 10-Q records the final Intersect purchase-price allocation: total USD 5,868 million, goodwill USD 2,174 million, property and equipment USD 5,129 million, debt assumed USD 1,214 million",
+      "read": "The only audited valuation of a private developer in this corpus — and USD 1.1 billion above the USD 4.75 billion headline once adjustments and assumed debt are counted.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+    },
+    {
+      "date": "2026-06-04",
+      "category": "project",
+      "headline": "Google and Intersect launch construction of the Meitner Energy Center (Gray and Roberts Counties): a data centre co-located with more than a gigawatt of wind, solar and storage plus on-site gas firming; Quantum's 640 MW / 1.3 GWh generation 'will begin operations this month'",
+      "read": "The first post-acquisition project adds gas to a model that was sold as solar-plus-storage; the data-centre megawatts are still unpublished.",
+      "source": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Google_Intersect_Texas_Announcement_-_June_2026.pdf"
+    },
+    {
+      "date": "2026-06-03",
+      "category": "corporate",
+      "headline": "Alphabet's investor presentation: 'Our recent acquisition of Intersect will help us come to market even faster'",
+      "read": "The parent frames the purchase as time-to-power, not as an energy business.",
+      "source": "https://blog.google/alphabet/investor-presentation-june-2026/"
+    },
+    {
+      "date": "2026-05-21",
+      "category": "financial",
+      "headline": "IPX Power closes USD 4.95 billion of debt for Darden (Fresno County, 1.15 GWac solar and 4.6 GWh of storage, COD 2028), including USD 2.13 billion of ITC purchase agreements",
+      "read": "The largest financing in the record belongs to the fleet Google chose not to buy.",
+      "source": "https://ipxpower.com/ipx-power-secures-financing-for-darden-projects/"
+    },
+    {
+      "date": "2026-04-30",
+      "category": "ma",
+      "headline": "Alphabet's Q1 2026 10-Q: acquisition completed 10 March 2026 'for $5.9 billion, after purchase price adjustments'; Intersect consolidated as a variable-interest entity with goodwill allocated to Google Services and Google Cloud",
+      "read": "Consolidation into the cloud and services segments tells a supplier which Google budget the campuses sit in.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+    },
+    {
+      "date": "2026-04-03",
+      "category": "regulatory",
+      "headline": "PUCT adopts SB 6 net-metering rules for co-located data centres of 75 MW or more; the Crusoe–Google campus at Goodnight is the first test case",
+      "read": "The rule that governs every Intersect park was written after the deal was signed; Intersect has not appeared in the docket.",
+      "source": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case/"
+    },
+    {
+      "date": "2026-03-13",
+      "category": "ma",
+      "headline": "Energy-Storage.news reports the acquisition complete, Google having acquired TPG Rise Climate's share; the grid-tied business separated into IPX Power",
+      "read": "Trade press confirmation of the sellers' 10 March releases.",
+      "source": "https://www.energy-storage.news/google-completes-us4-75-billion-intersect-power-acquisition-initial-focus-on-california-texas-solar-plus-storage/"
+    },
+    {
+      "date": "2026-03-10",
+      "category": "ma",
+      "headline": "TPG and Greenbelt announce completion of the USD 4.75 billion (plus debt) sale of Intersect to Google and the launch of IPX Power — about 4.4 GW of solar and 8.8 GWh of storage in construction or operation, TPG Rise Climate majority, CAI and Greenbelt; 'a combined enterprise value of $12 billion'",
+      "read": "Google bought the developer and the parks; the investors kept the fleet and the CFO, COO and CCO who ran it.",
+      "source": "https://www.tpg.com/news-and-insights/tpg-announces-completion-of-4-75-billion-sale-of-intersect-to-google-launches-ipx-power-as-independent-power-producer"
+    },
+    {
+      "date": "2026-02-05",
+      "category": "financial",
+      "headline": "Alphabet's FY2025 10-K: agreement to acquire Intersect 'for $4.8 billion in cash, plus the assumption of debt', closing expected in the first half of 2026",
+      "read": "The 10-K rounds the headline up; the 10-Qs later move it to USD 5.9 billion.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+    },
+    {
+      "date": "2026-01-06",
+      "category": "ma",
+      "headline": "Utility Dive: Alphabet takes about 3.6 GW of Texas solar and wind and 3.1 GWh of storage in development; the investor group keeps the operating assets plus a 1.6 GW / 4.8 GWh California project; 10.8 GW expected by late 2028",
+      "read": "The perimeter of the deal, as trade press reconstructed it — no party has published a project-by-project split.",
+      "source": "https://www.utilitydive.com/news/alphabet-acquires-clean-energy-developer-intersect-for-475b/808780/"
+    },
+    {
+      "date": "2025-12-22",
+      "category": "ma",
+      "headline": "Alphabet announces a definitive agreement to acquire Intersect for USD 4.75 billion in cash plus debt assumption; Kimber stays as CEO under the Intersect brand; Texas operating assets and California properties excluded",
+      "read": "A hyperscaler buys a developer rather than signing PPAs: the premise 'Google-owned since 2026' is confirmed, with the announcement in 2025 and the close in March 2026.",
+      "source": "https://abc.xyz/investor/news/news-details/2025/Alphabet-Announces-Agreement-to-Acquire-Intersect-to-Advance-U-S--Energy-Innovation-2025-DVIuVDM9wW/default.aspx"
+    },
+    {
+      "date": "2025-12-22",
+      "category": "corporate",
+      "headline": "Kimber's blog 'It Goes to 11': Intersect 'will remain Intersect, remaining separate from Alphabet and Google under the Intersect brand'; a portion of assets to be divested to existing investors who will 'continue to construct billions of dollars in new assets, including the world's largest BESS'",
+      "read": "The founder's own account of the split, written before the IPX name existed.",
+      "source": "https://www.intersect.com/blog/intersect-announces-agreement-to-be-acquired-by-google"
+    },
+    {
+      "date": "2025-11-14",
+      "category": "customer",
+      "headline": "Google announces a USD 40 billion Texas investment through 2027, including a Haskell County data centre 'built alongside a new solar and battery storage plant'",
+      "read": "Google named the county but not the developer; Intersect's Quantum is the plant.",
+      "source": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-texas/"
+    },
+    {
+      "date": "2025-10-30",
+      "category": "leadership",
+      "headline": "Katrina Rymill (ex-Equinix SVP Corporate Finance and Sustainability) appointed CFO; the release states USD 15 billion of assets in operation or under construction and 'over $2.1 billion in corporate equity raised'",
+      "read": "A data-centre-industry CFO hired seven weeks before the Google agreement.",
+      "source": "https://www.intersect.com/news/intersect-appoints-katrina-rymill-as-chief-financial-officer"
+    },
+    {
+      "date": "2025-10-27",
+      "category": "regulatory",
+      "headline": "Gray County's judge says the Meitner data-centre abatement was approved for a 'high profile tenant' he 'could not share … just yet'",
+      "read": "The tenant was Google; the county record preceded the deal announcement by eight weeks.",
+      "source": "https://highplainsobserverperryton.com/gray-county-judge-gives-update-on-intersect-power-project-p39368-307.htm"
+    },
+    {
+      "date": "2025-10-15",
+      "category": "regulatory",
+      "headline": "Gray County approves the Meitner data-centre abatement and a road-use agreement and abolishes the 2024 hydrogen abatement; the abatement is conditioned on an air-cooled data centre with a claw-back",
+      "read": "The county wrote the cooling technology into the tax deal.",
+      "source": "https://www.thepampanews.com/stories/county-passes-tax-abatement-for-intersect-power-in-recent-meeting,135676"
+    },
+    {
+      "date": "2025-08-01",
+      "category": "regulatory",
+      "headline": "Intersect's letter to Gray County neighbours: it 'is planning to develop an air-cooled data center instead of a hydrogen facility'; commissioners grant a 30-day extension on abatement talks",
+      "read": "The public record of the hydrogen-to-data-centre pivot, five months before Google announced the acquisition.",
+      "source": "https://www.thepampanews.com/stories/intersect-power-tax-abatement-negotiations-pushed-to-september,124510"
+    },
+    {
+      "date": "2025-06-25",
+      "category": "policy",
+      "headline": "Texas SB 6 signed: loads of 75 MW or more must accept curtailment in firm load shed and install shutoff equipment; PUCT to review co-location net-metering",
+      "read": "The statute that now governs every Intersect campus.",
+      "source": "https://www.utilitydive.com/news/texas-law-gives-grid-operator-power-to-disconnect-data-centers-during-crisi/751587/"
+    },
+    {
+      "date": "2025-06-13",
+      "category": "regulatory",
+      "headline": "California Energy Commission issues its final order certifying Darden (1,150 MW PV, 4,600 MWh) under the AB 205 opt-in process, the 800 MW hydrogen facility removed",
+      "read": "The second hydrogen retreat in the record; the project went to IPX at the carve-out.",
+      "source": "https://www.energy.ca.gov/powerplant/solar-photovoltaic-pv-battery-energy-storage/darden-clean-energy-project"
+    },
+    {
+      "date": "2025-05-21",
+      "category": "financial",
+      "headline": "Energy Risk names the USD 837 million Texas battery financing Deal of the Year; Kimber: about USD 4 billion of assets managed, USD 9 billion breaking ground in 2025 and a similar amount in 2026, and Intersect 'prepared to build a more merchant fleet, managing it using our trading team'",
+      "read": "The merchant conviction that the batteries were financed on — a year before the same fleet was spun out.",
+      "source": "https://www.risk.net/commodities/7961497/deal-of-the-year-intersect-power"
+    },
+    {
+      "date": "2025-05-14",
+      "category": "corporate",
+      "headline": "New headquarters at 140 New Montgomery Street, San Francisco (12,000 square feet), announced with Mayor Daniel Lurie",
+      "read": "A Houston-then-Oakland-then-San Francisco company settles where its parent is.",
+      "source": "https://www.intersect.com/news/mayor-lurie-intersect-power-announce-new-headquarters-in-historic-downtown-san-francisco-building"
+    },
+    {
+      "date": "2025-04-15",
+      "category": "corporate",
+      "headline": "Kimber's blog on hybrid gas and renewables: 'not your grandparents' baseload power' — cheap solar and wind for 50–70 per cent of hours, batteries, and peaking gas at lower capital cost than combined cycle; Intersect 'already in construction on one of the country's largest co-located load and generation projects'",
+      "read": "The gas leg of the energy-park model, stated a year before Meitner's release made it explicit.",
+      "source": "https://www.intersect.com/blog/hybrid-gas-and-renewable-solutions-not-your-grandparents-baseload-power"
+    },
+    {
+      "date": "2024-12-10",
+      "category": "partnership",
+      "headline": "Intersect, Google and TPG Rise Climate announce the co-location partnership and an 'over $800 million' round led by TPG Rise Climate and Google with CAI and Greenbelt; 'Google will serve as anchor tenant'; first project operational 2026, complete 2027; USD 20 billion target by decade end",
+      "read": "The minority stake and anchor-tenant structure that the December 2025 acquisition replaced.",
+      "source": "https://www.intersect.com/news/intersect-power-forms-strategic-partnership-with-google-and-tpg-rise-climate-to-co-locate-data-center-load-and-clean-power-generation"
+    },
+    {
+      "date": "2024-07-18",
+      "category": "procurement",
+      "headline": "Tesla to supply 15.3 GWh of Megapacks, more than half for four California and Texas projects by end-2027 and the rest for 2028–2030",
+      "read": "The largest Megapack order in this corpus's developer set; its split between Intersect and IPX is unpublished.",
+      "source": "https://www.intersect.com/news/tesla-provides-intersect-with-15-3-gwh-of-megapacks-for-solar-storage-projects"
+    },
+    {
+      "date": "2024-07-17",
+      "category": "financial",
+      "headline": "USD 837 million closed for three 160 MW / 320 MWh standalone Texas batteries (Lumina I, Lumina II, Radian) — Morgan Stanley tax equity, HPS construction and term debt, Deutsche Bank construction facility; 'concept to commissioning in under 12 months'",
+      "read": "Merchant batteries financed on tax equity and private credit, run on Tesla Autobidder — the fleet's cash engine before the sale.",
+      "source": "https://www.intersect.com/historical-releases/intersect-power-secures-837-million-in-project-financing-to-build-1-gwh-of-battery-energy-storage-systems-bess-in-texas"
+    },
+    {
+      "date": "2024-01-11",
+      "category": "project",
+      "headline": "Lumina I and II (828 MWp, Scurry County) reach commercial operation; RECs sold to 'two Fortune 100 companies'",
+      "read": "The last of the 2.2 GWdc near-term portfolio to reach COD, on schedule against the 2021 financing plan.",
+      "source": "https://www.intersect.com/news/intersect-power-lumina-solar-project-reaches-commercial-operation"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "google",
+      "type": "investor",
+      "status": "active",
+      "since": "2024-12",
+      "scale": "USD 4.75 billion in cash plus assumed debt (announced); USD 5,868 million total purchase price (Alphabet Q2 2026 10-Q)",
+      "via": "Alphabet acquisition; Quantum and Meitner energy parks",
+      "note": "Alphabet agreed on 22 December 2025 and closed on 10 March 2026 the acquisition of Intersect, after leading the December 2024 round as a minority holder; Google is the data-centre customer at Quantum (Haskell County) and Meitner (Gray and Roberts Counties).",
+      "context": "The relationship ran in three stages. In December 2024 Google and TPG Rise Climate led an 'over $800 million' round and Google agreed to 'serve as anchor tenant in newly constructed industrial parks' — Greenbelt describes 'a 20-year off-take and powered-land lease' for Quantum. In December 2025 Alphabet announced the acquisition of 'Intersect's team and multiple gigawatts of energy and data center projects currently in development or under construction' for USD 4.75 billion plus debt, excluding the Texas operating assets and California properties. On 10 March 2026 the deal closed; Alphabet's 10-Qs consolidate Intersect as a variable-interest entity at USD 5.9 billion with goodwill allocated to Google Services and Google Cloud, and the June 2026 investor presentation says the purchase 'will help us come to market even faster'. Sundar Pichai's stated rationale: 'operate more nimbly in building new power generation in lockstep with new data center load'.",
+      "source": "https://abc.xyz/investor/news/news-details/2025/Alphabet-Announces-Agreement-to-Acquire-Intersect-to-Advance-U-S--Energy-Innovation-2025-DVIuVDM9wW/default.aspx"
+    },
+    {
+      "slug": "tesla",
+      "type": "supplier",
+      "status": "active",
+      "since": "2022",
+      "scale": "15.3 GWh Megapack order (July 2024); '17.7 GWh of Tesla Megapacks secured' (about page); 258 Megapacks across three Texas batteries",
+      "via": "Megapack; Autobidder",
+      "note": "Tesla agreed in July 2024 to supply 15.3 GWh of Megapacks for Intersect's solar-plus-storage projects; Megapacks were installed at Athos III, Oberon and the three Texas standalone batteries, two of which run on Tesla's Autobidder.",
+      "context": "Intersect's 18 July 2024 release, with Tesla Energy's Mike Snyder quoted, put 'more than half' of the 15.3 GWh into four California and Texas projects by end-2027 and the balance into 2028–2030 deliveries from the Lathrop Megafactory. The three 160 MW / 320 MWh Texas batteries financed the same week used 86 Megapacks each; Oberon's COD release credited Lathrop-built Megapacks. Simon Ross, Intersect's CCO, was previously Tesla's deputy general counsel for the energy business. The order pre-dates the March 2026 carve-out, and neither party has said how it is split between Google-owned Intersect and IPX Power.",
+      "source": "https://www.intersect.com/news/tesla-provides-intersect-with-15-3-gwh-of-megapacks-for-solar-storage-projects"
+    },
+    {
+      "slug": "microsoft",
+      "type": "customer",
+      "status": "historical",
+      "since": "2023-11",
+      "scale": "share of Oberon's 679 MWp / 1 GWh output (not broken out)",
+      "via": "Oberon solar-plus-storage offtake",
+      "note": "Intersect's Oberon COD release names Microsoft among the project's offtakers with Calpine Energy Solutions, Constellation, Ava Community Energy and San Diego Community Power.",
+      "context": "Oberon (Riverside County, 679 MWp solar plus 250 MW / 1 GWh storage) reached commercial operation on 14 November 2023 selling energy, RECs and resource adequacy to a group of buyers that included Microsoft; the release does not size any buyer's share. The asset passed to IPX Power at the March 2026 carve-out, so the contract is now IPX's rather than Intersect's — hence historical for this dossier. Microsoft appears nowhere as a tenant of an Intersect energy park.",
+      "source": "https://www.intersect.com/historical-releases/intersect-power-reaches-commercial-operation-of-oberon-solar-storage-project"
+    },
+    {
+      "slug": "constellation-energy",
+      "type": "customer",
+      "status": "historical",
+      "since": "2023-11",
+      "scale": "share of Oberon's output (not broken out)",
+      "via": "Oberon solar-plus-storage offtake",
+      "note": "'Constellation' is named among Oberon's offtakers in Intersect's 14 November 2023 COD release and in Ava Community Energy's account of the same milestone.",
+      "context": "Constellation took a share of Oberon's energy, RECs and resource adequacy alongside Calpine Energy Solutions, Ava, Microsoft and San Diego Community Power; the contract size is not published. As with Microsoft, the asset moved to IPX Power in March 2026, and no Constellation link to the Google-era parks exists in the record.",
+      "source": "https://www.intersect.com/historical-releases/intersect-power-reaches-commercial-operation-of-oberon-solar-storage-project"
+    },
+    {
+      "slug": "equinix",
+      "type": "other",
+      "status": "active",
+      "since": "2025-10",
+      "via": "executive hire",
+      "note": "Intersect's CFO Katrina Rymill joined from Equinix, where she was SVP Corporate Finance and Sustainability, in October 2025.",
+      "context": "The hire is the one documented link between Intersect and the colocation industry's largest operator: Rymill ran global treasury, investor relations and sustainability at Equinix and raised USD 9 billion of green bonds there, per Intersect's appointment release. No commercial relationship between the companies is stated in any source.",
+      "source": "https://www.intersect.com/news/intersect-appoints-katrina-rymill-as-chief-financial-officer"
+    },
+    {
+      "slug": "crusoe",
+      "type": "competitor",
+      "status": "active",
+      "since": "2026-04",
+      "via": "Texas SB 6 co-location net-metering",
+      "note": "Latitude Media describes the Crusoe–Google campus at Goodnight as Texas's first SB 6 co-location net-metering test case under the rules the PUCT adopted in March 2026 — the same regime Intersect's Google parks operate under.",
+      "context": "Crusoe and Intersect are the two developers in this corpus building behind-the-meter campuses for Google in ERCOT. Latitude Media's April 2026 report on the Goodnight case explains the PUCT's 60-day review of net-metering arrangements for merchant generators registered before 1 September 2025 that co-locate with new load, and notes ERCOT has required transmission studies for co-location since 2022. Intersect does not appear in the docket; the link is the shared customer and the shared rule, not a stated commercial tie.",
+      "source": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case/"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Texas SB 6 (large-load interconnection and co-location, 2025)",
+      "status": "in-effect",
+      "effectiveDate": "2025-06-21",
+      "exposure": "Every named Intersect campus is an ERCOT co-located load above 75 MW, the threshold at which SB 6 (signed 20–21 June 2025) requires curtailment during firm load shed, on-site shutoff equipment, a USD 100,000 minimum interconnection fee and PUCT review of net-metering arrangements between merchant generators and new co-located load; the PUCT adopted its net-metering rules for co-located data centres in late March 2026. Baker Botts notes an exemption where the same parent held majority ownership of both generator and load on 1 January 2025 — a date before Google owned Intersect. No SB 6, PUCT Project 55999 or ERCOT large-load filing naming an Intersect or Google entity was found. Collection gap.",
+      "mitigation": "",
+      "source": "https://www.bakerbotts.com/thought-leadership/publications/2025/july/texas-senate-bill-6-understanding-the-impacts-to-large-loads-and-co-located-generation"
+    },
+    {
+      "regime": "FERC co-location and surplus-interconnection rules",
+      "status": "proposed",
+      "effectiveDate": "2024-12",
+      "exposure": "Intersect told FERC, per Utility Dive, that 'the lack of standard rules, practices and procedures for integrating co-located [load] with new and existing generation means co-location configurations must go through a laborious, unpredictable semi-discretionary process to interconnect'. No surplus-interconnection service request, Order 845 filing or FERC Section 203 record for the Alphabet transaction was found; Texas campuses interconnect under ERCOT's non-FERC regime through Cross Texas Transmission (Meitner, per New Project Media).",
+      "mitigation": "",
+      "source": "https://www.utilitydive.com/news/google-intersect-power-co-located-energy-park-data-center-ferc/735198/"
+    },
+    {
+      "regime": "Texas Chapter 312 abatements and county reinvestment zones",
+      "status": "in-effect",
+      "effectiveDate": "2025-10-15",
+      "exposure": "Gray County approved a data-centre abatement for IP Meitner in the Meitner Reinvestment Zone on 15 October 2025 — 100 per cent property-tax abatement for ten years per phase according to New Project Media's reading of the filings — and abolished the January 2024 hydrogen abatement; the county conditioned the abatement on an air-cooled data centre with back taxes due if cooling changes, and earlier tied the solar and hydrogen abatements to Ogallala groundwater limits and investment in Pampa's wastewater plant. The Google–Intersect release commits that the buildout 'does not pass the costs of its infrastructure growth onto local families' and that Google 'pays for 100% of the power it uses'.",
+      "mitigation": "Air-cooled design and a USD 10 million Google Texas Water Impact Fund (per the June 2026 release)",
+      "source": "https://www.thepampanews.com/stories/county-passes-tax-abatement-for-intersect-power-in-recent-meeting,135676"
+    },
+    {
+      "regime": "ITC/45X — domestic content and storage ITC",
+      "status": "in-effect",
+      "effectiveDate": "2023-01",
+      "exposure": "Athos III used 'American-made components to meet IRA domestic content requirements' and Oberon used Ohio-made First Solar modules, Lathrop-made Megapacks and American steel with union labour, per Intersect's COD releases; the USD 837 million Texas battery financing said the projects 'qualify for Investment Tax Credits under the Inflation Reduction Act'. All of those assets are now IPX Power's; IPX's Darden financing uses USD 2.13 billion of ITC purchase agreements. Whether the Google-era parks claim credits, and under which FEOC rules, is not stated by either party.",
+      "mitigation": "",
+      "source": "https://www.intersect.com/historical-releases/intersect-power-reaches-commercial-operation-of-310-mwp-athos-iii-solar-storage-project-in-california"
+    },
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2025-07",
+      "exposure": "The founder's May 2024 blog said battery cells were 'mostly' from China and expected that to shift under policy pressure; Intersect's disclosed battery supplier is Tesla (Lathrop) and its module supplier First Solar (Ohio). No Intersect-specific FEOC or tariff statement, and no supplier for Meitner's on-site gas generation, appears in any source read. Collection gap.",
+      "mitigation": "",
+      "source": "https://www.intersect.com/blog/bess-assets-rockstars-of-the-energy-transition"
+    },
+    {
+      "regime": "California CEQA / AB 205 opt-in certification and BLM DRECP",
+      "status": "in-effect",
+      "effectiveDate": "2025-06-13",
+      "exposure": "Darden (IP Darden I, LLC) was certified by the California Energy Commission on 13 June 2025 under the AB 205 opt-in process with its 800 MW hydrogen facility removed; Aramis survived a CEQA and Measure D petition (denied May 2022, appeal rejected August 2023); Oberon was 'the first project to achieve operation under BLM's Desert Renewable Energy Conservation Plan'. All three are IPX Power assets since March 2026.",
+      "mitigation": "",
+      "source": "https://www.energy.ca.gov/powerplant/solar-photovoltaic-pv-battery-energy-storage/darden-clean-energy-project"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Sheldon Kimber",
+      "title": "Founder and Chief Executive Officer",
+      "photo": "images/execs/intersect-power-kimber.jpg",
+      "background": [
+        "Founded Intersect in 2016; Alphabet's acquisition release: Intersect 'will maintain its brand identity and be led by founder Sheldon Kimber, working closely with Google's technical infrastructure group'",
+        "Chief Operating Officer — Recurrent Energy (joined 2007 as VP Finance; led expansion to about 2 GW operating)",
+        "Calpine — five years in finance and development of gas-fired projects; investment banker at Goldman Sachs; strategy consultant at Accenture",
+        "Taught Project Finance in the UC Berkeley Haas MBA for ten years; BA Economics, Kenyon College; MBA, UC Berkeley Haas"
+      ]
+    },
+    {
+      "name": "Simon Ross",
+      "title": "Chief Commercial Officer",
+      "photo": "images/execs/intersect-power-ross.jpg",
+      "background": [
+        "Leads strategy and business development, project development, procurement, and origination and trading (company bio)",
+        "Managing Director, Energy Technology — Macquarie Green Investment Group",
+        "Deputy General Counsel — Tesla (led legal for the global energy business; structured 'several of the world's first standalone energy storage projects'; SolarCity acquisition)",
+        "Recurrent Energy (more than 1 GW of development and financing); MA PPE, St Hugh's College, Oxford; law degree, BPP University"
+      ]
+    },
+    {
+      "name": "Katrina Rymill",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/intersect-power-rymill.jpg",
+      "linkedin": "https://www.linkedin.com/in/katrina-rymill-666177/",
+      "background": [
+        "Appointed 30 October 2025",
+        "SVP Corporate Finance and Sustainability — Equinix (global treasury, investor relations, sustainability; USD 9 billion of green bonds)",
+        "Redback Networks and CyberSource (business development, investor relations); Merrill Lynch leveraged finance",
+        "BA Biology, Harvard; MBA, MIT Sloan"
+      ]
+    },
+    {
+      "name": "Nick Spicer",
+      "title": "Chief Administrative Officer",
+      "photo": "images/execs/intersect-power-spicer.jpg",
+      "background": [
+        "Manages external affairs, corporate technology, HR, legal operations and corporate initiatives (company bio)",
+        "Investor relations, treasury and M&A roles — Chevron; engineer — BP (Colorado, Gulf of Mexico, Azerbaijan)",
+        "BS Chemical Engineering, Rice; MBA, UC Berkeley Haas"
+      ]
+    },
+    {
+      "name": "Rob Hanson",
+      "title": "Chief Technology Officer",
+      "photo": "images/execs/intersect-power-hanson.jpg",
+      "linkedin": "https://www.linkedin.com/in/robert-hanson-7a32218/",
+      "background": [
+        "Oversees engineering, construction and procurement (company bio)",
+        "Co-founder — Monolith (carbon-black and hydrogen electrification; 'the first new carbon black plant in America in more than three decades')",
+        "Board of Overview Energy; BS Mechanical Engineering, University of Saskatchewan; MS, Stanford; PE (California)"
+      ]
+    },
+    {
+      "name": "Jonathan Bain",
+      "title": "Chief Operating Officer",
+      "photo": "images/execs/intersect-power-bain.jpg",
+      "linkedin": "https://www.linkedin.com/in/jonathantbain/",
+      "background": [
+        "Leads corporate safety, asset management and operations for the generation fleet (company bio)",
+        "NextEra Energy, 1999–2024 — VP Renewable Operations Integration (more than 30 GW into operations), VP Wind Operations, VP Central Maintenance, regional GM roles in ERCOT and NEPOOL",
+        "Field service engineer — Siemens (turbines); BS Marine Engineering, Maine Maritime Academy; MBA, University of Rhode Island",
+        "John K. Martinez, the previous COO whose Intersect profile page is still live, moved to IPX Power as COO at the March 2026 carve-out"
+      ]
+    },
+    {
+      "name": "Rosemary (Rose) Antonopoulos",
+      "title": "General Counsel",
+      "photo": "images/execs/intersect-power-antonopoulos.jpg",
+      "linkedin": "https://www.linkedin.com/in/rosemary-antonopoulos-86a5716/",
+      "background": [
+        "SVP and Chief Administrative Officer — Calpine Corporation; earlier VP and Deputy General Counsel, Calpine West (joined 2004)",
+        "Energy development, construction and project-finance law at a San Francisco firm",
+        "BA International Relations, Marquette; JD, George Washington University Law School"
+      ]
+    },
+    {
+      "name": "Elizabeth Knowles",
+      "title": "Head of Community Engagement",
+      "background": [
+        "Quoted in the 4 June 2026 Meitner announcement; named Director of Community Engagement in Gray County commissioners' proceedings (January 2024)"
+      ]
+    },
+    {
+      "name": "Andrew Hart",
+      "title": "Regional Head of Data Center Public Affairs, Google (the parent's counterpart on the Texas campuses)",
+      "background": [
+        "Quoted for Google in the 4 June 2026 Meitner Energy Center release"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Google acquisition — as filed by Alphabet (announced 22 December 2025; closed 10 March 2026)",
+        "periodType": "other",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Purchase price (Alphabet Q2 2026 10-Q, final allocation)",
+            "actual": "USD 5,868 million total purchase price: goodwill USD 2,174 million, property and equipment USD 5,129 million, debt assumed USD 1,214 million, net liabilities assumed USD 221 million",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Acquirer's filing. The headline was 'USD 4.75 billion in cash plus debt assumption' (Alphabet release) and 'USD 4.8 billion' (10-K); the 10-Q figure is 'after purchase price adjustments'."
+          },
+          {
+            "name": "Combined enterprise value with the IPX carve-out (TPG)",
+            "actual": "'USD 12 billion' — 'a combined enterprise value of $12 billion when including the spinoff of grid-tied assets into IPX Power'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Seller's statement; IPX said to hold about 4.4 GW of solar and 8.8 GWh of storage with USD 10 billion invested."
+          },
+          {
+            "name": "Revenue and EBITDA",
+            "actual": "Not disclosed. The founder said in December 2023 that EBITDA was about USD 200 million and expected to triple by early 2027 (Stanford Hydrogen Initiative podcast)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No financial statement has ever been published; Alphabet does not report Intersect as a segment."
+          }
+        ],
+        "commentary": "The only audited numbers are the acquirer's purchase-price allocation. Because the grid-tied fleet left with IPX Power at closing, the USD 5.9 billion bought a development platform, a team, three named Texas parks and USD 1.2 billion of debt."
+      },
+      {
+        "period": "Capital formation before the sale (2021–2025)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Corporate equity raised",
+            "actual": "USD 127 million (CAI, Trilantic — January 2021); USD 750 million (TPG Rise Climate, CAI, Trilantic — June 2022); 'over USD 800 million' (TPG Rise Climate, Google, CAI, Greenbelt — December 2024); 'over USD 2.1 billion' cumulative (company, October 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Greenbelt's page splits the 2024 round as USD 879 million with USD 250 million from Google — investor-stated, not confirmed by Google."
+          },
+          {
+            "name": "Project and corporate debt",
+            "actual": "USD 482 million corporate facility (Generate Capital, CarVal — 2021); USD 2.6 billion portfolio financing (2021); USD 3.075 billion (2022); up to USD 800 million revolving credit facility (2023); USD 837 million Texas BESS financing (2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Per Intersect's releases; HPS Investment Partners was term lender on each portfolio round. Canary Media put total capital raised at about USD 5 billion by mid-2024."
+          },
+          {
+            "name": "Employees",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Collection gap."
+          }
+        ],
+        "commentary": "Every figure is a release; no consensus or guidance exists, so 'expected' is empty throughout. The founder's stated USD 1.3 billion of equity and USD 5–6 billion of project finance (December 2023) sit between the release totals and are carried as his statement."
+      }
+    ],
+    "commentary": "The financial record of Intersect is a capital-formation record that ends in a strategic sale: three growth rounds, three portfolio financings and a revolver, then a purchase price that Alphabet's 10-Q states to the million. What is not in the record is any operating result for the Google-owned entity, any project financing for the Texas parks since closing, or the split of the First Solar and Tesla frameworks between Intersect and IPX."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Google owns Intersect outright and that the acquisition is closed, not pending. Basis: Alphabet's 22 December 2025 release and FY2025 10-K, TPG's and Greenbelt's 10 March 2026 completion releases, and Alphabet's Q1 and Q2 2026 10-Qs, which consolidate Intersect as a variable-interest entity at USD 5.9 billion. The brief's 'Google-owned since 2026' is confirmed with a March 2026 close; the announcement was December 2025.",
+    "(High confidence) We assess that Google bought a development capability and three Texas parks, not an operating power fleet. Basis: Alphabet's release excludes 'Intersect's current Texas operating assets and California properties'; TPG and Greenbelt describe the carve-out of about 4.4 GW of solar and 8.8 GWh of storage into IPX Power with the former CFO, COO and CCO; Alphabet's allocation puts USD 2.2 billion of the USD 5.9 billion into goodwill. The fleet Intersect is known for — Oberon, Lumina, Radian, the Texas batteries, Darden — is now IPX's.",
+    "(Moderate confidence) We assess that Intersect is now a captive developer with no third-party customers, and that this was the purpose of the deal. Basis: every named park has Google as tenant; Alphabet's stated rationale is to 'operate more nimbly in building new power generation in lockstep with new data center load'; the June 2026 investor presentation frames the purchase as coming 'to market even faster'; no source says Intersect develops for others after closing. Kimber's blog says Intersect will 'remain separate … under the Intersect brand', which describes governance, not customers.",
+    "(Moderate confidence) We assess that the energy-park model has moved from 'solar plus storage plus hydrogen' to 'solar, wind and storage firmed by on-site gas', and that this is a design change forced by load, not a rhetorical one. Basis: Meitner's 2023 county presentation (340 MW solar, 460 MW wind, 400 MW electrolysis) became 840 MW of behind-the-meter data-centre load with 'firming on-site gas' by June 2026; Darden's 800 MW hydrogen facility was removed in October 2024; Kimber's April 2025 blog argues for peaking gas at lower capital cost than combined cycle. Gas capacity and its supplier are unpublished.",
+    "(Moderate confidence) We assess that the binding regulatory exposure is Texas SB 6 and county tax conditions rather than FERC. Basis: every park is an ERCOT co-located load above 75 MW; the PUCT adopted its co-location net-metering rules in March 2026 with a Crusoe–Google campus as the test case; Gray County's abatement carries an air-cooling claw-back; Intersect's own FERC filing complained about co-location process, but no FERC docket naming Intersect was found and ERCOT is outside FERC's interconnection jurisdiction.",
+    "(Low confidence) We assess that the pre-sale First Solar and Tesla frameworks are now split between Intersect and IPX Power, with the larger share of near-term Megapack deliveries at IPX's Darden. Basis: the 15.3 GWh Tesla order's 'four California and Texas projects by end-2027' predates the carve-out and Darden is the largest storage project in either company; neither party has published the split. Treat as a question for a supplier's next conversation, not a finding.",
+    "Indicators to watch: (1) a data-centre megawatt figure for Quantum or Meitner from Google, Intersect, ERCOT's large-load reports or a PUCT SB 6 filing — the first published load number would size the model; (2) an Intersect entity in a PUCT co-location net-metering review or an ERCOT curtailment filing, which would show which SB 6 path the parks take; (3) any Intersect project with a non-Google tenant, which would refute the captive-developer judgment; (4) a supplier announcement for Meitner's on-site gas (turbines or engines) and any FEOC-compliant battery supply statement — silence past Phase 1 construction would indicate the gas leg is procured through Google; (5) Alphabet's segment disclosures for any Intersect operating result, and IPX Power's next financing naming which Tesla and First Solar volumes it holds."
+  ],
+  "sources": [
+    {
+      "label": "IPX Power — USD 800 million corporate credit facility (post-carve-out)",
+      "url": "https://ipxpower.com/ipx-power-secures-800-million-corporate-credit-facility-to-support-expansion-of-its-clean-energy-platform/",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Alphabet Form 10-Q, Q2 2026 — final Intersect purchase-price allocation",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+      "date": "2026-07-23"
+    },
+    {
+      "label": "Alphabet — investor presentation, June 2026 ('come to market even faster')",
+      "url": "https://blog.google/alphabet/investor-presentation-june-2026/",
+      "date": "2026-06-03"
+    },
+    {
+      "label": "Google / Intersect joint release (Google-hosted PDF) — Meitner Energy Center; Quantum operations",
+      "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Google_Intersect_Texas_Announcement_-_June_2026.pdf",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "Intersect — Google and Intersect deepen Texas roots (Meitner release copy)",
+      "url": "https://www.intersect.com/news/google-and-intersect-deepen-texas-roots-with-new-data-center-and-energy-investments-in-gray-and-roberts-counties",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "Google blog — Meitner Energy Center",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/meitner-energy-center/",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "POWER — Google launches 1 GW-plus co-located data center and generation complex in Texas Panhandle",
+      "url": "https://www.powermag.com/google-launches-1-gw-plus-co-located-data-center-and-generation-complex-in-texas-panhandle/",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "Latitude Media — Google and Intersect to build first post-acquisition project in Texas",
+      "url": "https://www.latitudemedia.com/news/google-and-intersect-to-build-first-post-acquisition-project-in-texas/",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "PV Tech — Google, Intersect launch 1 GW-plus clean-energy-backed data centre project in Texas",
+      "url": "https://www.pv-tech.org/google-intersect-launch-1gw-plus-clean-energy-backed-data-centre-project-in-texas/",
+      "date": "2026-06-05"
+    },
+    {
+      "label": "Mercom — IPX Power closes USD 4.95 billion financing for Darden",
+      "url": "https://mercomcapital.com/ipx-power-closes-4-95b-financing-solar-storage-projects/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "IPX Power — secures financing for Darden projects (USD 4.95 billion)",
+      "url": "https://ipxpower.com/ipx-power-secures-financing-for-darden-projects/",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Alphabet Form 10-Q, Q1 2026 — acquisition completed 10 March 2026 for USD 5.9 billion",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "Latitude Media — how a Crusoe–Google campus became Texas's co-location test case (PUCT SB 6 rules)",
+      "url": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case/",
+      "date": "2026-04-03"
+    },
+    {
+      "label": "Energy-Storage.news — Google completes USD 4.75 billion Intersect acquisition",
+      "url": "https://www.energy-storage.news/google-completes-us4-75-billion-intersect-power-acquisition-initial-focus-on-california-texas-solar-plus-storage/",
+      "date": "2026-03-13"
+    },
+    {
+      "label": "Climate Adaptive Infrastructure — IPX Power launches following sale of Intersect to Google",
+      "url": "https://www.climateadaptiveinfra.com/news-and-insights/ipx-power-launches-as-independent-power-producer-following-sale-of-intersect-to-google",
+      "date": "2026-03-12"
+    },
+    {
+      "label": "PV Tech — Google finalises Intersect acquisition to bring data-centre power in-house",
+      "url": "https://www.pv-tech.org/google-finalises-intersect-acquisition-to-bring-data-centre-power-in-house/",
+      "date": "2026-03-12"
+    },
+    {
+      "label": "Alternatives Watch — Google, Intersect, TPG, Greenbelt, CAI, IPX Power",
+      "url": "https://www.alternativeswatch.com/2026/03/12/google-intersect-tpg-greenbelt-cai-ipx-power/",
+      "date": "2026-03-12"
+    },
+    {
+      "label": "IPX Power release (PR Newswire) — launches as independent power producer",
+      "url": "https://www.prnewswire.com/news-releases/ipx-power-launches-as-independent-power-producer-following-sale-of-intersect-to-google-302711797.html",
+      "date": "2026-03-12"
+    },
+    {
+      "label": "Power Technology — Google acquires Intersect Power",
+      "url": "https://www.power-technology.com/news/google-acquires-intersect-power/",
+      "date": "2026-03-11"
+    },
+    {
+      "label": "ESG Today — Intersect spins off IPX following acquisition by Google",
+      "url": "https://www.esgtoday.com/intersect-spins-off-green-energy-producer-ipx-following-acquisition-by-google/",
+      "date": "2026-03-11"
+    },
+    {
+      "label": "TPG — completion of USD 4.75 billion sale of Intersect to Google; IPX Power launched",
+      "url": "https://www.tpg.com/news-and-insights/tpg-announces-completion-of-4-75-billion-sale-of-intersect-to-google-launches-ipx-power-as-independent-power-producer",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "Greenbelt Capital Partners — Intersect sale and IPX launch",
+      "url": "https://www.greenbeltcapital.com/news/intersect-sale-ipx-launch.html",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "Greenbelt Capital Partners release (PR Newswire) — completes sale of Intersect Power to Google",
+      "url": "https://www.prnewswire.com/news-releases/greenbelt-capital-partners-completes-sale-of-intersect-power-to-google-and-announces-the-launch-of-ipx-power-302709946.html",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "IPX Power — launches as independent power producer following Intersect acquisition by Google",
+      "url": "https://ipxpower.com/ipx-power-launches-as-independent-power-producer-following-intersect-acquisition-by-google/",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "Intersect — IPX Power launch (historical release copy)",
+      "url": "https://www.intersect.com/historical-releases/ipx-power-launches-as-independent-power-producer-following-intersect-acquisition-by-google",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "Alphabet Form 10-K, FY2025 — agreement to acquire Intersect for USD 4.8 billion plus debt",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "date": "2026-02-05"
+    },
+    {
+      "label": "Utility Dive — Alphabet acquires clean-energy developer Intersect for USD 4.75 billion",
+      "url": "https://www.utilitydive.com/news/alphabet-acquires-clean-energy-developer-intersect-for-475b/808780/",
+      "date": "2026-01-06"
+    },
+    {
+      "label": "Utility Dive — ERCOT's large-load queue jumped almost 300% last year",
+      "url": "https://www.utilitydive.com/news/ercots-large-load-queue-jumped-almost-300-last-year-official/808820/",
+      "date": "2026-01-06"
+    },
+    {
+      "label": "ESG Dive — Alphabet acquires Intersect portfolio for USD 4.75 billion",
+      "url": "https://www.esgdive.com/news/alphabet-acquires-clean-energy-developer-intersect-portfolio-4-75b-google-data-centers/808756/",
+      "date": "2026-01-05"
+    },
+    {
+      "label": "pv magazine — Google acquires Intersect Power for nearly USD 5 billion",
+      "url": "https://www.pv-magazine.com/2026/01/05/google-acquires-intersect-power-for-nearly-5-billion/",
+      "date": "2026-01-05"
+    },
+    {
+      "label": "Kirkland & Ellis — advises TPG Rise Climate, CAI and Greenbelt on sale of Intersect",
+      "url": "https://www.kirkland.com/news/press-release/2025/12/kirkland-advises-tpg-rise-climate-adaptive-infrastructure-on-sale-of-intersect",
+      "date": "2025-12-23"
+    },
+    {
+      "label": "Alphabet Investor Relations — agreement to acquire Intersect",
+      "url": "https://abc.xyz/investor/news/news-details/2025/Alphabet-Announces-Agreement-to-Acquire-Intersect-to-Advance-U-S--Energy-Innovation-2025-DVIuVDM9wW/default.aspx",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Intersect — Alphabet announces agreement to acquire Intersect (release copy)",
+      "url": "https://www.intersect.com/news/alphabet-announces-agreement-to-acquire-intersect-to-advance-u-s-energy-innovation",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Google blog — advancing US energy innovation with Intersect",
+      "url": "https://blog.google/inside-google/infrastructure/energy-innovation-intersect/",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Intersect blog (Sheldon Kimber) — 'It Goes to 11 … Intersect's Next Phase'",
+      "url": "https://www.intersect.com/blog/intersect-announces-agreement-to-be-acquired-by-google",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Cleary Gottlieb — Alphabet in USD 4.75 billion acquisition of Intersect Power",
+      "url": "https://www.clearygottlieb.com/news-and-insights/news-listing/alphabet-in-4-75-billion-acquisition-of-intersect-power",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Reuters via Yahoo Finance — Alphabet to buy data-center infrastructure company Intersect",
+      "url": "https://finance.yahoo.com/news/alphabet-buy-data-center-infrastructure-161028901.html",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "TechCrunch — Alphabet to buy Intersect Power to bypass energy grid bottlenecks",
+      "url": "https://techcrunch.com/2025/12/22/alphabet-to-buy-intersect-power-to-bypass-energy-grid-bottlenecks/",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "POWER — Alphabet buying clean-energy developer to support data centers",
+      "url": "https://www.powermag.com/alphabet-buying-clean-energy-developer-to-support-data-centers/",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Latitude Media — ERCOT's large-load queue has nearly quadrupled in a year",
+      "url": "https://www.latitudemedia.com/news/ercots-large-load-queue-has-nearly-quadrupled-in-a-single-year/",
+      "date": "2025-12-03"
+    },
+    {
+      "label": "Google blog — USD 40 billion Texas investment (Haskell County data centre with solar and storage)",
+      "url": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-texas/",
+      "date": "2025-11-14"
+    },
+    {
+      "label": "Intersect — appoints Katrina Rymill as Chief Financial Officer",
+      "url": "https://www.intersect.com/news/intersect-appoints-katrina-rymill-as-chief-financial-officer",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Business Wire via Yahoo Finance — Intersect appoints Katrina Rymill CFO",
+      "url": "https://finance.yahoo.com/news/intersect-appoints-katrina-rymill-chief-160000041.html",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "High Plains Observer — Gray County judge update on Intersect project ('high profile tenant')",
+      "url": "https://highplainsobserverperryton.com/gray-county-judge-gives-update-on-intersect-power-project-p39368-307.htm",
+      "date": "2025-10-27"
+    },
+    {
+      "label": "The Pampa News — county passes tax abatement for Intersect Power; hydrogen abatement abolished",
+      "url": "https://www.thepampanews.com/stories/county-passes-tax-abatement-for-intersect-power-in-recent-meeting,135676",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "The Pampa News — Intersect Power tax-abatement negotiations pushed to September (air-cooled data centre letter)",
+      "url": "https://www.thepampanews.com/stories/intersect-power-tax-abatement-negotiations-pushed-to-september,124510",
+      "date": "2025-08-02"
+    },
+    {
+      "label": "Baker Botts — Texas Senate Bill 6: impacts to large loads and co-located generation",
+      "url": "https://www.bakerbotts.com/thought-leadership/publications/2025/july/texas-senate-bill-6-understanding-the-impacts-to-large-loads-and-co-located-generation",
+      "date": "2025-07-18"
+    },
+    {
+      "label": "Utility Dive — Texas law gives grid operator power to disconnect data centers during crises (SB 6)",
+      "url": "https://www.utilitydive.com/news/texas-law-gives-grid-operator-power-to-disconnect-data-centers-during-crisi/751587/",
+      "date": "2025-06-25"
+    },
+    {
+      "label": "California Energy Commission — Darden Clean Energy Project (docket 23-OPT-02)",
+      "url": "https://www.energy.ca.gov/powerplant/solar-photovoltaic-pv-battery-energy-storage/darden-clean-energy-project",
+      "date": "2025-06-13"
+    },
+    {
+      "label": "Risk.net — Energy Risk Awards Deal of the Year: Intersect Power",
+      "url": "https://www.risk.net/commodities/7961497/deal-of-the-year-intersect-power",
+      "date": "2025-05-21"
+    },
+    {
+      "label": "Intersect — wins Energy Risk Awards Deal of the Year for USD 837 million battery storage transaction",
+      "url": "https://www.intersect.com/news/intersect-wins-energy-risk-awards-deal-of-the-year-for-837-million-battery-storage-transaction",
+      "date": "2025-05-21"
+    },
+    {
+      "label": "Intersect — Mayor Lurie and Intersect Power announce new San Francisco headquarters",
+      "url": "https://www.intersect.com/news/mayor-lurie-intersect-power-announce-new-headquarters-in-historic-downtown-san-francisco-building",
+      "date": "2025-05-14"
+    },
+    {
+      "label": "Intersect blog (Kimber) — hybrid gas and renewable solutions: not your grandparents' baseload power",
+      "url": "https://www.intersect.com/blog/hybrid-gas-and-renewable-solutions-not-your-grandparents-baseload-power",
+      "date": "2025-04-15"
+    },
+    {
+      "label": "Intersect — named to Fast Company's Most Innovative Companies 2025",
+      "url": "https://www.intersect.com/news/intersect-named-to-fast-companys-worlds-most-innovative-companies-of-2025-list",
+      "date": "2025-03-19"
+    },
+    {
+      "label": "Intersect — named by Forbes among America's Best Startup Employers 2025",
+      "url": "https://www.intersect.com/news/intersect-power-named-by-forbes-as-one-of-americas-best-startup-employers",
+      "date": "2025-03-04"
+    },
+    {
+      "label": "Utility Dive — Google, Intersect co-located energy-park partnership; Intersect's FERC filing on co-location",
+      "url": "https://www.utilitydive.com/news/google-intersect-power-co-located-energy-park-data-center-ferc/735198/",
+      "date": "2024-12-11"
+    },
+    {
+      "label": "Kirkland & Ellis — advises TPG Rise Climate, CAI and Greenbelt on investment in Intersect Power",
+      "url": "https://www.kirkland.com/news/press-release/2024/12/kirkland-advises-tpg-rise-climate-cai-and-gc-on-investment-in-intersect-power",
+      "date": "2024-12-11"
+    },
+    {
+      "label": "Intersect — forms strategic partnership with Google and TPG Rise Climate to co-locate data-center load and clean power",
+      "url": "https://www.intersect.com/news/intersect-power-forms-strategic-partnership-with-google-and-tpg-rise-climate-to-co-locate-data-center-load-and-clean-power-generation",
+      "date": "2024-12-10"
+    },
+    {
+      "label": "TPG — Intersect Power partnership with Google and TPG Rise Climate (release copy)",
+      "url": "https://www.tpg.com/news-and-insights/intersect-power-forms-strategic-partnership-with-google-and-tpg-rise-climate-to-co-locate-data-center-load-and-clean-power-generation",
+      "date": "2024-12-10"
+    },
+    {
+      "label": "Google blog (Ruth Porat) — a new approach to data center and clean energy growth",
+      "url": "https://blog.google/inside-google/infrastructure/new-approach-to-data-center-and-clean-energy-growth/",
+      "date": "2024-12-10"
+    },
+    {
+      "label": "Reuters via Yahoo Finance — Google invests in Intersect Power; over USD 800 million round",
+      "url": "https://finance.yahoo.com/news/google-invests-intersect-power-over-140946469.html",
+      "date": "2024-12-10"
+    },
+    {
+      "label": "Bay Nature — large-scale solar is coming to tiger salamander country (Aramis)",
+      "url": "https://baynature.org/article/large-scale-solar-is-coming-to-tiger-salamander-country/",
+      "date": "2024-12-12"
+    },
+    {
+      "label": "Intersect blog (Kimber) — megatrends collide: AI data-center demand",
+      "url": "https://www.intersect.com/blog/decarbonization-digitalization-and-electrification-as-megatrends-collide-ai-data-center-demand-is-a-preview-of-whats-to-come",
+      "date": "2024-09-05"
+    },
+    {
+      "label": "Intersect — Tesla provides 15.3 GWh of Megapacks for solar and storage projects",
+      "url": "https://www.intersect.com/news/tesla-provides-intersect-with-15-3-gwh-of-megapacks-for-solar-storage-projects",
+      "date": "2024-07-18"
+    },
+    {
+      "label": "Energy-Storage.news — Intersect closes USD 837 million financing for Texas battery projects",
+      "url": "https://www.energy-storage.news/intersect-power-closes-us837-million-financing-for-portfolio-balancing-texas-battery-projects/",
+      "date": "2024-07-18"
+    },
+    {
+      "label": "Utility Dive — Intersect secures USD 837 million to boost Texas storage portfolio",
+      "url": "https://www.utilitydive.com/news/intersect-power-secures-837-million-to-boost-texas-storage-portfolio-by-ne/721752/",
+      "date": "2024-07-18"
+    },
+    {
+      "label": "Canary Media — Intersect Power to build USD 837 million of grid batteries in Texas",
+      "url": "https://www.canarymedia.com/articles/energy-storage/intersect-power-to-build-837m-worth-of-grid-batteries-in-texas",
+      "date": "2024-07-17"
+    },
+    {
+      "label": "Intersect — secures USD 837 million in project financing for 1 GWh of BESS in Texas",
+      "url": "https://www.intersect.com/historical-releases/intersect-power-secures-837-million-in-project-financing-to-build-1-gwh-of-battery-energy-storage-systems-bess-in-texas",
+      "date": "2024-07-17"
+    },
+    {
+      "label": "Intersect blog — BESS assets: rockstars of the energy transition",
+      "url": "https://www.intersect.com/blog/bess-assets-rockstars-of-the-energy-transition",
+      "date": "2024-05-09"
+    },
+    {
+      "label": "Intersect — Lumina solar project reaches commercial operation",
+      "url": "https://www.intersect.com/news/intersect-power-lumina-solar-project-reaches-commercial-operation",
+      "date": "2024-01-11"
+    },
+    {
+      "label": "Stanford Hydrogen Initiative — Sheldon Kimber: hydrogen project development demystified (podcast)",
+      "url": "https://hydrogen.stanford.edu/news/sheldon-kimber-hydrogen-project-development-demystified",
+      "date": "2023-12-11"
+    },
+    {
+      "label": "Gray County, Texas — public meeting presentation, Meitner project (PDF)",
+      "url": "https://www.co.gray.tx.us/upload/page/2004/2023/POWERPOINT%20Gray%20County%20Public%20Meeting%20Meitner%20Project%2012.15.23.pdf",
+      "date": "2023-12-15"
+    },
+    {
+      "label": "ABC7 Amarillo — Intersect Power's USD 1 billion project ignites Ogallala aquifer talks",
+      "url": "https://abc7amarillo.com/news/local/intersect-powers-1-billion-project-ignites-ogallala-aquifer-protection-talks-meinter-intersect-power-project-pampa-chris-porter-mitchell-locke-highway-152-panhandle-groundwater-conservation-district-terry-hall-levi-berry-gray-county-roberts-county-texas",
+      "date": "2023-12-20"
+    },
+    {
+      "label": "ABC7 Amarillo — Intersect Power project ignites tax debate in Gray County Commissioners Court",
+      "url": "https://abc7amarillo.com/news/local/intersect-powers-1-billion-project-ignites-tax-debate-in-gray-county-commission-court",
+      "date": "2024-01-15"
+    },
+    {
+      "label": "Orrick — Intersect Power's Oberon solar-plus-storage project (IRA priorities)",
+      "url": "https://www.orrick.com/en/News/2023/11/Aligning-with-Inflation-Reduction-Act-Priorities-Intersect-Powers-Oberon-Solar-Storage-Project",
+      "date": "2023-11-15"
+    },
+    {
+      "label": "Intersect — Oberon solar-plus-storage project reaches commercial operation",
+      "url": "https://www.intersect.com/historical-releases/intersect-power-reaches-commercial-operation-of-oberon-solar-storage-project",
+      "date": "2023-11-14"
+    },
+    {
+      "label": "Ava Community Energy — Intersect Power reaches commercial operation (Oberon)",
+      "url": "https://avaenergy.org/news/intersect-power-reaches-commercial-operation/",
+      "date": "2023-11-14"
+    },
+    {
+      "label": "Independent News — appeal to overturn Aramis is rejected",
+      "url": "https://www.independentnews.com/news/livermore_news/appeal-to-overturn-aramis-is-rejected/article_de468716-3c4d-11ee-8079-d32866c986ce.html",
+      "date": "2023-08-16"
+    },
+    {
+      "label": "Intersect blog — the future of the grid",
+      "url": "https://www.intersect.com/blog/the-future-of-the-grid",
+      "date": "2023-08-09"
+    },
+    {
+      "label": "Kirkland & Ellis — advises Intersect Power on revolving credit facility",
+      "url": "https://www.kirkland.com/news/press-release/2023/07/kirkland-advises-intersect-power-on-revolving-credit-facility",
+      "date": "2023-07-19"
+    },
+    {
+      "label": "Intersect — secures an up-to-USD 800 million revolving credit facility",
+      "url": "https://www.intersect.com/historical-releases/intersect-power-secures-an-up-to-800-million-revolving-credit-facility",
+      "date": "2023-06-27"
+    },
+    {
+      "label": "Intersect — Radian 415 MWp solar project reaches commercial operation",
+      "url": "https://www.intersect.com/historical-releases/intersect-powers-415-mwp-radian-solar-project-in-texas-reaches-commercial-operation",
+      "date": "2023-06-06"
+    },
+    {
+      "label": "Intersect — Athos III solar-plus-storage reaches commercial operation",
+      "url": "https://www.intersect.com/historical-releases/intersect-power-reaches-commercial-operation-of-310-mwp-athos-iii-solar-storage-project-in-california",
+      "date": "2023-01-11"
+    },
+    {
+      "label": "Intersect — procures 4.9 GW of First Solar modules for 2025–2029 delivery (7.3 GW 2022 orders)",
+      "url": "https://www.intersect.com/news/intersect-power-procures-4-9-gw-for-2025-2029-delivery-increasing-its-total-2022-orders-for-first-solar-module-technology-to-7-3-gw",
+      "date": "2022-11-17"
+    },
+    {
+      "label": "Intersect — closes USD 3.1 billion in project financing (Lumina, Oberon)",
+      "url": "https://www.intersect.com/historical-releases/intersect-power-closes-3-1-billion-in-project-financing-to-complete-near-term-portfolio-totaling-2-2-gwdc",
+      "date": "2022-09-29"
+    },
+    {
+      "label": "Intersect — orders 2.4 GW of First Solar modules",
+      "url": "https://www.intersect.com/news/intersect-orders-2-4-gw-of-first-solars-high-performance-modules",
+      "date": "2022-07-28"
+    },
+    {
+      "label": "Pleasanton Weekly — court upholds county's approval of Aramis solar project",
+      "url": "https://www.pleasantonweekly.com/news/2022/07/15/court-upholds-countys-approval-of-aramis-solar-project-in-livermore/",
+      "date": "2022-07-15"
+    },
+    {
+      "label": "Intersect release (PR Newswire) — USD 750 million growth equity from TPG Rise Climate, CAI and Trilantic",
+      "url": "https://www.prnewswire.com/news-releases/intersect-power-announces-750m-growth-equity-investment-from-tpg-rise-climate-cai-investments--trilantic-energy-partners-north-america-301576794.html",
+      "date": "2022-06-28"
+    },
+    {
+      "label": "US House Science Committee — witness biography, Sheldon Kimber",
+      "url": "https://docs.house.gov/meetings/SY/SY20/20220217/114415/HHRG-117-SY20-Bio-KimberS-20220217.pdf",
+      "date": "2022-02-17"
+    },
+    {
+      "label": "Intersect — secures USD 2.6 billion in project financing for 2.2 GWdc with 1.4 GWh of storage",
+      "url": "https://www.intersect.com/news/intersect-power-secures-2-6-billion-in-project-financing-to-build-out-near-term-portfolio-including-2-2-gwdc-of-late-stage-solar-with-1-4-gwh-of-storage-projects-will-be-in-operation-by-2023",
+      "date": "2021-11-18"
+    },
+    {
+      "label": "Intersect release (PR Newswire) — over USD 600 million of corporate capital (CAI, Trilantic; Generate, CarVal)",
+      "url": "https://www.prnewswire.com/news-releases/intersect-power-secures-over-600-million-of-corporate-capital-to-accelerate-growth-of-leading-clean-infrastructure-company-301214545.html",
+      "date": "2021-01-26"
+    },
+    {
+      "label": "Intersect release (PR Newswire) — 1.7 GW portfolio of shovel-ready US solar projects",
+      "url": "https://www.prnewswire.com/news-releases/intersect-power-announces-1-7-gw-portfolio-of-shovel-ready-us-solar-projects-300923924.html",
+      "date": "2019-09-24"
+    },
+    {
+      "label": "Greenbelt Capital Partners — Intersect portfolio page (investment timeline; USD 879 million round split)",
+      "url": "https://www.greenbeltcapital.com/portfolio-intersect-v2.html"
+    },
+    {
+      "label": "IPX Power — About (executive team from Intersect)",
+      "url": "https://ipxpower.com/about/"
+    },
+    {
+      "label": "New Project Media — Intersect Power pursuing 840 MW data-center conversion at former hydrogen project",
+      "url": "https://newprojectmedia.com/origination-intersect-power-pursuing-840-mw-data-center-conversion-at-former-green-hydrogen-project-in-tx-panhandle/"
+    },
+    {
+      "label": "PUCT Interchange — Project 55999 filings search ('Intersect': none)",
+      "url": "https://interchange.puc.texas.gov/search/filings/?UtilityType=A&ControlNumber=55999&ItemMatch=Equal&SearchText=Intersect"
+    },
+    {
+      "label": "Google — data center locations",
+      "url": "https://datacenters.google/locations/"
+    },
+    {
+      "label": "Google — data center locations: Texas",
+      "url": "https://datacenters.google/locations/texas/"
+    },
+    {
+      "label": "Cleanview — Intersect Power developer page (planned projects dataset)",
+      "url": "https://cleanview.co/power-projects/developers/intersect-power"
+    },
+    {
+      "label": "Intersect — home page",
+      "url": "https://intersect.com/"
+    },
+    {
+      "label": "Intersect — About (executive leadership and department heads)",
+      "url": "https://www.intersect.com/about"
+    },
+    {
+      "label": "Intersect — Solutions ('acquired by Google in March 2026; IPX Power assumed ownership of solar and storage assets')",
+      "url": "https://www.intersect.com/solutions"
+    },
+    {
+      "label": "Intersect — Community engagement (three co-located sites)",
+      "url": "https://www.intersect.com/community-engagement"
+    },
+    {
+      "label": "Intersect — Careers",
+      "url": "https://www.intersect.com/careers"
+    },
+    {
+      "label": "Intersect — News index",
+      "url": "https://www.intersect.com/news/"
+    },
+    {
+      "label": "Intersect — Quantum Clean Energy Project (portfolio page)",
+      "url": "https://www.intersect.com/portfolio/quantum"
+    },
+    {
+      "label": "Intersect — Meitner Energy Center (portfolio page)",
+      "url": "https://www.intersect.com/portfolio/meitner"
+    },
+    {
+      "label": "Intersect — Roman Clean Energy Project (portfolio page)",
+      "url": "https://www.intersect.com/portfolio/roman"
+    },
+    {
+      "label": "Intersect — Sheldon Kimber (team page)",
+      "url": "https://www.intersect.com/team/sheldon-kimber"
+    },
+    {
+      "label": "Intersect — Simon Ross (team page)",
+      "url": "https://www.intersect.com/team/simon-ross"
+    },
+    {
+      "label": "Intersect — Katrina Rymill (team page)",
+      "url": "https://www.intersect.com/team/katrina-rymill"
+    },
+    {
+      "label": "Intersect — Nick Spicer (team page)",
+      "url": "https://www.intersect.com/team/nick-spicer"
+    },
+    {
+      "label": "Intersect — Rob Hanson (team page)",
+      "url": "https://www.intersect.com/team/rob-hanson"
+    },
+    {
+      "label": "Intersect — Jonathan Bain (team page)",
+      "url": "https://www.intersect.com/team/jonathan-bain"
+    },
+    {
+      "label": "Intersect — Rosemary Antonopoulos (team page)",
+      "url": "https://www.intersect.com/team/rosemary-antonopoulos"
+    },
+    {
+      "label": "Intersect — John K. Martinez (stale team page; now IPX Power COO)",
+      "url": "https://www.intersect.com/team/john-k-martinez"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

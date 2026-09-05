@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 2,
+  "slug": "spearmint-energy",
+  "title": "Spearmint Energy — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [],
+  "sections": [
+    {
+      "id": "start-here-the-merchant-developer",
+      "title": "Start here: the merchant developer",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "Spearmint owns 350 MW of batteries in Texas and is building 300 MW more, and no source names a single customer. That is not a gap in the record; it is the business. This guide teaches the {{merchant}} developer as a model: the choice between selling projects and keeping them, the ladder of development stages and what each rung is worth to a buyer, how a battery with no contract is financed to construction and beyond, the market in which unbuilt projects change hands, and where the model breaks.",
+        "**What it deliberately does not repeat:** the hour-by-hour revenue of an ERCOT battery — {{ancillary services}} stacking, {{energy arbitrage}} mechanics and the duration-and-degradation arithmetic belong to the Classroom and to the storage-owner material this corpus already holds. The Aypa guide teaches the contracted platform from the buyer's chair; this guide is its mirror.",
+        "**One idea carries the guide.** With no offtaker, the lender is lending against three things the developer controls — the tax credit, the trading desk and the option to sell the project — and the whole capital stack is built to make those three bankable."
+      ]
+    },
+    {
+      "id": "sell-the-project-or-keep-it",
+      "title": "Sell the project or keep it",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A developer that has climbed a project to the top of the {{development stage ladder}} faces one decision: sell it to an owner, or become the owner.",
+        "**{{develop-to-sell}}.** Carry the project through land, queue, permits and contract, then sell it {{ready-to-build}} to an IPP or fund that finances and builds. Capital comes back in two or three years and goes into the next project; the developer never needs a construction loan, an operations team or a twenty-year view of prices. The price it gets depends entirely on which rung the project has reached — which is the next section.",
+        "**{{develop-to-own}}.** Keep the project, finance the construction, and earn the operating cash flow for decades. It needs long-term capital, a construction and operations function, and — for a merchant owner — a trading desk. The reward is the whole life of the asset and the option to sell it later, operating, at a higher multiple.",
+        "Spearmint's record shows which it chose. Every boilerplate since 2024 reads 'developing, owning, operating, and optimizing'; the only sale in four years is a partial post-COD stake in two operating batteries to a Japanese utility. It buys from develop-to-sell developers — Revolution from Con Edison Development, the 900 MW 'Nomadic' portfolio from an unnamed 'major developer', two Indiana projects from BW Solar — and holds what it builds. The brief that commissioned this guide supposed the opposite; the record corrects it.",
+        "Why hold, with no contract? Because the founder's thesis is the price itself: Spearmint develops 'in locations where we can solve the biggest weaknesses of energy — intermittency and the price volatility it creates', where 'utilities, load-serving entities, and developers … are not as focused on deploying critical infrastructure'. Selling the project would sell the volatility with it."
+      ]
+    },
+    {
+      "id": "what-each-rung-is-worth",
+      "title": "What each rung is worth: the development ladder as a price list",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "The {{pre-COD M&A}} market prices a project by the risks it has retired. The table walks the rungs, names the risk each one retires, and shows what Spearmint bought or built at that stage. Prices are described in words because no source states one for any Spearmint transaction.",
+      "cols": [
+        "Rung",
+        "Risk retired",
+        "Who typically sells here",
+        "Spearmint's record"
+      ],
+      "rows": [
+        [
+          "**Idea and {{site control}}**",
+          "Having nowhere to build",
+          "Landowner-facing originators",
+          "Silverfield (Kansas): 25 acres leased, presented to the county in 2025"
+        ],
+        [
+          "**{{queue position}} filed**",
+          "Never connecting",
+          "Early-stage developers who cannot fund studies",
+          "Green Eagle and Pumpkinvine bought from BW Solar 'early-stage' in December 2023; Pumpkinvine holds MISO queue J2766"
+        ],
+        [
+          "**Studies complete, {{interconnection agreement}} signed**",
+          "Upgrade-cost surprises",
+          "Developers without construction capital",
+          "Tierra Seca's ERCOT queue entry dates from August 2021; the sites had earlier belonged to another developer pair"
+        ],
+        [
+          "**Permitted**",
+          "The county saying no",
+          "Developers who want out before construction",
+          "Snowshoe and Midwater: Minnesota's first standalone-battery site permits (2025, 2026)"
+        ],
+        [
+          "**Contracted (or, for a merchant, hedged)**",
+          "Price risk",
+          "Contracted developers selling to funds",
+          "Spearmint skips this rung — no offtaker or hedge is named for any project"
+        ],
+        [
+          "**{{ready-to-build}} / {{notice to proceed}}**",
+          "Being a drawing",
+          "The classic develop-to-sell exit",
+          "Revolution bought as a 150 MW development project (July 2022), groundbreaking five months later"
+        ],
+        [
+          "**Under construction**",
+          "Cost and schedule",
+          "Rare — buyers dislike half-built assets",
+          "Red Egret: construction began at the May 2026 financing close"
+        ],
+        [
+          "**{{commercial operation date}}**",
+          "Everything above",
+          "Owners recycling equity",
+          "Kyuden International bought an undisclosed stake in Tierra Seca and Seven Flags a month after COD"
+        ]
+      ]
+    },
+    {
+      "id": "financing-a-battery-with-no-ppa",
+      "title": "Financing a battery with no PPA",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "A lender to a contracted battery lends against the contract. A lender to a merchant battery has to find something else, and Spearmint's four financings show the whole toolkit in order.",
+        "**The tax credit first.** Revolution's first outside money was USD 92 million of {{tax equity}} from Greenprint Capital — described at the time as one of the first uses of the standalone-storage credit. The credit is worth roughly a third of the project's cost and does not depend on power prices, so it is the one thing a merchant project can sell with certainty. Tierra Seca and Seven Flags carried USD 98 million of tax-equity commitments; Red Egret sells its credit outright through {{tax credit transferability}} for about USD 126 million.",
+        "**The platform loan above the projects.** A USD 200 million term loan from Aiga Capital Partners in June 2023, joined by Nuveen's energy-infrastructure credit arm and Elda River, and expanded to USD 325 million with Harrison Street in June 2026. This is private credit lending to the company, not to a project — secured on the whole pipeline and priced on the team and the trading desk. It is the merchant developer's substitute for a {{financial sponsor}}.",
+        "**Construction debt sized to the exit, not the revenue.** Tierra Seca and Seven Flags took a USD 59 million {{construction-to-term loan}} from Manulife and USD 95 million of {{tax-equity bridge loan}}s from East West Bank and Investec — the bridge being repaid by the tax equity at COD. Red Egret's USD 225 million construction facility 'will be repaid when commercial operations commence' by USD 96 million of Nuveen {{preferred equity}} and the credit-transfer proceeds. No term loan is named: the construction lenders are paid out at COD and the long-term capital is preferred equity plus the credit.",
+        "**What is missing, and why it matters.** No {{revenue put}}, no {{hedge}}, no toll. The Minnesota applications say the projects will sell 'on a merchant basis' through a tolling agreement with 'its affiliated merchant energy business' — the company tolling to itself. Waranch himself said merchant-only projects appeal to 'approximately 20%' of available investors. The stack above is what those 20 per cent will fund.",
+        "**The equity recycle.** Kyuden's post-COD investment in the two Del Rio and Laredo batteries is how a merchant owner gets equity back without selling the platform: sell part of an operating asset to an investor who wants exposure, keep control and the desk."
+      ]
+    },
+    {
+      "id": "the-pre-cod-market",
+      "title": "The pre-COD project market: who buys what from whom",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "Unbuilt projects change hands constantly, and the direction of trade tells you each company's model. Every row is a transaction in this corpus's record, read as a rung on the ladder.",
+      "cols": [
+        "Seller → buyer",
+        "Stage at sale",
+        "What changed hands",
+        "What it shows"
+      ],
+      "rows": [
+        [
+          "Con Edison Development → Spearmint (2022)",
+          "Development-stage, 150 MW",
+          "Revolution, with its LCRA-territory site next to a wind farm",
+          "A utility affiliate exiting a merchant Texas battery to a specialist"
+        ],
+        [
+          "Unnamed 'major developer' → Spearmint (2023)",
+          "Development-stage, 900 MW / 2,000 MWh",
+          "Three 300 MW ERCOT projects (Cooke, Galveston, Brazoria)",
+          "Portfolio-scale pre-COD trade; the seller stayed anonymous"
+        ],
+        [
+          "BW Solar → Spearmint (2023)",
+          "'Early-stage', 525 MW",
+          "Two Indiana MISO queue positions",
+          "A solar developer selling storage it will not build"
+        ],
+        [
+          "Eolian → Aypa (2023, 2024)",
+          "Permitted; then late-stage and contracted",
+          "Williams and Fletcher; Pediment after a joint utility bid",
+          "A developer-IPP feeding a contracted platform's conversion ladder"
+        ],
+        [
+          "Spearmint → Kyuden International (2026)",
+          "Operating (one month after COD)",
+          "An undisclosed stake in Tierra Seca and Seven Flags",
+          "Post-COD equity recycling by a merchant owner"
+        ],
+        [
+          "Intersect → IPX Power (2026)",
+          "Operating and under construction, 4.4 GW / 8.8 GWh",
+          "The whole grid-tied fleet, carved out at the Google sale",
+          "A {{carve-out}} that separated a merchant fleet from a captive developer"
+        ],
+        [
+          "Blackstone → Brookfield (signed 2026)",
+          "Operating, contracted and pipeline",
+          "The Aypa platform, about USD 7 billion enterprise value",
+          "A {{platform sale}} — the top of the ladder for a developer, not a project"
+        ]
+      ]
+    },
+    {
+      "id": "the-desk-is-the-collateral",
+      "title": "The desk is the collateral",
+      "kind": "prose",
+      "read": "5 min",
+      "ps": [
+        "A merchant owner without a trading desk is a price-taker with no opinion. Spearmint's whole structure exists to have one.",
+        "**The people.** The founder spent nearly thirty years in power research and portfolio management (Elustria, Elliott Associates, Deutsche Bank, Merrill Lynch, Constellation); the chairman founded an FTR-and-congestion trading firm that a lender says controls the company; another director founded and ran EDF Trading for 21 years; the Head of Optimization ran client energy derivatives at Koch Supply & Trading. The company was launched as three strategies — development, storage offtake and power trading — and PFI called it a 'green merchant energy trading company'.",
+        "**The function.** The company's own trader job posting describes it: 'dispatching Spearmint's battery storage assets … execute energy and ancillary service offers in day-ahead and real-time markets, utilizing Spearmint's internal software and associated forecasting tools … around-the-clock physical dispatch', with 'familiarity with futures and other hedging markets' preferred. That is {{in-house optimisation}}: the owner keeps the margin an outside optimiser would take, and carries the consequence of being wrong.",
+        "**Why lenders care.** Nuveen's infrastructure-credit arm, Elda River and Harrison Street are lending to a company whose revenue is whatever the desk earns. The platform loan is priced on the desk's credibility, the tax credits and the option to sell projects — the three things this guide opened with — because the fourth thing, a contract, does not exist.",
+        "**What the desk has not been shown to do.** The 2022 thesis was to toll other developers' batteries and provide 'creditworthy, long-term offtake solutions'. No third-party customer, no FERC market-based-rate record and no ERCOT QSE registration appear in the sources read; the only tolling language is a project company tolling to 'its affiliated merchant energy business'. The desk trades the fleet; whether it ever trades anyone else's is an open question."
+      ]
+    },
+    {
+      "id": "revenue-when-the-market-turns",
+      "title": "What the fleet earned when the market turned",
+      "kind": "bars",
+      "read": "3 min",
+      "unit": "ERCOT average battery revenue, USD per kW per year (Modo Energy for 2023–2025; 2025 is Modo's full-year forecast from November data)",
+      "intro": "Spearmint's two newest batteries reached commercial operation in December 2025. Read the bars as the market they entered — not Spearmint's own revenue, which is unpublished.",
+      "items": [
+        {
+          "label": "2023",
+          "sub": "ancillary-service prices at their peak; Revolution under construction",
+          "v": 193
+        },
+        {
+          "label": "2024",
+          "sub": "Revolution's first full year",
+          "v": 56
+        },
+        {
+          "label": "2025 (forecast)",
+          "sub": "about 9 GW added in two years; ancillary revenue down about 90% (Enverus); Tierra Seca and Seven Flags come online",
+          "v": 29
+        }
+      ]
+    },
+    {
+      "id": "merchant-or-contracted-the-developers-chair",
+      "title": "Merchant or contracted: the view from the developer's chair",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "The Aypa guide reads this choice from an infrastructure fund's seat. These cards read it from the developer's, using Spearmint's and Aypa's own words.",
+      "cards": [
+        {
+          "t": "Merchant owner (Spearmint)",
+          "meta": "Owner holds dispatch; capital is credit, tax equity and preferred equity",
+          "adv": [
+            "Every volatile hour accrues to the owner — the thesis is 'intermittency and the price volatility it creates'",
+            "No twenty-year availability promise, no utility RFP cycle",
+            "Faster to build where 'utilities … are not as focused'"
+          ],
+          "dis": [
+            "Only 'approximately 20%' of investors will fund merchant-only projects (Waranch)",
+            "Debt is sized to the credit and the exit, not to revenue — and revenue fell about 84% from 2023 to 2025",
+            "A saturated market does not care how good the desk is"
+          ]
+        },
+        {
+          "t": "Contracted owner (Aypa)",
+          "meta": "Utility holds dispatch; capital is bank debt sized on the fee",
+          "adv": [
+            "A 95%-contracted book carries about USD 4 billion of debt and sells at USD 7 billion",
+            "Investment-grade counterparties; 17-year average remaining life",
+            "A buyer can price it without a view on prices"
+          ],
+          "dis": [
+            "The upside belongs to the counterparty",
+            "Contract dates can outrun queue dates",
+            "Availability for twenty years is the owner's promise to keep"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The market saturates.** ERCOT battery revenue fell from about USD 193 per kW in 2023 to about USD 29 in 2025 as roughly 9 GW arrived; ancillary-service revenue fell about 90 per cent. A merchant fleet that reached scale in December 2025 met that market on day one. No desk out-trades a flat price curve.",
+        "**The credit is the collateral, and the credit has rules.** All four ERCOT batteries are Sungrow; both Minnesota designs are Tesla. Under FEOC rules the credit that tax equity and the transfer are buying can be lost by the wrong supplier, and the founder's own word for FEOC is 'unquestionably a big issue'. The supplier search began in May 2024; no non-Chinese order has been announced.",
+        "**The county says no.** Pumpkinvine (up to 400 MW) was refused unanimously in Kokomo after a thousand-signature petition; Red Egret was approved only after a rework; Minnesota's permits came with insurance, decommissioning and fire conditions. A {{conditional use permit}} is the rung that neither the credit nor the desk can buy.",
+        "**The pipeline is inventory, not assets.** 'Over 15 GWh' became 'projects under development throughout the United States' between one release and the next. The identifiable pieces are 1.3 GWh built or building, 1.2 GWh permitted, and early-stage positions in three more states; the rest is options.",
+        "**No sponsor, no backstop.** The platform loan substitutes for sponsor equity, and a lender that must be repaid has less patience than an owner. Headcount in the boilerplate fell from 'over 70' to 'over 50' in six months, and no CFO is listed.",
+        "**The construction loan must be taken out.** Red Egret's USD 225 million is repaid at COD by preferred equity and a credit sale. If COD slips, or the credit buyer's terms change, the bridge has nowhere to land."
+      ]
+    },
+    {
+      "id": "where-spearmint-slots-in",
+      "title": "Where Spearmint slots into the buyer side",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The three developer-IPPs added to this corpus together, and the two peers Modo Energy ranks in the same market.",
+      "cols": [
+        "Company",
+        "Model",
+        "Capital",
+        "Dispatch",
+        "Fails when"
+      ],
+      "rows": [
+        [
+          "**Spearmint Energy**",
+          "{{develop-to-own}}, {{merchant}}, ERCOT plus MISO permits",
+          "Private-credit platform loan; tax equity and credit transfer; preferred equity; no sponsor",
+          "Own desk",
+          "Prices saturate; FEOC; permits"
+        ],
+        [
+          "**Aypa Power**",
+          "{{develop-to-own}}, contracted, 95%",
+          "Corporate facility, warehouse, project loans; Blackstone → Brookfield",
+          "Utilities and CCAs",
+          "Permits; queue dates; single vendor"
+        ],
+        [
+          "**Intersect**",
+          "{{captive developer}} for Google",
+          "Parent balance sheet after the March 2026 sale",
+          "The parent's load",
+          "SB 6 and county conditions"
+        ],
+        [
+          "**Jupiter Power / Intersect's former fleet (IPX)**",
+          "ERCOT merchant fleets ranked by Modo",
+          "Sponsor-backed (Jupiter); carved-out fleet with USD 4.95 billion Darden debt (IPX)",
+          "Own desks; Tesla Autobidder",
+          "The same market Spearmint faces"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What are the three things a lender to a merchant battery can lend against when there is no contract?",
+          "a": "The tax credit (which does not depend on prices), the owner's trading desk, and the option to sell the project — Spearmint's stack is built to make each bankable."
+        },
+        {
+          "q": "Contrast develop-to-sell with develop-to-own in one sentence each.",
+          "a": "Develop-to-sell carries a project to ready-to-build and sells it to an owner, recycling capital in a few years; develop-to-own finances construction and keeps the operating cash flow, needing long-term capital and an operations or trading function."
+        },
+        {
+          "q": "Which rung of the ladder is the classic develop-to-sell exit, and why?",
+          "a": "Ready-to-build: land, permits, interconnection and (if any) offtake are in hand, so the buyer takes construction risk and little else — the highest price before the developer must fund the build."
+        },
+        {
+          "q": "How was Red Egret's USD 225 million construction loan designed to be repaid?",
+          "a": "At commercial operation, by USD 96 million of preferred equity from Nuveen and about USD 126 million of tax-credit transfer proceeds — no term loan named."
+        },
+        {
+          "q": "What is a tax-equity bridge loan?",
+          "a": "Short debt that advances the money a tax-equity investor or credit buyer will pay at COD so construction can proceed; it is repaid when those proceeds arrive."
+        },
+        {
+          "q": "Why does the Kyuden transaction matter to the model?",
+          "a": "It shows how a merchant owner recycles equity without selling the platform: sell part of an operating asset to an investor who wants exposure, keep control and the desk."
+        },
+        {
+          "q": "What did the Minnesota applications say about who would toll the batteries?",
+          "a": "The project would sell on a merchant basis through a tolling agreement with 'its affiliated merchant energy business or similar third-party market participant' — the company tolling to itself."
+        },
+        {
+          "q": "What happened to ERCOT battery revenue between 2023 and 2025, and why?",
+          "a": "It fell from about USD 193 per kW to about USD 29 as roughly 9 GW of new batteries saturated ancillary-service markets; ancillary revenue fell about 90 per cent."
+        },
+        {
+          "q": "Name the two policy exposures a single-supplier Sungrow fleet carries.",
+          "a": "FEOC rules on tax-credit eligibility and tariffs on Chinese-headquartered equipment — the credit being the collateral makes the first the sharper one."
+        },
+        {
+          "q": "What does 'in-house optimisation' mean for who keeps the margin?",
+          "a": "The owner runs bidding and dispatch with its own traders and software, keeping the margin an outside optimiser or toller would take and carrying the risk of being wrong."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A developer's boilerplate says 'developing, owning, operating, and optimizing' and its only sale in four years is a minority stake in two operating batteries. Which model is it?",
+          "c": [
+            "Develop-to-sell",
+            "Develop-to-own",
+            "Captive developer",
+            "Contracted platform"
+          ],
+          "a": 1,
+          "why": "It keeps what it builds; the partial post-COD stake sale is equity recycling, not a project exit."
+        },
+        {
+          "q": "Which rung of the development ladder does a merchant developer skip?",
+          "c": [
+            "Site control",
+            "Queue position",
+            "Offtake or hedge",
+            "Notice to proceed"
+          ],
+          "a": 2,
+          "why": "No offtaker, hedge or revenue put is named for any Spearmint project; the owner keeps price risk."
+        },
+        {
+          "q": "Why is the tax credit the first thing a merchant battery sells?",
+          "c": [
+            "It is the largest single cash item and does not depend on power prices",
+            "It is required by ERCOT",
+            "It replaces the construction loan",
+            "It is the only asset the county allows"
+          ],
+          "a": 0,
+          "why": "Roughly a third of project cost, certain regardless of prices, and monetisable by tax equity or transfer."
+        },
+        {
+          "q": "A platform loan from private-credit funds at the company level substitutes for what?",
+          "c": [
+            "An EPC contract",
+            "Sponsor equity",
+            "A utility toll",
+            "A queue position"
+          ],
+          "a": 1,
+          "why": "Spearmint has announced no corporate equity round; Aiga, Nuveen, Elda River and Harrison Street lend against the pipeline and the desk."
+        },
+        {
+          "q": "What must happen at Red Egret's COD for its construction lenders to be repaid?",
+          "c": [
+            "A utility signs a toll",
+            "Preferred equity and the credit-transfer proceeds arrive",
+            "The county renews the abatement",
+            "ERCOT raises the price cap"
+          ],
+          "a": 1,
+          "why": "The USD 225 million facility 'will be repaid when commercial operations commence' by USD 96 million of preferred equity and about USD 126 million from the credit sale."
+        },
+        {
+          "q": "Which statement about ERCOT battery revenue 2023–2025 is supported by the sources?",
+          "c": [
+            "It rose as more batteries were built",
+            "It fell by roughly 84 per cent as the market saturated",
+            "It was flat",
+            "It is unknown"
+          ],
+          "a": 1,
+          "why": "Modo: about USD 193 per kW (2023) to about USD 29 (2025 forecast); Enverus: ancillary revenue down about 90 per cent."
+        },
+        {
+          "q": "What is the pre-COD M&A market?",
+          "c": [
+            "Trading of operating plants only",
+            "The sale of projects between developers and owners before commercial operation, priced by stage",
+            "A futures market for batteries",
+            "County auctions of land"
+          ],
+          "a": 1,
+          "why": "Revolution, Nomadic, Green Eagle and Pumpkinvine all changed hands there."
+        },
+        {
+          "q": "Which is the rung that 'neither the credit nor the desk can buy'?",
+          "c": [
+            "The interconnection study",
+            "The local permit",
+            "The EPC contract",
+            "The tax-equity flip"
+          ],
+          "a": 1,
+          "why": "Kokomo's unanimous denial of Pumpkinvine is the example; it is decided at a public hearing."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 2,
+  "slug": "intersect-power",
+  "title": "Intersect — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [],
+  "sections": [
+    {
+      "id": "start-here-the-park-behind-one-fence",
+      "title": "Start here: the park behind one fence",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "In March 2026 Google paid about USD 5.9 billion for a developer instead of signing power purchase agreements with it. This guide teaches why: the co-located {{energy park}} — generation, storage and a data centre behind one grid connection — what the {{surplus interconnection service}} and {{behind-the-meter}} structures buy and what they forbid, how such a park is contracted and financed, why a hyperscaler would rather own the developer, and where the model fails.",
+        "**What it deliberately does not repeat:** the Crusoe guide teaches energy-first siting and running an islanded gigawatt campus; the xAI guide teaches owning versus renting a data centre and building one in months; the Google guide teaches hourly matching and TPUs. This guide is about the interconnection — what happens at the fence line between a campus and the grid, and who is allowed to build there.",
+        "**One idea carries the guide.** A grid connection is the scarce asset. An energy park is a way to make one connection serve three things at once — a solar plant, a battery and a load — and every rule that governs it is a rule about who may use the connection and when."
+      ]
+    },
+    {
+      "id": "three-assets-one-interconnection",
+      "title": "Three assets, one interconnection",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A conventional data centre asks a utility for 500 MW and waits — in Texas the large-load queue quadrupled in a year to more than 230 GW. A conventional solar plant asks the same grid for 500 MW of export and waits in the generation queue. An energy park files once and puts both behind the same point of connection.",
+        "**The generation** — at Quantum, 640 MW of solar; at Meitner, 'more than a gigawatt of wind, solar, and battery storage'. It is sized to the load, not to the grid: the founder's rule is that cheap solar and wind cover 'roughly 60–70% of the hours of the year' at a well-chosen site.",
+        "**The storage** — 1.3 GWh at Quantum. Its job inside a park is different from a grid battery's: it shifts the site's own midday solar into evening load and smooths the ramps, rather than chasing the hourly market price. A battery that serves a load behind the fence earns its keep in avoided grid purchases.",
+        "**The load** — the Google data centre. At Meitner the county record gives 840 MW of behind-the-meter load in three phases; at Quantum no figure is published. The load is what makes the park financeable: it is a customer whose bill is certain, standing where the generation is.",
+        "**The connection** — one point of interconnection, with the grid used for what the site cannot cover and for export 'when the system needs power'. The Gray County presentation put it plainly: 'most of the power produced by the project will be used onsite, reducing reliance on the transmission grid'. The {{firming}} — Meitner's on-site gas for 'a minority share of the site's demand' — is what closes the hours the renewables and the battery cannot.",
+        "The developer's product is the whole package. Intersect's own words: 'the foundation of the AI infrastructure stack — the land, steel, and power'. Greenbelt described the Quantum deal as 'a 20-year off-take and powered-land lease' — {{powered land}} being the name the market gives a site whose electricity is already secured."
+      ]
+    },
+    {
+      "id": "what-the-structures-buy-and-forbid",
+      "title": "What the structures buy, and what they forbid",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "Three legal structures let a park share one connection. Each buys speed in one direction and gives up something in another. The rows are the structures; the last column is what the record shows Intersect using.",
+      "cols": [
+        "Structure",
+        "What it buys",
+        "What it forbids or costs",
+        "In Intersect's record"
+      ],
+      "rows": [
+        [
+          "**{{surplus interconnection service}}**",
+          "Lets a new resource — usually a battery — use the unused part of an existing generator's grid connection without re-queuing",
+          "Only the surplus: the battery cannot export beyond the original generator's limit, and the rule is federal (FERC) — it does not apply inside ERCOT",
+          "No FERC surplus request naming Intersect was found; its Texas parks are outside FERC's interconnection jurisdiction"
+        ],
+        [
+          "**{{behind-the-meter}} load ({{private use network}})**",
+          "The load consumes the site's own power before the grid meters it; one large-load request instead of two queues",
+          "The site owes the grid nothing for what it self-supplies but must register the arrangement and accept the grid operator's rules for what crosses the meter",
+          "Meitner: 840 MW of behind-the-meter load per filings read by New Project Media, with amended interconnection agreements with Cross Texas Transmission"
+        ],
+        [
+          "**{{co-location net metering}} under Texas SB 6**",
+          "Regulator-approved netting of generation against load at one site for loads of 75 MW or more",
+          "A 60-day PUCT review, curtailment during firm load shed, on-site shutoff equipment, a USD 100,000 minimum fee; the ownership-date exemption falls on 1 January 2025 — before Google owned Intersect",
+          "No PUCT filing naming Intersect; the first test case is a Crusoe–Google campus"
+        ],
+        [
+          "**Islanded campus**",
+          "No grid at all — no queue, no curtailment order",
+          "No backup from the grid; every hour must be self-supplied",
+          "Not Intersect's model: the parks keep a grid connection for the hours the site cannot cover"
+        ]
+      ]
+    },
+    {
+      "id": "why-buy-the-developer",
+      "title": "Why a hyperscaler bought the developer instead of signing PPAs",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "Google has signed more than 6 GW of power purchase agreements in Texas alone. It could have signed three more with Intersect. It paid USD 4.75 billion plus debt instead. Four reasons are in the record.",
+        "**Time.** Alphabet's own explanation: Intersect will help it 'operate more nimbly in building new power generation in lockstep with new data center load', and its June 2026 investor presentation says the purchase 'will help us come to market even faster'. A PPA buys power from a project someone else must still develop; owning the developer puts the queue positions, land and permits on the buyer's own critical path.",
+        "**Control of the site.** A park is designed around one tenant's load profile, cooling and phasing. A tenant under a lease negotiates each change; a parent decides it. Gray County's abatement conditions — air cooling, water limits — were negotiated by Intersect for a tenant it 'could not share … just yet'; after closing the tenant and the developer are the same group.",
+        "**The pipeline, not the project.** Alphabet bought 'multiple gigawatts of energy and data center projects currently in development or under construction' — Quantum, Meitner, Roman and whatever the 54 planned projects in the datasets become. Reuters' figure was 10.8 GW by 2028. A PPA is one project; a {{captive developer}} is every future one.",
+        "**Price certainty on the buy side.** Under a PPA the developer's margin and its investors' return are inside the price. Owning the developer removes the middle: the parent funds construction from its balance sheet and pays itself. The {{purchase price allocation}} shows what that middle was worth — USD 2.2 billion of {{goodwill}} on a USD 5.9 billion price, the accountants' name for the team and the future business.",
+        "And one reason it could do it: the fleet was separable. The operating solar and batteries, with their hedges, CCA contracts and Fortune-100 REC buyers, were carved out to IPX Power with the sponsors and the CFO, COO and CCO. Google bought the part that builds parks and left the part that runs a merchant fleet — a {{carve-out}} that let each side keep the business it wanted."
+      ]
+    },
+    {
+      "id": "how-the-park-is-contracted",
+      "title": "How the park is contracted",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "Before the sale, an energy park had a developer, an anchor tenant and investors, and each pair needed a contract. After the sale most of those contracts collapse into one company. The rows are the seats; the columns show the before and the after as the record states them.",
+      "cols": [
+        "Seat",
+        "Before March 2026 (the December 2024 partnership)",
+        "After March 2026 (Google ownership)",
+        "What the record says"
+      ],
+      "rows": [
+        [
+          "**Developer**",
+          "Intersect Power, owned by TPG Rise Climate, CAI, Greenbelt and a Google minority stake",
+          "Intersect, a Google subsidiary 'under the Intersect brand', a consolidated {{variable interest entity}}",
+          "Alphabet 10-Q: consolidated at USD 5.9 billion; Kimber stays CEO"
+        ],
+        [
+          "**Tenant / customer**",
+          "Google as {{anchor tenant}} under a 20-year offtake and {{powered land}} lease (Greenbelt's description of Quantum)",
+          "The parent's own load — no lease needed between affiliates",
+          "No data-centre MW published for any park"
+        ],
+        [
+          "**Generation and storage owner**",
+          "Intersect project companies, financed with project debt and tax equity",
+          "Intersect, funded by the parent; no Google-era project financing found",
+          "Quantum operating June 2026; Meitner under construction"
+        ],
+        [
+          "**Grid**",
+          "One point of interconnection; export 'when the system needs power'",
+          "Same; governed by Texas SB 6 for loads of 75 MW or more",
+          "Cross Texas Transmission agreements at Meitner (New Project Media)"
+        ],
+        [
+          "**County**",
+          "{{Chapter 312 abatement}} negotiated by Intersect for a tenant it could not name",
+          "Abatement conditions bind the same group: air cooling or the taxes come back",
+          "Gray County, 15 October 2025"
+        ],
+        [
+          "**The old fleet**",
+          "Athos, Radian, Oberon, Lumina and the Texas batteries, contracted to CCAs, Microsoft, Constellation and a hedge",
+          "Carved out to IPX Power with the sponsors and the CFO, COO and CCO",
+          "TPG: USD 12 billion combined enterprise value"
+        ]
+      ]
+    },
+    {
+      "id": "how-the-park-is-financed",
+      "title": "How the park is financed: three eras of one company",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "**Era one — the sold pipeline (2016–2019).** Intersect developed 1.7 GWdc of solar and sold it to owners before construction: the {{develop-to-sell}} model, with First Solar modules and a Signal Energy EPC agreed before the sale so the buyer took a finished package.",
+        "**Era two — the owned fleet (2021–2024).** Three growth rounds (USD 127 million, USD 750 million led by TPG Rise Climate, 'over USD 800 million' led by TPG and Google) and three portfolio financings (USD 2.6 billion, USD 3.075 billion, USD 837 million) built 2.2 GWdc of solar and 2.4 GWh of storage that Intersect kept. The debt was project finance in the classic shape — {{construction-to-term loan}}s from MUFG and Santander, a USD 1.4 billion term loan from HPS Investment Partners, {{tax equity}} from Morgan Stanley, Bank of America, U.S. Bancorp and two Fortune-100 companies — but the revenue side was unusual: a bank {{hedge}} at Radian, CCA and corporate offtake at Oberon, RECs at Lumina, and merchant batteries on Tesla's Autobidder. Kimber's line was that 'long-term offtake contracts actually destroy value'.",
+        "**Era three — the parent's balance sheet (2026–).** After the sale no lender is needed: Alphabet's 10-Q shows USD 1.2 billion of assumed debt and no new facility, and Google's capital spending funds Quantum and Meitner directly. The financing question moves from 'who lends to the park?' to 'which Google budget does it sit in?' — and the {{purchase price allocation}} answers it: goodwill allocated to Google Services and Google Cloud.",
+        "What a supplier should take from this: the buyer is now the same entity that will use the power, so the contract that used to carry a developer's margin, a lender's covenants and a tenant's credit is now an internal transfer. The First Solar and Tesla framework orders that pre-date the sale are the one thing still to be split between the two companies, and neither has said how."
+      ]
+    },
+    {
+      "id": "what-google-bought-and-left",
+      "title": "What Google bought and what it left",
+      "kind": "bars",
+      "read": "3 min",
+      "unit": "USD millions — Alphabet's final purchase-price allocation (Q2 2026 10-Q) and the sellers' stated value of what was carved out",
+      "intro": "Read the first four bars as the accountants' split of USD 5,868 million; the last as the value the sellers placed on the fleet that went the other way.",
+      "items": [
+        {
+          "label": "Property and equipment acquired",
+          "sub": "the parks and development assets",
+          "v": 5129
+        },
+        {
+          "label": "Goodwill",
+          "sub": "the team and the future business",
+          "v": 2174
+        },
+        {
+          "label": "Debt assumed",
+          "sub": "reduces the price paid in cash",
+          "v": 1214
+        },
+        {
+          "label": "Cash paid (headline)",
+          "sub": "'USD 4.75 billion in cash plus debt assumption'",
+          "v": 4750
+        },
+        {
+          "label": "IPX Power carve-out (sellers' implied value)",
+          "sub": "USD 12 billion combined EV minus the Google price — 4.4 GW solar, 8.8 GWh storage",
+          "v": 7250
+        }
+      ]
+    },
+    {
+      "id": "grid-tied-or-behind-the-fence",
+      "title": "Grid-tied fleet or behind-the-fence park: two businesses in one company",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "The carve-out separated two businesses that had grown inside one company. The cards read each from the investor's seat, using the record of what went where.",
+      "cards": [
+        {
+          "t": "The grid-tied fleet (now IPX Power)",
+          "meta": "4.4 GW solar, 8.8 GWh storage; hedges, CCAs, merchant batteries",
+          "adv": [
+            "Sells to many buyers — CCAs, corporates, the ERCOT market",
+            "Financeable on its own: USD 4.95 billion for Darden two months after the split",
+            "Owns the Tesla Autobidder batteries that won Energy Risk's deal of the year"
+          ],
+          "dis": [
+            "Exposed to ERCOT's 2025 revenue collapse like every merchant owner",
+            "Needs a sponsor — TPG Rise Climate took majority ownership",
+            "Every project queues on its own"
+          ]
+        },
+        {
+          "t": "The energy-park developer (now Google's)",
+          "meta": "Quantum, Meitner, Roman; one customer",
+          "adv": [
+            "One certain customer whose load is the reason the park exists",
+            "One connection serves generation, storage and load",
+            "Funded by the parent — no lender, no tax-equity closing"
+          ],
+          "dis": [
+            "A {{captive developer}} cannot sell to anyone else",
+            "Every park is an ERCOT large load under SB 6 with curtailment obligations",
+            "County conditions (air cooling, water) bind the parent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The grid operator orders the load off.** Texas SB 6 requires loads of 75 MW or more to accept curtailment during firm load shed and to install shutoff equipment; a park's own generation does not exempt it. The rule was written after the deal was signed, and the ownership-date exemption fell on 1 January 2025 — before Google owned Intersect.",
+        "**The county's conditions bite.** Gray County wrote air cooling into the abatement with back taxes as the penalty, and earlier tied approvals to Ogallala groundwater limits and a wastewater investment. A parent that changes the design owes the county.",
+        "**The hours the renewables cannot cover.** A site 'roughly 60–70% of the hours of the year' on solar and wind needs {{firming}} for the rest; Meitner's answer is on-site gas for 'a minority share'. The supplier, the capacity and the permit for that gas are unpublished, and it is the part of the park that emits.",
+        "**The load never arrives, or arrives late.** Quantum's generation was operating in June 2026 while the data centre was still under construction; Meitner's Phase 1 is 'late 2028'. Generation ahead of load exports at market prices — the merchant exposure the park was designed to avoid.",
+        "**The parent changes its mind.** A captive developer has one customer. Google's data-centre plans move with its AI capital budget, and a park sized for 840 MW of load is a stranded solar farm if the phases stop.",
+        "**Nobody outside can see it.** No data-centre megawatts, no gas capacity, no contract value, no FERC or PUCT filing. A supplier, a utility or a lender analysing the parks works from county minutes and a trade outlet's reading of filings."
+      ]
+    },
+    {
+      "id": "where-intersect-slots-in",
+      "title": "Where Intersect slots into the buyer side",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The three developer-IPPs added to this corpus together, and the campus builders it already held.",
+      "cols": [
+        "Company",
+        "Model",
+        "Customer",
+        "Capital",
+        "Fails when"
+      ],
+      "rows": [
+        [
+          "**Intersect**",
+          "{{captive developer}} of co-located {{energy park}}s",
+          "Google (parent)",
+          "Alphabet balance sheet after March 2026",
+          "SB 6 curtailment; county conditions; load slips"
+        ],
+        [
+          "**Aypa Power**",
+          "Contracted standalone-storage platform",
+          "Utilities, public power, CCAs",
+          "Corporate facility, warehouse, project loans; sponsor sale to Brookfield",
+          "Permits; queue-versus-contract dates"
+        ],
+        [
+          "**Spearmint Energy**",
+          "{{merchant}} storage owner with its own desk",
+          "The ERCOT market",
+          "Private-credit platform loan, tax equity, credit transfer",
+          "Prices saturate; FEOC"
+        ],
+        [
+          "**Crusoe / xAI (existing guides)**",
+          "Energy-first and islanded campuses; owned data centres",
+          "Their own compute or tenants",
+          "See their dossiers",
+          "See their guides"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What three things sit behind one point of interconnection in an energy park?",
+          "a": "Generation (solar and wind), storage, and a large load such as a data centre — so one grid connection serves all three and most power never crosses the public grid."
+        },
+        {
+          "q": "What does surplus interconnection service buy, and where does it not apply?",
+          "a": "It lets a new resource use the unused part of an existing generator's connection without re-queuing; it is a FERC rule and does not apply inside ERCOT."
+        },
+        {
+          "q": "What does Texas SB 6 require of a co-located load of 75 MW or more?",
+          "a": "Curtailment during firm load shed, on-site shutoff equipment, a USD 100,000 minimum interconnection fee and PUCT review of net-metering arrangements."
+        },
+        {
+          "q": "What is 'powered land'?",
+          "a": "A parcel with its grid connection or on-site generation already secured, sold or leased to a customer who brings the building and the load; priced on megawatts, not acres."
+        },
+        {
+          "q": "Give two of the four reasons in the record for buying the developer rather than signing PPAs.",
+          "a": "Time to power ('in lockstep with new data center load'); control of site design and county conditions; the whole pipeline rather than one project; removing the developer's margin and its investors' return from the price."
+        },
+        {
+          "q": "What did the carve-out send to IPX Power?",
+          "a": "The grid-tied fleet — about 4.4 GW of solar and 8.8 GWh of storage in operation or construction, with the sponsors (TPG Rise Climate majority, CAI, Greenbelt) and the former CFO, COO and CCO."
+        },
+        {
+          "q": "What is goodwill in a purchase-price allocation?",
+          "a": "The part of the price above the identifiable assets — paid for the team, relationships and future business; USD 2.2 billion of Alphabet's USD 5.9 billion."
+        },
+        {
+          "q": "What is firming, and what does Meitner use for it?",
+          "a": "A controllable resource that covers the hours renewables and the battery cannot; Meitner uses on-site gas for 'a minority share of the site's demand'."
+        },
+        {
+          "q": "Why does generation that operates before the data centre create merchant exposure?",
+          "a": "Power the load cannot absorb is exported at market prices — exactly the price risk the park was designed to avoid."
+        },
+        {
+          "q": "What does consolidation as a variable interest entity tell you?",
+          "a": "The parent controls the subsidiary and reports its results as its own, whether or not it owns every share."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "Which structure lets a battery use an existing solar plant's unused grid capacity without joining the queue again?",
+          "c": [
+            "Co-location net metering",
+            "Surplus interconnection service",
+            "A private use network",
+            "A Chapter 312 abatement"
+          ],
+          "a": 1,
+          "why": "Surplus interconnection service is the federal rule for that; it does not apply inside ERCOT."
+        },
+        {
+          "q": "A Texas park's data centre draws 840 MW behind the meter. Which rule now governs it?",
+          "c": [
+            "FERC Order 845",
+            "Texas SB 6",
+            "The CPUC's mid-term reliability order",
+            "BLM's DRECP"
+          ],
+          "a": 1,
+          "why": "SB 6 covers ERCOT loads of 75 MW or more that co-locate with generation."
+        },
+        {
+          "q": "Why did the sellers describe the deal as USD 12 billion of enterprise value when Google paid USD 4.75 billion plus debt?",
+          "c": [
+            "Google paid in shares",
+            "The figure includes the grid-tied fleet carved out to IPX Power",
+            "It includes the county abatements",
+            "It is a typo"
+          ],
+          "a": 1,
+          "why": "TPG's 'combined enterprise value' counts both the Google purchase and the IPX spin-out."
+        },
+        {
+          "q": "Which of these is NOT a reason the record gives for buying the developer?",
+          "c": [
+            "Faster time to power",
+            "Control of site design",
+            "Access to a cheaper cell chemistry",
+            "Removing the developer's margin from the price"
+          ],
+          "a": 2,
+          "why": "Nothing in the record ties the deal to battery chemistry; the reasons are time, control, pipeline and price."
+        },
+        {
+          "q": "A park's solar operates in June 2026 but the data centre is still under construction. What is the owner's exposure?",
+          "c": [
+            "None — the solar is idle",
+            "Merchant sales of the surplus at market prices",
+            "A county fine",
+            "Loss of the interconnection"
+          ],
+          "a": 1,
+          "why": "Generation ahead of load exports at market prices, the risk the park was built to avoid."
+        },
+        {
+          "q": "What does a captive developer give up?",
+          "c": [
+            "Its brand",
+            "The ability to sell to anyone but its parent",
+            "Its permits",
+            "Its tax credits"
+          ],
+          "a": 1,
+          "why": "Every named Intersect park has Google as tenant; no third-party customer appears after closing."
+        },
+        {
+          "q": "Which county condition could cost Google back taxes at Meitner?",
+          "c": [
+            "Changing from air cooling to water cooling",
+            "Adding more solar",
+            "Hiring fewer than 3,500 workers",
+            "Exporting power to the grid"
+          ],
+          "a": 0,
+          "why": "Gray County's abatement is conditioned on an air-cooled data centre with a claw-back."
+        },
+        {
+          "q": "In the purchase-price allocation, which line represents the team and the future business?",
+          "c": [
+            "Property and equipment",
+            "Debt assumed",
+            "Goodwill",
+            "Net liabilities"
+          ],
+          "a": 2,
+          "why": "Goodwill is the excess of price over identifiable assets — USD 2,174 million here."
+        }
+      ]
+    }
+  ]
+}

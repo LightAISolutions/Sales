@@ -2161,6 +2161,67 @@
       "srcTotal": 149,
       "srcFirstPct": 56,
       "kpiNorm": false
+    },
+    {
+      "slug": "aypa-power",
+      "name": "Aypa Power",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Blackstone-owned standalone battery-storage platform under a signed, pending sale to Brookfield — about 6.5 GW operating, under construction and contracted, 95% contracted per the buyer",
+      "hq": "Austin, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "aypa.com",
+        "elora.aypa.com",
+        "hedley.aypa.com"
+      ],
+      "srcTotal": 91,
+      "srcFirstPct": 44,
+      "kpiNorm": false
+    },
+    {
+      "slug": "spearmint-energy",
+      "name": "Spearmint Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Founder-led merchant BESS developer-owner — 350 MW / 700 MWh operating in ERCOT plus 300 MW under construction, financed on private credit, tax equity and credit transfer with no named offtaker",
+      "hq": "Miami, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "spearmintenergy.com"
+      ],
+      "srcTotal": 114,
+      "srcFirstPct": 23,
+      "kpiNorm": false
+    },
+    {
+      "slug": "intersect-power",
+      "name": "Intersect",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Google-owned since March 2026 (USD 4.75bn plus debt) — the co-located energy-park developer behind the Quantum and Meitner Texas campuses; its grid-tied fleet was carved out as IPX Power",
+      "hq": "San Francisco, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "intersect.com",
+        "intersectpower.com",
+        "abc.xyz",
+        "blog.google",
+        "datacenters.google",
+        "storage.googleapis.com"
+      ],
+      "srcTotal": 116,
+      "srcFirstPct": 51,
+      "kpiNorm": false
     }
   ]
 }

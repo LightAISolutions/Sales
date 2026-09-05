@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 2,
+  "slug": "aypa-power",
+  "title": "Aypa Power — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [],
+  "sections": [
+    {
+      "id": "start-here-what-a-platform-buyer-pays-for",
+      "title": "Start here: what a buyer of a storage platform is actually paying for",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "Brookfield agreed in July 2026 to pay about USD 7 billion of {{enterprise value}} for Aypa — a company that publishes no revenue, no project list and no leadership page. This guide teaches what that money buys: a book of long-term contracts, a pipeline of {{queue position}}s and land, a financing machine that turns permits into operating batteries, and about 200 people who run it. It then teaches how the machine converts a pipeline into operating capacity, how it is financed layer by layer, how the credits are monetised, how a {{financial sponsor}} gets out, and where the whole structure fails.",
+        "**What it deliberately does not repeat:** how a battery earns money hour by hour — the {{tolling agreement}} revenue model, {{ancillary services}} stacking and the duration-and-degradation arithmetic are taught in the Classroom and in the storage-owner material this corpus already holds. Here the battery is an asset on a balance sheet, and the question is what it is worth to the next owner.",
+        "**One idea carries the guide.** A platform is worth the risks it has already retired. Every rung a project climbs — site, queue, permit, contract, financing, construction, operation — removes one thing that could go wrong, and a buyer pays for the rungs, not the megawatts."
+      ]
+    },
+    {
+      "id": "four-things-inside-the-price",
+      "title": "Four things inside the price",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Take the buyer's own words apart. Brookfield said it would acquire 'Aypa's operating, under-construction and contracted project portfolio, together with its development platform and approximately 200-person team'. That is three of the four things, and the fourth — the bank relationships — is implied by a company that has closed nine financings with the same fifteen lenders.",
+        "**The contracted book.** About 6.5 GW 'operating, under-construction and contracted', '95% contracted under long-term agreements with investment-grade customers for an average remaining contract life of 17 years'. Two numbers matter here more than the gigawatts: {{percent contracted}} tells a lender how much of the cash flow is fixed, and {{average remaining contract life}} tells it for how long. A portfolio that is 95 per cent contracted for 17 years can carry a great deal of debt; the same megawatts sold {{merchant}} could carry a fraction.",
+        "**The pipeline.** '>20 GW development pipeline' — projects at every earlier rung, from a land option to a permitted site waiting for a contract. A pipeline is mostly options: the right to keep spending on a project if the next study or hearing goes well. Its value is the sum of many small probabilities, and it is where a buyer's and seller's models disagree most.",
+        "**The team and the machine.** In-house development, transmission analytics, procurement, construction and operations, per Aypa's own regulatory testimony. A buyer of a {{platform sale}} is paying for the ability to make more projects, not for a fixed set of them — which is why the 200 people are in the sentence.",
+        "**The subtraction.** {{enterprise value}} minus equity value is debt. USD 7 billion minus USD 3 billion leaves about USD 4 billion of project and holding-company borrowing that stays with the assets and passes to the new owner. The seller's cheque is the equity value; the buyer's true cost is the enterprise value."
+      ]
+    },
+    {
+      "id": "the-conversion-ladder",
+      "title": "The conversion ladder: how a pipeline becomes an operating fleet",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "Every project climbs the same {{development stage ladder}}. The table shows what each rung retires, roughly what it costs, and where Aypa's own record shows the rung being climbed. Read it downward: value rises with each row, and so does the money at risk.",
+      "cols": [
+        "Rung",
+        "What it retires",
+        "What it costs",
+        "Aypa's record"
+      ],
+      "rows": [
+        [
+          "**{{site control}}**",
+          "The risk of having nowhere to build",
+          "An option payment or lease; fixed landowner payments ('Aypa covers install, maintenance and removal')",
+          "Landowner and developer pages offer 'fixed lease payments' and co-development terms"
+        ],
+        [
+          "**{{queue position}}**",
+          "The risk of never connecting",
+          "Interconnection deposits, usually posted as letters of credit; years of study time",
+          "Bypass entered the ERCOT queue in August 2021 and operated in February 2026 — four and a half years"
+        ],
+        [
+          "**Permits**",
+          "The risk that the county says no",
+          "Studies, hearings, a 437-page application (Kingfisher Reserve)",
+          "Two denials in twelve months (Hamilton County IN; Chino CA); approvals in Clark County, Summit Township, Irwindale, Michigan PSC"
+        ],
+        [
+          "**Offtake**",
+          "Merchant price risk",
+          "Bid preparation, credit support to the buyer",
+          "Tolls (SDG&E, SRP), an {{energy storage service agreement}} (NCPA), RA-plus-energy (PG&E), build-own-operate with utility dispatch (Santee Cooper), IESO LT1"
+        ],
+        [
+          "**Financing**",
+          "The risk of not having the money",
+          "Fees, hedges, the tax-equity structure",
+          "Project packages from USD 88 million to USD 535 million; the USD 1.5 billion warehouse for the next batch"
+        ],
+        [
+          "**{{notice to proceed}}**",
+          "The risk of being a drawing",
+          "The construction contract and the first equipment payment",
+          "January 2023 target: '1,500+ megawatts to notice-to-proceed within 24 months'"
+        ],
+        [
+          "**Construction**",
+          "Cost and schedule risk",
+          "The largest cheques; delay penalties",
+          "Bypass slipped eight weeks against its projected date"
+        ],
+        [
+          "**{{commercial operation date}}**",
+          "Everything above",
+          "Testing and commissioning",
+          "Pediment: originated 2018, bid 2023, bought 2024, contracted July 2024, financed December 2024, online June 2026"
+        ]
+      ]
+    },
+    {
+      "id": "who-holds-the-dispatch-rights",
+      "title": "Who holds the dispatch rights: reading a storage contract from the outside",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Aypa's contracts come in five forms, and the difference between them is who decides when the battery charges and discharges — the {{dispatch rights}}. Hold those and you hold the revenue risk; give them away and you are paid a fee.",
+        "**A utility toll (SDG&E at Cald, SRP at Pediment).** The utility pays a fixed monthly amount per megawatt for twenty years and dispatches the battery itself. Aypa's income is the fee; its risk is availability — being there when called. This is the form a lender likes best, and it is why Brookfield could say 'investment-grade customers'.",
+        "**An {{energy storage service agreement}} (NCPA at Trolley).** The same idea, bought by a joint-action agency on behalf of eight municipal utilities. Public power buys capacity the way it buys a transmission line: for reliability, on a long term, from a private owner who builds and maintains it.",
+        "**Resource adequacy with energy settlement (PG&E at Marici, Gabriel and Dirac).** California's version: the utility buys the battery's contribution to its reserve requirement, approved by the commission, with an energy settlement layered on. The contract date and the interconnection date can diverge — PG&E's evaluator flagged queue dates of 2031 and 2033 against 2027 deliveries.",
+        "**Build-own-operate with the utility holding dispatch (Santee Cooper at Pinopolis).** The public utility leases the land, keeps 'exclusive dispatch control', and Aypa constructs, owns and operates — a toll in all but name, on a retired coal site that earns the {{energy community bonus}}.",
+        "**Hybrid PPA with a community-choice aggregator (San Diego Community Power at Vidal).** Energy, resource adequacy and renewable certificates from a solar-plus-storage site, bought by the entity that serves retail customers in place of the utility. A {{solar-plus-storage}} project sells three products through one contract.",
+        "What none of these forms does is leave Aypa exposed to the hourly price. The two ERCOT batteries financed without a named counterparty (Wolf Tank, Borden County) are the exception, and the buyer's '95% contracted' is the measure of how small that exception is."
+      ]
+    },
+    {
+      "id": "the-financing-stack-layer-by-layer",
+      "title": "The financing stack, layer by layer",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "A multi-gigawatt private platform is financed in layers, each with its own lender and its own collateral. Aypa's releases name every layer. Read from the top (the company) to the bottom (a single battery).",
+      "cols": [
+        "Layer",
+        "What it is",
+        "Secured on",
+        "Aypa's instrument"
+      ],
+      "rows": [
+        [
+          "**Corporate facility**",
+          "A revolver, a term loan and a {{letter-of-credit facility}} at the holding company",
+          "The company's equity in its projects; the sponsor's standing",
+          "USD 320 million (2023) → 650 million → 1.05 billion → 1.55 billion (March 2026); the LC tranche was USD 550 million of the 1.05 billion"
+        ],
+        [
+          "**{{warehouse facility}}**",
+          "A revolving construction loan that funds several projects at once",
+          "The projects inside it, until each is refinanced at COD",
+          "USD 1.5 billion plus a USD 500 million accordion, three years, 19 lenders (February 2026)"
+        ],
+        [
+          "**{{construction-to-term loan}}**",
+          "Project debt drawn during the build and converted at COD",
+          "The project's contract and assets",
+          "Wolf Tank USD 88 million; Vidal USD 535 million; Elora and Hedley CAD 700 million"
+        ],
+        [
+          "**{{tax-equity bridge loan}}**",
+          "Short debt that advances what the tax investor or credit buyer will pay at COD",
+          "The tax-equity or transfer commitment",
+          "Bypass: USD 91 million bridge; Pediment: a 'tax credit transfer bridge loan'; Elora/Hedley: Canadian ITC bridge loans"
+        ],
+        [
+          "**{{tax equity}} or credit transfer**",
+          "Capital that buys the project's tax credits",
+          "The credits themselves",
+          "U.S. Bancorp (Cald–Borden, Kuna); Morgan Stanley USD 94 million at Bypass; a transfer at Pediment"
+        ],
+        [
+          "**{{back-leverage}}**",
+          "Debt on the developer's share above the project",
+          "The developer's distributions",
+          "Pediment's 'construction-to-back-leverage loan'; Infralogic's reported opco facility"
+        ],
+        [
+          "**Sponsor equity**",
+          "The owner's money",
+          "Nothing — it is last in line",
+          "Blackstone's investment was never disclosed; Brookfield pays USD 3 billion for it"
+        ]
+      ]
+    },
+    {
+      "id": "two-ways-to-sell-a-tax-credit",
+      "title": "Two ways to sell a tax credit",
+      "kind": "prose",
+      "read": "5 min",
+      "ps": [
+        "A battery earns an investment tax credit that a developer with little taxable income cannot use. Aypa's record shows both ways of turning that credit into construction money, sometimes in the same year.",
+        "**The {{partnership flip}}.** A bank becomes a partner in the project company and takes most of the tax benefits until it has earned its target return, after which its share flips down and the developer keeps the cash. U.S. Bancorp Impact Finance did this at Cald–Borden County and Kuna; Morgan Stanley Renewables did it at Bypass in a 'hybrid' form that mixes a flip with a transfer. The investor's money arrives at COD, so a bridge loan carries the project until then.",
+        "**The transfer.** Since {{tax credit transferability}} arrived in 2023, the credit can simply be sold to a corporate buyer for cash. Pediment's financing used a 'tax credit transfer bridge loan' — a lender advancing the sale proceeds. Aypa has never named a buyer; nor has any private developer in this corpus.",
+        "Why both? A flip brings depreciation as well as the credit and a partner who has done the diligence; a transfer is simpler and faster but sells only the credit. The choice is a pricing decision made project by project, and the FEOC rules that now govern which batteries qualify make it a supply-chain decision too — Aypa's only named battery vendor is Canadian Solar's e-STORAGE."
+      ]
+    },
+    {
+      "id": "the-disclosed-stack-by-size",
+      "title": "The disclosed stack by size",
+      "kind": "bars",
+      "read": "3 min",
+      "unit": "USD millions of disclosed facilities (Aypa releases; CAD 700 million shown at the stated USD 512 million)",
+      "intro": "Read the bars as what the lenders have committed. Together they are the 'about USD 4 billion' of debt that Enerdatics infers from the sale price — an inference the parties have not confirmed.",
+      "items": [
+        {
+          "label": "Corporate facility (March 2026)",
+          "sub": "revolver + term loan + LC facility",
+          "v": 1550
+        },
+        {
+          "label": "Construction warehouse (February 2026)",
+          "sub": "plus USD 500 million accordion",
+          "v": 1500
+        },
+        {
+          "label": "Cald + Borden County portfolio (2023)",
+          "sub": "debt and tax equity",
+          "v": 550
+        },
+        {
+          "label": "Vidal (2025)",
+          "sub": "hybrid, CCA PPA",
+          "v": 535
+        },
+        {
+          "label": "Elora + Hedley (2026)",
+          "sub": "CAD 700 million, ITC bridge loans",
+          "v": 512
+        },
+        {
+          "label": "Pediment (2024)",
+          "sub": "credit-transfer bridge",
+          "v": 398
+        },
+        {
+          "label": "Kuna (2024)",
+          "sub": "incl. USD 90 million tax equity",
+          "v": 323
+        },
+        {
+          "label": "Bypass (2024)",
+          "sub": "incl. USD 94 million tax equity",
+          "v": 190
+        },
+        {
+          "label": "Wolf Tank (2022)",
+          "sub": "first project loan",
+          "v": 88
+        }
+      ]
+    },
+    {
+      "id": "how-a-sponsor-exits",
+      "title": "How a sponsor exits: the sale of a platform, step by step",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "**The decision.** A {{financial sponsor}} holds a company for a period, not forever. Blackstone bought NRStor C&I in March 2020 with about 200 MWh of projects; by 2026 the platform had 6.5 GW contracted and a USD 1.55 billion corporate facility, and Infralogic reported teasers for 'Project Alpha' going out in February 2026 with Bank of America and Cantor Fitzgerald advising.",
+        "**The buyer.** A {{platform sale}} of contracted infrastructure attracts a different buyer from a single project: a fund that wants a machine and a book of long-dated cash flows. Brookfield bought through 'the second vintage of its global transition strategy' with its listed renewable affiliate co-investing — about USD 420 million or 760 million net to that affiliate, depending on which Brookfield document you read.",
+        "**The price.** Quoted two ways: about USD 7 billion of {{enterprise value}} 'at closing' and USD 3 billion of equity value. The buyer's own capacity numbers let an analyst divide: Enerdatics gets about USD 1.1 million per MW, 'just below the ~$1.27mn/MW median for comparable US standalone battery assets'. The seller's {{MOIC}} — Enerdatics' 6.2x — cannot be checked because the entry price was never disclosed.",
+        "**The gap between signing and closing.** 'Subject to customary regulatory approvals.' Between the two dates the seller still owns the company, the company's site still says 'A Blackstone Portfolio Company', and every lender with a change-of-control clause is deciding whether the new sponsor's credit is as good as the old one's. Aypa's July 2026 sale had not closed by September; the corporate facility and the warehouse are the two instruments to watch.",
+        "**What the buyer does next.** Refinance or keep the facilities, decide which pipeline options to keep funding, and put its own name on the site. None of that is public yet."
+      ]
+    },
+    {
+      "id": "contracted-or-merchant-the-buyers-chair",
+      "title": "Contracted platform or merchant platform: the view from the buyer's chair",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "The same battery can be sold on a 20-year toll or into the hourly market. A platform buyer prices the two very differently. The cards read the trade from an infrastructure fund's seat; the merchant case is this corpus's Spearmint guide.",
+      "cards": [
+        {
+          "t": "A contracted platform (Aypa)",
+          "meta": "95% contracted, 17 years average remaining life, investment-grade counterparties",
+          "adv": [
+            "Debt sized on fixed fees — the 'about USD 4 billion' inside the enterprise value",
+            "A buyer can underwrite the cash flows without a view on power prices",
+            "Utilities, public power and CCAs renew and expand (SRP's second 250 MW / 2,000 MWh project)"
+          ],
+          "dis": [
+            "The upside belongs to the counterparty holding the {{dispatch rights}}",
+            "Contract dates can outrun interconnection dates (Marici 2031 versus 2027)",
+            "The fee is only as good as the availability the owner delivers for twenty years"
+          ]
+        },
+        {
+          "t": "A merchant platform",
+          "meta": "Owner holds dispatch; revenue is the hourly price",
+          "adv": [
+            "Every extreme-price hour accrues to the owner",
+            "No twenty-year availability promise to a utility",
+            "Faster to contract — there is no contract"
+          ],
+          "dis": [
+            "Debt is sized on a floor or a {{revenue put}}, not on the market",
+            "Revenue collapses when the market saturates (ERCOT 2025)",
+            "A fund buyer applies a lower multiple because the cash flows are not fixed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The county says no.** Kingfisher Reserve (200 MW / 800 MWh) was denied unanimously by a county board after a two-hour hearing; Dirac was refused by a city planning commission six months after the state commission had approved its contract. A {{conditional use permit}} is the rung that money cannot buy, and it is where a multi-gigawatt pipeline loses projects one hearing at a time.",
+        "**The queue is slower than the contract.** PG&E's own evaluator flagged interconnection dates of 2031 and 2033 against contracted deliveries in 2027. A contract that starts before the grid connection exists is a promise the developer may have to pay to keep.",
+        "**The numbers drift.** Aypa's own project count went from 30 to 42 in two months; the buyer said 35. A pipeline of options is easy to count generously, and a buyer's diligence is largely the work of counting it strictly.",
+        "**The supply chain is one vendor.** Canadian Solar's e-STORAGE is the only battery supplier any Aypa-side source names, with Sungrow units at one site. Under FEOC rules the credit that the {{partnership flip}} and the transfer both depend on can be lost by the wrong cell.",
+        "**The debt was priced on the old sponsor.** Every facility in the stack was signed while Blackstone owned the platform. A change of control lets lenders reprice or exit; the buyer's first job is to find out which will.",
+        "**The deal does not close.** 'Subject to customary regulatory approvals' is a condition, not a formality. Until closing, the seller carries the company and the market watches the calendar."
+      ]
+    },
+    {
+      "id": "where-aypa-slots-in",
+      "title": "Where Aypa slots into the buyer side",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The three developer-IPPs added to this corpus together, plus the storage owners it already held, placed by what they sell and to whom.",
+      "cols": [
+        "Company",
+        "Model",
+        "Who holds dispatch",
+        "How it is financed",
+        "Where it fails"
+      ],
+      "rows": [
+        [
+          "**Aypa Power**",
+          "{{develop-to-own}}, contracted",
+          "Utilities, public power, CCAs (95%)",
+          "Corporate facility + warehouse + project loans + tax equity/transfer; sponsor sale to Brookfield",
+          "County permits; queue-versus-contract dates; single vendor"
+        ],
+        [
+          "**Spearmint Energy**",
+          "{{develop-to-own}}, {{merchant}}",
+          "The owner's own desk",
+          "Private-credit platform loan, tax equity, credit transfer, preferred equity; no sponsor equity",
+          "ERCOT price collapse; single vendor; permits"
+        ],
+        [
+          "**Intersect**",
+          "{{captive developer}} for Google since March 2026",
+          "The parent",
+          "Bought outright; grid fleet carved out to IPX",
+          "SB 6 and county conditions; unpublished load"
+        ],
+        [
+          "**Plus Power / Jupiter Power / Eolian**",
+          "Contracted franchise; ERCOT merchant fleet; PJM position (existing dossiers)",
+          "Varies",
+          "Varies",
+          "See their dossiers"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "A platform is sold at USD 7 billion enterprise value and USD 3 billion equity value. What does the buyer take on besides the equity cheque?",
+          "a": "About USD 4 billion of debt that stays with the assets — project loans, the warehouse and the corporate facility — which is why enterprise value, not equity value, is the buyer's cost."
+        },
+        {
+          "q": "Name the two numbers that tell a lender how much debt a contracted storage portfolio can carry.",
+          "a": "Percent contracted (how much of the cash flow is fixed) and average remaining contract life (for how long)."
+        },
+        {
+          "q": "What does a queue position retire, and how is it usually paid for?",
+          "a": "The risk of never connecting to the grid; it is held with interconnection deposits, usually posted as letters of credit from a corporate LC facility."
+        },
+        {
+          "q": "What is a warehouse facility for?",
+          "a": "Funding several projects through construction at once from one revolving loan, each project leaving the warehouse when it is refinanced at commercial operation."
+        },
+        {
+          "q": "Under a utility toll, who holds the dispatch rights and what risk does the owner keep?",
+          "a": "The utility dispatches; the owner keeps availability risk — being there when called — and earns a fixed fee."
+        },
+        {
+          "q": "Contrast a partnership flip with a credit transfer.",
+          "a": "A flip makes a tax investor a partner that takes tax benefits (credit and depreciation) until a target return, then flips down; a transfer sells the credit alone to a corporate buyer for cash. Both usually need a bridge loan until COD."
+        },
+        {
+          "q": "Why does a resource-adequacy contract dated 2027 with a queue date of 2031 matter?",
+          "a": "The developer has promised delivery before the grid connection exists; the gap is a risk it may have to pay to close, and the utility's evaluator flagged exactly that."
+        },
+        {
+          "q": "What happens to a platform's loans when the sponsor sells it?",
+          "a": "Change-of-control clauses let lenders reprice or exit; the buyer must find out which facilities survive the new sponsor."
+        },
+        {
+          "q": "Why does a buyer count a pipeline strictly when the seller counts it generously?",
+          "a": "A pipeline is options at many stages; the seller counts every option, the buyer prices each by its probability of climbing the next rung."
+        },
+        {
+          "q": "What is the one rung on the development ladder that money cannot buy?",
+          "a": "The local permit — a conditional use permit or rezoning decided at a public hearing, which is where Aypa lost Kingfisher Reserve and Dirac."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A seller says its platform has '6.5 GW operating, under construction and contracted'. What is the first split a buyer asks for?",
+          "c": [
+            "MW by state",
+            "Operating versus under construction versus contracted-but-unbuilt",
+            "MW by battery chemistry",
+            "MW by EPC contractor"
+          ],
+          "a": 1,
+          "why": "Each category sits on a different rung with different risk; the buyer's own release split it 3,000 MW operating and under construction against 3,500 MW contracted."
+        },
+        {
+          "q": "Which instrument advances the money a tax-equity investor will pay at COD so construction can start?",
+          "c": [
+            "A revenue put",
+            "A tax-equity bridge loan",
+            "Back-leverage",
+            "A letter of credit"
+          ],
+          "a": 1,
+          "why": "The bridge loan is repaid the day the tax-equity or credit-transfer proceeds arrive at commercial operation."
+        },
+        {
+          "q": "A public power agency signs a 20-year energy storage service agreement and dispatches the battery itself. What is the owner's main risk?",
+          "c": [
+            "Hourly price risk",
+            "Availability risk",
+            "Fuel price risk",
+            "Currency risk"
+          ],
+          "a": 1,
+          "why": "The buyer holds dispatch rights and price risk; the owner is paid a fee for being available."
+        },
+        {
+          "q": "Enterprise value USD 7 billion, equity value USD 3 billion. Roughly how much debt passes to the buyer?",
+          "c": [
+            "USD 10 billion",
+            "USD 3 billion",
+            "USD 4 billion",
+            "None — debt is repaid at closing"
+          ],
+          "a": 2,
+          "why": "Enterprise value minus equity value is net debt; the projects' loans stay with the assets."
+        },
+        {
+          "q": "Why might a buyer value a pipeline of 20 GW at a small fraction of an operating gigawatt?",
+          "c": [
+            "Pipelines are illegal to sell",
+            "Most pipeline projects are options that may never climb the next rung",
+            "Pipelines have no land",
+            "Pipelines are always merchant"
+          ],
+          "a": 1,
+          "why": "Value rises with each retired risk; early-stage projects have retired few."
+        },
+        {
+          "q": "Which is a sign that a platform's binding constraint has moved from capital to permitting?",
+          "c": [
+            "A larger corporate facility each year alongside county denials",
+            "Lower tax-equity pricing",
+            "A new EPC contractor",
+            "A rebranding"
+          ],
+          "a": 0,
+          "why": "Aypa expanded its facilities three years running while losing two local permits — money was not the bottleneck."
+        },
+        {
+          "q": "What does 'subject to customary regulatory approvals' mean for who owns the company today?",
+          "c": [
+            "The buyer owns it from signing",
+            "The seller owns it until closing",
+            "Ownership is shared",
+            "The regulator owns it"
+          ],
+          "a": 1,
+          "why": "Signing creates an obligation to close; ownership transfers at closing, which had not happened by September 2026."
+        },
+        {
+          "q": "A developer's only named battery supplier is one Chinese-headquartered integrator. Which financing layer is most directly exposed to FEOC rules?",
+          "c": [
+            "The corporate revolver",
+            "The tax-equity or credit-transfer layer",
+            "The landowner leases",
+            "The EPC contract"
+          ],
+          "a": 1,
+          "why": "FEOC rules decide whether the project's credit can be claimed at all, which is what tax equity and transfers are buying."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1255 @@
+{
+  "schemaVersion": 7,
+  "slug": "spearmint-energy",
+  "name": "Spearmint Energy (Spearmint Renewable Development Company, LLC and affiliates)",
+  "shortName": "Spearmint Energy",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://spearmintenergy.com/",
+  "headquarters": "Miami, Florida (2916 N. Miami Avenue); second office in Eden Prairie, Minnesota (7480 Flying Cloud Drive), per the company site",
+  "founded": 2022,
+  "employees": "Company boilerplate: 'over 70 professionals' (January 2026), 'over 60 professionals' (May–June 2026), 'over 50 professionals' (July 2026); PFI's 2024 profile put headcount at 34. No series is published and the 2026 figures move in the wrong direction for a growing company — treat as loosely stated.",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Spearmint Energy is a founder-led, trading-bred merchant developer that owns 350 MW / 700 MWh of two-hour ERCOT batteries (Revolution, Tierra Seca, Seven Flags), is building a fourth (Red Egret, 300 MW / 600 MWh, COD 2027), holds Minnesota's first two standalone-storage site permits (300 MW / 1,200 MWh), and has financed all of it without a single named offtaker, hedge or revenue put — on a USD 325 million private-credit platform facility, tax equity, a credit transfer and one undisclosed equity sale to Kyuden International. The premise '15 GWh in development' is the company's own boilerplate, stated in January and May 2026 and dropped from 21 May 2026 onward; the premise of a Blackstone sponsor is unsupported — no source links Blackstone to Spearmint, and the only ownership statement in the record is lender Elda River's that the company 'is controlled by Roscommon Analytics', an FTR and congestion trading firm founded by board chairman Kevin Kelley.\n\nBACKGROUND. Launched in Miami in May 2022 by Andrew Waranch (Elustria, Elliott Associates, Deutsche Bank, Merrill Lynch, Constellation) with three stated strategies — development, storage offtake and power trading — Spearmint bought Revolution from Con Edison Development (July 2022), the 900 MW 'Nomadic' ERCOT portfolio (March 2023) and two Indiana projects from BW Solar (December 2023), then built Revolution to COD in January 2024 on Sungrow PowerTitan with Mortenson, financed by USD 92 million of Greenprint tax equity and a USD 200 million Aiga term loan later joined by Nuveen and Elda River. Tierra Seca and Seven Flags (USD 252 million from Manulife, East West Bank, Investec and Sugar Creek) reached COD in late December 2025, in the year Modo Energy puts ERCOT battery revenue at about USD 26–29 per kW against USD 193 per kW in 2023. Red Egret closed about USD 450 million on 21 May 2026 (a construction loan repaid at COD by Nuveen preferred equity and about USD 126 million of ITC transfer). Outside ERCOT: Snowshoe (permit August 2025) and Midwater (permit July 2026) in Minnesota, Pumpkinvine denied in Kokomo (November 2024), Silverfield in Kansas and Cloverleaf in South Dakota in development. Twenty executives and directors are named with photographs on the company's site; no CFO is listed.\n\nCollection gaps: any revenue, dispatch result or contract price; the identity of the 'Nomadic' seller and the current status of the Cooke and Brazoria projects; the Kyuden stake and price; the Red Egret credit buyer; FERC market-based-rate or ERCOT QSE records (FERC pages unreadable); the CFO's successor; and the composition of the '15 GWh' beyond the projects named above.",
+  "ecosystemRole": "Spearmint is the pure merchant case in this corpus's BESS buyer side: a developer that finances batteries on tax credits and private credit rather than utility contracts, procures from one integrator (Sungrow) and one EPC (Mortenson), and monetises through its own trading desk. For a supplier it is a repeat single-source account; for the market it is a small ERCOT owner whose fleet reached scale in the revenue trough; for the register it is the develop-to-hold merchant model that Aypa's contracted platform and Intersect's captive parks bracket.",
+  "productsAndServices": [
+    {
+      "name": "Owned and operated ERCOT battery fleet (merchant)",
+      "category": "Owned and operated BESS — merchant",
+      "description": "Three operating standalone batteries in ERCOT, all two-hour, all built by Mortenson on Sungrow PowerTitan equipment, and all dispatched by Spearmint's own optimisation team without any named offtaker, hedge provider or revenue put: Revolution (150 MW / 300 MWh, McCamey, Upton County, in LCRA transmission territory next to the King Mountain wind farm; acquired as a development project from Con Edison Development in July 2022; commercial operation announced 4 January 2024 with 134 containers, 6,432 Sungrow modules and 45 PCS units), and Tierra Seca (Del Rio, Val Verde County) and Seven Flags (Laredo), 100 MW / 200 MWh each on PowerTitan 2.0, operating since late December 2025 per the company's 12 May 2026 release. Company boilerplate since May 2026: 'operates 350 MW / 700 MWh in ERCOT'.",
+      "highlights": [
+        "The company's site says why merchant: it develops 'in locations where we can solve the biggest weaknesses of energy — intermittency and the price volatility it creates', while 'utilities, load-serving entities, and developers … given their lower risk tolerance, they are not as focused on deploying critical infrastructure in the regions with the greatest imbalances'.",
+        "No source names a tolling counterparty, hedge, revenue put or offtake for any ERCOT asset; the only tolling language in the record is the Minnesota Snowshoe application, which 'anticipates entering into a Tolling Agreement with its affiliated merchant energy business or similar third-party market participant'.",
+        "The two newest assets reached COD in ERCOT's 2025 revenue trough: Modo Energy puts 2025 ERCOT battery revenue at about USD 26–29 per kW against USD 193 per kW in 2023, and Enverus puts ancillary-service revenue down about 90 per cent since 2023.",
+        "Kyuden International (Kyushu Electric group) bought an undisclosed equity interest in Tierra Seca and Seven Flags in January 2026 — the only asset-level sale in the record."
+      ],
+      "positioning": "The smallest of the three merchant ERCOT storage owners in this corpus's IPP set by operating capacity (350 MW against Jupiter Power's fleet and Plus Power's contracted franchise), and the only one whose founder and board come from power trading rather than development — Roscommon Analytics, which lender Elda River says controls the company, is an FTR and congestion trading firm. Modo's ERCOT owner rankings do not list Spearmint.",
+      "soldThrough": "ERCOT day-ahead and real-time energy and ancillary-service markets via in-house dispatch ('Spearmint's internal software and associated forecasting tools', per the company's trader job posting); tax credits monetised through tax equity and transfer.",
+      "targetSegments": [
+        "ERCOT wholesale market (energy arbitrage and ancillary services)",
+        "Project-level equity investors (Kyuden International)"
+      ],
+      "roadmap": "Red Egret (300 MW / 600 MWh, Texas City) under construction since May 2026 for a 2027 COD, taking the operating fleet to 'over 1.5 GWh … across four projects'."
+    },
+    {
+      "name": "Development pipeline — MISO, SPP and beyond",
+      "category": "Development",
+      "description": "A pipeline the company has described as 2.8 GW (February 2024), 4.1 GW (July 2024), 'over 13 GWh' in ten states (April and September 2025) and 'over 15 GWh' across more than 20 projects in 12–13 states (January and May 2026), then without a gigawatt-hour figure from 21 May 2026 onward ('projects under development throughout the United States'). Named projects outside ERCOT per regulator and county records: Snowshoe (150 MW / 600 MWh, Olmsted County, Minnesota — MPUC docket IP-7138/ESS-24-279, site permit August 2025, the state's first standalone battery permit, estimated capital cost USD 214 million in the application, COD Q4 2027, MISO queue J2731 via SMMPA's Maple Leaf substation); Midwater (150 MW / 600 MWh, Freeborn County, Minnesota — MPUC dockets 24-294/24-295, site permit 16 July 2026 with insurance, decommissioning and fire-coordination conditions, about USD 457 million capital cost per press reading of the filings, COD end-2027); Pumpkinvine (up to 400 MW, Howard County, Indiana — MISO queue J2766; Kokomo rezoning denied unanimously 12 November 2024); Green Eagle (125 MW, Indiana, bought with Pumpkinvine from BW Solar in December 2023); Silverfield (300 MW / 1,200 MWh, Linn County, Kansas, presented March 2025, target 2028); Cloverleaf (up to 175 MW, Brookings County, South Dakota, at the MISO–SPP seam). The 900 MW / 2,000 MWh 'Nomadic' ERCOT portfolio bought in March 2023 (Cooke, Galveston, Brazoria Counties) has no later status under that name.",
+      "highlights": [
+        "The company has never itemised the 15 GWh: the identifiable pieces are 350 MW / 700 MWh operating, 300 MW / 600 MWh under construction, 300 MW / 1,200 MWh permitted in Minnesota and the Indiana, Kansas and South Dakota projects above.",
+        "Both Minnesota applications were designed around Tesla Megapack 2XL enclosures 'to allow flexibility during equipment selection' — a design basis, not an order.",
+        "Waranch's stated geography (2024): ERCOT first, SPP and MISO 'significant potential', NYISO for acquisitions, 'we opt out of' PJM, California limited.",
+        "Buy-side M&A is the sourcing method: Revolution from Con Edison Development (2022), Nomadic from an unnamed 'major developer' (2023), Green Eagle and Pumpkinvine from BW Solar (2023); Energy-Storage.news notes an earlier Black Mountain Energy Storage / Cypress Creek exclusivity on the Tierra Seca and Seven Flags sites that Spearmint did not explain."
+      ],
+      "positioning": "A develop-to-own pipeline assembled largely by buying other developers' early-stage projects, financed on a platform term loan rather than sponsor equity; the Minnesota permits are the first standalone-storage site permits in that state.",
+      "soldThrough": "Held in project LLCs under Spearmint Renewable Development Company, LLC (Snowshoe BESS, LLC; Midwater BESS, LLC; Tierra Seca BESS LLC).",
+      "targetSegments": [
+        "MISO and SPP wholesale markets",
+        "County and state permitting authorities (Minnesota PUC, Texas cities, Indiana and Kansas counties)"
+      ],
+      "roadmap": "Snowshoe and Midwater construction Q1 2027, COD late 2027; Silverfield 2028; Cloverleaf's SPP phase was stated for Q1 2026 and MISO phase Q1 2028 in 2024 press, with no permit outcome found."
+    },
+    {
+      "name": "Optimisation and trading (the 'affiliated merchant energy business')",
+      "category": "Trading and risk management",
+      "description": "Spearmint launched in May 2022 describing three strategies — 'battery and solar project development, energy storage offtake, and renewables power trading' — and Waranch's 2022 op-ed proposed 'providing tolling solutions for developers via renting the battery facility' so that builders 'achieve lower borrowing costs'. By 2026 the arm is described as Optimization: Nick Dazzo (Managing Director, Head of Optimization) 'focuses on contracting for battery offtake and associated risk management activity'; Jason Gran (Head of Research, ex-Wärtsilä) runs 'forecasting and optimization technology'; the August 2026 'Power Energy Storage Trader' posting describes 'dispatching Spearmint's battery storage assets … execute energy and ancillary service offers in day-ahead and real-time markets, utilizing Spearmint's internal software and associated forecasting tools … around-the-clock physical dispatch', with 'familiarity with futures and other hedging markets' preferred.",
+      "highlights": [
+        "The board is a trading board: chairman Kevin Kelley founded Roscommon Analytics ('power optimization including FTRs and congestion'); John Rittenhouse founded and ran EDF Trading for 21 years; Waranch's own career ran through Elustria, Elliott Associates, Deutsche Bank, Merrill Lynch and Constellation Energy.",
+        "No third-party offtake customer of the trading arm, no FERC market-based-rate authorisation and no ERCOT QSE registration for a Spearmint entity was found (FERC pages returned 403 — unverified, not absent; ERCOT assets do not need FERC MBR).",
+        "PFI's 2024 profile called Spearmint a 'green merchant energy trading company' and referred to 'an innovative, creditworthy offtake structure' and 'a merchant trading component with hedging' without naming counterparties."
+      ],
+      "positioning": "The optimisation arm is what lets a founder-led company finance merchant batteries: lenders underwrite the dispatch team and the platform, not a PPA. Whether it tolls third-party batteries, as the 2022 thesis proposed, is not evidenced.",
+      "soldThrough": "Internal dispatch of owned assets; the Snowshoe application anticipates a tolling agreement between the project company and the 'affiliated merchant energy business'.",
+      "targetSegments": [
+        "Spearmint's own project companies",
+        "Third-party developers (proposed in 2022; no customer found)"
+      ],
+      "roadmap": "None stated beyond hiring; the company added 'provide system stability for new large loads' to its boilerplate in 2026 and Waranch reports 'more and more RFPs from tech companies'."
+    },
+    {
+      "name": "Capital structure — platform debt, project debt, tax equity and credit transfer",
+      "category": "Financing",
+      "description": "Every dollar in the record is a debt, tax-equity or project-equity instrument; no corporate equity round, valuation or sponsor commitment has ever been announced. Platform level: a USD 200 million term loan from Aiga Capital Partners (June 2023), joined by Nuveen Energy Infrastructure Credit as co-anchor (February 2024) and Elda River Capital Management (July 2024), then a USD 325 million 'expanded debt facility' with Nuveen, Elda River, Harrison Street Asset Management and Aiga (23 June 2026). Project level: USD 92 million of tax equity from Greenprint Capital Management for Revolution (October 2023) and USD 48 million from Manulife (per the company's news archive); USD 252 million for Tierra Seca and Seven Flags (April 2025 — USD 59 million construction-to-term loans from Manulife, USD 95 million tax-equity bridge loans from East West Bank and Investec, USD 98 million of tax-equity commitments from Sugar Creek Capital); a Kyuden International equity investment in the same two projects (January 2026, terms undisclosed); and about USD 450 million for Red Egret (21 May 2026 — a USD 225 million construction facility led by First Citizens and Investec with Nord/LB and East West Bank, to be repaid at COD by USD 96 million of Nuveen preferred equity and about USD 126 million of ITC-transfer proceeds from an unnamed buyer).",
+      "highlights": [
+        "Greenprint's Revolution investment was described by Energy-Storage.news as 'one of the first applications' of the standalone-storage ITC after the IRA.",
+        "Red Egret's structure — construction loan taken out at COD by preferred equity plus a credit transfer, with no term debt named — is the record's clearest example of financing a merchant battery without a PPA.",
+        "Lender Elda River's case study states the company 'is controlled by Roscommon Analytics, a large commodity trading platform' — the only ownership statement in any source; the company itself names no owner. The brief's Blackstone premise is unsupported: no source links Blackstone to Spearmint.",
+        "Waranch (2024): merchant-only projects appeal to 'approximately 20%' of available investors; offtake 'reduce[s] merchant revenue risk, attracting broader investor base'."
+      ],
+      "positioning": "Where Aypa finances on utility contracts and a USD 1.5 billion warehouse, Spearmint finances on private credit (Aiga, Nuveen, Elda River, Harrison Street), regional and foreign banks (Manulife, East West Bank, Investec, First Citizens, Nord/LB), tax-equity boutiques (Greenprint, Sugar Creek) and a Japanese utility's equity — a merchant developer's stack.",
+      "soldThrough": "Bilateral platform facilities and project-level syndicates; counsel Paul Hastings on every deal.",
+      "targetSegments": [
+        "Energy-infrastructure credit funds",
+        "Tax-equity and tax-credit-transfer investors",
+        "Foreign utility investors (Kyuden)"
+      ],
+      "roadmap": "The June 2026 facility is described as growth capital for the operating portfolio and 'US development portfolio'; no equity raise is announced."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Project ledger — every project a source names, as the company, regulators, counties and press state it",
+      "specs": [
+        {
+          "band": "Operating — ERCOT",
+          "label": "Revolution — McCamey, Upton County, TX",
+          "value": "150 MW / 300 MWh; LCRA transmission territory next to King Mountain wind farm; acquired from Con Edison Development (July 2022); groundbreaking December 2022; commercial operation announced 4 January 2024 ('on budget and on-schedule'); 134 containers, 6,432 Sungrow modules, 45 PCS; EPC Mortenson; USD 92 million Greenprint tax equity; no offtaker named"
+        },
+        {
+          "band": "Operating — ERCOT",
+          "label": "Tierra Seca — Del Rio, Val Verde County, TX",
+          "value": "100 MW / 200 MWh; Sungrow PowerTitan 2.0; EPC Mortenson; ERCOT queue 23INR0364 (102.7 MW, 138 kV Hamilton Road substation, status Operational, listed COD 4 February 2026); company: operating since late December 2025; Kyuden International equity (January 2026)"
+        },
+        {
+          "band": "Operating — ERCOT",
+          "label": "Seven Flags — Laredo, TX",
+          "value": "100 MW / 200 MWh; Sungrow PowerTitan 2.0; EPC Mortenson; operating since late December 2025 per the company; ERCOT queue record not found"
+        },
+        {
+          "band": "Under construction — ERCOT",
+          "label": "Red Egret — Texas City, Galveston County, TX",
+          "value": "300 MW / 600 MWh; 38 acres north of Moses Bayou near the Freeway Park substation, interconnecting via Texas-New Mexico Power; 149 Sungrow PowerTitan 2.0 units; EPC Mortenson (fourth Spearmint project); Texas City approved a development agreement and rezoning 7 August 2025 (about USD 47 million of property tax over 20 years); about USD 450 million financing closed 21 May 2026; company COD 2027 (interconnection-agreement COD 31 August 2026 per Energy-Storage.news)"
+        },
+        {
+          "band": "Permitted — MISO (Minnesota)",
+          "label": "Snowshoe — Kalmar Township, Olmsted County, MN",
+          "value": "150 MW / 600 MWh; Snowshoe BESS, LLC; MPUC docket IP-7138/ESS-24-279, application October 2024, site permit August 2025 (first standalone BESS permit in Minnesota) with emergency-response conditions; 161 kV tap to SMMPA's Maple Leaf substation, MISO queue J2731; capital cost USD 214 million in the application (USD 255 million per later press); Tesla Megapack 2XL design basis; construction Q1 2027, COD Q4 2027"
+        },
+        {
+          "band": "Permitted — MISO (Minnesota)",
+          "label": "Midwater — Shell Rock Township, Freeborn County, MN",
+          "value": "150 MW / 600 MWh; Midwater BESS, LLC; MPUC dockets 24-294 (BESS) and 24-295 (2,668-foot 161 kV line); joint application February 2025, ALJ report May 2026, site permit 16 July 2026 with stormwater, insurance-through-decommissioning, decommissioning-fund and fire-department conditions; adjacent to the Glenworth substation; about USD 457 million capital cost per press reading of filings; construction Q1 2027, COD end-2027"
+        },
+        {
+          "band": "Development — MISO (Indiana)",
+          "label": "Pumpkinvine — Kokomo, Howard County, IN",
+          "value": "Up to 400 MW on 15 acres; MISO queue J2766 (Definitive Planning Phase); Duke Energy line; Kokomo Plan Commission denied rezoning unanimously 12 November 2024 after organised opposition; six-month reapplication bar; later status not found"
+        },
+        {
+          "band": "Development — MISO (Indiana)",
+          "label": "Green Eagle — Indiana",
+          "value": "125 MW; acquired with Pumpkinvine from BW Solar (BW Group) in December 2023; county and status not found"
+        },
+        {
+          "band": "Development — SPP / MISO",
+          "label": "Silverfield — Linn County, KS",
+          "value": "300 MW / 1,200 MWh on about 25 leased acres north of Evergy's La Cygne plant; presented to county commissioners 31 March 2025; about USD 20 million of property tax over ten years projected; target completion 2028"
+        },
+        {
+          "band": "Development — SPP / MISO",
+          "label": "Cloverleaf — Brookings County, SD",
+          "value": "Up to 175 MW (about 150 enclosures) on 15 acres near Deer Creek Station at the MISO–SPP seam; land rights secured but no permit applied as of November 2024; SPP phase Q1 2026 and MISO phase Q1 2028 per Energy-Storage.news; outcome not found"
+        },
+        {
+          "band": "Historical — ERCOT",
+          "label": "'Nomadic' portfolio — Cooke, Galveston and Brazoria Counties, TX",
+          "value": "900 MW / 2,000 MWh in three 300 MW projects, acquired March 2023 from an unnamed 'major developer and operator of clean energy projects'; first NTP expected early 2024; no later status under that name (Red Egret, in Galveston County, is not stated by any source to be one of them)"
+        }
+      ],
+      "notes": "The company says 'over 20 projects … in 13 states' (May 2026) but names none beyond Texas, Minnesota, Indiana, Kansas and South Dakota. A pipeline in New York, California or the Desert Southwest is Waranch's stated interest, not a project."
+    },
+    {
+      "product": "Financing ledger — every instrument disclosed by the company, its lenders or their counsel (USD)",
+      "specs": [
+        {
+          "band": "Platform",
+          "label": "Term loan / credit facility",
+          "value": "USD 200 million from Aiga Capital Partners (June 2023; advisor Javelin Capital) → Nuveen Energy Infrastructure Credit joins as co-anchor (February 2024, '2.8 GW portfolio') → Elda River Capital Management joins (July 2024, '4.1 GW portfolio') → USD 325 million 'expanded debt facility' with Nuveen EIC, Elda River, Harrison Street Asset Management and Aiga (23 June 2026; tenor and pricing undisclosed)"
+        },
+        {
+          "band": "Project",
+          "label": "Revolution (150 MW / 300 MWh)",
+          "value": "USD 92 million tax equity from Greenprint Capital Management (October 2023); USD 48 million from Manulife per the company's news-archive headline (instrument and date not read)"
+        },
+        {
+          "band": "Project",
+          "label": "Tierra Seca + Seven Flags (2 × 100 MW / 200 MWh)",
+          "value": "USD 252 million (April 2025): USD 59 million construction-to-term loans (Manulife); USD 95 million tax-equity bridge loans (East West Bank, Investec — coordinating lead arrangers and green-loan structuring agents); USD 98 million tax-equity commitments (Sugar Creek Capital); counsel Paul Hastings, Day Pitney, Milbank, Leverage Law Group. Plus Kyuden International equity, closed 7 January 2026, amount and stake undisclosed (counsel Paul Hastings; K&L Gates for Kyuden)"
+        },
+        {
+          "band": "Project",
+          "label": "Red Egret (300 MW / 600 MWh)",
+          "value": "About USD 450 million (21 May 2026): USD 225 million construction facility — First Citizens Bank and Investec (coordinating lead arrangers, joint bookrunners), Nord/LB (joint lead arranger), East West Bank (mandated lead arranger) — repaid at COD by USD 96 million preferred equity from Nuveen Energy Infrastructure Credit and about USD 126 million from an ITC-transfer commitment (buyer unnamed; buyer's counsel Skadden); counsel Paul Hastings, Willkie Farr & Gallagher, Milbank"
+        },
+        {
+          "band": "Corporate",
+          "label": "Equity",
+          "value": "No corporate equity round, valuation or sponsor commitment announced. Lender Elda River: the company 'is controlled by Roscommon Analytics'. Board seats held by Bain Capital partner Alex Hocherman, Bain Capital senior adviser Dwight Poler and Encompass Capital partner Brian McShane — an inference about backers, not a stated shareholding"
+        }
+      ],
+      "notes": "Press-reported figures not used: Construction Review Online's 'approximately USD 200 million' Red Egret investment and Crunchbase's 'USD 1.78 billion raised' (which conflates debt, tax equity and project finance)."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-07-16",
+      "category": "regulatory",
+      "headline": "Minnesota PUC grants a site permit for Midwater (150 MW / 600 MWh, Freeborn County), Spearmint's second permitted MISO project, with insurance-through-decommissioning, decommissioning-fund, stormwater and fire-coordination conditions",
+      "read": "The MISO leg now holds 300 MW / 1,200 MWh of permits and no construction; the boilerplate headcount in the same release fell to 'over 50'.",
+      "source": "https://www.01net.it/spearmint-energy-secures-site-permit-for-600-mwh-battery-energy-storage-in-miso/"
+    },
+    {
+      "date": "2026-06-23",
+      "category": "financial",
+      "headline": "USD 325 million 'expanded debt facility' with Nuveen Energy Infrastructure Credit, Elda River, Harrison Street (new) and Aiga — growth capital for the operating fleet and the US development portfolio",
+      "read": "The platform loan has grown from USD 200 million to USD 325 million with private credit, not sponsor equity, four months after the two newest assets entered a revenue trough.",
+      "source": "https://finance.yahoo.com/news/spearmint-energy-secures-325-million-130000332.html"
+    },
+    {
+      "date": "2026-05-26",
+      "category": "leadership",
+      "headline": "Yelena Kuznetsova appointed Chief Marketing Communications Officer (joined 2023 as Director of Sustainability and ESG)",
+      "read": "A capital-markets communicator in the C-suite for a company that publishes no financials.",
+      "source": "https://batteriesnews.com/spearmint-energy-appoints-yelena-kuznetsova-as-chief-marketing-communications-officer/"
+    },
+    {
+      "date": "2026-05-21",
+      "category": "financial",
+      "headline": "About USD 450 million closed for Red Egret (300 MW / 600 MWh, Texas City): a USD 225 million First Citizens and Investec-led construction facility to be repaid at COD by USD 96 million of Nuveen preferred equity and about USD 126 million of ITC-transfer proceeds; construction begun, COD 2027; boilerplate drops the GWh pipeline figure",
+      "read": "The record's clearest no-PPA structure: bank construction debt, then preferred equity and a credit transfer, no term loan named.",
+      "source": "https://finance.yahoo.com/sectors/energy/articles/spearmint-energy-secures-approximately-450-130000620.html"
+    },
+    {
+      "date": "2026-05-12",
+      "category": "project",
+      "headline": "Tierra Seca and Seven Flags (2 × 100 MW / 200 MWh) declared in commercial operation — running since late December 2025; Mortenson EPC, Sungrow PowerTitan 2.0; boilerplate now 'over 20 projects, totaling over 15 GWh … in 13 states'",
+      "read": "The '15 GWh in development' premise is confirmed as the company's own figure and dated to January–May 2026; it disappears from releases nine days later.",
+      "source": "https://finance.yahoo.com/sectors/energy/articles/spearmint-energy-achieves-commercial-operation-130000865.html"
+    },
+    {
+      "date": "2026-05-05",
+      "category": "leadership",
+      "headline": "Michael Weinstein promoted to EVP, Head of Corporate Development, from SVP and Head of Investor Relations",
+      "read": "Corporate development, not investor relations, is the title a company that intends to buy developers or sell stakes gives its banker.",
+      "source": "https://spearmintenergy.com/team/michael-weinstein"
+    },
+    {
+      "date": "2026-01-07",
+      "category": "financial",
+      "headline": "Kyuden International (Kyushu Electric group) closes an equity investment in Tierra Seca and Seven Flags — its first US battery investment; amount and stake undisclosed",
+      "read": "A post-COD partial sale to a foreign utility is how a merchant developer recycles equity without selling the platform.",
+      "source": "https://finance.yahoo.com/news/spearmint-energy-secures-investment-kyuden-140000036.html"
+    },
+    {
+      "date": "2025-11-25",
+      "category": "market",
+      "headline": "Enverus: ERCOT battery ancillary-service revenue down about 90 per cent since 2023; average revenue USD 149 per kW (2023) to USD 17 per kW (2025 projection); RTC+B due December 2025",
+      "read": "Market context for a fleet that is 100 per cent ERCOT merchant.",
+      "source": "https://www.enverus.com/newsroom/ercot-battery-profits-drop-as-market-saturation-reshapes-texas-storage/"
+    },
+    {
+      "date": "2025-09-23",
+      "category": "policy",
+      "headline": "Waranch in Troutman Pepper Locke's post-OBBBA report and Utility Dive: storage 'remained relatively unscathed', FEOC 'unquestionably a big issue', supplier search across Europe, Japan and Korea since May 2024, 'power prices are going to rise dramatically', and an intent to 'pick up really strong developers on the solar side as well as some queue positions'",
+      "read": "The CEO's own statement of the pipeline-buying strategy and the FEOC exposure.",
+      "source": "https://www.utilitydive.com/news/with-tax-credits-secured-and-price-hikes-looming-battery-storage-is-poised-to-grow/760878/"
+    },
+    {
+      "date": "2025-08-19",
+      "category": "regulatory",
+      "headline": "Minnesota PUC approves the Snowshoe site permit (150 MW / 600 MWh, Olmsted County) — the state's first standalone battery",
+      "read": "First-mover permitting in a market with no standalone-storage precedent; conditions set the template Midwater inherited.",
+      "source": "https://www.energy-storage.news/minnesota-public-utilities-commission-approves-states-first-standalone-bess-project/"
+    },
+    {
+      "date": "2025-08-07",
+      "category": "regulatory",
+      "headline": "Texas City commission unanimously approves Red Egret's development agreement and rezoning (38 acres; about USD 47 million of property tax over 20 years); VP of Development Nick Coil says an earlier proposal was reworked after city feedback",
+      "read": "Even in Texas the binding step for a merchant battery is the city council.",
+      "source": "https://www.galvnews.com/news/texas-city-oks-next-steps-for-300-megawatt-battery-energy-storage-facility/article_e1bb7f03-933e-55e2-a5d9-91998cff3a0d.html"
+    },
+    {
+      "date": "2025-07-14",
+      "category": "policy",
+      "headline": "Waranch op-ed in Utility Dive: 'Will FERC stand up for competitive power markets?' — against utility self-dealing and PJM queue-jumping",
+      "read": "A merchant IPP's policy position, stated in its founder's name.",
+      "source": "https://www.utilitydive.com/news/ferc-competitive-power-markets-ipp-spearmint/752852/"
+    },
+    {
+      "date": "2025-04-17",
+      "category": "financial",
+      "headline": "USD 252 million for Tierra Seca and Seven Flags: Manulife construction-to-term loans (USD 59 million), East West Bank and Investec tax-equity bridge loans (USD 95 million), Sugar Creek tax-equity commitments (USD 98 million); Paul Hastings' release names no hedge, tolling or offtake",
+      "read": "Two merchant batteries financed to COD on tax equity and regional-bank debt.",
+      "source": "https://www.paulhastings.com/news/paul-hastings-advises-spearmint-on-usd252-million-battery-energy-storage-systems-financing"
+    },
+    {
+      "date": "2025-03-31",
+      "category": "project",
+      "headline": "Silverfield (300 MW / 1,200 MWh, Linn County, Kansas) presented to county commissioners; target completion 2028; Kansas batteries not yet eligible for the state's renewable abatement",
+      "read": "First named SPP-territory project; a four-hour design where the ERCOT fleet is two-hour.",
+      "source": "https://www.linncountyjournal.com/post/battery-energy-storage-company-presents-plans-to-commission"
+    },
+    {
+      "date": "2024-11-12",
+      "category": "regulatory",
+      "headline": "Kokomo Plan Commission unanimously denies rezoning for Pumpkinvine (up to 400 MW, Howard County, Indiana) after organised opposition; six-month reapplication bar",
+      "read": "The MISO pipeline's first documented loss, on the same fire-risk grounds Aypa met in Hamilton County eight months later.",
+      "source": "https://www.energy-storage.news/spearmint-energy-400mw-miso-bess-faces-setback-after-rezoning-denial-local-opposition/"
+    },
+    {
+      "date": "2024-09-04",
+      "category": "procurement",
+      "headline": "Sungrow and Spearmint announce a partnership for 'more than 1 GWh of additional' Texas storage through 2025 on PowerTitan 2.0 (Peter Rood and Sungrow's Martial Yu quoted)",
+      "read": "Single-supplier procurement made explicit: every Spearmint battery in Texas is Sungrow.",
+      "source": "https://cleantechnica.com/2024/09/04/sungrow-spearmint-energy-partner-to-add-over-1-gwh-of-energy-storage-capacity-in-texas/"
+    },
+    {
+      "date": "2024-07-23",
+      "category": "financial",
+      "headline": "Elda River Capital Management joins the USD 200 million platform facility with Nuveen and Aiga; company cites a '4.1 GW portfolio' with 'over 1 GW of projects nearing construction' in ERCOT; CFO Cory Magnuson quoted",
+      "read": "Elda River's case study is the source for the company being 'controlled by Roscommon Analytics'.",
+      "source": "https://www.energyglobal.com/energy-storage/23072024/elda-river-to-support-spearmint-energy-in-us-bess-project/"
+    },
+    {
+      "date": "2024-02-02",
+      "category": "financial",
+      "headline": "Nuveen Energy Infrastructure Credit joins Aiga's USD 200 million facility as co-anchor; '2.8 GW' portfolio",
+      "read": "TIAA's infrastructure-credit arm underwrites a merchant platform eighteen months after launch.",
+      "source": "https://www.energyglobal.com/energy-storage/02022024/spearmint-energy-partners-with-nuveen/"
+    },
+    {
+      "date": "2024-01-04",
+      "category": "project",
+      "headline": "Revolution (150 MW / 300 MWh, McCamey) commences commercial operation 'on schedule, within budget' — 134 containers, 6,432 Sungrow modules, 45 PCS, Mortenson EPC; 'our debut grid-scale storage project'",
+      "read": "Eighteen months from acquisition to COD, in ERCOT's best revenue year.",
+      "source": "https://irei.com/news/spearmint-energy-completes-revolution-one-of-the-largest-bess-projects-in-the-u-s/"
+    },
+    {
+      "date": "2023-12-05",
+      "category": "ma",
+      "headline": "Green Eagle (125 MW) and Pumpkinvine (400 MW), early-stage Indiana MISO projects, acquired from BW Solar",
+      "read": "The buy-side pattern: early-stage queue positions bought from a developer that does not build storage.",
+      "source": "https://www.energy-storage.news/spearmint-energy-400mw-miso-bess-faces-setback-after-rezoning-denial-local-opposition/"
+    },
+    {
+      "date": "2023-10-24",
+      "category": "financial",
+      "headline": "USD 92 million of tax equity from Greenprint Capital Management for Revolution — 'one of the first applications' of the standalone-storage ITC",
+      "read": "The IRA credit is what made a merchant battery financeable without a contract.",
+      "source": "https://www.energy-storage.news/spearmint-secures-us92-million-tax-equity-financing-for-300mwh-ercot-bess/"
+    },
+    {
+      "date": "2023-06-13",
+      "category": "financial",
+      "headline": "USD 200 million term loan from Aiga Capital Partners for a '1.2 GW / 2.4 GWh' ERCOT portfolio; advisor Javelin Capital",
+      "read": "The platform facility that every later lender joined.",
+      "source": "https://mercomcapital.com/spearmint-energy-secures-bess-storage-projects-texas/"
+    },
+    {
+      "date": "2023-03-22",
+      "category": "ma",
+      "headline": "'Nomadic' portfolio acquired: 900 MW / 2,000 MWh across three 300 MW projects in Cooke, Galveston and Brazoria Counties from an unnamed 'major developer'; first NTP expected early 2024",
+      "read": "The largest acquisition in the record, and the one whose later status is least visible.",
+      "source": "https://www.utilitydive.com/news/spearmint-storage-bess-acquisition-ercot-texas/645679/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "sungrow",
+      "type": "supplier",
+      "status": "active",
+      "since": "2022-11",
+      "scale": "'more than 1 GWh of additional energy storage capacity … through 2025' (2024 partnership); 149 PowerTitan 2.0 units at Red Egret; all four ERCOT projects",
+      "via": "PowerTitan / PowerTitan 2.0",
+      "note": "Sungrow supplied Revolution (PowerTitan: 6,432 modules, 134 containers, 45 PCS), Tierra Seca and Seven Flags (PowerTitan 2.0) and Red Egret (149 PowerTitan 2.0 units), under a Texas partnership for more than 1 GWh announced in August 2024.",
+      "context": "The relationship is the fleet: every Spearmint battery in Texas is a Sungrow system, and Spearmint's May 2026 release calls Red Egret 'the fourth Spearmint project to use the PowerTitan platform supplied by Sungrow USA'. CleanTechnica's account of the September 2024 partnership quotes Peter Rood and Sungrow's Martial Yu on more than 1 GWh of additional Texas capacity through 2025. The Minnesota projects, by contrast, are designed around Tesla Megapack 2XL. Waranch's statement that the company began 'evaluating suppliers all over the world' in May 2024 for FEOC reasons is the one signal that the concentration may not persist.",
+      "source": "https://cleantechnica.com/2024/09/04/sungrow-spearmint-energy-partner-to-add-over-1-gwh-of-energy-storage-capacity-in-texas/"
+    },
+    {
+      "slug": "mortenson",
+      "type": "supplier",
+      "status": "active",
+      "since": "2022-11",
+      "scale": "four projects, 650 MW / 1,300 MWh",
+      "via": "BESS EPC",
+      "note": "Mortenson built Revolution (EPC signed November 2022, Mortenson's 20th battery project), Tierra Seca and Seven Flags, and is building Red Egret, 'the fourth project built for Spearmint by Minneapolis-based M.A. Mortenson Company'.",
+      "context": "EnergyTech reported the Revolution EPC in December 2022; Spearmint's 12 May 2026 COD release quotes Mortenson's Kevin Boyce (VP and GM, Energy Storage) on Tierra Seca and Seven Flags; the Red Egret financing release names Mortenson as EPC again. Spearmint's second office is in Eden Prairie, Minnesota, near Mortenson's Minneapolis base. No other EPC appears in the record.",
+      "source": "https://finance.yahoo.com/sectors/energy/articles/spearmint-energy-achieves-commercial-operation-130000865.html"
+    },
+    {
+      "slug": "tesla",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2024-10",
+      "scale": "2 × 150 MW / 600 MWh (Snowshoe, Midwater — design basis)",
+      "via": "Megapack 2XL",
+      "note": "Spearmint's Minnesota PUC applications model the Snowshoe and Midwater layouts on Tesla Megapack 2XL enclosures while reserving equipment selection until construction — a design basis in a regulator's record, not a supply contract.",
+      "context": "The Snowshoe application (October 2024) states the preliminary design is based on Tesla Megapack 2 XL 'to allow flexibility during equipment selection'; Energy-Storage.news reports the same basis for Midwater from the MPUC filings. Neither Tesla nor Spearmint has announced an order. It is nonetheless the only non-Sungrow equipment named for any Spearmint project, and the Minnesota permits are the company's only post-ERCOT capacity.",
+      "source": "https://puc.eip.mn.gov/sites/default/files/2025-05/Application%20(1).pdf"
+    },
+    {
+      "slug": "jupiter-power",
+      "type": "competitor",
+      "status": "active",
+      "via": "ERCOT merchant storage",
+      "note": "Modo Energy's 2025 ERCOT buildout report lists Jupiter Power among the ISO's major battery owners alongside Engie, Enel, SMT and Tesla, in a market where Spearmint's 350 MW does not appear in the rankings.",
+      "context": "Spearmint and Jupiter Power run the same business — merchant batteries in ERCOT dispatched by an in-house trading team — at different scale. Modo's annual report puts ERCOT at 13.9 GW / 22.9 GWh entering 2026, with Engie at about 20 per cent share and new entrants including esVolta, Intersect, Gridstor, Nightpeak, TotalEnergies, Eni, Equinor, Brookfield and Tokyo Gas America; Spearmint's 350 MW is about 2.5 per cent of the fleet by arithmetic and is not named.",
+      "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
+    },
+    {
+      "slug": "intersect-power",
+      "type": "competitor",
+      "status": "active",
+      "via": "ERCOT merchant storage",
+      "note": "Modo Energy's 2025 ERCOT buildout report names Intersect among the year's new battery-owner entrants — three 160 MW / 320 MWh merchant batteries on Tesla Autobidder, the same merchant model Spearmint runs on Sungrow.",
+      "context": "Both companies argued the merchant case in the founder's voice — Kimber's 'long-term offtake contracts actually destroy value' and Waranch's 'utilities … are not as focused on deploying critical infrastructure in the regions with the greatest imbalances' — and both financed ERCOT batteries on tax equity and private credit. Intersect's batteries moved to IPX Power in March 2026; the comparison is of models, not a commercial tie.",
+      "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ITC (standalone storage) and tax-credit transferability",
+      "status": "in-effect",
+      "effectiveDate": "2023-01",
+      "exposure": "Revolution's USD 92 million Greenprint tax-equity investment (October 2023) was described by Energy-Storage.news as 'one of the first applications of the new standalone [storage] ITC'; Tierra Seca and Seven Flags carry USD 98 million of Sugar Creek tax-equity commitments bridged by East West Bank and Investec; Red Egret's USD 225 million construction loan is to be repaid at COD partly by about USD 126 million of ITC-transfer proceeds from an unnamed buyer. Waranch: 'we pioneer innovative approaches to monetise tax credits'.",
+      "mitigation": "",
+      "source": "https://www.energy-storage.news/spearmint-secures-us92-million-tax-equity-financing-for-300mwh-ercot-bess/"
+    },
+    {
+      "regime": "OBBBA (HR1) — credit phase-down and FEOC restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2025-07-04",
+      "exposure": "All four ERCOT projects use Sungrow PowerTitan equipment, and the two Minnesota projects are designed around Tesla Megapack 2XL. Waranch, in Troutman Pepper Locke's September 2025 report: storage 'remained relatively unscathed'; FEOC is 'unquestionably a big issue'; 'our team took aggressive action in May 2024 … we started evaluating suppliers all over the world' (Europe, Japan, Korea); investors 'stopped sitting on their wallets' once 'the OBBBA gave people some clarity'. No source quantifies Spearmint's FEOC exposure or names a non-Chinese supplier it has contracted.",
+      "mitigation": "Supplier diversification search begun May 2024 (company statement); no contract announced",
+      "source": "https://www.troutman.com/insights/report-us-energy-storage-firms-acknowledge-heightened-risks-as-battery-market-grows/"
+    },
+    {
+      "regime": "ERCOT market design — ancillary-service saturation and Real-Time Co-optimization plus Batteries (RTC+B)",
+      "status": "in-effect",
+      "effectiveDate": "2025-12",
+      "exposure": "Spearmint's entire operating fleet is merchant ERCOT storage. Modo Energy puts 2025 ERCOT battery revenue at about USD 26–29 per kW against USD 56 per kW in 2024 and USD 193 per kW in 2023, with ancillary-service revenue at USD 0.50 per kW-month in October 2025 against USD 1.52 a year earlier and the West load zone (Revolution's) the strongest at USD 3.4 per kW-month; Enverus puts ancillary-service revenue down about 90 per cent since 2023 with the ancillary share of revenue falling from 84 to 48 per cent, and RTC+B scheduled for December 2025. Modo's outlook cites load growth, thermal retirements, HB 1500 firming and 'volatility swaps, revenue-sharing arrangements' as bridges.",
+      "mitigation": "",
+      "source": "https://modoenergy.com/research/why-were-ercot-battery-revenues-so-low-in-2025-weather-energy-arbitrage-builodout"
+    },
+    {
+      "regime": "Texas SB 6 and HB 1500 (large loads, firming, curtailment)",
+      "status": "in-effect",
+      "effectiveDate": "2025-06",
+      "exposure": "Spearmint's 2026 boilerplate adds 'provide system stability for new large loads' and Waranch reports 'more and more RFPs from tech companies'; HB 1500's firming obligation is one of the revenue drivers Modo names. No Spearmint project is a co-located load and no SB 6 filing names the company.",
+      "mitigation": "",
+      "source": "https://modoenergy.com/research/en/ercot-bess-revenues-outlook-load-growth-thermal-retirements-bridging-solutions"
+    },
+    {
+      "regime": "Minnesota PUC site permitting (first standalone BESS permits in the state)",
+      "status": "in-effect",
+      "effectiveDate": "2025-08",
+      "exposure": "Snowshoe (docket IP-7138/ESS-24-279) received Minnesota's first standalone-battery site permit in August 2025 with emergency-response, water-main and first-responder-training conditions; Midwater (dockets 24-294/24-295) followed on 16 July 2026 with stormwater basins, insurance through decommissioning, a decommissioning and remediation fund and fire-department coordination, after residents 'made their voices heard' (Commissioner Tuma). Both applications state the projects will sell 'on a merchant basis' through a tolling agreement with the affiliated merchant business.",
+      "mitigation": "",
+      "source": "https://puc.eip.mn.gov/web/project/15971"
+    },
+    {
+      "regime": "Local zoning and fire-safety approvals (Indiana, Texas, Kansas, South Dakota)",
+      "status": "in-effect",
+      "effectiveDate": "2024-11-12",
+      "exposure": "Kokomo's plan commission denied Pumpkinvine's rezoning unanimously on 12 November 2024 after a petition of about 1,000 signatures and a hired attorney, citing fire risk and proximity to homes and a BorgWarner plant, with a six-month reapplication bar; Texas City approved Red Egret on 7 August 2025 only after 'a prior proposal was reworked after city feedback' and under a new 'District S-P' battery zoning; Linn County, Kansas noted 'ongoing community debate'; Cloverleaf had no permit application as of November 2024.",
+      "mitigation": "",
+      "source": "https://www.energy-storage.news/spearmint-energy-400mw-miso-bess-faces-setback-after-rezoning-denial-local-opposition/"
+    },
+    {
+      "regime": "FERC competitive-market governance (company advocacy)",
+      "status": "proposed",
+      "effectiveDate": "2025-07-14",
+      "exposure": "Waranch's Utility Dive op-ed asked whether the grid 'will be determined by free market competition or by monopoly utilities', criticised PJM's Reliability Resource Initiative as queue-jumping and called on FERC to 'reaffirm its commitment to market competition — and prevent utility self-dealing'. No FERC market-based-rate authorisation for a Spearmint entity was found (FERC pages returned 403; unverified rather than absent). Regulatory affairs is led by Jack Clark III, ex-NextEra.",
+      "mitigation": "",
+      "source": "https://www.utilitydive.com/news/ferc-competitive-power-markets-ipp-spearmint/752852/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Andrew Waranch",
+      "title": "Founder, President and Chief Executive Officer; Board Member",
+      "photo": "images/execs/spearmint-energy-waranch.jpg",
+      "linkedin": "https://www.linkedin.com/in/andrew-waranch-426142/",
+      "background": [
+        "Founded Spearmint in May 2022; 'nearly 30 years of research, optimization, and portfolio management experience across the electricity power markets' (company bio); started in energy trading and modelling in 1997 (PFI)",
+        "Prior firms per the company: Elustria, Elliott Associates, Deutsche Bank, Merrill Lynch and Constellation Energy; The Org lists a partnership at Curve Alpha Management",
+        "B.S. Applied Economics and Business Management, Dyson School, Cornell; Tamarindo Energy Transition Power List 2025"
+      ]
+    },
+    {
+      "name": "Peter K. Rood",
+      "title": "Chief Development Officer",
+      "photo": "images/execs/spearmint-energy-rood.jpg",
+      "linkedin": "https://www.linkedin.com/in/peter-rood/",
+      "background": [
+        "Named CDO in January 2023; authorised representative on the Minnesota PUC applications",
+        "Led the development of a 3,500 MW battery-storage portfolio at GlidePath Power Solutions; 'more than $4 billion of deployed capital' in storage (company bio)",
+        "RES Americas, NRStor, Acciona Energy, Gamesa Energy; B.S. University of Arizona"
+      ]
+    },
+    {
+      "name": "Nick Vamvakas",
+      "title": "Chief Strategy Officer",
+      "photo": "images/execs/spearmint-energy-vamvakas.jpg",
+      "background": [
+        "Joined September 2022",
+        "16 years at Société Générale, then Investcorp, overseeing 'multi-billion-dollar businesses spanning hedge fund partnerships, special opportunity products, and structuring activities'"
+      ]
+    },
+    {
+      "name": "Tara Young",
+      "title": "General Counsel",
+      "photo": "images/execs/spearmint-energy-young.jpg",
+      "linkedin": "https://www.linkedin.com/in/tara-young-41685356/",
+      "background": [
+        "Joined September 2023",
+        "Senior legal positions at NV Energy, Berkshire Hathaway Energy and Plus Power — 'projects in 25 states with total capacity of 8 GW'",
+        "B.A. Tufts; J.D. University of Washington"
+      ]
+    },
+    {
+      "name": "Michael Weinstein",
+      "title": "Executive Vice President, Head of Corporate Development",
+      "photo": "images/execs/spearmint-energy-weinstein.jpg",
+      "linkedin": "https://www.linkedin.com/in/michael-weinstein-erp-6715143/",
+      "background": [
+        "Joined January 2025 as SVP and Head of Investor Relations; promoted May 2026",
+        "Head of Investor Relations — SunPower; led utilities and alternative-energy equity research at Credit Suisse; portfolio manager at UBS O'Connor; Zimmer Lucas Partners; Goldman Sachs; electric tolling-contract originator at Allegheny Energy (2000)",
+        "B.S. Physics, US Naval Academy; M.A. Georgetown"
+      ]
+    },
+    {
+      "name": "Yelena Kuznetsova",
+      "title": "Chief Marketing Communications Officer",
+      "photo": "images/execs/spearmint-energy-kuznetsova.jpg",
+      "linkedin": "https://www.linkedin.com/in/yelena-kuznetsova-bb80777/",
+      "background": [
+        "Joined 2023 as Director of Sustainability and ESG; appointed CMCO May 2026",
+        "Senior marketing and investor-relations roles in capital markets and asset management (Batteries News: ex-Capital Dynamics SVP); began at Société Générale CIB equity derivatives",
+        "B.A. Cornell; Yale School of Management Sustainable Finance"
+      ]
+    },
+    {
+      "name": "Loraine Farberg",
+      "title": "Chief People Officer",
+      "photo": "images/execs/spearmint-energy-farberg.jpg",
+      "linkedin": "https://www.linkedin.com/in/loraine-farberg-35a04787",
+      "background": [
+        "Bridgewater Associates (vendor, relationship and talent management); Director, Kindred Partners"
+      ]
+    },
+    {
+      "name": "Cyanne Senra",
+      "title": "Chief Accounting Officer",
+      "photo": "images/execs/spearmint-energy-senra.jpg",
+      "linkedin": "https://www.linkedin.com/in/cyanne-senra-cpa-6a52071ba/",
+      "background": [
+        "More than 25 years of accounting experience; corporate controller of a development and construction management company; began at KPMG; Florida CPA",
+        "No CFO is listed on the 2026 team page — Cory Magnuson, CFO from May 2023 and quoted in the July 2024 lender release, no longer appears, and a successor is not announced. Collection gap."
+      ]
+    },
+    {
+      "name": "Nick Dazzo",
+      "title": "Managing Director, Head of Optimization",
+      "photo": "images/execs/spearmint-energy-dazzo.jpg",
+      "linkedin": "https://www.linkedin.com/in/nicholas-dazzo-502b098/",
+      "background": [
+        "'Focuses on contracting for battery offtake and associated risk management activity' (company bio)",
+        "Founded Alpha Power Advisers; head of client energy derivatives at Koch Supply & Trading; energy economist and strategist at J.P. Morgan; M.A. Economics, NYU"
+      ]
+    },
+    {
+      "name": "Jason Gran",
+      "title": "Managing Director, Head of Research",
+      "photo": "images/execs/spearmint-energy-gran.jpg",
+      "linkedin": "https://www.linkedin.com/in/jason-gran-3b9b2885/",
+      "background": [
+        "Wärtsilä Energy Storage and Optimization business (prior); Ph.D. Physics, UC Santa Barbara"
+      ]
+    },
+    {
+      "name": "Gina Wolf",
+      "title": "Senior Vice President, Strategy and Project Development",
+      "photo": "images/execs/spearmint-energy-wolf.jpg",
+      "linkedin": "https://www.linkedin.com/in/wolfgina",
+      "background": [
+        "Project strategy, M&A and greenfield development; 'more than 2 GW of wind, solar, and co-located battery storage projects constructed' (company bio)"
+      ]
+    },
+    {
+      "name": "Jeff Jackson",
+      "title": "Senior Vice President, Project Execution",
+      "photo": "images/execs/spearmint-energy-jackson.jpg",
+      "linkedin": "https://www.linkedin.com/in/jeff--jackson",
+      "background": [
+        "Renewables and data-centre site development; formed and led site development, EPC and origination teams for a data-centre start-up; B.A. Saint John's University (Minnesota)"
+      ]
+    },
+    {
+      "name": "Omar Longou",
+      "title": "Vice President, Commercial Operations",
+      "photo": "images/execs/spearmint-energy-longou.jpg",
+      "linkedin": "https://www.linkedin.com/in/omar-longou-8077768a/",
+      "background": [
+        "Joined December 2022 as Director of Commercial Operations",
+        "Siemens Gamesa Renewable Energy (execution and pre-sales technical project management, turbine supply agreements); B.S. Mechanical Engineering, Iowa State"
+      ]
+    },
+    {
+      "name": "Jack Clark III",
+      "title": "Director of Regulatory and Legislative Affairs",
+      "photo": "images/execs/spearmint-energy-clark.jpg",
+      "linkedin": "https://www.linkedin.com/in/jack-clark-iii-5983278/",
+      "background": [
+        "Joined December 2022 as Director of Regulatory — ERCOT and SPP",
+        "NextEra Energy Resources — operations, then nine years of regulatory and legislative affairs; earlier Entergy Services, Commonwealth Edison, Florida Power & Light; Tulane MBA"
+      ]
+    },
+    {
+      "name": "Kevin Kelley",
+      "title": "Chairman of the Board",
+      "photo": "images/execs/spearmint-energy-kelley.jpg",
+      "background": [
+        "Founder and president of Roscommon Analytics — 'investment management firm focused on the energy markets, specializing in power optimization including FTRs and congestion'; lender Elda River states Spearmint is 'controlled by Roscommon Analytics'",
+        "Ohio State B.S.; Harvard MBA"
+      ]
+    },
+    {
+      "name": "Alex Hocherman",
+      "title": "Board Member",
+      "photo": "images/execs/spearmint-energy-hocherman.jpg",
+      "background": [
+        "Partner, Bain Capital (joined 2002; co-head of Partnership Strategies); Bain & Company; Quadrangle Group; Wharton MBA"
+      ]
+    },
+    {
+      "name": "Andrew Kidd",
+      "title": "Board Member",
+      "photo": "images/execs/spearmint-energy-kidd.jpg",
+      "background": [
+        "EVP and General Counsel of El Paso Corporation's merchant energy business and of Constellation Energy's merchant businesses; CEO Samson Resources; independent director of ten energy companies"
+      ]
+    },
+    {
+      "name": "Brian McShane",
+      "title": "Board Member",
+      "photo": "images/execs/spearmint-energy-mcshane.jpg",
+      "background": [
+        "Partner and Sector Head, Encompass Capital Advisors (12 years); HTX Energy Capital Management; Sound Energy Capital; RBC Capital Markets"
+      ]
+    },
+    {
+      "name": "Dwight Poler",
+      "title": "Board Member",
+      "photo": "images/execs/spearmint-energy-poler.jpg",
+      "background": [
+        "Founder and CEO, AccelR8 Ventures; former Bain Capital partner who ran European private equity for 18 years and remains a senior adviser; Bain & Company; Morgan Stanley M&A"
+      ]
+    },
+    {
+      "name": "John Rittenhouse",
+      "title": "Board Member",
+      "background": [
+        "Senior Advisor to the CEO, Roscommon Analytics; founder and 21-year CEO of EDF Trading"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Capital formation and disclosed facilities (2022–2026)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No financial statement, trading result or asset-level revenue has been published. Aggregator figures are excluded."
+          },
+          {
+            "name": "Operating capacity (company boilerplate, May 2026)",
+            "actual": "'Operates 350 MW / 700 MWh in ERCOT' with 'an additional 300 MW / 600 MWh under construction'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Three operating projects plus Red Egret; the operating fleet's revenue is exposed to ERCOT's 2025 trough (Modo: about USD 26–29 per kW in 2025 against USD 193 per kW in 2023).",
+            "kpi": "mw-energized",
+            "qty": 350
+          },
+          {
+            "name": "Platform debt facility",
+            "actual": "USD 325 million (23 June 2026) — Nuveen Energy Infrastructure Credit, Elda River, Harrison Street, Aiga; up from the USD 200 million Aiga term loan of June 2023",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release with lender quotes; tenor and pricing undisclosed."
+          },
+          {
+            "name": "Project financings closed",
+            "actual": "USD 92 million tax equity (Revolution, 2023); USD 252 million (Tierra Seca and Seven Flags, April 2025); about USD 450 million (Red Egret, May 2026); Kyuden International project equity (January 2026, undisclosed)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Per company releases and counsel (Paul Hastings, K&L Gates). The Red Egret ITC-transfer buyer is unnamed."
+          },
+          {
+            "name": "Corporate equity",
+            "actual": "Not disclosed — no round, valuation or sponsor commitment announced",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lender Elda River states the company is controlled by Roscommon Analytics; no Blackstone or other sponsor relationship exists in any source read."
+          },
+          {
+            "name": "Headcount",
+            "actual": "'Over 70' (January 2026), 'over 60' (May–June 2026), 'over 50' (July 2026) per company boilerplate; 34 per PFI (2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Loosely stated."
+          }
+        ],
+        "commentary": "Spearmint publishes no accounts. The stack that can be read from releases — a USD 325 million platform facility, roughly USD 800 million of project-level debt, tax equity and credit transfer, and one undisclosed strategic equity sale — is a merchant developer's, and the two figures that would test it (ERCOT revenue per kW at Revolution, and the price Kyuden paid) are not public. 'Expected' is left empty throughout; no consensus or guidance exists."
+      }
+    ],
+    "commentary": "What is knowable: the company has financed four ERCOT batteries totalling 650 MW / 1,300 MWh without a named offtaker, using tax equity, bank construction loans, private-credit platform debt, preferred equity and a credit transfer. What is not: revenue, dispatch performance, the owner's identity in the company's own words, or who bought the Red Egret credits."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Spearmint is a develop-to-hold merchant owner, not a develop-to-sell developer. Basis: every boilerplate since 2024 reads 'developing, owning, operating, and optimizing'; the only sell-side transaction in the record is a partial post-COD equity sale to Kyuden; the pipeline was assembled by buying other developers' projects (Con Edison Development, the 'Nomadic' seller, BW Solar), not by selling its own. The brief's develop-to-sell framing should be read as the model Spearmint buys from, not the one it runs.",
+    "(High confidence) We assess that no sponsor stands behind the company in the way the brief supposed. Basis: no Blackstone reference exists in any source; the company names no owner; the single ownership statement is Elda River's 'controlled by Roscommon Analytics'; the board carries two Bain Capital-affiliated directors and an Encompass Capital partner without any stated shareholding. The capital is debt and tax equity, not sponsor equity.",
+    "(Moderate confidence) We assess that the fleet's realised revenue in 2025–2026 is well below what it was underwritten on, and that the June 2026 facility expansion is partly a liquidity response. Basis: Modo's and Enverus's 2025 ERCOT figures (revenue down about 84 per cent from 2023; ancillary revenue down about 90 per cent), the timing of Tierra Seca and Seven Flags' COD in December 2025, and the USD 325 million facility described as 'growth capital' for the operating and development portfolios. No Spearmint revenue figure exists to confirm it.",
+    "(Moderate confidence) We assess that the 'over 15 GWh' pipeline is a development-stage inventory, most of it early, and that its removal from the boilerplate on 21 May 2026 was deliberate. Basis: the identifiable pieces sum to 1.3 GWh operating or under construction, 1.2 GWh permitted, and Indiana, Kansas and South Dakota projects at pre-permit stage; the figure rose from 10 to 13 to 15 GWh in eighteen months as headcount fell from 'over 70' to 'over 50'; the company has never itemised it.",
+    "(Moderate confidence) We assess that supplier concentration in Sungrow is the fleet's largest policy exposure and that the May 2024 supplier search has not yet produced a contract. Basis: four of four ERCOT projects on PowerTitan; the Minnesota designs on Tesla Megapack 2XL as a basis only; Waranch's own statement that FEOC is 'unquestionably a big issue'; no non-Chinese order announced.",
+    "(Low confidence) We assess that the trading arm does not toll third-party batteries, despite the 2022 thesis. Basis: no third-party customer, FERC market-based-rate record or ERCOT QSE registration was found, and the only tolling language is between a project company and 'its affiliated merchant energy business'. The FERC record was unreadable, so this is an absence of evidence.",
+    "Indicators to watch: (1) Red Egret's COD against the 2027 company date and the 31 August 2026 interconnection-agreement date reported by Energy-Storage.news — a slip past 2027 would indicate construction-loan stress; (2) the name of the Red Egret ITC buyer or any FEOC-compliant supply contract, which would resolve the concentration judgment; (3) a named CFO, and any restatement of headcount above 'over 50'; (4) a first MISO financing for Snowshoe or Midwater (construction stated for Q1 2027) — a third-party tolling counterparty in that financing would refute the captive-tolling judgment; (5) Kyuden or another utility taking a further stake, or a whole-project sale, which would move the company toward develop-to-sell; (6) ERCOT revenue recovery signals Modo names — RTC+B, HB 1500 firming, load growth — against which the 2027 fleet of 1.3 GWh is levered."
+  ],
+  "sources": [
+    {
+      "label": "Renewable Energy Magazine — Spearmint secures nearly USD 450 million project financing (recap)",
+      "url": "https://www.renewableenergymagazine.com/storage/spearmint-energy-secures-nearly-450m-project-financing-20260722",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "Energy-Storage.news — Spearmint receives permit for 600 MWh Minnesota BESS (Midwater)",
+      "url": "https://www.energy-storage.news/spearmint-energy-receives-permit-for-600mwh-minnesota-bess/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "Interesting Engineering — US firm wins permission for Minnesota battery project",
+      "url": "https://interestingengineering.com/energy/us-firm-permission-minnesota-battery-project",
+      "date": "2026-07-18"
+    },
+    {
+      "label": "KAAL-TV — Minnesota approves Freeborn County battery storage project with new safety requirements",
+      "url": "https://www.kaaltv.com/news/top-news/minnesota-approves-freeborn-county-battery-storage-project-with-new-safety-requirements/",
+      "date": "2026-07-17"
+    },
+    {
+      "label": "Spearmint release (Business Wire, via 01net mirror) — site permit for 600 MWh battery storage in MISO (Midwater)",
+      "url": "https://www.01net.it/spearmint-energy-secures-site-permit-for-600-mwh-battery-energy-storage-in-miso/",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "Mercom — Spearmint secures USD 325 million for battery storage portfolio",
+      "url": "https://mercomcapital.com/spearmint-energy-secures-325-million-for-battery-storage-portfolio/",
+      "date": "2026-06-26"
+    },
+    {
+      "label": "Secured Finance Network — Spearmint secures USD 325 million debt facility",
+      "url": "https://www.sfnet.com/home/industry-data-publications/the-secured-lender/tsl-express-daily-articles-news/tsl-express-daily-articles-news/2026/06/24/spearmint-energy-secures--325-million-debt-facility-to-accelerate-next-generation-energy-storage",
+      "date": "2026-06-24"
+    },
+    {
+      "label": "Spearmint release (Business Wire, via Yahoo Finance) — USD 325 million debt facility",
+      "url": "https://finance.yahoo.com/news/spearmint-energy-secures-325-million-130000332.html",
+      "date": "2026-06-23"
+    },
+    {
+      "label": "Batteries News — Spearmint appoints Yelena Kuznetsova as Chief Marketing Communications Officer",
+      "url": "https://batteriesnews.com/spearmint-energy-appoints-yelena-kuznetsova-as-chief-marketing-communications-officer/",
+      "date": "2026-05-29"
+    },
+    {
+      "label": "Mercom — Spearmint secures USD 450 million for Texas battery storage project",
+      "url": "https://mercomcapital.com/spearmint-energy-secures-450-million-texas-battery-storage-project/",
+      "date": "2026-05-25"
+    },
+    {
+      "label": "ESS News — Spearmint closes USD 450 million for 600 MWh ERCOT project",
+      "url": "https://www.ess-news.com/2026/05/22/bess-financing-spearmint-closes-450-million-for-600-mwh-ercot-project-powerbank-leases-60-mwh-across-new-york/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "Power Technology — Spearmint Energy USD 450 million Red Egret BESS",
+      "url": "https://www.power-technology.com/news/spearmint-energy-450m-red-egret-bess/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "Spearmint release (Business Wire, via Yahoo Finance) — approximately USD 450 million for Red Egret",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/spearmint-energy-secures-approximately-450-130000620.html",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Energy-Storage.news — Spearmint secures USD 450 million for 600 MWh Texas BESS project",
+      "url": "https://www.energy-storage.news/spearmint-energy-secures-us450-million-for-600mwh-texas-bess-project/",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "POWER — Spearmint secures USD 450 million in financing for Texas BESS project",
+      "url": "https://www.powermag.com/spearmint-energy-secures-450-million-in-financing-for-texas-bess-project/",
+      "date": "2026-05"
+    },
+    {
+      "label": "Advanced Power Alliance — Spearmint achieves commercial operation for 400 MWh across two ERCOT projects (release copy)",
+      "url": "https://poweralliance.org/2026/05/20/spearmint-energy-achieves-commercial-operation-for-400-mwh-of-battery-energy-storage-across-two-projects-in-ercot/",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "Energy-Storage.news — US roundup: Spearmint, Polaris and Clearway (Tierra Seca and Seven Flags COD; site provenance)",
+      "url": "https://www.energy-storage.news/us-roundup-bess-project-updates-from-spearmint-polaris-and-clearway-in-texas-puerto-rico-and-utah/",
+      "date": "2026-05-13"
+    },
+    {
+      "label": "Spearmint release (Business Wire, via Yahoo Finance) — commercial operation for 400 MWh across two ERCOT projects",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/spearmint-energy-achieves-commercial-operation-130000865.html",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "Modo Energy — ERCOT BESS revenues outlook: load growth, thermal retirements, bridging solutions",
+      "url": "https://modoenergy.com/research/en/ercot-bess-revenues-outlook-load-growth-thermal-retirements-bridging-solutions",
+      "date": "2026-02-04"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery buildout 2025 annual report",
+      "url": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+      "date": "2026-02-02"
+    },
+    {
+      "label": "K&L Gates — advises Kyuden in its investment in Spearmint Energy (two battery projects)",
+      "url": "https://www.klgates.com/KL-Gates-Advises-Kyuden-in-its-Investment-in-Spearmint-Energy-Regarding-Two-Battery-Energy-Storage-Projects-1-14-2026",
+      "date": "2026-01-14"
+    },
+    {
+      "label": "Energy Global — Spearmint secures investment for 400 MWh across two projects (Kyuden)",
+      "url": "https://www.energyglobal.com/energy-storage/08012026/spearmint-energy-secures-investment-for-400-mwh-battery-energy-storage-across-two-projects/",
+      "date": "2026-01-08"
+    },
+    {
+      "label": "Pulse 2.0 — Spearmint lands Kyuden equity investment for two 200 MWh ERCOT projects",
+      "url": "https://pulse2.com/spearmint-energy-lands-kyuden-equity-investment-for-two-200-mwh-ercot-battery-projects/",
+      "date": "2026-01-08"
+    },
+    {
+      "label": "Spearmint release (Business Wire, via Yahoo Finance) — investment from Kyuden International",
+      "url": "https://finance.yahoo.com/news/spearmint-energy-secures-investment-kyuden-140000036.html",
+      "date": "2026-01-07"
+    },
+    {
+      "label": "IREI — Spearmint secures investment from Kyuden International for 400 MWh BESS projects in Texas",
+      "url": "https://irei.com/news/spearmint-energy-secures-investment-from-kyuden-international-for-400mwh-bess-projects-in-texas/",
+      "date": "2026-01-07"
+    },
+    {
+      "label": "Modo Energy — why were ERCOT battery revenues so low in 2025",
+      "url": "https://modoenergy.com/research/why-were-ercot-battery-revenues-so-low-in-2025-weather-energy-arbitrage-builodout",
+      "date": "2025-12"
+    },
+    {
+      "label": "Enverus — ERCOT battery profits drop as market saturation reshapes Texas storage",
+      "url": "https://www.enverus.com/newsroom/ercot-battery-profits-drop-as-market-saturation-reshapes-texas-storage/",
+      "date": "2025-11"
+    },
+    {
+      "label": "ESS News — battery storage revenues for ancillary services fall nearly 90 per cent in ERCOT",
+      "url": "https://www.ess-news.com/2025/11/25/battery-energy-storage-revenues-for-ancillary-services-fall-nearly-90-in-ercot/",
+      "date": "2025-11-25"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery benchmark report, October 2025",
+      "url": "https://modoenergy.com/research/en/ercot-battery-benchmark-report-october-2025-battery-energy-storage-revenues-capture-rates",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery buildout report Q3 2025",
+      "url": "https://modoenergy.com/research/en/ercot-battery-buildout-report-q3-2025",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "ESS News — storage is the winner in the post-OBBBA energy space (Waranch)",
+      "url": "https://www.ess-news.com/2025/09/29/storage-is-the-winner-in-the-post-obbba-energy-space/",
+      "date": "2025-09-29"
+    },
+    {
+      "label": "Proximo — 20 minutes with Andrew Waranch, Spearmint Energy",
+      "url": "https://www.proximoinfra.com/articles/8481/20-minutes-with-andrew-waranch-spearmint-energy",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "Utility Dive — with tax credits secured and price hikes looming, battery storage is poised to grow (Waranch)",
+      "url": "https://www.utilitydive.com/news/with-tax-credits-secured-and-price-hikes-looming-battery-storage-is-poised-to-grow/760878/",
+      "date": "2025-09-23"
+    },
+    {
+      "label": "Troutman Pepper Locke — report: US energy storage firms acknowledge heightened risks as battery market grows",
+      "url": "https://www.troutman.com/insights/report-us-energy-storage-firms-acknowledge-heightened-risks-as-battery-market-grows/",
+      "date": "2025-09"
+    },
+    {
+      "label": "Troutman Pepper Locke — What's Next for US Energy Storage After OBBBA (PDF)",
+      "url": "https://www.troutman.com/wp-content/uploads/2025/09/Whats-Next-for-US-Energy-Storage-After-OBBBA.pdf",
+      "date": "2025-09"
+    },
+    {
+      "label": "POWER — battery storage comes of age: from grid accessory to essential infrastructure (Waranch)",
+      "url": "https://www.powermag.com/battery-storage-comes-of-age-from-grid-accessory-to-essential-infrastructure/",
+      "date": "2025-09"
+    },
+    {
+      "label": "IESNA — Minnesota greenlights first-of-its-kind energy storage milestone (Snowshoe)",
+      "url": "https://www.iesna.com/news-insights/minnesota-greenlights-first-of-its-kind-energy-storage-milestone/",
+      "date": "2025-08-25"
+    },
+    {
+      "label": "Energy-Storage.news — Minnesota PUC approves state's first standalone BESS project (Snowshoe)",
+      "url": "https://www.energy-storage.news/minnesota-public-utilities-commission-approves-states-first-standalone-bess-project/",
+      "date": "2025-08-19"
+    },
+    {
+      "label": "MPR News — first standalone battery system approved in Minnesota",
+      "url": "https://www.mprnews.org/story/2025/08/16/first-standalone-battery-system-approved-in-minnesota",
+      "date": "2025-08-16"
+    },
+    {
+      "label": "Galveston County Daily News — Texas City OKs next steps for 300 MW battery facility (Red Egret)",
+      "url": "https://www.galvnews.com/news/texas-city-oks-next-steps-for-300-megawatt-battery-energy-storage-facility/article_e1bb7f03-933e-55e2-a5d9-91998cff3a0d.html",
+      "date": "2025-08-07"
+    },
+    {
+      "label": "Utility Dive — Waranch op-ed: will FERC stand up for competitive power markets?",
+      "url": "https://www.utilitydive.com/news/ferc-competitive-power-markets-ipp-spearmint/752852/",
+      "date": "2025-07-14"
+    },
+    {
+      "label": "Secured Finance Network — Spearmint secures over USD 250 million financing for 400 MWh across two projects",
+      "url": "https://www.sfnet.com/home/industry-data-publications/the-secured-lender/tsl-express-daily-articles-news/tsl-express-daily-articles-news/2025/04/21/spearmint-energy-secures-over-$250-million-financing-for-400-mwh-of-battery-energy-storage-across-two-projects",
+      "date": "2025-04-21"
+    },
+    {
+      "label": "Paul Hastings — advises Spearmint on USD 252 million battery energy storage financing",
+      "url": "https://www.paulhastings.com/news/paul-hastings-advises-spearmint-on-usd252-million-battery-energy-storage-systems-financing",
+      "date": "2025-04-17"
+    },
+    {
+      "label": "Energy-Storage.news — Spearmint secures USD 250 million for two Texas BESS totalling 400 MWh",
+      "url": "https://www.energy-storage.news/spearmint-energy-secures-us250-million-for-two-texas-bess-totalling-400mwh/",
+      "date": "2025-04-17"
+    },
+    {
+      "label": "Power Technology — Spearmint USD 250 million battery storage financing",
+      "url": "https://www.power-technology.com/news/spearmint-energy-250m-battery-storage/",
+      "date": "2025-04-17"
+    },
+    {
+      "label": "Linn County Journal — battery energy storage company presents plans to commission (Silverfield)",
+      "url": "https://www.linncountyjournal.com/post/battery-energy-storage-company-presents-plans-to-commission",
+      "date": "2025-03-31"
+    },
+    {
+      "label": "Energy-Storage.news — Spearmint 400 MW MISO BESS faces setback after rezoning denial (Pumpkinvine)",
+      "url": "https://www.energy-storage.news/spearmint-energy-400mw-miso-bess-faces-setback-after-rezoning-denial-local-opposition/",
+      "date": "2024-11"
+    },
+    {
+      "label": "Kokomo Tribune via Yahoo — proposed BESS halted by Kokomo Plan Commission",
+      "url": "https://www.yahoo.com/news/proposed-bess-halted-kokomo-plan-231600914.html",
+      "date": "2024-11"
+    },
+    {
+      "label": "SD News Watch — large lithium batteries, rural solar and wind power (Cloverleaf)",
+      "url": "https://www.sdnewswatch.org/large-lithium-batteries-rural-solar-wind-power/",
+      "date": "2024-11"
+    },
+    {
+      "label": "Kokomo Tribune via Yahoo — proposed battery energy storage system runs into opposition",
+      "url": "https://www.yahoo.com/news/proposed-battery-energy-storage-system-094600250.html",
+      "date": "2024-10-15"
+    },
+    {
+      "label": "Energy-Storage.news — NextEra, Primergy, Spearmint seek Minnesota approval for 300 MW of BESS (Snowshoe tolling language)",
+      "url": "https://www.energy-storage.news/nextera-primergy-spearmint-seek-minnesota-regulators-approval-for-300mw-of-bess-projects/",
+      "date": "2024-10"
+    },
+    {
+      "label": "Minnesota PUC — Snowshoe BESS, LLC site permit application (docket IP-7138/ESS-24-279)",
+      "url": "https://puc.eip.mn.gov/sites/default/files/2025-05/Application%20(1).pdf",
+      "date": "2024-10"
+    },
+    {
+      "label": "CleanTechnica — Sungrow and Spearmint partner to add over 1 GWh of storage in Texas",
+      "url": "https://cleantechnica.com/2024/09/04/sungrow-spearmint-energy-partner-to-add-over-1-gwh-of-energy-storage-capacity-in-texas/",
+      "date": "2024-09-04"
+    },
+    {
+      "label": "Renewable Energy World — more battery storage is coming to Texas: Spearmint and Sungrow team up again",
+      "url": "https://www.renewableenergyworld.com/energy-storage/battery/more-battery-storage-is-coming-to-texas-spearmint-and-sungrow-team-up-again/",
+      "date": "2024-08-26"
+    },
+    {
+      "label": "Power Technology — Elda River joins Spearmint USD 200 million funding for BESS development",
+      "url": "https://www.power-technology.com/news/elda-river-joins-spearmint-200mn-funding-for-bess-development/",
+      "date": "2024-07-24"
+    },
+    {
+      "label": "Energy Global — Elda River to support Spearmint Energy in US BESS project (release copy; CFO Magnuson quoted)",
+      "url": "https://www.energyglobal.com/energy-storage/23072024/elda-river-to-support-spearmint-energy-in-us-bess-project/",
+      "date": "2024-07-23"
+    },
+    {
+      "label": "IREI — Shop talk: a conversation with Andrew Waranch",
+      "url": "https://irei.com/publications/article/shop-talk-a-conversation-with-andrew-waranch/",
+      "date": "2024-03-01"
+    },
+    {
+      "label": "Mercom — Spearmint announces USD 200 million enhanced credit facility (Nuveen)",
+      "url": "https://mercomcapital.com/spearmint-energy-announces-200-million-enhanced-credit-facility/",
+      "date": "2024-02-06"
+    },
+    {
+      "label": "Energy Global — Spearmint Energy partners with Nuveen (release copy)",
+      "url": "https://www.energyglobal.com/energy-storage/02022024/spearmint-energy-partners-with-nuveen/",
+      "date": "2024-02-02"
+    },
+    {
+      "label": "Tamarindo — Nuveen joins Aiga in providing USD 200 million credit facility to Spearmint",
+      "url": "https://tamarindo.global/stories/nuveen-joins-aiga-in-providing-200m-credit-facility-to-storage-developer-spearmint-energy/",
+      "date": "2024-02-02"
+    },
+    {
+      "label": "inspiratia — Q&A: Spearmint Energy, navigating the battery energy storage sector (Waranch)",
+      "url": "https://inspiratia.com/article/qa-spearmint-energy-navigating-the-battery-energy-storage-sector-",
+      "date": "2024-01-15"
+    },
+    {
+      "label": "ESG Dive — Spearmint brings Texas battery storage plant online",
+      "url": "https://www.esgdive.com/news/spearmint-energy-brings-texas-battery-energy-storage-plant-online/704072/",
+      "date": "2024-01"
+    },
+    {
+      "label": "Utility Dive — Spearmint brings Texas battery energy storage plant online (Revolution)",
+      "url": "https://www.utilitydive.com/news/spearmint-energy-brings-texas-battery-energy-storage-plant-online/704319/",
+      "date": "2024-01"
+    },
+    {
+      "label": "IREI — Spearmint completes Revolution, one of the largest BESS projects in the US (release copy)",
+      "url": "https://irei.com/news/spearmint-energy-completes-revolution-one-of-the-largest-bess-projects-in-the-u-s/",
+      "date": "2024-01-04"
+    },
+    {
+      "label": "Solar Builder — First Citizens, Spearmint funding storage projects (Greenprint tax equity)",
+      "url": "https://solarbuildermag.com/projects/first-citizens-spearmint-funding-storage-projects-solar-financing-spotlight/",
+      "date": "2023-11-01"
+    },
+    {
+      "label": "Energy-Storage.news — Spearmint secures USD 92 million tax equity for 300 MWh ERCOT BESS",
+      "url": "https://www.energy-storage.news/spearmint-secures-us92-million-tax-equity-financing-for-300mwh-ercot-bess/",
+      "date": "2023-10-24"
+    },
+    {
+      "label": "Power Technology — Spearmint BESS project in Texas (Revolution energisation and commissioning)",
+      "url": "https://www.power-technology.com/news/spearmint-bess-project-texas/",
+      "date": "2023-07-27"
+    },
+    {
+      "label": "Energy-Storage.news — the future of battery trading: AI optimisation (Spearmint byline)",
+      "url": "https://www.energy-storage.news/the-future-of-battery-trading-addressing-the-risks-and-rewards-of-ai-optimisation/",
+      "date": "2023-07-25"
+    },
+    {
+      "label": "Mercom — Spearmint secures USD 200 million term loan for BESS projects in Texas (Aiga)",
+      "url": "https://mercomcapital.com/spearmint-energy-secures-bess-storage-projects-texas/",
+      "date": "2023-06-13"
+    },
+    {
+      "label": "Paul Hastings — advised Spearmint in acquisition of battery energy storage assets (Nomadic)",
+      "url": "https://www.paulhastings.com/news/paul-hastings-advised-spearmint-energy-in-acquisition-of-battery-energy",
+      "date": "2023-03-23"
+    },
+    {
+      "label": "Utility Dive — Spearmint expands ERCOT storage portfolio with 900 MW acquisition",
+      "url": "https://www.utilitydive.com/news/spearmint-storage-bess-acquisition-ercot-texas/645679/",
+      "date": "2023-03-22"
+    },
+    {
+      "label": "Energy-Storage.news — Spearmint buys 900 MW BESS portfolio in ERCOT",
+      "url": "https://www.energy-storage.news/spearmint-energy-buys-900mw-bess-portfolio-in-ercot/",
+      "date": "2023-03"
+    },
+    {
+      "label": "EnergyTech — Spearmint, Mortenson building 150 MW battery storage project in West Texas",
+      "url": "https://www.energytech.com/energy-storage/article/21256703/spearmint-energy-mortenson-building-150-mw-battery-energy-storage-project-in-west-texas",
+      "date": "2022-12"
+    },
+    {
+      "label": "IREI — Spearmint bolsters team with four new senior hires",
+      "url": "https://irei.com/news/spearmint-energy-bolsters-team-with-four-new-senior-hires/",
+      "date": "2022-12-06"
+    },
+    {
+      "label": "Mercom — Spearmint acquires 150 MW (Revolution) from Con Edison Development",
+      "url": "https://mercomcapital.com/spearmint-energy-acquires-150-mw/",
+      "date": "2022-08-01"
+    },
+    {
+      "label": "Energy Global — Spearmint acquires US energy storage project (Revolution)",
+      "url": "https://www.energyglobal.com/energy-storage/29072022/spearmint-energy-acquires-us-energy-storage-project/",
+      "date": "2022-07-29"
+    },
+    {
+      "label": "Energy-Storage.news — Waranch op-ed: investments in energy storage can fix our broken power grid",
+      "url": "https://www.energy-storage.news/investments-in-energy-storage-can-fix-our-broken-power-grid-and-drive-the-clean-energy-transition/",
+      "date": "2022-07-11"
+    },
+    {
+      "label": "PFI Yearbook 2024 — Spearmint brings trading focus to batteries",
+      "url": "https://www.pfie.com/pfi-awards/1491726/spearmint-brings-trading-focus-to-batteries"
+    },
+    {
+      "label": "Elda River Capital Management — portfolio: Spearmint ('controlled by Roscommon Analytics')",
+      "url": "https://www.eldariver.com/portfolio/spearmint"
+    },
+    {
+      "label": "Minnesota PUC — Midwater project page (dockets 24-294 / 24-295)",
+      "url": "https://puc.eip.mn.gov/web/project/15971"
+    },
+    {
+      "label": "interconnection.fyi — ERCOT queue 23INR0364 Tierra Seca",
+      "url": "https://www.interconnection.fyi/project/ercot-23inr0364"
+    },
+    {
+      "label": "Equilar — Spearmint Energy executive profiles",
+      "url": "https://people.equilar.com/bio/org/spearmint-energy/16649789"
+    },
+    {
+      "label": "The Org — Spearmint Energy org chart (Andrew Waranch)",
+      "url": "https://theorg.com/org/spearmint-energy/org-chart/andrew-waranch"
+    },
+    {
+      "label": "Energy Storage Summit — speaker: Andrew Waranch",
+      "url": "https://storagesummit.solarenergyevents.com/speaker/andrew-waranch/"
+    },
+    {
+      "label": "Cloverleaf Battery — project site (Brookings County, SD)",
+      "url": "https://www.cloverleafbattery.com/"
+    },
+    {
+      "label": "Greenhouse — Power Energy Storage Trader (Miami) job posting",
+      "url": "https://job-boards.greenhouse.io/spearmintenergy/jobs/4315201009"
+    },
+    {
+      "label": "Greenhouse — Manager, Development Operations (Eden Prairie) job posting",
+      "url": "https://job-boards.greenhouse.io/spearmintenergy/jobs/4330186009"
+    },
+    {
+      "label": "Greenhouse API — Spearmint Energy open roles",
+      "url": "https://boards-api.greenhouse.io/v1/boards/spearmintenergy/jobs"
+    },
+    {
+      "label": "Spearmint — home page",
+      "url": "https://spearmintenergy.com/"
+    },
+    {
+      "label": "Spearmint — Our Projects (350 MW / 700 MWh operating; why merchant)",
+      "url": "https://spearmintenergy.com/our-projects/"
+    },
+    {
+      "label": "Spearmint — Who We Are",
+      "url": "https://spearmintenergy.com/who-we-are/"
+    },
+    {
+      "label": "Spearmint — Our Team",
+      "url": "https://spearmintenergy.com/our-team/"
+    },
+    {
+      "label": "Spearmint — Our Partners (memberships; ERCOT, SPP, MISO, WECC)",
+      "url": "https://spearmintenergy.com/our-partners/"
+    },
+    {
+      "label": "Spearmint — In the News (release archive)",
+      "url": "https://spearmintenergy.com/in-the-news/"
+    },
+    {
+      "label": "Spearmint — Andrew Waranch (team page)",
+      "url": "https://spearmintenergy.com/team/andrew-waranch"
+    },
+    {
+      "label": "Spearmint — Peter Rood (team page)",
+      "url": "https://spearmintenergy.com/team/peter-rood"
+    },
+    {
+      "label": "Spearmint — Nick Vamvakas (team page)",
+      "url": "https://spearmintenergy.com/team/nick-vamvakas"
+    },
+    {
+      "label": "Spearmint — Tara Young (team page)",
+      "url": "https://spearmintenergy.com/team/tara-young"
+    },
+    {
+      "label": "Spearmint — Michael Weinstein (team page)",
+      "url": "https://spearmintenergy.com/team/michael-weinstein"
+    },
+    {
+      "label": "Spearmint — Yelena Kuznetsova (team page)",
+      "url": "https://spearmintenergy.com/team/yelena-kuznetsova"
+    },
+    {
+      "label": "Spearmint — Loraine Farberg (team page)",
+      "url": "https://spearmintenergy.com/team/loraine-farberg"
+    },
+    {
+      "label": "Spearmint — Cyanne Senra (team page)",
+      "url": "https://spearmintenergy.com/team/cyanne-senra"
+    },
+    {
+      "label": "Spearmint — Nick Dazzo (team page)",
+      "url": "https://spearmintenergy.com/team/nick-dazzo"
+    },
+    {
+      "label": "Spearmint — Jason Gran (team page)",
+      "url": "https://spearmintenergy.com/team/jason-gran"
+    },
+    {
+      "label": "Spearmint — Gina Wolf (team page)",
+      "url": "https://spearmintenergy.com/team/gina-wolf"
+    },
+    {
+      "label": "Spearmint — Jeff Jackson (team page)",
+      "url": "https://spearmintenergy.com/team/jeff-jackson"
+    },
+    {
+      "label": "Spearmint — Omar Longou (team page)",
+      "url": "https://spearmintenergy.com/team/omar-longou"
+    },
+    {
+      "label": "Spearmint — Jack Clark III (team page)",
+      "url": "https://spearmintenergy.com/team/jack-clark-iii"
+    },
+    {
+      "label": "Spearmint — Kevin Kelley (board page)",
+      "url": "https://spearmintenergy.com/team/kevin-kelley"
+    },
+    {
+      "label": "Spearmint — Alex Hocherman (board page)",
+      "url": "https://spearmintenergy.com/team/alex-hocherman"
+    },
+    {
+      "label": "Spearmint — Andrew Kidd (board page)",
+      "url": "https://spearmintenergy.com/team/andrew-kidd"
+    },
+    {
+      "label": "Spearmint — Brian McShane (board page)",
+      "url": "https://spearmintenergy.com/team/brian-mcshane"
+    },
+    {
+      "label": "Spearmint — Dwight Poler (board page)",
+      "url": "https://spearmintenergy.com/team/dwight-poler"
+    },
+    {
+      "label": "Spearmint — John Rittenhouse (board page)",
+      "url": "https://spearmintenergy.com/team/john-rittenhouse"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

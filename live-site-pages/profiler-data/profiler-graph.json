@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-05",
- "companies": 115,
+ "companies": 118,
  "edges": [
   {
    "a": "abb",
@@ -4195,6 +4195,20 @@
   },
   {
    "a": "apex-clean-energy",
+   "b": "intersect-power",
+   "evid": [
+    {
+     "where": "Capabilities · Powered Land — large-load and data-center sites",
+     "date": "",
+     "text": "A land-and-interconnection play into the AI-campus market competing against gas-first on-site generation (VoltaGrid, ProEnergy-type offerings) and against Intersect Power and NextEra-style co-location; differentiated by wind-resource depth in West Texas rather than by firm capacity — no firming partner is named.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
    "b": "jupiter-power",
    "curated": {
     "a": {
@@ -4870,6 +4884,184 @@
     }
    ],
    "last": "2026-08-12"
+  },
+  {
+   "a": "aypa-power",
+   "b": "canadian-solar",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Canadian Solar's e-STORAGE is the only battery supplier any Aypa-side source names: Cald (487 MWh, 2023), Bypass (498 MWh DC, 2024), two US projects totalling 1.2 GWh (March 2025) and Elora plus Hedley (2,122 MWh, October 2025).",
+     "context": "The relationship runs through CSI Solar's 6-Ks and e-STORAGE's own releases rather than Aypa's. The August 2024 6-K records a battery supply agreement and long-term service agreement for Bypass 'scheduled for completion in Q3 2025'; the March 2025 6-K records BSAs and 20-year LTSAs for two US projects with construction from Q3 2025; the October 2025 release records 420 MW / 2,122 MWh of SolBank for Elora and Hedley with deliveries from Q1 2026, e-STORAGE's Colin Parkin describing it as expanding 'our partnership with Aypa Power'. Energy-Storage.news separately describes Borden County as built from Sungrow units delivered via e-STORAGE. Kingfisher Reserve, denied in Indiana, was designed around SolBank 3.0.",
+     "source": "https://www.prnewswire.com/news-releases/canadian-solars-e-storage-expands-partnership-with-aypa-power-through-2-1-gwh-of-ontario-battery-storage-projects-302570479.html",
+     "status": "active",
+     "since": "2023-02",
+     "scale": "420 MW / 2,122 MWh (Ontario); 1.2–1.8 GWh (US, 2025); 498 MWh DC (Bypass); about 3.9 GWh cumulative per ESS News",
+     "via": "e-STORAGE SolBank / SolBank 3.0 with 20-year LTSAs"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-01",
+     "text": "Aypa Power expands to 420 MW / 2,122 MWh across two Ontario projects with 20-year LTSAs — Aypa is the anchor repeat customer (1.8 GWh US in March 2025, now Ontario) — the IPP relationship model working as designed.",
+     "src": "csestorage.com, 2025-10-01",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-01"
+  },
+  {
+   "a": "aypa-power",
+   "b": "eolian",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Eolian sold Aypa two Indiana projects (through the Blue Steel Power JV with Open Road Renewables, March 2023) and the late-stage Pediment project it had originated in 2018 and jointly bid into SRP's 2023 all-source RFP.",
+     "context": "Eolian is the peer that fed Aypa's conversion ladder twice. In March 2023 Aypa bought Williams (150 MW) and Fletcher (118 MW) from Blue Steel Power, with Eolian's Aaron Zubaty quoted in Aypa's release. SRP's July 2024 announcement records that Pediment (then Signal Butte) was originated by Eolian in 2018 and jointly bid with Aypa; Aypa then financed it (USD 398 million, December 2024) and SRP declared it online in June 2026. The pattern — a developer-IPP selling permitted, contracted projects to a platform that finances and builds them — is the pre-COD M&A market this corpus's Spearmint dossier describes from the seller's side.",
+     "source": "https://media.srpnet.com/srp-and-aypa-power-announce-new-battery-storage-system-to-help-meet-growing-energy-demand/",
+     "status": "historical",
+     "since": "2023-03",
+     "scale": "268 MW (Williams + Fletcher); 250 MW / 1,000 MWh (Pediment)",
+     "via": "late-stage project sales"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Contracted utility-scale storage fleet (tolling, energy-storage service and RA agreements)",
+     "date": "",
+     "text": "Against the other contracted-storage IPPs in this corpus — Plus Power's tolling franchise, Jupiter Power's ERCOT merchant fleet, Eolian's PJM position — Aypa's distinguishing record is breadth of counterparty type (investor-owned utilities, public power, CCAs, a provincial system operator) and the Canadian leg (Ontario LT1, Six Nations JV) that none of the US-only peers holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Development platform (pipeline, co-development, M&A)",
+     "date": "",
+     "text": "Acquisitions in the record: Cald (from Eolus Project Holdings, January 2022), Yadkins (100 MW, Chesapeake VA, from East Point Energy, March 2022) and Williams (150 MW) plus Fletcher (118 MW) in Indiana (from Blue Steel Power, a joint venture of Open Road Renewables and Eolian, March 2023).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-07-18",
+     "text": "SRP announces the Pediment (then Signal Butte) agreement — a project Eolian originated in 2018 and jointly bid with Aypa into SRP's 2023 all-source RFP — Late-stage acquisition from a peer IPP, then contract, then financing, then COD in 23 months — the conversion ladder in one project.",
+     "src": "https://media.srpnet.com/srp-and-aypa-power-announce-new-battery-storage-system-to-help-meet-growing-energy-demand/",
+     "from": "a"
+    }
+   ],
+   "last": "2024-07-18"
+  },
+  {
+   "a": "aypa-power",
+   "b": "jupiter-power",
+   "evid": [
+    {
+     "where": "Capabilities · Contracted utility-scale storage fleet (tolling, energy-storage service and RA agreements)",
+     "date": "",
+     "text": "Against the other contracted-storage IPPs in this corpus — Plus Power's tolling franchise, Jupiter Power's ERCOT merchant fleet, Eolian's PJM position — Aypa's distinguishing record is breadth of counterparty type (investor-owned utilities, public power, CCAs, a provincial system operator) and the Canadian leg (Ontario LT1, Six Nations JV) that none of the US-only peers holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Hybrid solar-plus-storage and merchant projects",
+     "date": "",
+     "text": "The merchant ERCOT assets sit in the same market as Jupiter Power's and Spearmint Energy's fleets, but Aypa's public statements do not describe a trading or optimisation arm of its own.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aypa-power",
+   "b": "key-capture-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Enerdatics' note on the Brookfield deal lists Key Capture Energy (SK) and esVolta as the comparable standalone storage platforms against which it benchmarks Aypa's implied about USD 1.1 million per MW.",
+     "context": "The comparison is an analyst's, not a party's. Enerdatics derives the per-MW value from the USD 7 billion enterprise value and Brookfield's about 6.5 GW, and sets it 'just below the ~$1.27mn/MW median for comparable US standalone battery assets at build-ready or construction stage since 2023'. No independent ranking of standalone storage developers placing Aypa was found.",
+     "source": "https://www.enerdatics.com/flashnotes-updates-brookfield-aypa",
+     "status": "active",
+     "scale": "about 0.7 GW operating / 3.6 GW total (Enerdatics)"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aypa-power",
+   "b": "plus-power",
+   "evid": [
+    {
+     "where": "Capabilities · Contracted utility-scale storage fleet (tolling, energy-storage service and RA agreements)",
+     "date": "",
+     "text": "Against the other contracted-storage IPPs in this corpus — Plus Power's tolling franchise, Jupiter Power's ERCOT merchant fleet, Eolian's PJM position — Aypa's distinguishing record is breadth of counterparty type (investor-owned utilities, public power, CCAs, a provincial system operator) and the Canadian leg (Ontario LT1, Six Nations JV) that none of the US-only peers holds.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aypa-power",
+   "b": "spearmint-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Hybrid solar-plus-storage and merchant projects",
+     "date": "",
+     "text": "The merchant ERCOT assets sit in the same market as Jupiter Power's and Spearmint Energy's fleets, but Aypa's public statements do not describe a trading or optimisation arm of its own.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aypa-power",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Energy-Storage.news states Aypa's Borden County battery 'consists of 90 Sungrow individual battery units' delivered by e-STORAGE, with Linxon providing balance of plant and commissioning.",
+     "context": "The statement is the trade outlet's description of the project cleared by ERCOT in August 2024, not a supplier release; neither Sungrow nor Aypa has announced the link. It is the only public account of the equipment inside an Aypa ERCOT project, and it places a second Chinese-headquartered supplier in the fleet alongside Canadian Solar.",
+     "source": "https://www.energy-storage.news/ercot-clears-480mw-of-bess-for-operations-in-august-including-tesla-owned-unit-at-factory/",
+     "status": "active",
+     "since": "2024-08",
+     "scale": "150 MW / 330 MWh (Borden County)",
+     "via": "battery units delivered via e-STORAGE"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The only named battery supplier is Canadian Solar's e-STORAGE (about 3.9 GWh cumulative per ESS News); Energy-Storage.news describes Sungrow units at Borden County.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Aypa is the buyer side of this corpus's storage supply chain: a multi-GW owner-operator that contracts with utilities, public power and CCAs, finances through a recurring group of project-finance banks and tax-equity investors, and procures batteries from Canadian Solar's e-STORAGE (with Sungrow units at one ERCOT site).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that supplier concentration in Canadian Solar's e-STORAGE, with Sungrow units at Borden County, leaves the fleet exposed to FEOC and tariff rules that neither Aypa nor its buyer has addressed publicly.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-09-19",
+     "text": "ERCOT clears Borden County (150 MW / 330 MWh) for operation in August 2024; Energy-Storage.news describes 90 Sungrow battery units delivered via e-STORAGE with Linxon balance of plant — The one public description of what is inside an Aypa ERCOT battery.",
+     "src": "https://www.energy-storage.news/ercot-clears-480mw-of-bess-for-operations-in-august-including-tesla-owned-unit-at-factory/",
+     "from": "a"
+    }
+   ],
+   "last": "2024-09-19"
   },
   {
    "a": "bechtel",
@@ -8625,6 +8817,24 @@
   },
   {
    "a": "constellation-energy",
+   "b": "intersect-power",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "'Constellation' is named among Oberon's offtakers in Intersect's 14 November 2023 COD release and in Ava Community Energy's account of the same milestone.",
+     "context": "Constellation took a share of Oberon's energy, RECs and resource adequacy alongside Calpine Energy Solutions, Ava, Microsoft and San Diego Community Power; the contract size is not published. As with Microsoft, the asset moved to IPX Power in March 2026, and no Constellation link to the Google-era parks exists in the record.",
+     "source": "https://www.intersect.com/historical-releases/intersect-power-reaches-commercial-operation-of-oberon-solar-storage-project",
+     "status": "historical",
+     "since": "2023-11",
+     "scale": "share of Oberon's output (not broken out)",
+     "via": "Oberon solar-plus-storage offtake"
+    }
+   },
+   "evid": [],
+   "last": "2023-11"
+  },
+  {
+   "a": "constellation-energy",
    "b": "lightsource-bp",
    "curated": {
     "b": {
@@ -10201,6 +10411,45 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "crusoe",
+   "b": "intersect-power",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Latitude Media describes the Crusoe–Google campus at Goodnight as Texas's first SB 6 co-location net-metering test case under the rules the PUCT adopted in March 2026 — the same regime Intersect's Google parks operate under.",
+     "context": "Crusoe and Intersect are the two developers in this corpus building behind-the-meter campuses for Google in ERCOT. Latitude Media's April 2026 report on the Goodnight case explains the PUCT's 60-day review of net-metering arrangements for merchant generators registered before 1 September 2025 that co-locate with new load, and notes ERCOT has required transmission studies for co-location since 2022. Intersect does not appear in the docket; the link is the shared customer and the shared rule, not a stated commercial tie.",
+     "source": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case/",
+     "status": "active",
+     "since": "2026-04",
+     "via": "Texas SB 6 co-location net-metering"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: every park is an ERCOT co-located load above 75 MW; the PUCT adopted its co-location net-metering rules in March 2026 with a Crusoe–Google campus as the test case; Gray County's abatement carries an air-cooling claw-back; Intersect's own FERC filing complained about co-location process, but no FERC docket naming Intersect was found and ERCOT is outside FERC's interconnection jurisdiction.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Co-located energy parks for Google (Quantum, Meitner, Roman)",
+     "date": "",
+     "text": "Against the other AI-campus developers in this corpus — Crusoe's flare-gas and islanded model, the neocloud landlords' leased shells — Intersect's distinguishing feature is ownership: since March 2026 the developer and the tenant are the same corporate group, so the campus is neither leased nor contracted but built for the parent.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-03",
+     "text": "PUCT adopts SB 6 net-metering rules for co-located data centres of 75 MW or more; the Crusoe–Google campus at Goodnight is the first test case — The rule that governs every Intersect park was written after the deal was signed; Intersect has not appeared in the docket.",
+     "src": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-03"
   },
   {
    "a": "crusoe",
@@ -14643,6 +14892,31 @@
   },
   {
    "a": "equinix",
+   "b": "intersect-power",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Intersect's CFO Katrina Rymill joined from Equinix, where she was SVP Corporate Finance and Sustainability, in October 2025.",
+     "context": "The hire is the one documented link between Intersect and the colocation industry's largest operator: Rymill ran global treasury, investor relations and sustainability at Equinix and raised USD 9 billion of green bonds there, per Intersect's appointment release. No commercial relationship between the companies is stated in any source.",
+     "source": "https://www.intersect.com/news/intersect-appoints-katrina-rymill-as-chief-financial-officer",
+     "status": "active",
+     "since": "2025-10",
+     "via": "executive hire"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-30",
+     "text": "Katrina Rymill (ex-Equinix SVP Corporate Finance and Sustainability) appointed CFO; the release states USD 15 billion of assets in operation or under construction and 'over $2.1 billion in corporate equity raised' — A data-centre-industry CFO hired seven weeks before the Google agreement.",
+     "src": "https://www.intersect.com/news/intersect-appoints-katrina-rymill-as-chief-financial-officer",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-30"
+  },
+  {
+   "a": "equinix",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -17827,6 +18101,256 @@
   },
   {
    "a": "google",
+   "b": "intersect-power",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Alphabet agreed on 22 December 2025 and closed on 10 March 2026 the acquisition of Intersect, after leading the December 2024 round as a minority holder; Google is the data-centre customer at Quantum (Haskell County) and Meitner (Gray and Roberts Counties).",
+     "context": "The relationship ran in three stages. In December 2024 Google and TPG Rise Climate led an 'over $800 million' round and Google agreed to 'serve as anchor tenant in newly constructed industrial parks' — Greenbelt describes 'a 20-year off-take and powered-land lease' for Quantum. In December 2025 Alphabet announced the acquisition of 'Intersect's team and multiple gigawatts of energy and data center projects currently in development or under construction' for USD 4.75 billion plus debt, excluding the Texas operating assets and California properties. On 10 March 2026 the deal closed; Alphabet's 10-Qs consolidate Intersect as a variable-interest entity at USD 5.9 billion with goodwill allocated to Google Services and Google Cloud, and the June 2026 investor presentation says the purchase 'will help us come to market even faster'. Sundar Pichai's stated rationale: 'operate more nimbly in building new power generation in lockstep with new data center load'.",
+     "source": "https://abc.xyz/investor/news/news-details/2025/Alphabet-Announces-Agreement-to-Acquire-Intersect-to-Advance-U-S--Energy-Innovation-2025-DVIuVDM9wW/default.aspx",
+     "status": "active",
+     "since": "2024-12",
+     "scale": "USD 4.75 billion in cash plus assumed debt (announced); USD 5,868 million total purchase price (Alphabet Q2 2026 10-Q)",
+     "via": "Alphabet acquisition; Quantum and Meitner energy parks"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power, ~$4.75B — 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Google as the ecosystem's most storage-forward buyer and its most vertically integrated: the Intersect acquisition brings development in-house ('energy parks' co-locating data centers with behind-the-meter solar+BESS to bypass interconnection queues — first: Haskell County TX, 640 MW solar + 1.3 GWh BESS beside a new campus), 1 GW of data-center demand response is signed across five utilities, and the Form Energy deal legitimizes multi-day (100-hour) storage for AI load.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Google has chosen ownership over procurement in energy: buying Intersect Power, co-developing energy parks, and anchoring first-of-kind storage (iron-air 30 GWh) and fusion offtakes make it the hyperscaler most likely to shape — rather than just consume — the storage market.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Intersect is a Google subsidiary — Alphabet announced the acquisition on 22 December 2025 at USD 4.75 billion in cash plus assumed debt, closed it on 10 March 2026, and books it at USD 5,868 million in its Q2 2026 10-Q — but Google bought only the 'digital power' development platform, its team and the Texas energy parks; the grid-tied fleet Intersect had built (about 4.4 GW of solar and 8.8 GWh of storage in construction or operation, per TPG) was carved out at closing into IPX Power under TPG Rise Climate, CAI and Greenbelt, and no source says Intersect develops for anyone but its parent now.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The premise 'Google-owned since 2026' is correct on the close date; the premise of a Wyoming campus is unsupported — the named parks are Quantum (Haskell County), Meitner (Gray and Roberts Counties) and Roman (Deaf Smith County), all in Texas.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Founded in 2016 by Sheldon Kimber (ex-COO of Recurrent Energy), Intersect developed and sold 1.7 GWdc of solar by 2019, then raised USD 127 million (2021), USD 750 million led by TPG Rise Climate (2022) and 'over $800 million' led by TPG and Google (December 2024) to build and own Athos III, Radian, Oberon and Lumina — 2.2 GWdc of solar and 2.4 GWh of storage financed in USD 2.6 billion (2021), USD 3.075 billion (2022) and USD 837 million (2024) rounds with HPS Investment Partners, MUFG and Santander, on hedges, corporate offtake and merchant batteries rather than utility PPAs.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The December 2024 partnership made Google 'anchor tenant' of co-located parks; a year later Google bought the developer.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Quantum's 640 MW of solar and 1.3 GWh of storage began operating in June 2026 with the Google data centre under construction; Meitner — 'more than a gigawatt of wind, solar, and battery storage' with 'a minority share' of demand from on-site gas — launched construction on 4 June 2026 after Gray County replaced a hydrogen abatement with a data-centre abatement conditioned on air cooling.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Kimber, Ross, Rymill, Spicer, Hanson, Bain and Antonopoulos lead the Google-era company; the former CFO, COO and CCO went to IPX.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gaps: data-centre megawatts, gas capacity and contract values at every park (the 840 MW Meitner load figure is New Project Media's reading of filings); any FERC Section 203, ERCOT large-load or PUCT SB 6 record naming an Intersect or Google entity; headcount; the split of the First Solar and Tesla frameworks between Intersect and IPX; and any post-acquisition project financing.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a supplier or EPC it is now a Google procurement channel with its own engineering, construction and procurement heads; for the utilities and ISOs it is an ERCOT co-located load governed by SB 6; for the sponsors it was a USD 12 billion combined exit.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that Google owns Intersect outright and that the acquisition is closed, not pending.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The brief's 'Google-owned since 2026' is confirmed with a March 2026 close; the announcement was December 2025.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that Google bought a development capability and three Texas parks, not an operating power fleet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: every named park has Google as tenant; Alphabet's stated rationale is to 'operate more nimbly in building new power generation in lockstep with new data center load'; the June 2026 investor presentation frames the purchase as coming 'to market even faster'; no source says Intersect develops for others after closing.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: every park is an ERCOT co-located load above 75 MW; the PUCT adopted its co-location net-metering rules in March 2026 with a Crusoe–Google campus as the test case; Gray County's abatement carries an air-cooling claw-back; Intersect's own FERC filing complained about co-location process, but no FERC docket naming Intersect was found and ERCOT is outside FERC's interconnection jurisdiction.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) a data-centre megawatt figure for Quantum or Meitner from Google, Intersect, ERCOT's large-load reports or a PUCT SB 6 filing — the first published load number would size the model; (2) an Intersect entity in a PUCT co-location net-metering review or an ERCOT curtailment filing, which would show which SB 6 path the parks take; (3) any Intersect project with a non-Google tenant, which would refute the captive-developer judgment; (4) a supplier announcement for Meitner's on-site gas (turbines or engines) and any FEOC-compliant battery supply statement — silence past Phase 1 construction would indicate the gas leg is procured through Google; (5) Alphabet's segment disclosures for any Intersect operating result, and IPX Power's next financing naming which Tesla and First Solar volumes it holds.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Co-located energy parks for Google (Quantum, Meitner, Roman)",
+     "date": "",
+     "text": "The business Google bought: development, construction and operation of campuses where a Google data centre sits behind one fence with dedicated generation and storage.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Co-located energy parks for Google (Quantum, Meitner, Roman)",
+     "date": "",
+     "text": "Named sites, all in Texas, per Intersect's portfolio pages and the June 2026 Google–Intersect release: Quantum (Haskell County — 640 MW of solar and 1.3 GWh of storage across two facilities, generation 'will begin operations this month' in June 2026, the Google data centre 'recently began construction'); Meitner Energy Center (Gray and Roberts Counties — 'a data center co-located with more than a gigawatt of wind, solar, and battery storage systems', 'a minority share of the site's demand met by firming on-site gas', air-cooled, construction launched 4 June 2026); and Roman (Deaf Smith County — 'in development', wind, solar, storage, natural-gas firming and an air-cooled data centre).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Procurement programme — First Solar modules and Tesla Megapacks",
+     "date": "",
+     "text": "Multi-year framework orders that pre-date the sale and now sit partly with IPX Power and partly with Google-owned Intersect (the split is not published): First Solar — 1.7 GW of Series 6 (September 2019), 2.4 GWdc for 2024–2026 delivery (July 2022) and 4.9 GWdc of Series 6 Plus and Series 7 for 2025–2029 (November 2022), which Intersect said took its 2022 orders to 7.3 GWdc and its cumulative First Solar procurement to 11.4 GWdc by 2029; Tesla — 15.3 GWh of Megapacks announced 18 July 2024, 'more than half' for four California and Texas projects by end-2027 and the rest for 2028–2030 from the Lathrop Megafactory, with the about page now citing 17.7 GWh secured.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Corporate capital formation (2020–2026)",
+     "date": "",
+     "text": "Equity per Intersect's own releases: USD 127 million from Climate Adaptive Infrastructure and Trilantic North America (January 2021, with a USD 482 million Generate Capital and CarVal debt facility); USD 750 million led by TPG Rise Climate with CAI and Trilantic Energy Partners North America (June 2022); 'over USD 800 million' led by TPG Rise Climate and Google with CAI and Greenbelt Capital Partners (10 December 2024 — Greenbelt's page splits it as USD 879 million, USD 250 million from Google, unconfirmed by Google); 'over USD 2.1 billion in corporate equity raised' cumulative (October 2025).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-06",
+     "text": "IPX Power — the carved-out grid-tied fleet, not Intersect — closes an USD 800 million corporate facility (USD 600 million revolver, USD 200 million LC) — The former Intersect fleet now finances itself independently; nothing comparable has been published for the Google-owned entity.",
+     "src": "https://ipxpower.com/ipx-power-secures-800-million-corporate-credit-facility-to-support-expansion-of-its-clean-energy-platform/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-21",
+     "text": "IPX Power closes USD 4.95 billion of debt for Darden (Fresno County, 1.15 GWac solar and 4.6 GWh of storage, COD 2028), including USD 2.13 billion of ITC purchase agreements — The largest financing in the record belongs to the fleet Google chose not to buy.",
+     "src": "https://ipxpower.com/ipx-power-secures-financing-for-darden-projects/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "Alphabet's Q1 2026 10-Q: acquisition completed 10 March 2026 'for $5.9 billion, after purchase price adjustments'; Intersect consolidated as a variable-interest entity with goodwill allocated to Google Services and Google Cloud — Consolidation into the cloud and services segments tells a supplier which Google budget the campuses sit in.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-03",
+     "text": "PUCT adopts SB 6 net-metering rules for co-located data centres of 75 MW or more; the Crusoe–Google campus at Goodnight is the first test case — The rule that governs every Intersect park was written after the deal was signed; Intersect has not appeared in the docket.",
+     "src": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-13",
+     "text": "Energy-Storage.news reports the acquisition complete, Google having acquired TPG Rise Climate's share; the grid-tied business separated into IPX Power — Trade press confirmation of the sellers' 10 March releases.",
+     "src": "https://www.energy-storage.news/google-completes-us4-75-billion-intersect-power-acquisition-initial-focus-on-california-texas-solar-plus-storage/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-10",
+     "text": "TPG and Greenbelt announce completion of the USD 4.75 billion (plus debt) sale of Intersect to Google and the launch of IPX Power — about 4.4 GW of solar and 8.8 GWh of storage in construction or operation, TPG Rise Climate majority, CAI and Greenbelt; 'a combined enterprise value of $12 billion' — Google bought the developer and the parks; the investors kept the fleet and the CFO, COO and CCO who ran it.",
+     "src": "https://www.tpg.com/news-and-insights/tpg-announces-completion-of-4-75-billion-sale-of-intersect-to-google-launches-ipx-power-as-independent-power-producer",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-22",
+     "text": "Alphabet announces a definitive agreement to acquire Intersect for USD 4.75 billion in cash plus debt assumption; Kimber stays as CEO under the Intersect brand; Texas operating assets and California properties excluded — A hyperscaler buys a developer rather than signing PPAs: the premise 'Google-owned since 2026' is confirmed, with the announcement in 2025 and the close in March 2026.",
+     "src": "https://abc.xyz/investor/news/news-details/2025/Alphabet-Announces-Agreement-to-Acquire-Intersect-to-Advance-U-S--Energy-Innovation-2025-DVIuVDM9wW/default.aspx",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-22",
+     "text": "Kimber's blog 'It Goes to 11': Intersect 'will remain Intersect, remaining separate from Alphabet and Google under the Intersect brand'; a portion of assets to be divested to existing investors who will 'continue to construct billions of dollars in new assets, including the world's largest BESS' — The founder's own account of the split, written before the IPX name existed.",
+     "src": "https://www.intersect.com/blog/intersect-announces-agreement-to-be-acquired-by-google",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-30",
+     "text": "Katrina Rymill (ex-Equinix SVP Corporate Finance and Sustainability) appointed CFO; the release states USD 15 billion of assets in operation or under construction and 'over $2.1 billion in corporate equity raised' — A data-centre-industry CFO hired seven weeks before the Google agreement.",
+     "src": "https://www.intersect.com/news/intersect-appoints-katrina-rymill-as-chief-financial-officer",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-27",
+     "text": "Gray County's judge says the Meitner data-centre abatement was approved for a 'high profile tenant' he 'could not share … just yet' — The tenant was Google; the county record preceded the deal announcement by eight weeks.",
+     "src": "https://highplainsobserverperryton.com/gray-county-judge-gives-update-on-intersect-power-project-p39368-307.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-01",
+     "text": "Intersect's letter to Gray County neighbours: it 'is planning to develop an air-cooled data center instead of a hydrogen facility'; commissioners grant a 30-day extension on abatement talks — The public record of the hydrogen-to-data-centre pivot, five months before Google announced the acquisition.",
+     "src": "https://www.thepampanews.com/stories/intersect-power-tax-abatement-negotiations-pushed-to-september,124510",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-10",
+     "text": "Intersect, Google and TPG Rise Climate announce the co-location partnership and an 'over $800 million' round led by TPG Rise Climate and Google with CAI and Greenbelt; 'Google will serve as anchor tenant'; first project operational 2026, complete 2027; USD 20 billion target by decade end — The minority stake and anchor-tenant structure that the December 2025 acquisition replaced.",
+     "src": "https://www.intersect.com/news/intersect-power-forms-strategic-partnership-with-google-and-tpg-rise-climate-to-co-locate-data-center-load-and-clean-power-generation",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-06"
+  },
+  {
+   "a": "google",
    "b": "jinko",
    "evid": [
     {
@@ -20868,6 +21392,208 @@
    "last": ""
   },
   {
+   "a": "intersect-power",
+   "b": "jinko",
+   "evid": [
+    {
+     "where": "Capabilities · Sunny 365 — AI Data-Center Solar+Storage (2026)",
+     "date": "",
+     "text": "Unique among module makers; overlaps conceptually with Google's Intersect-style energy-park model, executed from the supplier side",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "intersect-power",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Intersect's Oberon COD release names Microsoft among the project's offtakers with Calpine Energy Solutions, Constellation, Ava Community Energy and San Diego Community Power.",
+     "context": "Oberon (Riverside County, 679 MWp solar plus 250 MW / 1 GWh storage) reached commercial operation on 14 November 2023 selling energy, RECs and resource adequacy to a group of buyers that included Microsoft; the release does not size any buyer's share. The asset passed to IPX Power at the March 2026 carve-out, so the contract is now IPX's rather than Intersect's — hence historical for this dossier. Microsoft appears nowhere as a tenant of an Intersect energy park.",
+     "source": "https://www.intersect.com/historical-releases/intersect-power-reaches-commercial-operation-of-oberon-solar-storage-project",
+     "status": "historical",
+     "since": "2023-11",
+     "scale": "share of Oberon's 679 MWp / 1 GWh output (not broken out)",
+     "via": "Oberon solar-plus-storage offtake"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Grid-tied solar and storage fleet (developed by Intersect; owned by IPX Power since March 2026)",
+     "date": "",
+     "text": "Per Intersect's own COD releases: Athos III (Riverside County, 310 MWp / 224 MWac plus 448 MWh, COD 22 December 2022), Radian (Brown County TX, 415 MWp / 320 MWac, COD 16 May 2023, Merrill Lynch Commodities hedge), Oberon I and II (Riverside County, 679 MWp / 500 MWac plus 250 MW / 1 GWh, COD November 2023, offtake to Calpine Energy Solutions, Constellation, Ava Community Energy, Microsoft and San Diego Community Power), Lumina I and II (Scurry County TX, 828 MWp / 640 MWac, COD 3 January 2024, RECs to 'two Fortune 100 companies') and three 160 MW / 320 MWh standalone Texas batteries (Lumina I, Lumina II, Radian BESS — 86 Tesla Megapacks each, Autobidder on two, operational 2024).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2023-11"
+  },
+  {
+   "a": "intersect-power",
+   "b": "mortenson",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-12",
+     "text": "California Energy Commission approves Darden Clean Energy (Intersect Power) — Mortenson is full EPC on ~1,500 MWdc solar + 4,600 MWh storage, the world's largest BESS when built — as the first project under AB 205 fast-track permitting — Back-to-back record-scale BESS awards (Edwards & Sanborn, Nova, now Darden) make the storage book the fastest-compounding leg of the renewables franchise.",
+     "src": "California Energy Commission, 2025-06-12",
+     "from": "b"
+    }
+   ],
+   "last": "2025-06-12"
+  },
+  {
+   "a": "intersect-power",
+   "b": "plus-power",
+   "evid": [
+    {
+     "where": "Capabilities · Procurement programme — First Solar modules and Tesla Megapacks",
+     "date": "",
+     "text": "Two-vendor concentration by design — one module maker, one battery integrator — which is the opposite of the dual-sourcing pattern this corpus's Plus Power dossier describes.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "intersect-power",
+   "b": "solv-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The channel fact that matters most: on every verified flagship BESS build (Arevon's Vikings and Eland, Intersect's Oberon), the batteries were owner-furnished Tesla Megapacks — SOLV installs what owners buy — so its battery-selection influence concentrates in mid-size utility/co-op jobs, its advertised battery-module procurement scope, and the augmentation cycle of the O&M fleet, where OEM lock-in is weakest.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web it is the physical link between Batch B's buyers and Batch A's suppliers — it built Arevon's Tesla flagships, services Intersect Power (Google's co-location partner) and SB Energy (the Stargate-linked developer) under O&M, and its Sungrow experience is inverter-side only.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the AIDC angle as forming, not formed: 'actively exploring storage for data centers,' the Roberson Waite urban-BESS/substation capability, and O&M relationships with Stargate-linked SB Energy and Google-partnered Intersect Power put SOLV one contract away from AIDC-adjacent storage construction — worth monitoring for the first named award.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-scale solar + storage EPC",
+     "date": "",
+     "text": "Verified flagship builds: Vikings (Arevon — 157 MWdc + 150 MW/600 MWh Tesla Megapack, COD Nov 2024, 'first US utility-scale solar peaker'); Eland 1 & 2 (Arevon — 758 MWdc + 1,200 MWh combined, Tesla Megapack 2 XL, >$2B complex); Oberon 1 (Intersect Power — 339 MWdc scope + 500 kV substation/gen-tie + 250 MWac/1,000 MWh Tesla BESS); Chirreon (Torch/Trico co-op — 13 MW PV + 15 MW/2-hr BESS).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "intersect-power",
+   "b": "spearmint-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Modo Energy's 2025 ERCOT buildout report names Intersect among the year's new battery-owner entrants — three 160 MW / 320 MWh merchant batteries on Tesla Autobidder, the same merchant model Spearmint runs on Sungrow.",
+     "context": "Both companies argued the merchant case in the founder's voice — Kimber's 'long-term offtake contracts actually destroy value' and Waranch's 'utilities … are not as focused on deploying critical infrastructure in the regions with the greatest imbalances' — and both financed ERCOT batteries on tax equity and private credit. Intersect's batteries moved to IPX Power in March 2026; the comparison is of models, not a commercial tie.",
+     "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+     "status": "active",
+     "via": "ERCOT merchant storage"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a supplier it is a repeat single-source account; for the market it is a small ERCOT owner whose fleet reached scale in the revenue trough; for the register it is the develop-to-hold merchant model that Aypa's contracted platform and Intersect's captive parks bracket.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "intersect-power",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Tesla agreed in July 2024 to supply 15.3 GWh of Megapacks for Intersect's solar-plus-storage projects; Megapacks were installed at Athos III, Oberon and the three Texas standalone batteries, two of which run on Tesla's Autobidder.",
+     "context": "Intersect's 18 July 2024 release, with Tesla Energy's Mike Snyder quoted, put 'more than half' of the 15.3 GWh into four California and Texas projects by end-2027 and the balance into 2028–2030 deliveries from the Lathrop Megafactory. The three 160 MW / 320 MWh Texas batteries financed the same week used 86 Megapacks each; Oberon's COD release credited Lathrop-built Megapacks. Simon Ross, Intersect's CCO, was previously Tesla's deputy general counsel for the energy business. The order pre-dates the March 2026 carve-out, and neither party has said how it is split between Google-owned Intersect and IPX Power.",
+     "source": "https://www.intersect.com/news/tesla-provides-intersect-with-15-3-gwh-of-megapacks-for-solar-storage-projects",
+     "status": "active",
+     "since": "2022",
+     "scale": "15.3 GWh Megapack order (July 2024); '17.7 GWh of Tesla Megapacks secured' (about page); 258 Megapacks across three Texas batteries",
+     "via": "Megapack; Autobidder"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Supply is concentrated in First Solar (11.4 GWdc ordered by 2029) and Tesla (15.3 GWh of Megapacks).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gaps: data-centre megawatts, gas capacity and contract values at every park (the 840 MW Meitner load figure is New Project Media's reading of filings); any FERC Section 203, ERCOT large-load or PUCT SB 6 record naming an Intersect or Google entity; headcount; the split of the First Solar and Tesla frameworks between Intersect and IPX; and any post-acquisition project financing.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that the pre-sale First Solar and Tesla frameworks are now split between Intersect and IPX Power, with the larger share of near-term Megapack deliveries at IPX's Darden.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 15.3 GWh Tesla order's 'four California and Texas projects by end-2027' predates the carve-out and Darden is the largest storage project in either company; neither party has published the split.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) a data-centre megawatt figure for Quantum or Meitner from Google, Intersect, ERCOT's large-load reports or a PUCT SB 6 filing — the first published load number would size the model; (2) an Intersect entity in a PUCT co-location net-metering review or an ERCOT curtailment filing, which would show which SB 6 path the parks take; (3) any Intersect project with a non-Google tenant, which would refute the captive-developer judgment; (4) a supplier announcement for Meitner's on-site gas (turbines or engines) and any FEOC-compliant battery supply statement — silence past Phase 1 construction would indicate the gas leg is procured through Google; (5) Alphabet's segment disclosures for any Intersect operating result, and IPX Power's next financing naming which Tesla and First Solar volumes it holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Grid-tied solar and storage fleet (developed by Intersect; owned by IPX Power since March 2026)",
+     "date": "",
+     "text": "Per Intersect's own COD releases: Athos III (Riverside County, 310 MWp / 224 MWac plus 448 MWh, COD 22 December 2022), Radian (Brown County TX, 415 MWp / 320 MWac, COD 16 May 2023, Merrill Lynch Commodities hedge), Oberon I and II (Riverside County, 679 MWp / 500 MWac plus 250 MW / 1 GWh, COD November 2023, offtake to Calpine Energy Solutions, Constellation, Ava Community Energy, Microsoft and San Diego Community Power), Lumina I and II (Scurry County TX, 828 MWp / 640 MWac, COD 3 January 2024, RECs to 'two Fortune 100 companies') and three 160 MW / 320 MWh standalone Texas batteries (Lumina I, Lumina II, Radian BESS — 86 Tesla Megapacks each, Autobidder on two, operational 2024).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Procurement programme — First Solar modules and Tesla Megapacks",
+     "date": "",
+     "text": "Multi-year framework orders that pre-date the sale and now sit partly with IPX Power and partly with Google-owned Intersect (the split is not published): First Solar — 1.7 GW of Series 6 (September 2019), 2.4 GWdc for 2024–2026 delivery (July 2022) and 4.9 GWdc of Series 6 Plus and Series 7 for 2025–2029 (November 2022), which Intersect said took its 2022 orders to 7.3 GWdc and its cumulative First Solar procurement to 11.4 GWdc by 2029; Tesla — 15.3 GWh of Megapacks announced 18 July 2024, 'more than half' for four California and Texas projects by end-2027 and the rest for 2028–2030 from the Lathrop Megafactory, with the about page now citing 17.7 GWh secured.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-07-17",
+     "text": "USD 837 million closed for three 160 MW / 320 MWh standalone Texas batteries (Lumina I, Lumina II, Radian) — Morgan Stanley tax equity, HPS construction and term debt, Deutsche Bank construction facility; 'concept to commissioning in under 12 months' — Merchant batteries financed on tax equity and private credit, run on Tesla Autobidder — the fleet's cash engine before the sale.",
+     "src": "https://www.intersect.com/historical-releases/intersect-power-secures-837-million-in-project-financing-to-build-1-gwh-of-battery-energy-storage-systems-bess-in-texas",
+     "from": "a"
+    }
+   ],
+   "last": "2024-07-17"
+  },
+  {
    "a": "iren",
    "b": "lambda",
    "evid": [
@@ -21226,6 +21952,30 @@
      "text": "One of the largest ERCOT storage owners (grouped by Modo with Enel, SMT and Tesla among 2025's biggest adders; reported third owner past 1 GWh installed alongside Plus Power and ENGIE — aggregator-level).",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "jupiter-power",
+   "b": "spearmint-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Modo Energy's 2025 ERCOT buildout report lists Jupiter Power among the ISO's major battery owners alongside Engie, Enel, SMT and Tesla, in a market where Spearmint's 350 MW does not appear in the rankings.",
+     "context": "Spearmint and Jupiter Power run the same business — merchant batteries in ERCOT dispatched by an in-house trading team — at different scale. Modo's annual report puts ERCOT at 13.9 GW / 22.9 GWh entering 2026, with Engie at about 20 per cent share and new entrants including esVolta, Intersect, Gridstor, Nightpeak, TotalEnergies, Eni, Equinor, Brookfield and Tokyo Gas America; Spearmint's 350 MW is about 2.5 per cent of the fleet by arithmetic and is not named.",
+     "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+     "status": "active",
+     "via": "ERCOT merchant storage"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Owned and operated ERCOT battery fleet (merchant)",
+     "date": "",
+     "text": "The smallest of the three merchant ERCOT storage owners in this corpus's IPP set by operating capacity (350 MW against Jupiter Power's fleet and Plus Power's contracted franchise), and the only one whose founder and board come from power trading rather than development — Roscommon Analytics, which lender Elda River says controls the company, is an FTR and congestion trading firm.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -25022,6 +25772,60 @@
   },
   {
    "a": "mortenson",
+   "b": "spearmint-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Mortenson built Revolution (EPC signed November 2022, Mortenson's 20th battery project), Tierra Seca and Seven Flags, and is building Red Egret, 'the fourth project built for Spearmint by Minneapolis-based M.A. Mortenson Company'.",
+     "context": "EnergyTech reported the Revolution EPC in December 2022; Spearmint's 12 May 2026 COD release quotes Mortenson's Kevin Boyce (VP and GM, Energy Storage) on Tierra Seca and Seven Flags; the Red Egret financing release names Mortenson as EPC again. Spearmint's second office is in Eden Prairie, Minnesota, near Mortenson's Minneapolis base. No other EPC appears in the record.",
+     "source": "https://finance.yahoo.com/sectors/energy/articles/spearmint-energy-achieves-commercial-operation-130000865.html",
+     "status": "active",
+     "since": "2022-11",
+     "scale": "four projects, 650 MW / 1,300 MWh",
+     "via": "BESS EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Launched in Miami in May 2022 by Andrew Waranch (Elustria, Elliott Associates, Deutsche Bank, Merrill Lynch, Constellation) with three stated strategies — development, storage offtake and power trading — Spearmint bought Revolution from Con Edison Development (July 2022), the 900 MW 'Nomadic' ERCOT portfolio (March 2023) and two Indiana projects from BW Solar (December 2023), then built Revolution to COD in January 2024 on Sungrow PowerTitan with Mortenson, financed by USD 92 million of Greenprint tax equity and a USD 200 million Aiga term loan later joined by Nuveen and Elda River.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Spearmint is the pure merchant case in this corpus's BESS buyer side: a developer that finances batteries on tax credits and private credit rather than utility contracts, procures from one integrator (Sungrow) and one EPC (Mortenson), and monetises through its own trading desk.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Owned and operated ERCOT battery fleet (merchant)",
+     "date": "",
+     "text": "Three operating standalone batteries in ERCOT, all two-hour, all built by Mortenson on Sungrow PowerTitan equipment, and all dispatched by Spearmint's own optimisation team without any named offtaker, hedge provider or revenue put: Revolution (150 MW / 300 MWh, McCamey, Upton County, in LCRA transmission territory next to the King Mountain wind farm; acquired as a development project from Con Edison Development in July 2022; commercial operation announced 4 January 2024 with 134 containers, 6,432 Sungrow modules and 45 PCS units), and Tierra Seca (Del Rio, Val Verde County) and Seven Flags (Laredo), 100 MW / 200 MWh each on PowerTitan 2.0, operating since late December 2025 per the company's 12 May 2026 release.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-12",
+     "text": "Tierra Seca and Seven Flags (2 × 100 MW / 200 MWh) declared in commercial operation — running since late December 2025; Mortenson EPC, Sungrow PowerTitan 2.0; boilerplate now 'over 20 projects, totaling over 15 GWh … in 13 states' — The '15 GWh in development' premise is confirmed as the company's own figure and dated to January–May 2026; it disappears from releases nine days later.",
+     "src": "https://finance.yahoo.com/sectors/energy/articles/spearmint-energy-achieves-commercial-operation-130000865.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-01-04",
+     "text": "Revolution (150 MW / 300 MWh, McCamey) commences commercial operation 'on schedule, within budget' — 134 containers, 6,432 Sungrow modules, 45 PCS, Mortenson EPC; 'our debut grid-scale storage project' — Eighteen months from acquisition to COD, in ERCOT's best revenue year.",
+     "src": "https://irei.com/news/spearmint-energy-completes-revolution-one-of-the-largest-bess-projects-in-the-u-s/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-12"
+  },
+  {
+   "a": "mortenson",
    "b": "terra-gen",
    "curated": {
     "b": {
@@ -28092,6 +28896,20 @@
   },
   {
    "a": "plus-power",
+   "b": "spearmint-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Owned and operated ERCOT battery fleet (merchant)",
+     "date": "",
+     "text": "The smallest of the three merchant ERCOT storage owners in this corpus's IPP set by operating capacity (350 MW against Jupiter Power's fleet and Plus Power's contracted franchise), and the only one whose founder and board come from power trading rather than development — Roscommon Analytics, which lender Elda River says controls the company, is an FTR and congestion trading firm.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "plus-power",
    "b": "sungrow",
    "curated": {
     "a": {
@@ -29516,6 +30334,107 @@
      "text": "Colorado's 50 MW threshold and 80 percent minimum demand are the strictest of Xcel's three filings; Georgia Power's PSC rule (100 MW, per the Southern Company dossier) and Dominion Virginia's GS-5 class are the corpus comparators.",
      "src": "",
      "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "spearmint-energy",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Sungrow supplied Revolution (PowerTitan: 6,432 modules, 134 containers, 45 PCS), Tierra Seca and Seven Flags (PowerTitan 2.0) and Red Egret (149 PowerTitan 2.0 units), under a Texas partnership for more than 1 GWh announced in August 2024.",
+     "context": "The relationship is the fleet: every Spearmint battery in Texas is a Sungrow system, and Spearmint's May 2026 release calls Red Egret 'the fourth Spearmint project to use the PowerTitan platform supplied by Sungrow USA'. CleanTechnica's account of the September 2024 partnership quotes Peter Rood and Sungrow's Martial Yu on more than 1 GWh of additional Texas capacity through 2025. The Minnesota projects, by contrast, are designed around Tesla Megapack 2XL. Waranch's statement that the company began 'evaluating suppliers all over the world' in May 2024 for FEOC reasons is the one signal that the concentration may not persist.",
+     "source": "https://cleantechnica.com/2024/09/04/sungrow-spearmint-energy-partner-to-add-over-1-gwh-of-energy-storage-capacity-in-texas/",
+     "status": "active",
+     "since": "2022-11",
+     "scale": "'more than 1 GWh of additional energy storage capacity … through 2025' (2024 partnership); 149 PowerTitan 2.0 units at Red Egret; all four ERCOT projects",
+     "via": "PowerTitan / PowerTitan 2.0"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Launched in Miami in May 2022 by Andrew Waranch (Elustria, Elliott Associates, Deutsche Bank, Merrill Lynch, Constellation) with three stated strategies — development, storage offtake and power trading — Spearmint bought Revolution from Con Edison Development (July 2022), the 900 MW 'Nomadic' ERCOT portfolio (March 2023) and two Indiana projects from BW Solar (December 2023), then built Revolution to COD in January 2024 on Sungrow PowerTitan with Mortenson, financed by USD 92 million of Greenprint tax equity and a USD 200 million Aiga term loan later joined by Nuveen and Elda River.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Spearmint is the pure merchant case in this corpus's BESS buyer side: a developer that finances batteries on tax credits and private credit rather than utility contracts, procures from one integrator (Sungrow) and one EPC (Mortenson), and monetises through its own trading desk.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that supplier concentration in Sungrow is the fleet's largest policy exposure and that the May 2024 supplier search has not yet produced a contract.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owned and operated ERCOT battery fleet (merchant)",
+     "date": "",
+     "text": "Three operating standalone batteries in ERCOT, all two-hour, all built by Mortenson on Sungrow PowerTitan equipment, and all dispatched by Spearmint's own optimisation team without any named offtaker, hedge provider or revenue put: Revolution (150 MW / 300 MWh, McCamey, Upton County, in LCRA transmission territory next to the King Mountain wind farm; acquired as a development project from Con Edison Development in July 2022; commercial operation announced 4 January 2024 with 134 containers, 6,432 Sungrow modules and 45 PCS units), and Tierra Seca (Del Rio, Val Verde County) and Seven Flags (Laredo), 100 MW / 200 MWh each on PowerTitan 2.0, operating since late December 2025 per the company's 12 May 2026 release.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-12",
+     "text": "Tierra Seca and Seven Flags (2 × 100 MW / 200 MWh) declared in commercial operation — running since late December 2025; Mortenson EPC, Sungrow PowerTitan 2.0; boilerplate now 'over 20 projects, totaling over 15 GWh … in 13 states' — The '15 GWh in development' premise is confirmed as the company's own figure and dated to January–May 2026; it disappears from releases nine days later.",
+     "src": "https://finance.yahoo.com/sectors/energy/articles/spearmint-energy-achieves-commercial-operation-130000865.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-01-04",
+     "text": "Revolution (150 MW / 300 MWh, McCamey) commences commercial operation 'on schedule, within budget' — 134 containers, 6,432 Sungrow modules, 45 PCS, Mortenson EPC; 'our debut grid-scale storage project' — Eighteen months from acquisition to COD, in ERCOT's best revenue year.",
+     "src": "https://irei.com/news/spearmint-energy-completes-revolution-one-of-the-largest-bess-projects-in-the-u-s/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05-12"
+  },
+  {
+   "a": "spearmint-energy",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Spearmint's Minnesota PUC applications model the Snowshoe and Midwater layouts on Tesla Megapack 2XL enclosures while reserving equipment selection until construction — a design basis in a regulator's record, not a supply contract.",
+     "context": "The Snowshoe application (October 2024) states the preliminary design is based on Tesla Megapack 2 XL 'to allow flexibility during equipment selection'; Energy-Storage.news reports the same basis for Midwater from the MPUC filings. Neither Tesla nor Spearmint has announced an order. It is nonetheless the only non-Sungrow equipment named for any Spearmint project, and the Minnesota permits are the company's only post-ERCOT capacity.",
+     "source": "https://puc.eip.mn.gov/sites/default/files/2025-05/Application%20(1).pdf",
+     "status": "announced",
+     "since": "2024-10",
+     "scale": "2 × 150 MW / 600 MWh (Snowshoe, Midwater — design basis)",
+     "via": "Megapack 2XL"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: four of four ERCOT projects on PowerTitan; the Minnesota designs on Tesla Megapack 2XL as a basis only; Waranch's own statement that FEOC is 'unquestionably a big issue'; no non-Chinese order announced.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-10"
+  },
+  {
+   "a": "spearmint-energy",
+   "b": "wartsila",
+   "evid": [
+    {
+     "where": "Capabilities · Optimisation and trading (the 'affiliated merchant energy business')",
+     "date": "",
+     "text": "By 2026 the arm is described as Optimization: Nick Dazzo (Managing Director, Head of Optimization) 'focuses on contracting for battery offtake and associated risk management activity'; Jason Gran (Head of Research, ex-Wärtsilä) runs 'forecasting and optimization technology'; the August 2026 'Power Energy Storage Trader' posting describes 'dispatching Spearmint's battery storage assets … execute energy and ancillary service offers in day-ahead and real-time markets, utilizing Spearmint's internal software and associated forecasting tools … around-the-clock physical dispatch', with 'familiarity with futures and other hedging markets' preferred.",
+     "src": "",
+     "from": "a"
     }
    ],
    "last": ""

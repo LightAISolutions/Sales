@@ -1127,6 +1127,49 @@
         "Shareholder-suppliers: Amazon's holding (about USD 190bn of Anthropic paper) and milestone releases, Google's about 14% and Fluidstack backstops, Microsoft up to USD 5bn and NVIDIA up to USD 10bn — any change in stake or in the Azure USD 30bn / 1 GW commitment",
         "Chesterton check: the 401 MW Hawesville lease is at Justified (Hawesville, KY), direct with TeraWulf, no Fluidstack entity; Microsoft walked from Monarch and the Anthropic terms there are unconfirmed; Anthropic owns no campus. Do not re-import any of these premises"
       ]
+    },
+    {
+      "slug": "aypa-power",
+      "cadence": "quarterly",
+      "source": "Private Blackstone Energy Transition Partners portfolio company under a signed, unclosed sale to Brookfield (announced 22 July 2026; about USD 7bn EV / USD 3bn equity; 'subject to customary regulatory approvals'). First-party channels are aypa.com/news and the PR Newswire feed (no project list, no leadership page, no financials); the real disclosure channels are counterparty and regulator records — SRP, Santee Cooper, NCPA, United Power releases; CPUC resolutions and PG&E advice letters; SC PSC docket 2025-318-E; county boards and CEQAnet — plus Brookfield Asset Management 8-Ks and Brookfield Renewable results for the transaction. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Closing of the Brookfield acquisition: a completion release from Brookfield or Blackstone, any FERC Section 203 or HSR record, and whether the USD 1.55bn corporate facility and USD 1.5bn warehouse survive the change of control or are refinanced — update ownership, summary and judgment 1 the day it closes",
+        "CODs the releases promised but no source confirms: Kuna (stated mid-2025), Cald (stated 2024), Vidal (2026), Elora and Hedley (mid-2027), Pinopolis (1 December 2027; SC PSC hearing 19 March 2026) — silence past the dates is slippage",
+        "Dirac's appeal in Chino after the 4–3 planning-commission refusal (15 July 2026) and the Marici/Gabriel interconnection dates (CAISO queue 2031/2033 against 2027 contracted deliveries)",
+        "Any supplier other than Canadian Solar e-STORAGE, any FEOC or domestic-content statement, and any named tax-credit-transfer buyer — each would move the supplier-concentration judgment",
+        "Project-count and pipeline reconciliation: Aypa's 42 against Brookfield's 35 and the 3,000 MW / 3,500 MW split; an Aypa-published operating figure would replace the buyer's",
+        "Chesterton check: the sale is signed, not closed; '6.5 GW' is Brookfield's figure; the Yadkins PPA counterparty and the Bypass offtaker are undisclosed; no Aypa fire incident is documented (the Hamilton County press claim is unsupported). Do not re-import these as facts"
+      ]
+    },
+    {
+      "slug": "spearmint-energy",
+      "cadence": "quarterly",
+      "source": "Private, founder-led, no announced sponsor (lender Elda River: 'controlled by Roscommon Analytics'; no Blackstone link in any source). Business Wire is the release channel but returns 403 from this environment — read releases via Yahoo Finance, SFNet, 01net, Pulse 2.0, IREI and Energy Global mirrors; spearmintenergy.com/in-the-news lists titles. Lender and counsel releases (Paul Hastings, K&L Gates, Nuveen, Elda River), Minnesota PUC dockets (IP-7138/ESS-24-279; 24-294/24-295), interconnection.fyi ERCOT records and Modo Energy / Enverus for the market. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Red Egret construction and COD (company: 2027; interconnection-agreement COD 31 August 2026 per Energy-Storage.news) and the take-out of the USD 225m construction facility by Nuveen preferred equity and the ITC transfer — the buyer's name if released",
+        "A named CFO (Cory Magnuson's departure is press-reported only), headcount restated above 'over 50', and any corporate equity round or sponsor disclosure",
+        "A non-Sungrow supply contract or FEOC-compliant order (the May 2024 supplier search), and any Tesla order for Snowshoe/Midwater beyond the permit design basis",
+        "Minnesota: Snowshoe and Midwater financing and construction (Q1 2027 stated) — a third-party tolling counterparty in either financing would refute the captive-tolling judgment; Pumpkinvine, Green Eagle, Silverfield and Cloverleaf permit outcomes",
+        "ERCOT revenue recovery signals Modo names (RTC+B, HB 1500 firming, load growth) against a fleet that is 100% merchant; any Spearmint revenue or dispatch disclosure",
+        "Further Kyuden or utility stakes, or a whole-project sale, which would move the model toward develop-to-sell; the 'Nomadic' Cooke and Brazoria projects' status",
+        "Chesterton check: no Blackstone or other sponsor is evidenced; the '15 GWh' is company boilerplate dropped in May 2026; no offtaker, hedge or revenue put is named for any project; FERC MBR/QSE records were unreadable, not absent. Do not re-import the brief's premises"
+      ]
+    },
+    {
+      "slug": "intersect-power",
+      "cadence": "quarterly",
+      "source": "Google subsidiary since 10 March 2026 (acquisition announced 22 December 2025; USD 4.75bn cash plus debt; USD 5,868m in Alphabet's Q2 2026 10-Q). Company channels: intersect.com (news, portfolio pages, about — intersectpower.com redirects), Kimber's blog; parent channels: abc.xyz IR, blog.google, datacenters.google, Alphabet 10-Q/10-K acquisition notes; sellers: TPG, Greenbelt, CAI; the carved-out fleet reports as IPX Power (ipxpower.com). Campus facts come from Gray County minutes (The Pampa News, High Plains Observer), New Project Media and trade press; no FERC, ERCOT or PUCT filing names Intersect. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The first published data-centre MW for Quantum or Meitner (Google, Intersect, an ERCOT large-load report or a PUCT SB 6 net-metering filing) and Meitner Phase 1 dates against 'late 2028'",
+        "Any Intersect entity in a PUCT co-location net-metering review, an ERCOT curtailment or large-load filing, or a FERC docket — which SB 6 path the parks take",
+        "Meitner's on-site gas: turbine or engine supplier, capacity and air permit; any FEOC-compliant battery statement; the split of the First Solar (11.4 GWdc) and Tesla (15.3 GWh) frameworks between Intersect and IPX Power",
+        "Any non-Google tenant or third-party project, which would refute the captive-developer judgment; Roman's scope and dates; Google's Armstrong and Wilbarger County campuses and whether Intersect is attached",
+        "Alphabet's next 10-Q for any Intersect operating disclosure or impairment; IPX Power's financings for what they say about the former fleet",
+        "Chesterton check: the deal is closed (10 March 2026), not pending; Google bought the development platform and parks, not the operating fleet; there is no Wyoming campus; the 840 MW Meitner load is a trade outlet's reading of filings, not a party statement. Do not re-import the brief's premises"
+      ]
     }
   ]
 }
