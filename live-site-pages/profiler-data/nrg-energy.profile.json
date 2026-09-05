@@ -1,0 +1,1299 @@
+{
+ "schemaVersion": 7,
+ "slug": "nrg-energy",
+ "name": "NRG Energy, Inc.",
+ "shortName": "NRG Energy",
+ "categories": [
+  "ipp"
+ ],
+ "website": "https://www.nrg.com",
+ "headquarters": "Houston, TX, USA",
+ "employees": "Not disclosed as a single figure in the FY2025 Form 10-K",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: NRG"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** NRG is a **retail company that owns power plants**, not a generator that happens to sell retail — 96 percent of FY2025 revenue came from retail, and the LS Power acquisition that closed in January 2026 doubled the generation fleet precisely so the two halves would match. It is also the only one of the four large merchants with **no named hyperscaler counterparty**: its flagship 1.2 GW Texas project is 'aligned on principal commercial terms' and not signed, and the 5.4 GW GE Vernova arrangement is a development agreement with reserved turbine slots, not a joint venture.\n\n**BACKGROUND.** Houston. Serves approximately **8 million residential customers** — 5.6 million retail energy and 2.4 million Vivint smart-home subscribers — across 25 US states, the District of Columbia and eight Canadian provinces, under Reliant, Green Mountain Energy, Direct Energy, Cirro, XOOM and Vivint. FY2025 revenue was $30.7 billion, of which $29.5 billion was retail, on Adjusted EBITDA of $4,087 million. The owned fleet was **12,276 MW at 23 plants** at 31 December 2025 and roughly **25 GW** after LS Power closed. Robert Gaudette became chief executive on 30 April 2026, succeeding Lawrence Coben.",
+ "ecosystemRole": "NRG is the corpus's clearest case of the **natural hedge run the other way round**: it started with the customers and bought the generation to match them, where Vistra started with the plants. Eight covered dossiers already name it — the highest count of the three companies in this session — and most name it for people rather than deals: Aypa, esVolta, FlexGen and GridStor all have executives who came from NRG. The two that name it for business are the ones that matter: Kiewit, whose TIC subsidiary is the EPC partner in the 5.4 GW GE Vernova development agreement, and Oncor, for which NRG's retail subsidiaries are the second-largest customer group at 21 percent of 2025 revenue.",
+ "productsAndServices": [
+  {
+   "name": "Retail electricity, natural gas and home services",
+   "category": "Competitive retail supply",
+   "description": "The core of the company. Approximately 8 million residential customers at 31 December 2025 — 5,632 thousand retail energy and 2,419 thousand Vivint smart-home subscribers — plus large commercial, industrial, data-centre and wholesale customers. NRG sold 154 TWh of electricity and 1,857 million dekatherms of natural gas in 2025 across 25 US states, the District of Columbia and eight Canadian provinces, with Vivint serving all 50 states.",
+   "highlights": [
+    "Retail revenue was $29,543 million of $30,713 million total in FY2025 — a generation company only in the sense that a supermarket is a farm",
+    "Texas residential electricity has fallen three straight years: 2,928 to 2,909 to 2,860 thousand customers",
+    "Vivint grew from 2,226 to 2,419 thousand subscribers over the same year, with an average customer lifetime of about nine years and more than 37 million connected in-home devices",
+    "Home customers contract for one month to five years; business customers one to five years, at fixed, indexed or month-to-month prices",
+    "The provision for credit losses from credit risk was $272 million in FY2025, $314 million in FY2024 and $251 million in FY2023",
+    "NRG owns Direct Energy Regulated Services, a regulated rate supplier in parts of Alberta, and sells into California's Direct Access market and community choice aggregations"
+   ],
+   "positioning": "The largest share of competitively served residential electric customers in Texas, per the company. Vistra's TXU Energy is the direct competitor, with roughly 2.6 million Texas customers against NRG's 2.86 million; NRG is roughly 60 percent larger overall once Vivint is counted.",
+   "soldThrough": "Direct-to-consumer, brokers, community aggregation and a door-to-door and dealer channel for Vivint",
+   "targetSegments": [
+    "Residential",
+    "Small and medium business",
+    "Commercial and industrial",
+    "Smart home"
+   ]
+  },
+  {
+   "name": "Generation fleet",
+   "category": "Wholesale generation",
+   "description": "12,276 MW net at 23 plants at 31 December 2025 — 9,271 MW in Texas, 2,073 MW in the East and 932 MW in the West and elsewhere; 6,345 MW coal, 5,262 MW gas, 455 MW oil and 214 MW utility-scale solar. The LS Power acquisition closed on 30 January 2026 and added 18 gas and dual-fuel facilities of roughly 13 GW across nine states, taking the portfolio to approximately 25 GW. NRG also operates about 6,200 MW at 13 further plants on behalf of third parties.",
+   "highlights": [
+    "The fleet is unusually coal-heavy for a merchant — coal was 6,345 MW of 12,276 MW before LS Power closed",
+    "Indian River Unit 4 (410 MW coal, Delaware) retired on 23 February 2025 under an RMR settlement approved by FERC in January 2025",
+    "The Cottonwood lease (1,139 MW gas, Texas) ended in May 2025 and left the fleet",
+    "Six gas plants totalling 738 MW were bought from Rockland Capital for $560 million in April 2025, roughly $760 per kW",
+    "Three Texas Energy Fund-backed new-builds total about 1.5 GW on $1.15 billion of 3 percent state loans: T.H. Wharton (415 MW peaker, in service 26 May 2026), Cedar Bayou 5 (689 MW combined cycle, mid-2028) and Greens Bayou 6 (443 MW peaker, mid-2028)",
+    "T.H. Wharton was NRG's first new-build generation asset in nearly a decade and earned a completion-bonus grant agreement of up to $54.72 million over ten annual instalments",
+    "NRG owns no disclosed battery storage in either the FY2024 or FY2025 properties table"
+   ],
+   "positioning": "Roughly half Vistra's size after LS Power and with no nuclear at all. What NRG has instead is a retail book large enough to absorb most of what the fleet produces, and a demand-side business that Vistra and Talen do not have.",
+   "soldThrough": "Own retail load first, then wholesale energy and capacity markets",
+   "targetSegments": [
+    "ERCOT",
+    "PJM",
+    "ISO-NE",
+    "NYISO",
+    "Own retail load"
+   ]
+  },
+  {
+   "name": "Demand response and virtual power plants",
+   "category": "Distributed and demand-side resources",
+   "description": "CPower, acquired with the LS Power portfolio, is a commercial and industrial virtual-power-plant platform with approximately 6 GW of capacity across more than 2,000 customers, operating in every deregulated US market. Alongside it NRG runs a residential virtual power plant in Texas built on smart thermostats and home batteries.",
+   "highlights": [
+    "The Texas residential programme's 2025 target was raised from 20 MW to 150 MW in August 2025, exceeded that target, and passed 200 MW by Q1 2026",
+    "Stated trajectory is 650 MW in Texas by 2030 and 1 GW by 2035",
+    "Partnerships: Renew Home, the Google Nest and OhmConnect spinout, announced November 2024 for a roughly 1 GW artificial-intelligence-managed residential virtual power plant in Texas using free Nest and Vivint thermostats, with Google Cloud supplying forecasting and analytics",
+    "Sunrun partnership announced 16 December 2025 bundles solar-plus-storage with Reliant retail plans, aggregated and dispatched into ERCOT",
+    "Vivint's installed base is the distribution channel — 2.4 million homes with an average of about 16 connected devices each"
+   ],
+   "positioning": "The one product line neither Vistra nor Talen has at this scale. In an energy-only market where the largest loads may be curtailed in emergencies, a supplier that can turn demand down is selling the same reliability a peaker sells, at lower capital cost.",
+   "soldThrough": "Retail brands, Vivint's dealer channel, and direct commercial and industrial sales",
+   "targetSegments": [
+    "Residential",
+    "Commercial and industrial",
+    "ERCOT and PJM demand response"
+   ]
+  },
+  {
+   "name": "Bring Your Own Power — customer-backed new generation",
+   "category": "Contracted large-load supply",
+   "description": "NRG's name for building generation that a large load pays for. The model is deliberately different from selling an existing plant's output: the customer's capital commitment underwrites the plant, and NRG says it is paid for capacity made available rather than for energy consumed. The flagship is a 1.2 GW combined-cycle plant in Texas for an unnamed global cloud and artificial-intelligence hyperscaler, expandable to 2.4 GW.",
+   "highlights": [
+    "**Not signed.** The Q2 2026 release states the parties 'are aligned on principal commercial terms … and remains subject to final documentation and approvals'; Utility Dive reported it as not yet final",
+    "Disclosed economics: about $3.2 billion of investment at roughly $2,700 per kW, about $500 million of annual adjusted EBITDA and about $375 million of free cash flow before growth at full operation, a 12-15 percent pre-tax unlevered internal rate of return, and a target commercial operation date in late 2029",
+    "NRG says 95 percent of the free cash flow is supported by capacity payments — chief executive Robert Gaudette: 'we're paid for the megawatts we build and make available, not for how much the data center runs'",
+    "**Signed, and separate:** 445 MW of long-term retail power agreements with a single unnamed counterparty — 295 MW at two Texas sites announced August 2025 (initial power in the second half of 2026, fully online by 2030) and 150 MW at two PJM sites added in the third quarter of 2025 (initial power 2028, fully online in the second half of 2032)",
+    "The only counterparties NRG has ever named are two data-centre developers, Menlo Equities and PowLan, under February 2025 letters of intent targeting 400 MW initially with 'potential to scale to 6.5 GW'",
+    "NRG's stated 2026 goal was to sign at least 1 GW of long-term data-centre contracts under this model"
+   ],
+   "positioning": "The structural alternative to what Talen and Vistra sell. They monetise existing nuclear, which is fast and faces the additionality objection; NRG proposes new gas the customer funds, which is additional by construction and takes until 2029.",
+   "soldThrough": "Direct origination through NRG Business",
+   "targetSegments": [
+    "Hyperscale data centres",
+    "Large commercial and industrial load"
+   ],
+   "roadmap": "NRG says its development pipeline exceeds twice the 5.4 GW of secured turbine capacity, with 1.2 GW targeted online in each of 2029, 2030 and 2031, 1.8 GW by 2032, and roughly 2 GW of PJM uprates."
+  },
+  {
+   "name": "New-build development with GE Vernova and TIC",
+   "category": "Generation development",
+   "description": "A Project Development Agreement signed on 13 February 2025 with GE Vernova and TIC, a Kiewit subsidiary, to develop and construct up to 5.4 GW of new combined-cycle generation. Separately NRG holds slot reservation agreements with GE Vernova for 7HA gas turbines. The plants would be owned and operated by NRG alone.",
+   "highlights": [
+    "**It is not a joint venture.** The word does not appear in the FY2024 10-K, the FY2025 10-K or any NRG earnings release in this connection; NRG's own words are 'strategic Project Development Agreement' and 'the generation facilities will be owned and operated by NRG'",
+    "Turbine slot reservations grew from 1.2 GW (February 2025) to 3.6 GW (per the FY2025 10-K), against an unchanged 5.4 GW development ceiling — an expansion NRG disclosed only inside the 10-K",
+    "GE Vernova accounts for reservations separately from backlog in its own reporting, which is the clearest evidence the slots are conditional rather than firm orders",
+    "No firm turbine purchase order, no final investment decision and no named site has been disclosed under the agreement",
+    "Target is 'up to 5.4 GW online between 2029-2032', with the first projects expected to commence operations by the end of 2029, priority given to Texas and East region sites"
+   ],
+   "positioning": "Kiewit's own dossier records this alongside Homer City and Oglethorpe in a roughly 11 GW gas book, and identifies reserved GE Vernova 7HA slots as the scarcest capability in the AI-power complex — turbine manufacturing capacity, not construction labour, is the constraint through 2030.",
+   "soldThrough": "Development agreement plus separate turbine slot reservations",
+   "targetSegments": [
+    "ERCOT",
+    "PJM"
+   ]
+  },
+  {
+   "name": "Commercial operations and hedging",
+   "category": "Wholesale trading and risk management",
+   "description": "The market operations function that supplies retail load from the fleet and hedges the residual. NRG describes the Texas business as fully integrated — generation supply matched to retail load — which reduces third-party transactions, transaction costs, credit exposure and collateral posting.",
+   "highlights": [
+    "NRG publishes no percentage-hedged table in any filing; that disclosure exists only in the investor decks, which are not publicly reachable",
+    "Its candour instead is a risk factor: 'NRG does not typically hedge the entire exposure of its operations against commodity price volatility'",
+    "One-day 95 percent value at risk was $61 million at 31 December 2025 against $71 million a year earlier; full-term value at risk on mark-to-market derivatives was $145 million",
+    "A $0.50 per MMBtu move in gas changes the net value of derivative contracts by approximately $1.1 billion, and a $0.50 decrease would raise posted margin collateral by approximately $1.4 billion",
+    "A first-lien programme lets NRG grant liens instead of posting cash or letters of credit, with no volume limit and no stated maturity",
+    "PJM capacity cleared jumped from about 1,077 MW for 2027/2028 to 6,839 MW at $325.00/MW-day for 2028/2029 — the LS Power fleet clearing for the first time"
+   ],
+   "positioning": "The collateral point is the substance of the integrated model. Selling to your own customers rather than to a counterparty removes a margin call, which for a company with $1.4 billion of collateral sensitivity to a fifty-cent gas move is a balance-sheet fact, not a slogan.",
+   "soldThrough": "Own retail load, bilateral forwards, capacity auctions",
+   "targetSegments": [
+    "Own retail load",
+    "Wholesale counterparties"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Owned generation fleet as filed, 31 December 2025",
+   "specs": [
+    {
+     "band": "By fuel",
+     "label": "Coal",
+     "value": "6,345 MW — Texas 4,202, East 1,538, West/Other 605"
+    },
+    {
+     "band": "By fuel",
+     "label": "Natural gas",
+     "value": "5,262 MW — Texas 5,069, East 80, West/Other 113"
+    },
+    {
+     "band": "By fuel",
+     "label": "Oil",
+     "value": "455 MW, all East"
+    },
+    {
+     "band": "By fuel",
+     "label": "Utility-scale solar",
+     "value": "214 MW, all West/Other"
+    },
+    {
+     "band": "By fuel",
+     "label": "Battery storage owned",
+     "value": "None disclosed in the properties table of either the FY2024 or FY2025 Form 10-K"
+    },
+    {
+     "band": "Totals",
+     "label": "Owned net capacity",
+     "value": "12,276 MW at 23 plants (13,081 MW a year earlier)"
+    },
+    {
+     "band": "Totals",
+     "label": "Operated for third parties",
+     "value": "approximately 6,200 MW of coal, gas and wind at 13 further plants"
+    },
+    {
+     "band": "Totals",
+     "label": "Pro forma after LS Power",
+     "value": "approximately 25 GW — 18 gas and dual-fuel facilities of roughly 13 GW across nine states added 30 January 2026"
+    },
+    {
+     "band": "New build",
+     "label": "T.H. Wharton (TX, peaker)",
+     "value": "415 MW net / 456 MW nameplate; $216 million Texas Energy Fund loan; commercial operation 26 May 2026"
+    },
+    {
+     "band": "New build",
+     "label": "Cedar Bayou 5 (TX, combined cycle)",
+     "value": "689 MW net / 721 MW nameplate; $562 million loan; expected mid-2028"
+    },
+    {
+     "band": "New build",
+     "label": "Greens Bayou 6 (TX, peaker)",
+     "value": "443 MW net; $370 million loan; expected mid-2028"
+    },
+    {
+     "band": "New build",
+     "label": "Development agreement ceiling",
+     "value": "up to 5.4 GW of combined cycle with GE Vernova and TIC, online 2029-2032; 3.6 GW of 7HA turbine slots reserved"
+    }
+   ],
+   "notes": "The three Texas Energy Fund projects carry $1.15 billion of state loans at 3 percent, due 2045. T.H. Wharton was NRG's first new-build generation asset in nearly a decade."
+  },
+  {
+   "product": "Retail and smart-home book",
+   "specs": [
+    {
+     "band": "Customers",
+     "label": "Home — Texas retail electricity",
+     "value": "2,860 thousand (2,909 in 2024; 2,928 in 2023)"
+    },
+    {
+     "band": "Customers",
+     "label": "Home — East retail electricity",
+     "value": "1,803 thousand"
+    },
+    {
+     "band": "Customers",
+     "label": "Home — West/Other retail electricity",
+     "value": "325 thousand"
+    },
+    {
+     "band": "Customers",
+     "label": "Home — retail natural gas",
+     "value": "644 thousand (East 319, West/Other 325)"
+    },
+    {
+     "band": "Customers",
+     "label": "Total retail energy",
+     "value": "5,632 thousand (5,748 in 2024; 5,759 in 2023)"
+    },
+    {
+     "band": "Customers",
+     "label": "Vivint Smart Home",
+     "value": "2,419 thousand (2,226 in 2024; 2,111 in 2023), including 67 thousand non-Vivint home-protection customers"
+    },
+    {
+     "band": "Customers",
+     "label": "Combined",
+     "value": "8,051 thousand"
+    },
+    {
+     "band": "Volumes",
+     "label": "Electricity sold",
+     "value": "154,000 GWh in 2025 (154,448 in 2024)"
+    },
+    {
+     "band": "Volumes",
+     "label": "Natural gas sold",
+     "value": "1,856,821 thousand dekatherms in 2025"
+    },
+    {
+     "band": "Geography",
+     "label": "Footprint",
+     "value": "25 US states plus the District of Columbia and eight Canadian provinces; Vivint in all 50 states"
+    },
+    {
+     "band": "Brands",
+     "label": "Named in the Form 10-K",
+     "value": "NRG, Reliant, Direct Energy, Green Mountain Energy, Vivint"
+    },
+    {
+     "band": "Brands",
+     "label": "Confirmed in Exhibit 21.1",
+     "value": "Cirro, XOOM Energy, Energy Plus and the Direct Energy family of entities"
+    }
+   ],
+   "notes": "'Discount Power' appears nowhere in the FY2025 Form 10-K or in Exhibit 21.1 and should not be listed as a current brand. The retail energy book shrank in 2025 while Vivint grew — the composition of the eight million is moving."
+  },
+  {
+   "product": "Segment results, FY2025",
+   "specs": [
+    {
+     "band": "Revenue",
+     "label": "Texas",
+     "value": "$11,139M"
+    },
+    {
+     "band": "Revenue",
+     "label": "East",
+     "value": "$14,263M"
+    },
+    {
+     "band": "Revenue",
+     "label": "West/Other",
+     "value": "$3,202M"
+    },
+    {
+     "band": "Revenue",
+     "label": "Vivint Smart Home",
+     "value": "$2,144M"
+    },
+    {
+     "band": "Revenue",
+     "label": "Total",
+     "value": "$30,713M, of which retail revenue was $29,543M and capacity revenue $280M"
+    },
+    {
+     "band": "Adjusted EBITDA",
+     "label": "Texas",
+     "value": "$1,877M (from $1,582M) — improved margins and supply-cost optimisation"
+    },
+    {
+     "band": "Adjusted EBITDA",
+     "label": "East",
+     "value": "$981M (from $1,006M) — higher cost to serve retail load and the Indian River retirement"
+    },
+    {
+     "band": "Adjusted EBITDA",
+     "label": "West/Other including Corporate",
+     "value": "$137M (from $190M) — the Airtron sale and the Cottonwood lease ending"
+    },
+    {
+     "band": "Adjusted EBITDA",
+     "label": "Vivint Smart Home",
+     "value": "$1,092M (from $1,011M) — record new customer adds and higher recurring margin per customer"
+    },
+    {
+     "band": "Adjusted EBITDA",
+     "label": "Total",
+     "value": "$4,087M (from $3,789M)"
+    },
+    {
+     "band": "Goodwill",
+     "label": "Vivint share",
+     "value": "$3,523M of $5,017M total"
+    }
+   ],
+   "notes": "Vivint contributes roughly a quarter of Adjusted EBITDA on 7 percent of revenue, and carries 70 percent of the goodwill. Any read of NRG that treats it as a power company understates how much of the earnings comes from monthly subscriptions."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "NRG guides on Adjusted EPS, Adjusted EBITDA and Free Cash Flow before Growth, and does not guide GAAP net income at all, citing derivative fair-value swings. Revenue consensus for NRG is unusable — compilers do not model its gross retail revenue line consistently, so Zacks' Q2 2026 revenue estimate of $5.89 billion against a $7.48 billion actual produced a meaningless 27 percent 'beat'. **Expectations honesty:** FY2024 carries a genuine outlet-reported adjusted-EPS estimate; FY2025's only located consensus figure is nine months stale, so that year is benchmarked against NRG's own raised guidance and labelled as such; the latest interim carries three published consensus figures that disagree by 10 percent, all named.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The year the strategy was set: the GE Vernova and TIC development agreement was signed in February 2025 alongside these results, and the LS Power deal followed in May.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$28,130M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Of which retail revenue was $27,149 million. No usable full-year revenue consensus exists — compilers do not model NRG's gross retail line consistently.",
+      "kpi": "revenue",
+      "usdMillions": 28130,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$6.83",
+      "expected": "$6.50 (analyst estimate, reported by GuruFocus)",
+      "verdict": "beat",
+      "result": "Analyst-estimate benchmark. It also cleared the top of NRG's own raised guidance range of $5.95-$6.75. Note that on a GAAP EPS basis at least one outlet framed the same year as a miss — say which basis you mean."
+     },
+     {
+      "name": "Net income attributable to NRG",
+      "actual": "$1,125M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Includes a $204 million gain on the September 2024 sale of Airtron for $500 million.",
+      "kpi": "net-income",
+      "usdMillions": 1125,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted earnings per share",
+      "actual": "$4.99 ($5.14 basic)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "After $67 million of preferred dividends on the 10.25 percent Series A stock issued to fund Vivint.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$3,789M",
+      "expected": "—",
+      "verdict": "beat",
+      "result": "Segment split: Texas $1,582 million, East $1,006 million, Vivint $1,011 million, West and Other $190 million."
+     },
+     {
+      "name": "Free Cash Flow before Growth",
+      "actual": "$2,062M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Operating cash flow was $2,306 million against capital expenditure of $472 million — the last year before the new-build programme began."
+     },
+     {
+      "name": "Capital expenditures",
+      "actual": "$472M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "It more than doubled the following year as the three Texas Energy Fund projects started construction.",
+      "kpi": "capex",
+      "usdMillions": 472,
+      "fxBasis": "as reported"
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "NRG's headline was 'Exceeded 2025 raised financial guidance ranges'. The same year the retail energy book shrank by 116 thousand customers while Vivint grew by 193 thousand.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$30,713M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Retail revenue $29,543 million — 96 percent of the total. Capacity revenue was $280 million.",
+      "kpi": "revenue",
+      "usdMillions": 30713,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$8.24",
+      "expected": "$7.55-$8.15 (company guidance, raised September 2025)",
+      "verdict": "beat",
+      "result": "Company-guidance benchmark: above the top end of the raised range and well above the original $6.75-$7.75. The only published analyst consensus located is $7.47, dated May 2025 and therefore nine months stale — it is named but not used as the verdict."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$4,087M",
+      "expected": "$3,875-$4,025M (company guidance, raised September 2025)",
+      "verdict": "beat",
+      "result": "Company-guidance benchmark. Above the top end. Texas contributed $295 million of the $298 million year-on-year increase."
+     },
+     {
+      "name": "Net income attributable to NRG",
+      "actual": "$864M",
+      "expected": "—",
+      "verdict": "miss",
+      "result": "Down $261 million, which NRG attributes primarily to unrealised non-cash mark-to-market losses on economic hedges against gains in 2024, plus the Airtron sale and the Cottonwood lease termination.",
+      "kpi": "net-income",
+      "usdMillions": 864,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted earnings per share",
+      "actual": "$4.01 ($4.09 basic)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Helped by an 11 million reduction in weighted-average basic shares. Q4 2025 specifically beat: $1.04 adjusted against a $0.89 consensus.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Free Cash Flow before Growth",
+      "actual": "$2,210M",
+      "expected": "$2,100-$2,250M (company guidance, raised)",
+      "verdict": "inline",
+      "result": "Within the raised range. Operating cash flow fell $393 million, including a $224 million payment on the CPI Security Systems legal matter."
+     },
+     {
+      "name": "Capital expenditures",
+      "actual": "$1,147M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Up from $472 million as the three Texas Energy Fund projects moved into construction.",
+      "kpi": "capex",
+      "usdMillions": 1147,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Total retail and smart-home customers",
+      "actual": "8,051 thousand — 5,632 retail energy plus 2,419 Vivint",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "The retail energy book fell for the second consecutive year while Vivint grew; Texas residential electricity has now fallen three years running."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026 (three months to 30 June 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "The second consecutive adjusted-EPS miss of 2026, at the same $1.49 as the first, delivered alongside the unveiling of the $3.2 billion Texas project. The shares fell more than 15 percent on the day and set a 52-week low three weeks later.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$7,481M",
+      "expected": "$7.46B (Investing.com consensus)",
+      "verdict": "inline",
+      "result": "Analyst-consensus benchmark, effectively in line. Zacks' $5.89 billion estimate produced a spurious 27 percent 'beat' and should be ignored — compilers do not model NRG's gross retail revenue consistently.",
+      "kpi": "revenue",
+      "usdMillions": 7481,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$1.49 (from $1.68)",
+      "expected": "$1.66 (Zacks); $1.69 (MarketBeat); $1.82 (Investing.com)",
+      "verdict": "miss",
+      "result": "Analyst-consensus benchmark. A miss of 10 to 18 percent depending on the compiler; Zacks' $1.66 is the most conventionally cited. Adjusted EPS fell 11 percent year on year while Adjusted EBITDA rose 34 percent — the wedge is interest expense and share count from the LS Power acquisition."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$1,217M (from $909M)",
+      "expected": "—",
+      "verdict": "beat",
+      "result": "Up 33.9 percent. Segment split: East $469 million, Texas $381 million, Vivint $301 million, West and Other $66 million. East more than quadrupled on the acquired fleet."
+     },
+     {
+      "name": "Net income attributable to NRG",
+      "actual": "$506M (from a $(104)M loss)",
+      "expected": "—",
+      "verdict": "beat",
+      "result": "GAAP diluted EPS $2.31. The GAAP and adjusted figures point in opposite directions this quarter, which is why NRG does not guide GAAP.",
+      "kpi": "net-income",
+      "usdMillions": 506,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Free Cash Flow before Growth",
+      "actual": "$1,025M for the quarter; $959M for the first half",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "First-half free cash flow was below the single quarter's figure, reflecting first-quarter working capital."
+     },
+     {
+      "name": "2026 guidance",
+      "actual": "Reaffirmed at $7.90-$9.90 Adjusted EPS, $5,325-$5,825M Adjusted EBITDA and $2.8-$3.3B Free Cash Flow before Growth",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company guidance, set on 2 February 2026 to incorporate about eleven months of the LS Power portfolio. The $2.00-wide EPS range is unusually loose, and first-half adjusted EPS of $2.98 implies a heavily back-loaded year."
+     },
+     {
+      "name": "Contracted data-centre power agreements",
+      "actual": "445 MW signed across ERCOT and PJM with a single unnamed counterparty",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "The 1.2 GW Texas project announced in the same release is 'aligned on principal commercial terms' and not signed. Do not add the two figures together.",
+      "kpi": "mw-contracted",
+      "qty": 445
+     },
+     {
+      "name": "Capital expenditures",
+      "actual": "$338M for the quarter; $655M for the first half",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Against $595 million in the first half of 2025.",
+      "kpi": "capex",
+      "usdMillions": 338,
+      "fxBasis": "as reported"
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess the description of the GE Vernova and TIC arrangement as a 'joint venture' is wrong and should be corrected wherever it appears. NRG's own filings call it a **Project Development Agreement**, signed 13 February 2025, under which 'the generation facilities will be owned and operated by NRG'; the word joint venture appears nowhere in the FY2024 or FY2025 Form 10-K or in any earnings release in this connection. The turbines are covered by separate **slot reservation agreements** — 1.2 GW in February 2025, expanded to 3.6 GW by the FY2025 10-K without a press release — and GE Vernova accounts for reservations separately from firm backlog. No firm turbine order, no final investment decision and no named site has been disclosed. Basis: both 10-Ks, the February 2025 release and GE Vernova's own reporting.",
+  "**(High confidence)** We assess the LS Power acquisition is **closed**, not pending, and that this is the single most consequential fact about the company's shape. It completed on 30 January 2026 for $10,583 million of consideration — $6,855 million cash and 24,250,000 shares at $153.72 — plus approximately $3.2 billion of assumed debt, adding 18 gas and dual-fuel facilities of roughly 13 GW across nine states and CPower's roughly 6 GW demand-response platform, and doubling the fleet to about 25 GW. FERC approved it unconditionally on 14 November 2025 over the market monitor's objection. LS Power retains roughly 11 percent of NRG's shares with voting capped at 10 percent through a trust. Basis: the 10-K, the 10-Q and the transaction releases.",
+  "**(High confidence)** We assess NRG is the only one of the four large merchants with **no named hyperscaler counterparty**, and that this is a genuine competitive gap rather than a disclosure preference. Talen names Amazon, Constellation names Microsoft and Meta, Vistra names Amazon and Meta. NRG has 445 MW of signed retail power agreements with a counterparty it has never named, and a 1.2 GW project its own release says is 'aligned on principal commercial terms … subject to final documentation and approvals'. The only counterparties it has ever named are two data-centre developers, Menlo Equities and PowLan, under February 2025 letters of intent. Basis: the Q2 2026 release and Utility Dive's reporting that the project is not yet final.",
+  "**(High confidence)** We assess the integrated model is more load-led at NRG than at any peer, and that the collateral effect is the substance of it. Retail was $29.5 billion of $30.7 billion of FY2025 revenue; the fleet exists to serve that load. NRG's own language is that integration 'reduces the need to sell electricity to, and buy electricity from, other institutions and intermediaries' and results in 'a reduction in actual and contingent collateral through offsetting transactions'. Against a disclosed sensitivity of roughly $1.4 billion of additional margin collateral for a fifty-cent fall in gas prices, that is a balance-sheet consequence rather than a talking point. Basis: the FY2025 10-K's business overview and quantitative market-risk disclosures.",
+  "**(Moderate confidence)** We assess the retail book is quietly weakening while the smart-home book carries the growth, and that the mix shift is under-discussed. Retail energy customers fell from 5,748 to 5,632 thousand in 2025 and Texas residential electricity has now declined three years running, while Vivint added 193 thousand subscribers and contributed $1,092 million of the $4,087 million Adjusted EBITDA on 7 percent of revenue, carrying $3,523 million of the $5,017 million of goodwill. Basis: the FY2025 operational statistics and segment note. The disconfirming consideration is that Vivint's retention is high and its customer life about nine years, so a shift toward it is not obviously worse — but it is a different business with different risk.",
+  "**(Moderate confidence)** We assess the market has repudiated the story faster than the sell side has. Two consecutive adjusted-EPS misses in 2026, both at exactly $1.49, a 15 percent fall on the day the Texas project was unveiled, and a 52-week low of $111.85 on 24 August 2026 on a Morgan Stanley downgrade — against a mean price target near $189 and 13 of 16 analysts still at Buy or Strong Buy. Every August action was a target cut without a rating change. Basis: StockAnalysis, MarketBeat and the dated broker actions. Either the models or the tape is wrong; both cannot be right at a 37 percent gap.",
+  "**(Moderate confidence)** We assess Texas policy is now a two-sided risk for NRG rather than the tailwind it was. On 3 August 2026 the state paused data-centre grid interconnections pending an audit of a queue ERCOT put at roughly 410 GW, of which only about 9 GW has approval to energize — and NRG's signed 445 MW are grid-served and therefore exposed, while behind-the-meter generation is exempt, which cuts in favour of the Bring Your Own Power model. On the other side, NRG has been awarded more than $1.1 billion of taxpayer-backed Texas Energy Fund loans and its incoming chief executive conceded publicly that prices 'have to rise, given where supply and demand is going'. Basis: Foley's client alert, ERCOT's April 2026 testimony, the governor's releases and the POWER interview.",
+  "**Collection gap:** `investors.nrg.com` returns 403 and 503, so no investor deck, transcript or events calendar could be read first-party — which means the percentage of expected generation hedged, a figure Vistra and Talen both publish, is unobtainable for NRG. Nine of ten executive headshots are advertised by NRG's own pages at asset paths that redirect to an error page, so only one executive portrait could be downloaded. No net leverage ratio is published in any filing. No shareholder or securities litigation was found. **Indicators to watch:** (1) whether the 1.2 GW Texas project converts from 'principal commercial terms' to a signed agreement, and whether a counterparty is finally named — NRG's own 2026 goal was to sign at least 1 GW under this model; (2) a firm turbine purchase order or a final investment decision under the GE Vernova agreement, which would turn 3.6 GW of reserved slots into committed capacity; (3) the ERCOT interconnection audit's December 2026 verification report, which governs every grid-served large load NRG has signed; (4) the Texas residential customer count — a fourth consecutive annual decline would make the retail erosion structural rather than cyclical; (5) confirmation of the Q3 2026 report date, unannounced as of 5 September 2026 against a first-week-of-November pattern."
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-24",
+   "category": "market",
+   "headline": "Shares reach a 52-week low of $111.85 on a Morgan Stanley downgrade to Equal Weight",
+   "read": "Roughly 41 percent below the 52-week high, against a mean analyst target near $189 and thirteen of sixteen ratings still at Buy. Six firms cut targets in August without changing ratings.",
+   "source": "https://www.marketbeat.com/instant-alerts/nrg-energy-nysenrg-reaches-new-1-year-low-on-analyst-downgrade-2026-08-24/"
+  },
+  {
+   "date": "2026-08-06",
+   "category": "customer",
+   "headline": "1.2 GW combined-cycle project for an unnamed hyperscaler advanced but not signed",
+   "read": "A $3.2 billion investment at about $2,700 per kW, expandable to 2.4 GW, targeting late 2029 — with 95 percent of the free cash flow said to rest on capacity payments rather than consumption. Utility Dive is explicit that it is not yet final.",
+   "source": "https://www.utilitydive.com/news/nrg-nears-12-gw-hyperscaler-deal-amid-texas-data-center-pause/827212/"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026: adjusted EPS of $1.49 misses consensus for the second consecutive quarter; shares fall over 15 percent",
+   "read": "Adjusted EBITDA rose 34 percent on the LS Power fleet while adjusted EPS fell 11 percent — the wedge is interest expense and the shares issued to buy that fleet.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000018/nrgq22026ex991.htm"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "policy",
+   "headline": "Texas pauses data-centre grid interconnections pending an audit of the queue",
+   "read": "The governor directed the commission and ERCOT to verify roughly 474 GW of requests, about 90 percent of them data centres. Behind-the-meter generation is exempt, which favours NRG's Bring Your Own Power model; its signed 445 MW are grid-served and are not.",
+   "source": "https://www.utilitydive.com/news/texas-hits-pause-data-center-interconnections/827046/"
+  },
+  {
+   "date": "2026-06-17",
+   "category": "policy",
+   "headline": "Completion-bonus grant agreement signed with the PUCT for T.H. Wharton, up to $54.72 million",
+   "read": "Ten annual instalments beginning after the initial test period ends on 31 May 2027, subject to performance — the state paying for capacity that shows up, not capacity that is announced.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000020/nrg-20260630.htm"
+  },
+  {
+   "date": "2026-05-26",
+   "category": "project",
+   "headline": "T.H. Wharton reaches commercial operation — 415 MW, NRG's first new-build generation in nearly a decade",
+   "read": "The first of three Texas Energy Fund projects to finish, on a $216 million state loan at 3 percent. Cedar Bayou 5 and Greens Bayou 6 follow in mid-2028.",
+   "source": "https://www.utilitydive.com/news/nrg-close-to-completing-415-mw-gas-plant-backed-by-texas-energy-fund/819587/"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "leadership",
+   "headline": "Robert Gaudette becomes President and Chief Executive Officer; Antonio Carrillo becomes Chair",
+   "read": "A twenty-five-year NRG insider from the business and market operations side, not a generation executive — consistent with a company whose revenue is 96 percent retail. Lawrence Coben left the company and the board.",
+   "source": "https://www.nrg.com/about/newsroom/2026/45106.html"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "legal",
+   "headline": "New York Public Service Commission approves a $71 million consumer settlement covering nine NRG-affiliated retail brands",
+   "read": "The most material recent consumer-protection action against the retail book, reaching roughly 278,000 customers in Case 25-M-0516.",
+   "source": "https://www.governor.ny.gov/news/money-your-pockets-governor-kathy-hochul-announced-public-service-commission-directs-71"
+  },
+  {
+   "date": "2026-03-02",
+   "category": "corporate",
+   "headline": "Secondary offering of 12.3 million NRG shares held by LS Power, with a concurrent $300 million buy-back",
+   "read": "NRG received no proceeds from the offering but repurchased 1,829,269 shares from the seller at $164.00, taking part of its own paper back at a price it has not seen since.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000110465926008932/tm264311d3_ex99-1.htm"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "financial",
+   "headline": "FY2025 exceeds the raised guidance ranges: adjusted EPS $8.24 and Adjusted EBITDA $4,087 million",
+   "read": "Texas contributed almost all of the year-on-year increase. The same release extended the 14 percent-plus adjusted-EPS growth target through 2030.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000002/ex991-q42025.htm"
+  },
+  {
+   "date": "2026-01-30",
+   "category": "ma",
+   "headline": "LS Power acquisition completes — 13 GW of gas generation and the CPower demand-response platform",
+   "read": "Consideration of $10,583 million plus about $3.2 billion of assumed debt doubles the fleet to roughly 25 GW and adds 6 GW of commercial and industrial demand response. LS Power keeps about 11 percent of NRG's shares, voting capped at 10 percent.",
+   "source": "https://www.nrg.com/about/newsroom/2026/45146.html"
+  },
+  {
+   "date": "2025-12-16",
+   "category": "partnership",
+   "headline": "Sunrun partnership bundles home solar and storage with Reliant retail plans in Texas",
+   "read": "The residential virtual power plant gains a hardware channel; the stated target is 1 GW aggregated by 2035.",
+   "source": "https://investors.sunrun.com/news-events/press-releases/detail/358/sunrun-and-nrg-energy-announce-partnership-to-harness-the"
+  },
+  {
+   "date": "2025-11-14",
+   "category": "regulatory",
+   "headline": "FERC approves the LS Power acquisition unconditionally, over the PJM market monitor's objection",
+   "read": "The last substantive approval. The market monitor's concern was concentration in PJM; FERC did not impose conditions.",
+   "source": "https://www.utilitydive.com/news/ferc-nrg-ls-power-gas-fired-pjm-bp-wind/805651/"
+  },
+  {
+   "date": "2025-11-20",
+   "category": "policy",
+   "headline": "Third Texas Energy Fund loan approved — Greens Bayou 6, $370 million",
+   "read": "Takes NRG to about 1.5 GW of state-financed new build on $1.15 billion of 3 percent loans, in a programme that had deployed only $321 million in its first two years.",
+   "source": "https://www.utilitydive.com/news/texas-loan-fund-tops-35-gw-of-gas-capacity-secured-with-latest-nrg-deal/806144/"
+  },
+  {
+   "date": "2025-11-06",
+   "category": "customer",
+   "headline": "Two further long-term retail power agreements totalling 150 MW at PJM sites, taking the signed book to 445 MW",
+   "read": "Same counterparty as the Texas agreements, still unnamed. Initial power in 2028, fully online in the second half of 2032 — these are long-dated retail supply arrangements, not the customer-funded new-build model NRG now markets.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000101387125000023/nrgq32025ex991.htm"
+  },
+  {
+   "date": "2025-08-06",
+   "category": "customer",
+   "headline": "First signed long-term data-centre power agreements — 295 MW at two NRG-owned Texas sites",
+   "read": "Chief executive Larry Coben: 'We have also signed our first long-term data center power agreements.' Initial powering expected in the second half of 2026, fully online by 2030.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000101387125000018/nrgq22025ex991.htm"
+  },
+  {
+   "date": "2025-05-12",
+   "category": "ma",
+   "headline": "Agreement to acquire 13 GW of gas generation and CPower from LS Power for about $12 billion enterprise value",
+   "read": "A stated 7.5x 2026 EV/EBITDA, or 50 percent of new-build replacement cost, funded with $6.4 billion cash and $2.8 billion of stock. The long-term adjusted-EPS growth target rose from at least 10 percent to at least 14 percent on the same day.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000110465925047007/tm2514561d1_ex99-1.htm"
+  },
+  {
+   "date": "2025-04-10",
+   "category": "ma",
+   "headline": "Acquisition of a 738 MW Texas gas portfolio from Rockland Capital for $560 million",
+   "read": "About $760 per kW for six plants — one combined cycle and five peakers — roughly half hedged through 2028.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000004/nrg-20251231.htm"
+  },
+  {
+   "date": "2025-02-26",
+   "category": "partnership",
+   "headline": "Project Development Agreement with GE Vernova and Kiewit's TIC for up to 5.4 GW of new combined-cycle generation",
+   "read": "NRG owns and operates; GE Vernova supplies 7HA turbines under separate slot reservations, initially 1.2 GW and later 3.6 GW; TIC provides engineering and construction. First projects targeted for the end of 2029.",
+   "source": "https://www.gevernova.com/news/press-releases/nrg-energy-ge-vernova-kiewit-accelerating-new-generation-capacity-support-demand"
+  },
+  {
+   "date": "2024-11-19",
+   "category": "partnership",
+   "headline": "Renew Home and Google Cloud partnership for a roughly 1 GW residential virtual power plant in Texas",
+   "read": "Free Nest and Vivint thermostats on flexible rate plans, with Google Cloud supplying the forecasting and analytics. The demand-side answer to a market with no capacity payment.",
+   "source": "https://www.canarymedia.com/articles/virtual-power-plants/google-nest-spinout-picks-texas-for-1gw-virtual-power-plant"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "ge-vernova",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-02",
+   "scale": "3.6 GW of 7HA turbine slots reserved against a 5.4 GW development ceiling",
+   "via": "7HA gas turbines",
+   "note": "Turbine supplier and co-party to NRG's Project Development Agreement for up to 5.4 GW of new combined-cycle generation.",
+   "context": "NRG signed the agreement on 13 February 2025 with GE Vernova and TIC and announced it on 26 February. GE Vernova's own newsroom carries the joint release. The structure matters: it is a development agreement under which 'the generation facilities will be owned and operated by NRG', with turbines covered by separate slot reservation agreements — not an equity joint venture, and NRG's filings never use that phrase.\n\nThe reservations expanded from 1.2 GW in February 2025 to 3.6 GW by the FY2025 Form 10-K, disclosed only inside the filing. GE Vernova accounts for reservations separately from firm backlog in its own quarterly reporting, which is the clearest available evidence that the slots are conditional. No firm purchase order, final investment decision or named site has been disclosed under the agreement.",
+   "source": "https://www.gevernova.com/news/press-releases/nrg-energy-ge-vernova-kiewit-accelerating-new-generation-capacity-support-demand"
+  },
+  {
+   "slug": "kiewit",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-02",
+   "scale": "up to 5.4 GW of combined-cycle EPC",
+   "via": "TIC — The Industrial Company",
+   "note": "Engineering and construction partner through its subsidiary TIC in the same up-to-5.4 GW development agreement.",
+   "context": "GE Vernova's release names 'TIC, a subsidiary of Kiewit' as the construction partner, and NRG's filings refer to 'Kiewit's subsidiary, TIC' without spelling the acronym out; Oglethorpe Power's January 2026 release independently states that 'TIC — The Industrial Company is a wholly-owned subsidiary of Kiewit Corporation'.\n\nKiewit's own dossier places this alongside Homer City (up to 4.5 GW) and Oglethorpe (1,425 MW) in a roughly 11 GW gas book, and assesses reserved GE Vernova 7HA slots plus TIC's delivery record as the scarcest capability set in the AI-power complex — turbine manufacturing capacity, not construction labour, being the binding constraint through 2030. For NRG the relationship is what converts a turbine reservation into a buildable project.",
+   "source": "https://www.gevernova.com/news/press-releases/nrg-energy-ge-vernova-kiewit-accelerating-new-generation-capacity-support-demand"
+  },
+  {
+   "slug": "google",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-11",
+   "scale": "approximately 1 GW residential virtual power plant by 2035",
+   "via": "Google Cloud analytics and Nest thermostats",
+   "note": "Google Cloud supplies the data, analytics and artificial-intelligence layer for NRG's Texas residential virtual power plant, built with the Google Nest spinout Renew Home.",
+   "context": "The November 2024 announcement pairs NRG with Renew Home — the company formed from Google's Nest Renew and OhmConnect — to build a roughly one-gigawatt artificial-intelligence-managed residential virtual power plant in Texas by 2035, distributing free Nest and Vivint smart thermostats to customers on flexible rate plans. Roughly a million Texas households already ran Renew Home-managed Nest thermostats at announcement.\n\nGoogle Cloud is a named third party in the arrangement, supplying weather forecasting, renewable generation modelling and predictive pricing to run the aggregation. This is a demand-side relationship rather than a data-centre power sale: Google appears here as a technology supplier, not as a load NRG serves.",
+   "source": "https://www.canarymedia.com/articles/virtual-power-plants/google-nest-spinout-picks-texas-for-1gw-virtual-power-plant"
+  },
+  {
+   "slug": "oncor",
+   "type": "other",
+   "status": "active",
+   "since": "2025",
+   "scale": "21% of Oncor's 2025 operating revenues",
+   "note": "NRG's retail subsidiaries are the second-largest customer group of Oncor, the Texas wires utility that delivers their power.",
+   "context": "Oncor's Form 10-K for 2025 states that retailer subsidiaries of Vistra and NRG Energy are its two largest customers, at 25 percent and 21 percent of total operating revenues respectively, with no other customer exceeding 10 percent. In a restructured market the retailer is the wires utility's customer: it buys delivery service and passes the charge through to the household's bill.\n\nThe adjacency is not commercial in the ordinary sense — neither party chooses the other — but it sizes the relationship precisely. It also means the Texas interconnection pause and the transmission cost-allocation arguments now running through the commission reach NRG twice: once through its generation queue and once through the delivery charges its retail customers pay.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+  },
+  {
+   "slug": "vistra",
+   "type": "competitor",
+   "status": "active",
+   "scale": "~25 GW vs ~50 GW pro forma",
+   "note": "The other integrated merchant of scale, and NRG's direct competitor for Texas residential customers.",
+   "context": "Coverage of hyperscaler power contracting names Vistra, Constellation, Talen and NRG together as the merchant cohort. The two are the only integrated merchants of size: both own generation and a multi-million-customer retail book. NRG's book is larger — about eight million customers including Vivint against Vistra's five million — while Vistra's fleet is roughly twice the size and includes 6.4 GW of nuclear that NRG has none of.\n\nWedbush's February 2026 note reports capital rotating out of Vistra into NRG after Vistra's fourth-quarter print, citing NRG's diversified retail footprint and LS Power integration at a materially lower multiple; by August that trade had reversed, with NRG at a 52-week low. In Texas retail their brands compete head to head, Reliant against TXU Energy, and Oncor's 10-K sizes the two books at 21 and 25 percent of its revenue.",
+   "source": "https://investor.wedbush.com/wedbush/article/marketminute-2026-2-27-vistra-corp-vst-q4-earnings-analysis-reality-check-for-the-ai-power-trade"
+  },
+  {
+   "slug": "talen-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named alongside NRG in the merchant cohort competing for data-centre load, and the peer whose Susquehanna structure is described as the model others are trying to replicate.",
+   "context": "Trade coverage groups Vistra, Constellation, Talen and NRG as the four merchants pursuing hyperscaler power purchase agreements, and describes Talen's Amazon arrangement at Susquehanna as the model for such opportunities. The comparison is unflattering in one specific respect: three of the four have named, signed hyperscaler contracts and NRG does not.\n\nThe strategies are genuinely different rather than merely differently executed. Talen sells the output of an existing nuclear station, which is fast and invites the additionality objection; NRG proposes new gas that the customer's capital commitment underwrites, which is additional by construction and does not deliver until 2029. Talen's co-location fight also produced the FERC docket that now governs PJM co-located load, a rulebook NRG's PJM sites sit under.",
+   "source": "https://www.utilitydive.com/news/nrg-nears-12-gw-hyperscaler-deal-amid-texas-data-center-pause/827212/"
+  },
+  {
+   "slug": "constellation-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named alongside NRG in the merchant cohort, and a contrast in the Texas Energy Fund: Constellation withdrew a project NRG's programme completed.",
+   "context": "Constellation is the nuclear pure-play in the four-company merchant cohort, with Microsoft at Three Mile Island and Meta at Clinton, and is separately acquiring Calpine. It is the peer whose contracting record NRG's is measured against.\n\nThe sharper contrast is in Texas. Latitude Media's November 2025 account of the Texas Energy Fund records Constellation withdrawing a project citing permitting delays and local opposition, in a programme that had deployed only $321 million of $7.2 billion across two years, while NRG carried three projects totalling about 1.5 GW through to loans and brought the first to commercial operation in May 2026.",
+   "source": "https://www.latitudemedia.com/news/how-the-data-center-boom-brought-down-the-texas-energy-fund/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Texas Energy Fund (Senate Bills 2627 and 2268)",
+   "status": "in-effect",
+   "effectiveDate": "2023",
+   "exposure": "NRG has three approved loans totalling $1.15 billion at 3 percent against about 1.5 GW of new dispatchable capacity — T.H. Wharton ($216 million), Cedar Bayou 5 ($562 million) and Greens Bayou 6 ($370 million), all due 2045. The completion-bonus grant programme pays $120,000 per MW for projects interconnected before 1 June 2026 and $80,000 per MW thereafter to 1 June 2029, subject to performance; NRG signed a grant agreement for T.H. Wharton on 17 June 2026 for up to $54.72 million over ten annual instalments beginning after the initial test period ends on 31 May 2027. Senate Bill 2268 split the previous 10,000 MW collective cap into separate 10,000 MW caps for the loan and grant programmes.",
+   "mitigation": "The projects are brownfield expansions at sites NRG already owns, which is why they cleared a programme in which 72 applicants sought more than $24 billion and only a handful of projects have been financed.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000004/nrg-20251231.htm"
+  },
+  {
+   "regime": "Texas large-load interconnection pause and PUCT verification (August 2026)",
+   "status": "in-effect",
+   "effectiveDate": "2026-08-03",
+   "exposure": "The governor directed the commission and ERCOT to pause new data-centre grid interconnections and audit a queue of roughly 474 GW of requests, about 90 percent of them data centres. ERCOT halted its first large-load study batch and said verification would run to December 2026. NRG's signed 445 MW of data-centre retail agreements are grid-served and therefore inside the pause; the 1.2 GW project under negotiation is customer-funded new generation, which is a different regulatory path.",
+   "mitigation": "Behind-the-meter generation is exempt from the pause, which is the structural argument for NRG's Bring Your Own Power model. NRG publicly supported the governor's audit.",
+   "source": "https://www.foley.com/insights/publications/2026/08/governor-abbott-pauses-texas-data-center-interconnections-and-calls-for-verification-and-audit-what-data-center-developers-need-to-know-now/"
+  },
+  {
+   "regime": "ERCOT market design — real-time co-optimisation with batteries",
+   "status": "in-effect",
+   "effectiveDate": "2025-12-05",
+   "exposure": "ERCOT implemented real-time co-optimisation of energy and ancillary services on 5 December 2025, replacing the operating reserve demand curve with demand curves for each ancillary product as the primary scarcity-pricing mechanism. NRG's Texas operations are not rate-regulated by FERC because they are deemed to operate solely within ERCOT, so this is the mechanism that sets the scarcity revenue its Texas fleet earns. The East fleet by contrast draws a significant share of revenue from PJM, ISO-NE and NYISO capacity markets under pay-for-performance rules.",
+   "mitigation": "Integration is the hedge: retail load absorbs most of what the Texas fleet produces, so scarcity pricing is a cost as often as it is a revenue, and the two largely offset.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000004/nrg-20251231.htm"
+  },
+  {
+   "regime": "New York Public Service Commission consumer settlement (Case 25-M-0516)",
+   "status": "in-effect",
+   "effectiveDate": "2026-04-16",
+   "exposure": "The commission approved a $71 million settlement covering nine NRG-affiliated retail energy service companies and roughly 278,000 customers. It is the largest consumer-protection action against the retail book located in the record and bears directly on the segment that produces 96 percent of revenue.",
+   "mitigation": "None stated by the company in the sources located; the settlement resolves rather than contests the matter.",
+   "source": "https://www.governor.ny.gov/news/money-your-pockets-governor-kathy-hochul-announced-public-service-commission-directs-71"
+  },
+  {
+   "regime": "FERC review of the LS Power acquisition (Federal Power Act section 203)",
+   "status": "expired",
+   "effectiveDate": "2025-11-14",
+   "exposure": "FERC approved the acquisition of LS Power's 13 GW portfolio unconditionally on 14 November 2025, over an objection from PJM's Independent Market Monitor concerned about concentration. The New York State Public Service Commission and Hart-Scott-Rodino clearances followed, and the transaction closed on 30 January 2026.",
+   "mitigation": "The approval was granted without conditions, so no divestiture or behavioural remedy constrains the combined fleet.",
+   "source": "https://www.utilitydive.com/news/ferc-nrg-ls-power-gas-fired-pjm-bp-wind/805651/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Robert J. Gaudette",
+   "title": "President and Chief Executive Officer",
+   "background": [
+    "President and Chief Executive Officer — NRG Energy (from 30 April 2026); President from January 2026",
+    "Executive Vice President and President of NRG Business and Wholesale Operations, leading all power generation including plant operations, asset management, development, engineering and procurement",
+    "Executive Vice President of NRG Business and Market Operations (2022-); President of that unit from 2024",
+    "Senior Vice President, Business Solutions (2013-2022), leading what NRG calls the largest business-to-business retail gas and power platform in North America",
+    "Joined NRG in 2001 from a predecessor company — twenty-five years across trading, asset management, regulatory affairs, finance, strategy, sales, origination and product development"
+   ]
+  },
+  {
+   "name": "Woo-Sung (Bruce) Chung",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "background": [
+    "Executive Vice President and Chief Financial Officer — NRG Energy (June 2023-)",
+    "Executive Vice President, Strategy, M&A and NRG Services (2022-2023); Senior Vice President in the same role (2016-2022)",
+    "Managing Director — Energy Impact Partners (2016)",
+    "At NRG 2008-2016 on large-scale project and new business development",
+    "Director in the investment banking division of Citigroup and predecessor firms, covering power"
+   ]
+  },
+  {
+   "name": "Brad Bentley",
+   "title": "Executive Vice President, President of NRG Consumer",
+   "photo": "images/execs/nrg-energy-bentley.png",
+   "background": [
+    "Executive Vice President and President of NRG Consumer (July 2025-)",
+    "Chief Operating Officer, Traveler Operation — Expedia Group (2022-2025)",
+    "Chief Executive Officer and President — Inspire Clean Energy (2019-2022)",
+    "Executive roles at WarnerMedia, AT&T and DIRECTV"
+   ]
+  },
+  {
+   "name": "Brian Curci",
+   "title": "Executive Vice President and General Counsel",
+   "background": [
+    "Executive Vice President and General Counsel — NRG Energy (March 2021-)",
+    "Senior Vice President and General Counsel (2018-2021); Senior Vice President and Deputy General Counsel (2017-2018)",
+    "Corporate Secretary (2011-2018); joined NRG in 2007",
+    "Corporate associate — Saul Ewing LLP, Philadelphia"
+   ]
+  },
+  {
+   "name": "Gin Kirkland Kinney",
+   "title": "Executive Vice President and Chief Administrative Officer",
+   "background": [
+    "Executive Vice President and Chief Administrative Officer — NRG Energy (December 2024-)",
+    "Senior Vice President, Communications and Philanthropy (2021-2024)",
+    "Vice President — NRG Energy (2015-2021); Managing Director, NRG Business (2012-2015)"
+   ]
+  },
+  {
+   "name": "Dak Liyanearachchi",
+   "title": "Executive Vice President and Chief Technology Officer",
+   "background": [
+    "Executive Vice President and Chief Technology Officer — NRG Energy (December 2024-)",
+    "Chief Data and Technology Officer (2021-2024); Chief Data and Analytics Officer (2020-2021)",
+    "Chief Data and Analytics Officer — Hilton Worldwide (2017-2020)",
+    "Catalina Marketing (2007-2017); Gartner Chief Data Officer Advisory Board (2016-2017)"
+   ]
+  },
+  {
+   "name": "G. Alfred (Al) Spencer",
+   "title": "Senior Vice President and Chief Accounting Officer",
+   "background": [
+    "Senior Vice President and Chief Accounting Officer — NRG Energy (December 2023-), principal accounting officer",
+    "Vice President, Controller and Principal Accounting Officer — JetBlue Airways (2022-2023)",
+    "Deputy Chief Financial Officer and Corporate Controller, North America — Air Liquide (2017-2022)",
+    "Earlier roles at NCI Building Systems, Friedkin Services Group and ExpressJet Airlines"
+   ]
+  },
+  {
+   "name": "Caroline Golin",
+   "title": "Chief Growth and Policy Officer",
+   "background": [
+    "Chief Growth and Policy Officer — NRG Energy (appointed 2026)",
+    "Listed on NRG's management page outside the proxy's Section 16 officer group"
+   ]
+  },
+  {
+   "name": "Matthew Pistner",
+   "title": "Senior Vice President, Generation",
+   "background": [
+    "Senior Vice President, Generation — NRG Energy",
+    "Spoke for NRG on the Bring Your Own Power model and the labour to build it in an August 2026 POWER interview"
+   ]
+  },
+  {
+   "name": "Antonio Carrillo",
+   "title": "Chair of the Board",
+   "background": [
+    "Chair of the Board — NRG Energy (from 30 April 2026); Lead Independent Director and director since 2019",
+    "President and Chief Executive Officer — Arcosa Inc. (November 2018-)",
+    "Senior Vice President and Group President — Trinity Industries",
+    "Chief Executive Officer — Orbia Advance Corporation (2012-2018)",
+    "Former director of Dr Pepper Snapple and Trinity Industries"
+   ]
+  },
+  {
+   "name": "Alexandra Pruner",
+   "title": "Independent Director",
+   "background": [
+    "Director — NRG Energy (2019-)",
+    "Partner and Chief Financial Officer — Perella Weinberg Partners",
+    "Co-founder and Chief Financial Officer — Tudor, Pickering, Holt & Co."
+   ]
+  },
+  {
+   "name": "Glenn Wright",
+   "title": "Independent Director",
+   "background": [
+    "Director — NRG Energy (from 26 May 2026), bringing the board to eleven members",
+    "Senior Vice President, Shell Energy Americas and President and Chief Executive Officer, Shell New Energies US (2020-2025)",
+    "Vice President, Shell Energy Trading Americas and President and Chief Executive Officer, Shell Energy North America (2016-2020)",
+    "General Manager, Power Trading, Shell Energy North America (2008-2016); Vice President, Enron Industrial Markets (1999-2002)",
+    "PhD and MS chemical engineering and MBA, University of Texas at Austin; BS chemical engineering, Georgia Tech"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "San Antonio Current / Inside Climate News — Texas data-centre developers plan massive new gas projects",
+   "url": "https://www.sacurrent.com/news/texas-news/data-center-developers-in-texas-plan-massive-new-gas-power-projects/",
+   "date": "2026-08-29"
+  },
+  {
+   "label": "MarketBeat — NRG reaches a new one-year low on an analyst downgrade",
+   "url": "https://www.marketbeat.com/instant-alerts/nrg-energy-nysenrg-reaches-new-1-year-low-on-analyst-downgrade-2026-08-24/",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "ad-hoc-news — NRG stock falls to a new 52-week low on mixed Q2 2026 results",
+   "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/nrg-energy-stock-falls-to-a-new-52-week-low-as-mixed-q2-2026-results-and/69995200",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "Foley & Lardner — Governor Abbott pauses Texas data-centre interconnections and calls for verification and audit",
+   "url": "https://www.foley.com/insights/publications/2026/08/governor-abbott-pauses-texas-data-center-interconnections-and-calls-for-verification-and-audit-what-data-center-developers-need-to-know-now/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Utility Dive — NRG nears a 1.2 GW hyperscaler deal amid the Texas data-centre pause",
+   "url": "https://www.utilitydive.com/news/nrg-nears-12-gw-hyperscaler-deal-amid-texas-data-center-pause/827212/",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "POWER Magazine — the power interview: NRG's case for Bring Your Own Power and the labour to build it",
+   "url": "https://www.powermag.com/the-power-interview-nrgs-case-for-bring-your-own-power-and-the-labor-to-build-it/",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "NRG Energy — Q2 2026 results release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000018/nrgq22026ex991.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "NRG Energy — Form 10-Q for the quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000020/nrg-20260630.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Investing.com — NRG Q2 2026 slides: a $3.2 billion data-centre project unveiled amid an earnings miss",
+   "url": "https://ca.investing.com/news/company-news/nrg-q2-2026-slides-32b-data-center-project-unveiled-amid-earnings-miss-93CH-4774896",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Investing.com — NRG Energy Q2 2026 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-nrg-energy-q2-2026-earnings-miss-shares-slide-9-93CH-4834904",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Utility Dive — Texas hits pause on data-centre interconnections",
+   "url": "https://www.utilitydive.com/news/texas-hits-pause-data-center-interconnections/827046/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Yahoo Finance — NRG Energy Q2 earnings lag estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nrg-energy-q2-earnings-lag-151900357.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "GE Vernova — second quarter 2026 financial results (backlog against slot reservations)",
+   "url": "https://www.gevernova.com/news/articles/ge-vernova-releases-second-quarter-2026-financial-results",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "PJM — 2028/2029 capacity auction procures 138,318 MW of generation resources",
+   "url": "https://www.pjm.com/-/media/DotCom/about-pjm/newsroom/2026-releases/20260714-pjm-capacity-auction-procures-138318-mw-of-generation-resources.pdf",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "Utility Dive — NRG close to completing a 415 MW gas plant backed by the Texas Energy Fund",
+   "url": "https://www.utilitydive.com/news/nrg-close-to-completing-415-mw-gas-plant-backed-by-texas-energy-fund/819587/",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "NRG Energy — Form 10-Q for the quarter ended 31 March 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001013871/000101387126000012/nrg-20260331.htm",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "NRG Energy — Q1 2026 results release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000010/nrgq12026ex991.htm",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "TipRanks — NRG Q1 2026 report",
+   "url": "https://www.tipranks.com/stocks/nrg/earnings/q1-2026-report",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "EnergyChoiceMatters — New York Public Service Commission approves the NRG affiliated ESCO settlement",
+   "url": "https://www.energychoicematters.com/stories/20260416a.html",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "Office of the Governor of New York — Public Service Commission directs $71 million in consumer relief",
+   "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-kathy-hochul-announced-public-service-commission-directs-71",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "New York Department of Public Service — NRG-affiliated ESCO settlement distribution information",
+   "url": "https://dps.ny.gov/nrg-affiliated-escos-settlement-distribution-information"
+  },
+  {
+   "label": "ERCOT — large load update, April 2026 (Senate hearing materials)",
+   "url": "https://www.ercot.com/files/docs/2026/04/01/ERCOT_LargeLoad_Update_April2026_B-C_-Hearing.pdf",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "NRG Energy — secondary offering by LS Power and concurrent share repurchase (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000110465926008932/tm264311d3_ex99-1.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "NRG Energy — Form 8-K on the LS Power secondary offering",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000110465926008567/tm264311d1_8k.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Wedbush — Vistra Q4 2025 analysis, including capital rotation into NRG",
+   "url": "https://investor.wedbush.com/wedbush/article/marketminute-2026-2-27-vistra-corp-vst-q4-earnings-analysis-reality-check-for-the-ai-power-trade",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "NRG Energy — Form 10-K for the year ended 31 December 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000004/nrg-20251231.htm",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "NRG Energy — FY2025 results release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000002/ex991-q42025.htm",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "NRG Energy — subsidiaries of the registrant (Exhibit 21.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000004/exhibit211q42025.htm",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "24/7 Wall St. — NRG Q4 2025 earnings",
+   "url": "https://247wallst.com/companies/nrg/earnings/2025/Q4",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Simply Wall St — why NRG Energy is down after an earnings miss and a large buy-back",
+   "url": "https://simplywall.st/stocks/us/utilities/nyse-nrg/nrg-energy/news/why-nrg-energy-nrg-is-down-88-after-earnings-miss-and-big-bu",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "NRG Energy — completes the acquisition of 13 GW of generation and the C&I VPP portfolio from LS Power",
+   "url": "https://www.nrg.com/about/newsroom/2026/45146.html",
+   "date": "2026-01-30"
+  },
+  {
+   "label": "NRG Energy — receives all regulatory approvals for the LS Power portfolio acquisition",
+   "url": "https://www.nrg.com/about/newsroom/2026/45141.html",
+   "date": "2026-01-26"
+  },
+  {
+   "label": "Oglethorpe Power — selects Kiewit subsidiary TIC as EPC partner (confirms TIC is a Kiewit subsidiary)",
+   "url": "https://opc.com/2026/01/13/oglethorpe-power-selects-kiewit-subsidiary-the-industrial-company-tic-as-epc-partner-for-new-monroe-county-combined-cycle-plant/",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "NRG Energy — leadership succession plan announced",
+   "url": "https://www.nrg.com/about/newsroom/2026/45106.html",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "NRG Energy — updated 2026 guidance and fourth quarter 2025 earnings call announcement (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000110465926001602/tm261967d1_ex99-1.htm",
+   "date": "2026-02-02"
+  },
+  {
+   "label": "ESS News — Texas BESS round-up including the Sunrun and NRG home-storage partnership",
+   "url": "https://www.ess-news.com/2025/12/17/texas-bess-gridstor-inks-tolling-agreement-for-350-mwh-project-sunrun-teams-up-with-nrg-energy-for-low-cost-home-storage/",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Sunrun — Sunrun and NRG Energy announce a partnership to harness distributed energy in Texas",
+   "url": "https://investors.sunrun.com/news-events/press-releases/detail/358/sunrun-and-nrg-energy-announce-partnership-to-harness-the",
+   "date": "2025-12-16"
+  },
+  {
+   "label": "Electrek — Sunrun and NRG launch a virtual power plant to ease Texas power demand",
+   "url": "https://electrek.co/2025/12/16/sunrun-nrg-launch-a-virtual-power-plant-to-ease-texas-power-demand/",
+   "date": "2025-12-16"
+  },
+  {
+   "label": "Utility Dive — Texas loan fund tops 3.5 GW of gas capacity secured with the latest NRG deal",
+   "url": "https://www.utilitydive.com/news/texas-loan-fund-tops-35-gw-of-gas-capacity-secured-with-latest-nrg-deal/806144/",
+   "date": "2025-11-21"
+  },
+  {
+   "label": "Utility Dive — FERC approves NRG's acquisition of LS Power gas plants in PJM",
+   "url": "https://www.utilitydive.com/news/ferc-nrg-ls-power-gas-fired-pjm-bp-wind/805651/",
+   "date": "2025-11-17"
+  },
+  {
+   "label": "Latitude Media — how the data-centre boom brought down the Texas Energy Fund",
+   "url": "https://www.latitudemedia.com/news/how-the-data-center-boom-brought-down-the-texas-energy-fund/",
+   "date": "2025-11-10"
+  },
+  {
+   "label": "NRG Energy — Q3 2025 results release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387125000023/nrgq32025ex991.htm",
+   "date": "2025-11-06"
+  },
+  {
+   "label": "Utility Dive — NRG aims for a 2026 next step in the 5.4 GW gas deal with GE Vernova and Kiewit",
+   "url": "https://www.utilitydive.com/news/nrg-aims-for-2026-next-step-in-54-gw-gas-deal-with-ge-vernova-kiewit/805692/",
+   "date": "2025-11-07"
+  },
+  {
+   "label": "NRG Energy — notes offering release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000110465925090857/tm2526353d1_ex99-1.htm",
+   "date": "2025-10-06"
+  },
+  {
+   "label": "NRG Energy — notes pricing release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000110465925092754/tm2526385d1_ex99-1.htm",
+   "date": "2025-10-08"
+  },
+  {
+   "label": "NRG Energy — Q2 2025 results release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387125000018/nrgq22025ex991.htm",
+   "date": "2025-08-06"
+  },
+  {
+   "label": "Utility Dive — NRG Energy on data centres in Texas (Q2 2025 earnings)",
+   "url": "https://www.utilitydive.com/news/nrg-energy-data-center-texas-earnings/813076/",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "Utility Dive — NRG, LS Power, FERC and the gas-fired portfolio in PJM and NYISO",
+   "url": "https://www.utilitydive.com/news/nrg-ls-power-ferc-gas-fired-power-plant-pjm-nyiso/750900/",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "NRG Energy — agreement to acquire the LS Power portfolio (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000110465925047007/tm2514561d1_ex99-1.htm",
+   "date": "2025-05-12"
+  },
+  {
+   "label": "Yahoo Finance — NRG Energy doubles generation capacity with the LS Power acquisition",
+   "url": "https://finance.yahoo.com/news/nrg-energy-doubles-generation-capacity-145633466.html",
+   "date": "2025-05-12"
+  },
+  {
+   "label": "NRG Energy — Q1 2025 results release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387125000010/nrgq12025ex991.htm",
+   "date": "2025-05-12"
+  },
+  {
+   "label": "TipRanks / The Fly — NRG reaffirms FY2025 adjusted EPS guidance against a $7.47 consensus",
+   "url": "https://www.tipranks.com/news/the-fly/nrg-energy-reaffirms-fy25-adjusted-eps-6-75-7-75-consensus-7-47",
+   "date": "2025-05-12"
+  },
+  {
+   "label": "Utility Dive — Texas selects NRG for a loan to support a 456 MW gas plant",
+   "url": "https://www.utilitydive.com/news/texas-selects-nrg-for-loan-to-support-456-mw-gas-plant/757393/",
+   "date": "2025-07-31"
+  },
+  {
+   "label": "POWER Magazine — NRG, GE Vernova and Kiewit have a plan to build four new gas-fired power plants",
+   "url": "https://www.powermag.com/nrg-ge-vernova-kiewit-have-plan-to-build-four-new-gas-fired-power-plants/",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "GE Vernova — NRG Energy, GE Vernova and Kiewit accelerating new generation capacity to support demand",
+   "url": "https://www.gevernova.com/news/press-releases/nrg-energy-ge-vernova-kiewit-accelerating-new-generation-capacity-support-demand",
+   "date": "2025-02-26"
+  },
+  {
+   "label": "NRG Energy — FY2024 results release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387125000004/ex991-q42024.htm",
+   "date": "2025-02-26"
+  },
+  {
+   "label": "NRG Energy — Form 10-K for the year ended 31 December 2024",
+   "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387125000006/nrg-20241231.htm",
+   "date": "2025-02-26"
+  },
+  {
+   "label": "GuruFocus — NRG Energy surpasses Q4 2024 estimates",
+   "url": "https://www.gurufocus.com/news/2715822/nrg-energy-inc-surpasses-q4-2024-estimates-with-eps-of-310-and-revenue-of-2813-billion",
+   "date": "2025-02-26"
+  },
+  {
+   "label": "Canary Media — Google Nest spinout picks Texas for a 1 GW virtual power plant",
+   "url": "https://www.canarymedia.com/articles/virtual-power-plants/google-nest-spinout-picks-texas-for-1gw-virtual-power-plant",
+   "date": "2024-11-19"
+  },
+  {
+   "label": "Utility Dive — ERCOT's large-load queue jumped almost 300 percent last year",
+   "url": "https://www.utilitydive.com/news/ercots-large-load-queue-jumped-almost-300-last-year-official/808820/",
+   "date": "2026-01-08"
+  },
+  {
+   "label": "Power Engineering — people on the move: NRG taps a generation veteran as next CEO",
+   "url": "https://www.power-eng.com/news/people-on-the-move-nrg-taps-generation-veteran-as-next-ceo/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "RTO Insider — FERC requires additional changes for PJM co-located load",
+   "url": "https://www.rtoinsider.com/134982-ferc-requires-additional-changes-for-pjm-co-located-load/",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "PJM — 2027/2028 Base Residual Auction report",
+   "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2027-2028/2027-2028-bra-report.pdf",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Oncor — Form 10-K for the year ended 31 December 2025 (Vistra and NRG retail subsidiaries as largest customers)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "CultureMap Houston — the 2026 Fortune 500 Houston companies (NRG at number 149)",
+   "url": "https://houston.culturemap.com/news/innovation/fortune-500-company-houston-2026/",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "NRG Energy — newsroom",
+   "url": "https://www.nrg.com/about/newsroom.html"
+  },
+  {
+   "label": "NRG Energy — our management",
+   "url": "https://www.nrg.com/about/our-management.html"
+  },
+  {
+   "label": "MarketChameleon — NRG earnings dates",
+   "url": "https://marketchameleon.com/Overview/NRG/Earnings/Earnings-Dates/"
+  },
+  {
+   "label": "StockAnalysis — NRG overview and analyst forecasts",
+   "url": "https://stockanalysis.com/stocks/nrg/"
+  },
+  {
+   "label": "TipRanks — NRG earnings calendar",
+   "url": "https://www.tipranks.com/stocks/nrg/earnings"
+  },
+  {
+   "label": "ERCOT — day-ahead market overview",
+   "url": "https://www.ercot.com/mktinfo/dam"
+  },
+  {
+   "label": "EnergyChoiceMatters — NRG retail brand and market coverage",
+   "url": "https://www.energychoicematters.com/stories/20260515aaa.html"
+  }
+ ],
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 1
+}

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-05",
- "companies": 124,
+ "companies": 127,
  "edges": [
   {
    "a": "abb",
@@ -1514,6 +1514,22 @@
   },
   {
    "a": "aep",
+   "b": "talen-energy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Co-protestant with Exelon against the Susquehanna amended interconnection service agreement at FERC.",
+     "context": "The FERC order rejecting the amended interconnection service agreement records that Exelon Corporation and American Electric Power filed the timely protest against it. Their argument, as reported by POWER Magazine, was that the arrangement would let a large load avoid the transmission charges that grid-connected load pays.\n\nThe adjacency is now commercial as well as adversarial: three of the four plants Talen acquired in June 2026 — Lawrenceburg, Waterford and Darby — sit in the AEP zone of PJM, as does Guernsey.",
+     "source": "https://www.ferc.gov/sites/default/files/2024-11/20241101-3061_ER24-2172-000.pdf",
+     "status": "historical",
+     "since": "2024"
+    }
+   },
+   "evid": [],
+   "last": "2024"
+  },
+  {
+   "a": "aep",
    "b": "terawulf",
    "curated": {
     "a": {
@@ -2464,6 +2480,20 @@
   },
   {
    "a": "amazon",
+   "b": "nrg-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Talen names Amazon, Constellation names Microsoft and Meta, Vistra names Amazon and Meta.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amazon",
    "b": "nvidia",
    "evid": [
     {
@@ -2791,6 +2821,198 @@
     }
    ],
    "last": "2026-02-23"
+  },
+  {
+   "a": "amazon",
+   "b": "talen-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon bought Talen's Cumulus data-centre campus in March 2024 and buys Susquehanna output under a power purchase agreement expanded in June 2025.",
+     "context": "The relationship has two halves. In March 2024 Amazon Web Services purchased substantially all the assets of the Cumulus data campus for $650 million gross, $300 million of which sat in escrow until August 2024 pending milestones allowing development to 960 MW of consumption; Talen recorded a $324 million gain. Alongside the sale it entered an initial power purchase agreement with minimum commitments stepping up in 120 MW increments.\n\nThe second half is the restructuring. FERC rejected the amended interconnection service agreement that would have let Susquehanna divert up to 480 MW to co-located load. In June 2025 the two companies signed an amended agreement moving to a front-of-the-meter arrangement: Susquehanna sells into PJM, Talen acts as Amazon's licensed Pennsylvania retail electric generation supplier, and PPL Electric Utilities handles transmission and delivery. At full contract quantity Talen supplies 1,920 MW through 2042 with extension options, ramping to full volume no later than 2032. Talen's 10-Q states the transition occurred in April 2026. Amazon Energy LLC is also a named intervenor in the FERC docket, and the two companies co-sponsored a joint proposal in PJM's Critical Issue Fast Path stakeholder process.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm",
+     "status": "active",
+     "since": "2024-03",
+     "scale": "up to 1,920 MW through 2042",
+     "via": "Susquehanna nuclear output"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** Talen is the merchant generator that lost the co-location argument at FERC and won the commercial one anyway — the behind-the-meter arrangement that made it famous was rejected in November 2024, and the 1,920 MW Amazon deal that replaced it is an ordinary front-of-the-meter power sale that needed no FERC approval at all, running through a pre-existing Pennsylvania retail supplier licence.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Four covered dossiers already name it — Amazon, Constellation Energy, Invenergy and TeraWulf — and every one of them names it for the same thing: the Susquehanna arrangement, which is the reference case for whether a data centre may sit at a power plant and what it owes for the grid it still leans on.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess the widely repeated framing of Talen as 'the Amazon nuclear-PPA precedent' is backwards on the part that matters.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess the company's earnings power now rests more on the PJM capacity market than on the Amazon contract.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Jefferies' read, reported by Utility Dive, is that the order 'should further close the door' to IPPs selling existing generation while Talen's legacy Amazon deal 'appears safe'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Cole Muller — who ran the Cumulus data-centre business and led the Amazon transaction — became Chief Financial Officer; Darren Olagues's remit expanded to data-centre commercial strategy; and a Chief Asset Development Officer role was created for new generation and large-load interconnections.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Talen publishes no standalone sustainability report and no individual executive LinkedIn profiles, and discloses no revenue concentration for Amazon despite the contract's scale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Long-term large-load power supply (the AWS arrangement)",
+     "date": "",
+     "text": "Talen sells Amazon up to 1,920 MW of Susquehanna output through 2042 with extension options.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Long-term large-load power supply (the AWS arrangement)",
+     "date": "",
+     "text": "Since April 2026 this runs front-of-the-meter: Susquehanna sells its power into PJM, Talen acts as Amazon's licensed Pennsylvania retail electric generation supplier, and PPL Electric Utilities provides transmission and delivery.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Long-term large-load power supply (the AWS arrangement)",
+     "date": "",
+     "text": "Constellation sells Microsoft a restarted reactor and Meta an operating one; Vistra sells Amazon and Meta nuclear output under 20-year PPAs.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-20",
+     "text": "X-energy and Talen sign a letter of intent to assess three or more four-unit Xe-100 plants in Pennsylvania and PJM — The small-modular-reactor option becomes concrete enough to name a vendor — and Amazon is not a party to it, despite the June 2025 language about exploring SMRs together.",
+     "src": "https://www.world-nuclear-news.org/articles/x-energy-talen-to-assess-deployment-of-multiple-smr-plants",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-15",
+     "text": "Executive realignment: Terry Nutt to President, Cole Muller to Chief Financial Officer, a Chief Asset Development Officer role created — The executive who ran the Cumulus data-centre business and the Amazon transaction becomes CFO; the new development role is defined around new generation and large-load interconnections.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000041/ex99120251215pressreleasee.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-09",
+     "text": "Investor update discloses the Amazon ramp band and a shortfall make-whole capped at 50-65 percent — The single most useful disclosure about the contract: minimum and maximum volumes by year, about $18 billion of nominal cash flows at the minimum ramp, and the fact that a make-whole exists but does not make Talen whole.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000010/investorupdate090925_vf.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-03",
+     "text": "Talen buys TeraWulf's minority share in the Nautilus Cryptomine at Susquehanna — The bitcoin-mining chapter closes: Talen took full ownership, then ceased use of the facility in June 2025 and terminated the lease in September 2025, with Amazon taking possession of the structures.",
+     "src": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-20"
+  },
+  {
+   "a": "amazon",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon buys 1,200 MW of carbon-free power from Comanche Peak under a twenty-year agreement, and separately buys the output of the 200 MW Oak Hill solar plant.",
+     "context": "Vistra entered a twenty-year power purchase agreement in September 2025, with options to extend for up to twenty more years, to supply Amazon Web Services with 1,200 MW from the Comanche Peak nuclear plant in Glen Rose, Texas. Deliveries are expected to begin in the fourth quarter of 2027 and ramp to full capacity by 2032. Vistra discloses that the customer plans to bring one-to-one backup generation and that the parties have options to explore uprates and small modular reactors.\n\nThe naming is itself a fact worth recording. At the third-quarter 2025 results Vistra described the counterparty only as 'an investment grade counterparty', and did not name Amazon until the February 2026 earnings release and Form 10-K. No standalone press release for the agreement exists in Vistra's newsroom archive. Amazon separately buys the output of Vistra's 200 MW Oak Hill solar facility in ERCOT.",
+     "source": "https://www.power-eng.com/nuclear/vistra-secures-long-term-nuclear-ppa-from-comanche-peak-nuclear-plant/",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "1,200 MW over 20 years",
+     "via": "Comanche Peak nuclear output"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Roughly 3.8 GW of its six nuclear units are now sold to Amazon and Meta on twenty-year agreements, while the battery fleet that made its name has shrunk from 1,024 MW to 624 MW after the January 2025 Moss Landing fire, and **not one signed large-load agreement exists at any of its gas plants.**\n\n**BACKGROUND.** Irving, Texas.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Every signed large-load agreement Vistra has is nuclear**: 1,200 MW to Amazon from Comanche Peak and 2,609 MW to Meta from Perry, Davis-Besse and the uprate programme.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess the naming pattern around the Amazon contract is a deliberate disclosure choice with a cost.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Vistra announced a 1,200 MW twenty-year agreement in September 2025 describing the counterparty only as 'an investment grade counterparty', named Amazon five months later inside an earnings release, and has never issued a standalone press release for either that deal or the Moss Landing fire or the Helix investment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Nuclear generation",
+     "date": "",
+     "text": "Vistra is the only competitive owner with reactors in both ERCOT and PJM, which is why one contract went to Amazon in Texas and another to Meta in the east.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Long-term large-load power supply",
+     "date": "",
+     "text": "Talen's Amazon contract is larger by megawatt and longer by tenor, but rests on a single station.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-06",
+     "text": "Q3 2025 results narrow 2025 guidance and initiate 2026 guidance of $6.8-$7.6 billion — The same release disclosed a twenty-year, 1,200 MW power purchase agreement with 'an investment grade counterparty' — Amazon, though Vistra did not say so for another five months.",
+     "src": "https://investor.vistracorp.com/2025-11-06-Vistra-Reports-Third-Quarter-2025-Results,-Narrows-2025-Guidance,-and-Initiates-2026-Guidance",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-07-30",
+     "text": "Comanche Peak receives approval to operate through 2053 — The licence renewal that made the Amazon agreement possible a year later.",
+     "src": "https://investor.vistracorp.com/2024-07-30-Vistra-Receives-Approval-to-Operate-Comanche-Peak-Nuclear-Plant-Through-2053",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-06"
   },
   {
    "a": "amazon",
@@ -6645,6 +6867,39 @@
    "last": "2026-03-31"
   },
   {
+   "a": "burns-mcdonnell",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Engineering, procurement and construction contractor for the 100 MW Moss Landing Phase II battery system.",
+     "context": "Project records name Burns & McDonnell as the EPC contractor for Moss Landing Phase II, a stand-alone 100 MW building commissioned in 2021 — physically separate from the Phase I array inside the turbine building that burned in January 2025.\n\nBurns & McDonnell's own dossier records a different engagement at the same site: the 350 MW Phase III expansion, which it lists among five ENR regional Best Project awards for 2024. Phase II was moved to Vistra's Asset Closure segment in the fourth quarter of 2025 with a $155 million impairment and will not return to service.",
+     "source": "https://www.nsenergybusiness.com/projects/moss-landing/",
+     "status": "historical",
+     "since": "2021",
+     "scale": "100 MW / 400 MWh Phase II",
+     "via": "Moss Landing Phase II"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-31",
+     "text": "Five ENR regional Best Project awards including the Vistra Moss Landing energy-storage expansion (350 MW / 1,400 MWh) — Storage EPC credentials at flagship scale. (Note: a January 2025 fire occurred at the broader Moss Landing complex; no source ties Burns & McDonnell's phase to the burned building — an unresolved adjacency, not an allegation.)",
+     "src": "Burns & McDonnell release, 2024-10-31",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Five covered dossiers already name it, and they name it for three different things: Burns & McDonnell for building Moss Landing's second phase, Meta and Oklo for the January 2026 nuclear package, Invenergy for the contrast between developing new plants and contracting existing ones, and Oncor because Vistra's retail subsidiaries are its single largest customer group at 25 percent of 2025 revenue.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-10-31"
+  },
+  {
    "a": "byd",
    "b": "catl",
    "curated": {
@@ -9363,6 +9618,21 @@
   },
   {
    "a": "constellation-energy",
+   "b": "nrg-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named alongside NRG in the merchant cohort, and a contrast in the Texas Energy Fund: Constellation withdrew a project NRG's programme completed.",
+     "context": "Constellation is the nuclear pure-play in the four-company merchant cohort, with Microsoft at Three Mile Island and Meta at Clinton, and is separately acquiring Calpine. It is the peer whose contracting record NRG's is measured against.\n\nThe sharper contrast is in Texas. Latitude Media's November 2025 account of the Texas Energy Fund records Constellation withdrawing a project citing permitting delays and local opposition, in a programme that had deployed only $321 million of $7.2 billion across two years, while NRG carried three projects totalling about 1.5 GW through to loans and brought the first to commercial operation in May 2026.",
+     "source": "https://www.latitudemedia.com/news/how-the-data-center-boom-brought-down-the-texas-energy-fund/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "constellation-energy",
    "b": "sargent-lundy",
    "curated": {
     "b": {
@@ -9377,6 +9647,46 @@
    },
    "evid": [],
    "last": "2002"
+  },
+  {
+   "a": "constellation-energy",
+   "b": "talen-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The largest competitive nuclear owner in PJM, ranked second to Talen's fourth by the market monitor, and a co-filer with Talen in PJM's fast-path stakeholder process.",
+     "context": "Constellation intervened in the Susquehanna docket and filed jointly with Vistra in July 2024 in support of the co-located arrangement, then filed its own complaint alleging PJM's tariff was unjust and unreasonable because it was silent on fully isolated co-located load — the complaint that produced FERC's December 2025 order.\n\nThe two companies were also on the same side inside PJM's Critical Issue Fast Path process: Talen's 10-K records that it 'submitted a joint proposal amongst itself, Constellation, Calpine, Amazon, Microsoft, and Google' on large-load additions, and that neither that proposal nor any other received broad stakeholder support. Commercially they compete for the same nuclear-backed hyperscaler contracts, Constellation with Microsoft and Meta and Talen with Amazon.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm",
+     "status": "active",
+     "scale": "20.3 GW vs 13.1 GW of PJM capacity"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Four covered dossiers already name it — Amazon, Constellation Energy, Invenergy and TeraWulf — and every one of them names it for the same thing: the Susquehanna arrangement, which is the reference case for whether a data centre may sit at a power plant and what it owes for the grid it still leans on.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "constellation-energy",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The largest competitive nuclear owner, ranked above Vistra in PJM capacity, and a co-advocate for co-location at FERC.",
+     "context": "Utility Dive names Constellation alongside Vistra and PSEG as generators that benefit from FERC's 18 December 2025 co-location order, and separately reports that Constellation, Vistra and Calpine support co-location while AEP and Exelon sought to stop non-utility generators serving co-located load. The two companies filed jointly in the Susquehanna docket in July 2024.\n\nCommercially they compete for the same contracts with the same product. Constellation has Microsoft at Three Mile Island and Meta at Clinton; Vistra has Amazon at Comanche Peak and Meta across three PJM sites. Wedbush frames Constellation as the valuation comparator, trading at a higher multiple while pursuing the Calpine acquisition.",
+     "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/",
+     "status": "active",
+     "scale": "20.3 GW vs 13.9 GW of PJM capacity"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "coolit",
@@ -15744,6 +16054,20 @@
   },
   {
    "a": "esvolta",
+   "b": "nrg-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Eight covered dossiers already name it — the highest count of the three companies in this session — and most name it for people rather than deals: Aypa, esVolta, FlexGen and GridStor all have executives who came from NRG.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "esvolta",
    "b": "plus-power",
    "evid": [
     {
@@ -16791,6 +17115,20 @@
   },
   {
    "a": "flexgen",
+   "b": "nrg-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Eight covered dossiers already name it — the highest count of the three companies in this session — and most name it for people rather than deals: Aypa, esVolta, FlexGen and GridStor all have executives who came from NRG.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flexgen",
    "b": "rosendin",
    "curated": {
     "a": {
@@ -16978,6 +17316,24 @@
     }
    ],
    "last": "2025-04-23"
+  },
+  {
+   "a": "flexgen",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Designed and integrated the 10 MW / 42 MWh battery system at Vistra's 180 MW Upton 2 solar plant in Upton County, Texas.",
+     "context": "Vistra selected FlexGen to design and integrate the storage system co-located with the Upton 2 solar facility, reported at the time as the largest energy storage project in Texas. It is a small system by current standards and predates the Moss Landing build by two years.\n\nThe relationship is recorded here because it is the only named battery integrator in Vistra's public record. No integrator is named for Moss Landing Phase III, for the 270 MW Texas fleet, or for the additional California and Illinois storage the FY2025 10-K says the company plans to develop.",
+     "source": "https://www.power-eng.com/energy-storage/long-duration-energy-storage/vistra-flexgen-partner-on-largest-energy-storage-project-in-texas/",
+     "status": "historical",
+     "since": "2018",
+     "scale": "10 MW / 42 MWh",
+     "via": "Upton 2 storage system"
+    }
+   },
+   "evid": [],
+   "last": "2018"
   },
   {
    "a": "fluence",
@@ -17321,6 +17677,23 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "fluence",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Engineering contractor for the 300 MW Moss Landing Phase I system, with Luminant handling construction.",
+     "context": "Project records for Moss Landing name Fluence as the engineering contractor for Phase I, the 300 MW array installed inside the retired power plant's turbine building, with construction by Vistra's own Luminant organisation. The system entered service in 2020 and was the largest battery storage facility in the world at the time.\n\nThe engagement ended with the asset: Phase I burned on 16 January 2025, was written off at approximately $400 million in the first quarter of 2025 and moved to the Asset Closure segment. Fluence is not named as a defendant in either of the two suits filed over the fire; the battery supplier, LG Energy Solution, is.",
+     "source": "https://www.nsenergybusiness.com/projects/moss-landing/",
+     "status": "historical",
+     "since": "2020",
+     "via": "Moss Landing Phase I"
+    }
+   },
+   "evid": [],
+   "last": "2020"
   },
   {
    "a": "fluence",
@@ -18301,6 +18674,95 @@
     }
    ],
    "last": "2026-01-27"
+  },
+  {
+   "a": "ge-vernova",
+   "b": "nrg-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Turbine supplier and co-party to NRG's Project Development Agreement for up to 5.4 GW of new combined-cycle generation.",
+     "context": "NRG signed the agreement on 13 February 2025 with GE Vernova and TIC and announced it on 26 February. GE Vernova's own newsroom carries the joint release. The structure matters: it is a development agreement under which 'the generation facilities will be owned and operated by NRG', with turbines covered by separate slot reservation agreements — not an equity joint venture, and NRG's filings never use that phrase.\n\nThe reservations expanded from 1.2 GW in February 2025 to 3.6 GW by the FY2025 Form 10-K, disclosed only inside the filing. GE Vernova accounts for reservations separately from firm backlog in its own quarterly reporting, which is the clearest available evidence that the slots are conditional. No firm purchase order, final investment decision or named site has been disclosed under the agreement.",
+     "source": "https://www.gevernova.com/news/press-releases/nrg-energy-ge-vernova-kiewit-accelerating-new-generation-capacity-support-demand",
+     "status": "active",
+     "since": "2025-02",
+     "scale": "3.6 GW of 7HA turbine slots reserved against a 5.4 GW development ceiling",
+     "via": "7HA gas turbines"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is also the only one of the four large merchants with **no named hyperscaler counterparty**: its flagship 1.2 GW Texas project is 'aligned on principal commercial terms' and not signed, and the 5.4 GW GE Vernova arrangement is a development agreement with reserved turbine slots, not a joint venture.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The two that name it for business are the ones that matter: Kiewit, whose TIC subsidiary is the EPC partner in the 5.4 GW GE Vernova development agreement, and Oncor, for which NRG's retail subsidiaries are the second-largest customer group at 21 percent of 2025 revenue.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess the description of the GE Vernova and TIC arrangement as a 'joint venture' is wrong and should be corrected wherever it appears.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The turbines are covered by separate **slot reservation agreements** — 1.2 GW in February 2025, expanded to 3.6 GW by the FY2025 10-K without a press release — and GE Vernova accounts for reservations separately from firm backlog.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: both 10-Ks, the February 2025 release and GE Vernova's own reporting.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Indicators to watch:** (1) whether the 1.2 GW Texas project converts from 'principal commercial terms' to a signed agreement, and whether a counterparty is finally named — NRG's own 2026 goal was to sign at least 1 GW under this model; (2) a firm turbine purchase order or a final investment decision under the GE Vernova agreement, which would turn 3.6 GW of reserved slots into committed capacity; (3) the ERCOT interconnection audit's December 2026 verification report, which governs every grid-served large load NRG has signed; (4) the Texas residential customer count — a fourth consecutive annual decline would make the retail erosion structural rather than cyclical; (5) confirmation of the Q3 2026 report date, unannounced as of 5 September 2026 against a first-week-of-November pattern.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New-build development with GE Vernova and TIC",
+     "date": "",
+     "text": "A Project Development Agreement signed on 13 February 2025 with GE Vernova and TIC, a Kiewit subsidiary, to develop and construct up to 5.4 GW of new combined-cycle generation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New-build development with GE Vernova and TIC",
+     "date": "",
+     "text": "Separately NRG holds slot reservation agreements with GE Vernova for 7HA gas turbines.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · New-build development with GE Vernova and TIC",
+     "date": "",
+     "text": "Kiewit's own dossier records this alongside Homer City and Oglethorpe in a roughly 11 GW gas book, and identifies reserved GE Vernova 7HA slots as the scarcest capability in the AI-power complex — turbine manufacturing capacity, not construction labour, is the constraint through 2030.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-02-26",
+     "text": "Project Development Agreement with GE Vernova and Kiewit's TIC for up to 5.4 GW of new combined-cycle generation — NRG owns and operates; GE Vernova supplies 7HA turbines under separate slot reservations, initially 1.2 GW and later 3.6 GW; TIC provides engineering and construction. First projects targeted for the end of 2029.",
+     "src": "https://www.gevernova.com/news/press-releases/nrg-energy-ge-vernova-kiewit-accelerating-new-generation-capacity-support-demand",
+     "from": "b"
+    }
+   ],
+   "last": "2025-02-26"
   },
   {
    "a": "ge-vernova",
@@ -19400,6 +19862,32 @@
   },
   {
    "a": "google",
+   "b": "nrg-energy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Google Cloud supplies the data, analytics and artificial-intelligence layer for NRG's Texas residential virtual power plant, built with the Google Nest spinout Renew Home.",
+     "context": "The November 2024 announcement pairs NRG with Renew Home — the company formed from Google's Nest Renew and OhmConnect — to build a roughly one-gigawatt artificial-intelligence-managed residential virtual power plant in Texas by 2035, distributing free Nest and Vivint smart thermostats to customers on flexible rate plans. Roughly a million Texas households already ran Renew Home-managed Nest thermostats at announcement.\n\nGoogle Cloud is a named third party in the arrangement, supplying weather forecasting, renewable generation modelling and predictive pricing to run the aggregation. This is a demand-side relationship rather than a data-centre power sale: Google appears here as a technology supplier, not as a load NRG serves.",
+     "source": "https://www.canarymedia.com/articles/virtual-power-plants/google-nest-spinout-picks-texas-for-1gw-virtual-power-plant",
+     "status": "active",
+     "since": "2024-11",
+     "scale": "approximately 1 GW residential virtual power plant by 2035",
+     "via": "Google Cloud analytics and Nest thermostats"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-11-19",
+     "text": "Renew Home and Google Cloud partnership for a roughly 1 GW residential virtual power plant in Texas — Free Nest and Vivint thermostats on flexible rate plans, with Google Cloud supplying the forecasting and analytics. The demand-side answer to a market with no capacity payment.",
+     "src": "https://www.canarymedia.com/articles/virtual-power-plants/google-nest-spinout-picks-texas-for-1gw-virtual-power-plant",
+     "from": "b"
+    }
+   ],
+   "last": "2024-11-19"
+  },
+  {
+   "a": "google",
    "b": "nscale",
    "curated": {
     "b": {
@@ -19547,6 +20035,22 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "google",
+   "b": "talen-energy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Co-signatory with Talen on the same joint PJM fast-path proposal on large-load additions; not a commercial counterparty.",
+     "context": "The same 10-K passage names Google alongside Constellation, Calpine, Amazon and Microsoft as co-sponsors of the joint proposal Talen submitted in PJM's Critical Issue Fast Path process on how large loads should be added to the system.\n\nNo source states any commercial relationship between Talen and Google. It is recorded here because the coalition itself is informative: generators and hyperscalers filed together against a stakeholder body that then rejected every proposal, which is why the question went back to FERC.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm",
+     "status": "historical",
+     "since": "2025"
+    }
+   },
+   "evid": [],
+   "last": "2025"
   },
   {
    "a": "google",
@@ -19879,6 +20383,20 @@
     }
    },
    "evid": [],
+   "last": ""
+  },
+  {
+   "a": "gridstor",
+   "b": "nrg-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Eight covered dossiers already name it — the highest count of the three companies in this session — and most name it for people rather than deals: Aypa, esVolta, FlexGen and GridStor all have executives who came from NRG.",
+     "src": "",
+     "from": "b"
+    }
+   ],
    "last": ""
   },
   {
@@ -22598,6 +23116,20 @@
   },
   {
    "a": "intersect-power",
+   "b": "talen-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Powered-land development — the Talen flywheel",
+     "date": "",
+     "text": "The Intersect Power model inverted.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "intersect-power",
    "b": "tesla",
    "curated": {
     "a": {
@@ -23019,6 +23551,20 @@
   },
   {
    "a": "invenergy",
+   "b": "talen-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Four covered dossiers already name it — Amazon, Constellation Energy, Invenergy and TeraWulf — and every one of them names it for the same thing: the Susquehanna arrangement, which is the reference case for whether a data centre may sit at a power plant and what it owes for the grid it still leans on.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "invenergy",
    "b": "tesla",
    "curated": {
     "a": {
@@ -23042,6 +23588,34 @@
     }
    ],
    "last": "2025-02"
+  },
+  {
+   "a": "invenergy",
+   "b": "vistra",
+   "evid": [
+    {
+     "where": "Capabilities · Natural gas and data-centre power — Invenergy Power",
+     "date": "",
+     "text": "A gas developer that sells the plant to the utility at commissioning rather than an IPP that keeps merchant gas — the opposite of Vistra, NRG and Talen, which are contracting existing fleets to data centres.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-23",
+     "text": "Invenergy joins NVIDIA and Emerald AI on 'flexible AI factories as grid assets' alongside AES, Constellation, NextEra, Nscale and Vistra — Positions the company as a power partner for flexible data-centre load rather than only a PPA seller.",
+     "src": "https://wwww.invenergy.com/news/invenergy-joins-nvidia-and-emerald-ai-to-pioneer-flexible-ai-factories-as-grid-assets",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Five covered dossiers already name it, and they name it for three different things: Burns & McDonnell for building Moss Landing's second phase, Meta and Oklo for the January 2026 nuclear package, Invenergy for the contrast between developing new plants and contracting existing ones, and Oncor because Vistra's retail subsidiaries are its single largest customer group at 25 percent of 2025 revenue.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-23"
   },
   {
    "a": "iren",
@@ -23574,6 +24148,39 @@
     }
    ],
    "last": "2026-05-27"
+  },
+  {
+   "a": "kiewit",
+   "b": "nrg-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Engineering and construction partner through its subsidiary TIC in the same up-to-5.4 GW development agreement.",
+     "context": "GE Vernova's release names 'TIC, a subsidiary of Kiewit' as the construction partner, and NRG's filings refer to 'Kiewit's subsidiary, TIC' without spelling the acronym out; Oglethorpe Power's January 2026 release independently states that 'TIC — The Industrial Company is a wholly-owned subsidiary of Kiewit Corporation'.\n\nKiewit's own dossier places this alongside Homer City (up to 4.5 GW) and Oglethorpe (1,425 MW) in a roughly 11 GW gas book, and assesses reserved GE Vernova 7HA slots plus TIC's delivery record as the scarcest capability set in the AI-power complex — turbine manufacturing capacity, not construction labour, being the binding constraint through 2030. For NRG the relationship is what converts a turbine reservation into a buildable project.",
+     "source": "https://www.gevernova.com/news/press-releases/nrg-energy-ge-vernova-kiewit-accelerating-new-generation-capacity-support-demand",
+     "status": "active",
+     "since": "2025-02",
+     "scale": "up to 5.4 GW of combined-cycle EPC",
+     "via": "TIC — The Industrial Company"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · New-build development with GE Vernova and TIC",
+     "date": "",
+     "text": "A Project Development Agreement signed on 13 February 2025 with GE Vernova and TIC, a Kiewit subsidiary, to develop and construct up to 5.4 GW of new combined-cycle generation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-02-26",
+     "text": "Project Development Agreement with GE Vernova and Kiewit's TIC for up to 5.4 GW of new combined-cycle generation — NRG owns and operates; GE Vernova supplies 7HA turbines under separate slot reservations, initially 1.2 GW and later 3.6 GW; TIC provides engineering and construction. First projects targeted for the end of 2029.",
+     "src": "https://www.gevernova.com/news/press-releases/nrg-energy-ge-vernova-kiewit-accelerating-new-generation-capacity-support-demand",
+     "from": "b"
+    }
+   ],
+   "last": "2025-02-26"
   },
   {
    "a": "kiewit",
@@ -24118,6 +24725,32 @@
     }
    ],
    "last": "2026-05-08"
+  },
+  {
+   "a": "lg-energy-solution",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Supplied the batteries for Moss Landing Phases I and II, and is a named defendant in both suits arising from the January 2025 fire.",
+     "context": "Independent project records and trade coverage identify LG Energy Solution as the battery supplier for both the 300 MW Phase I system, which burned in January 2025, and the separate 100 MW Phase II building commissioned in 2021. Fluence was the engineering contractor for Phase I and Burns & McDonnell built Phase II.\n\nLG Energy Solution is a named defendant alongside Vistra, Dynegy Operating Company and PG&E in the Alameda County suit filed on 4 February 2026 and in the federal suit filed later that month, where plaintiffs allege 'faulty and dangerous NMC batteries produced by LG' and an indoor installation using a chemistry the industry has been moving away from. The supplier for Phase III, the 350 MW outdoor system that did not burn, is not stated in any source located and should not be assumed to be the same.",
+     "source": "https://www.nsenergybusiness.com/projects/moss-landing/",
+     "status": "historical",
+     "since": "2020",
+     "scale": "400 MW across two phases",
+     "via": "Moss Landing Phases I and II"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-02-04",
+     "text": "Four Monterey County residents sue Vistra, Dynegy Operating Company, LG Energy Solution and PG&E over the Moss Landing fire — A second suit followed on 27 February on behalf of a nearby restaurant. Both name LG Energy Solution as the battery supplier at Phase I and allege a failed water suppression system and an indoor NMC installation.",
+     "src": "https://www.montereycountynow.com/blogs/news_blog/four-local-residents-sue-vistra-and-pg-e-for-damages-related-to-vistras-moss-landing/article_9d19c8c4-e5b2-11ef-be03-8330caee1b3c.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-02-04"
   },
   {
    "a": "lightsource-bp",
@@ -25563,6 +26196,20 @@
   },
   {
    "a": "meta",
+   "b": "nrg-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Talen names Amazon, Constellation names Microsoft and Meta, Vistra names Amazon and Meta.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "meta",
    "b": "nvidia",
    "evid": [
     {
@@ -25813,6 +26460,20 @@
   },
   {
    "a": "meta",
+   "b": "talen-energy",
+   "evid": [
+    {
+     "where": "Capabilities · Long-term large-load power supply (the AWS arrangement)",
+     "date": "",
+     "text": "Constellation sells Microsoft a restarted reactor and Meta an operating one; Vistra sells Amazon and Meta nuclear output under 20-year PPAs.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "meta",
    "b": "tesla",
    "evid": [
     {
@@ -25908,6 +26569,88 @@
     }
    ],
    "last": "2026-02-13"
+  },
+  {
+   "a": "meta",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Meta buys 2,609 MW of carbon-free power and capacity from Vistra's PJM nuclear plants under twenty-year agreements announced 9 January 2026.",
+     "context": "The package has two parts. The first is operating capacity: 1,268 MW from Perry and 908 MW from Davis-Besse, with delivery of part of it beginning in late 2026 and full delivery by the end of 2027. The second is new capacity: 213 MW of uprate energy and capacity at Perry, 80 MW at Davis-Besse and 140 MW at Beaver Valley, with part delivering by 2031 and all of it by the end of 2034. Vistra calls these the largest nuclear uprates supported by a corporate customer in the United States and says the agreements support subsequent twenty-year licence renewals at all four PJM units.\n\nCrucially, this is not co-location. Vistra's release states that 'the electricity generated at the plants will continue to go to the grid for all electricity users' and that more than 15 percent of the contracted capacity is new capacity added to PJM — the direct answer to the additionality objection that co-located deals attract. Vistra sizes the accretion at roughly 13 to 17 percent of Adjusted Free Cash Flow before growth at full delivery, and excludes it from both 2026 guidance and the 2027 midpoint opportunity. Meta's own dossier records the arrangement inside a January 2026 package of up to 6.6 GW alongside TerraPower and Oklo.",
+     "source": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "2,609 MW over 20 years",
+     "via": "PJM nuclear output and uprates"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Meta as the ecosystem's most aggressive single energy buyer relative to its size: >30 GW of clean energy contracted, ~7.7 GW of nuclear (Constellation Clinton 1.1 GW + the January 2026 TerraPower/Oklo/Vistra package of up to 6.6 GW), seven new gas plants plus three grid-scale batteries in the Entergy Louisiana package, and frontier bets (1 GW/100 GWh Noon Energy long-duration storage reservation; 1 GW space solar).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy Procurement Portfolio",
+     "date": "",
+     "text": "Nuclear: Constellation Clinton (1,121 MW, 20-yr, from 2027) plus the January 2026 package — TerraPower (2 Natrium units of 690 MW each + rights to six more, with 1.2 GW of molten-salt thermal storage capability), Oklo (up to 1.2 GW Aurora campus, ~2030), Vistra (2.1 GW existing-plant PPAs + 433 MW uprates, the largest corporate-backed uprates).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "Up to 6.6 GW of nuclear contracted: TerraPower (Natrium, ~2032), Oklo (~2030), Vistra (2.1 GW + 433 MW uprates) — The largest corporate nuclear package — Natrium's built-in 1.2 GW thermal-storage capability is the adjacent-storage angle worth tracking.",
+     "src": "https://about.fb.com/news/2026/01/meta-nuclear-energy-projects-power-american-ai-leadership/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Roughly 3.8 GW of its six nuclear units are now sold to Amazon and Meta on twenty-year agreements, while the battery fleet that made its name has shrunk from 1,024 MW to 624 MW after the January 2025 Moss Landing fire, and **not one signed large-load agreement exists at any of its gas plants.**\n\n**BACKGROUND.** Irving, Texas.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Five covered dossiers already name it, and they name it for three different things: Burns & McDonnell for building Moss Landing's second phase, Meta and Oklo for the January 2026 nuclear package, Invenergy for the contrast between developing new plants and contracting existing ones, and Oncor because Vistra's retail subsidiaries are its single largest customer group at 25 percent of 2025 revenue.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Every signed large-load agreement Vistra has is nuclear**: 1,200 MW to Amazon from Comanche Peak and 2,609 MW to Meta from Perry, Davis-Besse and the uprate programme.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the FY2025 10-K, the Q2 2026 10-Q and the Meta and Comanche Peak disclosures.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Indicators to watch:** (1) the Cogentrix close, expected late 2026 — it is FERC-approved and unclosed, and takes the fleet to about 50 GW; (2) the first signed large-load agreement at a **gas** site, which would be the moment the brief's original premise becomes true; (3) a Moss Landing Phase III restart decision, or a decision not to, which settles whether 350 MW returns to the fleet; (4) whether the 2027 guidance issued in late 2026 folds in Meta and Cogentrix — both are currently excluded, so the first guide that includes them is not comparable with the last one; (5) the ERCOT large-load interconnection audit ordered on 3 August 2026 and whether it delays the Permian and Comanche Peak-adjacent load.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Nuclear generation",
+     "date": "",
+     "text": "Vistra is the only competitive owner with reactors in both ERCOT and PJM, which is why one contract went to Amazon in Texas and another to Meta in the east.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-09"
   },
   {
    "a": "meta",
@@ -26031,6 +26774,20 @@
     }
    ],
    "last": "2026-08-13"
+  },
+  {
+   "a": "microsoft",
+   "b": "nrg-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Talen names Amazon, Constellation names Microsoft and Meta, Vistra names Amazon and Meta.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "microsoft",
@@ -26471,6 +27228,30 @@
   },
   {
    "a": "microsoft",
+   "b": "talen-energy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Co-signatory with Talen on a joint proposal in PJM's Critical Issue Fast Path process on large-load additions; not a commercial counterparty.",
+     "context": "Talen's FY2025 Form 10-K states that in the accelerated PJM stakeholder process begun in August 2025, 'the Company was an active participant in the CIFP process and submitted a joint proposal amongst itself, Constellation, Calpine, Amazon, Microsoft, and Google representing the group's collective views on the best approach to large load additions', and that neither that proposal nor any other received broad stakeholder support during voting.\n\nThis is a regulatory alignment, not a contract. No source states any commercial relationship between Talen and Microsoft; Microsoft's named nuclear counterparty is Constellation, at Three Mile Island.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm",
+     "status": "historical",
+     "since": "2025"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Long-term large-load power supply (the AWS arrangement)",
+     "date": "",
+     "text": "Constellation sells Microsoft a restarted reactor and Meta an operating one; Vistra sells Amazon and Meta nuclear output under 20-year PPAs.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "microsoft",
    "b": "terawulf",
    "evid": [
     {
@@ -26496,6 +27277,24 @@
     }
    ],
    "last": "2025-07-15"
+  },
+  {
+   "a": "microsoft",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Microsoft buys the output of Vistra's 405 MW Pulaski solar facility in Illinois under a power purchase agreement.",
+     "context": "Vistra's third-quarter 2025 results release states that it is 'progressing with construction in support of a power purchase agreement at our Pulaski 405 MW new solar facility with Microsoft in Illinois (MISO)'. The plant is in Pulaski County and was in construction with an in-service date of 2026.\n\nThis is a renewable, not nuclear, agreement and belongs in a different category from the Amazon and Meta contracts: a hyperscaler buying the output of a new solar plant is additional generation by construction, where buying an operating reactor's output is not. It is the only Microsoft relationship in Vistra's record; Microsoft's nuclear counterparty is Constellation.",
+     "source": "https://investor.vistracorp.com/2025-11-06-Vistra-Reports-Third-Quarter-2025-Results,-Narrows-2025-Guidance,-and-Initiates-2026-Guidance",
+     "status": "active",
+     "since": "2025",
+     "scale": "405 MW solar",
+     "via": "Pulaski solar plant"
+    }
+   },
+   "evid": [],
+   "last": "2025"
   },
   {
    "a": "microsoft",
@@ -27841,6 +28640,38 @@
   },
   {
    "a": "nextera-energy-resources",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Ranked first, ahead of Vistra at second, in the only independent storage ranking located.",
+     "context": "Enverus's table of the top ten storage developers in North America by megawatts brought online during 2023 puts NextEra Energy Resources first at 2,194 MW and Vistra second at 750 MW, followed by Terra-Gen at 671 MW. This is a one-year flow measure rather than a stock of owned capacity, and it is the closest thing to an owner ranking that could be located — Wood Mackenzie and ACP's US Energy Storage Monitor and the EIA both decline to publish company rankings at this level.\n\nThe ranking matters because it is the evidence against the widely repeated claim that Vistra is the largest merchant battery owner in the country. Vistra does not make that claim itself; its own historical language was 'second-largest energy storage capacity in the country', on a 1,020 MW fleet that has since fallen to 624 MW.",
+     "source": "https://www.enverus.com/blog/top-10-storage-developers-in-north-america-by-megawatts-brought-online-in-2023/",
+     "status": "historical",
+     "since": "2023",
+     "scale": "2,194 MW vs 750 MW brought online in 2023"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No independent, dated ranking of storage owners by fleet size exists — Wood Mackenzie and ACP's US Energy Storage Monitor and the EIA both decline to publish one — and the closest available ranking, Enverus's July 2024 table of megawatts brought online during 2023, puts Vistra **second behind NextEra Energy Resources**, on a one-year flow measure rather than owned stock.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy storage",
+     "date": "",
+     "text": "Enverus ranked Vistra second in North America by storage megawatts brought online in 2023, behind NextEra Energy Resources — a flow measure over one year, not a stock of owned capacity.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023"
+  },
+  {
+   "a": "nextera-energy-resources",
    "b": "xcel-energy",
    "curated": {
     "b": {
@@ -27856,6 +28687,112 @@
    },
    "evid": [],
    "last": "2026-02"
+  },
+  {
+   "a": "nrg-energy",
+   "b": "oncor",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "NRG's retail subsidiaries are the second-largest customer group of Oncor, the Texas wires utility that delivers their power.",
+     "context": "Oncor's Form 10-K for 2025 states that retailer subsidiaries of Vistra and NRG Energy are its two largest customers, at 25 percent and 21 percent of total operating revenues respectively, with no other customer exceeding 10 percent. In a restructured market the retailer is the wires utility's customer: it buys delivery service and passes the charge through to the household's bill.\n\nThe adjacency is not commercial in the ordinary sense — neither party chooses the other — but it sizes the relationship precisely. It also means the Texas interconnection pause and the transmission cost-allocation arguments now running through the commission reach NRG twice: once through its generation queue and once through the delivery charges its retail customers pay.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm",
+     "status": "active",
+     "since": "2025",
+     "scale": "21% of Oncor's 2025 operating revenues"
+    }
+   },
+   "evid": [],
+   "last": "2025"
+  },
+  {
+   "a": "nrg-energy",
+   "b": "talen-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named alongside NRG in the merchant cohort competing for data-centre load, and the peer whose Susquehanna structure is described as the model others are trying to replicate.",
+     "context": "Trade coverage groups Vistra, Constellation, Talen and NRG as the four merchants pursuing hyperscaler power purchase agreements, and describes Talen's Amazon arrangement at Susquehanna as the model for such opportunities. The comparison is unflattering in one specific respect: three of the four have named, signed hyperscaler contracts and NRG does not.\n\nThe strategies are genuinely different rather than merely differently executed. Talen sells the output of an existing nuclear station, which is fast and invites the additionality objection; NRG proposes new gas that the customer's capital commitment underwrites, which is additional by construction and does not deliver until 2029. Talen's co-location fight also produced the FERC docket that now governs PJM co-located load, a rulebook NRG's PJM sites sit under.",
+     "source": "https://www.utilitydive.com/news/nrg-nears-12-gw-hyperscaler-deal-amid-texas-data-center-pause/827212/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "nrg-energy",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The other integrated merchant with a large retail book, and the peer capital rotated into after Vistra's fourth-quarter 2025 print.",
+     "context": "Wedbush's February 2026 note reports capital rotating out of Vistra and into NRG after the Q4 2025 results, citing NRG's revenue surprise, bullish 2026 guidance, diversified retail footprint and LS Power asset integration, at a materially lower multiple. The two are the sector's only integrated merchants of scale: both own generation and a multi-million-customer retail book, and both are named in the same four-company cohort as Talen and Constellation in coverage of hyperscaler power contracting.\n\nThe fleets are not comparable in size — Vistra's is roughly 50,000 MW pro forma for Cogentrix against NRG's roughly 25 GW after LS Power — but the retail books are: about five million customers for Vistra against about eight million for NRG including smart-home subscribers. Their retail brands compete directly in Texas, where NRG's Reliant and Vistra's TXU Energy are the two largest residential providers.",
+     "source": "https://investor.wedbush.com/wedbush/article/marketminute-2026-2-27-vistra-corp-vst-q4-earnings-analysis-reality-check-for-the-ai-power-trade",
+     "status": "active",
+     "scale": "~50 GW pro forma vs ~25 GW"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "The other integrated merchant of scale, and NRG's direct competitor for Texas residential customers.",
+     "context": "Coverage of hyperscaler power contracting names Vistra, Constellation, Talen and NRG together as the merchant cohort. The two are the only integrated merchants of size: both own generation and a multi-million-customer retail book. NRG's book is larger — about eight million customers including Vivint against Vistra's five million — while Vistra's fleet is roughly twice the size and includes 6.4 GW of nuclear that NRG has none of.\n\nWedbush's February 2026 note reports capital rotating out of Vistra into NRG after Vistra's fourth-quarter print, citing NRG's diversified retail footprint and LS Power integration at a materially lower multiple; by August that trade had reversed, with NRG at a 52-week low. In Texas retail their brands compete head to head, Reliant against TXU Energy, and Oncor's 10-K sizes the two books at 21 and 25 percent of its revenue.",
+     "source": "https://investor.wedbush.com/wedbush/article/marketminute-2026-2-27-vistra-corp-vst-q4-earnings-analysis-reality-check-for-the-ai-power-trade",
+     "status": "active",
+     "scale": "~25 GW vs ~50 GW pro forma"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "NRG is the corpus's clearest case of the **natural hedge run the other way round**: it started with the customers and bought the generation to match them, where Vistra started with the plants.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Talen names Amazon, Constellation names Microsoft and Meta, Vistra names Amazon and Meta.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gap:** `investors.nrg.com` returns 403 and 503, so no investor deck, transcript or events calendar could be read first-party — which means the percentage of expected generation hedged, a figure Vistra and Talen both publish, is unobtainable for NRG.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Generation fleet",
+     "date": "",
+     "text": "Roughly half Vistra's size after LS Power and with no nuclear at all.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Generation fleet",
+     "date": "",
+     "text": "What NRG has instead is a retail book large enough to absorb most of what the fleet produces, and a demand-side business that Vistra and Talen do not have.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Demand response and virtual power plants",
+     "date": "",
+     "text": "The one product line neither Vistra nor Talen has at this scale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Bring Your Own Power — customer-backed new generation",
+     "date": "",
+     "text": "The structural alternative to what Talen and Vistra sell.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "nscale",
@@ -28932,6 +29869,20 @@
   },
   {
    "a": "nvidia",
+   "b": "vistra",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Vistra committed up to $1 billion as a founding investor in a KKR-managed open-ended fund alongside NVIDIA and the Kuwait Investment Authority, with the second $500 million tranche tied to 'commercial power supply milestones for our existing generation assets' — that is, the fund buying power from Vistra — and took the role of preferred power provider.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "nvidia",
    "b": "xai",
    "curated": {
     "b": {
@@ -29243,6 +30194,20 @@
    "last": "2025-07-22"
   },
   {
+   "a": "oklo",
+   "b": "vistra",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Five covered dossiers already name it, and they name it for three different things: Burns & McDonnell for building Moss Landing's second phase, Meta and Oklo for the January 2026 nuclear package, Invenergy for the contrast between developing new plants and contracting existing ones, and Oncor because Vistra's retail subsidiaries are its single largest customer group at 25 percent of 2025 revenue.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "on-energy",
    "b": "piller",
    "evid": [
@@ -29327,6 +30292,23 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "oncor",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Vistra's retail subsidiaries are the largest single customer group of Oncor, the Texas wires utility that delivers their power.",
+     "context": "Oncor's Form 10-K for 2025 states that retailer subsidiaries of Vistra and NRG Energy are its two largest customers, at 25 percent and 21 percent of total operating revenues respectively, with no other customer exceeding 10 percent. In a restructured market the retailer, not the household, is the wires utility's customer: the retailer buys delivery service and passes the charge through on the bill.\n\nThe relationship is one-directional and non-commercial in the ordinary sense — Vistra does not choose Oncor and Oncor does not choose Vistra — but it is the cleanest available measure of how much of Texas's largest delivery network is carrying Vistra's load, and it is the reason ERCOT's August 2026 pause on data-centre interconnection studies reaches Vistra through two channels at once.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm",
+     "status": "active",
+     "since": "2025",
+     "scale": "25% of Oncor's 2025 operating revenues"
+    }
+   },
+   "evid": [],
+   "last": "2025"
   },
   {
    "a": "openai",
@@ -32399,6 +33381,85 @@
    "last": ""
   },
   {
+   "a": "talen-energy",
+   "b": "terawulf",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Former joint-venture partner in the Nautilus bitcoin-mining facility adjacent to Susquehanna; Talen bought TeraWulf out in October 2024 and the facility was wound down in 2025.",
+     "context": "Nautilus Cryptomine in Berwick, Pennsylvania was a joint venture between Talen and TeraWulf, powered from Susquehanna at a reported 2 cents per kWh. On 3 October 2024 Talen purchased TeraWulf's minority share for $85 million in cash plus selected physical assets, taking full ownership; TeraWulf's own dossier records the exit at roughly 3.4 times invested capital, used to fund its first high-performance-computing buildings.\n\nThe facility did not survive the Amazon restructuring. Talen agreed in June 2025 to cease use of it, and in September 2025 the lease, submetering and supply agreements were terminated and Amazon took possession of the existing structures, producing a net gain of $8 million. Talen had earlier repurchased the Cumulus Digital and Nautilus non-controlling interests for $125 million.",
+     "source": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html",
+     "status": "historical",
+     "since": "2021",
+     "scale": "$85 million buyout of a 25% stake",
+     "via": "Nautilus Cryptomine"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Four covered dossiers already name it — Amazon, Constellation Energy, Invenergy and TeraWulf — and every one of them names it for the same thing: the Susquehanna arrangement, which is the reference case for whether a data centre may sit at a power plant and what it owes for the grid it still leans on.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-03",
+     "text": "Talen buys TeraWulf's minority share in the Nautilus Cryptomine at Susquehanna — The bitcoin-mining chapter closes: Talen took full ownership, then ceased use of the facility in June 2025 and terminated the lease in September 2025, with Amazon taking possession of the structures.",
+     "src": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html",
+     "from": "a"
+    }
+   ],
+   "last": "2024-10-03"
+  },
+  {
+   "a": "talen-energy",
+   "b": "vistra",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The next-largest PJM capacity owner above Talen, and a co-party on the same side of the co-location argument at FERC.",
+     "context": "PJM's Independent Market Monitor, reported by Utility Dive in April 2026, ranks the region's capacity owners as Dominion 21.9 GW, Constellation 20.3 GW, Vistra 13.9 GW and Talen approximately 13.1 GW — Vistra sits immediately above Talen. The two are also on the same side of the regulatory argument: Vistra filed jointly with Constellation in the Susquehanna docket in July 2024 supporting the arrangement, and both protested PJM's February 2026 co-location compliance filing.\n\nJefferies, quoted by Utility Dive in August 2026, groups 'independent power producers like Talen Energy, Vistra and PSEG Power' as the class affected by Pennsylvania's data-centre executive order. The businesses differ in one structural way that matters: Vistra owns a five-million-customer retail book that hedges its generation, and Talen does not.",
+     "source": "https://www.utilitydive.com/news/talen-energy-capital-power-pjm-ferc/816451/",
+     "status": "active",
+     "scale": "13.9 GW vs 13.1 GW of PJM capacity"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The PJM capacity owner immediately below Vistra in the market monitor's ranking, and the peer whose Amazon deal is treated as the benchmark for nuclear-to-data-centre contracting.",
+     "context": "PJM's Independent Market Monitor, reported by Utility Dive in April 2026, ranks the region's capacity owners as Dominion 21.9 GW, Constellation 20.3 GW, Vistra 13.9 GW and Talen approximately 13.1 GW. Wedbush's note on Vistra's fourth-quarter 2025 results calls Talen 'the gold standard for the pure-play nuclear-to-data-center trade' — the comparison against which Vistra's Comanche Peak agreement is judged.\n\nThe two are also allies in the regulatory argument. Vistra filed jointly with Constellation in July 2024 in support of Talen's amended Susquehanna interconnection service agreement, and both protested PJM's February 2026 co-location compliance filing. The structural difference is the retail book: Talen sells its output to counterparties, Vistra can sell it to its own customers.",
+     "source": "https://www.utilitydive.com/news/pjm-data-center-colocation-ferc-vistra-constellation/815941/",
+     "status": "active",
+     "scale": "13.9 GW vs 13.1 GW of PJM capacity"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Susquehanna nuclear generation",
+     "date": "",
+     "text": "Constellation's Three Mile Island restart and Vistra's six-unit PJM and ERCOT fleet are the comparable nuclear franchises; Talen has one site and therefore one outage calendar.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Long-term large-load power supply (the AWS arrangement)",
+     "date": "",
+     "text": "Constellation sells Microsoft a restarted reactor and Meta an operating one; Vistra sells Amazon and Meta nuclear output under 20-year PPAs.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Commercial operations and hedging",
+     "date": "",
+     "text": "Hedge ratios well below Vistra's (which runs at or near 100 percent of expected generation for the prompt year) — Talen keeps more open position and says so, framing it as 'increasing cash flow stability while maintaining upside optionality'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "terra-gen",
    "b": "tesla",
    "evid": [
@@ -32418,6 +33479,23 @@
     }
    ],
    "last": "2026-08-04"
+  },
+  {
+   "a": "terra-gen",
+   "b": "vistra",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Ranked third, immediately below Vistra, in the Enverus 2023 storage-developer ranking.",
+     "context": "The same Enverus table that places Vistra second on megawatts brought online during 2023 places Terra-Gen third at 671 MW — within a hundred megawatts of Vistra on a measure of one year's completions. The rest of the top ten is CIM Group, Plus Power, Clearway, Intersect Power, Key Capture Energy, NV Energy and First Solar.\n\nThis is a ranking co-appearance rather than a commercial relationship, and it is recorded as such. Its analytical value is the shape of the field: the storage owners nearest Vistra by annual completions are pure-play developers with no generation fleet and no retail book, which is why a single project loss changed Vistra's storage standing so sharply and would not have changed theirs.",
+     "source": "https://www.enverus.com/blog/top-10-storage-developers-in-north-america-by-megawatts-brought-online-in-2023/",
+     "status": "historical",
+     "since": "2023",
+     "scale": "671 MW vs 750 MW brought online in 2023"
+    }
+   },
+   "evid": [],
+   "last": "2023"
   },
   {
    "a": "tesla",

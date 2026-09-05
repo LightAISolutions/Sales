@@ -1,0 +1,345 @@
+{
+ "schemaVersion": 2,
+ "slug": "nrg-energy",
+ "title": "NRG Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-05",
+ "sections": [
+  {
+   "id": "start-here-the-customers-came-first",
+   "title": "Start here: the customers came first",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "Ninety-six percent of this company's revenue comes from selling electricity, gas and home-security subscriptions to about eight million households. It owns power plants — roughly 25 gigawatts of them after an acquisition that closed in January 2026 — but the plants exist to supply the customers, not the other way round. That inversion is the subject of this guide: what it means to be a **{{load-following}}** business that also owns generation, and why the combination is a hedge that a bank cannot sell you.",
+    "**The one idea to carry through.** A generator's problem is finding a buyer for a known quantity of output. A retailer's problem is buying an unknown quantity of input — because customers use what they use, hour by hour, and the supplier must deliver it. Put the two inside one company and each one's problem is partly the other's answer. That is a {{natural hedge}}, and it changes what the company must post as collateral, how much it must trade, and what it can afford to promise a data centre.",
+    "**What it deliberately does not repeat.** The Vistra guide teaches the operating fleet — {{merit order}}, {{capacity market}}s, accreditation, and what a data centre can buy from a plant that already exists. The Talen guide teaches co-location at a nuclear plant and what the regulator decided. The Oncor guide teaches the wires company that delivers all of this and the {{energy-only market}} it sits inside. This guide is about the demand side of an integrated merchant: the retail book as a position, the arithmetic that decides whether it earns or destroys value, and the demand-side resources that turn customers into supply."
+   ]
+  },
+  {
+   "id": "the-retail-book-is-a-short-position",
+   "title": "The retail book is a short position",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "When a supplier signs a household onto a fixed price for twelve months, it has sold electricity it does not yet own, at a price it cannot change, in a quantity it will not know until the year is over. In market terms it is **short**: it owes power it has not bought. A generator with unsold output is **long**: it owns power it has not sold. Together the two make up a company's {{net position}}.",
+    "The retailer's problem is not volume, it is **shape**. A household uses very little at 4am and a great deal at 6pm on a hot day, and the hours when it uses most are exactly the hours when wholesale power is dearest. Buying a flat block of electricity does not cover a peaky load; the supplier must buy something that matches the curve, and the mismatch between the block it bought and the shape it must serve is a cost it discovers after the fact.",
+    "Weather is therefore the dominant risk on both sides. A mild winter means less consumption than the supplier bought, and it sells the surplus back into a market that is also mild — and cheap. A heatwave means more consumption than it bought, purchased in hours when prices are at their highest. This is why a retail business's quarterly earnings swing so violently: in one recent year the same segment produced $68 million of operating earnings in the first quarter and $773 million in the second.",
+    "**Now add generation.** If the same company owns plants, the shortfall in a heatwave can be met from its own units rather than bought at the top of the market. Its own words: integration 'reduces the need to sell electricity to, and buy electricity from, other institutions and intermediaries, resulting in more stable earnings and cash flows, lower transaction costs and less credit exposure.' The plants and the customers are two halves of one position."
+   ]
+  },
+  {
+   "id": "the-collateral-point",
+   "title": "The part nobody puts on a slide: collateral",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Hedging with a third party is not free. When a company sells power forward to a bank and the market then moves against that trade, the bank asks for margin — cash or letters of credit posted against a position that has not yet settled. The bigger the book and the sharper the move, the larger the call.",
+    "The scale is disclosed and it is startling. A **fifty-cent** change in the gas price per million British thermal units moves the net value of this company's derivative contracts by roughly **$1.1 billion**, and a fifty-cent *fall* would raise posted margin collateral by roughly **$1.4 billion**. That is working capital which has to be found from somewhere, in a hurry, in exactly the conditions that make funding hardest.",
+    "This is the concrete meaning of the integrated model. Every megawatt-hour that moves from the company's own plants to its own customers is a trade that never happens — so no margin is posted, no counterparty limit is consumed and no credit line is drawn. The company says integration 'results in a reduction in actual and contingent collateral through offsetting transactions'. It is a balance-sheet statement, not a marketing one.",
+    "**The historical warning.** A collateral spiral is how merchant generators fail. One peer in this corpus entered Chapter 11 in 2022 after 'increased collateral posting requirements caused by rapid and sustained increases to wholesale natural gas and power prices' left it without the cash to operate. The hedge that protects your earnings can be the thing that takes your liquidity."
+   ]
+  },
+  {
+   "id": "does-a-retail-customer-earn-its-keep",
+   "title": "Does a retail customer earn its keep? The three-number test",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "A retail book is not valuable because it is large. It is valuable when the margin a customer produces over their stay exceeds what it cost to win them and what a share of them will fail to pay. Three numbers decide it, and a seller into this industry should be able to ask for all three.",
+   "cols": [
+    "Number",
+    "What it is",
+    "How it goes wrong",
+    "What it looks like here"
+   ],
+   "rows": [
+    [
+     "{{retail gross margin}}",
+     "What the supplier collects minus what the power and its delivery cost to procure",
+     "Widens when wholesale prices fall faster than retail prices, which flatters a book that is actually shrinking",
+     "The residential and business segments produce roughly $4.1 billion of adjusted operating earnings a year across generation and retail combined"
+    ],
+    [
+     "{{customer acquisition cost}}",
+     "Marketing, sales commission and onboarding spend per customer signed",
+     "Capitalised and amortised, so a growth push looks cheaper in the year it happens than it really is",
+     "Amortisation of customer acquisition costs was $295 million in one year, up from $204 million — the cost of past growth landing later"
+    ],
+    [
+     "{{churn}}",
+     "The share of customers who leave in a period",
+     "Reported as a retention rate on a favourable base, or measured on total customers rather than on the segment that is leaving",
+     "Retail energy customers fell from 5,748 to 5,632 thousand in a year, while smart-home subscribers rose from 2,226 to 2,419 thousand"
+    ],
+    [
+     "{{bad debt}}",
+     "Billed revenue never collected",
+     "Rises after price spikes and in recessions — precisely when margin is already under pressure",
+     "The provision for credit losses from credit risk was $272 million in one year, $314 million the year before and $251 million the year before that"
+    ]
+   ],
+   "note": "Put the four together and the picture is a business whose energy customer count is slowly falling while a subscription business grows inside it. Texas residential electricity customers have declined three years running: 2,928, then 2,909, then 2,860 thousand."
+  },
+  {
+   "id": "customers-as-a-power-plant",
+   "title": "Customers as a power plant: demand response and virtual power plants",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A grid needs supply and demand to match. It has always been assumed that supply does the moving. {{demand response}} inverts that: a customer is paid to reduce its draw when the system is stressed, and from the operator's point of view a megawatt not consumed is indistinguishable from a megawatt generated.",
+    "A {{virtual power plant}} is the industrialised version. Thousands of small, distributed things — home batteries, thermostats, water heaters, commercial chillers, industrial processes, backup engines — are operated together so that the grid sees one dispatchable resource. It sells the same products a power station sells, without any single plant existing.",
+    "Two of these sit inside this company and they are not the same business. The commercial and industrial platform acquired with a gas portfolio has roughly **6 GW** across more than two thousand customers and operates in every deregulated US market — large sites with real processes to shed. The residential programme is built on smart thermostats and home batteries: its 2025 target was raised from 20 MW to 150 MW, was exceeded, passed 200 MW by early 2026, and is aimed at 650 MW in Texas by 2030 and 1 GW by 2035.",
+    "**Why a retailer is unusually well placed to build one.** The hard parts are customer access, a billing relationship and a reason for the customer to say yes. A supplier that already bills the household, already owns the smart-home hardware installed in 2.4 million of them, and can offer a cheaper tariff in exchange for control has all three. That is why this company's partners for the residential programme are a thermostat maker, a home-solar company and a cloud provider, rather than an equipment vendor.",
+    "**And why it matters more in an energy-only market.** Where nobody is paid to keep spare capacity, the system runs closer to its margin, and the state's answer for the largest customers is to make them part of the reserve. A supplier that can turn demand down is selling the same reliability a peaker sells, at a fraction of the capital cost."
+   ]
+  },
+  {
+   "id": "two-ways-to-sell-a-data-centre-power",
+   "title": "Two ways to sell a data centre power, and why this one chose the harder",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "The corpus now holds both models. One monetises plants that already exist; the other builds new ones the customer helps pay for. They are not variations of the same deal — they differ in speed, in who takes construction risk, and in whether they survive the {{additionality}} question.",
+   "cards": [
+    {
+     "t": "Sell from the existing fleet",
+     "meta": "A long-term power purchase agreement from an operating nuclear or gas plant, delivered through the grid",
+     "adv": [
+      "Fast — the plant, the connection and the permits already exist, so delivery can begin within two or three years",
+      "No construction risk: nothing has to be built for the contract to perform",
+      "Premium pricing, because the buyer is paying for certainty and speed rather than for electricity",
+      "The seller keeps an asset it already owns and simply changes who buys the output"
+     ],
+     "dis": [
+      "Fails the additionality test: the megawatt-hours existed already and the displaced buyer is served from the next unit in the {{merit order}}",
+      "Increasingly constrained by policy — one state now conditions preferential permitting for large data centres on sourcing from **new** in-zone supply",
+      "The plant remains a single point of failure the seller must insure and cover"
+     ]
+    },
+    {
+     "t": "Build new capacity the customer underwrites",
+     "meta": "'Bring your own power' — a new combined-cycle plant funded against the customer's commitment",
+     "adv": [
+      "Additional by construction: the megawatts did not exist before the contract",
+      "Politically durable — it answers the affordability argument that existing-fleet deals invite",
+      "Paid for availability rather than consumption: the seller says about 95 percent of the free cash flow rests on capacity payments, so the customer's utilisation is not the seller's risk",
+      "Behind-the-meter generation is exempt from the interconnection pause that now blocks grid-served large loads in Texas"
+     ],
+     "dis": [
+      "Slow: a stated commercial operation target of late 2029 for a project discussed in 2026",
+      "Capital-intensive — about $3.2 billion, roughly $2,700 per kilowatt",
+      "Depends on turbine slots that are **reserved, not ordered**: the manufacturer accounts for reservations separately from firm backlog",
+      "The flagship example is 'aligned on principal commercial terms' and not signed — a distinction that is easy to lose and expensive to get wrong"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "signed-announced-reserved",
+   "title": "Signed, announced, reserved: a vocabulary for pipelines",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "MW",
+   "intro": "One company's data-centre numbers, sorted by how binding they are. Every figure is real and publicly stated; only the first is a contract. Reading down this list is the single most useful discipline in the whole guide.",
+   "items": [
+    {
+     "label": "Signed long-term retail power agreements",
+     "sub": "445 MW with one counterparty, never named, across two markets",
+     "v": 445
+    },
+    {
+     "label": "Aligned on principal commercial terms",
+     "sub": "the flagship new-build project — explicitly not final",
+     "v": 1200
+    },
+    {
+     "label": "Turbine slots reserved",
+     "sub": "reservations, which the manufacturer counts separately from firm backlog",
+     "v": 3600
+    },
+    {
+     "label": "Development agreement ceiling",
+     "sub": "'up to' — an upper bound, not a plan",
+     "v": 5400
+    },
+    {
+     "label": "Letters of intent, initial phase",
+     "sub": "with two named data-centre developers",
+     "v": 400
+    },
+    {
+     "label": "Letters of intent, stated potential scale",
+     "sub": "'potential to scale to' — never repeated in a later filing",
+     "v": 6500
+    }
+   ],
+   "note": "The 6,500 MW figure and the 445 MW figure are separated by more than an order of magnitude and by every legal distinction that matters. A pipeline chart that stacks them is not a forecast; it is a list of sentences with different verbs."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Calling a development agreement a joint venture.** Under a development agreement the plants are owned and operated by one party and the others supply turbines and construction. In a joint venture the parties share equity and risk. The distinction decides who takes the loss if a site never gets built — and this company's filings never use the words 'joint venture' for the arrangement everyone else calls one.",
+    "**Treating a reserved turbine slot as an order.** A reservation holds a place in a manufacturing queue; an order is a purchase. The manufacturer's own reporting keeps them in separate lines, which is the clearest available evidence that they are different things.",
+    "**Adding the pipeline numbers together.** Signed retail agreements, a project at the terms-agreed stage, reserved slots and letters of intent are four different states of commitment. Summing them produces a number no filing supports.",
+    "**Assuming a natural hedge removes commodity risk.** It removes the need to *transact*, which is where the collateral saving comes from. It does not remove exposure: this company's own risk factors state plainly that it 'does not typically hedge the entire exposure of its operations against commodity price volatility'.",
+    "**Judging a retail business by customer count.** Eight million customers is a mix of two businesses moving in opposite directions — an energy book that shrank by 116 thousand in a year and a subscription book that grew by 193 thousand. The second carries about a quarter of operating earnings on 7 percent of revenue and 70 percent of the goodwill. A count without a mix is not a number.",
+    "**Forgetting the consumer regulator.** A business built on millions of household contracts is supervised by every state it operates in. One state commission approved a $71 million consumer settlement in 2026 covering nine of this company's retail brands and roughly 278,000 customers. Retail scale brings retail regulation."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is a retail electricity supplier structurally short?",
+     "a": "It has sold electricity it does not yet own, at a fixed price, in a quantity it will not know until the period ends — because customers consume what they consume. It must buy the input after committing to the output price."
+    },
+    {
+     "q": "What does load-following mean, and why is shape harder than volume?",
+     "a": "The obligation to supply exactly what customers happen to use, hour by hour, rather than a flat block. The peak hours when households use most are the hours when wholesale power is dearest, so a flat purchase leaves the supplier exposed exactly where it hurts."
+    },
+    {
+     "q": "Define a natural hedge and give the mechanism.",
+     "a": "An offset that comes from owning two businesses whose exposures point in opposite directions. A company that generates and also sells to customers is long supply and short demand at once, so a price move that hurts one side helps the other."
+    },
+    {
+     "q": "What does an integrated model save that a financial hedge does not?",
+     "a": "Collateral and transaction cost. Power moved from the company's own plants to its own customers is a trade that never happens — no margin posted, no counterparty limit used, no credit line drawn."
+    },
+    {
+     "q": "How large can a collateral call be for a company of this size?",
+     "a": "This one discloses that a fifty-cent-per-MMBtu fall in gas prices would raise posted margin collateral by roughly $1.4 billion. Collateral spirals, not operating losses, are how merchant generators have historically run out of money."
+    },
+    {
+     "q": "Name the four numbers that decide whether a retail book creates value.",
+     "a": "Retail gross margin, customer acquisition cost, churn, and bad debt. Margin per customer over their stay must exceed the cost of winning them plus the revenue never collected."
+    },
+    {
+     "q": "What is a virtual power plant, and why is a retailer well placed to build one?",
+     "a": "A fleet of small distributed resources operated together so the grid sees one dispatchable resource. A retailer already has the customer relationship, the billing channel and a tariff to offer in exchange for control — the three hardest parts."
+    },
+    {
+     "q": "Why does demand response matter more in an energy-only market?",
+     "a": "Because nobody is paid to hold spare capacity, so the system runs closer to its margin and the largest loads are treated as part of the reserve. A resource that turns demand down sells the same reliability a peaker sells at a fraction of the capital cost."
+    },
+    {
+     "q": "Distinguish 'signed', 'aligned on principal commercial terms', and 'reserved'.",
+     "a": "Signed is a contract with obligations. Aligned on principal commercial terms means the parties agree on the shape but documentation and approvals are outstanding. Reserved is a place held in a manufacturing queue, which the supplier accounts for separately from firm backlog."
+    },
+    {
+     "q": "What is the difference between a project development agreement and a joint venture?",
+     "a": "Under a development agreement one party owns and operates the resulting plants while the others supply equipment and construction. In a joint venture the parties share equity and risk. It decides who bears the loss if a site is never built."
+    },
+    {
+     "q": "State the additionality advantage of customer-funded new build over selling existing output.",
+     "a": "The megawatts did not exist before the contract, so the purchase adds supply rather than redirecting it. That is what makes the structure durable against the affordability and additionality arguments that existing-fleet deals attract."
+    },
+    {
+     "q": "Why can adjusted earnings per share fall while adjusted operating earnings rise sharply?",
+     "a": "Because an acquisition funded with debt and shares adds operating earnings while also adding interest expense and share count. The operating measure improves; the per-share measure is diluted by how the improvement was paid for."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A supplier signs a household onto a fixed twelve-month price. What position has it taken?",
+     "c": [
+      "Long power — it owns output it has not sold",
+      "Short power — it owes output it has not bought",
+      "Flat — the contract is self-hedging",
+      "None until the customer consumes"
+     ],
+     "a": 1,
+     "why": "It has committed to deliver whatever the household uses at a price it cannot change, before buying the input. That is a short position, and its size is unknown until the year ends."
+    },
+    {
+     "q": "Why does buying a flat block of power fail to hedge a residential book?",
+     "c": [
+      "Blocks are more expensive",
+      "Household load is peaky and the peaks fall in the dearest hours, so a flat block leaves the costly hours uncovered",
+      "Blocks cannot be resold",
+      "Regulators forbid it"
+     ],
+     "a": 1,
+     "why": "Shape, not volume, is the retailer's problem. The mismatch between a flat purchase and a peaky load is discovered as a cost after the fact."
+    },
+    {
+     "q": "What does an integrated generation-plus-retail company save that a bank hedge cannot provide?",
+     "c": [
+      "Fuel cost",
+      "Posted collateral and transaction cost on trades that never need to happen",
+      "Capacity payments",
+      "Regulatory approval"
+     ],
+     "a": 1,
+     "why": "Supplying its own customers from its own plants removes the trade, and with it the margin call, the counterparty limit and the credit line. That is why the company describes integration as reducing actual and contingent collateral."
+    },
+    {
+     "q": "A retail book grows by two million subscribers while the energy customer count falls. What must you check before calling it growth?",
+     "c": [
+      "The share price",
+      "Whether the two businesses have the same margin, risk and goodwill profile",
+      "The weather",
+      "The capacity auction result"
+     ],
+     "a": 1,
+     "why": "Here the subscription business carries about a quarter of operating earnings on 7 percent of revenue and 70 percent of the goodwill, while the energy book shrinks. A headline customer count hides a mix shift between two different businesses."
+    },
+    {
+     "q": "A manufacturer reports 'backlog' and 'slot reservations' as separate figures. What follows for a buyer's pipeline?",
+     "c": [
+      "They are interchangeable",
+      "Reservations are firm orders reported differently",
+      "Reservations hold a place in a queue and are not committed capacity, so they cannot be counted as backlog",
+      "Reservations are worth more than backlog"
+     ],
+     "a": 2,
+     "why": "The separate accounting is the evidence. A reservation is an option on manufacturing slots; only an order is a commitment, and only a final investment decision commits the project."
+    },
+    {
+     "q": "Which of these is a signed contract?",
+     "c": [
+      "A 6.5 GW 'potential to scale' figure attached to letters of intent",
+      "A 5.4 GW development-agreement ceiling",
+      "445 MW of long-term retail power agreements with an unnamed counterparty",
+      "A 1.2 GW project 'aligned on principal commercial terms'"
+     ],
+     "a": 2,
+     "why": "Only the retail agreements are executed contracts. The others are, in order, an aspiration, an upper bound and a stage before documentation — three different verbs that summarised charts routinely stack together."
+    },
+    {
+     "q": "A company is paid for capacity made available rather than for energy consumed under a customer-funded new build. What risk has it shed?",
+     "c": [
+      "Construction risk",
+      "Fuel price risk",
+      "Utilisation risk — whether the data centre actually runs its load",
+      "Interconnection risk"
+     ],
+     "a": 2,
+     "why": "Being paid for availability moves volume risk to the customer. Construction, fuel and interconnection risks all remain with the developer."
+    },
+    {
+     "q": "Why is bad debt a bigger issue for a retailer than for a wholesale generator?",
+     "c": [
+      "Retail prices are higher",
+      "A generator's counterparties are creditworthy institutions, while a retailer bills millions of households whose non-payment rises exactly when prices spike",
+      "Regulators require it",
+      "Generators do not extend credit"
+     ],
+     "a": 1,
+     "why": "Household non-payment is correlated with the same price events that squeeze margin, so the two risks arrive together — which is why the provision for credit losses runs to hundreds of millions of dollars a year at this scale."
+    }
+   ]
+  }
+ ]
+}

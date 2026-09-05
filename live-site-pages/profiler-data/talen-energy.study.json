@@ -1,0 +1,436 @@
+{
+ "schemaVersion": 2,
+ "slug": "talen-energy",
+ "title": "Talen Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-05",
+ "sections": [
+  {
+   "id": "start-here-the-plant-was-already-there",
+   "title": "Start here: the plant was already there",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "In March 2024 Amazon paid $650 million for a data-centre campus next door to a nuclear power station, and arranged to take the station's electricity directly, without the grid in between. Eight months later the federal energy regulator refused to let the arrangement grow, and eighteen months after that the two companies were doing something quite different and much more ordinary. This guide teaches why — what it means to put a large load at an existing power plant, which document has to change to allow it, what {{capacity interconnection rights}} are and why a data centre wants to borrow them, and what the regulator actually decided.",
+    "**The one idea to carry through.** Every other guide in this corpus about buying power starts with a project that does not exist yet: a developer with land, a {{queue position}} and a plan. This one starts with a plant that has been running since 1982. That single difference changes the question from *when can you build it* to *who is allowed to use what is already built* — and that is a legal question, not an engineering one.",
+    "**What it deliberately does not repeat.** The Intersect guide teaches the {{energy park}}: new generation, new storage and a new data centre behind one connection, using {{surplus interconnection service}} to reuse capacity a *new* plant is not using. This guide is the mirror image — an *existing* plant, an existing connection, and an argument about whether load may sit behind it. The Classroom's Fence Line lesson teaches the interconnection studies themselves and the difference between connecting a generator and connecting a load; the Dominion and Oncor guides teach how a regulated utility and a wires-only utility connect large customers. None of them covers a merchant generator's own connection agreement, which is what is at stake here."
+   ]
+  },
+  {
+   "id": "what-a-merchant-generator-sells",
+   "title": "What a merchant generator actually sells, and to whom",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "An {{independent power producer}} owns power plants and sells what they make. It has no captive customers, no rate base and no commission setting its prices. That makes it a {{merchant}}: it earns whatever the market pays, which is higher on average and far less predictable than a regulated utility's return.",
+    "A plant in {{PJM}} earns from three separate streams, and confusing them is the most common mistake a newcomer makes. **Energy** is payment for electricity actually produced, settled every five minutes at the price the last unit needed to meet demand. **Capacity** is payment for *being available* on a future day, bought years ahead in an auction; a plant that never runs still collects it. **Ancillary services** are payments for the fast, small adjustments that hold the system's frequency steady.",
+    "The mix matters more than the total. In 2024 Talen collected $192 million of capacity revenue; in 2025 it collected $485 million; in the first half of 2026 alone it collected $444 million. Nothing about the plants changed. What changed was the price at which capacity cleared in {{PJM}}'s auction, which went from $49.49 per megawatt-day for the 2024/2025 delivery year to $269.92, then $329.17, then $333.44, then $325.00. A generator's fortunes can be transformed by an auction it does not control.",
+    "**Why a data centre is a different kind of buyer.** A trading counterparty buys a megawatt-hour and resells it. A data centre buys certainty for fifteen or twenty years, and it will pay a premium for it — Talen's filings describe 'anticipated premium prices' on its Amazon contract. That premium is the entire reason merchant generators are now trying to sell to computer companies rather than to banks. But a twenty-year fixed obligation is also a promise a merchant has to keep in years when the market price is far higher, which is why the contracts carry make-whole and credit terms rather than a handshake."
+   ]
+  },
+  {
+   "id": "behind-the-meter-versus-in-front-of-it",
+   "title": "Behind the meter, in front of the meter, and why the difference costs money",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Two ways to sell a plant's output to a customer standing next to it. The physics is nearly identical; the bills are not. The last column is what the argument is really about — whether the load pays for a grid it is still relying on.",
+   "cols": [
+    "",
+    "{{behind-the-meter}} co-location",
+    "{{front-of-meter}} supply"
+   ],
+   "rows": [
+    [
+     "What physically happens",
+     "Power flows from the generator to the load without passing the point where the plant connects to the grid",
+     "Power flows onto the grid; the customer draws the same amount back through an ordinary utility connection"
+    ],
+    [
+     "Who delivers it",
+     "Nobody — there is no delivery. A wire and a substation on private land",
+     "The transmission and distribution utility, under its normal tariff"
+    ],
+    [
+     "Network charges",
+     "Little or none, which is the commercial attraction and the regulatory objection",
+     "The full set: transmission service, ancillary services, and the charges every other customer pays"
+    ],
+    [
+     "Who has to approve it",
+     "The grid operator and the federal regulator, because the plant's connection agreement has to be amended",
+     "Nobody new. If the seller already holds a {{retail choice}} supplier licence, this is a private contract"
+    ],
+    [
+     "What happens when the plant trips",
+     "The load is exposed unless it has its own backup, because it is not a grid customer",
+     "The load keeps drawing from the grid like anyone else; the seller has to buy replacement power"
+    ],
+    [
+     "What the grid loses",
+     "The megawatts the plant was contributing to everyone else's supply, plus the revenue that load would have paid toward the network",
+     "Nothing structurally — the plant still injects, the load still withdraws, both are visible to the operator"
+    ],
+    [
+     "The Talen case",
+     "300 MW permitted under the original agreement; a request to raise it to 480 MW was rejected",
+     "1,920 MW through 2042, transitioned in April 2026"
+    ]
+   ],
+   "note": "The word 'co-location' in this industry almost always means the first column. The second column is not co-location at all — it is an ordinary power sale between two parties who happen to be neighbours."
+  },
+  {
+   "id": "the-document-that-had-to-change",
+   "title": "The document that had to change: an interconnection service agreement",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Every generator on a grid has an {{interconnection service agreement}} — a contract between the plant, the transmission owner whose wires it plugs into, and the grid operator. It says where the plant connects, how much it may inject, what equipment protects the connection, and what studies that permission rests on. Susquehanna's is Service Agreement No. 1442, between {{PJM}}, PPL Electric Utilities and Susquehanna Nuclear.",
+    "Inside that agreement sit the plant's {{capacity interconnection rights}} — the firm megawatts it is entitled to put onto the system. They exist because someone paid for studies proving the network could absorb them, and they are treated almost like property. The station's existing agreement already permitted up to **300 MW** of co-located load: the plant could hold back that much from the grid and give it to a neighbour instead.",
+    "The amendment asked to raise that from 300 MW to **480 MW**, with a longer-term path to 960 MW. That is why this became a federal case. Changing what sits behind a connection is not a private decision between a seller and a buyer; it is a change to a filed agreement, and filed agreements are approved by the regulator.",
+    "**A useful comparison.** The rules that govern who may draw power from behind a generator's connection were written for {{station power}} — the pumps, fans and controls a plant needs to run itself, a few percent of its output. Nobody drafting them imagined a gigawatt of computers. Much of the argument that followed is what happens when a rule written for one scale is asked to carry another."
+   ]
+  },
+  {
+   "id": "what-ferc-actually-decided",
+   "title": "What the regulator actually decided, and what it did not",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The decision.** On 1 November 2024 the Federal Energy Regulatory Commission rejected the amendment, two votes to one. Its stated reason was narrow: the grid operator 'has not demonstrated that the proposed non-conforming provisions … are necessary deviations from the pro forma ISA due to specific reliability concerns, novel legal issues, or other unique factors.' In plainer words — when you ask to depart from the standard form of a connection agreement, you must show why the departure is necessary, and the case was not made.",
+    "**What it did not decide.** The concurring commissioner wrote that the rejection was 'without prejudice' and that 'the specific co-location arrangement proposed here may make sense and be acceptable under the Federal Power Act, but on this record that claim simply has not been proven.' The dissenting chairman thought the majority had missed 'the forest for the trees'. **This was a loss on burden of proof, not a ruling that co-location is unlawful.** Secondary coverage routinely gets this wrong.",
+    "**Why the distinction matters to anyone selling into this market.** A ruling on the merits would have settled the question. A ruling on evidence left it open — and open questions get litigated repeatedly. What followed was two more years of proceedings: a show-cause order to the grid operator in February 2025, a December 2025 finding that the operator's tariff was 'unjust and unreasonable' for co-located load, three new categories of transmission service ordered into existence, a compliance filing, further guidance in April 2026, and in June 2026 show-cause orders to **every** regional grid operator in the country. As of September 2026 the rulebook is still being written.",
+    "**The lesson generalises.** When a technology arrives faster than the rules that govern it, the first company through the door does not get a ruling. It gets a process — and it usually finds a commercial route around the process before the process ends."
+   ]
+  },
+  {
+   "id": "the-workaround",
+   "title": "The workaround, step by step",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "How a rejected co-location became an ordinary retail power sale. Gold is the commercial track, blue the regulatory track, red the physical work. Notice that the commercial track never waits for the regulatory one.",
+   "lanes": {
+    "gen": "Commercial",
+    "deploy": "Regulatory",
+    "eco": "Physical and market"
+   },
+   "items": [
+    {
+     "x": 0.0,
+     "lane": "gen",
+     "label": "Campus sold to the customer for $650 million; first power purchase agreement signed"
+    },
+    {
+     "x": 0.35,
+     "lane": "deploy",
+     "label": "Grid operator files to raise co-located load from 300 MW to 480 MW"
+    },
+    {
+     "x": 0.55,
+     "lane": "deploy",
+     "label": "Regulator rejects the amendment 2-1 on burden of proof, without prejudice"
+    },
+    {
+     "x": 0.62,
+     "lane": "gen",
+     "label": "Seller appeals — and simultaneously starts negotiating a different structure"
+    },
+    {
+     "x": 1.25,
+     "lane": "gen",
+     "label": "Amended agreement signed: 1,920 MW through 2042, {{front-of-meter}}, no regulatory approval needed"
+    },
+    {
+     "x": 1.45,
+     "lane": "eco",
+     "label": "Load moves into the grid operator's demand forecast; 148 MW of {{capacity interconnection rights}} restored to the plant"
+    },
+    {
+     "x": 1.6,
+     "lane": "deploy",
+     "label": "Restored rights re-enter the {{capacity auction}}"
+    },
+    {
+     "x": 1.75,
+     "lane": "gen",
+     "label": "Appeal voluntarily dismissed — 'this matter is now closed'"
+    },
+    {
+     "x": 1.95,
+     "lane": "eco",
+     "label": "Transmission reconfiguration completed during a refuelling outage; transition takes effect"
+    }
+   ],
+   "note": "The horizontal axis is years from the campus sale. The whole regulatory fight — file, reject, appeal, abandon — is bracketed by a commercial negotiation that simply routed around it."
+  },
+  {
+   "id": "why-front-of-meter-cost-nothing-here",
+   "title": "Why moving in front of the meter cost the seller almost nothing — and what it gave back",
+   "kind": "proscons",
+   "read": "4 min",
+   "intro": "Going {{front-of-meter}} looks like a defeat: the customer now pays network charges it had hoped to avoid. Read the ledger and it is closer to a trade. Both columns are things a seller in this position should be able to argue.",
+   "cards": [
+    {
+     "t": "What the seller gave up",
+     "meta": "The behind-the-meter structure, its regulatory novelty, and two years of legal cost",
+     "adv": [
+      "The customer now pays transmission and delivery charges through the local wires utility, which raises the all-in cost of the same electrons",
+      "The arrangement is no longer distinctive — anyone with a plant and a supplier licence can copy it",
+      "Two years of appeal costs, ending in a voluntary dismissal"
+     ],
+     "dis": [
+      "None of it was load. The customer still takes the same megawatts",
+      "The premium in the contract price survived the restructuring intact",
+      "Abandoning the appeal ended an open-ended legal exposure at a moment when the regulator was writing rules that could have been worse"
+     ]
+    },
+    {
+     "t": "What the seller got back",
+     "meta": "A contract that needs nobody's permission, and megawatts that go back to earning capacity revenue",
+     "adv": [
+      "No regulatory approval is required at all: the plant sells into the market, the seller acts as the customer's licensed retail supplier, and the wires utility delivers — three ordinary transactions",
+      "The load re-entered the grid operator's forecast, which restored **148 MW** of {{capacity interconnection rights}} to the plant and put them back into the {{capacity auction}}",
+      "The plant's output is again fully visible to the market, which removes the reliability objection other parties were making",
+      "The seller keeps the flexibility to serve the same customer from other plants in the same state"
+     ],
+     "dis": [
+      "The route depends on already holding an unconditioned retail supplier licence in that state — not every generator does",
+      "It only works where {{retail choice}} exists; in a regulated state there is no retail supplier to be"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-additionality-objection",
+   "title": "The objection that will not go away: additionality",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Selling an operating reactor's output to a data centre does not create a single new megawatt-hour. The reactor was already running and its power was already flowing to somebody. When the data centre buys it, the somebody else has to be supplied from whatever is next in the {{merit order}} — which, in most hours in most markets, is a gas plant.",
+    "That is the {{additionality}} objection, and it is the reason this class of deal attracts criticism that a new wind farm does not. The grid operator's own market monitor has argued the opposite policy — that new data centres should be required to bring their own new supply rather than buy existing output.",
+    "Sellers answer it in three ways, and it is worth being able to tell them apart. **First**, the plant might otherwise have closed, so the contract preserves supply rather than diverting it — a real argument for a marginal unit and a weak one for a low-cost nuclear station. **Second**, the contract funds new capacity: an {{nuclear uprate}} adds output at an existing site, and a new reactor adds more. **Third**, the load pays its way — a {{front-of-meter}} structure means the customer is on the network like everyone else and contributes to its cost.",
+    "The policy response is now explicit. In August 2026 Pennsylvania made preferential permitting for data centres above 25 MW conditional on sourcing electricity from **new** supplies in the local zone. Analysts read it as closing the door on selling existing generation under long-term contracts — while judging the already-signed nuclear deal safe. A rule written after your contract is signed is a different problem from one written before."
+   ]
+  },
+  {
+   "id": "the-other-contracted-revenue",
+   "title": "The other kind of contract: being paid not to close",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A merchant generator that wants to retire a plant cannot simply switch it off. It files a {{deactivation}} notice, and the grid operator studies whether the system can live without it. If the answer is no — usually because the transmission needed to replace it has not been built — the operator can require the plant to keep running under a {{reliability must-run}} agreement.",
+    "Two Baltimore-area plants totalling 2.0 GW are the corpus's worked example. Their owner intended to stop burning coal in May 2025. The operator found the local network could not yet cope, and a settlement signed in January 2025 with the state commission, local utilities, customer representatives and the Sierra Club kept them running to May 2029 — later extended to 2031 — at **$312 per megawatt-day** for one and **$137 per megawatt-day** for the other, roughly $180 million a year, plus reimbursement of fuel and variable costs.",
+    "Three features make this unlike any market revenue. The payments are **fixed**, so they do not move with prices. The units are **not capacity resources**, so they carry no availability obligation and no performance penalty — though the operator still counts them in the supply stack. And the cost falls on **one state's ratepayers**, not on the whole region, which is why the state's consumer advocate has argued the payment exceeds the owner's actual costs by $83 million a year and has litigated it twice.",
+    "**Why a seller should understand this.** A plant under such an agreement is a captive, cost-of-service customer for parts, services and emissions equipment for a defined number of years, with a regulator watching the spend. That is a different buying behaviour from a merchant plant deciding whether an upgrade pays back before the market turns."
+   ]
+  },
+  {
+   "id": "reading-a-contracted-megawatt",
+   "title": "Reading a contracted megawatt: the four numbers behind one headline",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "MW",
+   "intro": "One deal, four different quantities, all of them real and all of them meaning different things. This is the discipline the guide exists to teach: never accept a single megawatt figure for a long-term supply contract without asking which of these it is.",
+   "items": [
+    {
+     "label": "Full contract quantity",
+     "sub": "the headline number, reached no earlier than 2032",
+     "v": 1920
+    },
+    {
+     "label": "Contractual maximum in the first year",
+     "sub": "the most the customer may take in 2026",
+     "v": 960
+    },
+    {
+     "label": "Contractual minimum in the first year",
+     "sub": "what the customer must take in 2026",
+     "v": 240
+    },
+    {
+     "label": "Behind-the-meter load permitted before the fight",
+     "sub": "the original agreement's limit",
+     "v": 300
+    },
+    {
+     "label": "Behind-the-meter load requested and refused",
+     "sub": "the amendment the regulator rejected",
+     "v": 480
+    },
+    {
+     "label": "Interconnection rights restored by going front-of-meter",
+     "sub": "returned to the plant and to the capacity auction",
+     "v": 148
+    }
+   ],
+   "note": "The ramp band is the seller's own disclosure. There is also a shortfall make-whole with a cap: if the customer draws nothing, the payment is estimated to cover 50 to 65 percent of the full impact — so a take-or-pay is not the same as being paid in full."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Treating the rejection as the deal.** The most common error in this whole story is describing the company as 'the nuclear co-location precedent'. The co-location was refused. What exists is a front-of-the-meter retail supply arrangement that deliberately avoids needing approval. If you cite the case as evidence that behind-the-meter deals work, you are citing the one that did not.",
+    "**Assuming a rejection on evidence is a ruling on substance.** 'Rejected' and 'unlawful' are different words. The concurrence said so explicitly. A seller who reads the first as the second will wrongly conclude the model is dead; a seller who reads the second as the first will wrongly conclude nothing has changed.",
+    "**Confusing contracted megawatts with delivered megawatts.** A twenty-year contract with a ramp band, an acceleration option and a capped make-whole is not 1,920 MW of revenue starting now. In the first year the enforceable floor is an eighth of the headline.",
+    "**Reading a merchant's earnings from its earnings.** A generator that has sold most of next year forward books unrealised losses when prices rise, because the hedge is now below market — even though the underlying business just got better. In the first half of 2026 this company reported a loss and generated record cash in the same six months. If you are trying to judge whether a counterparty can fund a project, read the cash-flow statement.",
+    "**Assuming the rulebook is settled.** It is not. Comments in the current show-cause docket closed in September 2026, and the resulting tariff language will decide how co-located load is charged for the grid it leans on. Any commercial model priced on today's rules should be stress-tested against a gross-withdrawal charge.",
+    "**Forgetting that one plant is one outage.** A 2.5 GW station that supplies a single large contract is also a single point of failure. A refuelling outage in 2025 ran 72 days against a 30-to-35-day norm and cost about $34 million of margin. The company's own risk factors say a significant disruption there could impair its ability to meet the contract."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is an interconnection service agreement, and who are the three parties to it?",
+     "a": "The contract governing how a generator connects to the grid — signed by the generator, the transmission owner whose wires it plugs into, and the grid operator. It sets the point of connection, how much the plant may inject, the protective equipment, and the studies the permission rests on."
+    },
+    {
+     "q": "What are capacity interconnection rights?",
+     "a": "The firm megawatts of injection a generator is entitled to put onto the system, established by the studies it paid for. They behave like a property right, which is why an argument about putting load behind them becomes a regulatory case rather than a private negotiation."
+    },
+    {
+     "q": "State the difference between behind-the-meter co-location and front-of-the-meter supply in one sentence each.",
+     "a": "Behind the meter: power goes straight from the plant to the load without crossing the grid connection, so the load pays few or no network charges. In front of the meter: the plant sells onto the grid and the customer draws the same amount back as an ordinary grid customer, paying the normal delivery and transmission charges."
+    },
+    {
+     "q": "Why did the regulator reject the amended agreement, and what did it explicitly not decide?",
+     "a": "It found the grid operator had not met its burden to show the non-standard provisions were necessary — an evidentiary failure. The concurring commissioner stated the rejection was without prejudice and that the arrangement might well be lawful on a better record."
+    },
+    {
+     "q": "Name the three revenue streams a merchant plant earns in a market with a capacity mechanism.",
+     "a": "Energy, for electricity actually produced and settled at the market price; capacity, for being available on a future delivery day, bought in an auction years ahead; and ancillary services, for the fast adjustments that keep frequency stable."
+    },
+    {
+     "q": "What is station power, and why does it matter to a co-location argument?",
+     "a": "The electricity a plant consumes to run its own pumps, fans, controls and cooling. The rules about who may draw power from behind a generator's connection were written for that few-percent load, not for a gigawatt data centre — so a rule designed for one scale is being asked to carry another."
+    },
+    {
+     "q": "What is the additionality objection to selling an operating reactor's output to a data centre?",
+     "a": "The reactor was already running and its output was already serving someone. Moving it to a new customer does not add clean generation; it displaces the previous buyer onto whatever is next in the merit order, which is usually gas."
+    },
+    {
+     "q": "What is a reliability-must-run agreement and how is it paid?",
+     "a": "An arrangement that keeps a plant its owner wanted to retire running because the grid operator found the system cannot yet do without it. The owner receives fixed cost-of-service payments — dollars per megawatt-day — plus reimbursement of fuel and variable costs, paid by the local region's customers rather than by the market."
+    },
+    {
+     "q": "Why can a merchant generator report a large loss in the same period it generates record cash?",
+     "a": "Because a hedged book is marked to market. If it has sold next year's output forward and prices then rise, the forward sales are marked below the new market and book an unrealised loss, even though the physical business is worth more. The cash-flow statement, not the income statement, shows what actually happened."
+    },
+    {
+     "q": "What does it mean that a supply contract carries a 'shortfall make-whole with a cap'?",
+     "a": "If the buyer takes less than the contracted volume it pays compensation, but only up to a ceiling — in this case an estimated 50 to 65 percent of the full impact if nothing is drawn. It is not the same as take-or-pay, and the seller retains real volume risk."
+    },
+    {
+     "q": "Why did moving to a front-of-the-meter structure restore capacity interconnection rights to the plant?",
+     "a": "Because the load went back into the grid operator's demand forecast instead of being netted off behind the plant. With the plant once again injecting its full output to the system, 148 MW of interconnection rights were reinstated and could be sold into the capacity auction."
+    },
+    {
+     "q": "What is the price collar in a capacity auction, and why does clearing at the cap matter?",
+     "a": "An administratively set ceiling and floor on the clearing price. When an auction clears at the cap — as three consecutive ones did — the cap, not the balance of supply and demand, is setting the price, so the revenue depends on a political decision about whether the collar is extended."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A hyperscaler wants to take 400 MW directly from an operating nuclear plant, behind the meter. What has to happen first?",
+     "c": [
+      "Nothing — the plant owner and the customer sign a private contract",
+      "The plant's interconnection service agreement must be amended, which is a filing the regulator decides",
+      "The customer must join the generation interconnection queue",
+      "The state commission must issue a certificate for the plant"
+     ],
+     "a": 1,
+     "why": "Load behind a generator's connection changes what the filed connection agreement permits. That is a regulated filing by the grid operator, not a private deal — which is exactly why this became a two-year federal proceeding."
+    },
+    {
+     "q": "The regulator rejects such an amendment because the grid operator 'has not demonstrated' the non-standard terms are necessary. What has it decided?",
+     "c": [
+      "That co-location is unlawful under the Federal Power Act",
+      "That the plant may not sell to the customer at all",
+      "That this record did not justify departing from the standard agreement — leaving the question open",
+      "That the customer must build its own generation"
+     ],
+     "a": 2,
+     "why": "It is an evidentiary ruling, expressly without prejudice per the concurrence. The arrangement might be lawful on a better record; nobody proved it on this one."
+    },
+    {
+     "q": "A seller restructures the same deal front-of-the-meter. What is the largest commercial change for the buyer?",
+     "c": [
+      "The contract price falls",
+      "The buyer now pays transmission and delivery charges like any other grid customer",
+      "The buyer must take the power at a different site",
+      "The contract becomes shorter"
+     ],
+     "a": 1,
+     "why": "Front-of-the-meter means the power goes onto the grid and the customer draws it back through the wires utility, so the full set of network charges applies. That cost is what behind-the-meter was trying to avoid."
+    },
+    {
+     "q": "A contract is announced as '1,920 MW through 2042'. The first-year band is 240 to 960 MW. What is the enforceable volume in year one?",
+     "c": [
+      "1,920 MW",
+      "960 MW",
+      "240 MW",
+      "It cannot be determined"
+     ],
+     "a": 2,
+     "why": "The minimum is the obligation; the maximum is the buyer's option. Treating the headline number as year-one revenue overstates the contract eightfold at the start."
+    },
+    {
+     "q": "Why is 'additionality' a weaker argument against a new solar farm than against an operating reactor?",
+     "c": [
+      "Solar is cheaper",
+      "The reactor is larger",
+      "The solar farm's output did not exist before the contract; the reactor's did, so the contract moves it rather than adding it",
+      "Reactors are not counted as clean energy"
+     ],
+     "a": 2,
+     "why": "Additionality asks whether the purchase caused new generation to be built. New-build solar passes by construction. Buying an existing reactor's output redirects supply the grid already had."
+    },
+    {
+     "q": "A plant is running under a reliability-must-run agreement. Which statement is true?",
+     "c": [
+      "It bids into the capacity auction like any other unit",
+      "It is paid a fixed cost-of-service amount, carries no capacity obligation, and the cost falls on the local region's customers",
+      "It is paid only when it generates",
+      "It is owned by the grid operator"
+     ],
+     "a": 1,
+     "why": "That combination — fixed payment, no availability obligation, no performance penalty, local cost allocation — is what makes these agreements both valuable to the owner and contentious with consumer advocates."
+    },
+    {
+     "q": "A merchant generator reports a quarterly loss driven by unrealised derivative losses while raising its full-year cash guidance. What is the most likely explanation?",
+     "c": [
+      "An accounting error",
+      "The plants underperformed",
+      "Forward power prices rose, marking its forward sales below market, while the underlying business improved",
+      "A large customer defaulted"
+     ],
+     "a": 2,
+     "why": "A short forward position loses on paper when prices rise. The physical fleet is worth more, not less, which is why guidance went up in the same release."
+    },
+    {
+     "q": "Three consecutive capacity auctions clear at the administrative price cap. What should a seller conclude?",
+     "c": [
+      "The market is well supplied",
+      "The cap, not supply and demand, is setting the price — so revenue depends on whether the collar is extended",
+      "Capacity prices will keep rising",
+      "Generators are withholding capacity"
+     ],
+     "a": 1,
+     "why": "Clearing at the cap means offers above it did not clear. The binding constraint is administrative, which turns a market outcome into a policy decision — and makes the collar's expiry the biggest single swing factor in the seller's earnings."
+    }
+   ]
+  }
+ ]
+}

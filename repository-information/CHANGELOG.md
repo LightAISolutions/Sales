@@ -3,11 +3,167 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 79/100`
+`Sections: 80/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.63r] — 2026-09-05 05:30:09 AM EST
+
+> Fresh session on Opus 5 xhigh. Run Phase C session C4 of repository-information/PROFILER-COVERAGE-PLAN.md:
+> Talen Energy, Vistra, NRG Energy — the §8 rows `talen-energy`, `vistra`, `nrg-energy` (all `ipp`),
+> listed under C-P / C4 in §5/§8. C4 is the first Phase C session since C11 landed at v04.52r; C1 landed
+> at v04.47r, C2 at v04.48r (v2 at v04.50r), C3 at v04.50r, C11 at v04.52r. Phase B ran F1–F5 in the
+> interim (v04.58r–v04.62r) and added nine buyer-side study guides — read them before choosing angles.
+> When you flip the three §8 rows, fill Dossier and Guide as `v1 · v04.63r` / `✓ · v04.63r` and leave the
+> Model column at `Opus 5 xhigh` (no substitution to record).
+> READ FIRST: repository-information/SESSION-CONTEXT.md (the Latest entry has the F5 findings, the
+> registry append-order rule and the word-boundary caveat); PROFILER-COVERAGE-PLAN.md §2 (the model rule
+> and the v04.57r head-to-head note — C4 is the case that rule was written for), §5 row C-P / C4, §7, and
+> the three §8 rows; .claude/rules/profiler-app.md (Profiler Command, Profiler Prep Command);
+> repository-information/PROFILER-SCHEMA.md — in particular the schema v4 normalized-KPI overlay and the
+> "Expectations honesty" authoring rule, both of which bite here in a way they did not for the private
+> F-series; PROFILER-STYLES.md (active style: intel-briefing).
+> CLASSROOM-CURRICULUM-PLAN.md §6 is NOT in scope — C4 closes no register row (§8 "Closes" reads "power
+> partners"); do not edit it. .claude/rules/classroom-app.md is NOT needed.
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, categories `ipp` per the §8 row, intel-briefing prose with confidence-tagged key
+> judgments and an indicators-to-watch bullet) and study guide (schema v2, a where-it-fails section,
+> {{term}} tooltips against profiler-concepts.json, new shared concepts registered there rather than in
+> local glossaries, flashcards and quiz on how the business model and the buying process work, never
+> company trivia).
+> THESE THREE ARE PUBLIC — this is the whole reason they are Opus work, and it changes the research shape:
+> NASDAQ: TLN, NYSE: VST, NYSE: NRG. `expected` must carry REAL published analyst consensus or company
+> guidance for the trailing two fiscal years plus the latest interim, with `result`/`commentary` stating
+> which of the two it is; leave it empty only where none exists and say so. Fill the schema v4 overlay on
+> whole-company actuals only — `kpi: "revenue"` etc. with `usdMillions` and `fxBasis: "as reported"` (all
+> three report in USD, so no conversion and no researched FX rate). The v04.57r head-to-head found Opus's
+> 10-K extraction materially deeper than Fable's — risk factors, credit-transfer cash, insurance
+> repricing, capex actuals. Spend the depth there: read the 10-K, the latest 10-Q, the most recent
+> earnings call and the investor deck for each, not just the press releases.
+> PREMISES TO RE-VERIFY FIRST (the §5 C4 row, written 2026-09-03 — F3, F4 and F5 each found their brief
+> wrong on every company, so treat each clause as a dated claim): Talen Energy — "the Amazon nuclear-PPA
+> precedent (six dossiers)". Verify the Susquehanna arrangement as it stands today, not as first
+> announced: what FERC actually did to the co-location interconnection service agreement, whether the
+> deal was restructured into a front-of-the-meter PPA and on what terms, the MW, the tenor, and Talen's
+> own post-bankruptcy ownership and share count. Note the "six dossiers" figure is unverified; a
+> word-boundary count says four (amazon, constellation-energy, invenergy, terawulf). Vistra — "the
+> largest merchant BESS owner in the country with a growing data-center gas book". Verify the storage
+> fleet MW/MWh against the 10-K (Moss Landing is the name to check, including the January 2025 fire and
+> what it did to the reported fleet), verify the "largest" ranking against a citable source or drop it,
+> and separate the Energy Harbor nuclear acquisition from the gas book. Cited in five dossiers
+> (burns-mcdonnell, invenergy, meta, oklo, oncor). NRG Energy — "the third merchant with gas-for-AIDC
+> deals". Verify the GE Vernova and TIC/Kiewit joint venture terms, the LS Power acquisition, the retail
+> book size, and which data-center agreements are signed versus announced. Cited in eight dossiers
+> (aypa-power, esvolta, flexgen, gridstor, invenergy, kiewit, oncor, sargent-lundy) — the highest of the
+> three. Record every correction in the dossier's summary and judgments.
+> RESEARCH PRIORITIES, for every company: the generation fleet by plant, fuel, MW, and market (PJM,
+> ERCOT, ISO-NE, NYISO) as the 10-K states it; the retail electricity business (customer counts, states,
+> brands) for Vistra and NRG; data-center and large-load agreements with counterparty, MW, tenor and
+> signed-versus-announced status; capacity-market results and hedging disclosure; the storage and
+> nuclear fleets separately from gas; financing (term loans, notes, revolvers, buybacks) as filed;
+> regulatory and litigation exposure from the risk factors; leadership with company-published headshots
+> from the IR site or proxy. Two research agents per company (first-party exhaustive — IR, filings,
+> earnings calls, decks, plant pages — then third-party: FERC dockets and orders, ISO records, state
+> PUCs, trade press, analyst rankings with the ranking cited). A URL for every relationship claim;
+> relationships[] resolving only to covered slugs with a source that states the link — the covered
+> counterparties to look for are `amazon`, `constellation-energy`, `oklo`, `meta`, `microsoft`,
+> `ge-vernova`, `kiewit`, `oncor`, `terawulf`, `burns-mcdonnell`, `invenergy`, `sargent-lundy`,
+> `flexgen`, and the nine new buyer-side slugs (`aypa-power`, `spearmint-energy`, `intersect-power`,
+> `gridstor`, `available-power`, `esvolta`, `strata-clean-energy`, `hunt-energy-network`).
+> Put every must-find item in the agent prompts — nothing can be searched after they return. Have every
+> agent end its report in a `## ALL URLS` list of every URL it fetched successfully.
+> STUDY GUIDES: one guide each, do not duplicate. The corpus now holds nine buyer-side guides and six
+> utility dossiers, so read the start-here callouts of aypa-power, spearmint-energy, intersect-power,
+> invenergy, gridstor, available-power, esvolta, strata-clean-energy and hunt-energy-network before
+> choosing, and do not repeat them. Every one of those teaches a DEVELOPER — someone who builds a
+> pipeline. C4's companies own operating plants, which is the model the corpus does not hold. Candidate
+> angles: the merchant generator whose asset is an existing fleet rather than a pipeline, and how that
+> changes what a data centre can buy from it; co-location at a nuclear plant and what FERC decided about
+> using an existing interconnection for new load (the Talen case, read against the Intersect guide's
+> surplus-interconnection material so the two do not collide); owning both generation and a retail book,
+> and why the natural hedge changes the risk a merchant carries. Check whether the Classroom already owns
+> capacity markets before building a guide around PJM capacity; the Classroom owns tolling, ancillary
+> stacking and duration-and-degradation. If two of the three turn out to be the same model, teach one as
+> the case study and give the other the structural chapter.
+> BOOKKEEPING, same commit: `python3 scripts/sync-profiler-registry.py`, `build-profiler-graph.py`,
+> `check-profiler-study.py`; three calendar rows — these are PUBLIC companies, so the rows carry a
+> researched `nextReport` / `confirmed` / `source` / `watch[]`, not `cadence: "quarterly"`; README tree
+> entries for every profile, study file and study-prep folder plus the execs count (recount by registry
+> slug; currently 490 across 77 companies — turner-* files belong to turner-construction); flip the three
+> §8 rows; CHANGELOG entry (counter at 79/100 — no rotation). One push commit with repo version bump
+> (v04.62r → v04.63r).
+> ENVIRONMENT (confirmed by F1–F5): pip install playwright pymupdf pillow pillow-avif-plugin; never run
+> playwright install — use the /opt/pw-browsers/chromium-*/chrome-linux/chrome executable; the HTTP
+> server for the render harness must be threaded (ThreadingMixIn, daemon threads, swallow
+> BrokenPipeError); route script.google.com to the roles stub in scripts/verify-profiler-roles.py and
+> fulfill accounts.google.com with an empty script; per-slug tabs are `#ov-tab-<key>`, the sources list
+> is `.ov-sources ol li` (not `#ov-main ol li` — the numbered judgments leak in), the study button is
+> `#ov-study-btn`, term spans are `.gd-term` with `data-term`; `page.goto('about:blank')` before every
+> dossier and wrap the localStorage init script in try/catch; dry-run the harness on a known-good slug
+> first. Timeline sections use lane keys `gen` / `deploy` / `eco`. Tool output above ~30 KB is persisted
+> to a file — read agent reports in chunks of <=40 lines. Foreground sleep is blocked — use the Monitor
+> tool or a backgrounded until-loop to wait for agent report files. The shell cwd resets to the repo root
+> after every Bash call — use absolute paths. A stop hook fires on uncommitted edits while agents run —
+> make no repo edits until the agents return. Business Wire and archive.org are 403/blocked — read
+> Business Wire releases through Yahoo Finance, Stocktitan, Nasdaq, SFNet, IREI, Energy Global or
+> Batteries News mirrors and cite the mirror; SEC EDGAR and company IR sites answer directly.
+> SEVEN LESSONS FROM F1–F5, ALL MANDATORY: (1) build a URL index from the reports programmatically with a
+> regex that keeps parentheses inside URLs (`https?://[^\s<>\[\]"'`]+`, strip trailing punctuation), add
+> other covered dossiers' sources[] as a corpus tier, and make the assembler refuse any sources[],
+> relationships[], policyExposure[] or recentDevelopments[] URL not in the index — 0 unmatched per
+> dossier before writing; write all three profiles before relying on cross-citation. (2) Treat every
+> ownership, transaction, ranking and pipeline premise in this brief as a dated fact to re-verify first —
+> F3, F4 and F5 were wrong on all nine companies. (3) Keep press-reported values, analyst supplier
+> attributions and permit design bases as `announced` with the reporter named, never `active`;
+> interconnection and wire-company adjacencies are `other`; exec-background links, JV attributions and
+> analyst comparables are prose or `competitor` with the ranking cited, not supplier/customer
+> relationships. (4) A company-hosted headshot whose filename marks a LinkedIn origin is skipped; a
+> CDN-refused headshot is skipped rather than sourced elsewhere; company-published portrait renders count
+> as company photos. (5) A photo caption is not a supplier attribution — read the sentence, not the
+> image. (6) `profiler-companies.json` is appended in SESSION ORDER, not sorted — append your three
+> entries at the end and do not sort the file; `profiler-concepts.json` IS alphabetical by slug and the
+> schema requires it. (7) Measure corpus demand with word boundaries and case sensitivity — `grep -il
+> "Talen"` returns 17 dossiers because it matches "talent"; `grep -lE '\bTalen\b'` returns 4.
+> Do not read other dossiers' prose as a template for judgments. Estimate ~90 minutes; the F-sessions ran
+> 50–75 minutes net of stalls, and the filings work here will run longer.
+> VERIFY BEFORE COMMIT: sync-profiler-registry.py --check clean, check-profiler-study.py clean, every
+> dossier and guide renders with zero page errors and zero console errors (Playwright, per-slug tabs
+> including Relationships, sources count matches the file, no literal {{}} and no unresolved term spans),
+> every relationships[] slug and every {{term}} resolving. Normal Pre-Commit and Pre-Push checklists;
+> push on a claude/* branch.
+> If a capacity, a contract value, a transaction value or a customer cannot be sourced from a filing, a
+> regulator, a court record or the party's own release, leave it out and say so.
+
+### Added
+
+- **Three `ipp` dossiers at schema v7, profileVersion 1, in the intel-briefing style** — `talen-energy.profile.json` (81 sources, 51 percent first-party, 7 relationships, 21 developments, 5 policy regimes, 13 decision makers), `vistra.profile.json` (81 sources, 37 percent first-party, 13 relationships, 20 developments, 5 policy regimes, 11 decision makers) and `nrg-energy.profile.json` (72 sources, 33 percent first-party, 7 relationships, 20 developments, 5 policy regimes, 12 decision makers). All three carry the schema v4 normalized-KPI overlay on whole-company actuals only (`revenue`, `net-income`, `eps`, `capex`, `mw-contracted`), every currency figure `fxBasis: "as reported"` since all three report in USD.
+- **Three schema v2 study guides, each teaching a different half of the operating-generator model the corpus did not hold** — `talen-energy.study.json` (13 sections: co-location at a nuclear plant, the interconnection service agreement and capacity interconnection rights, what FERC decided and what it left open, the workaround, additionality, reliability-must-run), `vistra.study.json` (11 sections: merit order and uniform clearing, what a capacity auction buys and why accreditation not nameplate, two market designs inside one company, the five things a data centre can buy from an existing plant, and what twenty years of asset ownership costs) and `nrg-energy.study.json` (10 sections: the retail book as a short position, collateral as the real failure mode, the four numbers that decide whether a retail customer earns its keep, customers as a dispatchable resource, and the vocabulary separating signed from reserved). Each has a `where-it-fails` callout, flashcards and a self-test.
+- **Three full-depth lesson plans** under `repository-information/study-prep/{talen-energy,vistra,nrg-energy}/`, five modules each with per-module self-checks and a whole-plan self-test.
+- **25 shared concepts registered in `profiler-concepts.json`** (786 → 811, alphabetical): additionality, bad debt, baseload, basis risk, capacity interconnection rights, churn, co-location, customer acquisition cost, deactivation, dispatch, forced outage rate, forward hedging, retail gross margin, interconnection service agreement, load-following, mark-to-market, merit order, natural hedge, net position, offer cap, reliability must-run, spark spread, station power, unforced capacity, virtual power plant.
+- **19 company-published executive headshots** (Talen 10, Vistra 8, NRG 1), all verified against a contact sheet before use; execs count recounted by registry slug to 509 images across 80 companies.
+- **Three researched calendar rows** with `nextReport` / `confirmed: false` / `source` / `watch[]` — none of the three companies had announced a Q3 2026 date as of 5 September 2026, and each row records the tracker disagreement and the historical release pattern behind its estimate.
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §8** — the three C4 rows flipped to `v1 · v04.63r` / `✓ · v04.63r`; Model column unchanged at `Opus 5 xhigh` (no substitution).
+- **Registry, graph and README** — three entries appended to `profiler-companies.json` in session order (127 companies); `sync-profiler-registry.py` reconciled `srcTotal`, `srcFirstPct` and `kpiNorm`; `build-profiler-graph.py` rebuilt to 902 edges (678 curated) from 865; README tree gained six `profiler-data` rows and three `study-prep` blocks.
+
+### Fixed
+
+- **All three §5 premises were wrong and are corrected in the summaries, judgments and README descriptions.**
+  - **Talen Energy — "the Amazon nuclear-PPA precedent" is backwards on the part that matters.** FERC *rejected* the behind-the-meter arrangement on 1 November 2024 (docket ER24-2172, 189 FERC ¶ 61,078, 2–1, Christie and See in the majority, Chairman Phillips dissenting), on burden of proof and **expressly without prejudice**. What exists today is a *different, later* front-of-the-meter retail supply agreement signed 11 June 2025 — 1,920 MW through 2042, transitioned in April 2026 — deliberately structured so that no FERC approval is needed, running through Talen Energy Marketing's pre-existing unconditioned Pennsylvania supplier licence. The appeal was voluntarily dismissed in January 2026 ("this matter is now closed"). Talen has **no second hyperscaler**; the "4 GW" is land and contracting options. The "six dossiers" figure was also wrong: a word-boundary count returns four (amazon, constellation-energy, invenergy, terawulf). The 10-K calls Susquehanna the *seventh*-largest US nuclear plant while the website says sixth; Certrec's NERC-based list says seventh.
+  - **Vistra — both halves of the premise fail.** No citable independent ranking of storage owners by fleet size exists (Wood Mackenzie/ACP and the EIA both decline to publish one); the closest, Enverus's 2023 flow ranking, places Vistra **second behind NextEra**, and Vistra's own historical language was "second-largest". The fleet fell from **1,024 MW to 624 MW** between the FY2024 and FY2025 10-Ks after the 16 January 2025 Moss Landing fire ($400M written off to depreciation in Q1 2025, $155M impaired in Q4 2025, both permanently in Asset Closure). And there is **no data-center gas book at all** — every signed large-load agreement is nuclear (Amazon 1,200 MW at Comanche Peak; Meta 2,609 MW across Perry, Davis-Besse and 433 MW of uprates).
+  - **NRG Energy — three corrections.** The GE Vernova and TIC arrangement is **not a joint venture**: it is a Project Development Agreement signed 13 February 2025 under which "the generation facilities will be owned and operated by NRG", with turbine **slot reservations** that grew 1.2 GW → 3.6 GW against an unchanged 5.4 GW ceiling and no firm order, FID or named site. The LS Power acquisition is **closed**, not pending (30 January 2026, $10,583M plus ~$3.2bn assumed debt, CPower included). And the flagship 1.2 GW Texas project is **not signed** — "aligned on principal commercial terms … subject to final documentation and approvals". NRG is the only one of the four large merchants with **no named hyperscaler counterparty**; "largest IPP" is unverifiable and probably false on capacity.
+- **Expectations honesty applied throughout, and it bit hard.** No published full-year analyst consensus could be located for FY2024 or FY2025 for Talen or Vistra on any reachable host, so those periods are benchmarked against company guidance and labelled as such; NRG's FY2025 has only a nine-month-stale $7.47 figure, so it too is guidance-benchmarked. Only the latest interim carries genuine outlet-named consensus for all three, and NRG's Q2 2026 consensus differs by 10 percent across three compilers, all named.
+- **Every URL asserted programmatically before writing** — a report index of 485 URLs from the six agents' `## ALL URLS` sections plus a corpus tier of 5,799 URLs from other dossiers; **0 unmatched across 337 checked URLs** (114 / 119 / 104). One NRC URL was corrected by the check.
+
+### Verified
+
+- `sync-profiler-registry.py --check` clean (0 of 127 out of sync); `check-profiler-study.py` clean (101 guides, 811 concepts, 0 errors, 0 warnings); `check-profiler-reports.py` 0 errors.
+- Playwright render of all three dossiers and all three guides: **zero page errors, zero console errors**, all nine per-slug tabs clickable including Relationships, sources counts matching the files exactly (81 / 81 / 72), no literal `{{}}` anywhere, and every `.gd-term` span resolving against the concepts registry.
+- All 27 relationship slugs resolve to registry entries; all 19 photo paths exist on disk.
 
 ## [v04.62r] — 2026-09-05 03:52:41 AM EST
 

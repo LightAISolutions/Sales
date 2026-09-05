@@ -1,0 +1,1378 @@
+{
+ "schemaVersion": 7,
+ "slug": "vistra",
+ "name": "Vistra Corp.",
+ "shortName": "Vistra",
+ "categories": [
+  "ipp"
+ ],
+ "website": "https://www.vistracorp.com",
+ "headquarters": "Irving, TX, USA",
+ "founded": "2016 (emerged from the Energy Future Holdings restructuring); NYSE listing as Vistra Energy",
+ "employees": "Not disclosed as a single figure in the FY2025 Form 10-K",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: VST"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Vistra is no longer a storage story and is not yet a gas-for-data-centres story — it is a **nuclear contracting story attached to a five-million-customer retail book**. Roughly 3.8 GW of its six nuclear units are now sold to Amazon and Meta on twenty-year agreements, while the battery fleet that made its name has shrunk from 1,024 MW to 624 MW after the January 2025 Moss Landing fire, and **not one signed large-load agreement exists at any of its gas plants.**\n\n**BACKGROUND.** Irving, Texas. An integrated retail electricity and power generation company with a filed fleet of **43,641 MW at 31 December 2025** — 62 percent gas, 20 percent coal, 15 percent nuclear, 3 percent solar and storage — split 19,858 MW in ERCOT, 22,254 MW across PJM, ISO-NE, MISO and NYISO, and 1,529 MW in CAISO, all wholly owned. Retail serves about five million customers across sixteen states and the District of Columbia under TXU Energy, Ambit, Dynegy, Homefield, Energy Harbor and other brands, 2.6 million of them in Texas. FY2025 revenue was $17.7 billion and Ongoing Operations Adjusted EBITDA $5.9 billion. The company reached investment grade in December 2025 and had its debt collateral released in April 2026.",
+ "ecosystemRole": "Vistra is the corpus's clearest example of the **integrated merchant** — a company that owns both the generation and the customers it serves, so that a price move which hurts one side helps the other. Five covered dossiers already name it, and they name it for three different things: Burns & McDonnell for building Moss Landing's second phase, Meta and Oklo for the January 2026 nuclear package, Invenergy for the contrast between developing new plants and contracting existing ones, and Oncor because Vistra's retail subsidiaries are its single largest customer group at 25 percent of 2025 revenue. It is also the counterweight to Talen in the co-location argument: both filed on the same side at FERC, but only Vistra has a retail book to fall back on.",
+ "productsAndServices": [
+  {
+   "name": "Nuclear generation",
+   "category": "Baseload generation",
+   "description": "Six units at four sites totalling 6,448 MW: Comanche Peak Units 1 and 2 in Glen Rose, Texas (1,200 MW each, ERCOT), Beaver Valley Units 1 and 2 in Shippingport, Pennsylvania (939 and 933 MW, PJM), Perry in Ohio (1,268 MW, PJM) and Davis-Besse in Ohio (908 MW, PJM). Vistra calls it the nation's second-largest competitive nuclear fleet. Every reactor is now licensed for sixty years of operation.",
+   "highlights": [
+    "Licence expirations: Comanche Peak 2050 and 2053, Beaver Valley 2036 and 2047, Perry 2046, Davis-Besse 2037",
+    "Comanche Peak's twenty-year renewal was approved in July 2024; Perry's in July 2025, the last of the six",
+    "The four PJM units came with the Energy Harbor merger, which closed 1 March 2024 at an acquisition-date fair value of $5.4 billion",
+    "Nuclear fuel is contracted to cover all refuelling needs through 2030 without additional Russian deliveries",
+    "Transferable nuclear production tax credit revenue was $545 million in FY2024 and $220 million in FY2025",
+    "433 MW of uprates are under development at Perry (213 MW), Beaver Valley (140 MW) and Davis-Besse (80 MW) — capital spend runs 2026 to 2034 with less than 20 percent of it before the end of 2028"
+   ],
+   "positioning": "Constellation is larger in competitive nuclear; Talen owns one station. Vistra is the only competitive owner with reactors in both ERCOT and PJM, which is why one contract went to Amazon in Texas and another to Meta in the east.",
+   "soldThrough": "Wholesale markets, the retail book, and twenty-year bilateral power purchase agreements",
+   "targetSegments": [
+    "Hyperscale data centres",
+    "ERCOT and PJM wholesale markets"
+   ],
+   "roadmap": "Vistra says roughly 3.2 GW including ERCOT uprates remains available to contract, and that the Meta agreements support subsequent twenty-year licence renewals at all four PJM units."
+  },
+  {
+   "name": "Natural gas generation",
+   "category": "Intermediate and peaking generation",
+   "description": "26,989 MW at 31 December 2025 — 62 percent of the fleet — comprising 28 combined-cycle plants totalling 22,167 MW and 12 peaking plants totalling 4,822 MW, spread across ERCOT, PJM, ISO-NE, NYISO, MISO and CAISO. Two acquisitions and one divestment are reshaping it at once.",
+   "highlights": [
+    "Lotus Infrastructure's seven gas plants (2,557-2,600 MW, $1.9 billion base) closed 22 October 2025",
+    "Cogentrix (5,496 MW, about $4.0 billion net) was announced 5 January 2026, cleared FERC in August 2026 and is expected to close late 2026, taking the pro-forma fleet to roughly 50,000 MW",
+    "Vistra is simultaneously selling 754 MW — Casco Bay, Beaver Falls and Syracuse — two of which it bought from Lotus eight months earlier; buyer and price undisclosed",
+    "An 860 MW Permian Basin expansion in Ward County took a final investment decision in September 2025; Governor Abbott announced a Texas Energy Fund loan for it on 24 June 2026, the programme's eighth finalised loan",
+    "No signed or announced large-load agreement exists at any Vistra gas site"
+   ],
+   "positioning": "Buying operating combined-cycle capacity rather than building it — the same play Talen is running in PJM, executed at larger scale and funded from investment-grade balance sheet capacity rather than incremental leverage.",
+   "soldThrough": "Wholesale energy and capacity markets, and the retail book",
+   "targetSegments": [
+    "ERCOT energy market",
+    "PJM capacity market",
+    "Retail supply"
+   ]
+  },
+  {
+   "name": "Energy storage",
+   "category": "Grid-scale batteries",
+   "description": "624 MW as the FY2025 Form 10-K states it — 350 MW in California, 270 MW in Texas and 4 MW in Illinois — down from 1,024 MW a year earlier. The reduction is the January 2025 Moss Landing fire and its consequences, not a sale.",
+   "highlights": [
+    "Moss Landing Phase I (300 MW) was written off at approximately $400 million to depreciation expense in Q1 2025 and moved to the Asset Closure segment; it will not return",
+    "Moss Landing Phase II (100 MW) took a $155 million impairment in Q4 2025 and also moved to Asset Closure",
+    "Only Moss Landing Phase III (350 MW, in service June 2023) is a restart candidate; the Q2 2026 10-Q says 'when or if'",
+    "Combined business-interruption and property limits of $500 million have been fully collected, while the EPA remediation estimate has risen from $110 million to $175 million",
+    "No MWh figure for any Vistra storage asset appears in any first-party filing — the fleet is disclosed in MW only",
+    "The CAISO resource-adequacy revenue attached to the site falls from about 1,415 average MW in 2026 to 350 MW in 2028 as the Phase I and II contracts roll off"
+   ],
+   "positioning": "Enverus ranked Vistra second in North America by storage megawatts brought online in 2023, behind NextEra Energy Resources — a flow measure over one year, not a stock of owned capacity. No independent ranking of storage owners by fleet size could be located, and Vistra's own historical language was 'second-largest', never first.",
+   "soldThrough": "CAISO resource-adequacy contracts and ERCOT merchant operation",
+   "targetSegments": [
+    "California resource adequacy",
+    "ERCOT ancillary services and arbitrage"
+   ],
+   "roadmap": "The 10-K says Vistra plans additional battery storage in California and at retired or to-be-retired plant sites in Illinois; the March 2026 Enphase agreement expands a residential battery aggregation programme."
+  },
+  {
+   "name": "Retail electricity and natural gas",
+   "category": "Competitive retail supply",
+   "description": "Approximately five million residential, commercial and industrial customers across sixteen states and the District of Columbia, about 2.6 million of them in Texas. Brands include TXU Energy, Ambit Energy, 4Change, Express and Veteran Energy, Dynegy Energy Services, Homefield Energy, TriEagle, Public Power, U.S. Gas & Electric and Energy Harbor. FY2025 retail revenue was $14,340 million and retail Adjusted EBITDA $1,622 million.",
+   "highlights": [
+    "Retail volumes were 139.1 TWh in 2025, up from 133.4 TWh in 2024",
+    "Bad debt expense was $201 million in FY2025, against $183 million in FY2024 — the honest cost of serving households",
+    "TXU Energy is the top-rated large retail energy provider in the Texas Public Utility Commission rankings, per the company",
+    "Retail subsidiaries of Vistra are Oncor's largest customer group, at 25 percent of Oncor's total operating revenues for 2025",
+    "Retail Adjusted EBITDA is highly seasonal: $68 million in Q1 2026 against $773 million in Q2 2026"
+   ],
+   "positioning": "The structural difference from Talen. A pure merchant sells its output forward to banks and traders; an integrated merchant sells it to its own customers, which is both a hedge and a distribution channel a stand-alone generator does not have.",
+   "soldThrough": "Direct-to-consumer, brokers and community aggregation",
+   "targetSegments": [
+    "Residential",
+    "Small and medium business",
+    "Commercial and industrial",
+    "Municipal"
+   ]
+  },
+  {
+   "name": "Long-term large-load power supply",
+   "category": "Contracted power sales",
+   "description": "Twenty-year power purchase agreements selling nuclear output to hyperscalers. Amazon takes 1,200 MW from Comanche Peak, signed September 2025, with deliveries from the fourth quarter of 2027 ramping to full capacity by 2032 and options to extend by up to twenty more years. Meta takes 2,609 MW from the PJM fleet under agreements announced 9 January 2026 — 1,268 MW from Perry and 908 MW from Davis-Besse of operating capacity, plus 433 MW of uprate capacity.",
+   "highlights": [
+    "Roughly 3.8 GW of the 6.4 GW nuclear fleet is now contracted, and neither agreement is in 2026 guidance or the 2027 midpoint opportunity",
+    "Vistra did not name Amazon until February 2026; at Q3 2025 it described the counterparty only as 'an investment grade counterparty', and issued no standalone release for the deal",
+    "The Meta agreements are explicitly grid-delivered, not co-located: 'the electricity generated at the plants will continue to go to the grid for all electricity users'",
+    "Vistra sizes the accretion at roughly 8-10 percent of Adjusted Free Cash Flow before growth for the Amazon deal and 13-17 percent for the Meta package at full delivery",
+    "Amazon also buys the output of the 200 MW Oak Hill solar plant in ERCOT; Microsoft buys the 405 MW Pulaski solar plant in Illinois",
+    "The company's own language for everything else is unchanged across four consecutive filings: 'we continue to engage in discussions with various counterparties'"
+   ],
+   "positioning": "Talen's Amazon contract is larger by megawatt and longer by tenor, but rests on a single station. Vistra's book is spread across four nuclear sites in two markets and two counterparties — and, unlike Talen's, was never structured behind the meter, so it never needed FERC's permission.",
+   "soldThrough": "Direct bilateral power purchase agreements",
+   "targetSegments": [
+    "Hyperscale data centres"
+   ],
+   "roadmap": "Roughly 3.2 GW including ERCOT uprates remains available. In June 2026 Vistra committed up to $1 billion to KKR's Helix Fund alongside NVIDIA and the Kuwait Investment Authority, taking the role of 'preferred power provider' to the fund's data-centre investments."
+  },
+  {
+   "name": "Commercial operations and hedging",
+   "category": "Wholesale trading and risk management",
+   "description": "The desk that converts an integrated fleet-plus-retail position into a stable earnings stream. Vistra hedges close to all of its expected generation for the prompt year and a large share two and three years out, using the retail book itself as a sales channel for generation.",
+   "highlights": [
+    "Position at 3 August 2026: approximately 100 percent hedged for 2026, 94 percent for 2027 and 72 percent for 2028",
+    "The 10-K states the mechanical consequence plainly: when power prices move, the generation segments and the retail segment book equal and opposite unrealised marks",
+    "Commodity markets are liquid enough to hedge only two to three years out, and four to five using cross-commodity gas strategies",
+    "PJM capacity: 10,924 MW cleared at $325.00/MW-day for 2028/2029; 10,566 MW for 2027/2028 at $333.44; 11,527 MW for 2026/2027 at $329.17",
+    "ERCOT has no capacity market — Vistra describes it as relying on energy-market price signals, with real-time co-optimisation replacing the operating reserve demand curve from December 2025"
+   ],
+   "positioning": "Hedge ratios materially above Talen's 85/70/30 percent for the same years — the difference between a merchant that must find buyers and one that already has five million of them.",
+   "soldThrough": "Bilateral forwards, exchange products, capacity auctions and the retail book",
+   "targetSegments": [
+    "Wholesale counterparties",
+    "Own retail load"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Generation fleet as filed, 31 December 2025",
+   "specs": [
+    {
+     "band": "Fuel mix",
+     "label": "Natural gas (CCGT, CT or ST)",
+     "value": "26,989 MW — 62% of net capacity"
+    },
+    {
+     "band": "Fuel mix",
+     "label": "Coal (steam turbine)",
+     "value": "8,743 MW — 20%, across seven facilities"
+    },
+    {
+     "band": "Fuel mix",
+     "label": "Uranium (nuclear)",
+     "value": "6,448 MW — 15%, six units at four sites"
+    },
+    {
+     "band": "Fuel mix",
+     "label": "Renewable (solar and battery)",
+     "value": "1,274 MW — 3%"
+    },
+    {
+     "band": "Fuel mix",
+     "label": "Fuel oil (combustion turbine)",
+     "value": "187 MW"
+    },
+    {
+     "band": "Fuel mix",
+     "label": "Total net capacity",
+     "value": "43,641 MW, all 100% fee-simple owned"
+    },
+    {
+     "band": "By market",
+     "label": "Texas segment (ERCOT)",
+     "value": "19,858 MW — 46%"
+    },
+    {
+     "band": "By market",
+     "label": "East segment (PJM, ISO-NE, MISO, NYISO)",
+     "value": "22,254 MW — 51%"
+    },
+    {
+     "band": "By market",
+     "label": "West segment (CAISO)",
+     "value": "1,529 MW — 3%"
+    },
+    {
+     "band": "By market",
+     "label": "Gas fleet composition",
+     "value": "28 combined-cycle plants totalling 22,167 MW and 12 peaking plants totalling 4,822 MW"
+    },
+    {
+     "band": "Movement",
+     "label": "At 30 June 2026",
+     "value": "43,824 MW (Texas 19,987; East 22,308; West 1,529)"
+    },
+    {
+     "band": "Movement",
+     "label": "Pro forma for Cogentrix",
+     "value": "approximately 50,000 MW once the 5,496 MW acquisition closes, expected late 2026"
+    }
+   ],
+   "notes": "The FY2024 10-K described Vistra as 'the largest competitive power generator in the U.S. as measured by MWh of generation capacity'; the FY2025 10-K says 'one of the largest'. The wording changed; the company did not explain why."
+  },
+  {
+   "product": "Nuclear fleet",
+   "specs": [
+    {
+     "band": "ERCOT",
+     "label": "Comanche Peak Unit 1",
+     "value": "1,200 MW; 18-month refuelling cycle; licence to 2050"
+    },
+    {
+     "band": "ERCOT",
+     "label": "Comanche Peak Unit 2",
+     "value": "1,200 MW; 18-month cycle; licence to 2053"
+    },
+    {
+     "band": "PJM",
+     "label": "Beaver Valley Unit 1",
+     "value": "939 MW; 18-month cycle; licence to 2036"
+    },
+    {
+     "band": "PJM",
+     "label": "Beaver Valley Unit 2",
+     "value": "933 MW; 18-month cycle; licence to 2047"
+    },
+    {
+     "band": "PJM",
+     "label": "Perry",
+     "value": "1,268 MW; 24-month cycle; licence to 2046 (renewed July 2025)"
+    },
+    {
+     "band": "PJM",
+     "label": "Davis-Besse",
+     "value": "908 MW; 24-month cycle; licence to 2037"
+    },
+    {
+     "band": "Total",
+     "label": "Fleet",
+     "value": "6,448 MW across six units and four sites"
+    },
+    {
+     "band": "Contracted",
+     "label": "Amazon — Comanche Peak",
+     "value": "1,200 MW, 20 years, deliveries from Q4 2027 ramping to full capacity by 2032"
+    },
+    {
+     "band": "Contracted",
+     "label": "Meta — Perry and Davis-Besse",
+     "value": "2,176 MW of operating capacity, 20 years, part delivering late 2026 and full delivery by end-2027"
+    },
+    {
+     "band": "Contracted",
+     "label": "Meta — uprates",
+     "value": "433 MW: Perry 213 MW, Beaver Valley 140 MW, Davis-Besse 80 MW; part delivering by 2031, full delivery by end-2034"
+    },
+    {
+     "band": "Performance",
+     "label": "Capacity factor, Q2 2026",
+     "value": "Texas 85%, East 90%; year to date 93% and 91%"
+    }
+   ],
+   "notes": "Vistra says the uprates 'will be the largest nuclear uprates supported by a corporate customer in the United States'. The aggregate uprate capital figure is not disclosed."
+  },
+  {
+   "product": "Moss Landing energy storage complex",
+   "specs": [
+    {
+     "band": "Phase I",
+     "label": "Capacity and fate",
+     "value": "300 MW, housed inside the retired power plant's turbine building; burned 16 January 2025; approximately $400 million written off to depreciation expense in Q1 2025; will not return to service"
+    },
+    {
+     "band": "Phase II",
+     "label": "Capacity and fate",
+     "value": "100 MW in a stand-alone building; $155 million impairment in Q4 2025; will not return to service"
+    },
+    {
+     "band": "Phase III",
+     "label": "Capacity and status",
+     "value": "350 MW, commercial operation June 2023; offline; net book value approximately $320 million at 31 December 2025; restart 'when or if' per the Q2 2026 10-Q"
+    },
+    {
+     "band": "Site",
+     "label": "Gas plant",
+     "value": "Moss Landing 1 and 2, 1,020 MW combined-cycle, CAISO — unaffected, returned to service February 2025"
+    },
+    {
+     "band": "Incident",
+     "label": "Injuries",
+     "value": "None, per the Form 10-K"
+    },
+    {
+     "band": "Incident",
+     "label": "Cause",
+     "value": "Officially undetermined; outside experts retained"
+    },
+    {
+     "band": "Insurance",
+     "label": "Limits and recovery",
+     "value": "$500 million combined business-interruption and property limits, of which approximately $500 million had been collected through February 2026"
+    },
+    {
+     "band": "Remediation",
+     "label": "EPA settlement agreement",
+     "value": "Estimated at approximately $110 million in the FY2025 10-K, revised to approximately $175 million in Q2 2026 on an extended timeline; $90 million incurred through 30 June 2026"
+    },
+    {
+     "band": "Remediation",
+     "label": "Letters of credit",
+     "value": "$110 million posted to support the EPA agreement"
+    }
+   ],
+   "notes": "MWh figures are widely reported by third parties (1,200 MWh for Phase I, 400 MWh for Phase II, 1,400 MWh for Phase III) but appear in no Vistra filing; the company discloses storage in MW only. Two suits name Vistra, Dynegy Operating Company, LG Energy Solution and PG&E; a San Jose State University team led by Professor Ivano Aiello reported nickel, manganese and cobalt in Elkhorn Slough soils at 10 to 1,000 times pre-fire baselines, with a nickel-to-cobalt ratio matching the facility's chemistry, a finding Vistra disputes."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Vistra is close to fully hedged, so its GAAP result is a mark-to-market artefact and its Adjusted EBITDA is the operating signal. FY2025 net income fell $1,868 million on unrealised hedging losses while Ongoing Operations Adjusted EBITDA rose; Q2 2026 missed consensus on both GAAP lines by wide margins while the same quarter's Adjusted EBITDA grew more than 30 percent and full-year guidance was reaffirmed. **Expectations honesty:** no published full-year analyst consensus for FY2024 or FY2025 could be located on any reachable host, so those periods are benchmarked against Vistra's own guidance and labelled as such; the quarterly figures below are genuine outlet-named consensus.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The Energy Harbor year: ten months of the acquired nuclear fleet, a full nuclear production tax credit, and the buy-back of the Vistra Vision minority stake closing on the last day of the year.",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$17,224M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "No published full-year revenue consensus was located.",
+      "kpi": "revenue",
+      "usdMillions": 17224,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Ongoing Operations Adjusted EBITDA",
+      "actual": "$5,656M as originally reported ($5,643M restated for segment reclassification)",
+      "expected": "$856M below the actual, against the original guidance midpoint issued May 2024 (company guidance)",
+      "verdict": "beat",
+      "result": "Company-guidance benchmark, not consensus: Vistra's own release states the result came in $856 million above the midpoint of the guidance range it issued in May 2024."
+     },
+     {
+      "name": "Net income attributable to Vistra",
+      "actual": "$2,659M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Flattered by unrealised hedging gains and by the nuclear production tax credit recorded in the fourth quarter. Note $2,812M is total net income before the non-controlling interest.",
+      "kpi": "net-income",
+      "usdMillions": 2659,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted earnings per share",
+      "actual": "$7.00 ($7.16 basic)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "After $192 million of cumulative preferred dividends. Weighted-average diluted shares 352.6 million.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Cash provided by operating activities",
+      "actual": "$4,563M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Ongoing Operations Adjusted Free Cash Flow before growth was $2,888 million."
+     },
+     {
+      "name": "Capital expenditures including nuclear fuel and long-term service agreement prepayments",
+      "actual": "$2,078M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Rising through the period as the solar and storage build and the nuclear fleet's maintenance cycle both stepped up.",
+      "kpi": "capex",
+      "usdMillions": 2078,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Battery energy storage owned at period end",
+      "actual": "1,024 MW — 750 MW California, 270 MW Texas, 4 MW Illinois",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "The figure every 'largest merchant storage owner' claim rests on. It fell to 624 MW a year later."
+     },
+     {
+      "name": "Retail operating revenues",
+      "actual": "$12,797M; retail Adjusted EBITDA $1,463M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Bad debt expense $183 million."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "Chief executive Jim Burke called it 'a transformational year'. It was also the year the storage story ended and the nuclear contracting story began: Moss Landing burned in January, the Amazon agreement was signed in September, Lotus closed in October, and investment grade arrived in December.",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$17,738M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "No published full-year revenue consensus was located for FY2025 on any reachable host; the field is left empty rather than reconstructed.",
+      "kpi": "revenue",
+      "usdMillions": 17738,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Ongoing Operations Adjusted EBITDA",
+      "actual": "$5,912M",
+      "expected": "$5,500-$6,100M (company guidance, reaffirmed February 2025)",
+      "verdict": "beat",
+      "result": "Company-guidance benchmark. About $112 million above the midpoint — a far thinner beat than FY2024's $856 million, which is the more informative comparison."
+     },
+     {
+      "name": "Net income attributable to Vistra",
+      "actual": "$944M",
+      "expected": "—",
+      "verdict": "miss",
+      "result": "Down $1,868 million, which the company attributes primarily to unrealised losses on commodity hedging — roughly $1.8 billion of incremental mark-to-market loss versus FY2024 — plus $228 million of impairments including $155 million at Moss Landing Phase II.",
+      "kpi": "net-income",
+      "usdMillions": 944,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted earnings per share",
+      "actual": "$2.18 ($2.22 basic)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "No full-year consensus located. Q4 2025 adjusted EPS of $2.18 missed MarketBeat's $2.45 consensus, and Q4 revenue of $4.58 billion missed a $5.75 billion estimate.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Cash provided by operating activities",
+      "actual": "$4,070M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Ongoing Operations Adjusted Free Cash Flow before growth $3,592 million, against a stated medium-term conversion target of over 60 percent of Adjusted EBITDA."
+     },
+     {
+      "name": "Capital expenditures including nuclear fuel and long-term service agreement prepayments",
+      "actual": "$2,752M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Up a third year on year on the solar build, the Permian project and nuclear outage work.",
+      "kpi": "capex",
+      "usdMillions": 2752,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Battery energy storage owned at period end",
+      "actual": "624 MW — 350 MW California, 270 MW Texas, 4 MW Illinois",
+      "expected": "—",
+      "verdict": "miss",
+      "result": "A 400 MW reduction from the fire, booked as $400 million of depreciation expense in Q1 and a $155 million impairment in Q4. Not a disposal — the capacity is gone."
+     },
+     {
+      "name": "Contracted large-load supply at period end",
+      "actual": "1,200 MW to Amazon from Comanche Peak, 20 years",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "The Meta agreements for a further 2,609 MW were announced on 9 January 2026, after this period end.",
+      "kpi": "mw-contracted",
+      "qty": 1200
+     },
+     {
+      "name": "Retail operating revenues",
+      "actual": "$14,340M; retail Adjusted EBITDA $1,622M",
+      "expected": "—",
+      "verdict": "beat",
+      "result": "Higher retail margins on favourable supply costs were one of the two drivers the company named for the EBITDA increase. Bad debt expense rose to $201 million."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026 (three months to 30 June 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "The sharpest illustration in this dossier of why a hedged merchant cannot be judged on reported earnings: a 53 percent EPS miss and a 27 percent revenue miss beside 30 percent Adjusted EBITDA growth and reaffirmed guidance.",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$4,017M",
+      "expected": "$5.46B (MarketBeat consensus)",
+      "verdict": "miss",
+      "result": "Analyst-consensus benchmark. A 26.5 percent shortfall — but revenue for an integrated merchant moves with settled prices and hedge accounting, not with volume, so it is a poor operating signal.",
+      "kpi": "revenue",
+      "usdMillions": 4017,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted earnings per share",
+      "actual": "$0.76 ($0.77 basic)",
+      "expected": "$1.61 (MarketBeat consensus)",
+      "verdict": "miss",
+      "result": "Analyst-consensus benchmark. A 52.8 percent miss, caused by a $488 million increase in unrealised mark-to-market losses on derivative positions.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Net income attributable to Vistra",
+      "actual": "$305M (from $327M)",
+      "expected": "—",
+      "verdict": "miss",
+      "result": "Down $22 million on the mark-to-market swing, mostly offset by higher realised prices, higher capacity revenue and three months of the Lotus plants.",
+      "kpi": "net-income",
+      "usdMillions": 305,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Ongoing Operations Adjusted EBITDA",
+      "actual": "$1,767M (from $1,349M)",
+      "expected": "—",
+      "verdict": "beat",
+      "result": "More than 30 percent growth. Segment split: retail $773 million, Texas $311 million, East $642 million, West $68 million."
+     },
+     {
+      "name": "2026 guidance",
+      "actual": "Reaffirmed at $6,800-$7,600M Ongoing Operations Adjusted EBITDA and $3,925-$4,725M Adjusted Free Cash Flow before growth",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company guidance. It excludes both the pending Cogentrix acquisition and the signed Meta agreements, as does the $7.4-$7.8 billion 2027 midpoint opportunity."
+     },
+     {
+      "name": "Contracted large-load supply",
+      "actual": "3,809 MW — Amazon 1,200 MW and Meta 2,609 MW, both 20-year",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Roughly 3.2 GW including ERCOT uprates remains available to contract, per the company.",
+      "kpi": "mw-contracted",
+      "qty": 3809
+     },
+     {
+      "name": "Leverage and liquidity",
+      "actual": "Net debt to Adjusted EBITDA 2.6x (2.4x after cash margin deposits); total liquidity $6,295M at 30 June 2026",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "The revolver was upsized from $3.44 billion to $5.50 billion in June 2026 after the April collateral release; the stated long-term target is below 3x."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess the description of Vistra as 'the largest merchant battery-storage owner in the country' should be dropped rather than qualified. No independent, dated ranking of storage owners by fleet size exists — Wood Mackenzie and ACP's US Energy Storage Monitor and the EIA both decline to publish one — and the closest available ranking, Enverus's July 2024 table of megawatts brought online during 2023, puts Vistra **second behind NextEra Energy Resources**, on a one-year flow measure rather than owned stock. Vistra's own historical language was 'second-largest'. Basis: Enverus, the ACP release, EIA's Today in Energy, and both Form 10-Ks. The claim's factual base has also halved: the fleet fell from 1,024 MW to 624 MW between the two filings.",
+  "**(High confidence)** We assess the second half of the brief's premise — 'a growing data-center gas book' — is not supported by any filing. **Every signed large-load agreement Vistra has is nuclear**: 1,200 MW to Amazon from Comanche Peak and 2,609 MW to Meta from Perry, Davis-Besse and the uprate programme. The company's own words for its gas fleet are unchanged across four consecutive filings — 'we continue to engage in discussions with various counterparties' — and it does not use the phrase 'advanced discussions' anywhere. Basis: the FY2025 10-K, the Q2 2026 10-Q and the Meta and Comanche Peak disclosures.",
+  "**(High confidence)** We assess the integrated model is the company's real differentiator and that Vistra says so mechanically rather than rhetorically. The 10-K explains that when power prices move, the generation segments book unrealised losses or gains and the retail segment books the inverse, because retail procures from generation to meet load. The Q2 2026 segment split proves it: retail net income +$484 million, Texas +$592 million, East -$166 million, with an unrealised hedging swing of retail +$261 million, Texas -$446 million and East +$629 million. Basis: the 10-K and the Q2 2026 disclosures. The company itself puts a limit on the claim — the businesses are countercyclical 'to some extent', and a wholesale position subject to significant price moves remains.",
+  "**(High confidence)** We assess Moss Landing has permanently changed what merchant storage costs to own, and that Vistra's own numbers understate the total. The $400 million write-off and the $155 million impairment are the visible half; the $500 million insurance limit is fully collected while the remediation estimate has risen from $110 million to $175 million, and the CAISO resource-adequacy revenue attached to the site falls by roughly three-quarters in 2028 as the Phase I and II contracts expire. The cause is still officially undetermined nineteen months on. Basis: the 10-K, the Q2 2026 10-Q, and the EPA's settlement page.",
+  "**(Moderate confidence)** We assess Vistra is buying operating gas capacity faster than it is contracting it, and is comfortable with that. Lotus (2,557 MW) closed in October 2025, Cogentrix (5,496 MW) clears to roughly 50,000 MW pro forma, an 860 MW Permian expansion is under construction, and 754 MW is simultaneously being sold — two plants of which came from Lotus eight months earlier. The reconciling logic is that gas plants earn from capacity markets and scarcity whether or not a data centre signs, and the balance sheet reached investment grade in December 2025 with leverage at 2.6x. Basis: the transaction releases, the Q2 2026 deck and the ratings releases. The disconfirming consideration is that ERCOT paused data-centre interconnection studies in August 2026, which is where most of that new gas sits.",
+  "**(Moderate confidence)** We assess the naming pattern around the Amazon contract is a deliberate disclosure choice with a cost. Vistra announced a 1,200 MW twenty-year agreement in September 2025 describing the counterparty only as 'an investment grade counterparty', named Amazon five months later inside an earnings release, and has never issued a standalone press release for either that deal or the Moss Landing fire or the Helix investment. Basis: the Q3 2025 release, the FY2025 release and the full 2025 and 2026 newsroom archives. The effect is that the market learns about Vistra's largest commercial events from its filings rather than its communications, which is one plausible reading of why the equity has de-rated against a rising contracted book.",
+  "**(Low confidence)** We assess the Helix Digital Infrastructure commitment is the most consequential item in the Q2 2026 disclosures and the least explained. Vistra committed up to $1 billion as a founding investor in a KKR-managed open-ended fund alongside NVIDIA and the Kuwait Investment Authority, with the second $500 million tranche tied to 'commercial power supply milestones for our existing generation assets' — that is, the fund buying power from Vistra — and took the role of preferred power provider. It appears only inside the 10-Q and the earnings materials. Basis: the Q2 2026 10-Q and release. Whether this is a channel to demand or a capital commitment to someone else's data centres cannot yet be told apart.",
+  "**Collection gap:** Vistra discloses storage in MW only — no MWh figure for any asset appears in any filing, deck or sustainability report, so every megawatt-hour figure in circulation is third-party. It publishes no employee headcount as a single number, no board headshots, and no verified executive LinkedIn profiles. Neither the Moss Landing docket numbers nor a definitive journal citation for the San Jose State soil study could be confirmed. No full-year analyst consensus exists for FY2024 or FY2025. **Indicators to watch:** (1) the Cogentrix close, expected late 2026 — it is FERC-approved and unclosed, and takes the fleet to about 50 GW; (2) the first signed large-load agreement at a **gas** site, which would be the moment the brief's original premise becomes true; (3) a Moss Landing Phase III restart decision, or a decision not to, which settles whether 350 MW returns to the fleet; (4) whether the 2027 guidance issued in late 2026 folds in Meta and Cogentrix — both are currently excluded, so the first guide that includes them is not comparable with the last one; (5) the ERCOT large-load interconnection audit ordered on 3 August 2026 and whether it delays the Permian and Comanche Peak-adjacent load."
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-10",
+   "category": "financial",
+   "headline": "Q2 2026: Adjusted EBITDA up more than 30 percent to $1,767 million while GAAP EPS misses consensus by 53 percent",
+   "read": "The clearest case in the corpus of a hedged merchant whose reported earnings and operating earnings point in opposite directions. Guidance reaffirmed.",
+   "source": "https://www.utilitydive.com/news/vistra-texas-data-center-pause-comanche-amazon-earnings/827434/"
+  },
+  {
+   "date": "2026-06-24",
+   "category": "policy",
+   "headline": "Texas Energy Fund loan finalised for the 860 MW Permian Basin expansion in Ward County",
+   "read": "The programme's eighth finalised loan, in a fund that had deployed only $321 million of $7.2 billion by August 2025. Vistra took the investment decision in September 2025, nine months before the loan closed — the money did not make the project happen.",
+   "source": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-energy-fund-loan-for-860-mw-of-new-power-in-west-texas"
+  },
+  {
+   "date": "2026-06-24",
+   "category": "corporate",
+   "headline": "Revolving credit commitments increased from $3.44 billion to $5.50 billion and guarantors released",
+   "read": "The mechanical consequence of investment grade: the collateral securing the senior secured notes was released in full on 2 April 2026, and the notes now rank alongside the unsecured debt.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000019/vistra-20260630.htm"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "financial",
+   "headline": "Vistra achieves investment-grade credit ratings from S&P and Fitch",
+   "read": "S&P upgraded on 2 December 2025 and Fitch on 16 March 2026. For a merchant generator this is not a badge — it lowers the collateral it must post to hedge, which is working capital.",
+   "source": "https://investor.vistracorp.com/2026-03-17-Vistra-Achieves-Investment-Grade-Credit-Ratings-from-S-P-and-Fitch"
+  },
+  {
+   "date": "2026-03-05",
+   "category": "partnership",
+   "headline": "Residential battery aggregation programme expanded with Enphase Energy",
+   "read": "The demand-side complement to a utility-scale fleet, and the only part of the storage business that grew after Moss Landing.",
+   "source": "https://investor.vistracorp.com/2026-03-05-Vistra-Expands-Residential-Battery-Aggregation-Program-with-Enphase-Energy"
+  },
+  {
+   "date": "2026-02-26",
+   "category": "financial",
+   "headline": "FY2025: Ongoing Operations Adjusted EBITDA $5,912 million, about $112 million above the guidance midpoint",
+   "read": "A far thinner beat than FY2024's $856 million. Wedbush called the print 'the end of the easy money phase for the AI-utility trade'; the shares fell more than 5 percent pre-market.",
+   "source": "https://www.prnewswire.com/news-releases/vistra-reports-fourth-quarter-and-full-year-2025-results-302697962.html"
+  },
+  {
+   "date": "2026-01-09",
+   "category": "customer",
+   "headline": "Meta agreements for 2,609 MW of PJM nuclear capacity across Perry, Davis-Besse and 433 MW of uprates",
+   "read": "Grid-delivered, not co-located — the release is explicit that the electricity continues to go to the grid for all users. More than 15 percent of the contracted capacity is new capacity added to PJM.",
+   "source": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid"
+  },
+  {
+   "date": "2026-01-05",
+   "category": "ma",
+   "headline": "Cogentrix acquisition announced — 5,496 MW of gas for approximately $4.0 billion net",
+   "read": "Takes the pro-forma fleet to roughly 50,000 MW. FERC cleared it in August 2026 and it is expected to close late 2026; it is excluded from both 2026 guidance and the 2027 opportunity.",
+   "source": "https://investor.vistracorp.com/2026-01-05-Vistra-Adds-to-its-Industry-Leading-Generation-Portfolio-with-Acquisition-of-Cogentrix"
+  },
+  {
+   "date": "2025-12-18",
+   "category": "regulatory",
+   "headline": "FERC finds PJM's tariff unjust and unreasonable for co-located load; Vistra named among the generators that benefit",
+   "read": "Vistra then protested PJM's February 2026 compliance filing, arguing the proposals would produce 'long delays, unreasonable rates, and undue discrimination' — supportive of co-location in principle, opposed to PJM's implementation of it.",
+   "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+  },
+  {
+   "date": "2025-11-06",
+   "category": "financial",
+   "headline": "Q3 2025 results narrow 2025 guidance and initiate 2026 guidance of $6.8-$7.6 billion",
+   "read": "The same release disclosed a twenty-year, 1,200 MW power purchase agreement with 'an investment grade counterparty' — Amazon, though Vistra did not say so for another five months.",
+   "source": "https://investor.vistracorp.com/2025-11-06-Vistra-Reports-Third-Quarter-2025-Results,-Narrows-2025-Guidance,-and-Initiates-2026-Guidance"
+  },
+  {
+   "date": "2025-10-22",
+   "category": "ma",
+   "headline": "Acquisition of seven natural gas plants from Lotus Infrastructure completed",
+   "read": "About 2,600 MW for a $1.9 billion base price. Two of the acquired plants — Casco Bay and one other — were put up for sale eight months later.",
+   "source": "https://www.power-eng.com/gas/vistra-completes-acquisition-of-seven-gas-plants-totaling-2600-mw/"
+  },
+  {
+   "date": "2025-09-29",
+   "category": "project",
+   "headline": "Final investment decision on new gas-fuelled dispatchable units in the Permian Basin",
+   "read": "Two units totalling 860 MW at Ward County, online in 2028, more than tripling the site's capacity. Taken nine months before the state loan closed.",
+   "source": "https://investor.vistracorp.com/2025-09-29-Vistra-Announces-Plans-to-Build-New-Gas-Fueled-Dispatchable-Power-Units-in-the-Permian-Basin"
+  },
+  {
+   "date": "2025-09-30",
+   "category": "customer",
+   "headline": "Twenty-year power purchase agreement for 1,200 MW from Comanche Peak",
+   "read": "Deliveries from the fourth quarter of 2027 ramping to full capacity by 2032, with options to extend up to twenty more years. The customer plans one-to-one backup generation and options to explore uprates and small modular reactors.",
+   "source": "https://www.power-eng.com/nuclear/vistra-secures-long-term-nuclear-ppa-from-comanche-peak-nuclear-plant/"
+  },
+  {
+   "date": "2025-07-07",
+   "category": "regulatory",
+   "headline": "Perry receives approval to operate through 2046 — the last of the six reactors to be renewed",
+   "read": "Every Vistra reactor is now licensed for sixty years, which is what makes a twenty-year power purchase agreement financeable.",
+   "source": "https://investor.vistracorp.com/2025-07-07-Vistra-Receives-Approval-to-Extend-Operation-of-Perry-Nuclear-Plant-Through-2046"
+  },
+  {
+   "date": "2025-05-15",
+   "category": "ma",
+   "headline": "Agreement to acquire natural gas assets from Lotus Infrastructure",
+   "read": "The first of the two gas acquisitions that reshaped the fleet inside eighteen months.",
+   "source": "https://investor.vistracorp.com/2025-05-15-Vistra-to-Acquire-Natural-Gas-Assets,-Building-on-Industry-Leading-Generation-Portfolio-to-Better-Serve-Customers"
+  },
+  {
+   "date": "2025-03-21",
+   "category": "incident",
+   "headline": "Approximately $400 million written off at Moss Landing Phase I",
+   "read": "Booked as depreciation expense rather than impairment, and moved to the Asset Closure segment. Phase II followed in the fourth quarter with a $155 million impairment.",
+   "source": "https://www.energy-storage.news/vistra-to-write-off-us400-million-from-moss-landing-bess/"
+  },
+  {
+   "date": "2025-02-04",
+   "category": "legal",
+   "headline": "Four Monterey County residents sue Vistra, Dynegy Operating Company, LG Energy Solution and PG&E over the Moss Landing fire",
+   "read": "A second suit followed on 27 February on behalf of a nearby restaurant. Both name LG Energy Solution as the battery supplier at Phase I and allege a failed water suppression system and an indoor NMC installation.",
+   "source": "https://www.montereycountynow.com/blogs/news_blog/four-local-residents-sue-vistra-and-pg-e-for-damages-related-to-vistras-moss-landing/article_9d19c8c4-e5b2-11ef-be03-8330caee1b3c.html"
+  },
+  {
+   "date": "2025-01-17",
+   "category": "incident",
+   "headline": "Fire at the 300 MW Moss Landing Phase I battery facility",
+   "read": "About 1,200 residents evacuated for roughly a day; no injuries. The array sat inside the retired power plant's turbine building — one of fewer than one percent of US storage facilities housing batteries indoors.",
+   "source": "https://www.utilitydive.com/news/moss-landing-battery-fire-vistra/737837/"
+  },
+  {
+   "date": "2024-07-30",
+   "category": "regulatory",
+   "headline": "Comanche Peak receives approval to operate through 2053",
+   "read": "The licence renewal that made the Amazon agreement possible a year later.",
+   "source": "https://investor.vistracorp.com/2024-07-30-Vistra-Receives-Approval-to-Operate-Comanche-Peak-Nuclear-Plant-Through-2053"
+  },
+  {
+   "date": "2024-03-05",
+   "category": "ma",
+   "headline": "Energy Harbor acquisition completes, adding 4,048 MW of PJM nuclear and a retail book",
+   "read": "The transaction that made Vistra a two-market nuclear owner. The 15 percent Vistra Vision minority interest sold to Nuveen and Avenue was bought back for about $3.2 billion, closing 31 December 2024, with instalments to Nuveen running through 2026.",
+   "source": "https://world-nuclear-news.org/articles/vistra-completes-energy-harbor-acquisition"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "2,609 MW over 20 years",
+   "via": "PJM nuclear output and uprates",
+   "note": "Meta buys 2,609 MW of carbon-free power and capacity from Vistra's PJM nuclear plants under twenty-year agreements announced 9 January 2026.",
+   "context": "The package has two parts. The first is operating capacity: 1,268 MW from Perry and 908 MW from Davis-Besse, with delivery of part of it beginning in late 2026 and full delivery by the end of 2027. The second is new capacity: 213 MW of uprate energy and capacity at Perry, 80 MW at Davis-Besse and 140 MW at Beaver Valley, with part delivering by 2031 and all of it by the end of 2034. Vistra calls these the largest nuclear uprates supported by a corporate customer in the United States and says the agreements support subsequent twenty-year licence renewals at all four PJM units.\n\nCrucially, this is not co-location. Vistra's release states that 'the electricity generated at the plants will continue to go to the grid for all electricity users' and that more than 15 percent of the contracted capacity is new capacity added to PJM — the direct answer to the additionality objection that co-located deals attract. Vistra sizes the accretion at roughly 13 to 17 percent of Adjusted Free Cash Flow before growth at full delivery, and excludes it from both 2026 guidance and the 2027 midpoint opportunity. Meta's own dossier records the arrangement inside a January 2026 package of up to 6.6 GW alongside TerraPower and Oklo.",
+   "source": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "1,200 MW over 20 years",
+   "via": "Comanche Peak nuclear output",
+   "note": "Amazon buys 1,200 MW of carbon-free power from Comanche Peak under a twenty-year agreement, and separately buys the output of the 200 MW Oak Hill solar plant.",
+   "context": "Vistra entered a twenty-year power purchase agreement in September 2025, with options to extend for up to twenty more years, to supply Amazon Web Services with 1,200 MW from the Comanche Peak nuclear plant in Glen Rose, Texas. Deliveries are expected to begin in the fourth quarter of 2027 and ramp to full capacity by 2032. Vistra discloses that the customer plans to bring one-to-one backup generation and that the parties have options to explore uprates and small modular reactors.\n\nThe naming is itself a fact worth recording. At the third-quarter 2025 results Vistra described the counterparty only as 'an investment grade counterparty', and did not name Amazon until the February 2026 earnings release and Form 10-K. No standalone press release for the agreement exists in Vistra's newsroom archive. Amazon separately buys the output of Vistra's 200 MW Oak Hill solar facility in ERCOT.",
+   "source": "https://www.power-eng.com/nuclear/vistra-secures-long-term-nuclear-ppa-from-comanche-peak-nuclear-plant/"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "since": "2025",
+   "scale": "405 MW solar",
+   "via": "Pulaski solar plant",
+   "note": "Microsoft buys the output of Vistra's 405 MW Pulaski solar facility in Illinois under a power purchase agreement.",
+   "context": "Vistra's third-quarter 2025 results release states that it is 'progressing with construction in support of a power purchase agreement at our Pulaski 405 MW new solar facility with Microsoft in Illinois (MISO)'. The plant is in Pulaski County and was in construction with an in-service date of 2026.\n\nThis is a renewable, not nuclear, agreement and belongs in a different category from the Amazon and Meta contracts: a hyperscaler buying the output of a new solar plant is additional generation by construction, where buying an operating reactor's output is not. It is the only Microsoft relationship in Vistra's record; Microsoft's nuclear counterparty is Constellation.",
+   "source": "https://investor.vistracorp.com/2025-11-06-Vistra-Reports-Third-Quarter-2025-Results,-Narrows-2025-Guidance,-and-Initiates-2026-Guidance"
+  },
+  {
+   "slug": "lg-energy-solution",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2020",
+   "scale": "400 MW across two phases",
+   "via": "Moss Landing Phases I and II",
+   "note": "Supplied the batteries for Moss Landing Phases I and II, and is a named defendant in both suits arising from the January 2025 fire.",
+   "context": "Independent project records and trade coverage identify LG Energy Solution as the battery supplier for both the 300 MW Phase I system, which burned in January 2025, and the separate 100 MW Phase II building commissioned in 2021. Fluence was the engineering contractor for Phase I and Burns & McDonnell built Phase II.\n\nLG Energy Solution is a named defendant alongside Vistra, Dynegy Operating Company and PG&E in the Alameda County suit filed on 4 February 2026 and in the federal suit filed later that month, where plaintiffs allege 'faulty and dangerous NMC batteries produced by LG' and an indoor installation using a chemistry the industry has been moving away from. The supplier for Phase III, the 350 MW outdoor system that did not burn, is not stated in any source located and should not be assumed to be the same.",
+   "source": "https://www.nsenergybusiness.com/projects/moss-landing/"
+  },
+  {
+   "slug": "burns-mcdonnell",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2021",
+   "scale": "100 MW / 400 MWh Phase II",
+   "via": "Moss Landing Phase II",
+   "note": "Engineering, procurement and construction contractor for the 100 MW Moss Landing Phase II battery system.",
+   "context": "Project records name Burns & McDonnell as the EPC contractor for Moss Landing Phase II, a stand-alone 100 MW building commissioned in 2021 — physically separate from the Phase I array inside the turbine building that burned in January 2025.\n\nBurns & McDonnell's own dossier records a different engagement at the same site: the 350 MW Phase III expansion, which it lists among five ENR regional Best Project awards for 2024. Phase II was moved to Vistra's Asset Closure segment in the fourth quarter of 2025 with a $155 million impairment and will not return to service.",
+   "source": "https://www.nsenergybusiness.com/projects/moss-landing/"
+  },
+  {
+   "slug": "fluence",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2020",
+   "via": "Moss Landing Phase I",
+   "note": "Engineering contractor for the 300 MW Moss Landing Phase I system, with Luminant handling construction.",
+   "context": "Project records for Moss Landing name Fluence as the engineering contractor for Phase I, the 300 MW array installed inside the retired power plant's turbine building, with construction by Vistra's own Luminant organisation. The system entered service in 2020 and was the largest battery storage facility in the world at the time.\n\nThe engagement ended with the asset: Phase I burned on 16 January 2025, was written off at approximately $400 million in the first quarter of 2025 and moved to the Asset Closure segment. Fluence is not named as a defendant in either of the two suits filed over the fire; the battery supplier, LG Energy Solution, is.",
+   "source": "https://www.nsenergybusiness.com/projects/moss-landing/"
+  },
+  {
+   "slug": "flexgen",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2018",
+   "scale": "10 MW / 42 MWh",
+   "via": "Upton 2 storage system",
+   "note": "Designed and integrated the 10 MW / 42 MWh battery system at Vistra's 180 MW Upton 2 solar plant in Upton County, Texas.",
+   "context": "Vistra selected FlexGen to design and integrate the storage system co-located with the Upton 2 solar facility, reported at the time as the largest energy storage project in Texas. It is a small system by current standards and predates the Moss Landing build by two years.\n\nThe relationship is recorded here because it is the only named battery integrator in Vistra's public record. No integrator is named for Moss Landing Phase III, for the 270 MW Texas fleet, or for the additional California and Illinois storage the FY2025 10-K says the company plans to develop.",
+   "source": "https://www.power-eng.com/energy-storage/long-duration-energy-storage/vistra-flexgen-partner-on-largest-energy-storage-project-in-texas/"
+  },
+  {
+   "slug": "oncor",
+   "type": "other",
+   "status": "active",
+   "since": "2025",
+   "scale": "25% of Oncor's 2025 operating revenues",
+   "note": "Vistra's retail subsidiaries are the largest single customer group of Oncor, the Texas wires utility that delivers their power.",
+   "context": "Oncor's Form 10-K for 2025 states that retailer subsidiaries of Vistra and NRG Energy are its two largest customers, at 25 percent and 21 percent of total operating revenues respectively, with no other customer exceeding 10 percent. In a restructured market the retailer, not the household, is the wires utility's customer: the retailer buys delivery service and passes the charge through on the bill.\n\nThe relationship is one-directional and non-commercial in the ordinary sense — Vistra does not choose Oncor and Oncor does not choose Vistra — but it is the cleanest available measure of how much of Texas's largest delivery network is carrying Vistra's load, and it is the reason ERCOT's August 2026 pause on data-centre interconnection studies reaches Vistra through two channels at once.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+  },
+  {
+   "slug": "talen-energy",
+   "type": "competitor",
+   "status": "active",
+   "scale": "13.9 GW vs 13.1 GW of PJM capacity",
+   "note": "The PJM capacity owner immediately below Vistra in the market monitor's ranking, and the peer whose Amazon deal is treated as the benchmark for nuclear-to-data-centre contracting.",
+   "context": "PJM's Independent Market Monitor, reported by Utility Dive in April 2026, ranks the region's capacity owners as Dominion 21.9 GW, Constellation 20.3 GW, Vistra 13.9 GW and Talen approximately 13.1 GW. Wedbush's note on Vistra's fourth-quarter 2025 results calls Talen 'the gold standard for the pure-play nuclear-to-data-center trade' — the comparison against which Vistra's Comanche Peak agreement is judged.\n\nThe two are also allies in the regulatory argument. Vistra filed jointly with Constellation in July 2024 in support of Talen's amended Susquehanna interconnection service agreement, and both protested PJM's February 2026 co-location compliance filing. The structural difference is the retail book: Talen sells its output to counterparties, Vistra can sell it to its own customers.",
+   "source": "https://www.utilitydive.com/news/pjm-data-center-colocation-ferc-vistra-constellation/815941/"
+  },
+  {
+   "slug": "nrg-energy",
+   "type": "competitor",
+   "status": "active",
+   "scale": "~50 GW pro forma vs ~25 GW",
+   "note": "The other integrated merchant with a large retail book, and the peer capital rotated into after Vistra's fourth-quarter 2025 print.",
+   "context": "Wedbush's February 2026 note reports capital rotating out of Vistra and into NRG after the Q4 2025 results, citing NRG's revenue surprise, bullish 2026 guidance, diversified retail footprint and LS Power asset integration, at a materially lower multiple. The two are the sector's only integrated merchants of scale: both own generation and a multi-million-customer retail book, and both are named in the same four-company cohort as Talen and Constellation in coverage of hyperscaler power contracting.\n\nThe fleets are not comparable in size — Vistra's is roughly 50,000 MW pro forma for Cogentrix against NRG's roughly 25 GW after LS Power — but the retail books are: about five million customers for Vistra against about eight million for NRG including smart-home subscribers. Their retail brands compete directly in Texas, where NRG's Reliant and Vistra's TXU Energy are the two largest residential providers.",
+   "source": "https://investor.wedbush.com/wedbush/article/marketminute-2026-2-27-vistra-corp-vst-q4-earnings-analysis-reality-check-for-the-ai-power-trade"
+  },
+  {
+   "slug": "constellation-energy",
+   "type": "competitor",
+   "status": "active",
+   "scale": "20.3 GW vs 13.9 GW of PJM capacity",
+   "note": "The largest competitive nuclear owner, ranked above Vistra in PJM capacity, and a co-advocate for co-location at FERC.",
+   "context": "Utility Dive names Constellation alongside Vistra and PSEG as generators that benefit from FERC's 18 December 2025 co-location order, and separately reports that Constellation, Vistra and Calpine support co-location while AEP and Exelon sought to stop non-utility generators serving co-located load. The two companies filed jointly in the Susquehanna docket in July 2024.\n\nCommercially they compete for the same contracts with the same product. Constellation has Microsoft at Three Mile Island and Meta at Clinton; Vistra has Amazon at Comanche Peak and Meta across three PJM sites. Wedbush frames Constellation as the valuation comparator, trading at a higher multiple while pursuing the Calpine acquisition.",
+   "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "competitor",
+   "status": "historical",
+   "since": "2023",
+   "scale": "2,194 MW vs 750 MW brought online in 2023",
+   "note": "Ranked first, ahead of Vistra at second, in the only independent storage ranking located.",
+   "context": "Enverus's table of the top ten storage developers in North America by megawatts brought online during 2023 puts NextEra Energy Resources first at 2,194 MW and Vistra second at 750 MW, followed by Terra-Gen at 671 MW. This is a one-year flow measure rather than a stock of owned capacity, and it is the closest thing to an owner ranking that could be located — Wood Mackenzie and ACP's US Energy Storage Monitor and the EIA both decline to publish company rankings at this level.\n\nThe ranking matters because it is the evidence against the widely repeated claim that Vistra is the largest merchant battery owner in the country. Vistra does not make that claim itself; its own historical language was 'second-largest energy storage capacity in the country', on a 1,020 MW fleet that has since fallen to 624 MW.",
+   "source": "https://www.enverus.com/blog/top-10-storage-developers-in-north-america-by-megawatts-brought-online-in-2023/"
+  },
+  {
+   "slug": "terra-gen",
+   "type": "competitor",
+   "status": "historical",
+   "since": "2023",
+   "scale": "671 MW vs 750 MW brought online in 2023",
+   "note": "Ranked third, immediately below Vistra, in the Enverus 2023 storage-developer ranking.",
+   "context": "The same Enverus table that places Vistra second on megawatts brought online during 2023 places Terra-Gen third at 671 MW — within a hundred megawatts of Vistra on a measure of one year's completions. The rest of the top ten is CIM Group, Plus Power, Clearway, Intersect Power, Key Capture Energy, NV Energy and First Solar.\n\nThis is a ranking co-appearance rather than a commercial relationship, and it is recorded as such. Its analytical value is the shape of the field: the storage owners nearest Vistra by annual completions are pure-play developers with no generation fleet and no retail book, which is why a single project loss changed Vistra's storage standing so sharply and would not have changed theirs.",
+   "source": "https://www.enverus.com/blog/top-10-storage-developers-in-north-america-by-megawatts-brought-online-in-2023/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Texas Senate Bill 6 and the PUCT large-load rulemaking (Project 58317)",
+   "status": "in-effect",
+   "effectiveDate": "2025-06",
+   "exposure": "SB 6 requires the Public Utility Commission of Texas to set interconnection standards wherever total demand at a single site exceeds 75 MW, and directs the commission and ERCOT to require protocols allowing large loads interconnected after 31 December 2025 to be curtailed in emergencies, with the enabling equipment installed before interconnection. Vistra's own summary is that the statute 'requires certain co-located large loads and some front-of-the-meter large loads to provide load flexibility during emergencies' without interfering with price formation. On 3 August 2026 Texas paused data-centre grid interconnections pending an audit of the queue, which reaches every ERCOT large-load arrangement Vistra is negotiating.",
+   "mitigation": "Vistra publicly supports the interconnection-queue audit. Its one signed ERCOT large-load contract, the Amazon agreement at Comanche Peak, is a grid-delivered power purchase agreement rather than a co-location, and the customer plans its own one-to-one backup generation.",
+   "source": "https://www.utilitydive.com/news/vistra-texas-data-center-pause-comanche-amazon-earnings/827434/"
+  },
+  {
+   "regime": "FERC co-located load rulemaking in PJM (dockets EL25-49, EL26-67)",
+   "status": "in-effect",
+   "effectiveDate": "2025-12-18",
+   "exposure": "FERC's December 2025 order found PJM's tariff unjust and unreasonable for co-located load and directed three new transmission services plus revised behind-the-meter generation rules, with co-located loads paying for some ancillary services on a gross basis. Vistra's own read in the 10-K is favourable: 'Overall, we believe these new rules will remove regulatory uncertainty for co-location arrangements.' Its filings tell a more contested story — Vistra protested PJM's February 2026 compliance package, arguing it would produce 'long delays, unreasonable rates, and undue discrimination'.",
+   "mitigation": "None of Vistra's signed large-load agreements is a co-location: the Meta release states expressly that the electricity continues to flow to the grid for all users, and the Amazon agreement is a grid-delivered PPA. The company therefore benefits from a clearer rulebook without depending on one.",
+   "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+  },
+  {
+   "regime": "Nuclear production tax credit (section 45U)",
+   "status": "in-effect",
+   "effectiveDate": "2024-01-01",
+   "exposure": "Vistra recognised transferable nuclear production tax credit revenue of $545 million in FY2024 and $220 million in FY2025, the decline reflecting higher market prices rather than a change in the credit. Its 2026 guidance reconciliation explicitly 'excludes any potential benefit from the nuclear production tax credit', so the credit is treated as upside rather than budgeted revenue.",
+   "mitigation": "The Amazon and Meta agreements convert a large share of nuclear output from market-price exposure — which is what the credit backstops — into twenty-year contracted revenue, reducing reliance on the credit in the same way Talen describes for Susquehanna.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000006/vistra-20251231.htm"
+  },
+  {
+   "regime": "Texas Energy Fund in-ERCOT generation loan programme",
+   "status": "in-effect",
+   "effectiveDate": "2023",
+   "exposure": "Vistra was awarded a Texas Energy Fund loan for the 860 MW Permian Basin expansion in Ward County, announced by the governor on 24 June 2026 as the programme's eighth finalised loan. The programme carries a $7.2 billion authorisation at 3 percent over twenty years for projects adding at least 100 MW of dispatchable capacity, and had deployed only $321 million across two projects as of August 2025 against 72 initial applications seeking more than $24 billion.",
+   "mitigation": "Vistra took the final investment decision on the project in September 2025, nine months before the loan was finalised — the subsidy improved the return but did not create the project.",
+   "source": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-energy-fund-loan-for-860-mw-of-new-power-in-west-texas"
+  },
+  {
+   "regime": "EPA administrative settlement agreement for the Moss Landing site",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-17",
+   "exposure": "Vistra entered an administrative settlement agreement with the EPA in July 2025 covering removal and disposal at the burned Moss Landing Phase I facility, where roughly 55 percent of about 100,000 lithium-ion batteries were damaged. The estimate in the FY2025 10-K was approximately $110 million, of which $49 million had been incurred; the Q2 2026 10-Q raised it to approximately $175 million on an extended timeline, with $90 million incurred through 30 June 2026 and $85 million accrued.",
+   "mitigation": "Vistra has posted $110 million of letters of credit to support the agreement and has collected the full $500 million of combined business-interruption and property insurance. More than 34,000 intact modules have been removed; demolition is expected to complete in late 2026.",
+   "source": "https://www.epa.gov/ca/moss-landing-vistra-battery-fire"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Jim Burke",
+   "title": "President and Chief Executive Officer",
+   "photo": "images/execs/vistra-burke.jpg",
+   "background": [
+    "President and Chief Executive Officer — Vistra (August 2022-); director since 2022",
+    "President and Chief Financial Officer — Vistra (2020-2022); EVP and Chief Operating Officer (2016-2020)",
+    "Executive Vice President — Energy Future Holdings (from 2013)",
+    "President and Chief Executive Officer — TXU Energy (2005-2016); joined as SVP of residential markets in 2004",
+    "President and Chief Operating Officer — Gexa Energy; VP residential marketing then SVP consumer operations — Reliant Energy; began at Deloitte Consulting",
+    "Vice-Chair of the Nuclear Energy Institute and a board member of INPO; BA economics and MBA, Tulane; CPA (non-practising) and CFA"
+   ]
+  },
+  {
+   "name": "Kris Moldovan",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "photo": "images/execs/vistra-moldovan.jpg",
+   "background": [
+    "Executive Vice President and Chief Financial Officer — Vistra (August 2022-)",
+    "Senior Vice President and Treasurer — Vistra (2017-2022); Assistant Treasurer (2010-2017)",
+    "Joined Vistra's predecessors in 2006 as Senior Counsel",
+    "Attorney — Gibson, Dunn & Crutcher and Wildman Harrold",
+    "BS engineering, University of Illinois; JD, Duke; graduate finance certificate, SMU Cox"
+   ]
+  },
+  {
+   "name": "Stacey Doré",
+   "title": "Chief Strategy and Sustainability Officer, Executive Vice President of Public Affairs",
+   "photo": "images/execs/vistra-dore.png",
+   "background": [
+    "Chief Strategy and Sustainability Officer and EVP of Public Affairs — Vistra",
+    "President and Chief Executive Officer — Hunt Utility Services and Sharyland Utilities (2019-2021)",
+    "Senior Vice President and General Counsel — InfraREIT",
+    "EVP, General Counsel and co-restructuring counsel — Vistra's predecessors, joined 2008",
+    "Director — The Williams Companies (January 2021 to April 2026); began at Vinson & Elkins in 1997; JD, Harvard Law School"
+   ]
+  },
+  {
+   "name": "Scott A. Hudson",
+   "title": "President of Vistra Retail",
+   "photo": "images/execs/vistra-hudson.jpg",
+   "background": [
+    "President of Vistra Retail and president of TXU Energy",
+    "Chief Operating Officer — TXU Energy; joined in 2011",
+    "Senior roles at MBNA America, ChoicePoint and LexisNexis",
+    "Began as a commercial lawyer at Troutman Sanders"
+   ]
+  },
+  {
+   "name": "Stephanie Zapata Moore",
+   "title": "Executive Vice President, General Counsel and Chief Compliance Officer",
+   "photo": "images/execs/vistra-zapata-moore.jpg",
+   "background": [
+    "Executive Vice President and General Counsel — Vistra; Chief Compliance Officer per the 2026 proxy",
+    "Vice President and General Counsel — Luminant"
+   ]
+  },
+  {
+   "name": "Amanda DonCarlos",
+   "title": "Senior Vice President and Chief Human Resources Officer",
+   "photo": "images/execs/vistra-doncarlos.jpg",
+   "background": [
+    "Senior Vice President and Chief Human Resources Officer — Vistra",
+    "Vice President of Human Resources — Vistra",
+    "Joined Vistra's predecessors in 2010 on the legal team as managing counsel for labour and employment"
+   ]
+  },
+  {
+   "name": "Tom Farrah",
+   "title": "Senior Vice President and Chief Information Officer",
+   "photo": "images/execs/vistra-farrah.jpg",
+   "background": [
+    "Senior Vice President and Chief Information Officer — Vistra (joined 2020)",
+    "Senior Vice President of business transformation — Keurig Dr Pepper; SVP and CIO — Dr Pepper Snapple Group",
+    "Senior information-technology roles at General Motors, Pfizer and EDS"
+   ]
+  },
+  {
+   "name": "Sano Blocker",
+   "title": "Senior Vice President of Government Affairs",
+   "photo": "images/execs/vistra-blocker.jpg",
+   "background": [
+    "Senior Vice President of Government Affairs — Vistra",
+    "Senior Vice President of state and local political affairs — Energy Future Holdings",
+    "Executive director for global government affairs — EDS (to 2008); BA, Texas Tech University"
+   ]
+  },
+  {
+   "name": "Scott B. Helm",
+   "title": "Non-executive Chairman of the Board",
+   "background": [
+    "Non-executive Chairman — Vistra; director since 2017",
+    "Founding partner — Energy Capital Partners",
+    "Executive Vice President and Chief Financial Officer — Orion Power Holdings",
+    "Began his career at Goldman, Sachs & Co. in fixed income and then investment banking",
+    "BSBA, Washington University in St. Louis"
+   ]
+  },
+  {
+   "name": "John W. (Bill) Pitesa",
+   "title": "Independent Director; Chair, Generation and Safety Oversight Committee",
+   "background": [
+    "Director — Vistra (2024-); chairs the Generation and Safety Oversight Committee",
+    "Chief Nuclear Officer — Nuclear Energy Institute"
+   ]
+  },
+  {
+   "name": "Hilary E. Ackermann",
+   "title": "Independent Director; Chair, Sustainability and Risk Committee",
+   "background": [
+    "Director — Vistra (2018-); chairs the Sustainability and Risk Committee",
+    "Chief Risk Officer — Goldman Sachs Bank USA",
+    "Director — Eco Wave Power Global AB"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "24/7 Wall St. — Vistra's 2026 decline and a $300 price target from Guggenheim",
+   "url": "https://247wallst.com/investing/2026/08/31/vistra-wont-stop-declining-in-2026-why-does-this-prominent-wall-street-firm-expect-120-returns/",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Utility Dive — Vistra on the Texas data-centre pause, Comanche Peak and Amazon (Q2 2026 earnings)",
+   "url": "https://www.utilitydive.com/news/vistra-texas-data-center-pause-comanche-amazon-earnings/827434/",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "AllInvestView — Vistra Q2 2026 earnings summary and consensus",
+   "url": "https://www.allinvestview.com/earnings/VST/q2-2026/",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Vistra — Q2 2026 results release (Form 8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000017/vistra-20260630xearningsre.htm",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Vistra — Form 10-Q for the quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000019/vistra-20260630.htm",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Vistra — Q2 2026 results presentation",
+   "url": "https://investor.vistracorp.com/image/Q2_2026_Results_Presentation_vFinal.pdf",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Vistra — dividend declaration on common and Series A preferred stock",
+   "url": "https://investor.vistracorp.com/2026-07-29-Vistra-Declares-Dividend-on-Common-Stock-and-Series-A-Preferred-Stock",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Yahoo Finance — what to expect from Vistra's Q2 2026 earnings",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/vistras-q2-2026-earnings-expect-125055377.html",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "PJM — 2028/2029 Base Residual Auction results report",
+   "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "RTO Insider — PJM capacity auction clears at the maximum price and falls short of the reliability requirement",
+   "url": "https://www.rtoinsider.com/121911-pjm-capacity-auction-clears-max-price-falls-short-reliability-requirement/",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Office of the Governor of Texas — Texas Energy Fund loan for 860 MW of new power in West Texas",
+   "url": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-energy-fund-loan-for-860-mw-of-new-power-in-west-texas",
+   "date": "2026-06-24"
+  },
+  {
+   "label": "Vistra — Q1 2026 results release",
+   "url": "https://investor.vistracorp.com/2026-05-07-Vistra-Reports-First-Quarter-2026-Results",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "Vistra — Form 10-Q for the quarter ended 31 March 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000014/vistra-20260331.htm",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "Vistra — 2026 proxy statement (DEF 14A)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000162828026019029/vistra-20260318.htm",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "Vistra — investment-grade credit ratings from S&P and Fitch",
+   "url": "https://investor.vistracorp.com/2026-03-17-Vistra-Achieves-Investment-Grade-Credit-Ratings-from-S-P-and-Fitch",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "Vistra — residential battery aggregation programme expanded with Enphase Energy",
+   "url": "https://investor.vistracorp.com/2026-03-05-Vistra-Expands-Residential-Battery-Aggregation-Program-with-Enphase-Energy",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "Wedbush — Vistra Q4 2025 earnings analysis: a reality check for the AI power trade",
+   "url": "https://investor.wedbush.com/wedbush/article/marketminute-2026-2-27-vistra-corp-vst-q4-earnings-analysis-reality-check-for-the-ai-power-trade",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "Vistra — Form 10-K for the year ended 31 December 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000006/vistra-20251231.htm",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "PR Newswire — Vistra reports fourth quarter and full year 2025 results",
+   "url": "https://www.prnewswire.com/news-releases/vistra-reports-fourth-quarter-and-full-year-2025-results-302697962.html",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Vistra — Q4 2025 results presentation",
+   "url": "https://investor.vistracorp.com/image/2025_Q4_Results_Presentation_vFINAL.pdf",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Lookout Santa Cruz — independent study reveals heavy metals near Elkhorn Slough after the Moss Landing fire",
+   "url": "https://lookout.co/independent-study-reveals-heavy-metals-near-elkhorn-slough-after-moss-landing-fire/story",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "American Nuclear Society — the Meta-Vistra deal, a closer look",
+   "url": "https://www.ans.org/news/article-7668/the-metavistra-deal-a-closer-look/",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "Utility Dive — Meta's nuclear package with Oklo, Vistra and TerraPower",
+   "url": "https://www.utilitydive.com/news/meta-nuclear-deal-oklo-vistra-terrapower-ai-data-centers/809215/",
+   "date": "2026-01-12"
+  },
+  {
+   "label": "Power Engineering — Vistra and Meta ink PPAs for 2.6 GW of nuclear power in PJM",
+   "url": "https://www.power-eng.com/nuclear/vistra-and-meta-ink-ppa-for-2-6-gw-of-nuclear-power-in-pjm-region/",
+   "date": "2026-01-09"
+  },
+  {
+   "label": "Vistra — Vistra and Meta announce agreements to support PJM nuclear plants and add new nuclear generation",
+   "url": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid",
+   "date": "2026-01-09"
+  },
+  {
+   "label": "World Nuclear News — power purchase agreements support extended operations at Vistra plants",
+   "url": "https://world-nuclear-news.org/articles/ppas-support-extended-operations-at-vistra-plants",
+   "date": "2026-01-12"
+  },
+  {
+   "label": "Vistra — acquisition of Cogentrix announced",
+   "url": "https://investor.vistracorp.com/2026-01-05-Vistra-Adds-to-its-Industry-Leading-Generation-Portfolio-with-Acquisition-of-Cogentrix",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "POWER Magazine — Vistra to bolster its gas fleet by 5.5 GW with a $4 billion Cogentrix acquisition",
+   "url": "https://www.powermag.com/vistra-to-bolster-gas-fired-fleet-by-5-5-gw-with-4b-cogentrix-acquisition/",
+   "date": "2026-01-06"
+  },
+  {
+   "label": "Utility Dive — Vistra, Cogentrix and the natural-gas play for data centres",
+   "url": "https://www.utilitydive.com/news/vistra-cogentrix-natural-gas-energy-deal-data-centers/808854/",
+   "date": "2026-01-06"
+  },
+  {
+   "label": "KQED — Monterey County battery fire linked to a surge in heavy metals in nature-reserve soils",
+   "url": "https://www.kqed.org/news/12024233/monterey-county-battery-fire-linked-surge-heavy-metals-nature-reserves-soil",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "American Clean Power — US Energy Storage Monitor Q3 2025 with Wood Mackenzie",
+   "url": "https://cleanpower.org/news/us-energy-storage-monitor-q3-2025-woodmackenzie-acp/",
+   "date": "2025-12-16"
+  },
+  {
+   "label": "Utility Dive — FERC orders PJM to write co-location rules; Vistra named among the beneficiaries",
+   "url": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "PJM — 2027/2028 Base Residual Auction report",
+   "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2027-2028/2027-2028-bra-report.pdf",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Vistra — Q3 2025 results, narrowed 2025 guidance and initial 2026 guidance",
+   "url": "https://investor.vistracorp.com/2025-11-06-Vistra-Reports-Third-Quarter-2025-Results,-Narrows-2025-Guidance,-and-Initiates-2026-Guidance",
+   "date": "2025-11-06"
+  },
+  {
+   "label": "Vistra — completion of the acquisition of seven natural gas plants",
+   "url": "https://investor.vistracorp.com/2025-10-22-Vistra-Completes-Acquisition-of-Seven-Natural-Gas-Plants,-Expanding-Diverse-Generation-Fleet",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "Power Engineering — Vistra completes the acquisition of seven gas plants totalling 2,600 MW",
+   "url": "https://www.power-eng.com/gas/vistra-completes-acquisition-of-seven-gas-plants-totaling-2600-mw/",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "Power Engineering — Vistra secures a long-term nuclear PPA from Comanche Peak",
+   "url": "https://www.power-eng.com/nuclear/vistra-secures-long-term-nuclear-ppa-from-comanche-peak-nuclear-plant/",
+   "date": "2025-09-30"
+  },
+  {
+   "label": "Vistra — plans to build new gas-fuelled dispatchable units in the Permian Basin",
+   "url": "https://investor.vistracorp.com/2025-09-29-Vistra-Announces-Plans-to-Build-New-Gas-Fueled-Dispatchable-Power-Units-in-the-Permian-Basin",
+   "date": "2025-09-29"
+  },
+  {
+   "label": "Utility Dive — Vistra's Permian Basin natural gas power plant",
+   "url": "https://www.utilitydive.com/news/vistra-corp-natural-gas-permian-basin-power-plant/761358/",
+   "date": "2025-09-30"
+  },
+  {
+   "label": "Texas Tribune — the Texas Energy Fund's slow deployment of gas-plant loans",
+   "url": "https://www.texastribune.org/2025/08/26/texas-energy-fund-natural-gas-power-plants/",
+   "date": "2025-08-26"
+  },
+  {
+   "label": "Vistra — approval to extend operation of the Perry nuclear plant through 2046",
+   "url": "https://investor.vistracorp.com/2025-07-07-Vistra-Receives-Approval-to-Extend-Operation-of-Perry-Nuclear-Plant-Through-2046",
+   "date": "2025-07-07"
+  },
+  {
+   "label": "PJM — 2026/2027 Base Residual Auction report",
+   "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2026-2027/2026-2027-bra-report.pdf",
+   "date": "2025-07-22"
+  },
+  {
+   "label": "Vistra — agreement to acquire natural gas assets from Lotus Infrastructure",
+   "url": "https://investor.vistracorp.com/2025-05-15-Vistra-to-Acquire-Natural-Gas-Assets,-Building-on-Industry-Leading-Generation-Portfolio-to-Better-Serve-Customers",
+   "date": "2025-05-15"
+  },
+  {
+   "label": "Energy-Storage.news — Vistra to write off $400 million from the Moss Landing battery system",
+   "url": "https://www.energy-storage.news/vistra-to-write-off-us400-million-from-moss-landing-bess/",
+   "date": "2025-03-21"
+  },
+  {
+   "label": "Vistra — Form 10-K for the year ended 31 December 2024",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281925000013/vistra-20241231.htm",
+   "date": "2025-02-28"
+  },
+  {
+   "label": "PR Newswire — Vistra reports fourth quarter and full year 2024 results",
+   "url": "https://www.prnewswire.com/news-releases/vistra-reports-fourth-quarter-and-full-year-2024-results-302387102.html",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "Cotchett, Pitre & McCarthy — suit filed against Vistra and others over the Moss Landing battery fire",
+   "url": "https://www.cpmlegal.com/news-Lawsuit-Filed-Against-Texas-Based-Vistra-Corporation-and-Other-Relevant-Parties-for-Moss-Landing-Battery-Plant-Fire",
+   "date": "2025-02-27"
+  },
+  {
+   "label": "Singleton Schreiber — Monterey County residents sue Vistra and others over the Moss Landing battery fire",
+   "url": "https://www.singletonschreiber.com/newsroom/news/monterey-county-residents-sue-vistra-others-for-damages-due-to-moss-landing-battery-fire",
+   "date": "2025-02-05"
+  },
+  {
+   "label": "Monterey County NOW — four local residents sue Vistra and PG&E over Moss Landing",
+   "url": "https://www.montereycountynow.com/blogs/news_blog/four-local-residents-sue-vistra-and-pg-e-for-damages-related-to-vistras-moss-landing/article_9d19c8c4-e5b2-11ef-be03-8330caee1b3c.html",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "KQED Science — scientists trace heavy metals spread by the January battery fire near Monterey",
+   "url": "https://www.kqed.org/science/1999445/scientists-trace-heavy-metals-spread-by-januarys-huge-battery-fire-near-monterey",
+   "date": "2025-01-27"
+  },
+  {
+   "label": "Utility Dive — fire at Vistra's Moss Landing battery facility",
+   "url": "https://www.utilitydive.com/news/moss-landing-battery-fire-vistra/737837/",
+   "date": "2025-01-17"
+  },
+  {
+   "label": "CBS News San Francisco — PG&E seeks a restart of the Elkhorn battery facility at Moss Landing",
+   "url": "https://www.cbsnews.com/sanfrancisco/news/elkhorn-battery-storage-facility-moss-landing-pge-seeks-june1-restart",
+   "date": "2025-05-12"
+  },
+  {
+   "label": "Vistra — approval to operate Comanche Peak through 2053",
+   "url": "https://investor.vistracorp.com/2024-07-30-Vistra-Receives-Approval-to-Operate-Comanche-Peak-Nuclear-Plant-Through-2053",
+   "date": "2024-07-30"
+  },
+  {
+   "label": "Enverus — top ten storage developers in North America by megawatts brought online in 2023",
+   "url": "https://www.enverus.com/blog/top-10-storage-developers-in-north-america-by-megawatts-brought-online-in-2023/",
+   "date": "2024-07-15"
+  },
+  {
+   "label": "World Nuclear News — Vistra completes the Energy Harbor acquisition",
+   "url": "https://world-nuclear-news.org/articles/vistra-completes-energy-harbor-acquisition",
+   "date": "2024-03-05"
+  },
+  {
+   "label": "Power Engineering — Vistra and FlexGen partner on the largest energy storage project in Texas",
+   "url": "https://www.power-eng.com/energy-storage/long-duration-energy-storage/vistra-flexgen-partner-on-largest-energy-storage-project-in-texas/",
+   "date": "2018-06-18"
+  },
+  {
+   "label": "Oncor — Form 10-K for the year ended 31 December 2025 (Vistra and NRG retail subsidiaries as largest customers)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Power Engineering — Vistra engaged in co-location discussions with data centres",
+   "url": "https://www.power-eng.com/business/vistra-engaged-in-co-location-discussions-with-data-centers/"
+  },
+  {
+   "label": "POWER Magazine — Vistra in talks to expand power for data centres through nuclear and gas options",
+   "url": "https://www.powermag.com/vistra-in-talks-to-expand-power-for-data-centers-through-nuclear-gas-options/"
+  },
+  {
+   "label": "Vistra — generation fleet",
+   "url": "https://vistracorp.com/generation/"
+  },
+  {
+   "label": "Vistra — retail business",
+   "url": "https://vistracorp.com/retail/"
+  },
+  {
+   "label": "Vistra — Vistra Zero portfolio",
+   "url": "https://vistracorp.com/vistra-zero/"
+  },
+  {
+   "label": "Vistra — leadership",
+   "url": "https://vistracorp.com/about/leadership/"
+  },
+  {
+   "label": "Vistra — 2025 sustainability report",
+   "url": "https://vistracorp.com/documents/sustainability/reporting-year/2025/VST-sustainability-report-2025.pdf"
+  },
+  {
+   "label": "Moss Landing Response — Vistra's incident response site",
+   "url": "https://www.mosslandingresponse.com/"
+  },
+  {
+   "label": "Moss Landing Response — recovery process",
+   "url": "https://www.mosslandingresponse.com/recovery-process"
+  },
+  {
+   "label": "EPA — Moss Landing Vistra battery fire response",
+   "url": "https://www.epa.gov/ca/moss-landing-vistra-battery-fire"
+  },
+  {
+   "label": "NS Energy — Moss Landing energy storage project profile (phases, suppliers, contractors)",
+   "url": "https://www.nsenergybusiness.com/projects/moss-landing/"
+  },
+  {
+   "label": "Energy-Storage.news — Vistra claims its battery storage portfolio will reach 1,213 MW by 2026",
+   "url": "https://www.energy-storage.news/vistra-claims-battery-storage-portfolio-will-reach-1213mw-by-2026/"
+  },
+  {
+   "label": "NRC — Comanche Peak Unit 1 reactor information",
+   "url": "https://www.nrc.gov/info-finder/reactors/cp1"
+  },
+  {
+   "label": "NRC — Comanche Peak Unit 2 reactor information",
+   "url": "https://www.nrc.gov/info-finder/reactors/cp2"
+  },
+  {
+   "label": "NRC — Perry reactor information",
+   "url": "https://www.nrc.gov/info-finder/reactors/perr1"
+  },
+  {
+   "label": "NRC — Davis-Besse reactor information",
+   "url": "https://www.nrc.gov/info-finder/reactors/davi"
+  },
+  {
+   "label": "NRC — Beaver Valley Unit 1 reactor information",
+   "url": "https://www.nrc.gov/info-finder/reactors/bv1.html"
+  },
+  {
+   "label": "ERCOT — day-ahead market overview",
+   "url": "https://www.ercot.com/mktinfo/dam"
+  },
+  {
+   "label": "EIA — Today in Energy: US battery storage capacity growth",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=67925"
+  },
+  {
+   "label": "Cleanview — Vistra developer profile",
+   "url": "https://cleanview.co/power-projects/developers/vistra"
+  },
+  {
+   "label": "MarketBeat — VST earnings history and consensus",
+   "url": "https://www.marketbeat.com/stocks/NYSE/VST/earnings/"
+  },
+  {
+   "label": "StockAnalysis — VST overview and analyst forecasts",
+   "url": "https://stockanalysis.com/stocks/vst/"
+  },
+  {
+   "label": "TipRanks — VST analyst forecasts",
+   "url": "https://www.tipranks.com/stocks/vst/forecast"
+  },
+  {
+   "label": "Gibson Dunn — multi-billion-dollar victory for Luminant Energy in the Winter Storm Uri litigation at the Supreme Court of Texas",
+   "url": "https://www.gibsondunn.com/gibson-dunn-secures-multi-billion-dollar-victory-for-luminant-energy-in-winter-storm-uri-litigation-at-supreme-court-of-texas/"
+  }
+ ],
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 1
+}

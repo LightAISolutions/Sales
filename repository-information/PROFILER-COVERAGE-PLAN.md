@@ -197,9 +197,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | C2 | `mitsubishi-power` | Mitsubishi Power | supplier | Opus 5 xhigh | turbine gap | v1 · v04.48r | ✓ · v04.48r |
 | C3 | `infineon` | Infineon | supplier | Opus 5 xhigh | G9 | v1 · v04.50r | ✓ · v04.50r |
 | C3 | `flex` | Flex | supplier | Opus 5 xhigh | rack power | v1 · v04.50r | ✓ · v04.50r |
-| C4 | `talen-energy` | Talen Energy | ipp | Opus 5 xhigh | power partners | — | — |
-| C4 | `vistra` | Vistra | ipp | Opus 5 xhigh | power partners | — | — |
-| C4 | `nrg-energy` | NRG Energy | ipp | Opus 5 xhigh | power partners | — | — |
+| C4 | `talen-energy` | Talen Energy | ipp | Opus 5 xhigh | power partners | v1 · v04.63r | ✓ · v04.63r |
+| C4 | `vistra` | Vistra | ipp | Opus 5 xhigh | power partners | v1 · v04.63r | ✓ · v04.63r |
+| C4 | `nrg-energy` | NRG Energy | ipp | Opus 5 xhigh | power partners | v1 · v04.63r | ✓ · v04.63r |
 | C5 | `engie-north-america` | ENGIE North America | developer · ipp | Opus 5 xhigh | buyer side | — | — |
 | C5 | `aes-clean-energy` | AES Clean Energy | developer · ipp | Opus 5 xhigh | buyer side | — | — |
 | C5 | `rwe-clean-energy` | RWE Clean Energy | developer · ipp | Opus 5 xhigh | buyer side | — | — |

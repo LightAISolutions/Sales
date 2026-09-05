@@ -68,6 +68,11 @@
       ]
     },
     {
+      "slug": "additionality",
+      "term": "additionality",
+      "def": "The test of whether a clean-energy purchase caused new generation to be built, or simply bought output from a plant that already existed and was already serving the grid. Buying an existing nuclear unit's output scores badly on additionality even though the electricity itself is carbon-free."
+    },
+    {
       "slug": "adiabatic-cooling",
       "term": "adiabatic cooling",
       "def": "Pre-wetting the air entering an air-cooled condenser or dry cooler so it arrives closer to wet-bulb. It buys much of a tower's efficiency on the hottest days while using water only on those days."
@@ -362,6 +367,11 @@
       ]
     },
     {
+      "slug": "bad-debt",
+      "term": "bad debt",
+      "def": "Money a retail energy supplier billed to customers and never collected. It is a real cost of serving households and small businesses, rises in recessions and after price spikes, and is one reason a retail book is riskier than it looks from the margin alone."
+    },
+    {
       "slug": "balance-of-plant",
       "term": "balance of plant",
       "def": "Everything at a power project other than the main generating or storage equipment: transformers, switchgear, cabling, foundations, roads, controls. In a battery project the batteries are the equipment and the substation and enclosures are balance of plant.",
@@ -397,12 +407,22 @@
       ]
     },
     {
+      "slug": "baseload",
+      "term": "baseload",
+      "def": "A generating unit designed to run continuously at close to full output — historically nuclear and large coal plants. The word describes how a plant is operated and financed, not a physical property: a baseload unit earns by selling many hours of energy rather than a few expensive ones."
+    },
+    {
       "slug": "basis-of-design",
       "term": "basis of design",
       "def": "The engineering document that fixes a project's architecture, ratings and equipment choices before anything is tendered. Whoever writes it decides what the bidders are allowed to offer.",
       "aliases": [
         "BOD"
       ]
+    },
+    {
+      "slug": "basis-risk",
+      "term": "basis risk",
+      "def": "The risk that a hedge and the thing it is meant to protect settle at different prices. A generator hedged at a regional hub but paid at its own plant's node carries basis risk: if congestion pushes the two apart, the hedge stops matching the physical position."
     },
     {
       "slug": "batch-study",
@@ -672,6 +692,14 @@
       ]
     },
     {
+      "slug": "capacity-interconnection-rights",
+      "term": "capacity interconnection rights",
+      "aliases": [
+        "CIRs"
+      ],
+      "def": "The megawatts of firm injection a generator is entitled to put onto the grid at its point of interconnection, established by the studies it paid for. They are a property-like right: what a co-location arrangement argues over is whether load may sit behind them without a new study."
+    },
+    {
       "slug": "capacity-market",
       "term": "capacity market",
       "def": "A market that pays a resource for being available to serve peak demand — a payment for existing, not for energy produced. PJM runs its auction, the Base Residual Auction, three years ahead; the clearing price per megawatt-day is the signal that new data-center load has moved the region from surplus to scarcity, and it flows straight into a regulated utility's bills.",
@@ -856,6 +884,14 @@
       ]
     },
     {
+      "slug": "churn",
+      "term": "churn",
+      "aliases": [
+        "attrition rate"
+      ],
+      "def": "The share of a retail supplier's customers who leave in a period. Every lost customer must be replaced at a cost, so churn and the cost of winning a customer together decide whether a retail book earns its margin or spends it."
+    },
+    {
       "slug": "clarification",
       "term": "clarification",
       "def": "The treatment step in which suspended solids are allowed or induced to settle out of water. It is the workhorse ahead of filtration in nearly every water and wastewater train."
@@ -883,6 +919,14 @@
         "construction manager at risk",
         "CMAR"
       ]
+    },
+    {
+      "slug": "co-location",
+      "term": "co-location",
+      "aliases": [
+        "co-located"
+      ],
+      "def": "Putting a large electricity consumer — typically a data centre — physically at a generating plant and serving it directly, instead of connecting it to the grid as an ordinary customer. The engineering is simple; the argument is regulatory, over what the load owes for grid services it still relies on."
     },
     {
       "slug": "co-location-net-metering",
@@ -1377,6 +1421,14 @@
       ]
     },
     {
+      "slug": "customer-acquisition-cost",
+      "term": "customer acquisition cost",
+      "aliases": [
+        "CAC"
+      ],
+      "def": "What a retail supplier spends in marketing, sales commission and onboarding to sign one customer. Set against the margin that customer will produce before they leave, it is the arithmetic that decides whether growing a retail book creates value or destroys it."
+    },
+    {
       "slug": "customer-concentration",
       "term": "customer concentration",
       "def": "The share of a company's revenue coming from its largest customers. High concentration means the loss or slowdown of one relationship moves the whole company, which is why filings are required to disclose it.",
@@ -1472,6 +1524,14 @@
         "distribution cost recovery factor",
         "DCRF filing"
       ]
+    },
+    {
+      "slug": "deactivation",
+      "term": "deactivation",
+      "aliases": [
+        "deactivation notice"
+      ],
+      "def": "A generator's formal notice to its grid operator that it intends to stop running a unit. The operator studies whether the system can live without it, and may require it to keep running under a reliability agreement until replacement wires or generation arrive."
     },
     {
       "slug": "dead-time",
@@ -1729,6 +1789,14 @@
       "slug": "disinfection",
       "term": "disinfection",
       "def": "The final treatment step that inactivates pathogens — chlorine, ozone or ultraviolet light. Which method is used changes what residual protection the water carries downstream."
+    },
+    {
+      "slug": "dispatch",
+      "term": "dispatch",
+      "aliases": [
+        "dispatched"
+      ],
+      "def": "The grid operator's instruction telling each resource how much to produce in the next interval, issued to keep supply matched to demand at least cost. A plant that is available but not dispatched earns nothing from energy that interval."
     },
     {
       "slug": "dispatch-rights",
@@ -2621,6 +2689,14 @@
       ]
     },
     {
+      "slug": "forced-outage-rate",
+      "term": "forced outage rate",
+      "aliases": [
+        "EFORd"
+      ],
+      "def": "The share of time a generating unit is unavailable because something broke, as opposed to planned maintenance. Capacity markets use it to discount what a plant is credited with: a unit that fails often is worth fewer accredited megawatts than its nameplate."
+    },
+    {
       "slug": "formula-rate-plan",
       "term": "formula rate plan",
       "def": "A rate mechanism that resets a utility's rates every year by formula — actual earned return compared with an allowed band, with automatic adjustment — instead of a full contested rate case every few years. It cuts regulatory lag for the utility and gives the commission a yearly look at earnings; Entergy's Louisiana, Arkansas and Mississippi companies run on one.",
@@ -2630,6 +2706,15 @@
         "formula rates",
         "formula rate plans"
       ]
+    },
+    {
+      "slug": "forward-hedging",
+      "term": "forward hedging",
+      "aliases": [
+        "hedge ratio",
+        "percent hedged"
+      ],
+      "def": "Selling a share of next year's expected output forward at a fixed price before the year begins, so the revenue is known rather than discovered. A fleet's hedge ratio is the fraction sold forward: a high ratio protects the budget and forfeits a price spike, a low one does the reverse."
     },
     {
       "slug": "fouling-factor",
@@ -2871,6 +2956,11 @@
         "gross power capacity",
         "utility capacity"
       ]
+    },
+    {
+      "slug": "gross-margin-retail",
+      "term": "retail gross margin",
+      "def": "What a retail electricity supplier collects from customers minus what the electricity and its delivery cost to procure. It is the number a retail business is actually run on, and it widens when wholesale prices fall faster than retail prices do."
     },
     {
       "slug": "guaranteed-maximum-price",
@@ -3280,6 +3370,14 @@
       "aliases": [
         "interconnection"
       ]
+    },
+    {
+      "slug": "interconnection-service-agreement",
+      "term": "interconnection service agreement",
+      "aliases": [
+        "ISA"
+      ],
+      "def": "The contract between a generator, its transmission owner and the grid operator setting out how the plant connects, what it may inject, and what equipment and studies the connection depends on. Changing what sits behind that connection generally means amending the agreement, which is a regulated filing rather than a private decision."
     },
     {
       "slug": "interim-life-safety",
@@ -3696,6 +3794,15 @@
       ]
     },
     {
+      "slug": "load-following",
+      "term": "load-following",
+      "aliases": [
+        "load shape",
+        "serving load"
+      ],
+      "def": "The obligation to supply exactly what customers happen to use, hour by hour, rather than a flat block. A retail supplier is load-following by definition, which is why its purchasing problem is a shape problem and not just a volume one."
+    },
+    {
       "slug": "load-forecast",
       "term": "load forecast",
       "def": "The projection of future peak demand and energy that a utility's plan and a grid operator's markets are built on. Data-center requests inflated these forecasts faster than anything in the industry's history, and the arguments — how much of the queue is real, whether the same campus is counted by several utilities — are arguments about this number.",
@@ -3856,6 +3963,11 @@
       ]
     },
     {
+      "slug": "mark-to-market",
+      "term": "mark-to-market",
+      "def": "Restating an open contract at today's market price so that unrealised gains and losses appear in the accounts immediately. It makes a hedged generator's reported earnings swing with prices even when the underlying physical business has not changed."
+    },
+    {
       "slug": "mass-grading",
       "term": "mass grading",
       "def": "Reshaping an entire site to the elevations the design needs, before any building work. It is the first major scope on a greenfield project and the least reversible."
@@ -3909,6 +4021,11 @@
         "merchant HVDC",
         "merchant line"
       ]
+    },
+    {
+      "slug": "merit-order",
+      "term": "merit order",
+      "def": "The ranking of generators by the cost of producing their next unit of electricity, cheapest first. The grid operator works down the list until demand is met, and the last unit needed usually sets the price everyone is paid."
     },
     {
       "slug": "metal-clad-switchgear",
@@ -4141,6 +4258,11 @@
       "def": "Fluid moving through a loop because hot fluid is less dense than cold, with no pump. A reactor that can remove decay heat this way keeps cooling itself after losing all electrical power."
     },
     {
+      "slug": "natural-hedge",
+      "term": "natural hedge",
+      "def": "An offset that comes from owning two businesses whose exposures point in opposite directions, rather than from buying a financial contract. A company that both generates electricity and sells it to retail customers is long supply and short demand at the same time, so a price move that hurts one side helps the other."
+    },
+    {
       "slug": "ndaa-154",
       "term": "NDAA §154",
       "def": "A US defense-authorization provision restricting Department of Defense battery procurement from named Chinese suppliers — the list that made \"is your cell maker §154-listed?\" a standard sourcing question.",
@@ -4163,6 +4285,15 @@
       "slug": "neocloud",
       "term": "neocloud",
       "def": "A newer GPU-cloud provider renting AI compute capacity, typically growing faster than its capital base — a distinct buyer class from the hyperscalers."
+    },
+    {
+      "slug": "net-position",
+      "term": "net position",
+      "aliases": [
+        "long position",
+        "short position"
+      ],
+      "def": "How much more electricity a company has committed to sell than it can produce, or the reverse, over a given period. Being long means owning output with no buyer yet; being short means owing power that has not been secured."
     },
     {
       "slug": "neutron-cross-section",
@@ -4299,6 +4430,15 @@
       "aliases": [
         "original design manufacturer"
       ]
+    },
+    {
+      "slug": "offer-cap",
+      "term": "offer cap",
+      "aliases": [
+        "price cap",
+        "system-wide offer cap"
+      ],
+      "def": "The highest price a generator is permitted to bid into a wholesale market. In an energy-only market it also caps the scarcity revenue that is supposed to pay for building new plants, so where the regulator sets it is an investment decision as much as a consumer-protection one."
     },
     {
       "slug": "offshore-wind-lease",
@@ -5147,6 +5287,15 @@
       ]
     },
     {
+      "slug": "reliability-must-run",
+      "term": "reliability must-run",
+      "aliases": [
+        "RMR",
+        "RMR agreement"
+      ],
+      "def": "An agreement that keeps a plant its owner wants to retire running because the grid operator has found the system cannot yet do without it. The owner is paid its costs under a regulated rate, and the region's customers pay, until transmission or new generation removes the need."
+    },
+    {
       "slug": "reliance-letter",
       "term": "reliance letter",
       "def": "The engineer's written agreement that a named party other than its client — a new lender, a buyer of the project — may rely on its report, usually under the same liability cap. Without one, a report found in a data room is information, not something the reader can sue over.",
@@ -5810,6 +5959,11 @@
       ]
     },
     {
+      "slug": "spark-spread",
+      "term": "spark spread",
+      "def": "The gap between what a megawatt-hour of electricity sells for and what the gas to make it costs at a stated efficiency. It is the gross margin of a gas plant, and a merchant gas fleet's earnings are essentially the spark spread multiplied by the hours it is economic to run."
+    },
+    {
       "slug": "special-inspection",
       "term": "special inspection",
       "def": "Independent third-party inspection and testing of specific structural work — welds, bolts, concrete, soils — required by code and scheduled in advance. Work covered up before its inspection gets uncovered."
@@ -5952,6 +6106,14 @@
         "electronic UPS"
       ],
       "def": "A UPS built from power electronics — a rectifier, a DC link with batteries on it and an inverter — with no moving parts except fans. It is the incumbent form in data centers: modular, efficient, factory-built at low voltage, and dependent on a battery room whose chemistry, life and fire code are a design in themselves."
+    },
+    {
+      "slug": "station-power",
+      "term": "station power",
+      "aliases": [
+        "auxiliary load"
+      ],
+      "def": "The electricity a power plant itself consumes to run pumps, fans, controls and cooling. It matters in co-location arguments because rules about who may take power from behind a generator's connection were written with station power, not a gigawatt data centre, in mind."
     },
     {
       "slug": "stormwater-detention",
@@ -6535,6 +6697,14 @@
       "def": "The test method that characterizes how battery fires start and propagate at cell, module, unit, and installation level. Its data feeds fire-safety design and permitting for storage projects."
     },
     {
+      "slug": "unforced-capacity",
+      "term": "unforced capacity",
+      "aliases": [
+        "UCAP"
+      ],
+      "def": "A generator's capacity discounted for how often it is expected to be unavailable, so that a megawatt of one resource can be compared with a megawatt of another. Capacity markets buy and pay for unforced capacity, not nameplate."
+    },
+    {
       "slug": "uniform-load",
       "term": "uniform load",
       "def": "The distributed weight per unit area a floor is rated to carry, in pounds per square foot. Data halls are rated far above office space, and liquid-cooled rows above conventional halls."
@@ -6669,6 +6839,14 @@
         "wires-only utility",
         "wires-only"
       ]
+    },
+    {
+      "slug": "virtual-power-plant",
+      "term": "virtual power plant",
+      "aliases": [
+        "VPP"
+      ],
+      "def": "A fleet of small, distributed resources — home batteries, thermostats, backup generators, flexible industrial load — operated together so the grid sees them as one dispatchable resource. It sells the same products a power station sells without any single plant existing."
     },
     {
       "slug": "virtual-ppa",

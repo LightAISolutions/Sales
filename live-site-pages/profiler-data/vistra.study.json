@@ -1,0 +1,372 @@
+{
+ "schemaVersion": 2,
+ "slug": "vistra",
+ "title": "Vistra — Technology Study Guide",
+ "lastUpdated": "2026-09-05",
+ "sections": [
+  {
+   "id": "start-here-the-fleet-is-the-product",
+   "title": "Start here: the fleet is the product",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "Nine guides in this corpus teach companies whose asset is a **pipeline** — land, {{queue position}}s, permits and contracts that will one day become a power plant. This one teaches a company whose asset is **43,641 megawatts that already exist**, spread across five markets, running today. Everything changes when you cross that line: what you sell, who decides whether it runs, how you find out what it is worth, and what a data centre can actually buy from you.",
+    "**The one idea to carry through.** A developer's question is *will it get built and who will pay for it*. An owner's question is *will it run this hour, and what will I be paid for standing ready if it does not*. The second question is answered by two mechanisms this corpus has not yet taught in detail: the {{merit order}} that decides which plants run, and the {{capacity market}} that pays plants for existing at all.",
+    "**What it deliberately does not repeat.** The Aypa guide teaches the contracted platform as a thing a buyer prices; the Spearmint and GridStor guides teach merchant and contracted storage development; the Intersect guide teaches the co-located {{energy park}}; the Talen guide teaches co-location at a nuclear plant and what the regulator decided. The Classroom owns {{tolling agreement}}s, {{ancillary services}} stacking and battery duration-and-degradation. Here the subject is the operating thermal and nuclear fleet: how it earns, how it is hedged, and why owning one changes what a hyperscaler can buy."
+   ]
+  },
+  {
+   "id": "how-a-fleet-earns-in-an-hour",
+   "title": "How a fleet earns in an hour: the merit order",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Every few minutes the grid operator solves the same problem: meet demand at the lowest cost from the units available. It ranks them by the cost of producing their next megawatt-hour — the {{merit order}} — and works down the list until demand is met. The last unit needed sets the price, and **every** unit that cleared is paid that price, not its own cost.",
+    "This is why fuel cost decides how often a plant runs but not what it is paid. Nuclear and renewables sit at the bottom of the list because their marginal fuel cost is near zero, so they {{dispatch}} almost always and are described as {{baseload}}. Efficient {{combined cycle}} gas sits in the middle. Inefficient {{peaker}}s sit at the top and run for a few hundred hours a year, when nothing cheaper is left.",
+    "The gap between the power price and the fuel cost of making it is the {{spark spread}} — the gross margin of a gas plant. A fleet's earnings are, to a first approximation, its spark spread multiplied by the hours it is economic to run, plus whatever the market pays it for merely being available.",
+    "**Two consequences worth holding on to.** First, a nuclear plant's economics are almost entirely about *price*, not volume: it will run whatever happens, so what matters is what the marginal gas plant costs. Second, a peaker's economics are almost entirely about *scarcity*: it earns nothing for most of the year and everything in a heatwave, which is why a market with a price ceiling is making a decision about whether peakers get built at all."
+   ]
+  },
+  {
+   "id": "two-market-designs-one-company",
+   "title": "Two market designs inside one company",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "This company's fleet straddles the two designs the corpus keeps running into. Almost every apparent inconsistency in how it talks about its Texas and eastern businesses comes from this table.",
+   "cols": [
+    "",
+    "{{ERCOT}} — {{energy-only market}}",
+    "{{PJM}} and the eastern markets — {{capacity market}}"
+   ],
+   "rows": [
+    [
+     "What a plant is paid for",
+     "Energy and {{ancillary services}} only",
+     "Energy and ancillary services, **plus** a capacity payment for being available"
+    ],
+    [
+     "Who decides supply is adequate",
+     "Nobody. A price signal is supposed to summon it",
+     "The operator buys a target quantity of {{unforced capacity}} in an auction, typically three years ahead"
+    ],
+    [
+     "The investment signal",
+     "Scarcity prices in tight hours, bounded by an {{offer cap}}",
+     "The auction's clearing price per megawatt-day, known years before delivery"
+    ],
+    [
+     "What a data centre changes",
+     "Raises the number of tight hours, so raises expected scarcity revenue",
+     "Raises the demand curve in the auction, so raises the clearing price for everyone"
+    ],
+    [
+     "How this company's revenue behaves",
+     "Volatile, weather-driven, hedged heavily through the retail book",
+     "Partly locked in years ahead: 10,924 MW cleared at $325.00 per megawatt-day for the 2028/2029 year"
+    ],
+    [
+     "Fleet in this design",
+     "19,858 MW — 46 percent of the total",
+     "22,254 MW — 51 percent"
+    ],
+    [
+     "The current policy fight",
+     "A pause on data-centre interconnections while a roughly 474 GW queue is audited",
+     "Three consecutive auctions clearing at the administrative price cap, and a rulebook for co-located load still being written"
+    ]
+   ],
+   "note": "A capacity payment is not a subsidy. It is a purchase of an option: the right to call on a plant on a future day. What the auction reveals is the price of that option, which is why a clearing price that jumps sixfold in one year is the loudest signal in the industry."
+  },
+  {
+   "id": "accreditation-not-nameplate",
+   "title": "What actually gets sold in a capacity auction: accreditation, not nameplate",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A capacity auction does not buy nameplate megawatts. It buys {{unforced capacity}} — a plant's rating discounted for how often it is expected to be unavailable. The discount comes from its {{forced outage rate}}: the share of time it is broken rather than in planned maintenance.",
+    "This is the same arithmetic as {{ELCC}} for a battery or a solar farm, applied to thermal plants. A four-hour battery is credited well below its nameplate because it cannot cover a long evening peak alone; a gas plant is credited close to nameplate because it can run as long as the fuel lasts. Accreditation is the mechanism that makes a megawatt of one technology comparable with a megawatt of another.",
+    "For an owner it has a practical consequence: **reliability is revenue**. Improving a unit's availability raises its accredited capacity, which raises the megawatts it can sell in the auction, at a clearing price it did not have to negotiate. That is why an operator quoting 'commercial availability of 97 percent or greater' during a heatwave is making a financial statement, not an operational boast.",
+    "It also explains a category of spending a seller should understand. Equipment that raises availability — better instrumentation, faster returns from outage, condition monitoring — has a return that can be computed directly from the accreditation gain times the clearing price. Equipment that only raises efficiency competes for capital against that."
+   ]
+  },
+  {
+   "id": "what-a-data-centre-can-buy-from-an-operating-fleet",
+   "title": "What a data centre can actually buy from an operating fleet",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Four different things, often confused because all four get called 'a power deal'. The right-hand column is the question that decides whether the arrangement survives contact with a regulator or a sustainability audit.",
+   "cols": [
+    "What is sold",
+    "What the buyer gets",
+    "What the seller gives up",
+    "The awkward question"
+   ],
+   "rows": [
+    [
+     "Energy under a long-term {{PPA}}",
+     "A fixed or escalating price for a stated volume over ten to twenty years",
+     "Upside if market prices rise above the contract",
+     "Does it add generation, or move existing output to a new buyer? ({{additionality}})"
+    ],
+    [
+     "Capacity",
+     "A claim on the plant's availability, and in some structures the {{unforced capacity}} itself",
+     "The auction revenue those megawatts would have earned",
+     "Who bears the penalty if the plant is unavailable when called?"
+    ],
+    [
+     "Clean attributes",
+     "Certificates that let the buyer claim carbon-free consumption",
+     "Nothing physical — the electricity flows the same way",
+     "Are the certificates matched hourly, or annually against a different region?"
+    ],
+    [
+     "Firmness and speed",
+     "A connection that already exists, at a site already permitted, years before a new plant could be built",
+     "Optionality: the site is committed to one customer",
+     "Does the load pay for the grid services it still uses?"
+    ],
+    [
+     "New capacity attached to an existing site",
+     "An {{nuclear uprate}}, a new unit, or storage built beside a plant that already has a connection",
+     "Capital, and the schedule risk of building",
+     "None — this is the one column that is unambiguously additional"
+    ]
+   ],
+   "note": "The fifth row is why uprates keep appearing in these contracts. A 433 MW uprate programme attached to a 2,609 MW supply agreement is the seller buying an answer to the additionality question, and the buyer paying for it."
+  },
+  {
+   "id": "the-natural-hedge-seen-from-the-generation-side",
+   "title": "Selling to yourself: what a retail book does to a generator",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A merchant generator with no customers must sell its output forward to banks and traders. A generator that also owns a retail supplier can sell it to its own customers instead. The company describes the effect plainly: its integrated model 'allows us to efficiently obtain the electricity needed to serve our customers at the lowest cost' and 'enables us to structure products and contracts in a way that offers significant value compared to stand-alone retail electric providers'.",
+    "Mechanically, the two halves book equal and opposite marks. When power prices rise, the generation segments show unrealised losses on their forward sales and the retail segment — which buys from generation to meet its load — shows unrealised gains. That is the {{natural hedge}}, and it is why segment-level reported earnings are close to meaningless in isolation: in one recent quarter the generation and retail segments booked a mark-to-market swing of hundreds of millions of dollars in opposite directions inside the same company.",
+    "**The limit, stated by the company itself.** The two businesses are countercyclical 'to some extent' — but a generator with 43,641 MW and five million customers is still long generation. The residual wholesale position remains exposed to price, and it can be significant. A natural hedge reduces risk; it does not remove it.",
+    "The practical test is {{forward hedging}}. This company reports roughly 100 percent of expected generation hedged for the prompt year, 94 percent for the next and 72 percent for the one after. A pure-play merchant in the same market runs 85, 70 and 30 percent for the same years. The gap is what having your own customers buys you — and it is also why a hedged generator's reported profit tells you about last quarter's prices rather than this quarter's business."
+   ]
+  },
+  {
+   "id": "owning-an-asset-that-can-burn",
+   "title": "Owning an asset that can burn: what the storage fleet taught",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A developer that sells projects transfers operating risk at closing. An owner keeps it for twenty years. The clearest illustration in this corpus is a battery fleet that fell from 1,024 MW to 624 MW in a single year without a single megawatt being sold.",
+    "The mechanics are worth following because they are generic. A 300 MW array housed **inside a retired power plant's turbine building** caught fire in January 2025; about 1,200 people were evacuated and nobody was hurt. The array's remaining book value, roughly $400 million, was written off to depreciation expense and the asset moved to a closure segment. A separate 100 MW building at the same site was later judged unable to return and took a $155 million impairment. Only the third phase, 350 MW in outdoor enclosures, remains a restart candidate, and the latest filing says 'when **or if**'.",
+    "Then come the second-order costs, which are the ones a project model usually omits. Insurance covered $500 million of combined property and business interruption — and that limit is now fully collected, while the environmental remediation estimate has risen from about $110 million to about $175 million. The resource-adequacy contracts attached to the destroyed capacity roll off in 2028, taking roughly three-quarters of that site's contracted revenue with them. Litigation names the owner, the operating subsidiary, the battery supplier and the neighbouring utility.",
+    "**The transferable lessons.** Indoor installation concentrates risk: fewer than one percent of US storage facilities house batteries inside a building, and this was one of them. Chemistry matters to consequence, not just to cost — the plaintiffs' filings turn on nickel-manganese-cobalt cells rather than the iron-phosphate chemistry the industry has been moving toward. And an official cause is not guaranteed: nineteen months on, the company's own response site still says the cause is undetermined."
+   ]
+  },
+  {
+   "id": "reading-the-fleet-numbers",
+   "title": "Reading the fleet numbers without being misled",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "MW (net capacity as filed)",
+   "intro": "Six figures from the same company, all correct, all meaning different things. Naming which one you mean is the discipline this section exists to teach.",
+   "items": [
+    {
+     "label": "Total fleet, as filed at 31 December 2025",
+     "sub": "all fuels, all markets, 100 percent owned",
+     "v": 43641
+    },
+    {
+     "label": "Gas",
+     "sub": "62 percent — 28 combined-cycle plants and 12 peakers",
+     "v": 26989
+    },
+    {
+     "label": "Coal",
+     "sub": "20 percent, across seven facilities",
+     "v": 8743
+    },
+    {
+     "label": "Nuclear",
+     "sub": "15 percent — six units at four sites",
+     "v": 6448
+    },
+    {
+     "label": "Contracted to data centres",
+     "sub": "all of it nuclear, on 20-year agreements",
+     "v": 3809
+    },
+    {
+     "label": "Battery storage owned",
+     "sub": "down from 1,024 MW a year earlier",
+     "v": 624
+    }
+   ],
+   "note": "Two traps. The total is a **capacity** figure, not an energy figure — a 6,448 MW nuclear fleet produces far more megawatt-hours than a 26,989 MW gas fleet that runs part-time. And the contracted number is nuclear only: no signed large-load agreement exists at any gas site, which is the opposite of what most summaries of this company assert."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Reading a hedged generator on reported earnings.** A company that has sold nearly all of next year's output forward books unrealised losses when prices rise. One recent quarter showed a 53 percent miss against consensus earnings per share and a 27 percent revenue miss beside 30 percent growth in operating earnings and reaffirmed guidance. If you use the wrong line you will reach the opposite of the right conclusion.",
+    "**Assuming 'largest storage owner' is a fact.** No independent ranking of storage owners by fleet size exists — the two bodies that publish storage market data decline to rank companies. The closest available ranking measures megawatts brought online in one year and places this company **second**. Its own historical language was 'second-largest'. A claim repeated often is still not a sourced claim.",
+    "**Confusing a capacity payment with a subsidy.** It is the price of an option to call on a plant. When three consecutive auctions clear at an administrative cap, the binding constraint is a policy decision rather than scarcity — which makes the collar's expiry, not the supply-demand balance, the largest single swing factor in the owner's revenue.",
+    "**Treating nameplate as what the auction buys.** Auctions buy accredited, {{unforced capacity}}. A fleet's saleable capacity moves with its {{forced outage rate}}, which is why availability during heatwaves is a revenue statement.",
+    "**Assuming a nuclear power purchase agreement is co-location.** These are grid-delivered: the release for the largest of them says expressly that 'the electricity generated at the plants will continue to go to the grid for all electricity users'. That is a deliberate structural choice which keeps the arrangement outside the co-location rulebook entirely.",
+    "**Trusting a single fleet figure.** Between an acquisition that closed, one that has not, and 754 MW being sold, the same company is credibly described as 43,641 MW, 43,824 MW or about 50,000 MW depending on the date and the assumption. Always ask which."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is the merit order, and who sets the price?",
+     "a": "The ranking of available generators by the cost of their next megawatt-hour, cheapest first. The operator works down it until demand is met, and the last unit needed sets the price — which every cleared unit receives, regardless of its own cost."
+    },
+    {
+     "q": "Define spark spread and say what it measures.",
+     "a": "The gap between the price of electricity and the cost of the gas needed to make it at a stated efficiency. It is the gross margin of a gas plant, and a merchant gas fleet's earnings are approximately the spark spread times the hours it is economic to run."
+    },
+    {
+     "q": "What is unforced capacity, and why do auctions buy it rather than nameplate?",
+     "a": "Nameplate discounted for expected unavailability, using the unit's forced outage rate. Buying accredited rather than nameplate capacity makes a megawatt of one technology comparable with a megawatt of another, and makes reliability directly worth money to the owner."
+    },
+    {
+     "q": "State the structural difference between an energy-only market and one with a capacity market.",
+     "a": "In an energy-only market generators are paid only for what they produce, and scarcity prices are the sole signal to build. In a capacity market the operator buys a target quantity of accredited capacity years ahead, so plants are paid for being available whether or not they run."
+    },
+    {
+     "q": "What is a natural hedge between generation and retail, and what is its limit?",
+     "a": "Owning both a fleet and a customer book means a price rise that hurts one side helps the other, because retail buys from generation to serve load. The limit is that a company with far more generation than load remains net long, so a residual wholesale exposure survives the hedge."
+    },
+    {
+     "q": "Why can a company's segment-level reported earnings be misleading in a single quarter?",
+     "a": "Because unrealised mark-to-market moves on internal hedges push the generation and retail segments in opposite directions by large amounts. Only the group's adjusted operating measure is comparable across periods."
+    },
+    {
+     "q": "What is the additionality objection, and which contract structure answers it directly?",
+     "a": "That buying an existing plant's output moves supply rather than creating it. The structure that answers it is one funding new capacity — an uprate at an existing nuclear site, a new unit, or storage — because that capacity would not exist without the contract."
+    },
+    {
+     "q": "Name four distinct things a data centre can buy from an operating generator.",
+     "a": "Energy under a long-term contract; capacity, meaning a claim on availability; clean attributes or certificates; and speed — access to a site and a grid connection that already exist. A fifth, new capacity attached to an existing site, is the only one that is unambiguously additional."
+    },
+    {
+     "q": "Why does an owner carry risks a developer does not?",
+     "a": "A developer that sells at completion transfers operating risk with the asset. An owner keeps it for the asset's life — fire, outage, remediation, insurance limits, litigation and the expiry of the contracts attached to the capacity."
+    },
+    {
+     "q": "What does it mean when a capacity auction clears at the administrative price cap?",
+     "a": "That offers above the cap did not clear, so the cap rather than the supply-demand balance set the price. Revenue then depends on whether regulators extend the collar, which converts a market outcome into a policy decision."
+    },
+    {
+     "q": "Why is a nuclear plant's economics about price while a peaker's is about scarcity?",
+     "a": "Nuclear sits at the bottom of the merit order and runs nearly always, so its revenue moves with the price the marginal gas plant sets. A peaker runs only a few hundred hours a year, so almost all of its energy revenue arrives in the tightest hours."
+    },
+    {
+     "q": "What is a forced outage rate and where does it show up in the money?",
+     "a": "The share of time a unit is unavailable because something broke, as opposed to planned maintenance. It sets the discount between nameplate and accredited capacity, so it directly determines how many megawatts the owner can sell in a capacity auction."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A gas plant with a marginal cost of $38/MWh clears in an hour where the last unit needed costs $71/MWh. What is it paid?",
+     "c": [
+      "$38/MWh",
+      "$71/MWh",
+      "The average of the two",
+      "Its bid plus a capacity adder"
+     ],
+     "a": 1,
+     "why": "Uniform clearing: every cleared unit receives the price set by the marginal unit. The gap between that price and its own cost is the plant's margin for the hour."
+    },
+    {
+     "q": "A 500 MW plant has a forced outage rate that gives it 460 MW of accredited capacity. What can it sell in the auction?",
+     "c": [
+      "500 MW",
+      "460 MW",
+      "500 MW at a reduced price",
+      "Nothing until the outage rate improves"
+     ],
+     "a": 1,
+     "why": "Auctions buy unforced capacity. The 40 MW difference is the market's estimate of how often the plant will not be there when needed — which is why availability work has a computable return."
+    },
+    {
+     "q": "In an energy-only market, what replaces the capacity payment as the signal to build new generation?",
+     "c": [
+      "A commission certificate",
+      "Scarcity prices in tight hours, bounded by an offer cap",
+      "A long-term contract with the grid operator",
+      "State loan programmes"
+     ],
+     "a": 1,
+     "why": "There is no capacity payment and nobody is obliged to build. High prices in scarce hours are the entire investment signal, which is why where the regulator sets the offer cap is an investment decision."
+    },
+    {
+     "q": "A hyperscaler signs a twenty-year agreement for an operating reactor's output. Which criticism does the structure invite?",
+     "c": [
+      "That nuclear is not carbon-free",
+      "That it displaces existing buyers onto the next unit in the merit order rather than adding generation",
+      "That the plant will retire",
+      "That the price is too low"
+     ],
+     "a": 1,
+     "why": "That is the additionality objection. The reactor was already running; moving its output to a new customer redirects supply rather than creating it, and the displaced buyer is served by whatever is next in the stack — usually gas."
+    },
+    {
+     "q": "An integrated merchant reports a large earnings-per-share miss and 30 percent growth in adjusted operating earnings in the same quarter, and reaffirms guidance. What is the most likely explanation?",
+     "c": [
+      "An accounting error",
+      "Unrealised mark-to-market losses on the hedge book as forward prices rose",
+      "A plant outage",
+      "A customer default"
+     ],
+     "a": 1,
+     "why": "Selling next year forward and then watching prices rise produces paper losses on a business that just got more valuable. It is the standard signature of a heavily hedged generator."
+    },
+    {
+     "q": "Which structural feature made an indoor battery installation unusually costly when it failed?",
+     "c": [
+      "It used lithium-iron-phosphate cells",
+      "It was inside a retired power plant's turbine building, concentrating the fire and its consequences",
+      "It was not insured",
+      "It was outside the grid operator's footprint"
+     ],
+     "a": 1,
+     "why": "Fewer than one percent of US storage facilities house batteries indoors. Enclosure concentrated the event, and the second-order costs — remediation, litigation, lost resource-adequacy contracts — outran the insurance limit."
+    },
+    {
+     "q": "What does a hedge ratio of roughly 100 percent for the prompt year and 72 percent two years out tell you?",
+     "c": [
+      "The company expects prices to fall",
+      "Next year's revenue is largely known and the third year is still exposed",
+      "The company has no retail business",
+      "It has sold its plants"
+     ],
+     "a": 1,
+     "why": "A hedge ratio is how much of expected output has been sold forward. Near-total coverage next year means a knowable budget; a lower ratio further out is where the price view still lives."
+    },
+    {
+     "q": "Which of these contract structures answers the additionality objection outright?",
+     "c": [
+      "A long-term energy contract from an existing plant",
+      "A capacity claim on an existing plant",
+      "Annual clean-attribute certificates",
+      "Funding a nuclear uprate that adds new megawatts at an existing site"
+     ],
+     "a": 3,
+     "why": "Only the last creates generation that would not otherwise exist. It is why uprate programmes keep appearing attached to large nuclear supply agreements — the buyer is paying for an answer as well as for power."
+    }
+   ]
+  }
+ ]
+}

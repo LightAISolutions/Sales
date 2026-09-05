@@ -2335,6 +2335,64 @@
       "srcTotal": 87,
       "srcFirstPct": 32,
       "kpiNorm": false
+    },
+    {
+      "slug": "talen-energy",
+      "name": "Talen Energy",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The co-location precedent that failed and the contract that replaced it — FERC rejected the behind-the-meter Susquehanna arrangement in November 2024, and the 1,920 MW Amazon deal that followed is an ordinary front-of-the-meter retail supply needing no FERC approval; 15.7 GW of PJM generation anchored by 90 percent of one nuclear station, rebuilt on $9.7 billion of debt.",
+      "hq": "Houston, TX, USA",
+      "ticker": "NASDAQ: TLN",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "talenenergy.com",
+        "susquehannanuclear.com"
+      ],
+      "srcTotal": 81,
+      "srcFirstPct": 51,
+      "kpiNorm": true
+    },
+    {
+      "slug": "vistra",
+      "name": "Vistra",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The integrated merchant that became a nuclear contracting story — 3.8 GW of six reactors sold to Amazon and Meta on twenty-year agreements, a five-million-customer retail book that hedges 43,641 MW of generation, and a battery fleet cut from 1,024 MW to 624 MW by the Moss Landing fire; nothing signed at any gas site.",
+      "hq": "Irving, TX, USA",
+      "ticker": "NYSE: VST",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "vistracorp.com",
+        "investor.vistracorp.com",
+        "mosslandingresponse.com"
+      ],
+      "srcTotal": 81,
+      "srcFirstPct": 37,
+      "kpiNorm": true
+    },
+    {
+      "slug": "nrg-energy",
+      "name": "NRG Energy",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "A retail company that owns power plants — 96 percent of revenue from eight million customers, a fleet doubled to 25 GW by the closed LS Power acquisition, 6 GW of demand response through CPower, and the only large merchant with no named hyperscaler: its 1.2 GW Texas project is 'aligned on principal commercial terms', not signed.",
+      "hq": "Houston, TX, USA",
+      "ticker": "NYSE: NRG",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "nrg.com",
+        "investors.nrg.com"
+      ],
+      "srcTotal": 72,
+      "srcFirstPct": 33,
+      "kpiNorm": true
     }
   ]
 }
