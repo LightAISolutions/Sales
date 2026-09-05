@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 2,
+  "slug": "esvolta",
+  "title": "esVolta — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-mixed-book",
+      "title": "Start here: the mixed book",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "esVolta owns batteries under a utility {{RA contract}} in California and batteries with 'a hedge in place with a confidential commodity market participant' plus open wholesale exposure in Texas, and it has raised about USD 1.5 billion of facilities against that mix. This guide teaches the mixed portfolio as a model: how an owner decides which battery gets a contract, a hedge or nothing; what each choice does to the cash flow a lender can count; how a corporate {{pre-NTP facility}}, project debt, {{tax equity}} and {{preferred equity}} are layered on a book that is part contracted and part {{merchant}}; and what happens to all of it when the {{financial sponsor}} puts the company up for sale.",
+        "**What it deliberately does not repeat:** the Aypa guide teaches the fully contracted platform and its financing stack; the Spearmint guide teaches the fully merchant developer and the lender that lends against a trading desk; the GridStor guide teaches RA versus toll versus revenue swap from the buyer's chair; the Strata guide teaches the originator that sells the contract. The Classroom owns tolling, ancillary stacking and duration arithmetic. Here the question is the allocation — why one owner runs both models at once, and how the mix is priced.",
+        "**One idea carries the guide.** A contract is a price for giving up upside. An owner with a mixed book is choosing, market by market, how much upside to sell — and a lender lends against the part that was sold, not the part that was kept."
+      ]
+    },
+    {
+      "id": "three-ways-a-battery-is-paid",
+      "title": "Three ways a battery is paid, and what each leaves the owner",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "**Contracted.** Under an {{RA contract}} a California utility or {{community choice aggregator}} pays a fixed monthly amount per megawatt for the battery's availability, and the owner keeps the right to dispatch it into the CAISO market. esVolta's Hummingbird (75 MW / 300 MWh) has 'a long-term resource adequacy contract' with PG&E; Santa Paula sells to 'a major energy commodity firm and several California electric community choice aggregators'; Black Walnut was selected by a CCA group. The fixed payment is the part a lender counts; the energy revenue is upside.",
+        "**Hedged.** In Texas there is no capacity payment, so an owner that wants a floor buys one from a trader. esVolta's three ERCOT batteries 'have a hedge in place with a confidential commodity market participant' and 'will also participate in the ERCOT wholesale market' (the CEO to Utility Dive, January 2025). A {{hedge}} — a {{revenue put}}, a swap or a fixed-for-floating contract — pays the owner when market revenue falls below a strike and takes a share when it rises. The counterparty, the tenor and the volume are undisclosed, which is normal: hedges are private bilateral contracts.",
+        "**Merchant.** Whatever is not hedged earns the ERCOT {{settlement point}} price and the {{ancillary services}} clearing prices, five minutes at a time. That is where the upside lives and where 2025's revenue collapse (about USD 29/kW against USD 193/kW in 2023, per Modo Energy) landed. esVolta's newest Texas project, Boxcar, went a step further and signed 'a long-term offtake agreement ... with a major corporate customer' — a contract in a market that has none by default.",
+        "**The allocation is made by market.** California's RA obligation creates a buyer for availability; Texas's energy-only design does not. An owner in both places is not choosing between contracted and merchant as a philosophy; it is selling the upside where someone will pay for it and keeping it where no one will."
+      ]
+    },
+    {
+      "id": "the-book-by-market",
+      "title": "esVolta's book by market and contract type",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "Every operating or in-construction project the company names, sorted by how it is paid. The MW/MWh are the company's; the contract descriptions are quoted from the company or its lenders.",
+      "cols": [
+        "Project (market)",
+        "Size",
+        "How it is paid",
+        "What a lender counts"
+      ],
+      "rows": [
+        [
+          "Hummingbird — San Jose (CAISO / PG&E)",
+          "75 MW / 300 MWh",
+          "'Long-term resource adequacy contract' with PG&E; USD 110 million Greenprint tax equity",
+          "The RA payment for the contract term; energy revenue as upside"
+        ],
+        [
+          "Santa Paula — Ventura County (CAISO)",
+          "30 MW / 60 MWh",
+          "'A major energy commodity firm and several California electric community choice aggregators'; U.S. Bancorp tax equity",
+          "Contracted payments from several counterparties; refinanced within the USD 170 million esFaraday facility"
+        ],
+        [
+          "Black Walnut — Santa Paula (CAISO)",
+          "15 MW / 60 MWh",
+          "Selected by the California Choice Energy Authority (five cities); ITC transferred to Computacenter",
+          "A CCA contract; the credit sold rather than partnered"
+        ],
+        [
+          "Wildcat, Acorn — Riverside and Ventura counties (CAISO / SCE)",
+          "3 MW and 2 MW",
+          "SCE 2017 IDER RFO contracts",
+          "Small utility contracts from the company's first portfolio"
+        ],
+        [
+          "Anole, Desert Willow, Burksol — Dallas, Ellis, Dickens counties (ERCOT)",
+          "490 MW / 980 MWh",
+          "'A hedge in place with a confidential commodity market participant' plus ERCOT wholesale; Captona preferred equity above the debt",
+          "The hedged floor and the credits; USD 258 million of construction, bridge, LC and term debt from five banks"
+        ],
+        [
+          "Boxcar — Wylie (ERCOT), construction",
+          "150 MW / 300 MWh",
+          "'Long-term offtake agreement ... with a major corporate customer'; USD 139.6 million MUFG financing",
+          "A contract — which is why one bank could lend alone"
+        ],
+        [
+          "City Breeze — Bay City (ERCOT), construction",
+          "140 MW / 280 MWh",
+          "Not stated",
+          "Nothing yet disclosed"
+        ]
+      ]
+    },
+    {
+      "id": "what-a-lender-does-with-the-mix",
+      "title": "What a lender does with the mix",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A project lender builds a cash-flow model and sizes debt so that the {{DSCR}} — cash available divided by debt service — stays above a floor in a downside case. Contracted revenue enters the model at face value for the contract term. Hedged revenue enters at the hedge floor for the hedge tenor. Merchant revenue enters at a consultant's price forecast, cut by a haircut, and often only after the hedge expires. The same 100 MW battery therefore supports more debt under an RA contract than under a hedge, and more under a hedge than merchant.",
+        "**The mix decides the structure, not just the amount.** esVolta's Texas trio was financed in July 2024 with USD 258 million of 'construction plus tax equity bridge financing, letters of credit, and a long-term loan' from MUFG, Nomura, KeyBanc, Investec and Cadence — five lenders sharing a hedged-and-merchant risk. Boxcar, with a corporate offtake contract, was financed in March 2026 by MUFG alone at USD 139.6 million. A contract concentrates the risk enough for one bank to take it.",
+        "**Preferred equity fills the gap the debt leaves.** The Captona transaction of January 2025 — 'a preferred equity transaction structured by Captona LLC, securing $243 million in total capital investment including ITC transfer proceeds' — sits between the banks and esVolta's common equity on the three Texas projects. {{Preferred equity}} takes a fixed return ahead of the owner in exchange for absorbing some of the merchant risk the banks would not; it is what a hedged-merchant book needs that a contracted one does not.",
+        "**The credits are the same in both markets.** The standalone-storage {{ITC}} is earned at placement in service regardless of revenue model, so it is the most bankable line on a merchant battery. esVolta has monetised it three ways: {{tax equity}} (U.S. Bancorp at Santa Paula, Greenprint at Hummingbird), transfer inside a preferred-equity package (Captona), and a plain {{tax credit transferability}} sale (Computacenter at Black Walnut). {{Tax-equity bridge loan}}s in the project facilities advance the money until the credit lands.",
+        "**Corporate debt sits above all of it.** The Nomura-led {{pre-NTP facility}} — USD 185 million in April 2024, 'up to $450 million' in June 2026, with Copenhagen Infrastructure Partners' green credit funds as 'largest lender' — funds development, long-lead equipment and pre-construction across the whole pipeline. Its lenders underwrite the platform: the mixed book of operating projects, the 25 GWh pipeline and the sponsor. That last item is the one now in play."
+      ]
+    },
+    {
+      "id": "the-disclosed-stack",
+      "title": "The disclosed stack, by layer",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "esVolta's facilities since 2020, arranged from the corporate top to the project bottom. Amounts are the announced facility sizes, not draws; three transactions have no published amount.",
+      "cols": [
+        "Layer",
+        "Facility (date)",
+        "Lenders / investors",
+        "What it is lent against"
+      ],
+      "rows": [
+        [
+          "Corporate — pre-NTP",
+          "USD 185 million (April 2024) → up to USD 450 million (June 2026)",
+          "Nomura (lead); CIP Green Credit Funds I and II; Voya; Allianz GI; Celtic Bank; HSBC AM; Fiera; Truist",
+          "The pipeline, the operating book and the sponsor"
+        ],
+        [
+          "Project — preferred equity",
+          "USD 243 million incl. ITC transfer proceeds (January 2025)",
+          "Captona LLC and an unnamed equity partner",
+          "Three hedged-merchant Texas batteries, ahead of the common equity"
+        ],
+        [
+          "Project — construction / term",
+          "USD 258 million (July 2024)",
+          "MUFG, Nomura, KeyBanc (co-lead); Investec; Cadence Bank",
+          "The Texas trio's hedge floor, credits and merchant forecast"
+        ],
+        [
+          "Project — construction / term",
+          "USD 139.6 million (March 2026)",
+          "MUFG Bank alone",
+          "Boxcar's corporate offtake contract"
+        ],
+        [
+          "Project — refinancing",
+          "USD 140 million (February 2020) → USD 170 million (November 2023)",
+          "CIT, Siemens, CoBank, KeyBanc → First Citizens Bank Energy Finance",
+          "The esFaraday California contracted portfolio"
+        ],
+        [
+          "Tax equity",
+          "USD 110 million (November 2024); Santa Paula undisclosed (November 2023)",
+          "Greenprint Capital Management; U.S. Bancorp Impact Finance",
+          "The ITC on Hummingbird and Santa Paula"
+        ],
+        [
+          "Credit transfer",
+          "Undisclosed (December 2025)",
+          "Computacenter Holdings",
+          "The ITC on Black Walnut"
+        ]
+      ]
+    },
+    {
+      "id": "when-the-sponsor-sells",
+      "title": "When the sponsor sells: the mixed book on the block",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "Generate Capital bought esVolta in July 2022 for an undisclosed price. In January 2026 New Project Media reported Generate 'exploring strategic alternatives'; in June 2026 Infralogic reported it 'has mandated Barclays and Truist as advisors for the sale of esVolta' and quoted Generate's CEO that the {{sale process}} 'has seen good interest'. The company's own June 2026 release still calls it 'a portfolio company of Generate Capital'. A sale process is a formal auction; naming the banks is the point at which it becomes public.",
+        "**What a bidder is buying is the mix.** The Aypa guide teaches how a buyer prices a fully contracted platform: a book of long-dated contracts plus a pipeline. A mixed book is priced in two parts — the contracted and hedged cash flows at a low discount rate, the merchant exposure and the pipeline at a high one — and the bidder's identity decides the weighting. An {{infrastructure fund}} pays for the California RA contracts and the Texas hedge; a trading house pays for the merchant upside and the desk; an IPP pays for the pipeline and the team.",
+        "**The lenders are already voting.** Corporate lenders upsized the pre-NTP facility to USD 450 million in June 2026, during the sale process. A facility that funds 'long-lead equipment procurement' through a change of control tells a bidder the platform is underwritten independently of the sponsor — and it tells the seller the assets will not be starved while the auction runs. The reverse signal would have been a facility that shrank.",
+        "**Why the sponsor sells is not the company's fault.** New Project Media's sources tied the process to Generate's own capital — 'equity team layoffs and difficulty raising third-party capital' and write-downs on another portfolio company — rather than to esVolta's performance, and the CEO said the company was 'not currently looking to sell any material assets'. A {{financial sponsor}}'s exit is timed by the sponsor's fund life and balance sheet, as the Aypa guide's sponsor-exit chapter teaches; the operating company is the object, not the cause."
+      ]
+    },
+    {
+      "id": "the-disclosed-facilities-by-size",
+      "title": "Disclosed facilities by size",
+      "kind": "bars",
+      "read": "3 min",
+      "unit": "USD millions as announced by esVolta, its lenders and its investors",
+      "intro": "Facility sizes, not draws. The Santa Paula tax equity, the Black Walnut transfer and Generate's purchase price have no published amount and are not shown.",
+      "items": [
+        {
+          "label": "Corporate credit facility, upsized (2026)",
+          "sub": "Nomura lead; CIP Green Credit Funds largest lender",
+          "v": 450
+        },
+        {
+          "label": "ERCOT trio construction, bridge, LC and term (2024)",
+          "sub": "MUFG, Nomura, KeyBanc, Investec, Cadence",
+          "v": 258
+        },
+        {
+          "label": "Captona preferred equity incl. ITC proceeds (2025)",
+          "sub": "Captona and an unnamed equity partner",
+          "v": 243
+        },
+        {
+          "label": "Corporate pre-NTP facility, original (2024)",
+          "sub": "Nomura, CIP Green Credit Fund I, Voya",
+          "v": 185
+        },
+        {
+          "label": "esFaraday refinancing (2023)",
+          "sub": "First Citizens Bank Energy Finance",
+          "v": 170
+        },
+        {
+          "label": "esFaraday original facility (2020)",
+          "sub": "CIT, Siemens FS, CoBank, KeyBanc",
+          "v": 140
+        },
+        {
+          "label": "Boxcar project financing (2026)",
+          "sub": "MUFG Bank",
+          "v": 139.6
+        },
+        {
+          "label": "Hummingbird tax equity (2024)",
+          "sub": "Greenprint Capital Management",
+          "v": 110
+        }
+      ]
+    },
+    {
+      "id": "contract-hedge-or-merchant-the-owners-chair",
+      "title": "Contract, hedge or merchant: the owner's chair",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "An owner deciding how to pay for a new battery weighs the floor a contract gives against the upside it takes. The cards read the three choices from the owner's seat; the buyer's and the lender's seats are the GridStor and Aypa guides.",
+      "cards": [
+        {
+          "t": "Sell a contract (RA in California; corporate offtake at Boxcar)",
+          "meta": "Fixed payment for availability or capacity; owner may keep dispatch",
+          "adv": [
+            "The revenue line a lender counts at face value — one bank financed Boxcar alone",
+            "Survives a market collapse: 2025's ERCOT revenue halving did not touch an RA payment",
+            "Counterparty is a utility, a CCA or an investment-grade corporate"
+          ],
+          "dis": [
+            "Upside sold for the term; California RA prices are set by procurement cycles the owner does not control",
+            "Only available where a buyer for availability exists — Texas has no RA market",
+            "Long contracts fix the battery's economics before its degradation and augmentation costs are known"
+          ]
+        },
+        {
+          "t": "Buy a hedge (the Texas trio)",
+          "meta": "A trader pays when revenue falls below a strike and shares the upside above it",
+          "adv": [
+            "A floor without a utility: bankable in an energy-only market",
+            "Owner keeps dispatch and part of the upside",
+            "Tenor and volume can be tailored — a partial hedge on part of the fleet"
+          ],
+          "dis": [
+            "Counterparty, tenor and volume are private, so lenders haircut it and preferred equity is needed above the debt",
+            "The hedge expires; the merchant tail after it is what the lender models with a haircut",
+            "The trader is pricing the same market the owner is; the floor is bought at a cost"
+          ]
+        },
+        {
+          "t": "Stay merchant (the unhedged balance; City Breeze so far)",
+          "meta": "Five-minute settlement-point prices and ancillary services",
+          "adv": [
+            "All the upside — the 2023 ERCOT year paid about USD 193/kW",
+            "No counterparty to negotiate, no dispatch constraint",
+            "Fastest to close: nothing to sign but the interconnection"
+          ],
+          "dis": [
+            "The 2025 year paid about USD 29/kW; a fleet's revenue can fall by two-thirds in two years",
+            "Least debt per megawatt; needs the credit, corporate money or preferred equity to fund the build",
+            "A sponsor's sale process reprices merchant exposure hardest"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The hedge is smaller than it looks.** No source states the counterparty, the tenor or the share of the 980 MWh it covers. If the floor is thin or short, the Texas book is closer to merchant than the word 'hedge' suggests, and the USD 258 million of debt was carried by the credits and the preferred equity rather than the floor.",
+        "**The sponsor's problem becomes the company's.** A sale process run for the seller's reasons can end in a buyer that wants only one half of the book — the contracted half — and sells or starves the rest. The 25 GWh pipeline (Cactus Wren at 800 MW, Gila Monster, Tava Mountain, Marmot Hills, Holly Oaks) is the part a wrong buyer discards.",
+        "**One integrator, one country.** Sungrow systems sit on all three operating Texas sites and are the design basis at Boxcar; the company has no FEOC statement and its supplier code carries no FEOC language. If the 2026–2027 projects' credits are affected, the most bankable line in a merchant battery's model weakens.",
+        "**Contracts arrive late in California.** PG&E selected Hummingbird in 2018; the company says it began operating in March 2026 and no third party has confirmed it. An RA contract fixes the price but not the interconnection queue, and eight years is the cost.",
+        "**The pipeline outruns the book.** Cactus Wren alone is six times the company's largest project; it has permits, a 500 kV substation next door and a utility 'in active discussions', and no contract, supplier or financing. A mixed-book owner that has never signed a toll with an Arizona utility is proposing to sell one 3.2 GWh at a time."
+      ]
+    },
+    {
+      "id": "where-esvolta-slots-in",
+      "title": "Where esVolta slots in",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The corpus's storage owners, placed by how their batteries are paid and who owns the company.",
+      "cols": [
+        "Company (guide)",
+        "How the batteries are paid",
+        "Who owns the company",
+        "What esVolta shares / differs"
+      ],
+      "rows": [
+        [
+          "Aypa Power",
+          "Contracted platform",
+          "Blackstone → Brookfield (sale signed 2026)",
+          "Both are sponsor-owned platforms in a sale; Aypa's book is contracted, esVolta's is mixed"
+        ],
+        [
+          "Spearmint Energy",
+          "Merchant",
+          "Founders; Elda River as lender",
+          "Spearmint's lender lends against the desk; esVolta's lend against the RA contracts and a hedge floor"
+        ],
+        [
+          "GridStor",
+          "Contracted (RA, tolls, revenue swap)",
+          "A Goldman Sachs Asset Management fund",
+          "Same Modo 'pure-play' group in ERCOT; GridStor buys contracts before building, esVolta builds and hedges"
+        ],
+        [
+          "Strata Clean Energy",
+          "Tolls and RA — then sold",
+          "Founders",
+          "Both finance with Nomura-led corporate facilities; Strata sells the contract, esVolta keeps it"
+        ],
+        [
+          "Hunt Energy Network",
+          "Fully merchant, sub-10 MW",
+          "Hunt family with Manulife",
+          "Hunt trades its own fleet through its QSE; esVolta buys a hedge from a trader"
+        ],
+        [
+          "Intersect Power",
+          "Energy parks, now Google-owned",
+          "Google",
+          "Same Modo group; Intersect's batteries serve a captive load"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What does a resource-adequacy contract pay a battery for, and what does the owner keep?",
+          "a": "Availability — a fixed monthly payment per megawatt for meeting the buyer's capacity obligation. The owner keeps the right to dispatch into CAISO and earn energy revenue on top."
+        },
+        {
+          "q": "What is a hedge on a merchant battery, in one sentence?",
+          "a": "A private contract with a trader that pays the owner when market revenue falls below a strike and takes a share above it — a floor bought in a market that has no capacity payment."
+        },
+        {
+          "q": "Why did five banks share esVolta's Texas trio financing while one bank financed Boxcar alone?",
+          "a": "The trio is hedged-and-merchant, so the risk was syndicated; Boxcar has a long-term corporate offtake contract, which concentrates the revenue enough for a single lender."
+        },
+        {
+          "q": "What does preferred equity do in a hedged-merchant project's capital stack?",
+          "a": "It sits between the banks and the owner's common equity, takes a fixed return ahead of the owner, and absorbs merchant risk the banks would not lend against. Captona's USD 243 million package on the Texas trio is the instance."
+        },
+        {
+          "q": "How does a lender treat contracted, hedged and merchant revenue in a DSCR model?",
+          "a": "Contracted at face value for the term; hedged at the floor for the tenor; merchant at a forecast with a haircut, often only after the hedge expires. The same battery supports less debt at each step."
+        },
+        {
+          "q": "What does a pre-NTP corporate facility lend against?",
+          "a": "The platform — the pipeline, the operating book and the sponsor — rather than a single project. esVolta's Nomura-led facility funds development, long-lead equipment and pre-construction across five markets."
+        },
+        {
+          "q": "Name the three ways esVolta has monetised the storage ITC.",
+          "a": "Tax equity (U.S. Bancorp at Santa Paula, Greenprint at Hummingbird), transfer inside a preferred-equity package (Captona), and a plain credit sale (Computacenter at Black Walnut)."
+        },
+        {
+          "q": "Why does a mixed book get priced in two parts when the sponsor sells?",
+          "a": "Contracted and hedged cash flows are discounted at a low rate; merchant exposure and pipeline at a high one. Which bidder wins depends on which part it values — a fund, a trading house or an IPP weight them differently."
+        },
+        {
+          "q": "What signal did esVolta's lenders send during Generate's sale process?",
+          "a": "They upsized the corporate facility to USD 450 million in June 2026 — underwriting the platform through a change of control rather than shrinking it."
+        },
+        {
+          "q": "Why is the allocation between contracted and merchant made by market rather than by philosophy?",
+          "a": "California's RA obligation creates a buyer for availability; Texas's energy-only design does not. The owner sells upside where someone pays for it and keeps it where no one will."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "Under a California RA contract, who dispatches the battery?",
+          "c": [
+            "The utility",
+            "The owner",
+            "CAISO directly",
+            "The tax-equity investor"
+          ],
+          "a": 1,
+          "why": "RA pays for availability; dispatch and energy revenue stay with the owner. Under a toll the counterparty dispatches."
+        },
+        {
+          "q": "What was the esVolta–Captona transaction of January 2025?",
+          "c": [
+            "A sale of three Texas projects to Captona",
+            "A USD 243 million preferred-equity investment including ITC transfer proceeds",
+            "A construction loan",
+            "A tolling agreement"
+          ],
+          "a": 1,
+          "why": "esVolta's release and Captona's both describe preferred equity; esVolta remained owner-operator."
+        },
+        {
+          "q": "Which revenue does a lender count at face value in a DSCR model?",
+          "c": [
+            "Merchant energy revenue",
+            "Ancillary-services revenue",
+            "Contracted RA or offtake payments for the contract term",
+            "Forecast congestion revenue"
+          ],
+          "a": 2,
+          "why": "Contracted revenue is the only line that does not get a haircut; hedged revenue counts at the floor, merchant at a discounted forecast."
+        },
+        {
+          "q": "Why is Texas hedged rather than contracted in esVolta's book?",
+          "c": [
+            "Texas bans long-term contracts",
+            "ERCOT has no capacity or RA market, so a floor must be bought from a trader",
+            "Hedges are cheaper than RA contracts",
+            "The company prefers merchant risk"
+          ],
+          "a": 1,
+          "why": "Energy-only markets have no buyer for availability; the hedge substitutes for the missing capacity payment."
+        },
+        {
+          "q": "What does esVolta's June 2026 facility upsizing tell a bidder in the sale process?",
+          "c": [
+            "The sponsor is injecting equity",
+            "Lenders underwrite the platform independently of the sponsor",
+            "The company is over-leveraged",
+            "The pipeline has been sold"
+          ],
+          "a": 1,
+          "why": "A pre-NTP facility extended through a change of control signals the assets and pipeline stand on their own."
+        },
+        {
+          "q": "Which markets does esVolta say it operates in?",
+          "c": [
+            "CAISO, PJM and ERCOT",
+            "CAISO, ERCOT and WECC, expanding into SPP and MISO",
+            "ERCOT only",
+            "PJM and MISO"
+          ],
+          "a": 1,
+          "why": "The company's June 2026 release; no PJM project has ever been named."
+        },
+        {
+          "q": "Which layer absorbs merchant risk the banks will not lend against?",
+          "c": [
+            "The corporate revolver",
+            "Preferred equity",
+            "The tax-equity bridge",
+            "The interconnection deposit"
+          ],
+          "a": 1,
+          "why": "Preferred equity takes a fixed return ahead of common equity in exchange for carrying risk above the debt."
+        },
+        {
+          "q": "What is the single biggest unknown in esVolta's Texas revenue model?",
+          "c": [
+            "The battery supplier",
+            "The size, tenor and counterparty of the hedge",
+            "The interconnection voltage",
+            "The EPC"
+          ],
+          "a": 1,
+          "why": "Hedges are private; without the terms, a reader cannot tell how close to merchant the Texas book really is."
+        }
+      ]
+    }
+  ]
+}

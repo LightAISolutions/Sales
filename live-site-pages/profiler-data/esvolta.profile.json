@@ -1,0 +1,1124 @@
+{
+  "schemaVersion": 7,
+  "slug": "esvolta",
+  "name": "esVolta, LP",
+  "shortName": "esVolta",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://www.esvolta.com/",
+  "headquarters": "Newport Beach, California (100 Bayview Circle, Suite 340); formerly Aliso Viejo; staff 'remote with periodic site travel' per the careers page",
+  "founded": 2017,
+  "employees": "Not stated; about 130 people named by department on the company's about page (September 2026); LinkedIn '51-200'; 28 staff at the July 2022 Generate acquisition per the Orange County Business Journal",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: esVolta is a Generate Capital-owned standalone-storage developer and owner whose sponsor has put it up for sale — Infralogic reported on 5 June 2026 that Generate 'has mandated Barclays and Truist as advisors for the sale of esVolta' and quoted Generate's CEO that the process 'has seen good interest' — while the company itself still describes itself as 'a portfolio company of Generate Capital' (June 2026 release). The premise handed to this dossier is right on two clauses and wrong on the third: esVolta is a mixed contracted-and-merchant owner in CAISO and ERCOT, but it has never named a PJM project; its stated markets are 'CAISO, ERCOT, WECC' with 'continued expansion into SPP and MISO'. The esVolta–Captona transaction of January 2025 was a USD 243 million preferred-equity investment plus ITC-transfer proceeds into three Texas projects, not a sale — esVolta remains the owner-operator. What the company says (June 2026): 'approximately 2.0 GWh' of operational and in-construction contracted storage, 'over 25 GWh' of pipeline across about 30 projects, 'Total Investment to Date: $1+ billion', founded 2017 by Randolph Mann, headquartered in Newport Beach, California. Operating as released: Anole 240 MW / 480 MWh (Seagoville, Dallas County; July 2025), Desert Willow 150 MW / 300 MWh (Midlothian; May 2025) and Burksol 100 MW / 200 MWh (Afton, Dickens County; March 2025) in ERCOT — 'a hedge in place with a confidential commodity market participant', otherwise merchant, on Sungrow PowerTitan systems with Saber Power and Quanta as EPCs; Hummingbird 75 MW / 300 MWh (San Jose; company says operating since March 2026) under a long-term PG&E resource-adequacy contract; Santa Paula 30 MW / 60 MWh (offtakers 'a major energy commodity firm and several California electric community choice aggregators'); Black Walnut 15 MW / 60 MWh (California Choice Energy Authority); Wildcat and Acorn (SCE, 2021). Under construction: Boxcar 150 MW / 300 MWh (Wylie, Texas; 'a long-term offtake agreement ... with a major corporate customer'; USD 139.6 million MUFG financing, COD 2027) and City Breeze 140 MW / 280 MWh (Bay City, Texas; groundbreaking April 2026). Financing since 2023: a USD 170 million First Citizens refinancing, a USD 185 million Nomura-led pre-NTP facility upsized to USD 450 million in June 2026 (CIP Green Credit Funds the largest lender), USD 258 million of ERCOT project facilities (MUFG, Nomura, KeyBanc, Investec, Cadence), USD 110 million Greenprint tax equity at Hummingbird, the USD 243 million Captona preferred equity, an ITC transfer to Computacenter at Black Walnut, and the MUFG Boxcar loan. Collection gap: Generate's stake, the acquisition price, any sale valuation, the hedge counterparty, the Boxcar offtaker and the ITC buyers in the Captona deal are undisclosed.",
+  "ecosystemRole": "esVolta is the mixed-portfolio storage owner this corpus lacked: contracted resource-adequacy batteries in California, hedged-plus-merchant batteries in Texas, and a pipeline that runs into Arizona (Cactus Wren, 800 MW / 3,200 MWh, county-approved December 2025 with SRP 'in active discussions'), New Mexico (Gila Monster, 50 MW, for PNM), Colorado (Tava Mountain, 100 MW) and Montana. For a supplier it is a repeat buyer of Chinese integrated systems (Sungrow on all three Texas sites; Powin was its exclusive supplier through 2022) with a stated corporate facility earmarked for 'long-lead equipment procurement', and a sponsor-sale process that will decide who signs the next order. It sits with GridStor, Intersect Power and Nightpeak in Modo Energy's 'pure-play storage developers' group in ERCOT.",
+  "productsAndServices": [
+    {
+      "name": "Owned and operated storage — hedged-and-merchant in ERCOT",
+      "category": "Owned BESS — ERCOT (hedge plus wholesale)",
+      "description": "Three operating projects totalling 490 MW / 980 MWh, all two-hour lithium-iron-phosphate systems: Burksol (100 MW / 200 MWh; Afton, Dickens County; interconnects through Wind Energy Transmission Texas; acquired from Highfield Energy in December 2022; commercial March 2025; EPC Saber Power), Desert Willow (150 MW / 300 MWh; Midlothian, Ellis County; commercial May 2025; EPC Saber Power; batteries 'from Sungrow' with 'liquid cooled HVAC' per the company's VP of Projects) and Anole (240 MW / 480 MWh; Seagoville, Dallas County, ERCOT North zone; commercial July 2025; EPC Quanta Infrastructure Solutions Group). Revenue model as the CEO described it to Utility Dive in January 2025: the projects 'have a hedge in place with a confidential commodity market participant. They will also participate in the ERCOT wholesale market.' The company put the trio at 'roughly 4% of ERCOT's anticipated 12.2 GW of storage capacity as of July 2025'. Financed by USD 258 million of construction, tax-equity bridge, letter-of-credit and term facilities (MUFG, Nomura and KeyBanc as coordinating lead arrangers, Investec, Cadence Bank; July 2024) and the USD 243 million Captona preferred equity plus ITC transfer (January 2025). ESS News reports Sungrow PowerTitan 1.0 on all three sites.",
+      "highlights": [
+        "490 MW / 980 MWh operating in ERCOT by July 2025; Modo Energy listed Anole ('247 MW | 480 MWh') among the largest Q3 2025 additions",
+        "The hedge counterparty has never been named; the balance is merchant — this is the contracted-and-merchant mix the brief describes",
+        "Preferred equity from Captona (with an unnamed equity partner) sits above the project debt; esVolta 'raised nearly $900 million for its energy storage business in 2024'",
+        "Modo groups esVolta with GridStor, Intersect Power and Nightpeak as 'pure-play storage developers (1.25 GW) ... scaling after proving models elsewhere' in its 2025 ERCOT report"
+      ],
+      "positioning": "Merchant-with-a-hedge in Texas where GridStor tolls and swaps, Spearmint is fully merchant and Hunt Energy Network trades sub-10 MW units; larger than either specialist in ERCOT and smaller than Jupiter, Plus Power or Eolian.",
+      "soldThrough": "Wholesale energy and ancillary-services revenue plus a bilateral hedge with a commodity trader; tax credits monetised by transfer and tax equity",
+      "targetSegments": [
+        "ERCOT wholesale market",
+        "Commodity trading counterparties (hedges)",
+        "Corporate offtakers (Boxcar)"
+      ]
+    },
+    {
+      "name": "Owned and operated storage — contracted in CAISO",
+      "category": "Owned BESS — CAISO (resource adequacy)",
+      "description": "Hummingbird (75 MW / 300 MWh; San Jose, Santa Clara County; interconnected at PG&E's Metcalf 115 kV substation; selected by PG&E in July 2018 as one of four storage projects replacing gas capacity; 'long-term resource adequacy contract' with PG&E; USD 110 million tax equity from Greenprint Capital Management, November 2024; 'approximately 200 union jobs'; the company's projects page says 'Operating since March 2026' — no third-party COD article exists). Santa Paula (30 MW / 60 MWh; Ventura County, beside SCE's Wakefield substation; commercial January 2024; offtakers 'a major energy commodity firm and several California electric community choice aggregators'; U.S. Bancorp Impact Finance tax equity, 'esVolta's first tax equity transaction', November 2023; O&M by CAMS). Black Walnut (15 MW / 60 MWh; Santa Paula; selected by the California Choice Energy Authority in April 2020; commissioned October 2025; ITC transferred to Computacenter Holdings in December 2025, 'the first standalone ITC transfer by esVolta'). Wildcat (Palm Springs; 3 MW; operating since October 2021) and Acorn (Thousand Oaks; operating since April 2021) from SCE's 2017 IDER RFO. The 'esFaraday' California portfolio was refinanced at USD 170 million by First Citizens Bank in November 2023 (four projects, 370 MWh).",
+      "highlights": [
+        "Hummingbird is the company's largest contracted asset and its only utility RA contract of scale; PG&E selected it in 2018 and it took until 2026 to operate per the company",
+        "The California book is small-project heavy: Santa Paula, Black Walnut, Wildcat and Acorn together are under 130 MWh",
+        "Counterparties are CCAs, a commodity firm and PG&E — the company has never named the CCAs beyond CalChoice's members"
+      ],
+      "positioning": "A resource-adequacy seller to PG&E and CCAs, like Aypa's California book but far smaller; the contracts are what the corporate lenders underwrite alongside the Texas hedge.",
+      "soldThrough": "Long-term resource-adequacy contracts with PG&E and community choice aggregators; a bilateral contract with a commodity firm at Santa Paula",
+      "targetSegments": [
+        "PG&E",
+        "California community choice aggregators (CalChoice members Lancaster, Pico Rivera, Rancho Mirage, San Jacinto, Apple Valley per Energy-Storage.news)",
+        "Commodity trading firms"
+      ]
+    },
+    {
+      "name": "Development pipeline — 'about 30 projects, 25 GWh' across five markets",
+      "category": "Greenfield and acquired development (CAISO, ERCOT, WECC, SPP, MISO)",
+      "description": "Under construction: Boxcar (150 MW / 300 MWh; Wylie, Collin County; acquired from Black Mountain Energy Storage as 'Bufflehead' in March 2025; Oncor's Lavon 138 kV switching station; 'a long-term offtake agreement for the project with a major corporate customer'; USD 139.6 million MUFG construction, tax-equity bridge, letter-of-credit and term financing, March 2026; commercial 2027; filings cite Sungrow PowerTitan 2.0 as the design basis per Energy-Storage.news) and City Breeze (140 MW / 280 MWh; Bay City, Matagorda County; ERCOT queue 25INR0271 at 143.1 MW with an interconnection agreement and a projected COD of 18 March 2027; groundbreaking 9 April 2026 with Saber Power and SolaREIT) — together the 'Ironhorse portfolio', which brings the Texas book to 'five battery projects ... 1.56 GWh' by 2027. Permitted or in permitting: Cactus Wren (800 MW / 3,200 MWh, about 40 acres south of Maricopa, Pinal County, Arizona; Planning and Zoning 8–1 in November 2025 and Board of Supervisors unanimous on 10 December 2025; interconnection at SRP's Duke 500 kV substation; SRP 'in active discussions with the developer as we explore a potential energy storage agreement', ED3 requested pricing), Gila Monster (50 MW; Sandoval County, New Mexico; beside PNM's Rio Puerco switching substation; zoning approved 3–2 in August 2022; USD 300 million of industrial revenue bonds approved October 2024; construction 2027), Tava Mountain (100 MW; Colorado Springs; Planning Commission 6–1 in May 2025 to advance rezoning; Colorado Springs Utilities 'no current purchase plans'), Marmot Hills (250 MW) and Holly Oaks (125 MW) in California, and Beartooth (50 MW; Billings, Montana; NorthWestern Energy's 20-year pre-approval application was undone when a Montana court struck the pre-approval statute in May 2022). The June 2026 corporate facility is earmarked 'primarily to support project development, long-lead equipment procurement, and pre-construction costs'.",
+      "highlights": [
+        "Cactus Wren would be the company's largest project by a factor of six; no offtake is signed and SRP's statement is the only utility interest on record",
+        "Boxcar's corporate offtaker is unnamed — the first corporate contract in the company's history per its own boilerplate ('supplying both utilities and corporate offtakers')",
+        "The pipeline figure has been stable at '25 GWh' since January 2025 while the operating book grew from 1.5 to 2.0 GWh",
+        "No PJM project has ever been named; 'Virginia' appears once, in the 2022 Generate release's list of development states"
+      ],
+      "positioning": "A greenfield-plus-acquisition developer (Burksol from Highfield, Boxcar from Black Mountain) that keeps what it builds; Cleanview does not place it in its top 25 developers by pipeline.",
+      "soldThrough": "Own balance sheet and project finance; no project sales reported",
+      "targetSegments": [
+        "Arizona utilities (SRP, ED3) for Cactus Wren",
+        "PNM (Gila Monster)",
+        "Corporate offtakers (Boxcar)",
+        "ERCOT and CAISO wholesale"
+      ],
+      "roadmap": "Boxcar and City Breeze commercial in 2027; Cactus Wren groundbreaking targeted for 2026 per Energy-Storage.news; Gila Monster construction 2027 and 'full production' 2029 per the Rio Rancho Observer"
+    },
+    {
+      "name": "Corporate and project finance — the 'bankable' platform",
+      "category": "Financing (sponsor-backed private developer)",
+      "description": "esVolta's own values list 'Bankable' and 'Fully Integrated'; the record is a sequence of facilities that grew with the fleet. Corporate: USD 185 million senior secured pre-NTP facility (April 2024; Nomura sole lead arranger and administrative agent; Copenhagen Infrastructure Partners Green Credit Fund I; Voya) — later described by the company as 'the $200 million facility originally closed in March 2024' — upsized to 'up to $450 million' on 3 June 2026 with Nomura leading, CIP Green Credit Funds I and II as 'largest lender', Allianz Global Investors, Celtic Bank, HSBC Asset Management, Fiera Infrastructure Private Debt and Truist Bank. Project level: USD 140 million esFaraday facility (February 2020; CIT lead; Siemens Financial Services, CoBank, KeyBanc) refinanced at USD 170 million by First Citizens Bank Energy Finance (November 2023); USD 258 million ERCOT facilities (July 2024); USD 139.6 million Boxcar (MUFG, March 2026). Tax credits: U.S. Bancorp Impact Finance tax equity at Santa Paula (November 2023), USD 110 million Greenprint tax equity at Hummingbird (November 2024) — Energy-Storage.news noted the release 'didn't make clear whether it was a conventional tax equity ... or a tax credit transfer' — the Captona preferred equity 'including ITC transfer proceeds' (January 2025) and the Black Walnut transfer to Computacenter (December 2025). Counsel throughout: Orrick for esVolta; Norton Rose Fulbright, Winston & Strawn and Kirkland & Ellis across the counterparties.",
+      "highlights": [
+        "Nomura leads the corporate facility, as it does Strata's — the same bank desk finances both the originator and the owner in this corpus",
+        "CIP's credit funds are the largest corporate lender; CIP's equity fund is the buyer of Strata's Scatter Wash — the fund manager is on both sides of the Arizona storage market",
+        "'Total Investment to Date: $1+ billion' (homepage) against about USD 1.55 billion of disclosed facility sizes since 2020 — facilities are not draws"
+      ],
+      "positioning": "A more heavily bank-financed platform than GridStor (whose sponsor is a bank) and a more sponsor-dependent one than Spearmint; the sponsor's own capital constraints are now the variable.",
+      "soldThrough": "Corporate and project facilities arranged by Nomura, MUFG, First Citizens and KeyBanc; tax-credit monetisation by tax equity and transfer",
+      "targetSegments": [
+        "Infrastructure credit funds",
+        "Project-finance banks",
+        "Tax-credit buyers"
+      ]
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Project ledger — every project a source names, with MW / MWh, market, contract, financing and status as stated (sources: esvolta.com project page and releases, lender releases, county records, trade press)",
+      "specs": [
+        {
+          "band": "Operating (company states online)",
+          "label": "Anole — Seagoville, Dallas County, TX (ERCOT North)",
+          "value": "240 MW / 480 MWh (249 MW at the Captona announcement; '247MW' per Modo); 44 acres; 'Operating since July 2025'; two-hour LFP; EPC Quanta Infrastructure Solutions Group; Sungrow PowerTitan 1.0 per ESS News; hedge with 'a confidential commodity market participant' plus ERCOT wholesale"
+        },
+        {
+          "band": "Operating (company states online)",
+          "label": "Desert Willow — Midlothian, Ellis County, TX (ERCOT)",
+          "value": "150 MW / 300 MWh; 13 acres; 'Operating since May 2025'; EPC Saber Power; batteries 'from Sungrow' with 'liquid cooled HVAC' (VP of Projects, Midlothian Mirror re-post); ribbon-cutting 30 July 2025; same hedge"
+        },
+        {
+          "band": "Operating (company states online)",
+          "label": "Burksol — Afton, Dickens County, TX (ERCOT)",
+          "value": "100 MW / 200 MWh; 10 acres; 931 County Road 112; acquired from Highfield Energy December 2022 (Fractal Energy Storage Consultants ran the sale); construction from January 2024; commercial March 2025; interconnects through Wind Energy Transmission Texas; EPC Saber Power Services; 'Equipment suppliers: Sungrow and Fractal' (Texas Spur); same hedge"
+        },
+        {
+          "band": "Operating (company states online)",
+          "label": "Hummingbird — San Jose, Santa Clara County, CA (CAISO / PG&E)",
+          "value": "75 MW / 300 MWh; 'over 1,000 lithium-ion battery cabinets'; Metcalf 115 kV substation; PG&E 2018 RFO selection; 'long-term resource adequacy contract' with PG&E; USD 110 million Greenprint Capital Management tax equity (November 2024); 'Operating since March 2026' (company page) — third parties reported 'expected 2025'"
+        },
+        {
+          "band": "Operating (company states online)",
+          "label": "Santa Paula — Santa Paula, Ventura County, CA (CAISO / SCE)",
+          "value": "30 MW / 60 MWh; adjacent to Wakefield Substation; 'Operating since January 2024'; offtakers 'major energy commodity firm and several California electric community choice aggregators'; U.S. Bancorp Impact Finance tax equity (November 2023); CAMS O&M"
+        },
+        {
+          "band": "Operating (company states online)",
+          "label": "Black Walnut — Santa Paula, CA (CAISO)",
+          "value": "15 MW / 60 MWh; 17 containers of 1.25 MW per KCLU; selected by California Choice Energy Authority April 2020; 'commissioned in October 2025'; ITC transferred to Computacenter Holdings December 2025"
+        },
+        {
+          "band": "Operating (company states online)",
+          "label": "Wildcat and Acorn — Palm Springs (Riverside County) and Thousand Oaks (Ventura County), CA (CAISO / SCE)",
+          "value": "Wildcat 3 MW / 6 MWh on the company page (3 MW / 12 MWh at the 2018 award), operating since October 2021; Acorn 2 MW / 4 MWh on the company page (three Acorn sites, 6.5 MW / 26.5 MWh at the 2018 award), operating since April 2021; SCE 2017 IDER RFO contracts"
+        },
+        {
+          "band": "Under construction",
+          "label": "Boxcar — Wylie, Collin County, TX (ERCOT)",
+          "value": "150 MW / 300 MWh; acquired from Black Mountain Energy Storage ('Bufflehead') March 2025, price undisclosed; Oncor Lavon 138 kV switching station; ERCOT interconnection agreement September 2024; 'long-term offtake agreement ... with a major corporate customer' (unnamed); USD 139.6 million MUFG Bank construction, tax-equity bridge, LC and term financing (24 March 2026); 'operational in 2027'; design basis Sungrow PowerTitan 2.0 per filings (Energy-Storage.news)"
+        },
+        {
+          "band": "Under construction",
+          "label": "City Breeze — Bay City, Matagorda County, TX (ERCOT Coastal)",
+          "value": "140 MW / 280 MWh; ERCOT queue 25INR0271 'City Breeze BESS LLC', 143.1 MW, POI 'MAGILL4A 138KV', projected COD 18 March 2027, 'SS Completed, FIS Completed, IA'; groundbreaking 9 April 2026 with Saber Power and SolaREIT; offtake not stated; second project of the 'Ironhorse portfolio' with Boxcar"
+        },
+        {
+          "band": "Development — permitted",
+          "label": "Cactus Wren — south of Maricopa, Pinal County, AZ (SRP / WECC)",
+          "value": "'Up to 800 megawatts' / 3,200 MWh, four hours, about 40 acres; comprehensive-plan amendment, rezone and PAD overlay; Planning and Zoning 8–1 (20 November 2025), Board of Supervisors unanimous (10 December 2025); interconnection at SRP's Duke 500 kV substation; SRP 'in active discussions with the developer'; ED3 requested pricing; about 12-month build, groundbreaking targeted 2026; no offtake signed"
+        },
+        {
+          "band": "Development — permitted",
+          "label": "Gila Monster — Sandoval County (Rio Rancho), NM (PNM / WECC)",
+          "value": "50 MW; 9.5 acres beside PNM's Rio Puerco switching substation; zoning approved 3–2 on 24 August 2022 (third application since May 2021); USD 300 million industrial revenue bonds approved 23 October 2024; estimated cost USD 262 million; LFP containers; construction 2027, full production 2029; for PNM"
+        },
+        {
+          "band": "Development — in permitting",
+          "label": "Tava Mountain — Colorado Springs, CO",
+          "value": "100 MW; East Las Vegas and Royer Street; Planning Commission 6–1 in May 2025 to advance rezoning; Colorado Springs Utilities 'no current purchase plans'; residents cited the Moss Landing fire — esVolta: 'newer and safer technologies greatly mitigating such risks'; council approval reported only in search snippets, not verified"
+        },
+        {
+          "band": "Development — named without detail",
+          "label": "Marmot Hills (250 MW) and Holly Oaks (125 MW) — California",
+          "value": "Named by the CEO to Utility Dive in January 2025 as in development; counties, ISO position and offtake not stated"
+        },
+        {
+          "band": "Development — stalled",
+          "label": "Beartooth Energy Storage — Billings, MT (NorthWestern Energy)",
+          "value": "50 MW; NorthWestern's May 2021 pre-approval application for a 20-year agreement under which 'Beartooth would build and own the facility, and NorthWestern would control its charging and discharging'; the Montana pre-approval statute was struck down on 6 May 2022 (350 Montana suit) — 'could terminate a 50 megawatt carbon-free battery storage project'; no later status"
+        },
+        {
+          "band": "Legacy (acquired from Powin, December 2017)",
+          "label": "PPA Grand Johanna (Irvine, CA), Don Lee (Escondido, CA), Stratford (Ontario, IESO)",
+          "value": "2 MW / 9 MWh contracted with SCE, operational early 2017; 6.5 MW / 26 MWh contracted with SDG&E; 8.8 MW / 40.8 MWh with a 50 percent stake on commercial operation, contracted with the IESO — 'largest BESS in Canada at commissioning' per Energy-Storage.news; none appears on the current projects page and no source reports their status"
+        }
+      ],
+      "notes": "Company projects page total: '905 MW / 1,990 MWh' across ten projects (September 2026). Collection gap: per-project financing at Santa Paula and Black Walnut (amounts undisclosed), the hedge counterparty, the Boxcar offtaker, the CCAs at Santa Paula, and any PJM or MISO project — none is named."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-06-05",
+      "category": "ma",
+      "headline": "Infralogic: Generate Capital 'has mandated Barclays and Truist as advisors for the sale of esVolta'; Generate's CEO says the process 'has seen good interest'",
+      "read": "The sponsor is selling; no valuation or timeline is public and the company's own releases still call it a Generate portfolio company.",
+      "source": "https://ionanalytics.com/insights/infralogic/generate-capital-ceo-touts-shift-towards-projects-and-discipline/"
+    },
+    {
+      "date": "2026-06-03",
+      "category": "financial",
+      "headline": "Corporate credit facility upsized to 'up to $450 million' — Nomura leads; CIP Green Credit Funds I and II the largest lender; Allianz GI, Celtic Bank, HSBC AM, Fiera, Truist join",
+      "read": "Lenders extended the platform's runway during the sale process; use of proceeds is development, long-lead equipment and pre-construction across five markets including SPP and MISO.",
+      "source": "https://www.esvolta.com/post/esvolta-secures-upsized-corporate-credit-facility-to-support-expansion-of-energy-storage-portfolio"
+    },
+    {
+      "date": "2026-04-09",
+      "category": "project",
+      "headline": "City Breeze (140 MW / 280 MWh, Bay City, Texas) breaks ground with Saber Power and SolaREIT; second project in the 'Ironhorse portfolio'",
+      "read": "A fifth ERCOT battery; offtake unstated at groundbreaking.",
+      "source": "https://www.tipranks.com/news/private-companies/esvolta-expands-texas-battery-storage-portfolio-with-city-breeze-groundbreaking"
+    },
+    {
+      "date": "2026-03-24",
+      "category": "financial",
+      "headline": "USD 139.6 million MUFG financing for Boxcar (150 MW / 300 MWh, Wylie); 'a long-term offtake agreement ... with a major corporate customer'",
+      "read": "The first corporate offtake in the company's record, unnamed; it made a single-bank project loan possible.",
+      "source": "https://www.esvolta.com/post/esvolta-secures-139-6-million-project-financing-for-300-mwh-boxcar-energy-storage-project-in-texas"
+    },
+    {
+      "date": "2026-03-13",
+      "category": "project",
+      "headline": "KCLU: Santa Paula (30 MW) and Black Walnut (15 MW) both operating in Ventura County; Black Walnut is 17 containers of 1.25 MW",
+      "read": "Local confirmation of the two Ventura County batteries; the company's March 2026 date for Hummingbird has no equivalent.",
+      "source": "https://www.kclu.org/local-news/2026-03-13/expanding-green-energy-new-battery-energy-storage-project-in-ventura-county-can-power-45-000-homes"
+    },
+    {
+      "date": "2026-01-06",
+      "category": "regulatory",
+      "headline": "Energy-Storage.news: SRP 'in active discussions' and ED3 requesting pricing for the newly approved 800 MW / 3,200 MWh Cactus Wren project in Pinal County",
+      "read": "Arizona is the growth market; the project has permits and utility interest but no contract.",
+      "source": "https://www.energy-storage.news/utilities-srp-and-ed3-seeking-offtake-deal-for-esvoltas-newly-approved-3-2gwh-arizona-bess/"
+    },
+    {
+      "date": "2026-01",
+      "category": "ma",
+      "headline": "New Project Media: Generate Capital 'exploring strategic alternatives' for esVolta; CEO Mann: 'We are not currently looking to sell any material assets'",
+      "read": "First report of the sale process; sources cited Generate's own capital constraints and Pine Gate write-downs as the reason.",
+      "source": "https://newprojectmedia.com/ma-generate-capital-exploring-strategic-alternatives-for-esvolta/"
+    },
+    {
+      "date": "2025-12-18",
+      "category": "financial",
+      "headline": "Black Walnut ITC transferred to Computacenter Holdings — 'the first standalone ITC transfer by esVolta'",
+      "read": "A corporate buyer for a small credit; transferability is now used alongside tax equity.",
+      "source": "https://www.esvolta.com/post/esvolta-bolsters-clean-energy-in-california-with-computacenter-via-black-walnut-energy-storage-proje"
+    },
+    {
+      "date": "2025-12-10",
+      "category": "regulatory",
+      "headline": "Pinal County Board of Supervisors unanimously approves Cactus Wren (800 MW) after an 8–1 Planning and Zoning vote",
+      "read": "'The first time this board has seen a battery energy storage project by itself' (Rose Law Group's Court Rich).",
+      "source": "https://inmaricopa.com/800-megawatt-battery-project-south-of-city-gets-green-light/"
+    },
+    {
+      "date": "2025-10-08",
+      "category": "partnership",
+      "headline": "Sitetracker selected for asset-lifecycle management (VP Asset Management Marci Palmstrom quoted)",
+      "read": "An operating-fleet software choice; the company now runs asset management in-house.",
+      "source": "https://www.sitetracker.com/sitetracker-selected-by-esvolta-to-streamline-utility-scale-energy-storage-operations/"
+    },
+    {
+      "date": "2025-07-30",
+      "category": "project",
+      "headline": "Three Texas projects on line: Burksol (March), Desert Willow (May), Anole (July) — 490 MW / 980 MWh, 'roughly 4%' of ERCOT storage; Saber Power and Quanta as EPCs",
+      "read": "The company's operating book tripled in five months; ESS News names Sungrow PowerTitan 1.0 on all three.",
+      "source": "https://www.esvolta.com/post/esvolta-brings-three-large-scale-storage-projects-on-line-in-texas-meeting-2025-summer-peak"
+    },
+    {
+      "date": "2025-07-01",
+      "category": "policy",
+      "headline": "VP Government and Regulatory Affairs Tonja Wicks: 'If the final reconciliation bill ... continues fair access to investment tax credits for energy storage, we fully expect the storage sector will continue to grow rapidly through 2033'",
+      "read": "The company's only public policy statement; it concerns the ITC, not FEOC or tariffs.",
+      "source": "https://www.esvolta.com/post/energy-storage-news-clean-energy-experts-weigh-in-as-us-senators-vote-on-tax-reconciliation-bill"
+    },
+    {
+      "date": "2025-06-25",
+      "category": "leadership",
+      "headline": "Marci Palmstrom (ex-SCE operations) hired as VP Asset Management; Tonja Wicks (ex-Elevate Renewables) as VP Government and Regulatory Affairs (2 June); Mike Kalansky as VP Accounting (8 July)",
+      "read": "Three operating-company hires in six weeks as 1 GWh entered service.",
+      "source": "https://www.esvolta.com/post/esvolta-hires-marci-j-palmstrom-as-head-of-asset-management"
+    },
+    {
+      "date": "2025-05-15",
+      "category": "regulatory",
+      "headline": "Colorado Springs Planning Commission votes 6–1 to advance rezoning for the 100 MW Tava Mountain project over fire concerns",
+      "read": "Post-Moss Landing siting opposition reaches esVolta's pipeline; the utility has no purchase plans.",
+      "source": "https://krdo.com/news/2025/05/15/co-springs-homeowner-worried-about-fire-dangers-from-proposed-battery-facility-nearby/"
+    },
+    {
+      "date": "2025-03-27",
+      "category": "ma",
+      "headline": "Energy-Storage.news: esVolta acquires the 150 MW / 300 MWh Bufflehead project (now Boxcar) from Black Mountain Energy Storage; price undisclosed",
+      "read": "Buying late-stage projects supplements greenfield — the same market GridStor buys in.",
+      "source": "https://www.energy-storage.news/esvolta-acquires-300mwh-ercot-bess-from-black-mountain-energy-storage/"
+    },
+    {
+      "date": "2025-01-28",
+      "category": "market",
+      "headline": "Utility Dive: the Texas trio 'have a hedge in place with a confidential commodity market participant' and 'will also participate in the ERCOT wholesale market'; Marmot Hills and Holly Oaks named in California",
+      "read": "The clearest first-party statement of the revenue model; the hedge partner is still unnamed.",
+      "source": "https://www.utilitydive.com/news/esvolta-ercot-texas-battery-storage/738490/"
+    },
+    {
+      "date": "2025-01-27",
+      "category": "financial",
+      "headline": "USD 243 million preferred equity structured by Captona LLC, 'including ITC transfer proceeds', for Anole, Desert Willow and Burksol; 'esVolta raised nearly $900 million ... in 2024'",
+      "read": "Preferred equity, not a sale — esVolta remains owner-operator; Captona's equity partner is unnamed.",
+      "source": "https://www.prnewswire.com/news-releases/esvolta-secures-243-million-preferred-equity-investment-for-three-standalone-battery-energy-storage-projects-302360772.html"
+    },
+    {
+      "date": "2024-11-12",
+      "category": "financial",
+      "headline": "USD 110 million tax-equity investment by Greenprint Capital Management in Hummingbird (75 MW / 300 MWh)",
+      "read": "Energy-Storage.news noted the release did not say whether it was conventional tax equity or a credit transfer.",
+      "source": "https://www.prnewswire.com/news-releases/esvolta-secures-110-million-tax-equity-investment-for-300-mwh-hummingbird-energy-storage-project-302302499.html"
+    },
+    {
+      "date": "2024-10-23",
+      "category": "regulatory",
+      "headline": "Sandoval County, New Mexico approves USD 300 million of industrial revenue bonds for the 50 MW Gila Monster project (estimated cost USD 262 million; construction 2027)",
+      "read": "A county-level financing tool for a PNM-adjacent project; the cost figure is the county's, not the company's.",
+      "source": "https://www.rrobserver.com/news/commission-approves-es-volta-battery-storage-facility/article_1af05818-96f7-11ef-8f33-4386779e419a.html"
+    },
+    {
+      "date": "2024-08-15",
+      "category": "leadership",
+      "headline": "Justin Johns (ex-CFO, Shell's SouthCoast Wind and Shell's global renewables business) joins as SVP and CFO; predecessor Krish Koomar later moved to Vesper Energy",
+      "read": "A large-company finance chief hired as the facilities scaled past USD 800 million.",
+      "source": "https://www.prnewswire.com/news-releases/justin-johns-joins-esvolta-as-chief-financial-officer-302223682.html"
+    },
+    {
+      "date": "2024-07-30",
+      "category": "financial",
+      "headline": "USD 258 million senior secured credit facilities for the ERCOT trio — MUFG (coordinating lead arranger and green-loan coordinator), Nomura, KeyBanc, Investec, Cadence Bank",
+      "read": "Construction debt on merchant-with-hedge batteries; the largest single financing in the company's record.",
+      "source": "https://www.esvolta.com/post/esvolta-secures-258-million-credit-facilities-for-ercot-storage-portfolio"
+    },
+    {
+      "date": "2024-04-08",
+      "category": "financial",
+      "headline": "USD 185 million senior secured pre-NTP corporate facility led by Nomura with CIP Green Credit Fund I and Voya, for a '20+ GWh pipeline'",
+      "read": "Development capital from credit funds — the facility later described as USD 200 million and upsized to USD 450 million.",
+      "source": "https://www.prnewswire.com/news-releases/esvolta-secures-185-million-credit-facility-302109926.html"
+    },
+    {
+      "date": "2024-01-14",
+      "category": "project",
+      "headline": "Construction begins at Burksol (200 MWh), acquired from Highfield Energy in December 2022",
+      "read": "The company's first Texas build; Saber Power as EPC and Sungrow as supplier per the local groundbreaking notice.",
+      "source": "https://www.esvolta.com/post/esvolta-commences-construction-of-200-mwh-burksol-bess-facility-in-texas"
+    },
+    {
+      "date": "2023-11-14",
+      "category": "financial",
+      "headline": "First Citizens Bank leads a USD 170 million refinancing of the esFaraday California portfolio (four projects, 370 MWh); lender wording: 'esVolta is owned by Generate Capital, PBC'",
+      "read": "The 2020 CIT facility refinanced and upsized; the lender's release is the plainest ownership statement on record.",
+      "source": "https://www.prnewswire.com/news-releases/first-citizens-bank-leads-170-million-refinancing-for-california-battery-energy-storage-project-portfolio-301987680.html"
+    },
+    {
+      "date": "2023-11-10",
+      "category": "financial",
+      "headline": "U.S. Bancorp Impact Finance tax equity at Santa Paula — 'esVolta's first tax equity transaction' and among the first for standalone storage under the IRA",
+      "read": "The company began monetising the standalone-storage ITC as soon as it existed.",
+      "source": "https://batteriesnews.com/esvolta-secures-tax-equity-investment-from-us-bank-for-battery-energy-storage-project-in-california/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "sungrow",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024",
+      "scale": "Anole, Desert Willow, Burksol (980 MWh)",
+      "via": "PowerTitan (PowerTitan 1.0 per ESS News)",
+      "note": "esVolta's VP of Projects said Desert Willow's batteries are 'from Sungrow' with 'liquid cooled HVAC' (Midlothian Mirror, re-posted by esVolta); ESS News reports 'Sungrow PowerTitan 1.0 BESS batteries used across all three sites'; the Burksol groundbreaking notice lists 'Equipment suppliers: Sungrow and Fractal'.",
+      "context": "Sungrow is the only battery supplier esVolta has named on an operating project since its Powin exclusivity ended in 2022. The company itself names Sungrow only for Desert Willow; the all-three attribution is trade press (ESS News) and a local notice (Texas Spur). Boxcar's filings cite Sungrow PowerTitan 2.0 as the design basis per Energy-Storage.news, but no supply agreement for Boxcar or City Breeze has been announced.",
+      "source": "https://www.esvolta.com/post/midlothian-mirror-new-energy-storage-facility-to-help-power-texas"
+    },
+    {
+      "slug": "quanta-services",
+      "type": "partner",
+      "status": "active",
+      "since": "2024",
+      "scale": "Anole 240 MW / 480 MWh EPC",
+      "via": "Quanta Infrastructure Solutions Group",
+      "note": "'esVolta collaborated with ... Quanta Infrastructure Solutions Group at Anole on engineering, procurement, and construction' (company release, July 2025).",
+      "context": "Quanta built the largest of the three Texas projects; Saber Power (not covered) built Desert Willow and Burksol and is the named partner at City Breeze. No Quanta role on Boxcar or City Breeze is reported.",
+      "source": "https://www.esvolta.com/post/esvolta-brings-three-large-scale-storage-projects-on-line-in-texas-meeting-2025-summer-peak"
+    },
+    {
+      "slug": "gridstor",
+      "type": "competitor",
+      "status": "active",
+      "since": "2025",
+      "scale": "Modo Energy ERCOT 2025 annual report",
+      "note": "Modo Energy groups esVolta with GridStor, Intersect Power and Nightpeak as 'pure-play storage developers (1.25 GW)' in ERCOT — 'scaling after proving models elsewhere'.",
+      "context": "An analyst grouping, not a transaction. Both companies added ERCOT capacity in 2025 (Anole and GridStor's Hidden Lakes among the largest Q3 additions per Modo). GridStor tolls and swaps its output; esVolta hedges part of its Texas fleet and runs the rest merchant.",
+      "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
+    },
+    {
+      "slug": "intersect-power",
+      "type": "competitor",
+      "status": "active",
+      "since": "2025",
+      "scale": "Modo Energy ERCOT 2025 annual report",
+      "note": "Intersect Power sits in the same Modo Energy 'pure-play storage developers' group as esVolta in ERCOT.",
+      "context": "Analyst grouping only; no shared project or transaction is reported.",
+      "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "effectiveDate": "2023-01",
+      "exposure": "esVolta monetises the standalone-storage investment tax credit on every project it has financed since 2023: U.S. Bancorp Impact Finance tax equity at Santa Paula (November 2023, 'one of the first tax equity financings structured to capitalize on ... standalone energy storage under the Inflation Reduction Act'), USD 110 million Greenprint tax equity at Hummingbird (November 2024), ITC-transfer proceeds inside the USD 243 million Captona preferred-equity package for the Texas trio (January 2025), and a transfer to Computacenter Holdings at Black Walnut (December 2025). Its policy lead said in July 2025 that continued 'fair access to investment tax credits for energy storage' would keep the sector growing 'through 2033'.",
+      "mitigation": "Tax-equity bridge loans are built into the MUFG-led project facilities (2024 ERCOT trio, 2026 Boxcar) so credits are monetised at or after COD.",
+      "source": "https://www.esvolta.com/post/esvolta-bolsters-clean-energy-in-california-with-computacenter-via-black-walnut-energy-storage-proje"
+    },
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "exposure": "The company has made no public statement on the foreign-entity-of-concern rules and its supplier code of conduct (revised February 2025) carries no FEOC or UFLPA language. The facts on record: its three operating Texas projects use Sungrow systems (a Chinese integrator) per the company's VP of Projects and ESS News, and Boxcar's filings cite Sungrow PowerTitan 2.0 as the design basis. Collection gap: no source analyses whether the 2026–2027 projects' credits are affected.",
+      "source": "https://www.esvolta.com/supplier"
+    },
+    {
+      "regime": "Section 301 tariffs",
+      "status": "in-effect",
+      "exposure": "No esVolta statement on tariffs exists. The June 2026 corporate facility is earmarked in part for 'long-lead equipment procurement', which is the only procurement-timing signal on record.",
+      "source": "https://www.esvolta.com/post/esvolta-secures-upsized-corporate-credit-facility-to-support-expansion-of-energy-storage-portfolio"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Randolph Mann",
+      "title": "Founder and Chief Executive Officer",
+      "photo": "images/execs/esvolta-mann.jpg",
+      "background": [
+        "Founded esVolta in 2017; titled 'President' in releases through 2023, 'President and CEO' in January 2024, 'Founder and CEO' since",
+        "President of Salt Creek Energy Advisors; VP Development at NRG Energy (renewables, microgrids) and at Edison Mission Energy (wind) per Equilar",
+        "MS Management, MIT Sloan; BA, University of Virginia (Equilar)",
+        "To New Project Media (January 2026): 'Generate have been a great sponsor for the company' and 'We are not currently looking to sell any material assets'"
+      ]
+    },
+    {
+      "name": "Justin Johns",
+      "title": "Senior Vice President and Chief Financial Officer (since 15 August 2024)",
+      "photo": "images/execs/esvolta-johns.jpg",
+      "background": [
+        "Fifteen years at Shell — most recently CFO of the SouthCoast Wind Energy offshore-wind joint venture, previously CFO of Shell's global renewable energy business",
+        "Quoted on the Captona preferred equity (January 2025) and the MUFG Boxcar financing (March 2026)",
+        "MBA and JD, University of South Dakota"
+      ]
+    },
+    {
+      "name": "Tanya Willacy",
+      "title": "Senior Vice President and Chief Legal Officer",
+      "photo": "images/execs/esvolta-willacy.jpg",
+      "background": [
+        "Listed on the company's leadership page; no company biography published"
+      ]
+    },
+    {
+      "name": "Rishad Olpadwala",
+      "title": "Senior Vice President and Chief Development Officer",
+      "photo": "images/execs/esvolta-olpadwala.jpg",
+      "background": [
+        "Company representative to NAEMA alongside VP Development Phil Reeves",
+        "Previously Principal, Sierra Renewable Power (The Org aggregator — unverified by a company page)"
+      ]
+    },
+    {
+      "name": "Dave Leligdon",
+      "title": "Senior Vice President and Chief Projects Officer",
+      "photo": "images/execs/esvolta-leligdon.jpg",
+      "background": [
+        "Previously SVP Projects at Eos Energy Storage and 28 years at Black & Veatch (The Org aggregator — unverified by a company page)"
+      ]
+    },
+    {
+      "name": "Devin Hardman",
+      "title": "Senior Vice President and Chief Commercial Officer",
+      "background": [
+        "Listed on the company's leadership page; described as SVP Commercial Operations by KCLU (March 2026); no company biography published"
+      ]
+    },
+    {
+      "name": "Lizette Moses",
+      "title": "Senior Vice President and Chief Human Resources Officer",
+      "photo": "images/execs/esvolta-moses.jpg",
+      "background": [
+        "Listed on the company's leadership page; no company biography published"
+      ]
+    },
+    {
+      "name": "Tonja L. Wicks",
+      "title": "Vice President, Government and Regulatory Affairs (since June 2025)",
+      "photo": "images/execs/esvolta-wicks.jpg",
+      "background": [
+        "Twenty years across utilities, IPPs and renewables; previously VP Regulatory Affairs, Elevate Renewables",
+        "MBA American University; MA Public Policy and BA, Howard University; based in Pittsburgh",
+        "The company's public voice on the ITC during the July 2025 reconciliation bill"
+      ]
+    },
+    {
+      "name": "Marci J. Palmstrom",
+      "title": "Vice President, Asset Management (since June 2025)",
+      "background": [
+        "More than 25 years; former Southern California Edison operations executive",
+        "BA CSU Fullerton; MPA CSU Northridge; quoted on the Sitetracker selection (October 2025)"
+      ]
+    },
+    {
+      "name": "Michael Kalansky",
+      "title": "Vice President, Accounting, Tax and Risk (since July 2025)",
+      "background": [
+        "About 25 years across EY, banking and private equity; 'interim controller at a sustainable infrastructure investment firm'",
+        "CPA; MBA and BS, Fairfield University; based in Los Angeles"
+      ]
+    },
+    {
+      "name": "Joseph Williamson",
+      "title": "Vice President, Projects",
+      "background": [
+        "Quoted on Desert Willow's Sungrow batteries (August 2025) and on Hummingbird ('Energy storage has become a linchpin', Bloomberg Businessweek re-post, January 2025)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Disclosed facilities and sponsor record (2020–2026)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "esVolta publishes no financial statements; no revenue, EBITDA or valuation appears in any source. 'Expected' is left empty."
+          },
+          {
+            "name": "Ownership",
+            "actual": "'A portfolio company of Generate Capital' (company boilerplate, June 2026); 'esVolta is owned by Generate Capital, PBC' (First Citizens, November 2023); acquired 21 July 2022 (completed 13 July 2022 per the Orange County Business Journal), terms undisclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Stake and price not stated. Prior owners: Blue Sky Alternative Investments (2017), RBP Partners (sponsor by 2020), Macquarie Green Investment Group (bridge loan convertible to equity, January 2021)."
+          },
+          {
+            "name": "Sale process",
+            "actual": "Generate 'has mandated Barclays and Truist as advisors for the sale of esVolta' (Infralogic, 5 June 2026); 'exploring strategic alternatives' (New Project Media, January 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Trade press; no sponsor release, valuation or timeline."
+          },
+          {
+            "name": "Total investment (company claim)",
+            "actual": "'Total Investment to Date: $1+ billion' (homepage, 2026); 'esVolta raised nearly $900 million for its energy storage business in 2024' (January 2025 release)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company statements."
+          },
+          {
+            "name": "Corporate credit facility",
+            "actual": "USD 185 million (April 2024; Nomura, CIP Green Credit Fund I, Voya; later described as USD 200 million) → 'up to $450 million' (3 June 2026; Nomura lead; CIP Green Credit Funds I and II largest lender; Allianz GI, Celtic Bank, HSBC AM, Fiera, Truist)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases."
+          },
+          {
+            "name": "Project facilities",
+            "actual": "USD 140 million esFaraday (February 2020; CIT, Siemens FS, CoBank, KeyBanc) → USD 170 million refinancing (November 2023; First Citizens); USD 258 million ERCOT trio (July 2024; MUFG, Nomura, KeyBanc, Investec, Cadence); USD 139.6 million Boxcar (March 2026; MUFG)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company and lender releases; KeyBanc's deal page names itself coordinating lead arranger on the USD 258 million while the company says 'led by MUFG' — Energy-Storage.news's three-co-arranger list reconciles them."
+          },
+          {
+            "name": "Tax equity and credit transfers",
+            "actual": "U.S. Bancorp Impact Finance at Santa Paula (November 2023, undisclosed); USD 110 million Greenprint at Hummingbird (November 2024); USD 243 million Captona preferred equity 'including ITC transfer proceeds' (January 2025); Computacenter at Black Walnut (December 2025, undisclosed)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; the Captona ITC buyer and the Black Walnut amount are not stated."
+          },
+          {
+            "name": "Operating and in-construction capacity (company)",
+            "actual": "'Operating/In-Construction: 2.0 GWh' (homepage, 2026); projects page total 905 MW / 1,990 MWh; 'over 25 GWh' in development",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company statements; operating alone is about 615 MW / 1,410 MWh by the projects-page dates (Anole, Desert Willow, Burksol, Hummingbird, Santa Paula, Black Walnut, Wildcat, Acorn).",
+            "kpi": "mw-energized",
+            "qty": 615
+          }
+        ],
+        "commentary": "A sponsor-owned private company in a sale process: the numbers are facility sizes released by the company and its lenders, plus the company's own cumulative claims. No consensus or guidance exists, so 'expected' is empty throughout."
+      }
+    ],
+    "commentary": "About USD 1.55 billion of disclosed facilities since 2020 (corporate USD 450 million; project USD 170 million + 258 million + 139.6 million; tax equity and preferred USD 110 million + 243 million; plus undisclosed Santa Paula and Black Walnut credits). The corporate facility, upsized while the sponsor was selling, is the item that tells a reader lenders are underwriting the platform rather than the sponsor."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that esVolta is a mixed contracted-and-merchant owner in CAISO and ERCOT and not present in PJM — the brief's premise is two-thirds right. Basis: the company's own market list ('CAISO, ERCOT, WECC' plus expansion into 'SPP and MISO', June 2026), PG&E and CCA contracts in California, a hedge plus wholesale participation in Texas, and no PJM project in any source since 2017.",
+    "(High confidence) We assess that the January 2025 esVolta–Captona transaction was a financing, not a divestiture. Basis: the company's release ('preferred equity transaction structured by Captona LLC ... including ITC transfer proceeds'), Captona's own release ('joint venture'), and the July 2025 completion release naming esVolta as owner-operator with Captona as 'preferred equity' beside MUFG's debt. Renewable Energy World's 'acquires' headline overstated it.",
+    "(High confidence) We assess that Generate Capital is selling esVolta and that the outcome, not the current sponsor, decides the company's next three years of procurement. Basis: Infralogic's report of Barclays and Truist mandates and Generate's CEO on 'good interest' (June 2026), New Project Media's January 2026 report tying the process to Generate's own capital constraints, and the company's silence beyond 'portfolio company of Generate Capital'. Cutting against a distress reading: lenders upsized the corporate facility to USD 450 million during the process.",
+    "(Moderate confidence) We assess that the hedge-plus-merchant Texas model is financeable because the credits and the corporate facility carry it, not because the hedge is large. Basis: USD 258 million of project debt was raised against 980 MWh of hedged-and-merchant batteries with a tax-equity bridge and a preferred-equity layer above it; the hedge counterparty, tenor and volume have never been disclosed, and Boxcar — the first project with a named contract type ('a major corporate customer') — was financed by a single bank at USD 139.6 million. A revenue-put or swap disclosure would strengthen this judgment; a lender release citing the hedge would weaken it.",
+    "(Moderate confidence) We assess that Sungrow is the company's default integrator and that FEOC treatment of the 2026–2027 projects is the unaddressed risk. Basis: Sungrow on all three operating Texas sites (ESS News; the company names it at Desert Willow), Sungrow PowerTitan 2.0 as Boxcar's design basis (Energy-Storage.news), no FEOC language in the supplier code, and a corporate facility earmarked for 'long-lead equipment procurement'. No source states a supplier for Boxcar, City Breeze or Cactus Wren.",
+    "(Low confidence) We assess that Cactus Wren will be contracted with SRP or ED3 before construction. Basis: SRP's 'active discussions' and ED3's pricing request (January 2026) and a 2026 groundbreaking target; against it, no contract, no supplier and no financing eight months later, and an 800 MW single-site battery is six times the company's largest project.",
+    "Collection gap: Generate's stake and acquisition price, any sale valuation, the ERCOT hedge counterparty and terms, the Boxcar offtaker, the Santa Paula CCAs, the ITC buyers inside the Captona deal, the Black Walnut transfer amount, the Hummingbird commercial-operation confirmation from PG&E or CAISO, the employee count, and the board of esVolta LP are all unreported.",
+    "Indicators to watch: (1) a Generate release naming esVolta's buyer — an infrastructure fund or an IPP would settle whether the company stays a develop-and-own platform (Judgment 3); (2) a supplier announcement for Boxcar, City Breeze or Cactus Wren, and whether it is Sungrow again or a FEOC-compliant alternative (Judgment 5); (3) an SRP or ED3 contract for Cactus Wren and a groundbreaking in 2026 (Judgment 6); (4) Boxcar and City Breeze commercial operation in 2027 against the ERCOT queue's 18 March 2027 date for City Breeze; (5) the first named SPP or MISO project — the company has promised both markets since June 2026; (6) any disclosure of the Texas hedge's counterparty or tenor, or a revenue put on the merchant balance (Judgment 4)."
+  ],
+  "sources": [
+    {
+      "label": "Orrick — esVolta secures expanded USD 450 million credit facility",
+      "url": "https://www.orrick.com/en/News/2026/07/esVolta-Secures-Expanded-450-Million-Credit-Facility-to-Accelerate-Energy-Storage-Growth",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "Mercom — esVolta secures USD 450 million upsized credit facility",
+      "url": "https://mercomcapital.com/esvolta-secures-450-million-upsized-credit-facility-for-energy-storage-portfolio/",
+      "date": "2026-06-09"
+    },
+    {
+      "label": "SFNet (PR mirror) — esVolta secures upsized corporate credit facility",
+      "url": "https://www.sfnet.com/home/industry-data-publications/the-secured-lender/tsl-express-daily-articles-news/tsl-express-daily-articles-news/2026/06/08/esvolta-secures-upsized-corporate-credit-facility-to-support-expansion-of-energy-storage-portfolio",
+      "date": "2026-06-08"
+    },
+    {
+      "label": "Energy-Storage.news — esVolta closes USD 450 million expanded credit facility",
+      "url": "https://www.energy-storage.news/esvolta-closes-us450-million-expanded-credit-facility-to-expand-us-bess-portfolio/",
+      "date": "2026-06-08"
+    },
+    {
+      "label": "ABF Journal — esVolta secures upsized corporate credit facility",
+      "url": "https://www.abfjournal.com/esvolta-secures-upsized-corporate-credit-facility-to-support-energy-storage-portfolio/",
+      "date": "2026-06-08"
+    },
+    {
+      "label": "Infralogic / ION Analytics — Generate Capital CEO: Barclays and Truist mandated for the sale of esVolta",
+      "url": "https://ionanalytics.com/insights/infralogic/generate-capital-ceo-touts-shift-towards-projects-and-discipline/",
+      "date": "2026-06-05"
+    },
+    {
+      "label": "esVolta — secures upsized corporate credit facility (up to USD 450 million; Nomura; CIP Green Credit Funds)",
+      "url": "https://www.esvolta.com/post/esvolta-secures-upsized-corporate-credit-facility-to-support-expansion-of-energy-storage-portfolio",
+      "date": "2026-06-03"
+    },
+    {
+      "label": "PR Newswire — esVolta secures upsized corporate credit facility",
+      "url": "https://www.prnewswire.com/news-releases/esvolta-secures-upsized-corporate-credit-facility-to-support-expansion-of-energy-storage-portfolio-302790260.html",
+      "date": "2026-06-03"
+    },
+    {
+      "label": "Orrick — esVolta secures USD 139.6 million financing for Boxcar",
+      "url": "https://www.orrick.com/en/News/2026/04/esVolta-Secures-139-6M-Financing-for-Texas-Battery-Storage-Project",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "TipRanks — esVolta expands Texas portfolio with City Breeze groundbreaking (Saber Power, SolaREIT)",
+      "url": "https://www.tipranks.com/news/private-companies/esvolta-expands-texas-battery-storage-portfolio-with-city-breeze-groundbreaking",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "Energy-Storage.news — esVolta secures USD 140 million financing for 300 MWh Texas project (Boxcar)",
+      "url": "https://www.energy-storage.news/esvolta-secures-us140-million-financing-for-300mwh-texas-battery-storage-project/",
+      "date": "2026-03-26"
+    },
+    {
+      "label": "ESS News — esVolta and Doral secure Texas project financing (Boxcar; MUFG quote)",
+      "url": "https://www.ess-news.com/2026/03/25/1-billion-in-texas-project-financing-esvolta-and-doral-renewables-secure-funds-for-ercot-solar-storage/",
+      "date": "2026-03-25"
+    },
+    {
+      "label": "Yahoo Finance / Power Technology — esVolta secures USD 139.6 million (Boxcar; corporate offtake)",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/esvolta-secures-139-6m-support-111912449.html",
+      "date": "2026-03-25"
+    },
+    {
+      "label": "BIC Magazine — esVolta secures project financing for Boxcar",
+      "url": "https://www.bicmagazine.com/departments/engineering-construction/esvolta-secures-project-financing-for-boxcar-energy-project/",
+      "date": "2026-03-25"
+    },
+    {
+      "label": "esVolta — secures USD 139.6 million project financing for Boxcar (MUFG; major corporate customer)",
+      "url": "https://www.esvolta.com/post/esvolta-secures-139-6-million-project-financing-for-300-mwh-boxcar-energy-storage-project-in-texas",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "PR Newswire — esVolta secures USD 139.6 million project financing for Boxcar",
+      "url": "https://www.prnewswire.com/news-releases/esvolta-secures-139-6-million-project-financing-for-300-mwh-boxcar-energy-storage-project-in-texas-302722809.html",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "TipRanks — esVolta raises USD 139.6 million to finance Boxcar",
+      "url": "https://www.tipranks.com/news/private-companies/esvolta-raises-139-6-million-to-finance-texas-boxcar-battery-storage-project-expanding-ercot-footprint",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "KCLU — Santa Paula and Black Walnut batteries in Ventura County (Mann, Hardman, Palmstrom)",
+      "url": "https://www.kclu.org/local-news/2026-03-13/expanding-green-energy-new-battery-energy-storage-project-in-ventura-county-can-power-45-000-homes",
+      "date": "2026-03-13"
+    },
+    {
+      "label": "Energy-Storage.news — SRP and ED3 seeking offtake deal for esVolta's approved 3.2 GWh Cactus Wren",
+      "url": "https://www.energy-storage.news/utilities-srp-and-ed3-seeking-offtake-deal-for-esvoltas-newly-approved-3-2gwh-arizona-bess/",
+      "date": "2026-01-06"
+    },
+    {
+      "label": "New Project Media — Generate Capital exploring strategic alternatives for esVolta",
+      "url": "https://newprojectmedia.com/ma-generate-capital-exploring-strategic-alternatives-for-esvolta/",
+      "date": "2026-01"
+    },
+    {
+      "label": "esVolta — Black Walnut ITC transfer to Computacenter ('first standalone ITC transfer by esVolta')",
+      "url": "https://www.esvolta.com/post/esvolta-bolsters-clean-energy-in-california-with-computacenter-via-black-walnut-energy-storage-proje",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "InMaricopa — 800 MW Cactus Wren battery project approved by Pinal County",
+      "url": "https://inmaricopa.com/800-megawatt-battery-project-south-of-city-gets-green-light/",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "Rose Law Group Reporter — esVolta Cactus Wren gets green light from Pinal County",
+      "url": "https://roselawgroupreporter.com/2025/12/esvolta-battery-facility-gets-greenlight-from-pinal-county-with-court-rich-rose-law-groups-director-of-energy-utility-infrastructure-and-the-firms-co-founder-presenting-the/",
+      "date": "2025-12"
+    },
+    {
+      "label": "Modo Energy — CAISO battery fleet Q4 2025 (Black Walnut named)",
+      "url": "https://modoenergy.com/research/en/caiso-battery-fleet-2025-q4-15gw-interconnection-queue-standalone-colocated",
+      "date": "2025-12"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery buildout 2025 annual report (pure-play storage developers)",
+      "url": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+      "date": "2025-12"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery buildout Q3 2025 (Anole among largest additions)",
+      "url": "https://modoenergy.com/research/en/ercot-battery-buildout-report-q3-2025",
+      "date": "2025-10"
+    },
+    {
+      "label": "Energy-Storage.news — US roundup: Sitetracker and esVolta",
+      "url": "https://www.energy-storage.news/us-roundup-cross-industry-collaborations-target-energy-storage-growth-and-accessibility/",
+      "date": "2025-10-10"
+    },
+    {
+      "label": "Sitetracker — selected by esVolta (Palmstrom quote)",
+      "url": "https://www.sitetracker.com/sitetracker-selected-by-esvolta-to-streamline-utility-scale-energy-storage-operations/",
+      "date": "2025-10-08"
+    },
+    {
+      "label": "esVolta — Dallas Observer re-post: AI data centres and local storage (Midlothian)",
+      "url": "https://www.esvolta.com/post/nbc5-dallas-fort-worth-as-ai-data-centers-drive-up-texas-energy-demand-new-local-solutions-aim-to-1",
+      "date": "2025-08-15"
+    },
+    {
+      "label": "esVolta — Midlothian Mirror re-post: Desert Willow ribbon-cutting; Sungrow batteries (Williamson)",
+      "url": "https://www.esvolta.com/post/midlothian-mirror-new-energy-storage-facility-to-help-power-texas",
+      "date": "2025-08-06"
+    },
+    {
+      "label": "esVolta — NBC5 re-post: Anole ribbon cutting",
+      "url": "https://www.esvolta.com/post/nbc5-dallas-fort-worth-as-ai-data-centers-drive-up-texas-energy-demand-new-local-solutions-aim-to",
+      "date": "2025-08-01"
+    },
+    {
+      "label": "ESS News — esVolta commissions final project in 980 MWh Texas trio (Sungrow PowerTitan 1.0 on all three)",
+      "url": "https://www.ess-news.com/2025/07/31/esvolta-commissions-final-project-in-980-mwh-texas-battery-trio/",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "Energy-Storage.news — Apex and esVolta put Texas BESS projects into commercial operation",
+      "url": "https://www.energy-storage.news/apex-esvolta-put-texas-bess-projects-into-commercial-operation/",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "esVolta — brings three large-scale storage projects on line in Texas (Saber, Quanta; Captona, MUFG)",
+      "url": "https://www.esvolta.com/post/esvolta-brings-three-large-scale-storage-projects-on-line-in-texas-meeting-2025-summer-peak",
+      "date": "2025-07-30"
+    },
+    {
+      "label": "PR Newswire — esVolta brings three Texas projects on line",
+      "url": "https://www.prnewswire.com/news-releases/esvolta-brings-three-large-scale-storage-projects-on-line-in-texas-meeting-2025-summer-peak-302517631.html",
+      "date": "2025-07-30"
+    },
+    {
+      "label": "Solar Power World — esVolta brings 1 GWh of BESS online in Texas",
+      "url": "https://www.solarpowerworldonline.com/2025/07/esvolta-brings-1-gwh-of-bess-online-in-texas/",
+      "date": "2025-07-30"
+    },
+    {
+      "label": "esVolta — Mike Kalansky hired as VP Accounting",
+      "url": "https://www.esvolta.com/post/esvolta-hires-mike-kalansky-as-vice-president-of-accounting",
+      "date": "2025-07-08"
+    },
+    {
+      "label": "esVolta — Energy-Storage.news re-post: Wicks on the reconciliation bill and the ITC",
+      "url": "https://www.esvolta.com/post/energy-storage-news-clean-energy-experts-weigh-in-as-us-senators-vote-on-tax-reconciliation-bill",
+      "date": "2025-07-02"
+    },
+    {
+      "label": "esVolta — Marci Palmstrom hired as VP Asset Management",
+      "url": "https://www.esvolta.com/post/esvolta-hires-marci-j-palmstrom-as-head-of-asset-management",
+      "date": "2025-06-25"
+    },
+    {
+      "label": "esVolta — Tonja Wicks hired to lead Government and Regulatory Affairs",
+      "url": "https://www.esvolta.com/post/esvolta-hires-tonja-l-wicks-to-lead-government-and-regulatory-affairs",
+      "date": "2025-06-02"
+    },
+    {
+      "label": "KRDO — Colorado Springs residents worry about fire at proposed Tava Mountain battery",
+      "url": "https://krdo.com/news/2025/05/15/co-springs-homeowner-worried-about-fire-dangers-from-proposed-battery-facility-nearby/",
+      "date": "2025-05-15"
+    },
+    {
+      "label": "Energy-Storage.news — esVolta acquires 300 MWh ERCOT BESS from Black Mountain Energy Storage (Boxcar)",
+      "url": "https://www.energy-storage.news/esvolta-acquires-300mwh-ercot-bess-from-black-mountain-energy-storage/",
+      "date": "2025-03-27"
+    },
+    {
+      "label": "Renewable Energy World — Captona invests in nearly 1 GWh esVolta Texas portfolio",
+      "url": "https://www.renewableenergyworld.com/news/backing-texas-grid-resilience-investment-firm-acquires-nearly-1-gwh-battery-energy-storage-portfolio/",
+      "date": "2025-01-30"
+    },
+    {
+      "label": "Energy-Storage.news — esVolta and Captona transact on 1 GWh Texas BESS",
+      "url": "https://www.energy-storage.news/esvolta-partners-with-captona-for-1gwh-texas-bess-project/",
+      "date": "2025-01-28"
+    },
+    {
+      "label": "Utility Dive — esVolta poised to bring 490 MW / 980 MWh online in ERCOT (hedge; Marmot Hills, Holly Oaks)",
+      "url": "https://www.utilitydive.com/news/esvolta-ercot-texas-battery-storage/738490/",
+      "date": "2025-01-28"
+    },
+    {
+      "label": "esVolta — Utility Dive re-post: poised to bring 490 MW / 980 MWh online in ERCOT",
+      "url": "https://www.esvolta.com/post/esvolta-poised-to-bring-490-mw-980-mwh-of-storage-online-in-ercot",
+      "date": "2025-01-28"
+    },
+    {
+      "label": "EnergyTech — esVolta secures USD 243 million for three Texas projects",
+      "url": "https://www.energytech.com/energy-storage/article/55264133/esvolta-secures-243m-to-fund-construction-of-three-texas-battery-storage-projects",
+      "date": "2025-01-28"
+    },
+    {
+      "label": "Captona — Captona and esVolta close joint venture on Texas battery portfolio",
+      "url": "https://captona.com/captona-esvolta-close-joint-venture-on-battery-storage-portfolio-in-texas/",
+      "date": "2025-01-27"
+    },
+    {
+      "label": "esVolta — secures USD 243 million preferred equity investment (Captona)",
+      "url": "https://www.esvolta.com/post/esvolta-secures-243-million-preferred-equity-investment-for-three-standalone-battery-energy-storage",
+      "date": "2025-01-27"
+    },
+    {
+      "label": "PR Newswire — esVolta secures USD 243 million preferred equity investment",
+      "url": "https://www.prnewswire.com/news-releases/esvolta-secures-243-million-preferred-equity-investment-for-three-standalone-battery-energy-storage-projects-302360772.html",
+      "date": "2025-01-27"
+    },
+    {
+      "label": "esVolta — Bloomberg Businessweek re-post: Hummingbird (Williamson)",
+      "url": "https://www.esvolta.com/post/giant-batteries-aretransforming-the-world-selectrical-grids",
+      "date": "2025-01-17"
+    },
+    {
+      "label": "Dallas Innovates — Vesper Energy appoints Krish Koomar (ex-esVolta CFO)",
+      "url": "https://dallasinnovates.com/irvings-vesper-energy-appoints-new-chief-financial-officer/",
+      "date": "2024-11-22"
+    },
+    {
+      "label": "Orrick — tax equity deal closes for esVolta Hummingbird",
+      "url": "https://www.orrick.com/en/News/2024/11/Tax-Equity-Deal-Closes-for-esVolta-Hummingbird-Project",
+      "date": "2024-11-14"
+    },
+    {
+      "label": "Energy-Storage.news — Ormat and esVolta secure tax equity deals for California BESS",
+      "url": "https://www.energy-storage.news/ormat-and-esvolta-secure-tax-equity-deals-for-california-bess-projects/",
+      "date": "2024-11-13"
+    },
+    {
+      "label": "ESS News — esVolta secures USD 110 million for 300 MWh Hummingbird (Metcalf 115 kV)",
+      "url": "https://www.ess-news.com/2024/11/13/esvolta-secures-110m-for-300-mwh-battery-in-california/",
+      "date": "2024-11-13"
+    },
+    {
+      "label": "Power Technology — esVolta secures investment for Hummingbird",
+      "url": "https://www.power-technology.com/news/esvolta-secures-investment-energy-storage/",
+      "date": "2024-11-13"
+    },
+    {
+      "label": "PR Newswire — esVolta secures USD 110 million tax equity (Greenprint) for Hummingbird",
+      "url": "https://www.prnewswire.com/news-releases/esvolta-secures-110-million-tax-equity-investment-for-300-mwh-hummingbird-energy-storage-project-302302499.html",
+      "date": "2024-11-12"
+    },
+    {
+      "label": "Rio Rancho Observer — Sandoval County approves esVolta battery facility (Gila Monster; USD 300 million IRBs)",
+      "url": "https://www.rrobserver.com/news/commission-approves-es-volta-battery-storage-facility/article_1af05818-96f7-11ef-8f33-4386779e419a.html",
+      "date": "2024-10"
+    },
+    {
+      "label": "PR Newswire — Justin Johns joins esVolta as CFO",
+      "url": "https://www.prnewswire.com/news-releases/justin-johns-joins-esvolta-as-chief-financial-officer-302223682.html",
+      "date": "2024-08-15"
+    },
+    {
+      "label": "Energy-Storage.news — Eolian, BrightNight and esVolta raise over a billion dollars (USD 258 million lender list)",
+      "url": "https://www.energy-storage.news/eolian-brightnight-and-esvolta-raise-more-than-a-billion-dollars-from-financiers/",
+      "date": "2024-08-01"
+    },
+    {
+      "label": "esVolta — secures USD 258 million credit facilities for ERCOT storage portfolio",
+      "url": "https://www.esvolta.com/post/esvolta-secures-258-million-credit-facilities-for-ercot-storage-portfolio",
+      "date": "2024-07-30"
+    },
+    {
+      "label": "KeyBanc — esVolta storage portfolio USD 258 million (KeyBanc coordinating lead arranger)",
+      "url": "https://www.key.com/businesses-institutions/our-transactions/deals.esvolta-storage-portfolio.html",
+      "date": "2024-07-25"
+    },
+    {
+      "label": "Energy-Storage.news — esVolta secures USD 185 million pre-NTP financing",
+      "url": "https://www.energy-storage.news/esvolta-secures-us185-million-pre-ntp-financing-for-us-bess-deployments/",
+      "date": "2024-04-09"
+    },
+    {
+      "label": "Renewable Energy World — storage developer esVolta secures USD 185 million credit facility",
+      "url": "https://www.renewableenergyworld.com/energy-storage/battery/storage-developer-esvolta-secures-185m-credit-facility/",
+      "date": "2024-04-09"
+    },
+    {
+      "label": "PR Newswire — esVolta secures USD 185 million credit facility (Nomura, CIP, Voya)",
+      "url": "https://www.prnewswire.com/news-releases/esvolta-secures-185-million-credit-facility-302109926.html",
+      "date": "2024-04-08"
+    },
+    {
+      "label": "Highfield Energy — construction commences on 200 MWh Dickens County project (Burksol originated by Highfield)",
+      "url": "https://www.highfieldenergy.com/post/construction-commences-on-200-mwh-battery-energy-storage-project-in-dickens-county-texas",
+      "date": "2024-01-15"
+    },
+    {
+      "label": "esVolta — commences construction of 200 MWh Burksol (acquired from Highfield Energy)",
+      "url": "https://www.esvolta.com/post/esvolta-commences-construction-of-200-mwh-burksol-bess-facility-in-texas",
+      "date": "2024-01-14"
+    },
+    {
+      "label": "Texas Spur — Burksol groundbreaking notice (Saber Power; Sungrow and Fractal; WETT)",
+      "url": "https://www.thetexasspur.com/content/groundbreaking-ceremony-esvolta-project-set-january-11-dickens",
+      "date": "2024-01"
+    },
+    {
+      "label": "Orrick — esVolta closes first tax equity financing with U.S. Bancorp (Santa Paula)",
+      "url": "https://www.orrick.com/en/News/2023/11/A-Milestone-in-Energy-Storage-Financing-esVolta-Closes-First-Tax-Equity-Financing-with-US-Bancorp",
+      "date": "2023-11-15"
+    },
+    {
+      "label": "First Citizens — leads USD 170 million refinancing for esVolta California portfolio",
+      "url": "https://newsroom.firstcitizens.com/2023-11-14-First-Citizens-Bank-Leads-170-Million-Refinancing-for-California-Battery-Energy-Storage-Project-Portfolio",
+      "date": "2023-11-14"
+    },
+    {
+      "label": "PR Newswire — First Citizens leads USD 170 million refinancing ('esVolta is owned by Generate Capital, PBC')",
+      "url": "https://www.prnewswire.com/news-releases/first-citizens-bank-leads-170-million-refinancing-for-california-battery-energy-storage-project-portfolio-301987680.html",
+      "date": "2023-11-14"
+    },
+    {
+      "label": "Energy-Storage.news — esVolta and Atlantica secure tax equity and PPAs (Santa Paula offtakers)",
+      "url": "https://www.energy-storage.news/california-esvolta-and-atlantica-secure-tax-equity-ppas-for-large-scale-bess/",
+      "date": "2023-11-14"
+    },
+    {
+      "label": "Batteries News (Business Wire mirror) — esVolta secures tax equity from U.S. Bank for Santa Paula",
+      "url": "https://batteriesnews.com/esvolta-secures-tax-equity-investment-from-us-bank-for-battery-energy-storage-project-in-california/",
+      "date": "2023-11-10"
+    },
+    {
+      "label": "Rio Rancho Observer — Sandoval County commissioners approve esVolta zoning 3–2",
+      "url": "https://www.rrobserver.com/business/esvolta-attempts-battery-storage-unit-again-commissioners-disagree-with-each-other/article_4e4a4f43-f407-5038-8fd3-14b83ec68206.html",
+      "date": "2022-08-31"
+    },
+    {
+      "label": "Orange County Business Journal — Generate Capital provides energy boost to esVolta (closed 13 July 2022; 28 staff)",
+      "url": "https://www.ocbj.com/oc-homepage/generate-capital-provides-energy-boost-to-esvolta/",
+      "date": "2022-08-16"
+    },
+    {
+      "label": "Renewable Energy World — Generate Capital enters grid-scale storage with esVolta acquisition",
+      "url": "https://www.renewableenergyworld.com/energy-business/energy-finance/generate-capital-enters-grid-scale-battery-storage-market-with-esvolta-acquisition/",
+      "date": "2022-07-27"
+    },
+    {
+      "label": "Energy-Storage.news — Generate Capital enters front-of-meter storage with esVolta acquisition",
+      "url": "https://www.energy-storage.news/generate-capital-enters-front-of-the-meter-energy-storage-market-with-developer-acquisition/",
+      "date": "2022-07-22"
+    },
+    {
+      "label": "POWER (release mirror) — Generate Capital acquires battery storage developer esVolta",
+      "url": "https://www.powermag.com/press-releases/generate-capital-acquires-battery-storage-developer-esvolta-to-expand-energy-storage-and-grid-resilience-offerings/",
+      "date": "2022-07-21"
+    },
+    {
+      "label": "Montana Free Press — Montana judge strikes pre-approval law (Beartooth Energy Storage)",
+      "url": "https://montanafreepress.org/2022/05/09/montana-judge-strikes-pre-approval-law-favoring-northwestern-energy/",
+      "date": "2022-05-09"
+    },
+    {
+      "label": "Missoula Current — NorthWestern's Beartooth battery pre-approval application",
+      "url": "https://missoulacurrent.com/northwest-energy/",
+      "date": "2021-05-24"
+    },
+    {
+      "label": "Energy-Storage.news — Macquarie GIG to take stake in esVolta",
+      "url": "https://www.energy-storage.news/macquaries-green-investment-group-to-take-stake-in-utility-scale-energy-storage-developer-esvolta/",
+      "date": "2021-01-20"
+    },
+    {
+      "label": "POWER (release mirror) — Macquarie GIG invests in esVolta (bridge loan convertible to equity; RBP Partners)",
+      "url": "https://www.powermag.com/press-releases/macquaries-green-investment-group-invests-in-north-american-utility-scale-storage-developer-esvolta/",
+      "date": "2021-01-19"
+    },
+    {
+      "label": "Energy-Storage.news — CalChoice picks esVolta for 15 MW / 60 MWh Black Walnut",
+      "url": "https://www.energy-storage.news/california-community-energy-group-picks-esvolta-for-15mw-60mwh-battery-project/",
+      "date": "2020-04-09"
+    },
+    {
+      "label": "SFNet — esVolta secures USD 140 million credit facility (sponsored by RBP Partners)",
+      "url": "https://www.sfnet.com/home/industry-data-publications/the-secured-lender/magazine/tsl-article-detail/esvolta-secures-140-million-credit-facility",
+      "date": "2020-02"
+    },
+    {
+      "label": "POWER (release mirror) — esVolta secures USD 140 million credit facility (CIT; esFaraday)",
+      "url": "https://www.powermag.com/press-releases/esvolta-secures-140-million-credit-facility-for-portfolio-of-battery-energy-storage-projects/",
+      "date": "2020-02-24"
+    },
+    {
+      "label": "PR Newswire — Southern Power partnership with esVolta for energy storage projects",
+      "url": "https://www.prnewswire.com/news-releases/southern-power-announces-partnership-with-esvolta-for-energy-storage-projects-300891525.html",
+      "date": "2019-07-26"
+    },
+    {
+      "label": "Power Engineering — SCE selects esVolta for Wildcat and Acorn (IDER RFO)",
+      "url": "https://www.power-eng.com/energy-storage/socal-edison-selects-esvolta-for-energy-storage-projects/",
+      "date": "2018-10-16"
+    },
+    {
+      "label": "Energy-Daily — esVolta selected for four SCE storage projects (Aliso Viejo dateline; Blue Sky)",
+      "url": "https://www.energy-daily.com/reports/esVolta_selected_for_4_energy_storage_projects_totaling_38_5_MWhs_in_Southern_California_999.html",
+      "date": "2018-10-15"
+    },
+    {
+      "label": "NS Energy — PG&E selects esVolta to build Hummingbird",
+      "url": "https://www.nsenergybusiness.com/news/pge-selects-esvolta-to-build-hummingbird-energy-storage-project/",
+      "date": "2018-07-20"
+    },
+    {
+      "label": "Utility Dive — Powin sells 110 MWh of storage projects to esVolta",
+      "url": "https://www.utilitydive.com/news/powin-energy-sells-110-mwh-of-storage-projects-to-esvolta/512821/",
+      "date": "2017-12-12"
+    },
+    {
+      "label": "GlobeNewswire — Powin sells 110 MWh of operating projects and pipeline to esVolta (exclusive supplier through 2022)",
+      "url": "https://www.globenewswire.com/news-release/2017/12/11/1250781/0/en/powin-energy-sells-110mwh-of-operating-projects-and-pipeline-to-esvolta.html",
+      "date": "2017-12-11"
+    },
+    {
+      "label": "esVolta — homepage (2.0 GWh; 25+ GWh; $1+ billion; Newport Beach)",
+      "url": "https://esvolta.com/"
+    },
+    {
+      "label": "esVolta — Projects (portfolio total 905 MW / 1,990 MWh; per-project status)",
+      "url": "https://www.esvolta.com/projects"
+    },
+    {
+      "label": "esVolta — About us (leadership and staff roster; headshots)",
+      "url": "https://www.esvolta.com/about-us"
+    },
+    {
+      "label": "esVolta — Energy storage (develop, construct, own and operate)",
+      "url": "https://www.esvolta.com/energy-storage"
+    },
+    {
+      "label": "esVolta — Contact (100 Bayview Circle, Suite 340, Newport Beach)",
+      "url": "https://www.esvolta.com/contact"
+    },
+    {
+      "label": "esVolta — Media (release list back to 2022)",
+      "url": "https://www.esvolta.com/media"
+    },
+    {
+      "label": "esVolta — Supplier code of conduct (rev. February 2025; no FEOC language)",
+      "url": "https://www.esvolta.com/supplier"
+    },
+    {
+      "label": "esVolta — Responsibility (industry memberships)",
+      "url": "https://www.esvolta.com/responsibility"
+    },
+    {
+      "label": "Equilar — Randolph Mann biography",
+      "url": "https://people.equilar.com/bio/person/randolph-mann-esvolta-lp/42895551"
+    },
+    {
+      "label": "NAEMA — new market member esVolta (Olpadwala, Reeves; Newport Beach)",
+      "url": "https://naema.com/new-market-member-esvolta/"
+    },
+    {
+      "label": "Infocast — 2026 sponsor page: esVolta ('fully integrated standalone storage IPP'; five markets)",
+      "url": "https://www.infocastinc.com/2026-solar-wind-finance-investment-sponsors/esvolta"
+    },
+    {
+      "label": "ERCOT queue (aggregator) — 25INR0271 City Breeze BESS LLC (143.1 MW; COD 2027-03-18)",
+      "url": "https://www.ercotqueue.com/project/25INR0271"
+    },
+    {
+      "label": "Cleanview — developers page (esVolta not in top 25 by pipeline)",
+      "url": "https://cleanview.co/power-projects/developers"
+    },
+    {
+      "label": "Modo Energy — US battery optimizers and operators (esVolta absent)",
+      "url": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "label": "ACCURE — esVolta VP Engineering Ian Johnston on warranty monitoring",
+      "url": "https://www.accure.net/"
+    },
+    {
+      "label": "The Org (aggregator) — esVolta leadership team",
+      "url": "https://theorg.com/org/esvolta/teams/leadership-team"
+    },
+    {
+      "label": "CB Insights (aggregator) — esVolta (Newport Beach; 'Total Funding Raised: $525M')",
+      "url": "https://www.cbinsights.com/company/esvolta"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

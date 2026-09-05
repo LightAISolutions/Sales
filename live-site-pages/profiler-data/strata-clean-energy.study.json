@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 2,
+  "slug": "strata-clean-energy",
+  "title": "Strata Clean Energy — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-seller-at-the-table",
+      "title": "Start here: the seller at the table",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "In September 2025 GridStor bought a 100 MW / 400 MWh Arizona battery with a 20-year utility {{tolling agreement}} attached, from a company that had won the contract, signed the battery supplier and never intended to own it. This guide teaches that company's side of the table: the {{originator}} that turns land, a grid position and a utility {{RFP}} win into a project a fund will pay for, sells it before the toll begins, and keeps a fee. It teaches what a buyer is actually paying for, why a founder-owned developer sells a 20-year contract it could have kept, how the {{development margin}} and the retained service contracts replace an owner's cash flow, and where the model breaks.",
+        "**What it deliberately does not repeat:** the GridStor guide reads the same transaction from the buyer's chair — what a sponsor-created platform pays for and how it contracts before it builds; the Aypa guide teaches the contracted platform as an asset a buyer prices; the Spearmint guide teaches the merchant developer and the pre-COD market at transmission scale; the Available Power guide teaches selling small batteries at notice to proceed with a turnkey EPC. The Classroom owns tolling, ancillary stacking and duration arithmetic. Here the battery is a product the developer makes and sells, and the question is what the product is.",
+        "**One idea carries the guide.** A contract is worth more to the owner who can hold it longest at the lowest cost of capital. A founder-owned developer with a bank revolver cannot hold a 20-year toll as cheaply as a EUR 12 billion infrastructure fund can, so it sells the toll to the fund and gets paid for having created it."
+      ]
+    },
+    {
+      "id": "what-the-originator-makes",
+      "title": "What the originator makes",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "A developer that builds to sell is a manufacturer whose product is a de-risked project. The raw materials are a site with a willing landowner, a {{queue position}} that becomes an {{interconnection agreement}}, county and state permits, a utility contract, and a battery supply agreement. Each one removes a reason the project could fail, and a buyer pays for the removed reasons — the rungs of the {{development stage ladder}} — rather than for the megawatts.",
+        "**The contract is the rung that matters most.** Strata's three flagship batteries were all won in utility procurements: Ventura in Southern California Edison's resource-adequacy solicitation (a 20-year {{RA contract}}, approved by the CPUC in December 2019), Scatter Wash and White Tank in Arizona Public Service's all-source RFPs of 2022 and 2023 (20-year tolls). A toll or an RA contract converts a battery's uncertain hourly earnings into a fixed payment from a regulated utility, which is exactly the cash flow an {{infrastructure fund}} exists to buy.",
+        "**The supply agreement is the rung that proves the schedule.** White Tank's Canadian Solar e-STORAGE supply agreement and 20-year {{LTSA}} were signed in March 2025, six months before the sale to GridStor. The buyer inherited a project with its battery, its price and its service contract fixed — a project whose remaining risks were construction and a substation, not procurement in a tariff year.",
+        "**The financing rung is optional.** Scatter Wash had already closed a USD 559 million construction and tax-equity financing (J.P. Morgan, Nomura, U.S. Bancorp Impact Finance and five more lenders) when Copenhagen Infrastructure Partners bought it in September 2024. A financed, contracted project under construction is the top of the ladder short of operation; White Tank was sold a rung lower, contracted and procured but not yet financed. The price a buyer pays for each rung is never published — Strata disclosed no sale price for any of the three — so the {{development margin}} is inferred, not read."
+      ]
+    },
+    {
+      "id": "the-three-sales",
+      "title": "The three sales: what came with each and what the seller kept",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "Strata's three battery sales are the record of the model. The table reads each for what the buyer received, what the seller kept, and where the money went.",
+      "cols": [
+        "Sale (buyer, date)",
+        "What came with it",
+        "What the seller kept",
+        "Status now"
+      ],
+      "rows": [
+        [
+          "Ventura Energy Storage → Capital Dynamics at construction (September 2020), later Arevon",
+          "100 MW / 400 MWh on 6.5 acres; SCE 20-year RA contract; Tesla Megapack under a Tesla EPC contract; construction under way",
+          "Nothing disclosed beyond completing the build; 'now owned by Arevon' per Strata's January 2022 release",
+          "Online summer 2021; Strata's first sale of a flagship battery"
+        ],
+        [
+          "Scatter Wash → Copenhagen Infrastructure Partners, CI V fund (24 September 2024)",
+          "255 MW / 1,020 MWh; APS 20-year toll; Tesla Megapack 2XL; Mortenson EPC; USD 559 million financing already closed",
+          "A {{construction-management agreement}} and an asset-management agreement — 'Strata will continue to serve as construction and asset manager'; Tesla and Novasource hold the equipment O&M",
+          "Commercial April 2025 per Strata's case study; price undisclosed"
+        ],
+        [
+          "White Tank → GridStor (18 September 2025)",
+          "100 MW / 400 MWh (576 MWh DC); APS 20-year toll; Canadian Solar SolBank 3.0 supply agreement and 20-year LTSA; permits; no financing yet",
+          "'A consultative role for the project until commencement of commercial operations'",
+          "Construction start October 2026, in service first half 2027 per GridStor; price undisclosed"
+        ],
+        [
+          "Retained for comparison: Justice Energy Storage (not sold)",
+          "150 MW / 600 MWh; APS 20-year toll; groundbreaking May 2025; 'Strata will develop, own, and operate'",
+          "The whole asset — and the whole 20-year toll on a founder-owned balance sheet",
+          "'Expected operational April 2026'; no completion release published"
+        ]
+      ]
+    },
+    {
+      "id": "why-a-founder-owned-developer-sells-a-20-year-contract",
+      "title": "Why a founder-owned developer sells a 20-year contract",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A 20-year toll is a bond-like asset: fixed payments from a regulated utility, low risk once built. The price an owner will pay for it depends on the owner's cost of capital — an infrastructure fund raising money from pensions at single-digit returns can pay more for the same contract than a company that funds itself with a bank {{revolving credit facility}} and its founders' equity. The gap between those two prices is the {{development margin}} the seller collects.",
+        "**Strata has no sponsor.** Its financing page says it is 'a 100% privately held company owned by our founders'; the USD 150 million Blackstone put in during 2021 was credit, in the CFO's own words. Its growth capital is three successive revolvers — USD 170 million (Zions, 2022), USD 300 million (Nomura and First Citizens, 2023), USD 450 million (July 2026) — and project-level debt. A revolver funds development and construction; it does not fund owning 1 GWh of batteries for 20 years. A {{family office}} could hold the asset, but only by tying up equity the development business needs.",
+        "**Selling is {{capital recycling}}.** The USD 559 million Scatter Wash financing and the equity behind it came back to Strata when CIP bought the project seven months later, and the revolver was upsized twice afterwards. Each sale funds the next RFP bid. The company's own claim that it 'retain[s] ownership in more than 50% of the projects we develop' is true of its North Carolina and Virginia solar base — about 1 GW of owned assets under long-term PPAs — and not of its utility-scale batteries, three of which were sold and one kept.",
+        "**The buyer's identity tells the seller's story.** Capital Dynamics was a fund manager; CIP's CI V fund had a EUR 12 billion target; GridStor is a company Goldman Sachs Asset Management created to own contracted batteries. Every buyer was a vehicle with cheaper, longer money than a developer's. That is the whole trade: the originator manufactures a contract, the fund holds it."
+      ]
+    },
+    {
+      "id": "what-the-seller-keeps",
+      "title": "What the seller keeps: fees after the sale",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "A sale need not end the relationship. The retained contracts are how an originator turns a one-time margin into a recurring fee, and they explain why Strata can report assets it no longer owns as 'under management'.",
+      "cols": [
+        "Retained role",
+        "What it pays for",
+        "Who bears the risk",
+        "Strata's instance"
+      ],
+      "rows": [
+        [
+          "{{Construction-management agreement}}",
+          "Managing the EPC, schedule and budget for the new owner during construction, for a fee",
+          "The EPC bears fixed-price risk; the owner bears cost overruns above the EPC price; the manager bears reputational risk only",
+          "Scatter Wash for CIP (Mortenson as EPC)"
+        ],
+        [
+          "Asset-management agreement",
+          "Running the contract administration — the toll, the LTSA, warranties, ISO compliance — for a fee per megawatt",
+          "The owner bears the asset's performance; the manager is paid for administration",
+          "Scatter Wash for CIP; '260+' PV and BESS assets under O&M management across the company"
+        ],
+        [
+          "O&M contract",
+          "Preventive and corrective maintenance, remote operations, drone inspection",
+          "Availability guarantees can put fee at risk; equipment risk stays with the OEM under the LTSA",
+          "Strata Solar Services runs 180+ O&M staff; at Scatter Wash the equipment O&M sits with Tesla and Novasource"
+        ],
+        [
+          "Consultative role to COD",
+          "Advising the buyer through construction without managing it — the lightest tail",
+          "None disclosed",
+          "White Tank for GridStor, 'until commencement of commercial operations'"
+        ],
+        [
+          "{{Turnkey EPC}} awarded with the sale",
+          "Building the project the seller developed, at a fixed price, for the buyer",
+          "The seller-as-EPC takes construction risk",
+          "Cerulean Solar (62 MWac) sold to Dominion in November 2022 'and is awarded EPC contract'"
+        ]
+      ]
+    },
+    {
+      "id": "how-the-lender-reads-a-sold-project",
+      "title": "How the lender reads a project that changes hands",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Project debt is lent to the project company, not to its owner, so a sale of the company transfers the loan with it — subject to the lenders' consent. At Scatter Wash the USD 559 million financing closed in February 2024 and the project was sold in September; the lenders' underwriting did not change, because the toll, the EPC and the battery supply were the same. What changed was the equity behind them, from a founder-owned developer to a EUR 12 billion fund — an improvement in the lenders' eyes.",
+        "**The {{DSCR}} is set by the contract, not the owner.** A 20-year APS toll produces a fixed revenue line; lenders size the debt so that revenue covers debt service with a margin. That sizing is identical whoever owns the equity, which is why an originator can raise the financing and then sell the financed project: the financing is a feature of the product.",
+        "**Tax equity travels too.** U.S. Bancorp Impact Finance was Scatter Wash's 'primary tax-equity investor'; the {{ITC}} belongs to the project's owner at placement in service, so the buyer inherits both the credit and the tax-equity partner. On the two Vermont batteries Strata kept, it raised USD 8.7 million of {{tax equity}} itself — among the first standalone-storage credits monetised under the IRA.",
+        "**What the corporate lender underwrites is different.** Strata's revolver lenders (Nomura, First Citizens, ING and five unnamed banks under {{Green Loan Principles}}) look at the pipeline, the EPC and O&M cash flows and the owned solar fleet — the recurring business — and at the sale proceeds that repay development spend. The CFO's stated use of the July 2026 upsizing is 'to invest in our development pipeline and support our EPC and O&M businesses': the revolver is working capital for a manufacturer of projects."
+      ]
+    },
+    {
+      "id": "the-disclosed-money",
+      "title": "The disclosed money",
+      "kind": "bars",
+      "read": "3 min",
+      "unit": "USD millions as stated by Strata, its buyers and its lenders",
+      "intro": "Every bar is a facility or investment a source states. The sale prices of Ventura, Scatter Wash and White Tank are not shown because none is published; the '$4B+ debt raised' claim is the company's cumulative figure and is not a facility.",
+      "items": [
+        {
+          "label": "Scatter Wash construction and tax-equity financing (2024)",
+          "sub": "J.P. Morgan, Nomura, U.S. Bancorp Impact Finance, CoBank, KDB, NORD/LB, Siemens, Regions",
+          "v": 559
+        },
+        {
+          "label": "Corporate revolving credit facility (2026 upsizing)",
+          "sub": "Nomura, First Citizens",
+          "v": 450
+        },
+        {
+          "label": "Corporate revolving credit facility (2023)",
+          "sub": "Nomura, First Citizens, ING + five banks",
+          "v": 300
+        },
+        {
+          "label": "Corporate revolver renewal (2022)",
+          "sub": "Zions, Regions, CIT, Rabobank, First Horizon, NCB, United Community Bank",
+          "v": 170
+        },
+        {
+          "label": "Blackstone Credit capital (2021)",
+          "sub": "Described by the CFO as a credit facility",
+          "v": 150
+        },
+        {
+          "label": "Vermont batteries tax equity (2023)",
+          "sub": "United Community Bank, Enhanced Capital",
+          "v": 8.7
+        }
+      ]
+    },
+    {
+      "id": "sell-or-hold-the-originators-chair",
+      "title": "Sell or hold: the originator's chair",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "An originator that has just won a 20-year toll chooses between selling the project and holding it. The cards read the trade from the developer's seat; the buyer's seat is the GridStor guide.",
+      "cards": [
+        {
+          "t": "Sell the contracted project (Scatter Wash, White Tank)",
+          "meta": "Realise the development margin now; keep a service fee",
+          "adv": [
+            "Equity comes back within months and funds the next RFP bid — growth without a sponsor",
+            "The buyer's cheaper capital sets the price, so the seller captures the gap between two costs of capital",
+            "Construction and asset-management fees keep a recurring income from an asset no longer on the balance sheet",
+            "No 20-year exposure to the toll counterparty, the LTSA or battery degradation"
+          ],
+          "dis": [
+            "The operating cash flow — the part of the value a fund pays a premium for — goes to the buyer for two decades",
+            "Sale prices are never disclosed, so the margin cannot be benchmarked and the seller cannot prove it was paid fairly",
+            "A sold project no longer counts as owned: the 'over 50% retained' claim narrows to the solar base",
+            "The buyer inherits the supplier and the counterparty relationships the seller built"
+          ]
+        },
+        {
+          "t": "Hold and operate (Justice, Inland Empire, Vermont)",
+          "meta": "Own the toll for its life on a founder-owned balance sheet",
+          "adv": [
+            "Twenty years of fixed utility revenue and the tax credit stay with the developer",
+            "The owned fleet is the collateral and the recurring earnings the corporate lenders look at",
+            "Operating experience — the integrator failure at Inland Empire led to Strata's own control platform"
+          ],
+          "dis": [
+            "Ties up equity the development business needs; a revolver cannot fund long-dated ownership",
+            "A founder-owned holder pays more for capital than a fund, so the same contract is worth less held than sold",
+            "Concentration: Justice would be the company's largest owned asset by far, in one utility's territory",
+            "No sponsor to backstop a construction overrun or a delayed COD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The buyer disappears.** The model needs a fund with cheaper capital wanting exactly this contract at exactly this stage. If fund appetite for tolled storage weakens — higher rates, a sponsor pulling back, FEOC uncertainty on the supplier — the originator holds a project it did not build its balance sheet to hold. Strata's revolver funds development, not ownership; a project with no buyer becomes the second Justice.",
+        "**The contract is the product, and the utility writes it.** Strata's three tolls came from APS's all-source RFPs. A utility that changes its procurement — fewer RFPs, shorter terms, self-build, a rival winning — cuts the supply of the product. The named peers in the same RFPs (Recurrent Energy, EDF Renewables) are bidding for the same tolls.",
+        "**Fees are not ownership.** Construction-management and asset-management agreements pay for administration and carry reputational risk; they end when the buyer chooses. 'Under management' figures (4.2 GW in 2024, '260+ assets' in 2026) describe contracts, not assets, and the company switched from gigawatts to asset counts in 2026 without explaining why.",
+        "**Siting risk lands on the originator alone.** The rungs a buyer pays for are the ones a county can refuse. Strata's Virginia solar record — Hanover denied unanimously in 2024, Culpeper denied in 2026, Halifax approved 6-2 — is the cost of origination that no sale recovers.",
+        "**The record has holes a buyer would want filled.** No sale price for three flagship batteries, no completion release for Justice five months after its stated April 2026 date, an owned fleet the company never breaks out by ISO, site statistics that disagree with each other (285 versus 300+ projects; 1.8 versus 5 GWh of storage developed), and unverified snippets about attrition and stormwater citations. A seller's credibility is part of the product."
+      ]
+    },
+    {
+      "id": "where-strata-slots-in",
+      "title": "Where Strata slots in",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The corpus now holds the buyer and the seller of the same Arizona battery, and four other models of storage developer. The table places Strata against each.",
+      "cols": [
+        "Company (guide)",
+        "Model",
+        "Who holds the contract",
+        "What Strata shares / differs"
+      ],
+      "rows": [
+        [
+          "GridStor (buyer of White Tank)",
+          "Sponsor-created platform buying late-stage contracted projects",
+          "GridStor, for the fund",
+          "The same transaction from the other chair; GridStor inherits Strata's toll, supplier and LTSA"
+        ],
+        [
+          "Aypa Power",
+          "Contracted platform built to be sold whole",
+          "Aypa, then Brookfield",
+          "Aypa holds its contracts and sells the company; Strata sells the contracts and keeps the company"
+        ],
+        [
+          "Spearmint Energy",
+          "Merchant developer that keeps what it builds",
+          "No one — merchant",
+          "Opposite ends: Strata's batteries are all tolled or RA-contracted; Spearmint's have no offtaker"
+        ],
+        [
+          "Available Power",
+          "Sub-10 MW developer selling at notice to proceed with a turnkey EPC",
+          "The buyer, if any",
+          "Same develop-and-sell logic at a hundredth of the size and without a utility contract attached"
+        ],
+        [
+          "esVolta",
+          "Sponsor-owned owner-operator with a hedged-merchant and RA mix",
+          "esVolta, for Generate Capital",
+          "Both finance with Nomura-led facilities; esVolta keeps and operates, Strata sells and services"
+        ],
+        [
+          "Invenergy",
+          "Diversified developer with build-and-transfer to utilities",
+          "Invenergy or the utility",
+          "Strata's Dominion solar work is the same build-and-transfer at regional scale"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What does a buyer of a late-stage battery project actually pay for?",
+          "a": "The risks the originator has already retired — site, interconnection, permits, the utility contract, the supply agreement, sometimes the financing — not the megawatts. Each rung of the development ladder is a reason the project can no longer fail."
+        },
+        {
+          "q": "Why is a 20-year utility toll worth more to an infrastructure fund than to a founder-owned developer?",
+          "a": "The fund's capital is cheaper and longer-dated: it raises money from pensions at single-digit returns and holds assets for decades. A developer funding itself with a bank revolver values the same fixed cash flow at a higher discount rate, so the fund pays more."
+        },
+        {
+          "q": "What is the development margin and when is it earned?",
+          "a": "The gap between what the originator spent to reach a saleable stage and the sale price. It is earned on sale, not on operation, and it is almost never disclosed — Strata published no price for Ventura, Scatter Wash or White Tank."
+        },
+        {
+          "q": "What is capital recycling for a developer without a sponsor?",
+          "a": "Selling a finished or late-stage project to release the equity tied up in it and fund the next bids. Strata's revolver funds development; the sale proceeds replace the equity a sponsor would otherwise supply."
+        },
+        {
+          "q": "Does a project financing survive a sale of the project?",
+          "a": "Yes, with lender consent: the loan sits with the project company and is sized on the contract's revenue (the DSCR), not the owner. Scatter Wash's USD 559 million financing closed in February 2024 and the project was sold in September."
+        },
+        {
+          "q": "What is a construction-management agreement and what risk does it carry?",
+          "a": "A fee contract to manage the EPC, schedule and budget for the new owner. The EPC keeps fixed-price risk and the owner keeps overrun risk above it; the manager earns a fee and carries reputational risk. Strata holds one at Scatter Wash for CIP."
+        },
+        {
+          "q": "What does 'assets under management' mean for a developer that sells its projects?",
+          "a": "Service contracts, not ownership. Strata reports '260+' PV and BESS assets under O&M management; the batteries it sold appear there, the ones it owns appear in 'nearly 1 GW of owned assets'."
+        },
+        {
+          "q": "Why does the supply agreement matter to a buyer of an unbuilt battery?",
+          "a": "It fixes the battery's price, delivery and service terms before the sale, so the buyer's remaining risk is construction rather than procurement. White Tank's Canadian Solar agreement and 20-year LTSA were signed six months before GridStor bought the project."
+        },
+        {
+          "q": "What is the largest single risk to the originate-and-sell model?",
+          "a": "That the buyer disappears — a fund market that stops wanting tolled storage at that stage. The developer is then holding a project its balance sheet was not built to hold."
+        },
+        {
+          "q": "Where does the utility fit in this model?",
+          "a": "It manufactures the product's core: the all-source RFP that produces the 20-year toll. Fewer RFPs, shorter terms or a rival bidder winning cut off the supply of saleable projects."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "Which party's cost of capital sets the price a fund pays for a tolled battery?",
+          "c": [
+            "The originator's",
+            "The utility's",
+            "The buyer's",
+            "The battery supplier's"
+          ],
+          "a": 2,
+          "why": "The buyer discounts the contract's fixed cash flows at its own cost of capital; the gap between that and the seller's is the development margin."
+        },
+        {
+          "q": "What did Strata keep after selling Scatter Wash to CIP?",
+          "c": [
+            "A minority equity stake",
+            "Construction- and asset-management agreements",
+            "The tax credit",
+            "Nothing"
+          ],
+          "a": 1,
+          "why": "CIP's release: 'Strata will continue to serve as construction and asset manager'; the equipment O&M sits with Tesla and Novasource."
+        },
+        {
+          "q": "Why can a project financing close before the project is sold?",
+          "c": [
+            "Lenders lend to the owner, not the project",
+            "The debt is sized on the contract's revenue and travels with the project company",
+            "Sales are only allowed after COD",
+            "Tax equity forbids sales"
+          ],
+          "a": 1,
+          "why": "The DSCR is set by the toll; the equity behind the project company can change with lender consent."
+        },
+        {
+          "q": "Which statement about Strata's ownership is supported by the record?",
+          "c": [
+            "An infrastructure fund owns a majority",
+            "Blackstone owns a stake from 2021",
+            "It is '100% privately held ... owned by our founders'",
+            "Goldman Sachs Asset Management created it"
+          ],
+          "a": 2,
+          "why": "The company's financing page; the CFO described Blackstone's 2021 money as a credit facility."
+        },
+        {
+          "q": "What is capital recycling?",
+          "c": [
+            "Reusing battery cells",
+            "Selling a finished or late-stage asset to fund new development",
+            "Refinancing a revolver",
+            "Rolling a tax credit forward"
+          ],
+          "a": 1,
+          "why": "It is the growth-capital source of a developer with no sponsor."
+        },
+        {
+          "q": "Which of Strata's three flagship batteries was sold with its financing already closed?",
+          "c": [
+            "Ventura",
+            "Scatter Wash",
+            "White Tank",
+            "Justice"
+          ],
+          "a": 1,
+          "why": "The USD 559 million financing closed in February 2024; CIP bought the project in September 2024."
+        },
+        {
+          "q": "What makes the 'under management' figure different from the 'owned' figure?",
+          "c": [
+            "Nothing — they are the same fleet",
+            "Under management counts service contracts, including on assets the company sold",
+            "Under management counts only solar",
+            "Owned counts only batteries"
+          ],
+          "a": 1,
+          "why": "Sold assets stay under management if the seller keeps the O&M or asset-management contract."
+        },
+        {
+          "q": "What is the originator's biggest structural risk?",
+          "c": [
+            "Battery fires",
+            "A county permit denial",
+            "No buyer for the contracted project at the intended stage",
+            "A weak revolver"
+          ],
+          "a": 2,
+          "why": "The balance sheet is built to develop and sell; a project without a buyer must be held with capital the developer does not have."
+        }
+      ]
+    }
+  ]
+}

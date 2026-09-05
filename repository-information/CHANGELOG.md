@@ -3,11 +3,139 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 78/100`
+`Sections: 79/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.62r] — 2026-09-05 03:52:41 AM EST
+
+> Fresh session on Fable 5.1 Medium. Run Phase B session F5 of repository-information/PROFILER-COVERAGE-PLAN.md:
+> esVolta, Strata Clean Energy, Hunt Energy Network — the §8 rows `esvolta`, `strata-clean-energy`,
+> `hunt-energy-network` (all `developer · ipp`), listed under B5 in §4/§8. F5 is the fifth of the F1–F8
+> regrouping recorded in §4 (dated paragraph, 2026-09-04, v04.58r); F1 landed at v04.58r, F2 at v04.59r,
+> F3 at v04.60r, F4 (Invenergy, GridStor, Available Power) at v04.61r. When you flip the three §8 rows,
+> record `B5 → F5` in the Group column exactly as F4 recorded `B4 → F4`, and record the effort level this
+> session actually ran at in the Model column (`Fable 5.1 High → Medium` if Medium) per the §2 substitution
+> rule — F5 is the measured test of Medium; report in the summary whether the tripwires fired (a third-party
+> agent under 50 fetched URLs, snippet-reliant reports, judgments that read as summaries).
+> READ FIRST: repository-information/SESSION-CONTEXT.md (both entries — the Latest has the F4 lessons, the
+> harness fixes and the model decision); PROFILER-COVERAGE-PLAN.md §2, §4 row B-D / B5 and the regrouping
+> paragraph, §7, and the three §8 rows; .claude/rules/profiler-app.md (Profiler Command, Profiler Prep
+> Command); repository-information/PROFILER-SCHEMA.md; PROFILER-STYLES.md (active style: intel-briefing).
+> CLASSROOM-CURRICULUM-PLAN.md §6 is NOT in scope — F5 closes no register row; do not edit it.
+> .claude/rules/classroom-app.md is NOT needed.
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, categories per the §8 row, intel-briefing prose with confidence-tagged key judgments
+> and an indicators-to-watch bullet) and study guide (schema v2, a where-it-fails section, {{term}} tooltips
+> against profiler-concepts.json, new shared concepts registered there rather than in local glossaries,
+> flashcards and quiz on how the business model and the buying process work, never company trivia).
+> All three are private: disclose revenue, headcount, pipeline GW/GWh, backlog or funding only where a
+> source states it (a sponsor's release or filing, a lender's release, a regulator — ERCOT, CAISO, PJM,
+> MISO, FERC, a state PUC — a court record, a county permit, the company's own release); leave `expected`
+> empty and say so; calendar rows carry `cadence: "quarterly"`.
+> PREMISES TO RE-VERIFY FIRST (the §4 B5 row, written 2026-09-03: "Contracted and merchant mid-size BESS
+> owners across CAISO, PJM and ERCOT" — F3's and F4's briefs were wrong on every company, so treat each
+> clause as a dated claim): esVolta — who owns it today (sponsor or fund, stated stake and value), what is
+> operating by MW/MWh and COD as released, contracted or merchant per project, and the esVolta–Captona
+> Texas transaction Energy-Storage.news reported in January 2025 (cited in the GridStor dossier's sources).
+> Strata Clean Energy — ownership and sponsor, what it owns versus what it develops and sells (it sold the
+> 100 MW / 400 MWh White Tank project with its 20-year APS toll to GridStor on 18 September 2025 and stayed
+> on 'in a consultative role' — the GridStor dossier's sources carry the releases), operating fleet by ISO,
+> supplier and EPC names as released. Hunt Energy Network — ownership (the Hunt family relationship as a
+> source states it), the ERCOT fleet by MW/MWh and COD, whether its batteries are distribution-connected
+> sub-10 MW units (if so, the Available Power guide already owns the segment explanation — cite it, do not
+> re-teach it), merchant or contracted, lenders and tax-equity or credit-transfer counterparties as
+> released. Record every correction in the dossier's summary and judgments.
+> RESEARCH PRIORITIES, for every company: the project list with status, ISO, MW/MWh, COD and offtake as
+> released; financing (construction and term loans, tax equity, credit transfers, revenue puts, swaps or
+> hedges — as released, lender named); sponsor commitments as released; supplier, integrator and EPC names
+> as released among covered slugs; permit and county records; interconnection queue records; leadership
+> with company-published headshots. Two research agents per company (first-party exhaustive, then
+> third-party — sponsors' releases and filings, lenders, ISO and PUC records, county permits, court records,
+> trade press), a URL for every relationship claim, relationships[] resolving only to covered slugs with a
+> source that states the link — GridStor (`gridstor`) is now covered and is Strata's buyer; Available Power
+> (`available-power`) and Invenergy (`invenergy`) are covered. Put every must-find item in the agent
+> prompts — nothing can be searched after they return. Have every agent end its report in a `## ALL URLS`
+> list of every URL it fetched successfully.
+> STUDY GUIDES: one guide each, do not duplicate. Read the start-here callouts of the six F3/F4 guides
+> and do not repeat their material: aypa-power (the contracted platform as a financed asset base, the
+> conversion ladder, the financing stack, two ways to sell a tax credit, how a sponsor exits);
+> spearmint-energy (the merchant developer, the development-stage price list, financing a battery with no
+> PPA, the pre-COD market); intersect-power (the energy park, surplus interconnection, the captive
+> developer); invenergy (the diversified developer, economic ownership vs control, build-and-transfer to
+> utilities, merchant transmission); gridstor (the sponsor-created specialist, buying late-stage projects,
+> RA vs toll vs revenue swap, what a sponsor's name lets a young company borrow); available-power (the
+> sub-10 MW distributed play, siting on leased land, selling at NTP with a turnkey EPC, reading a silent
+> company). The IPP dossiers (plus-power, jupiter-power, key-capture-energy, eolian, arevon, terra-gen,
+> nextera-energy-resources) have no guides — do not look for them. The Classroom owns tolling, ancillary
+> stacking and duration-and-degradation. Choose each F5 guide's angle from the record; candidate angles the
+> corpus does not yet hold: the mixed contracted-and-merchant portfolio across three markets (how an owner
+> allocates between RA and toll markets and energy-only ERCOT, and what a lender does with the mix); the
+> originator that sells late-stage projects with the contract attached (Strata as GridStor's seller — the
+> seller's side of the table the GridStor guide reads from the buyer's chair); the family- or
+> strategic-owned developer and how it is financed without an infrastructure fund (verify the ownership
+> first). If two companies turn out to be the same model, teach one as the case study and give the other
+> the structural chapter.
+> BOOKKEEPING, same commit: `python3 scripts/sync-profiler-registry.py`, `build-profiler-graph.py`,
+> `check-profiler-study.py`; three calendar rows; README tree entries for every profile, study file and
+> study-prep folder plus the execs count (recount the files by registry slug; currently 468 across 74
+> companies — turner-* files belong to turner-construction); flip the three §8 rows; CHANGELOG entry
+> (counter at 78/100 — no rotation). One push commit with repo version bump (v04.61r → v04.62r).
+> ENVIRONMENT (confirmed by F1–F4): pip install playwright pymupdf pillow pillow-avif-plugin; never run
+> playwright install — use the /opt/pw-browsers/chromium-*/chrome-linux/chrome executable; the HTTP server
+> for the harness must be threaded (ThreadingMixIn, daemon threads, swallow BrokenPipeError); route
+> script.google.com to the roles stub in scripts/verify-profiler-roles.py and fulfill accounts.google.com
+> with an empty script; per-slug tabs are `#ov-tab-<key>`, the sources list is `.ov-sources ol li` (not
+> `#ov-main ol li` — the numbered judgments leak in), the study button is `#ov-study-btn`, term spans are
+> `.gd-term` with `data-term`; `page.goto('about:blank')` before every dossier (the study overlay otherwise
+> intercepts the next dossier's tab clicks) and wrap the localStorage init script in try/catch; dry-run the
+> harness on a known-good slug first. Timeline sections use lane keys `gen` / `deploy` / `eco`. Tool output
+> above ~30 KB is persisted to a file — read agent reports in chunks of ≤40 lines. Foreground sleep is
+> blocked — use the Monitor tool to wait for agent report files. The shell cwd resets to the repo root
+> after every Bash call — use absolute paths. A stop hook fires on uncommitted edits while agents run —
+> make no repo edits until the agents return. If agents die on an HTTP 429 usage limit, resume them by
+> SendMessage after the reset rather than respawning (F2 and F4 both did this successfully). Business
+> Wire and archive.org are 403/blocked — read Business Wire releases through Yahoo Finance, Stocktitan,
+> Nasdaq, SFNet, 01net, Pulse 2.0, IREI, Energy Global or Batteries News mirrors and cite the mirror;
+> a company that hosts its releases in full (GridStor did) needs no mirror.
+> FIVE LESSONS FROM F1–F4, ALL MANDATORY: (1) build a URL index from the reports programmatically with a
+> regex that keeps parentheses inside URLs (`https?://[^\s<>\[\]"'`]+`, strip trailing punctuation), add
+> other covered dossiers' sources[] as a corpus tier, and make the assembler refuse any sources[],
+> relationships[], policyExposure[] or recentDevelopments[] URL not in the index — 0 unmatched per dossier
+> before writing; write all three profiles before relying on cross-citation; (2) treat every ownership,
+> transaction, sponsor and pipeline premise in this brief as a dated fact to re-verify first — F3 and F4
+> were wrong on all six companies; (3) keep press-reported values, analyst supplier attributions and
+> permit design bases as `announced` with the reporter named, never `active`; interconnection adjacencies
+> to a covered utility are `other`; exec-background links, JV attributions and analyst comparables are
+> prose or `competitor` with the ranking cited, not supplier/customer relationships; (4) a company-hosted
+> headshot whose filename marks a LinkedIn origin is skipped; company-published portrait renders count as
+> company photos; (5) a photo caption is not a supplier attribution — read the sentence, not the image.
+> Do not read other dossiers' prose as a template for judgments. Estimate ~90 minutes; F4 ran ~73 minutes
+> net of a usage-limit stall.
+> VERIFY BEFORE COMMIT: sync-profiler-registry.py --check clean, check-profiler-study.py clean, every
+> dossier and guide renders with zero page errors and zero console errors (Playwright, per-slug tabs
+> including Relationships, sources count matches the file, no literal {{}} and no unresolved term spans),
+> every relationships[] slug and every {{term}} resolving. Normal Pre-Commit and Pre-Push checklists;
+> push on a claude/* branch.
+> If a capacity, a contract value, a transaction value or a customer cannot be sourced from a filing, a
+> regulator, a court record or the party's own release, leave it out and say so.
+
+### Added
+- **esVolta dossier (`esvolta.profile.json`, schema v7, profileVersion 1, `developer · ipp`, intel-briefing)** — 108 sources (31% first-party), 4 relationships (Sungrow supplier, Quanta partner, GridStor and Intersect Power as Modo-grouped competitors), 3 policy regimes, 11 decision makers with 7 company-hosted headshots, a 15-band project ledger. The record: a Generate Capital portfolio company whose sponsor has mandated Barclays and Truist for its sale (Infralogic, 5 June 2026); 490 MW / 980 MWh operating in ERCOT behind "a hedge in place with a confidential commodity market participant"; PG&E and community-choice resource adequacy in CAISO; Boxcar and City Breeze under construction; Cactus Wren (800 MW / 3,200 MWh) permitted in Pinal County with no offtake.
+- **Strata Clean Energy dossier (`strata-clean-energy.profile.json`, schema v7, profileVersion 1, `developer · ipp`)** — 103 sources (50% first-party), 11 relationships (GridStor as customer-buyer, Tesla and LS Energy Solutions active suppliers, Canadian Solar `announced`, Mortenson partner, Dominion customer, Arevon historical, four Solar Power World ranking competitors), 3 policy regimes, 12 decision makers with 10 headshots. The record: a founder-owned developer-EPC-owner that wins 20-year Arizona Public Service tolls and sells the battery with the contract attached — Scatter Wash to Copenhagen Infrastructure Partners (September 2024), White Tank to GridStor (September 2025), Ventura to Capital Dynamics and then Arevon — keeping Justice, Inland Empire, 20 MWh in Vermont and about 1 GW of owned solar.
+- **Hunt Energy Network dossier (`hunt-energy-network.profile.json`, schema v7, profileVersion 1, `developer · ipp`)** — 87 sources (32% first-party, ten of them PUCT Interchange filings), 7 relationships (Canadian Solar supplier via the Fort Duncan purchase, Burns & McDonnell historical, Caterpillar at parent level as `other`, Jupiter Power and Plus Power as Modo revenue-ranking competitors, AEP and Oncor as wire-company adjacencies), 4 policy regimes, 6 decision makers with 5 headshots. The record: a Hunt-family-owned, Manulife-funded, 100 percent merchant owner-trader of 32 distribution-connected 9.9 MW batteries plus the 100 MW / 200 MWh Fort Duncan battery, dispatched by its own Level 4 qualified scheduling entity, now adding oil-fired peakers.
+- **Three schema v2 study guides + three lesson plans** — `strata-clean-energy.study.json` (the seller at the table: what an originator makes, why a founder-owned developer sells a 20-year contract, the three sales read side by side, what the seller keeps in fees, how a lender reads a sold project); `esvolta.study.json` (the mixed book: three ways a battery is paid, the book by market, what a lender does with the mix, the disclosed stack by layer, when the sponsor sells); `hunt-energy-network.study.json` (the owner who trades: what a qualified scheduling entity is and why an owner would be one, five minutes at a time under RTC+B, a family and an insurer, why an owner-trader adds peakers, scale change). Each carries a where-it-fails callout, a slots-in table, ten flashcards and an eight-item quiz on the business model and the buying process.
+- **18 shared concepts registered in `profiler-concepts.json`** (786 total) — the owner-and-trader vocabulary: RA contract, qualified scheduling entity, load zone, settlement point, joint venture, general account, wholesale distribution service, pre-NTP facility, green loan, real-time co-optimization, sale process, DSCR, family office, originator, unit classes, construction-management agreement, capital recycling, development margin.
+- **Three quarterly calendar rows** in `profiler-refresh-calendar.json` (85 rows) with the re-verified premises written in as Chesterton checks; **22 headshots** in `images/execs/` (Strata 10, esVolta 7, Hunt 5), execs recount 490 images across 77 companies.
+
+### Changed
+- `PROFILER-COVERAGE-PLAN.md` §8 — the three rows flipped to `B5 → F5 … v1 · v04.62r | ✓ · v04.62r`, with the Model column recording the §2 substitution honestly: Fable 5.1 High → **Medium** for all research, dossiers, guides and lesson plans, then **Opus 5 xhigh** after the developer switched models for the bookkeeping tail. Registry synced (124 companies), graph rebuilt (865 edges, 653 curated), study checker clean (98 guides, 786 concepts), Playwright render of all nine dossier tabs and all three guides clean for each slug (sources counts 108 / 103 / 87 matching the files, no unresolved `{{term}}` spans, zero page and console errors).
+
+### Fixed
+- **All three §4 B5 premises were wrong and are corrected in the dossiers' summaries and judgments.** "Contracted and merchant mid-size BESS owners across CAISO, PJM and ERCOT" holds for none of them: esVolta is CAISO, ERCOT and WECC with SPP and MISO expansion and has never named a PJM project; Strata owns no battery in ERCOT or PJM, its one owned CAISO battery is Inland Empire under a PG&E resource-adequacy agreement, and its Arizona assets sit in APS territory outside any ISO; Hunt Energy Network is ERCOT-only, fully merchant and sub-10 MW rather than mid-size. Two further brief premises corrected: the esVolta–Captona transaction of January 2025 was a USD 243 million preferred-equity investment including ITC-transfer proceeds, not a sale, and Generate Capital acquired esVolta in July 2022, not 2023.
+- Session lessons applied: every `sources[]`, `relationships[]`, `policyExposure[]` and `recentDevelopments[]` URL asserted against a programmatic index built from the six `## ALL URLS` lists plus a corpus tier — 0 unmatched per dossier before writing (139 / 140 / 119 URLs checked). Press-reported and inherited attributions kept as `announced` or `other` with the reporter named (Canadian Solar at White Tank recorded `announced` because Strata sold the project six months after signing the supply agreement; Burns & McDonnell recorded `historical` as the seller's EPC at Fort Duncan; AEP and Oncor recorded `other` as wire-company adjacencies, not commercial links). The one CDN-refused headshot (esVolta's chief commercial officer) was skipped rather than sourced elsewhere.
 
 ## [v04.61r] — 2026-09-05 02:45:13 AM EST
 

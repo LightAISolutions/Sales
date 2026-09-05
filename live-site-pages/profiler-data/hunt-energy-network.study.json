@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 2,
+  "slug": "hunt-energy-network",
+  "title": "Hunt Energy Network — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-owner-who-trades",
+      "title": "Start here: the owner who trades",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "Hunt Energy Network owns 33 batteries in Texas, has never signed a contract for any of them, and is paid five minutes at a time by the ERCOT market through a trading desk it built itself. It is owned by a family company that has been in Texas energy since 1934 and funded by a life insurer's infrastructure funds through a {{joint venture}}. This guide teaches two things the corpus does not yet hold: what it means for a battery owner to be its own {{qualified scheduling entity}} — the owner-trader — and how a {{family office}} and an insurer's {{general account}} finance a merchant fleet without a bank, a tax-equity partner or an {{infrastructure fund}} in charge.",
+        "**What it deliberately does not repeat:** the Available Power guide teaches the sub-10 MW distributed play — why 9.9 MW, siting on leased land, the lighter distribution interconnection, selling at notice to proceed; HEN is the owner-operator instance of that segment and the segment's economics are taught there, not here. The Spearmint guide teaches financing a merchant battery with no PPA at transmission scale; the GridStor guide teaches converting merchant exposure into fixed payments through a desk that sells swaps; the Classroom owns responsive reserve, fast frequency response and hour-by-hour ERCOT revenue.",
+        "**One idea carries the guide.** In an energy-only market a battery is worth what its operator can trade it for. An owner that hires a trader buys a service; an owner that is the trader owns the margin — and, as Enerdatics put it about Hunt, 'merchant batteries remain financeable — only for operators who can trade them'."
+      ]
+    },
+    {
+      "id": "what-a-qse-is-and-why-an-owner-would-be-one",
+      "title": "What a QSE is and why an owner would be one",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "ERCOT does not deal with generators directly. Every resource — a gas plant, a wind farm, a 9.9 MW battery — is represented in the market by a {{qualified scheduling entity}}: the registered entity that submits its offers and bids, sends its telemetry, receives its dispatch instructions and settles its invoices. Most owners hire one. Optimisers such as Gridmatic, Habitat, Tesla and Equilibrium sell QSE services with an auto-bidder attached and take a fee or a revenue share; Modo Energy's directory lists HEN's TraDER beside them as 'QSE + DME + Auto-bidder', ERCOT only.",
+        "**What the desk does every five minutes.** ERCOT settles energy at each {{settlement point}} in five-minute real-time intervals and, since December 2025's {{real-time co-optimization}}, clears energy and {{ancillary services}} together in the same interval while tracking each battery's {{state of charge}}. A one-hour battery must decide, every interval, whether to hold its charge for a scarcity hour, sell it now, or offer it as reserve. HEN's own description of TraDER: a five-minute QSE that manages 'State-of-Charge management, cycle efficiency, and utility tariff cost mitigation', with an automated bidder, forecasts and 'strategic back-casting', run from a 24/7 operations centre.",
+        "**Why be your own.** Three reasons show in the record. Margin: a third-party optimiser's fee or share is the owner's cost; Modo's site data (Faulkner 'around $225,000/MW' in the year to March 2024, 60 percent above its DGR index; Junction 'the highest-earning one-hour site' in November 2024) is the return on keeping it. Fleet effects: 'managing revenue maximization across 32 unique nodes on a daily basis' (the VP Commercial) is a portfolio problem — a desk that sees every node can move charge between {{load zone}}s in its bidding. Product: a desk built for one fleet can be sold to others, and HEN markets TraDER as 'a turn-key asset management solution' for third-party owners.",
+        "**What it costs.** A Level 4 QSE carries credit requirements with ERCOT, a compliance function (HEN's 'Markets and Compliance' officer appears on its PUCT filings), 24/7 staffing and the rule-change work — HEN filed comments on the state-of-charge and ancillary-demand-curve rule changes that reshaped its own product. Those are fixed costs a 9.9 MW owner cannot carry alone; they need a fleet."
+      ]
+    },
+    {
+      "id": "the-owner-traders-fleet",
+      "title": "The owner-trader's fleet: what the record shows",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "The fleet as the company, the regulator and the analysts describe it. The 9.9 MW segment itself — why that size, how it connects — is the Available Power guide's material.",
+      "cols": [
+        "Fleet element",
+        "What a source states",
+        "Who states it",
+        "What it tells the reader"
+      ],
+      "rows": [
+        [
+          "32 distribution-connected batteries, 9.9 MW each",
+          "'Since 2021, Hunt Energy Network has deployed 32 distribution-level BESS facilities throughout ERCOT with a capacity of 10MW each'; every unit listed at 9.9 MW with its wire company (TNMP, Oncor, AEP Texas, South Texas Electric Cooperative)",
+          "Company release (February 2026); PUCT registration (April 2024)",
+          "One design, repeated; the wire company, not ERCOT, is the interconnection counterparty"
+        ],
+        [
+          "One-hour duration",
+          "Faulkner is 'a 9.9 MW, one-hour Distributed Generation Resource'; fleet '410 MW / 510 MWh' before Fort Duncan",
+          "Modo Energy",
+          "Short duration favours ancillary services and short arbitrage windows — the desk's products"
+        ],
+        [
+          "Fort Duncan, 100 MW / 200 MWh",
+          "'A 100% merchant facility'; bought operating from Recurrent Energy in February 2026; 'transmission-level'; to be dispatched by TraDER",
+          "Company release",
+          "The desk now trades a transmission node beside 32 distribution nodes"
+        ],
+        [
+          "Sited 'in all 4 load zones'",
+          "'The HEN fleet, strategically sited in all 4 load zones, maximizes value in all market conditions'",
+          "Company page",
+          "Geographic diversification of price risk within one market"
+        ],
+        [
+          "Revenue",
+          "'100% merchant revenue'; no toll, hedge or offtake in any source; 'Arbitrage is the name of the game now' (lead trader)",
+          "Modo Energy case study",
+          "Everything the fleet earns comes through the desk"
+        ],
+        [
+          "Wire-company tariffs",
+          "'A customer in one of AEP Texas's rate class for Wholesale Distribution Service'; demand charges contested in two PUCT dockets",
+          "PUCT filings",
+          "The distribution connection has a delivery cost the desk must trade around — 'utility tariff cost mitigation' is a TraDER feature"
+        ]
+      ]
+    },
+    {
+      "id": "a-family-and-an-insurer-how-hen-is-owned",
+      "title": "A family and an insurer: how HEN is owned and funded",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "**The family.** 'We are a part of the Hunt Energy Company'; 'part of a larger privately-owned group of companies managed by the Ray L. Hunt family'. Hunt Consolidated, founded on Hunt Oil in 1934, lists HEN as one of six divisions and dates it to 2018, 'created and incubated within Hunt Energy Enterprises', the group's energy-technology venture unit. A {{family office}} of this kind can own an operating company outright, fund it from the group's balance sheet, and hold it with no fund life to run out. Its executive chairman is a former FERC and Texas PUC chairman; its board member is the family's energy CEO.",
+        "**The insurer.** Manulife Investment Management — the asset-management arm of a Canadian life insurer — committed USD 225 million in March 2021 to form HEN Infrastructure, L.L.C., a {{joint venture}} 'to develop and manage a portfolio of 500 megawatts (MW) of distribution level energy storage assets in ERCOT, dispatched by Hunt Energy Network's proprietary TraDER platform'. The money was 'sourced for John Hancock Life Insurance Company (U.S.A.) balance sheet and third-party managed accounts' — the insurer's {{general account}}, which needs long-dated returns to match policy liabilities, plus client mandates. In August 2024 a 'wholly distinct' USD 250 million came from Manulife Infrastructure Fund III for more batteries and thermal peakers.",
+        "**The structure.** The PUCT registration attaches a chart: Hunt Consolidated → Hunt Equities and HIC GP → Hunt Investment Company → Hunt Energy Enterprises → Hunt Energy Network → HEN Infrastructure holding 'A Units', with John Hancock → Manulife Infrastructure II Holdings A, L.P. holding 'B Units', and the labels '100% Economic Interest' and '0% Economic Interest' against the {{unit classes}}. The filing does not make legible which class carries the economics — and that is the lesson: in a JV the operating agreement's unit terms, not the chart or the name on the door, say who gets the cash. Hunt originates, builds and trades; Manulife's money owns the batteries on terms neither party has published.",
+        "**What is missing, and what it means.** No bank loan, {{tax equity}} partner or {{tax credit transferability}} buyer has ever been named for a 420 MW fleet. Either the insurer's balance sheet and the family's fund the construction directly — plausible for a general account that wants the asset, not the fee — or the financings exist and a private company does not announce them. Both readings say the same thing to a supplier: there is no lender's technical adviser or tax-equity investor in the room, and the OEM decision is the owner's alone."
+      ]
+    },
+    {
+      "id": "three-ways-to-own-a-merchant-fleet",
+      "title": "Three ways to own a merchant fleet",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "The corpus now holds three merchant or near-merchant owners financed three different ways. The table sets the family-and-insurer model against the two the Spearmint and esVolta guides teach.",
+      "cols": [
+        "Owner",
+        "Who supplies the equity",
+        "Who supplies the debt",
+        "Who trades the fleet",
+        "Consequence"
+      ],
+      "rows": [
+        [
+          "Hunt Energy Network",
+          "The Hunt family and Manulife's insurer funds through a JV (USD 475 million committed)",
+          "None disclosed",
+          "HEN's own Level 4 QSE (TraDER)",
+          "No lender's DSCR discipline; the desk is the risk control; growth paced by the insurer's appetite"
+        ],
+        [
+          "Spearmint Energy",
+          "Founders and a lender that lends against the desk and the credits",
+          "Elda River and others",
+          "Spearmint's own desk",
+          "Debt on merchant batteries is possible when the lender underwrites the trading capability"
+        ],
+        [
+          "esVolta (Texas book)",
+          "Generate Capital plus Captona preferred equity",
+          "MUFG, Nomura, KeyBanc, Investec, Cadence",
+          "A hedge from 'a confidential commodity market participant' plus wholesale",
+          "A bought floor lets banks lend; the desk is outsourced to the hedge counterparty"
+        ],
+        [
+          "GridStor (for contrast)",
+          "A Goldman Sachs Asset Management fund",
+          "NORD/LB, First Citizens, Siemens",
+          "Contracts (RA, tolls) and an Axpo revenue swap",
+          "Merchant exposure converted into fixed payments before construction"
+        ]
+      ]
+    },
+    {
+      "id": "why-add-peakers-to-a-battery-fleet",
+      "title": "Why an owner-trader adds peakers",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "The 2024 Manulife commitment was for 'additional energy storage projects and new thermal peaking generation facilities throughout ERCOT' — units with 'significant on-site fuel storage' and multi-fuel capability for 'extreme weather events'. The company registered three 9.9 MW 'AGR' units at existing battery sites; EIA lists them as oil-fired; the first diesel peaker 'came on line' in April 2026.",
+        "**A one-hour battery has a scarcity problem.** ERCOT's highest prices come in multi-hour stress events — a winter storm, a summer evening with no wind. A one-hour battery sells its charge in the first hour and is empty for the rest; a peaker with fuel on site can run through the event. For a merchant fleet that earns its year in a few dozen hours, a small dispatchable unit at the same node is {{firming}} for the trading strategy, not a separate business.",
+        "**The same size, the same connection.** The peakers are 9.9 MW, registered as generation resources at the sites the batteries already occupy, on the same distribution interconnections. The Available Power guide explains what the threshold buys; here it buys a second product at a sunk site, dispatched by the same desk.",
+        "**And a door to the parent's business.** Pat Wood's bio says HEN 'is also working with select customers to power their data centers', and the parent, Hunt Energy Company, signed a Caterpillar agreement in August 2025 for 'up to 1 GW of power generation capacity for data centers across North America' citing HEN's fleet as credentials. Neither company says whether the peakers are Caterpillar units. A reader should hold the two as adjacent: the owner-trader's firming programme and the family company's data-centre power line share a family, a state and a fleet count, and nothing else in the record."
+      ]
+    },
+    {
+      "id": "disclosed-commitments-by-size",
+      "title": "Disclosed commitments by size",
+      "kind": "bars",
+      "read": "2 min",
+      "unit": "USD millions as stated by HEN and its counterparties",
+      "intro": "Only equity commitments are published. No loan, tax-equity or credit-transfer amount exists in the record; Recurrent Energy's USD 183 million at Fort Duncan was the seller's financing and is shown for contrast.",
+      "items": [
+        {
+          "label": "Manulife Infrastructure Fund III commitment (2024)",
+          "sub": "For batteries and thermal peakers",
+          "v": 250
+        },
+        {
+          "label": "Manulife / John Hancock commitment forming HEN Infrastructure (2021)",
+          "sub": "General account and managed accounts",
+          "v": 225
+        },
+        {
+          "label": "Recurrent Energy's Fort Duncan project financing and tax equity (pre-sale)",
+          "sub": "The seller's, not HEN's",
+          "v": 183
+        },
+        {
+          "label": "HEN investment in Quidnet Energy (2024)",
+          "sub": "Outbound; long-duration storage",
+          "v": 10
+        }
+      ]
+    },
+    {
+      "id": "own-the-desk-or-hire-it",
+      "title": "Own the desk or hire it: the owner's chair",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "A merchant battery owner chooses between building a QSE and trading function and hiring an optimiser. The cards read the trade from the owner's seat.",
+      "cards": [
+        {
+          "t": "Be the QSE (Hunt Energy Network)",
+          "meta": "In-house Level 4 QSE, auto-bidder, 24/7 operations centre",
+          "adv": [
+            "The optimiser's fee or revenue share stays with the owner",
+            "Portfolio bidding across 33 nodes and four load zones — a fleet advantage a per-site optimiser cannot use",
+            "The desk becomes a product: TraDER is marketed to third-party owners",
+            "Rule changes (RTC+B, state-of-charge accounting) are shaped by the owner's own filings"
+          ],
+          "dis": [
+            "Fixed costs — credit with ERCOT, compliance, staff — that only a fleet can carry",
+            "No lender underwrites the desk, so debt is absent or undisclosed; growth depends on the equity partner",
+            "Revenue is the market's: 2025's ERCOT battery revenues were about half of 2024's and the owner holds all of it",
+            "Amperical ranks most HEN sites mid-table; being the trader does not guarantee the top"
+          ]
+        },
+        {
+          "t": "Hire an optimiser (the default for small owners)",
+          "meta": "Gridmatic, Habitat, Tesla, Equilibrium and others sell QSE plus auto-bidding",
+          "adv": [
+            "No fixed cost; pay a fee or a share of revenue",
+            "Access to a desk that trades many owners' fleets and has already built the models",
+            "A bankable arrangement — lenders know the optimisers",
+            "Switchable when performance lags"
+          ],
+          "dis": [
+            "The fee or share is the margin the owner gives up",
+            "The optimiser bids each site for its own revenue, not the owner's portfolio",
+            "The owner learns nothing about its own market",
+            "Contract terms and performance are the optimiser's to set"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The market repriced the product.** ERCOT battery revenues fell from about USD 193/kW in 2023 to USD 56/kW in 2024 and USD 29/kW in 2025 as arbitrage replaced ancillary services (Modo). A fully merchant fleet with no hedge takes the whole fall; the desk's edge is measured against an index that is itself collapsing.",
+        "**The insurer's appetite is the growth constraint.** With no disclosed debt and no tax-credit partner, every new battery is funded by Manulife's commitments and the family. A general account that wants steady infrastructure returns may not fund a merchant fleet through a revenue trough; the 2024 commitment was earmarked partly for peakers, not batteries.",
+        "**The distribution connection has a landlord.** The batteries are wholesale distribution customers of TNMP, Oncor and AEP Texas and pay demand charges the company says penalise them; HEN is litigating rate classes in two dockets and asking the legislature for standardised interconnection rules. The segment's advantage — the lighter connection — comes with a tariff the wire company sets.",
+        "**A one-hour fleet under RTC+B.** Real-time co-optimisation tracks state of charge inside the clearing; a one-hour unit that used to be paid for reserve it might never deliver is now paid for what it can actually hold. HEN's own comments on the rule changes are the evidence that its product was exposed.",
+        "**Scale changes the model.** Fort Duncan and the 180 MW projects are transmission-level, two-hour and eighteen times the unit size the desk was built for. A trading desk tuned to 9.9 MW nodes with a distribution tariff is now trading a 100 MW node bought from a developer whose financing and supplier it inherited.",
+        "**The record is thin where a buyer would look.** No per-site MWh, no COD, no OEM, no EPC, no debt, no purchase price for Fort Duncan, no economic split between the unit classes, and fleet counts that disagree (33 in February 2026, '31' in May). A merchant owner's credibility with a counterparty rests on its desk's record, and that record is Modo's to publish, not the company's."
+      ]
+    },
+    {
+      "id": "where-hunt-energy-network-slots-in",
+      "title": "Where Hunt Energy Network slots in",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The corpus's ERCOT battery owners and the distributed-play developer, placed against HEN.",
+      "cols": [
+        "Company (guide)",
+        "Model",
+        "Who trades the fleet",
+        "What HEN shares / differs"
+      ],
+      "rows": [
+        [
+          "Available Power",
+          "Develops 9.9 MW batteries and sells at NTP with a turnkey EPC",
+          "The buyer's optimiser",
+          "Same unit, opposite end of the chain: HEN owns and trades what Available Power would sell; nothing operating on Available Power's side"
+        ],
+        [
+          "Spearmint Energy",
+          "Merchant developer, transmission scale",
+          "Spearmint's own desk; a lender lends against it",
+          "Both are owner-traders; Spearmint has bank debt against the desk, HEN has none disclosed"
+        ],
+        [
+          "esVolta",
+          "Mixed RA and hedged-merchant owner",
+          "A commodity trader's hedge plus wholesale",
+          "esVolta buys its floor; HEN trades unhedged"
+        ],
+        [
+          "GridStor",
+          "Contracted, sponsor-created platform",
+          "Contracts and an Axpo swap",
+          "GridStor's desk sells exposure away; HEN's keeps it"
+        ],
+        [
+          "Jupiter Power, Plus Power (dossiers)",
+          "Large transmission-scale ERCOT owners",
+          "Their own desks",
+          "Modo's July 2024 grouping of the three highest-earning owners; HEN at a tenth of the unit size"
+        ],
+        [
+          "Caterpillar (parent-level)",
+          "Genset supplier to Hunt Energy Company's data-centre programme",
+          "—",
+          "A sibling business of HEN's family owner; not an HEN contract"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What is a qualified scheduling entity?",
+          "a": "The ERCOT-registered entity that submits a resource's offers and bids, sends its telemetry, takes its dispatch instructions and settles its invoices. Every battery needs one; the owner can be it or hire it."
+        },
+        {
+          "q": "Why would a battery owner build its own QSE instead of hiring an optimiser?",
+          "a": "To keep the optimiser's fee or revenue share, to bid the whole fleet as a portfolio across nodes and load zones, and to turn the desk into a product it can sell to other owners."
+        },
+        {
+          "q": "What does real-time co-optimisation change for a one-hour battery?",
+          "a": "Energy and ancillary services clear together every five minutes with the battery's state of charge tracked in the clearing, so a unit is paid for the reserve it can actually hold rather than for a day-ahead commitment."
+        },
+        {
+          "q": "How is Hunt Energy Network owned?",
+          "a": "By the Ray L. Hunt family's group ('a part of the Hunt Energy Company'), with Manulife Investment Management as joint-venture equity partner through HEN Infrastructure — USD 225 million in 2021 from John Hancock's general account and managed accounts, USD 250 million in 2024 from Manulife Infrastructure Fund III."
+        },
+        {
+          "q": "Why do the unit classes in a JV matter more than the org chart?",
+          "a": "The operating agreement's A-unit and B-unit terms set who receives cash, control and returns; the PUCT chart shows both parties but not which class carries the economic interest."
+        },
+        {
+          "q": "What is a life insurer's general account, and why does it fund batteries?",
+          "a": "The insurer's own portfolio of policyholder premiums, which must earn long-dated steady returns to match its liabilities. It can own infrastructure directly, which lets a JV be funded without a bank."
+        },
+        {
+          "q": "What is missing from HEN's financing record, and what does it imply?",
+          "a": "No loan, tax-equity or credit-transfer counterparty for a 420 MW fleet. Either the insurer and the family fund construction directly, or the financings are unpublished; either way there is no lender's adviser in the OEM decision."
+        },
+        {
+          "q": "Why add a 9.9 MW oil-fired peaker to a battery site?",
+          "a": "A one-hour battery empties in the first hour of a multi-hour scarcity event; a fuelled peaker at the same node runs through it — firming for the trading strategy at a sunk site and connection."
+        },
+        {
+          "q": "What does a wholesale distribution tariff do to a distribution-connected battery?",
+          "a": "It adds a delivery charge set by the wire company, including demand charges the owner argues penalise a resource that cuts peak load; HEN contests them in PUCT rate cases and builds 'utility tariff cost mitigation' into its bidding."
+        },
+        {
+          "q": "What is the largest risk to a fully merchant, self-traded fleet?",
+          "a": "The market repricing: ERCOT battery revenues fell by about six times from 2023 to 2025, and an owner with no hedge, no contract and no lender's floor holds all of it."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "In ERCOT, who submits a battery's offers and receives its dispatch instructions?",
+          "c": [
+            "The battery OEM",
+            "ERCOT itself",
+            "The qualified scheduling entity",
+            "The wire company"
+          ],
+          "a": 2,
+          "why": "Every resource is represented by a QSE; HEN runs its own (HEN Power Marketing) rather than hiring one."
+        },
+        {
+          "q": "What kind of investor is Manulife in relation to HEN?",
+          "c": [
+            "A lender",
+            "A joint-venture equity partner through infrastructure funds and an insurer's general account",
+            "A tax-equity investor",
+            "The parent company"
+          ],
+          "a": 1,
+          "why": "USD 225 million (2021) formed HEN Infrastructure; USD 250 million (2024) came from Manulife Infrastructure Fund III; the parent is the Hunt family's Hunt Energy Company."
+        },
+        {
+          "q": "Which statement about HEN's revenue model is supported by the record?",
+          "c": [
+            "It holds APS tolls",
+            "It hedges with a commodity trader",
+            "It is 100 percent merchant with no toll, hedge or offtake in any source",
+            "It sells resource adequacy"
+          ],
+          "a": 2,
+          "why": "Fort Duncan is 'a 100% merchant facility'; Modo's case study describes '100% merchant revenue'; no contract appears in any filing."
+        },
+        {
+          "q": "What is the main advantage of trading a fleet of 33 nodes from one desk?",
+          "c": [
+            "Lower interconnection cost",
+            "Portfolio bidding across nodes and load zones that a per-site optimiser cannot do",
+            "Exemption from wire-company tariffs",
+            "Access to tax credits"
+          ],
+          "a": 1,
+          "why": "The VP Commercial describes 'managing revenue maximization across 32 unique nodes on a daily basis'."
+        },
+        {
+          "q": "Why does a one-hour battery owner add fuelled peakers?",
+          "c": [
+            "To qualify for RA contracts",
+            "To run through multi-hour scarcity events the battery cannot cover",
+            "To avoid RTC+B",
+            "To meet FEOC rules"
+          ],
+          "a": 1,
+          "why": "The 2024 Manulife commitment was for peakers with 'significant on-site fuel storage' for 'extreme weather events'."
+        },
+        {
+          "q": "What does the absence of any disclosed debt tell a supplier?",
+          "c": [
+            "The company is insolvent",
+            "The batteries are leased",
+            "There is no lender's adviser or tax-equity investor in the OEM decision",
+            "The fleet is contracted"
+          ],
+          "a": 2,
+          "why": "Either the insurer and family fund construction directly or the financings are private; in both cases the owner decides alone."
+        },
+        {
+          "q": "Which counterparty sets the delivery charge on HEN's distributed batteries?",
+          "c": [
+            "ERCOT",
+            "The wire company under its wholesale distribution tariff",
+            "Manulife",
+            "The PUCT directly"
+          ],
+          "a": 1,
+          "why": "HEN is 'a customer in one of AEP Texas's rate class for Wholesale Distribution Service' and contests the demand charges in rate cases."
+        },
+        {
+          "q": "Which guide teaches why the units are 9.9 MW?",
+          "c": [
+            "The Spearmint guide",
+            "The GridStor guide",
+            "The Available Power guide",
+            "The Invenergy guide"
+          ],
+          "a": 2,
+          "why": "The sub-10 MW distributed play is the Available Power guide's subject; HEN is the owner-operator instance."
+        }
+      ]
+    }
+  ]
+}

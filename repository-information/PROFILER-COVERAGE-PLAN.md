@@ -171,9 +171,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | B4 → F4 | `invenergy` | Invenergy | developer · ipp | Fable 5.1 High | buyer side | v1 · v04.61r | ✓ · v04.61r |
 | B4 → F4 | `gridstor` | Gridstor | developer · ipp | Fable 5.1 High | buyer side | v1 · v04.61r | ✓ · v04.61r |
 | B4 → F4 | `available-power` | Available Power | developer · ipp | Fable 5.1 High | buyer side | v1 · v04.61r | ✓ · v04.61r |
-| B5 | `esvolta` | esVolta | developer · ipp | Fable 5.1 High | buyer side | — | — |
-| B5 | `strata-clean-energy` | Strata Clean Energy | developer · ipp | Fable 5.1 High | buyer side | — | — |
-| B5 | `hunt-energy-network` | Hunt Energy Network | developer · ipp | Fable 5.1 High | buyer side | — | — |
+| B5 → F5 | `esvolta` | esVolta | developer · ipp | Fable 5.1 High → **Medium** (measured Medium test, §2 substitution; all research, dossiers, guides and lesson plans) → **Opus 5 xhigh** (developer switch, bookkeeping tail only) | buyer side | v1 · v04.62r | ✓ · v04.62r |
+| B5 → F5 | `strata-clean-energy` | Strata Clean Energy | developer · ipp | Fable 5.1 High → **Medium** (measured Medium test, §2 substitution; all research, dossiers, guides and lesson plans) → **Opus 5 xhigh** (developer switch, bookkeeping tail only) | buyer side | v1 · v04.62r | ✓ · v04.62r |
+| B5 → F5 | `hunt-energy-network` | Hunt Energy Network | developer · ipp | Fable 5.1 High → **Medium** (measured Medium test, §2 substitution; all research, dossiers, guides and lesson plans) → **Opus 5 xhigh** (developer switch, bookkeeping tail only) | buyer side | v1 · v04.62r | ✓ · v04.62r |
 | B6 | `excelsior-energy-capital` | Excelsior Energy Capital | investor · developer | Fable 5.1 High | buyer side | — | — |
 | B7 | `compass-datacenters` | Compass Datacenters | developer | Fable 5.1 High | AIDC developers | — | — |
 | B7 | `edgecore` | EdgeCore Digital Infrastructure | developer | Fable 5.1 High | AIDC developers | — | — |

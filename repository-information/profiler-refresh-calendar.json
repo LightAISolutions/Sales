@@ -1212,6 +1212,50 @@
         "Bastrop County: the Central Texas Airport / GREENPORT campus approval status — the host site of the only named project remains unapproved",
         "Chesterton check: Texas only (no CAISO); develop-and-sell at NTP, not owner-operator; no sponsor named; nothing operating under its ownership on any tracker; Sungrow is a caption in a 2024 article about another company's project, not a supplier. Do not re-import the 2026-09-03 premise"
       ]
+    },
+    {
+      "slug": "esvolta",
+      "cadence": "quarterly",
+      "source": "Private, sponsor-owned (Generate Capital, acquired July 2022, terms undisclosed) and in a sale process — Infralogic (5 June 2026): Barclays and Truist mandated; no sponsor release. First-party channels are esvolta.com (Wix; /news holds 16 posts from January 2024, /media lists older releases; per-project pages 404), PR Newswire and Orrick deal notes; Business Wire mirrors (Batteries News, SFNet) for 2023 and earlier. Boilerplate figures move: 1.5 GWh (2024) → 1.4 → 1.7 (December 2025) → 2.0 GWh (March 2026).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The outcome of Generate Capital's sale process — buyer, structure and whether esVolta stays a develop-and-own platform; the June 2026 release still calls it a Generate portfolio company",
+        "Boxcar (COD 2027) and City Breeze (queue COD 18 March 2027) construction milestones, a supplier announcement for either, and the name of Boxcar's 'major corporate customer'",
+        "An SRP or ED3 contract and a 2026 groundbreaking at Cactus Wren (800 MW / 3,200 MWh, Pinal County) — the company's largest project by six times, permitted December 2025 with no offtake",
+        "PG&E or CAISO confirmation of Hummingbird's commercial operation (company page: March 2026; no third-party COD article) and any disclosure of the ERCOT hedge counterparty or tenor",
+        "The first named SPP or MISO project (promised since June 2026) and any FEOC-driven change from Sungrow on the 2026–2027 projects",
+        "Chesterton check: esVolta is in CAISO, ERCOT and WECC with SPP/MISO expansion — not PJM; the Captona deal was preferred equity, not a sale; Generate acquired it in July 2022, not 2023. Do not re-import the 2026-09-03 premise"
+      ]
+    },
+    {
+      "slug": "strata-clean-energy",
+      "cadence": "quarterly",
+      "source": "Private, founder-owned ('100% privately held company owned by our founders'); no sponsor, no sale process reported. First-party channels are stratacleanenergy.com (WordPress with Yoast sitemaps; the /news archive hosts releases in full back to 2010, so Business Wire mirrors are needed only for the November 2024 White Tank toll and the April 2021 rename), the case-study pages and the leadership page. Site statistics are internally inconsistent (285 vs 300+ projects; 1.8 vs 5 GWh storage developed) — quote with the page.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "A Justice Energy Storage (150 MW / 600 MWh, APS toll) completion release or APS confirmation — the company's schedule said April 2026; nothing has been published",
+        "The next APS, SRP or TEP toll Strata wins and whether it is sold before COD (Scatter Wash → CIP, White Tank → GridStor) or retained — the test of the originate-and-sell judgment",
+        "White Tank construction start (October 2026 per GridStor) and in-service date (first half 2027), which ends Strata's consultative role",
+        "A named hyperscaler, natural-gas or Power-to-X project after the April 2026 reorganisation; the only sizing so far is a regional piece by a firm that represents the company",
+        "Any equity sponsor, stake sale or platform sale — none in the record — and the status of the 2021 Blackstone Credit USD 150 million",
+        "Virginia siting outcomes after the Hanover (2024) and Culpeper (2026) denials, and the unverified DEQ stormwater citations on Dominion EPC jobs",
+        "Chesterton check: Strata owns no battery in ERCOT or PJM; its owned CAISO battery is Inland Empire (70 MW / 280 MWh, PG&E RA); its Arizona assets are in APS territory outside any ISO; Blackstone's 2021 money was credit. Do not re-import the 2026-09-03 premise"
+      ]
+    },
+    {
+      "slug": "hunt-energy-network",
+      "cadence": "quarterly",
+      "source": "Private, Hunt-family-owned ('a part of the Hunt Energy Company'; 'managed by the Ray L. Hunt family') with Manulife Investment Management as joint-venture equity partner (USD 225 million 2021; USD 250 million 2024). First-party channels are thin: huntenergynetwork.com (13 pages, 2 posts, no press archive — the asset-development page is the project list and omits Fort Duncan), PR Newswire (three releases in five years), Hunt Consolidated's news page, and Pat Wood's testimony PDFs. The richest record is regulatory: PUCT Interchange filings (Projects 52196, 56556, 53911, 54335; Dockets 58315, 58964; Sharyland's affiliate report 36867) and Modo Energy's ERCOT benchmarks.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "An ERCOT interconnection agreement for Fizzle, Nanuluk, Whitetail or Amberjack2 (180 MW each; none has one) and Modo's cited 2027 commissioning for 360 MW of transmission-level assets",
+        "A second operating-asset purchase in ERCOT — Wood said the company is 'actively looking' — and whether it stays '100% merchant'",
+        "The TNMP rate case (Docket 58964) outcome on a substation-service rate class for storage and the AEP Texas UTM proceeding (Docket 58315)",
+        "A named third-party TraDER/QSE customer, a named data-centre customer, or a Caterpillar unit at an HEN site — none exists yet",
+        "Any lender, tax-equity or credit-transfer announcement; none has ever been published for a 420 MW fleet",
+        "The next fleet count (33 facilities in February 2026 vs '31 batteries' in May 2026) and whether the web project list is updated to include Fort Duncan",
+        "Chesterton check: HEN is ERCOT-only, fully merchant, and a sub-10 MW distributed owner (plus one 100 MW battery); Manulife is a JV equity partner, not an owner; the Caterpillar agreement is the parent's. Do not re-import the 2026-09-03 premise"
+      ]
     }
   ]
 }

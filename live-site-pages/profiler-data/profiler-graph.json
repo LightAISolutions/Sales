@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-05",
- "companies": 121,
+ "companies": 124,
  "edges": [
   {
    "a": "abb",
@@ -1266,6 +1266,23 @@
    },
    "evid": [],
    "last": "2025-12"
+  },
+  {
+   "a": "aep",
+   "b": "hunt-energy-network",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "AEP Texas is the wire company for ten of HEN's 9.9 MW batteries per the PUCT registration; HEN intervened in AEP Texas's 2025 tariff proceeding as 'a customer in one of AEP Texas's rate class for Wholesale Distribution Service'.",
+     "context": "An interconnection and tariff relationship, not a commercial one: HEN's batteries are distribution customers of AEP Texas and the company litigates the rate class. Wood's testimony names AEP Texas among the utilities whose differing interconnection rules HEN 'has navigated ... firsthand'.",
+     "source": "https://interchange.puc.texas.gov/Documents/58315_36_1555810.PDF",
+     "status": "active",
+     "since": "2021",
+     "scale": "Wholesale distribution service for HEN units on AEP Texas (Toyah, Holcomb, Catarina, Junction, Hamilton, Weil Tract, Falfurrias, Cisco, Russek Street, Pavlov per PUCT 56556)"
+    }
+   },
+   "evid": [],
+   "last": "2021"
   },
   {
    "a": "aep",
@@ -4881,6 +4898,23 @@
   },
   {
    "a": "arevon",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Strata developed and built Ventura (Saticoy) with an SCE 20-year resource-adequacy contract; Capital Dynamics co-invested in 2020 and the project is 'now owned by Arevon' per Strata's January 2022 release.",
+     "context": "The first of the three flagship batteries Strata sold. Arevon was the Capital Dynamics clean-energy platform spun out in 2021, which is how the asset moved. The relationship is historical: no later Strata–Arevon transaction is reported.",
+     "source": "https://stratacleanenergy.com/news/strata-clean-energy-contracts-another-400mwh-bess-california/",
+     "status": "historical",
+     "since": "2020",
+     "scale": "Ventura Energy Storage 100 MW / 400 MWh"
+    }
+   },
+   "evid": [],
+   "last": "2020"
+  },
+  {
+   "a": "arevon",
    "b": "tesla",
    "curated": {
     "a": {
@@ -5005,6 +5039,48 @@
      "text": "It is a Texas-only developer that sells distribution-connected 9.9 MW / 20 MWh batteries and one 100 MW / 200 MWh transmission-connected project at notice-to-proceed — 'we sell the projects at NTP' (VP Business Development Alex Krass, April 2023) — with Linxon, the Hitachi Energy and AtkinsRéalis joint venture, as the turnkey EPC that carries the asset to operation for a financial buyer.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "available-power",
+   "b": "hunt-energy-network",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The premise handed to this dossier is wrong on every clause but one: the company is ERCOT-only (no CAISO, no PJM), merchant not contracted ('Fort Duncan BESS is a 100% merchant facility'; no toll, hedge or offtake in any source), and its fleet is not 'mid-size' but a network of sub-10 MW units — the segment the Available Power guide already teaches.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hunt Energy Network is the operator's-chair counterpart to the developer-and-sell model the Available Power dossier describes: it sites, builds, owns and trades the same 9.9 MW distribution-connected class of battery, at 32 sites across all four ERCOT load zones, with an in-house Level 4 QSE and a five-minute optimisation platform (TraDER) it also markets to third-party owners.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The economics of the 9.9 MW threshold are taught in the Available Power guide; HEN is the owner-operator instance.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Owned and operated distributed batteries — the 9.9 MW network",
+     "date": "",
+     "text": "The owner-operator version of the sub-10 MW distributed play that Available Power develops and sells; the segment's economics — a lighter distribution-level interconnection, one site per substation, many small nodes — are taught in the Available Power study guide and not repeated here.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · TraDER — QSE and optimisation platform, in-house and for third parties",
+     "date": "",
+     "text": "The rare owner that is its own optimiser: where Available Power sells to owners who hire a QSE, and where esVolta hedges with a commodity trader, HEN trades 33 nodes itself and sells that capability.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -6294,6 +6370,38 @@
   },
   {
    "a": "burns-mcdonnell",
+   "b": "hunt-energy-network",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Energy-Storage.news names Burns & McDonnell as the EPC of Fort Duncan, built for Recurrent Energy before HEN bought it.",
+     "context": "A seller-side engagement inherited with the asset; HEN's own distributed fleet is described by Modo as built by 'an in-house EPC team'.",
+     "source": "https://www.energy-storage.news/recurrent-energy-sells-200mwh-texas-bess-to-hunt-energy-network/",
+     "status": "historical",
+     "since": "2025",
+     "scale": "Fort Duncan EPC (for Recurrent Energy)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a supplier it is a buyer that has never named an OEM, funded by a life insurer's infrastructure funds rather than bank debt, now buying operating transmission-scale batteries (Fort Duncan, with Canadian Solar e-STORAGE batteries and Burns & McDonnell as the seller's EPC) and adding fuel-oil peakers; its parent's Caterpillar agreement for 'up to 1 GW' of data-centre generation is a sibling business, not HEN's.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Transmission-level batteries — Fort Duncan and the 180 MW projects",
+     "date": "",
+     "text": "Fort Duncan (Eagle Pass, Maverick County; 100 MW / 200 MWh; 'commissioned in June 2025'; 'a 100% merchant facility') was acquired from Recurrent Energy in a transaction announced 24 February 2026 — the company's first purchase of an operating asset and first transmission-level battery, to be dispatched by TraDER; Recurrent had financed it with 'USD 183 million in project financing and tax equity' before the sale, its batteries were 'supplied by Canadian Solar's e-STORAGE division' and Burns & McDonnell was the EPC per Energy-Storage.news; TenOaks Power & Infrastructure advised HEN; the price is undisclosed.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "burns-mcdonnell",
    "b": "kiewit",
    "curated": {
     "a": {
@@ -7292,6 +7400,24 @@
   },
   {
    "a": "canadian-solar",
+   "b": "hunt-energy-network",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "HEN bought Fort Duncan from Recurrent Energy, Canadian Solar's development subsidiary; the release mirror states the batteries were 'supplied by Canadian Solar's e-STORAGE division'.",
+     "context": "The only battery OEM ever associated with an HEN asset — inherited with the purchase rather than procured. Recurrent's CEO Ismael Guerrero is quoted in HEN's release. No supplier for the 32 distributed units has been named by any source.",
+     "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/",
+     "status": "active",
+     "since": "2026-02",
+     "scale": "Fort Duncan 100 MW / 200 MWh (operating asset purchased from Recurrent Energy)",
+     "via": "e-STORAGE batteries (installed by the seller)"
+    }
+   },
+   "evid": [],
+   "last": "2026-02"
+  },
+  {
+   "a": "canadian-solar",
    "b": "hyperstrong",
    "curated": {
     "a": {
@@ -7334,6 +7460,24 @@
    },
    "evid": [],
    "last": "2026-02"
+  },
+  {
+   "a": "canadian-solar",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Canadian Solar's e-STORAGE signed a battery supply agreement and 20-year long-term service agreement with White Tank Energy Storage LLC in March 2025; the project has since been sold to GridStor.",
+     "context": "Bob Schaffeld, then President, announced 'the inclusion of e-STORAGE's flexible, turnkey solutions and service support in our White Tank energy storage project'. Delivery was scheduled around an October 2026 construction start. Because Strata sold the project company in September 2025, the contract now sits with GridStor; the engagement is recorded as announced rather than active for Strata.",
+     "source": "https://www.ess-news.com/2025/03/20/canadian-solars-e-storage-to-deliver-576-mwh-dc-of-energy-storage-systems-for-strata-clean-energys-white-tank-battery-project-in-arizona/",
+     "status": "announced",
+     "since": "2025-03",
+     "scale": "576 MWh DC (about 120 SolBank 3.0 enclosures)",
+     "via": "e-STORAGE SolBank 3.0"
+    }
+   },
+   "evid": [],
+   "last": "2025-03"
   },
   {
    "a": "canadian-solar",
@@ -7590,6 +7734,52 @@
     }
    ],
    "last": "2026-06-22"
+  },
+  {
+   "a": "caterpillar",
+   "b": "hunt-energy-network",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "The August 2025 Caterpillar agreement is with Hunt Energy Company, L.P., HEN's parent; Caterpillar's release cites HEN as the affiliate that 'currently operates 310 MW of distributed energy assets in Texas, with plans to expand beyond 1 GW'.",
+     "context": "Caterpillar supplies power systems, equipment and monitoring; Hunt provides 'infrastructure development, project financing and operational execution for data center and distributed energy resource projects'. Whether the Caterpillar units are HEN's 'thermal peakers' or its data-centre work is not stated by either company, so the link is recorded as a parent-level engagement rather than a supplier relationship.",
+     "source": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-and-Hunt-Energy-Company-L-P--Sign-Long-Term-Strategic-Agreement-to-Deliver-Power-Solutions-for-Data-Centers/default.aspx",
+     "status": "active",
+     "since": "2025-08",
+     "scale": "'Up to 1 GW' data-centre generation (parent-level)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a supplier it is a buyer that has never named an OEM, funded by a life insurer's infrastructure funds rather than bank debt, now buying operating transmission-scale batteries (Fort Duncan, with Canadian Solar e-STORAGE batteries and Burns & McDonnell as the seller's EPC) and adding fuel-oil peakers; its parent's Caterpillar agreement for 'up to 1 GW' of data-centre generation is a sibling business, not HEN's.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 2024 Manulife commitment's stated purpose ('thermal peaking generation facilities' with on-site fuel), 9.9 MW 'AGR' units registered at existing battery sites, the first diesel peaker online in April 2026, Wood's 'working with data customers', and the parent's Caterpillar agreement citing HEN's fleet as credentials.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) an interconnection agreement for Fizzle, Nanuluk, Whitetail or Amberjack2 — none has one, and a signed IA would date the 2027 transmission-scale programme (Judgment 3); (2) a second operating-asset purchase in ERCOT, which Wood said the company is 'actively looking' for, and whether it stays merchant (Judgments 1 and 4); (3) the outcome of the TNMP rate case (Docket 58964) on a substation-service rate class and the AEP Texas tariff proceeding — the delivery-charge line of a distribution-connected fleet; (4) a named third-party TraDER customer, the confirming evidence for Judgment 4; (5) a named data-centre customer or Caterpillar unit at an HEN site (Judgment 5); (6) any lender, tax-equity or credit-transfer announcement (Judgment 6); (7) the next fleet count — 33 facilities in February 2026 against '31 batteries' in May 2026 — and whether a unit was retired or sold.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Thermal peaking generation and customer-sited power",
+     "date": "",
+     "text": "Pat Wood's May 2026 bio: the team 'went operational on their first diesel peaking generator this month' and 'HEN is also working with select customers to power their data centers'; his House testimony: 'We are also working with data customers on their energy needs.' The Caterpillar agreement for 'up to 1 GW of power generation capacity for data centers across North America' (August 2025) is signed by Hunt Energy Company, L.P., which cites HEN as the affiliate that 'currently operates 310 MW of distributed energy assets'; whether Caterpillar gensets are HEN's peakers is not stated by either company.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-08"
   },
   {
    "a": "caterpillar",
@@ -12664,6 +12854,31 @@
   },
   {
    "a": "dominion-energy",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Dominion buys Strata-developed solar (four North Carolina farms in 2017; Cerulean Solar in November 2022 with the EPC awarded to Strata) and Strata builds Dominion-owned Virginia plants (Bookers Mill, 144 MW, COD 2024).",
+     "context": "Dominion is the company's most visible utility customer on both sides of the develop-and-sell model: it buys projects and it hires Strata as EPC. Solar Power World's 2026 contractor ranking counts all 407 MW of Strata's 2025 installations in Virginia. A 2023 Eastern District of Virginia record describes Strata as prime contractor on a 28 MW Dominion-owned plant.",
+     "source": "https://stratacleanenergy.com/news/strata-clean-energy-sells-utility-scale-solar-and-is-awarded-epc-contract/",
+     "status": "active",
+     "since": "2017",
+     "scale": "Cerulean 62 MWac; Bookers Mill 144 MW; four NC farms 20 MWac"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · EPC, high-voltage and grid infrastructure",
+     "date": "",
+     "text": "Solar Power World's 2026 Top Solar Contractors list ranks Strata #25 as an EPC with 407,340 kW installed in 2025, all in Virginia, plus 1,352,000 kWh of storage; the Virginia work is Dominion Energy's — Cerulean Solar (62 MWac, sold to Dominion in November 2022 with the EPC contract awarded to Strata) and Bookers Mill (144 MW, COD 2024).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2017"
+  },
+  {
+   "a": "dominion-energy",
    "b": "vantage",
    "curated": {
     "a": {
@@ -14704,6 +14919,20 @@
   },
   {
    "a": "eolian",
+   "b": "esvolta",
+   "evid": [
+    {
+     "where": "Capabilities · Owned and operated storage — hedged-and-merchant in ERCOT",
+     "date": "",
+     "text": "Merchant-with-a-hedge in Texas where GridStor tolls and swaps, Spearmint is fully merchant and Hunt Energy Network trades sub-10 MW units; larger than either specialist in ERCOT and smaller than Jupiter, Plus Power or Eolian.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eolian",
    "b": "fluence",
    "curated": {
     "a": {
@@ -15420,6 +15649,219 @@
     }
    ],
    "last": "2026-03-24"
+  },
+  {
+   "a": "esvolta",
+   "b": "gridstor",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Modo Energy groups esVolta with GridStor, Intersect Power and Nightpeak as 'pure-play storage developers (1.25 GW)' in ERCOT — 'scaling after proving models elsewhere'.",
+     "context": "An analyst grouping, not a transaction. Both companies added ERCOT capacity in 2025 (Anole and GridStor's Hidden Lakes among the largest Q3 additions per Modo). GridStor tolls and swaps its output; esVolta hedges part of its Texas fleet and runs the rest merchant.",
+     "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+     "status": "active",
+     "since": "2025",
+     "scale": "Modo Energy ERCOT 2025 annual report"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It sits with GridStor, Intersect Power and Nightpeak in Modo Energy's 'pure-play storage developers' group in ERCOT.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owned and operated storage — hedged-and-merchant in ERCOT",
+     "date": "",
+     "text": "Merchant-with-a-hedge in Texas where GridStor tolls and swaps, Spearmint is fully merchant and Hunt Energy Network trades sub-10 MW units; larger than either specialist in ERCOT and smaller than Jupiter, Plus Power or Eolian.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Corporate and project finance — the 'bankable' platform",
+     "date": "",
+     "text": "A more heavily bank-financed platform than GridStor (whose sponsor is a bank) and a more sponsor-dependent one than Spearmint; the sponsor's own capital constraints are now the variable.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-27",
+     "text": "Energy-Storage.news: esVolta acquires the 150 MW / 300 MWh Bufflehead project (now Boxcar) from Black Mountain Energy Storage; price undisclosed — Buying late-stage projects supplements greenfield — the same market GridStor buys in.",
+     "src": "https://www.energy-storage.news/esvolta-acquires-300mwh-ercot-bess-from-black-mountain-energy-storage/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-03-27"
+  },
+  {
+   "a": "esvolta",
+   "b": "hunt-energy-network",
+   "evid": [
+    {
+     "where": "Capabilities · Owned and operated storage — hedged-and-merchant in ERCOT",
+     "date": "",
+     "text": "Merchant-with-a-hedge in Texas where GridStor tolls and swaps, Spearmint is fully merchant and Hunt Energy Network trades sub-10 MW units; larger than either specialist in ERCOT and smaller than Jupiter, Plus Power or Eolian.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · TraDER — QSE and optimisation platform, in-house and for third parties",
+     "date": "",
+     "text": "The rare owner that is its own optimiser: where Available Power sells to owners who hire a QSE, and where esVolta hedges with a commodity trader, HEN trades 33 nodes itself and sells that capability.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "esvolta",
+   "b": "intersect-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Intersect Power sits in the same Modo Energy 'pure-play storage developers' group as esVolta in ERCOT.",
+     "context": "Analyst grouping only; no shared project or transaction is reported.",
+     "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+     "status": "active",
+     "since": "2025",
+     "scale": "Modo Energy ERCOT 2025 annual report"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It sits with GridStor, Intersect Power and Nightpeak in Modo Energy's 'pure-play storage developers' group in ERCOT.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "esvolta",
+   "b": "plus-power",
+   "evid": [
+    {
+     "where": "Capabilities · Owned and operated storage — hedged-and-merchant in ERCOT",
+     "date": "",
+     "text": "Merchant-with-a-hedge in Texas where GridStor tolls and swaps, Spearmint is fully merchant and Hunt Energy Network trades sub-10 MW units; larger than either specialist in ERCOT and smaller than Jupiter, Plus Power or Eolian.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "esvolta",
+   "b": "quanta-services",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "'esVolta collaborated with ... Quanta Infrastructure Solutions Group at Anole on engineering, procurement, and construction' (company release, July 2025).",
+     "context": "Quanta built the largest of the three Texas projects; Saber Power (not covered) built Desert Willow and Burksol and is the named partner at City Breeze. No Quanta role on Boxcar or City Breeze is reported.",
+     "source": "https://www.esvolta.com/post/esvolta-brings-three-large-scale-storage-projects-on-line-in-texas-meeting-2025-summer-peak",
+     "status": "active",
+     "since": "2024",
+     "scale": "Anole 240 MW / 480 MWh EPC",
+     "via": "Quanta Infrastructure Solutions Group"
+    }
+   },
+   "evid": [],
+   "last": "2024"
+  },
+  {
+   "a": "esvolta",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "esVolta's VP of Projects said Desert Willow's batteries are 'from Sungrow' with 'liquid cooled HVAC' (Midlothian Mirror, re-posted by esVolta); ESS News reports 'Sungrow PowerTitan 1.0 BESS batteries used across all three sites'; the Burksol groundbreaking notice lists 'Equipment suppliers: Sungrow and Fractal'.",
+     "context": "Sungrow is the only battery supplier esVolta has named on an operating project since its Powin exclusivity ended in 2022. The company itself names Sungrow only for Desert Willow; the all-three attribution is trade press (ESS News) and a local notice (Texas Spur). Boxcar's filings cite Sungrow PowerTitan 2.0 as the design basis per Energy-Storage.news, but no supply agreement for Boxcar or City Breeze has been announced.",
+     "source": "https://www.esvolta.com/post/midlothian-mirror-new-energy-storage-facility-to-help-power-texas",
+     "status": "active",
+     "since": "2024",
+     "scale": "Anole, Desert Willow, Burksol (980 MWh)",
+     "via": "PowerTitan (PowerTitan 1.0 per ESS News)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Operating as released: Anole 240 MW / 480 MWh (Seagoville, Dallas County; July 2025), Desert Willow 150 MW / 300 MWh (Midlothian; May 2025) and Burksol 100 MW / 200 MWh (Afton, Dickens County; March 2025) in ERCOT — 'a hedge in place with a confidential commodity market participant', otherwise merchant, on Sungrow PowerTitan systems with Saber Power and Quanta as EPCs; Hummingbird 75 MW / 300 MWh (San Jose; company says operating since March 2026) under a long-term PG&E resource-adequacy contract; Santa Paula 30 MW / 60 MWh (offtakers 'a major energy commodity firm and several California electric community choice aggregators'); Black Walnut 15 MW / 60 MWh (California Choice Energy Authority); Wildcat and Acorn (SCE, 2021).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a supplier it is a repeat buyer of Chinese integrated systems (Sungrow on all three Texas sites; Powin was its exclusive supplier through 2022) with a stated corporate facility earmarked for 'long-lead equipment procurement', and a sponsor-sale process that will decide who signs the next order.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that Sungrow is the company's default integrator and that FEOC treatment of the 2026–2027 projects is the unaddressed risk.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Sungrow on all three operating Texas sites (ESS News; the company names it at Desert Willow), Sungrow PowerTitan 2.0 as Boxcar's design basis (Energy-Storage.news), no FEOC language in the supplier code, and a corporate facility earmarked for 'long-lead equipment procurement'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) a Generate release naming esVolta's buyer — an infrastructure fund or an IPP would settle whether the company stays a develop-and-own platform (Judgment 3); (2) a supplier announcement for Boxcar, City Breeze or Cactus Wren, and whether it is Sungrow again or a FEOC-compliant alternative (Judgment 5); (3) an SRP or ED3 contract for Cactus Wren and a groundbreaking in 2026 (Judgment 6); (4) Boxcar and City Breeze commercial operation in 2027 against the ERCOT queue's 18 March 2027 date for City Breeze; (5) the first named SPP or MISO project — the company has promised both markets since June 2026; (6) any disclosure of the Texas hedge's counterparty or tenor, or a revenue put on the merchant balance (Judgment 4).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owned and operated storage — hedged-and-merchant in ERCOT",
+     "date": "",
+     "text": "Three operating projects totalling 490 MW / 980 MWh, all two-hour lithium-iron-phosphate systems: Burksol (100 MW / 200 MWh; Afton, Dickens County; interconnects through Wind Energy Transmission Texas; acquired from Highfield Energy in December 2022; commercial March 2025; EPC Saber Power), Desert Willow (150 MW / 300 MWh; Midlothian, Ellis County; commercial May 2025; EPC Saber Power; batteries 'from Sungrow' with 'liquid cooled HVAC' per the company's VP of Projects) and Anole (240 MW / 480 MWh; Seagoville, Dallas County, ERCOT North zone; commercial July 2025; EPC Quanta Infrastructure Solutions Group).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owned and operated storage — hedged-and-merchant in ERCOT",
+     "date": "",
+     "text": "ESS News reports Sungrow PowerTitan 1.0 on all three sites.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Development pipeline — 'about 30 projects, 25 GWh' across five markets",
+     "date": "",
+     "text": "Under construction: Boxcar (150 MW / 300 MWh; Wylie, Collin County; acquired from Black Mountain Energy Storage as 'Bufflehead' in March 2025; Oncor's Lavon 138 kV switching station; 'a long-term offtake agreement for the project with a major corporate customer'; USD 139.6 million MUFG construction, tax-equity bridge, letter-of-credit and term financing, March 2026; commercial 2027; filings cite Sungrow PowerTitan 2.0 as the design basis per Energy-Storage.news) and City Breeze (140 MW / 280 MWh; Bay City, Matagorda County; ERCOT queue 25INR0271 at 143.1 MW with an interconnection agreement and a projected COD of 18 March 2027; groundbreaking 9 April 2026 with Saber Power and SolaREIT) — together the 'Ironhorse portfolio', which brings the Texas book to 'five battery projects ...",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-30",
+     "text": "Three Texas projects on line: Burksol (March), Desert Willow (May), Anole (July) — 490 MW / 980 MWh, 'roughly 4%' of ERCOT storage; Saber Power and Quanta as EPCs — The company's operating book tripled in five months; ESS News names Sungrow PowerTitan 1.0 on all three.",
+     "src": "https://www.esvolta.com/post/esvolta-brings-three-large-scale-storage-projects-on-line-in-texas-meeting-2025-summer-peak",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-01-14",
+     "text": "Construction begins at Burksol (200 MWh), acquired from Highfield Energy in December 2022 — The company's first Texas build; Saber Power as EPC and Sungrow as supplier per the local groundbreaking notice.",
+     "src": "https://www.esvolta.com/post/esvolta-commences-construction-of-200-mwh-burksol-bess-facility-in-texas",
+     "from": "a"
+    }
+   ],
+   "last": "2025-07-30"
   },
   {
    "a": "eve-energy",
@@ -19411,6 +19853,20 @@
   },
   {
    "a": "gridstor",
+   "b": "hunt-energy-network",
+   "evid": [
+    {
+     "where": "Capabilities · Transmission-level batteries — Fort Duncan and the 180 MW projects",
+     "date": "",
+     "text": "A merchant buyer of built ERCOT batteries in the late-stage market where GridStor buys contracted ones; Enerdatics contrasts Hunt's stance with buyers who 'prefer contracted or hybrid structures'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "gridstor",
    "b": "intersect-power",
    "curated": {
     "a": {
@@ -19448,6 +19904,115 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "gridstor",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "GridStor bought the White Tank project and its 20-year APS tolling agreement from Strata on 18 September 2025; Strata continues 'in a consultative role ... until commencement of commercial operations'.",
+     "context": "The sale is the clearest instance of Strata's originate-contract-and-sell model: Strata won the toll in APS's June 2023 RFP, signed the Canadian Solar supply agreement in March 2025, and sold the project company to GridStor — a Goldman Sachs Asset Management-owned platform on its fourth acquisition in twelve months — before construction. No price was disclosed by either party. GridStor's own release quotes Markus Wilhelm on Strata's 'foundational role in advancing Arizona's clean energy infrastructure'.",
+     "source": "https://stratacleanenergy.com/news/gridstor-acquires-arizona-battery-energy-storage-project-from-strata-clean-energy/",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "100 MW / 400 MWh (White Tank)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The company states 280 MW / 600 MWh operating, 250 MW / 700 MWh under construction and 'over 3 GW' of later-stage pipeline across California, Texas, Arizona, Oklahoma (SPP) and Colorado, after five acquisitions in eighteen months from Balanced Rock Power (twice), Black Mountain Energy Storage, Capacity Power Group, Strata Clean Energy and Accelergen.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owned and operated storage — contracted with utilities and a retailer",
+     "date": "",
+     "text": "White Tank Reliability Project (Maricopa County; 100 MW / 400 MWh; east of APS's Colter substation) was bought from Strata Clean Energy in September 2025 with a 20-year APS tolling agreement, commercial first half of 2027.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Late-stage project acquisition — the pipeline machine",
+     "date": "",
+     "text": "The record is five acquisitions in eighteen months, each from a named originator: Evelyn/Hidden Lakes from Balanced Rock Power (March 2024); a 200 MW / 800 MWh two-phase project in eastern Oklahoma, SPP, from Black Mountain Energy Storage (January 2025, sited 'where multiple data centers are already operating'); a 100 MW / 400 MWh Arizona project from Capacity Power Group (January 2025, name and county undisclosed); Gunnar from Balanced Rock Power (February 2025); White Tank from Strata Clean Energy (September 2025, Strata retained 'in a consultative role'); and Birdseye, 199 MW / 796 MWh in Adams County, Colorado, from Accelergen (May 2026, interconnecting at Xcel Energy's Riverdale 230 kV substation per the seller's adviser).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-18",
+     "text": "GridStor acquires White Tank (100 MW / 400 MWh, Maricopa County) from Strata Clean Energy with a 20-year APS tolling agreement; commercial first half of 2027 — A fully contracted Arizona project bought with its toll attached; Strata stays on in a consultative role.",
+     "src": "https://gridstor.com/gridstor-acquires-arizona-battery-energy-storage-project-from-strata-clean-energy/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Strata Clean Energy is a founder-owned, vertically integrated developer-EPC-owner whose battery business is an originate-contract-and-sell machine: it wins utility tolls in Arizona Public Service's all-source RFPs, finances or starts construction, then sells the project with the contract attached to a fund-backed owner (Scatter Wash to Copenhagen Infrastructure Partners in September 2024, White Tank to GridStor in September 2025, Ventura to Capital Dynamics and later Arevon) while staying on as construction manager, asset manager or consultant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Morgan and Nomura, sold to CIP's CI V fund); Justice 150 MW / 600 MWh (20-year APS toll, groundbreaking May 2025, operational April 2026 per the company's own schedule — no completion release found); White Tank 100 MW / 400 MWh (20-year APS toll, Canadian Solar e-STORAGE SolBank 3.0 supply agreement, sold to GridStor, in service first half 2027); Inland Empire 70 MW / 280 MWh (Rialto, California, PG&E 15-year RA, commercial October 2024); two 5 MW / 10 MWh Vermont batteries (ISO-NE, USD 8.7 million tax equity); Ventura 100 MW / 400 MWh (SCE 20-year RA, developed and sold, online 2021).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Strata is the seller's side of the late-stage storage market this corpus reads from the buyer's chair in the GridStor dossier: it originates land, interconnection and a utility toll, then converts the package into cash and fees by selling to a fund-backed owner and keeping the EPC, O&M or asset-management contract.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) a Justice completion release or APS confirmation — confirms Judgment 6 and the company's first large owned battery; (2) the next tolled battery Strata wins (APS's 2025–2026 RFP cycle, SRP, TEP) and whether it is sold before COD — a fourth sale would settle Judgment 1, a retained asset would weaken it; (3) White Tank construction start in October 2026 and GridStor's in-service date in the first half of 2027 — Strata's consultative role ends there; (4) a named hyperscaler, gas or P2X project — the test of Judgment 5; (5) any equity sponsor, stake sale or platform sale — the record holds none, and one would change the ownership judgment entirely; (6) Virginia siting outcomes after the Hanover (2024) and Culpeper (2026) denials — the permitting risk on the Dominion EPC book.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Originate, contract and sell — utility-tolled storage projects sold with the contract attached",
+     "date": "",
+     "text": "White Tank (Avondale; 100 MW / 400 MWh, 576 MWh DC; APS 20-year toll announced November 2024 from the June 2023 RFP; Canadian Solar e-STORAGE SolBank 3.0 supply agreement and 20-year LTSA signed March 2025) was sold to GridStor on 18 September 2025 with Strata 'in a consultative role for the project until commencement of commercial operations'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Originate, contract and sell — utility-tolled storage projects sold with the contract attached",
+     "date": "",
+     "text": "The seller in the late-stage market GridStor, Aypa and Arevon buy in: Strata originates with its own land, interconnection (over 200 GIAs claimed) and EPC teams, wins the utility RFP, and exits before the long-dated toll would tie up its founder-owned balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Owned and operated fleet — the IPP",
+     "date": "",
+     "text": "Unlike Aypa or GridStor, ownership is a residual of the develop-build-operate loop rather than the business.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-18",
+     "text": "GridStor acquires the 100 MW / 400 MWh White Tank project with its 20-year APS toll; Strata stays 'in a consultative role' to COD; price undisclosed — The second flagship battery sold before construction in twelve months — to a fund-created platform on its fourth acquisition of the year.",
+     "src": "https://stratacleanenergy.com/news/gridstor-acquires-arizona-battery-energy-storage-project-from-strata-clean-energy/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-20",
+     "text": "Canadian Solar e-STORAGE: battery supply agreement and 20-year LTSA for 576 MWh DC of SolBank 3.0 at White Tank — Procurement precedes the sale — the buyer (GridStor) inherited the supply contract six months later.",
+     "src": "https://www.ess-news.com/2025/03/20/canadian-solars-e-storage-to-deliver-576-mwh-dc-of-energy-storage-systems-for-strata-clean-energys-white-tank-battery-project-in-arizona/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-09-18"
   },
   {
    "a": "gridstor",
@@ -21499,6 +22064,87 @@
      "where": "Capabilities · Data Center Facility & Critical Power (PowerPOD, UPS5000, SmartLi)",
      "date": "",
      "text": "#1 in prefabricated modular data centers per Omdia (though absent from the North America and Western Europe regional podiums, led by Johnson Controls/Schneider and Vertiv/Rittal respectively); top-5 in data-center UPS (behind Schneider, Vertiv, Eaton per MarketsandMarkets); the 41.9% modular-UPS #1 claim is a dated 2020 Frost & Sullivan figure.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "hunt-energy-network",
+   "b": "jupiter-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Modo Energy: 'Jupiter Power, Plus Power, and Hunt Energy Network owned the highest-earning batteries' in July 2024.",
+     "context": "A revenue-performance grouping, not a transaction; Jupiter's fleet is transmission-scale and much larger.",
+     "source": "https://modoenergy.com/research/ercot-july-2024-battery-energy-storage-revenues-owners-day-ahead-real-time-arbitrage-dart-optimization",
+     "status": "active",
+     "since": "2024-07",
+     "scale": "Modo Energy July 2024 revenue ranking"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-07",
+     "text": "Modo Energy: 'Jupiter Power, Plus Power, and Hunt Energy Network owned the highest-earning batteries' in July 2024, earning over half their revenue from energy markets — Peer set by revenue performance, not by size.",
+     "src": "https://modoenergy.com/research/ercot-july-2024-battery-energy-storage-revenues-owners-day-ahead-real-time-arbitrage-dart-optimization",
+     "from": "a"
+    }
+   ],
+   "last": "2024-07"
+  },
+  {
+   "a": "hunt-energy-network",
+   "b": "oncor",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Oncor is the interconnecting wire company for eight of HEN's 9.9 MW batteries per the April 2024 PUCT registration.",
+     "context": "Interconnection adjacency only; Wood's House testimony cites Oncor's application requirements and technical screens as an example of the non-standard DER interconnection rules HEN wants the PUCT to harmonise.",
+     "source": "https://interchange.puc.texas.gov/Documents/56556_1_1387683.PDF",
+     "status": "active",
+     "since": "2022",
+     "scale": "Wire company for Screwbean, Diboll, Garden City East, Mineral Wells, Farmersville, Pauline, Judkins, Lufkin South (PUCT 56556)"
+    }
+   },
+   "evid": [],
+   "last": "2022"
+  },
+  {
+   "a": "hunt-energy-network",
+   "b": "plus-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Plus Power sits with Jupiter Power and HEN in Modo Energy's July 2024 list of owners of 'the highest-earning batteries'.",
+     "context": "Ranking comparable only.",
+     "source": "https://modoenergy.com/research/ercot-july-2024-battery-energy-storage-revenues-owners-day-ahead-real-time-arbitrage-dart-optimization",
+     "status": "active",
+     "since": "2024-07",
+     "scale": "Modo Energy July 2024 revenue ranking"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-07",
+     "text": "Modo Energy: 'Jupiter Power, Plus Power, and Hunt Energy Network owned the highest-earning batteries' in July 2024, earning over half their revenue from energy markets — Peer set by revenue performance, not by size.",
+     "src": "https://modoenergy.com/research/ercot-july-2024-battery-energy-storage-revenues-owners-day-ahead-real-time-arbitrage-dart-optimization",
+     "from": "a"
+    }
+   ],
+   "last": "2024-07"
+  },
+  {
+   "a": "hunt-energy-network",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Capabilities · TraDER — QSE and optimisation platform, in-house and for third parties",
+     "date": "",
+     "text": "Modo's optimiser directory lists HEN/TraDER as 'QSE + DME + Auto-bidder', ERCOT only, beside Ascend, Caerus, CES, Equilibrium, Gridmatic, Habitat and Tesla; the 2026 release says TraDER 'is available for use by other 3rd party generation facilities'.",
      "src": "",
      "from": "a"
     }
@@ -23904,6 +24550,39 @@
   },
   {
    "a": "ls-energy-solutions",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "LS Energy Solutions' 'first commercial deployment of AiON-ESS Energy Series' was with Strata and Green Mountain Power in 2023; Strata operates the units.",
+     "context": "Twelve 0.83 MW / 2.2 MWh enclosures across two New England sites for peak shaving and ISO-NE markets. Josh Rogol, then President: 'The AiON-ESS Energy Series makes a great addition to our battery storage portfolio.' These are most likely the two Vermont batteries Solar Builder reports as Strata-owned, but no source ties the two accounts together explicitly.",
+     "source": "https://www.ls-es.com/ls-energy-solutions-announces-first-commercial-deployment-of-aion-ess-energy-series-with-strata-clean-energy",
+     "status": "active",
+     "since": "2023-06",
+     "scale": "2 x 4.99 MW / 10 MWh (12 AiON-ESS enclosures)",
+     "via": "AiON-ESS Energy Series"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a supplier it is a repeat buyer of batteries (Tesla Megapack at Ventura and Scatter Wash, Canadian Solar SolBank at White Tank, LS Energy Solutions in Vermont) and trackers (FTC Solar, 1.5 GW across two agreements), with a stated 'SupplyShield' factory-audit programme, a self-perform EPC arm ranked #25 on Solar Power World's 2026 contractor list, and a 2026 reorganisation aimed at hyperscaler 'Entitled Power Land' and natural-gas-backed portfolios.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Operations & maintenance and asset management for third parties",
+     "date": "",
+     "text": "Strata also operates the two LS Energy Solutions AiON-ESS batteries it deployed for Green Mountain Power in 2023 (the supplier's 'first commercial deployment').",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023-06"
+  },
+  {
+   "a": "ls-energy-solutions",
    "b": "tesla",
    "curated": {
     "a": {
@@ -24324,6 +25003,31 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "mccarthy",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "McCarthy is a top-five EPC on the same Solar Power World 2026 list on which Strata ranks #25.",
+     "context": "Ranking comparable only; no shared project is reported.",
+     "source": "https://www.solarpowerworldonline.com/2026-top-solar-contractors/",
+     "status": "active",
+     "since": "2026",
+     "scale": "Solar Power World 2026 Top Solar Contractors"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · EPC, high-voltage and grid infrastructure",
+     "date": "",
+     "text": "A regional self-perform EPC that builds what it develops and builds for Dominion; far smaller than Quanta, Moss, McCarthy, Primoris or SOLV (the top five on the same 2026 list).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026"
   },
   {
    "a": "mccarthy",
@@ -26627,6 +27331,38 @@
     }
    ],
    "last": "2026-05-12"
+  },
+  {
+   "a": "mortenson",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "'Mortenson was selected as Strata's EPC partner for this project in April 2023' (Scatter Wash groundbreaking release); Power Technology also lists Mortenson as EPC at Justice.",
+     "context": "Strata self-performs most of its solar EPC but used Mortenson for its largest battery. The Justice attribution comes from trade press, not a Strata release.",
+     "source": "https://stratacleanenergy.com/news/strata-clean-energy-breaks-ground-on-1-gwh-scatter-wash-energy-storage-project-in-phoenix/",
+     "status": "active",
+     "since": "2023-04",
+     "scale": "Scatter Wash 1,020 MWh EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Originate, contract and sell — utility-tolled storage projects sold with the contract attached",
+     "date": "",
+     "text": "Scatter Wash (Phoenix; 255 MW / 1,020 MWh; APS 20-year toll from the May 2022 RFP; Tesla Megapack 2XL; Mortenson EPC; USD 559 million construction and tax-equity financing led by J.P.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-01-23",
+     "text": "Scatter Wash groundbreaking: Tesla Megapack 2XL throughout, Mortenson EPC — Supplier and EPC named by the company itself.",
+     "src": "https://stratacleanenergy.com/news/strata-clean-energy-breaks-ground-on-1-gwh-scatter-wash-energy-storage-project-in-phoenix/",
+     "from": "b"
+    }
+   ],
+   "last": "2024-01-23"
   },
   {
    "a": "mortenson",
@@ -29984,6 +30720,31 @@
    "last": "2026-02-19"
   },
   {
+   "a": "primoris",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Primoris is a top-five EPC on the same Solar Power World 2026 list on which Strata ranks #25.",
+     "context": "Ranking comparable only; no shared project is reported.",
+     "source": "https://www.solarpowerworldonline.com/2026-top-solar-contractors/",
+     "status": "active",
+     "since": "2026",
+     "scale": "Solar Power World 2026 Top Solar Contractors"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · EPC, high-voltage and grid infrastructure",
+     "date": "",
+     "text": "A regional self-perform EPC that builds what it develops and builds for Dominion; far smaller than Quanta, Moss, McCarthy, Primoris or SOLV (the top five on the same 2026 list).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026"
+  },
+  {
    "a": "proenergy",
    "b": "voltagrid",
    "curated": {
@@ -30168,6 +30929,23 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "quanta-services",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Solar Power World's 2026 Top Solar Contractors list ranks Strata #25 as an EPC (407 MW installed in 2025); Quanta, Moss, McCarthy, Primoris and SOLV hold the top five places.",
+     "context": "The ranking is the only independent comparable that places Strata's EPC arm against national contractors; it is a size ranking, not a head-to-head. Strata's historical placings on the same list: #6 in 2013 and 2014, #18 in 2017.",
+     "source": "https://www.solarpowerworldonline.com/2026-top-solar-contractors/",
+     "status": "active",
+     "since": "2026",
+     "scale": "Solar Power World 2026 Top Solar Contractors"
+    }
+   },
+   "evid": [],
+   "last": "2026"
   },
   {
    "a": "rehlko",
@@ -30925,6 +31703,23 @@
   },
   {
    "a": "solv-energy",
+   "b": "strata-clean-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "SOLV Energy is a top-five EPC on the same Solar Power World 2026 list on which Strata ranks #25.",
+     "context": "Ranking comparable only; no shared project is reported.",
+     "source": "https://www.solarpowerworldonline.com/2026-top-solar-contractors/",
+     "status": "active",
+     "since": "2026",
+     "scale": "Solar Power World 2026 Top Solar Contractors"
+    }
+   },
+   "evid": [],
+   "last": "2026"
+  },
+  {
+   "a": "solv-energy",
    "b": "sungrow",
    "curated": {
     "a": {
@@ -31264,6 +32059,53 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "strata-clean-energy",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Strata's own releases name Tesla Megapack at Ventura (with Tesla as EPC), at Butler-Warner, and Megapack 2XL 'throughout' Scatter Wash, where 'Tesla and Novasource took on equipment and balance of plant O&M roles'.",
+     "context": "Tesla is the only battery supplier Strata has named on more than one project. At Ventura (2020) Tesla held the EPC contract as well as the supply. At Scatter Wash the company's groundbreaking release and case study name Megapack 2XL and Tesla's O&M role. Power Technology also attributes Tesla batteries to Justice, but no Strata release confirms it, so that attribution is trade press only.",
+     "source": "https://stratacleanenergy.com/news/strata-clean-energy-breaks-ground-on-1-gwh-scatter-wash-energy-storage-project-in-phoenix/",
+     "status": "active",
+     "since": "2020",
+     "scale": "Megapack at Ventura (400 MWh), Butler-Warner (8.8 MWh), Scatter Wash (1,020 MWh)",
+     "via": "Megapack / Megapack 2XL"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a supplier it is a repeat buyer of batteries (Tesla Megapack at Ventura and Scatter Wash, Canadian Solar SolBank at White Tank, LS Energy Solutions in Vermont) and trackers (FTC Solar, 1.5 GW across two agreements), with a stated 'SupplyShield' factory-audit programme, a self-perform EPC arm ranked #25 on Solar Power World's 2026 contractor list, and a 2026 reorganisation aimed at hyperscaler 'Entitled Power Land' and natural-gas-backed portfolios.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Originate, contract and sell — utility-tolled storage projects sold with the contract attached",
+     "date": "",
+     "text": "Scatter Wash (Phoenix; 255 MW / 1,020 MWh; APS 20-year toll from the May 2022 RFP; Tesla Megapack 2XL; Mortenson EPC; USD 559 million construction and tax-equity financing led by J.P.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Originate, contract and sell — utility-tolled storage projects sold with the contract attached",
+     "date": "",
+     "text": "Ventura Energy Storage (Saticoy; 100 MW / 400 MWh; SCE 20-year resource-adequacy contract approved by the CPUC in December 2019; Tesla Megapack under a Tesla EPC contract) was co-invested by Capital Dynamics at construction in 2020 and is 'now owned by Arevon' per the company's January 2022 release.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · EPC, high-voltage and grid infrastructure",
+     "date": "",
+     "text": "Third-party EPC for municipal batteries: Butler-Warner (Fayetteville PWC; 1.75 MW / 8.8 MWh; Tesla Megapack; August 2022) and commissioned batteries in Greenville and Wilson, North Carolina.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2020"
   },
   {
    "a": "sungrow",

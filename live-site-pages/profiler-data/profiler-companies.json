@@ -2279,6 +2279,62 @@
       "srcTotal": 42,
       "srcFirstPct": 26,
       "kpiNorm": false
+    },
+    {
+      "slug": "esvolta",
+      "name": "esVolta",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Generate Capital-owned standalone-storage owner in a sale process — hedged-and-merchant batteries in ERCOT, resource-adequacy batteries in CAISO, a 25 GWh pipeline into Arizona and New Mexico",
+      "hq": "Newport Beach, CA, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "esvolta.com"
+      ],
+      "srcTotal": 108,
+      "srcFirstPct": 31,
+      "kpiNorm": false
+    },
+    {
+      "slug": "strata-clean-energy",
+      "name": "Strata Clean Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Founder-owned developer-EPC-owner that wins utility tolls and sells the battery with the contract attached — Scatter Wash to CIP, White Tank to GridStor — while keeping about 1 GW of owned solar",
+      "hq": "Durham, NC, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "stratacleanenergy.com"
+      ],
+      "srcTotal": 103,
+      "srcFirstPct": 50,
+      "kpiNorm": false
+    },
+    {
+      "slug": "hunt-energy-network",
+      "name": "Hunt Energy Network",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Hunt-family-owned, Manulife-funded merchant owner-trader of 32 distribution-connected 9.9 MW batteries plus a 100 MW transmission battery in ERCOT, dispatched by its own QSE",
+      "hq": "Dallas, TX, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "huntenergynetwork.com",
+        "huntconsolidated.com",
+        "huntesg.com"
+      ],
+      "srcTotal": 87,
+      "srcFirstPct": 32,
+      "kpiNorm": false
     }
   ]
 }

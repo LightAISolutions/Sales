@@ -693,6 +693,14 @@
       ]
     },
     {
+      "slug": "capital-recycling",
+      "term": "capital recycling",
+      "def": "Selling a finished or late-stage asset to release the equity tied up in it and reinvest in new development. For a developer without a fund behind it, recycling is the main source of growth capital.",
+      "aliases": [
+        "recycle capital"
+      ]
+    },
+    {
       "slug": "captive-developer",
       "term": "captive developer",
       "def": "A developer that builds only for its parent or one customer rather than for the market. It trades the ability to sell to anyone for a guaranteed buyer and the parent's balance sheet.",
@@ -1050,6 +1058,15 @@
       "aliases": [
         "watts per cell",
         "W/cell"
+      ]
+    },
+    {
+      "slug": "construction-management-agreement",
+      "term": "construction-management agreement",
+      "def": "A contract under which a project's former developer or a specialist manages construction for the new owner for a fee, without taking the EPC's fixed-price risk. It is how a seller keeps a role and a fee stream after selling the project.",
+      "aliases": [
+        "construction manager",
+        "CMA"
       ]
     },
     {
@@ -1624,6 +1641,15 @@
       ]
     },
     {
+      "slug": "development-margin",
+      "term": "development margin",
+      "def": "The difference between what a developer spent to bring a project to a saleable stage and the price a buyer pays for it — the profit on origination. It is earned on sale, not on operation, and is rarely disclosed.",
+      "aliases": [
+        "development fee",
+        "development premium"
+      ]
+    },
+    {
       "slug": "development-pipeline",
       "term": "development pipeline",
       "def": "Every project a developer is working on that is not yet built, from a land option to a permitted, contracted site awaiting financing. Rankings by pipeline megawatts measure ambition and options, not operating capacity.",
@@ -1872,6 +1898,15 @@
         "cast-resin transformer",
         "cast resin",
         "dry type transformer"
+      ]
+    },
+    {
+      "slug": "dscr",
+      "term": "DSCR",
+      "def": "Debt service coverage ratio: the cash a project earns in a period divided by the debt payments due in it. Lenders size a loan so that the ratio stays above a floor in their downside case, which is why a merchant battery borrows less per megawatt than a tolled one.",
+      "aliases": [
+        "debt service coverage ratio",
+        "coverage ratio"
       ]
     },
     {
@@ -2335,6 +2370,15 @@
       "def": "Flexible AC transmission systems: the family of power-electronic devices — shunt and series compensation, STATCOMs, phase shifters — that make power flow in an AC network controllable instead of merely the arithmetic consequence of impedance."
     },
     {
+      "slug": "family-office",
+      "term": "family office",
+      "def": "The investment vehicle of a wealthy family, which can own operating businesses outright and hold them without a fund's fixed life. A family-owned developer answers to no limited partners and need not sell on a schedule.",
+      "aliases": [
+        "family-owned",
+        "family holding"
+      ]
+    },
+    {
       "slug": "farmdown",
       "term": "farmdown",
       "def": "Selling part of a project or portfolio — often a majority — to a long-term owner while keeping a stake and the operating role. It recycles a developer's capital into the next project; WEC Energy Group's majority ownership of Invenergy-built solar plants is the pattern.",
@@ -2718,6 +2762,15 @@
       ]
     },
     {
+      "slug": "general-account",
+      "term": "general account",
+      "def": "A life insurer's own investment portfolio, funded by policyholder premiums, which must earn steady long-dated returns. Insurers put general-account money into infrastructure directly or through a captive fund, which is how a battery joint venture can be financed without a bank.",
+      "aliases": [
+        "insurer balance sheet",
+        "life insurer general account"
+      ]
+    },
+    {
       "slug": "general-partner",
       "term": "general partner",
       "def": "The firm that runs an investment fund, chooses its investments and earns a management fee and a share of profits. The limited partners supply the money; the general partner supplies the decisions.",
@@ -2765,6 +2818,14 @@
       "def": "The part of a purchase price above the value of the identifiable assets — paid for the team, the relationships and the expected future business rather than for anything on a balance sheet.",
       "aliases": [
         "acquisition goodwill"
+      ]
+    },
+    {
+      "slug": "green-loan",
+      "term": "green loan",
+      "def": "A loan labelled under the Loan Market Association's Green Loan Principles because its proceeds fund eligible green assets such as batteries; a 'green structuring agent' certifies the use of proceeds. It widens the lender pool without changing the credit terms.",
+      "aliases": [
+        "Green Loan Principles"
       ]
     },
     {
@@ -3412,6 +3473,14 @@
       ]
     },
     {
+      "slug": "joint-venture",
+      "term": "joint venture",
+      "def": "A company formed by two parties that each contribute something — here an operator's projects and know-how and an investor's capital — and share the ownership. The economic split can differ from the headcount of members, so the unit terms matter more than the name.",
+      "aliases": [
+        "JV"
+      ]
+    },
+    {
       "slug": "just-transition",
       "term": "just transition",
       "def": "The policy of retiring coal plants on a schedule while funding the workers and communities that depended on them. Colorado wrote it into law in 2019 with a 2030 carbon target and a state office; it is why the state's resource plans pair a coal retirement date with a replacement build and a community package in the same decision.",
@@ -3659,6 +3728,14 @@
         "current slew rate",
         "load transients",
         "transient"
+      ]
+    },
+    {
+      "slug": "load-zone",
+      "term": "load zone",
+      "def": "One of ERCOT's four settlement regions (North, South, West, Houston) whose average price loads are charged. A fleet spread across all four earns whichever zone is stressed on a given day.",
+      "aliases": [
+        "load zones"
       ]
     },
     {
@@ -4290,6 +4367,14 @@
       ]
     },
     {
+      "slug": "originator",
+      "term": "originator",
+      "def": "The developer that finds the site, secures the land and grid position, wins the contract and carries the project to a saleable stage — and then may sell rather than build and own. Its product is a de-risked project, not electricity.",
+      "aliases": [
+        "origination"
+      ]
+    },
+    {
       "slug": "oring",
       "term": "ORing",
       "def": "Joining two or more sources to one bus through devices that let current flow only out of each source — an OR gate for power. A source that fails or is unplugged cannot drag the bus down or draw current from its neighbours, which is what makes redundant supplies and live swaps safe.",
@@ -4675,6 +4760,15 @@
       ]
     },
     {
+      "slug": "pre-ntp-facility",
+      "term": "pre-NTP facility",
+      "def": "A corporate credit line that funds development costs before a project reaches notice to proceed — interconnection deposits, permits, land, equipment down-payments. Lenders underwrite the pipeline and the sponsor, not a single contracted project.",
+      "aliases": [
+        "pre-NTP financing",
+        "development credit facility"
+      ]
+    },
+    {
       "slug": "precast-concrete",
       "term": "precast concrete",
       "def": "Structural elements cast in a factory under controlled conditions and delivered to site to be erected. It moves work off the critical path and out of the weather, at the cost of transport limits and long lead times."
@@ -4873,6 +4967,15 @@
       "def": "An electrochemical route to separating usable material from spent metallic fuel in molten salt, developed alongside metallic-fuel fast reactors. It recovers fuel without the aqueous chemistry of conventional reprocessing."
     },
     {
+      "slug": "qualified-scheduling-entity",
+      "term": "qualified scheduling entity",
+      "def": "The ERCOT-registered entity that submits offers, bids and telemetry for a generator or battery and settles its charges — the trading desk's licence. An owner can be its own QSE or hire one; a 'Level 4' QSE handles the full energy and ancillary-service settlement.",
+      "aliases": [
+        "QSE",
+        "Level 4 QSE"
+      ]
+    },
+    {
       "slug": "queue-position",
       "term": "queue position",
       "def": "A project's place in line for a grid connection, fixed by the date it applied. Earlier positions get studied first and face fewer upgrade costs, so a good queue position is a tradable asset in its own right.",
@@ -4890,6 +4993,16 @@
         "QD",
         "dry-break connector",
         "quick-disconnect coupling"
+      ]
+    },
+    {
+      "slug": "ra-contract",
+      "term": "RA contract",
+      "def": "A resource-adequacy contract: a California load-serving entity pays a battery a fixed monthly amount per megawatt for being available to meet the buyer's capacity obligation, whoever dispatches it. The contract is the reason most CAISO batteries get financed.",
+      "aliases": [
+        "RA",
+        "resource adequacy contract",
+        "resource adequacy agreement"
       ]
     },
     {
@@ -4979,6 +5092,16 @@
         "RTB",
         "shovel-ready",
         "construction-ready"
+      ]
+    },
+    {
+      "slug": "real-time-co-optimization",
+      "term": "real-time co-optimization",
+      "def": "ERCOT's December 2025 redesign in which energy and ancillary services are cleared together every five minutes rather than ancillary services being procured a day ahead. A battery's state of charge is tracked in the clearing, which changes how a one-hour unit is paid.",
+      "aliases": [
+        "RTC+B",
+        "RTC",
+        "real-time co-optimisation"
       ]
     },
     {
@@ -5253,6 +5376,16 @@
       ]
     },
     {
+      "slug": "sale-process",
+      "term": "sale process",
+      "def": "A formal auction in which an owner, through investment banks it has mandated, invites bids for a company or platform. 'Exploring strategic alternatives' is the polite first stage; naming the banks is the public one.",
+      "aliases": [
+        "strategic alternatives",
+        "strategic review",
+        "sale mandate"
+      ]
+    },
+    {
       "slug": "sb-6",
       "term": "SB 6",
       "def": "The 2025 Texas law setting the terms on which very large loads connect to the grid: screening-study fees and proof of site control up front, mandatory curtailment protocols, and disclosure of on-site backup generation. It is the template other states are copying, and it is what makes a data center's ability to shed or buffer load a condition of connecting at all.",
@@ -5430,6 +5563,16 @@
         "settlement agreement",
         "unopposed settlement",
         "black-box settlement"
+      ]
+    },
+    {
+      "slug": "settlement-point",
+      "term": "settlement point",
+      "def": "The node or hub at which a resource is paid ERCOT's locational price. Two batteries a few miles apart can earn different prices when a transmission constraint binds between them — which is why owners talk about 'nodes', not a single Texas price.",
+      "aliases": [
+        "nodal pricing",
+        "node",
+        "settlement point price"
       ]
     },
     {
@@ -6406,6 +6549,16 @@
       ]
     },
     {
+      "slug": "unit-classes",
+      "term": "unit classes",
+      "def": "The tiers of ownership units in an LLC or partnership — 'A units' and 'B units' — whose rights to cash, control and returns are set by the operating agreement rather than by how many units each party holds. The class terms, not the chart, say who gets the money.",
+      "aliases": [
+        "A units",
+        "B units",
+        "Class A units"
+      ]
+    },
+    {
       "slug": "ups",
       "term": "UPS",
       "def": "Uninterruptible power supply: a power stage backed by stored energy — a battery string or a spinning flywheel — that carries the load through grid disturbances until generators start. In data centers it sits between utility power and the IT load.",
@@ -6628,6 +6781,15 @@
       "slug": "white-space",
       "term": "white space",
       "def": "The floor area of a data hall where racks actually stand, as distinct from the plant rooms, switchrooms and battery rooms that serve it. It is what gets leased, so every square metre spent on plant is measured against it."
+    },
+    {
+      "slug": "wholesale-distribution-service",
+      "term": "wholesale distribution service",
+      "def": "The tariff a Texas wire company charges a generator or battery connected to its distribution system rather than to the transmission grid. It carries demand charges that storage owners argue penalise a resource that reduces peak load.",
+      "aliases": [
+        "WDS",
+        "distribution wholesale tariff"
+      ]
     },
     {
       "slug": "wide-bandgap",

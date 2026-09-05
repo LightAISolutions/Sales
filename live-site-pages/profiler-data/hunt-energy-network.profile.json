@@ -1,0 +1,925 @@
+{
+  "schemaVersion": 7,
+  "slug": "hunt-energy-network",
+  "name": "Hunt Energy Network, L.L.C. (a Hunt Energy Company / Hunt Consolidated affiliate)",
+  "shortName": "Hunt Energy Network",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://huntenergynetwork.com/",
+  "headquarters": "Dallas, Texas (1900 North Akard Street, the Hunt Consolidated headquarters); Houston office (842 West Sam Houston Parkway North)",
+  "founded": 2018,
+  "employees": "Not stated; LinkedIn '11–50'",
+  "ownership": {
+    "type": "subsidiary"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Hunt Energy Network is a Hunt-family-owned, Manulife-funded, fully merchant owner of small batteries in ERCOT — 32 distribution-connected 9.9 MW units built since 2021 plus one 100 MW / 200 MWh transmission-level battery bought in February 2026 — that trades them through its own qualified scheduling entity and is now adding oil-fired peakers and two 180 MW batteries. The premise handed to this dossier is wrong on every clause but one: the company is ERCOT-only (no CAISO, no PJM), merchant not contracted ('Fort Duncan BESS is a 100% merchant facility'; no toll, hedge or offtake in any source), and its fleet is not 'mid-size' but a network of sub-10 MW units — the segment the Available Power guide already teaches. What the company and its parent say: 'We are a part of the Hunt Energy Company' (HEN site); 'Hunt Energy, L.L.C., the parent company of Hunt Energy Network' (2024 release); one of six Hunt Consolidated divisions, 'founded in 2018', 'created and incubated within Hunt Energy Enterprises'; ultimately 'part of a larger privately-owned group of companies managed by the Ray L. Hunt family'. Equity partner: Manulife Investment Management — USD 225 million in March 2021 to form the joint venture HEN Infrastructure, L.L.C. (funded from John Hancock Life Insurance Company's balance sheet and managed accounts; the PUCT registration names 'Manulife Infrastructure II Holdings A, L.P.' holding B units) and a 'wholly distinct' USD 250 million commitment from Manulife Infrastructure Fund III in August 2024 for more batteries and 'thermal peaking generation facilities'. Fleet as released: 'Hunt Energy Network and its affiliates now own and operate 33 BESS facilities in ERCOT with a combined capacity of 420MW' (February 2026) — 32 'distribution-level' sites 'with a capacity of 10MW each' plus Fort Duncan (Eagle Pass, Maverick County; commissioned June 2025; bought from Recurrent Energy, price undisclosed, TenOaks advising); the PUCT registration lists every distributed unit at 9.9 MW with its wire company (TNMP, Oncor, AEP Texas, South Texas Electric Cooperative); Modo Energy describes the sites as 'one-hour' 9.9 MW distributed generation resources. In development: Fizzle (180 MW, Ward County) and Nanuluk (180 MW, Reeves County) batteries, Poteet and Silver Boot 9.9 MW batteries, and 9.9 MW 'thermal peakers' at Olney and Coyote Springs (EIA lists the added units as oil-fired); the ERCOT queue carries Whitetail (180 MW), Amberjack2 (180 MW) and Kodiak AGR1 (132 MW, oil) with no interconnection agreement. The first diesel peaking generator 'came on line' in April 2026 per Pat Wood's legislative testimony. No bank loan, tax-equity or credit-transfer counterparty and no battery supplier has ever been named. Collection gap: per-site MWh and COD, the Manulife economic split, revenue, and the EPC and OEM of the 9.9 MW fleet are unreported; the company's own counts disagree (33 facilities in February 2026, '31 batteries' in May 2026, 30 unflagged sites on the web list).",
+  "ecosystemRole": "Hunt Energy Network is the operator's-chair counterpart to the developer-and-sell model the Available Power dossier describes: it sites, builds, owns and trades the same 9.9 MW distribution-connected class of battery, at 32 sites across all four ERCOT load zones, with an in-house Level 4 QSE and a five-minute optimisation platform (TraDER) it also markets to third-party owners. For a supplier it is a buyer that has never named an OEM, funded by a life insurer's infrastructure funds rather than bank debt, now buying operating transmission-scale batteries (Fort Duncan, with Canadian Solar e-STORAGE batteries and Burns & McDonnell as the seller's EPC) and adding fuel-oil peakers; its parent's Caterpillar agreement for 'up to 1 GW' of data-centre generation is a sibling business, not HEN's.",
+  "productsAndServices": [
+    {
+      "name": "Owned and operated distributed batteries — the 9.9 MW network",
+      "category": "Owned BESS — ERCOT distribution-connected (merchant)",
+      "description": "'Since 2021, Hunt Energy Network has deployed 32 distribution-level BESS facilities throughout ERCOT with a capacity of 10MW each' (February 2026 release). The company's asset-development page lists 30 operating 9.9 MW batteries by county — Reeves (Toyah, Cedarvale, Sandlake, Coyote Springs, Saddleback, Faulkner), Ward (Lonestar, Rattlesnake), Culberson, Pecos, Ector, Reagan, Glasscock, Young, Palo Pinto, Eastland, Collin, Henderson, Angelina (two), Galveston, Matagorda, Bee, Nueces, Brooks, Hidalgo, La Salle, Dimmit, Val Verde, Kimble — 'strategically sited in all 4 load zones'. The April 2024 PUCT power-generation-company registration lists each unit at 9.9 MW with its interconnecting wire company (TNMP for the Permian and Gulf Coast units, Oncor for the north and east Texas units, AEP Texas for the south and west, South Texas Electric Cooperative at Val Verde). Modo Energy describes Faulkner as 'a 9.9 MW, one-hour Distributed Generation Resource (DGR)' and the fleet as a 'network of one-hour, 9.9 MW resources'; its undated case study gives '410 MW / 510 MWh' across 32 assets before Fort Duncan. EIA data via interconnection.fyi dates the first unit, Toyah Power Station, to 1 October 2021. The units are wholesale distribution customers of the wire companies — HEN 'is currently a customer in one of AEP Texas's rate class for Wholesale Distribution Service' for distribution energy storage resources — and pay demand charges the company contests. Revenue is '100% merchant' per Modo; no toll, hedge or offtake appears in any source.",
+      "highlights": [
+        "Modo Energy (July 2024): 'Jupiter Power, Plus Power, and Hunt Energy Network owned the highest-earning batteries'; Junction was 'the highest-earning one-hour site' in November 2024; Faulkner earned 'around $225,000/MW' in the year to March 2024, 60 percent above Modo's DGR index",
+        "Per-site MWh and COD are not published by the company; the one-hour duration and the 1:1 MWh/MW ratio come from Modo and EIA",
+        "The PUCT filing names 'Hunt Energy Network Land Company, L.L.C.' as the site-leasing affiliate and 'HEN Power Marketing, L.L.C.' as the QSE affiliate",
+        "The company claims 'nearly 1 in 6 BESS assets in ERCOT' by count — a site-count claim, not a capacity share"
+      ],
+      "positioning": "The owner-operator version of the sub-10 MW distributed play that Available Power develops and sells; the segment's economics — a lighter distribution-level interconnection, one site per substation, many small nodes — are taught in the Available Power study guide and not repeated here. ENGIE's Sweeny is the one third-party-named peer DGR (Modo).",
+      "soldThrough": "ERCOT energy and ancillary-services markets via the company's own QSE (HEN Power Marketing); no contracts",
+      "targetSegments": [
+        "ERCOT wholesale market (four load zones)",
+        "Ancillary services (RRS, ECRS, regulation) under RTC+B"
+      ]
+    },
+    {
+      "name": "Transmission-level batteries — Fort Duncan and the 180 MW projects",
+      "category": "Owned BESS — ERCOT transmission-connected (merchant)",
+      "description": "Fort Duncan (Eagle Pass, Maverick County; 100 MW / 200 MWh; 'commissioned in June 2025'; 'a 100% merchant facility') was acquired from Recurrent Energy in a transaction announced 24 February 2026 — the company's first purchase of an operating asset and first transmission-level battery, to be dispatched by TraDER; Recurrent had financed it with 'USD 183 million in project financing and tax equity' before the sale, its batteries were 'supplied by Canadian Solar's e-STORAGE division' and Burns & McDonnell was the EPC per Energy-Storage.news; TenOaks Power & Infrastructure advised HEN; the price is undisclosed. Pat Wood: 'With strong financial backing from Manulife Investment Management, we are actively looking to acquire additional BESS and generation assets within ERCOT in the near term.' In development on the company's list: Fizzle BESS (180 MW, Ward County) and Nanuluk BESS (180 MW, Reeves County); the ERCOT queue (July 2026 GIS report, via ercotqueue.com) shows Whitetail BESS (26INR0420, 180 MW, Mitchell County), Amberjack2 BESS (26INR0640, 180 MW, Cameron County) and Kodiak AGR1 (26INR0396, 132 MW, Reeves County, oil) — all without an interconnection agreement. Modo's case study cites '360 MW of transmission-level assets under development in West Texas, with commissioning expected in 2027'.",
+      "highlights": [
+        "Fort Duncan doubled the fleet's energy capacity (200 MWh against about 320 MWh of one-hour units) in one purchase",
+        "Enerdatics: 'Hunt is scaling merchant exposure, not contracted storage' and 'is underwriting volatility' through 'congestion spreads, system stress, and price dispersion'",
+        "The 180 MW projects would each be eighteen times the company's standard unit; none has an interconnection agreement per the aggregator"
+      ],
+      "positioning": "A merchant buyer of built ERCOT batteries in the late-stage market where GridStor buys contracted ones; Enerdatics contrasts Hunt's stance with buyers who 'prefer contracted or hybrid structures'.",
+      "soldThrough": "Merchant dispatch through the company's QSE; acquisitions advised by TenOaks",
+      "targetSegments": [
+        "Sellers of operating ERCOT batteries (Recurrent Energy)",
+        "ERCOT wholesale market"
+      ],
+      "roadmap": "Fizzle and Nanuluk 'In Development'; Modo cites 2027 commissioning for 360 MW of transmission-level assets; queue entries carry no interconnection agreements"
+    },
+    {
+      "name": "TraDER — QSE and optimisation platform, in-house and for third parties",
+      "category": "Trading and asset-management software / QSE services",
+      "description": "'Hunt Energy Network's 5-minute QSE ensures precision market participation, while enhancing State-of-Charge management, cycle efficiency, and utility tariff cost mitigation to protect battery health, enhance up-time, and reduce operational expenses. From bidding to settlement, TraDER delivers a seamless, turn-key solution for maximizing value in ERCOT's markets.' Feature blocks on the company page: an automated bidder ('Fully RTC-Compliant by Dec 2025'), AI/ML forecasting and back-casting, an 'Optimal BESS Asset Controller' at five-minute granularity, and '24/7/365 Level 4 QSE' services with settlement automation, run from a 'Network Optimization Center'. The company told the PUCT it 'operates a Level 4 Qualified Scheduling Entity (QSE) and is fully qualified to participate in the ERCOT energy and ancillary service markets'; the ERCOT resource IDs sit under QSE 'HEN Power Marketing LLC' (Amperical). Modo's optimiser directory lists HEN/TraDER as 'QSE + DME + Auto-bidder', ERCOT only, beside Ascend, Caerus, CES, Equilibrium, Gridmatic, Habitat and Tesla; the 2026 release says TraDER 'is available for use by other 3rd party generation facilities'. Third-party customers: none named. Modo's case study quotes the lead short-term trader, Georgia Clark: 'Arbitrage is the name of the game now.'",
+      "highlights": [
+        "HEN filed ERCOT comments on NPRR1204 (state-of-charge under real-time co-optimisation) and NPRR1268 (ancillary-service demand curves) — the rule changes that reshape a one-hour battery's revenue",
+        "Modo's benchmarks: ERCOT battery revenues fell from about USD 193/kW (2023) to USD 56/kW (2024) and USD 29.4/kW (2025) as arbitrage's share rose from 25 to 76 percent — the exposure of a 100 percent merchant fleet",
+        "HEN's sites rank from 22nd to 235th on Amperical's leaderboard, most earning USD 1–2/kW-month"
+      ],
+      "positioning": "The rare owner that is its own optimiser: where Available Power sells to owners who hire a QSE, and where esVolta hedges with a commodity trader, HEN trades 33 nodes itself and sells that capability.",
+      "soldThrough": "In-house for the owned fleet; marketed as 'a turn-key asset management solution' to third-party owners",
+      "targetSegments": [
+        "Third-party ERCOT battery and generation owners",
+        "The company's own 33-site fleet"
+      ]
+    },
+    {
+      "name": "Thermal peaking generation and customer-sited power",
+      "category": "Dispatchable generation (oil-fired peakers; data-centre power)",
+      "description": "The August 2024 Manulife commitment was for 'additional energy storage projects and new thermal peaking generation facilities throughout ERCOT' — units with 'significant on-site fuel storage' and multi-fuel capability for 'extreme weather events'. The PUCT registration (April 2024) added 'Olney AGR, Coyote Springs AGR, Saddleback AGR' at 9.9 MW each; EIA lists the added units as 'Oil/petroleum liquids' with 2026–2027 dates; the company's list shows Olney and Coyote Springs 'Thermal Peaker' in development and the queue carries Kodiak AGR1 (132 MW, oil). Pat Wood's May 2026 bio: the team 'went operational on their first diesel peaking generator this month' and 'HEN is also working with select customers to power their data centers'; his House testimony: 'We are also working with data customers on their energy needs.' The Caterpillar agreement for 'up to 1 GW of power generation capacity for data centers across North America' (August 2025) is signed by Hunt Energy Company, L.P., which cites HEN as the affiliate that 'currently operates 310 MW of distributed energy assets'; whether Caterpillar gensets are HEN's peakers is not stated by either company.",
+      "highlights": [
+        "The boilerplate changed from 'distributed energy resources' (2021) to 'dispatchable energy resources' (2024) as peakers entered the plan",
+        "No data-centre customer, peaker vendor or fuel arrangement has been named",
+        "Wood's policy positions favour on-site generation and batteries for large loads and a FERC-standardised large-load interconnection"
+      ],
+      "positioning": "Firming for a merchant battery fleet and a bridge to the parent's data-centre power line; the peakers are sized to the same 9.9 MW distribution threshold as the batteries.",
+      "soldThrough": "Not stated; merchant dispatch is the only model the company describes",
+      "targetSegments": [
+        "ERCOT scarcity hours",
+        "Data-centre customers ('select customers')"
+      ],
+      "roadmap": "Olney and Coyote Springs peakers 'In Development' (EIA: 2026 and February 2027); Kodiak AGR1 132 MW in the queue"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Fleet ledger — every site a source names, with MW, county, wire company, dates and status as stated (sources: huntenergynetwork.com asset-development page, PUCT Project 56556 registration, EIA via interconnection.fyi, company releases, ERCOT queue aggregator)",
+      "specs": [
+        {
+          "band": "Operating — distribution-connected 9.9 MW batteries (company list; wire company per PUCT 56556)",
+          "label": "Permian and West Texas (TNMP unless noted)",
+          "value": "Toyah Power Station (Reeves; AEP Texas; EIA online 1 October 2021 — the first unit); Faulkner (Reeves; EIA 1 April 2022); Coyote Springs (Reeves; EIA 1 June 2022); Saddleback, Cedarvale, Sandlake (Reeves); Lonestar, Rattlesnake (Ward); Screwbean (Culberson; Oncor); Gomez (Pecos); Judkins (Ector; Oncor); Russek Street (Reagan; AEP Texas); Garden City East (Glasscock; Oncor)"
+        },
+        {
+          "band": "Operating — distribution-connected 9.9 MW batteries (company list; wire company per PUCT 56556)",
+          "label": "North, Central and East Texas",
+          "value": "Olney (Young; TNMP; EIA online May 2023); Mineral Wells (Palo Pinto; Oncor); Cisco (Eastland; AEP Texas); Farmersville (Collin; Oncor); Pauline (Henderson; Oncor); Lufkin South and Diboll (Angelina; Oncor); Junction (Kimble; AEP Texas — 'the highest-earning one-hour site' in November 2024 per Modo)"
+        },
+        {
+          "band": "Operating — distribution-connected 9.9 MW batteries (company list; wire company per PUCT 56556)",
+          "label": "Gulf Coast and South Texas",
+          "value": "Mainland (Galveston; TNMP); Pavlov (Matagorda; AEP Texas); Tynan (Bee; EIA-listed); Weil Tract (Nueces; AEP Texas); Falfurrias (Brooks; AEP Texas); Val Verde (Hidalgo; South Texas Electric Cooperative); Holcomb (La Salle; AEP Texas); Catarina (Dimmit; AEP Texas); Hamilton (Val Verde; AEP Texas)"
+        },
+        {
+          "band": "Operating — transmission-connected",
+          "label": "Fort Duncan BESS — Eagle Pass, Maverick County (ERCOT)",
+          "value": "100 MW / 200 MWh; commissioned June 2025 by Recurrent Energy (Canadian Solar e-STORAGE batteries; Burns & McDonnell EPC per Energy-Storage.news; USD 183 million of Recurrent project financing and tax equity pre-sale); acquired by HEN, announced 24 February 2026, price undisclosed; 'a 100% merchant facility'; TenOaks Power & Infrastructure advised"
+        },
+        {
+          "band": "In development (company list)",
+          "label": "Poteet BESS (Atascosa) and Silver Boot BESS (Reeves)",
+          "value": "9.9 MW each; Poteet appears in EIA data and on Amperical's resource list (POTEETS_ESR1)"
+        },
+        {
+          "band": "In development (company list)",
+          "label": "Fizzle BESS (Ward County) and Nanuluk BESS (Reeves County)",
+          "value": "180 MW each; the company's first transmission-scale developments; Cleanview lists 'Nanulak BESS 182 MW'; Modo cites '360 MW of transmission-level assets under development in West Texas, with commissioning expected in 2027'"
+        },
+        {
+          "band": "In development (company list)",
+          "label": "Olney Thermal Peaker (Young) and Coyote Springs Thermal Peaker (Reeves)",
+          "value": "9.9 MW each; PUCT 56556 added 'Olney AGR, Coyote Springs AGR, Saddleback AGR'; EIA lists the Coyote Springs unit as 'Oil/petroleum liquids' planned for 1 February 2027 and the Olney unit for 2026; the first diesel peaker 'came on line' in April 2026 per Pat Wood (site not stated)"
+        },
+        {
+          "band": "ERCOT queue (aggregator, July 2026 GIS report; no interconnection agreement)",
+          "label": "Whitetail BESS, Amberjack2 BESS, Kodiak AGR1",
+          "value": "26INR0420 Whitetail 180 MW (Mitchell County); 26INR0640 Amberjack2 180 MW (Cameron County); 26INR0396 Kodiak AGR1 132 MW (Reeves County; fuel: oil); the Sharyland affiliate chart also names 'Amberjack BESS', 'Nanulak BESS', 'Whitetail BESS' and 'Kodiak' as project entities under Hunt Energy Company"
+        },
+        {
+          "band": "Fleet totals over time (company and parent statements)",
+          "label": "Aggregate",
+          "value": "500 MW target and 100 MW 'in advanced stages of development' (March 2021); 270 MW operational plus 80 MW in development (August 2024); '280MWs of distribution connected ... energy storage resources and load resources' (PUCT letter, September 2024); '310 MW of distributed energy assets' (Caterpillar release, August 2025); 33 facilities / 420 MW (February 2026); '31 batteries as of today' (May 2026 testimony); EIA: 31 plants, 337.1 MW (29 operational)"
+        }
+      ],
+      "notes": "Collection gap: the company publishes no MWh, COD or wire company per site; the one-hour duration comes from Modo, the wire companies from the PUCT registration and the dates from EIA. No OEM, integrator or EPC for the 9.9 MW fleet is named anywhere; Principle Services describes itself as owner's engineer for 'up to 50' HEN battery projects (vendor page). The company's site list omits Fort Duncan and its counts (33 / 31 / 30) are not reconciled."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-05-12",
+      "category": "policy",
+      "headline": "Pat Wood op-ed 'Let's Own the Fifth Industrial Revolution': supports FERC-standardised large-load interconnection with on-site generation and batteries as 'a viable option'",
+      "read": "The executive chairman's public position aligns HEN's peakers and batteries with the data-centre load wave.",
+      "source": "https://huntenergynetwork.com/lets-own-the-fifth-industrial-revolution/"
+    },
+    {
+      "date": "2026-05-06",
+      "category": "policy",
+      "headline": "Wood's written testimony to the Texas House State Affairs Committee: '31 batteries as of today', first diesel peaker online, 'working with data customers'; asks for standardised DER interconnection and demand-charge reform",
+      "read": "The company says utility demand charges hit its batteries and wants the PUCT to standardise distribution interconnection across Oncor, AEP Texas and others.",
+      "source": "https://huntenergynetwork.com/wp-content/uploads/2026/05/HSA-Wood-050626-v4.pdf"
+    },
+    {
+      "date": "2026-03-02",
+      "category": "regulatory",
+      "headline": "TNMP rate case (PUCT Docket 58964): HEN witness proposes a 'Wholesale Distribution Substation Service' rate class for distribution energy storage resources within 900 feet of a substation",
+      "read": "The company litigates the tariff its business model depends on — wholesale distribution service for sub-10 MW batteries.",
+      "source": "https://interchange.puc.texas.gov/Documents/58964_512_1595042.PDF"
+    },
+    {
+      "date": "2026-02-24",
+      "category": "ma",
+      "headline": "Acquires the 100 MW / 200 MWh Fort Duncan battery from Recurrent Energy — '100% merchant'; fleet now 33 facilities / 420 MW; 'actively looking to acquire additional BESS and generation assets'",
+      "read": "First operating-asset purchase and first transmission-level battery; the model shifts from build-small to buy-big while staying merchant.",
+      "source": "https://www.prnewswire.com/news-releases/hunt-energy-network-acquires-100mw-battery-from-recurrent-energy-302695223.html"
+    },
+    {
+      "date": "2026-02-24",
+      "category": "ma",
+      "headline": "Recurrent Energy: Fort Duncan reached commercial operation in June 2025 and carried 'USD 183 million in project financing and tax equity' before the sale",
+      "read": "The seller's financing, not HEN's; the purchase price is undisclosed.",
+      "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/"
+    },
+    {
+      "date": "2026-02",
+      "category": "market",
+      "headline": "Enerdatics: 'Hunt is scaling merchant exposure, not contracted storage' and 'underwriting volatility'; 'merchant batteries remain financeable — only for operators who can trade them'",
+      "read": "The analyst's read of the Fort Duncan purchase: the in-house desk is the asset.",
+      "source": "https://www.enerdatics.com/insights/hunt-doubles-down-on-merchant-storage-in-ercot"
+    },
+    {
+      "date": "2026-01-09",
+      "category": "regulatory",
+      "headline": "HEN (Baker Botts) in the TNMP rate case: 'each DESR is primarily in competition with the large generators and not each other'",
+      "read": "A discovery dispute that states how the company sees its competitive set.",
+      "source": "https://interchange.puc.texas.gov/Documents/58964_155_1573084.PDF"
+    },
+    {
+      "date": "2025-12-05",
+      "category": "market",
+      "headline": "ERCOT real-time co-optimisation plus batteries (RTC+B) goes live; HEN had commented on NPRR1204 (state of charge) and NPRR1268 (ancillary demand curves) and marketed TraDER as 'Fully RTC-Compliant by Dec 2025'",
+      "read": "The market redesign that most affects one-hour batteries; the company positioned its platform for it.",
+      "source": "https://www.ercot.com/mktrules/issues/NPRR1204"
+    },
+    {
+      "date": "2025-11-07",
+      "category": "regulatory",
+      "headline": "Motion to intervene in AEP Texas's UTM proceeding (Docket 58315): HEN 'is currently a customer in one of AEP Texas's rate class for Wholesale Distribution Service' for distribution energy storage resources; Stephanie Kroger listed as President",
+      "read": "Second wire-company tariff fight; the batteries' delivery charges are a cost line the company contests.",
+      "source": "https://interchange.puc.texas.gov/Documents/58315_36_1555810.PDF"
+    },
+    {
+      "date": "2025-08-21",
+      "category": "partnership",
+      "headline": "Caterpillar and Hunt Energy Company, L.P. sign a long-term agreement for 'up to 1 GW' of data-centre power generation; 'through its affiliate, Hunt Energy Network, the Company currently operates 310 MW'",
+      "read": "A sibling Hunt entity's deal that cites HEN's fleet as credentials; not an HEN contract.",
+      "source": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-and-Hunt-Energy-Company-L-P--Sign-Long-Term-Strategic-Agreement-to-Deliver-Power-Solutions-for-Data-Centers/default.aspx"
+    },
+    {
+      "date": "2025-05-30",
+      "category": "corporate",
+      "headline": "Sharyland Utilities' affiliate report lists HEN Infrastructure II, HEN Power Marketing, HEN Load Services and HEN Management as competitive affiliates under Hunt Energy Company, LLC, with project entities Amberjack, Nanulak, Whitetail and Kodiak",
+      "read": "The regulatory filing is the only published organisation chart; it places HEN under Hunt Energy Company.",
+      "source": "https://interchange.puc.texas.gov/Documents/36867_376_1503613.PDF"
+    },
+    {
+      "date": "2024-11",
+      "category": "market",
+      "headline": "Modo Energy: HEN's Junction battery 'was the highest-earning one-hour site' in November 2024, combining real-time energy with RRS commitments",
+      "read": "Evidence that the in-house desk out-earns peers on individual sites.",
+      "source": "https://modoenergy.com/research/ercot-battery-operations-november-2024-real-time-energy-market-swoose-junction-jupiter-power-hunt-energy"
+    },
+    {
+      "date": "2024-09-06",
+      "category": "regulatory",
+      "headline": "HEN asks to join the PUCT's aggregated distributed energy resource (ADER) pilot task force: 'HEN and its affiliates develop, own, and operate 280MWs of distribution connected ... energy storage resources and load resources'",
+      "read": "A Level 4 QSE with 280 MW of distributed batteries positions itself for the aggregation rules.",
+      "source": "https://interchange.puc.texas.gov/Documents/53911_112_1425837.PDF"
+    },
+    {
+      "date": "2024-08-08",
+      "category": "financial",
+      "headline": "USD 250 million funding commitment from Manulife Infrastructure Fund III, 'wholly distinct' from the 2021 USD 225 million; for more batteries and 'thermal peaking generation facilities' with on-site fuel storage",
+      "read": "The second fund commitment funds the pivot from batteries-only to batteries-plus-peakers.",
+      "source": "https://www.prnewswire.com/news-releases/hunt-energy-network-announces-250-million-funding-from-long-time-partner-manulife-302218056.html"
+    },
+    {
+      "date": "2024-07",
+      "category": "market",
+      "headline": "Modo Energy: 'Jupiter Power, Plus Power, and Hunt Energy Network owned the highest-earning batteries' in July 2024, earning over half their revenue from energy markets",
+      "read": "Peer set by revenue performance, not by size.",
+      "source": "https://modoenergy.com/research/ercot-july-2024-battery-energy-storage-revenues-owners-day-ahead-real-time-arbitrage-dart-optimization"
+    },
+    {
+      "date": "2024-06",
+      "category": "capacity",
+      "headline": "Modo Energy: 24 HEN batteries in commercial operation after Farmersville and Mainland, 'each ... 9.9 MW' one-hour",
+      "read": "The build cadence — roughly ten units a year since 2021.",
+      "source": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-buildout-report-new-capacity-rated-power-engie-plus-power-hunt-energy-network-projection"
+    },
+    {
+      "date": "2024-05-22",
+      "category": "partnership",
+      "headline": "USD 10 million investment in Quidnet Energy and a 300 MW geomechanical-storage collaboration in ERCOT; Hunt's Todd Benson joins Quidnet's board",
+      "read": "An outbound bet on long-duration storage from the family company's venture arm.",
+      "source": "https://www.globenewswire.com/news-release/2024/05/22/2886537/0/en/Quidnet-Energy-Announces-300-MW-Strategic-Partnership-and-10M-Investment-from-Hunt-Energy-Network.html"
+    },
+    {
+      "date": "2024-04-26",
+      "category": "regulatory",
+      "headline": "PUCT power-generation-company registration amendment lists every HEN unit at 9.9 MW with its wire company and adds Sandlake plus three 'AGR' peaker plants",
+      "read": "The regulator's record is the only per-site list of wire companies.",
+      "source": "https://interchange.puc.texas.gov/Documents/56556_1_1387683.PDF"
+    },
+    {
+      "date": "2024-04",
+      "category": "market",
+      "headline": "Modo Energy: Faulkner earned 'around $225,000/MW' from April 2023 to March 2024 at '>99%' availability — 15 percent above the ERCOT BESS index and 60 percent above the DGR index",
+      "read": "The best public revenue datapoint for a single HEN site.",
+      "source": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-sweeny-engie-faulkner-hunt-energy-network-revenues-operational-strategy-cycling-rates-capacity-allocation-regulation-ecrs-arbitrage-comparison"
+    },
+    {
+      "date": "2022-12-14",
+      "category": "policy",
+      "headline": "HEN comments on E3's performance credit mechanism report: 'agrees with the core premise of the PCM', proposes monthly peak-net-load hours, an eight-hour non-spin product and RMR over RUC",
+      "read": "The company's market-design positions, signed by Pat Wood as CEO.",
+      "source": "https://interchange.puc.texas.gov/Documents/54335_45_1258692.PDF"
+    },
+    {
+      "date": "2021-03-22",
+      "category": "financial",
+      "headline": "HEN Infrastructure, LLC formed with Manulife Investment Management to build '500 megawatts (MW) of distribution level energy storage assets' in ERCOT, dispatched by TraDER; Javelin Capital advised",
+      "read": "The founding structure: Hunt originates and operates, a life insurer's balance sheet funds.",
+      "source": "https://www.prnewswire.com/news-releases/hunt-energy-network-announces-new-energy-storage-venture-301252928.html"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "caterpillar",
+      "type": "other",
+      "status": "active",
+      "since": "2025-08",
+      "scale": "'Up to 1 GW' data-centre generation (parent-level)",
+      "note": "The August 2025 Caterpillar agreement is with Hunt Energy Company, L.P., HEN's parent; Caterpillar's release cites HEN as the affiliate that 'currently operates 310 MW of distributed energy assets in Texas, with plans to expand beyond 1 GW'.",
+      "context": "Caterpillar supplies power systems, equipment and monitoring; Hunt provides 'infrastructure development, project financing and operational execution for data center and distributed energy resource projects'. Whether the Caterpillar units are HEN's 'thermal peakers' or its data-centre work is not stated by either company, so the link is recorded as a parent-level engagement rather than a supplier relationship.",
+      "source": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-and-Hunt-Energy-Company-L-P--Sign-Long-Term-Strategic-Agreement-to-Deliver-Power-Solutions-for-Data-Centers/default.aspx"
+    },
+    {
+      "slug": "canadian-solar",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026-02",
+      "scale": "Fort Duncan 100 MW / 200 MWh (operating asset purchased from Recurrent Energy)",
+      "via": "e-STORAGE batteries (installed by the seller)",
+      "note": "HEN bought Fort Duncan from Recurrent Energy, Canadian Solar's development subsidiary; the release mirror states the batteries were 'supplied by Canadian Solar's e-STORAGE division'.",
+      "context": "The only battery OEM ever associated with an HEN asset — inherited with the purchase rather than procured. Recurrent's CEO Ismael Guerrero is quoted in HEN's release. No supplier for the 32 distributed units has been named by any source.",
+      "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/"
+    },
+    {
+      "slug": "burns-mcdonnell",
+      "type": "other",
+      "status": "historical",
+      "since": "2025",
+      "scale": "Fort Duncan EPC (for Recurrent Energy)",
+      "note": "Energy-Storage.news names Burns & McDonnell as the EPC of Fort Duncan, built for Recurrent Energy before HEN bought it.",
+      "context": "A seller-side engagement inherited with the asset; HEN's own distributed fleet is described by Modo as built by 'an in-house EPC team'.",
+      "source": "https://www.energy-storage.news/recurrent-energy-sells-200mwh-texas-bess-to-hunt-energy-network/"
+    },
+    {
+      "slug": "jupiter-power",
+      "type": "competitor",
+      "status": "active",
+      "since": "2024-07",
+      "scale": "Modo Energy July 2024 revenue ranking",
+      "note": "Modo Energy: 'Jupiter Power, Plus Power, and Hunt Energy Network owned the highest-earning batteries' in July 2024.",
+      "context": "A revenue-performance grouping, not a transaction; Jupiter's fleet is transmission-scale and much larger.",
+      "source": "https://modoenergy.com/research/ercot-july-2024-battery-energy-storage-revenues-owners-day-ahead-real-time-arbitrage-dart-optimization"
+    },
+    {
+      "slug": "plus-power",
+      "type": "competitor",
+      "status": "active",
+      "since": "2024-07",
+      "scale": "Modo Energy July 2024 revenue ranking",
+      "note": "Plus Power sits with Jupiter Power and HEN in Modo Energy's July 2024 list of owners of 'the highest-earning batteries'.",
+      "context": "Ranking comparable only.",
+      "source": "https://modoenergy.com/research/ercot-july-2024-battery-energy-storage-revenues-owners-day-ahead-real-time-arbitrage-dart-optimization"
+    },
+    {
+      "slug": "aep",
+      "type": "other",
+      "status": "active",
+      "since": "2021",
+      "scale": "Wholesale distribution service for HEN units on AEP Texas (Toyah, Holcomb, Catarina, Junction, Hamilton, Weil Tract, Falfurrias, Cisco, Russek Street, Pavlov per PUCT 56556)",
+      "note": "AEP Texas is the wire company for ten of HEN's 9.9 MW batteries per the PUCT registration; HEN intervened in AEP Texas's 2025 tariff proceeding as 'a customer in one of AEP Texas's rate class for Wholesale Distribution Service'.",
+      "context": "An interconnection and tariff relationship, not a commercial one: HEN's batteries are distribution customers of AEP Texas and the company litigates the rate class. Wood's testimony names AEP Texas among the utilities whose differing interconnection rules HEN 'has navigated ... firsthand'.",
+      "source": "https://interchange.puc.texas.gov/Documents/58315_36_1555810.PDF"
+    },
+    {
+      "slug": "oncor",
+      "type": "other",
+      "status": "active",
+      "since": "2022",
+      "scale": "Wire company for Screwbean, Diboll, Garden City East, Mineral Wells, Farmersville, Pauline, Judkins, Lufkin South (PUCT 56556)",
+      "note": "Oncor is the interconnecting wire company for eight of HEN's 9.9 MW batteries per the April 2024 PUCT registration.",
+      "context": "Interconnection adjacency only; Wood's House testimony cites Oncor's application requirements and technical screens as an example of the non-standard DER interconnection rules HEN wants the PUCT to harmonise.",
+      "source": "https://interchange.puc.texas.gov/Documents/56556_1_1387683.PDF"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ERCOT RTC+B and ancillary-service redesign",
+      "status": "in-effect",
+      "effectiveDate": "2025-12-05",
+      "exposure": "A one-hour, fully merchant fleet earns from energy arbitrage and ancillary services, both of which real-time co-optimisation with batteries reprices; HEN filed comments on NPRR1204 (state-of-charge accounting under RTC) and NPRR1268 (ancillary demand curves) and marketed TraDER as 'Fully RTC-Compliant by Dec 2025'. Modo's benchmarks put ERCOT battery revenues at about USD 29.4/kW in 2025 against USD 56/kW in 2024 and USD 193/kW in 2023.",
+      "mitigation": "In-house Level 4 QSE and the TraDER auto-bidder (company page); an eight-hour non-spin product and PCM design changes proposed to the PUCT in 2022.",
+      "source": "https://www.ercot.com/mktrules/issues/NPRR1268"
+    },
+    {
+      "regime": "Texas distribution wholesale tariffs (PUCT rate cases)",
+      "status": "in-effect",
+      "exposure": "HEN's 32 distributed batteries take wholesale distribution service from TNMP, Oncor, AEP Texas and South Texas Electric Cooperative and pay demand charges the company says penalise batteries 'actively reducing peak demand'; it is intervening in AEP Texas's UTM proceeding (Docket 58315) and the TNMP rate case (Docket 58964), where its witness proposed a dedicated substation-service rate class for storage within 900 feet of a substation.",
+      "mitigation": "Rate-case intervention (Wilkinson Barker Knauer; Baker Botts) and legislative testimony asking for PUCT-standardised DER interconnection rules within 12 months.",
+      "source": "https://interchange.puc.texas.gov/Documents/58964_512_1595042.PDF"
+    },
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "exposure": "No HEN statement on the storage investment tax credit and no tax-equity or credit-transfer counterparty has ever been named; the only tax-credit figure in the record is Recurrent Energy's 'USD 183 million in project financing and tax equity' at Fort Duncan before the sale. Collection gap: how a life-insurer-funded, Hunt-owned structure monetises credits is unreported.",
+      "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/"
+    },
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "exposure": "No supplier for the distributed fleet is named by any source, so exposure cannot be assessed; Fort Duncan's batteries are Canadian Solar e-STORAGE units installed by the seller. Collection gap.",
+      "source": "https://www.manilatimes.net/2026/02/24/tmt-newswire/pr-newswire/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/2283756"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Hunter L. Hunt",
+      "title": "Chairman and CEO, Hunt Energy Company; HEN Board Member",
+      "photo": "images/execs/hunt-energy-network-hunt.jpg",
+      "background": [
+        "Co-Chairman and CEO, Hunt Consolidated, Inc.; 'Chairman and CEO, Hunt Energy Holdings' (Hunt Consolidated leadership page); quoted as 'CEO of Hunt Energy, L.L.C., the parent company of Hunt Energy Network' (2024)",
+        "Founded Hunt Power and Sharyland Utilities in 1998; formerly Morgan Stanley; SMU (Wikipedia; Dallas Fed council bio)",
+        "Signed the August 2025 Caterpillar agreement as Hunt Energy CEO",
+        "Co-founded the Hunter and Stephanie Hunt Institute of Engineering and Humanity; Honorary Consul of the United Kingdom in Dallas since 2011"
+      ]
+    },
+    {
+      "name": "Pat Wood III",
+      "title": "Executive Chairman, Hunt Energy Network (CEO in 2021–2024 releases and PUCT filings)",
+      "photo": "images/execs/hunt-energy-network-wood.jpg",
+      "background": [
+        "Leads 'a platform of distributed power assets (storage, grid-connected and customer premises generation) across Texas' — '31 operating batteries' and the first diesel peaker as of May 2026 (company bio)",
+        "Chairman of the Public Utility Commission of Texas (late 1990s) and of FERC under George W. Bush; RMI describes him as HEN's 'founder and executive chairman'",
+        "Chairman of LUMA (Puerto Rico grid operator); public boards including Dynegy, Quanta Services, SunPower and Spring Valley Acquisition Corp.; development roles at Airtricity, First Wind, Sharyland Utilities, Xtreme Power",
+        "Texas A&M civil engineering; Harvard Law; based in Houston"
+      ]
+    },
+    {
+      "name": "Stephanie Kroger",
+      "title": "President and CEO, Hunt Energy Network",
+      "photo": "images/execs/hunt-energy-network-kroger.jpg",
+      "background": [
+        "'President and CEO' in the February 2026 release; 'President' in the November 2025 AEP Texas intervention; a PUCT registration contact since 2024",
+        "More than 30 years of legal work in the Texas electric sector — regulatory compliance and advocacy at ERCOT and the PUCT; helped establish ERCOT's competitive retail market for business customers",
+        "Previously Andrews Kurth LLP and Eversheds Sutherland LLP; BA Coe College; JD Columbia; based in Dallas"
+      ]
+    },
+    {
+      "name": "Blake Biggers",
+      "title": "Chief Financial Officer, Hunt Energy Network",
+      "photo": "images/execs/hunt-energy-network-biggers.jpg",
+      "background": [
+        "Listed on the company's team page (headshot uploaded July 2025); no biography published; CFO per Equilar"
+      ]
+    },
+    {
+      "name": "Daniel G. Price",
+      "title": "Chief Strategy Officer, Hunt Energy Network",
+      "photo": "images/execs/hunt-energy-network-price.jpg",
+      "background": [
+        "Signed the 2021 PUCT registration as President of HEN Infrastructure and the 2024 amendment",
+        "Former CTO of Sharyland Utilities, 'the first green field utility start-up company in over 40 years'; founded companies in renewables, advanced metering and financial systems; holds a metering patent",
+        "BS Physics, UT Arlington; chairman and founding board member of Village Tech Schools"
+      ]
+    },
+    {
+      "name": "Drew Peine",
+      "title": "Vice President, Commercial",
+      "background": [
+        "The company's named contact ('VP, Commercial'); quoted by Modo Energy as VP Commercialization on 'managing revenue maximization across 32 unique nodes on a daily basis'"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Disclosed commitments and fleet (2021–2026)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "HEN publishes no financial statements; the only revenue datapoints are Modo Energy's site-level estimates (Faulkner about USD 225,000/MW, April 2023–March 2024). 'Expected' is left empty."
+          },
+          {
+            "name": "Ownership",
+            "actual": "'A part of the Hunt Energy Company'; parent 'Hunt Energy, L.L.C.'; one of six Hunt Consolidated divisions; 'managed by the Ray L. Hunt family' (company boilerplate)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The PUCT chart runs Hunt Consolidated → Hunt Equities / HIC GP → Hunt Investment Company → Hunt Energy Enterprises → Hunt Energy Network → HEN Infrastructure (A units), with Manulife's vehicle holding B units; which class carries the economic interest is not legible in the filing."
+          },
+          {
+            "name": "Manulife Investment Management commitments",
+            "actual": "USD 225 million (March 2021; HEN Infrastructure, L.L.C.; John Hancock Life Insurance Company (U.S.A.) balance sheet and managed accounts; 'Manulife Infrastructure II Holdings A, L.P.' per PUCT) and USD 250 million (August 2024; Manulife Infrastructure Fund III and affiliates; 'wholly distinct')",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases and the PUCT registration; Sharyland's affiliate report lists an 'HEN Infrastructure II, L.L.C.' that may be the 2024 vehicle — not stated."
+          },
+          {
+            "name": "Bank debt, tax equity, credit transfers",
+            "actual": "None disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No lender, tax-equity investor or credit buyer appears in any source; Fort Duncan's USD 183 million was Recurrent's financing before the sale."
+          },
+          {
+            "name": "Outbound investment",
+            "actual": "USD 10 million in Quidnet Energy (May 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Quidnet release."
+          },
+          {
+            "name": "Operating fleet (company)",
+            "actual": "'33 BESS facilities ... combined capacity of 420MW' (February 2026): 32 distribution-level units 'with a capacity of 10MW each' plus Fort Duncan 100 MW / 200 MWh",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; energy capacity is about 520 MWh if the distributed units are one-hour (Modo: '410 MW / 510 MWh' pre-Fort Duncan).",
+            "kpi": "mw-energized",
+            "qty": 420
+          }
+        ],
+        "commentary": "A family-owned, insurer-funded private company: the only capital figures are Manulife's two commitments and the company's fleet counts. No consensus or guidance exists, so 'expected' is empty throughout."
+      }
+    ],
+    "commentary": "USD 475 million of disclosed equity commitments against a fleet the company puts at 420 MW; no debt, tax equity or transfer has ever been announced, which for a US battery owner of this size is itself the finding — either the structure is funded from the insurer's balance sheet and the family's, or the financings are unpublished."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Hunt Energy Network is an ERCOT-only, fully merchant owner of sub-10 MW distributed batteries and that the brief's premise ('contracted and merchant mid-size BESS owner across CAISO, PJM and ERCOT') is wrong on market, contract and size. Basis: the company's own releases ('100% merchant', '32 distribution-level BESS facilities ... 10MW each'), the PUCT registration (every unit 9.9 MW), Modo's one-hour DGR description, and the absence of any toll, hedge or offtake in a record that includes the regulator's filings.",
+    "(High confidence) We assess that the ownership is a Hunt-family holding funded by Manulife's infrastructure funds through a joint venture, not a sponsor-owned platform. Basis: the company ('a part of the Hunt Energy Company'; 'managed by the Ray L. Hunt family'), the 2021 and 2024 Manulife commitments (USD 225 million and USD 250 million), and the PUCT chart placing HEN Infrastructure under Hunt Energy Enterprises with Manulife's vehicle as the B-unit holder. Collection gap: the economic split between the two unit classes.",
+    "(High confidence) We assess that the sub-10 MW distribution-connected design is the company's structural choice and that it is now being supplemented, not replaced, by transmission-scale merchant assets. Basis: 32 units at 9.9 MW over five years; the Fort Duncan purchase (100 MW, 'transmission-level'); Fizzle, Nanuluk, Whitetail and Amberjack2 at 180 MW in development or in the queue; Wood's stated intent to 'acquire additional BESS and generation assets'. The economics of the 9.9 MW threshold are taught in the Available Power guide; HEN is the owner-operator instance.",
+    "(Moderate confidence) We assess that the in-house QSE and trading platform is the company's competitive asset and the reason it can stay merchant as ERCOT revenues compress. Basis: Modo's site-level rankings (Faulkner 60 percent above the DGR index; Junction the top one-hour site in November 2024; HEN among the three highest-earning owners in July 2024), Enerdatics' reading that 'merchant batteries remain financeable — only for operators who can trade them', and the company's decision to sell TraDER to third parties. Cutting against it: Amperical ranks most HEN sites in the middle of the leaderboard at USD 1–2/kW-month, and 2025 ERCOT battery revenues halved.",
+    "(Moderate confidence) We assess that the peaker programme is a hedge for the merchant battery fleet and a bridge to the parent's data-centre power business rather than a separate line of business. Basis: the 2024 Manulife commitment's stated purpose ('thermal peaking generation facilities' with on-site fuel), 9.9 MW 'AGR' units registered at existing battery sites, the first diesel peaker online in April 2026, Wood's 'working with data customers', and the parent's Caterpillar agreement citing HEN's fleet as credentials. No data-centre customer or genset vendor is named.",
+    "(Low confidence) We assess that the company's financing beyond Manulife equity is unpublished rather than absent. Basis: five years of construction at about ten units a year and a 100 MW acquisition with no bank, tax-equity or credit-transfer counterparty in any release, filing or lender announcement — unusual for a US storage owner of 420 MW, and consistent either with insurer balance-sheet funding or with private financings the family company does not announce.",
+    "Collection gap: per-site MWh and COD, the OEM and EPC of the 32 distributed units, the Fort Duncan purchase price, the Manulife economic split, any debt or tax-credit monetisation, revenue, headcount, the data-centre customers, the peaker vendor, and the site of the first operating diesel peaker are all unreported.",
+    "Indicators to watch: (1) an interconnection agreement for Fizzle, Nanuluk, Whitetail or Amberjack2 — none has one, and a signed IA would date the 2027 transmission-scale programme (Judgment 3); (2) a second operating-asset purchase in ERCOT, which Wood said the company is 'actively looking' for, and whether it stays merchant (Judgments 1 and 4); (3) the outcome of the TNMP rate case (Docket 58964) on a substation-service rate class and the AEP Texas tariff proceeding — the delivery-charge line of a distribution-connected fleet; (4) a named third-party TraDER customer, the confirming evidence for Judgment 4; (5) a named data-centre customer or Caterpillar unit at an HEN site (Judgment 5); (6) any lender, tax-equity or credit-transfer announcement (Judgment 6); (7) the next fleet count — 33 facilities in February 2026 against '31 batteries' in May 2026 — and whether a unit was retired or sold."
+  ],
+  "sources": [
+    {
+      "label": "HEN — 'Let's Own the Fifth Industrial Revolution' (Pat Wood op-ed on large-load interconnection)",
+      "url": "https://huntenergynetwork.com/lets-own-the-fifth-industrial-revolution/",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "HEN — Pat Wood op-ed PDF (large-load interconnection)",
+      "url": "https://huntenergynetwork.com/wp-content/uploads/2026/05/Large-Load-Op-Ed-v3.pdf",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "HEN — Pat Wood written testimony, Texas House State Affairs Committee (31 batteries; first diesel peaker; DER interconnection)",
+      "url": "https://huntenergynetwork.com/wp-content/uploads/2026/05/HSA-Wood-050626-v4.pdf",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "HEN — microgrids and DER testimony post",
+      "url": "https://huntenergynetwork.com/microgrids-and-distributed-energy-resources-evaluating-efficacy-improving-reliability-reducing-consumer-costs-and-supporting-grid-resilience/",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "PUCT Docket 58964 — Cities' cross-rebuttal describing HEN's proposed WDSS rate class (TNMP rate case)",
+      "url": "https://interchange.puc.texas.gov/Documents/58964_512_1595042.PDF",
+      "date": "2026-03-02"
+    },
+    {
+      "label": "Energy-Storage.news — Recurrent Energy sells 200 MWh Texas BESS to Hunt Energy Network (Burns & McDonnell EPC)",
+      "url": "https://www.energy-storage.news/recurrent-energy-sells-200mwh-texas-bess-to-hunt-energy-network/",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Enerdatics — Hunt doubles down on merchant storage in ERCOT",
+      "url": "https://www.enerdatics.com/insights/hunt-doubles-down-on-merchant-storage-in-ercot",
+      "date": "2026-02"
+    },
+    {
+      "label": "PR Newswire — Hunt Energy Network acquires 100 MW battery from Recurrent Energy",
+      "url": "https://www.prnewswire.com/news-releases/hunt-energy-network-acquires-100mw-battery-from-recurrent-energy-302695223.html",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Hunt Consolidated — HEN acquires 100 MW battery from Recurrent Energy (mirror)",
+      "url": "https://www.huntconsolidated.com/hunt-energy-network-acquires-100mw-battery-from-recurrent-energy/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Yahoo Finance (PR Newswire mirror) — HEN acquires 100 MW battery from Recurrent Energy",
+      "url": "https://finance.yahoo.com/news/hunt-energy-network-acquires-100mw-120000127.html",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Recurrent Energy — completes sale of 200 MWh Fort Duncan to Hunt Energy Network (USD 183 million prior financing)",
+      "url": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "PR Newswire — Recurrent Energy completes sale of 200 MWh battery storage facility to HEN",
+      "url": "https://www.prnewswire.com/news-releases/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas-302695525.html",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Manila Times (PR Newswire mirror) — Recurrent sale to HEN (batteries 'supplied by Canadian Solar's e-STORAGE division')",
+      "url": "https://www.manilatimes.net/2026/02/24/tmt-newswire/pr-newswire/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/2283756",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Canadian Solar IR — Recurrent Energy completes sale of 200 MWh battery storage facility",
+      "url": "https://investors.canadiansolar.com/news-releases/news-release-details/recurrent-energy-completes-sale-200-mwh-battery-storage-facility",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "EnergyTech — HEN acquires 200 MWh battery project in Texas",
+      "url": "https://www.energytech.com/energy-storage/news/55360199/hunt-energy-network-acquires-200-mwh-battery-project-in-texas",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "AI Journal (PR Newswire mirror) — HEN acquires 100 MW battery (TraDER available to third parties)",
+      "url": "https://aijourn.com/hunt-energy-network-acquires-100mw-battery-from-recurrent-energy/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "PUCT Docket 58964 — HEN reply to motion to compel (TNMP rate case; 'each DESR is primarily in competition with the large generators')",
+      "url": "https://interchange.puc.texas.gov/Documents/58964_155_1573084.PDF",
+      "date": "2026-01-09"
+    },
+    {
+      "label": "Modo Energy — why ERCOT battery revenues were so low in 2025",
+      "url": "https://modoenergy.com/research/en/why-were-ercot-battery-revenues-so-low-in-2025-weather-energy-arbitrage-builodout",
+      "date": "2026-01"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery revenue benchmark, November 2025 (RTC+B launch)",
+      "url": "https://modoenergy.com/research/en/ercot-battery-revenue-benchmark-november-2025-battery-energy-storage-bess-capture-rates",
+      "date": "2025-12"
+    },
+    {
+      "label": "Hunt Consolidated — news page (HEN acquisition; Caterpillar; Baker Hughes; Skyward)",
+      "url": "https://www.huntconsolidated.com/news/",
+      "date": "2025-12"
+    },
+    {
+      "label": "PUCT Docket 58315 — HEN motion to intervene in AEP Texas UTM proceeding (wholesale distribution service customer; Kroger as President)",
+      "url": "https://interchange.puc.texas.gov/Documents/58315_36_1555810.PDF",
+      "date": "2025-11-07"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery benchmark report, October 2025",
+      "url": "https://modoenergy.com/research/en/ercot-battery-benchmark-report-october-2025-battery-energy-storage-revenues-capture-rates",
+      "date": "2025-11"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery revenues benchmark, September 2025 (Russek Street)",
+      "url": "https://modoenergy.com/research/en/ercot-battery-revenues-benchmark-september-2025-russek-street-hunt-energy-top-bottom-spreads-day-ahead-real-time-arbitrage",
+      "date": "2025-10"
+    },
+    {
+      "label": "Caterpillar IR — Caterpillar and Hunt Energy Company, L.P. sign long-term strategic agreement (HEN cited as affiliate, 310 MW)",
+      "url": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-and-Hunt-Energy-Company-L-P--Sign-Long-Term-Strategic-Agreement-to-Deliver-Power-Solutions-for-Data-Centers/default.aspx",
+      "date": "2025-08-21"
+    },
+    {
+      "label": "Hunt Consolidated — Caterpillar and Hunt Energy Company agreement (mirror)",
+      "url": "https://www.huntconsolidated.com/caterpillar-and-hunt-energy-company-l-p-sign-long-term-strategic-agreement-to-deliver-power-solutions-for-data-centers/",
+      "date": "2025-08-21"
+    },
+    {
+      "label": "PR Newswire — Caterpillar and Hunt Energy Company agreement",
+      "url": "https://www.prnewswire.com/news-releases/caterpillar-and-hunt-energy-company-lp-sign-long-term-strategic-agreement-to-deliver-power-solutions-for-data-centers-302535794.html",
+      "date": "2025-08-21"
+    },
+    {
+      "label": "Dallas Innovates — Caterpillar and Hunt Energy ink 1 GW data-centre power agreement",
+      "url": "https://dallasinnovates.com/caterpillar-and-hunt-energy-ink-agreement-to-deliver-1gw-of-data-center-power-across-north-america/",
+      "date": "2025-08"
+    },
+    {
+      "label": "Modo Energy — ERCOT July 2025 battery revenue benchmark (Hunt Energy Network, Russek Street)",
+      "url": "https://modoenergy.com/research/ercot-july-2025-battery-energy-storage-revenue-benchmark-report-hunt-energy-network-engie-russek-street-endurance-park-gridmatic",
+      "date": "2025-08"
+    },
+    {
+      "label": "Modo Energy — ERCOT and CAISO June 2025 revenue stack (arbitrage share)",
+      "url": "https://modoenergy.com/research/en/ercot-caiso-june-2025-revenue-stack-batteries-bess-energy-arbitrage-nodal-price-locational-marginal-price-transmission-congestion-price-spreads",
+      "date": "2025-07"
+    },
+    {
+      "label": "PUCT Project 36867 — Sharyland Utilities annual report of affiliate activities (HEN entities; Hunt Energy Company org chart)",
+      "url": "https://interchange.puc.texas.gov/Documents/36867_376_1503613.PDF",
+      "date": "2025-05-30"
+    },
+    {
+      "label": "ERCOT — NPRR1268 RTC modification of ancillary service demand curves (HEN comments)",
+      "url": "https://www.ercot.com/mktrules/issues/NPRR1268",
+      "date": "2025-05-15"
+    },
+    {
+      "label": "CleanTechnica — Hunt's USD 10 million bet on long-duration storage (Quidnet)",
+      "url": "https://cleantechnica.com/2025/03/08/fossil-fuelers-bet-10-million-on-long-duration-energy-storage/",
+      "date": "2025-03-08"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery buildout 2025 annual report (top owners)",
+      "url": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+      "date": "2025-12"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery operations November 2024 (Junction the highest-earning one-hour site)",
+      "url": "https://modoenergy.com/research/ercot-battery-operations-november-2024-real-time-energy-market-swoose-junction-jupiter-power-hunt-energy",
+      "date": "2024-12"
+    },
+    {
+      "label": "ERCOT — approved WMS minutes 7 October 2024 (HEN guest)",
+      "url": "https://www.ercot.com/files/docs/2025/01/09/approved-minutes-wms-20241007.doc",
+      "date": "2024-10-07"
+    },
+    {
+      "label": "PUCT Project 53911 — HEN request to join ADER pilot task force (280 MW; Level 4 QSE)",
+      "url": "https://interchange.puc.texas.gov/Documents/53911_112_1425837.PDF",
+      "date": "2024-09-06"
+    },
+    {
+      "label": "PR Newswire — HEN announces USD 250 million funding from Manulife (Infrastructure Fund III; thermal peakers)",
+      "url": "https://www.prnewswire.com/news-releases/hunt-energy-network-announces-250-million-funding-from-long-time-partner-manulife-302218056.html",
+      "date": "2024-08-08"
+    },
+    {
+      "label": "Dallas Innovates — HEN to get USD 250 million from Manulife",
+      "url": "https://dallasinnovates.com/dallas-hunt-energy-network-to-get-250m-in-funding-from-ontario-based-manulife/",
+      "date": "2024-08"
+    },
+    {
+      "label": "IREI — Manulife Investment Management invests USD 250 million in HEN",
+      "url": "https://irei.com/news/manulife-investment-management-invests-250m-in-hunt-energy-network/",
+      "date": "2024-08"
+    },
+    {
+      "label": "Energy-Storage.news — Aypa Power and HEN raise USD 573 million",
+      "url": "https://www.energy-storage.news/aypa-power-hunt-energy-network-raise-us573-million-for-us-bess-projects/",
+      "date": "2024-08"
+    },
+    {
+      "label": "Modo Energy — ERCOT July 2024 battery revenues by owner (Jupiter, Plus Power, HEN highest-earning)",
+      "url": "https://modoenergy.com/research/ercot-july-2024-battery-energy-storage-revenues-owners-day-ahead-real-time-arbitrage-dart-optimization",
+      "date": "2024-08"
+    },
+    {
+      "label": "Modo Energy — ERCOT buildout report (24 HEN batteries; Farmersville and Mainland; 9.9 MW one-hour)",
+      "url": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-buildout-report-new-capacity-rated-power-engie-plus-power-hunt-energy-network-projection",
+      "date": "2024-06"
+    },
+    {
+      "label": "GlobeNewswire — Quidnet Energy: 300 MW strategic partnership and USD 10 million investment from HEN",
+      "url": "https://www.globenewswire.com/news-release/2024/05/22/2886537/0/en/Quidnet-Energy-Announces-300-MW-Strategic-Partnership-and-10M-Investment-from-Hunt-Energy-Network.html",
+      "date": "2024-05-22"
+    },
+    {
+      "label": "Quidnet Energy — Hunt Energy Network partnership page",
+      "url": "https://quidnetenergy.com/hunt-energy-network/",
+      "date": "2024-05-22"
+    },
+    {
+      "label": "PUCT Project 56556 — deficiency cure (registrant HEN Infrastructure; Manuel Uy, Markets and Compliance)",
+      "url": "https://interchange.puc.texas.gov/Documents/56556_3_1394246.PDF",
+      "date": "2024-05-16"
+    },
+    {
+      "label": "PUCT Project 56556 — PGC registration amendment listing every 9.9 MW unit with wire company; adds Sandlake and three AGR peakers",
+      "url": "https://interchange.puc.texas.gov/Documents/56556_1_1387683.PDF",
+      "date": "2024-04-26"
+    },
+    {
+      "label": "Modo Energy — Faulkner (HEN) vs Sweeny (ENGIE): 9.9 MW one-hour DGR revenues",
+      "url": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-sweeny-engie-faulkner-hunt-energy-network-revenues-operational-strategy-cycling-rates-capacity-allocation-regulation-ecrs-arbitrage-comparison",
+      "date": "2024-04"
+    },
+    {
+      "label": "ERCOT — NPRR1204 state of charge with real-time co-optimisation (HEN comments)",
+      "url": "https://www.ercot.com/mktrules/issues/NPRR1204",
+      "date": "2024-02-01"
+    },
+    {
+      "label": "PUCT Project 54941 — re-registration of Hunt Energy Network Land Company (Hoef's Road Storage; FERC EWG notice)",
+      "url": "https://interchange.puc.texas.gov/Documents/54941_43_1295449.PDF",
+      "date": "2023-05-16"
+    },
+    {
+      "label": "PUCT Project 54335 — HEN comments on the E3 performance credit mechanism report (Pat Wood as CEO)",
+      "url": "https://interchange.puc.texas.gov/Documents/54335_45_1258692.PDF",
+      "date": "2022-12-14"
+    },
+    {
+      "label": "PUCT Project 52196 — PGC registration amendment: HEN Infrastructure (formerly BEE Presidio); corporate parents and Manulife structure chart",
+      "url": "https://interchange.puc.texas.gov/Documents/52196_2_1133871.PDF",
+      "date": "2021-06-14"
+    },
+    {
+      "label": "Dallas Innovates — HEN's new venture will put 50 batteries across Texas",
+      "url": "https://dallasinnovates.com/hunt-energy-networks-new-venture-will-put-50-batteries-across-texas-giving-ercot-a-portfolio-of-energy-generation/",
+      "date": "2021-04-01"
+    },
+    {
+      "label": "Energy-Storage.news — HEN targets 500 MW of distribution-level batteries in ERCOT",
+      "url": "https://www.energy-storage.news/hunt-energy-network-targets-putting-500mw-of-distribution-level-batteries-into-texas-ercot-market/",
+      "date": "2021-03-26"
+    },
+    {
+      "label": "PR Newswire — HEN announces new energy storage venture (HEN Infrastructure with Manulife; 500 MW)",
+      "url": "https://www.prnewswire.com/news-releases/hunt-energy-network-announces-new-energy-storage-venture-301252928.html",
+      "date": "2021-03-22"
+    },
+    {
+      "label": "HEN — homepage ('Texas Focused. Decentralized Energy.'; TraDER)",
+      "url": "https://huntenergynetwork.com/"
+    },
+    {
+      "label": "HEN — Who We Are ('We are a part of the Hunt Energy Company'; leadership)",
+      "url": "https://huntenergynetwork.com/who-we-are/"
+    },
+    {
+      "label": "HEN — Hunter Hunt biography",
+      "url": "https://huntenergynetwork.com/who-we-are/hunter-hunt/"
+    },
+    {
+      "label": "HEN — Pat Wood biography ('31 operating batteries'; first diesel peaker)",
+      "url": "https://huntenergynetwork.com/who-we-are/pat-wood/"
+    },
+    {
+      "label": "HEN — Stephanie Kroger biography",
+      "url": "https://huntenergynetwork.com/who-we-are/stephanie-kroger/"
+    },
+    {
+      "label": "HEN — Daniel Price biography",
+      "url": "https://huntenergynetwork.com/who-we-are/daniel-price/"
+    },
+    {
+      "label": "HEN — QSE and Optimization (TraDER platform)",
+      "url": "https://huntenergynetwork.com/qse-optimization/"
+    },
+    {
+      "label": "HEN — Asset Development (Manulife equity partner; 36-project list; 'nearly 1 in 6')",
+      "url": "https://huntenergynetwork.com/asset-development/"
+    },
+    {
+      "label": "HEN — ERCOT Insights (PUCT and ERCOT filings)",
+      "url": "https://huntenergynetwork.com/hen-news/ercot-insights/"
+    },
+    {
+      "label": "HEN — Contact (Dallas and Houston offices; Drew Peine)",
+      "url": "https://huntenergynetwork.com/contact/"
+    },
+    {
+      "label": "HEN — Sustainability (safety record)",
+      "url": "https://huntenergynetwork.com/sustainability/"
+    },
+    {
+      "label": "Hunt Consolidated — Areas of Business (HEN founded 2018; 'nearly one in six BESS assets')",
+      "url": "https://www.huntconsolidated.com/areas-of-business/"
+    },
+    {
+      "label": "Hunt Consolidated — Our History ('In 2018, Hunt Energy Networks was created')",
+      "url": "https://www.huntconsolidated.com/who-we-are/our-history/"
+    },
+    {
+      "label": "Hunt Consolidated — Who We Are (Hunter Hunt: Chairman and CEO, Hunt Energy Holdings)",
+      "url": "https://www.huntconsolidated.com/who-we-are/"
+    },
+    {
+      "label": "Hunt ESG — Planet ('a Hunt company')",
+      "url": "https://huntesg.com/planet/"
+    },
+    {
+      "label": "Modo Energy — Hunt Energy Network case study (32 assets; 410 MW / 510 MWh; 100% merchant; in-house QSE)",
+      "url": "https://modoenergy.com/terminal/case-studies/hunt-energy-network"
+    },
+    {
+      "label": "Modo Energy — US battery optimizers and operators directory (HEN/TraDER: QSE + DME + auto-bidder)",
+      "url": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "label": "interconnection.fyi (EIA data) — HEN Infrastructure, L.L.C. projects (31 plants, 337.1 MW)",
+      "url": "https://www.interconnection.fyi/eia/projects/developer/HEN%20Infrastructure,%20L.L.C."
+    },
+    {
+      "label": "interconnection.fyi (EIA data) — Toyah Power Station (online 1 October 2021)",
+      "url": "https://www.interconnection.fyi/eia/plant/65836"
+    },
+    {
+      "label": "interconnection.fyi (EIA data) — Faulkner (online 1 April 2022)",
+      "url": "https://www.interconnection.fyi/eia/plant/65813"
+    },
+    {
+      "label": "interconnection.fyi (EIA data) — Coyote Springs (battery 2022; oil unit planned 2027)",
+      "url": "https://www.interconnection.fyi/eia/plant/65811"
+    },
+    {
+      "label": "interconnection.fyi (EIA data) — Olney (battery May 2023; oil unit 2026)",
+      "url": "https://www.interconnection.fyi/eia/plant/65832"
+    },
+    {
+      "label": "ERCOT queue (aggregator) — Hunt Energy Network LLC (Whitetail, Amberjack2, Kodiak AGR1)",
+      "url": "https://www.ercotqueue.com/developer/hunt-energy-network-llc"
+    },
+    {
+      "label": "Cleanview — Hunt Energy developer page (Nanulak, Whitetail, Kodiak; 513 MW planned)",
+      "url": "https://cleanview.co/power-projects/developers/hunt-energy"
+    },
+    {
+      "label": "Amperical — ERCOT battery leaderboard (HEN Power Marketing resource IDs)",
+      "url": "https://amperical.ai/ercot-leaderboard/"
+    },
+    {
+      "label": "ERCOT — Distributed Generation Resource definition",
+      "url": "https://www.ercot.com/services/rq/re/dgresource"
+    },
+    {
+      "label": "Principle Services — HEN battery energy storage owner's-engineer page (vendor attribution)",
+      "url": "https://principleservices.com/project/hen-battery-energy-storage"
+    },
+    {
+      "label": "Dallas Fed — Hunter L. Hunt council biography",
+      "url": "https://www.dallasfed.org/people/fed/councils/energy/hunt"
+    },
+    {
+      "label": "Wikipedia — Hunter L. Hunt",
+      "url": "https://en.wikipedia.org/wiki/Hunter_L._Hunt"
+    },
+    {
+      "label": "RMI — Pat Wood III biography ('founder and executive chairman of Hunt Energy Network')",
+      "url": "https://rmi.org/bios/pat-wood-iii/"
+    },
+    {
+      "label": "Equilar — Hunt Energy Network executives",
+      "url": "https://people.equilar.com/bio/org/hunt-energy-network/15098107"
+    },
+    {
+      "label": "Gulf Coast Power Association — HEN member page (Paul Schulze)",
+      "url": "https://www.gulfcoastpower.org/sponsors/hunt-energy-network"
+    },
+    {
+      "label": "OpenGovUS (aggregator) — HEN Infrastructure, L.L.C. Texas taxpayer record",
+      "url": "https://opengovus.com/texas-taxpayer/32072940474"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}
