@@ -1,0 +1,548 @@
+{
+  "schemaVersion": 2,
+  "slug": "invenergy",
+  "title": "Invenergy — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [],
+  "sections": [
+    {
+      "id": "start-here-the-diversified-private-developer",
+      "title": "Start here: the diversified private developer",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "Invenergy is the second-largest developer in the United States by {{development pipeline}} — 41,328 MW behind NextEra — and it is owned by a Quebec {{pension fund}}, a Blackstone {{infrastructure fund}} and its own managers. It builds wind, solar, batteries, gas plants, an 800-mile HVDC line and a solar-module factory. This guide teaches what that combination is: how one company allocates capital across five technologies, why owning transmission changes what a developer can build, how a private company of that size is owned and financed, and where the model breaks.",
+        "**What it deliberately does not repeat:** the Aypa guide teaches the contracted storage platform as an asset a buyer prices; the Spearmint guide teaches the merchant developer and the pre-COD market; the Intersect guide teaches the co-located energy park and who may use a grid connection. The Classroom owns how a battery earns money hour by hour. Here the unit of analysis is the developer's whole capital budget, and storage is one line in it.",
+        "**One idea carries the guide.** A diversified developer is a machine for turning permits, land and grid positions into whichever asset the buyers and the policy of the moment will pay for. In 2022 the buyers paid for offshore wind leases; in 2026 they pay for gas plants sold to utilities and for the transmission line that makes new sites possible. The company is the same; the fuel changed."
+      ]
+    },
+    {
+      "id": "one-capital-budget-five-products",
+      "title": "One capital budget, five products",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "A pure-play storage developer has one question: which battery to build next. A diversified developer has a harder one: which *asset class* earns the best return on the same development capability — the land team, the interconnection engineers, the permitting lawyers, the construction group. Invenergy's five products all use that machine, and each converts it into cash a different way.",
+        "**Wind and solar** are the volume business. The developer signs a {{PPA}} or {{virtual PPA}} with a corporate — Meta's 1,800 MW, Verizon's more than 1 GW — or an {{environmental attribute purchase agreement}} that sells the certificates while the electricity goes to the grid, then builds and either holds the plant or does a {{farmdown}}: WEC Energy Group is majority owner of Delilah I and Hardin III with Invenergy as developer and operator. The developer's return is the margin between what the project cost and what a long-term owner pays for contracted cash flow.",
+        "**Storage** in Invenergy's record is a utility-contracted Southwest business — eleven Arizona batteries for APS, a solar-plus-storage site for SRP — and a set of large development microsites (Cloud Cap at 1,000 MW / 4,000 MWh, Hazy Peak at 700 MW / 2,800 MWh) with no offtaker yet. It is built on the same land-and-interconnection machine as the wind and solar, and it shows why the machine matters more than the technology: the sites were assembled before the buyer existed.",
+        "**Gas** is the growth line of 2025–2026, and it uses a different exit: {{build-own-transfer}}. Indiana Michigan Power filed a {{CPCN}} to buy the 918 MW Sycamore Riverside plant and take ownership in March 2029; We Energies filed to buy two Wisconsin plants for its data-centre load. The developer carries the plant through permitting and construction and sells it into the utility's {{rate base}} at commissioning — the utility's customers pay for it over forty years, and the developer is out at year three.",
+        "**Transmission** is the product no other developer in this corpus sells: {{merchant transmission}}. Grain Belt Express earns from transmission service agreements with 39 Missouri municipal utilities under an {{open access transmission tariff}}, not from a regulated rate base. It is also the product that makes the others possible, which is the next section.",
+        "**Manufacturing and services** — Illuminate USA's module plant, Invenergy Services' operations arm — capture margin the developer would otherwise pay to suppliers and make the projects eligible for domestic-content bonuses. They are the machine feeding itself.",
+        "The allocation rule is visible in one number: the USD 765 million Interior paid in June 2026 to cancel four {{offshore wind lease}}s was committed, in the company's own words, to gas plants in five states and to geothermal. Capital moved from the technology the federal government stopped permitting to the two it will."
+      ]
+    },
+    {
+      "id": "who-owns-a-38-gigawatt-private-company",
+      "title": "Who owns a 38-gigawatt private company",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "Invenergy has no share price, so its ownership is read from its own releases. Three parties own it and a fourth owns the gas subsidiary. Read the table for the difference between {{economic ownership}} — who gets the profits — and control, which stays with the {{managing member}}.",
+      "cols": [
+        "Owner",
+        "What it holds",
+        "How it got there",
+        "What it wants"
+      ],
+      "rows": [
+        [
+          "**Invenergy management (Polsky, Murphy)**",
+          "{{managing member}} of every entity — day-to-day control; an undisclosed economic share",
+          "Founded the company in 2001 with the proceeds of selling SkyGen to Calpine",
+          "To keep control while selling economics to fund growth"
+        ],
+        [
+          "**CDPQ (Caisse de dépôt et placement du Québec)**",
+          "52.4 per cent {{economic ownership}} of Invenergy Renewables LLC",
+          "USD 500 million into the wind portfolio in 2013; a direct stake in 2014; bought out other holders to reach 52.4 per cent in 2018",
+          "A {{pension fund}}'s want: decades of inflation-linked cash flow, no need to exit"
+        ],
+        [
+          "**Blackstone Infrastructure Partners**",
+          "About USD 4 billion of equity in Invenergy Renewables Holdings LLC (2022 and 2023); 'CDPQ and Invenergy management remain majority owners'",
+          "'The largest recorded equity investment in North American renewables' per Blackstone",
+          "An {{infrastructure fund}}'s want: a large contracted platform it can hold long or sell; open-ended infrastructure vehicles have no fixed {{fund life}}"
+        ],
+        [
+          "**InfraBridge (formerly AMP Capital)**",
+          "50 per cent of Invenergy Clean Power LLC — the gas fleet — since 2018",
+          "A separate transaction the same day CDPQ went to 52.4 per cent",
+          "Contracted and merchant gas cash flow, ring-fenced from the renewables"
+        ],
+        [
+          "**Lenders and credit buyers**",
+          "A USD 1.5 billion {{revolving credit facility}} at Invenergy Renewables Operating I LLC; project debt (Natixis USD 1.27 billion; Mercom-reported USD 1.1 billion); a USD 580 million production-credit transfer on the AEP portfolio",
+          "Priced on the owners' names and the contracts",
+          "Repayment; they hold the {{change of control}} clauses"
+        ]
+      ]
+    },
+    {
+      "id": "why-a-pension-fund-and-a-bank-fund-own-a-developer",
+      "title": "Why a pension fund and a bank fund own a developer",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A developer at Invenergy's scale needs billions of equity it cannot raise from founders, and it will not list — a public developer's share price punishes the lumpy, permit-dependent cash flow of development. The alternative is direct ownership by institutions that price long-dated cash flow: a {{pension fund}} and an {{infrastructure fund}}.",
+        "**The pension fund** is the patient owner. CDPQ's liabilities are pensions payable for decades, so it wants assets that pay for decades and does not need to sell. That is why it can hold a majority economic stake since 2018 without an exit plan, and why the company can leave management as {{managing member}}: the fund is buying cash flow, not control.",
+        "**The infrastructure fund** is a different animal. Blackstone Infrastructure Partners invests {{limited partner}} money through a {{general partner}} that earns fees and a share of profits; its open-ended structure means it need not sell on a clock, but it must show its investors a return, which is why it wants the platform to keep growing — hence USD 3 billion in 2022 and another USD 1 billion in 2023, and why the pipeline ranking matters to it.",
+        "**What the structure buys the developer.** Equity for ten-year projects at a cost no bank would offer; a {{revolving credit facility}} sized on the owners' names (sixteen lenders at USD 1.5 billion); and the standing to be the buyer of other people's portfolios — the Invenergy-led consortium with CDPQ and Blackstone bought AEP's 1,365 MW of unregulated renewables for USD 1.5 billion enterprise value in 2023.",
+        "**What it costs.** Two owners with different clocks and a management that controls but does not own most of the economics. Every large decision — an offshore exit, a gas pivot — is a negotiation among three parties whose incentives usually align and occasionally do not. The company publishes none of it; the reader infers it from what gets funded."
+      ]
+    },
+    {
+      "id": "build-and-transfer-selling-a-gas-plant-to-a-utility",
+      "title": "Build-and-transfer: selling a gas plant to a utility",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "The gas line is a different transaction from a PPA. The developer builds, the {{regulated utility}} buys the plant, and the utility's commission approves the price into {{rate base}}. Read the rows for who carries which risk and when the developer gets paid.",
+      "cols": [
+        "Step",
+        "Who does it",
+        "Risk carried",
+        "Invenergy example"
+      ],
+      "rows": [
+        [
+          "**Site and permits**",
+          "Developer, on its own money",
+          "Permit denial; local opposition",
+          "Sycamore Riverside sited beside I&M's retired Breed plant and Invenergy's own Fairbanks solar and Grain Belt work in Sullivan County"
+        ],
+        [
+          "**Gas supply and turbines**",
+          "Developer contracts",
+          "Fuel availability; turbine lead times",
+          "Tallgrass precedent agreement makes Invenergy anchor shipper for up to three Arizona plants before any plant is named"
+        ],
+        [
+          "**Utility filing**",
+          "Utility files a {{CPCN}} naming the plant and its price",
+          "Commission may refuse or trim the price",
+          "I&M's April 2026 IURC filing, decision expected end-2026; We Energies' November 2025 Wisconsin PSC filing for Foundry Ridge and Red Oak Ridge"
+        ],
+        [
+          "**Construction**",
+          "Developer builds under the utility's agreement",
+          "Cost overrun and schedule",
+          "Sycamore's commissioning precedes the March 2029 ownership transfer"
+        ],
+        [
+          "**Transfer**",
+          "Ownership passes at commissioning; the utility's customers pay through rates",
+          "Developer is out; utility carries forty years of operation",
+          "'I&M expected to take ownership in March 2029 upon completion'"
+        ],
+        [
+          "**Why now**",
+          "Utilities face data-centre load they cannot build for fast enough",
+          "A utility's own build takes longer than buying a permitted developer plant",
+          "We Energies: 'When there's a gap that just can't be met, and we need power very quickly, these plants are going to come online'"
+        ]
+      ]
+    },
+    {
+      "id": "what-owning-transmission-changes",
+      "title": "What owning transmission changes",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "A developer's scarcest input is a place on the grid where new generation can connect. The {{interconnection queue}} rations it; a {{queue position}} takes years and can fail in the study. A developer that builds its own line creates connection points that did not exist — and decides what plugs into them.",
+        "**Merchant HVDC in one paragraph.** Grain Belt Express is 800 miles of 600 kV direct-current line from western Kansas to Indiana with a {{converter station}} at each end of Phase 1 (Siemens Energy), 5,000 MW of capacity and a stated USD 11 billion cost. It is {{merchant transmission}}: its revenue is transmission service sold under a FERC {{open access transmission tariff}} — 39 Missouri municipal utilities are contracted — not a utility's regulated rate base. Its financing is private after the DOE {{loan guarantee}}'s {{conditional commitment}} of USD 4.9 billion was terminated in July 2025.",
+        "**What the line buys the developer.** Every generator that connects at the Kansas end is a customer for the line and a project the same developer can build: Energies Media reported in March 2026 that Invenergy's western Kansas wind projects are 'tied to the Grain Belt Express transmission corridor'. The company has also said the line will carry 'coal, gas, and nuclear' — the fuel on the wire is whatever the buyers at the far end want. And a converter station is a siting anchor for a large load: an HVDC terminal delivers gigawatts to one point, which is what a data-centre campus needs.",
+        "**What it costs.** A decade and a half of state certificates — Indiana 2013, Kansas and Missouri 2019 amended 2023, Illinois 2023 upheld by the state supreme court in January 2026 — thousands of {{easement}}s (USD 105 million executed, 'over 1,500 voluntary agreements'), {{eminent domain}} petitions against the holdouts, a state attorney general's investigation, and USD 1.7 billion of EPC awards to Quanta and Kiewit made while the federal guarantee was still conditional. The developer that owns the line also owns every one of those fights.",
+        "**The comparison.** Intersect's answer to the grid-connection problem was to put generation, storage and the load behind one fence. Invenergy's is to build the wire. Both are ways to stop waiting in a queue; one is measured in fence lines, the other in states."
+      ]
+    },
+    {
+      "id": "the-policy-pivot-2022-2026",
+      "title": "The policy pivot: same developer, different fuel",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Six years of one company's capital, read against what the federal government would permit and pay for. The lane labels are plain text; the entries are what happened.",
+      "lanes": {
+        "gen": "Capital in",
+        "deploy": "Renewables and offshore",
+        "eco": "Gas, transmission and geothermal"
+      },
+      "items": [
+        {
+          "x": 2022.0,
+          "lane": "gen",
+          "label": "Blackstone invests about USD 3 billion (January)"
+        },
+        {
+          "x": 2022.2,
+          "lane": "deploy",
+          "label": "Wins the New York Bight offshore lease for USD 645 million"
+        },
+        {
+          "x": 2023.5,
+          "lane": "gen",
+          "label": "Blackstone adds USD 1 billion; revolver upsized to USD 1.5 billion"
+        },
+        {
+          "x": 2023.6,
+          "lane": "deploy",
+          "label": "Buys AEP's 1,365 MW renewables for USD 1.5 billion with a USD 580 million credit transfer"
+        },
+        {
+          "x": 2024.9,
+          "lane": "deploy",
+          "label": "Clean Path NY loses its NYSERDA contract (November)"
+        },
+        {
+          "x": 2024.9,
+          "lane": "eco",
+          "label": "DOE conditionally commits USD 4.9 billion to Grain Belt Express (November)"
+        },
+        {
+          "x": 2025.4,
+          "lane": "eco",
+          "label": "Quanta and Kiewit awarded USD 1.7 billion for Grain Belt Phase 1 (May)"
+        },
+        {
+          "x": 2025.55,
+          "lane": "eco",
+          "label": "DOE terminates the Grain Belt guarantee (July); 'privately financed'"
+        },
+        {
+          "x": 2025.85,
+          "lane": "deploy",
+          "label": "Leading Light Wind (2.4 GW) cancelled (November)"
+        },
+        {
+          "x": 2025.85,
+          "lane": "eco",
+          "label": "We Energies files to buy two Invenergy gas plants for data-centre load (November)"
+        },
+        {
+          "x": 2026.25,
+          "lane": "eco",
+          "label": "Invenergy Power created for 'natural gas and data center development'; I&M files for Sycamore Riverside (April)"
+        },
+        {
+          "x": 2026.45,
+          "lane": "gen",
+          "label": "Interior pays USD 765 million to cancel four offshore leases (June) — pledged to gas and geothermal"
+        },
+        {
+          "x": 2026.65,
+          "lane": "eco",
+          "label": "Two more Wisconsin gas plants (1,950 MW) filed (August)"
+        }
+      ]
+    },
+    {
+      "id": "disclosed-capital-by-size",
+      "title": "Disclosed capital by size",
+      "kind": "bars",
+      "read": "3 min",
+      "unit": "USD millions as stated by a party to each transaction (Invenergy, Blackstone, CDPQ, lenders, Interior); CAD 1.1 billion shown at its stated CAD value",
+      "intro": "Every bar is a transaction or facility someone announced. None is a financial result — Invenergy publishes no accounts. The bars show the scale at which the owners and lenders operate, and how large the offshore refund was against them.",
+      "items": [
+        {
+          "label": "Blackstone equity, 2022",
+          "sub": "Invenergy Renewables Holdings LLC",
+          "v": 3000
+        },
+        {
+          "label": "Blackstone equity, 2023",
+          "sub": "follow-on; about USD 4 billion combined",
+          "v": 1000
+        },
+        {
+          "label": "Corporate revolver, 2023",
+          "sub": "Invenergy Renewables Operating I LLC, 16 lenders",
+          "v": 1500
+        },
+        {
+          "label": "AEP portfolio purchase, 2023",
+          "sub": "enterprise value; USD 580 million credit transfer inside",
+          "v": 1500
+        },
+        {
+          "label": "Natixis construction financing, 2024",
+          "sub": "four AEP-offtake projects",
+          "v": 1270
+        },
+        {
+          "label": "Solar debt reported by Mercom, 2025",
+          "sub": "three projects, 590 MW",
+          "v": 1100
+        },
+        {
+          "label": "PPAW 1 financing, 2025",
+          "sub": "CAD, Quebec wind",
+          "v": 1100
+        },
+        {
+          "label": "Interior offshore settlement, 2026",
+          "sub": "four leases refunded at cost",
+          "v": 765
+        },
+        {
+          "label": "Grain Belt EPC awards, 2025",
+          "sub": "Quanta and Kiewit combined",
+          "v": 1700
+        }
+      ]
+    },
+    {
+      "id": "diversified-developer-or-pure-play-platform",
+      "title": "Diversified developer or pure-play platform: the view from the capital provider's chair",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "An owner choosing between backing a multi-technology developer and a single-technology platform is choosing between optionality and legibility. The cards read the trade from the fund's seat; the pure-play case is this corpus's Aypa and GridStor guides.",
+      "cards": [
+        {
+          "t": "A diversified developer (Invenergy)",
+          "meta": "Wind, solar, storage, gas, transmission, manufacturing; two institutional owners; no accounts published",
+          "adv": [
+            "Capital moves to whatever the policy of the year will permit — offshore leases in 2022, gas plants and geothermal in 2026",
+            "One development machine amortised over five products; the module plant and operator capture supplier margin",
+            "Owning the wire creates connection points instead of queueing for them",
+            "Scale to buy whole portfolios (AEP's 1,365 MW) and to sign 1,800 MW with one hyperscaler"
+          ],
+          "dis": [
+            "Illegible: no revenue, no segment results, boilerplate megawatts that move release to release",
+            "Every line carries its own political risk — a state attorney general for the line, a federal buyout for the leases, a commission for each gas plant",
+            "Storage is a rounding error in the whole and can be starved when gas pays better",
+            "Three owners with different clocks; a sponsor cannot buy 'the storage business' on its own"
+          ]
+        },
+        {
+          "t": "A pure-play storage platform (Aypa, GridStor)",
+          "meta": "One technology, one contract type, a sponsor that can sell the whole thing",
+          "adv": [
+            "A buyer can price it: percent contracted, remaining contract life, MW by stage",
+            "One supply chain, one policy regime (the storage credit survived the 2025 law)",
+            "Exit is a {{platform sale}} to an infrastructure fund at a stated enterprise value"
+          ],
+          "dis": [
+            "No fuel to switch to when the storage market turns",
+            "Must queue for every connection like everyone else",
+            "Smaller: 6.5 GW is a large platform; Invenergy's pipeline is 41 GW"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The line is financed on private capital or not at all.** After the DOE {{loan guarantee}} was withdrawn, Grain Belt Express needs USD 11 billion from banks, bonds and equity partners against transmission service contracts and a state certificate that is still being contested by the Missouri Attorney General. No financing has been announced. If it does not close, USD 1.7 billion of EPC awards and USD 105 million of {{easement}}s are stranded and the Kansas wind projects behind them lose their route to market.",
+        "**Policy can refund you and still beat you.** The USD 765 million offshore settlement returned the lease prices, not the development spend on Leading Light Wind, and it came with a condition — 'demonstrating necessary investments in U.S. conventional energy development' — that dictates where the money goes. A developer that takes federal money for exiting one technology is committing itself to another.",
+        "**Boilerplate is not a balance sheet.** '36 gigawatts developed' in April, '38' in May; '20 gigawatts operated' then '25'; 'largest privately held' with no ranking behind it. A reader who wants to know what Invenergy owns cannot find out. Every figure in this guide is a transaction someone else announced.",
+        "**Build-and-transfer lives or dies at the commission.** The gas plants earn nothing until a {{CPCN}} is granted and the price is approved into {{rate base}}; a commission that trims the price or a data-centre customer that walks (the Wisconsin plants exist for Microsoft's and Vantage's campuses) leaves the developer holding a permitted site and turbines with no buyer.",
+        "**Storage is not disclosed, so it cannot be sold.** No supplier, no per-project list, no ISO totals. A buyer of Invenergy's batteries would be buying a fleet the seller has never described; a supplier selling to it has no named procurement counterpart until 2026's new EVP of Renewable Engineering and Procurement.",
+        "**Three owners, one managing member.** The structure works while CDPQ, Blackstone and management want the same thing. A sale of either institution's stake — nothing in the record says one is coming — would trigger every {{change of control}} clause in USD 1.5 billion of revolver and a decade of project debt."
+      ]
+    },
+    {
+      "id": "where-invenergy-slots-in",
+      "title": "Where Invenergy slots into the buyer side",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The developer-IPPs this corpus now holds, placed by what they sell and to whom. Invenergy is the only one for which storage is not the main product.",
+      "cols": [
+        "Company",
+        "Model",
+        "Main product",
+        "How it is owned and financed",
+        "Where it fails"
+      ],
+      "rows": [
+        [
+          "**Invenergy**",
+          "Diversified {{develop-to-own}} and {{build-own-transfer}}",
+          "Wind and solar PPAs; gas plants sold to utilities; merchant HVDC; contracted Southwest storage",
+          "Management as managing member; CDPQ 52.4 per cent economic; Blackstone about USD 4 billion; USD 1.5 billion revolver; project debt",
+          "Transmission financing; commission approvals; opacity"
+        ],
+        [
+          "**Aypa Power**",
+          "{{develop-to-own}}, contracted storage platform",
+          "Utility and CCA tolls on batteries",
+          "Blackstone sponsor; corporate facility, warehouse, project loans; sale to Brookfield",
+          "Permits; queue-versus-contract dates; one vendor"
+        ],
+        [
+          "**Spearmint Energy**",
+          "{{merchant}} storage developer",
+          "ERCOT batteries with no offtaker",
+          "Founder-led; revenue puts, credit transfers, construction loans",
+          "The market turning; the pre-COD buyer disappearing"
+        ],
+        [
+          "**Intersect**",
+          "{{captive developer}}",
+          "Co-located energy parks for the owner's own load",
+          "Owned by Google since March 2026",
+          "One customer; the fence-line rules"
+        ],
+        [
+          "**GridStor**",
+          "{{sponsor-created platform}}, contracted",
+          "Late-stage acquired batteries under tolls, RA and a swap",
+          "Goldman Sachs Asset Management fund; NORD/LB debt; credit transfers",
+          "Fund life against 20-year tolls; single lender; procurement paused on FEOC"
+        ],
+        [
+          "**Available Power**",
+          "{{develop-to-sell}} at NTP",
+          "9.9 MW distribution-connected batteries with a turnkey EPC attached",
+          "No sponsor named; parent pivoted to edge data centres",
+          "No buyer ever named; record silent since 2024"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "A developer is ranked #2 in the US by pipeline and calls itself the 'largest privately held' developer. Are both true?",
+          "a": "Yes, on different measures. The ranking is development-pipeline megawatts, where NextEra (a utility-owned developer) is first; among developers that are not utilities or public companies, the #2 is the largest — but that is the company's own phrase, not a published ranking."
+        },
+        {
+          "q": "CDPQ holds 52.4 per cent economic ownership of Invenergy Renewables, yet Invenergy management runs it. How?",
+          "a": "Economic ownership is the right to profits; the managing member of the LLC holds operating control. The pension fund bought cash flow and left control with the founders."
+        },
+        {
+          "q": "What does a build-and-transfer gas plant sell, and to whom?",
+          "a": "A permitted, constructed plant sold to a regulated utility at commissioning, approved by the commission into rate base under a CPCN. The developer is paid once and exits; the utility's customers pay for forty years."
+        },
+        {
+          "q": "Why would a developer build an 800-mile HVDC line it does not need to sell its existing projects?",
+          "a": "Because the line creates connection points the queue would never grant, and every generator at its origin is both a line customer and a project the same developer can build. Owning the wire is owning the site rights."
+        },
+        {
+          "q": "A merchant transmission line and a utility transmission line: who pays for each?",
+          "a": "A merchant line is paid by customers who buy capacity under a FERC open-access tariff; a utility line is paid by all ratepayers through the regulated rate base. The merchant line must find its customers before it can be financed."
+        },
+        {
+          "q": "The DOE terminated a USD 4.9 billion conditional commitment. Did the project lose a loan?",
+          "a": "It lost a guarantee that had not closed. A conditional commitment is a promise to lend once conditions are met; until closing it can be withdrawn, and this one was, leaving the line to private financing at a higher cost."
+        },
+        {
+          "q": "Interior refunded USD 765 million for four offshore leases. Was the developer made whole?",
+          "a": "For the lease prices, yes — the amounts match what it paid. Not for years of development spend on Leading Light Wind, and the refund came with a condition to invest in conventional energy."
+        },
+        {
+          "q": "What is a farmdown, and why does a developer do it?",
+          "a": "Selling a majority of a completed project to a long-term owner (WEC Energy Group at Delilah I and Hardin III) while keeping a stake and the operating role. It returns capital to build the next project."
+        },
+        {
+          "q": "An environmental attribute purchase agreement gives the buyer what?",
+          "a": "The renewable-energy certificates from the project, without the electricity, which is sold to the grid. The buyer gets the clean-energy claim; the project gets a fixed revenue stream."
+        },
+        {
+          "q": "Why does an infrastructure fund want the pipeline ranking to keep rising?",
+          "a": "Its investors are limited partners who need to see growth in the platform's value; pipeline megawatts are the visible proxy for a private company that publishes no accounts."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "Which measure puts Invenergy second in the United States?",
+          "c": [
+            "Operating megawatts",
+            "Development-pipeline megawatts",
+            "Revenue",
+            "Employees"
+          ],
+          "a": 1,
+          "why": "Cleanview ranks developers by pipeline; Invenergy's 41,328 MW is second to NextEra's 68,229 MW. No operating-capacity ranking places it there."
+        },
+        {
+          "q": "In a build-and-transfer gas deal, when is the developer paid?",
+          "c": [
+            "When the PPA is signed",
+            "When the commission grants the certificate",
+            "At commissioning, when ownership transfers to the utility",
+            "Over forty years through rates"
+          ],
+          "a": 2,
+          "why": "The utility takes ownership on completion (Sycamore Riverside: March 2029); the utility's customers then pay through rate base."
+        },
+        {
+          "q": "What makes Grain Belt Express 'merchant'?",
+          "c": [
+            "It carries only wind power",
+            "Its revenue comes from customers buying capacity under a FERC tariff, not from a utility's rate base",
+            "It has no state certificates",
+            "It was federally financed"
+          ],
+          "a": 1,
+          "why": "Merchant transmission earns from transmission service agreements under an open-access tariff; the DOE guarantee was terminated and the line is privately financed."
+        },
+        {
+          "q": "Who is the managing member of Invenergy's entities?",
+          "c": [
+            "CDPQ",
+            "Blackstone Infrastructure Partners",
+            "Invenergy management",
+            "InfraBridge"
+          ],
+          "a": 2,
+          "why": "Every release says Invenergy management remains managing member; CDPQ and Blackstone hold the majority of the economics."
+        },
+        {
+          "q": "Which technology did the June 2026 offshore settlement money go to, per the company?",
+          "c": [
+            "More offshore wind leases",
+            "Storage in California",
+            "Gas plants in five states and geothermal",
+            "Solar modules"
+          ],
+          "a": 2,
+          "why": "Invenergy said the USD 765 million would fund gas plants in Indiana, Wisconsin, Iowa, Kansas and Missouri and geothermal development."
+        },
+        {
+          "q": "Why do developers own the module factory and the operations company?",
+          "c": [
+            "Regulators require it",
+            "To capture supplier margin and qualify for domestic-content bonuses",
+            "Because banks demand it",
+            "To avoid the interconnection queue"
+          ],
+          "a": 1,
+          "why": "Illuminate USA's modules go onto Invenergy's own Ohio projects; Invenergy Services operates the fleet — margin kept in-house and content that counts toward bonuses."
+        },
+        {
+          "q": "What does a conditional commitment from the DOE Loan Programs Office guarantee?",
+          "c": [
+            "Nothing until closing — it can be withdrawn",
+            "The full loan amount immediately",
+            "A federal grant",
+            "State certificate approval"
+          ],
+          "a": 0,
+          "why": "Grain Belt's USD 4.9 billion commitment was conditional; DOE terminated it in July 2025 before closing."
+        },
+        {
+          "q": "Which of these is NOT disclosed anywhere in Invenergy's record?",
+          "c": [
+            "Blackstone's equity amount",
+            "The corporate revolver size",
+            "The battery supplier for its storage fleet",
+            "The Meta contract megawatts"
+          ],
+          "a": 2,
+          "why": "No integrator, cell maker or PCS vendor is named for any Invenergy battery — the dossier's largest collection gap."
+        }
+      ]
+    }
+  ]
+}

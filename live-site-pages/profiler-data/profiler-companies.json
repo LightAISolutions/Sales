@@ -2222,6 +2222,63 @@
       "srcTotal": 116,
       "srcFirstPct": 51,
       "kpiNorm": false
+    },
+    {
+      "slug": "invenergy",
+      "name": "Invenergy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Chicago's privately held developer-operator — #2 US pipeline behind NextEra, CDPQ- and Blackstone-owned, storage in Arizona, gas plants for utilities' data-centre load, Grain Belt Express",
+      "hq": "Chicago, IL, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "invenergy.com",
+        "grainbeltexpress.com",
+        "cimarronlink.com"
+      ],
+      "srcTotal": 134,
+      "srcFirstPct": 55,
+      "kpiNorm": false
+    },
+    {
+      "slug": "gridstor",
+      "name": "GridStor",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Goldman Sachs Asset Management-owned standalone-storage owner — contracted batteries in California, Texas and Arizona, five late-stage acquisitions in eighteen months",
+      "hq": "Portland, OR, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "gridstor.com"
+      ],
+      "srcTotal": 97,
+      "srcFirstPct": 44,
+      "kpiNorm": false
+    },
+    {
+      "slug": "available-power",
+      "name": "Available Power",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Texas develop-and-sell developer of 9.9 MW distribution-connected batteries, a unit of Available Infrastructure; no operating fleet on the record since the parent's 2025 edge-AI pivot",
+      "hq": "Tysons Corner, VA, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "availableinfrastructure.com",
+        "available-power.com"
+      ],
+      "srcTotal": 42,
+      "srcFirstPct": 26,
+      "kpiNorm": false
     }
   ]
 }

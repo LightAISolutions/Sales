@@ -1170,6 +1170,48 @@
         "Alphabet's next 10-Q for any Intersect operating disclosure or impairment; IPX Power's financings for what they say about the former fleet",
         "Chesterton check: the deal is closed (10 March 2026), not pending; Google bought the development platform and parks, not the operating fleet; there is no Wyoming campus; the 840 MW Meitner load is a trade outlet's reading of filings, not a party statement. Do not re-import the brief's premises"
       ]
+    },
+    {
+      "slug": "invenergy",
+      "cadence": "quarterly",
+      "source": "Private developer owned by CDPQ (52.4% economic ownership of Invenergy Renewables LLC), Blackstone Infrastructure Partners (about USD 4bn, 2022–2023) and management as managing member; no financial statements. First-party channels are invenergy.com (served from the wwww. host; the press index will not paginate — use site search), grainbeltexpress.com and the project microsites; the disclosure channels that move the picture are utility CPCN filings (IURC for Sycamore Riverside, Wisconsin PSC for the We Energies plants), counterparty releases (Meta, Verizon, SRP, APS, AEP), Grain Belt court and DOE records, BOEM and BLM lease records, and Cleanview's pipeline rankings. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Grain Belt Express financing: any bank group, bond or equity partner announced for the USD 11bn line after the DOE guarantee's July 2025 termination, and whether Phase 1 construction actually starts in 2026 — a financing closes judgment 5; silence through mid-2027 confirms the delay reading",
+        "Regulatory decisions on the build-and-transfer gas plants: the IURC's end-2026 order on Sycamore Riverside (918 MW to I&M, March 2029) and the Wisconsin PSC's decisions on Foundry Ridge and Red Oak Ridge for We Energies, plus the October 2026 application for Union Depot and Forest Junction (1,950 MW) — approvals confirm the gas-to-utility model, a denial strands the settlement capital",
+        "Any Invenergy release naming a battery integrator, cell supplier or an ISO-level storage total, and any CAISO record for the 200 MW Seahawk (Minto Road) project taken over in September 2026 — the dossier's largest collection gap",
+        "Ownership: a Blackstone or CDPQ stake change, a holding-company rating, a recapitalisation or IPO report from a primary source — the 2023 baseline is the last confirmed state; aggregator valuation claims are excluded",
+        "The 4 July 2026 begin-construction record for the 2027–2028 Meta and Verizon projects and Treasury's final FEOC rule — a project dropping from the Meta list would show the deadline bit",
+        "Chesterton check: 'largest privately held' is company language (Cleanview #2 by pipeline); the storage fleet is Arizona-contracted, not merchant; the NVIDIA/Emerald AI 'AI factory-ready sites' are stated intent with no named site; boilerplate megawatts (36/38 GW developed, 20/25 GW operated) move release to release. Do not re-import these as facts"
+      ]
+    },
+    {
+      "slug": "gridstor",
+      "cadence": "quarterly",
+      "source": "Private, sponsor-created company owned by funds managed by Goldman Sachs Asset Management (trade press: Horizon Energy Storage); no fund name, commitment or ownership split is public. First-party channels are gridstor.com (WordPress with Yoast sitemaps — all 24 releases hosted in full, so Business Wire mirrors are unnecessary), the project pages and the June 2026 media kit; the disclosure channels that move the picture are lender and credit-buyer releases (NORD/LB, First Citizens, Siemens Financial Services, Foss & Company), counterparty releases (SCE, APS, Axpo), Modo Energy's ERCOT buildout reports, Enerdatics and Holland & Hart's deal notes. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Gunnar's commercial operation by end-2026 and the naming of its Fortune 500 tolling counterparty — a slip past first half 2027 repeats the Hidden Lakes delay",
+        "Offtake for Birdseye (Colorado, Xcel Energy's Riverdale substation) and the Oklahoma and Capacity Power Group projects, which carry no contract or date — confirmation that acquired projects are contracted before construction",
+        "A supplier name for Hidden Lakes, Gunnar or White Tank (Enerdatics' SolBank 3.0 attribution is unconfirmed) or a post-FEOC-guidance procurement announcement — the CTO's stated procurement pause is the supplier-relevant item",
+        "The pipeline figure in the next boilerplate ('over 5 GW' in September 2025, 'over 3 GW' since November 2025) and any update on the 2022 Los Angeles Basin portfolio beyond Santa Fe Springs",
+        "Any Goldman Sachs Asset Management release naming the fund, a co-investor, a continuation vehicle or a platform sale — the sponsor's exit route and commitment are undisclosed",
+        "Chesterton check: the company is contracted, not merchant (SCE RA, APS and Fortune 500 tolls, Axpo swap); the markets are CA, TX, AZ, OK and CO; HQ is Portland, not Los Angeles; the sponsor is a GSAM-managed fund, not 'GSAM Infrastructure' by name. Do not re-import the 2026-09-03 premise"
+      ]
+    },
+    {
+      "slug": "available-power",
+      "cadence": "quarterly",
+      "source": "Business unit of Available Infrastructure (Tysons Corner, VA), a private edge-AI and cybersecurity company since its July 2025 rebrand; no sponsor, lender, buyer or financial figure has ever been published for the storage business, and the corporate storage pages are gone (available-power.com redirects to the parent). First-party channels are availableinfrastructure.com/news and the parent's PRWeb releases; the only storage disclosures are the 2022–2024 partner releases (Stem, Linxon, CleanCapital, EIN Presswire) and two Energy-Storage.news interviews. The channels that would move the picture are an ERCOT or Cleanview record for a 100 MW / 200 MWh battery in Bastrop County, a buyer's release naming Available Power as seller, or a Datavault AI filing tying Project Qestrel sites to batteries. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Greenport's fate: an ERCOT commercial-operation entry or Cleanview listing for a 100 MW / 200 MWh battery in Bastrop County, or a buyer's release — the stated February 2026 operating date has no confirmation from any party",
+        "Any release from a financial owner naming Available Power as the seller of a 9.9 MW / 20 MWh portfolio — the three March 2024 sales are unverified",
+        "A storage-related release from Available Infrastructure or a project attributed to the CleanCapital joint venture — either would show the unit is active; the record has been silent since March 2024",
+        "Datavault AI's filings and the parent's Project Qestrel releases for any statement tying micro data-centre sites to on-site batteries — nothing does today",
+        "Bastrop County: the Central Texas Airport / GREENPORT campus approval status — the host site of the only named project remains unapproved",
+        "Chesterton check: Texas only (no CAISO); develop-and-sell at NTP, not owner-operator; no sponsor named; nothing operating under its ownership on any tracker; Sungrow is a caption in a 2024 article about another company's project, not a supplier. Do not re-import the 2026-09-03 premise"
+      ]
     }
   ]
 }

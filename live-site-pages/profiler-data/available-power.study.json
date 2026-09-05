@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 2,
+  "slug": "available-power",
+  "title": "Available Power — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [],
+  "sections": [
+    {
+      "id": "start-here-the-distributed-play",
+      "title": "Start here: the distributed play",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "Available Power built its business on one number: 9.9 MW. A battery sized just under 10 MW connects to the local distribution network instead of the transmission grid, follows ERCOT's lighter interconnection path, and can be developed, sold and built in a fraction of the time a 200 MW project takes. This guide teaches the sub-10 MW 'distributed play': what a {{distributed generation resource}} is and why the threshold exists, how a small battery is sited on leased commercial land, how a developer sells it at {{notice to proceed}} with a {{turnkey EPC}} attached so a financial buyer can own it without building it, how the pre-COD {{project marketplace}} sets the price, and where the model fails — including how to read a company whose record has gone silent.",
+        "**What it deliberately does not repeat:** the Spearmint guide teaches the development stage ladder, financing a merchant battery and the pre-COD market at transmission scale; the GridStor guide teaches the buyer of late-stage projects; the Classroom owns responsive reserve, fast frequency response and the hour-by-hour revenue of an ERCOT battery. Here the battery is small and the question is why small.",
+        "**One idea carries the guide.** Interconnection is a queue with a fast lane, and the fast lane has a size limit. A developer that designs to the limit trades megawatts per site for months per project — and then has to find a buyer who wants many small assets instead of one large one."
+      ]
+    },
+    {
+      "id": "why-9-9-megawatts",
+      "title": "Why 9.9 megawatts",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "ERCOT registers generators and batteries by where they connect and how large they are. A resource on the transmission grid enters the full generation-interconnection process — the {{interconnection queue}}, screening and full studies, a standard generation interconnection agreement — that Modo Energy measures in years. A resource on a distribution feeder is a {{distributed generation resource}}, typically under 10 MW, and ERCOT's own material describes systems under 10 MW as 'small' projects with 'a less stringent planning study process'. Alex Krass, Available Power's VP of Business Development, said it plainly in 2023: 'you can skip a part of the interconnection process with ERCOT (with projects under 10MW) so your time to market is quicker'.",
+        "**The counterparty changes.** A distribution-connected battery's interconnection is with the {{distribution service provider}} — the wires company (Oncor, CenterPoint, AEP Texas, TNMP) — not with ERCOT's transmission planners. The DSP studies its feeder, not the whole grid; the study is smaller, the upgrades are local, and the timeline is measured in months.",
+        "**The registration still happens.** Distributed generation over 1 MW that can export must register with ERCOT and enter the network model through the same online interconnection-request system; a battery under 10 MW is registered as a self-dispatched distributed generation resource and sells energy and ancillary services like any other. What it skips is the transmission-level study, not the market.",
+        "**Why 9.9 and not 10.** The threshold is 'less than 10 MW'; 9.9 MW is the largest round number under it, and 20 MWh gives the two hours the developer judged the 'sweet spot' — 'going to three or four you really get hammered on the Capex'. Bimergen, GoodPeak, ON.energy and Plus Power have since built or bought to the same template, which is the best evidence the arithmetic works.",
+        "**What the fast lane costs.** Megawatts. A 9.9 MW site earns a hundredth of a 1 GW project's revenue on a site, a lease, a substation tie and a permit of its own. The economics only work if the development is standardised — Ben Gregory's 'manufacturing-like, standardised approach ... we might leave some money on the table but we can do much more volume' — and if there are buyers for a portfolio of small assets."
+      ]
+    },
+    {
+      "id": "siting-on-leased-land",
+      "title": "Siting on leased land: the real-estate partner model",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "Available Power's stated method was to 'partner with real estate portfolio owners to site distributed energy systems such as batteries in locations where they create value for landowners, investors, and grid operators'. The table reads what each party contributes and receives under a {{site lease}}, using the one project the company named.",
+      "cols": [
+        "Party",
+        "Contributes",
+        "Receives",
+        "Greenport example"
+      ],
+      "rows": [
+        [
+          "**Landowner (real-estate portfolio owner)**",
+          "An acre or two of commercial or industrial land near a feeder or substation; no capital",
+          "Lease rent for twenty years; a resilience or amenity claim for the site",
+          "GREENPORT Energy leased land at a proposed airport and technology campus 'to host data centers' and a biofuel plant"
+        ],
+        [
+          "**Developer**",
+          "Site selection against the grid ('evaluate individual sites within the context of the grid'), the DSP interconnection, permits, an EPC and equipment contract",
+          "The sale price at notice-to-proceed",
+          "Available Power: Greenport announced September 2022; Linxon exclusivity May 2023; 'at NTP' by March 2024"
+        ],
+        [
+          "**EPC (turnkey)**",
+          "Substation, enclosures, inverters, controls — 'everything in place' — carried from NTP to operation",
+          "A construction contract that survives the sale",
+          "Linxon's scope: a 345/34.5 kV 130 MVA transformer, 345 kV switchgear, enclosures, inverter skid, EMS"
+        ],
+        [
+          "**Buyer (financial owner)**",
+          "Capital at NTP; owns and operates through the EPC and an optimiser",
+          "Merchant ERCOT revenue plus ancillary services for the life of the asset",
+          "Never named: three 9.9 MW sales to undisclosed buyers; Greenport auctioned via LevelTen with no outcome reported"
+        ],
+        [
+          "**Wires company**",
+          "The feeder and the interconnection study",
+          "A new resource on its network; no contract with the owner",
+          "Not named for any project"
+        ]
+      ]
+    },
+    {
+      "id": "selling-at-notice-to-proceed",
+      "title": "Selling at notice to proceed: the develop-and-flip",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "{{notice to proceed}} is the moment a project has everything but construction: site, interconnection, permit, equipment contracts, an EPC ready to start. On the {{development stage ladder}} it is the last rung before capital is spent in earnest, and it is the rung at which most risk has been retired and the price is highest relative to money at risk. Available Power's business was to reach it and stop: 'We sell the projects at NTP'.",
+        "**Why a buyer pays for it.** A financial owner — an infrastructure fund, a family office, an insurer — wants operating cash flow without a development team. Krass described the target as 'traditional financial capital partners versus someone who might have an EPC relationship'. The {{turnkey EPC}} attached to the sale is what makes that buyer possible: Linxon 'has already secured access to the necessary equipment supply', so the buyer signs one contract and waits for commissioning.",
+        "**What the seller keeps and gives up.** It keeps the development margin — the value of the rungs it climbed — and gives up the operating life. A merchant battery's revenue is uncertain; the seller has converted an uncertain twenty-year stream into a certain payment at year zero, which is the {{develop-to-sell}} choice the Spearmint guide contrasts with {{develop-to-own}}.",
+        "**Pricing by {{IRR}}.** Gregory's March 2024 remark shows the mechanism: 'A project that was at 12% IRR last year, is now at 14-15% IRR because of the BESS price falls'. The buyer's return is the ratio of expected revenue to capital cost; when battery prices fall, the same revenue on less capital raises the return, and a project that was marginal becomes saleable. The developer's price rises with it — until buyers' required returns rise too.",
+        "**The {{project marketplace}}.** Greenport was sold — or offered — 'in coordination with LevelTen Energy', an online marketplace where developers list projects and buyers bid. It turns a private negotiation into an auction with 'substantial interest'; it also means the seller's price is whatever the day's buyers will pay, which is the point the next section is about."
+      ]
+    },
+    {
+      "id": "the-buyer-side-of-a-small-battery",
+      "title": "The buyer side of a small battery: who owns 9.9 MW",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "A portfolio of small distribution-connected batteries and one large transmission-connected project are different purchases. The cards read the trade from a financial owner's seat.",
+      "cards": [
+        {
+          "t": "A portfolio of 9.9 MW batteries",
+          "meta": "Many sites, many leases, many DSP interconnections; each fast to build",
+          "adv": [
+            "Fast to commercial operation — months of interconnection, not years",
+            "Diversified across feeders and counties; one site's failure is a small loss",
+            "Distribution-level upgrades are local and cheap",
+            "The segment is populated: Bimergen bought eight from Aggreko, ON.energy and GoodPeak build to the same size"
+          ],
+          "dis": [
+            "Administrative cost per megawatt is high — a lease, a permit, a DSP study and an EPC mobilisation for every 9.9 MW",
+            "Merchant revenue only; no utility toll exists at this size",
+            "Less liquid to resell than one large asset",
+            "Needs an optimiser that will run small units (Stem's Athena was the original plan; no optimiser is named after 2022)"
+          ]
+        },
+        {
+          "t": "One 100 MW / 200 MWh transmission-connected project",
+          "meta": "Greenport: 345 kV, a 130 MVA transformer, a full ERCOT study",
+          "adv": [
+            "Scale: one site, one interconnection, one EPC, revenue that justifies a trading desk",
+            "Can carry a toll or a revenue swap like GridStor's Hidden Lakes",
+            "Attractive to the large buyers that run auctions"
+          ],
+          "dis": [
+            "Years in the transmission queue; the date slipped from mid-2024 to Q1 2025 to February 2026",
+            "Depends on the host site: an unapproved airport campus under a 2010 {{Chapter 381 agreement}} with organised opposition",
+            "A single sale that, if it does not close, is the whole business"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "6 min",
+      "ps": [
+        "**No buyer, no business.** A develop-and-sell company is only as real as its sales. Three 9.9 MW assets were 'recently sold' in March 2024 to buyers no one has named; Greenport was auctioned with no reported outcome; the ten-project near-term portfolio and the '1,000+ megawatt' pipeline have no later trace. Cleanview's September 2026 operating list and Modo Energy's 2025 owner report do not contain the company. The record is consistent with sales that happened privately and with sales that did not happen; it cannot distinguish them.",
+        "**The host site can fail the project.** Greenport sits on a campus that 'has yet to be approved for development' fifteen years after its {{Chapter 381 agreement}}, with a community group organised against the airport. A battery that leases land is exposed to the landlord's plans.",
+        "**The fast lane is a market, not a moat.** The sub-10 MW segment the company explained in 2023 now has named owners buying eight at a time. A template anyone can copy earns a developer's margin only while the developer is faster than the copiers.",
+        "**Equipment must be bought before the rule is known.** 'We secured our own supply of equipment' (March 2024) predates the 2026 FEOC material-assistance ratios; any project not under construction by then is tested against a rule its equipment was not chosen for.",
+        "**A parent can change business.** From July 2025 the parent trades as Available Infrastructure, an edge-AI and cybersecurity company with a '$5 billion' micro-data-centre plan, and 'Available Power' is a business unit with three named staff. Nothing ties the batteries to the new business; nothing says the unit is closed. A counterparty reading the record sees a storage developer that has said nothing about storage for two and a half years.",
+        "**How to read a silent company.** Check the parent's newsroom for any release in the asset class (none since 2024); check the operating and planned lists the ISO's trackers publish (absent); check whether any buyer, lender or EPC has named it since (none); check whether the people who spoke for the business are still there (the president is; the VP who explained the model is not). Silence in all four is the finding — and it is what this dossier reports."
+      ]
+    },
+    {
+      "id": "where-available-power-slots-in",
+      "title": "Where Available Power slots into the buyer side",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The developer-IPPs this corpus now holds, placed by what they sell and to whom. Available Power is the smallest unit and the only pure seller.",
+      "cols": [
+        "Company",
+        "Model",
+        "Unit size",
+        "Who buys",
+        "Where it fails"
+      ],
+      "rows": [
+        [
+          "**Available Power**",
+          "{{develop-to-sell}} at {{notice to proceed}}, {{turnkey EPC}} attached",
+          "9.9 MW / 20 MWh distribution-connected; one 100 MW project",
+          "Financial owners — never named",
+          "No buyer on the record; host site; parent pivot"
+        ],
+        [
+          "**GridStor**",
+          "{{sponsor-created platform}} buying late-stage projects",
+          "100–220 MW",
+          "Itself — then tolls with SCE, APS, a Fortune 500 toller, Axpo",
+          "Fund life against 20-year tolls"
+        ],
+        [
+          "**Spearmint Energy**",
+          "{{merchant}} developer, {{develop-to-own}}",
+          "150–350 MW",
+          "Itself; the trading desk",
+          "The market turning"
+        ],
+        [
+          "**Aypa Power**",
+          "{{develop-to-own}}, contracted",
+          "100–400 MW",
+          "Utilities, public power, CCAs",
+          "Permits; queue dates"
+        ],
+        [
+          "**Intersect**",
+          "{{captive developer}}",
+          "Gigawatt-scale energy parks",
+          "Google",
+          "One customer"
+        ],
+        [
+          "**Invenergy**",
+          "Diversified developer and {{build-own-transfer}}",
+          "10–1,000 MW batteries; 900–1,200 MW gas plants",
+          "Utilities, corporates",
+          "Transmission financing; opacity"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "Why does a developer size a Texas battery at 9.9 MW rather than 10 MW?",
+          "a": "Resources under 10 MW connect to the distribution network as distributed generation resources and follow a lighter interconnection study with the wires company, not the full ERCOT transmission process — months instead of years."
+        },
+        {
+          "q": "Who studies the interconnection of a distribution-connected battery in ERCOT?",
+          "a": "The distribution service provider — the wires company that owns the feeder (Oncor, CenterPoint, AEP Texas, TNMP) — not ERCOT's transmission planners."
+        },
+        {
+          "q": "Does a sub-10 MW battery skip ERCOT registration?",
+          "a": "No. Distributed generation over 1 MW that can export registers with ERCOT and enters the network model; what it skips is the transmission-level study, not the market."
+        },
+        {
+          "q": "What is sold at notice to proceed?",
+          "a": "A project with site, interconnection, permit, equipment contracts and an EPC ready to start — everything but the construction spend — at the rung where most risk is retired and the price is highest relative to money at risk."
+        },
+        {
+          "q": "Why attach a turnkey EPC to a project sale?",
+          "a": "So a financial buyer with no construction team can own it: one contract carries the asset from NTP to commercial operation. Available Power's buyers were 'traditional financial capital partners' without EPC relationships."
+        },
+        {
+          "q": "Battery prices fall and a project's IRR rises from 12 to 14–15 per cent. Why?",
+          "a": "IRR is the return that equates future revenue to today's cost; the same expected revenue on a lower capital cost is a higher return, so marginal projects become saleable."
+        },
+        {
+          "q": "What does a project marketplace change about a pre-COD sale?",
+          "a": "It turns a private negotiation into an auction — many bidders, a market price — and exposes the seller to whatever the day's buyers will pay."
+        },
+        {
+          "q": "What is a Chapter 381 agreement?",
+          "a": "A Texas county's economic-development contract granting incentives to a developer for investment and jobs; the Greenport campus has one from 2010 and is still unapproved."
+        },
+        {
+          "q": "A developer's last storage statement is two and a half years old. What four checks tell you whether it is still in business?",
+          "a": "The parent's newsroom for releases in the asset class; the ISO trackers' operating and planned lists; any buyer, lender or EPC naming it since; whether the people who spoke for the business are still there."
+        },
+        {
+          "q": "Why is a portfolio of small batteries less liquid than one large one?",
+          "a": "Each 9.9 MW unit carries its own lease, permit, DSP study and EPC mobilisation, so the administrative cost per megawatt is high and the pool of buyers who want many small assets is smaller."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "What does a 9.9 MW battery in ERCOT avoid?",
+          "c": [
+            "Registration with ERCOT",
+            "The full transmission-level interconnection study",
+            "Paying for interconnection upgrades",
+            "Selling ancillary services"
+          ],
+          "a": 1,
+          "why": "Under 10 MW it connects as a distributed generation resource through the wires company's lighter study; it still registers and still sells into the market."
+        },
+        {
+          "q": "With whom does a distribution-connected battery negotiate its interconnection?",
+          "c": [
+            "ERCOT's transmission planning group",
+            "The Public Utility Commission of Texas",
+            "The distribution service provider that owns the feeder",
+            "FERC"
+          ],
+          "a": 2,
+          "why": "The DSP — Oncor, CenterPoint, AEP Texas, TNMP — studies its own feeder."
+        },
+        {
+          "q": "At which rung did Available Power sell its projects?",
+          "c": [
+            "Site control",
+            "Permit",
+            "Notice to proceed",
+            "Commercial operation"
+          ],
+          "a": 2,
+          "why": "'We sell the projects at NTP' — with the EPC and equipment contracts in place for the buyer."
+        },
+        {
+          "q": "Why did the company attach Linxon to every project it sold?",
+          "c": [
+            "Linxon was its owner",
+            "To give financial buyers a turnkey EPC so they could own without building",
+            "Linxon financed the projects",
+            "ERCOT required it"
+          ],
+          "a": 1,
+          "why": "The buyers were financial owners without EPC relationships; the turnkey contract made them able to buy."
+        },
+        {
+          "q": "What raised the projects' IRR from 12 to 14–15 per cent in 2024?",
+          "c": [
+            "Higher ERCOT prices",
+            "Falling battery prices",
+            "Longer tolls",
+            "Federal grants"
+          ],
+          "a": 1,
+          "why": "Gregory: 'A project that was at 12% IRR last year, is now at 14-15% IRR because of the BESS price falls.'"
+        },
+        {
+          "q": "Which of these has the public record confirmed about Available Power's sales?",
+          "c": [
+            "The buyers' names",
+            "The sale prices",
+            "That three 9.9 MW assets were 'recently sold' as of March 2024",
+            "The counties"
+          ],
+          "a": 2,
+          "why": "Only the company's own statement exists; no buyer, price or county has ever been named by any party."
+        },
+        {
+          "q": "What happened to the parent company in 2025?",
+          "c": [
+            "It was acquired by Linxon",
+            "It listed on NASDAQ",
+            "It rebranded as Available Infrastructure, an edge-AI and cybersecurity company, with Available Power as a business unit",
+            "It merged with CleanCapital"
+          ],
+          "a": 2,
+          "why": "From July 2025 every parent release concerns SanQtum and Project Qestrel; Available Power is named as a subsidiary."
+        },
+        {
+          "q": "Which risk is specific to a battery on leased land at the Greenport campus?",
+          "c": [
+            "FEOC material-assistance ratios",
+            "The host campus has never been approved for development",
+            "ERCOT's RTC+B redesign",
+            "Two-hour duration"
+          ],
+          "a": 1,
+          "why": "The airport and technology centre under a 2010 Chapter 381 agreement 'has yet to be approved', with organised opposition; the battery's site depends on the landlord's plans."
+        }
+      ]
+    }
+  ]
+}

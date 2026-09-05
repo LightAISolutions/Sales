@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 2,
+  "slug": "gridstor",
+  "title": "GridStor — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [],
+  "sections": [
+    {
+      "id": "start-here-the-storage-specialist-a-bank-built",
+      "title": "Start here: the storage specialist a bank built",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "In 2021 Goldman Sachs Asset Management wanted to own standalone batteries and could not find a developer it wanted to back, so it bought a project in Goleta, hired a chief executive and built a company around it. GridStor is that company: a {{sponsor-created platform}} that owns 280 MW of contracted batteries, is building 250 MW more, and has bought five projects from other developers in eighteen months. This guide teaches how an {{asset manager}}'s {{infrastructure fund}} deploys money into storage, what a sponsor-backed specialist can finance that a founder-led one cannot, how a battery bought at notice-to-proceed is contracted before it is built, and where the model fails.",
+        "**What it deliberately does not repeat:** the Aypa guide teaches the contracted platform as an asset a buyer prices; the Spearmint guide teaches the merchant developer and financing a battery with no PPA; the Invenergy guide teaches the diversified developer and its owners; the Available Power guide teaches the seller side of the late-stage market GridStor buys in. The Classroom owns how a battery earns money hour by hour.",
+        "**One idea carries the guide.** A fund is a clock with money in it. It must invest, it must show returns, and one day it must get out. Every choice GridStor makes — buy late-stage projects instead of originating, contract every asset, borrow from one bank that already knows the sponsor, hire a trading desk to convert merchant revenue into fixed payments — is the choice a fund makes when it wants storage cash flow on a fund's schedule."
+      ]
+    },
+    {
+      "id": "how-an-asset-managers-fund-owns-a-developer",
+      "title": "How an asset manager's fund owns a developer",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "An {{asset manager}} runs money for others. Goldman Sachs Asset Management raises funds from {{limited partner}}s — pensions, insurers, sovereign funds — and its {{general partner}} team decides where the money goes and earns a fee plus a share of the profits. When lenders say GridStor 'is owned by funds managed by Goldman Sachs Asset Management', the owners are the fund's investors and the decision-maker is the fund's investment committee, on which one GridStor board member sits.",
+        "**The vehicle.** The company never names it; trade press calls it Horizon Energy Storage, a fund managed by GSAM's Sustainability and Infrastructure investing groups. The media kit says GSAM 'has raised over $1 billion to invest in energy storage assets that GridStor will source and manage' — the fund owns the batteries, GridStor finds and runs them. The fund's own 2023 close of a different vehicle (Horizon Environment & Climate Solutions I) does not mention GridStor, which is why the sponsor's commitment to this company is genuinely unknown.",
+        "**Creation, not investment.** Latitude Media's account is that Goldman 'created' GridStor after failing to find a developer to back, having already bought the Goleta project; Chris Taylor was hired to assemble the team. That inverts the usual order — a founder builds a pipeline and then sells a stake — and it explains the company's shape: no founder equity to dilute, no legacy pipeline, a board with two GSAM investors and a retired Goldman partner, and a chief executive who spent seven years investing Google's clean-energy money rather than developing projects.",
+        "**What a fund wants from a developer.** Assets with cash flow a fund can hold and, eventually, sell: contracted, financed, operating batteries. Not options. That is the difference between GridStor's boilerplate — 'focused on contracted revenues' — and Spearmint's, and it is the reason the next section is about buying rather than originating."
+      ]
+    },
+    {
+      "id": "buying-late-what-a-fund-backed-specialist-pays-for",
+      "title": "Buying late: what a fund-backed specialist pays for",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "GridStor's five acquisitions are all late on the {{development stage ladder}} — sites with land, a {{queue position}} and often a contract, bought from originators who stop there. The table reads each purchase for what came with it and what the buyer still had to do.",
+      "cols": [
+        "Purchase (seller, date)",
+        "What came with it",
+        "What the buyer added",
+        "Status now"
+      ],
+      "rows": [
+        [
+          "**Evelyn / Hidden Lakes** (Balanced Rock Power, March 2024)",
+          "Galveston County site beside a TNMP substation; 'up to 450 MW / 900 MWh'",
+          "Re-scoped to 220 MW / 440 MWh; EPC and battery supply agreements; USD 74 million First Citizens loan; USD 86 million credit sale; a 100 MW {{revenue swap}} with Axpo",
+          "Operating since November 2025"
+        ],
+        [
+          "**Oklahoma project** (Black Mountain Energy Storage, January 2025)",
+          "200 MW / 800 MWh in two phases in SPP, near operating data centres",
+          "Nothing announced",
+          "Development; no date or offtake"
+        ],
+        [
+          "**Arizona project** (Capacity Power Group, January 2025)",
+          "100 MW / 400 MWh",
+          "Nothing announced",
+          "Development; name and county unpublished"
+        ],
+        [
+          "**Gunnar** (Balanced Rock Power, February 2025)",
+          "Hidalgo County site beside an AEP Texas substation; 150 MW / 300 MWh",
+          "A {{tolling agreement}} with a Fortune 500 counterparty (December 2025); EPC agreement; USD 120 million of construction and {{tax-equity bridge loan}}s and letters of credit",
+          "Under construction; commercial by end-2026"
+        ],
+        [
+          "**White Tank** (Strata Clean Energy, September 2025)",
+          "100 MW / 400 MWh in Maricopa County with a 20-year APS toll already signed; Strata stays on as consultant",
+          "Financing to come",
+          "Commercial first half 2027"
+        ],
+        [
+          "**Birdseye** (Accelergen, May 2026)",
+          "199 MW / 796 MWh in Adams County, Colorado; interconnection at Xcel's Riverdale 230 kV substation",
+          "Nothing announced",
+          "Construction 2027; commercial end-2028"
+        ]
+      ]
+    },
+    {
+      "id": "why-buy-instead-of-originate",
+      "title": "Why buy instead of originate",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Originating a project — finding land, filing an interconnection request, waiting through the studies, winning the permit — takes four to seven years and produces mostly options that expire. A fund with a {{fund life}} cannot spend its first five years waiting. Buying at or near {{ready-to-build}} converts the sponsor's money into an operating battery in eighteen to twenty-four months: Hidden Lakes was bought in March 2024 and operating in November 2025.",
+        "**What the buyer pays for.** The rungs the seller has climbed — {{site control}}, a {{queue position}} with studies done, a permit, sometimes a contract (White Tank came with its 20-year APS toll). The seller's return is the difference between what those rungs cost and what a buyer with cheaper capital will pay; Available Power's whole business was to be that seller.",
+        "**What the buyer must still do.** Contract it if it is not contracted, sign the EPC and supply agreements, finance it, build it. GridStor's team is built for exactly those steps — a CTO who ran EPC contracting and procurement at Clearway, an SVP of EPC from Goldman Sachs Renewable Power, a VP of Origination from Ørsted, a head of capital markets from Greenbacker — and not for the years of origination the sellers do.",
+        "**Why the pipeline number moves.** 'Over 5 GW' in September 2025 became 'over 3 GW' two months later. A pipeline of acquired and optioned projects is re-scoped as options lapse or are dropped; a buyer's pipeline is a shopping list, not a promise. The company also says it develops greenfield — Goleta and Santa Fe Springs are in-house — but every asset since 2023 was bought."
+      ]
+    },
+    {
+      "id": "contracting-before-building",
+      "title": "Contracting before building: the three structures in the record",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "Every GridStor battery has a counterparty, and the three structures are different products. Read them for who takes the market risk and what a lender can lend against.",
+      "cols": [
+        "Structure",
+        "Who takes market risk",
+        "What the owner gets",
+        "GridStor example"
+      ],
+      "rows": [
+        [
+          "**{{resource adequacy}} contract**",
+          "The owner keeps energy-market risk; the utility pays for capacity",
+          "A fixed monthly payment for being available at four hours; the owner dispatches into CAISO",
+          "Goleta: 17 years with Southern California Edison, 40 MW at four hours"
+        ],
+        [
+          "**{{tolling agreement}}**",
+          "The toller — the utility or corporate — takes all of it",
+          "A fixed fee for capacity; the toller decides when to charge and discharge",
+          "White Tank: 20 years with APS ('APS may charge/discharge as needed'); Gunnar: a Fortune 500 counterparty, tenor undisclosed"
+        ],
+        [
+          "**{{revenue swap}}**",
+          "The swap counterparty takes the price risk on the swapped share",
+          "Fixed payments in exchange for uncertain merchant revenue on 100 MW; the other 120 MW stays merchant",
+          "Hidden Lakes: 100 MW with Axpo, which passes 'price predictability' to Houston retail customers"
+        ],
+        [
+          "**Merchant balance**",
+          "The owner",
+          "Whatever ERCOT pays",
+          "Hidden Lakes' remaining 120 MW; the position the swap was built to shrink"
+        ]
+      ]
+    },
+    {
+      "id": "what-a-sponsor-can-finance",
+      "title": "What a sponsor can finance that a founder cannot",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "A founder-led developer borrows on its projects; a sponsor-owned one borrows on its projects *and* on the sponsor's name. GridStor's disclosed financings show what that buys.",
+        "**One lender that keeps coming back.** NORD/LB lent USD 55 million on Goleta in 2023 — the bank's fourth standalone battery in the country — then long-term debt on the same project, a USD 50 million {{letter-of-credit facility}} for the development pipeline in 2025, and half of the USD 120 million Gunnar package in 2026. A repeat lender prices the second deal on the first; the sponsor's ownership is what let the first deal happen a year after founding.",
+        "**A development letter-of-credit facility.** Interconnection deposits and contract security are posted with letters of credit; a corporate facility for them (USD 50 million) is something a bank writes for a company whose owner is a fund, not for a three-year-old developer on its own. Aypa's equivalent tranche was USD 550 million — the scale difference between a Blackstone platform and a Goldman one.",
+        "**Credit transfers at the front of the queue.** Goleta's credits were sold to J.P. Morgan in one of the first battery transfers under the 2022 law, at what Latitude Media reports as 'ninety something cents' per dollar; Hidden Lakes' USD 86 million went to Foss & Company. A sponsor's counsel and relationships get a small company into a market that large buyers prefer to enter with large sellers.",
+        "**{{tax-equity bridge loan}}s and construction debt** at Gunnar from NORD/LB and Siemens Financial Services, and a First Citizens loan at Hidden Lakes, sized to be repaid when the credit buyer funds at commercial operation. Each is ordinary project finance; what is not ordinary is closing them serially with two lenders' first storage deals (Siemens Financial Services' first with GridStor; First Citizens as lead agent) on a company with no track record beyond one 60 MW battery.",
+        "**What the sponsor does not do.** It does not guarantee the debt — every facility is at the project — and it has not, on the record, committed a stated sum. 'Deployed only a fraction of the capital that we originally raised' (Taylor, June 2025) is the closest the record comes to saying how much is behind the company."
+      ]
+    },
+    {
+      "id": "disclosed-facilities-by-size",
+      "title": "Disclosed facilities by size",
+      "kind": "bars",
+      "read": "3 min",
+      "unit": "USD millions as stated by GridStor, its lenders and its credit buyers",
+      "intro": "Every bar is a facility a lender or buyer announced. The Goleta credit sale to J.P. Morgan has no published amount and is not shown; the sponsor's fund commitment is not shown because none is published.",
+      "items": [
+        {
+          "label": "Gunnar construction, bridge and LC package (2026)",
+          "sub": "NORD/LB and Siemens Financial Services",
+          "v": 120
+        },
+        {
+          "label": "Hidden Lakes credit transfer (2025)",
+          "sub": "Foss & Company",
+          "v": 86
+        },
+        {
+          "label": "Hidden Lakes construction financing (2025)",
+          "sub": "First Citizens Bank, lead agent",
+          "v": 74
+        },
+        {
+          "label": "Goleta project debt (2023)",
+          "sub": "NORD/LB",
+          "v": 55
+        },
+        {
+          "label": "Development letter-of-credit facility (2025)",
+          "sub": "NORD/LB, corporate",
+          "v": 50
+        }
+      ]
+    },
+    {
+      "id": "sponsor-created-or-founder-led",
+      "title": "Sponsor-created or founder-led: the view from the fund's chair",
+      "kind": "proscons",
+      "read": "5 min",
+      "intro": "A fund choosing to build its own developer or to back a founder's is trading control and legibility against origination depth. The cards read the trade from the fund's seat; the founder-led case is this corpus's Spearmint guide.",
+      "cards": [
+        {
+          "t": "A sponsor-created platform (GridStor)",
+          "meta": "Fund owns the company outright; team hired to buy, contract, finance and operate",
+          "adv": [
+            "Strategy is the fund's strategy — contracted assets on a fund's clock — with no founder to persuade",
+            "Bankable from year one on the sponsor's name: a repeat lender, a corporate LC facility, early credit transfers",
+            "A commercial desk built to convert merchant exposure into swaps and tolls",
+            "Exit is clean: the fund sells the fleet or the company with no founder stake to negotiate"
+          ],
+          "dis": [
+            "No origination engine — every project is bought, so the margin the originator earned is paid away",
+            "The sponsor's commitment is undisclosed and its clock is fixed; a 20-year toll outlives a ten-year fund",
+            "Pipeline is a shopping list that shrinks when options lapse (5 GW to 3 GW in two months)",
+            "Procurement is un-committed by design — one confirmed OEM, and a stated pause pending Treasury guidance"
+          ]
+        },
+        {
+          "t": "A founder-led developer (Spearmint)",
+          "meta": "Founders own the pipeline; capital arrives project by project",
+          "adv": [
+            "Originates its own sites and keeps the development margin",
+            "Can hold merchant exposure a fund would not",
+            "No fund life forcing a sale"
+          ],
+          "dis": [
+            "Borrows only on the projects; every first deal with a lender is the hard one",
+            "Must sell projects or stakes to fund the next ones",
+            "Founder risk is concentrated in a few people"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The clock and the contract disagree.** A fund's {{fund life}} is ten to twelve years; White Tank's toll is twenty and Goleta's RA contract seventeen. The assets will be sold before the contracts end — to another fund, a utility or a platform buyer — and the price then depends on a market the sponsor does not control. The exit route is nowhere in the record.",
+        "**Nothing the sponsor has committed is public.** 'Over $1 billion raised' for a strategy is not a commitment to this company, and 'deployed only a fraction' can mean patience or hesitation. A lender lending on the sponsor's name is lending on a name, not a number.",
+        "**One lender is a strength until it is not.** NORD/LB is in four of five disclosed transactions. A repeat lender is cheap and fast; a lender that changes its view of US storage — or of the sponsor — takes the pipeline's financing with it.",
+        "**A bought pipeline can be un-bought.** 'Over 5 GW' became 'over 3 GW' in two months; the Oklahoma and Capacity Power Group projects have had no update in eighteen months; the 2022 Los Angeles Basin portfolio has produced one named project and a court ruling against batteries in unincorporated Los Angeles County hangs over the rest.",
+        "**Procurement is waiting on Washington.** The CTO said in February 2026 that longer-dated purchases are on hold pending Treasury's FEOC guidance and that domestic batteries will not be available at scale before 2028. A buyer that will not commit to a supplier cannot be promised a delivery slot; the {{safe harbor}} and {{begin-construction deadline}} arithmetic then decides which projects keep their credits.",
+        "**The first Texas build was halved and late.** Hidden Lakes was bought as up to 450 MW / 900 MWh with operation in spring 2025, built at 220 MW / 440 MWh and operating in November 2025. No reason was published. Gunnar is the test of whether the second build holds its date."
+      ]
+    },
+    {
+      "id": "where-gridstor-slots-in",
+      "title": "Where GridStor slots into the buyer side",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The developer-IPPs this corpus now holds, placed by what they sell and who owns them. GridStor is the only one a fund built from nothing.",
+      "cols": [
+        "Company",
+        "Model",
+        "Who holds dispatch",
+        "How it is owned and financed",
+        "Where it fails"
+      ],
+      "rows": [
+        [
+          "**GridStor**",
+          "{{sponsor-created platform}}; late-stage acquisition; contracted",
+          "SCE (RA), APS and a Fortune 500 toller; Axpo on 100 MW; owner on the merchant balance",
+          "A Goldman Sachs Asset Management fund; NORD/LB and two other lenders; credit transfers",
+          "Fund life against 20-year tolls; single lender; procurement paused"
+        ],
+        [
+          "**Aypa Power**",
+          "{{develop-to-own}}, contracted platform",
+          "Utilities, public power, CCAs",
+          "Blackstone sponsor; corporate facility, warehouse, project loans; sale to Brookfield",
+          "Permits; queue-versus-contract dates; one vendor"
+        ],
+        [
+          "**Spearmint Energy**",
+          "{{merchant}} developer",
+          "The owner's trading desk",
+          "Founder-led; revenue puts, credit transfers, construction loans",
+          "The market turning"
+        ],
+        [
+          "**Intersect**",
+          "{{captive developer}}",
+          "The owner's own load",
+          "Google",
+          "One customer"
+        ],
+        [
+          "**Invenergy**",
+          "Diversified developer",
+          "Utilities and corporates; utilities own the gas plants",
+          "CDPQ, Blackstone and management; USD 1.5 billion revolver",
+          "Transmission financing; opacity"
+        ],
+        [
+          "**Available Power**",
+          "{{develop-to-sell}} at NTP",
+          "The buyer",
+          "No sponsor named; parent pivoted",
+          "No buyer ever named"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "Lenders say GridStor 'is owned by funds managed by Goldman Sachs Asset Management'. Who are the actual owners?",
+          "a": "The fund's limited partners — pensions, insurers, sovereign funds. GSAM is the asset manager that runs the fund; its investment committee makes the decisions."
+        },
+        {
+          "q": "What is a sponsor-created platform, and how is it different from a sponsor-backed one?",
+          "a": "A fund hires a team and supplies capital to build a developer from scratch (Goldman created GridStor around a project it had bought). A sponsor-backed developer existed first and sold a stake later (Blackstone into Aypa)."
+        },
+        {
+          "q": "Why does a fund-owned specialist buy late-stage projects rather than originate?",
+          "a": "A fund's clock is fixed; origination takes four to seven years and mostly produces options. Buying at ready-to-build turns the fund's money into an operating battery in about two years."
+        },
+        {
+          "q": "In a tolling agreement, who decides when the battery charges and discharges?",
+          "a": "The toller — APS at White Tank 'may charge/discharge as needed'. The owner is paid a fixed fee for capacity and gives up the dispatch decision."
+        },
+        {
+          "q": "What does a battery revenue swap do to the owner's cash flow?",
+          "a": "It exchanges uncertain merchant revenue on the swapped share (100 MW at Hidden Lakes) for fixed payments; the counterparty (Axpo) takes the price risk. The rest of the battery stays merchant."
+        },
+        {
+          "q": "What is a development letter-of-credit facility for?",
+          "a": "Posting interconnection deposits and contract security across the pipeline without cash; a bank writes one for a company whose owner is a fund."
+        },
+        {
+          "q": "Why does a repeat lender matter to a young developer?",
+          "a": "The second deal is priced on the first; NORD/LB's four GridStor transactions in three years are cheaper and faster each time — and a single point of failure if the bank's view changes."
+        },
+        {
+          "q": "A pipeline of 'over 5 GW' becomes 'over 3 GW' in two months. What happened?",
+          "a": "Options lapsed or were dropped; a buyer's pipeline is a shopping list of acquired and optioned projects, re-scoped as they mature or fail."
+        },
+        {
+          "q": "What does a tax-equity bridge loan bridge?",
+          "a": "The gap between construction spending and the date the credit buyer or tax-equity investor funds at commercial operation."
+        },
+        {
+          "q": "Why is procurement 'un-committed' a rational choice for GridStor in 2026?",
+          "a": "Treasury's FEOC guidance decides which batteries keep the credit; committing to a vendor before the rule is settled risks the credit on every longer-dated project."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "What kind of investor is Goldman Sachs Asset Management in relation to GridStor?",
+          "c": [
+            "A lender",
+            "An asset manager running a fund whose investors own the company",
+            "A utility customer",
+            "A battery supplier"
+          ],
+          "a": 1,
+          "why": "GSAM manages the fund (trade press: Horizon Energy Storage); the fund's limited partners are the economic owners."
+        },
+        {
+          "q": "Which structure leaves the battery owner with NO dispatch decision?",
+          "c": [
+            "Resource adequacy contract",
+            "Merchant operation",
+            "Tolling agreement",
+            "Revenue swap"
+          ],
+          "a": 2,
+          "why": "Under a toll the counterparty charges and discharges as it wishes; under RA the owner still dispatches; under a swap the owner dispatches and exchanges the revenue."
+        },
+        {
+          "q": "How did GridStor add 250 MW of under-construction capacity in 2025?",
+          "c": [
+            "Greenfield origination in California",
+            "Buying late-stage projects from Balanced Rock Power and Strata Clean Energy",
+            "A merger with another developer",
+            "Utility build-transfer contracts"
+          ],
+          "a": 1,
+          "why": "Gunnar (Balanced Rock Power) and White Tank (Strata) were acquired near ready-to-build; every asset since 2023 was bought."
+        },
+        {
+          "q": "What did the Axpo agreement change about Hidden Lakes?",
+          "c": [
+            "Its size",
+            "Its interconnection",
+            "100 MW of merchant revenue became fixed payments",
+            "Its battery supplier"
+          ],
+          "a": 2,
+          "why": "The revenue swap converts part of the merchant exposure into fixed payments; Axpo takes the price risk on that share."
+        },
+        {
+          "q": "Which figure about the sponsor's commitment to GridStor is public?",
+          "c": [
+            "The fund's ownership percentage",
+            "A stated dollar commitment to the company",
+            "'Over $1 billion raised' for the storage strategy, per the company's media kit",
+            "The fund's remaining life"
+          ],
+          "a": 2,
+          "why": "No fund name, commitment or ownership split appears on any company-authored page; the media kit's fundraising line is the only figure."
+        },
+        {
+          "q": "Why is a 20-year toll a problem for a fund owner?",
+          "c": [
+            "Tolls are illegal for funds",
+            "The fund must exit before the toll ends, so the asset will be sold on to another owner",
+            "Tolls pay less than merchant",
+            "Utilities do not sign 20-year tolls"
+          ],
+          "a": 1,
+          "why": "A fund's life is ten to twelve years; the contracted asset outlives it and must be sold, at a price set by the market at that time."
+        },
+        {
+          "q": "What did GridStor's CTO say the company is waiting for before longer-dated procurement?",
+          "c": [
+            "Lower cell prices",
+            "Treasury's FEOC guidance",
+            "A new lender",
+            "ERCOT market reform"
+          ],
+          "a": 1,
+          "why": "Dedrick (February 2026): 'We are now waiting for Treasury guidance before advancing pending procurement decisions on our longer-dated projects.'"
+        },
+        {
+          "q": "Which is the only battery supplier GridStor has named?",
+          "c": [
+            "Canadian Solar e-STORAGE",
+            "Fluence",
+            "Tesla (Megapack at Goleta)",
+            "Sungrow"
+          ],
+          "a": 2,
+          "why": "Goleta's 44 Tesla units are the only named supply; the SolBank attribution at White Tank is an analyst's report neither party has confirmed."
+        }
+      ]
+    }
+  ]
+}

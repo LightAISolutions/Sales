@@ -3,11 +3,127 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 77/100`
+`Sections: 78/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.61r] — 2026-09-05 02:45:13 AM EST
+
+> Fresh session on Fable 5.1 High. Run Phase B session F4 of repository-information/PROFILER-COVERAGE-PLAN.md:
+> Invenergy, Gridstor, Available Power — the §8 rows `invenergy`, `gridstor`, `available-power` (all
+> `developer · ipp`), listed under B4 in §4/§8. F4 is the fourth of the F1–F8 regrouping recorded in §4
+> (dated paragraph, 2026-09-04, v04.58r); F1 landed at v04.58r, F2 at v04.59r, F3 (Aypa Power, Spearmint
+> Energy, Intersect) at v04.60r. When you flip the three §8 rows, record `B4 → F4` in the Group column
+> exactly as F3 recorded `B3 → F3`.
+> READ FIRST: repository-information/SESSION-CONTEXT.md (both entries — the Latest has the F3 lessons and
+> environment notes); PROFILER-COVERAGE-PLAN.md §2 (the model rule — no substitution to record, F4 is
+> natively Fable High), §4 row B-D / B4 and the regrouping paragraph, §7, and the three §8 rows;
+> .claude/rules/profiler-app.md (Profiler Command, Profiler Prep Command); repository-information/
+> PROFILER-SCHEMA.md; PROFILER-STYLES.md (active style: intel-briefing). CLASSROOM-CURRICULUM-PLAN.md §6
+> is NOT in scope — F4 closes no register row (the §8 "Closes" column reads "buyer side"); do not edit it.
+> .claude/rules/classroom-app.md is NOT needed.
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, categories per the §8 row, intel-briefing prose with confidence-tagged key judgments
+> and an indicators-to-watch bullet) and study guide (schema v2, a where-it-fails section, {{term}} tooltips
+> against profiler-concepts.json, new shared concepts registered there rather than in local glossaries,
+> flashcards and quiz on how the business model and the buying process work, never company trivia).
+> All three are private: disclose revenue, headcount, pipeline GW/GWh, backlog or funding only where a
+> source states it (a sponsor's release or filing, a lender's release, a regulator — ERCOT, CAISO, PJM,
+> MISO, FERC, a state PUC — a court record, a county permit, the company's own release); leave `expected`
+> empty and say so; calendar rows carry `cadence: "quarterly"`.
+> PREMISES TO RE-VERIFY FIRST (dated facts from the §4 row, written 2026-09-03): Invenergy — "largest
+> private US developer": whose ranking and on what measure; the ownership stack today (Blackstone
+> Infrastructure's stake and its stated value, CDPQ, Invenergy Renewables vs Invenergy Transmission vs
+> Invenergy Storage as separate entities); what the four covered dossiers that name Invenergy actually
+> say about it. Gridstor — "CAISO/ERCOT merchant storage specialist": the sponsor (Goldman Sachs Asset
+> Management's Infrastructure business or whoever a release names), operating MW/MWh and CODs as released,
+> and whether its projects are merchant or contracted. Available Power — the same: sponsor, what is
+> operating, merchant or contracted. Record every correction in the dossier's summary and judgments.
+> RESEARCH PRIORITIES. Invenergy: the storage fleet and pipeline by ISO with MW/MWh and CODs only as
+> released (the developer's own project list is large — cover storage and the AIDC-relevant projects,
+> not every wind farm); the ownership history and any Blackstone/CDPQ transaction values as filed; the
+> Grain Belt Express and Clean Path NY transmission story only as it bears on storage and large-load
+> siting; named offtakers among covered slugs (hyperscalers, utilities); equipment suppliers and
+> integrators named in releases among covered slugs; leadership. Gridstor and Available Power: the
+> project list with status and financing (construction loans, tax equity, credit transfer, revenue puts
+> or hedges — as released), sponsor commitments as released, supplier and EPC names as released, permit
+> and county records, leadership. For every company: two research agents (first-party exhaustive, then
+> third-party — sponsors' releases and filings, lenders, ISO and PUC records, county permits, court
+> records, trade press), a URL for every relationship claim, relationships[] resolving only to covered
+> slugs with a source that states the link. Put every must-find item in the agent prompts — nothing can
+> be searched after they return.
+> STUDY GUIDES: one guide each, do not duplicate. The aypa-power, spearmint-energy and intersect-power
+> guides (F3) own: the contracted platform as a financed asset base and the conversion ladder; the
+> merchant developer, the development-stage price list, financing a battery with no PPA and the pre-COD
+> market; the co-located energy park, surplus interconnection, SB 6 net metering and the captive
+> developer. Read their start-here callouts and do not repeat that material. The IPP dossiers
+> (plus-power, jupiter-power, key-capture-energy, eolian, arevon, terra-gen, nextera-energy-resources)
+> have NO study guides — do not look for them. The Classroom owns tolling, ancillary stacking and
+> duration-and-degradation. Invenergy: the diversified private developer — how a multi-technology
+> developer allocates capital across wind, solar, storage, gas and transmission, why transmission
+> ownership changes what a developer can site, how a private developer of that scale is owned and
+> financed (sponsor stakes, infrastructure funds, portfolio-level debt), where it fails. Gridstor: the
+> merchant storage specialist inside a bank's infrastructure platform — how sponsor equity from an asset
+> manager is deployed into standalone storage, what a sponsor-backed specialist can finance that a
+> founder-led one cannot, where it fails. Available Power: choose the guide's angle from the record
+> (the third merchant specialist must not repeat Gridstor's — if the two are the same model, teach
+> Available Power as the case study and give Gridstor the structural chapter).
+> BOOKKEEPING, same commit: `python3 scripts/sync-profiler-registry.py`, `build-profiler-graph.py`,
+> `check-profiler-study.py`; three calendar rows; README tree entries for every profile, study file and
+> study-prep folder plus the execs count (recount the files by registry slug; currently 433 across 71
+> companies — remember turner-* files belong to turner-construction); flip the three §8 rows; CHANGELOG
+> entry (counter at 77/100 — no rotation). One push commit with repo version bump (v04.60r → v04.61r).
+> ENVIRONMENT (confirmed by F1–F3, 2026-09-04): pip install playwright pymupdf pillow pillow-avif-plugin
+> (AVIF headshots need the plugin); never run playwright install — use the
+> /opt/pw-browsers/chromium-*/chrome-linux/chrome executable; the HTTP server for the harness must be
+> threaded (ThreadingMixIn, daemon threads, swallow BrokenPipeError); route script.google.com to the
+> roles stub in scripts/verify-profiler-roles.py and fulfill accounts.google.com with an empty script;
+> per-slug tabs are `#ov-tab-<key>`, the study button is `#ov-study-btn`, term spans are `.gd-term`
+> with `data-term`; reload between dossiers; dry-run the harness on a known-good slug first. Tool output
+> above ~30 KB is persisted to a file — read agent reports in chunks of ≤40 lines. Foreground sleep is
+> blocked — use the Monitor tool to wait for agent report files. The shell cwd resets to the repo root
+> after every Bash call — use absolute paths. A stop hook fires on uncommitted edits while agents run —
+> `git stash` plan edits and pop them before the commit. If agents die on an HTTP 429 usage limit,
+> resume them by SendMessage after the reset rather than respawning. Business Wire and archive.org are
+> 403/blocked from this environment — read Business Wire releases through Yahoo Finance, SFNet, 01net,
+> Pulse 2.0, IREI, Energy Global or Batteries News mirrors and cite the mirror; the company's news page
+> gives the titles.
+> FOUR LESSONS FROM F1–F3, ALL MANDATORY: (1) have each agent report end in a `## ALL URLS` list, build
+> a URL index from the reports programmatically with a regex that keeps parentheses inside URLs
+> (`https?://[^\s<>\[\]"'`]+`, strip trailing punctuation), and make the assembler refuse any sources[],
+> relationships[], policyExposure[] or recentDevelopments[] URL not in the index — 0 unmatched per
+> dossier before writing; cite another covered dossier's source (corpus tier) rather than memory when a
+> release times out; (2) treat every ownership, transaction, sponsor and pipeline premise in this brief
+> as a dated fact to re-verify first — F3's brief was wrong on all three companies (a sale not yet
+> closed, a sponsor that does not exist, a campus that does not exist); (3) keep press-reported values
+> and permit design bases as `announced` with the reporter named, never `active`; exec-background links,
+> JV attributions and analyst comparables are prose or `competitor` with the ranking cited, not
+> supplier/customer relationships; (4) a company-hosted headshot whose filename marks a LinkedIn origin
+> is skipped. Do not read other dossiers' prose as a template for judgments. Estimate ~90 minutes; F3
+> ran 53 minutes with no usage-limit stall.
+> VERIFY BEFORE COMMIT: sync-profiler-registry.py --check clean, check-profiler-study.py clean, every
+> dossier and guide renders with zero page errors and zero console errors (Playwright, per-slug tabs
+> including Relationships, sources count matches the file, no literal {{}} and no unresolved term spans),
+> every relationships[] slug and every {{term}} resolving. Normal Pre-Commit and Pre-Push checklists;
+> push on a claude/* branch.
+> If a capacity, a contract value, a transaction value or a customer cannot be sourced from a filing, a
+> regulator, a court record or the party's own release, leave it out and say so.
+
+### Added
+- **Invenergy dossier (`invenergy.profile.json`, schema v7, profileVersion 1, `developer · ipp`, intel-briefing)** — 134 sources (55% first-party), 14 relationships (Meta, AEP, Microsoft, Kiewit, Quanta, Siemens Energy, GE Vernova, Blattner, NVIDIA, Tesla, Dominion, Equinix, NextEra and Apex as ranked competitors), 6 policy regimes, 18 decision makers with 16 company-published headshots, a three-table Technical Annex (storage ledger, Grain Belt Express, gas plants for utilities), 39 developments, 7 key judgments. Premises corrected: 'largest privately held' is company/Blackstone language — Cleanview's live rankings place Invenergy #2 by development pipeline (41,328 MW behind NextEra's 68,229 MW) and largest among non-utility developers on that measure; the ownership stack is CDPQ (52.4% economic ownership of Invenergy Renewables LLC since 2018), Blackstone Infrastructure Partners (about USD 4bn into Invenergy Renewables Holdings LLC, 2022–2023) and management as managing member, with the gas fleet in Invenergy Clean Power LLC 50/50 with InfraBridge — no 2024–2026 stake change found; the four corpus dossiers naming Invenergy (AEP, Kiewit, Meta, Apex) are consistent with the record. New material: the April 2026 Invenergy Power unit for gas and data centres, Sycamore Riverside (918 MW) to I&M, about 3.3 GW of Wisconsin gas for We Energies, the USD 765m Interior offshore-lease buyout redirected to gas and geothermal (45 BLM leases), the DOE's July 2025 termination of the USD 4.9bn Grain Belt guarantee and the January 2026 Illinois Supreme Court win, Clean Path NY's November 2024 termination. Storage: no supplier is named anywhere — recorded as the dossier's largest collection gap
+- **GridStor dossier (`gridstor.profile.json`, schema v7, profileVersion 1, `developer · ipp`)** — 97 sources (44% first-party), 6 relationships (Tesla active; Canadian Solar `announced` on Enerdatics' SolBank 3.0 report; Xcel Energy and AEP as interconnection adjacencies; Intersect and Plus Power as Modo/ESN-ranked competitors), 5 policy regimes, 18 decision makers (14 headshots plus 4 board members), a project ledger, 27 developments, 7 judgments. Premise corrected: the company is contracted (SCE 17-year RA at Goleta, 20-year APS toll at White Tank, a Fortune 500 toll at Gunnar, a 100 MW Axpo revenue swap on Hidden Lakes), multi-market (CA, TX, AZ, OK/SPP, CO), Portland-based, and owned by 'a fund managed by Goldman Sachs Asset Management' (trade press: Horizon Energy Storage) that created the company in 2021 per Latitude Media — 'GSAM Infrastructure' and 'merchant' were both wrong. 280 MW / 600 MWh operating, 250 MW / 700 MWh under construction, five late-stage acquisitions in eighteen months; financings from NORD/LB (four transactions), First Citizens, Siemens Financial Services, J.P. Morgan and Foss & Company as released
+- **Available Power dossier (`available-power.profile.json`, schema v7, profileVersion 1, `developer · ipp`)** — 42 sources (26% first-party), 2 competitor relationships (Plus Power, ON.energy in the ERCOT sub-10 MW segment per Energy-Storage.news), 5 policy regimes, 6 decision makers with 5 company-published portrait renders, a project ledger, 18 developments, 6 judgments. Premise corrected on every count: Texas-only (no CAISO), develop-and-sell at notice-to-proceed of 9.9 MW / 20 MWh distribution-connected batteries with Linxon as turnkey EPC (not owner-operator), no sponsor named by any source, nothing operating under its ownership on any tracker, and a parent — Available Infrastructure, Tysons Corner — that rebranded to edge-AI and cybersecurity in July 2025 with Available Power as a business unit; the storage record has been silent since March 2024 (Greenport 'at NTP' in a LevelTen auction; three 9.9 MW sales to unnamed buyers). Sungrow is a photo caption about another company's project, not a supplier
+- **Three schema v2 study guides + three lesson plans** — `invenergy.study.json` (the diversified private developer: one capital budget and five products; who owns a 38 GW private company; why a pension fund and a bank fund own a developer; build-and-transfer gas to utilities; what owning transmission changes; the 2022–2026 policy timeline; disclosed capital by size; diversified vs pure-play; where it fails), `gridstor.study.json` (the storage specialist a bank built: how an asset manager's fund owns a developer; buying late; why buy instead of originate; the three contracting structures; what a sponsor can finance that a founder cannot; disclosed facilities; sponsor-created vs founder-led; where it fails), `available-power.study.json` (the distributed play: why 9.9 MW and the ERCOT distributed-generation path; siting on leased land; selling at notice to proceed; the buyer side of a small battery; where it fails and how to read a silent company) — each with a where-it-fails callout, a slots-in table, flashcards and a self-test on the business model, never company trivia; `repository-information/study-prep/{invenergy,gridstor,available-power}/*-lesson-plan.md`
+- **38 shared concepts registered in `profiler-concepts.json`** (768 total) — managing member, economic ownership, infrastructure fund, fund life, limited/general partner, asset manager, pension fund, sponsor-created platform, merchant transmission, converter station, open access transmission tariff, loan guarantee, conditional commitment, eminent domain, easement, offshore wind lease, farmdown, virtual PPA, environmental attribute purchase agreement, development pipeline, independent power producer, change of control, begin-construction deadline, revenue swap, distributed generation resource, distribution service provider, site lease, turnkey EPC, project marketplace, IRR, balance of plant, large load, responsive reserve service, fast frequency response, CEQA, community choice aggregator, Chapter 381 agreement
+- **Three quarterly calendar rows** in `profiler-refresh-calendar.json` (82) with re-verified premises as Chesterton checks; **35 headshots** in `images/execs/` (Invenergy 16 from its Contentstack leadership page, GridStor 14 from its team pages, Available Power 5 company-published low-poly portrait renders); README tree entries for every new profile, study file and study-prep folder; execs count recounted by registry slug to **468 images across 74 companies**
+
+### Changed
+- `PROFILER-COVERAGE-PLAN.md` §8 — the three rows flipped to `B4 → F4 … v1 · v04.61r | ✓ · v04.61r`; registry synced (121 companies), graph rebuilt (837 edges), study checker clean (95 guides), Playwright render of every tab and guide clean (sources counts match, no literal braces, 0 unresolved terms, 0 page errors)
+
+### Fixed
+- Session lessons applied: every sources[], relationships[], policyExposure[] and recentDevelopments[] URL asserted against a programmatic index of the six `## ALL URLS` lists (parentheses kept inside URLs) — 0 unmatched per dossier; the harness now reloads to `about:blank` between dossiers (the study-guide overlay otherwise intercepts the next dossier's tab clicks) and its init script tolerates `about:blank`'s denied localStorage
 
 ## [v04.60r] — 2026-09-04 11:08:01 PM EST
 

@@ -2,6 +2,15 @@
   "schemaVersion": 1,
   "concepts": [
     {
+      "slug": "381-agreement",
+      "term": "Chapter 381 agreement",
+      "def": "A Texas county's economic-development contract under Local Government Code Chapter 381: the county grants tax rebates or other incentives to a developer in exchange for investment and jobs. The Greenport airport campus sits under one signed in 2010.",
+      "aliases": [
+        "Chapter 381",
+        "381 agreement"
+      ]
+    },
+    {
       "slug": "45x",
       "term": "45X",
       "def": "The US advanced-manufacturing production credit: a per-unit federal tax credit for domestically made battery cells, modules, and components — the incentive pulling battery manufacturing onshore.",
@@ -266,6 +275,14 @@
       ]
     },
     {
+      "slug": "asset-manager",
+      "term": "asset manager",
+      "def": "A firm that invests other people's money — pension funds, insurers, sovereign funds — through funds it manages for a fee. Goldman Sachs Asset Management is the arm of the bank that runs such funds; when it 'owns' GridStor, the owners are really the fund's investors.",
+      "aliases": [
+        "GSAM"
+      ]
+    },
+    {
       "slug": "asynchronous-tie",
       "term": "asynchronous tie",
       "def": "A DC link joining two AC networks that are not — and need not be — in step with one another. It moves power between them while keeping their disturbances on their own sides.",
@@ -345,6 +362,14 @@
       ]
     },
     {
+      "slug": "balance-of-plant",
+      "term": "balance of plant",
+      "def": "Everything at a power project other than the main generating or storage equipment: transformers, switchgear, cabling, foundations, roads, controls. In a battery project the batteries are the equipment and the substation and enclosures are balance of plant.",
+      "aliases": [
+        "BOP"
+      ]
+    },
+    {
       "slug": "balancing-authority",
       "term": "balancing authority",
       "def": "The entity that keeps generation and load matched second by second inside a defined area of the grid. In an RTO region the RTO is the balancing authority; outside one, a large vertically integrated utility can be its own — it dispatches its own plants, holds its own reserves and has no organized capacity market to buy from.",
@@ -410,6 +435,15 @@
       "slug": "bearing-capacity",
       "term": "bearing capacity",
       "def": "How much pressure the ground can carry before it fails or settles unacceptably, in pounds per square foot or kilopascals. It sets whether a structure sits on spread footings, a mat, or piles."
+    },
+    {
+      "slug": "begin-construction",
+      "term": "begin-construction deadline",
+      "def": "The date by which a project must start physical work (or meet the tax rules' safe harbour) to qualify for a tax credit that is being phased out. The 2025 law set 4 July 2026 for wind and solar credits; a project that misses it loses the credit.",
+      "aliases": [
+        "begin construction",
+        "start of construction"
+      ]
     },
     {
       "slug": "behind-the-meter",
@@ -680,6 +714,15 @@
       ]
     },
     {
+      "slug": "cca",
+      "term": "community choice aggregator",
+      "def": "A California local-government body that buys electricity for its residents while the utility still owns the wires. CCAs sign resource-adequacy and storage contracts of their own, so they are buyers of batteries alongside the utilities.",
+      "aliases": [
+        "CCA",
+        "community choice aggregation"
+      ]
+    },
+    {
       "slug": "ccn",
       "term": "CCN",
       "def": "Certificate of convenience and necessity: Texas's name for the commission order that lets a utility build a specific line or, outside ERCOT, a plant. In ERCOT it is issued for transmission — a wires-only utility's CCN case decides the route and the need for a 345 kV or 765 kV line, never a generator.",
@@ -711,6 +754,14 @@
       "def": "A compressor that raises pressure by flinging refrigerant outward with a high-speed impeller. Very efficient at large capacities and smooth flow, and it has a lower flow limit below which it cannot maintain head."
     },
     {
+      "slug": "ceqa",
+      "term": "CEQA",
+      "def": "The California Environmental Quality Act: every discretionary permit in California needs an environmental review — a negative declaration or a full impact report — before it can be issued. It is where a battery project's fire, noise and traffic questions get answered in public.",
+      "aliases": [
+        "California Environmental Quality Act"
+      ]
+    },
+    {
       "slug": "certificate-of-need",
       "term": "Minnesota certificate of need",
       "def": "Minnesota's version of the certificate: the commission's finding that a specific large plant or line is needed, issued in its own docket after the resource plan has set the direction. A combustion turbine or a transmission line in Minnesota needs one before it can be built and recovered.",
@@ -732,6 +783,14 @@
       "slug": "chain-reaction",
       "term": "chain reaction",
       "def": "A self-sustaining sequence in which each fission releases neutrons that cause further fissions. A reactor is held at exactly one fission per fission — any more and power rises, any less and it falls."
+    },
+    {
+      "slug": "change-of-control",
+      "term": "change of control",
+      "def": "A clause in a loan or contract that lets the other party renegotiate or walk away if the company's owner changes. Debt priced on one sponsor's name is re-examined when a different sponsor buys the platform.",
+      "aliases": [
+        "change-of-control clause"
+      ]
     },
     {
       "slug": "change-order",
@@ -936,6 +995,14 @@
       "def": "Letting condenser water get colder when the weather allows, which lowers the lift and so the compressor work. It is most of why a chiller's part-load efficiency beats its full-load efficiency."
     },
     {
+      "slug": "conditional-commitment",
+      "term": "conditional commitment",
+      "def": "A lender's promise to lend once a list of conditions is met — for the DOE Loan Programs Office, the stage between approval and closing. It can be withdrawn before closing, as Grain Belt Express's USD 4.9 billion guarantee was in July 2025.",
+      "aliases": [
+        "conditional loan commitment"
+      ]
+    },
+    {
       "slug": "conditional-use-permit",
       "term": "conditional use permit",
       "def": "Local government's permission to build something a zoning code does not allow by right. For a battery it is usually decided by a county board or city commission after a public hearing, and it is where community opposition can stop a project outright.",
@@ -1061,6 +1128,14 @@
       "aliases": [
         "conversion stages",
         "power conversion stage"
+      ]
+    },
+    {
+      "slug": "converter-station",
+      "term": "converter station",
+      "def": "The plant at each end of an HVDC line that turns alternating current into direct current and back. It is the expensive, specialist part of the line — Siemens Energy's role on Grain Belt Express — and there is one per grid the line touches.",
+      "aliases": [
+        "HVDC converter station"
       ]
     },
     {
@@ -1549,6 +1624,15 @@
       ]
     },
     {
+      "slug": "development-pipeline",
+      "term": "development pipeline",
+      "def": "Every project a developer is working on that is not yet built, from a land option to a permitted, contracted site awaiting financing. Rankings by pipeline megawatts measure ambition and options, not operating capacity.",
+      "aliases": [
+        "pipeline MW",
+        "project pipeline"
+      ]
+    },
+    {
       "slug": "development-stage-ladder",
       "term": "development stage ladder",
       "def": "The sequence a project climbs from idea to operation: site control, interconnection request, permits, offtake, notice to proceed, financial close, construction, commercial operation. Each rung retires a risk, so each rung raises what a buyer will pay.",
@@ -1644,6 +1728,16 @@
       ]
     },
     {
+      "slug": "distributed-generation-resource",
+      "term": "distributed generation resource",
+      "def": "ERCOT's registration class for a generator or battery connected to a distribution system rather than the transmission grid — typically under 10 MW. It follows a lighter interconnection path than a transmission-connected resource, which is why developers size projects at 9.9 MW.",
+      "aliases": [
+        "DGR",
+        "distribution-connected resource",
+        "distribution-connected storage"
+      ]
+    },
+    {
       "slug": "distributed-redundant",
       "term": "distributed redundant",
       "aliases": [
@@ -1653,6 +1747,14 @@
         "catcher"
       ],
       "def": "UPS topologies that reach N+1 or better without doubling everything. In a block-redundant or catcher design a spare UPS system stands ready to take any block's load through static transfer switches; in a distributed-redundant design each load is fed from two of several systems so any one can fail. Both cost less than 2N, and both place the redundancy in a switching event that has to work."
+    },
+    {
+      "slug": "distribution-service-provider",
+      "term": "distribution service provider",
+      "def": "In ERCOT, the company that owns the local distribution network a small generator connects to — Oncor, CenterPoint, AEP Texas, TNMP. A distribution-connected battery's interconnection is negotiated with the DSP, not with ERCOT's transmission planners.",
+      "aliases": [
+        "DSP"
+      ]
     },
     {
       "slug": "diversity-factor",
@@ -1809,6 +1911,15 @@
       ]
     },
     {
+      "slug": "easement",
+      "term": "easement",
+      "def": "A landowner's grant of a right to use a strip of land — for a transmission line, the right to build and maintain towers and conductors across a farm. A long line needs thousands; the ones a developer cannot buy voluntarily are the ones it seeks by eminent domain.",
+      "aliases": [
+        "right-of-way",
+        "transmission easement"
+      ]
+    },
+    {
       "slug": "ebr-ii",
       "term": "EBR-II",
       "def": "The Experimental Breeder Reactor II, a sodium-cooled fast reactor that ran at Idaho from 1964 to 1994 and in 1986 survived deliberate loss-of-flow and loss-of-heat-sink tests at full power with no operator action. Most US fast-reactor design heritage traces to it."
@@ -1823,6 +1934,14 @@
         "energy-saver mode"
       ],
       "def": "Running a static UPS with the load on the raw supply through the bypass and the conversion stage idling in reserve, lifting efficiency toward 98–99 percent. The bet is that the unit can detect a supply failure and transfer back to the inverter inside the servers' hold-up time, for every kind of fault — which is exactly what the mode's critics doubt."
+    },
+    {
+      "slug": "economic-ownership",
+      "term": "economic ownership",
+      "def": "The share of a company's profits and value an investor is entitled to, as distinct from control. CDPQ holds 52.4 per cent economic ownership of Invenergy Renewables while management remains the managing member that runs the business.",
+      "aliases": [
+        "economic interest"
+      ]
     },
     {
       "slug": "elcc",
@@ -1906,6 +2025,14 @@
       "slug": "emergency-planning-zone",
       "term": "emergency planning zone",
       "def": "The area around a reactor within which off-site emergency plans must exist. Shrinking it is one of the concrete practical claims small designs make, and it is decided by the regulator against the source term, not by the vendor."
+    },
+    {
+      "slug": "eminent-domain",
+      "term": "eminent domain",
+      "def": "The legal power to take private land for a public use in exchange for compensation. A transmission line with a state certificate can use it against holdout landowners, which is why certificates are fought so hard in court.",
+      "aliases": [
+        "condemnation"
+      ]
     },
     {
       "slug": "ems",
@@ -2035,6 +2162,15 @@
         "EV",
         "equity value",
         "enterprise value versus equity value"
+      ]
+    },
+    {
+      "slug": "environmental-attribute-purchase-agreement",
+      "term": "environmental attribute purchase agreement",
+      "def": "A contract in which a buyer purchases the renewable-energy certificates from a project without taking the electricity, which is sold into the grid. Meta's 2024 Invenergy deals were structured this way; the buyer gets the clean-energy claim, the project gets a fixed revenue stream.",
+      "aliases": [
+        "EAPA",
+        "environmental attribute agreement"
       ]
     },
     {
@@ -2197,6 +2333,24 @@
       "slug": "facts",
       "term": "FACTS",
       "def": "Flexible AC transmission systems: the family of power-electronic devices — shunt and series compensation, STATCOMs, phase shifters — that make power flow in an AC network controllable instead of merely the arithmetic consequence of impedance."
+    },
+    {
+      "slug": "farmdown",
+      "term": "farmdown",
+      "def": "Selling part of a project or portfolio — often a majority — to a long-term owner while keeping a stake and the operating role. It recycles a developer's capital into the next project; WEC Energy Group's majority ownership of Invenergy-built solar plants is the pattern.",
+      "aliases": [
+        "farm-down",
+        "sell-down"
+      ]
+    },
+    {
+      "slug": "fast-frequency-response",
+      "term": "fast frequency response",
+      "def": "An ERCOT ancillary service that pays a battery to inject power within a fraction of a second when grid frequency drops. Batteries are almost the only resource fast enough, which made it an early revenue source for Texas batteries.",
+      "aliases": [
+        "RRS-FFR",
+        "FFR"
+      ]
     },
     {
       "slug": "fast-spectrum",
@@ -2497,6 +2651,14 @@
       ]
     },
     {
+      "slug": "fund-life",
+      "term": "fund life",
+      "def": "The fixed term — usually ten to twelve years — over which an investment fund must invest its money and return it to investors. A fund that owns a developer has to sell it or its projects before the fund closes, whatever the contracts' tenor.",
+      "aliases": [
+        "fund term"
+      ]
+    },
+    {
       "slug": "galvanic-corrosion",
       "term": "galvanic corrosion",
       "def": "Corrosion that starts when two different metals sit in one conductive fluid and form a battery, dissolving the less noble one. In a coolant loop the defence is matched wetted materials, plastic piping where metals would otherwise meet, and an inhibitor package kept at strength.",
@@ -2553,6 +2715,14 @@
         "generator set",
         "gen set",
         "gensets"
+      ]
+    },
+    {
+      "slug": "general-partner",
+      "term": "general partner",
+      "def": "The firm that runs an investment fund, chooses its investments and earns a management fee and a share of profits. The limited partners supply the money; the general partner supplies the decisions.",
+      "aliases": [
+        "GP"
       ]
     },
     {
@@ -2969,12 +3139,28 @@
       ]
     },
     {
+      "slug": "independent-power-producer",
+      "term": "independent power producer",
+      "def": "A company that owns power plants and sells their output but is not a regulated utility with captive customers. Its revenue comes from contracts and markets, so its cost of capital and its exposure to prices are both higher than a utility's.",
+      "aliases": [
+        "IPP"
+      ]
+    },
+    {
       "slug": "inertia",
       "term": "inertia",
       "def": "The stabilizing effect of heavy spinning generator masses, which resist sudden changes in grid frequency and buy operators seconds to react. As synchronous plants retire in favor of inverter-connected wind, solar, and storage, that inertia has to be replaced — by synchronous condensers, or by grid-forming inverters imitating it electronically.",
       "aliases": [
         "synthetic inertia",
         "grid inertia"
+      ]
+    },
+    {
+      "slug": "infrastructure-fund",
+      "term": "infrastructure fund",
+      "def": "A pooled investment vehicle that buys long-lived, cash-generating physical assets — pipelines, ports, transmission, power plants — on behalf of pension funds and insurers. It prices contracted cash flows, so a contracted battery fleet is a natural fit and a merchant one is not.",
+      "aliases": [
+        "infrastructure investing"
       ]
     },
     {
@@ -3130,6 +3316,15 @@
       ]
     },
     {
+      "slug": "irr",
+      "term": "IRR",
+      "def": "Internal rate of return: the annual return that makes a project's future cash flows worth exactly what it costs today. Developers quote it to buyers; a falling battery price raises it because the same revenue is earned on less capital.",
+      "aliases": [
+        "internal rate of return",
+        "equity IRR"
+      ]
+    },
+    {
       "slug": "islanded",
       "term": "islanded",
       "def": "Running electrically disconnected from the grid, with on-site generation alone matching the load every second. There is no larger system to lean on, so frequency and voltage become the site's own problem — and so does restarting after a total loss.",
@@ -3242,6 +3437,14 @@
       "def": "Electrical power drawn per ton of cooling delivered — the chiller industry's efficiency measure, where lower is better. It is the inverse of COP in different units.",
       "aliases": [
         "kW per ton"
+      ]
+    },
+    {
+      "slug": "large-load",
+      "term": "large load",
+      "def": "A single customer — a data centre, an industrial plant — big enough that the grid must plan for it individually. Texas SB 6 draws the line at 75 MW; loads above it face curtailment rules, security deposits and co-location review.",
+      "aliases": [
+        "large-load customer"
       ]
     },
     {
@@ -3361,6 +3564,14 @@
       ]
     },
     {
+      "slug": "limited-partner",
+      "term": "limited partner",
+      "def": "An investor in a fund — a pension plan, an insurer, a sovereign fund — that puts up the money but takes no part in running it. CDPQ is both a limited partner in many funds and, at Invenergy, a direct owner.",
+      "aliases": [
+        "LP"
+      ]
+    },
+    {
       "slug": "line-commutated-converter",
       "term": "line-commutated converter",
       "def": "The older HVDC converter type, built from thyristors that need the AC network's own voltage to turn them off. Rugged and efficient at very high power, but it cannot energise a dead network and it consumes reactive power while working.",
@@ -3448,6 +3659,15 @@
         "current slew rate",
         "load transients",
         "transient"
+      ]
+    },
+    {
+      "slug": "loan-guarantee",
+      "term": "loan guarantee",
+      "def": "A government promise to repay a project's lenders if the project cannot. The DOE Loan Programs Office offers them for large energy projects; the guarantee lowers the interest rate because the lender's risk becomes the government's.",
+      "aliases": [
+        "DOE loan guarantee",
+        "LPO guarantee"
       ]
     },
     {
@@ -3551,6 +3771,14 @@
       "def": "Water added to a cooling or process loop to replace what evaporation, blowdown and leakage remove. A site's water demand is largely its makeup rate."
     },
     {
+      "slug": "managing-member",
+      "term": "managing member",
+      "def": "In a limited liability company, the member that runs the business day to day and makes operating decisions, regardless of how much of the economic ownership it holds. Invenergy's management is managing member with CDPQ and Blackstone as majority economic owners.",
+      "aliases": [
+        "managing member LLC"
+      ]
+    },
+    {
       "slug": "mass-grading",
       "term": "mass grading",
       "def": "Reshaping an entire site to the elevations the design needs, before any building work. It is the first major scope on a greenfield project and the least reversible."
@@ -3594,6 +3822,15 @@
         "merchant revenue",
         "merchant risk",
         "fully merchant"
+      ]
+    },
+    {
+      "slug": "merchant-transmission",
+      "term": "merchant transmission",
+      "def": "A transmission line built by a private developer that earns its money from customers who buy capacity on it — under a FERC tariff — rather than from a utility's regulated rate base. Grain Belt Express is one; its risk is that customers must be found before the line is financed.",
+      "aliases": [
+        "merchant HVDC",
+        "merchant line"
       ]
     },
     {
@@ -3987,6 +4224,15 @@
       ]
     },
     {
+      "slug": "offshore-wind-lease",
+      "term": "offshore wind lease",
+      "def": "A federal seabed lease auctioned by the Bureau of Ocean Energy Management that gives a developer the exclusive right to study and, with later permits, build wind turbines in an area. Buying the lease is the first and cheapest step; Invenergy's four cost USD 765 million and were bought back at that price.",
+      "aliases": [
+        "BOEM lease",
+        "seabed lease"
+      ]
+    },
+    {
       "slug": "offtake",
       "term": "offtake",
       "def": "The committed purchase of a project's output — power, capacity, or storage services. Signed offtake is what turns a development pipeline into a financeable project."
@@ -4015,6 +4261,14 @@
       "slug": "once-through-fuel-cycle",
       "term": "once-through fuel cycle",
       "def": "Using fuel once and then storing it, which is what the United States does. Recycling changes the volume and the heat load of what is left, and does not remove the need to store something."
+    },
+    {
+      "slug": "open-access-transmission-tariff",
+      "term": "open access transmission tariff",
+      "def": "The FERC-approved rate schedule under which a transmission owner must let anyone buy capacity on its line on published terms. A merchant line needs one before it can sell service.",
+      "aliases": [
+        "OATT"
+      ]
     },
     {
       "slug": "open-transition",
@@ -4181,6 +4435,14 @@
       "aliases": [
         "penny warrants",
         "warrants at $0.01"
+      ]
+    },
+    {
+      "slug": "pension-fund",
+      "term": "pension fund",
+      "def": "A pool of retirement savings that invests for decades and prizes steady, inflation-linked cash flow — which is why pension funds like CDPQ own infrastructure and renewable developers directly.",
+      "aliases": [
+        "pension plan"
       ]
     },
     {
@@ -4517,6 +4779,15 @@
       ]
     },
     {
+      "slug": "project-marketplace",
+      "term": "project marketplace",
+      "def": "An online platform where developers list projects for sale and buyers bid — LevelTen Energy's is the one Available Power used for Greenport. It turns the pre-COD sale from a private negotiation into an auction.",
+      "aliases": [
+        "project M&A marketplace",
+        "LevelTen"
+      ]
+    },
+    {
       "slug": "prudence-review",
       "term": "prudence review",
       "def": "The commission's after-the-fact test of whether a utility's spending was reasonable when the decision was made; imprudent cost is disallowed and falls on shareholders instead of customers. It is the reason a regulated buyer cares so much about a supplier's bankability and paperwork: every purchase must survive this review years later.",
@@ -4790,6 +5061,14 @@
       ]
     },
     {
+      "slug": "responsive-reserve-service",
+      "term": "responsive reserve service",
+      "def": "ERCOT's main contingency reserve: capacity held ready to respond within seconds to a plant tripping offline. Batteries can sell it, and for several years it paid more than energy arbitrage did.",
+      "aliases": [
+        "RRS"
+      ]
+    },
+    {
       "slug": "retail-choice",
       "term": "retail choice",
       "def": "A restructured market in which the wires company delivers power but customers buy the energy from competing retailers, and generation is not in rate base. Most of Texas works this way inside ERCOT; the Southeast and MISO South do not, which is why a data center there signs with one integrated utility rather than a retailer and a wires company.",
@@ -4819,6 +5098,15 @@
       "def": "The total a utility is allowed to collect from customers over a period: operating costs plus depreciation plus taxes plus the allowed return on rate base. A rate case is an argument about this one number, and the tariffs are how it is divided among customer classes.",
       "aliases": [
         "revenue requirements"
+      ]
+    },
+    {
+      "slug": "revenue-swap",
+      "term": "revenue swap",
+      "def": "A financial contract in which a battery owner exchanges its uncertain market revenue for fixed payments from a counterparty — the counterparty takes the price risk and the owner gets bankable cash flow. GridStor's April 2026 agreement with Axpo on Hidden Lakes is one.",
+      "aliases": [
+        "battery revenue swap",
+        "storage swap"
       ]
     },
     {
@@ -5274,6 +5562,14 @@
       ]
     },
     {
+      "slug": "site-lease",
+      "term": "site lease",
+      "def": "A long-term lease of a parcel from a landowner on which a developer builds a battery, paying rent instead of buying the land. Available Power's model leased commercial land from real-estate owners for small batteries.",
+      "aliases": [
+        "land lease"
+      ]
+    },
+    {
       "slug": "slab-on-grade",
       "term": "slab on grade",
       "def": "A concrete floor cast directly on prepared ground rather than spanning between supports. It is the working surface of a data hall, and its flatness and load rating are specifications, not by-products.",
@@ -5395,6 +5691,14 @@
       "def": "Generating units already running and synchronized but deliberately loaded below their capability, so their headroom is available in seconds rather than in the minutes a cold start would take. On an islanded campus it is the margin that absorbs a load swing or a unit trip without the frequency wandering.",
       "aliases": [
         "spinning reserves"
+      ]
+    },
+    {
+      "slug": "sponsor-created-platform",
+      "term": "sponsor-created platform",
+      "def": "A developer built from scratch by a fund that hired the team and supplied the capital, rather than a founder-led company the fund later invested in. GridStor is one: Goldman Sachs assembled it around a project it had already bought.",
+      "aliases": [
+        "fund-created platform"
       ]
     },
     {
@@ -6059,6 +6363,14 @@
       ]
     },
     {
+      "slug": "turnkey-epc",
+      "term": "turnkey EPC",
+      "def": "A contract under which one engineering, procurement and construction firm delivers the whole plant ready to operate, so the buyer need not manage suppliers. Available Power attached Linxon to projects it sold so a financial buyer could own without building.",
+      "aliases": [
+        "turnkey contract"
+      ]
+    },
+    {
       "slug": "twelve-pulse-rectifier",
       "term": "12-pulse rectifier",
       "def": "A diode rectifier fed through two transformer windings phase-shifted by thirty degrees, so the two halves' distortion partly cancels and the current drawn is much closer to a sine wave than a plain six-pulse bridge manages. It was the standard way to make a large UPS or drive tolerable to its upstream supply before active front ends took over.",
@@ -6203,6 +6515,15 @@
         "integrated utility",
         "wires-only utility",
         "wires-only"
+      ]
+    },
+    {
+      "slug": "virtual-ppa",
+      "term": "virtual PPA",
+      "def": "A financial power purchase agreement: the buyer pays the project a fixed price and receives the market price plus the renewable certificates, without ever taking the electricity. Corporates far from the project — Verizon, Microsoft — use it to claim clean energy.",
+      "aliases": [
+        "VPPA",
+        "financial PPA"
       ]
     },
     {

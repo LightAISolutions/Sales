@@ -1,0 +1,1171 @@
+{
+  "schemaVersion": 7,
+  "slug": "gridstor",
+  "name": "GridStor (GridStor LLC; owned by funds managed by Goldman Sachs Asset Management)",
+  "shortName": "GridStor",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://gridstor.com/",
+  "headquarters": "Portland, Oregon (7 SE Stark, Suite 850, Portland, OR 97214); offices in Los Angeles and Denver per the June 2026 media kit",
+  "founded": 2022,
+  "employees": "'Nearly 60 employees' per the company's June 2026 media kit; 68 profiles on the team page (September 2026)",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: GridStor is a Goldman Sachs Asset Management-owned standalone-storage developer and owner that is contracted, not merchant, and multi-market, not CAISO/ERCOT only — the premise handed to this dossier is wrong on both counts and on the sponsor's name. What the company says: 'investment from a fund managed by Goldman Sachs Asset Management', credited on its homepage to 'the Sustainability and Infrastructure Investing groups'; trade press names the vehicle as Horizon Energy Storage, and Latitude Media reports Goldman created the company in 2021 after failing to find a developer to back, hiring Chris Taylor to build the team around a Goleta project Goldman had already acquired. Every operating or contracted project has a counterparty: Goleta (60 MW / 160 MWh, CAISO, commercial December 2023) under a 17-year resource-adequacy contract with Southern California Edison; Hidden Lakes (220 MW / 440 MWh, ERCOT, operating since November 2025) with a 100 MW revenue-swap 'Energy Storage Agreement' with Axpo from April 2026 and the balance merchant; Gunnar (150 MW / 300 MWh, ERCOT, under construction, commercial late 2026) under a tolling agreement with an unnamed 'Fortune 500 company'; White Tank (100 MW / 400 MWh, Arizona, commercial first half of 2027) under a 20-year tolling agreement with Arizona Public Service. The company states 280 MW / 600 MWh operating, 250 MW / 700 MWh under construction and 'over 3 GW' of later-stage pipeline across California, Texas, Arizona, Oklahoma (SPP) and Colorado, after five acquisitions in eighteen months from Balanced Rock Power (twice), Black Mountain Energy Storage, Capacity Power Group, Strata Clean Energy and Accelergen.\n\nBACKGROUND. Founded in 2022 in Portland, Oregon, GridStor 'develops, acquires, builds and operates utility-scale, standalone battery storage projects' and describes itself as 'a developer and independent power producer'. Its first asset, Goleta, was financed with USD 55 million of NORD/LB debt (June 2023), long-term debt from NORD/LB and Mitsubishi HC Capital America, and one of the first battery investment-tax-credit transfers, sold to J.P. Morgan (closed March 2024). Since then the disclosed financings are First Citizens Bank's USD 74 million for Hidden Lakes (March 2025), a USD 50 million NORD/LB development letter-of-credit facility (September 2025), Foss & Company's USD 86 million ITC transfer on Hidden Lakes (November 2025) and a USD 120 million NORD/LB and Siemens Financial Services package of construction and tax-equity bridge loans and letters of credit for Gunnar (March 2026). The only battery supplier the company names is Tesla (44 Megapacks at Goleta, built in Lathrop); Enerdatics reports about 120 Canadian Solar e-STORAGE SolBank 3.0 enclosures at White Tank, which neither party has confirmed. GSAM's own June 2026 media-kit line is that it 'has raised over $1 billion to invest in energy storage assets that GridStor will source and manage'; the CEO said in June 2025 that the company had 'deployed only a fraction of the capital that we originally raised'.\n\nCollection gap: no fund name, commitment size or ownership percentage appears on any company-authored page; no EPC, owner's engineer, PCS vendor or O&M provider is named for any project; the Gunnar tolling counterparty, the Axpo tenor, the Oklahoma and Capacity Power Group project names and the status of the 2022 Upstream Energy Los Angeles Basin portfolio (500 MW / 2,000 MWh, of which only Santa Fe Springs at 90 MW has been named) are undisclosed. The pipeline figure moved from 'over 5 GW' (September 2025) to 'over 3 GW' (from November 2025) without explanation.",
+  "ecosystemRole": "GridStor is what a bank's infrastructure platform looks like when it decides to own batteries directly: a sponsor-created specialist that buys late-stage projects from originators (Balanced Rock Power, Strata, Accelergen), contracts them with utilities and a retailer (SCE, APS, Axpo), finances them with a recurring German lender (NORD/LB) plus credit transfers, and now markets storage to 'utilities, data centers, and other large industrial customers'. For a supplier it is a buyer with a named procurement lead, a stated wait on Treasury FEOC guidance before longer-dated purchases, and one confirmed OEM (Tesla).",
+  "productsAndServices": [
+    {
+      "name": "Owned and operated storage — contracted with utilities and a retailer",
+      "category": "Owned and operated BESS — contracted (RA, tolling, revenue swap)",
+      "description": "Four named projects carry the company's 280 MW / 600 MWh operating and 250 MW / 700 MWh under-construction totals. Goleta Energy Storage (Goleta, Santa Barbara County; 60 MW / 160 MWh; 44 Tesla Megapack units; 66 kV interconnection at SCE's Isla Vista substation) has a '17 years contract to provide resource adequacy to utility Southern California Edison' (40 MW at four hours per Energy-Storage.news) and is dispatched on CAISO signals — commercial December 2023. Hidden Lakes Reliability Project (Dickinson, Galveston County; 220 MW / 440 MWh; beside TNMP's Hidden Lakes substation) was bought from Balanced Rock Power in March 2024 as 'up to 450 MW / 900 MWh', built at 220 MW / 440 MWh from October 2024, entered operation in November 2025 as a merchant ERCOT battery, and from April 2026 backs a 100 MW 'Energy Storage Agreement' under which Axpo swaps its merchant exposure for fixed payments and 'pass[es] price predictability through to Houston retail customers'. Gunnar Reliability Project (Edinburg, Hidalgo County; 150 MW / 300 MWh; beside AEP's Closner substation) was bought from Balanced Rock Power in February 2025, signed 'a tolling agreement with a Fortune 500 company' in December 2025, started construction and is due 'by the end of 2026'. White Tank Reliability Project (Maricopa County; 100 MW / 400 MWh; east of APS's Colter substation) was bought from Strata Clean Energy in September 2025 with a 20-year APS tolling agreement, commercial first half of 2027.",
+      "highlights": [
+        "Chris Taylor on the Gunnar financing (March 2026): 'disciplined portfolio growth, focused on contracted revenues'",
+        "Modo Energy counted Hidden Lakes ('Evelyn') as the second-largest ERCOT battery addition of Q3 2025 and groups GridStor with esVolta, Intersect Power and Nightpeak as pure-play developers 'scaling after proving models elsewhere'",
+        "Hidden Lakes was downsized from up to 450 MW / 900 MWh at acquisition to 220 MW / 440 MWh at construction; no reason is published",
+        "Holland & Hart advised on 'a construction (EPC) agreement and a battery supply agreement' for Hidden Lakes (January 2025) and the Gunnar EPC agreement (April 2026) without naming either counterparty"
+      ],
+      "positioning": "Contracted where Spearmint is merchant and smaller than Aypa, Plus Power or Jupiter; the distinguishing feature is the sponsor — a bank-managed fund that owns the developer outright rather than a private-equity minority or a founder — and a commercial team (Titus, Testa) hired from commodity trading and PPA origination to build 'contracted offtake for 3+ GW'.",
+      "soldThrough": "Resource-adequacy contracts (SCE), long-term tolling (APS, a Fortune 500 counterparty), a battery revenue swap with a retailer (Axpo), and merchant ERCOT participation on the uncontracted balance; project debt from NORD/LB, Mitsubishi HC Capital America, First Citizens and Siemens Financial Services; ITC transfers to J.P. Morgan and Foss & Company.",
+      "targetSegments": [
+        "California utilities and CCAs (resource adequacy)",
+        "Arizona utilities (APS tolling)",
+        "ERCOT retailers and Fortune 500 offtakers (swaps, tolls)",
+        "Data centres and large industrial customers (stated target since 2025)"
+      ],
+      "roadmap": "Gunnar commercial by end-2026; White Tank first half of 2027; Birdseye (Colorado) construction as early as 2027 and commercial end-2028."
+    },
+    {
+      "name": "Late-stage project acquisition — the pipeline machine",
+      "category": "Development pipeline (acquired and in-house)",
+      "description": "GridStor 'both build[s] projects from start to finish and acquire[s] projects midway through development'. The record is five acquisitions in eighteen months, each from a named originator: Evelyn/Hidden Lakes from Balanced Rock Power (March 2024); a 200 MW / 800 MWh two-phase project in eastern Oklahoma, SPP, from Black Mountain Energy Storage (January 2025, sited 'where multiple data centers are already operating'); a 100 MW / 400 MWh Arizona project from Capacity Power Group (January 2025, name and county undisclosed); Gunnar from Balanced Rock Power (February 2025); White Tank from Strata Clean Energy (September 2025, Strata retained 'in a consultative role'); and Birdseye, 199 MW / 796 MWh in Adams County, Colorado, from Accelergen (May 2026, interconnecting at Xcel Energy's Riverdale 230 kV substation per the seller's adviser). In-house development is represented by Goleta and by Santa Fe Springs (90 MW, Los Angeles County, on a former refinery site vacant since 1992), where the city council upheld a zoning determination in January 2024; the 2022 purchase of a 500 MW / 2,000 MWh Los Angeles Basin portfolio from Upstream Energy has produced no other named project. Stated totals: 'over 3 GW' of later-stage pipeline 'across the western and central U.S.' (November 2025 onward), 'over 5 GW' in the September 2025 release, and 'over 6 GW' of greenfield per the media kit.",
+      "highlights": [
+        "The NORD/LB USD 50 million letter-of-credit facility (September 2025) exists 'in support of its development goals' — interconnection and permit security for the pipeline",
+        "The CFO said in September 2025 the company had 'taken proactive steps to ensure tax credit eligibility for our project pipeline'",
+        "Jack Murray (VP M&A, ex-Cypress Creek) leads acquisitions of 'development-stage and operational projects and portfolios'"
+      ],
+      "positioning": "A buyer of other developers' late-stage projects — the counterparty that Balanced Rock, Strata, Black Mountain and Accelergen sell to — rather than a greenfield originator; that makes it a comparable for how Available Power's develop-and-sell model finds its buyers.",
+      "soldThrough": "Asset purchases from originators (terms undisclosed); development letter-of-credit facility (NORD/LB).",
+      "targetSegments": [
+        "Originators selling at or near notice-to-proceed",
+        "Utilities issuing storage solicitations in the Southwest, Texas, SPP and Colorado"
+      ],
+      "roadmap": "Oklahoma two-phase project and the Capacity Power Group Arizona project carry no published dates; Birdseye construction 2027."
+    },
+    {
+      "name": "Power marketing, trading and structured offtake",
+      "category": "Commercial — origination and risk management",
+      "description": "Since July 2025 the company has a Chief Commercial Officer, Lance Titus (ex-Uniper Global Commodities), 'to drive portfolio-wide power marketing and trading strategy' and 'contracted offtake for 3+ GW of energy storage to supply utilities, data centers, and power retailers', and a VP of Origination and Power Marketing, Monica Testa (ex-Ørsted head of origination). The first product of that team is the Axpo battery revenue swap on Hidden Lakes, which Titus called 'a major advancement in risk management product development' that 'sets a strong precedent for financeable solutions', and the Gunnar toll with a Fortune 500 counterparty. GridStor does not appear on Modo Energy's April 2025 list of US battery optimisers and operators, and no third-party optimiser is named for its fleet.",
+      "highlights": [
+        "Taylor to S&P Global (May 2026): GridStor is 'pursuing both behind-the-meter and front-of-meter deals with hyperscalers, data center leasing companies and utilities' with Arizona, California and Oregon as focus markets",
+        "The Axpo agreement's tenor and price are undisclosed"
+      ],
+      "positioning": "A trading-desk approach to storage revenue inside a developer — closer to Spearmint's merchant desk than to Aypa's utility tolls, but used to convert merchant exposure into bankable contracts rather than to keep it.",
+      "soldThrough": "Bilateral structured contracts (swaps, tolls) and utility procurements.",
+      "targetSegments": [
+        "Retail electricity providers (Axpo)",
+        "Fortune 500 offtakers",
+        "Hyperscalers and data-centre leasing companies (stated)"
+      ],
+      "roadmap": "No announced transaction beyond Axpo and the Gunnar toll."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Project ledger — every project a source names, with MW / MWh, market, contract and status as stated (sources: gridstor.com project pages and releases, lender releases, trade press)",
+      "specs": [
+        {
+          "band": "Operating (source states online)",
+          "label": "Goleta Energy Storage — Goleta, Santa Barbara County, CA (CAISO)",
+          "value": "60 MW / 160 MWh; '44 fully-integrated Tesla battery systems, manufactured in Lathrop, California'; 66 kV interconnection at SCE's Isla Vista substation; '17 years contract to provide resource adequacy to utility Southern California Edison' (40 MW at four hours per Energy-Storage.news); commercial December 2023; NORD/LB USD 55 million debt; ITC sold to J.P. Morgan"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "Hidden Lakes Reliability Project (formerly Evelyn) — Dickinson, Galveston County, TX (ERCOT)",
+          "value": "220 MW / 440 MWh (acquired as 'up to 450 MW / 900 MWh'); adjacent to TNMP's Hidden Lakes substation; construction from October 2024; 'now in operation' at the 4 November 2025 dedication; First Citizens USD 74 million financing; Foss & Company USD 86 million ITC transfer; 100 MW Axpo 'Energy Storage Agreement' (swap) from April 2026, balance merchant"
+        },
+        {
+          "band": "Under construction",
+          "label": "Gunnar Reliability Project — Edinburg, Hidalgo County, TX (ERCOT)",
+          "value": "150 MW / 300 MWh; beside AEP's Closner substation; 'tolling agreement with a Fortune 500 company' (December 2025); construction started December 2025; 'expected to begin operations by the end of 2026'; USD 120 million NORD/LB and Siemens Financial Services construction and tax-equity bridge loans and letters of credit (March 2026)"
+        },
+        {
+          "band": "Contracted (not yet built)",
+          "label": "White Tank Reliability Project — Maricopa County, AZ (APS balancing area, non-ISO)",
+          "value": "100 MW / 400 MWh; acquired from Strata Clean Energy 18 September 2025; '20-year tolling agreement with Arizona Public Service (APS)'; commercial 'first half of 2027'; about 120 e-STORAGE SolBank 3.0 enclosures per Enerdatics (unconfirmed by either party)"
+        },
+        {
+          "band": "Development (acquired, no offtake stated)",
+          "label": "Birdseye — Adams County, CO (Public Service Company of Colorado territory, non-ISO)",
+          "value": "199 MW / 796 MWh; acquired from Accelergen 20 May 2026; 'construction anticipated to begin as early as 2027'; 'commercial operations date is planned for the end of 2028'; point of interconnection Riverdale 230 kV substation per Leyline Renewable Capital"
+        },
+        {
+          "band": "Development (acquired, no offtake stated)",
+          "label": "Oklahoma project — eastern Oklahoma (SPP)",
+          "value": "200 MW / 800 MWh 'to be developed in two phases'; acquired from Black Mountain Energy Storage 16 January 2025; name, county and date not published"
+        },
+        {
+          "band": "Development (acquired, no offtake stated)",
+          "label": "Arizona project from Capacity Power Group",
+          "value": "100 MW / 400 MWh; acquired 27 January 2025; name, county and date not published"
+        },
+        {
+          "band": "Development (in-house)",
+          "label": "Santa Fe Springs — Los Angeles County, CA (CAISO)",
+          "value": "90 MW; former Productol refinery site vacant since 1992; city council zoning determination upheld 11 January 2024; no status update published since"
+        },
+        {
+          "band": "Development (in-house)",
+          "label": "Los Angeles Basin portfolio (Upstream Energy)",
+          "value": "'over 500 MW / 2,000 MWh' of four-hour projects acquired October 2022 for 2024–2026 operation; no project other than Santa Fe Springs named since"
+        },
+        {
+          "band": "Company aggregates",
+          "label": "Totals as stated",
+          "value": "'280 MW / 600MWh in operation; 250 MW / 700 MWh under construction; 3+ GW later-stage development pipeline' (gridstor.com, June 2026); 'manages 530 MW, 1,300 MWh ... in operation and construction' (May 2026 boilerplate); 'over 5 GW' pipeline in the September 2025 boilerplate"
+        }
+      ],
+      "notes": "No EPC, owner's engineer, PCS supplier, O&M provider or optimiser is named for any project; no CAISO or ERCOT queue identifier, CPUC or PUCT docket, or county permit record is linked from company channels. The Goleta permit trail exists in the City of Goleta's Legistar file 19-554 (design review 2019)."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-05-21",
+      "category": "market",
+      "headline": "E&E News: Jason Burwen expects 'an increasing volume of new battery supply that is intended to be FEOC-compliant'; obstacles are interconnection, permitting and long-lead equipment",
+      "read": "The policy lead's public position: supply will adapt to the rule; schedule risk is the binding constraint.",
+      "source": "https://www.eenews.net/articles/grid-batteries-get-record-boost-from-data-centers/"
+    },
+    {
+      "date": "2026-05-20",
+      "category": "ma",
+      "headline": "GridStor acquires the 199 MW / 796 MWh Birdseye project in Adams County, Colorado from Accelergen — 'fifth within the last eighteen months'; commercial end-2028",
+      "read": "First entry into Colorado and the Public Service Company of Colorado territory; no offtake announced.",
+      "source": "https://gridstor.com/gridstor-acquires-colorado-battery-energy-storage-project-from-accelergen/"
+    },
+    {
+      "date": "2026-04-09",
+      "category": "customer",
+      "headline": "Energy-Storage.news: the Axpo deal is a battery revenue swap — 100 MW of Hidden Lakes backs a financial contract exchanging merchant revenue for fixed payments",
+      "read": "Names the structure the company's release only called 'bespoke': a hedge that makes a merchant ERCOT battery financeable.",
+      "source": "https://www.energy-storage.news/gridstor-axpo-execute-energy-storage-revenue-swap-agreement-for-440mwh-texas-bess/"
+    },
+    {
+      "date": "2026-04-08",
+      "category": "customer",
+      "headline": "GridStor and Axpo announce a 'battery storage swap agreement' — a 100 MW Energy Storage Agreement backed by Hidden Lakes that lets Axpo pass price predictability to Houston retail customers",
+      "read": "The commercial team's first structured product; tenor and price undisclosed.",
+      "source": "https://gridstor.com/gridstor-and-axpo-announce-battery-storage-swap-agreement/"
+    },
+    {
+      "date": "2026-03-09",
+      "category": "financial",
+      "headline": "NORD/LB and Siemens Financial Services close a USD 120 million package — construction and tax-equity bridge loans and letters of credit — for Gunnar",
+      "read": "The fourth NORD/LB transaction and Siemens Financial Services' first with GridStor; Taylor: growth 'focused on contracted revenues'.",
+      "source": "https://gridstor.com/nord-lb-siemens-financial-services-and-gridstor-announce-close-of-120-million-financing-agreement/"
+    },
+    {
+      "date": "2026-02-09",
+      "category": "policy",
+      "headline": "CTO Daniel Dedrick: GridStor is 'waiting for Treasury guidance before advancing pending procurement decisions on our longer-dated projects'; domestic BESS at scale not before 2028",
+      "read": "A stated procurement pause on FEOC uncertainty — the most direct supplier-relevant statement in the record.",
+      "source": "https://www.energy-storage.news/gridstor-warns-of-industry-slowdown-as-us-treasury-guidance-delays-bess-decisions/"
+    },
+    {
+      "date": "2025-12-16",
+      "category": "order-win",
+      "headline": "Tolling agreement with an unnamed 'Fortune 500 company' and start of construction for Gunnar (150 MW / 300 MWh); operations by end-2026",
+      "read": "The second Texas project is contracted before it is built — the opposite sequence from Hidden Lakes.",
+      "source": "https://gridstor.com/gridstor-announces-tolling-agreement-and-start-of-construction-for-texas-battery-energy-storage-project/"
+    },
+    {
+      "date": "2025-11-12",
+      "category": "leadership",
+      "headline": "Spencer Mash named Senior Vice President of Finance and Head of Capital Markets (co-founder and former EVP of Greenbacker)",
+      "read": "A capital-markets hire for a 3 GW pipeline the sponsor's fund will not carry alone.",
+      "source": "https://gridstor.com/gridstor-names-spencer-mash-as-senior-vice-president-to-advance-financing-of-battery-storage-projects/"
+    },
+    {
+      "date": "2025-11-11",
+      "category": "financial",
+      "headline": "Foss & Company buys USD 86 million of Hidden Lakes investment tax credits by direct transfer",
+      "read": "Completes the Hidden Lakes financing; the release calls the project a 'merchant battery storage initiative'.",
+      "source": "https://gridstor.com/foss-company-partners-with-gridstor-on-86-million-tax-credit-transfer-for-hidden-lakes-battery-storage-project/"
+    },
+    {
+      "date": "2025-11-04",
+      "category": "project",
+      "headline": "Hidden Lakes (220 MW / 440 MWh) dedicated 'now in operation' with the PUCT chairman and Rep. Randy Weber present",
+      "read": "GridStor's first operating Texas asset; the company's boilerplate now names 'data centers' among its customers.",
+      "source": "https://gridstor.com/gridstor-celebrates-completion-of-texass-newest-battery-storage-facility/"
+    },
+    {
+      "date": "2025-10-16",
+      "category": "market",
+      "headline": "Modo Energy: Hidden Lakes ('Evelyn') was the second-largest ERCOT battery to reach commercial operation in Q3 2025",
+      "read": "Independent confirmation of the commissioning quarter.",
+      "source": "https://modoenergy.com/research/en/ercot-battery-buildout-report-q3-2025"
+    },
+    {
+      "date": "2025-09-21",
+      "category": "procurement",
+      "headline": "Enerdatics reports about 120 Canadian Solar e-STORAGE SolBank 3.0 enclosures at White Tank",
+      "read": "The only supplier attribution for any project after Goleta — an analyst's report, unconfirmed by GridStor, Strata or Canadian Solar.",
+      "source": "https://www.enerdatics.com/insights/gridstor-expands-energy-storage-footprint-with-acquisition-of-white-tank-bess-in-arizona"
+    },
+    {
+      "date": "2025-09-18",
+      "category": "ma",
+      "headline": "GridStor acquires White Tank (100 MW / 400 MWh, Maricopa County) from Strata Clean Energy with a 20-year APS tolling agreement; commercial first half of 2027",
+      "read": "A fully contracted Arizona project bought with its toll attached; Strata stays on in a consultative role.",
+      "source": "https://gridstor.com/gridstor-acquires-arizona-battery-energy-storage-project-from-strata-clean-energy/"
+    },
+    {
+      "date": "2025-09-04",
+      "category": "financial",
+      "headline": "NORD/LB provides a USD 50 million development letter-of-credit facility; '450 MW of late-stage project acquisitions year-to-date'",
+      "read": "Corporate-level credit for pipeline security — the sponsor's equity is not the only source.",
+      "source": "https://gridstor.com/nord-lb-and-gridstor-announce-completion-of-50-million-letter-of-credit-facility/"
+    },
+    {
+      "date": "2025-07-08",
+      "category": "leadership",
+      "headline": "Lance Titus appointed Chief Commercial Officer to drive 'portfolio-wide power marketing and trading strategy'; board member Judith Johansen quoted",
+      "read": "A commodities trader is hired to contract the pipeline; the Axpo swap follows nine months later.",
+      "source": "https://gridstor.com/gridstor-appoints-lance-titus-as-chief-commercial-officer-to-drive-portfolio-wide-power-marketing-and-trading-strategy/"
+    },
+    {
+      "date": "2025-06-24",
+      "category": "corporate",
+      "headline": "Portland Business Journal (reposted): Taylor says the company has 'deployed only a fraction of the capital that we originally raised'",
+      "read": "Sponsor capacity is not the constraint; contracted projects are.",
+      "source": "https://gridstor.com/portland-biz-journal-in-wake-of-failures-portland-ceo-on-the-state-of-energy-storage/"
+    },
+    {
+      "date": "2025-04-10",
+      "category": "leadership",
+      "headline": "Daniel Dedrick promoted to Chief Technology Officer; Tony Song to SVP of EPC",
+      "read": "The procurement and construction seats a supplier would call on.",
+      "source": "https://gridstor.com/gridstor-promotes-daniel-dedrick-to-chief-technology-officer-creating-new-role-to-drive-growth/"
+    },
+    {
+      "date": "2025-03-06",
+      "category": "financial",
+      "headline": "First Citizens Bank leads a USD 74 million financing for Hidden Lakes; GridStor 'is owned by funds managed by Goldman Sachs Asset Management'",
+      "read": "The lender's release is the clearest ownership statement in the record.",
+      "source": "https://gridstor.com/first-citizens-bank-leads-74-million-financing-for-gridstors-hidden-lakes-battery-storage-project-in-texas/"
+    },
+    {
+      "date": "2025-02-03",
+      "category": "ma",
+      "headline": "GridStor acquires Gunnar (150 MW / 300 MWh, Hidalgo County) from Balanced Rock Power — 'fourth project acquisition in the past twelve months'",
+      "read": "Second purchase from the same originator in eleven months.",
+      "source": "https://gridstor.com/gridstor-announces-acquisition-of-texas-battery-energy-storage-project-from-balanced-rock-power/"
+    },
+    {
+      "date": "2025-01-27",
+      "category": "ma",
+      "headline": "GridStor acquires a 100 MW / 400 MWh Arizona project from Capacity Power Group",
+      "read": "Name, county and date remain unpublished.",
+      "source": "https://gridstor.com/gridstor-announces-acquisition-of-arizona-battery-energy-storage-project-from-capacity-power-group/"
+    },
+    {
+      "date": "2025-01-16",
+      "category": "ma",
+      "headline": "GridStor acquires a 200 MW / 800 MWh two-phase Oklahoma project from Black Mountain Energy Storage, sited 'where multiple data centers are already operating'",
+      "read": "First SPP entry, explicitly framed around data-centre load.",
+      "source": "https://gridstor.com/gridstor-announces-acquisition-of-oklahoma-battery-energy-storage-project-from-black-mountain-energy-storage/"
+    },
+    {
+      "date": "2025-01-30",
+      "category": "financial",
+      "headline": "Latitude Media: Goldman 'created' GridStor in 2021 after failing to find a developer to invest in; the Goleta credit sold at 'ninety something cents' per dollar",
+      "read": "The origin story — a sponsor that built its own developer around a project it had already bought.",
+      "source": "https://www.latitudemedia.com/news/how-gridstor-proved-a-new-grid-scale-storage-financing-strategy/"
+    },
+    {
+      "date": "2024-10-17",
+      "category": "project",
+      "headline": "Construction starts on Hidden Lakes at 220 MW / 440 MWh (acquired as up to 450 MW / 900 MWh); operations then expected summer 2025",
+      "read": "The first Texas build, halved in size from the acquisition headline and later than the acquisition schedule.",
+      "source": "https://gridstor.com/gridstor-commences-construction-on-galveston-county-battery-energy-storage-project/"
+    },
+    {
+      "date": "2024-03-07",
+      "category": "ma",
+      "headline": "GridStor acquires the up-to-450 MW / 900 MWh Evelyn project in Galveston County from Balanced Rock Power — its first ERCOT project",
+      "read": "Entry into ERCOT by acquisition rather than greenfield.",
+      "source": "https://gridstor.com/gridstor-announces-acquistion-of-galveston-county-battery-energy-storage-project-from-balanced-rock-power/"
+    },
+    {
+      "date": "2024-03-05",
+      "category": "financial",
+      "headline": "GridStor closes its first tax-credit sale, to J.P. Morgan, for Goleta; long-term debt from NORD/LB and Mitsubishi HC Capital America",
+      "read": "One of the first battery ITC transfers under the Inflation Reduction Act.",
+      "source": "https://gridstor.com/gridstor-announces-close-of-tax-credit-sale-for-goleta-energy-storage-project/"
+    },
+    {
+      "date": "2024-01-12",
+      "category": "regulatory",
+      "headline": "Santa Fe Springs city council upholds the determination that battery storage is a use similar to a substation, clearing GridStor's 90 MW project on a former refinery site",
+      "read": "The only Los Angeles Basin project named from the 2022 Upstream Energy portfolio.",
+      "source": "https://gridstor.com/santa-fe-springs-creates-path-to-revitalizing-former-refinery-site-with-state-of-the-art-battery-storage-facility/"
+    },
+    {
+      "date": "2023-12-05",
+      "category": "project",
+      "headline": "Goleta Energy Storage (60 MW / 160 MWh) completes and begins operation; 44 Tesla batteries; SCE resource-adequacy contract; NORD/LB USD 55 million debt",
+      "read": "The first asset, delivered eighteen months after the company's founding.",
+      "source": "https://gridstor.com/gridstor-celebrates-completion-of-californias-newest-battery-storage-facility/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "tesla",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023",
+      "scale": "44 Megapack units (60 MW / 160 MWh)",
+      "via": "Megapack (Lathrop, California)",
+      "note": "Goleta Energy Storage uses '44 fully-integrated Tesla battery systems, manufactured in Lathrop, California' — the only battery supplier GridStor has ever named.",
+      "context": "The company's project page and its December 2023 completion release both name Tesla and the Lathrop plant; Noozhawk describes the units as LFP. Trade press notes an amendment application in 2024 to add augmentation units. No Tesla order for Hidden Lakes, Gunnar or White Tank has been published, and Holland & Hart's note on the Hidden Lakes 'battery supply agreement' names no vendor.",
+      "source": "https://gridstor.com/project/goleta-facility/"
+    },
+    {
+      "slug": "canadian-solar",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2025-09",
+      "scale": "about 120 SolBank 3.0 enclosures (100 MW / 400 MWh) per Enerdatics",
+      "via": "e-STORAGE SolBank 3.0",
+      "note": "Enerdatics reports that the White Tank project GridStor bought from Strata Clean Energy is designed around about 120 Canadian Solar e-STORAGE SolBank 3.0 enclosures.",
+      "context": "The attribution is an analyst's (Enerdatics, 21 September 2025) and appears in no GridStor, Strata, APS or Canadian Solar release, so it is carried as reported rather than as a confirmed supply relationship. If accurate it would be the design basis inherited with the acquisition rather than a GridStor procurement decision.",
+      "source": "https://www.enerdatics.com/insights/gridstor-expands-energy-storage-footprint-with-acquisition-of-white-tank-bess-in-arizona"
+    },
+    {
+      "slug": "xcel-energy",
+      "type": "other",
+      "status": "announced",
+      "since": "2026-05",
+      "scale": "199 MW / 796 MWh (Birdseye)",
+      "via": "Interconnection at the Riverdale 230 kV substation (Public Service Company of Colorado)",
+      "note": "Birdseye, the Colorado project GridStor bought from Accelergen in May 2026, interconnects at Xcel Energy's Riverdale 230 kV substation per the seller's adviser Leyline Renewable Capital; no offtake with Xcel has been announced.",
+      "context": "The link is a point of interconnection in Public Service Company of Colorado's non-ISO territory, not a contract. Xcel's Colorado resource plans are the natural route to a toll; nothing in the record says one is in negotiation.",
+      "source": "https://www.leylinecapital.com/news/asset-sale-gridstor-acquires-199-mw-birdseye-storage-project-in-adams-county-co"
+    },
+    {
+      "slug": "aep",
+      "type": "other",
+      "status": "active",
+      "since": "2025-12",
+      "scale": "150 MW / 300 MWh (Gunnar)",
+      "via": "Interconnection beside AEP Texas's Closner substation, Edinburg",
+      "note": "Gunnar's project page places the battery 'neighboring AEP's existing Closner Substation' in Edinburg; the tolling counterparty is an unnamed Fortune 500 company, not AEP.",
+      "context": "An interconnection adjacency in AEP Texas's Lower Rio Grande Valley service area rather than a commercial relationship; carried so the AEP dossier's inbound view shows the site.",
+      "source": "https://gridstor.com/project/gunnar-reliability-project/"
+    },
+    {
+      "slug": "intersect-power",
+      "type": "competitor",
+      "status": "active",
+      "scale": "Modo Energy: pure-play developers (esVolta, Intersect Power, GridStor, Nightpeak) brought 1.25 GW online in ERCOT in 2025",
+      "note": "Modo Energy's ERCOT annual buildout report groups GridStor with esVolta, Intersect Power and Nightpeak as 'pure-play storage developers' scaling in Texas 'after proving models elsewhere'.",
+      "context": "The comparison is Modo's (February 2026), on 2025 ERCOT additions; Engie held about 20 per cent of installed ERCOT battery capacity. Intersect's ERCOT batteries sit inside co-located energy parks, which is a different model from GridStor's standalone contracted sites.",
+      "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
+    },
+    {
+      "slug": "plus-power",
+      "type": "competitor",
+      "status": "active",
+      "scale": "Hidalgo County peers: Plus Power's Anemoi 200 MW / 400 MWh against GridStor's Gunnar 150 MW / 300 MWh",
+      "note": "Energy-Storage.news lists Plus Power's Anemoi (200 MW / 400 MWh), Apex Clean Energy's Great Kiskadee (100 MW / 200 MWh) and three PureSky projects as GridStor's Hidalgo County neighbours.",
+      "context": "A siting comparison in one ERCOT county from the February 2025 acquisition coverage; no commercial link between the companies is reported.",
+      "source": "https://www.energy-storage.news/gridstor-acquires-150mw-300mwh-texas-bess-from-brp/"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "effectiveDate": "2023-01",
+      "exposure": "GridStor finances every project partly by selling the storage investment tax credit: Goleta's credits went to J.P. Morgan in March 2024 in one of 'the first class of tax credit transfer sales associated with battery energy storage projects in North America' (Latitude Media reports 'ninety something cents' per dollar), Hidden Lakes' USD 86 million went to Foss & Company in November 2025, and Gunnar's March 2026 package includes 'tax equity bridge loans'. Jason Burwen, now VP Policy, helped shape the standalone-storage credit at the Energy Storage Association.",
+      "mitigation": "Development letter-of-credit facility and 'proactive steps to ensure tax credit eligibility for our project pipeline' (CFO, September 2025).",
+      "source": "https://gridstor.com/gridstor-announces-close-of-tax-credit-sale-for-goleta-energy-storage-project/"
+    },
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2026-01",
+      "exposure": "CTO Daniel Dedrick told Energy-Storage.news in February 2026 that GridStor 'pre-qualified vendors and re-assessed supply options during the second half of 2025' and is 'waiting for Treasury guidance before advancing pending procurement decisions on our longer-dated projects', expecting 'a slowdown in prospective procurement and investment decisions' industry-wide and no significant domestic BESS supply before 2028. Burwen expects FEOC-compliant supply to grow (E&E News, May 2026).",
+      "mitigation": "A 'flexible and forward-looking approach to procurement' rather than multi-year single-vendor commitments (Dedrick).",
+      "source": "https://www.energy-storage.news/gridstor-warns-of-industry-slowdown-as-us-treasury-guidance-delays-bess-decisions/"
+    },
+    {
+      "regime": "OBBBA (HR1) storage credit treatment",
+      "status": "in-effect",
+      "effectiveDate": "2025-07",
+      "exposure": "Non-residential storage keeps the full 48E credit through 2033 under the July 2025 law while wind and solar phase out, and GridStor's CCO said 'recent federal legislation has only reinforced our confidence' (July 2025); the company's VP Finance framed the response as 'safe-harbouring, earlier procurement, bankable tolling structures' against FEOC, tariffs and queue delays.",
+      "mitigation": "",
+      "source": "https://www.solarpowerworldonline.com/2025/07/hr1-spares-energy-storage-but-can-it-thrive-alone/"
+    },
+    {
+      "regime": "California resource adequacy and local permitting",
+      "status": "in-effect",
+      "effectiveDate": "2021-10",
+      "exposure": "Goleta's revenue is a 17-year SCE resource-adequacy contract, and its permit trail runs through the City of Goleta (design review 2019, Planning Commission approval of the development plan and conditional-use permit in October 2021 per city records). Santa Fe Springs required a city-council zoning determination. Heatmap reports an October 2025 court ruling invalidating Los Angeles County's memo allowing batteries in unincorporated areas — a latent risk to the unnamed 2022 Los Angeles Basin portfolio if any site is unincorporated.",
+      "mitigation": "",
+      "source": "https://goleta.legistar.com/LegislationDetail.aspx?GUID=C8A31625-B6D6-493A-B55F-DF6092A855CA&ID=4217409"
+    },
+    {
+      "regime": "ERCOT market design (energy-only, RTC+B)",
+      "status": "in-effect",
+      "effectiveDate": "2025-12",
+      "exposure": "Hidden Lakes operated merchant in an energy-only market until the Axpo swap; Energy-Storage.news notes the swap addresses the absence of a capacity payment in ERCOT. The company's December 2025 release cites ERCOT's forecast of 'more than 50% increase in the state's peak load by 2030' and 'over 12,000 MW' of installed batteries as the case for Gunnar.",
+      "mitigation": "Contracted structures — the Gunnar toll and the Axpo swap — in place of merchant exposure.",
+      "source": "https://www.energy-storage.news/gridstor-axpo-execute-energy-storage-revenue-swap-agreement-for-440mwh-texas-bess/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Chris Taylor",
+      "title": "Chief Executive Officer",
+      "photo": "images/execs/gridstor-taylor.jpg",
+      "linkedin": "https://www.linkedin.com/in/chris-taylor-556b0516/",
+      "background": [
+        "Founded GridStor in 2022 as CEO; hired by Goldman Sachs to build the team around the already-acquired Goleta project per Latitude Media",
+        "Google — led clean-energy investing for the global data-centre business and headed the Portland office; 'over $1.5B in equity commitments' across seven years",
+        "Co-founder and Chief Development Officer, Element Power (private-equity-backed wind and solar IPP, 5 GW-plus portfolio)",
+        "Zilkha Renewable Energy from 2002, later EDP Renewables — led the West region (6 GW portfolio)",
+        "Peace Corps volunteer, Ivory Coast; BA Amherst College, MPA Princeton"
+      ]
+    },
+    {
+      "name": "Frank Burkhartsmeyer",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/gridstor-burkhartsmeyer.jpg",
+      "linkedin": "https://www.linkedin.com/in/frank-burkhartsmeyer-53650245/",
+      "background": [
+        "CFO since 28 August 2023",
+        "EVP Strategy and Business Development and CFO, NW Natural (NYSE: NWN)",
+        "President and CEO, Avangrid Renewables (formerly PacifiCorp Power Marketing)",
+        "Managing Director, Corporate Strategy, ScottishPower; Treasury Director, PacifiCorp",
+        "MBA University of Oregon; BA University of Montana"
+      ]
+    },
+    {
+      "name": "Daniel Dedrick",
+      "title": "Chief Technology Officer",
+      "photo": "images/execs/gridstor-dedrick.jpg",
+      "linkedin": "https://www.linkedin.com/in/danieldedrick",
+      "background": [
+        "CTO since April 2025 (previously SVP EPC and technical operations); oversees transmission and interconnection, engineering, procurement and construction, operations and asset management",
+        "Led storage engineering, EPC contracting and major equipment procurement at Clearway Energy Group and NRG Renewables — 'over 3 GWh of utility-scale energy storage'",
+        "Technology development at Sandia National Laboratories (hydrogen production, storage, safety, codes and standards)",
+        "MS Mechanical Engineering, University of California, Berkeley"
+      ]
+    },
+    {
+      "name": "Lance Titus",
+      "title": "Chief Commercial Officer",
+      "photo": "images/execs/gridstor-titus.jpg",
+      "linkedin": "https://www.linkedin.com/in/lancetitus/",
+      "background": [
+        "CCO since July 2025, leading portfolio-wide power marketing and trading and 'contracted offtake for 3+ GW'",
+        "Senior Managing Director and Head of New Energies, Americas, Uniper Global Commodities",
+        "Founded several energy trading platforms; 'over $20 billion in transactions' including 'contracted offtake of over 4 GW of power supply'",
+        "MBA University of Denver (Daniels)"
+      ]
+    },
+    {
+      "name": "Spencer Mash",
+      "title": "Senior Vice President of Finance and Head of Capital Markets",
+      "photo": "images/execs/gridstor-mash.jpg",
+      "linkedin": "https://www.linkedin.com/in/spencer-mash",
+      "background": [
+        "Joined November 2025 to oversee financing strategy and investor partnerships",
+        "Co-founder and EVP, Greenbacker Renewable Energy Company (3.5 GW, 'more than $3.4 billion in assets under management')",
+        "Deerfield Capital Management; Bank of America Merrill Lynch (leveraged acquisition finance)",
+        "BS Economics, Wharton"
+      ]
+    },
+    {
+      "name": "Tony Song",
+      "title": "Senior Vice President, Engineering, Procurement and Construction",
+      "photo": "images/execs/gridstor-song.jpg",
+      "background": [
+        "SVP EPC since April 2025 — technology selection, engineering, procurement and construction",
+        "Led energy storage at Goldman Sachs Renewable Power (1.1 GWh built)",
+        "Engineering, product design and manufacturing at battery integrator IHI Terrasun; earlier technical development roles at Invenergy and E.ON",
+        "BS Electrical Engineering Illinois; MS Michigan; MBA Chicago Booth"
+      ]
+    },
+    {
+      "name": "Jason Burwen",
+      "title": "Vice President of Policy and Strategy",
+      "photo": "images/execs/gridstor-burwen.jpg",
+      "linkedin": "https://www.linkedin.com/in/jburwen/",
+      "background": [
+        "VP Energy Storage, American Clean Power Association; interim CEO and VP Policy, US Energy Storage Association (2015–2023) — advocacy that 'directly shaped the energy storage federal investment tax credit'",
+        "Associate Director for Energy Innovation, Bipartisan Policy Center; consulting on demand response at FSC Group/Nexant",
+        "Quoted by E&E News (May 2026) on FEOC-compliant battery supply"
+      ]
+    },
+    {
+      "name": "Monica Testa",
+      "title": "Vice President of Origination and Power Marketing",
+      "photo": "images/execs/gridstor-testa.jpg",
+      "linkedin": "https://www.linkedin.com/in/monicaatesta/",
+      "background": [
+        "Secures long-term revenue agreements for the storage portfolio",
+        "Head of Origination, Ørsted (North American onshore wind, solar and storage PPAs); 'over 3GW of executed PPAs' across ERCOT, SPP, MISO and WECC",
+        "MA Energy and Resources Group, UC Berkeley; BA University of Vermont"
+      ]
+    },
+    {
+      "name": "Jack Murray",
+      "title": "Vice President of M&A",
+      "photo": "images/execs/gridstor-murray.jpg",
+      "linkedin": "https://www.linkedin.com/in/jackbmurray/",
+      "background": [
+        "Leads acquisitions of development-stage and operational projects and portfolios; joined 2022",
+        "Cypress Creek Renewables — led M&A and investment analytics, including 600 MWh of storage acquisitions",
+        "Lewis & Clark College; MBA USC"
+      ]
+    },
+    {
+      "name": "Ben Lackey",
+      "title": "General Counsel and Chief Compliance Officer",
+      "photo": "images/execs/gridstor-lackey.jpg",
+      "background": [
+        "General Counsel, Avangrid Renewables (acquisition, development, financing and construction of over 7 GW)",
+        "PPM Energy from 2004; Cadwalader, Jones Walker, Tonkon Torp",
+        "BA Bard College; JD University of Chicago"
+      ]
+    },
+    {
+      "name": "Kathryn Meyer",
+      "title": "Vice President of Development",
+      "photo": "images/execs/gridstor-meyer.jpg",
+      "linkedin": "https://www.linkedin.com/in/kcemeyer/",
+      "background": [
+        "Leads pipeline development and growth; a decade in utility-scale wind, solar and storage with 'more than 5 GWs' of development, construction and financing involvement",
+        "Primergy Solar; EDP Renewables North America"
+      ]
+    },
+    {
+      "name": "Toby Butterfield",
+      "title": "Vice President of Development, West",
+      "photo": "images/execs/gridstor-butterfield.jpg",
+      "linkedin": "https://www.linkedin.com/in/tobybutterfield",
+      "background": [
+        "Fifteen years in renewables; managed gigawatt-scale portfolios at EDP Renewables and Primergy Solar"
+      ]
+    },
+    {
+      "name": "Paul Zavesoff",
+      "title": "Vice President of Asset Management",
+      "photo": "images/execs/gridstor-zavesoff.jpg",
+      "linkedin": "https://www.linkedin.com/in/paul-zavesoff/",
+      "background": [
+        "Senior Director, Asset Management, Clearway Energy Group (utility-scale wind and solar); NRG Renewables",
+        "VP Finance, Ram Power (geothermal)"
+      ]
+    },
+    {
+      "name": "Will Jolley",
+      "title": "Vice President of Analytics",
+      "photo": "images/execs/gridstor-jolley.jpg",
+      "linkedin": "https://www.linkedin.com/in/willjolley/",
+      "background": [
+        "Power markets, forecasting and optimisation",
+        "LevelTen Energy (wind and solar price forecasting); Avangrid Renewables (financial modelling)",
+        "BA Economics NYU; MBA UCLA"
+      ]
+    },
+    {
+      "name": "Judi Johansen",
+      "title": "Board Member",
+      "background": [
+        "Former Administrator and CEO, Bonneville Power Administration; former President and CEO, PacifiCorp",
+        "Board of Hydrostor; quoted in the July 2025 CCO appointment release as a GridStor board member"
+      ]
+    },
+    {
+      "name": "Sebastien Gagnon",
+      "title": "Board Member (Goldman Sachs Asset Management)",
+      "background": [
+        "Managing Director, Goldman Sachs Asset Management; member of the Infrastructure Investment Committee",
+        "Boards of Northvolt, Lucid Energy II and Mountaineer NGL Storage; board observer at Redwood Materials and Hydrostor; Goldman Sachs since 2013, previously Apax Partners and Global Infrastructure Partners"
+      ]
+    },
+    {
+      "name": "Gunduz Shirin",
+      "title": "Board Member (Goldman Sachs Asset Management)",
+      "background": [
+        "Vice President, Goldman Sachs Asset Management, Energy Transition investments in the Americas; Goldman Sachs since 2014; previously Bank of America Merrill Lynch financial sponsors group"
+      ]
+    },
+    {
+      "name": "Jeff Resnick",
+      "title": "Board Member",
+      "background": [
+        "Retired Partner and Managing Director, Goldman Sachs — global head of commodities trading and money-market businesses; previously Chevron"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Capital formation and disclosed facilities (2022–2026)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "GridStor publishes no financial statements; no revenue, EBITDA or valuation appears in any source read."
+          },
+          {
+            "name": "Sponsor capital (Goldman Sachs Asset Management)",
+            "actual": "'GSAM has raised over $1 billion to invest in energy storage assets that GridStor will source and manage' (media kit, June 2026); GSAM 'evaluating opportunities to invest over US$1 billion' in US storage (Energy-Storage.news, 2023); fund vehicle 'Horizon Energy Storage' per trade press",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No fund name, commitment or ownership percentage appears on a company-authored page; lenders state GridStor 'is owned by funds managed by Goldman Sachs Asset Management'."
+          },
+          {
+            "name": "Goleta financing",
+            "actual": "USD 55 million NORD/LB debt (June 2023); long-term debt from NORD/LB and Mitsubishi HC Capital America; ITC sold to J.P. Morgan (March 2024, amount undisclosed)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company and lender releases."
+          },
+          {
+            "name": "Hidden Lakes financing",
+            "actual": "USD 74 million led by First Citizens Bank (March 2025); USD 86 million ITC transfer to Foss & Company (November 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lender and buyer releases."
+          },
+          {
+            "name": "Corporate development facility",
+            "actual": "USD 50 million letter-of-credit facility with NORD/LB (September 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release."
+          },
+          {
+            "name": "Gunnar financing",
+            "actual": "USD 120 million construction and tax-equity bridge loans and letters of credit from NORD/LB and Siemens Financial Services (March 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company and lender releases."
+          },
+          {
+            "name": "Operating and contracted capacity (company)",
+            "actual": "'280 MW / 600MWh in operation; 250 MW / 700 MWh under construction' (June 2026); 'manages 530 MW, 1,300 MWh' (May 2026 boilerplate)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company statements; Goleta 60 + Hidden Lakes 220 operating, Gunnar 150 + White Tank 100 under construction.",
+            "kpi": "mw-energized",
+            "qty": 280
+          }
+        ],
+        "commentary": "A sponsor-owned private company: the only numbers are facility sizes stated by lenders and credit buyers, and a sponsor fundraising figure from the company's own media kit. 'Expected' fields are empty because no consensus or guidance exists."
+      }
+    ],
+    "commentary": "About USD 385 million of disclosed debt, bridge and letter-of-credit facilities plus two credit transfers (one at USD 86 million, one undisclosed) against 530 MW of operating and under-construction batteries, all within a sponsor that says it raised more than USD 1 billion for the strategy and has 'deployed only a fraction'. The unknowns — fund commitment, ownership split, Axpo tenor, acquisition prices — are the ones a buyer of the platform would need."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that GridStor is a contracted storage owner, not a merchant specialist, and that the premise handed to this dossier is wrong. Basis: the SCE 17-year resource-adequacy contract at Goleta, the 20-year APS toll at White Tank, the Fortune 500 toll at Gunnar and the Axpo swap on Hidden Lakes are all stated by the company; the CEO describes growth as 'focused on contracted revenues'. Only the uncontracted 120 MW of Hidden Lakes is merchant, and the company built its commercial team to remove that exposure.",
+    "(High confidence) We assess that the sponsor is a fund managed by Goldman Sachs Asset Management's Sustainability and Infrastructure investing groups — named by trade press as Horizon Energy Storage — and that GridStor was created by that sponsor rather than founded and then funded. Basis: the company's own boilerplate and homepage, First Citizens' 'owned by funds managed by Goldman Sachs Asset Management', and Latitude Media's account of Goldman assembling the company around a pre-acquired Goleta project. Collection gap: no Goldman release, fund commitment or ownership percentage exists in public.",
+    "(High confidence) We assess that the growth model is late-stage acquisition — five purchases from four originators in eighteen months — financed project by project with one recurring lender and credit transfers, and that the sponsor's equity is not the binding constraint. Basis: the acquisition record, NORD/LB's four transactions, the CEO's June 2025 statement that only 'a fraction' of raised capital is deployed, and the hiring of a head of capital markets in November 2025.",
+    "(Moderate confidence) We assess that the markets are the Southwest, Texas and the central grid rather than CAISO alone, and that the 2022 Los Angeles Basin portfolio has largely stalled. Basis: the 2025–2026 acquisitions are in Texas, Oklahoma, Arizona and Colorado; Santa Fe Springs is the only Los Angeles project named since 2022 and has had no update since January 2024; the company's stated focus markets in May 2026 were Arizona, California and Oregon. Cuts against: the CEO still names California as a focus market, and the unnamed LA sites may simply be unreported.",
+    "(Moderate confidence) We assess that GridStor's procurement is deliberately un-committed: one confirmed OEM (Tesla at Goleta), an inherited design basis at White Tank reported by an analyst, and a stated pause on longer-dated purchases pending Treasury FEOC guidance. Basis: Dedrick's February 2026 statements and the absence of any supplier name for Hidden Lakes or Gunnar despite a signed battery supply agreement. For a supplier this is an open procurement with a named CTO, SVP EPC and Director of Procurement.",
+    "(Low confidence) Trade press and the company's boilerplate say GridStor is pursuing behind-the-meter and front-of-meter deals with hyperscalers and data-centre leasing companies; no such contract has been announced and the Oklahoma project is the only asset sited on data-centre load. Treat the data-centre customer segment as stated intent.",
+    "Indicators to watch: (1) Gunnar's commercial operation by end-2026 and the naming of its Fortune 500 counterparty — a slip past first half 2027 would show the second Texas build repeating Hidden Lakes' delay; (2) an offtake announcement for Birdseye (Xcel Energy's Colorado resource plan is the natural route) or for the Oklahoma project — either would confirm that acquired projects are contracted before construction; (3) a supplier name for Hidden Lakes, Gunnar or White Tank, or a post-guidance procurement announcement — the first would close the dossier's largest gap; (4) the pipeline figure in the next boilerplate — a return to 'over 5 GW' or a further cut would show whether the 2025 step-down was a re-scoping or a sale; (5) any Goldman Sachs release naming the fund, a co-investor, a continuation vehicle or a platform sale — the sponsor's exit route is undisclosed; (6) the Axpo swap's tenor or a second swap — a repeat would confirm the structure as a financing tool rather than a one-off."
+  ],
+  "sources": [
+    {
+      "label": "GridStor — New Project Media analysis on BESS asset-sale obstacles (reposted)",
+      "url": "https://gridstor.com/new-project-media-analysis-electrification-creating-massive-demand-for-bess-projects-but-obstacles-remain-in-asset-sales/",
+      "date": "2026-06-09"
+    },
+    {
+      "label": "GridStor — Denver Business Journal: Goldman Sachs-owned company plans 199 MW battery station (reposted; Riverdale substation)",
+      "url": "https://gridstor.com/denver-business-journal-goldman-sachs-owned-company-plans-199-megawatt-battery-station/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "E&E News — grid batteries get record boost from data centres; Burwen on FEOC-compliant supply",
+      "url": "https://www.eenews.net/articles/grid-batteries-get-record-boost-from-data-centers/",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Yahoo Finance / Power Technology — GridStor buys Accelergen's Birdseye project (about 115 jobs; terms undisclosed)",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/gridstor-buys-accelergen-birdseye-battery-082710789.html",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "GridStor — acquires the 199 MW / 796 MWh Birdseye project in Adams County, Colorado from Accelergen",
+      "url": "https://gridstor.com/gridstor-acquires-colorado-battery-energy-storage-project-from-accelergen/",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "Investing.com — GridStor acquires 199 MW battery storage project in Colorado",
+      "url": "https://www.investing.com/news/company-news/gridstor-acquires-199-mw-battery-storage-project-in-colorado-93CH-4701435",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "GridStor — S&P Global: surging data-centre demand (reposted; Taylor on hyperscaler and BTM deals, focus markets)",
+      "url": "https://gridstor.com/sp-global-surging-us-data-center-power-demand-tests-sustainability-targets/",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "Energy-Storage.news — GridStor and Axpo execute a revenue swap on the 440 MWh Hidden Lakes battery",
+      "url": "https://www.energy-storage.news/gridstor-axpo-execute-energy-storage-revenue-swap-agreement-for-440mwh-texas-bess/",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "GridStor — GridStor and Axpo announce battery storage swap agreement (100 MW Energy Storage Agreement)",
+      "url": "https://gridstor.com/gridstor-and-axpo-announce-battery-storage-swap-agreement/",
+      "date": "2026-04-08"
+    },
+    {
+      "label": "Yahoo Finance (Business Wire mirror) — GridStor and Axpo battery storage swap agreement",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/gridstor-axpo-announce-battery-storage-130000135.html",
+      "date": "2026-04-08"
+    },
+    {
+      "label": "Holland & Hart — advises GridStor on the EPC agreement for Gunnar (contractor unnamed)",
+      "url": "https://www.hollandhart.com/holland-hart-advises-gridstor-on-epc-agreement-for-battery-energy-storage-project-in-texas",
+      "date": "2026-04-06"
+    },
+    {
+      "label": "Energy-Storage.news — US financing roundup: GridStor's USD 120 million for Gunnar; 'major equipment already onshore'",
+      "url": "https://www.energy-storage.news/us-roundup-over-us2-billion-of-financing-updates-from-arevon-primergy-and-gridstor/",
+      "date": "2026-03-12"
+    },
+    {
+      "label": "Yahoo Finance / Power Technology — GridStor secures USD 120 million for the Gunnar Reliability Project",
+      "url": "https://finance.yahoo.com/news/gridstor-secures-120m-gunnar-reliability-100824627.html",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "GridStor — NORD/LB, Siemens Financial Services and GridStor close a USD 120 million financing for Gunnar",
+      "url": "https://gridstor.com/nord-lb-siemens-financial-services-and-gridstor-announce-close-of-120-million-financing-agreement/",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "Renewable Energy Magazine — GridStor closes USD 120 million financing for Texas BESS (Taylor, Martinez, Fuller quotes)",
+      "url": "https://www.renewableenergymagazine.com/storage/gridstora-announces-close-of-120-million-financing-20260309",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "Energy-Storage.news — GridStor warns of industry slowdown as Treasury guidance delays BESS decisions (Dedrick)",
+      "url": "https://www.energy-storage.news/gridstor-warns-of-industry-slowdown-as-us-treasury-guidance-delays-bess-decisions/",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "Modo Energy — ERCOT annual buildout report: 14 GW entering 2026; GridStor among pure-play developers",
+      "url": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+      "date": "2026-02-02"
+    },
+    {
+      "label": "Texas Politics — GridStor begins construction on Gunnar",
+      "url": "https://texaspolitics.com/2025/12/22/gridstor-begins-construction-on-major-battery-storage-project/",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Energy-Storage.news — GridStor executes tolling agreement for Texas BESS (Fortune 500 counterparty)",
+      "url": "https://www.energy-storage.news/gridstor-executes-tolling-agreement-for-texas-bess-cps-energy-launches-500mw-bess-rfp/",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "GridStor — tolling agreement and start of construction for the Gunnar Reliability Project",
+      "url": "https://gridstor.com/gridstor-announces-tolling-agreement-and-start-of-construction-for-texas-battery-energy-storage-project/",
+      "date": "2025-12-16"
+    },
+    {
+      "label": "GridStor — Gunnar Reliability Project page (Closner substation, 9.7 acres, end-2026)",
+      "url": "https://gridstor.com/project/gunnar-reliability-project/",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "Yahoo Finance (Business Wire mirror) — GridStor names Spencer Mash SVP of Finance and Head of Capital Markets",
+      "url": "https://finance.yahoo.com/news/gridstor-names-spencer-mash-senior-155100818.html",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "GridStor — names Spencer Mash Senior Vice President to advance financing",
+      "url": "https://gridstor.com/gridstor-names-spencer-mash-as-senior-vice-president-to-advance-financing-of-battery-storage-projects/",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "PR Newswire — Foss & Company partners with GridStor on the USD 86 million Hidden Lakes tax-credit transfer",
+      "url": "https://www.prnewswire.com/news-releases/foss--company-partners-with-gridstor-on-86-million-tax-credit-transfer-for-hidden-lakes-battery-storage-project-302597211.html",
+      "date": "2025-11-11"
+    },
+    {
+      "label": "GridStor — Foss & Company USD 86 million tax-credit transfer for Hidden Lakes",
+      "url": "https://gridstor.com/foss-company-partners-with-gridstor-on-86-million-tax-credit-transfer-for-hidden-lakes-battery-storage-project/",
+      "date": "2025-11-11"
+    },
+    {
+      "label": "KGTX 7 News — GridStor dedicates the 220 MW Hidden Lakes facility in Dickinson",
+      "url": "https://kgtx7news.com/2025/11/05/gridstor-dedicates-220-mw-hidden-lakes-battery-storage-facility-in-texas/",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "GridStor — celebrates completion of Texas's newest battery storage facility (Hidden Lakes 'now in operation')",
+      "url": "https://gridstor.com/gridstor-celebrates-completion-of-texass-newest-battery-storage-facility/",
+      "date": "2025-11-04"
+    },
+    {
+      "label": "Yahoo Finance (Business Wire mirror) — GridStor celebrates completion of Hidden Lakes",
+      "url": "https://finance.yahoo.com/news/gridstor-celebrates-completion-texas-newest-173300362.html",
+      "date": "2025-11-04"
+    },
+    {
+      "label": "Modo Energy — ERCOT buildout report Q3 2025: Hidden Lakes ('Evelyn') second-largest addition",
+      "url": "https://modoenergy.com/research/en/ercot-battery-buildout-report-q3-2025",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "Enerdatics — GridStor's White Tank acquisition; about 120 e-STORAGE SolBank 3.0 enclosures",
+      "url": "https://www.enerdatics.com/insights/gridstor-expands-energy-storage-footprint-with-acquisition-of-white-tank-bess-in-arizona",
+      "date": "2025-09-21"
+    },
+    {
+      "label": "Energy Global — GridStor acquires Arizona BESS from Strata Clean Energy (20-year APS toll)",
+      "url": "https://www.energyglobal.com/energy-storage/19092025/gridstor-acquires-arizona-bess-from-strata-clean-energy/",
+      "date": "2025-09-19"
+    },
+    {
+      "label": "GridStor — acquires the White Tank project from Strata Clean Energy; 20-year APS tolling agreement",
+      "url": "https://gridstor.com/gridstor-acquires-arizona-battery-energy-storage-project-from-strata-clean-energy/",
+      "date": "2025-09-18"
+    },
+    {
+      "label": "Nasdaq (Business Wire mirror) — GridStor acquires Arizona battery project from Strata Clean Energy",
+      "url": "https://www.nasdaq.com/press-release/gridstor-acquires-arizona-battery-energy-storage-project-strata-clean-energy-2025-09",
+      "date": "2025-09-18"
+    },
+    {
+      "label": "In Business Phoenix — energy storage developer acquires West Valley battery project",
+      "url": "https://inbusinessphx.com/growth-enterprise/energy-storage-developer-acquires-west-valley-battery-project",
+      "date": "2025-09-18"
+    },
+    {
+      "label": "GridStor — NORD/LB USD 50 million development letter-of-credit facility; 450 MW acquired year to date",
+      "url": "https://gridstor.com/nord-lb-and-gridstor-announce-completion-of-50-million-letter-of-credit-facility/",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Batteries News (Business Wire mirror) — NORD/LB and GridStor USD 50 million letter-of-credit facility",
+      "url": "https://batteriesnews.com/battery-storage-for-data-centers-nord-lb-and-gridstor-announce-completion-of-50-million-letter-of-credit-facility/",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Investing.com — GridStor secures USD 50 million letter of credit from NORD/LB",
+      "url": "https://www.investing.com/news/company-news/gridstor-secures-50-million-letter-of-credit-from-nordlb-93CH-4224450",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Solar Power World — energy storage spared by the OBBBA (48E through 2033; FEOC from 2026)",
+      "url": "https://www.solarpowerworldonline.com/2025/07/hr1-spares-energy-storage-but-can-it-thrive-alone/",
+      "date": "2025-07-28"
+    },
+    {
+      "label": "GridStor — appoints Lance Titus Chief Commercial Officer",
+      "url": "https://gridstor.com/gridstor-appoints-lance-titus-as-chief-commercial-officer-to-drive-portfolio-wide-power-marketing-and-trading-strategy/",
+      "date": "2025-07-08"
+    },
+    {
+      "label": "Yahoo Finance (Business Wire mirror) — GridStor appoints Lance Titus CCO",
+      "url": "https://finance.yahoo.com/news/gridstor-appoints-lance-titus-chief-130000393.html",
+      "date": "2025-07-08"
+    },
+    {
+      "label": "GridStor — Portland Business Journal: 'in wake of failures, Portland CEO on the state of energy storage' (reposted; capital 'only a fraction' deployed)",
+      "url": "https://gridstor.com/portland-biz-journal-in-wake-of-failures-portland-ceo-on-the-state-of-energy-storage/",
+      "date": "2025-06-24"
+    },
+    {
+      "label": "Modo Energy — US battery energy storage operators and optimisers (GridStor not listed)",
+      "url": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "GridStor — promotes Daniel Dedrick to Chief Technology Officer; Tony Song SVP of EPC",
+      "url": "https://gridstor.com/gridstor-promotes-daniel-dedrick-to-chief-technology-officer-creating-new-role-to-drive-growth/",
+      "date": "2025-04-10"
+    },
+    {
+      "label": "First Citizens Bank — leads USD 74 million financing for GridStor's Hidden Lakes project",
+      "url": "https://newsroom.firstcitizens.com/2025-03-06-First-Citizens-Bank-Leads-74-Million-Financing-for-GridStors-Hidden-Lakes-Battery-Storage-Project-in-Texas",
+      "date": "2025-03-06"
+    },
+    {
+      "label": "GridStor — First Citizens Bank leads USD 74 million financing for Hidden Lakes",
+      "url": "https://gridstor.com/first-citizens-bank-leads-74-million-financing-for-gridstors-hidden-lakes-battery-storage-project-in-texas/",
+      "date": "2025-03-06"
+    },
+    {
+      "label": "Mercom — GridStor acquires 150 MW battery project from Balanced Rock Power",
+      "url": "https://mercomcapital.com/gridstor-acquires-150-mw-battery-energy-storage-project-from-balanced-rock-power/",
+      "date": "2025-02-06"
+    },
+    {
+      "label": "Energy-Storage.news — GridStor acquires 150 MW / 300 MWh Texas BESS from BRP (Hidalgo County peers)",
+      "url": "https://www.energy-storage.news/gridstor-acquires-150mw-300mwh-texas-bess-from-brp/",
+      "date": "2025-02-04"
+    },
+    {
+      "label": "SolarQuarter — GridStor secures Texas battery storage project",
+      "url": "https://solarquarter.com/2025/02/04/gridstor-secures-texas-battery-storage-project-strengthening-clean-energy-push/",
+      "date": "2025-02-04"
+    },
+    {
+      "label": "GridStor — acquires a 150 MW / 300 MWh Texas project (Gunnar) from Balanced Rock Power",
+      "url": "https://gridstor.com/gridstor-announces-acquisition-of-texas-battery-energy-storage-project-from-balanced-rock-power/",
+      "date": "2025-02-03"
+    },
+    {
+      "label": "Latitude Media — how GridStor proved a new grid-scale storage financing strategy (origin; ITC transfer price)",
+      "url": "https://www.latitudemedia.com/news/how-gridstor-proved-a-new-grid-scale-storage-financing-strategy/",
+      "date": "2025-01-30"
+    },
+    {
+      "label": "Energy-Storage.news — esVolta and Captona transact; GridStor buys in Arizona (Capacity Power Group)",
+      "url": "https://www.energy-storage.news/esvolta-partners-with-captona-for-1gwh-texas-bess-project/",
+      "date": "2025-01-28"
+    },
+    {
+      "label": "GridStor — acquires a 100 MW / 400 MWh Arizona project from Capacity Power Group",
+      "url": "https://gridstor.com/gridstor-announces-acquisition-of-arizona-battery-energy-storage-project-from-capacity-power-group/",
+      "date": "2025-01-27"
+    },
+    {
+      "label": "Holland & Hart — advises GridStor on the Hidden Lakes EPC and battery supply agreements (counterparties unnamed)",
+      "url": "https://www.hollandhart.com/holland-hart-advises-gridstor-on-development-of-battery-energy-storage-project-in-texas",
+      "date": "2025-01-27"
+    },
+    {
+      "label": "Renewable Energy Magazine — GridStor acquires Oklahoma BESS project to feed data-centre demand",
+      "url": "https://www.renewableenergymagazine.com/storage/gridstor-acquires-oklahoma-bess-project-to-feed-20250124",
+      "date": "2025-01-24"
+    },
+    {
+      "label": "Energy-Storage.news — GridStor acquires 200 MW / 800 MWh Oklahoma BESS from BMES",
+      "url": "https://www.energy-storage.news/gridstor-acquires-200mw-800mwh-oklahoma-bess-from-bmes/",
+      "date": "2025-01-21"
+    },
+    {
+      "label": "GridStor — acquires a 200 MW / 800 MWh Oklahoma project from Black Mountain Energy Storage",
+      "url": "https://gridstor.com/gridstor-announces-acquisition-of-oklahoma-battery-energy-storage-project-from-black-mountain-energy-storage/",
+      "date": "2025-01-16"
+    },
+    {
+      "label": "Advanced Power Alliance (Business Wire mirror) — GridStor commences construction on the Galveston County project",
+      "url": "https://poweralliance.org/2024/11/18/gridstor-commences-construction-on-galveston-county-battery-energy-storage-project/",
+      "date": "2024-11-18"
+    },
+    {
+      "label": "Energy-Storage.news — Goldman Sachs-backed GridStor builds 440 MWh Texas BESS (downsized from 900 MWh)",
+      "url": "https://www.energy-storage.news/goldman-sachs-backed-developer-gridstor-builds-440mwh-texas-bess-project/",
+      "date": "2024-10-22"
+    },
+    {
+      "label": "GridStor — Hidden Lakes Reliability Project page (220 MW, 15 acres, TNMP substation, operations 2025)",
+      "url": "https://gridstor.com/project/hidden-lakes/",
+      "date": "2024-10-18"
+    },
+    {
+      "label": "GridStor — commences construction on the Galveston County project (Hidden Lakes, formerly Evelyn)",
+      "url": "https://gridstor.com/gridstor-commences-construction-on-galveston-county-battery-energy-storage-project/",
+      "date": "2024-10-17"
+    },
+    {
+      "label": "Latitude Media (industry news) — GridStor announces close of tax-credit sale for Goleta (J.P. Morgan)",
+      "url": "https://www.latitudemedia.com/industry-news/gridstor-announces-close-of-tax-credit-sale-for-goleta-energy-storage-project/",
+      "date": "2024-05-22"
+    },
+    {
+      "label": "Energy-Storage.news — Goldman Sachs-backed GridStor makes its first ERCOT project acquisition (Evelyn, 450 MW / 900 MWh)",
+      "url": "https://www.energy-storage.news/goldman-sachs-bess-developer-gridstor-ercot-project-acquisition/",
+      "date": "2024-03-12"
+    },
+    {
+      "label": "GridStor — acquisition of the Galveston County project from Balanced Rock Power (up to 450 MW / 900 MWh)",
+      "url": "https://gridstor.com/gridstor-announces-acquistion-of-galveston-county-battery-energy-storage-project-from-balanced-rock-power/",
+      "date": "2024-03-07"
+    },
+    {
+      "label": "GridStor — close of tax-credit sale for Goleta Energy Storage (J.P. Morgan; NORD/LB and Mitsubishi HC Capital America debt)",
+      "url": "https://gridstor.com/gridstor-announces-close-of-tax-credit-sale-for-goleta-energy-storage-project/",
+      "date": "2024-03-05"
+    },
+    {
+      "label": "GridStor — Santa Fe Springs creates a path to revitalising a former refinery site (90 MW)",
+      "url": "https://gridstor.com/santa-fe-springs-creates-path-to-revitalizing-former-refinery-site-with-state-of-the-art-battery-storage-facility/",
+      "date": "2024-01-12"
+    },
+    {
+      "label": "GridStor — coverage roundup: Goleta dedication in the press (Horizon Energy Storage named)",
+      "url": "https://gridstor.com/coverage-roundup-goleta-energy-storage-dedication-in-the-press/",
+      "date": "2024-01-10"
+    },
+    {
+      "label": "KCBX — energy storage facility now operating in Goleta (city permit and environmental review)",
+      "url": "https://www.kcbx.org/environment-and-energy/2023-12-27/energy-storage-facility-now-operating-in-goleta",
+      "date": "2023-12-27"
+    },
+    {
+      "label": "EnergyTech — GridStor unveils the 60 MW Goleta facility (NORD/LB USD 55 million; SCE resource adequacy)",
+      "url": "https://www.energytech.com/energy-storage/article/21278763/gridstor-unveils-60-mw-lithium-ion-battery-storage-facility-in-santa-barbara-county",
+      "date": "2023-12-07"
+    },
+    {
+      "label": "Energy-Storage.news — GridStor starts commercial operations at the 60 MW / 160 MWh Goleta facility",
+      "url": "https://www.energy-storage.news/gridstor-starts-commercial-operations-at-60mw-160mwh-california-battery-storage-facility/",
+      "date": "2023-12-06"
+    },
+    {
+      "label": "GridStor — celebrates completion of California's newest battery storage facility (Goleta)",
+      "url": "https://gridstor.com/gridstor-celebrates-completion-of-californias-newest-battery-storage-facility/",
+      "date": "2023-12-05"
+    },
+    {
+      "label": "Noozhawk — GridStor launches the Goleta facility, 'largest power resource in the county'",
+      "url": "https://www.noozhawk.com/gridstor-launches-goleta-energy-storage-facility-largest-power-resource-in-the-county/",
+      "date": "2023-12-05"
+    },
+    {
+      "label": "Santa Barbara Independent — Goleta flips the switch on the GridStor facility",
+      "url": "https://www.independent.com/2023/12/01/goleta-flips-the-switch-on-gridstor-battery-storage-facility/",
+      "date": "2023-12-01"
+    },
+    {
+      "label": "GridStor — Goleta Energy Storage project page (44 Tesla units, 66 kV interconnection, 17-year SCE contract)",
+      "url": "https://gridstor.com/project/goleta-facility/",
+      "date": "2023-09-08"
+    },
+    {
+      "label": "GridStor — 'From the CEO: the difference a year makes' (IRA anniversary; 'billions of dollars')",
+      "url": "https://gridstor.com/from-the-ceo-the-difference-a-year-makes-reflections-on-the-anniversary-of-the-inflation-reduction-act/",
+      "date": "2023-08-16"
+    },
+    {
+      "label": "GridStor — names Frank Burkhartsmeyer Chief Financial Officer",
+      "url": "https://gridstor.com/gridstor-names-frank-burkhartsmeyer-chief-financial-officer/",
+      "date": "2023-08-02"
+    },
+    {
+      "label": "Stocktitan (Business Wire mirror) — GridStor names Frank Burkhartsmeyer CFO",
+      "url": "https://www.stocktitan.net/news/GS/grid-stor-names-frank-burkhartsmeyer-chief-financial-vky7cqdzmp5c.html",
+      "date": "2023-08-02"
+    },
+    {
+      "label": "Noozhawk — GridStor begins construction on the Goleta facility (44 Tesla LFP batteries)",
+      "url": "https://www.noozhawk.com/gridstor-begins-construction-on-battery-storage-facility-in-goleta/",
+      "date": "2023-06-15"
+    },
+    {
+      "label": "GridStor — NORD/LB and GridStor close a USD 55 million debt financing for Goleta",
+      "url": "https://gridstor.com/nord-lb-and-gridstor-announce-close-of-55-million-debt-financing-agreement/",
+      "date": "2023-06-15"
+    },
+    {
+      "label": "Energy-Storage.news — Goldman Sachs-backed startup GridStor building its first project in California (Horizon Energy Storage; SCE 40 MW RA)",
+      "url": "https://www.energy-storage.news/goldman-sachs-backed-standalone-energy-storage-startup-gridstor-building-first-project-in-california/",
+      "date": "2023-06-06"
+    },
+    {
+      "label": "GridStor — 'The next chapter': battery installation begins at Goleta",
+      "url": "https://gridstor.com/the-next-chapter-gridstor-begins-installing-emission-free-batteries-at-new-goleta-facility-site/",
+      "date": "2023-05-08"
+    },
+    {
+      "label": "Goldman Sachs Asset Management — final close of Horizon Environment & Climate Solutions I (no GridStor mention)",
+      "url": "https://am.gs.com/en-us/institutions/news/press-release/2023/Goldman-Sachs-Asset-Management-Completes-Final-Close-of-Horizon-Environment-and-Climate-Solutions-I",
+      "date": "2023-01-10"
+    },
+    {
+      "label": "GridStor — featured in the Goldman Sachs 2022 Sustainability Report",
+      "url": "https://gridstor.com/gridstor-featured-in-goldman-sachs-sustainability-report/",
+      "date": "2022-12-20"
+    },
+    {
+      "label": "GridStor — Portland Business Journal: why Goldman Sachs is investing in a Portland storage startup (reposted)",
+      "url": "https://gridstor.com/why-goldman-sachs-is-investing-millions-in-a-portland-energy-storage-startup/",
+      "date": "2022-11-11"
+    },
+    {
+      "label": "T&D World — GridStor buys Los Angeles Basin projects from Upstream Energy (500 MW / 2,000 MWh)",
+      "url": "https://www.tdworld.com/distributed-energy-resources/article/21253735/battery-storage-firm-gridstor-buys-los-angeles-basin-projects-from-upstream-energy",
+      "date": "2022-10-31"
+    },
+    {
+      "label": "01net (Business Wire mirror) — GridStor acquires the LA Basin portfolio from Upstream Energy",
+      "url": "https://www.01net.it/battery-energy-storage-developer-gridstor-acquires-portfolio-of-la-basin-projects-from-upstream-energy/",
+      "date": "2022-10-28"
+    },
+    {
+      "label": "Energy-Storage.news — Goldman Sachs-backed GridStor buys 2 GWh of California projects from Upstream Energy",
+      "url": "https://www.energy-storage.news/goldman-sachs-backed-gridstor-buys-2gwh-of-california-projects-from-upstream-energy/",
+      "date": "2022-10-27"
+    },
+    {
+      "label": "City of Goleta Legistar — file 19-554: 6864/6868 Cortona Drive 60 MW battery facility, design review",
+      "url": "https://goleta.legistar.com/LegislationDetail.aspx?GUID=C8A31625-B6D6-493A-B55F-DF6092A855CA&ID=4217409",
+      "date": "2019-11-12"
+    },
+    {
+      "label": "GridStor — home page ('at a glance': 280 MW / 600 MWh operating, 250 MW / 700 MWh under construction, 3+ GW pipeline)",
+      "url": "https://gridstor.com/"
+    },
+    {
+      "label": "GridStor — about us (founded 2022; 'investment from a fund managed by Goldman Sachs Asset Management')",
+      "url": "https://gridstor.com/about-us/"
+    },
+    {
+      "label": "GridStor — projects page (pipeline list; 'we operate our projects as an independent power producer')",
+      "url": "https://gridstor.com/projects/"
+    },
+    {
+      "label": "GridStor — White Tank Reliability Project page (Colter substation, first half 2027)",
+      "url": "https://gridstor.com/project/white-tank-reliability-project/"
+    },
+    {
+      "label": "GridStor — team page (board, executive team, 68 profiles)",
+      "url": "https://gridstor.com/team/"
+    },
+    {
+      "label": "GridStor — contact page (Portland headquarters address)",
+      "url": "https://gridstor.com/contact/"
+    },
+    {
+      "label": "GridStor — media kit, June 2026 ('nearly 60 employees'; 'GSAM has raised over $1 billion')",
+      "url": "https://gridstor.com/wp-content/uploads/2026/06/GridStor-Media-Kit_June-2026.pdf"
+    },
+    {
+      "label": "GridStor — 'OB3 and market uncertainty' (VP Finance on safe-harbouring, tolling structures, FEOC, tariffs)",
+      "url": "https://gridstor.com/ob3-and-market-uncertainty-has-put-more-pressure-than-ever-on-clean-energy-assets/"
+    },
+    {
+      "label": "Leyline Renewable Capital — asset sale: GridStor acquires Birdseye (Riverdale 230 kV point of interconnection)",
+      "url": "https://www.leylinecapital.com/news/asset-sale-gridstor-acquires-199-mw-birdseye-storage-project-in-adams-county-co"
+    },
+    {
+      "label": "Heatmap — how a small community blocked battery storage in over half of Los Angeles County",
+      "url": "https://heatmap.news/plus/the-fight/spotlight/los-angeles-battery-storage-acton"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

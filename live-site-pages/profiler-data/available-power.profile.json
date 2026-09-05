@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 7,
+  "slug": "available-power",
+  "name": "Available Power, LLC (a business unit of Available Infrastructure)",
+  "shortName": "Available Power",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://availableinfrastructure.com/",
+  "headquarters": "Parent Available Infrastructure: Tysons Corner, Northern Virginia ('along the Washington, DC, beltway'); Available Power releases were datelined Austin, Texas (2022) and Boulder, Colorado (2023) — no street address is published",
+  "founded": 2020,
+  "employees": "Not disclosed; the parent's team page lists 29 names (September 2026), three of them tagged Available Power; The Org lists the unit at '1-10 employees'",
+  "ownership": {
+    "type": "subsidiary"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Available Power is not a CAISO/ERCOT merchant storage specialist and, on the public record, owns no operating battery. It is a Texas-only developer that sells distribution-connected 9.9 MW / 20 MWh batteries and one 100 MW / 200 MWh transmission-connected project at notice-to-proceed — 'we sell the projects at NTP' (VP Business Development Alex Krass, April 2023) — with Linxon, the Hitachi Energy and AtkinsRéalis joint venture, as the turnkey EPC that carries the asset to operation for a financial buyer. No sponsor, fund, lender, tax-equity investor or offtaker is named in any release, filing or article read; the only dollar figure attached to the storage business is Stem's February 2022 statement that a 100-site, 1 GW / 2 GWh Texas portfolio was 'expected to have a value of more than $500 million'. The last storage-side disclosure is March 2024 — Greenport (Bastrop County, ERCOT) 'at NTP' and being auctioned through LevelTen with a February 2026 operating date, and 'three assets' of 9.9 MW 'recently sold' to unnamed buyers. Since July 2025 the parent trades as Available Infrastructure, a Northern Virginia edge-AI and zero-trust cybersecurity company (SanQtum, a '$5 billion Project Qestrel' of 1,000 micro data centres with IBM, Crown Castle and Datavault AI), and 'Available Power' is one of its two business units; nothing ties the micro data centres to Texas batteries.\n\nBACKGROUND. Founded in early 2020 by brothers Daniel Gregory (CEO, ex-Shell head of microgrid solutions) and Benjamin Gregory (President, ex-Shell) with Hervé Touati (Executive Chairman, ex-Shell New Energies and first CEO of the Energy Web Foundation), the company described itself as 'a pure-play developer bringing de-risked, investment-grade assets to the modern power grid', partnering 'with real estate portfolio owners to site distributed energy systems such as batteries' on leased land, 'currently focused on the Texas market'. Milestones: Stem selected to supply hardware and Athena software for up to 100 front-of-meter sites (February 2022); the 100 MW / 200 MWh Greenport project at the proposed GREENPORT International Airport and Technology Center near Austin (September 2022, commercial 'mid-2024', then Q1 2025, then February 2026); a Linxon strategic partnership on a '1,000+ megawatt' ERCOT pipeline, 'an estimated 75%' of it distribution-connected at 'an average size of 10 MW / 20 MWh' (February 2023), and Linxon's exclusivity agreement for Greenport's 345 kV substation and balance of plant (May 2023); a joint venture with CleanCapital, which was to bring 'project financing, development, and construction expertise' (February 2024). Revenue on the batteries was described as merchant — energy trading plus ERCOT responsive-reserve and fast-frequency-response services.\n\nCollection gap: the corporate site's storage pages are gone (available-power.com now redirects to the parent; the 'what we do' and 'Bedrock' pages return 404), the Wayback Machine is unreachable from this environment, and no buyer of any Available Power project has ever been named by either side. The premise handed to this dossier is corrected on geography (Texas, not California), model (develop-and-sell, not owner-operator), sponsor (none named) and status (no operating fleet documented). Cleanview's September 2026 ERCOT operating list and Modo Energy's February 2026 owner report do not name Available Power.",
+  "ecosystemRole": "Available Power is the corpus's example of the sub-10 MW 'distributed play' in ERCOT — batteries sized just under the threshold at which a project must enter ERCOT's full interconnection study, sited on leased commercial land, packaged with an EPC and sold at notice-to-proceed to financial buyers who own but do not develop. It sits upstream of owners like GridStor and Spearmint in the value chain and, since 2025, inside a parent whose business is edge data centres rather than power.",
+  "productsAndServices": [
+    {
+      "name": "Distribution-connected 9.9 MW / 20 MWh batteries — developed to notice-to-proceed and sold",
+      "category": "Development — distribution-connected BESS (develop-and-sell)",
+      "description": "The core product: two-hour lithium-ion batteries of 9.9 MW on leased real-estate sites in Texas, sized under 10 MW so that, in Krass's words, 'you can skip a part of the interconnection process with ERCOT ... so your time to market is quicker'. Linxon's February 2023 release put the pipeline at '1,000+ megawatt' with 'an estimated 75%' distribution-connected at an average 10 MW / 20 MWh; Energy-Storage.news in April 2023 described 300 MW / 600 MWh of near-term projects — Greenport plus 'ten 9.9MW projects' — expected to reach NTP in 2023 and operate in 2024. The company sells at NTP 'but with the Linxon relationship, we have the contracts, the equipment procured and everything in place, so it's sort of a turnkey approach to the asset buyer', targeting 'traditional financial capital partners versus someone who might have an EPC relationship'. By March 2024 'the firm recently sold three assets this size'; buyers, prices and counties were never disclosed.",
+      "highlights": [
+        "Krass (April 2023): 'Two hour duration is the sweet spot ... going to three or four you really get hammered on the Capex'",
+        "Gregory (March 2024): a 'manufacturing-like, standardised approach to development ... we might leave some money on the table but we can do much more volume'; 'A project that was at 12% IRR last year, is now at 14-15% IRR because of the BESS price falls'",
+        "Stem (February 2022): exclusive rights to supply Athena software at 100 front-of-meter Texas sites, hardware included, 'beginning with deployment of the first 20 systems by early 2023'; no delivery was ever reported",
+        "Peer set for the sub-10 MW segment per Energy-Storage.news (March 2026): Bimergen (eight 9.9 MW projects bought from Aggreko), GoodPeak, ON.energy, Plus Power — Available Power is cited only for its 2023 interconnection quote"
+      ],
+      "positioning": "A volume developer of small standardised units where Spearmint, GridStor and Aypa build 100–400 MW transmission-connected projects; the edge is speed through the distribution interconnection path and a repeatable site-lease template, the cost is a buyer base of financial owners who need a turnkey EPC attached.",
+      "soldThrough": "Sale at notice-to-proceed to financial buyers, with Linxon as EPC and equipment procurer carrying construction to operation; land leased from 'real estate portfolio owners'; merchant ERCOT revenue thereafter for the buyer.",
+      "targetSegments": [
+        "Infrastructure funds and financial owners without EPC relationships",
+        "Commercial real-estate portfolio owners (site hosts)"
+      ],
+      "roadmap": "None published since March 2024; the parent's news archive since then contains no storage release."
+    },
+    {
+      "name": "Greenport BESS — 100 MW / 200 MWh transmission-connected project",
+      "category": "Development — utility-scale BESS (at NTP, offered for sale)",
+      "description": "Announced 7 September 2022 with GREENPORT Energy: a 100 MW / 200 MWh front-of-meter lithium-ion battery on leased land at the proposed GREENPORT International Airport and Technology Center on the Colorado River about 15–17 miles from downtown Austin (Bastrop County per the airport's own materials), interconnecting at 345 kV; 'ground breaking late 2023, commercial deployment mid-2024'. Linxon's May 2023 exclusivity agreement covers 'a 345/34.5kV, 130 MVA step-up power transformer, 345kV AIS equipment, battery enclosures, inverter skid with coupling transformer, inverter control system/EMS, and station auxiliary supply system', with completion 'by Q1 2025'. In March 2024 Ben Gregory said 'Greenport is at NTP, and we're currently selling the project ... running an auction process, in coordination with LevelTen Energy', with equipment secured for a February 2026 operating date. No sale, financing, energisation or commissioning has been reported by any party since, and the airport campus itself 'remains unapproved with no scheduled construction date' per community-meeting coverage.",
+      "highlights": [
+        "The host campus was marketed as a home for data centres, research and 'government agencies with high-security requirements', with a biofuel combined-cycle plant 'that will eventually generate 800 MW' — the battery was grid-facing, not a behind-the-meter contract",
+        "Revenue model as described in 2022: wholesale energy plus ERCOT responsive reserve service and fast frequency response — no offtaker",
+        "Battery supplier never named: the Sungrow photograph in the March 2024 Energy-Storage.news article is captioned as another company's Texas project"
+      ],
+      "positioning": "The one transmission-scale project in a distribution-scale portfolio, and the only named asset; its fate is the test of whether the develop-and-sell model closed at 100 MW.",
+      "soldThrough": "Auction through the LevelTen Energy project marketplace (March 2024); Linxon EPC exclusivity attached.",
+      "targetSegments": [
+        "Project buyers in the pre-COD ERCOT market"
+      ],
+      "roadmap": "Stated operating date February 2026; no confirmation exists."
+    },
+    {
+      "name": "CleanCapital joint venture and the parent's edge data-centre business",
+      "category": "Corporate — JV and parent-level pivot",
+      "description": "In February 2024 Available Power and CleanCapital formed a joint venture 'for storage development' in which CleanCapital would 'provide project financing, development, and construction expertise' and Available Power 'market insights, technology, and engineering expertise to develop strategically located batteries' in Texas and 'emerging markets across the U.S.'; CleanCapital's near-term storage pipeline was 'over 500 MWh' and no JV capitalisation was disclosed. No project has been attributed to the venture since. From July 2025 the parent — Available Infrastructure, 'parent company to Available Networks and Available Power subsidiaries' — has issued only cybersecurity and edge-AI releases: SanQtum (July 2025), a US patent for a firewall gateway protecting distributed energy resources and EV charging (July 2025), IBM offering the product as SanQtum AI (December 2025), and Project Qestrel — 'nearly $5 billion in project CapEx at full buildout', 1,000 micro data-centre sites in 100 US cities with up to 48 GPUs each, with Crown Castle, IBM, Strata Expanse, RAVEL and Datavault AI (March 2026). Datavault AI's Q2 2026 results record SanQtum deployments in New York and Philadelphia and that no tokens had been sold for the announced '$QEST' tokenisation.",
+      "highlights": [
+        "CEO Dan Gregory (September 2026): the company 'was originally founded with an early focus on the energy sector, including minigrids, virtual power plants, and battery energy storage systems'",
+        "No release states that Available Power batteries supply or back the micro data-centre sites"
+      ],
+      "positioning": "A developer whose parent has moved its capital and identity to a different infrastructure class; for a storage supplier the unit is a dormant counterparty until a new project appears.",
+      "soldThrough": "Joint-venture development (CleanCapital); parent-level partnerships (IBM, Crown Castle, Datavault AI).",
+      "targetSegments": [
+        "Storage financiers (JV)",
+        "Enterprise and government edge-AI customers (parent)"
+      ],
+      "roadmap": "Project Qestrel: '30 cities online by early July 2026' and nationwide by end-2026 per the parent; no storage roadmap."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Project ledger — every project a source names, with status as stated (sources: company releases via EIN Presswire and PR Newswire, Linxon, Stem, Energy-Storage.news)",
+      "specs": [
+        {
+          "band": "At notice-to-proceed, offered for sale (no completion reported)",
+          "label": "Greenport BESS — GREENPORT International Airport and Technology Center, near Austin (Bastrop County), ERCOT",
+          "value": "100 MW / 200 MWh; two-hour; 345 kV interconnection ('345/34.5kV, 130 MVA step-up power transformer'); announced 7 September 2022; commercial 'mid-2024' → 'Q1 2025' (Linxon, May 2023) → 'February 2026' (March 2024); 'at NTP ... running an auction process' via LevelTen (March 2024); EPC Linxon; supplier not named; buyer not named"
+        },
+        {
+          "band": "Sold at NTP (buyers unnamed)",
+          "label": "Three 9.9 MW / 20 MWh distribution-connected projects, Texas",
+          "value": "'the firm recently sold three assets this size' (Energy-Storage.news, 28 March 2024); counties, buyers and prices not disclosed"
+        },
+        {
+          "band": "Announced pipeline",
+          "label": "Ten 9.9 MW / 20 MWh projects (2023)",
+          "value": "'ten 9.9MW projects' expected to reach NTP in 2023 and operate in 2024 (April 2023); fate of the seven unsold not reported"
+        },
+        {
+          "band": "Announced pipeline",
+          "label": "ERCOT pipeline with Linxon",
+          "value": "'1,000+ megawatt (1+ gigawatt) front-of-meter project pipeline'; 'an estimated 75% of the project pipeline comprises distribution-connected battery systems with an average size of 10 MW / 20 MWh each' (28 February 2023)"
+        },
+        {
+          "band": "Announced pipeline",
+          "label": "Stem portfolio (2022)",
+          "value": "'100 front-of-the-meter (FTM) sites throughout the state of Texas'; 'one gigawatt (GW), or two gigawatt-hours (GWh)'; 'value of more than $500 million'; 'first 20 systems by early 2023' (24 February 2022)"
+        }
+      ],
+      "notes": "Nothing is stated as operating under Available Power's ownership by the company or any third party; Cleanview's September 2026 ERCOT operating list and Modo Energy's 2025 owner report do not name it. Interconnection queue identifiers, county permits and tax-abatement agreements naming Available Power were not found."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-01",
+      "category": "partnership",
+      "headline": "Available Infrastructure partners with EarthSpark International to host minigrid data on its SanQtum edge platform; CEO recalls the company's founding 'focus on the energy sector, including ... battery energy storage systems'",
+      "read": "The parent's only 2026 statement that mentions batteries — in the past tense.",
+      "source": "https://availableinfrastructure.com/news/available-infrastructure-partners-with-earthspark-international-to-secure-rural-minigrids-and-bring-cutting-edge-compute-capability-to-global-energy-access-solutions-across-30-countries/"
+    },
+    {
+      "date": "2026-08-19",
+      "category": "financial",
+      "headline": "Datavault AI's Q2 2026 results: SanQtum deployments completed in New York and Philadelphia; 'no tokens sold or capital raised to date' for the $QEST programme",
+      "read": "The partner's filing is the only audited trace of the parent's new business, and it shows deployments, not revenue.",
+      "source": "https://ir.datavaultsite.com/news-events/press-releases/detail/488/datavault-ai-reports-second-quarter-2026-financial-results-and-provides-business-update-highlighting-progress-toward-commercialization-of-tokenization-and-data-monetization-platforms"
+    },
+    {
+      "date": "2026-07-17",
+      "category": "partnership",
+      "headline": "Datavault AI announces tokenisation of Available Infrastructure's Project Qestrel fleet — 'a potential $1 billion in $QEST utility tokens'; revenue 'split equally'",
+      "read": "A projection by a partner, not capital raised.",
+      "source": "https://ir.datavaultsite.com/news-events/press-releases/detail/476/datavault-ai-announces-tokenization-of-available-infrastructures-project-qestrel-fleet-creating-a-potential-1-billion-in-qest-utility-tokens-for-sovereign-cybersecure-edge-ai-super-compute"
+    },
+    {
+      "date": "2026-03-16",
+      "category": "corporate",
+      "headline": "Available Infrastructure announces the '$5B Project Qestrel' — 1,000 urban micro data-centre sites in 100 US cities by end-2026 with Crown Castle, IBM, Strata Expanse, RAVEL and Datavault AI",
+      "read": "The parent's capital plan is edge compute; batteries and Texas are absent from the release.",
+      "source": "https://availableinfrastructure.com/news/available-infrastructure-announces-5b-project-qestrel-with-fleet-of-1000-urban-neocloud-sites-deploying-nationwide-by-end-of-2026/"
+    },
+    {
+      "date": "2026-03-05",
+      "category": "market",
+      "headline": "Energy-Storage.news maps the ERCOT sub-10 MW segment — Bimergen, GoodPeak, ON.energy, Plus Power — and re-quotes Available Power's 2023 line on skipping part of ERCOT's interconnection process",
+      "read": "The company is now cited as the segment's explainer, not as a participant.",
+      "source": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/"
+    },
+    {
+      "date": "2026-02-02",
+      "category": "market",
+      "headline": "Modo Energy's ERCOT annual buildout report: 13.9 GW / 22.9 GWh entering 2026, 18 new owners in 2025 — Available Power not among them",
+      "read": "Independent confirmation that no Available Power-owned battery is operating in ERCOT.",
+      "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
+    },
+    {
+      "date": "2026-01-05",
+      "category": "partnership",
+      "headline": "Datavault AI and Available Infrastructure to scale a 'physical private edge cloud' to 100 US cities in 2026",
+      "read": "The first of the 2026 edge-AI releases; no energy content.",
+      "source": "https://ir.datavaultsite.com/news-events/press-releases/detail/406/datavault-ai-and-available-infrastructure-to-scale-physical-private-edge-cloud-to-deliver-powerful-zero-trust-cybersecurity-digital-twin-and-agentic-data-monetization-to-100-u-s-cities-in-2026"
+    },
+    {
+      "date": "2025-12-19",
+      "category": "product-launch",
+      "headline": "IBM offers Available Infrastructure's cybersecurity solution as 'SanQtum AI' protecting watsonx",
+      "read": "The parent becomes an IBM channel product.",
+      "source": "https://availableinfrastructure.com/news/available-infrastructure-cybersecurity-solution-now-protecting-watsonx-offered-by-ibm-as-sanqtum-ai/"
+    },
+    {
+      "date": "2025-12-05",
+      "category": "market",
+      "headline": "ERCOT goes live with Real-Time Co-optimization plus Batteries (RTC+B), modelling batteries as single state-of-charge resources",
+      "read": "The market redesign any buyer of Available Power's projects now operates under.",
+      "source": "https://www.ercot.com/news/release/12052025-ercot-goes-live"
+    },
+    {
+      "date": "2025-07-30",
+      "category": "corporate",
+      "headline": "Available Infrastructure awarded a US patent (12368696B2) for a firewall gateway protecting energy and other critical infrastructure; boilerplate names 'Available Networks and Available Power subsidiaries'",
+      "read": "The corporate structure in the parent's own words: Available Power is a subsidiary.",
+      "source": "https://availableinfrastructure.com/news/available-awarded-us-patent-for-cybersecurity-solution-firewall-gateway-protects-energy-and-other-critical-infrastructure/"
+    },
+    {
+      "date": "2025-07-03",
+      "category": "corporate",
+      "headline": "Available Infrastructure launches SanQtum from Tysons Corner; 'Available unites distinct business units — Available Networks and Available Power'",
+      "read": "The rebrand and relocation to Northern Virginia; the first release since the storage record went silent.",
+      "source": "https://www.prweb.com/releases/available-infrastructure-launches-sanqtum-a-first-of-a-kind-cybersecurity-and-edge-ai-solution-302497432.html"
+    },
+    {
+      "date": "2024-03-28",
+      "category": "financial",
+      "headline": "Ben Gregory: Greenport 'is at NTP, and we're currently selling the project' through a LevelTen auction; three 9.9 MW assets 'recently sold'; equipment secured for a February 2026 operating date",
+      "read": "The last storage-side disclosure — and the only sale statement — from any source.",
+      "source": "https://www.energy-storage.news/bess-price-falls-pushing-marginal-projects-into-irr-investors-need-us-developer-says/"
+    },
+    {
+      "date": "2024-02-13",
+      "category": "partnership",
+      "headline": "CleanCapital and Available Power form a joint venture for distributed storage development; CleanCapital to provide 'project financing, development, and construction expertise'",
+      "read": "A capital partner arrives without a stated commitment; no project has followed.",
+      "source": "https://cleancapital.com/resources/cleancapital-and-available-power-form-joint-venture-for-storage-development/"
+    },
+    {
+      "date": "2023-05-08",
+      "category": "procurement",
+      "headline": "Linxon signs an exclusivity agreement for Greenport's 345 kV substation and balance of plant; completion 'by Q1 2025'",
+      "read": "The EPC scope is defined; the battery vendor is not.",
+      "source": "https://www.prnewswire.com/news-releases/linxon-signs-new-agreement-with-available-power-for-a-100-mw200-mwh-project-301818535.html"
+    },
+    {
+      "date": "2023-04-13",
+      "category": "market",
+      "headline": "Krass explains the 9.9 MW 'distributed play': skip part of ERCOT's interconnection process, two-hour duration, sell at NTP with Linxon attached; 300 MW / 600 MWh near term",
+      "read": "The clearest statement of the business model in the record.",
+      "source": "https://www.energy-storage.news/developer-fewer-eyes-on-9-9mw-distributed-play-segment-of-ercot-storage-market/"
+    },
+    {
+      "date": "2023-02-28",
+      "category": "partnership",
+      "headline": "Available Power and Linxon unveil a strategic partnership on a '1,000+ megawatt' ERCOT pipeline, 75% distribution-connected at 10 MW / 20 MWh average; Linxon 'has already secured access to the necessary equipment supply' for the first tranche",
+      "read": "The pipeline headline and the EPC that makes NTP sales turnkey.",
+      "source": "https://www.prnewswire.com/news-releases/available-power-linxon-unveil-strategic-partnership-with-1-gw-battery-energy-storage-project-pipeline-301758137.html"
+    },
+    {
+      "date": "2022-09-07",
+      "category": "project",
+      "headline": "Available Power announces the 100 MW / 200 MWh Greenport project with GREENPORT International Airport and Technology Center; ground-breaking late 2023, commercial mid-2024",
+      "read": "The only named project, at a campus that has itself never been approved.",
+      "source": "https://www.einpresswire.com/article/589813015/available-power-announces-200-mwh-energy-storage-project-with-greenport-international-airport-and-tech-center-in-austin"
+    },
+    {
+      "date": "2022-02-24",
+      "category": "partnership",
+      "headline": "Stem selected to supply hardware and Athena software for up to 100 front-of-meter Texas sites — 1 GW / 2 GWh, 'more than $500 million' of portfolio value, first 20 systems by early 2023",
+      "read": "The largest claim in the record; no delivery was ever reported.",
+      "source": "https://investors.stem.com/news-events/press-releases/detail/178/stems-athena-software-selected-by-available-power-to-optimize-up-to-2gwh-energy-storage-portfolio-in-ercot"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "plus-power",
+      "type": "competitor",
+      "status": "active",
+      "scale": "ERCOT sub-10 MW segment: Plus Power's Farmersville West BESS 1 and Mainland BESS against Available Power's 9.9 MW template",
+      "note": "Energy-Storage.news's March 2026 survey of the ERCOT 'distributed generation' battery segment lists Plus Power alongside Bimergen, GoodPeak and ON.energy, and cites Available Power for its 2023 explanation of the sub-10 MW interconnection path.",
+      "context": "A peer-set comparison by a trade outlet; no transaction between the companies is reported. Available Power's own peer claim was that its 1 GW pipeline would have been 'one of the largest-ever battery fleets announced by a developer' (February 2023).",
+      "source": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/"
+    },
+    {
+      "slug": "on-energy",
+      "type": "competitor",
+      "status": "active",
+      "scale": "ON.energy's 9.9 MW / 20 MWh ERCOT units against Available Power's identical template",
+      "note": "The same Energy-Storage.news survey names ON.energy's 9.9 MW / 20 MWh distribution-connected ERCOT projects in the segment Available Power described in 2023.",
+      "context": "The two companies chose the same size for the same reason — the lighter interconnection path under 10 MW — but ON.energy owns and operates while Available Power sold at notice-to-proceed.",
+      "source": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ERCOT distribution-connected generation rules (sub-10 MW path)",
+      "status": "in-effect",
+      "effectiveDate": "2023",
+      "exposure": "The business model rests on ERCOT's treatment of resources under 10 MW: 'you can skip a part of the interconnection process with ERCOT (with projects under 10MW) so your time to market is quicker' (Krass, April 2023); the company's pipeline was '75%' distribution-connected at 'an average size of 10 MW / 20 MWh' for that reason. Krass also said 'a lot of the PUCTs regulations coming in are incentivising the 2-hour-plus duration'.",
+      "mitigation": "",
+      "source": "https://www.energy-storage.news/developer-fewer-eyes-on-9-9mw-distributed-play-segment-of-ercot-storage-market/"
+    },
+    {
+      "regime": "ERCOT market design (energy-only, RTC+B)",
+      "status": "in-effect",
+      "effectiveDate": "2025-12",
+      "exposure": "Available Power described its batteries' revenue as merchant — wholesale energy plus responsive reserve service and fast frequency response — in an energy-only market with no capacity payment. ERCOT's RTC+B redesign went live on 5 December 2025, modelling batteries as single state-of-charge resources; Modo Energy reports two-hour batteries out-earned one-hour units by 15–81 per cent in 2026, which favours the company's two-hour template.",
+      "mitigation": "",
+      "source": "https://www.ercot.com/news/release/12052025-ercot-goes-live"
+    },
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "effectiveDate": "2023-01",
+      "exposure": "Non-residential storage keeps the full 48E investment tax credit through 2033 under the July 2025 law, which underwrites the pre-COD value of projects sold at notice-to-proceed; Available Power never disclosed a credit transfer, tax-equity investor or lender, so how its buyers monetised the credit is unknown.",
+      "mitigation": "",
+      "source": "https://www.solarpowerworldonline.com/2025/07/hr1-spares-energy-storage-but-can-it-thrive-alone/"
+    },
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2026-01",
+      "exposure": "The prohibited-foreign-entity material-assistance rules apply to storage projects beginning construction from 2026, with non-PFE cost ratios rising from 55 per cent (2026) to 75 per cent (2030) per Foley Hoag's July 2026 summary; any Available Power project not yet under construction — Greenport had equipment 'secured' in March 2024 but no reported start — would be tested against them. No company statement on FEOC exists.",
+      "mitigation": "",
+      "source": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/"
+    },
+    {
+      "regime": "Texas SB 6 (large-load and co-located generation)",
+      "status": "in-effect",
+      "effectiveDate": "2025",
+      "exposure": "SB 6 defines large loads at 75 MW and above and gives ERCOT curtailment and co-location review powers over them (PURA §39.169 and §39.170 per Baker Botts); Available Power's distribution-scale batteries sit below every SB 6 threshold, and the parent's micro data centres, at up to 48 GPUs a site, are far below the large-load line — the law is context, not an exposure.",
+      "mitigation": "",
+      "source": "https://www.bakerbotts.com/thought-leadership/publications/2025/july/texas-senate-bill-6-understanding-the-impacts-to-large-loads-and-co-located-generation"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Daniel Gregory",
+      "title": "Chief Executive Officer, Available Infrastructure (CEO of Available Power in the 2022 Stem release)",
+      "photo": "images/execs/available-power-gregory-daniel.jpg",
+      "background": [
+        "Co-founder (early 2020) with his brother Benjamin; 'Daniel Gregory, CEO of Available Power' in Stem's February 2022 release; 'CEO of Available Infrastructure' from July 2025",
+        "Head of Microgrid Solutions, Shell (October 2018 – January 2020) and earlier system architect at AREVA T&D, per aggregator profiles (not fetched)",
+        "Spokesperson for SanQtum, Project Qestrel and the Datavault AI partnership; KPMG edge-AI webcast panellist (August 2026)"
+      ]
+    },
+    {
+      "name": "Benjamin Gregory",
+      "title": "President, Available Power",
+      "photo": "images/execs/available-power-gregory-benjamin.jpg",
+      "background": [
+        "Co-founder; quoted in every storage release from 2022 to 2024 and still listed as 'President, Available Power' on the parent's team page (September 2026)",
+        "Formerly at Shell; per The Org, co-founded Pos-En, an energy-systems developer later acquired by Shell New Energies (aggregator profile, not fetched)",
+        "Set out the standardised 'manufacturing-like' development model and the NTP sale strategy (Energy-Storage.news, 2024)"
+      ]
+    },
+    {
+      "name": "Hervé Touati",
+      "title": "Executive Chairman",
+      "photo": "images/execs/available-power-touati.jpg",
+      "background": [
+        "Executive Chairman of Available Infrastructure per the team page; aggregator profiles date the Available Power chairmanship to 2020 (not fetched)",
+        "Led Shell New Energies' global Connected Energy business; earlier Rocky Mountain Institute, E.ON and McKinsey; first CEO of the Energy Web Foundation (Energy Web announcement, 2018 — reachable only as a search snippet)"
+      ]
+    },
+    {
+      "name": "Karn Sood",
+      "title": "Head of Finance and Analytics, Available Power",
+      "photo": "images/execs/available-power-sood.jpg",
+      "background": [
+        "Listed with that title on the parent's team page and on The Org's Available Power chart; Houston-based per an aggregator snippet"
+      ]
+    },
+    {
+      "name": "Adam Schultz",
+      "title": "Vice President, Operations, Available Power",
+      "photo": "images/execs/available-power-schultz.jpg",
+      "background": [
+        "Listed with that title on the parent's team page (September 2026); no bio published"
+      ]
+    },
+    {
+      "name": "Alex Krass",
+      "title": "Vice President, Business Development (2023–2024)",
+      "background": [
+        "Quoted as VP Business Development in Energy-Storage.news (April 2023, March 2024) — the source of the sub-10 MW interconnection and sell-at-NTP explanations; ex-Shell; not on the parent's current team page"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Disclosed figures (2022–2026)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No financial statement, funding round, sponsor commitment, lender, tax-equity investor or sale price has been published by the company, its parent or any counterparty."
+          },
+          {
+            "name": "Portfolio value (Stem release)",
+            "actual": "'The project portfolio is expected to have a value of more than $500 million' — 100 sites, 1 GW / 2 GWh (24 February 2022)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "A partner's projection at announcement; no deployment was reported."
+          },
+          {
+            "name": "Projects sold",
+            "actual": "'Three assets' of 9.9 MW / 20 MWh 'recently sold' by 28 March 2024; Greenport 'at NTP' and in a LevelTen auction",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Buyers and prices undisclosed; the Greenport outcome is unreported."
+          },
+          {
+            "name": "Parent capital plan (Available Infrastructure)",
+            "actual": "Project Qestrel 'nearly $5 billion in project CapEx at full buildout' (16 March 2026); Datavault AI's '$QEST' tokenisation 'a potential $1 billion' (17 July 2026) with 'no tokens sold or capital raised to date' (19 August 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Projections for the edge data-centre business, not storage; carried to show where the parent's capital is pointed."
+          }
+        ],
+        "commentary": "There is no financial record. The three figures above are a partner's 2022 valuation estimate, a 2024 sale statement without terms, and the parent's 2026 projections for a different business. 'Expected' fields are empty because nothing exists to compare against."
+      }
+    ],
+    "commentary": "For the buyer side of this corpus the number that matters is zero: zero named buyers, zero named lenders, zero operating megawatts attributable to the company. The pipeline claims (1 GW, 100 sites, USD 500 million) date from 2022–2023 and have no later confirmation."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Available Power is a Texas-only develop-and-sell developer of distribution-connected batteries, not an owner-operator and not a CAISO participant, and that the premise handed to this dossier is wrong on geography, model and sponsor. Basis: every company and partner release says 'currently focused on the Texas market'; the VP Business Development said 'we sell the projects at NTP'; no CAISO project, offtaker, toll or hedge appears anywhere; no fund or investor is named by any source.",
+    "(High confidence) We assess that no battery is operating under Available Power's ownership and that the storage business has been publicly dormant since March 2024. Basis: the last storage disclosure is the March 2024 interview; the parent's news archive from then to September 2026 contains no storage item; Modo Energy's 2025 ERCOT owner report and Cleanview's September 2026 operating list do not name the company; the three 9.9 MW sales and the Greenport auction have no reported outcome.",
+    "(High confidence) We assess that the parent has redirected its identity and capital to edge micro data centres and cybersecurity, with Available Power retained as a business unit rather than a growth line. Basis: the July 2025 rebrand to Available Infrastructure in Tysons Corner, the patent, IBM and Datavault AI releases, and the March 2026 'Project Qestrel' plan; the CEO's September 2026 description of energy as the company's 'early focus'.",
+    "(Moderate confidence) We assess that the sub-10 MW template was sound on its own terms — the segment it described in 2023 is now populated by Bimergen, GoodPeak, ON.energy and Plus Power, and ERCOT's RTC+B rewards two-hour duration — and that the company's problem was the buyer side, not the product. Basis: Gregory's own statement that price falls lifted project IRRs to '14–15%' while the firm was still auctioning Greenport; the CleanCapital JV's stated purpose was to supply 'project financing'. Cuts against: the absence of any named buyer means the sales themselves cannot be verified.",
+    "(Low confidence) Greenport may have been sold and built under another name: the March 2024 statement that equipment was 'secured' for a February 2026 operating date is consistent with a completed sale, but no ERCOT record, buyer release or trade-press item found confirms it, and the host airport campus remains unapproved. Treat the project as status unknown.",
+    "Collection gap: the company's own storage pages are gone and the Wayback Machine is unreachable from this environment, so the 2022–2024 record is reconstructed from partner releases and two Energy-Storage.news interviews; no queue identifier, permit, abatement, lender or buyer could be found. Indicators to watch: (1) an ERCOT commercial-operations or Cleanview entry for a 100 MW / 200 MWh battery in Bastrop County — that would resolve Greenport's fate; (2) any release from a financial owner naming Available Power as the seller of a 9.9 MW portfolio — the first would confirm the sales were real; (3) a storage-related release from Available Infrastructure, or a project attributed to the CleanCapital JV — either would show the unit is active; (4) a Datavault AI or parent disclosure tying Project Qestrel sites to on-site batteries — that would reconnect the two businesses; (5) the Bastrop County airport's approval status — the host campus is the precondition for the only named project."
+  ],
+  "sources": [
+    {
+      "label": "Available Infrastructure — partnership with EarthSpark International (CEO on the company's energy origins)",
+      "url": "https://availableinfrastructure.com/news/available-infrastructure-partners-with-earthspark-international-to-secure-rural-minigrids-and-bring-cutting-edge-compute-capability-to-global-energy-access-solutions-across-30-countries/",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Datavault AI — Q2 2026 results (SanQtum deployments; no $QEST tokens sold)",
+      "url": "https://ir.datavaultsite.com/news-events/press-releases/detail/488/datavault-ai-reports-second-quarter-2026-financial-results-and-provides-business-update-highlighting-progress-toward-commercialization-of-tokenization-and-data-monetization-platforms",
+      "date": "2026-08-19"
+    },
+    {
+      "label": "Available Infrastructure — 'Federal agencies just raised the bar on power grid security' (blog)",
+      "url": "https://availableinfrastructure.com/news/federal-agencies-just-raised-the-bar-on-power-grid-security/",
+      "date": "2026-08-19"
+    },
+    {
+      "label": "Datavault AI — tokenisation of Available Infrastructure's Project Qestrel fleet ('a potential $1 billion')",
+      "url": "https://ir.datavaultsite.com/news-events/press-releases/detail/476/datavault-ai-announces-tokenization-of-available-infrastructures-project-qestrel-fleet-creating-a-potential-1-billion-in-qest-utility-tokens-for-sovereign-cybersecure-edge-ai-super-compute",
+      "date": "2026-07-17"
+    },
+    {
+      "label": "Foley Hoag — the prohibited foreign entity (FEOC) rules and battery storage (material-assistance ratios)",
+      "url": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "Modo Energy — ERCOT battery storage in 2026: seven things to watch (RTC+B, duration premium, large-load queue)",
+      "url": "https://modoenergy.com/research/en/ercot-battery-storage-2026-things-to-watch",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "Available Infrastructure — announces the '$5B Project Qestrel' (1,000 urban neocloud sites)",
+      "url": "https://availableinfrastructure.com/news/available-infrastructure-announces-5b-project-qestrel-with-fleet-of-1000-urban-neocloud-sites-deploying-nationwide-by-end-of-2026/",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "PRWeb — Available Infrastructure announces Project Qestrel (partners Crown Castle, IBM, Strata Expanse, RAVEL, Datavault AI)",
+      "url": "https://www.prweb.com/releases/available-infrastructure-announces-5b-project-qestrel-with-fleet-of-1-000-urban-neocloud-sites-deploying-nationwide-by-end-of-2026--302713618.html",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "Energy-Storage.news — Bimergen acquires 79.2 MW of Texas BESS; the sub-10 MW peer set; Available Power's 2023 quote",
+      "url": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/",
+      "date": "2026-03-05"
+    },
+    {
+      "label": "GlobeNewswire — Bimergen completes acquisition of 79.2 MW of late-stage DG BESS projects from Aggreko (9.9 MW peer transaction)",
+      "url": "https://www.globenewswire.com/news-release/2026/03/03/3248139/0/en/Bimergen-Energy-Completes-Acquisition-of-79-2-MW-of-Late-Stage-DG-Battery-Energy-Storage-Projects-in-ERCOT-South-from-Aggreko-and-Executes-Simultaneous-Financing.html",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "Modo Energy — ERCOT annual buildout report: 14 GW entering 2026 (Available Power absent)",
+      "url": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+      "date": "2026-02-02"
+    },
+    {
+      "label": "Datavault AI — Datavault AI and Available Infrastructure to scale a physical private edge cloud to 100 US cities",
+      "url": "https://ir.datavaultsite.com/news-events/press-releases/detail/406/datavault-ai-and-available-infrastructure-to-scale-physical-private-edge-cloud-to-deliver-powerful-zero-trust-cybersecurity-digital-twin-and-agentic-data-monetization-to-100-u-s-cities-in-2026",
+      "date": "2026-01-05"
+    },
+    {
+      "label": "Available Infrastructure — cybersecurity solution now protecting watsonx, offered by IBM as SanQtum AI",
+      "url": "https://availableinfrastructure.com/news/available-infrastructure-cybersecurity-solution-now-protecting-watsonx-offered-by-ibm-as-sanqtum-ai/",
+      "date": "2025-12-19"
+    },
+    {
+      "label": "ERCOT — ERCOT goes live with RTC+B",
+      "url": "https://www.ercot.com/news/release/12052025-ercot-goes-live",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "Available Infrastructure — awarded a US patent for a firewall gateway protecting energy infrastructure ('Available Networks and Available Power subsidiaries')",
+      "url": "https://availableinfrastructure.com/news/available-awarded-us-patent-for-cybersecurity-solution-firewall-gateway-protects-energy-and-other-critical-infrastructure/",
+      "date": "2025-07-30"
+    },
+    {
+      "label": "Solar Power World — energy storage spared by the OBBBA (48E through 2033; FEOC from 2026)",
+      "url": "https://www.solarpowerworldonline.com/2025/07/hr1-spares-energy-storage-but-can-it-thrive-alone/",
+      "date": "2025-07-28"
+    },
+    {
+      "label": "Baker Botts — Texas Senate Bill 6: impacts on large loads and co-located generation",
+      "url": "https://www.bakerbotts.com/thought-leadership/publications/2025/july/texas-senate-bill-6-understanding-the-impacts-to-large-loads-and-co-located-generation",
+      "date": "2025-07-18"
+    },
+    {
+      "label": "PRWeb — Available Infrastructure launches SanQtum ('Available unites distinct business units — Available Networks and Available Power')",
+      "url": "https://www.prweb.com/releases/available-infrastructure-launches-sanqtum-a-first-of-a-kind-cybersecurity-and-edge-ai-solution-302497432.html",
+      "date": "2025-07-03"
+    },
+    {
+      "label": "Energy-Storage.news — BESS price falls push marginal projects into the IRR investors need (Greenport at NTP, LevelTen auction, three 9.9 MW assets sold)",
+      "url": "https://www.energy-storage.news/bess-price-falls-pushing-marginal-projects-into-irr-investors-need-us-developer-says/",
+      "date": "2024-03-28"
+    },
+    {
+      "label": "Solar Builder — CleanCapital and Available Power form a joint venture for storage development",
+      "url": "https://solarbuildermag.com/projects/cleancapital-available-power-form-joint-venture-for-energy-storage-development/",
+      "date": "2024-02-22"
+    },
+    {
+      "label": "Renewable Energy Magazine — CleanCapital and Available Power JV (Powers and Gregory quotes)",
+      "url": "https://www.renewableenergymagazine.com/storage/cleancapital-and-available-power-form-joint-venture-20240215",
+      "date": "2024-02-15"
+    },
+    {
+      "label": "CleanCapital — CleanCapital and Available Power form a joint venture for storage development",
+      "url": "https://cleancapital.com/resources/cleancapital-and-available-power-form-joint-venture-for-storage-development/",
+      "date": "2024-02-13"
+    },
+    {
+      "label": "Energy-Storage.news — Powin and Linxon secure 600 MWh of ERCOT contracts (Greenport pushed to Q1 2025)",
+      "url": "https://www.energy-storage.news/powin-and-linxon-secure-600mwh-of-bess-project-contracts-in-ercot-texas-market/",
+      "date": "2023-05-09"
+    },
+    {
+      "label": "powersystems.technology — Linxon signs exclusivity agreement with Available Power for the 100 MW Greenport BESS",
+      "url": "https://www.powersystems.technology/linxon-signs-exclusivity-agreement-with-available-power-for-100-mw-greenport-battery-energy-storage-system-in-texas/",
+      "date": "2023-05-09"
+    },
+    {
+      "label": "PR Newswire — Linxon signs a new agreement with Available Power for a 100 MW / 200 MWh project (Greenport scope)",
+      "url": "https://www.prnewswire.com/news-releases/linxon-signs-new-agreement-with-available-power-for-a-100-mw200-mwh-project-301818535.html",
+      "date": "2023-05-08"
+    },
+    {
+      "label": "Energy-Storage.news — 'fewer eyes' on the 9.9 MW distributed-play segment of the ERCOT storage market (Krass interview)",
+      "url": "https://www.energy-storage.news/developer-fewer-eyes-on-9-9mw-distributed-play-segment-of-ercot-storage-market/",
+      "date": "2023-04-13"
+    },
+    {
+      "label": "Energy-Storage.news — Available Power and Hitachi Energy's JV Linxon target 1 GW in Texas",
+      "url": "https://www.energy-storage.news/available-power-and-hitachi-energys-jv-entity-target-1gw-deployments-in-texas-market/",
+      "date": "2023-03-01"
+    },
+    {
+      "label": "PR Newswire — Available Power and Linxon unveil a strategic partnership with a 1 GW ERCOT pipeline",
+      "url": "https://www.prnewswire.com/news-releases/available-power-linxon-unveil-strategic-partnership-with-1-gw-battery-energy-storage-project-pipeline-301758137.html",
+      "date": "2023-02-28"
+    },
+    {
+      "label": "Available Infrastructure — 'Batteries are ready to flip how we operate modern power grids' (blog, Available Power era)",
+      "url": "https://availableinfrastructure.com/news/batteries-are-ready-to-flip-how-we-operate-modern-power-grids/",
+      "date": "2023-01-31"
+    },
+    {
+      "label": "EnergyTech — 200 MWh battery storage to complement CHP at a new Texas airport ('Austin-based Available Power')",
+      "url": "https://www.energytech.com/energy-storage/article/21250395/200-mwh-battery-energy-storage-to-complement-chp-at-new-texas-airport",
+      "date": "2022-09-09"
+    },
+    {
+      "label": "Energy-Storage.news — Available Power's 200 MWh BESS at a net-zero campus in Texas expected online in 2024",
+      "url": "https://www.energy-storage.news/available-powers-200mwh-bess-at-net-zero-campus-in-texas-expected-online-in-2024/",
+      "date": "2022-09-08"
+    },
+    {
+      "label": "EIN Presswire (company release) — Available Power announces the 200 MWh Greenport project near Austin",
+      "url": "https://www.einpresswire.com/article/589813015/available-power-announces-200-mwh-energy-storage-project-with-greenport-international-airport-and-tech-center-in-austin",
+      "date": "2022-09-07"
+    },
+    {
+      "label": "Stem — Stem's Athena software selected by Available Power to optimise up to 2 GWh in ERCOT (investor release)",
+      "url": "https://investors.stem.com/news-events/press-releases/detail/178/stems-athena-software-selected-by-available-power-to-optimize-up-to-2gwh-energy-storage-portfolio-in-ercot",
+      "date": "2022-02-24"
+    },
+    {
+      "label": "Stem — the same release as an investor-relations PDF (Business Wire mirror)",
+      "url": "https://s27.q4cdn.com/138752898/files/doc_news/Stems-Athena-Software-Selected-by-Available-Power-to-Optimize-Up-to-2GWh-Energy-Storage-Portfolio-in-ERCOT-2022.pdf",
+      "date": "2022-02-24"
+    },
+    {
+      "label": "Available Infrastructure — about page and team (leadership titles; Northern Virginia)",
+      "url": "https://availableinfrastructure.com/about/available-infrastructure/"
+    },
+    {
+      "label": "Available Infrastructure — news archive (no storage release since 2024)",
+      "url": "https://availableinfrastructure.com/news/"
+    },
+    {
+      "label": "Linxon — Greenport Battery Energy Storage System project page (awarded 2023; expected completion Q1 2025)",
+      "url": "https://linxon.com/project/greenport-battery-energy-storage-system-bess/"
+    },
+    {
+      "label": "The Org — Available Power org chart (Boulder; Benjamin Gregory, Karn Sood)",
+      "url": "https://theorg.com/org/available-power"
+    },
+    {
+      "label": "Cleanview — operating battery storage projects in ERCOT (no Available Power or Greenport entry, September 2026)",
+      "url": "https://cleanview.co/power-projects/operating/battery-storage-projects/ercot"
+    },
+    {
+      "label": "Cleanview — planned battery storage projects in ERCOT",
+      "url": "https://cleanview.co/power-projects/planned/battery-storage-projects/ercot"
+    },
+    {
+      "label": "Stop CTA — community opposition to the Central Texas Airport (Greenport host campus)",
+      "url": "https://www.stopcta.info/"
+    },
+    {
+      "label": "Wikipedia — Central Texas Airport (Bastrop County; 'has yet to be approved for development')",
+      "url": "https://en.wikipedia.org/wiki/Central_Texas_Airport"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

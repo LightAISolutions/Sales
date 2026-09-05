@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-05",
- "companies": 118,
+ "companies": 121,
  "edges": [
   {
    "a": "abb",
@@ -1248,6 +1248,50 @@
     }
    ],
    "last": "2026-07-31"
+  },
+  {
+   "a": "aep",
+   "b": "gridstor",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Gunnar's project page places the battery 'neighboring AEP's existing Closner Substation' in Edinburg; the tolling counterparty is an unnamed Fortune 500 company, not AEP.",
+     "context": "An interconnection adjacency in AEP Texas's Lower Rio Grande Valley service area rather than a commercial relationship; carried so the AEP dossier's inbound view shows the site.",
+     "source": "https://gridstor.com/project/gunnar-reliability-project/",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "150 MW / 300 MWh (Gunnar)",
+     "via": "Interconnection beside AEP Texas's Closner substation, Edinburg"
+    }
+   },
+   "evid": [],
+   "last": "2025-12"
+  },
+  {
+   "a": "aep",
+   "b": "invenergy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "AEP is buyer, seller and offtaker at once: Indiana Michigan Power filed in April 2026 to acquire Invenergy's 918 MW Sycamore Riverside gas plant for March 2029 ownership; SWEPCO and PSO contracted about 1 GW of Invenergy wind and solar in 2023; and an Invenergy-led consortium bought AEP's unregulated renewables in August 2023.",
+     "context": "The I&M filing (IURC certificate of public convenience and necessity, decision expected end-2026) describes Invenergy as 'North America's largest privately held independent power producer' and puts the acquisition at about USD 500 million per Inside INdiana Business. The SWEPCO purchases — Mooringsport solar (200 MW, Louisiana), Diversion wind (201 MW, Texas) and Wagon Wheel wind (598 MW, Oklahoma), about USD 2.2 billion — were approved by the Louisiana and Arkansas commissions in mid-2023; Natixis led USD 1.27 billion of construction financing for four of the AEP-offtake projects in March 2024. The IRG Acquisition Holdings purchase of AEP's 1,365 MW portfolio closed in August 2023 with a USD 580 million production-tax-credit transfer arranged by Bank of America, described as 'the first announced large scale transferability transaction to close'.",
+     "source": "https://www.aep.com/news/stories/view/11850/",
+     "status": "active",
+     "since": "2023",
+     "scale": "918 MW gas plant (CPCN pending); 1 GW SWEPCO/PSO wind and solar (about USD 2.2bn); 1,365 MW portfolio bought from AEP (USD 1.5bn EV)",
+     "via": "Sycamore Riverside Energy Center; SWEPCO and PSO offtake; IRG Acquisition Holdings"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-10",
+     "text": "Indiana Michigan Power filed to acquire the 918 MW dual-fuel Sycamore Riverside Energy Center from Invenergy for March 2029 service — Buying a developer's project rather than certifying a self-build is the faster path when the in-service date is the constraint.",
+     "src": "https://www.aep.com/news/stories/view/11850/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-04-10"
   },
   {
    "a": "aep",
@@ -4209,6 +4253,44 @@
   },
   {
    "a": "apex-clean-energy",
+   "b": "invenergy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Cleanview's wind-developer ranking places Invenergy second and Apex fourth; the Apex dossier in this corpus records the same table and the 2021 sale of Apex's Jayhawk Wind to WEC Energy Group with Invenergy as 10% owner and operator.",
+     "context": "The Jayhawk transaction (190 MW, Kansas, Facebook PPA) is recorded in the Apex dossier from its own sources; the North American Windpower report was unreachable in this session, so the operating link is noted here from the corpus rather than curated as a partner relationship.",
+     "source": "https://cleanview.co/content/top-wind-developers",
+     "status": "active",
+     "scale": "Cleanview wind pipeline: Invenergy #2 (14,192 MW) against Apex #4 (7,074 MW)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Utility-scale wind — development, construction and ownership",
+     "date": "",
+     "text": "The heritage business and still the largest line: the company ranked first in US wind capacity additions in 2015 (1,042 MW), and Cleanview ranks it the #4 US wind developer by development pipeline (7,074 MW across 29 projects, behind NextEra, Invenergy and Ørsted).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale wind — development, construction and ownership",
+     "date": "",
+     "text": "A top-five US wind developer by pipeline in a market where the top three (NextEra, Invenergy, Ørsted) are each 1.5–3× larger; differentiated by an origination platform (proprietary GIS 'ATLAS', met towers in nearly two dozen states) and by a willingness to build in hostile siting jurisdictions (Ohio, Illinois, North Dakota, Minnesota, Virginia) where competitors have exited — per Cleanview and company Insight pages.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The premise handed to this dossier — 'largest private US developer' — is corrected above; the four covered dossiers that name Invenergy (AEP, Kiewit, Meta, Apex Clean Energy) are consistent with the record here: the Sycamore Riverside sale, the Grain Belt Express awards, the 1,800 MW of Meta contracts and the Cleanview wind ranking.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
    "b": "jupiter-power",
    "curated": {
     "a": {
@@ -4884,6 +4966,110 @@
     }
    ],
    "last": "2026-08-12"
+  },
+  {
+   "a": "available-power",
+   "b": "gridstor",
+   "evid": [
+    {
+     "where": "Capabilities · Late-stage project acquisition — the pipeline machine",
+     "date": "",
+     "text": "A buyer of other developers' late-stage projects — the counterparty that Balanced Rock, Strata, Black Mountain and Accelergen sell to — rather than a greenfield originator; that makes it a comparable for how Available Power's develop-and-sell model finds its buyers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It sits upstream of owners like GridStor and Spearmint in the value chain and, since 2025, inside a parent whose business is edge data centres rather than power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Distribution-connected 9.9 MW / 20 MWh batteries — developed to notice-to-proceed and sold",
+     "date": "",
+     "text": "A volume developer of small standardised units where Spearmint, GridStor and Aypa build 100–400 MW transmission-connected projects; the edge is speed through the distribution interconnection path and a repeatable site-lease template, the cost is a buyer base of financial owners who need a turnkey EPC attached.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "available-power",
+   "b": "hitachi-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is a Texas-only developer that sells distribution-connected 9.9 MW / 20 MWh batteries and one 100 MW / 200 MWh transmission-connected project at notice-to-proceed — 'we sell the projects at NTP' (VP Business Development Alex Krass, April 2023) — with Linxon, the Hitachi Energy and AtkinsRéalis joint venture, as the turnkey EPC that carries the asset to operation for a financial buyer.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "available-power",
+   "b": "on-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The same Energy-Storage.news survey names ON.energy's 9.9 MW / 20 MWh distribution-connected ERCOT projects in the segment Available Power described in 2023.",
+     "context": "The two companies chose the same size for the same reason — the lighter interconnection path under 10 MW — but ON.energy owns and operates while Available Power sold at notice-to-proceed.",
+     "source": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/",
+     "status": "active",
+     "scale": "ON.energy's 9.9 MW / 20 MWh ERCOT units against Available Power's identical template"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that the sub-10 MW template was sound on its own terms — the segment it described in 2023 is now populated by Bimergen, GoodPeak, ON.energy and Plus Power, and ERCOT's RTC+B rewards two-hour duration — and that the company's problem was the buyer side, not the product.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-05",
+     "text": "Energy-Storage.news maps the ERCOT sub-10 MW segment — Bimergen, GoodPeak, ON.energy, Plus Power — and re-quotes Available Power's 2023 line on skipping part of ERCOT's interconnection process — The company is now cited as the segment's explainer, not as a participant.",
+     "src": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-05"
+  },
+  {
+   "a": "available-power",
+   "b": "plus-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Energy-Storage.news's March 2026 survey of the ERCOT 'distributed generation' battery segment lists Plus Power alongside Bimergen, GoodPeak and ON.energy, and cites Available Power for its 2023 explanation of the sub-10 MW interconnection path.",
+     "context": "A peer-set comparison by a trade outlet; no transaction between the companies is reported. Available Power's own peer claim was that its 1 GW pipeline would have been 'one of the largest-ever battery fleets announced by a developer' (February 2023).",
+     "source": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/",
+     "status": "active",
+     "scale": "ERCOT sub-10 MW segment: Plus Power's Farmersville West BESS 1 and Mainland BESS against Available Power's 9.9 MW template"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that the sub-10 MW template was sound on its own terms — the segment it described in 2023 is now populated by Bimergen, GoodPeak, ON.energy and Plus Power, and ERCOT's RTC+B rewards two-hour duration — and that the company's problem was the buyer side, not the product.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-05",
+     "text": "Energy-Storage.news maps the ERCOT sub-10 MW segment — Bimergen, GoodPeak, ON.energy, Plus Power — and re-quotes Available Power's 2023 line on skipping part of ERCOT's interconnection process — The company is now cited as the segment's explainer, not as a participant.",
+     "src": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-05"
   },
   {
    "a": "aypa-power",
@@ -5673,6 +5859,32 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "blattner",
+   "b": "invenergy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Blattner is the named engineering and construction contractor for Pleasant Prairie Solar Energy Center (Franklin County, Ohio), which started construction in June 2025 for a Meta offtake.",
+     "context": "The release also names Illuminate USA as module supplier. Blattner appears in older Invenergy wind releases (McAdoo, Rattlesnake) per site search, so the relationship predates the window. No storage EPC has been named by Invenergy for any project.",
+     "source": "https://wwww.invenergy.com/news/invenergy-s-pleasant-prairie-solar-energy-center-to-start-construction-in-franklin-county-ohio",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "240 MW (Pleasant Prairie Solar)",
+     "via": "Solar EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-12",
+     "text": "Pleasant Prairie Solar (Franklin County, Ohio) starts construction with Blattner as EPC and Illuminate USA modules; commercial early 2027 — The only release in the window that names a battery- or solar-side EPC.",
+     "src": "https://wwww.invenergy.com/news/invenergy-s-pleasant-prairie-solar-energy-center-to-start-construction-in-franklin-county-ohio",
+     "from": "b"
+    }
+   ],
+   "last": "2025-06-12"
   },
   {
    "a": "blattner",
@@ -7023,6 +7235,24 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "canadian-solar",
+   "b": "gridstor",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Enerdatics reports that the White Tank project GridStor bought from Strata Clean Energy is designed around about 120 Canadian Solar e-STORAGE SolBank 3.0 enclosures.",
+     "context": "The attribution is an analyst's (Enerdatics, 21 September 2025) and appears in no GridStor, Strata, APS or Canadian Solar release, so it is carried as reported rather than as a confirmed supply relationship. If accurate it would be the design basis inherited with the acquisition rather than a GridStor procurement decision.",
+     "source": "https://www.enerdatics.com/insights/gridstor-expands-energy-storage-footprint-with-acquisition-of-white-tank-bess-in-arizona",
+     "status": "announced",
+     "since": "2025-09",
+     "scale": "about 120 SolBank 3.0 enclosures (100 MW / 400 MWh) per Enerdatics",
+     "via": "e-STORAGE SolBank 3.0"
+    }
+   },
+   "evid": [],
+   "last": "2025-09"
   },
   {
    "a": "canadian-solar",
@@ -12242,6 +12472,24 @@
   },
   {
    "a": "dominion-energy",
+   "b": "invenergy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "An affiliate of Dominion Energy Virginia acquired Wilkinson Solar Energy Center (74 MW, Beaufort County, North Carolina) at commercial operation in June 2020; Microsoft holds the 15-year VPPA.",
+     "context": "The only Dominion link in the record; Invenergy's 2020 release names the buyer and the offtaker. No later Dominion transaction appears.",
+     "source": "https://wwww.invenergy.com/news/wilkinson-solar-energy-center-begins-commercial-operations",
+     "status": "historical",
+     "since": "2020",
+     "scale": "74 MW (Wilkinson Solar)",
+     "via": "Project acquisition at commercial operation"
+    }
+   },
+   "evid": [],
+   "last": "2020"
+  },
+  {
+   "a": "dominion-energy",
    "b": "meta",
    "curated": {
     "a": {
@@ -14917,6 +15165,24 @@
   },
   {
    "a": "equinix",
+   "b": "invenergy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Equinix signed a 100 MW PPA for Invenergy's Wake Wind Energy Center in Texas in November 2015 (about 457,000 MWh a year).",
+     "context": "Invenergy's earliest named data-centre offtaker, a decade before the 2026 gas-and-data-centre unit. No renewal or extension is published.",
+     "source": "https://wwww.invenergy.com/news/invenergy-to-provide-clean-power-to-equinix",
+     "status": "historical",
+     "since": "2015",
+     "scale": "100 MW wind PPA (Wake Wind, ERCOT)",
+     "via": "Power purchase agreement"
+    }
+   },
+   "evid": [],
+   "last": "2015"
+  },
+  {
+   "a": "equinix",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -17364,6 +17630,24 @@
   },
   {
    "a": "ge-vernova",
+   "b": "invenergy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "GE Vernova supplied the 15 turbines at Invenergy's Rusutsu Wind Energy Center in Japan (commercial March 2024) and, per POWER Magazine's archive, the 1.48 GW North Central Wind turbine order in Oklahoma (2021) and the three gas turbines at Lackawanna Energy Center.",
+     "context": "The Rusutsu release is the only turbine-OEM statement in Invenergy's trailing two years of releases; Vestas orders for Inaniwa (Japan) and Pencloe (Scotland) appear in Windtech International's order roundups but were not fetched and are not curated here. No GE Vernova order for the 2025–2026 Wisconsin or Indiana gas plants has been published.",
+     "source": "https://wwww.invenergy.com/news/invenergy-s-rusutsu-wind-energy-center-reaches-commercial-operations-in-japan",
+     "status": "active",
+     "since": "2019",
+     "scale": "15 × 4.2 MW turbines (Rusutsu, Japan); 1.48 GW Oklahoma order (2021); 3 turbines at Lackawanna (1,485 MW)",
+     "via": "Wind turbines and gas turbines"
+    }
+   },
+   "evid": [],
+   "last": "2019"
+  },
+  {
+   "a": "ge-vernova",
    "b": "kiewit",
    "curated": {
     "b": {
@@ -19124,6 +19408,133 @@
     }
    ],
    "last": "2025-08-19"
+  },
+  {
+   "a": "gridstor",
+   "b": "intersect-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Modo Energy's ERCOT annual buildout report groups GridStor with esVolta, Intersect Power and Nightpeak as 'pure-play storage developers' scaling in Texas 'after proving models elsewhere'.",
+     "context": "The comparison is Modo's (February 2026), on 2025 ERCOT additions; Engie held about 20 per cent of installed ERCOT battery capacity. Intersect's ERCOT batteries sit inside co-located energy parks, which is a different model from GridStor's standalone contracted sites.",
+     "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+     "status": "active",
+     "scale": "Modo Energy: pure-play developers (esVolta, Intersect Power, GridStor, Nightpeak) brought 1.25 GW online in ERCOT in 2025"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "gridstor",
+   "b": "plus-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Energy-Storage.news lists Plus Power's Anemoi (200 MW / 400 MWh), Apex Clean Energy's Great Kiskadee (100 MW / 200 MWh) and three PureSky projects as GridStor's Hidalgo County neighbours.",
+     "context": "A siting comparison in one ERCOT county from the February 2025 acquisition coverage; no commercial link between the companies is reported.",
+     "source": "https://www.energy-storage.news/gridstor-acquires-150mw-300mwh-texas-bess-from-brp/",
+     "status": "active",
+     "scale": "Hidalgo County peers: Plus Power's Anemoi 200 MW / 400 MWh against GridStor's Gunnar 150 MW / 300 MWh"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Owned and operated storage — contracted with utilities and a retailer",
+     "date": "",
+     "text": "Contracted where Spearmint is merchant and smaller than Aypa, Plus Power or Jupiter; the distinguishing feature is the sponsor — a bank-managed fund that owns the developer outright rather than a private-equity minority or a founder — and a commercial team (Titus, Testa) hired from commodity trading and PPA origination to build 'contracted offtake for 3+ GW'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "gridstor",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Goleta Energy Storage uses '44 fully-integrated Tesla battery systems, manufactured in Lathrop, California' — the only battery supplier GridStor has ever named.",
+     "context": "The company's project page and its December 2023 completion release both name Tesla and the Lathrop plant; Noozhawk describes the units as LFP. Trade press notes an amendment application in 2024 to add augmentation units. No Tesla order for Hidden Lakes, Gunnar or White Tank has been published, and Holland & Hart's note on the Hidden Lakes 'battery supply agreement' names no vendor.",
+     "source": "https://gridstor.com/project/goleta-facility/",
+     "status": "active",
+     "since": "2023",
+     "scale": "44 Megapack units (60 MW / 160 MWh)",
+     "via": "Megapack (Lathrop, California)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The only battery supplier the company names is Tesla (44 Megapacks at Goleta, built in Lathrop); Enerdatics reports about 120 Canadian Solar e-STORAGE SolBank 3.0 enclosures at White Tank, which neither party has confirmed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a supplier it is a buyer with a named procurement lead, a stated wait on Treasury FEOC guidance before longer-dated purchases, and one confirmed OEM (Tesla).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that GridStor's procurement is deliberately un-committed: one confirmed OEM (Tesla at Goleta), an inherited design basis at White Tank reported by an analyst, and a stated pause on longer-dated purchases pending Treasury FEOC guidance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Owned and operated storage — contracted with utilities and a retailer",
+     "date": "",
+     "text": "Goleta Energy Storage (Goleta, Santa Barbara County; 60 MW / 160 MWh; 44 Tesla Megapack units; 66 kV interconnection at SCE's Isla Vista substation) has a '17 years contract to provide resource adequacy to utility Southern California Edison' (40 MW at four hours per Energy-Storage.news) and is dispatched on CAISO signals — commercial December 2023.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2023-12-05",
+     "text": "Goleta Energy Storage (60 MW / 160 MWh) completes and begins operation; 44 Tesla batteries; SCE resource-adequacy contract; NORD/LB USD 55 million debt — The first asset, delivered eighteen months after the company's founding.",
+     "src": "https://gridstor.com/gridstor-celebrates-completion-of-californias-newest-battery-storage-facility/",
+     "from": "a"
+    }
+   ],
+   "last": "2023-12-05"
+  },
+  {
+   "a": "gridstor",
+   "b": "xcel-energy",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Birdseye, the Colorado project GridStor bought from Accelergen in May 2026, interconnects at Xcel Energy's Riverdale 230 kV substation per the seller's adviser Leyline Renewable Capital; no offtake with Xcel has been announced.",
+     "context": "The link is a point of interconnection in Public Service Company of Colorado's non-ISO territory, not a contract. Xcel's Colorado resource plans are the natural route to a toll; nothing in the record says one is in negotiation.",
+     "source": "https://www.leylinecapital.com/news/asset-sale-gridstor-acquires-199-mw-birdseye-storage-project-in-adams-county-co",
+     "status": "announced",
+     "since": "2026-05",
+     "scale": "199 MW / 796 MWh (Birdseye)",
+     "via": "Interconnection at the Riverdale 230 kV substation (Public Service Company of Colorado)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) Gunnar's commercial operation by end-2026 and the naming of its Fortune 500 counterparty — a slip past first half 2027 would show the second Texas build repeating Hidden Lakes' delay; (2) an offtake announcement for Birdseye (Xcel Energy's Colorado resource plan is the natural route) or for the Oklahoma project — either would confirm that acquired projects are contracted before construction; (3) a supplier name for Hidden Lakes, Gunnar or White Tank, or a post-guidance procurement announcement — the first would close the dossier's largest gap; (4) the pipeline figure in the next boilerplate — a return to 'over 5 GW' or a further cut would show whether the 2025 step-down was a re-scoping or a sale; (5) any Goldman Sachs release naming the fund, a co-investor, a continuation vehicle or a platform sale — the sponsor's exit route is undisclosed; (6) the Axpo swap's tenor or a second swap — a repeat would confirm the structure as a financing tool rather than a one-off.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Late-stage project acquisition — the pipeline machine",
+     "date": "",
+     "text": "The record is five acquisitions in eighteen months, each from a named originator: Evelyn/Hidden Lakes from Balanced Rock Power (March 2024); a 200 MW / 800 MWh two-phase project in eastern Oklahoma, SPP, from Black Mountain Energy Storage (January 2025, sited 'where multiple data centers are already operating'); a 100 MW / 400 MWh Arizona project from Capacity Power Group (January 2025, name and county undisclosed); Gunnar from Balanced Rock Power (February 2025); White Tank from Strata Clean Energy (September 2025, Strata retained 'in a consultative role'); and Birdseye, 199 MW / 796 MWh in Adams County, Colorado, from Accelergen (May 2026, interconnecting at Xcel Energy's Riverdale 230 kV substation per the seller's adviser).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05"
   },
   {
    "a": "hitachi-energy",
@@ -21393,6 +21804,27 @@
   },
   {
    "a": "intersect-power",
+   "b": "invenergy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Invenergy is the second-largest US developer by development pipeline on Cleanview's live rankings (41,328 MW across 212 projects, behind NextEra Energy's 68,229 MW and ahead of Engie and Intersect), which makes it the largest non-utility developer on that measure — the 'largest privately held' phrase is Invenergy's and Blackstone's own language, not an independent ranking, and the ranking measure is pipeline megawatts, not operating capacity.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-scale wind and solar — development, ownership and farmdown",
+     "date": "",
+     "text": "The only privately owned developer in Cleanview's top ten; a full-service developer-operator (in-house development, construction, Invenergy Services operations) where Intersect and Hecate are development platforms and NextEra and Engie are utility or IPP balance sheets.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "intersect-power",
    "b": "jinko",
    "evid": [
     {
@@ -21592,6 +22024,378 @@
     }
    ],
    "last": "2024-07-17"
+  },
+  {
+   "a": "invenergy",
+   "b": "kiewit",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Kiewit Energy Group and Quanta Services received 'combined awards: $1.7 billion' from Grain Belt Express on 7 May 2025 to build Phase 1 (about 530 miles, Kansas to Missouri).",
+     "context": "The awards were made while the DOE loan guarantee was still conditional and stand after its termination; Kiewit's own release calls the line the largest transmission project in US history. The Kiewit dossier in this corpus carries the award with the same figure. Phase 1 construction is targeted from 2026 with completion in 2029 per ConstructConnect.",
+     "source": "https://wwww.invenergy.com/news/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "USD 1.7bn combined with Quanta Services",
+     "via": "Grain Belt Express Phase 1 HVDC engineering, procurement and construction"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Transmission, HVDC & Substations",
+     "date": "",
+     "text": "Transmission lines, distribution, substations and switchyards, including the marquee HVDC projects of the era: lead designer/GC on the completed 339-mile, 1,250 MW Champlain Hudson Power Express (Québec to NYC), and a ~$1.7B share (with Quanta) of Invenergy's Grain Belt Express — an 800-mile, 5,000 MW HVDC line billed as the largest transmission project in US history.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The premise handed to this dossier — 'largest private US developer' — is corrected above; the four covered dossiers that name Invenergy (AEP, Kiewit, Meta, Apex Clean Energy) are consistent with the record here: the Sycamore Riverside sale, the Grain Belt Express awards, the 1,800 MW of Meta contracts and the Cleanview wind ranking.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Invenergy is the largest developer counterparty on the buyer side of this corpus and the one that has most visibly re-weighted toward gas-for-data-centres: it sells wind and solar output to Meta, Microsoft and Verizon, sells completed gas plants to regulated utilities (AEP's Indiana Michigan Power, We Energies), awards HVDC transmission EPC to Quanta and Kiewit with Siemens Energy converters, and buys utility-scale storage for Arizona utilities and, since September 2026, a 200 MW California project.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the USD 1.7 billion Quanta/Kiewit awards, Siemens Energy, Prysmian and Hubbell contracts, 95%-acquired easements, the SPP-filed ITC Great Plains interconnection agreement (January 2026) and the Illinois Supreme Court win argue for proceeding; the DOE guarantee's termination, the Missouri Attorney General's investigation and the absence of any announced private financing at USD 11 billion argue for delay.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Transmission — Grain Belt Express and the HVDC portfolio",
+     "date": "",
+     "text": "Contractor awards of USD 1.7 billion combined went to Quanta Services and Kiewit Energy Group in May 2025; Siemens Energy is the HVDC technology partner (January 2023), Prysmian supplies up to 12,500 miles of E3X conductor and Hubbell about USD 70 million of hardware.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-07",
+     "text": "Grain Belt Express awards USD 1.7 billion combined to Quanta Services and Kiewit Energy Group for Phase 1 HVDC construction — Contracts signed while the DOE guarantee was still conditional — the awards outlived the loan.",
+     "src": "https://wwww.invenergy.com/news/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history",
+     "from": "a"
+    }
+   ],
+   "last": "2025-05-07"
+  },
+  {
+   "a": "invenergy",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Meta is Invenergy's largest named corporate offtaker: 760 MW of environmental-attribute purchase agreements in December 2024 and 791 MW of new agreements in June 2025, 'Total MW with Meta: 1,800 MW'.",
+     "context": "The December 2024 tranche covers Hardin II Solar (Ohio, 150 MW, 2024), Delilah II Solar (Texas, 150 MW, 2025), Tip Top Solar (New Mexico, 110 MW, 2026) and Chalk Bluff Solar (Arkansas, 350 MW, 2027); the June 2025 tranche adds Yellow Wood Solar (Ohio, 300 MW, 2027), Pleasant Prairie Solar (Ohio, 140 MW, 2027), Decoy Solar (Arkansas, 155 MW, 2027) and Seaway Wind (Texas, 196 MW, 2028). Invenergy's release describes the June 2025 deals as 'supporting data center operations', and Ted Romaine's quote ties them to 'the AI race'. The Meta dossier in this corpus records the same 1,800 MW figure.",
+     "source": "https://wwww.invenergy.com/news/invenergy-to-provide-meta-with-nearly-800-mw-supporting-data-center-operations",
+     "status": "active",
+     "since": "2024-12",
+     "scale": "1,800 MW cumulative (eight projects)",
+     "via": "Environmental-attribute and power purchase agreements on Invenergy wind and solar"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The strategic centre of gravity in 2025–2026 is elsewhere: a new Invenergy Power unit (April 2026) for 'natural gas and data center development', 1,800 MW of Meta contracts, a 918 MW gas plant sold to AEP's Indiana Michigan Power, about 3.3 GW of Wisconsin gas plants proposed for We Energies' data-centre load, a USD 765 million federal buyout of four offshore-wind leases (June 2026) redirected to gas and geothermal, and the privately financed USD 11 billion Grain Belt Express HVDC line after the Department of Energy terminated its USD 4.9 billion conditional loan guarantee in July 2025.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The premise handed to this dossier — 'largest private US developer' — is corrected above; the four covered dossiers that name Invenergy (AEP, Kiewit, Meta, Apex Clean Energy) are consistent with the record here: the Sycamore Riverside sale, the Grain Belt Express awards, the 1,800 MW of Meta contracts and the Cleanview wind ranking.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Invenergy is the largest developer counterparty on the buyer side of this corpus and the one that has most visibly re-weighted toward gas-for-data-centres: it sells wind and solar output to Meta, Microsoft and Verizon, sells completed gas plants to regulated utilities (AEP's Indiana Michigan Power, We Energies), awards HVDC transmission EPC to Quanta and Kiewit with Siemens Energy converters, and buys utility-scale storage for Arizona utilities and, since September 2026, a 200 MW California project.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) a Wisconsin PSC decision on Foundry Ridge and Red Oak Ridge (application filed November 2025) and the IURC's end-2026 Sycamore Riverside order — approvals confirm the gas-to-utility model and its pricing; a denial would strand development capital the settlement proceeds were meant to recycle; (2) a Grain Belt Express financing announcement (bank group, bond or equity partner) before Phase 1 construction — its absence through mid-2027 would indicate the DOE termination was fatal to the 2026 schedule; (3) any Invenergy release naming a battery supplier or an ISO-level storage total, or a CAISO record for Seahawk — the first would close the largest collection gap in this dossier; (4) Treasury's final FEOC rule and the 4 July 2026 begin-construction record for the 2027 Meta and Verizon projects — a project dropping from the Meta list would show the deadline bit; (5) Illuminate USA output and any Invenergy storage project specifying domestic cells — the test of whether the module affiliate's playbook is repeated in batteries; (6) a Blackstone or CDPQ disclosure of a stake change, or a holding-company rating — either would replace the ownership judgment's 2023 baseline.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale wind and solar — development, ownership and farmdown",
+     "date": "",
+     "text": "Named corporate offtakers in the trailing period are Meta (eight projects, 1,800 MW cumulative), Verizon (four projects, 640 MW, more than 1 GW cumulative), Microsoft (Hardin III 250 MW), Honda and Tesla (Delilah I).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-13",
+     "text": "Treasury's draft FEOC guidance (12 February 2026) defers 'effective control'; wind and solar must begin construction by 4 July 2026 to keep credits — The clock that governs which of Invenergy's Meta and Verizon projects keep their credits.",
+     "src": "https://www.latitudemedia.com/news/underwhelming-feoc-guidance-punts-on-industrys-key-question/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-26",
+     "text": "Four new Meta agreements totalling 791 MW (Yellow Wood 300 MW, Pleasant Prairie 140 MW, Decoy 155 MW, Seaway Wind 196 MW); 'Total MW with Meta: 1,800 MW' — Meta is the largest named corporate offtaker; the release frames it as 'supporting data center operations'.",
+     "src": "https://wwww.invenergy.com/news/invenergy-to-provide-meta-with-nearly-800-mw-supporting-data-center-operations",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-02-19",
+     "text": "Verizon signs four virtual PPAs for 640 MW (Richfield, Maple Flats, Cadence, Chalk Bluff); more than 1 GW cumulative — Telecom demand is the second corporate book after Meta.",
+     "src": "https://wwww.invenergy.com/news/invenergy-verizon-partner-to-procure-over-1-gw-in-renewable-energy",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-13"
+  },
+  {
+   "a": "invenergy",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft holds the PPA on Hardin III Solar (250 MW, Ohio, commercial June 2025) and a 15-year virtual PPA for the full output of Wilkinson Solar (74 MW, North Carolina, 2020).",
+     "context": "Hardin III was developed and is operated by Invenergy with WEC Energy Group as majority owner and Illuminate USA modules; Wilkinson was acquired at completion by an affiliate of Dominion Energy Virginia. Both are attribute-and-energy contracts on grid-tied solar, not co-located supply.",
+     "source": "https://wwww.invenergy.com/news/invenergy-s-hardin-iii-commences-operations",
+     "status": "active",
+     "since": "2020",
+     "scale": "250 MW (Hardin III PPA); 74 MW (Wilkinson VPPA)",
+     "via": "Power purchase agreements on Invenergy solar"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Invenergy is the largest developer counterparty on the buyer side of this corpus and the one that has most visibly re-weighted toward gas-for-data-centres: it sells wind and solar output to Meta, Microsoft and Verizon, sells completed gas plants to regulated utilities (AEP's Indiana Michigan Power, We Energies), awards HVDC transmission EPC to Quanta and Kiewit with Siemens Energy converters, and buys utility-scale storage for Arizona utilities and, since September 2026, a 200 MW California project.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gap: whether any of the Wisconsin, Indiana or Arizona gas plants is contractually tied to a named hyperscaler campus beyond the utility filings' references to Microsoft Mount Pleasant and Vantage Port Washington.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale wind and solar — development, ownership and farmdown",
+     "date": "",
+     "text": "Named corporate offtakers in the trailing period are Meta (eight projects, 1,800 MW cumulative), Verizon (four projects, 640 MW, more than 1 GW cumulative), Microsoft (Hardin III 250 MW), Honda and Tesla (Delilah I).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Natural gas and data-centre power — Invenergy Power",
+     "date": "",
+     "text": "Gas is the fastest-moving line and, since 7 April 2026, has its own unit: 'Chief Commercial Officer Jim Shield will become President of Invenergy Power, which will oversee the company's growing natural gas and data center development.' The model is develop-and-sell to regulated utilities facing data-centre load: Indiana Michigan Power (AEP) filed with the IURC in April 2026 to acquire the 918 MW Sycamore Riverside Energy Center (Sullivan County, about USD 500 million per Inside INdiana Business, ownership transfer March 2029, IURC decision expected end-2026); We Energies filed with the Wisconsin PSC in November 2025 to acquire Foundry Ridge (Walworth County) and Red Oak Ridge (Kenosha County, 1.1 GW) — WPR gives the figures as USD 564.2 million and USD 1.77 billion — to serve the Microsoft Mount Pleasant and Vantage Port Washington campuses; and on 31 August 2026 Invenergy filed engineering plans for two more Wisconsin plants at Brillion (Union Depot 750 MW baseload, Forest Junction 1,200 MW peaker) for We Energies service by December 2031.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-04",
+     "text": "Hardin III Solar (250 MW, Ohio) commences operations — Microsoft PPA, WEC Energy Group majority owner, Illuminate USA modules — The farmdown model in one release: developer, hyperscaler offtaker, utility owner, affiliate module supplier.",
+     "src": "https://wwww.invenergy.com/news/invenergy-s-hardin-iii-commences-operations",
+     "from": "a"
+    }
+   ],
+   "last": "2025-06-04"
+  },
+  {
+   "a": "invenergy",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Cleanview's live development-pipeline ranking places NextEra Energy first and Invenergy second in the US overall and in both the wind and solar tables (read 5 September 2026).",
+     "context": "S&P Global Market Intelligence's June 2023 ranking had the same order for planned wind and solar through 2027 (18,811 MW against 12,041 MW, per the article snippet). The comparison is pipeline megawatts, which is why Invenergy's 'largest privately held' claim and NextEra's #1 are both true; NextEra is also a named co-participant in the NVIDIA flexible-AI-factory programme.",
+     "source": "https://cleanview.co/content/top-renewable-developers",
+     "status": "active",
+     "scale": "Cleanview: NextEra 68,229 MW pipeline (#1) against Invenergy 41,328 MW (#2)"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "invenergy",
+   "b": "nscale",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-23",
+     "text": "Invenergy joins NVIDIA and Emerald AI on 'flexible AI factories as grid assets' alongside AES, Constellation, NextEra, Nscale and Vistra — Positions the company as a power partner for flexible data-centre load rather than only a PPA seller.",
+     "src": "https://wwww.invenergy.com/news/invenergy-joins-nvidia-and-emerald-ai-to-pioneer-flexible-ai-factories-as-grid-assets",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-23"
+  },
+  {
+   "a": "invenergy",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Invenergy joined NVIDIA and Emerald AI's flexible-AI-factory initiative in March 2026 alongside AES, Constellation, NextEra, Nscale and Vistra.",
+     "context": "The release describes the NVIDIA Vera Rubin DSX AI Factory reference design and Emerald AI's Conductor software orchestrating flexibility 'with onsite generation, batteries, and behind-the-meter resources', and quotes Polsky on 'combining near-term generation solutions with a path to full grid connection'. Invenergy's April 2026 blog says it is developing 'AI factory-ready powered sites'; no site, customer or capacity has been named, so the engagement is a programme membership, not a contract.",
+     "source": "https://wwww.invenergy.com/news/invenergy-joins-nvidia-and-emerald-ai-to-pioneer-flexible-ai-factories-as-grid-assets",
+     "status": "announced",
+     "since": "2026-03",
+     "via": "'Flexible AI factories as grid assets' programme (Vera Rubin DSX reference design with Emerald AI)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) Trade press and the company's own blog say Invenergy is marketing 'AI factory-ready powered sites' up to 'multi-GW campuses' under the NVIDIA / Emerald AI programme.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-28",
+     "text": "Company blog: 'a portfolio of AI factory-ready powered sites' from edge deployments 'to multi-GW campuses' with the NVIDIA DSX design and Emerald AI's Conductor — The first company statement that it is marketing powered sites to AI load; no site, customer or megawatt is named.",
+     "src": "https://wwww.invenergy.com/news/power-lines/powering-the-next-phase-of-ai-infrastructure",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-23",
+     "text": "Invenergy joins NVIDIA and Emerald AI on 'flexible AI factories as grid assets' alongside AES, Constellation, NextEra, Nscale and Vistra — Positions the company as a power partner for flexible data-centre load rather than only a PPA seller.",
+     "src": "https://wwww.invenergy.com/news/invenergy-joins-nvidia-and-emerald-ai-to-pioneer-flexible-ai-factories-as-grid-assets",
+     "from": "a"
+    }
+   ],
+   "last": "2026-04-28"
+  },
+  {
+   "a": "invenergy",
+   "b": "plus-power",
+   "evid": [
+    {
+     "where": "Capabilities · Battery energy storage — standalone and hybrid, owned and operated",
+     "date": "",
+     "text": "Against Aypa (about 6.5 GW contracted) and Plus Power, Invenergy's disclosed storage fleet is small; against its own 38 GW, it is a rounding error the company says it intends to grow ('150 utility-scale projects' in pipeline).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "invenergy",
+   "b": "quanta-services",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Quanta Services' Infrastructure Solutions Group shares the USD 1.7 billion Phase 1 award with Kiewit for the 800-mile, 5,000 MW line.",
+     "context": "Invenergy's release names Quanta's Infrastructure Solutions Group and Kiewit Energy Group Inc. as the EPC contractors and puts Phase 1 jobs above 4,000. ConstructConnect lists the rest of the supply chain around the award: Siemens Energy converter technology, Prysmian conductor and Hubbell hardware.",
+     "source": "https://wwww.invenergy.com/news/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "USD 1.7bn combined with Kiewit Energy Group",
+     "via": "Grain Belt Express Phase 1 HVDC construction (Infrastructure Solutions Group)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Transmission — Grain Belt Express and the HVDC portfolio",
+     "date": "",
+     "text": "Contractor awards of USD 1.7 billion combined went to Quanta Services and Kiewit Energy Group in May 2025; Siemens Energy is the HVDC technology partner (January 2023), Prysmian supplies up to 12,500 miles of E3X conductor and Hubbell about USD 70 million of hardware.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-07",
+     "text": "Grain Belt Express awards USD 1.7 billion combined to Quanta Services and Kiewit Energy Group for Phase 1 HVDC construction — Contracts signed while the DOE guarantee was still conditional — the awards outlived the loan.",
+     "src": "https://wwww.invenergy.com/news/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history",
+     "from": "a"
+    }
+   ],
+   "last": "2025-05-07"
+  },
+  {
+   "a": "invenergy",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Grain Belt Express selected Siemens Energy as its HVDC technology partner on 25 January 2023, per the project's own news index.",
+     "context": "ConstructConnect's July 2025 summary confirms Siemens Energy as the HVDC technology supplier for the two Phase 1 converter stations in Kansas and Missouri. No contract value is published. This is the corpus's second Siemens Energy HVDC reference after Kiewit's Champlain Hudson work.",
+     "source": "https://grainbeltexpress.com/resources-news/",
+     "status": "active",
+     "since": "2023-01",
+     "scale": "5,000 MW HVDC (two Phase 1 converter stations)",
+     "via": "HVDC converter technology for Grain Belt Express"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Invenergy is the largest developer counterparty on the buyer side of this corpus and the one that has most visibly re-weighted toward gas-for-data-centres: it sells wind and solar output to Meta, Microsoft and Verizon, sells completed gas plants to regulated utilities (AEP's Indiana Michigan Power, We Energies), awards HVDC transmission EPC to Quanta and Kiewit with Siemens Energy converters, and buys utility-scale storage for Arizona utilities and, since September 2026, a 200 MW California project.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the USD 1.7 billion Quanta/Kiewit awards, Siemens Energy, Prysmian and Hubbell contracts, 95%-acquired easements, the SPP-filed ITC Great Plains interconnection agreement (January 2026) and the Illinois Supreme Court win argue for proceeding; the DOE guarantee's termination, the Missouri Attorney General's investigation and the absence of any announced private financing at USD 11 billion argue for delay.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Transmission — Grain Belt Express and the HVDC portfolio",
+     "date": "",
+     "text": "Contractor awards of USD 1.7 billion combined went to Quanta Services and Kiewit Energy Group in May 2025; Siemens Energy is the HVDC technology partner (January 2023), Prysmian supplies up to 12,500 miles of E3X conductor and Hubbell about USD 70 million of hardware.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2023-01"
+  },
+  {
+   "a": "invenergy",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Tesla holds a 100 MW virtual PPA on Delilah I Solar (300 MW, Texas, commercial February 2025) alongside Honda's 200 MW; WEC Energy Group is the majority owner.",
+     "context": "Tesla appears in Invenergy's record as an electricity buyer, not as a battery supplier — no Megapack or other Tesla storage order to Invenergy is published anywhere read.",
+     "source": "https://wwww.invenergy.com/news/invenergy-developed-delilah-i-solar-reaches-commercial-operations-in-texas",
+     "status": "active",
+     "since": "2025-02",
+     "scale": "100 MW virtual PPA (Delilah I Solar)",
+     "via": "Virtual power purchase agreement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Utility-scale wind and solar — development, ownership and farmdown",
+     "date": "",
+     "text": "Named corporate offtakers in the trailing period are Meta (eight projects, 1,800 MW cumulative), Verizon (four projects, 640 MW, more than 1 GW cumulative), Microsoft (Hardin III 250 MW), Honda and Tesla (Delilah I).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025-02"
   },
   {
    "a": "iren",
