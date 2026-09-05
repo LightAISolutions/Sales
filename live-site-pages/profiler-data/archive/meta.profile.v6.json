@@ -35,7 +35,7 @@
   {
    "name": "Energy Procurement Portfolio",
    "category": "Power · what this app's readers sell into",
-   "description": "Over 30 GW of clean energy contracted; 100% renewable-matched since 2020. Nuclear: Constellation Clinton (1,121 MW, 20-yr, from 2027) plus the January 2026 package — TerraPower (2 Natrium units of 690 MW each + rights to six more, with 1.2 GW of molten-salt thermal storage capability), Oklo (up to 1.2 GW Aurora campus, ~2030), Vistra (2,176 MW existing-plant PPAs + 433 MW uprates, 2,609 MW in total, the largest corporate-backed uprates). Gas: seven new plants (~5.2 GW Phase 2 proposal + ~2.3 GW Phase 1) with Entergy Louisiana for Hyperion. Storage: three grid-scale batteries in the Entergy package; 50 MW/4-hr BESS paired with 190 MW NM solar; Enbridge Cowboy (365 MW solar + 200 MW/1,600 MWh Tesla BESS, tolled via the Wyoming utility); Noon Energy LDES reservation up to 1 GW/100 GWh (>100-hr, pilot 2028). PPAs: Invenergy (1,800 MW cumulative), AES (650 MW), Sage/XGS geothermal (300 MW combined), Overview space solar (up to 1 GW, ~2030).",
+   "description": "Over 30 GW of clean energy contracted; 100% renewable-matched since 2020. Nuclear: Constellation Clinton (1,121 MW, 20-yr, from 2027) plus the January 2026 package — TerraPower (2 Natrium units of 690 MW each + rights to six more, with 1.2 GW of molten-salt thermal storage capability), Oklo (up to 1.2 GW Aurora campus, ~2030), Vistra (2.1 GW existing-plant PPAs + 433 MW uprates, the largest corporate-backed uprates). Gas: seven new plants (~5.2 GW Phase 2 proposal + ~2.3 GW Phase 1) with Entergy Louisiana for Hyperion. Storage: three grid-scale batteries in the Entergy package; 50 MW/4-hr BESS paired with 190 MW NM solar; Enbridge Cowboy (365 MW solar + 200 MW/1,600 MWh Tesla BESS, tolled via the Wyoming utility); Noon Energy LDES reservation up to 1 GW/100 GWh (>100-hr, pilot 2028). PPAs: Invenergy (1,800 MW cumulative), AES (650 MW), Sage/XGS geothermal (300 MW combined), Overview space solar (up to 1 GW, ~2030).",
    "highlights": [
     "~7.7 GW total contracted nuclear — the largest corporate nuclear commitment",
     "The Louisiana gas build-out is the ecosystem's highest-profile ratepayer controversy: LPSC challenges, a judge ordering Meta to reveal withheld demand evidence, and 15-yr Meta contracts vs 30-yr plant lives flagged by a dissenting commissioner",
@@ -111,7 +111,7 @@
   {
    "date": "2026-01-09",
    "category": "partnership",
-   "headline": "Up to 6.6 GW of nuclear contracted: TerraPower (Natrium, ~2032), Oklo (~2030), Vistra (2,176 MW + 433 MW uprates, 2,609 MW in total)",
+   "headline": "Up to 6.6 GW of nuclear contracted: TerraPower (Natrium, ~2032), Oklo (~2030), Vistra (2.1 GW + 433 MW uprates)",
    "read": "The largest corporate nuclear package — Natrium's built-in 1.2 GW thermal-storage capability is the adjacent-storage angle worth tracking.",
    "source": "https://about.fb.com/news/2026/01/meta-nuclear-energy-projects-power-american-ai-leadership/"
   },
@@ -538,6 +538,6 @@
    "url": "https://www.ucs.org/about/news/judge-orders-meta-explain-new-gas-demand-hyperscale-louisiana-data-center"
   }
  ],
- "lastUpdated": "2026-09-05",
- "profileVersion": 7
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 6
 }

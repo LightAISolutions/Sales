@@ -229,12 +229,12 @@
       "tagline": "ENR's #1 power design firm eleven years running — the largest US substation design group and a claimed >50% RICE share, fused to Tier-3 data-center design-build under a 100% ESOP.",
       "hq": "Kansas City, MO, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "burnsmcd.com"
       ],
-      "srcTotal": 28,
-      "srcFirstPct": 64,
+      "srcTotal": 29,
+      "srcFirstPct": 62,
       "kpiNorm": false
     },
     {
@@ -1103,7 +1103,7 @@
       "hq": "Menlo Park, CA, USA",
       "ticker": "NASDAQ: META",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "meta.com",
         "fb.com",
@@ -1799,12 +1799,12 @@
       "hq": "Easton, MD, USA",
       "ticker": "NASDAQ: WULF",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "terawulf.com"
       ],
-      "srcTotal": 27,
-      "srcFirstPct": 59,
+      "srcTotal": 28,
+      "srcFirstPct": 61,
       "kpiNorm": true
     },
     {
@@ -2239,7 +2239,7 @@
         "grainbeltexpress.com",
         "cimarronlink.com"
       ],
-      "srcTotal": 134,
+      "srcTotal": 135,
       "srcFirstPct": 55,
       "kpiNorm": false
     },

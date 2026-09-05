@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 80/100`
+`Sections: 81/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.64r] — 2026-09-05 05:50:38 AM EST
+
+> fix the C4 cross-dossier drift and add the reconciliation rule
+
+### Fixed
+
+- **`invenergy` v1 → v2 — the one clear error C4 surfaced.** Its positioning line read "the opposite of Vistra, NRG and Talen, which are contracting existing fleets to data centres." That is wrong for NRG, whose data-centre model is customer-funded **new build** under a Project Development Agreement with GE Vernova and Kiewit's TIC for up to 5.4 GW, not the sale of existing output — its signed 445 MW are retail supply agreements on NRG-owned land and its flagship 1.2 GW project is new construction. The sentence now separates NRG from the other two and says why, with the GE Vernova release added to `sources[]`.
+- **`meta` v6 → v7 — megawatt drift on the January 2026 nuclear package.** Two places read "Vistra (2.1 GW … + 433 MW uprates)". Vistra's own disclosure is **2,176 MW** of operating capacity (Perry 1,268 MW + Davis-Besse 908 MW) plus 433 MW of uprates, **2,609 MW in total**. Both corrected.
+- **`terawulf` v4 → v5 — the Nautilus exit figure reconciled rather than picked.** TeraWulf's dossier carried "~$92M / 3.4x MOIC" for the October 2024 exit; Talen's own release states **$85M in cash plus selected physical assets**. Both figures now appear with an explicit note that no source reconciles them, and Talen's release is added to `sources[]`.
+- **`burns-mcdonnell` v4 → v5 — an open question closed, not a contradiction corrected.** Its dossier flagged "no source ties Burns & McDonnell's phase to the burned building — an unresolved adjacency, not an allegation." The C4 research resolves it: the array that burned in January 2025 was **Phase I, 300 MW inside the retired plant's turbine building, engineered by Fluence with construction by Vistra's Luminant**. Burns & McDonnell's engagements are the separate 100 MW Phase II building and the 350 MW Phase III expansion — neither is the burned building. The note is rewritten as resolved and dated, a `vistra` relationship is added recording both phases, and the project record is added to `sources[]`.
+
+### Added
+
+- **A mandatory corpus-reconciliation step in the Profiler Command** (`.claude/rules/profiler-app.md`, new step 7; Batch requests, Standard treatment and Commit/push renumbered to 8, 9 and 10). After writing each profile a session must word-boundary grep every other dossier for the new company, classify each hit, and act: contradicted claims are revised in the *other* dossier with archive and `profileVersion` +1; differing figures are stated together with a note that nothing reconciles them; open questions the new research answers are closed and dated; accurate claims are left alone. The count reviewed and the count changed must be reported so a clean pass is distinguishable from a skipped one.
+- The rule names the gap it closes: `build-profiler-graph.py` resolves slugs, `check-profiler-study.py` validates terms, `sync-profiler-registry.py` reconciles counts and the authoring URL index validates citations — **none of them asks whether two dossiers assert contradictory facts.** It also carries the word-boundary caveat (`grep -lE '\bTalen\b'` returns four dossiers; `grep -il talen` returns seventeen, because it matches "talent") and a scope note that NVIDIA, Tesla, Microsoft, Google and Meta each carry 40+ inbound mentions and are a session of their own.
+
+### Verified
+
+- Four dossiers archived to `archive/` with `archive-index.json` updated (237 entries across 95 slugs, no missing files).
+- `sync-profiler-registry.py --check` clean (0 of 127 out of sync); `check-profiler-study.py` clean (101 guides, 811 concepts); graph rebuilt to 903 edges (678 curated) from 902.
+- Playwright render of all four revised dossiers plus `vistra`: **zero page errors, zero console errors**, source counts matching the files (135 / 20 / 28 / 29 / 81), no literal `{{}}`, every term span resolving.
+- URL-index gate re-run on the four: 0 unmatched among newly written citations. One pre-existing TeraWulf IR URL sits outside this session's research index; `git diff` confirms it was untouched.
+
+### Worth noting
+
+- **Calibration.** The pattern reported at v04.63r was one clear error, two unreconciled figures and one open question in twelve substantive inbound claims — not four contradictions. On close reading, `vistra` had already recorded both Burns & McDonnell engagements correctly, so no change was needed there; the C4 dossiers were not the source of any drift.
 
 ## [v04.63r] — 2026-09-05 05:30:09 AM EST
 

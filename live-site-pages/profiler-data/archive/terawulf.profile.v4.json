@@ -52,7 +52,7 @@
   {
    "name": "Bitcoin self-mining (legacy, shrinking)",
    "category": "Digital assets",
-   "description": "~49,400 miners / ~9.3 EH/s at YE2025 across 245 MW of legacy capacity at Lake Mariner. Digital-asset revenue fell from $47.6M in Q2 2025 to $12.8M in Q2 2026 (~29% of revenue) as buildings and power are progressively redeployed to HPC. The nuclear-powered Nautilus JV (Talen, 2¢/kWh) was exited in Oct 2024 at ~$92M / 3.4x MOIC to fund the first HPC buildings; Talen's own release states the consideration as $85M in cash plus selected physical assets, and no source reconciles the two figures.",
+   "description": "~49,400 miners / ~9.3 EH/s at YE2025 across 245 MW of legacy capacity at Lake Mariner. Digital-asset revenue fell from $47.6M in Q2 2025 to $12.8M in Q2 2026 (~29% of revenue) as buildings and power are progressively redeployed to HPC. The nuclear-powered Nautilus JV (Talen, 2¢/kWh) was exited in Oct 2024 at ~$92M / 3.4x MOIC to fund the first HPC buildings.",
    "highlights": [
     "Mining is now the bridge business funding nothing — HPC leases carry the story",
     "No stated exit date; capacity converts as HPC demand claims the megawatts"
@@ -323,7 +323,7 @@
       "result": "Still a bitcoin miner: 9.7 EH/s, 195 MW mining; $150M+ of buybacks"
      }
     ],
-    "commentary": "The last pure-mining year. The Nautilus nuclear JV exit (Oct 2024, ~$92M, 3.4x MOIC — Talen's release says $85M cash plus selected physical assets) funded the first HPC buildings."
+    "commentary": "The last pure-mining year. The Nautilus nuclear JV exit (Oct 2024, ~$92M, 3.4x MOIC) funded the first HPC buildings."
    },
    {
     "period": "FY2025",
@@ -536,13 +536,8 @@
   {
    "label": "Lake Mariner Data — project overview",
    "url": "https://www.lakemarinerdata.com/project-overview"
-  },
-  {
-   "label": "GlobeNewswire — Talen Energy purchases TeraWulf's minority share in Nautilus Cryptomine (counterparty figure)",
-   "url": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html",
-   "date": "2024-10-03"
   }
  ],
- "lastUpdated": "2026-09-05",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

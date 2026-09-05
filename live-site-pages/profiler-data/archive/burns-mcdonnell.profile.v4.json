@@ -168,7 +168,7 @@
    "date": "2024-10-31",
    "category": "Recognition",
    "headline": "Five ENR regional Best Project awards including the Vistra Moss Landing energy-storage expansion (350 MW / 1,400 MWh)",
-   "read": "Storage EPC credentials at flagship scale. (Adjacency resolved 2026-09-05 against the Moss Landing project record: the array that burned in January 2025 was Phase I, 300 MW inside the retired power plant's turbine building, engineered by Fluence with construction by Vistra's own Luminant organisation. Burns & McDonnell's engagements at the site are the separate 100 MW Phase II building, commissioned 2021, and this 350 MW Phase III expansion. Vistra wrote Phase I off at approximately $400 million and impaired Phase II at $155 million; only Phase III remains a restart candidate.)",
+   "read": "Storage EPC credentials at flagship scale. (Note: a January 2025 fire occurred at the broader Moss Landing complex; no source ties Burns & McDonnell's phase to the burned building — an unresolved adjacency, not an allegation.)",
    "source": "Burns & McDonnell release, 2024-10-31"
   },
   {
@@ -206,17 +206,6 @@
    "slug": "black-veatch",
    "type": "competitor",
    "note": "Perennial power-design rivalry — B&McD holds ENR #1 in T&D/substations against Black & Veatch's #2 across seven straight years."
-  },
-  {
-   "slug": "vistra",
-   "type": "customer",
-   "status": "historical",
-   "since": "2021",
-   "scale": "100 MW Phase II and the 350 MW / 1,400 MWh Phase III expansion",
-   "via": "Moss Landing energy storage",
-   "note": "Engineering, procurement and construction contractor for two of the three Moss Landing battery phases; the Phase III expansion won an ENR regional Best Project award in 2024.",
-   "context": "Burns & McDonnell's own release records five ENR regional Best Project awards for 2024 including the Vistra Moss Landing energy-storage expansion at 350 MW / 1,400 MWh — Phase III. The independent project record separately attributes the 100 MW Phase II building, commissioned in 2021, to Burns & McDonnell as EPC.\n\nNeither is the array that burned. Phase I, the 300 MW system installed inside the retired power plant's turbine building, was engineered by Fluence with construction by Vistra's Luminant organisation, and caught fire on 16 January 2025. Vistra wrote Phase I off at approximately $400 million in the first quarter of 2025 and impaired Phase II at $155 million in the fourth; both are permanently in its Asset Closure segment, and only Phase III is a restart candidate — the Q2 2026 Form 10-Q says 'when or if'.",
-   "source": "https://www.nsenergybusiness.com/projects/moss-landing/"
   }
  ],
  "technicalSpecs": [
@@ -540,12 +529,8 @@
   {
    "label": "T&D World — Keegan Odle profile (largest substation design group claim)",
    "url": "https://www.tdworld.com/home/contact/21140190/keegan-odle"
-  },
-  {
-   "label": "NS Energy — Moss Landing energy storage project profile (phase-by-phase contractors and suppliers)",
-   "url": "https://www.nsenergybusiness.com/projects/moss-landing/"
   }
  ],
- "lastUpdated": "2026-09-05",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

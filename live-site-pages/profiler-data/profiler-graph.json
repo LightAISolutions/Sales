@@ -6592,6 +6592,20 @@
   },
   {
    "a": "burns-mcdonnell",
+   "b": "fluence",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-31",
+     "text": "Five ENR regional Best Project awards including the Vistra Moss Landing energy-storage expansion (350 MW / 1,400 MWh) — Storage EPC credentials at flagship scale. (Adjacency resolved 2026-09-05 against the Moss Landing project record: the array that burned in January 2025 was Phase I, 300 MW inside the retired power plant's turbine building, engineered by Fluence with construction by Vistra's own Luminant organisation. Burns & McDonnell's engagements at the site are the separate 100 MW Phase II building, commissioned 2021, and this 350 MW Phase III expansion. Vistra wrote Phase I off at approximately $400 million and impaired Phase II at $155 million; only Phase III remains a restart candidate.)",
+     "src": "Burns & McDonnell release, 2024-10-31",
+     "from": "a"
+    }
+   ],
+   "last": "2024-10-31"
+  },
+  {
+   "a": "burns-mcdonnell",
    "b": "hunt-energy-network",
    "curated": {
     "b": {
@@ -6870,6 +6884,16 @@
    "a": "burns-mcdonnell",
    "b": "vistra",
    "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Engineering, procurement and construction contractor for two of the three Moss Landing battery phases; the Phase III expansion won an ENR regional Best Project award in 2024.",
+     "context": "Burns & McDonnell's own release records five ENR regional Best Project awards for 2024 including the Vistra Moss Landing energy-storage expansion at 350 MW / 1,400 MWh — Phase III. The independent project record separately attributes the 100 MW Phase II building, commissioned in 2021, to Burns & McDonnell as EPC.\n\nNeither is the array that burned. Phase I, the 300 MW system installed inside the retired power plant's turbine building, was engineered by Fluence with construction by Vistra's Luminant organisation, and caught fire on 16 January 2025. Vistra wrote Phase I off at approximately $400 million in the first quarter of 2025 and impaired Phase II at $155 million in the fourth; both are permanently in its Asset Closure segment, and only Phase III is a restart candidate — the Q2 2026 Form 10-Q says 'when or if'.",
+     "source": "https://www.nsenergybusiness.com/projects/moss-landing/",
+     "status": "historical",
+     "since": "2021",
+     "scale": "100 MW Phase II and the 350 MW / 1,400 MWh Phase III expansion",
+     "via": "Moss Landing energy storage"
+    },
     "b": {
      "type": "supplier",
      "note": "Engineering, procurement and construction contractor for the 100 MW Moss Landing Phase II battery system.",
@@ -6885,7 +6909,7 @@
     {
      "where": "Recent Reporting",
      "date": "2024-10-31",
-     "text": "Five ENR regional Best Project awards including the Vistra Moss Landing energy-storage expansion (350 MW / 1,400 MWh) — Storage EPC credentials at flagship scale. (Note: a January 2025 fire occurred at the broader Moss Landing complex; no source ties Burns & McDonnell's phase to the burned building — an unresolved adjacency, not an allegation.)",
+     "text": "Five ENR regional Best Project awards including the Vistra Moss Landing energy-storage expansion (350 MW / 1,400 MWh) — Storage EPC credentials at flagship scale. (Adjacency resolved 2026-09-05 against the Moss Landing project record: the array that burned in January 2025 was Phase I, 300 MW inside the retired power plant's turbine building, engineered by Fluence with construction by Vistra's own Luminant organisation. Burns & McDonnell's engagements at the site are the separate 100 MW Phase II building, commissioned 2021, and this 350 MW Phase III expansion. Vistra wrote Phase I off at approximately $400 million and impaired Phase II at $155 million; only Phase III remains a restart candidate.)",
      "src": "Burns & McDonnell release, 2024-10-31",
      "from": "a"
     },
@@ -18458,7 +18482,15 @@
      "via": "Wind turbines and gas turbines"
     }
    },
-   "evid": [],
+   "evid": [
+    {
+     "where": "Capabilities · Natural gas and data-centre power — Invenergy Power",
+     "date": "",
+     "text": "NRG sits between the two: it keeps merchant gas, but its data-centre model is customer-funded new build under a Project Development Agreement with GE Vernova and Kiewit's TIC for up to 5.4 GW, not the sale of existing output.",
+     "src": "",
+     "from": "b"
+    }
+   ],
    "last": "2019"
   },
   {
@@ -23248,6 +23280,13 @@
      "from": "a"
     },
     {
+     "where": "Capabilities · Natural gas and data-centre power — Invenergy Power",
+     "date": "",
+     "text": "NRG sits between the two: it keeps merchant gas, but its data-centre model is customer-funded new build under a Project Development Agreement with GE Vernova and Kiewit's TIC for up to 5.4 GW, not the sale of existing output.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Capabilities · Transmission — Grain Belt Express and the HVDC portfolio",
      "date": "",
      "text": "Contractor awards of USD 1.7 billion combined went to Quanta Services and Kiewit Energy Group in May 2025; Siemens Energy is the HVDC technology partner (January 2023), Prysmian supplies up to 12,500 miles of E3X conductor and Hubbell about USD 70 million of hardware.",
@@ -23596,7 +23635,7 @@
     {
      "where": "Capabilities · Natural gas and data-centre power — Invenergy Power",
      "date": "",
-     "text": "A gas developer that sells the plant to the utility at commissioning rather than an IPP that keeps merchant gas — the opposite of Vistra, NRG and Talen, which are contracting existing fleets to data centres.",
+     "text": "A gas developer that sells the plant to the utility at commissioning rather than an IPP that keeps merchant gas — the opposite of Vistra and Talen, which are contracting existing fleets to data centres.",
      "src": "",
      "from": "a"
     },
@@ -26256,14 +26295,14 @@
     {
      "where": "Capabilities · Energy Procurement Portfolio",
      "date": "",
-     "text": "Nuclear: Constellation Clinton (1,121 MW, 20-yr, from 2027) plus the January 2026 package — TerraPower (2 Natrium units of 690 MW each + rights to six more, with 1.2 GW of molten-salt thermal storage capability), Oklo (up to 1.2 GW Aurora campus, ~2030), Vistra (2.1 GW existing-plant PPAs + 433 MW uprates, the largest corporate-backed uprates).",
+     "text": "Nuclear: Constellation Clinton (1,121 MW, 20-yr, from 2027) plus the January 2026 package — TerraPower (2 Natrium units of 690 MW each + rights to six more, with 1.2 GW of molten-salt thermal storage capability), Oklo (up to 1.2 GW Aurora campus, ~2030), Vistra (2,176 MW existing-plant PPAs + 433 MW uprates, 2,609 MW in total, the largest corporate-backed uprates).",
      "src": "",
      "from": "a"
     },
     {
      "where": "Recent Reporting",
      "date": "2026-01-09",
-     "text": "Up to 6.6 GW of nuclear contracted: TerraPower (Natrium, ~2032), Oklo (~2030), Vistra (2.1 GW + 433 MW uprates) — The largest corporate nuclear package — Natrium's built-in 1.2 GW thermal-storage capability is the adjacent-storage angle worth tracking.",
+     "text": "Up to 6.6 GW of nuclear contracted: TerraPower (Natrium, ~2032), Oklo (~2030), Vistra (2,176 MW + 433 MW uprates, 2,609 MW in total) — The largest corporate nuclear package — Natrium's built-in 1.2 GW thermal-storage capability is the adjacent-storage angle worth tracking.",
      "src": "https://about.fb.com/news/2026/01/meta-nuclear-energy-projects-power-american-ai-leadership/",
      "from": "a"
     },
@@ -26596,14 +26635,14 @@
     {
      "where": "Capabilities · Energy Procurement Portfolio",
      "date": "",
-     "text": "Nuclear: Constellation Clinton (1,121 MW, 20-yr, from 2027) plus the January 2026 package — TerraPower (2 Natrium units of 690 MW each + rights to six more, with 1.2 GW of molten-salt thermal storage capability), Oklo (up to 1.2 GW Aurora campus, ~2030), Vistra (2.1 GW existing-plant PPAs + 433 MW uprates, the largest corporate-backed uprates).",
+     "text": "Nuclear: Constellation Clinton (1,121 MW, 20-yr, from 2027) plus the January 2026 package — TerraPower (2 Natrium units of 690 MW each + rights to six more, with 1.2 GW of molten-salt thermal storage capability), Oklo (up to 1.2 GW Aurora campus, ~2030), Vistra (2,176 MW existing-plant PPAs + 433 MW uprates, 2,609 MW in total, the largest corporate-backed uprates).",
      "src": "",
      "from": "a"
     },
     {
      "where": "Recent Reporting",
      "date": "2026-01-09",
-     "text": "Up to 6.6 GW of nuclear contracted: TerraPower (Natrium, ~2032), Oklo (~2030), Vistra (2.1 GW + 433 MW uprates) — The largest corporate nuclear package — Natrium's built-in 1.2 GW thermal-storage capability is the adjacent-storage angle worth tracking.",
+     "text": "Up to 6.6 GW of nuclear contracted: TerraPower (Natrium, ~2032), Oklo (~2030), Vistra (2,176 MW + 433 MW uprates, 2,609 MW in total) — The largest corporate nuclear package — Natrium's built-in 1.2 GW thermal-storage capability is the adjacent-storage angle worth tracking.",
      "src": "https://about.fb.com/news/2026/01/meta-nuclear-energy-projects-power-american-ai-leadership/",
      "from": "a"
     },

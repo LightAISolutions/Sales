@@ -1,0 +1,1658 @@
+{
+  "schemaVersion": 7,
+  "slug": "invenergy",
+  "name": "Invenergy LLC (Invenergy Renewables Holdings LLC · Invenergy Renewables LLC · Invenergy Clean Power LLC · Invenergy Transmission LLC · Invenergy Power)",
+  "shortName": "Invenergy",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://invenergy.com/",
+  "headquarters": "Chicago, Illinois (street address not published on the pages read); development offices in the US, Canada, Mexico, Spain, Japan, Poland and Scotland per the June 2023 Blackstone release",
+  "founded": 2001,
+  "employees": "'2,800+ people' per invenergy.com (September 2026); workforce-data aggregators show lower estimates (about 2,460–2,575) that no primary source confirms",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Invenergy is the second-largest US developer by development pipeline on Cleanview's live rankings (41,328 MW across 212 projects, behind NextEra Energy's 68,229 MW and ahead of Engie and Intersect), which makes it the largest non-utility developer on that measure — the 'largest privately held' phrase is Invenergy's and Blackstone's own language, not an independent ranking, and the ranking measure is pipeline megawatts, not operating capacity. The company is owned by CDPQ (52.4% economic ownership of Invenergy Renewables LLC after May 2018, invested since 2013), Blackstone Infrastructure Partners (about USD 3 billion in January 2022 plus about USD 1 billion in June 2023 into Invenergy Renewables Holdings LLC, 'approximately $4 billion' combined) and management, with 'CDPQ and Invenergy management' stated as majority owners and Invenergy as managing member; no 2024–2026 stake sale, recapitalisation or valuation appears in any release, filing or reputable report read. Its storage business is real but small relative to the whole and is disclosed only in fragments: '27 projects developed', '5,000 megawatt-hours of storage developed' and '150 utility-scale projects in the storage development pipeline' per the company, 736 MW of Arizona storage operating or under construction per Salt River Project (March 2026), and about 2.4 GW of named development-stage microsites in Arizona, Iowa, Tennessee, Ohio, New Mexico and Maryland. The strategic centre of gravity in 2025–2026 is elsewhere: a new Invenergy Power unit (April 2026) for 'natural gas and data center development', 1,800 MW of Meta contracts, a 918 MW gas plant sold to AEP's Indiana Michigan Power, about 3.3 GW of Wisconsin gas plants proposed for We Energies' data-centre load, a USD 765 million federal buyout of four offshore-wind leases (June 2026) redirected to gas and geothermal, and the privately financed USD 11 billion Grain Belt Express HVDC line after the Department of Energy terminated its USD 4.9 billion conditional loan guarantee in July 2025.\n\nBACKGROUND. Founded in Chicago in 2001 by Michael Polsky (who sold SkyGen Energy to Calpine that year) with Jim Murphy, Invenergy describes itself as 'North America's largest privately held developer, owner, and operator of innovative, reliable power infrastructure', with 'over 220 projects totaling more than 38 gigawatts' developed and 'over 25 gigawatts' operated across four continents per its May 2026 boilerplate; earlier boilerplate (April 2026) said 36 GW developed and 20 GW operated, and the figures move release to release. The business spans onshore wind, solar, standalone and hybrid storage, natural gas, transmission (Grain Belt Express, Cimarron Link, New Mexico North Path, the completed Cardal line in Uruguay), clean hydrogen (Sauk Valley, Illinois, operating since March 2025) and affiliates — Invenergy Services (operations), Illuminate USA (a 1.1 million-square-foot solar-module plant in Pataskala, Ohio, 'over 1,600 associates'), Reactivate and Energize Capital. Structure per the company's own releases: Invenergy Renewables Holdings LLC is the vehicle Blackstone invested in; Invenergy Renewables LLC carries CDPQ's stake; Invenergy Clean Power LLC holds the gas portfolio in a 2018 50/50 partnership with AMP Capital (now InfraBridge); Invenergy Transmission LLC holds Grain Belt Express; Invenergy Renewables Operating I LLC borrows the USD 1.5 billion revolver; Invenergy Thermal Operating I LLC carried Moody's Ba2 rating in 2021. Leadership changed on 7 April 2026: Polsky became Executive Chairman, Murphy CEO, and former CCO Jim Shield President of Invenergy Power.\n\nCollection gap: Invenergy publishes no financial statements, no per-project storage list with ISO, offtaker and contract type, and no battery supplier; the 21-page press archive would not paginate, so releases between September and December 2024 were recovered by site search only. The premise handed to this dossier — 'largest private US developer' — is corrected above; the four covered dossiers that name Invenergy (AEP, Kiewit, Meta, Apex Clean Energy) are consistent with the record here: the Sycamore Riverside sale, the Grain Belt Express awards, the 1,800 MW of Meta contracts and the Cleanview wind ranking.",
+  "ecosystemRole": "Invenergy is the largest developer counterparty on the buyer side of this corpus and the one that has most visibly re-weighted toward gas-for-data-centres: it sells wind and solar output to Meta, Microsoft and Verizon, sells completed gas plants to regulated utilities (AEP's Indiana Michigan Power, We Energies), awards HVDC transmission EPC to Quanta and Kiewit with Siemens Energy converters, and buys utility-scale storage for Arizona utilities and, since September 2026, a 200 MW California project. Its storage procurement is invisible in the public record — no integrator or cell supplier is named anywhere — which is itself the finding for a supplier reading this dossier.",
+  "productsAndServices": [
+    {
+      "name": "Utility-scale wind and solar — development, ownership and farmdown",
+      "category": "Generation — onshore wind and solar",
+      "description": "The heritage business and, by any measure the record supports, still the largest: Cleanview's live development-pipeline rankings (read 5 September 2026) place Invenergy second in the US overall (41,328 MW, 212 projects), second in wind (14,192 MW, 63 projects) and second in solar (22,560 MW, 124 projects), behind NextEra Energy in each table. The commercial model is to develop, contract and build, then hold or farm down: WEC Energy Group is 'majority owner' of Delilah I Solar (300 MW, Texas, commercial February 2025) and Hardin III Solar (250 MW, Ohio, commercial June 2025) with Invenergy as developer and operator; NIPSCO took Fairbanks Solar (250 MW, Indiana, commercial July 2025) under a build-transfer agreement; AEP's SWEPCO and PSO bought 1 GW of wind and solar for about USD 2.2 billion with construction financed by a Natixis-led USD 1.27 billion facility; and an Invenergy-led consortium with CDPQ and Blackstone bought AEP's 1,365 MW unregulated renewables portfolio for USD 1.5 billion enterprise value in August 2023. Named corporate offtakers in the trailing period are Meta (eight projects, 1,800 MW cumulative), Verizon (four projects, 640 MW, more than 1 GW cumulative), Microsoft (Hardin III 250 MW), Honda and Tesla (Delilah I).",
+      "highlights": [
+        "Cleanview (September 2026): #2 US developer by pipeline overall, wind and solar; the company's own 'largest privately held' claim carries no third-party attribution on any page read",
+        "Meta: 791 MW added June 2025 (Yellow Wood 300 MW, Pleasant Prairie 140 MW, Decoy 155 MW, Seaway Wind 196 MW) on top of 760 MW of environmental-attribute agreements in December 2024 — 'Total MW with Meta: 1,800 MW'",
+        "Verizon: 640 MW of new virtual PPAs (Richfield 50 MW, Maple Flats 250 MW, Cadence 240 MW, Chalk Bluff 100 MW), more than 1 GW cumulative (February 2025)",
+        "Mercom (February 2025): USD 1.1 billion of construction and bridge debt for three solar projects totalling 590 MW in Ohio, Indiana and Tennessee, lenders unnamed",
+        "South Dakota PUC approved the 333 MW, about USD 750 million Philip Wind project (February 2026), described as the state's largest; PPAW 1 (350 MW, Quebec, Hydro-Québec offtake) closed CAD 1.1 billion of financing in June 2025",
+        "Illuminate USA modules are specified on Invenergy's own Ohio solar projects (Pleasant Prairie, Hardin III); Blattner is the named EPC at Pleasant Prairie"
+      ],
+      "positioning": "The only privately owned developer in Cleanview's top ten; a full-service developer-operator (in-house development, construction, Invenergy Services operations) where Intersect and Hecate are development platforms and NextEra and Engie are utility or IPP balance sheets.",
+      "soldThrough": "Long-term PPAs and virtual PPAs with corporates and utilities; build-transfer and majority farmdowns to utilities (NIPSCO, WEC Energy Group, SWEPCO/PSO, Dominion Energy Virginia); project-level construction debt (Natixis, Mercom-reported USD 1.1 billion) and tax-credit transfers (the AEP portfolio's USD 580 million PTC transfer with Bank of America).",
+      "targetSegments": [
+        "Hyperscalers and telecoms (Meta, Microsoft, Verizon, Equinix)",
+        "Regulated utilities and public power (AEP, NIPSCO, WEC, SRP, APS, Grant County PUD, Hydro-Québec)",
+        "Infrastructure investors buying operating portfolios"
+      ],
+      "roadmap": "Meta projects due 2027 (Yellow Wood, Pleasant Prairie, Decoy) and 2028 (Seaway Wind); Verizon's Cadence Solar 2026 and Chalk Bluff 2027; Philip Wind construction from June 2026; Quincy Solar (120 MW, Washington) late 2027; Hashknife Solar (475 MW, Arizona) 2027 per POWER Magazine."
+    },
+    {
+      "name": "Battery energy storage — standalone and hybrid, owned and operated",
+      "category": "Owned and operated BESS — contracted (utility offtake) and hybrid",
+      "description": "Invenergy has built batteries since Grand Ridge (Illinois, 2012, 36 MW for PJM frequency regulation) but discloses the fleet only in aggregates: '27 projects developed', '5,000 megawatt-hours of storage developed', '150 utility-scale projects in the storage development pipeline' (storage page, read September 2026); '21 storage projects totaling 556 megawatts or 1,817 megawatt-hours' company-wide in August 2024; 'more than 25 energy storage projects totaling more than 1,250 megawatts' as relayed by The Pajaronian in September 2026. The operating core is Arizona: eleven APS-contracted projects commissioned 2023–2024 (Energy-Storage.news lists Cotton Center, Desert Star, El Sol, Foothills I and II, Gila Bend I and II, Paloma, Hyder I and II and Yuma — 261 MW / 903 MWh), and SRP's March 2026 release counts 736 MW of Invenergy storage operating or under construction in the state. Named development-stage microsites total about 2.4 GW (agent arithmetic, not a company figure): Cloud Cap 1,000 MW / 4,000 MWh and Hazy Peak 700 MW / 2,800 MWh in Arizona, Lincoln Route 300 MW / 1,200 MWh in Iowa, Yum Yum 147 MW in Tennessee, Hardin II 105 MW / 420 MWh in Ohio, Tip Top 70 MW / 280 MWh in New Mexico, Richfield 50 MW in Maryland. The first SRP agreement, SunDog (200 MW solar plus 200 MW / 800 MWh storage, Pinal County), was announced in March 2026, and on 3 September 2026 The Pajaronian reported Invenergy taking over the 200 MW Seahawk (Minto Road) project in Santa Cruz County, California from New Leaf Energy.",
+      "highlights": [
+        "Chemistry stated as lithium iron phosphate (company blog; the 2018 MidAmerican 1 MW / 4 MWh unit); no integrator, cell maker or PCS supplier is named in any first-party or third-party source read — a collection gap",
+        "ISO membership is never stated by the company; by geography the Arizona fleet sits in the APS and SRP balancing areas (WECC, non-ISO), Grand Ridge in PJM, Lincoln Route in MISO, Seahawk in CAISO",
+        "The El Sol figures conflict: 50 MW / 200 MWh per the August 2024 release and Energy-Storage.news, '250 megawatts / 1,250+ megawatt-hours' on the project microsite — the company does not reconcile them",
+        "Invenergy Services lists 'Storage (400+ MW)' across '19 storage projects' in its operated fleet",
+        "Contract types are disclosed only as 'power purchase agreement' (APS, Yuma) and 'agreement' (SRP, SunDog); no tolling, RA or merchant designation appears"
+      ],
+      "positioning": "A utility-contracted Southwest storage owner rather than a merchant or hyperscaler-facing storage platform: on the record, every operating battery serves an Arizona utility or a wind-solar co-location. Against Aypa (about 6.5 GW contracted) and Plus Power, Invenergy's disclosed storage fleet is small; against its own 38 GW, it is a rounding error the company says it intends to grow ('150 utility-scale projects' in pipeline).",
+      "soldThrough": "Utility PPAs and energy-storage agreements (APS, SRP); build-own-operate with Invenergy Services as operator; late-stage acquisitions (Seahawk) alongside greenfield microsites.",
+      "targetSegments": [
+        "Southwest utilities (APS, SRP)",
+        "Utilities and CCAs in California (Seahawk)",
+        "Hybrid additions to its own wind and solar sites"
+      ],
+      "roadmap": "SunDog (SRP) date not stated; Cloud Cap, Hazy Peak, Hardin II, Tip Top, Richfield and Yum Yum are in 'site characterization and permitting'; Lincoln Route in 'preliminary studies and land campaign'; Seahawk under new ownership from September 2026."
+    },
+    {
+      "name": "Natural gas and data-centre power — Invenergy Power",
+      "category": "Generation — gas plants developed for utilities and large loads",
+      "description": "Gas is the fastest-moving line and, since 7 April 2026, has its own unit: 'Chief Commercial Officer Jim Shield will become President of Invenergy Power, which will oversee the company's growing natural gas and data center development.' The model is develop-and-sell to regulated utilities facing data-centre load: Indiana Michigan Power (AEP) filed with the IURC in April 2026 to acquire the 918 MW Sycamore Riverside Energy Center (Sullivan County, about USD 500 million per Inside INdiana Business, ownership transfer March 2029, IURC decision expected end-2026); We Energies filed with the Wisconsin PSC in November 2025 to acquire Foundry Ridge (Walworth County) and Red Oak Ridge (Kenosha County, 1.1 GW) — WPR gives the figures as USD 564.2 million and USD 1.77 billion — to serve the Microsoft Mount Pleasant and Vantage Port Washington campuses; and on 31 August 2026 Invenergy filed engineering plans for two more Wisconsin plants at Brillion (Union Depot 750 MW baseload, Forest Junction 1,200 MW peaker) for We Energies service by December 2031. In Arizona a February 2026 precedent agreement makes Invenergy the anchor shipper on Tallgrass gas infrastructure for 'as many as three new natural gas-fired power plants' in Maricopa and Yuma Counties. The June 2026 Interior settlement (USD 765 million for four offshore leases) was explicitly redirected to 'natural gas-fired power plants in Indiana, Wisconsin, Iowa, Kansas, and Missouri and geothermal'.",
+      "highlights": [
+        "Historic gas fleet: Lackawanna Energy Center 1,485 MW (Pennsylvania, 2019), Nelson (Illinois), Ector County (ERCOT, 330 MW), Grays Harbor, St. Clair, Cannon Falls, Spindle Hill, Hardee — 2,680 MW net in the Invenergy Thermal Operating I LLC portfolio Moody's rated Ba2 in 2021",
+        "The gas portfolio sits in Invenergy Clean Power LLC, 50/50 with AMP Capital (now InfraBridge) since May 2018",
+        "NVIDIA / Emerald AI 'flexible AI factories' programme (March 2026): Invenergy joins AES, Constellation, NextEra, Nscale and Vistra around the Vera Rubin DSX reference design; the April 2026 blog describes 'a portfolio of AI factory-ready powered sites' from 'edge and distributed inference deployments to multi-GW campuses' — no site is named",
+        "The Daily Reporter's August 2026 figures for the two earlier Wisconsin plants are transposed against WPR's November 2025 report; WPR's are carried here",
+        "Sullivan County, Indiana hosts four Invenergy projects: Sycamore Riverside, Grain Belt Express, Fairbanks and Trade Post"
+      ],
+      "positioning": "A gas developer that sells the plant to the utility at commissioning rather than an IPP that keeps merchant gas — the opposite of Vistra, NRG and Talen, which are contracting existing fleets to data centres. Invenergy's edge is siting and permitting speed at its existing project sites (Foundry Ridge at the Darien solar site; Sycamore beside its own Fairbanks and Grain Belt work).",
+      "soldThrough": "Build-and-transfer to regulated utilities under CPCN filings (IURC, Wisconsin PSC); own-and-operate via Invenergy Clean Power for the legacy fleet; gas supply precedent agreements (Tallgrass).",
+      "targetSegments": [
+        "Regulated utilities with hyperscaler load (AEP, WEC Energy)",
+        "Hyperscalers and AI-factory developers (NVIDIA programme)",
+        "Arizona load growth (Tallgrass-supplied plants)"
+      ],
+      "roadmap": "Sycamore Riverside to I&M March 2029; Foundry Ridge end-2028 and Red Oak Ridge end-2029 per WPR; Union Depot and Forest Junction PSC application October 2026, construction Q4 2027, completion late 2031; Arizona gas plants undated."
+    },
+    {
+      "name": "Transmission — Grain Belt Express and the HVDC portfolio",
+      "category": "Merchant HVDC transmission (Invenergy Transmission LLC)",
+      "description": "Grain Belt Express is an about 800-mile, 5,000 MW, 600 kV HVDC line from western Kansas through Missouri and Illinois to Indiana, connecting four grid regions, at a stated USD 11 billion; Phase 1 is about 530 miles between converter stations in Kansas and Missouri with construction 'anticipated 2026' and, per ConstructConnect, completion in 2029. Contractor awards of USD 1.7 billion combined went to Quanta Services and Kiewit Energy Group in May 2025; Siemens Energy is the HVDC technology partner (January 2023), Prysmian supplies up to 12,500 miles of E3X conductor and Hubbell about USD 70 million of hardware. All four state approvals are in hand (Indiana 2013, Kansas 2019 amended 2023, Missouri 2019 amended 2023, Illinois 2023), the Missouri Supreme Court denied review in January 2025, and the Illinois Supreme Court upheld the ICC certificate 6–0 on 23 January 2026 while remanding three constitutional claims. The Department of Energy terminated its USD 4.9 billion conditional loan guarantee for Phase 1 on 23 July 2025; the company now describes the line as 'privately financed'. Missouri Attorney General Andrew Bailey issued a civil investigative demand on 2 July 2025 and asked the PSC to re-examine the certificate; Grain Belt petitioned Cole County Circuit Court to quash it. The company also lists Cimarron Link (1,900 MW, Oklahoma Panhandle to Jenks), New Mexico North Path (4,000 MW, with the state's RETA) and the operating Cardal line in Uruguay (55 km 500 kV, UTE 30-year lease, February 2024); '11 gigawatts of new transmission capacity in development'. Clean Path NY (175 miles, 3,800 MW, USD 11 billion, with energyRe and NYPA) lost its NYSERDA Tier 4 contract by mutual termination in November 2024 after the developers sought higher payments; NYPA petitioned the PSC in January 2025 to keep the project alive as a priority transmission project.",
+      "highlights": [
+        "Landowner easements: more than USD 105 million executed, USD 19 million paid, USD 86 million due at construction; 'over 1,500 voluntary agreements' (July 2025 letter to Secretary Wright)",
+        "Anchor customers: MOPEP's 39 Missouri municipal utilities under transmission service agreements ('$12.8 million in annual energy savings')",
+        "An amended interconnection agreement between Grain Belt Express LLC and ITC Great Plains was filed by SPP at FERC on 23 January 2026 (ER26-1106)",
+        "Fortune (August 2025): Invenergy argued the line would carry 'coal, gas, and nuclear' as well as renewables; Axios reported a planned gas-plant connection in July 2025",
+        "FERC (October 2025) denied Invenergy Energy Management's complaint against PJM (EL23-29) and granted in part Invenergy Transmission's complaint against MISO on merchant transmission in MTEP (EL22-83)"
+      ],
+      "positioning": "The only US developer building a multi-state merchant HVDC line at this scale; what transmission ownership buys is the right to site generation and load where the line lands — a capability no other BESS-side developer in this corpus has.",
+      "soldThrough": "Transmission service agreements with municipal and public-power buyers, FERC-approved open-access tariff; EPC to Quanta and Kiewit; private financing after the DOE guarantee was withdrawn.",
+      "targetSegments": [
+        "Municipal and public-power utilities (MOPEP)",
+        "Load-serving entities in MISO, PJM and SPP",
+        "Data-centre developers seeking interregional capacity (per company statements)"
+      ],
+      "roadmap": "Phase 1 construction from 2026, completion 2029 (ConstructConnect); Phase 2 (Missouri to Indiana) unscheduled; Cimarron Link in routing and environmental review; North Path undated."
+    },
+    {
+      "name": "Operations, manufacturing and new technologies — Invenergy Services, Illuminate USA, hydrogen, geothermal, offshore exit",
+      "category": "Services, affiliates and technology ventures",
+      "description": "Invenergy Services is the operations arm ('Storage (400+ MW)', '19 storage projects'; the natural-gas page cites '140 operational natural gas facilities' and '70 gigawatts' that appear to describe the serviced fleet rather than owned assets — the page does not say). Illuminate USA, an affiliate, runs a 1.1 million-square-foot solar-module plant in Pataskala, Ohio ('over 1,600 associates', 'over 13 million solar panels', eight lines) and named Art Fletcher CEO in April 2026. Sauk Valley Hydrogen (Rock Falls, Illinois, about 40 tonnes a year, Ohmium electrolysers, Aether Fuels offtake) reached commercial operation in March 2025. Offshore wind has been exited: Leading Light Wind (2.4 GW, New Jersey, with energyRe) was cancelled in November 2025 for 'financial, supply chain and regulatory obstacles', and on 17 June 2026 Interior agreed to pay USD 765 million — the original lease prices — to cancel four leases (New York Bight OCS-A 0542 USD 645 million, Morro Bay USD 112 million, two Gulf of Maine leases about USD 9 million). Invenergy Geothermal Development holds 45 BLM leases across about 144,000 acres in Utah, Idaho, Nevada and New Mexico and plans enhanced-geothermal drilling from late 2026; no geothermal plant operates yet.",
+      "highlights": [
+        "Reactivate (community solar) and Energize Capital (venture fund) are listed as ventures on invenergy.com",
+        "'Raised over $75 billion in capital' since 2001 (April 2026 boilerplate) and 'over $500 million invested in American communities' in 2025",
+        "Prysmian's Williamsport expansion and Hubbell's Grain Belt order are framed by the company as domestic supply-chain reshoring"
+      ],
+      "positioning": "An integrated developer with its own module plant, operator and early-stage technology bets — the diversification that lets the capital go where policy points (gas and geothermal in 2026, offshore wind in 2022).",
+      "soldThrough": "Operations and maintenance contracts (Invenergy Services); module supply to Invenergy projects and third parties (Illuminate USA); hydrogen offtake (Aether Fuels).",
+      "targetSegments": [
+        "Own fleet and third-party owners (operations)",
+        "Solar developers needing US-made modules",
+        "Industrial hydrogen offtakers"
+      ],
+      "roadmap": "Enhanced geothermal drilling later in 2026 (Canary Media); Illuminate USA sustainability reporting and glass sourcing (SOLARCYCLE, August 2025)."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Storage ledger — every battery project a source names, with MW / MWh, location, status and counterparty as stated (sources: Invenergy microsites and releases, SRP, Energy-Storage.news, The Pajaronian)",
+      "specs": [
+        {
+          "band": "Operating (source states online)",
+          "label": "Arizona APS fleet — 11 projects (2023–2024)",
+          "value": "Cotton Center 17 MW / 51 MWh; Desert Star 10 / 30; Foothills I 17.5 / 52.5; Foothills II 17.5 / 52.5; Gila Bend I 16 / 48; Gila Bend II 16 / 48; Paloma 17 / 51; Hyder I 16 / 48; Hyder II 14 / 42; El Sol 50 / 200; Yuma 70 / 280 — 261 MW / 903 MWh per Energy-Storage.news (30 August 2024); offtaker Arizona Public Service"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "El Sol Energy Storage Center — Maricopa County, AZ",
+          "value": "'250 megawatts' / '1,250+ megawatt-hours' per the project microsite; 50 MW / 200 MWh per the 29 August 2024 commissioning release — unreconciled by the company"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "Yuma Solar Energy Center (hybrid) — Yuma County, AZ",
+          "value": "70 MW solar + 70 MW storage; commercial operation 1 April 2025; power purchase agreement with Arizona Public Service"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "Grand Ridge Energy Center — LaSalle County, IL (PJM by geography)",
+          "value": "36 MW battery storage alongside 210 MW wind and 20 MW solar; batteries since 2012; '244.5 MW/MWh' in a 2022 company blog"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "Orangeville Wind and Storage — Wyoming County, NY",
+          "value": "20 MW lithium-ion storage added 2021 to a 94 MW wind centre (commercial 2014)"
+        },
+        {
+          "band": "Operating (source states online)",
+          "label": "La Toba Energy Center — Baja California Sur, Mexico",
+          "value": "35 MW solar co-located with a 20 MW four-hour battery; commercial October 2022"
+        },
+        {
+          "band": "Company aggregates",
+          "label": "Fleet totals as stated",
+          "value": "'27 projects developed', '5,000 megawatt-hours of storage developed', '150 utility-scale projects in the storage development pipeline' (storage page, September 2026); '21 storage projects totaling 556 megawatts or 1,817 megawatt-hours' (29 August 2024); 736 MW of Arizona storage operating or under construction (SRP, 17 March 2026); 'more than 25 energy storage projects totaling more than 1,250 megawatts' (The Pajaronian, 3 September 2026)"
+        },
+        {
+          "band": "Contracted / acquired (not yet online)",
+          "label": "SunDog Energy Center — Pinal County, AZ (Salt River Project)",
+          "value": "200 MW solar + 200 MW / 4-hour (800 MWh) storage; 'first agreement' between SRP and Invenergy, announced 17 March 2026; commercial date and contract type not stated"
+        },
+        {
+          "band": "Contracted / acquired (not yet online)",
+          "label": "Seahawk (Minto Road) Energy Storage — Santa Cruz County, CA (CAISO)",
+          "value": "200 MW; taken over from New Leaf Energy per The Pajaronian, 3 September 2026; MWh, offtake and date not reported"
+        },
+        {
+          "band": "Development (company microsites, no offtaker or date stated)",
+          "label": "Cloud Cap — Maricopa County, AZ",
+          "value": "1,000 MW / 4,000 MWh; 'site characterization and permitting'"
+        },
+        {
+          "band": "Development (company microsites, no offtaker or date stated)",
+          "label": "Hazy Peak — Pinal County, AZ",
+          "value": "700 MW / 2,800 MWh; 'site characterization and permitting'"
+        },
+        {
+          "band": "Development (company microsites, no offtaker or date stated)",
+          "label": "Lincoln Route — Linn County, IA (MISO by geography)",
+          "value": "300 MW / 1,200 MWh; 'preliminary studies and land campaign'"
+        },
+        {
+          "band": "Development (company microsites, no offtaker or date stated)",
+          "label": "Yum Yum — Fayette County, TN",
+          "value": "147 MW; MWh not stated; 'site characterization and permitting'"
+        },
+        {
+          "band": "Development (company microsites, no offtaker or date stated)",
+          "label": "Hardin II — Hardin County, OH (PJM by geography)",
+          "value": "105 MW / 420 MWh; 'site characterization and permitting'"
+        },
+        {
+          "band": "Development (company microsites, no offtaker or date stated)",
+          "label": "Tip Top — Lea County, NM",
+          "value": "70 MW / 280 MWh; 'proposed'; 'site characterization and permitting'"
+        },
+        {
+          "band": "Development (company microsites, no offtaker or date stated)",
+          "label": "Richfield — Dorchester County, MD (PJM by geography)",
+          "value": "50 MW; 'site characterization and permitting'"
+        }
+      ],
+      "notes": "Named development microsites sum to about 2,372 MW — agent arithmetic, not a company figure. No source read names a battery integrator, cell supplier or PCS vendor for any Invenergy project; the only chemistry statement is 'lithium iron phosphate' on a company blog and the 2018 MidAmerican 1 MW / 4 MWh unit Invenergy built as EPC."
+    },
+    {
+      "product": "Grain Belt Express — HVDC line as the company and its regulators describe it",
+      "specs": [
+        {
+          "band": "Design",
+          "label": "Capacity and route",
+          "value": "'5,000 megawatts'; about 800 miles; Kansas, Missouri, Illinois, Indiana; 'connect four U.S. power grids'; 600 kV HVDC per ConstructConnect"
+        },
+        {
+          "band": "Design",
+          "label": "Phase 1",
+          "value": "'approximately 530 miles between the converter stations in Kansas and Missouri'; 5,000 MW; construction 'anticipated 2026'; completion 2029 per ConstructConnect"
+        },
+        {
+          "band": "Design",
+          "label": "Phase 2",
+          "value": "Missouri mid-point converter station to the Indiana interconnection; schedule not announced"
+        },
+        {
+          "band": "Design",
+          "label": "Southwest Kansas AC Collector System",
+          "value": "two 345 kV AC lines (Meade–Dodge City, Bucklin–Dodge City); KCC siting permit 26 September 2024"
+        },
+        {
+          "band": "Cost and contracts",
+          "label": "Stated cost",
+          "value": "'$11 billion in private sector-led transmission investment' (2025–2026); '$7 billion' in the October 2023 release"
+        },
+        {
+          "band": "Cost and contracts",
+          "label": "EPC awards",
+          "value": "'Combined awards: $1.7 billion' to Quanta Services and Kiewit Energy Group Inc. (7 May 2025)"
+        },
+        {
+          "band": "Cost and contracts",
+          "label": "Technology and materials",
+          "value": "Siemens Energy HVDC technology partner (25 January 2023); Prysmian E3X conductor 'up to 12,500 miles'; Hubbell 'approximately $70 million' of transmission components"
+        },
+        {
+          "band": "Cost and contracts",
+          "label": "Easements",
+          "value": "'$105 million total ($19 million paid, $86 million due at construction)'; Phase 1 easements '95% acquired' (October 2023); 'over 1,500 voluntary agreements' (July 2025)"
+        },
+        {
+          "band": "Approvals",
+          "label": "State certificates",
+          "value": "Indiana IURC 2013; Kansas KCC 2019, amended 13 June 2023; Missouri PSC 2019, amended 12 October 2023 (Tiger Connector); Illinois ICC 8 March 2023 — upheld 6–0 by the Illinois Supreme Court 23 January 2026"
+        },
+        {
+          "band": "Approvals",
+          "label": "Federal",
+          "value": "FAST-41 covered project (20 February 2024); DOE EIS for Phase 1 in development; FERC-approved open-access transmission tariff; DOE LPO USD 4.9 billion conditional commitment (25 November 2024) terminated 23 July 2025"
+        },
+        {
+          "band": "Customers",
+          "label": "Contracted buyers",
+          "value": "MOPEP transmission service agreements — '$12.8 million in annual energy savings for at least 39 municipal utilities'"
+        }
+      ],
+      "notes": "Company claims of '$52 billion in energy cost savings over 15 years' and '5,500 American jobs' are the developer's own estimates and are contested by the Missouri Attorney General."
+    },
+    {
+      "product": "Gas plants developed for utilities and large loads — as filed or reported",
+      "specs": [
+        {
+          "band": "Filed with a regulator",
+          "label": "Sycamore Riverside Energy Center — Sullivan County, IN",
+          "value": "918 MW dual-fuel combustion turbines; Indiana Michigan Power (AEP) CPCN filing 10 April 2026; 'I&M expected to take ownership in March 2029 upon completion'; about USD 500 million per Inside INdiana Business; IURC decision expected end-2026"
+        },
+        {
+          "band": "Filed with a regulator",
+          "label": "Foundry Ridge Energy Center — Walworth County, WI",
+          "value": "'proposed 324 megawatt natural gas peaker' per the company microsite; 270 MW and about USD 564.2 million in We Energies' November 2025 PSC filing per WPR; in service end-2028"
+        },
+        {
+          "band": "Filed with a regulator",
+          "label": "Red Oak Ridge Energy Center — Kenosha County, WI",
+          "value": "1,210 MW, five gas turbines with hydrogen-cooled generators (WPR, September 2025); about USD 1.77 billion in We Energies' filing; in service end-2029"
+        },
+        {
+          "band": "Engineering plans filed",
+          "label": "Union Depot and Forest Junction Energy Centers — Brillion, Calumet County, WI",
+          "value": "750 MW baseload and 1,200 MW peaker, 'combined up to 1.95 GW'; We Energies service by December 2031; PSC application October 2026 (The Daily Reporter, 31 August 2026)"
+        },
+        {
+          "band": "Gas supply",
+          "label": "Arizona plants — Maricopa and Yuma Counties",
+          "value": "'as many as three new natural gas-fired power plants'; Invenergy the anchor shipper on Tallgrass infrastructure (20 February 2026); capacities not disclosed"
+        },
+        {
+          "band": "Legacy fleet (Moody's 2021)",
+          "label": "Invenergy Thermal Operating I LLC",
+          "value": "2,680 MW net — Nelson (Illinois CCGT), Ector County (330 MW, ERCOT), Grays Harbor, St. Clair, Cannon Falls, Spindle Hill, Hardee (51%); Ba2 senior secured, outlook negative (23 April 2021)"
+        }
+      ],
+      "notes": "The Daily Reporter's 31 August 2026 article transposes the Foundry Ridge and Red Oak Ridge dollar figures relative to WPR's November 2025 report; WPR's are carried."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-03",
+      "category": "project",
+      "headline": "Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
+      "read": "A late-stage storage acquisition in CAISO — the first named Invenergy battery outside the Southwest and its own wind-solar sites since Orangeville.",
+      "source": "https://pajaronian.com/invenergy-takes-over-minto-road-battery-storage-project/"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "project",
+      "headline": "Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
+      "read": "With the two earlier plants, about 3.3 GW of Wisconsin gas proposed for one utility's data-centre load in ten months.",
+      "source": "https://dailyreporter.com/2026/08/31/invenergy-proposes-two-natural-gas-plants-calumet-county/"
+    },
+    {
+      "date": "2026-08-20",
+      "category": "project",
+      "headline": "Quincy Solar (120 MW, Grant County, Washington) breaks ground; Cupertino Electric named contractor; commercial late 2027",
+      "read": "Public-power offtake with a 20-year PPA — the contracted model still runs alongside the gas pivot.",
+      "source": "https://wwww.invenergy.com/news/invenergy-and-grant-county-public-utility-district-celebrate-their-first-solar-project-to-break-ground-in-grant-county"
+    },
+    {
+      "date": "2026-06-22",
+      "category": "corporate",
+      "headline": "ThinkGeoEnergy: Invenergy accepts the Interior settlement to move capital from offshore wind to geothermal — 45 BLM leases, no operating plant yet",
+      "read": "Geothermal is the stated 'clean firm' bet; it is leases and drilling plans, not megawatts.",
+      "source": "https://www.thinkgeoenergy.com/invenergy-accepts-settlement-agreement-to-pivot-capital-from-wind-to-geothermal/"
+    },
+    {
+      "date": "2026-06-17",
+      "category": "policy",
+      "headline": "Interior agrees to pay Invenergy USD 765 million to cancel four offshore-wind leases (New York Bight, Morro Bay, two Gulf of Maine); funds pledged to gas plants in five states and geothermal",
+      "read": "The lease prices are refunded in full; the developer exits offshore wind with its capital intact and redirects it to what the administration will permit.",
+      "source": "https://heatmap.news/energy/trump-invenergy-wind-deal"
+    },
+    {
+      "date": "2026-06-17",
+      "category": "corporate",
+      "headline": "Canary Media: Invenergy holds 45 geothermal leases (about 144,000 acres) in five Western states and plans enhanced-geothermal drilling from late 2026",
+      "read": "Names the new technology line and its scale; Daniel Runyan (SVP Development) is the spokesperson for both gas and geothermal.",
+      "source": "https://www.canarymedia.com/articles/offshore-wind/invenergy-offshore-wind-payout-geothermal"
+    },
+    {
+      "date": "2026-05-19",
+      "category": "corporate",
+      "headline": "'Invenergy invested over $500 million in American communities last year'; boilerplate now 'over 220 projects totaling more than 38 gigawatts' and 'operates over 25 gigawatts'",
+      "read": "The scale claims moved from 36 GW / 20 GW in April to 38 GW / 25 GW in May 2026 — treat every headline figure as a moving boilerplate number.",
+      "source": "https://wwww.invenergy.com/news/invenergy-invested-over-500-million-in-american-communities-last-year"
+    },
+    {
+      "date": "2026-04-30",
+      "category": "leadership",
+      "headline": "Illuminate USA names Art Fletcher CEO, succeeding Frank Zhu",
+      "read": "The module affiliate — '1,600 associates', eight lines in Ohio — gets a new leader as FEOC rules bear on domestic content.",
+      "source": "https://wwww.invenergy.com/news/illuminate-usa-announces-new-ceo-art-fletcher"
+    },
+    {
+      "date": "2026-04-28",
+      "category": "market",
+      "headline": "Company blog: 'a portfolio of AI factory-ready powered sites' from edge deployments 'to multi-GW campuses' with the NVIDIA DSX design and Emerald AI's Conductor",
+      "read": "The first company statement that it is marketing powered sites to AI load; no site, customer or megawatt is named.",
+      "source": "https://wwww.invenergy.com/news/power-lines/powering-the-next-phase-of-ai-infrastructure"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "customer",
+      "headline": "Inside INdiana Business: I&M's Sycamore Riverside acquisition is about USD 500 million; IURC decision expected end-2026; Daniel Runyan quoted",
+      "read": "The only dollar figure for the plant sale, from a local reporter — carried as reported.",
+      "source": "https://www.insideindianabusiness.com/articles/indiana-michigan-power-seeks-to-acquire-sullivan-county-natural-gas-plant"
+    },
+    {
+      "date": "2026-04-10",
+      "category": "customer",
+      "headline": "Indiana Michigan Power (AEP) files with the IURC to acquire the 918 MW Sycamore Riverside Energy Center; I&M to take ownership in March 2029 on completion",
+      "read": "Develop-and-transfer gas to a regulated utility — the AEP relationship moves from wind and solar PPAs to a gas plant.",
+      "source": "https://wwww.invenergy.com/news/invenergy-advances-918-mw-natural-gas-project-with-offtake-agreement-in-indiana"
+    },
+    {
+      "date": "2026-04-07",
+      "category": "leadership",
+      "headline": "Michael Polsky becomes Executive Chairman, Jim Murphy CEO, and Jim Shield President of a new Invenergy Power unit for 'natural gas and data center development'",
+      "read": "A succession and a strategy statement in one release: gas and data centres get a president.",
+      "source": "https://wwww.invenergy.com/news/invenergy-strengthens-leadership-structure"
+    },
+    {
+      "date": "2026-03-23",
+      "category": "partnership",
+      "headline": "Invenergy joins NVIDIA and Emerald AI on 'flexible AI factories as grid assets' alongside AES, Constellation, NextEra, Nscale and Vistra",
+      "read": "Positions the company as a power partner for flexible data-centre load rather than only a PPA seller.",
+      "source": "https://wwww.invenergy.com/news/invenergy-joins-nvidia-and-emerald-ai-to-pioneer-flexible-ai-factories-as-grid-assets"
+    },
+    {
+      "date": "2026-03-19",
+      "category": "project",
+      "headline": "Energies Media: Kansas wind projects tied to the Grain Belt corridor advance; all four state approvals are in hand",
+      "read": "The line's economics depend on western Kansas generation the same developer is building.",
+      "source": "https://energiesmedia.com/invenergy-wind-grain-belt-express-transmission/"
+    },
+    {
+      "date": "2026-03-17",
+      "category": "order-win",
+      "headline": "SRP's first Invenergy agreement: SunDog, 200 MW solar plus 200 MW / 800 MWh storage in Pinal County; Invenergy's Arizona portfolio put at 545 MW solar and 736 MW storage operating or under construction",
+      "read": "The buyer's release supplies the only Arizona storage total the record has.",
+      "source": "https://media.srpnet.com/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand/"
+    },
+    {
+      "date": "2026-02-20",
+      "category": "partnership",
+      "headline": "Precedent agreement with Tallgrass: Invenergy is anchor shipper for gas supplying 'as many as three new natural gas-fired power plants' in Maricopa and Yuma Counties",
+      "read": "Gas-for-load in Arizona is now contracted at the pipeline level before any plant is named.",
+      "source": "https://wwww.invenergy.com/news/invenergy-signs-agreement-with-tallgrass-for-long-term-gas-supply"
+    },
+    {
+      "date": "2026-02-17",
+      "category": "regulatory",
+      "headline": "South Dakota PUC approves Philip Wind — 333 MW, about USD 750 million, construction from June 2026",
+      "read": "Onshore wind still moves where states permit it.",
+      "source": "https://electrek.co/2026/02/17/south-dakota-just-approved-its-largest-wind-farm-ever/"
+    },
+    {
+      "date": "2026-02-13",
+      "category": "policy",
+      "headline": "Treasury's draft FEOC guidance (12 February 2026) defers 'effective control'; wind and solar must begin construction by 4 July 2026 to keep credits",
+      "read": "The clock that governs which of Invenergy's Meta and Verizon projects keep their credits.",
+      "source": "https://www.latitudemedia.com/news/underwhelming-feoc-guidance-punts-on-industrys-key-question/"
+    },
+    {
+      "date": "2026-01-23",
+      "category": "legal",
+      "headline": "Illinois Supreme Court, 6–0, upholds the ICC certificate for Grain Belt Express; three constitutional claims remanded to the appellate court",
+      "read": "The last state permit survives its appeal; the company says it will proceed as a privately financed project.",
+      "source": "https://www.nprillinois.org/illinois/2026-01-23/state-high-court-rejects-challenge-to-wind-generated-transmission-line"
+    },
+    {
+      "date": "2025-11-13",
+      "category": "project",
+      "headline": "Invenergy cancels the 2.4 GW Leading Light Wind project off New Jersey, citing 'financial, supply chain and regulatory obstacles'",
+      "read": "The offshore exit begins; the lease itself is bought out seven months later.",
+      "source": "https://www.utilitydive.com/news/invenergy-offshore-wind-energy-leading-light-wind/805451/"
+    },
+    {
+      "date": "2025-11-05",
+      "category": "customer",
+      "headline": "We Energies files with the Wisconsin PSC to acquire two Invenergy-developed gas plants — Foundry Ridge (270 MW, about USD 564.2 million) and Red Oak Ridge (1.1 GW, about USD 1.77 billion) — for data-centre load",
+      "read": "The second utility in six months to buy an Invenergy gas plant for hyperscaler demand.",
+      "source": "https://www.wpr.org/news/we-energies-add-3gw-electric-grid-data-center-demand"
+    },
+    {
+      "date": "2025-09-16",
+      "category": "project",
+      "headline": "Invenergy proposes the 1,210 MW Red Oak Ridge gas plant in Kenosha County with a preliminary PSC engineering plan",
+      "read": "Filed before We Energies was attached — the developer builds the option, the utility buys it.",
+      "source": "https://www.wpr.org/news/developer-proposes-natural-gas-plant-kenosha-county-invenergy-red-oak-ridge-energy-center"
+    },
+    {
+      "date": "2025-08-14",
+      "category": "market",
+      "headline": "Fortune: Invenergy argues Grain Belt would carry 'coal, gas, and nuclear' as well as wind; 95% of land acquired; CEO: 'America will lose the test of its will to build'",
+      "read": "The line is being re-marketed as fuel-agnostic infrastructure after the loan loss.",
+      "source": "https://fortune.com/2025/08/14/grain-belt-express-wind-transmission-trump-white-house/"
+    },
+    {
+      "date": "2025-07-23",
+      "category": "policy",
+      "headline": "DOE terminates the USD 4.9 billion conditional loan guarantee for Grain Belt Express Phase 1; Grain Belt: 'a privately financed Grain Belt Express transmission superhighway will advance' the administration's agenda",
+      "read": "Federal credit support is gone; the EPC awards and easements stand, so the question becomes private financing at USD 11 billion.",
+      "source": "https://www.energy.gov/articles/department-energy-terminates-taxpayer-funded-financial-assistance-grain-belt-express"
+    },
+    {
+      "date": "2025-07-16",
+      "category": "legal",
+      "headline": "Grain Belt Express petitions Cole County Circuit Court to quash the Missouri Attorney General's civil investigative demand",
+      "read": "The state-level attack on the certificate is being fought in court rather than at the PSC, whose counsel called the certificates final.",
+      "source": "https://abc17news.com/news/missouri/2025/07/16/grain-belt-express-asks-court-to-intervene-against-attorney-generals-demands/"
+    },
+    {
+      "date": "2025-07-02",
+      "category": "legal",
+      "headline": "Missouri Attorney General Bailey issues a civil investigative demand to Grain Belt Express and asks the PSC to re-evaluate the certificate, alleging 'nearly 50 eminent domain lawsuits' and reliance on a 'non-existent carbon tax'",
+      "read": "Political risk to the line is now a formal legal record.",
+      "source": "https://ago.mo.gov/missouri-attorney-general-bailey-investigates-grain-belt-express-over-history-of-lies-and-false-promises/"
+    },
+    {
+      "date": "2025-06-26",
+      "category": "customer",
+      "headline": "Four new Meta agreements totalling 791 MW (Yellow Wood 300 MW, Pleasant Prairie 140 MW, Decoy 155 MW, Seaway Wind 196 MW); 'Total MW with Meta: 1,800 MW'",
+      "read": "Meta is the largest named corporate offtaker; the release frames it as 'supporting data center operations'.",
+      "source": "https://wwww.invenergy.com/news/invenergy-to-provide-meta-with-nearly-800-mw-supporting-data-center-operations"
+    },
+    {
+      "date": "2025-06-12",
+      "category": "project",
+      "headline": "Pleasant Prairie Solar (Franklin County, Ohio) starts construction with Blattner as EPC and Illuminate USA modules; commercial early 2027",
+      "read": "The only release in the window that names a battery- or solar-side EPC.",
+      "source": "https://wwww.invenergy.com/news/invenergy-s-pleasant-prairie-solar-energy-center-to-start-construction-in-franklin-county-ohio"
+    },
+    {
+      "date": "2025-06-06",
+      "category": "policy",
+      "headline": "Jim Murphy at ACORE: 'We need it all, and we need it all as fast as we can get'; on FEOC, 'The supply chain can not support that... It's just an unworkable provision'",
+      "read": "The company's own words on the rule that will govern its storage and module sourcing.",
+      "source": "https://heatmap.news/energy/renewable-energy-electricity-prices-big-beautiful-bill"
+    },
+    {
+      "date": "2025-06-04",
+      "category": "project",
+      "headline": "Hardin III Solar (250 MW, Ohio) commences operations — Microsoft PPA, WEC Energy Group majority owner, Illuminate USA modules",
+      "read": "The farmdown model in one release: developer, hyperscaler offtaker, utility owner, affiliate module supplier.",
+      "source": "https://wwww.invenergy.com/news/invenergy-s-hardin-iii-commences-operations"
+    },
+    {
+      "date": "2025-05-07",
+      "category": "procurement",
+      "headline": "Grain Belt Express awards USD 1.7 billion combined to Quanta Services and Kiewit Energy Group for Phase 1 HVDC construction",
+      "read": "Contracts signed while the DOE guarantee was still conditional — the awards outlived the loan.",
+      "source": "https://wwww.invenergy.com/news/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history"
+    },
+    {
+      "date": "2025-04-01",
+      "category": "project",
+      "headline": "Yuma Solar Energy Center (70 MW solar plus 70 MW storage) reaches commercial operation under an APS PPA",
+      "read": "The Arizona hybrid template that SunDog repeats for SRP.",
+      "source": "https://wwww.invenergy.com/news/invenergy-announces-commercial-operations-at-its-first-arizona-solar-facility"
+    },
+    {
+      "date": "2025-02-19",
+      "category": "customer",
+      "headline": "Verizon signs four virtual PPAs for 640 MW (Richfield, Maple Flats, Cadence, Chalk Bluff); more than 1 GW cumulative",
+      "read": "Telecom demand is the second corporate book after Meta.",
+      "source": "https://wwww.invenergy.com/news/invenergy-verizon-partner-to-procure-over-1-gw-in-renewable-energy"
+    },
+    {
+      "date": "2025-02-05",
+      "category": "financial",
+      "headline": "Mercom: USD 1.1 billion of construction and bridge debt plus a letter-of-credit facility for three solar projects totalling 590 MW in Ohio, Indiana and Tennessee",
+      "read": "Project debt at this scale is disclosed only through the trade press; lenders unnamed.",
+      "source": "https://mercomcapital.com/project-finance-brief-invenergy-secures-solar-projects/"
+    },
+    {
+      "date": "2024-12-05",
+      "category": "customer",
+      "headline": "Meta signs environmental-attribute purchase agreements for over 760 MW across Hardin II, Delilah II, Tip Top Solar and Chalk Bluff",
+      "read": "The first tranche of what became 1,800 MW.",
+      "source": "https://wwww.invenergy.com/news/invenergy-to-provide-over-760mw-in-renewable-energy-supporting-meta-s-energy-needs-in-line-with-its-clean-and-renewable-energy-goals"
+    },
+    {
+      "date": "2024-12-03",
+      "category": "regulatory",
+      "headline": "NYSERDA and the Clean Path NY developers (Forward Power — energyRe and Invenergy — with NYPA) mutually terminate the Tier 4 contract after the developers sought higher payments",
+      "read": "The second transmission line loses its anchor contract; NYPA petitioned in January 2025 to keep it alive as a priority project.",
+      "source": "https://www.utilitydive.com/news/nyserda-clean-path-ny-developers-terminate-contracts-transmission/734410/"
+    },
+    {
+      "date": "2024-10-29",
+      "category": "project",
+      "headline": "Invenergy NE Offshore Wind wins two Gulf of Maine leases (about 3.4 GW potential, about USD 10.7 million) — leases the company sold back to Interior in June 2026",
+      "read": "Bought for about USD 9 million per Heatmap and refunded at cost twenty months later.",
+      "source": "https://www.utilitydive.com/news/offshore-wind-lease-sale-gulf-maine-boem/731412/"
+    },
+    {
+      "date": "2024-10-15",
+      "category": "legal",
+      "headline": "Missouri Court of Appeals: Chariton County cannot block Grain Belt Express by refusing road-crossing consent",
+      "read": "One of a string of court wins that left the state certificates intact.",
+      "source": "https://sunflowerstateradio.com/2024/10/16/grain-belt-express-clears-another-legal-hurdle-with-missouri-appeals-court-ruling/"
+    },
+    {
+      "date": "2024-08-29",
+      "category": "project",
+      "headline": "El Sol, the tenth Arizona battery since 2023, reaches commercial operation; company-wide '21 storage projects totaling 556 megawatts or 1,817 megawatt-hours'",
+      "read": "The last company-wide storage MW / MWh figure the record has.",
+      "source": "https://wwww.invenergy.com/news/invenergy-announces-commercial-operations-at-its-10th-arizona-battery-energy-storage-center"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "meta",
+      "type": "customer",
+      "status": "active",
+      "since": "2024-12",
+      "scale": "1,800 MW cumulative (eight projects)",
+      "via": "Environmental-attribute and power purchase agreements on Invenergy wind and solar",
+      "note": "Meta is Invenergy's largest named corporate offtaker: 760 MW of environmental-attribute purchase agreements in December 2024 and 791 MW of new agreements in June 2025, 'Total MW with Meta: 1,800 MW'.",
+      "context": "The December 2024 tranche covers Hardin II Solar (Ohio, 150 MW, 2024), Delilah II Solar (Texas, 150 MW, 2025), Tip Top Solar (New Mexico, 110 MW, 2026) and Chalk Bluff Solar (Arkansas, 350 MW, 2027); the June 2025 tranche adds Yellow Wood Solar (Ohio, 300 MW, 2027), Pleasant Prairie Solar (Ohio, 140 MW, 2027), Decoy Solar (Arkansas, 155 MW, 2027) and Seaway Wind (Texas, 196 MW, 2028). Invenergy's release describes the June 2025 deals as 'supporting data center operations', and Ted Romaine's quote ties them to 'the AI race'. The Meta dossier in this corpus records the same 1,800 MW figure.",
+      "source": "https://wwww.invenergy.com/news/invenergy-to-provide-meta-with-nearly-800-mw-supporting-data-center-operations"
+    },
+    {
+      "slug": "aep",
+      "type": "customer",
+      "status": "active",
+      "since": "2023",
+      "scale": "918 MW gas plant (CPCN pending); 1 GW SWEPCO/PSO wind and solar (about USD 2.2bn); 1,365 MW portfolio bought from AEP (USD 1.5bn EV)",
+      "via": "Sycamore Riverside Energy Center; SWEPCO and PSO offtake; IRG Acquisition Holdings",
+      "note": "AEP is buyer, seller and offtaker at once: Indiana Michigan Power filed in April 2026 to acquire Invenergy's 918 MW Sycamore Riverside gas plant for March 2029 ownership; SWEPCO and PSO contracted about 1 GW of Invenergy wind and solar in 2023; and an Invenergy-led consortium bought AEP's unregulated renewables in August 2023.",
+      "context": "The I&M filing (IURC certificate of public convenience and necessity, decision expected end-2026) describes Invenergy as 'North America's largest privately held independent power producer' and puts the acquisition at about USD 500 million per Inside INdiana Business. The SWEPCO purchases — Mooringsport solar (200 MW, Louisiana), Diversion wind (201 MW, Texas) and Wagon Wheel wind (598 MW, Oklahoma), about USD 2.2 billion — were approved by the Louisiana and Arkansas commissions in mid-2023; Natixis led USD 1.27 billion of construction financing for four of the AEP-offtake projects in March 2024. The IRG Acquisition Holdings purchase of AEP's 1,365 MW portfolio closed in August 2023 with a USD 580 million production-tax-credit transfer arranged by Bank of America, described as 'the first announced large scale transferability transaction to close'.",
+      "source": "https://www.aep.com/news/stories/view/11850/"
+    },
+    {
+      "slug": "microsoft",
+      "type": "customer",
+      "status": "active",
+      "since": "2020",
+      "scale": "250 MW (Hardin III PPA); 74 MW (Wilkinson VPPA)",
+      "via": "Power purchase agreements on Invenergy solar",
+      "note": "Microsoft holds the PPA on Hardin III Solar (250 MW, Ohio, commercial June 2025) and a 15-year virtual PPA for the full output of Wilkinson Solar (74 MW, North Carolina, 2020).",
+      "context": "Hardin III was developed and is operated by Invenergy with WEC Energy Group as majority owner and Illuminate USA modules; Wilkinson was acquired at completion by an affiliate of Dominion Energy Virginia. Both are attribute-and-energy contracts on grid-tied solar, not co-located supply.",
+      "source": "https://wwww.invenergy.com/news/invenergy-s-hardin-iii-commences-operations"
+    },
+    {
+      "slug": "kiewit",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-05",
+      "scale": "USD 1.7bn combined with Quanta Services",
+      "via": "Grain Belt Express Phase 1 HVDC engineering, procurement and construction",
+      "note": "Kiewit Energy Group and Quanta Services received 'combined awards: $1.7 billion' from Grain Belt Express on 7 May 2025 to build Phase 1 (about 530 miles, Kansas to Missouri).",
+      "context": "The awards were made while the DOE loan guarantee was still conditional and stand after its termination; Kiewit's own release calls the line the largest transmission project in US history. The Kiewit dossier in this corpus carries the award with the same figure. Phase 1 construction is targeted from 2026 with completion in 2029 per ConstructConnect.",
+      "source": "https://wwww.invenergy.com/news/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history"
+    },
+    {
+      "slug": "quanta-services",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-05",
+      "scale": "USD 1.7bn combined with Kiewit Energy Group",
+      "via": "Grain Belt Express Phase 1 HVDC construction (Infrastructure Solutions Group)",
+      "note": "Quanta Services' Infrastructure Solutions Group shares the USD 1.7 billion Phase 1 award with Kiewit for the 800-mile, 5,000 MW line.",
+      "context": "Invenergy's release names Quanta's Infrastructure Solutions Group and Kiewit Energy Group Inc. as the EPC contractors and puts Phase 1 jobs above 4,000. ConstructConnect lists the rest of the supply chain around the award: Siemens Energy converter technology, Prysmian conductor and Hubbell hardware.",
+      "source": "https://wwww.invenergy.com/news/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history"
+    },
+    {
+      "slug": "siemens-energy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023-01",
+      "scale": "5,000 MW HVDC (two Phase 1 converter stations)",
+      "via": "HVDC converter technology for Grain Belt Express",
+      "note": "Grain Belt Express selected Siemens Energy as its HVDC technology partner on 25 January 2023, per the project's own news index.",
+      "context": "ConstructConnect's July 2025 summary confirms Siemens Energy as the HVDC technology supplier for the two Phase 1 converter stations in Kansas and Missouri. No contract value is published. This is the corpus's second Siemens Energy HVDC reference after Kiewit's Champlain Hudson work.",
+      "source": "https://grainbeltexpress.com/resources-news/"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "supplier",
+      "status": "active",
+      "since": "2019",
+      "scale": "15 × 4.2 MW turbines (Rusutsu, Japan); 1.48 GW Oklahoma order (2021); 3 turbines at Lackawanna (1,485 MW)",
+      "via": "Wind turbines and gas turbines",
+      "note": "GE Vernova supplied the 15 turbines at Invenergy's Rusutsu Wind Energy Center in Japan (commercial March 2024) and, per POWER Magazine's archive, the 1.48 GW North Central Wind turbine order in Oklahoma (2021) and the three gas turbines at Lackawanna Energy Center.",
+      "context": "The Rusutsu release is the only turbine-OEM statement in Invenergy's trailing two years of releases; Vestas orders for Inaniwa (Japan) and Pencloe (Scotland) appear in Windtech International's order roundups but were not fetched and are not curated here. No GE Vernova order for the 2025–2026 Wisconsin or Indiana gas plants has been published.",
+      "source": "https://wwww.invenergy.com/news/invenergy-s-rusutsu-wind-energy-center-reaches-commercial-operations-in-japan"
+    },
+    {
+      "slug": "blattner",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-06",
+      "scale": "240 MW (Pleasant Prairie Solar)",
+      "via": "Solar EPC",
+      "note": "Blattner is the named engineering and construction contractor for Pleasant Prairie Solar Energy Center (Franklin County, Ohio), which started construction in June 2025 for a Meta offtake.",
+      "context": "The release also names Illuminate USA as module supplier. Blattner appears in older Invenergy wind releases (McAdoo, Rattlesnake) per site search, so the relationship predates the window. No storage EPC has been named by Invenergy for any project.",
+      "source": "https://wwww.invenergy.com/news/invenergy-s-pleasant-prairie-solar-energy-center-to-start-construction-in-franklin-county-ohio"
+    },
+    {
+      "slug": "nvidia",
+      "type": "partner",
+      "status": "announced",
+      "since": "2026-03",
+      "via": "'Flexible AI factories as grid assets' programme (Vera Rubin DSX reference design with Emerald AI)",
+      "note": "Invenergy joined NVIDIA and Emerald AI's flexible-AI-factory initiative in March 2026 alongside AES, Constellation, NextEra, Nscale and Vistra.",
+      "context": "The release describes the NVIDIA Vera Rubin DSX AI Factory reference design and Emerald AI's Conductor software orchestrating flexibility 'with onsite generation, batteries, and behind-the-meter resources', and quotes Polsky on 'combining near-term generation solutions with a path to full grid connection'. Invenergy's April 2026 blog says it is developing 'AI factory-ready powered sites'; no site, customer or capacity has been named, so the engagement is a programme membership, not a contract.",
+      "source": "https://wwww.invenergy.com/news/invenergy-joins-nvidia-and-emerald-ai-to-pioneer-flexible-ai-factories-as-grid-assets"
+    },
+    {
+      "slug": "tesla",
+      "type": "customer",
+      "status": "active",
+      "since": "2025-02",
+      "scale": "100 MW virtual PPA (Delilah I Solar)",
+      "via": "Virtual power purchase agreement",
+      "note": "Tesla holds a 100 MW virtual PPA on Delilah I Solar (300 MW, Texas, commercial February 2025) alongside Honda's 200 MW; WEC Energy Group is the majority owner.",
+      "context": "Tesla appears in Invenergy's record as an electricity buyer, not as a battery supplier — no Megapack or other Tesla storage order to Invenergy is published anywhere read.",
+      "source": "https://wwww.invenergy.com/news/invenergy-developed-delilah-i-solar-reaches-commercial-operations-in-texas"
+    },
+    {
+      "slug": "dominion-energy",
+      "type": "customer",
+      "status": "historical",
+      "since": "2020",
+      "scale": "74 MW (Wilkinson Solar)",
+      "via": "Project acquisition at commercial operation",
+      "note": "An affiliate of Dominion Energy Virginia acquired Wilkinson Solar Energy Center (74 MW, Beaufort County, North Carolina) at commercial operation in June 2020; Microsoft holds the 15-year VPPA.",
+      "context": "The only Dominion link in the record; Invenergy's 2020 release names the buyer and the offtaker. No later Dominion transaction appears.",
+      "source": "https://wwww.invenergy.com/news/wilkinson-solar-energy-center-begins-commercial-operations"
+    },
+    {
+      "slug": "equinix",
+      "type": "customer",
+      "status": "historical",
+      "since": "2015",
+      "scale": "100 MW wind PPA (Wake Wind, ERCOT)",
+      "via": "Power purchase agreement",
+      "note": "Equinix signed a 100 MW PPA for Invenergy's Wake Wind Energy Center in Texas in November 2015 (about 457,000 MWh a year).",
+      "context": "Invenergy's earliest named data-centre offtaker, a decade before the 2026 gas-and-data-centre unit. No renewal or extension is published.",
+      "source": "https://wwww.invenergy.com/news/invenergy-to-provide-clean-power-to-equinix"
+    },
+    {
+      "slug": "nextera-energy-resources",
+      "type": "competitor",
+      "status": "active",
+      "scale": "Cleanview: NextEra 68,229 MW pipeline (#1) against Invenergy 41,328 MW (#2)",
+      "note": "Cleanview's live development-pipeline ranking places NextEra Energy first and Invenergy second in the US overall and in both the wind and solar tables (read 5 September 2026).",
+      "context": "S&P Global Market Intelligence's June 2023 ranking had the same order for planned wind and solar through 2027 (18,811 MW against 12,041 MW, per the article snippet). The comparison is pipeline megawatts, which is why Invenergy's 'largest privately held' claim and NextEra's #1 are both true; NextEra is also a named co-participant in the NVIDIA flexible-AI-factory programme.",
+      "source": "https://cleanview.co/content/top-renewable-developers"
+    },
+    {
+      "slug": "apex-clean-energy",
+      "type": "competitor",
+      "status": "active",
+      "scale": "Cleanview wind pipeline: Invenergy #2 (14,192 MW) against Apex #4 (7,074 MW)",
+      "note": "Cleanview's wind-developer ranking places Invenergy second and Apex fourth; the Apex dossier in this corpus records the same table and the 2021 sale of Apex's Jayhawk Wind to WEC Energy Group with Invenergy as 10% owner and operator.",
+      "context": "The Jayhawk transaction (190 MW, Kansas, Facebook PPA) is recorded in the Apex dossier from its own sources; the North American Windpower report was unreachable in this session, so the operating link is noted here from the corpus rather than curated as a partner relationship.",
+      "source": "https://cleanview.co/content/top-wind-developers"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "effectiveDate": "2023-01",
+      "exposure": "Invenergy monetises credits through transfers and tax equity at portfolio scale: the August 2023 purchase of AEP's 1,365 MW portfolio carried a USD 580 million production-tax-credit transfer arranged by Bank of America Securities, described in Invenergy's release as 'the first announced large scale transferability transaction to close since the passing of the Inflation Reduction Act'. Its Illuminate USA affiliate is a domestic module manufacturer whose output is specified on Invenergy's Ohio projects, which bears on domestic-content bonuses.",
+      "mitigation": "Illuminate USA (Pataskala, Ohio, eight lines) and the Prysmian and Hubbell supply agreements are framed by the company as domestic supply chain.",
+      "source": "https://wwww.invenergy.com/news/invenergy-led-consortium-completes-purchase-of-american-electric-power-s-unregulated-renewables-portfolio"
+    },
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2026-01",
+      "exposure": "Jim Murphy told the ACORE conference in June 2025 that the FEOC provision was 'unworkable' because 'the supply chain can not support that'. Treasury's 95-page draft guidance of 12 February 2026 deferred the 'effective control' question and set 4 July 2026 as the begin-construction deadline for wind and solar to keep credits — the deadline that governs Invenergy's 2027–2028 Meta and Verizon projects. No Invenergy statement on how its unnamed battery suppliers sit under the rule was found.",
+      "mitigation": "",
+      "source": "https://heatmap.news/energy/renewable-energy-electricity-prices-big-beautiful-bill"
+    },
+    {
+      "regime": "DOE Loan Programs Office",
+      "status": "expired",
+      "effectiveDate": "2025-07-23",
+      "exposure": "The USD 4.9 billion conditional loan guarantee for Grain Belt Express Phase 1 (issued 25 November 2024) was terminated on 23 July 2025; DOE said the conditions 'are unlikely to be met and it is not critical for the federal government to have a role'. Latitude Media reported that career LPO attorneys had advised the cancellation would breach the contract. The company's response was that the line would proceed 'privately financed'.",
+      "mitigation": "Private financing on the USD 11 billion line; the USD 1.7 billion EPC awards and 95% of Phase 1 easements were already executed.",
+      "source": "https://www.latitudemedia.com/news/how-the-grain-belt-express-lost-its-lpo-loan/"
+    },
+    {
+      "regime": "Offshore wind lease policy (Interior settlements)",
+      "status": "in-effect",
+      "effectiveDate": "2026-06-17",
+      "exposure": "Interior agreed to pay Invenergy USD 765 million — matching the original lease prices — to cancel four offshore leases (OCS-A 0542 in the New York Bight, a Morro Bay lease and two Gulf of Maine leases), the third such settlement after TotalEnergies. BOEM's lease page records the cancellation as 'contingent upon Invenergy demonstrating necessary investments in U.S. conventional energy development'; Invenergy committed the proceeds to gas plants in Indiana, Wisconsin, Iowa, Kansas and Missouri and to geothermal.",
+      "mitigation": "Redeployment into gas plants for utilities and 45 geothermal leases (about 144,000 acres).",
+      "source": "https://www.utilitydive.com/news/trump-administration-buys-out-four-more-offshore-wind-leases-for-765m/823314/"
+    },
+    {
+      "regime": "State siting and certificate law (Missouri, Illinois, Kansas, Indiana)",
+      "status": "in-effect",
+      "effectiveDate": "2023-10",
+      "exposure": "Grain Belt Express holds certificates in all four states; the Illinois Supreme Court upheld the ICC certificate 6–0 on 23 January 2026, the Missouri Supreme Court denied review of the PSC's Tiger Connector approval in January 2025, and the Missouri Court of Appeals held in October 2024 that a county cannot block the line by refusing road crossings. The Missouri Attorney General's July 2025 civil investigative demand and request that the PSC re-examine the certificate are the live challenges; PSC counsel has said the certificates 'cannot be revoked by the commission'.",
+      "mitigation": "Petition to quash the CID in Cole County Circuit Court (July 2025).",
+      "source": "https://ago.mo.gov/missouri-attorney-general-bailey-investigates-grain-belt-express-over-history-of-lies-and-false-promises/"
+    },
+    {
+      "regime": "DOE transmission policy (FAST-41, NIETC)",
+      "status": "in-effect",
+      "effectiveDate": "2024-02",
+      "exposure": "Grain Belt Express is a FAST-41 covered project (20 February 2024) with a DOE environmental impact statement for Phase 1 in development; in September 2024 Invenergy asked DOE to 'significantly narrow' the proposed Midwest-Plains national-interest corridor. FERC in October 2025 granted in part Invenergy Transmission's complaint against MISO on the treatment of merchant transmission in MTEP (EL22-83).",
+      "mitigation": "",
+      "source": "https://grainbeltexpress.com/resources-news/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Michael Polsky",
+      "title": "Founder and Executive Chairman",
+      "photo": "images/execs/invenergy-polsky.jpg",
+      "background": [
+        "Founder (2001) and CEO until 7 April 2026, when he became Executive Chairman per the company's leadership release",
+        "Co-founded Indeck Energy Services (1985) and founded SkyGen Energy, sold to Calpine in 2001 for USD 450 million per Forbes; arrived in the US from Ukraine in 1985 with a master's in mechanical engineering (company history page)",
+        "Forbes profile (September 2026): net worth USD 2.5 billion; more than USD 150 million donated to the University of Chicago",
+        "Quoted in the March 2026 NVIDIA / Emerald AI release and on transmission policy in the April 2025 Axios interview the company reposted"
+      ]
+    },
+    {
+      "name": "James (Jim) Murphy",
+      "title": "Chief Executive Officer and Co-Founder",
+      "photo": "images/execs/invenergy-murphy.jpg",
+      "background": [
+        "CEO since 7 April 2026; previously President (and 'President & Corporate Business Leader' in the 2022 Blackstone release; 'President & Chief Operating Officer' in the 2018 CDPQ release)",
+        "Met Polsky at SkyGen Energy and co-founded Invenergy in 2001 (company history page); described by SolarQuarter as Polsky's business partner of 35 years",
+        "Quoted on the ownership structure in the 2022 and 2023 Blackstone investment releases; told the ACORE conference in June 2025 that '90% of what we have in the queue is renewables' and that the FEOC provision is 'unworkable'"
+      ]
+    },
+    {
+      "name": "Jim Shield",
+      "title": "President, Invenergy Power",
+      "photo": "images/execs/invenergy-shield.jpg",
+      "background": [
+        "President of Invenergy Power from 7 April 2026, the new unit for 'natural gas and data center development'; previously Chief Commercial Officer (SVP/CCO in the April 2025 Yuma release)",
+        "Called the Grain Belt opposition 'egregious politically motivated lawfare' after the DOE termination (Utility Dive, July 2025) and is the company's voice on AI-driven demand in its April 2025 blog"
+      ]
+    },
+    {
+      "name": "Meghan Schultz",
+      "title": "Executive Vice President and Chief Financial Officer",
+      "photo": "images/execs/invenergy-schultz.jpg",
+      "background": [
+        "EVP and CFO per the leadership page (September 2026); appointment date not published",
+        "Brian Bortman, SVP Finance and Capital Markets, is the finance executive quoted in the Natixis USD 1.27 billion financing release (March 2024)"
+      ]
+    },
+    {
+      "name": "Bryan Schueler",
+      "title": "Senior Executive Vice President and Construction Business Leader",
+      "photo": "images/execs/invenergy-schueler.jpg",
+      "background": [
+        "Senior EVP and Construction Business Leader per the leadership page; title and photo only — the company publishes no executive bios"
+      ]
+    },
+    {
+      "name": "Mick Baird",
+      "title": "Chief Development Officer",
+      "photo": "images/execs/invenergy-baird.jpg",
+      "background": [
+        "Chief Development Officer per the leadership page (September 2026); no bio published"
+      ]
+    },
+    {
+      "name": "Ted Romaine",
+      "title": "Executive Vice President, Origination",
+      "photo": "images/execs/invenergy-romaine.jpg",
+      "background": [
+        "EVP Origination per the leadership page; quoted as the Invenergy signatory in the December 2024 and June 2025 Meta releases ('Winning the AI race requires reliable, cleaner, affordable energy') and in SRP's March 2026 SunDog release",
+        "The executive who fronts the hyperscaler and utility offtake book"
+      ]
+    },
+    {
+      "name": "Shashank Sane",
+      "title": "Executive Vice President, Transmission",
+      "photo": "images/execs/invenergy-sane.jpg",
+      "background": [
+        "EVP Transmission per the leadership page — the Grain Belt Express, Cimarron Link and North Path portfolio; no bio published"
+      ]
+    },
+    {
+      "name": "Conor Branch",
+      "title": "Executive Vice President, Development",
+      "photo": "images/execs/invenergy-branch.jpg",
+      "background": [
+        "EVP Development per the leadership page (card added to the site in late 2025 per the image metadata); no bio published"
+      ]
+    },
+    {
+      "name": "Steve Dowdy",
+      "title": "Executive Vice President and Operating Business Leader",
+      "photo": "images/execs/invenergy-dowdy.jpg",
+      "background": [
+        "EVP and Operating Business Leader per the leadership page — the Invenergy Services operations arm; no bio published"
+      ]
+    },
+    {
+      "name": "Mark Delaney",
+      "title": "Executive Vice President, Renewable Engineering and Procurement",
+      "photo": "images/execs/invenergy-delaney.jpg",
+      "background": [
+        "EVP Renewable Engineering and Procurement per the leadership page (card added 2026) — the procurement seat for storage, solar and wind equipment; no bio published and no supplier statement attributed to him"
+      ]
+    },
+    {
+      "name": "Omar Martino",
+      "title": "Executive Vice President, Markets and Regulatory",
+      "photo": "images/execs/invenergy-martino.jpg",
+      "background": [
+        "EVP Markets and Regulatory per the leadership page; no bio published"
+      ]
+    },
+    {
+      "name": "Joel Schroeder",
+      "title": "Executive Vice President, Engineering and Technology",
+      "photo": "images/execs/invenergy-schroeder.jpg",
+      "background": [
+        "EVP Engineering and Technology per the leadership page; no bio published"
+      ]
+    },
+    {
+      "name": "Bill Bradley",
+      "title": "Executive Vice President and General Counsel",
+      "photo": "images/execs/invenergy-bradley.jpg",
+      "background": [
+        "EVP and General Counsel per the leadership page; the Grain Belt litigation is led by outside counsel (Catherine Hanaway on the Missouri petition to quash)"
+      ]
+    },
+    {
+      "name": "James Rafferty",
+      "title": "Executive Vice President, Renewables Operations",
+      "photo": "images/execs/invenergy-rafferty.jpg",
+      "background": [
+        "EVP Renewables Operations per the leadership page; no bio published"
+      ]
+    },
+    {
+      "name": "Will Borders",
+      "title": "Executive Vice President, Legal and Chief Compliance Officer",
+      "photo": "images/execs/invenergy-borders.jpg",
+      "background": [
+        "EVP Legal and Chief Compliance Officer per the leadership page; no bio published"
+      ]
+    },
+    {
+      "name": "Daniel Runyan",
+      "title": "Senior Vice President of Development",
+      "background": [
+        "Quoted as Invenergy's spokesperson on the Sycamore Riverside sale to I&M (Inside INdiana Business, April 2026), the Tallgrass gas-supply agreement (POWER Magazine, February 2026) and the geothermal pivot after the offshore settlement (Canary Media, June 2026)",
+        "Not on the executive leadership page; listed among the company's senior vice presidents"
+      ]
+    },
+    {
+      "name": "Laura Miner",
+      "title": "Senior Vice President",
+      "background": [
+        "Quoted as the Invenergy executive on the Seahawk (Minto Road) storage takeover in Santa Cruz County (The Pajaronian, September 2026)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Capital formation and disclosed transactions (2013–2026)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Invenergy publishes no financial statements; no revenue, EBITDA, capex or net-debt figure appears in any release, filing or reputable report read. Aggregator estimates are excluded."
+          },
+          {
+            "name": "Blackstone Infrastructure Partners equity (Invenergy Renewables Holdings LLC)",
+            "actual": "'Approximately $3 billion' (7 January 2022) plus '$1 billion' follow-on (21 June 2023) — 'combined Blackstone investment totaling approximately $4 billion'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company and Blackstone releases. Blackstone's infrastructure page reportedly now cites USD 4.5 billion (search snippet; page returns 403 from this environment) — not carried as fact."
+          },
+          {
+            "name": "CDPQ ownership (Invenergy Renewables LLC)",
+            "actual": "52.4% economic ownership after the May 2018 transaction (from 32%); 'CDPQ and Invenergy management remain majority owners' (2022)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "CDPQ's 2018 release states the percentage; Utility Dive reported cumulative CDPQ investment 'over C$1 billion' including USD 500 million into Invenergy Wind in 2013. No 2024–2026 change found."
+          },
+          {
+            "name": "AMP Capital / InfraBridge (Invenergy Clean Power LLC)",
+            "actual": "50/50 partnership in the natural-gas holding company (22 May 2018); amount undisclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; Utility Dive notes the partnership excluded Energía del Pacífico and Clear River."
+          },
+          {
+            "name": "Corporate revolving credit facility (Invenergy Renewables Operating I LLC)",
+            "actual": "USD 1.5 billion after the July 2023 upsizing (from USD 600 million); 16 lenders led by Natixis as agent",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release, 25 July 2023."
+          },
+          {
+            "name": "Project and portfolio financings (trailing)",
+            "actual": "Natixis-led USD 1.27 billion construction financing for four AEP-offtake projects (March 2024); USD 1.1 billion of debt for 590 MW of solar (Mercom, February 2025); CAD 1.1 billion for PPAW 1 in Quebec (June 2025); AEP portfolio purchase at USD 1.5 billion enterprise value with a USD 580 million PTC transfer (August 2023)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lender, company and trade-press releases as cited in the source list."
+          },
+          {
+            "name": "Interior offshore-lease settlement",
+            "actual": "USD 765 million to Invenergy for four leases (17 June 2026) — the original lease prices (USD 645 million New York Bight, USD 112 million Morro Bay, about USD 9 million Gulf of Maine per Heatmap)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Paid through the Judgment Fund as a legal settlement; committed to gas and geothermal projects."
+          },
+          {
+            "name": "Cumulative capital raised (company claim)",
+            "actual": "'raised over $75 billion in capital' since 2001 (April 2026 boilerplate)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Unaudited company statement."
+          },
+          {
+            "name": "Credit rating (subsidiary)",
+            "actual": "Moody's Ba2 senior secured on Invenergy Thermal Operating I LLC's about USD 436 million facilities, outlook revised to negative (23 April 2021)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The only rating action found; no rating on Invenergy Renewables Holdings appears in any source read. Collection gap: current ratings."
+          }
+        ],
+        "commentary": "A private company with two institutional owners and a management managing member. Every number here is a transaction or facility size stated by a party to it; nothing is a financial result. 'Expected' fields are empty because no consensus or guidance exists for a company that publishes no accounts."
+      }
+    ],
+    "commentary": "What can be said with confidence: about USD 4 billion of Blackstone equity since 2022, a majority position held by CDPQ and management, a USD 1.5 billion corporate revolver, and project financings in the USD 1–1.3 billion range per portfolio. What cannot: revenue, leverage, valuation, or how the June 2026 settlement proceeds are held. Aggregator claims of a USD 20 billion-plus implied valuation and a 2025 secondary sale have no primary source and are excluded."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Invenergy's 'largest privately held developer' claim is true only on the pipeline measure and only among non-utility developers. Basis: Cleanview's live rankings (5 September 2026) place it second to NextEra Energy in every table (overall 41,328 MW against 68,229 MW), and S&P Global's 2023 ranking had the same order; no independent source names Invenergy first among private developers, and the phrase appears only in Invenergy's, Blackstone's and I&M's own text. The premise handed to this dossier is corrected to: second-largest US developer by pipeline, largest privately owned.",
+    "(High confidence) We assess that the ownership stack is unchanged since June 2023 — CDPQ (52.4% economic ownership of Invenergy Renewables LLC after 2018), Blackstone Infrastructure Partners (about USD 4 billion into Invenergy Renewables Holdings LLC across 2022–2023) and management as managing member — and that the gas portfolio sits separately in Invenergy Clean Power LLC with InfraBridge. Basis: the company's releases and capabilities page, CDPQ's 2018 release, Blackstone's 2022 release as mirrored by CDPQ; no 2024–2026 stake sale, recapitalisation, bond or rating action on the holding company was found. Aggregator claims of a USD 20 billion-plus valuation are unsourced and rejected.",
+    "(High confidence) We assess that Invenergy has re-weighted its growth capital toward gas plants sold to regulated utilities for data-centre load. Basis: the Invenergy Power unit created 7 April 2026 'to oversee the company's growing natural gas and data center development'; I&M's CPCN filing for the 918 MW Sycamore Riverside plant; We Energies' filings for Foundry Ridge and Red Oak Ridge (about USD 2.3 billion combined per WPR) and the August 2026 Brillion plans for another 1.95 GW; the Tallgrass anchor-shipper agreement; and the company's own statement that the USD 765 million offshore settlement funds gas and geothermal. The model is build-and-transfer at commissioning, not merchant gas.",
+    "(Moderate confidence) We assess that storage remains a utility-contracted Southwest business inside Invenergy rather than a merchant or hyperscaler-facing platform, and that its true size is between the company's '5,000 MWh developed' and SRP's '736 MW' Arizona figure. Basis: every operating battery a source names serves APS or SRP or is a hybrid addition to an Invenergy wind or solar site; the named development microsites (about 2.4 GW) are in 'site characterization and permitting' with no offtaker; the September 2026 Seahawk takeover is the first named CAISO storage asset. The judgment is moderate because the company discloses no per-project list and the '150 utility-scale projects' pipeline figure cannot be tested.",
+    "(Moderate confidence) We assess that Grain Belt Express will reach Phase 1 construction on private capital but on a slower schedule than 'anticipated 2026', and that its financing is now the single largest execution risk in the portfolio. Basis: the USD 1.7 billion Quanta/Kiewit awards, Siemens Energy, Prysmian and Hubbell contracts, 95%-acquired easements, the SPP-filed ITC Great Plains interconnection agreement (January 2026) and the Illinois Supreme Court win argue for proceeding; the DOE guarantee's termination, the Missouri Attorney General's investigation and the absence of any announced private financing at USD 11 billion argue for delay. Cuts against: the March 2026 Energies Media report that the four state approvals are 'the prerequisite to move the project into the construction and financing phases' implies financing is not yet closed.",
+    "(Low confidence) Trade press and the company's own blog say Invenergy is marketing 'AI factory-ready powered sites' up to 'multi-GW campuses' under the NVIDIA / Emerald AI programme. No site, customer, capacity or contract has been published; treat the data-centre siting business as an announced intent, not a pipeline. Collection gap: whether any of the Wisconsin, Indiana or Arizona gas plants is contractually tied to a named hyperscaler campus beyond the utility filings' references to Microsoft Mount Pleasant and Vantage Port Washington.",
+    "Collection gap: no battery integrator, cell supplier, PCS vendor or storage EPC is named in any Invenergy release, microsite, counterparty release or trade-press article read; the only chemistry statement is 'lithium iron phosphate'. Mark Delaney's Renewable Engineering and Procurement seat (new on the leadership page in 2026) is the procurement counterpart a supplier would approach. Indicators to watch: (1) a Wisconsin PSC decision on Foundry Ridge and Red Oak Ridge (application filed November 2025) and the IURC's end-2026 Sycamore Riverside order — approvals confirm the gas-to-utility model and its pricing; a denial would strand development capital the settlement proceeds were meant to recycle; (2) a Grain Belt Express financing announcement (bank group, bond or equity partner) before Phase 1 construction — its absence through mid-2027 would indicate the DOE termination was fatal to the 2026 schedule; (3) any Invenergy release naming a battery supplier or an ISO-level storage total, or a CAISO record for Seahawk — the first would close the largest collection gap in this dossier; (4) Treasury's final FEOC rule and the 4 July 2026 begin-construction record for the 2027 Meta and Verizon projects — a project dropping from the Meta list would show the deadline bit; (5) Illuminate USA output and any Invenergy storage project specifying domestic cells — the test of whether the module affiliate's playbook is repeated in batteries; (6) a Blackstone or CDPQ disclosure of a stake change, or a holding-company rating — either would replace the ownership judgment's 2023 baseline."
+  ],
+  "sources": [
+    {
+      "label": "The Pajaronian — Invenergy takes over the 200 MW Seahawk (Minto Road) storage project in Santa Cruz County; 'more than 25 energy storage projects totaling more than 1,250 megawatts'",
+      "url": "https://pajaronian.com/invenergy-takes-over-minto-road-battery-storage-project/",
+      "date": "2026-09-03"
+    },
+    {
+      "label": "The Daily Reporter — Invenergy proposes two Calumet County gas plants (Union Depot 750 MW, Forest Junction 1,200 MW) for We Energies",
+      "url": "https://dailyreporter.com/2026/08/31/invenergy-proposes-two-natural-gas-plants-calumet-county/",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Invenergy — Quincy Solar (120 MW) breaks ground with Grant County PUD; Cupertino Electric; commercial late 2027",
+      "url": "https://wwww.invenergy.com/news/invenergy-and-grant-county-public-utility-district-celebrate-their-first-solar-project-to-break-ground-in-grant-county",
+      "date": "2026-08-20"
+    },
+    {
+      "label": "Utility Dive — record geothermal bid; Invenergy a major participant in the June 2026 New Mexico lease sale",
+      "url": "https://www.utilitydive.com/news/record-setting-geothermal-bid-signals-rising-interest-in-federal-leases/827834/",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "ThinkGeoEnergy — Invenergy accepts settlement to pivot capital from offshore wind to geothermal; no operating geothermal plant yet",
+      "url": "https://www.thinkgeoenergy.com/invenergy-accepts-settlement-agreement-to-pivot-capital-from-wind-to-geothermal/",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "ThinkGeoEnergy — New Mexico BLM geothermal lease sale; Invenergy Geothermal Development wins a parcel",
+      "url": "https://www.thinkgeoenergy.com/new-mexico-geothermal-lease-sale-nets-over-16-million-on-bids-for-47-parcels/",
+      "date": "2026-06-18"
+    },
+    {
+      "label": "Utility Dive — Trump administration buys out four more Invenergy offshore wind leases for USD 765 million",
+      "url": "https://www.utilitydive.com/news/trump-administration-buys-out-four-more-offshore-wind-leases-for-765m/823314/",
+      "date": "2026-06-18"
+    },
+    {
+      "label": "Heatmap — Interior pays USD 765 million to cancel four Invenergy offshore leases; amounts match the original lease prices",
+      "url": "https://heatmap.news/energy/trump-invenergy-wind-deal",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "Canary Media — Invenergy says the offshore payout will fund geothermal (45 leases, about 144,000 acres) and gas",
+      "url": "https://www.canarymedia.com/articles/offshore-wind/invenergy-offshore-wind-payout-geothermal",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "DiscoveryAlert (citing Bloomberg and BOEM) — the four terminated leases: OCS-A 0542, 0562, 0567 and a California Central Coast lease",
+      "url": "https://discoveryalert.com/invenergy-offshore-wind-lease-termination-boem-2026/",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "Invenergy — 'Invenergy invested over $500 million in American communities last year'; 38 GW / 25 GW boilerplate",
+      "url": "https://wwww.invenergy.com/news/invenergy-invested-over-500-million-in-american-communities-last-year",
+      "date": "2026-05-19"
+    },
+    {
+      "label": "Invenergy — Illuminate USA names Art Fletcher CEO; 1.1 million sq ft, 1,600 associates, eight lines",
+      "url": "https://wwww.invenergy.com/news/illuminate-usa-announces-new-ceo-art-fletcher",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "Invenergy Power Lines blog — 'Powering the next phase of AI infrastructure': AI factory-ready powered sites, multi-GW campuses",
+      "url": "https://wwww.invenergy.com/news/power-lines/powering-the-next-phase-of-ai-infrastructure",
+      "date": "2026-04-28"
+    },
+    {
+      "label": "Inside INdiana Business — I&M seeks to acquire the Sycamore Riverside gas plant (about USD 500 million; IURC decision end-2026)",
+      "url": "https://www.insideindianabusiness.com/articles/indiana-michigan-power-seeks-to-acquire-sullivan-county-natural-gas-plant",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "Invenergy — 918 MW Sycamore Riverside gas project advances with I&M offtake; ownership to I&M March 2029",
+      "url": "https://wwww.invenergy.com/news/invenergy-advances-918-mw-natural-gas-project-with-offtake-agreement-in-indiana",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "AEP / Indiana Michigan Power — CPCN filing to acquire the 918 MW Sycamore Riverside Energy Center from Invenergy",
+      "url": "https://www.aep.com/news/stories/view/11850/",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "SolarQuarter — Invenergy appoints Jim Murphy CEO and Michael Polsky Executive Chairman",
+      "url": "https://solarquarter.com/2026/04/09/invenergy-appoints-jim-murphy-as-ceo-and-michael-polsky-as-executive-chairman-in-executive-leadership-shakeup/",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "Invenergy — 'Invenergy strengthens leadership structure': Polsky Executive Chairman, Murphy CEO, Shield President of Invenergy Power",
+      "url": "https://wwww.invenergy.com/news/invenergy-strengthens-leadership-structure",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "Invenergy — joins NVIDIA and Emerald AI to pioneer flexible AI factories as grid assets",
+      "url": "https://wwww.invenergy.com/news/invenergy-joins-nvidia-and-emerald-ai-to-pioneer-flexible-ai-factories-as-grid-assets",
+      "date": "2026-03-23"
+    },
+    {
+      "label": "Energies Media — Invenergy progresses Kansas wind tied to the Grain Belt Express corridor",
+      "url": "https://energiesmedia.com/invenergy-wind-grain-belt-express-transmission/",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "Salt River Project — first SRP–Invenergy agreement: SunDog 200 MW solar + 200 MW / 800 MWh storage; Invenergy Arizona portfolio 545 MW solar and 736 MW storage",
+      "url": "https://media.srpnet.com/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand/",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "Invenergy — SRP and Invenergy announce first agreement on the SunDog solar and storage project",
+      "url": "https://wwww.invenergy.com/news/srp-and-invenergy-announce-first-agreement-on-solar-and-storage-project-to-help-meet-valley-energy-demand",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "POWER Magazine — Invenergy inks Tallgrass supply deal for three new Arizona gas plants; Hashknife Solar 475 MW",
+      "url": "https://www.powermag.com/invenergy-inks-supply-deal-for-three-new-natural-gas-fired-power-plants-in-arizona/",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "Invenergy — agreement with Tallgrass for long-term gas supply; anchor shipper for up to three Arizona plants",
+      "url": "https://wwww.invenergy.com/news/invenergy-signs-agreement-with-tallgrass-for-long-term-gas-supply",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "Electrek — South Dakota PUC approves Invenergy's 333 MW Philip Wind (about USD 750 million)",
+      "url": "https://electrek.co/2026/02/17/south-dakota-just-approved-its-largest-wind-farm-ever/",
+      "date": "2026-02-17"
+    },
+    {
+      "label": "Latitude Media — Treasury's draft FEOC guidance defers 'effective control'; 4 July 2026 begin-construction deadline",
+      "url": "https://www.latitudemedia.com/news/underwhelming-feoc-guidance-punts-on-industrys-key-question/",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Grain Belt Express — Illinois Supreme Court gives key backing to the USD 11 billion project (ENR repost)",
+      "url": "https://grainbeltexpress.com/illinois-supreme-court-gives-key-backing-to-11b-grain-belt-express-project-engineering-news-record/",
+      "date": "2026-01-28"
+    },
+    {
+      "label": "NPR Illinois / Capitol News Illinois — Illinois Supreme Court rejects the challenge to Grain Belt Express 6–0",
+      "url": "https://www.nprillinois.org/illinois/2026-01-23/state-high-court-rejects-challenge-to-wind-generated-transmission-line",
+      "date": "2026-01-23"
+    },
+    {
+      "label": "SPP filing at FERC — amended and restated interconnection agreement, Grain Belt Express LLC and ITC Great Plains (ER26-1106)",
+      "url": "https://www.spp.org/documents/75773/20260123_3221r2%20grain%20belt%20express%20and%20itc%20great%20plains%20interconnection%20agreement_er26-1106.pdf",
+      "date": "2026-01-23"
+    },
+    {
+      "label": "Grain Belt Express — 'Stronger connections': designing the largest transmission line in US history (engineering article)",
+      "url": "https://grainbeltexpress.com/stronger-connections-with-grain-belt-express-designing-the-largest-transmission-line-in-u-s-history/",
+      "date": "2025-12-03"
+    },
+    {
+      "label": "Utility Dive — Invenergy cancels the 2.4 GW Leading Light Wind project off New Jersey",
+      "url": "https://www.utilitydive.com/news/invenergy-offshore-wind-energy-leading-light-wind/805451/",
+      "date": "2025-11-13"
+    },
+    {
+      "label": "Urban Milwaukee / WPR — We Energies plans nine power projects at USD 5.5 billion including two Invenergy gas plants",
+      "url": "https://urbanmilwaukee.com/2025/11/06/we-energies-plans-nine-power-projects-with-5-5-billion-cost/",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "WPR — We Energies files to acquire Invenergy's Foundry Ridge and Red Oak Ridge gas plants for data-centre demand",
+      "url": "https://www.wpr.org/news/we-energies-add-3gw-electric-grid-data-center-demand",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "WPR — Invenergy proposes the 1.2 GW Red Oak Ridge gas plant in Kenosha County",
+      "url": "https://www.wpr.org/news/developer-proposes-natural-gas-plant-kenosha-county-invenergy-red-oak-ridge-energy-center",
+      "date": "2025-09-16"
+    },
+    {
+      "label": "Fortune — Trump's war against wind extends to transmission; Grain Belt would carry coal, gas and nuclear",
+      "url": "https://fortune.com/2025/08/14/grain-belt-express-wind-transmission-trump-white-house/",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "Senate ENR Democrats — Heinrich demands answers from DOE on the Grain Belt termination",
+      "url": "https://www.energy.senate.gov/2025/7/heinrich-demands-answers-from-doe-on-decision-to-terminate-loan-commitment-for-grain-belt-express",
+      "date": "2025-07-29"
+    },
+    {
+      "label": "Latitude Media — how the Grain Belt Express lost its LPO loan",
+      "url": "https://www.latitudemedia.com/news/how-the-grain-belt-express-lost-its-lpo-loan/",
+      "date": "2025-07-24"
+    },
+    {
+      "label": "DOE — Department of Energy terminates taxpayer-funded financial assistance for Grain Belt Express",
+      "url": "https://www.energy.gov/articles/department-energy-terminates-taxpayer-funded-financial-assistance-grain-belt-express",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "Utility Dive — DOE cancels the USD 4.9 billion conditional loan commitment for Grain Belt Express",
+      "url": "https://www.utilitydive.com/news/doe-cancels-conditional-loan-commitment-grain-belt-express/753828/",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "Senator Hawley — 'Hawley wins cancelation of Grain Belt Express'",
+      "url": "https://www.hawley.senate.gov/hawley-wins-cancelation-of-grain-belt-express",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "Grain Belt Express — statement on the LPO loan guarantee: 'a privately financed Grain Belt Express'",
+      "url": "https://grainbeltexpress.com/grain-belt-express-statement-2/",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "ABC17 News — Grain Belt Express asks Cole County court to quash the Attorney General's demand",
+      "url": "https://abc17news.com/news/missouri/2025/07/16/grain-belt-express-asks-court-to-intervene-against-attorney-generals-demands/",
+      "date": "2025-07-16"
+    },
+    {
+      "label": "ConstructConnect — USD 11 billion Grain Belt Express slated for 2026 construction; Quanta, Kiewit, Prysmian, Siemens Energy, Hubbell",
+      "url": "https://news.constructconnect.com/11b-grain-belt-express-transmission-line-slated-for-construction-in-2026",
+      "date": "2025-07-16"
+    },
+    {
+      "label": "Grain Belt Express — letter to Energy Secretary Wright on the conditionally approved loan guarantee",
+      "url": "https://grainbeltexpress.com/letter-from-grain-belt-express-to-u-s-energy-secretary-wright/",
+      "date": "2025-07-11"
+    },
+    {
+      "label": "Grain Belt Express — statement: four state approvals, USD 52 billion savings, 5,500 jobs, USD 11 billion",
+      "url": "https://grainbeltexpress.com/grain-belt-express-statement/",
+      "date": "2025-07-10"
+    },
+    {
+      "label": "Invenergy — Fairbanks Solar (250 MW, Indiana) reaches commercial operation for NIPSCO",
+      "url": "https://wwww.invenergy.com/news/invenergy-announces-commercial-operations-at-indiana-s-fairbanks-solar-energy-center",
+      "date": "2025-07-09"
+    },
+    {
+      "label": "Missouri Attorney General — Bailey investigates Grain Belt Express; civil investigative demand",
+      "url": "https://ago.mo.gov/missouri-attorney-general-bailey-investigates-grain-belt-express-over-history-of-lies-and-false-promises/",
+      "date": "2025-07-02"
+    },
+    {
+      "label": "Windtech International — Meta expands clean energy procurement with Invenergy to 1,800 MW",
+      "url": "https://www.windtech-international.com/projects-and-contracts/meta-expands-clean-energy-procurement-with-invenergy-to-1-800-mw",
+      "date": "2025-06-27"
+    },
+    {
+      "label": "Invenergy — to provide Meta with nearly 800 MW supporting data center operations; 'Total MW with Meta: 1,800 MW'",
+      "url": "https://wwww.invenergy.com/news/invenergy-to-provide-meta-with-nearly-800-mw-supporting-data-center-operations",
+      "date": "2025-06-26"
+    },
+    {
+      "label": "Invenergy — Prysmian doubles down on US manufacturing with Invenergy's support (E3X conductor for Grain Belt Express)",
+      "url": "https://wwww.invenergy.com/news/with-invenergy-s-support-prysmian-doubles-down-on-u-s-manufacturing-and-domestic-energy-supply-chains",
+      "date": "2025-06-20"
+    },
+    {
+      "label": "Invenergy — Pleasant Prairie Solar starts construction in Franklin County, Ohio; Blattner EPC; Illuminate USA modules",
+      "url": "https://wwww.invenergy.com/news/invenergy-s-pleasant-prairie-solar-energy-center-to-start-construction-in-franklin-county-ohio",
+      "date": "2025-06-12"
+    },
+    {
+      "label": "Heatmap — 'It's the demand, stupid': Jim Murphy at ACORE on load growth and the FEOC provision",
+      "url": "https://heatmap.news/energy/renewable-energy-electricity-prices-big-beautiful-bill",
+      "date": "2025-06-06"
+    },
+    {
+      "label": "Invenergy — Hardin III (250 MW) commences operations; Microsoft PPA; WEC Energy Group majority owner",
+      "url": "https://wwww.invenergy.com/news/invenergy-s-hardin-iii-commences-operations",
+      "date": "2025-06-04"
+    },
+    {
+      "label": "Invenergy — PPAW 1 wind (350 MW, Quebec) closes CAD 1.1 billion financing with Alliance de l'énergie de l'Est",
+      "url": "https://wwww.invenergy.com/news/invenergy-and-alliance-de-l-nergie-de-l-est-close-cad-1-1b-financing-for-ppaw-1-wind-energy-centre-in-quebec",
+      "date": "2025-06-02"
+    },
+    {
+      "label": "Invenergy — Grain Belt Express awards USD 1.7 billion to Quanta and Kiewit",
+      "url": "https://wwww.invenergy.com/news/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history",
+      "date": "2025-05-07"
+    },
+    {
+      "label": "Kiewit — Grain Belt Express awards USD 1.7 billion to Quanta and Kiewit to build the largest transmission line in US history",
+      "url": "https://www.kiewit.com/newsroom/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history/",
+      "date": "2025-05-07"
+    },
+    {
+      "label": "Invenergy Power Lines blog — 'Powering the AI race' (Jim Shield on demand and permitting)",
+      "url": "https://wwww.invenergy.com/news/power-lines/powering-the-ai-race-every-drop-of-american-made-energy-and-transmission-infrastructure-to-deliver-it",
+      "date": "2025-04-30"
+    },
+    {
+      "label": "Invenergy — Axios repost: 'A power titan calls transmission key to Trump's agenda' (Polsky interview)",
+      "url": "https://wwww.invenergy.com/news/a-power-titan-calls-transmission-key-to-trump-s-agenda",
+      "date": "2025-04-24"
+    },
+    {
+      "label": "Invenergy — Quincy Solar 20-year PPA with Grant County PUD",
+      "url": "https://wwww.invenergy.com/news/invenergy-s-first-washington-solar-center-to-power-local-grid",
+      "date": "2025-04-15"
+    },
+    {
+      "label": "Invenergy — Yuma Solar Energy Center (70 MW solar + 70 MW storage) reaches commercial operation for APS",
+      "url": "https://wwww.invenergy.com/news/invenergy-announces-commercial-operations-at-its-first-arizona-solar-facility",
+      "date": "2025-04-01"
+    },
+    {
+      "label": "Invenergy — Sauk Valley Hydrogen reaches commercial operation (Ohmium electrolysers, Aether Fuels offtake)",
+      "url": "https://wwww.invenergy.com/news/invenergy-s-first-clean-hydrogen-facility-reaches-commercial-operations",
+      "date": "2025-03-20"
+    },
+    {
+      "label": "SDxCentral — Verizon signs four vPPAs with Invenergy for 640 MW",
+      "url": "https://www.sdxcentral.com/news/verizon-signs-four-vppas-with-invenergy-for-640mw-of-power-across-us/",
+      "date": "2025-02-24"
+    },
+    {
+      "label": "Invenergy — Verizon partnership to procure over 1 GW; 640 MW of new VPPAs",
+      "url": "https://wwww.invenergy.com/news/invenergy-verizon-partner-to-procure-over-1-gw-in-renewable-energy",
+      "date": "2025-02-19"
+    },
+    {
+      "label": "Invenergy — Delilah I Solar (300 MW, Texas) reaches commercial operation; WEC majority owner; Honda and Tesla VPPAs",
+      "url": "https://wwww.invenergy.com/news/invenergy-developed-delilah-i-solar-reaches-commercial-operations-in-texas",
+      "date": "2025-02-13"
+    },
+    {
+      "label": "Mercom — Invenergy secures USD 1.1 billion for three solar projects (590 MW)",
+      "url": "https://mercomcapital.com/project-finance-brief-invenergy-secures-solar-projects/",
+      "date": "2025-02-05"
+    },
+    {
+      "label": "Invenergy — Hubbell supply-chain agreement (about USD 70 million) for Grain Belt Express components",
+      "url": "https://wwww.invenergy.com/news/invenergy-and-hubbell-announce-supply-chain-agreement-partnership-supporting-local-jobs-and-us-infrastructure",
+      "date": "2025-01-16"
+    },
+    {
+      "label": "Invenergy — Hardin II Solar (150 MW, Ohio) reaches commercial operation for Meta",
+      "url": "https://wwww.invenergy.com/news/invenergy-s-hardin-ii-solar-reaches-commercial-operations",
+      "date": "2025-01-07"
+    },
+    {
+      "label": "RTO Insider — NYPA petitions the New York PSC to save the Clean Path project",
+      "url": "https://www.rtoinsider.com/94738-nypa-files-petition-psc-save-clean-path/",
+      "date": "2025-01-06"
+    },
+    {
+      "label": "Kansas Corporation Commission — Grain Belt Express AC collector conditional approval; approval timeline",
+      "url": "https://www.kcc.ks.gov/news-12-19-24",
+      "date": "2024-12-19"
+    },
+    {
+      "label": "ESG Dive — Meta signs four solar purchase agreements (760 MW) with Invenergy",
+      "url": "https://www.esgdive.com/news/meta-signs-solar-purchase-agreements-invenergy/735277/",
+      "date": "2024-12-11"
+    },
+    {
+      "label": "Invenergy — over 760 MW of renewable energy for Meta via environmental-attribute purchase agreements",
+      "url": "https://wwww.invenergy.com/news/invenergy-to-provide-over-760mw-in-renewable-energy-supporting-meta-s-energy-needs-in-line-with-its-clean-and-renewable-energy-goals",
+      "date": "2024-12-05"
+    },
+    {
+      "label": "Utility Dive — NYSERDA and Clean Path NY developers terminate the Tier 4 contracts",
+      "url": "https://www.utilitydive.com/news/nyserda-clean-path-ny-developers-terminate-contracts-transmission/734410/",
+      "date": "2024-12-03"
+    },
+    {
+      "label": "E&E News — major clean energy project (Clean Path NY) loses New York contract",
+      "url": "https://www.eenews.net/articles/major-clean-energy-project-loses-new-york-contract/",
+      "date": "2024-12-02"
+    },
+    {
+      "label": "Utility Dive — Avangrid and Invenergy subsidiaries secure BOEM's first Gulf of Maine offshore wind leases",
+      "url": "https://www.utilitydive.com/news/offshore-wind-lease-sale-gulf-maine-boem/731412/",
+      "date": "2024-10-29"
+    },
+    {
+      "label": "Sunflower State Radio / Missouri Independent — Grain Belt Express clears another legal hurdle (Chariton County road crossings)",
+      "url": "https://sunflowerstateradio.com/2024/10/16/grain-belt-express-clears-another-legal-hurdle-with-missouri-appeals-court-ruling/",
+      "date": "2024-10-16"
+    },
+    {
+      "label": "Grain Belt Express — Kansas Corporation Commission approves the AC collector application",
+      "url": "https://grainbeltexpress.com/kansas-corporation-commission-approves-grain-belt-express-ac-collector-application/",
+      "date": "2024-09-26"
+    },
+    {
+      "label": "Energy-Storage.news — Invenergy brings its Arizona portfolio to 600 MWh-plus with a tenth commissioned project (fleet list)",
+      "url": "https://www.energy-storage.news/invenergy-arizona-portfolio-600mwh-tenth-commissioned-project/",
+      "date": "2024-08-30"
+    },
+    {
+      "label": "Invenergy — El Sol, the tenth Arizona battery, reaches commercial operation; '21 storage projects totaling 556 megawatts or 1,817 megawatt-hours'",
+      "url": "https://wwww.invenergy.com/news/invenergy-announces-commercial-operations-at-its-10th-arizona-battery-energy-storage-center",
+      "date": "2024-08-29"
+    },
+    {
+      "label": "Natixis CIB — leads USD 1.27 billion construction financing of four Invenergy projects with SWEPCO and PSO offtake",
+      "url": "https://www.prnewswire.com/news-releases/natixis-corporate--investment-banking-leads-1-27bn-construction-financing-of-four-renewable-energy-projects-for-invenergy-302097160.html",
+      "date": "2024-03-22"
+    },
+    {
+      "label": "Invenergy — Rusutsu Wind Energy Center (Japan) reaches commercial operation with 15 GE Vernova turbines",
+      "url": "https://wwww.invenergy.com/news/invenergy-s-rusutsu-wind-energy-center-reaches-commercial-operations-in-japan",
+      "date": "2024-03-15"
+    },
+    {
+      "label": "Invenergy — Cardal transmission line begins operations in Uruguay (UTE 30-year lease)",
+      "url": "https://wwww.invenergy.com/news/invenergy-s-landmark-tealov-cardal-transmission-line-begins-operations-in-uruguay-",
+      "date": "2024-02-16"
+    },
+    {
+      "label": "Invenergy — Grain Belt Express secures the last of its state approvals (Missouri PSC); cost 'USD 7 billion'",
+      "url": "https://wwww.invenergy.com/news/invenergy-s-grain-belt-express-transmission-line-secures-last-of-its-state-approvals",
+      "date": "2023-10-12"
+    },
+    {
+      "label": "Utility Dive — AEP sells 1.3 GW of unregulated renewables to an Invenergy-led group with a first-of-its-kind PTC transfer",
+      "url": "https://www.utilitydive.com/news/aep-unregulated-wind-solar-renewable-energy-invenergy/691144/",
+      "date": "2023-08-17"
+    },
+    {
+      "label": "Invenergy — Invenergy-led consortium completes purchase of AEP's unregulated renewables portfolio (USD 1.5 billion EV)",
+      "url": "https://wwww.invenergy.com/news/invenergy-led-consortium-completes-purchase-of-american-electric-power-s-unregulated-renewables-portfolio",
+      "date": "2023-08-15"
+    },
+    {
+      "label": "Invenergy — closes and upsizes its revolving credit facility to USD 1.5 billion",
+      "url": "https://wwww.invenergy.com/news/invenergy-closes-and-upsizes-its-revolving-credit-facility-to-usd-1-5-billion",
+      "date": "2023-07-25"
+    },
+    {
+      "label": "Utility Dive — AEP's SWEPCO gets approval to buy 1 GW of wind and solar from Invenergy for USD 2.2 billion",
+      "url": "https://www.utilitydive.com/news/aep-swepco-louisiana-psc-wind-solar-invenergy-renewable/654394/",
+      "date": "2023-06-30"
+    },
+    {
+      "label": "Invenergy / PR Newswire — USD 1 billion follow-on investment from Blackstone Infrastructure Partners; 'approximately $4 billion' combined",
+      "url": "https://www.prnewswire.com/news-releases/invenergy-announces-1-billion-follow-on-investment-from-blackstone-infrastructure-partners-301856230.html",
+      "date": "2023-06-21"
+    },
+    {
+      "label": "Invenergy — USD 1 billion follow-on investment from Blackstone Infrastructure Partners",
+      "url": "https://wwww.invenergy.com/news/invenergy-announces-1-billion-follow-on-investment-from-blackstone-infrastructure-partners",
+      "date": "2023-06-21"
+    },
+    {
+      "label": "CDPQ (mirror of the Blackstone release) — approximately USD 3 billion investment from Blackstone Infrastructure Partners",
+      "url": "https://www.lacaisse.com/en/news/pressreleases/invenergy-announces-approximately-3-billion-investment-blackstone-infrastructure",
+      "date": "2022-01-07"
+    },
+    {
+      "label": "Invenergy — approximately USD 3 billion investment from Blackstone Infrastructure Partners; 'CDPQ and Invenergy management remain majority owners'",
+      "url": "https://wwww.invenergy.com/news/invenergy-announces-approximately-3-billion-investment-from-blackstone-infrastructure-partners-to-accelerate-renewable-development-activities",
+      "date": "2022-01-07"
+    },
+    {
+      "label": "Moody's via Yahoo Finance — affirms Invenergy Thermal Operating I LLC's Ba2 senior secured facilities; outlook negative",
+      "url": "https://finance.yahoo.com/news/invenergy-thermal-operating-llc-moodys-222407990.html",
+      "date": "2021-04-23"
+    },
+    {
+      "label": "Invenergy — Wilkinson Solar (74 MW, North Carolina) begins commercial operation; Microsoft VPPA; Dominion Energy Virginia affiliate acquires",
+      "url": "https://wwww.invenergy.com/news/wilkinson-solar-energy-center-begins-commercial-operations",
+      "date": "2020-06-16"
+    },
+    {
+      "label": "Invenergy — completes a four-month construction sprint on a 1 MW / 4 MWh LFP battery for MidAmerican Energy",
+      "url": "https://wwww.invenergy.com/news/invenergy-completes-four-month-construction-sprint-on-battery-storage-system-for-midamerican-energy",
+      "date": "2019-01-14"
+    },
+    {
+      "label": "Utility Dive — Invenergy widens capital base with investments in its gas and renewables arms (CDPQ 32% to 52.4%; AMP Capital 50%)",
+      "url": "https://www.utilitydive.com/news/invenergy-widens-capital-base-with-investments-in-its-gas-renewables-arms/524123/",
+      "date": "2018-05-23"
+    },
+    {
+      "label": "PV Tech — CDPQ acquires a majority stake in Invenergy Renewables",
+      "url": "https://www.pv-tech.org/cdpq-acquires-majority-stake-in-invenergy-renewables/",
+      "date": "2018-05-23"
+    },
+    {
+      "label": "CDPQ / PR Newswire — CDPQ acquires a significant additional stake in Invenergy Renewables LLC (52.4% economic ownership)",
+      "url": "https://www.prnewswire.com/news-releases/cdpq-acquires-significant-additional-stake-in-invenergy-renewables-llc-300652610.html",
+      "date": "2018-05-22"
+    },
+    {
+      "label": "Invenergy — strengthens its diversified clean energy platform through equity transactions with CDPQ and AMP Capital",
+      "url": "https://wwww.invenergy.com/news/invenergy-strengthens-its-diversified-clean-energy-platform-through-new-equity-transactions-with-cdpq-and-amp-capital",
+      "date": "2018-05-22"
+    },
+    {
+      "label": "Invenergy — to provide clean power to Equinix (100 MW Wake Wind PPA)",
+      "url": "https://wwww.invenergy.com/news/invenergy-to-provide-clean-power-to-equinix",
+      "date": "2015-11-16"
+    },
+    {
+      "label": "Cleanview — top utility-scale renewable energy developers in the US (development pipeline ranking; Invenergy #2)",
+      "url": "https://cleanview.co/content/top-renewable-developers"
+    },
+    {
+      "label": "Cleanview — top wind developers in the US (Invenergy #2)",
+      "url": "https://cleanview.co/content/top-wind-developers"
+    },
+    {
+      "label": "Cleanview — top utility-scale solar developers in the US (Invenergy #2)",
+      "url": "https://cleanview.co/content/top-solar-developers"
+    },
+    {
+      "label": "Cleanview — Invenergy developer page (138 projects, 27,709 MW planned)",
+      "url": "https://cleanview.co/power-projects/developers/invenergy"
+    },
+    {
+      "label": "Forbes — Michael Polsky profile (net worth, SkyGen sale, Invenergy stakes sold to Blackstone and CDPQ)",
+      "url": "https://www.forbes.com/profile/michael-polsky/"
+    },
+    {
+      "label": "BOEM — lease OCS-A 0542 (Invenergy Wind Offshore LLC) and the June 2026 settlement condition",
+      "url": "https://www.boem.gov/renewable-energy/state-activities/invenergy-ocs-0542"
+    },
+    {
+      "label": "Grain Belt Express — home page (5,000 MW, USD 11 billion, USD 52 billion savings claim)",
+      "url": "https://grainbeltexpress.com/"
+    },
+    {
+      "label": "Grain Belt Express — resources and news index (phases, Siemens Energy selection, FAST-41, state approvals, MOPEP)",
+      "url": "https://grainbeltexpress.com/resources-news/"
+    },
+    {
+      "label": "Cimarron Link — project site (1,900 MW, Oklahoma Panhandle to Jenks)",
+      "url": "https://cimarronlink.com/"
+    },
+    {
+      "label": "New Mexico North Path — project site (Invenergy and RETA)",
+      "url": "https://northpath.invenergy.com/"
+    },
+    {
+      "label": "Invenergy — home page ('232 projects', '38 gigawatts', '2,800+ people', 'North America's largest privately held independent power producer')",
+      "url": "https://invenergy.com/"
+    },
+    {
+      "label": "Invenergy — our history (founding narrative; 'more than 2,800 employees')",
+      "url": "https://wwww.invenergy.com/who-we-are/our-history"
+    },
+    {
+      "label": "Invenergy — leadership page (22 executives, titles and photographs; no bios)",
+      "url": "https://wwww.invenergy.com/who-we-are/leadership"
+    },
+    {
+      "label": "Invenergy — our capabilities (ownership summary: CDPQ since 2013, Blackstone 2021 and 2023, InfraBridge 2018)",
+      "url": "https://wwww.invenergy.com/expertise/our-capabilities"
+    },
+    {
+      "label": "Invenergy — energy storage page ('27 projects developed', '5,000 megawatt-hours', '150 utility-scale projects' in pipeline)",
+      "url": "https://wwww.invenergy.com/clean-energy/storage"
+    },
+    {
+      "label": "Invenergy — transmission page ('11 gigawatts of new transmission capacity in development')",
+      "url": "https://wwww.invenergy.com/clean-energy/transmission"
+    },
+    {
+      "label": "Invenergy — natural gas page",
+      "url": "https://wwww.invenergy.com/clean-energy/natural-gas"
+    },
+    {
+      "label": "Invenergy — customers page ('900 customers', '220 gigawatts contracted with utility customers', '60 gigawatts' corporate)",
+      "url": "https://wwww.invenergy.com/partners/customers"
+    },
+    {
+      "label": "Invenergy Services — overview ('Storage (400+ MW)', '19 storage projects')",
+      "url": "https://invenergy.com/services/overview"
+    },
+    {
+      "label": "Invenergy — news and press releases index (21 pages, 364 results)",
+      "url": "https://wwww.invenergy.com/news/news-and-press-releases"
+    },
+    {
+      "label": "Invenergy — Grand Ridge Energy Center case study (wind, solar and 36 MW storage since 2012)",
+      "url": "https://wwww.invenergy.com/projects/case-studies/grand-ridge-energy-center"
+    },
+    {
+      "label": "Invenergy — Orangeville Wind and Storage case study (20 MW storage added 2021)",
+      "url": "https://wwww.invenergy.com/projects/case-studies/orangeville-wind-and-storage"
+    },
+    {
+      "label": "Invenergy — La Toba Energy Center case study (35 MW solar + 20 MW four-hour storage, Mexico)",
+      "url": "https://wwww.invenergy.com/projects/case-studies/la-toba-energy-center"
+    },
+    {
+      "label": "El Sol Energy Storage Center — project microsite ('250 megawatts', '1,250+ megawatt-hours')",
+      "url": "https://elsolstorage.invenergy.com/"
+    },
+    {
+      "label": "Cloud Cap Energy Storage Center — project microsite (1,000 MW / 4,000 MWh, Maricopa County)",
+      "url": "https://cloudcapstorage.invenergy.com/"
+    },
+    {
+      "label": "Hazy Peak Energy Storage Center — project microsite (700 MW / 2,800 MWh, Pinal County)",
+      "url": "https://hazypeakstorage.invenergy.com/"
+    },
+    {
+      "label": "Lincoln Route Energy Storage Center — project microsite (300 MW / 1,200 MWh, Linn County, Iowa)",
+      "url": "https://lincolnroutestorage.invenergy.com/"
+    },
+    {
+      "label": "Yum Yum Energy Storage Center — project microsite (147 MW, Fayette County, Tennessee)",
+      "url": "https://yumyumstorage.invenergy.com/"
+    },
+    {
+      "label": "Hardin II Energy Storage Center — project microsite (105 MW / 420 MWh, Hardin County, Ohio)",
+      "url": "https://hardin2storage.invenergy.com/"
+    },
+    {
+      "label": "Tip Top Energy Storage Center — project microsite (70 MW / 280 MWh, Lea County, New Mexico)",
+      "url": "https://tiptopenergystorage.invenergy.com/"
+    },
+    {
+      "label": "Richfield Energy Storage Center — project microsite (50 MW, Dorchester County, Maryland)",
+      "url": "https://richfieldenergystoragecenter.invenergy.com/"
+    },
+    {
+      "label": "Foundry Ridge Energy Center — project microsite ('proposed 324 megawatt natural gas peaker', Walworth County)",
+      "url": "https://foundryridge.invenergy.com/"
+    },
+    {
+      "label": "Invenergy Power Lines blog — what you should know about energy storage safety (lithium iron phosphate)",
+      "url": "https://wwww.invenergy.com/news/power-lines/what-you-should-know-about-energy-storage-safety"
+    },
+    {
+      "label": "POWER Magazine — Invenergy tag archive (Lackawanna, GE 1.48 GW Oklahoma turbines, Verizon PPAs, offshore lease buybacks)",
+      "url": "https://www.powermag.com/tag/invenergy/"
+    },
+    {
+      "label": "BuildCentral — Invenergy projects in 2026 (Pleasant Prairie EPC Blattner; Trade Post, States Edge)",
+      "url": "https://www.buildcentral.com/invenergy-projects-in-2026-how-to-track-where-theyre-building-and-whos-involved/"
+    },
+    {
+      "label": "Wikipedia — Invenergy",
+      "url": "https://en.wikipedia.org/wiki/Invenergy"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}
