@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 2,
+  "slug": "powerhouse-data-centers",
+  "title": "PowerHouse Data Centers — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-powered-land-and-the-utility-first-campus",
+      "title": "Start here: powered land and the utility-first campus",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The Aligned guide names the queue problem and 'power-first' siting in a paragraph; the STACK guide teaches land-and-power banking as one rung of a developer's ladder; the Compass guide teaches how a sponsor funds a landlord and recycles its buildings; the EdgeCore guide opens the single-tenant lease from the landlord's chair. This guide is about the layer under all of them: **the developer whose product is the position — {{entitlement}}, a substation and a utility contract on a piece of land — and who sells that position to capital partners and, eventually, to a tenant or a buyer.** PowerHouse Data Centers is the worked example because it is the purest one in the corpus: a division of a private real-estate fund manager that supplies 5–10% of the equity, has delivered one building (and sold it to its tenant), lists '140 data centers' and '~10 GW' in planning, and whose flagship 1.8 GW campus in Joliet, Illinois was annexed by a council vote in March 2026 and lost its transmission contract with the utility in July.",
+        "**Four things this guide teaches.** What {{powered land}} actually is and why the substation, not the acreage, is the asset. The entitlement toolkit — {{annexation}}, {{planned unit development}}, {{by-right zoning}}, {{extraterritorial jurisdiction}}, the {{telecommunications hotel}} classification, the {{community benefit agreement}} — and what each buys. The two utility contracts behind a gigawatt campus, the state {{ESA}} and the federal {{transmission security agreement}}, and why one of them can be cancelled after the council has said yes. And the {{GP fund}} model: how a developer with a USD 309 million fund controls 'USD 9 billion of buying power', why its pipeline counter is the product, and what the one completed cycle (ABX-1: lease for 30 years, sell to the tenant) says about the exit.",
+        "**What it deliberately leaves to other guides.** The lease clauses and the limited-recourse loan (EdgeCore); sponsor co-control, ABS and rating agencies (Compass); the fund manager's own economics — management fee, carried interest, the fund calendar (Excelsior); the anchor's signature (Nscale); cooling (Aligned)."
+      ]
+    },
+    {
+      "id": "what-powered-land-is-worth",
+      "title": "What powered land is, and why the substation is the asset",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "Farmland outside Joliet is worth a few tens of thousands of dollars an acre. The same field with a signed allocation of 1,800 MW from the grid, a 25-acre switching station site conveyed to the utility, {{by-right zoning}} or an approved {{planned unit development}}, water and fibre, is worth what a hyperscaler will pay to skip three to five years of queueing — which, at the rents in the EdgeCore guide, is measured in months of rent on hundreds of megawatts. {{Powered land}} is that difference: a parcel whose grid connection has been secured before the building exists. The land is cheap; the megawatts are the asset; and the developer's skill is getting the megawatts attached to the dirt.",
+        "The physical form of the asset is a {{substation}}. PowerHouse's record is a catalogue of them: a 300 MW gas-insulated substation on the ten-acre ABX-1 site built with Dominion, energised in phases (15 MW at once, then 7, 8 and 60 MW); a 'first of its kind' {{gas-insulated switchgear}} substation at Arcola Grove squeezed from four acres to 2.4 so that it fits 468 feet from the nearest house; three 300 MW substations planned at PowerHouse 95; a 350 MW Oncor substation 'funded by PowerHouse' at Circle T; a 1.8 GW switchyard at Grand Prairie with the 'first 500 MW tranche approved through ERCOT'; an LG&E switch station for Louisville; 450 MW substations for each of three Carlisle campuses. A GIS substation matters in a suburb because it is enclosed, quiet and a third of the size of an air-insulated yard — which is why the county's planning commission still recommended denial 7–2 and the supervisors approved it 5–4.",
+        "Who pays for the substation decides who owns the position. When the utility builds it under its tariff, the capacity belongs to the utility's plan and the developer holds a queue position; when the developer funds it — Compass's USD 52.5 million in Texas, PowerHouse's Circle T and Joliet commitments — the developer holds a dedicated asset it can market to a tenant and pledge to a lender. PowerHouse employs a 'Senior Vice President, Data Center Utilities' recruited from Dominion for exactly this work.",
+        "The value is only realised when a tenant signs or a buyer pays. Until then, powered land is an option whose price the developer's own counter ('118 buildings ... in planning, underway, or completed, representing over 8.1 GW') reports as if it were a portfolio."
+      ]
+    },
+    {
+      "id": "the-entitlement-toolkit",
+      "title": "The entitlement toolkit",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "Each instrument buys a different thing from a different body. PowerHouse used every row in 2024–2026.",
+      "cols": [
+        "Instrument",
+        "What it does",
+        "Who decides",
+        "What it costs the developer",
+        "PowerHouse example"
+      ],
+      "rows": [
+        [
+          "**{{Annexation}}** with an annexation agreement",
+          "Moves county land into a city, swapping county rules for city zoning, water and taxes; the agreement fixes the developer's obligations",
+          "City council (Joliet: 8–1 after a 6.5-hour hearing)",
+          "A negotiated package: USD 100 million of community payments, all transmission upgrades, a 150,000 gallon-a-day water cap with a triple penalty, Tier 4 generators, no incentives",
+          "Joliet Technology Center, 795 acres, 19 March 2026"
+        ],
+        [
+          "**{{Planned unit development}}**",
+          "Approves a multi-building campus as one negotiated plan — uses, heights, phasing — instead of lot-by-lot rules",
+          "Council or board, usually with the annexation",
+          "Design concessions and conditions; a lawsuit if the process slips",
+          "Joliet's preliminary PUD plan (24 buildings, 6.9 million sq ft); challenged in Will County"
+        ],
+        [
+          "**{{By-right zoning}}**",
+          "The use is already permitted; only permits are needed, no public vote",
+          "Staff; planning commission at most",
+          "Finding the right parcel; premium price for it",
+          "EdgeCore's Louisa site (2019 rezoning); Westlake's first Circle T building 'permitted by right'"
+        ],
+        [
+          "**Rezoning and special exception**",
+          "Changes the district or adds a use the code does not allow; the political route",
+          "Planning commission recommends, elected board decides",
+          "Hearings, redesigns, one-vote margins",
+          "Arcola Grove: commission 7–2 against, supervisors 5–4 for (LEGI-2023-0071)"
+        ],
+        [
+          "**{{Telecommunications hotel}}** classification",
+          "An old land-use category that some codes still apply to data centers, approved by staff or commission without a council vote",
+          "Planning commission (Louisville: 6–1)",
+          "Political exposure once residents notice; the classification is the target of the moratorium that follows",
+          "Louisville Rubbertown: 'already approved under current zoning rules as a telecommunications hotel'"
+        ],
+        [
+          "**{{Extraterritorial jurisdiction}} release**",
+          "Moves a parcel from a city's planning reach into the county, which in Texas cannot zone, impose a moratorium or deny permits",
+          "City (petition), county",
+          "Public pushback and a reputation cost",
+          "Uhland, Texas: petition to release 500 acres of the Caldwell Valley Technology Park (May 2026)"
+        ],
+        [
+          "**{{Community benefit agreement}}** / donations",
+          "Cash or works offered for consent where tax abatements have been withdrawn or refused",
+          "Negotiated with the city or county",
+          "USD 100 million at Joliet (Hillwood's cheque); Compass's USD 27.6 million in Ellis County",
+          "The price of the vote, now a budget line"
+        ],
+        [
+          "**{{Data-center moratorium}}**",
+          "A temporary ban on new approvals while rules are rewritten; grandfathers what is already entitled",
+          "Council",
+          "A race to entitle before adoption",
+          "Louisville proposal (June 2026, Rubbertown exempt); Merrillville, Indiana (June 2026–May 2027) where PowerHouse lists 750 MW"
+        ]
+      ]
+    },
+    {
+      "id": "the-two-utility-contracts",
+      "title": "The two utility contracts behind a gigawatt campus — and how one was cancelled",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A large campus signs two contracts with its utility. The **retail** one — an {{electric service agreement}} filed with the state {{public utility commission}} — fixes the megawatts the utility will serve, the tariff, minimum bills and the customer's collateral. The **transmission** one — in ComEd's territory a {{transmission security agreement}} filed with {{FERC}} — covers the high-voltage upgrades the campus triggers: the customer posts security for them and commits to take the capacity, and the utility builds. Both exist because a 1,800 MW load is not a customer in the ordinary sense; it is a generation plant's worth of demand arriving on one substation.",
+        "Joliet shows the sequence and the failure. ComEd filed transmission security agreements for a batch of data-center customers from December 2025 — PowerHouse Hillwood Holding, QTS, Equinix, Aligned among them; the Illinois Attorney General protested that the safeguards 'do not prevent existing customers from paying the costs'; FERC accepted five of them on 11 March 2026, eight days before the council vote. On 23 March the Illinois Commerce Commission approved ComEd's large-load tariff: a base deposit of USD 1 million plus 'USD 500,000 for every 100-megawatt increment' above 200 MW, developer-funded substations and transmission, and the right for ComEd to keep deposits from projects that fail. On 24 July ComEd told FERC it had cancelled PowerHouse Hillwood's agreement; the dispute, per Utility Dive, 'centers on security deposit timing'. PowerHouse Hillwood asked FERC to reject the cancellation on 14 August and sued ComEd in federal court.",
+        "Read the deposit rule against the developer's model. A {{GP fund}} developer reserves capacity years ahead of a tenant and funds its share of the equity at 5–10%; a deposit of USD 500,000 per 100 MW above 200 MW on 1,800 MW is USD 8 million on top of the base — small next to USD 20 billion, large next to a GP fund's cheque, and forfeitable. The utility's rule is written to charge for exactly what the developer does: hold a grid position it may never fill. Whether the deposit was late, disputed or refused is not on the public record; that it became the breaking point is.",
+        "The state-federal split matters for what happens next. ComEd also cancelled the pending retail agreement at the commission, so both contracts are gone; the annexation agreement with the city, and its USD 100 million of promised payments, survive. A campus can therefore be fully entitled and have no power — the inverse of the by-right site with no permit. The EdgeCore guide records the landlord's answer ('we expect to bear 100% of the costs'); the Compass guide the pre-funded 'co-serve' version; the PowerHouse case is what the utility does when the developer's timing and the tariff's timing diverge."
+      ]
+    },
+    {
+      "id": "the-gp-fund-model",
+      "title": "The GP fund model: 10% of the equity, 100% of the pipeline",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "American Real Estate Partners is a fund manager before it is a developer. Its data-center division does not own its campuses outright; each campus sits in a {{joint venture}} with an institutional partner, and AREP's own discretionary fund supplies the general partner's share. Brian Katz's description, in an industry interview, is unusually direct: deals are structured '90/10 ... AREP contributes 10% of the equity while large institutional partners provide 90%', the Blue Owl programme '95/5', and the USD 300 million Fund IV is 'a GP fund with over USD 9bn total buying power' — enough for '12-to-15 new PowerHouse projects'. Fund IV closed at USD 309 million in February 2025 with 80% earmarked for PowerHouse, from 'predominantly repeat' ultra-high-net-worth and institutional investors.",
+        "The economics are the Excelsior guide's {{general partner}} and {{limited partner}} split applied to buildings rather than a fund: the GP puts in a sliver, does the work (site, entitlement, utility, design, construction management, leasing) and earns fees plus a {{carried interest}} — a promoted share of the profit once the partner's capital and preferred return are paid. 'Buying power' is the total project cost that 10% can control; it is why a USD 309 million fund can stand behind a USD 20 billion campus announcement without contradiction, and why the pipeline counter — the number of projects the GP has sourced — is the product it sells to the next partner.",
+        "The partners are programmatic where they can be: Harrison Street's commitment grew from USD 1 billion (2022) to 'USD 3.2 billion' across 'nearly 6 million square feet' in Northern Virginia, Dallas and Reno; the Blue Owl/Chirisa programme is 'USD 5 billion' drawn in USD 750 million tranches. A {{programmatic joint venture}} is capacity, not cash: the figure is what the partner will fund if the GP brings qualifying projects. Other partners are single-site: Provident at Grand Prairie ('first joint venture effort'), Hillwood at Joliet (whose USD 100 million community cheque is Hillwood's), Poe in Kentucky, Town Lane in Charlotte, Pennsylvania Data Center Partners at Carlisle.",
+        "What the reader should hold onto: the developer's balance sheet is small, its control is contractual, and its disclosed numbers are the partners' programme sizes and the projects' projected costs. There is no PowerHouse construction loan, bond or valuation on the public record; the only priced facts are the USD 600 million Société Générale-led loan on the CoreWeave building (a JV asset), the USD 309 million fund, and the USD 154.1 million ABX-1 sale."
+      ]
+    },
+    {
+      "id": "who-owns-what-in-a-powerhouse-jv",
+      "title": "Who owns what in a PowerHouse joint venture",
+      "kind": "table",
+      "read": "5 min",
+      "intro": "The same building appears in several parties' announcements. Sort the claims by who holds what.",
+      "cols": [
+        "Party",
+        "Holds",
+        "Gets paid by",
+        "Announces",
+        "Example"
+      ],
+      "rows": [
+        [
+          "AREP / PowerHouse (the GP)",
+          "5–10% of the JV equity; the management, development and leasing roles",
+          "Fees, its equity share and a carried interest on profit",
+          "The pipeline: '140 data centers', '~10 GW'; every campus release",
+          "'PowerHouse Data Centers, a wholly owned division of American Real Estate Partners'"
+        ],
+        [
+          "Institutional JV partner (the LP)",
+          "90–95% of the equity; consent rights on major decisions",
+          "Rent after debt service; the sale",
+          "The programme size and its own digital platform totals",
+          "Harrison Street 'USD 3.2 billion committed'; Blue Owl/Chirisa 'USD 5 billion'; Harrison Street's Arcola pre-lease release"
+        ],
+        [
+          "Regional land partner",
+          "Land, local relationships, sometimes the annexation applicant",
+          "Its share of the JV; the community package may be its cheque",
+          "The local announcement",
+          "Hillwood at Joliet ('PowerHouse Hillwood Holding, LLC'; USD 100 million to the city); Provident; Poe; Town Lane"
+        ],
+        [
+          "Project lender",
+          "A mortgage on one building and its lease",
+          "Interest; repaid at stabilization",
+          "Rarely — the arranger does",
+          "Société Générale-led USD 600 million for the 50 MW CoreWeave building (Newmark arranged)"
+        ],
+        [
+          "Tenant",
+          "A long lease; sometimes the building at the end",
+          "Nothing — it pays the rent",
+          "Rarely by name",
+          "CyrusOne (ABX-1, 30 years, then bought it for USD 154.1 million); CoreWeave (Chesterfield, via the Blue Owl/Chirisa vehicle)"
+        ],
+        [
+          "Utility",
+          "The service and transmission agreements; the substation site",
+          "Tariff, deposits, developer-funded upgrades",
+          "Filings at the commission and FERC",
+          "Dominion (ABX-1 300 MW substation); ComEd (Joliet TSA — cancelled); Oncor (Irving, Circle T)"
+        ]
+      ]
+    },
+    {
+      "id": "the-one-completed-cycle",
+      "title": "The one completed cycle: ABX-1 from land to sale, and what it prices",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Every figure in PowerHouse's pipeline is a plan except one building. ABX-1 in Ashburn — ten acres, a two-storey 265,850 sq ft {{powered shell}}, 60 MW rising to 80 — was announced with the Harrison Street joint venture in January 2022, topped out in March 2023 with DPR Construction as general contractor, leased in May 2023 to CyrusOne for 30 years on a 300 MW on-site substation Dominion was building, delivered in October 2023, and sold to CyrusOne in December 2024 for USD 154.1 million (Commercial Observer's figure; the sellers' release gives none). That is the whole model in one asset: entitle, power, build a shell, lease long, sell to the tenant.",
+        "What the sale prices is a {{stabilized asset}}: an energised shell with a 30-year {{credit tenant lease}} and no landlord operating risk, which is why the buyer was the tenant itself — an operator that would rather own the building it will run for three decades than pay rent on it. On the developer's side the sale is the exit that a {{GP fund}} needs: the partner's capital and preferred return come back, the promote is earned, and the fund can commit to the next site. SVP Asset Management Chaudhry said in 2025 that 'In 2027 and 2028, there will start to be a big buying opportunity for those looking to buy stabilized assets ... that have a traditional credit tenant lease' — a statement of when the company expects the rest of its portfolio to reach the same point.",
+        "The {{price per MW}} is the number to carry across the corpus. USD 154.1 million for a 60 MW shell is about USD 2.6 million a MW — a shell, without the tenant's electrical fit-out and cooling, with a ten-acre footprint. Compass's 2026 ABS appraisal of USD 3.6 billion on 198.2 MW of turnkey, operating, hyperscale-leased buildings is about USD 18 million a MW. The gap between the two is the value of the fit-out, the operating platform and the turnkey lease — the product ladder priced.",
+        "One completed cycle is also a caution: the December 2024 release that announced the sale counted '57 buildings ... over 4.1 GW' in the same paragraph. Twenty-one months later the counter reads 140 buildings and about 10 GW, and the delivered count is unchanged."
+      ]
+    },
+    {
+      "id": "powerhouse-money-ladder",
+      "title": "The disclosed ladder: what is public about PowerHouse's money",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD millions (as released; fund closes are equity commitments, JV figures are partner capacity, campus figures are projected investment, the sale is a price)",
+      "intro": "Read the ladder as three different kinds of number stacked together: money raised (small), partner capacity (large), and projected campus cost (very large). Only the first and the sale are cash.",
+      "items": [
+        {
+          "label": "AREP Fund III (2022)",
+          "sub": "\"$63 million\"; ~30% to data centers; finances Arcola",
+          "v": 63
+        },
+        {
+          "label": "ABX-1 sale to CyrusOne (Dec 2024)",
+          "sub": "60 MW shell, 30-year lease; ~USD 2.6m per MW",
+          "v": 154
+        },
+        {
+          "label": "AREP Fund IV (Feb 2025)",
+          "sub": "\"$309 million\"; 80% to PowerHouse; \"over USD 9bn total buying power\"",
+          "v": 309
+        },
+        {
+          "label": "SocGen-led construction loan (Dec 2024)",
+          "sub": "50 MW CoreWeave build-to-suit; arranged by Newmark",
+          "v": 600
+        },
+        {
+          "label": "Harrison Street JV commitment (Dec 2024)",
+          "sub": "\"$3.2 billion\" — partner capacity across NoVA, Dallas, Reno",
+          "v": 3200
+        },
+        {
+          "label": "Blue Owl / Chirisa programme (2024–25)",
+          "sub": "\"$5 billion\"; two $750m tranches closed",
+          "v": 5000
+        },
+        {
+          "label": "Carlisle, PA projected investment (Jul 2025)",
+          "sub": "\"$15 billion\" with Pennsylvania Data Center Partners",
+          "v": 15000
+        },
+        {
+          "label": "Joliet projected investment (Mar 2026)",
+          "sub": "\"~$20 billion\" with Hillwood; utility contract cancelled July 2026",
+          "v": 20000
+        }
+      ]
+    },
+    {
+      "id": "timeline-abx-1-and-joliet",
+      "title": "ABX-1 and Joliet on one clock",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Years on the horizontal axis. The upper lane is the one completed cycle; the lower is the flagship that has not started. Both are the same model at two scales.",
+      "unit": "calendar year",
+      "lanes": {
+        "abx": "ABX-1, Ashburn (60 MW)",
+        "jol": "Joliet Technology Center (1.8 GW)"
+      },
+      "items": [
+        {
+          "x": 2021,
+          "lane": "abx",
+          "label": "PowerHouse formed inside AREP; Harrison Street JV forming",
+          "sub": "Land in Ashburn; 300 MW substation site with Dominion"
+        },
+        {
+          "x": 2022,
+          "lane": "abx",
+          "label": "$1B Harrison Street JV announced (Jan); brand launched (Sep)",
+          "sub": "Six powered shells, 2.1 million sq ft planned in Northern Virginia"
+        },
+        {
+          "x": 2023,
+          "lane": "abx",
+          "label": "Topped out (Mar, DPR); leased to CyrusOne for 30 years (May); delivered (Oct)",
+          "sub": "Phased power: 15, 7, 8 then 60 MW as the substation energises"
+        },
+        {
+          "x": 2024,
+          "lane": "abx",
+          "label": "Sold to CyrusOne, \"$154.1 million\" (Dec)",
+          "sub": "The GP's exit; the tenant becomes the owner"
+        },
+        {
+          "x": 2025,
+          "lane": "jol",
+          "label": "Land assembled with Hillwood; ComEd TSA filed at FERC (Dec); proposal tabled after opposition",
+          "sub": "\"PowerHouse Hillwood Holding, LLC\""
+        },
+        {
+          "x": 2026,
+          "lane": "jol",
+          "label": "FERC accepts the TSA (11 Mar); council annexes 795 acres 8–1 (19 Mar); ICC deposit rules (23 Mar)",
+          "sub": "$100m community package; developer-funded upgrades; water cap"
+        },
+        {
+          "x": 2026,
+          "lane": "jol",
+          "label": "Residents sue (May); ComEd cancels the TSA (24 Jul); FERC challenge and federal suit (Aug)",
+          "sub": "Hearing 8 September 2026; first delivery was Q3 2028"
+        }
+      ]
+    },
+    {
+      "id": "reading-a-pipeline-counter",
+      "title": "Reading a pipeline counter: 4.1 GW to 10 GW in twenty-one months",
+      "kind": "prose",
+      "read": "5 min",
+      "ps": [
+        "PowerHouse's boilerplate is a time series. December 2024: '57 buildings ... over 4.1 GW of power in seven major US markets'. February 2025: '87 buildings across 25.5M SF underway, in planning or delivered, representing over 5.9 GW of power across six major U.S. markets'. June 2025: '24+ million square feet and 6.1 GW across six U.S. markets'. January 2026: '118 buildings currently in planning, underway, or completed, representing over 8.1 GW of power in eight major U.S. markets'. September 2026 (homepage): '140 data centers', '~10 GW', '39.3 million SF', '9 major U.S. markets'. Over the same period the delivered count went from one building to one building, and the leased count from two tenants to three leases.",
+        "The counter measures what a {{GP fund}} developer actually produces: sites optioned, joint ventures signed, capacity requested. Each new partner adds a campus to the series — Provident's 768 acres and a 1.8 GW switchyard (February 2025), Poe's 400 MW (January 2025), Pennsylvania Data Center Partners' 1.35 GW (July 2025), Hillwood's 1.8 GW (2026) — and each campus enters the counter at its ceiling. The phrase 'in planning, underway, or completed' is precise and honest; what it does not carry is the share of each. Compass's guide teaches the rung ladder; here the exercise is simpler: subtract the delivered (60 MW) and the leased (Arcola up to 120 MW, Chesterfield 120 MW) and the remainder is powered land at various stages of being powered.",
+        "The market count moves too — six markets in February 2025, seven in December 2024 (an earlier release with a higher count), eight in January 2026, nine on the homepage, ten in the CEO's bio — which tells the reader that the counters are compiled for each release rather than maintained as a ledger. Treat them as a press cycle, not a balance sheet, and quote them with a date.",
+        "Why the counter is still worth reading: it is the product. A partner considering a {{programmatic joint venture}} is buying access to the GP's sourced pipeline; the bigger the counter, the more the next partner's cheque can be, and the more the GP's 5–10% controls. That is the economic logic that makes an honest company report ten gigawatts against one delivered building."
+      ]
+    },
+    {
+      "id": "consent-tactics-and-their-cost",
+      "title": "Consent tactics and their cost: five votes in eighteen months",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Arcola, Virginia (2024–2025): a rezoning for 6.8 more acres, 100-foot buildings and a GIS substation; the planning commission recommended denial 7–2 with the CEO in the room; the supervisors approved 5–4. Louisville, Kentucky (March 2026): a 400 MW campus in Rubbertown approved 6–1 by the planning commission under the 'telecommunications hotel' classification — 'No Metro Council approval required' — followed within three months by a council moratorium proposal from which the project is exempt. Joliet, Illinois (March 2026): 8–1 after two marathon hearings, with a developer's warning that it would relocate if the vote failed, a USD 100 million community package and no incentives; followed by a residents' lawsuit. Uhland, Texas (May 2026): a petition to move a 500-acre site out of the city's jurisdiction into a county that cannot zone. Westlake, Texas (August 2026): a planning-and-zoning approval with the first building by right.",
+        "Read as a system: the developer chooses the instrument that minimises the number of elected people who must say yes — a classification that needs staff, a jurisdiction that has no zoning, an annexation that binds one council — and pays for the yes with a package rather than an abatement. The pattern clears votes. It also generates the two things that stop a campus after the vote: litigation over the process (Joliet's Open Meetings Act suit) and moratoria that close the door behind the project that got in (Louisville, Merrillville).",
+        "The cost is visible where the record gives numbers: Joliet's USD 100 million (Hillwood's cheque), all transmission upgrades, a water cap with a triple penalty, Tier 4 generators, a 65 dB limit; Compass's USD 27.6 million in Ellis County; QTS's USD 12 billion Wisconsin site lost to a village vote (its guide). What is not visible is the price of the site that never gets announced because the developer's own walk-away threshold — EdgeCore's 'financially unworkable' — was reached first.",
+        "For the reader the test of a campus announcement is now three questions: which body has voted, which utility has signed, and what did consent cost. Joliet answers yes, cancelled, USD 100 million."
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**Entitled but unpowered.** Joliet has an annexation agreement, a PUD and a USD 100 million promise, and no transmission or retail contract since 24 July 2026. A council vote is not a grid connection.",
+        "**The counter is not a portfolio.** '140 data centers' and '~10 GW' are sites optioned and JVs signed; one building has been delivered and it was sold. Subtract the delivered and the leased before reading the rest.",
+        "**Tenants are mostly unnamed.** CyrusOne (sold) and CoreWeave (via a partner vehicle) are the only names across thirteen campuses; the Joliet developers listed hyperscalers only as 'potential tenants'.",
+        "**The GP's cheque is small.** AREP contributes 5–10% of each JV's equity; the partners hold consent rights and their own platform totals. When a partner closes a deal without PowerHouse (Blue Owl/Chirisa's USD 4 billion, August 2025), the pipeline can move without the developer.",
+        "**Schedules slip silently.** Grand Prairie's first power moved from May 2026 to Q1 2027; Reno from end-2025 to 2028; the releases are never corrected, only the campus pages.",
+        "**The deposit rule targets the model.** Illinois charges USD 500,000 per 100 MW above 200 MW and keeps it if the project dies — a price on reserving capacity ahead of a tenant, which is what a powered-land developer does."
+      ]
+    },
+    {
+      "id": "where-powerhouse-slots-in",
+      "title": "Where PowerHouse's businesses slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per business line in the dossier, read against the layer of the ecosystem it touches.",
+      "cols": [
+        "Business line",
+        "Layer",
+        "Who it deals with",
+        "What to watch"
+      ],
+      "rows": [
+        [
+          "Powered core-and-shell and build-to-suit campuses",
+          "Landlord — shells and turnkey for hyperscalers and operators",
+          "CyrusOne (ABX-1), CoreWeave (Chesterfield), an unnamed hyperscaler (Arcola); DPR, E.E. Reed",
+          "Pacific power-on (Q3 2026); PowerHouse 95 first delivery; a named tenant on any new campus"
+        ],
+        [
+          "Utility-first campus development",
+          "Land, substations, entitlements — the position",
+          "Dominion, Oncor, ComEd, LG&E, Duke, PPL, NV Energy; councils and county boards",
+          "FERC and the federal court on the Joliet TSA; Grand Prairie Q1 2027 energisation"
+        ],
+        [
+          "Programmatic JV capital model",
+          "Capital — AREP GP funds at 5–10% with Harrison Street, Blue Owl/Chirisa and site partners",
+          "Institutional LPs, regional land partners, Société Générale on one loan",
+          "A third Blue Owl or Harrison Street tranche naming PowerHouse; a construction loan on any JV asset; AREP Fund V"
+        ],
+        [
+          "Turnkey fit-out and enterprise suites",
+          "Delivery and colocation — Integra Mission Critical; Quantum Connect 20 MW",
+          "Enterprise tenants at 1–3 MW; ASG",
+          "Quantum Connect availability late 2026"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What is powered land?",
+          "a": "A parcel whose grid connection — substation, allocation, often the utility contract — has been secured before any building exists; the megawatts, not the acres, are the asset."
+        },
+        {
+          "q": "Why is a gas-insulated substation worth fighting a planning commission for?",
+          "a": "It is enclosed, quieter and about a third the footprint of an air-insulated yard, so it can sit inside a suburban site (Arcola: 2.4 acres, 468 feet from homes) where a conventional substation could not be approved."
+        },
+        {
+          "q": "What does an annexation agreement do for a data-center campus?",
+          "a": "Moves county land into a city under city zoning and utilities, and fixes the developer's obligations — payments, water caps, generator standards, developer-funded upgrades — as the price of the vote."
+        },
+        {
+          "q": "What is by-right zoning?",
+          "a": "The intended use is already permitted, so only permits are needed and no elected body votes — the entitlement that removes a council's veto."
+        },
+        {
+          "q": "What is an ETJ release and why did PowerHouse seek one?",
+          "a": "Moving a parcel out of a city's extraterritorial planning reach into the county; in Texas counties cannot zone, impose moratoria or deny permits, so the site faces no local vote."
+        },
+        {
+          "q": "Name the two utility contracts behind a gigawatt campus in ComEd territory.",
+          "a": "A retail electric service agreement at the state commission and a transmission security agreement filed with FERC, under which the customer posts security for the transmission upgrades it triggers."
+        },
+        {
+          "q": "What did Illinois's March 2026 large-load rules add?",
+          "a": "A base deposit of USD 1 million plus USD 500,000 per 100 MW above 200 MW, developer-funded substations and transmission, and the utility's right to keep deposits from projects that fail."
+        },
+        {
+          "q": "What is a GP fund and what is its buying power?",
+          "a": "A small fund that supplies the general partner's 5–10% share of JV equity; buying power is the total project cost that share can control — USD 300 million controlling \"over USD 9bn\"."
+        },
+        {
+          "q": "What is a programmatic joint venture figure such as \"USD 3.2 billion committed\"?",
+          "a": "Partner capacity, not money spent: what the institutional partner will fund if the developer brings qualifying projects on the agreed terms."
+        },
+        {
+          "q": "What does the ABX-1 cycle look like, start to finish?",
+          "a": "Land and substation site (2021–22), topped out and leased for 30 years to CyrusOne (2023), delivered (October 2023), sold to the tenant for USD 154.1 million (December 2024)."
+        },
+        {
+          "q": "Why is price per MW a useful cross-check?",
+          "a": "It puts a powered-shell sale (ABX-1, about USD 2.6 million per MW) and a turnkey ABS appraisal (Compass, about USD 18 million per MW) on one axis and prices the product ladder between them."
+        },
+        {
+          "q": "How should you read '140 data centers, ~10 GW'?",
+          "a": "As sites optioned and JVs signed — \"in planning, underway, or completed\" — with one building delivered and three leases; subtract the delivered and leased and the rest is powered land at various stages."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A council annexes 795 acres 8–1 with a USD 100 million community package, and four months later the utility cancels the transmission security agreement. The campus is:",
+          "c": [
+            "Fully approved and proceeding",
+            "Fully entitled and unpowered — the local consent survives, the grid contract does not",
+            "Cancelled by the city",
+            "Powered but unentitled"
+          ],
+          "a": 1,
+          "why": "Entitlement and power are separate contracts with separate counterparties; Joliet holds the first and lost the second."
+        },
+        {
+          "q": "Illinois charges USD 500,000 per 100 MW above 200 MW as a retainable deposit. Which behaviour is the rule pricing?",
+          "c": [
+            "Building too fast",
+            "Reserving grid capacity years ahead of a tenant and walking away if none signs",
+            "Using too much water",
+            "Hiring non-union labour"
+          ],
+          "a": 1,
+          "why": "A powered-land developer holds capacity as an option; the deposit makes the option cost something if it lapses."
+        },
+        {
+          "q": "AREP's USD 309 million Fund IV is described as 'over USD 9bn total buying power'. The multiplier comes from:",
+          "c": [
+            "Leverage on the fund",
+            "The GP contributing 5–10% of each JV's equity, with institutional partners funding the rest",
+            "Government grants",
+            "Tenant prepayments"
+          ],
+          "a": 1,
+          "why": "90/10 and 95/5 JV splits mean a small GP cheque controls a large project; the fund's job is to be the 10%."
+        },
+        {
+          "q": "A partner announces a 'USD 3.2 billion' commitment to a joint venture. The best reading:",
+          "c": [
+            "USD 3.2 billion has been invested",
+            "It is capacity — what the partner will fund if the developer brings qualifying projects",
+            "The developer is worth USD 3.2 billion",
+            "It is a loan"
+          ],
+          "a": 1,
+          "why": "Programmatic JV figures are commitments drawn project by project; the money spent is the sum of the tranches actually closed."
+        },
+        {
+          "q": "ABX-1 (60 MW powered shell) sold for USD 154.1 million; Compass's 198.2 MW of turnkey buildings appraised at USD 3.6 billion. The difference per MW mostly reflects:",
+          "c": [
+            "Location",
+            "The tenant's fit-out, cooling and the operating platform that a shell does not include, plus lease terms",
+            "Inflation",
+            "The rating agency"
+          ],
+          "a": 1,
+          "why": "A shell is priced on structure, power and the lease; a turnkey building carries the electrical and mechanical plant and the operator's service — the product ladder in dollars."
+        },
+        {
+          "q": "A planning commission approves a 400 MW campus 6–1 as a 'telecommunications hotel' and the council later proposes a moratorium. The project is:",
+          "c": [
+            "Cancelled",
+            "Grandfathered — approved under the old classification before the moratorium, which typically exempts what is already entitled",
+            "Subject to a new vote",
+            "Moved to another state"
+          ],
+          "a": 1,
+          "why": "Moratoria close the door behind entitled projects; the classification is why no council vote was needed in the first place."
+        },
+        {
+          "q": "The developer's counter reads 140 data centers and ~10 GW; one building has been delivered and three leases signed. What is the remainder?",
+          "c": [
+            "Buildings under construction",
+            "Powered land at various stages — sites optioned and JVs signed, entered at each campus's ceiling",
+            "Leased capacity",
+            "An error"
+          ],
+          "a": 1,
+          "why": "\"In planning, underway, or completed\" is honest wording; subtracting delivered and leased leaves the position the GP sells to partners."
+        },
+        {
+          "q": "PowerHouse is absent from Blue Owl and Chirisa's USD 4 billion August 2025 close that includes the same Chesterfield campus. The most careful reading:",
+          "c": [
+            "PowerHouse has left the JV",
+            "A partner can finance and expand a programme on its own vehicle; the GP's role is contractual and its share small, so the pipeline can move without it — an indicator to watch, not a conclusion",
+            "PowerHouse sold its stake",
+            "The article is wrong"
+          ],
+          "a": 1,
+          "why": "The dossier records it as a low-confidence judgment: both partners still name PowerHouse in 2026 releases."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Joliet Technology Center",
+      "d": "The Hillwood–PowerHouse campus in Joliet, Illinois: 755–795 acres, up to 24 buildings and 1.8 GW, annexed by the city on 19 March 2026; its ComEd transmission security agreement was cancelled on 24 July 2026 and is in litigation."
+    }
+  ]
+}

@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 2,
+  "slug": "compass-datacenters",
+  "title": "Compass Datacenters — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-sponsor-behind-the-landlord",
+      "title": "Start here: the sponsor behind the landlord",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The Vantage guide teaches the wholesale operator-landlord and the campus lifecycle; QTS teaches why a standardized building beats a bespoke one and what perpetual capital changes; STACK teaches the product ladder and the ownership chain of funds and fund managers; Aligned teaches power-first development and the infrastructure-fund exit; Switch teaches the securitization round-trip; Fluidstack opens the lease from the tenant's chair. None of them sits in the sponsor's chair. This guide does: it is about **how a {{pension fund}} and an {{infrastructure fund}} own a build-to-suit landlord, what they are actually buying when they pay for {{co-control}}, how they read the landlord's pipeline, and how the same building gets paid for three times** — with sponsor equity, with a {{construction loan}} and finally with a {{data-center ABS}}. Compass Datacenters is the worked example because its sponsor is listed: Brookfield Infrastructure's letters to unitholders record what it paid, what it bought (170 MW operating, 735 MW 'operating, contracted and reserved') and how it counts the growth — and because Compass itself publishes a manufacturing model, a serial ABS programme and a Texas consent fight in unusual detail.",
+        "**Four things this guide teaches.** What a {{co-controlling stake}} is and why USD 1.35 billion of it came mostly from the sponsor's institutional partners. How to read a private landlord through its listed sponsor's {{segment reporting}} and what that reporting hides. The pipeline ladder — operating, contracted, reserved, land — and why the phrase {{delivered or under development}} needs a denominator. And {{capital recycling}}: how a leased building moves from sponsor equity to a construction loan to an ABS to an asset-level partner (KKR), and what a {{rating agency}} decides along the way.",
+        "**What it deliberately leaves to other guides.** The single-tenant lease itself from the landlord's side (the EdgeCore guide); powered land, entitlements and the utility contract behind a campus (the PowerHouse guide); how a fund raises money and reads a Form D (Excelsior); cooling physics (Aligned); the ABS mechanics of a master trust at Switch and Vantage are referenced, not re-taught."
+      ]
+    },
+    {
+      "id": "what-co-control-buys",
+      "title": "What co-control buys: pension money, infrastructure money and the operator who stays",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A {{financial sponsor}} that buys a landlord is not buying buildings; it is buying a machine that turns land and leases into contracted cash flow, plus the team that runs it. When Brookfield Infrastructure and Ontario Teachers' Pension Plan bought Compass in 2023 they described themselves as an equal co-controlling partnership: neither owns a majority, both sit on the board, both must agree to the decisions that matter (new campuses, new debt, a sale). {{Co-control}} is the structure a {{pension fund}} prefers when it wants the return of a private landlord without running one, and an {{infrastructure fund}} prefers when it wants an equal partner to share the equity cheques.",
+        "The price tells you how the money is layered. Brookfield Infrastructure's Q2 2023 letter says the co-controlling stake cost 'USD 1.35 billion, including Brookfield Infrastructure's equity of approximately USD 375 million'. Read it twice: the listed vehicle put in about a quarter; the rest of the Brookfield share came from the institutional funds it manages, and Ontario Teachers' put in its own half separately. So 'Brookfield-owned' is a shorthand for a stack of at least four pools of money — a listed partnership, its private funds, a pension plan, and (from December 2025) KKR at the level of individual campuses. The trade press's 'USD 5.5 billion including debt' is a different number again: an {{enterprise value}} guess that adds the campus mortgages, which the parties never confirmed.",
+        "What the sponsor keeps is the operator. The 2023 release says the founder-CEO 'continues leading post-closing', and the 2026 Outcomes Report still lists 195 employees. A sponsor that owns the machine but not the mechanics has bought the wrong thing; the co-control agreement is also an employment and incentive agreement, though its terms are never public.",
+        "Why the pension fund is there at all: a data-center lease to an investment-grade hyperscaler is a 10-to-15-year, inflation-adjusted, almost bond-like cash flow secured on a building that is hard to replace. That is the shape of a pension liability, which is why Ontario Teachers', GIC, OPTrust, Partners Group's clients and Brookfield's LPs keep turning up as the owners of the landlords in this corpus."
+      ]
+    },
+    {
+      "id": "reading-a-private-landlord-through-its-listed-sponsor",
+      "title": "Reading a private landlord through its listed sponsor",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "Compass publishes an ESG report and no accounts. Its sponsor publishes quarterly. Learn what each sponsor document answers and what it cannot.",
+      "cols": [
+        "Document",
+        "What it tells you about the landlord",
+        "What it does not"
+      ],
+      "rows": [
+        [
+          "**{{Letter to unitholders}}** at acquisition (Brookfield Q2 2023)",
+          "The price of co-control (USD 1.35 billion), the sponsor's own equity (~USD 375 million), the book at signing: 'approximately 170 megawatts of operating capacity', 'Total operating, contracted and reserved capacity is 735 megawatts, which is 85% underpinned by investment grade hyperscalers', 'Contracted capacity of 675 megawatts ... 13-year weighted average contract duration, with approximately 60% contracted on a triple net basis'",
+          "The tenants' names, rents per kW, the enterprise value, the debt assumed"
+        ],
+        [
+          "**Quarterly results / {{segment reporting}}** (Brookfield 'data' segment, 2025–2026)",
+          "Segment {{FFO}} (USD 502 million for 2025; USD 149 million in Q1 2026, up 46%), one-line events ('raised USD 830 million of investment grade asset-backed securities to fund contracted growth', 'commissioning of over 200 MW'), a platform-wide pipeline ('3.6 GW development potential, 1.2 GW operating, 1.1 GW contracted backlog, 1.3 GW land bank')",
+          "Which platform the numbers belong to — Compass, Data4 (Europe) and the colocation businesses are mixed; Compass is not named in any 2025–2026 letter"
+        ],
+        [
+          "**Filings** (BIP 6-K exhibits on EDGAR)",
+          "The same results text with the force of a filing; useful when the sponsor's site 404s",
+          "Nothing extra on a private subsidiary; no MW by company"
+        ],
+        [
+          "**The landlord's own disclosure** (Outcomes Report, Markets page)",
+          "Employees (195), delivery metrics (1.27 PUE, 0 WUE, 100% uptime, 0.56 TRIR), per-campus MW (360/320/212/200/108/79), the manufacturing share (84% offsite)",
+          "A portfolio total, revenue, EBITDA, tenants, the GC — and the per-campus figures mix operating, 'nearing completion' and 'development'"
+        ],
+        [
+          "**Deal-level disclosure** (ABS presales via Bisnow, ASR; the Red Oak mortgage)",
+          "Collateral MW, appraisal (USD 3.6 billion for 198.2 MW), lease-up ('100% leased to four firms'), rating, maturity",
+          "The tenants (only 'investment-grade hyperscale tenants'), the rent, the rest of the portfolio"
+        ]
+      ]
+    },
+    {
+      "id": "the-pipeline-ladder",
+      "title": "The pipeline ladder: operating, contracted, reserved, land",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "Every landlord press release carries a megawatt number, and the number is only meaningful with its rung on the ladder. The bottom rung is **operating** (energised, tenant in occupation, rent flowing) — 170 MW at Compass in mid-2023. Above it sits **{{contracted capacity}}**: buildings a tenant has signed for that are not yet delivered — the 675 MW Brookfield counted, with a 13-year {{WALT}}. Above that is **{{reserved capacity}}**: capacity a tenant has an option or right of first refusal on, with no rent commitment yet. Above that is **land** with utility capacity but no tenant, and above that land without power. Brookfield's 'operating, contracted and reserved' (735 MW) is the first three rungs; the Markets page's 1,279 MW (this dossier's sum) is all five.",
+        "The phrase {{delivered or under development}} — EdgeCore's wording, borrowed by the coverage plan and wrongly attached to Compass — is a two-rung count with no boundary between the rungs. 'Delivered' is operating. 'Under development' can mean contracted-and-building or a 697-acre field with a by-right zoning. A sponsor letter that says 'contracted backlog of 1.1 GW' is more informative than a developer page that says '2.27+ GW', because the sponsor has told you the rung.",
+        "Why the rung matters to price: each step down the ladder removes a risk and adds value. Land with a substation is worth the substation; a signed lease is worth the present value of 13 years of rent discounted at the tenant's credit; an operating building is worth that plus the removal of construction risk, which is why the Compass 2026-1 ABS collateral (six operating, 100%-leased buildings) appraised at USD 3.6 billion — about USD 18 million a MW — while a Red Oak building under construction was financed at a fraction of that.",
+        "The tell-tale in Compass's record is the {{triple-net lease}} share: 'approximately 60% contracted on a triple net basis'. In a triple-net lease the tenant pays taxes, insurance and maintenance, so the landlord's cash flow is nearly pure rent; the other 40% are gross or modified-gross leases where the landlord carries operating cost and its risk. A sponsor buying 'contracted' megawatts wants to know the split, because it decides how much of the rent survives an electricity-price shock."
+      ]
+    },
+    {
+      "id": "delivered-or-under-development-decoded",
+      "title": "'Delivered or under development' decoded: the same three companies, five ways of counting",
+      "kind": "table",
+      "read": "5 min",
+      "intro": "One coverage-plan cell attached three companies' figures to one row. Read each landlord's headline number against the rung it counts.",
+      "cols": [
+        "Landlord",
+        "Headline figure and wording",
+        "What the rung actually is",
+        "Independently verifiable operating base"
+      ],
+      "rows": [
+        [
+          "Compass",
+          "No company total; Markets page per-campus MW summing to 1,279 MW; Brookfield 2023: 735 MW 'operating, contracted and reserved'",
+          "Mixed: Red Oak 360 'nearing completion', Meridian 320 'broke ground', Goodyear/El Mirage 'development', Loudoun/Toronto operating",
+          "198.2 MW securitized in 2026 (six buildings) plus Red Oak's 180 MW and Loudoun's 79 MW; about 200 MW 'commissioned' in the year to Q1 2026 per Brookfield"
+        ],
+        [
+          "EdgeCore",
+          "'more than 1.8 gigawatts of capacity delivered or under development' (January 2026); '2.27+ GW' (site)",
+          "Delivered plus contracted plus land: only reconciles if Louisa's 1.1 GW planning-stage site is counted",
+          "Two buildings: PH01 Mesa 26 MW and SV01 Santa Clara 36 MW"
+        ],
+        [
+          "PowerHouse",
+          "'118 buildings ... in planning, underway, or completed, representing over 8.1 GW' (January 2026); '~10 GW' (site)",
+          "Planning-heavy: sites optioned and JVs signed; the 1.8 GW is one campus (Joliet) whose utility contract was cancelled",
+          "One building: ABX-1 (60 MW), sold to its tenant"
+        ],
+        [
+          "Brookfield Infrastructure (sponsor)",
+          "'3.6 GW development potential, including 1.2 GW of operating capacity, a contracted project backlog of 1.1 GW, and a total land bank of 1.3 GW'",
+          "Rung-labelled — but for every Brookfield data-center platform, not Compass alone",
+          "Not separable"
+        ],
+        [
+          "The lesson",
+          "A GW figure without a rung is marketing; a GW figure with a rung is data",
+          "Ask: operating, contracted, reserved or land? And whose?",
+          "Count buildings a third party has seen energised"
+        ]
+      ]
+    },
+    {
+      "id": "the-manufacturing-model",
+      "title": "The manufacturing model: why a sponsor pays for offsite fabrication",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A build-to-suit landlord earns its rent from the day the building is ready for service, and pays interest on the construction loan from the day it draws. Every month of schedule is therefore worth roughly one month of rent on the whole building — for a 36 MW hall at hyperscale rents, millions of dollars. That arithmetic is why Compass's differentiator is not a cooling patent (Aligned's) or a land bank (PowerHouse's) but a factory: the 2026 Outcomes Report describes a standardized building product, 'Moonraker', that is '84% fabricated offsite', and says that in 2025 the company moved '80-90% of power centers onsite level 3 and level 4 activity ... to the factory'.",
+        "{{Offsite fabrication}} means the electrical rooms, power centres and cooling modules are built, wired and tested in a plant and shipped as finished blocks, so that site work is reduced to foundations, steel and connections. Compass went one step further than buying prefabricated modules: it persuaded Schneider Electric to build a 110,000 sq ft factory on the Red Oak campus under a 'USD 3 billion over five years' agreement, added up to 1,500 Siemens medium-voltage skids, and co-developed Vertiv's CoolPhase Flex hybrid cooling unit — a supply chain that ships to Compass campuses in Texas, Arizona, Virginia and now Illinois and Mississippi under an 'integrated logistics' programme (451 inbound shipments and USD 16.8 million of logistics spend across three campuses in 2025).",
+        "What the sponsor gets is predictability: a 'contracted backlog' converts to 'operating capacity' on a schedule, and the ABS market prices delivered buildings. What it costs is flexibility — a standardized product suits a single-tenant hyperscale hall and suits nothing else, which is one reason Compass sold its modular 'Quantum' sideline in 2025 and now builds only campuses.",
+        "The number to distrust is the percentage. Compass gives three (85% on the homepage, 75%+ on the Communities page, 84% for Moonraker in the report); they measure different things (components, activity, one product) and none is audited. Quote the one with a source and a date."
+      ]
+    },
+    {
+      "id": "paying-for-a-building-three-times",
+      "title": "Paying for a building three times: sponsor equity, construction loan, ABS",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "Follow one Compass building from field to bond. **Stage one — equity.** The sponsors fund the land, the substation contribution (USD 52.5 million and a USD 20 million right-of-way in South Dallas) and the early construction with their own money; nothing is borrowed until a lease is signed, because nothing is lendable. **Stage two — the {{construction loan}}.** Once a hyperscaler signs, a bank lends against the lease: a limited-recourse loan to the campus entity, sized so that the contracted rent covers the interest with room to spare ({{DSCR}}), drawn as the building goes up. The tenant's investment-grade credit, not the landlord's, is what the bank is lending against. **Stage three — the {{data-center ABS}}.** When the building is energised and the tenant is paying, the campus is refinanced by selling bonds backed by the rent: Compass's February 2025 series (USD 885 million, three buildings) and February 2026 series (USD 830 million, six buildings, 198.2 MW, appraised USD 3.6 billion, '100% leased to four firms'). The ABS repays the construction loan and returns most of the sponsors' equity, which goes into the next field.",
+        "The bond is issued from a **master trust** — a bankruptcy-remote issuer that owns the buildings and can add collateral and issue new series against it. Compass runs two (the original Issuer and Issuer III), deliberately not cross-collateralized, so that a problem in one pool cannot reach the other. Each series is rated, and the rating sets the coupon: S&P caps data-center ABS at single-A, arguing that a specialised building with one tenant is not AAA collateral; Moody's, Fitch and Morningstar DBRS disagree, and Compass's 2026-1 senior tranche was the first hyperscale data-center ABS to carry a Moody's AAA. A notch of rating on USD 500 million is real money every year.",
+        "There is a fourth payment now. In December 2025 KKR agreed 'to invest in a portion of its operating data centers and future assets' — 'several billion dollars' per Bloomberg — which Compass calls a 'permanent, long-term capital partnership' and an 'evergreen financing partnership'. {{Permanent capital}} at the asset level means a third sponsor buys into specific stabilized campuses (and commits to future ones) without a change of control at the top; Bisnow's reading is that it recycles capital 'from stabilized assets to fund new development'. That is the same move as the ABS, made with equity instead of bonds — and it is why a landlord with three sponsors and a bond programme has no reason to sell the platform or list it.",
+        "The discipline for the reader: every financing announcement names a rung and a stage. 'USD 1.5 billion of construction financing for two fully leased data centers' (EdgeCore, 2026) is stage two on contracted capacity. 'USD 830 million of investment grade asset-backed securities to fund contracted growth' (Brookfield, 2026) is stage three on operating capacity, with the proceeds going to stage one somewhere else."
+      ]
+    },
+    {
+      "id": "the-capital-stack-of-a-build-to-suit-campus",
+      "title": "The capital stack of a build-to-suit campus",
+      "kind": "table",
+      "read": "5 min",
+      "intro": "Who puts money in at each stage, what they are paid, and what they can lose. Compass examples where the record gives one.",
+      "cols": [
+        "Layer",
+        "Who",
+        "Paid by",
+        "Risk they carry",
+        "Compass example"
+      ],
+      "rows": [
+        [
+          "Sponsor equity",
+          "Infrastructure fund, pension fund, their LPs",
+          "Rent after debt service; the gain on refinancing or sale",
+          "Everything — land, entitlement, construction, lease-up",
+          "Brookfield Infrastructure + Ontario Teachers' co-control (USD 1.35 billion for the stake, 2023); Compass's USD 52.5 million substation and USD 20 million right-of-way in Texas"
+        ],
+        [
+          "Asset-level partner",
+          "A second sponsor buying into specific campuses",
+          "A share of those campuses' rent and appreciation",
+          "Concentrated in the campuses it bought",
+          "KKR (December 2025): 'a portion of its operating data centers and future assets'; 'permanent, long-term capital partnership'"
+        ],
+        [
+          "{{Construction loan}}",
+          "Bank syndicate (MUFG, ING, TD and the like on peer deals)",
+          "Interest during construction; repaid at refinancing",
+          "Completion risk, sized to the signed lease",
+          "Not disclosed by Compass; Red Oak's USD 326 million fixed-rate mortgage to 2050 (2025) is the refinanced form"
+        ],
+        [
+          "{{Data-center ABS}}",
+          "Bond investors via a {{master trust}}",
+          "Coupon set by the rating; principal from rent and a refinancing at the anticipated repayment date",
+          "Tenant credit, lease renewal, building obsolescence",
+          "Series 2025-1/2 USD 885 million (S&P A/A-); Series 2026-1 USD 830 million (Moody's AAA/AA; USD 3.6 billion appraisal on 198.2 MW)"
+        ],
+        [
+          "Tenant",
+          "Investment-grade hyperscaler",
+          "Nothing — it pays the rent that services every layer above",
+          "Take-or-pay rent for 10–15 years on capacity it may not fill",
+          "'four investment-grade hyperscale tenants'; Red Oak 'fully occupied by a single tenant'; never named"
+        ]
+      ]
+    },
+    {
+      "id": "compass-money-ladder",
+      "title": "The disclosed ladder: what is public about Compass's money",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD millions (as released; the co-control price is the sponsors' cost, the ABS figures are bonds issued, the appraisal is collateral value)",
+      "intro": "Read the ladder as a size check on a private landlord: one purchase price, three structured-debt issuances, one appraisal and one supply framework are the only dollar figures on the public record. KKR's 'several billion' has no number.",
+      "items": [
+        {
+          "label": "Red Oak refinancing (Oct 2025)",
+          "sub": "Five buildings, 180 MW; fixed rate to 2050",
+          "v": 326
+        },
+        {
+          "label": "Schneider Red Oak factory agreement (Nov 2023)",
+          "sub": "\"$3 billion over five years\" supply framework — a commitment, not capital",
+          "v": 3000
+        },
+        {
+          "label": "Series 2026-1 ABS (Feb 2026)",
+          "sub": "Six buildings, 198.2 MW; first Moody's AAA on hyperscale ABS",
+          "v": 830
+        },
+        {
+          "label": "Series 2025-1/2025-2 ABS (Feb 2025)",
+          "sub": "Three buildings; S&P A / A-; Issuer III master trust",
+          "v": 885
+        },
+        {
+          "label": "Co-controlling stake (Brookfield Q2 2023 letter)",
+          "sub": "\"$1.35 billion, including Brookfield Infrastructure's equity of approximately $375 million\"",
+          "v": 1350
+        },
+        {
+          "label": "ABS 2026-1 collateral appraisal",
+          "sub": "\"Portfolio appraised value: $3.6 billion\" for 198.2 MW — about USD 18 million per MW",
+          "v": 3600
+        },
+        {
+          "label": "Press enterprise value at the 2023 sale",
+          "sub": "\"$5.5 billion including debt\" — never confirmed by any party",
+          "v": 5500
+        }
+      ]
+    },
+    {
+      "id": "timeline-from-founding-to-recycling",
+      "title": "From founding to recycling: Compass on one clock",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Years on the horizontal axis. The ownership lane shows who held the equity; the capital lane shows how buildings were paid for once the sponsors arrived.",
+      "unit": "calendar year",
+      "lanes": {
+        "own": "Ownership and campuses",
+        "cap": "Capital recycling"
+      },
+      "items": [
+        {
+          "x": 2011,
+          "lane": "own",
+          "label": "Founded by Chris Crosby (ex-Digital Realty)",
+          "sub": "First 1.2 MW data center in 2012; modular \"CompassPod\" era"
+        },
+        {
+          "x": 2017,
+          "lane": "own",
+          "label": "RedBird Capital and Ontario Teachers' take a majority stake",
+          "sub": "Per trade press; Azrieli Group 20% in 2019 with a \"$3 billion expansion plan\""
+        },
+        {
+          "x": 2019,
+          "lane": "own",
+          "label": "Goodyear (AZ), Loudoun (VA), Red Oak (TX) launched; ROOT (Montréal) bought",
+          "sub": "The single-tenant hyperscale campus model replaces the pod business"
+        },
+        {
+          "x": 2023,
+          "lane": "own",
+          "label": "Brookfield Infrastructure + Ontario Teachers' co-control (closed 3 Oct)",
+          "sub": "\"$1.35 billion\" for the stake; 170 MW operating, 735 MW operating/contracted/reserved"
+        },
+        {
+          "x": 2023,
+          "lane": "cap",
+          "label": "Schneider $3B factory agreement; Hoffman Estates land $194M",
+          "sub": "The manufacturing model gets its plant on the Red Oak campus"
+        },
+        {
+          "x": 2024,
+          "lane": "cap",
+          "label": "Green Finance Framework; Siemens skids; Vertiv CoolPhase Flex",
+          "sub": "Supply bench and green-finance label in place before the bonds"
+        },
+        {
+          "x": 2025,
+          "lane": "cap",
+          "label": "ABS 2025-1/2 $885M (Feb); Red Oak refi $326M (Oct); KKR agreement (Dec)",
+          "sub": "Stage-three money arrives; a third sponsor at asset level"
+        },
+        {
+          "x": 2025,
+          "lane": "own",
+          "label": "Meridian (MS) groundbreaking; Statesville (NC) rezoned; Quantum sold",
+          "sub": "Two new Southeast campuses; the modular sideline exits"
+        },
+        {
+          "x": 2026,
+          "lane": "cap",
+          "label": "ABS 2026-1 $830M with Moody's AAA (Feb); KKR \"permanent capital\" (Mar)",
+          "sub": "\"fourth structured debt issuance in two years\""
+        },
+        {
+          "x": 2026,
+          "lane": "own",
+          "label": "Prince William Digital Gateway abandoned (Apr); Red Oak II approved 4–1 (May); Infrastructure for America (Sep)",
+          "sub": "Consent becomes the binding constraint"
+        }
+      ]
+    },
+    {
+      "id": "the-co-serve-utility-model",
+      "title": "The co-serve utility model: who pays for the substation",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A hyperscale campus needs a {{substation}} of several hundred MVA and often a new transmission line to reach it. Under a traditional {{large-load tariff}} the utility builds both and recovers the cost over decades from all its customers, which is precisely the objection now raised in every state where data centers cluster. Compass's answer, which its CEO calls a 'co-serve model', is to pay up front: Chris Crosby's 2025 op-ed states the company 'secured transmission line right-of-way at nearly $20 million' and 'invested $52.5 million in private capital for substation development' for its South Dallas campus, and argues for 'creative tariffs ensuring commercial/industrial customers bear capacity expansion burden proportionally'.",
+        "What the landlord buys with that money is time and a seat: a developer-funded substation sits in its own schedule rather than the utility's capital plan, and a developer that has paid becomes a partner in the utility's planning rather than a queue entry. Mississippi shows the regulated version — Mississippi Power's supply to the Meridian campus runs through a special contract approved by the state commission, with the terms (about 500 MW) public but the price not. Arizona shows the other face: SRP's need for switchyard land redrew EdgeCore's Mesa expansion, and Arizona's 2026 law lets the commission set minimum bills and collateral for extra-high-load customers.",
+        "The Texas variant is political. In August 2026 Governor Abbott published five standards — pay for electric infrastructure, reuse your own water, reduce electricity costs, avoid residential neighbourhoods, no taxpayer incentives — and Compass endorsed them three days early with its own release ('We Agree. Raise the Standards.'), citing zero city water for cooling since 2011 and a willingness to reduce load during grid stress. Backup generation is part of the same posture: Compass says it can 'island' its campuses on HVO-fuelled generators during winter peaks, and reported a 191 MW diesel microgrid under development in Phoenix — flexible load rather than behind-the-meter supply.",
+        "For a sponsor the co-serve model is a cost line that buys a schedule; for a utility it is a customer that pre-funds its own capacity; for a ratepayer advocate it is the minimum acceptable behaviour. The EdgeCore guide follows the same question into the Ratepayer Protection Pledge, and the PowerHouse guide into what happens when the utility contract is cancelled anyway."
+      ]
+    },
+    {
+      "id": "consent-as-a-cost-line",
+      "title": "Consent as a cost line: what Compass paid in 2026 and what it lost",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "In one year Compass lost its largest site and won its largest expansion, and both outcomes were decided by local process rather than by capital or tenants. The Prince William Digital Gateway — 2,000 acres in Virginia co-developed with QTS, rezoned in December 2023 — was voided by a circuit court on a procedural defect and the ruling upheld by the Virginia Court of Appeals in March 2026; Compass withdrew on 29 April ('recent legal actions and compounding regulatory hurdles have effectively closed a viable path forward'). The second Red Oak campus in Texas — about 830 acres — passed the city council 4–1 around midnight after a five-hour meeting, on conditions (closed-loop cooling, no municipal water for cooling, noise and setback limits) that now travel with every Compass application.",
+        "Then the county withdrew the tax abatement. Compass's own SVP had said in 2023 that Ellis County's and Red Oak's incentive structure 'served as one of the greatest factors in our decision to expand in Red Oak'; in June 2026 the county pulled the abatement item for the 890-acre property 'due to community pushback' and Compass proceeded anyway, pledging USD 15 million for a county animal shelter and a USD 12.6 million training building for the state technical college in the same month. The Governor called for repealing data-center tax exemptions altogether.",
+        "Read those USD 27.6 million as a price, not a gift: consent now costs more than tax relief saves, and the developer that can pay it in cash — because its sponsors and its ABS programme have made capital the cheap input — can outbid one that cannot. Compass's institutional response was to organise the landlord tier: Infrastructure for America, a 501(c)(4) co-founded in September 2026 with Digital Realty, QTS and Vantage, exists to write the standard that host communities can hold every developer to, and to distinguish 'building to last' from 'building to exit'.",
+        "The QTS guide records the same lesson from the other side — a USD 12 billion Wisconsin site lost to a village annexation vote — and the PowerHouse guide shows the developer's toolkit for winning votes (annexation agreements, community-benefit payments, zoning classifications, jurisdiction changes). What is specific to a sponsor-owned landlord is that the sponsor underwrites the consent cost as part of the campus budget, in the same line as the substation."
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**Tenant concentration you cannot see.** Red Oak's five buildings are 'fully occupied by a single tenant'; the securitized pool is leased to 'four firms'; no tenant is ever named. A single hyperscaler's capex pause lands on one landlord's whole campus, and the ABS investor learns the name only in a confidential presale.",
+        "**A GW figure without a rung.** Compass publishes none; its Markets page mixes operating, 'nearing completion' and 'development' campuses; the coverage plan attached EdgeCore's '1.8 GW delivered or under development' and PowerHouse's Joliet to the Compass row. Every landlord's number needs its rung and its owner.",
+        "**Boilerplate that rewrites history.** Compass's 2019–2025 releases now carry a 'backed by Ontario Teachers', Brookfield Infrastructure and KKR' boilerplate that did not exist when they were issued (the January 2026 wire release still named two sponsors). A company's own archive is a current document, not a historical one.",
+        "**The rating-agency split.** S&P will not rate data-center ABS above single-A; Moody's, Fitch and DBRS will. The cheaper coupon depends on which agency the arranger chooses and whether the market keeps accepting the difference — a sudden agency convergence would reprice every landlord's refinancing.",
+        "**Consent as the binding constraint.** A procedural defect in a public notice killed a 2,000-acre campus after three years; a 4–1 vote and a withdrawn abatement decided the next one. Capital and manufacturing capacity do not help when the constraint is a council.",
+        "**The sponsor's view is aggregated.** Brookfield's segment mixes Compass with Data4 and colocation; 'contracted growth' and '200 MW commissioned' cannot be attributed. A listed sponsor is a window, not a ledger."
+      ]
+    },
+    {
+      "id": "where-compass-slots-in",
+      "title": "Where Compass's businesses slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per business line in the dossier, read against the layer of the ecosystem it touches.",
+      "cols": [
+        "Business line",
+        "Layer",
+        "Who it deals with",
+        "What to watch"
+      ],
+      "rows": [
+        [
+          "Hyperscale single-tenant build-to-suit campuses",
+          "Landlord — contracted capacity for hyperscalers",
+          "Unnamed investment-grade tenants; Oncor, Mississippi Power, APS, ComEd, Duke as utilities",
+          "Meridian's anchor tenant; Hoffman Estates first power; Statesville start"
+        ],
+        [
+          "Industrialized construction and supply chain",
+          "Delivery platform — turns contracted into operating MW",
+          "Schneider Electric (factory on campus), Siemens, Vertiv, Cummins",
+          "Whether the nine-month delivery claim holds on greenfield campuses"
+        ],
+        [
+          "Co-serve utility model",
+          "Grid — developer-funded substations and rights-of-way; flexible load",
+          "Utilities and commissions; Texas standards",
+          "Large-load tariff outcomes in Texas, Mississippi, Illinois"
+        ],
+        [
+          "Capital programme",
+          "Recycling — ABS master trusts, campus mortgages, KKR asset-level partnership",
+          "Rating agencies, bond investors, three sponsors",
+          "A fifth ABS series; the KKR amount; Moody's AAA extending to new collateral"
+        ],
+        [
+          "Community and coalition",
+          "Consent — donations, standards, Infrastructure for America",
+          "Councils, counties, the Governor; QTS, Vantage, Digital Realty",
+          "Whether pre-emption changes the vote count anywhere"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What does a co-controlling stake mean?",
+          "a": "Two sponsors each hold a large but non-majority stake and must agree on the decisions that matter — new campuses, new debt, a sale — while the operator keeps running the company."
+        },
+        {
+          "q": "Brookfield paid USD 1.35 billion for its Compass stake but its own equity was about USD 375 million. Where did the rest come from?",
+          "a": "From the institutional funds Brookfield manages — the listed vehicle syndicates most of a deal to its private-fund LPs and keeps a slice."
+        },
+        {
+          "q": "Name the rungs of the pipeline ladder from bottom to top.",
+          "a": "Operating (energised, rent flowing), contracted (signed, not delivered), reserved (option or right of first refusal), land with power, land without power."
+        },
+        {
+          "q": "Why is 'delivered or under development' an unhelpful figure on its own?",
+          "a": "It counts two rungs with no boundary: \"under development\" can mean a building under a signed lease or a field with by-right zoning. Ask which rung and whose."
+        },
+        {
+          "q": "What is a triple-net lease and why does a sponsor care about the share of the book on it?",
+          "a": "The tenant pays taxes, insurance and maintenance, so the landlord's rent is nearly pure cash flow; a higher NNN share means less operating-cost risk sits with the landlord."
+        },
+        {
+          "q": "What is the WALT of a lease book?",
+          "a": "Weighted average lease term — the rent-weighted years remaining across all leases; Compass's was 13 years at the 2023 sale."
+        },
+        {
+          "q": "Describe the three stages of paying for one build-to-suit building.",
+          "a": "Sponsor equity funds land, substation and early works; a construction loan sized to the signed lease funds the build; an ABS on the energised, leased building refinances the loan and returns equity."
+        },
+        {
+          "q": "What is a master trust in a data-center ABS?",
+          "a": "A bankruptcy-remote issuer that owns the buildings and can add collateral and issue new series against it; Compass runs two, deliberately not cross-collateralized."
+        },
+        {
+          "q": "Why did a Moody's AAA on the 2026-1 series matter?",
+          "a": "S&P caps data-center ABS at single-A; a AAA senior tranche lowers the coupon on USD 500 million of bonds and reprices the asset class."
+        },
+        {
+          "q": "What is permanent capital at the asset level?",
+          "a": "A sponsor (KKR) buying into specific stabilized campuses and committing to future ones on an evergreen basis — recycling equity without a change of control or a sale of the platform."
+        },
+        {
+          "q": "What does offsite fabrication buy a landlord?",
+          "a": "Schedule certainty: factory-built power centres and modules cut site work, so contracted capacity becomes operating capacity — and rent — on a predictable date."
+        },
+        {
+          "q": "What is the 'co-serve' utility model?",
+          "a": "The developer funds its own substation and transmission right-of-way and treats the utility as a planning partner, instead of joining the queue and socialising the cost through tariffs."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A sponsor's letter says it bought 'a co-controlling stake for USD 1.35 billion, including our equity of approximately USD 375 million'. The best reading is:",
+          "c": [
+            "The company was worth USD 1.35 billion",
+            "The sponsor put in USD 375 million of its own money and syndicated the rest of its share to the funds it manages; the other co-controller paid separately",
+            "The sponsor now owns 28% of the company",
+            "The company's debt was USD 975 million"
+          ],
+          "a": 1,
+          "why": "A listed sponsor typically keeps a minority of each deal on its own balance sheet and places the rest with its private-fund LPs; the co-controlling partner's half is a separate cheque. Enterprise value is not disclosed."
+        },
+        {
+          "q": "A developer announces '2.27+ GW' while a third party can verify two operating buildings totalling about 62 MW. The most likely explanation:",
+          "c": [
+            "The third party is wrong",
+            "The figure counts contracted and land-stage megawatts as well as operating ones",
+            "The developer has 2.27 GW leased",
+            "The buildings are hidden"
+          ],
+          "a": 1,
+          "why": "Portfolio counters are rung-less by design; \"delivered or under development\" and \"in planning, underway, or completed\" include sites with no tenant."
+        },
+        {
+          "q": "Brookfield's 2023 letter: 675 MW contracted, 13-year WALT, 'approximately 60% contracted on a triple net basis'. Which risk does the 40% carry that the 60% does not?",
+          "c": [
+            "Construction risk",
+            "Operating-cost risk — the landlord pays taxes, insurance or maintenance on gross leases",
+            "Tenant credit risk",
+            "Interconnection risk"
+          ],
+          "a": 1,
+          "why": "A triple-net tenant pays those costs; on gross or modified-gross leases the landlord does, so an electricity or insurance shock hits the landlord's margin."
+        },
+        {
+          "q": "Why does an ABS on six leased buildings return equity to the sponsors?",
+          "c": [
+            "Because bonds are cheaper than equity",
+            "Because the bond proceeds repay the construction loan and the surplus over the loan is distributed, while the buildings stay in the trust",
+            "Because the buildings are sold",
+            "Because the tenants pay a premium"
+          ],
+          "a": 1,
+          "why": "The appraisal (USD 3.6 billion on 198.2 MW) supports more debt than the construction loan; the difference is equity taken out and recycled into the next campus."
+        },
+        {
+          "q": "S&P caps data-center ABS at single-A; Moody's rated Compass's senior tranche AAA. What determines which rating the deal carries?",
+          "c": [
+            "The tenant",
+            "Which agency the arranger engages and its view of single-tenant specialised buildings as collateral",
+            "The state",
+            "The size of the deal"
+          ],
+          "a": 1,
+          "why": "Agencies disagree on the asset class; the arranger chooses. GlobalCapital records S&P as the outlier and DBRS/Moody's/Fitch going to AAA."
+        },
+        {
+          "q": "KKR's December 2025 deal was described as investing in 'a portion of its operating data centers and future assets' without a change of control. This is best described as:",
+          "c": [
+            "An acquisition of Compass",
+            "Asset-level permanent capital that recycles equity from stabilized campuses into development",
+            "A construction loan",
+            "An IPO"
+          ],
+          "a": 1,
+          "why": "Compass calls it a \"permanent, long-term capital partnership\"; Bisnow reads it as recycling; ownership at the top (Brookfield/OTPP co-control) is unchanged."
+        },
+        {
+          "q": "Compass paid USD 52.5 million for a substation and USD 20 million for a right-of-way. What did it buy?",
+          "c": [
+            "Cheaper electricity",
+            "Schedule control over its own grid connection and standing as the utility's planning partner rather than a queue entry",
+            "Ownership of the utility's transmission line",
+            "A tax abatement"
+          ],
+          "a": 1,
+          "why": "Developer-funded infrastructure moves the campus out of the utility's capital plan and pre-empts the ratepayer-cost objection."
+        },
+        {
+          "q": "A county withdraws a tax abatement after community pushback and the developer proceeds while donating USD 27.6 million locally. The lesson for a sponsor is:",
+          "c": [
+            "Incentives no longer matter",
+            "Consent is now a priced line in the campus budget that can exceed the tax relief, and the developer with the cheapest capital can pay it",
+            "Donations are tax-deductible",
+            "The project will fail"
+          ],
+          "a": 1,
+          "why": "Compass built its second Red Oak campus without the county abatement; the donations and the Abbott standards are the cost of the 4–1 vote."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Moonraker",
+      "d": "Compass's name for its standardized single-tenant building product, described in the 2026 Outcomes Report as 84% fabricated offsite."
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 2,
+  "slug": "edgecore",
+  "title": "EdgeCore Digital Infrastructure — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-lease-from-the-landlords-chair",
+      "title": "Start here: the single-tenant lease from the landlord's chair",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The Fluidstack guide opens the data-center lease from the tenant's side — who signs, who guarantees, what the landlord's lender can reach. The Vantage and STACK guides teach the product ladder (powered shell, turnkey, build-to-suit) and the operator-landlord model; the Compass guide teaches how a sponsor funds the pipeline and recycles the buildings. This guide sits across the table from Fluidstack: **it is about what the landlord promises in a {{build-to-suit}} lease to one hyperscaler, what the tenant promises back, how a bank turns that promise into a {{limited-recourse loan}}, why the tenant's name is the one thing the landlord will not say, and what 'we have never missed a customer milestone' does and does not cover.** EdgeCore is the worked example because it is the purest case in the corpus — 'one building, one customer' at every campus, every financing announced as 'fully leased' to an unnamed tenant, and a public record dense enough to see the lease-to-loan sequence four times over.",
+        "**Four things this guide teaches.** The anatomy of a {{single-tenant campus}} lease — term, rent per kW, {{rent escalator}}, {{delivery milestone}}s, {{liquidated damages}}, {{expansion option}}s and {{right of first offer}}s — and how the same clauses read from each chair. How a {{limited-recourse loan}} is sized to that lease and why it lives in a special-purpose borrower. What density and cooling commitments mean when they are written into a lease ('engineered to accommodate NVIDIA VR racks'). And who pays for power delivery — the {{Ratepayer Protection Pledge}}, a utility's large-customer process, and a landlord's stated walk-away threshold.",
+        "**What it deliberately leaves to other guides.** The tenant's guarantee and backstop ladder (Fluidstack); the sponsor's capital stack, ABS master trusts and rating agencies (Compass); powered land, entitlements and the utility contract behind a campus (PowerHouse); cooling physics (Aligned); the anchor's signature and 'contracted' as a word (Nscale)."
+      ]
+    },
+    {
+      "id": "anatomy-of-a-build-to-suit-lease",
+      "title": "Anatomy of a build-to-suit lease",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A hyperscale {{build-to-suit}} lease is a construction contract and a rental contract stapled together. The construction half fixes what the landlord will deliver: a building of a stated {{critical IT load}} (36 MW in EdgeCore's 2024 spec, 72 MW at AS01), to a stated design (data halls, storeys, power topology, {{N+1}} or better, a {{PUE}} band, a water usage effectiveness), on stated {{delivery milestone}}s ending in a {{ready for service}} date, with {{liquidated damages}} — a daily sum — if the landlord is late. The rental half fixes what the tenant will pay: a rent expressed per kW of critical load per month, on a {{take-or-pay}} basis for the whole contracted load whether or not the tenant fills it, for a term that at hyperscale runs ten to fifteen years or longer, with a {{rent escalator}} of a few percent a year and, in a {{triple-net lease}}, the taxes, insurance and maintenance on top.",
+        "Around those two halves sit the options that make a single building into a campus relationship. An {{expansion option}} gives the tenant the right, not the obligation, to take the next building at pre-agreed terms; a {{right of first offer}} on adjacent land lets it lock the campus without leasing all of it — which is why EdgeCore can buy 43.87 acres next to Mesa or 697 acres in Louisa before any lease exists. A confidentiality clause forbids the landlord from naming the tenant, and a change-of-control clause decides what happens if the landlord's sponsor sells.",
+        "EdgeCore publishes none of its lease terms, and that is normal; what it publishes is the outline the market can infer. Partners Group's investment case says 'The Company signs long-term contracts with large Tier 1 data center users' and that 'customers charged a price based on their contracted power capacity' produce 'highly visible cashflows' — rent per kW, take-or-pay, long term. Every financing describes the collateral as 'fully leased' to a 'single hyperscale tenant'. Virginia Business, asked in April 2026: the company 'declined to identify tenants or provide projected total construction cost'.",
+        "Read the lease as risk allocation. Construction risk (cost, schedule) sits with the landlord until ready for service. Utilisation risk (will the tenant actually fill 72 MW?) sits with the tenant from day one, because rent is on contracted load. Credit risk sits with the landlord — if the tenant fails, so does the building's only income — which is why the landlord wants an investment-grade hyperscaler, and why, at Fluidstack, a landlord wants a guarantor when it cannot get one."
+      ]
+    },
+    {
+      "id": "the-same-clause-three-chairs",
+      "title": "The same clause from three chairs",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "Each clause of a single-tenant lease looks different to the landlord, the tenant and the landlord's lender. EdgeCore examples where the record gives one.",
+      "cols": [
+        "Clause",
+        "Landlord reads it as",
+        "Tenant reads it as",
+        "Lender reads it as",
+        "EdgeCore example"
+      ],
+      "rows": [
+        [
+          "Contracted load and rent per kW",
+          "The building's revenue for 10–15 years, before it exists",
+          "The capacity reserved for its programme, paid whether used or not",
+          "The cash flow the loan is sized to; {{DSCR}} on contracted rent",
+          "AS01 72 MW and AS02 42 MW 'fully leased'; USD 1.5 billion of loans against them"
+        ],
+        [
+          "{{Ready for service}} date and {{liquidated damages}}",
+          "The day rent starts; the schedule the factory and the GC are held to",
+          "The day its racks can land; compensation if not",
+          "The date interest-only construction funding must convert",
+          "'initial occupancy: November 2026' (AS01), 'July 2027' (AS02); '10 out of 10' targets met"
+        ],
+        [
+          "{{Take-or-pay}}",
+          "Utilisation risk removed",
+          "A commitment its own demand forecast must justify",
+          "The reason a specialised building is financeable at all",
+          "Partners Group: pricing 'based on their contracted power capacity'"
+        ],
+        [
+          "Design standard (density, cooling, water)",
+          "A specification the building must hit; a claim it can market",
+          "Protection that the hall will carry its next-generation racks",
+          "A covenant on the collateral's fitness",
+          "'rack densities well over 50 kW'; 'engineered to accommodate ... NVIDIA VR racks'; WUE 'below .01 L/kWh'"
+        ],
+        [
+          "{{Expansion option}} / {{right of first offer}}",
+          "A reason to pre-position land; a sale it has not yet made",
+          "A campus lock without a campus lease",
+          "Future collateral it may finance later",
+          "43.87 acres added at Mesa (2025); 697 acres at Louisa; 'one building, one customer'"
+        ],
+        [
+          "Confidentiality",
+          "The tenant's name withheld even in a USD 1.5 billion financing release",
+          "Its infrastructure map kept private",
+          "Disclosed in the presale, not in the press",
+          "'declined to identify tenants' (Virginia Business, April 2026)"
+        ],
+        [
+          "Change of control",
+          "A clause its sponsor must respect on exit",
+          "A say in who its landlord becomes",
+          "A trigger on the loan",
+          "Partners Group's client funds own EdgeCore; an exit is the open structural question"
+        ]
+      ]
+    },
+    {
+      "id": "why-one-building-one-customer",
+      "title": "Why 'one building, one customer': single-tenant economics",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A multi-tenant hall is a retail business: many leases, cross-connect fees, churn, a sales force. A {{single-tenant campus}} is a bond: one counterparty, one long lease, one rent. EdgeCore chose the bond in October 2023 — 'The new EdgeCore is born in the age of AI ... We're going to build the 300 MVA campuses or bigger' — and says so on every campus page. The economics follow from the tenant's size: a hyperscaler taking a whole building can specify its own topology, run its own operations if it wants a {{powered shell}}, and commit to enough load that the landlord's rent covers a USD 1.9 billion loan.",
+        "The cost is {{tenant concentration}}. When a whole campus is one tenant, one procurement pause empties it, and the landlord's fortunes track that tenant's capital-spending cycle rather than a market. The landlord's defence is credit: it wants the tenant's own rating to be investment grade, so that its rent is a {{credit tenant lease}} and its lenders price it like the tenant's bonds. That is why EdgeCore's financings describe the tenant only by class ('single hyperscale tenant', 'Tier 1 data center users') — the class carries the credit and the name carries the confidentiality.",
+        "There is a second cost the corpus records: a single-tenant developer cannot build on speculation. Every EdgeCore campus was land first and lease second, and the buildings that exist were built after a signature. The two delivered buildings, PH01 (2019) and SV01 (2025), took a combined thirteen years from land to opening because the lease, not the land, set the clock. The company's '36+ months from groundbreaking to activation' benchmark measures the part after the signature.",
+        "Single-tenant also explains the executive bench: EdgeCore's CEO, President and security chief came from Vantage, its CCO from QTS, its operations head from STACK and Microsoft, its legal chief from Digital Realty and DuPont Fabros. The skill being bought is not marketing to many customers; it is negotiating and delivering for a handful."
+      ]
+    },
+    {
+      "id": "from-lease-to-loan",
+      "title": "From lease to loan: the limited-recourse campus financing",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "Once the lease is signed the landlord borrows against it, and the shape of the borrowing is the same in each of EdgeCore's four deals. A special-purpose entity — MECP1 Mesa 1, LLC; MECP1 Santa Clara 1, LLC — owns the campus and is the borrower. A bank syndicate ({{loan syndication}}: MUFG as administrative agent, TD Securities, ING, Scotiabank and Santander at Mesa; Apterra, Global Infrastructure Partners and ING at Sterling) lends a 'senior secured, limited-recourse term loan'. **Senior secured**: first claim on the building and the lease. **{{Limited-recourse loan}}**: if the campus fails, the lenders take the campus, not EdgeCore's other campuses or Partners Group's funds. **Term loan**: drawn during construction, then amortising against rent.",
+        "The loan is sized to the lease, not to the land. Lenders take the contracted rent, deduct operating costs the landlord bears, and require that what remains cover interest and principal by a margin — the {{DSCR}}. A 72 MW building at hyperscale rents, taken or paid for fifteen years by an investment-grade tenant, supports a great deal of debt; the same building with no lease supports almost none. That is why a USD 1.5 billion financing can be announced for two buildings whose tenant is unnamed: the presale told the banks the name, the class told the market the credit.",
+        "Two labels ride on the loan. **Green**: each EdgeCore facility is structured as a {{green loan}} with ING as structuring agent, meaning the proceeds fund assets meeting a published environmental standard (efficient, water-light buildings) — a label that widens the lender pool and marginally lowers the margin, and one that Compass formalised as a whole-company Green Finance Framework. **Accordion and revolving letter-of-credit facilities**: room to upsize as the campus expands and to post the {{credit support}} utilities demand.",
+        "The sequence over time: 2024 — USD 1.9 billion (Mesa), USD 1.1 billion (Reno and Ashburn), USD 440 million (Santa Clara); 2025 — the first {{data-center ABS}} (USD 235 million on PH01's single lease, ECore 2025-1, S&P A-/BBB-); 2026 — USD 1.5 billion (Sterling). About USD 5.2 billion of campus-level debt in thirty months, every dollar tied to a specific lease at a specific building, and none of it recourse to the sponsor. The Compass guide follows the same buildings one stage further, into the master trust and the rating-agency split."
+      ]
+    },
+    {
+      "id": "milestones-met-pipeline-slipped",
+      "title": "'100% customer milestones met' and the pipeline that slipped: reading a delivery claim",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "EdgeCore's homepage claims '100% Customer Milestones Met' and its January 2026 release '10 out of 10' 2025 targets. Both are probably true and both are narrow: a customer milestone is a date in a signed lease, and the lease is signed after the site, the power and the design are in hand. The same company's pipeline tells a different story once you read the campuses that had no lease. Reno was a launch market in February 2018 with '225 MW' planned by 2019, broke ground only in August 2023 on a different site (56 acres at the Tahoe-Reno Industrial Center instead of 136 acres by the airport, 216 MW instead of 400+), targeted late 2025, and was 'first of three 72MW data centers' still under construction in January 2026. Culpeper was announced in July 2024 at '216MW' initial and 'up to 432MW' with power in early 2028; the campus page now says 196 MW from mid-2029. A Richardson, Texas campus ('up to 165 MW', 2018) vanished from every later list.",
+        "None of that breaks a customer milestone, because none of it was under a lease. The lesson for the reader is to separate two clocks: the **lease clock**, which starts at signature and runs to ready for service, and which EdgeCore has evidently kept; and the **entitlement clock**, which runs from land purchase through power, permits and a signature, and which slips for reasons the landlord does not control — a utility's switchyard (Mesa lost a building to SRP's expansion in 2026), a cooperative's delivery date (Culpeper), a site change (Reno).",
+        "A tenant reads the two clocks as a single question: will the megawatts be there when my racks are? The lease answers it with milestones and damages. A sponsor reads them as two risks: the entitlement clock is why its equity is committed before any lease exists, and the lease clock is why that equity comes back.",
+        "Nscale's guide teaches what 'contracted' means when a press release says 'gigawatts'; the practical test here is simpler. Count the buildings a third party has seen opened (two), the buildings topped out under a lease (three), and everything else is on the entitlement clock."
+      ]
+    },
+    {
+      "id": "density-and-cooling-in-the-lease",
+      "title": "Density and cooling written into the lease",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A hyperscaler's lease specifies not only megawatts but how they are delivered to the rack. Three numbers do most of the work. **Rack density** (kW per rack): EdgeCore's 2023–2024 specification was 'Designed for 30-40 kW per rack density' — the upper end of air cooling; its 2026 pages say 'rack densities well over 50 kW' and 'designed to accommodate direct-to-chip liquid cooling'. **{{PUE}}**: the landlord commits to a band ('<1.25' at Mesa Building 1 per its engineer, '<1.3' in Santa Clara) because the tenant pays the overhead. **{{WUE}}**: 'below .01 L/kWh' on every EdgeCore page, achieved with {{closed-loop cooling}} — the same water circulating between the halls and outdoor dry coolers with almost no evaporation — which is what lets a campus claim near-zero water use in Arizona or Nevada.",
+        "What a density clause commits the landlord to is structure and plant as much as electricity: floor loading and ceiling height for taller, heavier liquid-cooled racks, mechanical galleries with room for coolant distribution, and pipework to bring facility water to the row. EdgeCore's Ashburn page says AS01/AS02 are 'structurally engineered to accommodate liquid to liquid loads, including NVIDIA VR racks' with 'mechanical galleries sized for variable water-to-air cooling ratios' — that is, the landlord has left space and structure for a tenant that may arrive with air-cooled racks and convert to liquid mid-lease.",
+        "The gap between design intent and deployed capability is where the reader should be careful. No third-party source describes an operating liquid-cooled EdgeCore hall; the delivered buildings (PH01, SV01) were built to the 30–40 kW specification; the '50 kW+' and 'direct-to-chip' language is 2026 marketing for buildings that occupy from late 2026. Aligned's guide teaches the physics; the point here is that a density number in a lease is a promise about a building not yet built, and the landlord's engineering choices decide whether the promise costs it a retrofit later.",
+        "Water is the clause that decides where a campus can be sited at all. EdgeCore's Mesa campus is 'water-neutral' by an accounting — SRP watershed projects that restore what the campus withdraws — layered on a design that withdraws little; MIT Technology Review confirmed the Reno building relies on an air-cooled closed-loop chiller. In regions where opposition targets evaporative designs, a near-zero WUE is not sustainability marketing; it is the entitlement."
+      ]
+    },
+    {
+      "id": "who-pays-for-power-delivery",
+      "title": "Who pays for power delivery: the pledge, the process and the walk-away threshold",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Behind every lease is a utility contract the tenant never signs. The landlord is the utility's customer, and the question of 2026 is how much of the new substation, transformers and lines a {{large load}} should pay for itself. Utilities have answered with process: SRP's Large Customer Integration Process (2025) requires customers to fund dedicated upgrades up front; Arizona's HB 2756 lets the commission set minimum bills, contract terms, infrastructure payments and collateral for 'extra high load factor customers'; Illinois's commission added a USD 500,000 deposit per 100 MW above 200 MW and lets ComEd keep it if the project dies. The federal government answered with a pledge: the {{Ratepayer Protection Pledge}} — bring or buy your own supply, pay for delivery infrastructure, pay whether you use the power or not, invest locally — which EdgeCore signed on 13 August 2026.",
+        "EdgeCore's own statement is more specific than the pledge. Its EVP Finance told Data Center Knowledge that power delivery infrastructure is 'roughly 5-10% of upfront project costs', that 'We expect to bear 100% of the costs', and that EdgeCore 'will abandon projects if power economics become financially unworkable'. That last sentence is a walk-away threshold stated in public, and it is the honest form of the pledge: a developer that pays for its own substation will drop a site where the substation costs more than the lease can carry.",
+        "The physical evidence is already on the record. At Mesa, SRP needed more land for a switchyard and EdgeCore's expansion shrank from three buildings to two; at Louisa, the cooperative's affiliate 'Hyperscale Energy' is the named supplier for 1.1 GW and a county supervisor's guess about gas plants or small reactors went unanswered; at Sterling, Dominion is the utility and Loudoun's allocation constraints ran until January 2026. In a lease, none of this reaches the tenant except as the ready-for-service date — the landlord carries the grid.",
+        "Compass's guide follows the developer that pre-funds the substation and calls it a 'co-serve' model; PowerHouse's guide follows the campus whose utility contract was cancelled after the council had approved it. EdgeCore sits between them: it pays, it pledges, and it has said out loud where it stops."
+      ]
+    },
+    {
+      "id": "timeline-lease-to-loan",
+      "title": "Lease to loan, campus by campus: EdgeCore on one clock",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Years on the horizontal axis. The campus lane shows land, leases and openings; the capital lane shows the financing that followed each lease.",
+      "unit": "calendar year",
+      "lanes": {
+        "camp": "Campuses and leases",
+        "cap": "Loans and bonds"
+      },
+      "items": [
+        {
+          "x": 2018,
+          "lane": "camp",
+          "label": "Founded by Mount Elbert, GIC and OPTrust (US$800m equity); land in Mesa, Sterling, Santa Clara, Reno",
+          "sub": "Richardson, TX planned and later dropped"
+        },
+        {
+          "x": 2019,
+          "lane": "camp",
+          "label": "PH01 Mesa opens (32 MW design / 26 MW leased)",
+          "sub": "The first single-tenant building; securitized six years later"
+        },
+        {
+          "x": 2022,
+          "lane": "cap",
+          "label": "Partners Group acquires EdgeCore for its clients (up to US$1.2bn)",
+          "sub": "476 MW portfolio at sale; sellers not named by either party"
+        },
+        {
+          "x": 2023,
+          "lane": "camp",
+          "label": "Kestler CEO (Mar); Santa Clara and Reno groundbreakings; \"Designed for Density\" pivot (Oct)",
+          "sub": "Single-tenant hyperscale only from here"
+        },
+        {
+          "x": 2024,
+          "lane": "cap",
+          "label": "US$1.9bn Mesa loan (Jan); US$1.1bn Reno+Ashburn (Mar); US$440m Santa Clara (Apr); US$1.9bn equity (Sep)",
+          "sub": "Four limited-recourse or sponsor cheques in nine months"
+        },
+        {
+          "x": 2024,
+          "lane": "camp",
+          "label": "Culpeper 120 acres (Jul); PH02 tops out (Dec, Holder GC)",
+          "sub": "Announced at 216/432 MW, now 196 MW from mid-2029"
+        },
+        {
+          "x": 2025,
+          "lane": "cap",
+          "label": "First ABS: US$235m on PH01 (Jul; S&P A-/BBB-)",
+          "sub": "One stabilized lease becomes a bond"
+        },
+        {
+          "x": 2025,
+          "lane": "camp",
+          "label": "Mesa +43.87 acres to 450+ MW (May); Louisa 697 acres, 1.1+ GW (Jun); SV01 opens (Sep); AS01 tops out (Sep)",
+          "sub": "\"1.8GW delivered or under development\" (Jan 2026)"
+        },
+        {
+          "x": 2026,
+          "lane": "cap",
+          "label": "US$1.5bn Sterling AS01/AS02 loans (Apr; Apterra, GIP, ING)",
+          "sub": "\"fully leased\" — tenant not identified"
+        },
+        {
+          "x": 2026,
+          "lane": "camp",
+          "label": "Mesa expansion cut for SRP switchyard (Mar); AS02 tops out (Jul); Ratepayer Protection Pledge (Aug)",
+          "sub": "AS01 occupancy Nov 2026; AS02 Jul 2027"
+        }
+      ]
+    },
+    {
+      "id": "edgecore-money-ladder",
+      "title": "The disclosed ladder: what is public about EdgeCore's money",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD millions (as released; loans are facilities sized to leases, the ABS is bonds issued, the equity is the sponsor round, the last bar is the company's planned-investment claim)",
+      "intro": "Read the ladder as a size check on a private landlord: every disclosed number is a financing or a claim; none is revenue.",
+      "items": [
+        {
+          "label": "PH01 ABS (Jul 2025)",
+          "sub": "One 26 MW leased building; S&P A- / BBB-",
+          "v": 235
+        },
+        {
+          "label": "Santa Clara SV01 green loan (Apr 2024)",
+          "sub": "36 MW; MUFG, ING, First-Citizens",
+          "v": 440
+        },
+        {
+          "label": "Reno + Ashburn loans (Mar 2024)",
+          "sub": "MUFG administrative agent",
+          "v": 1100
+        },
+        {
+          "label": "Partners Group acquisition commitment (Nov 2022)",
+          "sub": "\"up to USD 1.2 billion\" for acquisition and buildout",
+          "v": 1200
+        },
+        {
+          "label": "Sterling AS01/AS02 loans (Apr 2026)",
+          "sub": "114 MW fully leased; Apterra, GIP (BlackRock), ING",
+          "v": 1500
+        },
+        {
+          "label": "Mesa green loan (Jan 2024)",
+          "sub": "450 MW campus; MUFG, TD, ING, Scotiabank, Santander",
+          "v": 1900
+        },
+        {
+          "label": "Sponsor equity round (Sep 2024)",
+          "sub": "Partners Group \"on behalf of clients\" with co-investors",
+          "v": 1900
+        },
+        {
+          "label": "\"Committed\" capital (site, Sep 2026)",
+          "sub": "\"$7.4 billion in capital currently committed\"",
+          "v": 7400
+        },
+        {
+          "label": "\"Planned investment\" (Jan 2026 / site)",
+          "sub": "\"$16.1 billion\" — composition not published",
+          "v": 16100
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The tenant you cannot name.** Every EdgeCore financing is 'fully leased' to an unnamed 'single hyperscale tenant'. Confidentiality is normal; it also means the public record cannot say how many tenants the portfolio has, or whether one hyperscaler's pause would empty three campuses at once.",
+        "**Two clocks, one claim.** '100% Customer Milestones Met' covers the lease clock. Reno (2018 launch, 2023 groundbreaking, still building in 2026), Culpeper (216 MW/2028 to 196 MW/2029) and Richardson (dropped) are the entitlement clock, and it slipped.",
+        "**The headline counts land.** '1.8 GW delivered or under development' reconciles only with Louisa's 1.1 GW planning-stage site inside it; the verifiable operating base is two buildings. Ask which rung.",
+        "**Design intent read as capability.** '50 kW+' and 'direct-to-chip' describe buildings that occupy from late 2026; the delivered halls were specified at 30–40 kW. A lease density clause is a promise about a future building.",
+        "**The utility can redraw the campus.** Mesa lost a building to SRP's switchyard in 2026 with the project already approved; Louisa's 1.1 GW has no announced generation plan. The landlord carries the grid and the tenant sees only the date.",
+        "**The sponsor's funds have a life.** Partners Group bought EdgeCore for client programmes in 2022; a finite-life fund must exit, and the 2025 and 2026 reports mention EdgeCore only as a label. The change-of-control clause in every lease will matter before the leases end."
+      ]
+    },
+    {
+      "id": "where-edgecore-slots-in",
+      "title": "Where EdgeCore's businesses slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per business line in the dossier, read against the layer of the ecosystem it touches.",
+      "cols": [
+        "Business line",
+        "Layer",
+        "Who it deals with",
+        "What to watch"
+      ],
+      "rows": [
+        [
+          "Single-tenant hyperscale campuses ('Designed for Density')",
+          "Landlord — build-to-suit leases to unnamed hyperscalers",
+          "Hyperscale tenants; Holder Construction (Mesa, Santa Clara); SRP, NV Energy, SVP, Dominion, REC",
+          "AS01 occupancy November 2026; Reno RN01 energisation; a named tenant anywhere"
+        ],
+        [
+          "Gigascale campuses and powered-land pre-positioning",
+          "Land and entitlement — Louisa 1.1+ GW, Mesa expansion, Culpeper",
+          "Louisa IDA, REC and Hyperscale Energy, SRP, county boards",
+          "A Louisa tenant, generation plan or construction start; the Valley Link line"
+        ],
+        [
+          "Water-neutral air-cooled design standard",
+          "Facility design — closed-loop chilled water, WUE <0.01, PUE <1.25–1.3",
+          "DLR Group and the design bench; SRP watershed programme; tenants' density specs",
+          "First operating liquid-cooled hall; any audited PUE/WUE"
+        ],
+        [
+          "Project-level green financing and sponsor equity",
+          "Capital — limited-recourse loans, first ABS, Partners Group client equity",
+          "MUFG, ING, TD, Scotiabank, Santander, Apterra, GIP; Partners Group programmes",
+          "A second ABS; a Mesa refinancing; a sponsor exit process"
+        ],
+        [
+          "Ratepayer posture",
+          "Grid — pledge, self-funded delivery infrastructure, a stated walk-away threshold",
+          "Utilities, commissions, the pledge's sponsors",
+          "Arizona ACC rules under HB 2756; whether any campus is abandoned on power economics"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What two contracts does a build-to-suit lease staple together?",
+          "a": "A construction contract (what the landlord delivers, by when, with damages if late) and a rental contract (rent per kW on contracted load, take-or-pay, for a long term with escalators)."
+        },
+        {
+          "q": "Why is rent expressed per kW of contracted load rather than per square foot?",
+          "a": "Power is the scarce input and the unit of sale; the tenant pays for reserved critical load whether or not it fills it, which is what makes the cash flow financeable."
+        },
+        {
+          "q": "What does a ready-for-service date trigger?",
+          "a": "Rent starts, the tenant can move racks in, liquidated damages stop accruing, and the construction loan converts from interest-only funding to amortisation."
+        },
+        {
+          "q": "What is the difference between an expansion option and a right of first offer?",
+          "a": "An expansion option is a right to take the next building at pre-agreed terms; a right of first offer obliges the landlord to offer adjacent land or buildings to the tenant before anyone else."
+        },
+        {
+          "q": "What makes a loan limited-recourse?",
+          "a": "It is secured only on the project entity's campus and lease; if the campus fails the lenders take the campus, not the sponsor's other assets."
+        },
+        {
+          "q": "How is a construction loan sized on a single-tenant building?",
+          "a": "To the contracted rent: lenders require the rent after landlord costs to cover interest and principal by a margin (the DSCR), so a signed lease to an investment-grade tenant supports far more debt than an empty building."
+        },
+        {
+          "q": "What is a credit tenant lease?",
+          "a": "A long lease to an investment-grade tenant, so the landlord's rent is nearly as safe as the tenant's bonds and the building can be financed on the tenant's credit."
+        },
+        {
+          "q": "Why can a landlord announce a USD 1.5 billion 'fully leased' financing without naming the tenant?",
+          "a": "The confidentiality clause forbids it; the lenders learned the name in the presale and the market is told the tenant's class (single hyperscale tenant), which carries the credit."
+        },
+        {
+          "q": "What do the 'lease clock' and the 'entitlement clock' each measure?",
+          "a": "The lease clock runs from signature to ready for service and is what customer milestones cover; the entitlement clock runs from land purchase through power and permits to a signature, and slips for reasons the landlord does not control."
+        },
+        {
+          "q": "What does a density clause commit the landlord to beyond electricity?",
+          "a": "Floor loading, ceiling height, mechanical galleries and pipework for liquid cooling — structure and plant for racks that may arrive later in the lease."
+        },
+        {
+          "q": "What is closed-loop cooling and why does it decide siting?",
+          "a": "The same water circulates between the halls and outdoor dry coolers with almost no evaporation, giving a near-zero WUE — which is what lets a campus be approved in water-constrained Arizona, Nevada or rural Virginia."
+        },
+        {
+          "q": "What did EdgeCore commit to under the Ratepayer Protection Pledge, and what did it add?",
+          "a": "Bring or buy new supply, pay for delivery infrastructure, pay whether power is used or not, invest locally; its EVP Finance added \"We expect to bear 100% of the costs\" and that it will abandon projects if power economics become unworkable."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A landlord announces 'USD 1.5 billion of construction financing for two fully leased hyperscale data centers' and declines to name the tenant. The lenders:",
+          "c": [
+            "Are lending blind",
+            "Know the tenant from the presale and sized the loan to its contracted rent and credit",
+            "Are lending against the land",
+            "Require the tenant to guarantee the loan"
+          ],
+          "a": 1,
+          "why": "Limited-recourse construction loans are sized to the signed lease; confidentiality binds the press release, not the loan documents."
+        },
+        {
+          "q": "A tenant signs for 72 MW take-or-pay and fills 40 MW in year three. Who bears the cost of the unused 32 MW?",
+          "c": [
+            "The landlord",
+            "The tenant — rent is on contracted load",
+            "The utility",
+            "The lender"
+          ],
+          "a": 1,
+          "why": "Take-or-pay moves utilisation risk to the tenant; that is precisely what makes a specialised single-tenant building financeable."
+        },
+        {
+          "q": "EdgeCore claims '100% Customer Milestones Met' while Reno broke ground five years after launch and Culpeper's capacity date moved 18 months. Both can be true because:",
+          "c": [
+            "The claim is false",
+            "Customer milestones are lease-clock dates set after signature; Reno and Culpeper slipped on the entitlement clock, before any lease",
+            "Reno and Culpeper are leased",
+            "The claim excludes Virginia"
+          ],
+          "a": 1,
+          "why": "Milestones exist only once a lease exists; the pipeline slips happened to sites with no tenant."
+        },
+        {
+          "q": "A campus page says 'rack densities well over 50 kW' and 'engineered to accommodate NVIDIA VR racks', while the two delivered buildings were specified at 30–40 kW per rack. The safest reading:",
+          "c": [
+            "The delivered buildings run 50 kW racks",
+            "The density language is design intent for buildings occupying from late 2026; deployed liquid cooling is unverified",
+            "The company has retrofitted PH01",
+            "Density is irrelevant to a lease"
+          ],
+          "a": 1,
+          "why": "No third-party source describes an operating liquid-cooled EdgeCore hall; the lease clause is a promise about a future building."
+        },
+        {
+          "q": "Why does a limited-recourse loan sit in an entity like 'MECP1 Mesa 1, LLC' rather than in EdgeCore itself?",
+          "c": [
+            "For tax reasons only",
+            "So the lenders' claim is confined to that campus and lease and a failure there cannot reach the other campuses or the sponsor",
+            "Because banks prefer LLCs",
+            "To hide the tenant"
+          ],
+          "a": 1,
+          "why": "The special-purpose borrower is the mechanism that makes the loan limited-recourse in both directions."
+        },
+        {
+          "q": "SRP needed land for a switchyard and EdgeCore's approved Mesa expansion shrank from three buildings to two. In lease terms, who absorbs that?",
+          "c": [
+            "The tenant, through higher rent",
+            "The landlord — the grid sits on its side of the lease; the tenant sees only the ready-for-service date and megawatts it contracted",
+            "The utility",
+            "The city"
+          ],
+          "a": 1,
+          "why": "The landlord is the utility's customer; delivery infrastructure and its surprises are the landlord's risk and cost (EdgeCore: 5–10% of project cost, borne 100%)."
+        },
+        {
+          "q": "A developer's EVP says it 'will abandon projects if power economics become financially unworkable'. For a hyperscaler negotiating a lease this means:",
+          "c": [
+            "Nothing — leases are binding",
+            "That the landlord's pre-lease sites carry a stated walk-away threshold, so a signature — and the milestones and damages that come with it — is what converts a site from optional to committed",
+            "The landlord is in distress",
+            "Power will be free"
+          ],
+          "a": 1,
+          "why": "Before signature the landlord holds the option to drop the site; after it, the lease clock and liquidated damages bind it."
+        },
+        {
+          "q": "Partners Group bought EdgeCore in 2022 'on behalf of its clients'. Why does that matter to a tenant with a fifteen-year lease?",
+          "c": [
+            "It does not",
+            "Client programmes are finite-life funds that must exit; the lease's change-of-control clause will be exercised long before the lease ends",
+            "Partners Group guarantees the rent",
+            "The tenant becomes an LP"
+          ],
+          "a": 1,
+          "why": "Sponsor exits (sale, continuation vehicle, IPO) are the structural question for every fund-owned landlord; the lease anticipates it in the change-of-control clause."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Designed for Density",
+      "d": "EdgeCore's brand for its October 2023 repositioning as a single-tenant hyperscale developer: 300+ MW campus designs, 36–144 MW buildings, high-density and liquid-cooling-ready halls."
+    }
+  ]
+}

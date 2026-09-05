@@ -366,5 +366,47 @@ entry exceeds the 900-character scope cap and is listed as not examined.
 **Side effects.** 130 dossiers on the roster; graph rebuilt to 942 edges (704
 curated); 45 shared concepts registered; report pins unchanged (X3's job).
 
+**F7 — 2026-09-05, v04.74r, Fable 5.1 High.** Three `developer` dossiers
+(Compass Datacenters, EdgeCore, PowerHouse Data Centers) and two step-7
+revisions (`southern-company` v1→v2, `holder-construction` v4→v5). The checker
+exited 0 on the first run with **0** findings of any kind: no reciprocal-type
+findings (the session wrote no `investor` edges — the three landlords'
+sponsors are not covered slugs), **0** unregistered sources, **0** dangling
+slugs, **0** unregistered project pins (no campus was registered in
+`profiler-projects.json`; Joliet, Mesa and Meridian stay in prose because no
+second dossier is ready to pin them).
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **0** | — |
+| reciprocal-type · **corrected** | **0** | The two step-7 inbound edges paired coherently by construction: `southern-company`→`compass-datacenters` `customer` against Compass's `supplier` (Mississippi Power's ~500 MW special contract); `holder-construction`→`edgecore` `customer` against EdgeCore's `supplier` (Mesa PH02/PH03 and Santa Clara SV01 GC) |
+| unregistered-source · **replaced** | **0** | Every relationship `source` was written by the builders as the exact registered string (membership in `sources[]` asserted before the file was emitted, as in F6) |
+| unregistered-source · **registered** | **0** | Both step-7 edges registered their cited URL in the older dossier in the same edit (southern: the Compass Meridian release; holder: AZ Big Media's PH02 topping-out coverage, plus Interglobix for SV01) — nothing for the checker to find |
+| unregistered-source · **accepted** | **0** | — |
+
+**Step 7 substance, for the record.** The `holder-construction` dossier had
+carried "EdgeCore Mesa, AZ: $1.9B contract" in its summary, highlights, specs
+and developments since v1. Both EdgeCore research agents read the cited
+Construction Dive article and found that its "$1.9B ... job" headline styles
+EdgeCore's January 2024 debt financing as a contract value; the body states
+none. Corrected in v5 to "$1.9B-financed ... contract value undisclosed", with
+SV01 (Santa Clara) added from two independent sources. The `mccarthy` and
+`hitt` mentions of EdgeCore were accurate and were left alone; the `mccarthy`
+dossier's date for the same Construction Dive URL (2023-08-01, against
+2024-01-10) is a source-metadata slip, not a claim about EdgeCore, and was not
+touched.
+
+**Accept-list state.** 14 entries, unchanged — six of them still the
+`investor` ↔ `portfolio` enum gap recorded at X2 and F6. F7 adds no evidence
+either way.
+
+**Cross-reference checker.** Exit 0, no new candidate; one Compass
+`productsAndServices` scope (1,761 characters) joins the not-examined list.
+
+**Side effects.** 133 dossiers on the roster; graph rebuilt to 974 edges
+(727 curated); 40 shared concepts registered (895 total); report pins
+unchanged (X3's job).
+
+
 
 Developed by: LightAISolutions

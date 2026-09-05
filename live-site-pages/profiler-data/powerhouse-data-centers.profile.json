@@ -1,0 +1,1388 @@
+{
+  "schemaVersion": 7,
+  "slug": "powerhouse-data-centers",
+  "name": "PowerHouse Data Centers (a division of American Real Estate Partners)",
+  "shortName": "PowerHouse Data Centers",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://www.powerhousedata.com/",
+  "headquarters": "McLean, Virginia, USA (1660 International Drive, Suite 500 — American Real Estate Partners headquarters)",
+  "founded": 2021,
+  "employees": "Not disclosed; the PowerHouse team page lists 30 named executives and AREP's team page 32",
+  "ownership": {
+    "type": "subsidiary"
+  },
+  "summary": "BOTTOM LINE UP FRONT: PowerHouse Data Centers is the data-center division of American Real Estate Partners (AREP), a private McLean, Virginia fund manager, and a developer of powered core-and-shell and build-to-suit campuses for hyperscalers that it finances project by project through joint ventures with institutional capital (Harrison Street, Blue Owl/Chirisa, Provident, Hillwood, Poe, Town Lane, Pennsylvania Data Center Partners) in which AREP's own funds contribute roughly 5–10% of the equity; its boilerplate has climbed from 57 buildings and 4.1 GW (December 2024) to '140 data centers' and '~10 GW' (September 2026), but only one building is documented as delivered — ABX-1 in Ashburn, leased for 30 years to CyrusOne and sold to it for USD 154.1 million — and its flagship 1.8 GW Joliet Technology Center, annexed 8–1 in March 2026, lost its ComEd transmission security agreement in July 2026 and is now in litigation with the utility and with residents.\n\nBACKGROUND. AREP was founded in 2003 by Douglas Fleit and Brian Katz; PowerHouse was 'co-founded' inside it in 2021, launched publicly through a USD 1 billion joint venture with Harrison Street in January 2022 (six powered shells, 2.1 million sq ft in Northern Virginia) and branded in September 2022. Product per the Approach page: a 'Hyper-Scale Inspired Powered Core & Shell Model' from site selection through operations transfer, 'Minimum N+1 system redundancy baseline', 'PUE design target range of 1.2 to 1.3', turnkey fit-out via Integra Mission Critical, on-site substations to 'shorten the delivery horizon'. Campus list (homepage, with company MW figures): Northern Virginia — ABX-1 (60 MW, sold), Pacific (265 MW, ex-AOL headquarters, under construction), Arcola (120 MW, hyperscale lease January 2026), Quantum Connect (20 MW enterprise suites), PowerHouse 95 in Spotsylvania (900 MW), Chesterfield with Chirisa (CTP-02/03 120 MW fully leased build-to-suit for CoreWeave; 1600 Digital Drive 300 MW+); Texas — Irving (201 MW), Grand Prairie/Ellis County with Provident (1.8 GW switchyard, first 500 MW ERCOT tranche), Circle T in Westlake (300 MW), Red Oak (150 MW), a 500-acre Uhland site; Reno at the Tahoe-Reno Industrial Center (200 MW); Charlotte (380 MW, Duke Energy); Louisville (525 MW page / 402 MW release, LG&E) and Carrollton, Kentucky (USD 9.6 billion, July 2026) with Poe Companies; Carlisle, Pennsylvania (1.35 GW, USD 15 billion) with Pennsylvania Data Center Partners; Hobart (450 MW), Merrillville (750 MW) and La Porte (300 MW), Indiana; and Joliet, Illinois with Hillwood ('1800 MW', 755–795 acres, 24 buildings, '~$20 billion'). Capital: AREP Strategic Opportunity Fund III (USD 63 million, 2022) and Fund IV (USD 309 million, February 2025, 80% to PowerHouse), Harrison Street's USD 3.2 billion committed, the Blue Owl/Chirisa USD 5 billion programme (two USD 750 million tranches), a USD 600 million Société Générale-led construction loan for the CoreWeave building. Collection gap: no revenue, EBITDA, headcount, valuation or lease terms beyond ABX-1's 30 years; tenants are named only at ABX-1 (CyrusOne) and Chesterfield (CoreWeave); no general contractor beyond DPR (ABX-1) and E.E. Reed (Pacific).",
+  "ecosystemRole": "The land-and-entitlement end of the landlord chain: PowerHouse buys or options sites, secures utility capacity and zoning, builds powered shells (and turnkey halls on request), leases them to operators or hyperscalers and, at ABX-1, sold the stabilized building to its tenant. In this corpus it is CoreWeave's Chesterfield landlord through the Blue Owl/Chirisa joint venture, a Dominion Energy and Oncor large-load customer, DPR Construction's client on ABX-1, and the developer whose Joliet transmission security agreement with ComEd — accepted by FERC in March 2026 and cancelled by ComEd in July — is the live test of Illinois's new large-load rules.",
+  "productsAndServices": [
+    {
+      "name": "Powered core-and-shell and build-to-suit campuses for hyperscalers (the core product)",
+      "category": "Wholesale data-center development (powered shell, build-to-suit, turnkey)",
+      "description": "PowerHouse describes itself as a 'key real-estate solutions provider delivering best-in-class BTS shell and full turnkey deployments at scale anywhere in the United States' and 'a developer and owner of next-generation data centers' that 'owns its land sites, offering highly competitive fast-track approvals and zoning approvals'. The Approach page sets out a 'Hyper-Scale Inspired Powered Core & Shell Model' from site selection through operations transfer: 'Minimum N+1 system redundancy baseline', 'PUE design target range of 1.2 to 1.3', the ability to 'quickly pivot to any BTS end-user strategy', turnkey fit-out ('full fit out, equipment procurement and commissioning') through Integra Mission Critical, and target customers 'leading Hyperscalers & OTTs' and 'AI / HPC Deployments'. Fleit (2023): 'hyperscalers and operators are looking for real estate solution providers to handle everything from land identification and acquisition to data center design and construction'.",
+      "highlights": [
+        "The one completed cycle: ABX-1, Ashburn — 265,850 sq ft two-storey powered shell, 60 MW (80 MW maximum) on a 300 MW on-site GIS substation with Dominion, delivered October 2023, leased to CyrusOne for 30 years (May 2023, brokered by Avison Young), then sold to CyrusOne for USD 154.1 million in December 2024 (Commercial Observer; the JV release does not state the price).",
+        "Leases on the record: Arcola — 'long-term hyperscale lease' (January 2026; 'Two long-term hyperscale pre-leases executed' per Harrison Street, February 2026), tenant undisclosed, 615,000 sq ft, 'Up to 120 MW utility capacity', financed by AREP Strategic Opportunity Fund III; Chesterfield CTP-02/03 — 'Build-to-Suit (Fully Leased)' to CoreWeave (120 MW, delivery Q1 2027) under the Blue Owl/Chirisa joint venture; a 'first' 28 MW CoreWeave deal in September 2023 per Bisnow.",
+        "Under construction per the campus pages: Pacific (three three-storey buildings, 1,131,350 sq ft, 265 MW, power Q3 2026, E.E. Reed Construction); Arcola (two buildings, power Q3 2027); PowerHouse 95 (initial delivery Q3 2026); Irving (three 67 MW buildings, first topped out March 2026 per third parties); Reno (three buildings, 900,000 sq ft, completion April 2026 per the page; 2028 per directories).",
+        "Boilerplate progression (company figures): '57 buildings ... over 4.1 GW ... seven major US markets' (December 2024) → '87 buildings across 25.5M SF underway, in planning or delivered, representing over 5.9 GW' (February 2025) → '118 buildings currently in planning, underway, or completed, representing over 8.1 GW of power in eight major U.S. markets' (January 2026) → '140 data centers', '~10 GW', '39.3 million SF', '9 major U.S. markets' (homepage, September 2026). The counts are planning-heavy; ABX-1 is the only building documented as delivered."
+      ],
+      "positioning": "PowerHouse sells 'speed to market' and entitlement certainty rather than a proprietary design: it owns or options the land, brings the substation and the zoning, and lets the tenant choose shell or turnkey. Fleit (2022): a 'unique competitive advantage of an accelerated speed to market while overcoming the challenge of a fierce \"data center land run\"'. Peers in the same markets: Compass, Aligned, EdgeCore, Vantage, Tract and Novva at the Tahoe-Reno Industrial Center; Digital Realty in Charlotte; Provident's other DFW ventures. No first-party page names a competitor.",
+      "soldThrough": "Direct long-term leases to hyperscalers and operators (30-year at ABX-1), brokered where noted (Avison Young); stabilized assets held or sold to the tenant (ABX-1). SVP Asset Management Chaudhry (August 2025): 'In 2027 and 2028, there will start to be a big buying opportunity for those looking to buy stabilized assets ... that have a traditional credit tenant lease'.",
+      "targetSegments": [
+        "Hyperscalers and over-the-top platforms taking whole shells or campuses",
+        "Neoclouds and operators (CoreWeave, CyrusOne) taking build-to-suit or leased shells",
+        "AI/HPC deployments needing GPU and liquid-cooling-ready shells (Arcola: Tier III+/IV-ready)"
+      ],
+      "roadmap": "Per the campus pages: Pacific delivery Q3 2026–Q2 2027; Arcola Q4 2026–Q1 2027; PH95 initial delivery Q3 2026 and power Q3 2027; CTP-02/03 Q1 2027; Irving through Q1 2027; Grand Prairie Q1 2027 (the February 2025 release had said first power May 2026); Charlotte power Q2 2027; Louisville first building and 130 MW in Q4 2026; Carlisle 300 MW by Q2 2027; Hobart power Q2 2027; Joliet initial delivery Q3 2028 (now contested)."
+    },
+    {
+      "name": "Utility-first campus development — land, substations and entitlements ('powered land')",
+      "category": "Site acquisition, power procurement and entitlement",
+      "description": "PowerHouse's differentiator is the order of operations: it buys or options large parcels, secures utility capacity and builds or funds the substation before the tenant is signed. It employs a 'Senior Vice President, Data Center Utilities' (Will McCausland, ex-Dominion Energy) and pursues on-site or dedicated substations at every campus: a 300 MW GIS substation with Dominion at ABX-1 (phased 15/7/8/60 MW deliveries), a 'first of its kind' GIS substation at Arcola Grove approved by Loudoun's supervisors 5–4 after the planning commission recommended denial 7–2, three 300 MW substations planned at PowerHouse 95, an Oncor-served Irving site and an Oncor 350 MW substation 'funded by PowerHouse' at Circle T (per a Texas trade site), a '1.8 GW switchyard' at Grand Prairie with the 'first 500MW tranche approved through ERCOT', a 25-acre switching station to be conveyed to ComEd at Joliet, an LG&E switch station for Louisville and 450 MW substations for each Carlisle campus.",
+      "highlights": [
+        "Joliet Technology Center (with Hillwood, petitioner 'PowerHouse Hillwood Holding, LLC'): 795 acres conditionally annexed 8–1 on 19 March 2026 after a hearing of more than six hours; city terms — all transmission upgrades 'funded by the developer', a 150,000 gallons-a-day water cap with a triple penalty, Tier 4 generators, a USD 100 million community-benefit contribution (USD 20 million within 30 days of closing), no city incentives or abatements; FERC accepted ComEd's transmission security agreement with PowerHouse Hillwood on 11 March 2026 over Illinois Attorney General objections; ComEd cancelled it on 24 July 2026 over 'security deposit timing'; PowerHouse Hillwood asked FERC on 14 August to reject the cancellation and sued ComEd in the Northern District of Illinois; residents' suit (Open Meetings Act, due process) has a 8 September 2026 hearing.",
+        "Grand Prairie / Ellis County (with Provident): '768-acre' (release) or '810 Acres' (page), 24 buildings in three phases (release) or 28 in four (page), '8.5M SF', 1.8 GW switchyard; first power slipped from 'May 2026' (February 2025 release) to Q1 2027 (campus page).",
+        "Texas entitlement tactics: a petition in May 2026 to release a 500-acre Caldwell Valley Technology Park site from the City of Uhland's extraterritorial jurisdiction into Caldwell County, where counties cannot zone, impose moratoria or deny permits ('substantial pushback'; PowerHouse declined to comment); Westlake Planning & Zoning approval of the Circle T plan in August 2026 with later buildings needing special-use permits.",
+        "Power-constrained markets: Dominion bridging power at ABX-1 during Loudoun's 2022–2026 allocation constraints; Reno's '65+ MW bridging power'; Chesterfield's 300 MW secured with a 1 GW goal at 1600 Digital Drive."
+      ],
+      "positioning": "On-site substation land 'can significantly shorten the delivery horizon' (Approach page). The model front-loads the two scarce inputs — grid capacity and zoning — and treats the building as the commodity; the risk, visible at Joliet, is that a utility's contract terms or a council vote can cancel a gigawatt of 'pipeline' that has already entered the company's boilerplate.",
+      "soldThrough": "Sites held in project entities (Powerhouse Arcola LLC, PowerHouse Hillwood Holding, LLC, HW Technology Park Development LLC) with JV partners; utility capacity contracted through electric service and transmission security agreements.",
+      "targetSegments": [
+        "Hyperscale programmes of 300 MW to 1.8 GW per campus",
+        "Utilities and cooperatives with capacity to allocate (Dominion, Oncor, ComEd, LG&E, Duke Energy, PPL, NV Energy)"
+      ],
+      "roadmap": "Joliet construction 'early 2027', first sub-campus 2028, full build-out 2032 (per the March 2026 approval), subject to the ComEd dispute; Grand Prairie first energisation Q1 2027; Carlisle Phase 1 and power Q2 2027; Louisville LG&E switch station September 2026."
+    },
+    {
+      "name": "Programmatic joint-venture capital model (AREP funds plus institutional partners)",
+      "category": "Capital programme",
+      "description": "PowerHouse funds development 'through Joint Venture Agreements between capital partners and AREP' (Approach page). Katz (New Project Media, 2025): deals are structured '90/10 ... AREP contributes 10% of the equity while large institutional partners provide 90%', and the Blue Owl programme '95/5'; AREP's Strategic Opportunity Fund IV is a 'USD 300m GP fund with over USD 9bn total buying power' targeting '12-to-15 new PowerHouse projects'. Fund IV closed at 'USD 309 million' in February 2025 with '80% ... allocated to expanding AREP's data center platform, PowerHouse', investors 'predominantly repeat' ultra-high-net-worth and institutional (Commercial Observer); Fund III (USD 63 million, 2022) finances Arcola.",
+      "highlights": [
+        "Harrison Street: USD 1 billion joint venture (January 2022) grown to 'committed $3.2 billion to develop powered shell data centers representing nearly 6 million square feet' across Northern Virginia, Dallas and Reno (December 2024); Harrison Street Asset Management '$108 billion in AUM' (February 2026).",
+        "Blue Owl Real Estate (NYSE: OWL) and Chirisa Technology Parks: a 'USD 5 billion' programme launched August 2024 with a first USD 750 million tranche and a second USD 750 million tranche closed May 2025 for 120 MW at Chesterfield for CoreWeave; a USD 600 million construction loan led by Société Générale and arranged by Newmark for the 50 MW CoreWeave build-to-suit (December 2024). PowerHouse is not named in the August 2025 'USD 4 billion' Blue Owl/Chirisa/Machine Investment Group close for CoreWeave (Lancaster and Chesterfield).",
+        "Other JVs: Provident (Grand Prairie, 'first joint venture effort'); Hillwood Investment Properties (Joliet, 'PowerHouse Hillwood Holding, LLC'); Poe Companies (Louisville, Carrollton); Town Lane (Charlotte land, about USD 45.5 million for 122 acres); Pennsylvania Data Center Partners (Carlisle, USD 15 billion, USD 44 million land).",
+        "Exit: ABX-1 sold to its tenant CyrusOne for USD 154.1 million (December 2024). No construction loan, credit facility or valuation for PowerHouse or AREP as a whole is disclosed; the debt on the record is the USD 600 million SocGen loan and a 'USD 586m' Harrison Street Ashburn financing cited by Katz."
+      ],
+      "positioning": "A general-partner model: AREP supplies the team, the sites and 5–10% of the equity, and earns on the 90–95% it places — which is why the 'pipeline' figure is the product it sells to capital partners, and why the same building can appear in two partners' announcements.",
+      "soldThrough": "Discretionary AREP funds (UHNW and institutional LPs) as GP co-investment; programmatic and project-level JVs with institutional real-estate and private-credit managers; asset sales to tenants.",
+      "targetSegments": [
+        "Institutional real-estate and infrastructure capital (Harrison Street, Blue Owl, Davidson Kempner per Commercial Observer)",
+        "Regional developers with land (Hillwood, Provident, Poe, Town Lane)"
+      ],
+      "roadmap": "'12-to-15 new PowerHouse projects' from Fund IV (Katz); Fund V not announced."
+    },
+    {
+      "name": "Turnkey fit-out and enterprise suites (Integra Mission Critical; Quantum Connect)",
+      "category": "Turnkey delivery and enterprise colocation",
+      "description": "Beyond shells, PowerHouse offers 'full turnkey deployments' through Integra Mission Critical ('full fit out, equipment procurement and commissioning', Approach page) and, in Ashburn's Quantum Park, Quantum Connect — a 20 MW facility of '1-3MW private suites' with 'Up to 30kW' racks for enterprises 'too large for retail colocation yet underserved by hyperscale' (January 2025, availability late 2026), developed with ASG.",
+      "highlights": [
+        "Arcola's buildings are marketed as 'Tier III+/IV-ready with GPU and liquid-cooled support'; the Chirisa JV cites a 'Liquid cooling system nearly twice as efficient as air-cooled'.",
+        "Sustainability claims: iMasons Climate Accord member since January 2023, 'Journey to Net Zero', a reuse-water system at PowerHouse 95 'operational by early 2027', the 'industry's first data center project Sustainability Index with BALA'; no dated carbon or water targets and no ESG report."
+      ],
+      "positioning": "A minor line next to the shell business; it widens the tenant base below hyperscale and lets the developer capture fit-out margin when a tenant wants it.",
+      "soldThrough": "Direct; Integra Mission Critical as delivery partner; ASG for Quantum Connect.",
+      "targetSegments": [
+        "Enterprises needing 1–3 MW private suites in Ashburn",
+        "Tenants requiring turnkey rather than shell delivery"
+      ],
+      "roadmap": "Quantum Connect availability 'Late 2026'."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "PowerHouse ABX-1, Ashburn, Virginia — the delivered and sold building",
+      "specs": [
+        {
+          "band": "Building",
+          "label": "Size",
+          "value": "265,850 SF; two-story powered shell; 10 Acres"
+        },
+        {
+          "band": "Building",
+          "label": "Capacity",
+          "value": "60 MW (80 MW maximum)"
+        },
+        {
+          "band": "Power",
+          "label": "Substation",
+          "value": "300 MW on-site GIS substation with Dominion; 15 MW immediately available; 7 MW additional (January 2024); 8 MW additional (January 2025); 60 MW additional (late 2025)"
+        },
+        {
+          "band": "Tenancy",
+          "label": "Lease",
+          "value": "CyrusOne — 30-year lease (announced 12 May 2023); brokered by Avison Young"
+        },
+        {
+          "band": "Delivery",
+          "label": "Completed",
+          "value": "October 2023; general contractor DPR Construction"
+        },
+        {
+          "band": "Exit",
+          "label": "Sale",
+          "value": "Sold to CyrusOne for $154.1 million (10 December 2024); SOLD Q4 2024 (campus page)"
+        },
+        {
+          "band": "Capital",
+          "label": "JV",
+          "value": "Harrison Street joint venture — $3.2 billion committed, nearly 6 million square feet across Northern Virginia, Dallas and Reno (December 2024)"
+        }
+      ],
+      "notes": "Campus page, the 2023 lease release, Commercial Observer and the Harrison Street sale release. Square footage appears as 265,850 (page), 265,580 (release) and 265,000 (press)."
+    },
+    {
+      "product": "Joliet Technology Center (PowerHouse Joliet), Joliet, Illinois — with Hillwood",
+      "specs": [
+        {
+          "band": "Campus",
+          "label": "Power",
+          "value": "1800 MW (page); Up to 1.8 GW; annual electricity consumption of 1,800 megawatts (MW) (city memo)"
+        },
+        {
+          "band": "Campus",
+          "label": "Land",
+          "value": "755 Acres (page); ~795 acres conditionally annexed (city)"
+        },
+        {
+          "band": "Campus",
+          "label": "Buildings",
+          "value": "Up to 24 (page); 24 principal data center buildings ... 6,936,000 gross square feet (city memo); 24 two-story structures of roughly 144,500 square feet each (Data Center Frontier)"
+        },
+        {
+          "band": "Campus",
+          "label": "Investment",
+          "value": "~$20 billion of private investment"
+        },
+        {
+          "band": "Entitlement",
+          "label": "Approval",
+          "value": "Joliet City Council conditional annexation, 8–1, 19 March 2026; petitioner PowerHouse Hillwood Holding, LLC; applicant HW Technology Park Development LLC"
+        },
+        {
+          "band": "Terms",
+          "label": "Community",
+          "value": "$100 million community benefit contribution; $20 million within 30 days of closing; no city incentives or abatements"
+        },
+        {
+          "band": "Terms",
+          "label": "Water and noise",
+          "value": "150,000 gallons per day cap with 3x penalty; closed-loop system that recycles water; Tier 4 generators; ≤65 dB"
+        },
+        {
+          "band": "Terms",
+          "label": "Grid",
+          "value": "All required transmission and infrastructure improvements ... funded by the developer; 25-acre switching station to be conveyed to ComEd; PJM approval required"
+        },
+        {
+          "band": "Status",
+          "label": "Utility contract",
+          "value": "ComEd transmission security agreement accepted by FERC 11 March 2026; cancelled by ComEd 24 July 2026 (security deposit timing); PowerHouse Hillwood FERC challenge 14 August 2026 and suit in N.D. Ill.; residents' suit hearing 8 September 2026"
+        },
+        {
+          "band": "Schedule",
+          "label": "Delivery",
+          "value": "Q3 2028 initial delivery (page); construction begins early 2027; full build-out through 2032 (press)"
+        }
+      ],
+      "notes": "PowerHouse campus page, the Joliet Technology Center project site, the City of Joliet staff memo (File #178-26, 16 March 2026), Data Center Frontier, The Herald-News, Patch, Utility Dive and Rock River Current."
+    },
+    {
+      "product": "PowerHouse Grand Prairie (Ellis County), Texas — with Provident",
+      "specs": [
+        {
+          "band": "Campus",
+          "label": "Land",
+          "value": "768-acre (release, February 2025); 810 Acres (page)"
+        },
+        {
+          "band": "Campus",
+          "label": "Buildings",
+          "value": "24 buildings across three phases (release); 28 in 4 phases; 8.5M SF (page)"
+        },
+        {
+          "band": "Power",
+          "label": "Switchyard",
+          "value": "1.8 GW switchyard planned"
+        },
+        {
+          "band": "Power",
+          "label": "ERCOT",
+          "value": "First 500 MW tranche approved through ERCOT"
+        },
+        {
+          "band": "Schedule",
+          "label": "First power",
+          "value": "Initial power delivery: May 2026 (release) → Q1 2027 delivery (page)"
+        },
+        {
+          "band": "Capital",
+          "label": "JV",
+          "value": "Provident Data Centers (Leon Backes, founder and CEO) — co-developing the project as their first joint venture effort"
+        }
+      ],
+      "notes": "PR Newswire release (25 February 2025), the Provident Data Centers copy, Dallas Innovates and the campus page."
+    },
+    {
+      "product": "PowerHouse Arcola (Arcola Grove), Loudoun County, Virginia",
+      "specs": [
+        {
+          "band": "Campus",
+          "label": "Capacity",
+          "value": "Up to 120 MW utility capacity"
+        },
+        {
+          "band": "Campus",
+          "label": "Buildings",
+          "value": "two two-story buildings; 615,000 SF; 37-acre (release) / 30 Acres (page)"
+        },
+        {
+          "band": "Design",
+          "label": "Readiness",
+          "value": "Tier III+/IV-ready with GPU and liquid-cooled support; on-site substations; dark fiber to Ashburn and Manassas"
+        },
+        {
+          "band": "Leasing",
+          "label": "Status",
+          "value": "long-term hyperscale lease (15 January 2026); Two long-term hyperscale pre-leases executed (Harrison Street, February 2026); tenant undisclosed"
+        },
+        {
+          "band": "Capital",
+          "label": "Funding",
+          "value": "AREP Strategic Opportunity Fund III"
+        },
+        {
+          "band": "Entitlement",
+          "label": "Rezoning",
+          "value": "Arcola Grove Rezoning (LEGI-2023-0071) approved 5–4 after the Planning Commission recommended denial 7–2; first-of-its-kind GIS substation, footprint reduced from 4 acres to 2.4 acres; nearest home 468 feet"
+        },
+        {
+          "band": "Schedule",
+          "label": "Delivery",
+          "value": "Q4 2026 - Q1 2027; power Q3 2027 (page); Building A August 2025 / Building B September 2026 (directory, unverified)"
+        }
+      ],
+      "notes": "PR Newswire release (15 January 2026), Harrison Street release (12 February 2026), the campus page, Loudoun Now and the Piedmont Environmental Council."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-03",
+      "category": "legal",
+      "headline": "Rock River Current: ComEd has scrapped four transmission security agreements including 'Powerhouse Hillwood Holding in Joliet'; PowerHouse Hillwood 'filed suit in the U.S. District Court of Northern Illinois against ComEd over the termination'",
+      "read": "The 1.8 GW flagship now depends on a federal court and FERC, not a council vote — the first time a PowerHouse campus has been stopped by its utility rather than its neighbours.",
+      "source": "https://www.rockrivercurrent.com/2026/09/heres-where-rockford-data-center-plans-stand-after-cancellation-of-comed-energy-deal/"
+    },
+    {
+      "date": "2026-08-24",
+      "category": "regulatory",
+      "headline": "Utility Dive: PowerHouse Hillwood 'urged FERC on August 14 to reject ComEd's \"notice of cancellation\"' of its transmission security agreement; the dispute 'centers on security deposit timing'; ComEd also cancelled the pending ICC retail service agreement",
+      "read": "Illinois's new large-load rules bite on deposits: the developer that promised to fund every upgrade is arguing about when the money is due.",
+      "source": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/"
+    },
+    {
+      "date": "2026-08-17",
+      "category": "legal",
+      "headline": "Residents' suit (Joliet Residents for Responsible Growth) against the City of Joliet, Powerhouse Hillwood Holding, HW Technology Park Development and American Real Estate Partners set for a motion hearing on 8 September 2026",
+      "read": "Two parallel legal threats — the utility's and the residents' — on the same campus.",
+      "source": "https://www.shawlocal.com/the-herald-news/2026/08/18/lawsuit-against-joliet-data-center-heading-to-court-hearing/"
+    },
+    {
+      "date": "2026-08-07",
+      "category": "project",
+      "headline": "Westlake, Texas Planning & Zoning approves PowerHouse's Circle T plan: 87.96 acres, four buildings, '300 MW total', an Oncor '350 MW substation funded by PowerHouse', first building by right",
+      "read": "A fourth DFW site on Hillwood ranch land, with the developer again paying for the substation.",
+      "source": "https://usdatacenterprojects.com/texas/powerhouse-files-plans-for-300-mw-circle-t-data-center-campus-in-westlake-texas"
+    },
+    {
+      "date": "2026-07-31",
+      "category": "regulatory",
+      "headline": "Utility Dive: a Commonwealth Edison subsidiary 'on July 24 told the Federal Energy Regulatory Commission it had canceled a previously approved TSA with PowerHouse Hillwood Holding'",
+      "read": "The Joliet grid contract lasted four months from FERC acceptance to cancellation.",
+      "source": "https://www.utilitydive.com/news/exelon-data-center-load-new-jersey-battery-earnings/826686/"
+    },
+    {
+      "date": "2026-07-23",
+      "category": "project",
+      "headline": "Poe Companies and PowerHouse pitch a 'USD 9.6 billion' Carrollton Industrial Campus in Carroll County, Kentucky: 500-acre site east of I-71, LG&E 'confirmed capacity', 'USD 3.7 million' KBI incentive, 'Purchase options secured'",
+      "read": "A second Kentucky campus announced from purchase options while the first (Louisville) is still in site work.",
+      "source": "https://finance.yahoo.com/technology/articles/louisville-based-developer-plans-9-144212137.html"
+    },
+    {
+      "date": "2026-06-03",
+      "category": "regulatory",
+      "headline": "Louisville council members propose a moratorium on hyperscale data centers; the Rubbertown project is exempt as 'already approved under current zoning rules as a \"telecommunications hotel\"' and is described as under construction",
+      "read": "Grandfathered by a zoning classification written for another era — the entitlement-first model working as designed.",
+      "source": "https://spectrumnews1.com/ky/louisville/news/2026/06/03/data-centers-moratorium"
+    },
+    {
+      "date": "2026-05-26",
+      "category": "legal",
+      "headline": "Lawsuit filed in Will County (18 May) seeks to void Joliet's annexation, rezoning and planned-unit development approvals on Open Meetings Act and due-process grounds",
+      "read": "The council's 8–1 vote was the beginning of the fight, not the end.",
+      "source": "https://www.shawlocal.com/the-herald-news/2026/05/26/lawsuit-challenges-zoning-approval-process-for-joliet-data-center/"
+    },
+    {
+      "date": "2026-05-05",
+      "category": "regulatory",
+      "headline": "Bisnow: PowerHouse 'filed a petition to remove the project from Uhland's jurisdiction' for a 500-acre campus in the 3,600-acre Caldwell Valley Technology Park near Austin; 'substantial pushback' at an open house; PowerHouse declined to comment",
+      "read": "Moving a site from a city's extraterritorial jurisdiction into a county that cannot zone is an entitlement tactic, and it is now public.",
+      "source": "https://www.bisnow.com/austin/news/data-center-development/powerhouse-plans-austin-suburb-data-center-skirt-city-control-134437"
+    },
+    {
+      "date": "2026-04-13",
+      "category": "project",
+      "headline": "Data Center Frontier profiles the Joliet campus: 'USD 20 billion', 24 two-storey buildings of about 144,500 sq ft, 'Up to 1.8 GW', first building 2028, five-to-seven-year build; community package 'up to USD 100 million'",
+      "read": "The scale that put PowerHouse on the coverage plan — and every figure is a plan, not a building.",
+      "source": "https://www.datacenterfrontier.com/site-selection/article/55367747/hillwood-powerhouse-advance-20b-joliet-data-campus-as-midwest-ai-buildout-accelerates"
+    },
+    {
+      "date": "2026-03-23",
+      "category": "regulatory",
+      "headline": "Illinois Commerce Commission approves ComEd's large-load tariff: 'USD 500K additional deposit per 100 MW threshold above 200 MW', developer-funded substations and transmission, ComEd may retain deposits from projects that fail; about 100 projects and 35,000 MW in the queue",
+      "read": "The rules that four months later produced the Joliet cancellation.",
+      "source": "https://www.bisnow.com/chicago/news/data-center-development/joliet-oks-20b-data-center-as-illinois-seeks-to-make-large-developers-pay-more-for-projects-133777"
+    },
+    {
+      "date": "2026-03-19",
+      "category": "regulatory",
+      "headline": "Joliet City Council approves the Joliet Technology Center's conditional annexation and preliminary plans 8–1 after a hearing of more than 6.5 hours; 'USD 2.1 billion' in 30-year taxes projected; 'USD 100 million additional from Hillwood to city'; construction 'early 2027'",
+      "read": "Consent secured on the developer's terms: no incentives, developer-funded upgrades, a water cap and a USD 100 million community payment.",
+      "source": "https://www.shawlocal.com/the-herald-news/2026/03/20/joliet-oks-controversial-795-acre-data-center/"
+    },
+    {
+      "date": "2026-03-11",
+      "category": "regulatory",
+      "headline": "FERC accepts five ComEd transmission security agreements including 'PowerHouse Hillwood Holding' over Illinois Attorney General objections that the safeguards 'do not prevent existing customers from paying the costs'",
+      "read": "The federal acceptance that the July cancellation reversed.",
+      "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/"
+    },
+    {
+      "date": "2026-03-05",
+      "category": "regulatory",
+      "headline": "Louisville Metro Planning Commission approves the revised Rubbertown site plan 6–1: seven buildings, 1.6 million sq ft, '400 megawatts', LG&E and Louisville Water; heavy opposition; no Metro Council approval required",
+      "read": "Kentucky's first hyperscale campus clears its only vote.",
+      "source": "https://www.lpm.org/news/2026-03-05/west-louisville-data-center-approved-despite-opposition"
+    },
+    {
+      "date": "2026-02-12",
+      "category": "customer",
+      "headline": "Harrison Street: 'Two long-term hyperscale pre-leases executed' at PowerHouse Arcola — a leasing milestone for the joint venture",
+      "read": "The capital partner discloses two pre-leases where PowerHouse's own release said one; the tenant stays unnamed.",
+      "source": "https://harrisonst.com/harrison-street-asset-management-achieves-leasing-milestone-with-hyperscale-pre-leasing-at-powerhouse-arcola/"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "customer",
+      "headline": "PowerHouse executes a 'long-term hyperscale lease' at PowerHouse Arcola (37 acres, 615,000 sq ft, up to 120 MW), funded by AREP Strategic Opportunity Fund III; boilerplate '118 buildings ... over 8.1 GW ... eight major U.S. markets'",
+      "read": "The second hyperscale lease in the company's history after CyrusOne's, and the first funded from AREP's own fund rather than a JV.",
+      "source": "https://www.prnewswire.com/news-releases/powerhouse-data-centers-executes-hyperscale-lease-at-powerhouse-arcola-advancing-northern-virginia-expansion-302661927.html"
+    },
+    {
+      "date": "2025-12-23",
+      "category": "project",
+      "headline": "Middlesex Township, Pennsylvania planning commission recommends the Carlisle subdivision: three six-building campuses, '1.35 GW peak', site bought for 'USD 44 million', 'USD 65 million annually' in projected taxes, resident opposition",
+      "read": "The Pennsylvania joint venture moves from press release to land-use process.",
+      "source": "https://www.govtech.com/artificial-intelligence/cumberland-county-pa-data-centers-take-new-step-forward"
+    },
+    {
+      "date": "2025-07-15",
+      "category": "project",
+      "headline": "Carlisle, Pennsylvania joint venture with Pennsylvania Data Center Partners: '1.35 GW' expandable to 1.8 GW, 'USD 15 billion', about 700 acres, PPL Electric Utilities, 300 MW by Q2 2027; Senator McCormick quoted",
+      "read": "A third 1 GW-class site announced within six months, each with a different JV partner.",
+      "source": "https://www.powerhousedata.com/news/pennsylvania-data-center-partners-and-powerhouse-data-centers-launch-joint-venture-to-build-next-gen-1-35-gw-hyperscale-data-center-campus-in-carlisle-pennsylvania"
+    },
+    {
+      "date": "2025-06-04",
+      "category": "leadership",
+      "headline": "John Adametz (SVP Development & Construction, ex-Meta, 32 years US Navy Civil Engineer Corps) and Vardahn Chaudhry (SVP Asset Management, ex-JBG SMITH) join; boilerplate '24+ million square feet and 6.1 GW across six U.S. markets'",
+      "read": "Hyperscaler-side construction leadership and an asset-management function for a portfolio that will start stabilizing in 2026–2027.",
+      "source": "https://www.powerhousedata.com/news/powerhouse-strengthens-core-leadership-portfolio-with-dual-strategic-appointments"
+    },
+    {
+      "date": "2025-05-27",
+      "category": "financial",
+      "headline": "Blue Owl, Chirisa Technology Parks and PowerHouse close the second 'USD 750 million' tranche of the 'USD 5 billion' programme: 120 MW at Chesterfield for CoreWeave, delivery 2025–2026",
+      "read": "The only PowerHouse programme with a named neocloud tenant; PowerHouse is absent from the partners' August 2025 USD 4 billion close.",
+      "source": "https://www.powerhousedata.com/news/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership"
+    },
+    {
+      "date": "2025-02-25",
+      "category": "project",
+      "headline": "Grand Prairie/Ellis County campus with Provident: 768 acres, 24 buildings in three phases, a '1.8 GW switchyard', 'First 500 MW tranche approved through ERCOT', first power May 2026",
+      "read": "The other '1.8 GW' in PowerHouse's portfolio; the first-power date has since moved to Q1 2027.",
+      "source": "https://www.prnewswire.com/news-releases/powerhouse-and-provident-rewrite-the-data-center-playbook-with-new-texas-hyperscale-campus-302384924.html"
+    },
+    {
+      "date": "2025-02-18",
+      "category": "financial",
+      "headline": "AREP Strategic Opportunity Fund IV closes oversubscribed at 'USD 309 million' with '80% of Fund IV allocated to expanding AREP's data center platform, PowerHouse'; Katz: a USD 300 million GP fund with 'over USD 9bn total buying power'",
+      "read": "The GP fund that seeds 12–15 projects at 5–10% of the equity — the engine behind the boilerplate's growth from 4.1 GW to 10 GW.",
+      "source": "https://www.powerhousedata.com/news/arep-fund-iv-oversubscribed-at-309m"
+    },
+    {
+      "date": "2025-01-16",
+      "category": "project",
+      "headline": "Louisville, Kentucky campus with Poe Companies: '400 MW' campus, '335 MW initial power capacity secured', LG&E's first major data-center customer, first building and 130 MW in Q4 2026",
+      "read": "Kentucky entered on a utility's first large-load contract.",
+      "source": "https://www.powerhousedata.com/news/powerhouse-data-centers-and-poe-companies-partner-to-develop-kentuckys-first-hyperscale-data-center-campus"
+    },
+    {
+      "date": "2024-12-17",
+      "category": "ma",
+      "headline": "Harrison Street and PowerHouse sell ABX-1 (265,580 sq ft, 60 MW, leased to CyrusOne) to CyrusOne — 'USD 154.1 million' per Commercial Observer; the JV has 'committed $3.2 billion'; boilerplate '57 buildings ... over 4.1 GW'",
+      "read": "The full cycle — buy land, build the substation, lease for 30 years, sell to the tenant — completed once, 14 months after delivery.",
+      "source": "https://harrisonst.com/wp-content/uploads/2024/12/Harrison-Street-and-PowerHouse-Data-Centers-Sell-Powered-Shell-Data-Center.pdf"
+    },
+    {
+      "date": "2024-12-16",
+      "category": "financial",
+      "headline": "'USD 600 million' construction loan led by Société Générale and arranged by Newmark for the 50 MW CoreWeave build-to-suit near Richmond under the Blue Owl/Chirisa/PowerHouse joint venture",
+      "read": "The only construction loan on the public record for a PowerHouse project.",
+      "source": "https://www.bisnow.com/national/news/data-center/coreweave-data-center-in-virginia-lands-600m-loan-127230"
+    },
+    {
+      "date": "2024-10-04",
+      "category": "regulatory",
+      "headline": "Loudoun County planning commissioners recommend denial (7–2) of the Arcola substation and expanded data center; Fleit appears personally; the supervisors later approve the rezoning 5–4",
+      "read": "A GIS substation 468 feet from homes became the test case for Loudoun's tightening posture — and passed by one vote.",
+      "source": "https://www.loudounnow.com/news/county-planners-recommend-denial-of-arcola-substation-expanded-data-center/article_e865f8b6-825c-11ef-aa50-0fdc2e5d7809.html"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "coreweave",
+      "type": "customer",
+      "note": "Tenant of the 120 MW Chesterfield build-to-suit (CTP-02/03) under the Blue Owl/Chirisa/PowerHouse joint venture; a 50 MW CoreWeave building carries the USD 600 million SocGen-led loan.",
+      "context": "PowerHouse's May 2025 release on the second USD 750 million tranche states the 120 MW at Chirisa Technology Parks' 350-acre Chesterfield campus 'will support CoreWeave'; the campus page lists CTP-02 and CTP-03 as 'Build-to-Suit (Fully Leased)' with Q1 2027 delivery; Bisnow (December 2024) reports the USD 600 million construction loan for a '50-megawatt build-to-suit facility' leased to CoreWeave and a prior '28 MW deal signed September 2023'.\n\nNot supported: PowerHouse's role in the August 2025 'USD 4 billion' Blue Owl/Chirisa/Machine Investment Group close for CoreWeave's Lancaster and Chesterfield sites — Commercial Property Executive's coverage does not name PowerHouse.",
+      "source": "https://www.powerhousedata.com/news/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership",
+      "status": "active",
+      "since": "2023-09",
+      "scale": "120 MW",
+      "via": "Blue Owl / Chirisa Technology Parks joint venture"
+    },
+    {
+      "slug": "dominion-energy",
+      "type": "supplier",
+      "note": "Utility for the Northern Virginia and Chesterfield campuses; built the 300 MW GIS substation on the ABX-1 site.",
+      "context": "Commercial Observer (December 2024): 'Dominion Energy is building a 300-megawatt substation on the property, expected to be energized by early 2025' at ABX-1, with bridging power during Loudoun's allocation constraints; the Pacific site release names Dominion for the ex-AOL campus; the Chesterfield 1600 Digital Drive release cites Dominion's Meadowville substation; Dominion is listed on PowerHouse's partners page and SVP Data Center Utilities Will McCausland held 'leadership positions at Virginia's Dominion Energy'.",
+      "source": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/",
+      "status": "active",
+      "since": "2022"
+    },
+    {
+      "slug": "oncor",
+      "type": "supplier",
+      "note": "Utility for the Irving campus and the planned Circle T substation.",
+      "context": "The May 2024 Irving land-close release names 'Oncor (largest energy delivery company in Texas)' as the utility for the 200 MW campus; a Texas trade site's August 2026 report on Circle T cites an Oncor '350 MW substation funded by PowerHouse' (Westlake). The Grand Prairie campus is described by ERCOT tranche rather than by utility.",
+      "source": "https://www.powerhousedata.com/news/powerhouse-closes-on-irving-las-colinas-site-entering-dallas-fort-worth-market-to-develop-new-state-of-the-art-data-center-campus",
+      "status": "active",
+      "since": "2024-05"
+    },
+    {
+      "slug": "dpr",
+      "type": "supplier",
+      "note": "General contractor of ABX-1, PowerHouse's first and only delivered building; listed on the partners page; SVP Jeff Parsons is ex-DPR.",
+      "context": "The May 2023 CyrusOne lease release names DPR Construction as ABX-1's general contractor; DPR appears on PowerHouse's partners page alongside Corgan, kW Mission Critical, Greenway, Dominion and Integra; Jeff Parsons (SVP Development & Construction, Dallas, joined April 2025) spent more than ten years at DPR. No GC is named for any later PowerHouse campus except E.E. Reed at Pacific.",
+      "source": "https://www.powerhousedata.com/news/powerhouse-data-centers-announces-lease-agreement-with-cyrusone-for-abx-1-data-center-powered-shell",
+      "status": "active",
+      "since": "2022"
+    },
+    {
+      "slug": "meta",
+      "type": "other",
+      "note": "Claimed customer in a company award release and talent source (SVP John Adametz, ex-Meta); named by the Joliet developers as a potential tenant.",
+      "context": "PowerHouse's December 2025 release on Karen Petersburg's DCD award says she has led 'campuses for AWS, Google, Meta, Microsoft, and CoreWeave' — a company claim with no campus-level Meta lease disclosed anywhere; Adametz joined in June 2025 from Meta, where he 'Led partner strategy for leased capacity'; The Real Deal reports the Joliet developers naming 'Google, Amazon, Meta and Oracle' as potential tenants while 'Hillwood has not said which companies would be tenants'.",
+      "source": "https://www.powerhousedata.com/news/powerhouse-data-centers-karen-petersburg-named-dcd-woman-of-the-year-at-its-2025-global-awards",
+      "status": "announced"
+    },
+    {
+      "slug": "amazon",
+      "type": "other",
+      "note": "Claimed customer in the same award release; SVP Pete McGrath managed Northeast US construction for AWS; Hillwood cites Amazon as a client on the Joliet project site.",
+      "context": "The Petersburg award release lists AWS among the hyperscalers whose campuses she has led; McGrath's August 2024 hiring release credits 'managing Northeast U.S. construction for AWS'; the Joliet Technology Center site's Hillwood profile cites Amazon as a Hillwood client. No AWS lease at a PowerHouse campus is disclosed.",
+      "source": "https://www.powerhousedata.com/news/powerhouse-data-centers-karen-petersburg-named-dcd-woman-of-the-year-at-its-2025-global-awards",
+      "status": "announced"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ComEd transmission security agreements (FERC) and large-load tariff (Illinois)",
+      "status": "in-effect",
+      "effectiveDate": "2026-03-11",
+      "exposure": "FERC accepted ComEd's transmission security agreement with PowerHouse Hillwood Holding on 11 March 2026 over Illinois Attorney General objections; on 24 July 2026 ComEd told FERC it had cancelled the agreement, citing security-deposit timing, and cancelled the pending ICC retail service agreement; PowerHouse Hillwood challenged the cancellation at FERC on 14 August and sued ComEd in the Northern District of Illinois. The ICC's 23 March 2026 tariff order adds a USD 500,000 deposit per 100 MW above 200 MW, developer-funded substations and transmission, and lets ComEd keep deposits from projects that fail. Exposure: the entire 1.8 GW Joliet campus.",
+      "mitigation": "The Joliet annexation terms already commit the developer to fund all transmission upgrades ('will not be passed on to ComEd customers') and convey a 25-acre switching station to ComEd; the company's remedy is litigation, not a changed design.",
+      "source": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/"
+    },
+    {
+      "regime": "Loudoun County zoning (Arcola Grove rezoning, LEGI-2023-0071)",
+      "status": "in-effect",
+      "effectiveDate": "2025-07",
+      "exposure": "The Arcola expansion (a 6.8-acre addition, 786,400 sq ft, 100-ft height and a first-of-its-kind GIS substation) needed a rezoning and special exception; the Planning Commission recommended denial 7–2 in October 2024 and the Board of Supervisors approved 5–4 in 2025, with the Piedmont Environmental Council flagging the substation as precedent-setting and SF6 as a greenhouse-gas concern. Loudoun's posture has tightened since 2024 (Data Center Frontier), and Dominion's allocation constraints ran through January 2026.",
+      "source": "https://www.pecva.org/region/loudoun/loudoun-updates-summer-2025/"
+    },
+    {
+      "regime": "ERCOT large-load interconnection (Grand Prairie)",
+      "status": "in-effect",
+      "effectiveDate": "2025-02",
+      "exposure": "The February 2025 Grand Prairie release states the 'First 500 MW tranche approved through ERCOT' toward a '1.8 GW switchyard'; first energisation has moved from May 2026 to Q1 2027 on the campus page. No SB 6 or PUCT large-load discussion appears in first-party material.",
+      "source": "https://www.prnewswire.com/news-releases/powerhouse-and-provident-rewrite-the-data-center-playbook-with-new-texas-hyperscale-campus-302384924.html"
+    },
+    {
+      "regime": "Texas extraterritorial-jurisdiction release (Uhland / Caldwell County)",
+      "status": "proposed",
+      "effectiveDate": "2026-05",
+      "exposure": "PowerHouse petitioned in May 2026 to release a 500-acre site in the Caldwell Valley Technology Park from the City of Uhland's extraterritorial jurisdiction into Caldwell County, where counties 'cannot control zoning, issue moratoriums, or deny permits'; residents pushed back at an open house and PowerHouse declined to comment. Westlake's Circle T approval (August 2026) requires special-use permits for buildings after the first.",
+      "source": "https://www.bisnow.com/austin/news/data-center-development/powerhouse-plans-austin-suburb-data-center-skirt-city-control-134437"
+    },
+    {
+      "regime": "Local data-center moratoria (Louisville; Merrillville, Indiana)",
+      "status": "proposed",
+      "effectiveDate": "2026-06",
+      "exposure": "Louisville council members proposed a moratorium on hyperscale data centers in June 2026 — the Rubbertown campus is exempt as an already-approved 'telecommunications hotel' under the Land Development Code; the Town of Merrillville, Indiana, where PowerHouse lists a 750 MW site, has a data-center moratorium from 1 June 2026 to 31 May 2027 (developers unnamed).",
+      "source": "https://spectrumnews1.com/ky/louisville/news/2026/06/03/data-centers-moratorium"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Douglas Fleit",
+      "title": "Co-founder & Chief Executive Officer (AREP and PowerHouse)",
+      "photo": "images/execs/powerhouse-data-centers-fleit.jpg",
+      "background": [
+        "Co-founded American Real Estate Partners in 2003 with Brian Katz; 'In 2021, he co-founded PowerHouse Data Centers, AREP's national data center division'",
+        "'deploying over $12 billion in commercial real estate since 1981'; 'over 50 million square feet of transactions throughout his career'; appeared personally before Loudoun's planning commission on the Arcola substation (October 2024)",
+        "BS Psychology & Neurochemistry, University of New Hampshire"
+      ]
+    },
+    {
+      "name": "Brian Katz",
+      "title": "Co-founder & President (AREP and PowerHouse)",
+      "photo": "images/execs/powerhouse-data-centers-katz.jpg",
+      "background": [
+        "Co-founded AREP in 2003; runs 'the firm's discretionary fund business' (Strategic Opportunity Funds III and IV)",
+        "11 years with Cushman & Wakefield's Commercial Brokerage Group in Northern Virginia; Evans Company; began in 1987 as a broker at Julien J. Studley's Virginia office",
+        "MS Real Estate, Johns Hopkins; BA Economics, University of Maryland"
+      ]
+    },
+    {
+      "name": "Sean Bare",
+      "title": "Chief Financial Officer (AREP: Principal & Chief Financial Officer)",
+      "photo": "images/execs/powerhouse-data-centers-bare.jpg",
+      "background": [
+        "Named on the PowerHouse team page; no published biography"
+      ]
+    },
+    {
+      "name": "Paul Schulman",
+      "title": "Chief Operating Officer (AREP: Principal & Chief Operating Officer)",
+      "photo": "images/execs/powerhouse-data-centers-schulman.jpg",
+      "background": [
+        "Named on the PowerHouse team page; no published biography"
+      ]
+    },
+    {
+      "name": "Luke Kipfer",
+      "title": "Managing Director, Development & Construction",
+      "photo": "images/execs/powerhouse-data-centers-kipfer.jpg",
+      "background": [
+        "Promoted in August 2024 from EVP Development and Construction after overseeing 'projects across five markets'",
+        "VP of Data Center Development & Construction at AREP at the October 2023 Pacific site announcement"
+      ]
+    },
+    {
+      "name": "Kyle Fleit",
+      "title": "Managing Director, Acquisitions",
+      "photo": "images/execs/powerhouse-data-centers-kfleit.jpg",
+      "background": [
+        "Named on the PowerHouse team page; no published biography"
+      ]
+    },
+    {
+      "name": "T. J. Sevier",
+      "title": "Managing Director, Asset Management",
+      "photo": "images/execs/powerhouse-data-centers-sevier.jpg",
+      "background": [
+        "Named on the PowerHouse team page; no published biography"
+      ]
+    },
+    {
+      "name": "Patrick Pline",
+      "title": "Senior Vice President, Acquisitions & Development",
+      "photo": "images/execs/powerhouse-data-centers-pline.jpg",
+      "background": [
+        "Promoted in August 2024 from VP Development & Construction",
+        "'approximately $2 billion in construction projects, including PowerHouse ABX-1 and U.S. Customs and Border Protection headquarters in Ashburn'"
+      ]
+    },
+    {
+      "name": "Karen Petersburg",
+      "title": "Senior Vice President, Data Center Design & Engineering",
+      "photo": "images/execs/powerhouse-data-centers-petersburg.jpg",
+      "background": [
+        "DCD Woman of the Year 2025; led the Southwest expansion (Reno, Texas) and the sustainability/ESG programme including the 'industry's first data center project Sustainability Index with BALA'",
+        "Leads the 7x24 Exchange DC chapter; Green Building Initiative Member of the Year 2024; titled 'Vice President of Development & Construction, LEED AP' in the December 2025 award release"
+      ]
+    },
+    {
+      "name": "John Adametz",
+      "title": "Senior Vice President, Development & Construction",
+      "photo": "images/execs/powerhouse-data-centers-adametz.jpg",
+      "background": [
+        "Joined June 2025",
+        "Meta — 'Led partner strategy for leased capacity and design on multi-gigawatt campuses'",
+        "32 years in the US Navy Civil Engineer Corps"
+      ]
+    },
+    {
+      "name": "Pete McGrath",
+      "title": "Senior Vice President, Development & Construction",
+      "photo": "images/execs/powerhouse-data-centers-mcgrath.jpg",
+      "background": [
+        "Joined August 2024 as VP; 'over three decades' in construction",
+        "'managing Northeast U.S. construction for AWS'"
+      ]
+    },
+    {
+      "name": "Jeff Parsons",
+      "title": "Senior Vice President, Development & Construction",
+      "photo": "images/execs/powerhouse-data-centers-parsons.jpg",
+      "background": [
+        "Joined April 2025 to lead the Dallas team",
+        "More than ten years at DPR Construction, leading a 'construction team of 800'",
+        "Texas A&M University"
+      ]
+    },
+    {
+      "name": "Vardahn Chaudhry",
+      "title": "Senior Vice President, Asset Management",
+      "photo": "images/execs/powerhouse-data-centers-chaudhry.jpg",
+      "background": [
+        "Joined June 2025",
+        "VP of Investments, JBG SMITH ('$85 million digital infrastructure and venture capital portfolio'); Accenture",
+        "Quoted (August 2025) on a 2027–2028 buying window for stabilized credit-tenant data centers"
+      ]
+    },
+    {
+      "name": "Will McCausland",
+      "title": "Senior Vice President, Data Center Utilities",
+      "photo": "images/execs/powerhouse-data-centers-mccausland.jpg",
+      "background": [
+        "Joined July 2024 as Director; '15+ years' in utilities",
+        "'Former leadership positions at Virginia's Dominion Energy'"
+      ]
+    },
+    {
+      "name": "Elizabeth Nicholson",
+      "title": "Senior Vice President, Entitlements",
+      "photo": "images/execs/powerhouse-data-centers-nicholson.jpg",
+      "background": [
+        "Named on the PowerHouse team page; no published biography"
+      ]
+    },
+    {
+      "name": "Scott Sterling",
+      "title": "Managing Director & General Counsel",
+      "photo": "images/execs/powerhouse-data-centers-sterling.jpg",
+      "background": [
+        "Named on the PowerHouse team page; no published biography"
+      ]
+    },
+    {
+      "name": "Jim Moore",
+      "title": "Managing Director, Engineering & Technical Services",
+      "photo": "images/execs/powerhouse-data-centers-moore.jpg",
+      "background": [
+        "Named on the PowerHouse team page; no published biography"
+      ]
+    },
+    {
+      "name": "Louise Boulton-Lear",
+      "title": "Senior Vice President, Integrated Marketing Communications",
+      "photo": "images/execs/powerhouse-data-centers-boulton-lear.jpg",
+      "background": [
+        "Company spokesperson quoted in the December 2025 Petersburg award release"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (private division of a private fund manager — no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Asset sale",
+            "actual": "ABX-1 (60 MW, leased 30 years to CyrusOne) sold to CyrusOne — '$154.1 million' per Commercial Observer (10 December); the JV release does not state the price",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Commercial Observer; Harrison Street / AREP release"
+          },
+          {
+            "name": "Programmatic capital",
+            "actual": "Blue Owl / Chirisa / PowerHouse 'USD 5 billion' programme launched (August) with a first USD 750 million tranche; Harrison Street JV 'committed $3.2 billion ... nearly 6 million square feet' (December)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PowerHouse and Harrison Street releases"
+          },
+          {
+            "name": "Project debt",
+            "actual": "'$600 million' construction loan, syndicate led by Société Générale, arranged by Newmark, for the 50 MW CoreWeave build-to-suit (December)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Bisnow; IREI"
+          },
+          {
+            "name": "Land",
+            "actual": "Irving 50 acres (May); Spotsylvania 145 acres and Reno 49 acres (January); Charlotte land JV with Town Lane (September; about USD 45.5 million for 122 acres per Hoodline)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PowerHouse releases; Hoodline"
+          },
+          {
+            "name": "Portfolio claim at year end",
+            "actual": "'57 buildings ... over 4.1 GW of power in seven major US markets'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ABX-1 sale release (17 December 2024)"
+          }
+        ],
+        "commentary": "The year the model closed its first loop (ABX-1 built, leased, sold) and its capital partners' commitments were restated: USD 3.2 billion from Harrison Street and a USD 5 billion Blue Owl programme, both partner capacity rather than money spent."
+      },
+      {
+        "period": "FY2025 (no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Sponsor fund",
+            "actual": "AREP Strategic Opportunity Fund IV closed at '$309 million' (February), '80% ... allocated to ... PowerHouse', '100% deployed as common equity'; Katz: a USD 300 million GP fund with 'over USD 9bn total buying power' for '12-to-15 new PowerHouse projects', structured '90/10' with institutions (Blue Owl '95/5')",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PowerHouse release; Commercial Observer; New Project Media interview"
+          },
+          {
+            "name": "Programmatic capital",
+            "actual": "Second 'USD 750 million' Blue Owl/Chirisa tranche for 120 MW at Chesterfield for CoreWeave (May); PowerHouse not named in the partners' August 'USD 4 billion' close",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PowerHouse release; Commercial Property Executive"
+          },
+          {
+            "name": "Land",
+            "actual": "Carlisle, Pennsylvania about 693–700 acres bought for 'USD 44 million' (per GovTech/pennlive, December); Louisville 154 acres and Carrollton purchase options (Poe JV)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "GovTech; PowerHouse releases"
+          },
+          {
+            "name": "Portfolio claim progression",
+            "actual": "'87 buildings across 25.5M SF ... over 5.9 GW ... six major U.S. markets' (February) → '24+ million square feet and 6.1 GW across six U.S. markets' (June) → '118 buildings ... over 8.1 GW of power in eight major U.S. markets' (January 2026 release reporting on 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PowerHouse releases"
+          }
+        ],
+        "commentary": "Collection gap: no revenue, EBITDA, valuation or company-level debt. The only new money with a number is the USD 309 million GP fund; every larger figure is a JV programme size or a projected campus investment (Joliet USD 20 billion, Carlisle USD 15 billion)."
+      },
+      {
+        "period": "2026 year to date (through 5 September 2026)",
+        "periodType": "other",
+        "periodEnd": "2026-09-05",
+        "metrics": [
+          {
+            "name": "Leasing",
+            "actual": "Arcola 'long-term hyperscale lease' (January; up to 120 MW, 615,000 sq ft; tenant undisclosed), funded by AREP Strategic Opportunity Fund III; Harrison Street: 'Two long-term hyperscale pre-leases executed' (February)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PowerHouse and Harrison Street releases"
+          },
+          {
+            "name": "Joliet",
+            "actual": "'~$20 billion' campus annexed 8–1 (March) with a 'USD 100 million' community-benefit commitment and 'USD 310,000,000 in property taxes over 30 years, plus about USD 40,000,000 in utility taxes' projected for the city; ComEd cancelled the transmission security agreement (24 July); FERC challenge and federal suit (August)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "City of Joliet memo; Utility Dive; Rock River Current"
+          },
+          {
+            "name": "New campus announcements",
+            "actual": "Carrollton, Kentucky 'USD 9.6 billion' with Poe Companies (July; 'Purchase options secured'; 'USD 3.7 million' KBI incentive); Circle T, Westlake 300 MW (August); Uhland, Texas 500 acres (May)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "WHAS11 via Yahoo; US Data Center Projects; Bisnow"
+          },
+          {
+            "name": "Portfolio claim (site, September)",
+            "actual": "'140 data centers' underway or in planning; '~10 GW'; '39.3 million SF'; '9 major U.S. markets'; homepage market list sums to about 8.7 GW",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PowerHouse homepage"
+          }
+        ],
+        "commentary": "Collection gap: no construction loan, credit facility or bond for any 2026 project is disclosed; the brief's 'debt packages' could not be sourced. The company's counters ('140 data centers', '~10 GW') are planning-stage inventories of JV-owned sites, not PowerHouse's balance sheet."
+      }
+    ],
+    "commentary": "A private division that reports no accounts and finances everything at project level. Size it from the pieces: AREP's own funds (USD 63 million in 2022, USD 309 million in 2025) placed at 5–10% of each JV's equity; partner programmes of USD 3.2 billion (Harrison Street) and USD 5 billion (Blue Owl/Chirisa); one USD 600 million construction loan; one asset sale at USD 154.1 million. Projected campus investments (USD 20 billion Joliet, USD 15 billion Carlisle, USD 9.6 billion Carrollton, USD 11 billion Louisville) are developer or JV projections, not capital raised. No analyst covers the company; 'expected' fields are left empty."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that PowerHouse is a land-and-entitlement developer that sells pipeline to capital partners, not a landlord that sizes itself by leased megawatts. Basis: AREP's own funds supply 5–10% of the equity ('90/10', '95/5' per Katz) and its Fund IV is described as USD 300 million of GP money with 'over USD 9bn total buying power'; the portfolio counter is expressly 'in planning, underway, or completed'; the one completed cycle (ABX-1) ended in a sale to the tenant; and the boilerplate grew from 4.1 GW to '~10 GW' in 21 months while the delivered base stayed at one building. The counters measure sites optioned and JVs signed.",
+    "2. **(High confidence)** We assess that the utility-first model — buy the land, secure the substation and the tranche, then lease — is genuine and is also the company's largest single risk, because the utility's contract terms can now cancel a campus after the council has approved it. Basis: on-site or developer-funded substations at ABX-1 (300 MW GIS), Arcola (GIS approved 5–4), Grand Prairie (1.8 GW switchyard, 500 MW ERCOT tranche), Circle T (Oncor 350 MW) and Joliet (25-acre switching station); against that, ComEd's cancellation of the FERC-accepted Joliet transmission security agreement over deposit timing four months after acceptance, with the developer now in federal court. Illinois's deposit rules (USD 500,000 per 100 MW above 200 MW, retained on failure) price exactly the behaviour PowerHouse's model depends on: reserving capacity ahead of a tenant.",
+    "3. **(Moderate confidence)** We assess that tenant demand behind the pipeline is thin on the public record: two named tenants (CyrusOne at ABX-1, CoreWeave at Chesterfield through the Blue Owl/Chirisa vehicle) and one unnamed hyperscale lease at Arcola across a claimed 140 buildings. Basis: no tenant is disclosed for Pacific, PowerHouse 95, Irving, Reno, Grand Prairie, Charlotte, Louisville, Carlisle or Joliet; the Joliet developers named Google, Amazon, Meta and Oracle only as 'potential tenants'; the December 2025 award release's list of hyperscaler campuses is a company claim without a campus. A named anchor at Joliet or Grand Prairie would change this judgment.",
+    "4. **(Moderate confidence)** We assess that schedules across the portfolio are slipping by three to six quarters and that the company does not restate them. Basis: Grand Prairie first power moved from May 2026 (release) to Q1 2027 (page); Reno from 'end of 2025' bridging power to a 2028 completion per directories; Ellis County's building count from 24 to 28 and phases from three to four; Joliet's 'early 2027' construction start now sits behind two lawsuits and a cancelled utility contract. The campus pages carry the newer dates; the releases are never corrected.",
+    "5. **(High confidence)** We assess that consent is being won on the developer's money rather than on incentives, and that the pattern is deliberate. Basis: Joliet — no city incentives or abatements, USD 100 million in community payments, a water cap with a triple penalty, developer-funded transmission; Louisville — a zoning classification that required no council vote; Arcola — a 5–4 approval after a 7–2 planning-commission denial; Uhland — a petition to exit city jurisdiction where the county cannot zone. The approach clears votes and generates litigation (Joliet residents, May 2026) and moratorium proposals (Louisville, Merrillville) in equal measure.",
+    "6. **(Low confidence)** We assess that the Harrison Street and Blue Owl relationships are drifting toward the partners' own platforms. Basis: PowerHouse is absent from the August 2025 USD 4 billion Blue Owl/Chirisa/Machine Investment Group close for CoreWeave that includes the same Chesterfield campus; Harrison Street's February 2026 Arcola release counts the asset in its own USD 6.5 billion digital platform; and Katz's stated aim is 12–15 new projects from a GP fund, which favours new partners over deeper ones. Contradicting evidence: both partners still name PowerHouse in 2026 releases. A Blue Owl or Harrison Street financing that names PowerHouse would weaken this judgment.",
+    "Collection gap: no revenue, EBITDA, headcount, valuation, company-level debt or lease terms beyond ABX-1's 30 years; no tenant for eleven of thirteen announced campuses; no GC beyond DPR (ABX-1) and E.E. Reed (Pacific); the City of Joliet's own notice, the FERC docket, Hillwood's newsroom (no Joliet item), Blue Owl's and Provident's sites and all Data Center Dynamics coverage were unreadable; the brief's domains (powerhousedatacenters.com, areprealestate.com) are not the company's — it publishes at powerhousedata.com and americanrepartners.com — and its headquarters is McLean, not Reston. Premise check against the coverage-plan row 'Brookfield-owned hyperscale builder; 1.8 GW delivered or under development on $16.1B planned; Joliet 1.8 GW campus': only the last clause describes PowerHouse, and 'campus' is a plan — 1.8 GW is Joliet's ceiling on an annexed but unbuilt site whose utility contract has been cancelled; PowerHouse is wholly owned by AREP (no Brookfield, Ontario Teachers' or Partners Group link) and neither '1.8 GW delivered or under development' nor 'USD 16.1 billion' appears in any PowerHouse source (they are EdgeCore's figures).",
+    "INDICATORS TO WATCH — *8 September 2026 — Will County hearing on the residents' suit; FERC's ruling on the ComEd cancellation:* either against PowerHouse Hillwood would take Joliet out of the 2027 start. *Q3–Q4 2026 — Pacific power-on and PowerHouse 95 initial delivery:* the first buildings since ABX-1; slips would confirm Judgment 4. *Q1 2027 — Grand Prairie energisation and a named tenant:* the other 1.8 GW site's first real test. *Any construction loan or ABS naming a PowerHouse borrower:* would show the JV assets are financeable on their own leases. *A third Blue Owl or Harrison Street tranche that names PowerHouse:* would weaken Judgment 6. *AREP Fund V or a change in the 90/10 split:* would show whether the GP model scales with a USD 20 billion campus."
+  ],
+  "sources": [
+    {
+      "label": "Rock River Current — Where Rockford data center plans stand after ComEd's cancellation of energy deals",
+      "url": "https://www.rockrivercurrent.com/2026/09/heres-where-rockford-data-center-plans-stand-after-cancellation-of-comed-energy-deal/",
+      "date": "2026-09-03"
+    },
+    {
+      "label": "Utility Dive — Utility Dive: Microsoft, PowerHouse Hillwood dispute service agreements",
+      "url": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/",
+      "date": "2026-08-24"
+    },
+    {
+      "label": "Shaw Local / The Herald-News — Shaw Local: lawsuit heading to hearing",
+      "url": "https://www.shawlocal.com/the-herald-news/2026/08/18/lawsuit-against-joliet-data-center-heading-to-court-hearing/",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "US Data Center Projects — PowerHouse files plans for 300 MW Circle T campus in Westlake, Texas",
+      "url": "https://usdatacenterprojects.com/texas/powerhouse-files-plans-for-300-mw-circle-t-data-center-campus-in-westlake-texas",
+      "date": "2026-08-07"
+    },
+    {
+      "label": "Utility Dive — Utility Dive: Exelon high-probability load falls 40%",
+      "url": "https://www.utilitydive.com/news/exelon-data-center-load-new-jersey-battery-earnings/826686/",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Local 12 (WKRC) — Team looks to build $9.6B data center along I-71 in Kentucky",
+      "url": "https://local12.com/news/local/carrollton-data-center-9-billion-dollars-interstate-71-kentucky-carroll-county-between-cincinnati-louisville",
+      "date": "2026-07-25"
+    },
+    {
+      "label": "WHAS11 via Yahoo News — Louisville-based developer plans $9.6B data center in Carroll County",
+      "url": "https://finance.yahoo.com/technology/articles/louisville-based-developer-plans-9-144212137.html",
+      "date": "2026-07-23"
+    },
+    {
+      "label": "Spectrum News 1 Kentucky — Louisville weighs moratorium as data center concerns grow",
+      "url": "https://spectrumnews1.com/ky/louisville/news/2026/06/03/data-centers-moratorium",
+      "date": "2026-06-03"
+    },
+    {
+      "label": "Data Center Knowledge — DCK: New developments June 2026",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-june-2026",
+      "date": "2026-06"
+    },
+    {
+      "label": "Shaw Local / The Herald-News — Shaw Local: lawsuit challenges Joliet approval",
+      "url": "https://www.shawlocal.com/the-herald-news/2026/05/26/lawsuit-challenges-zoning-approval-process-for-joliet-data-center/",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Patch — Patch: Joliet lawsuit",
+      "url": "https://patch.com/illinois/joliet/joliets-data-center-jeopardy-city-joliet-powerhouse-hillwood-holding-face-lawsuit-3",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Bisnow — Bisnow: PowerHouse plans Austin-suburb data center",
+      "url": "https://www.bisnow.com/austin/news/data-center-development/powerhouse-plans-austin-suburb-data-center-skirt-city-control-134437",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "Data Center Frontier — DCF: Hillwood, PowerHouse advance $20B Joliet campus",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/55367747/hillwood-powerhouse-advance-20b-joliet-data-campus-as-midwest-ai-buildout-accelerates",
+      "date": "2026-04-13"
+    },
+    {
+      "label": "Construction Equipment Guide — Joliet approves annexation for 795-acre data center project",
+      "url": "https://www.constructionequipmentguide.com/joliet-approves-annexation-for-795-acre-data-center-project/71012",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "Bisnow — Joliet OKs $20B Data Center As Illinois Eyes Higher Developer Costs",
+      "url": "https://www.bisnow.com/chicago/news/data-center-development/joliet-oks-20b-data-center-as-illinois-seeks-to-make-large-developers-pay-more-for-projects-133777",
+      "date": "2026-03-23"
+    },
+    {
+      "label": "Shaw Local / The Herald-News — Joliet OKs controversial 795-acre data center",
+      "url": "https://www.shawlocal.com/the-herald-news/2026/03/20/joliet-oks-controversial-795-acre-data-center/",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "The Real Deal — Joliet approves $20B, 795-acre data center, despite backlash",
+      "url": "https://therealdeal.com/chicago/2026/03/20/joliet-approves-data-center-despite-backlash/",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "The Real Deal — Illinois cracks down on data center electrical power users with new deposit rules",
+      "url": "https://therealdeal.com/chicago/2026/03/20/illinois-cracks-down-on-data-center-electrical-power-users/",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "Patch — Joliet Technology Center Vote: City Council Goes 8-1",
+      "url": "https://patch.com/illinois/joliet/joliet-technology-center-vote-city-counci-goes-8-1-audience-claps-approval",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "NBC Chicago — Residents push back on plans to build controversial data center in Joliet, vote delayed",
+      "url": "https://www.nbcchicago.com/news/local/vote-on-joliet-data-center-proposal-postponed-after-marathon-public-meeting/3909416/",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "Shaw Local / The Herald-News — More than 6 hours of public hearing forces Joliet vote to Thursday",
+      "url": "https://www.shawlocal.com/the-herald-news/2026/03/17/joliet-city-council-moves-vote-on-data-center-to-thursday/",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "CBS News Chicago — Joliet data center decision delayed until Thursday",
+      "url": "https://www.cbsnews.com/chicago/news/joliet-city-council-meeting-illinois-largest-data-center/",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "City of Joliet memo File #178-26 (via Capitol News Illinois) — Joliet Technology Center annexation and PUD staff memo (PDF)",
+      "url": "https://capitolnewsillinois.com/wp-content/uploads/2026/05/community-development-memo-for-Joliet-data-center.pdf",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "WDRB — West Louisville residents speak out after planning commission allows data center to move forward",
+      "url": "https://www.wdrbwave.com/2026/03/14/west-louisville-residents-speak-out-after-planning-commission-allows-data-center-move-forward/",
+      "date": "2026-03-13"
+    },
+    {
+      "label": "Utility Dive — Utility Dive: FERC approves ComEd TSAs",
+      "url": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/",
+      "date": "2026-03-11"
+    },
+    {
+      "label": "LEO Weekly — West Louisville data center approved despite heated community opposition",
+      "url": "https://www.leoweekly.com/news/west-louisville-data-center-approved-despite-heated-community-opposition/",
+      "date": "2026-03-06"
+    },
+    {
+      "label": "Louisville Public Media — West Louisville data center approved despite opposition",
+      "url": "https://www.lpm.org/news/2026-03-05/west-louisville-data-center-approved-despite-opposition",
+      "date": "2026-03-05"
+    },
+    {
+      "label": "Shaw Local / The Herald-News — Joliet city staff recommends yes vote on data center",
+      "url": "https://www.shawlocal.com/the-herald-news/2026/03/05/joliet-staff-recommends-yes-vote-on-data-center-heres-what-they-say/",
+      "date": "2026-03-05"
+    },
+    {
+      "label": "Hoodline — Data center gold rush poised to remake Charlotte's University City",
+      "url": "https://hoodline.com/2026/03/data-center-gold-rush-poised-to-remake-charlotte-s-university-city/",
+      "date": "2026-03"
+    },
+    {
+      "label": "Shaw Local / The Herald-News — Developers outline Joliet data center project",
+      "url": "https://www.shawlocal.com/the-herald-news/2026/02/13/developers-outline-joliet-data-center-project-prepare-for-city-votes-in-march/",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Harrison Street — Arcola pre-leasing milestone",
+      "url": "https://harrisonst.com/harrison-street-asset-management-achieves-leasing-milestone-with-hyperscale-pre-leasing-at-powerhouse-arcola/",
+      "date": "2026-02-12",
+      "party": "company"
+    },
+    {
+      "label": "PR Newswire — Arcola hyperscale lease release",
+      "url": "https://www.prnewswire.com/news-releases/powerhouse-data-centers-executes-hyperscale-lease-at-powerhouse-arcola-advancing-northern-virginia-expansion-302661927.html",
+      "date": "2026-01-15",
+      "party": "company"
+    },
+    {
+      "label": "Utility Dive — Utility Dive: Illinois AG objections",
+      "url": "https://www.utilitydive.com/news/illinois-ag-files-objections-to-comed-data-center-agreements-at-ferc/809576/",
+      "date": "2026-01-14"
+    },
+    {
+      "label": "GovTech — Cumberland County, Pa., Data Centers Take New Step Forward (pennlive reprint)",
+      "url": "https://www.govtech.com/artificial-intelligence/cumberland-county-pa-data-centers-take-new-step-forward",
+      "date": "2025-12-23"
+    },
+    {
+      "label": "Shaw Local / The Herald-News — Joliet residents rise up again against proposed data center",
+      "url": "https://www.shawlocal.com/the-herald-news/2025/12/20/joliet-residents-rise-up-again-against-proposed-data-center/",
+      "date": "2025-12-20"
+    },
+    {
+      "label": "PowerHouse Data Centers — Petersburg DCD award",
+      "url": "https://www.powerhousedata.com/news/powerhouse-data-centers-karen-petersburg-named-dcd-woman-of-the-year-at-its-2025-global-awards",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Construction Review — PowerHouse Pacific Data Center Project in Virginia to be Completed End of 2026",
+      "url": "https://constructionreviewonline.com/powerhouse-data-centres-begins-construction-on-new-virginia-campus/",
+      "date": "2025-09-22"
+    },
+    {
+      "label": "Local 21 (WHP) — Agencies address concerns over plans for 700-acre data center in Cumberland County",
+      "url": "https://local21news.com/news/local/a-new-data-center-might-be-build-in-cumberland-county-and-its-700-acres-ai-carlisle-artificial-intelligence-pennsylvania-data-center-partners-powerhouse-pa",
+      "date": "2025-09-10"
+    },
+    {
+      "label": "Commercial Property Executive — Blue Owl, Chirisa Technology Close $4B JV for Data Center Campus",
+      "url": "https://www.commercialsearch.com/news/blue-owl-chirisa-technology-close-4b-jv-for-coreweave-campus/",
+      "date": "2025-08-26"
+    },
+    {
+      "label": "American Real Estate Partners — Bisnow reprint",
+      "url": "https://www.americanrepartners.com/news/chasing-a-development-boom-investors-are-turning-their-backs-on-existing-data-centers",
+      "date": "2025-08-15",
+      "party": "independent"
+    },
+    {
+      "label": "PowerHouse Data Centers — Carlisle PA 1.35 GW JV release",
+      "url": "https://www.powerhousedata.com/news/pennsylvania-data-center-partners-and-powerhouse-data-centers-launch-joint-venture-to-build-next-gen-1-35-gw-hyperscale-data-center-campus-in-carlisle-pennsylvania",
+      "date": "2025-07-15"
+    },
+    {
+      "label": "PowerHouse Data Centers — Adametz & Chaudhry appointments",
+      "url": "https://www.powerhousedata.com/news/powerhouse-strengthens-core-leadership-portfolio-with-dual-strategic-appointments",
+      "date": "2025-06-04"
+    },
+    {
+      "label": "Insider Monkey via Yahoo Finance — Blue Owl (NYSE: OWL) invests additional $750M in the Chirisa/PowerHouse joint venture",
+      "url": "https://finance.yahoo.com/news/blue-owl-invests-additional-750m-182802468.html",
+      "date": "2025-05-28"
+    },
+    {
+      "label": "PR Newswire — Blue Owl, Chirisa, PowerHouse Announce Next Phase of $5B JV",
+      "url": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html",
+      "date": "2025-05-28",
+      "party": "company"
+    },
+    {
+      "label": "PowerHouse Data Centers — Blue Owl/CTP/PowerHouse second $750M tranche",
+      "url": "https://www.powerhousedata.com/news/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership",
+      "date": "2025-05-27"
+    },
+    {
+      "label": "Loudoun Now — 'First of its Kind' Substation Considered by Supervisors",
+      "url": "https://www.loudounnow.com/news/first-of-its-kind-substation-considered-by-supervisors/article_17f7a8ac-a402-4a7a-98fe-c2a6e3b260ff.html",
+      "date": "2025-05-15"
+    },
+    {
+      "label": "PowerHouse Data Centers — Southwest team release",
+      "url": "https://www.powerhousedata.com/news/powerhouse-scales-up-in-the-southwest-adding-top-tier-development-team",
+      "date": "2025-04-02"
+    },
+    {
+      "label": "PR Newswire — PowerHouse & Provident Grand Prairie release",
+      "url": "https://www.prnewswire.com/news-releases/powerhouse-and-provident-rewrite-the-data-center-playbook-with-new-texas-hyperscale-campus-302384924.html",
+      "date": "2025-02-25",
+      "party": "company"
+    },
+    {
+      "label": "Provident Data Centers — Provident Data Centers copy of Grand Prairie release",
+      "url": "https://www.providentdatacenters.net/news/powerhouse-and-provident-rewrite-the-data-center-playbook-with-new-texas-hyperscale-campus",
+      "date": "2025-02-25",
+      "party": "company"
+    },
+    {
+      "label": "dallasinnovates.com — Provident, PowerHouse Partner on 'Hyperscale' North Texas Campus",
+      "url": "https://dallasinnovates.com/dallas-provident-data-centers-virginias-powerhouse-partner-on-hyperscale-north-texas-campus/",
+      "date": "2025-02-25"
+    },
+    {
+      "label": "Commercial Observer — AREP Closes $309M Fund Focused on Data Centers",
+      "url": "https://commercialobserver.com/2025/02/american-real-estate-partners-closes-309m-fund-data-centers/",
+      "date": "2025-02-19"
+    },
+    {
+      "label": "PowerHouse Data Centers — AREP Fund IV release",
+      "url": "https://www.powerhousedata.com/news/arep-fund-iv-oversubscribed-at-309m",
+      "date": "2025-02-18"
+    },
+    {
+      "label": "PowerHouse Data Centers — Quantum Connect release",
+      "url": "https://www.powerhousedata.com/news/quantum-connect-filling-gap-with-ai-ready-unique-facility-in-data-center-alley",
+      "date": "2025-01-17"
+    },
+    {
+      "label": "PowerHouse Data Centers — Louisville / Poe Companies release",
+      "url": "https://www.powerhousedata.com/news/powerhouse-data-centers-and-poe-companies-partner-to-develop-kentuckys-first-hyperscale-data-center-campus",
+      "date": "2025-01-16"
+    },
+    {
+      "label": "PowerHouse Data Centers — Charlotte release",
+      "url": "https://www.powerhousedata.com/news/powerhouse-powers-ahead-hyperscale-data-center-rising-in-charlotte-nc",
+      "date": "2025-01-14"
+    },
+    {
+      "label": "PowerHouse Data Centers — DFW / Provident JV announcement",
+      "url": "https://www.powerhousedata.com/news/powerhouse-and-provident-partner-to-develop-hyperscale-data-center-campus-in-dallas-fort-worth-metroplex",
+      "date": "2025-01-07"
+    },
+    {
+      "label": "Harrison Street — ABX-1 sale release",
+      "url": "https://harrisonst.com/wp-content/uploads/2024/12/Harrison-Street-and-PowerHouse-Data-Centers-Sell-Powered-Shell-Data-Center.pdf",
+      "date": "2024-12-17",
+      "party": "company"
+    },
+    {
+      "label": "IREI — Blue Owl, Chirisa and PowerHouse secure $600m construction financing for 50 MW build-to-suit data center",
+      "url": "https://irei.com/news/blue-owl-chirisa-and-powerhouse-secure-600m-construction-financing-for-50mw-build-to-suit-data-center/",
+      "date": "2024-12-16"
+    },
+    {
+      "label": "Bisnow — CoreWeave Data Center Project In Virginia Lands $600M Loan",
+      "url": "https://www.bisnow.com/national/news/data-center/coreweave-data-center-in-virginia-lands-600m-loan-127230",
+      "date": "2024-12-16"
+    },
+    {
+      "label": "Commercial Observer — Commercial Observer: CyrusOne acquires NoVA data center for $154M",
+      "url": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/",
+      "date": "2024-12-10"
+    },
+    {
+      "label": "Loudoun Now — County Planners Recommend Denial of Arcola Substation, Expanded Data Center",
+      "url": "https://www.loudounnow.com/news/county-planners-recommend-denial-of-arcola-substation-expanded-data-center/article_e865f8b6-825c-11ef-aa50-0fdc2e5d7809.html",
+      "date": "2024-10-04"
+    },
+    {
+      "label": "PowerHouse Data Centers — Digital Drive Chesterfield release",
+      "url": "https://www.powerhousedata.com/news/chirisa-technology-parks-and-powerhouse-data-centers-to-launch-next-generation-hyperscale-campus-in-chesterfield-county",
+      "date": "2024-09-26"
+    },
+    {
+      "label": "PowerHouse Data Centers — Blue Owl/CTP/PowerHouse first phase",
+      "url": "https://www.powerhousedata.com/news/pr-newswire-blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-first-phase-of-5-billion-joint-venture-development-partnership",
+      "date": "2024-08-29"
+    },
+    {
+      "label": "PowerHouse Data Centers — Kipfer/Pline/McGrath release",
+      "url": "https://www.powerhousedata.com/news/powerhouse-underscores-growth-strategy",
+      "date": "2024-08-22"
+    },
+    {
+      "label": "PowerHouse Data Centers — Monaco/McCausland release",
+      "url": "https://www.powerhousedata.com/news/powerhouse-matches-and-exceeds-pace-of-hyperscale-demand-driving-additional-strategic-momentum-with-proven-development-and-power-utility-leaders",
+      "date": "2024-07-24"
+    },
+    {
+      "label": "PowerHouse Data Centers — Irving land close",
+      "url": "https://www.powerhousedata.com/news/powerhouse-closes-on-irving-las-colinas-site-entering-dallas-fort-worth-market-to-develop-new-state-of-the-art-data-center-campus",
+      "date": "2024-05-15"
+    },
+    {
+      "label": "Data Center Frontier — PowerHouse Plans New NoVA Campus In Spotsylvania, Moves Into Reno",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/33019301/powerhouse-data-centers-plans-new-nova-campus-in-spotsylvania-moves-nationally-into-reno-nv",
+      "date": "2024-01-26"
+    },
+    {
+      "label": "PowerHouse Data Centers — Spotsylvania land close",
+      "url": "https://www.powerhousedata.com/news/powerhouse-data-centers-closes-on-site-of-800-mw-data-center-campus-in-spotsylvania-virginia",
+      "date": "2024-01-23"
+    },
+    {
+      "label": "Harrison Street — PH95 land close",
+      "url": "https://www.harrisonst.com/wp-content/uploads/2024/02/PowerHouse-95.pdf",
+      "date": "2024-01-23",
+      "party": "company"
+    },
+    {
+      "label": "PowerHouse Data Centers — Reno land close",
+      "url": "https://www.powerhousedata.com/news/powerhouse-data-centers-closes-on-nevada-site-for-powerhouse-reno",
+      "date": "2024-01-19"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Pacific site",
+      "url": "https://www.powerhousedata.com/news/powerhouse-data-centers-continues-momentum-with-a-second-strategic-development-site-in-data-center-alley",
+      "date": "2023-10-10"
+    },
+    {
+      "label": "Loudoun Now — CyrusOne Lands PowerHouse's ABX-1 Data Center",
+      "url": "https://www.loudounnow.com/business/cyrusone-lands-powerhouse-s-abx-1-data-center/article_14f140c8-0c6d-11ee-accb-5bc004f02320.html",
+      "date": "2023-06-16"
+    },
+    {
+      "label": "PowerHouse Data Centers — CyrusOne lease ABX-1",
+      "url": "https://www.powerhousedata.com/news/powerhouse-data-centers-announces-lease-agreement-with-cyrusone-for-abx-1-data-center-powered-shell",
+      "date": "2023-05-12"
+    },
+    {
+      "label": "Data Center Frontier — PowerHouse Leases Entire Ashburn Data Center to CyrusOne",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/33004986/powerhouse-leases-entire-ashburn-data-center-to-cyrusone",
+      "date": "2023-05-12"
+    },
+    {
+      "label": "Commercial Property Executive — PowerHouse Tops Out Its 1st Northern Virginia Data Center",
+      "url": "https://www.commercialsearch.com/news/powerhouse-tops-out-its-1st-northern-virginia-data-center/",
+      "date": "2023-03-02"
+    },
+    {
+      "label": "Data Center Frontier — PowerHouse Data Centers Launches $1 Billion Expansion in Data Center Alley",
+      "url": "https://www.datacenterfrontier.com/featured/article/11436906/powerhouse-data-centers-launches-1-billion-expansion-in-data-center-alley",
+      "date": "2022-10-21"
+    },
+    {
+      "label": "PowerHouse Data Centers — AREP debuts PowerHouse",
+      "url": "https://www.powerhousedata.com/news/press-release-arep-debuts-powerhouse-data-centers-as-an-all-in-one-solution-to-the-data-center-market",
+      "date": "2022-09-13"
+    },
+    {
+      "label": "PowerHouse Data Centers — AREP–Harrison Street $1B JV",
+      "url": "https://www.powerhousedata.com/news/arep-and-harrison-street-joint-venture-commits-1-billion-to-develop-2-1-million-square-feet-of-powered-shell-data-centers-across-northern-virginias-data-center-alley",
+      "date": "2022-01-12"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Data Centers — homepage",
+      "url": "https://www.powerhousedata.com/"
+    },
+    {
+      "label": "American Real Estate Partners — American Real Estate Partners — homepage",
+      "url": "https://www.americanrepartners.com/"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse team page",
+      "url": "https://www.powerhousedata.com/team"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse approach page",
+      "url": "https://www.powerhousedata.com/approach"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse platform page",
+      "url": "https://www.powerhousedata.com/platform"
+    },
+    {
+      "label": "American Real Estate Partners — AREP about",
+      "url": "https://www.americanrepartners.com/about-us"
+    },
+    {
+      "label": "American Real Estate Partners — AREP team page",
+      "url": "https://www.americanrepartners.com/our-team"
+    },
+    {
+      "label": "American Real Estate Partners — AREP data-center property type",
+      "url": "https://www.americanrepartners.com/property-types/data-centers"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse sustainability",
+      "url": "https://www.powerhousedata.com/sustainability"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse partners page",
+      "url": "https://www.powerhousedata.com/resources"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Joliet campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-joliet"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse 95 campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-95"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Arcola campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-arcola"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Louisville campus page",
+      "url": "https://www.powerhousedata.com/data-center/ph-louisville"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Reno campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-reno"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Irving campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-irving"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Charlotte campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-charlotte"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Hobart campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-hobart"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Grand Prairie campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-grand-prairie"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Circle T campus page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-circle-t"
+    },
+    {
+      "label": "PowerHouse Data Centers — CTP-02 and CTP-03 page",
+      "url": "https://www.powerhousedata.com/data-center/ctp-2"
+    },
+    {
+      "label": "PowerHouse Data Centers — 1600 Digital Drive page",
+      "url": "https://www.powerhousedata.com/data-center/digital-drive"
+    },
+    {
+      "label": "PowerHouse Data Centers — PAX-1 (Carlisle) page",
+      "url": "https://www.powerhousedata.com/data-center/pax-1"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse ABX-1 page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-abx-1"
+    },
+    {
+      "label": "PowerHouse Data Centers — PowerHouse Pacific page",
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-pacific"
+    },
+    {
+      "label": "PowerHouse Data Centers — PH95 groundbreaking",
+      "url": "https://www.powerhousedata.com/news/powerhouse-breaks-ground-on-800mw-data-center-campus-in-spotsylvania-county-virginia",
+      "party": "independent"
+    },
+    {
+      "label": "Joliet Technology Center (Hillwood–PowerHouse project site) — Joliet Technology Center (\"Yes to Joliet Jobs\") home",
+      "url": "https://joliettechnologycenter.com/",
+      "party": "company"
+    },
+    {
+      "label": "Joliet Technology Center (Hillwood–PowerHouse project site) — Joliet Technology Center — At a glance",
+      "url": "https://joliettechnologycenter.com/at-a-glance/",
+      "party": "company"
+    },
+    {
+      "label": "American Real Estate Partners — Douglas Fleit",
+      "url": "https://www.americanrepartners.com/team/douglas-fleit"
+    },
+    {
+      "label": "American Real Estate Partners — Brian Katz",
+      "url": "https://www.americanrepartners.com/team/brian-katz"
+    },
+    {
+      "label": "American Real Estate Partners — AREP closes Fund III",
+      "url": "https://www.americanrepartners.com/news/american-real-estate-partners-closes-third-real-estate-fund",
+      "party": "company"
+    },
+    {
+      "label": "Town of Merrillville, Indiana — Data centers (moratorium 1 June 2026 – 31 May 2027)",
+      "url": "https://www.merrillville.in.gov/business-building-economic-development/data-centers/"
+    },
+    {
+      "label": "PowerHouse Data Centers — Douglas Fleit",
+      "url": "https://www.powerhousedata.com/team-members/douglas-fleit-co-founder-chief-executive-officer"
+    },
+    {
+      "label": "New Project Media — Interview: AREP's new fund will support 12-to-15 new PowerHouse data centers (Brian Katz)",
+      "url": "https://newprojectmedia.com/interview-american-real-estate-partners-new-fund-will-support-12-to-15-new-powerhouse-data-centers-2/"
+    },
+    {
+      "label": "Pennsylvania Data Center Partners — Joint venture with PowerHouse (partner page)",
+      "url": "https://www.padatacenters.com/joint-venture-powerhouse"
+    },
+    {
+      "label": "Piedmont Environmental Council — Loudoun updates, summer 2025 (Arcola Grove rezoning approved 5–4)",
+      "url": "https://www.pecva.org/region/loudoun/loudoun-updates-summer-2025/"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

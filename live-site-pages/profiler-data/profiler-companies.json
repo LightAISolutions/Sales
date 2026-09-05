@@ -372,6 +372,23 @@
       "kpiNorm": true
     },
     {
+      "slug": "compass-datacenters",
+      "name": "Compass Datacenters",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Dallas single-tenant hyperscale campus developer co-controlled by Brookfield Infrastructure and Ontario Teachers' (October 2023) with KKR at asset level since December 2025 — a manufacturing model (84% offsite Moonraker building, Schneider factory on the Red Oak campus), a serial ABS programme with the first Moody's AAA on hyperscale collateral, Meridian's ~500 MW Mississippi Power contract, and a 2026 consent fight that lost the Prince William Digital Gateway and won a second Red Oak campus 4–1.",
+      "hq": "Dallas, TX, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "compassdatacenters.com"
+      ],
+      "srcTotal": 102,
+      "srcFirstPct": 42,
+      "kpiNorm": false
+    },
+    {
       "slug": "constellation-energy",
       "name": "Constellation Energy",
       "categories": [
@@ -596,6 +613,23 @@
       "srcTotal": 17,
       "srcFirstPct": 65,
       "kpiNorm": true
+    },
+    {
+      "slug": "edgecore",
+      "name": "EdgeCore Digital Infrastructure",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Partners Group-owned (2022) single-tenant hyperscale developer whose '1.8 GW delivered or under development on $16.1B planned' rests on two operating buildings (Mesa 26 MW, Santa Clara 36 MW) plus Sterling, Reno, Culpeper and a 1.1 GW Louisa County land position — financed campus by campus with limited-recourse green loans (USD 1.9bn Mesa, USD 1.5bn Sterling) and a first ABS; Holder builds Mesa; no tenant ever named.",
+      "hq": "Denver, CO, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "edgecore.com"
+      ],
+      "srcTotal": 107,
+      "srcFirstPct": 53,
+      "kpiNorm": false
     },
     {
       "slug": "enchanted-rock",
@@ -955,8 +989,8 @@
       "domains": [
         "holderconstruction.com"
       ],
-      "srcTotal": 28,
-      "srcFirstPct": 18,
+      "srcTotal": 30,
+      "srcFirstPct": 17,
       "kpiNorm": false
     },
     {
@@ -1725,6 +1759,25 @@
       "kpiNorm": true
     },
     {
+      "slug": "powerhouse-data-centers",
+      "name": "PowerHouse Data Centers",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "American Real Estate Partners' powered-shell and build-to-suit platform: AREP's GP funds put 5–10% into project JVs with Harrison Street (USD 3.2bn), Blue Owl/Chirisa (USD 5bn, CoreWeave at Chesterfield), Provident, Hillwood, Poe and others; one building delivered and sold (ABX-1 to CyrusOne, USD 154.1m); the 1.8 GW Joliet campus annexed 8–1 in March 2026 lost its ComEd transmission security agreement in July and is in litigation.",
+      "hq": "McLean, VA, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "powerhousedata.com",
+        "americanrepartners.com",
+        "joliettechnologycenter.com"
+      ],
+      "srcTotal": 114,
+      "srcFirstPct": 52,
+      "kpiNorm": false
+    },
+    {
       "slug": "prevalon",
       "name": "Prevalon Energy",
       "categories": [
@@ -2006,7 +2059,7 @@
       "hq": "Atlanta, GA, USA",
       "ticker": "NYSE: SO",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "southerncompany.com",
         "georgiapower.com",
@@ -2017,8 +2070,8 @@
         "s27.q4cdn.com",
         "southerncompany2021rd.q4web.com"
       ],
-      "srcTotal": 118,
-      "srcFirstPct": 64,
+      "srcTotal": 119,
+      "srcFirstPct": 63,
       "kpiNorm": true
     },
     {

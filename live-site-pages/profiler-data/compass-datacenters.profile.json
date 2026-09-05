@@ -1,0 +1,1416 @@
+{
+  "schemaVersion": 7,
+  "slug": "compass-datacenters",
+  "name": "Compass Datacenters, LLC",
+  "shortName": "Compass Datacenters",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://www.compassdatacenters.com/",
+  "headquarters": "Dallas, Texas, USA (14555 N. Dallas Parkway, Suite 125)",
+  "founded": 2011,
+  "employees": "195 (end of 2025, per the 2026 Outcomes Report)",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Compass Datacenters is a Dallas developer-owner of single-tenant hyperscale campuses that is co-controlled by Brookfield Infrastructure and Ontario Teachers' Pension Plan (closing 3 October 2023) with KKR as an asset-level 'permanent capital' partner since December 2025; it publishes no portfolio total, names no tenant and no general contractor, funds growth through a serial asset-backed securities programme (four structured issuances in two years, the February 2026 USD 830 million deal the first hyperscale data-center ABS to carry a Moody's AAA), and in 2026 lost the Prince William Digital Gateway to litigation while winning a second ~830-acre Red Oak campus by a 4–1 midnight vote amid organised opposition.\n\nBACKGROUND. Founded in 2011 by Chris Crosby (ex-Digital Realty); first 1.2 MW data center in 2012; 195 employees at the end of 2025 per the 2026 Outcomes Report. Ownership history per the parties' releases and Brookfield's letters: RedBird Capital Partners and Ontario Teachers' (2017 majority stake per trade press), Azrieli Group (2019, 20% per trade press), then Brookfield Infrastructure and Ontario Teachers' as equal co-controlling partners from October 2023 — Brookfield Infrastructure's Q2 2023 letter priced the co-controlling stake at USD 1.35 billion including its own equity of about USD 375 million; the press figure of USD 5.5 billion including debt was never confirmed by the parties. At signing Compass had about 170 MW operating and 735 MW operating, contracted and reserved, 675 MW of it contracted on a 13-year weighted average term with about 60% triple-net (Brookfield Q2 2023 letter). The company's Markets page lists per-campus capacity — Red Oak 360 MW, Meridian 320 MW, Goodyear 212 MW, Hoffman Estates 200 MW, El Mirage 108 MW, Loudoun 79 MW, plus Toronto and Milan without a figure — a sum of 1,279 MW by this dossier's arithmetic, not a company figure. Delivery model: a standardized 'Moonraker' building 84% fabricated offsite, a Schneider Electric factory on the Red Oak campus under a USD 3 billion five-year agreement, up to 1,500 Siemens medium-voltage skids, Vertiv CoolPhase Flex hybrid cooling, and a 'co-serve' utility posture in which Compass funds its own substations and transmission rights-of-way (USD 52.5 million and nearly USD 20 million in North Texas). Collection gap: no revenue, EBITDA, valuation, tenant identity, GC or company-stated portfolio MW exists in any fetched source; Brookfield Infrastructure's 2025–2026 letters aggregate Compass into a data segment without naming it.",
+  "ecosystemRole": "A build-to-suit landlord rather than an operator or a power developer: Compass buys land and utility capacity, manufactures standardized single-tenant buildings for hyperscalers, and leases them long-term to tenants it never names, then refinances the stabilized campuses through its ABS master trusts and, since December 2025, an asset-level partnership with KKR. In this corpus it is the counterparty on Mississippi Power's PSC-approved special contract for the ~500 MW Meridian campus (the Southern Company dossier's Mississippi large-load), a buyer of Schneider Electric power centres and Vertiv cooling, and — after the April 2026 withdrawal from the Prince William Digital Gateway it co-developed with QTS — a co-founder with QTS, Vantage and Digital Realty of the Infrastructure for America coalition (September 2026).",
+  "productsAndServices": [
+    {
+      "name": "Hyperscale single-tenant build-to-suit campuses (the core product)",
+      "category": "Wholesale data-center development and ownership",
+      "description": "Compass's Design page describes two service lines — 'Hyperscale — Single-tenant campuses with rapid delivery' and 'Cloud — 6-80 MW modular structures' — built from a 'standard kit-of-parts' with a 'tightly integrated supply chain'. The hyperscale design page offers campuses 'Up to 360 MW' with '450 MDA substations with dedicated, customizable and continuous capacity', one- or two-storey structures with two to four data halls, 'distributed redundancy; full, partial or no UPS'. The company builds, owns and operates the campus and leases whole buildings to one tenant; Red Oak's five operating buildings are 'fully occupied by a single tenant' and the securitized Phoenix and Toronto buildings are '100% leased to four firms on long-term contracts' that Moody's characterises as investment-grade hyperscalers (Bisnow, February 2026). Compass names no tenant on any page or release.",
+      "highlights": [
+        "Campuses per the Markets page: Red Oak, TX 360 MW ('nearing completion'); Meridian, MS 320 MW (broke ground 2025; the release states 'Approximately 500 megawatts of power supply' from Mississippi Power); Goodyear, AZ 212 MW; El Mirage, AZ 108 MW; Hoffman Estates, IL 200 MW (former Sears headquarters, five buildings, 'approximately $10 billion' of local investment); Loudoun County, VA 79 MW; Toronto and Milan (Noviglio, JV with Hines, '48MW+') without a stated figure.",
+        "Contracted book at the 2023 sale, per Brookfield Infrastructure's Q2 2023 letter: 'approximately 170 megawatts of operating capacity'; 'Total operating, contracted and reserved capacity is 735 megawatts, which is 85% underpinned by investment grade hyperscalers'; 'Contracted capacity of 675 megawatts ... 13-year weighted average contract duration, with approximately 60% contracted on a triple net basis'.",
+        "New sites 2025–2026: a second Red Oak campus of 'approximately 830 acres' (city) or an '890-acre property' (county) approved 4–1 on 12 May 2026 with eight two-storey buildings of 200,000 sq ft; Statesville, NC (about 330–340 acres, five 270,000 sq ft buildings, rezoning approved 8–0 in September 2025, Duke Energy substation less than a mile away); El Mirage, AZ (120 acres bought for USD 79.3 million in June 2024).",
+        "Exits and legacy sites: the Prince William Digital Gateway (co-developed with QTS; 2,000 acres, 37 planned facilities) abandoned on 29 April 2026 after the Virginia Court of Appeals upheld the voiding of the 2023 rezoning; Tel Aviv exited (Globes); Allen, TX buildings leased to TierPoint and ScaleMatrix; New Albany, OH 2014 pod site; Montréal (ex-ROOT, 2019) now listed among independently owned prior properties."
+      ],
+      "positioning": "Compass positions on delivery certainty rather than land bank: 'A Manufacturing Mindset For Hyperscale Growth', 'hyperscale campuses built to last', and the claim that its industrialized model can 'deliver large-scale data centers in as few as nine months' (Siemens release). An independent 2026 buyer's guide lists it as a 'Dedicated hyperscale campus developer' alongside QTS, Vantage, CyrusOne, STACK, Aligned, DataBank, NTT, Equinix xScale, Digital Realty and Tract, and advises buyers to 'Confirm whether the project will be customer-owned, leased, or operated by Compass'. Trade press names Aligned as a competitor expanding simultaneously in Dallas–Fort Worth.",
+      "soldThrough": "Direct long-term leases to hyperscale and cloud customers ('Target Markets: Cloud and hyperscale data center customers'); no broker or channel programme is described. Two co-development structures on the record: the Hines JV in Milan and the QTS co-development of the Prince William Digital Gateway (now abandoned).",
+      "targetSegments": [
+        "Hyperscale cloud providers taking whole buildings or campuses",
+        "Cloud and large enterprise tenants at 6–80 MW (\"Cloud\" modular structures)",
+        "Investment-grade tenants whose leases can be securitized"
+      ],
+      "roadmap": "Meridian: eight buildings over an eight-year construction period from the January 2025 groundbreaking, integrated-logistics programme extended to the JAN and ORD campuses in 2026 (Outcomes Report). Hoffman Estates: Building 1 topped out February 2026; ComEd power for the first building targeted mid-2026 in the 2024 kickoff coverage. Red Oak: three further buildings (USD 300 million) on the first campus and the ~830-acre second campus. Statesville: operational target 2028 per search-only reports (unverified). Milan still 'establishing' on the Markets page with no 2025–2026 update."
+    },
+    {
+      "name": "Industrialized construction and supply-chain programme (Moonraker, Schneider Red Oak factory, Siemens skids, Vertiv cooling)",
+      "category": "Delivery platform",
+      "description": "The 2026 Outcomes Report describes a standardized building product, 'Moonraker', that is '84% fabricated offsite', and reports that in 2025 Compass shifted '80-90% of power centers onsite level 3 and level 4 activity ... to the factory' and ran an integrated-logistics model across three campuses (PHX, IAD and DFW) with '451 inbound shipments' and 'USD 16.8M of integrated logistics spend'. Its partners page describes Schneider Electric as 'partners from the start' with 'a first-of-its-kind agreement to construct a Schneider manufacturing facility at our Red Oak campus', Vertiv as the source of 'free air-based data center cooling equipment', Cummins for 'manufacture and maintenance of generators' and Foster Fuels for HVO biofuel.",
+      "highlights": [
+        "Schneider Electric: 'USD 3 billion over five years' supply agreement (November 2023) covering prefabricated modular data centers and power centers made at a 110,000 sq ft Red Oak facility opened June 2024 (Manufacturing Dive; Dallas Express reports a 103,000 sq ft, USD 32 million plant — figures unreconciled); a prefabricated EcoStruxure Pod white-space module announced September 2025 with first units at a Compass campus in fall 2025 ('Reduces revenue generation timeline by up to 3 months').",
+        "Siemens (Smart Infrastructure, not Siemens Energy): 'up to 1,500 prefabricated modular medium-voltage skids over five years' (8DJH 36 gas-insulated switchgear plus transformers), December 2024.",
+        "Vertiv: CoolPhase Flex hybrid liquid/air units co-developed with Compass, first units Q1 2025 'under a multi-year, multi-billion dollar supply arrangement' (November 2024); Vertiv's own case study calls itself Compass's primary thermal partner.",
+        "Recognition: ICMA Platinum Medallion for Excellence in Industrialized Construction (January 2026), described by Compass as the 'first and only owner' so recognised; Compass Quantum, the 2022 'white space as a service' modular unit, was majority-sold to Northstar Technologies Group in April 2025 and is no longer a Compass product line."
+      ],
+      "positioning": "Offsite fabrication share is stated three ways by the company itself — '~85%' (homepage), '75%+' (Communities page) and '84%' (Outcomes Report, for the Moonraker product) — so the figure should be quoted with its source. The programme is domestic by design (Texas factory, US-made skids), which is Compass's only visible answer to equipment tariffs; no Compass source discusses tariff exposure.",
+      "soldThrough": "Internal delivery platform; not sold to third parties. Component supply runs through multi-year framework agreements with Schneider Electric, Siemens and Vertiv.",
+      "targetSegments": [
+        "Compass's own campus programme"
+      ],
+      "roadmap": "Integrated logistics extended to the Hoffman Estates (ORD) and Meridian (JAN) campuses in 2026 (Outcomes Report); EcoStruxure Pod deployment from fall 2025."
+    },
+    {
+      "name": "Campus power and the 'co-serve' utility model",
+      "category": "Power procurement and grid posture",
+      "description": "Compass is utility-served and pays for its own grid infrastructure. Chris Crosby's June 2025 Utility Dive op-ed describes a 'co-serve model' — 'We don't do what \"fly-by-night\" developers tend to do and \"demand dump\"—we're partners in planning, risk sharing and capital costs' — and states that Compass 'secured transmission line right-of-way at nearly $20 million' and 'invested $52.5 million in private capital for substation development' for its South Dallas campus. Utilities named by campus: Mississippi Power (Meridian, under a Public Service Commission-approved special contract with Compass Datacenters Jan I, LLC), Oncor (Red Oak, 'via two on-campus substations' per Commercial Property Executive), APS (Goodyear, '230kV substation adjacent'), ComEd (Hoffman Estates), Hydro-Québec (Montréal, 2019), Duke Energy (Statesville substation nearby).",
+      "highlights": [
+        "Mississippi PSC approved the Mississippi Power special contract on 7 February 2025; the company release states 'Approximately 500 megawatts of power supply' while the Markets page lists 320 MW — the two figures are not reconciled by Compass and may be utility supply versus IT load.",
+        "Backup and islanding: Chief Customer Officer Raymond Hawkins described a '191 MW Tier-4 diesel-powered microgrid under development' in Phoenix (May 2025); in January 2026 Compass said it can 'island' its facilities — removing load from the grid during peak weather — using HVO-fuelled backup generators, and reported that 70% of 2025 backup-generator fuel was HVO.",
+        "Texas: on 13 August 2026 Governor Abbott announced that Compass had committed to his data-center standards (pay for electric infrastructure, reuse own water, reduce electricity costs, avoid residential neighbourhoods, no taxpayer incentives); Compass's own release three days earlier asked the state to 'Raise the Standards' and stated each operational facility uses 'approximately the same annual water volume as two average households'.",
+        "Water: 'Zero city water used for cooling since 2011; air cooling and closed-loop recycled systems' (Communities page); '0 WUE' and '1.27 PUE' for assets placed in service in 2025 (Outcomes Report); Red Oak's 2026 rezoning conditions require a closed-loop cooling system and no municipal water for cooling."
+      ],
+      "positioning": "Compass's public argument is that the developer, not ratepayers, should carry grid capacity cost — Crosby advocates 'creative tariffs ensuring commercial/industrial customers bear capacity expansion burden proportionally'. Brookfield Infrastructure's 'USD 5 billion strategic partnership with Bloom Energy to install up to 1 GW of behind-the-meter power' is a sponsor-level programme that no source ties to Compass.",
+      "soldThrough": "Bilateral utility contracts and special contracts approved by state commissions; Compass-funded substations and rights-of-way.",
+      "targetSegments": [
+        "Regulated utilities and municipal utilities in Compass markets",
+        "ERCOT (Oncor), MISO/Southern (Mississippi Power), PJM (ComEd, Dominion territory), APS"
+      ],
+      "roadmap": "ComEd power for Hoffman Estates Building 1 targeted mid-2026 in 2024 coverage (no confirmation found); Phoenix 191 MW microgrid 'under development' (May 2025); Duke Energy service for Statesville reported by Bloomberg and E&E in February 2026 but not verifiable from a fetched source."
+    },
+    {
+      "name": "Capital programme — ABS master trusts, green finance framework and the KKR partnership",
+      "category": "Asset-level financing",
+      "description": "Compass finances stabilized campuses through data-center asset-backed securities and campus-level mortgages, and since December 2025 through an asset-level partnership with KKR. Bisnow counts the February 2026 USD 830 million issuance as Compass's 'fourth structured debt issuance in two years'; Asset Securitization Report describes two master trusts (Compass Datacenters Issuer LLC and Compass Datacenters Issuer III LLC/L.P.), the newer one not cross-collateralized with the older. In March 2026 Compass described the KKR deal as a 'permanent, long-term capital partnership' and an 'evergreen financing partnership' whose purpose Bisnow summarises as recycling capital from stabilized assets to fund new development.",
+      "highlights": [
+        "Series 2025-1/2025-2 (Issuer III): USD 885 million, three data centers (two Phoenix, one Toronto), Guggenheim sole structuring advisor, S&P ratings A and A-, expected close 19 February 2025; Morningstar DBRS rated the 2025-2 notes AAA in October 2025 (GlobalCapital).",
+        "Series 2026-1: USD 830 million against six buildings — five on the Goodyear campus (174.2 MW) and one in Toronto (24 MW), 198.2 MW and 819,000 sq ft in total, appraised at USD 3.6 billion, '100% leased to four firms on long-term contracts'; the USD 500 million senior tranche rated AAA by Moody's, 'the first triple-A rating from S&P Global, Moody's, or Fitch for a data center ABS deal' (Data Center Knowledge). Brookfield Infrastructure's Q1 2026 results: 'At our U.S. hyperscale data center business, we successfully raised $830 million of investment grade asset-backed securities to fund contracted growth'.",
+        "Red Oak: USD 326 million refinancing (October 2025) on the five operating buildings (180 MW; 360 MW at full build-out), fixed-rate, maturity 2050, Wilmington Trust as lender and KeyBank as servicer, with three further buildings (USD 300 million) planned.",
+        "KKR (announced 5 December 2025): 'definitive agreement for KKR to invest in a portion of its operating data centers and future assets', 'expected to raise several billion dollars' (Bloomberg); GuruFocus/Yahoo relays a '1.4 times invested capital' gross return as of late September 2025 — attribution unclear, treat as unverified.",
+        "Green Finance Framework (February 2024) with a Morningstar Sustainalytics second-party opinion; the framework page lists no specific issuances and no sustainability-linked loan was found."
+      ],
+      "positioning": "The rating-agency split matters for cost: S&P caps data-center ABS at single-A while Moody's, Fitch and DBRS have gone to AAA; Compass's 2026-1 deal was the first hyperscale ABS to get a Moody's AAA (GlobalCapital, Bisnow). Sponsor context: Brookfield Infrastructure's Q4 2025 letter reports a data-center platform with '3.6 GW' of development potential, '1.2 GW of operating capacity', a '1.1 GW' contracted backlog and a '1.3 GW' land bank — figures that aggregate all of Brookfield's platforms and do not break out Compass.",
+      "soldThrough": "Rule 144A asset-backed notes via structuring banks (Guggenheim); campus mortgages; sponsor and co-investor equity.",
+      "targetSegments": [
+        "Investment-grade ABS investors",
+        "Infrastructure and insurance capital (KKR, Brookfield, Ontario Teachers')"
+      ],
+      "roadmap": "Further ABS series against Red Oak and Meridian as buildings stabilize (inference from the two-trust structure — not a company statement); KKR-funded 'future assets' per the December 2025 agreement."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Hyperscale campus design standard (company pages and 2026 Outcomes Report)",
+      "specs": [
+        {
+          "band": "Campus",
+          "label": "Capacity",
+          "value": "Up to 360 MW"
+        },
+        {
+          "band": "Campus",
+          "label": "Substations",
+          "value": "450 MDA substations with dedicated, customizable and continuous capacity"
+        },
+        {
+          "band": "Building",
+          "label": "Form",
+          "value": "one or two-story structure with two to four data halls"
+        },
+        {
+          "band": "Building",
+          "label": "Redundancy",
+          "value": "distributed redundancy; full, partial or no UPS"
+        },
+        {
+          "band": "Building",
+          "label": "Offsite fabrication",
+          "value": "This standardized product is 84% fabricated offsite (Moonraker); homepage ~85%; Communities page 75%+ of components prefabricated offsite"
+        },
+        {
+          "band": "Cloud line",
+          "label": "Modular structures",
+          "value": "6-80 MW modular structures"
+        },
+        {
+          "band": "2025 outcomes",
+          "label": "PUE",
+          "value": "1.27 PUE — Assets put in place in 2025 average design power usage effectiveness"
+        },
+        {
+          "band": "2025 outcomes",
+          "label": "WUE",
+          "value": "0 WUE"
+        },
+        {
+          "band": "2025 outcomes",
+          "label": "Uptime",
+          "value": "100% Uptime in 2025"
+        },
+        {
+          "band": "2025 outcomes",
+          "label": "Safety",
+          "value": "0.56 TRIR"
+        },
+        {
+          "band": "2025 outcomes",
+          "label": "Certifications",
+          "value": "13 buildings across 5 campuses certified, with a total of 23 Globes awarded (Green Globes)"
+        },
+        {
+          "band": "2025 outcomes",
+          "label": "Backup fuel",
+          "value": "70% HVO — The majority of backup generator fuel purchased in 2025 was HVO biofuel"
+        }
+      ],
+      "notes": "Values verbatim from the Design, Hyperscale Design and Communities pages and the 2026 Outcomes Report (covering 2025). The three offsite-fabrication percentages are the company's own and are not reconciled."
+    },
+    {
+      "product": "Red Oak campus (DFW), Ellis County, Texas",
+      "specs": [
+        {
+          "band": "Capacity",
+          "label": "Operating",
+          "value": "180 megawatts across existing facilities"
+        },
+        {
+          "band": "Capacity",
+          "label": "Full build-out",
+          "value": "360 megawatts upon full build-out"
+        },
+        {
+          "band": "Site",
+          "label": "Land",
+          "value": "300 acres total (planned); 2020 launch release: 225 acres, 350+ MW of IT load"
+        },
+        {
+          "band": "Buildings",
+          "label": "Count",
+          "value": "5 facilities with 180 megawatts capacity; up to 10 total buildings"
+        },
+        {
+          "band": "Buildings",
+          "label": "Cooling",
+          "value": "air-cooled with N+1 redundancy"
+        },
+        {
+          "band": "Tenancy",
+          "label": "Occupancy",
+          "value": "fully occupied by a single tenant"
+        },
+        {
+          "band": "Grid",
+          "label": "Utility",
+          "value": "Oncor provides electricity via two on-campus substations"
+        },
+        {
+          "band": "Grid",
+          "label": "Compass-funded infrastructure",
+          "value": "secured transmission line right-of-way at nearly $20 million; invested $52.5 million in private capital for substation development"
+        },
+        {
+          "band": "Financing",
+          "label": "Refinancing (October 2025)",
+          "value": "$326 million; fixed-rate maturity in 2050; Wilmington Trust will provide the financing while KeyBank is the servicer"
+        },
+        {
+          "band": "On-campus factory",
+          "label": "Schneider Electric",
+          "value": "110,000 square feet; opening June 2024; 240 power centers in 2025; maximum capacity exceeds 400 annually"
+        },
+        {
+          "band": "Second campus (2026)",
+          "label": "Land",
+          "value": "approximately 830 acres (City of Red Oak) / 890-acre property (Ellis County)"
+        },
+        {
+          "band": "Second campus (2026)",
+          "label": "Plan",
+          "value": "Eight two-story structures; 200,000 SF per building (1.6M SF total); $9.45B latest abatement-backed campus investment"
+        }
+      ],
+      "notes": "Operating and full-build figures from the October 2025 refinancing coverage; second-campus figures from May–July 2026 local coverage. The Outcomes Report quotes a Red Oak official projecting the campus to be worth $6 billion upon completion."
+    },
+    {
+      "product": "Series 2026-1 asset-backed securities collateral (Goodyear and Toronto)",
+      "specs": [
+        {
+          "band": "Notes",
+          "label": "Size",
+          "value": "$830 million"
+        },
+        {
+          "band": "Notes",
+          "label": "Ratings",
+          "value": "$500 million senior tranche rated AAA by Moody's — the first triple-A rating from S&P Global, Moody's, or Fitch for a data center ABS deal"
+        },
+        {
+          "band": "Collateral",
+          "label": "Phoenix (Goodyear)",
+          "value": "Five facilities on a single Phoenix campus (174.2 MW capacity)"
+        },
+        {
+          "band": "Collateral",
+          "label": "Toronto",
+          "value": "One Toronto facility (24 MW capacity)"
+        },
+        {
+          "band": "Collateral",
+          "label": "Total",
+          "value": "198.2 megawatts across 819K SF"
+        },
+        {
+          "band": "Collateral",
+          "label": "Appraisal",
+          "value": "Portfolio appraised value: $3.6 billion"
+        },
+        {
+          "band": "Collateral",
+          "label": "Leasing",
+          "value": "100% leased to four firms on long-term contracts"
+        },
+        {
+          "band": "Programme",
+          "label": "Prior issuance",
+          "value": "Series 2025-1 and 2025-2: $885 million; Two facilities in Phoenix; one in Toronto; S&P A and A-; Compass Datacenters Issuer III LLC and L.P."
+        }
+      ],
+      "notes": "Bisnow (10 February 2026), Data Center Knowledge (12 February 2026) and Asset Securitization Report (7 February 2025). The Goodyear campus is listed at 212 MW on the Markets page against a 2019 plan of 350 MW across eight buildings on 225 acres."
+    },
+    {
+      "product": "Meridian campus (JAN), Lauderdale County, Mississippi",
+      "specs": [
+        {
+          "band": "Programme",
+          "label": "Investment",
+          "value": "$10 billion total investment (including tenant IT equipment)"
+        },
+        {
+          "band": "Programme",
+          "label": "Buildings",
+          "value": "8 data centers over 8-year construction period"
+        },
+        {
+          "band": "Power",
+          "label": "Supply",
+          "value": "Approximately 500 megawatts of power supply (release); Markets page: 320 MW"
+        },
+        {
+          "band": "Power",
+          "label": "Utility",
+          "value": "Mississippi Power Company; special contract with Compass Datacenters Jan I, LLC approved by the Mississippi Public Service Commission on 7 February 2025"
+        },
+        {
+          "band": "Incentives",
+          "label": "State",
+          "value": "10-year state income and franchise tax exemptions; Sales and use tax exemption on construction materials, equipment, software, and hardware replacements"
+        },
+        {
+          "band": "Incentives",
+          "label": "Local",
+          "value": "$4 million site grant from Lauderdale County; MDA site grant; City of Meridian water/sewer investment"
+        },
+        {
+          "band": "Tenancy",
+          "label": "First announced tenant",
+          "value": "Corderill LLC — $100 million, 20 new positions (April 2026); no hyperscaler named"
+        },
+        {
+          "band": "Milestones",
+          "label": "Groundbreaking",
+          "value": "28 January 2025"
+        }
+      ],
+      "notes": "Compass release and Governor Reeves' office (9 January 2025); Mississippi Business Journal and The Meridian Star (February–March 2025); SuperTalk Mississippi (April 2026). A Mississippi Today report that Mississippi Power extended a Plant Daniel coal unit to serve the load could not be fetched and is not relied on."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-02",
+      "category": "corporate",
+      "headline": "Infrastructure for America launches — a 501(c)(4) co-founded by Compass, Digital Realty, QTS and Vantage; Crosby: 'There's a difference between building to last and building to exit'",
+      "read": "Compass is organising the landlord tier's answer to moratoria: a shared standard that host communities can hold every developer to, positioned against 'build to exit' rivals.",
+      "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/"
+    },
+    {
+      "date": "2026-08-13",
+      "category": "policy",
+      "headline": "Governor Abbott announces that Galaxy, Compass Datacenters and Montera Infrastructure commit to comply with his data-center standards (pay for electric infrastructure, reuse own water, reduce electricity costs, avoid residential neighbourhoods, no taxpayer incentives)",
+      "read": "Compass traded the Ellis County abatement it had already lost for a first-mover seat at the standard-setting table in ERCOT's largest developer market.",
+      "source": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards"
+    },
+    {
+      "date": "2026-08-10",
+      "category": "policy",
+      "headline": "Compass to Gov. Abbott: 'We Agree. Raise the Standards.' — each facility uses 'approximately the same annual water volume as two average households'; Compass funds its own grid infrastructure and reduces load during grid stress",
+      "read": "The pre-emptive endorsement converts the co-serve model into a public benchmark that rivals must now match.",
+      "source": "https://www.compassdatacenters.com/news/compass-datacenters-to-gov-abbott-we-agree-raise-the-standards/"
+    },
+    {
+      "date": "2026-07-31",
+      "category": "other",
+      "headline": "Compass and Meridian Community College launch a 14-week MEI Data Center Pathway Program with Compass funding tuition for the first cohort; partners include Schneider Electric, Siemens, Vertiv, Rosendin and Salute",
+      "read": "Workforce programmes are the consent currency for the eight-building Meridian build; the partner list doubles as a map of Compass's supply bench.",
+      "source": "https://www.compassdatacenters.com/news/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program/"
+    },
+    {
+      "date": "2026-07-06",
+      "category": "regulatory",
+      "headline": "Ellis County approves Compass's USD 15 million animal-shelter grant; 'A proposed tax abatement for the 890-acre property was withdrawn before the June 23 commissioners meeting due to community pushback'",
+      "read": "The second Red Oak campus will be built without the county abatement that Compass's own SVP had called one of the greatest factors in the original expansion — consent now costs more than tax relief saves.",
+      "source": "https://www.keranews.org/energy-environment/2026-07-06/data-center-developer-compass-ellis-county-animal-shelter-pushback"
+    },
+    {
+      "date": "2026-06-30",
+      "category": "other",
+      "headline": "Compass donates a USD 12.6 million, 40,000 sq ft training building to Texas State Technical College at Red Oak; the campus 'will employ over 400 people, including both Compass staff and customer operations'",
+      "read": "USD 27.6 million of announced local giving in one month is the price of the 4–1 vote and the pattern to expect at Statesville and Hoffman Estates.",
+      "source": "https://finance.yahoo.com/technology/articles/compass-datacenters-donates-12-6m-130000668.html"
+    },
+    {
+      "date": "2026-05-12",
+      "category": "regulatory",
+      "headline": "Red Oak City Council approves (4–1, around midnight after a five-hour meeting) a ~830-acre second Compass campus — 'the sixth data center campus in Red Oak' — with a city tax abatement; Somervell and Ellis counties pass non-binding resolutions restricting data centers",
+      "read": "The DFW land bank doubled, but on conditions (closed-loop cooling, no municipal water, noise and setback limits) that now travel with every Texas application.",
+      "source": "https://www.cbsnews.com/texas/news/red-oak-community-fight-against-another-data-center-getting-approved-north-texas/"
+    },
+    {
+      "date": "2026-04-29",
+      "category": "legal",
+      "headline": "Statement on the Prince William Digital Gateway: President AJ Byers — 'Compass has reached the unfortunate conclusion that we cannot move forward'; the Virginia Court of Appeals had upheld (31 March) the voiding of the 2023 rezoning; QTS withdrew on 2 July",
+      "read": "The largest site in Compass's history (2,000 acres, 37 planned facilities with QTS) is gone; Northern Virginia growth now depends on the 79 MW Loudoun campus alone.",
+      "source": "https://www.compassdatacenters.com/news/digital-gateway-project/"
+    },
+    {
+      "date": "2026-04-29",
+      "category": "financial",
+      "headline": "Brookfield Infrastructure Q1 2026 results: 'At our U.S. hyperscale data center business, we successfully raised $830 million of investment grade asset-backed securities to fund contracted growth'; data segment FFO USD 149 million, up 46%",
+      "read": "The listed sponsor confirms the ABS and calls the pipeline 'contracted growth' — the only sponsor-side view of Compass in 2026, and it names no MW.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1406234/000117184326002798/exh_991.htm"
+    },
+    {
+      "date": "2026-04-22",
+      "category": "customer",
+      "headline": "Meridian lands its first announced tenant — Corderill LLC, USD 100 million and 20 jobs under Mississippi's Data Center Incentive programme",
+      "read": "A USD 100 million tenant on a USD 10 billion campus is a placeholder disclosure; the hyperscale anchor Mississippi Power's 500 MW contract implies remains unnamed.",
+      "source": "https://www.supertalk.fm/compass-datacenters-lands-first-tenant-with-100-million-investment/"
+    },
+    {
+      "date": "2026-03-16",
+      "category": "financial",
+      "headline": "Compass describes the KKR deal as 'a New Permanent Capital Partnership to Support Built to Last Vision' — an 'evergreen financing partnership'; amounts undisclosed; Crosby: 'measured in decades, not quarters'",
+      "read": "Permanent capital at asset level lets Compass recycle stabilized campuses without a sale of the platform or an IPO — the third leg after sponsor equity and ABS.",
+      "source": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/"
+    },
+    {
+      "date": "2026-02-15",
+      "category": "project",
+      "headline": "Hoffman Estates Building 1 tops out on the former Sears headquarters site; general contractor Power Construction; Mayor McLeod says the investment 'will be in the billions of dollars'",
+      "read": "The first named GC on any Compass campus, and a schedule check: the 2024 target of first power by mid-2026 looks tight with steel topped out in February.",
+      "source": "https://www.chicagoconstructionnews.com/compass-datacenters-marks-milestone-with-building-1-topping-off-at-hoffman-estates-campus/"
+    },
+    {
+      "date": "2026-02-10",
+      "category": "financial",
+      "headline": "USD 830 million Series 2026-1 ABS: six buildings (Phoenix 174.2 MW, Toronto 24 MW; 198.2 MW; USD 3.6 billion appraised), '100% leased to four firms on long-term contracts'; Moody's AAA/AA — 'the first hyperscale ABS offering it has given a AAA or AA rating'; 'fourth structured debt issuance in two years'",
+      "read": "A AAA on hyperscale collateral lowers Compass's cost of capital below the single-A cap S&P still applies to the asset class.",
+      "source": "https://www.bisnow.com/national/news/data-center-capital-markets/brookfields-compass-datacenters-raising-830m-securitizing-6-big-tech-data-centers-133152"
+    },
+    {
+      "date": "2026-01-28",
+      "category": "other",
+      "headline": "ICMA Platinum Medallion for Excellence in Industrialized Construction — Compass says it is the 'first and only owner' so recognised",
+      "read": "External validation of the manufacturing model that is the company's stated differentiator.",
+      "source": "https://www.compassdatacenters.com/news/icma-platinum-industrialized-construction/"
+    },
+    {
+      "date": "2026-01-23",
+      "category": "policy",
+      "headline": "Compass supports Energy Secretary Wright's directive to unleash backup generation ahead of Storm Fern — it can 'island' facilities, removing load from the grid during peak weather, on HVO-fuelled generators",
+      "read": "Compass is positioning its campuses as flexible load in ERCOT's winter-peak politics; the wire release's boilerplate still named only Ontario Teachers' and Brookfield.",
+      "source": "https://www.prnewswire.com/news-releases/compass-datacenters-supports-secretary-wrights-directive-to-unleash-backup-generation-ahead-of-storm-fern-302668764.html"
+    },
+    {
+      "date": "2025-12-05",
+      "category": "financial",
+      "headline": "KKR signs a definitive agreement 'to invest in a portion of its operating data centers and future assets'; 'expected to raise several billion dollars' (Bloomberg)",
+      "read": "Asset-level capital from a third sponsor without a change of control — the amount and the assets were never disclosed.",
+      "source": "https://news.bloomberglaw.com/private-equity/kkr-to-invest-in-assets-of-brookfields-compass-datacenters-1"
+    },
+    {
+      "date": "2025-10-29",
+      "category": "financial",
+      "headline": "USD 326 million Red Oak refinancing: five operating buildings, '180 megawatts across existing facilities; 360 megawatts upon full build-out', 'fully occupied by a single tenant', fixed-rate to 2050; three more buildings (USD 300 million) planned",
+      "read": "A 25-year fixed-rate mortgage on a single-tenant campus is only possible against a long lease to an investment-grade tenant — the tenant is still unnamed.",
+      "source": "https://www.commercialsearch.com/news/compass-datacenters-lands-326m-for-dfw-campus/"
+    },
+    {
+      "date": "2025-09-16",
+      "category": "regulatory",
+      "headline": "Statesville, NC City Council approves the rezoning 8–0 after 17 residents speak against and 5 in favour; five buildings of 270,000 sq ft on about 330–365 acres (sources differ)",
+      "read": "A new Southeast market with Duke Energy on the doorstep, won on a unanimous vote despite the noise, battery-safety and farmland objections that stalled other sites.",
+      "source": "https://www.wbtv.com/2025/09/16/statesville-city-council-approves-rezoning-request-new-data-center/"
+    },
+    {
+      "date": "2025-09-09",
+      "category": "product-launch",
+      "headline": "Compass and Schneider Electric announce a prefabricated EcoStruxure Pod white-space module — first units at a Compass campus in fall 2025, 'Reduces revenue generation timeline by up to 3 months'",
+      "read": "The prefab programme moves from power rooms into the data hall itself, which is where the revenue clock starts.",
+      "source": "https://www.compassdatacenters.com/news/compass-and-schneider-electric-announce-prefabricated-white-space-module-to-accelerate-data-center-delivery-timelines/"
+    },
+    {
+      "date": "2025-08-12",
+      "category": "financial",
+      "headline": "Inc. 5000: Compass ranks No. 982 with '435%' three-year revenue growth (fifth appearance); the 2026 list ranks it No. 527 with 660% growth",
+      "read": "The only revenue signal a private landlord gives — growth rates without a base.",
+      "source": "https://www.prnewswire.com/news-releases/compass-datacenters-ranks-no-982-on-the-2025-inc-5000-list-of-americas-fastest-growing-private-companies-302527001.html"
+    },
+    {
+      "date": "2025-04-02",
+      "category": "ma",
+      "headline": "Northstar Technologies Group acquires majority ownership of Compass Quantum, the 2022 'white space as a service' modular unit; terms undisclosed; Compass keeps a strategic partnership",
+      "read": "The edge/modular sideline is out; the company is now a pure hyperscale campus developer.",
+      "source": "https://www.compassdatacenters.com/news/northstar-technologies-group-acquires-majority-ownership-of-compass-quantum-from-compass-datacenters-enabling-next-phase-of-quantums-growth/"
+    },
+    {
+      "date": "2025-02-07",
+      "category": "regulatory",
+      "headline": "Mississippi PSC approves the special contract between Mississippi Power and Compass Datacenters Jan I, LLC for the USD 10 billion Lauderdale County campus",
+      "read": "The regulated-utility route to 500 MW: a commission-approved bilateral contract rather than a merchant or behind-the-meter supply.",
+      "source": "https://meridianstar.com/2025/02/07/psc-approves-contract-between-mississippi-power-compass-datacenters/"
+    },
+    {
+      "date": "2025-02-07",
+      "category": "financial",
+      "headline": "Series 2025-1/2025-2 ABS: USD 885 million from the new Compass Datacenters Issuer III master trust (two Phoenix and one Toronto data center), S&P A and A-, Guggenheim sole structuring advisor",
+      "read": "A second, non-cross-collateralized trust lets Compass securitize newer campuses without touching the 2021 pool.",
+      "source": "https://asreport.americanbanker.com/news/compass-datacenters-readies-885-million-in-data-center-revenues"
+    },
+    {
+      "date": "2025-01-28",
+      "category": "project",
+      "headline": "Groundbreaking for the Meridian campus at the MSU-Meridian Riley Center: eight data centers over an eight-year completion timeframe",
+      "read": "The first spade on Compass's largest single programme, one year before the first named tenant.",
+      "source": "https://www.yahoo.com/news/compass-datacenters-holds-groundbreaking-meridian-180522825.html"
+    },
+    {
+      "date": "2025-01-09",
+      "category": "project",
+      "headline": "Compass announces the USD 10 billion Meridian, Mississippi campus: eight data centers over eight years, 'Approximately 500 megawatts of power supply' from Mississippi Power, 10-year state income and franchise tax exemptions and sales/use tax exemptions",
+      "read": "A greenfield Southeast market chosen for power availability and incentives rather than proximity to an existing hub.",
+      "source": "https://www.compassdatacenters.com/news/compass-10b-investment-lauderdale-county-mississippi/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "southern-company",
+      "type": "supplier",
+      "note": "Mississippi Power (Southern Company) supplies the Meridian campus under a PSC-approved special contract — 'Approximately 500 megawatts of power supply'.",
+      "context": "Compass's 9 January 2025 release names Mississippi Power Company as the utility for the USD 10 billion, eight-building Lauderdale County campus with 'Approximately 500 megawatts of power supply'; the Mississippi Public Service Commission approved the special contract with Compass Datacenters Jan I, LLC on 7 February 2025 (The Meridian Star, Mississippi Business Journal). The Southern Company dossier records the same load from the utility's side as part of Mississippi Power's 'approximately 600 MWs' of recently signed economic-development load.\n\nCollection gap: the Markets page lists Meridian at 320 MW against the release's ~500 MW of supply, and no fetched source reconciles the two; a Mississippi Today report that a Plant Daniel coal unit was extended to serve the load could not be read.",
+      "source": "https://www.compassdatacenters.com/news/compass-10b-investment-lauderdale-county-mississippi/",
+      "status": "active",
+      "since": "2025-02",
+      "scale": "~500 MW"
+    },
+    {
+      "slug": "oncor",
+      "type": "supplier",
+      "note": "Oncor serves the Red Oak campus 'via two on-campus substations' that Compass funded.",
+      "context": "Commercial Property Executive's coverage of the October 2025 USD 326 million refinancing states that Oncor provides electricity to the five operating Red Oak buildings via two on-campus substations; Crosby's June 2025 op-ed says Compass 'invested $52.5 million in private capital for substation development' and 'secured transmission line right-of-way at nearly $20 million' for its South Dallas campus. Compass's own releases do not name the utility.",
+      "source": "https://www.commercialsearch.com/news/compass-datacenters-lands-326m-for-dfw-campus/",
+      "status": "active",
+      "scale": "two on-campus substations"
+    },
+    {
+      "slug": "schneider-electric",
+      "type": "supplier",
+      "note": "USD 3 billion, five-year supply agreement for prefabricated power centres and modular data centers, with a Schneider factory on the Red Oak campus.",
+      "context": "Manufacturing Dive (November 2023): a '$3 billion over five years' agreement under which Schneider manufactures 'Prefabricated IT modular data centers and power centers' at a 110,000 sq ft Red Oak facility opening June 2024, with '240 power centers in 2025' and capacity above 400 a year; about 150 modular solutions had already shipped from Schneider's West Chester, Ohio plant. Compass's partners page calls Schneider 'partners from the start'; the September 2025 EcoStruxure Pod release extends the programme into prefabricated white space.",
+      "source": "https://www.manufacturingdive.com/news/schneider-electric-compass-datacenters-expand-partnership/699594/",
+      "status": "active",
+      "since": "2023-11",
+      "scale": "$3 billion over five years",
+      "via": "Prefabricated power centers and EcoStruxure Pod modules"
+    },
+    {
+      "slug": "vertiv",
+      "type": "supplier",
+      "note": "Vertiv is Compass's primary thermal partner; CoolPhase Flex hybrid liquid/air units co-developed with Compass under a multi-year, multi-billion dollar supply arrangement.",
+      "context": "Compass's 18 November 2024 release announced the CoolPhase Flex hybrid liquid and air cooling system with first units in Q1 2025 'under a multi-year, multi-billion dollar supply arrangement'; Vertiv's own March 2024 case study describes each unit as supporting 'full-air or liquid cooling, including direct-to-chip'. The partners page credits Vertiv with Compass's 'free air-based data center cooling equipment'.",
+      "source": "https://www.compassdatacenters.com/news/vertiv-compass-hybrid-liquid-air-cooling-ai-deployment/",
+      "status": "active",
+      "since": "2024-11",
+      "scale": "multi-year, multi-billion dollar supply arrangement",
+      "via": "CoolPhase Flex"
+    },
+    {
+      "slug": "cummins",
+      "type": "supplier",
+      "note": "Generator supply and maintenance partner; HVO biofuel adoption.",
+      "context": "Compass's partners page lists Cummins for the 'manufacture and maintenance of generators' and credits the relationship for the shift to HVO biodiesel; the Outcomes Report states that 70% of backup-generator fuel bought in 2025 was HVO. No contract value or unit count is disclosed.",
+      "source": "https://www.compassdatacenters.com/about/our-partners/",
+      "status": "active"
+    },
+    {
+      "slug": "qts",
+      "type": "partner",
+      "note": "Co-developer of the abandoned Prince William Digital Gateway and co-founder of Infrastructure for America (September 2026).",
+      "context": "QTS (GW Acquisition Co.) and Compass (H&H Capital Acquisitions) were the two developers behind the 2,000-acre Prince William Digital Gateway rezoned in December 2023; after the Court of Appeals upheld the voiding of the rezoning, Compass withdrew on 29 April 2026 and QTS on 2 July 2026. On 2 September 2026 Compass, QTS, Vantage and Digital Realty launched Infrastructure for America, a 501(c)(4) setting host-community standards for developers. QTS's own dossier lists Compass among its competitors.",
+      "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+      "status": "active",
+      "since": "2023"
+    },
+    {
+      "slug": "vantage",
+      "type": "partner",
+      "note": "Co-founder of Infrastructure for America alongside Compass, QTS and Digital Realty.",
+      "context": "The 2 September 2026 launch release names Vantage as a founding member of the coalition. Vantage is otherwise a direct competitor in the hyperscale build-to-suit market — an independent 2026 buyer's guide lists both on the same shortlist — and no commercial dealing between the two is recorded.",
+      "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+      "status": "active",
+      "since": "2026-09"
+    },
+    {
+      "slug": "aligned",
+      "type": "competitor",
+      "note": "Named by Dallas press as a competitor expanding simultaneously in the DFW market.",
+      "context": "Dallas Express (May 2024), reporting Compass's Red Oak expansion filings, notes 'competitors like Aligned Data Centers expanding simultaneously in the region'. Both are sponsor-owned single-tenant hyperscale developers with water-free cooling claims; Aligned's dossier records no Compass link. No commercial dealing between the two is recorded.",
+      "source": "https://dallasexpress.com/metroplex/dallas-compass-expands-in-north-texas/",
+      "status": "active"
+    },
+    {
+      "slug": "rosendin",
+      "type": "other",
+      "note": "Industry partner in the Meridian Community College data-center workforce programme.",
+      "context": "Compass's 31 July 2026 release lists Rosendin among the 'Industry Partners Supporting Program' for the MEI Data Center Pathway Program, alongside Schneider Electric, Siemens, Vertiv and Salute. No source states that Rosendin holds an electrical contract on a Compass campus; no general contractor is named for Meridian.",
+      "source": "https://www.compassdatacenters.com/news/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program/",
+      "status": "active",
+      "since": "2026-07"
+    },
+    {
+      "slug": "amazon",
+      "type": "other",
+      "note": "Historical: Compass's former Israeli business built for AWS with Azrieli; Compass has since exited Israel.",
+      "context": "Globes (November 2025) describes the AWS data centers in Israel as 'executed by Azrieli and its former subsidiary Compass, which has since exited the field in Israel'. No current AWS lease at any Compass campus is disclosed; Bisnow's gloss that the securitized tenants are 'major tech firms like Amazon, Microsoft, Google, and Meta' is a characterisation of 'investment-grade hyperscale tenants', not a disclosure.",
+      "source": "https://en.globes.co.il/en/article-aws-to-double-data-center-capacity-in-israel-1001526360",
+      "status": "historical"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Texas data-center standards",
+      "status": "in-effect",
+      "effectiveDate": "2026-08-13",
+      "exposure": "On 13 August 2026 Governor Abbott announced that Compass had committed to comply with his data-center standards: pay for electric infrastructure rather than shifting costs to Texas families, reuse its own water, reduce electricity costs, avoid disrupting residential neighbourhoods and eliminate reliance on taxpayer-funded incentives, with PUCT/ERCOT review to require disclosure of public assistance, projected demand, on-site generation, water sources and project ownership. Compass's Red Oak campuses (360 MW operating/planned plus the ~830-acre second site) are the exposure.",
+      "mitigation": "Compass's 10 August 2026 release endorsed the standards ('We Agree. Raise the Standards.'), stating that each facility uses about the water of two households, that Compass funds its own grid infrastructure (USD 52.5 million substation, ~USD 20 million right-of-way) and voluntarily reduces load during grid stress.",
+      "source": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards"
+    },
+    {
+      "regime": "Mississippi data-center incentives",
+      "status": "in-effect",
+      "effectiveDate": "2025-01",
+      "exposure": "The Meridian campus was announced with '10-year state income and franchise tax exemptions' and a 'Sales and use tax exemption on construction materials, equipment, software, and hardware replacements', a USD 4 million Lauderdale County site grant and an MDA site grant; power is supplied under a special contract with Mississippi Power approved by the Public Service Commission on 7 February 2025. Tenant-level incentives run through the state's Data Center Incentive programme (Corderill, April 2026).",
+      "source": "https://www.compassdatacenters.com/news/compass-10b-investment-lauderdale-county-mississippi/"
+    },
+    {
+      "regime": "Chapter 312 abatement",
+      "status": "in-effect",
+      "effectiveDate": "2018-01",
+      "exposure": "Texas Comptroller records show a City of Allen Chapter 312 agreement with Compass Datacenters DFW LLC executed 15 November 2016 — '50% abatement for years 1-5 and 7-10; 0% in year 6' — expiring 31 December 2027. Red Oak granted a city abatement with the May 2026 rezoning of the second campus, but Ellis County withdrew its abatement item for the 890-acre property before the 23 June 2026 commissioners meeting 'due to community pushback', and Governor Abbott has called for repealing data-center tax exemptions.",
+      "mitigation": "Compass proceeded with the second Red Oak campus without the county abatement and pledged USD 15 million for a county animal shelter and a USD 12.6 million training building to Texas State Technical College (June 2026).",
+      "source": "https://comptroller.texas.gov/economy/development/search-tools/ch312/abatements-details.php?id=000003699"
+    },
+    {
+      "regime": "Virginia local zoning (Prince William Digital Gateway)",
+      "status": "expired",
+      "effectiveDate": "2026-04-29",
+      "exposure": "The December 2023 rezoning of the 2,000-acre Prince William Digital Gateway, co-developed by Compass and QTS, was voided by the Prince William Circuit Court and the ruling upheld by the Virginia Court of Appeals on 31 March 2026; Compass withdrew on 29 April 2026, stating that 'recent legal actions and compounding regulatory hurdles have effectively closed a viable path forward'. Compass's remaining Virginia exposure is the 79 MW Loudoun campus.",
+      "source": "https://www.compassdatacenters.com/news/digital-gateway-project/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Chris Crosby",
+      "title": "Chief Executive Officer",
+      "photo": "images/execs/compass-datacenters-crosby.jpg",
+      "background": [
+        "Founded Compass Datacenters in 2011 'after years of working at the intersection of tech and real estate development'; first 1.2 MW data center in 2012",
+        "Senior Vice President, Digital Realty (per trade press) before founding Compass",
+        "EY Southwest Entrepreneur of the Year 2023; testified to the House Small Business Committee (Democrats) on 21 January 2026; author of the June 2025 Utility Dive 'co-serve model' op-ed"
+      ]
+    },
+    {
+      "name": "AJ Byers",
+      "title": "President",
+      "photo": "images/execs/compass-datacenters-byers.jpg",
+      "background": [
+        "President, Compass Datacenters; issued the 29 April 2026 Digital Gateway withdrawal statement",
+        "President & CEO, ROOT Data Centers (Montréal) until Compass acquired it in July 2019",
+        "President, Rogers Data Centers; EVP, Primus; COO, Magma Communications; University of Waterloo"
+      ]
+    },
+    {
+      "name": "Jared Day",
+      "title": "President and Chief Financial Officer",
+      "photo": "images/execs/compass-datacenters-day.jpg",
+      "background": [
+        "Joined Compass in February 2025 (per a first-party release surfaced only in search — not independently corroborated)",
+        "President and acting CFO, Armor Defense",
+        "Principal, Boston Consulting Group; Washington & Lee University; Kellogg MBA"
+      ]
+    },
+    {
+      "name": "Adil Attlassy",
+      "title": "Chief Technology Officer",
+      "photo": "images/execs/compass-datacenters-attlassy.jpg",
+      "background": [
+        "General Manager, Global Site and Network Acquisition, Microsoft",
+        "Chief Development Officer, IO Data Centers (later Iron Mountain)",
+        "Executive roles at Digital Realty Trust in the US, UK and Singapore; MBA, Thunderbird"
+      ]
+    },
+    {
+      "name": "Jonathan Schildkraut",
+      "title": "Chief Investment Officer",
+      "photo": "images/execs/compass-datacenters-schildkraut.jpg",
+      "background": [
+        "Chief Strategy Officer, CyrusOne",
+        "Wall Street research analyst covering communications infrastructure",
+        "NYU JD/MBA; University of Michigan BBA"
+      ]
+    },
+    {
+      "name": "Raymond Hawkins",
+      "title": "Chief Customer Officer",
+      "photo": "images/execs/compass-datacenters-hawkins.jpg",
+      "background": [
+        "Responsible for 'all of the company's sales, sales channels, and marketing'; described the Phoenix 191 MW microgrid in a May 2025 Q&A",
+        "SVP Global Solutions Sales, Digital Realty",
+        "Sirius Computer Solutions; US Marine Corps; Auburn University"
+      ]
+    },
+    {
+      "name": "Tamara Yang",
+      "title": "Chief Delivery Officer",
+      "photo": "images/execs/compass-datacenters-yang.jpg",
+      "background": [
+        "Heads Compass's global construction programme / Delivery organisation",
+        "VP Organizational Development, Balfour Beatty; roles at Hensel Phelps and Turner Construction",
+        "US Naval Academy; Navy Surface Warfare Officer"
+      ]
+    },
+    {
+      "name": "Terrence Jones",
+      "title": "Chief Data Center Operations Officer",
+      "photo": "images/execs/compass-datacenters-jones.jpg",
+      "background": [
+        "Chief of Staff to the EVP Global Operations, Compass Datacenters",
+        "10+ years at Cencora (AmerisourceBergen)",
+        "UT Dallas MBA; UT Arlington BS"
+      ]
+    },
+    {
+      "name": "Mike Bowers",
+      "title": "General Counsel",
+      "photo": "images/execs/compass-datacenters-bowers.jpg",
+      "background": [
+        "General Counsel, Compass Datacenters",
+        "Trial attorney in construction and commercial litigation",
+        "University of Texas at Austin; SMU Dedman School of Law JD"
+      ]
+    },
+    {
+      "name": "Ram Balasubramanian",
+      "title": "Chief Information Officer",
+      "photo": "images/execs/compass-datacenters-balasubramanian.jpg",
+      "background": [
+        "CIO, Compass Datacenters",
+        "CIO roles at Liberty Steel, Canoo, Salesforce, Motorola and PepsiCo",
+        "UT Dallas MBA; SMU BBA"
+      ]
+    },
+    {
+      "name": "Anna Carlton",
+      "title": "Chief Culture Officer (bio text: SVP of People and Culture)",
+      "photo": "images/execs/compass-datacenters-carlton.jpg",
+      "background": [
+        "Leads people and culture at Compass",
+        "10+ years at Ever.Ag; HR consulting including Department of Defense work",
+        "Gannon University; Florida Tech MS"
+      ]
+    },
+    {
+      "name": "Sudhir Kalra",
+      "title": "Fellow & Chief Advisor, Data Center Operations",
+      "photo": "images/execs/compass-datacenters-kalra.jpg",
+      "background": [
+        "Executive Director and Global Head of Enterprise Data Centers, Morgan Stanley",
+        "Global head of engineering and critical systems, Deutsche Bank; SIAC"
+      ]
+    },
+    {
+      "name": "Nancy Novak",
+      "title": "Chief Innovation Officer Emeritus & Compass Ambassador",
+      "photo": "images/execs/compass-datacenters-novak.jpg",
+      "background": [
+        "Chief Innovation Officer, Compass Datacenters (now emeritus)",
+        "Hensel Phelps; Balfour Beatty; NIBS board; host of the 'Extending the Ladder' series"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2023 (private developer — no financial statements published; sale year)",
+        "periodType": "annual",
+        "periodEnd": "2023-12-31",
+        "metrics": [
+          {
+            "name": "Sale to Brookfield Infrastructure and Ontario Teachers'",
+            "actual": "Agreement 20 June 2023, closing 3 October 2023; Brookfield Infrastructure: 'a co-controlling stake in Compass Datacenters for $1.35 billion, including Brookfield Infrastructure's equity of approximately $375 million'; parties disclosed no total price; press: 'Above $5 billion' (Data Center Frontier), 'Over $5.5B (attributed to Reuters)' (Bisnow), '$5.5 billion including debt' (GuruFocus/Yahoo)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Brookfield Infrastructure Q2 2023 letter; OTPP release; McCarthy Tétrault deal page; trade press estimates"
+          },
+          {
+            "name": "Capacity at signing",
+            "actual": "'approximately 170 megawatts of operating capacity'; 'Total operating, contracted and reserved capacity is 735 megawatts, which is 85% underpinned by investment grade hyperscalers'; 'Contracted capacity of 675 megawatts ... 13-year weighted average contract duration, with approximately 60% contracted on a triple net basis'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Brookfield Infrastructure Q2 2023 letter"
+          },
+          {
+            "name": "Land and supply commitments",
+            "actual": "Hoffman Estates (former Sears HQ) bought for '$194 million' (September); Schneider Electric '$3 billion over five years' supply agreement (November)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Data Center Frontier; Manufacturing Dive"
+          }
+        ],
+        "commentary": "The only priced view of the company is the sponsor's: USD 1.35 billion for a co-controlling stake, most of it from Brookfield's institutional partners, against a press enterprise value of about USD 5.5 billion that no party confirmed."
+      },
+      {
+        "period": "FY2024 (no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Capital raised",
+            "actual": "Green Finance Framework (February) with a Sustainalytics second-party opinion — no issuance listed; Red Oak Buildings 3–4 filed at a 'Combined construction cost: $200 million' (TDLR, May); El Mirage 120 acres bought for '$79.3 million' (June)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Compass framework page; Dallas Express (TDLR filing); Bisnow"
+          },
+          {
+            "name": "Supply framework additions",
+            "actual": "Vertiv CoolPhase Flex 'multi-year, multi-billion dollar supply arrangement' (November); Siemens 'up to 1,500 prefabricated modular medium-voltage skids over five years' (December)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Compass releases"
+          },
+          {
+            "name": "Sponsor segment (context only)",
+            "actual": "Brookfield Infrastructure data segment includes Compass from Q4 2023; BIP does not break out Compass",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Brookfield Infrastructure letters"
+          }
+        ],
+        "commentary": "A build year: two campus programmes (Hoffman Estates, Red Oak expansion) and the supply bench were put in place before the 2025 securitizations."
+      },
+      {
+        "period": "FY2025 (no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Asset-backed securities",
+            "actual": "Series 2025-1/2025-2: '$885 million' from Compass Datacenters Issuer III (two Phoenix and one Toronto data center), S&P 'A and A-' (February); Morningstar DBRS rated the 2025-2 notes AAA (October)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Asset Securitization Report; GlobalCapital"
+          },
+          {
+            "name": "Red Oak refinancing",
+            "actual": "'$326 million', fixed-rate, maturity 2050, five buildings / 180 MW, 'fully occupied by a single tenant' (October)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Commercial Property Executive (Morningstar DBRS presale)"
+          },
+          {
+            "name": "KKR asset-level investment",
+            "actual": "Definitive agreement (5 December) for KKR 'to invest in a portion of its operating data centers and future assets'; 'expected to raise several billion dollars' (Bloomberg); GuruFocus/Yahoo: 'As of late September, Compass generated 1.4x gross return on invested capital' (attribution unclear)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Bloomberg Law; Bisnow; GuruFocus via Yahoo — no first-party amount"
+          },
+          {
+            "name": "Growth and operating metrics",
+            "actual": "Inc. 5000 No. 982 with '435%' three-year revenue growth (August); 2026 Outcomes Report for 2025: 195 employees, '1.27 PUE', '0 WUE', '100% Uptime in 2025', '0.56 TRIR', 13 buildings across 5 campuses Green Globes-certified",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Inc. 5000 release via PR Newswire; Compass Outcomes Report 2026"
+          },
+          {
+            "name": "Sponsor segment (context only)",
+            "actual": "Brookfield Infrastructure data segment FFO '$502 million' for 2025; platform 'development potential of approximately 3.6 GW, including 1.2 GW of operating capacity, a contracted project backlog of 1.1 GW, and a total land bank of 1.3 GW' — all BIP data-center platforms, Compass not named",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Brookfield Infrastructure Q4 2025 letter"
+          }
+        ],
+        "commentary": "Two securitizations, a 25-year campus mortgage and a third sponsor in one year: the capital structure now recycles stabilized buildings faster than the company discloses anything about them. Collection gap: no revenue, EBITDA or valuation; the '1.4x' return figure is relayed by an aggregator without a named source."
+      },
+      {
+        "period": "2026 year to date (through 5 September 2026)",
+        "periodType": "other",
+        "periodEnd": "2026-09-05",
+        "metrics": [
+          {
+            "name": "Series 2026-1 ABS",
+            "actual": "'$830 million' against six buildings (Phoenix 174.2 MW, Toronto 24 MW; 198.2 MW; appraised '$3.6 billion'); '$500 million' senior tranche rated AAA by Moody's; '100% leased to four firms on long-term contracts' (February)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Bisnow; Data Center Knowledge; confirmed in Brookfield Infrastructure Q1 2026 results"
+          },
+          {
+            "name": "KKR partnership framing",
+            "actual": "'permanent, long-term capital partnership'; 'evergreen financing partnership'; amounts undisclosed (16 March)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Compass in-the-news post"
+          },
+          {
+            "name": "Community commitments",
+            "actual": "'$15 million' Ellis County animal shelter (June); '$12.6 million' training building for Texas State Technical College (June); Meridian Community College programme tuition (July)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Compass releases via PR Newswire and Yahoo Finance; KERA"
+          },
+          {
+            "name": "Growth ranking",
+            "actual": "Inc. 5000 No. 527 with a '660% three-year growth rate' (August)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Compass in-the-news post"
+          },
+          {
+            "name": "Sponsor segment (context only)",
+            "actual": "Brookfield Infrastructure data segment FFO '$149 million' in Q1 (up 46%) and '$154 million' in Q2 (up 36%); neither release names Compass",
+            "expected": "",
+            "verdict": "inline",
+            "result": "BIP Q1 2026 results (SEC exhibit); Q2 2026 results via mirror"
+          }
+        ],
+        "commentary": "Collection gap: nothing in 2026 discloses Compass's revenue, EBITDA, debt total or the size of KKR's cheque; the only auditable numbers are the ABS collateral appraisal (USD 3.6 billion for 198.2 MW) and the sponsor's segment FFO, which mixes Compass with Data4 and the colocation platforms."
+      }
+    ],
+    "commentary": "A private, sponsor-owned developer that publishes an ESG report but no accounts. Size the company from the pieces: USD 1.35 billion paid for co-control in 2023, about USD 2.0 billion of structured debt issued in two years (USD 885 million + USD 830 million ABS, USD 326 million Red Oak mortgage), a USD 3.6 billion appraisal on 198.2 MW of securitized buildings (about USD 18 million per MW), and 'several billion dollars' from KKR at asset level. No 'expected' benchmarks exist because no analyst covers the company; the fields are left empty rather than manufactured."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Compass competes on delivery certainty rather than land bank, and that its industrialized model is real rather than marketing. Basis: the 2026 Outcomes Report's '84% fabricated offsite' Moonraker product and the shift of 80–90% of power-centre work to the factory; a Schneider Electric plant on the Red Oak campus under a USD 3 billion agreement; up to 1,500 Siemens medium-voltage skids; the ICMA Platinum award as 'first and only owner'; and 100% uptime and 1.27 design PUE on 2025 deliveries. The cost of the model is a smaller footprint — 195 employees and about 1.3 GW of listed campus capacity against multi-GW peers.",
+    "2. **(High confidence)** We assess that the sponsor structure, not leasing, is the growth engine: Brookfield Infrastructure and Ontario Teachers' co-control, KKR's asset-level 'permanent capital' from December 2025, and a serial ABS programme that recycles stabilized buildings (four structured issuances in two years; the first Moody's AAA on hyperscale collateral). Basis: Bisnow's reading of the KKR deal as capital recycling from stabilized assets into development, Compass's own 'evergreen financing partnership' framing, and Brookfield's Q1 2026 description of the ABS as funding 'contracted growth'. We assess an IPO or platform sale is not in prospect while three sponsors can be paid at asset level.",
+    "3. **(Moderate confidence)** We assess that tenant concentration is high and deliberately undisclosed. Basis: Red Oak's five buildings are 'fully occupied by a single tenant'; the securitized pool is leased to 'four firms'; the 2023 book was '85% underpinned by investment grade hyperscalers'; Meridian's only announced tenant is a USD 100 million Corderill LLC; no Compass page or release names a customer. Bisnow's 'Amazon, Microsoft, Google, and Meta' gloss is a characterisation of the ABS presale language, not a disclosure, and no source links Meta to any Compass campus — the Rosemount, Minnesota project sometimes associated with Compass is Meta's own under Xcel service agreements.",
+    "4. **(High confidence)** We assess that consent, not capital, is now Compass's binding constraint, and that the company has chosen pre-emption over resistance. Basis: the Prince William Digital Gateway (2,000 acres, with QTS) died in court in April 2026; the second Red Oak campus passed 4–1 at midnight with Somervell and Ellis counties passing anti-data-center resolutions and the county abatement withdrawn; Compass answered with USD 27.6 million of local donations, public endorsement of Governor Abbott's standards, and the Infrastructure for America coalition with QTS, Vantage and Digital Realty. The co-serve utility model (self-funded substations and rights-of-way, load reduction during grid stress) is the same posture applied to the grid.",
+    "5. **(Moderate confidence)** We assess that Compass's first-party figures should be read as marketing snapshots rather than a ledger. Basis: the company publishes no portfolio total; the Markets page sum (1,279 MW) mixes operating, 'nearing completion' and 'development' campuses; Meridian is 320 MW on the Markets page and ~500 MW of supply in the release; Goodyear is 212 MW today against a 2019 plan of 350 MW; three different offsite-fabrication percentages appear on the company's own pages; and the boilerplate on 2019–2025 releases was retro-edited to add KKR as a backer after the December 2025 deal, while the January 2026 wire release still named only Ontario Teachers' and Brookfield. Quote the source and the date with every Compass number.",
+    "6. **(Low confidence)** We assess that Compass is positioning as a flexible grid load rather than a behind-the-meter generator. Basis: the Phoenix '191 MW Tier-4 diesel-powered microgrid under development' (Hawkins, May 2025), the Storm Fern statement that it can 'island' facilities on HVO generators, and the Abbott-standards commitment to reduce load during grid stress; against this, Brookfield's 1 GW Bloom Energy framework is never tied to Compass, and no on-site prime power, PPA or battery project is disclosed. A named prime-power or BESS award at a Compass campus would move this judgment.",
+    "Collection gap: no revenue, EBITDA, valuation, debt total, tenant, general contractor (except Power Construction at Hoffman Estates) or company-stated portfolio MW; Brookfield Infrastructure's 2025–2026 letters do not name Compass; the Green Finance Framework and the Ontario Teachers' 2025 annual report could not be read as text; Mississippi Today's Plant Daniel coal-extension report and six Data Center Dynamics articles were blocked. Premise check against the coverage-plan row 'Brookfield-owned hyperscale builder; 1.8 GW delivered or under development on $16.1B planned; Joliet 1.8 GW campus': only the first clause describes Compass, and imprecisely — it is co-controlled by Brookfield Infrastructure and Ontario Teachers' with KKR at asset level; the 1.8 GW / USD 16.1 billion figures are EdgeCore's January 2026 release and Joliet is Hillwood and PowerHouse's campus (Compass's Illinois campus is Hoffman Estates, 200 MW).",
+    "INDICATORS TO WATCH — *Mid-2026 to 2027 — ComEd energises Hoffman Estates Building 1:* on time would confirm the nine-month-delivery claim on a 200 MW greenfield; a slip into 2027 would indicate the Sears-site programme is behind its 2024 schedule. *2026–2027 — a fifth ABS series or a Red Oak/Meridian securitization:* would confirm Judgment 2's recycling thesis and show whether Moody's AAA extends to new collateral. *Any first-party or filing disclosure of the KKR amount or the assets transferred:* would size the third sponsor. *A named hyperscale tenant at Meridian or a Mississippi Power docket showing the contracted MW:* would test Judgment 3 and reconcile 320 MW against 500 MW. *Ellis County or Texas legislative action on data-center abatements after the Abbott standards:* would show whether pre-emption bought Compass anything. *A prime-power, BESS or Bloom Energy award at a Compass campus:* would overturn Judgment 6."
+  ],
+  "sources": [
+    {
+      "label": "Compass Datacenters — Infrastructure for America Launches",
+      "url": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+      "date": "2026-09-02"
+    },
+    {
+      "label": "Office of the Texas Governor — Governor Abbott Announces Galaxy, Compass Datacenters And Montera Infrastructure Commit To Comply With His Data Center Standards",
+      "url": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Compass Datacenters — Compass Ranks No. 527 on the 2026 Inc. 5000",
+      "url": "https://www.compassdatacenters.com/in-the-news/compass-datacenters-2026-inc-5000/",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "Compass Datacenters — Compass Datacenters to Gov. Abbott: We Agree. Raise the Standards.",
+      "url": "https://www.compassdatacenters.com/news/compass-datacenters-to-gov-abbott-we-agree-raise-the-standards/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Compass Datacenters — Chris Crosby: Communities Deserve Better Partners, Not Blanket Bans (Fortune commentary summary)",
+      "url": "https://www.compassdatacenters.com/in-the-news/news-chris-crosby-communities-deserve-better-partners-not-blanket-bans/",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Compass Datacenters — Compass Datacenters CEO on data center moratoria (CNBC summary)",
+      "url": "https://www.compassdatacenters.com/in-the-news/in-the-news-data-center-moratorium-raise-the-bar/",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Compass Datacenters — Compass and Meridian Community College Launch Mississippi's First Data Center Workforce Training Program",
+      "url": "https://www.compassdatacenters.com/news/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program/",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Brookfield Infrastructure Partners — second-quarter 2026 results (via Quiver Quantitative mirror; data segment FFO, Bloom Energy framework; no Compass mention)",
+      "url": "https://www.quiverquant.com/news/Brookfield+Infrastructure+Partners+Reports+Strong+Second-Quarter+2026+Results,+Raises+Quarterly+Distribution+",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "CRE Daily — Red Oak Faces Data Center Boom Amid Resident Backlash",
+      "url": "https://www.credaily.com/briefs/red-oak-faces-data-center-boom-amid-resident-backlash/",
+      "date": "2026-07-27"
+    },
+    {
+      "label": "KERA News — Data center developer donates millions for Ellis County animal shelter, college as pushback grows",
+      "url": "https://www.keranews.org/energy-environment/2026-07-06/data-center-developer-compass-ellis-county-animal-shelter-pushback",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "Virginia Business — Prince William Digital Gateway data center project officially dies",
+      "url": "https://virginiabusiness.com/prince-william-digital-gateway-data-center-project-officially-dies/",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "Compass Datacenters — Outcomes Report 2026 (fourth annual disclosure report, covering 2025; PDF)",
+      "url": "https://www.compassdatacenters.com/wp-content/uploads/2026/08/OutcomesReport-2026-07-20-26-HQP-1.pdf",
+      "date": "2026-07"
+    },
+    {
+      "label": "Compass release (PR Newswire via Yahoo Finance) — Compass Datacenters donates $12.6M building to Texas State Technical College",
+      "url": "https://finance.yahoo.com/technology/articles/compass-datacenters-donates-12-6m-130000668.html",
+      "date": "2026-06-30",
+      "party": "company"
+    },
+    {
+      "label": "GigaCapacity — Best Hyperscale Data Center Developers 2026",
+      "url": "https://www.gigacapacity.com/markets/best-hyperscale-data-center-developers",
+      "date": "2026-06-21"
+    },
+    {
+      "label": "PR Newswire — Compass Datacenters Commits $15 Million to Build New Ellis County Animal Shelter",
+      "url": "https://www.prnewswire.com/news-releases/compass-datacenters-commits-15-million-to-build-new-ellis-county-animal-shelter-answering-the-communitys-urgent-call-302787879.html",
+      "date": "2026-06-02",
+      "party": "company"
+    },
+    {
+      "label": "CBS News Texas — Red Oak City Council approves another data center in North Texas amid backlash",
+      "url": "https://www.cbsnews.com/texas/news/red-oak-community-fight-against-another-data-center-getting-approved-north-texas/",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "KERA News — Oppose? Expand? Votes in 2 North Texas communities highlight a divide over data center growth",
+      "url": "https://www.keranews.org/energy-environment/2026-05-12/oppose-expand-votes-in-2-north-texas-communities-highlight-a-divide-over-data-center-growth",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "KRLD / Audacy — Red Oak residents pack city council meeting to protest proposed data center",
+      "url": "https://www.audacy.com/krld/news/local/red-oak-residents-pack-city-council-meeting-to-protest-proposed-data-center",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "FOX 4 Dallas — Red Oak approves 800-acre data center project despite resident protests",
+      "url": "https://www.fox4news.com/news/red-oak-data-center-city-council-protest",
+      "date": "2026-05-11"
+    },
+    {
+      "label": "GlobalCapital — S&P is right to keep triple-A away from data center ABS",
+      "url": "https://www.globalcapital.com/article/2gatl6p6gtk1i71gbe2o0/people-and-markets/gc-view/s-p-is-right-to-keep-triple-a-away-from-data-center-abs",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "Compass Datacenters — Statement Regarding Digital Gateway Project",
+      "url": "https://www.compassdatacenters.com/news/digital-gateway-project/",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "InsideNoVa — After Compass gives up legal fight, Prince William's Digital Gateway data center project in peril",
+      "url": "https://www.insidenova.com/news/prince_william/update-after-compass-gives-up-legal-fight-prince-williams-digital-gateway-data-center-project-in/article_d17048b9-8d0a-47ad-aeec-1cbd02f73f47.html",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "WTOP — Developers drop appeal of zoning decision on Digital Gateway project",
+      "url": "https://wtop.com/prince-william-county/2026/04/developers-drop-appeal-of-zoning-decision-on-digital-gateway-project/",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "SEC EDGAR — Brookfield Infrastructure Reports Strong First Quarter 2026 Results (Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1406234/000117184326002798/exh_991.htm",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "SuperTalk Mississippi — Compass Datacenters lands first tenant with $100 million investment",
+      "url": "https://www.supertalk.fm/compass-datacenters-lands-first-tenant-with-100-million-investment/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "Compass Datacenters — Compass Datacenters Establishes a New Permanent Capital Partnership to Support Built to Last Vision",
+      "url": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "Chicago Construction News — Compass Datacenters marks milestone with Building 1 topping off at Hoffman Estates campus",
+      "url": "https://www.chicagoconstructionnews.com/compass-datacenters-marks-milestone-with-building-1-topping-off-at-hoffman-estates-campus/",
+      "date": "2026-02-15"
+    },
+    {
+      "label": "Data Center Knowledge — Data Center Firm Gets First AAA Grade From Big Three Rating Agency",
+      "url": "https://www.datacenterknowledge.com/business/data-center-firm-gets-first-aaa-grade-from-big-three-rating-agency",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Bisnow — Brookfield's Compass To Securitize 6 Big Tech Data Centers, Raise $830M",
+      "url": "https://www.bisnow.com/national/news/data-center-capital-markets/brookfields-compass-datacenters-raising-830m-securitizing-6-big-tech-data-centers-133152",
+      "date": "2026-02-10"
+    },
+    {
+      "label": "Brookfield Infrastructure Partners — BIP Q4 2025 Letter to Unitholders",
+      "url": "https://bip.brookfield.com/bip/reports-filings/letters-unitholders/bip-q4-2025-letter-unitholders",
+      "date": "2026-01-29"
+    },
+    {
+      "label": "Compass Datacenters — Compass Recognized as Global Leader in Industrialized Construction (ICMA Platinum)",
+      "url": "https://www.compassdatacenters.com/news/icma-platinum-industrialized-construction/",
+      "date": "2026-01-28"
+    },
+    {
+      "label": "PR Newswire — Compass Datacenters Supports Secretary Wright's Directive to Unleash Backup Generation Ahead of Storm Fern",
+      "url": "https://www.prnewswire.com/news-releases/compass-datacenters-supports-secretary-wrights-directive-to-unleash-backup-generation-ahead-of-storm-fern-302668764.html",
+      "date": "2026-01-23",
+      "party": "company"
+    },
+    {
+      "label": "GuruFocus via Yahoo Finance — KKR joins the AI gold rush with billion-dollar bet on data center boom (Compass; \"1.4 times invested capital\")",
+      "url": "https://finance.yahoo.com/news/kkr-joins-ai-gold-rush-114256142.html",
+      "date": "2025-12-08"
+    },
+    {
+      "label": "Bisnow — KKR To Invest Billions In Portfolio Of Brookfield-Backed Compass Datacenters",
+      "url": "https://www.bisnow.com/national/news/data-center-capital-markets/kkr-invests-billions-in-portfolio-of-brookfield-backed-compass-datacenters-132236",
+      "date": "2025-12-08"
+    },
+    {
+      "label": "Bloomberg Law — KKR to Invest in Assets of Brookfield's Compass Datacenters (1)",
+      "url": "https://news.bloomberglaw.com/private-equity/kkr-to-invest-in-assets-of-brookfields-compass-datacenters-1",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "Globes — AWS to double data center capacity in Israel (Globes)",
+      "url": "https://en.globes.co.il/en/article-aws-to-double-data-center-capacity-in-israel-1001526360",
+      "date": "2025-11-13"
+    },
+    {
+      "label": "Commercial Property Executive — Compass Datacenters Lands $326M for DFW Campus",
+      "url": "https://www.commercialsearch.com/news/compass-datacenters-lands-326m-for-dfw-campus/",
+      "date": "2025-10-29"
+    },
+    {
+      "label": "Governing — North Carolina City Approves Massive Data Center Despite Local Opposition",
+      "url": "https://www.governing.com/infrastructure/north-carolina-city-approves-massive-data-center-despite-local-opposition",
+      "date": "2025-09-17"
+    },
+    {
+      "label": "WBTV — Statesville City Council approves rezoning request for new data center",
+      "url": "https://www.wbtv.com/2025/09/16/statesville-city-council-approves-rezoning-request-new-data-center/",
+      "date": "2025-09-16"
+    },
+    {
+      "label": "Compass Datacenters — Compass and Schneider Electric Announce Prefabricated White Space Module",
+      "url": "https://www.compassdatacenters.com/news/compass-and-schneider-electric-announce-prefabricated-white-space-module-to-accelerate-data-center-delivery-timelines/",
+      "date": "2025-09-09"
+    },
+    {
+      "label": "WSOC via Yahoo News — Statesville Planning Board approves 350-acre data center project",
+      "url": "https://www.yahoo.com/news/articles/statesville-planning-board-review-350-142436620.html",
+      "date": "2025-08-27"
+    },
+    {
+      "label": "GovTech — Texas Developer Plans Massive Data Center in North Carolina",
+      "url": "https://www.govtech.com/products/texas-developer-plans-massive-data-center-in-north-carolina",
+      "date": "2025-08-18"
+    },
+    {
+      "label": "PR Newswire — Compass Datacenters Ranks No. 982 on the 2025 Inc. 5000",
+      "url": "https://www.prnewswire.com/news-releases/compass-datacenters-ranks-no-982-on-the-2025-inc-5000-list-of-americas-fastest-growing-private-companies-302527001.html",
+      "date": "2025-08-12",
+      "party": "company"
+    },
+    {
+      "label": "Utility Dive — Chris Crosby op-ed: a collaborative approach for meeting data center power needs and protecting ratepayers (\"co-serve model\")",
+      "url": "https://www.utilitydive.com/news/data-center-power-needs-ratepayers/750203/",
+      "date": "2025-06-10",
+      "party": "company"
+    },
+    {
+      "label": "Renewable Energy World — Q&A with Compass Chief Customer Officer Raymond Hawkins",
+      "url": "https://www.renewableenergyworld.com/power-grid/on-data-center-power-partnerships-qa-with-compass-datacenters-chief-customer-officer-raymond-hawkins/",
+      "date": "2025-05-07"
+    },
+    {
+      "label": "Compass Datacenters — Northstar Technologies Group Acquires Majority Ownership of Compass Quantum",
+      "url": "https://www.compassdatacenters.com/news/northstar-technologies-group-acquires-majority-ownership-of-compass-quantum-from-compass-datacenters-enabling-next-phase-of-quantums-growth/",
+      "date": "2025-04-02"
+    },
+    {
+      "label": "ConstructConnect — With $20 Billion of Investments, Mississippi Stakes Claim as Next Big Data Center Player",
+      "url": "https://www.constructconnect.com/construction-economic-news/with-20-billion-of-investments-mississippi-stakes-claim-as-next-big-data-center-player",
+      "date": "2025-03-26"
+    },
+    {
+      "label": "Mississippi Business Journal — MS PSC Approves Contract Between MS Power Company and Compass Data Centers",
+      "url": "https://msbusinessjournal.com/ms-psc-approves-contract-between-ms-power-company-and-compass-data-centers/",
+      "date": "2025-03-05"
+    },
+    {
+      "label": "American Public Power Association — Mississippi Regulators Approve Contract Between Utility and Data Center Company",
+      "url": "https://www.publicpower.org/periodical/article/mississippi-regulators-approve-contract-between-utility-and-data-center-company",
+      "date": "2025-02-11"
+    },
+    {
+      "label": "The Meridian Star — PSC approves contract between Mississippi Power, Compass Datacenters",
+      "url": "https://meridianstar.com/2025/02/07/psc-approves-contract-between-mississippi-power-compass-datacenters/",
+      "date": "2025-02-07"
+    },
+    {
+      "label": "Asset Securitization Report — Compass Datacenters readies $885 million in data center revenues",
+      "url": "https://asreport.americanbanker.com/news/compass-datacenters-readies-885-million-in-data-center-revenues",
+      "date": "2025-02-07"
+    },
+    {
+      "label": "SuperTalk Mississippi — Mississippi Power tabbed to supply energy at $10 billion Compass Datacenters campus",
+      "url": "https://www.supertalk.fm/mississippi-power-tabbed-to-supply-energy-at-10-billion-compass-datacenters-campus/",
+      "date": "2025-02-07"
+    },
+    {
+      "label": "Magee News — MS PSC Approves Special Contract Between Mississippi Power Company and Compass Datacenters Jan I, LLC",
+      "url": "https://mageenews.com/ms-public-service-commission-approves-special-contract-between-mississippi-power-company-and-compass-datacenters-jan-i-llc/",
+      "date": "2025-02"
+    },
+    {
+      "label": "WJTV via Yahoo News — Compass Datacenters holds groundbreaking in Meridian",
+      "url": "https://www.yahoo.com/news/compass-datacenters-holds-groundbreaking-meridian-180522825.html",
+      "date": "2025-01-29"
+    },
+    {
+      "label": "Compass Datacenters — Compass Project Generates $10 Billion Investment in Lauderdale County",
+      "url": "https://www.compassdatacenters.com/news/compass-10b-investment-lauderdale-county-mississippi/",
+      "date": "2025-01-09"
+    },
+    {
+      "label": "Office of the Governor of Mississippi — Compass Datacenters project generates $10 billion investment in Lauderdale County (Governor of Mississippi)",
+      "url": "https://governorreeves.ms.gov/compass-datacenters-project-generates-10-billion-investment-in-lauderdale-county/",
+      "date": "2025-01-09"
+    },
+    {
+      "label": "Compass Datacenters — Siemens and Compass Sign Multi-Year Custom Electrical Solution Agreement",
+      "url": "https://www.compassdatacenters.com/news/siemens-and-compass-sign-multi-year-custom-electrical-solution-agreement/",
+      "date": "2024-12-04"
+    },
+    {
+      "label": "Compass Datacenters — Vertiv and Compass Datacenters Collaborate on Hybrid Liquid and Air Cooling System",
+      "url": "https://www.compassdatacenters.com/news/vertiv-compass-hybrid-liquid-air-cooling-ai-deployment/",
+      "date": "2024-11-18"
+    },
+    {
+      "label": "Data Center Frontier — Suburban Chicago Welcomes Compass Datacenters' Major Hyperscale Development on Legacy Sears HQ Site",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/55089460/suburban-chicago-welcomes-compass-datacenters-major-hyperscale-development-on-legacy-sears-hq-site",
+      "date": "2024-06-18"
+    },
+    {
+      "label": "Compass Datacenters — Compass Kicks Off Development Of Its First Hyperscale Data Center Campus in Illinois",
+      "url": "https://www.compassdatacenters.com/news/compass-kicks-off-development-of-its-first-hyperscale-campus-in-illinois/",
+      "date": "2024-06-13"
+    },
+    {
+      "label": "Compass Datacenters — Hoffman Estates' Data Center Project (Chicago Sun-Times summary)",
+      "url": "https://www.compassdatacenters.com/in-the-news/hoffman-estates-ready-for-a-modern-era-with-data-center-project-at-former-sears-site/",
+      "date": "2024-06-13"
+    },
+    {
+      "label": "Bisnow — Compass Datacenters Buys 120 Acres Near Phoenix For New Campus",
+      "url": "https://www.bisnow.com/national/news/data-center/compass-datacenters-buys-120-acres-near-phoenix-for-planned-campus-124627",
+      "date": "2024-06-10"
+    },
+    {
+      "label": "Dallas Express — Dallas-based Compass Datacenters plans to expand its campus in Red Oak, state filings show",
+      "url": "https://dallasexpress.com/metroplex/dallas-compass-expands-in-north-texas/",
+      "date": "2024-05-01"
+    },
+    {
+      "label": "Vertiv — Building what's next in data center infrastructure: A conversation with Compass Datacenters CEO, Chris Crosby",
+      "url": "https://www.vertiv.com/en-us/insights/articles/case-studies/building-whats-next-in-data-center-infrastructure-a-conversation-with-compass-datacenters-ceo-chris-crosby/",
+      "date": "2024-03-15"
+    },
+    {
+      "label": "Morningstar Sustainalytics — Compass Datacenters Green Finance Framework Second-Party Opinion (2024)",
+      "url": "https://www.sustainalytics.com/corporate-solutions/sustainable-finance-and-lending/published-projects/project/compass-datacenters/compass-datacenters-green-finance-framework-second-party-opinion-(2024)/compass-datacenters-green-finance-framework-second-party-opinion-(2024)",
+      "date": "2024-02"
+    },
+    {
+      "label": "Manufacturing Dive — Schneider Electric, Compass Datacenters expand data center manufacturing partnership",
+      "url": "https://www.manufacturingdive.com/news/schneider-electric-compass-datacenters-expand-partnership/699594/",
+      "date": "2023-11-14"
+    },
+    {
+      "label": "Focus Daily News — County Partners with Compass Datacenters for Phase 2 Construction of Red Oak Campus",
+      "url": "https://www.focusdailynews.com/county-partners-with-compass-datacenters-for-phase-2-construction-of-red-oak-campus/",
+      "date": "2023-11-05"
+    },
+    {
+      "label": "Brookfield Infrastructure Partners — BIP Q3 2023 Letter to Unitholders",
+      "url": "https://bip.brookfield.com/bip/reports-filings/letters-unitholders/bip-q3-2023-letter-unitholders",
+      "date": "2023-11-01"
+    },
+    {
+      "label": "Brookfield Infrastructure Partners — BIP Q2 2023 Letter to Unitholders",
+      "url": "https://bip.brookfield.com/bip/reports-filings/letters-unitholders/bip-q2-2023-letter-unitholders",
+      "date": "2023-08"
+    },
+    {
+      "label": "Ontario Teachers' Pension Plan — OTPP release: Brookfield Infrastructure and Ontario Teachers' to Acquire Compass Datacenters",
+      "url": "https://www.otpp.com/en-ca/about-us/news-and-insights/2023/brookfield-infrastructure-and-ontario-teachers--to-acquire-compass-datacenters-from-redbird-capital-partners-and-azrieli-group/",
+      "date": "2023-06-20"
+    },
+    {
+      "label": "Compass Datacenters — Brookfield Infrastructure and Ontario Teachers' to Acquire Compass Datacenters (Compass newsroom copy)",
+      "url": "https://www.compassdatacenters.com/news/brookfield-infrastructure-and-ontario-teachers-to-acquire-compass-datacenters-from-redbird-capital-partners-and-azrieli-group/",
+      "date": "2023-06-20"
+    },
+    {
+      "label": "Data Center Frontier — Compass Datacenters to be Acquired by Brookfield, Ontario Teachers",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/33006857/compass-datacenters-to-be-acquired-by-brookfield-ontario-teachers",
+      "date": "2023-06-20"
+    },
+    {
+      "label": "Bisnow — Brookfield, Ontario Pension Fund To Acquire Compass Datacenters",
+      "url": "https://www.bisnow.com/national/news/data-center/brookfield-and-ontario-teachers-pension-plan-acquiring-compass-datacenters-119468",
+      "date": "2023-06-20"
+    },
+    {
+      "label": "Compass Datacenters — Compass Datacenters Enters European Data Center Market in Joint Venture with Hines in Milan",
+      "url": "https://www.compassdatacenters.com/news/milan/",
+      "date": "2022-08-08"
+    },
+    {
+      "label": "Data Center Frontier — Compass Buys Property for $100 Million Toronto Data Center Campus",
+      "url": "https://www.datacenterfrontier.com/featured/article/11429021/compass-buys-property-for-100-million-toronto-data-center-campus",
+      "date": "2020-05-05"
+    },
+    {
+      "label": "Compass Datacenters — Compass Datacenters Acquires New Toronto Campus",
+      "url": "https://www.compassdatacenters.com/news/compass-datacenters-acquires-new-toronto-campus/",
+      "date": "2020-05-05"
+    },
+    {
+      "label": "Compass Datacenters — Compass Datacenters Adds Second Dallas Area Campus",
+      "url": "https://www.compassdatacenters.com/news/compass-datacenters-adds-second-dallas-area-campus/",
+      "date": "2020-01-29"
+    },
+    {
+      "label": "Compass Datacenters — Compass Datacenters Acquires ROOT Data Center",
+      "url": "https://www.compassdatacenters.com/news/compass-datacenters-acquires-root-data-center-expanding-focus-on-hyperscale-market/",
+      "date": "2019-07-23"
+    },
+    {
+      "label": "Data Center Frontier — Compass Acquires ROOT to Enter Montreal Data Center Market",
+      "url": "https://www.datacenterfrontier.com/cloud/article/11429512/compass-acquires-root-to-enter-montreal-data-center-market",
+      "date": "2019-07-23"
+    },
+    {
+      "label": "Compass Datacenters — Compass Datacenters Announces $3 Billion Expansion Plan",
+      "url": "https://www.compassdatacenters.com/news/compass-datacenters-announces-3-billion-expansion-plan/",
+      "date": "2019-07-18"
+    },
+    {
+      "label": "Data Center Knowledge — Data Center Developer Compass Secures $3B to Fund Next Stage of Growth",
+      "url": "https://www.datacenterknowledge.com/compass-datacenters/data-center-developer-compass-secures-3b-fund-next-stage-growth",
+      "date": "2019-07-18"
+    },
+    {
+      "label": "AZ Big Media — Compass Datacenters will build 225-acre Goodyear campus",
+      "url": "https://azbigmedia.com/business/economic-development/compass-datacenters-will-build-225-acre-goodyear-campus/",
+      "date": "2019-07-11"
+    },
+    {
+      "label": "Compass Datacenters — Compass Begins Construction of First Two Data Centers on Phoenix Campus",
+      "url": "https://www.compassdatacenters.com/news/compass-datacenters-begins-construction-of-first-two-data-centers-on-phoenix-campus/",
+      "date": "2019-07-09"
+    },
+    {
+      "label": "Greater Phoenix Economic Council — Goodyear welcomes Compass Datacenters to its technology corridor (GPEC)",
+      "url": "https://www.gpec.org/news/goodyear-welcomes-compass-datacenters-to-technology-corridor/",
+      "date": "2019-07-09"
+    },
+    {
+      "label": "Compass Datacenters — Compass Begins Construction on 75MW Data Center Campus in Northern Virginia",
+      "url": "https://www.compassdatacenters.com/news/compass-datacenters-begins-construction-on-75mw-data-center-campus-in-northern-virginia/",
+      "date": "2019-05-14"
+    },
+    {
+      "label": "Data Center Knowledge — Compass Buys Land for Ohio Data Center Campus",
+      "url": "https://www.datacenterknowledge.com/investing/compass-buys-land-for-ohio-data-center-campus",
+      "date": "2014-01-07"
+    },
+    {
+      "label": "Compass Datacenters — Homepage (hyperscale campuses \"built to last\"; manufacturing mindset)",
+      "url": "https://www.compassdatacenters.com/"
+    },
+    {
+      "label": "Compass Datacenters — About (backed by Ontario Teachers' Pension Plan, Brookfield Infrastructure and KKR; certifications)",
+      "url": "https://www.compassdatacenters.com/about/"
+    },
+    {
+      "label": "Compass Datacenters — Data Center Markets (per-campus MW and status)",
+      "url": "https://www.compassdatacenters.com/data-center-markets/"
+    },
+    {
+      "label": "Compass Datacenters — Capabilities (site selection, supply chain, utility partnerships)",
+      "url": "https://www.compassdatacenters.com/capabilities/"
+    },
+    {
+      "label": "Compass Datacenters — Our Partners (Schneider Electric, Vertiv, Cummins, Foster Fuels, Salute)",
+      "url": "https://www.compassdatacenters.com/about/our-partners/"
+    },
+    {
+      "label": "Compass Datacenters — Design (Hyperscale single-tenant campuses; Cloud 6–80 MW modular structures)",
+      "url": "https://www.compassdatacenters.com/design/"
+    },
+    {
+      "label": "Compass Datacenters — Communities (zero city water for cooling since 2011; substation and transmission funding)",
+      "url": "https://www.compassdatacenters.com/communities/"
+    },
+    {
+      "label": "Compass Datacenters — Leadership page",
+      "url": "https://www.compassdatacenters.com/about/leadership/"
+    },
+    {
+      "label": "Compass Datacenters — Green Finance Framework (February 2024; Sustainalytics second-party opinion)",
+      "url": "https://www.compassdatacenters.com/greenfinance/"
+    },
+    {
+      "label": "McCarthy Tétrault — deal page: Brookfield Infrastructure and Ontario Teachers' acquire Compass Datacenters (closing 3 October 2023)",
+      "url": "https://www.mccarthy.ca/en/experience/brookfield-infrastructure-and-ontario-teachers-pension-plan-acquires-compass-datacenters-from-redbird-capital-partners-and-azrieli-group"
+    },
+    {
+      "label": "Compass Datacenters — Press Releases Archive (page 1)",
+      "url": "https://www.compassdatacenters.com/news/"
+    },
+    {
+      "label": "Compass Datacenters — Hyperscale design (up to 360 MW; 450 MVA substations)",
+      "url": "https://www.compassdatacenters.com/design/hyperscale/"
+    },
+    {
+      "label": "Compass Datacenters — Outcomes (sustainability dashboard)",
+      "url": "https://www.compassdatacenters.com/outcomes/"
+    },
+    {
+      "label": "Ellis County Press — Red Oak data center gets tax abatement (phase 2; Chris Curtis quote)",
+      "url": "https://www.elliscountypress.com/news/red-oak-data-center-gets-tax-abatement"
+    },
+    {
+      "label": "Texas Comptroller — Chapter 312 abatement record, City of Allen / Compass Datacenters DFW LLC (2018–2027)",
+      "url": "https://comptroller.texas.gov/economy/development/search-tools/ch312/abatements-details.php?id=000003699"
+    },
+    {
+      "label": "Texas Department of Licensing and Regulation — project record TABS2020019741, Compass Datacenters DFW III-I, LLC (Red Oak)",
+      "url": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2020019741"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

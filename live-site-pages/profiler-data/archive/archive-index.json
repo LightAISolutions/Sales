@@ -733,6 +733,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-09-05",
       "supersededBy": 4
+    },
+    {
+      "file": "holder-construction.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 5
     }
   ],
   "huawei-digital-power": [
@@ -1996,6 +2002,14 @@
   "sargent-lundy": [
     {
       "file": "sargent-lundy.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 2
+    }
+  ],
+  "southern-company": [
+    {
+      "file": "southern-company.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-09-05",
       "supersededBy": 2

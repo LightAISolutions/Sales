@@ -3,11 +3,104 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.74r] — 2026-09-05 07:09:22 PM EST
+
+> **Prompt:** "Picking up from my last session, run Phase B session F7 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Fable 5.1 High as a fresh session: Compass Datacenters, EdgeCore Digital Infrastructure, PowerHouse Data Centers.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest = F6, Previous = X2); PROFILER-COVERAGE-PLAN.md §2,
+> §4 (the B-A / B7 row and the "Regrouping" paragraph), §7, and the three §8 rows (`compass-datacenters`,
+> `edgecore`, `powerhouse-data-centers`); .claude/rules/profiler-app.md (Profiler Command incl. steps 5 and 7,
+> Profiler Prep Command, Scheduled Refreshes, Archival Procedure); repository-information/PROFILER-SCHEMA.md
+> (relationships[] incl. `project` pins, sources[], Source provenance, named-projects registry);
+> repository-information/PROFILER-STYLES.md (active style: intel-briefing); PROFILER-CROSSREF-CALIBRATION.md →
+> "Relationships checker" incl. the X2 and F6 adjudication logs.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
+> category `developer` per the §8 rows) and study guide (schema v2) — then the four after-write scripts
+> (`sync-profiler-registry.py`, `build-profiler-graph.py`, `check-profiler-study.py`,
+> `check-profiler-relationships.py`), a calendar row per company (verify ownership first: private or
+> sponsor-owned → `cadence: "quarterly"`; a listed parent or a listed company → researched `nextReport` — F6
+> found X-energy public when the brief said private), README tree entries (profile, study, study-prep folder,
+> lesson plan, any archive files, the execs count), and flip the §8 rows to `B7 → F7`. One push commit.
+>
+> SESSION-SPECIFIC:
+>   - These are AIDC landlords, so the Compare peer family is `Colocation & Cloud Capacity` (developer +
+>     neocloud) — the F6 §7 note records that `developer` also spans renewable/storage developers; do not
+>     change Profiler.html or the family map, just note if the peer group reads oddly.
+>   - Named-project pins: register any recurring campus (e.g. Compass Red Oak / Meta Rosemount-class campuses,
+>     PowerHouse's Joliet, EdgeCore's Mesa or Reno) in `profiler-projects.json` ONLY if a relationship is ready
+>     to pin it, and add the matching Scraper interest-topic seed in the same commit per the schema — otherwise
+>     keep the campus in prose.
+>   - Investor edges: Compass is Brookfield/Ontario Teachers'-owned, EdgeCore is Partners Group-owned, PowerHouse
+>     is American Real Estate Partners' platform — none of those sponsors is a covered slug, so no `investor`
+>     edges are expected; if a covered company is a shareholder, type it `investor` and expect the reciprocal to
+>     report (the inverse `portfolio` is not in the enum — accept with the reason written out, as F6 did four
+>     times; do NOT add `portfolio`).
+>   - Writer rules the checker enforces: a relationship `source` URL must be the EXACT registered string in
+>     that dossier's sources[]; when step 7 adds an inbound edge to an OLDER dossier, register the cited URL in
+>     that dossier's sources[] in the same edit, archive it, bump its profileVersion. F6's builders asserted
+>     sources[] membership before writing — do the same.
+>   - Step 7 discipline: grep the corpus with word boundaries and case sensitivity — `\bCompass\b` (also
+>     "Compass Datacenters"), `\bEdgeCore\b`, `\bPowerHouse\b` AND `\bPowerhouse\b`, plus `Joliet`. Known hits at
+>     v04.73r: Compass in `southern-company`; EdgeCore in `hitt`, `holder-construction`, `mccarthy`; PowerHouse
+>     none under the CamelCase spelling. Read every hit and classify it (GC dossiers make claims about who built
+>     what for whom — verify the builder/campus attributions against the landlords' own releases).
+>   - Study guides: read the start-here callouts of aligned, vantage, qts, switch, equinix, stack-infrastructure,
+>     fluidstack and nscale (the landlord and neocloud guides) and do not repeat them. Candidate angles the corpus
+>     does not hold: the sponsor-owned hyperscale build-to-suit developer (how a pension/infrastructure sponsor
+>     funds a landlord's pipeline and what "delivered or under development" means); powered land and the
+>     utility-first campus (PowerHouse's model); the single-tenant campus lease from the landlord's chair. If
+>     two companies share a model, teach one as the case study and give the other the structural chapter.
+>   - Register shared concepts in `profiler-concepts.json` (855 today), not in local glossaries; check for alias
+>     collisions (`check-profiler-study.py` fails on them).
+>
+> THE §4 ROW IS A HYPOTHESIS, NOT A BRIEF: the B7 `Why` cell ("Brookfield-owned hyperscale builder; 1.8 GW
+> delivered or under development on $16.1B planned; Joliet 1.8 GW campus") is prompt material. Treat every clause
+> as an unverified, dated claim — ownership, the GW and dollar figures, which company each clause describes —
+> and record in the §8 rows' Closes column what you actually found before you commit, including "premise held".
+>
+> ENVIRONMENT (confirmed by F1–F6): `pip install playwright pillow` (never `playwright install` — use
+> /opt/pw-browsers/chromium-*/chrome-linux/chrome); the dossier harness pattern is in F6's session record
+> (threaded HTTP server, script.google.com stubbed, `.ov-sources ol li` with state='attached', `#ov-study-btn`,
+> `.gd-term`); Business Wire, WAM and many corporate newsrooms are 403 — cite the syndication mirror you actually
+> read; build a URL index from the agent reports and refuse any dossier URL not in it; no repo edits while agents
+> run (the stop hook fires on uncommitted edits); read agent reports in chunks; company headshots from
+> leadership pages only, verified on a contact sheet.
+>
+> VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, check-profiler-relationships.py
+> exit 0 (any accepts listed and reasoned), check-profiler-crossrefs.py exit 0 (adjudicate any new candidate
+> under step 7), the three dossiers and guides render in Playwright with zero page errors. Report per company:
+> source count and first-party share, relationships written, any accepts, every §4 premise verdict, and the
+> ownership finding that decided the calendar row type.
+>
+> Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch (CHANGELOG counter is at
+> 90/100 — no rotation)."
+
+### Added
+- **Compass Datacenters dossier (`compass-datacenters.profile.json`, schema v7, profileVersion 1, `developer`, intel-briefing)** — 102 sources (42% first-party: 46 compassdatacenters.com pages, releases and the 77-page 2026 Outcomes Report, wire releases via PR Newswire and Yahoo Finance mirrors, Brookfield Infrastructure's letters to unitholders and a 6-K exhibit, the OTPP release, Mississippi PSC coverage and Texas state records), 10 relationships (Southern Company/Mississippi Power and Oncor `supplier` as utilities; Schneider Electric, Vertiv and Cummins `supplier`; QTS and Vantage `partner` via the Prince William Digital Gateway and Infrastructure for America; Aligned `competitor`; Rosendin `other`; Amazon `other`/historical), 4 policy regimes, 13 decision makers with 13 company-published headshots, 25 developments, 6 key judgments. The record: co-controlled by Brookfield Infrastructure and Ontario Teachers' since 3 October 2023 (USD 1.35bn for the stake, ~USD 375m of Brookfield's own equity) with KKR at asset level since December 2025; no company-stated portfolio total (Markets page sum 1,279 MW); 84%-offsite 'Moonraker' building and a Schneider factory on the Red Oak campus; four structured issuances in two years including the first Moody's AAA on hyperscale ABS (USD 830m, February 2026); Meridian's ~500 MW Mississippi Power special contract; the Prince William Digital Gateway abandoned in April 2026 and a second ~830-acre Red Oak campus approved 4–1 in May; no tenant and no GC named except Power Construction (Hoffman Estates).
+- **EdgeCore Digital Infrastructure dossier (`edgecore.profile.json`, schema v7, profileVersion 1, `developer`)** — 107 sources (53% first-party: 60 edgecore.com pages incl. 15 executive bio pages, Partners Group releases and annual reports, PR Newswire and Yahoo mirrors, GIC's founding release), 7 relationships (Holder Construction and Dominion Energy `supplier`; NVIDIA and Meta `other`; Vantage, STACK Infrastructure and Amazon `competitor`), 5 policy regimes, 15 decision makers with 15 headshots (AVIF converted), 23 developments, 6 key judgments. The record: Partners Group-owned 'on behalf of its clients' since November 2022 (USD 1.9bn equity round September 2024); '1.8 GW delivered or under development' on 'USD 5.9bn' committed and 'USD 16.1bn' planned (January 2026; site now 2.27+ GW / USD 7.4bn) against two operating buildings (Mesa PH01 26 MW, Santa Clara SV01 36 MW); six campuses incl. the 1.1 GW Louisa County land position; limited-recourse green loans of USD 1.9bn (Mesa), USD 1.1bn, USD 440m and USD 1.5bn (Sterling, April 2026) plus a USD 235m first ABS; Holder as GC on Mesa and Santa Clara per third parties; Ratepayer Protection Pledge and a stated walk-away threshold; no tenant ever named.
+- **PowerHouse Data Centers dossier (`powerhouse-data-centers.profile.json`, schema v7, profileVersion 1, `developer`, `ownership.type: subsidiary`)** — 114 sources (52% first-party: powerhousedata.com and americanrepartners.com pages, campus pages and releases, the Hillwood–PowerHouse Joliet project site, Harrison Street and Provident partner releases, PR Newswire; the City of Joliet staff memo; Utility Dive's FERC record; Loudoun Now, Shaw Local, Patch), 6 relationships (CoreWeave `customer` via the Blue Owl/Chirisa JV; Dominion Energy, Oncor and DPR `supplier`; Meta and Amazon `other`/announced), 5 policy regimes, 18 decision makers with 18 headshots, 26 developments, 6 key judgments. The record: a wholly owned division of American Real Estate Partners funded through project JVs at 5–10% AREP equity (Harrison Street USD 3.2bn committed, Blue Owl/Chirisa USD 5bn, Provident, Hillwood, Poe, Town Lane, Pennsylvania Data Center Partners; AREP Fund IV USD 309m); one building delivered and sold (ABX-1, 60 MW, to CyrusOne for USD 154.1m); boilerplate 4.1 GW (December 2024) → '~10 GW' (September 2026); the 1.8 GW Joliet Technology Center annexed 8–1 on 19 March 2026, its FERC-accepted ComEd transmission security agreement cancelled 24 July 2026, now in FERC, federal and residents' litigation. Brief corrections: HQ McLean (not Reston/Herndon); the company publishes at powerhousedata.com / americanrepartners.com (the brief's domains were parked or dead); the executive is Luke Kipfer (no 'Luke Kinney').
+- **Three schema v2 study guides + three lesson plans** — `compass-datacenters.study.json` (the sponsor behind the landlord: what co-control buys, reading a private landlord through its listed sponsor, the pipeline ladder and 'delivered or under development' decoded across all three F7 companies, paying for a building three times plus asset-level permanent capital, the manufacturing model, the co-serve utility model, consent as a cost line; 16 sections); `edgecore.study.json` (the single-tenant lease from the landlord's chair: anatomy of a build-to-suit lease, the same clause from three chairs, 'one building, one customer', lease to limited-recourse loan to bond, milestones met vs the pipeline that slipped, density and cooling in the lease, who pays for power delivery; 14 sections); `powerhouse-data-centers.study.json` (powered land and the utility-first campus: why the substation is the asset, the entitlement toolkit, the two utility contracts and the Joliet cancellation, the GP-fund model and who owns what in a JV, the one completed cycle and price per MW, reading a pipeline counter, consent tactics; 15 sections). Lesson plans under `repository-information/study-prep/<slug>/`. None repeats the aligned, vantage, qts, switch, equinix, stack-infrastructure, fluidstack or nscale start-here callouts; Compass is the sponsor case study, EdgeCore the lease chapter, PowerHouse the powered-land chapter.
+- **40 shared concepts registered in `profiler-concepts.json`** (895 total) — build-to-suit, powered shell, offsite fabrication, data-center ABS, master trust, rating agency, co-control, contracted capacity, reserved capacity, WALT, delivered or under development, limited-recourse loan, permanent capital, stabilized asset, credit tenant lease, price per MW, transmission security agreement, annexation, by-right zoning, extraterritorial jurisdiction, planned unit development, telecommunications hotel, data-center moratorium, community benefit agreement, sales tax exemption, GP fund, programmatic joint venture, land bank, entitlement, single-tenant campus, tenant concentration, appraised value, Ratepayer Protection Pledge, water-neutral, closed-loop cooling, letter to unitholders, segment reporting, ready for service, right of first offer, loan syndication. Two alias collisions caught on the dry run (`concentration risk` → `supplier-concentration`, `customer concentration` → `customer-concentration`) and resolved by dropping the aliases.
+- **Three calendar rows** in `profiler-refresh-calendar.json` (94 rows), all `cadence: "quarterly"` — Compass (private, sponsor-owned; listed parents BIP/BIPC report a data segment without naming it), EdgeCore (private; Partners Group Holding AG is listed but reports EdgeCore only as a label), PowerHouse (private, unit-level division of AREP; Blue Owl is a JV partner, not a parent). Each row carries a Chesterton check of the premises corrected this session.
+- **46 headshots** in `images/execs/` (Compass 13, EdgeCore 15, PowerHouse 18), all company leadership-page portraits verified on a contact sheet; execs recount 594 images across 86 companies.
+
+### Changed
+- **Step 7 reconciliation — two older dossiers revised and archived** (profileVersion +1, `lastUpdated` 2026-09-05): `southern-company` v1→v2 (`compass-datacenters` `customer` edge for Mississippi Power's ~500 MW Meridian special contract; the Compass Meridian release registered in `sources[]` in the same edit); `holder-construction` v4→v5 (the '$1.9B contract' wording in the summary, highlights, specs, developments and a source label corrected — Construction Dive's headline styles EdgeCore's January 2024 debt financing as a contract value and the article states none; `edgecore` `customer` edge added covering Mesa PH02/PH03 and Santa Clara SV01; AZ Big Media and Interglobix registered). The `hitt` and `mccarthy` EdgeCore mentions were accurate and left alone. Corpus greps: `\bCompass\b` → southern-company only; `\bEdgeCore\b` → hitt, holder-construction, mccarthy; `\bPowerHouse\b` → none; `\bPowerhouse\b` → kiewit and oklo (Oklo's Aurora powerhouse product, not the company); `Joliet` → none.
+- **`PROFILER-COVERAGE-PLAN.md`** — §8 rows `compass-datacenters`, `edgecore`, `powerhouse-data-centers` flipped to `B7 → F7`, `v1 · v04.74r`, `✓ · v04.74r`, with the §4 premise verdicts in the Closes column: the one B7 `Why` cell describes three different companies — 'Brookfield-owned' is Compass (held, imprecisely: co-controlled with Ontario Teachers', KKR at asset level), '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's own January 2026 wording (held as wording; two operating buildings), 'Joliet 1.8 GW campus' is Hillwood/PowerHouse (held as a plan; utility contract cancelled). §7 `investor`/peer-group bullet extended with the landlords' view of the `Colocation & Cloud Capacity` family (28 cards mixing build-to-suit landlords with merchant battery developers — a `renewables-developer` split now visible from both ends; noted, not done).
+- **`PROFILER-CROSSREF-CALIBRATION.md`** — F7 adjudication log entry under the Relationships checker (0 findings on the first run: 0 accepted · 0 corrected · 0 replaced · 0 registered; the holder $1.9B correction recorded).
+- **Registry** synced (133 companies; Compass domain `compassdatacenters.com`; EdgeCore `edgecore.com`; PowerHouse `powerhousedata.com`, `americanrepartners.com`, `joliettechnologycenter.com`); graph rebuilt (974 edges, 727 curated); archive index +2.
+- **README tree** — entries for the three profiles, three study guides, three study-prep folders and lesson plans, two archive files, and the execs count.
+
+### Verified
+- `sync-profiler-registry.py --check` clean · `check-profiler-study.py` 0 errors (107 guides, 895 concepts) · `check-profiler-relationships.py` exit 0 (0 findings, 14 accept entries unchanged) · `check-profiler-crossrefs.py` exit 0 (0 new candidates; one Compass scope over the 900-character cap listed as not examined) · Playwright: the three new dossiers (source counts 102/107/114 matching the files) and their study guides, plus the revised southern-company and holder-construction dossiers, render with zero page errors and no unresolved term spans. No named project registered (`profiler-projects.json` unchanged) — no relationship was ready to pin Joliet, Mesa or Meridian; `Profiler.html` unchanged (no page version bump).
 
 ## [v04.73r] — 2026-09-05 05:51:42 PM EST
 

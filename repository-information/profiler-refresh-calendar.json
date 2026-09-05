@@ -1359,6 +1359,51 @@
         "Share register: Amazon 13G/13D changes (23.4% of Class A), Ares and Jane Street filings, lock-up expiry effects; analyst estimates once consensus forms",
         "Chesterton check: X-energy is public (not private); the USD 700m Series D closed November 2025 led by Jane Street (there was no February 2026 Series D); headcount is 916 at 17 March 2026 — vendor headcounts of 1,400–1,800 are unreliable. Do not re-import any of these"
       ]
+    },
+    {
+      "slug": "compass-datacenters",
+      "cadence": "quarterly",
+      "source": "Private, sponsor-owned (co-controlled by Brookfield Infrastructure and Ontario Teachers' Pension Plan since 3 October 2023; KKR asset-level partner since December 2025); no listing, no earnings calendar. Listed parents in the chain: Brookfield Infrastructure Partners (NYSE: BIP / TSX: BIP.UN) and BIPC report a 'data' segment quarterly (letters at bip.brookfield.com; 6-K exhibits on EDGAR) without naming Compass. Disclosure channels: compassdatacenters.com newsroom and in-the-news pages (retro-edited boilerplate — quote with dates), PR Newswire (readable) and Yahoo Finance mirrors, the annual Outcomes Report PDF (July/August), ABS presales via Bisnow / Asset Securitization Report / GlobalCapital, Mississippi PSC and Texas local press. Data Center Dynamics is 403 from this environment. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Hoffman Estates Building 1 energisation by ComEd (2024 target: mid-2026) and any named tenant; Meridian's hyperscale anchor (only Corderill LLC, USD 100m, is named) and the 320 MW (Markets page) vs ~500 MW (release) reconciliation",
+        "A fifth structured issuance (Red Oak or Meridian securitization) and whether Moody's AAA extends to new collateral; any disclosure of KKR's amount or the assets transferred under the December 2025 agreement",
+        "Second Red Oak campus (~830/890 acres): permits, first building, any renewed county abatement; Statesville, NC construction start and the reported Duke Energy ESA (Bloomberg/E&E, February 2026 — unverified)",
+        "Texas policy: PUCT/ERCOT implementation of Governor Abbott's data-center standards (August 2026), legislative action on abatements; Infrastructure for America (co-founded September 2026 with Digital Realty, QTS, Vantage) activity",
+        "Brookfield Infrastructure quarterly letters: any Compass-specific MW, FFO or 'commissioned' figure; any change in co-control (Ontario Teachers' or Brookfield stake sale)",
+        "Prime-power, BESS or Bloom Energy award at a Compass campus (would overturn the dossier's flexible-load judgment); the Phoenix 191 MW diesel microgrid status",
+        "Chesterton check: the coverage-plan cell's '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's and 'Joliet 1.8 GW' is Hillwood/PowerHouse's — neither describes Compass; Rosemount, MN is Meta's project, not Compass's; Compass names no tenant and no GC except Power Construction (Hoffman Estates); the '$5.5 billion' 2023 price is press-only (Brookfield: $1.35bn for the co-controlling stake). Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "edgecore",
+      "cadence": "quarterly",
+      "source": "Private, sponsor-owned (Partners Group 'on behalf of its clients' since 11 November 2022; USD 1.9bn equity round September 2024, Partners Group remains majority investor); no listing, no earnings calendar. Partners Group Holding AG (SIX: PGHN) is listed but its annual and interim reports carry EdgeCore only as a label. Disclosure channels: edgecore.com press releases (the 2026 Webflow site; legacy /news/ paths redirect), campus pages (figures move without release), Yahoo Finance and PR Newswire mirrors, financing counsel pages (Davis Polk), Commercial Property Executive, Virginia Business, AZ Big Media, Data Center Frontier; Data Center Dynamics is 403. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "AS01 Sterling occupancy (November 2026) and AS02 (July 2027) — the first deliveries under the 2023 repositioning; any named tenant anywhere in the portfolio",
+        "Reno RN01 energisation and NV Energy power delivery (a year past the late-2025 target); PH02/PH03 Mesa completions; Culpeper (196 MW from mid-2029) and the Mesa expansion (two buildings after the SRP switchyard cut)",
+        "Louisa County (1.1+ GW, 697 acres): construction start, tenant, generation or transmission plan (REC / Hyperscale Energy; Valley Link 765 kV opposition); the county performance agreement (1 December 2025, unfetched)",
+        "Financing: a second ABS or a Mesa refinancing (2025 ECore 2025-1 rated S&P A-/BBB-); any change in the '$7.4 billion committed / $16.1B planned' figures; a Partners Group exit process (sale, continuation vehicle, IPO)",
+        "Arizona: ACC rules under HB 2756 for extra-high-load customers and the 2026–2029 sales-tax exemption pause (HB 4168) — whether Mesa buildings hold grandfathered certifications; SRP's Large Customer Integration Process",
+        "Ratepayer posture: any campus abandoned on power economics (Brewer: 'will abandon projects if power economics become financially unworkable'); Virginia's electricity consumption tax (USD 0.011/kWh, July 2026–June 2028)",
+        "Chesterton check: '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's own January 2026 wording (superseded by the site's 2.27+ GW / $7.4bn) — the verifiable operating base is two buildings (PH01 26 MW, SV01 36 MW); EdgeCore is Partners Group-owned, not Brookfield-owned (its only Brookfield link is buying Mesa land from a Brookfield Properties affiliate) and has no Illinois site; Holder's Mesa contract value is undisclosed (the '$1.9B' is EdgeCore's loan). Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "powerhouse-data-centers",
+      "cadence": "quarterly",
+      "source": "Private, unit-level: a wholly owned division of American Real Estate Partners (AREP), a private McLean, VA fund manager; no listing, no earnings calendar; assets sit in project JVs (Harrison Street, Blue Owl/Chirisa, Provident, Hillwood, Poe, Town Lane, Pennsylvania Data Center Partners). Blue Owl Capital (NYSE: OWL) is a JV capital partner, not a parent. Disclosure channels: powerhousedata.com (NOT powerhousedatacenters.com, a parked domain) press releases and campus pages, americanrepartners.com news (NOT areprealestate.com), PR Newswire, Harrison Street and Provident partner releases, the Hillwood–PowerHouse Joliet project site (joliettechnologycenter.com, curl only), Utility Dive for the FERC/ComEd record, Shaw Local / Patch for Joliet litigation, Loudoun Now; the City of Joliet's site and FERC's are 403. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Joliet: the Will County residents' suit (hearing 8 September 2026), FERC's ruling on ComEd's 24 July 2026 cancellation of the transmission security agreement, the N.D. Ill. suit against ComEd, any replacement retail/transmission agreement; whether the 'early 2027' construction start survives",
+        "First buildings since ABX-1: Pacific power-on (Q3 2026) and delivery (Q3 2026–Q2 2027), PowerHouse 95 initial delivery (Q3 2026), Arcola (Q4 2026–Q1 2027, tenant unnamed), CTP-02/03 for CoreWeave (Q1 2027), Irving, Louisville (130 MW in Q4 2026)",
+        "Grand Prairie energisation (slipped from May 2026 to Q1 2027) and any named tenant; Circle T and Uhland entitlements in Texas; Charlotte substation energisation (April 2027); Carlisle Phase 1 (Q2 2027); Carrollton purchase options",
+        "Capital: any construction loan, ABS or valuation naming a PowerHouse borrower (none on the record); a third Blue Owl/Chirisa or Harrison Street tranche naming PowerHouse; AREP Fund V; any change in the 90/10 JV split",
+        "Boilerplate counters (140 data centers / ~10 GW on the homepage, 118 / 8.1 GW in January 2026): read against delivered (one building) and leased (Arcola, Chesterfield) — do not import the counter as capacity",
+        "Moratoria and rules: Louisville's proposed hyperscale moratorium (Rubbertown exempt), Merrillville IN moratorium to May 2027 (PowerHouse lists 750 MW there), ICC large-load deposit rules, Loudoun's posture on GIS substations",
+        "Chesterton check: 'Brookfield-owned' and '1.8 GW delivered or under development on $16.1B planned' do NOT describe PowerHouse (AREP-owned; the figures are EdgeCore's); Joliet's 1.8 GW is a plan, not a build; HQ is McLean (not Reston/Herndon); the executive is Luke Kipfer (no 'Luke Kinney'); the brief's domains were wrong. Do not re-import any of these"
+      ]
     }
   ]
 }

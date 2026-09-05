@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-05",
- "companies": 130,
+ "companies": 133,
  "edges": [
   {
    "a": "abb",
@@ -1597,6 +1597,21 @@
   },
   {
    "a": "aligned",
+   "b": "compass-datacenters",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named by Dallas press as a competitor expanding simultaneously in the DFW market.",
+     "context": "Dallas Express (May 2024), reporting Compass's Red Oak expansion filings, notes 'competitors like Aligned Data Centers expanding simultaneously in the region'. Both are sponsor-owned single-tenant hyperscale developers with water-free cooling claims; Aligned's dossier records no Compass link. No commercial dealing between the two is recorded.",
+     "source": "https://dallasexpress.com/metroplex/dallas-compass-expands-in-north-texas/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aligned",
    "b": "equinix",
    "curated": {
     "a": {
@@ -2218,6 +2233,29 @@
   },
   {
    "a": "amazon",
+   "b": "compass-datacenters",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Historical: Compass's former Israeli business built for AWS with Azrieli; Compass has since exited Israel.",
+     "context": "Globes (November 2025) describes the AWS data centers in Israel as 'executed by Azrieli and its former subsidiary Compass, which has since exited the field in Israel'. No current AWS lease at any Compass campus is disclosed; Bisnow's gloss that the securitized tenants are 'major tech firms like Amazon, Microsoft, Google, and Meta' is a characterisation of 'investment-grade hyperscale tenants', not a disclosure.",
+     "source": "https://en.globes.co.il/en/article-aws-to-double-data-center-capacity-in-israel-1001526360",
+     "status": "historical"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Bisnow's 'Amazon, Microsoft, Google, and Meta' gloss is a characterisation of the ABS presale language, not a disclosure, and no source links Meta to any Compass campus — the Rosemount, Minnesota project sometimes associated with Compass is Meta's own under Xcel service agreements.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amazon",
    "b": "constellation-energy",
    "curated": {
     "b": {
@@ -2283,6 +2321,21 @@
     }
    ],
    "last": "2026-08-03"
+  },
+  {
+   "a": "amazon",
+   "b": "edgecore",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "AWS is the neighbouring hyperscale developer in Louisa County (its own campuses within 15 miles of Shannon Hill) and the former employer of SVP Emerging Technologies Tom Traugott.",
+     "context": "The Louisa County newsletter records AWS proposals in the county alongside EdgeCore's Shannon Hill acquisition; Traugott led 'strategy and execution for new and existing regions across EMEA, APAC, and the Americas' at AWS. Whether AWS is an EdgeCore tenant anywhere is undisclosed — EdgeCore names no tenant.",
+     "source": "https://tammypurcell.substack.com/p/at-town-hall-adams-says-he-opposes",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "amazon",
@@ -2762,6 +2815,29 @@
     }
    ],
    "last": "2025-11-25"
+  },
+  {
+   "a": "amazon",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Claimed customer in the same award release; SVP Pete McGrath managed Northeast US construction for AWS; Hillwood cites Amazon as a client on the Joliet project site.",
+     "context": "The Petersburg award release lists AWS among the hyperscalers whose campuses she has led; McGrath's August 2024 hiring release credits 'managing Northeast U.S. construction for AWS'; the Joliet Technology Center site's Hillwood profile cites Amazon as a Hillwood client. No AWS lease at a PowerHouse campus is disclosed.",
+     "source": "https://www.powerhousedata.com/news/powerhouse-data-centers-karen-petersburg-named-dcd-woman-of-the-year-at-its-2025-global-awards",
+     "status": "announced"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no tenant is disclosed for Pacific, PowerHouse 95, Irving, Reno, Grand Prairie, Charlotte, Louisville, Carlisle or Joliet; the Joliet developers named Google, Amazon, Meta and Oracle only as 'potential tenants'; the December 2025 award release's list of hyperscaler campuses is a company claim without a campus.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "amazon",
@@ -6758,6 +6834,34 @@
   },
   {
    "a": "bloom-energy",
+   "b": "compass-datacenters",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Phoenix '191 MW Tier-4 diesel-powered microgrid under development' (Hawkins, May 2025), the Storm Fern statement that it can 'island' facilities on HVO generators, and the Abbott-standards commitment to reduce load during grid stress; against this, Brookfield's 1 GW Bloom Energy framework is never tied to Compass, and no on-site prime power, PPA or battery project is disclosed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*A prime-power, BESS or Bloom Energy award at a Compass campus:* would overturn Judgment 6.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Campus power and the 'co-serve' utility model",
+     "date": "",
+     "text": "Brookfield Infrastructure's 'USD 5 billion strategic partnership with Bloom Energy to install up to 1 GW of behind-the-meter power' is a sponsor-level programme that no source ties to Compass.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "bloom-energy",
    "b": "coreweave",
    "curated": {
     "b": {
@@ -9962,6 +10066,320 @@
    "last": "2026-08-14"
   },
   {
+   "a": "compass-datacenters",
+   "b": "cummins",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Generator supply and maintenance partner; HVO biofuel adoption.",
+     "context": "Compass's partners page lists Cummins for the 'manufacture and maintenance of generators' and credits the relationship for the shift to HVO biodiesel; the Outcomes Report states that 70% of backup-generator fuel bought in 2025 was HVO. No contract value or unit count is disclosed.",
+     "source": "https://www.compassdatacenters.com/about/our-partners/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Industrialized construction and supply-chain programme (Moonraker, Schneider Red Oak factory, Siemens skids, Vertiv cooling)",
+     "date": "",
+     "text": "Its partners page describes Schneider Electric as 'partners from the start' with 'a first-of-its-kind agreement to construct a Schneider manufacturing facility at our Red Oak campus', Vertiv as the source of 'free air-based data center cooling equipment', Cummins for 'manufacture and maintenance of generators' and Foster Fuels for HVO biofuel.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "equinix",
+   "evid": [
+    {
+     "where": "Capabilities · Hyperscale single-tenant build-to-suit campuses (the core product)",
+     "date": "",
+     "text": "An independent 2026 buyer's guide lists it as a 'Dedicated hyperscale campus developer' alongside QTS, Vantage, CyrusOne, STACK, Aligned, DataBank, NTT, Equinix xScale, Digital Realty and Tract, and advises buyers to 'Confirm whether the project will be customer-owned, leased, or operated by Compass'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "flex",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Delivery model: a standardized 'Moonraker' building 84% fabricated offsite, a Schneider Electric factory on the Red Oak campus under a USD 3 billion five-year agreement, up to 1,500 Siemens medium-voltage skids, Vertiv CoolPhase Flex hybrid cooling, and a 'co-serve' utility posture in which Compass funds its own substations and transmission rights-of-way (USD 52.5 million and nearly USD 20 million in North Texas).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "google",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Bisnow's 'Amazon, Microsoft, Google, and Meta' gloss is a characterisation of the ABS presale language, not a disclosure, and no source links Meta to any Compass campus — the Rosemount, Minnesota project sometimes associated with Compass is Meta's own under Xcel service agreements.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "meta",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Bisnow's 'Amazon, Microsoft, Google, and Meta' gloss is a characterisation of the ABS presale language, not a disclosure, and no source links Meta to any Compass campus — the Rosemount, Minnesota project sometimes associated with Compass is Meta's own under Xcel service agreements.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "microsoft",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Bisnow's 'Amazon, Microsoft, Google, and Meta' gloss is a characterisation of the ABS presale language, not a disclosure, and no source links Meta to any Compass campus — the Rosemount, Minnesota project sometimes associated with Compass is Meta's own under Xcel service agreements.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "oncor",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Oncor serves the Red Oak campus 'via two on-campus substations' that Compass funded.",
+     "context": "Commercial Property Executive's coverage of the October 2025 USD 326 million refinancing states that Oncor provides electricity to the five operating Red Oak buildings via two on-campus substations; Crosby's June 2025 op-ed says Compass 'invested $52.5 million in private capital for substation development' and 'secured transmission line right-of-way at nearly $20 million' for its South Dallas campus. Compass's own releases do not name the utility.",
+     "source": "https://www.commercialsearch.com/news/compass-datacenters-lands-326m-for-dfw-campus/",
+     "status": "active",
+     "scale": "two on-campus substations"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-developer of the abandoned Prince William Digital Gateway and co-founder of Infrastructure for America (September 2026).",
+     "context": "QTS (GW Acquisition Co.) and Compass (H&H Capital Acquisitions) were the two developers behind the 2,000-acre Prince William Digital Gateway rezoned in December 2023; after the Court of Appeals upheld the voiding of the rezoning, Compass withdrew on 29 April 2026 and QTS on 2 July 2026. On 2 September 2026 Compass, QTS, Vantage and Digital Realty launched Infrastructure for America, a 501(c)(4) setting host-community standards for developers. QTS's own dossier lists Compass among its competitors.",
+     "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "status": "active",
+     "since": "2023"
+    }
+   },
+   "evid": [],
+   "last": "2023"
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "rosendin",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Industry partner in the Meridian Community College data-center workforce programme.",
+     "context": "Compass's 31 July 2026 release lists Rosendin among the 'Industry Partners Supporting Program' for the MEI Data Center Pathway Program, alongside Schneider Electric, Siemens, Vertiv and Salute. No source states that Rosendin holds an electrical contract on a Compass campus; no general contractor is named for Meridian.",
+     "source": "https://www.compassdatacenters.com/news/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program/",
+     "status": "active",
+     "since": "2026-07"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-31",
+     "text": "Compass and Meridian Community College launch a 14-week MEI Data Center Pathway Program with Compass funding tuition for the first cohort; partners include Schneider Electric, Siemens, Vertiv, Rosendin and Salute — Workforce programmes are the consent currency for the eight-building Meridian build; the partner list doubles as a map of Compass's supply bench.",
+     "src": "https://www.compassdatacenters.com/news/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-31"
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "USD 3 billion, five-year supply agreement for prefabricated power centres and modular data centers, with a Schneider factory on the Red Oak campus.",
+     "context": "Manufacturing Dive (November 2023): a '$3 billion over five years' agreement under which Schneider manufactures 'Prefabricated IT modular data centers and power centers' at a 110,000 sq ft Red Oak facility opening June 2024, with '240 power centers in 2025' and capacity above 400 a year; about 150 modular solutions had already shipped from Schneider's West Chester, Ohio plant. Compass's partners page calls Schneider 'partners from the start'; the September 2025 EcoStruxure Pod release extends the programme into prefabricated white space.",
+     "source": "https://www.manufacturingdive.com/news/schneider-electric-compass-datacenters-expand-partnership/699594/",
+     "status": "active",
+     "since": "2023-11",
+     "scale": "$3 billion over five years",
+     "via": "Prefabricated power centers and EcoStruxure Pod modules"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Delivery model: a standardized 'Moonraker' building 84% fabricated offsite, a Schneider Electric factory on the Red Oak campus under a USD 3 billion five-year agreement, up to 1,500 Siemens medium-voltage skids, Vertiv CoolPhase Flex hybrid cooling, and a 'co-serve' utility posture in which Compass funds its own substations and transmission rights-of-way (USD 52.5 million and nearly USD 20 million in North Texas).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is the counterparty on Mississippi Power's PSC-approved special contract for the ~500 MW Meridian campus (the Southern Company dossier's Mississippi large-load), a buyer of Schneider Electric power centres and Vertiv cooling, and — after the April 2026 withdrawal from the Prince William Digital Gateway it co-developed with QTS — a co-founder with QTS, Vantage and Digital Realty of the Infrastructure for America coalition (September 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 2026 Outcomes Report's '84% fabricated offsite' Moonraker product and the shift of 80–90% of power-centre work to the factory; a Schneider Electric plant on the Red Oak campus under a USD 3 billion agreement; up to 1,500 Siemens medium-voltage skids; the ICMA Platinum award as 'first and only owner'; and 100% uptime and 1.27 design PUE on 2025 deliveries.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Industrialized construction and supply-chain programme (Moonraker, Schneider Red Oak factory, Siemens skids, Vertiv cooling)",
+     "date": "",
+     "text": "Its partners page describes Schneider Electric as 'partners from the start' with 'a first-of-its-kind agreement to construct a Schneider manufacturing facility at our Red Oak campus', Vertiv as the source of 'free air-based data center cooling equipment', Cummins for 'manufacture and maintenance of generators' and Foster Fuels for HVO biofuel.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-31",
+     "text": "Compass and Meridian Community College launch a 14-week MEI Data Center Pathway Program with Compass funding tuition for the first cohort; partners include Schneider Electric, Siemens, Vertiv, Rosendin and Salute — Workforce programmes are the consent currency for the eight-building Meridian build; the partner list doubles as a map of Compass's supply bench.",
+     "src": "https://www.compassdatacenters.com/news/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-09",
+     "text": "Compass and Schneider Electric announce a prefabricated EcoStruxure Pod white-space module — first units at a Compass campus in fall 2025, 'Reduces revenue generation timeline by up to 3 months' — The prefab programme moves from power rooms into the data hall itself, which is where the revenue clock starts.",
+     "src": "https://www.compassdatacenters.com/news/compass-and-schneider-electric-announce-prefabricated-white-space-module-to-accelerate-data-center-delivery-timelines/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-31"
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "southern-company",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Mississippi Power (Southern Company) supplies the Meridian campus under a PSC-approved special contract — 'Approximately 500 megawatts of power supply'.",
+     "context": "Compass's 9 January 2025 release names Mississippi Power Company as the utility for the USD 10 billion, eight-building Lauderdale County campus with 'Approximately 500 megawatts of power supply'; the Mississippi Public Service Commission approved the special contract with Compass Datacenters Jan I, LLC on 7 February 2025 (The Meridian Star, Mississippi Business Journal). The Southern Company dossier records the same load from the utility's side as part of Mississippi Power's 'approximately 600 MWs' of recently signed economic-development load.\n\nCollection gap: the Markets page lists Meridian at 320 MW against the release's ~500 MW of supply, and no fetched source reconciles the two; a Mississippi Today report that a Plant Daniel coal unit was extended to serve the load could not be read.",
+     "source": "https://www.compassdatacenters.com/news/compass-10b-investment-lauderdale-county-mississippi/",
+     "status": "active",
+     "since": "2025-02",
+     "scale": "~500 MW"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Compass Datacenters' Meridian campus is Mississippi Power's largest announced data-center load — 'Approximately 500 megawatts of power supply' under a PSC-approved special contract.",
+     "context": "Compass's 9 January 2025 release announcing the USD 10 billion, eight-building Lauderdale County campus names Mississippi Power Company as the utility and states 'Approximately 500 megawatts of power supply'; the Mississippi Public Service Commission approved the special contract between Mississippi Power and Compass Datacenters Jan I, LLC on 7 February 2025. This dossier records the same load from the utility's side as part of Mississippi Power's 'recently signed economic development loads of approximately 600 MWs'.\n\nAdded 2026-09-05 in the reconciliation for the Compass Datacenters dossier. Not reconciled: Compass's Markets page lists Meridian at 320 MW against the release's ~500 MW of supply, and the Compass dossier's first named tenant at Meridian is Corderill LLC (USD 100 million) — no hyperscale anchor is disclosed.",
+     "source": "https://www.compassdatacenters.com/news/compass-10b-investment-lauderdale-county-mississippi/",
+     "status": "active",
+     "since": "2025-02",
+     "scale": "~500 MW"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is the counterparty on Mississippi Power's PSC-approved special contract for the ~500 MW Meridian campus (the Southern Company dossier's Mississippi large-load), a buyer of Schneider Electric power centres and Vertiv cooling, and — after the April 2026 withdrawal from the Prince William Digital Gateway it co-developed with QTS — a co-founder with QTS, Vantage and Digital Realty of the Infrastructure for America coalition (September 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Alabama Power and Mississippi Power — the other two retail utilities",
+     "date": "",
+     "text": "Mississippi Power acquired FP&L's 50 percent of Plant Daniel Units 1 and 2 on July 30, 2025, extended the Daniel 2 and Watson 4 retirements in a March 2026 IRP update, received Mississippi PSC approval on July 7, 2026 to convert Daniel Unit 1 or 2 to gas by 2029, supplies Georgia Power under a 750 MW affiliate PPA extended in part through 2029, and reports 'recently signed economic development loads of approximately 600 MWs' including the Compass Datacenters $10B, ~500 MW Meridian campus (2025 Year in Review; Q2 2026 10-Q).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-02"
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-founder of Infrastructure for America alongside Compass, QTS and Digital Realty.",
+     "context": "The 2 September 2026 launch release names Vantage as a founding member of the coalition. Vantage is otherwise a direct competitor in the hyperscale build-to-suit market — an independent 2026 buyer's guide lists both on the same shortlist — and no commercial dealing between the two is recorded.",
+     "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "status": "active",
+     "since": "2026-09"
+    }
+   },
+   "evid": [],
+   "last": "2026-09"
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Vertiv is Compass's primary thermal partner; CoolPhase Flex hybrid liquid/air units co-developed with Compass under a multi-year, multi-billion dollar supply arrangement.",
+     "context": "Compass's 18 November 2024 release announced the CoolPhase Flex hybrid liquid and air cooling system with first units in Q1 2025 'under a multi-year, multi-billion dollar supply arrangement'; Vertiv's own March 2024 case study describes each unit as supporting 'full-air or liquid cooling, including direct-to-chip'. The partners page credits Vertiv with Compass's 'free air-based data center cooling equipment'.",
+     "source": "https://www.compassdatacenters.com/news/vertiv-compass-hybrid-liquid-air-cooling-ai-deployment/",
+     "status": "active",
+     "since": "2024-11",
+     "scale": "multi-year, multi-billion dollar supply arrangement",
+     "via": "CoolPhase Flex"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Delivery model: a standardized 'Moonraker' building 84% fabricated offsite, a Schneider Electric factory on the Red Oak campus under a USD 3 billion five-year agreement, up to 1,500 Siemens medium-voltage skids, Vertiv CoolPhase Flex hybrid cooling, and a 'co-serve' utility posture in which Compass funds its own substations and transmission rights-of-way (USD 52.5 million and nearly USD 20 million in North Texas).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is the counterparty on Mississippi Power's PSC-approved special contract for the ~500 MW Meridian campus (the Southern Company dossier's Mississippi large-load), a buyer of Schneider Electric power centres and Vertiv cooling, and — after the April 2026 withdrawal from the Prince William Digital Gateway it co-developed with QTS — a co-founder with QTS, Vantage and Digital Realty of the Infrastructure for America coalition (September 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Industrialized construction and supply-chain programme (Moonraker, Schneider Red Oak factory, Siemens skids, Vertiv cooling)",
+     "date": "",
+     "text": "Its partners page describes Schneider Electric as 'partners from the start' with 'a first-of-its-kind agreement to construct a Schneider manufacturing facility at our Red Oak campus', Vertiv as the source of 'free air-based data center cooling equipment', Cummins for 'manufacture and maintenance of generators' and Foster Fuels for HVO biofuel.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-31",
+     "text": "Compass and Meridian Community College launch a 14-week MEI Data Center Pathway Program with Compass funding tuition for the first cohort; partners include Schneider Electric, Siemens, Vertiv, Rosendin and Salute — Workforce programmes are the consent currency for the eight-building Meridian build; the partner list doubles as a map of Compass's supply bench.",
+     "src": "https://www.compassdatacenters.com/news/compass-datacenters-and-meridian-community-college-launch-mississippis-first-data-center-workforce-training-program/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-31"
+  },
+  {
    "a": "constellation-energy",
    "b": "intersect-power",
    "curated": {
@@ -11126,6 +11544,81 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "coreweave",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Tenant of the 120 MW Chesterfield build-to-suit (CTP-02/03) under the Blue Owl/Chirisa/PowerHouse joint venture; a 50 MW CoreWeave building carries the USD 600 million SocGen-led loan.",
+     "context": "PowerHouse's May 2025 release on the second USD 750 million tranche states the 120 MW at Chirisa Technology Parks' 350-acre Chesterfield campus 'will support CoreWeave'; the campus page lists CTP-02 and CTP-03 as 'Build-to-Suit (Fully Leased)' with Q1 2027 delivery; Bisnow (December 2024) reports the USD 600 million construction loan for a '50-megawatt build-to-suit facility' leased to CoreWeave and a prior '28 MW deal signed September 2023'.\n\nNot supported: PowerHouse's role in the August 2025 'USD 4 billion' Blue Owl/Chirisa/Machine Investment Group close for CoreWeave's Lancaster and Chesterfield sites — Commercial Property Executive's coverage does not name PowerHouse.",
+     "source": "https://www.powerhousedata.com/news/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership",
+     "status": "active",
+     "since": "2023-09",
+     "scale": "120 MW",
+     "via": "Blue Owl / Chirisa Technology Parks joint venture"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Campus list (homepage, with company MW figures): Northern Virginia — ABX-1 (60 MW, sold), Pacific (265 MW, ex-AOL headquarters, under construction), Arcola (120 MW, hyperscale lease January 2026), Quantum Connect (20 MW enterprise suites), PowerHouse 95 in Spotsylvania (900 MW), Chesterfield with Chirisa (CTP-02/03 120 MW fully leased build-to-suit for CoreWeave; 1600 Digital Drive 300 MW+); Texas — Irving (201 MW), Grand Prairie/Ellis County with Provident (1.8 GW switchyard, first 500 MW ERCOT tranche), Circle T in Westlake (300 MW), Red Oak (150 MW), a 500-acre Uhland site; Reno at the Tahoe-Reno Industrial Center (200 MW); Charlotte (380 MW, Duke Energy); Louisville (525 MW page / 402 MW release, LG&E) and Carrollton, Kentucky (USD 9.6 billion, July 2026) with Poe Companies; Carlisle, Pennsylvania (1.35 GW, USD 15 billion) with Pennsylvania Data Center Partners; Hobart (450 MW), Merrillville (750 MW) and La Porte (300 MW), Indiana; and Joliet, Illinois with Hillwood ('1800 MW', 755–795 acres, 24 buildings, '~$20 billion').",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Capital: AREP Strategic Opportunity Fund III (USD 63 million, 2022) and Fund IV (USD 309 million, February 2025, 80% to PowerHouse), Harrison Street's USD 3.2 billion committed, the Blue Owl/Chirisa USD 5 billion programme (two USD 750 million tranches), a USD 600 million Société Générale-led construction loan for the CoreWeave building.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gap: no revenue, EBITDA, headcount, valuation or lease terms beyond ABX-1's 30 years; tenants are named only at ABX-1 (CyrusOne) and Chesterfield (CoreWeave); no general contractor beyond DPR (ABX-1) and E.E.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is CoreWeave's Chesterfield landlord through the Blue Owl/Chirisa joint venture, a Dominion Energy and Oncor large-load customer, DPR Construction's client on ABX-1, and the developer whose Joliet transmission security agreement with ComEd — accepted by FERC in March 2026 and cancelled by ComEd in July — is the live test of Illinois's new large-load rules.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that tenant demand behind the pipeline is thin on the public record: two named tenants (CyrusOne at ABX-1, CoreWeave at Chesterfield through the Blue Owl/Chirisa vehicle) and one unnamed hyperscale lease at Arcola across a claimed 140 buildings.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: PowerHouse is absent from the August 2025 USD 4 billion Blue Owl/Chirisa/Machine Investment Group close for CoreWeave that includes the same Chesterfield campus; Harrison Street's February 2026 Arcola release counts the asset in its own USD 6.5 billion digital platform; and Katz's stated aim is 12–15 new projects from a GP fund, which favours new partners over deeper ones.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-27",
+     "text": "Blue Owl, Chirisa Technology Parks and PowerHouse close the second 'USD 750 million' tranche of the 'USD 5 billion' programme: 120 MW at Chesterfield for CoreWeave, delivery 2025–2026 — The only PowerHouse programme with a named neocloud tenant; PowerHouse is absent from the partners' August 2025 USD 4 billion close.",
+     "src": "https://www.powerhousedata.com/news/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-16",
+     "text": "'USD 600 million' construction loan led by Société Générale and arranged by Newmark for the 50 MW CoreWeave build-to-suit near Richmond under the Blue Owl/Chirisa/PowerHouse joint venture — The only construction loan on the public record for a PowerHouse project.",
+     "src": "https://www.bisnow.com/national/news/data-center/coreweave-data-center-in-virginia-lands-600m-loan-127230",
+     "from": "b"
+    }
+   ],
+   "last": "2025-05-27"
   },
   {
    "a": "coreweave",
@@ -13399,6 +13892,37 @@
   },
   {
    "a": "dominion-energy",
+   "b": "edgecore",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Power provider for the Sterling AS01/AS02 campus (114 MW), per the April 2026 financing coverage.",
+     "context": "Virginia Business (22 April 2026): 'Power for both data centers will be provided by Dominion Energy'; Construction Review repeats the attribution. EdgeCore's own release does not name the utility. Dominion is also a Valley Link joint-venture partner in the 765 kV transmission line opposed in Louisa and Orange counties, where EdgeCore's Shannon Hill campus is one of the approved sites; Louisa's supervisors deny that data-center approvals drove the line.",
+     "source": "https://virginiabusiness.com/edgecore-secures-1-5b-toward-sterling-data-centers-construction/",
+     "status": "active",
+     "scale": "114 MW"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Six markets per the company: Mesa, AZ (496 MW, five buildings, SRP; Holder Construction as GC per third parties), Reno/Tahoe-Reno Industrial Center, NV (216 MW, three buildings, NV Energy), Santa Clara, CA (72 MW, two buildings, Silicon Valley Power), Sterling, VA (114 MW, two fully leased buildings, Dominion Energy, USD 1.5 billion of construction loans in April 2026), Culpeper, VA (196 MW, capacity from mid-2029, Rappahannock Electric Cooperative) and Louisa County, VA (the 'gigascale' Shannon Hill site: 1.1+ GW, 697 acres bought for USD 42 million, 'USD 17B+', by-right zoning).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "EdgeCore is the developer-customer of Holder Construction on the Mesa and Santa Clara campuses, a Dominion Energy large-load customer at Sterling, an SRP customer whose Mesa expansion was redrawn around an SRP switchyard, and — with the August 2026 Ratepayer Protection Pledge — a self-declared 'pay for our own power delivery' developer.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dominion-energy",
    "b": "entergy",
    "curated": {
     "b": {
@@ -13568,6 +14092,37 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "dominion-energy",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Utility for the Northern Virginia and Chesterfield campuses; built the 300 MW GIS substation on the ABX-1 site.",
+     "context": "Commercial Observer (December 2024): 'Dominion Energy is building a 300-megawatt substation on the property, expected to be energized by early 2025' at ABX-1, with bridging power during Loudoun's allocation constraints; the Pacific site release names Dominion for the ex-AOL campus; the Chesterfield 1600 Digital Drive release cites Dominion's Meadowville substation; Dominion is listed on PowerHouse's partners page and SVP Data Center Utilities Will McCausland held 'leadership positions at Virginia's Dominion Energy'.",
+     "source": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/",
+     "status": "active",
+     "since": "2022"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is CoreWeave's Chesterfield landlord through the Blue Owl/Chirisa joint venture, a Dominion Energy and Oncor large-load customer, DPR Construction's client on ABX-1, and the developer whose Joliet transmission security agreement with ComEd — accepted by FERC in March 2026 and cancelled by ComEd in July — is the live test of Illinois's new large-load rules.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-first campus development — land, substations and entitlements ('powered land')",
+     "date": "",
+     "text": "It employs a 'Senior Vice President, Data Center Utilities' (Will McCausland, ex-Dominion Energy) and pursues on-site or dedicated substations at every campus: a 300 MW GIS substation with Dominion at ABX-1 (phased 15/7/8/60 MW deliveries), a 'first of its kind' GIS substation at Arcola Grove approved by Loudoun's supervisors 5–4 after the planning commission recommended denial 7–2, three 300 MW substations planned at PowerHouse 95, an Oncor-served Irving site and an Oncor 350 MW substation 'funded by PowerHouse' at Circle T (per a Texas trade site), a '1.8 GW switchyard' at Grand Prairie with the 'first 500MW tranche approved through ERCOT', a 25-acre switching station to be conveyed to ComEd at Joliet, an LG&E switch station for Louisville and 450 MW substations for each Carlisle campus.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2022"
   },
   {
    "a": "dominion-energy",
@@ -13874,6 +14429,30 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "dpr",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "General contractor of ABX-1, PowerHouse's first and only delivered building; listed on the partners page; SVP Jeff Parsons is ex-DPR.",
+     "context": "The May 2023 CyrusOne lease release names DPR Construction as ABX-1's general contractor; DPR appears on PowerHouse's partners page alongside Corgan, kW Mission Critical, Greenway, Dominion and Integra; Jeff Parsons (SVP Development & Construction, Dallas, joined April 2025) spent more than ten years at DPR. No GC is named for any later PowerHouse campus except E.E. Reed at Pacific.",
+     "source": "https://www.powerhousedata.com/news/powerhouse-data-centers-announces-lease-agreement-with-cyrusone-for-abx-1-data-center-powered-shell",
+     "status": "active",
+     "since": "2022"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is CoreWeave's Chesterfield landlord through the Blue Owl/Chirisa joint venture, a Dominion Energy and Oncor large-load customer, DPR Construction's client on ABX-1, and the developer whose Joliet transmission security agreement with ComEd — accepted by FERC in March 2026 and cancelled by ComEd in July — is the live test of Illinois's new large-load rules.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2022"
   },
   {
    "a": "dpr",
@@ -14775,6 +15354,152 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "edgecore",
+   "b": "holder-construction",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "General contractor on the Mesa campus (PH02, PH03) and Santa Clara SV01 — named by Holder, the trade press and the City of Mesa, never by EdgeCore.",
+     "context": "AZ Big Media's December 2024 topping-out coverage names Holder Construction as general contractor for PH02 (868,000 sq ft); Proximo lists Holder as EPC contractor on PH03; Mesa's January 2024 planning record states 'the general contractor is Holder Construction'; and Holder's president Beth Lowry attended the September 2025 SV01 ribbon-cutting in Santa Clara, where the structural-frame vendor's project page also lists Holder as GC. Construction Dive's January 2024 headline 'Holder Construction gets $1.9B Arizona data center job' refers to EdgeCore's USD 1.9 billion debt financing; the article states no contract value.\n\nNot supported: any Holder role at Sterling, Reno, Culpeper or Louisa — no GC is named for those sites in any fetched source.",
+     "source": "https://azbigmedia.com/real-estate/edgecore-celebrates-topping-off-of-second-data-center-building/",
+     "status": "active",
+     "since": "2024-01",
+     "via": "Mesa PH02/PH03 and Santa Clara SV01"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Developer client — general contractor for EdgeCore's Mesa, AZ campus (PH02/PH03) and its Santa Clara SV01 building.",
+     "context": "AZ Big Media's December 2024 topping-out coverage names Holder Construction as general contractor for EdgeCore's PH02 (868,000 sq ft) on the Mesa campus; Construction Dive reported Holder's selection for the campus in January 2024 (its '$1.9B job' headline refers to EdgeCore's debt financing — no contract value is stated); Interglobix records Holder's president at the September 2025 ribbon-cutting of EdgeCore's SV01 in Santa Clara, where the structural-frame vendor's project page also lists Holder as GC. EdgeCore itself never names its general contractor.\n\nAdded 2026-09-05 in the reconciliation for the EdgeCore dossier, which corrected this dossier's earlier '$1.9B contract' wording. Not supported: any Holder role at EdgeCore's Sterling, Reno, Culpeper or Louisa campuses.",
+     "source": "https://azbigmedia.com/real-estate/edgecore-celebrates-topping-off-of-second-data-center-building/",
+     "status": "active",
+     "since": "2024-01",
+     "via": "Mesa PH02/PH03 and Santa Clara SV01"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Six markets per the company: Mesa, AZ (496 MW, five buildings, SRP; Holder Construction as GC per third parties), Reno/Tahoe-Reno Industrial Center, NV (216 MW, three buildings, NV Energy), Santa Clara, CA (72 MW, two buildings, Silicon Valley Power), Sterling, VA (114 MW, two fully leased buildings, Dominion Energy, USD 1.5 billion of construction loans in April 2026), Culpeper, VA (196 MW, capacity from mid-2029, Rappahannock Electric Cooperative) and Louisa County, VA (the 'gigascale' Shannon Hill site: 1.1+ GW, 697 acres bought for USD 42 million, 'USD 17B+', by-right zoning).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "EdgeCore is the developer-customer of Holder Construction on the Mesa and Santa Clara campuses, a Dominion Energy large-load customer at Sterling, an SRP customer whose Mesa expansion was redrawn around an SRP switchyard, and — with the August 2026 Ratepayer Protection Pledge — a self-declared 'pay for our own power delivery' developer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-05",
+     "text": "Interglobix reports the 10 September 2025 ribbon-cutting of SV01 in Santa Clara with Mayor Lisa Gillmor and Holder Construction president Beth Lowry — The second delivered building — land bought in 2018, ground broken January 2023, opened September 2025: a 32-month build on a 12-acre urban site.",
+     "src": "https://www.interglobixmagazine.com/edgecore-sv01-data-center-ribbon-cutting-ceremony/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-04",
+     "text": "PH02 (868,000 sq ft) tops out in Mesa with general contractor Holder Construction; Arizona Corporation Commissioner Kevin Thompson attends — The only public naming of a GC on an EdgeCore campus comes from the GC and the trade press, never from EdgeCore.",
+     "src": "https://azbigmedia.com/real-estate/edgecore-celebrates-topping-off-of-second-data-center-building/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-12-05"
+  },
+  {
+   "a": "edgecore",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Sold about 15 acres of the Mesa expansion land to EdgeCore (2023); former employer of SVP Design & Construction Dave Rezash.",
+     "context": "Mesa's January 2024 planning coverage records EdgeCore 'acquiring approximately 15 acres previously owned by Meta Platforms Inc.' for the Elliot Road expansion; Rezash was 'Geo-Manager, North America East of Meta's Retrofit and Leased Portfolio' before joining EdgeCore. No lease between Meta and EdgeCore is disclosed at any campus.",
+     "source": "https://www.aztechcouncil.org/edgecore-data-center-mesa-planning-zoning/",
+     "status": "historical",
+     "since": "2023"
+    }
+   },
+   "evid": [],
+   "last": "2023"
+  },
+  {
+   "a": "edgecore",
+   "b": "microsoft",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-02-12",
+     "text": "Personnel expansion: Ruben Thissen (SVP Operations and EHS, founding STACK executive, ex-Microsoft), Therese Kerfoot promoted to EVP Strategy, Bill Jabjiniak to SVP community and government relations — The hires map the model — operations from a hyperscaler, strategy from CoreSite, community relations from the City of Mesa's former economic-development director.",
+     "src": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-implements-strategic-personnel-expansions-to-dynamically-address-data-center-industry-growth",
+     "from": "a"
+    }
+   ],
+   "last": "2025-02-12"
+  },
+  {
+   "a": "edgecore",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Design reference: Ashburn buildings are 'structurally engineered to accommodate liquid to liquid loads, including NVIDIA VR racks'.",
+     "context": "EdgeCore's Ashburn campus page cites NVIDIA rack designs as the structural and mechanical benchmark for AS01/AS02 (liquid-to-liquid loads, variable water-to-air cooling ratios). No commercial relationship with NVIDIA is disclosed; the reference is to a tenant-side hardware standard.",
+     "source": "https://edgecore.com/locations/ashburn-data-center",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Water-neutral, air-cooled design standard (closed-loop chilled water, WUE below 0.01 L/kWh)",
+     "date": "",
+     "text": "Ashburn buildings are 'structurally engineered to accommodate liquid to liquid loads, including NVIDIA VR racks', with 'mechanical galleries sized for variable water-to-air cooling ratios'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "edgecore",
+   "b": "stack-infrastructure",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "STACK's NVA10 sits 0.52 miles from EdgeCore's Culpeper site; SVP Operations Ruben Thissen was a founding STACK executive.",
+     "context": "datacenterHawk's listing for EdgeCore CP01-03 on Nalles Mill Road notes STACK Infrastructure's NVA10 '0.52 miles away' in the Culpeper Technology Zone; Thissen's bio describes him as a 'founding executive employee of STACK Infrastructure' for six years. Both compete for hyperscale build-to-suit leases in Virginia; no commercial dealing is recorded.",
+     "source": "https://datacenterhawk.com/marketplace/providers/edgecore/nalles-mill-road/cp01-03",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "edgecore",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Direct competitor in single-tenant hyperscale campuses and the source of EdgeCore's CEO, President and SVP Enterprise Security.",
+     "context": "Lee Kestler was Chief Commercial Officer of Vantage Data Centers before EdgeCore; Steve Conner was Vantage's CTO ('helping Vantage Data Centers grow to almost 1GW'); Greg Thompson was Vantage's CISO. Both companies build sponsor-financed single-tenant campuses for the same hyperscale tenants and co-locate at the Tahoe-Reno Industrial Center. No commercial dealing between the two is recorded.",
+     "source": "https://edgecore.com/company/leadership-team/lee-kestler",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-21",
+     "text": "Greg Thompson appointed SVP, Enterprise Security (ex-CISO of VHC Health and Vantage Data Centers; ex-FBI) as EdgeCore 'establishes enterprise security function' — Another Vantage alumnus; the function is a hyperscaler procurement requirement rather than a growth signal.",
+     "src": "https://edgecore.com/resources/press-releases/edgecoredigital-infrastructure-establishes-enterprise-security-function-to-address-nextphase-of-organizational-evolution",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05-21"
   },
   {
    "a": "enchanted-rock",
@@ -20201,7 +20926,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "CEO Beth Lowry says 60-70% of current projects are data centers; confirmed hyperscale work skews to Google (the ~$2B Fort Wayne IN campus; the New Albany OH 'Mustang Project') plus the $1.9B, ≥450 MW EdgeCore Mesa AZ campus and legacy Meta/Apple credits (Holder finished Apple Park).",
+     "text": "CEO Beth Lowry says 60-70% of current projects are data centers; confirmed hyperscale work skews to Google (the ~$2B Fort Wayne IN campus; the New Albany OH 'Mustang Project') plus the $1.9B-financed, ≥450 MW EdgeCore Mesa AZ campus and legacy Meta/Apple credits (Holder finished Apple Park).",
      "src": "",
      "from": "b"
     },
@@ -20236,7 +20961,7 @@
     {
      "where": "Recent Reporting",
      "date": "2024-01-10",
-     "text": "EdgeCore selects Holder for its $1.9B Mesa, AZ hyperscale campus — 3.1M sq ft, ≥450 MW critical load, water-neutral air-cooled design — Largest publicly reported single award in company history, and evidence the franchise extends beyond Google to the developer/colocation tier.",
+     "text": "EdgeCore selects Holder for its $1.9B-financed Mesa, AZ hyperscale campus — 3.1M sq ft, ≥450 MW critical load, water-neutral air-cooled design — Largest publicly reported data-center engagement in company history (contract value undisclosed), and evidence the franchise extends beyond Google to the developer/colocation tier.",
      "src": "Construction Dive, 2024-01-10",
      "from": "b"
     }
@@ -20920,6 +21645,20 @@
      "where": "Capabilities · Compute supply portfolio (cloud + silicon)",
      "date": "",
      "text": "Cloud: Microsoft (incremental $250B Azure commitment; right of first refusal removed), AWS ($38B initial, expanded by a reported $100B/8-year deal including ~2 GW of Trainium), Oracle (~$300B/5-year from 2027), CoreWeave (~$22.4B cumulative), Google Cloud (company-confirmed supplier).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "google",
+   "b": "powerhouse-data-centers",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no tenant is disclosed for Pacific, PowerHouse 95, Irving, Reno, Grand Prairie, Charlotte, Louisville, Carlisle or Joliet; the Joliet developers named Google, Amazon, Meta and Oracle only as 'potential tenants'; the December 2025 award release's list of hyperscaler campuses is a company claim without a campus.",
      "src": "",
      "from": "b"
     }
@@ -23257,7 +23996,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "CEO Beth Lowry says 60-70% of current projects are data centers; confirmed hyperscale work skews to Google (the ~$2B Fort Wayne IN campus; the New Albany OH 'Mustang Project') plus the $1.9B, ≥450 MW EdgeCore Mesa AZ campus and legacy Meta/Apple credits (Holder finished Apple Park).",
+     "text": "CEO Beth Lowry says 60-70% of current projects are data centers; confirmed hyperscale work skews to Google (the ~$2B Fort Wayne IN campus; the New Albany OH 'Mustang Project') plus the $1.9B-financed, ≥450 MW EdgeCore Mesa AZ campus and legacy Meta/Apple credits (Holder finished Apple Park).",
      "src": "",
      "from": "a"
     },
@@ -27398,6 +28137,36 @@
     }
    ],
    "last": "2025-12-10"
+  },
+  {
+   "a": "meta",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Claimed customer in a company award release and talent source (SVP John Adametz, ex-Meta); named by the Joliet developers as a potential tenant.",
+     "context": "PowerHouse's December 2025 release on Karen Petersburg's DCD award says she has led 'campuses for AWS, Google, Meta, Microsoft, and CoreWeave' — a company claim with no campus-level Meta lease disclosed anywhere; Adametz joined in June 2025 from Meta, where he 'Led partner strategy for leased capacity'; The Real Deal reports the Joliet developers naming 'Google, Amazon, Meta and Oracle' as potential tenants while 'Hillwood has not said which companies would be tenants'.",
+     "source": "https://www.powerhousedata.com/news/powerhouse-data-centers-karen-petersburg-named-dcd-woman-of-the-year-at-its-2025-global-awards",
+     "status": "announced"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no tenant is disclosed for Pacific, PowerHouse 95, Irving, Reno, Grand Prairie, Charlotte, Louisville, Carlisle or Joliet; the Joliet developers named Google, Amazon, Meta and Oracle only as 'potential tenants'; the December 2025 award release's list of hyperscaler campuses is a company claim without a campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-04",
+     "text": "John Adametz (SVP Development & Construction, ex-Meta, 32 years US Navy Civil Engineer Corps) and Vardahn Chaudhry (SVP Asset Management, ex-JBG SMITH) join; boilerplate '24+ million square feet and 6.1 GW across six U.S. markets' — Hyperscaler-side construction leadership and an asset-management function for a portfolio that will start stabilizing in 2026–2027.",
+     "src": "https://www.powerhousedata.com/news/powerhouse-strengthens-core-leadership-portfolio-with-dual-strategic-appointments",
+     "from": "b"
+    }
+   ],
+   "last": "2025-06-04"
   },
   {
    "a": "meta",
@@ -31982,6 +32751,22 @@
   },
   {
    "a": "oncor",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Utility for the Irving campus and the planned Circle T substation.",
+     "context": "The May 2024 Irving land-close release names 'Oncor (largest energy delivery company in Texas)' as the utility for the 200 MW campus; a Texas trade site's August 2026 report on Circle T cites an Oncor '350 MW substation funded by PowerHouse' (Westlake). The Grand Prairie campus is described by ERCOT tranche rather than by utility.",
+     "source": "https://www.powerhousedata.com/news/powerhouse-closes-on-irving-las-colinas-site-entering-dallas-fort-worth-market-to-develop-new-state-of-the-art-data-center-campus",
+     "status": "active",
+     "since": "2024-05"
+    }
+   },
+   "evid": [],
+   "last": "2024-05"
+  },
+  {
+   "a": "oncor",
    "b": "vistra",
    "curated": {
     "b": {
@@ -32493,6 +33278,20 @@
     }
    ],
    "last": "2026-01-06"
+  },
+  {
+   "a": "oracle",
+   "b": "powerhouse-data-centers",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no tenant is disclosed for Pacific, PowerHouse 95, Irving, Reno, Grand Prairie, Charlotte, Louisville, Carlisle or Joliet; the Joliet developers named Google, Amazon, Meta and Oracle only as 'potential tenants'; the December 2025 award release's list of hyperscaler campuses is a company claim without a campus.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "oracle",

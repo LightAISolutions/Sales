@@ -217,6 +217,16 @@
       ]
     },
     {
+      "slug": "annexation",
+      "term": "annexation",
+      "def": "A city's absorption of adjoining unincorporated land into its boundaries, usually on the landowner's petition. For a data-center campus it swaps county rules for city zoning, water and taxes, and is negotiated through an annexation agreement that sets the developer's obligations.",
+      "aliases": [
+        "annexation agreement",
+        "conditional annexation",
+        "annexed"
+      ]
+    },
+    {
       "slug": "anti-islanding",
       "term": "anti-islanding",
       "def": "Protection that stops an on-site generator from continuing to energize a utility line after the utility has disconnected. It exists to protect line workers, and it is why a set that runs in parallel with the grid needs more relaying than one that only ever runs on a dead bus.",
@@ -232,6 +242,16 @@
       "aliases": [
         "kVA",
         "volt-amperes"
+      ]
+    },
+    {
+      "slug": "appraised-value",
+      "term": "appraised value",
+      "def": "An independent valuer's estimate of what a building would sell for, used by lenders and rating agencies to size a loan or a bond against it. In data-center ABS it is quoted per pool and can be divided by MW.",
+      "aliases": [
+        "appraisal",
+        "collateral appraisal",
+        "appraised"
       ]
     },
     {
@@ -641,6 +661,15 @@
       ]
     },
     {
+      "slug": "build-to-suit",
+      "term": "build-to-suit",
+      "def": "A data center designed and built for one named tenant under a lease signed before ground breaks. The tenant gets a building to its own specification; the landlord trades speculative risk for a locked lease it can borrow against.",
+      "aliases": [
+        "build to suit",
+        "BTS"
+      ]
+    },
+    {
       "slug": "burnup",
       "term": "burnup",
       "def": "How much energy has been extracted from a given mass of fuel before it is discharged, in gigawatt-days per tonne. Higher burnup means fewer refuellings and less spent fuel per unit of electricity."
@@ -672,6 +701,16 @@
       "def": "Prefabricated bus bar running overhead along a row of racks, with tap-off boxes that branch power down to each cabinet. It replaces bundles of individually pulled feeders, so capacity can be added or moved without rewiring — which is why the 800 VDC designs distribute at the row on busway rather than conduit.",
       "aliases": [
         "bus duct"
+      ]
+    },
+    {
+      "slug": "by-right",
+      "term": "by-right zoning",
+      "def": "Zoning under which the intended use is already permitted, so the developer needs building permits but no rezoning vote or public hearing. The cheapest form of entitlement and the one that removes a council's veto.",
+      "aliases": [
+        "by right",
+        "by-right",
+        "as of right"
       ]
     },
     {
@@ -964,6 +1003,16 @@
       ]
     },
     {
+      "slug": "closed-loop-cooling",
+      "term": "closed-loop cooling",
+      "def": "A cooling design in which the same water circulates between the servers' heat exchangers and outdoor air-cooled or dry coolers, so almost nothing evaporates. The design that lets a campus claim near-zero water use in Arizona, Nevada or Texas.",
+      "aliases": [
+        "closed-loop chilled water",
+        "closed loop",
+        "closed-loop system"
+      ]
+    },
+    {
       "slug": "closed-transition",
       "term": "closed transition",
       "def": "A transfer that closes onto the new source before opening the old one, so the two are briefly in parallel and the load never sees a break. It requires the generator to be synchronized to the utility first, and the utility's permission, because for a fraction of a second the site's engines are feeding the grid.",
@@ -980,6 +1029,17 @@
       "aliases": [
         "construction manager at risk",
         "CMAR"
+      ]
+    },
+    {
+      "slug": "co-control",
+      "term": "co-control",
+      "def": "An ownership structure in which two sponsors each hold a large but non-majority stake and must agree on major decisions — new campuses, new debt, a sale — while the operating team keeps running the company.",
+      "aliases": [
+        "co-controlling stake",
+        "co-controlling",
+        "co-controlling shareholders",
+        "co-controlling partnership"
       ]
     },
     {
@@ -1074,6 +1134,16 @@
       "def": "The structured testing that proves a finished plant performs as contracted before it is handed over and paid for. For storage it is where capacity and round-trip-efficiency guarantees are measured; for a data center it is where the outage choreography gets rehearsed rather than discovered in production.",
       "aliases": [
         "commissioned"
+      ]
+    },
+    {
+      "slug": "community-benefit-agreement",
+      "term": "community benefit agreement",
+      "def": "A negotiated payment or set of commitments — cash to the city, a shelter, a training building, water and noise limits — that a developer offers in exchange for approval. Increasingly the price of consent where tax abatements have been withdrawn.",
+      "aliases": [
+        "community benefit contribution",
+        "community payments",
+        "community benefits package"
       ]
     },
     {
@@ -1241,6 +1311,16 @@
       "aliases": [
         "contract manufacturing",
         "CM"
+      ]
+    },
+    {
+      "slug": "contracted-capacity",
+      "term": "contracted capacity",
+      "def": "Data-center capacity a tenant has signed a lease for but that is not yet delivered. It sits between operating capacity and reserved capacity on the pipeline ladder and is what a construction lender lends against.",
+      "aliases": [
+        "contracted MW",
+        "contracted backlog",
+        "contracted megawatts"
       ]
     },
     {
@@ -1412,6 +1492,16 @@
       ]
     },
     {
+      "slug": "credit-tenant-lease",
+      "term": "credit tenant lease",
+      "def": "A long lease to a tenant whose own credit rating is investment grade. The landlord's rent is then nearly as safe as the tenant's bonds, which is what lets the landlord borrow cheaply against the building.",
+      "aliases": [
+        "credit tenant",
+        "credit-tenant lease",
+        "investment-grade tenant"
+      ]
+    },
+    {
       "slug": "critical-it-load",
       "term": "critical IT load",
       "def": "The electrical capacity reserved for the computers themselves — servers, storage, networking — excluding cooling, lighting and losses. Data-center leases are priced per megawatt of critical IT load; the building's gross capacity is larger.",
@@ -1551,6 +1641,26 @@
       "def": "The laboratory crushing of test cylinders cast from a concrete pour, typically at seven and twenty-eight days, to prove the concrete reached its specified strength. A failed break stops everything that was going to sit on it."
     },
     {
+      "slug": "data-center-abs",
+      "term": "data-center ABS",
+      "def": "Bonds backed by the rent from specific leased data-center buildings, issued from a bankruptcy-remote trust that owns them. The refinancing that repays a construction loan and returns the sponsor's equity once a building is energised and leased.",
+      "aliases": [
+        "data center ABS",
+        "ABS",
+        "asset-backed securities",
+        "asset-backed security"
+      ]
+    },
+    {
+      "slug": "data-center-moratorium",
+      "term": "data-center moratorium",
+      "def": "A temporary local ban on approving new data centers while a jurisdiction rewrites its rules. Projects already approved under the old rules are usually exempt, which is why developers race to entitle before one is adopted.",
+      "aliases": [
+        "moratorium",
+        "moratoria"
+      ]
+    },
+    {
       "slug": "day-tank",
       "term": "day tank",
       "def": "The small fuel tank mounted at or near the gen-set, kept full by pumps from the bulk storage tank, that feeds the engine directly. Sizing it is a code and permit question as much as an engineering one, because the tank's capacity sets how long the set can run if the transfer pumps fail.",
@@ -1665,6 +1775,17 @@
       "slug": "delayed-neutrons",
       "term": "delayed neutrons",
       "def": "The small fraction of fission neutrons (under one percent) emitted seconds to minutes after the split rather than instantly. They are the reason a reactor responds on a human timescale and can be controlled at all."
+    },
+    {
+      "slug": "delivered-or-under-development",
+      "term": "delivered or under development",
+      "def": "A landlord's headline capacity figure that adds operating buildings to everything not yet built — contracted, reserved or bare land — without saying how much of each. Useful only once the rung and the owner of each megawatt are known.",
+      "aliases": [
+        "under development",
+        "pipeline counter",
+        "in planning, underway, or completed",
+        "delivered or under construction"
+      ]
     },
     {
       "slug": "delivery-date-risk",
@@ -2368,6 +2489,16 @@
       ]
     },
     {
+      "slug": "entitlement",
+      "term": "entitlement",
+      "def": "The bundle of local approvals — zoning, annexation, site plan, permits, sometimes a development agreement — that lets a site be built as intended. Entitled land with power is what a utility-first developer sells.",
+      "aliases": [
+        "entitlements",
+        "entitled",
+        "entitlement process"
+      ]
+    },
+    {
       "slug": "environmental-assessment",
       "term": "environmental assessment",
       "def": "The shorter form of federal environmental review under NEPA; when it ends in a finding of no significant impact (FONSI) no full environmental impact statement is needed, which can shorten a permit review by a year or more.",
@@ -2527,6 +2658,15 @@
         "chip export controls",
         "BIS export rules",
         "Country Group A:5"
+      ]
+    },
+    {
+      "slug": "extraterritorial-jurisdiction",
+      "term": "extraterritorial jurisdiction",
+      "def": "The unincorporated land beyond a city's limits over which the city holds some planning control. Releasing a parcel from a city's ETJ moves it to the county, which in Texas cannot zone, impose moratoria or deny permits.",
+      "aliases": [
+        "ETJ",
+        "ETJ release"
       ]
     },
     {
@@ -3087,6 +3227,16 @@
       "def": "The part of a purchase price above the value of the identifiable assets — paid for the team, the relationships and the expected future business rather than for anything on a balance sheet.",
       "aliases": [
         "acquisition goodwill"
+      ]
+    },
+    {
+      "slug": "gp-fund",
+      "term": "GP fund",
+      "def": "A relatively small fund raised by a developer or fund manager to supply its own share — often 5–10% — of the equity in the joint ventures it forms with institutional partners. Its 'buying power' is the total project value that share can control.",
+      "aliases": [
+        "general-partner fund",
+        "sponsor fund",
+        "discretionary fund"
       ]
     },
     {
@@ -3837,6 +3987,16 @@
       ]
     },
     {
+      "slug": "land-bank",
+      "term": "land bank",
+      "def": "Sites a developer has bought or optioned ahead of any tenant, usually where utility capacity can be secured. Cheap to hold relative to the megawatts it can carry, and the raw material of every pipeline figure.",
+      "aliases": [
+        "land banking",
+        "land-banked",
+        "banked land"
+      ]
+    },
+    {
       "slug": "large-load",
       "term": "large load",
       "def": "A single customer — a data centre, an industrial plant — big enough that the grid must plan for it individually. Texas SB 6 draws the line at 75 MW; loads above it face curtailment rules, security deposits and co-location review.",
@@ -3977,6 +4137,17 @@
       ]
     },
     {
+      "slug": "limited-recourse-loan",
+      "term": "limited-recourse loan",
+      "def": "A loan to a project entity secured on that project's assets and lease, with little or no claim on the sponsor's other assets if it fails. The standard form of data-center construction debt, sized to the signed lease rather than to the developer's balance sheet.",
+      "aliases": [
+        "limited recourse",
+        "limited-recourse",
+        "non-recourse loan",
+        "non-recourse"
+      ]
+    },
+    {
       "slug": "line-commutated-converter",
       "term": "line-commutated converter",
       "def": "The older HVDC converter type, built from thyristors that need the AC network's own voltage to turn them off. Rugged and efficient at very high power, but it cannot energise a dead network and it consumes reactive power while working.",
@@ -4099,6 +4270,18 @@
       "aliases": [
         "DOE loan guarantee",
         "LPO guarantee"
+      ]
+    },
+    {
+      "slug": "loan-syndication",
+      "term": "loan syndication",
+      "def": "Spreading a large loan across several banks, one of which arranges it and one of which administers it. Data-center construction loans of USD 1–2 billion are syndicated because no single bank wants the whole exposure.",
+      "aliases": [
+        "syndicate",
+        "syndication",
+        "lead arranger",
+        "administrative agent",
+        "structuring agent"
       ]
     },
     {
@@ -4226,6 +4409,15 @@
       "slug": "mass-grading",
       "term": "mass grading",
       "def": "Reshaping an entire site to the elevations the design needs, before any building work. It is the first major scope on a greenfield project and the least reversible."
+    },
+    {
+      "slug": "master-trust",
+      "term": "master trust",
+      "def": "The standing issuer in a data-center ABS programme: it owns a pool of leased buildings and can add collateral and sell new series of bonds against the pool over time, instead of setting up a new structure for every deal.",
+      "aliases": [
+        "ABS master trust",
+        "issuer trust"
+      ]
     },
     {
       "slug": "mat-foundation",
@@ -4715,6 +4907,18 @@
       ]
     },
     {
+      "slug": "offsite-fabrication",
+      "term": "offsite fabrication",
+      "def": "Building the electrical rooms, power centres and cooling modules in a factory and shipping them as tested blocks, so site work shrinks to foundations, steel and connections. The developer's tool for making the delivery date credible.",
+      "aliases": [
+        "prefabrication",
+        "prefabricated",
+        "kit-of-parts",
+        "kit of parts",
+        "industrialized construction"
+      ]
+    },
+    {
       "slug": "offtake",
       "term": "offtake",
       "def": "The committed purchase of a project's output — power, capacity, or storage services. Signed offtake is what turns a development pipeline into a financeable project."
@@ -4984,6 +5188,16 @@
       ]
     },
     {
+      "slug": "permanent-capital",
+      "term": "permanent capital",
+      "def": "Investment money with no fixed date on which it must be returned — the opposite of a closed-end fund. At asset level it means a sponsor buying into specific stabilized campuses and committing to future ones without a change of control or a sale.",
+      "aliases": [
+        "evergreen capital",
+        "evergreen financing",
+        "evergreen"
+      ]
+    },
+    {
       "slug": "pfc",
       "term": "power factor correction",
       "def": "A stage at the front of an AC supply that forces the current it draws to follow the shape of the mains voltage. Without it the supply draws current in short peaks, which wastes capacity in every transformer and cable upstream and is limited by standards.",
@@ -5007,6 +5221,15 @@
       "slug": "pjm",
       "term": "PJM",
       "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
+    },
+    {
+      "slug": "planned-unit-development",
+      "term": "planned unit development",
+      "def": "A zoning approval that treats a large site as one negotiated plan — uses, heights, setbacks, phasing, community obligations — instead of applying the standard district rules lot by lot. The instrument under which a multi-building campus is approved.",
+      "aliases": [
+        "PUD",
+        "planned development"
+      ]
     },
     {
       "slug": "planning-reserve-margin",
@@ -5176,6 +5399,16 @@
       ]
     },
     {
+      "slug": "powered-shell",
+      "term": "powered shell",
+      "def": "A data-center building delivered with structure, utility power connection and often the substation, but without the tenant's electrical distribution, UPS, generators and cooling. Cheapest rent, most tenant control, longest fit-out — the product a land-and-entitlement developer sells.",
+      "aliases": [
+        "powered core and shell",
+        "powered core & shell",
+        "core and shell"
+      ]
+    },
+    {
       "slug": "ppa",
       "term": "PPA",
       "def": "Power purchase agreement: a long-term contract to buy a project's power or capacity at agreed terms — the bankable revenue stream that lets developers finance construction.",
@@ -5277,6 +5510,17 @@
       ]
     },
     {
+      "slug": "price-per-mw",
+      "term": "price per MW",
+      "def": "A data-center valuation shorthand: the price or appraisal of a building divided by its critical IT capacity. It lets a securitization appraisal, a sale and a construction budget be compared on one axis.",
+      "aliases": [
+        "value per MW",
+        "dollars per MW",
+        "$ per MW",
+        "per-MW value"
+      ]
+    },
+    {
       "slug": "primary-secondary-pumping",
       "term": "primary-secondary pumping",
       "def": "A plant split into a constant-flow loop through the chillers and a variable-flow loop out to the load, joined by a short bypass. Simple to control, and it hides a low delta-T rather than exposing it."
@@ -5323,6 +5567,17 @@
       "slug": "proctor-test",
       "term": "Proctor test",
       "def": "The laboratory test that establishes the maximum dry density a given soil can reach and the moisture content at which it reaches it. Field compaction is then specified as a percentage of that number."
+    },
+    {
+      "slug": "programmatic-joint-venture",
+      "term": "programmatic joint venture",
+      "def": "An agreement in which a capital partner commits to fund a series of a developer's projects on pre-agreed terms, rather than negotiating one deal at a time. The commitment figure (USD 3.2 billion, USD 5 billion) is capacity, not money spent.",
+      "aliases": [
+        "programmatic JV",
+        "programmatic partnership",
+        "JV programme",
+        "JV program"
+      ]
     },
     {
       "slug": "progressive-design-build",
@@ -5555,6 +5810,35 @@
       ]
     },
     {
+      "slug": "ratepayer-protection-pledge",
+      "term": "Ratepayer Protection Pledge",
+      "def": "A voluntary commitment, launched in 2026, under which a data-center developer promises to bring or pay for its own power supply and delivery infrastructure, pay for capacity whether used or not, and invest locally. It does not itself change how a utility allocates costs.",
+      "aliases": [
+        "ratepayer pledge"
+      ]
+    },
+    {
+      "slug": "rating-agency",
+      "term": "rating agency",
+      "def": "A firm (S&P, Moody's, Fitch, Morningstar DBRS, KBRA) that grades a bond's likelihood of paying. The grade sets the coupon; agencies disagree about whether single-tenant data centers can be top-rated collateral.",
+      "aliases": [
+        "credit rating",
+        "AAA",
+        "credit rating agency",
+        "ratings agency"
+      ]
+    },
+    {
+      "slug": "ready-for-service",
+      "term": "ready for service",
+      "def": "The contractual date on which a data-center building is complete, commissioned and available for the tenant to move in — the day rent starts. Delay damages and the landlord's construction-loan interest both hang on it.",
+      "aliases": [
+        "RFS",
+        "ready-for-service date",
+        "RFS date"
+      ]
+    },
+    {
       "slug": "ready-to-build",
       "term": "ready-to-build",
       "def": "A project with land, permits, interconnection and (where needed) offtake all in hand, lacking only money and a contractor. It is the most valuable point for a developer to sell, because the buyer takes construction risk and little else.",
@@ -5669,6 +5953,15 @@
         "supply framework agreement",
         "framework agreement",
         "volume reservation"
+      ]
+    },
+    {
+      "slug": "reserved-capacity",
+      "term": "reserved capacity",
+      "def": "Capacity a tenant holds an option or right of first refusal on, with no rent commitment yet. Counted above contracted capacity in a landlord's pipeline; worth a schedule, not a cash flow.",
+      "aliases": [
+        "reserved MW",
+        "reserved"
       ]
     },
     {
@@ -5799,6 +6092,16 @@
       ]
     },
     {
+      "slug": "right-of-first-offer",
+      "term": "right of first offer",
+      "def": "A tenant's contractual right to be offered a landlord's next building or adjacent land before anyone else (first offer) or to match a third party's terms (first refusal). How a hyperscaler locks a campus without leasing all of it.",
+      "aliases": [
+        "ROFO",
+        "right of first refusal",
+        "ROFR"
+      ]
+    },
+    {
       "slug": "ripple-current",
       "term": "ripple current",
       "def": "The small alternating current superimposed on a battery's direct current by the charger or the inverter. It heats the cell from the inside and ages it, which is why the acceptable level is a published specification rather than an afterthought."
@@ -5881,6 +6184,16 @@
         "strategic alternatives",
         "strategic review",
         "sale mandate"
+      ]
+    },
+    {
+      "slug": "sales-tax-exemption",
+      "term": "sales tax exemption",
+      "def": "A state incentive that removes sales or use tax on the servers and equipment a data center buys, which can be the largest recurring tax on a campus. Several states paused or capped these in 2026.",
+      "aliases": [
+        "data center sales tax exemption",
+        "sales and use tax exemption",
+        "sales-and-use tax exemption"
       ]
     },
     {
@@ -5987,6 +6300,16 @@
       "def": "The Southeast Energy Exchange Market — a bilateral, fifteen-minute trading platform among Southeastern utilities that are not in any RTO. It is not a market operator: there is no central dispatch, no capacity auction and no queue; each utility remains its own balancing authority.",
       "aliases": [
         "Southeast Energy Exchange Market"
+      ]
+    },
+    {
+      "slug": "segment-reporting",
+      "term": "segment reporting",
+      "def": "How a listed group reports results by business line rather than by subsidiary. A private landlord inside a 'data' segment is visible only as a share of the segment's cash flow, mixed with its siblings.",
+      "aliases": [
+        "data segment",
+        "segment results",
+        "operating segment"
       ]
     },
     {
@@ -6194,6 +6517,16 @@
       ]
     },
     {
+      "slug": "single-tenant-campus",
+      "term": "single-tenant campus",
+      "def": "A campus or building leased entirely to one customer, typically a hyperscaler. Simplest to build and finance, and the most concentrated: one tenant's decision empties the whole asset.",
+      "aliases": [
+        "single-tenant",
+        "single tenant",
+        "one building, one customer"
+      ]
+    },
+    {
       "slug": "site-acceptance-test",
       "term": "site acceptance test",
       "def": "Testing the installed equipment on site, energised and in its final configuration, before the owner accepts it. It proves the installation, where the works test proved the machine.",
@@ -6395,6 +6728,16 @@
       "def": "Solid-state transformer: a power-electronics replacement for the iron transformer that converts medium-voltage AC directly to regulated DC using high-frequency switching — a candidate to collapse today's multi-stage data-center power chain into one device.",
       "aliases": [
         "solid-state transformer"
+      ]
+    },
+    {
+      "slug": "stabilized-asset",
+      "term": "stabilized asset",
+      "def": "A building that is complete, energised and leased with the tenant paying rent — the state in which a construction loan can be refinanced by a mortgage or an ABS, and in which a buyer can price it on the rent alone.",
+      "aliases": [
+        "stabilized",
+        "stabilization",
+        "stabilized building"
       ]
     },
     {
@@ -6806,9 +7149,26 @@
       ]
     },
     {
+      "slug": "telecommunications-hotel",
+      "term": "telecommunications hotel",
+      "def": "An older land-use category, written for switching and carrier buildings, under which some cities still classify data centers. Where it survives, a campus can be approved by staff or a planning commission without the council vote a new category would require.",
+      "aliases": [
+        "telecom hotel"
+      ]
+    },
+    {
       "slug": "temperature-lift",
       "term": "temperature lift",
       "def": "The temperature difference a refrigeration machine has to pump heat across — condensing temperature minus evaporating temperature. Compressor work rises with lift, so every degree given back at either end is money."
+    },
+    {
+      "slug": "tenant-concentration",
+      "term": "tenant concentration",
+      "def": "The share of a landlord's rent that comes from one or a few tenants. High concentration lowers the cost of debt while the tenant is strong and makes the landlord's fortunes track that tenant's capital spending.",
+      "aliases": [
+        "tenant-concentration risk",
+        "single-tenant concentration"
+      ]
     },
     {
       "slug": "tenant-of-record",
@@ -7008,6 +7368,15 @@
       ]
     },
     {
+      "slug": "transmission-security-agreement",
+      "term": "transmission security agreement",
+      "def": "A contract between a utility and a very large new customer, filed with the federal regulator, under which the customer posts security for the transmission upgrades it triggers and commits to take the capacity. The federal half of connecting a gigawatt campus; the state half is the retail service agreement.",
+      "aliases": [
+        "TSA",
+        "transmission security agreements"
+      ]
+    },
+    {
       "slug": "triple-net-lease",
       "term": "triple-net lease",
       "def": "A lease in which the tenant pays rent plus property taxes, insurance and maintenance — the landlord collects a clean number and the tenant carries the operating-cost risk. Written NNN.",
@@ -7113,6 +7482,16 @@
         "A units",
         "B units",
         "Class A units"
+      ]
+    },
+    {
+      "slug": "unitholder-letter",
+      "term": "letter to unitholders",
+      "def": "The quarterly narrative a listed partnership or company sends its owners alongside the numbers. For a private subsidiary it is often the only place the sponsor states what it paid and what it bought.",
+      "aliases": [
+        "unitholder letter",
+        "letter to shareholders",
+        "shareholder letter"
       ]
     },
     {
@@ -7323,6 +7702,16 @@
       ]
     },
     {
+      "slug": "walt",
+      "term": "WALT",
+      "def": "Weighted average lease term: the rent-weighted number of years remaining across a landlord's leases. Longer is safer for a lender or a sponsor because the rent is locked for longer.",
+      "aliases": [
+        "weighted average lease term",
+        "weighted average contract duration",
+        "weighted-average lease term"
+      ]
+    },
+    {
       "slug": "warehouse-facility",
       "term": "warehouse facility",
       "def": "A large revolving loan that funds several projects through construction at once, each one leaving the warehouse when it is refinanced at commercial operation. It is how a private developer builds a portfolio without raising a separate loan for every site.",
@@ -7337,6 +7726,15 @@
       "slug": "water-cement-ratio",
       "term": "water-cement ratio",
       "def": "The mass of water relative to cement in a concrete mix, and the single strongest determinant of its strength and durability. Adding water at the truck to make placement easier trades permanent strength for temporary convenience."
+    },
+    {
+      "slug": "water-neutral",
+      "term": "water-neutral",
+      "def": "A commitment to restore as much water to the relevant watershed as a facility withdraws, usually by funding conservation or forest-health projects. Distinct from a low water usage effectiveness, which measures what the cooling system consumes.",
+      "aliases": [
+        "water neutral",
+        "water neutrality"
+      ]
     },
     {
       "slug": "water-reclamation",
