@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 84/100`
+`Sections: 85/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.68r] — 2026-09-05 03:28:38 PM EST
+
+> add the sourcing rule to step 7
+
+### Added
+
+- **A sourcing-verification rule in Profiler Command step 7** (`.claude/rules/profiler-app.md`). Any statement about **where** a claim is documented — "documented from X's side", "only trade press carries it", "neither party has confirmed it" — is a claim about the **`sources[]` arrays**, and must be resolved by opening the cited entries on both dossiers and checking host and document type. The rule states the distinction it turns on: a company's own IR page or SEC/HKEX filing is first-party, a wire release the company issued is first-party distributed, and trade press or aggregators are not — however faithfully they report the company. It also states the trap directly: **a dossier's summary of its own provenance is the text under review and cannot be evidence for it.**
+- The rule carries the developer directive that motivated it (2026-09-05): **high verity of information is the priority — when the citations do not settle something, state the gap clearly and honestly.** An explicit "no source reconciles these" beats a confident sentence the citations do not support.
+- Provenance note records the failure that produced it: the v04.66r reconciliation wrote that three layers of the Hithium/Jupiter Power relationship were "documented from Hithium's side" when only one was, having inferred it from the two dossiers' prose — the cross-reference rule's own failure mode, committed while applying the cross-reference rule.
+
+### Verified
+
+- Spot-checked **all 16** scopes the checker reports as not examined (rather than sampling): **none hides a cross-dossier answer.** Six are mutual hedges where both dossiers say the same "we don't know" (`amazon`↔`flex` on the warrant, `anthropic`↔`nscale` on the $45B Monarch contract, `eaton`↔`flex` on the JetCool collaboration); seven are a company's own internal status or a regulatory question no dossier can settle; two were adjudicated at v04.67r. The three that looked answerable were checked against their counterparts and all came back negative — Google's dossier carries only the $4.75B acquisition and not the $250M tranche, Hithium's does not resolve Woolooga ownership, and Tesla's 4680 discussion is its own line, not Panasonic's.
+- Re-examined `enchanted-rock technicalSpecs[0].specs[0]` against both dossiers' citations: every claim holds. The 470 MW order traces to ERock's Q2 2026 results (BusinessWire wire release; **8-K Exhibit 99.1** in Anthropic's dossier), Anthropic's dossier states it has not announced the order and names no sites, and `anthropic strategyRead[8]` carries any site disclosure as an indicator to watch. **No developer adjudication required** — the only unresolved element is the destination sites, which neither company has disclosed, and that is a stated gap rather than an open question.
+- No rule conflicts: the existing `sources[]` citation-order guidance (step 2) and the report-citation guidance are complementary, not contradicted.
+
+### Worth noting
+
+- **One partial signal was found and deliberately not written in.** Hithium's HKEX prospectus customer roster names **Lightsource bp, not Aula**, which is consistent with Lightsource being the counterparty as of filing but does not resolve the post-sale Woolooga ownership question `lightsource-bp` flags. Recording it as a resolution would repeat the exact overstatement this rule now forbids, so it was reported to the developer instead.
+- **The 900-character scope cap cost nothing on this corpus** — but that was unknowable until the checker began reporting what it skips, and the same cap did hide a real record once the `hithium` write-up grew past it.
 
 ## [v04.67r] — 2026-09-05 03:16:27 PM EST
 
