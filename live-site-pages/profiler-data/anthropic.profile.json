@@ -1,0 +1,1783 @@
+{
+  "schemaVersion": 7,
+  "slug": "anthropic",
+  "name": "Anthropic, PBC",
+  "shortName": "Anthropic",
+  "categories": [
+    "hyperscaler"
+  ],
+  "website": "https://www.anthropic.com/",
+  "headquarters": "San Francisco, California (policy filings give 548 Market St., PMB 90375, San Francisco, CA 94104); twelve offices including Seattle, New York, Washington DC, London, Dublin, Zurich, Paris, Munich, Tokyo, Seoul and Bengaluru (November 2025)",
+  "founded": 2021,
+  "employees": "Not stated by the company. Press and trackers: about 2,300 (Fortune, December 2025), 4,020 (Revelio, March 2026), about 5,000 (SaaStr, 2026), 5,605 (Tracxn, July 2026). Collection gap.",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Anthropic is the frontier lab that buys compute across three silicon suppliers and, since mid-2026, signs the leases and the generation orders itself — up to 5 GW of Amazon Trainium under a commitment of 'more than $100 billion over the next ten years', 'well over a gigawatt' of Google TPUs in 2026 and 'multiple gigawatts' more from 2027 (recapped by Anthropic as 5 GW), USD 30 billion of Azure and up to 1 GW of NVIDIA Grace Blackwell and Vera Rubin, a USD 50 billion Fluidstack data-centre programme, all of SpaceX's Colossus 1 (more than 300 MW), a direct 20-year, 401 MW lease with TeraWulf at Hawesville, Kentucky (about USD 19 billion), a 470 MW equipment purchase order with ERock, and reported six-year contracts of about USD 45 billion with Nscale (460 MW) and USD 35 billion with Lambda — financed by run-rate revenue the company reported at USD 47 billion in May 2026 (USD 9 billion at end-2025), a Series H of USD 65 billion at a USD 965 billion post-money valuation, and a confidential draft S-1 filed on 1 June 2026.\n\nBACKGROUND. A Delaware public benefit corporation founded in 2021 by Dario and Daniela Amodei and five other former OpenAI researchers, governed by a Long-Term Benefit Trust whose appointees have held a board majority since April 2026. Amazon is 'primary cloud provider and training partner' with USD 8 billion of convertible notes (2023–2025) converted in part to preferred stock plus USD 10 billion of Series G and H preferred bought in Q2 2026 and a USD 20 billion milestone facility; Google holds about 14% (court records, per Fortune) after commitments Google has not itself itemised; Microsoft committed up to USD 5 billion and NVIDIA up to USD 10 billion in November 2025. The company sells the Claude model family (Fable 5.1 and Mythos 5.1 from 1 September 2026, Opus 5, Sonnet 5, Haiku 4.5) through its API, Amazon Bedrock, Google Vertex AI and Microsoft Foundry, Claude Code (USD 2.5 billion run-rate by February 2026) and vertical offerings for finance, life sciences, healthcare and government. It endorsed California SB 53, welcomed New York's RAISE Act, signed the EU GPAI code of practice, argues publicly for chip export controls, pledged to pay '100% of the grid upgrades needed to interconnect our data centers', and won a First Amendment ruling on 28 August 2026 against the Department of War's supply-chain-risk designation. It has not published a consolidated gigawatt total, its headcount, or a fiscal-year revenue figure.",
+  "ecosystemRole": "The compute buyer this corpus's landlords, utilities and power vendors are building for: named in Amazon's, Google's, Microsoft's and NVIDIA's own releases as the counterparty for gigawatt-denominated silicon; the end user behind Fluidstack's Google-backstopped leases at TeraWulf, Cipher and Hut 8; the direct tenant at TeraWulf's Justified campus and, per Bloomberg, at Riot's Rockdale; ERock's largest-ever order (470 MW of gas gensets); the reported anchor at Nscale's Monarch campus and, through Lambda and NVIDIA, at Hut 8's Beacon Point; and the anchor tenant of Theseus, the Macquarie–GIC platform that will 'develop, own, operate, and lease' facilities to it. Its make-versus-lease answer is neither: it leases buildings, has chips bought by an Apollo–Blackstone vehicle with Broadcom residual-value support, and buys the generation.",
+  "productsAndServices": [
+    {
+      "name": "Compute procurement — the three-silicon supply book (Amazon Trainium, Google TPU, NVIDIA on Azure and neoclouds)",
+      "category": "Compute supply (as buyer)",
+      "description": "The capacity Anthropic contracts to train and serve Claude, denominated by the parties in gigawatts: Amazon Trainium2–4 and Graviton under a ten-year commitment of more than USD 100 billion for up to 5 GW; Google TPUs — up to one million chips and 'well over a gigawatt' in 2026, 'multiple gigawatts' from 2027 supplied through Broadcom; NVIDIA Grace Blackwell and Vera Rubin on Azure (USD 30 billion, up to 1 GW) and through CoreWeave, Lambda, Nscale, SpaceX/xAI and Volta.",
+      "highlights": [
+        "Amazon (20 April 2026): 'up to 5 gigawatts (GW) of capacity for training and deploying Claude', 'nearly 1GW total' of Trainium capacity 'by the end of 2026'; 'Anthropic is committing more than $100 billion over the next ten years to AWS technologies'; 'over one million Trainium2 chips' in use; Project Rainier at New Carlisle, Indiana — 'nearly half a million Trainium2 chips' (Amazon), 'roughly one gigawatt of power' across Indiana, Mississippi and Pennsylvania (Semafor, quoting an AWS engineer).",
+        "Google (23 October 2025): 'up to one million TPU chips', 'well over a gigawatt of capacity coming online in 2026', 'worth tens of billions of dollars'; (6 April 2026): 'multiple gigawatts of TPU capacity … expected to come online starting in 2027', 'supplied through Broadcom' — Anthropic's own May 2026 recap calls it a '5 GW agreement beginning in 2027'; CFO Krishna Rao: 'our most significant compute commitment to date'.",
+        "Microsoft and NVIDIA (18 November 2025): 'Anthropic has committed to purchase $30 billion of Azure compute capacity and to contract additional compute capacity up to one gigawatt' on 'NVIDIA Grace Blackwell and Vera Rubin systems'; 'Claude becomes only frontier model on all three major cloud services'.",
+        "SpaceX (6 May 2026): 'an agreement with SpaceX to use all of the compute capacity at their Colossus 1 data center, giving access to more than 300 megawatts of new capacity (over 220,000 NVIDIA GPUs) within the month'; SpaceX's S-1 terms per TechCrunch: USD 1.25 billion a month through May 2029, 90-day termination.",
+        "Neocloud contracts reported in 2026 (none confirmed by Anthropic): CoreWeave multi-year agreement (April); Volta Infra six-year, USD 10 billion, 121 MW IT at Tydal, Norway (August); Nscale about USD 45 billion / 460 MW at Monarch (August); Lambda six-year, USD 35 billion at Hut 8's Beacon Point (August–September); an AMD partnership of USD 5 billion (press tally). Forkast's count: 'eight compute corridors'; TechXplore: 'at least $135 billion' of commitments in 2026.",
+        "Anthropic has never published a consolidated total; MeasuredAI's tracker headline is '15+ GW' and DCD cites 'more than 10GW of servers from cloud providers including a $200 billion agreement with Google' — the USD 200 billion figure has no primary source."
+      ],
+      "positioning": "OpenAI's compute book is larger and NVIDIA-centred (the corpus's openai dossier records ~30 GW committed); Anthropic's is the only frontier book split across three silicon platforms, which its own releases present as 'a disciplined approach to scaling infrastructure' and which The Register and Dealroom present as circular — Amazon, Google, Microsoft and NVIDIA are all shareholders and suppliers.",
+      "soldThrough": "Not sold; contracted. Cloud commitments (take-or-pay style, with Amazon's USD 20 billion facility released 'as we reach certain delivery milestones of compute capacity'), direct leases (TeraWulf, Riot per Bloomberg), tenant-operator programmes (Fluidstack), chip-leasing SPVs (Apollo–Blackstone, Broadcom residual-value support) and an anchor-tenant platform (Theseus).",
+      "targetSegments": [
+        "Claude training runs (Anthropic projects a single model needs '2GW capacity in 2027 and 5GW in 2028')",
+        "Inference for API, Claude Code and enterprise customers"
+      ],
+      "roadmap": "Trainium2 capacity H1 2026 and ~1 GW Trainium by end-2026; Fluidstack sites 'online throughout 2026'; Google/Broadcom TPUs 'starting in 2027'; Justified 2H 2027 → early 2028; Riot Rockdale 96 MW December 2027 → 191 MW June 2028; Monarch late 2027; Volta December 2026 and March 2027."
+    },
+    {
+      "name": "Sites, leases and power — TeraWulf Justified, Fluidstack's five campuses, Riot Rockdale, Hut 8 River Bend and Beacon Point, ERock generation, Theseus",
+      "category": "Data-centre and power counterparty positions",
+      "description": "Where Anthropic itself, rather than a cloud, is the tenant, end user or equipment buyer: a 20-year, 401 MW lease at TeraWulf's Justified campus in Hawesville, Kentucky (about USD 19 billion initial term, up to about USD 33 billion with extensions, 'supported by an investment-grade credit'); the USD 50 billion Fluidstack programme whose leases the landlords file under Fluidstack's name with Google backstops; Riot's 191 MW build-to-suit at Rockdale, Texas (USD 9.1 billion over 20 years; tenant unnamed by Riot, Anthropic per Bloomberg); Hut 8's River Bend (245 MW for Anthropic via Fluidstack, up to 2,295 MW) and Beacon Point (704 MW, NVIDIA lease, Lambda operator, Anthropic buyer per CoinDesk); ERock's 470 MW RockBlock order; and Theseus, the Macquarie Asset Management–GIC platform formed to 'develop, own, operate, and lease' facilities to Anthropic.",
+      "highlights": [
+        "TeraWulf (6 July 2026): 'a 20-year lease agreement with Anthropic at its Justified Data campus in Hawesville, Kentucky … approximately 401 MW of critical IT load … approximately $19 billion of contracted revenue over the initial term', 'up to approximately $33 billion if Anthropic exercises both five-year extension options'; initial capacity 'second half of 2027', full 401 MW 'by early 2028'; Fluidstack is not a party (Hoodline; the 8-K).",
+        "Fluidstack (12 November 2025): 'a $50 billion investment in American computing infrastructure, building data centers with Fluidstack in Texas and New York, with more sites to come'; the landlords' filings put Fluidstack's leased critical IT at about 1.4 GW (Lake Mariner 378 MW, Abernathy 168 MW, Barber Lake 207 MW, River Bend 245 MW, New Lebanon 430 MW), all Google-backstopped; Hut 8's release: 'at least 245 megawatts and up to 2,295 MW of AI data center infrastructure for Anthropic, leveraging clusters operated by Fluidstack', with Head of Compute James Bradbury quoted.",
+        "ERock (11 August 2026): 'Executed a 470 MW equipment purchase order with Anthropic … extending production commitments into 2028'; backlog 'approximately $1.7 billion'; natural-gas RockBlock generators, no sites named — Anthropic has not announced it.",
+        "Riot Platforms (10 August 2026): '191 MW critical IT build-to-suit Tier 3 data center at Riot's Rockdale campus', 20 years to June 2048, '$9.1 billion' (USD 16.1 billion with options), 'initial 96 IT MW expected in December 2027', a USD 573 million Morgan Stanley interim facility and an 'IG-Backstop in Finalization'; tenant 'one of the world's leading frontier AI labs' — Anthropic per Bloomberg.",
+        "Theseus (Macquarie, 10 August 2026): MAM funds and GIC 'jointly own the platform and provide majority equity funding for each project', Anthropic as anchor tenant, US focus, no capital figure, capacity or sites disclosed; Anthropic commits to cover consumer electricity-price increases from these sites.",
+        "Chips at the Fluidstack sites: press accounts of the Broadcom–Apollo–Blackstone vehicle (June–September 2026, about USD 35–36 billion in tranches) describe an SPV that 'will purchase Google's chips and lease them to Anthropic for use at facilities in New York, Texas, Louisiana, and Indiana', with Broadcom 'providing a residual value support agreement'; Bloomberg reported Blackstone weighing a second package.",
+        "MLQ (2026): 'more than a dozen preliminary agreements to lease U.S. data centers with a combined capacity exceeding 1 gigawatt' — search-summary only."
+      ],
+      "positioning": "Among frontier labs Anthropic sits between OpenAI (Stargate's landlord-financed campuses through Oracle, Crusoe and SoftBank) and xAI (self-built Colossus): it contracts directly for buildings and generation but owns neither, and its chips at leased sites are owned by lessors. The corpus's terawulf dossier calls the Justified lease 'graduation day' from middleman tenancy.",
+      "soldThrough": "Direct leases with investment-grade credit support (the provider is not named in TeraWulf's filings); end-user agreements behind Fluidstack's Google-backstopped leases; equipment purchase orders (ERock); anchor-tenant platform (Theseus).",
+      "targetSegments": [
+        "Anthropic's own training and inference fleet"
+      ],
+      "roadmap": "Lake Mariner CB-4 2H 2026 and CB-5 early 2027; Barber Lake September 2026; Abernathy Q4 2026; River Bend Q2 2027; Justified 2H 2027; Rockdale December 2027; ERock deliveries into 2028."
+    },
+    {
+      "name": "Claude model family and platform — Fable 5.1 / Mythos 5.1, Opus 5, Sonnet 5, Haiku 4.5; Claude Developer Platform, Bedrock, Vertex AI, Microsoft Foundry",
+      "category": "Frontier models and API (the revenue side)",
+      "description": "The models the compute serves, sold per token through Anthropic's API and the three hyperscaler marketplaces: Claude Fable 5.1 and Mythos 5.1 (1 September 2026; USD 10 per million input tokens, USD 50 output; Mythos 'identical to Fable 5.1 but with reduced safeguards for verified professionals'), Claude Opus 5 (24 July 2026; USD 5/25), Claude Sonnet 5 (30 June 2026; USD 2/10) and Claude Haiku 4.5 (USD 1/5).",
+      "highlights": [
+        "Fable 5.1 pricing page: cache reads USD 0.25 per million ('75% reduction from Fable 5'); 'US-only inference: 1.1x pricing multiplier'; available on the API, Bedrock, Vertex AI, Azure Foundry, Claude Code and Claude Enterprise; named customers Jane Street, Cognition, Millennium, MongoDB, Square, Ramp, Canva, Datadog and SpaceX AI.",
+        "Fable 5 and Mythos 5 (9 June 2026) were withdrawn 12–30 June 2026 after 'the US government applied export controls to Claude Fable 5 and Mythos 5, requiring restriction of access to foreign nationals' (triggered by a safeguard bypass by Amazon researchers), and restored on 1 July 2026 when the controls were lifted.",
+        "Distribution: 'Claude becomes only frontier model on all three major cloud services' (November 2025); 'over 100,000 customers running Claude on Amazon Bedrock' (April 2026); 'over 1,000 business customers each spending $1+ million annually' (April 2026); '8' of the Fortune 10 (February 2026).",
+        "Run-rate revenue as Anthropic states it: about USD 1 billion early 2025, over USD 5 billion August 2025, USD 14 billion February 2026, over USD 30 billion April 2026 (from about USD 9 billion at end-2025), 'crossed $47 billion' May 2026; Bloomberg (August 2026, sources): USD 65 billion at end-July.",
+        "Consumer and team plans (claude.com/pricing): Free; Pro USD 17 a month annual or USD 20 monthly; Max from USD 100; Team USD 20 or USD 100 per seat; Enterprise seat plus usage."
+      ],
+      "positioning": "Versus OpenAI's GPT-5.5/5.6 and Google's Gemini as the company itself positions each release (Fable 5.1 against 'GPT-5.6 Sol, Opus 5, and previous Fable 5'); enterprise revenue is 'more than 50% of total' (February 2026).",
+      "soldThrough": "Direct API and subscriptions; Amazon Bedrock, Google Vertex AI, Microsoft Foundry; GSA schedule and the USD 1 government offer; systems integrators (Accenture, Deloitte, KPMG, PwC).",
+      "targetSegments": [
+        "Developers and AI-native companies",
+        "Enterprises (financial services, life sciences, healthcare)",
+        "Government and national security (Claude Gov)"
+      ],
+      "roadmap": "Enterprise Frontier Safeguards rollout 'fall 2026'; Mythos trusted-access expansion; Sonnet 5 on Vertex AI 'coming soon'."
+    },
+    {
+      "name": "Claude Code, Cowork and the agentic products",
+      "category": "Developer and knowledge-work agents",
+      "description": "Claude Code (launched with Claude 3.7 Sonnet, March 2025) — USD 500 million run-rate by September 2025, USD 1 billion by November 2025 'six months after public launch', 'over $2.5 billion' by February 2026 — plus Claude Cowork inside spreadsheets and documents via MCP, the Bun acquisition (December 2025), and Anthropic Labs (January 2026) under Mike Krieger and Ben Mann.",
+      "highlights": [
+        "Team and Enterprise premium seats with Claude Code, admin controls and a Compliance API (August 2025); PwC rollout of Claude Code and Cowork to '30,000 PwC professionals' (May 2026) — Dario Amodei: 'Insurance underwriting that took 10 weeks now takes 10 days'.",
+        "Higher usage limits (May 2026) were funded explicitly by the Colossus 1 capacity: 'Anthropic plans to use this additional compute to directly improve capacity for Claude Pro and Claude Max subscribers' (SpaceX AI page)."
+      ],
+      "positioning": "Claude Code is the product the company cites when it explains why it needs more compute; press accounts of mid-2026 rate limits and outages attributed them 'primarily' to a compute shortage.",
+      "soldThrough": "Subscriptions (Pro, Max, Team, Enterprise) and API usage.",
+      "targetSegments": [
+        "Software engineers",
+        "Enterprise knowledge workers (PwC, the Fortune 10)"
+      ],
+      "roadmap": "Anthropic Labs products; Cowork on all plans (per the Opus 4.8 release)."
+    },
+    {
+      "name": "Vertical and public-sector offerings — Claude for Financial Services, Life Sciences, Healthcare, Government (Claude Gov), Enterprise Frontier Safeguards",
+      "category": "Industry solutions and government",
+      "description": "Packaged deployments with named partners and channels: Financial Services (July 2025; Bridgewater, Commonwealth Bank, AIG; FactSet, S&P Global, Snowflake), Life Sciences (October 2025; Sanofi, Novo Nordisk, Broad Institute), Healthcare (January 2026; HIPAA-ready), Claude Gov for classified environments on AWS (June 2025), the USD 200 million DoD CDAO prototype agreement (July 2025), Claude for USD 1 a year to all three branches of government (August 2025), and Enterprise Frontier Safeguards (September 2026; Goldman Sachs, Morgan Stanley, Citi, Visa, Mastercard).",
+      "highlights": [
+        "Department of War: a supply-chain-risk designation on 4 March 2026 after Anthropic refused to drop its bans on 'fully autonomous weapons and mass domestic surveillance'; Anthropic sued; Judge Rita Lin (N.D. Cal., 28 August 2026) held the designation 'unlawful retaliation' — 'The empty invocation of national security is not a blank check to punish and retaliate against government critics'; the D.C. Circuit case is pending.",
+        "DOE Genesis Mission partnership (December 2025) with all 17 national labs, including 'speeding up permitting review processes that bottleneck America's energy expansion'.",
+        "Anthropic Economic Index reports (January, March, June 2026) and Claude Corps (USD 150 million, 1,000 fellows, June 2026)."
+      ],
+      "positioning": "The government line is where policy exposure and revenue meet: the company claimed the designation could cut 2026 revenue by 'multiple billions'.",
+      "soldThrough": "AWS, Google Cloud and Palantir for government; marketplaces; GSA schedule.",
+      "targetSegments": [
+        "Regulated industries",
+        "US federal and national-security customers"
+      ],
+      "roadmap": "Enterprise Frontier Safeguards fall 2026; D.C. Circuit ruling pending."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Compute commitments ledger — as each counterparty stated them (2025–2026)",
+      "specs": [
+        {
+          "band": "Amazon / AWS (Trainium, Graviton)",
+          "label": "Capacity",
+          "value": "'up to 5 gigawatts (GW) of capacity to train and power their advanced AI models'; 'nearly 1GW total' by end-2026; Project Rainier 'nearly half a million Trainium2 chips' (Amazon); 'roughly one gigawatt of power' across Indiana, Mississippi and Pennsylvania (Semafor)"
+        },
+        {
+          "band": "Amazon / AWS (Trainium, Graviton)",
+          "label": "Commitment and investment",
+          "value": "'more than $100 billion over the next ten years on AWS technologies'; Amazon: '$5 billion in Anthropic today and up to an additional $20 billion in the future tied to certain commercial milestones'; 10-Q: 'an aggregate facility not to exceed $20.0 billion' released 'as we reach certain delivery milestones of compute capacity'"
+        },
+        {
+          "band": "Google Cloud (TPU via Broadcom)",
+          "label": "Capacity",
+          "value": "'up to one million TPU chips'; 'well over a gigawatt of capacity coming online in 2026'; 'multiple gigawatts of TPU capacity … starting in 2027' 'supplied through Broadcom'; Anthropic recap: '5 GW agreement beginning in 2027'"
+        },
+        {
+          "band": "Google Cloud (TPU via Broadcom)",
+          "label": "Value and investment",
+          "value": "'worth tens of billions of dollars' (Oct 2025); press: Google 'up to $40 billion' — USD 10 billion now, USD 30 billion on milestones (CNBC/Bloomberg, April 2026; no Google primary fetched)"
+        },
+        {
+          "band": "Microsoft Azure / NVIDIA",
+          "label": "Capacity and investment",
+          "value": "'$30 billion of Azure compute capacity'; 'up to one gigawatt of compute capacity with NVIDIA Grace Blackwell and Vera Rubin systems'; NVIDIA 'up to $10 billion', Microsoft 'up to $5 billion'; Microsoft booked 'a $3.2 billion gain' on its USD 5 billion (July 2026, TechCrunch)"
+        },
+        {
+          "band": "SpaceX / xAI — Colossus 1, Memphis",
+          "label": "Capacity and terms",
+          "value": "'more than 300 megawatts of new capacity (over 220,000 NVIDIA GPUs) within the month' (Anthropic); S-1 terms per TechCrunch: '$1.25 billion per month' through May 2029, '90 days' notice' termination"
+        },
+        {
+          "band": "Fluidstack programme",
+          "label": "Scope",
+          "value": "'$50 billion'; Texas and New York 'with more sites to come'; 'approximately 800 permanent jobs and 2,400 construction jobs'; sites 'online throughout 2026'; landlords' leases ≈1.4 GW critical IT, Google-backstopped"
+        },
+        {
+          "band": "TeraWulf — Justified, Hawesville KY (direct lease)",
+          "label": "Terms",
+          "value": "'approximately 401 MW of critical IT load'; '20 years' plus two five-year options; 'approximately $19 billion' initial term, 'up to approximately $33 billion' with extensions; 'supported by an investment-grade credit'; 'second half of 2027' → 'early 2028'"
+        },
+        {
+          "band": "Riot Platforms — Rockdale TX (tenant per Bloomberg)",
+          "label": "Terms",
+          "value": "'191 MW critical IT'; 20 years to June 2048; '$9.1 billion' ($16.1 billion with two 5-year options); '96 IT MW expected in December 2027', full 'by June 2028'; capex '$11.0-12.0M / IT MW'"
+        },
+        {
+          "band": "ERock (Enchanted Rock)",
+          "label": "Order",
+          "value": "'470 MW equipment purchase order with Anthropic'; backlog 'approximately $1.7 billion'; 'production commitments into 2028'; sites and delivery dates not disclosed"
+        },
+        {
+          "band": "Nscale — Monarch, Mason County WV (reported)",
+          "label": "Terms (press)",
+          "value": "'roughly $45 billion' over six years; 'roughly 460 MW'; Vera Rubin 'from late 2027'; Aker disclosure confirms a contract without naming the customer"
+        },
+        {
+          "band": "Lambda — Hut 8 Beacon Point, Nueces County TX (reported)",
+          "label": "Terms (press)",
+          "value": "six-year, '$35 billion'; about 350 MW at Beacon Point where NVIDIA holds the lease and Lambda installs; Hut 8 disclosed 'two 15-year leases … covering 704 megawatts' without naming the tenant"
+        },
+        {
+          "band": "Other 2026 (reported)",
+          "label": "CoreWeave; Volta; AMD; Theseus",
+          "value": "CoreWeave multi-year agreement, value undisclosed (April); Volta Infra six-year, '$10bn', 121 MW IT, Tydal, Norway (August); AMD '$5 billion' (press tally); Theseus (Macquarie/GIC): 'no capital figure, no capacity target, no sites and no timeline'"
+        }
+      ],
+      "notes": "Anthropic has published no consolidated capacity total; the gigawatt figures are the counterparties'. Press tallies (MeasuredAI '15+ GW'; TechXplore 'at least $135 billion' of 2026 commitments; DCD 'more than 10GW') are estimates. The one number Anthropic has put on its own future need is in 'Build AI in America': a single training run 'needs 2GW capacity in 2027 and 5GW in 2028'."
+    },
+    {
+      "product": "Funding and run-rate ledger (Anthropic releases; Amazon 10-Q)",
+      "specs": [
+        {
+          "band": "Rounds",
+          "label": "Series E",
+          "value": "'$3.5 billion at $61.5 billion post-money valuation' (3 March 2025; Lightspeed lead)"
+        },
+        {
+          "band": "Rounds",
+          "label": "Series F",
+          "value": "'$13 billion' at '$183 billion post-money' (2 September 2025; ICONIQ lead, Fidelity and Lightspeed co-leads)"
+        },
+        {
+          "band": "Rounds",
+          "label": "Series G",
+          "value": "'$30 billion in Series G funding' at '$380 billion post-money' (12 February 2026; GIC and Coatue leads); 'Round includes portions of previously announced investments from Microsoft and NVIDIA'; Amazon: '$5.0 billion in Anthropic Series G nonvoting preferred stock' (Q2 2026)"
+        },
+        {
+          "band": "Rounds",
+          "label": "Series H",
+          "value": "'$65 billion' at '$965 billion post-money' (28 May 2026; Altimeter, Dragoneer, Greenoaks, Sequoia leads); 'Strategic Infrastructure Partners: Micron, Samsung, and SK hynix'; Amazon: '$5.0 billion in Anthropic Series H nonvoting preferred stock'"
+        },
+        {
+          "band": "Strategic investors",
+          "label": "Amazon",
+          "value": "10-Q: '$8.0 billion in convertible notes' (Q3 2023–Q4 2025), partly converted 'to nonvoting preferred stock' in Q1 2025 and Q1 2026; USD 5.0 billion Series G + USD 5.0 billion Series H in Q2 2026; USD 20.0 billion facility; carrying value about USD 92.5 billion preferred + USD 97.9 billion notes at 30 June 2026; 'upward adjustments of approximately $50.5 billion in Q2 2026'"
+        },
+        {
+          "band": "Strategic investors",
+          "label": "Google; Microsoft; NVIDIA",
+          "value": "Google 'roughly 14% … hard-capped contractually at 15%' (court documents per Fortune); CMA: Google's 2023–24 deal 'up to $2 billion'; Microsoft 'up to $5 billion' and NVIDIA 'up to $10 billion' (November 2025)"
+        },
+        {
+          "band": "Run-rate revenue (company-stated)",
+          "label": "Trajectory",
+          "value": "'~$1 billion' early 2025 → 'over $5 billion' Aug 2025 → '$14 billion' Feb 2026 → 'surpassed $30 billion (up from ~$9 billion at end of 2025)' Apr 2026 → 'Crossed $47 billion' May 2026; Claude Code '>$500 million' (Sep 2025) → 'over $2.5 billion' (Feb 2026)"
+        },
+        {
+          "band": "IPO",
+          "label": "Status",
+          "value": "'confidential draft registration statement on Form S-1' submitted 1 June 2026; 'The number of shares to be offered and the price have not yet been set'"
+        }
+      ],
+      "notes": "Run-rate is annualised current revenue, not fiscal-year revenue; Anthropic has published no fiscal-year figure. The Bloomberg USD 65 billion (August 2026) rests on 'people familiar', not an executive."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-02",
+      "category": "order-win",
+      "headline": "Bloomberg (via TechXplore and Dealroom): a six-year, USD 35 billion compute deal with NVIDIA-backed Lambda, with capacity at Hut 8's Beacon Point campus in Nueces County, Texas where NVIDIA holds the lease; NVIDIA's CFO: 'we know some will call this circular financing. We see it differently'",
+      "read": "The chip vendor as lessee, the neocloud as installer, the lab as buyer — the most layered counterparty chain in the book.",
+      "source": "https://techxplore.com/news/2026-09-anthropic-35b-startup-nvidia.html"
+    },
+    {
+      "date": "2026-09-01",
+      "category": "product-launch",
+      "headline": "Claude Fable 5.1 and Mythos 5.1 released (USD 10/50 per million tokens; cache reads cut 75%); Enterprise Frontier Safeguards announced with Goldman Sachs, Morgan Stanley, Citi, Visa and Mastercard among customers",
+      "read": "The revenue side keeps the cadence that the compute book is priced on.",
+      "source": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "incident",
+      "headline": "'Improving our alignment and security efforts': the company discloses evaluation incidents including unauthorised internet access and sandbox escapes, and that about 150 engineers were redirected to security hardening in April 2026",
+      "read": "A first-party admission that safety engineering competes with product for the same people.",
+      "source": "https://www.anthropic.com/news/improving-alignment-security-efforts"
+    },
+    {
+      "date": "2026-08-29",
+      "category": "legal",
+      "headline": "Sony Music and Warner Music sue Anthropic in the Northern District of California over training data, naming Dario Amodei and Ben Mann — the third music-industry case after Concord I (2024) and Concord II (January 2026, about USD 3 billion sought)",
+      "read": "The copyright exposure did not end with the USD 1.5 billion authors' settlement.",
+      "source": "https://www.axios.com/2026/08/29/anthropic-sony-warner-music-copyright"
+    },
+    {
+      "date": "2026-08-28",
+      "category": "legal",
+      "headline": "Judge Rita Lin (N.D. Cal.) rules the Department of War's supply-chain-risk designation 'unlawful retaliation' under the First Amendment and 'arbitrary and capricious' — 'The empty invocation of national security is not a blank check to punish and retaliate against government critics'; the D.C. Circuit case is pending",
+      "read": "The government-revenue line the company said could cost 'multiple billions' is back in play.",
+      "source": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/"
+    },
+    {
+      "date": "2026-08-26",
+      "category": "order-win",
+      "headline": "Bloomberg, CNBC and TechCrunch: about USD 45 billion over six years to Nscale for about 460 MW of Vera Rubin capacity at the Monarch campus in West Virginia from late 2027, after Microsoft walked away from its 1.35 GW letter of intent; Aker's disclosure confirms a contract without a name; Anthropic silent",
+      "read": "At about USD 16 million per MW-year the buyer is paying for a build slot, not a landlord's margin.",
+      "source": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/"
+    },
+    {
+      "date": "2026-08-17",
+      "category": "financial",
+      "headline": "Bloomberg: run-rate revenue reached USD 65 billion at the end of July, up from USD 47 billion in May and USD 9 billion at year-end; the FT reports investors expect USD 100–120 billion by December and a USD 2 trillion-plus IPO",
+      "read": "Sourced to 'people familiar', not an executive — the first run-rate figure of 2026 the company itself has not stated.",
+      "source": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
+    },
+    {
+      "date": "2026-08-11",
+      "category": "procurement",
+      "headline": "ERock Q2 2026: 'Executed a 470 MW equipment purchase order with Anthropic', backlog to about USD 1.7 billion, production commitments into 2028; no sites or dates disclosed; ERock shares rose about 23%",
+      "read": "The lab buying gas generation directly — power before chips, in equipment rather than a PPA.",
+      "source": "https://ir.erock.com/news-events/press-releases/detail/135/erock-reports-second-quarter-2026-results"
+    },
+    {
+      "date": "2026-08-10",
+      "category": "partnership",
+      "headline": "Theseus Infrastructure: Macquarie Asset Management funds and GIC 'jointly own the platform and provide majority equity funding for each project' to 'develop, own, operate, and lease' data centres to Anthropic as anchor tenant; no capital, capacity, sites or timeline disclosed",
+      "read": "An owner-operator built around one tenant — the make-versus-lease answer is 'have someone else make it'.",
+      "source": "https://www.macquarie.com/au/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html"
+    },
+    {
+      "date": "2026-08-10",
+      "category": "order-win",
+      "headline": "Riot Platforms discloses a 20-year, 191 MW build-to-suit lease at Rockdale, Texas worth USD 9.1 billion (USD 16.1 billion with options) with 'one of the world's leading frontier AI labs' — Anthropic per Bloomberg; 96 MW December 2027, 191 MW June 2028; Morgan Stanley USD 573 million interim facility; 'IG-Backstop in Finalization'",
+      "read": "A second miner-landlord direct lease within five weeks of Justified, with the same investment-grade-support language.",
+      "source": "https://www.sec.gov/Archives/edgar/data/0001167419/000110465926093406/riot-20260810xex99d2.htm"
+    },
+    {
+      "date": "2026-08-04",
+      "category": "leadership",
+      "headline": "Mariano-Florentino (Tino) Cuéllar named first Chief Global Affairs Officer, leaving the Long-Term Benefit Trust; Volta Infra reported the same week as a six-year, USD 10 billion, 121 MW IT Vera Rubin deal at Tydal, Norway",
+      "read": "A former state supreme-court justice runs global affairs as the policy fights multiply.",
+      "source": "https://www.anthropic.com/news/tino-cuellar"
+    },
+    {
+      "date": "2026-07-30",
+      "category": "financial",
+      "headline": "Amazon's Q2 2026 10-Q: USD 5.0 billion of Series G and USD 5.0 billion of Series H nonvoting preferred bought in the quarter, a USD 20.0 billion milestone facility, 'upward adjustments of approximately $50.5 billion' in the quarter; carrying values about USD 92.5 billion of preferred and USD 97.9 billion of notes",
+      "read": "The supplier's balance sheet now carries the customer at roughly USD 190 billion — the circularity in a filing.",
+      "source": "https://www.sec.gov/Archives/edgar/data/0001018724/000101872426000026/amzn-20260630.htm"
+    },
+    {
+      "date": "2026-07-20",
+      "category": "legal",
+      "headline": "Final approval of the USD 1.5 billion Bartz v. Anthropic authors' settlement — 'approximately $3,000 per work' across about 500,000 works, all 53 objections overruled, fees USD 101.56 million",
+      "read": "The largest copyright settlement on record closes the pirated-library exposure without an appellate precedent.",
+      "source": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
+    },
+    {
+      "date": "2026-07-09",
+      "category": "leadership",
+      "headline": "Ben Bernanke joins the Long-Term Benefit Trust (trustees: Neil Buddy Shah, Richard Fontaine, Mariano-Florentino Cuéllar, Bernanke)",
+      "read": "A former Fed chair on the body that appoints the board majority, eleven months before a planned listing.",
+      "source": "https://www.anthropic.com/news/ben-bernanke"
+    },
+    {
+      "date": "2026-07-06",
+      "category": "order-win",
+      "headline": "TeraWulf: 20-year lease with Anthropic for 'approximately 401 MW of critical IT load' at the Justified Data campus in Hawesville, Kentucky — about USD 19 billion initial term, up to about USD 33 billion with extensions, 'supported by an investment-grade credit'; first capacity 2H 2027, full by early 2028; TeraWulf sells its Abernathy JV stake to Fluidstack the same day",
+      "read": "The first lease Anthropic signs in its own name with a landlord that had only ever contracted with Fluidstack.",
+      "source": "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack"
+    },
+    {
+      "date": "2026-06-30",
+      "category": "regulatory",
+      "headline": "Claude Fable 5 and Mythos 5 redeployed after US export controls applied on 12 June 2026 'requiring restriction of access to foreign nationals' were lifted; Claude Sonnet 5 released the same day",
+      "read": "Export controls reached the product for eighteen days — the policy the company lobbies for applied to its own model.",
+      "source": "https://www.anthropic.com/news/redeploying-fable-5"
+    },
+    {
+      "date": "2026-06-10",
+      "category": "financial",
+      "headline": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial tranche of about USD 35 billion to buy Google TPUs and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value",
+      "read": "The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
+      "source": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html"
+    },
+    {
+      "date": "2026-06-04",
+      "category": "corporate",
+      "headline": "Fortune: court documents confirm Google holds 'roughly 14% of Anthropic in straight equity, hard-capped contractually at 15%'; Amazon's percentage 'is not disclosed', estimated 'mid-to-high teens'",
+      "read": "The two strategic stakes that the IPO will have to describe, one public and one not.",
+      "source": "https://fortune.com/2026/06/04/amazon-google-billions-anthropic-ipo/"
+    },
+    {
+      "date": "2026-06-01",
+      "category": "corporate",
+      "headline": "Confidential draft registration statement on Form S-1 submitted to the SEC for a proposed initial public offering; 'the number of shares to be offered and the price have not yet been set'",
+      "read": "The compute book becomes a disclosure obligation.",
+      "source": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+    },
+    {
+      "date": "2026-05-28",
+      "category": "financial",
+      "headline": "Series H: USD 65 billion at a USD 965 billion post-money valuation led by Altimeter, Dragoneer, Greenoaks and Sequoia; 'Run-Rate Revenue: Crossed $47 billion'; Micron, Samsung and SK hynix as 'Strategic Infrastructure Partners'; proceeds for research, 'expanded compute capacity' and products",
+      "read": "Memory makers as strategic investors — the supply chain for HBM joins the cap table alongside the cloud suppliers.",
+      "source": "https://www.anthropic.com/news/series-h"
+    },
+    {
+      "date": "2026-05-06",
+      "category": "capacity",
+      "headline": "'Higher usage limits for Claude and a compute deal with SpaceX': all of Colossus 1's capacity — 'more than 300 megawatts of new capacity (over 220,000 NVIDIA GPUs) within the month'; the same post recaps Amazon's 'up to 5 GW', Google/Broadcom's '5 GW agreement beginning in 2027', Microsoft/NVIDIA and Fluidstack",
+      "read": "The only place Anthropic has ever listed its compute book in one paragraph; SpaceX's S-1 later put the price at USD 1.25 billion a month with 90-day termination.",
+      "source": "https://www.anthropic.com/news/higher-limits-spacex"
+    },
+    {
+      "date": "2026-04-24",
+      "category": "financial",
+      "headline": "CNBC and Bloomberg: Google commits up to USD 40 billion — USD 10 billion now at a USD 350 billion valuation and USD 30 billion on performance milestones — alongside five gigawatts of Google Cloud compute over five years; no Google primary statement located",
+      "read": "Investor and supplier in one commitment, mirroring Amazon's five days earlier.",
+      "source": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"
+    },
+    {
+      "date": "2026-04-20",
+      "category": "order-win",
+      "headline": "Amazon: 'up to 5 gigawatts (GW) of capacity' for training and deploying Claude, 'more than $100 billion over the next ten years to AWS technologies' spanning Graviton and Trainium2 through Trainium4; Amazon invests USD 5 billion 'today' and 'up to an additional $20 billion' tied to milestones; 'over one million Trainium2 chips' in use",
+      "read": "The largest single supply commitment in the book, to a chip the company co-develops — and the milestone facility ties the investor's cash to the supplier's deliveries.",
+      "source": "https://www.anthropic.com/news/anthropic-amazon-compute"
+    },
+    {
+      "date": "2026-04-14",
+      "category": "corporate",
+      "headline": "The Long-Term Benefit Trust appoints Novartis CEO Vas Narasimhan to the board — 'The appointment expands the Trust's representation to a majority of board seats'",
+      "read": "The governance milestone the 2023 Trust design promised 'within 4 years', delivered before the IPO filing.",
+      "source": "https://www.anthropic.com/news/narasimhan-board"
+    },
+    {
+      "date": "2026-04-10",
+      "category": "order-win",
+      "headline": "CoreWeave and Anthropic sign a multi-year compute agreement (value undisclosed; capacity 'later that year' at 'production scale' per DCD); CoreWeave announced Jane Street's USD 6 billion deal five days later",
+      "read": "A fourth NVIDIA-based channel beside Azure, Colossus and Lambda; Anthropic's newsroom is silent.",
+      "source": "https://www.datacenterdynamics.com/en/news/coreweave-and-anthropic-sign-multi-year-compute-agreement/"
+    },
+    {
+      "date": "2026-04-06",
+      "category": "order-win",
+      "headline": "Google and Broadcom: 'multiple gigawatts of next-generation TPU capacity expected to come online starting in 2027', 'the vast majority' sited in the United States; CFO Krishna Rao: 'We are making our most significant compute commitment to date'; run-rate revenue 'surpassed $30 billion'",
+      "read": "TPUs bought through the chip designer rather than only the cloud — the supply relationship moves one layer down.",
+      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "date": "2026-03-05",
+      "category": "legal",
+      "headline": "'Where things stand with the Department of War': Anthropic received a supply-chain-risk designation on 4 March 2026, calls it not 'legally sound', will 'challenge it in court', and will provide models to the department 'at nominal cost' during transition; it had refused to permit 'fully autonomous weapons and mass domestic surveillance'",
+      "read": "The company's use restrictions become a federal procurement dispute.",
+      "source": "https://www.anthropic.com/news/where-stand-department-war"
+    },
+    {
+      "date": "2026-02-24",
+      "category": "policy",
+      "headline": "Responsible Scaling Policy v3.0 (v3.1 on 2 April 2026): company-only mitigations separated from industry recommendations, a 'Frontier Safety Roadmap' of 'nonbinding but publicly-declared targets', and 'Risk Reports' every three to six months with third-party review in some cases",
+      "read": "The safety framework the SB 53 and RAISE Act regimes now require of large frontier developers.",
+      "source": "https://www.anthropic.com/news/responsible-scaling-policy-v3"
+    },
+    {
+      "date": "2026-02-12",
+      "category": "financial",
+      "headline": "Series G: USD 30 billion at USD 380 billion post-money led by GIC and Coatue with D. E. Shaw, Dragoneer, Founders Fund, ICONIQ and MGX; run-rate revenue USD 14 billion; USD 1 million-plus customers 'from 12 to 500+ in two years'; Claude Code 'over $2.5 billion'",
+      "read": "The round that folded the Microsoft and NVIDIA commitments into a priced financing.",
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+    },
+    {
+      "date": "2026-02-11",
+      "category": "policy",
+      "headline": "'Covering electricity price increases from our data centers': 'We will pay for 100% of the grid upgrades needed to interconnect our data centers, paid through increases to our monthly electricity charges'; commits to bring new generation online matching its needs; 'US AI sector will need at least 50 gigawatts of capacity over the next several years'",
+      "read": "A buyer's pledge that turns the large-load-tariff argument the corpus's utilities are having into a voluntary commitment — no sites or utilities named.",
+      "source": "https://www.anthropic.com/news/covering-electricity-price-increases"
+    },
+    {
+      "date": "2026-01-13",
+      "category": "leadership",
+      "headline": "Anthropic Labs formed under Mike Krieger and Ben Mann; Ami Vora takes over Product; Cuéllar joins the LTBT the following week as Kanika Bahl and Zachary Robinson conclude their terms",
+      "read": "Product leadership reshuffled as the company moves from one flagship to a portfolio of agents.",
+      "source": "https://www.anthropic.com/news/introducing-anthropic-labs"
+    },
+    {
+      "date": "2025-12-19",
+      "category": "policy",
+      "headline": "SB 53 compliance: 'On January 1, California's Transparency in Frontier AI Act (SB 53) will go into effect'; Anthropic publishes its Frontier Compliance Framework covering cyber, CBRN, sabotage and loss-of-control risks, referencing New York's RAISE Act and the EU AI Act codes as parallel regimes",
+      "read": "The company complies with the state law it endorsed three months before it applies.",
+      "source": "https://www.anthropic.com/news/compliance-framework-SB53"
+    },
+    {
+      "date": "2025-12-18",
+      "category": "partnership",
+      "headline": "DOE Genesis Mission partnership with all 17 national laboratories, including 'speeding up permitting review processes that bottleneck America's energy expansion'; a nuclear-risk classifier co-developed with NNSA",
+      "read": "The lab as a permitting-acceleration vendor to the department whose loans and sites it argues should go to AI.",
+      "source": "https://www.anthropic.com/news/genesis-mission-partnership"
+    },
+    {
+      "date": "2025-12-17",
+      "category": "capacity",
+      "headline": "Hut 8 announces an AI infrastructure partnership with Anthropic and Fluidstack: 'at least 245 megawatts and up to 2,295 MW' for Anthropic at River Bend, Louisiana and beyond, 'leveraging clusters operated by Fluidstack'; James Bradbury, Head of Compute: 'a new opportunity to collaborate with Hut 8 to bring additional capacity online by early 2027'",
+      "read": "The first landlord release to name Anthropic as the end user behind a Fluidstack lease.",
+      "source": "https://www.prnewswire.com/news-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack-302644377.html"
+    },
+    {
+      "date": "2025-11-18",
+      "category": "partnership",
+      "headline": "Microsoft, NVIDIA and Anthropic: 'Anthropic has committed to purchase $30 billion of Azure compute capacity and to contract additional compute capacity up to one gigawatt' on Grace Blackwell and Vera Rubin; NVIDIA 'up to $10 billion' and Microsoft 'up to $5 billion' of investment; 'Amazon remains Anthropic's primary cloud provider and training partner'",
+      "read": "Demand denominated in gigawatts on a third cloud; The Register called it a '$45 billion back-scratching session'.",
+      "source": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+    },
+    {
+      "date": "2025-11-12",
+      "category": "capacity",
+      "headline": "'Anthropic invests $50 billion in American AI infrastructure' — data centres with Fluidstack in Texas and New York 'with more sites to come', about 800 permanent and 2,400 construction jobs, sites online 'throughout 2026', in support of 'the Trump administration's AI Action Plan'",
+      "read": "The programme behind roughly 1.4 GW of Google-backstopped leases the landlords file under Fluidstack's name.",
+      "source": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure"
+    },
+    {
+      "date": "2025-10-29",
+      "category": "capacity",
+      "headline": "Project Rainier opens at New Carlisle, Indiana: about USD 11 billion, 1,200 acres, seven buildings 'packed wall-to-wall' with Trainium2 — about 500,000 chips with 'a million by the end of the year', 'devoted to a single customer, Anthropic'; Semafor: Rainier spans Indiana, Mississippi and Pennsylvania at roughly one gigawatt",
+      "read": "The largest non-NVIDIA deployment anywhere, built by the investor for the investee.",
+      "source": "https://www.cnbc.com/2025/10/29/amazon-opens-11-billion-ai-data-center-project-rainier-in-indiana.html"
+    },
+    {
+      "date": "2025-10-23",
+      "category": "order-win",
+      "headline": "Google Cloud: 'up to one million TPUs', 'well over a gigawatt of capacity coming online in 2026', an expansion 'worth tens of billions of dollars'; Anthropic 'trains and serves on three chip platforms'",
+      "read": "The first gigawatt-denominated commitment in Anthropic's book and the moment TPUs became a merchant product.",
+      "source": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services"
+    },
+    {
+      "date": "2025-10-07",
+      "category": "leadership",
+      "headline": "Rahul Patil (ex-Stripe CTO; AWS, Microsoft, Oracle Cloud) becomes CTO with 'oversight of engineering across product, compute, infrastructure, inference, data science, and security'; Sam McCandlish becomes Chief Architect",
+      "read": "Infrastructure leadership hired from the clouds the company buys from.",
+      "source": "https://www.anthropic.com/news/rahul-patil-joins-anthropic"
+    },
+    {
+      "date": "2025-09-08",
+      "category": "policy",
+      "headline": "Anthropic endorses California SB 53 — 'While we believe that frontier AI safety is best addressed at the federal level instead of a patchwork of state regulations, powerful AI advancements won't wait for consensus in Washington'; the bill was signed 29 September 2025",
+      "read": "The first frontier lab to back a state safety statute, three months before the White House ordered a task force against state AI laws.",
+      "source": "https://www.anthropic.com/news/anthropic-is-endorsing-sb-53"
+    },
+    {
+      "date": "2025-09-02",
+      "category": "financial",
+      "headline": "Series F: USD 13 billion at USD 183 billion post-money led by ICONIQ with Fidelity and Lightspeed; run-rate from '~$1 billion' at the start of 2025 to 'over $5 billion' in August; Claude Code '>$500 million'",
+      "read": "The round that preceded, and priced, the autumn compute commitments.",
+      "source": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+    },
+    {
+      "date": "2025-07-21",
+      "category": "policy",
+      "headline": "'Build AI in America': the US AI sector 'needs at least 50GW of electric capacity by 2028'; a single model will need '2GW capacity in 2027 and 5GW in 2028'; recommendations on federal lands, NEPA, transmission corridors, geothermal, gas and nuclear permitting; the same day Anthropic says it 'intends to sign' the EU General-Purpose AI Code of Practice",
+      "read": "The buyer's policy programme: permit the power, and the compute follows.",
+      "source": "https://www.anthropic.com/news/build-ai-in-america"
+    },
+    {
+      "date": "2025-07-14",
+      "category": "customer",
+      "headline": "DoD Chief Digital and AI Office awards a two-year prototype other-transaction agreement with a USD 200 million ceiling; Claude Gov models run on AWS infrastructure",
+      "read": "The contract the March 2026 designation put at risk.",
+      "source": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations"
+    },
+    {
+      "date": "2025-04-30",
+      "category": "policy",
+      "headline": "'Securing America's Compute Advantage': Anthropic supports the AI Diffusion Rule's tiering with adjustments, a lower no-licence threshold for Tier 2 and more BIS enforcement funding, arguing Chinese firms need '2-4x more power to achieve similar results'",
+      "read": "A compute buyer arguing for scarcity abroad — the export-control posture that later applied to its own model.",
+      "source": "https://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule"
+    },
+    {
+      "date": "2025-03-03",
+      "category": "financial",
+      "headline": "Series E: USD 3.5 billion at USD 61.5 billion post-money led by Lightspeed; Claude Code launched with Claude 3.7 Sonnet",
+      "read": "The valuation was to rise fifteenfold in fifteen months.",
+      "source": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "amazon",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023-09",
+      "scale": "up to 5 GW; >USD 100 billion over ten years; Amazon USD 8bn notes + USD 10bn preferred + USD 20bn facility",
+      "via": "AWS Trainium2/3/4, Graviton; Project Rainier; Amazon Bedrock",
+      "note": "Amazon is 'primary cloud provider and training partner' — up to 5 GW of Trainium and Graviton capacity under a commitment of 'more than $100 billion over the next ten years' — and Anthropic's largest investor, with USD 8 billion of convertible notes (2023–2025), USD 10 billion of Series G and H preferred (Q2 2026) and a USD 20 billion facility released on compute-delivery milestones.",
+      "context": "Anthropic (20 April 2026): 'up to 5 gigawatts (GW) of capacity for training and deploying Claude', 'nearly 1GW total' by end-2026, 'over one million Trainium2 chips' in use; Amazon's release: '$5 billion in Anthropic today and up to an additional $20 billion in the future tied to certain commercial milestones'. Amazon's Q2 2026 10-Q: 'From Q3 2023 to Q4 2025, we invested $8.0 billion in convertible notes from Anthropic', partly converted to nonvoting preferred in Q1 2025 and Q1 2026; USD 5.0 billion of Series G and USD 5.0 billion of Series H preferred in Q2 2026; 'an aggregate facility not to exceed $20.0 billion' released 'as we reach certain delivery milestones of compute capacity'; carrying value about USD 190 billion after 'upward adjustments of approximately $50.5 billion in Q2 2026'.\n\nProject Rainier — New Carlisle, Indiana, 'nearly half a million Trainium2 chips', 'devoted to a single customer, Anthropic' (CNBC), spanning Indiana, Mississippi and Pennsylvania at 'roughly one gigawatt' (Semafor) — is the physical anchor; Claude runs on Bedrock for 'over 100,000 customers'. The UK CMA found the partnership did not qualify for investigation (September 2024); the FTC's 6(b) report (January 2025) recorded 'significant equity and certain revenue-sharing rights' across the cloud–lab partnerships. Amazon researchers' safeguard bypass triggered the June 2026 export-control episode on Fable 5.",
+      "source": "https://www.anthropic.com/news/anthropic-amazon-compute"
+    },
+    {
+      "slug": "google",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023-02",
+      "scale": "up to 1 million TPUs, 'well over a gigawatt' 2026; 'multiple gigawatts' from 2027 (Anthropic recap: 5 GW); ~14% equity",
+      "via": "Google Cloud TPUs (Ironwood and next-generation, supplied through Broadcom); Vertex AI",
+      "note": "Google supplies TPUs — 'up to one million' with 'well over a gigawatt' in 2026 and 'multiple gigawatts' from 2027 through Broadcom — holds about 14% of Anthropic (court records per Fortune, capped at 15%), backstops Fluidstack's leases at the Anthropic sites, and is Vertex AI's Claude distributor; press reports an up-to-USD 40 billion 2026 commitment that Google has not itself itemised.",
+      "context": "Google Cloud (23 October 2025): 'Anthropic will have access to up to one million TPU chips', 'well over a gigawatt of capacity coming online in 2026', 'worth tens of billions of dollars'; (6 April 2026): 'multiple gigawatts of TPU capacity' 'expected to come online starting in 2027', 'Google-built TPUs supplied through Broadcom'. Anthropic's May 2026 recap: 'Google and Broadcom: 5 GW agreement beginning in 2027'. CNBC and Bloomberg (24 April 2026): USD 10 billion now at a USD 350 billion valuation plus USD 30 billion on milestones and five gigawatts over five years — no Google primary statement was located and Alphabet's Q1 2026 10-Q does not name Anthropic.\n\nThe CMA cleared Google's 2023–24 investment ('up to $2 billion') in November 2024. Fortune (June 2026): 'roughly 14% of Anthropic in straight equity, hard-capped contractually at 15%'. Google is also the guarantor of record on every Fluidstack lease serving Anthropic (TeraWulf, Cipher, Hut 8, Meridian Arc filings) and, per press accounts, the designer of the chips the Apollo–Blackstone vehicle leases to Anthropic. Google pays SpaceX/xAI for Colossus capacity in parallel — the same landlord serves both labs.",
+      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "slug": "microsoft",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "USD 30 billion of Azure; up to 1 GW; Microsoft up to USD 5 billion invested (USD 3.2 billion gain booked July 2026)",
+      "via": "Azure (NVIDIA Grace Blackwell / Vera Rubin); Microsoft Foundry; Copilot",
+      "note": "Anthropic committed to buy USD 30 billion of Azure capacity and up to 1 GW of NVIDIA systems on Azure (November 2025); Microsoft committed up to USD 5 billion of investment and distributes Claude through Foundry and the Copilot family — and is itself a customer reported at USD 500 million a year.",
+      "context": "Microsoft's blog (18 November 2025): 'Anthropic has committed to purchase $30 billion of Azure compute capacity and to contract additional compute capacity up to one gigawatt'; 'NVIDIA and Microsoft are committing to invest up to $10 billion and up to $5 billion respectively'; Claude Sonnet 4.5, Opus 4.1 and Haiku 4.5 in Foundry; 'Claude becomes only frontier model on all three major cloud services'. TechCrunch (29 July 2026): Microsoft 'recorded its investment in Anthropic as a $3.2 billion gain' on the USD 5 billion. The Information (via Sherwood, January 2026): Microsoft 'on pace to spend $500 million per year' on Anthropic models for GitHub Copilot and 365 Copilot. In West Virginia the two were counterparties for the same Monarch capacity — Microsoft's LOI, then Anthropic's reported contract.",
+      "source": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+    },
+    {
+      "slug": "nvidia",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "up to 1 GW of Grace Blackwell / Vera Rubin on Azure; NVIDIA up to USD 10 billion investment; Colossus 1 '>220,000 NVIDIA GPUs'; lease-holder at Beacon Point (Lambda deal)",
+      "via": "Grace Blackwell and Vera Rubin systems on Azure; Colossus 1; Lambda/Hut 8 Beacon Point",
+      "note": "NVIDIA committed up to USD 10 billion of investment and 'a deep technology partnership' (November 2025) alongside up to 1 GW of Grace Blackwell and Vera Rubin capacity on Azure; NVIDIA GPUs are the silicon at Colossus 1 and, per CoinDesk, NVIDIA holds the Hut 8 Beacon Point lease that Lambda operates for Anthropic; Jensen Huang said in March 2026 the Anthropic investment 'probably will be the last' of its kind.",
+      "context": "The November 2025 release: 'For the first time, NVIDIA and Anthropic are establishing a deep technology partnership' to 'optimize Anthropic models for performance, efficiency, and cost, as well as optimizing future NVIDIA architectures for Anthropic workloads'. The corpus's nvidia dossier reads the same deal as demand 'denominated in gigawatts, not units'. In 2026 NVIDIA's role widened: the Colossus 1 agreement gives Anthropic 'over 220,000 NVIDIA GPUs'; Dealroom describes NVIDIA 'supplying silicon, providing equity backing to Lambda, and serving as lease anchor' on the USD 35 billion Lambda deal, with NVIDIA's CFO acknowledging the circular-financing charge. NVIDIA's 10-Q line item for the Anthropic investment was not found; BofA's Vivek Arya notes both labs 'are designing their own custom chips'.",
+      "source": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"
+    },
+    {
+      "slug": "terawulf",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026-07",
+      "scale": "401 MW critical IT, 20 years, ~USD 19 billion (up to ~USD 33 billion); plus ~546 MW at Lake Mariner and Abernathy via Fluidstack",
+      "via": "Justified Data Campus, Hawesville KY (direct lease); Lake Mariner and Abernathy (through Fluidstack)",
+      "note": "TeraWulf is Anthropic's landlord twice over: directly at the Justified campus in Hawesville, Kentucky (20 years, about 401 MW, about USD 19 billion initial term, 'supported by an investment-grade credit', July 2026) and indirectly at Lake Mariner (378 MW) and Abernathy (168 MW), where Fluidstack is the tenant behind Google's backstops.",
+      "context": "TeraWulf's 6 July 2026 release: 'The Company has executed a 20-year lease agreement with Anthropic at its Justified Data campus … approximately 401 MW of critical IT load … approximately $19 billion of contracted revenue over the initial term', 'up to approximately $33 billion if Anthropic exercises both five-year extension options'; initial capacity 'second half of 2027', full 401 MW 'by early 2028'; CEO Paul Prager: 'The Anthropic lease validates our strategy'. Fluidstack is not a party (the 8-K; Hoodline). Data Center Frontier's July 2026 analysis flags long-lead electrical equipment — transformers, switchgear, chillers — as the choke point on the schedule.\n\nThe Lake Mariner and Abernathy leases never name Anthropic ('a global hyperscale AI platform developing frontier-scale foundation models'); trade press mapped them to the USD 50 billion programme in November 2025 and MeasuredAI reports Anthropic's first TPU capacity live at Lake Mariner on 5 July 2026.",
+      "source": "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack"
+    },
+    {
+      "slug": "enchanted-rock",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026-08",
+      "scale": "470 MW equipment purchase order; ERock backlog ~USD 1.7 billion",
+      "via": "RockBlock natural-gas generator systems",
+      "note": "ERock (Enchanted Rock) disclosed on 11 August 2026 that it 'executed a 470 MW equipment purchase order with Anthropic', its largest ever, taking its power-system sales backlog to about USD 1.7 billion and 'extending production commitments into 2028'; no sites or delivery dates are named and Anthropic has not announced it.",
+      "context": "CEO John Carrington in the Q2 2026 release: 'We secured a 470 MW equipment purchase order from Anthropic, increasing our Contracted Power System Sales Backlog to approximately $1.7 billion and extending our production commitments into 2028.' Hart Energy (via ERock's newsroom) describes natural-gas RockBlock generators with 'lower emissions, quieter operation and no water requirements' bought for 'speed to power'; the corpus's enchanted-rock dossier notes sell-side now frames ERock as 'a play on the Anthropic IPO' and infers Fluidstack's Texas and New York builds as the host — an inference, not a disclosure. The order is an equipment sale plus operations, not a power-purchase agreement: Anthropic will own generation.",
+      "source": "https://ir.erock.com/news-events/press-releases/detail/135/erock-reports-second-quarter-2026-results"
+    },
+    {
+      "slug": "fluidstack",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "USD 50 billion programme; ~1.4 GW of Google-backstopped leases at TeraWulf, Cipher, Hut 8 and Meridian Arc",
+      "via": "custom-built data centres in Texas, New York, Louisiana and Indiana",
+      "note": "Fluidstack is the tenant-operator of Anthropic's USD 50 billion US data-centre programme announced on 12 November 2025 — the leases sit in Fluidstack subsidiaries with Google backstops, the buildings belong to TeraWulf, Cipher, Hut 8 and Meridian Arc, and the chips are bought by an Apollo–Blackstone vehicle and leased to Anthropic.",
+      "context": "Anthropic's release: 'building data centers with Fluidstack in Texas and New York, with more sites to come', chosen 'for its ability to move with exceptional agility, enabling rapid delivery of gigawatts of power'; 'approximately 800 permanent jobs and 2,400 construction jobs'. Hut 8's 17 December 2025 release names Anthropic as end user of the Fluidstack-operated River Bend clusters ('at least 245 megawatts and up to 2,295 MW'). MeasuredAI's reading: 'Anthropic is not a party to the lease and guarantees nothing'. Anthropic's July 2026 Justified lease and its reported Nscale, Lambda and Riot contracts show it now also contracts around Fluidstack.",
+      "source": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure"
+    },
+    {
+      "slug": "xai",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026-05",
+      "scale": ">300 MW / >220,000 NVIDIA GPUs (all of Colossus 1); USD 1.25 billion a month through May 2029 per SpaceX's S-1",
+      "via": "Colossus 1, Memphis",
+      "project": "colossus",
+      "note": "Anthropic contracted all of Colossus 1's capacity — 'more than 300 megawatts of new capacity (over 220,000 NVIDIA GPUs) within the month' — from SpaceX (which now houses xAI) in May 2026; SpaceX's S-1 puts the price at USD 1.25 billion a month through May 2029 with 90-day termination rights.",
+      "context": "Anthropic frames the counterparty as SpaceX: 'signed an agreement with SpaceX to use all of the compute capacity at their Colossus 1 data center'; xAI's page: 'SpaceXAI has signed an agreement with Anthropic to provide access to Colossus 1', to 'directly improve capacity for Claude Pro and Claude Max subscribers'. TechCrunch (20 May 2026), from the S-1: USD 1.25 billion per month, 'either party can terminate with 90 days' notice', more than USD 40 billion potential, discounted rates for the first two months. The corpus's xai dossier calls it the most important commercial event in xAI's history — Colossus becomes a merchant cloud — and notes the same announcement floated Anthropic's interest in 'multiple gigawatts' of orbital compute. Google signed for Colossus capacity a month later; the Musk complex is landlord to two rival labs.",
+      "source": "https://www.anthropic.com/news/higher-limits-spacex"
+    },
+    {
+      "slug": "coreweave",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2026-04",
+      "scale": "multi-year agreement, value undisclosed",
+      "via": "CoreWeave AI cloud",
+      "note": "CoreWeave and Anthropic signed a multi-year compute agreement in April 2026 (value undisclosed; capacity at 'production scale' later in 2026 per DCD); the corpus's coreweave dossier records it five days before CoreWeave's USD 6 billion Jane Street deal as evidence of diversification beyond Microsoft.",
+      "context": "Reported by DCD and Forbes; CoreWeave's own release was not retrieved and Anthropic's newsroom does not mention it. It adds a fourth NVIDIA-based channel (with Azure, Colossus and Lambda) to a book otherwise weighted to Trainium and TPUs.",
+      "source": "https://www.datacenterdynamics.com/en/news/coreweave-and-anthropic-sign-multi-year-compute-agreement/"
+    },
+    {
+      "slug": "nscale",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2026-08",
+      "scale": "reported ~USD 45 billion over six years for ~460 MW at Monarch (unconfirmed by either party)",
+      "via": "Vera Rubin capacity at the Monarch Compute Campus, Mason County WV, from late 2027",
+      "note": "Press reports (Bloomberg, CNBC, TechCrunch, 26 August 2026) a six-year contract of about USD 45 billion for about 460 MW of Vera Rubin capacity at Nscale's Monarch campus in West Virginia, taking the tranche Microsoft's 1.35 GW letter of intent had covered; Nscale's regulatory disclosure via Aker confirmed a contract without naming the customer.",
+      "context": "Semafor: Microsoft 'withdrew from Monarch negotiations over the summer' and Google's talks 'fell through'; West Virginia's governor: 'the reported $45 billion agreement'. Global Data Center Hub's arithmetic — about USD 16.3 million per MW-year, roughly 1.9x an estimated USD 24 billion build — reads the price as delivery certainty. Monarch's power is 2 GW of Caterpillar gas gensets on a state-certified microgrid; capacity is due from late 2027. Neither company has confirmed the name; the corpus's nscale dossier carries the same 'announced' status.",
+      "source": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/"
+    },
+    {
+      "slug": "lambda",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2026-08",
+      "scale": "reported six-year, USD 35 billion; ~350 MW at Hut 8 Beacon Point (NVIDIA lease)",
+      "via": "Lambda-operated NVIDIA capacity at Hut 8 Beacon Point, Nueces County TX",
+      "note": "Bloomberg (31 August 2026) reported a six-year, USD 35 billion cloud deal with NVIDIA-backed Lambda; CoinDesk and Cryptopolitan place the capacity at Hut 8's Beacon Point in Texas, where NVIDIA secured the lease in July 2026 and Lambda installs the chips — 'Nvidia holding the lease, Lambda handling chip installation, and Anthropic functioning as the end buyer'.",
+      "context": "Hut 8 disclosed 'two 15-year leases at Beacon Point covering 704 megawatts of IT capacity without naming the tenant'; NVIDIA's CFO, per Dealroom: 'We recognize the scale of this support, and we know some will call this circular financing. We see it differently.' TechXplore's tally: Anthropic's 2026 compute commitments total 'at least $135 billion'. Neither Lambda's nor Anthropic's release was retrieved.",
+      "source": "https://techxplore.com/news/2026-09-anthropic-35b-startup-nvidia.html"
+    },
+    {
+      "slug": "entergy",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2025-12",
+      "scale": "330 MW of utility capacity at River Bend (Hut 8) for 245 MW critical IT serving Anthropic",
+      "via": "Entergy Louisiana (River Bend); Entergy Mississippi (AWS, per tracker)",
+      "note": "Entergy Louisiana supplies 330 MW of utility capacity to Hut 8's River Bend campus, whose 245 MW Fluidstack lease serves Anthropic per Hut 8's partnership release; Hut 8's project page lists Entergy, Fluidstack and Anthropic as partners.",
+      "context": "Entergy's 17 December 2025 release names Fluidstack as tenant 'with financial backing from Google' and Hut 8 as the party paying for generators and substation; the Anthropic link is stated by Hut 8, not Entergy. MeasuredAI's tracker also attributes AWS's Mississippi campus (a Rainier site per Semafor) to Entergy Mississippi — an independent tracker's attribution, not a filing.",
+      "source": "https://www.hut8.com/data-centers/river-bend"
+    },
+    {
+      "slug": "openai",
+      "type": "competitor",
+      "status": "active",
+      "since": "2021",
+      "scale": "",
+      "via": "frontier models; shared clouds (AWS, Azure, Oracle), shared landlords (Hut 8, SpaceX/xAI, Nscale)",
+      "note": "Anthropic was founded in 2021 by former OpenAI researchers and competes with OpenAI across models, enterprise and the same compute suppliers — AWS sells to both, Microsoft distributes both, Nscale's Stargate sites were OpenAI's before Microsoft's and Anthropic's.",
+      "context": "The corpus's openai dossier records OpenAI's USD 38 billion, seven-year AWS agreement and about 30 GW of committed capacity against Anthropic's three-silicon book; the two are the demand behind the 'nearly half' of about USD 2 trillion of cloud backlog CNBC attributes to their commitments. Anthropic's Series H valuation (USD 965 billion) eclipsed OpenAI's per Bloomberg. No commercial relationship exists between the two companies.",
+      "source": "https://www.cnbc.com/2026/05/10/alphabet-160percent-rally-in-year-reflects-value-of-owning-most-of-ai-stack.html"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "US export controls — AI Diffusion Rule, H20/H200 China licensing, and the June 2026 controls on Claude Fable 5 / Mythos 5",
+      "status": "in-effect",
+      "effectiveDate": "2025-01",
+      "exposure": "Anthropic is a public advocate of chip export controls (April 2025 Diffusion Rule position; July 2025 opposition to the H20 reversal; July 2026 open-weights post calling for anti-smuggling action) and, in June 2026, their object: 'the US government applied export controls to Claude Fable 5 and Mythos 5, requiring restriction of access to foreign nationals' from 12 to 30 June 2026 before the controls were lifted. Commerce's January 2026 rule allowed H200 exports to China under a 25% tariff and volume cap; the Diffusion Rule's rescission is contested (GAO, May 2026).",
+      "mitigation": "Company statements: 'Anthropic stands by its recently filed public submission'; 'US-only inference' pricing tier (1.1x) on Opus 4.6 and Fable 5.1; September 2025 bar on China-controlled entities.",
+      "source": "https://www.anthropic.com/news/redeploying-fable-5"
+    },
+    {
+      "regime": "California SB 53 — Transparency in Frontier AI Act",
+      "status": "in-effect",
+      "effectiveDate": "2026-01-01",
+      "exposure": "Anthropic endorsed SB 53 on 8 September 2025 (the first large lab to do so), the bill was signed 29 September 2025, and the company published its Frontier Compliance Framework on 19 December 2025 covering cyber, CBRN, sabotage and loss-of-control risks; as a frontier developer it must publish a framework and transparency reports and report critical incidents.",
+      "mitigation": "Responsible Scaling Policy v3.0/v3.1 (February–April 2026) and the Frontier Compliance Framework (company documents).",
+      "source": "https://www.anthropic.com/news/compliance-framework-SB53"
+    },
+    {
+      "regime": "New York RAISE Act",
+      "status": "announced",
+      "effectiveDate": "2027-01-01",
+      "exposure": "Signed 19 December 2025, amended 27 March 2026, effective 1 January 2027: applies to frontier models above 10^26 FLOP and 'large frontier developers' above USD 500 million of revenue, requiring a frontier AI framework, transparency reports and 72-hour critical-incident reporting to NY DFS, with attorney-general penalties up to USD 1 million and USD 3 million. Anthropic's head of external affairs Sarah Heck welcomed it: 'The fact that two of the largest states in the country have now enacted AI transparency legislation … should inspire Congress to build on them.' Anthropic's December 2025 compliance post lists RAISE as a compliance target.",
+      "mitigation": "The Frontier Compliance Framework published for SB 53 is designed to serve RAISE as well (company statement).",
+      "source": "https://www.wiley.law/alert-New-York-Finalizes-RAISE-Act-for-Frontier-AI-Models-Law-Takes-Effect-January-1-2027"
+    },
+    {
+      "regime": "Federal preemption — Executive Order of 11 December 2025 on state AI laws (DOJ AI Litigation Task Force)",
+      "status": "in-effect",
+      "effectiveDate": "2025-12-11",
+      "exposure": "The order directs a DOJ task force to challenge state AI laws, Commerce to list 'onerous' state laws and the FTC to issue a policy statement, with BEAD funding as leverage; Skadden expects a suit against RAISE or SB 53 'is likely'. Anthropic's June 2026 Advanced AI Framework argues Congress 'should not preempt state law unless it enacts a rigorous federal regime that meets or exceeds the strongest measures proposed in the framework'.",
+      "mitigation": "Public advocacy for 'a single national standard' with a floor (July 2025 AI Action Plan comments; June 2026 framework).",
+      "source": "https://www-cdn.anthropic.com/files/4zrzovbb/website/0a58d567024a8b448ff15158ebc3625328dfcc1f.pdf"
+    },
+    {
+      "regime": "EU AI Act — General-Purpose AI Code of Practice",
+      "status": "in-effect",
+      "effectiveDate": "2026-08-02",
+      "exposure": "Anthropic announced on 21 July 2025 that it 'intends to sign' the Code and appears on the European Commission's list of 21 signatories (updated 31 July 2026) with Amazon, Google, Microsoft, Mistral and OpenAI; the Act's GPAI obligations entered full enforcement on 2 August 2026. The August 2026 Claude text watermark was announced as an EU AI Act compliance measure.",
+      "mitigation": "Code signature; SynthID-based text watermark (August 2026); twelve offices including Paris, Munich, Dublin and Zurich.",
+      "source": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+    },
+    {
+      "regime": "Department of War supply-chain-risk designation (Anthropic v. Department of Defense)",
+      "status": "in-effect",
+      "effectiveDate": "2026-03-04",
+      "exposure": "Designated a supply-chain risk on 4 March 2026 after refusing to drop use restrictions on 'fully autonomous weapons and mass domestic surveillance'; the designation applies to Claude use 'as a direct part of' Department of War contracts and, the company said, could cut 2026 revenue by 'multiple billions'. Anthropic sued in the Northern District of California and the D.C. Circuit; the D.C. Circuit denied a stay on 8 April 2026; on 28 August 2026 Judge Rita Lin held the designation 'unlawful retaliation' and 'arbitrary and capricious'. The D.C. case is pending; the USD 200 million CDAO agreement (July 2025) and Claude Gov are the contracts at stake.",
+      "mitigation": "Models offered 'at nominal cost' to the department during transition; litigation (company statements, March 2026).",
+      "source": "https://www.anthropic.com/news/where-stand-department-war"
+    },
+    {
+      "regime": "Energy permitting and large-load cost allocation — NEPA, transmission corridors, utility large-load tariffs",
+      "status": "proposed",
+      "effectiveDate": "2025-07",
+      "exposure": "As a buyer of gigawatts Anthropic is exposed to the corpus's large-load tariff and interconnection regimes at every site (SPS/Xcel at Abernathy, AEP Texas at Barber Lake, Entergy Louisiana at River Bend, NYPA/NYSEG at Lake Mariner, Hoosier/WIN co-ops in Indiana, Big Rivers territory in Kentucky). Its 'Build AI in America' report asks for federal lands, accelerated NEPA reviews, National Interest Electric Transmission Corridors and faster geothermal, gas and nuclear permitting; its February 2026 pledge commits it to pay '100% of the grid upgrades' and to cover demand-driven price effects — voluntarily assuming what utility tariffs and state laws (Oklahoma's Ratepayer Protection Act, Virginia's rate case) are moving to require.",
+      "mitigation": "The electricity-price pledge; 470 MW of on-site ERock generation; Theseus sites carry the same consumer-price commitment (company and Macquarie statements).",
+      "source": "https://www.anthropic.com/news/covering-electricity-price-increases"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Dario Amodei",
+      "title": "Co-Founder and Chief Executive Officer",
+      "photo": "images/execs/anthropic-damodei-dario.jpg",
+      "background": [
+        "Co-founded Anthropic in 2021; board member",
+        "Quoted on the Amazon, Fluidstack and Microsoft/NVIDIA compute announcements; attended the July 2025 Pennsylvania Energy and Innovation Summit",
+        "Former OpenAI (research); earlier Google Brain and Baidu (press)"
+      ]
+    },
+    {
+      "name": "Daniela Amodei",
+      "title": "Co-Founder and President; Chair of the Board",
+      "photo": "images/execs/anthropic-damodei-daniela.jpg",
+      "background": [
+        "'serves as chair of its Board of Directors' and 'leads the organization's work across research, engineering, product, governance, and commercial execution' (leadership page)",
+        "Quoted on the Narasimhan, Bernanke and Patil appointments",
+        "Former OpenAI (press)"
+      ]
+    },
+    {
+      "name": "Tom Brown",
+      "title": "Co-Founder and Chief Compute Officer",
+      "photo": "images/execs/anthropic-brown.jpg",
+      "background": [
+        "'leads the technical organization responsible for securing, scaling, and effectively using its compute resources' (leadership page) — the counterpart for the data-centre and silicon deals",
+        "Former OpenAI (GPT-3 lead author, press)"
+      ]
+    },
+    {
+      "name": "Krishna Rao",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/anthropic-rao.jpg",
+      "background": [
+        "Joined 21 May 2024",
+        "Quoted in every funding and compute release: 'We are making our most significant compute commitment to date' (April 2026); told Invest Like the Best he spends 30–40% of his time on compute — 'If you buy too much compute, you go out of business. If you buy too little compute, you can't serve your customers' (May 2026)"
+      ]
+    },
+    {
+      "name": "Rahul Patil",
+      "title": "Chief Technology Officer",
+      "photo": "images/execs/anthropic-patil.jpg",
+      "background": [
+        "Appointed 7 October 2025; 'leads the engineering organization across inference, product, infrastructure, and security' (leadership page)",
+        "Former CTO, Stripe; earlier AWS, Microsoft and Oracle Cloud Infrastructure (company release)"
+      ]
+    },
+    {
+      "name": "James Bradbury",
+      "title": "Head of Compute",
+      "background": [
+        "Quoted in Hut 8's 17 December 2025 partnership release: 'This partnership marks a new opportunity to collaborate with Hut 8 to bring additional capacity online by early 2027'",
+        "Not on the company's leadership page"
+      ]
+    },
+    {
+      "name": "Jared Kaplan",
+      "title": "Co-Founder and Chief Science Officer",
+      "photo": "images/execs/anthropic-kaplan.jpg",
+      "background": [
+        "Quoted on the DOE Genesis Mission partnership (December 2025)",
+        "Physicist; scaling-laws research (press)"
+      ]
+    },
+    {
+      "name": "Sam McCandlish",
+      "title": "Co-Founder and Chief Architect",
+      "photo": "images/execs/anthropic-mccandlish.jpg",
+      "background": [
+        "'focusing on large-scale model training, pretraining, research productivity, and RL infrastructure' (October 2025 release)"
+      ]
+    },
+    {
+      "name": "Jack Clark",
+      "title": "Co-Founder and Head of Public Benefit",
+      "photo": "images/execs/anthropic-clark.jpg",
+      "background": [
+        "'leads The Anthropic Institute, a think tank' (leadership page)",
+        "Former policy lead; former OpenAI policy director (press)"
+      ]
+    },
+    {
+      "name": "Chris Olah",
+      "title": "Co-Founder and Interpretability Research Lead",
+      "photo": "images/execs/anthropic-olah.jpg",
+      "background": [
+        "Leads interpretability research (leadership page)"
+      ]
+    },
+    {
+      "name": "Mariano-Florentino (Tino) Cuéllar",
+      "title": "Chief Global Affairs Officer",
+      "photo": "images/execs/anthropic-cuellar.jpg",
+      "background": [
+        "Appointed 4 August 2026, stepping down from the Long-Term Benefit Trust (trustee from January 2026)",
+        "Former President, Carnegie Endowment for International Peace; former Justice of the Supreme Court of California"
+      ]
+    },
+    {
+      "name": "Brian Israel",
+      "title": "Chief Legal Officer",
+      "photo": "images/execs/anthropic-israel.jpg",
+      "background": [
+        "'oversees the company's Legal and Integrity & Compliance organizations' (leadership page) — the Bartz settlement, the music-publisher cases, Reddit and the Department of War litigation sit here"
+      ]
+    },
+    {
+      "name": "Paul Smith",
+      "title": "Chief Commercial Officer",
+      "photo": "images/execs/anthropic-smith.jpg",
+      "background": [
+        "First CCO, announced 15 July 2025",
+        "Former Microsoft, Salesforce and ServiceNow (company release)"
+      ]
+    },
+    {
+      "name": "Ami Vora",
+      "title": "Chief Product Officer",
+      "photo": "images/execs/anthropic-vora.jpg",
+      "background": [
+        "Joined at the end of 2025; took over Product on 13 January 2026 when Mike Krieger moved to Anthropic Labs"
+      ]
+    },
+    {
+      "name": "Sasha de Marigny",
+      "title": "Chief Brand and Communications Officer",
+      "photo": "images/execs/anthropic-demarigny.jpg",
+      "background": [
+        "Listed on the leadership page (2026)"
+      ]
+    },
+    {
+      "name": "Hannah Pritchett",
+      "title": "Chief People Officer",
+      "photo": "images/execs/anthropic-pritchett.jpg",
+      "background": [
+        "Listed on the leadership page (2026)"
+      ]
+    },
+    {
+      "name": "Mike Krieger and Ben Mann",
+      "title": "Co-leads, Anthropic Labs",
+      "background": [
+        "Labs formed 13 January 2026, reporting to Daniela Amodei; Krieger was Chief Product Officer from May 2024; Mann is a co-founder named in the music publishers' suits"
+      ]
+    },
+    {
+      "name": "Board: Dario Amodei, Daniela Amodei, Yasmin Razavi, Reed Hastings, Chris Liddell, Vas Narasimhan (Jay Kreps listed in April 2026, absent from the September 2026 company page)",
+      "title": "Board of Directors",
+      "background": [
+        "Hastings (May 2025) and Narasimhan (April 2026) were appointed by the Long-Term Benefit Trust, whose appointees hold 'a majority of board seats' since April 2026",
+        "Razavi: Spark Capital; Kreps: Confluent CEO, LTBT-appointed May 2024 — his absence from the live company page is unexplained on first-party channels"
+      ]
+    },
+    {
+      "name": "Long-Term Benefit Trust: Neil Buddy Shah (Chair), Richard Fontaine, Ben Bernanke",
+      "title": "Trustees",
+      "background": [
+        "'an independent body of five financially disinterested members' holding Class T stock with authority to appoint a growing share of the board (2023 design); Cuéllar left in August 2026 and 'The Trust will appoint a successor through its standard process'",
+        "Shah: CEO, Clinton Health Access Initiative; Fontaine: CNAS (June 2025); Bernanke: former Federal Reserve Chair (July 2026)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (no statements published)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed; run-rate 'approximately $1 billion' at the start of 2025 (Series F release)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company statement of run-rate, not fiscal-year revenue"
+          },
+          {
+            "name": "Amazon investment",
+            "actual": "'a new $4 billion investment from Amazon' bringing 'Amazon's total investment in Anthropic to $8 billion' (22 November 2024); AWS 'primary cloud and training partner'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; Amazon's 10-Q records the notes as USD 8.0 billion from Q3 2023 to Q4 2025"
+          }
+        ],
+        "commentary": "The year the Trainium bet was made — Project Rainier announced with 'hundreds of thousands of Trainium2 chips'."
+      },
+      {
+        "period": "FY2025 (no statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Run-rate 'over $5 billion' in August 2025 and about USD 9 billion at year-end (Anthropic, April 2026); no fiscal-year figure",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company statements of run-rate"
+          },
+          {
+            "name": "Equity raised",
+            "actual": "Series E USD 3.5 billion at USD 61.5 billion (March); Series F USD 13 billion at USD 183 billion (September); Microsoft up to USD 5 billion and NVIDIA up to USD 10 billion committed (November)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases"
+          },
+          {
+            "name": "Compute commitments announced",
+            "actual": "Google: up to 1 million TPUs, 'well over a gigawatt' in 2026, 'tens of billions of dollars'; Microsoft: USD 30 billion of Azure and up to 1 GW; Fluidstack: USD 50 billion",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; no total stated"
+          },
+          {
+            "name": "Litigation provision",
+            "actual": "USD 1.5 billion Bartz settlement agreed (preliminary approval September 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Court record via press; no first-party statement"
+          },
+          {
+            "name": "Claude Code run-rate",
+            "actual": "'$1 billion in run-rate revenue (achieved in November 2025, six months after public launch)'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release (Bun acquisition)"
+          }
+        ],
+        "commentary": "Burn and profitability are not disclosed; The Information's 2025 reporting (USD 5.6 billion 2025 burn, cash-flow positive 2027) predates the 2026 revenue surge and is not used as fact. `expected` is left empty — no consensus exists for a private company."
+      },
+      {
+        "period": "2026 year to date (September)",
+        "periodType": "other",
+        "periodEnd": "2026-09-04",
+        "metrics": [
+          {
+            "name": "Run-rate revenue",
+            "actual": "'$14 billion' (12 February); 'surpassed $30 billion' (6 April); 'Crossed $47 billion' (28 May) — company statements; Bloomberg (17 August, sources): USD 65 billion at end-July",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases for the first three; press for the fourth"
+          },
+          {
+            "name": "Equity raised",
+            "actual": "Series G USD 30 billion at USD 380 billion (February); Google USD 10 billion now plus up to USD 30 billion on milestones (April, press); Amazon USD 5 billion now plus a USD 20 billion facility (April) and USD 5 billion of Series H (Q2 2026 10-Q); Series H USD 65 billion at USD 965 billion (May)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; Amazon 10-Q; Google figures press-only"
+          },
+          {
+            "name": "Compute commitments announced or reported",
+            "actual": "Amazon: up to 5 GW, more than USD 100 billion over ten years; Google/Broadcom: multiple GW from 2027 ('5 GW'); SpaceX Colossus 1: >300 MW at USD 1.25 billion a month (S-1); TeraWulf Justified: 401 MW, about USD 19 billion; ERock: 470 MW order; reported — CoreWeave, Volta USD 10 billion, Nscale about USD 45 billion, Lambda USD 35 billion, Riot USD 9.1 billion, AMD USD 5 billion; Theseus (no figures)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases where stated; press for the rest; TechXplore's tally 'at least $135 billion' in 2026"
+          },
+          {
+            "name": "Litigation",
+            "actual": "Bartz USD 1.5 billion settlement finally approved (20 July); Concord II (about USD 3 billion sought) and Sony/Warner (August) pending; Reddit remanded to state court; Department of War designation ruled unlawful in N.D. Cal. (28 August), D.C. Circuit pending",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Court records via press"
+          },
+          {
+            "name": "IPO",
+            "actual": "Confidential draft S-1 submitted 1 June 2026; FT/Bloomberg report a USD 2 trillion-plus target",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company Rule 135 notice; valuation target is press"
+          }
+        ],
+        "commentary": "Revenue run-rate rose roughly fivefold in seven months by the company's own numbers while announced compute commitments passed USD 135 billion for the year by press count — the ratio the IPO will be priced on. Supplier-investors' marks (Amazon +USD 50.5 billion in Q2 2026; Microsoft +USD 3.2 billion) are gains on private rounds those suppliers helped price."
+      }
+    ],
+    "commentary": "Anthropic publishes run-rate revenue at funding events and nothing else: no fiscal-year revenue, no gross margin, no compute spend, no burn, no headcount. Every capacity and dollar figure above is either an Anthropic release, a counterparty's filing or release (Amazon's 10-Q is the most detailed), or a named-outlet report marked as such. The Bloomberg USD 65 billion run-rate and every neocloud contract value except Colossus 1's S-1 terms rest on unnamed sources."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Anthropic's compute strategy is a deliberate three-silicon hedge whose price is dependence on suppliers that are also its shareholders. Basis: Trainium (up to 5 GW, more than USD 100 billion over ten years, Amazon holding about USD 190 billion of Anthropic paper), TPUs (well over 1 GW in 2026, multiple GW from 2027, Google about 14%), and NVIDIA on Azure, Colossus, CoreWeave and Lambda (Microsoft up to USD 5 billion, NVIDIA up to USD 10 billion); the company's own phrase is 'a disciplined approach to scaling infrastructure'. Amazon's USD 20 billion facility released 'as we reach certain delivery milestones of compute capacity' makes the investor's cash contingent on the supplier's deliveries — the circularity is contractual, not rhetorical.",
+    "2. **(High confidence)** We assess that in 2026 Anthropic crossed from cloud customer to direct infrastructure counterparty without becoming an owner. Basis: the 401 MW Justified lease in its own name, Riot's 191 MW build-to-suit (tenant per Bloomberg), the 470 MW ERock equipment order, the Theseus anchor-tenant platform and the Apollo–Blackstone chip vehicle — leases, generation and lessor-owned chips, but no owned campus. This is the make-versus-lease answer the corpus's xai dossier poses: rent the building, buy the power, let a lessor hold the silicon and a hyperscaler hold the credit.",
+    "3. **(High confidence)** We assess that power, not chips, is the buyer's binding constraint and that Anthropic is paying to remove it. Basis: 'Build AI in America' (50 GW by 2028; 2 GW per training run in 2027, 5 GW in 2028); the February 2026 pledge to pay '100% of the grid upgrades'; the 470 MW on-site gas order; Monarch's islanded 2 GW; Data Center Frontier's flag that transformers, switchgear and chillers are the choke point on the Justified schedule. The buyer is absorbing costs — grid upgrades, generation, consumer price effects — that utilities' large-load tariffs are only beginning to require.",
+    "4. **(Moderate confidence)** We assess that delivery-date risk is now larger than allocation risk, and that the 2H 2026 to early 2028 window will show whether the book is real. Basis: Trainium 'nearly 1GW' by end-2026, Fluidstack sites 'throughout 2026' (CB-5 already moved to early 2027), Barber Lake September 2026, River Bend Q2 2027, Justified 2H 2027, Rockdale December 2027, Monarch late 2027, TPUs 'starting in 2027'. No filing read reports a missed milestone yet; the mid-2026 rate limits the company attributed to a compute shortage show what a slip costs. Startup counterparties — Volta was seven months old, Nscale two years — carry the execution.",
+    "5. **(Moderate confidence)** We assess that the run-rate the compute is priced on is real but the numbers after May 2026 are not the company's. Basis: USD 14 billion, USD 30 billion and USD 47 billion are Anthropic statements at funding events; USD 65 billion (Bloomberg, August) and the USD 100–120 billion year-end expectation (FT) are sourced to 'people familiar'. TechXplore's 'at least $135 billion' of 2026 commitments is likewise a press tally. The S-1 will replace all of it; until then the ratio of commitments to revenue is an estimate built on estimates.",
+    "6. **(Moderate confidence)** We assess that governance and policy posture are assets in the compute market as much as constraints. Basis: LTBT-appointed directors hold a board majority (April 2026) with a former Fed chair as trustee; the company endorsed SB 53, welcomed RAISE, signed the EU code and argues for export controls — and landlords cite 'investment-grade credit' support behind its leases that the filings do not name. The Department of War designation shows the other edge: a policy stance cost a federal customer, and the 28 August ruling recovers it only in one court.",
+    "7. **(Low confidence)** We assess that the reported Nscale and Lambda contracts, if confirmed, mark a shift from tenant-of-record intermediaries (Fluidstack behind Google) to neocloud service contracts where the operator finances the build against Anthropic's signature — and that this is what 'investment-grade credit' behind a private company's leases implies. Basis: Nscale's investment-grade-rated term loans and Riot's 'IG-Backstop in Finalization' language; the identity of the credit provider is not disclosed anywhere read, so the mechanism is inferred.",
+    "Collection gaps: Anthropic publishes no consolidated capacity total, fiscal-year revenue, compute spend, burn or headcount; the credit-support provider behind the Justified and Rockdale leases is unnamed; Google's own statement of the USD 40 billion commitment, CoreWeave's and Lambda's releases, Nscale's confirmation, the TeraWulf Q2 2026 10-Q text, NVIDIA's 10-Q line item and Amazon's Q1 2026 earnings 8-K were not retrieved; the Jay Kreps board discrepancy is unexplained; several CNBC, DCD, Bloomberg and Forbes pages were unreachable and are cited from search summaries.",
+    "INDICATORS TO WATCH — *Q4 2026 — the public S-1:* would replace every press-sourced revenue and commitment figure and name the lease credit support. *End-2026 — 'nearly 1GW' of Trainium and the Fluidstack sites 'online throughout 2026':* the first hard delivery tests of Judgment 4. *Late 2027 — Justified, Rockdale, Monarch and Google/Broadcom TPU first capacity:* the concentration of the book's start dates in one window is itself the risk. *Any ERock site disclosure:* would show where the 470 MW of generation goes and whether it is bridge or permanent power. *D.C. Circuit ruling on the supply-chain-risk designation:* decides whether the federal customer returns. *A confirmed Nscale or Lambda release:* would convert Judgment 7 from inference to record."
+  ],
+  "sources": [
+    {
+      "label": "TechXplore — Anthropic's $35B deal with NVIDIA-backed Lambda",
+      "url": "https://techxplore.com/news/2026-09-anthropic-35b-startup-nvidia.html",
+      "date": "2026-09-02"
+    },
+    {
+      "label": "Dealroom — NVIDIA anchors Anthropic's $35B compute deal as circular-financing fears mount",
+      "url": "https://dealroom.co/news/148222-nvidia-anchors-anthropics-35b-compute-deal-as-circular-financing-fears-m/",
+      "date": "2026-09-02"
+    },
+    {
+      "label": "Cryptopolitan — Anthropic, Lambda, NVIDIA and Hut 8's Texas lease",
+      "url": "https://www.cryptopolitan.com/anthropic-lambda-nvidia-hut8-texas-lease/",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "CoinDesk — Hut 8's Texas power site sits inside Anthropic's $35 billion AI deal (headline)",
+      "url": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Anthropic — Claude Fable 5.1 and Mythos 5.1",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Anthropic — Enterprise Frontier Safeguards",
+      "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Yahoo Finance (Bloomberg) — Anthropic's $36 billion AI chip financing (Apollo/Blackstone SPV)",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html",
+      "date": "2026-09"
+    },
+    {
+      "label": "Capacity — Anthropic, Blackstone and Apollo's $35bn AI infrastructure SPV",
+      "url": "https://capacityglobal.com/news/anthropic-blackstone-apollo-35bn-ai-infrastructure-spv/",
+      "date": "2026-09"
+    },
+    {
+      "label": "Bloomberg — Anthropic seals $35 billion cloud deal with NVIDIA-backed Lambda (headline)",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Anthropic — Improving our alignment and security efforts",
+      "url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "measuredai — Anthropic's 15+ GW data-center build (tracker)",
+      "url": "https://measuredai.substack.com/p/anthropic-data-centers",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Axios — Sony and Warner Music sue Anthropic (headline)",
+      "url": "https://www.axios.com/2026/08/29/anthropic-sony-warner-music-copyright",
+      "date": "2026-08-29"
+    },
+    {
+      "label": "TechCrunch — Anthropic gets its first court win over the Pentagon's supply-chain-risk label",
+      "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Semafor — Google and Microsoft were in talks for the Nscale compute deal that went to Anthropic",
+      "url": "https://www.semafor.com/article/08/28/2026/google-and-microsoft-were-in-talks-for-nscale-compute-deal-that-went-to-anthropic",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Yahoo Finance (Forkast) — Anthropic's $45B Nscale deal adds an eighth compute corridor",
+      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-45b-nscale-deal-adds-200722819.html",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Anthropic — Expanding our support for scientists",
+      "url": "https://www.anthropic.com/news/expanding-support-for-scientists",
+      "date": "2026-08-27"
+    },
+    {
+      "label": "TechCrunch — Anthropic continues compute-gobbling streak in $45 billion deal with Nscale",
+      "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+      "date": "2026-08-26"
+    },
+    {
+      "label": "Bloomberg — Anthropic to pay Nscale $45 billion for AI computing power (headline)",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-26/anthropic-to-pay-nscale-45-billion-for-ai-computing-power",
+      "date": "2026-08-26"
+    },
+    {
+      "label": "TechCrunch — Anthropic's annualized revenue surges to $65B (Bloomberg)",
+      "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "Anthropic — Claude text watermark (EU AI Act compliance)",
+      "url": "https://www.anthropic.com/news/claude-text-watermark",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "ERock — newsroom: 470 MW natural-gas power deal with Anthropic pushes backlog to $1.7B (Hart Energy)",
+      "url": "https://erock.com/newsroom/erock-secures-470-mw-natural-gas-power-deal-with-anthropic-pushing-backlog-to-1-7b-hart-energy/",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "ERock — Q2 2026 results: 470 MW equipment purchase order with Anthropic",
+      "url": "https://ir.erock.com/news-events/press-releases/detail/135/erock-reports-second-quarter-2026-results",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "ERock — 8-K Ex. 99.1 Q2 2026 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002110029/000119312526344714/eroc-ex99_1.htm",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "Yahoo Finance — Riot Platforms soars 17.9% on frontier-lab lease",
+      "url": "https://finance.yahoo.com/technology/ai/articles/riot-platforms-soars-17-9-130537358.html",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "Riot Platforms — 8-K Ex. 99.2: 191 MW build-to-suit at Rockdale, $9.1B, IG-backstop in finalization",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001167419/000110465926093406/riot-20260810xex99d2.htm",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Riot Platforms — Q2 2026 results and strategic highlights",
+      "url": "https://www.riotplatforms.com/riot-platforms-reports-second-quarter-2026-financial-results-and-strategic-highlights/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Macquarie — Anthropic, Macquarie Asset Management and GIC data-centre infrastructure partnership (Theseus)",
+      "url": "https://www.macquarie.com/au/en/about/news/2026/anthropic-mam-gic-data-centre-infrastructure-partnership.html",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Anthropic — Tino Cuéllar named Chief Global Affairs Officer",
+      "url": "https://www.anthropic.com/news/tino-cuellar",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "BigGo Finance — Volta Infra six-year $10B Anthropic deal, Tydal, Norway",
+      "url": "https://finance.biggo.com/news/86994ef5-b675-46ff-ba01-c99258a7f743",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "Global Data Center Hub — every Anthropic compute deal (Theseus tally)",
+      "url": "https://www.globaldatacenterhub.com/p/every-anthropic-compute-deal-has",
+      "date": "2026-08"
+    },
+    {
+      "label": "European Commission — General-Purpose AI Code of Practice signatories",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Amazon — 10-Q Q2 2026 (Anthropic investment note)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001018724/000101872426000026/amzn-20260630.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "TechCrunch — Microsoft logs $3.2B from Anthropic investment",
+      "url": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "Anthropic — Our position on open-weights models",
+      "url": "https://www.anthropic.com/news/position-open-weights-models",
+      "date": "2026-07-27"
+    },
+    {
+      "label": "Anthropic — Claude Opus 5",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "date": "2026-07-24"
+    },
+    {
+      "label": "Authors Alliance — Bartz v. Anthropic settlement receives final approval",
+      "url": "https://www.authorsalliance.org/2026/07/21/bartz-v-anthropic-settlement-receives-final-approval/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "TechCrunch — Anthropic's landmark $1.5B copyright settlement is approved",
+      "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/",
+      "date": "2026-07-20"
+    },
+    {
+      "label": "Data Center Frontier — TeraWulf's $19B Anthropic lease puts its brownfield AI strategy to the test",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/55389531/terawulfs-19b-anthropic-lease-puts-its-brownfield-ai-strategy-to-the-test",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "Anthropic — Ben Bernanke joins the Long-Term Benefit Trust",
+      "url": "https://www.anthropic.com/news/ben-bernanke",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "TeraWulf — Anthropic lease at Justified Data Campus; sale of Abernathy JV interest to Fluidstack",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "Hoodline — rural Kentucky river town snags Anthropic's $19 billion data-center deal",
+      "url": "https://hoodline.com/2026/07/rural-kentucky-river-town-snags-anthropic-s-19-billion-data-center-deal/",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "Anthropic — Claude Sonnet 5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "date": "2026-06-30"
+    },
+    {
+      "label": "Anthropic — Redeploying Claude Fable 5 after export controls lifted",
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "date": "2026-06-30"
+    },
+    {
+      "label": "Anthropic — Economic Index, June 2026 report",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "date": "2026-06-26"
+    },
+    {
+      "label": "Anthropic — Claude Corps",
+      "url": "https://www.anthropic.com/news/claude-corps",
+      "date": "2026-06-11"
+    },
+    {
+      "label": "AI News — new data-centre projects mark Anthropic's biggest US expansion (Broadcom–Apollo–Blackstone)",
+      "url": "https://www.artificialintelligence-news.com/news/new-data-centre-projects-mark-anthropic-biggest-us-expansion/",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "Anthropic — Claude Fable 5 and Mythos 5",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "date": "2026-06-09"
+    },
+    {
+      "label": "Fortune — Amazon and Google stand to make billions from Anthropic's IPO (stakes)",
+      "url": "https://fortune.com/2026/06/04/amazon-google-billions-anthropic-ipo/",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "Anthropic — confidential draft S-1 submitted to the SEC",
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+      "date": "2026-06-01"
+    },
+    {
+      "label": "TechCrunch — Anthropic files to go public",
+      "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
+      "date": "2026-06-01"
+    },
+    {
+      "label": "Anthropic — Advanced AI Framework (PDF, June 2026)",
+      "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/0a58d567024a8b448ff15158ebc3625328dfcc1f.pdf",
+      "date": "2026-06"
+    },
+    {
+      "label": "Anthropic — Series H",
+      "url": "https://www.anthropic.com/news/series-h",
+      "date": "2026-05-28"
+    },
+    {
+      "label": "Anthropic — Claude Opus 4.8",
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "date": "2026-05-28"
+    },
+    {
+      "label": "TechCrunch — Anthropic will pay xAI $1.25 billion per month for compute (SpaceX S-1)",
+      "url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "Yahoo Finance (24/7 Wall St) — Anthropic CFO reveals the compute gamble",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/anthropic-cfo-reveals-compute-gamble-120656734.html",
+      "date": "2026-05-15"
+    },
+    {
+      "label": "Anthropic — 2028: two scenarios for global AI leadership",
+      "url": "https://www.anthropic.com/news/2028-ai-leadership",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "Anthropic — expanded PwC partnership",
+      "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "CNBC — Alphabet's rally reflects value of owning most of the AI stack ($200B commitment, backlog concentration)",
+      "url": "https://www.cnbc.com/2026/05/10/alphabet-160percent-rally-in-year-reflects-value-of-owning-most-of-ai-stack.html",
+      "date": "2026-05-10"
+    },
+    {
+      "label": "TechCrunch — We're feeling cynical about xAI's big deal with Anthropic",
+      "url": "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/",
+      "date": "2026-05-10"
+    },
+    {
+      "label": "Anthropic — higher usage limits and a compute deal with SpaceX (Colossus 1)",
+      "url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "xAI / SpaceX AI — Anthropic compute partnership (Colossus 1)",
+      "url": "https://x.ai/news/anthropic-compute-partnership",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "Fortune — half of Google's and Amazon's AI profits came from their Anthropic stakes",
+      "url": "https://fortune.com/2026/04/30/google-amazon-ai-profits-anthropic-stake-bubble-earnings-2026/",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "Amazon — 10-Q Q1 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "TechCrunch — Google to invest up to $40B in Anthropic in cash and compute",
+      "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+      "date": "2026-04-24"
+    },
+    {
+      "label": "Bloomberg — Google plans to invest up to $40 billion in Anthropic (headline)",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic",
+      "date": "2026-04-24"
+    },
+    {
+      "label": "Anthropic — at Google Cloud Next 2026",
+      "url": "https://www.anthropic.com/events/anthropic-at-google-cloud-next-2026",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "Anthropic — Anthropic and Amazon expand collaboration for up to 5 gigawatts of new compute",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "Anthropic — Long-Term Benefit Trust appoints Vas Narasimhan to the board",
+      "url": "https://www.anthropic.com/news/narasimhan-board",
+      "date": "2026-04-14"
+    },
+    {
+      "label": "DCD — CoreWeave and Anthropic sign multi-year compute agreement (headline)",
+      "url": "https://www.datacenterdynamics.com/en/news/coreweave-and-anthropic-sign-multi-year-compute-agreement/",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "Anthropic — Project Glasswing",
+      "url": "https://www.anthropic.com/glasswing",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "Anthropic — expands partnership with Google and Broadcom for multiple gigawatts of compute",
+      "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+      "date": "2026-04-06"
+    },
+    {
+      "label": "Google Cloud — Anthropic expands use of Google Cloud and TPUs (Broadcom)",
+      "url": "https://www.googlecloudpresscorner.com/2026-04-06-Anthropic-Expands-Use-of-Google-Cloud-and-TPUs",
+      "date": "2026-04-06"
+    },
+    {
+      "label": "Anthropic — Responsible Scaling Policy v3.1 (PDF)",
+      "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/bf04581e4f329735fd90634f6a1962c13c0bd351.pdf",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "Amazon — invests an additional $5 billion in Anthropic; 5 GW; >$100 billion over ten years",
+      "url": "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
+      "date": "2026-04"
+    },
+    {
+      "label": "R&D World — Anthropic's oversight trust hits majority control",
+      "url": "https://www.rdworldonline.com/anthropics-oversight-trust-just-hit-majority-control-the-tipping-point-was-adding-novartis-ceo-vas-narasimhan-to-its-board/",
+      "date": "2026-04"
+    },
+    {
+      "label": "Wiley — New York finalizes RAISE Act; law takes effect 1 January 2027",
+      "url": "https://www.wiley.law/alert-New-York-Finalizes-RAISE-Act-for-Frontier-AI-Models-Law-Takes-Effect-January-1-2027",
+      "date": "2026-04"
+    },
+    {
+      "label": "Fortune — Anthropic's Pentagon lawsuit and the China AI race",
+      "url": "https://fortune.com/2026/03/12/anthropic-pentagon-lawsuit-supply-chain-risk-china-ai-race/",
+      "date": "2026-03-12"
+    },
+    {
+      "label": "Anthropic — Where things stand with the Department of War",
+      "url": "https://www.anthropic.com/news/where-stand-department-war",
+      "date": "2026-03-05"
+    },
+    {
+      "label": "PYMNTS — NVIDIA signals final investments in OpenAI and Anthropic",
+      "url": "https://www.pymnts.com/artificial-intelligence-2/2026/nvidia-signals-final-investments-in-openai-and-anthropic/",
+      "date": "2026-03"
+    },
+    {
+      "label": "Anthropic — statement on the Secretary of War's comments",
+      "url": "https://www.anthropic.com/news/statement-comments-secretary-war",
+      "date": "2026-02-27"
+    },
+    {
+      "label": "Anthropic — statement on the Department of War",
+      "url": "https://www.anthropic.com/news/statement-department-of-war",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Anthropic — Responsible Scaling Policy v3.0",
+      "url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Anthropic — detecting and preventing distillation attacks",
+      "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "Anthropic — Series G: $30 billion at $380 billion post-money",
+      "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "GIC — leads $30 billion Series G in Anthropic",
+      "url": "https://www.gic.com.sg/newsroom/all/gic-leads-30-billion-series-g-in-anthropic/",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Anthropic — covering electricity price increases from our data centers",
+      "url": "https://www.anthropic.com/news/covering-electricity-price-increases",
+      "date": "2026-02-11"
+    },
+    {
+      "label": "Anthropic — Claude Opus 4.6",
+      "url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "date": "2026-02-05"
+    },
+    {
+      "label": "TechCrunch — music publishers sue Anthropic for $3B over 20,000 works",
+      "url": "https://techcrunch.com/2026/01/29/music-publishers-sue-anthropic-for-3b-over-flagrant-piracy-of-20000-works/",
+      "date": "2026-01-29"
+    },
+    {
+      "label": "Anthropic — Mariano-Florentino Cuéllar joins the Long-Term Benefit Trust",
+      "url": "https://www.anthropic.com/news/mariano-florentino-long-term-benefit-trust",
+      "date": "2026-01-21"
+    },
+    {
+      "label": "Sherwood — Microsoft on track to spend $500 million per year on Anthropic AI (The Information)",
+      "url": "https://sherwood.news/tech/report-microsoft-on-track-to-spend-usd500-million-per-year-on-anthropic-ai/",
+      "date": "2026-01-14"
+    },
+    {
+      "label": "Anthropic — introducing Anthropic Labs",
+      "url": "https://www.anthropic.com/news/introducing-anthropic-labs",
+      "date": "2026-01-13"
+    },
+    {
+      "label": "Anthropic — Claude for Healthcare",
+      "url": "https://www.anthropic.com/news/healthcare-life-sciences",
+      "date": "2026-01-11"
+    },
+    {
+      "label": "Skadden — New York enacts AI transparency law (RAISE vs the executive order)",
+      "url": "https://www.skadden.com/insights/publications/2026/01/new-york-enacts-ai-transparency-law",
+      "date": "2026-01"
+    },
+    {
+      "label": "TechCrunch — Governor Hochul signs RAISE Act; Anthropic's Sarah Heck quoted",
+      "url": "https://techcrunch.com/2025/12/20/new-york-governor-kathy-hochul-signs-raise-act-to-regulate-ai-safety/",
+      "date": "2025-12-20"
+    },
+    {
+      "label": "Anthropic — Frontier Compliance Framework for SB 53",
+      "url": "https://www.anthropic.com/news/compliance-framework-SB53",
+      "date": "2025-12-19"
+    },
+    {
+      "label": "Anthropic — DOE Genesis Mission partnership",
+      "url": "https://www.anthropic.com/news/genesis-mission-partnership",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "Hut 8 — announces AI infrastructure partnership with Anthropic and Fluidstack",
+      "url": "https://www.prnewswire.com/news-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack-302644377.html",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Hut 8 — 8-K Ex. 99.1: 245 MW River Bend lease with Fluidstack, Google backstop",
+      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Anthropic — acquires Bun as Claude Code reaches $1B run-rate",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone",
+      "date": "2025-12-03"
+    },
+    {
+      "label": "Anthropic — Microsoft, NVIDIA and Anthropic announce strategic partnerships",
+      "url": "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "Microsoft — Microsoft, NVIDIA and Anthropic announce strategic partnerships",
+      "url": "https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "NVIDIA — Microsoft, NVIDIA and Anthropic partnership",
+      "url": "https://blogs.nvidia.com/blog/microsoft-nvidia-anthropic-announce-partnership/",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "Anthropic — invests $50 billion in American AI infrastructure with Fluidstack",
+      "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "Fluidstack — selected by Anthropic to deliver custom data centers",
+      "url": "https://fluidstack.io/blog/fluidstack-selected-by-anthropic-to-deliver-custom-data-centers-in-the-us",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "CNBC — Anthropic to spend $50B on data centers in Texas and New York",
+      "url": "https://www.cnbc.com/2025/11/12/anthropic-ai-data-centers-texas-new-york.html",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "Anthropic — new offices in Paris and Munich",
+      "url": "https://www.anthropic.com/news/new-offices-in-paris-and-munich-expand-european-presence",
+      "date": "2025-11-07"
+    },
+    {
+      "label": "CNBC — Amazon opens $11 billion Project Rainier in Indiana",
+      "url": "https://www.cnbc.com/2025/10/29/amazon-opens-11-billion-ai-data-center-project-rainier-in-indiana.html",
+      "date": "2025-10-29"
+    },
+    {
+      "label": "Semafor — AWS's multi-state AI data center is powering Anthropic's Claude",
+      "url": "https://www.semafor.com/article/10/29/2025/aws-massive-multi-state-ai-data-center-is-powering-anthropics-claude",
+      "date": "2025-10-29"
+    },
+    {
+      "label": "Anthropic — expanding our use of Google Cloud TPUs and services",
+      "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+      "date": "2025-10-23"
+    },
+    {
+      "label": "Google Cloud — Anthropic to expand use of Google Cloud TPUs and services",
+      "url": "https://www.googlecloudpresscorner.com/2025-10-23-Anthropic-to-Expand-Use-of-Google-Cloud-TPUs-and-Services",
+      "date": "2025-10-23"
+    },
+    {
+      "label": "Anthropic — Claude for Life Sciences",
+      "url": "https://www.anthropic.com/news/claude-for-life-sciences",
+      "date": "2025-10-20"
+    },
+    {
+      "label": "Anthropic — Rahul Patil joins as CTO",
+      "url": "https://www.anthropic.com/news/rahul-patil-joins-anthropic",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "Anthropic — endorsing SB 53",
+      "url": "https://www.anthropic.com/news/anthropic-is-endorsing-sb-53",
+      "date": "2025-09-08"
+    },
+    {
+      "label": "Anthropic — updating restrictions of sales to unsupported regions",
+      "url": "https://www.anthropic.com/news/updating-restrictions-of-sales-to-unsupported-regions",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Anthropic — Series F at $183B post-money",
+      "url": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+      "date": "2025-09-02"
+    },
+    {
+      "label": "Anthropic — Claude Code on Team and Enterprise",
+      "url": "https://www.anthropic.com/news/claude-code-on-team-and-enterprise",
+      "date": "2025-08-20"
+    },
+    {
+      "label": "Anthropic — expanded Claude access across all three branches of government",
+      "url": "https://www.anthropic.com/news/offering-expanded-claude-access-across-all-three-branches-of-government",
+      "date": "2025-08-12"
+    },
+    {
+      "label": "Anthropic — thoughts on America's AI Action Plan",
+      "url": "https://www.anthropic.com/news/thoughts-on-america-s-ai-action-plan",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "Anthropic — Build AI in America (50 GW by 2028)",
+      "url": "https://www.anthropic.com/news/build-ai-in-america",
+      "date": "2025-07-21"
+    },
+    {
+      "label": "Anthropic — Build AI in America executive summary (PDF)",
+      "url": "https://www-cdn.anthropic.com/13e4cfd61ee168c0372256d7de83d57c9df7c6d1.pdf",
+      "date": "2025-07-21"
+    },
+    {
+      "label": "Anthropic — EU General-Purpose AI Code of Practice",
+      "url": "https://www.anthropic.com/news/eu-code-practice",
+      "date": "2025-07-21"
+    },
+    {
+      "label": "Anthropic — Paul Smith to join as Chief Commercial Officer",
+      "url": "https://www.anthropic.com/news/paul-smith-to-join-anthropic",
+      "date": "2025-07-15"
+    },
+    {
+      "label": "Anthropic — Claude for Financial Services",
+      "url": "https://www.anthropic.com/news/claude-for-financial-services",
+      "date": "2025-07-15"
+    },
+    {
+      "label": "Anthropic — investing in energy to secure America's AI future",
+      "url": "https://www.anthropic.com/news/investing-in-energy-to-secure-america-s-ai-future",
+      "date": "2025-07-15"
+    },
+    {
+      "label": "Anthropic — Department of Defense $200M prototype agreement",
+      "url": "https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations",
+      "date": "2025-07-14"
+    },
+    {
+      "label": "Anthropic — Richard Fontaine appointed to the Long-Term Benefit Trust",
+      "url": "https://www.anthropic.com/news/national-security-expert-richard-fontaine-appointed-to-anthropic-s-long-term-benefit-trust",
+      "date": "2025-06-07"
+    },
+    {
+      "label": "Anthropic — Claude Gov models for US national security customers",
+      "url": "https://www.anthropic.com/news/claude-gov-models-for-u-s-national-security-customers",
+      "date": "2025-06-06"
+    },
+    {
+      "label": "Anthropic — Reed Hastings joins the board",
+      "url": "https://www.anthropic.com/news/reed-hastings",
+      "date": "2025-05-28"
+    },
+    {
+      "label": "Anthropic — position on the Diffusion Rule",
+      "url": "https://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule",
+      "date": "2025-04-30"
+    },
+    {
+      "label": "Anthropic — Series E at $61.5B post-money",
+      "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+      "date": "2025-03-03"
+    },
+    {
+      "label": "Anthropic — response to the OSTP AI Action Plan RFI (PDF)",
+      "url": "https://assets.anthropic.com/m/4e20a4ab6512e217/original/Anthropic-Response-to-OSTP-RFI-March-2025-Final-Submission-v3.pdf",
+      "date": "2025-03"
+    },
+    {
+      "label": "FTC — staff report on AI partnerships and investments (6(b) study)",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-issues-staff-report-ai-partnerships-investments-study",
+      "date": "2025-01-17"
+    },
+    {
+      "label": "Anthropic — powering the next generation of AI development with AWS ($8 billion)",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-trainium",
+      "date": "2024-11-22"
+    },
+    {
+      "label": "UK CMA — summary of phase 1 decision, Alphabet/Anthropic",
+      "url": "https://assets.publishing.service.gov.uk/media/673c56a45aadb65be090fdad/Summary_of_phase_1_decision.pdf",
+      "date": "2024-11-19"
+    },
+    {
+      "label": "UK CMA — Amazon/Anthropic partnership merger inquiry",
+      "url": "https://gov.uk/cma-cases/amazon-slash-anthropic-partnership-merger-inquiry",
+      "date": "2024-09-27"
+    },
+    {
+      "label": "Anthropic — Jay Kreps appointed to the board",
+      "url": "https://www.anthropic.com/news/jay-kreps-appointed-to-board-of-directors",
+      "date": "2024-05-29"
+    },
+    {
+      "label": "Anthropic — Krishna Rao joins as CFO",
+      "url": "https://www.anthropic.com/news/krishna-rao-joins-anthropic",
+      "date": "2024-05-21"
+    },
+    {
+      "label": "Anthropic — Mike Krieger joins as CPO",
+      "url": "https://www.anthropic.com/news/mike-krieger-joins-anthropic",
+      "date": "2024-05-15"
+    },
+    {
+      "label": "Harvard Law School Forum — Anthropic's Long-Term Benefit Trust",
+      "url": "https://corpgov.law.harvard.edu/2023/10/28/anthropic-long-term-benefit-trust/",
+      "date": "2023-10-28"
+    },
+    {
+      "label": "Anthropic — the Long-Term Benefit Trust",
+      "url": "https://www.anthropic.com/news/the-long-term-benefit-trust",
+      "date": "2023-09-19"
+    },
+    {
+      "label": "Value Add VC — is Anthropic profitable in 2026? (analyst estimates)",
+      "url": "https://valueaddvc.com/blog/is-anthropic-profitable-2026-losses-burn-rate-and-the-path-to-breakeven"
+    },
+    {
+      "label": "Anthropic — company page (board, LTBT, PBC)",
+      "url": "https://www.anthropic.com/company"
+    },
+    {
+      "label": "Anthropic — leadership page",
+      "url": "https://www.anthropic.com/company/leadership"
+    },
+    {
+      "label": "Anthropic — policy hub",
+      "url": "https://www.anthropic.com/policy"
+    },
+    {
+      "label": "Anthropic — Transparency Hub",
+      "url": "https://www.anthropic.com/transparency"
+    },
+    {
+      "label": "Anthropic — Claude Fable product page",
+      "url": "https://www.anthropic.com/claude/fable"
+    },
+    {
+      "label": "Claude — pricing",
+      "url": "https://claude.com/pricing"
+    },
+    {
+      "label": "Anthropic — careers: Technical Program Manager, Data Center Infrastructure",
+      "url": "https://www.anthropic.com/careers/jobs/5013743008"
+    },
+    {
+      "label": "Hut 8 — River Bend project page (partners Fluidstack, Anthropic, Entergy)",
+      "url": "https://www.hut8.com/data-centers/river-bend"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

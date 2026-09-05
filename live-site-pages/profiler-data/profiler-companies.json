@@ -2103,6 +2103,64 @@
       "srcTotal": 151,
       "srcFirstPct": 65,
       "kpiNorm": false
+    },
+    {
+      "slug": "fluidstack",
+      "name": "Fluidstack",
+      "categories": [
+        "neocloud"
+      ],
+      "tagline": "Tenant-of-record on ~1.4 GW of Anthropic-bound leases at TeraWulf, Cipher, Hut 8 and Meridian Arc — bankable only through Google's backstops and penny warrants; owns one campus (Abernathy, July 2026) and USD 2.6bn of equity against ~USD 27bn of rent.",
+      "hq": "New York, NY, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "fluidstack.io",
+        "okmulgeefluidstack.io",
+        "sullivanfluidstack.io",
+        "harlingenfluidstack.io"
+      ],
+      "srcTotal": 136,
+      "srcFirstPct": 47,
+      "kpiNorm": false
+    },
+    {
+      "slug": "nscale",
+      "name": "Nscale",
+      "categories": [
+        "neocloud"
+      ],
+      "tagline": "Microsoft-anchored European neocloud that owns its ground — Glomfjord and Narvik hydro, the 2 GW Caterpillar-powered Monarch campus — ~200,000 GB300 + 96,000 Rubin contracted, a reported USD 45bn Anthropic deal after Microsoft walked, USD 3.7bn equity and USD 6.1bn debt against ~USD 100M quarterly revenue.",
+      "hq": "London, United Kingdom",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "nscale.com",
+        "docs.nscale.com"
+      ],
+      "srcTotal": 126,
+      "srcFirstPct": 51,
+      "kpiNorm": false
+    },
+    {
+      "slug": "anthropic",
+      "name": "Anthropic",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The compute buyer — up to 5 GW of Trainium, 'well over a gigawatt' of TPUs then multi-GW from 2027, USD 30bn of Azure, all of Colossus 1, a 401 MW direct lease, a 470 MW gas order and reported USD 45bn/USD 35bn neocloud contracts, on run-rate revenue of USD 47bn and a USD 965bn Series H ahead of an IPO.",
+      "hq": "San Francisco, CA, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "anthropic.com",
+        "claude.com",
+        "www-cdn.anthropic.com",
+        "assets.anthropic.com"
+      ],
+      "srcTotal": 149,
+      "srcFirstPct": 56,
+      "kpiNorm": false
     }
   ]
 }

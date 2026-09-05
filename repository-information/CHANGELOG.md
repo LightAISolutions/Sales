@@ -3,11 +3,113 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 75/100`
+`Sections: 76/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.59r] — 2026-09-04 10:05:27 PM EST
+
+> Fresh session on Fable 5.1 High. Run Phase B session F2 of repository-information/PROFILER-COVERAGE-PLAN.md:
+> Fluidstack, Nscale, Anthropic — the §8 rows `fluidstack` (neocloud), `nscale` (neocloud), `anthropic`
+> (hyperscaler), listed under B9 in §4/§8. F2 is the second of the F1–F8 regrouping recorded in §4 (dated
+> paragraph, 2026-09-04, v04.58r); F1 landed DNV, Sargent & Lundy and CoolIT at v04.58r. When you flip the
+> three §8 rows, record `B9 → F2` in the Group column exactly as F1 recorded `B10 → F1`.
+> READ FIRST: repository-information/SESSION-CONTEXT.md (both entries — the Latest has the F1 lessons and
+> environment notes); PROFILER-COVERAGE-PLAN.md §2 (the model rule — no substitution to record, F2 is
+> natively Fable High), §4 row B-A / B9 and the regrouping paragraph, §7, and the three §8 rows;
+> .claude/rules/profiler-app.md (Profiler Command, Profiler Prep Command); repository-information/
+> PROFILER-SCHEMA.md; PROFILER-STYLES.md (active style: intel-briefing). CLASSROOM-CURRICULUM-PLAN.md §6
+> is NOT in scope — F2 closes no register row (the §8 "Closes" column reads "AIDC developers"); do not
+> edit it. .claude/rules/classroom-app.md is NOT needed.
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, categories per the §8 row, intel-briefing prose with confidence-tagged key judgments
+> and an indicators-to-watch bullet) and study guide (schema v2, a where-it-fails section, {{term}} tooltips
+> against profiler-concepts.json, new shared concepts registered there rather than in local glossaries,
+> flashcards and quiz on how the business model and the buying process work, never company trivia).
+> All three are private: disclose revenue, headcount, backlog or funding only where a source states it
+> (a funding release, a lender's or landlord's filing, a regulator, a court record, the company's own
+> release); leave `expected` empty and say so; calendar rows carry `cadence: "quarterly"`.
+> RESEARCH PRIORITIES. Fluidstack: tenant-of-record position in the TeraWulf, Hut 8 and Cipher leases
+> (capacity in MW, term, the Google backstop/guarantee mechanics and warrants, dates from the landlords'
+> 8-Ks and releases), the Anthropic–Fluidstack River Bend and other named sites, the French/European
+> sovereign-compute announcements, what Fluidstack actually owns versus leases (no GPUs on balance sheet?),
+> ownership and funding rounds with amounts only where stated, leadership. Nscale: the Microsoft-anchored
+> contracts (Narvik/Norway, Texas, UK — GW and GPU counts as stated by Microsoft or Nscale), the Aker JV,
+> the Stargate UK / OpenAI announcements, funding rounds (Series B amount and investors as released),
+> sites and power sources, leadership, and what is contracted versus announced. Anthropic: treat it as the
+> compute buyer — the Google TPU and Amazon Trainium commitments (Project Rainier, the 1 GW / multi-GW
+> TPU announcements, the Microsoft/NVIDIA deal — numbers only as the parties released them), the
+> Fluidstack $50bn data-centre programme and the Texas/New York sites, the Enchanted Rock 470 MW order and
+> the TeraWulf 401 MW lease already named in ten covered dossiers (resolve every one as a relationships[]
+> entry with the source that states the link), ownership (Amazon and Google stakes as disclosed),
+> governance (LTBT, PBC status), revenue run-rate only where a named executive or filing states it, and
+> its policy exposure (export controls, the RAISE-style state bills, EU AI Act). For every company: two
+> research agents (first-party exhaustive, then third-party — landlords' SEC filings, lenders, regulators,
+> court records, trade press), a URL for every relationship claim, relationships[] resolving only to
+> covered slugs with a source that states the link. Put every must-find item in the agent prompts —
+> nothing can be searched after they return.
+> STUDY GUIDES: one guide each, do not duplicate. Check the existing coreweave, nebius, lambda, crusoe and
+> iren guides first and do not repeat their neocloud material (GPU-as-a-service unit economics, the
+> GPU-backed debt structure, the hyperscaler-anchor tenant model). Fluidstack: the tenant-of-record
+> structure — who signs the lease, who guarantees it, who owns the GPUs, what the landlord's lender sees,
+> how a backstop/warrant package prices a credit gap, the counterparty chain from landlord to end user.
+> Nscale: sovereign and anchored compute — how a single-anchor neocloud is financed and built (Microsoft's
+> commitments as the collateral), power-first siting in the Nordics, what "contracted" means in a
+> gigawatt announcement versus a signed capacity agreement. Anthropic: the AI lab as a compute buyer —
+> how a frontier lab contracts capacity across three silicon suppliers, take-or-pay and prepayment
+> structures, the make-versus-lease decision, why a lab signs a 401 MW lease and a 470 MW generation order
+> itself, and where the buyer fails (concentration, delivery-date risk, power before chips). Check the
+> openai and xai guides first and do not repeat their compute-buyer material.
+> BOOKKEEPING, same commit: `python3 scripts/sync-profiler-registry.py`, `build-profiler-graph.py`,
+> `check-profiler-study.py`; three calendar rows; README tree entries for every profile, study file and
+> study-prep folder plus the execs count (recount the files; currently 376 across 68 companies); flip the
+> three §8 rows; CHANGELOG entry (counter at 75/100 — no rotation). One push commit with repo version bump.
+> ENVIRONMENT (confirmed by F1, 2026-09-04): pip install playwright and pip install pymupdf are both
+> needed; never run playwright install — use the /opt/pw-browsers/chromium-*/chrome-linux/chrome
+> executable; the HTTP server for the harness must be threaded (ThreadingMixIn, daemon threads, swallow
+> BrokenPipeError); route script.google.com to the roles stub in scripts/verify-profiler-roles.py and
+> fulfill accounts.google.com with an empty script; reload between dossiers. Tool output above ~30 KB is
+> persisted to a file — read agent reports in chunks of ≤40 lines. Foreground sleep is blocked — use the
+> Monitor tool to wait for agent report files. A stop hook fires on uncommitted edits while agents run —
+> `git stash` plan edits and pop them before the commit. TWO LESSONS FROM F1, BOTH MANDATORY: (1) build
+> the sources[] list from a URL index extracted programmatically from the agent reports and assert every
+> URL against it before writing the profile — F1 fabricated one URL from a remembered quote and caught it
+> only by grepping; (2) treat every ownership, litigation and funding premise in this brief as a dated
+> fact to re-verify first — F1's brief was stale on CoolIT's owner and on a court outcome. Do not read
+> other dossiers' prose as a template for judgments. Estimate ~90 minutes; F1 took 1h 34m.
+> VERIFY BEFORE COMMIT: sync-profiler-registry.py --check clean, check-profiler-study.py clean, every
+> dossier and guide renders with zero page errors and zero console errors (Playwright, per-slug tabs
+> including Relationships, sources count matches the file, no literal {{}} and no unresolved term spans),
+> every relationships[] slug and every {{term}} resolving. Normal Pre-Commit and Pre-Push checklists;
+> push on a claude/* branch.
+> If a capacity, a contract value or a customer cannot be sourced from a filing, a regulator, a court
+> record or the party's own release, leave it out and say so.
+
+### Added
+
+**Profiler dossiers + study guides — Phase B session F2 (data-only; no page or GAS change)**
+
+- **`live-site-pages/profiler-data/fluidstack.profile.json`** — Fluidstack, `neocloud`, schema v7, profileVersion 1, intel-briefing style: 136 sources (110 dated; 47% first-party), 5 products, two spec groups (the lease ledger per campus — Lake Mariner 378 MW, Abernathy 168, Barber Lake 207, River Bend 245, New Lebanon 430, about 1.4 GW contracted critical IT — and the platform), 35 developments, 9 relationships to covered companies (anthropic, google, terawulf, entergy, aep, nvidia, nscale, nebius, iren), 6 policy regimes, 10 decision makers (no company-published headshots found), private financials with a `mw-contracted` KPI of 1,428 MW; 6 confidence-tagged judgments, a collection-gaps paragraph and an indicators-to-watch bullet. **Premises re-verified as dated facts:** the reported USD 1.5bn round at USD 18bn (September 2026) is unannounced by the company and is marked reported; the 1 GW France campus memorandum was withdrawn in March 2026; every Google backstop term is sourced from the landlords' filings and law-firm alerts because Google has published nothing naming Fluidstack.
+- **`live-site-pages/profiler-data/nscale.profile.json`** — Nscale, `neocloud`, profileVersion 1: 126 sources (98 dated; 51% first-party), 6 products, 39 developments, 9 relationships (microsoft active; anthropic `announced` — the reported USD 45bn / 460 MW Monarch contract, unconfirmed by either party; openai `announced`; nvidia, caterpillar, schneider-electric, fluidstack, nebius; google `historical`), 5 policy regimes, 20 decision makers with 16 headshots; revenue (about USD 33m 2025, about USD 100m Q2 2026) and the USD 51bn backlog carried as press-reported. **Premises re-verified:** OpenAI's Stargate Norway LOI was replaced by Microsoft (Aker, April 2026) and Stargate UK is paused; Microsoft walked from the 1.35 GW Monarch LOI (Semafor) before Anthropic took 460 MW.
+- **`live-site-pages/profiler-data/anthropic.profile.json`** — Anthropic, `hyperscaler`, profileVersion 1: 149 sources (140 dated; 56% first-party), 5 products (the compute book, sites/leases/power, Claude models, Claude Code, verticals and government), two spec groups (the commitments ledger; funding and run-rate), 45 developments, 13 relationships (amazon, google, microsoft, nvidia, terawulf, enchanted-rock, fluidstack, xai, openai active; coreweave, nscale, lambda, entergy `announced`), 7 policy regimes, 19 decision makers with 15 headshots; 7 judgments. Run-rate revenue (USD 9bn end-2025 → USD 47bn May 2026) and the Series H (USD 65bn at USD 965bn post-money) are the company's own statements; the confidential draft S-1 (1 June 2026) has nothing public. **Premise re-verified:** the 401 MW, 20-year lease is at Justified (Hawesville, KY), direct with TeraWulf, with no Fluidstack entity in it.
+- **`fluidstack.study.json`, `nscale.study.json`, `anthropic.study.json`** (schema v2 — 14 / 13 / 12 sections, each with a start-here callout, a where-it-fails section, a where-X-slots-in table, flashcards and a self-test on the structure and the buying process, never company trivia). Fluidstack teaches the tenant-of-record structure: the six-seat counterparty chain, the recognition agreement step by step, what the landlord's lender sees, backstops and penny warrants, modified gross against triple net, critical IT against gross against utility megawatts, who eats a delay. Nscale teaches the anchored neocloud as a financing structure: the vocabulary of not-yet, anatomy of an anchor contract, signature-to-collateral sequence, why the loan is investment grade and the company is not, power-first Nordic siting, sovereign compute, the Monarch anchor-change case. Anthropic teaches the lab as compute buyer: three silicons and three kinds of contract, take-or-pay / prepayment / milestone money from the buyer's chair, the six-rung counterparty ladder, why sign the 401 MW lease yourself, why buy 470 MW of generation, the lessor chip vehicle and residual-value support, the delivery window. None repeats the coreweave / nebius / lambda / crusoe / iren neocloud material or the openai / xai compute-buyer material — each guide names what those guides own and references it.
+- **`repository-information/study-prep/{fluidstack,nscale,anthropic}/*-lesson-plan.md`** — three five-module lesson plans from the Profiler Prep Command.
+- **`live-site-pages/images/execs/`** — 31 new company-published headshots (anthropic-* 15, nscale-* 16).
+- **`profiler-concepts.json`** — 46 new shared concepts registered (638 → 684): tenant-of-record, recognition-agreement, credit-backstop, penny-warrant, bankruptcy-remote-spv, modified-gross-lease, triple-net-lease, critical-it-load, gross-capacity, rent-escalator, pass-through-costs, lockbox-account, completion-guarantee, construction-period-risk, delivery-milestone, chip-leasing-vehicle, residual-value-support, counterparty-chain, letter-of-intent, memorandum-of-understanding, capacity-agreement, expansion-option, grid-capacity-reservation, anchor-tenant, delayed-draw-term-loan, revolving-credit-facility, investment-grade-rating, project-financing, sovereign-compute, ai-growth-zone, power-first-siting, heat-reuse, multi-silicon-strategy, compute-commitment, milestone-funding, prepayment, monthly-capacity-fee, direct-lease, equipment-purchase-order, power-before-chips, delivery-date-risk, supplier-concentration, run-rate-revenue, tpu, trainium, islanded-microgrid. No local glossaries.
+
+### Changed
+
+- **`profiler-companies.json`** — three registry entries (`fluidstack` and `nscale` under `neocloud`, `anthropic` under `hyperscaler`), 112 → 115 companies; `sync-profiler-registry.py` wrote `srcTotal`/`srcFirstPct`/`kpiNorm`. **`profiler-graph.json`** rebuilt: 785 edges (594 curated), built 2026-09-05. **`repository-information/profiler-refresh-calendar.json`** — three private rows with `cadence: "quarterly"`, a source note naming the counterparty filings that are each company's real disclosure channel, and watch lists ending in a Chesterton check (73 → 76 rows); `updated` 2026-09-05.
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — the three §8 rows flipped to `B9 → F2 … v1 · v04.59r | ✓ · v04.59r`, exactly as F1 recorded `B10 → F1`. `CLASSROOM-CURRICULUM-PLAN.md` §6 not touched (out of scope for F2).
+- README tree: entries for the three profiles, three study guides, three study-prep folders and lesson plans; execs line recounted from the files — 376 → **407 images across 69 companies** (the recount by registry slug gives 69, not the 70 the prior 68 baseline would imply; the prior figure was one high); `Last updated:` and `Repo version:`; repo version v04.58r → **v04.59r**.
+
+### Verified
+
+- Every URL in `sources[]`, `relationships[]`, `policyExposure[]` and `recentDevelopments[]` of all three dossiers was asserted programmatically against a URL index extracted from the six research-agent reports (plus pages fetched in-session and other covered dossiers' sources): 0 unmatched per dossier — the F1 lesson applied.
+- `sync-profiler-registry.py --check`: 0 of 115 out of sync. `check-profiler-study.py`: 89 guides + 684 concepts, 0 errors, 0 warnings. `build-profiler-graph.py`: no unresolved slugs.
+- Playwright (threaded server, GAS stubbed as admin): each of the three dossiers renders all nine tabs including Relationships (9 / 9 / 13 curated links, 0 unresolved), every `sources[]` entry renders (136 / 126 / 149), each study guide opens with 0 literal `{{}}` markers and 0 unresolved term spans (16 / 22 / 22 spans), zero page errors and zero console errors — ALL CLEAN. Dry-run of the same harness on `coolit` was clean before the new slugs were checked.
 
 ## [v04.58r] — 2026-09-04 07:21:00 PM EST
 

@@ -106,6 +106,14 @@
       "def": "The North American standard that fixes the conditions a water-cooled chiller is rated at and the weighting used for its part-load number, so that two manufacturers' figures can be compared at all."
     },
     {
+      "slug": "ai-growth-zone",
+      "term": "AI Growth Zone",
+      "def": "A UK government designation for an area given faster planning and priority grid access to attract AI data centers. It changes the permitting and connection timeline, not the price of power.",
+      "aliases": [
+        "AI Growth Zones"
+      ]
+    },
+    {
       "slug": "aim-act",
       "term": "AIM Act",
       "def": "The US law directing a stepwise phasedown of high-GWP hydrofluorocarbon production and imports, with sector rules restricting what new equipment may be charged with. It sets the calendar the whole HVAC industry is redesigning against."
@@ -162,6 +170,15 @@
       "def": "The current a conductor is allowed to carry continuously without exceeding its insulation's temperature limit. It falls when conductors are bundled, run hot, or run in a hot room — so the same cable is not the same rating everywhere.",
       "aliases": [
         "current-carrying capacity"
+      ]
+    },
+    {
+      "slug": "anchor-tenant",
+      "term": "anchor tenant",
+      "def": "The one large customer whose signed commitment lets a developer finance and build a site. Its credit becomes the project's credit — and its departure, or the substitution of a different anchor, changes everything the lenders underwrote.",
+      "aliases": [
+        "anchor customer",
+        "anchor"
       ]
     },
     {
@@ -310,6 +327,17 @@
       "slug": "bankability",
       "term": "bankability",
       "def": "Whether lenders and investors will finance a project or accept a supplier — a function of certifications, warranties, balance-sheet strength, track record, and policy exposure rather than spec-sheet performance."
+    },
+    {
+      "slug": "bankruptcy-remote-spv",
+      "term": "bankruptcy-remote SPV",
+      "def": "A special-purpose vehicle set up to hold one lease, loan or asset so that if it fails, its problems stay inside it and do not reach the parent — and so that the parent's problems do not reach it. Lenders and landlords insist on one so the credit they analyse is the one they get.",
+      "aliases": [
+        "SPV",
+        "special-purpose vehicle",
+        "special purpose vehicle",
+        "tenant SPV"
+      ]
     },
     {
       "slug": "basis-of-design",
@@ -554,6 +582,16 @@
       "def": "The current an AC cable draws simply to charge its own capacitance, growing with length and voltage. Beyond roughly a hundred kilometres of subsea cable it consumes the whole rating, which is why long submarine links are direct current."
     },
     {
+      "slug": "capacity-agreement",
+      "term": "capacity agreement",
+      "def": "A binding contract to supply a stated amount of compute or power for a stated period at agreed terms — the document a lender will finance against, as opposed to an announcement, an option or a letter of intent.",
+      "aliases": [
+        "capacity contract",
+        "compute services agreement",
+        "customer agreement"
+      ]
+    },
+    {
       "slug": "capacity-credit",
       "term": "capacity credit",
       "def": "The fraction of a generator's nameplate that a grid planner is willing to count on at the moment of system peak. Firm plant approaches its nameplate; weather-dependent plant does not."
@@ -667,6 +705,16 @@
       "def": "The control logic that decides how many machines run and which ones. Getting it wrong is the difference between a plant at design efficiency and one running four machines lightly loaded."
     },
     {
+      "slug": "chip-leasing-vehicle",
+      "term": "chip-leasing vehicle",
+      "def": "A financing entity that borrows money, buys AI accelerators and leases them to the company that uses them. It keeps the chips off the user's balance sheet; the lenders' risk is what the chips are worth when the lease ends.",
+      "aliases": [
+        "chip lessor",
+        "GPU leasing SPV",
+        "chip-lease SPV"
+      ]
+    },
+    {
       "slug": "chp",
       "term": "CHP",
       "def": "Combined heat and power, also called cogeneration: using both the electricity a prime mover generates and the heat it would otherwise vent. Because the heat is free once the fuel is burned, overall fuel utilisation can pass 80 percent — but only if there is a real use for the heat next door, which is what makes siting rather than efficiency the binding question.",
@@ -768,6 +816,23 @@
       "def": "Densifying placed soil so it will carry load without settling later, verified in the field against a laboratory maximum. Fill that was not compacted to specification shows up as a cracked slab years afterwards."
     },
     {
+      "slug": "completion-guarantee",
+      "term": "completion guarantee",
+      "def": "A sponsor's promise to lenders that a project will be finished, or that a capped amount will be paid if it is not. It covers the construction period, when there is no rent yet to secure the debt; it is not a guarantee of the debt itself.",
+      "aliases": [
+        "capped completion guarantee"
+      ]
+    },
+    {
+      "slug": "compute-commitment",
+      "term": "compute commitment",
+      "def": "A buyer's contractual promise to purchase a stated amount of computing capacity or spend a stated sum over years — the demand-side document that suppliers, landlords and lenders finance against.",
+      "aliases": [
+        "compute commitments",
+        "cloud commitment"
+      ]
+    },
+    {
       "slug": "concurrent-maintainability",
       "term": "concurrent maintainability",
       "aliases": [
@@ -832,6 +897,14 @@
         "Vogtle construction monitoring",
         "VCM",
         "construction-monitoring report"
+      ]
+    },
+    {
+      "slug": "construction-period-risk",
+      "term": "construction-period risk",
+      "def": "The exposure between financial close and the day the tenant starts paying: cost overruns, delays and the chance the tenant walks. In backstopped leases the guarantor's promise usually switches on only at rent commencement, so the build is the lender's risk.",
+      "aliases": [
+        "construction risk"
       ]
     },
     {
@@ -945,6 +1018,14 @@
       ]
     },
     {
+      "slug": "counterparty-chain",
+      "term": "counterparty chain",
+      "def": "The sequence of parties between the owner of a building and the user of the computers inside it — landlord, tenant of record, operator, guarantor, chip lessor, end user. Each link carries a different risk and a different credit.",
+      "aliases": [
+        "chain of counterparties"
+      ]
+    },
+    {
       "slug": "coupling-choke",
       "term": "coupling choke",
       "aliases": [
@@ -984,6 +1065,16 @@
       ]
     },
     {
+      "slug": "credit-backstop",
+      "term": "credit backstop",
+      "def": "A promise by a strong third party to cover a weaker party's payments if that party fails — a guarantee in substance if not always in legal form. It lets a lease or loan be underwritten on the guarantor's credit rating rather than the borrower's.",
+      "aliases": [
+        "backstop",
+        "financial backstop",
+        "lease backstop"
+      ]
+    },
+    {
       "slug": "credit-support",
       "term": "credit support",
       "def": "The collateral a utility requires from a large new customer before it builds for it — a letter of credit, a cash deposit, a parent-company guaranty or a surety bond — sized to some months or years of the minimum bill, so that a customer that walks away leaves money behind rather than a stranded substation.",
@@ -994,6 +1085,16 @@
         "parent guaranty",
         "financial security",
         "credit requirements"
+      ]
+    },
+    {
+      "slug": "critical-it-load",
+      "term": "critical IT load",
+      "def": "The electrical capacity reserved for the computers themselves — servers, storage, networking — excluding cooling, lighting and losses. Data-center leases are priced per megawatt of critical IT load; the building's gross capacity is larger.",
+      "aliases": [
+        "critical IT",
+        "IT load",
+        "IT capacity"
       ]
     },
     {
@@ -1212,9 +1313,36 @@
       "def": "The gradual loss of a battery's usable capacity with cycling and age. Storage contracts manage it with capacity guarantees and planned augmentation."
     },
     {
+      "slug": "delayed-draw-term-loan",
+      "term": "delayed-draw term loan",
+      "def": "A loan that is committed up front but drawn in tranches as the borrower needs cash — typically as equipment is ordered or construction milestones are hit. Common for GPU fleets and data-center builds, where spending is staged.",
+      "aliases": [
+        "DDTL",
+        "delayed draw term loan"
+      ]
+    },
+    {
       "slug": "delayed-neutrons",
       "term": "delayed neutrons",
       "def": "The small fraction of fission neutrons (under one percent) emitted seconds to minutes after the split rather than instantly. They are the reason a reactor responds on a human timescale and can be controlled at all."
+    },
+    {
+      "slug": "delivery-date-risk",
+      "term": "delivery-date risk",
+      "def": "The chance that contracted capacity arrives later than the date the buyer planned around. For a compute buyer whose demand is growing, a late site means rationing customers; for the lender, a delayed backstop.",
+      "aliases": [
+        "delivery risk",
+        "schedule risk"
+      ]
+    },
+    {
+      "slug": "delivery-milestone",
+      "term": "delivery milestone",
+      "def": "A dated point at which contracted capacity must be energized and handed over. Rent, guarantees and investor money are often tied to milestones — a missed one can delay a backstop, trigger a termination right or hold back funding.",
+      "aliases": [
+        "delivery milestones",
+        "delivery date"
+      ]
     },
     {
       "slug": "delta-t",
@@ -1328,6 +1456,15 @@
       "def": "A simulated copy of a real asset, fed by its live data, used to rehearse changes before they touch the hardware — testing a control strategy, forecasting degradation, or learning what normal looks like so anomalies stand out. It is how an operator tries something on a plant without trying it on the plant.",
       "aliases": [
         "digital twins"
+      ]
+    },
+    {
+      "slug": "direct-lease",
+      "term": "direct lease",
+      "def": "A data-center lease signed by the end user itself, in its own name, rather than by a cloud provider or intermediary on its behalf. It gives the user control of the site and puts the user's own credit behind the rent.",
+      "aliases": [
+        "direct leases",
+        "signs the lease itself"
       ]
     },
     {
@@ -1735,6 +1872,15 @@
       "def": "The engineered concrete base under a transformer, generator, chiller or tower, sized for its weight, its dynamic loads and its maintenance access. It has to exist before the equipment can be set, which puts it on the critical path."
     },
     {
+      "slug": "equipment-purchase-order",
+      "term": "equipment purchase order",
+      "def": "An order to buy machinery — here generators — outright, with delivery on a schedule, as opposed to a power-purchase agreement in which someone else owns the plant and sells the output. The buyer owns the risk and the asset.",
+      "aliases": [
+        "purchase order",
+        "EPO"
+      ]
+    },
+    {
       "slug": "equity-ratio",
       "term": "equity ratio",
       "def": "The share of a utility's regulatory capital structure funded by equity rather than debt. Regulators set it for ratemaking regardless of how the company actually finances itself. A higher equity ratio raises the allowed return in dollars, because equity earns the authorized return on equity while debt earns only its interest cost.",
@@ -1799,6 +1945,15 @@
       "slug": "expansion-device",
       "term": "expansion device",
       "def": "The valve or orifice that drops the high-pressure liquid refrigerant back to evaporator pressure, cooling it as it goes. The cheapest component in the loop and the one that meters the whole machine."
+    },
+    {
+      "slug": "expansion-option",
+      "term": "expansion option",
+      "def": "A contractual right, not an obligation, for a customer to take more capacity later at pre-agreed terms. Headlines count options as if exercised; balance sheets do not.",
+      "aliases": [
+        "option on second phase",
+        "option to scale"
+      ]
     },
     {
       "slug": "expansive-soil",
@@ -2215,6 +2370,16 @@
       ]
     },
     {
+      "slug": "grid-capacity-reservation",
+      "term": "grid capacity reservation",
+      "def": "A commitment by a grid operator to hold a stated amount of connection capacity for a customer at a named substation. It is the scarce asset behind a power-first site: without it the site is land.",
+      "aliases": [
+        "capacity reservation",
+        "reserved grid capacity",
+        "power allocation"
+      ]
+    },
+    {
       "slug": "grid-following",
       "term": "grid-following",
       "def": "An inverter that locks onto the grid's existing voltage wave and injects current into it — a surfer riding a wave someone else is making. It is the conventional mode and works well, but it cannot operate at all without a live grid to follow, so it contributes nothing during the outage it is standing beside.",
@@ -2237,6 +2402,15 @@
       "def": "A UPS whose battery is also allowed to work for the building or the grid — shaving a peak, answering a demand-response call, holding frequency — rather than sitting at float. It turns a stranded asset into an earning one and puts the backup duty into competition with the earning duty.",
       "aliases": [
         "grid-interactive"
+      ]
+    },
+    {
+      "slug": "gross-capacity",
+      "term": "gross capacity",
+      "def": "The total electrical capacity a data center draws or is built for, including cooling, power losses and support systems as well as the computers. A 168 MW critical-IT hall may need 240 MW gross; the utility sees the gross number.",
+      "aliases": [
+        "gross power capacity",
+        "utility capacity"
       ]
     },
     {
@@ -2298,6 +2472,15 @@
       "slug": "heat-recovery-chiller",
       "term": "heat-recovery chiller",
       "def": "A chiller run so that the heat it rejects is sold or used rather than thrown away — hot water for a building or a district. Physically it is a heat pump; commercially it is a chiller with a second product."
+    },
+    {
+      "slug": "heat-reuse",
+      "term": "heat reuse",
+      "def": "Piping a data center's waste heat to a nearby user — a district heating network, a swimming pool, a fish farm — instead of rejecting it to the air. Cheap where the site is cold and the heat has a buyer; a planning-permission argument in Europe.",
+      "aliases": [
+        "waste-heat reuse",
+        "district heating"
+      ]
     },
     {
       "slug": "heavy-duty-gas-turbine",
@@ -2645,6 +2828,17 @@
       ]
     },
     {
+      "slug": "investment-grade-rating",
+      "term": "investment-grade rating",
+      "def": "A credit rating (BBB-/Baa3 or better) signalling low default risk. Debt rated investment grade can be sold to insurers and pension funds at lower interest; a project loan achieving it on the strength of an anchor contract is borrowing on the anchor's credit.",
+      "aliases": [
+        "investment grade",
+        "investment-grade",
+        "IG rating",
+        "IG-backstop"
+      ]
+    },
+    {
       "slug": "ip-licensing",
       "term": "IP licensing",
       "def": "Earning revenue by letting other companies use patented technology under a royalty or fee instead of, or as well as, selling products. For a hardware company it turns a patent portfolio into a second business — and a lawsuit into a negotiation.",
@@ -2682,6 +2876,16 @@
         "islanding",
         "island mode",
         "off-grid operation"
+      ]
+    },
+    {
+      "slug": "islanded-microgrid",
+      "term": "islanded microgrid",
+      "def": "A campus power system that generates, stores and balances its own electricity with no grid connection, or with the grid held in reserve. It trades a utility queue for the burden of running a power plant.",
+      "aliases": [
+        "state-certified microgrid",
+        "AI microgrid",
+        "grid-independent generation"
       ]
     },
     {
@@ -2868,6 +3072,15 @@
       "def": "A bacterium that grows in warm stagnant water and can be dispersed in aerosols, which is why open cooling towers carry a mandated water-treatment and testing regime."
     },
     {
+      "slug": "letter-of-intent",
+      "term": "letter of intent",
+      "def": "A signed statement that two parties intend to do a deal on outlined terms, usually non-binding. It reserves capacity and starts diligence; it is not a contract, and either side can walk away — as anchor tenants do.",
+      "aliases": [
+        "LOI",
+        "non-binding letter of intent"
+      ]
+    },
+    {
       "slug": "lfp",
       "term": "LFP",
       "def": "Lithium iron phosphate: a lithium-ion battery chemistry using an iron-phosphate cathode. It trades some energy density for lower cost, longer cycle life, and much better thermal stability than nickel-based chemistries — which is why it dominates grid-scale storage.",
@@ -2964,6 +3177,15 @@
         "current slew rate",
         "load transients",
         "transient"
+      ]
+    },
+    {
+      "slug": "lockbox-account",
+      "term": "lockbox account",
+      "def": "A bank account controlled by lenders into which a tenant's rent is paid before anyone else can touch it. It turns a lease into collateral: the cash flow is captured at source rather than promised.",
+      "aliases": [
+        "lockbox",
+        "designated lockbox account"
       ]
     },
     {
@@ -3076,6 +3298,15 @@
       ]
     },
     {
+      "slug": "memorandum-of-understanding",
+      "term": "memorandum of understanding",
+      "def": "A written statement of shared intentions between parties, typically governments and companies, that commits neither to spend money. Gigawatt-scale AI announcements at summits are often MoUs.",
+      "aliases": [
+        "MoU",
+        "memoranda of understanding"
+      ]
+    },
+    {
       "slug": "mep",
       "term": "MEP",
       "def": "Mechanical, electrical and plumbing — the building services trades taken together. On a data-centre schedule MEP is where most of the labour hours and most of the risk sit, which is why who holds those trades decides who can compress the programme.",
@@ -3107,6 +3338,15 @@
       "slug": "microreactor",
       "term": "microreactor",
       "def": "A reactor in the single-digit-to-tens-of-megawatts class, small enough to be transported largely assembled and installed as equipment rather than constructed as a plant."
+    },
+    {
+      "slug": "milestone-funding",
+      "term": "milestone funding",
+      "def": "Investor money released in tranches only when agreed events occur — capacity delivered, targets hit — rather than all at signing. It ties a strategic investor's cash to its own or a partner's performance.",
+      "aliases": [
+        "milestone facility",
+        "milestone-based funding"
+      ]
     },
     {
       "slug": "minimum-demand-charge",
@@ -3174,6 +3414,14 @@
       ]
     },
     {
+      "slug": "modified-gross-lease",
+      "term": "modified gross lease",
+      "def": "A lease in which rent covers some operating costs and the tenant pays others directly — between a gross lease (everything in the rent) and a triple-net lease (tenant pays everything). Which costs sit where decides who bears the risk of rising power and insurance bills.",
+      "aliases": [
+        "modified gross"
+      ]
+    },
+    {
       "slug": "modular-ups",
       "term": "modular UPS",
       "def": "A UPS built from hot-swappable power modules in a common frame, so capacity is added a module at a time and a failed module is replaced without dropping the load. It trades a slightly higher cost per kilowatt for the ability to buy redundancy and capacity in small increments as a hall fills.",
@@ -3186,6 +3434,15 @@
       "slug": "molten-salt-reactor",
       "term": "molten salt reactor",
       "def": "A design in which the coolant, and sometimes the fuel itself, is a molten fluoride or chloride salt. Very high boiling point, low pressure, and a chemistry problem that has to be solved before it is an engineering problem."
+    },
+    {
+      "slug": "monthly-capacity-fee",
+      "term": "monthly capacity fee",
+      "def": "A fixed monthly charge for an amount of compute regardless of use — the cloud equivalent of rent. Paired with a short termination notice it is flexible for the buyer and fragile for the seller.",
+      "aliases": [
+        "capacity fee",
+        "monthly fee"
+      ]
     },
     {
       "slug": "mosfet",
@@ -3212,6 +3469,15 @@
         "MISO Transmission Expansion Plan",
         "MTEP portfolio",
         "Tranche 2"
+      ]
+    },
+    {
+      "slug": "multi-silicon-strategy",
+      "term": "multi-silicon strategy",
+      "def": "A compute buyer's deliberate use of more than one kind of AI accelerator — for example NVIDIA GPUs, Google TPUs and Amazon Trainium — so that no single supplier's allocation, price or roadmap can stall it. Costs more engineering; buys leverage.",
+      "aliases": [
+        "three-silicon",
+        "multi-silicon"
       ]
     },
     {
@@ -3541,6 +3807,15 @@
       ]
     },
     {
+      "slug": "pass-through-costs",
+      "term": "pass-through costs",
+      "def": "Operating costs the landlord incurs and bills straight to the tenant — power, water, taxes, insurance — without markup. In a backstopped lease the guarantor often covers pass-throughs as well as base rent.",
+      "aliases": [
+        "pass-throughs",
+        "pass-through obligations"
+      ]
+    },
+    {
       "slug": "passive-safety",
       "term": "passive safety",
       "def": "Safety that rests on physics and geometry rather than on pumps, valves and operator action — gravity, natural circulation, thermal expansion. The claim is only as good as the conditions under which it was demonstrated."
@@ -3586,6 +3861,15 @@
       "aliases": [
         "peak shave",
         "demand limiting"
+      ]
+    },
+    {
+      "slug": "penny-warrant",
+      "term": "penny warrant",
+      "def": "A right to buy shares at a nominal price (often USD 0.01), so its value is almost the full share price. Given to a guarantor or lender, it is equity compensation for credit support — the price of a backstop paid in the company's own stock.",
+      "aliases": [
+        "penny warrants",
+        "warrants at $0.01"
       ]
     },
     {
@@ -3678,6 +3962,14 @@
       ]
     },
     {
+      "slug": "power-before-chips",
+      "term": "power before chips",
+      "def": "The rule that a site must have firm electricity — reserved grid capacity or on-site generation — before accelerators are worth ordering, because chips can be bought in months and power takes years.",
+      "aliases": [
+        "power first"
+      ]
+    },
+    {
       "slug": "power-conditioning",
       "term": "power conditioning",
       "aliases": [
@@ -3704,6 +3996,14 @@
       "aliases": [
         "PF",
         "reactive power"
+      ]
+    },
+    {
+      "slug": "power-first-siting",
+      "term": "power-first siting",
+      "def": "Choosing a data-center location by where firm electricity can be had soonest — a hydro region with spare generation, a miner's energized substation, a gas microgrid — rather than by proximity to customers or fiber.",
+      "aliases": [
+        "power-first"
       ]
     },
     {
@@ -3782,6 +4082,15 @@
       "def": "The estimating, planning, constructability review and procurement work done before construction starts. It is where a schedule is either made possible or quietly made impossible."
     },
     {
+      "slug": "prepayment",
+      "term": "prepayment",
+      "def": "Paying for capacity before it is delivered. In compute contracts a prepayment funds the supplier's build and shifts delivery risk onto the buyer, who has paid for something that does not yet exist.",
+      "aliases": [
+        "prepayments",
+        "prepaid capacity"
+      ]
+    },
+    {
       "slug": "pressure-drop",
       "term": "pressure drop",
       "def": "The pressure a fluid loses as it flows through pipes, fittings, connectors and cold-plate channels — the head the CDU's pumps must supply at design flow or the far racks starve. Narrow lines multiply it: a 1-inch branch can lose over five times the pressure of a 2-inch one.",
@@ -3836,6 +4145,15 @@
       "slug": "proctor-test",
       "term": "Proctor test",
       "def": "The laboratory test that establishes the maximum dry density a given soil can reach and the moisture content at which it reaches it. Field compaction is then specified as a percentage of that number."
+    },
+    {
+      "slug": "project-financing",
+      "term": "project financing",
+      "def": "Debt raised by a single project's own entity and repaid only from that project's cash flows, secured on its contracts and assets rather than on the sponsor's balance sheet. Lenders underwrite the contract, the builder and the counterparty, not the parent.",
+      "aliases": [
+        "project finance",
+        "non-recourse financing"
+      ]
     },
     {
       "slug": "prudence-review",
@@ -4012,6 +4330,14 @@
       ]
     },
     {
+      "slug": "recognition-agreement",
+      "term": "recognition agreement",
+      "def": "A side contract between a landlord, its tenant and a third party in which the third party promises that, if the tenant defaults or goes bankrupt, it will either pay the rent and step into the lease or pay a termination fee. It is how a guarantor's credit is attached to someone else's lease.",
+      "aliases": [
+        "recognition agreements"
+      ]
+    },
+    {
       "slug": "rectifier",
       "term": "rectifier",
       "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
@@ -4054,6 +4380,26 @@
       ]
     },
     {
+      "slug": "rent-escalator",
+      "term": "rent escalator",
+      "def": "A clause raising rent by a fixed percentage each year (2–3% is common in data-center leases). Over a 15–20-year term it compounds into a large share of the contract's headline value.",
+      "aliases": [
+        "escalator",
+        "annual escalator",
+        "base rent escalator"
+      ]
+    },
+    {
+      "slug": "residual-value-support",
+      "term": "residual-value support",
+      "def": "A promise, usually by the chip maker or designer, to cover part of the value of leased hardware at the end of the lease. It removes the lessor's biggest fear — that the chips will be worth nothing — and is what makes multi-billion chip leases financeable.",
+      "aliases": [
+        "residual value support",
+        "residual value guarantee",
+        "residual value"
+      ]
+    },
+    {
       "slug": "retail-choice",
       "term": "retail choice",
       "def": "A restructured market in which the wires company delivers power but customers buy the energy from competing retailers, and generation is not in rate base. Most of Texas works this way inside ERCOT; the Southeast and MISO South do not, which is why a data center there signs with one integrated utility rather than a retailer and a wires company.",
@@ -4086,6 +4432,16 @@
       "aliases": [
         "reverse recovery charge",
         "Qrr"
+      ]
+    },
+    {
+      "slug": "revolving-credit-facility",
+      "term": "revolving credit facility",
+      "def": "A bank line a company can draw, repay and redraw up to a limit — working-capital liquidity rather than project debt. A large syndicated revolver is a sign banks treat the company as an established borrower.",
+      "aliases": [
+        "RCF",
+        "revolver",
+        "revolving credit"
       ]
     },
     {
@@ -4185,6 +4541,16 @@
         "independent system operator",
         "grid operator",
         "RTOs"
+      ]
+    },
+    {
+      "slug": "run-rate-revenue",
+      "term": "run-rate revenue",
+      "def": "The latest month's (or week's) revenue multiplied out to a year — a snapshot of current pace, not an audited annual figure. Companies disclose it at funding events; it can move faster than any fiscal year shows.",
+      "aliases": [
+        "run-rate",
+        "annualized revenue",
+        "annualised revenue"
       ]
     },
     {
@@ -4572,6 +4938,17 @@
       "def": "The quantity and kind of radioactive material a given accident could release. Almost every downstream siting, staffing and emergency-planning requirement is sized from it."
     },
     {
+      "slug": "sovereign-compute",
+      "term": "sovereign compute",
+      "def": "AI computing capacity located in, and legally controlled from, a particular country so that its data and workloads stay under that country's law. Governments buy it for public services, defence and regulated industries; vendors sell the same racks with a jurisdiction attached.",
+      "aliases": [
+        "sovereign AI",
+        "sovereign AI cloud",
+        "sovereign capacity",
+        "data sovereignty"
+      ]
+    },
+    {
       "slug": "special-inspection",
       "term": "special inspection",
       "def": "Independent third-party inspection and testing of specific structural work — welds, bolts, concrete, soils — required by code and scheduled in advance. Work covered up before its inspection gets uncovered."
@@ -4820,6 +5197,15 @@
       ]
     },
     {
+      "slug": "supplier-concentration",
+      "term": "supplier concentration",
+      "def": "Dependence on a small number of suppliers for a critical input. For a compute buyer it is measured in gigawatts per counterparty; the mitigation is more suppliers, which costs engineering and negotiating leverage.",
+      "aliases": [
+        "concentration risk",
+        "counterparty concentration"
+      ]
+    },
+    {
       "slug": "surge",
       "term": "surge",
       "def": "The flow breakdown that occurs when a centrifugal compressor is asked for more pressure rise than its current flow can sustain: the gas momentarily reverses. It is noisy, damaging, and the reason a centrifugal chiller has a minimum load."
@@ -4985,6 +5371,14 @@
       "def": "The temperature difference a refrigeration machine has to pump heat across — condensing temperature minus evaporating temperature. Compressor work rises with lift, so every degree given back at either end is money."
     },
     {
+      "slug": "tenant-of-record",
+      "term": "tenant of record",
+      "def": "The entity whose name is on a data-center lease and who owes the rent — not necessarily the company whose computers fill the building. In the AI buildout an intermediary can be tenant of record for a frontier lab that never signs the lease.",
+      "aliases": [
+        "tenant-of-record"
+      ]
+    },
+    {
       "slug": "test-year",
       "term": "test year",
       "def": "The twelve-month period of actual costs and sales a rate case uses as its base. A historic test year uses costs already incurred; a forecast or future test year projects them forward. The choice matters: a utility investing faster than it depreciates recovers less under a historic year, which is why commissions sometimes impose one as a discipline.",
@@ -5123,6 +5517,26 @@
       ]
     },
     {
+      "slug": "tpu",
+      "term": "TPU",
+      "def": "Tensor Processing Unit: Google's own AI accelerator chip, designed in-house and built with Broadcom, used inside Google Cloud and now sold or leased to outside buyers as an alternative to NVIDIA GPUs.",
+      "aliases": [
+        "TPUs",
+        "Tensor Processing Unit",
+        "Ironwood"
+      ]
+    },
+    {
+      "slug": "trainium",
+      "term": "Trainium",
+      "def": "Amazon's own AI training and inference chip, built for AWS and offered to customers as a lower-cost alternative to NVIDIA GPUs. Anthropic is its anchor user.",
+      "aliases": [
+        "Trainium2",
+        "Trainium3",
+        "Trainium4"
+      ]
+    },
+    {
       "slug": "transfer-limit",
       "term": "transfer limit",
       "def": "The most power a corridor can actually carry, set by whichever constraint binds first — conductor heating, voltage collapse, or the stability of the machines at each end. It usually sits well below the sum of the lines' thermal ratings."
@@ -5151,6 +5565,16 @@
       "aliases": [
         "transformer-free UPS",
         "transformerless"
+      ]
+    },
+    {
+      "slug": "triple-net-lease",
+      "term": "triple-net lease",
+      "def": "A lease in which the tenant pays rent plus property taxes, insurance and maintenance — the landlord collects a clean number and the tenant carries the operating-cost risk. Written NNN.",
+      "aliases": [
+        "NNN",
+        "triple net",
+        "triple-net"
       ]
     },
     {

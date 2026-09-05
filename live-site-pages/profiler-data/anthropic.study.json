@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 2,
+  "slug": "anthropic",
+  "title": "Anthropic — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [
+    {
+      "t": "Project Rainier",
+      "d": "Amazon's name for the Trainium2 cluster built for Anthropic — 'nearly half a million' chips at New Carlisle, Indiana at opening, described by an AWS engineer as spanning Indiana, Mississippi and Pennsylvania at roughly one gigawatt. A named single-customer campus rather than a shared cloud region."
+    },
+    {
+      "t": "Justified",
+      "d": "TeraWulf's Justified Data Campus at Hawesville, Kentucky — the site of Anthropic's first lease in its own name: about 401 MW of critical IT for 20 years, about USD 19 billion over the initial term."
+    },
+    {
+      "t": "Colossus 1",
+      "d": "xAI's original Memphis cluster, now inside SpaceX, whose entire capacity — more than 300 MW and over 220,000 NVIDIA GPUs — Anthropic contracted in May 2026 at USD 1.25 billion a month with 90-day termination rights per SpaceX's S-1."
+    }
+  ],
+  "sections": [
+    {
+      "id": "start-here-the-buyer-s-side-of-the-table",
+      "title": "Start here: the buyer's side of the table",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The OpenAI guide in this corpus teaches the compute offtake as project finance — the lab's commitment as the document a builder borrows against — and the model-lab business model; the xAI guide teaches make-or-buy for a lab that chose to build, and grid power against your own plant. This guide sits between them: it is about a lab that chose neither to build nor simply to rent, and what its contracts look like from the buyer's chair. How a frontier lab contracts capacity across three kinds of silicon, what take-or-pay, prepayment and milestone money do from the buyer's side, why the buyer signs a 401 MW lease and a 470 MW generation order itself, who owns the chips when a lessor buys them, and where a buyer — not a seller — fails.",
+        "**What it deliberately does not repeat:** the project-finance logic of the offtake, the make-versus-buy arithmetic, scaling laws, training against inference, or grid-versus-own-plant. Those are in the OpenAI and xAI guides and only referenced.",
+        "**One idea carries the guide.** A compute buyer's job is to convert revenue it does not yet have into capacity that does not yet exist, on dates it does not control, from suppliers that are also its shareholders. Every structure in the book — the **{{multi-silicon strategy}}**, the **{{milestone funding}}**, the **{{direct lease}}**, the **{{chip-leasing vehicle}}**, the **{{equipment purchase order}}** — is a way of moving one of those four risks somewhere else."
+      ]
+    },
+    {
+      "id": "three-silicons-three-contracts",
+      "title": "Three silicons, three kinds of contract",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "A buyer that uses more than one accelerator is not just hedging chip supply; it is signing three structurally different contracts. The rows are Anthropic's, as the parties stated them.",
+      "cols": [
+        "Silicon",
+        "Who sells it, and how",
+        "Unit of the contract",
+        "Who owns the chips",
+        "What the buyer gets and gives"
+      ],
+      "rows": [
+        [
+          "**{{Trainium}}** (Amazon)",
+          "Only through AWS — the chip is not sold outside the cloud; Project Rainier is a single-customer campus",
+          "Gigawatts and dollars: 'up to 5 gigawatts', 'more than $100 billion over the next ten years'",
+          "Amazon",
+          "Priority on a chip 'co-developed' with the buyer; in return, a decade of committed spend and an investor whose USD 20 billion facility is released 'as we reach certain delivery milestones'"
+        ],
+        [
+          "**{{TPU}}** (Google)",
+          "Through Google Cloud, and from 2027 'supplied through Broadcom' — the designer sells to the buyer's lessor",
+          "Chips and gigawatts: 'up to one million TPU chips', 'well over a gigawatt', 'multiple gigawatts … starting in 2027'",
+          "Google Cloud for the 2026 tranche; a chip-leasing vehicle for the Fluidstack-site tranche",
+          "A second architecture and a second cloud; a supplier that is also a 14% shareholder and the guarantor of the buyer's landlords' leases"
+        ],
+        [
+          "**NVIDIA GPUs** (through Azure, Colossus, CoreWeave, Lambda, Nscale, Volta)",
+          "Every channel at once: a hyperscaler's cloud, a rival lab's campus, four neoclouds",
+          "Dollars and megawatts: '$30 billion of Azure', 'up to one gigawatt'; '$1.25 billion per month' for Colossus 1; reported USD 45 billion / 460 MW (Nscale), USD 35 billion (Lambda)",
+          "The cloud, the landlord or the neocloud — never the buyer",
+          "Fungible capacity on the industry's standard architecture; the most suppliers, the least leverage per supplier, and the vendor as investor (NVIDIA 'up to $10 billion')"
+        ]
+      ]
+    },
+    {
+      "id": "take-or-pay-prepayment-and-milestone-money",
+      "title": "Take-or-pay, prepayment and milestone money — from the buyer's chair",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "The CoreWeave guide explains **{{take-or-pay}}** from the seller's side: the buyer pays for committed capacity whether or not it uses it, which is what lets the seller borrow. From the buyer's side the same clause is a bet on its own growth. Anthropic's 'more than $100 billion over the next ten years to AWS technologies' and '$30 billion of Azure compute capacity' are **{{compute commitment}}**s of that kind: spend promised on a schedule the buyer set when its run-rate was USD 30 billion. If revenue keeps compounding the commitment is a discount; if it stalls the commitment is a liability with no asset behind it. CFO Krishna Rao's summary — 'If you buy too much compute, you go out of business. If you buy too little compute, you can't serve your customers' — is the buyer's version of the seller's utilization problem.",
+        "A **{{prepayment}}** moves money earlier still: the buyer funds the seller's build before capacity exists. Anthropic's public releases do not disclose prepayments, but the structure appears in reverse in Amazon's filings — the investor's USD 20 billion facility for Anthropic is released 'as we reach certain delivery milestones of compute capacity'. That is **{{milestone funding}}**: the supplier-investor's cash arrives only when the supplier has delivered. It aligns the two roles Amazon plays and it means the buyer's balance sheet is, in part, a function of its supplier's construction schedule.",
+        "The Colossus 1 contract is the opposite pole: a **{{monthly capacity fee}}** of USD 1.25 billion with 'either party can terminate with 90 days' notice' (SpaceX's S-1, per TechCrunch). No commitment, no prepayment, a rent-like payment for delivered capacity. It bought '>300 megawatts … within the month' at the cost of a price the buyer cannot lock and a supplier that can take the capacity back in a quarter — which is why a buyer uses it for the demand spike it cannot plan (the May 2026 rate-limit crisis) rather than for the training runs it can.",
+        "Read the three together and the buyer's book is a term structure: a decade of committed Trainium at the long end, a five-to-six-year window of TPUs and neocloud contracts in the middle, and monthly Colossus at the short end. Each maturity has a price, and the price of the short end is being the first to lose capacity when a rival bids more — Google contracted the same landlord's next campus a month later.",
+        "**Self-check:** a buyer's investor promises USD 20 billion 'tied to certain commercial milestones' and the investor is also the buyer's largest supplier. Whose performance releases the money? *(The supplier's — the milestones are compute deliveries by the investor itself.)*"
+      ]
+    },
+    {
+      "id": "the-buyer-s-counterparty-ladder",
+      "title": "The buyer's counterparty ladder: six ways to get a megawatt",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "Between 'rent from a cloud' and 'build your own campus' there are more rungs than the make-or-buy framing admits. Anthropic uses every one. Read down for what the buyer controls and what it carries at each rung.",
+      "cols": [
+        "Rung",
+        "Anthropic example",
+        "What the buyer controls",
+        "What the buyer carries",
+        "Who owns the building / chips"
+      ],
+      "rows": [
+        [
+          "**Cloud commitment**",
+          "AWS up to 5 GW; Azure USD 30 billion; Google TPUs",
+          "Spend and rough timing",
+          "Take-or-pay on its own growth; the cloud's allocation decisions",
+          "The cloud / the cloud"
+        ],
+        [
+          "**Neocloud services contract**",
+          "CoreWeave (April 2026); Nscale ~USD 45 billion (reported); Lambda USD 35 billion (reported); Volta USD 10 billion",
+          "Site, chip generation and delivery dates named in the contract",
+          "The neocloud's execution and financing risk — a two-year-old company building a gigawatt",
+          "The neocloud or its landlord / the neocloud (financed against the buyer's signature)"
+        ],
+        [
+          "**Tenant-operator programme**",
+          "Fluidstack, USD 50 billion, ~1.4 GW of leases",
+          "Custom halls 'designed specifically for Anthropic's workloads'; the operator",
+          "Nothing on the lease — 'is not a party to the lease and guarantees nothing'; delivery risk through the operator",
+          "TeraWulf, Cipher, Hut 8, Meridian Arc / a chip-leasing vehicle"
+        ],
+        [
+          "**{{direct lease}}**",
+          "TeraWulf Justified 401 MW, 20 years, ~USD 19 billion; Riot Rockdale 191 MW (per Bloomberg)",
+          "The site, the term, the fit-out specification; its own name on the paper",
+          "Twenty years of rent; whatever credit support it had to procure",
+          "The landlord / whoever the buyer chooses"
+        ],
+        [
+          "**{{equipment purchase order}}**",
+          "ERock 470 MW of RockBlock gas generation",
+          "The generation asset itself — where it goes, when it runs",
+          "Ownership, permits, fuel, operations (or an operations contract); no PPA counterparty",
+          "The buyer owns the generators; the site is separate"
+        ],
+        [
+          "**Anchor-tenant platform**",
+          "Theseus (Macquarie Asset Management and GIC): 'develop, own, operate, and lease' to Anthropic",
+          "A pipeline built around it; the electricity-price pledge attached",
+          "A long lease commitment to a vehicle that exists to serve it — concentration on both sides",
+          "The platform's investors / not disclosed"
+        ]
+      ]
+    },
+    {
+      "id": "why-sign-the-401-mw-lease-yourself",
+      "title": "Why sign the 401 MW lease yourself",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "For eight months Anthropic's US buildings were leased by someone else. The landlords' filings for Lake Mariner, Abernathy, Barber Lake and River Bend name Fluidstack subsidiaries as tenant and Google as guarantor; the end user is 'a global hyperscale AI platform developing frontier-scale foundation models'. Then on 6 July 2026 TeraWulf announced 'a 20-year lease agreement with Anthropic at its Justified Data campus' for 'approximately 401 MW of critical IT load … approximately $19 billion of contracted revenue over the initial term', and no Fluidstack entity appears in it. The corpus's terawulf dossier calls it 'graduation day'. Why would a buyer that had a working intermediary sign the lease itself?",
+        "Three reasons are visible in the documents. Control: a **{{direct lease}}** puts the site, the term (twenty years plus two five-year options) and the fit-out in the buyer's hands rather than an operator's contract. Cost: the intermediary layer is paid for — Fluidstack's speed, Google's credit (bought with warrants), a chip-lessor's margin — and a buyer with USD 47 billion of run-rate revenue can procure credit support directly, which is what 'expected to be supported by an investment-grade credit' means. Continuity: a twenty-year lease survives an operator that might not; the Fluidstack guide shows how much of that chain is shells and guarantees.",
+        "What the buyer takes on is the other half of the Fluidstack guide: rent for twenty years on a campus the landlord has yet to build, delivery in 'the second half of 2027' with full capacity 'by early 2028', and a supply chain Data Center Frontier describes as having 'minimal procurement buffer' on transformers, switchgear and chillers. The intermediary structure had put construction-period risk on bondholders and rent risk on Google; the direct lease puts schedule risk on the buyer's own capacity plan.",
+        "The credit-support provider is not named in any filing read. That omission is the most important unknown in the buyer's book: 'investment-grade credit' behind a private company's twenty-year lease is either a bank instrument the buyer paid for, a strategic investor's guarantee, or something a public S-1 will have to describe.",
+        "**Self-check:** name one thing a direct lease gives the buyer and one thing it takes away, compared with a tenant-operator programme. *(Gives: control of site, term and specification in its own name. Takes: the construction-period and schedule risk that the intermediary structure had placed on landlords, bondholders and a guarantor.)*"
+      ]
+    },
+    {
+      "id": "why-buy-470-mw-of-generation",
+      "title": "Why buy 470 MW of generation instead of a power contract",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "The xAI guide teaches the choice between waiting for the grid and generating on site. Anthropic's version is narrower and, for this corpus, more instructive: it bought the generators. ERock's Q2 2026 release: 'Executed a 470 MW equipment purchase order with Anthropic … extending production commitments into 2028'. An **{{equipment purchase order}}** is not a **{{PPA}}**. Under a PPA a developer owns the plant and sells the output; the buyer's obligation is to pay for energy. Under a purchase order the buyer owns the machines, decides where they go and carries the fuel, permits and operations (or contracts them to the vendor). ERock's model, per the corpus's enchanted-rock dossier, is equipment sale plus operations.",
+        "Why a lab would want that follows from the rule the guide's concepts file calls **{{power before chips}}**: accelerators can be ordered in months, grid capacity takes years, and a buyer whose demand is doubling cannot wait. Owned generation is portable across sites the buyer does not yet know it will have; a PPA is tied to a plant. It is **{{bridge power}}** if the grid arrives, permanent if it does not — ERock's 'no sites, no dates' disclosure is consistent with a buyer keeping that option open. And it is one of the few compute inputs a lab can own outright without becoming a data-centre operator: the generators are not the building.",
+        "The buyer's February 2026 pledge frames the same move from the utility's side: 'We will pay for 100% of the grid upgrades needed to interconnect our data centers' and bring new generation online matching its needs. The corpus's utilities (Entergy, AEP, Xcel, Oncor) are writing large-load tariffs to make big customers pay exactly that; Anthropic offered to before being asked, and then bought 470 MW of its own. Read together: the buyer is pricing power scarcity into its own capital plan rather than into a landlord's or a utility's.",
+        "**Self-check:** a lab signs a PPA for 470 MW of gas generation at a named site versus buying 470 MW of gensets with no site named. Which keeps more options open, and at what cost? *(The purchase order — the machines can go anywhere — at the cost of owning, fuelling, permitting and operating them.)*"
+      ]
+    },
+    {
+      "id": "who-owns-the-chips-the-lessor-vehicle",
+      "title": "Who owns the chips: the lessor vehicle and the residual-value promise",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "At the Fluidstack sites the buildings belong to landlords, the leases to Fluidstack subsidiaries, the credit to Google — and, by press accounts of the Broadcom–Apollo–Blackstone platform, the chips to a **{{chip-leasing vehicle}}** that 'will purchase Google's chips and lease them to Anthropic for use at facilities in New York, Texas, Louisiana, and Indiana', with Broadcom 'providing a residual value support agreement'. Bloomberg reported tranches of roughly USD 6 billion, USD 25 billion and USD 4.5 billion and a possible second package. The buyer neither buys the silicon nor rents it from a cloud: it leases it from a fund.",
+        "The structure exists because of one number nobody knows — what a TPU is worth in 2031. A lender financing a chip fleet is really financing the fleet's value at the end of the lease; if that value is zero the lease payments must amortise the whole cost, which makes the rent expensive. **{{residual-value support}}** from the chip's designer caps that fear: Broadcom promises to stand behind part of the end-of-lease value, so the lessor can charge less and the lender can lend more. The corpus's coreweave guide teaches GPU-backed debt from the borrower's side; this is the same problem solved by moving the chips off every operating company's balance sheet and putting the designer's promise under them.",
+        "For the buyer the lease is flexibility bought at a margin: a decade of chip obsolescence moved to a lessor, at the price of a lease payment above what an owner would pay and a dependence on the vehicle's continued financing. For the ecosystem it is a new kind of counterparty — a chip fund — that appears in no landlord filing and answers to bondholders. The Lambda deal shows the mirror image: NVIDIA holds the Beacon Point lease, Lambda installs the chips, Anthropic buys the output — 'circular financing', the NVIDIA CFO said, 'we see it differently'.",
+        "**Self-check:** why would a chip designer guarantee the residual value of chips it has already been paid for? *(Because the guarantee is what makes the next order financeable — it is a cost of selling, priced against future volume.)*"
+      ]
+    },
+    {
+      "id": "the-delivery-window",
+      "title": "The delivery window: when the book is supposed to arrive",
+      "kind": "timeline",
+      "read": "6 min",
+      "intro": "Months from September 2026. Every dated delivery in the buyer's book, as the counterparties filed or stated it. Two lanes: cloud and chip capacity, and sites the buyer contracts directly or through an operator. The clustering in the 12-to-18-month band is the risk the guide's 'where it fails' section names.",
+      "unit": "months from September 2026",
+      "lanes": {
+        "cloud": "Cloud and silicon deliveries",
+        "site": "Leased and operated sites"
+      },
+      "items": [
+        {
+          "x": 0,
+          "lane": "site",
+          "label": "Barber Lake first capacity (Cipher / Fluidstack)",
+          "sub": "September 2026 'on schedule'"
+        },
+        {
+          "x": 2,
+          "lane": "site",
+          "label": "Abernathy 168 MW (Fluidstack-led JV)",
+          "sub": "'targeted for the fourth quarter of 2026'"
+        },
+        {
+          "x": 3,
+          "lane": "cloud",
+          "label": "AWS 'nearly 1GW' of Trainium2/3",
+          "sub": "'by the end of 2026'"
+        },
+        {
+          "x": 3,
+          "lane": "site",
+          "label": "Lake Mariner CB-4 rent commencement; New Lebanon first capacity",
+          "sub": "'second half of 2026'; 'late 2026'"
+        },
+        {
+          "x": 4,
+          "lane": "site",
+          "label": "Barber Lake +39 MW; Lake Mariner CB-5",
+          "sub": "January 2027; 'early 2027'"
+        },
+        {
+          "x": 4,
+          "lane": "cloud",
+          "label": "Google/Broadcom TPUs 'starting in 2027'",
+          "sub": "'multiple gigawatts' through 2027 and beyond"
+        },
+        {
+          "x": 9,
+          "lane": "site",
+          "label": "River Bend first hall (Hut 8 / Fluidstack)",
+          "sub": "Q2 2027; remaining halls through 2027"
+        },
+        {
+          "x": 10,
+          "lane": "site",
+          "label": "New Lebanon first hall",
+          "sub": "July 2027"
+        },
+        {
+          "x": 13,
+          "lane": "site",
+          "label": "Justified 401 MW initial capacity (direct lease)",
+          "sub": "'second half of 2027' → full 'by early 2028'"
+        },
+        {
+          "x": 15,
+          "lane": "site",
+          "label": "Monarch 460 MW (Nscale, reported); Rockdale 96 MW (Riot)",
+          "sub": "'from late 2027'; December 2027"
+        },
+        {
+          "x": 18,
+          "lane": "site",
+          "label": "ERock generation deliveries",
+          "sub": "'production commitments into 2028' — sites undisclosed"
+        },
+        {
+          "x": 21,
+          "lane": "site",
+          "label": "Rockdale full 191 MW",
+          "sub": "June 2028"
+        }
+      ]
+    },
+    {
+      "id": "where-the-buyer-fails",
+      "title": "Where the buyer fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "6 min",
+      "ps": [
+        "**Concentration on the supply side.** Three silicon suppliers is diversification of architecture, not of counterparty: Amazon, Google, Microsoft and NVIDIA are together the buyer's largest investors, its clouds, its chip sources and — through Google's backstops of Fluidstack — the credit behind its landlords. **{{supplier concentration}}** measured in gigawatts per counterparty is the number the S-1 will have to show.",
+        "**Delivery-date risk clusters.** Justified, Monarch, Rockdale, River Bend's remaining halls and the TPU ramp all land in the late-2027 window. A buyer that planned revenue on that capacity has no fallback if the transformers Data Center Frontier flags as the choke point are late for everyone at once. The corpus records no missed milestone yet; it records the May 2026 rate-limit crisis as what a shortfall costs.",
+        "**Power before chips, again.** A lab can buy 470 MW of gensets and pledge to fund grid upgrades and still be rationed by the interconnection queues its landlords sit in. Owning generation solves the sites the buyer controls; most of its megawatts are on sites it does not.",
+        "**Commitments outrun the numbers that justify them.** USD 47 billion of run-rate revenue (May, company) or USD 65 billion (August, Bloomberg's sources) against 'at least $135 billion' of 2026 commitments (TechXplore's tally). Run-rate is a month multiplied by twelve; commitments are a decade. The OpenAI guide's point that this is design, not accident, applies with the buyer's own numbers.",
+        "**The investor-supplier's mark is the buyer's valuation.** Amazon booked 'upward adjustments of approximately $50.5 billion' in one quarter on paper priced by rounds it helped fund; Microsoft booked USD 3.2 billion. If the buyer's growth slows, the supplier's balance sheet and its appetite to keep delivering capacity move together.",
+        "**Policy can reach the product.** Export controls applied to the buyer's own flagship model for eighteen days in June 2026; a Department of War designation put a federal revenue line at risk until a district judge intervened; state frontier-AI laws the buyer endorsed now bind it. A compute buyer is also a regulated seller, and both edges cut.",
+        "**Nobody outside can add it up.** No consolidated gigawatt total, no fiscal-year revenue, no compute spend, and the credit provider behind its own leases unnamed. The buyer's book is reconstructed from suppliers' filings — which is exactly what this dossier and guide did."
+      ]
+    },
+    {
+      "id": "where-anthropic-slots-in",
+      "title": "Where Anthropic slots into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The buyer's seat at each rung of the ladder, September 2026, with the status the parties gave it.",
+      "cols": [
+        "Rung",
+        "Counterparty",
+        "Anthropic's seat",
+        "Status (per the parties)",
+        "Capacity or value stated"
+      ],
+      "rows": [
+        [
+          "Cloud commitment",
+          "Amazon / AWS",
+          "Buyer, co-developer of Trainium, investee",
+          "Signed (April 2026)",
+          "Up to 5 GW; >USD 100 billion / 10 years"
+        ],
+        [
+          "Cloud commitment",
+          "Google Cloud / Broadcom",
+          "Buyer, investee (~14%)",
+          "Signed (October 2025; April 2026)",
+          "Up to 1 million TPUs; >1 GW 2026; multi-GW from 2027"
+        ],
+        [
+          "Cloud commitment",
+          "Microsoft Azure / NVIDIA",
+          "Buyer, investee",
+          "Signed (November 2025)",
+          "USD 30 billion; up to 1 GW"
+        ],
+        [
+          "Monthly capacity",
+          "SpaceX / xAI — Colossus 1",
+          "Tenant of a rival's cluster",
+          "Signed (May 2026; S-1 terms)",
+          ">300 MW; USD 1.25 billion / month"
+        ],
+        [
+          "Neocloud contracts",
+          "CoreWeave; Nscale; Lambda; Volta",
+          "Customer",
+          "Announced by CoreWeave; reported for the rest",
+          "Undisclosed; ~USD 45 billion / 460 MW; USD 35 billion; USD 10 billion"
+        ],
+        [
+          "Tenant-operator programme",
+          "Fluidstack (TeraWulf, Cipher, Hut 8, Meridian Arc)",
+          "End user; 'not a party to the lease'",
+          "Announced (November 2025)",
+          "USD 50 billion; ~1.4 GW of leases"
+        ],
+        [
+          "Direct lease",
+          "TeraWulf Justified; Riot Rockdale (per Bloomberg)",
+          "Tenant of record",
+          "Signed (July 2026); disclosed unnamed (August 2026)",
+          "401 MW / ~USD 19 billion; 191 MW / USD 9.1 billion"
+        ],
+        [
+          "Equipment owner",
+          "ERock",
+          "Buyer of 470 MW of gas generation",
+          "Disclosed by ERock (August 2026)",
+          "470 MW; sites undisclosed"
+        ],
+        [
+          "Anchor tenant",
+          "Theseus (Macquarie, GIC)",
+          "Anchor of a platform built for it",
+          "Announced (August 2026)",
+          "None disclosed"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What does a multi-silicon strategy buy a compute buyer, and what does it cost?",
+          "a": "Leverage and supply resilience — no single supplier's allocation, price or roadmap can stall it — at the cost of engineering across three architectures and, in Anthropic's case, dependence on suppliers that are also its investors."
+        },
+        {
+          "q": "From the buyer's side, what is take-or-pay?",
+          "a": "A bet on the buyer's own growth: it pays for committed capacity whether or not it uses it, so the commitment is a discount if revenue compounds and a liability with no asset behind it if revenue stalls."
+        },
+        {
+          "q": "What is milestone funding in the Amazon–Anthropic relationship?",
+          "a": "Amazon's USD 20 billion facility is released 'as we reach certain delivery milestones of compute capacity' — the investor's cash arrives only when the investor, as supplier, has delivered."
+        },
+        {
+          "q": "Contrast a monthly capacity fee with a ten-year commitment.",
+          "a": "The monthly fee (Colossus 1: USD 1.25 billion a month, 90-day termination) buys immediate capacity with no commitment but no price certainty and the risk of losing the capacity to a higher bidder; the ten-year commitment locks price and priority at the cost of a decade of obligation."
+        },
+        {
+          "q": "Why would a buyer with a working tenant-operator sign a 401 MW lease itself?",
+          "a": "Control of site, term and specification in its own name; avoiding the paid-for intermediary layers (operator speed, guarantor credit, lessor margin); continuity beyond any operator — at the cost of taking schedule and construction-period risk onto its own plan."
+        },
+        {
+          "q": "Equipment purchase order versus PPA for on-site generation: what changes?",
+          "a": "Under a PPA a developer owns the plant and sells energy; under a purchase order the buyer owns the generators, decides the site and carries fuel, permits and operations. The purchase order keeps site options open and the asset portable."
+        },
+        {
+          "q": "What does residual-value support do in a chip-leasing vehicle?",
+          "a": "The chip designer promises to cover part of the chips' end-of-lease value, capping the lessor's biggest risk so it can charge lower rent and its lenders can lend more — the cost of selling the next order."
+        },
+        {
+          "q": "Why is 'nearly 1 GW by end-2026' a different kind of risk from 'multiple gigawatts from 2027'?",
+          "a": "The first is a dated delivery the buyer has planned revenue on; the second is a ramp whose start date clusters with several other sites. Delivery-date risk is about the concentration of milestones, not just their existence."
+        },
+        {
+          "q": "What is power before chips?",
+          "a": "Accelerators can be bought in months and firm power takes years, so a site needs reserved grid capacity or on-site generation before chips are worth ordering — the reason a lab buys 470 MW of gensets."
+        },
+        {
+          "q": "Why can no outsider add up Anthropic's compute book?",
+          "a": "The buyer publishes no consolidated gigawatt total, fiscal-year revenue or compute spend and does not name the credit behind its leases; the book is reconstructed from suppliers' and landlords' filings."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A supplier-investor's USD 20 billion facility is released on compute-delivery milestones. If the supplier's construction slips a year, what happens to the buyer?",
+          "c": [
+            "Nothing — the investment is unconditional",
+            "The buyer's capacity and its funding are both delayed",
+            "The buyer receives the cash early",
+            "The supplier pays a penalty"
+          ],
+          "a": 1,
+          "why": "Milestone funding ties the investor's cash to its own deliveries; a slip delays both the capacity and the money."
+        },
+        {
+          "q": "Which contract in Anthropic's book carries the least commitment and the least security of tenure?",
+          "c": [
+            "AWS up to 5 GW",
+            "Colossus 1 at USD 1.25 billion a month with 90-day termination",
+            "TeraWulf Justified, 20 years",
+            "Google TPUs from 2027"
+          ],
+          "a": 1,
+          "why": "A monthly fee with mutual 90-day termination is the short end of the term structure — flexible for both sides, secure for neither."
+        },
+        {
+          "q": "Signing a 20-year direct lease rather than using a tenant-operator moves which risk onto the buyer?",
+          "c": [
+            "Chip obsolescence",
+            "Construction-period and schedule risk",
+            "Export-control risk",
+            "Utility rate risk only"
+          ],
+          "a": 1,
+          "why": "The intermediary structure had placed construction risk on landlords and bondholders and rent risk on a guarantor; the direct lease puts schedule risk on the buyer's own capacity plan."
+        },
+        {
+          "q": "A 470 MW equipment purchase order for gas generation with no sites named most likely means the buyer:",
+          "c": [
+            "Has a PPA at a named plant",
+            "Wants portable generation it can deploy where grid capacity is late",
+            "Is building a utility",
+            "Has abandoned grid connections"
+          ],
+          "a": 1,
+          "why": "A purchase order buys machines, not a plant at a site; it keeps site options open as bridge or permanent power."
+        },
+        {
+          "q": "Why does a chip designer provide residual-value support to a chip-leasing vehicle?",
+          "c": [
+            "Regulation requires it",
+            "It makes the fleet financeable and so sells the next order",
+            "It has spare cash",
+            "The buyer demanded it"
+          ],
+          "a": 1,
+          "why": "The lessor's biggest risk is end-of-lease value; the designer's promise caps it, lowering rent and enabling more lending — a cost of selling."
+        },
+        {
+          "q": "The buyer's 2026 commitments ('at least $135 billion') are compared with run-rate revenue. What is run-rate?",
+          "c": [
+            "Audited annual revenue",
+            "The latest month or week multiplied out to a year",
+            "Contracted backlog",
+            "Cash on hand"
+          ],
+          "a": 1,
+          "why": "Run-rate is a snapshot of current pace, disclosed at funding events; it is not a fiscal-year figure."
+        },
+        {
+          "q": "Which statement about Anthropic's silicon suppliers is correct?",
+          "c": [
+            "They are independent of its investors",
+            "Amazon, Google, Microsoft and NVIDIA are each both supplier and investor",
+            "Only NVIDIA invests",
+            "Google sells TPUs directly to Anthropic"
+          ],
+          "a": 1,
+          "why": "Each of the four holds equity or commitments and supplies compute; the 2027 TPUs come 'supplied through Broadcom' to a lessor, not to Anthropic directly."
+        },
+        {
+          "q": "Most of the buyer's late-2027 deliveries share which exposure?",
+          "c": [
+            "The same landlord",
+            "Long-lead electrical equipment and a clustered start window",
+            "The same utility",
+            "The same chip"
+          ],
+          "a": 1,
+          "why": "Justified, Monarch, Rockdale, River Bend and the TPU ramp all start in the same window; Data Center Frontier flags transformers, switchgear and chillers as the choke point."
+        }
+      ]
+    }
+  ]
+}

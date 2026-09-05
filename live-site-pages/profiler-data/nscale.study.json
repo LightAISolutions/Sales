@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 2,
+  "slug": "nscale",
+  "title": "Nscale — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [
+    {
+      "t": "Stargate",
+      "d": "OpenAI's brand for large AI data-centre programmes with partners; 'Stargate Norway' (Nscale–Aker, July 2025) and 'Stargate UK' (September 2025) were announced under it. In Norway OpenAI's letter of intent was later replaced by a Microsoft contract; in the UK OpenAI paused the project in April 2026."
+    },
+    {
+      "t": "Aaktig Digital",
+      "d": "The company through which, per a Norwegian parliamentary answer, 230 MW of grid capacity was reserved at the Kvandal transformer station for the Narvik data centre — the reservation Nscale's Narvik plans rest on."
+    },
+    {
+      "t": "Statnett",
+      "d": "Norway's state transmission-system operator, which allocates grid connection capacity. In May 2026 it halted new allocations in Northern Norway for grid-security reasons, leaving Nscale's Narvik phase 2 and Korgen applications in the queue."
+    }
+  ],
+  "sections": [
+    {
+      "id": "start-here-what-a-signature-buys",
+      "title": "Start here: what an anchor's signature buys, and what a gigawatt announcement does not",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The Nebius guide in this corpus teaches why a hyperscaler anchor is both validation and concentration; the CoreWeave guide teaches GPU-backed debt; the Crusoe guide teaches energy-first siting with flare gas and the islanded campus. This guide takes the next step for a **{{neocloud}}** with one signature behind it: how a single anchor's contract is turned into collateral for a build the company cannot fund itself, what 'contracted' means when a press release says 'gigawatts', how a site is chosen when the scarce input is a grid reservation rather than land, and what a government is actually buying when it buys **{{sovereign compute}}**.",
+        "**What it deliberately does not repeat:** the anchor-tenant concentration argument, the take-or-pay logic, GPU collateral as a concept, or the physics of running an island — those are in the Nebius, CoreWeave and Crusoe guides and are only referenced.",
+        "**One idea carries the guide.** A gigawatt is a unit of ambition until someone signs for the megawatts inside it. Everything financeable in this business is a signed **{{capacity agreement}}**; everything else — letters of intent, memoranda, options, ambitions, pipelines, queues — is a description of what might be signed. Learning to sort the two is the whole skill."
+      ]
+    },
+    {
+      "id": "the-vocabulary-of-not-yet",
+      "title": "The vocabulary of not-yet: from ambition to signed capacity",
+      "kind": "table",
+      "read": "8 min",
+      "intro": "Every word in the first column appears in Nscale's own releases or its counterparties'. Read across for what each one binds and what a lender would accept. The examples are Nscale's, with the company's own phrasing.",
+      "cols": [
+        "The word",
+        "What it binds",
+        "Nscale example (phrasing)",
+        "Would a lender finance it?"
+      ],
+      "rows": [
+        [
+          "**Pipeline / ambition**",
+          "Nothing — a list of sites the company would like to build",
+          "'1.3GW pipeline across Europe and North America' (2024–25); '+290MW' at Narvik described as an 'ambition'; 'approximately 8 gigawatts by 2031' at Monarch",
+          "No"
+        ],
+        [
+          "**{{memorandum of understanding}}**",
+          "Intent between parties, typically no money",
+          "Not used by Nscale itself; the corpus's Fluidstack dossier records a French 1 GW MoU abandoned within thirteen months",
+          "No"
+        ],
+        [
+          "**Offtake exploration**",
+          "A customer's stated interest in taking capacity later",
+          "OpenAI 'will explore offtake of up to 8,000 NVIDIA GPUs in Q1 2026' (Stargate UK) — paused April 2026",
+          "No"
+        ],
+        [
+          "**{{letter of intent}}**",
+          "Outlined terms, usually non-binding; reserves capacity while diligence runs",
+          "Microsoft's 'letter of intent … to provide 1.35 gigawatts' at Monarch (March 2026) — withdrawn over the summer; OpenAI's Stargate Norway LOI — 'replaced' by Microsoft (Aker Q1 2026)",
+          "Only as a bridge; the lender will wait for the contract"
+        ],
+        [
+          "**{{grid capacity reservation}}**",
+          "The grid operator's promise to hold connection capacity",
+          "'230 MW reserved through the company Aaktig Digital' at Kvandal; 1 GW Helgeland and 140 MW Ballangsleira still in Statnett's queue",
+          "It is a condition, not collateral — but without it the site is not financeable"
+        ],
+        [
+          "**{{expansion option}}**",
+          "A customer's right, not obligation, to take more later",
+          "Microsoft's 'option on 700MW second phase from late 2027' at Ward County; 'scalable to 1.2GW'",
+          "Not the option; only the base commitment"
+        ],
+        [
+          "**{{capacity agreement}}**",
+          "Binding supply of stated capacity for a stated term",
+          "'a binding five-year customer agreement at a contract value of approximately USD 6.2 billion' (Microsoft, Narvik, September 2025); 'multiple executed customer contracts' behind the USD 1.4 billion GPU loan",
+          "Yes — this is what the term loans and the investment-grade ratings are underwritten on"
+        ],
+        [
+          "**Lease**",
+          "The landlord's binding right to rent",
+          "Ionic Digital: '10-year triple-net lease', '234 MW', 'approximately $2 billion' at Cedarvale",
+          "Yes — for the landlord; for Nscale it is an obligation"
+        ],
+        [
+          "**Reported contract**",
+          "Whatever the parties actually signed — unknown until they say",
+          "Anthropic 'about $45 billion over six years' for '460 MW' at Monarch (Bloomberg; Aker disclosure without a name)",
+          "A lender will see the document; the public sees a press figure"
+        ]
+      ]
+    },
+    {
+      "id": "anatomy-of-an-anchor-contract",
+      "title": "Anatomy of an anchor contract: what Microsoft actually signs",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "An anchored neocloud sells one thing to one customer per site: dated delivery of a stated number of accelerators in a stated building, operated to a service level, for a term. Nscale's Monarch release names the two documents that make up such a deal — 'initial multi-year compute services agreement alongside long-term data centre lease structure'. The compute-services agreement is the customer paying for GPUs by the month or the year; the lease structure is the same customer taking rights over the hall those GPUs sit in. The first is revenue; the second is what makes the building financeable if the first stops.",
+        "The units in the contract are the tell. Microsoft's Narvik deal is stated in dollars and years ('approximately USD 6.2 billion', 'five-year'); the October 2025 expansion is stated in chips and sites ('approximately 200,000 NVIDIA GB300 GPUs'; Texas ~104,000, Portugal ~12,600, UK ~23,000, Norway ~52,000) with no value; the 2026 additions are stated in chips and generations ('30,000+ NVIDIA Rubin GPUs'; '66,000+ NVIDIA Vera Rubin NVL72 GPUs'). A contract stated in chips is a contract that moves when the chip roadmap moves — Narvik's 52,000 GB300s became 30,000 Rubins between October 2025 and April 2026, fewer and newer, on the same site.",
+        "Delivery is staged, and the stages are the contract's real terms: Ward County 'phased from Q3 2026'; Sines '12,600 … Q1 2026' then '66,000+ … from late 2027'; Loughton 'Q1 2027'. Each stage is a **{{delivery milestone}}** at which revenue starts, a loan tranche can be drawn and — as the Fluidstack guide shows for the tenant-of-record structure — a guarantee may switch on. Microsoft's Source EMEA feature describes exactly this: a deal that 'will begin to deliver services in stages, commencing in 2026'.",
+        "What the contract does not say publicly is as informative. Neither Nscale nor Microsoft has stated the value of anything after the USD 6.2 billion; the FT's 'up to $14 billion' is a report. No term in years is given for the 200,000-GPU expansion. No penalty for late delivery is disclosed. The Leverage Shares line — 'contracted demand is not necessarily guaranteed demand' — is about those unstated terms.",
+        "**Self-check:** a release says a hyperscaler 'contracted approximately 200,000 GPUs' across four sites. What three things do you still not know? *(The value, the term, and what happens if a site is late.)*"
+      ]
+    },
+    {
+      "id": "from-signature-to-collateral",
+      "title": "From signature to collateral: the financing sequence of an anchored build",
+      "kind": "timeline",
+      "read": "7 min",
+      "intro": "Months relative to the first binding anchor contract (Microsoft, Narvik, September 2025 = 0). Two lanes: what Nscale sold or signed, and what lenders and investors did with it. The pattern is the order in which an anchor's signature becomes money — equity first, then chip debt, then project debt, then bank lines, then a listing.",
+      "unit": "months relative to the first binding anchor contract (negative = before)",
+      "lanes": {
+        "deal": "Contracts and sites",
+        "money": "Equity and debt"
+      },
+      "items": [
+        {
+          "x": -9,
+          "lane": "money",
+          "label": "Series A USD 155 million",
+          "sub": "Sandton Capital lead; '1.3GW pipeline' — equity against ambition"
+        },
+        {
+          "x": -2,
+          "lane": "deal",
+          "label": "Stargate Norway: Aker JV, OpenAI LOI",
+          "sub": "230 MW site; 'target … 100,000 NVIDIA GPUs by end of 2026'"
+        },
+        {
+          "x": 0,
+          "lane": "deal",
+          "label": "Microsoft Narvik agreement",
+          "sub": "'binding five-year … approximately USD 6.2 billion' — the first signed **{{capacity agreement}}**"
+        },
+        {
+          "x": 0,
+          "lane": "money",
+          "label": "Series B USD 1.1 billion + SAFE USD 433 million",
+          "sub": "Aker lead (USD 285 million cash and land); NVIDIA, Dell, Nokia among investors — equity against the anchor"
+        },
+        {
+          "x": 1,
+          "lane": "deal",
+          "label": "Microsoft expansion ~200,000 GB300",
+          "sub": "Texas, Portugal, UK, Norway; Ionic Cedarvale lease signed"
+        },
+        {
+          "x": 5,
+          "lane": "money",
+          "label": "USD 1.4 billion GPU **{{delayed-draw term loan}}**",
+          "sub": "PIMCO, Blue Owl, LuminArx; 'secured by GPU infrastructure' against 'multiple executed customer contracts'"
+        },
+        {
+          "x": 6,
+          "lane": "money",
+          "label": "Series C USD 2 billion at USD 14.6 billion",
+          "sub": "Aker and 8090 lead; JV rolled in; Aker to 22.8%"
+        },
+        {
+          "x": 6,
+          "lane": "deal",
+          "label": "Monarch acquired; Microsoft 1.35 GW LOI",
+          "sub": "2,250 acres; 2 GW Caterpillar order inherited"
+        },
+        {
+          "x": 8,
+          "lane": "money",
+          "label": "USD 790 million Narvik **{{project financing}}**",
+          "sub": "ABN AMRO, DNB, Eksfin, Nordea, SEB; 115 MW expansion"
+        },
+        {
+          "x": 10,
+          "lane": "money",
+          "label": "USD 900 million **{{revolving credit facility}}**",
+          "sub": "Twelve banks — corporate liquidity, not project debt"
+        },
+        {
+          "x": 11,
+          "lane": "deal",
+          "label": "Microsoft exits Monarch; Anthropic reported at ~USD 45 billion",
+          "sub": "The anchor changes hands on the same site"
+        },
+        {
+          "x": 11,
+          "lane": "money",
+          "label": "~USD 3 billion Ward County and Madison DDTLs, **{{investment-grade rating}}**",
+          "sub": "J.P. Morgan and Goldman Sachs; 'investment-grade ratings with stable outlooks' at the site SPVs"
+        },
+        {
+          "x": 12,
+          "lane": "money",
+          "label": "IPO of up to USD 3 billion reported",
+          "sub": "'$51 billion in total contracted revenue' against ~USD 100 million quarterly revenue (Bloomberg via Dealroom)"
+        }
+      ]
+    },
+    {
+      "id": "why-the-loan-is-investment-grade-and-the-company-is-not",
+      "title": "Why the loan is investment grade and the company is not",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Nscale's August 2026 term loans 'received investment-grade ratings with stable outlooks'. Nscale itself has no public rating and, by the press figures, about USD 100 million of quarterly revenue against USD 6.1 billion of facilities. Both statements are true because they rate different things. **{{project financing}}** lends to a site's own entity — 'Nscale Ward County Borrower SPV, LLC' — repaid only from that site's contract, secured on that site's GPUs and building. The rating agency asks: will Microsoft pay for 104,000 GB300s over the term, and can this borrower deliver them? If the anchor is AAA and the delivery risk is manageable, the loan can be **{{investment-grade rating}}** even though the parent could not borrow a fraction of it unsecured.",
+        "This is what an anchor's signature is for. The Nebius guide teaches that an anchor converts spare capacity into financeable backlog; here the mechanism is visible in the paper: the GPU loan of February 2026 was drawn 'against multiple executed customer contracts', the Narvik financing came with a state export-credit agency (Eksfin) inside it because a hydro site in Norway is a national project, and the US loans reached investment grade because the counterparty at Ward County is Microsoft. Aker's shareholder letters call this Nscale going 'from a relatively small startup with fewer than 5,000 GPUs to contracts securing more than 200,000 GPUs globally' in a year — the contracts, not the GPUs, are the asset.",
+        "The parent's risk is what is left over: the equity in each SPV, the completion of each build, the corporate overhead, and the possibility that an anchor leaves before the site is financed. Monarch is the case. The Caterpillar 2 GW order was placed by the prior owner in January 2026 on the strength of a hyperscaler letter of intent; the LOI became Nscale's in March; Microsoft 'walked away' in the summer; a different anchor arrived in August. The gensets are on order regardless — Capacity reported Caterpillar Financial vendor financing behind them — and the loan that will finance the buildings can only be rated once the replacement contract exists on paper.",
+        "**Self-check:** a company's site loan is rated investment grade. Does that mean the company could issue investment-grade bonds? *(No — the rating attaches to the SPV, its contract and its collateral; the parent carries everything the SPV does not.)*"
+      ]
+    },
+    {
+      "id": "power-first-siting-in-the-nordics",
+      "title": "Power-first siting in the Nordics: hydro is cheap, transmission is scarce",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "The Crusoe guide's energy-first thesis is 'find the power, then the land'. In Northern Norway the power was found a century ago — Glomfjord sits beside a 120 MW hydro plant 'built at the end of the fjord over 100 years ago', and Microsoft chose Narvik 'for its abundant hydropower and low local electricity demand, because of its small population and transmission capacity'. What is scarce is not generation but the wires to move it and the operator's permission to connect. **{{power-first siting}}** in the Nordics therefore means winning a **{{grid capacity reservation}}** from the transmission operator, and the reservation is the site.",
+        "The Norwegian record shows what a reservation is and is not. A parliamentary answer in August 2025 records '230 MW reserved through the company Aaktig Digital … under the Kvandal transformer station', while Aker Nscale sits 'in the capacity queue at Statnett' for '1 gigawatt for a data center in Helgeland and 140 megawatt for another data center in Narvik municipality at Ballangsleira'. Reserved is bankable — the USD 790 million financing followed. Queued is a plan. In May 2026 Statnett halted new allocations in Northern Norway for grid-security reasons and Nscale Norway's chief executive said phase 2 was 'more in the blue': the 290 MW ambition became conditional on a decision the company does not control.",
+        "Three other Nordic mechanics matter to a buyer of this capacity. A connection charge — Norway's anleggsbidrag — can be levied on the customer whose load forces grid reinforcement, and a member of the Storting asked whether Nscale should pay one. State export credit (Eksfin's NOK 2.2 billion inside the Narvik package) is available because a data centre exporting compute is treated as an export industry. And **{{heat reuse}}** is part of the licence to operate as much as an efficiency: Glomfjord's waste heat goes to the town pool and to fish farms, and Loughton's planning case in England turned partly on the same argument.",
+        "The contrast with Nscale's US sites is deliberate. Ward County is a bitcoin miner's already-energised campus on ERCOT; Monarch is 2 GW of Caterpillar gas gensets on a state-certified **{{islanded microgrid}}** that operates 'independently from the local grid while preserving future interconnection options'. Where the Nordic constraint is the operator's queue, the American answer was to buy the power plant. The xAI guide covers that trade-off in general; here it is enough to note that Nscale's 2026 capital went to the sites where power did not depend on a queue.",
+        "**Self-check:** a Nordic site has 230 MW reserved and 290 MW 'in ambition'. Which number would a bank lend against? *(230 MW — and only for buildings whose customer has signed.)*"
+      ]
+    },
+    {
+      "id": "what-a-government-buys",
+      "title": "What a government buys when it buys sovereign compute",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "**{{sovereign compute}}** is the same rack of GPUs with a jurisdiction attached. The buyer — a ministry, a public service, a regulated bank — wants three things: the data stays in the country, the operator is subject to the country's law rather than a foreign one, and the capacity cannot be reassigned to a foreign customer when demand spikes. OpenAI's Stargate UK page put the use cases plainly: 'critical public services, regulated industries like finance, research projects or national security partnerships'. Nscale's own tagline is 'Sovereign AI Cloud made for Europe, by Europe'.",
+        "The state's side of the bargain is not money but time and permission. The UK's **{{AI Growth Zone}}** designation for the North East promised faster planning and priority grid access at Cobalt Park and Blyth, and a minister's letter told Epping Forest's council the government was 'keen to see the successful delivery' of Loughton. Norway's contribution is the export-credit loan and, until May 2026, the grid reservation. What the state rarely provides is an anchor contract: Stargate UK was an 'exploration of offtake' by a private company, not a government purchase order, and when OpenAI paused it in April 2026 the reason it gave was the price of energy and 'the right conditions such as regulation'.",
+        "That is the structural weakness of the sovereign pitch as a financing basis. A sovereign customer is politically valuable and commercially small — BT's deal is 'up to 14 megawatts across three BT sites'; the Trusted Tech Alliance is a set of principles. The megawatts that carry Nscale's debt are Microsoft's in Texas and Portugal and, if confirmed, Anthropic's in West Virginia. Sovereignty gets the permit and the headline; the anchor gets the loan.",
+        "**Self-check:** a government designates a growth zone and a lab 'explores offtake' of 8,000 GPUs there. Who has committed money? *(Neither — the zone changes the timeline, the exploration is an intention; only a signed agreement would.)*"
+      ]
+    },
+    {
+      "id": "the-site-ladder",
+      "title": "The site ladder: what is running, contracted and imagined",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "megawatts — the first figure stated as operational or contracted at each site, with the stated ceiling in the note (company, landlord and Aker statements, September 2026)",
+      "intro": "Read the bars as 'signed or running'; read the sub-lines for the ambition. The distance between the two is the company's growth story and its risk in one picture.",
+      "items": [
+        {
+          "label": "Glomfjord, Norway (owned)",
+          "sub": "30 MW operational, expanding to 60 MW on hydro",
+          "v": 30
+        },
+        {
+          "label": "Keflavik, Iceland (Verne)",
+          "sub": "15 MW, ~4,600 Blackwell Ultra, first phase complete",
+          "v": 15
+        },
+        {
+          "label": "Madison, North Carolina",
+          "sub": "40 MW by 2026; '99MW secured Duke Energy'; USD 1.2 billion DDTL",
+          "v": 40
+        },
+        {
+          "label": "Loughton, England",
+          "sub": "50 MW → 90 MW; Microsoft 23,040 GPUs Q1–Q2 2027",
+          "v": 50
+        },
+        {
+          "label": "Narvik / Kvandal, Norway (owned)",
+          "sub": "230 MW reserved; +290 MW 'ambition' now subject to Statnett",
+          "v": 230
+        },
+        {
+          "label": "Ward County, Texas (Ionic Cedarvale, leased)",
+          "sub": "234 MW leased; 'scalable to 1.2GW'; Microsoft option on 700 MW",
+          "v": 234
+        },
+        {
+          "label": "Sines, Portugal (Start Campus)",
+          "sub": "Microsoft 12,600 GB300 + 66,000 Vera Rubin; campus 1.2 GW permitted; second building 200 MW",
+          "v": 200
+        },
+        {
+          "label": "Monarch, West Virginia (owned)",
+          "sub": "Anthropic ~460 MW reported; Phase 1 1.35 GW; 2 GW generation H1 2028; '8 GW by 2031'",
+          "v": 460
+        }
+      ]
+    },
+    {
+      "id": "when-the-anchor-changes-hands",
+      "title": "When the anchor changes hands: the Monarch case",
+      "kind": "proscons",
+      "read": "6 min",
+      "intro": "Between March and August 2026 the same 1.35 GW phase at Monarch had a Microsoft letter of intent, a Google negotiation that 'fell through', and a reported Anthropic contract for its first 460 MW. The cards read that sequence from three seats.",
+      "cards": [
+        {
+          "t": "The developer (Nscale)",
+          "meta": "Owns the site and the gas order; needs a signed anchor before the buildings can be financed",
+          "adv": [
+            "A replacement anchor arrived within months — demand for delivered 2027 capacity exceeded one hyperscaler's appetite",
+            "The reported price (~USD 16 million per MW-year) is higher than a landlord's rent — the buyer pays for the slot",
+            "The gensets and the site were sunk costs that made the campus real to the next buyer"
+          ],
+          "dis": [
+            "An LOI financed nothing: the Caterpillar order was placed on it, the loan could not be",
+            "Neither party has confirmed the replacement contract — the company's largest number is a press figure",
+            "A six-year term against Vera Rubin hardware puts residual value in 2033 on the developer's side of the table"
+          ]
+        },
+        {
+          "t": "The departing anchor (Microsoft)",
+          "meta": "Signed an LOI, then reviewed 'its data center portfolio and on-site power generation allocations'",
+          "adv": [
+            "An LOI cost it nothing to leave",
+            "It kept four other Nscale sites and added Rubin GPUs at two of them in the same months",
+            "Its exit was invisible until a competitor's contract made it news"
+          ],
+          "dis": [
+            "A hyperscaler that walks from a gas-powered campus signals something about its view of on-site gas — the utilities in this corpus will read it",
+            "The developer it left now serves its rival on the same ground"
+          ]
+        },
+        {
+          "t": "The arriving anchor (Anthropic)",
+          "meta": "Reported ~USD 45 billion, six years, 460 MW, from late 2027",
+          "adv": [
+            "Delivery certainty from a site with generation already on order — the buyer's binding constraint (see the Anthropic guide) solved by someone else's sunk cost",
+            "Vera Rubin on a purpose-built AI factory design"
+          ],
+          "dis": [
+            "It is anchoring a developer whose largest prior anchor left, on a campus with no grid connection",
+            "At ~1.9x estimated build cost over six years it is paying for the silicon inside the lease (Global Data Center Hub)",
+            "Its own newsroom is silent — the exposure is disclosed by its supplier's shareholder, not by it"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**Contracted is not delivered, and delivered is not paid.** USD 51 billion of reported backlog against about USD 100 million of quarterly revenue is the gap Dealroom names: 'if large customers delay or cancel before GPUs are switched on'. Every loan in the stack is drawn against milestones the company has not yet hit.",
+        "**The anchor can leave before the building exists.** Monarch's LOI was withdrawn; Stargate Norway's LOI was replaced; Stargate UK's exploration was paused. Three of Nscale's five announced anchors changed or stalled within a year. A single-anchor site is a single point of failure until the contract is signed and the loan is rated.",
+        "**Power can be reserved and still not arrive.** Statnett's halt did not touch the 230 MW reservation and still made phase 2 'more in the blue'; Loughton's power and planning pushed operability from 2026 to 2027. Reserved capacity is a promise by a regulated body with its own duties.",
+        "**A contract stated in chips moves with the roadmap.** 52,000 GB300 became 30,000 Rubin at Narvik. The dollar value may or may not have moved; nobody has said. Buyers of this capacity should read chip counts as provisional.",
+        "**The company publishes no numbers.** Revenue, backlog and headcount are Aker's, Bloomberg's and Companies House's. The lead shareholder's quarterly report is the disclosure channel; the S-1, if filed, will be the first primary statement of any of it.",
+        "**Six-year contracts against five-to-six-year hardware.** Leverage Shares: 'Much of this financing assumes the chips will remain valuable and useful for five to six years.' The residual value of a Vera Rubin fleet in 2033 is the open variable in every long contract the company signs."
+      ]
+    },
+    {
+      "id": "where-nscale-slots-in",
+      "title": "Where Nscale slots into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The same ledger the Fluidstack guide uses, applied to a company that owns its ground. The difference in the 'Nscale's seat' column is the whole comparison.",
+      "cols": [
+        "Site",
+        "Landlord",
+        "Nscale's seat",
+        "Anchor (status)",
+        "Financing"
+      ],
+      "rows": [
+        [
+          "Glomfjord, Norway",
+          "Nscale",
+          "Owner-operator",
+          "None named",
+          "Equity"
+        ],
+        [
+          "Narvik / Kvandal, Norway",
+          "Nscale (ex-Aker JV); Nordkraft operating JV",
+          "Owner-operator",
+          "Microsoft (signed, USD 6.2 billion, five years); OpenAI (LOI replaced)",
+          "USD 790 million project financing; Eksfin"
+        ],
+        [
+          "Ward County, Texas",
+          "Ionic Digital (10-year triple-net lease)",
+          "Tenant and operator",
+          "Microsoft (signed; ~104,000 GB300; 700 MW option)",
+          "USD 1.85 billion DDTL, investment grade"
+        ],
+        [
+          "Sines, Portugal",
+          "Start Campus",
+          "Tenant and operator",
+          "Microsoft (signed; 12,600 GB300 + 66,000 Vera Rubin)",
+          "Start Campus's €695 million; GPU DDTL"
+        ],
+        [
+          "Loughton, England",
+          "Nscale (operates)",
+          "Developer-operator",
+          "Microsoft (signed; 23,040 GPUs, 2027)",
+          "GPU DDTL"
+        ],
+        [
+          "Monarch, West Virginia",
+          "Nscale (via AIP)",
+          "Owner-operator with its own 2 GW gas microgrid",
+          "Microsoft (LOI withdrawn); Anthropic (reported ~USD 45 billion / 460 MW)",
+          "Caterpillar vendor financing on the gensets; buildings unfinanced as of September 2026"
+        ],
+        [
+          "Madison, North Carolina",
+          "Partner-run",
+          "Tenant and operator",
+          "Not stated",
+          "USD 1.2 billion DDTL, investment grade"
+        ],
+        [
+          "Barstow, Texas",
+          "Not stated",
+          "Operator",
+          "Figure (signed; USD 3.5 billion initial commitment)",
+          "Not stated"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "Rank these from least to most binding: pipeline, letter of intent, capacity agreement, expansion option, memorandum of understanding.",
+          "a": "Pipeline (nothing) → memorandum of understanding (intent, no money) → letter of intent (outlined terms, usually non-binding) → expansion option (binding right for the customer, obligation for the supplier only if exercised) → capacity agreement (binding supply for a term)."
+        },
+        {
+          "q": "What two documents make up an anchor deal at a site like Monarch?",
+          "a": "A compute-services agreement (the customer pays for GPUs by the period) and a long-term data-centre lease structure (the customer takes rights over the hall). The first is revenue; the second makes the building financeable."
+        },
+        {
+          "q": "Why can a site loan be investment grade when the parent has no rating?",
+          "a": "Project financing rates the SPV, its anchor contract and its collateral, not the parent. If the anchor is a top-rated hyperscaler and delivery risk is manageable, the loan qualifies; the parent carries everything the SPV does not."
+        },
+        {
+          "q": "What does a grid capacity reservation give a Nordic developer, and what can still go wrong?",
+          "a": "A transmission operator's commitment to hold connection capacity at a substation — the bankable asset behind the site. The operator can still halt further allocations (Statnett, May 2026), levy a connection charge, or leave expansion in a queue."
+        },
+        {
+          "q": "What does a government usually contribute to a sovereign-compute project, and what does it usually not?",
+          "a": "Faster planning, priority grid access, political support and sometimes export credit; usually not an anchor purchase contract — the megawatts are still sold to a private anchor."
+        },
+        {
+          "q": "A contract is stated as '52,000 GB300 GPUs' and later as '30,000 Rubin GPUs' for the same site. What changed?",
+          "a": "The chip generation — a contract denominated in chips moves with the roadmap; whether the dollar value moved is not disclosed."
+        },
+        {
+          "q": "What is a delayed-draw term loan, and why does a GPU buildout use one?",
+          "a": "A committed loan drawn in tranches as spending occurs. GPU fleets and buildings are bought in stages tied to delivery milestones, so the borrower draws as it orders rather than paying interest on undrawn cash."
+        },
+        {
+          "q": "What is the residual-value problem in a six-year compute contract?",
+          "a": "The hardware is assumed useful for five to six years; the contract ends around the same time. Who owns the chips in 2033 and what they are worth decides whether the developer made money — an open variable in every long contract."
+        },
+        {
+          "q": "Why did the Caterpillar 2 GW order at Monarch not depend on the Microsoft LOI surviving?",
+          "a": "It was placed by the prior owner in January 2026 with vendor financing and delivery dates; the gensets are on order regardless of who the anchor is. The buildings, not the generation, wait for a signed contract."
+        },
+        {
+          "q": "What does 'reserved' versus 'queued' mean in Statnett's language?",
+          "a": "Reserved: capacity held for the customer at a named substation (230 MW at Kvandal). Queued: an application awaiting allocation (1 GW Helgeland, 140 MW Ballangsleira) — a plan, not a right."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A release announces 'a letter of intent to provide 1.35 gigawatts' at a new campus. A vendor is asked to quote switchgear on it. The vendor should treat the demand as:",
+          "c": [
+            "Contracted",
+            "Provisional until a capacity agreement is signed",
+            "Guaranteed by the hyperscaler",
+            "Financed"
+          ],
+          "a": 1,
+          "why": "An LOI is usually non-binding; at Monarch the LOI was withdrawn within five months and a different anchor arrived."
+        },
+        {
+          "q": "Which of these did lenders actually lend against in February 2026?",
+          "c": [
+            "The 1.3 GW pipeline",
+            "The Stargate UK offtake exploration",
+            "'Multiple executed customer contracts' with GPUs as collateral",
+            "The Narvik 290 MW ambition"
+          ],
+          "a": 2,
+          "why": "The USD 1.4 billion GPU loan was described as secured by GPU infrastructure against executed contracts."
+        },
+        {
+          "q": "Statnett halts new allocations in Northern Norway. What happens to the 230 MW already reserved at Kvandal?",
+          "c": [
+            "It is cancelled",
+            "It stands; the expansion beyond it is what becomes uncertain",
+            "It doubles",
+            "It transfers to Korgen"
+          ],
+          "a": 1,
+          "why": "The reservation held; the company's CEO said phase 2 was 'more in the blue'."
+        },
+        {
+          "q": "Why is a project loan at Ward County investment grade?",
+          "c": [
+            "Nscale is rated investment grade",
+            "The loan is rated on the SPV's Microsoft contract and collateral",
+            "Texas guarantees data-center loans",
+            "GPUs never lose value"
+          ],
+          "a": 1,
+          "why": "Project financing rates the site entity, its anchor and its collateral, not the parent company."
+        },
+        {
+          "q": "The strongest evidence that Monarch's anchor changed hands is:",
+          "c": [
+            "Nscale's press release naming Anthropic",
+            "Anthropic's newsroom",
+            "Semafor's report plus an Aker disclosure of a contract without a name",
+            "A Microsoft statement"
+          ],
+          "a": 2,
+          "why": "Neither Nscale nor Anthropic has confirmed the name; the record is a press report and the lead shareholder's regulatory disclosure."
+        },
+        {
+          "q": "A sovereign customer 'explores offtake' of 8,000 GPUs in a growth zone. Which party has bound itself?",
+          "c": [
+            "The government",
+            "The lab",
+            "The developer",
+            "None of them"
+          ],
+          "a": 3,
+          "why": "Exploration is intent; a growth-zone designation changes timelines, not obligations; the developer has not been paid."
+        },
+        {
+          "q": "Nscale's Norway contract went from 52,000 GB300 to 30,000 Rubin GPUs. The best reading is:",
+          "c": [
+            "The deal shrank by 40%",
+            "The deal moved to a newer chip generation; value and term were not restated",
+            "Microsoft cancelled",
+            "The site lost power"
+          ],
+          "a": 1,
+          "why": "Contracts stated in chips move with the roadmap; no party restated the value."
+        },
+        {
+          "q": "Which financing came with a state export-credit agency inside it?",
+          "c": [
+            "The USD 1.4 billion GPU loan",
+            "The USD 790 million Narvik financing (Eksfin)",
+            "The USD 900 million revolver",
+            "The Ward County DDTL"
+          ],
+          "a": 1,
+          "why": "Eksfin participated in the Narvik package (NOK 2.2 billion per NRK) — compute exports treated as an export industry."
+        }
+      ]
+    }
+  ]
+}

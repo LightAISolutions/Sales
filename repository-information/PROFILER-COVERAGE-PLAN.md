@@ -181,9 +181,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | B8 | `fermi-america` | Fermi America | developer | Fable 5.1 High | AIDC developers | — | — |
 | B8 | `tract` | Tract | developer | Fable 5.1 High | AIDC developers | — | — |
 | B8 | `prime-data-centers` | Prime Data Centers | developer | Fable 5.1 High | AIDC developers | — | — |
-| B9 | `fluidstack` | Fluidstack | neocloud | Fable 5.1 High | AIDC developers | — | — |
-| B9 | `nscale` | Nscale | neocloud | Fable 5.1 High | AIDC developers | — | — |
-| B9 | `anthropic` | Anthropic | hyperscaler | Fable 5.1 High | AIDC developers | — | — |
+| B9 → F2 | `fluidstack` | Fluidstack | neocloud | Fable 5.1 High | AIDC developers | v1 · v04.59r | ✓ · v04.59r |
+| B9 → F2 | `nscale` | Nscale | neocloud | Fable 5.1 High | AIDC developers | v1 · v04.59r | ✓ · v04.59r |
+| B9 → F2 | `anthropic` | Anthropic | hyperscaler | Fable 5.1 High | AIDC developers | v1 · v04.59r | ✓ · v04.59r |
 | B10 | `mgx` | MGX | investor | Fable 5.1 High | ecosystem | — | — |
 | B10 → F1 | `dnv` | DNV | advisor | Fable 5.1 High | G10 | v1 · v04.58r | ✓ · v04.58r |
 | B10 → F1 | `sargent-lundy` | Sargent & Lundy | advisor | Fable 5.1 High | G10 | v1 · v04.58r | ✓ · v04.58r |

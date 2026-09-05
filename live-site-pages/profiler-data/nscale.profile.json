@@ -1,0 +1,1578 @@
+{
+  "schemaVersion": 7,
+  "slug": "nscale",
+  "name": "Nscale Limited (Nscale Global Holdings Limited; Nscale AS)",
+  "shortName": "Nscale",
+  "categories": [
+    "neocloud"
+  ],
+  "website": "https://www.nscale.com/",
+  "headquarters": "London, United Kingdom — the company says only 'Headquartered in the U.K.'; Companies House shows Nscale Global Holdings Limited's registered office at Level 5, 16 New Burlington Place, London W1S 2HX (moved from Knutsford, Cheshire, July 2026). Operating entities in Norway (Nscale AS, Nscale Norway AS), Portugal, Iceland and the United States (Nscale Ward County Borrower SPV, LLC)",
+  "founded": 2024,
+  "employees": "Not stated by the company. Revelio Labs: about 578 employees worldwide as of March 2026 (42 in 2023, 98 in 2024, 365 in 2025); the Anyscale acquisition adds about 200 and Future-tech added about 60. Collection gap.",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Nscale is the anchored neocloud built almost entirely on Microsoft's signature — 'approximately 200,000 NVIDIA GB300 GPUs' contracted in October 2025 across Ward County, Texas; Sines, Portugal; Loughton, England and Narvik, Norway, then 96,000-plus Vera Rubin GPUs added for Norway and Portugal in 2026 — and, since 26 August 2026, on a reported USD 45 billion, six-year contract with Anthropic for 460 MW at the Monarch campus in West Virginia that Microsoft had walked away from over the summer; it has raised about USD 3.7 billion of equity (Series C USD 2 billion at USD 14.6 billion, March 2026, led by Aker ASA and 8090 Industries) and about USD 6.1 billion of debt facilities, two of them investment-grade rated, against reported revenue of about USD 33 million for 2025 and USD 100 million in the second quarter of 2026, and Bloomberg reports an IPO of up to USD 3 billion on a USD 51 billion contracted backlog.\n\nBACKGROUND. Launched from stealth in May 2024 out of the Melbourne bitcoin miner Arkon Energy's 30 MW hydro-powered site at Glomfjord, Norway, by Josh Payne (Arkon's founder) and Nathan Townsend, Nscale raised a USD 155 million Series A (December 2024), a USD 1.1 billion Series B led by Aker (September 2025) and a USD 433 million SAFE, formed and then absorbed a 50/50 Narvik joint venture with Aker, was named OpenAI's first European 'Stargate' partner (Norway, July 2025; UK, September 2025) before OpenAI's Norway letter of intent was replaced by a Microsoft contract and OpenAI paused Stargate UK, bought the 2,250-acre Monarch campus with its 2 GW Caterpillar gas order (March 2026), agreed to buy Anyscale (July 2026), and signed a USD 3.5 billion compute commitment from Figure (3 September 2026). It calls itself 'the first AI-native hyperscaler' and says 'We build and own every layer ourselves' — sites, power, compute and software. The company publishes no revenue, backlog, headcount or contract value; every such figure below is Aker's, a lender's, Companies House's or a named outlet's.",
+  "ecosystemRole": "The European entry in the anchored-neocloud model, and the one that owns its ground: Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid, Loughton in Essex, with partner-run halls at Start Campus (Sines), Ionic Digital (Ward County), Verne (Keflavik) and a Duke Energy-served site in North Carolina. For the corpus's power vendors Nscale is Caterpillar's largest single generation order (Monarch) and a Schneider Electric customer per Aker; for the utilities it is a 230 MW Statnett reservation at Kvandal that the grid operator's May 2026 allocation halt has put in doubt, and a Duke Energy '99MW secured' site in Madison. Microsoft anchors four sites and Anthropic the fifth; OpenAI's role has shrunk to a paused UK exploration.",
+  "productsAndServices": [
+    {
+      "name": "Data-centre development and ownership — Glomfjord, Narvik/Kvandal, Monarch, Loughton; partner-run Sines, Ward County, Keflavik, Madison",
+      "category": "AI data-centre build and operate ('vertically integrated')",
+      "description": "Nscale develops, owns or leases and operates the halls its GPUs sit in — 'software, compute, and power in a vertically integrated offering' — with 'pre-fabricated, chip agnostic infrastructure', closed-loop direct-to-chip liquid cooling and a stated PUE target of 1.1–1.15. The sites page lists eleven locations across Norway, the UK, Portugal, Iceland and the United States.",
+      "highlights": [
+        "Glomfjord, Norway (owned): 30 MW operational, expanding to 60 MW with InfraPartners' modular build (2025); '100% renewable' hydro from a 120 MW plant 'built at the end of the fjord over 100 years ago'; adiabatic cooling; waste heat to the town pool and fish farms; the Svartisen AMD MI250X cluster placed 24th on the November 2024 Top500.",
+        "Narvik / Kvandal, Norway ('Stargate Norway'): 230 MW facility with a 290 MW expansion ambition; initial 20 MW phase with 'approximately USD 1 billion committed'; 100% hydro; the Aker JV rolled into Nscale in March 2026 and 'solely managed by Nscale'; Nordscale Operations AS (51% Nscale / 49% Nordkraft) operates it from 2026; USD 790 million of project financing (May 2026) for a 115 MW expansion; contractor HENT has three buildings totalling 100 MW under contract for 2027.",
+        "Monarch Compute Campus, Mason County, West Virginia (owned via the AIP acquisition): '2,250+ acres'; Phase 1 1.35 GW 'targeted delivery early 2028'; '2 gigawatts expected online by H1 2028' from Caterpillar G3500 gas generation; 'approximately 8 gigawatts by 2031'; 'first state-certified AI microgrid in the US', grid-independent; '$20B+' capital investment; Ames Construction, Kiewit and Boyd CAT at the June 2026 job fair.",
+        "Loughton, Essex, UK (operated): 50 MW scalable to 90 MW; direct liquid cooling; waste-heat reuse; Microsoft's 23,040 GB300s (now Vera Rubin) from Q1–Q2 2027; approved by Epping Forest District Council in June 2026 after a ministerial letter; the company had promised 'operational Q4 2026' in January 2025.",
+        "Partner-run: Start Campus SIN01/SIN02 at Sines, Portugal (12,600 GB300 from Q1 2026; 66,000-plus Vera Rubin from late 2027; €695 million of Start Campus investment; ocean cooling, PUE 1.1, WUE 0); Ionic Digital's Cedarvale campus in Ward County, Texas (234 MW, 10-year triple-net lease, about USD 2 billion to Ionic; 'scalable to 1.2GW'); Verne at Keflavik, Iceland (15 MW, about 4,600 Blackwell Ultra GPUs, first phase complete April 2026); Madison, North Carolina (96 acres, 40 MW by 2026, '99MW secured Duke Energy').",
+        "Korgen (Helgeland, ~250 MW, target 2028) and Ballangsleira (Narvik, 140 MW) are in Statnett's queue; Statnett halted new North-Norway allocations in May 2026 and Nscale Norway's CEO said 'Phase 2 is more uncertain'."
+      ],
+      "positioning": "Where Fluidstack leases and CoreWeave, Nebius and Lambda mostly colocate, Nscale owns land, power and buildings on two continents — Crusoe's builder-operator model with a Nordic hydro origin. Its stated differentiators are time-to-power (behind-the-meter gas at Monarch, hydro reservations in Norway) and 'sovereign' siting for European customers; its weakness is that Loughton, Narvik phase 2 and Stargate UK have all slipped or stalled on power and planning.",
+      "soldThrough": "Multi-year compute-services agreements with a single anchor per site (Microsoft, Anthropic, Figure), 'alongside long-term data centre lease structure' at Monarch; project and GPU-backed debt at site SPVs.",
+      "targetSegments": [
+        "Hyperscalers (Microsoft)",
+        "Frontier labs (Anthropic, OpenAI — Stargate)",
+        "AI-native companies (Figure)",
+        "Telcos and sovereign programmes (BT, Singtel)"
+      ],
+      "roadmap": "Ward County phased from Q3 2026 with a Microsoft option on a 700 MW second phase from late 2027; Sines Vera Rubin from late 2027; Loughton Q1–Q2 2027; Narvik Rubin delivery 2027; Monarch late 2027 (Anthropic tranche) and Phase 1 early 2028, 2 GW generation H1 2028, 8 GW by 2031; Barstow, Texas (Figure) H2 2027."
+    },
+    {
+      "name": "GPU compute — NVIDIA Vera Rubin NVL72, GB300/GB200 NVL72, H200, H100; AMD MI300X and MI250X",
+      "category": "Bare-metal and cluster GPU capacity",
+      "description": "The hardware layer sold as instances, reserved clusters or whole-site deployments: the catalogue lists the NVIDIA DGX Vera Rubin NVL72, GB300 NVL72, GB200 NVL72, H200 and H100; AMD MI300X serves inference and the Hugging Face provider and MI250X the Svartisen cluster. Interconnect is InfiniBand, RoCE and NVLink; storage partners are Vast and DDN.",
+      "highlights": [
+        "Vera Rubin NVL72 as catalogued: '72 Rubin GPUs', sixth-generation NVLink, '75TB fast memory', '2,520 PFLOPS NVFP4 training / 3,600 PFLOPS inference'; Nscale claims to be 'among the first European companies – and the first provider outside of Microsoft itself' to deploy Vera Rubin, with '100,000+ GPUs in 2027' across the UK, Norway 'and beyond'.",
+        "Contracted fleet as the customers and Aker state it: Microsoft ~200,000 GB300 (October 2025) plus 30,000-plus Rubin at Narvik (April 2026) and 66,000-plus Vera Rubin NVL72 at Sines (May 2026) — Aker: 'more than 96,000 NVIDIA Rubin GPUs combined'; Anthropic's reported 460 MW at Monarch on Vera Rubin from late 2027; Figure up to 100,000 GPUs. Bloomberg (via Dealroom): '~289,000 active and contracted GPUs' and '~194,000 Nvidia Vera Rubin chips'.",
+        "Financed against itself: the USD 1.4 billion GPU delayed-draw term loan (PIMCO, Blue Owl, LuminArx; Goldman Sachs structuring, February 2026) is 'secured by GPU infrastructure' for Norway, Portugal, Iceland and the UK; the Ward County (USD 1.85 billion) and Madison (USD 1.2 billion) delayed-draw loans of August 2026 'received investment-grade ratings with stable outlooks'.",
+        "GB200 page claims '30X faster' Llama 3 inference than H100 and '25X more energy efficient'; no pricing is published ('contact sales'); the Series A blog's roadmap was 50,000 GPUs by end-2025, 150,000 by end-2026 and 350,000 by end-2027."
+      ],
+      "positioning": "Nscale is buying the same NVL72 racks as CoreWeave, Nebius and Lambda but has moved its anchor contracts to Vera Rubin earlier than any European peer; the AMD line dates from the Arkon era and no MI355X appears on first-party pages.",
+      "soldThrough": "Reserved capacity under anchor contracts; on-demand instances through the console (USD 5 minimum credit); Hugging Face inference provider.",
+      "targetSegments": [
+        "Anchor tenants",
+        "AI labs and enterprises renting clusters",
+        "Developers via inference APIs"
+      ],
+      "roadmap": "Vera Rubin deliveries 2027 at Narvik, Sines and Loughton; Rubin-class at Monarch and Barstow from late 2027."
+    },
+    {
+      "name": "Platform services — Managed Slurm, Nscale Kubernetes Service, Private AI Cloud, Fleet Operations, and Anyscale (Ray) pending",
+      "category": "Orchestration and operations software",
+      "description": "The software above the racks: Managed Slurm and NKS for clusters, GPU and CPU instances and elastic GPU instances, Private AI Cloud for isolated tenants, Fleet Operations (Control Center, Observability, a 'Radar API' exposing real-time GPU availability and repair status) and, once the Anyscale acquisition closes, the Ray distributed-compute layer.",
+      "highlights": [
+        "Anyscale (agreement 30 July 2026, close H2 2026 subject to regulatory approval; Bloomberg: about USD 1.65 billion): about 200 employees join; Nscale joins the PyTorch Foundation for Ray; Anyscale's CEO calls the combination 'the first full-stack AI hyperscaler'.",
+        "Lightning AI 'AI Studio' partnership (June 2025) for enterprise workspaces; Terraform provider and SSO/API credentials in the docs; Future-tech (December 2025) added a 60-person data-centre engineering consultancy.",
+        "Fleet Operations is pitched at 'hundreds of thousands of GPUs' — the operating layer for anchor customers' fleets rather than a retail cloud console."
+      ],
+      "positioning": "The same ladder Lambda, Nebius and Fluidstack sell (bare metal → Slurm/Kubernetes → managed inference); the Anyscale purchase is the one move that adds a widely used open-source layer no peer owns.",
+      "soldThrough": "Bundled with capacity; Anyscale's existing customers post-close.",
+      "targetSegments": [
+        "Anchor tenants' ML-platform teams",
+        "Enterprises deploying Ray"
+      ],
+      "roadmap": "Anyscale close H2 2026."
+    },
+    {
+      "name": "AI Services — Serverless Inference, serverless fine-tuning, Prompt Workbench; Hugging Face inference provider",
+      "category": "Token-priced inference and fine-tuning",
+      "description": "Pay-per-token inference on open models (launched 4 February 2025) with OpenAI-compatible APIs — Llama 4 Scout, Qwen3, Kimi K2.5, Mixtral 8x22B, GPT-OSS 20B/120B, SDXL and FLUX.1 schnell — plus serverless fine-tuning; an official Hugging Face inference provider since May 2025 on H100 and MI300X, 'hosted in Northern Europe near the Arctic Circle'.",
+      "highlights": [
+        "Company metrics: the inference platform saw '148x growth' and 'over 5,000 users' (Vera Rubin release, 2026); a USD 2 fine-tuning credit and USD 5 minimum console credit are the only prices published.",
+        "Positioned as 'sovereign European AI infrastructure' — in-region processing for European developers."
+      ],
+      "positioning": "A small retail layer beside a wholesale business; comparable to Nebius's and Together AI's inference endpoints, not to the hyperscalers' model gardens.",
+      "soldThrough": "Self-serve console; Hugging Face marketplace.",
+      "targetSegments": [
+        "Developers and AI-native start-ups in Europe"
+      ],
+      "roadmap": "Evaluation tools 'coming soon' (docs)."
+    },
+    {
+      "name": "Energy and power — the Chief Power Officer's unit, the Monarch AI microgrid and the Caterpillar 2 GW order",
+      "category": "Behind-the-meter generation and power development",
+      "description": "Nscale's answer to time-to-power: an in-house energy and power organisation (Daniel Shapiro, Chief Power Officer, and Bengt Jarlsjo, Deputy, appointed March 2026 with the AIP acquisition), a state-certified AI microgrid at Monarch running Caterpillar G3500-series natural-gas generator sets 'at sufficient scale to achieve two gigawatts of power generation by the first half of 2028', 'operating independently from the local grid while preserving future interconnection options', with planned carbon sequestration.",
+      "highlights": [
+        "Caterpillar and Boyd CAT (January 2026, placed by AIP before the acquisition): 2 GW of Cat G3516 fast-response gensets, 'equipment delivery September 2026–August 2027', battery storage and SCR emissions controls, Caterpillar Financial vendor financing; the gensets 'ramp from zero to full load in approximately seven seconds'; Capacity reported it as the largest single power-generation contract in Caterpillar's history.",
+        "Norway: 230 MW reserved at the Kvandal transformer station through Aaktig Digital in Nordkraft's network (Stortinget written answer, August 2025); Eksfin state loan of NOK 2.2 billion inside the USD 790 million financing; Statnett's May 2026 halt on new North-Norway allocations leaves phase 2 'more in the blue'.",
+        "Sines: ocean cooling with 'WUE 0'; Loughton: 'waste-heat reuse'; the sites page claims 'behind-the-meter generation' and 'microgrid island capability' as platform features."
+      ],
+      "positioning": "Islanded gas at Monarch puts Nscale in the same behind-the-fence category as xAI's Colossus and Crusoe's Abilene, with Caterpillar rather than turbines; its Norwegian sites are the opposite — grid hydro whose scarcity is now the constraint.",
+      "soldThrough": "Not sold separately; embedded in site economics.",
+      "targetSegments": [
+        "Anchor tenants needing 2027–2028 delivery"
+      ],
+      "roadmap": "Gensets delivered September 2026–August 2027; 2 GW online H1 2028; Monarch expansion to ~8 GW by 2031."
+    },
+    {
+      "name": "Sovereign AI — BT, Singtel, Stargate UK and the 'made for Europe, by Europe' cloud",
+      "category": "Sovereign and telco compute",
+      "description": "Capacity marketed for in-country processing: up to 14 MW across three BT sites in the UK (April 2026), a capacity-swap partnership with Singtel/Nxera across Southeast Asia (2024), the Trusted Tech Alliance membership (February 2026), and Stargate UK with OpenAI and NVIDIA — 'up to 8,000 GPUs in Q1 2026, potential 31,000' at sites including Cobalt Park in the North East AI Growth Zone — which OpenAI paused in April 2026 over energy costs and regulation.",
+      "highlights": [
+        "UK AI Minister Kanishka Narayan and BT Business CEO Jon James quoted on the BT deal; the company's January 2025 pledge was '£2 billion' ('$2.5 billion over three years') in UK data-centre investment.",
+        "OpenAI's April 2026 statement: 'we continue to explore Stargate UK and will move forward when the right conditions such as regulation and the cost of energy enable long-term infrastructure investment'; Nscale declined to comment.",
+        "No EU AI Act or export-control position is published; the Norwegian Transparency Act compliance page names Nscale Limited."
+      ],
+      "positioning": "Nscale inherited the European sovereign-compute position Fluidstack vacated in March 2026, but its own flagship sovereign project is paused and its capital is going to Texas and West Virginia.",
+      "soldThrough": "Government-endorsed partnerships; telco resale.",
+      "targetSegments": [
+        "UK public sector and regulated industries",
+        "Telcos"
+      ],
+      "roadmap": "BT sites undated; Stargate UK paused."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Site and contract ledger — capacity, anchor, status as stated by the company, its landlords, Aker ASA and the anchor customers",
+      "specs": [
+        {
+          "band": "Glomfjord, Norway (owned)",
+          "label": "Capacity and power",
+          "value": "'30MW operational' → '60MW'; '100% renewable' hydro; adiabatic cooling; Svartisen cluster 'AMD Instinct MI250X' (Top500 #24, Nov 2024)"
+        },
+        {
+          "band": "Narvik / Kvandal, Norway (owned; ex-Aker JV)",
+          "label": "Capacity",
+          "value": "'230MW' facility, '+290MW' ambition; '230 MW reserved through the company Aaktig Digital … under the Kvandal transformer station' (Stortinget answer); HENT: 'three buildings with combined capacity of 100 MW', completion 2027"
+        },
+        {
+          "band": "Narvik / Kvandal, Norway (owned; ex-Aker JV)",
+          "label": "Anchor",
+          "value": "Microsoft: 'binding five-year customer agreement at a contract value of approximately USD 6.2 billion' (Aker/Nscale, Sept 2025); '~52,000' GB300 (Oct 2025); '30,000+ NVIDIA Rubin GPUs', delivery 2027 (Apr 2026); OpenAI's Stargate Norway LOI 'replaced' (Aker Q1 2026)"
+        },
+        {
+          "band": "Narvik / Kvandal, Norway (owned; ex-Aker JV)",
+          "label": "Financing",
+          "value": "'USD 790 million' (ABN AMRO, DNB, Eksfin, Nordea, SEB) for a 115 MW expansion; NRK: Eksfin state loan NOK 2.2 billion; project cost ~NOK 8 billion"
+        },
+        {
+          "band": "Ward County / Barstow, Texas (Ionic Digital Cedarvale, leased)",
+          "label": "Capacity and lease",
+          "value": "'234 MW (full facility)'; '10-year triple-net lease'; 'approximately $2 billion' contracted revenue to Ionic; Nscale: '~240MW → 1.2GW'; ~200 MW IT load in the first financed tranche"
+        },
+        {
+          "band": "Ward County / Barstow, Texas (Ionic Digital Cedarvale, leased)",
+          "label": "Anchor and debt",
+          "value": "Microsoft '~104,000' GB300 'phased from Q3 2026', 'option on 700MW second phase from late 2027'; DDTL 'up to $1.85bn' (J.P. Morgan lead-left), 'investment-grade' rated; GB300 + VR200 Vera Rubin; closed-loop DLC + rear-door heat exchangers"
+        },
+        {
+          "band": "Monarch Compute Campus, Mason County, West Virginia (owned via AIP)",
+          "label": "Site",
+          "value": "'2,250+ acres'; Phase 1 '1.35GW' 'targeted delivery early 2028'; '2 gigawatts expected online by H1 2028'; 'approximately 8 gigawatts by 2031'; 'first state-certified AI microgrid'; '$20B+' capex; '$80M+ annually' in taxes"
+        },
+        {
+          "band": "Monarch Compute Campus, Mason County, West Virginia (owned via AIP)",
+          "label": "Anchor",
+          "value": "Microsoft LOI 'to provide 1.35 gigawatts of AI compute capacity' (Mar 2026), withdrawn 'over the summer' (Semafor); Anthropic 'about $45 billion over six years', '460 MW', Vera Rubin 'from late 2027' (Bloomberg/CNBC via press; Aker disclosure per Data Centre Review; not confirmed by either party)"
+        },
+        {
+          "band": "Monarch Compute Campus, Mason County, West Virginia (owned via AIP)",
+          "label": "Generation",
+          "value": "Caterpillar G3500-series gas gensets to '2 gigawatts of power generation by the first half of 2028'; Capacity: G3516, delivery 'September 2026–August 2027', BESS, SCR, 'full load in approximately seven seconds'"
+        },
+        {
+          "band": "Loughton, Essex, UK (operated)",
+          "label": "Capacity and anchor",
+          "value": "'50MW scalable to 90MW'; Microsoft '23,040 NVIDIA GB300 GPUs initially', 'delivery Q1 2027' (Sept 2025); 'up to 45,000 NVIDIA GB200 GPUs', 'operational Q4 2026' (Jan 2025 — superseded); approved June 2026; 'construction work to begin in the second quarter of 2026'"
+        },
+        {
+          "band": "Sines, Portugal (Start Campus, partner-run)",
+          "label": "Capacity and anchor",
+          "value": "'~12,600' GB300 'Q1 2026' (SIN01); '66,000+ NVIDIA Vera Rubin NVL72 GPUs' 'from late 2027'; '€230m shared infra + €465m second 200MW building'; campus '1.2GW fully permitted'; 'target PUE 1.1, WUE 0'"
+        },
+        {
+          "band": "Keflavik, Iceland (Verne, partner-run)",
+          "label": "Capacity",
+          "value": "'15 megawatts'; 'approximately 4,600 NVIDIA Blackwell Ultra GPUs'; '85% liquid-cooled, 15% air-cooled'; first phase complete April 2026"
+        },
+        {
+          "band": "Madison, North Carolina (partner-run)",
+          "label": "Capacity and debt",
+          "value": "'96 acres'; 'up to 40MW' by 2026; '99MW secured Duke Energy'; DDTL 'up to $1.2bn' (Goldman Sachs lead-left), investment-grade rated; customer not stated"
+        },
+        {
+          "band": "Barstow, Texas (Figure)",
+          "label": "Anchor",
+          "value": "Figure: 'initial commitment: $3.5 billion in compute', intent 'over $6 billion', 'up to 100,000 NVIDIA GPUs', 'initial deployment Barstow, Texas, H2 2027'; MW not stated"
+        },
+        {
+          "band": "Queued / paused",
+          "label": "Korgen, Ballangsleira, Stargate UK",
+          "value": "Korgen 'approximately 250 MW of grid capacity', target 2028; Ballangsleira 140 MW (Statnett queue); Stargate UK 'up to 8,000 NVIDIA GPUs in Q1 2026 … potential to scale to 31,000' — paused by OpenAI April 2026"
+        }
+      ],
+      "notes": "Contract values: Microsoft Norway 'approximately USD 6.2 billion' is the only value either party has stated; the FT's 'up to $14 billion' for the October 2025 expansion and the USD 45 billion Anthropic figure are press-sourced. Nscale itself has never published a contract value, a revenue figure or a total MW under contract."
+    },
+    {
+      "product": "Platform and GPU catalogue (nscale.com product pages and docs, 2026)",
+      "specs": [
+        {
+          "band": "NVIDIA DGX Vera Rubin NVL72",
+          "label": "Configuration",
+          "value": "'72 Rubin GPUs'; '6th-gen NVLink'; '75TB fast memory'"
+        },
+        {
+          "band": "NVIDIA DGX Vera Rubin NVL72",
+          "label": "Performance (as listed)",
+          "value": "'2,520 PFLOPS NVFP4 training / 3,600 PFLOPS inference'"
+        },
+        {
+          "band": "NVIDIA GB200 NVL72",
+          "label": "Configuration and claims",
+          "value": "'36 Grace CPUs + 72 Blackwell GPUs'; '30X faster' Llama 3 inference vs H100; '25X more energy efficient'"
+        },
+        {
+          "band": "Catalogue",
+          "label": "GPU types",
+          "value": "Vera Rubin NVL72, GB300 NVL72, GB200 NVL72, H200, H100 (gpu-nodes page); AMD MI300X (Hugging Face provider), MI250X (Svartisen)"
+        },
+        {
+          "band": "Facility",
+          "label": "Efficiency and cooling",
+          "value": "'Low PUE targeting 1.1–1.15'; closed-loop direct-to-chip liquid cooling; 'behind-the-meter generation'; 'microgrid island capability'"
+        },
+        {
+          "band": "Network and storage",
+          "label": "Fabric",
+          "value": "InfiniBand / RoCE / NVLink; Svartisen: 'lossless RoCE Ethernet fabric powered by Broadcom'; storage partners Vast, DDN"
+        },
+        {
+          "band": "Software",
+          "label": "Layers",
+          "value": "Serverless Inference (OpenAI-compatible API), fine-tuning ('$2 credit'), Managed Slurm, NKS, GPU/CPU VMs, VPC, NFS, Terraform provider; console '$5 minimum credit'"
+        }
+      ],
+      "notes": "No published price list, SLA or region specification; MI355X and Supermicro do not appear on first-party pages."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-03",
+      "category": "customer",
+      "headline": "Figure: multi-year partnership — 'initial commitment: $3.5 billion in compute', intent to scale 'over $6 billion', up to 100,000 NVIDIA GPUs, first deployment at Barstow, Texas in H2 2027; Nscale takes a strategic stake in Figure",
+      "read": "A third anchor beside Microsoft and Anthropic, and the first where the neocloud is also an investor in its customer.",
+      "source": "https://www.nscale.com/press-releases/nscale-and-figure"
+    },
+    {
+      "date": "2026-09-02",
+      "category": "capacity",
+      "headline": "Digi.no: contractor HENT (Sentia) signs for two more buildings at Narvik — 'three buildings with combined capacity of 100 MW', completion 2027",
+      "read": "Phase 1 at Kvandal is physically progressing while phase 2's power remains unallocated.",
+      "source": "https://www.digi.no/artikler/signerte-kontrakt-for-utvidelse-av-datasenteret-i-narvik/576552"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "financial",
+      "headline": "About USD 3 billion of senior secured delayed-draw term loans: up to USD 1.85 billion for Ward County, Texas (~200 MW IT, GB300 + VR200) and up to USD 1.2 billion for Madison, North Carolina (up to 40 MW); J.P. Morgan and Goldman Sachs joint lead arrangers; 'both facilities received investment-grade ratings with stable outlooks'",
+      "read": "Investment-grade project debt at the SPV level on the strength of the anchor contracts — the financing model CoreWeave reached only after its IPO.",
+      "source": "https://www.nscale.com/press-releases/nscale-3-billion-delayed-draw-term-loans"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "market",
+      "headline": "Leverage Shares' IPO risk note: 'roughly $3 billion of financing against a business generating only a few hundred million dollars in annual revenue'; GPU depreciation assumptions of five to six years; 'contracted demand is not necessarily guaranteed demand'",
+      "read": "The sell-side framing of the backlog-versus-run-rate gap that the IPO will have to answer.",
+      "source": "https://leverageshares.com/us/insights/nscale-ipo-what-investors-should-know-about-the-risks/"
+    },
+    {
+      "date": "2026-08-28",
+      "category": "customer",
+      "headline": "Semafor: Google and Microsoft were both in talks for the Monarch capacity that went to Anthropic — Microsoft 'withdrew from Monarch negotiations over the summer during a review of its data center portfolio and on-site power generation allocations'; Data Centre Review: Nscale's disclosure via Aker 'confirmed the contract exists but did not publicly name the customer'; West Virginia's governor calls it 'the reported $45 billion agreement'",
+      "read": "The anchor changed hands between the LOI and the contract — and neither Nscale nor Anthropic has confirmed the name.",
+      "source": "https://www.semafor.com/article/08/28/2026/google-and-microsoft-were-in-talks-for-nscale-compute-deal-that-went-to-anthropic"
+    },
+    {
+      "date": "2026-08-26",
+      "category": "order-win",
+      "headline": "Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on",
+      "read": "At about USD 16 million per MW-year the silicon is paid off inside the lease (Global Data Center Hub) — the customer is buying delivery certainty, not a landlord's margin.",
+      "source": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/"
+    },
+    {
+      "date": "2026-08-21",
+      "category": "financial",
+      "headline": "Bloomberg: Nscale plans a US IPO that may raise as much as USD 3 billion, with Goldman Sachs and JPMorgan, filing as early as September 2026; Dealroom relays 'USD 51 billion in total contracted revenue', Q2 2026 revenue about USD 100 million, FY2025 about USD 33 million, '~289,000 active and contracted GPUs'",
+      "read": "The first revenue figures ever attached to the company, and they come from IPO leaks rather than the company.",
+      "source": "https://dealroom.co/news/143730-nscale-eyes-september-us-ipo-on-51b-ai-contract-backlog/"
+    },
+    {
+      "date": "2026-07-30",
+      "category": "ma",
+      "headline": "Definitive agreement to acquire Anyscale (Ray); about 200 employees join; close H2 2026; Bloomberg reports about USD 1.65 billion; Payne: 'We build and own every layer ourselves'",
+      "read": "The software layer bought rather than built — the acquisition that lets the company call itself 'full-stack'.",
+      "source": "https://www.nscale.com/press-releases/nscale-acquires-anyscale"
+    },
+    {
+      "date": "2026-07-16",
+      "category": "financial",
+      "headline": "Aker ASA H1 2026: 'Nscale signed two major Microsoft contracts in Portugal and Norway for more than 96,000 NVIDIA Rubin GPUs combined' and 'secured USD 790m in financing'; Aker's NAV rose close to NOK 40 billion in the half, 'driven by continued extraordinary growth in Nscale'",
+      "read": "The lead shareholder's quarterly reports are the company's de facto investor disclosure.",
+      "source": "https://www.tradingview.com/news/modular_finance:2e8703d51a4ac:0-aker-asa-reports-second-quarter-and-half-year-results-2026/"
+    },
+    {
+      "date": "2026-07-07",
+      "category": "financial",
+      "headline": "USD 900 million revolving credit facility from twelve banks led by J.P. Morgan, Goldman Sachs, Morgan Stanley and MUFG for expansion in the US, Europe and APAC",
+      "read": "A corporate liquidity line on top of project debt — the bank syndicate is now treating Nscale as a borrower, not a start-up.",
+      "source": "https://www.nscale.com/press-releases/revolving-credit-facility"
+    },
+    {
+      "date": "2026-07-06",
+      "category": "partnership",
+      "headline": "Nordscale Operations AS — 51% Nscale Norway AS, 49% Nordkraft AS — to operate the Kvandal facility from 2026, based at Bjerkvik outside Narvik",
+      "read": "The grid company becomes the operating partner: local power relationships institutionalised after Statnett's halt.",
+      "source": "https://www.nscale.com/press-releases/nordscale"
+    },
+    {
+      "date": "2026-07-05",
+      "category": "regulatory",
+      "headline": "The Telegraph reports Investment Minister Lord Stockwood wrote to Epping Forest District Council in November 2025 that 'This Government is keen to see the successful delivery of this site'; the council approved the enlarged Loughton scheme in June 2026 after Loughton Town Council objected and demanded grid-impact evidence; operability moved from 2026 to 2027",
+      "read": "Political support delivered the permit; it did not deliver the year the company had promised.",
+      "source": "https://www.yahoo.com/news/politics/articles/labour-pressured-council-back-giant-123414059.html"
+    },
+    {
+      "date": "2026-05-26",
+      "category": "regulatory",
+      "headline": "NRK: Statnett halts new power allocations in North Norway for grid-security reasons; Nscale Norway CEO Stian Jenssen: 'Byggetrinn 2 er mer i det blå etter Statnetts beslutning' ('Phase 2 is more uncertain after Statnett's decision'); Eksfin's NOK 2.2 billion state loan and the 230 MW allocation cited",
+      "read": "Power-first siting cuts both ways — hydro was the reason for Narvik and transmission is now the ceiling.",
+      "source": "https://www.nrk.no/nordland/nscale-sar-tvil-om-videre-satsing-pa-gigant-datasenter-i-narvik-1.17893773"
+    },
+    {
+      "date": "2026-05-11",
+      "category": "financial",
+      "headline": "USD 790 million of project financing from ABN AMRO, DNB, Eksfin, Nordea and SEB for a 115 MW Narvik expansion, with an accordion — 'the largest AI infrastructure investment in Norway'",
+      "read": "Nordic bank and export-credit money for a hydro-powered site: the European financing template, before the US loans went investment-grade.",
+      "source": "https://www.nscale.com/press-releases/nscale-secures-790-million-norway"
+    },
+    {
+      "date": "2026-05-08",
+      "category": "financial",
+      "headline": "Aker ASA Q1 2026: USD 350 million cash plus the JV roll-up and earn-out in the Series C lifted Aker to '22.8% on a fully diluted basis'; Nscale is Aker's second-largest asset at 'NOK 32 billion'; Microsoft 'signed a contract … covering 30,000 GPUs in Narvik', replacing the OpenAI Stargate Norway LOI",
+      "read": "OpenAI out, Microsoft in at Narvik — the anchor the site was announced with is not the anchor it will serve.",
+      "source": "https://www.tradingview.com/news/modular_finance:61a79faedf016:0-aker-asa-reports-first-quarter-results-2026/"
+    },
+    {
+      "date": "2026-05-05",
+      "category": "order-win",
+      "headline": "Sines, Portugal: 66,000-plus NVIDIA Vera Rubin NVL72 GPUs for Microsoft at Start Campus from late 2027; Start Campus invests €230 million in shared infrastructure and €465 million in a second 200 MW building; campus 1.2 GW permitted, ocean-cooled, target PUE 1.1",
+      "read": "Microsoft's largest European Nscale tranche lands on a partner's campus, not Nscale's own.",
+      "source": "https://www.nscale.com/press-releases/nscale-start-campus"
+    },
+    {
+      "date": "2026-04-28",
+      "category": "leadership",
+      "headline": "Sam Huckaby (ex-Oracle SVP OCI data-centre infrastructure, ex-Vantage COO North America) appointed President of Data Centers; Lauren Hurwitz (ex-Palantir) appointed COO per search results — the release page returns 404",
+      "read": "Hyperscaler and colocation operators hired to run buildings, a year after the company was a GPU-cloud start-up.",
+      "source": "https://www.nscale.com/press-releases/nscale-appoints-sam-huckaby"
+    },
+    {
+      "date": "2026-04-23",
+      "category": "partnership",
+      "headline": "BT: 'up to 14 megawatts of AI compute capacity across three BT sites', NVIDIA-powered, sovereign UK; the UK AI Minister and BT Business CEO quoted",
+      "read": "The only sovereign UK capacity actually contracted, at a fraction of Stargate UK's scale.",
+      "source": "https://www.nscale.com/press-releases/nscale-and-bt"
+    },
+    {
+      "date": "2026-04-14",
+      "category": "order-win",
+      "headline": "Narvik: 230 MW, '30,000+ NVIDIA Rubin GPUs' for Microsoft, delivery 2027 — 'the roll up of the Aker Nscale joint venture' and 'a project solely managed by Nscale'; Microsoft's Jon Tinter quoted",
+      "read": "The 52,000 GB300 of October 2025 became 30,000 Rubin of April 2026 — fewer, newer chips for the same site.",
+      "source": "https://www.nscale.com/press-releases/nscale-microsoft-norway"
+    },
+    {
+      "date": "2026-04-09",
+      "category": "customer",
+      "headline": "OpenAI pauses Stargate UK: 'we continue to explore Stargate UK and will move forward when the right conditions such as regulation and the cost of energy enable long-term infrastructure investment'; Nscale declined to comment",
+      "read": "The 8,000-to-31,000-GPU sovereign flagship stalls on UK power prices — a data point on how firm an 'exploration of offtake' is.",
+      "source": "https://www.cnbc.com/2026/04/09/openai-halts-uk-stargate-project.html"
+    },
+    {
+      "date": "2026-03-30",
+      "category": "regulatory",
+      "headline": "Data Centre Review: Loughton Town Council demands a fresh application for Nscale's revised scheme ('almost 50% taller', 50% more internal capacity) and evidence on grid impact; Nscale: 'we expect construction work to begin in the second quarter of 2026'",
+      "read": "Local planning as the constraint in the one European market with the most political backing.",
+      "source": "https://datacentrereview.com/2026/03/nscale-latest-to-face-public-backlash-over-proposed-data-centre/"
+    },
+    {
+      "date": "2026-03-16",
+      "category": "ma",
+      "headline": "Acquisition of American Intelligence & Power Corporation (sponsored by Fidelis New Energy and 8090 Industries) — the 2,250-acre Monarch Compute Campus in Mason County, West Virginia, 'a power runway scalable to over 8 gigawatts', 2 GW online by H1 2028 — for cash and shares; Microsoft letter of intent for 1.35 GW of Vera Rubin NVL72 capacity, 'deployment begins late 2027'; Daniel Shapiro named Chief Power Officer; Aker's stake diluted from 23.9% to 22.7%",
+      "read": "The company bought its own power: a gas microgrid campus with a hyperscaler LOI attached, five months before the hyperscaler left.",
+      "source": "https://www.nscale.com/press-releases/nscale-acquires-american-intelligence-power-corporation"
+    },
+    {
+      "date": "2026-03-09",
+      "category": "financial",
+      "headline": "Series C: USD 2 billion at a USD 14.6 billion valuation led by Aker ASA and 8090 Industries with Astra, Citadel, Dell, Jane Street, Lenovo, Linden, Nokia, NVIDIA and Point72; Sheryl Sandberg, Susan Decker and Nick Clegg join the board; the Aker Nscale JV rolled fully into Nscale; Payne: 'This is the largest infrastructure buildout in human history'",
+      "read": "Europe's largest Series C, and the round that turned a JV partner into a 22.8% shareholder.",
+      "source": "https://www.nscale.com/press-releases/nscale-series-c"
+    },
+    {
+      "date": "2026-02-13",
+      "category": "partnership",
+      "headline": "Trusted Tech Alliance launched at the Munich Security Conference with Anthropic, AWS, Cohere, Ericsson, Google Cloud, Microsoft, Nokia, NTT, SAP and Saab among members",
+      "read": "Nscale's only first-party page naming Anthropic, Google Cloud and AWS — as co-signatories, not customers.",
+      "source": "https://www.nscale.com/press-releases/trusted-tech-alliance"
+    },
+    {
+      "date": "2026-02-12",
+      "category": "financial",
+      "headline": "USD 1.4 billion GPU-backed delayed-draw term loan led by PIMCO, Blue Owl and LuminArx with Goldman Sachs as sole structuring and placement agent, collateralised by GPU infrastructure, financing clusters in Norway, Portugal, Iceland and the UK against 'multiple executed customer contracts'",
+      "read": "GPUs as collateral at the European sites — the CoreWeave structure, a year on.",
+      "source": "https://www.nscale.com/press-releases/nscale-signs-1-4bn-delayed-draw-term-loan"
+    },
+    {
+      "date": "2026-02-03",
+      "category": "capacity",
+      "headline": "Verne, Keflavik, Iceland: 15 MW, about 4,600 NVIDIA Blackwell Ultra GPUs, 85% liquid-cooled, during 2026; first phase complete by April 2026",
+      "read": "Iceland is where Fluidstack's European fleet lived — Nscale takes the same geothermal-and-hydro colocation route on a small scale.",
+      "source": "https://www.nscale.com/press-releases/nscale-and-verne"
+    },
+    {
+      "date": "2025-12-26",
+      "category": "leadership",
+      "headline": "Alice Takhtajan (ex-J.P. Morgan ECM, TMT) becomes CFO; Ron Huisman moves to Chief Accounting and Finance Operations Officer",
+      "read": "An equity-capital-markets banker as CFO eight months before the IPO leak.",
+      "source": "https://www.nscale.com/press-releases/nscale-appoints-alice-takhtajan"
+    },
+    {
+      "date": "2025-12-15",
+      "category": "ma",
+      "headline": "Acquisition of Future-tech, a ~60-person European data-centre engineering consultancy; terms not stated",
+      "read": "Design capacity bought ahead of the US build programme.",
+      "source": "https://www.nscale.com/press-releases/nscale-acquires-future-tech"
+    },
+    {
+      "date": "2025-10-15",
+      "category": "order-win",
+      "headline": "Microsoft expansion to 'approximately 200,000 NVIDIA GB300 GPUs': Texas ~104,000 (240 MW campus scalable to 1.2 GW, phased from Q3 2026, Microsoft option on a 700 MW second phase), Sines ~12,600 (Q1 2026), Loughton ~23,000 (Q1 2027), Narvik ~52,000; with Dell; value not stated (FT: up to USD 14 billion)",
+      "read": "Aker's Q3 letter: from 'fewer than 5,000 GPUs' to 'contracts securing more than 200,000' in a year — all of it one customer.",
+      "source": "https://www.nscale.com/press-releases/nscale-microsoft-2025"
+    },
+    {
+      "date": "2025-10-14",
+      "category": "order-win",
+      "headline": "Ionic Digital leases its Cedarvale, Barstow, Texas facility to Nscale: '10-year triple-net lease', '234 MW (full facility)', 'approximately $2 billion' of contracted revenue; Ionic moves its mining rigs to Midland",
+      "read": "A bitcoin miner's building becomes Microsoft's Texas GB300 site — the miner-pivot cohort with Nscale, not Fluidstack, as tenant.",
+      "source": "https://ionicdigital.com/press-releases/ionic-digital-secures-transformational-lease-agreement-of-cedarvale-facility-with-nscale/"
+    },
+    {
+      "date": "2025-10-13",
+      "category": "corporate",
+      "headline": "Aker and Nscale close the 50/50 Narvik joint venture ('Aker Nscale'); Aker's direct stake 9.3% fully diluted; Microsoft's 'five-year, multi-billion dollar off-take agreement'; Aker's JV stake 'convertible into additional Nscale shares at a future IPO'",
+      "read": "The IPO was written into the JV terms a year before the filing.",
+      "source": "https://www.prnewswire.com/news-releases/aker-finalizes-investment-in-nscale-and-joint-venture-in-narvik-302582292.html"
+    },
+    {
+      "date": "2025-10-01",
+      "category": "financial",
+      "headline": "USD 433 million pre-Series C SAFE from Blue Owl managed funds, Dell, NVIDIA and Nokia plus existing investors; boilerplate: 'operates across 50+ data centers'",
+      "read": "Suppliers as shareholders — NVIDIA, Dell and Nokia in successive rounds.",
+      "source": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe"
+    },
+    {
+      "date": "2025-09-25",
+      "category": "financial",
+      "headline": "Series B: USD 1.1 billion led by Aker ASA (USD 285 million in cash and Narvik land, 9.3% fully diluted, earn-out to 12.2%) with Sandton, Blue Owl, Dell, Fidelity, G Squared, Nokia, NVIDIA, Point72 and T.Capital; Payne: 'Europe needs a Hyperscaler'",
+      "read": "Europe's largest Series B, part-paid in land — Aker's Narvik portfolio after 'multiple failed attempts' to develop it.",
+      "source": "https://www.nscale.com/press-releases/nscale-series-b"
+    },
+    {
+      "date": "2025-09-17",
+      "category": "order-win",
+      "headline": "Aker, Nscale and Microsoft sign 'a binding five-year customer agreement at a contract value of approximately USD 6.2 billion' for Narvik, delivered in stages from 2026; Microsoft's Scott Guthrie names Narvik and Loughton in his 'most powerful AI datacenter' post the next day",
+      "read": "The only contract value Microsoft or Nscale has ever put on a deal.",
+      "source": "https://news.microsoft.com/source/emea/features/the-port-town-in-norway-emerging-as-an-ai-hub/"
+    },
+    {
+      "date": "2025-09-16",
+      "category": "order-win",
+      "headline": "UK announcement: Loughton — 23,040 NVIDIA GB300 for Microsoft, 50 MW to 90 MW, Q1 2027; Stargate UK with OpenAI and NVIDIA — 8,000 GPUs in Q1 2026, potential 31,000, Cobalt Park in the North East AI Growth Zone; 'up to 58,640' GPUs across the UK; the Prime Minister quoted on 'sovereign capability'",
+      "read": "Announced during the US state visit as part of a USD 30 billion package — the political peak of the sovereign story.",
+      "source": "https://www.nscale.com/press-releases/nscale-uk-ai-infrastructure-announcement"
+    },
+    {
+      "date": "2025-08-12",
+      "category": "regulatory",
+      "headline": "Stortinget written answer: 230 MW 'reserved through the company Aaktig Digital' under the Kvandal transformer station; Aker Nscale in Statnett's queue for 1 GW at Helgeland and 140 MW at Ballangsleira; the question asked whether the company should pay a grid-connection charge",
+      "read": "The Norwegian record of what is reserved (230 MW) versus what is queued (1.14 GW).",
+      "source": "https://www.altinget.no/digital/statsradensvarer/18098"
+    },
+    {
+      "date": "2025-07-31",
+      "category": "partnership",
+      "headline": "Stargate Norway: 50/50 Nscale–Aker joint venture at Kvandal — 230 MW, '+290MW' ambition, 'target … 100,000 NVIDIA GPUs by end of 2026', 'approximately USD 1 billion committed to initial 20MW phase'; OpenAI 'initial offtaker with option to scale' — its first European site under 'OpenAI for Countries'",
+      "read": "OpenAI was the announced anchor; nine months later Aker records the LOI 'replaced' by Microsoft.",
+      "source": "https://www.nscale.com/press-releases/stargate-norway-nscale-aker-openai"
+    },
+    {
+      "date": "2025-06-11",
+      "category": "partnership",
+      "headline": "NVIDIA lists Nscale among the providers contributing Blackwell and other GPUs to DGX Cloud Lepton, alongside Mistral AI, Nebius, Fluidstack, Scaleway and Together AI; Lightning AI 'AI Studio' partnership the same day",
+      "read": "Nscale and Fluidstack side by side in NVIDIA's European marketplace, a year before they became the two Anthropic suppliers.",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem"
+    },
+    {
+      "date": "2025-03-25",
+      "category": "capacity",
+      "headline": "InfraPartners to build the modular Glomfjord expansion from 30 MW to 60 MW, launch Q2 2025; boilerplate '1.3GW pipeline across Europe and North America'",
+      "read": "The last expansion of the Arkon-era site; everything since has been new ground.",
+      "source": "https://www.nscale.com/press-releases/nscale-and-infrapartners-announce-partnership-to-build-60mw-ai-data-centre-in-glomfjord-norway"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "microsoft",
+      "type": "customer",
+      "status": "active",
+      "since": "2025-09",
+      "scale": "~200,000 GB300 (Oct 2025) + 96,000+ Vera Rubin (2026); 'approximately USD 6.2 billion' five-year Narvik agreement; 1.35 GW Monarch LOI withdrawn",
+      "via": "GB300 and Vera Rubin NVL72 capacity at Narvik, Ward County, Loughton, Sines",
+      "note": "Microsoft is Nscale's anchor at four sites: the USD 6.2 billion five-year Narvik agreement (September 2025), the ~200,000-GB300 expansion across Texas, Portugal, the UK and Norway (October 2025), 30,000-plus Rubin at Narvik (April 2026) and 66,000-plus Vera Rubin at Sines (May 2026); its 1.35 GW Monarch letter of intent (March 2026) was withdrawn over the summer of 2026.",
+      "context": "Microsoft Source EMEA (17 September 2025): 'Microsoft, Nscale and Aker have entered into a landmark deal … worth an estimated $6.2 billion', 'a five-year agreement that will begin to deliver services in stages, commencing in 2026'; Scott Guthrie's blog the next day names Narvik and Loughton as GB300 sites. Nscale's October 2025 release puts the total at 'approximately 200,000 NVIDIA GB300 GPUs' with Texas at ~104,000 on a 240 MW campus and a Microsoft option on a 700 MW second phase; the FT reported the expansion as worth up to USD 14 billion — no party has stated it.\n\nIn 2026 the Norway tranche moved to 30,000-plus Rubin GPUs (Aker: replacing the OpenAI LOI) and Sines to 66,000-plus Vera Rubin; Aker's H1 2026 report counts 'more than 96,000 NVIDIA Rubin GPUs combined'. The Monarch LOI — 'initial multi-year compute services agreement alongside long-term data centre lease structure' — did not become a contract: Semafor reports Microsoft withdrew 'during a review of its data center portfolio and on-site power generation allocations', and Anthropic took the first 460 MW.",
+      "source": "https://news.microsoft.com/source/emea/features/the-port-town-in-norway-emerging-as-an-ai-hub/"
+    },
+    {
+      "slug": "anthropic",
+      "type": "customer",
+      "status": "announced",
+      "since": "2026-08",
+      "scale": "reported ~USD 45 billion over six years for ~460 MW at Monarch (press; Aker disclosure; unconfirmed by either party)",
+      "via": "Vera Rubin NVL72 capacity at Monarch, from late 2027",
+      "note": "Bloomberg, CNBC and TechCrunch reported on 26 August 2026 that Anthropic agreed to pay Nscale about USD 45 billion over six years for about 460 MW of Vera Rubin capacity at the Monarch campus from late 2027; Data Centre Review reports Nscale's regulatory disclosure via Aker confirmed a contract without naming the customer; neither company has confirmed the name.",
+      "context": "TechCrunch: the deal covers 'roughly 460 MW' in the 1.35 GW first phase that Microsoft's March 2026 letter of intent had addressed; Semafor adds that Google was also in talks and that Microsoft 'walked away' over the summer. West Virginia's governor called it 'the reported $45 billion agreement' and 'an extraordinary vote of confidence in our state'; Nscale gave USD 500,000 to Mason County schools. Global Data Center Hub's reading: USD 45 billion / 460 MW / six years is about USD 16.3 million per MW per year against a build cost near USD 24 billion — 'the silicon is being paid off inside the lease'.\n\nAnthropic's own newsroom is silent on Nscale; its only first-party mention is as a Trusted Tech Alliance co-member (February 2026). The status is therefore 'announced' by press, not by the parties, and the number is a press figure.",
+      "source": "https://www.datacentrereview.com/2026/08/anthropic-reportedly-behind-nscales-45bn-ai-compute-contract/"
+    },
+    {
+      "slug": "openai",
+      "type": "customer",
+      "status": "announced",
+      "since": "2025-07",
+      "scale": "Stargate Norway: 100,000 GPUs by end-2026 target (LOI replaced by Microsoft); Stargate UK: up to 8,000 → 31,000 GPUs (paused April 2026)",
+      "via": "Stargate Norway; Stargate UK",
+      "note": "OpenAI was announced as 'initial offtaker with option to scale' at Stargate Norway (July 2025) and as the explorer of 'up to 8,000 NVIDIA GPUs in Q1 2026 with the potential to scale to 31,000' at Stargate UK (September 2025); Aker's Q1 2026 report records the Norway LOI replaced by a Microsoft contract, and OpenAI paused Stargate UK in April 2026.",
+      "context": "Stargate Norway (31 July 2025): 'the first data centre initiative on the continent' under 'OpenAI for Countries', 230 MW at Kvandal with 'approximately USD 1 billion committed to initial 20MW phase'; Sam Altman: 'Europe needs more compute'. Stargate UK (16 September 2025): sites including Cobalt Park in the North East AI Growth Zone, for 'critical public services, regulated industries like finance, research projects or national security partnerships'.\n\nBy April 2026 both had changed: Aker's Q1 report says Microsoft's 30,000-GPU Narvik contract replaced 'the previous LOI with Open AI (Stargate Norway)', and OpenAI told CNBC it would 'move forward when the right conditions such as regulation and the cost of energy enable long-term infrastructure investment'. No OpenAI contract value has ever been stated. OpenAI still appears in Nscale's 'trusted by' logos.",
+      "source": "https://www.nscale.com/press-releases/stargate-norway-nscale-aker-openai"
+    },
+    {
+      "slug": "nvidia",
+      "type": "investor",
+      "status": "active",
+      "since": "2025-09",
+      "scale": "Series B, SAFE and Series C participant; Vera Rubin NVL72 supplier; DGX Cloud Lepton contributor",
+      "via": "Series B / pre-Series C SAFE / Series C; DSX AI Factory reference design",
+      "note": "NVIDIA invested in the Series B (September 2025), the USD 433 million SAFE (October 2025) and the Series C (March 2026), supplies the GB300 and Vera Rubin NVL72 systems behind every anchor contract, and lists Nscale as a DGX Cloud Lepton contributor.",
+      "context": "The Series B release names NVIDIA among participants; the SAFE release names 'Blue Owl Managed Funds, Dell, NVIDIA, Nokia'; the Series C lists NVIDIA among supporting investors. On the product side Nscale claims to be 'the first provider outside of Microsoft itself' to deploy Vera Rubin, with Ian Buck quoted, and the Monarch campus is designed to NVIDIA's DSX AI Factory reference design. NVIDIA's own June 2025 Lepton release lists Nscale as a marketplace contributor and its executives are quoted in the Verne and BT releases. The circularity — supplier, shareholder and marketplace operator — is the pattern the corpus records for CoreWeave and Lambda.",
+      "source": "https://www.nscale.com/press-releases/nscale-series-b"
+    },
+    {
+      "slug": "caterpillar",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026-01",
+      "scale": "2 GW of Cat G3516 gas gensets at Monarch; deliveries September 2026–August 2027",
+      "via": "Cat G3500-series generator sets; Boyd CAT",
+      "note": "Monarch's 2 GW behind-the-meter generation is Caterpillar G3500-series natural-gas generator sets with Boyd CAT as dealer — an order placed by American Intelligence & Power in January 2026 and inherited by Nscale with the March 2026 acquisition.",
+      "context": "Nscale's March 2026 release: 'Through a strategic collaboration with Caterpillar, Nscale will deploy Caterpillar G3500 series natural gas generator sets at sufficient scale to achieve two gigawatts of power generation by the first half of 2028'; Caterpillar's Melissa Busen: 'Projects like Monarch demonstrate how Caterpillar's natural gas generation platforms are being deployed as core infrastructure for data centers'. Capacity's January 2026 report on the AIP order: G3516 fast-response sets, delivery September 2026 to August 2027, battery storage, SCR emissions controls, Caterpillar Financial vendor financing, 'zero to full load in approximately seven seconds'. Boyd CAT was at the June 2026 job fair.",
+      "source": "https://www.nscale.com/press-releases/nscale-west-virginia-ai-factory"
+    },
+    {
+      "slug": "google",
+      "type": "other",
+      "status": "historical",
+      "since": "2026",
+      "scale": "talks for Monarch capacity that 'fell through' (Semafor); Trusted Tech Alliance co-member",
+      "via": "Monarch capacity negotiations",
+      "note": "Semafor reported that Google 'engaged in discussions with Nscale but the negotiations fell through following an internal assessment of computing requirements and capital expenditure management' before Anthropic took the Monarch capacity; Google Cloud is otherwise only a Trusted Tech Alliance co-member.",
+      "context": "The August 2026 Semafor account is the only record of a Google–Nscale commercial discussion; no Google page names Nscale. Google's compute relationships in the corpus run through its own TPU deals with Anthropic and through backstops of Fluidstack's leases, not through Nscale.",
+      "source": "https://www.semafor.com/article/08/28/2026/google-and-microsoft-were-in-talks-for-nscale-compute-deal-that-went-to-anthropic"
+    },
+    {
+      "slug": "schneider-electric",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026",
+      "scale": "",
+      "via": "data-centre technology supply (per Aker ASA)",
+      "note": "Aker ASA's Q2 2026 CEO letter states 'At Aker and Nscale, we also know Schneider Electric as an important technology supplier to data centers' — the only stated supplier link for electrical infrastructure.",
+      "context": "The remark appears in the letter explaining Aker's sale of Cognite to Schneider Electric; it names Schneider as a supplier to Nscale's data centres without products or values. No Nscale or Schneider page states the relationship.",
+      "source": "https://airtools-aker.prod-mid-euw3.investis.com/sites/airtools-aker/files/pr/Aker-ASA-Q2-2026-CEO-Letter.pdf"
+    },
+    {
+      "slug": "fluidstack",
+      "type": "competitor",
+      "status": "active",
+      "since": "2025-06",
+      "scale": "",
+      "via": "DGX Cloud Lepton co-contributors; both Anthropic capacity suppliers (2026)",
+      "note": "Fluidstack and Nscale are the two European-origin neoclouds now supplying Anthropic in the United States — Fluidstack as tenant-operator of the USD 50 billion programme, Nscale through the reported USD 45 billion Monarch contract — and NVIDIA lists both as DGX Cloud Lepton contributors.",
+      "context": "Semafor's August 2026 report names Fluidstack as a peer Anthropic supplier in describing the Nscale deal. The models differ: Fluidstack leases its sites with Google backstops and owns almost nothing; Nscale owns Glomfjord, Narvik and Monarch and borrows against its GPUs and its anchor contracts. Fluidstack's withdrawal from France in March 2026 left Nscale as the European sovereign-compute name.",
+      "source": "https://www.semafor.com/article/08/28/2026/google-and-microsoft-were-in-talks-for-nscale-compute-deal-that-went-to-anthropic"
+    },
+    {
+      "slug": "nebius",
+      "type": "competitor",
+      "status": "active",
+      "since": "2025-06",
+      "scale": "",
+      "via": "DGX Cloud Lepton co-contributors; both Microsoft neocloud suppliers",
+      "note": "Nebius and Nscale are named together by NVIDIA as DGX Cloud Lepton contributors and are both Microsoft-anchored European neoclouds.",
+      "context": "NVIDIA's June 2025 Lepton release lists 'Mistral AI, Nebius, Nscale, Firebird, Fluidstack, Hydra Host, Scaleway and Together AI' as contributors. Both companies own their data centres and both signed multi-billion Microsoft capacity deals in the autumn of 2025; Nebius is Nasdaq-listed and finances with convertible notes, Nscale is private and finances with GPU-backed and project term loans ahead of a reported IPO.",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "UK AI Growth Zones / AI Opportunities Action Plan (Stargate UK, Loughton)",
+      "status": "in-effect",
+      "effectiveDate": "2025-09",
+      "exposure": "The North East AI Growth Zone (announced 17 September 2025: '£30 billion potential investment', Cobalt Park and Blyth) is the designated home of Stargate UK, with Nscale, OpenAI and NVIDIA named; the government's Investment Minister wrote to Epping Forest District Council in November 2025 in support of the Loughton site, which was approved in June 2026 after local objection. OpenAI paused Stargate UK in April 2026 citing 'regulation and the cost of energy'.",
+      "mitigation": "Company statements: 'Data sovereignty is at the heart of our strategy' (Karl Havard, January 2025); 'We remain fully committed to the Loughton project' (2026).",
+      "source": "https://www.ncl.ac.uk/press/articles/archive/2025/09/aigrowthzone/"
+    },
+    {
+      "regime": "Norway — Statnett grid allocation and connection charges (anleggsbidrag); Norwegian Transparency Act",
+      "status": "in-effect",
+      "effectiveDate": "2026-05",
+      "exposure": "Statnett halted new power allocations in Northern Norway in May 2026 for grid-security reasons; Nscale's 230 MW at Kvandal is reserved (through Aaktig Digital) but the Korgen 1 GW and Ballangsleira 140 MW applications sit in the queue and Nscale Norway's CEO said phase 2 is 'more uncertain'. A Stortinget question (August 2025) asked whether the company should pay a grid-connection charge. Nscale Limited publishes a Norwegian Transparency Act compliance page.",
+      "mitigation": "Nordscale Operations JV with the local grid company Nordkraft (July 2026); Eksfin state export credit inside the USD 790 million financing.",
+      "source": "https://www.nrk.no/nordland/nscale-sar-tvil-om-videre-satsing-pa-gigant-datasenter-i-narvik-1.17893773"
+    },
+    {
+      "regime": "US export controls — AI Diffusion Rule tiering and its contested rescission",
+      "status": "in-effect",
+      "effectiveDate": "2025-01",
+      "exposure": "Norway, the UK and Portugal were Tier 1 under the January 2025 AI Diffusion Rule; BIS announced rescission in May 2025 but a May 2026 GAO opinion held the non-enforcement announcement is itself a rule under the Congressional Review Act, so the rule 'remains on the books and legally in effect, suspended only by an unenforced and now legally contested non-enforcement posture'. No Nscale-specific export-control action or first-party statement was found.",
+      "mitigation": "",
+      "source": "https://www.onelexpartners.com/news-and-insights/us-export-controls-and-ai-a-practitioners-guide"
+    },
+    {
+      "regime": "West Virginia — state-certified AI microgrid; WV DEP air permits (New Source Review) at Monarch",
+      "status": "in-effect",
+      "effectiveDate": "2026",
+      "exposure": "Monarch is described by Nscale and Power Engineering as 'the first state-certified AI microgrid in the U.S.', operating 'independently from the local grid while preserving future interconnection options'; the project tracker Servercountry lists WV DEP New Source Review air-permit applications for the 2 GW of gas generation and no PSC filing. The campus page promises 'closed-loop cooling' that 'never draws from Mason County's drinking water'.",
+      "mitigation": "SCR emissions controls and battery storage on the gensets (Capacity); planned carbon sequestration (company release).",
+      "source": "https://servercountry.org/data/projects/nscale-microsoft-monarch-compute-campus-ai-infrastructure-phase-wv/"
+    },
+    {
+      "regime": "EU AI Act (GPAI obligations; full enforcement 2 August 2026)",
+      "status": "in-effect",
+      "effectiveDate": "2026-08-02",
+      "exposure": "Collection gap: no first-party statement on the EU AI Act exists; Nscale is an infrastructure provider rather than a model provider, so its exposure runs through customers' obligations and through the Trusted Tech Alliance principles it signed in February 2026 (supply-chain security, rule of law, data protection).",
+      "mitigation": "",
+      "source": "https://www.nscale.com/press-releases/trusted-tech-alliance"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Josh Payne (Joshua David Payne)",
+      "title": "Chief Executive Officer and Founder",
+      "photo": "images/execs/nscale-payne.jpg",
+      "background": [
+        "Founder and CEO since the May 2024 launch from stealth; director and person with significant control of Nscale Global Holdings Ltd until 5 May 2026, when 'Nscale Limited' became the controlling entity (Companies House)",
+        "Founder and executive chairman of Arkon Energy, the Melbourne bitcoin miner Nscale spun out of (press); Australian; press describes a former coal-mine worker turned entrepreneur",
+        "Quoted in every funding and anchor release: 'Europe needs a Hyperscaler'; 'This is the largest infrastructure buildout in human history'"
+      ]
+    },
+    {
+      "name": "Alice Takhtajan",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/nscale-takhtajan.jpg",
+      "background": [
+        "CFO from 26 December 2025",
+        "25-plus years at J.P. Morgan, most recently in equity capital markets for TMT (company release)"
+      ]
+    },
+    {
+      "name": "Nidhi Chappell",
+      "title": "President, AI Infrastructure (Global)",
+      "photo": "images/execs/nscale-chappell.jpg",
+      "background": [
+        "Joined late 2025; Seattle-based; reports to the CEO",
+        "Former Microsoft corporate vice president, Azure AI and HPC infrastructure — 'four generations of supercomputers for ChatGPT' (company release)",
+        "Eight years at Intel"
+      ]
+    },
+    {
+      "name": "Sam Huckaby",
+      "title": "President of Data Centers",
+      "photo": "images/execs/nscale-huckaby.jpg",
+      "background": [
+        "Appointed April 2026",
+        "Former SVP, OCI data-centre infrastructure, Oracle",
+        "Former COO North America, Vantage Data Centers"
+      ]
+    },
+    {
+      "name": "Sagar Rawal",
+      "title": "Chief Infrastructure Officer",
+      "photo": "images/execs/nscale-rawal.jpg",
+      "background": [
+        "Former head of infrastructure at Microsoft; earlier Oracle Cloud Infrastructure, NVIDIA and AWS (company about page)"
+      ]
+    },
+    {
+      "name": "Daniel Shapiro",
+      "title": "Chief Power Officer",
+      "photo": "images/execs/nscale-shapiro.jpg",
+      "background": [
+        "Appointed March 2026 with the American Intelligence & Power acquisition; leads Nscale's energy and power unit with Deputy CPO Bengt Jarlsjo",
+        "Responsible for the Monarch 2 GW gas microgrid and Caterpillar programme"
+      ]
+    },
+    {
+      "name": "David Power",
+      "title": "Chief Technology Officer",
+      "photo": "images/execs/nscale-power.jpg",
+      "background": [
+        "Twenty-plus years in high-performance computing (company about page)"
+      ]
+    },
+    {
+      "name": "Tom Burke",
+      "title": "Chief Revenue Officer",
+      "photo": "images/execs/nscale-burke.jpg",
+      "background": [
+        "Former Chief Revenue Officer, Applied Digital; earlier IBM (company about page)",
+        "Quoted on the BT sovereign partnership (April 2026)"
+      ]
+    },
+    {
+      "name": "Daniel Bathurst",
+      "title": "Chief Product Officer",
+      "photo": "images/execs/nscale-bathurst.jpg",
+      "background": [
+        "Quoted at the Serverless Inference launch (February 2025)"
+      ]
+    },
+    {
+      "name": "Philippe Sachs",
+      "title": "President EMEA (also styled Chief Business Officer)",
+      "photo": "images/execs/nscale-sachs.jpg",
+      "background": [
+        "Director of Nscale Global Holdings Ltd, re-appointed 5 May 2026 (Companies House)",
+        "Quoted in the Verne Iceland release as Chief Business Officer & President EMEA"
+      ]
+    },
+    {
+      "name": "Jing Yin",
+      "title": "President APAC",
+      "photo": "images/execs/nscale-yin.jpg",
+      "background": [
+        "Former Alibaba Cloud, Ant Group and Lazada (company about page)",
+        "Director of Nscale Global Holdings Ltd October 2025–February 2026"
+      ]
+    },
+    {
+      "name": "Osvaldo Morales",
+      "title": "Deputy President, North America",
+      "photo": "images/execs/nscale-morales.jpg",
+      "background": [
+        "Former Microsoft, AWS, NVIDIA and Digital Realty (company about page)"
+      ]
+    },
+    {
+      "name": "Lauren Hurwitz",
+      "title": "Chief Operating Officer",
+      "background": [
+        "Appointed April–May 2026 (search result; the release page returns 404); director of Nscale Global Holdings Ltd from 5 May 2026 (Companies House)",
+        "Former head of international public sector, Palantir"
+      ]
+    },
+    {
+      "name": "Phoebee Gahan",
+      "title": "Chief Legal Officer",
+      "photo": "images/execs/nscale-gahan.jpg",
+      "background": [
+        "Company secretary of Nscale Global Holdings Ltd since July 2024 (Companies House)"
+      ]
+    },
+    {
+      "name": "Latha Maripuri",
+      "title": "Chief Information Security Officer",
+      "photo": "images/execs/nscale-maripuri.jpg",
+      "background": [
+        "Appointed early 2026",
+        "Former CISO, Uber; global CISO and deputy CTO, News Corp; IBM"
+      ]
+    },
+    {
+      "name": "Naeem Hatimi",
+      "title": "Chief People Officer",
+      "photo": "images/execs/nscale-hatimi.jpg",
+      "background": [
+        "Listed on the company about page (2026)"
+      ]
+    },
+    {
+      "name": "Sam Sturgess",
+      "title": "SVP Strategy and Corporate Development",
+      "photo": "images/execs/nscale-sturgess.jpg",
+      "background": [
+        "Listed on the company about page (2026)"
+      ]
+    },
+    {
+      "name": "Ron Huisman",
+      "title": "Chief Accounting and Finance Operations Officer (CFO October 2024–December 2025)",
+      "background": [
+        "Former CFO, AtlasEdge; Liberty Global (company release)"
+      ]
+    },
+    {
+      "name": "Stian Jenssen",
+      "title": "Managing Director, Scandinavia (CEO, Nscale Norway)",
+      "background": [
+        "Quoted on the Nordscale JV and, to NRK, on Statnett's allocation halt"
+      ]
+    },
+    {
+      "name": "Board: Øyvind Eriksen (Aker ASA), Sheryl Sandberg, Susan Decker, Sir Nick Clegg",
+      "title": "Directors (board additions announced March 2026; Eriksen from October 2025)",
+      "background": [
+        "Eriksen: Aker ASA CEO, on the board since the Series B; Sandberg (ex-Meta COO), Decker (ex-Yahoo CFO) and Clegg (ex-Meta) joined with the Series C",
+        "All four resigned from the UK holding company on 5 May 2026 when 'Nscale Limited' was notified as the controlling entity — the board evidently sits at a new parent (Companies House)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (no statements published; first accounts to 31 Dec 2024 filed)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed by the company",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Nscale Global Holdings Ltd filed accounts to 31 December 2024 (Companies House); turnover not extracted — collection gap"
+          },
+          {
+            "name": "Funding",
+            "actual": "Seed USD 30 million (December 2023, per the Series A release); Series A USD 155 million led by Sandton Capital Partners (9 December 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; no valuation stated"
+          },
+          {
+            "name": "Fleet",
+            "actual": "'fewer than 5,000 GPUs' at the start of 2025 (Aker Q3 2025 letter); Svartisen cluster of AMD MI250X at Glomfjord",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Aker ASA shareholder letter"
+          }
+        ],
+        "commentary": "The Arkon-era company: one 30 MW Norwegian hydro site and a GPU cloud launched in May 2024."
+      },
+      {
+        "period": "FY2025 (no statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "About USD 33 million (Bloomberg via Dealroom, August 2026 IPO reporting)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Press figure from IPO preparations; not stated by the company"
+          },
+          {
+            "name": "Equity raised",
+            "actual": "Series B USD 1.1 billion (25 September 2025; Aker USD 285 million in cash and Narvik land for 9.3% fully diluted) + pre-Series C SAFE USD 433 million (1 October 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; no valuation stated for either"
+          },
+          {
+            "name": "Contracted GPUs",
+            "actual": "'contracts securing more than 200,000 GPUs globally' by end-September 2025 (Aker Q3 2025 letter); Microsoft 'approximately 200,000 NVIDIA GB300 GPUs' (October 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Aker and company statements; contract values not stated beyond the USD 6.2 billion Narvik agreement"
+          },
+          {
+            "name": "Acquisitions",
+            "actual": "Future-tech (December 2025; terms not stated)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release"
+          }
+        ],
+        "commentary": "Aker's Q3 2025 letter: 'from a relatively small startup with fewer than 5,000 GPUs to contracts securing more than 200,000 GPUs globally'. No consensus exists for a private company; `expected` is left empty."
+      },
+      {
+        "period": "2026 year to date (September)",
+        "periodType": "other",
+        "periodEnd": "2026-09-04",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "About USD 37 million in Q1 2026 and about USD 100 million in Q2 2026 (Bloomberg via Dealroom)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Press figures from IPO preparations; the company has published none"
+          },
+          {
+            "name": "Contracted backlog",
+            "actual": "'$51 billion in total contracted revenue' (Bloomberg via Dealroom, August 2026) — before the reported USD 45 billion Anthropic contract and the USD 3.5 billion Figure commitment",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Press; Leverage Shares: 'contracted demand is not necessarily guaranteed demand'"
+          },
+          {
+            "name": "Series C",
+            "actual": "USD 2 billion at a USD 14.6 billion valuation, led by Aker ASA and 8090 Industries (9 March 2026); Aker to 22.8% fully diluted, carrying Nscale at NOK 32 billion",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; Aker Q1 2026 report"
+          },
+          {
+            "name": "Debt facilities",
+            "actual": "USD 1.4 billion GPU delayed-draw term loan (February); USD 790 million Narvik project financing (May); USD 900 million revolving credit facility (July); about USD 3 billion of Ward County and Madison delayed-draw term loans, investment-grade rated (August) — about USD 6.1 billion in total",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; totals are the researcher's sum"
+          },
+          {
+            "name": "Acquisitions",
+            "actual": "American Intelligence & Power Corporation (March; cash and shares, 'slightly ownership dilutive' per Aker); Anyscale (agreed July; about USD 1.65 billion per Bloomberg; close H2 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases and Aker notice; Anyscale value is press"
+          },
+          {
+            "name": "IPO",
+            "actual": "Bloomberg (21 August 2026): US IPO of up to USD 3 billion planned, filing as early as September 2026, Goldman Sachs and JPMorgan",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Press; no SEC filing found"
+          }
+        ],
+        "commentary": "Equity of roughly USD 3.7 billion and debt facilities of roughly USD 6.1 billion against reported revenue of about USD 100 million in the latest quarter and a reported USD 51 billion backlog — the gap Leverage Shares and Dealroom flag ahead of the IPO."
+      }
+    ],
+    "commentary": "Nscale publishes no financial statements, revenue, backlog or headcount. The figures above are its own funding releases, Aker ASA's quarterly reports (the lead shareholder's disclosure is the most reliable window), Companies House and named-outlet IPO reporting; aggregator estimates are excluded. The one contract value ever stated by a party is Microsoft's 'approximately USD 6.2 billion' Narvik agreement."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Nscale is a single-anchor business whose anchor has changed twice in a year, and that the contract book is therefore less diversified than its size suggests. Basis: OpenAI was the announced offtaker at Narvik (July 2025) and Cobalt Park (September 2025); by April 2026 Aker records the Norway LOI 'replaced' by Microsoft and OpenAI paused Stargate UK; Microsoft signed the 1.35 GW Monarch LOI in March 2026 and, per Semafor, 'walked away' over the summer, and Anthropic took 460 MW. Microsoft still anchors four sites; Figure is the first customer that is neither a hyperscaler nor a frontier lab.",
+    "2. **(High confidence)** We assess that the financing structure is the company's real product for lenders: contracted, anchor-backed capacity at site SPVs, GPU collateral in Europe, and now investment-grade ratings on the Texas and North Carolina term loans. Basis: the February 2026 DDTL is 'secured by GPU infrastructure' against 'multiple executed customer contracts'; the August 2026 loans 'received investment-grade ratings with stable outlooks'; the USD 900 million RCF has twelve banks. The counter-evidence is the revenue base — about USD 100 million in Q2 2026 (press) against USD 6.1 billion of facilities — which is why the Leverage Shares note calls contracted demand 'not necessarily guaranteed demand'.",
+    "3. **(High confidence)** We assess that power, not capital or chips, is the binding constraint at every European site and the reason the capital went to West Virginia and Texas. Basis: Statnett's May 2026 halt ('Phase 2 is more uncertain'); Loughton's slip from 'operational Q4 2026' to 2027 through a planning fight settled by ministerial letter; OpenAI's Stargate UK pause on 'the cost of energy'; against which Monarch buys 2 GW of Caterpillar gas 'independently from the local grid' and Ward County sits on an ERCOT campus a miner already energised.",
+    "4. **(Moderate confidence)** We assess that the reported Anthropic Monarch contract prices delivery certainty rather than a landlord's margin, and that it is Nscale's most important and least confirmed number. Basis: Global Data Center Hub's arithmetic (USD 45 billion / 460 MW / six years ≈ USD 16.3 million per MW-year, roughly 1.9x an estimated USD 24 billion build cost); the value is press-sourced, Aker's disclosure did not name the customer, and Anthropic's newsroom is silent. If confirmed at those terms the residual value of the Vera Rubin fleet in 2033 is the largest open variable in the company's economics.",
+    "5. **(Moderate confidence)** We assess that 'vertically integrated' is true of ownership and increasingly of software, but not of Nscale's largest contracted sites. Basis: Glomfjord, Narvik and Monarch are owned; Ward County is Ionic Digital's building under a 10-year triple-net lease, Sines is Start Campus's, Keflavik is Verne's, and Madison is 'partner-run' — the majority of Microsoft's GB300 and Vera Rubin volume sits on other people's campuses. Anyscale (Ray) and Future-tech add the software and engineering layers; power is in-house at Monarch only.",
+    "6. **(Low confidence)** We assess that the Arkon Energy origin still shapes the company's site choices and its governance. Basis: Glomfjord was Arkon's mining site; Ward County is a miner's campus; Companies House shows Arkon Energy Pty Ltd as the pre-Series B controlling shareholder and shows the 5 May 2026 migration of the board to a new parent, 'Nscale Limited', whose filings were not found. The company has never mentioned Arkon on its own channels. This is inference from the corporate record, not from any statement.",
+    "Collection gaps: no revenue, backlog, headcount, contract values (other than Microsoft's USD 6.2 billion) or GPU totals on first-party channels; the new parent 'Nscale Limited' is not identified in Companies House filings read; OpenAI's Stargate pages, Caterpillar's AIP release, Nokia's release and several DCD, CNBC and Bloomberg pages were unreachable and are cited from search summaries or reprints; the Lauren Hurwitz appointment release returns 404; Arkon's site was unreachable; David Sykes and Sam Pitt from the commissioning brief were not found anywhere.",
+    "INDICATORS TO WATCH — *September–October 2026 — the S-1:* an actual filing would replace every press-sourced revenue and backlog figure above and state whether the Anthropic contract exists on the reported terms. *Q3 2026 — first Ward County GB300 tranche for Microsoft:* the first US delivery against the 'phased from Q3 2026' schedule. *September 2026–August 2027 — Caterpillar genset deliveries at Monarch:* the physical test of the 2 GW-by-H1-2028 claim. *2026–2027 — Statnett's allocation decisions in Northern Norway:* any allocation to Korgen or Ballangsleira would reopen phase 2; none would confirm Judgment 3. *H2 2026 — Anyscale close and any Series D:* whether the software strategy and the pre-IPO cap table settle before the listing. *Any OpenAI statement on Stargate UK:* a resumption would restore the sovereign narrative; a cancellation would end it."
+  ],
+  "sources": [
+    {
+      "label": "Nscale — Figure partnership: USD 3.5B initial compute commitment, Barstow TX",
+      "url": "https://www.nscale.com/press-releases/nscale-and-figure",
+      "date": "2026-09-03"
+    },
+    {
+      "label": "Digi.no — HENT signs for Narvik expansion: three buildings, 100 MW, 2027",
+      "url": "https://www.digi.no/artikler/signerte-kontrakt-for-utvidelse-av-datasenteret-i-narvik/576552",
+      "date": "2026-09-02"
+    },
+    {
+      "label": "Global Data Center Hub — Anthropic–Nscale Monarch: the lease economics",
+      "url": "https://www.globaldatacenterhub.com/p/anthropic-nscale-monarch-compute-campus",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Nscale — ~USD 3B delayed-draw term loans (Ward County TX; Madison NC), investment-grade rated",
+      "url": "https://www.nscale.com/press-releases/nscale-3-billion-delayed-draw-term-loans",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Leverage Shares — Nscale IPO: what investors should know about the risks",
+      "url": "https://leverageshares.com/us/insights/nscale-ipo-what-investors-should-know-about-the-risks/",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Semafor — Google and Microsoft were in talks for the Nscale compute deal that went to Anthropic",
+      "url": "https://www.semafor.com/article/08/28/2026/google-and-microsoft-were-in-talks-for-nscale-compute-deal-that-went-to-anthropic",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Data Centre Review — Anthropic reportedly behind Nscale's $45bn AI compute contract (Aker disclosure)",
+      "url": "https://www.datacentrereview.com/2026/08/anthropic-reportedly-behind-nscales-45bn-ai-compute-contract/",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Herald-Dispatch — Nscale reaches $45 billion deal with Anthropic; Governor Morrisey quote",
+      "url": "https://www.herald-dispatch.com/business/nscale-reaches-45-billion-deal-with-anthropic/article_f6343036-8c34-4325-8d6d-340cd442e724.html",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Forbes — Anthropic's $45 billion Nscale deal buys 460 megawatts of Vera Rubin (headline; unreachable)",
+      "url": "https://www.forbes.com/sites/jonmarkman/2026/08/28/anthropics-45-billion-nscale-deal-buys-460-megawatts-of-vera-rubin/",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "VKTR — Anthropic signs $45 billion compute deal with Nscale for 460 MW in West Virginia",
+      "url": "https://www.vktr.com/ai-market/anthropic-signs-45-billion-compute-deal-with-nscale-for-460-megawatts-in-west-virginia/",
+      "date": "2026-08-27"
+    },
+    {
+      "label": "TechCrunch — Anthropic continues compute-gobbling streak in $45 billion deal with Nscale",
+      "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
+      "date": "2026-08-26"
+    },
+    {
+      "label": "Bloomberg — Anthropic to pay Nscale $45 billion for AI computing power (headline; paywalled)",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-26/anthropic-to-pay-nscale-45-billion-for-ai-computing-power",
+      "date": "2026-08-26"
+    },
+    {
+      "label": "Bloomberg — AI cloud firm Nscale plans US IPO, may raise as much as $3 billion (headline)",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-21/ai-cloud-firm-nscale-is-said-to-seek-up-to-3-billion-in-us-ipo",
+      "date": "2026-08-21"
+    },
+    {
+      "label": "Nscale — Ray Summit 2026 event page",
+      "url": "https://www.nscale.com/events/raysummit-2026",
+      "date": "2026-08"
+    },
+    {
+      "label": "Dealroom — Nscale eyes September US IPO on $51B AI contract backlog",
+      "url": "https://dealroom.co/news/143730-nscale-eyes-september-us-ipo-on-51b-ai-contract-backlog/",
+      "date": "2026-08"
+    },
+    {
+      "label": "Revelio Labs — Nscale employee data",
+      "url": "https://www.reveliolabs.com/companies/nscale/employees",
+      "date": "2026-08"
+    },
+    {
+      "label": "Nscale — acquires Anyscale",
+      "url": "https://www.nscale.com/press-releases/nscale-acquires-anyscale",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "PR Newswire — Nscale acquires Anyscale (wire copy)",
+      "url": "https://www.prnewswire.com/news-releases/nscale-acquires-anyscale-enhancing-its-full-stack-ai-cloud-platform-302838058.html",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Bloomberg — Nscale to buy AI software startup Anyscale for $1.65 billion (headline)",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-30/nscale-to-buy-ai-software-startup-anyscale-for-1-65-billion",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "TechCrunch — Nscale buys Anyscale as it seeks to own more of the AI compute stack",
+      "url": "https://techcrunch.com/2026/07/30/nscale-buys-anyscale-as-it-seeks-to-own-more-of-the-ai-compute-stack/",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Aker ASA — Q2 and half-year results 2026 (Modular Finance)",
+      "url": "https://www.tradingview.com/news/modular_finance:2e8703d51a4ac:0-aker-asa-reports-second-quarter-and-half-year-results-2026/",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "Aker ASA — Q2 2026 CEO letter (PDF)",
+      "url": "https://airtools-aker.prod-mid-euw3.investis.com/sites/airtools-aker/files/pr/Aker-ASA-Q2-2026-CEO-Letter.pdf",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "Nscale — USD 900 million revolving credit facility",
+      "url": "https://www.nscale.com/press-releases/revolving-credit-facility",
+      "date": "2026-07-07"
+    },
+    {
+      "label": "Nscale — Nordscale Operations AS joint venture with Nordkraft",
+      "url": "https://www.nscale.com/press-releases/nordscale",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "Capacity — Nscale wins UK data-centre planning despite objection",
+      "url": "https://capacityglobal.com/news/nscale-uk-data-centre-planning-despite-objection/",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "The Telegraph via Yahoo — Labour pressured council to back giant AI data centre (Loughton)",
+      "url": "https://www.yahoo.com/news/politics/articles/labour-pressured-council-back-giant-123414059.html",
+      "date": "2026-07-05"
+    },
+    {
+      "label": "Nscale — Monarch Compute Campus job fair",
+      "url": "https://www.nscale.com/press-releases/monarch-compute-campus-job-fair",
+      "date": "2026-06"
+    },
+    {
+      "label": "NRK — Nscale casts doubt on further investment in giant Narvik data centre after Statnett halt",
+      "url": "https://www.nrk.no/nordland/nscale-sar-tvil-om-videre-satsing-pa-gigant-datasenter-i-narvik-1.17893773",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Nscale — secures USD 790 million financing in Norway",
+      "url": "https://www.nscale.com/press-releases/nscale-secures-790-million-norway",
+      "date": "2026-05-11"
+    },
+    {
+      "label": "Aker ASA — Q1 2026 results (Modular Finance)",
+      "url": "https://www.tradingview.com/news/modular_finance:61a79faedf016:0-aker-asa-reports-first-quarter-results-2026/",
+      "date": "2026-05-08"
+    },
+    {
+      "label": "Nscale — Start Campus Sines: 66,000+ Vera Rubin for Microsoft",
+      "url": "https://www.nscale.com/press-releases/nscale-start-campus",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "TNW — Nscale invests €695M in Portugal with Microsoft",
+      "url": "https://thenextweb.com/news/nscale-portugal-microsoft-neocloud-ai-infrastructure",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "Construction Review Online — Microsoft/Start Campus expansion plans unveiled by Nscale in Sines",
+      "url": "https://constructionreviewonline.com/microsoft-start-campus-expansion-plans-unveiled-by-nscale-in-sines-portugal/",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "Nscale — appoints Sam Huckaby President of Data Centers",
+      "url": "https://www.nscale.com/press-releases/nscale-appoints-sam-huckaby",
+      "date": "2026-04-28"
+    },
+    {
+      "label": "BeBeez — Verne and Nscale complete first phase of AI deployment in Iceland",
+      "url": "https://bebeez.eu/2026/04/24/verne-and-nscale-complete-first-phase-of-ai-deployment-in-iceland/",
+      "date": "2026-04-24"
+    },
+    {
+      "label": "Nscale — BT partnership: up to 14 MW across three BT sites",
+      "url": "https://www.nscale.com/press-releases/nscale-and-bt",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "BeBeez — Microsoft contracts 30,000 NVIDIA Rubin GPUs from Nscale at Narvik",
+      "url": "https://bebeez.eu/2026/04/15/microsoft-contracts-30000-nvidia-rubin-gpus-from-nscale-at-data-center-in-narvik-norway/",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Nscale — Microsoft Norway expansion: 230 MW, 30,000+ Rubin GPUs",
+      "url": "https://www.nscale.com/press-releases/nscale-microsoft-norway",
+      "date": "2026-04-14"
+    },
+    {
+      "label": "CNBC — OpenAI halts UK Stargate project",
+      "url": "https://www.cnbc.com/2026/04/09/openai-halts-uk-stargate-project.html",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "Data Centre Review — Nscale latest to face public backlash over proposed data centre (Loughton)",
+      "url": "https://datacentrereview.com/2026/03/nscale-latest-to-face-public-backlash-over-proposed-data-centre/",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "TNW — Nscale's West Virginia Monarch campus, Microsoft LOI, Vera Rubin",
+      "url": "https://thenextweb.com/news/nscale-west-virginia-monarch-microsoft-vera-rubin",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "Power Engineering — Caterpillar engines to support 2 GW of onsite power at West Virginia campus tied to Microsoft, NVIDIA",
+      "url": "https://www.power-eng.com/onsite-power/caterpillar-engines-to-support-2-gw-of-onsite-power-at-west-virginia-data-center-campus-tied-to-microsoft-nvidia/",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "Nscale — Nscale and Microsoft announce collaboration with NVIDIA and Caterpillar for 1.35 GW at West Virginia AI factory",
+      "url": "https://www.nscale.com/press-releases/nscale-west-virginia-ai-factory",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "Nscale — acquires American Intelligence & Power Corporation",
+      "url": "https://www.nscale.com/press-releases/nscale-acquires-american-intelligence-power-corporation",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "Aker ASA — notice: Nscale to acquire AIP and signs LOI with Microsoft covering 430,000 GPUs",
+      "url": "https://www.tradingview.com/news/modular_finance:f327599a5e6a1:0-nscale-to-acquire-american-intelligence-power-corporation-and-signs-loi-with-microsoft-covering-430-000-gpus/",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "Nscale — Series C: USD 2 billion at USD 14.6 billion",
+      "url": "https://www.nscale.com/press-releases/nscale-series-c",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "PR Newswire — Nscale raises $2 billion Series C (wire copy)",
+      "url": "https://www.prnewswire.com/news-releases/nscale-raises-2-billion-in-series-c--the-largest-in-european-history-302707945.html",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "CNBC — Nvidia backs Nscale as it hits $14.6 billion valuation (headline)",
+      "url": "https://www.cnbc.com/2026/03/09/nscale-ai-data-center-nvidia-raise.html",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "PR Newswire — Nscale/Microsoft 1.35 GW West Virginia release (wire copy)",
+      "url": "https://www.prnewswire.com/news-releases/nscale-and-microsoft-announce-collaboration-with-nvidia-and-caterpillar-to-deliver-1-35gw-of-nvidia-vera-rubin-nvl72-gpus-at-flagship-ai-factory-campus-in-west-virginia-302715210.html",
+      "date": "2026-03"
+    },
+    {
+      "label": "Telecompaper — Nscale attracts USD 2 bln Series C backed by NVIDIA, Nokia, Lenovo, Dell",
+      "url": "https://www.telecompaper.com/news/nscale-attracts-usd-2-bln-series-c-funding-backed-by-nvidia-nokia-lenovo-dell--1564668",
+      "date": "2026-03"
+    },
+    {
+      "label": "Nscale — Trusted Tech Alliance",
+      "url": "https://www.nscale.com/press-releases/trusted-tech-alliance",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "City AM — Nscale bags $1.4bn loan as AI infrastructure shifts to private credit",
+      "url": "https://www.cityam.com/nscale-bags-1-4bn-loan-as-ai-infrastructure-shifts-to-private-credit/",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Nscale — signs USD 1.4bn GPU delayed-draw term loan",
+      "url": "https://www.nscale.com/press-releases/nscale-signs-1-4bn-delayed-draw-term-loan",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Bloomberg — Nscale gets $1.4 billion loan from Pimco, Blue Owl to buy Nvidia chips (headline)",
+      "url": "https://www.bloomberg.com/news/articles/2026-02-12/nscale-secures-1-4-billion-chip-loan-from-pimco-blue-owl",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Nscale — Verne Iceland: 15 MW, ~4,600 Blackwell Ultra GPUs",
+      "url": "https://www.nscale.com/press-releases/nscale-and-verne",
+      "date": "2026-02-03"
+    },
+    {
+      "label": "Capacity — Caterpillar to supply 2 GW of gas generation (AIP Monarch order)",
+      "url": "https://capacityglobal.com/news/caterpillar-to-supply-2gw-of-gas-generation/",
+      "date": "2026-01-29"
+    },
+    {
+      "label": "Caterpillar — AIP forms strategic alliance with Caterpillar and Boyd CAT (release; unreachable)",
+      "url": "https://www.caterpillar.com/en/news/corporate-press-releases/h/aip-boyd-cat.html",
+      "date": "2026-01"
+    },
+    {
+      "label": "Nscale — acquires Future-tech",
+      "url": "https://www.nscale.com/press-releases/nscale-acquires-future-tech",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "Nscale — appoints Alice Takhtajan CFO",
+      "url": "https://www.nscale.com/press-releases/nscale-appoints-alice-takhtajan",
+      "date": "2025-12"
+    },
+    {
+      "label": "Nscale — Glomfjord community blog",
+      "url": "https://www.nscale.com/blog/building-ai-infrastructure-together-in-glomfjord",
+      "date": "2025-11-24"
+    },
+    {
+      "label": "Verne — Verne and Nscale: 15 MW Iceland deployment",
+      "url": "https://www.verne.co/news/news-verne-and-nscale",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "Aker ASA — Q3 2025 shareholder letter",
+      "url": "https://www.akerasa.com/investors/shareholder-letters/2025/third-quarter-2025",
+      "date": "2025-11"
+    },
+    {
+      "label": "High North News — Aker Nscale plans AI data centre in Korgen, Nordland",
+      "url": "https://www.highnorthnews.com/naeringsliv/aker-nscale-planlegger-for-ki-datasenter-i-korgen-nordland/120367",
+      "date": "2025-10-20"
+    },
+    {
+      "label": "Nscale — contracts ~200,000 NVIDIA GB300 GPUs with Microsoft",
+      "url": "https://www.nscale.com/press-releases/nscale-microsoft-2025",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "GlobeNewswire — Nscale ~200,000 GB300 release (wire copy)",
+      "url": "https://www.globenewswire.com/news-release/2025/10/15/3166823/0/en/Nscale-Contracts-Approximately-200-000-NVIDIA-GB300-GPUs-with-Microsoft-to-Deliver-NVIDIA-AI-Infrastructure-Across-Europe-and-the-U-S.html",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "TechCrunch — Nscale inks massive AI infrastructure deal with Microsoft",
+      "url": "https://techcrunch.com/2025/10/15/nscale-inks-massive-ai-infrastructure-deal-with-microsoft/",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "Start Campus — hosts EU's first NVIDIA GB300 chips with Nscale for Microsoft",
+      "url": "https://lp.startcampus.pt/start-campus-hosts-eus-first-nvidia-gb300-chips-with-nscale-for-microsoft",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "Davis Polk — Ionic Digital $2 billion lease agreement with Nscale",
+      "url": "https://www.davispolk.com/experience/ionic-digital-2-billion-lease-agreement-hyperscale-data-center-nscale",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "Ionic Digital — secures transformational lease of Cedarvale facility with Nscale",
+      "url": "https://ionicdigital.com/press-releases/ionic-digital-secures-transformational-lease-agreement-of-cedarvale-facility-with-nscale/",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "Aker ASA — finalizes investment in Nscale and joint venture in Narvik",
+      "url": "https://www.prnewswire.com/news-releases/aker-finalizes-investment-in-nscale-and-joint-venture-in-narvik-302582292.html",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "Nscale — pre-Series C SAFE: USD 433 million",
+      "url": "https://www.nscale.com/press-releases/nscale-pre-series-c-safe",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "SDxCentral — Nokia secures networking deal for Nscale's data-center buildout",
+      "url": "https://www.sdxcentral.com/news/nokia-secures-networking-deal-for-nscales-data-center-buildout/",
+      "date": "2025-09-26"
+    },
+    {
+      "label": "Nscale — Series B: USD 1.1 billion led by Aker",
+      "url": "https://www.nscale.com/press-releases/nscale-series-b",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "GlobeNewswire — Nscale Series B (wire copy)",
+      "url": "https://www.globenewswire.com/news-release/2025/09/25/3156030/0/en/Nscale-raises-the-largest-Series-B-in-European-history-at-1-1-billion-to-accelerate-its-global-AI-infrastructure-and-GPU-deployment-rollout.html",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "Aker ASA — participates in Nscale's USD 1.1 billion Series B (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/aker-participates-in-nscales-usd-1-1-billion-series-b-funding-round-302566874.html",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "North East Combined Authority — AI Growth Zone page",
+      "url": "https://www.northeast-ca.gov.uk/ai-growth-zone",
+      "date": "2025-09-24"
+    },
+    {
+      "label": "RCR Wireless — Microsoft's $6.2 billion Norway AI agreement",
+      "url": "https://www.rcrwireless.com/20250919/ai-infrastructure/microsoft-ai-norway",
+      "date": "2025-09-19"
+    },
+    {
+      "label": "Microsoft — 'Inside the world's most powerful AI datacenter' (Scott Guthrie) naming Narvik and Loughton",
+      "url": "https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/",
+      "date": "2025-09-18"
+    },
+    {
+      "label": "Microsoft Source EMEA — the port town in Norway emerging as an AI hub ($6.2 billion Narvik deal)",
+      "url": "https://news.microsoft.com/source/emea/features/the-port-town-in-norway-emerging-as-an-ai-hub/",
+      "date": "2025-09-17"
+    },
+    {
+      "label": "Newcastle University — North East AI Growth Zone government announcement (Stargate UK)",
+      "url": "https://www.ncl.ac.uk/press/articles/archive/2025/09/aigrowthzone/",
+      "date": "2025-09-17"
+    },
+    {
+      "label": "Nscale — UK AI infrastructure announcement: Loughton, Stargate UK",
+      "url": "https://www.nscale.com/press-releases/nscale-uk-ai-infrastructure-announcement",
+      "date": "2025-09-16"
+    },
+    {
+      "label": "OpenAI — Introducing Stargate UK (page unreachable)",
+      "url": "https://openai.com/index/introducing-stargate-uk/",
+      "date": "2025-09-16"
+    },
+    {
+      "label": "Nscale — Stargate Norway blog",
+      "url": "https://www.nscale.com/blog/stargate-norway-laying-the-foundation-for-the-future-of-ai",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "Altinget — Stortinget written question on the Narvik data-centre grid connection charge",
+      "url": "https://www.altinget.no/digital/statsradensvarer/18098",
+      "date": "2025-08-12"
+    },
+    {
+      "label": "Nscale — Stargate Norway: Nscale, Aker and OpenAI",
+      "url": "https://www.nscale.com/press-releases/stargate-norway-nscale-aker-openai",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "OpenAI — Introducing Stargate Norway (page unreachable)",
+      "url": "https://openai.com/index/introducing-stargate-norway/",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "Nscale — Lightning AI partnership: enterprise AI Studio",
+      "url": "https://www.nscale.com/press-releases/nscale-lightning-ai-partner-to-launch-enterprise-grade-ai-studio",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "NVIDIA — DGX Cloud Lepton connects Europe's developers (Nscale among contributors)",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "Nscale — official Hugging Face inference provider",
+      "url": "https://www.nscale.com/blog/nscale-is-now-an-official-hugging-face-inference-provider",
+      "date": "2025-05-14"
+    },
+    {
+      "label": "Nscale — InfraPartners to build 60 MW Glomfjord expansion",
+      "url": "https://www.nscale.com/press-releases/nscale-and-infrapartners-announce-partnership-to-build-60mw-ai-data-centre-in-glomfjord-norway",
+      "date": "2025-03-25"
+    },
+    {
+      "label": "Nscale — launches Serverless Inference platform",
+      "url": "https://www.nscale.com/press-releases/ai-hyperscaler-nscale-launches-serverless-inference-platform",
+      "date": "2025-02-04"
+    },
+    {
+      "label": "Nscale — to invest £2 billion in the UK data-centre industry",
+      "url": "https://www.nscale.com/press-releases/ai-hyperscaler-nscale-to-invest-gbp-2-billion-in-the-uk-data-centre-industry",
+      "date": "2025-01-13"
+    },
+    {
+      "label": "Nscale — Series A CEO blog: launching from stealth, pipeline and roadmap",
+      "url": "https://www.nscale.com/blog/nscale-155m-series-a-words-from-the-ceo",
+      "date": "2024-12-10"
+    },
+    {
+      "label": "Nscale — Series A: USD 155 million led by Sandton Capital",
+      "url": "https://www.nscale.com/press-releases/ai-hyperscaler-nscale-secures-usd-155-million-in-series-a",
+      "date": "2024-12-09"
+    },
+    {
+      "label": "GlobeNewswire — Nscale Series A (wire copy)",
+      "url": "https://www.globenewswire.com/news-release/2024/12/09/2993494/0/en/AI-hyperscaler-Nscale-secures-155-million-in-Series-A-funding-to-accelerate-AI-infrastructure-expansion-and-meet-soaring-demand-for-large-scale-compute.html",
+      "date": "2024-12-09"
+    },
+    {
+      "label": "Nscale — Svartisen cluster makes the Top500 list",
+      "url": "https://www.nscale.com/blog/nscale-makes-the-top500-list",
+      "date": "2024-11-28"
+    },
+    {
+      "label": "Nscale — appoints Karl Havard COO and Ron Huisman CFO",
+      "url": "https://www.nscale.com/press-releases/nscale-appoints-karl-havard-as-chief-operating-officer-and-ron-huisman-as-chief-financial-officer-to-accelerate-growth-plans",
+      "date": "2024-10-17"
+    },
+    {
+      "label": "Arkon Energy — raises $110 million (News Direct; unreachable)",
+      "url": "https://newsdirect.com/news/arkon-energy-raises-110-million-to-triple-its-bitcoin-mining-capacity-and-launch-ai-cloud-service-363814531",
+      "date": "2023-12-22"
+    },
+    {
+      "label": "One Lex Partners — US export controls and AI: a practitioner's guide",
+      "url": "https://www.onelexpartners.com/news-and-insights/us-export-controls-and-ai-a-practitioners-guide"
+    },
+    {
+      "label": "Nscale — home page",
+      "url": "https://www.nscale.com/"
+    },
+    {
+      "label": "Nscale — about page (leadership)",
+      "url": "https://www.nscale.com/about"
+    },
+    {
+      "label": "Nscale — AI infrastructure (sites)",
+      "url": "https://www.nscale.com/ai-infrastructure"
+    },
+    {
+      "label": "Nscale — Monarch Compute Campus page",
+      "url": "https://www.nscale.com/ai-infrastructure/monarch"
+    },
+    {
+      "label": "Nscale — Glomfjord page",
+      "url": "https://www.nscale.com/ai-infrastructure/glomfjord"
+    },
+    {
+      "label": "Nscale — service overview",
+      "url": "https://www.nscale.com/service-overview"
+    },
+    {
+      "label": "Nscale — AI Services",
+      "url": "https://www.nscale.com/services/ai-services"
+    },
+    {
+      "label": "Nscale — Fleet Operations",
+      "url": "https://www.nscale.com/services/fleet-operations"
+    },
+    {
+      "label": "Nscale — GPU nodes catalogue",
+      "url": "https://www.nscale.com/product/gpu-nodes"
+    },
+    {
+      "label": "Nscale — NVIDIA GB200 node page",
+      "url": "https://www.nscale.com/gpu-nodes/nvidia-gb200"
+    },
+    {
+      "label": "Nscale — Vera Rubin release (100,000+ GPUs in 2027)",
+      "url": "https://www.nscale.com/press-releases/nscale-nvidia-vera-rubin"
+    },
+    {
+      "label": "Nscale — appoints Nidhi Chappell President of AI Infrastructure",
+      "url": "https://www.nscale.com/press-releases/nscale-appoints-nidhi-chappell"
+    },
+    {
+      "label": "Nscale — Chief Information Security Officer appointment",
+      "url": "https://www.nscale.com/press-releases/chief-information-security-officer"
+    },
+    {
+      "label": "Nscale — sovereign AI cloud page ('Home advantage')",
+      "url": "https://www.nscale.com/home-advantage"
+    },
+    {
+      "label": "Nscale — telco industry page",
+      "url": "https://www.nscale.com/industries/telco"
+    },
+    {
+      "label": "Nscale — 2025 year-in-review blog",
+      "url": "https://www.nscale.com/blog/nscale-2025"
+    },
+    {
+      "label": "Nscale — docs overview",
+      "url": "https://docs.nscale.com/"
+    },
+    {
+      "label": "Nscale — Singtel partnership",
+      "url": "https://www.nscale.com/press-releases/singtel-and-nscale-unlock-gpu-capacity-globally-to-accelerate-ai-adoption"
+    },
+    {
+      "label": "Nscale — transparency and human rights policy (Norwegian Transparency Act)",
+      "url": "https://www.nscale.com/policies/transparency-and-human-rights"
+    },
+    {
+      "label": "Nscale — terms and conditions (Nscale AS)",
+      "url": "https://www.nscale.com/policies/terms-conditions"
+    },
+    {
+      "label": "Companies House — Nscale Global Holdings Limited (15749408) overview",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15749408"
+    },
+    {
+      "label": "Companies House — Nscale Global Holdings Limited officers",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15749408/officers"
+    },
+    {
+      "label": "Companies House — Nscale Global Holdings Limited charges",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15749408/charges"
+    },
+    {
+      "label": "Companies House — Nscale Global Holdings Limited filing history",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15749408/filing-history"
+    },
+    {
+      "label": "Servercountry — Monarch Compute Campus project record (DEP permits, jobs)",
+      "url": "https://servercountry.org/data/projects/nscale-microsoft-monarch-compute-campus-ai-infrastructure-phase-wv/"
+    },
+    {
+      "label": "Baxtel — Nscale Glomfjord (ex-Hydrokraft; Arkon acquired 2022)",
+      "url": "https://baxtel.com/data-center/nscale-glomfjord-hydrokraft"
+    },
+    {
+      "label": "Wikipedia — Nscale (Arkon origin, citing FT)",
+      "url": "https://en.wikipedia.org/wiki/Nscale"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

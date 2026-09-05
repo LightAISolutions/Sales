@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
   "companies": [
     {
@@ -1081,6 +1081,51 @@
         "Channel concentration: named server-OEM design wins (Dell, HPE, Gigabyte are sourced; Supermicro and Lenovo run in-house designs) and any first named hyperscaler — CoolIT claims '4 of 5' hyperscalers without naming one",
         "Litigation: the Asetek disputes ended in 2022 (summary judgment, settlement) with the Federal Circuit reviving CoolIT's '567 patent in March 2024 — watch for any new assertion now that a deep-pocketed parent owns the portfolio",
         "Chesterton check: CoolIT was KKR/Mubadala-owned May 2023–July 2026, not 'KKR-owned since 2023' today, and no jury verdict was ever reached in Asetek v. CoolIT. Do not re-import either premise"
+      ]
+    },
+    {
+      "slug": "fluidstack",
+      "cadence": "quarterly",
+      "source": "Private (Fluidstack Limited, UK 10985545; HQ New York since December 2025); no filings of its own. The disclosure channel is its public landlords and counterparties — TeraWulf (10-Q/10-K/8-K: Lake Mariner CB-5, the Abernathy sale, the Google recognition agreements and penny warrants), Cipher Mining (Barber Lake, the USD 544.5m guarantee asset), Hut 8 (River Bend), Meridian Arc's bond disclosures (New Lebanon) — plus Anthropic's newsroom for the USD 50bn programme and Aker/Nscale filings where the two overlap. Funding is disclosed by investors (Series A USD 830m, January 2026) and by press (the reported USD 1.5bn at USD 18bn, September 2026 — unannounced by the company). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Commencement dates against the leases: CB-5 (moved '2H 2026' → 'early 2027'), Abernathy ('2H 2026' → 'Q4 2026'), Barber Lake (September 2026, reported on schedule), River Bend (Q2 2027), New Lebanon — each landlord's next 10-Q; the Google backstop only becomes effective at commencement, and a delay beyond 180 days lets the tenant terminate",
+        "Any Google publication naming Fluidstack (equity investment, the reported USD 100m talks tied to Ironwood TPU distribution, the Broadcom–Apollo–Blackstone chip vehicle) — today every backstop term is sourced from counterparties' filings and law-firm alerts, not from Google",
+        "The reported USD 1.5bn round at USD 18bn (Jane Street-led, September 2026): a company or investor announcement that confirms or corrects it; total funding stands at about USD 2.6bn on announced rounds",
+        "The owner-developer pivot: Abernathy (bought TeraWulf's 50.1% for about USD 530m, July 2026), Okmulgee OK, Sullivan County NY and Wythe County VA — financing announcements, utility agreements (Entergy, AEP rows are `announced`), and whether any lease is signed without a Google recognition agreement",
+        "Anthropic routing around the intermediary: Hawesville (401 MW direct with TeraWulf, July 2026), Riot, Hut 8 Beacon Point, Nscale, Lambda — each new direct contract reduces the credit-substitution half of Fluidstack's product",
+        "Europe: the withdrawn 1 GW France campus (March 2026), any remaining Nordic/UK colocation for Mistral, Poolside, Black Forest Labs; the Macquarie GPU-secured facility's status",
+        "Chesterton check: Fluidstack does not own Lake Mariner, Barber Lake, River Bend or New Lebanon — it is tenant of record; the USD 18bn valuation is reported, not announced; the 401 MW Hawesville lease has no Fluidstack entity in it. Do not re-import any of these premises"
+      ]
+    },
+    {
+      "slug": "nscale",
+      "cadence": "quarterly",
+      "source": "Private; no filings of its own. The disclosure channel is Aker ASA's quarterly reports and presentations (Aker led Series B and C and reports the Narvik/Norway contracts, the replaced OpenAI LOI and the Monarch customer without naming it), the company's newsroom (Microsoft GPU contracts stated in chips, the DDTL and the investment-grade project loans, the RCF, Anyscale, Figure), Statnett and UK planning records for power, and press for revenue (about USD 33m 2025; about USD 100m Q2 2026), backlog (USD 51bn) and the reported USD 45bn Anthropic contract — none confirmed by the parties. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The Anthropic Monarch contract (reported about USD 45bn / six years / 460 MW, 26 August 2026): confirmation by either party, the site-company financing raised against it and its rating; Microsoft's withdrawal from the 1.35 GW LOI is press-sourced (Semafor)",
+        "The reported IPO of up to USD 3bn (Bloomberg): a public filing would be the first first-party revenue, backlog and debt disclosure — re-run the dossier's financials from it",
+        "Microsoft delivery milestones: Ward County TX, Sines PT, Loughton UK (slipped 'operational Q4 2026' → 2027), Narvik NO (52,000 GB300 → 30,000 Vera Rubin) — Aker's next quarterly for accepted capacity and any change in GPU counts or customer",
+        "Power: Statnett's May 2026 large-load halt and phase 2 at Narvik/Glomfjord beyond the 230 MW reservation; Loughton's planning and grid after the ministerial letter; Monarch's 2 GW Caterpillar gas order, air permits and any grid interconnection",
+        "Debt stack against revenue: about USD 6.1bn of facilities (February 2026 GPU-secured DDTL, August 2026 investment-grade Texas and North Carolina loans, USD 900m twelve-bank RCF) — drawdowns, covenant disclosures and the first audited revenue figure",
+        "Figure's USD 3.5bn compute commitment (3 September 2026): whether a lender rates a loan against a non-hyperscaler anchor; the Anyscale acquisition closing and what it adds to the software layer",
+        "Chesterton check: OpenAI is no longer the Narvik offtaker (LOI replaced by Microsoft per Aker, April 2026) and Stargate UK is paused; Microsoft is not the Monarch anchor; revenue and backlog figures are press-reported. Do not re-import any of these premises"
+      ]
+    },
+    {
+      "slug": "anthropic",
+      "cadence": "quarterly",
+      "source": "Private Delaware public benefit corporation; confidential draft S-1 filed 1 June 2026 with nothing public from it. First-party channels are the newsroom (compute commitments with Amazon, Google, Microsoft/NVIDIA, Fluidstack, SpaceX; run-rate revenue statements; the Series H; Build AI in America; the grid-upgrade pledge) and claude.com product pages. Counterparty filings carry the contract terms: Amazon 10-Qs (convertible notes, Series G/H preferred, the USD 20bn milestone facility), TeraWulf's 8-K (the 401 MW Hawesville lease, about USD 19bn), ERock's release (470 MW equipment order), Aker/Nscale and the Fluidstack landlords for the chains, court records via Fortune for Google's about 14%. The Nscale (about USD 45bn) and Lambda (about USD 35bn) contracts are press-reported only. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The S-1 going public: the first audited revenue, the compute commitments as a purchase-obligations table, supplier concentration in gigawatts per counterparty, the Long-Term Benefit Trust governance disclosure — re-run financials and judgments from it",
+        "Delivery window 2H 2026 → early 2028: Trainium 'nearly 1 GW' by end-2026, Fluidstack CB-5 (early 2027), Barber Lake (September 2026), River Bend (Q2 2027), Hawesville (2H 2027), Rockdale (December 2027), Monarch (late 2027), TPUs 'starting in 2027' — any missed milestone in a landlord's or supplier's filing, and any repeat of the May 2026 compute-shortage rate limits",
+        "Run-rate revenue after USD 47bn (May 2026): the next company statement; the take-or-pay book is affordable only while it compounds",
+        "Direct-counterparty moves: further leases in Anthropic's own name (Hawesville, Riot's 191 MW build-to-suit), the Theseus anchor-tenant platform, the Apollo–Blackstone chip vehicle's residual-value terms, any owned campus — the make-versus-lease answer may change",
+        "Power: ERock 470 MW order deliveries and permits, the '100% of grid upgrades' pledge in utility dockets (Entergy row is `announced`), Monarch's islanded 2 GW, transformer/switchgear lead times flagged as the Hawesville choke point",
+        "Shareholder-suppliers: Amazon's holding (about USD 190bn of Anthropic paper) and milestone releases, Google's about 14% and Fluidstack backstops, Microsoft up to USD 5bn and NVIDIA up to USD 10bn — any change in stake or in the Azure USD 30bn / 1 GW commitment",
+        "Chesterton check: the 401 MW Hawesville lease is at Justified (Hawesville, KY), direct with TeraWulf, no Fluidstack entity; Microsoft walked from Monarch and the Anthropic terms there are unconfirmed; Anthropic owns no campus. Do not re-import any of these premises"
       ]
     }
   ]

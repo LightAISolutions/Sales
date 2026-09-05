@@ -1,0 +1,1524 @@
+{
+  "schemaVersion": 7,
+  "slug": "fluidstack",
+  "name": "Fluidstack Ltd (Fluidstack Limited)",
+  "shortName": "Fluidstack",
+  "categories": [
+    "neocloud"
+  ],
+  "website": "https://fluidstack.io/",
+  "headquarters": "Midtown Manhattan, New York City (global headquarters since December 2025; street address not published). Registered office of Fluidstack Limited (UK company no. 10985545): 123 Colonnade Walk, Buckingham Palace Road, London SW1 9SH per the site's terms; Companies House shows Third Floor, 20 Old Bailey, London EC4M 7AN. Offices listed on the jobs page: Austin, New York, San Francisco, Seattle, Phoenix",
+  "founded": 2017,
+  "employees": "Not stated by the company. Proxies only: the jobs page listed 210 open roles and the home page '251 open roles' (September 2026); LinkedIn shows a '51–200' size band with 451 listed profiles; aggregator trackers give 181–418 employees during 2026. Collection gap.",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Fluidstack is the tenant-of-record, not the owner, of roughly 1.4 GW of contracted critical IT load across five US campuses being built for Anthropic — Lake Mariner NY (378 MW, TeraWulf), Abernathy TX (168 MW, the joint venture it now controls), Barber Lake TX (207 MW, Cipher), River Bend LA (245 MW, Hut 8) and New Lebanon IN (430 MW, Meridian Arc) — and every one of those leases is bankable only because Google stands behind Fluidstack's rent with more than USD 6 billion of backstops and guarantees, paid for with penny warrants in two of the landlords; its own equity is USD 2.6 billion of total funding, USD 830 million of it a January 2026 Series A at a USD 7.5 billion valuation, plus a reported but unannounced USD 1.5 billion round at USD 18 billion in September 2026.\n\nBACKGROUND. Founded in 2017 at Oxford by Gary Wu, César Maklary and Jamie Cox as a GPU marketplace, Fluidstack ran H100/H200 clusters for Mistral, Poolside, Black Forest Labs and Character.AI in third-party European colocation, financed GPUs through a Macquarie senior facility secured on the chips (April 2025), and signed a €10 billion, 1 GW French campus memorandum at the AI Action Summit (February 2025) that it abandoned in March 2026 as it pivoted to the United States. From August 2025 it became the intermediary tenant in a chain of former bitcoin miners' campuses, was named by Anthropic on 12 November 2025 as the builder of a USD 50 billion programme of custom data centres in Texas and New York, moved its headquarters to New York in December 2025, and in July 2026 bought TeraWulf's 50.1% of the Abernathy joint venture for about USD 530 million — its first owned campus. The 2026 website describes the company as building 'civilization-scale infrastructure for AI' and delivering 'gigawatts of compute in 6 months'; the company publishes no revenue, backlog or headcount, and its 2025 GPU-cloud marketing site has been taken down.",
+  "ecosystemRole": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by the landlords only in separate partnership releases or not at all. For the ecosystem's utilities and vendors Fluidstack is the counterparty of record at Lake Mariner (NYPA/NYSEG hydro allocation), Abernathy (SPS territory), Barber Lake (AEP Texas/ERCOT), River Bend (Entergy Louisiana, 330 MW utility capacity), New Lebanon (Hoosier Energy/WIN Energy co-ops) and now Wythe County, Virginia (Appalachian Power's large-load list) and Okmulgee, Oklahoma (AEP-PSO, Jane Street as first tenant).",
+  "productsAndServices": [
+    {
+      "name": "Data-centre development and operations for frontier labs (the tenant-operator model)",
+      "category": "AI data-centre build and operate",
+      "description": "Fluidstack's 2026 business: it secures power and sites, signs the lease as tenant, specifies the liquid-cooled halls the landlord builds, procures and racks the compute, and operates the clusters for a single end user — 'power acquisition, data center design, construction, and operations' in the company's words. The buildings belong to the landlord (TeraWulf, Cipher, Hut 8, Meridian Arc) and the chips increasingly to a financing vehicle; Fluidstack sells speed.",
+      "highlights": [
+        "Home page (2026): 'We build technology to enable delivery of gigawatts of compute in 6 months rather than the industry's 18-24 months'; jobs page: 'We build gigawatt-scale data centers from the ground up, delivered in months'.",
+        "Anthropic (12 November 2025) chose Fluidstack 'for its ability to move with exceptional agility, enabling rapid delivery of gigawatts of power'; the programme is 'USD 50 billion' of 'custom-built data centers designed specifically for Anthropic's workloads' in Texas and New York, 'with additional sites planned', 'approximately 800 permanent jobs and 2,400 construction jobs', sites 'expected to come online throughout 2026'.",
+        "Contracted lease positions per the landlords' filings: Lake Mariner NY 378 MW critical IT (three 10-year leases, ~USD 6.7 billion initial term); Abernathy TX 168 MW (25-year hosting term, ~USD 9.5 billion); Barber Lake TX 207 MW (10-year, ~USD 3.8 billion); River Bend LA 245 MW (15-year triple-net, USD 7.0 billion); New Lebanon IN 430 MW (15-year master lease behind USD 5.7 billion of Meridian Arc notes).",
+        "SemiAnalysis ClusterMAX 2.0 (November 2025, Gold tier, one of six among 84 providers): Fluidstack has 'the most unique business model' and is 'effectively the hired gun that organizations go to in order to turn bronze-tier datacenter infrastructure into a gold-tier customer experience'; 'the speed at which the Fluidstack team addressed issues was unmatched in all our testing'.",
+        "First-party project sites for owned developments: Sullivan County, Indiana ('a USD 65 billion development', 2027 start, leased 'exclusively to American tenants', USD 50 million of community payments) and Okmulgee, Oklahoma (first phase September 2027, final September 2028, Jane Street as first tenant, AEP-PSO power, 'Fluidstack is paying for all of the energy and energy infrastructure')."
+      ],
+      "positioning": "Against CoreWeave, Nebius, Lambda and Crusoe — which own or finance GPUs and, increasingly, buildings — Fluidstack owns almost nothing: measuredai's July 2026 analysis calls it 'the pure tenant-operator' that 'owns zero buildings across its five U.S. sites while managing operations through five bankruptcy-remote tenant SPVs'. Its differentiator is a Google credit wrap that no other neocloud carries; its weakness is that the same wrap makes it replaceable — Anthropic signed its 401 MW Kentucky lease with TeraWulf directly in July 2026 with no Fluidstack involvement.",
+      "soldThrough": "Direct, single-tenant contracts with AI labs; leases signed by US subsidiaries (Fluidstack USA I/II/III Inc., Fluidstack CS I Inc.) with Google recognition agreements; the company says it enables labs 'to access cutting-edge compute without typical multi-year contracts', but the landlord leases behind it run 10–25 years.",
+      "targetSegments": [
+        "Frontier AI labs (Anthropic, Meta, Mistral, Poolside, Black Forest Labs, Character.AI named by the company)",
+        "Quantitative finance (Jane Street as Okmulgee first tenant)",
+        "Governments (the withdrawn French sovereign campus)"
+      ],
+      "roadmap": "Sites 'coming online throughout 2026' (Anthropic release); Lake Mariner CB-3 energized July 2026, CB-4 phased delivery 2H 2026, CB-5 early 2027; Abernathy targeted Q4 2026; Barber Lake September 2026 and 39 MW by January 2027; River Bend first hall Q2 2027; New Lebanon first hall July 2027; Okmulgee September 2027; Sullivan County from 2027."
+    },
+    {
+      "name": "Managed GPU cloud platform — Managed Kubernetes, Managed Slurm, Lighthouse, Atlas API and fluidctl",
+      "category": "Bare-metal AI cloud software layer",
+      "description": "The software Fluidstack runs on top of leased halls and financed GPUs: 'an AI cloud platform designed from the ground up to meet the security, reliability, and scale requirements of top AI labs', with bare-metal container and batch orchestration, DCGM-based health checks, auto-remediation and a management API whose host is api.atlas.fluidstack.io.",
+      "highlights": [
+        "Managed Kubernetes: 'ultra-reliable bare metal container orchestration platform powering frontier model training and inference' with the NVIDIA GPU Operator and Network Operator, passive and active health checks and observability; provisioned through sales, not self-serve ('can not be provisioned via API').",
+        "Managed Slurm: bare-metal batch orchestration for 'frontier model training' with Pyxis/Enroot containers and 'topology-aware scheduling' to cut collective-communication latency.",
+        "Lighthouse: 'the monitoring, observability, and reliability suite' — managed Grafana dashboards, passive DCGM background checks (PCIe, memory, firmware, thermal, power, NVLink and NVSwitch errors), active DCGM checks ('~2 minutes per run', preview) and auto-remediation (preview) that will 'automatically drain, power-cycle, and schedule physical maintenance for nodes'.",
+        "Scale claim (2025 boilerplate): 'over 100,000 GPUs under management' and 'rapid access to high-performance exa-scale compute within days' for 'multi-thousand GPU workloads'. The GPU catalogue and price list that the 2025 site carried are gone; docs.atlas.fluidstack.io answered 503 on every attempt — collection gap.",
+        "Status page: 'All services are online', no incidents recorded May–July 2026; no regions or components are named."
+      ],
+      "positioning": "Comparable to the orchestration layers Lambda, Nebius and Nscale sell, but Fluidstack's is documented only for existing customers — there is no public pricing, region list or instance catalogue in 2026, which is consistent with a company that now sells whole campuses rather than hours.",
+      "soldThrough": "Managed services inside single-tenant contracts; SSO or API credentials via fluidctl; Projects give 'logical and network isolation'.",
+      "targetSegments": [
+        "AI labs running multi-thousand-GPU training and inference on Fluidstack-operated clusters"
+      ],
+      "roadmap": "Active DCGM checks and auto-remediation are 'preview' features (docs, 2026)."
+    },
+    {
+      "name": "European GPU clusters — Iceland/Nordics with Borealis, Dell and NVIDIA; the cancelled Mistral/Eclairion and Bosquel projects",
+      "category": "Colocated GPU clusters (Europe)",
+      "description": "The 2025 European business: NVIDIA HGX H200 clusters on Dell PowerEdge XE9680 with Quantum-2 InfiniBand in Borealis Data Center's Icelandic sites on hydro and geothermal power, a planned 18,000-GPU Mistral AI supercomputer with Eclairion at Bruyères-le-Châtel, and the 1 GW nuclear-powered Bosquel campus — the last two dropped in March 2026.",
+      "highlights": [
+        "25 March 2025: 'deploying and managing Exascale clusters across Iceland and Europe' with Borealis, Dell and NVIDIA on '100% renewable energy (hydro and geothermal)'; Poolside's CEO: 'Fluidstack's speed, reliability, and customer support are second to none'.",
+        "3 March 2025: 'Fluidstack Delivering Europe's Largest AI Supercomputer to Mistral AI in 2025' — '>18,000 GPUs' with Eclairion, first tranche 'operational by Summer 2025' on '100% decarbonized electricity'. Bloomberg (18 March 2026) reported the Eclairion deal cancelled; the release has been removed from the company's site.",
+        "10 February 2025: memorandum with the French government (ministers Lombard and Feracci, signed by Maklary) for 'up to 1 gigawatt (GW) of dedicated AI compute power', 'predominantly nuclear energy', a '€10 billion' first phase, 'close to 500,000 next-generation AI chips', live 2026 and 'beyond 1 GW by 2028'. Abandoned March 2026 per Bloomberg and the French economy ministry; the Somme authorities and RTE reopened the site to other investors.",
+        "Iceland capacity is what the Macquarie facility financed: 'a senior debt facility secured by NVIDIA GPUs', GPUs 'deployed' in an Icelandic data centre, closed 'in a matter of weeks' (Macquarie).",
+        "UK Companies House lists Fluidstack Iceland/Norway/Finland Holdings I Ltd and Fluidstack France Holdings I Ltd (2025) — residual Nordic activity; no UK or Norwegian project has been announced."
+      ],
+      "positioning": "Fluidstack was the French state's chosen sovereign-compute partner for one year; Julien Simon's critique is that it became redundant 'when Mistral and Nvidia connected directly'. Nscale (Narvik, Loughton, Sines) now holds the European sovereign-neocloud position Fluidstack vacated.",
+      "soldThrough": "Reserved clusters in third-party colocation; GPUs financed on Fluidstack's own balance sheet via asset-backed debt.",
+      "targetSegments": [
+        "European AI labs (Mistral, Poolside, Black Forest Labs)",
+        "Sovereign programmes (France — withdrawn)"
+      ],
+      "roadmap": "No European roadmap is published in 2026."
+    },
+    {
+      "name": "Power and land development — Sullivan County IN, Okmulgee OK, Wythe County VA, Harlingen TX",
+      "category": "Site and power acquisition",
+      "description": "From late 2025 Fluidstack began acquiring powered land and developing campuses in its own name rather than leasing from a landlord: a 2.1 GW-capable Indiana industrial park (with Meridian Arc/Next Frontier), a city-approved Oklahoma campus with Jane Street as first tenant, the 99-acre Solis Arx tract at Progress Park in Wythe County, Virginia, and a Harlingen, Texas site whose project page is not yet reachable.",
+      "highlights": [
+        "New Lebanon, Sullivan County, Indiana: Meridian Arc HoldCo (Frontier Development Holdings/Next Frontier 50.1%, Fluidstack Ltd 49.9%) priced USD 5.7 billion of 6.25% senior secured notes due 2031 (April 2026, Fitch BB, Morgan Stanley) to buy about 140 acres and build 245 MW + 185 MW of critical IT '100% leased to Fluidstack over a 15-year base lease term', 'guaranteed by Google'; power through a multi-party agreement with Hoosier Energy and WIN Energy REMC; first hall July 2027.",
+        "Okmulgee, Oklahoma (company project site): first phase September 2027, final September 2028; 'Jane Street will be the first tenant'; AEP-PSO as power provider; 'Fluidstack is paying for all of the energy and energy infrastructure'; a USD 7 million education commitment; designed to comply with Oklahoma SB 259 (water) and the Data Center Consumer Ratepayer Protection Act of 2026.",
+        "Wythe County, Virginia: the county's project page records that Solis Arx's campus was 'announced on December 5, 2025' on a '99-acre tract within Progress Park' and that 'on June 9, 2026, a representative of Fluidstack presented to the Board of Supervisors regarding the acquisition of Solis Arx'; Appalachian Power's large-load list (Cardinal News, 31 July 2026) carries 'Fluidstack (formerly Solis Arx) — Unknown MW — Wythe — In progress'.",
+        "Sullivan County project site: 'a USD 65 billion development', 'no property-tax incentives sought', '100% Self-Funded Energy', closed-loop cooling, a 55 dB noise limit; the company's public-affairs representative cited 'nearly USD 600 million in labor contracts' at the August 2026 open house."
+      ],
+      "positioning": "This is the step from tenant to developer that Crusoe, Nscale and (through Justified) TeraWulf's own tenants have taken; Fluidstack's version keeps a financial partner (Coatue-linked Next Frontier at New Lebanon) as majority owner and Google as guarantor.",
+      "soldThrough": "Long-term single-tenant leases; project bonds at the holding-company level.",
+      "targetSegments": [
+        "Anthropic (the programme sites)",
+        "Jane Street (Okmulgee)"
+      ],
+      "roadmap": "New Lebanon capacity from late 2026, first hall July 2027; Okmulgee September 2027 and September 2028; Wythe County and Harlingen undated."
+    },
+    {
+      "name": "GPU and capacity financing — Macquarie asset-backed facility, capacity purchases from smaller neoclouds, the Broadcom–Apollo–Blackstone chip vehicle",
+      "category": "Financing structures",
+      "description": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (the Broadcom–Apollo–Blackstone platform, June 2026, reported at about USD 35 billion for the first tranche).",
+      "highlights": [
+        "Macquarie (1 April 2025): 'strategic GPU financing deal to supply GPUs to premier AI research labs across Europe'; 'The financing structure, secured by the GPUs themselves, allows Fluidstack to provide AI compute to customers…without the burden of long-term commitments'; the amount is not stated by either party (press: up to USD 10 billion of capacity).",
+        "Boost Run (SPAC 8-K, 15 December 2025): 'Fluidstack, a leading AI cloud platform, has entered into a two-year USD 127 million contract with Boost Run to facilitate inference and training clusters for customers within its world-class portfolio' — Fluidstack as buyer of capacity.",
+        "Broadcom–Apollo–Blackstone (June 2026, press summaries; the Broadcom release page was unreachable): an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026'; the vehicle buys the chips — including Google TPUs — and leases them to Anthropic, with Broadcom supporting residual value. measuredai reported the first TPU capacity live at Lake Mariner on 5 July 2026.",
+        "Destiny Tech100's prospectus (August 2026) describes the company as 'securing power, data center capacity, and financing through long-term partnerships rather than owning infrastructure outright'."
+      ],
+      "positioning": "Where CoreWeave and Lambda pledge owned GPUs to lenders, Fluidstack's US model puts the chips in a lessor vehicle and the credit on Google — Dave Friedman's February 2026 line: 'The collateral is cosmetic. The credit is Google's.'",
+      "soldThrough": "Not a product sold; structures behind the contracts.",
+      "targetSegments": [
+        "Lenders and lessors (Macquarie, Apollo, Blackstone, project bondholders)"
+      ],
+      "roadmap": "Bloomberg reported (September 2026) that Blackstone was weighing a second debt package for the Anthropic chip deal."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Tenant-of-record lease ledger — capacity, term, value and credit support as the landlords filed them",
+      "specs": [
+        {
+          "band": "Lake Mariner, Barker NY (TeraWulf / Akela Data)",
+          "label": "Capacity",
+          "value": "'378 MW of critical IT load' across three leases (CB-3, CB-4, CB-5); August 2025 releases: '200+ MW critical IT load (representing ~250 MW gross capacity)' plus 'an incremental 160 MW'"
+        },
+        {
+          "band": "Lake Mariner, Barker NY (TeraWulf / Akela Data)",
+          "label": "Term",
+          "value": "'initial 10-year term and two five-year renewal options' per lease; 'Modified gross lease with annual escalators'"
+        },
+        {
+          "band": "Lake Mariner, Barker NY (TeraWulf / Akela Data)",
+          "label": "Contracted revenue",
+          "value": "'$6.7 Billion in Contracted Revenue, with Potential to Reach $16 Billion with Lease Extensions'"
+        },
+        {
+          "band": "Lake Mariner, Barker NY (TeraWulf / Akela Data)",
+          "label": "Google support",
+          "value": "backstop 'increases to approximately $3.2 billion'; warrants for 41,011,803 + 32,568,197 shares at $0.01, 'approximately 14%' pro forma; '$600 million of Google's credit support' effective on CB-3 delivery (July 2026)"
+        },
+        {
+          "band": "Lake Mariner, Barker NY (TeraWulf / Akela Data)",
+          "label": "Status",
+          "value": "'102 MW of critical IT HPC capacity' energized July 2026; two leases amended 'from 162 MW to 168 MW' with 'commencement on a data hall-by-data hall basis'; CB-4 rent commencement 2H 2026, CB-5 'early 2027'"
+        },
+        {
+          "band": "Abernathy, Hale County TX (FS CS I LLC / Flash Compute LLC)",
+          "label": "Capacity",
+          "value": "'168 MW critical IT load (240 MW gross)'"
+        },
+        {
+          "band": "Abernathy, Hale County TX (FS CS I LLC / Flash Compute LLC)",
+          "label": "Term and value",
+          "value": "'25-year hosting commitment represents approximately $9.5 billion in contracted revenue to the joint venture'; term 'may be shortened to 20 years or 15 years'"
+        },
+        {
+          "band": "Abernathy, Hale County TX (FS CS I LLC / Flash Compute LLC)",
+          "label": "Ownership and debt",
+          "value": "TeraWulf 50.1% / Fluidstack CS I Inc. 49.9% until 6 July 2026; TeraWulf's stake sold to 'an investor group led by' Fluidstack for 'approximately $530 million' in three instalments; '$1,300.0 million' of 7.250% Senior Secured Notes due 2030 (December 2025); Google backs 'approximately $1.3 billion of Fluidstack's long-term lease obligations', no warrants"
+        },
+        {
+          "band": "Abernathy, Hale County TX (FS CS I LLC / Flash Compute LLC)",
+          "label": "Delivery",
+          "value": "'second half of 2026' (8-K); 'targeted for the fourth quarter of 2026' (Q2 2026 release)"
+        },
+        {
+          "band": "Barber Lake, Colorado City TX (Cipher / Fluidstack USA II Inc.)",
+          "label": "Capacity",
+          "value": "'168 MW of critical IT load, supported by a maximum of 244 MW of gross capacity' plus 'an additional 39 MW of critical IT load, supported by a maximum of 56 MW' — 'the entire 300 MW of capacity'"
+        },
+        {
+          "band": "Barber Lake, Colorado City TX (Cipher / Fluidstack USA II Inc.)",
+          "label": "Term and value",
+          "value": "10-year with two five-year options; 'approximately $3 billion' + 'approximately $830 million' initial terms, 'approximately $9.0 billion in total for the entire lease' with extensions"
+        },
+        {
+          "band": "Barber Lake, Colorado City TX (Cipher / Fluidstack USA II Inc.)",
+          "label": "Google support",
+          "value": "'$1.4 billion' + 'an additional $333 million' backstop; warrants for 24,178,576 shares at $0.01 ('approximately 5.4%'), Cipher to top up if warrant value is below $430 million; Cipher books a '$544.5 million' asset for the backstop"
+        },
+        {
+          "band": "Barber Lake, Colorado City TX (Cipher / Fluidstack USA II Inc.)",
+          "label": "Delivery",
+          "value": "'expected commencement date of September 2026'; the 39 MW 'by January 2027'; 'on schedule' per Cipher's June 2026 deck"
+        },
+        {
+          "band": "River Bend, West Feliciana Parish LA (Hut 8 / Fluidstack USA IV Inc.)",
+          "label": "Capacity",
+          "value": "'245 megawatts (MW) of IT capacity'; Entergy Louisiana 'will provide 330 MW of utility capacity'; ROFO 'for up to an additional 1,000 MW'"
+        },
+        {
+          "band": "River Bend, West Feliciana Parish LA (Hut 8 / Fluidstack USA IV Inc.)",
+          "label": "Term and value",
+          "value": "'15-year, $7.0 billion lease'; 'Triple net (NNN)'; '3.0% annual base rent escalator'; 'Three 5-year renewal options increase potential contract value to approximately $17.7 billion'"
+        },
+        {
+          "band": "River Bend, West Feliciana Parish LA (Hut 8 / Fluidstack USA IV Inc.)",
+          "label": "Google support",
+          "value": "'a financial backstop, which covers the lease payments and related pass-through obligations' for the 15-year base term, plus a separate backstop for the Operations Services Agreement; no warrants disclosed"
+        },
+        {
+          "band": "River Bend, West Feliciana Parish LA (Hut 8 / Fluidstack USA IV Inc.)",
+          "label": "Delivery",
+          "value": "'Initial data hall … Q2 2027, with additional data halls scheduled to come online over the balance of 2027'; project financing 'up to 85% loan-to-cost' from J.P. Morgan and Goldman Sachs still 'expected' at the FY2025 10-K"
+        },
+        {
+          "band": "New Lebanon, Sullivan County IN (Meridian Arc HoldCo)",
+          "label": "Capacity and term",
+          "value": "'245 MW + 185 MW critical IT' in two buildings; 'a 15-year master lease with Fluidstack'; Fluidstack Ltd 49.9% of the HoldCo"
+        },
+        {
+          "band": "New Lebanon, Sullivan County IN (Meridian Arc HoldCo)",
+          "label": "Debt and support",
+          "value": "'$5.7bn 6.25% senior secured notes due 2031' priced at par (April 2026, Fitch BB); lease 'credit-guaranteed by Google'"
+        },
+        {
+          "band": "New Lebanon, Sullivan County IN (Meridian Arc HoldCo)",
+          "label": "Delivery",
+          "value": "'capacity from late 2026, first hall July 2027'"
+        }
+      ],
+      "notes": "Every figure is the landlord's or bond counsel's, not Fluidstack's — the company has never published a lease. The five leases sum to about 1,428 MW of critical IT (researcher's arithmetic). Google's backstop is a recognition agreement: on a Fluidstack payment default or insolvency Google may pay the termination fee or 'pay all rent currently due under the Fluidstack Lease and assume the Fluidstack Lease as the tenant', and it becomes effective only at lease commencement, so bondholders carry construction risk without Google (Quinn Emanuel, March 2026)."
+    },
+    {
+      "product": "Lighthouse and platform — the software layer as documented (docs.fluidstack.io, 2026)",
+      "specs": [
+        {
+          "band": "Orchestration",
+          "label": "Managed Kubernetes",
+          "value": "'ultra-reliable bare metal container orchestration platform powering frontier model training and inference'; NVIDIA GPU Operator + Network Operator"
+        },
+        {
+          "band": "Orchestration",
+          "label": "Managed Slurm",
+          "value": "'ultra-reliable bare metal batch orchestration platform powering frontier model training'; Pyxis/Enroot; 'topology-aware scheduling'"
+        },
+        {
+          "band": "Reliability",
+          "label": "Passive checks",
+          "value": "'NVIDIA's DCGM background health checks' — PCIe, memory, firmware, thermal, power, NVLink, NVSwitch errors"
+        },
+        {
+          "band": "Reliability",
+          "label": "Active checks",
+          "value": "DCGM active checks, preview, '~2 minutes per run' — deployment, interconnect, topology, hardware"
+        },
+        {
+          "band": "Reliability",
+          "label": "Auto-remediation",
+          "value": "preview: 'automatically drain, power-cycle, and schedule physical maintenance for nodes'"
+        },
+        {
+          "band": "Access",
+          "label": "API and CLI",
+          "value": "Management API base 'https://api.atlas.fluidstack.io/api/v1alpha1' (bearer auth; Regions, Clusters, Organizations, Members, Instances, SSH keys); CLI 'fluidctl'; Projects give 'logical and network isolation'"
+        },
+        {
+          "band": "Hardware (2025 statements)",
+          "label": "Reference deployment",
+          "value": "'NVIDIA HGX H200' on Dell PowerEdge XE9680 with NVIDIA Quantum-2 InfiniBand (Iceland, March 2025)"
+        }
+      ],
+      "notes": "No GPU catalogue, pricing, region list or SLA is published in 2026; the 2025 marketing pages (/pricing, /solutions) return 404 and docs.atlas.fluidstack.io was unreachable — a collection gap, stated as such."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-04",
+      "category": "financial",
+      "headline": "Crunchbase News reports a USD 1.5 billion round led by Jane Street Capital at an USD 18 billion valuation, taking total funding to 'just over $2.6 billion'; the company has not announced it. SEC Form D filed 30 June 2026 shows a USD 1.5 billion offering with USD 730 million sold from 15 June",
+      "read": "The valuation more than doubled in eight months on the strength of leases the company does not guarantee; the Form D, not a press release, is the only primary record of the round.",
+      "source": "https://news.crunchbase.com/venture/biggest-funding-rounds-crusoe-fluidstack-multibillion-dollar-ai-infrastructure/"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "other",
+      "headline": "measuredai's tracker reports Anthropic's first TPU capacity under its 'colocation and managed services agreements with Fluidstack' came online at Lake Mariner on 5 July 2026 and tallies five Fluidstack campuses at about 1.4 GW critical IT",
+      "read": "The first Anthropic silicon in a Fluidstack-operated hall — the moment the Google backstops start converting from contingent to live.",
+      "source": "https://measuredai.substack.com/p/anthropic-data-centers"
+    },
+    {
+      "date": "2026-08-06",
+      "category": "project",
+      "headline": "Sullivan County, Indiana open house: Fluidstack's public-affairs representative describes closed-loop cooling and 'nearly $600 million in labor contracts'; the company's project site calls the campus 'a $65 billion development' with USD 50 million of community payments",
+      "read": "The first campus Fluidstack fronts in its own name, presented to a county rather than a landlord.",
+      "source": "https://www.wthitv.com/2026/08/06/fluidstack-hosts-open-house-sullivan-county-data-center-campus/"
+    },
+    {
+      "date": "2026-08-05",
+      "category": "capacity",
+      "headline": "TeraWulf Q2 2026: CB-3 delivered in early July, 'increasing revenue-generating capacity to 102 MW and satisfying the applicable conditions for $600 million of Google's credit support for Fluidstack's lease obligations to become effective'; two leases amended from 162 MW to 168 MW with data-hall-by-data-hall commencement",
+      "read": "Rent has started and the backstop has switched on at one building; the amendment also shows the tenant paying extra base rent for scope changes.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000162/a_wulfearningsreleaseq22026.htm"
+    },
+    {
+      "date": "2026-07-25",
+      "category": "project",
+      "headline": "Okmulgee, Oklahoma: the city posts the data-centre release; Fluidstack's project site states a first phase in September 2027, final phase September 2028, Jane Street as first tenant and AEP-PSO as power provider, with Fluidstack 'paying for all of the energy and energy infrastructure'",
+      "read": "A second non-Anthropic tenant and a second self-developed campus — diversification from a one-customer book, on paper.",
+      "source": "https://www.okmulgeefluidstack.io/"
+    },
+    {
+      "date": "2026-07-20",
+      "category": "financial",
+      "headline": "Company blog confirms 'Fluidstack raised an $830M Series A at a $7.5B valuation in January, led by Situational Awareness'; the goal is 'to be the fastest on the planet at deploying hundreds of gigawatts of compute'",
+      "read": "The only funding round the company has ever announced itself, disclosed six months after it closed and only after the SEC Form D/A (May 2026) had already shown USD 842 million sold to 30 investors.",
+      "source": "https://fluidstack.io/blog/series-a-announcement"
+    },
+    {
+      "date": "2026-07-06",
+      "category": "ma",
+      "headline": "TeraWulf agrees to sell its 50.1% of the Abernathy joint venture to 'an investor group led by its joint venture partner, Fluidstack' for about USD 530 million in three instalments; the same release announces Anthropic's direct 401 MW, 20-year lease at TeraWulf's Justified campus in Hawesville, Kentucky, with no Fluidstack involvement",
+      "read": "Two signals in one filing: Fluidstack becomes an owner for the first time, and its anchor customer shows it can contract with the landlord directly when investment-grade support is available.",
+      "source": "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack"
+    },
+    {
+      "date": "2026-06-30",
+      "category": "financial",
+      "headline": "SEC Form D: a new USD 1.5 billion equity offering by Fluidstack Ltd with USD 729,999,546 sold to seven investors since 15 June 2026, signed by General Counsel Dennis Wallace",
+      "read": "The primary record behind the September press reports of a Jane Street-led round.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2104151/000090679126000132/primary_doc.xml"
+    },
+    {
+      "date": "2026-06-10",
+      "category": "financial",
+      "headline": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value",
+      "read": "The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
+      "source": "https://www.artificialintelligence-news.com/news/new-data-centre-projects-mark-anthropic-biggest-us-expansion/"
+    },
+    {
+      "date": "2026-06-09",
+      "category": "project",
+      "headline": "A Fluidstack representative presents to the Wythe County, Virginia Board of Supervisors 'regarding the acquisition of Solis Arx' — the 99-acre Progress Park campus announced by Solis Arx on 5 December 2025; Appalachian Power's large-load list later carries 'Fluidstack (formerly Solis Arx)'",
+      "read": "Powered land bought outright in AEP territory; MW undisclosed.",
+      "source": "https://www.wytheco.org/418/Solis-ArxFluidstack"
+    },
+    {
+      "date": "2026-05-12",
+      "category": "financial",
+      "headline": "SEC Form D/A: the equity offering first filed in January is raised to USD 849,999,997 with USD 842,478,689 sold to 30 investors — the round the company later called its USD 830 million Series A",
+      "read": "Regulatory filings, not press releases, are the reliable record of this company's capital raising.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2104151/000090679126000077/primary_doc.xml"
+    },
+    {
+      "date": "2026-04-17",
+      "category": "financial",
+      "headline": "Meridian Arc HoldCo — a joint venture of Next Frontier (Frontier Development Holdings) and Fluidstack Ltd — prices USD 5.7 billion of 6.25% senior secured notes due 2031 to build 430 MW of critical IT at New Lebanon, Indiana, '100% leased to Fluidstack over a 15-year base lease term' and 'guaranteed by Google'",
+      "read": "The largest single financing in the Fluidstack chain and the first outside the miner-landlord cohort; Coatue-linked capital as majority owner.",
+      "source": "https://finance.yahoo.com/markets/stocks/articles/meridian-arc-inks-5-7b-112514403.html"
+    },
+    {
+      "date": "2026-04-14",
+      "category": "financial",
+      "headline": "Bloomberg reports Jane Street in talks to back Fluidstack at an USD 18 billion valuation, with Situational Awareness co-leading and Morgan Stanley advising; TechCrunch dates the prior round to December 2025 at USD 7.5 billion",
+      "read": "A 2.4x step-up in four months, reported before the January round had even been announced.",
+      "source": "https://techcrunch.com/2026/04/14/ai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report/"
+    },
+    {
+      "date": "2026-03-19",
+      "category": "corporate",
+      "headline": "Fluidstack abandons the €10 billion, 1 GW Bosquel campus in France and cancels the Eclairion/Mistral cluster as it pivots to the United States (Bloomberg, 18 March; the French economy ministry confirmed per L'Usine Nouvelle); the Somme authorities and RTE reopen the site to other investors",
+      "read": "The marquee sovereign-compute commitment of the 2025 AI Action Summit lasted thirteen months — a data point on how binding a memorandum is.",
+      "source": "https://finance.yahoo.com/sectors/technology/articles/fluidstack-abandons-11-5-billion-124930636.html"
+    },
+    {
+      "date": "2026-02-25",
+      "category": "financial",
+      "headline": "Hut 8 FY2025 results 8-K restates the River Bend 245 MW, USD 7.0 billion Fluidstack lease with a Google backstop, confirms the Anthropic partnership and says project financing of up to 85% loan-to-cost with J.P. Morgan and Goldman Sachs is expected",
+      "read": "Financial close at River Bend is still a future event; the lease exists, the debt does not yet.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019393/hut-20260225xex99d1.htm"
+    },
+    {
+      "date": "2026-02-20",
+      "category": "financial",
+      "headline": "SiliconANGLE, citing the Wall Street Journal: Google exploring a USD 100 million investment in Fluidstack at a USD 7.5 billion valuation, tied to distribution of Ironwood TPUs, alongside 'a $10 billion line of credit secured for data center construction'",
+      "read": "If completed, Google would be guarantor, warrant-holder in the landlords and shareholder in the tenant — the whole capital stack of the chain; not confirmed by either party.",
+      "source": "https://siliconangle.com/2026/02/20/google-reportedly-invest-100m-ai-cloud-operator-fluidstack/"
+    },
+    {
+      "date": "2026-01-23",
+      "category": "financial",
+      "headline": "SEC Form D: Fluidstack Ltd files a USD 750 million equity offering with USD 450 million sold since 10 January 2026, signed by CEO Peixian (Gary) Wu; related persons listed include Maklary, Jamie Cox, Stephane Fisch, James Dugan, Malachi Price, Jason Kichen and Dennis Wallace",
+      "read": "First SEC footprint of the company and the only public list of its executive officers.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2104151/000090679126000010/primary_doc.xml"
+    },
+    {
+      "date": "2025-12-29",
+      "category": "financial",
+      "headline": "Flash Compute LLC (the Abernathy JV vehicle) completes USD 1.3 billion of 7.250% Senior Secured Notes due 2030 led by Morgan Stanley; no amortisation before completion; the JV partners give a capped USD 100 million completion guarantee that 'is not a guarantee of the notes'",
+      "read": "Project bonds with construction risk on the bondholders and Google's USD 1.3 billion sitting behind the Fluidstack USA III sublease, not the notes.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925124839/tm2534384d1_8k.htm"
+    },
+    {
+      "date": "2025-12-18",
+      "category": "financial",
+      "headline": "Joint TeraWulf–Fluidstack release on pricing the Abernathy project financing: 'up to 240 MW of gross power capacity (168 MW of critical IT load) under a long-term hosting structure with investment-grade credit support' from 'a leading global hyperscale partner'; Gary Wu points to 'our next joint venture development'",
+      "read": "The only release Fluidstack has co-issued; Google is unnamed in it.",
+      "source": "https://www.globenewswire.com/news-release/2025/12/18/3208237/0/en/TeraWulf-and-Fluidstack-Announce-Successful-Pricing-of-Project-Financing-for-168-MW-HPC-Compute-Joint-Venture.html"
+    },
+    {
+      "date": "2025-12-17",
+      "category": "order-win",
+      "headline": "Hut 8 signs a 15-year, USD 7.0 billion triple-net lease with Fluidstack for 245 MW at River Bend, Louisiana (Google backstop on rent and pass-throughs, ROFO for 1,000 MW more) and announces a partnership with Anthropic and Fluidstack for 'at least 245 megawatts and up to 2,295 MW'; Entergy Louisiana to supply 330 MW of utility capacity",
+      "read": "The first lease where the landlord names Anthropic as the end user on the same day; Louisiana grants sales-tax rebates under Act 730.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm"
+    },
+    {
+      "date": "2025-12-15",
+      "category": "procurement",
+      "headline": "Boost Run's SPAC filing discloses 'a two-year $127 million contract with Boost Run to facilitate inference and training clusters' for Fluidstack's customers",
+      "read": "Fluidstack buying capacity from a smaller neocloud — the operator also subcontracts when its own halls are not ready.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2032379/000149315225027804/ex99-1.htm"
+    },
+    {
+      "date": "2025-12-04",
+      "category": "corporate",
+      "headline": "Global headquarters relocated from London to Midtown Manhattan; '1,100 jobs to New York State', 300 permanent at an average USD 144,000; Gary Wu: 'Compute capacity is a strategic national asset'",
+      "read": "The company followed its customer and its landlords; the UK company remains the legal parent.",
+      "source": "https://fluidstack.io/blog/fluidstack-expands-u-s-investment-by-relocating-global-headquarters-to-new-york-city"
+    },
+    {
+      "date": "2025-11-20",
+      "category": "order-win",
+      "headline": "Cipher adds 39 MW critical IT (56 MW gross) at Barber Lake by January 2027, about USD 830 million over the initial term; Fluidstack now leases the entire 300 MW site; Google backstops a further USD 333 million (USD 1.73 billion total)",
+      "read": "The backstop scales linearly with the lease — Google is pricing capacity, not a one-off relationship.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm"
+    },
+    {
+      "date": "2025-11-12",
+      "category": "customer",
+      "headline": "Anthropic announces a USD 50 billion investment in American AI infrastructure, 'building data centers with Fluidstack in Texas and New York, with more sites to come'; about 800 permanent and 2,400 construction jobs; sites online 'throughout 2026'",
+      "read": "The end user steps out from behind the landlords' 'global hyperscale AI platform' language; the sites and MW are still not named by either party.",
+      "source": "https://fluidstack.io/blog/fluidstack-selected-by-anthropic-to-deliver-custom-data-centers-in-the-us"
+    },
+    {
+      "date": "2025-11-06",
+      "category": "market",
+      "headline": "SemiAnalysis ClusterMAX 2.0 rates Fluidstack Gold — 'the hired gun … to turn bronze-tier datacenter infrastructure into a gold-tier customer experience' — while flagging outdated GPU Operator charts and container-toolkit versions",
+      "read": "Independent validation of the operating model on the same day the security-process gaps were published.",
+      "source": "https://www.clustermax.ai/cloudreview/fluidstack"
+    },
+    {
+      "date": "2025-10-28",
+      "category": "partnership",
+      "headline": "TeraWulf–Fluidstack Abernathy, Texas joint venture (TeraWulf 51%): 168 MW critical IT, 25-year hosting term, about USD 9.5 billion of contracted revenue, Google backing about USD 1.3 billion of Fluidstack's obligations with no warrants; the customer is 'a global hyperscale AI platform developing frontier-scale foundation models'",
+      "read": "The template leaves New York and the warrants drop out — Google pays for credit, not equity, the second time.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925102858/tm2529509d1_ex99-1.htm"
+    },
+    {
+      "date": "2025-10-16",
+      "category": "financial",
+      "headline": "WULF Compute prices USD 3.2 billion of 7.75% senior secured notes due 2030 secured by, among other things, 'a designated lockbox account of Fluidstack USA I Inc.' and, until completion, 'a pledge by Google LLC of warrants'",
+      "read": "The lender's view of the chain: Fluidstack's rent flows through a lockbox and Google's warrants are the pre-completion collateral.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925100142/tm2528904d1_ex99-1.htm"
+    },
+    {
+      "date": "2025-09-25",
+      "category": "order-win",
+      "headline": "Cipher Mining signs a 10-year lease with Fluidstack USA II Inc. for 168 MW critical IT at Barber Lake, Texas (about USD 3 billion, USD 7 billion with extensions), delivery September 2026; Google backstops USD 1.4 billion and takes warrants for 24,178,576 shares at USD 0.01 (about 5.4%)",
+      "read": "The Lake Mariner structure replicated with a second landlord six weeks later — the backstop-plus-warrant package is a product.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm"
+    },
+    {
+      "date": "2025-08-18",
+      "category": "order-win",
+      "headline": "Fluidstack exercises its option on CB-5 at Lake Mariner: an incremental 160 MW critical IT, 'over 360 MW' total, USD 6.7 billion contracted (up to USD 16 billion); Google's backstop rises to about USD 3.2 billion and its warrants to about 14% of TeraWulf pro forma",
+      "read": "Four days after the first leases, the chain's largest single position.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925079463/tm2523651d3_ex99-1.htm"
+    },
+    {
+      "date": "2025-08-14",
+      "category": "order-win",
+      "headline": "TeraWulf signs two 10-year leases with Fluidstack USA I Inc. for 'more than 200 MW of critical IT load' at Lake Mariner, New York (about USD 3.7 billion, USD 8.7 billion with extensions); Google backstops USD 1.8 billion and receives warrants for about 41 million shares (about 8%)",
+      "read": "The transaction that created the model: a thinly capitalised tenant, a hyperscaler's credit, and a landlord paid in rent and a Google shareholder.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925078084/tm2523008d2_ex99-1.htm"
+    },
+    {
+      "date": "2025-04-01",
+      "category": "financial",
+      "headline": "Macquarie GPU financing 'to supply GPUs to premier AI research labs across Europe' — 'secured by the GPUs themselves', for an Icelandic renewables-powered site; amount not stated",
+      "read": "The last European-era financing before the US pivot; the asset-backed structure the US leases abandoned.",
+      "source": "https://fluidstack.io/blog/fluidstack-and-macquarie-announce-gpu-financing-deal-to-power-ai-labs-across-europe"
+    },
+    {
+      "date": "2025-03-25",
+      "category": "capacity",
+      "headline": "Exascale H200 clusters in Iceland and Europe with Borealis Data Center, Dell (PowerEdge XE9680) and NVIDIA (Quantum-2 InfiniBand) on hydro and geothermal power; Poolside quoted as customer",
+      "read": "The company's last first-party hardware disclosure — the only GPU model it has named since.",
+      "source": "https://fluidstack.io/blog/fluidstack-to-deploy-energy-efficient-exascale-gpu-clusters-in-europe-in-collaboration-with-nvidia-borealis-data-center-and-dell-technologies"
+    },
+    {
+      "date": "2025-03-03",
+      "category": "customer",
+      "headline": "'Fluidstack Delivering Europe's Largest AI Supercomputer to Mistral AI in 2025' — more than 18,000 GPUs with Eclairion at Bruyères-le-Châtel, first tranche 'operational by Summer 2025'",
+      "read": "Cancelled in March 2026 per Bloomberg; the release no longer exists on the company's site.",
+      "source": "https://quantumzeitgeist.com/fluidstack-delivers-europes-largest-ai-supercomputer-to-mistral-ai-in-2025/"
+    },
+    {
+      "date": "2025-02-25",
+      "category": "leadership",
+      "headline": "Rob Perdue (ex-COO of The Trade Desk) joins as COO; Dan Carpenter (ex-AWS) VP Sales; Mike McDonald (built Crusoe's GPU cloud 'from $0 to >$100M ARR') VP Product; Katherine Ollerhead (ex-Canonical) General Counsel",
+      "read": "The 2025 executive layer; by 2026 the SEC Form D names Dennis Wallace as General Counsel and none of these four.",
+      "source": "https://fluidstack.io/blog/fluidstack-strengthens-leadership-team-with-key-executive-hires-to-drive-next-phase-of-growth"
+    },
+    {
+      "date": "2025-02-10",
+      "category": "partnership",
+      "headline": "Memorandum with the French government at the AI Action Summit: 'up to 1 gigawatt (GW) of dedicated AI compute power', 'predominantly nuclear energy', a '€10 billion' first phase, 'close to 500,000 next-generation AI chips', live 2026 and 'beyond 1 GW by 2028' (Bosquel, Somme)",
+      "read": "The announcement that made Fluidstack a name; abandoned thirteen months later.",
+      "source": "https://aithority.com/machine-learning/fluidstack-to-build-1gw-ai-supercomputer-in-france/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "anthropic",
+      "type": "customer",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "USD 50 billion programme; ~1.4 GW critical IT across five leased campuses",
+      "via": "custom-built data centres, Texas and New York and beyond",
+      "note": "Anthropic named Fluidstack on 12 November 2025 as the builder of a USD 50 billion programme of custom data centres in Texas and New York; Hut 8's December 2025 partnership release names Anthropic as the end user of the Fluidstack-operated River Bend clusters.",
+      "context": "Anthropic's release: 'building data centers with Fluidstack in Texas and New York, with more sites to come', chosen 'for its ability to move with exceptional agility, enabling rapid delivery of gigawatts of power'; Fluidstack's Gary Wu: 'Fluidstack was built for this moment.' The sites are not named by either party. Hut 8's release of 17 December 2025 is the one landlord document that closes the loop: 'at least 245 megawatts and up to 2,295 MW of AI data center infrastructure for Anthropic, leveraging clusters operated by Fluidstack', with Anthropic's Head of Compute James Bradbury quoted.\n\nTeraWulf and Cipher describe the end user only as 'a global hyperscale AI platform developing frontier-scale foundation models'. In July 2026 Anthropic signed its 401 MW Hawesville, Kentucky lease with TeraWulf directly — Fluidstack is not a party — and in August 2026 it contracted with Nscale, Lambda and Riot as well; Fluidstack is one channel among several.",
+      "source": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure"
+    },
+    {
+      "slug": "google",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-08",
+      "scale": "> USD 6 billion of lease backstops and guarantees; warrants ~14% of TeraWulf and ~5.4% of Cipher",
+      "via": "recognition agreements with the landlords",
+      "note": "Google backstops Fluidstack's lease obligations at every US campus — USD 3.2 billion at Lake Mariner, USD 1.3 billion at Abernathy, USD 1.73 billion at Barber Lake, the full 15-year River Bend base term, and the New Lebanon master lease — and holds penny warrants in TeraWulf and Cipher in return.",
+      "context": "The mechanics are in the landlords' 8-Ks: Google LLC signs a recognition agreement per building; on 'a payment default under a Fluidstack Lease, or if Fluidstack becomes subject to an insolvency event' Google may pay the termination fee or 'pay all rent currently due under the Fluidstack Lease and assume the Fluidstack Lease as the tenant'. The backstop becomes effective at lease commencement — TeraWulf's Q2 2026 release records USD 600 million of it switching on when CB-3 was delivered. Cipher carries a USD 544.5 million asset for 'the value of Google agreeing to make the lease payments from Fluidstack'.\n\nGoogle has never published a page naming Fluidstack; Fluidstack's one joint release calls it 'a leading global hyperscale partner'. The Wall Street Journal reported (February 2026) that Google was exploring a USD 100 million equity investment in Fluidstack tied to TPU distribution, and the TPUs Anthropic runs at Fluidstack sites are, per press accounts of the Broadcom–Apollo–Blackstone vehicle, Google-built chips leased to Anthropic.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925078084/tm2523008d2_ex99-1.htm"
+    },
+    {
+      "slug": "terawulf",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-08",
+      "scale": "378 MW at Lake Mariner (~USD 6.7 billion); 168 MW Abernathy JV (~USD 9.5 billion), now Fluidstack-controlled",
+      "via": "CB-3, CB-4, CB-5 leases; Abernathy joint venture",
+      "note": "TeraWulf is Fluidstack's largest landlord: three 10-year leases for 378 MW of critical IT at Lake Mariner, New York, and the Abernathy, Texas joint venture whose 50.1% TeraWulf sold to a Fluidstack-led group in July 2026 for about USD 530 million.",
+      "context": "August 2025: two leases for 'more than 200 MW' (about USD 3.7 billion) then CB-5 (160 MW), USD 6.7 billion contracted, all with Google backstops and warrants. October 2025: the 168 MW Abernathy JV with a 25-year, USD 9.5 billion hosting commitment and USD 1.3 billion of Google support; December 2025: USD 1.3 billion of 7.25% JV notes. TeraWulf's FY2025 10-K says the Google credit support 'was a key factor in enabling efficient financing and phased development'.\n\nJuly 2026 changed the relationship twice: TeraWulf exited Abernathy to Fluidstack at 'a premium to invested capital' and signed Anthropic directly for 401 MW at Hawesville, Kentucky. CB-3 was energized in July 2026 (102 MW revenue-generating), CB-4 is in commissioning for 2H 2026 delivery and CB-5 is targeted for early 2027; two leases were amended from 162 MW to 168 MW.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm"
+    },
+    {
+      "slug": "entergy",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2025-12",
+      "scale": "330 MW of utility capacity for 245 MW critical IT at River Bend",
+      "via": "Entergy Louisiana",
+      "note": "Entergy Louisiana will provide 330 MW of utility capacity to Hut 8's River Bend campus, where Fluidstack is the tenant 'with financial backing from Google'; Hut 8 pays for the generators and substation.",
+      "context": "Entergy's 17 December 2025 release: 'Entergy Louisiana will provide 330 MW of utility capacity to support 245 MW of critical IT load' for tenant 'Fluidstack ... with financial backing from Google', with about 1,000 peak construction workers and at least 75 direct jobs; the campus is scalable to 1,000 MW. WAFB reported that Hut 8 agreed to pay for the generators and substation 'with no additional power generation required from ratepayers'. No Louisiana Public Service Commission docket naming Fluidstack was found.",
+      "source": "https://www.entergy.com/news/hut-8-selects-entergy-southeast-louisiana-for-10-billion-artificial-intelligence-data-center"
+    },
+    {
+      "slug": "aep",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2026",
+      "scale": "Wythe County VA large-load applicant (MW unknown); AEP-PSO power at Okmulgee OK; AEP Texas serves Barber Lake",
+      "via": "Appalachian Power; Public Service Company of Oklahoma",
+      "note": "Fluidstack appears on Appalachian Power's large-load pipeline as 'Fluidstack (formerly Solis Arx) — Unknown MW — Wythe — In progress', names AEP-PSO as the power provider for its Okmulgee, Oklahoma campus, and its Barber Lake lease sits in AEP Texas territory.",
+      "context": "Cardinal News (31 July 2026) reported Appalachian Power's list of 36 potential large-load customers representing about 25,000 MW, including 'another Wythe County data center that initially was announced by a company called Solis Arx but which has since been acquired by New York City-based Fluidstack'. The county's page records Fluidstack's 9 June 2026 presentation on the Solis Arx acquisition. Fluidstack's Okmulgee project site names AEP-PSO as power provider and says the company pays for all energy infrastructure. No AEP-authored page names Fluidstack.",
+      "source": "https://cardinalnews.org/2026/07/31/appalachian-power-anticipates-explosive-growth-in-large-customers-primarily-data-centers/"
+    },
+    {
+      "slug": "nvidia",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-03",
+      "scale": "HGX H200 clusters (Iceland); NVIDIA DGX Cloud Lepton contributor",
+      "via": "HGX H200, Quantum-2 InfiniBand; DGX Cloud Lepton marketplace",
+      "note": "Fluidstack deployed NVIDIA HGX H200 clusters with Quantum-2 InfiniBand in Iceland (March 2025) and is listed by NVIDIA among the providers contributing Blackwell and other GPUs to the DGX Cloud Lepton marketplace (June 2025).",
+      "context": "The Iceland release describes 'Exascale clusters across Iceland and Europe' on Dell PowerEdge XE9680 with NVIDIA HGX H200 and Quantum-2 InfiniBand. NVIDIA's DGX Cloud Lepton release (11 June 2025) states that 'Mistral AI, Nebius, Nscale, Firebird, Fluidstack, Hydra Host, Scaleway and Together AI are now contributing NVIDIA Blackwell and other NVIDIA architecture GPUs to the marketplace'. At the US Anthropic sites the accelerators are Google TPUs per press accounts of the chip-leasing vehicle, so NVIDIA's share of Fluidstack's 2026 fleet is not disclosed.",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem"
+    },
+    {
+      "slug": "nscale",
+      "type": "competitor",
+      "status": "active",
+      "since": "2025-06",
+      "scale": "",
+      "via": "DGX Cloud Lepton co-contributors; both Anthropic compute suppliers (2026)",
+      "note": "Nscale and Fluidstack are listed together by NVIDIA as DGX Cloud Lepton contributors and are both Anthropic capacity suppliers in 2026 — Nscale through the reported USD 45 billion Monarch contract, Fluidstack through the USD 50 billion programme.",
+      "context": "Both companies pivoted from GPU-cloud marketplaces to building gigawatt campuses for anchor tenants within a year of each other, and both are European-origin companies now building mostly in the United States. Nscale owns its sites (Glomfjord, Narvik, Monarch) and finances GPUs on its own balance sheet with investment-grade-rated term loans; Fluidstack leases its sites and leans on Google's credit. Nscale took the European sovereign position Fluidstack vacated when it withdrew from France in March 2026.",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem"
+    },
+    {
+      "slug": "nebius",
+      "type": "competitor",
+      "status": "active",
+      "since": "2025-06",
+      "scale": "",
+      "via": "DGX Cloud Lepton co-contributors",
+      "note": "Nebius and Fluidstack are named together by NVIDIA as DGX Cloud Lepton capacity contributors; both hold SemiAnalysis ClusterMAX Gold tier.",
+      "context": "NVIDIA's June 2025 Lepton release lists both as contributors of Blackwell and other GPUs to its marketplace. SemiAnalysis's ClusterMAX 2.0 (November 2025) placed Nebius, Crusoe and Fluidstack at Gold with CoreWeave alone at Platinum. Nebius builds and owns its own data centres and finances GPUs with convertible notes; Fluidstack is a tenant behind Google's credit.",
+      "source": "https://www.clustermax.ai/cloudreview/fluidstack"
+    },
+    {
+      "slug": "iren",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026-07",
+      "scale": "part of USD 2.8 billion of new IREN cloud contracts (individual value undisclosed)",
+      "via": "IREN AI Cloud",
+      "note": "IREN named Fluidstack among the customers of USD 2.8 billion of new multi-year cloud contracts announced on 20 July 2026 — Fluidstack as a buyer of GPU capacity from another neocloud.",
+      "context": "IREN's release lists Perplexity, Figure AI, Together AI, Fluidstack, Fireworks, Fal, Hume and one unnamed customer behind USD 2.8 billion of multi-year contracts and a year-end 2026 ARR target above USD 4 billion. Read with the Boost Run contract (December 2025), it shows Fluidstack sourcing capacity from other providers while its own leased halls are still under construction. The individual Fluidstack contract value is not disclosed.",
+      "source": "https://iren.gcs-web.com/news-releases/news-release-details/iren-signs-28bn-new-customer-contracts-leading-ai-developers"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Louisiana Act 730 (2024) data-centre sales-and-use tax rebate; Quality Jobs program",
+      "status": "in-effect",
+      "effectiveDate": "2025-12",
+      "exposure": "Louisiana Economic Development's 17 December 2025 release for Hut 8's River Bend campus, where Fluidstack is tenant, lists a 'sales and use tax rebate on qualifying data center equipment purchases/leases (Act 730, 2024)' and the Quality Jobs program, on 'up to $10 billion investment in Phase I'. Entergy Louisiana supplies 330 MW of utility capacity; WAFB reported Hut 8 pays for the generators and substation. No LPSC docket names Fluidstack.",
+      "mitigation": "",
+      "source": "https://www.opportunitylouisiana.gov/news/hut-8-selects-southeast-louisiana-as-site-of-10-billion-artificial-intelligence-data-center"
+    },
+    {
+      "regime": "Oklahoma SB 259 (data-centre water use) and the Data Center Consumer Ratepayer Protection Act of 2026",
+      "status": "in-effect",
+      "effectiveDate": "2026",
+      "exposure": "Fluidstack's Okmulgee project site states the campus is designed to comply with 'Oklahoma's SB 259 (water use) and the Oklahoma Data Center Consumer Ratepayer Protection Act of 2026', names AEP-PSO as power provider and says 'Fluidstack is paying for all of the energy and energy infrastructure'; no property-tax incentives are sought.",
+      "mitigation": "Closed-loop cooling; self-funded energy infrastructure; a USD 7 million education commitment (company project site).",
+      "source": "https://www.okmulgeefluidstack.io/"
+    },
+    {
+      "regime": "New York State power allocation and local land use (NYPA/NYSEG allocation; Town of Somerset approvals)",
+      "status": "in-effect",
+      "effectiveDate": "2025-10",
+      "exposure": "The Lake Mariner campus 'has 750 MW of power capacity allocated from NYSEG and the New York Power Authority, with 90% of it coming from hydropower' (Niagara Gazette); the Somerset town and planning boards approved the PUD amendment, site plan, SEQR and special-use permit for the Fluidstack expansion in October 2025. No NYPA, NYSERDA or PSC document naming Fluidstack was found.",
+      "mitigation": "",
+      "source": "https://finance.yahoo.com/news/lake-mariner-campus-adding-more-111600474.html"
+    },
+    {
+      "regime": "Virginia — Appalachian Power large-load tariff and rate case (SCC docket 146851)",
+      "status": "proposed",
+      "effectiveDate": "2026",
+      "exposure": "Appalachian Power told Cardinal News it has 36 potential large-load customers representing about 25,000 MW against a recent peak near 7,200 MW, listing 'Fluidstack (formerly Solis Arx)' in Wythe County with unknown MW; the utility's pending rate case and large-load terms will govern the campus's minimum-demand and credit-support obligations.",
+      "mitigation": "",
+      "source": "https://cardinalnews.org/2026/07/31/appalachian-power-anticipates-explosive-growth-in-large-customers-primarily-data-centers/"
+    },
+    {
+      "regime": "France — sovereign AI compute programme (AI Action Summit memorandum, February 2025)",
+      "status": "expired",
+      "effectiveDate": "2026-03",
+      "exposure": "The memorandum with the French government for 'up to 1 gigawatt' of nuclear-powered compute and a €10 billion first phase at Bosquel was abandoned in March 2026 (Bloomberg; confirmed by the economy ministry per L'Usine Nouvelle); the Somme intercommunality and RTE launched a new call for investors. Fluidstack has made no first-party statement on the withdrawal.",
+      "mitigation": "",
+      "source": "https://www.lagazettefrance.fr/article/somme-le-megaprojet-de-supercalculateur-de-fluidstack-a-l-arret"
+    },
+    {
+      "regime": "US export controls (AI Diffusion Rule and successors)",
+      "status": "in-effect",
+      "effectiveDate": "2025-01",
+      "exposure": "Collection gap: no export-control action, licence or first-party statement naming Fluidstack was found. The exposure is indirect — the company's remaining European holding entities (Iceland, Norway, Finland, France) and any non-US deployment of controlled accelerators fall under the rule's tiering, which BIS announced it would rescind in May 2025 but which a May 2026 GAO opinion held remains legally in effect.",
+      "mitigation": "",
+      "source": "https://www.onelexpartners.com/news-and-insights/us-export-controls-and-ai-a-practitioners-guide"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Gary Wu (Peixian Wu)",
+      "title": "Co-Founder and Chief Executive Officer",
+      "background": [
+        "Co-founded Fluidstack at Oxford in 2017; director of Fluidstack Ltd since incorporation (Companies House; 'Peixian Wu')",
+        "Signed the January 2026 SEC Form D as Chief Executive Officer",
+        "Quoted in the Anthropic, Hut 8, HQ-relocation and TeraWulf project-financing releases",
+        "Background not stated by the company; press: economics at Oxford"
+      ]
+    },
+    {
+      "name": "César Maklary",
+      "title": "Co-Founder and President",
+      "background": [
+        "Co-founder; director of Fluidstack Ltd since June 2022 (Companies House; French national, resident Luxembourg)",
+        "Signed the February 2025 memorandum with the French government at the AI Action Summit",
+        "Quoted in the TeraWulf, Cipher, Macquarie, Borealis and ClusterMAX releases",
+        "Press: MEng aeronautical engineering, Imperial College London; former Formula 1 aerodynamicist — not stated by the company"
+      ]
+    },
+    {
+      "name": "Jamie Cox (James Edward Cox)",
+      "title": "Co-Founder; Executive Officer and Director",
+      "background": [
+        "Co-founder (press); listed as an executive officer on the January 2026 SEC Form D",
+        "Director of Fluidstack Ltd October 2017–April 2021 and again from 10 January 2026 (Companies House)",
+        "Title not stated by the company"
+      ]
+    },
+    {
+      "name": "Dennis Wallace",
+      "title": "General Counsel",
+      "background": [
+        "Signed the May and June 2026 SEC Form D filings as General Counsel",
+        "Listed as an executive officer on the January 2026 Form D"
+      ]
+    },
+    {
+      "name": "Rob Perdue",
+      "title": "Chief Operating Officer (announced February 2025)",
+      "background": [
+        "Joined February 2025 per the company's leadership release; based in New York City",
+        "Former COO of The Trade Desk (NASDAQ: TTD), which he scaled 'from $1M to $700M revenue' and whose 2016 IPO he co-led (company release)",
+        "Not among the executive officers listed on the 2026 SEC Form D — current status unconfirmed"
+      ]
+    },
+    {
+      "name": "Stephane Fisch",
+      "title": "Director",
+      "background": [
+        "Director of Fluidstack Ltd since November 2023 (Companies House; French national, resident United States)",
+        "Listed as a director on the January 2026 SEC Form D"
+      ]
+    },
+    {
+      "name": "Dan Carpenter",
+      "title": "Vice President of Sales (announced February 2025)",
+      "background": [
+        "Leads global go-to-market per the February 2025 release",
+        "'Over a decade leading global enterprise sales at AWS and Omniva' (company release)"
+      ]
+    },
+    {
+      "name": "Mike McDonald",
+      "title": "Vice President of Product (announced February 2025)",
+      "background": [
+        "Google, Microsoft and Crusoe; 'built Crusoe's GPU cloud, scaling from $0 to >$100M ARR' (company release)",
+        "Designed GitHub Copilot and Google Cloud Run (company release)"
+      ]
+    },
+    {
+      "name": "James Dugan; Malachi Price; Jason Kichen",
+      "title": "Executive officers (titles not disclosed)",
+      "background": [
+        "Named as executive officers on the January 2026 SEC Form D",
+        "No first-party biography; the 2026 site has no leadership page"
+      ]
+    },
+    {
+      "name": "Kate Franko",
+      "title": "Public affairs representative",
+      "background": [
+        "Quoted in Indiana and Oklahoma local press on the Sullivan County and Okmulgee campuses (2026)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (no statements published)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Fluidstack has never published revenue. Aggregator estimates (Sacra 'USD 180M ARR' December 2024; a 'USD 66.2M 2024 revenue' snippet) are not used."
+          },
+          {
+            "name": "Filed accounts",
+            "actual": "Companies House: accounts made up to 31 December 2024 filed; next due 30 September 2026",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Turnover and headcount in the filed accounts were not extracted — collection gap"
+          }
+        ],
+        "commentary": "The last full year of the European GPU-cloud business: H100/H200 clusters for Mistral, Poolside, Black Forest Labs and Character.AI in third-party colocation."
+      },
+      {
+        "period": "FY2025 (no statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No revenue, ARR or backlog figure exists on first-party channels or in any named-outlet report"
+          },
+          {
+            "name": "Contracted critical IT load under lease (tenant of record)",
+            "actual": "About 1,428 MW across five campuses: Lake Mariner 378 MW + Abernathy 168 MW + Barber Lake 207 MW + River Bend 245 MW + New Lebanon 430 MW (landlords' filings; New Lebanon priced April 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Researcher's sum of landlord-stated figures; the company publishes no total",
+            "kpi": "mw-contracted",
+            "qty": 1428
+          },
+          {
+            "name": "Base-term rent commitments behind those leases",
+            "actual": "About USD 27 billion: Lake Mariner ~USD 6.7B (10 years) + Abernathy ~USD 9.5B (25 years) + Barber Lake ~USD 3.8B (10 years) + River Bend USD 7.0B (15 years), before New Lebanon (value undisclosed; USD 5.7B of notes)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "All Google-backstopped; none guaranteed by Fluidstack's parent per the filings read"
+          },
+          {
+            "name": "Equity raised",
+            "actual": "USD 450 million sold by 23 January 2026 in a USD 750 million Form D offering (first sale 10 January 2026) — the round later announced as an USD 830 million Series A at USD 7.5 billion",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Press dated the round to December 2025 (TechCrunch citing Bloomberg); the Form D dates the first sale to 10 January 2026"
+          },
+          {
+            "name": "Debt",
+            "actual": "Macquarie senior facility secured on GPUs (April 2025; amount not stated; press: up to USD 10 billion of capacity); USD 1.3 billion of 7.25% notes at the Abernathy JV (49.9% Fluidstack, December 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Project-level debt sits in landlord or JV vehicles, not at Fluidstack Ltd — Companies House shows no registered charges against the parent"
+          }
+        ],
+        "commentary": "The pivot year: five US leases signed between August and December, the Anthropic programme announced in November, the headquarters moved to New York in December. No consensus or guidance exists for a private company; `expected` is left empty."
+      },
+      {
+        "period": "2026 year to date (September)",
+        "periodType": "other",
+        "periodEnd": "2026-09-04",
+        "metrics": [
+          {
+            "name": "Series A",
+            "actual": "'$830M Series A at a $7.5B valuation in January, led by Situational Awareness' (company blog, 20 July 2026); Form D/A of 12 May 2026: USD 842,478,689 sold to 30 investors",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company-stated; the only round Fluidstack has announced"
+          },
+          {
+            "name": "Follow-on round",
+            "actual": "Form D of 30 June 2026: USD 1.5 billion offering, USD 729,999,546 sold to seven investors from 15 June; Crunchbase News (4 September 2026): USD 1.5 billion led by Jane Street at an USD 18 billion valuation, total funding 'just over $2.6 billion'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Press report of the closed amount and valuation; not announced by the company"
+          },
+          {
+            "name": "Abernathy buy-out",
+            "actual": "About USD 530 million payable to TeraWulf in three instalments (USD 250M within 14 days; USD 150M by 31 December 2026; ~USD 130M by 30 April 2027) for the 50.1% interest, by an investor group led by Fluidstack",
+            "expected": "",
+            "verdict": "inline",
+            "result": "TeraWulf 8-K, 6 July 2026; the split between Fluidstack and its co-investors is not disclosed"
+          },
+          {
+            "name": "Revenue run-rate",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The first rent-bearing capacity (102 MW at Lake Mariner) was energized in July 2026, so 2026 revenue is largely a second-half event"
+          }
+        ],
+        "commentary": "Capital-raising is visible only through SEC Form D filings and press; the company's own disclosure is a single blog post. Contracted-but-undelivered capacity dwarfs equity: about USD 2.6 billion of total funding against roughly USD 27 billion of base-term rent, which is why every lease carries Google's credit rather than Fluidstack's."
+      }
+    ],
+    "commentary": "Fluidstack publishes no financial statements. Everything quantitative above is either a landlord's SEC filing, a Fluidstack Form D, or a named-outlet report; aggregator revenue estimates are excluded. The one figure that matters to counterparties — what the company itself guarantees — is, on the filings read, nothing: the landlords' credit is Google's, and the Abernathy bondholders' completion guarantee is capped at USD 100 million from the JV partners."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Fluidstack's product is credit substitution plus speed, not compute. Basis: every US lease is signed by a bankruptcy-remote Fluidstack subsidiary and every one carries a Google recognition agreement under which Google may 'assume the Fluidstack Lease as the tenant'; TeraWulf's 10-K calls that support 'a key factor in enabling efficient financing'; Cipher books it as a USD 544.5 million asset; the company's own 2026 site sells 'gigawatts of compute in 6 months'. About USD 27 billion of base-term rent stands on roughly USD 2.6 billion of equity.",
+    "2. **(High confidence)** We assess that the tenant-of-record position is replaceable by its own customer, and that July 2026 showed it. Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale, Lambda, Riot and Hut 8's Beacon Point. Fluidstack's answer — buying the Abernathy campus and developing Okmulgee, Sullivan County and Wythe County in its own name — is a move from tenant to owner-developer that its balance sheet has not yet been shown to carry.",
+    "3. **(Moderate confidence)** We assess that construction-period risk, not tenant credit, is where this chain can break. Basis: the backstop 'becomes effective as of the commencement date' (TeraWulf 10-Q), so bondholders at Flash Compute and Meridian Arc carry the build with only a capped USD 100 million completion guarantee; Quinn Emanuel notes that a delay beyond 180 days lets Fluidstack terminate 'and Google's backstop obligation would never trigger'. The schedule has already moved: CB-5 from '2H 2026' to 'early 2027', Abernathy from '2H 2026' to 'Q4 2026'. Barber Lake is reported on schedule.",
+    "4. **(Moderate confidence)** We assess that Google's position — guarantor of the leases, warrant-holder in two landlords, reported prospective shareholder in the tenant and, through the Broadcom–Apollo–Blackstone vehicle, the designer of the chips leased to the end user — makes the Fluidstack chain a Google TPU distribution channel to Anthropic as much as a neocloud. Basis: the landlords' 8-Ks, the WSJ-reported USD 100 million equity talks tied to Ironwood distribution, and press descriptions of the chip vehicle; Google has published nothing naming Fluidstack, so the mechanism is inferred from counterparties' filings.",
+    "5. **(Moderate confidence)** We assess that the European withdrawal was a choice of counterparty quality over sovereignty. Basis: the French memorandum was a non-binding MoU with no anchor tenant; the US leases have a AA+ guarantor and a single frontier lab behind them; Bloomberg's account and the HQ move to New York point the same way. The reputational cost is real — the Somme authorities had to re-tender — and it is the reason a European government would now look to Nscale rather than Fluidstack.",
+    "6. **(Low confidence)** We assess that Fluidstack is commercially dependent on Anthropic to a degree neither company discloses. Basis: the 2026 home page names Anthropic, NVIDIA and Meta; Jane Street is the only other named tenant (Okmulgee, first phase September 2027); trade press maps all five leased campuses to the Anthropic programme. The company's 2025 customer list (Mistral, Poolside, Black Forest Labs, Character.AI) belongs to the European business it wound down. Concentration is inferred, not stated.",
+    "Collection gaps: Fluidstack has never published revenue, backlog, headcount or a lease; the 2025 GPU-cloud site (pricing, GPU catalogue, solutions pages) has been removed and the Atlas documentation host was unreachable; fluidstack.io carries no leadership page and no headshots; Google has never named Fluidstack; the Broadcom chip-vehicle release and several Bloomberg, DCD and Forbes pages were unreachable and are cited from reprints or search summaries; Fluidstack Ltd's filed FY2024 accounts were not read; the France withdrawal has no first-party statement.",
+    "INDICATORS TO WATCH — *Q4 2026 — Abernathy delivery:* on-time energisation would confirm Judgment 3's risk is being managed; a slip past 180 days would test the termination right and the bondholders. *2H 2026 — CB-4 rent commencement at Lake Mariner and the September 2026 Barber Lake start:* each switches on a tranche of Google's backstop. *By 30 September 2026 — Fluidstack Ltd's FY2025 accounts at Companies House:* the first audited turnover for the pivot year. *2026–2027 — a company announcement of the Jane Street round or of any Google equity:* would confirm or refute Judgment 4. *Q2 2027 — River Bend financial close and first hall:* the JPM/Goldman 85% loan-to-cost facility is still 'expected'. *Any new Anthropic lease signed without Fluidstack:* each one weakens Judgment 2's counter-move."
+  ],
+  "sources": [
+    {
+      "label": "Crunchbase News — week's biggest rounds: Fluidstack USD 1.5B led by Jane Street at USD 18B",
+      "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-crusoe-fluidstack-multibillion-dollar-ai-infrastructure/",
+      "date": "2026-09-04"
+    },
+    {
+      "label": "Forbes — Fluidstack hit an $18 billion valuation helping build Google and Anthropic's data centers (headline; page unreachable)",
+      "url": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
+      "date": "2026-09-03"
+    },
+    {
+      "label": "measuredai — Anthropic's 15+ GW data-center build: Fluidstack sites, first TPU capacity live at Lake Mariner",
+      "url": "https://measuredai.substack.com/p/anthropic-data-centers",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Destiny Tech100 424B3 — $15M into Fluidstack Series B via Magnitude FSTK LLC; 'rather than owning infrastructure outright'",
+      "url": "https://www.sec.gov/Archives/edgar/data/1843974/000157587226000624/dxyx104_424b3.htm",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Fundrise Innovation Fund NPORT-P — Fluidstack Ltd exposure",
+      "url": "https://www.sec.gov/Archives/edgar/data/1867090/000186709026000109/04400.htm",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Simply Wall St narrative — TeraWulf: Google backstop and Fluidstack reliance heighten operational risk",
+      "url": "https://simplywall.st/community/narratives/us/software/nasdaq-wulf/terawulf/8ga6lqam-google-backstop-and-fluidstack-reliance-will-heighten-operational-risk",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "WTHI — Fluidstack hosts open house for Sullivan County data-center campus",
+      "url": "https://www.wthitv.com/2026/08/06/fluidstack-hosts-open-house-sullivan-county-data-center-campus/",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "TeraWulf — Q2 2026 results (8-K Ex. 99.1): CB-3 delivered, $600M Google support effective, Abernathy sale",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000162/a_wulfearningsreleaseq22026.htm",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "TeraWulf — 10-Q Q2 2026: Fluidstack HPC lease amendments, Google Recognition Agreements, Abernathy Note 11",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "TeraWulf — Q2 2026 results release (GlobeNewswire)",
+      "url": "https://www.globenewswire.com/news-release/2026/08/05/3339168/0/en/terawulf-reports-second-quarter-2026-results.html",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Cipher Digital — 10-Q Q2 2026: Barber Lake for Fluidstack USA II Inc., $544.5M Google-backstop asset",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000041/cifr-20260630.htm",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "Okmulgee, OK — city data-centre documentation page",
+      "url": "https://www.okmulgeeonline.com/300/Data-Center-Related-Documentation-and-Pr",
+      "date": "2026-08"
+    },
+    {
+      "label": "Cardinal News — Appalachian Power anticipates explosive large-load growth; Fluidstack (formerly Solis Arx) in Wythe",
+      "url": "https://cardinalnews.org/2026/07/31/appalachian-power-anticipates-explosive-growth-in-large-customers-primarily-data-centers/",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "measuredai — Neoclouds, AI's middle layer: Fluidstack 'the pure tenant-operator'",
+      "url": "https://measuredai.substack.com/p/neoclouds-ai-middle-layer",
+      "date": "2026-07-28"
+    },
+    {
+      "label": "SiliconANGLE — Fluidstack raises $830M at $7.5B valuation",
+      "url": "https://siliconangle.com/2026/07/21/ai-data-center-builder-fluidstack-raises-830m-7-5b-valuation/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "Fluidstack blog — 'Fluidstack raised $830M Series A'",
+      "url": "https://fluidstack.io/blog/series-a-announcement",
+      "date": "2026-07-20"
+    },
+    {
+      "label": "IREN — $2.8B of new customer contracts with leading AI developers (Fluidstack named)",
+      "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-signs-28bn-new-customer-contracts-leading-ai-developers",
+      "date": "2026-07-20"
+    },
+    {
+      "label": "Data Center Frontier — TeraWulf's $19B Anthropic lease puts its brownfield AI strategy to the test",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/55389531/terawulfs-19b-anthropic-lease-puts-its-brownfield-ai-strategy-to-the-test",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "TeraWulf — Anthropic lease at Justified Data Campus and sale of majority interest in Abernathy JV to Fluidstack (release)",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "TeraWulf — 8-K body: Membership Interest Purchase Agreement with Fluidstack CS I Inc., ~$530M in three instalments",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_8k.htm",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "TeraWulf — 8-K Ex. 99.1: Anthropic lease + Abernathy sale release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465926080583/tm2619468d1_ex99-1.htm",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "Hoodline — Hawesville KY Anthropic $19B lease; Fluidstack not involved",
+      "url": "https://hoodline.com/2026/07/rural-kentucky-river-town-snags-anthropic-s-19-billion-data-center-deal/",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "Fluidstack Ltd — SEC Form D: $1.5B offering, $730M sold (General Counsel Dennis Wallace)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2104151/000090679126000132/primary_doc.xml",
+      "date": "2026-06-30"
+    },
+    {
+      "label": "rfp.wiki — Fluidstack risk notes",
+      "url": "https://www.rfp.wiki/artificial-intelligence/ai-infrastructure-platforms/fluidstack",
+      "date": "2026-06-15"
+    },
+    {
+      "label": "AI News — new data-centre projects mark Anthropic's biggest US expansion (Broadcom–Apollo–Blackstone vehicle at Fluidstack sites)",
+      "url": "https://www.artificialintelligence-news.com/news/new-data-centre-projects-mark-anthropic-biggest-us-expansion/",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "Wythe County, VA — Solis Arx / Fluidstack project page",
+      "url": "https://www.wytheco.org/418/Solis-ArxFluidstack",
+      "date": "2026-06-09"
+    },
+    {
+      "label": "Cipher Digital — 8-K investor presentation: Barber Lake on schedule for September 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm",
+      "date": "2026-06-08"
+    },
+    {
+      "label": "Cardinal News — gigawatt data-center project planned for Wythe County (TAC; separate from Fluidstack)",
+      "url": "https://cardinalnews.org/2026/06/04/gigawatt-data-center-project-planned-for-wythe-county/",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "Data Center Richness (Rich Miller) — inside an accelerated AI data-center project (Lake Mariner CB-4)",
+      "url": "https://datacenterrichness.substack.com/p/inside-an-accelerated-ai-data-center",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Dell — Dell Technologies World 2026 blog naming Fluidstack among storage customers",
+      "url": "https://www.dell.com/en-us/blog/dell-technologies-world-a-bright-and-beautiful-road-ahead/",
+      "date": "2026-05-18"
+    },
+    {
+      "label": "Fluidstack Ltd — SEC Form D/A: $850M offering, $842M sold to 30 investors",
+      "url": "https://www.sec.gov/Archives/edgar/data/2104151/000090679126000077/primary_doc.xml",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "Hut 8 — 8-K Ex. 99.1: River Bend April 2026 investor presentation",
+      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926049090/tm2612485d1_ex99-1.htm",
+      "date": "2026-05"
+    },
+    {
+      "label": "Latham & Watkins — advises on Meridian Arc HoldCo senior secured notes (Next Frontier / Fluidstack)",
+      "url": "https://www.lw.com/en/news/latham-advises-on-meridian-arc-holdco-senior-secured-notes-offering-to-finance-ai-data-center",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "PitchBook via Yahoo Finance — Meridian Arc inks $5.7B notes; 100% leased to Fluidstack, guaranteed by Google",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/meridian-arc-inks-5-7b-112514403.html",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "Cahill — initial-purchaser counsel, Meridian Arc HoldCo $5.7B high-yield offering",
+      "url": "https://www.cahill.com/news/firm-news/2026-04-17-cahill-represents-initial-purchaser-in-meridian-arc-holdco-57-billion-high-yield-bond-offering",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "Cooley — Fluidstack joint venture to issue $5.7B of senior secured notes",
+      "url": "https://www.cooley.com/news/coverage/2026/2026-04-16-fluidstack-joint-venture-to-issue-5-7-billion-in-senior-secured-notes",
+      "date": "2026-04-16"
+    },
+    {
+      "label": "TechCrunch — Fluidstack in talks for $1B round at $18B valuation months after $7.5B (Bloomberg)",
+      "url": "https://techcrunch.com/2026/04/14/ai-datacenter-startup-fluidstack-in-talks-for-1b-round-at-18b-valuation-months-after-hitting-7-5b-says-report/",
+      "date": "2026-04-14"
+    },
+    {
+      "label": "Caproasia — Fluidstack raised $750M at $7B valuation; founded 2017 by Wu, Maklary, Cox",
+      "url": "https://www.caproasia.com/2026/04/09/uk-data-centre-cloud-provider-fluidstack-raised-750-million-at-7-billion-valuation-founded-in-2017-by-gary-wu-cesar-maklary-jamie-cox/",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "New Project Media — Potentia's 2.1 GW Indiana project now backed by Fluidstack and Google",
+      "url": "https://newprojectmedia.com/financingorigination-data-center-start-up-potentia-behind-2-1-gw-indiana-project-now-backed-by-fluidstack-and-google/",
+      "date": "2026-04"
+    },
+    {
+      "label": "La Gazette France — Somme: Fluidstack's supercomputer megaproject halted; CC2SO and RTE re-tender",
+      "url": "https://www.lagazettefrance.fr/article/somme-le-megaprojet-de-supercalculateur-de-fluidstack-a-l-arret",
+      "date": "2026-03-25"
+    },
+    {
+      "label": "Julien Simon (airealist) — The King's New Datacenters",
+      "url": "https://www.airealist.ai/p/the-kings-new-datacenters",
+      "date": "2026-03-25"
+    },
+    {
+      "label": "Yahoo Finance (citing Bloomberg) — Fluidstack abandons $11.5B French project",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/fluidstack-abandons-11-5-billion-124930636.html",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "TheEnergyMag — Fluidstack drops AI data-centre projects in France",
+      "url": "https://theenergymag.com/news/2026-03-19/fluidstack-drop-ai-france",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "Bloomberg — Fluidstack drops out of marquee €10B AI project in France (headline; paywalled)",
+      "url": "https://www.bloomberg.com/news/articles/2026-03-18/fluidstack-drops-out-of-marquee-10-billion-ai-project-in-france",
+      "date": "2026-03-18"
+    },
+    {
+      "label": "Quinn Emanuel — client alert: emerging litigation risks in financing the AI data-center boom",
+      "url": "https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/",
+      "date": "2026-03-13"
+    },
+    {
+      "label": "TeraWulf — 10-K FY2025: Akela Fluidstack Leases (378 MW), Google credit support, Abernathy Fluidstack USA III lease",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm",
+      "date": "2026-02-27"
+    },
+    {
+      "label": "Hut 8 — 10-K FY2025: Anthropic/Fluidstack partnership, River Bend lease, Google backstop",
+      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019392/hut-20251231x10k.htm",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "Hut 8 — 8-K Ex. 99.1: Q4/FY2025 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019393/hut-20260225xex99d1.htm",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "Dave Friedman — Fluidstack and the GPU financing problem",
+      "url": "https://davefriedman.substack.com/p/fluidstack-and-the-gpu-financing",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "SiliconANGLE (citing WSJ) — Google reportedly to invest $100M in Fluidstack",
+      "url": "https://siliconangle.com/2026/02/20/google-reportedly-invest-100m-ai-cloud-operator-fluidstack/",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "Cipher Mining — 8-K investor presentation: Barber Lake ~$3.8B lease with Fluidstack/Google",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326001480/dp240991_ex9901.htm",
+      "date": "2026-02-03"
+    },
+    {
+      "label": "WVTF — data-center projects developing in Pulaski and Wythe counties",
+      "url": "https://www.wvtf.org/news/2026-02-03/data-center-projects-developing-in-pulaski-and-wythe-counties",
+      "date": "2026-02-03"
+    },
+    {
+      "label": "Fluidstack Ltd — SEC Form D: $750M offering, $450M sold; executive officers listed",
+      "url": "https://www.sec.gov/Archives/edgar/data/2104151/000090679126000010/primary_doc.xml",
+      "date": "2026-01-23"
+    },
+    {
+      "label": "The Daily Yonder — the data-center rush in Appalachia",
+      "url": "https://dailyyonder.com/the-data-center-rush-in-appalachia/2026/01/07/",
+      "date": "2026-01-07"
+    },
+    {
+      "label": "TeraWulf — 8-K: completion of Flash Compute $1.3B 7.250% notes; capped completion guarantee",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925124839/tm2534384d1_8k.htm",
+      "date": "2025-12-29"
+    },
+    {
+      "label": "TeraWulf — 8-K Ex. 4.1: Flash Compute LLC indenture",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925124839/tm2534384d1_ex4-1.htm",
+      "date": "2025-12-29"
+    },
+    {
+      "label": "10/12 Industry Report — Hut 8 lands a massive partnership for its West Feliciana data center",
+      "url": "https://www.1012industryreport.com/technology/ai/hut-8-lands-a-massive-partnership-for-its-west-feliciana-data-center/",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "TeraWulf and Fluidstack — joint release: pricing of project financing for 168 MW HPC joint venture",
+      "url": "https://www.globenewswire.com/news-release/2025/12/18/3208237/0/en/TeraWulf-and-Fluidstack-Announce-Successful-Pricing-of-Project-Financing-for-168-MW-HPC-Compute-Joint-Venture.html",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "TeraWulf — 8-K: Flash Compute LLC offering; JV ownership 50.1% / 49.9%",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925122293/tm2533501d1_8k.htm",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "TeraWulf — 8-K Ex. 99.1: Flash Compute investor presentation",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925122387/tm2533871d1_ex99-1.htm",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "WAFB — Hut 8 facility expected to generate $90M annually for local government",
+      "url": "https://www.wafb.com/2025/12/18/hut-8-facility-expected-generate-90-million-annually-local-government/",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "Hut 8 — 8-K Ex. 99.1: 15-year, 245 MW River Bend lease with Fluidstack, $7.0B, Google backstop",
+      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Hut 8 — 8-K Ex. 99.2: River Bend transaction presentation",
+      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d2.htm",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Hut 8 — announces AI infrastructure partnership with Anthropic and Fluidstack (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack-302644377.html",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Hut 8 — signs 15-year 245 MW River Bend lease, $7.0B (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/hut-8-signs-15-year-245-mw-ai-data-center-lease-at-river-bend-campus-with-total-contract-value-of-7-0-billion-302644600.html",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Entergy — Hut 8 selects Entergy Southeast Louisiana for $10B AI data center; Fluidstack tenant, Google backing",
+      "url": "https://www.entergy.com/news/hut-8-selects-entergy-southeast-louisiana-for-10-billion-artificial-intelligence-data-center",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Louisiana Economic Development — Hut 8 selects Southeast Louisiana; Act 730 rebate, Quality Jobs",
+      "url": "https://www.opportunitylouisiana.gov/news/hut-8-selects-southeast-louisiana-as-site-of-10-billion-artificial-intelligence-data-center",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Cooley — advised Fluidstack on $7B data-center lease with Hut 8",
+      "url": "https://www.cooley.com/news/coverage/2025/2025-12-17-fluidstack-announces-$7-billion-data-center-lease-with-hut-8",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Willow Lane Acquisition Corp / Boost Run — 8-K Ex. 99.1: two-year $127M Fluidstack contract",
+      "url": "https://www.sec.gov/Archives/edgar/data/2032379/000149315225027804/ex99-1.htm",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "Introl — Anthropic $50B data-center plan",
+      "url": "https://introl.com/blog/anthropic-50-billion-data-center-plan-december-2025",
+      "date": "2025-12-10"
+    },
+    {
+      "label": "Cardinal News — data-center campus announced for Wythe County (Solis Arx)",
+      "url": "https://cardinalnews.org/2025/12/05/data-center-campus-announced-for-wythe-county/",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "Fluidstack blog — relocating global headquarters to New York City",
+      "url": "https://fluidstack.io/blog/fluidstack-expands-u-s-investment-by-relocating-global-headquarters-to-new-york-city",
+      "date": "2025-12-04"
+    },
+    {
+      "label": "Fluidstack — HQ relocation release (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/fluidstack-expands-us-investment-by-relocating-global-headquarters-to-new-york-city-302633160.html",
+      "date": "2025-12-04"
+    },
+    {
+      "label": "Cipher Mining — 8-K Ex. 99.1: additional 39 MW critical IT at Barber Lake; Google +$333M",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "Cipher Mining — 8-K body: 39 MW expansion",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_8k.htm",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "Fluidstack blog — selected by Anthropic to deliver custom data centers in New York and Texas",
+      "url": "https://fluidstack.io/blog/fluidstack-selected-by-anthropic-to-deliver-custom-data-centers-in-the-us",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "Anthropic — invests $50 billion in American AI infrastructure with Fluidstack",
+      "url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "CNBC — Anthropic to spend $50B on US AI infrastructure with Fluidstack",
+      "url": "https://www.cnbc.com/2025/11/12/anthropic-ai-data-centers-texas-new-york.html",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "TechCrunch — Anthropic announces $50B data-center plan with Fluidstack",
+      "url": "https://www.techcrunch.com/2025/11/12/anthropic-announces-50-billion-data-center-plan/",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "Data Center Knowledge — Anthropic, Fluidstack to pour $50B into US data centers",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/anthropic-fluidstack-to-pour-50-billion-into-us-data-centers",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "Data Center Richness (Rich Miller) — massive expansions from Anthropic: the $50B programme mapped to TeraWulf sites",
+      "url": "https://datacenterrichness.substack.com/p/massive-expansions-from-anthropic",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "Fluidstack blog — awarded ClusterMAX Gold by SemiAnalysis",
+      "url": "https://fluidstack.io/blog/fluidstack-awarded-clustermax-gold-by-semianalysis",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "SemiAnalysis ClusterMAX 2.0 — Fluidstack cloud review (Gold)",
+      "url": "https://www.clustermax.ai/cloudreview/fluidstack",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "TeraWulf — 8-K Ex. 99.1: 168 MW Abernathy, Texas joint venture with Fluidstack; Google $1.3B",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925102858/tm2529509d1_ex99-1.htm",
+      "date": "2025-10-28"
+    },
+    {
+      "label": "TeraWulf — Abernathy JV release (IR site)",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/121/terawulf-expands-strategic-partnership-with-fluidstack-through-new-168-mw-ai-compute-joint-venture",
+      "date": "2025-10-28"
+    },
+    {
+      "label": "Niagara Gazette via Yahoo — Lake Mariner campus adding more; NYPA/NYSEG 750 MW; Somerset approvals",
+      "url": "https://finance.yahoo.com/news/lake-mariner-campus-adding-more-111600474.html",
+      "date": "2025-10-25"
+    },
+    {
+      "label": "Two Seas Capital — DFAN14A re Core Scientific citing the Fluidstack/Google-backstopped contracts",
+      "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0000902664-25-004458/p25-2197dfan14a.htm",
+      "date": "2025-10-17"
+    },
+    {
+      "label": "TeraWulf — 8-K Ex. 99.1: pricing of $3.2B WULF Compute senior secured notes (Fluidstack lockbox, Google warrant pledge)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925100142/tm2528904d1_ex99-1.htm",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "Cipher Mining — 8-K Ex. 99.1: 168 MW 10-year AI hosting agreement with Fluidstack; Google $1.4B backstop",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "Cipher Mining — 8-K body: Fluidstack USA II Inc. lease, Recognition Agreement, Google warrants",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_8k.htm",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "Cipher Mining — signs 168 MW 10-year AI hosting agreement with Fluidstack (GlobeNewswire)",
+      "url": "https://www.globenewswire.com/news-release/2025/09/25/3156107/0/en/Cipher-Mining-Signs-168-MW-10-Year-AI-Hosting-Agreement-with-Fluidstack.html",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "TeraWulf — 8-K Ex. 99.1: Fluidstack expansion with 160 MW CB-5 lease; Google backstop to ~$3.2B",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925079463/tm2523651d3_ex99-1.htm",
+      "date": "2025-08-18"
+    },
+    {
+      "label": "TeraWulf — 8-K body: CB-5 lease; 32,568,197 Google warrants",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925079463/tm2523651d3_8k.htm",
+      "date": "2025-08-18"
+    },
+    {
+      "label": "TeraWulf — CB-5 expansion release (IR site)",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner",
+      "date": "2025-08-18"
+    },
+    {
+      "label": "TeraWulf — 8-K Ex. 99.1: 200+ MW 10-year AI hosting agreements with Fluidstack; Google $1.8B backstop",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925078084/tm2523008d2_ex99-1.htm",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "TeraWulf — 8-K body: Fluidstack USA I Inc. leases; Google Recognition Agreements",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000110465925078084/tm2523008d2_8k.htm",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "TeraWulf — 200+ MW Fluidstack hosting agreements (GlobeNewswire)",
+      "url": "https://www.globenewswire.com/news-release/2025/08/14/3133308/0/en/TeraWulf-Signs-200-MW-10-Year-AI-Hosting-Agreements-with-Fluidstack.html",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "TeraWulf — 200+ MW Fluidstack hosting agreements (IR site)",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/112/terawulf-signs-200-mw-10-year-ai-hosting-agreements-with-fluidstack",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "NVIDIA — DGX Cloud Lepton connects Europe's developers; Fluidstack among contributing providers",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "NVIDIA GTC Paris 2025 — 'Delivering gigawatt-scale AI clusters: a joint perspective from Fluidstack and Eclairion'",
+      "url": "https://www.nvidia.com/en-us/on-demand/session/gtcparis25-gps1053/",
+      "date": "2025-06"
+    },
+    {
+      "label": "Fluidstack — Terms of Use (FLUIDSTACK LIMITED, London registered address)",
+      "url": "https://fluidstack.io/legal/terms-of-use",
+      "date": "2025-05-23"
+    },
+    {
+      "label": "Fluidstack blog — Fluidstack and Macquarie announce GPU financing deal",
+      "url": "https://fluidstack.io/blog/fluidstack-and-macquarie-announce-gpu-financing-deal-to-power-ai-labs-across-europe",
+      "date": "2025-04-01"
+    },
+    {
+      "label": "Fluidstack blog — exascale GPU clusters in Europe with NVIDIA, Borealis Data Center and Dell",
+      "url": "https://fluidstack.io/blog/fluidstack-to-deploy-energy-efficient-exascale-gpu-clusters-in-europe-in-collaboration-with-nvidia-borealis-data-center-and-dell-technologies",
+      "date": "2025-03-25"
+    },
+    {
+      "label": "Fluidstack blog — Fluidstack and DDN join forces with Mistral AI",
+      "url": "https://fluidstack.io/blog/fluidstack-and-ddn-join-forces-with-mistral-ai-to-accelerate-enterprise-ai",
+      "date": "2025-03-17"
+    },
+    {
+      "label": "Business Wire — Fluidstack delivering Europe's largest AI supercomputer to Mistral AI (page unreachable)",
+      "url": "https://www.businesswire.com/news/home/20250303970989/en/Fluidstack-Delivering-Europes-Largest-AI-Supercomputer-to-Mistral-AI-in-2025",
+      "date": "2025-03-03"
+    },
+    {
+      "label": "Quantum Zeitgeist — reprint: Fluidstack delivering Europe's largest AI supercomputer to Mistral AI",
+      "url": "https://quantumzeitgeist.com/fluidstack-delivers-europes-largest-ai-supercomputer-to-mistral-ai-in-2025/",
+      "date": "2025-03"
+    },
+    {
+      "label": "Fluidstack blog — strengthens leadership team with key executive hires",
+      "url": "https://fluidstack.io/blog/fluidstack-strengthens-leadership-team-with-key-executive-hires-to-drive-next-phase-of-growth",
+      "date": "2025-02-25"
+    },
+    {
+      "label": "AiThority — reprint: Fluidstack to build 1 GW AI supercomputer in France",
+      "url": "https://aithority.com/machine-learning/fluidstack-to-build-1gw-ai-supercomputer-in-france/",
+      "date": "2025-02-11"
+    },
+    {
+      "label": "DCmag (FR) — Fluidstack va construire un supercalculateur d'IA de 1 GW en France (10 milliards €)",
+      "url": "https://dcmag.fr/fluidstack-va-construire-un-supercalculateur-dia-de-1-gw-en-france-10-milliards-e/",
+      "date": "2025-02-10"
+    },
+    {
+      "label": "Business Wire — Fluidstack to build 1 GW AI supercomputer in France (page unreachable)",
+      "url": "https://www.businesswire.com/news/home/20250210579531/en/Fluidstack-to-Build-1GW-AI-Supercomputer-in-France",
+      "date": "2025-02-10"
+    },
+    {
+      "label": "One Lex Partners — US export controls and AI: a practitioner's guide (Diffusion Rule status)",
+      "url": "https://www.onelexpartners.com/news-and-insights/us-export-controls-and-ai-a-practitioners-guide"
+    },
+    {
+      "label": "Fluidstack — home page (2026 redesign)",
+      "url": "https://fluidstack.io/"
+    },
+    {
+      "label": "Fluidstack — blog index",
+      "url": "https://fluidstack.io/blog"
+    },
+    {
+      "label": "Fluidstack — jobs page (offices and site locations)",
+      "url": "https://fluidstack.io/jobs"
+    },
+    {
+      "label": "Fluidstack — Okmulgee, Oklahoma project site",
+      "url": "https://www.okmulgeefluidstack.io/"
+    },
+    {
+      "label": "Fluidstack — Sullivan County, Indiana project site",
+      "url": "https://www.sullivanfluidstack.io/"
+    },
+    {
+      "label": "Fluidstack docs — platform overview",
+      "url": "https://docs.fluidstack.io/"
+    },
+    {
+      "label": "Fluidstack docs — Managed Kubernetes",
+      "url": "https://docs.fluidstack.io/kubernetes/overview"
+    },
+    {
+      "label": "Fluidstack docs — Managed Slurm",
+      "url": "https://docs.fluidstack.io/slurm/overview"
+    },
+    {
+      "label": "Fluidstack docs — Lighthouse",
+      "url": "https://docs.fluidstack.io/lighthouse/overview"
+    },
+    {
+      "label": "Fluidstack docs — Projects",
+      "url": "https://docs.fluidstack.io/projects/overview"
+    },
+    {
+      "label": "Fluidstack docs — Management API",
+      "url": "https://docs.fluidstack.io/api-reference/management-api"
+    },
+    {
+      "label": "Fluidstack — status page",
+      "url": "https://status.fluidstack.io/"
+    },
+    {
+      "label": "Fluidstack — LinkedIn company page",
+      "url": "https://www.linkedin.com/company/fluidstack"
+    },
+    {
+      "label": "Macquarie — accelerating investment in compute infrastructure for Fluidstack",
+      "url": "https://www.macquarie.com/au/en/insights/accelerating-investment-in-compute-infrastructure-for-fluidstack-a-leading-ai-cloud-platform.html"
+    },
+    {
+      "label": "UK Companies House — FLUIDSTACK LTD (10985545) overview",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/10985545"
+    },
+    {
+      "label": "UK Companies House — FLUIDSTACK LTD officers",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/10985545/officers"
+    },
+    {
+      "label": "UK Companies House — FLUIDSTACK LTD filing history",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/10985545/filing-history"
+    },
+    {
+      "label": "UK Companies House — search 'fluidstack' (group entities)",
+      "url": "https://find-and-update.company-information.service.gov.uk/search?q=fluidstack"
+    },
+    {
+      "label": "Hut 8 — River Bend project page",
+      "url": "https://www.hut8.com/data-centers/river-bend"
+    },
+    {
+      "label": "Baxtel — Fluidstack Bosquel Business Park (withdrawn)",
+      "url": "https://baxtel.com/data-center/fluidstack-bosquel-business-park"
+    },
+    {
+      "label": "Baxtel — Fluidstack New Lebanon, Indiana",
+      "url": "https://baxtel.com/data-center/fluidstack-new-lebanon-indiana"
+    },
+    {
+      "label": "Glenn K. Lockwood — Fluidstack entity notes",
+      "url": "https://www.glennklockwood.com/garden/entities/fluidstack"
+    },
+    {
+      "label": "powertracker.io — Barber Lake (AEP Texas / ERCOT)",
+      "url": "https://powertracker.io/site/barber-lake"
+    },
+    {
+      "label": "interconnection.fyi — Fluidstack Lake Mariner entry",
+      "url": "https://www.interconnection.fyi/data-center/project/fluidstack-lake-mariner-68f1d803"
+    },
+    {
+      "label": "SEC EDGAR full-text search — 'Fluidstack', 2025-01-01 to 2026-09-04",
+      "url": "https://efts.sec.gov/LATEST/search-index?q=Fluidstack&dateRange=custom&startdt=2025-01-01&enddt=2026-09-04"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

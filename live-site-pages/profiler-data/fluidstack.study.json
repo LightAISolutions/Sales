@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 2,
+  "slug": "fluidstack",
+  "title": "Fluidstack — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "glossary": [
+    {
+      "t": "Google Recognition Agreement",
+      "d": "The name TeraWulf's and Cipher's filings give to the contract in which Google agrees, on a Fluidstack payment default or insolvency, to pay the termination fee or to pay all rent due and assume the Fluidstack lease as tenant. It is signed per building and becomes effective at that building's lease commencement."
+    },
+    {
+      "t": "Akela",
+      "d": "Akela Data LLC, the TeraWulf subsidiary that is landlord under the three Lake Mariner leases with Fluidstack USA I Inc. — the landlord side of the chain is itself a special-purpose entity."
+    },
+    {
+      "t": "Flash Compute",
+      "d": "Flash Compute LLC, the issuer of USD 1.3 billion of 7.25% notes that finance the Abernathy campus; owned through FS CS I LLC, whose members were TeraWulf (50.1%) and Fluidstack CS I Inc. (49.9%) until July 2026 and are now a Fluidstack-led group."
+    }
+  ],
+  "sections": [
+    {
+      "id": "start-here-who-signs-and-who-pays",
+      "title": "Start here: who signs the lease, and who actually pays",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The CoreWeave guide in this corpus teaches how a neocloud borrows against GPUs and contracted cash flows; the Nebius guide teaches what an **{{anchor tenant}}** does to a young cloud's credit; the Lambda guide teaches colocation against owning the building. None of them opens the lease itself. This guide does: who is named on it, who guarantees it, what the landlord's lender can actually reach, how a guarantor is paid for lending its credit, and how many parties stand between the person who owns the roof and the model that runs under it.",
+        "**What it deliberately does not repeat:** GPU-as-a-service unit economics, the GPU-backed debt structure, the hyperscaler-anchor model or the service ladder — those are taught in the CoreWeave, Lambda and Nebius guides and only referenced here.",
+        "**One idea carries the guide.** A lease is a promise to pay for fifteen years by a company that may not exist in fifteen years. Everything in the tenant-of-record structure — the special-purpose tenant, the recognition agreement, the lockbox, the warrants, the completion guarantee — exists to answer one question a lender asks: if the tenant stops paying, who pays?"
+      ]
+    },
+    {
+      "id": "the-tenant-is-a-shell-by-design",
+      "title": "The tenant is a shell, by design",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Read any of the landlords' filings and the tenant is never 'Fluidstack'. At Lake Mariner it is Fluidstack USA I Inc.; at Barber Lake, Fluidstack USA II Inc.; at Abernathy the sublessee is Fluidstack USA III and the joint-venture member is Fluidstack CS I Inc.; at River Bend, Fluidstack USA IV Inc. Each is a **{{bankruptcy-remote SPV}}** — a company with one lease, one purpose and, unless the parent chooses otherwise, no other assets. The parent, Fluidstack Ltd, appears in the filings only as the group the subsidiaries belong to; no landlord document read states a parent guarantee.",
+        "This is not evasion; it is what lenders demand. A special-purpose tenant means the credit the landlord's lender analyses is exactly the credit it gets: the lease, whatever sits behind the lease, and nothing that could be dragged into an unrelated bankruptcy. The corollary is that the tenant's own promise is worth very little. A company with about USD 2.6 billion of total funding has signed, through its subsidiaries, roughly USD 27 billion of base-term rent. The gap between those numbers is the credit gap, and the rest of the structure is how it is closed.",
+        "The same logic runs on the landlord's side. Akela Data LLC, WULF Compute LLC, Flash Compute LLC, Cipher Barber Lake, Meridian Arc HoldCo — every campus sits in its own vehicle so that its notes are secured on its own leases. The transaction is therefore SPV-to-SPV: a shell landlord renting to a shell tenant, with the substance supplied by whoever stands behind each shell.",
+        "**Self-check:** a landlord's 8-K says the lease was signed by 'Fluidstack USA II Inc.' and quotes a co-founder of Fluidstack Ltd. Which entity owes the rent? *(Only the subsidiary — unless a guarantee from the parent is disclosed, and here none is.)*"
+      ]
+    },
+    {
+      "id": "the-counterparty-chain",
+      "title": "The counterparty chain: six seats between the roof and the model",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "Every Fluidstack campus has the same seats, filled by different names. The **{{counterparty chain}}** is the map a vendor, a utility or a lender needs before asking 'who is my customer?'. Read down the columns for Lake Mariner as the landlords filed it.",
+      "cols": [
+        "Seat",
+        "Who sits in it (Lake Mariner)",
+        "What they own or owe",
+        "Whose credit they rely on"
+      ],
+      "rows": [
+        [
+          "**Landlord**",
+          "Akela Data LLC (TeraWulf)",
+          "The land, substation, buildings and cooling plant; owes delivery on dates; collects rent through a **{{lockbox account}}**",
+          "The tenant's rent, made bankable by the guarantor"
+        ],
+        [
+          "**Landlord's lender**",
+          "Holders of USD 3.2 billion of 7.75% WULF Compute notes",
+          "A first lien on the campus, the lockbox and, pre-completion, Google's pledged warrants",
+          "The guarantor's backstop once it is effective; TeraWulf's completion until then"
+        ],
+        [
+          "**Tenant of record**",
+          "Fluidstack USA I Inc.",
+          "The lease: 10 years plus two five-year options, 'modified gross lease with annual escalators'",
+          "Its parent's willingness to fund it; in default, nothing"
+        ],
+        [
+          "**Guarantor**",
+          "Google LLC",
+          "A recognition agreement per building: pay the termination fee, or pay the rent and take the lease",
+          "Its own AA+ rating — the only investment-grade credit in the chain"
+        ],
+        [
+          "**Operator**",
+          "Fluidstack (the parent and its engineers)",
+          "Rack design, cluster software (Managed Kubernetes, Slurm, Lighthouse), operations for the end user",
+          "Paid by the end user; not a party to the lease"
+        ],
+        [
+          "**Chip owner**",
+          "A chip-leasing vehicle (Apollo–Blackstone, per press), with Broadcom residual-value support",
+          "The TPUs, leased to the end user",
+          "The end user's lease payments; Broadcom's residual promise"
+        ],
+        [
+          "**End user**",
+          "Anthropic (named by Hut 8 and by trade press; 'a global hyperscale AI platform' in TeraWulf's and Cipher's filings)",
+          "A services contract with the operator; 'is not a party to the lease and guarantees nothing' (measuredai)",
+          "Its own run-rate revenue and its investors"
+        ]
+      ]
+    },
+    {
+      "id": "how-a-backstop-works",
+      "title": "How a backstop works: the recognition agreement, step by step",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A **{{credit backstop}}** is a promise by a strong party to cover a weak party's payments. In this chain it takes a specific legal form, the **{{recognition agreement}}**, and the landlords' 8-Ks describe its mechanics closely enough to walk through. Google signs one agreement per building with the landlord and the tenant. Nothing happens while the tenant pays. If the tenant misses a payment or 'becomes subject to an insolvency event', the landlord gives notice, and Google gets a choice.",
+        "Cipher's filing lists the choices: Google may '(i) pay all rent currently due under the Fluidstack Lease and assume the Fluidstack Lease as the tenant thereunder, (ii) under certain circumstances, pay a certain termination fee … provided that upon payment of such termination fee, Google will be provided with an equity interest in Cipher Barber Lake, or (iii) … defer its election … during which deferral period Google will pay all unpaid rent'. In plain terms: step in and become the tenant, buy out of the lease and take a piece of the building, or keep paying while it decides. The landlord is made whole in every branch. A middle path exists too — landlord and guarantor may agree on a replacement tenant first.",
+        "Two features decide what the backstop is worth on any given day. First, it is sized, not open-ended: USD 1.8 billion then USD 3.2 billion at Lake Mariner, USD 1.3 billion at Abernathy, USD 1.4 billion then USD 1.73 billion at Barber Lake, 'lease payments and related pass-through obligations' for the 15-year base term at River Bend. Second, it is timed: 'The Google Backstop under each Google Recognition Agreement becomes effective as of the commencement date under the corresponding Fluidstack HPC Lease.' Before the building is delivered there is no backstop. TeraWulf's Q2 2026 release records the switch being thrown — CB-3 delivered, 'satisfying the applicable conditions for $600 million of Google's credit support … to become effective'.",
+        "Notice what the guarantor is guaranteeing: the tenant's rent to the landlord, not the tenant's obligations to its own customer, and not the landlord's debt. Google's promise attaches to the lease. It is the landlord's lender who benefits, because the lease is the lender's collateral. Cipher records the value of that promise as an asset — USD 544.5 million, amortised over the lease — 'representing the value of Google agreeing to make the lease payments from Fluidstack in the event of Fluidstack not fulfilling its obligations'.",
+        "**Self-check:** a tenant defaults in month three of construction, before the building is delivered. What does the guarantor owe? *(Nothing — the recognition agreement is not yet effective. The landlord's lender is exposed to the builder, not the guarantor.)*"
+      ]
+    },
+    {
+      "id": "what-the-lenders-see",
+      "title": "What the landlord's lender actually sees",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "A project bond for one of these campuses is secured on documents, not on a promise that AI demand will last. The bond disclosures list what the lender can reach. The rows are in the order the money flows.",
+      "cols": [
+        "Collateral or protection",
+        "What it is",
+        "Where it appears",
+        "When it works"
+      ],
+      "rows": [
+        [
+          "**{{lockbox account}}**",
+          "Rent is paid into a lender-controlled account before the landlord can spend it",
+          "'a designated lockbox account of Fluidstack USA I Inc.' in the WULF Compute notes; 'Fluidstack USA III Lockbox Arrangements' in the Flash Compute indenture",
+          "From rent commencement"
+        ],
+        [
+          "**Warrant pledge**",
+          "The guarantor's penny warrants in the landlord are pledged to the lenders until the building is finished",
+          "'prior to the completion of the Data Center Expansion, a pledge by Google LLC of warrants to purchase common stock of TeraWulf'",
+          "During construction only — released at completion"
+        ],
+        [
+          "**{{completion guarantee}}**",
+          "The sponsors promise to finish the building, up to a cap",
+          "Abernathy: 'JV Partners Holdco will provide a capped completion guarantee … up to $100 million … not a guarantee of the notes'",
+          "During construction; capped at a fraction of the USD 1.3 billion notes"
+        ],
+        [
+          "**The lease itself**",
+          "Ten to twenty-five years of contracted rent with escalators",
+          "USD 6.7 billion (Lake Mariner), USD 9.5 billion (Abernathy), USD 3.8 billion (Barber Lake), USD 7.0 billion (River Bend) over initial terms",
+          "Only once commenced — and only as good as the tenant plus guarantor"
+        ],
+        [
+          "**{{credit backstop}}**",
+          "The guarantor's recognition agreement",
+          "Effective per building at commencement; sized per lease",
+          "The operating period — the piece that makes the lease investment-grade-like"
+        ],
+        [
+          "**Cash reserves**",
+          "Debt-service and collateral reserves funded from the notes",
+          "'$75.0 million of cash collateral to secure the Guarantor's obligations under a certain letter of credit' (Abernathy)",
+          "Throughout"
+        ]
+      ]
+    },
+    {
+      "id": "pricing-a-credit-gap",
+      "title": "Pricing a credit gap: backstops and penny warrants",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "A guarantor lends its rating; something has to pay for that. In this chain the price was paid twice in the landlords' shares — **{{penny warrant}}**s exercisable at USD 0.01 — and twice not at all. The table is what the landlords disclosed; the last column is the pattern to notice.",
+      "cols": [
+        "Lease (date)",
+        "Backstop",
+        "Warrants to the guarantor",
+        "Pro forma stake",
+        "What was different"
+      ],
+      "rows": [
+        [
+          "Lake Mariner CB-3/CB-4 (Aug 2025)",
+          "USD 1.8 billion",
+          "~41.0 million shares at USD 0.01",
+          "~8% of TeraWulf",
+          "First deal; the template is set: credit for equity"
+        ],
+        [
+          "Lake Mariner CB-5 (Aug 2025)",
+          "+USD 1.4 billion (USD 3.2 billion total)",
+          "+32.6 million shares",
+          "~14% of TeraWulf",
+          "Same economics as CB-3/4 — the price scales with the lease"
+        ],
+        [
+          "Barber Lake (Sep 2025)",
+          "USD 1.4 billion",
+          "~24.2 million shares at USD 0.01",
+          "~5.4% of Cipher",
+          "Cipher must top up if the warrants are worth less than USD 430 million — a floor on the guarantor's fee"
+        ],
+        [
+          "Barber Lake +39 MW (Nov 2025)",
+          "+USD 333 million",
+          "None disclosed",
+          "—",
+          "Cipher adds USD 118 million of equity instead"
+        ],
+        [
+          "Abernathy JV (Oct 2025)",
+          "USD 1.3 billion",
+          "None — 'No TeraWulf equity securities or warrants were issued'",
+          "—",
+          "The landlord is a 51% JV partner; the guarantor is paid elsewhere"
+        ],
+        [
+          "River Bend (Dec 2025)",
+          "Base rent and pass-throughs, 15 years",
+          "None disclosed",
+          "—",
+          "A triple-net lease and a Google-backed operations agreement instead"
+        ],
+        [
+          "New Lebanon (Apr 2026)",
+          "Master lease 'guaranteed by Google'",
+          "None disclosed",
+          "—",
+          "Bond-financed at the HoldCo; Fluidstack is a 49.9% owner"
+        ]
+      ]
+    },
+    {
+      "id": "modified-gross-versus-triple-net",
+      "title": "Modified gross versus triple net: who eats the power bill",
+      "kind": "prose",
+      "read": "5 min",
+      "ps": [
+        "Two of the leases are described by their landlords as a **{{modified gross lease}}** 'with annual escalators' (Lake Mariner, Barber Lake) and one as a **{{triple-net lease}}** with a '3.0% annual base rent escalator' (River Bend). The difference is who carries operating costs. Under triple net the tenant pays base rent plus taxes, insurance and maintenance, and the landlord's number is clean — which is why Hut 8 can quote 'expected cumulative NOI contribution of $6.9 billion' against a USD 7.0 billion contract: almost everything the tenant pays is margin. Under modified gross some costs sit inside the rent, and the landlord's site margin — TeraWulf's 'Expected Site NOI Margins: 85%' — is lower and depends on what the landlord absorbs.",
+        "For the guarantor the distinction matters because a backstop of 'lease payments and related **{{pass-through costs}}**' is larger and less predictable than a backstop of base rent alone. For the utility it matters because the party that pays the power bill is the party with the incentive to negotiate the tariff. For a vendor selling to the campus it matters because the tenant under a triple-net lease is the one specifying and paying for maintenance.",
+        "The **{{rent escalator}}** is the quiet term. Three percent a year over fifteen years lifts the last year's rent 55 percent above the first; over a 25-year Abernathy commitment the compounding is why a 168 MW lease is 'approximately $9.5 billion'. Headline contract values are escalated sums, not present values.",
+        "**Self-check:** a landlord quotes a USD 7.0 billion contract and USD 6.9 billion of cumulative NOI. Which lease type is it? *(Triple net — the tenant pays the operating costs, so nearly all rent is landlord margin.)*"
+      ]
+    },
+    {
+      "id": "critical-it-gross-and-utility-megawatts",
+      "title": "Three megawatts that are not the same: critical IT, gross, utility",
+      "kind": "prose",
+      "read": "5 min",
+      "ps": [
+        "Every lease in the chain is priced per megawatt of **{{critical IT load}}** — the power the computers draw — while the building and the utility are sized on **{{gross capacity}}**. TeraWulf: '200+ MW critical IT load (representing ~250 MW gross capacity)'; Cipher: '168 MW of critical IT load, supported by a maximum of 244 MW of gross capacity'; Hut 8: '245 MW IT / 330 MW utility'. The ratio (gross ÷ IT) is the site's overhead for cooling, power conversion and losses — 1.25 at Lake Mariner, 1.45 at Barber Lake, 1.35 at River Bend, each a statement about the cooling plant and the climate.",
+        "The Nebius guide's contracted-versus-connected-versus-active distinction is about time — what is signed, wired and running. This one is about the same moment measured at three points in the building. A vendor sizing a switchgear order works from gross; a chip-leasing vehicle sizing its fleet works from critical IT; a utility filing its large-load request works from the utility number, which may exceed gross if the site reserves headroom. Mixing them produces the errors trade press makes when it calls River Bend a '330 MW' data center.",
+        "**Self-check:** a lease is for 168 MW critical IT with 240 MW gross. A vendor is asked to quote coolant distribution units. Which number sizes the heat to be rejected? *(Critical IT — the 168 MW is what becomes heat in the racks; the 72 MW difference is mostly the plant that rejects it.)*"
+      ]
+    },
+    {
+      "id": "who-eats-a-delay",
+      "title": "Who eats a delay: three seats in the chain",
+      "kind": "proscons",
+      "read": "7 min",
+      "intro": "Construction takes longer than a lease negotiation, and the backstop only starts when the building is delivered. Each seat carries a different piece of the delay. The cards read the risk from each seat's point of view, using terms from the Abernathy and Lake Mariner disclosures and the Quinn Emanuel client alert on the structure.",
+      "cards": [
+        {
+          "t": "The landlord and its bondholders",
+          "meta": "Own the build; secured by lockbox, warrants and a capped completion guarantee",
+          "adv": [
+            "Rent is escalated and long — 'approximately $9.5 billion' over 25 years at Abernathy",
+            "The guarantor's warrants are pledged to the lenders until completion",
+            "The landlord's own expertise is the construction (TeraWulf: '~$9.1M per critical-IT MW')"
+          ],
+          "dis": [
+            "'The backstop activates only after construction is complete and Fluidstack's lease commences; during the build-out phase, bondholders bear full project execution risk with no Google support' (Quinn Emanuel)",
+            "The completion guarantee is 'up to $100 million' against USD 1.3 billion of notes",
+            "'If construction is delayed by more than 180 days past the target completion date, Fluidstack can terminate its leases entirely — and Google's backstop obligation would never trigger'"
+          ]
+        },
+        {
+          "t": "The tenant-operator",
+          "meta": "Signs the lease through an SPV; owes the end user delivery",
+          "adv": [
+            "A termination right if the landlord is late — the one place the shell has leverage",
+            "No construction capital at risk in a leased campus",
+            "Can subcontract capacity elsewhere while waiting (the Boost Run and IREN contracts)"
+          ],
+          "dis": [
+            "Its customer contract has its own dates; a late landlord does not excuse a late operator",
+            "Reputation with the guarantor: a backstop that never triggers because the tenant walked is still a relationship consumed",
+            "In the campus it now owns (Abernathy), the delay risk moved onto its own side of the table"
+          ]
+        },
+        {
+          "t": "The guarantor",
+          "meta": "Promises rent from commencement; paid in warrants or otherwise",
+          "adv": [
+            "Owes nothing until the building is delivered — construction risk is someone else's",
+            "Sized exposure: USD 3.2 billion, not the USD 16 billion headline",
+            "In the assume-the-lease branch it ends up with a delivered, liquid-cooled campus"
+          ],
+          "dis": [
+            "Its warrants are pledged to the lenders until completion — a late build ties up its consideration",
+            "Each lease amendment (162 MW to 168 MW; data-hall-by-data-hall commencement) changes what it has backstopped",
+            "Once effective, a default puts it in the data-center landlord business for a decade"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-backstop-ladder",
+      "title": "The backstop ladder: what one guarantor stands behind",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD billions of Fluidstack lease obligations backstopped or guaranteed by Google, by campus (landlords' filings; New Lebanon shown at its bond size, the lease value being undisclosed)",
+      "intro": "Read the bars as the guarantor's book. Together they are why measuredai tallies Google's support behind Fluidstack at more than USD 6 billion and why Dave Friedman wrote 'The collateral is cosmetic. The credit is Google's.'",
+      "items": [
+        {
+          "label": "Lake Mariner, NY (three leases)",
+          "sub": "USD 1.8B + USD 1.4B; warrants ~14% of TeraWulf",
+          "v": 3.2
+        },
+        {
+          "label": "Barber Lake, TX (two leases)",
+          "sub": "USD 1.4B + USD 333M; warrants ~5.4% of Cipher",
+          "v": 1.73
+        },
+        {
+          "label": "Abernathy, TX (JV)",
+          "sub": "USD 1.3B behind the Fluidstack USA III sublease; no warrants",
+          "v": 1.3
+        },
+        {
+          "label": "River Bend, LA",
+          "sub": "Base rent and pass-throughs, 15 years, on a USD 7.0B lease — amount not stated; shown at the base-term value",
+          "v": 7.0
+        },
+        {
+          "label": "New Lebanon, IN",
+          "sub": "Master lease 'guaranteed by Google'; USD 5.7B of Meridian Arc notes",
+          "v": 5.7
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The chain is only as strong as the seat you forgot.** A lender who prices the lease on the guarantor and forgets that the backstop starts at commencement is lending unsecured through construction. Quinn Emanuel's alert is the reference: the 180-day termination right and the construction-period gap are the two places the structure has no guarantor.",
+        "**The end user can route around the intermediary.** In July 2026 Anthropic signed 401 MW at Hawesville with TeraWulf directly, 'supported by an investment-grade credit', with no Fluidstack entity in the lease; in August Riot and Nscale disclosed direct or reported contracts. A tenant of record whose only asset is speed is replaced the day the customer can borrow its own credit.",
+        "**The guarantor's consideration is in the landlord's stock.** Penny warrants pay Google in TeraWulf and Cipher shares; a fall in those shares (Cipher's top-up clause exists for exactly this) changes the guarantor's economics without changing its obligation. A guarantor paid in equity is a shareholder with a lease exposure, which is not the same as a disinterested guarantor.",
+        "**Headline values are escalated, undiscounted and optional.** 'USD 16 billion with extensions' assumes two five-year options are exercised and every escalator paid. The base term is USD 6.7 billion; the backstop is USD 3.2 billion; the rent actually commenced by July 2026 was 102 MW at one campus.",
+        "**Concentration hides inside SPVs.** Five tenant vehicles, four landlords, one guarantor and — by every public account — one end user. Diversification at the entity level is concentration at the economic level.",
+        "**Nobody publishes the operator's numbers.** Fluidstack discloses no revenue, no headcount and no lease; the only primary record of its capital raising is SEC Form D. Every figure in this guide is a counterparty's."
+      ]
+    },
+    {
+      "id": "where-fluidstack-slots-in",
+      "title": "Where Fluidstack slots into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "The same seats, with what Fluidstack actually holds at each campus in September 2026.",
+      "cols": [
+        "Campus",
+        "Landlord",
+        "Fluidstack's seat",
+        "Guarantor",
+        "Delivery (as filed)"
+      ],
+      "rows": [
+        [
+          "Lake Mariner, NY — 378 MW",
+          "TeraWulf (Akela Data)",
+          "Tenant of record (USA I Inc.) and operator",
+          "Google, USD 3.2B + warrants",
+          "CB-3 July 2026 (102 MW); CB-4 2H 2026; CB-5 early 2027"
+        ],
+        [
+          "Abernathy, TX — 168 MW",
+          "The JV it now leads (bought TeraWulf's 50.1% for ~USD 530M)",
+          "Owner-operator and sublessee (USA III)",
+          "Google, USD 1.3B",
+          "Q4 2026"
+        ],
+        [
+          "Barber Lake, TX — 207 MW",
+          "Cipher",
+          "Tenant of record (USA II Inc.) and operator",
+          "Google, USD 1.73B + warrants",
+          "September 2026; +39 MW January 2027"
+        ],
+        [
+          "River Bend, LA — 245 MW",
+          "Hut 8",
+          "Tenant of record (USA IV Inc.) and operator for Anthropic",
+          "Google, base rent and pass-throughs",
+          "Q2 2027"
+        ],
+        [
+          "New Lebanon, IN — 430 MW",
+          "Meridian Arc (Next Frontier 50.1% / Fluidstack 49.9%)",
+          "Co-owner and sole tenant under a 15-year master lease",
+          "Google guaranty",
+          "Late 2026; first hall July 2027"
+        ],
+        [
+          "Okmulgee, OK; Sullivan County, IN; Wythe County, VA",
+          "Fluidstack (developing)",
+          "Developer and landlord-to-be; Jane Street first tenant at Okmulgee",
+          "None disclosed",
+          "2027–2028"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What is a tenant of record, and why is it often a special-purpose subsidiary?",
+          "a": "The entity named on the lease that owes the rent. It is an SPV so that the landlord's lender analyses exactly one credit — the lease and what stands behind it — with no exposure to the parent's other businesses, and so the parent's other creditors cannot reach the lease."
+        },
+        {
+          "q": "Name the three branches of a recognition agreement when the tenant defaults.",
+          "a": "The guarantor may pay all rent due and assume the lease as tenant; pay a termination fee (and, at Barber Lake, receive equity in the landlord vehicle); or defer its election while paying the unpaid rent. Landlord and guarantor may also agree on a replacement tenant first."
+        },
+        {
+          "q": "When does a backstop become effective, and who carries the risk before that?",
+          "a": "At the lease commencement date for that building. Before delivery the landlord's bondholders carry construction risk, protected only by a capped completion guarantee and, at TeraWulf, a pledge of the guarantor's warrants."
+        },
+        {
+          "q": "How was Google paid for backstopping the Lake Mariner and Barber Lake leases?",
+          "a": "In penny warrants — rights to buy landlord shares at USD 0.01 — about 14% of TeraWulf pro forma and about 5.4% of Cipher, with Cipher obliged to top up if the warrants are worth less than USD 430 million. At Abernathy and River Bend no warrants were disclosed."
+        },
+        {
+          "q": "What does a lockbox account do for a lender?",
+          "a": "It captures the tenant's rent in a lender-controlled account before the landlord can spend it, turning the lease's cash flow into collateral the lender holds at source."
+        },
+        {
+          "q": "Distinguish critical IT load, gross capacity and utility capacity.",
+          "a": "Critical IT is the power the computers draw and the unit leases are priced in; gross adds cooling, conversion and losses and sizes the building; utility capacity is what the grid supplies, which may include headroom. Barber Lake: 168 MW IT, 244 MW gross."
+        },
+        {
+          "q": "Why does a triple-net lease let a landlord quote NOI almost equal to contract value?",
+          "a": "Because the tenant pays taxes, insurance and maintenance directly, so nearly all rent is margin — Hut 8's USD 6.9 billion of NOI on a USD 7.0 billion lease."
+        },
+        {
+          "q": "What is the 180-day problem in the tenant-of-record structure?",
+          "a": "If construction runs more than 180 days late the tenant can terminate, and because the backstop only triggers at commencement, the guarantor never becomes liable — the lender is left with an unfinished building and no guaranteed tenant."
+        },
+        {
+          "q": "Why is a headline of 'USD 16 billion with extensions' not the lender's number?",
+          "a": "It assumes two five-year options are exercised and every escalator paid; the base term is USD 6.7 billion, the backstop USD 3.2 billion, and rent actually flows only from delivered halls."
+        },
+        {
+          "q": "What changed for Fluidstack at Abernathy in July 2026?",
+          "a": "It led a group buying TeraWulf's 50.1% of the joint venture for about USD 530 million, moving from tenant to owner-operator of the campus while the USD 1.3 billion of project notes and Google's backstop stayed in place."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A landlord's bondholders are told the lease is 'backstopped by Google'. The building is nine months from delivery. What protects the bondholders today?",
+          "c": [
+            "Google's recognition agreement",
+            "A capped completion guarantee, the lockbox and any pledged warrants",
+            "The tenant's parent guarantee",
+            "The end user's services contract"
+          ],
+          "a": 1,
+          "why": "The recognition agreement becomes effective at commencement. Before delivery the lender has construction-period protections only; no parent guarantee is disclosed and the end user is not a party."
+        },
+        {
+          "q": "Which lease term makes a 168 MW, 25-year commitment worth 'approximately $9.5 billion'?",
+          "c": [
+            "Triple-net pass-throughs",
+            "The annual rent escalator compounding over the term",
+            "The two five-year extension options",
+            "Google's backstop"
+          ],
+          "a": 1,
+          "why": "Escalators compound; the headline is an undiscounted sum of escalated rent over the initial term. Options would add further; the backstop does not change the rent."
+        },
+        {
+          "q": "Cipher books a USD 544.5 million asset at signing. What is it?",
+          "c": [
+            "The tenant's security deposit",
+            "The fair value of Google's promise to pay rent if Fluidstack does not, amortised over the lease",
+            "Prepaid rent from Fluidstack",
+            "The construction budget"
+          ],
+          "a": 1,
+          "why": "Cipher's 10-Q describes the asset as the value of Google agreeing to make the lease payments in the event of a Fluidstack default — the backstop, capitalised."
+        },
+        {
+          "q": "A utility engineer sizing the substation for River Bend should use:",
+          "c": [
+            "245 MW",
+            "330 MW",
+            "USD 7.0 billion",
+            "2,295 MW"
+          ],
+          "a": 1,
+          "why": "245 MW is critical IT; the utility number is 330 MW; 2,295 MW is the optional expansion ceiling in the Anthropic partnership release."
+        },
+        {
+          "q": "Why did Google's warrant stake in TeraWulf rise from about 8% to about 14% within four days?",
+          "c": [
+            "TeraWulf issued a dividend",
+            "Fluidstack exercised its option on a third building (CB-5) and Google backstopped it on the same terms",
+            "Google bought shares in the market",
+            "The lease was extended to 25 years"
+          ],
+          "a": 1,
+          "why": "The CB-5 lease added 160 MW and USD 1.4 billion of backstop, paid for with 32.6 million more warrants — the price scaled with the lease."
+        },
+        {
+          "q": "In July 2026 Anthropic signed 401 MW at Hawesville directly with TeraWulf. For the tenant-of-record model this shows:",
+          "c": [
+            "The model is illegal",
+            "The end user can bypass the intermediary when it has its own investment-grade support",
+            "TeraWulf no longer works with Fluidstack",
+            "Google withdrew its backstops"
+          ],
+          "a": 1,
+          "why": "The same landlord contracted with the end user directly on 'investment-grade credit'; Fluidstack's Lake Mariner and Abernathy positions were unchanged and it bought TeraWulf's Abernathy stake the same day."
+        },
+        {
+          "q": "Which statement about the guarantor's exposure is correct?",
+          "c": [
+            "It is unlimited",
+            "It equals the headline contract value with extensions",
+            "It is sized per lease and starts at commencement",
+            "It covers the landlord's bonds directly"
+          ],
+          "a": 2,
+          "why": "The backstops are stated amounts (USD 3.2 billion at Lake Mariner) attached to the lease, effective at commencement; they support the bonds only indirectly through the lease."
+        },
+        {
+          "q": "A modified gross lease with an 85% site NOI margin versus a triple-net lease with a 99% margin — what explains the gap?",
+          "c": [
+            "Different rent levels",
+            "Under modified gross the landlord absorbs some operating costs inside the rent",
+            "Triple-net tenants pay more rent",
+            "The guarantor pays the difference"
+          ],
+          "a": 1,
+          "why": "The lease type decides who pays operating costs; under triple net the tenant pays them directly, so almost all rent is landlord margin."
+        }
+      ]
+    }
+  ]
+}
