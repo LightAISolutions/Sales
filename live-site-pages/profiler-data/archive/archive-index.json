@@ -1965,6 +1965,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-05",
       "supersededBy": 2
+    },
+    {
+      "file": "mccarthy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 3
     }
   ],
   "vistra": [
