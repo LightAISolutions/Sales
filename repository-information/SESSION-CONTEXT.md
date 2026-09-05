@@ -6,6 +6,60 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-05 01:50 PM EST
+**Repo version:** v04.64r (bumped on the push commit `8b91c94`; C4 itself shipped at v04.63r in commit `710034c`, which merged mid-session)
+**Branch:** `claude/phase-c4-profiler-session-rwzxo5` (rebased onto `origin/main` at `b44d0f9` after the v04.63r merge, before the v04.64r edits)
+**Model:** Opus 5 xhigh — Phase C session C4 (Talen Energy · Vistra · NRG Energy), then an unplanned cross-dossier reconciliation pass the C4 research forced.
+
+### What was done
+
+- **C4 shipped at v04.63r** — three `ipp` dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans. Sources 81 / 81 / 72 (first-party 51 / 37 / 33 percent); relationships 7 / 13 / 7; developments 21 / 20 / 20; decision makers 13 / 11 / 12; 19 headshots. 25 shared concepts registered (811 total). Registry sync (127), graph rebuild (903 edges, 678 curated), study checker (101 guides) and the Playwright render all clean. Three **researched** calendar rows, not `cadence: "quarterly"`. §8 rows flipped to `v1 · v04.63r` / `✓ · v04.63r`. CHANGELOG 80/100.
+- **All three C4 premises were wrong and are corrected** in the summaries, judgments and README descriptions, same as B5/F5 before it.
+- **Expectations honesty was applied literally.** No full-year analyst consensus exists for FY2024/FY2025 for Talen or Vistra on any reachable host, so those periods are **guidance-benchmarked and say so** in `result`/`commentary`. NRG's only FY2025 consensus is nine months stale and is labelled as such. `ir.talenenergy.com` and `investors.nrg.com` are WAF-blocked (503/403); press releases were recovered from SEC 8-K exhibits and the block recorded as a collection gap.
+- **v04.64r reconciled the existing corpus against the three new dossiers.** C4 landed into a corpus that already carried ~30 inbound mentions of Talen, Vistra and NRG. Nothing had ever checked whether those mentions still held. Four did not:
+  - `invenergy` v1 → v2 — grouped NRG with Vistra and Talen as "contracting existing fleets to data centres". NRG's model is customer-funded **new build** under a Project Development Agreement with GE Vernova and Kiewit's TIC for up to 5.4 GW. Separated, GE Vernova release sourced.
+  - `meta` v6 → v7 — "Vistra (2.1 GW + 433 MW uprates)" in two places. Vistra discloses **2,176 MW** operating (Perry 1,268 + Davis-Besse 908) plus 433 MW of uprates, **2,609 MW total**. Both corrected.
+  - `terawulf` v4 → v5 — the Nautilus exit carried "~$92M / 3.4x MOIC"; Talen's own release states **$85M cash plus selected physical assets**. Both figures now stated with an explicit note that no source reconciles them.
+  - `burns-mcdonnell` v4 → v5 — the open Moss Landing adjacency question closed and dated. Phase I (300 MW, engineered by Fluence, built by Luminant) is the unit that burned; B&McD's engagements are Phase II (100 MW) and Phase III (350 MW). A `vistra` relationship and the NS Energy project record added.
+- **Added mandatory step 7 to the Profiler Command** in `.claude/rules/profiler-app.md` — "Reconcile the corpus against the new dossier". Word-boundary grep every other dossier for the new company, skip exec-career mentions, then the four-way disposition: contradicted → revise the **other** dossier with archive + `profileVersion` bump; differing figures → state both and say nothing reconciles them; open question the new research answers → close and date it; accurate → leave alone. Report counts reviewed and changed. Batch requests / Standard treatment / Commit-push renumbered 8 / 9 / 10.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean; `8b91c94` pushed and merging. Program state: **38 of 65 new companies done, 4 of 30 guide passes done.**
+
+- **Opus 5 xhigh remaining:** C5 (ENGIE North America · AES Clean Energy · RWE Clean Energy), C6, C7, C8, C9, C10, C12 — 18 companies over 7 sessions — plus **26 guide backfills**.
+- **Fable 5.1 remaining:** F6 (MGX · Excelsior Energy Capital · X-energy — first `investor` chips with data), F7 (Compass · EdgeCore · PowerHouse), F8 (Fermi America · Tract · Prime Data Centers).
+- **Classroom register:** G6 open (wants a guidance module via `industry guidance:` plus a developer-supplied document); G10 Partial; G11 deferred; G12 by design.
+- **Not started, and now the developer's stated priority:** `scripts/check-profiler-crossrefs.py` and the retroactive sweep of the pre-existing cross-dossier pairs. See the recommendation below.
+
+### Key decisions and findings
+
+- **The corpus has a structural blind spot no checker covered.** `sync-profiler-registry.py`, `build-profiler-graph.py` and `check-profiler-study.py` all validate a dossier against *itself* or against the registry. None asks whether **two dossiers assert contradictory facts about the same thing**. Step 7 closes this going forward by rule; it does not touch the backlog.
+- **The backlog was measured this session.** 127 dossiers, **1.79M tokens** of corpus, **870–1,130 distinct cross-dossier pairs** (the count is matcher-dependent — a suffix-stripping tokenizer gives 870, the looser earlier matcher gave 1,126). **5,719 mention occurrences.** Distribution is sharply concentrated: **top 10 targets = 39% of pairs, top 25 = 65%**; 11 of 79 targets have only 1–2 inbound. NVIDIA 56, Tesla 51, Microsoft 46, Siemens Energy 39, GE Vernova 29, Vertiv 26, OpenAI 25, Eaton 24, Oracle 23, Fluence 23.
+- **Field distribution decides the checker's scope.** On a 1,378-mention sample: `relationships` 297, `sources` 295, `productsAndServices` 225, `recentDevelopments` 207, `technicalSpecs` 84, `strategyRead` 80, `decisionMakers` 58, `ecosystemRole` 39, `summary` 32, `policyExposure` 31, `financials` 18. **`sources` and `decisionMakers` are 26% of the surface and are pure noise** — source titles and exec career history. **78% of mentions contain a digit**, so a naive numeric-conflict detector has enormous surface and will drown in false positives unless scoped.
+- **The `meta` case is the checker's hardest calibration target.** 2,176 MW and 2.1 GW are numerically **equal**; a unit-normalizing comparator says "no conflict" and misses the drift, because the drift was the **omitted 433 MW of uprates**, not a wrong number. Any checker that only compares normalized magnitudes would have scored 3 of 4 known cases, not 4.
+- **A model upgrade is not the fix for accuracy, and this session is the second data point.** C4's premises were caught because the prompt told the agents to check them — the same reason F5's were. What was missing in both cases was a **rule**, not reasoning depth. The one thing that went wrong this session that a better model would not have fixed was the absence of a cross-dossier gate.
+- **I over-called one of the four items and corrected it mid-session.** I first described the Burns & McDonnell / Vistra Moss Landing item as two dossiers contradicting each other. They did not — B&McD plausibly worked both Phase II and the Phase III expansion, and `vistra.profile.json` had already recorded both correctly. It was an **open question**, not a contradiction. This is the exact failure mode the retroactive sweep must be protected against: over-calling rewrites accurate dossiers.
+- **I also mis-stated a diagnosis earlier in the session and corrected it publicly.** I claimed §5's Phase C descriptions "were written from corpus mentions rather than from filings." Selection was corpus-driven, but the descriptive claims mostly appear nowhere in the corpus — the accurate diagnosis is **unattributed market knowledge written from memory at plan-approval time**.
+
+### Active context
+
+- Branch `claude/phase-c4-profiler-session-rwzxo5`; repo version **v04.64r**; CHANGELOG **81/100**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders.
+- Registry **127** companies; concepts **811**; study guides **101**; graph **903 edges (678 curated)**; archive index **237 entries across 95 slugs**; calendar 88 rows.
+- Scratchpad tooling that survives as a recipe: `urlcheck.py` (URL-index gate), `c4-render-check.py` (Playwright harness — threaded HTTP server, `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, GAS stub for `script.google.com`, `.ov-sources ol li` for source counts, `.gd-term` resolved against `gdGlossMap` **not** `e.title`).
+- **Model recommendation recorded for the developer's next two jobs:** build `scripts/check-profiler-crossrefs.py` on **Opus 5 xhigh** (one-time durable artifact, adversarial false-positive design problem, four ground-truth cases to calibrate against); run the retroactive sweep on **Fable 5.1 High** (high-volume shallow adjudication where §2 already records Fable as better at hedging and relationship discipline — the anti-over-calling property the sweep needs most). Not Medium for either.
+
+### Recommendation for next session
+
+- **Build `scripts/check-profiler-crossrefs.py` as a fresh Opus 5 xhigh session, using the paste-ready prompt written in chat on 2026-09-05 at ~01:50 PM EST** — it is the only one of the four proposed follow-ups that both makes step 7 verifiable instead of self-reported and reaches the 870–1,130-pair pre-existing backlog, and it must exist and be tuned to a measured false-positive rate **before** any retroactive sweep starts, or the sweep burns its budget adjudicating noise. The session must end with the checker's FP rate measured on a sample and with all four known-drift cases scored against their pre-fix revisions in `archive/`.
+**To continue:** type `build the cross-reference checker on Opus 5 xhigh`
+
+## Previous Sessions
+
+### Session — Phase B F5 (Fable 5.1 Medium)
+
 **Date:** 2026-09-05 04:05 AM EST
 **Repo version:** v04.62r (bumped this session on the F5 push commit `b735830`; this entry is the housekeeping commit `Remember session context`)
 **Branch:** `claude/fable-5-1-medium-phase-b-f5-bll92b` (the v04.62r push merged and the branch was swept; rebased onto `origin/main` at `5cfd6fe` before this commit)
@@ -48,44 +102,4 @@ Nothing is in flight. Working tree clean after this commit. Program state: **35 
 - **Run Phase C session C4 (Talen Energy · Vistra · NRG Energy) as a fresh Opus 5 xhigh session using the paste-ready prompt written in chat on 2026-09-05 at ~04:10 AM EST** — three public IPP dossiers plus study guides, which is where the Opus thread was left off in plan order after C11 (v04.52r), is the strongest Opus fit left in the plan (three companies with 10-Ks, earnings calls and investor decks, the reading depth the v04.57r head-to-head found Opus better at), and unlocks the Phase D `clean-firm-power` lesson (C4 + C11).
 **To continue:** type `run C4 on Opus 5 xhigh`
 
-## Previous Sessions
-
-
-**Date:** 2026-09-05 02:52 AM EST
-**Repo version:** v04.61r (bumped this session on the F4 push commit `5a3497c`; this entry is the housekeeping commit `Remember session context`)
-**Branch:** `claude/fable-phase-b-f4-802vt2` (the v04.61r push merged and the branch was swept; rebased onto `origin/main` at `ecd9dbb` before this commit)
-**Model:** Fable 5.1 High — Phase B session F4 (Invenergy · GridStor · Available Power).
-
-### What was done
-
-- **Three `developer · ipp` dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** Sources 134 / 97 / 42 (first-party 55 / 44 / 26 percent — Available Power's is low because its own storage pages are gone and the record is partner releases); relationships 14 / 6 / 2, all resolving; 35 headshots (Invenergy 16, GridStor 14, Available Power 5 company-published low-poly portrait renders); 38 shared concepts registered (owner-and-financier vocabulary: managing member, economic ownership, infrastructure fund, fund life, LP/GP, asset manager, sponsor-created platform, merchant transmission, converter station, OATT, loan guarantee, conditional commitment, eminent domain, easement, farmdown, virtual PPA, EAPA, revenue swap, distributed generation resource, DSP, site lease, turnkey EPC, project marketplace, CEQA, CCA, Chapter 381). Registry sync (121), graph rebuild (837 edges), study checker (95 guides, 768 concepts) and the Playwright render of every tab and guide all clean; three quarterly calendar rows (82); §8 rows flipped to `B4 → F4 … v1 · v04.61r | ✓ · v04.61r`; execs recount 468 across 74; CHANGELOG 78/100.
-- **Every URL asserted programmatically** (`scratchpad/urlcheck.py` — report index from the six `## ALL URLS` lists plus a corpus tier) — 0 unmatched per dossier (193 / 135 / 67 URLs); it caught one truncated Cleanview path and one source filed under the wrong company.
-- **Premises re-verified and corrected, not smoothed:** Invenergy is **#2 by development pipeline** on Cleanview (41,328 MW behind NextEra's 68,229) — 'largest privately held' is company and Blackstone language with no ranking behind it; ownership is CDPQ (52.4% economic of Invenergy Renewables LLC since 2018), Blackstone Infrastructure (about USD 4bn, 2022–2023) and management as managing member, gas in Invenergy Clean Power LLC 50/50 with InfraBridge, no 2024–2026 change; no battery supplier is named anywhere. GridStor is **contracted, not merchant** (SCE 17-yr RA, APS 20-yr toll, a Fortune 500 toll, an Axpo revenue swap), multi-market (CA/TX/AZ/OK/CO), Portland-based, owned by 'a fund managed by Goldman Sachs Asset Management' (trade press: Horizon Energy Storage) that **created** the company in 2021. Available Power is **Texas-only, develop-and-sell at NTP** of 9.9 MW batteries with Linxon as turnkey EPC, no sponsor named, nothing operating on any tracker, and a parent (Available Infrastructure, Tysons Corner) that pivoted to edge-AI in July 2025; the storage record is silent since March 2024; the 'Sungrow' in the 2024 ESN article is a caption about another company.
-- **Six agents died on the HTTP 429 session limit** ~25 minutes in and were resumed by SendMessage after the 06:00 UTC reset with context intact (the F2 lesson); the stall cost ~2h 15m, net work ~1h 13m against a 90m estimate.
-- **Evaluated Fable 5.1 Medium vs High for F5–F8 and wrote the paste-ready F5 prompt** (esVolta · Strata Clean Energy · Hunt Energy Network) in chat at ~02:55 AM EST.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean after this commit. F5–F8 remain (see the model decision below); the G6 guidance module (Opus 5 xhigh), Phase C C4–C10 + C12, 26 guide backfills, the F9 Xcel head-to-head and Phase D are unchanged.
-
-### Key decisions and findings
-
-- **Model for F5–F8: run F5 on Fable 5.1 Medium as a measured test, with tripwires.** Anthropic's Fable 5.1 docs (released 1 September 2026) say Low or Medium effort matches or beats Fable 5 at High at much lower cost, that the 5.1-over-5 gains are widest at higher effort, and that the one documented lower-effort regression is the model answering from memory instead of searching — the research agents' failure mode, which the URL-index gate structurally catches. The binding constraint on this program has been the cap (two 429 stalls in four sessions). If F5's agents return fewer URLs (<50 per third-party agent), lean on snippets, or the judgments read as summaries, switch F6–F8 back to High; either way record the effort actually used in the §8 Model column (`Fable 5.1 High → Medium`) per the §2 substitution rule. The claim that the reset was update-driven is unverified — the 06:00 UTC reset is the ordinary session-limit reset.
-- **The render harness needs two fixes** now in `scratchpad/f4-render-check.py`: `page.goto('about:blank')` before each dossier (the study-guide overlay otherwise intercepts the next dossier's tab clicks) and a `try/catch` around the localStorage init script (`about:blank` denies it). The sources count reads `.ov-sources ol li`, not `#ov-main ol li` (the numbered judgments leak in).
-- **Timeline sections use lane keys `gen` / `deploy` / `eco`** (`GD_LANE_COLORS`); other keys render grey. Registry `hq` strings are free-form; `City, ST, USA` was used.
-- **The URL-index corpus tier only sees dossiers already on disk** — write all three profiles before relying on cross-citation; `urlcheck.py` excludes the slug being checked.
-- **Analyst supplier attributions are `announced` with the reporter named** (Enerdatics' SolBank 3.0 at White Tank); interconnection adjacencies to a covered utility are `other` (Xcel's Riverdale substation, AEP's Closner); exec alumni links stay in prose (Tony Song ex-Invenergy, Chris Taylor ex-Google).
-- **Company-published portrait renders count as company photos** (Available Power's low-poly set) — used, not skipped.
-
-### Active context
-
-- Branch `claude/fable-phase-b-f4-802vt2`; repo version **v04.61r**; CHANGELOG 78/100.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders.
-- Registry 121 companies; concepts 768; calendar 82 rows; execs 468 images across 74 companies.
-
-### Recommendation for next session
-
-- **Run F5 (esVolta · Strata Clean Energy · Hunt Energy Network) as a fresh Fable 5.1 Medium session using the paste-ready prompt written in chat on 2026-09-05 at ~02:55 AM EST** — three `developer · ipp` dossiers + three guides, the B5 premises ("contracted and merchant mid-size BESS owners across CAISO, PJM and ERCOT") re-verified first, §8 rows flipped to `B5 → F5` with the effort level recorded, one push commit (v04.61r → v04.62r); fall back to High on the tripwires above.
-**To continue:** type `run F5 on Fable 5.1 Medium`
-
+Developed by: LightAISolutions
