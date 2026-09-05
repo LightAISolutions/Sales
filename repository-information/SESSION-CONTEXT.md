@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-05 02:52 AM EST
+**Repo version:** v04.61r (bumped this session on the F4 push commit `5a3497c`; this entry is the housekeeping commit `Remember session context`)
+**Branch:** `claude/fable-phase-b-f4-802vt2` (the v04.61r push merged and the branch was swept; rebased onto `origin/main` at `ecd9dbb` before this commit)
+**Model:** Fable 5.1 High — Phase B session F4 (Invenergy · GridStor · Available Power).
+
+### What was done
+
+- **Three `developer · ipp` dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** Sources 134 / 97 / 42 (first-party 55 / 44 / 26 percent — Available Power's is low because its own storage pages are gone and the record is partner releases); relationships 14 / 6 / 2, all resolving; 35 headshots (Invenergy 16, GridStor 14, Available Power 5 company-published low-poly portrait renders); 38 shared concepts registered (owner-and-financier vocabulary: managing member, economic ownership, infrastructure fund, fund life, LP/GP, asset manager, sponsor-created platform, merchant transmission, converter station, OATT, loan guarantee, conditional commitment, eminent domain, easement, farmdown, virtual PPA, EAPA, revenue swap, distributed generation resource, DSP, site lease, turnkey EPC, project marketplace, CEQA, CCA, Chapter 381). Registry sync (121), graph rebuild (837 edges), study checker (95 guides, 768 concepts) and the Playwright render of every tab and guide all clean; three quarterly calendar rows (82); §8 rows flipped to `B4 → F4 … v1 · v04.61r | ✓ · v04.61r`; execs recount 468 across 74; CHANGELOG 78/100.
+- **Every URL asserted programmatically** (`scratchpad/urlcheck.py` — report index from the six `## ALL URLS` lists plus a corpus tier) — 0 unmatched per dossier (193 / 135 / 67 URLs); it caught one truncated Cleanview path and one source filed under the wrong company.
+- **Premises re-verified and corrected, not smoothed:** Invenergy is **#2 by development pipeline** on Cleanview (41,328 MW behind NextEra's 68,229) — 'largest privately held' is company and Blackstone language with no ranking behind it; ownership is CDPQ (52.4% economic of Invenergy Renewables LLC since 2018), Blackstone Infrastructure (about USD 4bn, 2022–2023) and management as managing member, gas in Invenergy Clean Power LLC 50/50 with InfraBridge, no 2024–2026 change; no battery supplier is named anywhere. GridStor is **contracted, not merchant** (SCE 17-yr RA, APS 20-yr toll, a Fortune 500 toll, an Axpo revenue swap), multi-market (CA/TX/AZ/OK/CO), Portland-based, owned by 'a fund managed by Goldman Sachs Asset Management' (trade press: Horizon Energy Storage) that **created** the company in 2021. Available Power is **Texas-only, develop-and-sell at NTP** of 9.9 MW batteries with Linxon as turnkey EPC, no sponsor named, nothing operating on any tracker, and a parent (Available Infrastructure, Tysons Corner) that pivoted to edge-AI in July 2025; the storage record is silent since March 2024; the 'Sungrow' in the 2024 ESN article is a caption about another company.
+- **Six agents died on the HTTP 429 session limit** ~25 minutes in and were resumed by SendMessage after the 06:00 UTC reset with context intact (the F2 lesson); the stall cost ~2h 15m, net work ~1h 13m against a 90m estimate.
+- **Evaluated Fable 5.1 Medium vs High for F5–F8 and wrote the paste-ready F5 prompt** (esVolta · Strata Clean Energy · Hunt Energy Network) in chat at ~02:55 AM EST.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean after this commit. F5–F8 remain (see the model decision below); the G6 guidance module (Opus 5 xhigh), Phase C C4–C10 + C12, 26 guide backfills, the F9 Xcel head-to-head and Phase D are unchanged.
+
+### Key decisions and findings
+
+- **Model for F5–F8: run F5 on Fable 5.1 Medium as a measured test, with tripwires.** Anthropic's Fable 5.1 docs (released 1 September 2026) say Low or Medium effort matches or beats Fable 5 at High at much lower cost, that the 5.1-over-5 gains are widest at higher effort, and that the one documented lower-effort regression is the model answering from memory instead of searching — the research agents' failure mode, which the URL-index gate structurally catches. The binding constraint on this program has been the cap (two 429 stalls in four sessions). If F5's agents return fewer URLs (<50 per third-party agent), lean on snippets, or the judgments read as summaries, switch F6–F8 back to High; either way record the effort actually used in the §8 Model column (`Fable 5.1 High → Medium`) per the §2 substitution rule. The claim that the reset was update-driven is unverified — the 06:00 UTC reset is the ordinary session-limit reset.
+- **The render harness needs two fixes** now in `scratchpad/f4-render-check.py`: `page.goto('about:blank')` before each dossier (the study-guide overlay otherwise intercepts the next dossier's tab clicks) and a `try/catch` around the localStorage init script (`about:blank` denies it). The sources count reads `.ov-sources ol li`, not `#ov-main ol li` (the numbered judgments leak in).
+- **Timeline sections use lane keys `gen` / `deploy` / `eco`** (`GD_LANE_COLORS`); other keys render grey. Registry `hq` strings are free-form; `City, ST, USA` was used.
+- **The URL-index corpus tier only sees dossiers already on disk** — write all three profiles before relying on cross-citation; `urlcheck.py` excludes the slug being checked.
+- **Analyst supplier attributions are `announced` with the reporter named** (Enerdatics' SolBank 3.0 at White Tank); interconnection adjacencies to a covered utility are `other` (Xcel's Riverdale substation, AEP's Closner); exec alumni links stay in prose (Tony Song ex-Invenergy, Chris Taylor ex-Google).
+- **Company-published portrait renders count as company photos** (Available Power's low-poly set) — used, not skipped.
+
+### Active context
+
+- Branch `claude/fable-phase-b-f4-802vt2`; repo version **v04.61r**; CHANGELOG 78/100.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders.
+- Registry 121 companies; concepts 768; calendar 82 rows; execs 468 images across 74 companies.
+
+### Recommendation for next session
+
+- **Run F5 (esVolta · Strata Clean Energy · Hunt Energy Network) as a fresh Fable 5.1 Medium session using the paste-ready prompt written in chat on 2026-09-05 at ~02:55 AM EST** — three `developer · ipp` dossiers + three guides, the B5 premises ("contracted and merchant mid-size BESS owners across CAISO, PJM and ERCOT") re-verified first, §8 rows flipped to `B5 → F5` with the effort level recorded, one push commit (v04.61r → v04.62r); fall back to High on the tripwires above.
+**To continue:** type `run F5 on Fable 5.1 Medium`
+
+## Previous Sessions
+
 **Date:** 2026-09-04 11:18 PM EST
 **Repo version:** v04.60r (bumped this session on the F3 push commit `4507585`; this entry is the housekeeping commit `Remember session context`)
 **Branch:** `claude/fable-phase-b-f3-profiler-efm1gh` (the v04.60r push merged and the branch was swept; rebased onto `origin/main` at `80a8e06` before this commit)
@@ -43,43 +83,3 @@ Nothing is in flight. Working tree clean after this commit. F4–F8 remain on Fa
 
 - **Run F4 (Invenergy · Gridstor · Available Power) as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at ~11:18 PM EST** — three `developer · ipp` dossiers + three guides, the Invenergy ownership (Blackstone Infrastructure stake, CDPQ) and the Gridstor / Available Power sponsor premises re-verified first, §8 rows flipped to `B4 → F4`, one push commit (v04.60r → v04.61r).
 **To continue:** type `run F4 on Fable 5.1 High`
-
-## Previous Sessions
-
-**Date:** 2026-09-04 10:12 PM EST
-**Repo version:** v04.59r (bumped this session on the F2 push commit `911f8e0`; this entry is the housekeeping commit `Remember session context`)
-**Branch:** `claude/fable-phase-b-f2-sf0i80` (the v04.59r push merged and the branch was swept; rebased onto `origin/main` at `4634e10` before this commit)
-**Model:** Fable 5.1 High — Phase B session F2 (Fluidstack · Nscale · Anthropic).
-
-### What was done
-
-- **Three dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** `fluidstack` and `nscale` under `neocloud`, `anthropic` under `hyperscaler` — the first frontier-lab dossier. Sources 136 / 126 / 149 (first-party 47 / 51 / 56 percent); relationships 9 / 9 / 13, all resolving; 31 headshots (none for Fluidstack — no leadership page with photos exists); 46 shared concepts registered (tenant-of-record and lease vocabulary, anchored-neocloud financing, the buyer-side compute-contract terms). Registry sync (115), graph rebuild (785 edges), study checker (89 guides, 684 concepts) and the Playwright render of every dossier tab and every guide all clean; three quarterly calendar rows (76).
-- **Every URL asserted programmatically.** `scratchpad/urlindex.py` built a URL index from the six agent reports (plus session-fetched pages and other covered dossiers' sources as a second tier) and every sources[], relationships[], policyExposure[] and recentDevelopments[] URL was checked against it before assembly — 0 unmatched per dossier. The F1 lesson, applied.
-- **Premises re-verified as dated facts and recorded, not smoothed:** the 401 MW / 20-year Anthropic lease is at Justified (Hawesville, KY), direct with TeraWulf, no Fluidstack entity; Microsoft walked from Nscale's 1.35 GW Monarch LOI (Semafor) and the Anthropic 460 MW / about USD 45bn contract there is press-reported and unconfirmed by either party (`announced`); OpenAI's Stargate Norway LOI was replaced by Microsoft and Stargate UK is paused; Fluidstack's USD 1.5bn round at USD 18bn is unannounced by the company; its 1 GW France campus was withdrawn in March 2026.
-- **§8 rows flipped to `B9 → F2 … v1 · v04.59r | ✓ · v04.59r`.** CLASSROOM-CURRICULUM-PLAN.md §6 untouched (F2 closes no register row). README execs line recounted from the files by registry slug: **407 images across 69 companies** — the prior 68 baseline was one high (67 by the same method), so the count moved by one company fewer than the two added.
-- **Wrote the paste-ready F3 prompt** (Aypa Power · Spearmint Energy · Intersect Power) in chat at ~10:15 PM EST.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean after this commit. F3–F8 remain on Fable 5.1 High; the G6 guidance module (Opus 5 xhigh), Phase C C4–C10 + C12, 26 guide backfills and Phase D are unchanged.
-
-### Key decisions and findings
-
-- **The URL index is the assembly gate, not a post-check.** Build `<slug>-{a,b}.md` reports that each end in `## ALL URLS`, index them, and have the assembler refuse any URL not in the index; cite a source from another covered dossier's sources[] (corpus tier) rather than from memory when a release times out or 404s.
-- **Reported contract values stay `announced` with the reporter named.** The Nscale–Anthropic Monarch terms and the Lambda contract are the two largest unconfirmed numbers in the three dossiers; each calendar row's first watch item is their confirmation.
-- **A subsidiary's parent domains count as first-party** (schema rule) — Anthropic's registry domains include claude.com and its CDN; Fluidstack's include the project-site domains.
-- **Six agents died on an HTTP 429 usage limit mid-run** and were resumed by SendMessage with context intact after the user's reset — resume rather than respawn; the reports were complete. The stall cost ~1h 25m; net of it F2 ran ~72 minutes against a 90m estimate.
-- **`json.dump(indent=2, ensure_ascii=False)` matches the calendar file's formatting** (46-line diff for three rows); the concepts file is the same.
-- **Environment re-confirmed:** Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; threaded HTTP server + GAS stub as admin + accounts.google.com fulfilled empty; `f2-render-check.py` (per-slug tabs incl. Relationships, sources count, `{{`, then `#ov-study-btn` and `.gd-term` data-terms against concepts + glossary) is the working harness — dry-run it on a known-good slug first. Shell cwd resets to the repo root after every Bash call; tool output above ~30 KB persists to a file; foreground sleep is blocked (Monitor tool).
-
-### Active context
-
-- Branch `claude/fable-phase-b-f2-sf0i80`; repo version **v04.59r**; CHANGELOG 76/100.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders.
-- Registry 115 companies; concepts 684; calendar 76 rows; execs 407 images across 69 companies.
-
-### Recommendation for next session
-
-- **Run F3 (Aypa Power · Spearmint Energy · Intersect Power) as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at ~10:15 PM EST** — three `developer · ipp` dossiers + three guides on the BESS-developer buyer side, with the Aypa (Blackstone → Brookfield), Intersect (Google-owned) and Spearmint ownership premises re-verified first, §8 rows flipped to `B3 → F3`, one push commit.
-**To continue:** type `run F3 on Fable 5.1 High`
