@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-04 11:18 PM EST
+**Repo version:** v04.60r (bumped this session on the F3 push commit `4507585`; this entry is the housekeeping commit `Remember session context`)
+**Branch:** `claude/fable-phase-b-f3-profiler-efm1gh` (the v04.60r push merged and the branch was swept; rebased onto `origin/main` at `80a8e06` before this commit)
+**Model:** Fable 5.1 High — Phase B session F3 (Aypa Power · Spearmint Energy · Intersect).
+
+### What was done
+
+- **Three `developer · ipp` dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** Sources 91 / 114 / 116 (first-party 44 / 23 / 51 percent — Spearmint's is low because Business Wire returns 403 and every release was read through mirrors); relationships 4 / 5 / 6, all resolving; 26 headshots (Intersect 7, Spearmint 19; Aypa publishes none); 46 shared concepts registered (the developer-and-financing vocabulary: development-stage ladder, queue position, NTP/COD, ready-to-build, pre-COD M&A, platform sale, tax equity and partnership flip, bridge loans, warehouse, back-leverage, revenue put, energy park, surplus interconnection, co-location net metering, Chapter 312). Registry sync (118), graph rebuild (810 edges), study checker (92 guides, 730 concepts) and the Playwright render of every tab and guide all clean; three quarterly calendar rows (79); §8 rows flipped to `B3 → F3 … v1 · v04.60r | ✓ · v04.60r`; execs recount 433 across 71.
+- **Every URL asserted programmatically** (`scratchpad/urlcheck.py`: report index from the six `## ALL URLS` lists plus a corpus tier) — 0 unmatched per dossier before writing; the check caught two label typos and one parenthesised URL the first regex truncated.
+- **Premises re-verified and corrected, not smoothed:** the Brookfield–Aypa sale is signed (22 July 2026, about USD 7bn EV / USD 3bn equity, Brookfield 8-K) and **not closed**; the 6.5 GW is Brookfield's figure, split by Brookfield Renewable (about 3,000 MW operating and under construction; about 3,500 MW contracted). Spearmint has **no Blackstone or any sponsor** (lender Elda River: 'controlled by Roscommon Analytics'), is develop-to-own not develop-to-sell, and its '15 GWh' is boilerplate dropped from 21 May 2026. Google **closed** the Intersect purchase on 10 March 2026 (USD 5,868m in Alphabet's Q2 10-Q), bought only the parks and team, the fleet went to IPX Power, and **there is no Wyoming campus**.
+- **The brief's list of IPP guides to avoid does not exist** (plus-power, jupiter-power, key-capture-energy, eolian, arevon, terra-gen, nextera-energy-resources have dossiers but no guides — the Phase C backfills); the guides name the Classroom's tolling / ancillary / duration material and the crusoe / xai / google guides instead.
+- **Wrote the paste-ready F4 prompt** (Invenergy · Gridstor · Available Power) in chat at ~11:18 PM EST.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean after this commit. F4–F8 remain on Fable 5.1 High; the G6 guidance module (Opus 5 xhigh), Phase C C4–C10 + C12, 26 guide backfills and Phase D are unchanged.
+
+### Key decisions and findings
+
+- **Business Wire is 403 from this environment.** Read releases through Yahoo Finance, SFNet, 01net, Pulse 2.0, IREI, Energy Global and Batteries News mirrors, and cite the mirror; the company's `in-the-news` page gives the titles. archive.org is blocked too.
+- **Keep parentheses inside URLs in the index regex** (`https?://[^\s<>\[\]"'`]+`, strip trailing punctuation) — an MPUC PDF named `Application%20(1).pdf` was truncated by the F2 pattern.
+- **A design basis in a permit filing is `announced`, not a supply relationship** (Tesla Megapack 2XL in Spearmint's Minnesota applications); a competitor link from an analyst ranking cites the ranking (Modo, Enerdatics).
+- **Exec-background links and JV attributions are not relationships** (Apex/NextEra alumni at Aypa; Linxon as a Hitachi Energy JV) — mention in prose, do not curate.
+- **A company-hosted headshot whose filename marks a LinkedIn origin is skipped** (one Spearmint board photo).
+- **Environment re-confirmed:** `pip install playwright pymupdf pillow pillow-avif-plugin` (AVIF headshots need the plugin); Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; the `f3-render-check.py` harness (threaded server, admin stub, per-slug tabs via `#ov-tab-<key>`, sources count, `{{`, `#ov-study-btn` then `.gd-term` data-terms against concepts + glossary) is the working recipe — dry-run on `fluidstack`. Six agents ran 12–17 minutes each with no 429 stall; net session time 53 minutes against a 90-minute estimate.
+
+### Active context
+
+- Branch `claude/fable-phase-b-f3-profiler-efm1gh`; repo version **v04.60r**; CHANGELOG 77/100.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders.
+- Registry 118 companies; concepts 730; calendar 79 rows; execs 433 images across 71 companies.
+
+### Recommendation for next session
+
+- **Run F4 (Invenergy · Gridstor · Available Power) as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at ~11:18 PM EST** — three `developer · ipp` dossiers + three guides, the Invenergy ownership (Blackstone Infrastructure stake, CDPQ) and the Gridstor / Available Power sponsor premises re-verified first, §8 rows flipped to `B4 → F4`, one push commit (v04.60r → v04.61r).
+**To continue:** type `run F4 on Fable 5.1 High`
+
+## Previous Sessions
+
 **Date:** 2026-09-04 10:12 PM EST
 **Repo version:** v04.59r (bumped this session on the F2 push commit `911f8e0`; this entry is the housekeeping commit `Remember session context`)
 **Branch:** `claude/fable-phase-b-f2-sf0i80` (the v04.59r push merged and the branch was swept; rebased onto `origin/main` at `4634e10` before this commit)
@@ -43,44 +83,3 @@ Nothing is in flight. Working tree clean after this commit. F3–F8 remain on Fa
 
 - **Run F3 (Aypa Power · Spearmint Energy · Intersect Power) as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at ~10:15 PM EST** — three `developer · ipp` dossiers + three guides on the BESS-developer buyer side, with the Aypa (Blackstone → Brookfield), Intersect (Google-owned) and Spearmint ownership premises re-verified first, §8 rows flipped to `B3 → F3`, one push commit.
 **To continue:** type `run F3 on Fable 5.1 High`
-
-## Previous Sessions
-
-**Date:** 2026-09-04 07:29 PM EST
-**Repo version:** v04.58r (bumped this session on the F1 push commit `1c3a3cc`; this entry is the housekeeping commit `Remember session context`)
-**Branch:** `claude/fable-phase-b-f1-5mj1xg` (the v04.58r push merged and the branch was swept; rebased onto `origin/main` at `3e806ee` before this commit)
-**Model:** Fable 5.1 High — Phase B session F1 (DNV · Sargent & Lundy · CoolIT).
-
-### What was done
-
-- **Three dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** `dnv` and `sargent-lundy` are the registry's first two `advisor`-category entries (the roster's Advisor chip now shows 2 and filters to them — Playwright-verified with a screenshot); `coolit` under `supplier`. Sources 101 / 158 / 151 (first-party 32 / 71 / 65 percent); relationships 10 / 16 / 3, all resolving; 28 headshots; 28 shared concepts registered (8 project-finance terms from the IE guides, 20 CDU terms). Registry sync, graph rebuild (745 edges) and the study checker all clean; three quarterly calendar rows.
-- **Premise corrections recorded in the CoolIT dossier, not smoothed:** Ecolab-owned since 2026-07-02 (about USD 4.75bn; KKR + Mubadala only May 2023 → July 2026); Asetek v. CoolIT ended in the 2022-09-11 summary judgment and a settlement, no jury verdict; the Federal Circuit revived CoolIT's '567 patent 2024-03-07. Sargent & Lundy is not an ESOP ("privately owned and led by engineers").
-- **Register:** G7 → **Closed** v04.58r (CDU-specialist half landed; Trane holds the chiller half). G10 → **Partial** v04.58r — two IE dossiers satisfy the independent-engineer half and give `what-bankable-means` public corroboration, but no broker or insurer dossier exists, so the insurance half is still open and the row says so. §8 rows flipped to `B10 → F1 … v1 · v04.58r | ✓ · v04.58r`; §4 carries the dated F1–F8 regrouping paragraph.
-- **Wrote the paste-ready F2 prompt** (Fluidstack · Nscale · Anthropic) in chat at ~07:29 PM EST — same structure as F1, with this session's two lessons added to its ENVIRONMENT block.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean after this commit. F2–F8 remain on Fable 5.1 High; the G6 guidance module (Opus 5 xhigh), Phase C C4–C10 + C12, 26 guide backfills and Phase D are unchanged.
-
-### Key decisions and findings
-
-- **Verify every source URL against the research reports before assembly.** One URL was fabricated mid-assembly (an AEP centenary page for Sargent & Lundy that no report contained); caught before commit by grepping the reports, then the CoolIT assembly asserted every URL programmatically. Future sessions: build the sources list from a URL index extracted from the agent reports, never from memory of a quote.
-- **Ownership and litigation premises in a commissioning brief are dated facts — re-check them first.** The F1 brief said "KKR-owned since 2023" and implied an Asetek jury verdict; both were stale. Put the ownership and litigation questions in the agent prompts explicitly, as F1 did, and record corrections in the dossier's summary and judgments.
-- **`party` field and parent domains:** for a subsidiary, the parent's domain goes into registry `domains` (schema rule), so Ecolab's releases count as first-party for CoolIT. DNV's annual report read from a mirror host carries `party: "company"`; title-only citations of unreadable pages are stated as a collection gap in the dossier rather than dropped.
-- **Concept collisions:** the registry already had `approach` (tower/chiller sense) — `approach-temperature` was registered with only the "approach temperature differential" alias. `direct-to-chip cooling` is an alias of `cold-plate`; `direct-liquid-cooling` carries `DLC` only. Check aliases before registering.
-- **JSON formatting:** `profiler-concepts.json` and `profiler-refresh-calendar.json` are two-space indented; a one-space dump produced a 10,000-line diff and was re-serialised before commit.
-- **Environment re-confirmed:** dnv.com is Cloudflare-blocked (403 on every page) and annualreport.dnv.com egress-denied — mirror hosts (IIOA for the annual report, ASHB for RP-0043) worked; tool output above ~30 KB is persisted to a file, so read reports in ≤40-line chunks; foreground `sleep` is blocked — use the Monitor tool to wait on agent report files; a stop hook fires on uncommitted plan edits while agents run — `git stash` them and pop before the commit. Threaded HTTP server + roles stub + `/opt/pw-browsers/chromium-*` still the working Playwright recipe (`f1-render-check.py` pattern: roster chip click, per-slug tabs, sources count, `{{}}` and gd-term resolution).
-- **Time:** F1 took 1h 34m against a 45m estimate — six agent reports totalling ~2,000 lines, a context compaction, and dossiers averaging 137 sources. Estimate F2 at ~90 minutes.
-
-### Active context
-
-- Branch `claude/fable-phase-b-f1-5mj1xg`; repo version **v04.58r**; CHANGELOG 75/100.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders.
-- Registry 112 companies (2 advisor); concepts 638; calendar 73 rows; execs 376 images across 68 companies.
-
-### Recommendation for next session
-
-- **Run F2 (Fluidstack · Nscale · Anthropic) as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at ~07:29 PM EST** — three dossiers + three guides, first hyperscaler-category AI lab authored on Fable, neocloud guides that must not repeat CoreWeave / Nebius / Lambda, §8 rows flipped, one push commit.
-**To continue:** type `run F2 on Fable 5.1 High`
-
