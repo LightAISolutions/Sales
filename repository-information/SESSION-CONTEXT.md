@@ -6,6 +6,62 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-05 03:37 PM EST
+**Repo version:** v04.69r — five push commits this session (v04.65r → v04.69r)
+**Branch:** `claude/profiler-crossref-checker-3x3r4n` (rebased onto `origin/main` before each of the five pushes; each merged and was swept before the next)
+**Model:** Opus 5 xhigh — the cross-reference checker build, then four corrective passes the build itself surfaced.
+
+### What was done
+
+- **v04.65r — `scripts/check-profiler-crossrefs.py` built, the first checker that reads two dossiers against each other.** Three detectors: **differing figures** (two magnitudes for one apparent fact in a shared dimension), **open questions** (one dossier flags something unresolved that another answers), and an opt-in **grouped attribution** class. Never edits a dossier. 1.4 s over 127 dossiers / 25,152 passages. Companion `PROFILER-CROSSREF-CALIBRATION.md` and the `profiler-crossref-accepted.json` accept list.
+- **Scored 3 of 4 against the v04.64r drift cases** using the archived pre-fix revisions as a reconstructed corpus. Caught `meta` (2.1 GW vs Vistra's 2,609 MW, Δ 19.5 %), `terawulf` (~$92M vs Talen's $85M, Δ 7.6 %, anchor `Nautilus`), `burns-mcdonnell` (marker `no source ties`, anchor `Moss Landing`). **Missed `invenergy`** — a categorical mischaracterisation in which every number is right; out of scope for a static checker and the docstring says so rather than stretching a definition. All three caught cases vanish on the fixed corpus **with no accept-list entry**, which is the evidence it measures drift rather than coincidence.
+- **False-positive rate measured, not estimated: 71 % (precision 29 %) on a seven-item load** — a full census of the live corpus, all seven adjudicated, with **66 distinct candidates hand-checked** across the tuning stages. Volume, not rate, was the design target: 148 candidates at ~10 % precision became 7.
+- **v04.66r — the two open candidates adjudicated.** `enchanted-rock` v3 → v4 and `hithium` v8 → v9, both closed by revising the **asking** dossier; `anthropic` and `jupiter-power` were accurate and left alone. Open-question fingerprints changed to include both claim texts so an edited claim reopens a candidate, as the docstring already promised.
+- **v04.67r — the hithium sourcing claim corrected (v9 → v10) after the developer challenged it.** v9 said the three layers were "documented from Hithium's side". Reading the **citations** rather than the prose shows **one** is: the partner roster, in Hithium's own HKEX prospectus (27 Oct 2025). The June 2024 3 GWh agreement rests on trade press (Solarbe Global, corroborated by SMM) and Trimount on Energy-Storage.News. v9 also omitted that **Jupiter's CTO Michael Geier is quoted in the 3 GWh announcement**.
+- **v04.67r also fixed a false green in the checker.** `OQ_SCOPE_MAX` had silently dropped that very candidate — documenting the reconciliation thoroughly pushed both records past 900 characters and the checker reported a clean pass on a pair it had stopped reading. The cap stays (raising it to 1500 admits eight more candidates with no ground-truth gain); every scope it declines to examine is now **reported** — 16 on the current corpus.
+- **v04.68r — the sourcing rule added to Profiler Command step 7.** Any statement about *where* a claim is documented is a claim about the `sources[]` arrays and must be resolved by opening the cited entries on both dossiers. Carries the developer directive: **high verity is the priority; when the citations do not settle something, state the gap clearly and honestly.**
+- **v04.69r — §5's `Why` column demoted from fact to hypothesis** in `PROFILER-COVERAGE-PLAN.md`, with a banner marking it unverified prompt material, a new `Checked` column recording each session's real status, and a §7 obligation (plus a prompt-template line) requiring each session to rewrite its own row with what was found.
+- **All 16 not-examined scopes were read, not sampled** — none hides a cross-dossier answer. Six are mutual hedges, seven are a company's own internal status or a regulatory question, two were the adjudicated hithium pair. The three that looked answerable were checked against their counterparts and came back negative.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean; `3bd24d7` pushed and merging. `check-profiler-crossrefs.py` **exits 0** with 6 accepted candidates and 16 scopes reported as not examined. Program state is **unchanged from the C4 session — 38 of 65 new companies done, 4 of 30 guide passes done**; this session added no dossiers.
+
+- **Opus 5 xhigh remaining:** C5 (ENGIE North America · AES Clean Energy · RWE Clean Energy), C6, C7, C8, C9, C10, C12 — 18 companies over 7 sessions — plus **26 guide backfills**.
+- **Fable 5.1 remaining:** F6 (MGX · Excelsior Energy Capital · X-energy), F7 (Compass · EdgeCore · PowerHouse), F8 (Fermi America · Tract · Prime Data Centers).
+- **Classroom register:** G6 open; G10 Partial; G11 deferred; G12 by design.
+### Key decisions and findings
+
+- **The `meta` case — the one a magnitude comparator cannot see — is solved, by two mechanisms.** 2,176 MW and 2.1 GW are equal to two significant figures, so a comparator that normalises *and* applies a tolerance calls them the same. **Strict equality with a banded difference** catches the rounded restatement (2,100 ≠ 2,176), and **arithmetic component/total reconciliation** stops the corrected text being flagged forever (2,176 + 433 = 2,609 reconciles; the pre-fix 2,100 + 433 = 2,533 reconciles with nothing). Do not re-introduce a tolerance on equality.
+- **Coverage is narrower than the backlog and this changes sweep planning.** Mutual mention reduces the ~870–1,130 cross-dossier pairs to **260 compared pairs**. The checker is a **floor** under step 7, not the sweep tool the earlier plan imagined. A clean run is not a clean corpus — and now says so.
+- **Two rejected approaches, recorded so they are not re-tried:** requiring a shared rare *topic* anchor on the figure class (Meta and Vistra share no non-company anchor, so it drops the whole omitted-component class), and figure-local lexical overlap (neither figure case shares a unit phrase).
+- **`ATTR_WINDOW = 40` with directional attribution is the load-bearing setting.** A sweep at 40/60/80/120/160 kept both figure cases at every setting; **every** candidate the wider windows added was a false positive. The `DIFF_MAX = 0.25` band ceiling is the most sensitive knob — the `meta` case sits at 19.5 %, so do not go below 22 %.
+- **Closing an open question does not silence it, and that is correct.** The honest close keeps the hedging word, so the uncertainty becomes *documented* rather than *open*. **Revise-and-accept is the normal disposition for the open-question class**; only the figure class routinely goes quiet on its own.
+- **I made the exact error the cross-reference rule exists to catch, while applying that rule.** "Documented from Hithium's side" was inferred from the two dossiers' **prose** instead of their **citations**. The developer caught it by asking for the evidence. The generalisable lesson is now a rule: *a dossier's summary of its own provenance is the text under review and cannot be evidence for it.*
+- **A silent threshold is worse than a wrong one.** The scope cap produced a false green precisely because the reconciliation was written thoroughly — the fuller the write-up, the blinder the tool. Fixing the *silence* rather than the threshold cost nothing and removed a class of failure no amount of tuning would have.
+- **The developer's §5 tally was checked and corrected before it was written in.** The instruction said "twelve for twelve wrong"; the repo documents premise verdicts for **two** sessions — C4 (§5, all three wrong, v04.63r) and B5 (§4, all three wrong, v04.62r). Phase C has shipped **14 companies across five sessions**; C1, C2, C3 and C11 recorded **no verdict either way** and are marked **unknown, not correct**. The banner says "wrong in every Phase C session where it was checked — one of five".
+- **Provenance of the action plan could be confirmed only in substance.** It is the v04.57r-era screenshot, not in the repo; the quoted phase appears nowhere in it. Said so plainly rather than implying a match.
+- **One partial signal was deliberately not written in.** Hithium's HKEX prospectus customer roster names **Lightsource bp, not Aula**, which bears on the open Woolooga post-sale ownership question in `lightsource-bp` — but recording it as a resolution would repeat the overstatement the new rule forbids. Reported to the developer instead; **still open, developer's call**.
+
+### Active context
+
+- Branch `claude/profiler-crossref-checker-3x3r4n`; repo version **v04.69r**; CHANGELOG **86/100**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders.
+- Registry **127** companies; concepts **811**; study guides **101**; graph **903 edges (678 curated, 2,788 evidence items)**; archive index **240 entries across 95 slugs**.
+- Checker state: `python3 scripts/check-profiler-crossrefs.py` → **exit 0**, 6 accepted, 16 not examined. Useful flags: `--json`, `--pair A B`, `--only`, `--include-grouped`, `--require-anchor`, `--max-delta`, `--data DIR` (the last one is how the ground-truth corpus is scored).
+- **Ground-truth reproduction recipe** is in `PROFILER-CROSSREF-CALIBRATION.md` — copy the corpus to a temp dir, swap in the four archived pre-fix revisions, run with `--data`.
+- Pre-existing gap left untouched: `hithium.profile.v5.json` is absent from `archive/` while v1–v4 and v6–v9 are present.
+
+### Recommendation for next session
+
+- **Run Phase C session C5 (ENGIE North America · AES Clean Energy · RWE Clean Energy) on Opus 5 xhigh** — the checker work is finished and the corpus is green, so the highest-value next action is production coverage, and C5 is the **first session to exercise both new rules**: the step 7 sourcing rule (verify provenance against `sources[]`, never from another dossier's prose) and the §5 obligation to rewrite its own `Why` cell and fill in `Checked`. Running it next is how we find out whether the rules hold under a real research pass rather than in review.
+**To continue:** type `run Phase C session C5 on Opus 5 xhigh`
+
+## Previous Sessions
+
+### Session — Phase C C4 + cross-dossier reconciliation (Opus 5 xhigh)
+
 **Date:** 2026-09-05 01:50 PM EST
 **Repo version:** v04.64r (bumped on the push commit `8b91c94`; C4 itself shipped at v04.63r in commit `710034c`, which merged mid-session)
 **Branch:** `claude/phase-c4-profiler-session-rwzxo5` (rebased onto `origin/main` at `b44d0f9` after the v04.63r merge, before the v04.64r edits)
@@ -55,51 +111,3 @@ Nothing is in flight. Working tree clean; `8b91c94` pushed and merging. Program 
 
 - **Build `scripts/check-profiler-crossrefs.py` as a fresh Opus 5 xhigh session, using the paste-ready prompt written in chat on 2026-09-05 at ~01:50 PM EST** — it is the only one of the four proposed follow-ups that both makes step 7 verifiable instead of self-reported and reaches the 870–1,130-pair pre-existing backlog, and it must exist and be tuned to a measured false-positive rate **before** any retroactive sweep starts, or the sweep burns its budget adjudicating noise. The session must end with the checker's FP rate measured on a sample and with all four known-drift cases scored against their pre-fix revisions in `archive/`.
 **To continue:** type `build the cross-reference checker on Opus 5 xhigh`
-
-## Previous Sessions
-
-### Session — Phase B F5 (Fable 5.1 Medium)
-
-**Date:** 2026-09-05 04:05 AM EST
-**Repo version:** v04.62r (bumped this session on the F5 push commit `b735830`; this entry is the housekeeping commit `Remember session context`)
-**Branch:** `claude/fable-5-1-medium-phase-b-f5-bll92b` (the v04.62r push merged and the branch was swept; rebased onto `origin/main` at `5cfd6fe` before this commit)
-**Model:** Fable 5.1 Medium — Phase B session F5 (esVolta · Strata Clean Energy · Hunt Energy Network). The developer switched to **Opus 5 xhigh** at the bookkeeping tail, so F5 measures Medium on the research and authoring only.
-
-### What was done
-
-- **Three `developer · ipp` dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** Sources 108 / 103 / 87 (first-party 31 / 50 / 32 percent); relationships 4 / 11 / 7, all resolving; policy regimes 3 / 3 / 4; 22 headshots (Strata 10, esVolta 7, Hunt 5). 18 shared concepts registered (786 total); registry sync (124), graph rebuild (865 edges, 653 curated), study checker (98 guides) and the Playwright render of every tab and guide all clean; three quarterly calendar rows (85); §8 rows flipped to `B5 → F5 … v1 · v04.62r | ✓ · v04.62r`; execs recount 490 across 77; CHANGELOG 79/100.
-- **Every URL asserted programmatically** (`scratchpad/urlcheck.py`, the F4 recipe) — 0 unmatched per dossier (139 / 140 / 119 URLs).
-- **All three B5 premises were wrong and are corrected in the summaries and judgments.** "Contracted and merchant mid-size BESS owners across CAISO, PJM and ERCOT" holds for none of them. **esVolta**: Generate Capital portfolio company whose sponsor mandated **Barclays and Truist for its sale** (Infralogic, 5 June 2026); CAISO + ERCOT + WECC expanding to SPP and MISO, **never PJM**; 490 MW / 980 MWh operating in ERCOT behind "a hedge in place with a confidential commodity market participant"; the January 2025 Captona deal was **USD 243 million of preferred equity including ITC-transfer proceeds, not a sale**; Generate acquired it **July 2022, not 2023**. **Strata**: **founder-owned, no sponsor** ("100% privately held company owned by our founders"; Blackstone's 2021 USD 150 million was **credit**, per its own CFO); an **originate-contract-and-sell** model — Scatter Wash to CIP (Sept 2024), White Tank to GridStor (Sept 2025), Ventura to Capital Dynamics then Arevon — keeping Justice, Inland Empire (70 MW / 280 MWh, PG&E RA) and about 1 GW of owned **solar**; **no owned battery in ERCOT or PJM**, Arizona sits in APS territory outside any ISO. **Hunt Energy Network**: Hunt-family-owned with **Manulife as JV equity partner** (USD 225 million 2021 + USD 250 million 2024), **ERCOT-only, 100 percent merchant, sub-10 MW** (32 distribution-connected 9.9 MW units + the 100 MW / 200 MWh Fort Duncan), traded by its **own Level 4 QSE (TraDER)**; the Caterpillar 1 GW agreement is the **parent's**, not HEN's.
-- **Evaluated the developer's action plan** (the screenshot from the v04.57r era) against current state and wrote a paste-ready **Opus 5 xhigh prompt for session C4** in chat at ~04:10 AM EST.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean after this commit. Program state: **35 of 65 new companies done, 4 of 30 guide passes done.**
-
-- **Fable 5.1 High/Medium remaining:** F6 (MGX · Excelsior Energy Capital · X-energy — first `investor` chips with data, include the visual check), F7 (Compass · EdgeCore · PowerHouse), F8 (Fermi America · Tract · Prime Data Centers). F9 (the Xcel head-to-head) was **completed at v04.57r** and its reminder is closed.
-- **Opus 5 xhigh remaining:** C4 (Talen · Vistra · NRG), C5, C6, C7, C8, C9, C10, C12 — 21 companies over 8 sessions — plus **26 guide backfills** (the 3 revisions and the Narada backfill landed at v04.51r).
-- **Classroom register:** G1–G5, G7 (v04.58r), G8, G9 closed; **G10 Partial** (v04.58r); **G6 open** and is the one Opus item that is not a dossier (it wants a guidance module via the `industry guidance:` command and a developer-supplied document); G11 deferred, G12 by design.
-
-### Key decisions and findings
-
-- **Fable 5.1 Medium passed its measured test — none of the three tripwires fired.** Third-party agents fetched 105 / 81 / 85 URLs against a 50 floor; each carried an explicit unverified list (13–16 flagged items) and kept snippets out of the fetched-URL lists, and the Hunt agent pulled ten PUCT Interchange PDFs with `curl` when WebFetch returned 503; judgments are confidence-tagged with stated bases and several name disconfirming evidence. **Caveat: the measurement covers research and authoring only** — the model switched at the bookkeeping tail. Both the Strata and Hunt third-party agents exhausted the 200-call search budget mid-task, which is a capacity signal rather than a quality one.
-- **`profiler-companies.json` is appended in session order, not sorted.** Sorting it produced a 518-line diff over 121 pre-existing entries; the append convention was restored and only the three new entries appended (58-line diff). **`profiler-concepts.json` IS alphabetical by slug** and the schema requires it.
-- **The §5 guide-backfill rationale is now stale.** It says "Twenty-seven backfills, IPPs first because the BESS buyer side has no guides at all." The buyer side now has **nine** guides (aypa-power, spearmint-energy, intersect-power, invenergy, gridstor, available-power, esvolta, strata-clean-energy, hunt-energy-network), so the nine IPP backfills are less urgent and easier to differentiate than when the plan was written.
-- **Measure corpus demand with word boundaries and case sensitivity.** `grep -il "Talen"` returns 17 dossiers because it matches "talent"; `grep -lE '\bTalen\b'` returns 4. Corrected demand for uncovered Phase C names: Blackstone 14, Macquarie 12, Digital Realty 10, NRG 8, Power Electronics 8, Brookfield 8, CyrusOne 7, Vistra 5, Recurrent Energy 5, Talen 4.
-- **A CDN-refused headshot is skipped, not sourced elsewhere** — esVolta's chief commercial officer renders an initials avatar because `static.wixstatic.com` returns Forbidden for that one file.
-- **Strata's president may have moved**: Bob Schaffeld is quoted as President through May 2025 but sits on the advisory board on the September 2026 leadership page; no release records the change and the dossier states both.
-- Environment unchanged from F4: threaded HTTP server, `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, `about:blank` before each dossier, `.ov-sources ol li` for the source count, Business Wire and archive.org 403.
-
-### Active context
-
-- Branch `claude/fable-5-1-medium-phase-b-f5-bll92b`; repo version **v04.62r**; CHANGELOG **79/100** (about 17 sessions left in the program, so rotation stays unlikely but the headroom is no longer generous).
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders (the Xcel head-to-head reminder was completed 2026-09-04).
-- Registry 124 companies; concepts 786; calendar 85 rows; study guides 98; execs 490 images across 77 companies.
-
-### Recommendation for next session
-
-- **Run Phase C session C4 (Talen Energy · Vistra · NRG Energy) as a fresh Opus 5 xhigh session using the paste-ready prompt written in chat on 2026-09-05 at ~04:10 AM EST** — three public IPP dossiers plus study guides, which is where the Opus thread was left off in plan order after C11 (v04.52r), is the strongest Opus fit left in the plan (three companies with 10-Ks, earnings calls and investor decks, the reading depth the v04.57r head-to-head found Opus better at), and unlocks the Phase D `clean-firm-power` lesson (C4 + C11).
-**To continue:** type `run C4 on Opus 5 xhigh`
-
-Developed by: LightAISolutions
