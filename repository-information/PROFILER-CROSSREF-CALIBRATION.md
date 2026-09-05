@@ -78,6 +78,14 @@ run against both corpora; the ground-truth cases had to survive every change.
 | Difference band ceiling 35 % → 25 % | 3 | The single most sensitive knob. The `meta` case sits at 19.5 %, so 25 % leaves 5.5 points of headroom; do not lower it below 22 %. |
 | Already-hedged passages suppressed | 2 | "figures conflict across outlets — treat as unresolved" is a disclosed disagreement, not a drift. |
 
+**Scope cap made visible (v04.67r).** `OQ_SCOPE_MAX` once dropped a real
+candidate in silence: documenting the `hithium` reconciliation thoroughly pushed
+both records past 900 characters and the checker went green on a pair it had
+stopped reading. Raising the cap to 1500 admits eight more candidates at once
+with no ground-truth gain, so the cap stays — but every scope it declines to
+examine is now listed under "NOT examined" with its size. **A clean run is not a
+clean corpus.**
+
 Open-question class, separately: whole-`strategyRead`-array scopes → per-element
 scopes (134 → 36); answering passage must name the asking company and must not
 itself be hedged (36 → 21); bounded record scopes, restatement suppression by
@@ -132,13 +140,23 @@ answering one, per step 7:
   sites. The Fluidstack TX/NY host inference is genuinely unconfirmed on both
   sides, so the cross-check was recorded and dated rather than the question
   being declared answered.
-- **`hithium` v8 → v9.** The checker's pairing invites the reading that Jupiter
-  confirmed what Hithium hedged. The corpus says the opposite: Jupiter Power's
-  own dossier records that **Jupiter's channels have never once named Hithium**,
-  and that the "verified three layers" are verified from *Hithium-side*
-  disclosures, the HKEX prospectus roster and third-party coverage. Completion
-  of the 3 GWh delivery is confirmed by no source. Recorded in both Hithium
-  passages; `jupiter-power` was accurate and left alone.
+- **`hithium` v8 → v9 → v10.** The checker's pairing invites the reading that
+  Jupiter confirmed what Hithium hedged. Jupiter Power's own dossier records the
+  opposite — **Jupiter's channels have never once named Hithium** — so v9 wrote
+  that the "verified three layers" were documented from Hithium's side. **v10
+  corrected that**, and the correction is the more useful lesson: checking the
+  citations shows only one of the three layers is Hithium-sourced (the partner
+  roster, in its 27 October 2025 HKEX prospectus). The June 2024 3 GWh agreement
+  rests on trade press (Solarbe Global, corroborated by SMM) and Trimount on
+  Energy-Storage.News. v9 also omitted that **Jupiter's CTO Michael Geier is
+  quoted in the 3 GWh announcement** — which does not overturn the channels
+  claim, but does qualify "one way only". `jupiter-power` was accurate
+  throughout and was left alone.
+
+  **The generalisable failure:** "which side is this documented from?" is a
+  question about the `sources[]` array, and v9 answered it from the *prose* of
+  the two dossiers instead. Adjudicating a cross-reference means reading the
+  citations, not the summaries — the prose is what is under review.
 
 **A property worth knowing before adjudicating.** Closing an open question does
 not silence it, because the honest close usually keeps the hedging word — the

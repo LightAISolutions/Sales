@@ -609,6 +609,12 @@
       "profileVersion": 8,
       "archivedAt": "2026-09-05",
       "supersededBy": 9
+    },
+    {
+      "file": "hithium.profile.v9.json",
+      "profileVersion": 9,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 10
     }
   ],
   "hitt": [

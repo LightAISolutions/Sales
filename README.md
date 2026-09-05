@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-05 02:56:19 PM EST` · Repo version: `v04.66r`
+Last updated: `2026-09-05 03:16:27 PM EST` · Repo version: `v04.67r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -406,6 +406,7 @@ Last updated: `2026-09-05 02:56:19 PM EST` · Repo version: `v04.66r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v6.json">hithium.profile.v6.json</a> — Archived v6 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v7.json">hithium.profile.v7.json</a> — Archived v7 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v8.json">hithium.profile.v8.json</a> — Archived v8 dossier (Hithium)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v9.json">hithium.profile.v9.json</a> — Archived v9 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v1.json">hitt.profile.v1.json</a> — Archived v1 dossier (HITT Contracting)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v3.json">hitt.profile.v3.json</a> — Archived v3 dossier (HITT)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/holder-construction.profile.v1.json">holder-construction.profile.v1.json</a> — Archived v1 dossier (Holder Construction)

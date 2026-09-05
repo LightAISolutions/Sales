@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 83/100`
+`Sections: 84/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.67r] — 2026-09-05 03:16:27 PM EST
+
+> The passage says that "the three layers are documented from Hithium's side". Is that true? I have not personally looked into either side, so make sure your language is objective and clear. If you have evidence that "the three layers are documented from Hithium's side", then I think this passage is good and can pass.
+
+### Fixed
+
+- **`hithium` v9 → v10 — the sourcing claim written at v04.66r was wrong and is corrected.** v9 said the three layers of the Jupiter Power relationship were "documented from Hithium's side — its own disclosures and the HKEX prospectus partner roster". Checking the `sources[]` arrays rather than the prose shows **one** of the three is Hithium-sourced: the partner roster, in Hithium's own **HKEX prospectus filed 27 October 2025** (`www1.hkexnews.hk`). The **June 2024 3 GWh supply agreement** rests on trade press — **Solarbe Global, corroborated by SMM** — and the **Trimount design win** on **Energy-Storage.News**. No first-party release from either company is cited for either. Corrected in `strategyRead[6]` and `technicalSpecs[9].specs[3]`.
+- **The same passages omitted a material qualifier and now carry it:** **Jupiter's CTO Michael Geier is quoted in the 3 GWh announcement.** Jupiter Power's own dossier names him as "the executive quoted in both the Hithium 3 GWh and Energy Vault supply announcements". This does not overturn "Jupiter's own channels have never named Hithium" — a quote given for a supplier's release is not Jupiter's channel — but a passage asserting the confirmation runs "one way only" without it overstated the asymmetry.
+- **`PROFILER-CROSSREF-CALIBRATION.md` adjudication log corrected** to match, and now records the generalisable failure: *"which side is this documented from?" is a question about the `sources[]` array, and v9 answered it from the prose of the two dossiers instead.* Adjudicating a cross-reference means reading the citations, not the summaries — the prose is what is under review.
+
+### Changed
+
+- **`check-profiler-crossrefs.py` now reports the scopes it declines to examine.** The `OQ_SCOPE_MAX` cap silently dropped a real candidate: documenting the `hithium` reconciliation thoroughly pushed both records past 900 characters, and the checker reported a clean pass on a pair it had simply stopped reading. **The defect was the silence, not the threshold.** Raising the cap to 1500 admits eight more candidates at once with no ground-truth gain, so the cap stays and every skipped scope is now listed under "NOT examined" with its size — 16 on the current corpus. The docstring states plainly that a clean run is not a clean corpus.
+- **The stale `bf7153a031f9` accept entry was removed** (6 entries). Its candidate no longer exists: the pair is now covered by the not-examined report, and the adjudication itself lives in the dossier text and the calibration log.
+
+### Verified
+
+- Checked each layer against the citation, not the prose: 3 GWh → Solarbe Global + SMM (trade press); partner roster → Hithium's HKEX prospectus (first-party filing, directly cited); Trimount → Energy-Storage.News (trade press). Hithium's dossier carries 32 first-party `hithium.com` sources of 51 overall, but **none of them covers the Jupiter relationship**.
+- `sync-profiler-registry.py` clean (0 of 127 out of sync); graph rebuilt to 903 edges (678 curated); `check-profiler-study.py` clean (101 guides, 811 concepts); `check-profiler-crossrefs.py` exit 0 with 6 suppressed and 16 scopes reported as not examined.
+- `hithium.profile.v9.json` archived, `archive-index.json` at 240 entries across 95 slugs, README tree updated.
+
+### Worth noting
+
+- **The developer's question was the right one to ask, and the answer was no.** The v04.66r passage read as authoritative and was written from the two dossiers' summaries rather than their citations — the same failure mode the cross-reference rule exists to catch, committed while applying that rule.
+- **A cap that silently drops a record penalises thoroughness.** The fuller the reconciliation write-up, the more likely it crosses the threshold and the blinder the checker becomes. Reporting the skip costs nothing and removes a class of false green that no amount of threshold tuning would have.
+- **Neither correction changes the underlying judgment**: the relationship is real, Jupiter has published nothing naming Hithium on its own channels, and no source confirms the 3 GWh delivery completed. What changed is the accuracy of the claim about *where the documentation comes from*.
 
 ## [v04.66r] — 2026-09-05 02:56:19 PM EST
 

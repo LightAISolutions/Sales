@@ -70,6 +70,14 @@ COVERAGE AND THE FALSE-POSITIVE BUDGET
   other is never compared. That is the price of the precision above, and it
   means this script is a floor under step 7, not a substitute for it.
 
+  A clean run is not a clean corpus, and the report says where it did not look.
+  Scopes carrying an uncertainty marker and a covered company but exceeding
+  OQ_SCOPE_MAX are listed under "NOT examined" with their size. This exists
+  because the cap once hid a real candidate: documenting a reconciliation
+  thoroughly pushed the record past the cap, and the checker went green on a
+  pair it had simply stopped reading. Never read a green run as covering those
+  paths.
+
 ACCEPTING A REVIEWED CANDIDATE
   Each candidate prints a 12-character id, stable across reruns as long as the
   two claims do not change. Add it to the accept list to keep reruns quiet:
@@ -129,7 +137,11 @@ ANCHOR_DF_STRICT = 4
 OQ_PROXIMITY = 400
 # The uncertainty has to live in a bounded record — a development, a
 # relationship, one judgement — not somewhere inside a 4,000-character summary
-# that also happens to name the company two paragraphs away.
+# that also happens to name the company two paragraphs away. Raising it to 1500
+# admits eight more candidates at once with no ground-truth gain, so the cap
+# stays — but every scope it declines to examine is REPORTED. A cap that
+# silently drops a record punishes the reviewer for documenting a
+# reconciliation thoroughly: the fuller the write-up, the blinder the checker.
 OQ_SCOPE_MAX = 900
 # Token overlap above which the "answer" is just the same sentence restated.
 # Two dossiers that both say "confirmed talks but no details finalized" agree;
@@ -764,16 +776,20 @@ def detect_open_questions(corpus, anchor_df, rare_index):
     inside one scope — and (b) is the other dossier's passage on the same
     topic, enforced by a rare, non-company, multi-word-or-very-rare anchor.
     """
-    findings, emitted = [], set()
+    findings, emitted, skipped = [], set(), []
     for sa in sorted(corpus):
         A = corpus[sa]
         for scope, plist in A.scopes.items():
             if "[" not in scope:
                 continue          # a whole summary / ecosystemRole is not a record
             joined = " ".join(p.text for p in plist)
-            if len(joined) > OQ_SCOPE_MAX:
-                continue
             low = joined.lower()
+            if len(joined) > OQ_SCOPE_MAX:
+                # Not examined — but say so rather than reporting a clean pass.
+                if (any(m in low for m in UNCERTAINTY_MARKERS)
+                        and any(sl != sa for p in plist for sl, _, _ in p.spans)):
+                    skipped.append((sa, scope, len(joined)))
+                continue
             marks = [(m, low.find(m)) for m in UNCERTAINTY_MARKERS if m in low]
             if not marks:
                 continue
@@ -849,7 +865,7 @@ def detect_open_questions(corpus, anchor_df, rare_index):
                     "id": fingerprint(["oq", sa, sb, scope, marker, top[0][0],
                                        joined, top[0][1].text]),
                 })
-    return findings
+    return findings, skipped
 
 
 GROUPING_RE = re.compile(r"\b(which|that|who|all of (?:which|them)|both|each)\b")
@@ -981,6 +997,11 @@ def render_text(findings, accepted, stats, out=sys.stdout):
       (stats["dossiers"], stats["pairs"]))
     w("%d candidate(s) reported, %d suppressed by the accept list (%d entries)"
       % (len(findings), stats["suppressed"], len(accepted)))
+    if stats.get("notExamined"):
+        w("%d scope(s) NOT examined — over the %d-character size cap; a clean run "
+          "does not cover these:" % (len(stats["notExamined"]), OQ_SCOPE_MAX))
+        for sk in stats["notExamined"]:
+            w("  %s  %s  (%d chars)" % (sk["slug"], sk["path"], sk["chars"]))
     if findings:
         w("Accept a reviewed candidate by adding its id to %s"
           % stats["accept_path"])
@@ -1024,8 +1045,9 @@ def main():
 
     findings = detect_figures(corpus, anchor_df,
                               require_anchor=args.require_anchor)
-    findings += detect_open_questions(corpus, anchor_df,
-                                      build_rare_index(corpus, anchor_df))
+    oq, skipped = detect_open_questions(corpus, anchor_df,
+                                        build_rare_index(corpus, anchor_df))
+    findings += oq
     if args.include_grouped:
         findings += detect_grouped_claims(corpus)
     if args.kinds:
@@ -1040,7 +1062,9 @@ def main():
     kept = [f for f in findings if f["id"] not in accepted]
     stats = {"dossiers": len(corpus), "pairs": pairs,
              "suppressed": len(findings) - len(kept),
-             "accept_path": args.accept}
+             "accept_path": args.accept,
+             "notExamined": [{"slug": a, "path": b, "chars": c}
+                             for a, b, c in skipped]}
 
     if args.json:
         json.dump({"schemaVersion": 1, "stats": stats, "findings": kept},
