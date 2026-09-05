@@ -238,7 +238,7 @@
    "type": "other",
    "note": "AIOn 800V HVDC products aligned to NVIDIA-style architecture; CNESA lists Narada among 31 core 800V industry-chain companies.",
    "context": "Narada's AIOn 800V HVDC and AIOn pod products align to the NVIDIA-style 800 VDC architecture, and CNESA lists it among 31 core industry-chain companies for 800V — ecosystem alignment from the AIDC backup-power side (10C AIOn X-Rate, >600 kW per cabinet), not a named NVIDIA partnership.",
-   "source": "https://en.cnesa.org/latest-news/2025/11/25/nvidias-800v-architecture-reshapes-ai-data-centers-",
+   "source": "https://en.cnesa.org/latest-news/2025/11/25/nvidias-800v-architecture-reshapes-ai-data-centers-31-core-industry-chain-companies-unveiled",
    "via": "AIOn 800V HVDC",
    "status": "active"
   },
@@ -461,6 +461,6 @@
    "url": "https://mpinarada.com/critical-power-ups/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

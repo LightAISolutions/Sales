@@ -219,7 +219,7 @@
    "type": "supplier",
    "note": "8 GWh, ~$1.43B Vertech framework (2026-2029) on US-made Arizona LFP — LG ES Vertech's largest order ever.",
    "context": "November 2024: Terra-Gen locked an up-to-8 GWh, four-year supply agreement with LG Energy Solution Vertech — modular containerized LFP on cells from LG's Arizona plant, 'all products meeting domestic content requirements,' ~KRW 2T (~$1.43B), including AEROS EMS, following a prior 2.2 GWh collaboration believed to be LG's Edwards & Sanborn share.\n\nThe decisive fact of the account: the most Chinese-content-comfortable large US buyer (LG+Samsung+BYD at E&S; BYD at Canyon Country as late as Nov 2024) solved FEOC with one Korean-US supply chain, pre-booking its mid-decade pipeline before OBBBA even passed.",
-   "source": "https://www.ess-news.com/2024/11/18/masdar-backed-terra-gen-places-8-gwh-energy-storage-order-w",
+   "source": "https://www.ess-news.com/2024/11/18/masdar-backed-terra-gen-places-8-gwh-energy-storage-order-with-lg/",
    "via": "Vertech containerized LFP",
    "status": "active",
    "since": "2024-11",
@@ -417,6 +417,6 @@
    "url": "https://terra-gen.com/projects/energy-storage/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

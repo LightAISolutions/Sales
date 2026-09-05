@@ -169,7 +169,7 @@
    "type": "customer",
    "note": "5 GW AI UPS deployment agreement across multiple hyperscale campuses, commissioning 2026-2027.",
    "context": "July 2026: Crusoe and ON.energy agreed to deploy 5 GW of AI UPS™ — the category-making award that puts a BESS-based medium-voltage UPS into ERCOT hyperscale sockets at gigawatt scale, validated against NOGRR 282 large-load ride-through requirements. Financing is undisclosed, and the dossier flags scaffolding risk: >$250M lifetime capital raised against a 5 GW buildout implies project-level structures or a major raise that has not surfaced.",
-   "source": "https://www.crusoe.ai/resources/newsroom/crusoe-and-on-energy-to-deploy-5-gw-of-ai-ups-tm-at-mu",
+   "source": "https://www.crusoe.ai/resources/newsroom/crusoe-and-on-energy-to-deploy-5-gw-of-ai-ups-tm-at-multiple-hyperscale-campuses",
    "via": "AI UPS",
    "status": "active",
    "since": "2026-07",
@@ -191,7 +191,7 @@
    "type": "supplier",
    "note": "Supplied the legacy LatAm merchant fleet — the pre-pivot era's only confirmed cell relationship.",
    "context": "ON.energy's legacy fleet across Peru, Mexico, Chile, Colombia and Honduras (~320 MWh operating/under construction at the December 2024 snapshot) is CATL-supplied — the only public confirmation of the relationship. The pivot product's zero-Chinese-content stack signals pragmatic rather than ideological sourcing, and the dormant LatAm franchise remains a non-FEOC channel where Chinese cells stay acceptable.",
-   "source": "https://www.energy-storage.news/on-energy-fully-integrated-bess-developer-poised-for-rapid-gro",
+   "source": "https://www.energy-storage.news/on-energy-fully-integrated-bess-developer-poised-for-rapid-growth-in-the-us-market/",
    "status": "historical",
    "scale": "~320 MWh LatAm fleet"
   },
@@ -200,7 +200,7 @@
    "type": "competitor",
    "note": "Direct product-category rival: AI UPS vs Hithium's ∞Power AIDC line, FEOC-clean vs §154-designated.",
    "context": "ON.energy's AI UPS occupies the same grid-buffering, transient-absorbing socket as Hithium's December 2025 ∞Power AI-data-center system (1300Ah cell, 6.9 MW/55.2 MWh) — with a supply chain assembled explicitly FEOC-clean while Hithium carries the NDAA §154 designation. The dossier's read: assume Hithium is designed out of the US product; the dormant LatAm franchise is the one plausible opening.",
-   "source": "https://www.ess-news.com/2025/12/15/hithium-pushes-into-long-duration-storage-and-ai-data-centr",
+   "source": "https://www.ess-news.com/2025/12/15/hithium-pushes-into-long-duration-storage-and-ai-data-centres-with-1300ah-battery-cell-6-9-mw-55-2-mwh-system-and-lithium-sodium-hybrid/",
    "status": "active"
   },
   {
@@ -382,6 +382,6 @@
    "date": null
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

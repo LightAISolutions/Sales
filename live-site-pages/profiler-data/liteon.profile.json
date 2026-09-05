@@ -131,7 +131,7 @@
    "type": "partner",
    "note": "800 VDC power-components-tier member; 110 kW power shelves for Vera Rubin NVL72 and GB300 collaboration.",
    "context": "LITEON sits on NVIDIA's own 800V partner roster (power-components tier with Delta, Megmeet, Flex, BizLink), shipping 33 kW power shelves, 8.5 kW PSU+BBU pairs, 110 kW shelves for Vera Rubin NVL72 and an 800 VDC 660 kW power rack scaling to >1.5 MW racks in 2H 2026. At OCP 2025 it showed a GB300 NVL72 collaboration combining energy storage, power capping and GPU load management to cut grid peak load ~30% — BBU-side engineering as a first-class NVIDIA collaboration.",
-   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-a",
+   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
    "via": "800 VDC power components",
    "status": "active",
    "since": "2025"
@@ -424,6 +424,6 @@
    "url": "https://simplywall.st/stocks/tw/tech/twse-2301/lite-on-technology-shares/news/analyst-estimates-heres-what-brokers-think-of-lite-on-techno"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

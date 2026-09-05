@@ -172,7 +172,7 @@
    "type": "competitor",
    "note": "One of the three OEMs supplying two-thirds of turbines for gas plants under construction globally.",
    "context": "GEV, Siemens Energy and Mitsubishi Power supply two-thirds of turbines for gas plants under construction worldwide; GEV holds the largest single heavy-duty share (>14.5%). Siemens Energy nearly doubled unit sales year-over-year, and its supply lands in the same 2028-2030 windows GEV is now selling — the scarcity the whole sector is monetizing. The two also contest the transformer top tier.",
-   "source": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-p",
+   "source": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-power-plants-under",
    "status": "active"
   },
   {
@@ -180,7 +180,7 @@
    "type": "competitor",
    "note": "Transformer top-tier rival — Hitachi leads globally; Prolec makes GEV the most North America-weighted.",
    "context": "Hitachi Energy leads global transformers with Siemens Energy, Eaton, GEV and Toshiba in the top tier, but the completed Prolec GE acquisition makes GEV the most North America-weighted player in a market with 2.5-4 year lead times industry-wide. The two also split the HVDC order book (Hitachi + Siemens Energy + GEV took ~60-65% of 2025 HVDC intake).",
-   "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transfo",
+   "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/",
    "status": "active"
   },
   {
@@ -188,7 +188,7 @@
    "type": "competitor",
    "note": "Fellow transformer top-tier player in the shortage-constrained North American market.",
    "context": "Eaton sits in the global transformer top tier with Hitachi Energy, Siemens Energy, GEV and Toshiba. With US transformer lead times at 2.5-4 years and prices up sharply, the two compete for the same data-center and utility electrification backlog — GEV's edge being the wholly owned Prolec GE North American footprint.",
-   "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transfo",
+   "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/",
    "status": "active"
   },
   {
@@ -497,6 +497,6 @@
    "url": "https://www.gevernova.com/gas-power/industries/data-centers"
   }
  ],
- "lastUpdated": "2026-09-03",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

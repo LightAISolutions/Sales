@@ -257,7 +257,7 @@
    "type": "competitor",
    "note": "600Ah+ roadmap closing on Sunwoda's 684 Ah early-mover lead through 2026-27.",
    "context": "Sunwoda's 684 Ah volume leadership in the 600+ Ah class is real but perishable: CATL/EVE/Hithium roadmaps close the gap through 2026-2027, and Sunwoda runs from a much smaller base — with cells booked against a sub-5% margin price war.",
-   "source": "https://www.energy-storage.news/industry-updates/sunwoda-produces-one-millionth-684ah-energy-st",
+   "source": "https://www.energy-storage.news/industry-updates/sunwoda-produces-one-millionth-684ah-energy-storage-cell/",
    "via": "684 Ah cell",
    "status": "active"
   },
@@ -474,6 +474,6 @@
    "url": "https://en.sunwoda.com/article/1524/9.html"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

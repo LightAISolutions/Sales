@@ -154,7 +154,7 @@
    "type": "competitor",
    "note": "Cell-for-cell ESS rival; EVE leads the 600Ah+ class CATL is following.",
    "context": "EVE was first to mass-produce the 600Ah+ cell class (Mr.Big 628Ah) and connected the world's first 628Ah grid-scale station (Lingshou 400 MWh, Feb 2026) — running ahead of CATL's 587Ah in deployed large-cell capacity and forcing the system-economics transition CATL is now following. InfoLink's FY2025 ranking has CATL #1, Hithium #2, EVE #3 as the market doubled to 612 GWh; the same glut-to-tightness reversal lifts all three.",
-   "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-f",
+   "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
    "status": "active"
   },
   {
@@ -162,7 +162,7 @@
    "type": "competitor",
    "note": "Displaced EVE from #2 in InfoLink's FY2025 global ESS cell shipment ranking.",
    "context": "The stationary-only specialist took the #2 slot in both total and utility-scale ESS cell shipments for 2025, pushing EVE to #3 — a share-loss signal during a demand boom that EVE's own channels omit (company messaging still claims 'second globally'). The two also compete directly in the large-format race (EVE 628Ah vs Hithium's 1175Ah/1300Ah kAh-class) and in sodium-ion.",
-   "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-f",
+   "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
    "status": "active",
    "since": "2026-02"
   },
@@ -504,6 +504,6 @@
    "url": "https://stockanalysis.com/quote/she/300014/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

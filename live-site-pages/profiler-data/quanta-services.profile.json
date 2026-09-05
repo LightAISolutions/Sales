@@ -135,7 +135,7 @@
    "type": "competitor",
    "note": "Direct data-center electrical rival — at ~3.7x Rosendin's electrical revenue.",
    "context": "Quanta is the #1 US electrical contractor ($13.5B electrical revenue per EC&M 2025, roughly 3.7x #2 Rosendin) and its Technology & Load Centers end market (guided +220-240% in 2026) is head-to-head with Rosendin, MYR and IES in data-center electrical — the fastest-scaling craft-labor platform in the AIDC buildout, with record $53.4B backlog.",
-   "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-co",
+   "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings",
    "via": "data-center electrical",
    "status": "active"
   },
@@ -453,6 +453,6 @@
    "url": "https://en.wikipedia.org/wiki/LUMA_Energy"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

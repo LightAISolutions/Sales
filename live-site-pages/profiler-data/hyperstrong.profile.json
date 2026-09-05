@@ -260,7 +260,7 @@
    "type": "supplier",
    "note": "Ten-year pact (2026-2035): ≥200 GWh over 2026-28 (~RMB 20B) plus the claimed world's largest sodium-ion order — supply security at the cost of structural dependence.",
    "context": "The November 2025 strategic pact locks ≥200 GWh of cells and systems over 2026-2028 (Morgan Stanley sized it at roughly half of CATL's 2025 ESS volume annually), plus joint investment funds; April 2026 added a 60 GWh three-year sodium-ion agreement with applications including data-center storage.\n\nThe history shows deliberate hedging: CATL supplied 81% of HyperStrong's cells in 2022, down to 21% in H1 2024 (EVE 35%), then re-concentration via the pact. Both suppliers also sell competing systems downstream — the integrator-without-cells model's structural tension.",
-   "source": "https://www.ess-news.com/2025/11/14/catl-hyperstrong-sign-massive-200-gwh-battery-supply-agreement-f",
+   "source": "https://www.ess-news.com/2025/11/14/catl-hyperstrong-sign-massive-200-gwh-battery-supply-agreement-for-energy-storage/",
    "status": "active",
    "since": "2025-11",
    "scale": "≥200 GWh (2026-28) + 60 GWh sodium-ion"
@@ -505,6 +505,6 @@
    "url": "https://www.hyperstrong.com/en/products/hyperblockm"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

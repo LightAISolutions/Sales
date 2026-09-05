@@ -149,7 +149,7 @@
    "type": "partner",
    "note": "The deepest reference-design franchise: co-developed designs from GB200 through Vera Rubin and gigawatt AI-factory blueprints.",
    "context": "Schneider is the only vendor with co-developed NVIDIA designs spanning power management (ETAP electrical models), liquid-cooling controls (interoperable with NVIDIA Mission Control — the industry-first integrated design, Sept 2025), and whole-factory blueprints: GB200 NVL72 (132 kW racks, Dec 2024), GB300 NVL72 (142 kW racks, ANSI+IEC variants), and gigawatt-scale AI-factory blueprints with AVEVA embedded in Omniverse DSX (GTC, March 2026), including Vera Rubin NVL72 and tokens-per-MW optimization.\n\nThe dossier's judgment: reference-design-led selling pulls Schneider hardware into projects before competitive bidding starts — the procurement template hyperscalers apply to everyone else.",
-   "source": "https://www.globenewswire.com/news-release/2026/03/16/3256775/0/en/schneider-electric-teams-wit",
+   "source": "https://www.globenewswire.com/news-release/2026/03/16/3256775/0/en/schneider-electric-teams-with-nvidia-to-develop-validated-blueprints-to-design-simulate-build-operate-and-maintain-gigawatt-scale-ai-factories.html",
    "via": "reference designs and AI-factory blueprints",
    "status": "active",
    "since": "2024-12"
@@ -159,7 +159,7 @@
    "type": "competitor",
    "note": "Shared global #1 in data-center physical infrastructure — ~0.1 point apart per Dell'Oro.",
    "context": "Dell'Oro has Schneider and Vertiv sharing the global #1 in data-center physical infrastructure. The structural contrast: pure-play Vertiv (~75-80% data-center) vs Schneider's DC franchise inside a €40B diversified portfolio — steadier through AI-capex shocks but multiple-capped. Liquid cooling is now a three-way incumbent fight (Motivair vs Vertiv's four-deal assembly vs Eaton-Boyd) where 'largest installed base' claims are unverifiable.",
-   "source": "https://www.delloro.com/news/data-center-physical-infrastructure-market-expands-28-percent-y-y-",
+   "source": "https://www.delloro.com/news/data-center-physical-infrastructure-market-expands-28-percent-y-y-in-1q-2026/",
    "status": "active"
   },
   {
@@ -167,7 +167,7 @@
    "type": "competitor",
    "note": "Three-way liquid-cooling and 800 VDC rivalry; parallel US onshoring race.",
    "context": "Eaton's $9.5B Boyd acquisition answered Schneider's Motivair; Schneider's 800 VDC 'sidecar' disclosure (Oct 2025 — AC to 800 VDC for racks to 1.2 MW, integrated storage) mirrors Eaton's supercap-plus-DC-distribution hedge, with all incumbents still pre-product on 800 VDC switchboards. Both are racing >$700M-class US manufacturing investments toward hyperscaler proximity.",
-   "source": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-in",
+   "source": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-innovation-in-800-vdc-power-systems-in-support-of-nvidia%E2%80%99s-next-generation-gpus-68ecb631098fd4ea49024353/",
    "status": "active"
   },
   {
@@ -436,6 +436,11 @@
  },
  "sources": [
   {
+   "label": "Facilities Dive — LiquidStack buy gives Trane AI data-centre cooling exposure",
+   "url": "https://www.facilitiesdive.com/news/liquidstack-buy-gives-trane-ai-data-center-cooling-exposure/812053/",
+   "date": "2026-02-12"
+  },
+  {
    "label": "MarketsandMarkets — data centre busway market report 2026-2032",
    "url": "https://www.marketsandmarkets.com/Market-Reports/data-center-busways-market-153219647.html",
    "date": "2026-01"
@@ -516,6 +521,6 @@
    "date": "2024-10"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 7
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 8
 }

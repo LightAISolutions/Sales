@@ -173,7 +173,7 @@
    "type": "competitor",
    "note": "Rack-power rival and fellow participant in the 2027-28 US transformer capacity wave.",
    "context": "Eaton contests both ends of Hitachi Energy's reach: inside the data center (rack power, where Hitachi's 800 VDC push lands) and in transformers, where ~$1.8B of announced US industry investment (Hitachi, Siemens Energy, GE Vernova, Eaton, Prolec, WEG, ERMCO) all arrives 2027-28 — the back-loaded overcapacity risk to today's scarcity pricing.",
-   "source": "https://www.woodmac.com/press-releases/power-transformers-and-distribution-transformers-will-face-supply-defic",
+   "source": "https://www.woodmac.com/press-releases/power-transformers-and-distribution-transformers-will-face-supply-deficits-of-30-and-10-in-2025/",
    "status": "active"
   },
   {
@@ -448,6 +448,6 @@
    "url": "https://www.mordorintelligence.com/industry-reports/global-hvdc-converter-station-market-industry"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

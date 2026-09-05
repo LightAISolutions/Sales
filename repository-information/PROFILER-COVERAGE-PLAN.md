@@ -328,7 +328,7 @@ Every cross-reference surface in the repo was enumerated and counted on 2026-09-
 | Item | Model | Status |
 |------|-------|--------|
 | X1 · `check-profiler-relationships.py` | Fable 5.1 High | **Done — v04.71r.** Reproduces §9.1 exactly (853 / 678 · 82 naive → **15** · **119** · 0 dangling); (d) measured at 51 pins, 0 unregistered. Exits 1 on the live corpus with 134 findings for X2 |
-| X2 · clear the 15 + 119 | Fable 5.1 Medium | — |
+| X2 · clear the 15 + 119 | Fable 5.1 Medium | **Done — v04.72r.** Exits 0: 10 of the 15 reciprocal pairs accepted with written reasons, 5 `type`s corrected (Kiewit→Bechtel `competitor`; NVIDIA→Flex/Infineon/LITEON/Megmeet `partner`); of the 119 URLs, **104** were truncated prefixes of a URL the dossier already registered (string fix), **15** registered into `sources[]` with label and date. 49 dossiers revised and archived |
 | X3 · integrity close-out | Opus 5 xhigh | — |
 
 ### 9.5 · Where Phase X sits in the run order

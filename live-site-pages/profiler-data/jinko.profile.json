@@ -132,7 +132,7 @@
    "type": "competitor",
    "note": "Scale benchmark: Jinko is a storage challenger against Sungrow's top-ranked integrator position.",
    "context": "Jinko is a BNEF Tier-1 ESS maker for 8 straight quarters with 12 GWh of claimed capacity, but absent from the top-10 BESS integrator rankings Sungrow leads — a fast-growing niche player against Sungrow/BYD/CATL/Tesla scale, differentiating on grid-forming capability for weak-grid markets.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-top",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
   },
   {
@@ -140,7 +140,7 @@
    "type": "competitor",
    "note": "6+ MWh-class rival the SunTera G3 was built to match.",
    "context": "The SunTera G3 storage flagship (6.25 MWh, 587 Ah cells, grid-forming with black start; global shipments from Q4 2025) matches the 6+ MWh class of Sungrow, Hithium and BYD — Jinko competing up into the big integrators' container class from a PV base.",
-   "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-20",
+   "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-2025/",
    "status": "active"
   },
   {
@@ -148,7 +148,7 @@
    "type": "competitor",
    "note": "Cell-scale incumbent in the integrator rankings Jinko has yet to crack.",
    "context": "CATL's integrator scale (top-3 in Wood Mackenzie's global BESS ranking) defines the tier above Jinko's storage business — Jinko's 12 GWh claimed ESS capacity is a niche position against the Sungrow/BYD/CATL/Tesla leaders.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-top",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
   },
   {
@@ -156,7 +156,7 @@
    "type": "competitor",
    "note": "Western integrator scale-leader in the class Jinko challenges from below.",
    "context": "Tesla sits in the Sungrow/BYD/CATL/Tesla leader set of the global BESS integrator rankings Jinko is absent from — the scale gap that makes Jinko a storage challenger rather than a peer, despite Tier-1 BNEF status.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-top",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
   },
   {
@@ -164,7 +164,7 @@
    "type": "competitor",
    "note": "Container-class rival in the 6+ MWh race.",
    "context": "The SunTera G3's 6.25 MWh, 587 Ah grid-forming design lands squarely in the container class Hithium contests with ∞Block/∞Power — with Jinko's differentiation being grid-forming capability for weak-grid markets and PV+storage integration from its module base.",
-   "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-20",
+   "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-2025/",
    "status": "active"
   }
  ],
@@ -435,6 +435,6 @@
    "url": "https://www.jinkosolar.com/en/site/tigerneo_3"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

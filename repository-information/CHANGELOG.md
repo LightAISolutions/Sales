@@ -3,11 +3,98 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.72r] — 2026-09-05 04:30:40 PM EST
+
+> **Prompt:** "Run Phase X item X2 of repository-information/PROFILER-COVERAGE-PLAN.md on Fable 5.1 Medium as a
+> fresh session: clear what scripts/check-profiler-relationships.py reports, until it exits 0.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md; PROFILER-COVERAGE-PLAN.md §9 in full (§9.2
+> what this phase declines to do, §9.3 the X2 row) plus §2 and §7; the docstring of
+> scripts/check-profiler-relationships.py; repository-information/PROFILER-CROSSREF-CALIBRATION.md
+> → "Relationships checker" section; repository-information/PROFILER-SCHEMA.md (the relationships[]
+> row, the sources[] row, and Source provenance — the party-tier rule); .claude/rules/profiler-app.md
+> (Profiler Command step 5 and the Archival Procedure).
+>
+> THE TASK: run `python3 scripts/check-profiler-relationships.py` first and work from ITS output, not
+> from this prompt. At v04.71r it reports 134 findings: 15 reciprocal-type, 119 unregistered-source,
+> 0 dangling-slug, 0 unregistered-project. Two kinds of work, both bounded adjudication:
+>
+>   (1) The 15 reciprocal-type findings — each is a pair where both dossiers curate the link and the
+>       two `type`s are not coherent inverses. `type` reads from the stating side ("B is A's <type>"),
+>       so A:supplier pairs with B:customer, investor with portfolio, partner/competitor with
+>       themselves. Three dispositions:
+>         - Both true at once → ACCEPT: add the finding's printed id to
+>           repository-information/profiler-relationships-accepted.json with `pair`, a one-line
+>           `why`, and `when`. Expected accepts: microsoft/openai and google/terawulf (partner AND
+>           investor — both true); eolian/jupiter-power and mitsubishi-power/prevalon (other/other —
+>           the checker treats `other` as untyped by design; do NOT change that rule, accept the
+>           pair with the reason written out).
+>         - One side is simply wrong → correct that side's `type` (archive the outgoing profile +
+>           profileVersion +1 per the Archival Procedure). Expect this for the five
+>           vendor-says-partner / NVIDIA-says-supplier pairs (flex, infineon, liteon, megmeet, and
+>           delta-electronics/infineon in the same shape) — read both notes and decide which side
+>           is right; do not assume NVIDIA's.
+>         - The remaining six (amazon/mainspring-energy, bechtel/kiewit, blattner/quanta-services,
+>           byd/sinexcel, byd/tesla, dpr/openai) are genuinely mixed — adjudicate each from the two
+>           `note`/`context` fields and the cited sources. A pair that is legitimately two things
+>           (byd/tesla: cell customer AND rival) is an accept with the reason; a lazy `other` is a
+>           rewrite.
+>       `investor`'s inverse is `portfolio`, which the schema enum does not carry. If a corrected
+>       pair needs it, accept the pair and note the enum gap in the response — do not add a type to
+>       the schema this session.
+>
+>   (2) The 119 unregistered-source findings — a relationships[].source that is a URL but is not an
+>       exact string in that dossier's own sources[]. Across 49 dossiers; nvidia 11, eolian /
+>       turner-construction / vertiv 6 each, jinko / vantage 5. For each: register the URL into the
+>       dossier's sources[] with `label`, `url`, publication `date` (omit for evergreen pages), in
+>       the schema's ordering (newest first, undated last), and set `party` explicitly only when the
+>       domain rule would mis-tier it — OR replace the relationship's source string with an
+>       already-registered equivalent when the dossier already cites the same document. The one
+>       near-match the checker prints (hithium, trailing slash) is a string fix, not a registration.
+>       Accept a URL finding only when neither is possible, and say why.
+>       Do NOT touch the 140 label sources or the 77 absent sources — the schema allows both.
+>
+> DO NOT: add a fifth detector, loosen any rule, or start rewriting dossier prose beyond the `type`
+> field and sources[] — this is bookkeeping, not research. Do NOT run the retroactive sweep §9.2
+> declines. Do NOT fix one-sided edges; one-sidedness is deliberately not an invariant.
+>
+> BOOKKEEPING: every edited profile follows the Archival Procedure (copy to archive/, archive-index
+> entry, profileVersion +1, lastUpdated). Registering sources changes srcTotal / srcFirstPct, so run
+> `python3 scripts/sync-profiler-registry.py` and `python3 scripts/build-profiler-graph.py` after
+> the edits. Every accept-list entry carries a one-line reason. Flip the §9.4 X2 row to the repo
+> version. Add an adjudication log entry to PROFILER-CROSSREF-CALIBRATION.md's Relationships
+> checker section: counts accepted / corrected / registered / replaced, and any pattern worth a rule.
+> CHANGELOG entry (private file names are fine in the repo CHANGELOG).
+>
+> VERIFY: `python3 scripts/check-profiler-relationships.py` exits 0 and the accept list has no entry
+> without a `why`; sync-profiler-registry.py --check, check-profiler-study.py,
+> check-profiler-reports.py and check-profiler-crossrefs.py all still run clean (crossrefs may
+> surface a new candidate if a note changed — adjudicate it under step 7 or accept it, do not skip
+> it). Report the counts: accepted, corrected, registered, replaced.
+>
+> Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch."
+
+### Changed
+
+- **49 dossiers revised (each archived, `profileVersion` +1, `lastUpdated` 2026-09-05) to clear every finding of `scripts/check-profiler-relationships.py` — Phase X item X2.** The checker now **exits 0** on the 127-dossier corpus: 853 entries, 678 pairs, 0 incoherent reciprocal types, 636 exact `sources[]` URL matches, 0 unregistered URLs (140 labels and 77 absent sources untouched, as the schema allows).
+- **Relationship `source` strings replaced in 104 entries across 43 dossiers.** Every one was a truncated prefix of a URL the same dossier had already registered — clipped mid-slug at roughly 100 characters, or missing a trailing `.html` / `/` (the `hithium` near-match). Substituted with the registered string; no new sources, no tier changes. Heaviest: `nvidia` 9, `eolian` 6, `jinko` / `turner-construction` 5.
+- **15 relationship URLs registered into `sources[]`** with label and publication date, in schema order (newest first): `black-veatch`, `eaton`, `equinix`, `kiewit`, `mccarthy`, `meta`, `nvidia` (2), `schneider-electric`, `siemens-energy`, `turner-construction`, `vantage`, `vertiv` (2), `vistra`. All were inbound edges written by a step-7 reconciliation when a newer dossier (`oklo`, `mccarthy`, `trane-technologies`, `hitt`, `talen-energy`) landed, citing the new dossier's source without registering it in the older one. No `party` override was needed — a counterparty's newsroom tiers `independent` under the domain rule, which is correct.
+- **5 relationship `type`s corrected.** `kiewit`→`bechtel` `other`→`competitor` (both dossiers record the ENR #2-vs-#4 rivalry; the note now leads with it). `nvidia`→`flex`, `infineon`, `liteon`, `megmeet` `supplier`→`partner` — the cited source is NVIDIA's own 800 VDC *partner* ecosystem list, NVIDIA is not the purchaser of the power shelves or the silicon, and each vendor's dossier reasons the `partner` typing; the vendor side was right.
+- **`repository-information/profiler-relationships-accepted.json` — 10 reciprocal-type pairs accepted, each with a written reason:** `microsoft`/`openai` and `google`/`terawulf` (partner AND investor); `byd`/`tesla` and `byd`/`sinexcel` (customer AND rival at different layers); `delta-electronics`/`infineon` (silicon supplier AND co-development partner, both contexts reason their own side); `dpr`/`openai` (DPR's `other` is a deliberate indirect — the contract runs through Crusoe); `amazon`/`mainspring-energy` and `blattner`/`quanta-services` (the coherent inverse is `portfolio` / `subsidiary`, which the `type` enum does not carry — enum gap recorded, not fixed); `eolian`/`jupiter-power` and `mitsubishi-power`/`prevalon` (`other`/`other` corporate-structure links the checker reports by design).
+- **`profiler-companies.json`** — 47 rows re-synced (`lastUpdated`; `srcTotal` / `srcFirstPct` on the 13 dossiers that gained sources). **`profiler-graph.json`** rebuilt (903 edges). **`archive/archive-index.json`** — 49 new entries.
+- **`PROFILER-COVERAGE-PLAN.md` §9.4** — X2 row flipped to `Done — v04.72r` with the counts. **`PROFILER-CROSSREF-CALIBRATION.md`** — Relationships checker section gains an **Adjudication log** (accepted 10 · corrected 5 · replaced 104 · registered 15 · accepted-URL 0), the truncated-prefix pattern and the step-7 registration pattern as candidate rule wording, and the enum gap.
+- **README tree** — 49 new archive entries, plus 3 archive files from earlier today that were missing from the tree; 3 duplicate archive lines removed and the block's last-entry connector corrected.
+
+### Verified
+
+- `check-profiler-relationships.py` exit 0 (0 findings, 10 suppressed by the accept list); `sync-profiler-registry.py --check` 0 of 127 out of sync; `check-profiler-study.py` 0 errors / 0 warnings; `check-profiler-reports.py` 0 errors / 34 aged-pin warnings (31 → 34 — three more dossiers the reports pin were revised; warning-only, X3 re-pins); `check-profiler-crossrefs.py` exit 0, no new candidate.
+- No Profiler page edit — data-only change per the Archival Procedure (no page version bump, no page changelog entry).
 
 ## [v04.71r] — 2026-09-05 04:18:17 PM EST
 

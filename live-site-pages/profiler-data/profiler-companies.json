@@ -176,12 +176,12 @@
       "tagline": "The interconnection specialist — client-owned substations that halve hyperscale grid timelines; ENR #6 Power + #8 Water + #1 Hydrogen (ACES Delta), and an equal seat in one of the first US SMR design-build JVs.",
       "hq": "Overland Park, KS, USA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "bv.com"
       ],
-      "srcTotal": 29,
-      "srcFirstPct": 55,
+      "srcTotal": 30,
+      "srcFirstPct": 53,
       "kpiNorm": false
     },
     {
@@ -492,12 +492,12 @@
       "hq": "Dublin, Ireland",
       "ticker": "NYSE: ETN",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "eaton.com"
       ],
-      "srcTotal": 16,
-      "srcFirstPct": 69,
+      "srcTotal": 17,
+      "srcFirstPct": 65,
       "kpiNorm": true
     },
     {
@@ -571,7 +571,7 @@
       "tagline": "The American-built ideologue and energy-plus-load pioneer — CyrusOne DFW7 monetizes a BESS interconnection, Flint Grid is PJM's largest battery in the Columbus AI corridor, and both GWh-class supplier slots are open (to FEOC-clean vendors).",
       "hq": "Burlingame, CA, US",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "eolianenergy.com"
       ],
@@ -589,12 +589,12 @@
       "hq": "Redwood City, CA, USA",
       "ticker": "NASDAQ: EQIX",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "equinix.com"
       ],
-      "srcTotal": 12,
-      "srcFirstPct": 50,
+      "srcTotal": 13,
+      "srcFirstPct": 46,
       "kpiNorm": true
     },
     {
@@ -607,7 +607,7 @@
       "hq": "Huizhou, China",
       "ticker": "SZSE: 300014",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "evebattery.com"
       ],
@@ -652,7 +652,7 @@
       "tagline": "Software-first US BESS integrator (HybridOS EMS) — assessed as a services-lane specialist after acquiring Powin's assets in 2025.",
       "hq": "Durham, NC, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "flexgen.com"
       ],
@@ -670,7 +670,7 @@
       "hq": "Arlington, VA, USA",
       "ticker": "NASDAQ: FLNC",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "fluenceenergy.com"
       ],
@@ -688,7 +688,7 @@
       "hq": "Cambridge, MA, USA",
       "ticker": "NYSE: GEV",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "gevernova.com"
       ],
@@ -725,7 +725,7 @@
       "tagline": "World's largest transformer maker and HVDC leader — $57.9B backlog, 30-40 month lead times, $9B+ capacity program; its calendar is everyone's constraint.",
       "hq": "Zurich, Switzerland",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "hitachienergy.com",
         "hitachi.com"
@@ -761,7 +761,7 @@
       "tagline": "America's #1 data-center builder by revenue — $13B on an 82% mission-critical mix, 2+ GW commissioned; the 180-day 22.5 MW speed benchmark from Data Center Alley's home team.",
       "hq": "Falls Church, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "hitt.com",
         "hittyearinreview.com"
@@ -779,7 +779,7 @@
       "tagline": "The quiet giant of hyperscale construction — BD+C's #1 data-center contractor in 2023-24; Google's $2B Fort Wayne campus and EdgeCore's 450 MW Mesa build behind an NDA-heavy low profile.",
       "hq": "Atlanta, GA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-29",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "holderconstruction.com"
       ],
@@ -796,7 +796,7 @@
       "tagline": "The excluded benchmark — #1 in prefab modular DCs and PV inverters, CNY 77.3B revenue; US-banned and EU-phasing-out, so its AIDC market is the Gulf and APAC.",
       "hq": "Shenzhen, China",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "digitalpower.huawei.com",
         "huawei.com"
@@ -816,7 +816,7 @@
       "hq": "Beijing, China",
       "ticker": "SSE STAR: 688411",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "hyperstrong.com"
       ],
@@ -873,7 +873,7 @@
       "hq": "Shangrao, China",
       "ticker": "NYSE: JKS · SSE: 688223",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "jinkosolar.com"
       ],
@@ -924,12 +924,12 @@
       "tagline": "The power picks-and-shovels of the AI boom — ~11 GW of gas EPC (Homer City 4.5 GW), completed HVDC (CHPE), and the Oklo SMR constructor seat; employee-owned at ENR #4.",
       "hq": "Omaha, NE, USA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "kiewit.com"
       ],
-      "srcTotal": 28,
-      "srcFirstPct": 18,
+      "srcTotal": 29,
+      "srcFirstPct": 17,
       "kpiNorm": false
     },
     {
@@ -959,7 +959,7 @@
       "hq": "Seoul, South Korea",
       "ticker": "KRX: 373220",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "lgensol.com"
       ],
@@ -976,7 +976,7 @@
       "tagline": "The second verified Hithium customer — 640 MWh at Woolooga, Australia only; FEOC-clean First Solar in the US, Gotion won the next battery, and bp is reportedly selling the whole platform to a Kuwait-backed consortium.",
       "hq": "London, UK",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "lightsourcebp.com"
       ],
@@ -994,7 +994,7 @@
       "hq": "Taipei, Taiwan",
       "ticker": "TWSE: 2301",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "liteon.com"
       ],
@@ -1030,7 +1030,7 @@
       "tagline": "Linear-generator maker (250 kW units, 46% LHV, <1.5 ppm NOx no SCR) — OBBBA's flat 30% ITC winner, ~$1B AIDC pipeline, exploring IPO under ex-Cummins CEO Linebarger",
       "hq": "Menlo Park, California, United States",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "mainspringenergy.com"
       ],
@@ -1066,13 +1066,13 @@
       "tagline": "162-year-old, 100% employee-owned national builder: 418 MW of data centres delivered against 2 GW+ in preconstruction, and an ENR Top 400 rank that slipped 20 → 22 in the data-centre year.",
       "hq": "St. Louis / Dallas, USA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "mccarthy.com",
         "digcastle.com"
       ],
-      "srcTotal": 99,
-      "srcFirstPct": 57,
+      "srcTotal": 100,
+      "srcFirstPct": 56,
       "kpiNorm": true
     },
     {
@@ -1109,8 +1109,8 @@
         "fb.com",
         "atmeta.com"
       ],
-      "srcTotal": 20,
-      "srcFirstPct": 50,
+      "srcTotal": 21,
+      "srcFirstPct": 48,
       "kpiNorm": true
     },
     {
@@ -1185,7 +1185,7 @@
       "tagline": "The power-and-shell contractor — top-10 ENR builder pairing 11 GW of data centers with 47.8 GW wind / 17 GW solar / 45 GWh storage EPC and gigawatt-class substations.",
       "hq": "Minneapolis, MN, USA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "mortenson.com"
       ],
@@ -1204,7 +1204,7 @@
       "hq": "Hangzhou, China",
       "ticker": "SZSE: 300068 (ST Nandu)",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "en.naradapower.com",
         "mpinarada.com"
@@ -1241,7 +1241,7 @@
       "hq": "Juno Beach, FL, US",
       "ticker": "NYSE: NEE",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "nexteraenergyresources.com",
         "nexteraenergy.com"
@@ -1260,11 +1260,11 @@
       "hq": "Santa Clara, CA, USA",
       "ticker": "NASDAQ: NVDA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "nvidia.com"
       ],
-      "srcTotal": 16,
+      "srcTotal": 18,
       "srcFirstPct": 56,
       "kpiNorm": true
     },
@@ -1296,7 +1296,7 @@
       "tagline": "BESS-based medium-voltage AI UPS™ pioneer — 5 GW Crusoe deployment, FEOC-clean US stack (cells unnamed); direct category competitor to Hithium's ∞Power AIDC line",
       "hq": "Miami, Florida, United States",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "on.energy"
       ],
@@ -1480,7 +1480,7 @@
       "tagline": "Refurb-jet-core aeroderivative supplier (PE6000, 48 MW) — >1.65 GW of AIDC turbine orders incl. Crusoe 650 MW on 2027 delivery; ECP-owned, no BESS offering",
       "hq": "Sedalia, Missouri, United States",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "proenergyservices.com"
       ],
@@ -1497,7 +1497,7 @@
       "tagline": "Blackstone's $60B growth machine — leased capacity 14× since the take-private, 3 GW+ live with a $30B pre-leased pipeline stamped from the water-free Freedom design; the $4.6B Baa2 green bond marked the wholesale sector's IG debut.",
       "hq": "Sterling, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "q.com"
       ],
@@ -1515,7 +1515,7 @@
       "hq": "Houston, TX, USA",
       "ticker": "NYSE: PWR",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "quantaservices.com"
       ],
@@ -1573,7 +1573,7 @@
       "tagline": "#2 US electrical contractor (ESOP, $5.6B revenue) — 15+ GW of data-center power built; BESSUPS with FlexGen moves BESS inside the fence.",
       "hq": "San Jose, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "rosendin.com"
       ],
@@ -1591,7 +1591,7 @@
       "hq": "Seoul, South Korea",
       "ticker": "KRX: 028260",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "samsungcnt.com",
         "samsungrenewableenergy.com"
@@ -1610,7 +1610,7 @@
       "hq": "Yongin-si, South Korea",
       "ticker": "KRX: 006400",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "samsungsdi.com"
       ],
@@ -1628,12 +1628,12 @@
       "hq": "Rueil-Malmaison, France",
       "ticker": "EPA: SU",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "se.com"
       ],
-      "srcTotal": 16,
-      "srcFirstPct": 69,
+      "srcTotal": 17,
+      "srcFirstPct": 65,
       "kpiNorm": true
     },
     {
@@ -1646,12 +1646,12 @@
       "hq": "Munich, Germany",
       "ticker": "ETR: ENR",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "siemens-energy.com"
       ],
-      "srcTotal": 18,
-      "srcFirstPct": 50,
+      "srcTotal": 19,
+      "srcFirstPct": 47,
       "kpiNorm": true
     },
     {
@@ -1724,7 +1724,7 @@
       "tagline": "Blue Owl's named-tenant build engine — developer-owner of all three campuses in Amazon's $18B Louisiana program plus the 1 GW+ Stargate 'Project Jupiter'; 13 GW stated pipeline across three ring-fenced regions, ten ABS series since 2019, a reported $30B+ APAC sale in motion.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "stackinfra.com"
       ],
@@ -1742,7 +1742,7 @@
       "hq": "Hefei, China",
       "ticker": "SZSE: 300274",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "en.sungrowpower.com",
         "sungrowpower.com"
@@ -1762,7 +1762,7 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 300207",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "sunwodaenergy.com",
         "sunwoda.com",
@@ -1781,7 +1781,7 @@
       "tagline": "Patent-moated Tier 5 landlord of the AI-factory era — five US Prime campuses, 2 MW-per-rack EVO halls, a 12 GW Oklo nuclear option and $24B raised since 2024; a confidential S-1 is filed at a reported $50–80B.",
       "hq": "Las Vegas, NV, USA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "switch.com"
       ],
@@ -1816,7 +1816,7 @@
       "tagline": "The FEOC pivot case study — world's largest single BESS site (E&S, 3.3 GWh on LG/Samsung/BYD) then an 8 GWh, ~$1.43B US-made LG Vertech lock through 2029; Masdar/Igneo-owned with a 1 GWh NY build ahead.",
       "hq": "San Diego, CA, US",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "terra-gen.com"
       ],
@@ -1834,7 +1834,7 @@
       "hq": "Austin, TX, USA",
       "ticker": "NASDAQ: TSLA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "tesla.com"
       ],
@@ -1874,7 +1874,7 @@
       "hq": "Changzhou, China",
       "ticker": "SHA: 688599 (Trina Solar)",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "trinasolar.com"
       ],
@@ -1891,12 +1891,12 @@
       "tagline": "ENR's #1 US contractor six years running — data-center revenue tripling toward a $20B-by-2030 target on Meta, CoreWeave, and Stargate mega-campuses; SourceBlue buys the gear.",
       "hq": "New York, NY, USA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "turnerconstruction.com"
       ],
-      "srcTotal": 24,
-      "srcFirstPct": 33,
+      "srcTotal": 25,
+      "srcFirstPct": 32,
       "kpiNorm": true
     },
     {
@@ -1908,11 +1908,11 @@
       "tagline": "The giga-scale Stargate landlord — 41 campuses / ~9 GW on five continents, 1.4 GW Frontier + 902 MW Lighthouse for Oracle/OpenAI behind a record $38B loan; invented the data-center ABS, now reportedly exploring a ~$100B IPO.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "vantage-dc.com"
       ],
-      "srcTotal": 44,
+      "srcTotal": 45,
       "srcFirstPct": 84,
       "kpiNorm": false
     },
@@ -1926,12 +1926,12 @@
       "hq": "Columbus, OH, USA",
       "ticker": "NYSE: VRT",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "vertiv.com"
       ],
-      "srcTotal": 14,
-      "srcFirstPct": 57,
+      "srcTotal": 16,
+      "srcFirstPct": 50,
       "kpiNorm": true
     },
     {
@@ -1962,7 +1962,7 @@
       "tagline": "Volume leader of behind-the-meter AIDC gas power — 2.3 GW Oracle/OpenAI, >1 GW Vantage; Blackstone/Halliburton $1B equity, $5B debt; the defining FEOC-immune adjacent competitor",
       "hq": "Houston, Texas, United States",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "voltagrid.com"
       ],
@@ -1980,7 +1980,7 @@
       "hq": "Helsinki, Finland",
       "ticker": "HEL: WRT1V",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "wartsila.com"
       ],
@@ -2371,7 +2371,7 @@
         "investor.vistracorp.com",
         "mosslandingresponse.com"
       ],
-      "srcTotal": 81,
+      "srcTotal": 82,
       "srcFirstPct": 37,
       "kpiNorm": true
     },

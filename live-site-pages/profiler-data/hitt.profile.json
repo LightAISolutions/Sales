@@ -247,7 +247,7 @@
    "type": "customer",
    "note": "GC on Vantage's Ashburn campus — 250,000 sq ft pad-to-ribbon in seven months; open OSHA matter from a fatal 2025 trench collapse.",
    "context": "Vantage Data Centers is one of HITT's named repeat data-center clients — a 250,000 sq ft Vantage building went pad-to-ribbon in seven months, the calling-card velocity stat. The relationship also carries HITT's most serious open liability: an April 2025 fatal trench collapse at the Vantage Ashburn campus where HITT is GC (worker employed by a subcontractor), with Virginia OSH investigating and no citation outcome located as of August 2026.",
-   "source": "https://www.loudountimes.com/0local-or-not/worker-killed-in-ashburn-trench-collapse/article_efbc9df1-a3ca",
+   "source": "https://www.loudountimes.com/0local-or-not/worker-killed-in-ashburn-trench-collapse/article_efbc9df1-a3ca-456e-9f27-7a6a165c6ddb.html",
    "status": "active"
   },
   {
@@ -650,6 +650,6 @@
    "url": "https://www.hitt.com/leadership/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

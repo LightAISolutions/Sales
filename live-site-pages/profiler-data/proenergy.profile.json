@@ -185,7 +185,7 @@
    "type": "customer",
    "note": "13 PE6000s (650 MW) for hyperscale AI factories — dual-sourced head-to-head against GE Vernova's LM2500XPRESS.",
    "context": "April 2026: Crusoe ordered 13 PE6000 packages (650 MW) for hyperscale AI factories, delivery targeted summer 2027 — the second major AIDC award in ProEnergy's >1.65 GW announced book, and a telling one: Crusoe dual-sources 29 LM2500XPRESS units alongside the 13 PE6000s, meaning refurbished 747/767 cores now bid head-to-head with new OEM iron. The schedule is the product: 2027 delivery against OEM queues stretching to 2029-2030.",
-   "source": "https://thedatacenterengineer.com/news/proenergy-to-deliver-13x-50-mw-pe6000-gas-turbine-genset",
+   "source": "https://thedatacenterengineer.com/news/proenergy-to-deliver-13x-50-mw-pe6000-gas-turbine-gensets-for-crusoe-ai-data-centers/",
    "via": "PE6000",
    "status": "active",
    "since": "2026-04",
@@ -196,7 +196,7 @@
    "type": "competitor",
    "note": "The supply-chain arbitrage target: PE6000 (refurbished GE CF6 cores) delivers 2027 while GEV's book is sold out to 2030.",
    "context": "ProEnergy refurbishes retired Boeing 747/767 GE CF6-80C2 cores into its own-spec PE6000 (48 MW ISO, 5-minute start, LM6000-interchangeable), winning the ~50 MW-block segment on availability — 2027 delivery vs LM6000 waitlists of 3-5 years. The window is real but closing: GEV aero output rose 32% YoY in Q1 2026, and Crusoe already dual-sources both vendors.",
-   "source": "https://www.power-eng.com/gas/turbines/data-centers-drive-record-surge-in-ge-vernova-power-equi",
+   "source": "https://www.power-eng.com/gas/turbines/data-centers-drive-record-surge-in-ge-vernova-power-equipment-orders-as-turbine-slots-tighten-through-2030/",
    "via": "PE6000",
    "status": "active"
   },
@@ -408,6 +408,6 @@
    "date": null
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

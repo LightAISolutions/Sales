@@ -156,7 +156,7 @@
    "type": "customer",
    "note": "Completed the Townsite solar + storage project together.",
    "context": "Arevon and Rosendin completed the Townsite solar and storage project (Nevada) — a delivered utility-scale reference in the Rosendin Energy Group book that is now being pointed at data-center grid work (BESS/substation expansion under new leadership, February 2026).",
-   "source": "https://arevonenergy.com/news/releases/arevon-and-rosendin-complete-townsite-solar-storage-proj",
+   "source": "https://arevonenergy.com/news/releases/arevon-and-rosendin-complete-townsite-solar-storage-project-in-boulder-city-nevada/",
    "status": "active"
   },
   {
@@ -164,7 +164,7 @@
    "type": "competitor",
    "note": "The #1 electrical contractor Rosendin trails at ~3.7x scale in data-center electrical.",
    "context": "Quanta's $13.5B electrical revenue (EC&M 2025) is roughly 3.7x Rosendin's #2 position, and Quanta's Technology & Load Centers segment competes directly for the same data-center electrical scope. Rosendin's counter is the employee-owned craft franchise plus product moves (BESSUPS, Phinergy aluminum-air backup) that sell power capacity, not just installation.",
-   "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-co",
+   "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings",
    "via": "data-center electrical",
    "status": "active"
   }
@@ -385,6 +385,6 @@
    "url": "https://www.rosendin.com/sectors/renewable-energy/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

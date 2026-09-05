@@ -190,7 +190,7 @@
    "type": "competitor",
    "note": "The other leading Western integrator — Megapack 3/Megablock vs Smartstack, and the only other at-scale US domestic-content path.",
    "context": "Fluence and Tesla are the two leading Western system integrators in a market now led by Chinese vertically integrated players (Fluence #7 in Wood Mackenzie's first global ranking, July 2026). They contest every layer: next-gen AC blocks (Megapack 3 ~5 MWh and 20 MWh Megablock vs Smartstack 7.5/10 MWh), bidding software (Autobidder vs Mosaic), and — decisively for US hyperscaler deals — the only two at-scale FEOC-compliant, ITC-bonus-qualifying US supply chains.",
-   "source": "https://www.globenewswire.com/news-release/2026/06/23/3316028/0/en/Fluence-Advances-Smartstack-Energy-Storage-",
+   "source": "https://www.globenewswire.com/news-release/2026/06/23/3316028/0/en/Fluence-Advances-Smartstack-Energy-Storage-Platform-with-High-Density-10-MWh-System.html",
    "status": "active"
   },
   {
@@ -224,7 +224,7 @@
    "type": "partner",
    "note": "Smartstack integrated into Siemens' reference architecture for NVIDIA AI data centers.",
    "context": "June 2026: Fluence's Smartstack was integrated (with nVent) into Siemens' reference architecture for NVIDIA AI data centers — AI load smoothing, black start, and demand response in a 136 MW facility design. A named lane in the NVIDIA/Siemens AI-infrastructure stack and the clearest signal yet that BESS is becoming standard equipment behind the data-center meter.",
-   "source": "https://www.energy-storage.news/fluence-to-integrate-smartstack-into-siemens-nvidia-ai-data-centre-reference-a",
+   "source": "https://www.energy-storage.news/fluence-to-integrate-smartstack-into-siemens-nvidia-ai-data-centre-reference-architecture/",
    "via": "Smartstack",
    "status": "active",
    "since": "2026-06",
@@ -690,6 +690,6 @@
    "url": "https://fluenceenergy.com/domestic-content/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

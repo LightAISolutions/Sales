@@ -148,7 +148,7 @@
    "type": "partner",
    "note": "Named 800 VDC power-systems partner; GB300 reference architecture; full 800 VDC portfolio ships 2H 2026.",
    "context": "Vertiv is a named NVIDIA 800 VDC data-center power systems partner: platform designs advanced to engineering readiness (October 2025) with early design engagement on multiple gigawatt-scale AI-factory projects, timed for Kyber/Rubin Ultra in 2027; an energy-efficient cooling + power reference architecture for GB300 NVL72 (142 kW/rack) with SimReady assets in Omniverse (June 2025); and a DGX GB300 federal deployment at the Naval Postgraduate School (July 2026).",
-   "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/from-vision-to-readiness-vert",
+   "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/from-vision-to-readiness-vertiv-collaborates-with-nvidia-to-advance-800-vdc-platform-designs-to-power-the-next-generation-of-ai-factories/",
    "via": "800 VDC power systems",
    "status": "active",
    "since": "2025-06"
@@ -166,7 +166,7 @@
    "type": "competitor",
    "note": "Liquid-cooling M&A rival ($9.5B Boyd vs Vertiv's four-deal assembly) and prefab competitor.",
    "context": "Eaton's $9.5B Boyd acquisition bought in one stroke the liquid-cooling scope Vertiv assembled through PurgeRite (~$1.0B), Strategic Thermal Labs, ThermoKey and BMarko; Eaton's Fibrebond/Flexnode stack competes with Vertiv OneCore/SmartRun in prefab, backed on Vertiv's side by four new/expanded Americas plants (~7x infrastructure-solutions capacity when ramped).",
-   "source": "https://www.vertiv.com/en-in/about/news-and-insights/news-releases/vertiv-announces-vertiv-onec",
+   "source": "https://www.vertiv.com/en-in/about/news-and-insights/news-releases/vertiv-announces-vertiv-onecore-to-accelerate-deployment-of-scalable-prefabricated-infrastructure-for-ai-hpc-and-high-density-5-mw-data-centers/",
    "status": "active"
   },
   {
@@ -174,7 +174,7 @@
    "type": "competitor",
    "note": "Vertiv's DynaFlex/EnergyCore Grid enters the utility-scale BESS integrator space from the data-center side.",
    "context": "EnergyCore Grid (1 MW-200+ MW utility-grade BESS sold through data-center relationships) puts Vertiv directly into the integrator space occupied by Fluence, Tesla and Sungrow — attacking the interconnection-queue problem from the data-center channel rather than the IPP channel. The lane-crossing move the dossier flags for every storage vendor.",
-   "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-launches-utility-grade",
+   "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-launches-utility-grade-energy-storage-system-to-accelerate-data-center-interconnection-and-grid-resilience-in-north-america/",
    "status": "active"
   },
   {
@@ -182,7 +182,7 @@
    "type": "competitor",
    "note": "Rack-level challenger in the shelf/BBU territory Vertiv is moving down into.",
    "context": "Vertiv's PowerDirect Rack (ORv3 50V DC shelf) entry moves it down into the shelf/BBU territory where Delta, LITEON and Megmeet operate — while for challengers like Megmeet and Sinexcel, Vertiv defines the incumbent product benchmark, with the most centralized-UPS content at risk in the 800 VDC transition and the most aggressive replacement roadmap.",
-   "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-unveils-new-systems-to",
+   "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-unveils-new-systems-to-solve-speed-of-deployment-management-and-rack-power-and-cooling-challenges-for-ai-applications/",
    "status": "active"
   },
   {
@@ -486,6 +486,11 @@
    "date": "2025-08-05"
   },
   {
+   "label": "Oklo — Collaboration with Vertiv on power and cooling solutions for hyperscale and colocation data centres",
+   "url": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Vertiv-Announce-Collaboration-to-Advance-Power-and-Cooling-Solutions-for-Hyperscale-and-Colocation-Data-Centers-in-the-United-States/default.aspx",
+   "date": "2025-07-22"
+  },
+  {
    "label": "Dell'Oro — Schneider and Vertiv tied for DCPI #1",
    "url": "https://www.delloro.com/news/data-center-physical-infrastructure-grew-17-percent-y-y-in-1q-2025-driven-by-ai-buildout/",
    "date": "2025-06"
@@ -494,6 +499,11 @@
    "label": "PowerDirect Rack / SmartRun / Unify launch",
    "url": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-unveils-new-systems-to-solve-speed-of-deployment-management-and-rack-power-and-cooling-challenges-for-ai-applications/",
    "date": "2025-03-18"
+  },
+  {
+   "label": "ABI Research — Vertiv and Johnson Controls take the lead in ABI Research's Thermal Management Providers for Data Centers competitive ranking",
+   "url": "https://www.abiresearch.com/press/vertiv-and-johnson-controls-take-the-lead-in-abi-researchs-thermal-management-providers-for-data-centers-competitive-ranking",
+   "date": "2025-01-30"
   },
   {
    "label": "Manufacturing Dive — Mitsubishi subsidiary invests $86 million in a Pennsylvania switchgear facility",
@@ -509,6 +519,6 @@
    "url": "https://rosenlegal.com/case/vertiv-holdings-co/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 8
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 9
 }

@@ -150,7 +150,7 @@
    "type": "investor",
    "note": "~$4.5B of lease credit backstops bought with warrants now ~14% of the company pro forma.",
    "context": "Google provides amortizing credit backstops across TeraWulf's Fluidstack lease chain — $3.2B behind the Lake Mariner leases (378 MW, ~$6.7B contracted, up to ~$16B with extensions) plus $1.3B behind the 168 MW Abernathy, TX JV — with SEC 8-K mechanics obliging Google to assume the lease on Fluidstack default. The warrants Google received equal ~14% of pro forma equity: the disclosed price of bankability, and the paper the $3.2B of 7.75% WULF Compute notes are secured against.\n\nThe dossier's frame: TeraWulf is credit arbitrage on power scarcity — brownfield megawatts converted into 10-20-year take-or-pay leases with thinly capitalized AI intermediaries, made bankable by Google's investment-grade support (and Anthropic's investment-grade-supported 401 MW/~$19B Hawesville lease).",
-   "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidst",
+   "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner",
    "via": "lease credit backstops",
    "status": "active",
    "since": "2025-08",
@@ -544,5 +544,5 @@
   }
  ],
  "lastUpdated": "2026-09-05",
- "profileVersion": 5
+ "profileVersion": 6
 }

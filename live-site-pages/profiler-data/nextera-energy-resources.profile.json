@@ -211,7 +211,7 @@
    "type": "customer",
    "note": "~2.5 GW across 11 PPAs plus two direct storage ESAs (168 MW New Mexico).",
    "context": "Announced the same day as the Google framework (Dec 8, 2025): Meta signed ~2.5 GW with NEER — 11 PPAs plus two energy storage agreements including 168 MW of New Mexico storage with CODs 2026-2028. The dossier's marker: storage contracted DIRECTLY with a hyperscaler in ESA format — proof NextEra sells storage as an AIDC product, not just an ITC asset.",
-   "source": "https://newsroom.nexteraenergy.com/2025-12-08-NextEra-Energy-Resources-and-Meta-Strengthen-Amer",
+   "source": "https://newsroom.nexteraenergy.com/2025-12-08-NextEra-Energy-Resources-and-Meta-Strengthen-American-Energy-Leadership",
    "status": "active",
    "since": "2025-12",
    "scale": "~2.5 GW (11 PPAs + 2 storage ESAs)"
@@ -221,7 +221,7 @@
    "type": "supplier",
    "note": "Confirmed multi-project ESS supply — first tranche ~$301M, reported ~6.3 GWh of 20-ft Samsung Battery Boxes.",
    "context": "March 2025: Samsung SDI confirmed a multi-project ESS supply deal with NextEra (first tranche ~$301M; Korean-press-reported ~6.3 GWh total). It is the one named piece of NEER's domestic-supply wall — 'competitively priced domestic battery supply secured through 2029' at 1.5x inventory coverage, with the master domestic counterparty still undisclosed. NEER buys as a self-integrator: cells and DC blocks direct, no Tesla/Fluence channel.",
-   "source": "https://www.energy-storage.news/samsung-sdi-confirms-multi-project-energy-storage-supply-deal-w",
+   "source": "https://www.energy-storage.news/samsung-sdi-confirms-multi-project-energy-storage-supply-deal-with-nextera/",
    "via": "Samsung Battery Box",
    "status": "active",
    "since": "2025-03",
@@ -415,6 +415,6 @@
    "url": "https://www.nexteraenergyresources.com/our-solutions/battery-energy-storage.html"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

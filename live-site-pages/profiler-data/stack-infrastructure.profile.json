@@ -237,7 +237,7 @@
    "type": "customer",
    "note": "Developer-owner of all three campuses in Amazon's $18B northwest Louisiana buildout.",
    "context": "STACK is developer and owner of Amazon's three-campus program across Caddo Parish, Bossier Parish and Shreveport, Louisiana — announced at $12B in February 2026 and raised to $18B on August 18, 2026, with 1,500+ construction jobs and STACK funding all water, wastewater and electrical upgrades. The platform's largest disclosed commitment, and the anchor of its claim as the Blue Owl complex's named-tenant build engine.",
-   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-announces-data-",
+   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-announces-data-center-developments-supporting-economic-growth-in-louisiana/",
    "status": "active",
    "since": "2026-02",
    "scale": "$18B, three campuses"
@@ -247,7 +247,7 @@
    "type": "customer",
    "note": "Developer of Project Jupiter — the 1GW+ Stargate campus in Santa Teresa, NM serving Oracle/OpenAI.",
    "context": "September 2025: STACK was named developer of Project Jupiter (with BorderPlex Digital Assets) — a 1GW+ AI campus in Doña Ana County, New Mexico, part of Oracle's 4.5GW additional Stargate capacity, with an on-site microgrid and closed-loop cooling holding water use to office-building levels; Blue Owl funds the development. STACK joins Vantage as a named Stargate landlord.",
-   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digita",
+   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
    "project": "jupiter-nm",
    "status": "active",
    "since": "2025-09",
@@ -258,7 +258,7 @@
    "type": "customer",
    "note": "End tenant of the Stargate capacity Project Jupiter delivers.",
    "context": "Project Jupiter serves the Oracle/OpenAI Stargate program — Oracle holds the lease (18-year OCI term per trade reporting) with OpenAI as primary client, making STACK one of the small set of private wholesale platforms holding developer-owner roles in a Stargate site and a hyperscaler state-scale program simultaneously.",
-   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digita",
+   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
    "project": "jupiter-nm",
    "status": "active",
    "since": "2025-09"
@@ -268,7 +268,7 @@
    "type": "other",
    "note": "Talent and capital touchpoints: ex-Microsoft VP of Energy as CDO Americas; Microsoft-backed AIP among reported APAC suitors.",
    "context": "May 2026: Bobby Hollis — Microsoft's VP of Energy, previously Meta and Rowan Digital — became Chief Development Officer, STACK Americas, owning end-to-end power strategy. June 2026: Bloomberg-sourced reports put the BlackRock/Microsoft/MGX-backed AI Infrastructure Partnership among suitors for STACK's APAC portfolio (a sale that could exceed $30B).",
-   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-appoints-bobby-",
+   "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-appoints-bobby-hollis-as-chief-development-officer/",
    "status": "active"
   },
   {
@@ -767,6 +767,6 @@
    "url": "https://www.stackinfra.com/solutions/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

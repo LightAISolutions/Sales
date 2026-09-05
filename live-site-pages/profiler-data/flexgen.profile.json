@@ -170,7 +170,7 @@
    "type": "partner",
    "note": "BESSUPS partnership — medium-voltage BESS replacing conventional UPS infrastructure for data centers.",
    "context": "Announced June 2025: FlexGen and Rosendin Electric partner on BESSUPS, first-of-its-kind medium-voltage utility-scale battery storage that replaces conventional UPS infrastructure — BESS as both power quality inside the fence and grid services outside it, aimed at AI campuses stuck in interconnection queues. FlexGen's clearest data-center wedge post-pivot.",
-   "source": "https://www.businesswire.com/news/home/20250603612484/en/FlexGen-and-Rosendin-Partner-to-Deliver-First-of-its-",
+   "source": "https://www.businesswire.com/news/home/20250603612484/en/FlexGen-and-Rosendin-Partner-to-Deliver-First-of-its-Kind-Battery-Storage-Solution-for-Data-Centers",
    "via": "BESSUPS",
    "status": "active",
    "since": "2025-06"
@@ -189,7 +189,7 @@
    "type": "supplier",
    "note": "10 GWh multi-year supply agreement (Sep 2022) from FlexGen's pre-pivot integrator era.",
    "context": "CATL signed a 10 GWh multi-year BESS supply agreement with FlexGen in September 2022, when FlexGen was buying cells for its own integrated systems. After the 2023-24 pivot to software and services, FlexGen no longer supplies AC blocks — the agreement belongs to the prior business model, though CATL hardware remains in the fleet HybridOS controls and services.",
-   "source": "https://www.prnewswire.com/news-releases/catl-and-flexgen-sign-10gwh-multi-year-battery-energy-storage-system-",
+   "source": "https://www.prnewswire.com/news-releases/catl-and-flexgen-sign-10gwh-multi-year-battery-energy-storage-system-supply-agreement-301630386.html",
    "status": "historical",
    "since": "2022-09",
    "scale": "10 GWh multi-year"
@@ -605,6 +605,6 @@
    "url": "https://linxon.com/press-release-flexgen-and-linxon-announce-collaboration-to-advance-energy-storage-solutions/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

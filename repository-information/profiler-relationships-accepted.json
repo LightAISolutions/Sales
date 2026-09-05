@@ -1,5 +1,66 @@
 {
   "schemaVersion": 1,
   "note": "relationships[] findings from scripts/check-profiler-relationships.py that a human has reviewed and that need no dossier change. Each id is printed by the checker and hashes the facts behind the finding (both types for a reciprocal pair; slug, counterparty and url for an unregistered source), so editing either side reopens it. These are structural invariants: an entry here is an exception with a written reason, never a loosened rule. Seeded empty at X1 (v04.71r); X2 populates it. Method: repository-information/PROFILER-CROSSREF-CALIBRATION.md → Relationships checker.",
-  "accepted": []
+  "accepted": [
+    {
+      "id": "2ee80f475bc4",
+      "pair": "amazon x mainspring-energy",
+      "why": "Amazon is Mainspring's investor (Climate Pledge Fund, Series F) — the coherent inverse is `portfolio`, which the schema enum does not carry, so Amazon's side stays `other` until the enum grows",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "b9e868c6c207",
+      "pair": "blattner x quanta-services",
+      "why": "Parent/subsidiary — Quanta owns Blattner outright. Neither `parent` nor `subsidiary` nor `portfolio` is in the enum; `investor`/`other` is the closest the schema allows, both dossiers state the corporate structure",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "129676ccb545",
+      "pair": "byd x sinexcel",
+      "why": "Two distinct relationships, both true: BYD competes with Sinexcel's C&I cabinets at system level while buying its battery formation & test equipment — competitor from BYD's side, customer from Sinexcel's",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "4febd634a6d7",
+      "pair": "byd x tesla",
+      "why": "Cell customer AND BESS rival, both true at once: FinDreams supplies LFP cells to Tesla's Shanghai Megafactory while the two fight at the container layer — BYD types the supply link, Tesla the rivalry",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "b80b5b2fcb5c",
+      "pair": "delta-electronics x infineon",
+      "why": "Both true and both reasoned in their own context: Infineon supplies the silicon and packaging into Delta's module (supplier from Delta's side) and the two co-develop under a bilateral first-party release (partner from Infineon's side)",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "6c4dc2d88ea5",
+      "pair": "dpr x openai",
+      "why": "DPR leads the Stargate Abilene build that OpenAI's workloads anchor (supplier in OpenAI's construction bench) but contracts through developer Crusoe, so DPR's side is a deliberate `other` — indirect, not lazy; both dossiers name the Crusoe intermediation",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "2a0854c0f1b6",
+      "pair": "eolian x jupiter-power",
+      "why": "Sponsor siblings under BlackRock after the GIP absorption — a corporate-structure link with no enum type; `other`/`other` is the honest typing and the checker reports `other` by design",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "930714c4e23c",
+      "pair": "google x terawulf",
+      "why": "Partner AND investor — both true: Google backstops ~$4.5B of Fluidstack-TeraWulf leases (partner) and took warrants equal to ~14% of TeraWulf (investor)",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "4ac8cac2a72b",
+      "pair": "microsoft x openai",
+      "why": "Partner AND investor — both true: ~27% stake plus the $250B Azure commitment; Microsoft types the commercial partnership, OpenAI the ownership",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "11542bece402",
+      "pair": "mitsubishi-power x prevalon",
+      "why": "Former parent and its 2024 carve-out, co-owned until the July 2026 sale to Nextpower — a historical corporate-structure link with no enum type; `other`/`other` is the honest typing and the checker reports `other` by design",
+      "when": "2026-09-05"
+    }
+  ]
 }

@@ -179,7 +179,7 @@
    "type": "customer",
    "note": "Two gigacampuses: Richland Parish LA (~$50B/5 GW, shared bench) and Lebanon IN ($10B/1 GW).",
    "context": "Meta programs span ~$60B of campus value in Turner's book: the Richland Parish, LA campus — won at $10B in December 2024 with DPR and Mortenson, expanded to ~$50B / 5 GW / ~10M sq ft by July 2026 (Meta's largest data center, ~7,500 peak workers) — plus the $10B, 1 GW Lebanon, Indiana campus (February 2026) and Jeffersonville. Data centers are ~42% of Turner's backlog, concentrated in a handful of counterparties — Meta above all.",
-   "source": "https://www.turnerconstruction.com/insights/expanded-meta-data-center-creates-more-jobs-and-opp",
+   "source": "https://www.turnerconstruction.com/insights/expanded-meta-data-center-creates-more-jobs-and-opportunity-in-richland-parish-louisiana",
    "status": "active",
    "since": "2024-12",
    "scale": "~$60B of Meta campus value"
@@ -200,7 +200,7 @@
    "type": "customer",
    "note": "Builder on the Stargate Wisconsin campus — and enterprise customer of OpenAI in the other direction.",
    "context": "September 2025: the Turner-McCarthy JV was named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW — split four ways with Whiting-Turner, Weitz and Michels). November 2025: Turner signed a 'wall to wall' OpenAI partnership deploying ChatGPT Enterprise to every employee with 100+ custom AI agents — the AI trade running in both directions.",
-   "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-da",
+   "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
    "via": "Turner-McCarthy JV",
    "project": "stargate",
    "status": "active",
@@ -211,7 +211,7 @@
    "type": "customer",
    "note": "The Stargate WI campus Turner co-builds is Oracle-leased capacity.",
    "context": "Turner's seat on Vantage's Port Washington 'Stargate' campus places it in the Oracle/OpenAI delivery chain — Oracle-linked work adding to a data-center backlog already concentrated in Meta programs, per the dossier's counterparty-concentration basis.",
-   "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-da",
+   "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
    "project": "stargate",
    "status": "active"
   },
@@ -230,7 +230,7 @@
    "type": "partner",
    "note": "Shared-bench co-prime on Meta Richland Parish.",
    "context": "Meta selected the Turner + DPR + Mortenson team for Richland Parish in December 2024 — the template for the shared-bench delivery model on AI gigacampuses, now a ~$50B program. Rivals on every other pursuit.",
-   "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-",
+   "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center",
    "project": "hyperion",
    "status": "active",
    "since": "2024-12"
@@ -240,7 +240,7 @@
    "type": "partner",
    "note": "Co-prime on Meta Richland Parish; the power-scope specialist beside the building GCs.",
    "context": "Mortenson shares the Richland Parish bench with Turner and DPR, holding the sitework, MV-power, substation, water and fiber scopes — the shared-award pattern (Meta LA split three ways, Stargate WI four ways) that shows how hyperscalers dual-source GC capacity: no single builder gets an AI gigacampus alone.",
-   "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-",
+   "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center",
    "project": "hyperion",
    "status": "active",
    "since": "2024-12"
@@ -494,6 +494,11 @@
    "date": "2026-02-13"
   },
   {
+   "label": "The Daily Reporter — Turner and McCarthy announce a partnership for the $15B Port Washington project (Buildings 13 and 14, 468 MW)",
+   "url": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+   "date": "2026-01-22"
+  },
+  {
    "label": "Construction Dive — Turner 'wall to wall' OpenAI partnership",
    "url": "https://www.constructiondive.com/news/turner-partnership-openai-startups-tech/804765/",
    "date": "2025-11-05"
@@ -565,6 +570,6 @@
    "url": "https://www.turnerconstruction.com/services"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

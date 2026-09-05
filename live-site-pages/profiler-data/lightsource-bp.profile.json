@@ -210,7 +210,7 @@
    "type": "supplier",
    "note": "Woolooga BESS Stage 1: 128 × 5 MWh containers (640 MWh) — Hithium's Australian market entry, geographically fenced from the FEOC-clean US book.",
    "context": "The December 2024 deal — 640 MWh of 314 Ah LFP containers with 25-year warranties and INTEC partnering on O&M, expected operational mid-2026 — made Lightsource bp the second verified Hithium field customer, later named among Hithium's flagship customers in HKEX prospectus coverage.\n\nThe relationship lives only where FEOC doesn't reach: the US book is FEOC-clean by design (~8.3 GW of First Solar modules), the larger follow-on Queensland battery (Lower Wonga) went to rival Gotion, and the Woolooga asset itself may now belong to Aula Energy after the February 2026 Australian portfolio sale — so the signing entity, the COD owner, and the future procurement decider may be three different organizations.",
-   "source": "https://www.energy-storage.news/lightsource-bp-picks-hithium-to-supply-640mwh-bess-for-australia-pro",
+   "source": "https://www.energy-storage.news/lightsource-bp-picks-hithium-to-supply-640mwh-bess-for-australia-project/",
    "via": "5 MWh LFP containers",
    "status": "active",
    "since": "2024-12",
@@ -221,7 +221,7 @@
    "type": "customer",
    "note": "Two solar PPAs, including Mowata (172 MWdc, LA) framed against Meta's Hyperion AI campus.",
    "context": "Meta holds two Lightsource bp offtakes — Arche (133 MW, Ohio) and Mowata (172 MWdc, Louisiana; PPA July 2026, $237M), which trade press frames against Meta's Hyperion AI campus in Richland Parish. The Gulf-South/Louisiana position adjacent to Meta's AI buildout is the dossier's sharpest AIDC asset for the #1-ranked US solar developer.",
-   "source": "https://www.datacenterdynamics.com/en/news/meta-inks-172mw-solar-ppa-with-lightsource-bp-in-acadia-p",
+   "source": "https://www.datacenterdynamics.com/en/news/meta-inks-172mw-solar-ppa-with-lightsource-bp-in-acadia-parish-louisiana/",
    "via": "solar PPAs",
    "status": "active",
    "scale": "Arche 133 MW + Mowata 172 MWdc"
@@ -474,6 +474,6 @@
    "url": "https://lightsourcebp.com/data-center-solutions/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

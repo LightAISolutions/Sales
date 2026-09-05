@@ -163,7 +163,7 @@
    "type": "competitor",
    "note": "Took Huawei's Middle East BESS stronghold (87% of 2025 regional share with Sungrow).",
    "context": "Wood Mackenzie has Huawei losing its Middle East storage stronghold to BYD and Sungrow, who combined for 87% of 2025 regional BESS share — the sharpest evidence for the dossier's judgment that Huawei's grid-scale storage position is weaker than its marketing narrative.",
-   "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-",
+   "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-dominance-2025/",
    "status": "active"
   },
   {
@@ -171,7 +171,7 @@
    "type": "competitor",
    "note": "Ahead of Huawei in global utility BESS integration rankings.",
    "context": "Huawei is joint-#4 globally in 2024 utility BESS integration behind Tesla, Sungrow and CRRC (Wood Mackenzie) — the reality check on its self-presentation as an ESS leader. The two never meet in the US, where Huawei is excluded and Tesla is the domestic-content benchmark.",
-   "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-",
+   "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-dominance-2025/",
    "status": "active"
   },
   {
@@ -179,7 +179,7 @@
    "type": "competitor",
    "note": "Fellow top-4 utility BESS integrator in the global ranking.",
    "context": "CRRC sits with Tesla and Sungrow ahead of joint-#4 Huawei in Wood Mackenzie's 2024 utility BESS integration ranking — part of the Chinese integrator bloc that took 76% of the global market, competing with Huawei for the same domestic and export tenders.",
-   "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-",
+   "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-dominance-2025/",
    "status": "active"
   },
   {
@@ -457,6 +457,6 @@
    "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-ups-market.asp"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

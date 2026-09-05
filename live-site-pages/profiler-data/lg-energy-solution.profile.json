@@ -130,7 +130,7 @@
    "type": "customer",
    "note": "Confirmed Megapack 3 LFP cell supplier — $4.3B, Lansing MI production from 2027.",
    "context": "May 2026 confirmation resolved eight months of 'mystery buyer' speculation: LGES supplies Tesla's Megapack 3 LFP cells under a $4.3B contract with production at Lansing, Michigan from 2027. A structural win the dossier calls the FEOC thesis in action — Tesla onshoring Megapack cells to a Korean supplier — even as LGES Vertech competes with Tesla downstream in integration.",
-   "source": "https://electrek.co/2026/03/17/tesla-lg-energy-solution-4-3-billion-lfp-battery-deal-megapack-confir",
+   "source": "https://electrek.co/2026/03/17/tesla-lg-energy-solution-4-3-billion-lfp-battery-deal-megapack-confirmed/",
    "via": "Megapack 3 LFP cells",
    "status": "active",
    "since": "2026",
@@ -444,6 +444,6 @@
    "url": "https://www.lgensol.com/assets/file/LGES_spec_sheet_cells_2024.pdf"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

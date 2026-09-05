@@ -227,7 +227,7 @@
    "type": "customer",
    "note": "Revealed end user of the ~700 MW Hermantown MN site Mortenson Properties is entitling.",
    "context": "March 2026: the city of Hermantown revealed Google as end user of the ~700 MW data center Mortenson's development arm is entitling — the first public confirmation that Mortenson Properties is originating hyperscale work as a land developer, a second Google-adjacent channel beyond the GC book. An updated environmental review (~7 months) is underway with the MCEA lawsuit on hold.",
-   "source": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-d",
+   "source": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-data-center",
    "via": "Mortenson Properties",
    "status": "announced",
    "since": "2026-03",
@@ -643,6 +643,6 @@
    "url": "https://www.mortenson.com/services/mortenson-properties"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

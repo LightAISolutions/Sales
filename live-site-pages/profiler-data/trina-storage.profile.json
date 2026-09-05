@@ -251,7 +251,7 @@
    "type": "partner",
    "note": "371 MWh Houston BESS delivered with FlexGen as integrator — the flagship US reference.",
    "context": "April 2025: Trina Storage's largest North American grid-scale deployment — 371 MWh in Houston for developer SMT Energy, with FlexGen as integrator (HybridOS EMS) and Macquarie/KeyBank as equity and tax partners. Notably delivered through a US integrator wrapping Trina DC blocks — exactly the channel structure FEOC pressure favors.",
-   "source": "https://www.prnewswire.com/news-releases/trina-storage-and-flexgen-to-deploy-371-mwh-of-battery",
+   "source": "https://www.prnewswire.com/news-releases/trina-storage-and-flexgen-to-deploy-371-mwh-of-battery-energy-storage-in-houston-302434771.html",
    "via": "DC blocks",
    "status": "active",
    "since": "2025-04",
@@ -262,7 +262,7 @@
    "type": "competitor",
    "note": "∞Power 6.25-class rival in the 6+ MWh container generation.",
    "context": "Elementa 3 enters the 6+ MWh generation level with Hithium ∞Power 6.25, Sungrow PowerTitan 3.0 Class and CRRC 6.X — differentiated by Trina's in-house cell and the certification wrap (UL 9540A Nov 2025 ed., CSA/ANSI C800-2025, NFPA 855-2026 at beyond-standard severity), not the container.",
-   "source": "https://www.trinasolar.com/us/resources/newsroom/Trina-Storage-Unveils-Elementa-3-Advancing-Saf",
+   "source": "https://www.trinasolar.com/us/resources/newsroom/Trina-Storage-Unveils-Elementa-3-Advancing-Safety,-Flexibility-and-System-Value-for-Utility-Scale-Energy-Storage/",
    "via": "Elementa 3",
    "status": "active"
   },
@@ -561,6 +561,6 @@
    "url": "https://www.trinasolar.com/en-glb/management-team/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

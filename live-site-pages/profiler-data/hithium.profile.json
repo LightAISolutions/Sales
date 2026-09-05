@@ -248,7 +248,7 @@
    "type": "competitor",
    "note": "ON.energy's FEOC-clean AI UPS (5 GW Crusoe anchor) is defining the US AIDC socket Hithium targets.",
    "context": "The dossier assesses the AIDC category's US terms are being set by ON.energy, not Hithium: the AI UPS is medium-voltage, ride-through-certified (ERCOT NOGRR 282/LVRT), FEOC-clean by design, and anchored by a 5 GW Crusoe deployment — every attribute the ∞Power AIDC line lacks for US hyperscale buyers. Hithium's line is deliberately positioned as a full-duration energy backbone, not a compliance-grade UPS, leaving safe-harbored, merchant and non-US channels as its realistic landing zones.",
-   "source": "https://www.datacenterdynamics.com/en/news/crusoe-to-deploy-5gw-of-onenergys-ai-ups-systems-across-data-center",
+   "source": "https://www.datacenterdynamics.com/en/news/crusoe-to-deploy-5gw-of-onenergys-ai-ups-systems-across-data-center-portfolio/",
    "status": "active"
   },
   {
@@ -256,7 +256,7 @@
    "type": "competitor",
    "note": "Large-format race rival; Hithium took EVE's #2 spot in FY2025 ESS shipments.",
    "context": "EVE mass-produced the 628Ah class first, but Hithium is the only maker in mass production above 1,000Ah (∞Cell 1175Ah, 1300Ah announced) — one of only two suppliers (with CATL) shipping 500Ah+ cells at GWh scale by early 2026. InfoLink's FY2025 ranking put Hithium #2 and EVE #3 as the market doubled to 612 GWh. As diversified rivals (CATL, BYD, EVE) manage EV-cell allocation conflicts, Hithium's stationary-only focus is the differentiation.",
-   "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-f",
+   "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
    "status": "active"
   },
   {
@@ -264,7 +264,7 @@
    "type": "competitor",
    "note": "DC-block and sodium-ion rival among the diversified Chinese majors.",
    "context": "BYD's MC Cube contests the same 6+ MWh 20-ft DC-block class as ∞Block/∞Power, and BYD is among the sodium-ion rivals (with CATL Naxtra, HiNA, Envision) to Hithium's ∞Cell N line. Hithium's counter-positioning: purpose-designed stationary cells (8-hour-native LDES, harsh-environment engineering) versus formats adapted from EV lines.",
-   "source": "https://www.ess-news.com/2026/01/22/from-314ah-to-500ah-plus-chinese-battery-majors-race-into-bigger-lfp-cells",
+   "source": "https://www.ess-news.com/2026/01/22/from-314ah-to-500ah-plus-chinese-battery-majors-race-into-bigger-lfp-cells/",
    "status": "active"
   },
   {
@@ -1119,5 +1119,5 @@
   }
  ],
  "lastUpdated": "2026-09-05",
- "profileVersion": 10
+ "profileVersion": 11
 }

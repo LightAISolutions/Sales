@@ -196,7 +196,7 @@
    "type": "competitor",
    "note": "The #1 vertically integrated giant the pure-play integrator model sells against.",
    "context": "Wood Mackenzie's July 2026 inaugural global BESS integrator ranking places Wärtsilä in the global top ten, bucketed with Fluence and Powin as a 'pure-play' integrator competing against vertically integrated Sungrow (#1), Tesla (#2), CATL (#3) and BYD (#4) on system design, commissioning expertise, safety architecture and controls software (GEMS) rather than in-house cell/PCS manufacturing.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
   },
   {
@@ -204,7 +204,7 @@
    "type": "competitor",
    "note": "Megapack-class rival in the 5 MWh AC-block class Quantum3 entered.",
    "context": "GridSolve Quantum3 (September 2024) sits in the grid-scale '5 MWh in a 20-ft container' class Tesla, Sungrow, CATL and BYD define. Wärtsilä's counter as a pure-play: GEMS software optimization, cybersecurity certification depth, and multi-asset (storage + engine + renewables) coordination single-product vendors lack.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "via": "Quantum3",
    "status": "active"
   },
@@ -213,7 +213,7 @@
    "type": "competitor",
    "note": "Vertically integrated #3 in the ranking where Wärtsilä holds a pure-play top-ten slot.",
    "context": "CATL (#3 in Wood Mackenzie's ranking, TENER-class blocks) is among the hardware-led rivals against which Wärtsilä argues software-and-controls differentiation — while as a cell-independent integrator it can, in principle, buy from any of them.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
   },
   {
@@ -221,7 +221,7 @@
    "type": "competitor",
    "note": "Fellow 'pure-play' integrator in Wood Mackenzie's bucket.",
    "context": "Wood Mackenzie frames Wärtsilä with Fluence and Powin as the pure-play integrators against the vertically integrated Chinese/Tesla leaders — the two Western firms contest the same utility and IPP accounts with rival OS stacks (GEMS vs Fluence OS/Mosaic).",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
   }
  ],
@@ -673,6 +673,6 @@
    "url": "https://storage.wartsila.com/solutions/service/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

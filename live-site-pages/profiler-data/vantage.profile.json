@@ -242,7 +242,7 @@
    "type": "customer",
    "note": "Anchor tenant of the two Stargate giga-campuses — Frontier (1.4GW TX) and Lighthouse (902MW WI), $40B+ combined build.",
    "context": "Vantage is executing the largest third-party piece of the Oracle/OpenAI Stargate program: Frontier, Shackelford County, TX (1.4GW critical IT, 10 buildings, $25B+, first building H2 2026, off-grid on a 700MW VoltaGrid microgrid) and Lighthouse, Port Washington, WI (902MW, 4 buildings, $15B+, complete 2028).\n\nBehind them sits a record ~$38B bank package led by JPMorgan and MUFG ($23.25B Frontier / $14.75B Lighthouse, ~4-year tenor, ~250bps) — the largest AI-infrastructure financing ever assembled, with refinancing outcomes tied to the OpenAI complex's credit trajectory in a way no earlier Vantage financing was tied to any single tenant.",
-   "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-cente",
+   "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
    "project": "stargate",
    "status": "active",
    "since": "2025-08",
@@ -253,7 +253,7 @@
    "type": "customer",
    "note": "Named alongside OpenAI and Oracle as a Stargate principal (Lighthouse announcement, Oct 2025).",
    "context": "The October 22, 2025 Stargate Wisconsin announcement named Vantage alongside OpenAI and Oracle — the moment it moved from large developer to named AI-infrastructure counterparty. OpenAI is the end tenant of both Frontier and Lighthouse within the 4.5GW Stargate expansion.",
-   "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-cente",
+   "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
    "project": "stargate",
    "status": "active",
    "since": "2025-10"
@@ -263,7 +263,7 @@
    "type": "supplier",
    "note": ">1GW microgrid partnership — including Frontier's 700MW off-grid plant (210 Jenbacher engines).",
    "context": "February 2025: VoltaGrid partnered to deploy more than 1GW of prime natural-gas microgrid capacity across Vantage's North America portfolio — months-scale installation, up to 98% criteria-pollutant reduction, hydrogen/RNG-capable. Frontier runs fully off-grid on the resulting 700MW plant (210 Jenbacher J624s per TCEQ filings, 197 prime + 13 backup) — the largest off-grid data-center power plant disclosed to date, converting ERCOT interconnection delay into a procurement item. Liberty Energy (Jan 2026, up to 1GW with 400MW of 2027 capacity reserved) is the second leg of the dispatchable-power bench.",
-   "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-",
+   "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-more-than-one-gigawatt-of-power-generation/",
    "via": "natural-gas microgrid",
    "project": "frontier",
    "status": "active",
@@ -275,7 +275,7 @@
    "type": "customer",
    "note": "First commercial capacity commitment in the UK's South Wales AI Growth Zone (CWL1 Newport).",
    "context": "August 2026: Nebius signed for high-density NVIDIA capacity at Vantage's CWL1 Newport campus — the first announced commercial commitment in the UK's South Wales AI Growth Zone, within Vantage's >1GW Newport/Bridgend/Bro Tathan plan. A neocloud logo validating that the UK AI policy machinery routes through Vantage's existing power position.",
-   "source": "https://vantage-dc.com/news/vantage-data-centers-and-nebius-expand-uk-ai-infrastructure-with-fi",
+   "source": "https://vantage-dc.com/news/vantage-data-centers-and-nebius-expand-uk-ai-infrastructure-with-first-deployment-in-south-wales-ai-growth-zone/",
    "status": "active",
    "since": "2026-08"
   },
@@ -807,6 +807,11 @@
    "date": "2024-06-04"
   },
   {
+   "label": "Vantage Data Centers — Vantage and McCarthy celebrate the topping out of Phase II in Goodyear, Arizona",
+   "url": "https://vantage-dc.com/news/vantage-data-centers-and-mccarthy-building-companies-celebrate-topping-out-of-construction-on-phase-ii-of-major-data-center-project-in-goodyear-ariz/",
+   "date": "2023-07-07"
+  },
+  {
    "label": "Vantage — industry-first $1.125B securitized-notes financing",
    "url": "https://vantage-dc.com/news/securitization/",
    "date": "2018-02-20"
@@ -836,6 +841,6 @@
    "url": "https://vantage-dc.com/sustainability/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

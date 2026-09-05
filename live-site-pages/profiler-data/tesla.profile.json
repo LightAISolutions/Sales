@@ -199,7 +199,7 @@
    "type": "supplier",
    "note": "Primary LFP cell source for Megapack — dependence now being reduced by in-house Nevada cells made on CATL equipment.",
    "context": "Megapack 2XL runs primarily on CATL LFP cells, and Tesla's ~7 GWh Sparks, NV cell plant — which shipped its first US-made-cell Megapacks in July 2026 — was itself built with CATL equipment. The dossier's judgment: onshored LFP production reduces but does not eliminate structural dependence on CATL, with tariff hedging the near-term driver; the Megapack 3's in-house 2.8L cell is the next-generation reduction step.",
-   "source": "https://teslanorth.com/2026/07/31/tesla-begins-shipping-first-megapacks-powered-by-american-mad",
+   "source": "https://teslanorth.com/2026/07/31/tesla-begins-shipping-first-megapacks-powered-by-american-made-lfp-cells/",
    "via": "Megapack",
    "status": "active",
    "scale": "Primary storage-cell source"
@@ -254,7 +254,7 @@
    "type": "competitor",
    "note": "Took Tesla's #1 global BESS integrator ranking as Chinese integrators reached ~76% share.",
    "context": "Wood Mackenzie's 2026 comprehensive ranking put Tesla #2 behind Sungrow — the first time the integrator top spot changed hands — as Chinese integrators captured ~76% of a >100 GW market. Tesla's counters: factory prefabrication, Autobidder, delivery speed, bankability, and non-China supply for tariff-sensitive Western buyers (record 46.7 GWh deployed in 2025; Megapack 3/Megablock ramping at Brookshire).",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
   },
   {
@@ -763,6 +763,6 @@
    "url": "https://energylibrary.tesla.com/docs/Public/EnergyStorage/Powerwall/3/InstallManual/BackupSwitch/en-us/GUID-EC527BC7-4750-4425-BBC4-DB8C000339B3.html"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

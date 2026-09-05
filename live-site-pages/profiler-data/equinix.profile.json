@@ -151,7 +151,7 @@
    "type": "other",
    "note": "Talent link, not a contract: Eaton's former CFO Olivier Leonetti became Equinix CFO in March 2026.",
    "context": "An electrical-industry CFO for an infrastructure-heavy era — Leonetti's arrival (announced days after Moody's upgraded Equinix to Baa1) signals where the $5-7B/yr capex program is pointed, and gives Equinix native fluency with the power-equipment supply chain Eaton sits in. No commercial Eaton contract is documented in this dossier.",
-   "source": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results",
+   "source": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results,-Raises-2026-Guidance-and-Long-Term-Outlook",
    "status": "active",
    "since": "2026-03"
   },
@@ -384,6 +384,11 @@
    "date": "2024-06"
   },
   {
+   "label": "Data Center Dynamics — Equinix signs deal for up to 500 MW from Oklo SMRs, makes a $25m pre-payment",
+   "url": "https://www.datacenterdynamics.com/en/news/equinix-signs-deal-to-procure-up-to-500mw-of-nuclear-power-from-oklo-smrs-makes-25m-pre-payment/",
+   "date": "2024-04"
+  },
+  {
    "label": "Hindenburg report (historical short thesis)",
    "url": "https://hindenburgresearch.com/equinix/",
    "date": "2024-03-20"
@@ -394,6 +399,6 @@
    "date": "2023-03"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

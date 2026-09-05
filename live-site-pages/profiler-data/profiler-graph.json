@@ -390,7 +390,7 @@
      "type": "partner",
      "note": "Grid-tier member of the 800VDC ecosystem (added at OCP 2025).",
      "context": "ABB joined NVIDIA's 800VDC ecosystem at the October 2025 OCP Summit alongside GE Vernova, Hitachi Energy, Siemens and Heron Power — the grid-equipment tier joining the partner list moved 800VDC from server-vendor concern to utility-interconnection concern, where BESS lives.",
-     "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-fact",
+     "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
      "status": "active",
      "since": "2025-10",
      "via": "800VDC ecosystem"
@@ -2412,7 +2412,7 @@
      "type": "investor",
      "note": "Amazon's Climate Pledge Fund joined the $258M Series F; reported last-mile linear-generator deployments.",
      "context": "April 2025: Mainspring closed a $258M Series F led by General Catalyst with Amazon's Climate Pledge Fund, DCVC and Temasek participating (total raised >$800M; NextEra, AEP and Chevron sit on the cap table as strategics). The utility & C&I fleet section also carries reported Amazon last-mile deployments of the linear generator — investor first, early customer second.",
-     "source": "https://www.bloomberg.com/news/articles/2025-04-14/menlo-park-based-energy-startup-nabs-258-mil",
+     "source": "https://www.bloomberg.com/news/articles/2025-04-14/menlo-park-based-energy-startup-nabs-258-million-to-power-data-centers",
      "status": "active",
      "since": "2025-04",
      "via": "linear generators"
@@ -2695,7 +2695,7 @@
      "type": "customer",
      "note": "Reported battery-supply agreement/talks (April 2026) — not company-confirmed.",
      "context": "UPI reported a Samsung SDI battery-supply agreement with Amazon (April 2026), consistent with trade-press reports of Amazon in direct battery-supply talks and as an end customer of the Simplo BBU chain — none company-confirmed. The dossier holds both the Tesla and Amazon deals as unverified upside options.",
-     "source": "https://www.upi.com/Top_News/World-News/2026/04/28/samsung-sdi-batterty-supply-agreement-amazon",
+     "source": "https://www.upi.com/Top_News/World-News/2026/04/28/samsung-sdi-batterty-supply-agreement-amazon/1051777407238/",
      "status": "announced",
      "since": "2026-04"
     }
@@ -2763,7 +2763,7 @@
      "type": "customer",
      "note": "Developer-owner of all three campuses in Amazon's $18B northwest Louisiana buildout.",
      "context": "STACK is developer and owner of Amazon's three-campus program across Caddo Parish, Bossier Parish and Shreveport, Louisiana — announced at $12B in February 2026 and raised to $18B on August 18, 2026, with 1,500+ construction jobs and STACK funding all water, wastewater and electrical upgrades. The platform's largest disclosed commitment, and the anchor of its claim as the Blue Owl complex's named-tenant build engine.",
-     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-announces-data-",
+     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-announces-data-center-developments-supporting-economic-growth-in-louisiana/",
      "status": "active",
      "since": "2026-02",
      "scale": "$18B, three campuses"
@@ -5094,7 +5094,7 @@
      "type": "customer",
      "note": "Completed the Townsite solar + storage project together.",
      "context": "Arevon and Rosendin completed the Townsite solar and storage project (Nevada) — a delivered utility-scale reference in the Rosendin Energy Group book that is now being pointed at data-center grid work (BESS/substation expansion under new leadership, February 2026).",
-     "source": "https://arevonenergy.com/news/releases/arevon-and-rosendin-complete-townsite-solar-storage-proj",
+     "source": "https://arevonenergy.com/news/releases/arevon-and-rosendin-complete-townsite-solar-storage-project-in-boulder-city-nevada/",
      "status": "active"
     }
    },
@@ -5584,8 +5584,8 @@
      "context": "Kiewit briefly took ENR's #2 spot in 2024 before Bechtel retook it ($19.5B revenue on the 2026 Top 400). The dossier treats the US–Japan framework naming of both firms as directional optionality, not bankable pipeline."
     },
     "b": {
-     "type": "other",
-     "note": "Co-named delivery contractor under the $550B US-Japan AI infrastructure framework.",
+     "type": "competitor",
+     "note": "Megaproject EPC arch-rival (ENR #2 vs #4-class), and co-named delivery contractor under the $550B US-Japan AI infrastructure framework.",
      "context": "October 2025: Kiewit and Bechtel were the two US EPC firms named delivery contractors under the $550B US-Japan AI infrastructure framework, with up to $332B earmarked for energy infrastructure. No Kiewit projects have been assigned — the dossier treats it as optionality, not backlog, but the two-firm shortlist itself is the signal.",
      "source": "https://www.constructiondive.com/news/bechtel-kiewit-us-japan-ai-infrastructure-data-centers/804220/",
      "status": "announced",
@@ -7114,7 +7114,7 @@
      "type": "competitor",
      "note": "DC-block and sodium-ion rival among the diversified Chinese majors.",
      "context": "BYD's MC Cube contests the same 6+ MWh 20-ft DC-block class as ∞Block/∞Power, and BYD is among the sodium-ion rivals (with CATL Naxtra, HiNA, Envision) to Hithium's ∞Cell N line. Hithium's counter-positioning: purpose-designed stationary cells (8-hour-native LDES, harsh-environment engineering) versus formats adapted from EV lines.",
-     "source": "https://www.ess-news.com/2026/01/22/from-314ah-to-500ah-plus-chinese-battery-majors-race-into-bigger-lfp-cells",
+     "source": "https://www.ess-news.com/2026/01/22/from-314ah-to-500ah-plus-chinese-battery-majors-race-into-bigger-lfp-cells/",
      "status": "active"
     }
    },
@@ -7165,7 +7165,7 @@
      "type": "competitor",
      "note": "Took Huawei's Middle East BESS stronghold (87% of 2025 regional share with Sungrow).",
      "context": "Wood Mackenzie has Huawei losing its Middle East storage stronghold to BYD and Sungrow, who combined for 87% of 2025 regional BESS share — the sharpest evidence for the dossier's judgment that Huawei's grid-scale storage position is weaker than its marketing narrative.",
-     "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-",
+     "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-dominance-2025/",
      "status": "active"
     }
    },
@@ -7248,7 +7248,7 @@
      "type": "competitor",
      "note": "6+ MWh-class rival the SunTera G3 was built to match.",
      "context": "The SunTera G3 storage flagship (6.25 MWh, 587 Ah cells, grid-forming with black start; global shipments from Q4 2025) matches the 6+ MWh class of Sungrow, Hithium and BYD — Jinko competing up into the big integrators' container class from a PV base.",
-     "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-20",
+     "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-2025/",
      "status": "active"
     }
    },
@@ -7369,7 +7369,7 @@
      "type": "competitor",
      "note": "Top-deployer rival among the Chinese integrators holding ~76% of the global market.",
      "context": "BYD (top 2025 deployer by some rankings, MC Cube block class) is the other Chinese vertically integrated giant in Sungrow's head-on set — together the Chinese integrators captured ~76% of a >100 GW market in 2025, with BYD+Sungrow taking 87% of Middle East share.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active"
     }
    },
@@ -7731,7 +7731,7 @@
      "type": "other",
      "note": "e-STORAGE won 503 MWh in the ex-Samsung Texas pipeline — the develop-and-sell model's procurement truth.",
      "context": "February 2026: e-STORAGE (Canadian Solar) signed 503 MWh of supply for Sunraycer's Lupinus projects — Texas projects C&T originated and sold (the 2023 Sunraycer transaction: ~1 GW solar + ~2 GW ESS across 15 projects, with Samsung retaining development services through NTP). C&T teed up the projects; the buyer picked the batteries, and picked a US-manufacturing-committed supplier.",
-     "source": "https://www.energy-storage.news/e-storage-sunraycer-enter-agreements-for-texas-bess-projects-to",
+     "source": "https://www.energy-storage.news/e-storage-sunraycer-enter-agreements-for-texas-bess-projects-totalling-503mwh/",
      "status": "active",
      "since": "2026-02",
      "via": "e-STORAGE"
@@ -8684,7 +8684,7 @@
      "type": "competitor",
      "note": "Cell-for-cell ESS rival; EVE leads the 600Ah+ class CATL is following.",
      "context": "EVE was first to mass-produce the 600Ah+ cell class (Mr.Big 628Ah) and connected the world's first 628Ah grid-scale station (Lingshou 400 MWh, Feb 2026) — running ahead of CATL's 587Ah in deployed large-cell capacity and forcing the system-economics transition CATL is now following. InfoLink's FY2025 ranking has CATL #1, Hithium #2, EVE #3 as the market doubled to 612 GWh; the same glut-to-tightness reversal lifts all three.",
-     "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-f",
+     "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
      "status": "active"
     }
    },
@@ -8749,7 +8749,7 @@
      "type": "supplier",
      "note": "10 GWh multi-year supply agreement (Sep 2022) from FlexGen's pre-pivot integrator era.",
      "context": "CATL signed a 10 GWh multi-year BESS supply agreement with FlexGen in September 2022, when FlexGen was buying cells for its own integrated systems. After the 2023-24 pivot to software and services, FlexGen no longer supplies AC blocks — the agreement belongs to the prior business model, though CATL hardware remains in the fleet HybridOS controls and services.",
-     "source": "https://www.prnewswire.com/news-releases/catl-and-flexgen-sign-10gwh-multi-year-battery-energy-storage-system-",
+     "source": "https://www.prnewswire.com/news-releases/catl-and-flexgen-sign-10gwh-multi-year-battery-energy-storage-system-supply-agreement-301630386.html",
      "status": "historical",
      "since": "2022-09",
      "scale": "10 GWh multi-year"
@@ -8948,7 +8948,7 @@
      "type": "supplier",
      "note": "Ten-year pact (2026-2035): ≥200 GWh over 2026-28 (~RMB 20B) plus the claimed world's largest sodium-ion order — supply security at the cost of structural dependence.",
      "context": "The November 2025 strategic pact locks ≥200 GWh of cells and systems over 2026-2028 (Morgan Stanley sized it at roughly half of CATL's 2025 ESS volume annually), plus joint investment funds; April 2026 added a 60 GWh three-year sodium-ion agreement with applications including data-center storage.\n\nThe history shows deliberate hedging: CATL supplied 81% of HyperStrong's cells in 2022, down to 21% in H1 2024 (EVE 35%), then re-concentration via the pact. Both suppliers also sell competing systems downstream — the integrator-without-cells model's structural tension.",
-     "source": "https://www.ess-news.com/2025/11/14/catl-hyperstrong-sign-massive-200-gwh-battery-supply-agreement-f",
+     "source": "https://www.ess-news.com/2025/11/14/catl-hyperstrong-sign-massive-200-gwh-battery-supply-agreement-for-energy-storage/",
      "status": "active",
      "since": "2025-11",
      "scale": "≥200 GWh (2026-28) + 60 GWh sodium-ion"
@@ -9022,7 +9022,7 @@
      "type": "competitor",
      "note": "Cell-scale incumbent in the integrator rankings Jinko has yet to crack.",
      "context": "CATL's integrator scale (top-3 in Wood Mackenzie's global BESS ranking) defines the tier above Jinko's storage business — Jinko's 12 GWh claimed ESS capacity is a niche position against the Sungrow/BYD/CATL/Tesla leaders.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-top",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active"
     }
    },
@@ -9107,7 +9107,7 @@
      "type": "supplier",
      "note": "Supplied the legacy LatAm merchant fleet — the pre-pivot era's only confirmed cell relationship.",
      "context": "ON.energy's legacy fleet across Peru, Mexico, Chile, Colombia and Honduras (~320 MWh operating/under construction at the December 2024 snapshot) is CATL-supplied — the only public confirmation of the relationship. The pivot product's zero-Chinese-content stack signals pragmatic rather than ideological sourcing, and the dormant LatAm franchise remains a non-FEOC channel where Chinese cells stay acceptable.",
-     "source": "https://www.energy-storage.news/on-energy-fully-integrated-bess-developer-poised-for-rapid-gro",
+     "source": "https://www.energy-storage.news/on-energy-fully-integrated-bess-developer-poised-for-rapid-growth-in-the-us-market/",
      "status": "historical",
      "scale": "~320 MWh LatAm fleet"
     }
@@ -9261,7 +9261,7 @@
      "type": "competitor",
      "note": "TENER Stack rival in the next-gen AC-block race.",
      "context": "CATL's TENER Stack (9 MWh stackable) sits in the PowerTitan 3.0 competitive set with Tesla's Megablock — the head-on Chinese-major contest where Sungrow differentiates on AC-block integration, grid-forming maturity, burn-tested safety and harsh-climate MEA engineering.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active",
      "via": "PowerTitan 3.0"
     }
@@ -9292,7 +9292,7 @@
      "type": "competitor",
      "note": "600Ah+ roadmap closing on Sunwoda's 684 Ah early-mover lead through 2026-27.",
      "context": "Sunwoda's 684 Ah volume leadership in the 600+ Ah class is real but perishable: CATL/EVE/Hithium roadmaps close the gap through 2026-2027, and Sunwoda runs from a much smaller base — with cells booked against a sub-5% margin price war.",
-     "source": "https://www.energy-storage.news/industry-updates/sunwoda-produces-one-millionth-684ah-energy-st",
+     "source": "https://www.energy-storage.news/industry-updates/sunwoda-produces-one-millionth-684ah-energy-storage-cell/",
      "status": "active",
      "via": "684 Ah cell"
     }
@@ -9330,7 +9330,7 @@
      "type": "supplier",
      "note": "Primary LFP cell source for Megapack — dependence now being reduced by in-house Nevada cells made on CATL equipment.",
      "context": "Megapack 2XL runs primarily on CATL LFP cells, and Tesla's ~7 GWh Sparks, NV cell plant — which shipped its first US-made-cell Megapacks in July 2026 — was itself built with CATL equipment. The dossier's judgment: onshored LFP production reduces but does not eliminate structural dependence on CATL, with tariff hedging the near-term driver; the Megapack 3's in-house 2.8L cell is the next-generation reduction step.",
-     "source": "https://teslanorth.com/2026/07/31/tesla-begins-shipping-first-megapacks-powered-by-american-mad",
+     "source": "https://teslanorth.com/2026/07/31/tesla-begins-shipping-first-megapacks-powered-by-american-made-lfp-cells/",
      "status": "active",
      "scale": "Primary storage-cell source",
      "via": "Megapack"
@@ -9418,7 +9418,7 @@
      "type": "competitor",
      "note": "Vertically integrated #3 in the ranking where Wärtsilä holds a pure-play top-ten slot.",
      "context": "CATL (#3 in Wood Mackenzie's ranking, TENER-class blocks) is among the hardware-led rivals against which Wärtsilä argues software-and-controls differentiation — while as a cell-independent integrator it can, in principle, buy from any of them.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active"
     }
    },
@@ -10683,7 +10683,7 @@
      "type": "customer",
      "note": "Executed both world-first NVIDIA bring-ups (GB200, GB300 NVL72) inside Switch AI Factories.",
      "context": "CoreWeave ran the industry-first NVIDIA GB200 NVL72 bring-up (November 2024) and the world-first GB300 NVL72 bring-up (on Dell rack-scale systems, July 2025) inside Switch's Rob Roy EVO AI Factories — two NVIDIA generations launched first on Switch floors, the strongest third-party validation that the 2MW-per-rack EVO density claims translate to deployed hardware.",
-     "source": "https://www.switch.com/coreweave-deploys-industry-first-nvidia-gb300-nvl72-in-switchs-ai-factor",
+     "source": "https://www.switch.com/coreweave-deploys-industry-first-nvidia-gb300-nvl72-in-switchs-ai-factory-solution/",
      "status": "active",
      "since": "2024-11",
      "via": "EVO AI Factories"
@@ -10894,7 +10894,7 @@
      "type": "competitor",
      "note": "Fellow top-4 utility BESS integrator in the global ranking.",
      "context": "CRRC sits with Tesla and Sungrow ahead of joint-#4 Huawei in Wood Mackenzie's 2024 utility BESS integration ranking — part of the Chinese integrator bloc that took 76% of the global market, competing with Huawei for the same domestic and export tenders.",
-     "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-",
+     "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-dominance-2025/",
      "status": "active"
     }
    },
@@ -11395,7 +11395,7 @@
      "type": "customer",
      "note": "5 GW AI UPS deployment agreement across multiple hyperscale campuses, commissioning 2026-2027.",
      "context": "July 2026: Crusoe and ON.energy agreed to deploy 5 GW of AI UPS™ — the category-making award that puts a BESS-based medium-voltage UPS into ERCOT hyperscale sockets at gigawatt scale, validated against NOGRR 282 large-load ride-through requirements. Financing is undisclosed, and the dossier flags scaffolding risk: >$250M lifetime capital raised against a 5 GW buildout implies project-level structures or a major raise that has not surfaced.",
-     "source": "https://www.crusoe.ai/resources/newsroom/crusoe-and-on-energy-to-deploy-5-gw-of-ai-ups-tm-at-mu",
+     "source": "https://www.crusoe.ai/resources/newsroom/crusoe-and-on-energy-to-deploy-5-gw-of-ai-ups-tm-at-multiple-hyperscale-campuses",
      "status": "active",
      "since": "2026-07",
      "scale": "5 GW",
@@ -11740,7 +11740,7 @@
      "type": "customer",
      "note": "13 PE6000s (650 MW) for hyperscale AI factories — dual-sourced head-to-head against GE Vernova's LM2500XPRESS.",
      "context": "April 2026: Crusoe ordered 13 PE6000 packages (650 MW) for hyperscale AI factories, delivery targeted summer 2027 — the second major AIDC award in ProEnergy's >1.65 GW announced book, and a telling one: Crusoe dual-sources 29 LM2500XPRESS units alongside the 13 PE6000s, meaning refurbished 747/767 cores now bid head-to-head with new OEM iron. The schedule is the product: 2027 delivery against OEM queues stretching to 2029-2030.",
-     "source": "https://thedatacenterengineer.com/news/proenergy-to-deliver-13x-50-mw-pe6000-gas-turbine-genset",
+     "source": "https://thedatacenterengineer.com/news/proenergy-to-deliver-13x-50-mw-pe6000-gas-turbine-gensets-for-crusoe-ai-data-centers/",
      "status": "active",
      "since": "2026-04",
      "scale": "650 MW (13 × PE6000)",
@@ -12420,7 +12420,7 @@
      "type": "supplier",
      "note": "Dominant AI-server power supplier (~70% of Blackwell-platform PSUs per KGI) and founding 800VDC partner.",
      "context": "Delta holds an estimated ~70% of Blackwell-platform AI-server PSUs (KGI) and anchors the component tier of the 800VDC ecosystem from the founding Computex list — the incumbent every other power-shelf vendor is measured against.",
-     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
      "status": "active",
      "scale": "~70% Blackwell PSU share (est.)",
      "via": "Blackwell-platform PSUs"
@@ -13408,7 +13408,7 @@
      "type": "partner",
      "note": "Shared-bench co-prime on Meta Richland Parish.",
      "context": "Meta selected the Turner + DPR + Mortenson team for Richland Parish in December 2024 — the template for the shared-bench delivery model on AI gigacampuses, now a ~$50B program. Rivals on every other pursuit.",
-     "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-",
+     "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center",
      "status": "active",
      "since": "2024-12",
      "project": "hyperion"
@@ -13425,7 +13425,7 @@
      "type": "other",
      "note": "Talent link, not a contract: Eaton's former CFO Olivier Leonetti became Equinix CFO in March 2026.",
      "context": "An electrical-industry CFO for an infrastructure-heavy era — Leonetti's arrival (announced days after Moody's upgraded Equinix to Baa1) signals where the $5-7B/yr capex program is pointed, and gives Equinix native fluency with the power-equipment supply chain Eaton sits in. No commercial Eaton contract is documented in this dossier.",
-     "source": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results",
+     "source": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results,-Raises-2026-Guidance-and-Long-Term-Outlook",
      "status": "active",
      "since": "2026-03"
     }
@@ -13516,7 +13516,7 @@
      "type": "competitor",
      "note": "Fellow transformer top-tier player in the shortage-constrained North American market.",
      "context": "Eaton sits in the global transformer top tier with Hitachi Energy, Siemens Energy, GEV and Toshiba. With US transformer lead times at 2.5-4 years and prices up sharply, the two compete for the same data-center and utility electrification backlog — GEV's edge being the wholly owned Prolec GE North American footprint.",
-     "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transfo",
+     "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/",
      "status": "active"
     }
    },
@@ -13539,7 +13539,7 @@
      "type": "competitor",
      "note": "Rack-power rival and fellow participant in the 2027-28 US transformer capacity wave.",
      "context": "Eaton contests both ends of Hitachi Energy's reach: inside the data center (rack power, where Hitachi's 800 VDC push lands) and in transformers, where ~$1.8B of announced US industry investment (Hitachi, Siemens Energy, GE Vernova, Eaton, Prolec, WEG, ERMCO) all arrives 2027-28 — the back-loaded overcapacity risk to today's scarcity pricing.",
-     "source": "https://www.woodmac.com/press-releases/power-transformers-and-distribution-transformers-will-face-supply-defic",
+     "source": "https://www.woodmac.com/press-releases/power-transformers-and-distribution-transformers-will-face-supply-deficits-of-30-and-10-in-2025/",
      "status": "active"
     }
    },
@@ -13732,7 +13732,7 @@
      "type": "partner",
      "note": "Founding 800VDC partner at the power-infrastructure tier.",
      "context": "Eaton appeared on NVIDIA's initial 800VDC partner list (Computex, May 2025) with Delta, LITEON, Megmeet, Schneider, Vertiv, Infineon and TI — the power-infrastructure names NVIDIA designated to carry the 2027 rack transition.",
-     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
      "status": "active",
      "since": "2025-05",
      "via": "800VDC ecosystem"
@@ -13965,7 +13965,7 @@
      "type": "competitor",
      "note": "Three-way liquid-cooling and 800 VDC rivalry; parallel US onshoring race.",
      "context": "Eaton's $9.5B Boyd acquisition answered Schneider's Motivair; Schneider's 800 VDC 'sidecar' disclosure (Oct 2025 — AC to 800 VDC for racks to 1.2 MW, integrated storage) mirrors Eaton's supercap-plus-DC-distribution hedge, with all incumbents still pre-product on 800 VDC switchboards. Both are racing >$700M-class US manufacturing investments toward hyperscaler proximity.",
-     "source": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-in",
+     "source": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-innovation-in-800-vdc-power-systems-in-support-of-nvidia%E2%80%99s-next-generation-gpus-68ecb631098fd4ea49024353/",
      "status": "active"
     }
    },
@@ -14047,7 +14047,7 @@
      "type": "partner",
      "note": "Alliance productizing a 500 MW SGT-800-based standard onsite-power block — diesel-free, claimed two years off time-to-power.",
      "context": "June 2025: Eaton and Siemens Energy joined forces on a fast-track data-center offering — a repeatable 500 MW grid-independent block (SGT-800 fleet: 620 installations, >20M operating hours, 99.1% reliability; hydrogen-ready to 75 vol%) that 'eliminates diesel backup gensets', with Siemens Energy supplying generation/storage and Eaton the grid-to-chip electrical stack (MV/LV switchgear, UPS, busway, racks). The dossier rates it the most productized onsite-power offering from any major OEM — aimed squarely at the behind-the-meter demand xAI, Crusoe and the hyperscalers validated, and the direct structural answer to GE Vernova's AIDC push.",
-     "source": "https://www.siemens-energy.com/us/en/home/press-releases/eaton-and-siemens-energy-join-forces-t",
+     "source": "https://www.siemens-energy.com/us/en/home/press-releases/eaton-and-siemens-energy-join-forces-to-provide-power-and-techno.html",
      "status": "active",
      "since": "2025-06",
      "scale": "500 MW standard block",
@@ -14181,7 +14181,7 @@
      "type": "competitor",
      "note": "Liquid-cooling M&A rival ($9.5B Boyd vs Vertiv's four-deal assembly) and prefab competitor.",
      "context": "Eaton's $9.5B Boyd acquisition bought in one stroke the liquid-cooling scope Vertiv assembled through PurgeRite (~$1.0B), Strategic Thermal Labs, ThermoKey and BMarko; Eaton's Fibrebond/Flexnode stack competes with Vertiv OneCore/SmartRun in prefab, backed on Vertiv's side by four new/expanded Americas plants (~7x infrastructure-solutions capacity when ramped).",
-     "source": "https://www.vertiv.com/en-in/about/news-and-insights/news-releases/vertiv-announces-vertiv-onec",
+     "source": "https://www.vertiv.com/en-in/about/news-and-insights/news-releases/vertiv-announces-vertiv-onecore-to-accelerate-deployment-of-scalable-prefabricated-infrastructure-for-ai-hpc-and-high-density-5-mw-data-centers/",
      "status": "active"
     }
    },
@@ -15273,7 +15273,7 @@
      "type": "other",
      "note": "US Energy Storage Coalition co-member in the American-built storage campaign.",
      "context": "Eolian sits alongside Tesla, LG Energy Solution Vertech, Fluence and Form Energy in the US Energy Storage Coalition, whose March 2026 claim — 'our American factories [are] now capable of fully supplying the systems we need' (CEO Aaron Zubaty) — is the public banner of Eolian's procurement ideology. Fluence is a policy ally here, not a supplier: no Fluence hardware appears in Eolian's fleet.",
-     "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-",
+     "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds",
      "status": "active"
     }
    },
@@ -15387,7 +15387,7 @@
      "type": "other",
      "note": "Sibling storage operator under BlackRock after the GIP absorption — sponsor-level procurement norms could converge.",
      "context": "Eolian (a Global Infrastructure Partners portfolio company) and Jupiter Power now sit under one sponsor following BlackRock's absorption of GIP. If sponsor-level procurement norms harmonize, the dossier assesses they harmonize toward Eolian's American-built doctrine rather than Jupiter's quiet-buyer pragmatism — a convergence risk for Chinese-cell suppliers holding Jupiter accounts.",
-     "source": "https://www.prnewswire.com/news-releases/global-infrastructure-partners-announces-acquisition-of-map-energys-r",
+     "source": "https://www.prnewswire.com/news-releases/global-infrastructure-partners-announces-acquisition-of-map-energys-renewable-energy-business-301199023.html",
      "status": "active"
     },
     "b": {
@@ -15439,7 +15439,7 @@
      "type": "other",
      "note": "Coalition co-member and a structural favorite (with Tesla) for the open Flint Grid supplier slots.",
      "context": "LG Energy Solution Vertech is a fellow US Energy Storage Coalition member, and the dossier assesses the open supplier slots for Flint Grid — 200 MW/1.06 GWh under construction (PJM's largest battery), with Phase 1 delivering ~2027 and Phase 2 ~2029 — as effectively reserved for FEOC-clean vendors, with Tesla and LGES Vertech the structural favorites given the coalition posture and the Padua precedent.",
-     "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-",
+     "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds",
      "status": "active"
     }
    },
@@ -15549,7 +15549,7 @@
      "type": "supplier",
      "note": "First supplier: 100 MW NMC Chisholm Grid (COD 2021), now being repurposed for the CyrusOne data-center deal.",
      "context": "Sungrow supplied the 100 MW / 125 MWh NMC system for Chisholm Grid in Fort Worth — Eolian's first major BESS and the start of a supplier progression that moved to Wärtsilä and then all-Tesla. Chisholm is now being modernized and repurposed to enable the CyrusOne DFW7 200 MW Fort Worth data-center campus, monetizing its existing interconnection.",
-     "source": "https://www.prnewswire.com/news-releases/sungrow-supplies-a-100-mw-energy-storage-project-in-texas-301213083",
+     "source": "https://www.prnewswire.com/news-releases/sungrow-supplies-a-100-mw-energy-storage-project-in-texas-301213083.html",
      "status": "historical",
      "since": "2021",
      "scale": "100 MW / 125 MWh"
@@ -15581,7 +15581,7 @@
      "type": "supplier",
      "note": "Supplies the entire 400 MW / 1.8 GWh Padua complex — Tesla's largest Texas Megapack showcase.",
      "context": "Padua 1 (50 MW/100 MWh, COD Sep 2025), Padua 2 (150 MW/600 MWh, Winter 2026) and Padua 3 'Ferdinand' (200 MW/800 MWh, Spring 2026) are all Tesla Megapack — the largest BESS site in Texas at >$700M, under CPS Energy storage-capacity agreements.\n\nThe relationship is embedded in Eolian's financing story: Tesla VP Mike Snyder was quoted in the $463M Natixis-arranged construction + term + LC financing for Padua 2&3 (Oct 2025). Tesla is the endpoint of Eolian's supplier progression (Sungrow 2021 → Wärtsilä 2023 → Tesla), consistent with its American-built advocacy.",
-     "source": "https://www.prnewswire.com/news-releases/eolian-and-natixis-corporate--investment-banking-close-463-million-fi",
+     "source": "https://www.prnewswire.com/news-releases/eolian-and-natixis-corporate--investment-banking-close-463-million-financing-for-largest-battery-energy-storage-site-in-texas-providing-needed-capacity-at-critical-location-for-the-grid-302579608.html",
      "status": "active",
      "since": "2025",
      "scale": "400 MW / 1.8 GWh, >$700M complex",
@@ -15642,7 +15642,7 @@
      "type": "supplier",
      "note": "Delivered Madero & Ignacio Grid (200 MW) — world's largest fully-merchant BESS at COD — with an ongoing GEMS service agreement.",
      "context": "Wärtsilä supplied GridSolv Quantum hardware and the GEMS energy-management platform for the Mission, TX pair (200 MW / >500 MWh combined, COD March 2023), operated under a Service+ GAP agreement with dispatch via Eolian's own software. The middle step of Eolian's supplier progression, after Sungrow and before the all-Tesla Padua complex.",
-     "source": "https://www.wartsila.com/media/news/27-03-2023-wartsila-and-eolian-complete-200-mw-standalone-energy-storage-f",
+     "source": "https://www.wartsila.com/media/news/27-03-2023-wartsila-and-eolian-complete-200-mw-standalone-energy-storage-facility-in-texas-the-largest-merchant-battery-system-in-the-world-3246410",
      "status": "active",
      "since": "2023-03",
      "scale": "200 MW / >500 MWh",
@@ -16250,7 +16250,7 @@
      "type": "competitor",
      "note": "Displaced EVE from #2 in InfoLink's FY2025 global ESS cell shipment ranking.",
      "context": "The stationary-only specialist took the #2 slot in both total and utility-scale ESS cell shipments for 2025, pushing EVE to #3 — a share-loss signal during a demand boom that EVE's own channels omit (company messaging still claims 'second globally'). The two also compete directly in the large-format race (EVE 628Ah vs Hithium's 1175Ah/1300Ah kAh-class) and in sodium-ion.",
-     "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-f",
+     "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
      "status": "active",
      "since": "2026-02"
     },
@@ -16258,7 +16258,7 @@
      "type": "competitor",
      "note": "Large-format race rival; Hithium took EVE's #2 spot in FY2025 ESS shipments.",
      "context": "EVE mass-produced the 628Ah class first, but Hithium is the only maker in mass production above 1,000Ah (∞Cell 1175Ah, 1300Ah announced) — one of only two suppliers (with CATL) shipping 500Ah+ cells at GWh scale by early 2026. InfoLink's FY2025 ranking put Hithium #2 and EVE #3 as the market doubled to 612 GWh. As diversified rivals (CATL, BYD, EVE) manage EV-cell allocation conflicts, Hithium's stationary-only focus is the differentiation.",
-     "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-f",
+     "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
      "status": "active"
     }
    },
@@ -16742,7 +16742,7 @@
      "via": "800 VDC power shelves and racks"
     },
     "b": {
-     "type": "supplier",
+     "type": "partner",
      "note": "NVIDIA names Flex Power among the power system components vendors for its 800 VDC architecture, and Flex has shipped power shelves built to NVIDIA platform requirements.",
      "context": "Flex sits in the second of NVIDIA's three published tiers — power system components — with Bizlink, Delta, Lead Wealth, LITEON and Megmeet. That tier consumes the silicon the first tier supplies and feeds the facility-power systems of the third.\n\nFlex has shipped against it: a 33 kW power shelf for the GB300 NVL72 platform at 97.5% peak half-load efficiency in August 2025, then a 110 kW shelf and an 800 VDC Power Rack for the Vera Rubin platform in March 2026, plus reference designs for NVIDIA's Omniverse DSX blueprint. Flex states it plans full-scale production of 800 VDC power components to coincide with NVIDIA Kyber rack-scale systems.\n\nOne observation belongs with it: Flex is not named in NVIDIA's May 2026 DSX partner release, nor in independent coverage of NVIDIA's GTC 2026 800 VDC ecosystem. From 2026 the announcements are largely Flex's own.",
      "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
@@ -17159,7 +17159,7 @@
      "type": "partner",
      "note": "BESSUPS partnership — medium-voltage BESS replacing conventional UPS infrastructure for data centers.",
      "context": "Announced June 2025: FlexGen and Rosendin Electric partner on BESSUPS, first-of-its-kind medium-voltage utility-scale battery storage that replaces conventional UPS infrastructure — BESS as both power quality inside the fence and grid services outside it, aimed at AI campuses stuck in interconnection queues. FlexGen's clearest data-center wedge post-pivot.",
-     "source": "https://www.businesswire.com/news/home/20250603612484/en/FlexGen-and-Rosendin-Partner-to-Deliver-First-of-its-",
+     "source": "https://www.businesswire.com/news/home/20250603612484/en/FlexGen-and-Rosendin-Partner-to-Deliver-First-of-its-Kind-Battery-Storage-Solution-for-Data-Centers",
      "status": "active",
      "since": "2025-06",
      "via": "BESSUPS"
@@ -17316,7 +17316,7 @@
      "type": "partner",
      "note": "371 MWh Houston BESS delivered with FlexGen as integrator — the flagship US reference.",
      "context": "April 2025: Trina Storage's largest North American grid-scale deployment — 371 MWh in Houston for developer SMT Energy, with FlexGen as integrator (HybridOS EMS) and Macquarie/KeyBank as equity and tax partners. Notably delivered through a US integrator wrapping Trina DC blocks — exactly the channel structure FEOC pressure favors.",
-     "source": "https://www.prnewswire.com/news-releases/trina-storage-and-flexgen-to-deploy-371-mwh-of-battery",
+     "source": "https://www.prnewswire.com/news-releases/trina-storage-and-flexgen-to-deploy-371-mwh-of-battery-energy-storage-in-houston-302434771.html",
      "status": "active",
      "since": "2025-04",
      "scale": "371 MWh",
@@ -17455,7 +17455,7 @@
      "type": "partner",
      "note": "Smartstack integrated into Siemens' reference architecture for NVIDIA AI data centers.",
      "context": "June 2026: Fluence's Smartstack was integrated (with nVent) into Siemens' reference architecture for NVIDIA AI data centers — AI load smoothing, black start, and demand response in a 136 MW facility design. A named lane in the NVIDIA/Siemens AI-infrastructure stack and the clearest signal yet that BESS is becoming standard equipment behind the data-center meter.",
-     "source": "https://www.energy-storage.news/fluence-to-integrate-smartstack-into-siemens-nvidia-ai-data-centre-reference-a",
+     "source": "https://www.energy-storage.news/fluence-to-integrate-smartstack-into-siemens-nvidia-ai-data-centre-reference-architecture/",
      "status": "active",
      "since": "2026-06",
      "scale": "136 MW reference facility design",
@@ -17601,7 +17601,7 @@
      "type": "competitor",
      "note": "The other leading Western integrator — Megapack 3/Megablock vs Smartstack, and the only other at-scale US domestic-content path.",
      "context": "Fluence and Tesla are the two leading Western system integrators in a market now led by Chinese vertically integrated players (Fluence #7 in Wood Mackenzie's first global ranking, July 2026). They contest every layer: next-gen AC blocks (Megapack 3 ~5 MWh and 20 MWh Megablock vs Smartstack 7.5/10 MWh), bidding software (Autobidder vs Mosaic), and — decisively for US hyperscaler deals — the only two at-scale FEOC-compliant, ITC-bonus-qualifying US supply chains.",
-     "source": "https://www.globenewswire.com/news-release/2026/06/23/3316028/0/en/Fluence-Advances-Smartstack-Energy-Storage-",
+     "source": "https://www.globenewswire.com/news-release/2026/06/23/3316028/0/en/Fluence-Advances-Smartstack-Energy-Storage-Platform-with-High-Density-10-MWh-System.html",
      "status": "active"
     },
     "b": {
@@ -17680,7 +17680,7 @@
      "type": "competitor",
      "note": "Vertiv's DynaFlex/EnergyCore Grid enters the utility-scale BESS integrator space from the data-center side.",
      "context": "EnergyCore Grid (1 MW-200+ MW utility-grade BESS sold through data-center relationships) puts Vertiv directly into the integrator space occupied by Fluence, Tesla and Sungrow — attacking the interconnection-queue problem from the data-center channel rather than the IPP channel. The lane-crossing move the dossier flags for every storage vendor.",
-     "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-launches-utility-grade",
+     "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-launches-utility-grade-energy-storage-system-to-accelerate-data-center-interconnection-and-grid-resilience-in-north-america/",
      "status": "active"
     }
    },
@@ -17727,7 +17727,7 @@
      "type": "competitor",
      "note": "Fellow 'pure-play' integrator in Wood Mackenzie's bucket.",
      "context": "Wood Mackenzie frames Wärtsilä with Fluence and Powin as the pure-play integrators against the vertically integrated Chinese/Tesla leaders — the two Western firms contest the same utility and IPP accounts with rival OS stacks (GEMS vs Fluence OS/Mosaic).",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active"
     }
    },
@@ -18410,7 +18410,7 @@
      "type": "competitor",
      "note": "Transformer top-tier rival — Hitachi leads globally; Prolec makes GEV the most North America-weighted.",
      "context": "Hitachi Energy leads global transformers with Siemens Energy, Eaton, GEV and Toshiba in the top tier, but the completed Prolec GE acquisition makes GEV the most North America-weighted player in a market with 2.5-4 year lead times industry-wide. The two also split the HVDC order book (Hitachi + Siemens Energy + GEV took ~60-65% of 2025 HVDC intake).",
-     "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transfo",
+     "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/",
      "status": "active"
     },
     "b": {
@@ -18813,7 +18813,7 @@
      "type": "partner",
      "note": "Grid-tier 800VDC ecosystem member with three joint AI-factory reference designs.",
      "context": "GE Vernova joined the 800VDC ecosystem at OCP 2025 and co-published AI Factory 800 VDC reference designs (grid-connected, islanded, bridging) with Omniverse DSX digital twins — the deepest grid-tier collaboration in the partner list.",
-     "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-fact",
+     "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
      "status": "active",
      "since": "2025-10",
      "via": "800VDC ecosystem"
@@ -18969,7 +18969,7 @@
      "type": "competitor",
      "note": "The supply-chain arbitrage target: PE6000 (refurbished GE CF6 cores) delivers 2027 while GEV's book is sold out to 2030.",
      "context": "ProEnergy refurbishes retired Boeing 747/767 GE CF6-80C2 cores into its own-spec PE6000 (48 MW ISO, 5-minute start, LM6000-interchangeable), winning the ~50 MW-block segment on availability — 2027 delivery vs LM6000 waitlists of 3-5 years. The window is real but closing: GEV aero output rose 32% YoY in Q1 2026, and Crusoe already dual-sources both vendors.",
-     "source": "https://www.power-eng.com/gas/turbines/data-centers-drive-record-surge-in-ge-vernova-power-equi",
+     "source": "https://www.power-eng.com/gas/turbines/data-centers-drive-record-surge-in-ge-vernova-power-equipment-orders-as-turbine-slots-tighten-through-2030/",
      "status": "active",
      "via": "PE6000"
     }
@@ -19090,14 +19090,14 @@
      "type": "competitor",
      "note": "One of the three OEMs supplying two-thirds of turbines for gas plants under construction globally.",
      "context": "GEV, Siemens Energy and Mitsubishi Power supply two-thirds of turbines for gas plants under construction worldwide; GEV holds the largest single heavy-duty share (>14.5%). Siemens Energy nearly doubled unit sales year-over-year, and its supply lands in the same 2028-2030 windows GEV is now selling — the scarcity the whole sector is monetizing. The two also contest the transformer top tier.",
-     "source": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-p",
+     "source": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-power-plants-under",
      "status": "active"
     },
     "b": {
      "type": "competitor",
      "note": "The other Western giant gating AIDC's two scarcest inputs — gas turbines and grid equipment.",
      "context": "Siemens Energy and GE Vernova (with Mitsubishi Power) supply roughly two-thirds of turbines for gas plants under construction and effectively set the AIDC sector's time-to-power floor: large-frame slots nearly full through 2028, reservation fees back for the first time since the early-2000s boom. Siemens Energy's Q3 FY26: €10.0B of Gas Services orders in one quarter (book-to-bill 2.65, 73 turbines = 15 GW) with US data centers the named driver, group backlog €162B; the SGT6-9000HL is the direct 7HA.03 rival.",
-     "source": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbi",
+     "source": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-power-plants-under",
      "status": "active"
     }
    },
@@ -19777,7 +19777,7 @@
      "type": "customer",
      "note": "Revealed end user of the ~700 MW Hermantown MN site Mortenson Properties is entitling.",
      "context": "March 2026: the city of Hermantown revealed Google as end user of the ~700 MW data center Mortenson's development arm is entitling — the first public confirmation that Mortenson Properties is originating hyperscale work as a land developer, a second Google-adjacent channel beyond the GC book. An updated environmental review (~7 months) is underway with the MCEA lawsuit on hold.",
-     "source": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-d",
+     "source": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-data-center",
      "status": "announced",
      "since": "2026-03",
      "scale": "~700 MW site",
@@ -20102,7 +20102,7 @@
      "type": "investor",
      "note": "~$4.5B of lease credit backstops bought with warrants now ~14% of the company pro forma.",
      "context": "Google provides amortizing credit backstops across TeraWulf's Fluidstack lease chain — $3.2B behind the Lake Mariner leases (378 MW, ~$6.7B contracted, up to ~$16B with extensions) plus $1.3B behind the 168 MW Abernathy, TX JV — with SEC 8-K mechanics obliging Google to assume the lease on Fluidstack default. The warrants Google received equal ~14% of pro forma equity: the disclosed price of bankability, and the paper the $3.2B of 7.75% WULF Compute notes are secured against.\n\nThe dossier's frame: TeraWulf is credit arbitrage on power scarcity — brownfield megawatts converted into 10-20-year take-or-pay leases with thinly capitalized AI intermediaries, made bankable by Google's investment-grade support (and Anthropic's investment-grade-supported 401 MW/~$19B Hawesville lease).",
-     "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidst",
+     "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner",
      "status": "active",
      "since": "2025-08",
      "scale": "~$4.5B backstops; ~14% warrants",
@@ -20765,7 +20765,7 @@
      "type": "partner",
      "note": "Grid-tier 800VDC member with a co-designed grid-to-rack architecture.",
      "context": "Hitachi Energy joined the 800VDC ecosystem (OCP 2025) with a co-designed grid-to-rack power conversion architecture (company-claimed 15x power-supply increase) plus Omniverse digital-twin and DSX blueprint work announced at CERAWeek 2026.",
-     "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-fact",
+     "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
      "status": "active",
      "since": "2025-10",
      "via": "800VDC ecosystem"
@@ -21047,7 +21047,7 @@
      "type": "competitor",
      "note": "Container-class rival in the 6+ MWh race.",
      "context": "The SunTera G3's 6.25 MWh, 587 Ah grid-forming design lands squarely in the container class Hithium contests with ∞Block/∞Power — with Jinko's differentiation being grid-forming capability for weak-grid markets and PV+storage integration from its module base.",
-     "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-20",
+     "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-2025/",
      "status": "active"
     }
    },
@@ -21291,7 +21291,7 @@
      "type": "supplier",
      "note": "Woolooga BESS Stage 1: 128 × 5 MWh containers (640 MWh) — Hithium's Australian market entry, geographically fenced from the FEOC-clean US book.",
      "context": "The December 2024 deal — 640 MWh of 314 Ah LFP containers with 25-year warranties and INTEC partnering on O&M, expected operational mid-2026 — made Lightsource bp the second verified Hithium field customer, later named among Hithium's flagship customers in HKEX prospectus coverage.\n\nThe relationship lives only where FEOC doesn't reach: the US book is FEOC-clean by design (~8.3 GW of First Solar modules), the larger follow-on Queensland battery (Lower Wonga) went to rival Gotion, and the Woolooga asset itself may now belong to Aula Energy after the February 2026 Australian portfolio sale — so the signing entity, the COD owner, and the future procurement decider may be three different organizations.",
-     "source": "https://www.energy-storage.news/lightsource-bp-picks-hithium-to-supply-640mwh-bess-for-australia-pro",
+     "source": "https://www.energy-storage.news/lightsource-bp-picks-hithium-to-supply-640mwh-bess-for-australia-project/",
      "status": "active",
      "since": "2024-12",
      "scale": "640 MWh (128 × 5 MWh)",
@@ -21496,14 +21496,14 @@
      "type": "competitor",
      "note": "ON.energy's FEOC-clean AI UPS (5 GW Crusoe anchor) is defining the US AIDC socket Hithium targets.",
      "context": "The dossier assesses the AIDC category's US terms are being set by ON.energy, not Hithium: the AI UPS is medium-voltage, ride-through-certified (ERCOT NOGRR 282/LVRT), FEOC-clean by design, and anchored by a 5 GW Crusoe deployment — every attribute the ∞Power AIDC line lacks for US hyperscale buyers. Hithium's line is deliberately positioned as a full-duration energy backbone, not a compliance-grade UPS, leaving safe-harbored, merchant and non-US channels as its realistic landing zones.",
-     "source": "https://www.datacenterdynamics.com/en/news/crusoe-to-deploy-5gw-of-onenergys-ai-ups-systems-across-data-center",
+     "source": "https://www.datacenterdynamics.com/en/news/crusoe-to-deploy-5gw-of-onenergys-ai-ups-systems-across-data-center-portfolio/",
      "status": "active"
     },
     "b": {
      "type": "competitor",
      "note": "Direct product-category rival: AI UPS vs Hithium's ∞Power AIDC line, FEOC-clean vs §154-designated.",
      "context": "ON.energy's AI UPS occupies the same grid-buffering, transient-absorbing socket as Hithium's December 2025 ∞Power AI-data-center system (1300Ah cell, 6.9 MW/55.2 MWh) — with a supply chain assembled explicitly FEOC-clean while Hithium carries the NDAA §154 designation. The dossier's read: assume Hithium is designed out of the US product; the dormant LatAm franchise is the one plausible opening.",
-     "source": "https://www.ess-news.com/2025/12/15/hithium-pushes-into-long-duration-storage-and-ai-data-centr",
+     "source": "https://www.ess-news.com/2025/12/15/hithium-pushes-into-long-duration-storage-and-ai-data-centres-with-1300ah-battery-cell-6-9-mw-55-2-mwh-system-and-lithium-sodium-hybrid/",
      "status": "active"
     }
    },
@@ -21696,7 +21696,7 @@
      "type": "partner",
      "note": "~10 GWh global cooperation agreement (Jan 2025), prospectus-cited — real but unconverted 19 months on.",
      "context": "The agreement — signed at Hithium's Xiamen HQ with the E&C group, announced January 6-8, 2025 — covers ~10 GWh of ESS execution projects worldwide with continuous battery-and-system supply, and the HKEX prospectus naming is confirmed. Yet no publicly attributed project exists anywhere: the classic optionality MOU.\n\nThe plausible conversion theatre is E&C's non-US book (Middle East, Australia, Asia — the Qatar/Dukhan-class franchise), not the US, where C&T's develop-and-sell T&I model hands battery procurement to its buyers (see the e-STORAGE/Sunraycer outcome) and Korean battery politics plus Samsung SDI's US ramp pull against every future C&T battery decision.",
-     "source": "https://www.ess-news.com/2025/01/08/hithium-samsung-ct-corporation-partner-on-10-gwh-battery-st",
+     "source": "https://www.ess-news.com/2025/01/08/hithium-samsung-ct-corporation-partner-on-10-gwh-battery-storage-rollout/",
      "status": "announced",
      "since": "2025-01",
      "scale": "~10 GWh MOU",
@@ -21994,7 +21994,7 @@
      "type": "competitor",
      "note": "∞Power 6.25-class rival in the 6+ MWh container generation.",
      "context": "Elementa 3 enters the 6+ MWh generation level with Hithium ∞Power 6.25, Sungrow PowerTitan 3.0 Class and CRRC 6.X — differentiated by Trina's in-house cell and the certification wrap (UL 9540A Nov 2025 ed., CSA/ANSI C800-2025, NFPA 855-2026 at beyond-standard severity), not the container.",
-     "source": "https://www.trinasolar.com/us/resources/newsroom/Trina-Storage-Unveils-Elementa-3-Advancing-Saf",
+     "source": "https://www.trinasolar.com/us/resources/newsroom/Trina-Storage-Unveils-Elementa-3-Advancing-Safety,-Flexibility-and-System-Value-for-Utility-Scale-Energy-Storage/",
      "status": "active",
      "via": "Elementa 3"
     }
@@ -22273,7 +22273,7 @@
      "type": "customer",
      "note": "GC on Vantage's Ashburn campus — 250,000 sq ft pad-to-ribbon in seven months; open OSHA matter from a fatal 2025 trench collapse.",
      "context": "Vantage Data Centers is one of HITT's named repeat data-center clients — a 250,000 sq ft Vantage building went pad-to-ribbon in seven months, the calling-card velocity stat. The relationship also carries HITT's most serious open liability: an April 2025 fatal trench collapse at the Vantage Ashburn campus where HITT is GC (worker employed by a subcontractor), with Virginia OSH investigating and no citation outcome located as of August 2026.",
-     "source": "https://www.loudountimes.com/0local-or-not/worker-killed-in-ashburn-trench-collapse/article_efbc9df1-a3ca",
+     "source": "https://www.loudountimes.com/0local-or-not/worker-killed-in-ashburn-trench-collapse/article_efbc9df1-a3ca-456e-9f27-7a6a165c6ddb.html",
      "status": "active"
     }
    },
@@ -22311,7 +22311,7 @@
      "type": "customer",
      "note": "Legacy client credit on the chairman's roster — but absent from Meta's newest mega-campus GC lineups.",
      "context": "Meta appears on the client roster per the chairman's board bio (with Apple, Google, State Farm et al.), and Holder carries legacy Meta data-center credits. The 2025-26 record Meta awards (Hyperion/Louisiana, Indiana), though, are publicly held by Turner, DPR, Mortenson, HITT, Fortis and Hensel Phelps with no reported Holder role — either undisclosed private awards or share loss; public sources cannot distinguish.",
-     "source": "https://www.georgiapower.com/content/dam/georgia-power/pdfs/company-pdfs/about-us/board-of-directors/bio_",
+     "source": "https://www.georgiapower.com/content/dam/georgia-power/pdfs/company-pdfs/about-us/board-of-directors/bio_tommy-holder.pdf",
      "status": "historical"
     }
    },
@@ -22568,7 +22568,7 @@
      "type": "competitor",
      "note": "Ahead of Huawei in global utility BESS integration rankings.",
      "context": "Huawei is joint-#4 globally in 2024 utility BESS integration behind Tesla, Sungrow and CRRC (Wood Mackenzie) — the reality check on its self-presentation as an ESS leader. The two never meet in the US, where Huawei is excluded and Tesla is the domestic-content benchmark.",
-     "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-",
+     "source": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-dominance-2025/",
      "status": "active"
     }
    },
@@ -22812,7 +22812,7 @@
      "via": "800 VDC power conversion silicon"
     },
     "b": {
-     "type": "supplier",
+     "type": "partner",
      "note": "NVIDIA names Infineon among the silicon providers for its 800 VDC data-centre architecture on its own developer blog.",
      "context": "NVIDIA's published 800 VDC ecosystem sorts partners into three tiers, and Infineon sits in the first: silicon providers, alongside Analog Devices, AOS, Efficient Power Conversion, Innoscience, Monolithic Power Systems, Navitas, onsemi, Power Integrations, Renesas, Richtek, ROHM, STMicroelectronics and Texas Instruments — fourteen names, so this is an ecosystem rather than a sole source.\n\nThe relationship went beyond listing. Infineon published a CoolSiC JFET hot-swap solution in October 2025 that lets an operator exchange a server board in an 800 VDC rack while the rest of the rack keeps running, and joined NVIDIA's MGX AI Factory ecosystem in May 2026 committing to the full 800 V to 50 V, 12 V and 6 V conversion flow with GaN bus converters near 1 MHz.\n\nNVIDIA ties full-scale production of the architecture to its Kyber rack-scale systems in 2027. Neither party has published a revenue figure, a volume commitment or an exclusivity term.",
      "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
@@ -23958,7 +23958,7 @@
      "type": "competitor",
      "note": "Scale benchmark: Jinko is a storage challenger against Sungrow's top-ranked integrator position.",
      "context": "Jinko is a BNEF Tier-1 ESS maker for 8 straight quarters with 12 GWh of claimed capacity, but absent from the top-10 BESS integrator rankings Sungrow leads — a fast-growing niche player against Sungrow/BYD/CATL/Tesla scale, differentiating on grid-forming capability for weak-grid markets.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-top",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active"
     }
    },
@@ -23988,7 +23988,7 @@
      "type": "competitor",
      "note": "Western integrator scale-leader in the class Jinko challenges from below.",
      "context": "Tesla sits in the Sungrow/BYD/CATL/Tesla leader set of the global BESS integrator rankings Jinko is absent from — the scale gap that makes Jinko a storage challenger rather than a peer, despite Tier-1 BNEF status.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-top",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active"
     }
    },
@@ -24683,7 +24683,7 @@
      "type": "supplier",
      "note": "8 GWh, ~$1.43B Vertech framework (2026-2029) on US-made Arizona LFP — LG ES Vertech's largest order ever.",
      "context": "November 2024: Terra-Gen locked an up-to-8 GWh, four-year supply agreement with LG Energy Solution Vertech — modular containerized LFP on cells from LG's Arizona plant, 'all products meeting domestic content requirements,' ~KRW 2T (~$1.43B), including AEROS EMS, following a prior 2.2 GWh collaboration believed to be LG's Edwards & Sanborn share.\n\nThe decisive fact of the account: the most Chinese-content-comfortable large US buyer (LG+Samsung+BYD at E&S; BYD at Canyon Country as late as Nov 2024) solved FEOC with one Korean-US supply chain, pre-booking its mid-decade pipeline before OBBBA even passed.",
-     "source": "https://www.ess-news.com/2024/11/18/masdar-backed-terra-gen-places-8-gwh-energy-storage-order-w",
+     "source": "https://www.ess-news.com/2024/11/18/masdar-backed-terra-gen-places-8-gwh-energy-storage-order-with-lg/",
      "status": "active",
      "since": "2024-11",
      "scale": "8 GWh / ~$1.43B",
@@ -24730,7 +24730,7 @@
      "type": "customer",
      "note": "Confirmed Megapack 3 LFP cell supplier — $4.3B, Lansing MI production from 2027.",
      "context": "May 2026 confirmation resolved eight months of 'mystery buyer' speculation: LGES supplies Tesla's Megapack 3 LFP cells under a $4.3B contract with production at Lansing, Michigan from 2027. A structural win the dossier calls the FEOC thesis in action — Tesla onshoring Megapack cells to a Korean supplier — even as LGES Vertech competes with Tesla downstream in integration.",
-     "source": "https://electrek.co/2026/03/17/tesla-lg-energy-solution-4-3-billion-lfp-battery-deal-megapack-confir",
+     "source": "https://electrek.co/2026/03/17/tesla-lg-energy-solution-4-3-billion-lfp-battery-deal-megapack-confirmed/",
      "status": "active",
      "since": "2026",
      "scale": "$4.3B; production from 2027",
@@ -24840,7 +24840,7 @@
      "type": "customer",
      "note": "Two solar PPAs, including Mowata (172 MWdc, LA) framed against Meta's Hyperion AI campus.",
      "context": "Meta holds two Lightsource bp offtakes — Arche (133 MW, Ohio) and Mowata (172 MWdc, Louisiana; PPA July 2026, $237M), which trade press frames against Meta's Hyperion AI campus in Richland Parish. The Gulf-South/Louisiana position adjacent to Meta's AI buildout is the dossier's sharpest AIDC asset for the #1-ranked US solar developer.",
-     "source": "https://www.datacenterdynamics.com/en/news/meta-inks-172mw-solar-ppa-with-lightsource-bp-in-acadia-p",
+     "source": "https://www.datacenterdynamics.com/en/news/meta-inks-172mw-solar-ppa-with-lightsource-bp-in-acadia-parish-louisiana/",
      "status": "active",
      "scale": "Arche 133 MW + Mowata 172 MWdc",
      "via": "solar PPAs"
@@ -24992,16 +24992,16 @@
      "type": "partner",
      "note": "800 VDC power-components-tier member; 110 kW power shelves for Vera Rubin NVL72 and GB300 collaboration.",
      "context": "LITEON sits on NVIDIA's own 800V partner roster (power-components tier with Delta, Megmeet, Flex, BizLink), shipping 33 kW power shelves, 8.5 kW PSU+BBU pairs, 110 kW shelves for Vera Rubin NVL72 and an 800 VDC 660 kW power rack scaling to >1.5 MW racks in 2H 2026. At OCP 2025 it showed a GB300 NVL72 collaboration combining energy storage, power capping and GPU load management to cut grid peak load ~30% — BBU-side engineering as a first-class NVIDIA collaboration.",
-     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-a",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
      "status": "active",
      "since": "2025",
      "via": "800 VDC power components"
     },
     "b": {
-     "type": "supplier",
+     "type": "partner",
      "note": "#2 Blackwell-platform PSU source and founding 800VDC component-tier partner.",
      "context": "LITEON is the estimated #2 supplier of Blackwell-platform AI-server power (KGI) and a founding member of the 800VDC component tier, shipping 110 kW power shelves for Vera Rubin NVL72 and GB300-class BBU collaborations.",
-     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
      "status": "active",
      "via": "Blackwell-platform PSUs"
     }
@@ -25816,10 +25816,10 @@
      "via": "800V HVDC Sidecar"
     },
     "b": {
-     "type": "supplier",
+     "type": "partner",
      "note": "The mainland-China exception on both 800VDC partner lists; named for GB200 NVL72 power.",
      "context": "Megmeet's inclusion in both NVIDIA 800VDC partner lists is the mainland-China exception — the only mainland power vendor NVIDIA has named for GB200 NVL72 power, co-developing the 800V sidecar for the Kyber rack platform.",
-     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
      "status": "active",
      "via": "GB200 NVL72 power"
     }
@@ -25929,7 +25929,7 @@
      "type": "competitor",
      "note": "Rack-level challenger in the shelf/BBU territory Vertiv is moving down into.",
      "context": "Vertiv's PowerDirect Rack (ORv3 50V DC shelf) entry moves it down into the shelf/BBU territory where Delta, LITEON and Megmeet operate — while for challengers like Megmeet and Sinexcel, Vertiv defines the incumbent product benchmark, with the most centralized-UPS content at risk in the 800 VDC transition and the most aggressive replacement roadmap.",
-     "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-unveils-new-systems-to",
+     "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/vertiv-unveils-new-systems-to-solve-speed-of-deployment-management-and-rack-power-and-cooling-challenges-for-ai-applications/",
      "status": "active"
     }
    },
@@ -26209,7 +26209,7 @@
      "type": "customer",
      "note": "~2.5 GW across 11 PPAs plus two direct storage ESAs (168 MW New Mexico).",
      "context": "Announced the same day as the Google framework (Dec 8, 2025): Meta signed ~2.5 GW with NEER — 11 PPAs plus two energy storage agreements including 168 MW of New Mexico storage with CODs 2026-2028. The dossier's marker: storage contracted DIRECTLY with a hyperscaler in ESA format — proof NextEra sells storage as an AIDC product, not just an ITC asset.",
-     "source": "https://newsroom.nexteraenergy.com/2025-12-08-NextEra-Energy-Resources-and-Meta-Strengthen-Amer",
+     "source": "https://newsroom.nexteraenergy.com/2025-12-08-NextEra-Energy-Resources-and-Meta-Strengthen-American-Energy-Leadership",
      "status": "active",
      "since": "2025-12",
      "scale": "~2.5 GW (11 PPAs + 2 storage ESAs)"
@@ -26418,7 +26418,7 @@
      "type": "partner",
      "note": "120 MWac Oregon solar build with Avangrid and PGE.",
      "context": "December 2024: Avangrid and Portland General Electric collaborated with QTS and Meta to build 120 MWac of Oregon solar — part of QTS's utility-first energy franchise (Alliant 750 MW Wisconsin renewables, ENGIE/ABEI Lubio Solar PPA) and its stated policy of funding 100% of the energy infrastructure its campuses require.",
-     "source": "https://q.com/news/avangrid-and-portland-general-electric-collaborate-with-qts-and-meta-to-buil",
+     "source": "https://q.com/news/avangrid-and-portland-general-electric-collaborate-with-qts-and-meta-to-build-120-mwac-solar-project-in-oregon/",
      "status": "active",
      "since": "2024-12",
      "scale": "120 MWac"
@@ -26564,7 +26564,7 @@
      "type": "customer",
      "note": "Two gigacampuses: Richland Parish LA (~$50B/5 GW, shared bench) and Lebanon IN ($10B/1 GW).",
      "context": "Meta programs span ~$60B of campus value in Turner's book: the Richland Parish, LA campus — won at $10B in December 2024 with DPR and Mortenson, expanded to ~$50B / 5 GW / ~10M sq ft by July 2026 (Meta's largest data center, ~7,500 peak workers) — plus the $10B, 1 GW Lebanon, Indiana campus (February 2026) and Jeffersonville. Data centers are ~42% of Turner's backlog, concentrated in a handful of counterparties — Meta above all.",
-     "source": "https://www.turnerconstruction.com/insights/expanded-meta-data-center-creates-more-jobs-and-opp",
+     "source": "https://www.turnerconstruction.com/insights/expanded-meta-data-center-creates-more-jobs-and-opportunity-in-richland-parish-louisiana",
      "status": "active",
      "since": "2024-12",
      "scale": "~$60B of Meta campus value"
@@ -27156,7 +27156,7 @@
      "type": "customer",
      "note": "Fayetteville flagship houses at least one Microsoft AI 'superfactory'; the $4.6B green bond's collateral tied to Microsoft.",
      "context": "QTS's Fayetteville, GA mega-campus (13 'Freedom' buildings, ~6.2M sq ft) houses at least one Microsoft AI 'superfactory' per trade press, and Bloomberg tied the collateral of the April 2026 $4.6B green bond (10-year, 5.700%, Baa2 — QTS's first investment-grade rating, ~$12.5B peak demand) to Microsoft — the AI-landlord relationship priced by the bond market at 5.7%.",
-     "source": "https://www.bloomberg.com/news/articles/2026-04-06/blackstone-backed-data-center-firm-qts-kicks",
+     "source": "https://www.bloomberg.com/news/articles/2026-04-06/blackstone-backed-data-center-firm-qts-kicks-off-bond-sale",
      "status": "active",
      "scale": "Fayetteville flagship + $4.6B bond collateral",
      "via": "Freedom buildings"
@@ -27243,7 +27243,7 @@
      "type": "other",
      "note": "Talent and capital touchpoints: ex-Microsoft VP of Energy as CDO Americas; Microsoft-backed AIP among reported APAC suitors.",
      "context": "May 2026: Bobby Hollis — Microsoft's VP of Energy, previously Meta and Rowan Digital — became Chief Development Officer, STACK Americas, owning end-to-end power strategy. June 2026: Bloomberg-sourced reports put the BlackRock/Microsoft/MGX-backed AI Infrastructure Partnership among suitors for STACK's APAC portfolio (a sale that could exceed $30B).",
-     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-appoints-bobby-",
+     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-appoints-bobby-hollis-as-chief-development-officer/",
      "status": "active"
     }
    },
@@ -28277,7 +28277,7 @@
      "type": "partner",
      "note": "Co-prime on Meta Richland Parish; the power-scope specialist beside the building GCs.",
      "context": "Mortenson shares the Richland Parish bench with Turner and DPR, holding the sitework, MV-power, substation, water and fiber scopes — the shared-award pattern (Meta LA split three ways, Stargate WI four ways) that shows how hyperscalers dual-source GC capacity: no single builder gets an AI gigacampus alone.",
-     "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-",
+     "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center",
      "status": "active",
      "since": "2024-12",
      "project": "hyperion"
@@ -28356,7 +28356,7 @@
      "type": "other",
      "note": "AIOn 800V HVDC products aligned to NVIDIA-style architecture; CNESA lists Narada among 31 core 800V industry-chain companies.",
      "context": "Narada's AIOn 800V HVDC and AIOn pod products align to the NVIDIA-style 800 VDC architecture, and CNESA lists it among 31 core industry-chain companies for 800V — ecosystem alignment from the AIDC backup-power side (10C AIOn X-Rate, >600 kW per cabinet), not a named NVIDIA partnership.",
-     "source": "https://en.cnesa.org/latest-news/2025/11/25/nvidias-800v-architecture-reshapes-ai-data-centers-",
+     "source": "https://en.cnesa.org/latest-news/2025/11/25/nvidias-800v-architecture-reshapes-ai-data-centers-31-core-industry-chain-companies-unveiled",
      "status": "active",
      "via": "AIOn 800V HVDC"
     }
@@ -28563,7 +28563,7 @@
      "type": "customer",
      "note": "First commercial capacity commitment in the UK's South Wales AI Growth Zone (CWL1 Newport).",
      "context": "August 2026: Nebius signed for high-density NVIDIA capacity at Vantage's CWL1 Newport campus — the first announced commercial commitment in the UK's South Wales AI Growth Zone, within Vantage's >1GW Newport/Bridgend/Bro Tathan plan. A neocloud logo validating that the UK AI policy machinery routes through Vantage's existing power position.",
-     "source": "https://vantage-dc.com/news/vantage-data-centers-and-nebius-expand-uk-ai-infrastructure-with-fi",
+     "source": "https://vantage-dc.com/news/vantage-data-centers-and-nebius-expand-uk-ai-infrastructure-with-first-deployment-in-south-wales-ai-growth-zone/",
      "status": "active",
      "since": "2026-08"
     }
@@ -28587,7 +28587,7 @@
      "type": "supplier",
      "note": "Confirmed multi-project ESS supply — first tranche ~$301M, reported ~6.3 GWh of 20-ft Samsung Battery Boxes.",
      "context": "March 2025: Samsung SDI confirmed a multi-project ESS supply deal with NextEra (first tranche ~$301M; Korean-press-reported ~6.3 GWh total). It is the one named piece of NEER's domestic-supply wall — 'competitively priced domestic battery supply secured through 2029' at 1.5x inventory coverage, with the master domestic counterparty still undisclosed. NEER buys as a self-integrator: cells and DC blocks direct, no Tesla/Fluence channel.",
-     "source": "https://www.energy-storage.news/samsung-sdi-confirms-multi-project-energy-storage-supply-deal-w",
+     "source": "https://www.energy-storage.news/samsung-sdi-confirms-multi-project-energy-storage-supply-deal-with-nextera/",
      "status": "active",
      "since": "2025-03",
      "scale": "~6.3 GWh reported",
@@ -28597,7 +28597,7 @@
      "type": "customer",
      "note": "Confirmed multi-project ESS supply — ~$301M first tranche, reported ~6.3 GWh of Samsung Battery Boxes.",
      "context": "March 2025: Samsung SDI confirmed the multi-project ESS supply deal with NextEra Energy Resources (first tranche ~$301M; Korean-press-reported ~6.3 GWh across projects; 20-ft SBB containers) — the anchor win of the US ESS ramp and the named piece of NextEra's domestic-supply wall.",
-     "source": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand",
+     "source": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand-to-outstrip-production/",
      "status": "active",
      "since": "2025-03",
      "scale": "~6.3 GWh reported",
@@ -29188,7 +29188,7 @@
      "type": "customer",
      "note": "10 GW letter of intent; NVIDIA to invest up to $100B as capacity deploys — the anchor of the circular-financing critique.",
      "context": "September 2025: OpenAI signed a letter of intent for at least 10 GW of NVIDIA systems, with NVIDIA intending to invest up to $100B progressively as each gigawatt deploys (first GW on Vera Rubin in 2H 2026). The defining GW-scale demand signal — and the anchor of the circular-financing critique the dossier rates the most serious structural risk (Bernstein: will 'clearly fuel circular concerns'), alongside reported discussions of guaranteeing up to $250B of OpenAI lease payments.",
-     "source": "https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-1",
+     "source": "https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems",
      "status": "active",
      "since": "2025-09",
      "scale": "10 GW LOI; up to $100B investment",
@@ -29447,7 +29447,7 @@
      "type": "partner",
      "note": "The deepest reference-design franchise: co-developed designs from GB200 through Vera Rubin and gigawatt AI-factory blueprints.",
      "context": "Schneider is the only vendor with co-developed NVIDIA designs spanning power management (ETAP electrical models), liquid-cooling controls (interoperable with NVIDIA Mission Control — the industry-first integrated design, Sept 2025), and whole-factory blueprints: GB200 NVL72 (132 kW racks, Dec 2024), GB300 NVL72 (142 kW racks, ANSI+IEC variants), and gigawatt-scale AI-factory blueprints with AVEVA embedded in Omniverse DSX (GTC, March 2026), including Vera Rubin NVL72 and tokens-per-MW optimization.\n\nThe dossier's judgment: reference-design-led selling pulls Schneider hardware into projects before competitive bidding starts — the procurement template hyperscalers apply to everyone else.",
-     "source": "https://www.globenewswire.com/news-release/2026/03/16/3256775/0/en/schneider-electric-teams-wit",
+     "source": "https://www.globenewswire.com/news-release/2026/03/16/3256775/0/en/schneider-electric-teams-with-nvidia-to-develop-validated-blueprints-to-design-simulate-build-operate-and-maintain-gigawatt-scale-ai-factories.html",
      "status": "active",
      "since": "2024-12",
      "via": "reference designs and AI-factory blueprints"
@@ -29535,7 +29535,7 @@
      "type": "partner",
      "note": "Orlando AI grid lab with NVIDIA within the $1B US investment.",
      "context": "February 2026: Siemens Energy's $1B US investment (Mississippi HV switchgear plant, Charlotte gas-turbine manufacturing resumption and LPT production from 2026-27) includes an Orlando AI grid lab with NVIDIA — localization against the transformer bottleneck (~80% of US LPTs imported, 36+ month lead times) with an AI-grid research leg.",
-     "source": "https://www.siemens-energy.com/us/en/home/press-releases/siemens-energy-is-investing--1-billion",
+     "source": "https://www.siemens-energy.com/us/en/home/press-releases/siemens-energy-is-investing--1-billion-and-creating-highly-skill.html",
      "status": "active",
      "since": "2026-02"
     }
@@ -29580,7 +29580,7 @@
      "type": "partner",
      "note": "Two consecutive world-first NVIDIA bring-ups on Switch floors; Omniverse DSX integrated into the LDC EVO operating system — NVIDIA also a customer per Reuters.",
      "context": "Switch's EVO AI Factories are aligned to NVIDIA DGX/MGX roadmaps from Blackwell through Rubin and hosted the industry-first GB200 NVL72 bring-up (Nov 2024) and world-first GB300 NVL72 bring-up (Jul 2025). March 2026: the NVIDIA Omniverse DSX Blueprint was integrated into EVO and the LDC EVO living-data-center OS — a physics-accurate digital twin replacing DCIM, showcased at GTC with Dell, Schneider, Cadence and ETAP. Reuters also lists NVIDIA among Switch customers.",
-     "source": "https://www.switch.com/switch-integrates-nvidia-omniverse-dsx-blueprint-into-switchs-evo-ai-fac",
+     "source": "https://www.switch.com/switch-integrates-nvidia-omniverse-dsx-blueprint-into-switchs-evo-ai-factories/",
      "status": "active",
      "since": "2024-11",
      "via": "EVO AI Factories"
@@ -29737,7 +29737,7 @@
      "type": "partner",
      "note": "Founding 800VDC partner on the power/cooling side.",
      "context": "Vertiv was on the initial 800VDC partner list at Computex (May 2025) — the founding document of the 2027 power transition — carrying the white-space power and cooling tier of the architecture into hyperscale deployments.",
-     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+     "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
      "status": "active",
      "since": "2025-05",
      "via": "800VDC ecosystem"
@@ -29746,7 +29746,7 @@
      "type": "partner",
      "note": "Named 800 VDC power-systems partner; GB300 reference architecture; full 800 VDC portfolio ships 2H 2026.",
      "context": "Vertiv is a named NVIDIA 800 VDC data-center power systems partner: platform designs advanced to engineering readiness (October 2025) with early design engagement on multiple gigawatt-scale AI-factory projects, timed for Kyber/Rubin Ultra in 2027; an energy-efficient cooling + power reference architecture for GB300 NVL72 (142 kW/rack) with SimReady assets in Omniverse (June 2025); and a DGX GB300 federal deployment at the Naval Postgraduate School (July 2026).",
-     "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/from-vision-to-readiness-vert",
+     "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/from-vision-to-readiness-vertiv-collaborates-with-nvidia-to-advance-800-vdc-platform-designs-to-power-the-next-generation-of-ai-factories/",
      "status": "active",
      "since": "2025-06",
      "via": "800 VDC power systems"
@@ -30612,7 +30612,7 @@
      "type": "customer",
      "note": "End tenant of the Stargate capacity Project Jupiter delivers.",
      "context": "Project Jupiter serves the Oracle/OpenAI Stargate program — Oracle holds the lease (18-year OCI term per trade reporting) with OpenAI as primary client, making STACK one of the small set of private wholesale platforms holding developer-owner roles in a Stargate site and a hyperscaler state-scale program simultaneously.",
-     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digita",
+     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
      "status": "active",
      "since": "2025-09",
      "project": "jupiter-nm"
@@ -30658,7 +30658,7 @@
      "type": "customer",
      "note": "Builder on the Stargate Wisconsin campus — and enterprise customer of OpenAI in the other direction.",
      "context": "September 2025: the Turner-McCarthy JV was named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW — split four ways with Whiting-Turner, Weitz and Michels). November 2025: Turner signed a 'wall to wall' OpenAI partnership deploying ChatGPT Enterprise to every employee with 100+ custom AI agents — the AI trade running in both directions.",
-     "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-da",
+     "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
      "status": "active",
      "since": "2025-09",
      "via": "Turner-McCarthy JV",
@@ -30722,7 +30722,7 @@
      "type": "customer",
      "note": "Named alongside OpenAI and Oracle as a Stargate principal (Lighthouse announcement, Oct 2025).",
      "context": "The October 22, 2025 Stargate Wisconsin announcement named Vantage alongside OpenAI and Oracle — the moment it moved from large developer to named AI-infrastructure counterparty. OpenAI is the end tenant of both Frontier and Lighthouse within the 4.5GW Stargate expansion.",
-     "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-cente",
+     "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
      "status": "active",
      "since": "2025-10",
      "project": "stargate"
@@ -30899,7 +30899,7 @@
      "type": "customer",
      "note": "Developer of Project Jupiter — the 1GW+ Stargate campus in Santa Teresa, NM serving Oracle/OpenAI.",
      "context": "September 2025: STACK was named developer of Project Jupiter (with BorderPlex Digital Assets) — a 1GW+ AI campus in Doña Ana County, New Mexico, part of Oracle's 4.5GW additional Stargate capacity, with an on-site microgrid and closed-loop cooling holding water use to office-building levels; Blue Owl funds the development. STACK joins Vantage as a named Stargate landlord.",
-     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digita",
+     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
      "status": "active",
      "since": "2025-09",
      "scale": "1GW+ campus",
@@ -30953,7 +30953,7 @@
      "type": "customer",
      "note": "The Stargate WI campus Turner co-builds is Oracle-leased capacity.",
      "context": "Turner's seat on Vantage's Port Washington 'Stargate' campus places it in the Oracle/OpenAI delivery chain — Oracle-linked work adding to a data-center backlog already concentrated in Meta programs, per the dossier's counterparty-concentration basis.",
-     "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-da",
+     "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
      "status": "active",
      "project": "stargate"
     }
@@ -31008,7 +31008,7 @@
      "type": "customer",
      "note": "Anchor tenant of the two Stargate giga-campuses — Frontier (1.4GW TX) and Lighthouse (902MW WI), $40B+ combined build.",
      "context": "Vantage is executing the largest third-party piece of the Oracle/OpenAI Stargate program: Frontier, Shackelford County, TX (1.4GW critical IT, 10 buildings, $25B+, first building H2 2026, off-grid on a 700MW VoltaGrid microgrid) and Lighthouse, Port Washington, WI (902MW, 4 buildings, $15B+, complete 2028).\n\nBehind them sits a record ~$38B bank package led by JPMorgan and MUFG ($23.25B Frontier / $14.75B Lighthouse, ~4-year tenor, ~250bps) — the largest AI-infrastructure financing ever assembled, with refinancing outcomes tied to the OpenAI complex's credit trajectory in a way no earlier Vantage financing was tied to any single tenant.",
-     "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-cente",
+     "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
      "status": "active",
      "since": "2025-08",
      "scale": "$40B+ build; ~$38B debt package",
@@ -31889,7 +31889,7 @@
      "type": "competitor",
      "note": "Direct data-center electrical rival — at ~3.7x Rosendin's electrical revenue.",
      "context": "Quanta is the #1 US electrical contractor ($13.5B electrical revenue per EC&M 2025, roughly 3.7x #2 Rosendin) and its Technology & Load Centers end market (guided +220-240% in 2026) is head-to-head with Rosendin, MYR and IES in data-center electrical — the fastest-scaling craft-labor platform in the AIDC buildout, with record $53.4B backlog.",
-     "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-co",
+     "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings",
      "status": "active",
      "via": "data-center electrical"
     },
@@ -31897,7 +31897,7 @@
      "type": "competitor",
      "note": "The #1 electrical contractor Rosendin trails at ~3.7x scale in data-center electrical.",
      "context": "Quanta's $13.5B electrical revenue (EC&M 2025) is roughly 3.7x Rosendin's #2 position, and Quanta's Technology & Load Centers segment competes directly for the same data-center electrical scope. Rosendin's counter is the employee-owned craft franchise plus product moves (BESSUPS, Phinergy aluminum-air backup) that sell power capacity, not just installation.",
-     "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-co",
+     "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings",
      "status": "active",
      "via": "data-center electrical"
     }
@@ -32380,7 +32380,7 @@
      "type": "supplier",
      "note": "$1.9B supply-capacity agreement — prefab power modules, Uniflair chillers, and full-service maintenance for the EVO rollout.",
      "context": "November 2025: the Schneider Electric supply-capacity agreement expanded to $1.9B across two phases — prefabricated power modules, the first North American deployment of new Uniflair chillers, and a three-year full-service maintenance contract supporting up to 2MW-per-rack EVO builds across all five campuses. Switch locked its power-and-cooling slots the way hyperscalers lock GPUs.",
-     "source": "https://www.switch.com/schneider-electric-and-switch-expand-partnership-with-1-9-billion-supply",
+     "source": "https://www.switch.com/schneider-electric-and-switch-expand-partnership-with-1-9-billion-supply-capacity-agreement/",
      "status": "active",
      "since": "2025-11",
      "scale": "$1.9B supply-capacity reservation",
@@ -32471,7 +32471,7 @@
      "type": "competitor",
      "note": "Shared global #1 in data-center physical infrastructure — ~0.1 point apart per Dell'Oro.",
      "context": "Dell'Oro has Schneider and Vertiv sharing the global #1 in data-center physical infrastructure. The structural contrast: pure-play Vertiv (~75-80% data-center) vs Schneider's DC franchise inside a €40B diversified portfolio — steadier through AI-capex shocks but multiple-capped. Liquid cooling is now a three-way incumbent fight (Motivair vs Vertiv's four-deal assembly vs Eaton-Boyd) where 'largest installed base' claims are unverifiable.",
-     "source": "https://www.delloro.com/news/data-center-physical-infrastructure-market-expands-28-percent-y-y-",
+     "source": "https://www.delloro.com/news/data-center-physical-infrastructure-market-expands-28-percent-y-y-in-1q-2026/",
      "status": "active"
     },
     "b": {
@@ -33174,7 +33174,7 @@
      "type": "competitor",
      "note": "First vendor ever to take the global BESS integrator top spot from Tesla — and holder of both Wood Mackenzie crowns.",
      "context": "July 2026: Sungrow ranked #1 in BOTH Wood Mackenzie's inaugural Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (assessing 2025) — the first company to take the integrator top spot from Tesla, as annual global BESS installations passed 100 GW. PowerTitan 3.0 (12.5 MWh per 30-ft) contests Megapack 3/Megablock on density; Tesla's counters are US manufacturing, bankability and Autobidder.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active",
      "since": "2026-07",
      "via": "PowerTitan 3.0"
@@ -33183,7 +33183,7 @@
      "type": "competitor",
      "note": "Took Tesla's #1 global BESS integrator ranking as Chinese integrators reached ~76% share.",
      "context": "Wood Mackenzie's 2026 comprehensive ranking put Tesla #2 behind Sungrow — the first time the integrator top spot changed hands — as Chinese integrators captured ~76% of a >100 GW market. Tesla's counters: factory prefabrication, Autobidder, delivery speed, bankability, and non-China supply for tariff-sensitive Western buyers (record 46.7 GWh deployed in 2025; Megapack 3/Megablock ramping at Brookshire).",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active"
     }
    },
@@ -33327,7 +33327,7 @@
      "type": "competitor",
      "note": "The #1 vertically integrated giant the pure-play integrator model sells against.",
      "context": "Wood Mackenzie's July 2026 inaugural global BESS integrator ranking places Wärtsilä in the global top ten, bucketed with Fluence and Powin as a 'pure-play' integrator competing against vertically integrated Sungrow (#1), Tesla (#2), CATL (#3) and BYD (#4) on system design, commissioning expertise, safety architecture and controls software (GEMS) rather than in-house cell/PCS manufacturing.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active"
     }
    },
@@ -33670,7 +33670,7 @@
      "type": "competitor",
      "note": "Megapack-class rival in the 5 MWh AC-block class Quantum3 entered.",
      "context": "GridSolve Quantum3 (September 2024) sits in the grid-scale '5 MWh in a 20-ft container' class Tesla, Sungrow, CATL and BYD define. Wärtsilä's counter as a pure-play: GEMS software optimization, cybersecurity certification depth, and multi-asset (storage + engine + renewables) coordination single-product vendors lack.",
-     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+     "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
      "status": "active",
      "via": "Quantum3"
     }
@@ -33894,7 +33894,7 @@
      "type": "supplier",
      "note": ">1GW microgrid partnership — including Frontier's 700MW off-grid plant (210 Jenbacher engines).",
      "context": "February 2025: VoltaGrid partnered to deploy more than 1GW of prime natural-gas microgrid capacity across Vantage's North America portfolio — months-scale installation, up to 98% criteria-pollutant reduction, hydrogen/RNG-capable. Frontier runs fully off-grid on the resulting 700MW plant (210 Jenbacher J624s per TCEQ filings, 197 prime + 13 backup) — the largest off-grid data-center power plant disclosed to date, converting ERCOT interconnection delay into a procurement item. Liberty Energy (Jan 2026, up to 1GW with 400MW of 2027 capacity reserved) is the second leg of the dispatchable-power bench.",
-     "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-",
+     "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-more-than-one-gigawatt-of-power-generation/",
      "status": "active",
      "since": "2025-02",
      "scale": ">1GW partnership; 700MW at Frontier",
@@ -33905,7 +33905,7 @@
      "type": "customer",
      "note": ">1 GW microgrid partnership — prime power across the North America portfolio, led by Frontier's 700 MW.",
      "context": "The February 2025 Vantage partnership (>1 GW of natural-gas microgrids as primary power) announced the oilfield-to-AIDC pivot had worked — prime power, not just bridge. Frontier, Shackelford County (the 1.4 GW OpenAI/Stargate campus) runs on VoltaGrid's 210 Jenbacher J624s, ~700 MW initial, TCEQ-permitted, with no battery layer.",
-     "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-",
+     "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-more-than-one-gigawatt-of-power-generation/",
      "status": "active",
      "since": "2025-02",
      "scale": ">1 GW; 700 MW at Frontier",

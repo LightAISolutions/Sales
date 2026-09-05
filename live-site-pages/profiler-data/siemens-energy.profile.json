@@ -137,7 +137,7 @@
    "type": "partner",
    "note": "Alliance productizing a 500 MW SGT-800-based standard onsite-power block — diesel-free, claimed two years off time-to-power.",
    "context": "June 2025: Eaton and Siemens Energy joined forces on a fast-track data-center offering — a repeatable 500 MW grid-independent block (SGT-800 fleet: 620 installations, >20M operating hours, 99.1% reliability; hydrogen-ready to 75 vol%) that 'eliminates diesel backup gensets', with Siemens Energy supplying generation/storage and Eaton the grid-to-chip electrical stack (MV/LV switchgear, UPS, busway, racks). The dossier rates it the most productized onsite-power offering from any major OEM — aimed squarely at the behind-the-meter demand xAI, Crusoe and the hyperscalers validated, and the direct structural answer to GE Vernova's AIDC push.",
-   "source": "https://www.siemens-energy.com/us/en/home/press-releases/eaton-and-siemens-energy-join-forces-t",
+   "source": "https://www.siemens-energy.com/us/en/home/press-releases/eaton-and-siemens-energy-join-forces-to-provide-power-and-techno.html",
    "via": "500 MW SGT-800 block",
    "status": "active",
    "since": "2025-06",
@@ -148,7 +148,7 @@
    "type": "competitor",
    "note": "The other Western giant gating AIDC's two scarcest inputs — gas turbines and grid equipment.",
    "context": "Siemens Energy and GE Vernova (with Mitsubishi Power) supply roughly two-thirds of turbines for gas plants under construction and effectively set the AIDC sector's time-to-power floor: large-frame slots nearly full through 2028, reservation fees back for the first time since the early-2000s boom. Siemens Energy's Q3 FY26: €10.0B of Gas Services orders in one quarter (book-to-bill 2.65, 73 turbines = 15 GW) with US data centers the named driver, group backlog €162B; the SGT6-9000HL is the direct 7HA.03 rival.",
-   "source": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbi",
+   "source": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-power-plants-under",
    "status": "active"
   },
   {
@@ -156,7 +156,7 @@
    "type": "partner",
    "note": "Orlando AI grid lab with NVIDIA within the $1B US investment.",
    "context": "February 2026: Siemens Energy's $1B US investment (Mississippi HV switchgear plant, Charlotte gas-turbine manufacturing resumption and LPT production from 2026-27) includes an Orlando AI grid lab with NVIDIA — localization against the transformer bottleneck (~80% of US LPTs imported, 36+ month lead times) with an AI-grid research leg.",
-   "source": "https://www.siemens-energy.com/us/en/home/press-releases/siemens-energy-is-investing--1-billion",
+   "source": "https://www.siemens-energy.com/us/en/home/press-releases/siemens-energy-is-investing--1-billion-and-creating-highly-skill.html",
    "status": "active",
    "since": "2026-02"
   },
@@ -444,6 +444,11 @@
    "date": "2025-11-20"
   },
   {
+   "label": "Oklo — Binding contract with Siemens Energy for the Aurora-INL power conversion system",
+   "url": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Siemens-Energy-Sign-Binding-Contract-to-Expedite-Procurement-of-the-Power-Conversion-System-for-Commercial-Power-Plant/default.aspx",
+   "date": "2025-11-19"
+  },
+  {
    "label": "Siemens Energy — Xcel Energy 10-turbine order press release",
    "url": "https://www.siemens-energy.com/us/en/home/press-releases/Siemens-Energy-to-supply-ten-gas-turbines-to-Xcel-Energy.html",
    "date": "2025-10-01"
@@ -495,6 +500,6 @@
    "url": "https://capital.com/en-int/analysis/siemens-energy-stock-forecast"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

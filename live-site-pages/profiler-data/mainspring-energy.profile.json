@@ -185,7 +185,7 @@
    "type": "investor",
    "note": "Amazon's Climate Pledge Fund joined the $258M Series F; reported last-mile linear-generator deployments.",
    "context": "April 2025: Mainspring closed a $258M Series F led by General Catalyst with Amazon's Climate Pledge Fund, DCVC and Temasek participating (total raised >$800M; NextEra, AEP and Chevron sit on the cap table as strategics). The utility & C&I fleet section also carries reported Amazon last-mile deployments of the linear generator — investor first, early customer second.",
-   "source": "https://www.bloomberg.com/news/articles/2025-04-14/menlo-park-based-energy-startup-nabs-258-mil",
+   "source": "https://www.bloomberg.com/news/articles/2025-04-14/menlo-park-based-energy-startup-nabs-258-million-to-power-data-centers",
    "via": "linear generators",
    "status": "active",
    "since": "2025-04"
@@ -438,6 +438,6 @@
    "date": null
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

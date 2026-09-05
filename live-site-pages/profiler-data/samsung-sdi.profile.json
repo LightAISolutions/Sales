@@ -140,7 +140,7 @@
    "type": "customer",
    "note": "Confirmed multi-project ESS supply — ~$301M first tranche, reported ~6.3 GWh of Samsung Battery Boxes.",
    "context": "March 2025: Samsung SDI confirmed the multi-project ESS supply deal with NextEra Energy Resources (first tranche ~$301M; Korean-press-reported ~6.3 GWh across projects; 20-ft SBB containers) — the anchor win of the US ESS ramp and the named piece of NextEra's domestic-supply wall.",
-   "source": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand",
+   "source": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand-to-outstrip-production/",
    "via": "Samsung Battery Box",
    "status": "active",
    "since": "2025-03",
@@ -162,7 +162,7 @@
    "type": "customer",
    "note": "Reported battery-supply agreement/talks (April 2026) — not company-confirmed.",
    "context": "UPI reported a Samsung SDI battery-supply agreement with Amazon (April 2026), consistent with trade-press reports of Amazon in direct battery-supply talks and as an end customer of the Simplo BBU chain — none company-confirmed. The dossier holds both the Tesla and Amazon deals as unverified upside options.",
-   "source": "https://www.upi.com/Top_News/World-News/2026/04/28/samsung-sdi-batterty-supply-agreement-amazon",
+   "source": "https://www.upi.com/Top_News/World-News/2026/04/28/samsung-sdi-batterty-supply-agreement-amazon/1051777407238/",
    "status": "announced",
    "since": "2026-04"
   },
@@ -466,6 +466,6 @@
    "url": "https://www.samsungsdi.com/upload/download/business/SAMSUNG%20SDI_ESS%20Product%20Information_JP&EN.pdf"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

@@ -200,7 +200,7 @@
    "type": "supplier",
    "note": "Supplies the entire 400 MW / 1.8 GWh Padua complex — Tesla's largest Texas Megapack showcase.",
    "context": "Padua 1 (50 MW/100 MWh, COD Sep 2025), Padua 2 (150 MW/600 MWh, Winter 2026) and Padua 3 'Ferdinand' (200 MW/800 MWh, Spring 2026) are all Tesla Megapack — the largest BESS site in Texas at >$700M, under CPS Energy storage-capacity agreements.\n\nThe relationship is embedded in Eolian's financing story: Tesla VP Mike Snyder was quoted in the $463M Natixis-arranged construction + term + LC financing for Padua 2&3 (Oct 2025). Tesla is the endpoint of Eolian's supplier progression (Sungrow 2021 → Wärtsilä 2023 → Tesla), consistent with its American-built advocacy.",
-   "source": "https://www.prnewswire.com/news-releases/eolian-and-natixis-corporate--investment-banking-close-463-million-fi",
+   "source": "https://www.prnewswire.com/news-releases/eolian-and-natixis-corporate--investment-banking-close-463-million-financing-for-largest-battery-energy-storage-site-in-texas-providing-needed-capacity-at-critical-location-for-the-grid-302579608.html",
    "via": "Megapack",
    "status": "active",
    "since": "2025",
@@ -211,7 +211,7 @@
    "type": "supplier",
    "note": "Delivered Madero & Ignacio Grid (200 MW) — world's largest fully-merchant BESS at COD — with an ongoing GEMS service agreement.",
    "context": "Wärtsilä supplied GridSolv Quantum hardware and the GEMS energy-management platform for the Mission, TX pair (200 MW / >500 MWh combined, COD March 2023), operated under a Service+ GAP agreement with dispatch via Eolian's own software. The middle step of Eolian's supplier progression, after Sungrow and before the all-Tesla Padua complex.",
-   "source": "https://www.wartsila.com/media/news/27-03-2023-wartsila-and-eolian-complete-200-mw-standalone-energy-storage-f",
+   "source": "https://www.wartsila.com/media/news/27-03-2023-wartsila-and-eolian-complete-200-mw-standalone-energy-storage-facility-in-texas-the-largest-merchant-battery-system-in-the-world-3246410",
    "via": "GridSolv Quantum + GEMS",
    "status": "active",
    "since": "2023-03",
@@ -222,7 +222,7 @@
    "type": "supplier",
    "note": "First supplier: 100 MW NMC Chisholm Grid (COD 2021), now being repurposed for the CyrusOne data-center deal.",
    "context": "Sungrow supplied the 100 MW / 125 MWh NMC system for Chisholm Grid in Fort Worth — Eolian's first major BESS and the start of a supplier progression that moved to Wärtsilä and then all-Tesla. Chisholm is now being modernized and repurposed to enable the CyrusOne DFW7 200 MW Fort Worth data-center campus, monetizing its existing interconnection.",
-   "source": "https://www.prnewswire.com/news-releases/sungrow-supplies-a-100-mw-energy-storage-project-in-texas-301213083",
+   "source": "https://www.prnewswire.com/news-releases/sungrow-supplies-a-100-mw-energy-storage-project-in-texas-301213083.html",
    "status": "historical",
    "since": "2021",
    "scale": "100 MW / 125 MWh"
@@ -241,7 +241,7 @@
    "type": "other",
    "note": "Sibling storage operator under BlackRock after the GIP absorption — sponsor-level procurement norms could converge.",
    "context": "Eolian (a Global Infrastructure Partners portfolio company) and Jupiter Power now sit under one sponsor following BlackRock's absorption of GIP. If sponsor-level procurement norms harmonize, the dossier assesses they harmonize toward Eolian's American-built doctrine rather than Jupiter's quiet-buyer pragmatism — a convergence risk for Chinese-cell suppliers holding Jupiter accounts.",
-   "source": "https://www.prnewswire.com/news-releases/global-infrastructure-partners-announces-acquisition-of-map-energys-r",
+   "source": "https://www.prnewswire.com/news-releases/global-infrastructure-partners-announces-acquisition-of-map-energys-renewable-energy-business-301199023.html",
    "status": "active"
   },
   {
@@ -249,7 +249,7 @@
    "type": "other",
    "note": "US Energy Storage Coalition co-member in the American-built storage campaign.",
    "context": "Eolian sits alongside Tesla, LG Energy Solution Vertech, Fluence and Form Energy in the US Energy Storage Coalition, whose March 2026 claim — 'our American factories [are] now capable of fully supplying the systems we need' (CEO Aaron Zubaty) — is the public banner of Eolian's procurement ideology. Fluence is a policy ally here, not a supplier: no Fluence hardware appears in Eolian's fleet.",
-   "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-",
+   "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds",
    "status": "active"
   },
   {
@@ -257,7 +257,7 @@
    "type": "other",
    "note": "Coalition co-member and a structural favorite (with Tesla) for the open Flint Grid supplier slots.",
    "context": "LG Energy Solution Vertech is a fellow US Energy Storage Coalition member, and the dossier assesses the open supplier slots for Flint Grid — 200 MW/1.06 GWh under construction (PJM's largest battery), with Phase 1 delivering ~2027 and Phase 2 ~2029 — as effectively reserved for FEOC-clean vendors, with Tesla and LGES Vertech the structural favorites given the coalition posture and the Padua precedent.",
-   "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-",
+   "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds",
    "status": "active"
   }
  ],
@@ -430,6 +430,6 @@
    "url": "https://www.eolianenergy.com/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

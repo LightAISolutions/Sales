@@ -262,7 +262,7 @@
    "type": "customer",
    "note": "Fayetteville flagship houses at least one Microsoft AI 'superfactory'; the $4.6B green bond's collateral tied to Microsoft.",
    "context": "QTS's Fayetteville, GA mega-campus (13 'Freedom' buildings, ~6.2M sq ft) houses at least one Microsoft AI 'superfactory' per trade press, and Bloomberg tied the collateral of the April 2026 $4.6B green bond (10-year, 5.700%, Baa2 — QTS's first investment-grade rating, ~$12.5B peak demand) to Microsoft — the AI-landlord relationship priced by the bond market at 5.7%.",
-   "source": "https://www.bloomberg.com/news/articles/2026-04-06/blackstone-backed-data-center-firm-qts-kicks",
+   "source": "https://www.bloomberg.com/news/articles/2026-04-06/blackstone-backed-data-center-firm-qts-kicks-off-bond-sale",
    "via": "Freedom buildings",
    "status": "active",
    "scale": "Fayetteville flagship + $4.6B bond collateral"
@@ -272,7 +272,7 @@
    "type": "partner",
    "note": "120 MWac Oregon solar build with Avangrid and PGE.",
    "context": "December 2024: Avangrid and Portland General Electric collaborated with QTS and Meta to build 120 MWac of Oregon solar — part of QTS's utility-first energy franchise (Alliant 750 MW Wisconsin renewables, ENGIE/ABEI Lubio Solar PPA) and its stated policy of funding 100% of the energy infrastructure its campuses require.",
-   "source": "https://q.com/news/avangrid-and-portland-general-electric-collaborate-with-qts-and-meta-to-buil",
+   "source": "https://q.com/news/avangrid-and-portland-general-electric-collaborate-with-qts-and-meta-to-build-120-mwac-solar-project-in-oregon/",
    "status": "active",
    "since": "2024-12",
    "scale": "120 MWac"
@@ -802,6 +802,6 @@
    "url": "https://info.siteselectiongroup.com/blog/the-largest-u-s-data-center-operators-in-2026"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

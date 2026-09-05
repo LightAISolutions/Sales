@@ -171,7 +171,7 @@
    "type": "competitor",
    "note": "First vendor ever to take the global BESS integrator top spot from Tesla — and holder of both Wood Mackenzie crowns.",
    "context": "July 2026: Sungrow ranked #1 in BOTH Wood Mackenzie's inaugural Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (assessing 2025) — the first company to take the integrator top spot from Tesla, as annual global BESS installations passed 100 GW. PowerTitan 3.0 (12.5 MWh per 30-ft) contests Megapack 3/Megablock on density; Tesla's counters are US manufacturing, bankability and Autobidder.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "via": "PowerTitan 3.0",
    "status": "active",
    "since": "2026-07"
@@ -181,7 +181,7 @@
    "type": "competitor",
    "note": "TENER Stack rival in the next-gen AC-block race.",
    "context": "CATL's TENER Stack (9 MWh stackable) sits in the PowerTitan 3.0 competitive set with Tesla's Megablock — the head-on Chinese-major contest where Sungrow differentiates on AC-block integration, grid-forming maturity, burn-tested safety and harsh-climate MEA engineering.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "via": "PowerTitan 3.0",
    "status": "active"
   },
@@ -190,7 +190,7 @@
    "type": "competitor",
    "note": "Top-deployer rival among the Chinese integrators holding ~76% of the global market.",
    "context": "BYD (top 2025 deployer by some rankings, MC Cube block class) is the other Chinese vertically integrated giant in Sungrow's head-on set — together the Chinese integrators captured ~76% of a >100 GW market in 2025, with BYD+Sungrow taking 87% of Middle East share.",
-   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "status": "active"
   },
   {
@@ -902,6 +902,6 @@
    "url": "https://stockanalysis.com/quote/she/300274/company/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

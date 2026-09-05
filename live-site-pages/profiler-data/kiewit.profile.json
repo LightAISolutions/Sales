@@ -206,8 +206,8 @@
   },
   {
    "slug": "bechtel",
-   "type": "other",
-   "note": "Co-named delivery contractor under the $550B US-Japan AI infrastructure framework.",
+   "type": "competitor",
+   "note": "Megaproject EPC arch-rival (ENR #2 vs #4-class), and co-named delivery contractor under the $550B US-Japan AI infrastructure framework.",
    "context": "October 2025: Kiewit and Bechtel were the two US EPC firms named delivery contractors under the $550B US-Japan AI infrastructure framework, with up to $332B earmarked for energy infrastructure. No Kiewit projects have been assigned — the dossier treats it as optionality, not backlog, but the two-firm shortlist itself is the signal.",
    "source": "https://www.constructiondive.com/news/bechtel-kiewit-us-japan-ai-infrastructure-data-centers/804220/",
    "status": "announced",
@@ -439,6 +439,11 @@
    "date": "2025-07-17"
   },
   {
+   "label": "Oklo — Selects Kiewit as lead constructor for the first Aurora powerhouse in Idaho",
+   "url": "https://oklo.com/newsroom/news-details/2025/Oklo-Selects-Kiewit-as-the-Lead-Constructor-for-First-Aurora-Powerhouse-in-Idaho/default.aspx",
+   "date": "2025-07-15"
+  },
+  {
    "label": "Kiewit — Grain Belt Express awards ~$1.7B to Quanta and Kiewit (largest US transmission line)",
    "url": "https://www.kiewit.com/newsroom/grain-belt-express-awards-1-7b-to-u-s-contractors-quanta-and-kiewit-to-build-largest-transmission-line-in-u-s-history/",
    "date": "2025-05-07"
@@ -536,6 +541,6 @@
    "url": "https://www.datacenterdynamics.com/en/news/homer-city-and-kiewit-unveil-plans-for-45gw-natural-gas-powered-ai-data-center-in-pennsylvania/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

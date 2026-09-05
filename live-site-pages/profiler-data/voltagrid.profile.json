@@ -195,7 +195,7 @@
    "type": "customer",
    "note": ">1 GW microgrid partnership — prime power across the North America portfolio, led by Frontier's 700 MW.",
    "context": "The February 2025 Vantage partnership (>1 GW of natural-gas microgrids as primary power) announced the oilfield-to-AIDC pivot had worked — prime power, not just bridge. Frontier, Shackelford County (the 1.4 GW OpenAI/Stargate campus) runs on VoltaGrid's 210 Jenbacher J624s, ~700 MW initial, TCEQ-permitted, with no battery layer.",
-   "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-",
+   "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-more-than-one-gigawatt-of-power-generation/",
    "via": "natural-gas microgrids",
    "project": "stargate",
    "status": "active",
@@ -439,6 +439,6 @@
    "url": "https://voltagrid.com/"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

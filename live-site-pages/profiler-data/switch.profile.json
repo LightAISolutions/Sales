@@ -237,7 +237,7 @@
    "type": "partner",
    "note": "Two consecutive world-first NVIDIA bring-ups on Switch floors; Omniverse DSX integrated into the LDC EVO operating system — NVIDIA also a customer per Reuters.",
    "context": "Switch's EVO AI Factories are aligned to NVIDIA DGX/MGX roadmaps from Blackwell through Rubin and hosted the industry-first GB200 NVL72 bring-up (Nov 2024) and world-first GB300 NVL72 bring-up (Jul 2025). March 2026: the NVIDIA Omniverse DSX Blueprint was integrated into EVO and the LDC EVO living-data-center OS — a physics-accurate digital twin replacing DCIM, showcased at GTC with Dell, Schneider, Cadence and ETAP. Reuters also lists NVIDIA among Switch customers.",
-   "source": "https://www.switch.com/switch-integrates-nvidia-omniverse-dsx-blueprint-into-switchs-evo-ai-fac",
+   "source": "https://www.switch.com/switch-integrates-nvidia-omniverse-dsx-blueprint-into-switchs-evo-ai-factories/",
    "via": "EVO AI Factories",
    "status": "active",
    "since": "2024-11"
@@ -247,7 +247,7 @@
    "type": "customer",
    "note": "Executed both world-first NVIDIA bring-ups (GB200, GB300 NVL72) inside Switch AI Factories.",
    "context": "CoreWeave ran the industry-first NVIDIA GB200 NVL72 bring-up (November 2024) and the world-first GB300 NVL72 bring-up (on Dell rack-scale systems, July 2025) inside Switch's Rob Roy EVO AI Factories — two NVIDIA generations launched first on Switch floors, the strongest third-party validation that the 2MW-per-rack EVO density claims translate to deployed hardware.",
-   "source": "https://www.switch.com/coreweave-deploys-industry-first-nvidia-gb300-nvl72-in-switchs-ai-factor",
+   "source": "https://www.switch.com/coreweave-deploys-industry-first-nvidia-gb300-nvl72-in-switchs-ai-factory-solution/",
    "via": "EVO AI Factories",
    "status": "active",
    "since": "2024-11"
@@ -257,7 +257,7 @@
    "type": "supplier",
    "note": "$1.9B supply-capacity agreement — prefab power modules, Uniflair chillers, and full-service maintenance for the EVO rollout.",
    "context": "November 2025: the Schneider Electric supply-capacity agreement expanded to $1.9B across two phases — prefabricated power modules, the first North American deployment of new Uniflair chillers, and a three-year full-service maintenance contract supporting up to 2MW-per-rack EVO builds across all five campuses. Switch locked its power-and-cooling slots the way hyperscalers lock GPUs.",
-   "source": "https://www.switch.com/schneider-electric-and-switch-expand-partnership-with-1-9-billion-supply",
+   "source": "https://www.switch.com/schneider-electric-and-switch-expand-partnership-with-1-9-billion-supply-capacity-agreement/",
    "via": "prefab power modules & Uniflair chillers",
    "status": "active",
    "since": "2025-11",
@@ -842,6 +842,6 @@
    "url": "https://www.switch.com/atlanta/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

@@ -196,7 +196,7 @@
    "type": "partner",
    "note": "~10 GWh global cooperation agreement (Jan 2025), prospectus-cited — real but unconverted 19 months on.",
    "context": "The agreement — signed at Hithium's Xiamen HQ with the E&C group, announced January 6-8, 2025 — covers ~10 GWh of ESS execution projects worldwide with continuous battery-and-system supply, and the HKEX prospectus naming is confirmed. Yet no publicly attributed project exists anywhere: the classic optionality MOU.\n\nThe plausible conversion theatre is E&C's non-US book (Middle East, Australia, Asia — the Qatar/Dukhan-class franchise), not the US, where C&T's develop-and-sell T&I model hands battery procurement to its buyers (see the e-STORAGE/Sunraycer outcome) and Korean battery politics plus Samsung SDI's US ramp pull against every future C&T battery decision.",
-   "source": "https://www.ess-news.com/2025/01/08/hithium-samsung-ct-corporation-partner-on-10-gwh-battery-st",
+   "source": "https://www.ess-news.com/2025/01/08/hithium-samsung-ct-corporation-partner-on-10-gwh-battery-storage-rollout/",
    "via": "ESS batteries and system solutions",
    "status": "announced",
    "since": "2025-01",
@@ -218,7 +218,7 @@
    "type": "other",
    "note": "e-STORAGE won 503 MWh in the ex-Samsung Texas pipeline — the develop-and-sell model's procurement truth.",
    "context": "February 2026: e-STORAGE (Canadian Solar) signed 503 MWh of supply for Sunraycer's Lupinus projects — Texas projects C&T originated and sold (the 2023 Sunraycer transaction: ~1 GW solar + ~2 GW ESS across 15 projects, with Samsung retaining development services through NTP). C&T teed up the projects; the buyer picked the batteries, and picked a US-manufacturing-committed supplier.",
-   "source": "https://www.energy-storage.news/e-storage-sunraycer-enter-agreements-for-texas-bess-projects-to",
+   "source": "https://www.energy-storage.news/e-storage-sunraycer-enter-agreements-for-texas-bess-projects-totalling-503mwh/",
    "via": "e-STORAGE",
    "status": "active",
    "since": "2026-02"
@@ -419,6 +419,6 @@
    "url": "https://www.samsungcnt.com/eng/about-us/overview.do"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

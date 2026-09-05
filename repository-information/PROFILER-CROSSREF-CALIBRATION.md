@@ -304,4 +304,37 @@ a *near match* hint (1 of the 119 on the live corpus) but the finding stands.
   counterparty + url), so a dossier edit that changes the fact reopens it —
   the same contract as the cross-reference checker's fingerprints.
 
+### Adjudication log
+
+**X2 — 2026-09-05, v04.72r, Fable 5.1 Medium.** All 134 findings cleared; the
+checker exits 0 with 10 accept-list entries.
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **10** | `microsoft`/`openai`, `google`/`terawulf` (partner AND investor); `byd`/`tesla` (cell customer AND rival), `byd`/`sinexcel` (equipment customer AND C&I rival), `delta-electronics`/`infineon` (silicon supplier AND co-development partner — each context states its own rationale); `dpr`/`openai` (DPR's `other` is a deliberate *indirect* — the contract runs through Crusoe); `amazon`/`mainspring-energy` and `blattner`/`quanta-services` (the coherent inverse is `portfolio` / `subsidiary`, which the enum lacks); `eolian`/`jupiter-power`, `mitsubishi-power`/`prevalon` (`other`/`other` corporate-structure links, reported by design) |
+| reciprocal-type · **corrected** | **5** | `kiewit`→`bechtel` `other`→`competitor` (the note led with the US-Japan framework co-naming, but both dossiers record the ENR #2-vs-#4 rivalry); `nvidia`→`flex`/`infineon`/`liteon`/`megmeet` `supplier`→`partner` — the cited source is NVIDIA's own 800 VDC *partner* ecosystem list, NVIDIA is not the purchaser of the power shelves or the silicon (the ODMs and operators are), and each vendor's dossier reasons the `partner` typing; the vendor side was right, not NVIDIA's |
+| unregistered-source · **replaced** | **104** | The `source` string was a **truncated prefix** of a URL the same dossier already registered — cut at roughly 100 characters mid-slug (`…close-463-million-fi`), or missing a trailing `.html` / `/` (the `hithium` near-match). Fixed by substituting the registered string; no new source, no tier change |
+| unregistered-source · **registered** | **15** | Genuinely absent from the dossier's `sources[]`. Every one was an inbound edge written by a step-7 reconciliation when a newer dossier landed (`oklo` 6, `mccarthy` 3, `trane-technologies` 4, `hitt` 1, `talen-energy` 1) — the writer cited the new dossier's source without registering it in the older dossier. Registered with the label and publication date the newer dossier already carries; no `party` override needed (a counterparty's newsroom tiers `independent` under the domain rule, which is correct — it is not the dossier subject's own account) |
+| unregistered-source · **accepted** | **0** | — |
+
+**Pattern worth a rule.** 104 of the 119 were one defect: a relationship
+`source` copied as a clipped prefix of the registered URL. That is a writer
+habit, not a research gap, and it is now mechanically caught — the checker's
+exact-match rule is the guard, and the disposition is always "substitute the
+registered string", never "register the prefix". The other 15 are the step-7
+shape: when reconciliation adds an edge to an *older* dossier, the cited URL
+must be registered in that dossier's `sources[]` in the same edit. Both belong
+in the Profiler Command's step-7 wording rather than in a new detector.
+
+**Enum gap, recorded not fixed.** `investor`'s inverse `portfolio` and the
+parent/subsidiary relation are not in the `type` enum, so `amazon`/`mainspring-energy`
+and `blattner`/`quanta-services` sit on the accept list with the gap
+written out. Growing the enum is a schema decision for a later session.
+
+**Side effects.** Registering 15 URLs and revising 49 dossiers moved
+`srcTotal` / `srcFirstPct` on 47 registry rows (sync run), rebuilt the graph
+(903 edges), and aged 3 more report pins (31 → 34, warning-
+only, X3's job). `check-profiler-crossrefs.py` surfaced no new candidate.
+
+
 Developed by: LightAISolutions

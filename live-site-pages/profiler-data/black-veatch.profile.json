@@ -446,6 +446,11 @@
    "date": "2026-03-23"
   },
   {
+   "label": "McCarthy — McCarthy HITT and NGA celebrate the completion and opening of the Next NGA West campus",
+   "url": "https://www.mccarthy.com/insights/mccarthy-hitt-and-nga-celebrate-completion-and-opening-of-next-nga-west-campus-in-st-louis",
+   "date": "2026-01-29"
+  },
+  {
    "label": "American Public Power Association — B&V report details top utility obstacles getting data centers online (2025 Electric Report)",
    "url": "https://www.publicpower.org/periodical/article/black-veatch-report-details-top-utility-obstacles-getting-data-centers-online",
    "date": "2025-11"
@@ -560,6 +565,6 @@
    "url": "https://www.forbes.com/companies/black-veatch/"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }
