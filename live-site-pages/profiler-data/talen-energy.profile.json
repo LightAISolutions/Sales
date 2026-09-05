@@ -1,1362 +1,1372 @@
 {
- "schemaVersion": 7,
- "slug": "talen-energy",
- "name": "Talen Energy Corporation",
- "shortName": "Talen Energy",
- "categories": [
-  "ipp"
- ],
- "website": "https://www.talenenergy.com",
- "headquarters": "Houston, TX, USA",
- "founded": "Emerged from Chapter 11 restructuring May 2023; Nasdaq listing 10 July 2024",
- "employees": "~2,000 (2025)",
- "ownership": {
-  "type": "public",
-  "ticker": "NASDAQ: TLN"
- },
- "summary": "**BOTTOM LINE UP FRONT:** Talen is the merchant generator that lost the co-location argument at FERC and won the commercial one anyway — the behind-the-meter arrangement that made it famous was rejected in November 2024, and the 1,920 MW Amazon deal that replaced it is an ordinary front-of-the-meter power sale that needed no FERC approval at all, running through a pre-existing Pennsylvania retail supplier licence. Everything else about the company is a debt-funded bet that PJM stays short of dispatchable capacity.\n\n**BACKGROUND.** Houston-headquartered independent power producer, ~2,000 employees, listed on Nasdaq in July 2024 after emerging from Chapter 11 in May 2023. The fleet is **PJM plus one plant in Montana**: 13,108 MW owned of 16,757 MW gross at 31 December 2025 per the Form 10-K, rising to roughly 15.7 GW of owned capacity after the Cornerstone acquisition closed in June 2026. Its single largest asset is a 90 percent interest in the 2,494 MW Susquehanna nuclear station in Pennsylvania, which produced about 17 TWh in 2025 at an all-in cost near $27/MWh. Talen exited ERCOT entirely in May 2024, exited ISO-NE and New Jersey in September 2025, and then spent $7.3 billion buying four combined-cycle and peaking plants in Pennsylvania, Ohio and Indiana — taking total debt principal from $6.9 billion to $9.7 billion in eight months.",
- "ecosystemRole": "Talen is the corpus's first worked example of a **merchant generator selling from an existing fleet** rather than a developer selling a pipeline. Four covered dossiers already name it — Amazon, Constellation Energy, Invenergy and TeraWulf — and every one of them names it for the same thing: the Susquehanna arrangement, which is the reference case for whether a data centre may sit at a power plant and what it owes for the grid it still leans on. The FERC record that arrangement produced now governs everyone: the December 2025 order finding PJM's tariff unjust and unreasonable for co-located load, and the June 2026 show-cause orders to all six RTOs, both trace back to the Susquehanna docket.",
- "productsAndServices": [
-  {
-   "name": "Susquehanna nuclear generation",
-   "category": "Baseload generation",
-   "description": "A 90 percent undivided interest in the two-unit Susquehanna Steam Electric Station in Salem Township, Luzerne County, Pennsylvania — 2,494 MW summer rating, 2,245 MW owned, dual General Electric boiling-water reactors inside Mark II containments. The 10-K states 2025 output of approximately 17 TWh at an all-in cost of approximately $27 per MWh. Allegheny Electric Cooperative holds the remaining 10 percent.",
-   "highlights": [
-    "Unit 1 operating licence expires 17 July 2042; Unit 2 expires 2044; the company says it is beginning work on further 20-year extensions",
-    "Nuclear fuel fully contracted through the 2028 fuel load, more than 50 percent through 2029, over 20 percent through 2030, with no exposure to Russian-affiliated counterparties",
-    "Decommissioning trust fair value $1.9 billion at 31 December 2025; on-site dry-cask storage expected to hold all spent fuel through 2044",
-    "The 2025 refuelling outage ran 72 days against a 30-35 day norm, costing about $30 million and roughly $34 million of margin; the 2026 outage was projected at about 55 days",
-    "The Form 10-K calls Susquehanna the seventh-largest US nuclear facility; the company website says sixth. Certrec's NERC-based 2025 list says seventh"
-   ],
-   "positioning": "The whole company's contracting story rests on one station. Constellation's Three Mile Island restart and Vistra's six-unit PJM and ERCOT fleet are the comparable nuclear franchises; Talen has one site and therefore one outage calendar.",
-   "soldThrough": "Wholesale into PJM, plus the front-of-the-meter retail supply arrangement with Amazon",
-   "targetSegments": [
-    "PJM wholesale market",
-    "Hyperscale data centres"
-   ],
-   "roadmap": "Talen and Amazon said in June 2025 they would explore small modular reactors in Talen's Pennsylvania footprint and pursue Susquehanna uprates; a March 2026 letter of intent with X-energy covers assessing three or more four-unit Xe-100 plants. No uprate licence amendment is on the NRC record."
+  "schemaVersion": 7,
+  "slug": "talen-energy",
+  "name": "Talen Energy Corporation",
+  "shortName": "Talen Energy",
+  "categories": [
+    "ipp"
+  ],
+  "website": "https://www.talenenergy.com",
+  "headquarters": "Houston, TX, USA",
+  "founded": "Emerged from Chapter 11 restructuring May 2023; Nasdaq listing 10 July 2024",
+  "employees": "~2,000 (2025)",
+  "ownership": {
+    "type": "public",
+    "ticker": "NASDAQ: TLN"
   },
-  {
-   "name": "Dispatchable fossil fleet",
-   "category": "Intermediate and peaking generation",
-   "description": "Gas, dual-fuel and coal units across PJM. At 31 December 2025 the filed fleet was Guernsey 1,771 MW gas baseload (Ohio), Martins Creek 1,710 MW gas/oil peaker, Montour 1,505 MW gas peaker, Brunner Island 1,419 MW gas/coal intermediate, Freedom 1,049 MW gas baseload and Lower Mount Bethel 607 MW gas baseload (all Pennsylvania), plus minority interests in Conemaugh and Keystone and 30 percent of Colstrip Unit 3 in Montana. The June 2026 Cornerstone close added Lawrenceburg (Indiana), Waterford and Darby (Ohio).",
-   "highlights": [
-    "Approximately 3.2 GW of legacy coal has been converted to lower-carbon fuels, including Brunner Island, Montour and H.A. Wagner Unit 3",
-    "Coal-fired generation must cease at Brunner Island by 31 December 2028 — an EPA effluent-guidelines election Talen made, not merely an economic decision",
-    "The FY2025 10-K moved the Keystone and Conemaugh coal-cessation dates from December 2028 to 31 December 2034 without explanation",
-    "Freedom and Guernsey were bought from Caithness Energy and BlackRock's Global Infrastructure Partners for approximately $3.8 billion gross, closing 25 November 2025, at a stated 6.7x 2026 EV/EBITDA and an average heat rate of 6,550 Btu/kWh",
-    "Cornerstone was bought from Energy Capital Partners for $3.5 billion ($2.6 billion cash plus 2,399,998 shares valued at $927 million), closing 15 June 2026, at a stated 6.6x 2027E adjusted EBITDA",
-    "The three Cornerstone plants carry three different MW sets across Talen's own January 2026 release, its 10-K and its website — quote the source, not the marketing figure"
-   ],
-   "positioning": "Talen buys operating combined-cycle plants at roughly half new-build cost rather than developing them; the January 2026 release put Cornerstone at about 85 percent unlevered free-cash-flow conversion.",
-   "soldThrough": "PJM energy and capacity markets, hedged forward",
-   "targetSegments": [
-    "PJM energy market",
-    "PJM capacity market"
-   ]
-  },
-  {
-   "name": "Reliability-must-run service (Brandon Shores and H.A. Wagner)",
-   "category": "Contracted reliability revenue",
-   "description": "Two Baltimore-area plants totalling 2.0 GW that Talen intended to retire on 31 May 2025 and instead runs under FERC-approved reliability-must-run agreements, because PJM found the Baltimore transmission system could not yet do without them. Brandon Shores earns $312/MW-day (about $145 million a year) and H.A. Wagner $137/MW-day (about $35 million a year), each inclusive of a performance hold-back, plus separate reimbursement of fuel and variable costs.",
-   "highlights": [
-    "Settled 27 January 2025 with PJM, the Maryland Public Service Commission, Maryland utilities and customers, and the Sierra Club; FERC approved in May 2025 for a term to 31 May 2029",
-    "Neither unit is a capacity resource and neither carries a capacity-performance obligation, but PJM counts both in the capacity supply stack",
-    "PJM asked in May 2026 to extend both agreements to 31 May 2031; RTO Insider reported on 24 August 2026 that FERC approved the extension",
-    "The Maryland Office of People's Counsel argues the roughly $180 million annual payment exceeds Talen's costs by $83 million a year, and appealed the original approval in August 2025"
-   ],
-   "positioning": "This is contracted revenue with no market risk and no capacity obligation, from assets that would otherwise be closed — and it is paid by Maryland ratepayers rather than spread across PJM, which is why it is litigated.",
-   "soldThrough": "Cost-of-service agreement with PJM, approved by FERC",
-   "targetSegments": [
-    "PJM reliability",
-    "Maryland load"
-   ]
-  },
-  {
-   "name": "Long-term large-load power supply (the AWS arrangement)",
-   "category": "Contracted power sales",
-   "description": "Talen sells Amazon up to 1,920 MW of Susquehanna output through 2042 with extension options. Since April 2026 this runs front-of-the-meter: Susquehanna sells its power into PJM, Talen acts as Amazon's licensed Pennsylvania retail electric generation supplier, and PPL Electric Utilities provides transmission and delivery. Talen's September 2025 investor update discloses the minimum-to-maximum ramp — 240-960 MW in 2026 rising to 1,680-1,920 MW in 2032 — and about $18 billion of nominal cash flows over a 17-year contract at the minimum ramp.",
-   "highlights": [
-    "The original March 2024 transaction sold the Cumulus data-centre campus to Amazon for $650 million gross and created the first PPA; the $300 million escrow released in August 2024 on milestones allowing development to 960 MW",
-    "FERC rejected the amended interconnection service agreement that would have raised behind-the-meter co-located load from 300 MW to 480 MW (docket ER24-2172, order 189 FERC para. 61,078, 1 November 2024, 2-1)",
-    "The June 2025 amendment moved the arrangement front-of-the-meter; Talen's own description is that this 'will significantly decrease Talen's market risk and minimize its reliance on the Federal nuclear production tax credit'",
-    "The Form 10-K calls it 'long-term, fixed-price supply … at anticipated premium prices'; POWER Magazine reports the contract carries 2 percent annual escalators from 2028. The base price is not disclosed",
-    "A shortfall make-whole applies with a cap: Talen's deck estimates that if no power is drawn the shortfall payment covers 50-65 percent of the full impact",
-    "Moving the load into PJM's forecast restored 148 MW of capacity interconnection rights to Susquehanna, available from the 2027/2028 auction",
-    "Talen has letters of credit posted to Amazon supporting its obligations, and states Amazon may be entitled to remedies for non-performance"
-   ],
-   "positioning": "Constellation sells Microsoft a restarted reactor and Meta an operating one; Vistra sells Amazon and Meta nuclear output under 20-year PPAs. Talen's contract is the largest single-counterparty nuclear supply arrangement of the three by MW, and the only one that began as a behind-the-meter co-location and was rebuilt as an ordinary retail supply after losing at FERC.",
-   "soldThrough": "Direct bilateral contract, delivered through a Pennsylvania retail electric generation supplier licence",
-   "targetSegments": [
-    "Hyperscale data centres",
-    "Large commercial and industrial load"
-   ],
-   "roadmap": "Talen reported 'approximately 4 GW of land development and data center contracting options' at Q2 2026 — a pipeline, not contracts. No second hyperscaler counterparty exists in any filing."
-  },
-  {
-   "name": "Commercial operations and hedging",
-   "category": "Wholesale trading and origination",
-   "description": "The desk that sells the fleet's output forward, buys its fuel, and originates the large-load contracts. Policy is to hedge 60-80 percent of expected generation for the prompt twelve months and to scale down further out, inclusive of the nuclear production tax credit's effect.",
-   "highlights": [
-    "Position at 30 June 2026: approximately 85 percent hedged for 2026, 70 percent for 2027 and 30 percent for 2028",
-    "The book was net short power on a mark-to-market basis in the first half of 2026 — the disclosed cause of a $(324) million unrealised derivative loss against record cash generation",
-    "PJM capacity revenue moved from $192 million in FY2024 to $485 million in FY2025 to $444 million in the first half of 2026 alone",
-    "Cleared capacity: 6,820 MW at $269.92/MW-day for 2025/2026; 6,702 MW at $329.17 for 2026/2027; 8,745 MW at $333.44 for 2027/2028; 10,180 MW at $325.00 for 2028/2029, worth approximately $1,208 million",
-    "Talen incurred $29 million of net capacity-performance penalties for Winter Storm Elliott in 2022 — the risk is realised, not theoretical"
-   ],
-   "positioning": "Hedge ratios well below Vistra's (which runs at or near 100 percent of expected generation for the prompt year) — Talen keeps more open position and says so, framing it as 'increasing cash flow stability while maintaining upside optionality'.",
-   "soldThrough": "Bilateral forwards, exchange-traded products, PJM auctions",
-   "targetSegments": [
-    "PJM wholesale counterparties",
-    "Financial institutions"
-   ]
-  },
-  {
-   "name": "Powered-land development — the Talen flywheel",
-   "category": "Site development",
-   "description": "The company's name for reinvesting free cash flow into sites, interconnection and new capacity that can then be contracted to large loads, toggling between buybacks and acquisitions as prices allow. The 10-K describes contracting long-term power sales with large-load counterparties 'where our assets and sites are advantaged in delivering speed-to-market, large-scale capability, price certainty, and appropriate credit support'.",
-   "highlights": [
-    "The stated buyer requirement is 1 GW-plus scale sites in growing data-centre markets that can expand on site or in clusters",
-    "Management guided that the Amazon ramp alone lifts long-term contracted gross margin from roughly 10 percent to about 35 percent by 2028-2030",
-    "A new Chief Asset Development Officer role was created in December 2025 for new generation and large-load interconnections",
-    "Pennsylvania's 19 August 2026 executive order makes this harder: preferential permitting for data centres above 25 MW now requires sourcing from new supply in the local PJM zone. Jefferies said the order 'should further close the door' to IPPs selling existing generation, while Talen's existing Susquehanna deal 'appears safe'"
-   ],
-   "positioning": "The Intersect Power model inverted. Intersect builds new generation behind one interconnection for a new campus; Talen already owns the interconnection and the plant, and is selling access to both.",
-   "soldThrough": "Direct origination",
-   "targetSegments": [
-    "Hyperscalers",
-    "Co-location providers",
-    "Neoclouds"
-   ]
-  }
- ],
- "technicalSpecs": [
-  {
-   "product": "Susquehanna Steam Electric Station",
-   "specs": [
+  "summary": "**BOTTOM LINE UP FRONT:** Talen is the merchant generator that lost the co-location argument at FERC and won the commercial one anyway — the behind-the-meter arrangement that made it famous was rejected in November 2024, and the 1,920 MW Amazon deal that replaced it is an ordinary front-of-the-meter power sale that needed no FERC approval at all, running through a pre-existing Pennsylvania retail supplier licence. Everything else about the company is a debt-funded bet that PJM stays short of dispatchable capacity.\n\n**BACKGROUND.** Houston-headquartered independent power producer, ~2,000 employees, listed on Nasdaq in July 2024 after emerging from Chapter 11 in May 2023. The fleet is **PJM plus one plant in Montana**: 13,108 MW owned of 16,757 MW gross at 31 December 2025 per the Form 10-K, rising to roughly 15.7 GW of owned capacity after the Cornerstone acquisition closed in June 2026. Its single largest asset is a 90 percent interest in the 2,494 MW Susquehanna nuclear station in Pennsylvania, which produced about 17 TWh in 2025 at an all-in cost near $27/MWh. Talen exited ERCOT entirely in May 2024, exited ISO-NE and New Jersey in September 2025, and then spent $7.3 billion buying four combined-cycle and peaking plants in Pennsylvania, Ohio and Indiana — taking total debt principal from $6.9 billion to $9.7 billion in eight months.",
+  "ecosystemRole": "Talen is the corpus's first worked example of a **merchant generator selling from an existing fleet** rather than a developer selling a pipeline. Four covered dossiers already name it — Amazon, Constellation Energy, Invenergy and TeraWulf — and every one of them names it for the same thing: the Susquehanna arrangement, which is the reference case for whether a data centre may sit at a power plant and what it owes for the grid it still leans on. The FERC record that arrangement produced now governs everyone: the December 2025 order finding PJM's tariff unjust and unreasonable for co-located load, and the June 2026 show-cause orders to all six RTOs, both trace back to the Susquehanna docket.",
+  "productsAndServices": [
     {
-     "band": "Power",
-     "label": "Station capacity (summer rating)",
-     "value": "2,494 MW at 31 December 2025 (2,476 MW a year earlier)"
+      "name": "Susquehanna nuclear generation",
+      "category": "Baseload generation",
+      "description": "A 90 percent undivided interest in the two-unit Susquehanna Steam Electric Station in Salem Township, Luzerne County, Pennsylvania — 2,494 MW summer rating, 2,245 MW owned, dual General Electric boiling-water reactors inside Mark II containments. The 10-K states 2025 output of approximately 17 TWh at an all-in cost of approximately $27 per MWh. Allegheny Electric Cooperative holds the remaining 10 percent.",
+      "highlights": [
+        "Unit 1 operating licence expires 17 July 2042; Unit 2 expires 2044; the company says it is beginning work on further 20-year extensions",
+        "Nuclear fuel fully contracted through the 2028 fuel load, more than 50 percent through 2029, over 20 percent through 2030, with no exposure to Russian-affiliated counterparties",
+        "Decommissioning trust fair value $1.9 billion at 31 December 2025; on-site dry-cask storage expected to hold all spent fuel through 2044",
+        "The 2025 refuelling outage ran 72 days against a 30-35 day norm, costing about $30 million and roughly $34 million of margin; the 2026 outage was projected at about 55 days",
+        "The Form 10-K calls Susquehanna the seventh-largest US nuclear facility; the company website says sixth. Certrec's NERC-based 2025 list says seventh"
+      ],
+      "positioning": "The whole company's contracting story rests on one station. Constellation's Three Mile Island restart and Vistra's six-unit PJM and ERCOT fleet are the comparable nuclear franchises; Talen has one site and therefore one outage calendar.",
+      "soldThrough": "Wholesale into PJM, plus the front-of-the-meter retail supply arrangement with Amazon",
+      "targetSegments": [
+        "PJM wholesale market",
+        "Hyperscale data centres"
+      ],
+      "roadmap": "Talen and Amazon said in June 2025 they would explore small modular reactors in Talen's Pennsylvania footprint and pursue Susquehanna uprates; a March 2026 letter of intent with X-energy covers assessing three or more four-unit Xe-100 plants. No uprate licence amendment is on the NRC record."
     },
     {
-     "band": "Power",
-     "label": "Talen owned capacity",
-     "value": "2,245 MW — a 90% undivided interest"
+      "name": "Dispatchable fossil fleet",
+      "category": "Intermediate and peaking generation",
+      "description": "Gas, dual-fuel and coal units across PJM. At 31 December 2025 the filed fleet was Guernsey 1,771 MW gas baseload (Ohio), Martins Creek 1,710 MW gas/oil peaker, Montour 1,505 MW gas peaker, Brunner Island 1,419 MW gas/coal intermediate, Freedom 1,049 MW gas baseload and Lower Mount Bethel 607 MW gas baseload (all Pennsylvania), plus minority interests in Conemaugh and Keystone and 30 percent of Colstrip Unit 3 in Montana. The June 2026 Cornerstone close added Lawrenceburg (Indiana), Waterford and Darby (Ohio).",
+      "highlights": [
+        "Approximately 3.2 GW of legacy coal has been converted to lower-carbon fuels, including Brunner Island, Montour and H.A. Wagner Unit 3",
+        "Coal-fired generation must cease at Brunner Island by 31 December 2028 — an EPA effluent-guidelines election Talen made, not merely an economic decision",
+        "The FY2025 10-K moved the Keystone and Conemaugh coal-cessation dates from December 2028 to 31 December 2034 without explanation",
+        "Freedom and Guernsey were bought from Caithness Energy and BlackRock's Global Infrastructure Partners for approximately $3.8 billion gross, closing 25 November 2025, at a stated 6.7x 2026 EV/EBITDA and an average heat rate of 6,550 Btu/kWh",
+        "Cornerstone was bought from Energy Capital Partners for $3.5 billion ($2.6 billion cash plus 2,399,998 shares valued at $927 million), closing 15 June 2026, at a stated 6.6x 2027E adjusted EBITDA",
+        "The three Cornerstone plants carry three different MW sets across Talen's own January 2026 release, its 10-K and its website — quote the source, not the marketing figure"
+      ],
+      "positioning": "Talen buys operating combined-cycle plants at roughly half new-build cost rather than developing them; the January 2026 release put Cornerstone at about 85 percent unlevered free-cash-flow conversion.",
+      "soldThrough": "PJM energy and capacity markets, hedged forward",
+      "targetSegments": [
+        "PJM energy market",
+        "PJM capacity market"
+      ]
     },
     {
-     "band": "Power",
-     "label": "2025 generation",
-     "value": "approximately 17 TWh"
+      "name": "Reliability-must-run service (Brandon Shores and H.A. Wagner)",
+      "category": "Contracted reliability revenue",
+      "description": "Two Baltimore-area plants totalling 2.0 GW that Talen intended to retire on 31 May 2025 and instead runs under FERC-approved reliability-must-run agreements, because PJM found the Baltimore transmission system could not yet do without them. Brandon Shores earns $312/MW-day (about $145 million a year) and H.A. Wagner $137/MW-day (about $35 million a year), each inclusive of a performance hold-back, plus separate reimbursement of fuel and variable costs.",
+      "highlights": [
+        "Settled 27 January 2025 with PJM, the Maryland Public Service Commission, Maryland utilities and customers, and the Sierra Club; FERC approved in May 2025 for a term to 31 May 2029",
+        "Neither unit is a capacity resource and neither carries a capacity-performance obligation, but PJM counts both in the capacity supply stack",
+        "PJM asked in May 2026 to extend both agreements to 31 May 2031; RTO Insider reported on 24 August 2026 that FERC approved the extension",
+        "The Maryland Office of People's Counsel argues the roughly $180 million annual payment exceeds Talen's costs by $83 million a year, and appealed the original approval in August 2025"
+      ],
+      "positioning": "This is contracted revenue with no market risk and no capacity obligation, from assets that would otherwise be closed — and it is paid by Maryland ratepayers rather than spread across PJM, which is why it is litigated.",
+      "soldThrough": "Cost-of-service agreement with PJM, approved by FERC",
+      "targetSegments": [
+        "PJM reliability",
+        "Maryland load"
+      ]
     },
     {
-     "band": "Power",
-     "label": "All-in cost",
-     "value": "approximately $27 per MWh"
+      "name": "Long-term large-load power supply (the AWS arrangement)",
+      "category": "Contracted power sales",
+      "description": "Talen sells Amazon up to 1,920 MW of Susquehanna output through 2042 with extension options. Since April 2026 this runs front-of-the-meter: Susquehanna sells its power into PJM, Talen acts as Amazon's licensed Pennsylvania retail electric generation supplier, and PPL Electric Utilities provides transmission and delivery. Talen's September 2025 investor update discloses the minimum-to-maximum ramp — 240-960 MW in 2026 rising to 1,680-1,920 MW in 2032 — and about $18 billion of nominal cash flows over a 17-year contract at the minimum ramp.",
+      "highlights": [
+        "The original March 2024 transaction sold the Cumulus data-centre campus to Amazon for $650 million gross and created the first PPA; the $300 million escrow released in August 2024 on milestones allowing development to 960 MW",
+        "FERC rejected the amended interconnection service agreement that would have raised behind-the-meter co-located load from 300 MW to 480 MW (docket ER24-2172, order 189 FERC para. 61,078, 1 November 2024, 2-1)",
+        "The June 2025 amendment moved the arrangement front-of-the-meter; Talen's own description is that this 'will significantly decrease Talen's market risk and minimize its reliance on the Federal nuclear production tax credit'",
+        "The Form 10-K calls it 'long-term, fixed-price supply … at anticipated premium prices'; POWER Magazine reports the contract carries 2 percent annual escalators from 2028. The base price is not disclosed",
+        "A shortfall make-whole applies with a cap: Talen's deck estimates that if no power is drawn the shortfall payment covers 50-65 percent of the full impact",
+        "Moving the load into PJM's forecast restored 148 MW of capacity interconnection rights to Susquehanna, available from the 2027/2028 auction",
+        "Talen has letters of credit posted to Amazon supporting its obligations, and states Amazon may be entitled to remedies for non-performance"
+      ],
+      "positioning": "Constellation sells Microsoft a restarted reactor and Meta an operating one; Vistra sells Amazon and Meta nuclear output under 20-year PPAs. Talen's contract is the largest single-counterparty nuclear supply arrangement of the three by MW, and the only one that began as a behind-the-meter co-location and was rebuilt as an ordinary retail supply after losing at FERC.",
+      "soldThrough": "Direct bilateral contract, delivered through a Pennsylvania retail electric generation supplier licence",
+      "targetSegments": [
+        "Hyperscale data centres",
+        "Large commercial and industrial load"
+      ],
+      "roadmap": "Talen reported 'approximately 4 GW of land development and data center contracting options' at Q2 2026 — a pipeline, not contracts. No second hyperscaler counterparty exists in any filing."
     },
     {
-     "band": "Design",
-     "label": "Reactor type",
-     "value": "Dual-unit General Electric Type 4 boiling-water reactors, Mark II containment"
+      "name": "Commercial operations and hedging",
+      "category": "Wholesale trading and origination",
+      "description": "The desk that sells the fleet's output forward, buys its fuel, and originates the large-load contracts. Policy is to hedge 60-80 percent of expected generation for the prompt twelve months and to scale down further out, inclusive of the nuclear production tax credit's effect.",
+      "highlights": [
+        "Position at 30 June 2026: approximately 85 percent hedged for 2026, 70 percent for 2027 and 30 percent for 2028",
+        "The book was net short power on a mark-to-market basis in the first half of 2026 — the disclosed cause of a $(324) million unrealised derivative loss against record cash generation",
+        "PJM capacity revenue moved from $192 million in FY2024 to $485 million in FY2025 to $444 million in the first half of 2026 alone",
+        "Cleared capacity: 6,820 MW at $269.92/MW-day for 2025/2026; 6,702 MW at $329.17 for 2026/2027; 8,745 MW at $333.44 for 2027/2028; 10,180 MW at $325.00 for 2028/2029, worth approximately $1,208 million",
+        "Talen incurred $29 million of net capacity-performance penalties for Winter Storm Elliott in 2022 — the risk is realised, not theoretical"
+      ],
+      "positioning": "Hedge ratios well below Vistra's (which runs at or near 100 percent of expected generation for the prompt year) — Talen keeps more open position and says so, framing it as 'increasing cash flow stability while maintaining upside optionality'.",
+      "soldThrough": "Bilateral forwards, exchange-traded products, PJM auctions",
+      "targetSegments": [
+        "PJM wholesale counterparties",
+        "Financial institutions"
+      ]
     },
     {
-     "band": "Design",
-     "label": "Unit 1 thermal rating",
-     "value": "3,952 MWt"
-    },
-    {
-     "band": "Design",
-     "label": "Location",
-     "value": "Salem Township, Luzerne County, Pennsylvania"
-    },
-    {
-     "band": "Compliance",
-     "label": "Unit 1 licence",
-     "value": "Issued 17 July 1982, expires 17 July 2042"
-    },
-    {
-     "band": "Compliance",
-     "label": "Unit 2 licence",
-     "value": "Expires 2044"
-    },
-    {
-     "band": "Compliance",
-     "label": "Licence renewal",
-     "value": "20-year extension granted November 2009"
-    },
-    {
-     "band": "Compliance",
-     "label": "Decommissioning trust",
-     "value": "$1.9 billion fair value at 31 December 2025; exceeds NRC minimum funding"
-    },
-    {
-     "band": "Compliance",
-     "label": "Spent fuel",
-     "value": "On-site dry-cask storage expected to accommodate all spent fuel through 2044"
+      "name": "Powered-land development — the Talen flywheel",
+      "category": "Site development",
+      "description": "The company's name for reinvesting free cash flow into sites, interconnection and new capacity that can then be contracted to large loads, toggling between buybacks and acquisitions as prices allow. The 10-K describes contracting long-term power sales with large-load counterparties 'where our assets and sites are advantaged in delivering speed-to-market, large-scale capability, price certainty, and appropriate credit support'.",
+      "highlights": [
+        "The stated buyer requirement is 1 GW-plus scale sites in growing data-centre markets that can expand on site or in clusters",
+        "Management guided that the Amazon ramp alone lifts long-term contracted gross margin from roughly 10 percent to about 35 percent by 2028-2030",
+        "A new Chief Asset Development Officer role was created in December 2025 for new generation and large-load interconnections",
+        "Pennsylvania's 19 August 2026 executive order makes this harder: preferential permitting for data centres above 25 MW now requires sourcing from new supply in the local PJM zone. Jefferies said the order 'should further close the door' to IPPs selling existing generation, while Talen's existing Susquehanna deal 'appears safe'"
+      ],
+      "positioning": "The Intersect Power model inverted. Intersect builds new generation behind one interconnection for a new campus; Talen already owns the interconnection and the plant, and is selling access to both.",
+      "soldThrough": "Direct origination",
+      "targetSegments": [
+        "Hyperscalers",
+        "Co-location providers",
+        "Neoclouds"
+      ]
     }
-   ],
-   "notes": "Talen's 10-K calls Susquehanna the seventh-largest US nuclear facility; the corporate website says sixth. Certrec's June 2025 list built on NERC data ranks it seventh at 2,494 MW, behind Peach Bottom."
-  },
-  {
-   "product": "Generation fleet as filed, 31 December 2025",
-   "specs": [
+  ],
+  "technicalSpecs": [
     {
-     "band": "PJM",
-     "label": "Susquehanna (PA, nuclear, baseload)",
-     "value": "2,494 MW gross / 2,245 MW owned at 90%"
+      "product": "Susquehanna Steam Electric Station",
+      "specs": [
+        {
+          "band": "Power",
+          "label": "Station capacity (summer rating)",
+          "value": "2,494 MW at 31 December 2025 (2,476 MW a year earlier)"
+        },
+        {
+          "band": "Power",
+          "label": "Talen owned capacity",
+          "value": "2,245 MW — a 90% undivided interest"
+        },
+        {
+          "band": "Power",
+          "label": "2025 generation",
+          "value": "approximately 17 TWh"
+        },
+        {
+          "band": "Power",
+          "label": "All-in cost",
+          "value": "approximately $27 per MWh"
+        },
+        {
+          "band": "Design",
+          "label": "Reactor type",
+          "value": "Dual-unit General Electric Type 4 boiling-water reactors, Mark II containment"
+        },
+        {
+          "band": "Design",
+          "label": "Unit 1 thermal rating",
+          "value": "3,952 MWt"
+        },
+        {
+          "band": "Design",
+          "label": "Location",
+          "value": "Salem Township, Luzerne County, Pennsylvania"
+        },
+        {
+          "band": "Compliance",
+          "label": "Unit 1 licence",
+          "value": "Issued 17 July 1982, expires 17 July 2042"
+        },
+        {
+          "band": "Compliance",
+          "label": "Unit 2 licence",
+          "value": "Expires 2044"
+        },
+        {
+          "band": "Compliance",
+          "label": "Licence renewal",
+          "value": "20-year extension granted November 2009"
+        },
+        {
+          "band": "Compliance",
+          "label": "Decommissioning trust",
+          "value": "$1.9 billion fair value at 31 December 2025; exceeds NRC minimum funding"
+        },
+        {
+          "band": "Compliance",
+          "label": "Spent fuel",
+          "value": "On-site dry-cask storage expected to accommodate all spent fuel through 2044"
+        }
+      ],
+      "notes": "Talen's 10-K calls Susquehanna the seventh-largest US nuclear facility; the corporate website says sixth. Certrec's June 2025 list built on NERC data ranks it seventh at 2,494 MW, behind Peach Bottom."
     },
     {
-     "band": "PJM",
-     "label": "Guernsey (OH, natural gas, baseload)",
-     "value": "1,771 MW"
+      "product": "Generation fleet as filed, 31 December 2025",
+      "specs": [
+        {
+          "band": "PJM",
+          "label": "Susquehanna (PA, nuclear, baseload)",
+          "value": "2,494 MW gross / 2,245 MW owned at 90%"
+        },
+        {
+          "band": "PJM",
+          "label": "Guernsey (OH, natural gas, baseload)",
+          "value": "1,771 MW"
+        },
+        {
+          "band": "PJM",
+          "label": "Martins Creek (PA, gas/fuel oil, peaker)",
+          "value": "1,710 MW"
+        },
+        {
+          "band": "PJM",
+          "label": "Montour (PA, natural gas, peaker)",
+          "value": "1,505 MW"
+        },
+        {
+          "band": "PJM",
+          "label": "Brunner Island (PA, gas/coal, intermediate)",
+          "value": "1,419 MW — coal generation must cease by 31 December 2028"
+        },
+        {
+          "band": "PJM",
+          "label": "Brandon Shores (MD, coal, RMR)",
+          "value": "1,273 MW"
+        },
+        {
+          "band": "PJM",
+          "label": "Freedom (PA, natural gas, baseload)",
+          "value": "1,049 MW"
+        },
+        {
+          "band": "PJM",
+          "label": "H.A. Wagner (MD, fuel oil, RMR)",
+          "value": "702 MW"
+        },
+        {
+          "band": "PJM",
+          "label": "Lower Mount Bethel (PA, natural gas, baseload)",
+          "value": "607 MW"
+        },
+        {
+          "band": "PJM",
+          "label": "Conemaugh (PA, coal, intermediate)",
+          "value": "1,763 MW gross / 392 MW owned at 22.22%"
+        },
+        {
+          "band": "PJM",
+          "label": "Keystone (PA, coal, intermediate)",
+          "value": "1,724 MW gross / 213 MW owned at 12.34% — under contract for sale at $85 million"
+        },
+        {
+          "band": "PJM",
+          "label": "PJM total",
+          "value": "16,017 MW gross / 12,886 MW owned"
+        },
+        {
+          "band": "WECC",
+          "label": "Colstrip Unit 3 (MT, coal, baseload)",
+          "value": "740 MW gross / 222 MW owned at 30%; entitled to 15% of Units 3 and 4 output under a joint-owner sharing agreement"
+        },
+        {
+          "band": "Total",
+          "label": "Filed fleet at 31 December 2025",
+          "value": "16,757 MW gross / 13,108 MW owned"
+        },
+        {
+          "band": "Total",
+          "label": "Added June 2026 (Cornerstone)",
+          "value": "Lawrenceburg (IN), Waterford (OH) and Darby (OH) — 2,451 MW per the April 2026 pricing release, 'approximately 2.6 GW' in the marketing"
+        },
+        {
+          "band": "Total",
+          "label": "Company boilerplate, August 2026",
+          "value": "approximately 15.7 GW of power infrastructure including 2.2 GW of nuclear"
+        }
+      ],
+      "notes": "The boilerplate figure moved 10.7 -> 13.1 -> 15.6 -> 15.7 GW inside fourteen months and refers to owned rather than gross MW. Always check the release date before quoting a headline gigawatt number."
     },
     {
-     "band": "PJM",
-     "label": "Martins Creek (PA, gas/fuel oil, peaker)",
-     "value": "1,710 MW"
-    },
-    {
-     "band": "PJM",
-     "label": "Montour (PA, natural gas, peaker)",
-     "value": "1,505 MW"
-    },
-    {
-     "band": "PJM",
-     "label": "Brunner Island (PA, gas/coal, intermediate)",
-     "value": "1,419 MW — coal generation must cease by 31 December 2028"
-    },
-    {
-     "band": "PJM",
-     "label": "Brandon Shores (MD, coal, RMR)",
-     "value": "1,273 MW"
-    },
-    {
-     "band": "PJM",
-     "label": "Freedom (PA, natural gas, baseload)",
-     "value": "1,049 MW"
-    },
-    {
-     "band": "PJM",
-     "label": "H.A. Wagner (MD, fuel oil, RMR)",
-     "value": "702 MW"
-    },
-    {
-     "band": "PJM",
-     "label": "Lower Mount Bethel (PA, natural gas, baseload)",
-     "value": "607 MW"
-    },
-    {
-     "band": "PJM",
-     "label": "Conemaugh (PA, coal, intermediate)",
-     "value": "1,763 MW gross / 392 MW owned at 22.22%"
-    },
-    {
-     "band": "PJM",
-     "label": "Keystone (PA, coal, intermediate)",
-     "value": "1,724 MW gross / 213 MW owned at 12.34% — under contract for sale at $85 million"
-    },
-    {
-     "band": "PJM",
-     "label": "PJM total",
-     "value": "16,017 MW gross / 12,886 MW owned"
-    },
-    {
-     "band": "WECC",
-     "label": "Colstrip Unit 3 (MT, coal, baseload)",
-     "value": "740 MW gross / 222 MW owned at 30%; entitled to 15% of Units 3 and 4 output under a joint-owner sharing agreement"
-    },
-    {
-     "band": "Total",
-     "label": "Filed fleet at 31 December 2025",
-     "value": "16,757 MW gross / 13,108 MW owned"
-    },
-    {
-     "band": "Total",
-     "label": "Added June 2026 (Cornerstone)",
-     "value": "Lawrenceburg (IN), Waterford (OH) and Darby (OH) — 2,451 MW per the April 2026 pricing release, 'approximately 2.6 GW' in the marketing"
-    },
-    {
-     "band": "Total",
-     "label": "Company boilerplate, August 2026",
-     "value": "approximately 15.7 GW of power infrastructure including 2.2 GW of nuclear"
+      "product": "PJM capacity auction results as Talen reports them",
+      "specs": [
+        {
+          "band": "2025/2026",
+          "label": "Cleared / price / revenue",
+          "value": "6,820 MW at $269.92/MW-day, approximately $670 million"
+        },
+        {
+          "band": "2026/2027",
+          "label": "Cleared / price / revenue",
+          "value": "6,702 MW at $329.17/MW-day, approximately $805 million"
+        },
+        {
+          "band": "2027/2028",
+          "label": "Cleared / price / revenue",
+          "value": "8,745 MW at $333.44/MW-day, approximately $1,067 million"
+        },
+        {
+          "band": "2028/2029",
+          "label": "Cleared / price / revenue",
+          "value": "10,180 MW at $325.00/MW-day, approximately $1,208 million"
+        },
+        {
+          "band": "Context",
+          "label": "Prior vintage",
+          "value": "MAAC and PPL zones cleared at $49.49/MW-day for both 2023/2024 and 2024/2025"
+        },
+        {
+          "band": "Context",
+          "label": "Price collar",
+          "value": "The last three auctions all cleared at the FERC-approved administrative cap; the 2028/2029 cap was $325/MW-day UCAP with a $175 floor"
+        },
+        {
+          "band": "Context",
+          "label": "Reliability shortfall",
+          "value": "PJM's 2027/2028 and 2028/2029 auctions were the first in which the whole RTO fell short of its reliability requirement — by roughly 6,500 MW and 6,831 MW"
+        }
+      ],
+      "notes": "Capacity revenue, not energy, is the single largest driver of the earnings inflection: it rose from $192 million in FY2024 to $485 million in FY2025 and $444 million in the first half of 2026 alone."
     }
-   ],
-   "notes": "The boilerplate figure moved 10.7 -> 13.1 -> 15.6 -> 15.7 GW inside fourteen months and refers to owned rather than gross MW. Always check the release date before quoting a headline gigawatt number."
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "public",
+    "commentary": "Talen guides on Adjusted EBITDA and Adjusted Free Cash Flow, not on earnings per share, and its GAAP result is dominated by mark-to-market movement on a hedge book that was net short into a rising forward curve. FY2024's $998 million of GAAP net income included an $886 million combined gain on the Cumulus and ERCOT sales; FY2025's $(219) million loss included a $501 million fourth-quarter stock-compensation charge from the executive cash-settlement provision. Read the cash lines. **Expectations honesty:** no published full-year analyst consensus for FY2024 or FY2025 revenue, EPS or EBITDA could be located, so those periods are benchmarked against Talen's own guidance and labelled as such. Only the latest interim carries a genuine outlet-named consensus.",
+    "periods": [
+      {
+        "period": "FY2024",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "commentary": "The base year: ERCOT sold, the data-centre campus sold to Amazon, 22 percent of the shares bought back, and the behind-the-meter arrangement still alive. Talen titled the release 'Exceeds 2024 Guidance'.",
+        "metrics": [
+          {
+            "name": "Total operating revenues",
+            "actual": "$2,115M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "No published full-year revenue consensus was located. Note stockanalysis.com carries FY2024 revenue as $2,073M against $2,115M in the February 2025 release, a restatement difference; state the basis if quoting.",
+            "kpi": "revenue",
+            "usdMillions": 2115,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Adjusted EBITDA",
+            "actual": "$770M",
+            "expected": "$765M (company guidance midpoint)",
+            "verdict": "beat",
+            "result": "Benchmark is Talen's own 2024 guidance midpoint, not analyst consensus. Beat by $5 million."
+          },
+          {
+            "name": "Adjusted Free Cash Flow",
+            "actual": "$283M",
+            "expected": "$275M (company guidance midpoint)",
+            "verdict": "beat",
+            "result": "Company guidance benchmark. Beat by $8 million."
+          },
+          {
+            "name": "Net income attributable to stockholders",
+            "actual": "$998M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Flattered by an $886 million combined gain on the Cumulus data-campus sale to Amazon and the ERCOT portfolio sale to CPS Energy; not an operating result.",
+            "kpi": "net-income",
+            "usdMillions": 998,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Diluted earnings per share",
+            "actual": "$17.67 ($18.40 basic)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "No full-year consensus located. Weighted-average diluted shares were 56.5 million, against 45.7 million a year later after the buyback.",
+            "kpi": "eps"
+          },
+          {
+            "name": "Capital expenditures",
+            "actual": "$189M ($85M property, plant and equipment plus $104M nuclear fuel)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Pre-acquisition run rate; the forward plan filed with the FY2025 10-K is $318 million for 2026 and $268 million for 2027.",
+            "kpi": "capex",
+            "usdMillions": 189,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Nuclear production tax credit revenue",
+            "actual": "$220M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Recognised in FY2024 and zero in FY2025, because PJM prices rose above the credit's recognition threshold. The credit is a floor, not an earnings stream."
+          },
+          {
+            "name": "Share repurchases",
+            "actual": "$(1,958)M — approximately 13 million shares, 22 percent of those outstanding",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Includes a negotiated fourth-quarter block from Rubric Capital Management priced at a 4 percent discount to a 15-day VWAP, funded by an incremental term loan."
+          }
+        ]
+      },
+      {
+        "period": "FY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "commentary": "The year the company was remade: the Amazon PPA expanded to 1,920 MW front-of-the-meter, Freedom and Guernsey closed in November, Cornerstone was agreed in January 2026, and the RMR agreements began paying in June. Results landed mid-range against the original guidance and above the narrowed range issued at Q3.",
+        "metrics": [
+          {
+            "name": "Total operating revenues",
+            "actual": "$2,581M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "No published full-year consensus was located for FY2025 on any host checked; the field is left empty rather than reconstructed.",
+            "kpi": "revenue",
+            "usdMillions": 2581,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Adjusted EBITDA",
+            "actual": "$1,035M",
+            "expected": "$925-$1,175M (company guidance, reaffirmed February 2025)",
+            "verdict": "inline",
+            "result": "Company guidance benchmark. Mid-range against the original guidance and above the high end of the narrowed $975-$1,050M range set at Q3 2025."
+          },
+          {
+            "name": "Adjusted Free Cash Flow",
+            "actual": "$524M",
+            "expected": "$395-$595M (company guidance)",
+            "verdict": "inline",
+            "result": "Upper half of the original guidance range and above the narrowed $450-$495M range."
+          },
+          {
+            "name": "Net income attributable to stockholders",
+            "actual": "$(219)M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "A $1,217 million swing from FY2024 that the company attributes to the absence of the prior year's $888 million of sale gains and to a $501 million fourth-quarter charge from changing the accounting for 2023 emergence awards. Operating cash flow was $704 million.",
+            "kpi": "net-income",
+            "usdMillions": -219,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Diluted earnings per share",
+            "actual": "$(4.79)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "No consensus located. The loss is an accounting artefact of the stock-compensation charge and mark-to-market, not of the operating year.",
+            "kpi": "eps"
+          },
+          {
+            "name": "Capacity revenues",
+            "actual": "$485M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Up from $192 million in FY2024 as the 2025/2026 PJM planning year began at $269.92/MW-day against $49.49 in the prior vintage."
+          },
+          {
+            "name": "Capital expenditures",
+            "actual": "$206M ($98M property, plant and equipment plus $108M nuclear fuel)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Higher than FY2024 on the extended Susquehanna refuelling outage.",
+            "kpi": "capex",
+            "usdMillions": 206,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Contracted large-load supply at period end",
+            "actual": "up to 1,920 MW to Amazon through 2042 at full contract quantity",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "The only signed large-load contract in any Talen filing. The separate 'approximately 4 GW of land development and data center contracting options' is a pipeline, not contracted volume.",
+            "kpi": "mw-contracted",
+            "qty": 1920
+          },
+          {
+            "name": "Total debt principal",
+            "actual": "$6,911M at 31 December 2025",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Rose to $9,696 million by 30 June 2026 after the April 2026 unsecured issuance funded Cornerstone and redeemed the 8.625 percent secured notes."
+          }
+        ]
+      },
+      {
+        "period": "Q2 2026 (three months to 30 June 2026)",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "commentary": "The clearest illustration of why this company cannot be read on GAAP earnings: a $(2.00) reported loss per share and a consensus miss on both lines, alongside record cash generation and a raised full-year guide on the day Cornerstone closed.",
+        "metrics": [
+          {
+            "name": "Total operating revenues",
+            "actual": "$747M",
+            "expected": "$832.81M (MarketBeat consensus)",
+            "verdict": "miss",
+            "result": "Analyst-consensus benchmark, MarketBeat. A 10 percent shortfall. Zacks carried $792.6M, a 5.7 percent shortfall — compilers differ by roughly 5 percent on the same quarter.",
+            "kpi": "revenue",
+            "usdMillions": 747,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "GAAP diluted earnings per share",
+            "actual": "$(2.00)",
+            "expected": "$3.21 (MarketBeat consensus); $3.20 (Zacks)",
+            "verdict": "miss",
+            "result": "Analyst-consensus benchmark. The gap is largely definitional — Zacks' post-print write-up compares an adjusted $0.16 against its $3.20 consensus, while the SEC filing is authoritative that GAAP diluted EPS was $(2.00). Either way it is a miss.",
+            "kpi": "eps"
+          },
+          {
+            "name": "Net loss attributable to stockholders",
+            "actual": "$(92)M",
+            "expected": "—",
+            "verdict": "miss",
+            "result": "Driven by $211 million of unrealised derivative losses on a net-short book into a rising forward curve, and by interest expense that more than doubled year on year on roughly $9.7 billion of debt.",
+            "kpi": "net-income",
+            "usdMillions": -92,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Adjusted EBITDA",
+            "actual": "$374M (from $90M)",
+            "expected": "—",
+            "verdict": "beat",
+            "result": "No published consensus for this metric was located. Against company guidance the signal is the raise: full-year Adjusted EBITDA guidance went to $2,025-$2,225 million from $1,750-$2,050 million."
+          },
+          {
+            "name": "Adjusted Free Cash Flow",
+            "actual": "$212M for the quarter; $562M for the first half (from $9M)",
+            "expected": "—",
+            "verdict": "beat",
+            "result": "Full-year Adjusted Free Cash Flow guidance raised to $1,200-$1,350 million from $980-$1,180 million on 5 August 2026."
+          },
+          {
+            "name": "Generation and capacity factor",
+            "actual": "14.1 TWh at a 47.6 percent capacity factor (from 7.3 TWh at 31.8 percent)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Two effects at once: the acquired combined-cycle plants, and a Susquehanna outage in the prior-year quarter."
+          },
+          {
+            "name": "Capital expenditures",
+            "actual": "$56M net for the quarter",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "First-half property, plant and equipment expenditure was $181 million against $51 million a year earlier.",
+            "kpi": "capex",
+            "usdMillions": 56,
+            "fxBasis": "as reported"
+          }
+        ]
+      }
+    ]
   },
-  {
-   "product": "PJM capacity auction results as Talen reports them",
-   "specs": [
+  "strategyRead": [
+    "**(High confidence)** We assess the widely repeated framing of Talen as 'the Amazon nuclear-PPA precedent' is backwards on the part that matters. FERC **rejected** the behind-the-meter structure on 1 November 2024 (docket ER24-2172, 189 FERC para. 61,078, 2-1, Christie and See in the majority, Chairman Phillips dissenting), on the narrow ground that PJM had not met its burden to justify non-conforming provisions — expressly without prejudice, per Christie's concurrence. What exists today is a **different, later, front-of-the-meter retail supply arrangement** signed in June 2025 and transitioned in April 2026, deliberately structured so that no FERC approval is needed: it runs through Talen Energy Marketing's pre-existing, unconditioned Pennsylvania electric generation supplier licence. Talen voluntarily dismissed its appeal in January 2026 and its own 10-K says 'this matter is now closed'. The precedent Talen actually set is a regulatory loss and a commercial workaround.",
+    "**(High confidence)** We assess the company's earnings power now rests more on the PJM capacity market than on the Amazon contract. Cleared capacity revenue went from approximately $670 million for 2025/2026 to approximately $1,208 million for 2028/2029, and the last three auctions all cleared **at the administrative price cap** — meaning the collar, not scarcity, is setting the price. Basis: Talen's own auction releases and PJM's Base Residual Auction reports. The disconfirming consideration is that a collar is a political artefact: it was set with the thirteen PJM governors, and both its extension and its expiry are decisions someone else makes.",
+    "**(High confidence)** We assess Talen has converted itself from a nuclear-plus-legacy-coal company into a PJM gas company with a nuclear anchor, and has funded that with debt rather than equity. In fourteen months it exited ERCOT, ISO-NE and New Jersey, then spent about $7.3 billion on Freedom, Guernsey and Cornerstone. Total debt principal rose from $6.9 billion to $9.7 billion and interest expense in the first half of 2026 more than doubled year on year, to $333 million. Basis: the 10-K, the 10-Q and the transaction releases. This is a coherent strategy at 6.6-6.7x EV/EBITDA against new-build cost, and it is also the reason a capacity-price reversal would hurt more now than in 2024.",
+    "**(Moderate confidence)** We assess the 'approximately 4 GW of land development and data center contracting options' should be read as optionality rather than pipeline. No second hyperscaler counterparty appears in any Talen filing or in any third-party source located, and Pennsylvania's 19 August 2026 executive order conditions preferential permitting for large data centres on sourcing from **new** supply in the local PJM zone — which is precisely what selling existing Susquehanna or Montour output is not. Jefferies' read, reported by Utility Dive, is that the order 'should further close the door' to IPPs selling existing generation while Talen's legacy Amazon deal 'appears safe'. Basis: Q2 2026 release, Utility Dive, August 2026.",
+    "**(Moderate confidence)** We assess the Brandon Shores and H.A. Wagner reliability-must-run agreements are worth more to Talen than the fleet arithmetic suggests, and carry a political liability in proportion. Roughly $180 million a year of fixed payments with no capacity obligation and no performance penalty, from two plants Talen tried to close, now extended to 2031 per RTO Insider's report of FERC's 24 August 2026 order. The Maryland Office of People's Counsel puts the excess over cost at $83 million a year. Basis: the settlement release, the 10-Q, RTO Insider and Bay Journal.",
+    "**(Moderate confidence)** We assess the executive realignment of December 2025 tells you where the company thinks its value sits. Cole Muller — who ran the Cumulus data-centre business and led the Amazon transaction — became Chief Financial Officer; Darren Olagues's remit expanded to data-centre commercial strategy; and a Chief Asset Development Officer role was created for new generation and large-load interconnections. Basis: the December 2025 8-K and the 2026 proxy. A company that promotes its data-centre dealmaker to CFO is telling you which contract it expects to sign next.",
+    "**(Low confidence)** Talen's ownership is unusually concentrated for a listed company and the public record on it is poor. The 2026 proxy shows Vanguard 10.5 percent, BlackRock 8.6 percent, Rubric Capital 7.8 percent and MFN Partners 6.6 percent as of March 2026, and Energy Capital Partners took approximately 5 percent of the pro-forma equity at the June 2026 Cornerstone close. A third-party aggregator puts Rubric far higher, at roughly 22 percent; the two accounts cannot both be right and we could not obtain a clean current filing to settle it. Treat any single ownership percentage as unverified.",
+    "**Collection gap:** `ir.talenenergy.com` is hard-blocked by its own web application firewall, so the Q2 2026 investor deck and the revised numeric 2027-2028 outlook could not be read; every press release below was recovered instead from its identical SEC Form 8-K exhibit. Talen publishes no standalone sustainability report and no individual executive LinkedIn profiles, and discloses no revenue concentration for Amazon despite the contract's scale. No full-year analyst consensus exists for FY2024 or FY2025. **Indicators to watch:** (1) the FERC show-cause docket for PJM (EL26-67-000) — stakeholder comments were due 16 September 2026 and the resulting tariff language will govern every future co-location, so a rule that prices co-located load on gross rather than net withdrawals would raise the cost of the whole flywheel; (2) a second named large-load counterparty, at any site other than Susquehanna — its absence twelve months after the 4 GW pipeline was first described would confirm the Pennsylvania executive order is binding; (3) the 2030/2031 Base Residual Auction scheduled for May 2027 and whether the price collar is extended again — the first uncollared auction after three consecutive at-cap clears is the single largest swing factor in Talen's earnings; (4) the Colstrip decision, which the 10-K says may have to be made before the MATS and greenhouse-gas litigation resolves; (5) confirmation of the Q3 2026 report date, which Talen had not announced as of 5 September 2026 while trackers estimated 4 to 18 November."
+  ],
+  "recentDevelopments": [
     {
-     "band": "2025/2026",
-     "label": "Cleared / price / revenue",
-     "value": "6,820 MW at $269.92/MW-day, approximately $670 million"
+      "date": "2026-08-24",
+      "category": "regulatory",
+      "headline": "FERC approves extension of the Brandon Shores and H.A. Wagner reliability-must-run agreements through 2031",
+      "read": "Roughly $180 million a year of fixed, obligation-free revenue extended by two years, over protests from the Maryland Office of People's Counsel and PJM's Independent Market Monitor. Talen's own 10-Q, filed three weeks earlier, said only that a decision was expected by mid-September.",
+      "source": "https://www.rtoinsider.com/tag/talen-energy/"
     },
     {
-     "band": "2026/2027",
-     "label": "Cleared / price / revenue",
-     "value": "6,702 MW at $329.17/MW-day, approximately $805 million"
+      "date": "2026-08-19",
+      "category": "policy",
+      "headline": "Pennsylvania executive order conditions preferential permitting for data centres above 25 MW on new in-zone supply",
+      "read": "The clearest external constraint on the flywheel. Jefferies read it as closing the door to IPPs selling existing generation on long-term contracts, while judging Talen's legacy Susquehanna deal safe.",
+      "source": "https://www.utilitydive.com/news/pennsylvania-executive-order-data-centers/828261/"
     },
     {
-     "band": "2027/2028",
-     "label": "Cleared / price / revenue",
-     "value": "8,745 MW at $333.44/MW-day, approximately $1,067 million"
+      "date": "2026-08-05",
+      "category": "financial",
+      "headline": "Q2 2026: guidance raised to $2,025-$2,225 million Adjusted EBITDA on a GAAP loss of $(92) million",
+      "read": "The quarter that shows the company cannot be read on reported earnings — a consensus miss on both lines beside record first-half free cash flow of $562 million and a raised full-year guide.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000065/a20260805q22026earningsrel.htm"
     },
     {
-     "band": "2028/2029",
-     "label": "Cleared / price / revenue",
-     "value": "10,180 MW at $325.00/MW-day, approximately $1,208 million"
+      "date": "2026-07-14",
+      "category": "market",
+      "headline": "Talen clears 10,180 MW at $325.00/MW-day in PJM's 2028/2029 capacity auction",
+      "read": "Approximately $1,208 million of capacity revenue for a single planning year, and the third consecutive auction to clear at the administrative price cap.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000058/a20260714pressreleasepjm20.htm"
     },
     {
-     "band": "Context",
-     "label": "Prior vintage",
-     "value": "MAAC and PPL zones cleared at $49.49/MW-day for both 2023/2024 and 2024/2025"
+      "date": "2026-06-18",
+      "category": "regulatory",
+      "headline": "FERC issues section 206 show-cause orders to all six RTOs on large-load and co-located-load rules",
+      "read": "The Susquehanna docket's final consequence: instead of a national rule, every grid operator must now justify or reform its own rules across five areas, with PJM's docket EL26-67-000 comments due 16 September 2026.",
+      "source": "https://www.mcguirewoods.com/client-resources/alerts/2026/6/ferc-issues-section-206-show-cause-orders-directing-all-six-rtos-isos-to-justify-or-reform-large-load-integration-rules/"
     },
     {
-     "band": "Context",
-     "label": "Price collar",
-     "value": "The last three auctions all cleared at the FERC-approved administrative cap; the 2028/2029 cap was $325/MW-day UCAP with a $175 floor"
+      "date": "2026-06-15",
+      "category": "ma",
+      "headline": "Cornerstone acquisition closes — Lawrenceburg, Waterford and Darby added for $3.5 billion",
+      "read": "Approximately 2.6 GW bought from Energy Capital Partners at a stated 6.6x 2027 EV/EBITDA, paid $2.6 billion cash and 2,399,998 shares; ECP becomes roughly a 5 percent holder.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/a20260615pressreleasetalen.htm"
     },
     {
-     "band": "Context",
-     "label": "Reliability shortfall",
-     "value": "PJM's 2027/2028 and 2028/2029 auctions were the first in which the whole RTO fell short of its reliability requirement — by roughly 6,500 MW and 6,831 MW"
+      "date": "2026-04-17",
+      "category": "financial",
+      "headline": "$4.0 billion of senior unsecured notes priced to fund Cornerstone and redeem the 8.625 percent secured notes",
+      "read": "Total debt principal moves to $9.7 billion. Talen claims over $40 million a year of interest savings from the redemption; the make-whole cost about $60 million.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000030/a20260417pressreleaseprici.htm"
+    },
+    {
+      "date": "2026-04-16",
+      "category": "regulatory",
+      "headline": "FERC issues further guidance on co-located load interconnection, recognising three interconnection pathways",
+      "read": "Reduced-capacity interconnection, provisional interconnection service and surplus interconnection service are all now available routes; FERC rejected PJM's proposed point-of-change-in-ownership definition.",
+      "source": "https://www.vnf.com/ferc-provides-further-guidance-on-co-located-load-interconnection"
+    },
+    {
+      "date": "2026-03-20",
+      "category": "partnership",
+      "headline": "X-energy and Talen sign a letter of intent to assess three or more four-unit Xe-100 plants in Pennsylvania and PJM",
+      "read": "The small-modular-reactor option becomes concrete enough to name a vendor — and Amazon is not a party to it, despite the June 2025 language about exploring SMRs together.",
+      "source": "https://www.world-nuclear-news.org/articles/x-energy-talen-to-assess-deployment-of-multiple-smr-plants"
+    },
+    {
+      "date": "2026-02-26",
+      "category": "financial",
+      "headline": "FY2025: Adjusted EBITDA $1,035 million and Adjusted Free Cash Flow $524 million on a GAAP loss of $(219) million",
+      "read": "Guidance reaffirmed rather than changed. The loss is the absence of 2024's $888 million of sale gains plus a $501 million stock-compensation charge, not an operating deterioration.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000014/a20260226q42025earningsrel.htm"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "ma",
+      "headline": "Talen agrees to buy Cornerstone Generation from Energy Capital Partners for $3.45 billion",
+      "read": "The second acquisition in six months, again of operating combined-cycle capacity at roughly half new-build cost, again mostly debt-funded.",
+      "source": "https://www.utilitydive.com/news/talen-in-deal-to-buy-26-gw-of-gas-plants-in-pjm-for-35b/809826/"
+    },
+    {
+      "date": "2025-12-18",
+      "category": "regulatory",
+      "headline": "FERC finds PJM's tariff unjust and unreasonable for co-located load and orders three new transmission services",
+      "read": "The rulebook the Susquehanna rejection made necessary: interim non-firm, firm contract demand and non-firm contract demand services, plus revised behind-the-meter generation rules.",
+      "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+    },
+    {
+      "date": "2025-12-17",
+      "category": "market",
+      "headline": "Talen clears 8,745 MW at $333.44/MW-day in the 2027/2028 auction",
+      "read": "Approximately $1,067 million of capacity revenue, in the first auction where the whole RTO fell short of its reliability requirement.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000045/ex99120251217pressreleasep.htm"
+    },
+    {
+      "date": "2025-12-15",
+      "category": "leadership",
+      "headline": "Executive realignment: Terry Nutt to President, Cole Muller to Chief Financial Officer, a Chief Asset Development Officer role created",
+      "read": "The executive who ran the Cumulus data-centre business and the Amazon transaction becomes CFO; the new development role is defined around new generation and large-load interconnections.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000041/ex99120251215pressreleasee.htm"
+    },
+    {
+      "date": "2025-11-25",
+      "category": "ma",
+      "headline": "Freedom and Guernsey acquisitions close for approximately $3.8 billion gross",
+      "read": "Two of PJM's most efficient combined-cycle plants, bought from Caithness Energy and BlackRock's Global Infrastructure Partners at a stated 6.7x 2026 EV/EBITDA, lifting annual generation from about 40 TWh to about 60 TWh.",
+      "source": "https://www.globenewswire.com/news-release/2025/11/18/3189980/0/en/talen-energy-receives-regulatory-clearance-for-freedom-and-guernsey-acquisitions.html"
+    },
+    {
+      "date": "2025-09-09",
+      "category": "corporate",
+      "headline": "Investor update discloses the Amazon ramp band and a shortfall make-whole capped at 50-65 percent",
+      "read": "The single most useful disclosure about the contract: minimum and maximum volumes by year, about $18 billion of nominal cash flows at the minimum ramp, and the fact that a make-whole exists but does not make Talen whole.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000010/investorupdate090925_vf.htm"
+    },
+    {
+      "date": "2025-06-11",
+      "category": "customer",
+      "headline": "Amazon PPA expanded to 1,920 MW through 2042 and moved front-of-the-meter",
+      "read": "The workaround: Susquehanna sells into PJM, Talen becomes Amazon's Pennsylvania retail supplier and PPL Electric handles delivery, so no FERC approval is required. Talen says it 'will significantly decrease Talen's market risk and minimize its reliance on the Federal nuclear production tax credit'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm"
+    },
+    {
+      "date": "2025-01-27",
+      "category": "regulatory",
+      "headline": "Reliability-must-run settlement keeps Brandon Shores and H.A. Wagner running to May 2029",
+      "read": "Settled with PJM, the Maryland PSC, Maryland utilities and customers, and the Sierra Club — an unusual coalition, and the reason the deal held.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025002644/a20250127pressreleasermrse.htm"
+    },
+    {
+      "date": "2024-11-01",
+      "category": "regulatory",
+      "headline": "FERC rejects the amended Susquehanna interconnection service agreement, 2-1",
+      "read": "The decision the company is still known for. It rejected PJM's non-conforming provisions on burden of proof, expressly without prejudice — not a ruling that co-location is unlawful, but enough to end this version of it.",
+      "source": "https://www.ferc.gov/sites/default/files/2024-11/20241101-3061_ER24-2172-000.pdf"
+    },
+    {
+      "date": "2024-10-03",
+      "category": "ma",
+      "headline": "Talen buys TeraWulf's minority share in the Nautilus Cryptomine at Susquehanna",
+      "read": "The bitcoin-mining chapter closes: Talen took full ownership, then ceased use of the facility in June 2025 and terminated the lease in September 2025, with Amazon taking possession of the structures.",
+      "source": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html"
+    },
+    {
+      "date": "2024-05-01",
+      "category": "ma",
+      "headline": "CPS Energy completes the purchase of Talen's 1,710 MW Texas fleet for $785 million",
+      "read": "Talen's complete exit from ERCOT, realising a $564 million gain that funded most of the 2024 buyback. Its markets today are PJM and WECC only.",
+      "source": "https://www.powermag.com/cps-energy-to-acquire-talens-1-7-gw-gas-power-fleet-in-texas-for-785m/"
     }
-   ],
-   "notes": "Capacity revenue, not energy, is the single largest driver of the earnings inflection: it rose from $192 million in FY2024 to $485 million in FY2025 and $444 million in the first half of 2026 alone."
-  }
- ],
- "financials": {
-  "currency": "USD",
-  "type": "public",
-  "commentary": "Talen guides on Adjusted EBITDA and Adjusted Free Cash Flow, not on earnings per share, and its GAAP result is dominated by mark-to-market movement on a hedge book that was net short into a rising forward curve. FY2024's $998 million of GAAP net income included an $886 million combined gain on the Cumulus and ERCOT sales; FY2025's $(219) million loss included a $501 million fourth-quarter stock-compensation charge from the executive cash-settlement provision. Read the cash lines. **Expectations honesty:** no published full-year analyst consensus for FY2024 or FY2025 revenue, EPS or EBITDA could be located, so those periods are benchmarked against Talen's own guidance and labelled as such. Only the latest interim carries a genuine outlet-named consensus.",
-  "periods": [
-   {
-    "period": "FY2024",
-    "periodType": "annual",
-    "periodEnd": "2024-12-31",
-    "commentary": "The base year: ERCOT sold, the data-centre campus sold to Amazon, 22 percent of the shares bought back, and the behind-the-meter arrangement still alive. Talen titled the release 'Exceeds 2024 Guidance'.",
-    "metrics": [
-     {
-      "name": "Total operating revenues",
-      "actual": "$2,115M",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "No published full-year revenue consensus was located. Note stockanalysis.com carries FY2024 revenue as $2,073M against $2,115M in the February 2025 release, a restatement difference; state the basis if quoting.",
-      "kpi": "revenue",
-      "usdMillions": 2115,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "Adjusted EBITDA",
-      "actual": "$770M",
-      "expected": "$765M (company guidance midpoint)",
-      "verdict": "beat",
-      "result": "Benchmark is Talen's own 2024 guidance midpoint, not analyst consensus. Beat by $5 million."
-     },
-     {
-      "name": "Adjusted Free Cash Flow",
-      "actual": "$283M",
-      "expected": "$275M (company guidance midpoint)",
-      "verdict": "beat",
-      "result": "Company guidance benchmark. Beat by $8 million."
-     },
-     {
-      "name": "Net income attributable to stockholders",
-      "actual": "$998M",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "Flattered by an $886 million combined gain on the Cumulus data-campus sale to Amazon and the ERCOT portfolio sale to CPS Energy; not an operating result.",
-      "kpi": "net-income",
-      "usdMillions": 998,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "Diluted earnings per share",
-      "actual": "$17.67 ($18.40 basic)",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "No full-year consensus located. Weighted-average diluted shares were 56.5 million, against 45.7 million a year later after the buyback.",
-      "kpi": "eps"
-     },
-     {
-      "name": "Capital expenditures",
-      "actual": "$189M ($85M property, plant and equipment plus $104M nuclear fuel)",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "Pre-acquisition run rate; the forward plan filed with the FY2025 10-K is $318 million for 2026 and $268 million for 2027.",
-      "kpi": "capex",
-      "usdMillions": 189,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "Nuclear production tax credit revenue",
-      "actual": "$220M",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "Recognised in FY2024 and zero in FY2025, because PJM prices rose above the credit's recognition threshold. The credit is a floor, not an earnings stream."
-     },
-     {
-      "name": "Share repurchases",
-      "actual": "$(1,958)M — approximately 13 million shares, 22 percent of those outstanding",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "Includes a negotiated fourth-quarter block from Rubric Capital Management priced at a 4 percent discount to a 15-day VWAP, funded by an incremental term loan."
-     }
-    ]
-   },
-   {
-    "period": "FY2025",
-    "periodType": "annual",
-    "periodEnd": "2025-12-31",
-    "commentary": "The year the company was remade: the Amazon PPA expanded to 1,920 MW front-of-the-meter, Freedom and Guernsey closed in November, Cornerstone was agreed in January 2026, and the RMR agreements began paying in June. Results landed mid-range against the original guidance and above the narrowed range issued at Q3.",
-    "metrics": [
-     {
-      "name": "Total operating revenues",
-      "actual": "$2,581M",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "No published full-year consensus was located for FY2025 on any host checked; the field is left empty rather than reconstructed.",
-      "kpi": "revenue",
-      "usdMillions": 2581,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "Adjusted EBITDA",
-      "actual": "$1,035M",
-      "expected": "$925-$1,175M (company guidance, reaffirmed February 2025)",
-      "verdict": "inline",
-      "result": "Company guidance benchmark. Mid-range against the original guidance and above the high end of the narrowed $975-$1,050M range set at Q3 2025."
-     },
-     {
-      "name": "Adjusted Free Cash Flow",
-      "actual": "$524M",
-      "expected": "$395-$595M (company guidance)",
-      "verdict": "inline",
-      "result": "Upper half of the original guidance range and above the narrowed $450-$495M range."
-     },
-     {
-      "name": "Net income attributable to stockholders",
-      "actual": "$(219)M",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "A $1,217 million swing from FY2024 that the company attributes to the absence of the prior year's $888 million of sale gains and to a $501 million fourth-quarter charge from changing the accounting for 2023 emergence awards. Operating cash flow was $704 million.",
-      "kpi": "net-income",
-      "usdMillions": -219,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "Diluted earnings per share",
-      "actual": "$(4.79)",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "No consensus located. The loss is an accounting artefact of the stock-compensation charge and mark-to-market, not of the operating year.",
-      "kpi": "eps"
-     },
-     {
-      "name": "Capacity revenues",
-      "actual": "$485M",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "Up from $192 million in FY2024 as the 2025/2026 PJM planning year began at $269.92/MW-day against $49.49 in the prior vintage."
-     },
-     {
-      "name": "Capital expenditures",
-      "actual": "$206M ($98M property, plant and equipment plus $108M nuclear fuel)",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "Higher than FY2024 on the extended Susquehanna refuelling outage.",
-      "kpi": "capex",
-      "usdMillions": 206,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "Contracted large-load supply at period end",
-      "actual": "up to 1,920 MW to Amazon through 2042 at full contract quantity",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "The only signed large-load contract in any Talen filing. The separate 'approximately 4 GW of land development and data center contracting options' is a pipeline, not contracted volume.",
-      "kpi": "mw-contracted",
-      "qty": 1920
-     },
-     {
-      "name": "Total debt principal",
-      "actual": "$6,911M at 31 December 2025",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "Rose to $9,696 million by 30 June 2026 after the April 2026 unsecured issuance funded Cornerstone and redeemed the 8.625 percent secured notes."
-     }
-    ]
-   },
-   {
-    "period": "Q2 2026 (three months to 30 June 2026)",
-    "periodType": "quarter",
-    "periodEnd": "2026-06-30",
-    "commentary": "The clearest illustration of why this company cannot be read on GAAP earnings: a $(2.00) reported loss per share and a consensus miss on both lines, alongside record cash generation and a raised full-year guide on the day Cornerstone closed.",
-    "metrics": [
-     {
-      "name": "Total operating revenues",
-      "actual": "$747M",
-      "expected": "$832.81M (MarketBeat consensus)",
-      "verdict": "miss",
-      "result": "Analyst-consensus benchmark, MarketBeat. A 10 percent shortfall. Zacks carried $792.6M, a 5.7 percent shortfall — compilers differ by roughly 5 percent on the same quarter.",
-      "kpi": "revenue",
-      "usdMillions": 747,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "GAAP diluted earnings per share",
-      "actual": "$(2.00)",
-      "expected": "$3.21 (MarketBeat consensus); $3.20 (Zacks)",
-      "verdict": "miss",
-      "result": "Analyst-consensus benchmark. The gap is largely definitional — Zacks' post-print write-up compares an adjusted $0.16 against its $3.20 consensus, while the SEC filing is authoritative that GAAP diluted EPS was $(2.00). Either way it is a miss.",
-      "kpi": "eps"
-     },
-     {
-      "name": "Net loss attributable to stockholders",
-      "actual": "$(92)M",
-      "expected": "—",
-      "verdict": "miss",
-      "result": "Driven by $211 million of unrealised derivative losses on a net-short book into a rising forward curve, and by interest expense that more than doubled year on year on roughly $9.7 billion of debt.",
-      "kpi": "net-income",
-      "usdMillions": -92,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "Adjusted EBITDA",
-      "actual": "$374M (from $90M)",
-      "expected": "—",
-      "verdict": "beat",
-      "result": "No published consensus for this metric was located. Against company guidance the signal is the raise: full-year Adjusted EBITDA guidance went to $2,025-$2,225 million from $1,750-$2,050 million."
-     },
-     {
-      "name": "Adjusted Free Cash Flow",
-      "actual": "$212M for the quarter; $562M for the first half (from $9M)",
-      "expected": "—",
-      "verdict": "beat",
-      "result": "Full-year Adjusted Free Cash Flow guidance raised to $1,200-$1,350 million from $980-$1,180 million on 5 August 2026."
-     },
-     {
-      "name": "Generation and capacity factor",
-      "actual": "14.1 TWh at a 47.6 percent capacity factor (from 7.3 TWh at 31.8 percent)",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "Two effects at once: the acquired combined-cycle plants, and a Susquehanna outage in the prior-year quarter."
-     },
-     {
-      "name": "Capital expenditures",
-      "actual": "$56M net for the quarter",
-      "expected": "—",
-      "verdict": "inline",
-      "result": "First-half property, plant and equipment expenditure was $181 million against $51 million a year earlier.",
-      "kpi": "capex",
-      "usdMillions": 56,
-      "fxBasis": "as reported"
-     }
-    ]
-   }
-  ]
- },
- "strategyRead": [
-  "**(High confidence)** We assess the widely repeated framing of Talen as 'the Amazon nuclear-PPA precedent' is backwards on the part that matters. FERC **rejected** the behind-the-meter structure on 1 November 2024 (docket ER24-2172, 189 FERC para. 61,078, 2-1, Christie and See in the majority, Chairman Phillips dissenting), on the narrow ground that PJM had not met its burden to justify non-conforming provisions — expressly without prejudice, per Christie's concurrence. What exists today is a **different, later, front-of-the-meter retail supply arrangement** signed in June 2025 and transitioned in April 2026, deliberately structured so that no FERC approval is needed: it runs through Talen Energy Marketing's pre-existing, unconditioned Pennsylvania electric generation supplier licence. Talen voluntarily dismissed its appeal in January 2026 and its own 10-K says 'this matter is now closed'. The precedent Talen actually set is a regulatory loss and a commercial workaround.",
-  "**(High confidence)** We assess the company's earnings power now rests more on the PJM capacity market than on the Amazon contract. Cleared capacity revenue went from approximately $670 million for 2025/2026 to approximately $1,208 million for 2028/2029, and the last three auctions all cleared **at the administrative price cap** — meaning the collar, not scarcity, is setting the price. Basis: Talen's own auction releases and PJM's Base Residual Auction reports. The disconfirming consideration is that a collar is a political artefact: it was set with the thirteen PJM governors, and both its extension and its expiry are decisions someone else makes.",
-  "**(High confidence)** We assess Talen has converted itself from a nuclear-plus-legacy-coal company into a PJM gas company with a nuclear anchor, and has funded that with debt rather than equity. In fourteen months it exited ERCOT, ISO-NE and New Jersey, then spent about $7.3 billion on Freedom, Guernsey and Cornerstone. Total debt principal rose from $6.9 billion to $9.7 billion and interest expense in the first half of 2026 more than doubled year on year, to $333 million. Basis: the 10-K, the 10-Q and the transaction releases. This is a coherent strategy at 6.6-6.7x EV/EBITDA against new-build cost, and it is also the reason a capacity-price reversal would hurt more now than in 2024.",
-  "**(Moderate confidence)** We assess the 'approximately 4 GW of land development and data center contracting options' should be read as optionality rather than pipeline. No second hyperscaler counterparty appears in any Talen filing or in any third-party source located, and Pennsylvania's 19 August 2026 executive order conditions preferential permitting for large data centres on sourcing from **new** supply in the local PJM zone — which is precisely what selling existing Susquehanna or Montour output is not. Jefferies' read, reported by Utility Dive, is that the order 'should further close the door' to IPPs selling existing generation while Talen's legacy Amazon deal 'appears safe'. Basis: Q2 2026 release, Utility Dive, August 2026.",
-  "**(Moderate confidence)** We assess the Brandon Shores and H.A. Wagner reliability-must-run agreements are worth more to Talen than the fleet arithmetic suggests, and carry a political liability in proportion. Roughly $180 million a year of fixed payments with no capacity obligation and no performance penalty, from two plants Talen tried to close, now extended to 2031 per RTO Insider's report of FERC's 24 August 2026 order. The Maryland Office of People's Counsel puts the excess over cost at $83 million a year. Basis: the settlement release, the 10-Q, RTO Insider and Bay Journal.",
-  "**(Moderate confidence)** We assess the executive realignment of December 2025 tells you where the company thinks its value sits. Cole Muller — who ran the Cumulus data-centre business and led the Amazon transaction — became Chief Financial Officer; Darren Olagues's remit expanded to data-centre commercial strategy; and a Chief Asset Development Officer role was created for new generation and large-load interconnections. Basis: the December 2025 8-K and the 2026 proxy. A company that promotes its data-centre dealmaker to CFO is telling you which contract it expects to sign next.",
-  "**(Low confidence)** Talen's ownership is unusually concentrated for a listed company and the public record on it is poor. The 2026 proxy shows Vanguard 10.5 percent, BlackRock 8.6 percent, Rubric Capital 7.8 percent and MFN Partners 6.6 percent as of March 2026, and Energy Capital Partners took approximately 5 percent of the pro-forma equity at the June 2026 Cornerstone close. A third-party aggregator puts Rubric far higher, at roughly 22 percent; the two accounts cannot both be right and we could not obtain a clean current filing to settle it. Treat any single ownership percentage as unverified.",
-  "**Collection gap:** `ir.talenenergy.com` is hard-blocked by its own web application firewall, so the Q2 2026 investor deck and the revised numeric 2027-2028 outlook could not be read; every press release below was recovered instead from its identical SEC Form 8-K exhibit. Talen publishes no standalone sustainability report and no individual executive LinkedIn profiles, and discloses no revenue concentration for Amazon despite the contract's scale. No full-year analyst consensus exists for FY2024 or FY2025. **Indicators to watch:** (1) the FERC show-cause docket for PJM (EL26-67-000) — stakeholder comments were due 16 September 2026 and the resulting tariff language will govern every future co-location, so a rule that prices co-located load on gross rather than net withdrawals would raise the cost of the whole flywheel; (2) a second named large-load counterparty, at any site other than Susquehanna — its absence twelve months after the 4 GW pipeline was first described would confirm the Pennsylvania executive order is binding; (3) the 2030/2031 Base Residual Auction scheduled for May 2027 and whether the price collar is extended again — the first uncollared auction after three consecutive at-cap clears is the single largest swing factor in Talen's earnings; (4) the Colstrip decision, which the 10-K says may have to be made before the MATS and greenhouse-gas litigation resolves; (5) confirmation of the Q3 2026 report date, which Talen had not announced as of 5 September 2026 while trackers estimated 4 to 18 November."
- ],
- "recentDevelopments": [
-  {
-   "date": "2026-08-24",
-   "category": "regulatory",
-   "headline": "FERC approves extension of the Brandon Shores and H.A. Wagner reliability-must-run agreements through 2031",
-   "read": "Roughly $180 million a year of fixed, obligation-free revenue extended by two years, over protests from the Maryland Office of People's Counsel and PJM's Independent Market Monitor. Talen's own 10-Q, filed three weeks earlier, said only that a decision was expected by mid-September.",
-   "source": "https://www.rtoinsider.com/tag/talen-energy/"
-  },
-  {
-   "date": "2026-08-19",
-   "category": "policy",
-   "headline": "Pennsylvania executive order conditions preferential permitting for data centres above 25 MW on new in-zone supply",
-   "read": "The clearest external constraint on the flywheel. Jefferies read it as closing the door to IPPs selling existing generation on long-term contracts, while judging Talen's legacy Susquehanna deal safe.",
-   "source": "https://www.utilitydive.com/news/pennsylvania-executive-order-data-centers/828261/"
-  },
-  {
-   "date": "2026-08-05",
-   "category": "financial",
-   "headline": "Q2 2026: guidance raised to $2,025-$2,225 million Adjusted EBITDA on a GAAP loss of $(92) million",
-   "read": "The quarter that shows the company cannot be read on reported earnings — a consensus miss on both lines beside record first-half free cash flow of $562 million and a raised full-year guide.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000065/a20260805q22026earningsrel.htm"
-  },
-  {
-   "date": "2026-07-14",
-   "category": "market",
-   "headline": "Talen clears 10,180 MW at $325.00/MW-day in PJM's 2028/2029 capacity auction",
-   "read": "Approximately $1,208 million of capacity revenue for a single planning year, and the third consecutive auction to clear at the administrative price cap.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000058/a20260714pressreleasepjm20.htm"
-  },
-  {
-   "date": "2026-06-18",
-   "category": "regulatory",
-   "headline": "FERC issues section 206 show-cause orders to all six RTOs on large-load and co-located-load rules",
-   "read": "The Susquehanna docket's final consequence: instead of a national rule, every grid operator must now justify or reform its own rules across five areas, with PJM's docket EL26-67-000 comments due 16 September 2026.",
-   "source": "https://www.mcguirewoods.com/client-resources/alerts/2026/6/ferc-issues-section-206-show-cause-orders-directing-all-six-rtos-isos-to-justify-or-reform-large-load-integration-rules/"
-  },
-  {
-   "date": "2026-06-15",
-   "category": "ma",
-   "headline": "Cornerstone acquisition closes — Lawrenceburg, Waterford and Darby added for $3.5 billion",
-   "read": "Approximately 2.6 GW bought from Energy Capital Partners at a stated 6.6x 2027 EV/EBITDA, paid $2.6 billion cash and 2,399,998 shares; ECP becomes roughly a 5 percent holder.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/a20260615pressreleasetalen.htm"
-  },
-  {
-   "date": "2026-04-17",
-   "category": "financial",
-   "headline": "$4.0 billion of senior unsecured notes priced to fund Cornerstone and redeem the 8.625 percent secured notes",
-   "read": "Total debt principal moves to $9.7 billion. Talen claims over $40 million a year of interest savings from the redemption; the make-whole cost about $60 million.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000030/a20260417pressreleaseprici.htm"
-  },
-  {
-   "date": "2026-04-16",
-   "category": "regulatory",
-   "headline": "FERC issues further guidance on co-located load interconnection, recognising three interconnection pathways",
-   "read": "Reduced-capacity interconnection, provisional interconnection service and surplus interconnection service are all now available routes; FERC rejected PJM's proposed point-of-change-in-ownership definition.",
-   "source": "https://www.vnf.com/ferc-provides-further-guidance-on-co-located-load-interconnection"
-  },
-  {
-   "date": "2026-03-20",
-   "category": "partnership",
-   "headline": "X-energy and Talen sign a letter of intent to assess three or more four-unit Xe-100 plants in Pennsylvania and PJM",
-   "read": "The small-modular-reactor option becomes concrete enough to name a vendor — and Amazon is not a party to it, despite the June 2025 language about exploring SMRs together.",
-   "source": "https://www.world-nuclear-news.org/articles/x-energy-talen-to-assess-deployment-of-multiple-smr-plants"
-  },
-  {
-   "date": "2026-02-26",
-   "category": "financial",
-   "headline": "FY2025: Adjusted EBITDA $1,035 million and Adjusted Free Cash Flow $524 million on a GAAP loss of $(219) million",
-   "read": "Guidance reaffirmed rather than changed. The loss is the absence of 2024's $888 million of sale gains plus a $501 million stock-compensation charge, not an operating deterioration.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000014/a20260226q42025earningsrel.htm"
-  },
-  {
-   "date": "2026-01-15",
-   "category": "ma",
-   "headline": "Talen agrees to buy Cornerstone Generation from Energy Capital Partners for $3.45 billion",
-   "read": "The second acquisition in six months, again of operating combined-cycle capacity at roughly half new-build cost, again mostly debt-funded.",
-   "source": "https://www.utilitydive.com/news/talen-in-deal-to-buy-26-gw-of-gas-plants-in-pjm-for-35b/809826/"
-  },
-  {
-   "date": "2025-12-18",
-   "category": "regulatory",
-   "headline": "FERC finds PJM's tariff unjust and unreasonable for co-located load and orders three new transmission services",
-   "read": "The rulebook the Susquehanna rejection made necessary: interim non-firm, firm contract demand and non-firm contract demand services, plus revised behind-the-meter generation rules.",
-   "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
-  },
-  {
-   "date": "2025-12-17",
-   "category": "market",
-   "headline": "Talen clears 8,745 MW at $333.44/MW-day in the 2027/2028 auction",
-   "read": "Approximately $1,067 million of capacity revenue, in the first auction where the whole RTO fell short of its reliability requirement.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000045/ex99120251217pressreleasep.htm"
-  },
-  {
-   "date": "2025-12-15",
-   "category": "leadership",
-   "headline": "Executive realignment: Terry Nutt to President, Cole Muller to Chief Financial Officer, a Chief Asset Development Officer role created",
-   "read": "The executive who ran the Cumulus data-centre business and the Amazon transaction becomes CFO; the new development role is defined around new generation and large-load interconnections.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000041/ex99120251215pressreleasee.htm"
-  },
-  {
-   "date": "2025-11-25",
-   "category": "ma",
-   "headline": "Freedom and Guernsey acquisitions close for approximately $3.8 billion gross",
-   "read": "Two of PJM's most efficient combined-cycle plants, bought from Caithness Energy and BlackRock's Global Infrastructure Partners at a stated 6.7x 2026 EV/EBITDA, lifting annual generation from about 40 TWh to about 60 TWh.",
-   "source": "https://www.globenewswire.com/news-release/2025/11/18/3189980/0/en/talen-energy-receives-regulatory-clearance-for-freedom-and-guernsey-acquisitions.html"
-  },
-  {
-   "date": "2025-09-09",
-   "category": "corporate",
-   "headline": "Investor update discloses the Amazon ramp band and a shortfall make-whole capped at 50-65 percent",
-   "read": "The single most useful disclosure about the contract: minimum and maximum volumes by year, about $18 billion of nominal cash flows at the minimum ramp, and the fact that a make-whole exists but does not make Talen whole.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000010/investorupdate090925_vf.htm"
-  },
-  {
-   "date": "2025-06-11",
-   "category": "customer",
-   "headline": "Amazon PPA expanded to 1,920 MW through 2042 and moved front-of-the-meter",
-   "read": "The workaround: Susquehanna sells into PJM, Talen becomes Amazon's Pennsylvania retail supplier and PPL Electric handles delivery, so no FERC approval is required. Talen says it 'will significantly decrease Talen's market risk and minimize its reliance on the Federal nuclear production tax credit'.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm"
-  },
-  {
-   "date": "2025-01-27",
-   "category": "regulatory",
-   "headline": "Reliability-must-run settlement keeps Brandon Shores and H.A. Wagner running to May 2029",
-   "read": "Settled with PJM, the Maryland PSC, Maryland utilities and customers, and the Sierra Club — an unusual coalition, and the reason the deal held.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025002644/a20250127pressreleasermrse.htm"
-  },
-  {
-   "date": "2024-11-01",
-   "category": "regulatory",
-   "headline": "FERC rejects the amended Susquehanna interconnection service agreement, 2-1",
-   "read": "The decision the company is still known for. It rejected PJM's non-conforming provisions on burden of proof, expressly without prejudice — not a ruling that co-location is unlawful, but enough to end this version of it.",
-   "source": "https://www.ferc.gov/sites/default/files/2024-11/20241101-3061_ER24-2172-000.pdf"
-  },
-  {
-   "date": "2024-10-03",
-   "category": "ma",
-   "headline": "Talen buys TeraWulf's minority share in the Nautilus Cryptomine at Susquehanna",
-   "read": "The bitcoin-mining chapter closes: Talen took full ownership, then ceased use of the facility in June 2025 and terminated the lease in September 2025, with Amazon taking possession of the structures.",
-   "source": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html"
-  },
-  {
-   "date": "2024-05-01",
-   "category": "ma",
-   "headline": "CPS Energy completes the purchase of Talen's 1,710 MW Texas fleet for $785 million",
-   "read": "Talen's complete exit from ERCOT, realising a $564 million gain that funded most of the 2024 buyback. Its markets today are PJM and WECC only.",
-   "source": "https://www.powermag.com/cps-energy-to-acquire-talens-1-7-gw-gas-power-fleet-in-texas-for-785m/"
-  }
- ],
- "relationships": [
-  {
-   "slug": "amazon",
-   "type": "customer",
-   "status": "active",
-   "since": "2024-03",
-   "scale": "up to 1,920 MW through 2042",
-   "via": "Susquehanna nuclear output",
-   "note": "Amazon bought Talen's Cumulus data-centre campus in March 2024 and buys Susquehanna output under a power purchase agreement expanded in June 2025.",
-   "context": "The relationship has two halves. In March 2024 Amazon Web Services purchased substantially all the assets of the Cumulus data campus for $650 million gross, $300 million of which sat in escrow until August 2024 pending milestones allowing development to 960 MW of consumption; Talen recorded a $324 million gain. Alongside the sale it entered an initial power purchase agreement with minimum commitments stepping up in 120 MW increments.\n\nThe second half is the restructuring. FERC rejected the amended interconnection service agreement that would have let Susquehanna divert up to 480 MW to co-located load. In June 2025 the two companies signed an amended agreement moving to a front-of-the-meter arrangement: Susquehanna sells into PJM, Talen acts as Amazon's licensed Pennsylvania retail electric generation supplier, and PPL Electric Utilities handles transmission and delivery. At full contract quantity Talen supplies 1,920 MW through 2042 with extension options, ramping to full volume no later than 2032. Talen's 10-Q states the transition occurred in April 2026. Amazon Energy LLC is also a named intervenor in the FERC docket, and the two companies co-sponsored a joint proposal in PJM's Critical Issue Fast Path stakeholder process.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm"
-  },
-  {
-   "slug": "terawulf",
-   "type": "partner",
-   "status": "historical",
-   "since": "2021",
-   "scale": "$85 million buyout of a 25% stake",
-   "via": "Nautilus Cryptomine",
-   "note": "Former joint-venture partner in the Nautilus bitcoin-mining facility adjacent to Susquehanna; Talen bought TeraWulf out in October 2024 and the facility was wound down in 2025.",
-   "context": "Nautilus Cryptomine in Berwick, Pennsylvania was a joint venture between Talen and TeraWulf, powered from Susquehanna at a reported 2 cents per kWh. On 3 October 2024 Talen purchased TeraWulf's minority share for $85 million in cash plus selected physical assets, taking full ownership; TeraWulf's own dossier records the exit at roughly 3.4 times invested capital, used to fund its first high-performance-computing buildings.\n\nThe facility did not survive the Amazon restructuring. Talen agreed in June 2025 to cease use of it, and in September 2025 the lease, submetering and supply agreements were terminated and Amazon took possession of the existing structures, producing a net gain of $8 million. Talen had earlier repurchased the Cumulus Digital and Nautilus non-controlling interests for $125 million.",
-   "source": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html"
-  },
-  {
-   "slug": "vistra",
-   "type": "competitor",
-   "status": "active",
-   "scale": "13.9 GW vs 13.1 GW of PJM capacity",
-   "note": "The next-largest PJM capacity owner above Talen, and a co-party on the same side of the co-location argument at FERC.",
-   "context": "PJM's Independent Market Monitor, reported by Utility Dive in April 2026, ranks the region's capacity owners as Dominion 21.9 GW, Constellation 20.3 GW, Vistra 13.9 GW and Talen approximately 13.1 GW — Vistra sits immediately above Talen. The two are also on the same side of the regulatory argument: Vistra filed jointly with Constellation in the Susquehanna docket in July 2024 supporting the arrangement, and both protested PJM's February 2026 co-location compliance filing.\n\nJefferies, quoted by Utility Dive in August 2026, groups 'independent power producers like Talen Energy, Vistra and PSEG Power' as the class affected by Pennsylvania's data-centre executive order. The businesses differ in one structural way that matters: Vistra owns a five-million-customer retail book that hedges its generation, and Talen does not.",
-   "source": "https://www.utilitydive.com/news/talen-energy-capital-power-pjm-ferc/816451/"
-  },
-  {
-   "slug": "constellation-energy",
-   "type": "competitor",
-   "status": "active",
-   "scale": "20.3 GW vs 13.1 GW of PJM capacity",
-   "note": "The largest competitive nuclear owner in PJM, ranked second to Talen's fourth by the market monitor, and a co-filer with Talen in PJM's fast-path stakeholder process.",
-   "context": "Constellation intervened in the Susquehanna docket and filed jointly with Vistra in July 2024 in support of the co-located arrangement, then filed its own complaint alleging PJM's tariff was unjust and unreasonable because it was silent on fully isolated co-located load — the complaint that produced FERC's December 2025 order.\n\nThe two companies were also on the same side inside PJM's Critical Issue Fast Path process: Talen's 10-K records that it 'submitted a joint proposal amongst itself, Constellation, Calpine, Amazon, Microsoft, and Google' on large-load additions, and that neither that proposal nor any other received broad stakeholder support. Commercially they compete for the same nuclear-backed hyperscaler contracts, Constellation with Microsoft and Meta and Talen with Amazon.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
-  },
-  {
-   "slug": "microsoft",
-   "type": "other",
-   "status": "historical",
-   "since": "2025",
-   "note": "Co-signatory with Talen on a joint proposal in PJM's Critical Issue Fast Path process on large-load additions; not a commercial counterparty.",
-   "context": "Talen's FY2025 Form 10-K states that in the accelerated PJM stakeholder process begun in August 2025, 'the Company was an active participant in the CIFP process and submitted a joint proposal amongst itself, Constellation, Calpine, Amazon, Microsoft, and Google representing the group's collective views on the best approach to large load additions', and that neither that proposal nor any other received broad stakeholder support during voting.\n\nThis is a regulatory alignment, not a contract. No source states any commercial relationship between Talen and Microsoft; Microsoft's named nuclear counterparty is Constellation, at Three Mile Island.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
-  },
-  {
-   "slug": "google",
-   "type": "other",
-   "status": "historical",
-   "since": "2025",
-   "note": "Co-signatory with Talen on the same joint PJM fast-path proposal on large-load additions; not a commercial counterparty.",
-   "context": "The same 10-K passage names Google alongside Constellation, Calpine, Amazon and Microsoft as co-sponsors of the joint proposal Talen submitted in PJM's Critical Issue Fast Path process on how large loads should be added to the system.\n\nNo source states any commercial relationship between Talen and Google. It is recorded here because the coalition itself is informative: generators and hyperscalers filed together against a stakeholder body that then rejected every proposal, which is why the question went back to FERC.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
-  },
-  {
-   "slug": "aep",
-   "type": "other",
-   "status": "historical",
-   "since": "2024",
-   "note": "Co-protestant with Exelon against the Susquehanna amended interconnection service agreement at FERC.",
-   "context": "The FERC order rejecting the amended interconnection service agreement records that Exelon Corporation and American Electric Power filed the timely protest against it. Their argument, as reported by POWER Magazine, was that the arrangement would let a large load avoid the transmission charges that grid-connected load pays.\n\nThe adjacency is now commercial as well as adversarial: three of the four plants Talen acquired in June 2026 — Lawrenceburg, Waterford and Darby — sit in the AEP zone of PJM, as does Guernsey.",
-   "source": "https://www.ferc.gov/sites/default/files/2024-11/20241101-3061_ER24-2172-000.pdf"
-  }
- ],
- "policyExposure": [
-  {
-   "regime": "FERC co-located load and large-load interconnection (dockets ER24-2172, EL25-49, EL26-67)",
-   "status": "in-effect",
-   "effectiveDate": "2025-12-18",
-   "exposure": "Talen is the origin case. FERC rejected the amended Susquehanna interconnection service agreement on 1 November 2024 in docket ER24-2172, then consolidated the wider question into a section 206 proceeding, and on 18 December 2025 found PJM's tariff unjust and unreasonable as to the interconnection of co-located loads, directing three new transmission services. PJM filed compliance language on 23 February 2026 and FERC issued further guidance on 16 April 2026. In June 2026 FERC issued tailored show-cause orders to every RTO, PJM's under docket EL26-67-000, covering the interconnection process, cost allocation, transmission services for flexible large loads, behind-the-meter generation and co-located loads, and the study of generation serving electrically proximate load. The rulebook that will govern every future Talen co-location is still being written.",
-   "mitigation": "Talen restructured the Amazon arrangement front-of-the-meter in June 2025 so that it needs no FERC approval, dismissed its appeal in January 2026, and states the matter is closed. It participates directly in the proceedings and co-filed a joint proposal with Constellation, Calpine, Amazon, Microsoft and Google in PJM's fast-path process.",
-   "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
-  },
-  {
-   "regime": "Nuclear production tax credit (section 45U)",
-   "status": "in-effect",
-   "effectiveDate": "2024-01-01",
-   "exposure": "Susquehanna output sold to third parties from 31 December 2023 through 31 December 2032 is eligible. The credit begins when annual gross receipts fall below an equivalent $44.60/MWh and rises to $3/MWh at $26/MWh, with a five-times increase to as much as $15/MWh for meeting prevailing-wage requirements, which Talen expects to meet. Talen recognised $220 million of credit revenue in FY2024 and none in FY2025, because market prices exceeded the recognition threshold. In September 2025 it sold credits with a carrying value of $202 million for $191 million in cash.",
-   "mitigation": "Talen treats the credit as a downside backstop rather than an earnings stream, and says the Amazon contract 'will significantly decrease Talen's market risk and minimize its reliance on the Federal nuclear production tax credit'.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
-  },
-  {
-   "regime": "EPA mercury and air toxics standards and greenhouse-gas rules for existing units",
-   "status": "in-effect",
-   "effectiveDate": "2024-05",
-   "exposure": "The binding exposure is Colstrip. The 10-K states Colstrip was not expected to meet the 2024 particulate-matter standard without substantial control upgrades, and that if existing coal units run beyond 2031 the greenhouse-gas guidelines require reductions such as carbon capture by the end of 2031 — leaving the co-owners a choice between cost-prohibitive controls and retirement. EPA repealed the tighter particulate standards in February 2026 and proposed in June 2025 to repeal the greenhouse-gas standards outright, but both actions are in litigation. Talen says it is possible it will have to decide Colstrip's future before it has clarity.",
-   "mitigation": "Talen applied for and in April 2025 was granted a two-year presidential compliance exemption under Clean Air Act section 112(i)(4) for Colstrip, and has intervened to defend it in both the D.C. Circuit and the district court.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
-  },
-  {
-   "regime": "EPA effluent limitations guidelines and coal combustion residuals rules",
-   "status": "in-effect",
-   "effectiveDate": "2020",
-   "exposure": "Talen elected the 2020 effluent-guidelines option that exempts a plant from certain wastewater standards if it commits to cease coal-fired generation by the end of 2028 — which is why Brunner Island's coal cessation date is a regulatory commitment, not a market judgment. Asset retirement obligations and accrued environmental costs stood at $497 million at 30 June 2026, the majority relating to ash impoundments at Colstrip, Brunner Island and Montour, with a significant portion of the Colstrip and Brunner Island obligations expected to settle through 2030. The Center for Biological Diversity filed a citizen suit in April 2025 alleging groundwater monitoring failures at Brunner Island's Ash Basin 5.",
-   "mitigation": "Talen has surety bonds of $221 million outstanding at 30 June 2026, of which $103 million is posted to the Montana Department of Environmental Quality for Colstrip ash obligations, and withdrew its extension request for an unlined Montour impoundment after beginning closure.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
-  },
-  {
-   "regime": "Pennsylvania data-centre executive order and RGGI withdrawal",
-   "status": "in-effect",
-   "effectiveDate": "2026-08-19",
-   "exposure": "The August 2026 executive order gives data-centre projects above 25 MW preferential permitting only if they commit to source electricity from new power supplies in their local PJM zone, meet firm clean-energy requirements ramping to 32 percent by 2035, and pay all costs their interconnection causes. Separately, Pennsylvania's November 2025 budget required withdrawal from the Regional Greenhouse Gas Initiative and the state Supreme Court dismissed the appeal on 6 January 2026, removing a carbon cost Talen's fossil fleet had faced.",
-   "mitigation": "Talen's existing Amazon contract is judged by Jefferies to be safe under the order; the company has not stated a response for its remaining Pennsylvania development pipeline.",
-   "source": "https://www.utilitydive.com/news/pennsylvania-executive-order-data-centers/828261/"
-  }
- ],
- "decisionMakers": [
-  {
-   "name": "Mark A. \"Mac\" McFarland",
-   "title": "Chief Executive Officer and Director",
-   "photo": "images/execs/talen-energy-mcfarland.webp",
-   "background": [
-    "Chief Executive Officer and Director — Talen Energy (May 2023-); also President May 2023 to December 2025",
-    "President, Chief Executive Officer and Director — California Resources Corporation (2020-2023); remains a director and chairs Carbon TerraVault",
-    "Executive Chairman — GenOn Energy; President and CEO April 2017 to December 2018, board member to September 2022",
-    "Chief Executive Officer — Luminant Holding Company (2013-2016), a subsidiary of Energy Future Holdings",
-    "Chief Commercial Officer — Energy Future Holdings (2008-2013)"
-   ]
-  },
-  {
-   "name": "Terry L. Nutt",
-   "title": "President",
-   "photo": "images/execs/talen-energy-nutt.webp",
-   "background": [
-    "President — Talen Energy (December 2025-)",
-    "Chief Financial Officer — Talen Energy (July 2023 to December 2025), leading finance, M&A, risk management and treasury",
-    "Chief Financial Officer — Just Energy",
-    "Chief Financial Officer and Managing Director — EDF Trading North America (2018-2023)",
-    "Senior finance roles including SVP and Controller and SVP of Risk Management — Vistra Corporation and predecessors; earlier at Dynegy",
-    "M.S. Accounting and B.B.A. summa cum laude, Texas A&M University"
-   ]
-  },
-  {
-   "name": "Cole Muller",
-   "title": "Chief Financial Officer",
-   "photo": "images/execs/talen-energy-muller.jpg",
-   "background": [
-    "Chief Financial Officer — Talen Energy (December 2025-), covering accounting, treasury, risk, planning, investor relations, tax and internal audit",
-    "EVP, Strategic Ventures — Talen Energy (2023-2025), leading the Cumulus data-centre, digital, renewables and battery businesses and the data-centre contracting strategy",
-    "SVP, Cumulus Growth — Talen Energy (2021-2023); earlier led Talen's roughly 8 GW PJM fossil business unit",
-    "Associate Partner — McKinsey & Company; joined Talen in 2018",
-    "Submarine officer — United States Navy; B.S. Mathematics, U.S. Naval Academy; MBA Wharton; JD University of Pennsylvania"
-   ]
-  },
-  {
-   "name": "Brad L. Berryman",
-   "title": "Chief Operating Officer",
-   "photo": "images/execs/talen-energy-berryman.jpg",
-   "background": [
-    "Chief Operating Officer — Talen Energy (December 2025-), responsible for the generation fleet in the Mid-Atlantic and Ohio",
-    "Senior Vice President and Chief Nuclear Officer — Talen Energy"
-   ]
-  },
-  {
-   "name": "Chris E. Morice",
-   "title": "Chief Commercial Officer",
-   "photo": "images/execs/talen-energy-morice.jpg",
-   "background": [
-    "Chief Commercial Officer — Talen Energy (2023-), responsible for hedging and trading across all commodities and for commercial origination",
-    "Oversees wholesale trading and fleet optimisation"
-   ]
-  },
-  {
-   "name": "Darren J. Olagues",
-   "title": "Chief Development Officer",
-   "photo": "images/execs/talen-energy-olagues.jpg",
-   "background": [
-    "Chief Development Officer — Talen Energy, leading corporate strategy and development",
-    "Remit expanded in December 2025 to oversee data-centre commercial strategies alongside corporate strategy and M&A"
-   ]
-  },
-  {
-   "name": "Dale E. Lebsack",
-   "title": "Chief Asset Development Officer",
-   "photo": "images/execs/talen-energy-lebsack.jpg",
-   "background": [
-    "Chief Asset Development Officer — Talen Energy (role created December 2025)",
-    "Responsible for assessing, designing and constructing new generation assets and for developing sites for new generation and large-load interconnections"
-   ]
-  },
-  {
-   "name": "Edward T. Casulli",
-   "title": "Senior Vice President and Chief Nuclear Officer",
-   "photo": "images/execs/talen-energy-casulli.jpg",
-   "background": [
-    "Senior Vice President and Chief Nuclear Officer — Talen Energy (December 2025-)",
-    "Site Vice President — Susquehanna Steam Electric Station",
-    "Roughly 30 years in nuclear operations, largely at PSEG's Hope Creek station, rising from Operations Shift Supervisor to Vice President",
-    "B.S. Electrical Engineering, U.S. Naval Academy; Naval Nuclear Propulsion Program, lieutenant; Executive M.S. Management of Technology, University of Pennsylvania"
-   ]
-  },
-  {
-   "name": "Andrew M. \"Andy\" Wright",
-   "title": "Chief Administrative Officer",
-   "photo": "images/execs/talen-energy-wright.jpg",
-   "background": [
-    "Chief Administrative Officer — Talen Energy (June 2023-), the company's first, covering human resources, information technology and corporate security",
-    "General Counsel and Corporate Secretary — Talen Energy"
-   ]
-  },
-  {
-   "name": "Dan Kelly",
-   "title": "General Counsel and Corporate Secretary",
-   "photo": "images/execs/talen-energy-kelly.jpg",
-   "background": [
-    "General Counsel and Corporate Secretary — Talen Energy (May 2026-), leading legal, regulatory and external affairs and corporate governance",
-    "Senior Vice President and Deputy General Counsel — Vistra Corp. and predecessor Energy Future Holdings, overseeing litigation, environmental, nuclear, labour and commercial regulatory compliance",
-    "Attorney — Vinson & Elkins LLP, Dallas",
-    "Judicial clerk to Chief Judge A. Joe Fish (N.D. Tex.) and Circuit Judge Pasco M. Bowman (8th Cir.); legislative assistant to a U.S. Senator",
-    "JD cum laude, University of Michigan Law School; B.A. Philosophy, Lawrence University"
-   ]
-  },
-  {
-   "name": "Stephen Schaefer",
-   "title": "Chairman of the Board (independent)",
-   "background": [
-    "Chairman — Talen Energy (May 2023-); chairs the Nominating and Governance Committee",
-    "Director — GenOn Holdings (2018-, formerly Chairman) and Golar LNG (August 2025-)",
-    "Partner — Riverstone Holdings (2004-2015), responsible for conventional power and renewable energy investments and a member of two investment committees",
-    "Active in deregulated gas and power markets since 1993; former Audit Chair at Just Energy Group and Chairman of TexGen Power"
-   ]
-  },
-  {
-   "name": "Joseph Nigro",
-   "title": "Independent Director; Chair, Risk Oversight Committee",
-   "background": [
-    "Senior adviser — Blackstone's energy transition group, and director of Kindle Energy (July 2023-)",
-    "Chairman — Eos Energy Enterprises (December 2025-); director since March 2025",
-    "Chief Financial Officer — Exelon (2018-2022), member of the executive committee and chair of the corporate investment committee",
-    "Chief Executive Officer — Constellation Energy (2013-2018); earlier SVP Portfolio Management and Strategy, Exelon Power Team"
-   ]
-  },
-  {
-   "name": "Karen Hyde",
-   "title": "Independent Director; Chair, Audit Committee",
-   "background": [
-    "Senior Vice President, Chief Compliance and Ethics Officer, Chief Audit Executive and Chief Risk Officer — Xcel Energy, to her 2022 retirement after 30 years",
-    "Roughly a decade negotiating structured power purchase arrangements, including Xcel Energy's first renewable energy contracts",
-    "Lead nuclear engineer — U.S. Department of Defense, responsible for overhauling submarine reactors",
-    "M.S. Mineral Economics, Colorado School of Mines; B.S. Metallurgical Engineering, Lafayette College"
-   ]
-  }
- ],
- "sources": [
-  {
-   "label": "RTO Insider — Talen Energy coverage index (RMR extension approved through 2031, 24 August 2026)",
-   "url": "https://www.rtoinsider.com/tag/talen-energy/"
-  },
-  {
-   "label": "Utility Dive — Pennsylvania executive order on data centres; Jefferies on IPPs selling existing generation",
-   "url": "https://www.utilitydive.com/news/pennsylvania-executive-order-data-centers/828261/",
-   "date": "2026-08-21"
-  },
-  {
-   "label": "WMAR-2 News — FERC extends operation of Brandon Shores and Wagner past retirement dates",
-   "url": "https://www.wmar2news.com/local/federal-commission-extends-operation-of-brandon-shores-wagner-power-plants-past-retirement-dates",
-   "date": "2026-08-24"
-  },
-  {
-   "label": "Talen Energy — Q2 2026 results release (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000065/a20260805q22026earningsrel.htm",
-   "date": "2026-08-05"
-  },
-  {
-   "label": "Talen Energy — Form 10-Q for the quarter ended 30 June 2026",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000066/tln-20260630.htm",
-   "date": "2026-08-05"
-  },
-  {
-   "label": "TradingView / Zacks — TLN Q2 earnings call emphasises cash flow and data-centre strategy",
-   "url": "https://www.tradingview.com/news/zacks:07b55190e094b:0-tln-q2-earnings-call-emphasizes-cash-flow-and-data-center-strategy/",
-   "date": "2026-08-06"
-  },
-  {
-   "label": "Investing.com — Talen Energy Q2 2026 earnings call transcript",
-   "url": "https://ca.investing.com/news/transcripts/earnings-call-transcript-talen-energy-lifts-2026-outlook-in-q2-2026-93CH-4779438",
-   "date": "2026-08-05"
-  },
-  {
-   "label": "TradingView / Zacks — Talen Energy set to report Q2 earnings (pre-print consensus)",
-   "url": "https://www.tradingview.com/news/zacks:a1b021aeb094b:0-talen-energy-set-to-report-q2-earnings-what-s-in-store-for-the-stock/",
-   "date": "2026-07-30"
-  },
-  {
-   "label": "Talen Energy — PJM 2028/2029 capacity auction results (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000058/a20260714pressreleasepjm20.htm",
-   "date": "2026-07-14"
-  },
-  {
-   "label": "PJM — 2028/2029 Base Residual Auction procures 138,318 MW of generation resources",
-   "url": "https://www.pjm.com/-/media/DotCom/about-pjm/newsroom/2026-releases/20260714-pjm-capacity-auction-procures-138318-mw-of-generation-resources.pdf",
-   "date": "2026-07-14"
-  },
-  {
-   "label": "McGuireWoods — FERC issues section 206 show-cause orders to all six RTOs on large-load rules",
-   "url": "https://www.mcguirewoods.com/client-resources/alerts/2026/6/ferc-issues-section-206-show-cause-orders-directing-all-six-rtos-isos-to-justify-or-reform-large-load-integration-rules/",
-   "date": "2026-06-22"
-  },
-  {
-   "label": "Talen Energy — Cornerstone acquisition completed (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/a20260615pressreleasetalen.htm",
-   "date": "2026-06-15"
-  },
-  {
-   "label": "Talen Energy — Amendment No. 6 to the Credit Agreement (Form 8-K)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000042/tln-20260520.htm",
-   "date": "2026-05-21"
-  },
-  {
-   "label": "Talen Energy — Q1 2026 results release (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000035/a20260505q12026earningsrel.htm",
-   "date": "2026-05-05"
-  },
-  {
-   "label": "Van Ness Feldman — FERC provides further guidance on co-located load interconnection",
-   "url": "https://www.vnf.com/ferc-provides-further-guidance-on-co-located-load-interconnection",
-   "date": "2026-04-22"
-  },
-  {
-   "label": "Talen Energy — pricing of $4.0 billion of senior unsecured notes (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000030/a20260417pressreleaseprici.htm",
-   "date": "2026-04-17"
-  },
-  {
-   "label": "Utility Dive — PJM market monitor ranks Talen fourth-largest PJM capacity owner at ~13.1 GW",
-   "url": "https://www.utilitydive.com/news/talen-energy-capital-power-pjm-ferc/816451/",
-   "date": "2026-04-02"
-  },
-  {
-   "label": "Utility Dive — Vistra, Constellation and others protest PJM's co-location compliance filing",
-   "url": "https://www.utilitydive.com/news/pjm-data-center-colocation-ferc-vistra-constellation/815941/",
-   "date": "2026-03-27"
-  },
-  {
-   "label": "World Nuclear News — X-energy and Talen to assess deployment of multiple SMR plants",
-   "url": "https://www.world-nuclear-news.org/articles/x-energy-talen-to-assess-deployment-of-multiple-smr-plants",
-   "date": "2026-03-20"
-  },
-  {
-   "label": "Talen Energy — 2026 proxy statement (DEF 14A)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000023/tln-20260319.htm",
-   "date": "2026-03-19"
-  },
-  {
-   "label": "Talen Energy — Form 10-K for the year ended 31 December 2025",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm",
-   "date": "2026-02-26"
-  },
-  {
-   "label": "Talen Energy — FY2025 results release (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000014/a20260226q42025earningsrel.htm",
-   "date": "2026-02-26"
-  },
-  {
-   "label": "GlobeNewswire — Talen Energy reports fourth quarter and full year 2025 results",
-   "url": "https://www.globenewswire.com/news-release/2026/02/26/3246096/0/en/Talen-Energy-Reports-Fourth-Quarter-and-Full-Year-2025-Results.html",
-   "date": "2026-02-26"
-  },
-  {
-   "label": "Investing.com — Talen Energy Q4 2025 earnings call transcript",
-   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-talen-energy-q4-2025-sees-strong-financial-results-93CH-4530120",
-   "date": "2026-02-26"
-  },
-  {
-   "label": "Utility Dive — Talen to buy 2.6 GW of gas plants in PJM for $3.5 billion",
-   "url": "https://www.utilitydive.com/news/talen-in-deal-to-buy-26-gw-of-gas-plants-in-pjm-for-35b/809826/",
-   "date": "2026-01-15"
-  },
-  {
-   "label": "Talen Energy — Cornerstone acquisition announcement (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000004/a20260115pressreleasetalen.htm",
-   "date": "2026-01-15"
-  },
-  {
-   "label": "Talen Energy — Cornerstone investor call presentation (Form 8-K Exhibit 99.2)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000004/a20260115investorcallpre.htm",
-   "date": "2026-01-15"
-  },
-  {
-   "label": "Utility Dive — FERC orders PJM to write co-location rules; tariff unjust and unreasonable",
-   "url": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/",
-   "date": "2025-12-18"
-  },
-  {
-   "label": "Baker Botts — FERC issues order providing guidance for co-locating power plants with data centres in PJM",
-   "url": "https://www.bakerbotts.com/thought-leadership/publications/2025/december/ferc-issues-order-providing-guidance-for-co-locating-power-plants-with-data-centers-within-pjm",
-   "date": "2025-12-22"
-  },
-  {
-   "label": "Talen Energy — PJM 2027/2028 capacity auction results (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000045/ex99120251217pressreleasep.htm",
-   "date": "2025-12-17"
-  },
-  {
-   "label": "PJM — 2027/2028 Base Residual Auction report",
-   "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2027-2028/2027-2028-bra-report.pdf",
-   "date": "2025-12-17"
-  },
-  {
-   "label": "Talen Energy — executive leadership realignment (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000041/ex99120251215pressreleasee.htm",
-   "date": "2025-12-15"
-  },
-  {
-   "label": "GlobeNewswire — Talen receives regulatory clearance for the Freedom and Guernsey acquisitions",
-   "url": "https://www.globenewswire.com/news-release/2025/11/18/3189980/0/en/talen-energy-receives-regulatory-clearance-for-freedom-and-guernsey-acquisitions.html",
-   "date": "2025-11-18"
-  },
-  {
-   "label": "Talen Energy — Q3 2025 results release (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000031/a20251105q32025earningsrel.htm",
-   "date": "2025-11-05"
-  },
-  {
-   "label": "Talen Energy — notes pricing release (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000021/ex99120251010pressreleases.htm",
-   "date": "2025-10-10"
-  },
-  {
-   "label": "Talen Energy — notes offering launch (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000018/ex99120251009pressreleases.htm",
-   "date": "2025-10-09"
-  },
-  {
-   "label": "Talen Energy — incremental term loan and facility upsizing (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000013/ex99120251006pressreleaset.htm",
-   "date": "2025-10-06"
-  },
-  {
-   "label": "PJM Independent Market Monitor — comments in dockets EC25-121 and EC25-125",
-   "url": "https://www.monitoringanalytics.com/filings/2025/IMM_Comments_Docket_Nos_EC25-121_EC25-125_20250915.pdf",
-   "date": "2025-09-15"
-  },
-  {
-   "label": "Talen Energy — September 2025 investor update (Form 8-K Exhibit 99.2)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000010/investorupdate090925_vf.htm",
-   "date": "2025-09-09"
-  },
-  {
-   "label": "Talen Energy — Q2 2025 results release (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025038538/a20250807q22025earningsrel.htm",
-   "date": "2025-08-07"
-  },
-  {
-   "label": "PJM — 2026/2027 Base Residual Auction report",
-   "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2026-2027/2026-2027-bra-report.pdf",
-   "date": "2025-07-22"
-  },
-  {
-   "label": "Talen Energy — PJM 2026/2027 capacity auction results (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025035577/a20250722pressreleasepjm20.htm",
-   "date": "2025-07-22"
-  },
-  {
-   "label": "Talen Energy — agreements to acquire Freedom and Guernsey (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025035201/a20250717pressreleasetalen.htm",
-   "date": "2025-07-17"
-  },
-  {
-   "label": "American Public Power Association — Talen unveils agreements to buy power plants in Pennsylvania and Ohio",
-   "url": "https://www.publicpower.org/periodical/article/talen-energy-unveils-agreements-buy-power-plants-pennsylvania-ohio",
-   "date": "2025-07-18"
-  },
-  {
-   "label": "POWER Magazine — Talen and Amazon launch an $18 billion nuclear PPA: a grid-connected IPP model",
-   "url": "https://www.powermag.com/talen-amazon-launch-18b-nuclear-ppa-a-grid-connected-ipp-model-for-the-data-center-era/",
-   "date": "2025-06-12"
-  },
-  {
-   "label": "Talen Energy — expanded Amazon nuclear relationship (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm",
-   "date": "2025-06-11"
-  },
-  {
-   "label": "Utility Dive — Talen and AWS restructure the Susquehanna arrangement front-of-the-meter",
-   "url": "https://www.utilitydive.com/news/talen-amazon-aws-susquehanna-nuclear-data-centert/750440/",
-   "date": "2025-06-11"
-  },
-  {
-   "label": "EnergyChoiceMatters — Talen's Pennsylvania electric generation supplier licence and the AWS retail structure",
-   "url": "http://www.energychoicematters.com/stories/20250611b.html",
-   "date": "2025-06-11"
-  },
-  {
-   "label": "Certrec — Where is the largest nuclear power plant in the US? Top 20 for 2025 (NERC data)",
-   "url": "https://www.certrec.com/blog/where-is-the-biggest-nuclear-power-plant-in-the-us-top-20-list-for-2025/",
-   "date": "2025-06-02"
-  },
-  {
-   "label": "Talen Energy — Q1 2025 results release (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025023450/a20250508q12025earningsrel.htm",
-   "date": "2025-05-08"
-  },
-  {
-   "label": "Bay Journal — closure of Maryland's last coal power plant may be pushed to 2029",
-   "url": "https://www.bayjournal.com/news/climate_change/closure-of-maryland-s-last-coal-power-plant-may-be-pushed-to-2029/article_636695cd-be67-481d-8595-b776f5e7f745.html",
-   "date": "2025-04-22"
-  },
-  {
-   "label": "American Nuclear Society — FERC denies the Talen-Amazon agreement again",
-   "url": "https://www.ans.org/news/2025-04-16/article-6937/ferc-denies-talen-amazon-agreementagain/",
-   "date": "2025-04-16"
-  },
-  {
-   "label": "Talen Energy — Form 10-K for the year ended 31 December 2024",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025008786/tln-20241231.htm",
-   "date": "2025-02-28"
-  },
-  {
-   "label": "GlobeNewswire — Talen Energy reports full year 2024 results and exceeds 2024 guidance",
-   "url": "https://www.globenewswire.com/news-release/2025/02/27/3034317/0/en/Talen-Energy-Reports-Full-Year-2024-Results-Exceeds-2024-Guidance-and-Reaffirms-2025-Guidance.html",
-   "date": "2025-02-27"
-  },
-  {
-   "label": "Talen Energy — FY2024 results release (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025008641/a20250227q42024earningsrel.htm",
-   "date": "2025-02-27"
-  },
-  {
-   "label": "Concentric Energy Advisors — summary of the FERC proceeding on co-located large loads (EL25-49-000)",
-   "url": "https://ceadvisors.com/summary-of-ferc-order-instituting-proceeding-on-co-located-large-loads-at-generating-facilities-docket-no-el25-49-000-et-al/",
-   "date": "2025-02-25"
-  },
-  {
-   "label": "Data Center Frontier — Talen continues the behind-the-meter fight for the AWS campus",
-   "url": "https://www.datacenterfrontier.com/energy/article/55264293/talen-energy-continues-behind-the-meter-power-fight-for-aws-data-center-campus",
-   "date": "2025-02-12"
-  },
-  {
-   "label": "Talen Energy — Brandon Shores and H.A. Wagner RMR settlement (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025002644/a20250127pressreleasermrse.htm",
-   "date": "2025-01-27"
-  },
-  {
-   "label": "Power Engineering — two fossil-fired plants get a life extension as part of a PJM agreement",
-   "url": "https://www.power-eng.com/coal/two-fossil-fired-plants-get-a-life-extension-as-part-of-pjm-agreement/",
-   "date": "2025-01-28"
-  },
-  {
-   "label": "Talen Energy — negotiated share repurchase from Rubric Capital (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024049981/a20241205pressreleaseshare.htm",
-   "date": "2024-12-05"
-  },
-  {
-   "label": "RTO Insider — FERC rejects expansion of the co-located data centre at Susquehanna",
-   "url": "https://www.rtoinsider.com/91053-ferc-rejects-expansion-co-located-data-center/",
-   "date": "2024-11-03"
-  },
-  {
-   "label": "Talen Energy — statement on the FERC order rejecting the Susquehanna ISA (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024044828/a20241103pressreleaseferco.htm",
-   "date": "2024-11-03"
-  },
-  {
-   "label": "POWER Magazine — FERC blocks PJM proposal to expand Amazon data-centre load at Susquehanna",
-   "url": "https://www.powermag.com/ferc-blocks-pjm-proposal-to-expand-amazon-data-center-load-at-susquehanna-nuclear-plant/",
-   "date": "2024-11-02"
-  },
-  {
-   "label": "FERC — order rejecting amendments to the Susquehanna interconnection service agreement, 189 FERC para. 61,078 (ER24-2172)",
-   "url": "https://www.ferc.gov/sites/default/files/2024-11/20241101-3061_ER24-2172-000.pdf",
-   "date": "2024-11-01"
-  },
-  {
-   "label": "GlobeNewswire — Talen Energy purchases TeraWulf's minority share in Nautilus Cryptomine",
-   "url": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html",
-   "date": "2024-10-03"
-  },
-  {
-   "label": "Talen Energy — Cumulus escrow release on milestones to 960 MW (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024038388/a20240826pressreleasecumul.htm",
-   "date": "2024-08-26"
-  },
-  {
-   "label": "Talen Energy — FERC staff deficiency letter and technical conference on co-located load (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024034491/a20240802pressreleaseferci.htm",
-   "date": "2024-08-02"
-  },
-  {
-   "label": "Talen Energy — PJM 2025/2026 capacity auction results (Form 8-K Exhibit 99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024033572/a20240731pressreleasepjm25.htm",
-   "date": "2024-07-31"
-  },
-  {
-   "label": "POWER Magazine — CPS Energy to acquire Talen's 1.7 GW Texas gas fleet for $785 million",
-   "url": "https://www.powermag.com/cps-energy-to-acquire-talens-1-7-gw-gas-power-fleet-in-texas-for-785m/",
-   "date": "2024-03-19"
-  },
-  {
-   "label": "Talen Energy — generation portfolio",
-   "url": "https://www.talenenergy.com/our-portfolio/"
-  },
-  {
-   "label": "Talen Energy — about us",
-   "url": "https://www.talenenergy.com/about-us/"
-  },
-  {
-   "label": "Talen Energy — our leadership",
-   "url": "https://www.talenenergy.com/our-leadership/"
-  },
-  {
-   "label": "Talen Energy — powering data",
-   "url": "https://www.talenenergy.com/powering-data/"
-  },
-  {
-   "label": "Susquehanna Nuclear — plant site",
-   "url": "https://susquehannanuclear.com/"
-  },
-  {
-   "label": "NRC — Susquehanna Unit 1 reactor information",
-   "url": "https://www.nrc.gov/info-finder/reactors/susq1.html"
-  },
-  {
-   "label": "NRC — Susquehanna Unit 1 power uprate record",
-   "url": "https://www.nrc.gov/reactors/operating/licensing/power-uprates/bwr-stretch/susquehanna-unit-1"
-  },
-  {
-   "label": "MarketBeat — TLN earnings history and consensus",
-   "url": "https://www.marketbeat.com/stocks/NASDAQ/TLN/earnings/"
-  },
-  {
-   "label": "MarketBeat — TLN analyst price targets",
-   "url": "https://www.marketbeat.com/stocks/NASDAQ/TLN/price-target/"
-  },
-  {
-   "label": "StockAnalysis — TLN overview and analyst forecasts",
-   "url": "https://stockanalysis.com/stocks/tln/"
-  },
-  {
-   "label": "TipRanks — TLN earnings calendar",
-   "url": "https://www.tipranks.com/stocks/tln/earnings"
-  },
-  {
-   "label": "Public Justice — coal ash citizen suit concerning Brunner Island, York Haven, Pennsylvania",
-   "url": "https://www.publicjustice.net/toxic-coal-ash-york-haven-pennsylvania-lawsuit/"
-  }
- ],
- "lastUpdated": "2026-09-05",
- "profileVersion": 1
+  ],
+  "relationships": [
+    {
+      "slug": "amazon",
+      "type": "customer",
+      "status": "active",
+      "since": "2024-03",
+      "scale": "up to 1,920 MW through 2042",
+      "via": "Susquehanna nuclear output",
+      "note": "Amazon bought Talen's Cumulus data-centre campus in March 2024 and buys Susquehanna output under a power purchase agreement expanded in June 2025.",
+      "context": "The relationship has two halves. In March 2024 Amazon Web Services purchased substantially all the assets of the Cumulus data campus for $650 million gross, $300 million of which sat in escrow until August 2024 pending milestones allowing development to 960 MW of consumption; Talen recorded a $324 million gain. Alongside the sale it entered an initial power purchase agreement with minimum commitments stepping up in 120 MW increments.\n\nThe second half is the restructuring. FERC rejected the amended interconnection service agreement that would have let Susquehanna divert up to 480 MW to co-located load. In June 2025 the two companies signed an amended agreement moving to a front-of-the-meter arrangement: Susquehanna sells into PJM, Talen acts as Amazon's licensed Pennsylvania retail electric generation supplier, and PPL Electric Utilities handles transmission and delivery. At full contract quantity Talen supplies 1,920 MW through 2042 with extension options, ramping to full volume no later than 2032. Talen's 10-Q states the transition occurred in April 2026. Amazon Energy LLC is also a named intervenor in the FERC docket, and the two companies co-sponsored a joint proposal in PJM's Critical Issue Fast Path stakeholder process.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm"
+    },
+    {
+      "slug": "terawulf",
+      "type": "partner",
+      "status": "historical",
+      "since": "2021",
+      "scale": "$85 million buyout of a 25% stake",
+      "via": "Nautilus Cryptomine",
+      "note": "Former joint-venture partner in the Nautilus bitcoin-mining facility adjacent to Susquehanna; Talen bought TeraWulf out in October 2024 and the facility was wound down in 2025.",
+      "context": "Nautilus Cryptomine in Berwick, Pennsylvania was a joint venture between Talen and TeraWulf, powered from Susquehanna at a reported 2 cents per kWh. On 3 October 2024 Talen purchased TeraWulf's minority share for $85 million in cash plus selected physical assets, taking full ownership; TeraWulf's own dossier records the exit at roughly 3.4 times invested capital, used to fund its first high-performance-computing buildings.\n\nThe facility did not survive the Amazon restructuring. Talen agreed in June 2025 to cease use of it, and in September 2025 the lease, submetering and supply agreements were terminated and Amazon took possession of the existing structures, producing a net gain of $8 million. Talen had earlier repurchased the Cumulus Digital and Nautilus non-controlling interests for $125 million.",
+      "source": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html"
+    },
+    {
+      "slug": "vistra",
+      "type": "competitor",
+      "status": "active",
+      "scale": "13.9 GW vs 13.1 GW of PJM capacity",
+      "note": "The next-largest PJM capacity owner above Talen, and a co-party on the same side of the co-location argument at FERC.",
+      "context": "PJM's Independent Market Monitor, reported by Utility Dive in April 2026, ranks the region's capacity owners as Dominion 21.9 GW, Constellation 20.3 GW, Vistra 13.9 GW and Talen approximately 13.1 GW — Vistra sits immediately above Talen. The two are also on the same side of the regulatory argument: Vistra filed jointly with Constellation in the Susquehanna docket in July 2024 supporting the arrangement, and both protested PJM's February 2026 co-location compliance filing.\n\nJefferies, quoted by Utility Dive in August 2026, groups 'independent power producers like Talen Energy, Vistra and PSEG Power' as the class affected by Pennsylvania's data-centre executive order. The businesses differ in one structural way that matters: Vistra owns a five-million-customer retail book that hedges its generation, and Talen does not.",
+      "source": "https://www.utilitydive.com/news/talen-energy-capital-power-pjm-ferc/816451/"
+    },
+    {
+      "slug": "constellation-energy",
+      "type": "competitor",
+      "status": "active",
+      "scale": "20.3 GW vs 13.1 GW of PJM capacity",
+      "note": "The largest competitive nuclear owner in PJM, ranked second to Talen's fourth by the market monitor, and a co-filer with Talen in PJM's fast-path stakeholder process.",
+      "context": "Constellation intervened in the Susquehanna docket and filed jointly with Vistra in July 2024 in support of the co-located arrangement, then filed its own complaint alleging PJM's tariff was unjust and unreasonable because it was silent on fully isolated co-located load — the complaint that produced FERC's December 2025 order.\n\nThe two companies were also on the same side inside PJM's Critical Issue Fast Path process: Talen's 10-K records that it 'submitted a joint proposal amongst itself, Constellation, Calpine, Amazon, Microsoft, and Google' on large-load additions, and that neither that proposal nor any other received broad stakeholder support. Commercially they compete for the same nuclear-backed hyperscaler contracts, Constellation with Microsoft and Meta and Talen with Amazon.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
+    },
+    {
+      "slug": "microsoft",
+      "type": "other",
+      "status": "historical",
+      "since": "2025",
+      "note": "Co-signatory with Talen on a joint proposal in PJM's Critical Issue Fast Path process on large-load additions; not a commercial counterparty.",
+      "context": "Talen's FY2025 Form 10-K states that in the accelerated PJM stakeholder process begun in August 2025, 'the Company was an active participant in the CIFP process and submitted a joint proposal amongst itself, Constellation, Calpine, Amazon, Microsoft, and Google representing the group's collective views on the best approach to large load additions', and that neither that proposal nor any other received broad stakeholder support during voting.\n\nThis is a regulatory alignment, not a contract. No source states any commercial relationship between Talen and Microsoft; Microsoft's named nuclear counterparty is Constellation, at Three Mile Island.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
+    },
+    {
+      "slug": "google",
+      "type": "other",
+      "status": "historical",
+      "since": "2025",
+      "note": "Co-signatory with Talen on the same joint PJM fast-path proposal on large-load additions; not a commercial counterparty.",
+      "context": "The same 10-K passage names Google alongside Constellation, Calpine, Amazon and Microsoft as co-sponsors of the joint proposal Talen submitted in PJM's Critical Issue Fast Path process on how large loads should be added to the system.\n\nNo source states any commercial relationship between Talen and Google. It is recorded here because the coalition itself is informative: generators and hyperscalers filed together against a stakeholder body that then rejected every proposal, which is why the question went back to FERC.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
+    },
+    {
+      "slug": "aep",
+      "type": "other",
+      "status": "historical",
+      "since": "2024",
+      "note": "Co-protestant with Exelon against the Susquehanna amended interconnection service agreement at FERC.",
+      "context": "The FERC order rejecting the amended interconnection service agreement records that Exelon Corporation and American Electric Power filed the timely protest against it. Their argument, as reported by POWER Magazine, was that the arrangement would let a large load avoid the transmission charges that grid-connected load pays.\n\nThe adjacency is now commercial as well as adversarial: three of the four plants Talen acquired in June 2026 — Lawrenceburg, Waterford and Darby — sit in the AEP zone of PJM, as does Guernsey.",
+      "source": "https://www.ferc.gov/sites/default/files/2024-11/20241101-3061_ER24-2172-000.pdf"
+    },
+    {
+      "slug": "x-energy",
+      "type": "partner",
+      "status": "announced",
+      "since": "2026-03",
+      "scale": "three or more four-unit Xe-100 plants (non-binding LOI)",
+      "note": "Non-binding letter of intent (March 2026) to assess three or more four-unit Xe-100 plants in Pennsylvania and PJM; Amazon — Talen's Susquehanna counterparty and X-energy's largest shareholder — is not a party.",
+      "context": "World Nuclear News (20 March 2026) reported the LOI; X-energy's own release frames the evaluation around 'onshoring of manufacturing, data centers, and electrification' and its prospectus calls the LOI non-binding (X-energy dossier, this corpus). Recorded as `announced`: no definitive agreement, site or schedule exists.",
+      "source": "https://www.world-nuclear-news.org/articles/x-energy-talen-to-assess-deployment-of-multiple-smr-plants"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "FERC co-located load and large-load interconnection (dockets ER24-2172, EL25-49, EL26-67)",
+      "status": "in-effect",
+      "effectiveDate": "2025-12-18",
+      "exposure": "Talen is the origin case. FERC rejected the amended Susquehanna interconnection service agreement on 1 November 2024 in docket ER24-2172, then consolidated the wider question into a section 206 proceeding, and on 18 December 2025 found PJM's tariff unjust and unreasonable as to the interconnection of co-located loads, directing three new transmission services. PJM filed compliance language on 23 February 2026 and FERC issued further guidance on 16 April 2026. In June 2026 FERC issued tailored show-cause orders to every RTO, PJM's under docket EL26-67-000, covering the interconnection process, cost allocation, transmission services for flexible large loads, behind-the-meter generation and co-located loads, and the study of generation serving electrically proximate load. The rulebook that will govern every future Talen co-location is still being written.",
+      "mitigation": "Talen restructured the Amazon arrangement front-of-the-meter in June 2025 so that it needs no FERC approval, dismissed its appeal in January 2026, and states the matter is closed. It participates directly in the proceedings and co-filed a joint proposal with Constellation, Calpine, Amazon, Microsoft and Google in PJM's fast-path process.",
+      "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+    },
+    {
+      "regime": "Nuclear production tax credit (section 45U)",
+      "status": "in-effect",
+      "effectiveDate": "2024-01-01",
+      "exposure": "Susquehanna output sold to third parties from 31 December 2023 through 31 December 2032 is eligible. The credit begins when annual gross receipts fall below an equivalent $44.60/MWh and rises to $3/MWh at $26/MWh, with a five-times increase to as much as $15/MWh for meeting prevailing-wage requirements, which Talen expects to meet. Talen recognised $220 million of credit revenue in FY2024 and none in FY2025, because market prices exceeded the recognition threshold. In September 2025 it sold credits with a carrying value of $202 million for $191 million in cash.",
+      "mitigation": "Talen treats the credit as a downside backstop rather than an earnings stream, and says the Amazon contract 'will significantly decrease Talen's market risk and minimize its reliance on the Federal nuclear production tax credit'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
+    },
+    {
+      "regime": "EPA mercury and air toxics standards and greenhouse-gas rules for existing units",
+      "status": "in-effect",
+      "effectiveDate": "2024-05",
+      "exposure": "The binding exposure is Colstrip. The 10-K states Colstrip was not expected to meet the 2024 particulate-matter standard without substantial control upgrades, and that if existing coal units run beyond 2031 the greenhouse-gas guidelines require reductions such as carbon capture by the end of 2031 — leaving the co-owners a choice between cost-prohibitive controls and retirement. EPA repealed the tighter particulate standards in February 2026 and proposed in June 2025 to repeal the greenhouse-gas standards outright, but both actions are in litigation. Talen says it is possible it will have to decide Colstrip's future before it has clarity.",
+      "mitigation": "Talen applied for and in April 2025 was granted a two-year presidential compliance exemption under Clean Air Act section 112(i)(4) for Colstrip, and has intervened to defend it in both the D.C. Circuit and the district court.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
+    },
+    {
+      "regime": "EPA effluent limitations guidelines and coal combustion residuals rules",
+      "status": "in-effect",
+      "effectiveDate": "2020",
+      "exposure": "Talen elected the 2020 effluent-guidelines option that exempts a plant from certain wastewater standards if it commits to cease coal-fired generation by the end of 2028 — which is why Brunner Island's coal cessation date is a regulatory commitment, not a market judgment. Asset retirement obligations and accrued environmental costs stood at $497 million at 30 June 2026, the majority relating to ash impoundments at Colstrip, Brunner Island and Montour, with a significant portion of the Colstrip and Brunner Island obligations expected to settle through 2030. The Center for Biological Diversity filed a citizen suit in April 2025 alleging groundwater monitoring failures at Brunner Island's Ash Basin 5.",
+      "mitigation": "Talen has surety bonds of $221 million outstanding at 30 June 2026, of which $103 million is posted to the Montana Department of Environmental Quality for Colstrip ash obligations, and withdrew its extension request for an unlined Montour impoundment after beginning closure.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
+    },
+    {
+      "regime": "Pennsylvania data-centre executive order and RGGI withdrawal",
+      "status": "in-effect",
+      "effectiveDate": "2026-08-19",
+      "exposure": "The August 2026 executive order gives data-centre projects above 25 MW preferential permitting only if they commit to source electricity from new power supplies in their local PJM zone, meet firm clean-energy requirements ramping to 32 percent by 2035, and pay all costs their interconnection causes. Separately, Pennsylvania's November 2025 budget required withdrawal from the Regional Greenhouse Gas Initiative and the state Supreme Court dismissed the appeal on 6 January 2026, removing a carbon cost Talen's fossil fleet had faced.",
+      "mitigation": "Talen's existing Amazon contract is judged by Jefferies to be safe under the order; the company has not stated a response for its remaining Pennsylvania development pipeline.",
+      "source": "https://www.utilitydive.com/news/pennsylvania-executive-order-data-centers/828261/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Mark A. \"Mac\" McFarland",
+      "title": "Chief Executive Officer and Director",
+      "photo": "images/execs/talen-energy-mcfarland.webp",
+      "background": [
+        "Chief Executive Officer and Director — Talen Energy (May 2023-); also President May 2023 to December 2025",
+        "President, Chief Executive Officer and Director — California Resources Corporation (2020-2023); remains a director and chairs Carbon TerraVault",
+        "Executive Chairman — GenOn Energy; President and CEO April 2017 to December 2018, board member to September 2022",
+        "Chief Executive Officer — Luminant Holding Company (2013-2016), a subsidiary of Energy Future Holdings",
+        "Chief Commercial Officer — Energy Future Holdings (2008-2013)"
+      ]
+    },
+    {
+      "name": "Terry L. Nutt",
+      "title": "President",
+      "photo": "images/execs/talen-energy-nutt.webp",
+      "background": [
+        "President — Talen Energy (December 2025-)",
+        "Chief Financial Officer — Talen Energy (July 2023 to December 2025), leading finance, M&A, risk management and treasury",
+        "Chief Financial Officer — Just Energy",
+        "Chief Financial Officer and Managing Director — EDF Trading North America (2018-2023)",
+        "Senior finance roles including SVP and Controller and SVP of Risk Management — Vistra Corporation and predecessors; earlier at Dynegy",
+        "M.S. Accounting and B.B.A. summa cum laude, Texas A&M University"
+      ]
+    },
+    {
+      "name": "Cole Muller",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/talen-energy-muller.jpg",
+      "background": [
+        "Chief Financial Officer — Talen Energy (December 2025-), covering accounting, treasury, risk, planning, investor relations, tax and internal audit",
+        "EVP, Strategic Ventures — Talen Energy (2023-2025), leading the Cumulus data-centre, digital, renewables and battery businesses and the data-centre contracting strategy",
+        "SVP, Cumulus Growth — Talen Energy (2021-2023); earlier led Talen's roughly 8 GW PJM fossil business unit",
+        "Associate Partner — McKinsey & Company; joined Talen in 2018",
+        "Submarine officer — United States Navy; B.S. Mathematics, U.S. Naval Academy; MBA Wharton; JD University of Pennsylvania"
+      ]
+    },
+    {
+      "name": "Brad L. Berryman",
+      "title": "Chief Operating Officer",
+      "photo": "images/execs/talen-energy-berryman.jpg",
+      "background": [
+        "Chief Operating Officer — Talen Energy (December 2025-), responsible for the generation fleet in the Mid-Atlantic and Ohio",
+        "Senior Vice President and Chief Nuclear Officer — Talen Energy"
+      ]
+    },
+    {
+      "name": "Chris E. Morice",
+      "title": "Chief Commercial Officer",
+      "photo": "images/execs/talen-energy-morice.jpg",
+      "background": [
+        "Chief Commercial Officer — Talen Energy (2023-), responsible for hedging and trading across all commodities and for commercial origination",
+        "Oversees wholesale trading and fleet optimisation"
+      ]
+    },
+    {
+      "name": "Darren J. Olagues",
+      "title": "Chief Development Officer",
+      "photo": "images/execs/talen-energy-olagues.jpg",
+      "background": [
+        "Chief Development Officer — Talen Energy, leading corporate strategy and development",
+        "Remit expanded in December 2025 to oversee data-centre commercial strategies alongside corporate strategy and M&A"
+      ]
+    },
+    {
+      "name": "Dale E. Lebsack",
+      "title": "Chief Asset Development Officer",
+      "photo": "images/execs/talen-energy-lebsack.jpg",
+      "background": [
+        "Chief Asset Development Officer — Talen Energy (role created December 2025)",
+        "Responsible for assessing, designing and constructing new generation assets and for developing sites for new generation and large-load interconnections"
+      ]
+    },
+    {
+      "name": "Edward T. Casulli",
+      "title": "Senior Vice President and Chief Nuclear Officer",
+      "photo": "images/execs/talen-energy-casulli.jpg",
+      "background": [
+        "Senior Vice President and Chief Nuclear Officer — Talen Energy (December 2025-)",
+        "Site Vice President — Susquehanna Steam Electric Station",
+        "Roughly 30 years in nuclear operations, largely at PSEG's Hope Creek station, rising from Operations Shift Supervisor to Vice President",
+        "B.S. Electrical Engineering, U.S. Naval Academy; Naval Nuclear Propulsion Program, lieutenant; Executive M.S. Management of Technology, University of Pennsylvania"
+      ]
+    },
+    {
+      "name": "Andrew M. \"Andy\" Wright",
+      "title": "Chief Administrative Officer",
+      "photo": "images/execs/talen-energy-wright.jpg",
+      "background": [
+        "Chief Administrative Officer — Talen Energy (June 2023-), the company's first, covering human resources, information technology and corporate security",
+        "General Counsel and Corporate Secretary — Talen Energy"
+      ]
+    },
+    {
+      "name": "Dan Kelly",
+      "title": "General Counsel and Corporate Secretary",
+      "photo": "images/execs/talen-energy-kelly.jpg",
+      "background": [
+        "General Counsel and Corporate Secretary — Talen Energy (May 2026-), leading legal, regulatory and external affairs and corporate governance",
+        "Senior Vice President and Deputy General Counsel — Vistra Corp. and predecessor Energy Future Holdings, overseeing litigation, environmental, nuclear, labour and commercial regulatory compliance",
+        "Attorney — Vinson & Elkins LLP, Dallas",
+        "Judicial clerk to Chief Judge A. Joe Fish (N.D. Tex.) and Circuit Judge Pasco M. Bowman (8th Cir.); legislative assistant to a U.S. Senator",
+        "JD cum laude, University of Michigan Law School; B.A. Philosophy, Lawrence University"
+      ]
+    },
+    {
+      "name": "Stephen Schaefer",
+      "title": "Chairman of the Board (independent)",
+      "background": [
+        "Chairman — Talen Energy (May 2023-); chairs the Nominating and Governance Committee",
+        "Director — GenOn Holdings (2018-, formerly Chairman) and Golar LNG (August 2025-)",
+        "Partner — Riverstone Holdings (2004-2015), responsible for conventional power and renewable energy investments and a member of two investment committees",
+        "Active in deregulated gas and power markets since 1993; former Audit Chair at Just Energy Group and Chairman of TexGen Power"
+      ]
+    },
+    {
+      "name": "Joseph Nigro",
+      "title": "Independent Director; Chair, Risk Oversight Committee",
+      "background": [
+        "Senior adviser — Blackstone's energy transition group, and director of Kindle Energy (July 2023-)",
+        "Chairman — Eos Energy Enterprises (December 2025-); director since March 2025",
+        "Chief Financial Officer — Exelon (2018-2022), member of the executive committee and chair of the corporate investment committee",
+        "Chief Executive Officer — Constellation Energy (2013-2018); earlier SVP Portfolio Management and Strategy, Exelon Power Team"
+      ]
+    },
+    {
+      "name": "Karen Hyde",
+      "title": "Independent Director; Chair, Audit Committee",
+      "background": [
+        "Senior Vice President, Chief Compliance and Ethics Officer, Chief Audit Executive and Chief Risk Officer — Xcel Energy, to her 2022 retirement after 30 years",
+        "Roughly a decade negotiating structured power purchase arrangements, including Xcel Energy's first renewable energy contracts",
+        "Lead nuclear engineer — U.S. Department of Defense, responsible for overhauling submarine reactors",
+        "M.S. Mineral Economics, Colorado School of Mines; B.S. Metallurgical Engineering, Lafayette College"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "RTO Insider — Talen Energy coverage index (RMR extension approved through 2031, 24 August 2026)",
+      "url": "https://www.rtoinsider.com/tag/talen-energy/"
+    },
+    {
+      "label": "Utility Dive — Pennsylvania executive order on data centres; Jefferies on IPPs selling existing generation",
+      "url": "https://www.utilitydive.com/news/pennsylvania-executive-order-data-centers/828261/",
+      "date": "2026-08-21"
+    },
+    {
+      "label": "WMAR-2 News — FERC extends operation of Brandon Shores and Wagner past retirement dates",
+      "url": "https://www.wmar2news.com/local/federal-commission-extends-operation-of-brandon-shores-wagner-power-plants-past-retirement-dates",
+      "date": "2026-08-24"
+    },
+    {
+      "label": "Talen Energy — Q2 2026 results release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000065/a20260805q22026earningsrel.htm",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Talen Energy — Form 10-Q for the quarter ended 30 June 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000066/tln-20260630.htm",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "TradingView / Zacks — TLN Q2 earnings call emphasises cash flow and data-centre strategy",
+      "url": "https://www.tradingview.com/news/zacks:07b55190e094b:0-tln-q2-earnings-call-emphasizes-cash-flow-and-data-center-strategy/",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Investing.com — Talen Energy Q2 2026 earnings call transcript",
+      "url": "https://ca.investing.com/news/transcripts/earnings-call-transcript-talen-energy-lifts-2026-outlook-in-q2-2026-93CH-4779438",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "TradingView / Zacks — Talen Energy set to report Q2 earnings (pre-print consensus)",
+      "url": "https://www.tradingview.com/news/zacks:a1b021aeb094b:0-talen-energy-set-to-report-q2-earnings-what-s-in-store-for-the-stock/",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Talen Energy — PJM 2028/2029 capacity auction results (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000058/a20260714pressreleasepjm20.htm",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "PJM — 2028/2029 Base Residual Auction procures 138,318 MW of generation resources",
+      "url": "https://www.pjm.com/-/media/DotCom/about-pjm/newsroom/2026-releases/20260714-pjm-capacity-auction-procures-138318-mw-of-generation-resources.pdf",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "McGuireWoods — FERC issues section 206 show-cause orders to all six RTOs on large-load rules",
+      "url": "https://www.mcguirewoods.com/client-resources/alerts/2026/6/ferc-issues-section-206-show-cause-orders-directing-all-six-rtos-isos-to-justify-or-reform-large-load-integration-rules/",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "Talen Energy — Cornerstone acquisition completed (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/a20260615pressreleasetalen.htm",
+      "date": "2026-06-15"
+    },
+    {
+      "label": "Talen Energy — Amendment No. 6 to the Credit Agreement (Form 8-K)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000042/tln-20260520.htm",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Talen Energy — Q1 2026 results release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000035/a20260505q12026earningsrel.htm",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "Van Ness Feldman — FERC provides further guidance on co-located load interconnection",
+      "url": "https://www.vnf.com/ferc-provides-further-guidance-on-co-located-load-interconnection",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "Talen Energy — pricing of $4.0 billion of senior unsecured notes (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000030/a20260417pressreleaseprici.htm",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "Utility Dive — PJM market monitor ranks Talen fourth-largest PJM capacity owner at ~13.1 GW",
+      "url": "https://www.utilitydive.com/news/talen-energy-capital-power-pjm-ferc/816451/",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "Utility Dive — Vistra, Constellation and others protest PJM's co-location compliance filing",
+      "url": "https://www.utilitydive.com/news/pjm-data-center-colocation-ferc-vistra-constellation/815941/",
+      "date": "2026-03-27"
+    },
+    {
+      "label": "World Nuclear News — X-energy and Talen to assess deployment of multiple SMR plants",
+      "url": "https://www.world-nuclear-news.org/articles/x-energy-talen-to-assess-deployment-of-multiple-smr-plants",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "Talen Energy — 2026 proxy statement (DEF 14A)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000023/tln-20260319.htm",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "Talen Energy — Form 10-K for the year ended 31 December 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Talen Energy — FY2025 results release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000014/a20260226q42025earningsrel.htm",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "GlobeNewswire — Talen Energy reports fourth quarter and full year 2025 results",
+      "url": "https://www.globenewswire.com/news-release/2026/02/26/3246096/0/en/Talen-Energy-Reports-Fourth-Quarter-and-Full-Year-2025-Results.html",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Investing.com — Talen Energy Q4 2025 earnings call transcript",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-talen-energy-q4-2025-sees-strong-financial-results-93CH-4530120",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Utility Dive — Talen to buy 2.6 GW of gas plants in PJM for $3.5 billion",
+      "url": "https://www.utilitydive.com/news/talen-in-deal-to-buy-26-gw-of-gas-plants-in-pjm-for-35b/809826/",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "Talen Energy — Cornerstone acquisition announcement (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000004/a20260115pressreleasetalen.htm",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "Talen Energy — Cornerstone investor call presentation (Form 8-K Exhibit 99.2)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000004/a20260115investorcallpre.htm",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "Utility Dive — FERC orders PJM to write co-location rules; tariff unjust and unreasonable",
+      "url": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "Baker Botts — FERC issues order providing guidance for co-locating power plants with data centres in PJM",
+      "url": "https://www.bakerbotts.com/thought-leadership/publications/2025/december/ferc-issues-order-providing-guidance-for-co-locating-power-plants-with-data-centers-within-pjm",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Talen Energy — PJM 2027/2028 capacity auction results (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000045/ex99120251217pressreleasep.htm",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "PJM — 2027/2028 Base Residual Auction report",
+      "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2027-2028/2027-2028-bra-report.pdf",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "Talen Energy — executive leadership realignment (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000041/ex99120251215pressreleasee.htm",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "GlobeNewswire — Talen receives regulatory clearance for the Freedom and Guernsey acquisitions",
+      "url": "https://www.globenewswire.com/news-release/2025/11/18/3189980/0/en/talen-energy-receives-regulatory-clearance-for-freedom-and-guernsey-acquisitions.html",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "Talen Energy — Q3 2025 results release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000031/a20251105q32025earningsrel.htm",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "Talen Energy — notes pricing release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000021/ex99120251010pressreleases.htm",
+      "date": "2025-10-10"
+    },
+    {
+      "label": "Talen Energy — notes offering launch (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000018/ex99120251009pressreleases.htm",
+      "date": "2025-10-09"
+    },
+    {
+      "label": "Talen Energy — incremental term loan and facility upsizing (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000013/ex99120251006pressreleaset.htm",
+      "date": "2025-10-06"
+    },
+    {
+      "label": "PJM Independent Market Monitor — comments in dockets EC25-121 and EC25-125",
+      "url": "https://www.monitoringanalytics.com/filings/2025/IMM_Comments_Docket_Nos_EC25-121_EC25-125_20250915.pdf",
+      "date": "2025-09-15"
+    },
+    {
+      "label": "Talen Energy — September 2025 investor update (Form 8-K Exhibit 99.2)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000010/investorupdate090925_vf.htm",
+      "date": "2025-09-09"
+    },
+    {
+      "label": "Talen Energy — Q2 2025 results release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025038538/a20250807q22025earningsrel.htm",
+      "date": "2025-08-07"
+    },
+    {
+      "label": "PJM — 2026/2027 Base Residual Auction report",
+      "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2026-2027/2026-2027-bra-report.pdf",
+      "date": "2025-07-22"
+    },
+    {
+      "label": "Talen Energy — PJM 2026/2027 capacity auction results (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025035577/a20250722pressreleasepjm20.htm",
+      "date": "2025-07-22"
+    },
+    {
+      "label": "Talen Energy — agreements to acquire Freedom and Guernsey (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025035201/a20250717pressreleasetalen.htm",
+      "date": "2025-07-17"
+    },
+    {
+      "label": "American Public Power Association — Talen unveils agreements to buy power plants in Pennsylvania and Ohio",
+      "url": "https://www.publicpower.org/periodical/article/talen-energy-unveils-agreements-buy-power-plants-pennsylvania-ohio",
+      "date": "2025-07-18"
+    },
+    {
+      "label": "POWER Magazine — Talen and Amazon launch an $18 billion nuclear PPA: a grid-connected IPP model",
+      "url": "https://www.powermag.com/talen-amazon-launch-18b-nuclear-ppa-a-grid-connected-ipp-model-for-the-data-center-era/",
+      "date": "2025-06-12"
+    },
+    {
+      "label": "Talen Energy — expanded Amazon nuclear relationship (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "Utility Dive — Talen and AWS restructure the Susquehanna arrangement front-of-the-meter",
+      "url": "https://www.utilitydive.com/news/talen-amazon-aws-susquehanna-nuclear-data-centert/750440/",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "EnergyChoiceMatters — Talen's Pennsylvania electric generation supplier licence and the AWS retail structure",
+      "url": "http://www.energychoicematters.com/stories/20250611b.html",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "Certrec — Where is the largest nuclear power plant in the US? Top 20 for 2025 (NERC data)",
+      "url": "https://www.certrec.com/blog/where-is-the-biggest-nuclear-power-plant-in-the-us-top-20-list-for-2025/",
+      "date": "2025-06-02"
+    },
+    {
+      "label": "Talen Energy — Q1 2025 results release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025023450/a20250508q12025earningsrel.htm",
+      "date": "2025-05-08"
+    },
+    {
+      "label": "Bay Journal — closure of Maryland's last coal power plant may be pushed to 2029",
+      "url": "https://www.bayjournal.com/news/climate_change/closure-of-maryland-s-last-coal-power-plant-may-be-pushed-to-2029/article_636695cd-be67-481d-8595-b776f5e7f745.html",
+      "date": "2025-04-22"
+    },
+    {
+      "label": "American Nuclear Society — FERC denies the Talen-Amazon agreement again",
+      "url": "https://www.ans.org/news/2025-04-16/article-6937/ferc-denies-talen-amazon-agreementagain/",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "Talen Energy — Form 10-K for the year ended 31 December 2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025008786/tln-20241231.htm",
+      "date": "2025-02-28"
+    },
+    {
+      "label": "GlobeNewswire — Talen Energy reports full year 2024 results and exceeds 2024 guidance",
+      "url": "https://www.globenewswire.com/news-release/2025/02/27/3034317/0/en/Talen-Energy-Reports-Full-Year-2024-Results-Exceeds-2024-Guidance-and-Reaffirms-2025-Guidance.html",
+      "date": "2025-02-27"
+    },
+    {
+      "label": "Talen Energy — FY2024 results release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025008641/a20250227q42024earningsrel.htm",
+      "date": "2025-02-27"
+    },
+    {
+      "label": "Concentric Energy Advisors — summary of the FERC proceeding on co-located large loads (EL25-49-000)",
+      "url": "https://ceadvisors.com/summary-of-ferc-order-instituting-proceeding-on-co-located-large-loads-at-generating-facilities-docket-no-el25-49-000-et-al/",
+      "date": "2025-02-25"
+    },
+    {
+      "label": "Data Center Frontier — Talen continues the behind-the-meter fight for the AWS campus",
+      "url": "https://www.datacenterfrontier.com/energy/article/55264293/talen-energy-continues-behind-the-meter-power-fight-for-aws-data-center-campus",
+      "date": "2025-02-12"
+    },
+    {
+      "label": "Talen Energy — Brandon Shores and H.A. Wagner RMR settlement (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025002644/a20250127pressreleasermrse.htm",
+      "date": "2025-01-27"
+    },
+    {
+      "label": "Power Engineering — two fossil-fired plants get a life extension as part of a PJM agreement",
+      "url": "https://www.power-eng.com/coal/two-fossil-fired-plants-get-a-life-extension-as-part-of-pjm-agreement/",
+      "date": "2025-01-28"
+    },
+    {
+      "label": "Talen Energy — negotiated share repurchase from Rubric Capital (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024049981/a20241205pressreleaseshare.htm",
+      "date": "2024-12-05"
+    },
+    {
+      "label": "RTO Insider — FERC rejects expansion of the co-located data centre at Susquehanna",
+      "url": "https://www.rtoinsider.com/91053-ferc-rejects-expansion-co-located-data-center/",
+      "date": "2024-11-03"
+    },
+    {
+      "label": "Talen Energy — statement on the FERC order rejecting the Susquehanna ISA (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024044828/a20241103pressreleaseferco.htm",
+      "date": "2024-11-03"
+    },
+    {
+      "label": "POWER Magazine — FERC blocks PJM proposal to expand Amazon data-centre load at Susquehanna",
+      "url": "https://www.powermag.com/ferc-blocks-pjm-proposal-to-expand-amazon-data-center-load-at-susquehanna-nuclear-plant/",
+      "date": "2024-11-02"
+    },
+    {
+      "label": "FERC — order rejecting amendments to the Susquehanna interconnection service agreement, 189 FERC para. 61,078 (ER24-2172)",
+      "url": "https://www.ferc.gov/sites/default/files/2024-11/20241101-3061_ER24-2172-000.pdf",
+      "date": "2024-11-01"
+    },
+    {
+      "label": "GlobeNewswire — Talen Energy purchases TeraWulf's minority share in Nautilus Cryptomine",
+      "url": "https://www.globenewswire.com/news-release/2024/10/03/2958010/0/en/Talen-Energy-Purchases-TeraWulf-s-Minority-Share-in-Nautilus-Cryptomine.html",
+      "date": "2024-10-03"
+    },
+    {
+      "label": "Talen Energy — Cumulus escrow release on milestones to 960 MW (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024038388/a20240826pressreleasecumul.htm",
+      "date": "2024-08-26"
+    },
+    {
+      "label": "Talen Energy — FERC staff deficiency letter and technical conference on co-located load (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024034491/a20240802pressreleaseferci.htm",
+      "date": "2024-08-02"
+    },
+    {
+      "label": "Talen Energy — PJM 2025/2026 capacity auction results (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828024033572/a20240731pressreleasepjm25.htm",
+      "date": "2024-07-31"
+    },
+    {
+      "label": "POWER Magazine — CPS Energy to acquire Talen's 1.7 GW Texas gas fleet for $785 million",
+      "url": "https://www.powermag.com/cps-energy-to-acquire-talens-1-7-gw-gas-power-fleet-in-texas-for-785m/",
+      "date": "2024-03-19"
+    },
+    {
+      "label": "Talen Energy — generation portfolio",
+      "url": "https://www.talenenergy.com/our-portfolio/"
+    },
+    {
+      "label": "Talen Energy — about us",
+      "url": "https://www.talenenergy.com/about-us/"
+    },
+    {
+      "label": "Talen Energy — our leadership",
+      "url": "https://www.talenenergy.com/our-leadership/"
+    },
+    {
+      "label": "Talen Energy — powering data",
+      "url": "https://www.talenenergy.com/powering-data/"
+    },
+    {
+      "label": "Susquehanna Nuclear — plant site",
+      "url": "https://susquehannanuclear.com/"
+    },
+    {
+      "label": "NRC — Susquehanna Unit 1 reactor information",
+      "url": "https://www.nrc.gov/info-finder/reactors/susq1.html"
+    },
+    {
+      "label": "NRC — Susquehanna Unit 1 power uprate record",
+      "url": "https://www.nrc.gov/reactors/operating/licensing/power-uprates/bwr-stretch/susquehanna-unit-1"
+    },
+    {
+      "label": "MarketBeat — TLN earnings history and consensus",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/TLN/earnings/"
+    },
+    {
+      "label": "MarketBeat — TLN analyst price targets",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/TLN/price-target/"
+    },
+    {
+      "label": "StockAnalysis — TLN overview and analyst forecasts",
+      "url": "https://stockanalysis.com/stocks/tln/"
+    },
+    {
+      "label": "TipRanks — TLN earnings calendar",
+      "url": "https://www.tipranks.com/stocks/tln/earnings"
+    },
+    {
+      "label": "Public Justice — coal ash citizen suit concerning Brunner Island, York Haven, Pennsylvania",
+      "url": "https://www.publicjustice.net/toxic-coal-ash-york-haven-pennsylvania-lawsuit/"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 2
 }

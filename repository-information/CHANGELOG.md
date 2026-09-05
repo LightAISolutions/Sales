@@ -3,11 +3,83 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.73r] — 2026-09-05 05:51:42 PM EST
+
+> Picking up from my last session, run Phase B session F6 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Fable 5.1 High as a fresh session: MGX, Excelsior Energy Capital, X-energy.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md; PROFILER-COVERAGE-PLAN.md §2, §4 (the B6, B10 and
+> B-L rows plus the "Regrouping" paragraph that defines F6), §7, and the three §8 rows (`mgx`,
+> `excelsior-energy-capital`, `x-energy`); .claude/rules/profiler-app.md (Profiler Command incl. step 5 and
+> step 7, Profiler Prep Command, Scheduled Refreshes, Archival Procedure); repository-information/PROFILER-SCHEMA.md
+> (relationships[], sources[], Source provenance); repository-information/PROFILER-STYLES.md (active style:
+> intel-briefing); repository-information/PROFILER-CROSSREF-CALIBRATION.md → "Relationships checker" incl. the X2
+> adjudication log.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
+> categories per the §8 row: MGX `investor`; Excelsior Energy Capital `investor` · `developer`; X-energy `supplier`)
+> and study guide (schema v2) — then the four after-write scripts (`sync-profiler-registry.py`,
+> `build-profiler-graph.py`, `check-profiler-study.py`, `check-profiler-relationships.py`), a calendar row
+> (all three are private → `cadence: "quarterly"`), README tree entries, and flip the §8 rows. One push commit.
+>
+> SESSION-SPECIFIC:
+>   - F6 is the FIRST session to put data behind the `investor` category. Do a visual check (Playwright) of the
+>     roster chip label, the `.ov-tag` colour and the Compare peer group for MGX and Excelsior — §7 asks for this
+>     explicitly. Report what you saw; fix Profiler.html only if the chip is actually broken (then [PC-HTML-VERSION]
+>     #2 fires and the page changelog gets an entry).
+>   - `relationships[]` will produce the first `investor`-typed edges written by a research pass. The checker's
+>     inverse for `investor` is `portfolio`, which the `type` enum does NOT carry, so any reciprocal pair (e.g. MGX
+>     ↔ OpenAI, MGX ↔ Aligned, Excelsior ↔ Fluence, X-energy ↔ Amazon) will report as reciprocal-type. Do NOT add
+>     `portfolio` to the schema — accept each such pair in profiler-relationships-accepted.json with the reason
+>     written out, exactly as X2 did for amazon/mainspring-energy. Record how many you accepted so the enum
+>     decision has evidence.
+>   - Two writer rules from X2's adjudication log, both of which the checker now enforces mechanically: (1) a
+>     relationship `source` that is a URL must be the EXACT string registered in that dossier's sources[] — never
+>     a clipped prefix; (2) when step 7 reconciliation adds an inbound edge to an OLDER dossier (MGX will land into
+>     the openai / aligned / stargate mentions, X-energy into amazon / energy-northwest / dow-style mentions),
+>     register the cited URL in that older dossier's sources[] in the SAME edit, archive it, and bump its
+>     profileVersion.
+>   - Step 7 discipline as C4 taught: grep the corpus for each display name with word boundaries and case
+>     sensitivity (`\bMGX\b`, `\bExcelsior\b`, `\bX-energy\b` and `\bX-Energy\b`), read every hit, and classify
+>     it — the openai and aligned dossiers in particular already make claims about MGX's money.
+>
+> THE §4 ROW IS A HYPOTHESIS, NOT A BRIEF: the three companies' `Why` cells in the §4 B-group table (B6, B10,
+> B-L) are prompt material. Treat every claim in them as unverified, and record in the §8 rows' Closes/notes
+> what you actually found before you commit — including "premise held" when it did.
+>
+> VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, check-profiler-relationships.py
+> exit 0 (with the investor accepts listed and reasoned), check-profiler-crossrefs.py exit 0 (adjudicate any new
+> candidate under step 7 — do not skip it), the three dossiers and guides render in Playwright with zero page
+> errors, and the `investor` chip check reported. Report per company: source count and first-party share,
+> relationships written, investor-pair accepts, and every §4 premise verdict.
+>
+> Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch.
+
+### Added
+- **MGX dossier (`mgx.profile.json`, schema v7, profileVersion 1, `investor`, intel-briefing)** — 103 sources (42% first-party: 30 mgx.ae pages and releases, 6 MGX X posts tagged `party: company`, 6 ADGM FSRA register documents), 11 relationships (OpenAI, Aligned, Anthropic, xAI and Vantage typed `other` because the enum has no `portfolio` value; Microsoft, NVIDIA, Oracle and GE Vernova `partner`; NextEra Energy Resources `other` at parent level; STACK Infrastructure `announced` from Bloomberg-sourced reports), 3 policy regimes, 16 decision makers with 15 company-published headshots, 23 developments, 6 key judgments. The record: Abu Dhabi's state-backed AI vehicle — USD 49bn Fund I final close (1 July 2026), initial equity funder of Stargate LLC (contribution unconfirmed), AIP co-founder and direct co-owner of Aligned Data Centers since 21 July 2026, five OpenAI follow-ons and co-lead of Anthropic's Series G, USD 2bn Binance stake settled in USD1, 15% of TikTok USDS JV; publishes no AUM total, ticket sizes, stakes or headcount. **First `investor`-category dossier.**
+- **Excelsior Energy Capital dossier (`excelsior-energy-capital.profile.json`, schema v7, profileVersion 1, `investor · developer`)** — 108 sources (55% first-party: excelsiorcapital.com and Lydian pages, Excelsior and Lydian releases via syndication mirrors, SEC Form D/D-A and Form ADV), 8 relationships (Fluence and LG Energy Solution `supplier`, CATL `supplier` via Lydian per trade press, Meta and Google `customer` via utility green tariffs, Invenergy `other` historical, Oncor and Xcel Energy `other`), 2 policy regimes, 11 decision makers with 10 headshots, 15 developments, 5 key judgments. The record: Minnesota closed-end fund manager (USD 1.505bn regulatory AUM, 25 employees; Fund I USD 504m in harvest, Fund II just over USD 1bn) that owns Faraday Solar (685 MWdc, Meta via PacifiCorp Schedule 34), develops through the wholly-owned Lydian platform (Texas merchant batteries on CATL cells; Atlas North 1.5 GW from Hanwha), reserved 9.7 GWh of US-made batteries from Fluence (2.2 GWh, July 2024) and LG Energy Solution Vertech (7.5 GWh, December 2024) with no recipient project named, and is selling 830 MW to Enel for about USD 1bn.
+- **X-energy dossier (`x-energy.profile.json`, schema v7, profileVersion 1, `supplier`, `ownership.type: public`, NASDAQ: XE)** — 139 sources (62% first-party: x-energy.com product pages and 55 releases, the 424B4 prospectus, Q1/Q2 2026 10-Qs and 8-K exhibits, NRC and DOE documents), 7 relationships (Amazon `investor`; Kiewit, Black & Veatch, NVIDIA `partner`; Talen Energy `partner`/`announced`; Sargent & Lundy `supplier`; Oklo `competitor`), 5 policy regimes, 15 decision makers with 14 headshots, 29 developments, 6 key judgments. The record: Xe-100 pebble-bed HTGR (80 MWe / 200 MWt, 750°C) and TRISO-X fuel (TX-1 licensed 13 February 2026, complete H1 2028); Amazon's SMR partner (Series C-1 anchor, 23.4% of Class A, Cascade rights, 5 GW option by 2039); Dow's Long Mott construction permit on an 18-month NRC clock (EA/FONSI May 2026, permit guided Q1 2027, Dow FID not before 2028); IPO 24 April 2026 at USD 23 (USD 1.02bn gross), USD 17.71 on 4 September; Q2 2026 revenues and grant income USD 54.6m against USD 164.6m opex, USD 1.9bn liquidity; ARDP cost share up to USD 2.115bn per the Q2 call.
+- **Three schema v2 study guides + three lesson plans** — `mgx.study.json` (the money behind the money: sovereign wealth funds, fund vs platform vs JV vs direct stake, sizing an investor that publishes no numbers, why labs take Gulf money, the circular-financing pattern, export controls and CFIUS as the binding constraints; 13 sections); `excelsior-energy-capital.study.json` (the fund above the platform: the closed-end fund calendar, reading Form D and Form ADV, own/operate/develop, the battery reservation agreement and domestic-content arithmetic, EV/EBITDA on the Enel sale, the hyperscaler behind the green tariff; 14 sections); `x-energy.study.json` (the fuel is the reactor: TRISO as containment, 750°C as the product, continuous refuelling, the HALEU chain and the fuel factory licensed first, Part 50 on an 18-month clock, the ring around a vendor that owns no plant, an order book of options, going public on cost share; 14 sections). Each carries a where-it-fails callout, a slots-in table, ten flashcards and an eight-item quiz; none repeats the Oklo, Aypa, GridStor, Anthropic or Dominion material.
+- **44 shared concepts registered in `profiler-concepts.json`** (855 total) — sovereign wealth fund, closed-end fund, co-investment, anchor investor, follow-on investment, secondary sale, export controls, CFIUS, Form D, Form ADV, regulatory AUM, harvest period, carried interest, management fee, domestic content bonus, green tariff, load-serving entity, EV/EBITDA, reservation agreement, platform investment, vintage year, HTGR, TRISO, pebble-bed reactor, LEU, functional containment, Part 50, environmental assessment, ARDP, cost share, Up-C, dual-class shares, IPO, process heat, progressive design-build, offtaker, final investment decision, order book, Generic Design Assessment, capital-light model, grant income, Stargate, circular financing, most favored pricing.
+- **Three calendar rows** in `profiler-refresh-calendar.json` (91 rows): `mgx` and `excelsior-energy-capital` on `cadence: "quarterly"`; **`x-energy` carries `nextReport: 2026-11-13` (`confirmed: false`, cadence-inferred from the 13 August Q2 date) because X-energy is public since April 2026** — the brief's "all three are private" premise did not hold for it. Each row carries a Chesterton check of the premises corrected this session.
+- **39 headshots** in `images/execs/` (MGX 15, Excelsior 10, X-energy 14), all company-published leadership-page portraits; execs recount 548 images across 83 companies.
+
+### Changed
+- **Step 7 reconciliation — eleven older dossiers revised and archived** (profileVersion +1, `lastUpdated` 2026-09-05): `kiewit` v6→v7 (the negative finding "No confirmed Kiewit role on … X-energy programs" was wrong since October 2025 — Kiewit Nuclear Solutions is an equal partner in Cascade Nuclear Partners, design-builder for the first four Xe-100s at Energy Northwest; highlight and target segment corrected, `x-energy` and `black-veatch` `partner` edges added, Kiewit newsroom release registered); `oklo` v1→v2 (its Kiewit context repeated the same negative finding — corrected; `x-energy` `competitor` edge added; Energy Northwest release registered); `openai` v4→v5 (`mgx` `investor` edge; SoftBank Stargate release and MGX board release registered); `aligned` v4→v5 (`mgx` `investor` edge); `anthropic` v1→v2 (`mgx` `investor` edge); `amazon` v6→v7 (`x-energy` `supplier` edge); `talen-energy` v1→v2 (`x-energy` `partner`/`announced` edge); `black-veatch` v6→v7 (`x-energy` `partner` edge; Energy Northwest release registered); `sargent-lundy` v1→v2 (`x-energy` `customer` edge); `fluence` v7→v8 (`excelsior-energy-capital` `customer` edge; the 2.2 GWh claim had no registered source — GlobeNewswire release registered); `lg-energy-solution` v5→v6 (`excelsior-energy-capital` `customer` edge). Corpus grep: 12 files matched `\bMGX\b`, of which 8 (coolit, delta-electronics, flex, infineon, liteon, megmeet, nvidia, switch) are NVIDIA's MGX rack architecture — classified and left; 2 matched `\bExcelsior\b`; 7 matched `\bX-[eE]nergy\b` (dominion-energy label-only, left).
+- **`profiler-relationships-accepted.json`** — four investor-pair accepts with written reasons (`mgx`/`openai`, `aligned`/`mgx`, `anthropic`/`mgx`, `amazon`/`x-energy`): all four are the `investor` ↔ `portfolio` enum gap; six accept-list entries now exist only because of it (evidence for the enum decision, recorded in the calibration log, not made). **`profiler-crossref-accepted.json`** — two open questions accepted (`mgx`/`openai` Stargate contribution unconfirmed on both sides; `mgx`/`stack-infrastructure` Bloomberg-sourced on both sides).
+- **`PROFILER-CROSSREF-CALIBRATION.md`** — F6 adjudication log entry under the Relationships checker (4 accepted · 0 corrected · 0 replaced · 0 registered — every relationship URL was written as the exact registered string and every step 7 inbound edge registered its URL in the same edit).
+- **`PROFILER-COVERAGE-PLAN.md`** — §8 rows `mgx`, `excelsior-energy-capital`, `x-energy` flipped to `B6/B10 → F6`, `v1 · v04.73r`, `✓ · v04.73r`, with the §4 premise verdicts written into the Closes column (Excelsior: Fluence premise held with two date/project corrections, `developer` only via Lydian; MGX: Aligned held, Stargate held narrowly, "10 dossiers" did not hold — 4 name the fund; X-energy: Amazon premise held on every element, company is public, Series D was November 2025). §7 `investor` bullet rewritten with the visual-check result: chip label `investor 2`, `.ov-tag.investor` colour `#b18cf2` as declared, Compare peer group "Investor" alone for MGX and "Investor / Colocation & Cloud Capacity" when Excelsior (also `developer`) is picked first — the family map working as designed, with the `developer`-spans-two-spaces artefact noted; `Profiler.html` unchanged.
+- **Registry** synced (130 companies; MGX domains `mgx.ae`; Excelsior `excelsiorcapital.com`, `lydianenergy.com`; X-energy `x-energy.com`, `cdn.x-energy.com`, `investors.x-energy.com`; X-energy carries `ticker: NASDAQ: XE`); graph rebuilt (942 edges, 704 curated); archive index +11.
+- **README tree** — entries for the three profiles, three study guides, three study-prep folders and lesson plans, eleven archive files, and the execs count.
+
+### Verified
+- `sync-profiler-registry.py --check` clean · `check-profiler-study.py` 0 errors (104 guides, 855 concepts) · `check-profiler-relationships.py` exit 0 (14 accept entries) · `check-profiler-crossrefs.py` exit 0 (8 accept entries) · Playwright: three dossiers (9 tabs each, source counts 103/108/139 matching the files) and three study guides render with zero page errors, no literal `{{` and no unresolved term spans; roster `investor` chip and Compare peer group inspected as above.
 
 ## [v04.72r] — 2026-09-05 04:30:40 PM EST
 

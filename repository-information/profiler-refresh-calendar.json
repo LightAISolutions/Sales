@@ -1313,6 +1313,52 @@
         "Consumer-protection exposure: the $71 million New York PSC settlement approved 2026-04-16 across nine NRG-affiliated brands and about 278,000 customers (Case 25-M-0516). Watch for similar actions in other states",
         "Chesterton check: investors.nrg.com is 403/503-blocked, so the percentage of expected generation hedged — a figure both Vistra and Talen publish — is unobtainable for NRG, as is any net leverage ratio. Nine of ten executive headshots are advertised at NRG asset paths that redirect to an error page. Absence of these is a collection gap, not evidence"
       ]
+    },
+    {
+      "slug": "excelsior-energy-capital",
+      "cadence": "quarterly",
+      "source": "Private fund manager (Excelsior Renewable Energy Management Company LP, SEC CRD 289890); no listing, no earnings calendar. Disclosure channels: SEC Form ADV annual amendment (late March — regulatory AUM, headcount), SEC Form D/D-A filings for fund vehicles, Business Wire releases mirrored on Yahoo Finance/AOL (businesswire.com is 403 from this environment), excelsiorcapital.com news page (excelsiorenergycapital.com redirects there), Lydian Energy releases. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Enel closing of the 830 MW Fund I portfolio sale (expected Q3 2026; ~USD 1bn consideration, ~USD 1.3bn EV) — confirm completion, FERC/FDI conditions, and whether Excelsior issues its own release",
+        "First named delivery of Fluence Gridstack Pro (2.2 GWh, from 2025) or LG Energy Solution Vertech (7.5 GWh, first delivery slated April 2026) to an Excelsior/Lydian site — no source has yet named a recipient project",
+        "Pintail, Crane and Headcamp COD (released target Q4 2025; ERCOT record for Headcamp showed July 2026) — energisation dates in ERCOT records; reconcile the two MWh sets (300/400/400 vs 391/521/521)",
+        "Lydian pipeline and Atlas North build-out: any financing or supplier named for the 450 MW / 1,800 MWh CAISO batteries; Faraday BESS Phase 1 progress",
+        "Fund III: a Form D or first-close release would end the 'two active funds' boilerplate; the March 2027 Form ADV amendment for regulatory AUM and headcount",
+        "Stella Power and CleanAmps alliances: any named site, MW or data-centre offtaker (none disclosed as of September 2026)",
+        "Chesterton check: the Fluence 2.2 GWh deal dates from 30 July 2024 (not December 2024 — that is the LG deal); no source names Holland, MI or a 2030 end year for the LG agreement; the fourth co-founder is Ryan Fegley (no 'Ryan Stephenson'); a 'Fund III $1.8bn' web claim is uncorroborated. Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "mgx",
+      "cadence": "quarterly",
+      "source": "Private ADGM fund manager (MGX Fund Management Limited, FSP 240067); no listing, no earnings calendar, no annual report. Disclosure channels: mgx.ae news-insights (pages ~15 MB — fetch with curl, not WebFetch; /en/ paths redirect), MGX's X account (via the oEmbed endpoint), board-meeting releases (two to four a year, also carried by the Abu Dhabi Media Office), co-issuer releases (AIP/BlackRock/GIP/Microsoft, Aligned, SoftBank for Stargate), ADGM FSRA register for licence and director changes. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "AIP's second investment after Aligned (power, chips or campuses) and any disclosure of MGX's percentage of Aligned or the acquisition debt package",
+        "The '8 GW by end-2026' contracted-capacity claim: any breakdown by asset in a board release",
+        "Stargate LLC: any first-party statement naming MGX's contribution (Bloomberg's ~USD 7bn is unconfirmed); whether later Stargate releases name MGX at all",
+        "US political risk: congressional action on UAE chip access (Country Group A:5, July 2026), the USD1/Binance matter, Commerce's stated favourable review of applications 'destined for MGX'",
+        "Successor fund or new commitments after the USD 49bn Fund I close (1 July 2026); any LP named",
+        "Regulated-entity governance: the ADGM register's licensed directors (Xiao and Edelman withdrawn 18 May 2026; Namphy and Dweik added) and any MGX statement explaining it",
+        "Chesterton check: MGX publishes no AUM total, ticket sizes, stakes or headcount — do not import press estimates as facts; the mgx.ae index headline '$18B Series K' for Databricks is a typo for USD 1bn; eight corpus 'MGX' hits are NVIDIA's MGX rack architecture, not this fund"
+      ]
+    },
+    {
+      "slug": "x-energy",
+      "nextReport": "2026-11-13",
+      "confirmed": false,
+      "source": "Public since 24 April 2026 (Nasdaq: XE). Q1 2026 results 4 June 2026; Q2 2026 results 13 August 2026 (8-K Ex. 99.1 and 10-Q filed the same day). Q3 2026 date not announced — 2026-11-13 is a cadence inference from the Q2 date; Investing.com's calendar shows a projected 2 December 2026, so confirm against investors.x-energy.com (HTTP 503 from this environment) or the 8-K when the date is set. Non-accelerated filer 10-Q deadline for Q3 is mid-November.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Q3 2026 results: revenues and grant income vs USD 54.6m in Q2, operating expenses, cash burn against USD 1.9bn liquidity; whether the additional up to USD 1bn of ARDP cost share (DOE share up to USD 2.115bn, stated on the Q2 call) appears in the 10-Q or a DOE release",
+        "NRC Long Mott final safety evaluation (target November 2026) and construction permit decision (company: Q1 2027); any hearing; Dow's FID posture (no FID before 2028) and Dow's cost programme",
+        "Energy Northwest Cascade construction permit application (guided H1 2027) and Amazon's funding milestones; the 'next 1-gigawatt project' with an investor-owned utility described as in 'final throes' on the Q2 call",
+        "TX-1: core-and-shell completion, interior build-out, completion by H1 2028; HALEU deliveries under the Centrus and General Matter agreements and the DOE allocation",
+        "Centrica/Hartlepool: UK GDA progress (conclusion by end-2029), any definitive agreement replacing the non-binding JDA; Talen LOI and LG&E/KU study outcomes",
+        "Share register: Amazon 13G/13D changes (23.4% of Class A), Ares and Jane Street filings, lock-up expiry effects; analyst estimates once consensus forms",
+        "Chesterton check: X-energy is public (not private); the USD 700m Series D closed November 2025 led by Jane Street (there was no February 2026 Series D); headcount is 916 at 17 March 2026 — vendor headcounts of 1,400–1,800 are unreliable. Do not re-import any of these"
+      ]
     }
   ]
 }

@@ -61,6 +61,30 @@
       "pair": "mitsubishi-power x prevalon",
       "why": "Former parent and its 2024 carve-out, co-owned until the July 2026 sale to Nextpower — a historical corporate-structure link with no enum type; `other`/`other` is the honest typing and the checker reports `other` by design",
       "when": "2026-09-05"
+    },
+    {
+      "id": "8c882676d589",
+      "pair": "mgx x openai",
+      "why": "OpenAI correctly records MGX as `investor` (Stargate initial equity funder; five follow-on rounds). The coherent inverse is `portfolio`, which the `type` enum does not carry, so MGX types OpenAI `other` with the gap written into its note. Same enum gap as amazon/mainspring-energy (X2). F6 investor-pair accept 1 of 4.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "63f344fec506",
+      "pair": "aligned x mgx",
+      "why": "Aligned correctly records MGX as `investor` (direct co-owner since the 21 July 2026 closing). The coherent inverse is `portfolio`, absent from the enum; MGX types Aligned `other`. Enum gap, not a factual conflict. F6 investor-pair accept 2 of 4.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "84f9fb321e07",
+      "pair": "anthropic x mgx",
+      "why": "Anthropic correctly records MGX as `investor` (Series G co-lead, Series H significant investor). The coherent inverse is `portfolio`, absent from the enum; MGX types Anthropic `other`. Enum gap. F6 investor-pair accept 3 of 4.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "7fc58068dce6",
+      "pair": "amazon x x-energy",
+      "why": "Both true at once: Amazon is X-energy's largest outside shareholder (23.4% of Class A) AND the anchor buyer of Xe-100 capacity (Cascade rights, 5 GW option). X-energy types the shareholder side `investor`; Amazon types the commercial side `supplier` because the enum has no `portfolio` value and the purchase relation is the one Amazon's own page describes. F6 investor-pair accept 4 of 4.",
+      "when": "2026-09-05"
     }
   ]
 }

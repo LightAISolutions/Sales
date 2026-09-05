@@ -187,6 +187,15 @@
       ]
     },
     {
+      "slug": "anchor-investor",
+      "term": "anchor investor",
+      "def": "The first large investor to commit to a fund or a round, whose name and cheque persuade others to follow; anchors often get better terms in exchange for going first.",
+      "aliases": [
+        "anchor LP",
+        "cornerstone investor"
+      ]
+    },
+    {
       "slug": "anchor-tenant",
       "term": "anchor tenant",
       "def": "The one large customer whose signed commitment lets a developer finance and build a site. Its credit becomes the project's credit — and its departure, or the substitution of a different anchor, changes everything the lenders underwrote.",
@@ -256,6 +265,14 @@
         "arc-resistant construction",
         "IEEE C37.20.7",
         "arc-resistant"
+      ]
+    },
+    {
+      "slug": "ardp",
+      "term": "ARDP",
+      "def": "The US Department of Energy's Advanced Reactor Demonstration Program (2020), which splits the cost of building two first-of-a-kind reactors — X-energy's Xe-100 and TerraPower's Natrium — roughly 50/50 with the developers under cooperative agreements.",
+      "aliases": [
+        "Advanced Reactor Demonstration Program"
       ]
     },
     {
@@ -721,6 +738,15 @@
       ]
     },
     {
+      "slug": "capital-light-model",
+      "term": "capital-light model",
+      "def": "A business that sells technology, engineering, licences and fuel without owning the plants that use them, so it needs far less capital than an owner-operator but depends on others' investment decisions.",
+      "aliases": [
+        "asset-light",
+        "capital light"
+      ]
+    },
+    {
       "slug": "capital-recycling",
       "term": "capital recycling",
       "def": "Selling a finished or late-stage asset to release the equity tied up in it and reinvest in new development. For a developer without a fund behind it, recycling is the main source of growth capital.",
@@ -736,6 +762,15 @@
         "captive",
         "in-house developer",
         "internal developer"
+      ]
+    },
+    {
+      "slug": "carried-interest",
+      "term": "carried interest",
+      "def": "The manager's share of a fund's profits — typically around 20% above a hurdle return — paid on top of the annual management fee; the main way a general partner is rewarded for performance.",
+      "aliases": [
+        "carry",
+        "promote"
       ]
     },
     {
@@ -816,6 +851,15 @@
       ]
     },
     {
+      "slug": "cfius",
+      "term": "CFIUS",
+      "def": "The Committee on Foreign Investment in the United States, the inter-agency body that reviews foreign acquisitions of US businesses for national-security risk and can impose conditions or block a deal.",
+      "aliases": [
+        "Committee on Foreign Investment in the United States",
+        "foreign investment review"
+      ]
+    },
+    {
       "slug": "chain-reaction",
       "term": "chain reaction",
       "def": "A self-sustaining sequence in which each fission releases neutrons that cause further fissions. A reactor is held at exactly one fission per fission — any more and power rises, any less and it falls."
@@ -892,6 +936,15 @@
       "def": "The share of a retail supplier's customers who leave in a period. Every lost customer must be replaced at a cost, so churn and the cost of winning a customer together decide whether a retail book earns its margin or spends it."
     },
     {
+      "slug": "circular-financing",
+      "term": "circular financing",
+      "def": "A pattern in which a supplier or investor funds its own customer, so the money that pays for the supplier's product comes partly from the supplier — the concern raised when chipmakers, clouds and investors back the labs that buy from them.",
+      "aliases": [
+        "circularity",
+        "circular deal"
+      ]
+    },
+    {
       "slug": "clarification",
       "term": "clarification",
       "def": "The treatment step in which suspended solids are allowed or induced to settle out of water. It is the workhorse ahead of filtration in nearly every water and wastewater train."
@@ -900,6 +953,15 @@
       "slug": "clean-firm-power",
       "term": "clean firm power",
       "def": "Generation that is both low-carbon and available on demand around the clock — nuclear, geothermal, hydro, or a fuel-burning plant with capture. It is what a load with a flat, continuous profile actually needs."
+    },
+    {
+      "slug": "closed-end-fund",
+      "term": "closed-end fund",
+      "def": "An investment fund that raises a fixed pool of commitments from investors over a limited fundraising period, invests it over a few years and returns the money as assets are sold, then winds up; investors cannot withdraw early, so the manager can hold illiquid assets like power plants.",
+      "aliases": [
+        "closed-end vehicle",
+        "drawdown fund"
+      ]
     },
     {
       "slug": "closed-transition",
@@ -918,6 +980,15 @@
       "aliases": [
         "construction manager at risk",
         "CMAR"
+      ]
+    },
+    {
+      "slug": "co-investment",
+      "term": "co-investment",
+      "def": "Money an investor puts directly into a single deal alongside a fund it already backs, usually with lower fees, so a large deal can be financed without breaching the fund's concentration limits.",
+      "aliases": [
+        "co-invest",
+        "co-investment vehicle"
       ]
     },
     {
@@ -1258,6 +1329,16 @@
         "cost-of-service ratemaking",
         "cost of service study",
         "cost-of-service study"
+      ]
+    },
+    {
+      "slug": "cost-share",
+      "term": "cost share",
+      "def": "A government funding structure that reimburses an agreed percentage of a project's eligible costs as they are incurred, so the developer is paid back only for money it has already spent.",
+      "aliases": [
+        "cost-share agreement",
+        "cooperative agreement",
+        "50/50 cost share"
       ]
     },
     {
@@ -1881,6 +1962,15 @@
       ]
     },
     {
+      "slug": "domestic-content-bonus",
+      "term": "domestic content bonus",
+      "def": "An extra 10 percentage points of US investment or production tax credit for a project whose steel, iron and manufactured components meet a US-made threshold; the reason buyers reserve US-made batteries and modules years ahead.",
+      "aliases": [
+        "domestic content adder",
+        "domestic content"
+      ]
+    },
+    {
       "slug": "double-conversion",
       "term": "double conversion",
       "aliases": [
@@ -1975,6 +2065,16 @@
       "aliases": [
         "debt service coverage ratio",
         "coverage ratio"
+      ]
+    },
+    {
+      "slug": "dual-class-shares",
+      "term": "dual-class shares",
+      "def": "Two classes of stock with different votes per share, so founders can keep control of the company while owning a minority of its economic value.",
+      "aliases": [
+        "dual class",
+        "Class B shares",
+        "high-vote shares"
       ]
     },
     {
@@ -2268,6 +2368,18 @@
       ]
     },
     {
+      "slug": "environmental-assessment",
+      "term": "environmental assessment",
+      "def": "The shorter form of federal environmental review under NEPA; when it ends in a finding of no significant impact (FONSI) no full environmental impact statement is needed, which can shorten a permit review by a year or more.",
+      "aliases": [
+        "EA",
+        "FONSI",
+        "finding of no significant impact",
+        "environmental impact statement",
+        "EIS"
+      ]
+    },
+    {
       "slug": "environmental-attribute-purchase-agreement",
       "term": "environmental attribute purchase agreement",
       "def": "A contract in which a buyer purchases the renewable-energy certificates from a project without taking the electricity, which is sold into the grid. Meta's 2024 Invenergy deals were structured this way; the buyer gets the clean-energy claim, the project gets a fixed revenue stream.",
@@ -2353,6 +2465,15 @@
       ]
     },
     {
+      "slug": "ev-ebitda",
+      "term": "EV/EBITDA",
+      "def": "Enterprise value divided by earnings before interest, tax, depreciation and amortisation — the multiple buyers pay for a business's operating cash earnings; for operating renewable portfolios it prices the contracted cash flows.",
+      "aliases": [
+        "EBITDA multiple",
+        "enterprise value to EBITDA"
+      ]
+    },
+    {
       "slug": "evaporator",
       "term": "evaporator",
       "def": "The heat exchanger where the refrigerant boils and takes heat out of the water being chilled. In a chiller it is where the useful cooling actually happens."
@@ -2397,6 +2518,16 @@
       "slug": "expansive-soil",
       "term": "expansive soil",
       "def": "Clay that swells when it takes on water and shrinks when it dries, moving whatever sits on it. It is treated by removing it, stabilising it, or spanning over it — never by ignoring it."
+    },
+    {
+      "slug": "export-controls",
+      "term": "export controls",
+      "def": "Government rules that restrict which products, technologies or data may be shipped to which countries or buyers without a licence; for AI, the rules that govern where advanced chips and servers may be sent and who may run them.",
+      "aliases": [
+        "chip export controls",
+        "BIS export rules",
+        "Country Group A:5"
+      ]
     },
     {
       "slug": "f-gas-regulation",
@@ -2528,6 +2659,15 @@
       "def": "A single number that multiplies a device's on-resistance by a switching-related charge, so two switches can be compared on conduction and switching cost together. Lower is better, and it is how a datasheet argument about one material beating another is usually settled.",
       "aliases": [
         "RDS(on) x Qg"
+      ]
+    },
+    {
+      "slug": "final-investment-decision",
+      "term": "final investment decision",
+      "def": "The point at which a project's owner formally commits the capital to build; before FID a project has permits and designs but no binding commitment to spend.",
+      "aliases": [
+        "FID",
+        "investment decision"
       ]
     },
     {
@@ -2681,6 +2821,15 @@
       "def": "Energy stored as rotation — half the moment of inertia times speed squared — in a heavy rotor or a fast light one on low-friction bearings, sometimes in a vacuum. It gives very high power for seconds, essentially unlimited cycles and no chemical aging, and its state of charge is simply its speed. In a UPS it covers a generator start; as a battery for hours it is the wrong tool."
     },
     {
+      "slug": "follow-on-investment",
+      "term": "follow-on investment",
+      "def": "An additional investment by an existing shareholder in a later funding round of the same company, used to keep or increase its stake as the company grows.",
+      "aliases": [
+        "follow-on",
+        "follow-on round"
+      ]
+    },
+    {
       "slug": "footprint-density",
       "term": "footprint density",
       "def": "How much protected power a machine delivers per square metre of floor it stands on. Where saleable white space is the scarce good, it is a commercial argument written as a specification.",
@@ -2695,6 +2844,24 @@
         "EFORd"
       ],
       "def": "The share of time a generating unit is unavailable because something broke, as opposed to planned maintenance. Capacity markets use it to discount what a plant is credited with: a unit that fails often is worth fewer accredited megawatts than its nameplate."
+    },
+    {
+      "slug": "form-adv",
+      "term": "Form ADV",
+      "def": "The registration form an investment adviser files annually with the SEC; Part 1 discloses regulatory assets under management, employee count, client mix and fund vehicles, making it the audited-grade size record for a private fund manager.",
+      "aliases": [
+        "ADV filing",
+        "adviser registration"
+      ]
+    },
+    {
+      "slug": "form-d",
+      "term": "Form D",
+      "def": "The short notice a US company or fund files with the SEC after selling securities privately without registration; it discloses the amount sold, the number of investors and the placement agents — often the only public record of a private fund's size.",
+      "aliases": [
+        "Form D/A",
+        "Regulation D notice"
+      ]
     },
     {
       "slug": "formula-rate-plan",
@@ -2777,6 +2944,14 @@
       "aliases": [
         "fuel conditioning",
         "polishing"
+      ]
+    },
+    {
+      "slug": "functional-containment",
+      "term": "functional containment",
+      "def": "A safety approach in which the barriers holding radioactivity are built into the fuel and reactor physics rather than a large pressure-tight building, so the plant can argue for a smaller structure and site footprint.",
+      "aliases": [
+        "functional-containment approach"
       ]
     },
     {
@@ -2881,6 +3056,15 @@
       ]
     },
     {
+      "slug": "generic-design-assessment",
+      "term": "Generic Design Assessment",
+      "def": "The UK regulators' review of a reactor design independent of any site, run by the Office for Nuclear Regulation and the environment agencies; a design that passes can then be licensed for specific sites more quickly.",
+      "aliases": [
+        "GDA",
+        "UK GDA"
+      ]
+    },
+    {
       "slug": "geotechnical-investigation",
       "term": "geotechnical investigation",
       "def": "The programme of borings, samples and laboratory tests that establishes what is under a site before anything is designed for it. It is the cheapest work on a project and the source of its most expensive surprises.",
@@ -2906,11 +3090,29 @@
       ]
     },
     {
+      "slug": "grant-income",
+      "term": "grant income",
+      "def": "Government funding recognised in a company's income statement as work under a cooperative agreement is performed; for a pre-revenue reactor developer it can be the largest line above the loss.",
+      "aliases": [
+        "government grant income"
+      ]
+    },
+    {
       "slug": "green-loan",
       "term": "green loan",
       "def": "A loan labelled under the Loan Market Association's Green Loan Principles because its proceeds fund eligible green assets such as batteries; a 'green structuring agent' certifies the use of proceeds. It widens the lender pool without changing the credit terms.",
       "aliases": [
         "Green Loan Principles"
+      ]
+    },
+    {
+      "slug": "green-tariff",
+      "term": "green tariff",
+      "def": "A utility rate schedule that lets a large customer buy the output and environmental attributes of a specific renewable project through the utility, so the customer gets green power without contracting directly with the developer.",
+      "aliases": [
+        "green energy tariff",
+        "Schedule 34",
+        "renewable energy tariff"
       ]
     },
     {
@@ -3002,6 +3204,15 @@
         "THD",
         "total harmonic distortion",
         "harmonic distortion"
+      ]
+    },
+    {
+      "slug": "harvest-period",
+      "term": "harvest period",
+      "def": "The later years of a closed-end fund's life, after the investment period ends, when the manager stops buying and sells assets to return capital to investors.",
+      "aliases": [
+        "harvest",
+        "harvesting"
       ]
     },
     {
@@ -3117,6 +3328,15 @@
       "aliases": [
         "heat recovery steam generator",
         "heat-recovery steam generator"
+      ]
+    },
+    {
+      "slug": "htgr",
+      "term": "HTGR",
+      "def": "High-temperature gas-cooled reactor: a reactor cooled by helium gas and moderated by graphite that runs far hotter than a water-cooled reactor (around 750°C outlet), so it can supply industrial steam as well as electricity.",
+      "aliases": [
+        "high-temperature gas-cooled reactor",
+        "high temperature gas reactor"
       ]
     },
     {
@@ -3467,6 +3687,16 @@
       "def": "Integrated part-load value: a single efficiency number that weights performance at 100, 75, 50 and 25 percent load, because a chiller almost never runs at its design point. It uses standard-rating conditions."
     },
     {
+      "slug": "ipo",
+      "term": "IPO",
+      "def": "Initial public offering: the first sale of a company's shares to the public on a stock exchange, priced by underwriters and followed by a lock-up period during which insiders may not sell.",
+      "aliases": [
+        "initial public offering",
+        "lock-up",
+        "lock-up period"
+      ]
+    },
+    {
       "slug": "irp",
       "term": "IRP",
       "def": "Integrated resource plan: a regulated utility's commission-filed roadmap of what it expects to need and how it intends to procure it. Certified IRP megawatts are the real demand pipeline for an equipment supplier — they become purchase orders on a multi-year fuse.",
@@ -3722,6 +3952,14 @@
       ]
     },
     {
+      "slug": "leu",
+      "term": "LEU",
+      "def": "Low-enriched uranium: uranium enriched to less than 5% U-235, the fuel of the existing light-water fleet and the widely available enrichment product.",
+      "aliases": [
+        "low-enriched uranium"
+      ]
+    },
+    {
       "slug": "lfp",
       "term": "LFP",
       "def": "Lithium iron phosphate: a lithium-ion battery chemistry using an iron-phosphate cathode. It trades some energy density for lower cost, longer cycle life, and much better thermal stability than nickel-based chemistries — which is why it dominates grid-scale storage.",
@@ -3812,6 +4050,15 @@
         "long-term load forecast",
         "demand forecast",
         "load growth"
+      ]
+    },
+    {
+      "slug": "load-serving-entity",
+      "term": "load-serving entity",
+      "def": "A utility or retail supplier responsible for procuring electricity and capacity for the end customers it serves; in California the buyers of most long-term solar and storage contracts.",
+      "aliases": [
+        "LSE",
+        "load serving entity"
       ]
     },
     {
@@ -3953,6 +4200,14 @@
       "slug": "makeup-water",
       "term": "makeup water",
       "def": "Water added to a cooling or process loop to replace what evaporation, blowdown and leakage remove. A site's water demand is largely its makeup rate."
+    },
+    {
+      "slug": "management-fee",
+      "term": "management fee",
+      "def": "The annual fee a fund manager charges investors on committed or invested capital — typically 1–2% — to run the firm regardless of performance.",
+      "aliases": [
+        "annual management fee"
+      ]
     },
     {
       "slug": "managing-member",
@@ -4174,6 +4429,16 @@
       "aliases": [
         "metal-oxide-semiconductor field-effect transistor",
         "power MOSFET"
+      ]
+    },
+    {
+      "slug": "most-favored-pricing",
+      "term": "most favored pricing",
+      "def": "A contract term guaranteeing one customer terms at least as good as any later customer receives, sometimes with a payment if the seller later achieves lower costs.",
+      "aliases": [
+        "most favored nation",
+        "MFN clause",
+        "most-favoured pricing"
       ]
     },
     {
@@ -4455,6 +4720,15 @@
       "def": "The committed purchase of a project's output — power, capacity, or storage services. Signed offtake is what turns a development pipeline into a financeable project."
     },
     {
+      "slug": "offtaker",
+      "term": "offtaker",
+      "def": "The buyer that has agreed to purchase a project's output — electricity, steam or capacity — under a long-term contract; the credit the lenders look through to.",
+      "aliases": [
+        "power offtaker",
+        "offtake counterparty"
+      ]
+    },
+    {
       "slug": "on-load-tap-changer",
       "term": "on-load tap changer",
       "def": "A switch inside a transformer that changes the number of turns in use — and so the output voltage — without interrupting the load. It is the only substantial moving part in most transformers, which makes it the part most likely to need maintenance and one of the more common causes of transformer outages.",
@@ -4504,6 +4778,15 @@
       "aliases": [
         "three-name specification",
         "approved equal"
+      ]
+    },
+    {
+      "slug": "order-book",
+      "term": "order book",
+      "def": "The reactors, units or capacity a vendor counts as sold or reserved; the word covers everything from signed purchase orders to non-binding options, so the terms behind the number matter more than the number.",
+      "aliases": [
+        "orderbook",
+        "pipeline (nuclear)"
       ]
     },
     {
@@ -4561,6 +4844,16 @@
       "aliases": [
         "stray inductance",
         "loop inductance"
+      ]
+    },
+    {
+      "slug": "part-50",
+      "term": "Part 50",
+      "def": "The NRC's two-step licensing path for a power reactor: a construction permit to build, then an operating licence to run — as opposed to Part 52, which combines design certification, site and construction into one combined licence.",
+      "aliases": [
+        "10 CFR Part 50",
+        "two-step licensing",
+        "Part 52"
       ]
     },
     {
@@ -4654,6 +4947,16 @@
       ]
     },
     {
+      "slug": "pebble-bed-reactor",
+      "term": "pebble-bed reactor",
+      "def": "A gas-cooled reactor whose fuel is thousands of billiard-ball-sized graphite spheres, each packed with TRISO particles, that flow slowly down through the core and are refuelled continuously while the reactor runs.",
+      "aliases": [
+        "pebble bed",
+        "fuel pebble",
+        "pebbles"
+      ]
+    },
+    {
       "slug": "penny-warrant",
       "term": "penny warrant",
       "def": "A right to buy shares at a nominal price (often USD 0.01), so its value is almost the full share price. Given to a guarantor or lender, it is equity compensation for credit support — the price of a backstop paid in the company's own stock.",
@@ -4723,6 +5026,15 @@
       "def": "A stack of thin corrugated metal plates through which two fluids flow in alternate channels, so heat crosses the metal while the fluids never mix. It is the boundary inside a liquid-to-liquid CDU between facility water and rack coolant; more plate area buys a lower approach temperature.",
       "aliases": [
         "brazed plate heat exchanger"
+      ]
+    },
+    {
+      "slug": "platform-investment",
+      "term": "platform investment",
+      "def": "A fund's investment in an operating company that then buys or develops many projects, rather than in one project at a time; the platform carries the team and pipeline, the fund carries the capital.",
+      "aliases": [
+        "platform company",
+        "captive development platform"
       ]
     },
     {
@@ -4999,9 +5311,27 @@
       ]
     },
     {
+      "slug": "process-heat",
+      "term": "process heat",
+      "def": "Heat delivered to an industrial plant as steam or hot gas to run chemical, refining or manufacturing processes — a product a reactor or gas plant can sell alongside or instead of electricity.",
+      "aliases": [
+        "industrial process heat",
+        "industrial steam"
+      ]
+    },
+    {
       "slug": "proctor-test",
       "term": "Proctor test",
       "def": "The laboratory test that establishes the maximum dry density a given soil can reach and the moisture content at which it reaches it. Field compaction is then specified as a percentage of that number."
+    },
+    {
+      "slug": "progressive-design-build",
+      "term": "progressive design-build",
+      "def": "A contracting model in which the builder is chosen early on qualifications and works with the owner to develop the design, scope and price in stages before a fixed-price construction contract is signed — used for first-of-a-kind plants where the price cannot be known up front.",
+      "aliases": [
+        "PDB",
+        "progressive design build"
+      ]
     },
     {
       "slug": "project-financing",
@@ -5278,6 +5608,15 @@
       ]
     },
     {
+      "slug": "regulatory-aum",
+      "term": "regulatory AUM",
+      "def": "Assets under management as defined by the SEC for Form ADV — the gross value of the portfolios an adviser manages with discretion; it can differ from the 'equity capital' or 'AUM' a firm quotes in press releases.",
+      "aliases": [
+        "RAUM",
+        "regulatory assets under management"
+      ]
+    },
+    {
       "slug": "regulatory-lag",
       "term": "regulatory lag",
       "def": "The gap between when a utility spends money and when a rate order lets it recover that money. Long lag erodes the earned return below the allowed one; riders, formula rate plans and CWIP recovery all exist to shorten it.",
@@ -5320,6 +5659,16 @@
         "escalator",
         "annual escalator",
         "base rent escalator"
+      ]
+    },
+    {
+      "slug": "reservation-agreement",
+      "term": "reservation agreement",
+      "def": "A supply framework in which a buyer reserves manufacturing capacity or volume (in GWh or units) for future projects, with prices and slots fixed but individual purchase orders drawn down later as projects are ready.",
+      "aliases": [
+        "supply framework agreement",
+        "framework agreement",
+        "volume reservation"
       ]
     },
     {
@@ -5589,6 +5938,15 @@
         "technology cooling system",
         "TCS loop",
         "secondary loop"
+      ]
+    },
+    {
+      "slug": "secondary-sale",
+      "term": "secondary sale",
+      "def": "A sale of existing shares by current holders — often employees or early investors — to a new buyer, so the company itself receives no new money; contrast a primary round, which issues new shares for cash.",
+      "aliases": [
+        "employee secondary",
+        "secondary transaction"
       ]
     },
     {
@@ -5959,6 +6317,16 @@
       ]
     },
     {
+      "slug": "sovereign-wealth-fund",
+      "term": "sovereign wealth fund",
+      "def": "A state-owned investment fund that invests a government's surplus — oil revenue, reserves or budget surpluses — in companies, property and infrastructure at home and abroad, answering to the state rather than to outside investors.",
+      "aliases": [
+        "SWF",
+        "sovereign fund",
+        "state investment fund"
+      ]
+    },
+    {
       "slug": "spark-spread",
       "term": "spark spread",
       "def": "The gap between what a megawatt-hour of electricity sells for and what the gas to make it costs at a stated efficiency. It is the gross margin of a gas plant, and a merchant gas fleet's earnings are essentially the spark spread multiplied by the hours it is economic to run."
@@ -6048,6 +6416,15 @@
         "ESP",
         "standby duty",
         "standby generator"
+      ]
+    },
+    {
+      "slug": "stargate",
+      "term": "Stargate",
+      "def": "The USD 500 billion AI-infrastructure programme announced in January 2025 by OpenAI, SoftBank, Oracle and MGX to build data-centre campuses for OpenAI, starting in Abilene, Texas.",
+      "aliases": [
+        "Stargate LLC",
+        "Stargate project"
       ]
     },
     {
@@ -6641,6 +7018,16 @@
       ]
     },
     {
+      "slug": "triso",
+      "term": "TRISO",
+      "def": "Tri-structural isotropic fuel: a sub-millimetre uranium kernel wrapped in layers of carbon and silicon carbide that hold fission products inside the particle even at very high temperatures — the fuel form that lets a gas reactor claim its containment is in the fuel itself.",
+      "aliases": [
+        "TRISO fuel",
+        "TRISO particle",
+        "tri-structural isotropic"
+      ]
+    },
+    {
       "slug": "turbine-cooling-air",
       "term": "turbine cooling air",
       "def": "Air bled from the compressor and piped through hollow blades and vanes so they survive gas hotter than their own melting point. It is a direct loss — that air was compressed at cost and does no work in the combustor — so every design is a trade between how hot the machine can fire and how much of its own air it must spend to allow it.",
@@ -6726,6 +7113,15 @@
         "A units",
         "B units",
         "Class A units"
+      ]
+    },
+    {
+      "slug": "up-c-structure",
+      "term": "Up-C",
+      "def": "A listing structure in which the public company owns units of an underlying operating partnership or LLC; pre-IPO owners keep their partnership units and matching high-vote shares, so control and tax treatment differ from an ordinary IPO.",
+      "aliases": [
+        "Up-C structure",
+        "umbrella partnership C-corporation"
       ]
     },
     {
@@ -6838,6 +7234,14 @@
         "integrated utility",
         "wires-only utility",
         "wires-only"
+      ]
+    },
+    {
+      "slug": "vintage-year",
+      "term": "vintage year",
+      "def": "The year a fund makes its first investment, used to compare funds that faced the same market conditions.",
+      "aliases": [
+        "fund vintage"
       ]
     },
     {

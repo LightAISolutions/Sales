@@ -690,6 +690,16 @@
       "note": "Anthropic was founded in 2021 by former OpenAI researchers and competes with OpenAI across models, enterprise and the same compute suppliers — AWS sells to both, Microsoft distributes both, Nscale's Stargate sites were OpenAI's before Microsoft's and Anthropic's.",
       "context": "The corpus's openai dossier records OpenAI's USD 38 billion, seven-year AWS agreement and about 30 GW of committed capacity against Anthropic's three-silicon book; the two are the demand behind the 'nearly half' of about USD 2 trillion of cloud backlog CNBC attributes to their commitments. Anthropic's Series H valuation (USD 965 billion) eclipsed OpenAI's per Bloomberg. No commercial relationship exists between the two companies.",
       "source": "https://www.cnbc.com/2026/05/10/alphabet-160percent-rally-in-year-reflects-value-of-owning-most-of-ai-stack.html"
+    },
+    {
+      "slug": "mgx",
+      "type": "investor",
+      "status": "active",
+      "since": "2025",
+      "scale": "co-lead, USD 30bn Series G; significant investor, USD 65bn Series H",
+      "note": "Abu Dhabi's MGX co-led the USD 30 billion Series G (February 2026) and is listed as a significant investor in the USD 65 billion Series H (May 2026); MGX's board calls the Series G a follow-on, so an earlier position existed.",
+      "context": "Anthropic's Series G release: 'The round was co-led by D. E. Shaw Ventures, Dragoneer, Founders Fund, ICONIQ, and MGX'; the Series H release lists MGX under 'Significant investors'. Amounts undisclosed. The relationship carries a documented internal debate at Anthropic over Gulf capital (WIRED-reported Amodei memo: 'a real downside and I'm not thrilled about it'; deals to be 'narrowly scoped, purely financial'). MGX's dossier (this corpus) types the reverse link `other` because the schema's `type` enum has no 'portfolio' value.",
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
     }
   ],
   "policyExposure": [
@@ -1779,5 +1789,5 @@
     }
   ],
   "lastUpdated": "2026-09-05",
-  "profileVersion": 1
+  "profileVersion": 2
 }

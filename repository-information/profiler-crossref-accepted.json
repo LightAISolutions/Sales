@@ -37,6 +37,18 @@
       "pair": "tesla x samsung-sdi",
       "why": "Both dossiers carry the same hedge on the same reported talks ('confirmed talks but no details finalized'). They agree; neither answers the other.",
       "when": "2026-09-05"
+    },
+    {
+      "id": "54c1e9ac38fc",
+      "pair": "mgx x openai",
+      "why": "Open question stands: MGX's Stargate contribution is confirmed by no principal (Bloomberg's ~USD 7bn is press-reported); OpenAI's new inbound note repeats the SoftBank 'initial equity funder' language and does not state an amount, so it does not answer MGX's 'ticket unconfirmed'. Both dossiers hedge identically.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "04ace9e93f2b",
+      "pair": "mgx x stack-infrastructure",
+      "why": "Both dossiers carry the same Bloomberg-sourced report (AIP among reported suitors for STACK's APAC portfolio) as unconfirmed; MGX's entry is typed `announced` for that reason. Neither answers the other; no party has confirmed.",
+      "when": "2026-09-05"
     }
   ]
 }

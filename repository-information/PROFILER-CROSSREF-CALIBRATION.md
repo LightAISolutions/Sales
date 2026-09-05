@@ -336,5 +336,35 @@ written out. Growing the enum is a schema decision for a later session.
 (903 edges), and aged 3 more report pins (31 → 34, warning-
 only, X3's job). `check-profiler-crossrefs.py` surfaced no new candidate.
 
+**F6 — 2026-09-05, v04.73r, Fable 5.1 High.** The first research pass to
+write `investor`-typed edges (MGX, Excelsior Energy Capital, X-energy). The
+checker exited 1 on exactly the four reciprocal pairs the session brief
+anticipated, and 0 after adjudication; **0** unregistered sources, **0**
+dangling slugs, **0** unregistered project pins.
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **4** | `mgx`/`openai`, `aligned`/`mgx`, `anthropic`/`mgx` — the counterparty correctly says `investor`, MGX says `other` because the coherent inverse `portfolio` is not in the enum; `amazon`/`x-energy` — X-energy says `investor` (23.4% holder), Amazon says `supplier` (anchor buyer of Xe-100 capacity), both true at once and again blocked from coherence by the missing `portfolio` value |
+| reciprocal-type · **corrected** | **0** | Eleven other pairs written this session paired coherently by construction: `kiewit`/`x-energy` and `black-veatch`/`x-energy` `partner`/`partner`, `talen-energy`/`x-energy` `partner`/`partner`, `oklo`/`x-energy` `competitor`/`competitor`, `sargent-lundy`→`x-energy` `customer` vs `x-energy`→`sargent-lundy` `supplier`, `fluence`→`excelsior-energy-capital` and `lg-energy-solution`→`excelsior-energy-capital` `customer` vs Excelsior's `supplier` |
+| unregistered-source · **replaced** | **0** | Every relationship `source` was written as the exact registered string (the builder asserted membership in `sources[]` before writing) |
+| unregistered-source · **registered** | **0** | Step 7 added inbound edges to eleven older dossiers (kiewit, oklo, openai, aligned, anthropic, amazon, talen-energy, black-veatch, sargent-lundy, fluence, lg-energy-solution); where the cited URL was absent it was registered in the same edit (kiewit: Kiewit newsroom; oklo and black-veatch: Energy Northwest release; openai: SoftBank Stargate release and MGX board release; fluence: GlobeNewswire release) — so the checker had nothing to register |
+
+**Enum evidence.** Four accepts in one session, all of them the `investor` ↔
+`portfolio` gap, on top of X2's two (`amazon`/`mainspring-energy`,
+`blattner`/`quanta-services`). Six accept-list entries now exist only because
+`portfolio` is absent from the `type` enum. Adding it would let the reverse
+side of an investor edge be typed honestly and would retire these six; the
+decision remains a schema change for a later session, recorded here as
+evidence rather than made.
+
+**Cross-reference checker.** Two new candidates, both accepted as open
+questions that stand: `mgx`/`openai` (MGX's Stargate contribution is
+unconfirmed on both sides) and `mgx`/`stack-infrastructure` (the AIP-as-suitor
+report is Bloomberg-sourced on both sides). Exit 0. One MGX `strategyRead`
+entry exceeds the 900-character scope cap and is listed as not examined.
+
+**Side effects.** 130 dossiers on the roster; graph rebuilt to 942 edges (704
+curated); 45 shared concepts registered; report pins unchanged (X3's job).
+
 
 Developed by: LightAISolutions

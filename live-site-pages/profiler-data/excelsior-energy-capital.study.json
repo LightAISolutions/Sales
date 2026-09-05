@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 2,
+  "slug": "excelsior-energy-capital",
+  "title": "Excelsior Energy Capital — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-fund-above-the-platform",
+      "title": "Start here: the fund above the platform",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The Aypa guide teaches what a buyer pays for a contracted storage platform; the GridStor guide teaches how an asset manager's fund creates and owns a specialist; the Spearmint guide teaches the merchant developer. This guide climbs one level: it is about the **fund manager itself** — the {{general partner}} that raises a {{closed-end fund}} from pension funds and insurers, buys and builds power plants with it for a decade, and then sells them. Excelsior Energy Capital is the worked example because it is small enough to read whole (two funds, USD 1.5 billion of {{regulatory AUM}}, 25 people) and because its public record is unusually legible: SEC {{Form D}} and {{Form ADV}} filings, a wholly-owned {{platform investment}} (Lydian Energy), two exits with prices attached, and 9.7 GWh of batteries reserved years before the projects that will use them.",
+        "**Four things this guide teaches.** How to read a private fund from its public filings — what a Form D, a Form ADV and a fund's boilerplate each actually disclose. What a {{reservation agreement}} for batteries is, why a buyer signs one for more gigawatt-hours than it has projects, and what the {{domestic content bonus}} does to that decision. How an operating renewable portfolio is priced when it is sold — the {{EV/EBITDA}} multiple and the {{harvest period}} it belongs to. And how a {{hyperscaler}} ends up buying a solar farm's output without ever signing with the farm's owner — the {{green tariff}}.",
+        "**What it deliberately leaves to other guides.** Tax-credit monetisation and the financing stack (Aypa); the sponsor-created specialist and buying late-stage projects (GridStor); merchant revenue and financing a battery without a PPA (Spearmint); how a battery earns money hour by hour (the Classroom)."
+      ]
+    },
+    {
+      "id": "what-a-closed-end-fund-is",
+      "title": "What a closed-end fund is, and why power plants need one",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A {{closed-end fund}} is a pool of money with a calendar. Investors — the {{limited partner}}s — promise a fixed sum during a fundraising window that lasts a year or two; the manager — the {{general partner}} — then has an investment period of roughly four to five years to call that money and put it into assets, and a {{fund life}} of ten to twelve years in total to sell everything and hand the proceeds back. Nobody can withdraw early. That last rule is the point: a wind farm cannot be sold in a week, so the money that owns it must be equally patient.",
+        "Excelsior's record shows the calendar in the filings. Fund I's first sale was 8 September 2017 (the Form D), it closed at USD 504 million in January 2021, it was 'fully deployed across 16 investments totaling 1.95 GW' by 2025, and it made its first exit in December 2023 and its second — 830 MW to Enel for about USD 1 billion — in February 2026. That is the whole arc: raise, deploy, harvest. Fund II's first sale was 19 December 2022, its first close USD 502 million in March 2023, its final close 'just over $1 billion' in April 2025 against a USD 750 million target, and by then it was 'Over 50% deployed across 15 investments'.",
+        "The manager is paid twice. A {{management fee}} — typically 1–2% a year on committed or invested capital — runs the firm; {{carried interest}} — a share of profits above a hurdle — rewards it if the assets are sold for more than they cost. Excelsior publishes neither number, which is normal; the Form ADV shows 'related-person ownership 5%' of the funds and a USD 10 million minimum commitment, which tells you the founders co-invest and the investors are institutions.",
+        "Why does a power plant want this structure rather than a utility's balance sheet or a public company's shares? Because the asset is illiquid, the returns are contractual and long, and the buyers of that risk — pension plans, insurers, endowments, family offices, the {{anchor investor}} Development Bank of Japan in Fund II — want a manager who buys, operates and sells on a schedule that matches their liabilities. The fund is a rental of the manager's judgment for a decade."
+      ]
+    },
+    {
+      "id": "reading-a-private-fund-from-its-filings",
+      "title": "Reading a private fund from its public filings",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "A private fund manager publishes no accounts. Three public records still exist, and each answers a different question. Learn which is which before quoting a size figure.",
+      "cols": [
+        "Record",
+        "Who files it and when",
+        "What it actually tells you",
+        "What it does not"
+      ],
+      "rows": [
+        [
+          "**{{Form D}}** (SEC)",
+          "The fund vehicle, within 15 days of first sale, amended as more is sold",
+          "Total offering, amount sold to date, number of investors, first-sale date, placement agents, the named executive officers. Fund I D/A: USD 503,787,879 sold to 27 investors",
+          "Anything after the last amendment — Fund II's last Form D shows about USD 680 million across three vehicles, a floor set a year before the USD 1 billion close"
+        ],
+        [
+          "**{{Form ADV}}** Part 1 (SEC)",
+          "The adviser, annually by 30 March",
+          "{{Regulatory AUM}} (USD 1,505,418,687), employee count (25), share of non-US clients (47%), the list of fund vehicles, minimum commitment, related-person ownership",
+          "Performance, fees (Part 2 brochure, not fetched), which asset sits in which fund"
+        ],
+        [
+          "**Press-release boilerplate**",
+          "The firm, at its discretion",
+          "A rounded, moving figure: 'over $1 billion of equity capital' (2024) → 'over $1.45 billion in assets under management' → 'over $1.5 billion of equity capital' (2025–26)",
+          "Definitions — 'equity capital' and 'AUM' are different things; the boilerplate switches between them"
+        ],
+        [
+          "**Counterparty releases and filings**",
+          "Lenders, OEMs, buyers, advisers",
+          "The deal facts the firm may not announce itself: Enel's about USD 1 billion / USD 1.3 billion EV for 830 MW; KeyBanc's record of the BlackRock sale; Deutsche Bank's 'US$3bn of equity investments across 2.3 GW'",
+          "Confirmation from the firm — Excelsior issued no release on the Enel sale"
+        ],
+        [
+          "**Regulator and grid records**",
+          "ERCOT, PUCs, county permits",
+          "The state of a project independent of the release: the ERCOT queue record for Headcamp showed July 2026 against a Q4 2025 release target",
+          "Ownership detail (developer fields are often paywalled)"
+        ]
+      ]
+    },
+    {
+      "id": "own-operate-or-develop",
+      "title": "Own, operate or develop: three ways a fund touches a project",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A fund can meet a power project at three moments. It can buy it **operating**, from a developer or another owner, and collect contracted cash flows — Excelsior's Prairie Breeze wind (from Invenergy), El Centro, the Syncarpha portfolio and the 830 MW it later sold to Enel. It can buy it at **construction start**, taking construction risk but not development risk — the Unico, Nokomis and Regis structures, in which a partner 'develops' and Excelsior 'acquires projects upon construction start', and Faraday Solar, bought from developers Parasol and Clenera and financed by Excelsior at USD 1.3 billion. Or it can **develop**, carrying land, interconnection and permitting risk itself.",
+        "Excelsior's founding mandate was the first two: 'own and operate renewable investments with contracted returns'. The third arrived in 2023 as a {{platform investment}} — Lydian Energy, an operating company co-founded with Excelsior, wholly owned by Fund II per trade press, with its own CEO, staff and pipeline. The fund does not develop; its platform does. And even the platform develops late-stage: its largest deal, Atlas North, was 'four late-stage projects' bought from Hanwha Renewables, and its Texas batteries were developed under Fund II. No source shows Lydian filing its own interconnection requests or originating sites.",
+        "Why bother with a platform at all, if buying at construction start already avoids development risk? Because the margin between a permitted project and an operating one is where the return is, and a fund that only buys at notice-to-proceed pays that margin to someone else. A captive platform captures it, keeps the team between deals, and lets the fund's reserved equipment (below) find projects to go into. The cost is that the fund now carries schedule risk — the Texas batteries were released for Q4 2025 and were still 'In Construction' in September 2026 — and the platform's pipeline number moves: 1.75 GW, 4.7 GW, 4.4 GW, 5.1 GW in successive releases.",
+        "The category question this raises for the app — investor or developer? — has a precise answer: Excelsior is an investor that owns a developer. The `developer` chip rests on Lydian, and Lydian's development is acquisition-and-build rather than origination."
+      ]
+    },
+    {
+      "id": "what-a-reservation-agreement-is",
+      "title": "Reserving batteries before the projects exist: what a supply framework is",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "In July 2024 Excelsior signed for 2.2 GWh of Fluence Gridstack Pro; in December 2024 for 7.5 GWh of LG Energy Solution Vertech systems. Neither release names a project. That is not an omission — it is what a {{reservation agreement}} is. The buyer reserves manufacturing volume and slots over several years at agreed terms; individual purchase orders are drawn down later, project by project, as each reaches financing. The 9.7 GWh total is an option on supply, not a delivery schedule.",
+        "Why would a fund with roughly 4.4 GW of solar-and-storage pipeline reserve nearly 10 GWh of batteries? Three reasons the record supports. **Supply certainty** — Excelsior's partner Chris Frantz: the Fluence deal 'reduces battery supply risks for our projects'. **Domestic content** — both agreements were written to qualify for the {{domestic content bonus}}, the extra 10 percentage points of {{ITC}} for projects whose manufactured components meet a US-made threshold; Fluence's cells come from AESC's Tennessee plant and its modules from Utah, LG committed that 'All projects will meet domestic content requirements'. **Tariff and {{FEOC}} insulation** — US-made supply sidesteps the tariff and foreign-entity rules that Chinese cells attract. The reservation converts a policy bonus into a procurement position before the projects are built.",
+        "The arithmetic makes the bonus worth the commitment. A 200 MW / 400 MWh battery costing, say, USD 600 per kWh installed is a USD 240 million project; the base 30% ITC is USD 72 million; the domestic-content adder is another 10 points, USD 24 million. Multiply by a pipeline of several gigawatt-hours and the bonus is worth more than a supplier's price premium. (Illustrative figures — the dossier carries no Excelsior battery prices.)",
+        "And the trap: a reservation is only as real as its draw-down. Two years after the Fluence signing no source names a project that has received Gridstack Pro; Excelsior appears in no Fluence SEC filing; Lydian's first three batteries use CATL cells and its CEO said the frameworks 'do not have an impact on Lydian's three projects'. The July 2026 CleanAmps release restates the volume as '10+ GWh of strategic battery procurement initiatives'. When you read a GWh supply headline, ask which project drew on it, and when."
+      ]
+    },
+    {
+      "id": "the-two-battery-frameworks-side-by-side",
+      "title": "The two frameworks side by side",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "Both were signed in 2024, both for US-made systems, both without a named project. The differences are in what was promised.",
+      "cols": [
+        "",
+        "Fluence (30 July 2024)",
+        "LG Energy Solution Vertech (19 December 2024)"
+      ],
+      "rows": [
+        [
+          "Volume",
+          "2.2 GWh",
+          "7.5 GWh"
+        ],
+        [
+          "Product",
+          "Gridstack Pro; cells 'primarily manufactured in Tennessee' (AESC, 305 Ah LFP per Fluence's site); modules made by Fluence in Utah",
+          "'fully integrated' containerized LFP long-cell systems with AEROS software, integration and lifecycle services"
+        ],
+        [
+          "Timing",
+          "Deliveries 'beginning in 2025'; 'five to 10 project sites' in ERCOT and CAISO (Utility Dive)",
+          "'First delivery slated for April 2026'; 'multi-year'; no end year stated"
+        ],
+        [
+          "Policy hook",
+          "'one of the first energy storage solutions expected to qualify as domestic content under the Inflation Reduction Act'",
+          "'All projects will meet domestic content requirements and will be delivered to the U.S.'"
+        ],
+        [
+          "Value",
+          "Undisclosed",
+          "Undisclosed by LG; KED Global estimates KRW 1.8 trillion (about USD 1.24 billion)"
+        ],
+        [
+          "Named project",
+          "None",
+          "None"
+        ],
+        [
+          "Corroboration from the seller's side",
+          "Fluence's release only; no SEC filing or earnings-call mention of Excelsior",
+          "LGES lists the deal in its US pipeline alongside DTE, Terra-Gen and Qcells"
+        ]
+      ]
+    },
+    {
+      "id": "the-hyperscaler-behind-the-utility",
+      "title": "The hyperscaler behind the utility: how Meta buys Faraday's power",
+      "kind": "prose",
+      "read": "5 min",
+      "ps": [
+        "Faraday Solar sells its output under 'PacifiCorp's 20-year power purchase agreement via Rocky Mountain Power's Schedule 34 green energy tariff', with Meta 'purchasing energy and environmental attributes'. Read that sentence slowly, because it is the structure behind many hyperscaler solar claims. The contract counterparty — the credit the lenders underwrote — is the utility, PacifiCorp. Meta is not the {{offtaker}}; Meta is a retail customer of the utility on a special rate schedule, a {{green tariff}}, under which the utility procures a specific project and passes its energy and attributes through to the customer.",
+        "Why structure it this way rather than a direct corporate PPA? Because in a regulated, vertically integrated territory the utility is the only entity allowed to sell retail power; a data centre cannot legally buy from a solar farm across the street. The green tariff is the commission-approved workaround: the utility signs the PPA, the customer commits to take the project's output at a tariff price, the utility's other customers are shielded from the cost. The Dominion guide in this corpus explains the regulated side of this bargain; here the point is what it means for the owner.",
+        "For Excelsior the structure is good and bad at once. Good: the credit is an investment-grade utility, which is what made the USD 1.3 billion financing possible. Bad: the owner never negotiates with the hyperscaler and cannot repeat the relationship elsewhere — Meta's demand is available to Excelsior only where PacifiCorp offers Schedule 34. The same pattern holds at Skyhawk, where Google buys through TVA's Green Invest programme. When a renewable owner tells you it 'supplies Meta' or 'supplies Google', ask whose name is on the contract."
+      ]
+    },
+    {
+      "id": "selling-the-portfolio",
+      "title": "Selling the portfolio: what 8x EBITDA means and why it happens now",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "In February 2026 Enel Green Power North America agreed to buy 830 MW of Excelsior's operating wind and solar for about USD 1 billion (EUR 850 million), an {{enterprise value}} of about USD 1.3 billion, with the portfolio generating about 2.1 TWh a year and about USD 145 million of EBITDA. Enerdatics divides the second number by the last and gets roughly 8x {{EV/EBITDA}}. That multiple is the price of contracted renewable cash flows in early 2026, and it is the number a fund manager watches more closely than any other.",
+        "Two things to notice. First, the gap between consideration (about USD 1 billion) and enterprise value (about USD 1.3 billion) is the project debt the buyer assumes — the {{back-leverage}} and term loans that sat under Fund I's assets. The equity that returns to Fund I's investors is the consideration, not the EV. Against a USD 504 million fund, USD 1 billion for one sale is most of the fund's capital coming back in a single transaction. Second, the seller was 'Excelsior Renewable Energy Intermediate Fund I LP' — a Fund I vehicle — which tells you this is the {{harvest period}}: the fund raised in 2017–2020 is selling in 2024–2026, on schedule.",
+        "Why sell rather than hold contracted assets that still have fifteen years of PPA? Because a closed-end fund must return capital within its life, because a strategic buyer with a lower cost of capital (Enel funds the purchase from operating cash) will pay more for the same cash flows than the fund's investors require, and because the manager's {{carried interest}} is earned on realised gains. The first exit — 38 distributed projects to BlackRock in December 2023 — tested the market at small scale; Enel is the main event. Conditions still attach: antitrust, FERC authorisation and a foreign-direct-investment review, with closing expected in the third quarter of 2026."
+      ]
+    },
+    {
+      "id": "the-ledger",
+      "title": "The disclosed ledger: what is public about Excelsior's money",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD millions (as released; project financings are debt-plus-equity packages, fund figures are equity commitments)",
+      "intro": "Read the ladder as a size check on a private manager: two fund closes, three project-level financings and one sale price are the only dollar figures on the public record.",
+      "items": [
+        {
+          "label": "Lydian Texas BESS financing (Jul 2025)",
+          "sub": "ING ~USD 139m (Pintail, Crane) + KeyBank USD 94m (Headcamp); 550 MW / 1.1 GWh",
+          "v": 233
+        },
+        {
+          "label": "Fund I final close (Jan 2021)",
+          "sub": "Form D/A: USD 503,787,879 sold to 27 investors; 16 investments, 1.95 GW",
+          "v": 504
+        },
+        {
+          "label": "Lydian financing (Feb 2026)",
+          "sub": "CIBC, MUFG; Faraday BESS Phase 1, AC Ranch 1, Yellow Viking",
+          "v": 689
+        },
+        {
+          "label": "Enel purchase of 830 MW (signed Feb 2026)",
+          "sub": "about USD 1bn consideration; ~USD 1.3bn EV; ~USD 145m EBITDA (Enerdatics)",
+          "v": 1000
+        },
+        {
+          "label": "Fund II final close (Apr 2025)",
+          "sub": "'just over $1 billion' vs USD 750m target; DBJ anchor; 2.25 GW",
+          "v": 1000
+        },
+        {
+          "label": "Faraday Solar financing (Nov 2023)",
+          "sub": "USD 400m tax equity + USD 460m senior + USD 300m tax-exempt + USD 250m ancillary",
+          "v": 1300
+        },
+        {
+          "label": "Regulatory AUM (Form ADV, Mar 2026)",
+          "sub": "USD 1,505,418,687 across two pooled vehicles; 25 employees",
+          "v": 1505
+        }
+      ]
+    },
+    {
+      "id": "timeline-raise-deploy-harvest",
+      "title": "Raise, deploy, harvest: the two funds on one clock",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Years on the horizontal axis. Fund I's harvest overlaps Fund II's deployment — the overlap is how a manager keeps its team and platform working between funds.",
+      "unit": "calendar year",
+      "lanes": {
+        "f1": "Fund I (2017 vintage)",
+        "f2": "Fund II (2022 vintage) and Lydian"
+      },
+      "items": [
+        {
+          "x": 2017,
+          "lane": "f1",
+          "label": "First sale (Form D, Sep 2017)",
+          "sub": "Founded by four ex-TerraForm Power executives"
+        },
+        {
+          "x": 2019,
+          "lane": "f1",
+          "label": "Operating acquisitions",
+          "sub": "El Centro, Syncarpha, Nokomis community solar, Prairie Breeze wind from Invenergy"
+        },
+        {
+          "x": 2021,
+          "lane": "f1",
+          "label": "Final close USD 504m",
+          "sub": "7 investments, 27 projects, 192 MW at close; later 16 investments, 1.95 GW"
+        },
+        {
+          "x": 2022,
+          "lane": "f1",
+          "label": "Skyhawk (TVA / Google); REX storage JV",
+          "sub": "First battery investments"
+        },
+        {
+          "x": 2023,
+          "lane": "f2",
+          "label": "First close USD 502m; Lydian co-founded; Faraday USD 1.3bn financing",
+          "sub": "Fund II's flagship acquired at construction start"
+        },
+        {
+          "x": 2024,
+          "lane": "f1",
+          "label": "First exit: 38 projects to BlackRock",
+          "sub": "Closed Dec 2023, announced Mar 2024"
+        },
+        {
+          "x": 2024,
+          "lane": "f2",
+          "label": "Lydian launches (1.75 GW); Fluence 2.2 GWh and LG 7.5 GWh reserved",
+          "sub": "Procurement ahead of projects"
+        },
+        {
+          "x": 2025,
+          "lane": "f2",
+          "label": "Final close just over USD 1bn; Faraday COD; Lydian USD 233m",
+          "sub": "2.25 GW at close"
+        },
+        {
+          "x": 2026,
+          "lane": "f1",
+          "label": "Enel buys 830 MW for ~USD 1bn",
+          "sub": "Harvest; closing expected Q3 2026"
+        },
+        {
+          "x": 2026,
+          "lane": "f2",
+          "label": "Lydian USD 689m; Atlas North 1.5 GW; CleanAmps data-centre platform",
+          "sub": "Deployment continues"
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The reservation that never draws down.** A GWh framework signed for the tax bonus is worthless if the projects slip or use another supplier. Excelsior's first three batteries carry CATL cells; two years on, no Fluence or LG delivery to an Excelsior site is on the record. The buyer has paid for optionality it may not exercise; the seller has booked a headline it may not ship.",
+        "**Schedule slip on a merchant asset.** Pintail, Crane and Headcamp were released for Q4 2025 and were still in construction in September 2026. A merchant battery earns nothing until energised, and the tax credit bridge loan that financed it assumes a placed-in-service date.",
+        "**The fund clock against the market.** A closed-end fund must sell within its life whether or not multiples are good. Fund I is harvesting into an 8x EBITDA market; a fund whose harvest lands in a bad year returns less for the same assets.",
+        "**Boilerplate as data.** 'Over $1.5 billion of equity capital' and 'USD 1,505,418,687 of regulatory AUM' happen to agree at Excelsior; at many managers they do not. Quote the filing, not the release.",
+        "**The hyperscaler that is not your customer.** A green-tariff structure puts the utility between owner and data centre. The owner cannot take the relationship to the next site, and a change in the tariff or the utility's procurement changes the owner's market.",
+        "**A platform's pipeline is a moving number.** 1.75 GW, 4.7 GW, 4.4 GW, 5.1 GW — each is true on its date and none is a commitment. Pipeline is inventory, not revenue."
+      ]
+    },
+    {
+      "id": "where-excelsior-slots-in",
+      "title": "Where Excelsior's businesses slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per business line in the dossier, read against the layer of the ecosystem it touches.",
+      "cols": [
+        "Business line",
+        "Layer",
+        "What it sells or buys",
+        "Covered counterparties"
+      ],
+      "rows": [
+        [
+          "Fund management (Fund I, Fund II)",
+          "Capital",
+          "Ten-year exposure to contracted US renewables for institutional LPs; DBJ as anchor",
+          "—"
+        ],
+        [
+          "Owned operating portfolio",
+          "Asset ownership",
+          "Contracted power to utilities and their green-tariff customers; sells portfolios at exit",
+          "Meta (via PacifiCorp), Google (via TVA), Invenergy (seller), Xcel Energy (tariff), Oncor (wires)"
+        ],
+        [
+          "Lydian Energy",
+          "Development and construction",
+          "Late-stage solar and storage taken through financing and construction; merchant ERCOT batteries and contracted CAISO/Utah projects",
+          "CATL (cells, per trade press)"
+        ],
+        [
+          "Supply frameworks",
+          "Procurement",
+          "Reserved US-made batteries and modules for the domestic-content bonus",
+          "Fluence (2.2 GWh), LG Energy Solution (7.5 GWh)"
+        ],
+        [
+          "Stella Power / CleanAmps",
+          "Firm power for large loads",
+          "Gas-hybrid and data-centre platform offers, no site yet",
+          "—"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What is a closed-end fund, in one sentence?",
+          "a": "A fixed pool of investor commitments raised over a limited window, invested over a few years and returned as assets are sold, with no early withdrawal — the structure that lets a manager hold illiquid assets like power plants."
+        },
+        {
+          "q": "Name the two ways a fund manager is paid.",
+          "a": "A management fee (1–2% a year on committed or invested capital) and carried interest (a share of realised profits above a hurdle)."
+        },
+        {
+          "q": "What does a Form D tell you that a press release does not?",
+          "a": "The exact amount sold, the number of investors, the first-sale date and the placement agents — a filed floor on a fund's size rather than a rounded boilerplate figure."
+        },
+        {
+          "q": "What is regulatory AUM and where is it disclosed?",
+          "a": "The SEC's Form ADV definition of assets under management — gross portfolio value managed with discretion — disclosed annually in Form ADV Part 1; it can differ from a firm's quoted 'equity capital'."
+        },
+        {
+          "q": "What is a reservation agreement for batteries?",
+          "a": "A multi-year framework in which the buyer reserves manufacturing volume (GWh) and slots at agreed terms, with purchase orders drawn down project by project later — an option on supply, not a delivery schedule."
+        },
+        {
+          "q": "Why sign for more GWh than you have projects?",
+          "a": "To lock supply, to qualify future projects for the 10-point domestic-content bonus, and to insulate the pipeline from tariff and FEOC rules on foreign cells — the bonus across a pipeline can exceed a US supplier's price premium."
+        },
+        {
+          "q": "Who is the offtaker at Faraday Solar, and where does Meta sit?",
+          "a": "PacifiCorp, under a 20-year PPA; Meta is a retail customer of the utility on the Schedule 34 green tariff, taking the project's energy and attributes through the utility."
+        },
+        {
+          "q": "What is the difference between consideration and enterprise value in a portfolio sale?",
+          "a": "Enterprise value includes the project debt the buyer assumes; consideration is what the seller's equity receives — Enel's ~USD 1bn consideration against ~USD 1.3bn EV for 830 MW."
+        },
+        {
+          "q": "What does an 8x EV/EBITDA multiple price?",
+          "a": "The contracted operating cash flows of the portfolio — about USD 145m of EBITDA valued at about USD 1.3bn — the market's price for long-dated renewable cash flows in early 2026."
+        },
+        {
+          "q": "What is the difference between a fund that develops and a fund that owns a developer?",
+          "a": "The fund's own capital never carries land, interconnection or permitting risk; a wholly-owned platform (Lydian) does, and even then by buying late-stage projects rather than originating them."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A fund's Form D shows USD 234 million sold to 9 investors in February 2024; the firm's April 2025 release says the fund closed at just over USD 1 billion. The correct reading is:",
+          "c": [
+            "The release is wrong — the filing is authoritative and the fund is USD 234 million",
+            "The filing is a floor at its date; later sales (and two feeder vehicles) were not yet amended, so both can be true",
+            "The fund must have been marked up by USD 766 million",
+            "Neither number is usable"
+          ],
+          "a": 1,
+          "why": "A Form D reports sales to its filing date and is amended only when more is sold; feeder vehicles file separately. The release reports the final close a year later."
+        },
+        {
+          "q": "A renewable owner announces a 7.5 GWh battery supply agreement with a first delivery in April 2026. Eighteen months later no project is named as a recipient. This most likely means:",
+          "c": [
+            "The agreement was cancelled",
+            "The agreement is a reservation framework and no purchase order has yet been drawn down publicly",
+            "The batteries were delivered secretly",
+            "The owner has no projects"
+          ],
+          "a": 1,
+          "why": "Frameworks reserve volume; draw-down happens project by project and is often unannounced. Absence of a named project is the normal state of a reservation, not evidence of cancellation — but it is also not evidence of delivery."
+        },
+        {
+          "q": "A data centre operator is said to 'buy power from' a Utah solar farm owned by a fund. The farm's PPA is with PacifiCorp under Schedule 34. Who bears the credit risk the lenders underwrote?",
+          "c": [
+            "The data centre operator",
+            "The fund",
+            "PacifiCorp, the utility",
+            "The EPC contractor"
+          ],
+          "a": 2,
+          "why": "Under a green tariff the utility signs the PPA and is the counterparty; the hyperscaler is the utility's tariff customer."
+        },
+        {
+          "q": "Why does a fund manager reserve US-made batteries rather than buy the cheapest cells available?",
+          "c": [
+            "US-made cells perform better",
+            "The domestic-content bonus (10 ITC points) across a pipeline can outweigh a price premium, and US supply avoids tariff and FEOC exposure",
+            "Chinese cells cannot be imported",
+            "Lenders require it"
+          ],
+          "a": 1,
+          "why": "The bonus is a policy value the reservation captures; Lydian's use of CATL cells on its first batteries shows the choice is economic, not a legal bar."
+        },
+        {
+          "q": "Fund I sells 830 MW for ~USD 1bn consideration at ~USD 1.3bn EV. The USD 300m difference is:",
+          "c": [
+            "The buyer's premium",
+            "Project-level debt the buyer assumes",
+            "Tax equity returned to investors",
+            "Carried interest"
+          ],
+          "a": 1,
+          "why": "EV = equity value + net debt; the seller's equity receives the consideration."
+        },
+        {
+          "q": "Which statement correctly describes Excelsior's development activity?",
+          "c": [
+            "Excelsior originates greenfield sites and files interconnection requests",
+            "Excelsior develops through a wholly-owned platform (Lydian) that mostly acquires late-stage projects and builds them",
+            "Excelsior never develops — it only buys operating assets",
+            "Excelsior is an EPC contractor"
+          ],
+          "a": 1,
+          "why": "Lydian was co-founded in 2023; its largest deal was Hanwha's late-stage Atlas North. No source shows origination by Excelsior or Lydian."
+        },
+        {
+          "q": "A closed-end fund raised in 2017 is selling its largest portfolio in 2026. This is best described as:",
+          "c": [
+            "A distressed sale",
+            "The harvest period, on schedule for a ten-to-twelve-year fund life",
+            "A change of strategy",
+            "A failure to deploy"
+          ],
+          "a": 1,
+          "why": "Raise 2017–2021, deploy to 2025, harvest 2024–2026 is the standard arc; the Form D first-sale date and the seller entity (a Fund I vehicle) confirm it."
+        },
+        {
+          "q": "A release says a platform has '4.4 GW of solar and storage projects'. The safest interpretation is:",
+          "c": [
+            "4.4 GW of operating capacity",
+            "4.4 GW of contracted capacity",
+            "A pipeline figure that changes with each release and includes early-stage projects",
+            "4.4 GW financed"
+          ],
+          "a": 2,
+          "why": "Lydian's stated pipeline moved 1.75 → 4.7 → 4.4 → 5.1 GW across releases; pipeline is inventory, not commitment."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Schedule 34 green energy tariff",
+      "d": "Rocky Mountain Power's (PacifiCorp's) Utah rate schedule under which a large customer takes the output and attributes of a specific renewable project through the utility — the structure behind Meta's purchase of Faraday Solar's power."
+    }
+  ]
+}

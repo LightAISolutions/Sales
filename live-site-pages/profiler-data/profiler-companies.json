@@ -70,7 +70,7 @@
       "tagline": "The record $40B exit — AIP/MGX/GIP bought the 51-campus, 6.4 GW Americas platform from Macquarie with Microsoft, NVIDIA and xAI inside the buyer consortium; patented Delta³/DeltaFlow waterless cooling (600+ kW/rack hybrid) is the moat.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "aligneddc.com"
       ],
@@ -88,7 +88,7 @@
       "hq": "Seattle, WA, USA",
       "ticker": "NASDAQ: AMZN",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "aboutamazon.com",
         "amazon.com"
@@ -96,6 +96,26 @@
       "srcTotal": 23,
       "srcFirstPct": 57,
       "kpiNorm": true
+    },
+    {
+      "slug": "anthropic",
+      "name": "Anthropic",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The compute buyer — up to 5 GW of Trainium, 'well over a gigawatt' of TPUs then multi-GW from 2027, USD 30bn of Azure, all of Colossus 1, a 401 MW direct lease, a 470 MW gas order and reported USD 45bn/USD 35bn neocloud contracts, on run-rate revenue of USD 47bn and a USD 965bn Series H ahead of an IPO.",
+      "hq": "San Francisco, CA, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "anthropic.com",
+        "claude.com",
+        "www-cdn.anthropic.com",
+        "assets.anthropic.com"
+      ],
+      "srcTotal": 149,
+      "srcFirstPct": 56,
+      "kpiNorm": false
     },
     {
       "slug": "apex-clean-energy",
@@ -151,6 +171,45 @@
       "kpiNorm": false
     },
     {
+      "slug": "available-power",
+      "name": "Available Power",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Texas develop-and-sell developer of 9.9 MW distribution-connected batteries, a unit of Available Infrastructure; no operating fleet on the record since the parent's 2025 edge-AI pivot",
+      "hq": "Tysons Corner, VA, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "availableinfrastructure.com",
+        "available-power.com"
+      ],
+      "srcTotal": 42,
+      "srcFirstPct": 26,
+      "kpiNorm": false
+    },
+    {
+      "slug": "aypa-power",
+      "name": "Aypa Power",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Blackstone-owned standalone battery-storage platform under a signed, pending sale to Brookfield — about 6.5 GW operating, under construction and contracted, 95% contracted per the buyer",
+      "hq": "Austin, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "aypa.com",
+        "elora.aypa.com",
+        "hedley.aypa.com"
+      ],
+      "srcTotal": 91,
+      "srcFirstPct": 44,
+      "kpiNorm": false
+    },
+    {
       "slug": "bechtel",
       "name": "Bechtel",
       "categories": [
@@ -180,8 +239,8 @@
       "domains": [
         "bv.com"
       ],
-      "srcTotal": 30,
-      "srcFirstPct": 53,
+      "srcTotal": 31,
+      "srcFirstPct": 52,
       "kpiNorm": false
     },
     {
@@ -331,6 +390,25 @@
       "kpiNorm": false
     },
     {
+      "slug": "coolit",
+      "name": "CoolIT Systems",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Calgary direct-liquid-cooling specialist — cold plates, rack manifolds and 80 kW to 2 MW CDUs on NVIDIA's recommended-vendor list — bought by Ecolab for about USD 4.75bn (closed July 2026) after three years under KKR and Mubadala.",
+      "hq": "Calgary, Alberta, Canada",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "coolitsystems.com",
+        "44473873.fs1.hubspotusercontent-na1.net",
+        "ecolab.com"
+      ],
+      "srcTotal": 151,
+      "srcFirstPct": 65,
+      "kpiNorm": false
+    },
+    {
       "slug": "core-scientific",
       "name": "Core Scientific",
       "categories": [
@@ -442,6 +520,25 @@
       "srcTotal": 16,
       "srcFirstPct": 50,
       "kpiNorm": true
+    },
+    {
+      "slug": "dnv",
+      "name": "DNV",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Norwegian foundation-owned assurance and risk-management group (NOK 43.9bn revenue, 2025) whose Energy Systems arm writes the recommended practices and independent-engineer reports that make batteries and grids bankable — and runs the labs the data comes from.",
+      "hq": "Høvik, Norway",
+      "status": "active",
+      "lastUpdated": "2026-09-04",
+      "domains": [
+        "dnv.com",
+        "greenpowermonitor.com",
+        "veracity.com"
+      ],
+      "srcTotal": 101,
+      "srcFirstPct": 32,
+      "kpiNorm": false
     },
     {
       "slug": "dominion-energy",
@@ -598,6 +695,24 @@
       "kpiNorm": true
     },
     {
+      "slug": "esvolta",
+      "name": "esVolta",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Generate Capital-owned standalone-storage owner in a sale process — hedged-and-merchant batteries in ERCOT, resource-adequacy batteries in CAISO, a 25 GWh pipeline into Arizona and New Mexico",
+      "hq": "Newport Beach, CA, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "esvolta.com"
+      ],
+      "srcTotal": 108,
+      "srcFirstPct": 31,
+      "kpiNorm": false
+    },
+    {
       "slug": "eve-energy",
       "name": "EVE Energy",
       "categories": [
@@ -614,6 +729,25 @@
       "srcTotal": 16,
       "srcFirstPct": 44,
       "kpiNorm": true
+    },
+    {
+      "slug": "excelsior-energy-capital",
+      "name": "Excelsior Energy Capital",
+      "categories": [
+        "investor",
+        "developer"
+      ],
+      "tagline": "Minnesota renewable-infrastructure fund manager (USD 1.5bn regulatory AUM; Fund I USD 504m, Fund II just over USD 1bn) that owns wind, solar and storage, develops through its wholly-owned Lydian Energy platform, and reserved 9.7 GWh of US-made batteries from Fluence and LG Energy Solution Vertech.",
+      "hq": "Excelsior, Minnesota, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "excelsiorcapital.com",
+        "lydianenergy.com"
+      ],
+      "srcTotal": 108,
+      "srcFirstPct": 55,
+      "kpiNorm": false
     },
     {
       "slug": "flex",
@@ -674,9 +808,29 @@
       "domains": [
         "fluenceenergy.com"
       ],
-      "srcTotal": 30,
-      "srcFirstPct": 57,
+      "srcTotal": 31,
+      "srcFirstPct": 58,
       "kpiNorm": true
+    },
+    {
+      "slug": "fluidstack",
+      "name": "Fluidstack",
+      "categories": [
+        "neocloud"
+      ],
+      "tagline": "Tenant-of-record on ~1.4 GW of Anthropic-bound leases at TeraWulf, Cipher, Hut 8 and Meridian Arc — bankable only through Google's backstops and penny warrants; owns one campus (Abernathy, July 2026) and USD 2.6bn of equity against ~USD 27bn of rent.",
+      "hq": "New York, NY, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "fluidstack.io",
+        "okmulgeefluidstack.io",
+        "sullivanfluidstack.io",
+        "harlingenfluidstack.io"
+      ],
+      "srcTotal": 136,
+      "srcFirstPct": 47,
+      "kpiNorm": false
     },
     {
       "slug": "ge-vernova",
@@ -715,6 +869,24 @@
       "srcTotal": 23,
       "srcFirstPct": 43,
       "kpiNorm": true
+    },
+    {
+      "slug": "gridstor",
+      "name": "GridStor",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Goldman Sachs Asset Management-owned standalone-storage owner — contracted batteries in California, Texas and Arizona, five late-stage acquisitions in eighteen months",
+      "hq": "Portland, OR, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "gridstor.com"
+      ],
+      "srcTotal": 97,
+      "srcFirstPct": 44,
+      "kpiNorm": false
     },
     {
       "slug": "hitachi-energy",
@@ -806,6 +978,26 @@
       "kpiNorm": false
     },
     {
+      "slug": "hunt-energy-network",
+      "name": "Hunt Energy Network",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Hunt-family-owned, Manulife-funded merchant owner-trader of 32 distribution-connected 9.9 MW batteries plus a 100 MW transmission battery in ERCOT, dispatched by its own QSE",
+      "hq": "Dallas, TX, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "huntenergynetwork.com",
+        "huntconsolidated.com",
+        "huntesg.com"
+      ],
+      "srcTotal": 87,
+      "srcFirstPct": 32,
+      "kpiNorm": false
+    },
+    {
       "slug": "hyperstrong",
       "name": "HyperStrong",
       "categories": [
@@ -842,6 +1034,49 @@
       "srcTotal": 77,
       "srcFirstPct": 53,
       "kpiNorm": true
+    },
+    {
+      "slug": "intersect-power",
+      "name": "Intersect",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Google-owned since March 2026 (USD 4.75bn plus debt) — the co-located energy-park developer behind the Quantum and Meitner Texas campuses; its grid-tied fleet was carved out as IPX Power",
+      "hq": "San Francisco, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "intersect.com",
+        "intersectpower.com",
+        "abc.xyz",
+        "blog.google",
+        "datacenters.google",
+        "storage.googleapis.com"
+      ],
+      "srcTotal": 116,
+      "srcFirstPct": 51,
+      "kpiNorm": false
+    },
+    {
+      "slug": "invenergy",
+      "name": "Invenergy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Chicago's privately held developer-operator — #2 US pipeline behind NextEra, CDPQ- and Blackstone-owned, storage in Arizona, gas plants for utilities' data-centre load, Grain Belt Express",
+      "hq": "Chicago, IL, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "invenergy.com",
+        "grainbeltexpress.com",
+        "cimarronlink.com"
+      ],
+      "srcTotal": 135,
+      "srcFirstPct": 55,
+      "kpiNorm": false
     },
     {
       "slug": "iren",
@@ -928,8 +1163,8 @@
       "domains": [
         "kiewit.com"
       ],
-      "srcTotal": 29,
-      "srcFirstPct": 17,
+      "srcTotal": 30,
+      "srcFirstPct": 20,
       "kpiNorm": false
     },
     {
@@ -1114,6 +1349,23 @@
       "kpiNorm": true
     },
     {
+      "slug": "mgx",
+      "name": "MGX",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Abu Dhabi's state-backed AI investment vehicle (Mubadala and G42 founding partners; chaired by Sheikh Tahnoon bin Zayed) — USD 49bn Fund I, Stargate initial equity funder, AIP co-founder and owner of Aligned Data Centers, repeat investor in OpenAI, Anthropic and xAI.",
+      "hq": "Abu Dhabi, United Arab Emirates",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "mgx.ae"
+      ],
+      "srcTotal": 103,
+      "srcFirstPct": 42,
+      "kpiNorm": false
+    },
+    {
       "slug": "microsoft",
       "name": "Microsoft",
       "categories": [
@@ -1251,6 +1503,43 @@
       "kpiNorm": false
     },
     {
+      "slug": "nrg-energy",
+      "name": "NRG Energy",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "A retail company that owns power plants — 96 percent of revenue from eight million customers, a fleet doubled to 25 GW by the closed LS Power acquisition, 6 GW of demand response through CPower, and the only large merchant with no named hyperscaler: its 1.2 GW Texas project is 'aligned on principal commercial terms', not signed.",
+      "hq": "Houston, TX, USA",
+      "ticker": "NYSE: NRG",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "nrg.com",
+        "investors.nrg.com"
+      ],
+      "srcTotal": 72,
+      "srcFirstPct": 33,
+      "kpiNorm": true
+    },
+    {
+      "slug": "nscale",
+      "name": "Nscale",
+      "categories": [
+        "neocloud"
+      ],
+      "tagline": "Microsoft-anchored European neocloud that owns its ground — Glomfjord and Narvik hydro, the 2 GW Caterpillar-powered Monarch campus — ~200,000 GB300 + 96,000 Rubin contracted, a reported USD 45bn Anthropic deal after Microsoft walked, USD 3.7bn equity and USD 6.1bn debt against ~USD 100M quarterly revenue.",
+      "hq": "London, United Kingdom",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "nscale.com",
+        "docs.nscale.com"
+      ],
+      "srcTotal": 126,
+      "srcFirstPct": 51,
+      "kpiNorm": false
+    },
+    {
       "slug": "nvidia",
       "name": "NVIDIA",
       "categories": [
@@ -1278,11 +1567,11 @@
       "hq": "Santa Clara, USA",
       "ticker": "NYSE: OKLO",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "oklo.com"
       ],
-      "srcTotal": 98,
+      "srcTotal": 99,
       "srcFirstPct": 58,
       "kpiNorm": true
     },
@@ -1333,12 +1622,12 @@
       "tagline": "Anchor demand — ~$1.4T / ~30 GW committed against ~0.3 GW operational; the circular-financing debate is, in large part, the OpenAI-solvency debate.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "openai.com"
       ],
-      "srcTotal": 22,
-      "srcFirstPct": 50,
+      "srcTotal": 24,
+      "srcFirstPct": 46,
       "kpiNorm": false
     },
     {
@@ -1619,6 +1908,23 @@
       "kpiNorm": true
     },
     {
+      "slug": "sargent-lundy",
+      "name": "Sargent & Lundy",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Chicago power-engineering firm since 1891, privately owned and led by engineers, working as owner's engineer, independent engineer and engineer of record on nuclear restarts, SMRs, gas plants, grid and data-centre campus power — fee-for-service, no equity, no construction.",
+      "hq": "Chicago, Illinois, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "sargentlundy.com"
+      ],
+      "srcTotal": 158,
+      "srcFirstPct": 71,
+      "kpiNorm": false
+    },
+    {
       "slug": "schneider-electric",
       "name": "Schneider Electric",
       "categories": [
@@ -1716,6 +2022,24 @@
       "kpiNorm": true
     },
     {
+      "slug": "spearmint-energy",
+      "name": "Spearmint Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Founder-led merchant BESS developer-owner — 350 MW / 700 MWh operating in ERCOT plus 300 MW under construction, financed on private credit, tax equity and credit transfer with no named offtaker",
+      "hq": "Miami, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "spearmintenergy.com"
+      ],
+      "srcTotal": 114,
+      "srcFirstPct": 23,
+      "kpiNorm": false
+    },
+    {
       "slug": "stack-infrastructure",
       "name": "STACK Infrastructure",
       "categories": [
@@ -1730,6 +2054,24 @@
       ],
       "srcTotal": 40,
       "srcFirstPct": 80,
+      "kpiNorm": false
+    },
+    {
+      "slug": "strata-clean-energy",
+      "name": "Strata Clean Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Founder-owned developer-EPC-owner that wins utility tolls and sells the battery with the contract attached — Scatter Wash to CIP, White Tank to GridStor — while keeping about 1 GW of owned solar",
+      "hq": "Durham, NC, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "stratacleanenergy.com"
+      ],
+      "srcTotal": 103,
+      "srcFirstPct": 50,
       "kpiNorm": false
     },
     {
@@ -1788,6 +2130,25 @@
       "srcTotal": 43,
       "srcFirstPct": 79,
       "kpiNorm": false
+    },
+    {
+      "slug": "talen-energy",
+      "name": "Talen Energy",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The co-location precedent that failed and the contract that replaced it — FERC rejected the behind-the-meter Susquehanna arrangement in November 2024, and the 1,920 MW Amazon deal that followed is an ordinary front-of-the-meter retail supply needing no FERC approval; 15.7 GW of PJM generation anchored by 90 percent of one nuclear station, rebuilt on $9.7 billion of debt.",
+      "hq": "Houston, TX, USA",
+      "ticker": "NASDAQ: TLN",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "talenenergy.com",
+        "susquehannanuclear.com"
+      ],
+      "srcTotal": 81,
+      "srcFirstPct": 51,
+      "kpiNorm": true
     },
     {
       "slug": "terawulf",
@@ -1954,6 +2315,26 @@
       "kpiNorm": true
     },
     {
+      "slug": "vistra",
+      "name": "Vistra",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The integrated merchant that became a nuclear contracting story — 3.8 GW of six reactors sold to Amazon and Meta on twenty-year agreements, a five-million-customer retail book that hedges 43,641 MW of generation, and a battery fleet cut from 1,024 MW to 624 MW by the Moss Landing fire; nothing signed at any gas site.",
+      "hq": "Irving, TX, USA",
+      "ticker": "NYSE: VST",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "vistracorp.com",
+        "investor.vistracorp.com",
+        "mosslandingresponse.com"
+      ],
+      "srcTotal": 82,
+      "srcFirstPct": 37,
+      "kpiNorm": true
+    },
+    {
       "slug": "voltagrid",
       "name": "VoltaGrid",
       "categories": [
@@ -1986,6 +2367,26 @@
       ],
       "srcTotal": 30,
       "srcFirstPct": 70,
+      "kpiNorm": false
+    },
+    {
+      "slug": "x-energy",
+      "name": "X-energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Rockville, Maryland developer of the Xe-100 pebble-bed HTGR SMR (80 MWe, 750°C) and TRISO-X fuel — Amazon's SMR partner (23.4% holder, 5 GW option by 2039), Dow's Long Mott licensing applicant, Nasdaq: XE since April 2026.",
+      "hq": "Rockville, Maryland, USA",
+      "ticker": "NASDAQ: XE",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "x-energy.com",
+        "cdn.x-energy.com",
+        "investors.x-energy.com"
+      ],
+      "srcTotal": 139,
+      "srcFirstPct": 62,
       "kpiNorm": false
     },
     {
@@ -2047,351 +2448,6 @@
       ],
       "srcTotal": 43,
       "srcFirstPct": 42,
-      "kpiNorm": true
-    },
-    {
-      "slug": "dnv",
-      "name": "DNV",
-      "categories": [
-        "advisor"
-      ],
-      "tagline": "Norwegian foundation-owned assurance and risk-management group (NOK 43.9bn revenue, 2025) whose Energy Systems arm writes the recommended practices and independent-engineer reports that make batteries and grids bankable — and runs the labs the data comes from.",
-      "hq": "Høvik, Norway",
-      "status": "active",
-      "lastUpdated": "2026-09-04",
-      "domains": [
-        "dnv.com",
-        "greenpowermonitor.com",
-        "veracity.com"
-      ],
-      "srcTotal": 101,
-      "srcFirstPct": 32,
-      "kpiNorm": false
-    },
-    {
-      "slug": "sargent-lundy",
-      "name": "Sargent & Lundy",
-      "categories": [
-        "advisor"
-      ],
-      "tagline": "Chicago power-engineering firm since 1891, privately owned and led by engineers, working as owner's engineer, independent engineer and engineer of record on nuclear restarts, SMRs, gas plants, grid and data-centre campus power — fee-for-service, no equity, no construction.",
-      "hq": "Chicago, Illinois, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-04",
-      "domains": [
-        "sargentlundy.com"
-      ],
-      "srcTotal": 158,
-      "srcFirstPct": 71,
-      "kpiNorm": false
-    },
-    {
-      "slug": "coolit",
-      "name": "CoolIT Systems",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "Calgary direct-liquid-cooling specialist — cold plates, rack manifolds and 80 kW to 2 MW CDUs on NVIDIA's recommended-vendor list — bought by Ecolab for about USD 4.75bn (closed July 2026) after three years under KKR and Mubadala.",
-      "hq": "Calgary, Alberta, Canada",
-      "status": "active",
-      "lastUpdated": "2026-09-04",
-      "domains": [
-        "coolitsystems.com",
-        "44473873.fs1.hubspotusercontent-na1.net",
-        "ecolab.com"
-      ],
-      "srcTotal": 151,
-      "srcFirstPct": 65,
-      "kpiNorm": false
-    },
-    {
-      "slug": "fluidstack",
-      "name": "Fluidstack",
-      "categories": [
-        "neocloud"
-      ],
-      "tagline": "Tenant-of-record on ~1.4 GW of Anthropic-bound leases at TeraWulf, Cipher, Hut 8 and Meridian Arc — bankable only through Google's backstops and penny warrants; owns one campus (Abernathy, July 2026) and USD 2.6bn of equity against ~USD 27bn of rent.",
-      "hq": "New York, NY, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "fluidstack.io",
-        "okmulgeefluidstack.io",
-        "sullivanfluidstack.io",
-        "harlingenfluidstack.io"
-      ],
-      "srcTotal": 136,
-      "srcFirstPct": 47,
-      "kpiNorm": false
-    },
-    {
-      "slug": "nscale",
-      "name": "Nscale",
-      "categories": [
-        "neocloud"
-      ],
-      "tagline": "Microsoft-anchored European neocloud that owns its ground — Glomfjord and Narvik hydro, the 2 GW Caterpillar-powered Monarch campus — ~200,000 GB300 + 96,000 Rubin contracted, a reported USD 45bn Anthropic deal after Microsoft walked, USD 3.7bn equity and USD 6.1bn debt against ~USD 100M quarterly revenue.",
-      "hq": "London, United Kingdom",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "nscale.com",
-        "docs.nscale.com"
-      ],
-      "srcTotal": 126,
-      "srcFirstPct": 51,
-      "kpiNorm": false
-    },
-    {
-      "slug": "anthropic",
-      "name": "Anthropic",
-      "categories": [
-        "hyperscaler"
-      ],
-      "tagline": "The compute buyer — up to 5 GW of Trainium, 'well over a gigawatt' of TPUs then multi-GW from 2027, USD 30bn of Azure, all of Colossus 1, a 401 MW direct lease, a 470 MW gas order and reported USD 45bn/USD 35bn neocloud contracts, on run-rate revenue of USD 47bn and a USD 965bn Series H ahead of an IPO.",
-      "hq": "San Francisco, CA, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "anthropic.com",
-        "claude.com",
-        "www-cdn.anthropic.com",
-        "assets.anthropic.com"
-      ],
-      "srcTotal": 149,
-      "srcFirstPct": 56,
-      "kpiNorm": false
-    },
-    {
-      "slug": "aypa-power",
-      "name": "Aypa Power",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Blackstone-owned standalone battery-storage platform under a signed, pending sale to Brookfield — about 6.5 GW operating, under construction and contracted, 95% contracted per the buyer",
-      "hq": "Austin, United States",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "aypa.com",
-        "elora.aypa.com",
-        "hedley.aypa.com"
-      ],
-      "srcTotal": 91,
-      "srcFirstPct": 44,
-      "kpiNorm": false
-    },
-    {
-      "slug": "spearmint-energy",
-      "name": "Spearmint Energy",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Founder-led merchant BESS developer-owner — 350 MW / 700 MWh operating in ERCOT plus 300 MW under construction, financed on private credit, tax equity and credit transfer with no named offtaker",
-      "hq": "Miami, United States",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "spearmintenergy.com"
-      ],
-      "srcTotal": 114,
-      "srcFirstPct": 23,
-      "kpiNorm": false
-    },
-    {
-      "slug": "intersect-power",
-      "name": "Intersect",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Google-owned since March 2026 (USD 4.75bn plus debt) — the co-located energy-park developer behind the Quantum and Meitner Texas campuses; its grid-tied fleet was carved out as IPX Power",
-      "hq": "San Francisco, United States",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "intersect.com",
-        "intersectpower.com",
-        "abc.xyz",
-        "blog.google",
-        "datacenters.google",
-        "storage.googleapis.com"
-      ],
-      "srcTotal": 116,
-      "srcFirstPct": 51,
-      "kpiNorm": false
-    },
-    {
-      "slug": "invenergy",
-      "name": "Invenergy",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Chicago's privately held developer-operator — #2 US pipeline behind NextEra, CDPQ- and Blackstone-owned, storage in Arizona, gas plants for utilities' data-centre load, Grain Belt Express",
-      "hq": "Chicago, IL, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "invenergy.com",
-        "grainbeltexpress.com",
-        "cimarronlink.com"
-      ],
-      "srcTotal": 135,
-      "srcFirstPct": 55,
-      "kpiNorm": false
-    },
-    {
-      "slug": "gridstor",
-      "name": "GridStor",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Goldman Sachs Asset Management-owned standalone-storage owner — contracted batteries in California, Texas and Arizona, five late-stage acquisitions in eighteen months",
-      "hq": "Portland, OR, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "gridstor.com"
-      ],
-      "srcTotal": 97,
-      "srcFirstPct": 44,
-      "kpiNorm": false
-    },
-    {
-      "slug": "available-power",
-      "name": "Available Power",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Texas develop-and-sell developer of 9.9 MW distribution-connected batteries, a unit of Available Infrastructure; no operating fleet on the record since the parent's 2025 edge-AI pivot",
-      "hq": "Tysons Corner, VA, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "availableinfrastructure.com",
-        "available-power.com"
-      ],
-      "srcTotal": 42,
-      "srcFirstPct": 26,
-      "kpiNorm": false
-    },
-    {
-      "slug": "esvolta",
-      "name": "esVolta",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Generate Capital-owned standalone-storage owner in a sale process — hedged-and-merchant batteries in ERCOT, resource-adequacy batteries in CAISO, a 25 GWh pipeline into Arizona and New Mexico",
-      "hq": "Newport Beach, CA, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "esvolta.com"
-      ],
-      "srcTotal": 108,
-      "srcFirstPct": 31,
-      "kpiNorm": false
-    },
-    {
-      "slug": "strata-clean-energy",
-      "name": "Strata Clean Energy",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Founder-owned developer-EPC-owner that wins utility tolls and sells the battery with the contract attached — Scatter Wash to CIP, White Tank to GridStor — while keeping about 1 GW of owned solar",
-      "hq": "Durham, NC, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "stratacleanenergy.com"
-      ],
-      "srcTotal": 103,
-      "srcFirstPct": 50,
-      "kpiNorm": false
-    },
-    {
-      "slug": "hunt-energy-network",
-      "name": "Hunt Energy Network",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "Hunt-family-owned, Manulife-funded merchant owner-trader of 32 distribution-connected 9.9 MW batteries plus a 100 MW transmission battery in ERCOT, dispatched by its own QSE",
-      "hq": "Dallas, TX, USA",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "huntenergynetwork.com",
-        "huntconsolidated.com",
-        "huntesg.com"
-      ],
-      "srcTotal": 87,
-      "srcFirstPct": 32,
-      "kpiNorm": false
-    },
-    {
-      "slug": "talen-energy",
-      "name": "Talen Energy",
-      "categories": [
-        "ipp"
-      ],
-      "tagline": "The co-location precedent that failed and the contract that replaced it — FERC rejected the behind-the-meter Susquehanna arrangement in November 2024, and the 1,920 MW Amazon deal that followed is an ordinary front-of-the-meter retail supply needing no FERC approval; 15.7 GW of PJM generation anchored by 90 percent of one nuclear station, rebuilt on $9.7 billion of debt.",
-      "hq": "Houston, TX, USA",
-      "ticker": "NASDAQ: TLN",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "talenenergy.com",
-        "susquehannanuclear.com"
-      ],
-      "srcTotal": 81,
-      "srcFirstPct": 51,
-      "kpiNorm": true
-    },
-    {
-      "slug": "vistra",
-      "name": "Vistra",
-      "categories": [
-        "ipp"
-      ],
-      "tagline": "The integrated merchant that became a nuclear contracting story — 3.8 GW of six reactors sold to Amazon and Meta on twenty-year agreements, a five-million-customer retail book that hedges 43,641 MW of generation, and a battery fleet cut from 1,024 MW to 624 MW by the Moss Landing fire; nothing signed at any gas site.",
-      "hq": "Irving, TX, USA",
-      "ticker": "NYSE: VST",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "vistracorp.com",
-        "investor.vistracorp.com",
-        "mosslandingresponse.com"
-      ],
-      "srcTotal": 82,
-      "srcFirstPct": 37,
-      "kpiNorm": true
-    },
-    {
-      "slug": "nrg-energy",
-      "name": "NRG Energy",
-      "categories": [
-        "ipp"
-      ],
-      "tagline": "A retail company that owns power plants — 96 percent of revenue from eight million customers, a fleet doubled to 25 GW by the closed LS Power acquisition, 6 GW of demand response through CPower, and the only large merchant with no named hyperscaler: its 1.2 GW Texas project is 'aligned on principal commercial terms', not signed.",
-      "hq": "Houston, TX, USA",
-      "ticker": "NYSE: NRG",
-      "status": "active",
-      "lastUpdated": "2026-09-05",
-      "domains": [
-        "nrg.com",
-        "investors.nrg.com"
-      ],
-      "srcTotal": 72,
-      "srcFirstPct": 33,
       "kpiNorm": true
     }
   ]

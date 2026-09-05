@@ -1,0 +1,1288 @@
+{
+  "schemaVersion": 7,
+  "slug": "mgx",
+  "name": "MGX Fund Management Limited (MGX Group Holding 1 Ltd)",
+  "shortName": "MGX",
+  "categories": [
+    "investor"
+  ],
+  "website": "https://www.mgx.ae/",
+  "headquarters": "Abu Dhabi, United Arab Emirates — 13th Floor, Al Sarab Tower, Abu Dhabi Global Market Square, Al Maryah Island (ADGM); US arm MGX Fund Management (US) LLC at 50 Hudson Yards, New York",
+  "founded": 2024,
+  "employees": "Not stated on any MGX channel; the leadership page names 10 executives and the ADGM register lists 12 approved persons. Collection gap.",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: MGX is Abu Dhabi's state-backed AI investment vehicle — created in March 2024 by the Artificial Intelligence and Advanced Technology Council with Mubadala and G42 as 'foundational partners', chaired by Sheikh Tahnoon bin Zayed — and in fourteen months it has become the largest single pool of dedicated AI capital on the record: MGX Fund I closed on 1 July 2026 at USD 49 billion against a USD 45 billion target with 14 portfolio companies, it is one of four initial equity funders of Stargate LLC, a co-founder of the AI Infrastructure Partnership (AIP) with BlackRock, GIP and Microsoft, and, with AIP and GIP, the owner since 21 July 2026 of Aligned Data Centers (about USD 40 billion enterprise value, 51 campuses, 6.4 GW). Its relevance to this corpus is that it now sits behind the money in ten dossiers — OpenAI, Anthropic and xAI as a repeat investor, Aligned and Vantage as an owner — while publishing no ticket sizes, no stake percentages, no AUM total and no headcount.\n\nBACKGROUND. Legal structure per MGX's own footer: MGX Group Holding 1 Ltd (ADGM) owns MGX Fund Management Limited, licensed by the ADGM Financial Services Regulatory Authority on 18 October 2024 (FSP 240067) to manage collective investment funds and, from June 2025, to advise on and arrange investments; four funds are registered (MGX Fund I LP, an AIV and two co-investment vehicles). Board: Chairman Sheikh Tahnoon bin Zayed Al Nahyan (UAE National Security Advisor, chairman of G42, ADIA, ADQ, IHC and FAB), Vice Chairman Khaldoon Al Mubarak (Mubadala Group CEO), Jassem Al Zaabi, Peng Xiao (G42 Group CEO) and Martin Edelman; Managing Director and CEO Ahmed Yahia Al Idrissi (formerly CEO of Mubadala's direct investments platform, ex-McKinsey partner) also chairs the Investment Committee and is Vice Chairman of AIP. Three stated pillars: semiconductors, AI digital infrastructure, AI technology; about 70% of capital to North America. Named holdings (portfolio page, 13): AIP, Aligned, Altera, Anthropic, Binance, Campus AI, Databricks, Isomorphic Labs, Khazna, OpenAI, SpaceX (xAI after the merger), TikTok USDS Joint Venture LLC and Vantage Data Centers. Disclosed amounts are few: USD 2 billion for a minority stake in Binance (March 2025, settled in World Liberty Financial's USD1 stablecoin), 15% of the TikTok USDS JV (January 2026), co-lead of Anthropic's USD 30 billion Series G and of OpenAI's USD 122 billion round (2026), participation in xAI's USD 20 billion Series E, and a reported (Bloomberg) about USD 7 billion Stargate commitment that no principal has confirmed. The board stated in May 2026 that portfolio companies' contracted AI-infrastructure capacity is 'projected to exceed 8GWs by the end of 2026'.",
+  "ecosystemRole": "The sovereign capital behind the largest AI build-outs this corpus tracks: an initial equity funder of Stargate LLC (with SoftBank, OpenAI and Oracle), co-founder and Vice Chair seat-holder of the AI Infrastructure Partnership whose first investment was Aligned Data Centers, an owner in Vantage Data Centers 'to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin', a repeat investor in OpenAI, Anthropic and xAI, and — through AIP's agreements with GE Vernova and NextEra Energy — a stated backer of 'all forms of energy' for AI data centres. MGX owns no power project and has no energy strategy of its own; every energy statement on its channels is made through AIP, Aligned or Campus AI.",
+  "productsAndServices": [
+    {
+      "name": "MGX Fund I — the USD 49 billion AI fund",
+      "category": "Fund management",
+      "description": "MGX's flagship closed-end vehicle, registered in ADGM as MGX Fund I LP (established 8 May 2024) with an alternative investment vehicle (AIV-1, July 2025) and two co-investment partnerships (August 2025). Final close confirmed 1 July 2026 at 'USD 49 billion in total commitments, significantly above its initial $45 billion target fund size' from 'major institutional and private investors from the Gulf, North America, Asia and Europe'; 'Since inception, MGX Fund I has invested in 14 companies'. Strategy: 'highly curated exposure to the AI thematic through disciplined investments in differentiated and restricted opportunities across the AI technology stack, including semiconductors, AI infrastructure and AI and AI-enabling technologies and platforms'.",
+      "highlights": [
+        "USD 49 billion final close vs USD 45 billion target (1 July 2026); press calls it the largest dedicated AI fund raised to date; equivalent AED 180 billion (Khaleej Times).",
+        "14 portfolio companies since inception; the portfolio page names 13 (AIP, Aligned, Altera, Anthropic, Binance, Campus AI, Databricks, Isomorphic Labs, Khazna, OpenAI, SpaceX, TikTok USDS JV, Vantage) — one holding is unnamed.",
+        "No LP is named by MGX or any outlet; the Mubadala and G42 contributions are undisclosed. Bloomberg (January 2025) recorded a founding target of 'eventual assets of $100 billion'; press cites a deployment pace of about USD 10 billion a year (Quartz, PYMNTS, Semafor).",
+        "Regulated entity: MGX Fund Management Limited, FSP 240067, 'Managing a Collective Investment Fund' (18 October 2024), 'Advising on Investments or Credit' and 'Arranging Deals in Investments' (23 June 2025); Qualified Investor Funds only — 'not permitted to deal with Retail Clients'.",
+        "Geography: 'Approximately 70% of our capital is allocated to North America with the remainder across the UAE, Western Europe and selected APAC countries'."
+      ],
+      "positioning": "Larger than any single AI-dedicated private vehicle on the record and sovereign-backed, MGX's stated differentiator is access — 'differentiated and restricted opportunities' — through its chairman's and Mubadala's relationships (Semafor's 'playbook' account) and co-investment with Silver Lake, BlackRock/GIP, SoftBank and Bpifrance. Comparable pools of AI-infrastructure capital in the corpus are AIP itself (USD 30 billion equity / USD 100 billion with debt), Brookfield's and Blackstone's infrastructure funds, and SoftBank's Vision Funds; none is a state AI champion in the way MGX describes itself.",
+      "soldThrough": "Direct commitments from institutional and private LPs; ADGM Qualified Investor Fund structures; co-investment vehicles for deal-level partners.",
+      "targetSegments": [
+        "Gulf, North American, Asian and European institutional and private investors (LPs)",
+        "AI companies and platforms seeking a sovereign anchor investor with US, UAE and European reach"
+      ],
+      "roadmap": "Board releases in February 2026 noted 'strong fundraising momentum, including new commitments from top-tier international investors'; no successor fund has been announced."
+    },
+    {
+      "name": "AI Infrastructure Partnership (AIP) and Aligned Data Centers",
+      "category": "AI digital infrastructure — platform ownership",
+      "description": "AIP (launched 17 September 2024 as the Global AI Infrastructure Investment Partnership by BlackRock, Global Infrastructure Partners, Microsoft and MGX, with NVIDIA as technical partner) seeks 'to unlock $30 billion of private equity capital over time' and 'up to $100 billion in total investment potential when including debt financing' for data centres and 'energy infrastructure to create new sources of power for these facilities', chiefly in the United States. NVIDIA and xAI joined in March 2025, Cisco as technology partner, Kuwait Investment Authority (June 2025) and Temasek as financial anchors; GE Vernova and NextEra Energy 'agreed to collaborate with AIP to accelerate the scaling of critical and diverse energy solutions for AI data centers'. AIP's first investment — with MGX and GIP as direct co-buyers — was Aligned Data Centers: 100% of the equity from Macquarie Asset Management funds at about USD 40 billion enterprise value, announced 15 October 2025 and closed 21 July 2026 with 'an additional $5 billion of growth capital' committed.",
+      "highlights": [
+        "Aligned at close: '51 campuses and more than 6.4GW of operational and planned capacity' across Northern Virginia, Chicago, Dallas, Ohio, Phoenix, Salt Lake City, São Paulo, Querétaro and Santiago; CEO Andrew Schaap and team retained; HQ Dallas.",
+        "Governance seats: Ahmed Yahia Al Idrissi is Vice Chairman of AIP; Andre Namphy (MGX CLO) sits on AIP's Investment Committee; David Scott sits on AIP's board.",
+        "MGX's percentage of Aligned, the consortium's debt package and AIP's committed capital to date are undisclosed. ESG Dive lists AIP's members as BlackRock, Microsoft, NVIDIA, xAI, Temasek and KIA with Cisco as technology partner.",
+        "Energy: NextEra's CEO in the March 2025 release — 'an all forms of energy solution that leverages ready-now renewables and battery storage coupled with gas-fired and nuclear generation'; GE Vernova to 'work with AIP and its partners on supply chain planning'. Aligned's own October 2025 release adds a 31 MW / 62 MWh Calibrant battery in the Pacific Northwest.",
+        "Reported, not confirmed: Bloomberg-sourced reports (June 2026, in this corpus's STACK Infrastructure dossier) name the BlackRock/Microsoft/MGX-backed AIP among suitors for STACK's APAC portfolio."
+      ],
+      "positioning": "AIP is the vehicle through which MGX competes with Brookfield, Blackstone/QTS, DigitalBridge and KKR for hyperscale landlords; Aligned's 6.4 GW makes the consortium one of the largest owners of US data-centre capacity after one transaction. The energy leg — GE Vernova and NextEra agreements — is the part of MGX's footprint that touches this corpus's power and storage suppliers.",
+      "soldThrough": "Platform equity through AIP alongside direct co-investment (MGX and GIP were named buyers of Aligned separately from AIP).",
+      "targetSegments": [
+        "Hyperscale and AI data-centre operators (Aligned's tenants)",
+        "Power and energy-infrastructure counterparties via the GE Vernova and NextEra collaborations"
+      ],
+      "roadmap": "AIP's stated focus is 'the U.S. as well as OECD and U.S. partner countries'; USD 5 billion of growth capital committed to Aligned at closing; no second AIP investment announced as of September 2026."
+    },
+    {
+      "name": "Frontier models and core AI — OpenAI, Anthropic, xAI/SpaceX, Databricks, Isomorphic Labs",
+      "category": "AI technology — minority equity",
+      "description": "MGX's repeat positions in the frontier labs and data platforms this corpus tracks as compute buyers. OpenAI: participant in the October 2024 round (amount undisclosed), 'an additional major investment ... in its most recent $300 billion valuation funding round' (2025), a fourth follow-on via the employee secondary, and 'co-lead in OpenAI's latest US$122 billion funding round' at USD 852 billion (March 2026) — 'MGX's fifth follow-on in OpenAI'. Anthropic: first backed by May 2025, co-lead of the USD 30 billion Series G at USD 380 billion post-money (February 2026) and a 'significant investor' in the USD 65 billion Series H at USD 965 billion (May 2026). xAI: Series C (December 2024) and USD 20 billion Series E (January 2026), then the SpaceX merger. Databricks: co-lead of the USD 1 billion Series K (September 2025), Series L at USD 134 billion (December 2025) and the USD 5 billion round at USD 190 billion (August 2026); new investor in the USD 10 billion Series J (December 2024). Isomorphic Labs: new investor in the USD 2.1 billion Series B (May 2026), 'MGX's first foray' into AI drug discovery.",
+      "highlights": [
+        "No dollar amount or stake is disclosed for any of these positions; MGX declined to give its OpenAI ticket to AGBI (October 2024). Anthropic lists MGX as a co-lead in Series G alongside D. E. Shaw Ventures, Dragoneer, Founders Fund and ICONIQ (GIC and Coatue led).",
+        "Anthropic's acceptance of Gulf capital is documented as contested internally: WIRED (via Fwdstart) quoted Dario Amodei's 2025 memo — 'This is a real downside and I'm not thrilled about it' — with any deal to be 'narrowly scoped, purely financial' and without governance rights; The Intercept (June 2026) reports MGX in both Series G and H.",
+        "xAI names MGX among Series E investors with Valor, StepStone, Fidelity, QIA and Baron; MGX's own X post: 'This investment supports the rapid scaling of compute infrastructure and the buildout of the largest GPU clusters in the world.'",
+        "OpenAI is also MGX's Stargate co-funder; the board's December 2025 release describes 'deepening partnerships with leading AI shapers, such as OpenAI, xAI and Databricks'."
+      ],
+      "positioning": "Among sovereign and quasi-sovereign AI investors (QIA, GIC, Temasek, PIF vehicles), MGX is the only one that is simultaneously a co-lead in OpenAI and Anthropic rounds, a Stargate equity funder and an owner of the landlords (Aligned, Vantage) those labs lease from — the layered-counterparty pattern this corpus's Anthropic and OpenAI dossiers describe.",
+      "soldThrough": "Minority primary and secondary equity in private rounds, typically alongside a US lead investor.",
+      "targetSegments": [
+        "Frontier-model developers (OpenAI, Anthropic, xAI)",
+        "Data and AI platforms (Databricks) and AI-enabled life sciences (Isomorphic Labs)"
+      ],
+      "roadmap": "MGX's board language commits to 'frontier models and platforms to the infrastructure required to scale them globally'; no exit, listing or secondary sale of any position has been announced."
+    },
+    {
+      "name": "Compute campuses and colocation — Stargate LLC, Vantage, Khazna, Campus AI (France)",
+      "category": "AI digital infrastructure — campuses",
+      "description": "Stargate LLC: SoftBank's 22 January 2025 release names 'SoftBank, OpenAI, Oracle, and MGX' as 'the initial equity funders' of the USD 500 billion, four-year programme (SoftBank financial responsibility, OpenAI operational); Bloomberg reported MGX 'is contributing approximately $7 billion', which no principal has confirmed, and MGX's own channels carry no Stargate release. Vantage Data Centers (North America): 'further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin' (board release, December 2025). Khazna Data Centers: minority stake alongside Silver Lake with G42 as majority owner (March 2025), described by the board as MGX's route into Stargate UAE. Campus AI: joint venture with Bpifrance, Mistral AI and NVIDIA for a 1.4 GW Paris-region campus (May 2025; construction from H2 2026, operations by 2028; EDF and RTE as partners), expanded in June 2026 toward 'up to 3 GW of compute capacity nationwide' with a second site.",
+      "highlights": [
+        "Stargate caveats: SoftBank's September 2025 five-new-sites release names only OpenAI, Oracle and SoftBank; Stargate UAE's releases (G42, OpenAI, Oracle, NVIDIA, SoftBank, Cisco) do not name MGX; The Information (via The Decoder, February 2026) reports the JV 'hasn't hired any staff'. MGX is a committed initial funder of a vehicle whose operating form is disputed in the press.",
+        "The Information (via TechCrunch) framed the Stargate split as OpenAI and SoftBank at USD 19 billion each for 40% each with Oracle and MGX in the remaining 20% — a combined figure that conflicts with Bloomberg's about USD 7 billion for MGX alone; both are recorded as reported.",
+        "Vantage: amount undisclosed; the corpus's Vantage dossier carries the Texas (Frontier) and Wisconsin (Lighthouse) Stargate campuses.",
+        "Campus AI: Bloomberg put the first phase at EUR 8.5 billion (RCR Wireless); AGBI reports a EUR 7.5 billion June 2026 expansion partnership; equity split undisclosed.",
+        "Khazna: e& sold its 40% to G42 for AED 8 billion (AGBI); MGX's and Silver Lake's stakes are undisclosed."
+      ],
+      "positioning": "MGX holds the campus layer on both sides of the Atlantic: Stargate and Vantage in the US, Khazna in the UAE, Campus AI in France — the physical footprint behind the '8GWs by the end of 2026' contracted-capacity statement, though that figure is MGX's own and is not broken down.",
+      "soldThrough": "JV equity (Stargate LLC, Campus AI), platform equity (Vantage), minority stakes (Khazna).",
+      "targetSegments": [
+        "Hyperscaler and frontier-lab compute tenants (OpenAI at Stargate; Mistral at Campus AI)"
+      ],
+      "roadmap": "Campus AI construction 'expected to begin in the second half of 2026, with operations launching by 2028'; Stargate UAE's first 200 MW in 2026 (G42); no dated MGX-specific milestone."
+    },
+    {
+      "name": "Semiconductors and strategic platforms — Altera, TikTok USDS JV, Binance",
+      "category": "Semiconductors and strategic minority stakes",
+      "description": "Altera: co-investor with Silver Lake in the acquisition of a 51% stake from Intel (which retains 49%) 'valuing the company at $8.7 billion and establishing the world's largest independent pure-play FPGA business' (September 2025). TikTok USDS Joint Venture LLC: one of three managing investors — Silver Lake, Oracle and MGX 'each holding 15%' — with ByteDance at 19.9% (January 2026); David Scott sits on the seven-member board and its security committee. Binance: 'a landmark $2 billion investment ... the first institutional investment in Binance', a minority stake and 'the single largest investment into a crypto company and the largest investment ever paid in crypto (stablecoin)' (March 2025), settled in World Liberty Financial's USD1.",
+      "highlights": [
+        "Altera cheque size undisclosed; Omar Alismail (CIO Semiconductors & Infrastructure): 'Altera provides a foundational platform for next generation computing.'",
+        "TikTok USDS: dollar amount undisclosed; Semafor put the US app's valuation at USD 14 billion; the venture is the only MGX holding with a stated percentage other than Binance's 'minority'.",
+        "Binance/USD1: the settlement stablecoin belongs to the Trump-family-linked World Liberty Financial; Reuters, ABC and WSJ-sourced reporting document the controversy, Binance's CEO said the USD1 choice 'was made by MGX', and Senators Warren and Merkley wrote to MGX and Binance. Recorded as reported context, not as an MGX statement."
+      ],
+      "positioning": "These are access-driven stakes rather than a thesis: Altera through Silver Lake, TikTok through the US divestiture process, Binance as a first crypto position. The semiconductors pillar is otherwise unfilled on the portfolio page — no foundry, memory or GPU position is named despite the pillar's prominence in MGX's strategy.",
+      "soldThrough": "Consortium minority equity alongside Silver Lake and Oracle; direct minority investment (Binance).",
+      "targetSegments": [
+        "Semiconductor platforms (FPGA), US-regulated technology divestitures, digital-asset exchanges"
+      ],
+      "roadmap": "None stated."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Disclosed deal ledger — as MGX or the counterparty stated it (2024–2026)",
+      "specs": [
+        {
+          "band": "Funds",
+          "label": "MGX Fund I",
+          "value": "$49 billion in total commitments, significantly above its initial $45 billion target fund size; 14 companies (1 July 2026)"
+        },
+        {
+          "band": "Funds",
+          "label": "AIP",
+          "value": "$30 billion of private equity capital over time … up to $100 billion in total investment potential when including debt financing (Sep 2024)"
+        },
+        {
+          "band": "Data centres",
+          "label": "Aligned Data Centers",
+          "value": "approximately $40 billion enterprise value (announced 15 Oct 2025; closed 21 Jul 2026); 51 campuses and more than 6.4GW of operational and planned capacity; additional $5 billion of growth capital"
+        },
+        {
+          "band": "Data centres",
+          "label": "Vantage Data Centers",
+          "value": "further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin (Dec 2025); amount undisclosed"
+        },
+        {
+          "band": "Data centres",
+          "label": "Campus AI (France)",
+          "value": "1.4 GW Paris-region campus (May 2025; construction H2 2026, operations by 2028) → up to 3 GW of compute capacity nationwide (Jun 2026)"
+        },
+        {
+          "band": "Data centres",
+          "label": "Stargate LLC",
+          "value": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX (22 Jan 2025); $500 billion over the next four years; MGX ticket unconfirmed — Bloomberg: approximately $7 billion"
+        },
+        {
+          "band": "Frontier labs",
+          "label": "OpenAI",
+          "value": "five follow-ons; co-lead of the US$122 billion round at $852 billion (Mar 2026); amounts undisclosed"
+        },
+        {
+          "band": "Frontier labs",
+          "label": "Anthropic",
+          "value": "co-lead, $30 billion Series G at $380 billion post-money (Feb 2026); significant investor, $65B Series H at $965 billion (May 2026)"
+        },
+        {
+          "band": "Frontier labs",
+          "label": "xAI / SpaceX",
+          "value": "$6B Series C (Dec 2024); $20 billion Series E (Jan 2026); merger with SpaceX"
+        },
+        {
+          "band": "Platforms",
+          "label": "Databricks",
+          "value": "new investor, $10B Series J at $62B (Dec 2024); co-lead $1B Series K (Sep 2025); Series L at $134 billion (Dec 2025); $5 billion at $190 billion (Aug 2026)"
+        },
+        {
+          "band": "Platforms",
+          "label": "Isomorphic Labs",
+          "value": "$2.1B Series B (May 2026), new investor"
+        },
+        {
+          "band": "Strategic",
+          "label": "Altera",
+          "value": "co-investor with Silver Lake in a 51% stake; Intel retains 49%; valuing the company at $8.7 billion (Sep 2025)"
+        },
+        {
+          "band": "Strategic",
+          "label": "TikTok USDS Joint Venture LLC",
+          "value": "three managing investors, Silver Lake, Oracle and MGX, each holding 15%; ByteDance retains 19.9% (Jan 2026)"
+        },
+        {
+          "band": "Strategic",
+          "label": "Binance",
+          "value": "$2 billion … minority stake (Mar 2025); settled in World Liberty Financial's USD1 stablecoin (May 2025)"
+        },
+        {
+          "band": "Portfolio statement",
+          "label": "Contracted AI infrastructure capacity",
+          "value": "projected to exceed 8GWs by the end of 2026 (board release, 25 May 2026)"
+        }
+      ],
+      "notes": "Values verbatim from MGX releases, MGX X posts and counterparty releases; every 'undisclosed' is a genuine gap — MGX publishes no ticket sizes, stakes, AUM total or deployed-capital figure."
+    },
+    {
+      "product": "Corporate and regulatory record (ADGM)",
+      "specs": [
+        {
+          "band": "Structure",
+          "label": "Entities",
+          "value": "MGX Group Holding 1 Ltd … owns MGX Fund Management Limited; MGX Fund Management (US) LLC, 50 Hudson Yards, New York"
+        },
+        {
+          "band": "Structure",
+          "label": "Formation",
+          "value": "created 12 March 2024 by the Artificial Intelligence and Advanced Technology Council; Mubadala and G42 will serve as foundational partners"
+        },
+        {
+          "band": "Licence",
+          "label": "FSRA",
+          "value": "FSP Number 240067; FSP Date 18 October 2024; Managing a Collective Investment Fund (18 Oct 2024); Advising on Investments or Credit and Arranging Deals in Investments (23 Jun 2025); not permitted to deal with Retail Clients"
+        },
+        {
+          "band": "Funds registered",
+          "label": "Vehicles",
+          "value": "MGX Fund I LP (F-0144, 8 May 2024); MGX Fund I AIV-1 LP (F-0191, 17 Jul 2025); MGX I Co-Investment 2 LP (F-0202, 26 Aug 2025); MGX I Co-Investment 3 LP (F-0203, 29 Aug 2025) — all Qualified Investor Funds"
+        },
+        {
+          "band": "Governance",
+          "label": "Committees",
+          "value": "Board Executive Committee (Chair Peng Xiao); Nomination and Remuneration Committee (Chair Peng Xiao); Audit and Risk Committee (Chair Jassem Al Zaabi); Investment Committee (Chair Ahmed Yahia Al Idrissi); Management Committee (Co-Chair Danny Dweik)"
+        },
+        {
+          "band": "Governance",
+          "label": "Regulated-entity directors (FSRA register)",
+          "value": "Peng Xiao and Martin Edelman withdrawn as Licensed Directors 18 May 2026; Andre Namphy and Dani Dweik added 19 May 2026; Ahmed Yahia Licensed Director and SEO since 18 Oct 2024 — the Group board page is unchanged"
+        }
+      ],
+      "notes": "The regulated-entity director change concerns MGX Fund Management Limited's licensed board; both Xiao and Edelman attended the Group board's 25 May 2026 meeting. MGX has issued no statement on it."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-13",
+      "category": "financial",
+      "headline": "Databricks closes a USD 5 billion strategic round at a USD 190 billion valuation led by Coatue with Blackstone, MGX, T. Rowe Price accounts and Sixth Street Growth — MGX's fourth Databricks round",
+      "read": "A repeat position that MGX reposts verbatim rather than announces; the ticket is again undisclosed.",
+      "source": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales"
+    },
+    {
+      "date": "2026-08-06",
+      "category": "regulatory",
+      "headline": "Senator Warren presses Commerce on the UAE's move to Country Group A:5 and the department's stated favourable view of chip and server export applications 'destined for MGX', linking it to a reported USD 500 million UAE-linked investment in World Liberty Financial (CNBC via Incrypted)",
+      "read": "MGX's US access is now a named object of congressional scrutiny — the political-risk line that did not exist a year earlier.",
+      "source": "https://incrypted.com/en/senator-warren-calls-inquiry-uae-decision-following-investment-trump-family-crypto-project/"
+    },
+    {
+      "date": "2026-07-21",
+      "category": "ma",
+      "headline": "AIP, MGX and BlackRock's GIP close the acquisition of 100% of Aligned Data Centers from Macquarie-managed funds at about USD 40 billion enterprise value — 51 campuses, more than 6.4 GW operational and planned, USD 5 billion of additional growth capital committed; the largest data-centre deal on record",
+      "read": "MGX becomes an owner of the landlord its portfolio labs lease from; AIP's first investment is also its thesis in one asset.",
+      "source": "https://www.mgx.ae/news-insights/aip-mgx-and-blackrocks-gip-close-acquisition-aligned-data-centers"
+    },
+    {
+      "date": "2026-07-10",
+      "category": "regulatory",
+      "headline": "Warren statement: 'Trump's Commerce Department is giving G42 license-free access to advanced AI chips and promising favorable treatment for MGX'; calls for Lutnick and BIS Under Secretary Kessler to testify",
+      "read": "The export-control regime that governs MGX's portfolio (chips into UAE campuses) is being relaxed in its favour and contested in the same month.",
+      "source": "https://www.banking.senate.gov/newsroom/minority/senator-warren-statement-on-trump-administrations-removing-export-controls-on-ai-chips-to-uae"
+    },
+    {
+      "date": "2026-07-01",
+      "category": "financial",
+      "headline": "MGX confirms the final close of MGX Fund I at USD 49 billion in total commitments, above the USD 45 billion target, from Gulf, North American, Asian and European investors; 14 companies since inception",
+      "read": "The first hard size figure MGX has ever published — and it is the largest dedicated AI fund on the record.",
+      "source": "https://www.mgx.ae/news-insights/mgx-pleased-confirm-final-close-mgx-fund-i-49-billion-total-commitments-significantly"
+    },
+    {
+      "date": "2026-06-02",
+      "category": "project",
+      "headline": "Bpifrance, Mistral and MGX announce the expansion of Campus AI toward up to 3 GW of compute capacity across France, with a second site doubling the consortium's initial investment; witnessed by President Macron and Khaldoon Al Mubarak",
+      "read": "MGX's European campus leg scales before its first site has broken ground.",
+      "source": "https://www.mgx.ae/news-insights/bpifrance-mistral-and-mgx-expand-campus-ai-across-france-deliver-3-gw-network-ai"
+    },
+    {
+      "date": "2026-05-31",
+      "category": "financial",
+      "headline": "MGX joins Anthropic's USD 65 billion Series H at USD 965 billion post-money as a 'significant investor' (Altimeter, Dragoneer, Greenoaks and Sequoia led)",
+      "read": "Second Anthropic round in four months; The Intercept's June piece makes the Gulf-capital question public.",
+      "source": "https://x.com/mgx_ai/status/2061012967919858027"
+    },
+    {
+      "date": "2026-05-25",
+      "category": "corporate",
+      "headline": "Board meeting: MGX co-led OpenAI's USD 122 billion round — its fifth follow-on — joined Isomorphic Labs' USD 2.1 billion Series B, and states portfolio companies' contracted AI-infrastructure capacity is 'projected to exceed 8GWs by the end of 2026'",
+      "read": "The only aggregate capacity figure MGX has published; it is not broken down by asset.",
+      "source": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-chairs-mgxs-second-board-meeting-2026"
+    },
+    {
+      "date": "2026-03-31",
+      "category": "financial",
+      "headline": "OpenAI closes a USD 122 billion round at USD 852 billion; SoftBank and a16z as co-leads per SiliconANGLE, MGX among the major investors (MGX and the Abu Dhabi Media Office say MGX co-led)",
+      "read": "Fifth follow-on in a single company — the concentration MGX's 'high conviction' language describes.",
+      "source": "https://siliconangle.com/2026/03/31/openai-just-closed-record-breaking-122b-funding-round-brings-value-852b/"
+    },
+    {
+      "date": "2026-02-23",
+      "category": "market",
+      "headline": "The Information (via The Decoder) reports Stargate's joint venture 'hasn't hired any staff' more than a year after launch, with OpenAI working bilaterally with Oracle",
+      "read": "The vehicle MGX co-funded is disputed as an operating entity; MGX is not mentioned in the reporting.",
+      "source": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/"
+    },
+    {
+      "date": "2026-02-13",
+      "category": "financial",
+      "headline": "MGX co-leads Anthropic's USD 30 billion Series G at USD 380 billion post-money with D. E. Shaw Ventures, Dragoneer, Founders Fund and ICONIQ (GIC and Coatue led)",
+      "read": "From participant (2025) to co-lead in one round — the same escalation pattern as OpenAI.",
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+    },
+    {
+      "date": "2026-01-23",
+      "category": "ma",
+      "headline": "TikTok USDS Joint Venture LLC formed with Silver Lake, Oracle and MGX as managing investors at 15% each and ByteDance at 19.9%; MGX's David Scott takes a board and security-committee seat",
+      "read": "A stated percentage at last — and a US-regulated governance role for an Abu Dhabi fund.",
+      "source": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en"
+    },
+    {
+      "date": "2026-01-07",
+      "category": "financial",
+      "headline": "MGX participates in xAI's USD 20 billion Series E 'to support the rapid scaling of compute infrastructure and the buildout of the largest GPU clusters in the world'; xAI later merges with SpaceX",
+      "read": "Third frontier lab in the book; xAI is also an AIP technology partner.",
+      "source": "https://x.com/mgx_ai/status/2008755646716576254"
+    },
+    {
+      "date": "2025-12-09",
+      "category": "corporate",
+      "headline": "Final 2025 board meeting: MGX 'is expanding next-generation digital infrastructure through its further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin' and 'supporting the build-out of Stargate UAE through its investment in Khazna'",
+      "read": "The only MGX statement tying it to Stargate's physical campuses — through landlords, not through the JV.",
+      "source": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-al-nahyan-chairs-mgxs-final-board-meeting-2025"
+    },
+    {
+      "date": "2025-10-15",
+      "category": "ma",
+      "headline": "AIP, MGX and BlackRock's GIP agree to acquire all equity in Aligned Data Centers at about USD 40 billion enterprise value (50 campuses, more than 5 GW at announcement); AIP's first investment; anchors KIA and Temasek; partners Microsoft, NVIDIA, xAI, Cisco, GE Vernova, NextEra",
+      "read": "The consortium's first deployment goes to a landlord rather than a chip or power asset.",
+      "source": "https://aligneddc.com/press-release/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/"
+    },
+    {
+      "date": "2025-09-16",
+      "category": "ma",
+      "headline": "MGX joins Silver Lake as co-investor in the acquisition of a 51% stake in Altera from Intel, valuing the FPGA business at USD 8.7 billion",
+      "read": "The first and so far only semiconductor asset under a pillar MGX lists first in its strategy.",
+      "source": "https://www.mgx.ae/news-insights/mgx-joins-silver-lake-altera-acquisition"
+    },
+    {
+      "date": "2025-06-03",
+      "category": "partnership",
+      "headline": "Kuwait Investment Authority joins AIP as 'the first non-founder financial anchor investor'; AIP now counts NVIDIA, xAI and Cisco as technology partners",
+      "read": "AIP's capital base broadens beyond its four founders before its first deal.",
+      "source": "https://www.mgx.ae/news-insights/mgx-blackrock-global-infrastructure-partners-and-microsoft-welcome-kuwait-investment"
+    },
+    {
+      "date": "2025-05-19",
+      "category": "project",
+      "headline": "MGX, Bpifrance, Mistral AI and NVIDIA form a joint venture for a 1.4 GW AI campus in the Paris region with EDF, RTE, Bouygues and others as partners; construction from H2 2026, operations by 2028",
+      "read": "MGX's first campus JV outside the US–UAE axis, with the grid operator at the table from day one.",
+      "source": "https://www.mgx.ae/news-insights/mgx-bpifrance-mistral-ai-and-nvidia-launch-joint-venture-build-europes-largest-ai"
+    },
+    {
+      "date": "2025-05-01",
+      "category": "legal",
+      "headline": "World Liberty Financial's USD1 is announced as the stablecoin settling MGX's USD 2 billion Binance investment; Reuters, ABC and later WSJ-sourced reporting document the Trump-family link and congressional letters to MGX and Binance",
+      "read": "The reputational line that follows MGX into every US deal thereafter.",
+      "source": "https://www.kitco.com/news/off-the-wire/2025-05-01/trumps-stablecoin-chosen-2-billion-abu-dhabi-investment-binance-co"
+    },
+    {
+      "date": "2025-03-19",
+      "category": "partnership",
+      "headline": "NVIDIA and xAI join the renamed AI Infrastructure Partnership; GE Vernova and NextEra Energy agree to collaborate on 'critical and diverse energy solutions for AI data centers'",
+      "read": "The power leg of MGX's footprint is created here — by agreement, through AIP, with no MGX-owned generation.",
+      "source": "https://www.mgx.ae/news-insights/blackrock-gip-microsoft-and-mgx-welcome-nvidia-and-xai-aip"
+    },
+    {
+      "date": "2025-03-12",
+      "category": "financial",
+      "headline": "MGX makes 'a landmark $2 billion investment' for a minority stake in Binance — 'the first institutional investment in Binance' and MGX's first crypto position",
+      "read": "The one MGX deal with a published dollar figure at signing.",
+      "source": "https://www.mgx.ae/news-insights/mgx-backs-binance-landmark-investment"
+    },
+    {
+      "date": "2025-01-22",
+      "category": "partnership",
+      "headline": "Stargate announced: USD 500 billion over four years with 'SoftBank, OpenAI, Oracle, and MGX' as initial equity funders; Bloomberg reports MGX contributing about USD 7 billion",
+      "read": "MGX's most-cited role in this corpus rests on one sentence in a SoftBank release and a press-reported number.",
+      "source": "https://group.softbank/en/news/press/20250122"
+    },
+    {
+      "date": "2024-09-17",
+      "category": "partnership",
+      "headline": "BlackRock, GIP, Microsoft and MGX launch the Global AI Infrastructure Investment Partnership targeting USD 30 billion of equity and up to USD 100 billion with debt for data centres and 'energy infrastructure to create new sources of power'",
+      "read": "MGX's route into data-centre ownership and, later, Aligned — six months after its own creation.",
+      "source": "https://www.mgx.ae/news-insights/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "openai",
+      "type": "other",
+      "status": "active",
+      "since": "2024-10",
+      "note": "Portfolio company and Stargate co-funder: five follow-on investments including co-lead of the USD 122 billion round (March 2026), and one of four initial equity funders of Stargate LLC — the `type` enum has no 'portfolio' value, so the honest typing is `other`.",
+      "context": "MGX's board releases record the sequence: participation in the October 2024 round (amount undisclosed), 'an additional major investment in OpenAI in its most recent $300 billion valuation funding round' (September 2025), 'participation in OpenAI's latest employee secondary—its fourth follow-on investment in OpenAI' (February 2026) and 'participation as co-lead in OpenAI's latest US$122 billion funding round. This investment, which marks MGX's fifth follow-on in OpenAI' (May 2026). SoftBank's Stargate release names 'SoftBank, OpenAI, Oracle, and MGX' as the initial equity funders. No dollar figure or stake is published by either party; Bloomberg's about USD 7 billion Stargate figure is press-reported.\n\nThe OpenAI dossier on this corpus records 'Oracle and MGX equity partners' in Stargate — consistent with the SoftBank text. MGX's own Stargate exposure is otherwise indirect: Vantage (Texas and Wisconsin campuses) and Khazna (Stargate UAE).",
+      "source": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-chairs-mgxs-second-board-meeting-2026"
+    },
+    {
+      "slug": "aligned",
+      "type": "other",
+      "status": "active",
+      "since": "2026-07",
+      "scale": "~USD 40 billion EV; 51 campuses; 6.4 GW",
+      "note": "Owner since 21 July 2026: MGX, AIP and BlackRock's GIP acquired 100% of Aligned's equity from Macquarie-managed funds and committed USD 5 billion of growth capital — a portfolio holding typed `other` because the enum carries no 'portfolio' value.",
+      "context": "The closing release: 'AIP, MGX, and BlackRock's Global Infrastructure Partners (GIP) today announced the completion of their acquisition of 100% of the equity in Aligned Data Centers' at 'approximately $40 billion' enterprise value, with 'an additional $5 billion of growth capital'; Aligned has '51 campuses and more than 6.4GW of operational and planned capacity'. MGX is named as a direct buyer alongside AIP (which it co-founded) and GIP. Its percentage and the debt package are undisclosed.\n\nAligned's dossier on this corpus carries the same transaction from the target's side and lists NVIDIA, Microsoft, xAI and GE Vernova as investors through AIP. The consortium members are also, through Stargate, Vantage and the frontier labs, the tenants' financiers — the layered ownership this corpus's landlord dossiers describe.",
+      "source": "https://www.mgx.ae/news-insights/aip-mgx-and-blackrocks-gip-close-acquisition-aligned-data-centers"
+    },
+    {
+      "slug": "anthropic",
+      "type": "other",
+      "status": "active",
+      "since": "2025-05",
+      "scale": "co-lead, USD 30bn Series G; significant investor, USD 65bn Series H",
+      "note": "Portfolio company: first backed by May 2025, co-lead of the USD 30 billion Series G (February 2026) and a 'significant investor' in the USD 65 billion Series H (May 2026); typed `other` for want of a 'portfolio' enum value.",
+      "context": "Anthropic's Series G release lists MGX among the co-leads ('The round was co-led by D. E. Shaw Ventures, Dragoneer, Founders Fund, ICONIQ, and MGX'); its Series H release lists MGX under 'Significant investors'. MGX's board release calls the Series G a 'follow-on investment', so a prior position existed — the May 2025 board release had 'welcomed MGX investments in leading large language models (LLM's) including Open AI, Anthropic and xAI'. Amounts undisclosed.\n\nThe relationship carries a documented governance debate on the Anthropic side: WIRED (via Fwdstart) quoted Dario Amodei's memo that Gulf capital is 'a real downside and I'm not thrilled about it' and that any deal would be 'narrowly scoped, purely financial'; The Intercept (June 2026) reports MGX in both rounds. The corpus's Anthropic dossier records MGX in the Series G investor list.",
+      "source": "https://x.com/mgx_ai/status/2022186555738341520"
+    },
+    {
+      "slug": "xai",
+      "type": "other",
+      "status": "active",
+      "since": "2024-12",
+      "scale": "USD 6bn Series C; USD 20bn Series E",
+      "note": "Portfolio company (Series C, December 2024; USD 20 billion Series E, January 2026; subsequently merged with SpaceX) and AIP technology partner since March 2025; typed `other` for want of a 'portfolio' enum value.",
+      "context": "xAI's Series C release names MGX among participants; its Series E release lists MGX with Valor Equity Partners, StepStone, Fidelity, QIA and Baron Capital, with NVIDIA and Cisco as strategic investors. MGX's X post: 'This investment supports the rapid scaling of compute infrastructure and the buildout of the largest GPU clusters in the world.' MGX's portfolio page now lists the holding as SpaceX following the merger noted in the February 2026 board release. xAI also joined AIP as a technology partner in March 2025 and is named among Aligned's strategic partners.",
+      "source": "https://x.ai/news/series-e"
+    },
+    {
+      "slug": "microsoft",
+      "type": "partner",
+      "status": "active",
+      "since": "2024-09",
+      "via": "AI Infrastructure Partnership (AIP)",
+      "note": "Co-founder with MGX, BlackRock and GIP of the AI Infrastructure Partnership (September 2024) and a co-owner of Aligned through it.",
+      "context": "The launch release: 'BlackRock, Global Infrastructure Partners (GIP), Microsoft, and MGX announced the Global AI Infrastructure Investment Partnership (GAIIP) to make investments in new and expanded data centers … as well as energy infrastructure to create new sources of power for these facilities', seeking 'to unlock $30 billion of private equity capital over time' and 'up to $100 billion in total investment potential when including debt financing'. Brad Smith: 'The capital spending needed for AI infrastructure and the new energy to power it goes beyond what any single company or government can finance.' Microsoft is also G42's USD 1.5 billion investor (2024), which Bloomberg links to MGX's board composition.",
+      "source": "https://www.mgx.ae/news-insights/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership"
+    },
+    {
+      "slug": "nvidia",
+      "type": "partner",
+      "status": "active",
+      "since": "2024-09",
+      "via": "AIP (technical partner, then member); Campus AI joint venture",
+      "note": "NVIDIA supported AIP at launch as technical partner, joined it in March 2025, and is MGX's co-shareholder with Bpifrance and Mistral in the Campus AI joint venture (May 2025).",
+      "context": "September 2024: 'NVIDIA will support GAIIP'; March 2025: 'NVIDIA and xAI will join the Global AI Infrastructure Investment Partnership, now named the AI Infrastructure Partnership (AIP)'. May 2025: 'Bpifrance … and MGX … together with … Mistral AI, and … NVIDIA, announced the formation of a joint venture to establish Europe's largest AI Campus … expected to ultimately reach a capacity of 1.4 GW.' NVIDIA is also a strategic investor in xAI's Series E and among Aligned's strategic partners after the AIP acquisition.",
+      "source": "https://www.mgx.ae/news-insights/mgx-bpifrance-mistral-ai-and-nvidia-launch-joint-venture-build-europes-largest-ai"
+    },
+    {
+      "slug": "oracle",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-01",
+      "via": "Stargate LLC (co-funder); TikTok USDS Joint Venture (co-managing investor, 15% each)",
+      "note": "Fellow initial equity funder of Stargate LLC and co-managing investor with MGX and Silver Lake in the TikTok USDS Joint Venture.",
+      "context": "SoftBank's Stargate release: 'The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX'; The Information (via TechCrunch) framed Oracle and MGX as sharing the remaining 20% after OpenAI and SoftBank's 40% each. TikTok's newsroom: 'TikTok USDS Joint Venture has three managing investors, Silver Lake, Oracle and MGX, each holding 15%', with Oracle as 'Trusted Security Partner'. Oracle's own Stargate campuses (Abilene and the five 2025 sites) are recorded in the corpus's Oracle and OpenAI dossiers; MGX is not named in the later Stargate site releases.",
+      "source": "https://group.softbank/en/news/press/20250122"
+    },
+    {
+      "slug": "vantage",
+      "type": "other",
+      "status": "active",
+      "since": "2025",
+      "scale": "Stargate build-out of 2.3 gigawatts in Texas and Wisconsin",
+      "note": "Portfolio holding: 'further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin' (board release, December 2025); amount undisclosed; typed `other` for want of a 'portfolio' enum value.",
+      "context": "MGX's December 2025 board release is the only first-party statement: 'In the United States, MGX is expanding next-generation digital infrastructure through its further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin.' Vantage Data Centers (North America) appears on MGX's portfolio page. The corpus's Vantage dossier carries the Frontier (Texas) and Lighthouse (Wisconsin) Stargate campuses; 'further investments' implies an earlier position that no MGX channel dates.",
+      "source": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-al-nahyan-chairs-mgxs-final-board-meeting-2025"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-03",
+      "via": "AI Infrastructure Partnership (AIP)",
+      "note": "GE Vernova 'agreed to collaborate with AIP to accelerate the scaling of critical and diverse energy solutions for AI data centers' and to work 'on supply chain planning and in delivering innovative and high efficiency energy solutions' (March 2025); named a strategic partner in the Aligned acquisition.",
+      "context": "An AIP-level agreement rather than a bilateral MGX contract: the March 2025 release quotes GE Vernova's CEO on 'an all-of-the-above approach … utilizing gas, nuclear, wind and more', and Aligned's October 2025 announcement lists GE Vernova among the consortium's strategic partners. No MGX-owned generation or equipment order exists; the link is recorded because it is the only route by which MGX's capital reaches this corpus's power-equipment suppliers.",
+      "source": "https://www.mgx.ae/news-insights/blackrock-gip-microsoft-and-mgx-welcome-nvidia-and-xai-aip"
+    },
+    {
+      "slug": "nextera-energy-resources",
+      "type": "other",
+      "status": "active",
+      "since": "2025-03",
+      "via": "AI Infrastructure Partnership (AIP) — agreement with parent NextEra Energy",
+      "note": "NextEra Energy (parent of NextEra Energy Resources) 'agreed to collaborate with AIP' on energy for AI data centres (March 2025) and is named among Aligned's strategic partners; an AIP-level, parent-level tie, so typed `other`.",
+      "context": "The March 2025 AIP release quotes NextEra's CEO: 'an all forms of energy solution that leverages ready-now renewables and battery storage coupled with gas-fired and nuclear generation in the future … to get as many electrons onto the grid as quickly and most cost effectively as possible.' The agreement is with NextEra Energy, Inc.; the covered slug is its competitive-generation subsidiary, and no project, PPA or MW is stated — hence `other`.",
+      "source": "https://www.mgx.ae/news-insights/blackrock-gip-microsoft-and-mgx-welcome-nvidia-and-xai-aip"
+    },
+    {
+      "slug": "stack-infrastructure",
+      "type": "other",
+      "status": "announced",
+      "since": "2026-06",
+      "note": "Reported only: Bloomberg-sourced reports (June 2026) name the BlackRock/Microsoft/MGX-backed AIP among suitors for STACK's APAC data-centre portfolio, a sale that could exceed USD 30 billion. No party has confirmed; recorded as `announced` with the reporter named.",
+      "context": "The corpus's STACK Infrastructure dossier carries the Bloomberg-sourced reporting that Blue Owl is preparing a sale of STACK's Tokyo, Osaka, Sydney, Melbourne and Johor portfolio with AIP, Brookfield, IFM, KKR and DigitalBridge among reported suitors. MGX's own channels are silent; AIP's stated geography ('the U.S. as well as OECD and U.S. partner countries') would admit Japan and Australia. Treat as an unconfirmed lead until AIP, MGX or Blue Owl states it.",
+      "source": "STACK Infrastructure dossier (this corpus) — Bloomberg-sourced reports, June 2026; no MGX or AIP statement"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "US export controls — UAE chip access (Country Group A:5, July 2026)",
+      "status": "in-effect",
+      "effectiveDate": "2026-07",
+      "exposure": "MGX's US and UAE portfolio depends on advanced-chip flows that were restricted under the Biden-era proposals and G42's prior Commerce scrutiny (Bloomberg, January 2025; House and Senate Democrats, May 2025). In July 2026 Commerce moved the UAE to Country Group A:5 — licence-free shipment of certain sensitive technologies — and, per CNBC via Incrypted, 'said it would view favorably export applications for semiconductors and server equipment destined for MGX'; Senator Warren's 10 July statement describes 'favorable treatment for MGX' and links it to a UAE-linked stake in World Liberty Financial, calling for Commerce testimony.",
+      "mitigation": "None stated by MGX. MGX did not respond to The Intercept; its channels carry no export-control statement.",
+      "source": "https://incrypted.com/en/senator-warren-calls-inquiry-uae-decision-following-investment-trump-family-crypto-project/"
+    },
+    {
+      "regime": "US congressional scrutiny — Binance/USD1 and the Trump-family link",
+      "status": "in-effect",
+      "effectiveDate": "2025-05",
+      "exposure": "MGX's USD 2 billion Binance investment was settled in World Liberty Financial's USD1 stablecoin (announced 1 May 2025); Reuters, ABC and WSJ-sourced reporting document the Trump-family connection, Binance's CEO said the USD1 choice 'was made by MGX', and Senators Warren and Merkley wrote to MGX and Binance. The episode recurs in the 2026 export-control debate.",
+      "mitigation": "None stated by MGX; the Binance release describes the deal only as 'the largest investment ever paid in crypto (stablecoin)'.",
+      "source": "https://www.kitco.com/news/off-the-wire/2025-05-01/trumps-stablecoin-chosen-2-billion-abu-dhabi-investment-binance-co"
+    },
+    {
+      "regime": "US CFIUS / national-security review — TikTok divestiture",
+      "status": "in-effect",
+      "effectiveDate": "2026-01",
+      "exposure": "MGX holds 15% of TikTok USDS Joint Venture LLC, the vehicle created 'in compliance with US regulatory requirements' under the divestiture law, with David Scott on its board and security committee providing 'governance oversight of security and safety risks associated with emerging AI technologies'. The structure is itself a product of US national-security review, and press (Silicon Republic) notes MGX's 'close ties to the United Arab Emirates political class'.",
+      "mitigation": "Company statement: the JV 'has three managing investors, Silver Lake, Oracle and MGX, each holding 15%' with Oracle as 'Trusted Security Partner'.",
+      "source": "https://www.mgx.ae/news-insights/tiktok-usds-joint-venture-llc-established-compliance-us-regulatory-requirements"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "His Highness Sheikh Tahnoon bin Zayed Al Nahyan",
+      "title": "Chairman of the Board",
+      "photo": "images/execs/mgx-al-nahyan.jpg",
+      "background": [
+        "Deputy Ruler of Abu Dhabi and National Security Advisor of the United Arab Emirates; Chairman of the Artificial Intelligence and Advanced Technology Council (AIATC), which created MGX in March 2024",
+        "Chairman of ADIA, ADQ, IHC, First Abu Dhabi Bank and G42; member of the Supreme Council for Financial and Economic Affairs",
+        "Quoted at MGX's creation: 'In MGX, we are establishing a UAE national champion focused on AI and advanced technologies'"
+      ]
+    },
+    {
+      "name": "H.E. Khaldoon Khalifa Al Mubarak",
+      "title": "Vice Chairman; member of the Board Executive Committee and Nomination and Remuneration Committee",
+      "photo": "images/execs/mgx-al-mubarak.jpg",
+      "background": [
+        "Managing Director and Group CEO of Mubadala Investment Company; Chairman of the Executive Affairs Authority; Secretary General of the AIATC (from October 2025)",
+        "Chairman of Manchester City FC and City Football Group; boards of ADNOC, G42, ADCB and Mubadala Capital",
+        "Witnessed the June 2026 Campus AI expansion signing with President Macron; Tufts University"
+      ]
+    },
+    {
+      "name": "Ahmed Yahia Al Idrissi",
+      "title": "Managing Director, Chief Executive Officer and Investment Committee Chairman; Board member; Vice Chairman of the AI Infrastructure Partnership",
+      "photo": "images/execs/mgx-al-idrissi.jpg",
+      "background": [
+        "CEO of MGX since its creation (March 2024); quoted on the AIP launch, the KIA admission, Campus AI and the Aligned acquisition",
+        "Previously CEO of Private Equity / Direct Investments at Mubadala and a member of Mubadala's Investment Committee; earlier Partner at McKinsey & Company, Managing Partner of the Abu Dhabi practice",
+        "Former Chairman of GlobalFoundries, NOVA Chemicals and Moeve; former board member of AMD, Masdar, Tabreed and Emirates Global Aluminium",
+        "MSc MIT (Mechanical Engineering / Product Strategy); Engineer's degree, Ecole Centrale Paris"
+      ]
+    },
+    {
+      "name": "H.E. Jassem Mohammed Bu Ataba Al Zaabi",
+      "title": "Board member; Chairman of the Audit and Risk Committee; member of the Board Executive Committee",
+      "photo": "images/execs/mgx-al-zaabi.jpg",
+      "background": [
+        "Chairman of the Department of Finance, Abu Dhabi; Secretary General of the Supreme Council for Financial and Economic Affairs",
+        "Chairman of the Abu Dhabi Pension Fund, Modon Holding and e&; Vice Chairman of the UAE Central Bank and ADQ",
+        "MBA London Business School"
+      ]
+    },
+    {
+      "name": "Peng Xiao",
+      "title": "Board member; Chairman of the Board Executive Committee and of the Nomination and Remuneration Committee",
+      "photo": "images/execs/mgx-xiao.jpg",
+      "background": [
+        "Group CEO of G42 — one of MGX's two foundational partners",
+        "Formerly Senior Executive Vice President, CTO and CIO of MicroStrategy",
+        "Withdrawn as a Licensed Director of the regulated entity MGX Fund Management Limited on 18 May 2026 per the ADGM register; remains on the Group board and attended the 25 May 2026 board meeting"
+      ]
+    },
+    {
+      "name": "Martin Edelman",
+      "title": "Board member; member of the Nomination and Remuneration Committee",
+      "photo": "images/execs/mgx-edelman.jpg",
+      "background": [
+        "More than 50 years of legal experience; adviser to Mubadala Investment Company, RedBird IMI and Fortune; General Counsel of G42",
+        "Boards of Aldar REIT, City Football Group and Equity Commonwealth",
+        "Joined the MGX board by September 2024; withdrawn as a Licensed Director of the regulated entity on 18 May 2026 per the ADGM register, remaining on the Group board"
+      ]
+    },
+    {
+      "name": "Danny (Dani) Dweik",
+      "title": "Chief Operating Officer, Chief Finance Officer and Investment Committee member; Co-Chair of the Management Committee; Licensed Director of MGX Fund Management Limited (from 19 May 2026)",
+      "photo": "images/execs/mgx-dweik.jpg",
+      "background": [
+        "Executive Director at Mubadala leading the Industrials and Business Services and the Energy and Sustainability sectors",
+        "CEO of NOVA Chemicals; CEO and CFO of Emirates Global Aluminium; Associate Partner, McKinsey",
+        "MPA Harvard; MBA McGill"
+      ]
+    },
+    {
+      "name": "Ali Osman",
+      "title": "Chief Investment Officer, Artificial Intelligence; Investment Committee member",
+      "photo": "images/execs/mgx-osman.jpg",
+      "background": [
+        "Over 15 years at Mubadala Investment Company managing a portfolio exceeding USD 10 billion; established Mubadala's Technology unit (over USD 4 billion across software and tech-enabled services) and co-founded its Life Sciences unit",
+        "Boards of Avalara, Outset Medical, Sterling Pharmaceutical Solutions and Envision Pharma Group; Davos fireside (January 2026)",
+        "MBA Harvard Business School; BS Tufts"
+      ]
+    },
+    {
+      "name": "Dr. Guy Harmelin",
+      "title": "Chief Investment Officer, Advanced Technology; Investment Committee member",
+      "photo": "images/execs/mgx-harmelin.jpg",
+      "background": [
+        "Senior advisor to the CEO of G42 and to CIM Group; led the direct technology investment arm at Harel Insurance",
+        "Co-founder and CEO of RondinX (merged with BiomX); co-founder of Ayala Pharma",
+        "MD, University of Florence"
+      ]
+    },
+    {
+      "name": "Omar Alismail",
+      "title": "Chief Investment Officer, Semiconductors and Infrastructure; Investment Committee member; Management Committee member",
+      "photo": "images/execs/mgx-alismail.jpg",
+      "background": [
+        "Quoted on the Altera acquisition: 'Altera provides a foundational platform for next generation computing.'",
+        "Established the Mubadala Operating Partners team; Deputy CFO of GlobalFoundries and co-led its 2021 IPO; board observer at GlobalFoundries and TM Mining Ventures",
+        "CFA; MSc Imperial College London"
+      ]
+    },
+    {
+      "name": "Andre Namphy",
+      "title": "Chief Legal Officer and Investment Committee member; Board Secretary; member of AIP's Investment Committee; Licensed Director of MGX Fund Management Limited (from 19 May 2026)",
+      "photo": "images/execs/mgx-namphy.jpg",
+      "background": [
+        "General Counsel of Direct Investments at Mubadala Investment Company; earlier Sullivan & Cromwell (New York, Hong Kong)",
+        "BA Harvard; D.Phil. Oxford (Rhodes Scholar); JD Yale"
+      ]
+    },
+    {
+      "name": "David Scott",
+      "title": "Chief Strategy, External Affairs (and Safety) Officer; Investment Committee member; board member of TikTok USDS JV, AIP, ENEC and TerraPower",
+      "photo": "images/execs/mgx-scott.jpg",
+      "background": [
+        "Leads strategy (target themes, capital allocation, portfolio risk) and the safety function (safety-related investment criteria); MGX's designee on the TikTok USDS JV board and security committee; media contact on the Aligned closing release",
+        "Executive Director for Economic and Energy Affairs at Abu Dhabi's Executive Affairs Authority; regional VP, Occidental Petroleum; NSC Director for Arabian Peninsula and North African Affairs (White House); US Foreign Service Officer; US Army veteran",
+        "Managing Director of the Mohamed bin Zayed Water Initiative; Davos fireside chat (January 2026)"
+      ]
+    },
+    {
+      "name": "Misha Logvinov",
+      "title": "Chief Technology Officer; Management Committee member; leads the New York office",
+      "photo": "images/execs/mgx-logvinov.jpg",
+      "background": [
+        "Drives AI value creation across the investment lifecycle and operations",
+        "Senior operating partner at Mubadala; Managing Director and Head of Technology Strategy at EQT; Oracle (OCI North America); CIO of Lithium Technologies"
+      ]
+    },
+    {
+      "name": "Laila Saif",
+      "title": "Chief People Officer; Management Committee member",
+      "photo": "images/execs/mgx-saif.jpg",
+      "background": [
+        "Over 21 years of HR leadership including 12 years at Mubadala Group companies; Director of Human Capital at Emirates Global Aluminium; GE Capital; advised the EDGE Group restructuring"
+      ]
+    },
+    {
+      "name": "Amal Al Qasim",
+      "title": "Chief of Staff to the CEO; Management Committee member",
+      "photo": "images/execs/mgx-al-qasim.jpg",
+      "background": [
+        "Nearly a decade as Operations Manager for Mubadala's Direct Investments platform; supports the CEO on the Board, Board Executive Committee, Investment Committee and AIP (USA)"
+      ]
+    },
+    {
+      "name": "Andy Pickens",
+      "title": "Managing Director and AI product lead, US operations (per Bloomberg via EnterpriseAM, March 2025)",
+      "background": [
+        "Ex-Apollo Global Management; hired alongside David Mamikonyan (Chief Security Officer, ex-Warburg Pincus) and Emilio Mena Jr (legal, ex-Wafra) — press-reported, not on the MGX leadership page"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (private fund manager — no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Capital base",
+            "actual": "Not disclosed. MGX Fund I LP registered in ADGM on 8 May 2024; Bloomberg (January 2025) recorded a founding target of 'eventual assets of $100 billion'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ADGM register; press-reported target"
+          },
+          {
+            "name": "Deals announced",
+            "actual": "GAIIP/AIP co-founded (USD 30 billion equity target, up to USD 100 billion with debt); OpenAI October 2024 round (participant, amount undisclosed); xAI Series C (USD 6 billion round, participant); Databricks Series J (USD 10 billion round, new investor)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company and counterparty releases"
+          }
+        ],
+        "commentary": "The formation year: licence granted 18 October 2024; three of the four board meetings were held; no capital figure was published."
+      },
+      {
+        "period": "FY2025 (no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Disclosed commitments",
+            "actual": "Binance USD 2 billion (minority); Stargate LLC initial equity funder (about USD 7 billion per Bloomberg, unconfirmed); Altera 51% stake with Silver Lake (company valued at USD 8.7 billion; MGX share undisclosed); Khazna minority stake (undisclosed); Campus AI JV 1.4 GW (Bloomberg: EUR 8.5 billion first phase; equity split undisclosed); Aligned agreed at about USD 40 billion EV (MGX share undisclosed); Databricks Series K co-lead (USD 1 billion round) and Series L (USD 134 billion valuation); OpenAI USD 300 billion-valuation round and employee secondary",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases, X posts, counterparty releases; one press-reported figure flagged"
+          },
+          {
+            "name": "Fundraising",
+            "actual": "'progress on MGX's global fundraising activities' (December 2025 board release); MGX Fund I AIV-1 and two co-investment vehicles registered July–August 2025",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; ADGM register"
+          }
+        ],
+        "commentary": "CEO (December 2025): '2025 has been a defining year for MGX. We have moved from vision to execution, deploying capital at scale.' No total deployed figure accompanies the statement."
+      },
+      {
+        "period": "2026 year to date (through 5 September 2026)",
+        "periodType": "other",
+        "periodEnd": "2026-09-05",
+        "metrics": [
+          {
+            "name": "MGX Fund I final close",
+            "actual": "'$49 billion in total commitments, significantly above its initial $45 billion target fund size'; 14 portfolio companies (1 July 2026)",
+            "expected": "USD 45 billion target (company)",
+            "verdict": "beat",
+            "result": "Company release; the only audited-grade size figure MGX has published"
+          },
+          {
+            "name": "Deals announced",
+            "actual": "xAI USD 20 billion Series E (participant); TikTok USDS JV 15%; Anthropic USD 30 billion Series G (co-lead) and USD 65 billion Series H (significant investor); OpenAI USD 122 billion round (co-lead); Isomorphic Labs USD 2.1 billion Series B; Campus AI expansion toward 3 GW; Aligned closed (USD 40 billion EV, USD 5 billion growth capital); Databricks USD 5 billion at USD 190 billion",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company and counterparty releases; amounts undisclosed"
+          },
+          {
+            "name": "Portfolio capacity statement",
+            "actual": "Contracted AI-infrastructure capacity of portfolio companies 'projected to exceed 8GWs by the end of 2026'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Board release, 25 May 2026; not broken down"
+          }
+        ],
+        "commentary": "Deployment pace is press-estimated at about USD 10 billion a year (Quartz, PYMNTS, Semafor); MGX publishes no deployed-capital total, no returns and no headcount. 'Expected' is left empty except where MGX itself stated a target."
+      }
+    ],
+    "commentary": "Collection gap: MGX publishes no annual report, financial statements, AUM total, LP names, ticket sizes or stake percentages. The record consists of one fund-size figure (USD 49 billion), one stated percentage (15% of TikTok USDS JV), one stated dollar deal (USD 2 billion Binance), and counterparty round sizes in which MGX's share is unstated."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that MGX is a state AI champion operating as a fund, and that its edge is access rather than analysis. Basis: created by a government council with the UAE's National Security Advisor as chairman and the Mubadala and G42 chiefs on its board; the 'differentiated and restricted opportunities' language in its own fund-close release; co-lead roles in OpenAI and Anthropic rounds within two years of formation; Semafor's account of a 'playbook' built on leadership relationships and co-investment with Silver Lake, BlackRock/GIP and SoftBank. The USD 49 billion close from unnamed Gulf, North American, Asian and European LPs shows third-party capital has followed.",
+    "2. **(High confidence)** We assess that MGX's exposure to this corpus runs through ownership of the landlords and the labs at once, and that no MGX statement quantifies either. Basis: initial equity funder of Stargate LLC (SoftBank release), owner of Aligned (about USD 40 billion EV, 6.4 GW) with AIP and GIP, investor in Vantage 'to support the Stargate build-out of 2.3 gigawatts', and repeat investor in OpenAI, Anthropic and xAI — while every ticket, stake and the Stargate contribution are undisclosed (Bloomberg's about USD 7 billion is press-reported). The '8GWs by the end of 2026' contracted-capacity figure is MGX's own aggregate.",
+    "3. **(Moderate confidence)** We assess that Stargate LLC is a smaller part of MGX's actual footprint than its ten corpus mentions imply. Basis: MGX has never issued a Stargate release; SoftBank's September 2025 expansion and every Stargate UAE release omit MGX; The Information (February 2026) reports the JV never hired staff and that OpenAI works bilaterally with Oracle. MGX's dated, first-party Stargate exposure is via Vantage and Khazna — landlords — rather than the JV. A confirmed MGX equity contribution to Stargate LLC would reverse this judgment.",
+    "4. **(Moderate confidence)** We assess that US political risk to MGX has moved from background to foreground in 2026 and is now the main threat to its North American deployment. Basis: the Binance settlement in the Trump-family-linked USD1 stablecoin (May 2025) drew Senate letters; the July 2026 export-control relaxation for the UAE, with Commerce's stated favourable view of applications 'destined for MGX', drew Senator Warren's calls for testimony and a CNBC-reported USD 500 million UAE-linked stake in World Liberty Financial; Anthropic's own memo treats Gulf capital as 'a real downside'. About 70% of MGX's capital is allocated to North America, so an adverse turn in Congress or a change of administration bears directly on the book.",
+    "5. **(Low confidence)** We assess that MGX's energy exposure is entirely derivative and that no MGX-owned power asset should be expected. Basis: every energy statement on MGX channels is made through AIP (GE Vernova and NextEra 'all forms of energy' collaborations), Aligned (cooling efficiency, a 31 MW / 62 MWh Calibrant battery) or Campus AI (EDF, RTE); David Scott's ENEC and TerraPower board seats are personal. A direct MGX investment in generation, fuel or storage would move this judgment; none is announced.",
+    "Collection gap: no headcount; no Mubadala or G42 ownership percentage (a 'ownership-v3.jpg' graphic on the site could not be read); no LP names; no ticket or stake for any frontier-lab, Aligned, Vantage, Khazna, Altera or Stargate position; the mgx.ae news index shows a '$18B Series K' headline for Databricks where the X post and board release say USD 1 billion (treated as a site typo); no MGX statement on the 18–19 May 2026 change of licensed directors at the regulated entity; the alleged intelligence findings on G42 and the reported G42 US-redomiciling plan were not verifiable from any fetched page. Premise check against the coverage-plan row: 'Stargate and Aligned money (10 dossiers)' holds for Aligned (owner since 21 July 2026) and holds narrowly for Stargate (named initial equity funder; contribution unconfirmed; later Stargate communications omit MGX); two of the ten corpus MGX mentions turned out to be NVIDIA's MGX rack architecture, not the fund — see the step 7 note in the session record.",
+    "INDICATORS TO WATCH — *Q4 2026 — AIP's second investment:* a power, chip or campus asset would show whether AIP is a data-centre owner or a broader infrastructure platform; *end-2026 — the '8 GW' contracted-capacity claim:* any breakdown by asset would make Judgment 2 testable; *2026–2027 — a first-party Stargate LLC statement naming MGX's contribution:* would reverse Judgment 3; *congressional action on UAE chip access or the USD1 matter:* hearings or legislation naming MGX would confirm Judgment 4; *any MGX investment in generation, fuel or storage:* would end Judgment 5; *a successor fund announcement:* the first test of whether the USD 49 billion close is repeatable."
+  ],
+  "sources": [
+    {
+      "label": "MGX — Databricks $5B strategic funding at $190B valuation (Databricks release reposted on mgx.ae)",
+      "url": "https://www.mgx.ae/news-insights/mgx-coatue-blackstone-trowe-price-and-sixth-street-growth-closes-databricks-5b",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Databricks — grows 80% YoY, surpasses $7B revenue run-rate, closes $5B at $190B valuation",
+      "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Incrypted (relaying CNBC) — Senator Warren calls for inquiry into UAE export-control decision following investment in Trump family crypto project",
+      "url": "https://incrypted.com/en/senator-warren-calls-inquiry-uae-decision-following-investment-trump-family-crypto-project/",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "ESG Dive — BlackRock's GIP, Microsoft-backed AI group buy Aligned Data Centers for $40B",
+      "url": "https://www.esgdive.com/news/blackrocks-gip-microsoft-backed-ai-group-buy-aligned-data-centers-for-40/825920/",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "MGX — AIP, MGX and BlackRock's GIP close acquisition of Aligned Data Centers",
+      "url": "https://www.mgx.ae/news-insights/aip-mgx-and-blackrocks-gip-close-acquisition-aligned-data-centers",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "Aligned Data Centers — AIP, MGX and BlackRock's GIP close acquisition of Aligned Data Centers (51 campuses, 6.4 GW, $5B growth capital)",
+      "url": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "Pulse 2.0 — AIP, MGX and BlackRock's GIP close $40 billion Aligned acquisition",
+      "url": "https://pulse2.com/aligned-data-centers-aip-mgx-and-blackrocks-gip-close-40-billion-acquisition/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "EnterpriseAM MENA+ — reports that G42 will become mostly US-owned, 'take 'em with a kilo of salt'",
+      "url": "https://enterpriseam.com/menaplus/2026/07/17/those-reports-that-g42-is-going-to-be-mostly-us-downed-take-em-with-a-kilo-of-salt/",
+      "date": "2026-07-17"
+    },
+    {
+      "label": "US Senate Banking Committee (minority) — Senator Warren statement on removing export controls on AI chips to the UAE ('favorable treatment for MGX')",
+      "url": "https://www.banking.senate.gov/newsroom/minority/senator-warren-statement-on-trump-administrations-removing-export-controls-on-ai-chips-to-uae",
+      "date": "2026-07-10"
+    },
+    {
+      "label": "MGX — final close of MGX Fund I at $49 billion in total commitments, above the $45 billion target",
+      "url": "https://www.mgx.ae/news-insights/mgx-pleased-confirm-final-close-mgx-fund-i-49-billion-total-commitments-significantly",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "The National — Abu Dhabi's AI investment firm MGX raises $49bn for new fund",
+      "url": "https://www.thenationalnews.com/business/markets/2026/07/01/abu-dhabis-ai-investment-firm-mgx-raises-49bn-for-new-fund/",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Quartz via Yahoo Finance — Abu Dhabi's MGX closes $49 billion AI fund above target",
+      "url": "https://finance.yahoo.com/technology/ai/articles/abu-dhabis-mgx-closes-49-142845970.html",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Tech Startups — MGX closes record $49 billion AI fund after backing OpenAI, Anthropic and xAI",
+      "url": "https://techstartups.com/2026/07/01/abu-dhabis-mgx-closes-record-49-billion-ai-fund-to-invest-across-ai-infrastructure-chips-and-ai-companies-after-backing-openai-anthropic-and-xai/",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Khaleej Times — Abu Dhabi's MGX raises Dh180 billion from institutional, elite investors",
+      "url": "https://www.khaleejtimes.com/business/abu-dhabis-mgx-raises-dh180-billion-from-institutional-elite-investors",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "AGBI — MGX raises $49bn as investors flock to AI",
+      "url": "https://www.agbi.com/ai/2026/07/mgx-raises-49bn-as-investors-flock-to-ai/",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "PYMNTS — MGX pursues AI infrastructure investments with $49 billion fund",
+      "url": "https://www.pymnts.com/news/investment-tracker/2026/mgx-pursues-ai-infrastructure-investments-with-49-billion-fund/",
+      "date": "2026-07"
+    },
+    {
+      "label": "The Intercept — Anthropic says we must stop authoritarian AI; what about its authoritarian investors?",
+      "url": "https://theintercept.com/2026/06/06/anthropic-ai-investor-abu-dhabi-china/",
+      "date": "2026-06-06"
+    },
+    {
+      "label": "MGX — Bpifrance, Mistral and MGX to expand Campus AI across France to a 3 GW network",
+      "url": "https://www.mgx.ae/news-insights/bpifrance-mistral-and-mgx-expand-campus-ai-across-france-deliver-3-gw-network-ai",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "MGX on X — MGX has joined Anthropic's $65B Series H funding round",
+      "url": "https://x.com/mgx_ai/status/2061012967919858027",
+      "date": "2026-05-31",
+      "party": "company"
+    },
+    {
+      "label": "The National — MGX touts participation in Anthropic's $65bn Series H",
+      "url": "https://www.thenationalnews.com/future/technology/2026/05/29/mgx-anthropic-series-h-uae/",
+      "date": "2026-05-29"
+    },
+    {
+      "label": "Anthropic — Series H: $65 billion at $965 billion post-money",
+      "url": "https://www.anthropic.com/news/series-h",
+      "date": "2026-05-28"
+    },
+    {
+      "label": "MGX — Sheikh Tahnoon bin Zayed chairs MGX's second board meeting of 2026 (OpenAI $122bn co-lead; portfolio capacity to exceed 8 GW)",
+      "url": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-chairs-mgxs-second-board-meeting-2026",
+      "date": "2026-05-25"
+    },
+    {
+      "label": "Abu Dhabi Media Office — Tahnoon bin Zayed chairs MGX's second board meeting of 2026",
+      "url": "https://www.mediaoffice.abudhabi/en/economy/tahnoon-bin-zayed-chairs-mgxs-second-board-meeting-of-2026/",
+      "date": "2026-05-25"
+    },
+    {
+      "label": "MGX on X — MGX participates in Isomorphic Labs' $2.1B Series B",
+      "url": "https://x.com/mgx_ai/status/2054418891800203496",
+      "date": "2026-05-13",
+      "party": "company"
+    },
+    {
+      "label": "Isomorphic Labs — $2.1 billion Series B funding",
+      "url": "https://www.isomorphiclabs.com/press/isomorphic-labs-funding",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "Yahoo Finance (The Cool Down) — OpenAI raises $122 billion at $852 billion valuation",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/openai-raises-122-billion-852-073000122.html",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "SiliconANGLE — OpenAI closes record $122B funding round, valued at $852B",
+      "url": "https://siliconangle.com/2026/03/31/openai-just-closed-record-breaking-122b-funding-round-brings-value-852b/",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "MGX — Sheikh Tahnoon bin Zayed chairs MGX's first board meeting of 2026 (xAI Series E, Anthropic Series G co-lead, fourth OpenAI follow-on)",
+      "url": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-al-nahyan-chairs-mgxs-first-board-meeting-2026",
+      "date": "2026-02-27"
+    },
+    {
+      "label": "The Decoder (citing The Information) — Stargate's $500 billion project reportedly stalls over disputes between OpenAI, Oracle and SoftBank",
+      "url": "https://the-decoder.com/stargates-500-billion-ai-infrastructure-project-reportedly-stalls-over-unresolved-disputes-between-openai-oracle-and-softbank/",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "Semafor — The playbook Abu Dhabi's MGX uses to get exclusive investment opportunities",
+      "url": "https://www.semafor.com/article/02/18/2026/the-playbook-abu-dhabis-mgx-uses-to-get-exclusive-investment-opportunities",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "MGX on X — MGX co-leads Anthropic's $30 billion Series G at a $380 billion post-money valuation",
+      "url": "https://x.com/mgx_ai/status/2022186555738341520",
+      "date": "2026-02-13",
+      "party": "company"
+    },
+    {
+      "label": "The National — MGX participates in Anthropic's $30 billion Series G",
+      "url": "https://www.thenationalnews.com/future/technology/2026/02/13/mgx-anthropic-investment-ai/",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Anthropic — $30 billion Series G at $380 billion post-money valuation",
+      "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "TechCrunch — Anthropic raises another $30B in Series G at a $380 billion valuation",
+      "url": "https://techcrunch.com/2026/02/12/anthropic-raises-another-30-billion-in-series-g-with-a-new-value-of-380-billion/",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "MGX — David Scott fireside chat at Semafor Haus, Davos",
+      "url": "https://www.mgx.ae/news-insights/mgx-chief-strategy-and-external-affairs-officer-david-scott-joined-fireside-chat",
+      "date": "2026-01-26"
+    },
+    {
+      "label": "TikTok Newsroom — announcement from the new TikTok USDS Joint Venture LLC (Oracle, Silver Lake, MGX 15% each)",
+      "url": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en",
+      "date": "2026-01-23"
+    },
+    {
+      "label": "Silicon Republic — TikTok forms US joint venture, Oracle to control security",
+      "url": "https://www.siliconrepublic.com/business/tiktok-us-joint-venture-bytedance-oracle-mgx-silver-lake",
+      "date": "2026-01-23"
+    },
+    {
+      "label": "MGX — TikTok USDS Joint Venture LLC established in compliance with US regulatory requirements",
+      "url": "https://www.mgx.ae/news-insights/tiktok-usds-joint-venture-llc-established-compliance-us-regulatory-requirements",
+      "date": "2026-01-22"
+    },
+    {
+      "label": "MGX on X — MGX participates in xAI's $20 billion Series E",
+      "url": "https://x.com/mgx_ai/status/2008755646716576254",
+      "date": "2026-01-07",
+      "party": "company"
+    },
+    {
+      "label": "xAI — xAI raises $20B Series E",
+      "url": "https://x.ai/news/series-e",
+      "date": "2026-01-06"
+    },
+    {
+      "label": "MGX on X — MGX participated in Databricks' Series L at a $134 billion valuation",
+      "url": "https://x.com/mgx_ai/status/2000977839215255947",
+      "date": "2025-12-16",
+      "party": "company"
+    },
+    {
+      "label": "MGX — Sheikh Tahnoon bin Zayed chairs MGX's final board meeting of 2025 (Vantage/Stargate 2.3 GW; Khazna/Stargate UAE)",
+      "url": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-al-nahyan-chairs-mgxs-final-board-meeting-2025",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "Benzinga via Yahoo Finance (citing WSJ) — Binance denied it helped Trump's crypto venture build USD1",
+      "url": "https://finance.yahoo.com/news/binance-denied-helped-trumps-crypto-154604507.html",
+      "date": "2025-11-13"
+    },
+    {
+      "label": "Aligned Data Centers — Aligned and Calibrant to deploy first-of-its-kind energy solution (31 MW / 62 MWh BESS)",
+      "url": "https://aligneddc.com/press-release/aligned-and-calibrant-to-deploy-first-of-its-kind-energy-solution/",
+      "date": "2025-10-22"
+    },
+    {
+      "label": "PR Newswire (G42) — G42 provides update on construction of Stargate UAE AI infrastructure cluster",
+      "url": "https://www.prnewswire.com/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586401.html",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "Semafor via Yahoo Finance — Abu Dhabi's MGX part of $40B Aligned Data Centers acquisition",
+      "url": "https://finance.yahoo.com/news/abu-dhabis-mgx-part-40b-102948213.html",
+      "date": "2025-10-16"
+    },
+    {
+      "label": "MGX — AIP, MGX and BlackRock's GIP to acquire all equity in Aligned Data Centers (announcement)",
+      "url": "https://www.mgx.ae/news-insights/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "Aligned Data Centers — AIP, MGX and BlackRock's GIP to acquire all equity in Aligned Data Centers (~$40B EV; KIA, Temasek anchors; Microsoft, NVIDIA, xAI, Cisco, GE Vernova, NextEra partners)",
+      "url": "https://aligneddc.com/press-release/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "MGX — Sheikh Tahnoon bin Zayed chairs MGX board meeting (OpenAI $300bn round, Altera, Databricks Series K)",
+      "url": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-al-nahyan-chairs-mgxs-board-meeting",
+      "date": "2025-09-28"
+    },
+    {
+      "label": "Semafor via Yahoo Finance — Abu Dhabi's MGX joins consortium to keep TikTok alive in US",
+      "url": "https://finance.yahoo.com/news/abu-dhabis-mgx-joins-consortium-121923320.html",
+      "date": "2025-09-26"
+    },
+    {
+      "label": "SoftBank Group — OpenAI, Oracle and SoftBank expand Stargate with five new US sites",
+      "url": "https://group.softbank/en/news/press/20250924",
+      "date": "2025-09-24"
+    },
+    {
+      "label": "MGX — MGX joins Silver Lake in Altera acquisition (51% stake; Intel retains 49%)",
+      "url": "https://www.mgx.ae/news-insights/mgx-joins-silver-lake-altera-acquisition",
+      "date": "2025-09-16"
+    },
+    {
+      "label": "MGX on X — MGX co-leads $1B Series K in Databricks",
+      "url": "https://x.com/mgx_ai/status/1965381572594647311",
+      "date": "2025-09-09",
+      "party": "company"
+    },
+    {
+      "label": "Fwdstart (citing WIRED) — 'Not thrilled about it': Anthropic rethinks Gulf capital stance",
+      "url": "https://www.fwdstart.me/p/anthropic-rethinks-gulf-capital-stance-to-fund-ai-growth",
+      "date": "2025-07-22"
+    },
+    {
+      "label": "MGX — MGX, BlackRock, GIP and Microsoft welcome Kuwait Investment Authority to the AI Infrastructure Partnership",
+      "url": "https://www.mgx.ae/news-insights/mgx-blackrock-global-infrastructure-partners-and-microsoft-welcome-kuwait-investment",
+      "date": "2025-06-03"
+    },
+    {
+      "label": "BlackRock IR — MGX, BlackRock, GIP and Microsoft welcome KIA to AIP",
+      "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2025/MGX-BlackRock-Global-Infrastructure-Partners-and-Microsoft-Welcome-Kuwait-Investment-Authority-KIA-to-the-AI-Infrastructure-Partnership/default.aspx",
+      "date": "2025-06-03"
+    },
+    {
+      "label": "Global Infrastructure Partners — KIA joins AIP (GE Vernova and NextEra energy agreements)",
+      "url": "https://www.global-infra.com/news/mgx-blackrock-global-infrastructure-partners-and-microsoft-welcome-kuwait-investment-authority-kia-to-the-ai-infrastructure-partnership/",
+      "date": "2025-06-03"
+    },
+    {
+      "label": "RCR Wireless — AI campus initiative unites MGX, Nvidia and French partners (1.4 GW Paris campus)",
+      "url": "https://www.rcrwireless.com/20250522/ai-ml/nvidia-ai-campus-france",
+      "date": "2025-05-22"
+    },
+    {
+      "label": "SoftBank Group — Global tech alliance launches Stargate UAE",
+      "url": "https://group.softbank/en/news/press/20250522",
+      "date": "2025-05-22"
+    },
+    {
+      "label": "G42 — Global tech alliance launches Stargate UAE (G42, OpenAI, Oracle, NVIDIA, SoftBank, Cisco)",
+      "url": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+      "date": "2025-05-22"
+    },
+    {
+      "label": "MGX — MGX, Bpifrance, Mistral AI and NVIDIA launch joint venture to build Europe's largest AI campus (1.4 GW)",
+      "url": "https://www.mgx.ae/news-insights/mgx-bpifrance-mistral-ai-and-nvidia-launch-joint-venture-build-europes-largest-ai",
+      "date": "2025-05-19"
+    },
+    {
+      "label": "Middle East AI News — MGX and Bpifrance back 1.4 GW Paris AI campus",
+      "url": "https://www.middleeastainews.com/p/mgx-bpifrance-1gw-paris-ai-campus",
+      "date": "2025-05-19"
+    },
+    {
+      "label": "US House Intelligence Committee Democrats — statement on Middle East AI chip deals (G42's history with China)",
+      "url": "https://democrats-intelligence.house.gov/news/documentsingle.aspx?DocumentID=1380",
+      "date": "2025-05-16"
+    },
+    {
+      "label": "MGX — Sheikh Tahnoon bin Zayed chairs MGX's first board meeting of 2025 (Ain launch; OpenAI, Anthropic, xAI investments welcomed)",
+      "url": "https://www.mgx.ae/news-insights/tahnoon-bin-zayed-chairs-mgxs-first-board-meeting-2025",
+      "date": "2025-05-11"
+    },
+    {
+      "label": "ABC News — Trump family crypto venture tapped as part of $2B Emirati-backed deal",
+      "url": "https://abcnews.com/US/trump-family-crypto-venture-tapped-part-2b-emirati/story?id=121415842",
+      "date": "2025-05-02"
+    },
+    {
+      "label": "The Block — World Liberty Financial's USD1 to close Binance's $2 billion investment from MGX",
+      "url": "https://www.theblock.co/post/352830/world-liberty-financials-usd1-binances-2-billion-investment-mgx-report",
+      "date": "2025-05-01"
+    },
+    {
+      "label": "Reuters via Kitco — Trump's stablecoin chosen for $2 billion Abu Dhabi investment in Binance",
+      "url": "https://www.kitco.com/news/off-the-wire/2025-05-01/trumps-stablecoin-chosen-2-billion-abu-dhabi-investment-binance-co",
+      "date": "2025-05-01"
+    },
+    {
+      "label": "AGBI — MGX buys stake in Dubai's Khazna Data Centers",
+      "url": "https://www.agbi.com/tech/2025/03/mgx-buys-stake-in-dubais-khazna-data-centers/",
+      "date": "2025-03-27"
+    },
+    {
+      "label": "Khazna Data Centers — Khazna welcomes MGX and Silver Lake as strategic minority investors",
+      "url": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/",
+      "date": "2025-03-26"
+    },
+    {
+      "label": "MGX — BlackRock, GIP, Microsoft and MGX welcome NVIDIA and xAI to the AI Infrastructure Partnership (GE Vernova, NextEra collaborate)",
+      "url": "https://www.mgx.ae/news-insights/blackrock-gip-microsoft-and-mgx-welcome-nvidia-and-xai-aip",
+      "date": "2025-03-19"
+    },
+    {
+      "label": "EnterpriseAM (citing Bloomberg) — MGX taps new MD and AI product lead for the US (Pickens, Mamikonyan)",
+      "url": "https://enterpriseam.com/uae/2025/03/13/mgx-taps-new-md-and-ai-product-lead-for-the-us-franklin-templeton-taps-new-dubai-based-solutions-portfolio-manager/",
+      "date": "2025-03-13"
+    },
+    {
+      "label": "MGX — MGX backs Binance in landmark $2 billion investment",
+      "url": "https://www.mgx.ae/news-insights/mgx-backs-binance-landmark-investment",
+      "date": "2025-03-12"
+    },
+    {
+      "label": "Futurism — This Emirati prince controls four times Elon Musk's wealth (Tahnoon profile)",
+      "url": "https://futurism.com/uae-sheikh-tahnoon-wealth-ai",
+      "date": "2025-02-27"
+    },
+    {
+      "label": "Bloomberg via Yahoo Finance — Abu Dhabi's MGX helps bankroll Trump's $100 billion AI plan (about $7 billion to Stargate)",
+      "url": "https://finance.yahoo.com/news/abu-dhabi-fund-helping-bankroll-113758378.html",
+      "date": "2025-01-23"
+    },
+    {
+      "label": "TechCrunch (citing The Information) — OpenAI and SoftBank reportedly putting $19B each into Stargate",
+      "url": "https://techcrunch.com/2025/01/23/openai-and-softbank-are-reportedly-putting-19b-each-into-stargate",
+      "date": "2025-01-23"
+    },
+    {
+      "label": "Crunchbase News — MGX role grows: Stargate, OpenAI, G42, TikTok",
+      "url": "https://news.crunchbase.com/ai/mgx-role-grows-stargate-openai-g42-tiktok/",
+      "date": "2025-01-23"
+    },
+    {
+      "label": "SoftBank Group — Announcing The Stargate Project (initial equity funders SoftBank, OpenAI, Oracle, MGX)",
+      "url": "https://group.softbank/en/news/press/20250122",
+      "date": "2025-01-22"
+    },
+    {
+      "label": "Mubadala — AI to revolutionize investment strategies: Mubadala and MGX 'Alpha Intelligence' report",
+      "url": "https://www.mubadala.com/en/news/ai-to-revolutionize-investment-strategies-mubadala-and-mgx-report",
+      "date": "2025-01-22"
+    },
+    {
+      "label": "MGX — Sheikh Tahnoon bin Zayed chairs MGX's year-end board meeting 2024",
+      "url": "https://www.mgx.ae/news-insights/tahnoon-bin-zayed-chairs-mgxs-year-end-board-meeting-2024",
+      "date": "2024-12-20"
+    },
+    {
+      "label": "xAI — xAI raises $6B Series C (MGX named)",
+      "url": "https://x.ai/news/series-c",
+      "date": "2024-12-23"
+    },
+    {
+      "label": "Databricks — $10B Series J at $62B valuation (MGX a new investor)",
+      "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-10b-series-j-investment-62b-valuation",
+      "date": "2024-12-17"
+    },
+    {
+      "label": "AGBI — UAE's MGX part of OpenAI's $6.6bn fund raising",
+      "url": "https://www.agbi.com/ai/2024/10/uaes-mgx-part-of-openais-6-6bn-fund-raising/",
+      "date": "2024-10-03"
+    },
+    {
+      "label": "MGX — BlackRock, Global Infrastructure Partners, Microsoft and MGX launch new AI partnership (GAIIP, $30bn equity / $100bn potential)",
+      "url": "https://www.mgx.ae/news-insights/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership",
+      "date": "2024-09-17"
+    },
+    {
+      "label": "BlackRock IR — BlackRock, GIP, Microsoft and MGX launch new AI partnership to invest in data centers and supporting power infrastructure",
+      "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2024/BlackRock-Global-Infrastructure-Partners-Microsoft-and-MGX-Launch-New-AI-Partnership-to-Invest-in-Data-Centers-and-Supporting-Power-Infrastructure/default.aspx",
+      "date": "2024-09-17"
+    },
+    {
+      "label": "Microsoft Source — BlackRock, GIP, Microsoft and MGX launch GAIIP",
+      "url": "https://news.microsoft.com/source/2024/09/17/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership-to-invest-in-data-centers-and-supporting-power-infrastructure/",
+      "date": "2024-09-17"
+    },
+    {
+      "label": "MGX — Tahnoon bin Zayed chairs second MGX board meeting",
+      "url": "https://www.mgx.ae/news-insights/tahnoon-bin-zayed-chairs-second-mgx-board-meeting",
+      "date": "2024-09-02"
+    },
+    {
+      "label": "MGX — Tahnoon bin Zayed chairs inaugural meeting of MGX",
+      "url": "https://www.mgx.ae/news-insights/tahnoon-bin-zayed-chairs-inaugural-meeting-mgx",
+      "date": "2024-05-28"
+    },
+    {
+      "label": "MGX (WAM copy) — Abu Dhabi launches comprehensive global investment strategy on artificial intelligence; MGX created with Mubadala and G42 as foundational partners",
+      "url": "https://www.mgx.ae/news-insights/abu-dhabi-launches-comprehensive-global-investment-strategy-artificial-intelligence",
+      "date": "2024-03-12"
+    },
+    {
+      "label": "Mubadala — Abu Dhabi launches comprehensive global investment strategy on artificial intelligence",
+      "url": "https://www.mubadala.com/en/news/abu-dhabi-launches-comprehensive-global-investment-strategy-on-artificial-intelligence",
+      "date": "2024-03-11"
+    },
+    {
+      "label": "MGX — homepage",
+      "url": "https://www.mgx.ae/"
+    },
+    {
+      "label": "MGX — Who we are",
+      "url": "https://www.mgx.ae/who-we-are"
+    },
+    {
+      "label": "MGX — Investment strategy (semiconductors, AI digital infrastructure, AI technology; ~70% North America)",
+      "url": "https://www.mgx.ae/investment-strategy"
+    },
+    {
+      "label": "MGX — Our portfolio (13 named holdings)",
+      "url": "https://www.mgx.ae/our-portfolio"
+    },
+    {
+      "label": "MGX — Our board",
+      "url": "https://www.mgx.ae/our-board"
+    },
+    {
+      "label": "MGX — Our leadership team",
+      "url": "https://www.mgx.ae/our-leadership-team"
+    },
+    {
+      "label": "MGX — Contact (Abu Dhabi ADGM and New York entities)",
+      "url": "https://www.mgx.ae/contact"
+    },
+    {
+      "label": "MGX — News & insights index",
+      "url": "https://www.mgx.ae/news-insights"
+    },
+    {
+      "label": "ADGM FSRA — firm profile: MGX Fund Management Limited (FSP 240067)",
+      "url": "https://www.adgm.com/api/FSRAC_FirmPdf/GenerateFirmProfilePdf?FirmId=165728",
+      "party": "disclosure"
+    },
+    {
+      "label": "ADGM FSRA public register — MGX Fund Management Limited",
+      "url": "https://www.adgm.com/public-registers/fsra/firms/financial-firms/mgx-fund-management-limited-240067",
+      "party": "disclosure"
+    },
+    {
+      "label": "ADGM fund register — MGX Fund I LP (F-0144)",
+      "url": "https://www.adgm.com/public-registers/fsra/funds/mgx-fund-i-lp-f-0144",
+      "party": "disclosure"
+    },
+    {
+      "label": "ADGM fund register — MGX Fund I AIV-1 LP (F-0191)",
+      "url": "https://www.adgm.com/public-registers/fsra/funds/mgx-fund-i-aiv-1-lp-f-0191",
+      "party": "disclosure"
+    },
+    {
+      "label": "ADGM fund register — MGX I Co-Investment 2 LP (F-0202)",
+      "url": "https://www.adgm.com/public-registers/fsra/funds/mgx-i-co-investment-2-lp-f-0202",
+      "party": "disclosure"
+    },
+    {
+      "label": "ADGM fund register — MGX I Co-Investment 3 LP (F-0203)",
+      "url": "https://www.adgm.com/public-registers/fsra/funds/mgx-i-co-investment-3-lp-f-0203",
+      "party": "disclosure"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

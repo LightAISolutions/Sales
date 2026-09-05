@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 2,
+  "slug": "x-energy",
+  "title": "X-energy — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-fuel-is-the-reactor",
+      "title": "Start here: the fuel is the reactor",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The Oklo guide in this corpus teaches the reactor as a machine: moderators and coolants, why a coolant's boiling point sets the size of the building, passive safety, why fuel is the constraint, what 'modular' buys, the two regulators, load-following and the years from design to first power. This guide repeats none of it. It takes one design — X-energy's Xe-100, a {{pebble-bed reactor}} of the {{HTGR}} family — and teaches the things that are specific to it: why the safety case lives inside a sub-millimetre fuel particle, why running at 750°C is the product, why a fuel factory got its licence before any reactor did, what a construction permit on an 18-month clock actually is, what an {{order book}} of 144 reactors means when four are binding, and how a company with no plant went public on a {{capital-light model}} funded by {{cost share}}.",
+        "**Five ideas carry it.** The {{TRISO}} particle is the containment. Heat at 750°C is what an industrial customer buys; electricity is the by-product. Continuous refuelling changes what a reactor is for. The vendor does not own the plant — a ring of owner, builder, engineer and buyer does — and the vendor's revenue is grants and services until the first unit runs. And {{HALEU}} is the constraint that survives every licence.",
+        "**Left to other guides.** Reactor physics and passive safety (Oklo); the regulated utility's clock and large-load tariffs (Dominion); the merchant nuclear plant and behind-the-meter loads (Talen, Constellation); the constructor's view of first-of-a-kind (Kiewit); the bankability of a project (DNV, Sargent & Lundy)."
+      ]
+    },
+    {
+      "id": "the-particle-is-the-containment",
+      "title": "The particle is the containment: what TRISO does",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "A conventional reactor keeps radioactivity in with layers of steel and concrete around the core. A {{pebble-bed reactor}} inverts that: the barrier is built into the fuel. A {{TRISO}} particle is a uranium kernel about half a millimetre across wrapped in four layers — a porous carbon buffer that absorbs fission gases, an inner pyrolytic carbon layer, a silicon carbide shell and an outer pyrolytic carbon layer. The silicon carbide is the pressure vessel; it holds fission products at temperatures far above anything the reactor can reach. X-energy's figures: '18,000 uranium kernels in each pebble', fuel that 'Remains stable above 1450C', '600°C above light water reactor temperatures'.",
+        "Some 200,000 of those pebbles — graphite spheres the size of billiard balls — fill the core. Because the fuel cannot melt and the graphite core has enormous thermal mass, the design claims a {{negative temperature coefficient}} strong enough that a loss of cooling makes the reactor hotter, slower and then stable without pumps or operator action. That is the safety argument the NRC accepted as the {{functional containment}} approach: the containment function is performed by the fuel and the physics, not by a large pressure-tight building.",
+        "The regulatory consequence is concrete. Long Mott's construction permit application was the first commercial advanced-reactor application to receive an {{environmental assessment}} with a finding of no significant impact rather than a full environmental impact statement — a review that finished 'ahead of schedule' in May 2026 — and one of the intervenor contentions the NRC's licensing board dismissed was precisely a challenge to functional containment. The particle, in other words, shortened the permit.",
+        "Two things the particle does not do. It does not remove the need for enriched uranium — the kernels are {{HALEU}} at 15.5% U-235, three times the enrichment of the existing fleet's fuel. And it does not make itself: TRISO coating is a manufacturing process, and that is why the next section is about a factory."
+      ]
+    },
+    {
+      "id": "why-750-degrees-is-the-product",
+      "title": "Why 750°C is the product, not a spec",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A light-water reactor's coolant leaves the core at about 300°C; the steam it makes runs a turbine at modest efficiency and is useless for most chemistry. The Xe-100 uses helium — a gas that does not boil, does not react and does not become radioactive — heated to '750°C Outlet Temperature', and makes '565°C Steam Temperature' in a steam generator. That steam can drive a turbine at a higher {{Rankine cycle}} efficiency, or it can be piped into a chemical plant as {{process heat}}.",
+        "The second use is why Dow is the first customer. Dow's UCC Seadrift site makes 'more than 4 billion pounds of materials per year' and burns fuel to make steam; four Xe-100s (320 MWe, 800 MWt) are to supply 'electricity and high-temperature industrial steam' to it. The reactor's unit of sale there is megawatts thermal, not electrical — 200 MWt per unit against 80 MWe — and the customer's alternative is a gas boiler, not a wind farm. X-energy's Chief Scientist frames the roadmap in the same terms: 'medium-temperature applications up to 600°C for steam needs in oil recovery and refining, and high-temperature applications reaching 900°C for steam reforming and hydrogen production'.",
+        "For the data-centre buyer the arithmetic is different but the temperature still matters: a higher steam temperature means more electricity per unit of heat and less cooling water per megawatt, and the design's '10-25% Land Use vs. Large LWR' follows partly from that. The {{SMR}} label is common to a dozen designs; the 750°C outlet is what distinguishes an {{HTGR}} from a light-water SMR such as the BWRX-300 or NuScale's module, and it is why the corpus files X-energy under the industrial and hyperscaler buyers rather than only the utilities."
+      ]
+    },
+    {
+      "id": "continuous-refuelling",
+      "title": "Continuous refuelling changes what a reactor is for",
+      "kind": "prose",
+      "read": "5 min",
+      "ps": [
+        "A light-water reactor shuts down every 18 to 24 months for weeks to swap fuel assemblies; its owner plans the grid around the outage. A pebble bed is refuelled while running: pebbles enter at the top, pass through the core several times, are measured for burn-up as they exit at the bottom and are either recirculated or discharged — 'more than 200,000 fuel Pebbles are gravity-fed and continuously rotated through the core'. X-energy's spec strings follow from that: 'Online Refueling — Continuous operation to maximize uptime', '95% Target Reliability', and a claimed 'designed to ramp up or ramp down between 40% and full power in 12 minutes'.",
+        "Why this matters commercially rather than technically: an industrial customer buying steam cannot stop its plant for a refuelling outage, and a data-centre campus buying firm power values availability above almost everything. Continuous refuelling makes the reactor behave like a boiler that is always on. It also means the fuel is a flow, not a batch — which is why the fuel plant's throughput (below) is quoted in pebbles per year and why X-energy describes its future as 'recurring fuel sales'.",
+        "The cost of the feature is complexity and licensing novelty: a fuel-handling system that moves pebbles under pressure, a burn-up measurement station, and a reactor whose core composition changes continuously. Several of the NRC topical reports on the Xe-100 pre-application page concern exactly these systems."
+      ]
+    },
+    {
+      "id": "the-fuel-factory",
+      "title": "The fuel factory got its licence first: TX-1 and the HALEU chain",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "Read the chain from mine to core. Each row is a step; the last two are X-energy's, and the one before them is the constraint.",
+      "cols": [
+        "Step",
+        "What happens",
+        "Who does it for the Xe-100",
+        "Status (Sep 2026)"
+      ],
+      "rows": [
+        [
+          "Enrichment",
+          "Uranium hexafluoride is spun in centrifuges to raise U-235 from 0.7% (natural) to the target. {{LEU}} is under 5%; {{HALEU}} is 5–20%; the Xe-100 needs 15.5%",
+          "Centrus (American Centrifuge Plant, Piketon) — definitive agreement August 2026, phased, with X-energy prepayments; General Matter — long-term agreement; DOE HALEU Availability Program allocation for the Dow first cores",
+          "Pre-commercial supply; prospectus risk factor: failure 'could delay fuel fabrication (TX-1 and beyond) and reactor deployments'"
+        ],
+        [
+          "Kernel and coating",
+          "HALEU is converted to uranium oxycarbide kernels and coated in the four TRISO layers, then pressed into graphite pebbles",
+          "TRISO-X, LLC (X-energy subsidiary) at TX-1, Oak Ridge; pilot line at ORNL under an extended CRADA",
+          "TX-1 vertical construction from November 2025; interior build-out Q3 2026; completion H1 2028"
+        ],
+        [
+          "Licence to possess and fabricate",
+          "An NRC Part 70 special nuclear materials licence for a Category II facility (enrichment between 10% and 20%)",
+          "NRC Materials License SNM-7007 to TRISO-X, issued 13 February 2026, 40 years — 'the first new fuel fabrication license in approximately 50 years' (DOE)",
+          "Issued, three months ahead of schedule"
+        ],
+        [
+          "Capacity",
+          "5 metric tons of uranium a year, about 700,000 pebbles — 'enough fuel for up to 11 Xe-100 reactors'",
+          "TX-1; TX-2 planned on a campus expanded to about 180 acres; TX-L research centre",
+          "Sized for 11 units against an order book of 144"
+        ],
+        [
+          "Qualification",
+          "Irradiate commercial fuel in a test reactor, then examine it to prove performance to the regulator",
+          "13-month irradiation in INL's Advanced Test Reactor from November 2025; post-irradiation examination at INL and ORNL",
+          "In progress — on the licensing path for first power"
+        ],
+        [
+          "Paying for it",
+          "Contracts, tax credit, grants and cost share",
+          "Geiger Brothers USD 40.8m; Clark Construction USD 48.2m; about USD 30m DOE-authorised early procurement; USD 148m IRA investment tax credit; USD 11m Tennessee grant",
+          "POWER cites a USD 768m construction budget; total cost undisclosed"
+        ]
+      ]
+    },
+    {
+      "id": "what-a-construction-permit-is",
+      "title": "What a construction permit is, and what an 18-month clock means",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "The NRC licenses a power reactor in one of two ways. {{Part 50}} is two steps: a **construction permit** that lets the owner build, based on a preliminary safety analysis report and an environmental review, then an **operating licence** based on the final design and the built plant. Part 52 folds design certification, site and construction into one combined licence. Dow's Long Mott application took the Part 50 route — the older, two-step path — because a first-of-a-kind design with a partly complete design basis is better suited to a permit that can be issued before every detail is final.",
+        "The clock is the news. Historically a construction permit review took 36 months or more. The NRC set Long Mott's schedule at 18 months on 10 June 2025, 'consistent with the 18 month timeline required by Executive Order 14300' — half the generic time and faster than X-energy's own 30-month estimate. The milestones then ran to time: draft safety evaluation February 2026, {{environmental assessment}} and finding of no significant impact 18 May 2026 (early), advanced safety evaluation August 2026, final safety evaluation targeted November 2026, permit guided to the first quarter of 2027. TerraPower, the other {{ARDP}} awardee, received its permit in March 2026 and broke ground in April.",
+        "What the permit is not: a commitment to build. Dow said in June 2025 it 'does not expect to make a final investment decision on the project before 2028', and in February 2025 that operations are 'likely 2031 to 2032'. A construction permit is a right, exercised at {{final investment decision}}; between the two sit the sponsor's balance sheet (Dow cut 4,500 jobs in January 2026), the cost estimate (which the prospectus says 'has increased'), and the cost-share window (ARDP's outside date 'in or around 2030'). The one legal challenge — an intervenor contention that Long Mott Energy 'has failed to demonstrate its financial qualifications' — went to exactly this point, and was dismissed in June 2026.",
+        "Across the Atlantic the equivalent gate is the {{Generic Design Assessment}}: a design review independent of any site, entered on 2 June 2026 and 'expected to conclude by end of 2029', on which Centrica's Hartlepool plan depends."
+      ]
+    },
+    {
+      "id": "the-ring-around-the-reactor",
+      "title": "The ring around the reactor: vendor, owner, builder, engineer, buyer",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "X-energy sells reactors and fuel; it does not own or operate plants. Every megawatt on its order book therefore has a ring of other parties around it. Cascade (Richland, Washington) shows the full ring; Long Mott shows a shorter one.",
+      "cols": [
+        "Seat",
+        "Cascade Advanced Energy Facility (WA)",
+        "Long Mott Generating Station (TX)",
+        "What the seat carries"
+      ],
+      "rows": [
+        [
+          "Technology vendor",
+          "X-energy (Xe-100, fuel, engineering)",
+          "X-energy",
+          "Design, licensing support, IP — X-energy 'will own the intellectual property related to the reactor systems'"
+        ],
+        [
+          "Owner and licensee",
+          "Energy Northwest (public power joint operating agency) — 'will build, own and operate'",
+          "Long Mott Energy, LLC, a wholly owned Dow subsidiary — the NRC applicant",
+          "The construction permit is issued to the owner, not the vendor"
+        ],
+        [
+          "Design-builder",
+          "Cascade Nuclear Partners — Kiewit Nuclear Solutions, Black & Veatch, Aecon, equal JV, {{progressive design-build}}",
+          "Fluor (FEL-2 engineering contract, April 2026); constructor not yet named",
+          "Under progressive design-build the price is developed in stages before a fixed contract — the model for first-of-a-kind plants"
+        ],
+        [
+          "Owner's engineer / licensing engineer",
+          "AtkinsRéalis ({{owner's engineer}})",
+          "Sargent & Lundy — site selection, licensing and environmental services; environmental report with WSP",
+          "The engineer who writes the application and checks the vendor"
+        ],
+        [
+          "Funder and buyer",
+          "Amazon — funds the feasibility phase, holds rights to the first project's power, options on more than 5 GW by 2039; public power may buy up to 50% of the full 960 MW",
+          "Dow — the steam and power customer; DOE cost share via ARDP",
+          "The {{offtaker}} is the credit the plant is financed against; here the offtaker is also a shareholder of the vendor"
+        ],
+        [
+          "Supply chain",
+          "Doosan (vessels), SGL Carbon and Toyo Tanso (graphite), Centrus and General Matter (HALEU), TRISO-X (fuel)",
+          "Same",
+          "Long-lead items reserved years before the permit"
+        ]
+      ]
+    },
+    {
+      "id": "an-order-book-of-options",
+      "title": "An order book of options: reading 144 reactors",
+      "kind": "prose",
+      "read": "5 min",
+      "ps": [
+        "X-energy reports 'a project pipeline … of 144 reactors across the U.S. and U.K. for approximately 11.5 gigawatts electric'. The Q2 2026 release adds the qualifier that matters: 'assuming full customer exercise of contingent rights'. An {{order book}} in this industry is a ladder of commitments of very different strength, and the number at the top mixes all of them.",
+        "Read the rungs. **Binding and in licensing:** Dow's four units — a construction permit application under review, a master project development agreement, and a customer who has still not taken a final investment decision. **Rights and options:** Amazon's 'more than 5 GWe' by 2039 — priority queue slots, rights of first refusal, {{most favored pricing}} — beginning with Energy Northwest's 320 MW, whose own construction permit application is not yet filed. **Non-binding development agreements:** Centrica's 'approximately six GWe (representative of 76 reactors …)' under a joint development agreement the prospectus itself calls 'non-binding'. **Letters of intent and studies:** Talen's 'three or more four-unit' plants; LG&E and KU's feasibility study; the 'next 1-gigawatt project' described as in 'final throes'. Half the gigawatts are Centrica's; about a third are Amazon's; four reactors are Dow's.",
+        "Why publish the top number? Because supply-chain partners (Doosan's 16-unit reservation and a Changwon line for about 20 reactors a year; SGL's capacity doubling 'for up to 8 new Xe-100 reactors annually') size their factories to it, and because public-market analysts value the company on it. Why read the rungs? Because the {{capital-light model}} — licensing, engineering, fuel, no plant ownership — means every rung depends on someone else's {{final investment decision}}."
+      ]
+    },
+    {
+      "id": "going-public-without-a-plant",
+      "title": "Going public without a plant: what the income statement of a reactor vendor shows",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "X-energy priced an {{IPO}} of 44,254,659 shares at USD 23 on 23 April 2026 — above a USD 16–19 range — raising USD 1.02 billion gross, about USD 9.1 billion of market value at pricing, three years after a USD 2.0 billion SPAC merger was abandoned for 'challenging market conditions' and 'peer-company trading performance'. The stock traded at USD 17.71 on 4 September 2026. Two structural features and one accounting feature explain what an investor actually bought.",
+        "**{{Up-C}} and {{dual-class shares}}.** The listed company, X-Energy, Inc., owns units of the operating LLC; pre-IPO holders kept LLC units and matching Class B shares. Class A carries the economics the public bought; Class B carries votes. Founder Kam Ghaffarian's vehicles hold 70.9% of the Class B — control without majority economics. Amazon holds 23.4% of the Class A and no Class B: a large economic owner with no voting block. Ares holds both.",
+        "**{{Grant income}} and {{cost share}}.** Q2 2026 'revenues and grant income' were USD 54.6 million — USD 50.1 million of services (engineering and licensing work billed to sponsors and DOE) and USD 4.5 million of grants — against USD 164.6 million of operating expenses. The CEO called ARDP 'our largest source of revenue at our current stage of development'. Under a 50/50 {{cost share}} the government reimburses half of eligible spending after it is incurred; the company's income is therefore a function of how fast it spends, and its cash need is the other half plus everything ineligible. Liquidity of USD 1.9 billion against about USD 165 million of operating cash burn in the first half is the runway.",
+        "**What the DOE share has done.** USD 1.2 billion (half of USD 2.4 billion eligible) at the 2021 agreement; 'estimated project costs have increased' per the prospectus; per the Q2 call and ANS, DOE notified up to USD 1 billion more, taking its share to up to USD 2.115 billion — implying roughly USD 4.2 billion of eligible cost on a 50/50 basis, arithmetic no party has published. Only USD 547 million had been reimbursed by mid-2026. A pre-revenue nuclear vendor is, in accounting terms, a cost-share programme with a listed equity attached."
+      ]
+    },
+    {
+      "id": "the-ladder-of-first-power",
+      "title": "The ladder of first power: from ARDP goal to Morgan Stanley's model",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Calendar years on the axis. The top lane is what the record says about when the first Xe-100 makes power; the bottom lane is the fuel and regulatory milestones that gate it. The gap between the 2020 goal and the current guidance is the story.",
+      "unit": "calendar year",
+      "lanes": {
+        "pwr": "First-power guidance (who said it, when)",
+        "gate": "Gates: licence, fuel, decision"
+      },
+      "items": [
+        {
+          "x": 2027,
+          "lane": "pwr",
+          "label": "ARDP goal: operational 'within seven years' of Oct 2020",
+          "sub": "DOE, October 2020"
+        },
+        {
+          "x": 2027,
+          "lane": "gate",
+          "label": "Long Mott construction permit expected Q1 2027",
+          "sub": "NRC final safety evaluation target Nov 2026"
+        },
+        {
+          "x": 2028,
+          "lane": "gate",
+          "label": "TX-1 fuel plant complete (H1); fuel fabrication begins; Dow FID not before 2028",
+          "sub": "Cascade construction permit anticipated 2028"
+        },
+        {
+          "x": 2029,
+          "lane": "gate",
+          "label": "UK GDA conclusion 'by end of 2029'",
+          "sub": "Centrica / Hartlepool"
+        },
+        {
+          "x": 2030,
+          "lane": "pwr",
+          "label": "'end of decade' completion",
+          "sub": "Dow, May 2023 (construction from 2026)"
+        },
+        {
+          "x": 2030,
+          "lane": "gate",
+          "label": "ARDP outside date 'in or around 2030'",
+          "sub": "Maximum extension; Dow funds the remainder after"
+        },
+        {
+          "x": 2031,
+          "lane": "pwr",
+          "label": "Operations 'likely 2031 to 2032'; company: 'early 2030s'",
+          "sub": "Dow (Feb 2025); X-energy 10-Q"
+        },
+        {
+          "x": 2033,
+          "lane": "pwr",
+          "label": "Morgan Stanley models first project online in 2033",
+          "sub": "Press-reported analyst case (May 2026)"
+        },
+        {
+          "x": 2035,
+          "lane": "pwr",
+          "label": "Centrica Hartlepool first power 'mid-2030s'",
+          "sub": "960 MW, 12 units"
+        },
+        {
+          "x": 2039,
+          "lane": "pwr",
+          "label": "Amazon: 'more than 5 gigawatts online … by 2039'",
+          "sub": "Options, not orders"
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The permit without the decision.** A construction permit in Q1 2027 and no Dow final investment decision before 2028 leaves a licensed hole in the ground. The sponsor's cost programme (USD 2 billion of savings, 4,500 jobs) and the cost estimate that 'has increased' are the real gate.",
+        "**Fuel before reactors, enrichment after both.** TX-1 will be able to make fuel for 11 reactors in 2028; the HALEU to feed it comes from plants that are themselves not yet at commercial scale. The first cores use lower enrichment; every core after depends on Centrus and General Matter delivering.",
+        "**An order book that is mostly options.** Four binding reactors; the rest are Amazon's rights, Centrica's non-binding agreement and letters of intent. Supply-chain partners have sized factories to the top number.",
+        "**Cost share as revenue.** Half of every eligible dollar spent comes back — and the other half, plus ineligible costs, is the company's. If the eligible total has grown from USD 2.4 billion to roughly USD 4.2 billion, so has the company's half.",
+        "**The public market's clock.** A stock priced at USD 23 and trading at USD 17.71 four months later, with lock-ups expiring and the first hard milestone (the permit) in 2027, will mark the company on news that the engineering schedule does not control.",
+        "**Concentration of counterparties.** Three primary customers — Dow, Amazon, Centrica — one of which is also the largest outside shareholder with most-favoured pricing. A change at any one moves the book."
+      ]
+    },
+    {
+      "id": "where-x-energy-slots-in",
+      "title": "Where X-energy's products slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per product line in the dossier, read against the covered counterparties around it.",
+      "cols": [
+        "Product line",
+        "What it is",
+        "Who buys or builds",
+        "Covered counterparties"
+      ],
+      "rows": [
+        [
+          "Xe-100",
+          "80 MWe / 200 MWt pebble-bed HTGR in 4- or 12-unit plants for power and 750°C process heat",
+          "Owners: Dow (Long Mott), Energy Northwest (Cascade, Amazon-funded), Centrica (Hartlepool); builders: Cascade Nuclear Partners; engineers: Sargent & Lundy, Fluor, AtkinsRéalis",
+          "Amazon (investor, rights), Kiewit and Black & Veatch (design-build), Sargent & Lundy (licensing), Talen (LOI), Oklo (peer)"
+        ],
+        [
+          "TRISO-X fuel / TX-1",
+          "Licensed HALEU TRISO fabrication, 5 MTU a year for up to 11 reactors, complete H1 2028",
+          "Captive to Xe-100 plants; merchant sales to other developers stated as intent",
+          "—"
+        ],
+        [
+          "XENITH microreactor",
+          "3–10 MWe transportable TRISO microreactor from Project Pele",
+          "DoD / DIU; not yet operational",
+          "—"
+        ],
+        [
+          "Services and cost share",
+          "Licensing, engineering, programme work billed to sponsors and DOE — the current revenue line",
+          "DOE (ARDP, Project Prometheus with NVIDIA and AWS), Dow, Energy Northwest, Centrica",
+          "NVIDIA (Project Prometheus)"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What is a TRISO particle and what does it do?",
+          "a": "A sub-millimetre uranium kernel wrapped in a porous carbon buffer, pyrolytic carbon, a silicon carbide shell and outer pyrolytic carbon; the silicon carbide holds fission products at temperatures far above the reactor's reach, so the containment function sits in the fuel."
+        },
+        {
+          "q": "What is 'functional containment' and what did it buy the Xe-100 in licensing?",
+          "a": "A safety approach where the fuel and physics, not a large pressure-tight building, perform the containment function; it underpinned an environmental assessment with a finding of no significant impact instead of a full EIS, and a dismissed intervenor contention."
+        },
+        {
+          "q": "Why does a 750°C outlet matter commercially?",
+          "a": "It makes 565°C steam usable as industrial process heat — the product Dow buys — and raises electrical efficiency; it is what distinguishes an HTGR from light-water SMRs."
+        },
+        {
+          "q": "What does continuous refuelling change?",
+          "a": "The reactor runs without refuelling outages, behaving like an always-on boiler for industrial or data-centre loads; fuel becomes a flow measured in pebbles per year, and fuel sales become recurring revenue."
+        },
+        {
+          "q": "What is HALEU and why is it the constraint?",
+          "a": "Uranium enriched between 5% and 20% U-235 (the Xe-100 uses 15.5%); the commercial supply chain (Centrus, General Matter) is pre-commercial, so every core after the first depends on plants that do not yet run at scale."
+        },
+        {
+          "q": "What did NRC licence SNM-7007 authorise, and why is it notable?",
+          "a": "TRISO-X's TX-1 (and TX-2) to possess and fabricate HALEU fuel for 40 years — the first Category II fuel-fabrication licence and the first new fuel fabrication licence in about 50 years, issued before any Xe-100 had a permit."
+        },
+        {
+          "q": "Construction permit versus final investment decision — what is the difference?",
+          "a": "The permit (NRC, Part 50 step one) is the right to build; the FID is the owner's binding commitment of capital. Long Mott's permit is guided to Q1 2027; Dow's FID is not before 2028."
+        },
+        {
+          "q": "What does '144 reactors / 11.5 GW' actually contain?",
+          "a": "Four binding Dow units in licensing, Amazon's options and rights (more than 5 GW by 2039), Centrica's non-binding ~6 GW joint development agreement, and letters of intent — 'assuming full customer exercise of contingent rights'."
+        },
+        {
+          "q": "How does a pre-revenue reactor vendor show income?",
+          "a": "Services billed to sponsors and DOE plus grant income under a 50/50 cost share — Q2 2026 USD 54.6m against USD 164.6m of operating expenses; ARDP is 'our largest source of revenue'."
+        },
+        {
+          "q": "What do Up-C and dual-class shares mean for who controls X-energy?",
+          "a": "The public company owns units of the operating LLC; founder vehicles hold 70.9% of the high-vote Class B, so the founder controls the company while Amazon, with 23.4% of Class A and no Class B, is a large economic owner without a voting block."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "Why could the NRC issue an environmental assessment rather than a full environmental impact statement for Long Mott?",
+          "c": [
+            "Because Dow asked for one",
+            "Because the design's functional-containment case and site findings supported a finding of no significant impact",
+            "Because SMRs are exempt from NEPA",
+            "Because Texas has no environmental review"
+          ],
+          "a": 1,
+          "why": "The EA/FONSI was the first for a commercial advanced-reactor Part 50 application; the fuel's containment properties underpin the smaller footprint and consequence analysis."
+        },
+        {
+          "q": "A chemical plant is evaluating an Xe-100 four-pack. Which figure is the unit of sale?",
+          "c": [
+            "80 MWe per unit",
+            "320 MWe for the plant",
+            "200 MWt per unit / 800 MWth for the plant — steam for the process",
+            "10-25% land use"
+          ],
+          "a": 2,
+          "why": "Dow buys 'electricity and high-temperature industrial steam'; the thermal output is the product the boiler it replaces provided."
+        },
+        {
+          "q": "TX-1 will be complete in H1 2028 with capacity for 11 reactors; the first Xe-100 construction permit is expected Q1 2027 and Dow's FID not before 2028. What is the binding constraint on fuel for the fleet?",
+          "c": [
+            "TX-1 capacity",
+            "The number of pebbles per reactor",
+            "HALEU enrichment supply from pre-commercial plants",
+            "The NRC fuel licence"
+          ],
+          "a": 2,
+          "why": "The plant is licensed and sized; the enrichment feed (Centrus, General Matter) is the pre-commercial link the prospectus's own risk factor names."
+        },
+        {
+          "q": "X-energy's order book is '144 reactors, ~11.5 GWe (assuming full customer exercise of contingent rights)'. How many reactors are in a construction permit application?",
+          "c": [
+            "144",
+            "76",
+            "12",
+            "4"
+          ],
+          "a": 3,
+          "why": "Dow's four units at Long Mott; Amazon's are options, Centrica's a non-binding JDA, Talen's an LOI."
+        },
+        {
+          "q": "Under a 50/50 cost share, DOE's share rises from USD 1.2bn to up to USD 2.115bn. What does that imply for the company?",
+          "c": [
+            "The company's costs fell",
+            "Eligible project costs have roughly grown to about USD 4.2bn, so the company's half has grown too",
+            "DOE now pays everything",
+            "Nothing — cost share does not affect the company"
+          ],
+          "a": 1,
+          "why": "Cost share reimburses a percentage of eligible spending; a larger government share means a larger total and a larger company share."
+        },
+        {
+          "q": "Amazon holds 23.4% of X-energy's Class A shares and no Class B; founder vehicles hold 70.9% of Class B. Who controls the company?",
+          "c": [
+            "Amazon",
+            "The founder, through high-vote Class B shares",
+            "Public shareholders",
+            "The NRC"
+          ],
+          "a": 1,
+          "why": "Dual-class shares separate votes from economics; the Up-C structure preserved the founder's LLC units and matching Class B."
+        },
+        {
+          "q": "Energy Northwest selected Cascade Nuclear Partners under a 'progressive design-build' model. What does that mean?",
+          "c": [
+            "A fixed-price EPC contract was signed",
+            "The builder was chosen early on qualifications and will develop scope, schedule and price in stages before a construction contract",
+            "The builder owns the plant",
+            "X-energy builds the plant itself"
+          ],
+          "a": 1,
+          "why": "Progressive design-build defers the fixed price until the design is mature — the model for first-of-a-kind plants whose cost cannot be known up front."
+        },
+        {
+          "q": "Which party is the NRC applicant for Long Mott?",
+          "c": [
+            "X-energy",
+            "Dow's subsidiary Long Mott Energy, LLC",
+            "Sargent & Lundy",
+            "Amazon"
+          ],
+          "a": 1,
+          "why": "Permits are issued to owners and operators; the vendor supplies the design and licensing support."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Cascade Nuclear Partners",
+      "d": "The equal joint venture of Kiewit Nuclear Solutions, Black & Veatch and Aecon that Energy Northwest selected in October 2025 as progressive design-builder for the first four Xe-100 units at the Cascade Advanced Energy Facility in Richland, Washington."
+    },
+    {
+      "t": "Long Mott",
+      "d": "Long Mott Generating Station — Dow's proposed four-unit Xe-100 plant (320 MWe, 800 MWth) at its UCC Seadrift site in Calhoun County, Texas, whose construction permit application (filed March 2025 by Long Mott Energy, LLC) is the first commercial Xe-100 licensing action."
+    }
+  ]
+}

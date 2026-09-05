@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 2,
+  "slug": "mgx",
+  "title": "MGX — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-money-behind-the-money",
+      "title": "Start here: the money behind the money",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "This corpus teaches who builds AI data centres, who powers them, who leases them and who rents the compute. It has not yet taught **who pays** — the layer of capital above the landlords and the labs. MGX is that layer's clearest case: an Abu Dhabi {{sovereign wealth fund}} vehicle two years old that is an initial equity funder of {{Stargate}}, a co-founder of the AI Infrastructure Partnership that owns Aligned Data Centers, an owner in Vantage, and a co-lead investor in OpenAI and Anthropic — the same names that anchor a dozen dossiers here.",
+        "**What this guide teaches.** What a sovereign wealth fund is and why the Gulf has so much of it. How the fund, the platform and the joint venture differ as vehicles — MGX Fund I, the AI Infrastructure Partnership, Stargate LLC and Campus AI are four different legal animals. What {{co-investment}}, an {{anchor investor}}, a {{follow-on investment}} and a {{secondary sale}} are, and how you read a fund's power from a portfolio page that publishes no numbers. Why frontier labs take Gulf money and what they give up. Why {{export controls}} and {{CFIUS}} — not returns — are the binding constraints on where sovereign AI capital can buy compute. And what the {{circular financing}} pattern looks like when one investor funds the tenant, the landlord and the builder at once.",
+        "**What it deliberately leaves to other guides.** The compute-buyer's side of the contracts (Anthropic, OpenAI guides); the landlord's economics (Aligned, Vantage); the fund manager as owner-operator of power plants (Excelsior, GridStor, Aypa)."
+      ]
+    },
+    {
+      "id": "what-a-sovereign-wealth-fund-is",
+      "title": "What a sovereign wealth fund is, and why the Gulf has so many",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A {{sovereign wealth fund}} is a state-owned pool of investment capital. Its money is the government's — oil and gas revenue, foreign-exchange reserves, budget surpluses — and its purpose is to turn a depleting or volatile income into a permanent, diversified one. It answers to a ruler, a ministry or a council rather than to outside investors, which means it can be patient, political and opaque in ways a pension fund cannot.",
+        "Abu Dhabi runs several. ADIA is the classic reserve fund; Mubadala (about USD 330 billion of assets per Bloomberg) is the strategic developer that built GlobalFoundries and owns stakes across industry; ADQ holds domestic infrastructure; G42 is the state's AI operating group. MGX was created in March 2024 by a government council — the Artificial Intelligence and Advanced Technology Council — with Mubadala and G42 as 'foundational partners' and the council's chairman, Sheikh Tahnoon bin Zayed, as its chairman. Its stated job is narrower than a reserve fund's: 'a UAE national champion focused on AI and advanced technologies'.",
+        "The structure explains the behaviour. A national champion can commit USD 49 billion to one theme (MGX Fund I's final close), take stakes with no published price, and be welcomed into rounds that a private fund could not access, because its counterparties are dealing with a state. The same structure is why US politicians ask who sits behind it. Everything in this guide follows from that double nature: the most patient capital in the market, and the most scrutinised."
+      ]
+    },
+    {
+      "id": "fund-platform-jv",
+      "title": "Fund, platform, joint venture, direct stake: four vehicles MGX uses",
+      "kind": "table",
+      "read": "7 min",
+      "intro": "MGX's portfolio page lists thirteen names, but they are held through four different kinds of vehicle. The vehicle decides who controls what, who else is in the room, and what gets disclosed.",
+      "cols": [
+        "Vehicle",
+        "How it works",
+        "MGX example",
+        "What it tells you"
+      ],
+      "rows": [
+        [
+          "**{{Closed-end fund}}**",
+          "Investors commit capital to a manager for a fixed life; the manager picks the deals",
+          "MGX Fund I LP — USD 49 billion of commitments from 'major institutional and private investors from the Gulf, North America, Asia and Europe'; four ADGM-registered vehicles including an AIV and two co-investment partnerships",
+          "MGX is a manager of others' money as well as the state's; the LPs are unnamed"
+        ],
+        [
+          "**Platform**",
+          "A fund and partners create an investment company that then buys assets; members share governance",
+          "AI Infrastructure Partnership (AIP) — co-founded with BlackRock, GIP and Microsoft; USD 30 billion equity target, USD 100 billion with debt; KIA and Temasek as anchors; NVIDIA, xAI, Cisco as technology partners; first investment Aligned",
+          "Control is shared and formal: MGX's CEO is AIP's Vice Chairman, its CLO sits on the investment committee"
+        ],
+        [
+          "**Joint venture**",
+          "Partners form a new company for one purpose and split its equity",
+          "{{Stargate}} LLC (SoftBank, OpenAI, Oracle, MGX as 'initial equity funders'); Campus AI (Bpifrance, Mistral, NVIDIA, MGX) for a 1.4 → 3 GW French campus",
+          "MGX's share is undisclosed in both; the JV can exist on paper before it exists in fact — The Information reported Stargate 'hasn't hired any staff' a year on"
+        ],
+        [
+          "**Direct minority stake**",
+          "MGX buys shares in a company's round or from existing holders",
+          "OpenAI (five follow-ons, co-lead of the USD 122 billion round), Anthropic (Series G co-lead), xAI, Databricks, Isomorphic; Binance USD 2 billion; TikTok USDS JV 15%; Altera with Silver Lake",
+          "The two disclosed percentages in the whole book (15% TikTok; 51% Altera at consortium level) are here; every lab stake is unstated"
+        ],
+        [
+          "**Direct + platform at once**",
+          "The fund co-invests directly alongside the platform it co-founded",
+          "Aligned: 'AIP, MGX, and BlackRock's GIP' named as buyers — MGX both inside AIP and beside it",
+          "{{Co-investment}} lets a large deal be done without breaching the platform's concentration limits, and gives MGX a larger slice than its AIP share alone"
+        ]
+      ]
+    },
+    {
+      "id": "reading-a-fund-that-publishes-no-numbers",
+      "title": "Reading a fund that publishes no numbers",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "MGX publishes no annual report, no AUM total, no ticket sizes, no stakes and no headcount. Its record consists of one fund-size figure (USD 49 billion), one stated percentage (15% of TikTok USDS), one stated deal value (USD 2 billion for Binance) and a list of rounds it joined. How do you size such an investor? By the roles it is given, not the cheques it writes.",
+        "Rounds have a grammar. A **lead** sets the price and terms and usually takes the largest slice; a **co-lead** shares that role; a **participant** takes an allocation on the lead's terms; an **{{anchor investor}}** is the first large commitment whose name brings the others. A **{{follow-on investment}}** in a later round keeps or grows a stake; a **{{secondary sale}}** — MGX's fourth OpenAI transaction was an 'employee secondary' — buys existing shares from employees or early holders, so the company gets no new money. Read MGX's OpenAI sequence in these terms: participant (October 2024), major investment in the USD 300 billion round (2025), secondary (early 2026), co-lead of the USD 122 billion round (March 2026). The escalation from participant to co-lead inside two years is the size signal; the same pattern repeats at Anthropic (participant by May 2025, co-lead February 2026) and Databricks (new investor December 2024, co-lead September 2025).",
+        "Second signal: who quotes whom. When BlackRock's, Microsoft's and GIP's releases carry MGX's CEO as a named speaker, and when Aligned's closing release lists 'AIP, MGX, and BlackRock's GIP' as buyers with MGX's David Scott as the media contact, MGX is a principal, not a passenger. When Stargate UAE's releases (G42, OpenAI, Oracle, NVIDIA, SoftBank, Cisco) do not name MGX at all, MGX's role there runs through Khazna, a landlord it part-owns — indirect.",
+        "Third signal: the regulator's register. The ADGM's FSRA file shows MGX Fund Management Limited licensed on 18 October 2024, four registered funds, twelve approved persons, and a change of licensed directors in May 2026 that the company never announced. A register is the one document a private fund cannot decline to file."
+      ]
+    },
+    {
+      "id": "why-labs-take-gulf-money",
+      "title": "Why frontier labs take Gulf money, and what they give up",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A frontier lab's compute bill is denominated in tens of billions a year, and the Anthropic dossier in this corpus shows what it has bought: gigawatts from Amazon, Google, Microsoft and NVIDIA, financed by rounds of USD 30 billion and USD 65 billion. Few investors can write those cheques; sovereign funds can. Dario Amodei's 2025 memo, quoted by WIRED, put the arithmetic plainly: Gulf capital is 'easily $100B or more' and the company 'gain[s] a very large benefit from having access to this capital' — and in the same memo, 'This is a real downside and I'm not thrilled about it.'",
+        "What the lab gives up is the ability to say no later, and control over who its investors' governments are. The stated mitigation is structural: deals 'narrowly scoped, purely financial', with no governance rights. That is why MGX is a co-lead of Anthropic's Series G but appears on no Anthropic board, and why its OpenAI position, five rounds deep, is described only in MGX's own board releases. The lab takes the money and keeps the boardroom.",
+        "What the investor gets is position in the two or three companies whose compute demand drives the entire build-out this corpus tracks — plus, in MGX's case, ownership of the landlords (Aligned, Vantage) and a funding seat in the programme (Stargate) that the lab's demand fills. That is the circle the next section draws."
+      ]
+    },
+    {
+      "id": "the-circle",
+      "title": "The circle: funding the tenant, the landlord and the builder",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "Put MGX's holdings on the map this corpus already draws. OpenAI is the tenant of Stargate's Abilene campus; Stargate LLC's equity funders are SoftBank, OpenAI, Oracle and MGX; Vantage builds Stargate's Texas and Wisconsin campuses, and MGX has 'further investments in Vantage … to support the Stargate build-out of 2.3 gigawatts'; Oracle is Stargate's operator and MGX's co-managing investor in the TikTok USDS venture. Aligned leases to hyperscalers and labs; AIP — MGX, BlackRock, GIP, Microsoft, with NVIDIA and xAI as technology partners — owns Aligned; MGX also backs xAI and Anthropic, who lease from landlords like these. NVIDIA sells the chips into all of it, sits inside AIP and inside Campus AI with MGX.",
+        "This is the {{circular financing}} pattern — the concern the Anthropic dossier quotes NVIDIA's CFO answering ('we know some will call this circular financing. We see it differently'). From one investor's chair it is simply vertical exposure: MGX profits if the lab grows, if the landlord fills, and if the campus is built, and it has reduced the risk that any one link fails for want of capital by funding the others. From the system's chair it means the same balance sheets appear on several sides of the same transaction, and that the demand signal (the lab's commitment) is partly financed by the parties who benefit from it.",
+        "Two things to hold. First, MGX's actual percentages are undisclosed at every link — so the circle's thickness cannot be measured from public sources. Second, MGX owns no power: every energy statement it makes runs through AIP's agreements with GE Vernova and NextEra Energy ('all forms of energy'), Aligned's cooling and a 31 MW / 62 MWh battery, or Campus AI's partnership with EDF and RTE. The capital layer touches this corpus's power and storage suppliers only through the landlords it owns."
+      ]
+    },
+    {
+      "id": "export-controls-are-the-constraint",
+      "title": "Export controls and CFIUS: the constraints that bind sovereign AI capital",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "A sovereign fund buying farmland faces almost no US federal review. A sovereign fund buying AI compute faces two regimes, and both bit MGX in 2026.",
+        "**{{Export controls}}** govern where advanced chips and servers may be shipped and who may run them. Under the Biden-era proposals the UAE faced limits on chip imports, and G42 — MGX's co-founder, chaired by MGX's chairman — had been scrutinised by Commerce over China ties before divesting them; House and Senate Democrats in May 2025 opposed 'very large volumes of advanced AI chips to the UAE'. In July 2026 Commerce moved the UAE to Country Group A:5, allowing licence-free shipment of certain sensitive technology, and, per CNBC, 'said it would view favorably export applications for semiconductors and server equipment destined for MGX'. Senator Warren's response named MGX directly and called for the Commerce Secretary to testify. For an investor whose portfolio is 70% North American and whose UAE campuses (Khazna, Stargate UAE) need US chips, the licence regime is the supply chain.",
+        "**{{CFIUS}}** reviews foreign acquisitions of US businesses for national-security risk. MGX's 15% of TikTok USDS Joint Venture LLC exists because of a divestiture law and a national-security process — the venture was 'established in compliance with US regulatory requirements', with Oracle as 'Trusted Security Partner' and MGX's David Scott on the security committee. A foreign state-linked investor holding a piece of a US social network is itself the product of a review, and any future MGX acquisition of a US landlord or lab stake above the passive threshold runs the same gauntlet.",
+        "The third constraint is political rather than legal. MGX's USD 2 billion Binance investment was settled in World Liberty Financial's USD1 stablecoin — a Trump-family-linked vehicle — and Senators wrote to MGX and Binance; the same episode resurfaced in the July 2026 export-control debate alongside a reported USD 500 million UAE-linked stake in World Liberty Financial. None of this is a finding against MGX; all of it is a reason a lab or landlord's counsel now asks who the investor is before the term sheet."
+      ]
+    },
+    {
+      "id": "scale-ledger",
+      "title": "Scale ledger: the disclosed figures, and the undisclosed ones",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD billions — announced deal or fund sizes (MGX's own share undisclosed except where noted)",
+      "intro": "Every bar is a round, fund or transaction MGX is named in. Only the first two are MGX's own money in a stated amount; the rest are the size of the room MGX was in.",
+      "items": [
+        {
+          "label": "Binance minority stake (Mar 2025)",
+          "sub": "The one deal with a published MGX dollar figure; settled in USD1",
+          "v": 2
+        },
+        {
+          "label": "Stargate — MGX contribution (Bloomberg, unconfirmed)",
+          "sub": "'approximately $7 billion' reported; no principal has confirmed",
+          "v": 7
+        },
+        {
+          "label": "Altera — company valuation (Sep 2025)",
+          "sub": "51% stake with Silver Lake; Intel keeps 49%; MGX share undisclosed",
+          "v": 8.7
+        },
+        {
+          "label": "xAI Series E (Jan 2026)",
+          "sub": "MGX participant",
+          "v": 20
+        },
+        {
+          "label": "Anthropic Series G (Feb 2026)",
+          "sub": "MGX co-lead; USD 380 billion post-money",
+          "v": 30
+        },
+        {
+          "label": "AIP equity target (Sep 2024)",
+          "sub": "USD 30 billion equity, up to USD 100 billion with debt",
+          "v": 30
+        },
+        {
+          "label": "Aligned Data Centers EV (closed Jul 2026)",
+          "sub": "AIP, MGX and GIP; 51 campuses, 6.4 GW; plus USD 5 billion growth capital",
+          "v": 40
+        },
+        {
+          "label": "MGX Fund I final close (Jul 2026)",
+          "sub": "USD 49 billion vs USD 45 billion target; 14 companies",
+          "v": 49
+        },
+        {
+          "label": "Anthropic Series H (May 2026)",
+          "sub": "MGX 'significant investor'; USD 965 billion post-money",
+          "v": 65
+        },
+        {
+          "label": "OpenAI round (Mar 2026)",
+          "sub": "MGX co-lead; USD 852 billion valuation; fifth follow-on",
+          "v": 122
+        },
+        {
+          "label": "Stargate programme (Jan 2025)",
+          "sub": "USD 500 billion over four years; 'initial equity funders' SoftBank, OpenAI, Oracle, MGX",
+          "v": 500
+        }
+      ]
+    },
+    {
+      "id": "timeline-two-years",
+      "title": "Two years from creation to Fund I close",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Months since MGX's creation on the horizontal axis. Lanes: the capital vehicles MGX built, and the stakes it took. Note how the platform (AIP) and the JV (Stargate) come before the fund is even licensed.",
+      "unit": "months since creation (March 2024 = 0)",
+      "lanes": {
+        "veh": "Vehicles and governance",
+        "stk": "Stakes and rounds"
+      },
+      "items": [
+        {
+          "x": 0,
+          "lane": "veh",
+          "label": "Created by the AIATC; Mubadala and G42 foundational partners",
+          "sub": "Sheikh Tahnoon chairman; Ahmed Yahia Al Idrissi CEO"
+        },
+        {
+          "x": 6,
+          "lane": "veh",
+          "label": "GAIIP / AIP co-founded with BlackRock, GIP, Microsoft",
+          "sub": "USD 30bn equity target; NVIDIA technical partner"
+        },
+        {
+          "x": 7,
+          "lane": "veh",
+          "label": "FSRA licence (18 Oct 2024)",
+          "sub": "MGX Fund Management Limited, FSP 240067"
+        },
+        {
+          "x": 7,
+          "lane": "stk",
+          "label": "OpenAI round (participant); xAI Series C; Databricks Series J",
+          "sub": "Amounts undisclosed"
+        },
+        {
+          "x": 10,
+          "lane": "veh",
+          "label": "Stargate LLC announced — initial equity funder",
+          "sub": "USD 500bn programme"
+        },
+        {
+          "x": 12,
+          "lane": "stk",
+          "label": "Binance USD 2bn; Khazna minority stake",
+          "sub": "NVIDIA and xAI join AIP"
+        },
+        {
+          "x": 14,
+          "lane": "veh",
+          "label": "Campus AI JV (Bpifrance, Mistral, NVIDIA) — 1.4 GW",
+          "sub": "KIA joins AIP as first anchor"
+        },
+        {
+          "x": 18,
+          "lane": "stk",
+          "label": "Altera 51% with Silver Lake; Databricks Series K co-lead",
+          "sub": ""
+        },
+        {
+          "x": 19,
+          "lane": "stk",
+          "label": "Aligned agreed — AIP's first investment (~USD 40bn EV)",
+          "sub": ""
+        },
+        {
+          "x": 22,
+          "lane": "stk",
+          "label": "xAI Series E; TikTok USDS JV 15%; Anthropic Series G co-lead",
+          "sub": "Jan–Feb 2026"
+        },
+        {
+          "x": 24,
+          "lane": "stk",
+          "label": "OpenAI USD 122bn round co-lead (fifth follow-on)",
+          "sub": "March 2026"
+        },
+        {
+          "x": 27,
+          "lane": "veh",
+          "label": "Fund I final close USD 49bn; Aligned closes",
+          "sub": "July 2026"
+        }
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The JV that never forms.** Stargate LLC has four named equity funders and, per The Information, no staff a year later; later Stargate releases omit MGX. Capital committed to a vehicle that operates bilaterally (OpenAI–Oracle) may never be called, or may be called on terms the funder did not set.",
+        "**Access is not control.** A co-lead with no board seat has price influence at the moment of the round and none afterwards. 'Narrowly scoped, purely financial' is the lab's protection, not the investor's.",
+        "**The licence is the supply chain.** A UAE campus without US chips is a building. A change of US administration, a congressional rider or a Commerce reversal can strand a sovereign portfolio's physical assets — the 2026 A:5 decision can be unmade as quickly as it was made.",
+        "**Reputational contagion.** One settlement in a politically linked stablecoin followed MGX into every subsequent US debate about it. Counterparties price that; some (Anthropic's memo) say so in writing.",
+        "**Opacity cuts both ways.** Undisclosed stakes protect the investor from scrutiny and prevent anyone — including its own LPs' regulators — from measuring its exposure. When the circle in this guide cannot be quantified, neither can its risk.",
+        "**Concentration.** Five follow-ons in one company is conviction or is concentration, depending on the outcome; a sovereign 'national champion' cannot easily sell down a flagship position without a political cost."
+      ]
+    },
+    {
+      "id": "where-mgx-slots-in",
+      "title": "Where MGX's holdings slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per layer of the AI-infrastructure chain this corpus tracks, with the MGX holding that touches it.",
+      "cols": [
+        "Layer",
+        "MGX holding",
+        "Vehicle",
+        "Covered counterparties"
+      ],
+      "rows": [
+        [
+          "Demand — frontier labs",
+          "OpenAI, Anthropic, xAI/SpaceX; Databricks, Isomorphic",
+          "Direct minority stakes (follow-ons, co-leads)",
+          "OpenAI, Anthropic, xAI"
+        ],
+        [
+          "Programmes",
+          "Stargate LLC (initial equity funder)",
+          "Joint venture",
+          "OpenAI, Oracle"
+        ],
+        [
+          "Landlords and campuses",
+          "Aligned (owner via AIP + direct); Vantage; Khazna; Campus AI (France)",
+          "Platform, direct, JV",
+          "Aligned, Vantage, Microsoft, NVIDIA"
+        ],
+        [
+          "Power for campuses",
+          "None owned; AIP agreements with GE Vernova and NextEra Energy; Aligned's Calibrant battery",
+          "Via AIP / portfolio companies",
+          "GE Vernova, NextEra Energy Resources"
+        ],
+        [
+          "Chips and platforms",
+          "Altera (FPGA, with Silver Lake); NVIDIA as AIP and Campus AI partner",
+          "Consortium stake; partnership",
+          "NVIDIA"
+        ],
+        [
+          "Regulated US assets",
+          "TikTok USDS JV (15%)",
+          "Direct stake under a national-security structure",
+          "Oracle"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What is a sovereign wealth fund?",
+          "a": "A state-owned investment fund that invests government surpluses — oil revenue, reserves — in companies and infrastructure, answering to the state rather than to outside investors; patient, political and often opaque."
+        },
+        {
+          "q": "Distinguish a fund, a platform and a joint venture as investment vehicles.",
+          "a": "A fund pools investors' commitments for a manager to invest over a fixed life; a platform is an investment company created by a fund and partners that then buys assets under shared governance; a JV is a new company partners form for one purpose and split."
+        },
+        {
+          "q": "What is co-investment and why does it exist?",
+          "a": "Direct money into a single deal alongside a fund the investor already backs, usually at lower fees, so a large deal can be done without breaching the fund's concentration limits — MGX beside AIP in Aligned."
+        },
+        {
+          "q": "Lead, co-lead, participant, anchor: what does each role signal?",
+          "a": "The lead sets price and terms and takes the largest slice; a co-lead shares that; a participant takes an allocation on the lead's terms; an anchor is the first large commitment whose name brings others."
+        },
+        {
+          "q": "What is a secondary sale?",
+          "a": "A purchase of existing shares from employees or early holders, so the company receives no new money — MGX's fourth OpenAI transaction was an employee secondary."
+        },
+        {
+          "q": "How do you size an investor that publishes no ticket sizes?",
+          "a": "By the roles it is given (participant → co-lead escalation), by who quotes it in counterparty releases, and by regulatory registers it cannot decline to file."
+        },
+        {
+          "q": "Why do frontier labs accept sovereign capital, and how do they limit it?",
+          "a": "Because compute bills run to tens of billions a year and few others can fund them; they limit it by making deals 'narrowly scoped, purely financial' with no governance rights."
+        },
+        {
+          "q": "What is circular financing in the AI build-out?",
+          "a": "The same investors or suppliers funding the tenant, the landlord and the builder of one campus, so the demand signal is partly financed by the parties who benefit from it."
+        },
+        {
+          "q": "What do export controls have to do with an investor?",
+          "a": "They decide whether the chips and servers a portfolio campus needs may be shipped to it; for a UAE-based investor the licence regime is the supply chain — the July 2026 Country Group A:5 change and Commerce's stated favourable view of applications 'destined for MGX' show it."
+        },
+        {
+          "q": "What is CFIUS and where does it touch MGX?",
+          "a": "The US inter-agency review of foreign acquisitions for national-security risk; MGX's 15% of TikTok USDS JV is the product of such a process, with a security committee seat as a condition of the structure."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "MGX's OpenAI record reads: participant (2024), major investment (2025), employee secondary (early 2026), co-lead of a USD 122 billion round (March 2026). The strongest inference is:",
+          "c": [
+            "MGX's stake is about 20%",
+            "MGX's position has grown in size and influence over two years, though no amount is disclosed",
+            "OpenAI is controlled by MGX",
+            "The secondary means OpenAI raised no money in 2026"
+          ],
+          "a": 1,
+          "why": "Roles escalate from participant to co-lead; that is the size signal available when tickets are undisclosed. Nothing in the record supports a percentage."
+        },
+        {
+          "q": "Aligned's closing release names 'AIP, MGX, and BlackRock's GIP' as buyers. Why is MGX named separately from AIP, which it co-founded?",
+          "c": [
+            "A typo",
+            "MGX co-invested directly alongside the platform, taking a larger slice than its AIP share alone",
+            "MGX left AIP",
+            "AIP is a subsidiary of MGX"
+          ],
+          "a": 1,
+          "why": "Direct co-investment beside a platform is how a large deal is done without breaching the platform's concentration limits."
+        },
+        {
+          "q": "SoftBank's January 2025 release names MGX an 'initial equity funder' of Stargate; Bloomberg reported about USD 7 billion; later Stargate releases omit MGX and The Information reported the JV had no staff. What should a dossier record?",
+          "c": [
+            "MGX invested USD 7 billion in Stargate",
+            "MGX is a named initial equity funder whose contribution no principal has confirmed, of a JV whose operating form is disputed",
+            "MGX has withdrawn from Stargate",
+            "Stargate is an MGX subsidiary"
+          ],
+          "a": 1,
+          "why": "Record the primary text (SoftBank), flag the amount as press-reported, and record the later omissions — without asserting withdrawal."
+        },
+        {
+          "q": "A lab accepts a sovereign fund as co-lead of a USD 30 billion round on 'narrowly scoped, purely financial' terms. What has the fund NOT obtained?",
+          "c": [
+            "Shares",
+            "Price influence at the round",
+            "A board seat or governance rights",
+            "Exposure to the lab's growth"
+          ],
+          "a": 2,
+          "why": "The lab's mitigation is exactly to withhold governance; the co-lead's influence is at the moment of pricing."
+        },
+        {
+          "q": "Why does Commerce's July 2026 move of the UAE to Country Group A:5 matter to an AI investor?",
+          "c": [
+            "It changes tax rates",
+            "It allows licence-free shipment of certain sensitive technology, including the chips a UAE campus needs — the licence regime is the supply chain",
+            "It approves a merger",
+            "It has no effect on investors"
+          ],
+          "a": 1,
+          "why": "Export controls decide whether portfolio campuses can be equipped; the 2026 change was made in MGX's favour and contested in Congress within weeks."
+        },
+        {
+          "q": "MGX publishes no AUM total. Which figure is the closest audited-grade proxy?",
+          "c": [
+            "The USD 100 billion target in press reports",
+            "The USD 49 billion Fund I final close from MGX's own release",
+            "The USD 10 billion a year deployment pace",
+            "The '8 GW' contracted capacity claim"
+          ],
+          "a": 1,
+          "why": "A fund close is a stated commitment figure from the manager; the target and the pace are press estimates and the 8 GW is a portfolio-capacity statement, not capital."
+        },
+        {
+          "q": "'MGX owns no power project.' Which statement is consistent with the record?",
+          "c": [
+            "MGX's energy exposure runs through AIP's GE Vernova and NextEra agreements and through Aligned and Campus AI",
+            "MGX owns gas plants in Texas",
+            "MGX has a nuclear fleet through ENEC",
+            "MGX supplies batteries to Aligned"
+          ],
+          "a": 0,
+          "why": "Every energy statement on MGX's channels is made through AIP or portfolio companies; David Scott's ENEC and TerraPower seats are personal."
+        },
+        {
+          "q": "An investor funds a lab, owns the landlord the lab leases from, and co-funds the programme building the campus. The name for the risk observers raise is:",
+          "c": [
+            "Carried interest",
+            "Circular financing",
+            "Domestic content",
+            "Progressive design-build"
+          ],
+          "a": 1,
+          "why": "The same balance sheets on several sides of a transaction mean the demand signal is partly self-financed."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "AIATC",
+      "d": "The Artificial Intelligence and Advanced Technology Council, the Abu Dhabi government body (established January 2024, chaired by Sheikh Tahnoon bin Zayed) that created MGX in March 2024."
+    },
+    {
+      "t": "AIP",
+      "d": "The AI Infrastructure Partnership (launched September 2024 as GAIIP) co-founded by BlackRock, Global Infrastructure Partners, Microsoft and MGX to invest in data centres and their power; NVIDIA, xAI and Cisco are technology partners, KIA and Temasek financial anchors; its first investment was Aligned Data Centers."
+    }
+  ]
+}
