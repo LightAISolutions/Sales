@@ -3,11 +3,19 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.76r] — 2026-09-05 07:22:22 PM EST
+
+> **Prompt:** "Fix the McCarthy source label too so it matches Holder's"
+
+### Fixed
+
+- **`mccarthy.profile.json` (profileVersion 3 → 4)** — the Construction Dive source label for the EdgeCore Mesa award now matches the `holder-construction` dossier's wording ("gets $1.9B Arizona data center job (EdgeCore Mesa, ≥450 MW — the $1.9B is EdgeCore's debt financing; no contract value stated)"), retaining the McCarthy-side note that the article corrects a misattribution to McCarthy. Previously the label read the $1.9B as the contract value. Prior version archived as `archive/mccarthy.profile.v3.json` and indexed. Registry sync and relationships checker clean.
 
 ## [v04.75r] — 2026-09-05 07:20:12 PM EST
 

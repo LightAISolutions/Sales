@@ -1971,6 +1971,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-09-05",
       "supersededBy": 3
+    },
+    {
+      "file": "mccarthy.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 4
     }
   ],
   "vistra": [
