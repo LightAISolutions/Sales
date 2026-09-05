@@ -6,6 +6,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-05 04:05 AM EST
+**Repo version:** v04.62r (bumped this session on the F5 push commit `b735830`; this entry is the housekeeping commit `Remember session context`)
+**Branch:** `claude/fable-5-1-medium-phase-b-f5-bll92b` (the v04.62r push merged and the branch was swept; rebased onto `origin/main` at `5cfd6fe` before this commit)
+**Model:** Fable 5.1 Medium — Phase B session F5 (esVolta · Strata Clean Energy · Hunt Energy Network). The developer switched to **Opus 5 xhigh** at the bookkeeping tail, so F5 measures Medium on the research and authoring only.
+
+### What was done
+
+- **Three `developer · ipp` dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** Sources 108 / 103 / 87 (first-party 31 / 50 / 32 percent); relationships 4 / 11 / 7, all resolving; policy regimes 3 / 3 / 4; 22 headshots (Strata 10, esVolta 7, Hunt 5). 18 shared concepts registered (786 total); registry sync (124), graph rebuild (865 edges, 653 curated), study checker (98 guides) and the Playwright render of every tab and guide all clean; three quarterly calendar rows (85); §8 rows flipped to `B5 → F5 … v1 · v04.62r | ✓ · v04.62r`; execs recount 490 across 77; CHANGELOG 79/100.
+- **Every URL asserted programmatically** (`scratchpad/urlcheck.py`, the F4 recipe) — 0 unmatched per dossier (139 / 140 / 119 URLs).
+- **All three B5 premises were wrong and are corrected in the summaries and judgments.** "Contracted and merchant mid-size BESS owners across CAISO, PJM and ERCOT" holds for none of them. **esVolta**: Generate Capital portfolio company whose sponsor mandated **Barclays and Truist for its sale** (Infralogic, 5 June 2026); CAISO + ERCOT + WECC expanding to SPP and MISO, **never PJM**; 490 MW / 980 MWh operating in ERCOT behind "a hedge in place with a confidential commodity market participant"; the January 2025 Captona deal was **USD 243 million of preferred equity including ITC-transfer proceeds, not a sale**; Generate acquired it **July 2022, not 2023**. **Strata**: **founder-owned, no sponsor** ("100% privately held company owned by our founders"; Blackstone's 2021 USD 150 million was **credit**, per its own CFO); an **originate-contract-and-sell** model — Scatter Wash to CIP (Sept 2024), White Tank to GridStor (Sept 2025), Ventura to Capital Dynamics then Arevon — keeping Justice, Inland Empire (70 MW / 280 MWh, PG&E RA) and about 1 GW of owned **solar**; **no owned battery in ERCOT or PJM**, Arizona sits in APS territory outside any ISO. **Hunt Energy Network**: Hunt-family-owned with **Manulife as JV equity partner** (USD 225 million 2021 + USD 250 million 2024), **ERCOT-only, 100 percent merchant, sub-10 MW** (32 distribution-connected 9.9 MW units + the 100 MW / 200 MWh Fort Duncan), traded by its **own Level 4 QSE (TraDER)**; the Caterpillar 1 GW agreement is the **parent's**, not HEN's.
+- **Evaluated the developer's action plan** (the screenshot from the v04.57r era) against current state and wrote a paste-ready **Opus 5 xhigh prompt for session C4** in chat at ~04:10 AM EST.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean after this commit. Program state: **35 of 65 new companies done, 4 of 30 guide passes done.**
+
+- **Fable 5.1 High/Medium remaining:** F6 (MGX · Excelsior Energy Capital · X-energy — first `investor` chips with data, include the visual check), F7 (Compass · EdgeCore · PowerHouse), F8 (Fermi America · Tract · Prime Data Centers). F9 (the Xcel head-to-head) was **completed at v04.57r** and its reminder is closed.
+- **Opus 5 xhigh remaining:** C4 (Talen · Vistra · NRG), C5, C6, C7, C8, C9, C10, C12 — 21 companies over 8 sessions — plus **26 guide backfills** (the 3 revisions and the Narada backfill landed at v04.51r).
+- **Classroom register:** G1–G5, G7 (v04.58r), G8, G9 closed; **G10 Partial** (v04.58r); **G6 open** and is the one Opus item that is not a dossier (it wants a guidance module via the `industry guidance:` command and a developer-supplied document); G11 deferred, G12 by design.
+
+### Key decisions and findings
+
+- **Fable 5.1 Medium passed its measured test — none of the three tripwires fired.** Third-party agents fetched 105 / 81 / 85 URLs against a 50 floor; each carried an explicit unverified list (13–16 flagged items) and kept snippets out of the fetched-URL lists, and the Hunt agent pulled ten PUCT Interchange PDFs with `curl` when WebFetch returned 503; judgments are confidence-tagged with stated bases and several name disconfirming evidence. **Caveat: the measurement covers research and authoring only** — the model switched at the bookkeeping tail. Both the Strata and Hunt third-party agents exhausted the 200-call search budget mid-task, which is a capacity signal rather than a quality one.
+- **`profiler-companies.json` is appended in session order, not sorted.** Sorting it produced a 518-line diff over 121 pre-existing entries; the append convention was restored and only the three new entries appended (58-line diff). **`profiler-concepts.json` IS alphabetical by slug** and the schema requires it.
+- **The §5 guide-backfill rationale is now stale.** It says "Twenty-seven backfills, IPPs first because the BESS buyer side has no guides at all." The buyer side now has **nine** guides (aypa-power, spearmint-energy, intersect-power, invenergy, gridstor, available-power, esvolta, strata-clean-energy, hunt-energy-network), so the nine IPP backfills are less urgent and easier to differentiate than when the plan was written.
+- **Measure corpus demand with word boundaries and case sensitivity.** `grep -il "Talen"` returns 17 dossiers because it matches "talent"; `grep -lE '\bTalen\b'` returns 4. Corrected demand for uncovered Phase C names: Blackstone 14, Macquarie 12, Digital Realty 10, NRG 8, Power Electronics 8, Brookfield 8, CyrusOne 7, Vistra 5, Recurrent Energy 5, Talen 4.
+- **A CDN-refused headshot is skipped, not sourced elsewhere** — esVolta's chief commercial officer renders an initials avatar because `static.wixstatic.com` returns Forbidden for that one file.
+- **Strata's president may have moved**: Bob Schaffeld is quoted as President through May 2025 but sits on the advisory board on the September 2026 leadership page; no release records the change and the dossier states both.
+- Environment unchanged from F4: threaded HTTP server, `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, `about:blank` before each dossier, `.ov-sources ol li` for the source count, Business Wire and archive.org 403.
+
+### Active context
+
+- Branch `claude/fable-5-1-medium-phase-b-f5-bll92b`; repo version **v04.62r**; CHANGELOG **79/100** (about 17 sessions left in the program, so rotation stays unlikely but the headroom is no longer generous).
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders (the Xcel head-to-head reminder was completed 2026-09-04).
+- Registry 124 companies; concepts 786; calendar 85 rows; study guides 98; execs 490 images across 77 companies.
+
+### Recommendation for next session
+
+- **Run Phase C session C4 (Talen Energy · Vistra · NRG Energy) as a fresh Opus 5 xhigh session using the paste-ready prompt written in chat on 2026-09-05 at ~04:10 AM EST** — three public IPP dossiers plus study guides, which is where the Opus thread was left off in plan order after C11 (v04.52r), is the strongest Opus fit left in the plan (three companies with 10-Ks, earnings calls and investor decks, the reading depth the v04.57r head-to-head found Opus better at), and unlocks the Phase D `clean-firm-power` lesson (C4 + C11).
+**To continue:** type `run C4 on Opus 5 xhigh`
+
+## Previous Sessions
+
+
 **Date:** 2026-09-05 02:52 AM EST
 **Repo version:** v04.61r (bumped this session on the F4 push commit `5a3497c`; this entry is the housekeeping commit `Remember session context`)
 **Branch:** `claude/fable-phase-b-f4-802vt2` (the v04.61r push merged and the branch was swept; rebased onto `origin/main` at `ecd9dbb` before this commit)
@@ -44,42 +89,3 @@ Nothing is in flight. Working tree clean after this commit. F5–F8 remain (see 
 - **Run F5 (esVolta · Strata Clean Energy · Hunt Energy Network) as a fresh Fable 5.1 Medium session using the paste-ready prompt written in chat on 2026-09-05 at ~02:55 AM EST** — three `developer · ipp` dossiers + three guides, the B5 premises ("contracted and merchant mid-size BESS owners across CAISO, PJM and ERCOT") re-verified first, §8 rows flipped to `B5 → F5` with the effort level recorded, one push commit (v04.61r → v04.62r); fall back to High on the tripwires above.
 **To continue:** type `run F5 on Fable 5.1 Medium`
 
-## Previous Sessions
-
-**Date:** 2026-09-04 11:18 PM EST
-**Repo version:** v04.60r (bumped this session on the F3 push commit `4507585`; this entry is the housekeeping commit `Remember session context`)
-**Branch:** `claude/fable-phase-b-f3-profiler-efm1gh` (the v04.60r push merged and the branch was swept; rebased onto `origin/main` at `80a8e06` before this commit)
-**Model:** Fable 5.1 High — Phase B session F3 (Aypa Power · Spearmint Energy · Intersect).
-
-### What was done
-
-- **Three `developer · ipp` dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans in one push commit.** Sources 91 / 114 / 116 (first-party 44 / 23 / 51 percent — Spearmint's is low because Business Wire returns 403 and every release was read through mirrors); relationships 4 / 5 / 6, all resolving; 26 headshots (Intersect 7, Spearmint 19; Aypa publishes none); 46 shared concepts registered (the developer-and-financing vocabulary: development-stage ladder, queue position, NTP/COD, ready-to-build, pre-COD M&A, platform sale, tax equity and partnership flip, bridge loans, warehouse, back-leverage, revenue put, energy park, surplus interconnection, co-location net metering, Chapter 312). Registry sync (118), graph rebuild (810 edges), study checker (92 guides, 730 concepts) and the Playwright render of every tab and guide all clean; three quarterly calendar rows (79); §8 rows flipped to `B3 → F3 … v1 · v04.60r | ✓ · v04.60r`; execs recount 433 across 71.
-- **Every URL asserted programmatically** (`scratchpad/urlcheck.py`: report index from the six `## ALL URLS` lists plus a corpus tier) — 0 unmatched per dossier before writing; the check caught two label typos and one parenthesised URL the first regex truncated.
-- **Premises re-verified and corrected, not smoothed:** the Brookfield–Aypa sale is signed (22 July 2026, about USD 7bn EV / USD 3bn equity, Brookfield 8-K) and **not closed**; the 6.5 GW is Brookfield's figure, split by Brookfield Renewable (about 3,000 MW operating and under construction; about 3,500 MW contracted). Spearmint has **no Blackstone or any sponsor** (lender Elda River: 'controlled by Roscommon Analytics'), is develop-to-own not develop-to-sell, and its '15 GWh' is boilerplate dropped from 21 May 2026. Google **closed** the Intersect purchase on 10 March 2026 (USD 5,868m in Alphabet's Q2 10-Q), bought only the parks and team, the fleet went to IPX Power, and **there is no Wyoming campus**.
-- **The brief's list of IPP guides to avoid does not exist** (plus-power, jupiter-power, key-capture-energy, eolian, arevon, terra-gen, nextera-energy-resources have dossiers but no guides — the Phase C backfills); the guides name the Classroom's tolling / ancillary / duration material and the crusoe / xai / google guides instead.
-- **Wrote the paste-ready F4 prompt** (Invenergy · Gridstor · Available Power) in chat at ~11:18 PM EST.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean after this commit. F4–F8 remain on Fable 5.1 High; the G6 guidance module (Opus 5 xhigh), Phase C C4–C10 + C12, 26 guide backfills and Phase D are unchanged.
-
-### Key decisions and findings
-
-- **Business Wire is 403 from this environment.** Read releases through Yahoo Finance, SFNet, 01net, Pulse 2.0, IREI, Energy Global and Batteries News mirrors, and cite the mirror; the company's `in-the-news` page gives the titles. archive.org is blocked too.
-- **Keep parentheses inside URLs in the index regex** (`https?://[^\s<>\[\]"'`]+`, strip trailing punctuation) — an MPUC PDF named `Application%20(1).pdf` was truncated by the F2 pattern.
-- **A design basis in a permit filing is `announced`, not a supply relationship** (Tesla Megapack 2XL in Spearmint's Minnesota applications); a competitor link from an analyst ranking cites the ranking (Modo, Enerdatics).
-- **Exec-background links and JV attributions are not relationships** (Apex/NextEra alumni at Aypa; Linxon as a Hitachi Energy JV) — mention in prose, do not curate.
-- **A company-hosted headshot whose filename marks a LinkedIn origin is skipped** (one Spearmint board photo).
-- **Environment re-confirmed:** `pip install playwright pymupdf pillow pillow-avif-plugin` (AVIF headshots need the plugin); Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; the `f3-render-check.py` harness (threaded server, admin stub, per-slug tabs via `#ov-tab-<key>`, sources count, `{{`, `#ov-study-btn` then `.gd-term` data-terms against concepts + glossary) is the working recipe — dry-run on `fluidstack`. Six agents ran 12–17 minutes each with no 429 stall; net session time 53 minutes against a 90-minute estimate.
-
-### Active context
-
-- Branch `claude/fable-phase-b-f3-profiler-efm1gh`; repo version **v04.60r**; CHANGELOG 77/100.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders.
-- Registry 118 companies; concepts 730; calendar 79 rows; execs 433 images across 71 companies.
-
-### Recommendation for next session
-
-- **Run F4 (Invenergy · Gridstor · Available Power) as a fresh Fable 5.1 High session using the paste-ready prompt written in chat on 2026-09-04 at ~11:18 PM EST** — three `developer · ipp` dossiers + three guides, the Invenergy ownership (Blackstone Infrastructure stake, CDPQ) and the Gridstor / Available Power sponsor premises re-verified first, §8 rows flipped to `B4 → F4`, one push commit (v04.60r → v04.61r).
-**To continue:** type `run F4 on Fable 5.1 High`
