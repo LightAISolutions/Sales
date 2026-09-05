@@ -3,11 +3,140 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 81/100`
+`Sections: 82/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.65r] — 2026-09-05 02:35:04 PM EST
+
+> Build scripts/check-profiler-crossrefs.py — a checker that detects when two
+> Profiler dossiers assert contradictory facts about the same thing.
+>
+> Develop on branch claude/profiler-crossref-checker (create it). Read
+> CLAUDE.md, .claude/rules/profiler-app.md (especially the new step 7,
+> "Reconcile the corpus against the new dossier") and
+> repository-information/PROFILER-SCHEMA.md before writing any code.
+>
+> WHY THIS EXISTS
+> sync-profiler-registry.py, build-profiler-graph.py and check-profiler-study.py
+> each validate a dossier against itself or against the registry. None asks
+> whether two dossiers contradict each other. Repo version v04.64r added a rule
+> (step 7) requiring that reconciliation by hand on every new dossier, and fixed
+> four real cases it surfaced. This script makes that rule verifiable instead of
+> self-reported, and is the only way to reach the ~870-1,130 cross-dossier pairs
+> already in the corpus from the 127 dossiers written before the rule existed.
+>
+> FOUR GROUND-TRUTH CASES — calibrate against these
+> Each was fixed at v04.64r. The pre-fix text is in
+> live-site-pages/profiler-data/archive/. Diff each archived revision against its
+> current file to see exactly what changed:
+>   archive/invenergy.profile.v1.json      vs invenergy.profile.json
+>   archive/meta.profile.v6.json           vs meta.profile.json
+>   archive/terawulf.profile.v4.json       vs terawulf.profile.json
+>   archive/burns-mcdonnell.profile.v4.json vs burns-mcdonnell.profile.json
+>
+> They are four DIFFERENT conflict types and the checker should be measured on
+> all four:
+>   1. invenergy - a categorical mischaracterisation. It grouped NRG with Vistra
+>      and Talen as "contracting existing fleets to data centres"; NRG's model is
+>      customer-funded new build. No number is wrong. This is the hardest class
+>      and it is acceptable to conclude it is out of scope for a static checker —
+>      but say so explicitly rather than silently missing it.
+>   2. meta - THE CRITICAL CALIBRATION CASE. It read "Vistra (2.1 GW + 433 MW
+>      uprates)" where Vistra discloses 2,176 MW operating plus 433 MW of
+>      uprates, 2,609 MW total. Note that 2,176 MW and 2.1 GW are NUMERICALLY
+>      EQUAL. A unit-normalizing comparator reports no conflict and misses this
+>      entirely. The drift was an omitted component, not a wrong magnitude. If
+>      your design only compares normalized magnitudes it scores 3 of 4 and you
+>      will not notice. Solve this or state plainly that you could not.
+>   3. terawulf - a genuine figure conflict: "~$92M / 3.4x MOIC" for the Nautilus
+>      exit against Talen's own "$85M in cash plus selected physical assets" for
+>      the same transaction. This is the class the checker should nail.
+>   4. burns-mcdonnell - an open question, not a contradiction: the dossier said
+>      the Moss Landing adjacency was unresolved; other dossiers already carried
+>      the answer. Detecting "one dossier says unknown, another states it" is a
+>      valuable and cheap class.
+>
+> MEASURED FACTS ABOUT THE CORPUS (from the v04.64r session — re-verify, do not
+> trust these numbers blindly)
+> - 127 dossiers, ~1.79M tokens, 5,719 cross-dossier mention occurrences across
+>   870-1,130 distinct pairs (the count is matcher-dependent).
+> - Concentration: top 10 mention targets carry 39% of pairs, top 25 carry 65%.
+>   NVIDIA 56 inbound dossiers, Tesla 51, Microsoft 46, Siemens Energy 39,
+>   GE Vernova 29, Vertiv 26, OpenAI 25, Eaton 24, Oracle 23, Fluence 23.
+> - Field distribution of mentions (1,378-mention sample): relationships 297,
+>   sources 295, productsAndServices 225, recentDevelopments 207,
+>   technicalSpecs 84, strategyRead 80, decisionMakers 58, ecosystemRole 39,
+>   summary 32, policyExposure 31, financials 18.
+> - sources and decisionMakers are 26% of the surface and are NOISE — source
+>   titles and exec career history. Step 7 already says to skip exec-career
+>   mentions.
+> - 78% of mentions contain a digit. This is why an unscoped numeric comparator
+>   will drown in false positives.
+> - Match with word boundaries and case sensitivity. grep -il "talen" matches
+>   "talent" and returns 17 dossiers; grep -lE '\bTalen\b' returns 4.
+>
+> DESIGN CONSTRAINTS
+> - FALSE POSITIVES ARE THE FAILURE MODE, not false negatives. A checker nobody
+>   runs twice is worth nothing. Set an explicit precision target, design for it,
+>   and report the measured rate. If you must trade, prefer missing a real
+>   conflict over flagging an accurate claim.
+> - Output must be adjudicable without opening both files: for each candidate,
+>   print both dossiers, both verbatim claims with their JSON paths, the specific
+>   values that differ, and a proposed classification under step 7's four-way
+>   disposition (contradicted / differing figures / open question / accurate).
+> - Do NOT auto-edit any dossier. The script reports; a human or a later session
+>   adjudicates. Rewriting an accurate dossier is worse than the drift.
+> - --json for machine output and a readable default. Non-zero exit on findings,
+>   with a documented way to accept a reviewed pair so reruns stay quiet.
+> - Match the conventions of the existing checkers in scripts/ — read
+>   check-profiler-study.py and sync-profiler-registry.py first.
+>
+> DELIVERABLES — the session is not done without all four
+> 1. scripts/check-profiler-crossrefs.py, ending with
+>    "# Developed by: LightAISolutions".
+> 2. A scored run against all four ground-truth cases using the archived pre-fix
+>    revisions. State plainly how many of the four it catches. Three of four with
+>    an honest explanation beats a claimed four with a stretched definition.
+> 3. A MEASURED false-positive rate: run against the live corpus, hand-check a
+>    random sample of at least 30 flagged candidates, and report the rate. This
+>    number gates whether the retroactive sweep can start, so do not estimate it.
+> 4. A short section in the script's docstring or a companion note on which
+>    conflict classes it detects and which it structurally cannot.
+>
+> DO NOT run the retroactive sweep in this session — that is a separate job on a
+> different model. Build and tune the checker only.
+>
+> Standard repo treatment: Pre-Commit and Pre-Push checklists, CHANGELOG entry,
+> repo version bump on the push commit, README timestamp, README tree entry for
+> the new script, one push commit on the claude/* branch.
+
+### Added
+
+- **`scripts/check-profiler-crossrefs.py` — the first checker that reads two dossiers against each other.** Every existing validator checks a dossier against itself or against an index; none asks whether two dossiers assert contradictory facts. Three detectors: **differing figures** (two magnitudes for what looks like one fact, in a shared dimension — power, energy, currency, percent), **open questions** (one dossier flags something unresolved inside a bounded record and another carries an unhedged passage on the same rare-anchored topic), and an opt-in **grouped attribution** class (`--include-grouped`) that surfaces one characterisation applied to several companies at once. Readable output by default, `--json` for machines, `--pair` and `--only` to scope, exit 1 while candidates remain. **It never edits a dossier** — it reports, and a human adjudicates under step 7's four-way disposition. 1.4 seconds over 127 dossiers.
+- **`repository-information/profiler-crossref-accepted.json` — the accept list.** Each candidate carries a 12-character id, stable across reruns while the two claims are unchanged. Reviewed candidates needing no dossier change go here with a reason and a date; editing either claim changes the id, so the candidate returns for review. Seeded with the five candidates adjudicated in this session, leaving two genuinely open items for the developer.
+- **`repository-information/PROFILER-CROSSREF-CALIBRATION.md` — the evidence behind every threshold.** The four ground-truth cases and how each is scored, the reproduction recipe for the pre-fix corpus, the full tuning sweep row by row, the measured false-positive rate with its adjudication standard, the residual false-positive patterns, and the coverage limit to read before planning a retroactive sweep.
+
+### Changed
+
+- **Profiler Command step 7 now names the checker** (`.claude/rules/profiler-app.md`). The reconciliation stays a grep-and-read obligation — the rule is explicit that the checker is a **floor, not a substitute**, and that the categorical-mischaracterisation class it cannot see is exactly the `invenergy` case that motivated the rule.
+
+### Verified
+
+- **Scored 3 of 4 against the known drift cases**, using the archived pre-fix revisions as a reconstructed corpus. Caught: `meta` (2.1 GW against Vistra's 2,609 MW, Δ 19.5 %), `terawulf` (~$92M against Talen's $85M, Δ 7.6 %, anchored on `Nautilus`), `burns-mcdonnell` (marker `no source ties`, anchor `Moss Landing`, answered by `vistra relationships[4].context`). **Missed: `invenergy`** — a categorical mischaracterisation in which every number is correct. `--include-grouped` surfaces the sentence, but as 1 of 80 candidates and indistinguishable from the accurate peer groupings around it, so it is scored a miss and the docstring says why rather than claiming it.
+- **All three caught cases disappear on the live corpus with no accept-list entry.** The checker measures the drift, not the pairing.
+- **The `meta` case — the one a magnitude comparator cannot see — is solved.** 2,176 MW and 2.1 GW are equal to two significant figures; the drift was an omitted component. Two mechanisms find it: strict equality with a banded difference (2,100 ≠ 2,176, so the rounded restatement lands in the band), and arithmetic reconciliation (after the fix 2,176 + 433 = 2,609 reconciles and the pair is dropped; before it, 2,100 + 433 = 2,533 reconciles with nothing).
+- **Measured false-positive rate: 71 %, precision 29 %, on a seven-item load** — a full census of the live corpus, not a sample, with all seven adjudicated. **66 distinct candidates were hand-checked** across the tuning stages. Two candidates are genuinely actionable (`enchanted-rock` × `anthropic`, `hithium` × `jupiter-power`); five were accepted with reasons.
+
+### Worth noting
+
+- **The volume, not the rate, is the design decision.** 148 candidates at ~10 % precision was a checker nobody would run twice. Seven precision filters took it to seven candidates: nearest-figure-per-dimension attribution, a directional 40-character attribution window, agreed-value credits at passage and dossier scope, arithmetic component/total reconciliation, a 25 % difference-band ceiling, and suppression of passages that already disclose the disagreement. The trade is explicit — a ten-minute review of the whole corpus that surfaces two real items.
+- **Coverage is narrower than the corpus and the note says so plainly.** Requiring mutual mention reduces the ~870–1,130 cross-dossier pairs to **260 compared pairs**. A pair where only one side names the other is never compared. A clean run means those 260 pairs trip none of the three detectors — not that the corpus is consistent.
+- **Two approaches were tried and rejected**, recorded so they are not re-tried: requiring a shared rare *topic* anchor on the figure class (Meta and Vistra share no non-company anchor, so it drops the entire omitted-component class), and figure-local lexical overlap (neither figure case shares a unit phrase — "existing-plant PPAs" against "from the PJM fleet").
+- **A 350-alternative company-matching regex took 201 seconds; a first-token index does the same work in 0.6.** Kept because a checker that takes three minutes gets run once.
+- **The retroactive sweep was not run**, as instructed. The measured rate above is the number that gates it, and the coverage limit is the caveat that goes with it.
 
 ## [v04.64r] — 2026-09-05 05:50:38 AM EST
 

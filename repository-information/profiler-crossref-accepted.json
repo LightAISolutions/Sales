@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "note": "Cross-dossier candidates from scripts/check-profiler-crossrefs.py that a human has reviewed and found to need no dossier change. Each id is printed by the checker; editing either dossier's claim changes the id, so the candidate returns for review. Method and adjudication standard: repository-information/PROFILER-CROSSREF-CALIBRATION.md.",
+  "accepted": [
+    {
+      "id": "daf884f297f8",
+      "pair": "byd x tesla",
+      "why": "Different products. BYD's positioning quotes Tesla Megapack 3 at ~5 MWh; Tesla's positioning quotes BYD's MC Cube at ~6 MWh. Both accurate.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "29d6ebe92c2a",
+      "pair": "envision-energy x prevalon",
+      "why": "Both dossiers flag the same forward-looking regulatory question (whether the Fixx structure survives Treasury's final FEOC rules). No dossier can answer it; only Treasury can.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "2b97f269c354",
+      "pair": "envision-energy x fluence",
+      "why": "Same FEOC open question as above; the matched Fluence passage is a cell part number, not an answer.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "8ec646e16001",
+      "pair": "google x anthropic",
+      "why": "Google's unresolved item is the composition of its own Q2 2026 equity gains. Anthropic's dossier has no bearing on it.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "2e3072b4e12f",
+      "pair": "tesla x samsung-sdi",
+      "why": "Both dossiers carry the same hedge on the same reported talks ('confirmed talks but no details finalized'). They agree; neither answers the other.",
+      "when": "2026-09-05"
+    }
+  ]
+}
