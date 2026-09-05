@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "note": "relationships[] findings from scripts/check-profiler-relationships.py that a human has reviewed and that need no dossier change. Each id is printed by the checker and hashes the facts behind the finding (both types for a reciprocal pair; slug, counterparty and url for an unregistered source), so editing either side reopens it. These are structural invariants: an entry here is an exception with a written reason, never a loosened rule. Seeded empty at X1 (v04.71r); X2 populates it. Method: repository-information/PROFILER-CROSSREF-CALIBRATION.md → Relationships checker.",
+  "accepted": []
+}

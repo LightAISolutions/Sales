@@ -8,6 +8,10 @@ The script's docstring is the user-facing contract. This file is the evidence
 behind it — read it before changing any threshold in the script's `tuning`
 block, and update it when you do.
 
+The last section covers the sibling `scripts/check-profiler-relationships.py`
+(added v04.71r) — the mechanical guard over `relationships[]`, which has no
+tuning block by design.
+
 ## Why the script exists
 
 `sync-profiler-registry.py`, `build-profiler-graph.py`,
@@ -190,5 +194,114 @@ it does not mean the corpus is consistent.
 350-alternative regex for company matching and took 201 seconds; a first-token
 index over the same text does it in 0.6. Keep it fast — a checker that takes
 three minutes gets run once.
+
+## Relationships checker — `check-profiler-relationships.py` (X1, v04.71r)
+
+The sixth checker, built 2026-09-05 as Phase X item X1 (`PROFILER-COVERAGE-PLAN.md`
+§9.3) on Fable 5.1 High, against the 127-dossier corpus at v04.70r. It guards
+S2 — the curated `relationships[]` arrays — which no script had ever read for
+anything but slug resolution. It shares this file with the cross-reference
+checker because it is the other half of the same question: `check-profiler-
+crossrefs.py` asks whether two dossiers *contradict* each other; this one asks
+whether the edges they *declare* between each other are well-formed.
+
+### Four mechanical invariants, and nothing else
+
+| # | Kind | Invariant | Live corpus (v04.70r) |
+|---|------|-----------|------------------------|
+| (a) | `dangling-slug` | Every `relationships[].slug` resolves in `profiler-companies.json` | **0** — regression guard |
+| (b) | `reciprocal-type` | When A curates B *and* B curates A, the two `type`s are coherent inverses | **15** (82 naive) |
+| (c) | `unregistered-source` | `relationships[].source`, **when it is a URL**, is an exact string in that dossier's own `sources[]` | **119** |
+| (d) | `unregistered-project` | `relationships[].project`, when set, resolves in `profiler-projects.json` | **0** of 51 pins |
+
+**There is no semantic detector and there will not be one.** The semantic
+layer exists above; a fifth "smart" check here would re-import the
+false-positive problem that layer was tuned for. Consequently there is no
+`tuning` block: every finding is either true or an accepted exception with a
+written reason in `profiler-relationships-accepted.json`. Loosening a rule to
+make a finding go away is the one move this checker forbids by design.
+
+### The 82-versus-15 filtering rule
+
+`type` reads from the **stating** side's perspective — "B is A's `<type>`".
+So when A says B is its `supplier`, the coherent reciprocal is B saying A is
+its `customer`, and comparing the two strings naively calls every correct
+customer/supplier pair a conflict. On the live corpus the naive comparison
+reports **82** differing pairs across the 175 reciprocal pairs; **67** of them
+are correct `customer`↔`supplier` inverses. The checker's inverse table is:
+
+| A says B is… | …so B must say A is | Class |
+|--------------|---------------------|-------|
+| `customer` | `supplier` | inverse pair |
+| `supplier` | `customer` | inverse pair |
+| `investor` | `portfolio` | inverse pair (schema-level; the enum does not carry `portfolio` yet, so an `investor` edge's reciprocal is reported until it does or the pair is accepted) |
+| `partner` | `partner` | symmetric |
+| `competitor` | `competitor` | symmetric |
+| `other` | *(none)* | reported — `other` makes no claim, so coherence cannot be shown |
+
+The last row is what takes the count from 13 to **15**: `eolian`/`jupiter-power`
+and `mitsubishi-power`/`prevalon` are `other`/`other` pairs. A symmetry rule
+that let `other` match itself would pass them silently; the checker reports
+them instead, because two dossiers agreeing to say nothing is not the same as
+two dossiers agreeing. Both belong on the accept list with a reason, which is
+X2's job — the ground-truth count was measured with them included, and the
+checker reproduces it exactly.
+
+Of the 15, `microsoft`/`openai` (`partner` · `investor`) and
+`google`/`terawulf` (`partner` · `investor`) are the clearest legitimately-both
+cases. Five are a vendor calling NVIDIA a `partner` while NVIDIA lists the
+vendor as a `supplier` (`flex`, `infineon`, `liteon`, `megmeet`, plus
+`delta-electronics`/`infineon` in the same shape) — those are real
+adjudications, not accepts.
+
+### Why one-sidedness is deliberately NOT an invariant
+
+503 of the 853 entries at v04.69r have no reciprocal edge. Reporting them
+would be the over-calling that §9.2 reason 2 declines, and the histogram says
+why: **421** of the 503 are silent in both directions (neither dossier's prose
+mentions the other either), and **165** of those are `competitor` edges, where
+silence is correct — a large company has no reason to name a small rival, and
+a dossier that lists one would be padding. The remainder are largely a small
+vendor naming a large customer that will never list it back. Nothing is lost
+by not flagging them: `build-profiler-graph.py` already merges one-sided edges
+into bidirectional graph edges, so the Relationships tab shows the inbound
+account regardless. One-sidedness is a prompt for the *next revision* of the
+silent dossier, not a defect in the corpus.
+
+### Source disposition, and what (c) does not flag
+
+The schema (`PROFILER-SCHEMA.md` → `relationships[]`) says `source` is "a URL
+or a label from this profile's `sources[]`", and that when the field is absent
+the app derives a provisional link at render time. Three of the four
+dispositions are therefore allowed, and the checker counts them without
+reporting them:
+
+| Disposition | v04.70r | Reported |
+|-------------|---------|----------|
+| exact `sources[]` URL match | **517** | no |
+| URL not in `sources[]` | **119** | **yes** |
+| bare label | **140** | no — allowed by schema |
+| absent | **77** | no — derived-link fallback |
+
+An earlier pass that flagged every non-matching string counted 259 and would
+have manufactured 140 false defects out of the labels. The match is **exact**
+because the app resolves the string exactly; when a `sources[]` url matches
+after normalising scheme, `www.`, trailing slash and fragment, the report adds
+a *near match* hint (1 of the 119 on the live corpus) but the finding stands.
+
+### Verification at build
+
+- Reproduces the §9.1 ground truth to the entry: 853 entries, 678 distinct
+  pairs, 175 reciprocal pairs, 82 naive / **15** filtered type findings,
+  517 / **119** / 140 / 77 source disposition, 0 dangling slugs.
+- (d) was unmeasured in §9.1: **51** pins across 8 registered projects, 0
+  unregistered.
+- Exit 1 on the live corpus (134 findings); the four siblings
+  (`sync-profiler-registry.py --check`, `check-profiler-study.py`,
+  `check-profiler-reports.py`, `check-profiler-crossrefs.py`) unchanged and
+  clean. Runtime 0.16 s.
+- Accept-list ids hash the facts behind the finding (both types; slug +
+  counterparty + url), so a dossier edit that changes the fact reopens it —
+  the same contract as the cross-reference checker's fingerprints.
 
 Developed by: LightAISolutions

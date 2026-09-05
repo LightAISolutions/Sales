@@ -141,7 +141,7 @@ When §8 shows every row done **and §9's Phase X ledger is clear**, the develop
 The commands and their rules live in `.claude/rules/profiler-app.md` and `PROFILER-SCHEMA.md`; nothing here repeats them. What this plan adds is the **order** and the **bookkeeping** that every session in this program owes:
 
 - **Dossier then guide, same commit.** `profiler <Company>` (two parallel research subagents, first-party exhaustive then third-party, ~50–70 sources) followed by `profiler prep <Company>` (lesson plan under `repository-information/study-prep/<slug>/` plus `<slug>.study.json` at schema v2). One push commit per session
-- **After every profile write:** `python3 scripts/sync-profiler-registry.py`, `python3 scripts/build-profiler-graph.py`, `python3 scripts/check-profiler-study.py`. The roster, the graph and the study validator are three separate things that go stale separately
+- **After every profile write:** `python3 scripts/sync-profiler-registry.py`, `python3 scripts/build-profiler-graph.py`, `python3 scripts/check-profiler-study.py`, `python3 scripts/check-profiler-relationships.py`. The roster, the graph, the study validator and the relationships checker are four separate things that go stale separately — the fourth (X1, v04.71r) fails on a dangling slug, an incoherent reciprocal type, a relationship URL the dossier never registered in `sources[]`, or an unregistered project pin; exceptions go on `repository-information/profiler-relationships-accepted.json` with a reason
 - **Calendar row.** Every new company gets a row in `repository-information/profiler-refresh-calendar.json`: public companies carry a researched `nextReport` / `confirmed` / `source` / `watch[]`; private and unit-level companies carry `cadence: "quarterly"`. The earnings desk is capped at three companies a day and this program adds ~65 rows, so expect the desk's queue to lengthen — that is by design, the calendar is the queue
 - **README tree.** One entry per new `<slug>.profile.json` and `<slug>.study.json`, in the existing format
 - **§5 of this file — rewrite your own row.** The `Why (hypothesis — unverified)` cell is prompt material, not a finding. After the research pass, **replace it with what the sources actually showed** and fill in `Checked` with the verdict and the repo version — including "premise held" when it did, so a confirmed row is distinguishable from an unexamined one. Never leave a shipped row carrying its original wording, and never record a verdict you did not check. This is what turns §5 from a wish into a record.
@@ -327,7 +327,7 @@ Every cross-reference surface in the repo was enumerated and counted on 2026-09-
 
 | Item | Model | Status |
 |------|-------|--------|
-| X1 · `check-profiler-relationships.py` | Fable 5.1 High | — |
+| X1 · `check-profiler-relationships.py` | Fable 5.1 High | **Done — v04.71r.** Reproduces §9.1 exactly (853 / 678 · 82 naive → **15** · **119** · 0 dangling); (d) measured at 51 pins, 0 unregistered. Exits 1 on the live corpus with 134 findings for X2 |
 | X2 · clear the 15 + 119 | Fable 5.1 Medium | — |
 | X3 · integrity close-out | Opus 5 xhigh | — |
 

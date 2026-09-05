@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-05 03:56:44 PM EST` · Repo version: `v04.70r`
+Last updated: `2026-09-05 04:18:17 PM EST` · Repo version: `v04.71r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -691,6 +691,7 @@ Last updated: `2026-09-05 03:56:44 PM EST` · Repo version: `v04.70r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-profiler-graph.py">build-profiler-graph.py</a> — Profiler relationship-graph builder (merges both dossiers' curated links + full-sentence cross-mention evidence into profiler-graph.json; --check reports drift) — required after any profile write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-reports.py">check-profiler-reports.py</a> — Profiler report verification (citation resolution against dossier sources, provenance tiers, KPI figure checks, index reconciliation) — required after any report write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-crossrefs.py">check-profiler-crossrefs.py</a> — Cross-dossier contradiction checker (differing figures, open questions one dossier answers for another, opt-in grouped attributions) — makes Profiler Command step 7 verifiable rather than self-reported
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-relationships.py">check-profiler-relationships.py</a> — Mechanical guard over every dossier's relationships[] (slug resolution, coherent reciprocal types, relationship URLs registered in sources[], project pins in the named-projects registry) — required after any profile write; exits non-zero while a finding is unreviewed
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/playwright-harness.py">playwright-harness.py</a>   — Chromium smoke-test harness for all projects (load + console-error + screenshot)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/scan-project-candidates.py">scan-project-candidates.py</a> — Named-project candidate scanner (counts distinct-dossier mentions per watchlisted project; flags unregistered names at ≥3 dossiers for registry review)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/lift-study-guides.py">lift-study-guides.py</a> — One-shot mechanical study-guide lift from schema v1 to v2 (lossless heading/bullets → prose sections; --check reports without writing)
@@ -783,6 +784,7 @@ Last updated: `2026-09-05 03:56:44 PM EST` · Repo version: `v04.70r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-STYLES.md">PROFILER-STYLES.md</a>      — Profiler dossier writing-style registry (active style + Default/Bloomberg/alternative styles with mock-ups)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/profiler-crossref-accepted.json">profiler-crossref-accepted.json</a> — Reviewed cross-dossier candidates that need no dossier change; check-profiler-crossrefs.py suppresses these ids so reruns stay quiet
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/profiler-relationships-accepted.json">profiler-relationships-accepted.json</a> — Reviewed relationships[] findings that need no dossier change, each with a written reason; check-profiler-relationships.py suppresses these ids (seeded empty at X1, populated by X2)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/profiler-refresh-calendar.json">profiler-refresh-calendar.json</a> — Report calendar driving the Profiler earnings desk Routine — next report date, confirmation status and watch items per covered company (schema: repository-information/PROFILER-SCHEMA.md)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/industry-guidance">industry-guidance/</a>   — Analyses of industry-wide documents feeding the Profiler app's admin-only Industry Guidance modules (not deployed)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/bess-bankability-certification-analysis.md">bess-bankability-certification-analysis.md</a> — Bankability &amp; certification for grid-scale BESS (research synthesis; source of truth for the in-app module)

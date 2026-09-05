@@ -3,11 +3,91 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.71r] — 2026-09-05 04:18:17 PM EST
+
+> **Prompt:** "Run Phase X item X1 of repository-information/PROFILER-COVERAGE-PLAN.md on Fable 5.1 High as a
+> fresh session: build scripts/check-profiler-relationships.py, the sixth checker.
+> 
+> READ FIRST: repository-information/SESSION-CONTEXT.md; PROFILER-COVERAGE-PLAN.md §9 in full
+> (§9.1 the measured surface, §9.2 what this phase declines to do and why, §9.3 the X1 row) plus
+> §2 and §7; repository-information/PROFILER-SCHEMA.md (the relationships[] row and the Source
+> provenance section); repository-information/PROFILER-CROSSREF-CALIBRATION.md. Read
+> scripts/check-profiler-crossrefs.py and scripts/sync-profiler-registry.py before writing a line —
+> match their CLI shape, their exit-code contract and their output style rather than inventing new ones.
+> 
+> THE TASK: four MECHANICAL invariants over every dossier's relationships[] array. No semantic
+> detectors — the semantic layer is check-profiler-crossrefs.py and it already exists. Adding a
+> fifth "smart" check is the failure mode to avoid, not a bonus.
+>   (a) every relationships[].slug resolves in profiler-companies.json
+>   (b) reciprocal edges carry coherent types — customer<->supplier, investor<->portfolio,
+>       parent<->subsidiary, and symmetric types (partner, competitor) matching themselves —
+>       with an accept list for pairs that are legitimately both
+>   (c) relationships[].source, WHEN IT IS A URL, resolves inside that dossier's own sources[].
+>       A bare label is explicitly allowed by the schema ("a URL or a label from this profile's
+>       sources[]") and must NOT be flagged. An absent source must NOT be flagged — the app's
+>       derived-link fallback covers it
+>   (d) relationships[].project resolves in profiler-projects.json
+> 
+> GROUND TRUTH, measured 2026-09-05 at v04.69r over 127 dossiers — the run on the current corpus
+> must reproduce these numbers, and a material difference means the checker is wrong, not the corpus:
+>   853 relationship entries across 678 distinct pairs
+>   (a) 0 dangling slugs        -> this invariant is a regression guard, expect zero findings
+>   (b) 15 genuinely inconsistent reciprocal type pairs, AFTER filtering correct inverses.
+>       Filtering matters: a naive comparison reports 82, and 67 of those are customer/supplier
+>       pairs that are correct. Several of the 15 are legitimately both and belong on the
+>       accept list rather than in a dossier rewrite — microsoft/openai (partner AND investor)
+>       and google/terawulf (partner AND investor) are the clearest; eolian/jupiter-power and
+>       mitsubishi-power/prevalon are other/other pairs that a symmetry rule over-calls
+>   (c) 119 URL sources absent from their dossier's sources[]. The full disposition of the 853
+>       is: 517 exact sources[] URL match, 119 URL not in sources[], 140 label (allowed),
+>       77 absent (allowed)
+>   (d) unmeasured — report what you find
+> 
+> DO NOT fix anything this session. X1 builds and calibrates the checker; X2 clears what it
+> reports, on Fable 5.1 Medium. A session that also starts rewriting dossiers has merged two
+> items and blown its budget.
+> 
+> DELIVERABLES: the script, with --json, --only and an accept-list flag matching the crossref
+> checker's conventions; repository-information/profiler-relationships-accepted.json seeded EMPTY
+> (X2 populates it); a new section in PROFILER-CROSSREF-CALIBRATION.md describing the four
+> invariants, the 82-vs-15 filtering rule and why one-sidedness is deliberately NOT an invariant
+> (§9.2 reason 2: 421 of the 503 one-sided edges are silent both ways and 165 are competitor
+> edges, where silence is correct); the §9.4 ledger row flipped to the repo version; a CHANGELOG
+> entry. Add the checker to the after-every-profile-write list in §7 and in the Profiler Command
+> step 8 of .claude/rules/profiler-app.md, beside the registry sync, graph build and study validator.
+> 
+> VERIFY: the checker exits NON-ZERO on the current corpus and reports exactly the (b) and (c)
+> counts above; sync-profiler-registry.py --check, check-profiler-study.py, check-profiler-reports.py
+> and check-profiler-crossrefs.py all still run clean; python3 -c "import ast" parse check is not
+> enough — actually run it. State the false-positive posture plainly: these are structural
+> invariants, so a finding is a finding, and any exception goes on the accept list with a written
+> reason, never into a loosened rule.
+> 
+> Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch."
+
+### Added
+
+- **`scripts/check-profiler-relationships.py` — the sixth checker, Phase X item X1.** Four mechanical invariants over every dossier's `relationships[]`, nothing semantic: (a) `dangling-slug` — every `slug` resolves in `profiler-companies.json`; (b) `reciprocal-type` — when both dossiers curate the pair, the two `type`s are coherent inverses (`customer`↔`supplier`, `investor`↔`portfolio`, `partner` and `competitor` with themselves; `other` has no inverse and is reported for a human to accept); (c) `unregistered-source` — a `source` that is a URL is an exact string in that dossier's own `sources[]`, while labels and absent sources are allowed by schema and never flagged; (d) `unregistered-project` — a `project` pin resolves in `profiler-projects.json`. Same CLI shape, exit contract (0 clean · 1 findings · 2 broken input) and report style as `check-profiler-crossrefs.py`: `--json`, `--only`, `--pair`, `--kinds`, `--accept`, 12-character finding ids that hash the facts behind the finding. Runs in 0.16 s.
+- **`repository-information/profiler-relationships-accepted.json`, seeded empty.** The accept list for the new checker — X2 populates it. These are structural invariants, so an entry is an exception with a written reason, never a loosened rule.
+- **"Relationships checker" section in `repository-information/PROFILER-CROSSREF-CALIBRATION.md`** — the four invariants, the 82-versus-15 filtering rule (a naive string comparison reports 82 reciprocal pairs; 67 are correct `customer`↔`supplier` inverses; treating `other` as untyped rather than self-symmetric is what makes the count 15, not 13), why one-sidedness is deliberately not an invariant (§9.2 reason 2: 421 of the 503 one-sided edges are silent both ways and 165 are `competitor`, where silence is correct), the source-disposition table (517 / 119 / 140 / 77) and the verification at build.
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §7** — the after-every-profile-write list now names four scripts, not three; **§9.4** — the X1 ledger row flipped to `Done — v04.71r` with the reproduced counts.
+- **`.claude/rules/profiler-app.md` Profiler Command step 5** — the relationships checker is now required beside the registry sync and the graph build on every profile write path. *(The X1 prompt said "step 8"; step 8 is Batch requests — the sync and graph build live in step 5, so the checker went there.)*
+- **README tree** — entries for the new script and the new accept list.
+
+### Verified
+
+- **The checker reproduces the §9.1 ground truth to the entry on the live corpus at v04.70r:** 853 entries, 678 distinct pairs, 175 reciprocal pairs, **0** dangling slugs, 82 naive → **15** reciprocal-type findings, **119** unregistered-source findings (disposition 517 exact match · 119 missing · 140 label · 77 absent). Invariant (d), unmeasured until now: **51** project pins across 8 registered projects, **0** unregistered. Exit 1, 134 findings — all left for X2; nothing was fixed this session by instruction.
+- **Of the 15, the four the prompt named are present:** `microsoft`/`openai` and `google`/`terawulf` (`partner` · `investor` — both true, accept-list candidates), `eolian`/`jupiter-power` and `mitsubishi-power`/`prevalon` (`other`/`other`). Five more share one shape — a vendor calling NVIDIA a `partner` while NVIDIA lists it as a `supplier` — and are real adjudications.
+- **The four siblings still run clean:** `sync-profiler-registry.py --check` 0 of 127 out of sync; `check-profiler-study.py` 0 errors / 0 warnings; `check-profiler-reports.py` 0 errors / 31 aged-pin warnings (unchanged); `check-profiler-crossrefs.py` exit 0.
 
 ## [v04.70r] — 2026-09-05 03:56:44 PM EST
 
