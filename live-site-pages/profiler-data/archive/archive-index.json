@@ -397,6 +397,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-30",
       "supersededBy": 3
+    },
+    {
+      "file": "enchanted-rock.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 4
     }
   ],
   "envision-energy": [
@@ -597,6 +603,12 @@
       "profileVersion": 7,
       "archivedAt": "2026-08-30",
       "supersededBy": 8
+    },
+    {
+      "file": "hithium.profile.v8.json",
+      "profileVersion": 8,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 9
     }
   ],
   "hitt": [

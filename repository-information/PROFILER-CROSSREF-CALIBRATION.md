@@ -120,6 +120,40 @@ corpus and surfaces two real items. It is **not** a rate that would survive a
 - **Generic answer passages.** An open question anchored to a rare topic can
   match a counterpart `summary` that mentions the topic without answering.
 
+## Adjudication log
+
+**2026-09-05 (v04.66r) — the first two candidates were worked.** Both were open
+questions, and both were closed by revising the **asking** dossier, not the
+answering one, per step 7:
+
+- **`enchanted-rock` v3 → v4.** Anthropic's dossier corroborates the 470 MW
+  equipment purchase order and the RockBlock attribution — but both trace to
+  ERock's own release, Anthropic has not announced the order, and it names no
+  sites. The Fluidstack TX/NY host inference is genuinely unconfirmed on both
+  sides, so the cross-check was recorded and dated rather than the question
+  being declared answered.
+- **`hithium` v8 → v9.** The checker's pairing invites the reading that Jupiter
+  confirmed what Hithium hedged. The corpus says the opposite: Jupiter Power's
+  own dossier records that **Jupiter's channels have never once named Hithium**,
+  and that the "verified three layers" are verified from *Hithium-side*
+  disclosures, the HKEX prospectus roster and third-party coverage. Completion
+  of the 3 GWh delivery is confirmed by no source. Recorded in both Hithium
+  passages; `jupiter-power` was accurate and left alone.
+
+**A property worth knowing before adjudicating.** Closing an open question does
+not silence it, because the honest close usually keeps the hedging word — the
+uncertainty is now *documented* rather than *open*, but the marker is still
+there. Both revisions above therefore still surface, and both were then
+accepted. Expect "revise **and** accept" to be the normal disposition for this
+class; only the figure class routinely goes quiet on its own.
+
+**Fingerprint contract fixed the same day.** Open-question ids originally hashed
+only slug pair, scope, marker and anchor, so rewriting the claim left the id —
+and any accept entry — valid against text that no longer existed. Ids now
+include both claim texts, matching what the docstring always promised. The
+change invalidated the four accept entries written earlier that day; they were
+re-derived, which is the intended behaviour rather than a migration to avoid.
+
 ## Coverage limit — read this before planning a sweep
 
 Mutual mention (A names B *and* B names A) reduces the ~870–1,130

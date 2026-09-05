@@ -50,7 +50,7 @@
     {
      "band": "Anthropic",
      "label": "~470 MW",
-     "value": "RockBlock equipment purchase order announced with Q2 results Aug 11, 2026 — largest order in company history; backlog to ~$1.7B (10x YoY); production commitments into 2028; O&M to follow; sites undisclosed (Anthropic's Fluidstack TX/NY buildout is the inferred host — unconfirmed); stock +23% on the print. Checked against the Anthropic dossier 2026-09-05: Anthropic records the same 470 MW equipment purchase order and the RockBlock attribution, but both trace to ERock's own release rather than to Anthropic, which has not announced the order and names no sites. The Fluidstack TX/NY host therefore remains unconfirmed on both sides, and Anthropic's dossier carries it as an indicator to watch rather than a stated fact."
+     "value": "RockBlock equipment purchase order announced with Q2 results Aug 11, 2026 — largest order in company history; backlog to ~$1.7B (10x YoY); production commitments into 2028; O&M to follow; sites undisclosed (Anthropic's Fluidstack TX/NY buildout is the inferred host — unconfirmed); stock +23% on the print"
     },
     {
      "band": "Meta / El Paso Electric",
@@ -427,6 +427,6 @@
    "date": null
   }
  ],
- "lastUpdated": "2026-09-05",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

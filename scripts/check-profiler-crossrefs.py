@@ -842,7 +842,12 @@ def detect_open_questions(corpus, anchor_df, rare_index):
                           "path": top[0][1].path,
                           "claim": top[0][1].text[:700].replace("\n", " "),
                           "also": [p.path for _, p in top[1:]]},
-                    "id": fingerprint(["oq", sa, sb, scope, marker, top[0][0]]),
+                    # The claim text is part of the identity: editing either
+                    # side must reopen the candidate for review, which is the
+                    # contract the docstring states. Scope + marker alone would
+                    # keep an accepted id valid after the passage was rewritten.
+                    "id": fingerprint(["oq", sa, sb, scope, marker, top[0][0],
+                                       joined, top[0][1].text]),
                 })
     return findings
 

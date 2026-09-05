@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "note": "Cross-dossier candidates from scripts/check-profiler-crossrefs.py that a human has reviewed and found to need no dossier change. Each id is printed by the checker; editing either dossier's claim changes the id, so the candidate returns for review. Method and adjudication standard: repository-information/PROFILER-CROSSREF-CALIBRATION.md.",
+  "note": "Cross-dossier candidates from scripts/check-profiler-crossrefs.py that a human has reviewed and that need no further dossier change. Each id is printed by the checker; it covers both claims, so editing either side reopens the candidate for review. Method and adjudication standard: repository-information/PROFILER-CROSSREF-CALIBRATION.md.",
   "accepted": [
     {
       "id": "daf884f297f8",
@@ -9,25 +9,37 @@
       "when": "2026-09-05"
     },
     {
-      "id": "29d6ebe92c2a",
+      "id": "1976de46b9f7",
+      "pair": "enchanted-rock x anthropic",
+      "why": "Adjudicated and closed in enchanted-rock v4 (2026-09-05). Anthropic's dossier corroborates the 470 MW order and the RockBlock attribution, but both trace to ERock's own release; Anthropic has not announced the order and names no sites, so the Fluidstack TX/NY host stays genuinely unconfirmed. The marker word remains because the uncertainty is real — it is now documented rather than open.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "bf7153a031f9",
+      "pair": "hithium x jupiter-power",
+      "why": "Adjudicated and closed in hithium v9 (2026-09-05). The confirmation runs one way: the relationship is documented from Hithium-side disclosures, the HKEX prospectus roster and third-party coverage, while Jupiter's own channels have never named Hithium. Completion of the 3 GWh delivery is confirmed by no source. Recorded in both hithium passages; nothing left to resolve from the corpus.",
+      "when": "2026-09-05"
+    },
+    {
+      "id": "bc77c86a8c09",
       "pair": "envision-energy x prevalon",
       "why": "Both dossiers flag the same forward-looking regulatory question (whether the Fixx structure survives Treasury's final FEOC rules). No dossier can answer it; only Treasury can.",
       "when": "2026-09-05"
     },
     {
-      "id": "2b97f269c354",
+      "id": "402df07664e8",
       "pair": "envision-energy x fluence",
       "why": "Same FEOC open question as above; the matched Fluence passage is a cell part number, not an answer.",
       "when": "2026-09-05"
     },
     {
-      "id": "8ec646e16001",
+      "id": "f83b579e0be3",
       "pair": "google x anthropic",
       "why": "Google's unresolved item is the composition of its own Q2 2026 equity gains. Anthropic's dossier has no bearing on it.",
       "when": "2026-09-05"
     },
     {
-      "id": "2e3072b4e12f",
+      "id": "ad8093af9a68",
       "pair": "tesla x samsung-sdi",
       "why": "Both dossiers carry the same hedge on the same reported talks ('confirmed talks but no details finalized'). They agree; neither answers the other.",
       "when": "2026-09-05"

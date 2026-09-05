@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 82/100`
+`Sections: 83/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.66r] — 2026-09-05 02:56:19 PM EST
+
+> For enchanted-rock x anthropic, mention that Anthropic's 470MW equipment purchase could be with RockBlock, but unconfirmed. For hithium x jupiter-power, honestly and clearly state that hithium did not confirm the relationship, but Jupiter did.
+>
+> Which flagged dossier do I need to revise or add to the accept list?
+
+### Fixed
+
+- **`enchanted-rock` v3 → v4 — the RockBlock order's host, cross-checked and dated.** The dossier flagged the 470 MW RockBlock equipment purchase order's destination as "sites undisclosed (Anthropic's Fluidstack TX/NY buildout is the inferred host — unconfirmed)". The Anthropic dossier corroborates the order and the RockBlock attribution, but **both trace to ERock's own release**, not to Anthropic, which has not announced the order and names no sites — it carries any site disclosure as an indicator to watch. The cross-check is now recorded and dated in the spec; the host inference stays explicitly unconfirmed on both sides rather than being upgraded to an answer.
+- **`hithium` v8 → v9 — the confirmation asymmetry stated plainly, in the direction the corpus supports.** Both the `strategyRead` judgement and the Jupiter Power technical-spec band now record that the relationship is documented **from Hithium's side** — its own disclosures and the HKEX prospectus partner roster — plus third-party coverage of the Trimount design win, while **Jupiter's own channels have never once named Hithium** and it publicly messages domestic content instead. Neither party has confirmed completion of the 3 GWh delivery. `jupiter-power` already recorded this asymmetry correctly and was left alone.
+
+### Changed
+
+- **Open-question fingerprints now include both claim texts** (`scripts/check-profiler-crossrefs.py`). They previously hashed only the slug pair, scope, marker and anchor, so rewriting a claim left the id — and any accept entry — valid against text that no longer existed. The docstring already promised that editing a claim reopens the candidate; the code now matches. The change re-derived the four open-question accept entries written earlier the same day.
+- **`repository-information/profiler-crossref-accepted.json`** carries all seven reviewed candidates under the corrected fingerprints, each with the reason it needs no further change. `check-profiler-crossrefs.py` now exits **0** on the live corpus.
+- **`repository-information/PROFILER-CROSSREF-CALIBRATION.md`** gains an adjudication log recording both dispositions, the fingerprint correction, and the property that matters most for future passes.
+
+### Verified
+
+- `sync-profiler-registry.py` reconciled both `lastUpdated` fields (2 of 127 updated); `build-profiler-graph.py` rebuilt to 903 edges (678 curated, 2,788 evidence items); `check-profiler-study.py` clean (101 guides, 811 concepts); `check-profiler-crossrefs.py` **exit 0, 7 suppressed**.
+- Both outgoing versions archived (`enchanted-rock.profile.v3.json`, `hithium.profile.v8.json`) with `archive-index.json` updated to 239 entries across 95 slugs, and both added to the README tree.
+
+### Worth noting
+
+- **One instruction was inverted against the corpus and was not written as given.** The request was to state that "hithium did not confirm the relationship, but Jupiter did." The corpus says the reverse: `jupiter-power`'s own dossier records that **Jupiter has never publicly named Hithium**, and that the "verified three layers" are verified from *Hithium-side* disclosures, the HKEX prospectus roster and third-party coverage. The checker's pairing invites the misreading, because it prints Hithium's hedge next to Jupiter's word "verified". The revision states the asymmetry in the direction the sources support.
+- **Closing an open question does not silence it, and that is correct.** The honest close keeps the hedging word — the uncertainty becomes *documented* rather than *open*. Both revised candidates therefore still surfaced and were then accepted. **Revise-and-accept is the normal disposition for the open-question class**; only the figure class routinely goes quiet on its own.
+- **The `hithium` `strategyRead[6]` candidate disappeared for a threshold reason, not a substantive one** — the added sentence pushed the scope past the 900-character `OQ_SCOPE_MAX` bound. The same reconciliation is carried in the technical-spec band, which is still flagged and was accepted, so nothing was lost; noting it because a scope cap silently dropping a record is a behaviour worth remembering.
+- **A pre-existing archive gap is left untouched**: `hithium.profile.v5.json` is absent from `archive/` while v1–v4 and v6–v8 are present. It predates this session and is not this change's to fix silently.
 
 ## [v04.65r] — 2026-09-05 02:35:04 PM EST
 
