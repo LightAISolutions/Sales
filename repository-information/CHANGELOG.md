@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 85/100`
+`Sections: 86/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.69r] — 2026-09-05 03:36:09 PM EST
+
+> Before I remember session, the action plan had an additional phase after creating the check-profiler-crossrefs.py:
+>
+> "Demote §5's Why column from fact to hypothesis. Mark it explicitly as unverified prompt material and have each session rewrite its own row with what was actually found. §5 then becomes a record instead of a wish, and C5–C12 stop carrying false authority. Twelve for twelve wrong is not a column anyone should read as true."
+>
+> Confirm that this is part of the action plan. If so, execute it.
+
+### Changed
+
+- **§5's `Why` column is demoted from fact to hypothesis** (`repository-information/PROFILER-COVERAGE-PLAN.md`). The header is now `Why (hypothesis — unverified)` and the table carries a banner stating what the column is: **unattributed market knowledge written at plan-approval time, not from filings and not from the corpus** — not to be cited, carried into a dossier, or treated as a finding. Its only job is to tell a session where to start looking.
+- **A `Checked` column makes §5 a record instead of a wish.** Each of the twelve rows now carries its actual status: C4 the full three-part verdict, the four other shipped sessions marked **verdict not recorded**, and the seven unrun sessions marked **not yet run**.
+- **§7 gains the row-rewrite obligation**, and the paste-in prompt template gains a matching line: after the research pass a session replaces its own `Why` cell with what the sources showed and fills in `Checked` with the verdict and repo version — **including "premise held" when it did**, so a confirmed row is distinguishable from an unexamined one. A shipped row still carrying its original wording is an unfinished row.
+
+### Verified
+
+- **The instruction's tally was checked against the record and corrected before anything was written.** The repo documents premise verdicts for **two** sessions, not twelve: **C4** (§5 — all three wrong, v04.63r) and **B5** (§4 — all three wrong, v04.62r). Phase C has shipped **14 companies across five sessions** (C1, C2, C3, C4, C11); **C1, C2, C3 and C11 recorded no verdict either way**. The banner therefore states "wrong in every Phase C session where it was checked — one of five", and marks the four unchecked rows **unknown, not correct**. Writing "twelve for twelve" would have been the exact error the v04.68r sourcing rule forbids, in the same file that rule was written to protect.
+- The C4 `Checked` cell reproduces the three findings from the v04.63r entry: FERC **rejected** the Talen behind-the-meter arrangement (ER24-2172, 1 Nov 2024) and today's deal is a later front-of-the-meter supply agreement; Vistra is **second, not largest**, with the storage fleet down 1,024 → 624 MW; NRG's GE Vernova/TIC arrangement is a **Project Development Agreement, not a joint venture**.
+- Table integrity checked programmatically: twelve rows, six cells each.
+
+### Worth noting
+
+- **Provenance could be confirmed only in substance, not in wording.** The action plan is the screenshot from the v04.57r era that session F5 evaluated; it is not in the repo and the quoted phase appears nowhere in it. What is verifiable is that §5 exists, that its `Why` column is unverified prompt material, and that it failed every time a session checked it. That was stated plainly rather than implying the wording had been matched against a source.
+- **The four unchecked rows are the strongest argument for the demotion.** C1, C2, C3 and C11 shipped without recording whether their premises held. They are not evidence the column is reliable — they are evidence nobody looked.
 
 ## [v04.68r] — 2026-09-05 03:28:38 PM EST
 

@@ -85,20 +85,36 @@ Twenty-nine companies, **up to three per session, dossier + study guide each**, 
 
 Thirty-two companies with deep first-party records, **up to three per session, dossier + study guide each**, plus the guide work on existing dossiers. Roughly eleven dossier sessions and seven guide sessions. Run the register closers first (C1–C3), because they finish G2, G3, G4 and the turbine gap; then the power partners; then the public BESS and AIDC names; then the money; then the low-priority tail; and the guide backfill whenever a session has room.
 
-| Group | Session | Companies | Category | Why |
-|-------|---------|-----------|----------|-----|
-| C-R | C1 | **Cummins** · **Rolls-Royce Power Systems (mtu)** · **Rehlko (Kohler Energy)** | supplier | Completes G2: #2 gen-set share (~16%, six dossiers name it); the hyperscale AI-hall gainer with its own BESS line; the fourth OEM |
-| C-R | C2 | **Mitsubishi Electric** · **Powell Industries** · **Mitsubishi Power** | supplier | Large static UPS plus transformers and switchgear (G3); the MV switchgear specialist with a >$400M single data-center order and a $1.8B backlog (G4); the third gas-turbine OEM and Prevalon's former parent — bridge-power lessons cite only two of three today |
-| C-R | C3 | **Infineon** · **Flex** | supplier | SiC/GaN for the 800 VDC chain, already tied to Delta in the corpus (G9); the NVIDIA GB300 power-shelf partner named in six dossiers — completes the rack-power set beside Delta, LITEON and Megmeet |
-| C-P | C4 | **Talen Energy** · **Vistra** · **NRG Energy** | ipp | The Amazon nuclear-PPA precedent (six dossiers); the largest merchant BESS owner in the country with a growing data-center gas book; the third merchant with gas-for-AIDC deals |
-| C-D | C5 | **ENGIE North America** · **AES Clean Energy** · **RWE Clean Energy** | developer | 5.6 GW of storage operating or building, absorbed Broad Reach, sold a 2.4 GW stake to CBRE IM; one of the biggest hyperscaler PPA counterparties (five dossiers); ~931 MW of US storage under construction |
-| C-D | C6 | **Clearway Energy** · **Recurrent Energy** · **Form Energy** | developer · developer · supplier | Public yieldco with a large CAISO storage fleet; Canadian Solar's development arm (four dossiers); the long-duration reference `where-batteries-stop` needs — Google-backed, ~80 GWh reported backlog |
-| C-D | C7 | **Power Electronics** | supplier | The leading US utility-scale PCS specialist (six dossiers) — pair with C6 if the session has room |
-| C-A | C8 | **Digital Realty** · **CyrusOne** | developer | The largest missing AIDC landlord (13 dossiers; 2 GW Kansas City energy-service agreement); KKR/GIP-owned with a 760 MW Fairfield campus |
-| C-A | C9 | **Cipher Mining** · **Hut 8** · **Galaxy Digital** | developer | The miner-pivot landlords: 300 MW AWS lease; $7B Anthropic/Fluidstack River Bend plus a $9.8B 352 MW Texas lease; 800 MW CoreWeave at Helios — >$19B of leases combined |
-| C-I | C10 | **Blackstone** · **Brookfield** · **Macquarie** | investor | Owns QTS, seeded Aypa and VoltaGrid (12 dossiers); owns Compass and is buying Aypa; sold Aligned for $40B (8 dossiers) |
-| C-L | C11 | **Oklo** · **Trane Technologies** · **McCarthy** | supplier · supplier · gc | The most-mentioned SMR vendor (5 dossiers, 35 hits) for G8; the chiller OEM for G7 (Motivair and Boyd Thermal already live inside Schneider's and Eaton's dossiers); the data-center GC the corpus names most |
-| C-L | C12 | **Whiting-Turner** · **Gotion** · **REPT** | gc · supplier · supplier | Second DC general contractor; two FEOC case studies that complete the Chinese cell roster |
+> **⚠️ The `Why (hypothesis)` column is UNVERIFIED PROMPT MATERIAL, not fact.**
+> It was written at plan-approval time from unattributed market knowledge — not from filings, not from
+> the corpus. **Do not cite it, carry it into a dossier, or treat it as a finding.** Its only job is to
+> tell a session where to start looking.
+>
+> **Every session rewrites its own row.** After the research pass, replace the `Why (hypothesis)` cell
+> with what the sources actually showed and fill in `Checked` with the verdict and the repo version. A
+> row that has run and still carries its original wording is an unfinished row. §5 is a **record**, not
+> a wish.
+>
+> **The evidence for the demotion.** Where a session checked its premises, they failed: **C4 — all three
+> wrong** (v04.63r) and, in Phase B, **B5 — all three wrong** (v04.62r). C1, C2, C3 and C11 shipped
+> without recording a verdict either way, so those rows are **unknown, not correct**. One of five Phase C
+> sessions checked; that one went nought for three.
+> *(Demoted 2026-09-05, v04.69r, on the developer's action plan.)*
+
+| Group | Session | Companies | Category | Why (hypothesis — unverified) | Checked |
+|-------|---------|-----------|----------|-------------------------------|---------|
+| C-R | C1 | **Cummins** · **Rolls-Royce Power Systems (mtu)** · **Rehlko (Kohler Energy)** | supplier | Completes G2: #2 gen-set share (~16%, six dossiers name it); the hyperscale AI-hall gainer with its own BESS line; the fourth OEM | Shipped v04.47r — **premise verdict not recorded** |
+| C-R | C2 | **Mitsubishi Electric** · **Powell Industries** · **Mitsubishi Power** | supplier | Large static UPS plus transformers and switchgear (G3); the MV switchgear specialist with a >$400M single data-center order and a $1.8B backlog (G4); the third gas-turbine OEM and Prevalon's former parent — bridge-power lessons cite only two of three today | Shipped v04.48r (v2 v04.50r) — **verdict not recorded** |
+| C-R | C3 | **Infineon** · **Flex** | supplier | SiC/GaN for the 800 VDC chain, already tied to Delta in the corpus (G9); the NVIDIA GB300 power-shelf partner named in six dossiers — completes the rack-power set beside Delta, LITEON and Megmeet | Shipped v04.50r — **verdict not recorded** |
+| C-P | C4 | **Talen Energy** · **Vistra** · **NRG Energy** | ipp | The Amazon nuclear-PPA precedent (six dossiers); the largest merchant BESS owner in the country with a growing data-center gas book; the third merchant with gas-for-AIDC deals | **All three wrong; corrected v04.63r.** FERC *rejected* the Talen behind-the-meter arrangement (ER24-2172, 1 Nov 2024) — today's deal is a later front-of-the-meter supply agreement; Vistra is **second, not largest**, and its storage fleet fell 1,024 → 624 MW; NRG's GE Vernova/TIC arrangement is a **Project Development Agreement, not a JV**, with slot reservations and no firm order |
+| C-D | C5 | **ENGIE North America** · **AES Clean Energy** · **RWE Clean Energy** | developer | 5.6 GW of storage operating or building, absorbed Broad Reach, sold a 2.4 GW stake to CBRE IM; one of the biggest hyperscaler PPA counterparties (five dossiers); ~931 MW of US storage under construction | Not yet run |
+| C-D | C6 | **Clearway Energy** · **Recurrent Energy** · **Form Energy** | developer · developer · supplier | Public yieldco with a large CAISO storage fleet; Canadian Solar's development arm (four dossiers); the long-duration reference `where-batteries-stop` needs — Google-backed, ~80 GWh reported backlog | Not yet run |
+| C-D | C7 | **Power Electronics** | supplier | The leading US utility-scale PCS specialist (six dossiers) — pair with C6 if the session has room | Not yet run |
+| C-A | C8 | **Digital Realty** · **CyrusOne** | developer | The largest missing AIDC landlord (13 dossiers; 2 GW Kansas City energy-service agreement); KKR/GIP-owned with a 760 MW Fairfield campus | Not yet run |
+| C-A | C9 | **Cipher Mining** · **Hut 8** · **Galaxy Digital** | developer | The miner-pivot landlords: 300 MW AWS lease; $7B Anthropic/Fluidstack River Bend plus a $9.8B 352 MW Texas lease; 800 MW CoreWeave at Helios — >$19B of leases combined | Not yet run |
+| C-I | C10 | **Blackstone** · **Brookfield** · **Macquarie** | investor | Owns QTS, seeded Aypa and VoltaGrid (12 dossiers); owns Compass and is buying Aypa; sold Aligned for $40B (8 dossiers) | Not yet run |
+| C-L | C11 | **Oklo** · **Trane Technologies** · **McCarthy** | supplier · supplier · gc | The most-mentioned SMR vendor (5 dossiers, 35 hits) for G8; the chiller OEM for G7 (Motivair and Boyd Thermal already live inside Schneider's and Eaton's dossiers); the data-center GC the corpus names most | Shipped v04.52r — **verdict not recorded** |
+| C-L | C12 | **Whiting-Turner** · **Gotion** · **REPT** | gc · supplier · supplier | Second DC general contractor; two FEOC case studies that complete the Chinese cell roster | Not yet run |
 
 **Study-guide work (Opus 5 xhigh, 4–5 guides per session, `profiler prep <Company>`):**
 
@@ -125,6 +141,7 @@ The commands and their rules live in `.claude/rules/profiler-app.md` and `PROFIL
 - **After every profile write:** `python3 scripts/sync-profiler-registry.py`, `python3 scripts/build-profiler-graph.py`, `python3 scripts/check-profiler-study.py`. The roster, the graph and the study validator are three separate things that go stale separately
 - **Calendar row.** Every new company gets a row in `repository-information/profiler-refresh-calendar.json`: public companies carry a researched `nextReport` / `confirmed` / `source` / `watch[]`; private and unit-level companies carry `cadence: "quarterly"`. The earnings desk is capped at three companies a day and this program adds ~65 rows, so expect the desk's queue to lengthen — that is by design, the calendar is the queue
 - **README tree.** One entry per new `<slug>.profile.json` and `<slug>.study.json`, in the existing format
+- **§5 of this file — rewrite your own row.** The `Why (hypothesis — unverified)` cell is prompt material, not a finding. After the research pass, **replace it with what the sources actually showed** and fill in `Checked` with the verdict and the repo version — including "premise held" when it did, so a confirmed row is distinguishable from an unexamined one. Never leave a shipped row carrying its original wording, and never record a verdict you did not check. This is what turns §5 from a wish into a record.
 - **§8 of this file.** Flip the row in the same commit. Record a model substitution if the Fable cap forced one
 - **Register checks.** At the end of each *phase* (not each session), re-run the §6 checks in `CLASSROOM-CURRICULUM-PLAN.md` and date them — a row is not closed until someone re-runs its check
 - **The `utility` category does not exist yet.** `profiler-companies.json` declares `supplier · developer · integrator · epc · gc · ipp · investor · hyperscaler · neocloud · advisor · other`. Session **A3 (Dominion)** adds `utility`: the registry `categories` array, PROFILER-SCHEMA.md's category table, and `Profiler.html`'s chip label, `.ov-tag` colour, `known` list, compare peer groups and `OV_REL_CAT_COLORS` — a page version bump. Do not file utilities under `ipp` or `other` to avoid the change
@@ -142,6 +159,8 @@ repository-information/PROFILER-SCHEMA.md; repository-information/PROFILER-STYLE
 THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
 categories per the §8 row) and study guide (schema v2) — then the registry sync, the graph build, the study
 validator, a calendar row, README tree entries, and flip the §8 row. One push commit. [Session-specific notes.]
+THE §5 ROW IS A HYPOTHESIS, NOT A BRIEF: treat every claim in its `Why` cell as unverified, and
+rewrite that cell plus the `Checked` column with what you actually found before you commit.
 VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, the dossier and guide render
 (Playwright), zero page errors. Normal Pre-Commit and Pre-Push checklists; push on a claude/* branch.
 ```
