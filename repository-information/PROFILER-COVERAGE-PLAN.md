@@ -1,6 +1,6 @@
 # Profiler Coverage Plan — closing Classroom's gap register
 
-**Approved by the developer on 2026-09-03 (v04.39r → v04.40r).** This is the working plan for the Profiler coverage expansion that Classroom's curriculum plan (`CLASSROOM-CURRICULUM-PLAN.md` §6, the gap register) asked for. It is ordered by **model**, not by tier, because that is how the developer will run it: every Fable 5.1 xhigh session first, then every Fable 5.1 High session, then every Opus 5 xhigh session, then back to the Classroom build. Read §2 for the model rule, §3–§6 for the phases, §7 for what every session does, and §8 for the status ledger — the one table that says what is done.
+**Approved by the developer on 2026-09-03 (v04.39r → v04.40r).** This is the working plan for the Profiler coverage expansion that Classroom's curriculum plan (`CLASSROOM-CURRICULUM-PLAN.md` §6, the gap register) asked for. It is ordered by **model**, not by tier, because that is how the developer will run it: every Fable 5.1 xhigh session first, then every Fable 5.1 High session, then every Opus 5 xhigh session, then back to the Classroom build. Read §2 for the model rule, §3–§6 for the phases, §7 for what every session does, §8 for the status ledger — the one table that says what is done — and **§9 for Phase X, the cross-reference integrity work**, which runs alongside Phases B and C and must close before Phase D.
 
 **How to use this file.** A session that lands a dossier or study guide flips the company's row in §8 in the same commit (`—` → `v1` for a dossier, `—` → `✓` for a guide, with the repo version). A row is not done until its files exist on `main`. When a phase completes, re-run the register checks in `CLASSROOM-CURRICULUM-PLAN.md` §6 and date them there — that register, not this ledger, is what the Classroom backfill reads.
 
@@ -32,11 +32,14 @@ Three models are in play and the developer has fixed their order. What each one 
 |-------|-----------|-----|
 | **Fable 5.1 xhigh** | The four **anchor** companies a future Classroom lesson will pin as its primary source, run as **dossier + study guide in one session** | The study guide's concept chain, section design and drill items are the quality-sensitive layer, and a lesson will hang on them. xhigh is the exception, not the default — running the thirty-company developer roster at xhigh is where the weekly Fable cap dies |
 | **Fable 5.1 High** | **Private or opaque subjects** where the dossier's value is inference from a thin public record and the strategy read has to reason across the ecosystem — plus the **utilities**, whose value is regulatory synthesis (IRPs, rate cases, large-load tariffs, PUC dockets) | The research subagents inherit the parent model, so the synthesis and the source-weighing both run on Fable. Anthropic's own guidance is to start at high and step up only when evals show headroom |
+| **Fable 5.1 Medium** | **Rule-bound bookkeeping and bounded adjudication** — work where the rule is already written and the judgment is "does this record match that record, yes or no": source registration, reciprocal-type reconciliation, report re-pinning, ledger flips. Also viable for a **full dossier + guide session** on a private subject when the Fable budget is tight | Session F5 ran three companies end to end on Medium — all research, both dossiers and guides, and the lesson plans — and shipped at v04.62r with the registry, graph and study checkers clean and **all three premises caught and corrected**. Premise-checking turned out to be prompt-driven, not effort-driven. Medium's weakness is reading depth on long filings, which bounded adjudication does not need |
 | **Opus 5 xhigh** | **Public companies with a deep first-party record**, where the schema and the checkers do the work and the two research subagents do the finding — and all **study-guide work on existing dossiers** | Half the rate against the weekly limit, no weekly cap, and the one batch this repo explicitly authored on Fable 5 (v02.20r) is indistinguishable in the CHANGELOG from the Opus batches |
 
 **Confidence note.** This is judgment, not measurement — the repo has never compared dossier quality by model. Phase A doubles as the cheapest possible test: if Caterpillar's guide on xhigh reads no better than a High-effort guide, the developer can demote Piller, Dominion and Vicor to High before running them.
 
 **Head-to-head evidence (2026-09-04, v04.57r).** The rule was tested once, on the Xcel Energy dossier: the Opus 5 xhigh v1 (v04.46r) was archived and a Fable 5.1 High session re-ran `profiler Xcel Energy` blind, writing v2 from its own research before opening v1. Differences were classed as *same fact, different treatment* (weighted) or *search luck* (discounted). Verdict on the claim that Fable is better at the judgments and the relationship discipline: **inconclusive**. On relationship and sourcing discipline Fable had a narrow edge on the (a)-class evidence — it recorded the unapproved Google ESA as `announced` where Opus wrote `active`, dated the Meta link to the 2023 MPUC approval where Opus wrote 2026 from a trade-association list and asserted a collection gap Xcel's own newsroom contradicts, withheld a Moody's negative-outlook claim that Opus asserted without a resolvable source, and stated the SPS-presidency gap that Opus's decision-maker list omits without comment. On the judgments there was no gap in either direction: five of seven judgments are the same call at similar confidence, Opus's set read the company's own pipeline slide more closely (the flat contracted block, the one-year slip, the redacted fifth row) and found a structural point Fable missed (PSCo belongs to no RTO, so the commission is the effective buyer in the largest state), while Fable's set added the ownership-ratio judgment and a dated indicator list. Opus's 10-K extraction was materially deeper (risk factors, credit-transfer cash, insurance repricing, capex actuals) — the same document was available to both, so this is reading depth rather than search luck, and it cuts against Fable on thoroughness. Consequence: no Fable make-good is warranted for the Oncor and AEP substitutions, and the Phase B remainder can go to either model without regret; the one lapse worth a checker rule is an unsourced rating-outlook assertion, which is model-independent. Full section-by-section report in the v04.57r CHANGELOG entry's session chat.
+
+**Medium evidence (2026-09-05, v04.70r).** The one Medium data point is F5, and it is a strong one: a three-company Fable 5.1 Medium session produced dossiers and guides indistinguishable in the ledger from its High siblings, and its premise-verdict record (**all three wrong, all three caught**) matches what C4 achieved on Opus 5 xhigh. Read against the §2 head-to-head — where Opus's one clear edge was **10-K reading depth** — the rule that falls out is: **effort buys depth of reading, not care.** Spend it where a long first-party document has to be mined; save it where the work is comparing two records the repo already holds. That is why §9's integrity items are assigned to Medium and the Phase C public companies are not.
 
 **If the weekly Fable cap binds mid-phase**, Opus 5 xhigh is acceptable for any Phase B company; record the substitution in the §8 ledger's Model column so the record stays honest.
 
@@ -125,7 +128,7 @@ Thirty-two companies with deep first-party records, **up to three per session, d
 
 ## 6 · Phase D — back to Classroom
 
-When §8 shows every row done, the developer returns to the Classroom build — **backfill first, then continue**. In order:
+When §8 shows every row done **and §9's Phase X ledger is clear**, the developer returns to the Classroom build — **backfill first, then continue**. In order:
 
 1. **Re-run every register check and date it** in `CLASSROOM-CURRICULUM-PLAN.md` §6. Expected result: G2, G3, G4, G5, G7, G8, G9 and G10 close; G6 stays open (it wants a guidance module, not a dossier — commission it in the same pass if the developer wants the contributor-gated interconnection lesson); G11 and G12 unchanged
 2. **Author the lessons the closures unlock**, one per Opus 5 session per the standing decision: `backup-generation` (A1 + C1), `the-ups-room` (A2 + Vertiv/Schneider revisions), `how-a-utility-buys` (A3 + B1/B2 — the first public utility lesson), a deepened `inside-the-rack` and `the-800-vdc-shift` battery side (A4 + C3 + the Narada guide), `the-transformer-and-the-substation` and `breakers-relays-and-faults` with a second and third vendor (C2 + the Siemens Energy revision), `who-buys-storage` and `how-a-storage-project-happens` on the new buyer guides (B3–B6, C5–C7), and `clean-firm-power` (C4 + C11)
@@ -144,9 +147,9 @@ The commands and their rules live in `.claude/rules/profiler-app.md` and `PROFIL
 - **§5 of this file — rewrite your own row.** The `Why (hypothesis — unverified)` cell is prompt material, not a finding. After the research pass, **replace it with what the sources actually showed** and fill in `Checked` with the verdict and the repo version — including "premise held" when it did, so a confirmed row is distinguishable from an unexamined one. Never leave a shipped row carrying its original wording, and never record a verdict you did not check. This is what turns §5 from a wish into a record.
 - **§8 of this file.** Flip the row in the same commit. Record a model substitution if the Fable cap forced one
 - **Register checks.** At the end of each *phase* (not each session), re-run the §6 checks in `CLASSROOM-CURRICULUM-PLAN.md` and date them — a row is not closed until someone re-runs its check
-- **The `utility` category does not exist yet.** `profiler-companies.json` declares `supplier · developer · integrator · epc · gc · ipp · investor · hyperscaler · neocloud · advisor · other`. Session **A3 (Dominion)** adds `utility`: the registry `categories` array, PROFILER-SCHEMA.md's category table, and `Profiler.html`'s chip label, `.ov-tag` colour, `known` list, compare peer groups and `OV_REL_CAT_COLORS` — a page version bump. Do not file utilities under `ipp` or `other` to avoid the change
-- **`investor` and `advisor` have never held a company.** Session B10 (MGX, DNV, Sargent & Lundy) is the first to exercise those roster chips with data — include a visual check
-- **CHANGELOG capacity** stood at 92/100 at approval. Archive rotation is mandatory above 100 and will fire around the eighth push of this program; budget for it in that session
+- **The `utility` category exists — added by A3 (Dominion), verified 2026-09-05 at v04.69r.** `profiler-companies.json` now declares `supplier · developer · integrator · epc · gc · ipp · utility · investor · hyperscaler · neocloud · advisor · other` and **six** companies carry `utility` (Dominion, Southern, Entergy, Oncor, AEP, Xcel). Do not file utilities under `ipp` or `other`. *(This bullet read "does not exist yet" until v04.70r — it had been stale since v04.43r.)*
+- **`advisor` now holds two companies; `investor` still holds none** (verified 2026-09-05 at v04.69r). F1 landed DNV and Sargent & Lundy at v04.58r, so the `advisor` chip has been exercised. The **first session to put data behind `investor` is now F6** (MGX · Excelsior Energy Capital), not B10 — include a visual check of the chip label, `.ov-tag` colour and the compare peer group when it runs. *(This bullet named B10 until v04.70r.)*
+- **CHANGELOG capacity — rotation has already fired once and will fire again inside this program.** It stood at 92/100 at approval, hit 100/100 and rotated (oldest whole date group moved to `CHANGELOG-archive.md` with SHA enrichment), and sits at **86/100 as of v04.69r — 14 pushes of headroom**. The remaining program is ~18 push commits (see §9), so **rotation is due around the fourteenth**, which lands in the guide-backfill block. Budget an extra ~10 minutes in whichever session crosses 100
 
 **Paste-in prompt template** (fill the bracketed fields; the Caterpillar version was handed to the developer at approval):
 
@@ -275,5 +278,72 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | backfill | `mastec` | MasTec | EPC | — |
 | backfill | `solv-energy` | SOLV Energy | EPC | — |
 | backfill | `samsung-ct` | Samsung C&T | EPC | — |
+
+---
+
+## 9 · Phase X — cross-reference integrity
+
+**Added 2026-09-05 (v04.70r) on the developer's instruction to check every existing cross-reference for accuracy before the coverage program resumes.** Phase X runs **alongside** Phases B and C and **closes before Phase D**. It is numbered 9 rather than inserted as a new §6 on purpose: `§2`, `§5`, `§7` and `§8` are referenced by the prompt template, by `.claude/rules/profiler-app.md` and by `SESSION-CONTEXT.md`, and renumbering them would create the exact class of defect this phase exists to remove.
+
+### 9.1 · The surface, measured
+
+Every cross-reference surface in the repo was enumerated and counted on 2026-09-05 at v04.69r. **This table is the scope of Phase X.** Nothing was estimated; each row is a script run or a query over the live corpus.
+
+| # | Surface | Size | Guarded by | State at v04.69r |
+|---|---------|------|-----------|------------------|
+| S1 | Dossier ↔ dossier factual claims | **260** mutually-mentioning pairs (of ~870–1,130 total pairs) | `check-profiler-crossrefs.py` | **Clean** — exit 0, 6 accepted candidates, 16 scopes reported not-examined. Blind by construction to **categorical mischaracterisation** (the `invenergy` class) |
+| S2 | `relationships[]` curated edges | **853** entries · **678** distinct pairs | **nothing** | **0 dangling slugs.** 503 one-sided; **15** reciprocal type conflicts after filtering correct inverses; **119** entries cite a URL absent from that dossier's own `sources[]`; **77** cite nothing |
+| S3 | Report → dossier citations | 4 reports · ~31 version pins | `check-profiler-reports.py` | 0 errors, **31 aged pins** — warning-only by design. Concentrated on `hithium` (2 reports, 50 mentions), `catl` (3, 52), `byd` (2, 38) |
+| S4 | Study guide → dossier / concepts | 101 guides · 811 concepts | `check-profiler-study.py` | **Clean** — 0 errors, 0 warnings |
+| S5 | Classroom → corpus (provenance stamps, `gateDigest`) | 10 lessons · 3 tracks · 134 gate cases | `check-classroom-content.py` · `check-classroom-pipeline.py` | **Clean** — 0 errors; pipeline checker reports nothing to judge against `origin/main` |
+| S6 | Registry ↔ dossiers | 127 entries | `sync-profiler-registry.py --check` | **Clean** — 0 of 127 out of sync |
+| S7 | Repo documentation pointers (`` `path/to/file` `` references in CLAUDE.md, `.claude/rules/**`, `repository-information/**`) | **406** backticked repo-path references | nothing | **Clean** — every unresolvable path is either a deliberate placeholder (`NEW.html`, `PAGENAME`, `my-project/`) or a historical `CHANGELOG-archive.md` entry naming a since-deleted file. **Zero real dangling pointers** |
+
+**The finding that shapes this phase: five of seven surfaces are already clean, and one of the two that are not is warning-only.** A general "sweep everything" pass would spend most of its budget re-confirming green. The unguarded accuracy risk is concentrated in **S2**, which no checker has ever looked at.
+
+### 9.2 · What Phase X deliberately does not do
+
+**It does not run the retroactive 870–1,130-pair sweep** the v04.64r session proposed. Three reasons, in order of weight:
+
+1. **The sweep is perishable and the corpus is not finished.** 27 companies remain. C4 landed into ~30 inbound mentions and four of them were wrong — every new dossier manufactures new cross-references. A sweep run now would need re-running after C12. Step 7 of the Profiler Command already reconciles the corpus against each new dossier as it lands, so the *forward* direction is covered by rule.
+2. **One-sidedness is a weak signal.** Of the 503 one-sided edges, **421** are silent in both directions — and the type histogram says why that is mostly correct: 165 are `competitor` (a large company has no reason to name a small rival) and the rest are largely small-vendor-names-large-customer. Adjudicating 421 items to find a handful of real conflicts is precisely the over-calling failure the v04.64r session flagged, where a checker rewrites accurate dossiers.
+3. **The one class that would justify the spend cannot be detected statically.** Categorical mischaracterisation — every number right, the business model wrong — is out of scope for any comparator, as `check-profiler-crossrefs.py`'s own docstring says. It is read work, and read work is better spent on the 27 dossiers still to be written than on re-reading 127 that step 7 will revisit anyway.
+
+**What replaces the sweep** is a durable checker over S2's mechanical invariants (X1), a bounded fix of the decidable defects it finds (X2), and **one** integrity close-out after the corpus is complete (X3).
+
+### 9.3 · The work items
+
+| # | Item | Model | Size | Done when |
+|---|------|-------|------|-----------|
+| **X1** | Build **`scripts/check-profiler-relationships.py`** — the sixth checker, run after every profile write beside the registry sync, graph build and study validator. Four mechanical invariants only: (a) every `relationships[].slug` resolves in the registry, (b) reciprocal edges carry coherent types (`customer`↔`supplier`, `investor`↔`portfolio`, symmetric types matching themselves) with an accept list for the legitimately-both cases, (c) `relationships[].source` that is a **URL** resolves inside that dossier's `sources[]`, (d) `relationships[].project` resolves in `profiler-projects.json`. **No semantic detectors** — the semantic layer is `check-profiler-crossrefs.py` and it already exists | **Fable 5.1 High** | 1 session | The script exits non-zero on the current corpus with the 15 + 119 defects listed, `--json` and an accept list work, and `PROFILER-CROSSREF-CALIBRATION.md` gains a section describing it |
+| **X2** | Clear what X1 reports: adjudicate the **15** reciprocal type conflicts (several — `microsoft`/`openai`, `google`/`terawulf` — are legitimately both `partner` and `investor` and belong on the accept list, not in a rewrite), and register the **119** out-of-band relationship URLs into their dossiers' `sources[]` with the correct party tier, or replace them with an already-registered equivalent. Leave the **77** absent-source entries alone unless the note asserts a hard fact — the schema's derived-link fallback covers them | **Fable 5.1 Medium** | 1 session | `check-profiler-relationships.py` exits 0; every accept-list entry carries a one-line reason |
+| **X3** | **Integrity close-out, after C12 and the guide backfills land.** Re-run all six checkers; re-pin all four reports to the current `profileVersion`s and re-verify each citation's figure against the dossier it now points at (31 pins aged at v04.69r and the number will have grown); re-run `check-profiler-crossrefs.py` over the completed 154-company corpus and adjudicate what it surfaces; then re-run the `CLASSROOM-CURRICULUM-PLAN.md` §6 register checks and date them | **Opus 5 xhigh** | 1–2 sessions | All six checkers exit 0, `check-profiler-reports.py` reports **0 warnings**, and §6's register rows carry a fresh date |
+
+**Why X1 is High and not Opus.** The v04.64r session recorded "build the checker on Opus 5 xhigh" for `check-profiler-crossrefs.py`, and that was right — that checker's hard problem was an adversarial false-positive design over free text with four ground-truth cases to calibrate against. X1 has no such problem: its four invariants are structural, the defect set is already enumerated above, and there is nothing to tune. The precedent does not transfer.
+
+**Why X2 is Medium.** Registering a URL into `sources[]` is lookup-and-classify against a party-tier rule that is already written in `PROFILER-SCHEMA.md` → Source provenance. Per §2's Medium note, effort buys reading depth, and this work needs none.
+
+### 9.4 · Status ledger
+
+| Item | Model | Status |
+|------|-------|--------|
+| X1 · `check-profiler-relationships.py` | Fable 5.1 High | — |
+| X2 · clear the 15 + 119 | Fable 5.1 Medium | — |
+| X3 · integrity close-out | Opus 5 xhigh | — |
+
+### 9.5 · Where Phase X sits in the run order
+
+Phase X does not displace coverage. The whole remaining program, in the order the developer will run it:
+
+| Order | Sessions | Model | What |
+|-------|----------|-------|------|
+| 1 | X1, X2 | Fable High, then Medium | Close S2 while the Fable budget is fresh — these are the only unguarded surfaces, and both are bounded |
+| 2 | F6 · F7 · F8 | Fable 5.1 High | The 9 remaining private subjects — §4's own rule assigns them to Fable, and F6 is the **first session to put data behind the `investor` chip** |
+| 3 | C5 · C6 · C7 · C8 · C9 · C10 · C12 | Opus 5 xhigh | The 18 remaining public deep-record companies |
+| 4 | 6 guide sessions | Opus 5 xhigh | The 26 backfills, 4–5 per session. **CHANGELOG rotation falls in this block** |
+| 5 | X3 | Opus 5 xhigh | Integrity close-out |
+| 6 | Phase D | Opus 5 xhigh | §6 — register re-checks, then the lessons the closures unlock |
+
+**G6 is independent of all of the above** and is blocked on the developer, not on a model: it wants a guidance module, which needs a developer-supplied industry document run through the `industry guidance:` command. It can be handed over at any point without disturbing the order.
 
 Developed by: LightAISolutions

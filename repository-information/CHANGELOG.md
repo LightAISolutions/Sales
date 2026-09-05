@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.70r] — 2026-09-05 03:56:44 PM EST
+
+> *(Attached: the v04.57r-era action-plan screenshot, "Where you actually are", showing the Phase A–D table, "35 of 65 new companies, 4 of 30 guide passes", CHANGELOG at 79/100, and "The next unrun item in plan order is C4 — Talen Energy · Vistra · NRG Energy".)*
+>
+> Before I continue with my Profiler update plan v3 (attached), I want to go through all the existing cross-references and check for accuracy. You had come up with an action plan in a previous session and recommended me to use Fable 5.1 xhigh for it. Evaluate where I am at in my overall Profiler update plan, which is part of an even bigger Classroom build plan, and also fold in my plan to check existing cross references for accuracy. Then, update the plan and recommend me a new action plan to systematically complete everything. My Fable limit just reset, so I would like to use Fable 5.1 until I am out of tokens and then switch to Opus 5 xhigh. If an action item can be completed well with Fable 5.1 Medium instead of High, then recommend that to save me tokens.
+
+### Added
+
+- **§9 · Phase X — cross-reference integrity** in `repository-information/PROFILER-COVERAGE-PLAN.md`. A new phase that runs alongside Phases B and C and closes before Phase D, holding the measured cross-reference surface inventory (§9.1), an explicit record of what the phase declines to do and why (§9.2), three work items with model assignments (§9.3), a status ledger (§9.4) and the full remaining run order (§9.5). Numbered **9 rather than inserted as a new §6** because `§2`, `§5`, `§7` and `§8` are referenced from the paste-in prompt template, `.claude/rules/profiler-app.md` and `SESSION-CONTEXT.md` — renumbering them would have created the exact defect class the phase exists to remove.
+- **A `Fable 5.1 Medium` row in the §2 model table**, with the F5 evidence written up: a three-company Medium session produced dossiers and guides indistinguishable in the ledger from its High siblings and caught all three of its premises. Read against the §2 head-to-head — where Opus's one clear edge was 10-K reading depth — the rule recorded is **effort buys depth of reading, not care**.
+
+### Verified
+
+- **All seven cross-reference surfaces enumerated and counted against the live corpus at v04.69r; five are clean.** Dossier↔dossier (`check-profiler-crossrefs.py`, exit 0), study guides and concepts (101 guides / 811 concepts, 0 errors), Classroom provenance (10 lessons / 134 gate cases, 0 errors), registry sync (0 of 127 out of sync), and **repo documentation pointers — 406 backticked repo-path references scanned, zero real dangling pointers** (every miss is a deliberate placeholder such as `NEW.html` or `PAGENAME`, or a historical `CHANGELOG-archive.md` entry naming a since-deleted file).
+- **`relationships[]` is the one unguarded surface.** 853 entries across 678 distinct pairs, **0 dangling slugs**; 503 one-sided; **15** reciprocal type conflicts after filtering correct inverses (`customer`↔`supplier` and friends); **119** entries cite a URL absent from that dossier's own `sources[]`; 77 cite nothing.
+- **Reports carry 31 aged version pins**, warning-only by design, concentrated on `hithium` (2 reports, 50 mentions), `catl` (3, 52) and `byd` (2, 38). No corrected-away figure was found live in a report — the `meta` 2.1 GW → 2,609 MW correction did not propagate into report text.
+- **Program state re-counted from the §8 ledger, not from memory: 38 of 65 new companies, 4 of 30 guide passes.** 27 companies remain — 9 on Fable (F6 · F7 · F8) and 18 on Opus (C5 · C6 · C7 · C8 · C9 · C10 · C12) — plus 26 guide backfills. Gap register: G1–G5, G7, G8, G9 closed; G6 open; G10 Partial; G11 deferred; G12 by design.
+- **The `check-classroom-pipeline.py` run that first reported 250 findings was a stale-ref artifact**, not a defect. `origin/main` had not been fetched; after `git fetch origin main` the checker reports "nothing changed against origin/main — nothing to judge". Reported as clean rather than as a finding.
+
+### Fixed
+
+- **Three stale claims in §7 corrected — the same accuracy check, applied to the plan itself.** (a) "The `utility` category does not exist yet" had been wrong since v04.43r; it exists and **six** companies carry it. (b) "`investor` and `advisor` have never held a company" is wrong for `advisor`, which F1 populated at v04.58r with DNV and Sargent & Lundy; the first session to put data behind **`investor` is now F6**, not B10. (c) The CHANGELOG-capacity bullet still said "stood at 92/100 … will fire around the eighth push" — rotation has already fired once and the file sits at 86/100, so the bullet now states the real headroom and that the next rotation lands in the guide-backfill block.
+
+### Worth noting
+
+- **The retroactive 870–1,130-pair sweep proposed at v04.64r is explicitly declined, with reasons recorded in §9.2.** It is perishable while 27 companies remain (C4 landed into ~30 inbound mentions and four were wrong); one-sidedness is a weak signal (of 503 one-sided edges, 421 are silent both ways and 165 of those are `competitor`, where silence is correct); and the one class that would justify the spend — categorical mischaracterisation, the `invenergy` case — cannot be detected statically and is better spent on the 27 dossiers still to write.
+- **X1 is assigned Fable 5.1 High, departing from the v04.64r precedent that checkers are built on Opus.** That precedent was earned by an adversarial false-positive problem over free text with four ground-truth cases to calibrate. X1's four invariants are structural and its defect set is already enumerated — there is nothing to tune, so the precedent does not transfer. Stated rather than followed silently.
 
 ## [v04.69r] — 2026-09-05 03:36:09 PM EST
 
