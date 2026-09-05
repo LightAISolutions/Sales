@@ -6,6 +6,59 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-05 04:06 PM EST
+**Repo version:** v04.70r — one push commit this session
+**Branch:** `claude/profiler-update-plan-review-kzebob` (pushed at `a25b804`, merged to `main` as `0ee65ce`, rebased after)
+**Model:** Opus 5 xhigh — a plan-review session, no dossier work. The developer asked where the Profiler program actually stands, asked to fold a cross-reference accuracy pass into it, and asked for a Fable-first action plan with Medium substitutions where they hold.
+
+### What was done
+
+- **All seven cross-reference surfaces enumerated and counted against the live corpus — nothing estimated.** Five came back clean: dossier↔dossier (`check-profiler-crossrefs.py`, exit 0), study guides and concepts (101 / 811, 0 errors), Classroom provenance (10 lessons, 134 gate cases, 0 errors), registry sync (0 of 127 out of sync), and **repo documentation pointers — 406 backticked repo-path references across CLAUDE.md and every rules file, zero real dangling pointers** (every miss is a deliberate placeholder like `NEW.html` / `PAGENAME`, or a `CHANGELOG-archive.md` entry naming a since-deleted file).
+- **`relationships[]` is the one unguarded surface, and is now measured.** 853 entries across 678 distinct pairs; **0 dangling slugs**; 503 one-sided (421 silent both ways, 165 of those `competitor`); **15** genuinely inconsistent reciprocal type pairs after filtering correct inverses; source disposition **517** exact `sources[]` URL match / **119** URL absent from `sources[]` / **140** label (allowed) / **77** absent (allowed).
+- **Reports carry 31 aged version pins**, warning-only by design — `hithium` (2 reports, 50 mentions), `catl` (3, 52), `byd` (2, 38). Checked whether any corrected-away figure is live in a report: **none is**; the `meta` 2.1 GW → 2,609 MW correction never propagated into report text.
+- **§9 · Phase X — cross-reference integrity added to `PROFILER-COVERAGE-PLAN.md`** with the surface inventory (§9.1), the explicit decline of the retroactive sweep and its three reasons (§9.2), three model-assigned work items (§9.3), a status ledger (§9.4) and the whole remaining run order (§9.5).
+- **A `Fable 5.1 Medium` row added to the §2 model table**, written up from the F5 evidence.
+- **Three stale §7 claims corrected** — the `utility` category *does* exist (6 companies, stale since v04.43r), `advisor` *is* populated (DNV + Sargent & Lundy at v04.58r, so the first `investor` session is **F6**, not B10), and the CHANGELOG-capacity bullet no longer says "92/100 … around the eighth push" (rotation already fired; 87/100 now).
+- **A paste-in X1 prompt was written in chat** carrying the measured ground-truth counts, so the X1 session has a hard success criterion instead of a discovery task. It is not in the repo — regenerate it from §9.3 plus the numbers above if it is lost.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean, branch rebased onto `origin/main` at `0ee65ce`. **Program state is unchanged by this session — 38 of 65 new companies, 4 of 30 guide passes.** No dossier was written; this was planning only.
+
+- **Next action is X1** — build `scripts/check-profiler-relationships.py` on **Fable 5.1 High**. The prompt is in this session's chat.
+- **Fable remaining:** X1 (High) · X2 (Medium) · F6 (MGX · Excelsior Energy Capital · X-energy — first `investor` chips) · F7 (Compass · EdgeCore · PowerHouse) · F8 (Fermi America · Tract · Prime Data Centers).
+- **Opus remaining:** C5 · C6 · C7 · C8 · C9 · C10 · C12 — 18 companies over 7 sessions — plus **26 guide backfills**, then **X3** the integrity close-out.
+- **Classroom register:** G6 open (blocked on a developer-supplied document, not on a model); G10 Partial; G11 deferred; G12 by design.
+
+### Key decisions and findings
+
+- **The retroactive 870–1,130-pair sweep proposed at v04.64r is declined, and §9.2 records why** rather than leaving it silently undone. It is perishable while 27 companies remain (C4 landed into ~30 inbound mentions and four were wrong, so every new dossier manufactures new cross-references); one-sidedness is a weak signal (421 of 503 silent both ways, 165 `competitor`, where silence is correct); and the class that would justify the spend — categorical mischaracterisation, the `invenergy` case — cannot be detected statically at all.
+- **`relationships[].source` not matching `sources[]` is NOT a schema violation.** The schema says "a URL or a label … so **prefer** an exact `sources[]` URL". A first pass counted 259 mismatches; refining against the schema gives **119** that are URLs (the rest are labels, which are allowed). The unrefined number would have manufactured 140 false defects — this is the over-calling failure mode the v04.64r session warned about, caught before it was written down.
+- **A naive reciprocal-type comparison reports 82 conflicts; 67 of them are correct `customer`↔`supplier` inverses.** The real number is 15, and several of those (`microsoft`/`openai`, `google`/`terawulf` — both genuinely partner *and* investor) belong on an accept list, not in a rewrite. The X1 prompt carries both numbers so the checker is not built against the wrong target.
+- **X1 is assigned Fable 5.1 High, departing from the v04.64r precedent that checkers are built on Opus.** That precedent was earned by an adversarial false-positive problem over free text with four ground-truth cases to calibrate. X1's four invariants are structural and its defect set is already enumerated — nothing to tune. Said so explicitly rather than following the precedent silently.
+- **The model rule that fell out of F5 + the §2 head-to-head: effort buys depth of reading, not care.** Opus's one clear edge was 10-K extraction depth; premise-checking was prompt-driven in both directions. So Medium is safe for bounded adjudication (X2) and unsafe for private subjects where inference from a thin record is the product (F6–F8). If the Fable budget runs short, **demote X1 to Medium before touching F6–F8**.
+- **§9 was numbered 9, not inserted as a new §6.** `§2`, `§5`, `§7` and `§8` are referenced from the paste-in prompt template, `.claude/rules/profiler-app.md` and this file — renumbering them would have created the exact defect class Phase X exists to remove.
+- **One checker result was a false alarm and was not recorded as a finding.** `check-classroom-pipeline.py` reported 250 findings because `origin/main` had not been fetched; after `git fetch origin main` it reports "nothing changed against origin/main — nothing to judge". Diff-aware checkers need a fresh remote ref before their output means anything.
+- **`verify-profiler-roles.py` could not be run** — Playwright is not installed in this container. It is the only checker left unexecuted; treat its status as unknown, not green.
+
+### Active context
+
+- Branch `claude/profiler-update-plan-review-kzebob`; repo version **v04.70r**; CHANGELOG **87/100** — 13 pushes of headroom, and the remaining program is ~18 pushes, so **rotation falls inside the guide-backfill block**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
+- Registry **127** companies; concepts **811**; study guides **101**; graph **903 edges**; categories in use — supplier 53, developer 21, ipp 21, epc 12, integrator 10, hyperscaler 8, neocloud 7, utility 6, gc 6, advisor 2, **investor 0**.
+- Checker state at v04.70r: registry sync clean · study clean · classroom content clean · classroom pipeline clean · crossrefs exit 0 (6 accepted, 16 not examined) · reports 0 errors / **31 aged pins** · roles **not run** (no Playwright).
+- The measurement one-liners that produced §9.1 are not saved anywhere — they were ad-hoc `python3 - <<'PY'` blocks over `live-site-pages/profiler-data/*.profile.json`. X1 makes invariants (a)–(d) permanent; the one-sidedness and mention-silence counts would need re-deriving.
+
+### Recommendation for next session
+
+- **Run X1 on Fable 5.1 High — build `scripts/check-profiler-relationships.py` to §9.3's four invariants, confirm it reproduces the 15 type conflicts and 119 unregistered URLs on the current corpus, and stop there.** It is the only unguarded cross-reference surface left, the defect set is already measured so the session has a hard pass/fail criterion instead of an open-ended hunt, and nothing in X2 can start until the checker exists. Do not let the session drift into fixing what it finds — that is X2, on Medium, and merging the two blows the budget.
+**To continue:** type `run X1 on Fable 5.1 High`
+
+## Previous Sessions
+
+### Session — cross-reference checker build + four corrective passes (Opus 5 xhigh)
+
 **Date:** 2026-09-05 03:37 PM EST
 **Repo version:** v04.69r — five push commits this session (v04.65r → v04.69r)
 **Branch:** `claude/profiler-crossref-checker-3x3r4n` (rebased onto `origin/main` before each of the five pushes; each merged and was swept before the next)
@@ -58,56 +111,3 @@ Nothing is in flight. Working tree clean; `3bd24d7` pushed and merging. `check-p
 - **Run Phase C session C5 (ENGIE North America · AES Clean Energy · RWE Clean Energy) on Opus 5 xhigh** — the checker work is finished and the corpus is green, so the highest-value next action is production coverage, and C5 is the **first session to exercise both new rules**: the step 7 sourcing rule (verify provenance against `sources[]`, never from another dossier's prose) and the §5 obligation to rewrite its own `Why` cell and fill in `Checked`. Running it next is how we find out whether the rules hold under a real research pass rather than in review.
 **To continue:** type `run Phase C session C5 on Opus 5 xhigh`
 
-## Previous Sessions
-
-### Session — Phase C C4 + cross-dossier reconciliation (Opus 5 xhigh)
-
-**Date:** 2026-09-05 01:50 PM EST
-**Repo version:** v04.64r (bumped on the push commit `8b91c94`; C4 itself shipped at v04.63r in commit `710034c`, which merged mid-session)
-**Branch:** `claude/phase-c4-profiler-session-rwzxo5` (rebased onto `origin/main` at `b44d0f9` after the v04.63r merge, before the v04.64r edits)
-**Model:** Opus 5 xhigh — Phase C session C4 (Talen Energy · Vistra · NRG Energy), then an unplanned cross-dossier reconciliation pass the C4 research forced.
-
-### What was done
-
-- **C4 shipped at v04.63r** — three `ipp` dossiers (schema v7, profileVersion 1, intel-briefing) + three schema v2 study guides + three lesson plans. Sources 81 / 81 / 72 (first-party 51 / 37 / 33 percent); relationships 7 / 13 / 7; developments 21 / 20 / 20; decision makers 13 / 11 / 12; 19 headshots. 25 shared concepts registered (811 total). Registry sync (127), graph rebuild (903 edges, 678 curated), study checker (101 guides) and the Playwright render all clean. Three **researched** calendar rows, not `cadence: "quarterly"`. §8 rows flipped to `v1 · v04.63r` / `✓ · v04.63r`. CHANGELOG 80/100.
-- **All three C4 premises were wrong and are corrected** in the summaries, judgments and README descriptions, same as B5/F5 before it.
-- **Expectations honesty was applied literally.** No full-year analyst consensus exists for FY2024/FY2025 for Talen or Vistra on any reachable host, so those periods are **guidance-benchmarked and say so** in `result`/`commentary`. NRG's only FY2025 consensus is nine months stale and is labelled as such. `ir.talenenergy.com` and `investors.nrg.com` are WAF-blocked (503/403); press releases were recovered from SEC 8-K exhibits and the block recorded as a collection gap.
-- **v04.64r reconciled the existing corpus against the three new dossiers.** C4 landed into a corpus that already carried ~30 inbound mentions of Talen, Vistra and NRG. Nothing had ever checked whether those mentions still held. Four did not:
-  - `invenergy` v1 → v2 — grouped NRG with Vistra and Talen as "contracting existing fleets to data centres". NRG's model is customer-funded **new build** under a Project Development Agreement with GE Vernova and Kiewit's TIC for up to 5.4 GW. Separated, GE Vernova release sourced.
-  - `meta` v6 → v7 — "Vistra (2.1 GW + 433 MW uprates)" in two places. Vistra discloses **2,176 MW** operating (Perry 1,268 + Davis-Besse 908) plus 433 MW of uprates, **2,609 MW total**. Both corrected.
-  - `terawulf` v4 → v5 — the Nautilus exit carried "~$92M / 3.4x MOIC"; Talen's own release states **$85M cash plus selected physical assets**. Both figures now stated with an explicit note that no source reconciles them.
-  - `burns-mcdonnell` v4 → v5 — the open Moss Landing adjacency question closed and dated. Phase I (300 MW, engineered by Fluence, built by Luminant) is the unit that burned; B&McD's engagements are Phase II (100 MW) and Phase III (350 MW). A `vistra` relationship and the NS Energy project record added.
-- **Added mandatory step 7 to the Profiler Command** in `.claude/rules/profiler-app.md` — "Reconcile the corpus against the new dossier". Word-boundary grep every other dossier for the new company, skip exec-career mentions, then the four-way disposition: contradicted → revise the **other** dossier with archive + `profileVersion` bump; differing figures → state both and say nothing reconciles them; open question the new research answers → close and date it; accurate → leave alone. Report counts reviewed and changed. Batch requests / Standard treatment / Commit-push renumbered 8 / 9 / 10.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean; `8b91c94` pushed and merging. Program state: **38 of 65 new companies done, 4 of 30 guide passes done.**
-
-- **Opus 5 xhigh remaining:** C5 (ENGIE North America · AES Clean Energy · RWE Clean Energy), C6, C7, C8, C9, C10, C12 — 18 companies over 7 sessions — plus **26 guide backfills**.
-- **Fable 5.1 remaining:** F6 (MGX · Excelsior Energy Capital · X-energy — first `investor` chips with data), F7 (Compass · EdgeCore · PowerHouse), F8 (Fermi America · Tract · Prime Data Centers).
-- **Classroom register:** G6 open (wants a guidance module via `industry guidance:` plus a developer-supplied document); G10 Partial; G11 deferred; G12 by design.
-- **Not started, and now the developer's stated priority:** `scripts/check-profiler-crossrefs.py` and the retroactive sweep of the pre-existing cross-dossier pairs. See the recommendation below.
-
-### Key decisions and findings
-
-- **The corpus has a structural blind spot no checker covered.** `sync-profiler-registry.py`, `build-profiler-graph.py` and `check-profiler-study.py` all validate a dossier against *itself* or against the registry. None asks whether **two dossiers assert contradictory facts about the same thing**. Step 7 closes this going forward by rule; it does not touch the backlog.
-- **The backlog was measured this session.** 127 dossiers, **1.79M tokens** of corpus, **870–1,130 distinct cross-dossier pairs** (the count is matcher-dependent — a suffix-stripping tokenizer gives 870, the looser earlier matcher gave 1,126). **5,719 mention occurrences.** Distribution is sharply concentrated: **top 10 targets = 39% of pairs, top 25 = 65%**; 11 of 79 targets have only 1–2 inbound. NVIDIA 56, Tesla 51, Microsoft 46, Siemens Energy 39, GE Vernova 29, Vertiv 26, OpenAI 25, Eaton 24, Oracle 23, Fluence 23.
-- **Field distribution decides the checker's scope.** On a 1,378-mention sample: `relationships` 297, `sources` 295, `productsAndServices` 225, `recentDevelopments` 207, `technicalSpecs` 84, `strategyRead` 80, `decisionMakers` 58, `ecosystemRole` 39, `summary` 32, `policyExposure` 31, `financials` 18. **`sources` and `decisionMakers` are 26% of the surface and are pure noise** — source titles and exec career history. **78% of mentions contain a digit**, so a naive numeric-conflict detector has enormous surface and will drown in false positives unless scoped.
-- **The `meta` case is the checker's hardest calibration target.** 2,176 MW and 2.1 GW are numerically **equal**; a unit-normalizing comparator says "no conflict" and misses the drift, because the drift was the **omitted 433 MW of uprates**, not a wrong number. Any checker that only compares normalized magnitudes would have scored 3 of 4 known cases, not 4.
-- **A model upgrade is not the fix for accuracy, and this session is the second data point.** C4's premises were caught because the prompt told the agents to check them — the same reason F5's were. What was missing in both cases was a **rule**, not reasoning depth. The one thing that went wrong this session that a better model would not have fixed was the absence of a cross-dossier gate.
-- **I over-called one of the four items and corrected it mid-session.** I first described the Burns & McDonnell / Vistra Moss Landing item as two dossiers contradicting each other. They did not — B&McD plausibly worked both Phase II and the Phase III expansion, and `vistra.profile.json` had already recorded both correctly. It was an **open question**, not a contradiction. This is the exact failure mode the retroactive sweep must be protected against: over-calling rewrites accurate dossiers.
-- **I also mis-stated a diagnosis earlier in the session and corrected it publicly.** I claimed §5's Phase C descriptions "were written from corpus mentions rather than from filings." Selection was corpus-driven, but the descriptive claims mostly appear nowhere in the corpus — the accurate diagnosis is **unattributed market knowledge written from memory at plan-approval time**.
-
-### Active context
-
-- Branch `claude/phase-c4-profiler-session-rwzxo5`; repo version **v04.64r**; CHANGELOG **81/100**.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders.
-- Registry **127** companies; concepts **811**; study guides **101**; graph **903 edges (678 curated)**; archive index **237 entries across 95 slugs**; calendar 88 rows.
-- Scratchpad tooling that survives as a recipe: `urlcheck.py` (URL-index gate), `c4-render-check.py` (Playwright harness — threaded HTTP server, `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, GAS stub for `script.google.com`, `.ov-sources ol li` for source counts, `.gd-term` resolved against `gdGlossMap` **not** `e.title`).
-- **Model recommendation recorded for the developer's next two jobs:** build `scripts/check-profiler-crossrefs.py` on **Opus 5 xhigh** (one-time durable artifact, adversarial false-positive design problem, four ground-truth cases to calibrate against); run the retroactive sweep on **Fable 5.1 High** (high-volume shallow adjudication where §2 already records Fable as better at hedging and relationship discipline — the anti-over-calling property the sweep needs most). Not Medium for either.
-
-### Recommendation for next session
-
-- **Build `scripts/check-profiler-crossrefs.py` as a fresh Opus 5 xhigh session, using the paste-ready prompt written in chat on 2026-09-05 at ~01:50 PM EST** — it is the only one of the four proposed follow-ups that both makes step 7 verifiable instead of self-reported and reaches the 870–1,130-pair pre-existing backlog, and it must exist and be tuned to a measured false-positive rate **before** any retroactive sweep starts, or the sweep burns its budget adjudicating noise. The session must end with the checker's FP rate measured on a sample and with all four known-drift cases scored against their pre-fix revisions in `archive/`.
-**To continue:** type `build the cross-reference checker on Opus 5 xhigh`
