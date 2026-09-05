@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-05 06:02 PM EST
+**Repo version:** v04.73r — one push commit this session (`d229ff9`, merged to `main`), plus this housekeeping commit
+**Branch:** `claude/phase-b-f6-profiler-20aamw` (rebased onto `origin/main` after the merge)
+**Model:** Fable 5.1 High — Phase B session **F6**: MGX · Excelsior Energy Capital · X-energy — the first dossiers behind the `investor` chip. Two research subagents per company (six total, 60/57 · 67/64 · 85/66 sources), dossiers, guides, lesson plans, step 7 reconciliation, all in one push commit.
+
+### What was done
+
+- **Three dossiers** (schema v7, profileVersion 1, intel-briefing): `mgx` (`investor`; 103 sources, 42% first-party, 11 relationships), `excelsior-energy-capital` (`investor · developer`; 108 sources, 55%, 8 relationships), `x-energy` (`supplier`; 139 sources, 62%, 7 relationships; `ownership.type: public`, NASDAQ: XE). 39 company-published headshots (execs 548 across 83 companies).
+- **Three schema v2 guides + lesson plans**: MGX (the money behind the money — sovereign funds, fund/platform/JV/direct stake, sizing an investor with no numbers, why labs take Gulf money, circular financing, export controls and CFIUS); Excelsior (the fund above the platform — closed-end fund calendar, Form D/ADV, own/operate/develop, battery reservation agreements and the domestic-content bonus, EV/EBITDA on the Enel sale, the green tariff); X-energy (the fuel is the reactor — TRISO as containment, 750°C as product, continuous refuelling, the HALEU chain, Part 50 on an 18-month clock, the ring around a vendor that owns no plant, an order book of options, going public on cost share). 44 shared concepts registered (855 total). None repeats Oklo, Aypa, GridStor, Anthropic or Dominion.
+- **Step 7 reconciliation — eleven older dossiers revised and archived** (kiewit v7, oklo v2, openai v5, aligned v5, anthropic v2, amazon v7, talen-energy v2, black-veatch v7, sargent-lundy v2, fluence v8, lg-energy-solution v6). The kiewit and oklo dossiers carried a wrong negative finding on X-energy (Kiewit Nuclear Solutions is in the Cascade Nuclear Partners JV since October 2025) — corrected. Every inbound edge's URL was registered in the same edit.
+- **Checkers**: registry sync clean (130 companies) · study 0 errors (104 guides) · relationships exit 0 with **4 accepts** (`mgx`/`openai`, `aligned`/`mgx`, `anthropic`/`mgx`, `amazon`/`x-energy` — all the `investor` ↔ `portfolio` enum gap; 14 accept entries total, 6 of them the enum gap) · crossrefs exit 0 with 2 accepted open questions · graph 942 edges.
+- **Investor chip visual check** (Playwright, Profiler v01.82w, unchanged): roster chip `investor 2`, `.ov-tag.investor` = `#b18cf2` as declared, Compare "Investor" alone for MGX and "Investor / Colocation & Cloud Capacity" when Excelsior (also `developer`) is picked first — the family map as designed; artefact recorded in §7.
+- **Bookkeeping**: three calendar rows (91) — `x-energy` carries `nextReport: 2026-11-13` (unconfirmed) because it is public; §8 rows flipped `B6/B10 → F6` with premise verdicts in Closes; §7 investor bullet rewritten; F6 entry in the calibration log; README tree (+3 profiles, +3 guides, +3 study-prep folders, +11 archive lines); CHANGELOG **90/100**.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean, branch rebased onto `origin/main`. **Program state: 41 of 65 new companies, 4 of 30 guide passes.** The F7 paste-in prompt was handed to the developer in this session's chat (regenerate from §4 row B7 and §7 if lost).
+
+- **Next action is F7** on Fable 5.1 High — Compass Datacenters · EdgeCore Digital Infrastructure · PowerHouse Data Centers (`developer`, AIDC developers).
+- **Fable remaining:** F7 · F8 (High). **Opus remaining:** C5–C10, C12, 26 guide backfills, X3.
+
+### Key decisions and findings
+
+- **Premise verdicts (§4 → §8 Closes):** Excelsior — Fluence 2.2 GWh customer **held**, but signed 30 July 2024 (December 2024 is LG's separate 7.5 GWh deal) and no recipient project or delivery is named; `developer` holds only via the wholly-owned Lydian platform. MGX — Aligned **held** (direct co-owner since 21 July 2026), Stargate **held narrowly** (named initial funder, contribution unconfirmed, later releases omit MGX), "10 dossiers" **did not hold**: 12 files match `\bMGX\b`, 8 are NVIDIA's MGX rack architecture, 4 name the fund. X-energy — Amazon SMR partner **held** on every element; brief corrections: public since 24 April 2026, Series D USD 700m closed November 2025 led by Jane Street.
+- **Enum gap evidence, not fixed:** six accept-list entries now exist only because `portfolio` is absent from `relationships[].type`. Recorded in the calibration log for the schema decision; not adopted.
+- **`developer` spans two spaces:** the `Colocation & Cloud Capacity` peer family treats data-centre developers and renewable/storage developers (F3–F5's `developer · ipp`) as one space. A `renewables-developer` family split is a visible option; noted in §7, not done.
+- **Writer discipline that made the checker trivial:** the dossier builders asserted every relationship/policy/development URL was an exact member of `sources[]` before writing (0 unregistered-source findings), and a scratchpad URL index refused any URL the agents had not fetched (0 unmatched across three dossiers).
+- **Environment:** mgx.ae pages are ~15 MB (curl, not WebFetch; `/en/` paths redirect); excelsiorenergycapital.com redirects to excelsiorcapital.com; Business Wire, WAM, openai.com, centrica.com, investors.x-energy.com, federalregister.gov unreadable — mirrors used and cited; Python `playwright` and `pillow` needed `pip install`; the harness-created remote branch was already swept by the workflow at push time (ls-remote empty), so push-once held.
+
+### Active context
+
+- Branch `claude/phase-b-f6-profiler-20aamw`; repo version **v04.73r**; CHANGELOG **90/100** — 10 pushes of headroom.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
+- Checker state at v04.73r: registry sync clean · study clean · relationships exit 0 (14 accepts) · crossrefs exit 0 (8 accepts) · reports not re-run (X3 re-pins) · roles not run.
+
+### Recommendation for next session
+
+- **Run F7 on Fable 5.1 High — `profiler` + `profiler prep` for Compass Datacenters, EdgeCore Digital Infrastructure and PowerHouse Data Centers (`developer`, AIDC developers), then the four after-write scripts, three calendar rows, README tree entries and the §8 flips.** Corpus mentions to reconcile in step 7: Compass in `southern-company`; EdgeCore in `hitt`, `holder-construction`, `mccarthy`; PowerHouse none under `\bPowerHouse\b` (also grep `\bPowerhouse\b` and `Joliet`).
+**To continue:** type `run F7 on Fable 5.1 High`
+
+## Previous Sessions
+
+### Session — Phase X item X2, relationships checker cleared to exit 0 (Fable 5.1 Medium)
 **Date:** 2026-09-05 04:43 PM EST
 **Repo version:** v04.72r — one push commit this session, plus this housekeeping commit
 **Branch:** `claude/profiler-relationships-x2-r0d1pm` (pushed at `d24e339`, merged to `main`, rebased after)
@@ -44,50 +88,5 @@ Nothing is in flight. Working tree clean, branch rebased onto `origin/main`. **P
 
 - **Run F6 on Fable 5.1 High — `profiler` + `profiler prep` for MGX, Excelsior Energy Capital and X-energy, the first dossiers behind the `investor` chip, with a visual check of the chip label, `.ov-tag` colour and the compare peer group, then the four after-write scripts and the §8 row flips.** S2 is closed, the checker guards every new `relationships[]` edge, and the remaining Fable work is all dossier research.
 **To continue:** type `run F6 on Fable 5.1 High`
-
-## Previous Sessions
-
-### Session — Phase X item X1, relationships checker built (Fable 5.1 High)
-
-**Date:** 2026-09-05 04:23 PM EST
-**Repo version:** v04.71r — one push commit this session
-**Branch:** `claude/profiler-relationships-checker-xchehb` (pushed at `20f6bbf`, merged to `main`, rebased after)
-**Model:** Fable 5.1 High — Phase X item **X1**: built `scripts/check-profiler-relationships.py`, the sixth checker. No dossier was touched, by instruction.
-
-### What was done
-
-- **`scripts/check-profiler-relationships.py` built and calibrated.** Four mechanical invariants over every dossier's `relationships[]`: `dangling-slug` (slug resolves in the registry), `reciprocal-type` (both-ways pairs carry coherent inverse types), `unregistered-source` (a `source` that is a URL is an exact string in that dossier's own `sources[]`; labels and absent sources are allowed and never flagged), `unregistered-project` (pin resolves in `profiler-projects.json`). Same CLI shape and exit contract as the crossref checker: `--json`, `--only`, `--pair`, `--kinds`, `--accept`; exit 0 clean / 1 findings / 2 broken input. Runtime 0.16 s.
-- **Reproduces the §9.1 ground truth to the entry on the v04.70r corpus:** 853 entries, 678 distinct pairs, 175 reciprocal pairs, 0 dangling slugs, 82 naive → **15** reciprocal-type findings, **119** unregistered-source findings (517 exact match · 119 missing · 140 label · 77 absent). Invariant (d), unmeasured until now: 51 pins across 8 registered projects, 0 unregistered. **Exit 1, 134 findings, all left for X2.**
-- **`repository-information/profiler-relationships-accepted.json` seeded empty.**
-- **"Relationships checker" section added to `PROFILER-CROSSREF-CALIBRATION.md`** — the invariants, the 82-vs-15 filtering rule, why one-sidedness is not an invariant (§9.2 reason 2), the source-disposition table, verification at build.
-- **§7 of `PROFILER-COVERAGE-PLAN.md`** names four after-every-profile-write scripts; **§9.4** X1 row flipped to `Done — v04.71r`. **`profiler-app.md` step 5** requires the checker beside the registry sync and graph build. README tree entries for both new files.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean, branch rebased onto `origin/main` at `688f19d`. **Program state unchanged — 38 of 65 new companies, 4 of 30 guide passes.** The X2 paste-in prompt was handed to the developer in this session's chat (regenerate it from §9.3's X2 row plus the checker's own `--json` output if lost).
-
-- **Next action is X2** on Fable 5.1 Medium — clear the 134 findings until the checker exits 0.
-- **Fable remaining:** X2 (Medium) · F6 · F7 · F8 (High). **Opus remaining:** C5–C10, C12, 26 guide backfills, X3.
-
-### Key decisions and findings
-
-- **`other` is untyped, not self-symmetric.** A pure inverse table yields 13 reciprocal findings; the ground truth of 15 includes `eolian`/`jupiter-power` and `mitsubishi-power`/`prevalon` as `other`/`other`. The checker reports any pair with `other` on either side because two dossiers agreeing to say nothing is not agreement — those two go on the accept list in X2 with a reason. Do not "fix" the rule back to 13.
-- **`investor`↔`portfolio` is in the inverse table; `portfolio` is not in the schema enum.** Every `investor` reciprocal reports until the enum grows or the pair is accepted. No such pair exists today. `parent`/`subsidiary` were not added — neither exists in schema or corpus.
-- **No tuning block, by design.** These are structural invariants: a finding is a finding; an exception goes on the accept list with a written reason, never into a loosened rule.
-- **The prompt said "step 8" of the Profiler Command; the checker went into step 5**, where the registry sync and graph build live. Recorded in the CHANGELOG entry.
-- **Shape of the 119:** 49 dossiers; `nvidia` 11, `eolian` / `turner-construction` / `vertiv` 6 each, `jinko` / `vantage` 5. Only 1 of 119 is a scheme/slash variant (`hithium`, trailing slash); the other 118 need real `sources[]` registration with a party tier. Registering URLs changes `srcTotal` / `srcFirstPct`, so X2 must run `sync-profiler-registry.py` and `build-profiler-graph.py` after.
-- **Shape of the 15:** 2 clear both-true accepts (`microsoft`/`openai`, `google`/`terawulf` — partner AND investor), 2 `other`/`other` accepts, 5 vendor-says-`partner` / NVIDIA-says-`supplier` (`flex`, `infineon`, `liteon`, `megmeet`, and `delta-electronics`/`infineon` in the same shape), 6 genuinely mixed (`amazon`/`mainspring-energy`, `bechtel`/`kiewit`, `blattner`/`quanta-services`, `byd`/`sinexcel`, `byd`/`tesla`, `dpr`/`openai`).
-
-### Active context
-
-- Branch `claude/profiler-relationships-checker-xchehb`; repo version **v04.71r**; CHANGELOG **88/100** — 12 pushes of headroom.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
-- Checker state at v04.71r: registry sync clean · study clean · reports 0 errors / 31 aged pins · crossrefs exit 0 · **relationships exit 1 (134 findings, accept list empty)** · roles not run (no Playwright in the container).
-
-### Recommendation for next session
-
-- **Run X2 on Fable 5.1 Medium — adjudicate the 15 reciprocal-type findings (accept the four both-true / `other`-`other` pairs with written reasons, correct the rest), register the 119 URLs into their dossiers' `sources[]` with the right party tier, then run the registry sync and graph build, and stop when `check-profiler-relationships.py` exits 0.** The defect set is enumerated, the rules are written, and F6 cannot sensibly start until S2 is closed.
-**To continue:** type `run X2 on Fable 5.1 Medium`
 
 Developed by: LightAISolutions
