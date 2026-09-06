@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-06 07:00 PM EST
+**Repo version:** v04.93r — **five** push commits this session (`e8cfd6c` v04.88r was the prior session's tail; this session landed `f16c0f8` v04.89r, `2b8cb3c` v04.90r, `987d5f2` v04.91r, `61e2474` v04.92r, `fddbed4` v04.93r), all merged to `main`, plus this housekeeping commit
+**Branch:** `claude/phase-c10-profiler-coverage-ww7aro` (rebased onto `origin/main` after each merge)
+**Model:** Opus 5 xhigh — Phase C session **C10** (Blackstone · Brookfield · Macquarie, landed at v04.86r before the context compaction) and then five follow-on pushes, each one the developer accepting the previous response's recommendation.
+
+### What was done
+
+**v04.89r — bijection enforcement.** `scripts/sync-profiler-registry.py` now asserts that every active roster company has exactly one refresh-calendar row and every row resolves to a covered company, plus the row shape from PROFILER-SCHEMA.md. Error under `--check` (exit 1), warning in write mode — because the Profiler Command registers a company at step 5 and adds its calendar row later in the same session. Tested by being made to fail in ten sandbox states.
+
+**v04.90r — closed the C10 step-7 deferral across the nine unreached dossiers.** One needed a change: `nvidia` to pv9, adding the 10 Aug 2026 six-firm compute-financing MOU and three reciprocal edges (`blackstone`, `brookfield`, `fluidstack`). Eight needed nothing and each is named with its reason in the CHANGELOG. The BlackRock/Blackstone control was run over all nine and came back clean.
+
+**v04.91r — the overdue `nvidia` earnings refresh.** Q2 FY2027 actuals (revenue $96.2B +106% against a $91B guide; data center $89.0B; GAAP EPS $2.46 above non-GAAP $2.22 on $7.771B of equity-securities gains; Q3 guided $108.0B ±2% at 74.0%). All four calendar watch items worked; the row advanced out of OVERDUE, `nextReport` rolled to 2026-11-25.
+
+**v04.92r — `scripts/check-source-reachability.py`.** A disclosure-tier reachability probe plus a corpus provenance measurement. Always exits 0. Two defects in the draft were found by testing it to failure.
+
+**v04.93r — archive-rotation hardening.** Did **not** run the rotation (the rule says stop at ≤100 and we are at 96). Dry-ran it instead and found the real risk: on a shallow clone every SHA lookup for the first-to-rotate groups fails silently.
+
+### Where we left off
+
+All five pushes merged. Working tree clean, nothing unpushed. `Sections: 96/100` in CHANGELOG.md — four pushes of headroom. All seven checkers exit 0. The developer asked for a plan evaluation, a next-session prompt, and this context write.
+
+### Key decisions and findings
+
+- **The attached run-order snapshot the developer pasted is STALE.** Its items ② (X2), ③ (F6·F7·F8) and most of ④ (C5–C10) are already complete. The real remaining program is **C12 → 6 guide sessions → X3 → Phase D**. Recorded here so a future session does not re-derive it.
+- **Phase X is done except X3.** X1 shipped at v04.71r; X2 is empirically clear — `check-profiler-relationships.py` reports 0 findings, 0 URLs outside `sources[]`, 0 incoherent reciprocals, and all 10 accept-list entries carry a `why`. **§9.4's status ledger is EMPTY and should be filled in** — the plan does not record that X1 and X2 landed.
+- **§7's after-every-write list is out of date** — it names four scripts; there are now six checkers plus the reachability probe.
+- **EDGAR is blocked from this environment's egress.** SEC's own "Undeclared Automated Tool" page under a correctly declared non-personal User-Agent; network-keyed, not fixable by changing the UA. **But `asx.com.au` and `londonstockexchange.com` both return 200**, so the filing route is alive and it is SEC specifically that is down. **This does not bite C12** — Whiting-Turner is private, Gotion files on Shenzhen (`szse.cn` / `cninfo.com.cn`) and REPT on HKEX (`hkexnews.hk`).
+- **Never put the developer's email in a request header.** `check-source-reachability.py` carries a role address on an org domain and a comment saying so.
+- **The accept list stays at TEN.** `portfolio` entered the enum at v04.85r; the list may grow only for genuinely-both-true pairs, never for enum gaps.
+- **Three of my four recommendations this session needed correcting on contact with the repo.** The pattern was recommending from memory of the rules at the end of a response rather than checking first.
+
+### Active context
+
+- **Branch:** `claude/phase-c10-profiler-coverage-ww7aro` · **repo version:** v04.93r · **Profiler page:** v01.83w (unchanged since v04.85r — every push since has been data-only)
+- **Corpus:** 151 companies · 151 profiles · 125 study guides (26 backfills outstanding) · 297 archived dossier versions
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG:** 96/100. Next rotation moves the 2026-08-31 group (3 sections) once the total passes 100. **Deepen the clone first** — now a mandatory step in the procedure.
+- **Standing, unassigned:** the README archive listing is 53 entries behind (313 listed vs 366 on disk, ordering undecided); `archive/nvidia.profile.v2.json` is missing and cannot be reconstructed; `nvidia`'s 2026-08-27 calendar one-shot fired SUCCEEDED but landed no commit, which no checker can see.
+
+### Recommendation for next session
+
+- Run **Phase C session C12** — `whiting-turner`, `gotion`, `rept` — on **Opus 5 xhigh**, the last three new companies in the program, taking the corpus to the 154 that X3's close-out assumes. Fill in §9.4's empty status ledger for X1/X2 and refresh §7's checker list in the same commit, since both are stale and both are one-line fixes a C12 session is already in the right files to make.
+
+**To continue:** type `profiler coverage plan session C12`
+
+## Previous Sessions
+
+### Session — Phase C session C9 + follow-ons (Opus 5 xhigh)
+
 **Date:** 2026-09-06 08:38 AM EST
 **Repo version:** v04.85r — **three** push commits this session (`02ce5be` v04.83r, `64c4806` v04.84r, `6049838` v04.85r, all merged to `main`), plus this housekeeping commit
 **Branch:** `claude/phase-c-session-c9-hra8xc` (rebased onto `origin/main` after each merge)
@@ -45,54 +94,3 @@ All three pushes are merged. Working tree clean, all checkers green: registry sy
 - Run **C10 — Blackstone · Brookfield · Macquarie** (`investor`, Opus 5 xhigh). The enum blocker is cleared, so this session can finally write `investor`/`portfolio` pairs coherently instead of generating accepts; these three are the counterparties `aligned`, `cyrusone`, `digital-realty` and `qts` currently cannot link to at all. Budget for the inbound tail — the union of `\bBlackstone\b`, `\bBrookfield\b` and `\bMacquarie\b` is **38 dossiers**, nearly double C8's twenty — and guard hard against **BlackRock**, which appears in 19 files and is a different firm.
 
 **To continue:** type `continue with C10`
-
-## Previous Sessions
-
-### Session — Phase C session C8 (Opus 5 xhigh)
-
-**Date:** 2026-09-06 05:47 AM EST
-**Repo version:** v04.82r — one push commit this session (`81746f2`, merged to `main` as of `1088e16`), plus this housekeeping commit
-**Branch:** `claude/phase-c8-profiler-coverage-yl4hgi` (rebased onto `origin/main` after the merge)
-**Model:** Opus 5 xhigh — Phase C session **C8**: Digital Realty · CyrusOne. Four research subagents, two dossiers, two study guides, two lesson plans, **fifteen** step-7 revisions, all in one push commit.
-
-### What was done
-
-- **Two schema v7 dossiers at profileVersion 1, intel-briefing style, both `developer`.** `digital-realty` (78 sources, **72% first-party**, 12 relationships, 7 `policyExposure`) — 310 data centres, ~3.1 GW in place and ~8.5 GW buildable at 30 June 2026, FY2025 revenue USD 6,112.7m (+10.0%) and Core FFO USD 7.39/share; the 1,402 MW pipeline's pre-leased share **fell 64% → 54% while capacity underway rose 82%**, more than doubling unleased capacity from ~277 MW to ~645 MW; 25.4% cash mark-to-market with the >1 MW book at **+66.7%**; twenty largest customers 50.9% of recurring revenue with **nine of twenty redacted** (~24.6% unattributable). `cyrusone` (69 sources, **38% first-party**, 11 relationships, 8 `policyExposure`) — KKR/GIP-owned since March 2022 at ~USD 15bn, publishing **no revenue, EBITDA, backlog or bookings figure of any kind**, funded entirely through securitisation.
-- **Two schema v2 study guides + two lesson plans**, written deliberately past the nine existing colocation guides. The gap taken was the **money layer**: Digital Realty (16 sections) teaches the REIT bargain and its funding constraint, why depreciation makes property earnings meaningless, **cap rate vs yield on cost and the development spread**, mark-to-market, and growing without retained earnings; CyrusOne (14 sections) teaches what a take-private changes, **reading a securitisation collateral table as a substitute income statement**, hold period and MOIC vs IRR, why an outage became a financing event, and the curtailment bargain. **Eighteen concepts registered (969)** — `cap rate` and `yield on cost` had **zero** corpus-wide hits before this session.
-- **Step 7 — twenty inbound dossiers reviewed, fifteen revised and archived, five needing no change. The largest tail in the program, completed WITHOUT a deferral.** Three contradicted: `switch` v6→v7 (grouped Digital Realty with Equinix as a "retail incumbent" when it leads **wholesale** at ~28%), `tract` v1→v2 (Teraco "51% for USD 3.5bn" — it was **55%**, and USD 3.5bn was the **valuation** not the consideration), `aligned` v5→v6 ("Ascenty (Digital Realty)" — the 10-K lists it **unconsolidated at 49%**). Twelve accurate, gained curated edges.
-- **Two calendar rows of different types** (106 rows, 53 private), the §5 C8 row rewritten with per-clause verdicts, both §8 rows flipped, §7's X3 bullet extended from a fifth end, §7's CHANGELOG bullet 98 → **99/100**, and a C8 calibration-log entry.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean, `81746f2` merged to `main`. **Program state: 56 of 65 new companies, 4 of 30 guide passes. Phases A and B complete; C1–C8 and C11 shipped.** The C9 paste-in prompt was handed to the developer in this session's chat.
-
-- **Remaining, in §9.5 order:** C9 · C10 · C12 (Opus 5 xhigh), then the 26 guide backfills (6 sessions), then X3, then Phase D.
-- **CHANGELOG is 99/100 — ZERO pushes of headroom. C9's push commit crosses 100 and MUST rotate.** Budget ~10 extra minutes.
-
-### Key decisions and findings
-
-- **Premise verdicts, C8: one clause unfalsifiable, one failed, three held with correction.** *"The largest missing AIDC landlord"* is **UNFALSIFIABLE**, the same shape C7 found for PCS — no published ranking measures AI-data-centre landlords, and the one AI-specific index (the AI Data Center Index) ranks **facilities, not operators**, and lists neither company. Two measurable substitutes disagree by design: USDataMap puts CyrusOne ahead at 3,026 MW of tracked capacity vs 2,878 MW, while ABI puts Digital Realty ahead at 686 MW of **active IT load** vs 674 MW. *"(13 dossiers)"* **failed — fifteen**. The Kansas City, KKR/GIP and 760 MW Fairfield clauses each **held with correction**.
-- **Two consecutive sessions have now found a §5 superlative to be unmeasurable rather than false.** That is a pattern, not a coincidence: analyst houses rank the categories they have always ranked, and new categories fall between them. Three remaining Phase C `Why` cells contain superlatives of the same form.
-- **A URL-fabrication near-miss — a new defect class.** Three relationship `source` values in the first Digital Realty draft were URLs **constructed from plausible site structure** rather than copied. None existed. The pre-emit validator caught them by requiring exact `sources[]` membership. Distinct from X2's clipped prefixes: not a copy error but an invention. A session writing `source` as a bare label would not have been protected.
-- **The brief's own refutation of a premise was itself wrong, and the reason generalises.** It said the Fairfield clause was uncorroborated in-corpus. It was corroborated — in `constellation-energy`, under the **plant name** (Freestone Energy Center) rather than the town name. **A campus is named in dossiers by whichever of town, county, plant or project code the source used; a single-term grep misses the other three.**
-- **A false-positive class the brief said would not exist.** The full names were clean, as predicted — but the **abbreviation** was not: `edgecore`'s six `DLR` hits are **DLR Group, an architecture firm**. Grep abbreviations separately from names.
-- **A candidate flagged, tested and refuted.** `constellation-energy`'s "~400 MW at Thad Hill" looked like a mis-transcribed executive name (Calpine's CEO is Thad Hill). The release names "the **Thad Hill Energy Center** in Bosque County" — accurate, left alone.
-- **No `investor` edges, and that is the F7 shape:** KKR, GIP, BlackRock, Blackstone and Brookfield are all uncovered slugs. **C10 unlocks this** — once Blackstone and Brookfield land, Digital Realty's twenty unconsolidated entities become linkable and the six enum-gap accept entries get exercised.
-- **X3, from a fifth and simplifying end.** Digital Realty and CyrusOne are the corpus's **first pure landlords** — `developer` and nothing else, no generation, no storage. For them `Colocation & Cloud Capacity` lights 28 cards of which the merchant battery owners share no counterparty or revenue model at all. That **undercuts C5's market-map defence**, which rested on ENGIE/AES/RWE genuinely selling power to landlords in the family. The case for a `renewables-developer` split is **stronger** after C8.
-
-### Active context
-
-- Branch `claude/phase-c8-profiler-coverage-yl4hgi`; repo version **v04.82r**; CHANGELOG **99/100**.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
-- Checker state at v04.82r: registry sync clean (**145**) · study 0/0 (**119 guides, 969 concepts**) · relationships exit 0 with **0 findings, 0 unregistered sources** (14 accepts) · crossrefs exit 0 (**324 pairs**, 9 accepts, 20 scopes over the cap) · graph **1,128 edges (846 curated)** · reports not run (X3's job).
-- **Open item for the developer:** the README tree lists archive snapshots individually and is **32 files behind** (313 entries vs 345 on disk) — C5, C6, C7 all missing theirs. C8 added 18 more and followed the precedent rather than inserting ~350 lines. Decide: regenerate mechanically, or exclude archive snapshots by rule.
-- **Deferred, stated not silent:** no executive photographs added (Digital Realty publishes 11 Cloudinary headshots, CyrusOne 8 HubSpot ones) — traded for completing the twenty-dossier step-7 tail.
-- Environment notes: `pip install playwright pillow` then `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; serve `live-site-pages/` over a local HTTP server and use the `#<slug>` hash route; the study guide is the real render check — `ovFetchJson(slug+'.study.json').then(ovShowStudy)` in page context. **sec.gov requires a DECLARED User-Agent** naming the requester or it returns an "Undeclared Automated Tool" page — use a non-personal identifier, never the developer's email. **Hosts blocked this session:** `investor.digitalrealty.com` (403/503, and Wayback returns a stale nav-only shell — use sec.gov 8-K Exhibit 99.1 for the supplement and 99.2 for the deck), `datacenterdynamics.com` (403 on every attempt, and **web.archive.org is unreachable from this environment**, so DCD bodies cannot be read at all), plus `spglobal.com/ratings`, `cbonds.com`, `costar.com`, `therealdeal.com`, `eon.com`, `forbes.com`; `bloomberg.com` and `ifre.com` paywalled. Digital Realty's newsroom **bodies are JS-rendered but dates are static** — use the sitemap for URLs and GlobeNewswire for bodies.
-
-### Recommendation for next session
-
-- **Run Phase C session C9 on Opus 5 xhigh — Cipher Mining, Hut 8 and Galaxy Digital (three §8 rows, all `developer`, all columns at `—`). THE CHANGELOG ROTATION IS MANDATORY THIS SESSION: it sits at 99/100 and this push crosses 100, so budget ~10 extra minutes for moving the oldest whole date group to `CHANGELOG-archive.md` with SHA enrichment on every moved header. C9 INVERTS C8's SHAPE: the inbound step-7 grep is SMALL — `\bCipher\b` hits 4 files, `\bHut 8\b` 3, and `\bGalaxy Digital\b` returns ZERO — but the OUTBOUND edge set will be large, because nearly every lease counterparty and peer is already a covered slug (anthropic, fluidstack, amazon, coreweave, google, terawulf, entergy, aep, iren, lambda, nscale, oracle, sargent-lundy, core-scientific, applied-digital, crusoe). Amazon and Google are in the step-7 scope-note 40+ inbound class — defer with a statement rather than skimming, as C6 did with `google`. TWO REAL TRAPS: `\bGalaxy\b` hits four files of which `envision-energy` and `piller` are Envision's "Galaxy Campus" in Ulanqab (definite false positives) while `compass-datacenters` and `schneider-electric` carry a Texas Governor's release naming "Galaxy" beside Compass and Montera — plausibly the real company, VERIFY don't assume; and `\bHelios\b` is a C7-shaped trap, because `oracle` means AMD's MI450 "Helios racks" and `rolls-royce-power-systems` means the Voltaria Helios battery in Scotland, neither of which is Galaxy's Texas campus. The `Why` cell's ">$19B of leases combined" is a SUMMED figure of exactly the class that failed C8's count test — test each lease separately. GUIDE SCOPE: five miner-pivot guides already exist (`terawulf`, `iren`, `core-scientific`, `applied-digital`, `crusoe`) and between them cover why miners became landlords, the vertical-integration spectrum, brownfield power, take-or-pay colocation, transition-period income statements, GPU financing and unnamed-tenant concentration. They ALL start after the pivot decision — so the unclaimed gap is (a) the bitcoin economics that FORCE it (hashprice, network difficulty, the halving, why a fleet strands) and (b) Galaxy Digital, which is not a miner at all but an asset manager that happens to own a campus, a business none of the five describes.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
-**To continue:** type `run Phase C session C9 on Opus 5 xhigh`
-
-Developed by: LightAISolutions
