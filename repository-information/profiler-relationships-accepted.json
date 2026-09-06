@@ -85,6 +85,12 @@
       "pair": "amazon x x-energy",
       "why": "Both true at once: Amazon is X-energy's largest outside shareholder (23.4% of Class A) AND the anchor buyer of Xe-100 capacity (Cascade rights, 5 GW option). X-energy types the shareholder side `investor`; Amazon types the commercial side `supplier` because the enum has no `portfolio` value and the purchase relation is the one Amazon's own page describes. F6 investor-pair accept 4 of 4.",
       "when": "2026-09-05"
+    },
+    {
+      "id": "67904fc82307",
+      "pair": "cipher-mining x google",
+      "why": "Cipher correctly records Google as `investor` (penny warrants over 24,178,576 shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor, taken as consideration for the USD 1.73bn Barber Lake rent backstop). The coherent inverse is `portfolio`, which the schema enum does not carry, so Google's side stays `other` until the enum grows — the same disposition as `amazon x mainspring-energy`, `mgx x openai`, `aligned x mgx` and `anthropic x mgx`. Note the sibling pair `google x terawulf` is accepted for a different reason (partner AND investor both true); here Google's side is not a second true type but the absent inverse.",
+      "when": "2026-09-06"
     }
   ]
 }

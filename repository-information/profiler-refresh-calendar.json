@@ -601,13 +601,15 @@
       "nextReport": "2026-10-27",
       "confirmed": true,
       "source": "Alphabet Q3 2026 listed as confirmed for 2026-10-27 after close; one tracker showed 10-28 unconfirmed — verify at https://abc.xyz/investor",
-      "lastRefreshed": "2026-08-30",
+      "lastRefreshed": "2026-09-06",
       "watch": [
         "Capex guidance",
         "Intersect Power buildout and the energy-parks pipeline",
         "Form Energy iron-air progress",
         "Demand-response scale and new BESS/storage procurement",
-        "TPU v7 external-sales momentum"
+        "TPU v7 external-sales momentum",
+        "The Fluidstack lease-backstop programme — whether it grows to further campuses or landlords, whether any instrument is increased, unwound or actually triggered, and whether the price keeps varying by counterparty (penny warrants over about 14% of TeraWulf and about 5.4% of Cipher, but NOTHING at Hut 8, where the consideration is instead a springing Alphabet guarantee tied to Google's share of consolidated Alphabet revenue)",
+        "Chesterton check: Google is the credit BEHIND the tenant, not the tenant — Fluidstack is the lessee of record at Lake Mariner, Abernathy, Barber Lake and River Bend, and Anthropic is the end user at River Bend. Do not re-import any of these as Google leases. Google has never published a page naming Fluidstack; the mechanics live in the LANDLORDS' 8-Ks, not in Alphabet's own filings"
       ]
     },
     {

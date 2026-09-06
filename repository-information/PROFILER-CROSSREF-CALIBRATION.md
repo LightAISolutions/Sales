@@ -1103,5 +1103,75 @@ where the profiles are indent=1. One new one: `archive.py` was written with
 `archive-index.json`** into a spurious several-hundred-line diff; it was caught by
 asserting `keys == sorted(keys)` before the first run and removed.
 
+**C9 addendum — 2026-09-06, v04.84r, Opus 5 xhigh. The `google` deferral is
+closed, and it cost the fifteenth accept entry.** The C9 entry above recorded
+that `google` was not opened at all and that "anyone reading the Google backstop
+story from `google`'s side is still reading a partial record". That is no longer
+true. `google` is revised to **profileVersion 7** (v6 archived first) and now
+carries the Fluidstack lease-backstop programme as a first-class strand.
+
+**What the dossier was actually missing, stated precisely.** `google` was not
+silent on the programme — it carried the **TeraWulf** instrument, the first and
+largest, and described it correctly. What it lacked was **every other party and
+any programme-level view**: no `fluidstack` edge at all, though Fluidstack is the
+tenant every Recognition Agreement stands behind; no `cipher-mining`; no `hut-8`;
+no `anthropic`, despite Anthropic being both Google's largest external TPU
+customer and the end user of the campus Google's own backstop underwrites. Four
+relationships added, one enriched — 10 → 14.
+
+**The disclosure asymmetry, verified rather than assumed.** EDGAR full-text
+search restricted to Alphabet Inc. (CIK 0001652044) returns **zero hits for
+`Fluidstack` and zero for `Recognition Agreement`**. Two controls were run before
+that zero was written down, because a null result from a search API is worthless
+without them: `Fluidstack` unrestricted returns **143** hits, and `data center`
+within Alphabet's own CIK returns **78**. The mechanism works against Alphabet's
+filings; the absence is real. The whole programme — roughly USD 6.2bn of
+disclosed support plus one uncapped base term — is legible **only** from the
+landlords' 8-Ks and 10-Qs.
+
+**The fifteenth accept entry, and why C9's cheaper resolution stopped being
+available.** C9 left `google` silent on both its landlord edges precisely to
+avoid this, and that was correct while `google` was not being opened: a silent
+counterparty generates no finding. Opening it removed the option. `hut-8` types
+Google `partner`, which is symmetric and coherent for free; `terawulf` was
+already accepted as **partner AND investor, both true**; but `cipher-mining`
+types Google `investor` on the penny warrants, and the coherent inverse
+`portfolio` is **still absent from the schema enum**. Leaving Google silent on
+Cipher alone while carrying TeraWulf and Hut 8 would have been arbitrary, and
+the two positions are materially the same fact. So the Cipher side is typed
+`other` and accepted as **`67904fc82307` — `cipher-mining x google`**, on the
+`amazon x mainspring-energy` / `mgx x openai` / `aligned x mgx` /
+`anthropic x mgx` precedent. **The accept list moves 14 → 15**, and the reason is
+recorded as distinct from its sibling: `google x terawulf` is accepted because
+two types are both true, this one because the true inverse does not exist. The
+`investor` ↔ `portfolio` gap now stands at **seven instances** — the first
+movement since F6 — which is the strongest single argument the program has
+produced for growing the enum rather than continuing to accept around it.
+
+**The finding the revision is actually for.** The price of the backstop is
+**negotiated, not structural**. Google took penny warrants over 32,568,197
+TeraWulf shares (~14%) and 24,178,576 Cipher shares (~5.4%, with a USD 430.0m
+value floor) — and **nothing whatever at Hut 8**, on the largest lease in the set,
+where the consideration is instead a springing Alphabet guarantee tied to
+Google's share of consolidated Alphabet revenue. No source located explains the
+difference, which is stated in the dossier as an open question rather than
+smoothed over. Two further cautions are recorded on the face of the dossier: the
+backstops **switch on at lease commencement, not at signing** (TeraWulf recorded
+only USD 600m becoming effective when CB-3 was delivered), and **no source
+publishes a programme-level total** — River Bend's "full base term" is a
+description, not a dollar cap, so the components cannot honestly be summed.
+
+**Side effects.** `google` 24 → 38 sources and 46% → 55% first-party; 13 → 21
+developments; a `Fluidstack lease credit-support programme` spec table added;
+two `strategyRead` bullets; the refresh-calendar row gains a programme watch item
+and a Chesterton check ("Google is the credit BEHIND the tenant, not the
+tenant"). `river-bend-campus` gains a second pin, from Google's side — 56 → 57
+registered pins. Graph edges unchanged at **1,177 (888 curated)**, which is the
+expected result and worth stating: all four new edges were already one-sided
+pairs, so the revision made them reciprocal without creating a single new pair.
+Cross-reference pairs 335 → **337**. One pre-existing oddity was left alone under
+Chesterton's fence: `recentDevelopments` carries a `2026-03-xx` date that predates
+this session and is not part of this change.
+
 
 Developed by: LightAISolutions

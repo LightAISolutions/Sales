@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-06 07:53:35 AM EST` · Repo version: `v04.83r`
+Last updated: `2026-09-06 08:14:28 AM EST` · Repo version: `v04.84r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -182,7 +182,7 @@ Last updated: `2026-09-06 07:53:35 AM EST` · Repo version: `v04.83r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/galaxy-digital.study.json">galaxy-digital.study.json</a> — Galaxy Digital in-app technology study guide (the business none of the five miner guides describes — principal against agency trading and why gross turnover is not revenue in the landlord sense, AUM and the asset-management stack, then the landlord half: ASC 842 operating against sales-type lessor accounting, non-recourse ring-fencing, loan-to-cost and DSCR, and what a 9.875% coupon says about a single unrated tenant; 12 sections)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/ge-vernova.profile.json">ge-vernova.profile.json</a> — GE Vernova dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/ge-vernova.study.json">ge-vernova.study.json</a> — GE Vernova in-app technology study guide
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/google.profile.json">google.profile.json</a>    — Google dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/google.profile.json">google.profile.json</a>    — Google dossier profile (hyperscaler — the storage-forward buyer and the credit behind the AI landlords: Intersect Power bought outright (~$4.75B), the 300 MW / 30 GWh Form Energy iron-air anchor, 1 GW of signed demand response, and TPU v7 as the first credible external threat to NVIDIA; plus the Fluidstack lease-backstop programme — per-building Recognition Agreements behind TeraWulf, Cipher and Hut 8 worth ~$3.2B, $1.73B and a full $7.0B base term, bought with penny warrants over ~14% and ~5.4% of two landlords and nothing at all from the third, and disclosed nowhere in Alphabet's own filings; 38 sources)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/google.study.json">google.study.json</a> — Google in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/gridstor.profile.json">gridstor.profile.json</a> — GridStor dossier profile (developer · ipp — Goldman Sachs Asset Management-owned, sponsor-created standalone-storage owner: 280 MW / 600 MWh operating under SCE resource adequacy and an Axpo revenue swap, 250 MW / 700 MWh under construction under APS and Fortune 500 tolls, five late-stage acquisitions in eighteen months; contracted and multi-market, not merchant CAISO/ERCOT — premise corrected)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/gridstor.study.json">gridstor.study.json</a> — GridStor in-app technology study guide (the storage specialist a bank built: how an asset manager's fund owns a developer, buying late instead of originating, the three contracting structures, what a sponsor can finance that a founder cannot, where it fails)

@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.84r] — 2026-09-06 08:14:28 AM EST
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response's CLAUDE TO DEVELOPER section: "run a short focused `profiler Google`
+> revision before C10, so the backstop programme is reconciled from Google's side while the three landlord dossiers
+> that describe it are fresh — it is the only deferral C9 left open, and C10 will add investor-side edges on top of
+> it.")*
+
+### Added
+
+- **The Fluidstack lease credit-support programme is now a first-class strand of the `google` dossier** (profileVersion 6 → 7; v6 archived before editing). Per-building Recognition Agreements under which Google promises the **landlord** that, on a payment default or insolvency of the tenant, it will either pay the termination fee or pay all rent currently due and assume the lease itself. Disclosed support: ~USD 3.2bn at TeraWulf's Lake Mariner, USD 1.3bn at Abernathy, USD 1.73bn at Cipher's Barber Lake, the full 15-year base term of Hut 8's USD 7.0bn River Bend lease, and a master lease at New Lebanon, Indiana.
+- **Four relationships added and one enriched** (10 → 14): `fluidstack` (`partner` — the tenant every agreement stands behind), `hut-8` (`partner`, pinned to `river-bend-campus`), `cipher-mining` (`other` — see below), `anthropic` (`customer` — largest external TPU buyer and the end user at River Bend), plus a rewritten `terawulf` entry.
+- **A `Fluidstack lease credit-support programme` spec table** setting out the mechanism, the per-campus support, the price paid at each landlord, and how the landlords measure it — Cipher carries a USD 544.5m asset for "the value of Google agreeing to make the lease payments from Fluidstack", and its project notes amortise against the backstop rather than a fixed schedule.
+- **Eight developments** tracing the programme from the first Recognition Agreements (2025-08-14) to Fluidstack's USD 18bn valuation (2026-09-03), and **fourteen sources** — 24 → 38, first-party share 46% → 55%.
+- **A programme watch item and a Chesterton check** on the `google` refresh-calendar row ("Google is the credit BEHIND the tenant, not the tenant").
+
+### Changed
+
+- **The `investor` ↔ `portfolio` enum gap moved for the first time since F6 — to seven instances.** `cipher-mining` correctly types Google `investor` (penny warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma, USD 430.0m value floor); the coherent inverse `portfolio` is still absent from the schema enum, so Google's side is typed `other` and accepted as `67904fc82307`. **The accept list moves 14 → 15** — C9's cheaper resolution (leave the counterparty silent) stopped being available the moment `google` was opened, because carrying TeraWulf and Hut 8 while staying silent on Cipher would have been arbitrary.
+- `profiler-graph.json` rebuilt — edges unchanged at 1,177 (888 curated), which is the expected result: all four new edges were already one-sided pairs, so the revision made them reciprocal without creating a new pair. Cross-reference pairs 335 → 337.
+- **A C9 addendum in `PROFILER-CROSSREF-CALIBRATION.md`** closing the deferral the C9 entry left open and recording the fifteenth accept.
+- The README tree entry for `google.profile.json` now describes the dossier rather than naming it.
+
+### Fixed
+
+- **The disclosure asymmetry is now recorded, and was verified rather than assumed.** EDGAR full-text search restricted to Alphabet Inc. (CIK 0001652044) returns **zero hits for "Fluidstack" and zero for "Recognition Agreement"**. Two controls were run before that null was written down: "Fluidstack" unrestricted returns **143** hits and "data center" within Alphabet's own CIK returns **78**, so the mechanism works and the absence is real. The programme is legible only from the landlords' filings.
+- **The price of a Google backstop is negotiated, not structural.** ~14% of TeraWulf and ~5.4% of Cipher, but **nothing at all at Hut 8** on the largest lease in the set, where the consideration is instead a springing Alphabet guarantee. No source explains the difference; the dossier states it as an open question rather than smoothing it over. Two related cautions are now on the face of the dossier: the backstops switch on at **lease commencement, not signing**, and **no source publishes a programme-level total**, so the components cannot honestly be summed.
 
 ## [v04.83r] — 2026-09-06 07:53:35 AM EST
 
