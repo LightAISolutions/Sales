@@ -1276,15 +1276,16 @@
     },
     {
       "slug": "nvidia",
-      "nextReport": "2026-08-26",
-      "confirmed": true,
-      "source": "Q2 FY2027 results (quarter ended 2026-07-26) were company-confirmed for 2026-08-26. OVERDUE — the 2026-08-27 one-shot fired (SUCCEEDED) but landed no commit and the dossier's latest period is still Q1 FY2027 with commentary reading 'Q2 FY2027 not yet reported as of 2026-08-09'. Next after this: Q3 FY2027, tracker estimates conflict (2026-11-17 vs 2026-11-25), not company-confirmed.",
-      "lastRefreshed": "2026-08-30",
+      "nextReport": "2026-11-25",
+      "confirmed": false,
+      "source": "Q2 FY2027 reported 2026-08-26 (quarter ended 2026-07-26) and is now recorded in the dossier — the OVERDUE state from the 2026-08-27 one-shot is cleared. Q3 FY2027 ends 2026-10-25 and has no company-confirmed date. 2026-11-25 is a cadence inference: NVIDIA has reported on a Wednesday (Q1 on 2026-05-20, Q2 on 2026-08-26) at a 24-31 day lag, and 2026-11-25 is the Wednesday at the 31-day lag Q2 used. The competing tracker estimate of 2026-11-17 is a Tuesday, which is inconsistent with that pattern.",
+      "lastRefreshed": "2026-09-06",
       "watch": [
-        "ADD THE MISSING PERIOD: Q2 FY2027 actuals are absent from financials.periods[]",
-        "Data-center segment results vs the $91B Q2 guide",
-        "Rack-power architecture signals (800 VDC rollout, Vera Rubin/Kyber timing, power-smoothing features)",
-        "Any changes to the published 800VDC partner list"
+        "Q3 FY2027 against the $108.0B ±2% revenue guide and the 74.0% ±50bp gross-margin guide (down 100bp from Q2)",
+        "Gains from equity securities — $7.771B in Q2 alone and excluded from non-GAAP; a reversal cuts GAAP EPS below non-GAAP",
+        "Whether any China data-center compute revenue re-enters the outlook (currently assumed at zero)",
+        "800 VDC / Kyber: no change to the published partner list found in NVIDIA's own pages since the October 2025 OCP announcement as of 2026-09-06 — watch for a Vera Rubin NVL72 production-timing update",
+        "AWS 2M-GPU deployment across 2027-2028 and any effect on the four-customers-at-61% concentration disclosed in the 10-Qs"
       ]
     },
     {

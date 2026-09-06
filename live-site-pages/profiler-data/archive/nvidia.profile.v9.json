@@ -61,20 +61,6 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-08-26",
-   "category": "financial",
-   "headline": "Q2 FY2027: revenue $96.2B (+106% YoY, +18% QoQ) against a $91B guide; data center $89.0B (+117%); GAAP EPS $2.46 above non-GAAP $2.22; Q3 guided to $108.0B ±2% at 74.0% gross margin",
-   "read": "We assess the guide-beat cadence is intact but the earnings mix is shifting: gross margin is guided down 100bp while $7.771B of gains on NVIDIA's own equity stakes lift GAAP above non-GAAP for a second quarter. The operating business and the investment portfolio are now both material to reported earnings, and only one of them is what the multiple is being paid for.",
-   "source": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
-  },
-  {
-   "date": "2026-08-26",
-   "category": "partnership",
-   "headline": "AWS to deploy 2 million additional NVIDIA GPUs across its global infrastructure in 2027-2028 — on top of the 1 million announced at GTC 2026 — spanning Blackwell Ultra, Rubin and Rubin Ultra, Vera CPU, NVLink Fusion and Spectrum networking, plus 100,000 GPUs for federal workloads",
-   "read": "The largest single named hyperscaler commitment in the file by unit count, and it lands on the same day as the Q2 print. No power figure and no dollar figure are stated, so it sizes the demand signal without sizing the buildout — the gigawatt translation is the reader's to make, not the release's.",
-   "source": "https://nvidianews.nvidia.com/news/aws-and-nvidia-to-deliver-2-million-additional-gpus-and-next-generation-infrastructure-for-agentic-and-physical-ai"
-  },
-  {
    "date": "2026-08-10",
    "category": "partnership",
    "headline": "Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital",
@@ -141,7 +127,7 @@
  "strategyRead": [
   "(High confidence) We assess NVIDIA has converted its compute roadmap into control of the data-center power agenda: by publishing the 800VDC architecture, naming the qualified vendor slate, and prescribing storage placement (rack supercaps + interconnection BESS), it sets the requirements every power/BESS supplier in this app must meet for the 2027 Kyber generation. Basis: NVIDIA's own technical blogs and whitepaper.",
   "(High confidence) We assess demand is now denominated in gigawatts: OpenAI (10 GW LOI), Anthropic (up to 1 GW initial), and >1.7 GW already deployed across NVIDIA Cloud Partners. Third-party projections of ~233 GW of cumulative new AI data-center power demand 2025–2030 rest heavily on NVIDIA's shipment cadence — the single most important demand variable for this ecosystem.",
-  "(Moderate confidence) We assess the circular-financing critique is the most serious structural risk: up to $100B invested in OpenAI as it buys NVIDIA systems, reported discussions of guaranteeing up to $250B of OpenAI lease payments, and four direct customers at 61% of revenue. Bernstein and Bloomberg Intelligence analysts flag it; Burry's depreciation-understatement thesis (~$176B, 2026–2028) is the bear case NVIDIA felt compelled to rebut directly. The August 2026 compute-financing platforms — memorandums with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilize over $500B of third-party capital — are the largest structural answer offered so far, moving demand financing toward independent underwriters rather than NVIDIA's balance sheet. We do not yet score it as mitigating: the instruments are memorandums, no per-firm allocation is published, and no platform has been shown funding a transaction. As of Q2 FY2027 the critique is legible in the income statement itself: $7.771B of net gains from equity securities, excluded from non-GAAP, put GAAP EPS above non-GAAP for a second consecutive quarter. Stakes taken in customers and cloud partners now move reported earnings directly, and a reversal would cut GAAP EPS below non-GAAP as mechanically as the gains lifted it.",
+  "(Moderate confidence) We assess the circular-financing critique is the most serious structural risk: up to $100B invested in OpenAI as it buys NVIDIA systems, reported discussions of guaranteeing up to $250B of OpenAI lease payments, and four direct customers at 61% of revenue. Bernstein and Bloomberg Intelligence analysts flag it; Burry's depreciation-understatement thesis (~$176B, 2026–2028) is the bear case NVIDIA felt compelled to rebut directly. The August 2026 compute-financing platforms — memorandums with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilize over $500B of third-party capital — are the largest structural answer offered so far, moving demand financing toward independent underwriters rather than NVIDIA's balance sheet. We do not yet score it as mitigating: the instruments are memorandums, no per-firm allocation is published, and no platform has been shown funding a transaction.",
   "(Moderate confidence) We assess the GB300 power-smoothing feature set (rack energy storage, ramp control, up to 30% peak-demand reduction) partially internalizes what would otherwise be BESS-supplier revenue — but simultaneously legitimizes storage-at-the-rack, expanding the BBU/supercapacitor market (~$2.8B → ~$7.1B by 2033 per analyst estimates) faster than it cannibalizes it.",
   "(High confidence) China is now regulatory downside only: guidance assumes zero China data-center compute revenue after the H20 whipsaw ($4.5B charge, then a 15%-of-revenue export deal, then Beijing's effective blacklisting), and the SAMR Mellanox probe carries a potential ~$2.9B fine. Basis: filings, Commerce testimony, SAMR announcements."
  ],
@@ -429,48 +415,7 @@
   "type": "public",
   "periods": [
    {
-    "period": "Q2 FY2027 (ended 2026-07-26; latest interim)",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "$96.2B (+106% YoY, +18% QoQ)",
-      "expected": "own guide $91B",
-      "verdict": "beat",
-      "result": "beat the guide by ~$5.2B; year-ago quarter was $46.743B"
-     },
-     {
-      "name": "Data center revenue",
-      "actual": "$89.0B (+117%)",
-      "expected": "",
-      "verdict": "beat",
-      "result": "record; 92.5% of total revenue (92.2% in Q1)"
-     },
-     {
-      "name": "Non-GAAP EPS",
-      "actual": "$2.22",
-      "expected": "",
-      "verdict": "",
-      "result": "GAAP $2.46 — above non-GAAP for the second straight quarter, driven by $7.771B of net gains from equity securities that non-GAAP excludes"
-     },
-     {
-      "name": "GAAP net income",
-      "actual": "$59.688B",
-      "expected": "",
-      "verdict": "",
-      "result": "62% net margin; GAAP and non-GAAP gross margin both 75.0%"
-     },
-     {
-      "name": "Q3 FY2027 guidance",
-      "actual": "$108.0B revenue ±2%; gross margin 74.0% ±50bp",
-      "expected": "",
-      "verdict": "",
-      "result": "no China data-center compute revenue assumed in the outlook"
-     }
-    ],
-    "commentary": "Reported 2026-08-26. The $91B guide set at Q1 was beaten by roughly $5.2B and the Q3 guide steps up again to $108.0B, while guided gross margin steps down 100bp to 74.0%. GAAP earnings are now materially flattered by mark-ups on NVIDIA's own equity stakes: $7.771B of net gains from equity securities in the quarter, excluded from non-GAAP, which is why GAAP EPS ($2.46) sits above non-GAAP ($2.22) — the same inversion as Q1, at roughly double the size."
-   },
-   {
-    "period": "Q1 FY2027 (ended 2026-04-26)",
+    "period": "Q1 FY2027 (ended 2026-04-26; latest interim)",
     "metrics": [
      {
       "name": "Revenue",
@@ -494,7 +439,7 @@
       "result": "GAAP $2.39 incl. equity gains; dividend raised 25x, +$80B buyback"
      }
     ],
-    "commentary": "Q2 FY2027 guided to $91B, well above street — beaten at $96.2B when reported 2026-08-26."
+    "commentary": "Q2 FY2027 guided to $91B, well above street. Q2 FY2027 (July 2026 quarter) not yet reported as of 2026-08-09 — typically late August."
    },
    {
     "period": "FY2026 (ended 2026-01-25)",
@@ -549,7 +494,7 @@
     "commentary": "FY2026 Q1 absorbed a $4.5B H20 export-restriction charge with ~$8B of guided China revenue loss — later structurally excluded from guidance."
    }
   ],
-  "commentary": "Customer concentration per 10-Q filings: Q3 FY2026 had four direct customers >10% each (22/15/13/11% = 61% combined); direct customers are ODM/CSP intermediaries with ultimate demand attributed to Microsoft, Meta, Amazon, Google. Supply: TSMC CoWoS sold out through 2026 (NVIDIA reportedly >50% of it); all three HBM vendors' 2026 output sold out under non-cancellable contracts. Equity stakes now move reported earnings: net gains from equity securities were $7.771B in Q2 FY2027 and are excluded from non-GAAP, putting GAAP EPS above non-GAAP in both Q1 and Q2 FY2027."
+  "commentary": "Customer concentration per 10-Q filings: Q3 FY2026 had four direct customers >10% each (22/15/13/11% = 61% combined); direct customers are ODM/CSP intermediaries with ultimate demand attributed to Microsoft, Meta, Amazon, Google. Supply: TSMC CoWoS sold out through 2026 (NVIDIA reportedly >50% of it); all three HBM vendors' 2026 output sold out under non-cancellable contracts."
  },
  "sources": [
   {
@@ -655,18 +600,8 @@
    "label": "NVIDIA — DGX Cloud Lepton connects Europe's developers to the global NVIDIA compute ecosystem",
    "url": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem",
    "date": "2025-06-11"
-  },
-  {
-   "label": "NVIDIA — Q2 FY2027 results",
-   "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
-   "date": "2026-08-26"
-  },
-  {
-   "label": "AWS and NVIDIA — 2 million additional GPUs across AWS infrastructure in 2027-2028",
-   "url": "https://nvidianews.nvidia.com/news/aws-and-nvidia-to-deliver-2-million-additional-gpus-and-next-generation-infrastructure-for-agentic-and-physical-ai",
-   "date": "2026-08-26"
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 10
+ "profileVersion": 9
 }

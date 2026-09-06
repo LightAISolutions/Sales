@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.91r] — 2026-09-06 06:17:12 PM EST — v01.83w
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response: "Run the overdue `nvidia` earnings refresh — add Q2 FY2027 actuals to
+> `financials.periods[]`, work the four watch items on its calendar row, and advance `lastRefreshed`.")*
+
+### Added
+
+- **`nvidia` Q2 FY2027 actuals** (quarter ended 2026-07-26, reported 2026-08-26): revenue **$96.2B** (+106% YoY, +18% QoQ) against the company's own **$91B** guide; data center **$89.0B** (+117%), 92.5% of total; GAAP diluted EPS **$2.46** against non-GAAP **$2.22**; GAAP net income **$59.688B**; GAAP and non-GAAP gross margin both **75.0%**; Q3 FY2027 guided to **$108.0B ±2%** at **74.0% ±50bp** gross margin with no China data-center compute revenue assumed.
+- **Two developments dated 2026-08-26** — the Q2 print, and AWS deploying 2 million additional NVIDIA GPUs across its global infrastructure in 2027–2028 on top of the 1 million announced at GTC 2026 (Blackwell Ultra, Rubin, Rubin Ultra, Vera CPU, NVLink Fusion, Spectrum; 100,000 GPUs for federal workloads). Two sources added, both first-party.
+
+### Changed
+
+- **`nvidia` dossier to profileVersion 10 (v9 archived).** Q1 FY2027 loses the "latest interim" marker and its stale "Q2 not yet reported as of 2026-08-09" note. The circular-financing `strategyRead` and the financials `commentary` both now carry the equity-gains fact below.
+- **`nvidia`'s refresh-calendar row advanced** — `OVERDUE` cleared, `lastRefreshed` 2026-08-30 → 2026-09-06, `nextReport` rolled to 2026-11-25, and all four watch items replaced with five written against what is now open.
+
+### Notes
+
+- **The circular-financing critique is now legible in the income statement, not just in commentary.** GAAP EPS exceeds non-GAAP for the second consecutive quarter because **$7.771B of net gains from equity securities** are excluded from non-GAAP — verified against the release's own "RECONCILIATION OF GAAP TO NON-GAAP FINANCIAL MEASURES" table, not inferred from the EPS inversion. Q1 showed the same inversion at roughly half the size. Stakes taken in customers and cloud partners now move reported earnings directly, and a reversal would cut GAAP EPS below non-GAAP as mechanically as the gains lifted it.
+- **The GAAP-above-non-GAAP figure was read three times before it was written.** The first extraction returned GAAP $2.46 against non-GAAP $2.22 and identical 75.0% GAAP and non-GAAP gross margins — two anomalies in one pass, which reads like a mis-parsed summary table rather than a fact. A second read confined to the highlights table confirmed both, and a third read of the reconciliation table produced the cause. An arithmetic control also holds: $59.688B on $96.2B is a 62% net margin, consistent with a 75% gross margin and NVIDIA's disclosed opex and tax rates.
+- **EDGAR was blocked from this session's egress and the refresh was completed anyway.** `data.sec.gov` returned SEC's "Your Request Originates from an Undeclared Automated Tool" page under a properly declared non-personal User-Agent in SEC's prescribed format, including on retry with `Accept-Encoding` and `Host` headers. The block text is network-keyed ("part of a network of automated tools"), so it is not a User-Agent defect and further retries would be pointless load on a government site. Every figure above therefore comes from NVIDIA's own newsroom release rather than from XBRL. **This bounds the route, not the data** — the figures are first-party either way — but a future session should expect the same block rather than assume EDGAR works.
+- **Watch item 4 resolved as a verified null, correctly bounded.** No change to the published 800 VDC partner list was found in NVIDIA's own pages as of 2026-09-06: both the NVIDIA blog and the developer-blog ecosystem page date to **October 13, 2025**, which the dossier already carries as a development, and the partner list they print is the one the dossier already holds as relationships. A web search additionally surfaced an "OCP joint white paper March 2026", an "LVDC Solid-State Transformer Specification v0.3 July 2026", "80+ equipment manufacturers" and a "30% TCO" figure — **none of which appears on either NVIDIA page**, so none was written. That is a summarizer synthesis, and it is recorded here as a lead for the next refresh rather than as a fact.
+- **The Q3 date is a cadence inference and says so.** NVIDIA has reported on a Wednesday (Q1 on 2026-05-20, Q2 on 2026-08-26) at a 24–31 day lag from quarter end. Q3 FY2027 ends 2026-10-25, so 2026-11-25 is the Wednesday at the 31-day lag Q2 used. The competing tracker estimate of **2026-11-17 is a Tuesday** — computed with `date -d`, not assumed — which is itself evidence against it. `confirmed` stays `false`.
+- Data-only change per `.claude/rules/profiler-app.md`: no Profiler page version bump and no page changelog entry. CHANGELOG `Sections: 93/100` -> `94/100`; six pushes of headroom.
 
 ## [v04.90r] — 2026-09-06 05:56:46 PM EST — v01.83w
 
