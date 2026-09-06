@@ -6,6 +6,53 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-06 03:40 AM EST
+**Repo version:** v04.81r — one push commit this session (`d900bc4`), plus this housekeeping commit
+**Branch:** `claude/phase-c7-power-electronics-gom1y8`
+**Model:** Opus 5 xhigh — Phase C session **C7**: Power Electronics. Two research subagents, one dossier, one study guide, one lesson plan, **three** step-7 revisions, all in one push commit.
+
+### What was done
+
+- **One schema v7 dossier at profileVersion 1, intel-briefing style.** `power-electronics` (85 sources, **61% first-party**, 8 relationships, 4 `policyExposure` entries) — Power Electronics España, S.L. of Llíria, Valencia, the corpus's **first dedicated power-conversion specialist**: founded 1987, 3,685 employees, FY2025 revenue above €1.3bn with EBITDA above €250m, and **approximately 70% of group revenue earned in the United States while manufacturing in Spain**. Grid forming (VISMA) shipped as **standard** across the storage and solar lines. Wholly owned by a holding company administered by three corporate vehicles, with **no outside capital anywhere in the public record**.
+- **One schema v2 study guide (11 sections) + lesson plan (5 modules)**, written deliberately past `sinexcel`, `sungrow` and `delta-electronics`, which already cover modular-versus-central conversion and the grid-forming metaphor. The new material: the power triangle and why a converter is rated in kVA, reading a capability curve and a derating table, following versus forming as **current source versus voltage source**, **the two separate US rulebooks** (IEEE 1547 + UL 1741 SA/SB at distribution against IEEE 2800 + NERC PRC-029-1 + FERC Order 901 at transmission), ride-through and the prohibition of momentary cessation, and what a developer buys when it buys conversion separately from cells. **Twelve concepts registered** (951 total) — none of the standards existed in the registry before.
+- **Step 7 — three dossiers revised and archived, splitting three ways.** `sinexcel` v6→v7 **contradicted**: it grouped the subject with Sungrow and SMA as "integrated-inverter giants" competing on "full BESS supply", which is right about Sungrow and wrong about a company that makes no cells and sells no turnkey system. `sungrow` v7→v8 **accurate and left alone** (corroborated by Wood Mackenzie's own CY2023 wording). `terra-gen` v4→v5 **under-evidenced rather than wrong** — qualified, not deleted.
+- **Calendar row** (104 rows, 52 private) with `cadence: "quarterly"`, the ownership finding written into `source`, and a nine-item `watch[]`; **§5 row rewritten** with per-clause verdicts, **§8 row flipped**, §7's CHANGELOG bullet 97/100 → **98/100**, and a C7 calibration-log entry.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean, `d900bc4` pushed to `claude/phase-c7-power-electronics-gom1y8`. **Program state: 54 of 65 new companies, 4 of 30 guide passes. Phases A and B complete; C1–C7 and C11 shipped.** The C8 paste-in prompt was handed to the developer in this session's chat.
+
+- **Remaining, in §9.5 order:** C8 · C9 · C10 · C12 (Opus 5 xhigh), then the 26 guide backfills (6 sessions), then X3, then Phase D.
+- **CHANGELOG is 98/100 — two pushes of headroom.** C8 takes it to 99; **C9 is the session that crosses 100 and must budget the rotation**.
+
+### Key decisions and findings
+
+- **Premise verdicts, C7: nought for two, one with a narrower true core.** "The leading US utility-scale PCS specialist" **failed as stated** — and the reason is the session's main result: **no independent ranking of US utility-scale PCS suppliers exists at all**, and the absence is *structural*, because analyst houses rank either global PV inverters or **AC-integrated** storage systems, and Wood Mackenzie's integrator ranking states a scope that excludes conversion-only vendors **by definition rather than by performance**. The one independent US-leadership statement (Wood Mackenzie, CY2023) concerns **solar central inverters**, names Sungrow jointly, is unquantified, and was not repeated the following year. "(six dossiers)" **failed — three, not six**.
+- **A new verdict shape worth reusing: a premise can be *unfalsifiable* rather than true or false.** C7 is the first session to record that, and the dossier says so in `strategyRead` and in the guide's "where this fails" section instead of repeating the claim. Future superlative clauses ("the largest missing X") should be tested against a measurable basis and reported this way when none exists.
+- **A research agent misclassified a source and the error was caught before it propagated.** Agent A treated `power-electronics.co.nz` as a first-party subsidiary site; it says **"locally owned supplier"** — an independent distributor. That one word meant the Sinexcel supply link belongs to the *distributor*, not the manufacturer (so no supplier edge was written), and the "family owned" and "three factories / 120,000 m² / 30 GW" statements are third-party.
+- **Two provenance traps ran in opposite directions**, and together would have misstated the first-party share both ways at once: the company serves its own datasheets from an S3 bucket host that tiers `independent` (nine sources carry an explicit `"party": "company"`), while the NZ distributor's domain was deliberately kept **out** of the registry's `domains`.
+- **The schema's "FX rates are researched, not remembered" rule earned its keep.** A remembered EUR/USD rate of 1.09 was wrong by 4% (actual 2025 average 1.1296); the FY2025 USD overlay moved $1,417m → $1,468m.
+- **The pre-emission validator and the round-trip harness both paid for themselves again**, at roughly ten minutes to rebuild. The validator reported 0 errors first run; the harness kept the three step-7 revisions to **17–21 changed lines each** rather than full re-serialisations.
+- **A false-positive class more extreme than `\bAES\b` or `\bRecurrent\b`.** `\bPower Electronics\b` matched eight dossiers and **five were not the company** — Delta's own business segment, EVE's own lab, and three citations of the trade publication *Power Electronics News*; `vicor` alone carried three distinct kinds (publication, IEEE award name, academic discipline). A company whose name is also its industry's name defeats word-boundary matching entirely.
+
+### Active context
+
+- Branch `claude/phase-c7-power-electronics-gom1y8`; repo version **v04.81r**; CHANGELOG **98/100**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
+- Checker state at v04.81r: registry sync clean (143) · study 0/0 (117 guides, 951 concepts) · relationships exit 0 with **0 findings** (14 accepts) · crossrefs exit 0 (304 pairs, 9 accepts, 20 scopes over the cap) · graph **1,096 edges (820 curated)** · reports not run (X3's job).
+- Environment notes: `pip install playwright pillow` then `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; the Profiler hash route is `#<slug>`; the dossier view sits behind the auth wall so the study guide is the real render check — `ovFetchJson(slug+'.study.json').then(ovShowStudy)` in page context. **PDF text extraction is broken in this environment** (`cryptography` module panics, so `pypdf` and `pdfminer.six` both fail and `pdftotext` is absent) — plan around it. **Hosts blocked this session:** `eleconomista.es` and `pv-magazine-usa.com` (both 403 — use `valenciaplaza.com` and the global `pv-magazine.com`), `fcc.gov` FAQ pages (403 — use law-firm alerts), and the company's own `/en/blog` index is JS-rendered and returns an empty shell, so use `sitemap-0.xml` for the post inventory.
+
+### Recommendation for next session
+
+- **Run Phase C session C8 on Opus 5 xhigh — Digital Realty and CyrusOne (both §8 rows `developer`, all columns at `—`), two dossiers + two study guides, the four after-write checkers plus crossrefs, two calendar rows of DIFFERENT types (Digital Realty is a listed REIT and gets a researched `nextReport` row; CyrusOne is private and gets `cadence: "quarterly"`), README tree entries, flip both §8 rows and rewrite the §5 C8 row with per-clause verdicts. BUDGET THE SESSION AROUND STEP 7: the greps return 15 files for `\bDigital Realty\b` and 10 for `\bCyrusOne\b`, a union of TWENTY dossiers with EIGHTEEN substantive — twice C5's and C6's tail and the largest in the program. Unlike C7 there is no false-positive class, so the filtering is "career history versus substantive claim". "(13 dossiers)" is already refuted (15), and "KKR/GIP-owned" is stale — GIP has been part of BlackRock since October 2024, as three dossiers already record. The clause that needs real testing is the superlative "the largest missing AIDC landlord": test it against megawatts, revenue or a published ranking, and if none exists report that the way C7 reported the absent PCS ranking. The guides must reach past the nine colocation guides already in the library — the unclaimed gap is the money layer (what a REIT is, funds from operations versus earnings, how a stabilised asset is valued and financed, churn and mark-to-market on renewal, and what a take-private changes). CHANGELOG goes 98 → 99, so C8 does not rotate but C9 will. One push commit.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
+**To continue:** type `run Phase C session C8 on Opus 5 xhigh`
+
+## Previous Sessions
+
+### Session — Phase C session C6 (Opus 5 xhigh)
+
+
 **Date:** 2026-09-06 02:12 AM EST
 **Repo version:** v04.80r — one push commit this session (`c17c6f4`, merged to `main`), plus this housekeeping commit
 **Branch:** `claude/phase-c6-profiler-coverage-ez8zje` (rebased onto `origin/main` after the merge)
@@ -46,48 +93,3 @@ Nothing is in flight. Working tree clean, `c17c6f4` merged to `main`. **Program 
 
 - **Run Phase C session C7 on Opus 5 xhigh — Power Electronics (§8 row `supplier`, both columns at `—`), dossier + study guide, the four after-write checkers plus crossrefs, a `cadence: "quarterly"` calendar row (the company is private and family-owned), README tree entries, flip the §8 row and rewrite the §5 C7 row with per-clause verdicts. The "(six dossiers)" premise is ALREADY REFUTED and the grep is a trap: `\bPower Electronics\b` returns eight files but five are not the company — `delta-electronics` (Delta's own segment name), `eve-energy` (EVE's own lab) and `vicor`, `flex`, `infineon` (all citing *Power Electronics News*). Only `sinexcel`, `sungrow` and `terra-gen` name the company, so expect a small step-7 tail. The clause that actually needs testing is "the leading US utility-scale PCS specialist" — find an independent ranking or say plainly that none exists. One push commit.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
 **To continue:** type `run Phase C session C7 on Opus 5 xhigh`
-
-## Previous Sessions
-
-### Session — Phase C session C5 (Opus 5 xhigh)
-
-**Date:** 2026-09-06 12:41 AM EST
-**Repo version:** v04.79r — one push commit this session (`98c464b`, merged to `main`), plus this housekeeping commit
-**Branch:** `claude/phase-c5-profiler-coverage-k4env1`
-**Model:** Opus 5 xhigh — Phase C session **C5**: ENGIE North America · AES Clean Energy · RWE Clean Energy (`developer · ipp` storage and renewables owners). **The first Phase C dossier session after the Phase B close.** Six research subagents (two per company), three dossiers, three study guides, three lesson plans, **nine** step-7 revisions, all in one push commit.
-
-### What was done
-
-- **Three schema v7 dossiers at profileVersion 1, intel-briefing style.** `engie-north-america` (60 sources, 58% first-party, 12 relationships) — largest ERCOT battery owner at ~2.8 GW / 20% share (Modo) and second in the US at 3.662 GW (S&P Global), on a fleet **bought** with Broad Reach Power in August 2023 for >$1bn equity value; a one-hour fleet (1.8 GWh against 1.8 GW) built for an ancillary market whose revenues then fell ~90%; three minority sell-downs in ten months (Ares 49% of 905 MW, CBRE IM 49.5% of 2.4 GW, Ares +730 MW) with NA capital employed falling EUR 808m; Meta >1.3 GW across four Texas projects; **no permanent CEO since 1 August 2026**. `aes-clean-energy` (56 sources, 45% first-party, 12 relationships, 11 headshots) — 10,961 MW operating, 46 GW pipeline, third US battery owner at 1.978 GW (42 MW ahead of Google-owned Intersect); Bellefield 1 GW + 1 GW four-hour for Amazon; Maximo sold as a service to competing EPCs; tax attributes $1,540m against $2,871m Adjusted EBITDA; **the parent's $33.4bn take-private by GIP and EQT, signed 1 Mar 2026 and approved 26 Jun 2026, after which guidance and earnings calls stopped**. `rwe-clean-energy` (60 sources, 57% first-party, 14 relationships, 3 headshots) — **renamed RWE Americas, LLC in March 2026**; EUR 17bn to 2031 and 13→22 GW announced the same quarter as fifteen gas peakers; a US$1.22bn Interior settlement relinquishing three offshore leases with $900m into Louisiana LNG, and a California notice of intent to sue RWE over it on 1 September 2026.
-- **Three schema v2 study guides + three lesson plans**, each a curriculum no existing guide covers: ENGIE = what a battery sells inside an hour (ancillary stack, duration as a dated design decision, capital recycling, three data-centre products, co-location as a generator's fix); AES = building a gigawatt (module and tracker mechanics, the labour-cost crossover, reading a construction robot as a service business, tax equity and transferability, the construction clock); RWE = what an interconnection is worth (repowering and capacity factor, safe harbour, co-located vs standalone, iron-air chemistry, simple-cycle peakers, reading a segment report that hides your country). **Six concepts registered** (928 total).
-- **Step 7 — nine dossiers revised and archived**, the largest tail any session has run. **Two carried contradicted claims**: `amazon` said "AES owns roughly 28% of Fluence" (corrected to 28.19% at FY2025 and **22%** after the May 2026 sell-down) and `fluence` described AES as "reportedly being taken private by GIP/BlackRock for ~$38B" in three places (corrected to the signed, stockholder-approved GIP+EQT deal at $15.00/share). Seven were accurate and gained curated edges: `qts`, `blattner`, `mccarthy`, `jupiter-power`, `hunt-energy-network`, `plus-power`, `meta`. `canadian-solar`'s ENGIE mention was **left alone** — no source establishes whether that entity is North American, and the gap is stated in the calibration log rather than guessed.
-- **Three `cadence: "quarterly"` calendar rows** (100 rows total), each with the unit-level rule cited and a Chesterton-check watch item; §5 C5 row rewritten with per-clause verdicts; §8 rows flipped; §7's CHANGELOG bullet refreshed 86/100 → 96/100; §7's X3 bullet extended; C5 entry added to the calibration log.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean, `98c464b` merged to `main`. **Program state: 50 of 65 new companies, 4 of 30 guide passes. Phases A and B complete; C1-C5 and C11 shipped.** The C6 paste-in prompt (Clearway Energy · Recurrent Energy · Form Energy, Opus 5 xhigh) was handed to the developer in this session's chat.
-
-- **Remaining, in §9.5 order:** C6 · C7 · C8 · C9 · C10 · C12 (Opus 5 xhigh), then the 26 guide backfills (6 sessions), then X3, then Phase D.
-- **CHANGELOG is 96/100 — four pushes of headroom.** Rotation now falls around **C8 or C9**, inside the Phase C dossier block, not in the guide backfill. §7's bullet is corrected to say so.
-
-### Key decisions and findings
-
-- **The `investor` edge the brief expected was declined, deliberately.** AES ↔ Fluence is typed `supplier`/`customer`, not `investor`, because `type` reads from the stating side and this dossier's subject is the US renewables unit, which buys from Fluence; the 22% stake sits at **The AES Corporation**, in a different SBU. Typing it `investor` would have mis-stated the unit's position to win a graph colour. Reasoning is written into the calibration log; the accept list stayed at **14**.
-- **Premise verdicts, C5: two of five clauses held, two failed, one split.** Failed — ENGIE's "5.6 GW of storage" matches no source, and RWE's "~931 MW under construction" is a stale 2 October 2024 company figure whose three Texas projects were all commissioned by end-2025. Held — "absorbed Broad Reach". Held with correction — "sold a 2.4 GW stake to CBRE IM" was a **49.5% minority interest** with control retained. Split — AES's hyperscaler ranking holds commercially but is company-sourced only, and its "(five dossiers)" parenthetical failed at eight hits / three substantive.
-- **A formatting trap worth inheriting: the corpus has MIXED JSON indentation.** Most dossiers are indent=1, but `amazon`, `fluence`, `hunt-energy-network`, `profiler-companies.json`, `profiler-concepts.json`, the archive index and the refresh calendar are indent=2, and trailing newlines vary. A writer forcing indent=1 produced a 27,000-line formatting diff, caught at the pre-stage `git diff --stat` review and fixed by re-serialising each file at its original indentation (`amazon` 1,057 → 17 lines; `profiler-concepts.json` 16,248 → 56).
-- **Peer family, from a third end:** these three are the first `developer · ipp` companies that are also **named PPA counterparties to the data-centre developers already in `Colocation & Cloud Capacity`**, so the family lights their own customers. It is behaving as a **market map** rather than a peer set — which is a real adjacency, not a sorting error. Recorded in §7 for X3; family map untouched.
-- **Calendar rows:** all three unit-level → `cadence: "quarterly"` per the rule, with the reasoning written into each `source` rather than left implicit. AES's row flags that the take-private will end the filing stream that dossier depends on.
-
-### Active context
-
-- Branch `claude/phase-c5-profiler-coverage-k4env1`; repo version **v04.79r**; CHANGELOG **96/100**.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
-- Checker state at v04.79r: registry sync clean (0 of 139) · study 0/0 (113 guides, 928 concepts) · relationships exit 0 with **0 findings** (14 accepts) · crossrefs exit 0 (286 pairs, 0 new candidates, 20 scopes over the cap) · graph 1,050 edges (784 curated) · reports not run (X3's job).
-- Environment notes: `pip install playwright pillow` then `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; the Profiler hash route is `#<slug>`, not `#company/<slug>`; the study-guide button is role-gated, so render a guide with `ovFetchJson(slug+'.study.json').then(ovShowStudy)` in page context; `aescleanenergy.com` returns 520 and `us.rwe.com`/`rwecleanenergy.com` do not resolve.
-
-### Recommendation for next session
-
-- **Run Phase C session C6 on Opus 5 xhigh — Clearway Energy, Recurrent Energy, Form Energy (§8 rows at `—`/`—`; Clearway and Recurrent `developer · ipp`, Form `supplier`), dossier + study guide each, the four after-write checkers plus crossrefs, a calendar row per company decided separately because the three have different ownership shapes (Clearway listed, Recurrent a Canadian Solar unit, Form private), README tree entries, flip the §8 rows and rewrite the §5 C6 row with per-clause verdicts. Expect the largest step-7 tail yet — `\bRecurrent\b` already hits ten dossiers and `canadian-solar` calls Recurrent its wholly-owned developer with an 80.6 GWh pipeline, which is very likely the figure the C6 cell mis-attributes to Form Energy. One push commit.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
-**To continue:** type `run Phase C session C6 on Opus 5 xhigh`
-
