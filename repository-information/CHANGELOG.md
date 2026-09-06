@@ -3,11 +3,76 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.78r] — 2026-09-05 08:54:53 PM EST
+
+> **Prompt:** "Picking up from my last session, run the Phase B closeout of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Fable 5.1 High as a fresh session. Phase B is complete — F8 (Fermi America, Tract, Prime Data Centers) landed at
+> v04.77r and all 29 Phase B companies are covered. This session is bookkeeping and verification only: no dossier
+> or study-guide work, no Profiler.html or family-map changes.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest = F8, Previous = F7); PROFILER-COVERAGE-PLAN.md §1,
+> §2, §4 (the B-group table and the "Regrouping" paragraph), §7 (especially the "Register checks" bullet), §8 (all
+> B rows) and §9.5 (run order); repository-information/CLASSROOM-CURRICULUM-PLAN.md §6 in full — the gap register,
+> its "Standings" paragraph and the dated re-check trail (note how the Phase A close at v04.44r was recorded);
+> PROFILER-CROSSREF-CALIBRATION.md → "Relationships checker" (F6–F8 logs, the peer-family and X3 notes).
+>
+> THE TASK:
+>   1. Re-run the CLASSROOM-CURRICULUM-PLAN.md §6 gap register IN FULL — all twelve rows, G1–G12 — against the
+>      corpus, not against the rows' own text: dossier and study-guide files by slug, section titles and keyword
+>      coverage inside the guides a row names, module ids in `guidanceDocs_()` in googleAppsScripts/Profiler/
+>      Profiler.gs. Two rows need real attention: G10 sits at "Partial v04.58r" although DNV and Sargent & Lundy
+>      both landed at F1 — decide whether the row's remaining ask (insurance/brokers) keeps it Partial or whether
+>      it closes, and say why; G6 is structural (needs an "Interconnection for large loads" guidance module — a
+>      developer-supplied document) and stays Open unless a module has appeared. For every row, record the verdict
+>      with the repo version. Append ONE dated trail paragraph ("Where the register stands after Phase B (re-run
+>      YYYY-MM-DD, vXX.XXr)") — the trail is append-only, never rewrite an earlier paragraph — and refresh the
+>      Standings paragraph and each row's Status cell to match. Date the re-run in the §6 intro sentence the way
+>      the Phase A close did.
+>   2. PROFILER-COVERAGE-PLAN.md bookkeeping: mark Phase B complete — a dated note under §4's Regrouping paragraph
+>      (F1–F8 landed, model substitutions recorded in §8: B2 ran on Opus 5 xhigh, F5 on Fable Medium), §9.5
+>      run-order row 2 marked done, and a dated "where coverage stands after Phase B" line or table under §1
+>      (counts from the filesystem: dossiers, study guides, projects, graph edges from profiler-graph.json,
+>      concepts, guidance modules, reports — the v04.39r baseline was 89 / 62 / 8 / 490 / 112 / 7 / 4). Verify
+>      every §8 B-row carries a version in both the Dossier and Guide columns and no row still shows its original
+>      §4 hypothesis wording. Add ONE §7 bullet handing the peer-family observation to X3: F6, F7 and F8 all
+>      recorded that `Colocation & Cloud Capacity` mixes generation-first, powered-land and build-to-suit
+>      developers with the F3–F5 merchant battery developers (a `renewables-developer` split is the candidate) —
+>      record it as an X3 decision, do not act on it.
+>   3. Refresh-calendar sanity pass over the Phase B rows only (profiler-refresh-calendar.json): every Phase B
+>      company has a row; public companies carry nextReport/confirmed/source/watch[], private ones
+>      cadence: "quarterly". Fermi America's nextReport (2026-11-12) is an unconfirmed cadence inference — check
+>      investor.fermiamerica.com/events-presentations and EDGAR for an announced Q3 date and set `confirmed` if
+>      one exists; otherwise leave it and say so. Do not touch other rows.
+>   4. Re-run all four after-write checkers plus check-profiler-crossrefs.py and check-profiler-reports.py; report
+>      each result. Reports are expected to show aged pins — that is X3's job, record the count, do not re-pin.
+>
+> DO NOT: write or revise any dossier or study guide (loose threads for later revisions — CoreWeave's missing Elk
+> Grove Village lease, the plus-power Sierra Estrella attribution, Tract's 8 September PUCN decision — go into
+> the §7 bullet or the calibration log as notes, not into files); change Profiler.html, Profiler.gs, Scraper.gs
+> or the family map; register projects or concepts; rotate the CHANGELOG (counter is at 94/100).
+>
+> VERIFY: every §6 row has a fresh dated verdict; the §6 Status cells, Standings and the new trail paragraph
+> agree with each other; §1/§4/§9.5 in the coverage plan say Phase B is complete with the date and version;
+> all checkers reported. Report: the twelve §6 verdicts with any status changes, the corpus counts, the calendar
+> finding for Fermi, and the checker results.
+>
+> Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch."
+
+### Changed
+- `repository-information/CLASSROOM-CURRICULUM-PLAN.md` §6 — **Phase B close of the gap register (re-run 2026-09-05, v04.78r).** All twelve rows re-checked against the corpus (dossier and guide files by slug, section ids inside the guides each row names, the eight module ids `guidanceDocs_()` returns) and each row's Gap cell carries a dated v04.78r verdict. **One status change: G10 `Partial v04.58r` → `Closed v04.78r`** — the row's stated ask (a module revision *or* one IE-firm dossier) is satisfied twice by `dnv` and `sargent-lundy`, and its Unlocks (a public corroborating source for `what-bankable-means`) is delivered by section id; the insurance/broker seat was never an ask of the row and is recorded as a residual for a new row if wanted. G1, G2, G3, G4, G5, G7, G8, G9 re-confirmed closed; **G6 stays Open** (no interconnection module among the eight; "Order 2023" still absent from the corpus); G11 and G12 re-affirmed. The intro sentence dates the Phase B re-run beside the Phase A one, the Standings block is rewritten to v04.78r (eight closed · one open · two standing; the "Scheduled" bucket is now empty), the trail count reads six, and one append-only trail paragraph "Where the register stands after Phase B" is added after the v04.55r paragraph — no earlier paragraph was touched.
+- `repository-information/PROFILER-COVERAGE-PLAN.md` — **Phase B marked complete.** §1 gains a dated "where coverage stands after Phase B" paragraph and delta table from the filesystem (136 dossiers · 110 guides · 8 projects · 1,012 edges · 922 concepts · 8 modules · 4 reports against the v04.39r baseline 89 / 62 / 8 / 490 / 112 / 7 / 4, with the roster's category-tag counts); §4 gains a dated "Phase B complete" note under the Regrouping paragraph (B1–B2 then F1–F8 with their versions; model substitutions as §8 records them — B2 on Opus 5 xhigh, F5 on Fable 5.1 Medium); §7 gains one bullet handing the `Colocation & Cloud Capacity` peer-family observation (F6/F7/F8; `renewables-developer` split as the candidate) to X3 as a decision, not an action, with the three loose threads (CoreWeave's Elk Grove Village lease, plus-power's Sierra Estrella line, Tract's 8 September PUCN decision) noted for later revisions; §9.5 run-order row 2 marked done.
+
+### Verified
+- **§8 B rows**: all 29 carry a version in both the Dossier and Guide columns (v04.45r–v04.77r); no row's `Closes` cell still shows its original §4 hypothesis wording.
+- **Refresh calendar, Phase B rows only**: all 29 present (97 rows in the file). Public rows (`southern-company`, `entergy`, `oncor`, `aep`, `xcel-energy`, `fermi-america`, `x-energy`) carry `nextReport` / `confirmed` / `source` / `watch[]`; the 22 private rows carry `cadence: "quarterly"`. **Fermi America's `nextReport` 2026-11-12 stays `confirmed: false`**: EDGAR (CIK 2071778) shows no 8-K announcing a Q3 2026 date — the filings since the 13 August Q2 release are the 31 August officer 8-K (Items 5.02/9.01) and the 2 September shareholder-nomination 8-K (Items 5.08/8.01) — and `investor.fermiamerica.com/events-presentations` returned HTTP 403 to this session, so the IR page could not be re-read. No calendar row was changed.
+- **Checkers at v04.78r** (no data file changed): `sync-profiler-registry.py` 0 of 136 updated · `build-profiler-graph.py` 1,012 edges (749 curated), file unchanged · `check-profiler-study.py` 110 guides, 922 concepts, 0 errors / 0 warnings · `check-profiler-relationships.py` exit 0, 0 findings, 14 suppressed by the accept list · `check-profiler-crossrefs.py` exit 0, 0 candidates, 7 suppressed (8 entries), 20 scopes over the 900-character cap not examined · `check-profiler-reports.py` exit 0, 0 errors, **35 aged-pin warnings** across three of the four reports (`grid-scale-bess` 9, `named-project-bess-attach` 10, `s154-listed-bess-suppliers` 16) — recorded for X3, not re-pinned.
+- No dossier, study guide, `Profiler.html`, `Profiler.gs`, `Scraper.gs`, family map, project or concept was changed; CHANGELOG not rotated (95/100 after this push).
 
 ## [v04.77r] — 2026-09-05 08:39:26 PM EST
 
