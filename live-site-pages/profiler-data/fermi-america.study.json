@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 2,
+  "slug": "fermi-america",
+  "title": "Fermi America — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-power-plant-behind-the-fence",
+      "title": "Start here: the power plant behind the fence",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The PowerHouse guide teaches powered land and the two utility contracts; the Intersect guide teaches the energy park where generation, storage and load share one grid connection; the Vantage guide names behind-the-meter microgrids as bridge power; the Oklo and X-energy guides teach what a reactor does. None of them starts from a developer whose first product is a power station. This guide does: **it is about the {{generation-first campus}} — a data-center developer that builds its own gas plant (and applies for its own reactors) before it has a tenant, treats the utility as a supplement, and sells 'time to power' as the thing a tenant is paying for.** Fermi America is the worked example because it is the extreme case in the corpus: a pre-revenue company that listed on Nasdaq in October 2025 on a permit, a ground lease and a letter of intent, has landed about 1.5 GW of turbines and permitted 6 GW of gas, holds a combined-license application for four AP1000s, and by September 2026 had one binding-but-conditional tenant, a founder removed and litigating, and going-concern language in its 10-Q.",
+        "**Four things this guide teaches.** What a gas turbine actually is and why a developer's fleet is sequenced by {{time-to-power}} rather than by size — mobile aeroderivatives in months, small industrial units in a year, F-class heavy frames in two, and why each of them starts as {{simple cycle}} and becomes {{combined cycle}} later. What a {{private grid}} campus is and is not: which pieces of a utility it replicates behind the fence, which it still buys from the grid, and what the tenant is actually buying when rent is quoted per {{kW-month}} of total facility power. How generation is financed before a tenant exists — an {{equipment warehouse facility}}, asset-backed loans at 12–13%, {{convertible notes}} with a {{capped call}}, and a {{build-own-operate-transfer}} partner — and what each lender wrote into its covenants about the lease that had not been signed. And how a large-reactor {{combined licence}} application proceeds, what the {{applicant-prepared EIS}} pilot changes, and why 'first unit 2033' is a schedule with no financing attached.",
+        "**What it deliberately leaves to other guides.** Reactor physics and fuel (Oklo, X-energy); the interconnection queue and large-load tariffs on the utility side (Xcel, Oncor, Dominion); the lease from the landlord's chair (EdgeCore) and the tenant's (Fluidstack); the energy-park structures that let generation and storage share an interconnection (Intersect). Company history, executives and share prices stay in the dossier."
+      ]
+    },
+    {
+      "id": "what-a-gas-turbine-is-and-the-three-classes-a-campus-buys",
+      "title": "What a gas turbine is, and the three classes a campus buys",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A gas turbine is a jet engine bolted to a generator. Air is compressed, fuel is burned in it, and the hot gas expands through a turbine that spins both the compressor and the generator shaft. Nothing boils and nothing condenses, which is why a gas turbine can be started in minutes and why its output falls in thin, hot air: the machine is rated at {{ISO rating}} conditions (15 °C, sea level) and {{derating}} takes a slice off at a 3,500-foot Panhandle site in summer. Fermi's seven TM2500 units are 157.5 MW on the nameplate and 126–132 MW at site elevation; that gap is not a fault, it is physics.",
+        "The corpus's turbine fleets fall into three classes that trade size for speed. An {{aeroderivative}} — GE's TM2500 is literally an aircraft engine on a trailer — is about 20–35 MW a unit, arrives on trucks, and is running two months after it lands; its cost per kW is high and its efficiency is modest, so it is bridge power. A small industrial frame such as Siemens's SGT-800 sits at 50–60 MW a unit and about fifteen months from delivery to power; six of them with heat-recovery boilers make a 400–480 MW block. A {{heavy-duty gas turbine}} of F-class — Siemens's SGT6-5000F at roughly 240 MW a unit, GE's 7F — is the workhorse of the utility fleet, the most efficient of the three in simple cycle, the cheapest per kW, and the slowest: twenty-two months from port to power on Fermi's own table, and years on the OEM's order book if you have not already bought a slot.",
+        "The ladder explains the fleet. Fermi bought six SGT-800s second-hand from a Louisiana LNG developer, three refurbished 1980s-vintage GE Frame 6Bs from a New Jersey plant, leased seven TM2500s for twenty years and signed a fixed-price agreement for three new F-class units — four different machines whose only common property is that each could be had sooner than a new order for the machine one rung up. The Q2 2026 investor presentation lists them by 'time to power': 2, 8, 15 and 22 months. Read the fleet as a schedule, not a plant.",
+        "What 'landed' means. 'Total landed: 1.5 GW' counts turbines that have cleared customs at the Port of Houston. A turbine at a port is a large steel object; a power plant is that object plus a foundation, a fuel connection, a switchyard, cooling, controls, a permit to run and a contractor to assemble it. Fermi's first-phase civil scope — six 'bathtub' excavations, five miles of gas pipe, seven miles of water — is the part of the plant that was actually built by August 2026. The company's own first-power dates (210 MW on 1 July 2027) are the honest distance between the two."
+      ]
+    },
+    {
+      "id": "simple-cycle-first-combined-cycle-later",
+      "title": "Simple cycle first, combined cycle later: what the HRSG changes",
+      "kind": "prose",
+      "read": "6 min",
+      "ps": [
+        "A gas turbine in {{simple cycle}} throws away roughly 60% of its fuel energy as exhaust heat at 500–600 °C. {{Combined cycle}} adds a {{HRSG}} — a heat-recovery steam generator, a boiler that sits in the exhaust stream — and a steam turbine on the recovered heat. The same fuel now makes about half again as much electricity: Fermi's six SGT-800s are 296 MW in simple cycle and 396 MW combined on its own table (478 MW ISO on its site), the three F-class units 728 MW simple and 1,042 MW combined. The steam side is what turns a peaker into a baseload plant, and it is also what takes another year to build, needs water, and ties the turbines together so they can no longer be dispatched one at a time.",
+        "The phasing on a generation-first campus follows from that arithmetic. Phase 1 is everything in simple cycle — grid power, the mobile units, the 6Bs, the SGT-800s — because a tenant's first 200 MW cares about the date, not the heat rate. Phase 2 adds the HRSGs and the SST-600 steam turbine that arrived with the Siemens package, converting the block to combined cycle once the load is there to run it continuously. A campus that never reaches Phase 2 has bought expensive electricity; a campus that reaches it too early has bought a boiler for a load that does not exist.",
+        "Water is the hidden term. Combined cycle needs cooling for the steam condenser; on the Ogallala aquifer that is a political quantity. Fermi's answer — a hybrid dry-wet cooling agreement claimed to cut water use by 80%, a 2.5 million-gallon-a-day city contract at double the industrial rate and a 30-year groundwater lease — is the cost of running a steam cycle in a place where the neighbours have a moratorium on the agenda.",
+        "Emissions are the permit. A 6 GW gas fleet is a {{major source}} under the Clean Air Act; the TCEQ {{air permit}} issued on 25 February 2026 authorises that much combustion, and the 5 GW application filed a month later is the difference between the 11 GW plan and the 17 GW one. The company paused site work for nineteen days rather than pour foundations without it — the permit, not the turbine delivery, was the critical path in February."
+      ]
+    },
+    {
+      "id": "time-to-power-as-the-product",
+      "title": "Time to power as the product: what a tenant is buying",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "Every data-center lease in the corpus sells megawatts on a date. On a grid-fed campus the date belongs to the utility; the landlord's skill is queue position, substation funding and entitlement. On a generation-first campus the developer owns the date, and so it owns the risk: it has bought the machines, the fuel contract, the water and the permit before any tenant has promised to pay for them. The pitch is the chairman's sentence on the Q2 2026 call — 'There is no site we know of that has equipment and the ability to deliver 4.8 gigawatts during this time period' — and the price of the pitch is a balance sheet made of turbines.",
+        "The lease then has to carry the power plant. Fermi's TensorWave lease quotes about USD 6.5 billion over fifteen years for 222 MW of {{total facility power}}, which third parties reduce to roughly USD 163 per {{kW-month}}. Two things distinguish that number from a landlord's rent. First, it is quoted on total facility power (everything the campus draws for the tenant, including cooling losses), not on {{critical IT load}}; a tenant comparing it with a 'per kW of critical load' quote elsewhere must first divide by the campus's {{PUE}}. Second, it bundles the electricity: under a {{modified gross lease}} the fixed and variable power charges pass through, so part of the rent is a fuel bill whose size the tenant does not control and whose hedge is the developer's firm gas supply.",
+        "What the tenant gets in exchange is islanding. A private grid can promise a delivery date that does not depend on a transmission line the utility has not built, and can promise redundancy the tenant can inspect — Fermi's 'HyperRedundant' trademark is the marketing form of N+1 at the generation level. What it cannot promise is that the utility is irrelevant: the campus still bought 200 MW from SPS for the first tenant, because 200 MW of grid power in the second half of 2026 beats 640 MW of owned nameplate in late 2027.",
+        "Read the conditions. TensorWave's lease is binding but 'effective' only on closing by 30 September 2026 with financing, board approvals and 'requisite project guaranties' — a lease in which the landlord's ability to build the power plant is itself a condition. That is the generation-first model's signature clause: the tenant will not pay for a plant that may not be financed, and the lender will not finance a plant without the tenant. The 'backstop' guarantor 'that is a global leader in AI', named and then unnamed in the same week's releases, is the third party both sides need."
+      ]
+    },
+    {
+      "id": "the-private-grid-what-it-replicates-and-what-it-still-buys",
+      "title": "The private grid: what it replicates and what it still buys",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "A utility does six jobs. Line up which of them a behind-the-fence campus does for itself, and which it still pays someone else for.",
+      "cols": [
+        "Utility function",
+        "Who does it at Project Matador",
+        "What it costs or depends on"
+      ],
+      "rows": [
+        [
+          "Generation",
+          "Fermi's owned fleet (SGT-800s, F-class, 6Bs, leased TM2500s) and, under the framework, Hillcore's 2.6 GW block",
+          "Turbine capital at 12–13% asset-backed rates; a take-or-pay PPA to Hillcore on at least half of tenant load"
+        ],
+        [
+          "Fuel supply",
+          "Energy Transfer firm gas arrangement scalable to ~300,000 MMBtu/day; a planned Waha interconnect",
+          "Gas price pass-through to tenants; a director of Fermi sits on Energy Transfer's board"
+        ],
+        [
+          "Transmission",
+          "None needed inside the fence; a 115 kV tie to SPS for up to 200 MW",
+          "'regulatory approvals, SPS interconnection work schedules' — the 86 MW moved from January to the second half of 2026"
+        ],
+        [
+          "Distribution and switching",
+          "Campus switchgear and substations financed on the Keystone/Cape high-voltage equipment facility (12.90%)",
+          "A lender covenant that requires an approved customer agreement by 31 December 2026"
+        ],
+        [
+          "Reliability and reserve",
+          "N+1 at the generation level (the 'HyperRedundant' claim); the grid tie as a reserve",
+          "No regional operator's reserve margin behind the fence — the campus's own spare unit is its reserve"
+        ],
+        [
+          "Rate regulation",
+          "None — the price of power is a lease clause, not a tariff",
+          "The tenant's protection is the contract; the public's is the air permit and the water contract"
+        ]
+      ]
+    },
+    {
+      "id": "financing-generation-before-a-tenant",
+      "title": "Financing generation before a tenant: the lender's clauses",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A landlord with a signed lease borrows against the lease (EdgeCore's limited-recourse loans). A developer with turbines and no lease borrows against the turbines. Fermi's 2026 stack is a catalogue of that second kind of debt. An {{equipment warehouse facility}} — MUFG's USD 500 million at SOFR plus 4% — funds turbine progress payments against the machines themselves, matures in eighteen months, and steps up its amortisation if no lease of at least 400 MW exists by November 2026. A high-voltage equipment facility (Keystone/Cape, USD 120 million plus an accordion, 12.90%) funds substations and requires 'an approved customer agreement' by year-end or a 1.05× prepayment. A turbine-specific term loan (Beal Bank/CSG, USD 165 million, 12.00%, with a USD 37 million exit fee) sits on the six SGT-800s. Each lender wrote the missing tenant into its terms.",
+        "Equity came in two forms with different clocks. The IPO — 37.4 million shares at USD 21 for about USD 746 million net — funded the first turbines and the site; by June 2026 cash was USD 62.5 million. The bridge was {{convertible notes}}: USD 431.25 million at 5.00% due 2031, convertible at about USD 9.52 when the stock was USD 7.32, with a {{capped call}} bought from the proceeds that pushes the effective dilution price to USD 14.64. A convert is cheap debt that becomes expensive equity if the company succeeds; a capped call is the company paying up front to blunt that dilution up to a ceiling. Both are what a pre-revenue company issues when banks will lend only against steel.",
+        "The {{going concern}} paragraph is the summary of all of the above. Auditing standards require a company to say when its cash and committed facilities will not cover twelve months of obligations; Fermi's Q2 2026 10-Q says the conditions 'raise substantial doubt' and then lists management's plans — the converts, the undrawn facilities, 'sequencing' capex and 'possible equipment monetization' — that management concludes alleviate it. 'Equipment monetization' means selling turbines; in 2026 a landed F-class unit is a liquid asset, which is the one advantage of a balance sheet made of them.",
+        "The {{build-own-operate-transfer}} framework with Hillcore is the alternative to all of it: a partner finances, builds, owns and operates 2.6 GW on subleased acres, Fermi buys the output under long-term PPAs on a take-or-pay basis for at least half of tenant load, and holds a 10-year option to buy the plant at fair market value. The developer trades ownership of the megawatts for not having to pay for them — and takes on a fuel-and-capacity obligation that only a tenant's rent can service. A framework is not a contract; the definitive documents were due within about ninety days of 11 August 2026."
+      ]
+    },
+    {
+      "id": "fermi-money-ladder",
+      "title": "The disclosed ladder: what is public about Fermi's money",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD millions (as disclosed; facilities are commitments, draws are at 30 June 2026, the IPO figure is net proceeds, the last bar is the company's Phase 0–1 capex estimate)",
+      "intro": "Read the ladder against a cash balance of USD 91.7 million on 30 June 2026: every rung above the IPO is debt secured on equipment or convertible into shares.",
+      "items": [
+        {
+          "label": "Beal/CSG SGT-800 facility (Mar 2026)",
+          "sub": "12.00%; $14.7m drawn; $37m exit fee",
+          "v": 165
+        },
+        {
+          "label": "Keystone/Cape HV equipment (Feb 2026)",
+          "sub": "12.90%; $120m + $100m accordion; $77.3m drawn; customer-agreement covenant",
+          "v": 220
+        },
+        {
+          "label": "Convertible notes (Jul 2026)",
+          "sub": "5.00% due 2031; conversion ~$9.52; capped call to $14.64",
+          "v": 431
+        },
+        {
+          "label": "MUFG equipment warehouse (Feb 2026)",
+          "sub": "SOFR + 4%; $444.9m drawn; 400 MW lease test Nov 2026",
+          "v": 500
+        },
+        {
+          "label": "IPO net proceeds (Oct 2025)",
+          "sub": "37,375,000 shares at $21.00",
+          "v": 746
+        },
+        {
+          "label": "Capex to 30 June 2026 (inception)",
+          "sub": "$569m in 2025 + $626m in H1 2026",
+          "v": 1195
+        },
+        {
+          "label": "Phase 0 + Phase 1 capex (company estimate)",
+          "sub": "'could exceed $3 billion'; ~$2bn in the next 12 months",
+          "v": 3000
+        }
+      ]
+    },
+    {
+      "id": "the-nuclear-application-what-a-col-is-and-what-2033-means",
+      "title": "The nuclear application: what a COL is and what '2033' means",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "A {{combined licence}} under NRC Part 52 authorises both construction and operation of a reactor in one proceeding, on the strength of a certified design (Westinghouse's AP1000, Revision 19) plus a site-specific application. Fermi filed Parts 1 and 2 in June and August 2025; the NRC 'docketed' them on 5 September 2025 — accepted them as complete enough to review, which is not an approval — under four dockets, one per unit. Part 3, the site-specific safety analysis, is due at the end of 2026. After that come the safety review, the environmental review, a mandatory hearing before the Commission, and a decision with no scheduled date. Construction of the nuclear islands cannot legally begin before the licence issues.",
+        "The environmental half is where Fermi is a first. Under NEPA the NRC must produce an environmental impact statement; in the {{applicant-prepared EIS}} pilot the applicant drafts it under NRC supervision, which the agency says cuts its review time by about half. Fermi's draft was complete in July 2026 and the NRC targets a final EIS in December 2026 — fast for the environmental record, and irrelevant to the safety review's clock.",
+        "'One unit in each of 2033, 2034, 2035 and 2036' is a plan built backwards from a licence date the NRC has not set, plus about five years of construction per unit. It slipped a year inside twelve months (2032 became 2033). More importantly, nothing else attaches to it: no EPC contract (Hyundai has completed a front-end design and is a 'potential' EPC), no financing (applications to DOE and a Texas fund, no award), no tenant for nuclear-priced power, and a stated all-phase capital need of USD 70–90 billion for a company capitalised at about USD 3.3 billion. The application is real and further along than most; the plant is a decade of decisions away.",
+        "Why file at all, then? Because a docketed COL is an asset a gas campus cannot otherwise have: it reserves the site's nuclear future, it attracts the vendors (Westinghouse, Hyundai, Doosan, a HALEU supplier) whose names carry the story, and it distinguishes the campus in a market where every developer has gas turbines. The dossier's judgment is that it is 'a licensing asset and a political banner'; the guide's point is that a licence is worth exactly what the next financing says it is."
+      ]
+    },
+    {
+      "id": "fermi-on-one-clock",
+      "title": "From ground lease to going concern: Fermi on one clock",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Months on the horizontal axis. The power lane shows generation and permits; the money lane shows what paid for them; the tenant lane shows who was supposed to.",
+      "unit": "calendar year (decimal — .5 is July)",
+      "lanes": {
+        "power": "Generation and permits",
+        "money": "Capital",
+        "tenant": "Tenants and governance"
+      },
+      "items": [
+        {
+          "x": 2025.33,
+          "lane": "power",
+          "label": "99-year Texas Tech ground lease signed",
+          "sub": "~5,236 acres next to Pantex"
+        },
+        {
+          "x": 2025.42,
+          "lane": "power",
+          "label": "AP1000 COL Part 1 filed",
+          "sub": "Docketed 5 September; first large LWR COLA since 2009"
+        },
+        {
+          "x": 2025.67,
+          "lane": "tenant",
+          "label": "'First Tenant' letter of intent",
+          "sub": "Investment-grade; USD 150m advance agreement in November"
+        },
+        {
+          "x": 2025.75,
+          "lane": "money",
+          "label": "IPO at USD 21; Nasdaq + LSE",
+          "sub": "USD 746m net; high of USD 36.99 next day"
+        },
+        {
+          "x": 2025.92,
+          "lane": "power",
+          "label": "SPS electric service agreement, up to 200 MW",
+          "sub": "86 MW 'January 2026' — later 'second half of 2026'"
+        },
+        {
+          "x": 2025.92,
+          "lane": "tenant",
+          "label": "First Tenant terminates",
+          "sub": "Shares fall about a third; class action follows in January"
+        },
+        {
+          "x": 2026.08,
+          "lane": "money",
+          "label": "MUFG USD 500m warehouse; Keystone USD 120m",
+          "sub": "Turbines and substations as collateral"
+        },
+        {
+          "x": 2026.08,
+          "lane": "power",
+          "label": "TCEQ 6 GW air permit; six SGT-800s land",
+          "sub": "Construction paused 19 days waiting for it"
+        },
+        {
+          "x": 2026.25,
+          "lane": "tenant",
+          "label": "Founder CEO removed, then terminated for cause",
+          "sub": "Consent solicitation and lawsuits follow"
+        },
+        {
+          "x": 2026.5,
+          "lane": "money",
+          "label": "USD 431m 5% converts; F-class turbines land",
+          "sub": "Capped call to USD 14.64"
+        },
+        {
+          "x": 2026.58,
+          "lane": "tenant",
+          "label": "TensorWave 222 MW lease (conditional); Hillcore 2.6 GW framework; new CEO",
+          "sub": "Closing due 30 September 2026"
+        },
+        {
+          "x": 2026.58,
+          "lane": "money",
+          "label": "10-Q: going-concern doubt, alleviated by plans",
+          "sub": "USD 91.7m cash; USD 520m debt"
+        }
+      ]
+    },
+    {
+      "id": "reading-a-pre-revenue-power-developer",
+      "title": "Reading a pre-revenue power developer: which numbers to trust",
+      "kind": "table",
+      "read": "5 min",
+      "intro": "Fermi publishes more than any private developer in the corpus because it is listed; the discipline is knowing which document answers which question.",
+      "cols": [
+        "Question",
+        "Where the answer is",
+        "What the other documents say instead"
+      ],
+      "rows": [
+        [
+          "How many MW are running?",
+          "Nothing — no generation or grid power energised at 13 August 2026 (Q2 release; 10-K restatement of the SPS date)",
+          "'1.5 GW landed' (turbines at port); 'first power online in 2026' (website); '86 MW beginning January 2026' (December 2025 release)"
+        ],
+        [
+          "How many MW are contracted?",
+          "One conditional lease: 222 MW (10-Q Note 9), effective only on closing",
+          "'up to 17 GW' (permits plus plans); 'seven potential tenants and twelve potential joint venture partners' (offering memorandum)"
+        ],
+        [
+          "When is first power?",
+          "210 MW on 1 July 2027; 640 MW nameplate by Q4 2027 (COO, prepared remarks)",
+          "'about 200 megawatts of initial commercial power over the next six months' (Q2 release — grid power, not generation)"
+        ],
+        [
+          "How much cash?",
+          "USD 62.5m plus USD 29.2m restricted at 30 June 2026 (10-Q), plus ~USD 382m net converts after quarter-end",
+          "'Nearly USD 1.4bn of committed financing' (investor deck — facilities, not cash)"
+        ],
+        [
+          "Who owns it?",
+          "10-K/A beneficial-ownership table at 26 April 2026 (founder entities 21.8%; Caddis 9.6%; Perry 2.6%); later 13D/13G amendments",
+          "'approximately 40%' (company's June 2026 consent-revocation statement, counting affiliates); '22.7%' (the founder's own DEFC14A)"
+        ],
+        [
+          "What is the plant worth?",
+          "Nothing on the record — the only market price is the share price (USD 5.12; ~USD 3.3bn market cap)",
+          "Sell-side targets from USD 6 to USD 30 on the same day (TipRanks, August 2026)"
+        ]
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The date belongs to the developer, so the slip does too.** 'Three 500,000-square-foot data centers by end-2026' became '210 MW on 1 July 2027' in fourteen months; satellite imagery showed site work only through April 2026. A grid-fed landlord blames the utility; a generation-first developer owns every month.",
+        "**Steel is not a plant.** 'Total landed: 1.5 GW' is turbines at the Port of Houston. Foundations, fuel, switchgear, controls, cooling and an EPC contract stand between a landed unit and a watt; the F-class EPC was 'in negotiation' in August 2026.",
+        "**The lease that is not yet a lease.** Binding but conditional on financing and guaranties by 30 September 2026, with the guarantor's name removed from the release. Until closing, the campus has a tenant in the same sense it has a reactor.",
+        "**Debt written for a tenant that did not exist.** A 400 MW lease test in November 2026 (MUFG), an approved customer agreement by 31 December (Keystone), and 'possible equipment monetization' in the going-concern plan: the lenders' clauses are the schedule the company actually runs on.",
+        "**A framework is not 2.6 GW.** '4.8 GW within about 30 months' adds a signed 2.2 GW self-build to an unsigned Hillcore block. Count capacity by the document that binds it.",
+        "**Governance is a cost of capital.** A founder holding 22–40% who was terminated for cause, sued, ran a consent solicitation and remains the largest holder is a term every new investor prices — and the annual meeting on 30 October 2026 is the first vote."
+      ]
+    },
+    {
+      "id": "where-fermi-slots-in",
+      "title": "Where Fermi's businesses slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per business line in the dossier, read against the layer of the ecosystem it touches.",
+      "cols": [
+        "Business line",
+        "Layer",
+        "Who it deals with",
+        "What to watch"
+      ],
+      "rows": [
+        [
+          "Private-grid data-center leases (TensorWave, 222 MW conditional)",
+          "Landlord — build-to-suit and turnkey on a self-powered campus",
+          "AI neoclouds and hyperscalers; a third-party 'backstop' guarantor; project-level lenders",
+          "Closing by 30 September 2026; the guarantor; delivery late 2027 to Q1 2028; the 650 MW option"
+        ],
+        [
+          "Owned gas fleet (SGT-800, SGT6-5000F, Frame 6B, TM2500)",
+          "Generation — the campus's own utility",
+          "Siemens Energy, GE Vernova, Mobile Power Solutions; Primoris and TSK as EPC; Energy Transfer for fuel",
+          "First simple-cycle power (1 July 2027 target); F-class EPC award; TM2500 pick-up July–September 2027"
+        ],
+        [
+          "Hillcore build-own-operate-transfer block (2.6 GW framework)",
+          "Third-party generation on subleased land; Fermi as anchor offtaker",
+          "Hillcore Energy Capital (Hillcore Group, JV Driver)",
+          "Definitive documents (~November 2026); notice to proceed; the take-or-pay terms"
+        ],
+        [
+          "SPS grid tie (up to 200 MW) and solar/storage plans",
+          "Utility supplement and firming",
+          "Xcel Energy / SPS; 'solar and battery partners' being vetted",
+          "86 MW energised in H2 2026; 200 MW by 1 October 2027"
+        ],
+        [
+          "Four AP1000s under COL review",
+          "Long-dated generation; a licensing asset",
+          "NRC; Westinghouse, Hyundai E&C, Doosan; DOE and Texas funding programmes",
+          "Part 3 by 31 December 2026; final EIS December 2026; any EPC contract or award"
+        ],
+        [
+          "Site, water and permits (Texas Tech lease; TCEQ; Amarillo water)",
+          "Powered land — the position the whole campus rests on",
+          "Texas Tech University System, NNSA, TCEQ, City of Amarillo, Carson County",
+          "The 5 GW permit increment; the USD 9m Texas Tech escrow (31 December 2026); the 713-acre land exchange"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "Why is a gas turbine's output lower at Fermi's site than on its nameplate?",
+          "a": "Nameplate is at ISO conditions (15 °C, sea level). Thin, hot Panhandle air holds less oxygen per stroke, so the machine derates — the TM2500s' 157.5 MW becomes 126–132 MW at site."
+        },
+        {
+          "q": "Rank the three turbine classes by time to power and by cost per kW.",
+          "a": "Aeroderivative (mobile, ~2 months, most expensive per kW); small industrial frame like the SGT-800 (~15 months); heavy-duty F-class (~22 months from port, cheapest per kW and most efficient). Speed costs money."
+        },
+        {
+          "q": "What does an HRSG do, and what does it cost the developer?",
+          "a": "It recovers exhaust heat to make steam for a second turbine, lifting output by roughly a third to a half on the same fuel — at the price of another year of construction, cooling water and a plant that must run continuously to pay for itself."
+        },
+        {
+          "q": "What is a 'private grid' campus still buying from the utility?",
+          "a": "At Project Matador, up to 200 MW over SPS's 115 kV system as the first tenant's bridge and as reserve. Generation moves behind the fence; the transmission tie and the regulatory approvals to energise it do not."
+        },
+        {
+          "q": "A lease quotes USD 163 per kW-month on total facility power. What must you do before comparing it with a landlord's per-kW-of-critical-load rent?",
+          "a": "Divide by the campus PUE to get the equivalent per kW of critical IT load, and separate the power pass-through — part of the number is a fuel bill."
+        },
+        {
+          "q": "What is an equipment warehouse facility?",
+          "a": "A revolving loan secured on equipment (here turbines) that funds progress payments until a permanent financing or a lease takes them out; MUFG's USD 500 million line matures in August 2027 and steps up amortisation if no 400 MW lease exists by November 2026."
+        },
+        {
+          "q": "What does a capped call do on a convertible note?",
+          "a": "The issuer buys an option that offsets dilution between the conversion price and a cap — Fermi's converts convert at about USD 9.52 but the capped call makes the effective dilution price USD 14.64."
+        },
+        {
+          "q": "What does 'substantial doubt about the company's ability to continue as a going concern' mean when management says its plans alleviate it?",
+          "a": "The auditors' test is twelve months of obligations against cash and committed facilities; the company failed the test on its own numbers and passed it on its plans (the converts, undrawn facilities, capex sequencing, possible equipment sales)."
+        },
+        {
+          "q": "What is a build-own-operate-transfer power arrangement?",
+          "a": "A partner finances, builds, owns and operates the plant and sells the developer its output under a long-term PPA, with a later option for the developer to buy it; the developer gives up owning the megawatts to avoid paying for them up front."
+        },
+        {
+          "q": "What does it mean that the NRC 'docketed' Fermi's COL application?",
+          "a": "That Parts 1 and 2 were accepted as complete enough to review — the start of the safety and environmental reviews, a mandatory hearing and a Commission decision with no scheduled date. Not an approval."
+        },
+        {
+          "q": "What is the applicant-prepared EIS pilot?",
+          "a": "The applicant drafts the environmental impact statement under NRC supervision; the NRC says it halves its review time. It speeds the environmental record, not the safety review."
+        },
+        {
+          "q": "Why can a signed lease be 'binding' and still not count as a tenant?",
+          "a": "Because its effectiveness is conditional — here on financing, board approvals and third-party guaranties by 30 September 2026 — and either side may terminate if the conditions fail."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A developer's investor deck lists 'time to power' of 2, 8, 15 and 22 months for four turbine types. The most likely mapping is:",
+          "c": [
+            "Frame 6B, F-class, aeroderivative, SGT-800",
+            "Aeroderivative TM2500, Frame 6B, SGT-800, F-class SGT6-5000F",
+            "F-class, SGT-800, Frame 6B, TM2500",
+            "All are similar; the order is arbitrary"
+          ],
+          "a": 1,
+          "why": "Mobile aeroderivatives run within weeks of landing; refurbished small frames in months; new small industrial frames in about a year; heavy F-class units need the longest civil and balance-of-plant scope."
+        },
+        {
+          "q": "'Total landed: 1.5 GW' most precisely means:",
+          "c": [
+            "1.5 GW is energised",
+            "1.5 GW of turbines have cleared customs at the Port of Houston",
+            "1.5 GW is contracted to tenants",
+            "1.5 GW is permitted by the TCEQ"
+          ],
+          "a": 1,
+          "why": "Landed is a logistics milestone. Nothing was energised at 13 August 2026 and the TCEQ permit covers about 6 GW."
+        },
+        {
+          "q": "Converting the six SGT-800s from simple to combined cycle would:",
+          "c": [
+            "Cut output by a third",
+            "Raise output from about 296 MW to about 396 MW on the same fuel, at the cost of more construction, water and continuous operation",
+            "Remove the need for an air permit",
+            "Make the units dispatchable one at a time"
+          ],
+          "a": 1,
+          "why": "The HRSGs and steam turbine recover exhaust heat; the company's own table gives 296 MW simple and 396 MW combined."
+        },
+        {
+          "q": "Which clause makes the TensorWave lease a conditional option rather than a contract in force?",
+          "c": [
+            "The 15-year term",
+            "The 650 MW expansion right",
+            "Effectiveness only on closing by 30 September 2026 with project financing, board approvals and requisite guaranties",
+            "The modified net structure"
+          ],
+          "a": 2,
+          "why": "The 10-Q states the conditions and that either party may terminate if they are unmet."
+        },
+        {
+          "q": "MUFG's warehouse facility steps up amortisation if no lease of at least 400 MW exists by November 2026. This is best read as:",
+          "c": [
+            "A penalty for building too fast",
+            "The lender writing the missing tenant into the loan — the schedule the company really runs on",
+            "A REIT requirement",
+            "An NRC condition"
+          ],
+          "a": 1,
+          "why": "Asset-backed lenders to a pre-revenue developer protect themselves with tenant covenants; Keystone's facility has a parallel customer-agreement deadline."
+        },
+        {
+          "q": "A capped call purchased with convertible-note proceeds:",
+          "c": [
+            "Raises the coupon",
+            "Offsets dilution between the conversion price and a cap (USD 9.52 to USD 14.64 here)",
+            "Guarantees repayment",
+            "Converts the notes into equipment loans"
+          ],
+          "a": 1,
+          "why": "It is an option the issuer buys to reduce the shares it must deliver if the stock rises up to the cap."
+        },
+        {
+          "q": "The NRC's acceptance of Fermi's COL Parts 1 and 2 on 5 September 2025 means:",
+          "c": [
+            "Construction of the reactors may begin",
+            "The application is docketed for review; a licence follows only after safety and environmental reviews, a hearing and a Commission decision",
+            "The AP1000 design was certified",
+            "The EIS is complete"
+          ],
+          "a": 1,
+          "why": "Docketing is acceptance for review. Part 3 is due December 2026 and the decision has no date."
+        },
+        {
+          "q": "'4.8 GW within about 30 months' in Fermi's August 2026 explainer is:",
+          "c": [
+            "Energised capacity",
+            "Permitted capacity",
+            "2.2 GW of owned turbines plus a 2.6 GW framework with Hillcore whose definitive documents were not yet signed",
+            "The TensorWave expansion option"
+          ],
+          "a": 2,
+          "why": "Count capacity by the document that binds it — a framework agreement is not a plant."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Project Matador",
+      "d": "Fermi America's campus in Carson County, Texas, on a 99-year Texas Tech University System ground lease next to the Pantex Plant: about 6 GW of gas generation permitted, four AP1000 reactors under NRC review, up to 17 GW planned, nothing energised as of August 2026."
+    },
+    {
+      "t": "Hillcore Power Center",
+      "d": "The ~2.6 GW gas-plus-solar block that Hillcore Energy Capital would finance, build, own and operate on ~400 subleased acres of Project Matador under an August 2026 framework agreement, with Fermi as anchor buyer and a 10-year option to purchase."
+    }
+  ]
+}

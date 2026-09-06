@@ -245,6 +245,15 @@
       ]
     },
     {
+      "slug": "applicant-prepared-eis",
+      "term": "applicant-prepared EIS",
+      "def": "A pilot under which the applicant for a nuclear licence drafts the environmental impact statement itself under the regulator's supervision, instead of the NRC writing it. The NRC says it roughly halves its environmental review time; it does not shorten the safety review.",
+      "aliases": [
+        "applicant-prepared environmental impact statement",
+        "EIS pilot"
+      ]
+    },
+    {
       "slug": "appraised-value",
       "term": "appraised value",
       "def": "An independent valuer's estimate of what a building would sell for, used by lenders and rating agencies to size a loan or a bond against it. In data-center ABS it is quoted per pool and can be divided by MW.",
@@ -265,6 +274,15 @@
       "def": "At a heat exchanger, the temperature gap between the two fluids that drives heat across it — at a CDU, how much warmer the coolant leaving for the racks is than the facility water arriving from the plant. A capacity rating is only meaningful at a stated approach, and the rack's inlet limit minus the CDU's approach is the warmest water the plant is allowed to make.",
       "aliases": [
         "approach temperature differential"
+      ]
+    },
+    {
+      "slug": "arbitration-clause",
+      "term": "arbitration clause",
+      "def": "A term in a private contract that sends disputes to an arbitrator rather than a court or a regulator. Tract invoked one in its 2024 NV Energy contracts; the utility sued to keep the same questions before the commission — the fight is over which instrument governs.",
+      "aliases": [
+        "arbitration",
+        "arbitration demand"
       ]
     },
     {
@@ -620,6 +638,16 @@
       ]
     },
     {
+      "slug": "bridging-generation",
+      "term": "bridging generation",
+      "def": "Temporary on-site generation — typically trailer-mounted or small gas units — that lets a campus energise before its permanent grid connection is built. It moves the delivery date from the utility's clock to the developer's, at the cost of permits, fuel and, where a renewable standard applies, political opposition.",
+      "aliases": [
+        "temporary generation",
+        "temporary power plant",
+        "self-generation project"
+      ]
+    },
+    {
       "slug": "brownfield",
       "term": "brownfield",
       "def": "A site that already carries industrial infrastructure — most valuably an existing grid connection and substation from a retired plant. In a market where interconnection is the long pole, inheriting energized wires can move a project years ahead of an equivalent greenfield, which is why retired coal and industrial sites are being bought for their electrical position rather than their land.",
@@ -647,6 +675,15 @@
       "aliases": [
         "build own operate",
         "BOO"
+      ]
+    },
+    {
+      "slug": "build-own-operate-transfer",
+      "term": "build-own-operate-transfer",
+      "def": "A power arrangement in which a partner finances, builds, owns and operates the plant on the developer's land and sells the developer its output under a long-term take-or-pay contract, with a later option for the developer to buy the plant. The developer gives up owning the megawatts to avoid paying for them up front.",
+      "aliases": [
+        "BOOT",
+        "BOOT power center"
       ]
     },
     {
@@ -791,6 +828,15 @@
       "def": "Selling a finished or late-stage asset to release the equity tied up in it and reinvest in new development. For a developer without a fund behind it, recycling is the main source of growth capital.",
       "aliases": [
         "recycle capital"
+      ]
+    },
+    {
+      "slug": "capped-call",
+      "term": "capped call",
+      "def": "An option an issuer buys alongside a convertible note to offset the dilution between the conversion price and a higher cap. It costs part of the proceeds up front and raises the effective price at which new shares dilute existing holders — from about USD 9.52 to USD 14.64 in Fermi's July 2026 deal.",
+      "aliases": [
+        "capped-call transaction",
+        "capped call transaction"
       ]
     },
     {
@@ -1348,6 +1394,16 @@
       "def": "The plant at each end of an HVDC line that turns alternating current into direct current and back. It is the expensive, specialist part of the line — Siemens Energy's role on Grain Belt Express — and there is one per grid the line touches.",
       "aliases": [
         "HVDC converter station"
+      ]
+    },
+    {
+      "slug": "convertible-notes",
+      "term": "convertible notes",
+      "def": "Debt that pays a coupon and can be exchanged for shares at a set conversion price. For a company banks will lend to only against steel, converts are cheap money that becomes expensive equity if the shares rise; the coupon and the conversion premium price how much the market believes in the plan.",
+      "aliases": [
+        "convertible note",
+        "converts",
+        "convertible senior notes"
       ]
     },
     {
@@ -2562,6 +2618,16 @@
       ]
     },
     {
+      "slug": "equipment-warehouse-facility",
+      "term": "equipment warehouse facility",
+      "def": "A short-dated revolving loan secured on equipment — turbines, transformers, switchgear — that funds progress payments until a permanent financing or a lease refinances it. Lenders to a pre-revenue developer write tenant tests into it: MUFG's line steps up amortisation if no 400 MW lease exists by a set date.",
+      "aliases": [
+        "turbine warehouse",
+        "equipment warehouse line",
+        "warehouse loan"
+      ]
+    },
+    {
       "slug": "equity-ratio",
       "term": "equity ratio",
       "def": "The share of a utility's regulatory capital structure funded by equity rather than debt. Regulators set it for ratemaking regardless of how the company actually finances itself. A higher equity ratio raises the allowed return in dollars, because equity earns the authorized return on equity while debt earns only its interest cost.",
@@ -3179,6 +3245,15 @@
       ]
     },
     {
+      "slug": "generation-first-campus",
+      "term": "generation-first campus",
+      "def": "A data-center development that builds its own power plant behind the fence — gas turbines, and in Fermi's case a reactor application — before it has a tenant, and treats the utility connection as a supplement rather than the source. The developer owns the delivery date and therefore the risk.",
+      "aliases": [
+        "generation-first",
+        "behind-the-fence campus"
+      ]
+    },
+    {
       "slug": "generator-circuit-breaker",
       "term": "generator circuit breaker",
       "def": "A breaker between the generator and its step-up transformer, rated for the very large currents a machine produces close up. It lets one unit be taken off and put back on the network without switching the whole high-voltage bay.",
@@ -3219,6 +3294,16 @@
       "def": "Grain-oriented electrical steel: the specialty magnetic steel every transformer core requires. Only a handful of mills worldwide produce it, and every announced transformer plant bids for the same tonnage — which is why transformer lead times, not capital, gate so many projects.",
       "aliases": [
         "grain-oriented electrical steel"
+      ]
+    },
+    {
+      "slug": "going-concern",
+      "term": "going concern",
+      "def": "An accounting judgement about whether a company can meet its obligations for the next twelve months. When cash and committed facilities fall short, the filing must say the conditions 'raise substantial doubt' and then state management's plans; if the plans are judged sufficient, the doubt is 'alleviated' but the sentence stays in the filing.",
+      "aliases": [
+        "going-concern doubt",
+        "substantial doubt",
+        "going concern qualification"
       ]
     },
     {
@@ -3446,6 +3531,24 @@
         "OpCo",
         "OpCos",
         "operating subsidiary"
+      ]
+    },
+    {
+      "slug": "horizontal-developer",
+      "term": "horizontal developer",
+      "def": "A developer whose product is the finished site — grading, roads, water, sewer, substation, zoning and permits — sold or leased to the vertical developer who builds the data center. Tract is the corpus's purest example; the buildings are somebody else's.",
+      "aliases": [
+        "horizontal development",
+        "horizontal powered land"
+      ]
+    },
+    {
+      "slug": "horizontal-vertical-split",
+      "term": "horizontal-vertical split",
+      "def": "The division of a campus into site work and paper (horizontal: civil works, utilities, entitlements) and the building and everything inside it (vertical). A land developer that grows a vertical arm is choosing to capture the widest rung of the value ladder — powered to leased — rather than sell the parcel once.",
+      "aliases": [
+        "horizontal versus vertical",
+        "horizontal vs vertical"
       ]
     },
     {
@@ -3796,6 +3899,16 @@
       ]
     },
     {
+      "slug": "intra-group-sale",
+      "term": "intra-group sale",
+      "def": "A transaction between two entities under the same manager — a land fund selling a parcel to its sister campus fund. Valid and common, but it sets no market price: the buyer and the seller share an owner, and the price may be repaid to the sponsor from the buyer's own financing.",
+      "aliases": [
+        "intra-group transaction",
+        "affiliate transaction",
+        "related-party sale"
+      ]
+    },
+    {
       "slug": "inverter",
       "term": "inverter",
       "def": "A converter that turns direct current into alternating current — the mirror image of a rectifier. It appears wherever DC has to be handed back to an AC world: on the output of a battery or solar array, inside a UPS, and between an electric vehicle's pack and its motor. A bidirectional one that does both jobs is a power conversion system.",
@@ -3942,6 +4055,15 @@
       ]
     },
     {
+      "slug": "joint-control",
+      "term": "joint control",
+      "def": "In merger law, the position in which two or more shareholders can each block strategic decisions — budgets, sales, new campuses — regardless of share percentages. A company can be majority founder-owned and jointly controlled at once; the European Commission's clearance of Prime records exactly that.",
+      "aliases": [
+        "jointly controlled",
+        "joint control clearance"
+      ]
+    },
+    {
       "slug": "joint-design-manufacturer",
       "term": "JDM",
       "def": "Joint design manufacture — an arrangement in which buyer and manufacturer develop the product together, splitting the design work and, usually, arguing later about who owns which part of it.",
@@ -3979,6 +4101,16 @@
       ]
     },
     {
+      "slug": "kw-month",
+      "term": "kW-month",
+      "def": "The unit data-center rent is quoted in: dollars per kilowatt of reserved power per month. Always ask whether the kilowatts are critical IT load or total facility power (which includes cooling and losses) — the same dollar figure means very different rents on the two bases.",
+      "aliases": [
+        "kilowatt-month",
+        "per kW per month",
+        "kW/month"
+      ]
+    },
+    {
       "slug": "kw-per-ton",
       "term": "kW/ton",
       "def": "Electrical power drawn per ton of cooling delivered — the chiller industry's efficiency measure, where lower is better. It is the inverse of COP in different units.",
@@ -3997,11 +4129,30 @@
       ]
     },
     {
+      "slug": "land-value-ladder",
+      "term": "land value ladder",
+      "def": "The rungs a data-center parcel climbs — raw land, entitled and serviced, powered (a dated utility instrument), leased — and the idea that price and risk move with the rung, not the acreage. Only the leased rung supports large debt; the powered rung is the widest, slowest and least in the developer's control.",
+      "aliases": [
+        "value ladder",
+        "parcel value ladder"
+      ]
+    },
+    {
       "slug": "large-load",
       "term": "large load",
       "def": "A single customer — a data centre, an industrial plant — big enough that the grid must plan for it individually. Texas SB 6 draws the line at 75 MW; loads above it face curtailment rules, security deposits and co-location review.",
       "aliases": [
         "large-load customer"
+      ]
+    },
+    {
+      "slug": "large-load-electric-service-agreement",
+      "term": "large-load electric service agreement",
+      "def": "The utility's filed contract with a very large customer, approved by the state commission, that fixes the customer's minimum take, deposits, term and share of grid upgrades. It is the regulator's instrument for allocating the cost of serving a gigawatt-scale campus.",
+      "aliases": [
+        "LLESA",
+        "large-load ESA",
+        "large load electric service agreement"
       ]
     },
     {
@@ -4282,6 +4433,15 @@
         "lead arranger",
         "administrative agent",
         "structuring agent"
+      ]
+    },
+    {
+      "slug": "loan-to-cost",
+      "term": "loan-to-cost",
+      "def": "Debt as a share of a project's total cost. A bond of USD 4.6 billion against a campus built for about that much is near 100% loan-to-cost: efficient for the sponsor, whose equity is repaid from the proceeds, and fragile for the bondholders, who own any overrun or delay.",
+      "aliases": [
+        "LTC",
+        "loan to cost"
       ]
     },
     {
@@ -5218,6 +5378,16 @@
       ]
     },
     {
+      "slug": "phantom-equity",
+      "term": "phantom equity",
+      "def": "A cash promise equal to what a share would be worth, granted without issuing the share, so an employee gains from a sale or valuation event while the founder's cap table stays clean. Its weakness is that its value is whatever the company's own valuation says — the substance of the 2026 suits against Prime.",
+      "aliases": [
+        "phantom stock",
+        "phantom units",
+        "synthetic equity"
+      ]
+    },
+    {
       "slug": "pjm",
       "term": "PJM",
       "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
@@ -5542,6 +5712,15 @@
       ]
     },
     {
+      "slug": "private-grid",
+      "term": "private grid",
+      "def": "A campus electrical system that generates, distributes and manages its own power behind the meter, buying from the public grid only as a supplement or reserve. It replicates generation and distribution; it still depends on the utility for any grid tie and on regulators for permits.",
+      "aliases": [
+        "private-grid campus",
+        "behind-the-meter grid"
+      ]
+    },
+    {
       "slug": "private-use-network",
       "term": "private use network",
       "def": "ERCOT's term for a site with its own generation and load behind one point of connection to the grid — an industrial plant or a data-center campus that generates part of what it consumes. Its net position is what the grid sees; the rules on what such a site owes for the grid it leans on are the co-location argument in Texas form.",
@@ -5586,6 +5765,15 @@
       "aliases": [
         "PDB",
         "progressive design build"
+      ]
+    },
+    {
+      "slug": "project-bonds",
+      "term": "project bonds",
+      "def": "Bonds issued by a single-purpose company whose only assets are one project — a campus, its substation and its lease — sold to institutional investors instead of borrowed from banks. The credit is the tenant's, the collateral is the campus, and the sponsor's equity is a thin slice beneath the bondholders.",
+      "aliases": [
+        "project bond",
+        "single-asset bond"
       ]
     },
     {
@@ -5865,6 +6053,26 @@
       "aliases": [
         "RDHx",
         "rear door heat exchanger"
+      ]
+    },
+    {
+      "slug": "recapitalisation",
+      "term": "recapitalisation",
+      "def": "Changing who funds a company and on what terms — new common or preferred equity, new debt, a refinancing — usually to fund growth or replace maturing capital without necessarily changing who runs it. Prime Data Centers has been recapitalised five times while remaining founder-controlled.",
+      "aliases": [
+        "recapitalised",
+        "recapitalized",
+        "recapitalization",
+        "recap"
+      ]
+    },
+    {
+      "slug": "recapitalisation-ladder",
+      "term": "recapitalisation ladder",
+      "def": "The sequence of forms a founder-owned developer raises money in without giving up control: a strategic partner, institutional co-investors, a joint-control arrangement, a joint-venture cheque, preferred equity at the parent, then project-level debt building by building. Each rung has a price in consent rights or coupon.",
+      "aliases": [
+        "recapitalization ladder",
+        "funding ladder"
       ]
     },
     {
@@ -6157,6 +6365,16 @@
       ]
     },
     {
+      "slug": "rule-144a",
+      "term": "Rule 144A",
+      "def": "The US rule that lets securities be sold quickly to large institutional investors without SEC registration. Most data-center project bonds are 144A (and Reg S offshore) offerings, which is why their terms surface through bond marketing and press reports rather than public filings.",
+      "aliases": [
+        "144A",
+        "Rule 144A/Reg S",
+        "private placement notes"
+      ]
+    },
+    {
       "slug": "run-rate-revenue",
       "term": "run-rate revenue",
       "def": "The latest month's (or week's) revenue multiplied out to a year — a snapshot of current pace, not an audited annual figure. Companies disclose it at funding events; it can move faster than any fiscal year shows.",
@@ -6368,6 +6586,15 @@
       "aliases": [
         "semi-solid electrolyte",
         "hybrid solid-liquid electrolyte"
+      ]
+    },
+    {
+      "slug": "senior-secured-notes",
+      "term": "senior secured notes",
+      "def": "Bonds that rank first among a borrower's debts and carry a lien on named assets — the campus and the equity of its holding company in Fleet's Storey County deals. 'Senior' is the queue position in a default; 'secured' is what the holders can take.",
+      "aliases": [
+        "senior secured note",
+        "secured notes"
       ]
     },
     {
@@ -6857,6 +7084,15 @@
       ]
     },
     {
+      "slug": "strategic-partner",
+      "term": "strategic partner",
+      "def": "An investor that takes a stake and a role — capital plus consultation, co-investment or consent rights — rather than a passive holding. Macquarie Capital's 2021 partnership with Prime paired equity with a ten-year capital plan.",
+      "aliases": [
+        "strategic investor",
+        "strategic equity partner"
+      ]
+    },
+    {
       "slug": "strict-liability",
       "term": "strict liability",
       "def": "A legal standard under which a party is liable for harm regardless of fault or negligence. In utility wildfire law it means a utility whose equipment ignited a fire pays even if it maintained the line reasonably. Some states apply it or the related doctrine of inverse condemnation; others require proof of negligence. Which standard a state uses is the single largest variable in a utility's wildfire exposure.",
@@ -7283,6 +7519,15 @@
       ]
     },
     {
+      "slug": "time-to-power",
+      "term": "time-to-power",
+      "def": "The months between a generating unit landing on site and its first delivered watt. The number a generation-first developer sequences its fleet by: mobile aeroderivatives in about two months, refurbished small frames in eight, new industrial frames in fifteen, heavy F-class units in about twenty-two.",
+      "aliases": [
+        "time to power",
+        "months to power"
+      ]
+    },
+    {
       "slug": "tolling-agreement",
       "term": "tolling agreement",
       "def": "A storage contract where the offtaker pays a fixed fee for the right to charge and discharge the battery as they wish — the owner operates the asset, the toller takes the market risk.",
@@ -7314,6 +7559,15 @@
       "aliases": [
         "top-cooled",
         "dual-side cooling"
+      ]
+    },
+    {
+      "slug": "total-facility-power",
+      "term": "total facility power",
+      "def": "Everything a campus draws for a tenant — the IT load plus cooling, distribution losses and building services. A rent quoted on total facility power must be divided by the PUE to compare with a rent quoted on critical IT load.",
+      "aliases": [
+        "facility power",
+        "gross power"
       ]
     },
     {

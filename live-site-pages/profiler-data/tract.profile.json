@@ -1,0 +1,1593 @@
+{
+  "schemaVersion": 7,
+  "slug": "tract",
+  "name": "Tract (Tract Capital Management portfolio company)",
+  "shortName": "Tract",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://www.tract.com/",
+  "headquarters": "Denver, Colorado, USA (3200 Cherry Creek South Drive, Suite 700 — the company's largest land position is in Storey and Lyon counties, Nevada)",
+  "founded": 2022,
+  "employees": "Not disclosed; LinkedIn lists about 80 employees (September 2026) and the team page names 60 people including a five-person Tract Europe group; the company said 'over 50' in May 2024",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Tract is the horizontal half of a two-platform Denver asset manager — it buys, zones, entitles and services master-planned 'technology parks' and sells the shovel-ready parcels as a product, while its sister platform Fleet Data Centers builds single-tenant turnkey campuses on Tract land — and after four years and roughly 21,000 entitled acres the only transactions on the public record are Fleet's own two Storey County campuses, financed by USD 8.4 billion of high-yield notes against 197-month leases to an unnamed AA- tenant that Bloomberg identifies as Nvidia; whether a third-party operator ever buys a Tract parcel, and whether NV Energy's July 2026 lawsuit and the pending PUCN decisions on Tract's temporary gas plants leave the Nevada parks powered on their stated dates, are the two facts that decide the model.\n\nBACKGROUND. Founded in 2022 by Grant van Rooyen, the founder of Cologix, as a portfolio company of Tract Capital Management (Denver; about USD 6 billion of assets under management per Bloomberg), Tract describes itself as 'a horizontal developer of master-planned data center parks' that pre-positions 'power, fiber, zoning, and entitlements' so that hyperscale and wholesale developers can 'drive capacity to market with speed and certainty'. Its projects page lists 14 parks totalling 21,078 acres and 18,695 MW across Nevada (five parks, 12,390 acres), Texas (three), Utah (two), Arizona, Iowa, Illinois and Virginia, and the company claims 'over 25GW of planned capacity and over 25,000 acres of land under control'. Institutional backers named by Data Center Frontier are Berkshire Partners (2023), Permira (June 2024), PSP Partners, S2G Ventures and Columbia Capital; the company itself names none. The record since 2024 is one of entitlement wins and losses in roughly equal measure: Hanover, Buckeye, Altoona, Lyon County and Morris (with a FERC-approved ComEd transmission security agreement) approved; Chesterfield withdrawn, Mooresville withdrawn, Hanover's second park rejected 4–3 in May 2026; a summary-judgment win over Switch's colocation covenant at the Tahoe-Reno Industrial Center in October 2025; and, since July 2026, a Washoe County suit by NV Energy to keep Tract's power-supply obligations before the utility commission rather than an arbitrator. Per company pages (read via Wayback captures — the live site blocks automated fetches), Fleet releases, PUCN dockets and the cited press.",
+  "ecosystemRole": "The developer's developer: where Compass, EdgeCore and PowerHouse build or lease buildings, Tract sells the powered, permitted ground beneath them and leaves the vertical work to others — including its own affiliate Fleet, whose first two campuses sit on Tract parcels at the Tahoe-Reno Industrial Center. In this corpus it is a neighbour and rival of Vantage, EdgeCore, PowerHouse and Switch at TRIC (Switch is also its litigant), of Prime Data Centers and PowerHouse in Caldwell County, Texas, and of Meta, Google and QTS at Eagle Mountain; a Dominion Energy, ComEd, NV Energy, APS, Rocky Mountain Power, Bluebonnet and LCRA large-load customer; and, through Fleet, the reported landlord of Nvidia's first owned-lease campus.",
+  "productsAndServices": [
+    {
+      "name": "Master-planned technology parks — shovel-ready, powered, entitled parcels sold as a product (the core business)",
+      "category": "Horizontal data-center land development (powered land)",
+      "description": "Tract 'acquires, zones, entitles, and develops master-planned technology campuses to provide Data Center end-users with speed and certainty' and sells 'shovel-ready development sites … as a product'; its What We Do page says it 'saves time for hyperscalers and data center developers' by 'acquiring and conditioning land specifically for data center construction and commissioning', and its Approach page frames the sale as 'When Cloud and Wholesale Data Centers invest in a Tract-owned parcel'. The horizontal scope at Peru Shelf was 'NV Energy switch stations, new access roads, and wet utility infrastructure'; per-site preparation spend is reported at USD 50–100 million (Richmond BizSense, Muskin Elam) or USD 100–150 million (Bisnow). The projects page (February 2026 capture) lists 14 parks, 21,078 acres and 18,695 MW, every one labelled 'Owned & In Development'; the company claims 'over 25GW of planned capacity and over 25,000 acres of land under control across the country, including campuses exceeding 1,000 acres and 1GW in each of Arizona, Iowa, Nevada, Texas, Utah and Virginia' (January 2026).",
+      "highlights": [
+        "What a Tract parcel comes with, in the company's park-page vocabulary: by-right data-center zoning (Buckeye, Peru Shelf, Peru Ridge, Pole Canyon, Pony Express, Hanover), a development agreement (Altoona, Sapphire, Caldwell, Buckeye), a reserved water allocation (Altoona 588,000 gallons a day), an on-site or planned substation (South Valley 525/345 kV; Hanover up to eight Dominion substations; Caldwell a Bluebonnet/LCRA substation scaling to 1.6 GW), a stated energisation date (Peru Shelf February 2027; South Valley September 2027; Caldwell, Medina and Morris 2028) and parcel sizes from 40 to 1,200 acres.",
+        "No third-party parcel sale with a named buyer or price appears on any company page or in any fetched article; the only disclosed transactions are intra-group — Fleet Data Centers I subsidiaries bought a 252-acre and a 517-acre Storey County property from Tract-sponsored funds (Kirkland & Ellis, 2 March 2026: 'lease and purchase and sale of real property'). Richmond BizSense (2025) and the Eagle Mountain economic-development office (2024) describe the model as selling or leasing sites 'to other data center developers'; whether that has happened is the collection gap at the centre of this dossier.",
+        "Entitlement record: approvals at Hanover (May 2024, unanimous), Buckeye (August 2024, unanimous, with a development agreement reimbursing up to USD 50 million once the city collects USD 60 million), Lyon County (2025 rezoning and development agreement), Altoona (annexation, rezoning and development agreement), Farmington, Minnesota (final plat and PUD, November 2024) and Morris (fully zoned at purchase); losses at Chesterfield, Virginia (744 acres, planning commission denial recommended 17 June 2025, withdrawn 2 July), Mooresville, North Carolina (400 acres, withdrawn 13 August 2025 after opposition) and Hanover's Mountain Road Technology Park (about 430 acres, rejected 4–3 on 27 May 2026); Goochland, Virginia (870 acres, 900 MW) was in pre-application in July 2026.",
+        "The renewable pre-position: an exclusive collaboration with Silicon Ranch (January 2024) for more than 500 MW of owned solar and storage 'married to the data center land' in Nevada and Utah; the Approach page still cites 'a leading solar developer'.",
+        "Portfolio counters over time: 'more than 20,000 acres' (April 2024), 'over 23,000' (August 2024), 'over 25,000' (January 2026); Storey and Lyon County holdings 'over 12,500 acres' (September 2025) or '12,000 acres' (KOLO, May 2026). The counter is acreage under control, not acreage sold."
+      ],
+      "positioning": "Tract names no competitor. It is described alongside Vantage, EdgeCore, Novva, Switch, Google and Apple as a TRIC neighbour (Data Center Frontier), beside Prime Data Centers' campus 'across the street' in Caldwell County (Muskin Elam) and beside Chirisa, AREP/PowerHouse and Torch Clean Energy in Virginia (Bisnow). Its differentiation claim is the product itself — a parcel with power, water, fibre and zoning already in place — and the scale of the land bank; its exposure is that every other party in the chain (utility, county, tenant) decides when the parcel is worth paying for.",
+      "soldThrough": "Sale of entitled parcels to data-center developers (the stated model); intra-group sale and ground lease to Fleet Data Centers' project companies (the only recorded transactions); development agreements and municipal reimbursements.",
+      "targetSegments": [
+        "Hyperscalers (the company names Microsoft, Nvidia, Amazon and Meta as the market it serves, none as a customer)",
+        "Wholesale data-center developers",
+        "Its own affiliate Fleet Data Centers"
+      ],
+      "roadmap": "Peru Shelf energisation February 2027; South Valley September 2027 (construction power 2025); Caldwell first 250 MW Q1 2028 (substation to 1.6 GW); Medina mid-2028; Morris June 2028 with 1 GW by 2032; Hanover 2028 (bridging power 'as early as 2026'); Eagle Mountain more than 400 MW by 2028. Tract Europe 'actively engaged … to identify, entitle & proactively invest in the next generation of build-ready sites' (2026) with no European site listed."
+    },
+    {
+      "name": "The Nevada parks — Peru Shelf, Peru Ridge, South Valley, Virginia Highlands and Sapphire (12,390 acres, 5,455 MW on the projects page)",
+      "category": "Master-planned parks, Storey and Lyon counties",
+      "description": "Tract's largest position began with about 2,200 acres bought from Blockchains LLC in 2023 with 1,100 acre-feet of water rights (Peru Shelf, 686 acres, up to 810 MW; South Valley, 1,500 acres, 1,200 MW), added 517 acres inside the Tahoe-Reno Industrial Center in February 2024 (Peru Ridge, 230 MW, with a pre-graded pad), 8,590 acres between TRIC and the Virginia City Highlands in June 2024 (Virginia Highlands, 2,500 MW, 11 parcels of 250–1,200 acres) and about 1,060 acres at Silver Springs in Lyon County in September 2025 (Sapphire, 700 MW under utility study, 'up to 1.6 gigawatts'). Peru Shelf broke ground on 30 April 2024 (Westex Geotechnical; F&P Construction) with 'NV Energy switch stations' in scope and 'initial power delivery in late 2026 or early 2027', now stated as 'Site energization February 2027, construction power available immediately'; South Valley's page lists an 'On-Site 525/345 kV Substation' and 'Site energization September 2027'. NV Energy's own account (NewsData, August 2026) is that Tract 'plans to build at least five data centers with a combined load of nearly 5.5 GW in the state'.",
+      "highlights": [
+        "The two campuses actually under construction are Fleet's: SV RNO Property Owner I, LLC (252 acres, South Valley) and PR RNO Property Owner I, LLC (517 acres — the Peru Ridge acreage) are each building a '230 MW utility / 200 MW IT' turnkey data center and substation, '100% leased to a AA- investment grade rated tenant with a market cap in excess of $3 trillion' on 197-month triple-net leases, financed by USD 3.8 billion of 5.875% notes due 2031 (priced 13 February 2026) and USD 4.6 billion of 6.500% notes due 2031 (closed 1 May 2026). Bloomberg identifies the tenant as Nvidia with an initial term of about 16 years and two 10-year options; Fleet has not confirmed. The groundbreaking with Governor Lombardo on 20 May 2026 was reported as a USD 4.6 billion, 2-million-square-foot build with 1,500 peak construction jobs.",
+        "Power before the substation: the two Fleet SPVs applied to the PUCN on 20 April 2026 for temporary gas plants — 144 MW at South Valley (docket 26-04026) and 218 MW at Peru Ridge (26-04027), the 'Peru Ridge Self-Generation Project' — with a decision scheduled for 8 September 2026; SV RNO applied on 7 April for a new 345 kV substation and four 345 kV lines (26-04007); NV Energy filed a large-load electric service agreement with both SPVs on 29 May (26-05027); Reno Power NR 1 noticed an approximately 88.6-mile 525 kV transmission loop (26-02021) and petitioned for an advisory opinion on Rule 9 (25-09008); Storey County's planning commission recommended Tract's six-mile 345 kV line to a new NV Energy 'Mackay' substation on 4 September 2025.",
+        "The utility dispute: under June 2024 agreements with Tract subsidiary Reno Power, Tract demanded arbitration on 16 June 2026; NV Energy sued Tract Capital Management in Washoe County on 24 July 2026 (CV26-02142) to keep supply adequacy, cost allocation and resource-plan treatment before the PUCN, saying Tract 'wants NV Energy to reserve and provide enormous amounts of power for Tract's private development while shifting the infrastructure and energy costs to Nevada families'; Tract says it has spent 'more than $127 million' on its obligations and that NV Energy is demanding it commit 'USD 1 billion in network infrastructure upgrades for the benefit of all NV Energy customers'.",
+        "The covenant fight: Switch sued in August 2023 over a 2015 TRIC covenant barring multi-tenant colocation on Peru Shelf ('only 5% of Tract's total Reno portfolio'); Judge Woodbury granted Switch a preliminary injunction on a relocated easement in July 2025, then summary judgment to Tract on the covenant on 29 September 2025 (final judgment October) confirming 'Tract's right to horizontally prepare the Peru Shelf for the development by others of any type of data center that is not a multi-tenant data center facility'; the easement trial set for March 2026 has no reported outcome."
+      ],
+      "positioning": "TRIC is the most crowded powered-land market in the corpus — Vantage NV1 (224 MW), EdgeCore (216 MW), Novva, PowerHouse, Switch, Google and Apple — and Tract holds the largest raw acreage by a wide margin; its 5.5 GW of stated load is, per NV Energy, about a third of the utility's generating capacity, which is the arithmetic behind the lawsuit.",
+      "soldThrough": "Parcels held by Tract-sponsored funds ('Tract I'); the two active campuses sold and ground-leased to Fleet's project SPVs; power contracted through Reno Power NR 1 and the SPVs with NV Energy (Sierra Pacific Power).",
+      "targetSegments": [
+        "Single-tenant hyperscale campuses (Fleet)",
+        "Non-multi-tenant data centers on Peru Shelf (covenant)",
+        "Commercial energy production (Virginia Highlands zoning)"
+      ],
+      "roadmap": "PUCN decision on the temporary gas plants 8 September 2026; Fleet campus operations targeted Q3 2027 per trade press; Peru Shelf February 2027 and South Valley September 2027 energisation; Sapphire 700 MW study; 525 kV loop federal application."
+    },
+    {
+      "name": "The Sun Belt and Midwest parks — Texas, Arizona, Utah, Iowa, Illinois, Virginia and the Minnesota pipeline",
+      "category": "Master-planned parks outside Nevada (8,688 acres, 13,240 MW on the projects page)",
+      "description": "Caldwell Valley, Texas ('Project Snow'): 1,515 acres closed 7 May 2025 after '18 months' of pre-work with a Bluebonnet Electric Cooperative facility design agreement for 360 MW in 2028, plus 1,458 acres in January 2026 for about 2,973 acres and 'more than 4 GW', a Bluebonnet/LCRA on-site substation 'capable of scaling to 1.6GW' with 'the first 250MW of capacity contracted for delivery in the first quarter of 2028', 345 kV lines and the Kinder Morgan Permian Highway pipeline, and 'plans for onsite power generation that will become grid connected'; Medina (265 acres, 500 MW, Medina Electric Cooperative, mid-2028, adjacent to Microsoft's Castroville campus) and Applewhite in south San Antonio (339 acres, 720 MW design). Buckeye, Arizona: 2,069 acres bought in August 2024 for USD 136 million from Cipriani Holdings, 'up to 20 million square feet … as many as 40 individual data centers', up to 1.8 GW with APS, 22 by-right parcels of 44–242 acres, a development agreement approved unanimously — still 'planned or proposed' in May 2026. Eagle Mountain, Utah: 668 acres (January 2024) inside the RTI overlay with by-right use and 'more than 400 megawatts' from Rocky Mountain Power by 2028 (Pole Canyon 844 acres/1,700 MW; Pony Express 225 acres/120 MW next to Meta, Google and QTS). Altoona, Iowa: 453 acres (September 2025) with annexation, rezoning, a development agreement and a 588,000-gallon-a-day water reservation, 'over 1GW'. Morris, Illinois: 343 acres (January 2026, about USD 51.5 million from a Clarius Partners affiliate) with a ComEd transmission security agreement for 1 GW approved by FERC in April 2026, first power June 2028 and full ramp by 2032. Hanover, Virginia: 1,200 acres (May 2024, about USD 32.7 million) approved unanimously for up to 2.4 GW across eight Dominion substations, long-lead equipment ordered, bridging power 'as early as 2026', energisation 2028.",
+      "highlights": [
+        "Texas is the largest non-Nevada position and the one with a contracted first block (250 MW, Q1 2028) — but also the site of a county whose commissioners suspended data-center abatements in August 2026 and where Prime Data Centers' USD 4 billion campus sits 'across the street'.",
+        "Morris is the only park with a FERC-accepted utility contract: the ComEd TSA (counterparty Grundy County Power NR I, LLC) carries 'committed revenue contributions, minimum usage commitments, and shortfall payments for underperformance' — the same instrument that ComEd cancelled on PowerHouse's Joliet campus in July 2026.",
+        "Virginia is where the model has lost most often: Chesterfield's 744 acres withdrawn (July 2025) under a county that now requires conditional-use permits and has 'signaled an end to data center approvals'; Hanover's second park rejected 4–3 (May 2026) despite a planning-commission 6–1 recommendation, a USD 15 million water pledge and a claimed USD 901 million of property tax over twenty years; Goochland's 870 acres opposed at pre-application (July 2026).",
+        "The Minnesota and Carolina pipeline is press-only: Farmington (343 acres including a golf course, final plat approved November 2024), Rosemount (447 acres, environmental review), Cannon Falls (about 250 acres, 'USD 30 billion over 20 years', Dakota Electric) and the withdrawn Mooresville park on Earnhardt family land — none appears on the company's projects page."
+      ],
+      "positioning": "Every park is sold on the same four claims — by-right zoning, a development agreement, a utility date and a water reservation — and priced against the county's willingness to grant them; the Buckeye reimbursement (USD 50 million after USD 60 million of city revenue) and the Caldwell arrangement ('no county tax incentives requested') show two ends of that trade.",
+      "soldThrough": "Fee-simple land held by Tract entities (Grundy County Power NR I in Illinois; Caldwell parcels; Buckeye), with utility contracts signed in Tract's name ahead of any buyer.",
+      "targetSegments": [
+        "Hyperscale and wholesale developers in secondary markets with power (Phoenix West Valley, Central Texas, Des Moines, Chicago exurbs, Richmond)"
+      ],
+      "roadmap": "Caldwell 250 MW Q1 2028 and 1.6 GW substation; Morris June 2028 to 1 GW by 2032; Hanover 2028; Eagle Mountain 2028; Buckeye and Altoona undated; Goochland conditional-use application pending; Cannon Falls vote and 'summer 2026' construction hope unconfirmed."
+    },
+    {
+      "name": "Fleet Data Centers — the vertical sister platform (500 MW+ single-user campuses on Tract land)",
+      "category": "Affiliate: build-to-suit mega-campus developer and operator",
+      "description": "Tract Capital introduced Fleet Data Centers on 8 January 2025 as 'the mega-campus vertical development strategy' beside Tract's 'horizontal powered land strategy': 'a developer and operator of mega-scale, single-user data center campuses' targeting '500 MW+ build-to-suit megacampuses for single-user customers', led by President Chris Vonderhaar (ex-Google Cloud vice president and AWS data-center executive) with Grant van Rooyen as executive chairman. Its first fund, Fleet Data Centers I, LP, holds the two Storey County project companies; the USD 4.6 billion closing release says proceeds also 'reimburse the Issuer's sponsor for prior equity contributions used to fund acquisition of property for the Project'.",
+      "highlights": [
+        "Bond terms as released: USD 3.8 billion 5.875% senior secured notes due 1 March 2031 (SV RNO Property Owner I; 144A/Reg S; 2.5% annual amortisation; first-priority liens on the issuer's assets and the equity of SV RNO HoldCo) and USD 4.6 billion 6.500% notes due 1 May 2031 (PR RNO Property Owner I; priced at 99 to yield 6.74% per Bloomberg Law). Bloomberg: JPMorgan lead and Morgan Stanley co-manager on the first deal; Fleet I equity 'about USD 620 million'; Fleet calls the February issue 'the highest-rated, largest issuance, highest loan-to-cost, and tightest pricing for any single data center high-yield bond project financing to date' (Baxtel).",
+        "Why Fleet exists, in FOSS Force's account of the launch: 'Leasing model preferred over sales' — the vertical arm captures the lease the horizontal arm cannot, and the Nevada campuses were chosen for 'earliest utility power delivery'.",
+        "Fleet's tenant is the corpus's most valuable unnamed counterparty: 'AA- investment grade rated tenant with a market cap in excess of $3 trillion' in every release; Nvidia per Bloomberg (February and April 2026); Baxtel lists Nvidia, Alphabet, Apple and Microsoft as the candidates the description fits."
+      ],
+      "positioning": "Fleet competes with EdgeCore, Vantage and the F7 landlords for single-tenant hyperscale leases; its advantage is that its landlord already owns the powered ground.",
+      "soldThrough": "Project-company leases (197-month triple-net) financed with senior secured notes; sponsor equity from Fleet Data Centers I, LP.",
+      "targetSegments": [
+        "One hyperscaler per campus"
+      ],
+      "roadmap": "Both Storey County campuses under construction from May 2026; operations targeted 2027; further Fleet campuses unannounced."
+    },
+    {
+      "name": "Energy and grid services around the parks — utility contracts, temporary generation, renewables and a gas desk",
+      "category": "Power pre-positioning (the part of the product the utility controls)",
+      "description": "Tract's team page lists a Chief Energy Officer (2024), an SVP Utility Development who founded Dominion's data-center services group, an SVP Energy Development from Calpine and Competitive Power Ventures, a VP Regulatory Affairs, a VP Energy Procurement 'responsible for ensuring the procurement of reliable, cost-effective supply to meet the needs of data centers' power generation facilities', a Manager of Gas Supply 'supporting the company's natural gas strategy', and transmission-planning directors from Invenergy and Recurrent. The instruments on the record: the ComEd transmission security agreement (Morris, FERC-approved); the Bluebonnet facility design agreement and LCRA substation (Caldwell); Dominion's eight-substation plan (Hanover); the June 2024 NV Energy agreements with Reno Power; the Silicon Ranch solar-and-storage collaboration (Nevada and Utah); and, in 2026, the two temporary gas plants (144 MW and 218 MW) Fleet's SPVs asked the PUCN to permit while the grid connection is built.",
+      "highlights": [
+        "The gas plants are the model's stress point: the Nevada Independent reported that the private plants 'would skirt' the state's renewable standard, the Sierra Club opposed them, and the PUCN's decision is scheduled for 8 September 2026 — three days after this dossier.",
+        "Caldwell's January 2026 release says Tract 'has initiated plans for onsite power generation that will become grid connected' — the Panhandle/Fermi pattern arriving at the powered-land developer."
+      ],
+      "positioning": "Powered land is only powered when the utility agrees; Tract's 2026 record — a FERC-approved TSA in Illinois, a lawsuit in Nevada — shows both outcomes on the same product.",
+      "soldThrough": "Utility agreements held by Tract or Fleet entities; bridging generation permitted to the project SPVs.",
+      "targetSegments": [
+        "Parcel buyers and Fleet tenants who need a dated power supply"
+      ],
+      "roadmap": "PUCN gas-plant decision 8 September 2026; NV Energy litigation and arbitration; Silicon Ranch projects undated."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Projects page — 14 parks as listed by the company (acres / MW / status label 'Owned & In Development')",
+      "specs": [
+        {
+          "band": "Nevada",
+          "label": "Peru Shelf Technology Park (Storey Co., TRIC)",
+          "value": "686 acres; 810 MW; parcels from 183 acres to 277 acres; Site energization February 2027, construction power available immediately; By-right data center use with 125′ building height allowances"
+        },
+        {
+          "band": "Nevada",
+          "label": "Peru Ridge (Storey Co., TRIC)",
+          "value": "517 acres; 230 MW; 2 parcels; existing 40 acre pad is graded and expandable to 100+ acres; 7-Day Grading and 30-Day Building Permits"
+        },
+        {
+          "band": "Nevada",
+          "label": "South Valley Technology Park (Storey Co.)",
+          "value": "1,534 acres; 1,215 MW; 7 Parcels from 70-641 Acres; On-Site 525/345 kV Substation; Site energization September 2027, construction power available in 2025"
+        },
+        {
+          "band": "Nevada",
+          "label": "Virginia Highlands Technology Park (Storey Co.)",
+          "value": "8,590 acres; 2,500 MW; 11 Individual Parcels, from 250-1,200 Acres in Scale; Industrial Zoning"
+        },
+        {
+          "band": "Nevada",
+          "label": "Sapphire Technology Park (Lyon Co., Silver Springs)",
+          "value": "1,063 acres; 700 MW; existing development agreement in place and 700 MWs under utility study; Adjacent to hyperscale Silver Springs campus"
+        },
+        {
+          "band": "Texas",
+          "label": "Caldwell Valley (Caldwell Co.)",
+          "value": "2,973 acres; 4,000 MW; mega-campus; Site energization in 2028; Located on 345kV transmission lines and the Kinder Morgan Permian Highway gas pipeline"
+        },
+        {
+          "band": "Texas",
+          "label": "Applewhite Technology Park (San Antonio)",
+          "value": "339 acres; 720 MW; 339 Total Acres MI-1; Industrial Zoning; Site designs support 720 MWs"
+        },
+        {
+          "band": "Texas",
+          "label": "Medina Technology Park (Medina Co.)",
+          "value": "265 acres; 500 MW; Serviced by the Medina Electric Cooperative (MEC) and East Medina County SUD; Site energization in mid-2028; Adjacent to existing Microsoft campus in Castroville"
+        },
+        {
+          "band": "Arizona",
+          "label": "Buckeye Technology Park",
+          "value": "2,019 acres; 1,800 MW; largest contiguous data center project in the Phoenix market; 22 Parcels, 44-242 Acres in Size; By-Right Data Center Use"
+        },
+        {
+          "band": "Utah",
+          "label": "Pole Canyon / Pony Express (Eagle Mountain)",
+          "value": "844 acres / 1,700 MW; 18 parcels ranging from 40 to 74 acres — and 225 acres / 120 MW; 4 parcels ranging from 45-90 acres; Contiguous to data center campuses of Meta, Google, and QTS"
+        },
+        {
+          "band": "Iowa",
+          "label": "Altoona Technology Park",
+          "value": "468 acres; 1,000 MW; by-right data center zoning and supported by utility studies; Development Agreement in Place; Water Reservation of 588k GPD"
+        },
+        {
+          "band": "Illinois",
+          "label": "Morris Technology Park",
+          "value": "344 acres; 1,000 MW (listing only; ComEd TSA FERC-approved April 2026; first power June 2028)"
+        },
+        {
+          "band": "Virginia",
+          "label": "Hanover Technology Park",
+          "value": "1,211 acres; 2,400 MW; 5 Parcels ranging in size from 153 to 318 acres; Up to 2,400 MWs across 8 substations; M-1 Limited Industrial zoning with up to 110′ building heights"
+        },
+        {
+          "band": "Totals",
+          "label": "Projects page",
+          "value": "14 projects; 21,078 acres; 18,695 MW (state tiles); company claim 'over 25GW … over 25,000 acres'"
+        }
+      ],
+      "notes": "Company park pages read via Wayback captures (October 2025 to August 2026). Acreage differs between releases and pages (Buckeye 2,069 vs 2,019; Altoona 453 vs 468; Morris 343 vs 344)."
+    },
+    {
+      "product": "Fleet Data Centers Storey County campuses and notes (affiliate)",
+      "specs": [
+        {
+          "band": "Campus 1 (SV RNO Property Owner I, LLC)",
+          "label": "Site / capacity",
+          "value": "252 acre property in Storey County; 230 MW utility / 200 MW IT turnkey data center and substation"
+        },
+        {
+          "band": "Campus 1 (SV RNO Property Owner I, LLC)",
+          "label": "Notes",
+          "value": "$3.8 billion 5.875% senior secured notes due March 1, 2031; priced 13 February 2026, closed 24 February; 2.5% annual amortization; Rule 144A / Regulation S"
+        },
+        {
+          "band": "Campus 2 (PR RNO Property Owner I, LLC)",
+          "label": "Site / capacity",
+          "value": "517 acre property in Storey County; 230 MW utility / 200 MW IT"
+        },
+        {
+          "band": "Campus 2 (PR RNO Property Owner I, LLC)",
+          "label": "Notes",
+          "value": "$4.6 billion 6.500% senior secured notes due May 1, 2031; priced 28–29 April 2026 (at 99 to yield 6.74% per Bloomberg Law), closed 1 May 2026"
+        },
+        {
+          "band": "Tenancy (both)",
+          "label": "Lease",
+          "value": "100% leased to a AA- investment grade rated tenant with a market cap in excess of $3 trillion; 197-month NNN lease (Bloomberg: Nvidia; initial ~16 years plus two 10-year options)"
+        },
+        {
+          "band": "Sponsor",
+          "label": "Equity",
+          "value": "Fleet Data Centers I, LP — 'about USD 620 million of equity' (Bloomberg); Tract Capital 'about USD 6 billion of assets under management'"
+        },
+        {
+          "band": "Bridging power",
+          "label": "PUCN applications (20 April 2026)",
+          "value": "South Valley Temporary Power Generation Facility 144 MW (26-04026); Peru Ridge Self-Generation Project 218 MW (26-04027); new 345 kV substation and four 345 kV lines (26-04007); LLESA with NV Energy (26-05027)"
+        }
+      ],
+      "notes": "Fleet releases (company site and wire mirrors), Kirkland & Ellis, Bloomberg via Yahoo Finance Singapore and Bloomberg Law, PUCN docket index. The SV = South Valley and PR = Peru Ridge mapping follows the entity prefixes and the 517-acre match; the releases do not name the parks."
+    },
+    {
+      "product": "Disclosed land prices and utility instruments",
+      "specs": [
+        {
+          "band": "Land",
+          "label": "Buckeye, AZ",
+          "value": "2,069 acres for $136 million (August 2024) from Cipriani Holdings / Arizona Land Consulting; seller paid $40 million in 2022"
+        },
+        {
+          "band": "Land",
+          "label": "Hanover, VA",
+          "value": "1,200 acres for about $32.7 million (spring 2024)"
+        },
+        {
+          "band": "Land",
+          "label": "Morris, IL",
+          "value": "343 acres for about $51.5 million (January 2026) from a Clarius Partners affiliate"
+        },
+        {
+          "band": "Land",
+          "label": "Undisclosed",
+          "value": "Storey County 2,200 acres (Blockchains, 2023), 517 acres, 8,590 acres; Silver Springs; Caldwell (both tranches); Eagle Mountain; Altoona"
+        },
+        {
+          "band": "Utility",
+          "label": "ComEd (Morris)",
+          "value": "Transmission Security Agreement with Grundy County Power NR I, LLC; FERC-approved April 2026; committed revenue contributions, minimum usage commitments, and shortfall payments for underperformance"
+        },
+        {
+          "band": "Utility",
+          "label": "Bluebonnet / LCRA (Caldwell)",
+          "value": "Facility Design Agreement (2025); on-site substation capable of scaling to 1.6GW; first 250MW … first quarter of 2028"
+        },
+        {
+          "band": "Utility",
+          "label": "NV Energy (Nevada)",
+          "value": "June 2024 agreements with Reno Power; Tract '>$127 million' spent, NV Energy seeking '$1 billion' of network upgrades; Washoe County suit CV26-02142 (24 July 2026)"
+        },
+        {
+          "band": "Utility",
+          "label": "Dominion (Hanover)",
+          "value": "up to 8 substations; long lead equipment ordered (2024); bridging power expected as early as 2026"
+        },
+        {
+          "band": "Utility",
+          "label": "Rocky Mountain Power (Eagle Mountain)",
+          "value": "more than 400 megawatts via new transmission infrastructure by 2028"
+        }
+      ],
+      "notes": "Prices per AZ Big Media, Richmond BizSense and Bisnow; utility terms per company releases, Eco Journal of Illinois, NewsData and the PUCN index."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-07",
+      "category": "legal",
+      "headline": "CBS News: NV Energy's suit says Tract's two campuses (>2 GW) would be 'nearly one-third of NV Energy's generating capacity'; Tract calls the complaint 'a public relations blitz stoking anti-data center sentiment' and says it 'never asked or expected for our costs to be subsidized by others'",
+      "read": "The dispute is now framed for a national audience as who pays for the grid — the question every powered-land park in Nevada will be answered by.",
+      "source": "https://www.cbsnews.com/news/nevada-data-center-lawsuit-ai-energy-costs/"
+    },
+    {
+      "date": "2026-08-05",
+      "category": "legal",
+      "headline": "NewsData: NV Energy filed suit on 24 July 2026 in Washoe County (CV26-02142) against Tract Capital Management to block the arbitration Tract demanded on 16 June under June 2024 agreements with subsidiary Reno Power; Tract says it has spent 'more than $127 million' and that NV Energy wants 'USD 1 billion in network infrastructure upgrades'",
+      "read": "The utility contract that made the Nevada parks 'powered' is in court; the energisation dates on the park pages depend on its outcome.",
+      "source": "https://www.newsdata.com/california_energy_markets/southwest/nv-energy-sues-over-whether-regulators-or-arbitrators-decide-dispute-with-data-center-developer/article_2f5432d3-5780-4c49-88ad-3468a575f622.html"
+    },
+    {
+      "date": "2026-07-29",
+      "category": "legal",
+      "headline": "KOLO: NV Energy sues Tract; the company's statement calls the filing 'laced with inflammatory rhetoric'",
+      "read": "First local coverage of the suit; KOLO reports Tract's spend as 'over $50 million' against the USD 127 million figure elsewhere.",
+      "source": "https://www.kolotv.com/2026/07/29/nv-energy-sues-tract-over-data-center-regulations/"
+    },
+    {
+      "date": "2026-07-27",
+      "category": "regulatory",
+      "headline": "Virginia Mercury: Goochland County residents oppose Tract's 870-acre, 900 MW proposal at a pre-application meeting; the conditional-use permit is not yet filed; Dominion's queue is 'up to seven years'",
+      "read": "A third Virginia park enters the consent process two months after the second was rejected.",
+      "source": "https://virginiamercury.com/2026/07/27/goochland-residents-rebuff-data-center-developer-tract-ahead-of-permit-application/"
+    },
+    {
+      "date": "2026-05-29",
+      "category": "regulatory",
+      "headline": "Hanover County supervisors reject the ~430-acre Mountain Road Technology Park 4–3 despite a 6–1 planning-commission recommendation, a USD 15 million water pledge and a claimed USD 901 million of property tax over 2025–2044",
+      "read": "The entitlement product fails at the ballot of seven people; the approved 2024 Hanover park is unaffected.",
+      "source": "https://virginiabusiness.com/hanover-supervisors-reject-430-acre-data-center-campus/"
+    },
+    {
+      "date": "2026-05-20",
+      "category": "capacity",
+      "headline": "Fleet and Tract break ground with Governor Lombardo on a 2-million-square-foot, 'USD 4.6 billion' data center at South Valley on USA Parkway; 1,500 peak construction jobs, about 100 permanent; Fleet and Tract 'control 12,000 acres in Storey and Lyon counties'",
+      "read": "The first vertical construction on Tract land — by Tract's own affiliate.",
+      "source": "https://www.kolotv.com/2026/05/20/gov-lombardo-construction-companies-break-ground-2-million-sq-ft-data-center-storey-co/"
+    },
+    {
+      "date": "2026-05-01",
+      "category": "financial",
+      "headline": "Fleet Data Centers closes the upsized USD 4.6 billion 6.500% senior secured notes due 2031 (PR RNO Property Owner I; 517-acre Storey County property; 100% leased 197 months to an AA- tenant with a market cap above USD 3 trillion); proceeds also 'reimburse the Issuer's sponsor for prior equity contributions'",
+      "read": "USD 8.4 billion of bonds in ten weeks against two leases — the largest capital event in the powered-land corpus, and it is the affiliate's.",
+      "source": "https://kdhnews.com/online_features/press_releases/fleet-data-centers-announces-closing-of-upsized-4-6b-6-500-senior-secured-notes-offering/article_8127ae89-f72d-58a4-b9e2-2177acf07bcb.html"
+    },
+    {
+      "date": "2026-04-28",
+      "category": "financial",
+      "headline": "Bloomberg Law: the USD 4.59 billion notes price at 99 to yield 6.74%; the campus is 'expected to be leased to Nvidia'",
+      "read": "The second time Bloomberg names the tenant Fleet will not.",
+      "source": "https://news.bloomberglaw.com/california-brief/nvidia-tied-data-center-raises-4-59-billion-from-junk-bond-sale"
+    },
+    {
+      "date": "2026-04-20",
+      "category": "regulatory",
+      "headline": "Fleet's two Storey County SPVs apply to the PUCN for temporary gas plants — 144 MW at South Valley (26-04026) and 218 MW at Peru Ridge (26-04027) — while the grid connection is built",
+      "read": "Powered land buying its own bridge power: the Panhandle model arrives at TRIC, with a decision due 8 September 2026.",
+      "source": "https://thenevadaindependent.com/article/why-a-northern-nevada-data-center-wants-to-build-its-own-temporary-natural-gas-power-plant"
+    },
+    {
+      "date": "2026-04-15",
+      "category": "regulatory",
+      "headline": "Tract announces FERC approval of the ComEd transmission security agreement for the 1 GW Morris Technology Park (counterparty Grundy County Power NR I, LLC); ComEd CEO Gil Quiniones quoted",
+      "read": "The one park with a federally accepted utility contract — the same instrument ComEd later cancelled on PowerHouse's Joliet campus.",
+      "source": "https://www.einpresswire.com/article/905748272/ferc-approves-tsa-between-comed-tract-advancing-1gw-of-responsible-data-center-growth-in-greater-chicago"
+    },
+    {
+      "date": "2026-04-07",
+      "category": "regulatory",
+      "headline": "SV RNO Property Owner 1 applies to the PUCN for a new 345 kV substation and four 345 kV lines at South Valley (26-04007)",
+      "read": "The on-site substation the park page advertises becomes a docket.",
+      "source": "https://pucweb1.state.nv.us/PUC2/Dktinfo.aspx?Util=Electric"
+    },
+    {
+      "date": "2026-03-02",
+      "category": "corporate",
+      "headline": "Kirkland & Ellis: advised 'private equity funds sponsored by Tract Capital' on the lease and purchase-and-sale of real property for the 230 MW Storey County turnkey data center and substation",
+      "read": "The only documented Tract parcel sale — to its sister fund.",
+      "source": "https://www.kirkland.com/news/press-release/2026/03/kirkland-advises-tract-capital-on-lease-and-purchase-and-sale-for-hyperscale-data-center-development"
+    },
+    {
+      "date": "2026-02-24",
+      "category": "financial",
+      "headline": "Fleet closes the upsized USD 3.8 billion 5.875% senior secured notes due 2031 (SV RNO Property Owner I; 252-acre property; 230 MW utility / 200 MW IT; AA- tenant)",
+      "read": "The first Fleet campus is fully financed before a shovel is in the ground.",
+      "source": "https://fleetdatacenters.com/news/fleet-data-centers-announces-closing-of-upsized-3-8-billion-5-875-senior-secured-notes-offering-to-fund-hyperscale-facility-in-rapidly-growing-reno-hub/"
+    },
+    {
+      "date": "2026-02-13",
+      "category": "financial",
+      "headline": "Bloomberg (via Yahoo Finance Singapore): Nvidia to lease the data centre funded by the USD 3.8 billion junk-bond sale for about 16 years plus two 10-year options; Tract Capital has 'about USD 6 billion of assets under management'; Fleet I 'about USD 620 million of equity'; JPMorgan lead, Morgan Stanley co-manager",
+      "read": "The tenant, the sponsor's size and the equity cheque, all from the bond marketing rather than the company.",
+      "source": "https://sg.finance.yahoo.com/news/nvidia-lease-data-centre-funded-195216702.html"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "capacity",
+      "headline": "Tract enters Greater Chicago: 343 acres at Morris, Illinois, 'fully zoned and entitled', with a ComEd TSA for 1 GW, initial energisation June 2028 and a full ramp by 2032; 2.9 million square feet, more than 1,000 construction and about 350 permanent jobs",
+      "read": "The twelfth market, bought with the utility contract already signed.",
+      "source": "https://www.tract.com/news/tract-enters-greater-chicago-market-with-the-acquisition-of-343-acres-to-be-developed-as-a-1gw-data-center-campus-known-as-the-morris-technology-park/"
+    },
+    {
+      "date": "2026-01-13",
+      "category": "capacity",
+      "headline": "Two acquisitions add 1,458 acres to Caldwell Valley for 'nearly 3,000 acres' and 'more than 4GW'; Tract, Bluebonnet and LCRA plan an on-site substation scaling to 1.6 GW with 'the first 250MW of capacity contracted for delivery in the first quarter of 2028'; 'plans for onsite power generation that will become grid connected'",
+      "read": "The Texas park doubles and acquires a contracted first block — smaller and later than the 360 MW-in-2028 of the first release.",
+      "source": "https://www.tract.com/news/tract-closes-on-two-incremental-acquisitions-adding-1458-acres-to-caldwell-valley-technology-park-in-caldwell-county-texas-bringing-total-campus-to-nearly-3000-acres/"
+    },
+    {
+      "date": "2025-10-13",
+      "category": "legal",
+      "headline": "Final judgment for Tract against Switch: the court confirms 'Tract's right to horizontally prepare the Peru Shelf for the development by others of any type of data center that is not a multi-tenant data center facility'; the 2015 covenant touches 'only 5% of Tract's total Reno portfolio'",
+      "read": "Two years of litigation over a covenant that bars retail colocation on one park; the easement fight continued.",
+      "source": "https://www.tract.com/news/tract-achieves-major-court-victory-against-switch-in-reno-data-center-land-dispute/"
+    },
+    {
+      "date": "2025-10-01",
+      "category": "capacity",
+      "headline": "Altoona Now: 453 acres fully entitled for 'over 1GW' in Altoona, Iowa after annexation, rezoning and a development agreement; Graham Williams quoted as Chief Investment Officer",
+      "read": "Des Moines is the eleventh market; MidAmerican's territory, near Meta.",
+      "source": "https://altoonanow.org/tract-brings-450-acre-data-center-campus-to-altoona-iowa/"
+    },
+    {
+      "date": "2025-09-17",
+      "category": "capacity",
+      "headline": "Tract closes about 1,060 acres at Silver Springs, Lyon County (Sapphire) after a rezoning and development agreement: 'up to 1.6 gigawatts', 700 MW 'currently under utility study', adjacent to a planned transmission line and a gas transmission line",
+      "read": "The Reno footprint crosses the county line; the first park adjacent to a Microsoft parcel.",
+      "source": "https://www.tract.com/news/tract-expands-its-greater-reno-portfolio-closing-on-1060-acres-in-silver-springs-nevada-following-successful-rezoning-and-development-agreement-with-lyon-county/"
+    },
+    {
+      "date": "2025-08-14",
+      "category": "market",
+      "headline": "Data Center Frontier profile names Tract's backers — Berkshire Partners, PSP Partners, Permira, S2G Ventures, Columbia Capital — and its pipeline in Minnesota, Iowa, Illinois and North Carolina",
+      "read": "The only source for the investor list; the company names none.",
+      "source": "https://www.datacenterfrontier.com/site-selection/article/55308975/scaling-up-tracts-master-planned-land-and-infrastructure-approach-to-data-center-development"
+    },
+    {
+      "date": "2025-08-13",
+      "category": "regulatory",
+      "headline": "NBC News: Tract withdraws its 400-acre Mooresville, North Carolina park on Earnhardt family land after neighbourhood opposition ('My client is Tract, I was instructed to withdraw it')",
+      "read": "The second withdrawal in six weeks.",
+      "source": "https://www.nbcnews.com/news/us-news/dale-earnhardt-widow-data-center-backs-off-mooresville-north-carolina-rcna224827"
+    },
+    {
+      "date": "2025-07-15",
+      "category": "legal",
+      "headline": "Nevada Independent: Judge Woodbury grants Switch a preliminary injunction preserving its original 100-foot easement over Tract's relocated 20-foot easement ('Switch's link to utilities … effectively severed'); easement trial set for March 2026",
+      "read": "The one round Switch won; the trial's outcome is not on the record.",
+      "source": "https://thenevadaindependent.com/article/opinion-in-competing-data-center-developers-road-forward-switch-wins-for-now"
+    },
+    {
+      "date": "2025-07-02",
+      "category": "regulatory",
+      "headline": "Richmond BizSense: Tract withdraws the 744-acre Chesterfield, Virginia rezoning after a unanimous planning-commission recommendation to deny; 'Tract's business model involves acquiring land and constructing infrastructure … and then selling off portions of the site to other companies'",
+      "read": "The clearest third-party statement of the model, in the article about its first Virginia defeat.",
+      "source": "https://richmondbizsense.com/2025/07/02/after-thumbs-down-from-commission-developer-withdraws-plans-to-refile-700-acre-chesterfield-data-center-proposal/"
+    },
+    {
+      "date": "2025-05-07",
+      "category": "capacity",
+      "headline": "Tract closes 1,515 acres in Caldwell County, Texas after an '18-month engagement', with a Facility Design Agreement with Bluebonnet Electric Cooperative and a 'target energization date for the initial 360MW in 2028'; Governor Abbott quoted",
+      "read": "Entry into Central Texas across the road from Prime Data Centers' campus.",
+      "source": "https://finance.yahoo.com/news/tract-closes-acquisition-1-515-140000930.html"
+    },
+    {
+      "date": "2025-01-08",
+      "category": "corporate",
+      "headline": "Tract Capital introduces Fleet Data Centers — 'the mega-campus vertical development strategy' for 'customized 500MW+ campuses' — under President Chris Vonderhaar (ex-Google Cloud, AWS)",
+      "read": "The horizontal developer grows a vertical arm; sixteen months later Fleet is the only buyer of a Tract parcel.",
+      "source": "https://tractcapital.com/news/tract-capital-introduces-fleet-data-centers-a-new-mega-scale-data-center-development-platform-focused-on-customized-500mw-campuses/"
+    },
+    {
+      "date": "2024-09-06",
+      "category": "market",
+      "headline": "Yahoo Finance interview: van Rooyen says Tract does 'all the complicated and hard to do part[s] of infrastructure' so hyperscalers can 'move with speed and certainty'; names Microsoft, Nvidia, Amazon and Meta as the market",
+      "read": "The pitch in the founder's words; none of the four is a disclosed customer.",
+      "source": "https://finance.yahoo.com/video/tract-helps-hyperscalers-meet-data-214719118.html"
+    },
+    {
+      "date": "2024-08-28",
+      "category": "capacity",
+      "headline": "Tract closes 2,069 acres in Buckeye, Arizona ('largest contiguous data center project in the Phoenix market'): up to 20 million square feet, as many as 40 data centers, 'up to 1.8GW' with the local utility; portfolio 'over 23,000 acres'",
+      "read": "USD 136 million for a park that was still 'planned or proposed' two years later.",
+      "source": "https://www.tract.com/news/tract-closes-acquisition-of-2069-acres-in-buckeye-arizona/"
+    },
+    {
+      "date": "2024-06-18",
+      "category": "capacity",
+      "headline": "8,590 acres closed in Storey County (Virginia Highlands) with industrial zoning 'inclusive of data centers and commercial energy production'",
+      "read": "The land bank quadruples in one purchase; no utility date attached.",
+      "source": "https://www.tract.com/news/tract-announces-acquisition-of-8590-acres-within-storey-county-to-secure-long-term-growth-in-northern-nevada/"
+    },
+    {
+      "date": "2024-05-08",
+      "category": "capacity",
+      "headline": "1,200 acres in Hanover County, Virginia, approved unanimously for up to 2.4 GW across eight Dominion substations; 'long lead equipment' ordered; energisation 2028, bridging power as early as 2026",
+      "read": "The Virginia flagship, later joined by three proposals that lost.",
+      "source": "https://www.tract.com/news/tract-announces-acquisition-of-1200-acres-in-hanover-county-va/"
+    },
+    {
+      "date": "2024-04-30",
+      "category": "capacity",
+      "headline": "Peru Shelf groundbreaking: 686 acres, 'up to 810MW', NV Energy switch stations in the horizontal scope, 'initial power delivery in late 2026 or early 2027'; South Valley described as 1,500 acres and 1,200 MW",
+      "read": "The first park to break ground; the date later moved to February 2027.",
+      "source": "https://www.tract.com/news/tract-breaks-ground-on-peru-shelf-technology-park-in-storey-county-nevada/"
+    },
+    {
+      "date": "2024-02-07",
+      "category": "capacity",
+      "headline": "517 acres added inside TRIC adjacent to Peru Shelf (Peru Ridge), with a pre-graded pad and TRIGID water and sewer",
+      "read": "The parcel that became Fleet's second campus.",
+      "source": "https://www.tract.com/news/tract-announces-the-acquisition-of-an-additional-517-acres-in-storey-county-nevada-adjacent-to-its-existing-project/"
+    },
+    {
+      "date": "2024-01-23",
+      "category": "partnership",
+      "headline": "Exclusive collaboration with Silicon Ranch for more than 500 MW of owned solar and storage aligned with Tract's Nevada and Utah campuses",
+      "read": "The renewable pre-position — no project has since been named.",
+      "source": "https://www.tract.com/news/silicon-ranch-and-tract-announce-exclusive-collaboration-agreement-to-align-renewable-energy-and-data-center-development-in-nevada-and-utah/"
+    },
+    {
+      "date": "2024-01-18",
+      "category": "capacity",
+      "headline": "668 acres in Eagle Mountain, Utah inside the RTI overlay (by-right data-center use); 'more than 400 megawatts' from Rocky Mountain Power by 2028",
+      "read": "Utah entry next to Meta and Google.",
+      "source": "https://www.tract.com/news/tract-announces-acquisition-of-668-acres-in-eagle-mountain-ut-promising-further-investment-for-data-center-campuses/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "nvidia",
+      "type": "customer",
+      "status": "active",
+      "since": "2026",
+      "scale": "two 230 MW / 200 MW IT campuses; 197-month leases",
+      "via": "Fleet Data Centers (affiliate) — SV RNO and PR RNO Property Owner I, LLC, Storey County",
+      "note": "Bloomberg identifies Nvidia as the 'AA- investment grade rated tenant with a market cap in excess of $3 trillion' that has leased 100% of both Fleet Data Centers campuses on Tract's Storey County land for 197 months; Fleet and Tract have not named the tenant.",
+      "context": "Bloomberg (via Yahoo Finance Singapore, 13 February 2026) reported an initial term of about 16 years with two 10-year options on the campus financed by the USD 3.8 billion notes, and Bloomberg Law (28 April 2026) reported the USD 4.59 billion second issue for a campus 'expected to be leased to Nvidia'. Fleet's releases describe the tenant only by rating and market capitalisation. The lease is with Fleet's project companies, which bought the parcels from Tract-sponsored funds (Kirkland & Ellis, March 2026); Tract's relationship to the tenant is as land seller and affiliate of the landlord. The Nvidia dossier records nothing on Fleet or Storey County.",
+      "source": "https://sg.finance.yahoo.com/news/nvidia-lease-data-centre-funded-195216702.html"
+    },
+    {
+      "slug": "switch",
+      "type": "other",
+      "status": "active",
+      "since": "2023-08",
+      "note": "Adverse litigant: Switch sued Tract's Storey County entity in 2023 to enforce a 2015 TRIC covenant barring multi-tenant colocation on Peru Shelf; Tract won summary judgment on the covenant in October 2025 while Switch holds a preliminary injunction on a relocated easement.",
+      "context": "Tract's 13 October 2025 release reports the final judgment confirming its right to prepare Peru Shelf for 'any type of data center that is not a multi-tenant data center facility' and says the covenant affects 'only 5% of Tract's total Reno portfolio'; the Nevada Independent's series covers Switch's July 2025 injunction preserving a 100-foot easement and the March 2026 easement trial, whose outcome is not on the record. Tract's counterclaims accuse Switch, Rob Roy, DigitalBridge and Marc Ganzi of interference. Switch is also a TRIC neighbour and, at its Citadel campus, the incumbent the covenant was written to protect.",
+      "source": "https://www.tract.com/news/tract-achieves-major-court-victory-against-switch-in-reno-data-center-land-dispute/"
+    },
+    {
+      "slug": "prime-data-centers",
+      "type": "competitor",
+      "status": "active",
+      "since": "2025",
+      "note": "Prime Data Centers' USD 4 billion Lockhart campus sits 'across the street' from Tract's Caldwell Valley park in Caldwell County, Texas — the two developers compete for the same Bluebonnet-served hyperscale tenants.",
+      "context": "Muskin Elam's account of the May 2025 acquisition places Prime's campus across the road from the 1,515 acres; Baxtel's Caldwell Valley page puts Prime 1.43 miles away and PowerHouse's Austin site adjacent. Prime's AUS01 filing (May 2026) is a two-building, USD 400 million first phase on Bluebonnet power; Tract's first 250 MW is contracted for Q1 2028. Both are exposed to the county's August 2026 suspension of data-center abatements.",
+      "source": "https://muskin-elam.com/1500-acre-data-center-campus-800-jobs-confirmed-for-small-town-in-caldwell-county/"
+    },
+    {
+      "slug": "powerhouse-data-centers",
+      "type": "competitor",
+      "status": "active",
+      "note": "PowerHouse Data Centers is a neighbour and rival in two of Tract's markets — the Tahoe-Reno Industrial Center (PowerHouse Reno, 200 MW) and Caldwell County, Texas (PowerHouse's Uhland site adjacent to Caldwell Valley).",
+      "context": "Commercial Property Executive's February 2024 coverage of the 517-acre purchase lists PowerHouse, EdgeCore and Novva among the TRIC operators near Tract's parcels, and Baxtel's Caldwell Valley page lists 'PowerHouse Austin adjacent'. The PowerHouse dossier names Tract among its TRIC peers. Neither company has a commercial relationship with the other on the record.",
+      "source": "https://www.commercialsearch.com/news/tract-acquires-another-517-acres-near-reno/"
+    },
+    {
+      "slug": "edgecore",
+      "type": "competitor",
+      "status": "active",
+      "note": "EdgeCore's 216 MW Reno campus at TRIC is one of the operators Tract's Nevada parks compete with for hyperscale tenants.",
+      "context": "Data Center Frontier's NV1 article lists EdgeCore (216 MW, late 2025), Vantage NV1 (224 MW), Novva (60 MW), Switch and Google as the TRIC competitors alongside Tract's 11,000-plus acres and 'up to 2GW from 2026' NV Energy commitment; CPE's 2024 coverage names EdgeCore among the neighbours of the 517-acre parcel.",
+      "source": "https://www.datacenterfrontier.com/site-selection/article/55305086/nv1-and-the-nevada-hyperscale-boom-vantage-data-centers-bets-3b-on-the-ai-future"
+    },
+    {
+      "slug": "vantage",
+      "type": "competitor",
+      "status": "active",
+      "note": "Vantage's USD 3 billion, 224 MW NV1 campus at TRIC is the largest operating rival to Tract's Nevada parks.",
+      "context": "Data Center Frontier's NV1 profile sets Vantage's four-building campus beside Tract's Storey County holdings and NV Energy commitment; both compete for the same hyperscale tenants and the same NV Energy capacity.",
+      "source": "https://www.datacenterfrontier.com/site-selection/article/55305086/nv1-and-the-nevada-hyperscale-boom-vantage-data-centers-bets-3b-on-the-ai-future"
+    },
+    {
+      "slug": "dominion-energy",
+      "type": "supplier",
+      "status": "announced",
+      "since": "2024-05",
+      "scale": "up to 2,400 MW across 8 substations",
+      "via": "Hanover Technology Park, Virginia",
+      "note": "Dominion Energy is the utility for Tract's Hanover park: up to eight substations for 2.4 GW, with 'long lead equipment for the initial substation' ordered in 2024 and bridging power expected 'as early as 2026'.",
+      "context": "Tract's 8 May 2024 release and the Hanover park page describe the Dominion plan; Capacity and the Greater Richmond Partnership repeat the 2028 energisation target. Tract's SVP Utility Development and a VP Utility Development are Dominion alumni. The Dominion dossier does not name Tract; Virginia Mercury reported Dominion's queue at 'up to seven years' in the Goochland pre-application.",
+      "source": "https://www.tract.com/news/tract-announces-acquisition-of-1200-acres-in-hanover-county-va/"
+    },
+    {
+      "slug": "microsoft",
+      "type": "other",
+      "status": "active",
+      "note": "Microsoft's Castroville campus is adjacent to Tract's Medina Technology Park, and Microsoft won parcel-map approval for 274 acres near Tract's Silver Springs park in 2025; the company names Microsoft as part of the hyperscaler market it serves, not as a customer.",
+      "context": "The Medina park page advertises 'Adjacent to existing Microsoft campus in Castroville'; Baxtel's Silver Springs page notes Microsoft's 2025 parcel-map approval nearby; van Rooyen's September 2024 interview lists Microsoft, Nvidia, Amazon and Meta as the market. No transaction between the companies is on the record.",
+      "source": "https://www.tract.com/project/medina-technology-park/"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Nevada large-load service and cost allocation — NV Energy v. Tract Capital Management (Washoe County CV26-02142) and PUCN dockets",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-24",
+      "exposure": "NV Energy sued on 24 July 2026 to keep power-supply adequacy, large-load cost allocation and resource-plan treatment of Tract's loads before the PUCN rather than the arbitrator Tract invoked on 16 June under June 2024 agreements with subsidiary Reno Power; the utility describes Tract's plan as 'at least five data centers with a combined load of nearly 5.5 GW' and seeks USD 1 billion of network upgrades; Tract says it has spent more than USD 127 million on its obligations. NV Energy's large-load electric service agreement with the two Fleet SPVs (26-05027) and the temporary gas plant permits (26-04026, 26-04027; decision 8 September 2026) sit in the same commission.",
+      "mitigation": "Tract's stated position is that the June 2024 contracts govern and that it 'never asked or expected for our costs to be subsidized by others'; the Fleet SPVs applied for 362 MW of temporary on-site gas generation and a new 345 kV substation so the first campuses do not wait on the dispute.",
+      "source": "https://www.newsdata.com/california_energy_markets/southwest/nv-energy-sues-over-whether-regulators-or-arbitrators-decide-dispute-with-data-center-developer/article_2f5432d3-5780-4c49-88ad-3468a575f622.html"
+    },
+    {
+      "regime": "FERC-jurisdictional transmission security agreements (ComEd, Illinois)",
+      "status": "in-effect",
+      "effectiveDate": "2026-04",
+      "exposure": "The Morris park's 1 GW depends on a ComEd transmission security agreement with Grundy County Power NR I, LLC that FERC approved in April 2026; the agreement carries 'committed revenue contributions, minimum usage commitments, and shortfall payments for underperformance', and ComEd cancelled the same class of agreement on PowerHouse's Joliet campus in July 2026 over deposit timing.",
+      "source": "https://www.einpresswire.com/article/905748272/ferc-approves-tsa-between-comed-tract-advancing-1gw-of-responsible-data-center-growth-in-greater-chicago"
+    },
+    {
+      "regime": "Local land-use consent (rezonings, conditional-use permits, annexation and development agreements)",
+      "status": "in-effect",
+      "exposure": "The product is the entitlement, so every park is a vote: approvals at Hanover (2024), Buckeye (2024), Farmington (2024), Lyon County (2025), Altoona (2025) and Morris; defeats at Chesterfield (withdrawn July 2025; the county now requires conditional-use permits from 1 January 2026 and 'signaled an end to data center approvals' in August 2026), Mooresville (withdrawn August 2025) and Hanover's Mountain Road park (rejected 4–3, May 2026); Goochland pending. Storey County's planning commission recommended Tract's 345 kV line special-use permit (SUP 2025-051) in September 2025.",
+      "mitigation": "Community benefit and infrastructure offers — a USD 15 million water pledge at Mountain Road, USD 3.5 million of road cash and a park contribution at Hanover, FM 2720 road funding and 'no county tax incentives requested' at Caldwell, 80 acres reserved for the city at Altoona, a white paper on 'Data Centers and Residential Property Values' (March 2026).",
+      "source": "https://virginiabusiness.com/hanover-supervisors-reject-430-acre-data-center-campus/"
+    },
+    {
+      "regime": "Private restrictive covenants and easements at the Tahoe-Reno Industrial Center (Switch v. NVLCO Storey County, Case 23-RP-00005-1E)",
+      "status": "in-effect",
+      "effectiveDate": "2023-08",
+      "exposure": "A 2015 covenant bars multi-tenant colocation on Peru Shelf; the court confirmed in October 2025 that Tract may prepare the park for any other type of data center, while Switch holds a July 2025 preliminary injunction on its 100-foot utility easement; the easement trial set for March 2026 has no reported outcome.",
+      "mitigation": "Tract's release says the covenant touches 'only 5% of Tract's total Reno portfolio'; its counterclaims against Switch and DigitalBridge allege interference.",
+      "source": "https://thenevadaindependent.com/article/opinion-two-nevada-data-center-developers-settle-in-for-a-long-legal-fight-for-ai-profits"
+    },
+    {
+      "regime": "Texas large-load rules (SB 6) and Caldwell County abatements",
+      "status": "in-effect",
+      "effectiveDate": "2026-08",
+      "exposure": "Caldwell County commissioners suspended Chapter 312 abatements for large data centers in August 2026 after resident backlash; Tract 'requested no county tax incentives' for Caldwell Valley, and Texas SB 6 large-load curtailment and on-site power provisions were cited in coverage of the park.",
+      "source": "https://centexdatacenters.org/projects/tract-caldwell-county"
+    },
+    {
+      "regime": "Water allocations and groundwater caps",
+      "status": "in-effect",
+      "exposure": "Storey County parks carry 1,100 acre-feet of water rights bought with the Blockchains land; Buckeye's self-supplied groundwater is capped at 2,000 acre-feet a year with the system to transfer to the city; Altoona reserves 588,000 gallons a day; Hanover's rejected park averaged 600,000 gallons a day; Cannon Falls caps 43 million gallons a year; the Governor's condition at the Fleet groundbreaking was 'closed loop' cooling.",
+      "source": "https://www.technologyreview.com/2025/05/20/1116287/ai-data-centers-nevada-water-reno-computing-environmental-impact/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Grant van Rooyen",
+      "title": "Executive Chairman, Tract (Chief Executive Officer and Managing Partner, Tract Capital Management; Executive Chairman, Fleet Data Centers)",
+      "background": [
+        "Founded Tract (2022) and Fleet Data Centers (2025) as Tract Capital Management portfolio companies; chairs TCM's executive, management and investment committees; styled 'CEO and Managing Partner' of Tract in 2024 releases, 'Executive Chairman' from 2025",
+        "Led the acquisition of Teraco (South Africa) with a private-equity syndicate for about USD 850 million and the sale of 51% to Digital Realty for about USD 3.5 billion; acquired 49% of MedOne (Israel) in a USD 450 million deal",
+        "Founded Cologix (2010; recapitalisations of about USD 1.4 billion in 2017 and USD 4 billion in 2022), Communications Realty Investments and the van Rooyen Group (2010)",
+        "Twelve years at Level 3 Communications, President of Content Markets (32 acquisitions); born in South Africa, raised in South Africa and Australia; degree in economics and finance"
+      ]
+    },
+    {
+      "name": "Graham Williams",
+      "title": "President, Tract and Senior Managing Director, Tract Capital (Chief Investment Officer through September 2025)",
+      "background": [
+        "President of Tract (quoted as such from January 2026 on the Morris TSA and the NV Energy suit); responsible for 'investment strategy, technical infrastructure strategy' and the engineering and development teams for all sites",
+        "Chief Investment Officer, Tract / Tract Capital (2024–September 2025)",
+        "Chief Operating Officer, Cologix; operating adviser, Columbia Capital (board of Centra)",
+        "Level 3 Communications (corporate strategy, commercial management, product management)"
+      ]
+    },
+    {
+      "name": "Chris Vonderhaar",
+      "title": "President, Fleet Data Centers (affiliate)",
+      "background": [
+        "President of Fleet Data Centers since its January 2025 launch; quoted at the May 2026 Storey County groundbreaking",
+        "Vice President, Demand and Supply Management, Google Cloud (about one year)",
+        "Vice President, AWS Global Data Centers / Data Center Community (more than ten years, to 2023; reported as 15,000 staff and 4+ GW)",
+        "CenturyLink to 2008; worked with van Rooyen on Kiewit's fibre network that became Level 3 in the 1990s"
+      ]
+    },
+    {
+      "name": "John Belkin",
+      "title": "General Counsel",
+      "photo": "images/execs/tract-belkin.jpg",
+      "background": [
+        "General Counsel, Tract; 25 years in real estate, land use, telecom and government affairs",
+        "Most recently Garfield & Hecht, P.C. (Aspen); first General Counsel of Cologix; Corporate Counsel, Level 3",
+        "Congressional aide; attorney at the US Trade Representative; clerk, US Court of International Trade and District of Connecticut"
+      ]
+    },
+    {
+      "name": "Phillip Sandino",
+      "title": "Senior Vice President, Utility Development",
+      "photo": "images/execs/tract-sandino.jpg",
+      "background": [
+        "Leads utility infrastructure and energy supply at all Tract sites",
+        "Director of electrical distribution, Dominion Energy — started Dominion Data Center Services; Vice President Operations, NTT Data Centers",
+        "US Navy; BS MET Texas Tech; MBA USC"
+      ]
+    },
+    {
+      "name": "Adam DeWolf",
+      "title": "Senior Vice President, Energy Strategy",
+      "photo": "images/execs/tract-dewolf.jpg",
+      "background": [
+        "Senior Vice President, Energy Strategy, Tract",
+        "Koch Disruptive Technologies (computing and connectivity theme); Boston Consulting Group"
+      ]
+    },
+    {
+      "name": "Steve Remillard",
+      "title": "Senior Vice President, Energy Development",
+      "photo": "images/execs/tract-remillard.jpg",
+      "background": [
+        "More than 30 years in power development",
+        "Competitive Power Ventures; Calpine"
+      ]
+    },
+    {
+      "name": "Jacob Bock",
+      "title": "Senior Vice President, Land Strategy",
+      "photo": "images/execs/tract-bock.jpg",
+      "background": [
+        "Investments, acquisition and site-selection strategy for Tract",
+        "Director of Investments, The Broe Group; HFF",
+        "BA, University of Pennsylvania"
+      ]
+    },
+    {
+      "name": "Kevin Arrow",
+      "title": "Senior Vice President, Land Development",
+      "photo": "images/execs/tract-arrow.jpg",
+      "background": [
+        "Senior Vice President, Land Development, Tract",
+        "Head of Land Development, Meta",
+        "California-licensed civil engineer"
+      ]
+    },
+    {
+      "name": "Coury Morris",
+      "title": "Senior Vice President, Engineering and Construction",
+      "photo": "images/execs/tract-morris.jpg",
+      "background": [
+        "Tract's representative before the Storey County planning commission on the 345 kV line permit (September 2025)",
+        "Principal Engineer, Great Basin Engineering (more than ten years); PE",
+        "BS Mechanical Engineering, University of Utah"
+      ]
+    },
+    {
+      "name": "Jason Lohmiller",
+      "title": "Senior Vice President, Commercial Management",
+      "photo": "images/execs/tract-lohmiller.jpg",
+      "background": [
+        "Senior Vice President, Commercial Management, Tract",
+        "Chief Commercial Officer, Deep Edge Realty; Zayo; Cologix; DataBank; Integra; Liberty Mutual"
+      ]
+    },
+    {
+      "name": "Sharon Lam",
+      "title": "Senior Vice President, Strategic Development Investments",
+      "photo": "images/execs/tract-lam.jpg",
+      "background": [
+        "Senior Vice President, Strategic Development Investments, Tract",
+        "Vice President, Columbia Capital; Goldman Sachs TMT; boards of Groundswell and Bandwidth IG; observer, SummitIG",
+        "University of Virginia"
+      ]
+    },
+    {
+      "name": "Paul Bultema",
+      "title": "Senior Vice President, Head of Tract Europe",
+      "background": [
+        "Leads the five-person Tract Europe unit 'overseeing the expansion of our powered land portfolio across the region'; panellist at MWC26 on European digital sovereignty",
+        "AWS; Accenture (UK); Level 3 (launched Europe); Coopers & Lybrand; Motorola",
+        "Wheaton BA; DePaul MBA; Oxford Saïd"
+      ]
+    },
+    {
+      "name": "Matt Conrad",
+      "title": "Vice President, Business Development and External Affairs",
+      "photo": "images/execs/tract-conrad.jpg",
+      "background": [
+        "Vice President, Business Development and External Affairs, Tract",
+        "Virginia Commonwealth University; Office of the Governor of Virginia"
+      ]
+    },
+    {
+      "name": "Orijit Ghoshal",
+      "title": "Vice President, Regulatory Affairs",
+      "photo": "images/execs/tract-ghoshal.jpg",
+      "background": [
+        "FERC, PUC and RTO work across SPP, ERCOT, WECC, MISO, PJM and CAISO for Tract",
+        "esVolta; Invenergy; Illinois Commerce Commission; City of Chicago; Citizens Utility Board",
+        "BA Yale; JD Chicago-Kent"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2026 to date (private — no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2026-12-31",
+        "metrics": [
+          {
+            "name": "Affiliate project debt",
+            "actual": "Fleet Data Centers I SPVs: $3.8 billion 5.875% senior secured notes due 2031 (closed 24 February) and $4.6 billion 6.500% notes due 2031 (closed 1 May; priced at 99 to yield 6.74%) — $8.4 billion against two 230 MW campuses on Tract land",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Fleet releases; Bloomberg Law"
+          },
+          {
+            "name": "Affiliate equity",
+            "actual": "Fleet Data Centers I 'about USD 620 million of equity' (Bloomberg); Tract Capital 'about USD 6 billion of assets under management'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Bloomberg via Yahoo Finance Singapore"
+          },
+          {
+            "name": "Land",
+            "actual": "Morris, Illinois 343 acres for about $51.5 million (January); Caldwell Valley +1,458 acres (January; price undisclosed)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Bisnow; company release"
+          },
+          {
+            "name": "Nevada spend in dispute",
+            "actual": "'more than $127 million' spent on NV Energy-related obligations per Tract (NewsData; CBS) — 'over $50 million' per KOLO; NV Energy seeking '$1 billion' of network upgrades",
+            "expected": "",
+            "verdict": "inline",
+            "result": "NewsData; KOLO"
+          },
+          {
+            "name": "Third-party parcel sales",
+            "actual": "None disclosed with a buyer or price",
+            "expected": "",
+            "verdict": "inline",
+            "result": "company pages; all fetched press"
+          }
+        ],
+        "commentary": "Tract publishes no accounts; the numbers that exist are land prices, an affiliate's bond terms and the two sides' figures in a utility lawsuit. The Fleet notes are the only market price on the platform: USD 8.4 billion of five-year secured debt at 5.875–6.5% against 197-month leases to an AA- tenant, with sponsor equity of about USD 620 million — a loan-to-cost that Fleet itself calls the highest for a single data-center high-yield project financing. Nothing here is Tract revenue."
+      },
+      {
+        "period": "FY2024–FY2025 (private)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Land purchases (disclosed prices)",
+            "actual": "Buckeye 2,069 acres $136 million (August 2024); Hanover 1,200 acres about $32.7 million (spring 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "AZ Big Media; Richmond BizSense"
+          },
+          {
+            "name": "Land purchases (undisclosed)",
+            "actual": "Storey County 517 acres (February 2024) and 8,590 acres (June 2024); Eagle Mountain 668 acres (January 2024); Caldwell 1,515 acres (May 2025); Altoona 453 acres (September 2025); Silver Springs ~1,060 acres (September 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "company releases"
+          },
+          {
+            "name": "Equity",
+            "actual": "Permira growth equity (June 2024; amount undisclosed; Torch Partners advised); Berkshire Partners (2023); PSP Partners, S2G Ventures, Columbia Capital per Data Center Frontier; Head of Capital Formation hired January 2024 'to lead investor relations for existing investors and lead future fundraising activity'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Torch Partners; Berkshire Partners; DCF; company release"
+          },
+          {
+            "name": "Per-site horizontal spend (reported)",
+            "actual": "'typically spends $50 million to $100 million to prepare a site' (Richmond BizSense) or 'between $100M and $150M' (Bisnow Chicago)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "press"
+          },
+          {
+            "name": "Municipal economics",
+            "actual": "Buckeye development agreement reimburses up to $50 million once the city collects $60 million of project revenue; Hanover claimed $1.78 billion of tax over 20 years; Morris more than 1,000 construction and about 350 permanent jobs",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ABC15; GRP; company release"
+          }
+        ],
+        "commentary": "Two years of buying: about 21,000 entitled acres across seven states at prices disclosed for three parks. 'Expected' is left empty by rule — there is no consensus for a private land developer — and the platform's value is visible only through the affiliate's bonds and the investors who backed it."
+      }
+    ],
+    "commentary": "Private; no earnings calendar. The dated items are regulatory: the PUCN's 8 September 2026 decision on the two temporary gas plants, the NV Energy suit and arbitration, the Goochland conditional-use application, Peru Shelf's February 2027 and South Valley's September 2027 energisation dates, Caldwell's Q1 2028 first block and Morris's June 2028 first power."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Tract's product — an entitled, powered parcel sold to another developer — has not yet been sold to anyone outside the group: the only recorded transactions are the two Storey County parcels bought by Fleet's project companies from Tract-sponsored funds. Basis: no company page or fetched article names a third-party buyer or price across four years and fourteen parks; Kirkland & Ellis's March 2026 release describes the Fleet purchase-and-sale; Fleet was launched in January 2025 with a 'leasing model preferred over sales'. Collection gap: unreported private sales are possible; none is visible.",
+    "(High confidence) We assess that the value the market has priced is the affiliate's, not Tract's: USD 8.4 billion of five-year secured notes at 5.875–6.5% against two 197-month leases to a tenant Bloomberg names as Nvidia, with about USD 620 million of sponsor equity. The horizontal platform's economics — land bought at USD 51,000–66,000 an acre in Morris and Buckeye, USD 50–150 million of infrastructure per park — are invisible in every disclosure. Basis: Fleet's releases and the Bloomberg bond reporting; the disclosed land prices.",
+    "(Moderate confidence) We assess that the Nevada position, 12,000 acres and 5.5 GW of stated load, is now contingent on a utility dispute the company cannot control: NV Energy's July 2026 suit, the USD 1 billion network-upgrade demand and the 8 September 2026 PUCN decision on 362 MW of temporary gas generation together decide whether 'Site energization February 2027' at Peru Shelf and 'September 2027' at South Valley hold. Basis: NewsData, CBS and the Nevada Independent on the suit; the PUCN docket index; the park pages. Indicator: the PUCN order and any settlement or ruling on the arbitration.",
+    "(Moderate confidence) We assess that the entitlement product succeeds where a county wants growth and fails where residents organise, and that the ratio is roughly even: six approvals against three losses since 2024, with Virginia the weakest market (one approval, two withdrawals or rejections, one contested pre-application). Basis: the county records and local press listed in Policy Exposure; the company's own consent offers (water pledges, road cash, no-incentive stances, a property-values white paper) show it pricing consent as a cost line.",
+    "(Moderate confidence) We assess that the 2024 executive build-out has partly unwound: the CFO, Chief Energy Officer, Chief Innovation Officer and Head of Capital Formation hired in January–February 2024 are absent from the 2026 team page, the founder moved from CEO to Executive Chairman, and the former CIO is now President. Basis: the who-we-are page against the 2024 releases and Equilar's change log; no departure was announced, so the reading is inference from absence. What it suggests: a platform that pivoted from raising a fund to executing two campuses through Fleet.",
+    "(Low confidence) We assess that Tract's 2026 moves toward on-site generation — the Fleet gas plants in Nevada, 'onsite power generation that will become grid connected' at Caldwell, a gas-supply desk on the team page — are the beginning of a shift from powered land to power-generating land, which would put it in Fermi America's and Intersect Power's business rather than PowerHouse's. Basis: the PUCN applications, the January 2026 Caldwell release and the team roster; nothing built.",
+    "Collection gap: the live tract.com, tractcapital.com and fleetdatacenters.com sites block automated fetches, so every company page was read from Wayback captures dated between October 2025 and August 2026; headcount, the sellers and prices of the Nevada parcels, the outcome of the March 2026 easement trial, any refiling in Chesterfield and the status of the Minnesota parks are unknown. INDICATORS TO WATCH: 8 September 2026 — PUCN decision on dockets 26-04026 and 26-04027; the Washoe County case and arbitration; any third-party parcel sale with a named buyer; Fleet's tenant confirmation or a third Fleet campus; the Goochland application; Peru Shelf's February 2027 energisation."
+  ],
+  "sources": [
+    {
+      "label": "Fleet Data Centers — Fleet Data Centers homepage — positioning, Suite 500 address",
+      "url": "https://fleetdatacenters.com/",
+      "date": "2026-09-05"
+    },
+    {
+      "label": "Fleet Data Centers — Fleet news listing — May 2026 groundbreaking coverage links",
+      "url": "https://fleetdatacenters.com/news/",
+      "date": "2026-09-05"
+    },
+    {
+      "label": "Chesterfield Report — Chesterfield Report tracker: Tract Branders Bridge withdrawn; PC denial 2025-06-17; withdrawal 2025-07-02; any refile falls under county CUP requirement effective 2026-01-01; county board \"signals end to data center approvals\" (2026-08-14)",
+      "url": "https://chesterfieldreport.com/data-centers.html",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Tract — Our Approach — \"invest in a Tract-owned parcel\"; solar partner (read via Wayback capture of 2026-08-28; live site blocks automated fetches)",
+      "url": "https://www.tract.com/our-approach/",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Tract — Sapphire project page (read via Wayback capture of 2026-08-28; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/sapphire/",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "The Nevada Independent — Nevada Independent: TRIC master developer vs TRIGID water suit; 2020 agreement; Clay Mitchell quote; Tract not a party (context only)",
+      "url": "https://thenevadaindependent.com/article/could-nevadas-tech-epicenter-run-out-of-water-thats-the-big-question-in-an-ongoing-suit",
+      "date": "2026-08-25"
+    },
+    {
+      "label": "Tract — Altoona project page (read via Wayback capture of 2026-08-19; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/altoona/",
+      "date": "2026-08-19"
+    },
+    {
+      "label": "Tract Capital — Tract Capital news listing — three Fleet notes releases (read via Wayback capture of 2026-08-11; live site blocks automated fetches)",
+      "url": "https://tractcapital.com/news/",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "Tract — Applewhite project page (read via Wayback capture of 2026-08-10; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/applewhite/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Tract — Caldwell Valley project page (read via Wayback capture of 2026-08-10; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/caldwellvalley/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Tract — Medina Technology Park project page (read via Wayback capture of 2026-08-10; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/medina-technology-park/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "CBS News — NV Energy v Tract; \"Reno Power (Tract's local contracting entity)\"; two campuses >2GW = \"nearly one-third of NV Energy's generating capacity\"; Tract \"$127 million\" invested, \"nearly $1 billion\" committed upgrades; June arbitration call; NV Energy spokesperson Katie Jo Collier quote; Tract calls it a \"public relations blitz stoking anti-data center sentiment\"; NV 22 operating DCs, 20 in development",
+      "url": "https://www.cbsnews.com/news/nevada-data-center-lawsuit-ai-energy-costs/",
+      "date": "2026-08-07"
+    },
+    {
+      "label": "The Nevada Globe — Nevada Globe: NV Energy v Tract Capital Management; says \"Federal court\" (conflicts with NewsData/Nev. Indy: Washoe County district court); $127M; ~$1B; Collier quote",
+      "url": "https://thenevadaglobe.com/702times/nv-energy-sues-data-center-developer-in-first-of-its-kind-fight-over-ai-power-buildout/",
+      "date": "2026-08-07"
+    },
+    {
+      "label": "NewsData / California Energy Markets — NV Energy sues over whether regulators or arbitrators decide its dispute with Tract (Washoe County, CV26-02142)",
+      "url": "https://www.newsdata.com/california_energy_markets/southwest/nv-energy-sues-over-whether-regulators-or-arbitrators-decide-dispute-with-data-center-developer/article_2f5432d3-5780-4c49-88ad-3468a575f622.html",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Tract — News/press-release listing page 1 (FERC TSA, DCD, FCTV items) (read via Wayback capture of 2026-08-04; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "KOLO 8 — KOLO TV: NV Energy sues Tract; Tract says \"over $50 million invested\" and \"nearly $1 billion\" committed; Tract statement quotes (\"laced with inflammatory rhetoric\"; \"never asked or expected for our costs to be subsidized by others\")",
+      "url": "https://www.kolotv.com/2026/07/29/nv-energy-sues-tract-over-data-center-regulations/",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "Virginia Mercury — Goochland 870 ac / 900 MW pre-application; business-model description; Kara Bowyer (read via Wayback capture of 2026-08-23; live site blocks automated fetches)",
+      "url": "https://virginiamercury.com/2026/07/27/goochland-residents-rebuff-data-center-developer-tract-ahead-of-permit-application/",
+      "date": "2026-07-27"
+    },
+    {
+      "label": "Tract — What We Do — \"shovel-ready development sites … as a product\" (read via Wayback capture of 2026-07-24; live site blocks automated fetches)",
+      "url": "https://www.tract.com/what-we-do/",
+      "date": "2026-07-24"
+    },
+    {
+      "label": "The Nevada Independent — Nevada Independent: NV Energy sues Tract in Washoe County Second Judicial District Court (declaratory/injunctive relief); temporary plants proposed 144MW South Valley + 218MW Peru Ridge; Tract \"nearly $1 billion\" infrastructure commitment; NV Energy IRP 22GW DC demand; 8,600 ac 2024; 1,060 ac Lyon 2025; NV Energy quote re \"shifting the infrastructure and energy costs to Nevada families\"",
+      "url": "https://thenevadaindependent.com/article/nevadas-electric-utility-is-suing-a-major-data-center-company-heres-why",
+      "date": "2026-07"
+    },
+    {
+      "label": "Virginia Business — Hanover BoS rejected Tract's 430-ac \"Mountain Road Technology Park\" 4-3; 129 ac of DC buildings in 5 zones; 600k gal/day avg water; first Dominion service late 2029; phased through 2034; $901M property tax 2025–2044; supervisors named",
+      "url": "https://virginiabusiness.com/hanover-supervisors-reject-430-acre-data-center-campus/",
+      "date": "2026-05-29"
+    },
+    {
+      "label": "WTVR — Hanover BOS denies Mountain Road Technology Park 4-3; Erin Fosdick quoted",
+      "url": "https://www.wtvr.com/news/local-news/hanover-county/tract-data-center-vote-may-28-2026",
+      "date": "2026-05-28"
+    },
+    {
+      "label": "Real Estate Daily News — Tract Buckeye Technology Park still \"planned or proposed\" as of May 2026; up to 1.8GW; 20M sq ft / 40 DCs; other Buckeye DC entrant Phoenix Hydrogen Hub LLC (Fortescue) 158 ac",
+      "url": "https://realestatedaily-news.com/buckeyes-next-growth-wave-may-not-be-rooftops-but-megawatts/",
+      "date": "2026-05-28"
+    },
+    {
+      "label": "Baxtel — Baxtel news: Fleet groundbreaking; \"256-acre site\" (sic; other sources 252); 230MW; \"Fleet was launched by Tract to build data centers within Tract's planned campuses ... single-tenant campuses of 500MW or more\"",
+      "url": "https://baxtel.com/news/fleet-breaks-ground-on-a-new-data-center-project-outside-reno-nevada",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "KOLO 8 — South Valley groundbreaking with Gov. Lombardo; $4.6B; 2M sq ft; 12,000 ac Storey/Lyon",
+      "url": "https://www.kolotv.com/2026/05/20/gov-lombardo-construction-companies-break-ground-2-million-sq-ft-data-center-storey-co/",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "Our Town Reno — Fleet groundbreaking off USA Parkway 2026-05-20; 517 ac; 230MW; $4.6bn notes after $3.8bn; Gov. Lombardo present; \"Campus Certainty at Mega-Scale\"",
+      "url": "http://www.ourtownreno.com/our-stories-1/2026/5/20/fleet-data-centers-embarks-on-massive-project-for-major-tenant-off-usa-parkway",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "2News — Fleet groundbreaking at TRIC; \">$1 billion already invested\"; Vonderhaar quotes; Lombardo",
+      "url": "https://www.2news.com/news/fleet-data-centers-breaks-ground-on-new-center-in-northern-nevada/article_698b1bd5-e099-408d-9cdb-9a25acfc5c55.html",
+      "date": "2026-05-19"
+    },
+    {
+      "label": "Baxtel — Baxtel news: Fleet raises $4.6bn (6.5%) after $3.8bn 5.875% in Feb 2026; 517 ac; 230MW; candidates Nvidia/Alphabet/Apple/Microsoft",
+      "url": "https://baxtel.com/news/fleet-data-centers-raises-4-6bn-for-nevada-data-center-campus",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "KDH News (Fleet Data Centers release) — Fleet closes upsized USD 4.6 billion 6.500% senior secured notes for the 517-acre Storey County campus",
+      "url": "https://kdhnews.com/online_features/press_releases/fleet-data-centers-announces-closing-of-upsized-4-6b-6-500-senior-secured-notes-offering/article_8127ae89-f72d-58a4-b9e2-2177acf07bcb.html",
+      "date": "2026-05-01"
+    },
+    {
+      "label": "National Law Review (Fleet Data Centers release) — Fleet prices USD 4.6 billion of senior secured notes due 2031 (PR RNO Property Owner I)",
+      "url": "https://natlawreview.com/press-releases/fleet-data-centers-announces-pricing-46-billion-senior-secured-notes",
+      "date": "2026-04-29"
+    },
+    {
+      "label": "Bloomberg Law — Nvidia-tied data center raises USD 4.59 billion from junk-bond sale (Storey County, Tract Capital and Fleet Data Centers I)",
+      "url": "https://news.bloomberglaw.com/california-brief/nvidia-tied-data-center-raises-4-59-billion-from-junk-bond-sale",
+      "date": "2026-04-28"
+    },
+    {
+      "label": "Infor Capital — FERC approved ComEd–Tract TSA; 1GW Morris Technology Park; June 2028 initial power, 1GW by 2032; \"committed revenue streams, minimum usage guarantees, and penalties for underperformance\"; Tract \"over 25 gigawatts ... more than 25,000 acres\"",
+      "url": "https://inforcapital.com/news/ferc-approves-transmission-agreement-for-planned-1gw-tract-data-center-in-morris-illinois/",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "VPM — Hanover PC voted 6–1 for Tract's 427-ac Mountain Road DC; 900MW; $15M water infrastructure pledge; air-cooling/recirculating evaporative cooling; opposition Friends of Hanover, Stop Hanover Data Centers (Ashly Covington)",
+      "url": "https://www.vpm.org/news/2026-04-17/hanover-planning-commission-mountain-rd-data-center-covington-strong/",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "EIN Presswire (Tract release) — FERC approves transmission security agreement between ComEd and Tract for the 1 GW Morris Technology Park",
+      "url": "https://www.einpresswire.com/article/905748272/ferc-approves-tsa-between-comed-tract-advancing-1gw-of-responsible-data-center-growth-in-greater-chicago",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Eco Journal of Illinois — Eco Journal of Illinois mirror of Tract PR: FERC approved TSA between ComEd and Tract \"through Grundy County Power NR I, LLC\"; Graham Williams \"President of Tract\" quote; ComEd CEO Gil Quiniones quote",
+      "url": "https://www.ecojournalillinois.com/article/905748272-ferc-approves-tsa-between-comed-tract-advancing-1gw-of-responsible-data-center-growth-in-greater-chicago",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Tract — Buckeye project page (read via Wayback capture of 2026-04-11; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/buckeye/",
+      "date": "2026-04-11"
+    },
+    {
+      "label": "Tract — Virginia Highlands project page (read via Wayback capture of 2026-04-11; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/virginia-highlands/",
+      "date": "2026-04-11"
+    },
+    {
+      "label": "Tract — Blog listing (white paper 2026-03-30; ABJ; Grist) (read via Wayback capture of 2026-04-11; live site blocks automated fetches)",
+      "url": "https://www.tract.com/about/",
+      "date": "2026-04-11"
+    },
+    {
+      "label": "SEC EDGAR — SEC EDGAR exhibit — NOT Tract: Amendment to Special Warranty Deed, Grow Odessa → Texas Critical Data Centers LLC, 235 ac Ector County TX (checked; false positive)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2028336/000121390026037454/ea028411601ex10-1.htm",
+      "date": "2026-03-25"
+    },
+    {
+      "label": "Kirkland & Ellis — advises Tract Capital funds on the lease and purchase-and-sale for a 230 MW turnkey data center and substation in Storey County",
+      "url": "https://www.kirkland.com/news/press-release/2026/03/kirkland-advises-tract-capital-on-lease-and-purchase-and-sale-for-hyperscale-data-center-development",
+      "date": "2026-03-02"
+    },
+    {
+      "label": "Fleet Data Centers — Fleet: closing $3.8B notes (read via Wayback capture of 2026-07-25; live site blocks automated fetches)",
+      "url": "https://fleetdatacenters.com/news/fleet-data-centers-announces-closing-of-upsized-3-8-billion-5-875-senior-secured-notes-offering-to-fund-hyperscale-facility-in-rapidly-growing-reno-hub/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Construction Review Online — $3.8bn 5.875% senior secured notes due 2031; issuer SV RNO Property Owner I, LLC; 252 ac; 230MW utility / 200MW IT; turnkey DC + substation; Storey County (commenter correction)",
+      "url": "https://constructionreviewonline.com/fleet-data-centers-raises-3-8bn-to-build-230mw-data-center-campus-for-3-trillion-tech-giant-in-reno-nevada/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Baxtel — Baxtel news: Fleet DC seeks $3.8bn; 100% leased to \"AA- investment grade rated tenant with a market cap in excess of $3 trillion\"; 197-month NNN",
+      "url": "https://baxtel.com/news/tract-s-fleet-data-centers-seeks-3-8bn-to-fuel-nevada-build-out",
+      "date": "2026-02-14"
+    },
+    {
+      "label": "Fleet Data Centers — Fleet: pricing $3.8B 5.875% notes; SV RNO Property Owner I; 252 ac; AA- tenant (read via Wayback capture of 2026-04-30; live site blocks automated fetches)",
+      "url": "https://fleetdatacenters.com/news/fleet-data-centers-announces-pricing-of-3-8-billion-of-senior-secured-notes-for-hyperscale-facility-in-rapidly-growing-reno-hub/",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Bloomberg via Yahoo Finance Singapore — Nvidia to lease data centre funded by USD 3.8 billion junk-bond sale; Tract Capital about USD 6 billion AUM",
+      "url": "https://sg.finance.yahoo.com/news/nvidia-lease-data-centre-funded-195216702.html",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "GuruFocus — GuruFocus (Bloomberg-derived): Nvidia ~16-yr lease + two 10-yr renewals; Tract Capital ~$6B AUM; Fleet I first fund is borrower; $620M equity",
+      "url": "https://www.gurufocus.com/news/8613029/nvidia-nvda-to-lease-data-center-backed-by-38-billion-junk-bond",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Tract — South Valley project page (read via Wayback capture of 2026-01-26; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/south-valley/",
+      "date": "2026-01-26"
+    },
+    {
+      "label": "Tract — Release: Morris Technology Park, 343 ac, ComEd TSA, 1 GW (read via Wayback capture of 2026-02-26; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-enters-greater-chicago-market-with-the-acquisition-of-343-acres-to-be-developed-as-a-1gw-data-center-campus-known-as-the-morris-technology-park/",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "Tract — Release: Caldwell Valley +1,458 ac → ~3,000 ac, >4 GW (read via Wayback capture of 2026-02-11; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-closes-on-two-incremental-acquisitions-adding-1458-acres-to-caldwell-valley-technology-park-in-caldwell-county-texas-bringing-total-campus-to-nearly-3000-acres/",
+      "date": "2026-01-13"
+    },
+    {
+      "label": "Hoodline — Caldwell Valley +1,458 ac → ~3,000 ac; 360MW initial; \"strong feedback\" from prospective tenants, none named",
+      "url": "https://hoodline.com/2026/01/data-center-giant-gobbles-up-3-000-acres-outside-austin/",
+      "date": "2026-01-13"
+    },
+    {
+      "label": "Tract — Careers page (no listings in capture) (read via Wayback capture of 2026-01-05; live site blocks automated fetches)",
+      "url": "https://www.tract.com/careers/",
+      "date": "2026-01-05"
+    },
+    {
+      "label": "Tract — Tract ESG Policy post (read via Wayback capture of 2026-01-02; live site blocks automated fetches)",
+      "url": "https://www.tract.com/esg/tract-esg-policy/",
+      "date": "2025-12-10"
+    },
+    {
+      "label": "Tract — Resources listing p.2 (read via Wayback capture of 2025-10-20; live site blocks automated fetches)",
+      "url": "https://www.tract.com/resources/page/2/",
+      "date": "2025-10-20"
+    },
+    {
+      "label": "Tract — Peru Ridge project page (read via Wayback capture of 2025-10-18; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/peru-ridge/",
+      "date": "2025-10-18"
+    },
+    {
+      "label": "Tract — Peru Shelf project page (read via Wayback capture of 2025-10-18; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/peru-shelf/",
+      "date": "2025-10-18"
+    },
+    {
+      "label": "Tract — Pole Canyon project page (read via Wayback capture of 2025-10-18; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/pole-canyon-technology-tract/",
+      "date": "2025-10-18"
+    },
+    {
+      "label": "Tract — Pony Express project page (read via Wayback capture of 2025-10-18; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/pony-express-technology-tract/",
+      "date": "2025-10-18"
+    },
+    {
+      "label": "Tract — Hanover project page (read via Wayback capture of 2025-10-18; live site blocks automated fetches)",
+      "url": "https://www.tract.com/project/hanover/",
+      "date": "2025-10-18"
+    },
+    {
+      "label": "Tract — Resources listing p.1 (press + \"Tract in the news\") (read via Wayback capture of 2025-10-18; live site blocks automated fetches)",
+      "url": "https://www.tract.com/resources/",
+      "date": "2025-10-18"
+    },
+    {
+      "label": "Tract — Release: court victory vs Switch (case no., counsel, media contact) (read via Wayback capture of 2026-08-04; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-achieves-major-court-victory-against-switch-in-reno-data-center-land-dispute/",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "The Nevada Independent — Nevada Independent opinion: Judge Jason Woodbury 16-page ruling denies Switch summary judgment, grants Tract counterclaim; Case No. 23-RP-00005-1E; covenant 88 yrs remaining; Tract bought >2,200 ac from Blockchains Aug 2023; Switch sued late Aug 2023; July 2025 preliminary injunction for Switch on easement; easement trial March 2026",
+      "url": "https://thenevadaindependent.com/article/opinion-two-nevada-data-center-developers-settle-in-for-a-long-legal-fight-for-ai-profits",
+      "date": "2025-10"
+    },
+    {
+      "label": "Altoona Now — 453 ac fully entitled, >1GW; annexation, rezoning, development agreement; Graham Williams \"Chief Investment Officer\" quote; Mayor Dean O'Connor; Meta, LightEdge in Altoona",
+      "url": "https://altoonanow.org/tract-brings-450-acre-data-center-campus-to-altoona-iowa/",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "BeBeez — Silver Springs, Lyon County NV ~1,060 ac, 1.6GW potential, 700MW utility study under review; Graham Williams CIO Tract Capital quote; Lyon County Manager Andrew Haskin quote; mentions Switch legal dispute in Storey County; Fleet DC",
+      "url": "https://bebeez.eu/2025/09/19/tract-acquires-1000-acres-in-nevada-for-1-6gw-data-center-park/",
+      "date": "2025-09-19"
+    },
+    {
+      "label": "Tract — Release: 1,060 ac Silver Springs / Lyon County (Sapphire) (read via Wayback capture of 2026-08-02; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-expands-its-greater-reno-portfolio-closing-on-1060-acres-in-silver-springs-nevada-following-successful-rezoning-and-development-agreement-with-lyon-county/",
+      "date": "2025-09-17"
+    },
+    {
+      "label": "Tract — Release: 453 ac Altoona, IA (read via Wayback capture of 2026-08-19; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-enters-the-des-moines-market-with-the-acquisition-of-453-acres-following-successful-collaboration-with-the-city-of-altoona-ia/",
+      "date": "2025-09-09"
+    },
+    {
+      "label": "Storey County — Storey County Planning Commission minutes: SUP 2025-051 — Tract (rep \"Coury Morris, representative for Tract\") — two ~3-mi single-circuit 345kV segments (6 mi total) outside designated corridor to new NV Energy \"Mackay\" substation south of TRIC; ~39 poles 77–165 ft; APNs 004-201-13, 004-181-05, 004-181-03, 004-181-08, 004-181-13; recommended approval (Sterrett/Umbach)",
+      "url": "https://storeycounty.org/AgendaCenter/ViewFile/Minutes/_09042025-1326",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Data Center Frontier — Profile: investors named; Mooresville NC; MN pipeline; Buckeye DA $50M",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/55308975/scaling-up-tracts-master-planned-land-and-infrastructure-approach-to-data-center-development",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "NBC News — Tract withdrew Mooresville NC 400-ac, \"$30 billion\" project on Teresa Earnhardt land on Wed Aug 13 2025; ~200 residents at Aug 4 meeting; Kerry Earnhardt opposed; engineer Dan Brewer \"My client is Tract, I was instructed to withdraw it\"; Mayor Chris Carney",
+      "url": "https://www.nbcnews.com/news/us-news/dale-earnhardt-widow-data-center-backs-off-mooresville-north-carolina-rcna224827",
+      "date": "2025-08-13"
+    },
+    {
+      "label": "Richmond BizSense — Richmond BizSense (Jack Jacobs): Tract withdrew rezoning for 744 ac at 16100 Branders Bridge Road, Chesterfield; up to 11 DC facilities ~2M sq ft on ~350 ac; Commissioner Gib Sloan traffic concerns; \"Tract's business model involves acquiring land and constructing infrastructure ... and then selling off portions of the site to other companies that would build data center facilities there\"; Hanover 1,200 ac infrastructure to finish 2026 or 2027",
+      "url": "https://richmondbizsense.com/2025/07/02/after-thumbs-down-from-commission-developer-withdraws-plans-to-refile-700-acre-chesterfield-data-center-proposal/",
+      "date": "2025-07-02"
+    },
+    {
+      "label": "The Nevada Independent — Nevada Independent opinion: Woodbury 31-page PI order preserving Switch's original 100-ft easement vs Tract's relocated 20-ft easement; \"Switch's link to utilities ... effectively severed\"; trial March 2026; Latham & Watkins (Joshua Hamilton) for Switch; Tract spokesperson quote",
+      "url": "https://thenevadaindependent.com/article/opinion-in-competing-data-center-developers-road-forward-switch-wins-for-now",
+      "date": "2025-07"
+    },
+    {
+      "label": "Richmond BizSense — Chesterfield PC unanimous denial recommendation; Gib Sloan quotes; 350 ac developed / 365 ac open; buffers 725/250/100 ft; water ≤2,000 gal/day/acre; 60 dB generator limit; 110-ft height; Geiger; John Martin RVA757 Connects in favor",
+      "url": "https://richmondbizsense.com/2025/06/20/planning-commission-recommends-denial-of-700-acre-data-center-project-in-chesterfield/",
+      "date": "2025-06-20"
+    },
+    {
+      "label": "Data Center View — Uhland TX 1,515 ac; 360MW by 2028; Bluebonnet FDA; \"over 25,000 acres and more than 25GW of planned capacity\"",
+      "url": "https://news.datacenterview.com/p/may-21-2025-tract-acquires-1-515-acres-for-future-data-center-development",
+      "date": "2025-05-21"
+    },
+    {
+      "label": "technologyreview.com — MIT Technology Review \"The data center boom in the desert\": Tract 2,200 ac Storey County, \">1,100 acre-feet of water rights, the equivalent of nearly 360 million gallons a year\"; Tract listed with Google, Switch, EdgeCore, Novva, Vantage, PowerHouse at TRIC; Tract did not respond",
+      "url": "https://www.technologyreview.com/2025/05/20/1116287/ai-data-centers-nevada-water-reno-computing-environmental-impact/",
+      "date": "2025-05-20"
+    },
+    {
+      "label": "Austin Monitor — Lockhart/Caldwell Co 1,500 ac, 2GW, Bluebonnet 360MW in 2028, FM 2720 road improvements funded by Tract, van Rooyen quote on transmission+gas+fiber, SB6 context",
+      "url": "https://austinmonitor.com/stories/2025/05/new-data-center-planned-for-lockhart-in-2028/",
+      "date": "2025-05-15"
+    },
+    {
+      "label": "GovTech Insider — GovTech Insider (Texas): 1,515 ac NW of Lockhart; >2GW; announced May 7 2025; van Rooyen \"Executive Chairman and Tract Capital Management CEO and Managing Partner\"; Abbott quote",
+      "url": "https://insider.govtech.com/texas/news/colorado-developer-plans-data-center-on-1-515-central-texas-acres",
+      "date": "2025-05-13"
+    },
+    {
+      "label": "Yahoo Finance (GlobeNewswire mirror) — Tract closes acquisition of 1,515 acres in Caldwell County, Texas; Bluebonnet facility design agreement",
+      "url": "https://finance.yahoo.com/news/tract-closes-acquisition-1-515-140000930.html",
+      "date": "2025-05-07"
+    },
+    {
+      "label": "The Nevada Independent — Nevada Independent opinion: 2-day PI hearing May 22 before Judge Woodbury, Carson City; Switch attorney Joshua Hamilton; Tract attorney Michael Dockterman; Matt Spencer President Tract Management Company testified (\"I would like to offer to work with Switch, but they keep suing me\"); Rob Roy; DigitalBridge/Marc Ganzi ($11B Switch buy Dec 2022); Tract bought Aug 2023; Switch sued Oct 2023; March 2024 PI denied in part; May 2024 MTD denied; 20-ft easement",
+      "url": "https://thenevadaindependent.com/article/opinion-hearing-offers-an-impressive-glimpse-of-a-brewing-nevada-data-center-battle",
+      "date": "2025-05"
+    },
+    {
+      "label": "The Nevada Independent — Nevada Independent opinion \"Switch loses another round\": May 2 2024 Woodbury denied Switch MTD of Tract counterclaims; counterclaims allege Switch, Roy, DigitalBridge, Ganzi interfered incl. \"plans to build a public road and right-of-way\"; defendant styled Tract Capital Management",
+      "url": "https://thenevadaindependent.com/article/opinion-switch-loses-another-round-in-data-center-dispute-at-industrial-park",
+      "date": "2025-05"
+    },
+    {
+      "label": "Tract Capital — Tract Capital \"Meet the Team\" — officer titles, \"Tract I portfolio\", investor portal (read via Wayback capture of 2025-03-23; live site blocks automated fetches)",
+      "url": "https://tractcapital.com/meet-the-team/",
+      "date": "2025-03-23"
+    },
+    {
+      "label": "Tract Capital — Tract Capital contact page (read via Wayback capture of 2025-03-23; live site blocks automated fetches)",
+      "url": "https://tractcapital.com/contact-us/",
+      "date": "2025-03-23"
+    },
+    {
+      "label": "Tract Capital — Tract Capital careers page (read via Wayback capture of 2025-03-23; live site blocks automated fetches)",
+      "url": "https://tractcapital.com/careers/",
+      "date": "2025-03-23"
+    },
+    {
+      "label": "AZ Big Media — 2,069 ac Buckeye, $136M, $20B, 20M sq ft, up to 40 DCs, 360+ jobs; seller Anita Verma-Lallian / Arizona Land Consulting bought Feb 2022 for planned \"Cipriani\" residential community; ~1 mi from Buckeye Municipal Airport; Mayor Eric Orsborn quote",
+      "url": "https://azbigmedia.com/real-estate/2069-acre-parcel-will-become-a20-billion-data-center-park-in-buckeye/",
+      "date": "2025-02-11"
+    },
+    {
+      "label": "Bisnow — Chesterfield 740 ac, up to 2M SF / 11 buildings, 4 substations; landowner LLC tied to Shoosmith Construction; \"Tract secures land, power and entitlements for data center campuses where other firms ultimately build the facilities\"; Hanover 1,200 ac bought $32.7M May 2024, development-ready 2027; founded 2022; names Chirisa, AREP, PowerHouse, CoreWeave, Torch Clean Energy, D.E. Shaw Renewable",
+      "url": "https://www.bisnow.com/news/national/data-center/tract-pitches-700-acre-data-center-campus-near-richmond-127853",
+      "date": "2025-02-03"
+    },
+    {
+      "label": "Richmond BizSense — Chesterfield rezoning filed Nov 2024; 740 ac assessed $1.2M, under contract from LLC tied to Tony Lucas (Shoosmith Construction); spokeswoman Julia Kendall; \"Tract said it typically spends $50 million to $100 million to prepare a site\"; attorney Jeff Geiger (Hirschler); Hanover bought spring 2024 for $32.7M; adjacent Chester Solar Technology Park (Torch Clean Energy / D.E. Shaw Renewable)",
+      "url": "https://richmondbizsense.com/2025/02/03/denver-firm-tract-seeks-to-rezone-700-plus-acres-for-data-center-park-in-chesterfield/",
+      "date": "2025-02-03"
+    },
+    {
+      "label": "FOSS Force — Fleet — Vonderhaar background (AWS VP Data Center Community, left 2023; Google Cloud 1 yr; CenturyLink to 2008; Kiewit/Level 3 with van Rooyen in 1990s); \"Leasing model preferred over sales\"; first target Nevada/Reno; Tract Capital land business since 2022",
+      "url": "https://fossforce.com/2025/01/fleet-data-centers-launches-offering-hyperscalers-a-will-build-to-suit-tenant-approach/",
+      "date": "2025-01-19"
+    },
+    {
+      "label": "Data Center Frontier — Fleet DC launch; van Rooyen CEO Tract Capital + Exec Chairman Fleet; Chris Vonderhaar President Fleet (ex-Google Cloud VP Demand & Supply Mgmt; AWS 10+ yrs); 500MW+ single-user build-to-suit campuses; Tract Capital structure (Tract = land/horizontal; Fleet = vertical)",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/55260011/tract-capital-unveils-fleet-data-centers-specializing-in-500-mw-build-to-suit-megacampuses",
+      "date": "2025-01-09"
+    },
+    {
+      "label": "Tract Capital — Release: Tract Capital introduces Fleet Data Centers (two strategies; Vonderhaar) (read via Wayback capture of 2025-08-05; live site blocks automated fetches)",
+      "url": "https://tractcapital.com/news/tract-capital-introduces-fleet-data-centers-a-new-mega-scale-data-center-development-platform-focused-on-customized-500mw-campuses/",
+      "date": "2025-01-08"
+    },
+    {
+      "label": "Yahoo Finance — Yahoo Finance mirror of Tract Capital PR: Fleet launch; Tract Capital = \"alternative asset manager focused on building companies that enable rapid scaling of digital infrastructure\"; portfolio: Tract (horizontal powered land) + Fleet (vertical mega-campus); HQ Denver",
+      "url": "https://finance.yahoo.com/news/tract-capital-introduces-fleet-data-150000821.html",
+      "date": "2025-01-08"
+    },
+    {
+      "label": "Yahoo Finance — video interview: Grant van Rooyen on how Tract helps hyperscalers meet data-center demand",
+      "url": "https://finance.yahoo.com/video/tract-helps-hyperscalers-meet-data-214719118.html",
+      "date": "2024-09-06"
+    },
+    {
+      "label": "Tract — Release: 2,069 ac Buckeye, AZ; portfolio 23,000 ac (read via Wayback capture of 2026-08-09; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-closes-acquisition-of-2069-acres-in-buckeye-arizona/",
+      "date": "2024-08-28"
+    },
+    {
+      "label": "CRE Daily — CRE Daily brief: Buckeye $136M, ~2.1K ac, $20B expected value over 15 yrs excl. servers; APS utility; Denver-based",
+      "url": "https://www.credaily.com/briefs/arizona-land-deal-shows-ai-fueled-demand-for-data-centers/",
+      "date": "2024-08-28"
+    },
+    {
+      "label": "ABC15 Arizona — ABC15: Buckeye council unanimous Aug 6 (2024) DA — up to $50M reimbursement after $60M city revenue; \"Buckeye Tech Corridor\"",
+      "url": "https://www.abc15.com/news/business/20-billion-data-center-campus-gets-green-light-in-buckeye",
+      "date": "2024-08"
+    },
+    {
+      "label": "Tract — Release: 8,590 ac Storey County (Virginia Highlands) (read via Wayback capture of 2025-12-24; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-announces-acquisition-of-8590-acres-within-storey-county-to-secure-long-term-growth-in-northern-nevada/",
+      "date": "2024-06-18"
+    },
+    {
+      "label": "Capacity — Capacity Global: Hanover Technology Park VA 1,200 ac, 2.4GW, up to 46 buildings, Dominion long-lead substation equipment ordered, bridging power 2026, energization 2028, horizontal work end-2024; quotes van Rooyen, John Budesky, Gov. Youngkin",
+      "url": "https://capacityglobal.com/news/tract-plans-2-4gw-data-centre-campus-in-virginia/",
+      "date": "2024-05-09"
+    },
+    {
+      "label": "Tract — Release: 1,200 ac Hanover County, VA; Dominion; 2.4 GW (read via Wayback capture of 2025-07-15; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-announces-acquisition-of-1200-acres-in-hanover-county-va/",
+      "date": "2024-05-08"
+    },
+    {
+      "label": "Tract — Release: Cherry Creek HQ lease; >50 employees; founded 2022 office (read via Wayback capture of 2024-06-19; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-signs-lease-on-20000-square-foot-office-in-cherry-creek/",
+      "date": "2024-05-02"
+    },
+    {
+      "label": "Greater Richmond Partnership — GRP (Greater Richmond Partnership): Hanover unanimous PC + BoS approval May 2024; 1,200 ac; 2.4GW; ~30 buildings; 800+ employees; $1.78B tax/20yrs; $3.5M road cash contribution; $100k Washington Lacy Park; energization 2028; bridging 2026",
+      "url": "https://www.grpva.com/news/tract-approved-for-1200-acre-data-center-campus-in-hanover/",
+      "date": "2024-05"
+    },
+    {
+      "label": "Construction Review Online — Hanover Technology Park 1,200 ac, 2.4GW, up to 46 buildings, \"US$33 million for the parcel\"; Dominion; operational 2028",
+      "url": "https://constructionreviewonline.com/plans-for-massive-2-4-gw-tract-hanover-technology-park-unveiled-virginia/",
+      "date": "2024-05"
+    },
+    {
+      "label": "Tract — Release: Peru Shelf groundbreaking; NV Energy; contractors (read via Wayback capture of 2026-01-21; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-breaks-ground-on-peru-shelf-technology-park-in-storey-county-nevada/",
+      "date": "2024-04-30"
+    },
+    {
+      "label": "Yahoo Finance — Yahoo Finance mirror of Tract PR: Peru Shelf groundbreaking; 686 ac / 810MW; South Valley 1,500 ac / 1,200MW; 510 ac adjacent; contractors Westex Geotechnical, F&P Construction; HQ Denver; \"20,000+ acres\"",
+      "url": "https://finance.yahoo.com/news/tract-breaks-ground-peru-shelf-150500450.html",
+      "date": "2024-04-30"
+    },
+    {
+      "label": "Commercial Property Executive — 517 ac at TRIC adjacent to 686 ac Peru Drive; ~120-ac pre-graded pad; water/sewer adjacent; NV Energy from 2026; Silicon Ranch renewables partnership; 2GW; mentions Microsoft, PowerHouse, EdgeCore, Novva, JLL, Harrison Street; van Rooyen \"bolt-on\" quote",
+      "url": "https://www.commercialsearch.com/news/tract-acquires-another-517-acres-near-reno/",
+      "date": "2024-02-08"
+    },
+    {
+      "label": "Tract — Release: +517 ac TRIC (Peru Ridge) (read via Wayback capture of 2024-02-29; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-announces-the-acquisition-of-an-additional-517-acres-in-storey-county-nevada-adjacent-to-its-existing-project/",
+      "date": "2024-02-07"
+    },
+    {
+      "label": "Tract — Release: Sahlstrom (CEO-energy) & Cox (CIO-innovation) hires (read via Wayback capture of 2024-06-19; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-welcomes-two-industry-veterans-dedicated-to-accelerating-responsible-digital-infrastructure/",
+      "date": "2024-02-05"
+    },
+    {
+      "label": "Tract — Release: Stockard CFO & Eubanks Head of Capital Formation (read via Wayback capture of 2024-05-23; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/key-senior-team-adds-bolster-tracts-finance-and-capital-formation-functions-with-an-eye-toward-scale/",
+      "date": "2024-01-31"
+    },
+    {
+      "label": "Missoula Current — Eagle Mountain 668 ac, 400MW, RMP; Williams CIO quote",
+      "url": "https://missoulacurrent.com/data-center-colorado/",
+      "date": "2024-01-29"
+    },
+    {
+      "label": "Utah News Dispatch — 668+ ac Eagle Mountain; 400+MW by 2028; HQ Denver",
+      "url": "https://utahnewsdispatch.com/briefs/tract-data-center-eagle-mountain/",
+      "date": "2024-01-26"
+    },
+    {
+      "label": "Daily Herald — Daily Herald (Provo): 668 ac in two Eagle Mountain areas (SE of Meta; E of Tyson) acquired Jan 18 2024; RMP >400MW by 2028; Evan Berrett: Tract prepares sites \"for eventual resale or lease to other data center developers\"",
+      "url": "https://www.heraldextra.com/news/local/2024/jan/25/tract-acquires-land-in-eagle-mountain-to-prepare-for-future-data-centers/",
+      "date": "2024-01-25"
+    },
+    {
+      "label": "Tract — Release: Silicon Ranch exclusive collaboration (NV, UT) (read via Wayback capture of 2024-06-19; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/silicon-ranch-and-tract-announce-exclusive-collaboration-agreement-to-align-renewable-energy-and-data-center-development-in-nevada-and-utah/",
+      "date": "2024-01-23"
+    },
+    {
+      "label": "Utah Business — Utah Business mirror of Tract PR: 668 ac Eagle Mountain; RTI Overlay by-right; Rocky Mountain Power >400MW by 2028; Graham Williams \"Chief Investment Officer\"; Mayor Tom Westmoreland",
+      "url": "https://www.utahbusiness.com/press-releases/2024/01/19/tract-acquires-668-acres-eagle-mountain/",
+      "date": "2024-01-19"
+    },
+    {
+      "label": "Tract — Release: 668 ac Eagle Mountain, UT; Rocky Mountain Power (read via Wayback capture of 2024-11-11; live site blocks automated fetches)",
+      "url": "https://www.tract.com/news/tract-announces-acquisition-of-668-acres-in-eagle-mountain-ut-promising-further-investment-for-data-center-campuses/",
+      "date": "2024-01-18"
+    },
+    {
+      "label": "Data Center Knowledge — Eagle Mountain 668+ ac; 400+MW by 2028; Tract Denver-based; Williams CIO quote \"building blocks for land and power are getting bigger\"; Meta/Google nearby",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/colorado-based-company-acquires-land-for-data-center-in-utah",
+      "date": "2024-01"
+    },
+    {
+      "label": "Data Center Frontier — Data Center Frontier Mountain West: Tract >2,200 ac Reno; 2GW NV Energy from 2026; >1,100 AF water; \"acquires, zones, entitles, and develops master-planned data center parks\"; adjacent Switch, Apple, Google",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/33012732/hyperscale-driven-us-mountain-west-data-center-markets-continue-building-up-and-big",
+      "date": "2023-10"
+    },
+    {
+      "label": "Tract — homepage: positioning, Denver headquarters (read via Wayback capture of 2026-07-13; live site blocks automated fetches)",
+      "url": "https://www.tract.com/"
+    },
+    {
+      "label": "Tract — Who We Are: full team roster, titles and biographies (live render 2026-09-05 and Wayback captures of 2026-07-13 and 2026-08-28)",
+      "url": "https://www.tract.com/who-we-are/"
+    },
+    {
+      "label": "Tract — Projects listing: 14 parks, state totals of 21,078 acres and 18,695 MW (read via Wayback capture of 2026-02-23)",
+      "url": "https://www.tract.com/projects/"
+    },
+    {
+      "label": "Tract — Projects listing filtered to Texas (read via Wayback capture of 2026-05-16)",
+      "url": "https://www.tract.com/projects/?market=texas"
+    },
+    {
+      "label": "LinkedIn — Tract company page: founded 2022, Denver, 80 employees listed",
+      "url": "https://www.linkedin.com/company/tractinfra"
+    },
+    {
+      "label": "S2G Investments — S2G Investments portfolio page: Tract founded 2022, HQ Denver CO, CEO Grant van Rooyen, \"data center land acquisition and development company\"",
+      "url": "https://www.s2ginvestments.com/companies/tract"
+    },
+    {
+      "label": "Baxtel — Baxtel Tract operator page: 15 sites list incl. Peru Shelf (under construction), South Valley (1,500 ac planned), Virginia Highlands (8,590 ac), Silver Springs (~1,060 ac), Buckeye (2,019 ac), Colonial Heights VA (withdrawn), Mooresville NC (withdrawn)",
+      "url": "https://baxtel.com/data-centers/tract"
+    },
+    {
+      "label": "Baxtel — Baxtel South Valley Technology Park: 9000 USA Pkwy Reno; \"1,500-acre project\" \"up to seven individual campuses\"; year planned 2027; NV Energy 2GW starting 2026; 1,100 AF water rights (Peru Shelf + South Valley) from Blockchains LLC; 2,200 ac announced Oct 2023",
+      "url": "https://baxtel.com/data-center/tract-south-valley-technology-park"
+    },
+    {
+      "label": "Baxtel — Baxtel Virginia Highlands: 8,590 ac between TRIC and Virginia City Highlands SE of Lockwood; total NV holdings \"over 11,000 acres, spread across three distinct projects\"; year planned 2028; news item 2026-02-14 Fleet DC \"seeking to raise billions of dollars to build out a campus in Reno\"",
+      "url": "https://baxtel.com/data-center/tract-virginia-highlands"
+    },
+    {
+      "label": "Baxtel — Baxtel Buckeye AZ: 5572 S Johnson Rd; \"2,019 Total Acres\" \"22 Parcels, 44-242 Acres in Size\"; \"By-Right Data Center Use\"; year planned 2027; bought from Arizona Land Consulting >$136M; prior owner paid $40M in 2022",
+      "url": "https://baxtel.com/data-center/tract-buckeye-arizona"
+    },
+    {
+      "label": "Berkshire Partners — Berkshire Partners portfolio: Tract, invested 2023, HQ Denver CO, \"data center land acquisition and development company\"; deal team Drew Walker, Larry Hamelsky, Peter Loibner",
+      "url": "https://berkshirepartners.com/portfolio-companies/tract/"
+    },
+    {
+      "label": "Torch Partners — advised Permira on growth equity funding in Tract, June 2024; \"almost 5GW ... at three locations\"; \"20,000 acres\"",
+      "url": "https://www.torchpartners.com/deals/torch-partners-advised-permira-on-its-growth-equity-funding-in-tract"
+    },
+    {
+      "label": "Bisnow — Bisnow Chicago: Morris IL 343 ac from Clarius Partners affiliate ~$51.5M; 2.9M SF, 1GW; ComEd; energization June 2028, full 1GW by 2032; Tract \"typically invests $100M and $150M on a site to prepare it for a sale\"; Graham Williams quoted as \"Tract President\"; Avison Young brokers; Grundy EDC",
+      "url": "https://www.bisnow.com/chicago/news/data-center-capital-markets/data-center-infrastructure-developer-takes-343-acre-chicago-area-swing-132919"
+    },
+    {
+      "label": "theaiconsultingnetwork.com — AI Consulting Network blog: $4.6B 6.500% senior secured notes due May 1 2031; issuer PR RNO Property Owner I, LLC; 517 ac Storey County; 230MW/200MW; JPMorgan bookrunner; closed May 1 2026; tenant AA rated >$3T market cap, 197-month NNN",
+      "url": "https://www.theaiconsultingnetwork.com/blog/fleet-data-centers-4-6b-storey-county-nevada-ai-campus-cre-investors-2026"
+    },
+    {
+      "label": "servercountry.org — Server Country: Buckeye 2,069 ac $136M; 1.8GW; Buckeye DA Aug 2024 up to $50M reimbursement after $60M city revenue; \"300 high-paying jobs and nearly 2,000 construction jobs at peak\"; $20.0B",
+      "url": "https://servercountry.org/data/projects/tract-buckeye-data-center-park/"
+    },
+    {
+      "label": "circleofblue.org — Circle of Blue: Cipriani Holdings sold 2,069 ac west of Buckeye Municipal Airport to Tract Aug 2024; \"Buckeye Tech Corridor\"; groundwater 2,000 acre-feet/yr cap per city planning doc; Tract to drill wells, later transfer water system to city; Graham Williams \"chief investment officer\" quote",
+      "url": "https://www.circleofblue.org/2025/supply/data-centers-a-small-but-growing-factor-in-arizonas-water-budget/"
+    },
+    {
+      "label": "The Nevada Independent — Nevada Independent: Fleet DC temporary gas plants — South Valley 144MW, \"Peru Ridge Self-Generation Project\" 218MW, 350+MW combined, 2-3 yrs \"until NV Energy can deliver\"; applications filed April 20 2026, PUCN Dockets 26-04026 (South Valley) & 26-04027 (Peru Ridge); NDEP air permits; construction early 2027–end 2027; Bloomberg reported Nvidia plans to lease a Storey County site; Sierra Club Olivia Tanager quote; Peru Ridge in TRIC core (dev agreement), South Valley outside core near Lyon line (SUP may be required)",
+      "url": "https://thenevadaindependent.com/article/why-a-northern-nevada-data-center-wants-to-build-its-own-temporary-natural-gas-power-plant"
+    },
+    {
+      "label": "Baxtel — Baxtel Peru Ridge: 1000 Peru Dr; 517 ac; planned 2027; nearby PowerHouse Reno, Vantage, Apple within 1–3 mi",
+      "url": "https://baxtel.com/data-center/tract-peru-ridge"
+    },
+    {
+      "label": "Baxtel — Baxtel Peru Shelf Technology Park: 1900 Peru Dr; 686 ac + 510 ac adjacent planning; up to 810MW; NV Energy; initial power \"late 2026 or early 2027\"; under construction; \"Fleet: Peru Shelf Tech Park (leasing space from Tract)\"",
+      "url": "https://baxtel.com/data-center/tract-peru-shelf-technology-park"
+    },
+    {
+      "label": "Baxtel — Baxtel Pony Express Tech Park: E 1000N St, Eagle Mountain UT; two parcels >668 ac incl. 225-ac Pony Express Technology Park; planned 2028; near Meta, Google, QTS",
+      "url": "https://baxtel.com/data-center/tract-pony-express-tech-park"
+    },
+    {
+      "label": "Baxtel — Baxtel Hanover County VA: Hickory Hill Road east of I-95; 1,211 ac; 2.4GW; ~30 buildings 200k–400k sq ft; 8 substations; 800+ employees; >$50M infrastructure; $1.78B tax revenue/20 yrs; energization 2028; Dominion long-lead equipment; bridging power 2026",
+      "url": "https://baxtel.com/data-center/tract-hanover-county-va"
+    },
+    {
+      "label": "Baxtel — Baxtel Silver Springs: 1,060 ac Lyon County; up to 1.6GW; \"Land Bank\"; rezoning + development agreement completed with Lyon County; announced 2025-09-20; Microsoft parcel map approval 2025 for 274 ac nearby",
+      "url": "https://baxtel.com/data-center/tract-silver-springs"
+    },
+    {
+      "label": "More Than Just Parks — More Than Just Parks tracker: Peru Ridge Technology Park (Tract/Fleet) 200MW, 686 ac, under construction, initial power late 2026/early 2027 (cites Tract PR)",
+      "url": "https://morethanjustparks.com/data-center-tracker/tract-peru-ridge-technology-park-nv--67e0da68-2a12-4614-9d80-f9f267de88a7"
+    },
+    {
+      "label": "Equilar ExecAtlas — Tract executive roster and title changes (updated August 2026)",
+      "url": "https://people.equilar.com/bio/org/tract/12082398"
+    },
+    {
+      "label": "Post Register — Post Register (Uhland): 1,515 ac; 2+GW; 360MW Bluebonnet; construction in 12–18 months; ops by 2028; FM 2720 funding",
+      "url": "https://post-register.com/tract-bringing-uhland-a-mega-tech-hub-site/"
+    },
+    {
+      "label": "Muskin Elam Group — Caldwell 1,515 ac acquired May 7 2025; \"4 gigawatts ... at full buildout\" (2GW conservative); ≥5.5M sq ft; 800 jobs at full buildout; horizontal infrastructure \"$50 million and $100 million\"; no county/city incentives requested; across street from Prime Data Centers $4B campus; 18 months of pre-work",
+      "url": "https://muskin-elam.com/1500-acre-data-center-campus-800-jobs-confirmed-for-small-town-in-caldwell-county/"
+    },
+    {
+      "label": "Data Center Frontier — Data Center Frontier NV1/Vantage: Tract >11,000 ac Storey County incl. Peru Shelf + South Valley; up to 2GW from 2026; TRIC competitors Vantage NV1 224MW (2026), EdgeCore 216MW (late 2025), Novva 60MW (2026), Switch, Google",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/55305086/nv1-and-the-nevada-hyperscale-boom-vantage-data-centers-bets-3b-on-the-ai-future"
+    },
+    {
+      "label": "KSTP — Cannon Falls — Tract, Denver-based; >250 ac farmland N of Cannon Falls on Hwy 52; \"$30 billion investment over the next 20 years\"; ~250 permanent jobs; 1,500 construction jobs/10 yrs; $30M tax/20 yrs; water capped 43M gal/yr; power from Dakota Electric Association; construction hoped summer 2026",
+      "url": "https://kstp.com/accountability/cannon-falls-pine-island-are-both-discussing-bringing-data-centers-to-their-towns/"
+    },
+    {
+      "label": "Baxtel — Baxtel Farmington MN: 220th St W, Dakota County; 343 ac incl. Fountain Valley Golf Club; $5B; up to 12 DC buildings >2.5M sq ft; City Council approved final plat + PUD 2024-11-18; planned 2027",
+      "url": "https://baxtel.com/data-center/tract-farmington-campus"
+    },
+    {
+      "label": "Baxtel — Baxtel Rosemount MN: 447 ac; env review 3 scenarios (2.3M sq ft tech park / 2.5M sq ft light industrial); planned 2027",
+      "url": "https://baxtel.com/data-center/tract-rosemount-campus"
+    },
+    {
+      "label": "Baxtel — Baxtel Medina Tech Park: Co Rd 4516, Medina County TX; 265 ac; planned 2028, \"site energization in mid-2028\"; adjacent to Microsoft Castroville campus",
+      "url": "https://baxtel.com/data-center/tract-medina-tech-park"
+    },
+    {
+      "label": "Baxtel — Baxtel Applewhite Tech Park: Mauermann Rd, south San Antonio near Toyota / Texas A&M-SA; 339 ac; land bank; existing industrial zoning",
+      "url": "https://baxtel.com/data-center/tract-applewhite-tech-park"
+    },
+    {
+      "label": "datacenterHawk — datacenterHawk Fleet profile: founded 2025; HQ \"3200 Cherry Creek S Drive, Ste 500, Denver, CO\"; owned by Tract Capital Management; sites Peru Ridge (2300 Peru Drive, McCarran NV 89437) and South Valley (9000 USA Parkway, Silver Springs NV 89429)",
+      "url": "https://datacenterhawk.com/marketplace/providers/fleet-data-centers"
+    },
+    {
+      "label": "Data Center Frontier — DCF Executive Roundtable: Fleet = \"mega-campus vertical development arm of Tract Capital ... which also operates Tract to refine development sites at ground level ... power, fiber, zoning and entitlements\"",
+      "url": "https://www.datacenterfrontier.com/executive-roundtable/article/55275695/executive-roundtable-data-center-site-selection-and-market-evolution-in-a-constrained-environment"
+    },
+    {
+      "label": "Cleanview — Tract Altoona 468 ac, planned, (county listed as \"Story\" — likely error; Altoona is Polk County)",
+      "url": "https://cleanview.co/data-centers/iowa/2131/tract-altoona"
+    },
+    {
+      "label": "Baxtel — Baxtel Caldwell Valley: Uhland TX; \"2,973 acres\"; codename \"Project Snow\"; 1.6GW on-site substation, first phase Q1 2028; Bluebonnet + LCRA; Kinder Morgan Permian Highway pipeline; 345kV; \"integrated on-site power generation\"; Prime Data Centers 1.43 mi, PowerHouse Austin adjacent",
+      "url": "https://baxtel.com/data-center/tract-caldwell-valley"
+    },
+    {
+      "label": "Central Texas Data Center Tracker — 1,515 ac (2025-05-07) + 1,458 ac (2026-01-13) = 2,973 ac, \"4+ GW\"; Bluebonnet FDA 360MW Q1 2028; Bluebonnet+LCRA substation to 1.6GW, 250MW contracted Q1 2028; Judge Hoppy Haden; no county tax incentives requested; no public water plan; KUT 2026-02-26 water advocates",
+      "url": "https://centexdatacenters.org/projects/tract-caldwell-county"
+    },
+    {
+      "label": "Equilar — Paul Bultema, SVP and Head of Tract Europe",
+      "url": "https://people.equilar.com/bio/person/paul-bultema-tract/62496310"
+    },
+    {
+      "label": "PUCN — electric docket index: 26-05027 (LLESA with PR RNO and SV RNO), 26-04026 and 26-04027 (temporary gas plants), 26-04007 (345 kV substation), 25-09008, 26-02021",
+      "url": "https://pucweb1.state.nv.us/PUC2/Dktinfo.aspx?Util=Electric"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

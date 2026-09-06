@@ -1,0 +1,1603 @@
+{
+  "schemaVersion": 7,
+  "slug": "prime-data-centers",
+  "name": "Prime Data Centers, LLC",
+  "shortName": "Prime Data Centers",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://primedatacenters.com/",
+  "headquarters": "Dallas, Texas, USA (400 North Ervay Street; 'a large regional office in Denver' and an office in New York; established in California in 2017 with Sacramento as the first campus)",
+  "founded": 2017,
+  "employees": "Not disclosed; LinkedIn lists 51–200 (about 171 associated members, September 2026); the 2025 sustainability report cites '54% YOY people growth'",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Prime Data Centers is a founder-controlled, privately held developer of wholesale and build-to-suit campuses — about 151 MW operating across Chicago, Los Angeles, Dallas, Sacramento and Silicon Valley, about 222 MW under construction led by the 240 MW Avondale, Arizona campus that broke ground in May 2026, and a '4+ GW' (or, in one April 2026 release, '7 GW') pipeline across Texas, Pennsylvania, Denmark, Finland, Germany and Spain — whose two named tenants are CoreWeave (a 15-year, about USD 2.2 billion lease at Elk Grove Village, financed by USD 900 million of 7.5% notes in June 2026) and Lambda (21 MW at Vernon), and whose 2026 has brought a shelved USD 500 million Nordic bond, a Grain Management preferred-equity injection into its parent, and companion lawsuits by seven former executives alleging more than USD 400 million of fraud on a company they say is now valued above USD 6 billion.\n\nBACKGROUND. Established in California in 2017 by Nicholas Laag and two real-estate partners and headquartered in Dallas since about 2025, Prime describes itself as 'a leading international developer and owner of hyperscale and purpose-built data centers' with '13 Campuses' and '28 Data Centers'; it sells powered shells, build-to-suit and turnkey wholesale space (threshold 500 kW; 'exclusively wholesale'), retrofits, and 'a range of financial deal structures' including joint ventures and sale-leasebacks. Its capital came in layers: Macquarie Capital's June 2021 equity partnership (a 'USD 5 billion over the next 10 years' plan), Ares Management and Siemens Financial Services as later institutional investors, joint control by Macquarie, Ares and Data Realty Group cleared by the European Commission in March 2025 (Case M.11843), a Snowhawk/Nuveen strategic investment in July 2025 during a reported USD 2 billion raise, and Grain Management's April 2026 preferred equity in Data Realty Holding Corp., 'the founding and controlling shareholder'. The brief's 'Prime Group' parentage has no support in any source; the brief's Northern Virginia and Kansas City sites do not exist. Per company pages (read via Wayback captures — the live site returns 403 to automated fetches), wire releases, Bloomberg via mirrors, court and regulator records, and the cited press.",
+  "ecosystemRole": "The mid-tier build-to-suit developer competing for the same hyperscale and neocloud tenants as the F7 landlords, and the corpus's clearest recapitalisation case: a founder's platform that has taken Macquarie, Ares, Siemens, Snowhawk/Nuveen and Grain money in five rounds, shelved a bond, and financed its one fully leased campus with project-level high-yield debt. It is CoreWeave's Chicago landlord and Lambda's Los Angeles landlord; a Holder Construction and Clune customer; an Oncor, ComEd, SRP, SMUD, Bluebonnet and Vernon Public Utilities large-load customer; Tract's neighbour and rival in Caldwell County; and the campus next door to Plus Power's Sierra Estrella battery in Avondale.",
+  "productsAndServices": [
+    {
+      "name": "Build-to-suit, powered shell and turnkey wholesale data centers (the core product)",
+      "category": "Wholesale data-center development and ownership",
+      "description": "'A build-to-suit data center is Prime Data Centers' most common development approach. Whether it's a 5MW+ wholesale turnkey or a 75MW+ hyperscale facility, we excel at building to our customers' exact specifications' (2025 site); the 2026 site's 'Model' block offers 'Powered Shells for custom infrastructure, Build-to-Suit environments for rapid deployment, or transforming legacy sites through strategic retrofits', at scales 'from a single data hall (3-12 MW), through to an entire data center (20+ MW) or a full campus (100+ MW)'. Prime 'focuses exclusively on wholesale solutions' with the retail threshold defined at 500 kW, leases 'on either a triple net (NNN) or modified gross' basis, and — 'as a privately held company that is majority founder-owned' — offers 'joint ventures (JV) and sale-leaseback opportunities, as well as more traditional leasing options', plus lease-to-own and 'hybrid expansion options … starting with a powered shell that converts into customized turnkey data halls'. The August 2026 site adds a 'Solutions' menu — Gigascale, Metro, Build-to-Suit — whose pages are not archived.",
+      "highlights": [
+        "Named tenants: CoreWeave — a 15-year build-to-suit lease of the Elk Grove Village campus worth about USD 2.2 billion with two seven-year renewals, disclosed through the June 2026 bond marketing (Bloomberg via Investing.com; GuruFocus); Lambda — 21 MW of LAX01's 33 MW from November 2025 for NVIDIA Blackwell systems. Unnamed: the 'leading hyperscaler' that has 'secured' Avondale buildings 1–3 (144 MW); the 'publicly traded global enterprise' in Sacramento's 8 MW build-to-suit (2021); the Fortune 50 'cloud service provider … global leader in eCommerce' at Hayward; LAX01's second AI tenant. Historical: Cyxtera pre-leased two Santa Clara buildings and rejected both leases in its 2023 bankruptcy.",
+        "Operating base per the company's own building-status fields (April–May 2026 captures): ORD01-01 Chicago 72 MW (leased), LAX01-01 33 MW (leased), DFW01-01 8 MW (leased), SMF01-01 8 MW (leased), SJC01 Hayward 20 MW (leased), SJC06 San Jose 10 MW (available) — about 151 MW operational, 141 MW leased. Under construction: PHX01-01 to -04 (4 × 48 MW), DFW01-02 (12 MW), SMF01-02 (18 MW). In development and already 'Leased': ORD01-02 and -03 (108 MW).",
+        "Design basis on every location page: 'M&E: Concurrently maintainable · Cooling: Closed loop air and liquid · Committed to 100% renewable · Performance: AI-ready'; the AI page offers 'over 100kW per rack', direct-to-chip and immersion options, 'minimum two independent entry points per building', and cluster optimisation for H100, A100, HGX B200 'and emerging accelerators'; LAX01 was built for 40 kW per rack on air with liquid to 120 kW. Tech sheets say 'N+1' where the pages say concurrently maintainable.",
+        "Efficiency as reported (2025 Sustainability Report, FY2024 data): design PUE 1.20 (ISO/IEC 30134-2 Category 1), design WUE site 0.002 L/kWh, market-based CUE 0.109 kg CO2e per IT kWh, RECs covering about 36% of US operating electricity, water restoration certificates at 120% of use, HVO as the main US backup-generator fuel with all US backups on HVO targeted by 2030; ISO 27001, SOC 2 and PCI-DSS achieved in 2024; ENERGY STAR for DFW01-01 and SMF01-01 (January 2026)."
+      ],
+      "positioning": "Prime names no competitor and says only that 'we move faster than traditional operators'. Reporters set it beside Microsoft's Elk Grove Technology Park, CloudHQ and Meta in Chicago and beside Aligned, CyrusOne, Equinix and PowerHouse/Hillwood in CBRE's Chicago survey; beside STACK and Vantage in Phoenix; beside CoreSite and Digital Realty in Vernon; beside Tract and PowerHouse in Caldwell County; and beside Equinix, CyrusOne and Data4 in Madrid. The only comparative claim it can make on the record is speed to a leased building: LAX01 'leased … before it was out of the ground' (JLL) and ORD01-01 fully leased.",
+      "soldThrough": "Direct wholesale leases (triple-net or modified gross) to hyperscalers, neoclouds and enterprises; build-to-suit, powered-shell, lease-to-own, joint-venture and sale-leaseback structures; acquisitions of cash-flowing facilities (DFW01 bought from VPLS/Evocative in 2023; a USD 200 million Cerberus acquisition facility in 2024).",
+      "targetSegments": [
+        "Hyperscalers (Avondale, Elk Grove)",
+        "AI neoclouds (CoreWeave, Lambda)",
+        "Enterprises and public technology companies (Sacramento, Hayward, Silicon Valley)"
+      ],
+      "roadmap": "'1GW+ critical IT load deliverable between 2025 and 2028' (July 2025); Avondale buildings 1–3 under construction from May 2026 with no delivery date released; Austin phase 1 (two 380,000 sq ft shells, USD 400 million) June 2026 to September 2027 per the Texas filing; SMF02 from May 2026; Esbjerg first capacity late 2029; Järvenpää construction from 2027."
+    },
+    {
+      "name": "The US campus portfolio — Chicago, Los Angeles, Phoenix, Dallas–Fort Worth, Austin, Sacramento and Silicon Valley",
+      "category": "Owned campuses (about 151 MW operating; about 222 MW under construction; about 700 MW in development on the location pages)",
+      "description": "Chicago ORD01, Elk Grove Village: 29.75 acres, three hyperscale buildings, 270 MW on the page (72 + 54 + 54 per building), ComEd with an adjacent substation; ORD01-01 operational and leased, ORD01-02 and -03 in development and leased — the CoreWeave campus, built by Clune with Gensler design and refinanced in June 2026. Los Angeles LAX01, Vernon: 1.95 acres, 33 MW across six halls on a 49.5 MVA, 66 kV Vernon Public Utilities substation, opened November 2024 'one hundred percent leased by two artificial intelligence companies'. Phoenix PHX01, Avondale: 66.5 acres bought in 2023 for USD 28.9 million, five buildings of 267,000 sq ft and 48 MW (240 MW; 210 MW and 42 MW per building in the 2023 plan), an SRP substation of about 250 MW with 'Phase 1 … commissioned to support the first 144MW', buildings 1–3 broke ground 21 May 2026 with ARCO/Murray. Dallas DFW01: two enterprise buildings, 8 MW operational (bought from VPLS/Evocative in 2023) and 12 MW under construction, Oncor; plus DFW04 Fort Worth (three 267,000 sq ft, 48 MW buildings; Texas filing completion date January 2026 with no reported opening) and DFW02 Garland (three buildings, 'more than USD 1.3 billion'). Austin AUS01, Lockhart: 205 acres, eight buildings and 384 MW on the page, Bluebonnet Electric Cooperative; the May 2026 Texas filing cut phase 1 to two 380,000 sq ft shells at USD 400 million, June 2026 to September 2027. Sacramento SMF01, McClellan Park: 8 MW operational (Holder Construction GC) and SMF02's 18 MW under construction from May 2026 (Clune), SMUD. Silicon Valley: five sites and 57 MW — Hayward SJC01 20 MW leased, Santa Clara SJC02 9 MW powered shell leased, SJC03 and SJC04 9 MW each, San Jose SJC06 10 MW — on Silicon Valley Power and PG&E.",
+      "highlights": [
+        "Chicago is the fully leased campus and the one with a market price: Elk Grove Village Property LLC, 'a wholly-owned indirect subsidiary of Prime Data Centers LLC', priced USD 900 million of five-year 7.5% notes at par on 2 June 2026 (upsized from USD 850 million; Santander sole bookrunner) to refinance USD 500 million of debt and 'fund the remaining estimated construction costs', backed by CoreWeave's 15-year lease; CBRE's H2 2025 survey records the campus as fully leased.",
+        "Phoenix is the flagship: 'more than $3 billion' of Prime investment 'with customers investing an average 2x more', buildings 1–3 'secured by a leading hyperscaler', buildings 4 and 5 available; Plus Power's Sierra Estrella battery (250 MW / 1,000 MWh, SRP tolling) sits at the same Avondale Boulevard address block. Data Center Knowledge's July 2026 note that Prime 'opened the first facility' conflicts with the company's 'Construction' status and the May groundbreaking.",
+        "Texas is where the utility clock has bitten: in November 2023 Prime's then-EVP said Oncor had pushed '2 GW of capacity across five separate data center projects throughout Texas' from 2025 'into 2027'; DFW04's filed completion date passed without a reported opening; Austin's phase 1 shrank from three buildings and USD 1.3 billion (2024) to two shells and USD 400 million (2026), and Caldwell County suspended data-center abatements in August 2026 after approving Prime's 10-year, 100% abatement with a PILOT in 2024.",
+        "Counts drift by page and date: '14 campuses' (home, July 2026) against '13 Campuses · 28 Data Centers' (about page, August 2026); Chicago '270MW' on the page against 180 MW summed per building, 175 MW in the 2022 release and 275 MVA at the substation."
+      ],
+      "positioning": "Prime's US footprint is metro-edge wholesale in the West and Chicago plus hyperscale build-to-suit in Phoenix and Texas — smaller than the F7 landlords' campuses but fully leased where built.",
+      "soldThrough": "Owned by project subsidiaries (Elk Grove Village Property LLC; Benbrook Property LLC; Lockhart Property LLC) and leased wholesale; Hayward held in a Harrison Street joint venture (per trade press) and reported as offered for sale.",
+      "targetSegments": [
+        "Neoclouds (CoreWeave, Lambda)",
+        "Hyperscalers (Avondale)",
+        "Enterprises (Sacramento, Dallas, Silicon Valley)"
+      ],
+      "roadmap": "Avondale buildings 1–3 in construction (no date); DFW01-02 and SMF02 in construction; ORD01-02/-03 development, leased; Austin phase 1 to September 2027; Santa Clara 1231 Comstock and 2225 Martin planned."
+    },
+    {
+      "name": "Europe — Madrid, Frankfurt, Esbjerg, Järvenpää, Sæby and Berlin",
+      "category": "EMEA development pipeline (about 690–1,000 MW announced; nothing operating)",
+      "description": "Madrid MAD01, Alcobendas: 8 acres, one 40 MW critical building of 25,810 sq m on Iberdrola power with an on-site substation, announced May 2024 with construction 'estimated to commence Q1 2025, subject to customer demand'. Frankfurt FRA01, Main-Taunus-Kreis: 2.8 acres, 20 MW in development (an 80 MW figure and a site removal from the website were reported in 2025). Esbjerg ESB01, Denmark (27 March 2026): with local partner Brunswick Real Estate, applying in the EIA for 550 MW IT on a 640,000 sq m municipal site, a 160 MW first phase of about EUR 2 billion, full build-out about EUR 6 billion, construction from 2027 and go-live 'late 2029'. Järvenpää, Finland (January 2026): a 12-hectare site, 100–130 MW, EUR 1.2 billion initial per the city (EUR 1.8 billion in trade press), Brunswick and AINS Group, EIA in 2026, construction from 2027. Sæby AAL01, Denmark: an 80 MW page not linked from the 2026 navigation; the 2023 124 MW plan is listed as cancelled by Baxtel while Prime's 2026 boilerplate still names it. Berlin appears only in market lists.",
+      "highlights": [
+        "Europe is announced capacity without a tenant, a utility date or a financing on the record; the Nordic bond that would have funded it — USD 600 million cut to USD 500 million — was shelved in July 2026 'after investors balked at the proposed terms' (Bloomberg via swissinfo)."
+      ],
+      "positioning": "Prime's European pitch is subsea-cable adjacency (Esbjerg's six cables) and district-heating reuse (Sæby, Järvenpää) rather than scale; its neighbours in Madrid are Equinix, CyrusOne and Data4.",
+      "soldThrough": "Development partnerships with Brunswick Real Estate in the Nordics; no lease disclosed.",
+      "targetSegments": [
+        "Hyperscalers and cloud providers in Nordic and Iberian markets"
+      ],
+      "roadmap": "Esbjerg EIA and permits, construction 2027, capacity late 2029; Järvenpää EIA 2026, construction 2027; Madrid subject to demand; Frankfurt and Berlin undated."
+    },
+    {
+      "name": "Power — on-site substations, utility large-load agreements and the Pennsylvania gas-fired campus",
+      "category": "Power delivery for the campuses",
+      "description": "Prime builds or co-funds its own substations (Vernon's 49.5 MVA at 66 kV 'built by Prime'; Sacramento's 50 MVA private substation with two 69 kV feeds; Chicago's 275 MVA on-site; Avondale's about 250 MW SRP substation with phase 1 commissioned for 144 MW) and holds large-load service from SMUD, Vernon Public Utilities, ComEd, Oncor, SRP, Silicon Valley Power, PG&E, Bluebonnet, Iberdrola and Nord Energi. On 6 May 2026 UGI Energy Services announced it 'will sell property to Prime Data Centers for construction of an on-site gas-fueled electric generation facility' in Pennsylvania's northern tier, with Prime's gas demand 'projected to exceed 100,000 dekatherms per day within three to five years' and UGI investing more than USD 100 million in supply infrastructure; the March 2026 hire of John Bates (ex-Radial Power, NRG, Sunnova) as EVP of Development and Power covers 'grid-connected and behind-the-meter assets'.",
+      "highlights": [
+        "The Pennsylvania campus has no county, capacity or date on the record and drew local opposition and a former DEP secretary's call for transparency within a fortnight of the announcement.",
+        "SRP's large-load regime (15-year contracts, 80% minimum takes, collateral in the hundreds of millions, 24 applicants cut to three after a February 2026 deposit) applies to Avondale; Prime is not named in SRP's coverage."
+      ],
+      "positioning": "A landlord that self-builds substations to shorten the utility clock, now adding behind-the-meter gas for the first time — the Fermi and Tract direction, a year behind them.",
+      "soldThrough": "Utility tariffs and agreements held by the project entities; the UGI arrangement is a land sale plus gas supply, with Prime to build the plant.",
+      "targetSegments": [
+        "Prime's own campuses"
+      ],
+      "roadmap": "Pennsylvania gas demand 'within three to five years'; Avondale substation phases 2–5 undated."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Location pages — campus specifications as the company lists them (Wayback captures April–May 2026)",
+      "specs": [
+        {
+          "band": "Chicago ORD01 (Elk Grove Village)",
+          "label": "Campus",
+          "value": "29.75 acres; 3 hyperscale buildings; 270MW; 958,000 sq ft; 18 halls; ComEd; substation adjacent; 17 carriers in proximity"
+        },
+        {
+          "band": "Chicago ORD01 (Elk Grove Village)",
+          "label": "Buildings",
+          "value": "ORD01-01 Operational, Leased, 72MW, 384,000 sq ft, Hyperscale with liquid cooling; ORD01-02 Development, Leased, 54MW, 279,000 sq ft; ORD01-03 Development, Leased, 54MW, 294,000 sq ft"
+        },
+        {
+          "band": "Los Angeles LAX01 (Vernon)",
+          "label": "Campus",
+          "value": "1.95 acres; 33MW; 242,495 sq ft; 6 halls; Vernon Power Utility (VPU); substation on site; LAX01-01 Operational, Leased, Multi-tenant"
+        },
+        {
+          "band": "Phoenix PHX01 (Avondale)",
+          "label": "Campus",
+          "value": "66.5 acres; 5 hyperscale buildings; 240MW; 1,300,000 sq ft; 20 halls; SRP; substation on site"
+        },
+        {
+          "band": "Phoenix PHX01 (Avondale)",
+          "label": "Buildings",
+          "value": "PHX01-01/-02/-03 Construction, Leased, 48MW / 267,000 sq ft each; PHX01-04 Construction, Available, 48MW; PHX01-05 Development, Available, 48MW"
+        },
+        {
+          "band": "Dallas DFW01",
+          "label": "Campus",
+          "value": "8.44 acres; 2 enterprise buildings; 20MW; 213,000 sq ft; 7 halls; Oncor; DFW01-01 Operational, Leased, 8MW, Multi-tenant; DFW01-02 Construction, Leased, 12MW"
+        },
+        {
+          "band": "Austin AUS01 (Lockhart)",
+          "label": "Campus",
+          "value": "205 acres; 8 buildings; 384MW; 2,000,000 sq ft; Blue Bonnet Electric Cooperative; substation on site; AUS01-01…08 Development, Available, Hyperscale with liquid cooling; AUS01-01 144MW / 250,000 sq ft"
+        },
+        {
+          "band": "Sacramento SMF01 (McClellan Park)",
+          "label": "Campus",
+          "value": "8.64 acres; 2 enterprise buildings; 26MW; 215,000 sq ft; SMUD; SMF01-01 Operational, Leased, 8MW, Single tenant; SMF01-02 Construction, Available, 18MW, 150,000 sq ft; CA opportunity zone"
+        },
+        {
+          "band": "Silicon Valley portfolio",
+          "label": "Five sites",
+          "value": "13 acres; 57MW; 540,000 sq ft; SVP, PG&E; SJC01 Hayward Operational, Leased, 20MW; SJC02 Powered shell, Leased, 9MW; SJC03 Development, Leased, 9MW; SJC04 Development, Available, 9MW; SJC06 San Jose Operational, Available, 10MW"
+        },
+        {
+          "band": "Madrid MAD01 (Alcobendas)",
+          "label": "Campus",
+          "value": "8 acres; 1 building; 40MW; 25,810 sq m; 4 halls; Iberdrola; substation on site; 10 carriers on campus"
+        },
+        {
+          "band": "Frankfurt FRA01",
+          "label": "Campus",
+          "value": "2.8 acres; 1 building; 20MW; 15,000 sq m; Development"
+        },
+        {
+          "band": "Saeby AAL01 (Denmark)",
+          "label": "Campus (page not in 2026 navigation)",
+          "value": "27.52 acres; 1 building; 80MW; 49,000 sq m; Nord Energi; Development"
+        },
+        {
+          "band": "Common spec text",
+          "label": "Every location page",
+          "value": "M&E: Concurrently maintainable · Cooling: Closed loop air and liquid · Security: Comprehensive, layered protection · Committed to 100% renewable · Performance: AI-ready · Additional Features: Infrastructure galleries for data hall privacy"
+        }
+      ],
+      "notes": "Company location pages and tech sheets, read via Wayback captures because the live site returns 403. Chicago's 270 MW headline does not equal the per-building sum (180 MW); tech sheets list 'M&E: N+1'."
+    },
+    {
+      "product": "AI-ready design and sustainability metrics (AI page; 2025 Sustainability Report, FY2024 data)",
+      "specs": [
+        {
+          "band": "Density",
+          "label": "Rack power",
+          "value": "Over 100kW per rack supporting the most demanding GPU configurations; LAX01: standard air cooling for up to 40 kilowatts-per-rack density with the ability to combine liquid cooling to condition infrastructure that will consume 120 kilowatts per rack"
+        },
+        {
+          "band": "Cooling",
+          "label": "Options",
+          "value": "air, liquid, and hybrid systems … direct-to-chip cooling, immersion cooling, and hybrid systems"
+        },
+        {
+          "band": "Efficiency",
+          "label": "Design PUE (2024)",
+          "value": "1.20 (ISO/IEC 30134-2 Cat 1); 1.33 at 100% load in the 2023 report"
+        },
+        {
+          "band": "Efficiency",
+          "label": "Design WUE (2024)",
+          "value": "Site 0.002 L/kWh; Source 4.054"
+        },
+        {
+          "band": "Efficiency",
+          "label": "CUE (2024, market-based)",
+          "value": "0.109 kg CO2e/IT kWh; RECs ~36% of 2024 US operating electricity; water restoration certificates 120% of water use"
+        },
+        {
+          "band": "Operations",
+          "label": "Backup fuel",
+          "value": "HVO the main US backup-generator fuel; target all US backups on HVO by 2030; 100% renewable matching target 2030"
+        },
+        {
+          "band": "Compliance",
+          "label": "Certifications",
+          "value": "ISO 27001, SOC 2 and PCI-DSS achieved in 2024; ENERGY STAR for DFW01-01 and SMF01-01 (January 2026)"
+        }
+      ],
+      "notes": "Company AI page and sustainability report."
+    },
+    {
+      "product": "Capital events on the record (private company)",
+      "specs": [
+        {
+          "band": "Equity",
+          "label": "Macquarie Capital (24 June 2021)",
+          "value": "strategic partnership and equity investment; targeted capital investments in excess of $5 billion over the next 10 years; pipeline 400 MW"
+        },
+        {
+          "band": "Equity",
+          "label": "Ares Management; Siemens Financial Services",
+          "value": "'existing institutional investors' (July 2025); Ares joint control by contract cleared by the European Commission 19 March 2025 (Case M.11843, with Macquarie via WDCAH and Data Realty Group)"
+        },
+        {
+          "band": "Equity",
+          "label": "Snowhawk LP + Nuveen (31 July 2025)",
+          "value": "strategic equity investment, amount undisclosed; company 'raising more than $2 billion this year'"
+        },
+        {
+          "band": "Equity",
+          "label": "Grain Management (7 April 2026)",
+          "value": "significant preferred equity investment in Data Realty Holding Corp., the founding and controlling shareholder; ability to provide additional capital over time; terms undisclosed"
+        },
+        {
+          "band": "Debt",
+          "label": "Cerberus Capital Management (September 2024)",
+          "value": "$200 million acquisition credit facility, arranged by Newmark"
+        },
+        {
+          "band": "Debt",
+          "label": "Silver Point Finance (2023)",
+          "value": "$22.2 million + $59.8 million on the Avondale land"
+        },
+        {
+          "band": "Debt",
+          "label": "Elk Grove Village Property LLC (2 June 2026)",
+          "value": "$900 million five-year 7.5% senior notes at par (upsized from $850 million; Santander sole bookrunner); refinances $500 million; backed by CoreWeave's 15-year lease (~$2.2 billion, two 7-year renewals)"
+        },
+        {
+          "band": "Debt",
+          "label": "Norwegian-law bond (July 2026)",
+          "value": "$600 million cut to $500 million, then shelved 'after investors balked at the proposed terms'; may relaunch"
+        },
+        {
+          "band": "Valuation (contested)",
+          "label": "Plaintiffs' claim (August 2026)",
+          "value": "'from about $140 million to more than $6 billion'"
+        }
+      ],
+      "notes": "Company releases, PR Newswire, Macquarie, EUR-Lex, Commercial Observer, CPE, Bloomberg via Investing.com and swissinfo, KERA."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-22",
+      "category": "policy",
+      "headline": "Caldwell County commissioners suspend Chapter 312 tax abatements for all large data centers after resident backlash — Prime's 2024 abatement for the Lockhart campus predates the suspension",
+      "read": "The county that approved a 10-year, 100% abatement in 2024 has closed the window behind Prime and in front of Tract.",
+      "source": "https://www.yahoo.com/news/politics/articles/texas-county-suspends-tax-breaks-170000940.html"
+    },
+    {
+      "date": "2026-08-07",
+      "category": "legal",
+      "headline": "KERA: seven former employees — including the former Chief Commercial Officer, VP of HR and Head of Utilities and Incentives — sue Prime, Data Realty Holdings, Laag and Pelz in Dallas County, the Southern District of New York and California for fraud, misrepresentation and civil RICO, claiming more than USD 400 million and a valuation that went 'from about $140 million to more than $6 billion'",
+      "read": "The commercial leadership that signed CoreWeave and Lambda is now suing the founders; the USD 6 billion figure is the only valuation on the record and it is the plaintiffs'.",
+      "source": "https://www.keranews.org/business-economy/2026-08-07/dallas-data-center-company-denied-former-employees-400-million-in-compensation-lawsuit-says"
+    },
+    {
+      "date": "2026-08-04",
+      "category": "legal",
+      "headline": "Plaintiffs' counsel Rogge Dunn files a USD 185 million Texas suit and announces the companion actions, alleging a 'two-tiered valuation system' and coerced re-signing of phantom-equity agreements",
+      "read": "No defendant response was found; the allegations are untested.",
+      "source": "https://roggedunngroup.com/rogge-dunn-group-files-185m-lawsuit-for-executives-of-data-center.html"
+    },
+    {
+      "date": "2026-07-22",
+      "category": "financial",
+      "headline": "Bloomberg (via swissinfo): Prime 'shelved a planned Norwegian-law bond after investors balked at the proposed terms', having cut it from USD 600 million to USD 500 million; it 'may look to relaunch'",
+      "read": "The first public financing failure — six weeks after the Elk Grove notes succeeded on a CoreWeave lease.",
+      "source": "https://www.swissinfo.ch/eng/ai-borrowers-are-pushing-a-niche-credit-market-to-its-limits/91783622"
+    },
+    {
+      "date": "2026-07-02",
+      "category": "capacity",
+      "headline": "Data Center Knowledge: 'In Avondale, Arizona, Prime Data Centers opened the first facility in its 240 MW hyperscale campus'",
+      "read": "Conflicts with the company's own 'Construction' status six weeks after groundbreaking; treated as unconfirmed.",
+      "source": "https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-july-2026"
+    },
+    {
+      "date": "2026-06-02",
+      "category": "financial",
+      "headline": "Elk Grove Village Property LLC prices USD 900 million of five-year 7.5% notes at par (upsized from USD 850 million; Santander) to refinance USD 500 million and fund remaining construction; the campus is leased to CoreWeave for 15 years, about USD 2.2 billion",
+      "read": "The first bond, the first named hyperscale-class tenant, and the first market coupon on a Prime asset — all disclosed through the bond, not the company.",
+      "source": "https://www.investing.com/news/stock-market-news/coreweave-data-center-raises-900-million-in-junkbond-sale--bloomberg-93CH-4723001"
+    },
+    {
+      "date": "2026-05-21",
+      "category": "capacity",
+      "headline": "Groundbreaking on Avondale buildings 1–3 (3 × 267,000 sq ft, 48 MW each; 144 MW): 'more than $3 billion' of Prime investment 'with customers investing an average 2x more'; buildings 1–3 'secured by a leading hyperscaler'; phase 1 of the ~250 MW SRP substation commissioned; GC ARCO/Murray",
+      "read": "The flagship starts three years after the land purchase, with the tenant unnamed and no delivery date released.",
+      "source": "https://finance.yahoo.com/sectors/technology/articles/prime-data-centers-breaks-ground-150000450.html"
+    },
+    {
+      "date": "2026-05-13",
+      "category": "capacity",
+      "headline": "Texas filing TABS2026019473: AUS-01, Lockhart — 'Two new 380,000 sf shell buildings', estimated cost USD 400 million, June 2026 to September 2027, Gensler",
+      "read": "Austin's phase 1 is two shells, down from three buildings and USD 1.3 billion in 2024.",
+      "source": "https://baxtel.com/news/prime-plans-to-construct-two-data-centers-outside-austin-texas"
+    },
+    {
+      "date": "2026-05-07",
+      "category": "capacity",
+      "headline": "Groundbreaking on SMF02 at McClellan Park, Sacramento: 18 MW, 150,000 sq ft, Clune Construction, SMUD; about 250 construction and 30 permanent jobs",
+      "read": "A second multi-tenant building at the first campus.",
+      "source": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-second-sacramento-data-center-expanding-regional-campus-footprint/"
+    },
+    {
+      "date": "2026-05-06",
+      "category": "partnership",
+      "headline": "UGI Energy Services partnership: UGI to sell Prime land for an on-site gas-fired generation plant in Pennsylvania's northern tier and build supply infrastructure (more than USD 100 million); Prime's gas demand 'projected to exceed 100,000 dekatherms per day within three to five years'",
+      "read": "Prime's first behind-the-meter campus — location, size and date undisclosed.",
+      "source": "https://blog.ugies.com/ugi-energy-services-and-prime-data-centers-forge-strategic-partnership-to-power-data-center-campus"
+    },
+    {
+      "date": "2026-04-07",
+      "category": "financial",
+      "headline": "Grain Management makes 'a significant preferred equity investment in Data Realty Holding Corp., the founding and controlling shareholder of Prime Data Centers', with 'the ability to provide additional capital over time'; the release says '7-gigawatts (GW) of operational and planned capacity'",
+      "read": "Capital at the parent, not the company — and a pipeline figure the company's own site does not use.",
+      "source": "https://www.prnewswire.com/news-releases/grain-management-announces-strategic-structured-financing-in-data-realty-holding-corp-the-founding-and-controlling-shareholder-of-prime-data-centers-302735733.html"
+    },
+    {
+      "date": "2026-03-27",
+      "category": "capacity",
+      "headline": "Esbjerg, Denmark (ESB01) with Brunswick Real Estate: 550 MW IT sought in the EIA; 160 MW first phase (about EUR 2 billion), about EUR 6 billion at full build; construction 2027, go-live late 2029",
+      "read": "The largest announced campus is in Europe, unfinanced and untenanted.",
+      "source": "https://primedatacenters.com/news/prime-data-centers-announces-plans-for-major-data-center-development-in-esbjerg-denmark/"
+    },
+    {
+      "date": "2026-03-03",
+      "category": "leadership",
+      "headline": "John Bates appointed Executive Vice President of Development and Power — founder of Radial Power (more than 300 MW; more than USD 500 million raised), Starmex Energy; Sunnova; NRG; Chevron",
+      "read": "A power developer for 'grid-connected and behind-the-meter assets'; the UGI campus followed two months later.",
+      "source": "https://primedatacenters.com/news/prime-data-centers-appoints-john-bates-as-executive-vice-president-of-development-power/"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "other",
+      "headline": "DFW01-01 and SMF01-01 earn ENERGY STAR certification",
+      "read": "Two of the six operating buildings; the sustainability report is the company's most detailed disclosure.",
+      "source": "https://primedatacenters.com/news/prime-data-centers-dallas-and-sacramento-facilities-earn-energy-star-certification-for-superior-energy-performance/"
+    },
+    {
+      "date": "2026-01-14",
+      "category": "capacity",
+      "headline": "City of Järvenpää announces Prime's plan for an AI-ready data center of about EUR 1.2 billion on 12 hectares with Brunswick Real Estate; EIA in 2026, construction from 2027",
+      "read": "Finland is the fourth European market announced with no tenant.",
+      "source": "https://www.jarvenpaa.fi/a/prime-data-centers-suunnittelee-mittavaa-datakeskusinvestointia-jarvenpaahan"
+    },
+    {
+      "date": "2025-11-13",
+      "category": "customer",
+      "headline": "Lambda leases 21 MW of LAX01's 33 MW for NVIDIA Blackwell systems ('AI-optimized infrastructure in Southern California'); Vernon's mayor quoted",
+      "read": "The second named tenant; LAX01 had been 'one hundred percent leased by two artificial intelligence companies' since opening.",
+      "source": "https://primedatacenters.com/news/prime-data-centers-and-lambda-partner-to-power-the-next-era-of-superintelligence-with-ai-optimized-infrastructure-in-southern-california/"
+    },
+    {
+      "date": "2025-10-30",
+      "category": "leadership",
+      "headline": "Donncha Ó Tuama appointed Chief Legal Officer (ex-General Counsel, Yondr Group) and Michael Hildebrand SVP Product Delivery, North America (ex-Tesla, Eli Lilly)",
+      "read": "A legal chief who ran Yondr's USD 5.8 billion sale, nine months before the founders were sued.",
+      "source": "https://primedatacenters.com/news/prime-data-centers-appoints-donncha-o-tuama-as-chief-legal-officer-michael-hildebrand-as-senior-vice-president-of-product-delivery-north-america/"
+    },
+    {
+      "date": "2025-07-31",
+      "category": "financial",
+      "headline": "Snowhawk LP and Nuveen make a strategic equity investment alongside 'existing institutional investors' Macquarie Capital, Ares Management and Siemens Financial Services; Prime is 'raising more than $2 billion this year' on a 'four gigawatts (GW) roadmap'",
+      "read": "The fourth investor group; the USD 2 billion raise had been delayed from Q1 by lease negotiations per Infralogic.",
+      "source": "https://primedatacenters.com/news/snowhawk-and-nuveen-make-strategic-investment-in-prime-data-centers/"
+    },
+    {
+      "date": "2025-05-15",
+      "category": "financial",
+      "headline": "Infralogic: Prime's roughly USD 2 billion equity raise (Guggenheim, Moelis) delayed from Q1 2025 by 'prolonged ongoing lease negotiations'; a debt raise for in-market projects begun",
+      "read": "The pattern of 2025–2026: leases first, then capital.",
+      "source": "https://ionanalytics.com/insights/infralogic/hyperscaler-equity-raise-gets-delayed/"
+    },
+    {
+      "date": "2025-03-19",
+      "category": "corporate",
+      "headline": "European Commission clears joint control of Prime by Ares, Macquarie (via WDCAH) and Data Realty Group (Case M.11843, simplified procedure)",
+      "read": "The only regulatory record of who controls the company.",
+      "source": "https://www.marketscreener.com/quote/stock/MACQUARIE-GROUP-LIMITED-6491460/news/European-Commission-OKs-Prime-Data-Centers-Takeover-by-Ares-Macquarie-Data-Realty-49376294/"
+    },
+    {
+      "date": "2024-11-14",
+      "category": "capacity",
+      "headline": "LAX01, Vernon opens: 33 MW, 'one hundred percent leased by two artificial intelligence companies'; air cooling to 40 kW per rack, liquid to 120 kW",
+      "read": "The first AI-era building, leased before completion.",
+      "source": "https://primedatacenters.com/news/prime-opens-los-angeles-data-center/"
+    },
+    {
+      "date": "2024-11-07",
+      "category": "capacity",
+      "headline": "365 injury-free days at Elk Grove Village with Clune Construction; the site 'will deliver 180 MW'",
+      "read": "Chicago's first building nearing completion; the campus later carried 270 MW on the page.",
+      "source": "https://primedatacenters.com/news/data-center-safety-milestone/"
+    },
+    {
+      "date": "2024-09-03",
+      "category": "financial",
+      "headline": "Cerberus Capital Management closes a USD 200 million credit facility for Prime's US data-center acquisitions, arranged by Newmark",
+      "read": "Acquisition capital for the 'asset-acquisition arm' the CEO described in 2021.",
+      "source": "https://commercialobserver.com/2024/09/cerberus-closes-200m-credit-facility-for-u-s-data-center-acquisitions/"
+    },
+    {
+      "date": "2024-05-22",
+      "category": "capacity",
+      "headline": "Madrid MAD01: 40 MW critical in Alcobendas, 'construction estimated to commence Q1 2025, subject to customer demand'",
+      "read": "Still 'Development' in May 2026.",
+      "source": "https://primedatacenters.com/news/prime-madrid-data-center/"
+    },
+    {
+      "date": "2024-02-26",
+      "category": "capacity",
+      "headline": "Bisnow: Prime plans a USD 1.3 billion Austin campus (Lockhart) — three buildings in the first filings",
+      "read": "Cut to two shells and USD 400 million by the May 2026 filing.",
+      "source": "https://www.bisnow.com/national/news/data-center/prime-data-centers-planning-13b-austin-campus-123071"
+    },
+    {
+      "date": "2023-11-16",
+      "category": "regulatory",
+      "headline": "Bisnow: Prime's EVP says Oncor pushed '2 GW of capacity across five separate data center projects throughout Texas' from 2025 'into 2027' after more than a year of negotiation",
+      "read": "The utility clock on Texas; DFW04 and DFW02 have no reported openings as of September 2026.",
+      "source": "https://www.bisnow.com/national/news/data-center/its-going-to-be-frustrating-dallas-data-centers-face-two-new-power-problems-121711"
+    },
+    {
+      "date": "2023-05-04",
+      "category": "capacity",
+      "headline": "First Phoenix campus announced: Avondale, 210 MW, first building 'projected for Q3 2025 completion'",
+      "read": "Now 240 MW with groundbreaking in May 2026 — three years and 30 MW later.",
+      "source": "https://primedatacenters.com/news/prime-announces-its-first-phoenix-data-center-campus/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "coreweave",
+      "type": "customer",
+      "status": "active",
+      "since": "2025",
+      "scale": "~$2.2 billion, 15-year lease",
+      "via": "Elk Grove Village (ORD01) build-to-suit campus",
+      "note": "CoreWeave is the tenant of Prime's Elk Grove Village campus under a 15-year build-to-suit lease worth about USD 2.2 billion with two seven-year renewals, disclosed through the June 2026 USD 900 million bond marketing.",
+      "context": "Bloomberg (via Investing.com, 2 June 2026) and GuruFocus report that Elk Grove Village Property LLC, a wholly owned indirect Prime subsidiary, priced USD 900 million of five-year 7.5% notes backed by the CoreWeave lease to refinance USD 500 million and fund remaining construction. Prime's location page shows all three Chicago buildings 'Leased' (72 + 54 + 54 MW) without naming the tenant, and CBRE's H2 2025 Chicago survey records the campus as fully leased. The CoreWeave dossier records nothing on Prime or Elk Grove Village.",
+      "source": "https://www.investing.com/news/stock-market-news/coreweave-data-center-raises-900-million-in-junkbond-sale--bloomberg-93CH-4723001"
+    },
+    {
+      "slug": "lambda",
+      "type": "customer",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "21 MW of 33 MW",
+      "via": "LAX01, Vernon (Los Angeles)",
+      "note": "Lambda leases 21 MW of Prime's 33 MW LAX01 building in Vernon for NVIDIA Blackwell systems, announced 13 November 2025.",
+      "context": "Prime's release says 'Lambda will initially lease a portion of the facility representing 21 MW of power'; LAX01 opened in November 2024 'one hundred percent leased by two artificial intelligence companies', so Lambda is one of the two and the other is unnamed. The Lambda dossier lists 'Prime Data Centers Vernon CA (LAX01): 21 of 33 MW leased' among its colocation sites.",
+      "source": "https://primedatacenters.com/news/prime-data-centers-and-lambda-partner-to-power-the-next-era-of-superintelligence-with-ai-optimized-infrastructure-in-southern-california/"
+    },
+    {
+      "slug": "holder-construction",
+      "type": "supplier",
+      "status": "historical",
+      "since": "2020",
+      "via": "SMF01, McClellan Park, Sacramento (general contractor)",
+      "note": "Holder Construction was the general contractor for Prime's first building at McClellan Park, Sacramento, with Corgan as architect and kW Mission Critical Engineering as MEP engineer, per the mechanical contractor's project page.",
+      "context": "ACCO Engineered Systems' project page for 'Prime Data Center, McClellan Park' names Holder as GC; Prime's later buildings were built by Clune (Chicago, Sacramento SMF02) and ARCO/Murray (Avondale). The Holder dossier does not name Prime.",
+      "source": "https://www.accoes.com/project/prime-data-center-mcclellan-park-ca/"
+    },
+    {
+      "slug": "oncor",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023",
+      "via": "DFW01 Dallas, DFW02 Garland and DFW04 Fort Worth",
+      "note": "Oncor is the utility for Prime's three Dallas–Fort Worth campuses; in November 2023 Prime said Oncor had pushed '2 GW of capacity across five separate data center projects throughout Texas' from 2025 into 2027.",
+      "context": "Bisnow's November 2023 report quotes Prime's then-EVP of Acquisitions on more than a year of negotiation with Oncor and the slipped delivery; Prime's Dallas location page lists Oncor with a substation 'in close proximity'. DFW04's filed completion date (January 2026) has no reported opening. The Oncor dossier does not name Prime.",
+      "source": "https://www.bisnow.com/national/news/data-center/its-going-to-be-frustrating-dallas-data-centers-face-two-new-power-problems-121711"
+    },
+    {
+      "slug": "plus-power",
+      "type": "other",
+      "status": "active",
+      "note": "Plus Power's Sierra Estrella battery (250 MW / 1,000 MWh, SRP tolling) sits on the same Avondale Boulevard block as Prime's 240 MW PHX01 campus; trade and broker coverage describes it as grid support for the campus, but SRP's own release does not mention Prime and no contract between the companies is on the record.",
+      "context": "SRP's April 2023 groundbreaking release names SRP, Plus Power and the City of Avondale only; Orion Investment Real Estate's broker blog and the Plus Power dossier frame the battery as support for the adjacent data-center load. This dossier records adjacency, not a relationship.",
+      "source": "https://media.srpnet.com/srp-plus-power-and-avondale-to-break-ground-on-large-scale-battery-storage-facility/"
+    },
+    {
+      "slug": "tract",
+      "type": "competitor",
+      "status": "active",
+      "since": "2025",
+      "note": "Tract's Caldwell Valley park (about 2,973 acres, 'more than 4 GW') sits across the road from Prime's Lockhart campus in Caldwell County, Texas; both draw on Bluebonnet Electric Cooperative.",
+      "context": "The Caldwell DCAT tracker and Central Texas coverage place Prime's 'Project Snow' at 1395 Bob White Road and Tract's park on the same FM 2720 corridor; Prime's phase 1 (two shells, USD 400 million, June 2026–September 2027) and Tract's first 250 MW (Q1 2028) compete for the same cooperative capacity, and both sit under the county's August 2026 abatement suspension.",
+      "source": "https://caldwelldcat.org/"
+    },
+    {
+      "slug": "powerhouse-data-centers",
+      "type": "competitor",
+      "status": "active",
+      "note": "CBRE's Chicago market survey lists PowerHouse/Hillwood's Joliet campus among the developments competing with Prime's fully leased Elk Grove Village campus; PowerHouse also holds a Uhland site near Prime's Lockhart campus.",
+      "context": "CBRE's H2 2025 Chicago report records Prime's campus as fully leased alongside Aligned's ORD3, CyrusOne's Wood Dale, Equinix's Minooka and the PowerHouse/Hillwood Joliet plan, with ComEd delivery delays 'until 2032 or later' market-wide. The PowerHouse dossier lists a 500-acre Uhland site in Texas.",
+      "source": "https://www.cbre.com/insights/books/north-america-data-center-trends-h2-2025/chicago-data-center-market"
+    },
+    {
+      "slug": "aligned",
+      "type": "competitor",
+      "status": "active",
+      "note": "Aligned's ORD3 campus is among the Chicago developments CBRE sets beside Prime's Elk Grove Village campus; Lambda leases from both landlords (Aligned DFW-04 Plano and Prime LAX01).",
+      "context": "CBRE's H2 2025 Chicago survey; the Lambda dossier's colocation list.",
+      "source": "https://www.cbre.com/insights/books/north-america-data-center-trends-h2-2025/chicago-data-center-market"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Employee litigation — fraud and civil RICO claims (Dallas County CC-26-06214-B; S.D.N.Y. 1:26-cv-04493; California Superior Court 26CV015678)",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-31",
+      "exposure": "Seven former executives, including the former Chief Commercial Officer, allege a 'two-tiered valuation system', coerced re-signing of phantom-equity agreements, 'undisclosed property transactions absorbing co-owner interests' and dilution, claiming USD 185 million in Texas and more than USD 400 million in total against Prime, Data Realty Holdings, the CEO and the CFO. No defence has been reported; the suits name the parent that Grain financed in April 2026.",
+      "source": "https://www.keranews.org/business-economy/2026-08-07/dallas-data-center-company-denied-former-employees-400-million-in-compensation-lawsuit-says"
+    },
+    {
+      "regime": "Utility large-load service — Oncor (ERCOT), SRP (Arizona), ComEd (Illinois)",
+      "status": "in-effect",
+      "exposure": "Oncor pushed Prime's 2 GW of Texas projects from 2025 to 2027 in 2023; SRP's large-load programme imposes 15-year contracts, 80% minimum takes and collateral deposits that cut 24 applicants (7.2 GW) to three after February 2026 — Prime is not named in SRP's coverage; ComEd's market-wide delivery delays run 'until 2032 or later' per CBRE, with Prime's campus already served.",
+      "mitigation": "Self-built and co-funded substations (Vernon 49.5 MVA; Sacramento 50 MVA; Chicago 275 MVA; Avondale ~250 MW with phase 1 commissioned) and, from May 2026, an on-site gas-fired plant in Pennsylvania with UGI.",
+      "source": "https://www.bisnow.com/national/news/data-center/its-going-to-be-frustrating-dallas-data-centers-face-two-new-power-problems-121711"
+    },
+    {
+      "regime": "Texas Chapter 312 abatements — Caldwell County",
+      "status": "in-effect",
+      "effectiveDate": "2026-08",
+      "exposure": "Prime's Lockhart campus received a 10-year, 100% abatement with a payment in lieu of taxes of about 40% (about USD 840,000 a year for phase 1) in March 2024; the county suspended new data-center abatements in August 2026 amid conflict-of-interest disclosures by the county judge and organised opposition.",
+      "source": "https://caldwelldcat.org/"
+    },
+    {
+      "regime": "EU merger control — Case M.11843",
+      "status": "in-effect",
+      "effectiveDate": "2025-03-19",
+      "exposure": "The European Commission cleared the acquisition of joint control of Prime by Ares, Macquarie (via WDCAH) and Data Realty Group under the simplified procedure — the only public record of the control structure.",
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:C_202501340"
+    },
+    {
+      "regime": "Environmental impact assessment — Esbjerg (Denmark) and Järvenpää (Finland)",
+      "status": "in-effect",
+      "effectiveDate": "2026-01",
+      "exposure": "Both Nordic campuses are in EIA: Esbjerg 'applying for an assessed capacity of 550MW IT' with construction 'subject to successful completion of the EIA process and obtaining all necessary permits and grid connection agreements'; Järvenpää's EIA is coordinated by the Finnish licensing agency in 2026.",
+      "source": "https://primedatacenters.com/news/prime-data-centers-announces-plans-for-major-data-center-development-in-esbjerg-denmark/"
+    },
+    {
+      "regime": "Illinois data-center tax exemption; Elk Grove Village TIF and eminent domain",
+      "status": "in-effect",
+      "exposure": "Prime was 'the first recipient' of Illinois's data-center sales and utility tax exemption for projects above USD 250 million; the Elk Grove site was assembled with a TIF district for remediation and eminent-domain threats by the village (about 24 acres including a USD 16.5 million parcel).",
+      "source": "https://siteselection.com/its-prime-time-in-illinois/"
+    },
+    {
+      "regime": "California CEQA — SMF02",
+      "status": "in-effect",
+      "effectiveDate": "2026-02-05",
+      "exposure": "Sacramento County approved SMF02 (PLNP2024-00238) with a setback variance; the notice of determination posted 25 February 2026.",
+      "source": "https://ceqanet.lci.ca.gov/1996122010/10"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Nicholas Laag",
+      "title": "Founder & Chief Executive Officer",
+      "photo": "images/execs/prime-data-centers-laag.jpg",
+      "background": [
+        "Founded Prime Data Centers (2017) with two real-estate partners after 14 years together; named defendant in the August 2026 employee suits",
+        "'over 15 years experience in private equity investments and executive-level operations in Europe and Asia'; CEO of United Waters China Ltd (United Waters International AG), where he is a non-executive director and 'family member of the controlling shareholder'"
+      ]
+    },
+    {
+      "name": "Ulrich Pelz",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/prime-data-centers-pelz.jpg",
+      "background": [
+        "CFO, Prime Data Centers; named defendant in the August 2026 suits",
+        "Board-level CFO, Al Rajhi Holding Group; Group CFO, Data Trust Holdings (Luxembourg); '25+ years of global operations and investment experience'"
+      ]
+    },
+    {
+      "name": "Donncha Ó Tuama",
+      "title": "Chief Legal Officer (from 30 October 2025)",
+      "photo": "images/execs/prime-data-centers-o-tuama.jpg",
+      "background": [
+        "General Counsel, Yondr Group — 'oversaw the company's $5.8 billion sale to Digital Bridge'; 'over 500 MW of critical IT capacity delivered and over 1GW of development pipeline secured'",
+        "A decade at law firms in the US and Europe"
+      ]
+    },
+    {
+      "name": "Michael Wall",
+      "title": "Executive Vice President, Product Delivery",
+      "photo": "images/execs/prime-data-centers-wall.jpg",
+      "background": [
+        "EVP Product Delivery (quoted on the Lambda and Avondale releases); SVP Development and Construction, Europe (2023–2024)",
+        "Leadership roles at Meta, Vertiv and Global Switch; a founder of Quark; more than 30 years"
+      ]
+    },
+    {
+      "name": "John Bates",
+      "title": "Executive Vice President, Development & Power (from 3 March 2026)",
+      "photo": "images/execs/prime-data-centers-bates.jpg",
+      "background": [
+        "Founder and CEO, Radial Power (scaled to more than 300 MW; raised more than USD 500 million); founder, Starmex Energy (Mexico)",
+        "Senior roles at Sunnova Energy and NRG Energy; began at Chevron; more than 30 years"
+      ]
+    },
+    {
+      "name": "Gabby Ascione",
+      "title": "Executive Vice President, Commercial Strategy & Revenue (Team page April 2026: SVP Hyperscale)",
+      "photo": "images/execs/prime-data-centers-ascione.jpg",
+      "background": [
+        "SVP of Hyperscale Sales, Prime Data Centers; '15+ years'",
+        "Digital Realty Trust; Intercall; LoopNet"
+      ]
+    },
+    {
+      "name": "Michael Hildebrand",
+      "title": "Senior Vice President, Product Delivery, North America (from 30 October 2025)",
+      "photo": "images/execs/prime-data-centers-hildebrand.jpg",
+      "background": [
+        "Quoted on the May 2026 Sacramento SMF02 groundbreaking",
+        "Tesla (Nevada semi-assembly factory design and construction); Eli Lilly (global capital construction); more than 35 years"
+      ]
+    },
+    {
+      "name": "Steve Benson",
+      "title": "Senior Vice President, Critical Operations",
+      "photo": "images/execs/prime-data-centers-benson.jpg",
+      "background": [
+        "Author of the March 2026 HVO fuel op-ed; quoted on the ENERGY STAR certifications",
+        "QTS Data Centers; AWS; CenturyLink (Lumen); more than 25 years"
+      ]
+    },
+    {
+      "name": "Sarah Martinez",
+      "title": "Vice President, ESG (Sustainability)",
+      "photo": "images/execs/prime-data-centers-martinez.jpg",
+      "background": [
+        "Chairs the sustainability programme (iMasons Climate Accord); hired January 2024",
+        "Disney; The Clorox Company; Target; Prologis; University of Michigan"
+      ]
+    },
+    {
+      "name": "David Lindner",
+      "title": "Vice President, Business & Project Development, EMEA",
+      "photo": "images/execs/prime-data-centers-lindner.jpg",
+      "background": [
+        "Leads European business and project development (Madrid, Frankfurt, Nordics)"
+      ]
+    },
+    {
+      "name": "Rex Eicher",
+      "title": "Vice President, Construction",
+      "photo": "images/execs/prime-data-centers-eicher.jpg",
+      "background": [
+        "Vice President, Construction, Prime Data Centers"
+      ]
+    },
+    {
+      "name": "Matt Dunson",
+      "title": "Vice President, Engineering",
+      "photo": "images/execs/prime-data-centers-dunson.jpg",
+      "background": [
+        "Vice President, Engineering, Prime Data Centers"
+      ]
+    },
+    {
+      "name": "Krystyna Witt",
+      "title": "Vice President, Solutions Engineering",
+      "photo": "images/execs/prime-data-centers-witt.jpg",
+      "background": [
+        "Vice President, Solutions Engineering, Prime Data Centers"
+      ]
+    },
+    {
+      "name": "Jason Dill",
+      "title": "Vice President, Sales",
+      "photo": "images/execs/prime-data-centers-dill.jpg",
+      "background": [
+        "Vice President, Sales, Prime Data Centers"
+      ]
+    },
+    {
+      "name": "Chloe Mickel",
+      "title": "Vice President, Legal",
+      "photo": "images/execs/prime-data-centers-mickel.jpg",
+      "background": [
+        "Vice President, Legal, Prime Data Centers"
+      ]
+    },
+    {
+      "name": "Krista Shepard",
+      "title": "Vice President, Marketing",
+      "photo": "images/execs/prime-data-centers-shepard.jpg",
+      "background": [
+        "Vice President, Marketing, Prime Data Centers"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2026 to date (private — no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2026-12-31",
+        "metrics": [
+          {
+            "name": "Project debt",
+            "actual": "Elk Grove Village Property LLC: $900 million five-year 7.5% senior notes at par (2 June; upsized from $850 million; Santander), refinancing $500 million; backed by CoreWeave's 15-year lease of about $2.2 billion",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Bloomberg via Investing.com; GuruFocus"
+          },
+          {
+            "name": "Shelved debt",
+            "actual": "Norwegian-law bond cut from $600 million to $500 million, then shelved in July 'after investors balked at the proposed terms'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Bloomberg via swissinfo"
+          },
+          {
+            "name": "Parent equity",
+            "actual": "Grain Management preferred equity in Data Realty Holding Corp. (7 April); terms undisclosed; option for additional capital",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PR Newswire"
+          },
+          {
+            "name": "Campus capex claims",
+            "actual": "Avondale 'more than $3 billion' (Prime) with customers 'an average 2x more'; Austin phase 1 $400 million (Texas filing); Esbjerg about EUR 2 billion phase 1 / EUR 6 billion full; Järvenpää EUR 1.2 billion (city)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "company releases; TDLR; City of Järvenpää"
+          },
+          {
+            "name": "Contested valuation",
+            "actual": "'from about $140 million to more than $6 billion' per the plaintiffs' August 2026 filings",
+            "expected": "",
+            "verdict": "inline",
+            "result": "KERA"
+          }
+        ],
+        "commentary": "Prime publishes no accounts; 2026 disclosed a market coupon (7.5% on a fully leased campus), a failed bond, a parent-level preferred round and a plaintiffs' valuation. The company's own scale statements moved from '4+ GW' (site) to '7 GW' (Grain release) inside a month. 'Expected' is empty by rule — no consensus exists for a private developer."
+      },
+      {
+        "period": "FY2021–FY2025 (private)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Equity",
+            "actual": "Macquarie Capital partnership (June 2021; 'in excess of $5 billion over the next 10 years' targeted); Ares Management and Siemens Financial Services as later institutional investors; joint control by Ares, Macquarie and Data Realty cleared by the EC (March 2025); Snowhawk + Nuveen (July 2025, undisclosed) during a 'more than $2 billion' raise run by Guggenheim and Moelis",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Macquarie; EUR-Lex; company release; Infralogic"
+          },
+          {
+            "name": "Debt",
+            "actual": "Silver Point Finance $22.2 million + $59.8 million on the Avondale land (2023); Cerberus $200 million acquisition facility (September 2024, Newmark)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "CPE; Commercial Observer"
+          },
+          {
+            "name": "Land and acquisitions",
+            "actual": "Avondale 66.5 acres $28.9 million (2023); DFW01 Dallas bought from VPLS/Evocative (April 2023, price undisclosed)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "CPE; Baxtel"
+          },
+          {
+            "name": "Campus investment claims",
+            "actual": "Chicago '$1 billion' (2022); Phoenix 'more than two billion dollars' (2023); Austin '$1.3 billion' (2024); DFW04 '$1.6 billion' and DFW02 'more than $1.3 billion' (trade press)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "PR Newswire; company releases; Baxtel"
+          },
+          {
+            "name": "Tenant credit event",
+            "actual": "Cyxtera rejected its pre-leases on two Santa Clara buildings (1111 and 1231 Comstock, 9 MW each) in its 2023 Chapter 11",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Baxtel"
+          }
+        ],
+        "commentary": "Five years of equity layering on a founder-controlled platform whose disclosed operating base is about 151 MW. The numbers that exist are investors' names, campus cost claims and one tenant default; revenue, EBITDA and the size of any round are absent."
+      }
+    ],
+    "commentary": "Private; no earnings calendar. Dated items: SRP's September 2026 large-load deposits (market-wide); Austin phase 1 completion September 2027 (Texas filing); Esbjerg first capacity late 2029; the three employee suits; any relaunch of the shelved bond; a delivery date for Avondale building 1."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Prime's model is recapitalisation as much as development: five equity rounds (Macquarie 2021, Ares and Siemens, Snowhawk/Nuveen 2025, Grain 2026 at the parent), an acquisition line, project-level high-yield debt on the one fully leased campus, and a bond that failed — against about 151 MW operating after nine years. Basis: the capital-events table; the EC control notice; Infralogic's account of the delayed USD 2 billion raise; Bloomberg's bond reporting. What it means for sellers: the buyer's cheque is a project company's, sized to a signed lease.",
+    "(High confidence) We assess that the two named tenants — CoreWeave (about USD 2.2 billion over 15 years at Elk Grove Village) and Lambda (21 MW at Vernon) — make Prime a neocloud landlord first and a hyperscale landlord by aspiration: the 'leading hyperscaler' at Avondale is unnamed and the campus has no delivery date. Basis: the bond disclosures, the Lambda release, the Avondale groundbreaking release; the company's own building-status fields.",
+    "(Moderate confidence) We assess that the Texas and Arizona programmes are utility-paced rather than capital-paced: Oncor's 2023 push of 2 GW to 2027, DFW04's passed completion date with no opening, Austin's phase 1 cut from three buildings to two shells, and SRP's deposit-and-collateral regime that reduced 24 applicants to three. Basis: Bisnow 2023; the Texas filings; Baxtel and Cleanview status pages; Arizona Capitol Times and Pinal Post on SRP. Indicator: an Avondale building 1 delivery date, and whether DFW04 reports an opening in 2026.",
+    "(Moderate confidence) We assess that the August 2026 employee suits are a governance event with commercial consequences whatever their merit: the plaintiffs include the former Chief Commercial Officer and the Head of Utilities and Incentives, the defendants include the parent Grain just financed, and the claimed USD 6 billion valuation is now the only public number on the company's worth. Basis: KERA; the plaintiffs' counsel's release; Equilar's record of further VP departures in July 2026. Collection gap: no court filing or defence was read.",
+    "(Moderate confidence) We assess that the European pipeline (550 MW Esbjerg, 100–130 MW Järvenpää, Madrid, Frankfurt, Berlin, the withdrawn Sæby) is a land-and-permit position without a funding source since the Nordic bond was shelved, and that the company's '7 GW' figure counts it in full. Basis: the Esbjerg and Järvenpää releases; the swissinfo bond report; the boilerplate drift from 4 GW to 7 GW.",
+    "(Low confidence) We assess that the UGI gas-fired campus in Pennsylvania and the hire of a power developer as EVP mark a turn toward behind-the-meter generation that the company has neither sized nor sited — a direction shared with Tract's Nevada gas plants and Fermi's private grid, and a departure from Prime's self-built-substation habit. Basis: the UGI release and the Bates appointment; nothing else.",
+    "Collection gap: the live primedatacenters.com returns 403, so every company page was read from Wayback captures dated March–August 2026; the new Solutions pages, the Avondale groundbreaking post and 2026 blog posts are not archived; the ownership of Data Realty Holding Corp., headcount, revenue, the Avondale hyperscaler, LAX01's second tenant, DFW04's status and the bond terms beyond coupon and size are unknown; DCD, Bloomberg originals and court dockets were unreadable. INDICATORS TO WATCH: Avondale building 1 delivery; a named hyperscaler; a relaunched or failed Nordic bond; the first court response in the employee suits; Austin phase 1 completion (September 2027); Esbjerg EIA outcome; any sale of the Hayward joint-venture building."
+  ],
+  "sources": [
+    {
+      "label": "Yahoo News — Yahoo/Texas county suspends abatements",
+      "url": "https://www.yahoo.com/news/politics/articles/texas-county-suspends-tax-breaks-170000940.html",
+      "date": "2026-08-22"
+    },
+    {
+      "label": "KERA News — Dallas data center company denied former employees USD 400 million in compensation, lawsuit says",
+      "url": "https://www.keranews.org/business-economy/2026-08-07/dallas-data-center-company-denied-former-employees-400-million-in-compensation-lawsuit-says",
+      "date": "2026-08-07"
+    },
+    {
+      "label": "FinancialContent — FinancialContent lawsuit release",
+      "url": "https://www.financialcontent.com/article/bizwire-2026-8-4-prime-data-centers-sued-over-alleged-pervasive-fraud-to-strip-employees-and-business-partners-of-value-worth-hundreds-of-millions",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "Rogge Dunn Group — Rogge Dunn Group case page",
+      "url": "https://roggedunngroup.com/rogge-dunn-group-files-185m-lawsuit-for-executives-of-data-center.html",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "Androvett — Androvett lawsuit coverage",
+      "url": "https://androvett.com/media-coverage/prime-data-centers-sued-over-alleged-pervasive-fraud-to-strip-employees-and-business-partners-of-value-worth-hundreds-of-millions",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "BriefGlance — BriefGlance lawsuit analysis",
+      "url": "https://briefglance.com/articles/the-6-billion-mirage-fraud-allegations-rock-a-data-center-giant",
+      "date": "2026-08"
+    },
+    {
+      "label": "Pinal Post — Pinal Post SRP large-load",
+      "url": "https://pinalpost.com/data-center-power-costs-srp-pinal-county-august-2026/",
+      "date": "2026-08"
+    },
+    {
+      "label": "SWI swissinfo.ch — Bloomberg via swissinfo — Nordic bond shelved",
+      "url": "https://www.swissinfo.ch/eng/ai-borrowers-are-pushing-a-niche-credit-market-to-its-limits/91783622",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "Data Center Knowledge — Data Center Knowledge July 2026 roundup",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-july-2026",
+      "date": "2026-07-02"
+    },
+    {
+      "label": "AZ Big Media — AZ Big Media Avondale",
+      "url": "https://azbigmedia.com/real-estate/prime-data-centers-launches-3-billion-investment-in-avondale/",
+      "date": "2026-06-15"
+    },
+    {
+      "label": "Investing.com (Bloomberg) — CoreWeave data center raises USD 900 million in junk-bond sale: Elk Grove Village Property LLC, 7.5% five-year notes, Santander",
+      "url": "https://www.investing.com/news/stock-market-news/coreweave-data-center-raises-900-million-in-junkbond-sale--bloomberg-93CH-4723001",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "Yahoo Finance — Yahoo CRWV subsidiary $900M",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-crwv-subsidiary-raises-900-011330653.html",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "Insider Monkey — Insider Monkey $900M",
+      "url": "https://www.insidermonkey.com/blog/coreweaves-crwv-subsidiary-raises-900-million-through-high-yield-bond-offering-reports-bloomberg-1778868/",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "Foreign Policy Journal — Foreign Policy Journal $850M bond",
+      "url": "https://www.foreignpolicyjournal.com/2026/06/02/coreweave-nasdaq-crwv-linked-data-center-targets-850-million-junk-bond-sale-to-fund-ai-infrastructure/",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "TradingView (GuruFocus) — CoreWeave-linked Elk Grove data center seeks USD 850 million bond financing; 15-year lease of about USD 2.2 billion",
+      "url": "https://www.tradingview.com/news/gurufocus:35f8dbc6a094b:0-coreweave-linked-data-center-seeks-850-million-bond-financing/",
+      "date": "2026-06"
+    },
+    {
+      "label": "Crypto Briefing — Crypto Briefing bond",
+      "url": "https://cryptobriefing.com/elk-grove-coreweave-data-center-junk-bonds/",
+      "date": "2026-06"
+    },
+    {
+      "label": "REBusinessOnline — REBusinessOnline PHX01",
+      "url": "https://rebusinessonline.com/prime-data-centers-breaks-ground-on-three-buildings-at-3b-metro-phoenix-campus/",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Commercial Property Executive — CPE PHX01 groundbreaking",
+      "url": "https://www.commercialsearch.com/news/prime-breaks-ground-on-3b-phoenix-data-center-campus/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "Yahoo Finance (Business Wire mirror) — Prime Data Centers breaks ground on three buildings at its 240 MW Phoenix campus, advancing a USD 3 billion investment in Avondale",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/prime-data-centers-breaks-ground-150000450.html",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "FinancialContent — Phoenix groundbreaking release — FinancialContent/Business Wire",
+      "url": "https://www.financialcontent.com/article/bizwire-2026-5-21-prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-campus-in-phoenix-advancing-3b-investment-in-avondale",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Construction Equipment Guide — Construction Equipment Guide PHX01",
+      "url": "https://www.constructionequipmentguide.com/prime-data-centers-breaks-ground-on-three-buildings-in-phoenix-advancing-3b-investment/71525",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "BriefGlance — BriefGlance PHX01",
+      "url": "https://briefglance.com/articles/prime-data-centers-breaks-ground-on-3b-phoenix-ai-powerhouse-campus",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "WPSU — WPSU UGI/Prime PA",
+      "url": "https://radio.wpsu.org/2026-05-20/natural-gas-powered-data-center-northern-tier-pa",
+      "date": "2026-05-20"
+    },
+    {
+      "label": "Baxtel — Baxtel news Austin TDLR filing",
+      "url": "https://baxtel.com/news/prime-plans-to-construct-two-data-centers-outside-austin-texas",
+      "date": "2026-05-13"
+    },
+    {
+      "label": "First News Now — First News Now PA UGI/Prime",
+      "url": "https://www.firstnewsnowpa.com/cameron-potter-or-tioga-county-possible-home-to-ugi-energy-services-and-prime-data-centers-forge-strategic-partnership-to-power-data-center-campus/",
+      "date": "2026-05-11"
+    },
+    {
+      "label": "Baxtel — Baxtel news SMF02 groundbreaking",
+      "url": "https://baxtel.com/news/prime-begins-construction-on-new-data-center-in-sacramento-california",
+      "date": "2026-05-08"
+    },
+    {
+      "label": "Prime Data Centers — SMF02 groundbreaking release (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-second-sacramento-data-center-expanding-regional-campus-footprint/",
+      "date": "2026-05-07"
+    },
+    {
+      "label": "UGI Energy Services — UGI Energy Services partnership — UGI blog",
+      "url": "https://blog.ugies.com/ugi-energy-services-and-prime-data-centers-forge-strategic-partnership-to-power-data-center-campus",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "Yahoo Finance — UGI release — Yahoo Finance SG",
+      "url": "https://sg.finance.yahoo.com/news/ugi-energy-services-prime-data-201500707.html",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "PA Environment Digest — PA Environment Digest UGI/Prime",
+      "url": "http://paenvironmentdaily.blogspot.com/2026/05/ugi-energy-services-prime-data-centers.html",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "Texas TDLR — TDLR project TABS2026019473 (AUS-01)",
+      "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019473",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "Metro Phoenix — Metro Phoenix Avondale",
+      "url": "https://metrophoenix.com/2026/05/3-billion-avondale-data-center-breaks-ground/",
+      "date": "2026-05"
+    },
+    {
+      "label": "Hoodline — Hoodline SMF02",
+      "url": "https://hoodline.com/2026/05/ai-gold-rush-hits-mcclellan-as-prime-breaks-ground-on-massive-sacramento-server-hub/",
+      "date": "2026-05"
+    },
+    {
+      "label": "Baxtel — Baxtel news Grain",
+      "url": "https://baxtel.com/news/grain-backs-parent-company-of-prime-data-centers",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "Simpson Thacher & Bartlett — Simpson Thacher Grain deal",
+      "url": "https://www.stblaw.com/about-us/news/view/2026/04/08/grain-announces-structured-financing-in-the-founding-and-controlling-shareholder-of-prime-data-centers",
+      "date": "2026-04-08"
+    },
+    {
+      "label": "PR Newswire — Grain Management announces strategic structured financing in Data Realty Holding Corp., the founding and controlling shareholder of Prime Data Centers",
+      "url": "https://www.prnewswire.com/news-releases/grain-management-announces-strategic-structured-financing-in-data-realty-holding-corp-the-founding-and-controlling-shareholder-of-prime-data-centers-302735733.html",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "Yahoo Finance — Grain release — Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/grain-management-announces-strategic-structured-130000599.html",
+      "date": "2026-04-07"
+    },
+    {
+      "label": "Arizona Capitol Times — AZ Capitol Times SRP facts",
+      "url": "https://azcapitoltimes.com/news/2026/03/31/the-facts-about-srp-and-data-centers/",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "Datacenter Forum — Datacenter Forum Esbjerg",
+      "url": "https://www.datacenter-forum.com/datacenter-forum/us-prime-data-centers-is-coming-to-esbjerg-denmark",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "Prime Data Centers — Esbjerg ESB01 release (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-announces-plans-for-major-data-center-development-in-esbjerg-denmark/",
+      "date": "2026-03-27"
+    },
+    {
+      "label": "BeBeez — BeBeez Esbjerg 550MW",
+      "url": "https://bebeez.eu/2026/03/27/prime-data-centers-to-develop-550mw-campus-in-esbjerg-denmark/",
+      "date": "2026-03-27"
+    },
+    {
+      "label": "Caldwell County — Caldwell County commissioners (Edged/EDC Austin abatement)",
+      "url": "https://www.co.caldwell.tx.us/page/article/1242",
+      "date": "2026-03-26"
+    },
+    {
+      "label": "Prime Data Centers — HVO op-ed (Steve Benson) (read via Wayback capture of 2026-04-20; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/three-ways-to-fuel-sustainability-through-operational-change/",
+      "date": "2026-03-05"
+    },
+    {
+      "label": "Prime Data Centers — John Bates appointment (read via Wayback capture of 2026-03-08; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-appoints-john-bates-as-executive-vice-president-of-development-power/",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "PR Newswire — John Bates appointment",
+      "url": "https://www.prnewswire.com/news-releases/prime-data-centers-appoints-john-bates-as-executive-vice-president-of-development-and-power-302701090.html",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "CEQAnet — CEQAnet NOD Prime Data Centers",
+      "url": "https://ceqanet.lci.ca.gov/1996122010/10",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "Datacenter Forum — Järvenpää",
+      "url": "https://www.datacenter-forum.com/datacenter-forum/prime-data-centers-plans-a-large-scale-data-center-investment-in-jarvenpaa-finland",
+      "date": "2026-01-19"
+    },
+    {
+      "label": "Prime Data Centers — ENERGY STAR release (read via Wayback capture of 2026-02-14; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-dallas-and-sacramento-facilities-earn-energy-star-certification-for-superior-energy-performance/",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "Yahoo Finance — ENERGY STAR release — Yahoo Finance (PR Newswire)",
+      "url": "https://finance.yahoo.com/news/prime-data-centers-dallas-sacramento-160000234.html",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "BeBeez — BeBeez Järvenpää",
+      "url": "https://bebeez.eu/2026/01/15/prime-targets-data-center-development-in-jarvenpaa-finland/",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "City of Järvenpää — City of Järvenpää announcement",
+      "url": "https://www.jarvenpaa.fi/a/prime-data-centers-suunnittelee-mittavaa-datakeskusinvestointia-jarvenpaahan",
+      "date": "2026-01-14"
+    },
+    {
+      "label": "The Fast Mode — Prime Data Centers and Lambda partner to launch AI-optimized GPU infrastructure at LAX01 (21 MW of 33 MW)",
+      "url": "https://www.thefastmode.com/technology-solutions/45897-prime-data-centers-lambda-partner-to-launch-ai-optimized-gpu-infrastructure-at-lax01",
+      "date": "2025-11-17"
+    },
+    {
+      "label": "Prime Data Centers — Lambda / LAX01 release (read via Wayback capture of 2026-04-20; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-and-lambda-partner-to-power-the-next-era-of-superintelligence-with-ai-optimized-infrastructure-in-southern-california/",
+      "date": "2025-11-13"
+    },
+    {
+      "label": "Bisnow — Bisnow Digital Realty Vernon",
+      "url": "https://www.bisnow.com/los-angeles/news/data-center-development/digital-realty-buys-vernon-data-center-site-49m-131715",
+      "date": "2025-11-04"
+    },
+    {
+      "label": "Prime Data Centers — Ó Tuama / Hildebrand appointments (read via Wayback capture of 2026-04-20; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-appoints-donncha-o-tuama-as-chief-legal-officer-michael-hildebrand-as-senior-vice-president-of-product-delivery-north-america/",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Commercial Property Executive — CPE Nuveen JV",
+      "url": "https://www.commercialsearch.com/news/nuveen-jv-invests-in-prime-data-centers/",
+      "date": "2025-08-04"
+    },
+    {
+      "label": "Prime Data Centers — 2025 Sustainability Report PDF (FY2024 data) (read via Wayback capture of 2026-05-07; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/wp-content/uploads/2025/08/Prime-Data-Centers_2025-Sustainability-Report_FINAL-optimised.pdf",
+      "date": "2025-08"
+    },
+    {
+      "label": "Prime Data Centers — Snowhawk & Nuveen investment (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/snowhawk-and-nuveen-make-strategic-investment-in-prime-data-centers/",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "Yahoo Finance — Yahoo Snowhawk/Nuveen release",
+      "url": "https://finance.yahoo.com/news/snowhawk-nuveen-strategic-investment-prime-130000876.html",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "Kirkland & Ellis — Kirkland Snowhawk",
+      "url": "https://www.kirkland.com/news/press-release/2025/07/kirkland-advises-snowhawk-on-strategic-investment-in-prime-data-centers",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "More Than Just Parks — More Than Just Parks tracker DFW02-01",
+      "url": "https://morethanjustparks.com/data-center-tracker/prime-garland-tx-dfw02-01-tx--d82b6058-b54b-4afe-a025-2340fc8a4aea",
+      "date": "2025-07-15"
+    },
+    {
+      "label": "ION Analytics / Infralogic — ION Analytics/Infralogic raise delayed",
+      "url": "https://ionanalytics.com/insights/infralogic/hyperscaler-equity-raise-gets-delayed/",
+      "date": "2025-05-15"
+    },
+    {
+      "label": "MarketScreener — MarketScreener EC approval",
+      "url": "https://www.marketscreener.com/quote/stock/MACQUARIE-GROUP-LIMITED-6491460/news/European-Commission-OKs-Prime-Data-Centers-Takeover-by-Ares-Macquarie-Data-Realty-49376294/",
+      "date": "2025-03-19"
+    },
+    {
+      "label": "EUR-Lex — Official Journal notice, Case M.11843: Ares, Macquarie and Data Realty Group joint control of Prime Data Centers",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:C_202501340",
+      "date": "2025-02"
+    },
+    {
+      "label": "Data Center View — Data Center View Cerberus",
+      "url": "https://news.datacenterview.com/p/prime-data-centers-secures-200-million-credit-facility",
+      "date": "2024-12-18"
+    },
+    {
+      "label": "Bisnow — Bisnow LA suburbs (Vernon)",
+      "url": "https://www.bisnow.com/los-angeles/news/data-center/los-angeles-data-centers-vernon-monterey-park-el-segundo-127101",
+      "date": "2024-12-09"
+    },
+    {
+      "label": "Prime Data Centers — LAX01 opening (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-opens-los-angeles-data-center/",
+      "date": "2024-11-14"
+    },
+    {
+      "label": "Prime Data Centers — Clune 365 days injury-free, Elk Grove (read via Wayback capture of 2026-03-08; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/data-center-safety-milestone/",
+      "date": "2024-11-07"
+    },
+    {
+      "label": "Commercial Observer — Commercial Observer Cerberus $200M",
+      "url": "https://commercialobserver.com/2024/09/cerberus-closes-200m-credit-facility-for-u-s-data-center-acquisitions/",
+      "date": "2024-09-03"
+    },
+    {
+      "label": "Texas TDLR — TDLR TABS2024017792 DFW04-02",
+      "url": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2024017792",
+      "date": "2024-09-01"
+    },
+    {
+      "label": "Prime Data Centers — Inaugural sustainability report release (read via Wayback capture of 2026-03-08; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/sustainability-report/",
+      "date": "2024-08-20"
+    },
+    {
+      "label": "DataCentreNews UK — DataCentreNews UK Madrid",
+      "url": "https://datacentrenews.uk/story/prime-data-centers-to-build-largest-data-centre-in-madrid",
+      "date": "2024-05-24"
+    },
+    {
+      "label": "Prime Data Centers — Madrid 40 MW plan (read via Wayback capture of 2026-04-20; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-madrid-data-center/",
+      "date": "2024-05-22"
+    },
+    {
+      "label": "Data Center Frontier — DCF Land and Expand (Phoenix)",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/55038457/land-and-expand-new-data-center-developments-by-meta-t5-prime-ardent-tract",
+      "date": "2024-05-09"
+    },
+    {
+      "label": "Post Register — Post Register Caldwell",
+      "url": "https://post-register.com/data-center-campus-coming-to-county/",
+      "date": "2024-03-20"
+    },
+    {
+      "label": "Hays Caldwell EDP — Hays Caldwell EDP",
+      "url": "https://hayscaldwelledp.com/about/news-and-publications/data-center-campus-to-be-constructed-in-caldwell-county",
+      "date": "2024-03-13"
+    },
+    {
+      "label": "Bisnow — Bisnow Austin $1.3B",
+      "url": "https://www.bisnow.com/national/news/data-center/prime-data-centers-planning-13b-austin-campus-123071",
+      "date": "2024-02-26"
+    },
+    {
+      "label": "Sustainable Tech Partner — Sustainable Tech Partner VP ESG",
+      "url": "https://sustainabletechpartner.com/vertical-market/technology/prime-data-centers-sharpens-sustainability-strategy-hires-vp-of-esg/",
+      "date": "2024-01"
+    },
+    {
+      "label": "Bisnow — Dallas data centers face two new power problems: Oncor pushes Prime's 2 GW across five Texas projects to 2027",
+      "url": "https://www.bisnow.com/national/news/data-center/its-going-to-be-frustrating-dallas-data-centers-face-two-new-power-problems-121711",
+      "date": "2023-11-16"
+    },
+    {
+      "label": "Site Selection — Site Selection Illinois",
+      "url": "https://siteselection.com/its-prime-time-in-illinois/",
+      "date": "2023-10"
+    },
+    {
+      "label": "Baxtel — Baxtel news Cyxtera rejects Prime leases",
+      "url": "https://baxtel.com/news/cyxtera-refuses-leases-at-two-data-centers-in-silicon-valley-owned-by-prime",
+      "date": "2023-08-01"
+    },
+    {
+      "label": "Commercial Property Executive — CPE Phoenix debut $2B",
+      "url": "https://www.commercialsearch.com/news/prime-debuts-in-phoenix-with-2b-data-center-campus/",
+      "date": "2023-05-05"
+    },
+    {
+      "label": "Prime Data Centers — First Phoenix campus (210 MW) (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-announces-its-first-phoenix-data-center-campus/",
+      "date": "2023-05-04"
+    },
+    {
+      "label": "Data Center Frontier — DCF Phoenix 210MW",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/33004536/prime-will-enter-phoenix-market-with-210-megawatt-campus",
+      "date": "2023-05-04"
+    },
+    {
+      "label": "SRP — SRP, Plus Power and Avondale break ground on the Sierra Estrella battery storage facility (Prime not mentioned)",
+      "url": "https://media.srpnet.com/srp-plus-power-and-avondale-to-break-ground-on-large-scale-battery-storage-facility/",
+      "date": "2023-04-05"
+    },
+    {
+      "label": "Prime Data Centers — Denmark/Saeby 124 MW (read via Wayback capture of 2026-04-20; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-enters-denmark-with-124-megawatt-data-center-campus-that-delivers-a-net-positive-environmental-impact/",
+      "date": "2023-02-02"
+    },
+    {
+      "label": "Chicago Construction News — Chicago Construction News groundbreaking",
+      "url": "https://www.chicagoconstructionnews.com/prime-data-centers-begins-construction-on-1-billion-data-centre-campus/",
+      "date": "2022-11-29"
+    },
+    {
+      "label": "PR Newswire — Chicago groundbreaking — PR Newswire",
+      "url": "https://www.prnewswire.com/news-releases/prime-data-centers-breaks-ground-on-1b-chicago-data-center-campus-in-elk-grove-village-301681170.html",
+      "date": "2022-11-17"
+    },
+    {
+      "label": "Brains RE — Brains RE Madrid €200–300M",
+      "url": "https://brainsre.news/prime-data-centers-invertira-200-300-millones-data-center-madrid/",
+      "date": "2022-08-10"
+    },
+    {
+      "label": "AZBEX — AZBEX Hermosa Ranch revived",
+      "url": "https://azbex.com/planning-development/data-center-plan-at-avondale-tech-campus-revived/",
+      "date": "2022-08-09"
+    },
+    {
+      "label": "Prime Data Centers — Vernon 33 MW development (read via Wayback capture of 2026-04-20; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-is-developing-a-new-33mw-data-center-in-vernon-los-angeles-market/",
+      "date": "2022-06-01"
+    },
+    {
+      "label": "Data Center Frontier — DCF Prime enters LA",
+      "url": "https://www.datacenterfrontier.com/colo/interconnection/article/11427342/prime-data-centers-enters-the-los-angeles-market",
+      "date": "2022-06-01"
+    },
+    {
+      "label": "Bisnow — Bisnow Elk Grove land buy",
+      "url": "https://www.bisnow.com/chicago/news/data-center-bisnow-national/elk-grove-village-land-buy-clears-the-way-for-1b-data-center-complex-113231",
+      "date": "2022-05-31"
+    },
+    {
+      "label": "Data Center Frontier — DCF Santa Clara expansion",
+      "url": "https://www.datacenterfrontier.com/cloud/article/11427659/prime-data-centers-continues-its-expansion-in-santa-clara",
+      "date": "2022-01-19"
+    },
+    {
+      "label": "Prime Data Centers — Elk Grove 750k sq ft plan (read via Wayback capture of 2026-04-20; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-planning-750k-sq-ft-data-center-campus-in-elk-grove-il/",
+      "date": "2021-09-14"
+    },
+    {
+      "label": "Prime Data Centers — Macquarie Capital partnership (read via Wayback capture of 2026-02-14; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-announces-strategic-partnership-and-equity-investment-with-macquarie-capital/",
+      "date": "2021-06-24"
+    },
+    {
+      "label": "Macquarie — Macquarie Capital partnership release",
+      "url": "https://www.macquarie.com/au/en/about/news/2021/macquarie-capital-announces-strategic-partnership-with-prime-data-centers.html",
+      "date": "2021-06-24"
+    },
+    {
+      "label": "Telecom Ramblings — Telecom Ramblings newswire Macquarie",
+      "url": "https://newswire.telecomramblings.com/2021/06/prime-data-centers-announces-strategic-partnership-and-equity-investment-with-macquarie-capital/",
+      "date": "2021-06-24"
+    },
+    {
+      "label": "Data Center Catalog — Data Center Catalog Macquarie",
+      "url": "https://datacentercatalog.com/news/2021/macquarie-invests-in-prime-data-centers-sees-major-growth-ahead",
+      "date": "2021-06-24"
+    },
+    {
+      "label": "Prime Data Centers — Sacramento 8 MW lease (read via Wayback capture of 2026-04-20; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/prime-data-centers-announces-8mw-lease-in-sacramento-with-public-tech-company/",
+      "date": "2021-04-20"
+    },
+    {
+      "label": "Data Center Frontier — DCF Sacramento 8MW lease",
+      "url": "https://www.datacenterfrontier.com/cloud/article/11428251/prime-data-centers-lands-8-megawatt-project-in-sacramento",
+      "date": "2021-04-20"
+    },
+    {
+      "label": "Telecom Ramblings — Telecom Ramblings CEO interview",
+      "url": "https://www.telecomramblings.com/2021/01/industry-spotlight-prime-data-centers-ceo-nicholas-laag/",
+      "date": "2021-01-11"
+    },
+    {
+      "label": "Data Center Frontier — DCF Santa Clara four-story",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/11428631/prime-data-centers-plans-four-story-project-in-santa-clara",
+      "date": "2020-10-22"
+    },
+    {
+      "label": "Data Center POST — Data Center POST Sacramento",
+      "url": "https://datacenterpost.com/prime-data-centers-new-sacramento-campus-excels-in-business-continuity/",
+      "date": "2020-03-03"
+    },
+    {
+      "label": "Prime Data Centers — homepage: 14 campuses, 4+ GW pipeline, the Model block (read via Wayback capture of 2026-07-01; live site returns 403 to automated fetches)",
+      "url": "https://primedatacenters.com/"
+    },
+    {
+      "label": "Prime Data Centers — About: established 2017 in California, 13 campuses, 28 data centers, majority founder-owned (read via Wayback capture of 2026-08-07)",
+      "url": "https://primedatacenters.com/about/"
+    },
+    {
+      "label": "Prime Data Centers — Locations index (2026-04-24) (read via Wayback capture of 2026-04-24; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/"
+    },
+    {
+      "label": "Prime Data Centers — Austin AUS01 (2026-05-07) (read via Wayback capture of 2026-05-07; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/austin/"
+    },
+    {
+      "label": "Prime Data Centers — Chicago ORD01 (2026-04-23) (read via Wayback capture of 2026-04-23; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/chicago/"
+    },
+    {
+      "label": "Prime Data Centers — Dallas DFW01 (2026-04-23) (read via Wayback capture of 2026-04-23; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/dallas/"
+    },
+    {
+      "label": "Prime Data Centers — Frankfurt FRA01 (2026-04-23) (read via Wayback capture of 2026-04-23; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/frankfurt/"
+    },
+    {
+      "label": "Prime Data Centers — Los Angeles LAX01 (2026-04-23) (read via Wayback capture of 2026-04-23; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/los-angeles/"
+    },
+    {
+      "label": "Prime Data Centers — Madrid MAD01 (2026-05-19) (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/madrid/"
+    },
+    {
+      "label": "Prime Data Centers — Phoenix PHX01 (2026-04-24) (read via Wayback capture of 2026-04-24; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/phoenix/"
+    },
+    {
+      "label": "Prime Data Centers — Sacramento SMF01 (2026-05-19) (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/sacramento/"
+    },
+    {
+      "label": "Prime Data Centers — Silicon Valley portfolio (2026-05-19) (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/silicon-valley/"
+    },
+    {
+      "label": "Prime Data Centers — Saeby AAL01 (2026-03-08) (read via Wayback capture of 2026-03-08; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/locations/saeby/"
+    },
+    {
+      "label": "Prime Data Centers — AI Solutions (2026-04-23) (read via Wayback capture of 2026-04-23; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/ai/"
+    },
+    {
+      "label": "Prime Data Centers — Sustainability (2026-04-23) (read via Wayback capture of 2026-04-23; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/sustainability/"
+    },
+    {
+      "label": "Prime Data Centers — Team page: names, titles and headshots (read via Wayback capture of 2026-04-23)",
+      "url": "https://primedatacenters.com/team/"
+    },
+    {
+      "label": "Prime Data Centers — News index (2026-05-19) (read via Wayback capture of 2026-05-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/news/"
+    },
+    {
+      "label": "Prime Data Centers — Leadership page with bios (old site, 2025-01-19) (read via Wayback capture of 2025-01-19; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/data-center-leadership/"
+    },
+    {
+      "label": "Prime Data Centers — Build-to-suit page (old site, 2025-05-24) (read via Wayback capture of 2025-05-24; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/build-to-suit-data-centers/"
+    },
+    {
+      "label": "Prime Data Centers — Powered shell page (old site, 2025-05-24) (read via Wayback capture of 2025-05-24; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/data-center-solutions/powered-shell/"
+    },
+    {
+      "label": "Prime Data Centers — Wholesale page (old site, 2025-06-23) (read via Wayback capture of 2025-06-23; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/data-center-solutions/wholesale-data-center/"
+    },
+    {
+      "label": "Prime Data Centers — Partners page (old site, 2025-04-25) (read via Wayback capture of 2025-04-25; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/partners/"
+    },
+    {
+      "label": "Prime Data Centers — Tech sheet LAX01-01 PDF (read via Wayback capture of 2025-11-14; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/wp-content/uploads/2025/10/PDC_LosAngeles_TechSheet_LAX01_01.pdf"
+    },
+    {
+      "label": "Prime Data Centers — Tech sheet ORD01-01 PDF (read via Wayback capture of 2026-03-08; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/wp-content/uploads/2025/10/PDC_Chicago_TechSheet_ORD01_01.pdf"
+    },
+    {
+      "label": "Prime Data Centers — Tech sheet PHX01-01 PDF (read via Wayback capture of 2026-04-23; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/wp-content/uploads/2025/10/PDC_Phoenix_TechSheet_PHX01_01.pdf"
+    },
+    {
+      "label": "Prime Data Centers — Tech sheet SMF01-02 PDF (read via Wayback capture of 2026-01-28; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/wp-content/uploads/2025/10/PDC_Sacramento_TechSheet_SMF01-02.pdf"
+    },
+    {
+      "label": "Prime Data Centers — Tech sheet AUS01-01 PDF (read via Wayback capture of 2026-02-25; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/wp-content/uploads/2025/10/PDC_Austin_TechSheet_AUS01_01.pdf"
+    },
+    {
+      "label": "Prime Data Centers — Tech sheet SJC01 PDF (read via Wayback capture of 2026-01-28; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/wp-content/uploads/2025/10/PDC_Silicon_Valley_TechSheets_SJC01.pdf"
+    },
+    {
+      "label": "Prime Data Centers — Tech sheet DFW01-02 PDF (read via Wayback capture of 2026-03-08; live site blocks automated fetches)",
+      "url": "https://primedatacenters.com/wp-content/uploads/2025/10/PDC_Dallas_TechSheet_DFW01_02.pdf"
+    },
+    {
+      "label": "LinkedIn — Prime Data Centers company page: 51–200 employees, Dallas, founded 2017",
+      "url": "https://www.linkedin.com/company/prime-data-centers/"
+    },
+    {
+      "label": "ARCO/Murray — ARCO/Murray PHX01",
+      "url": "https://www.arcomurray.com/prime-data-centers-groundbreaking/"
+    },
+    {
+      "label": "Abridged (PBS KVIE) — Abridged/PBS KVIE Sacramento DCs",
+      "url": "https://www.abridged.org/news/data-centers-planned-in-sacramento/"
+    },
+    {
+      "label": "Caldwell DCAT — Caldwell DCAT Prime tracker",
+      "url": "https://caldwelldcat.org/"
+    },
+    {
+      "label": "AINS Group — AINS Group Järvenpää reference",
+      "url": "https://www.ains.fi/en/references/prime-data-centers-datacenter-jarvenpaa"
+    },
+    {
+      "label": "Bisnow — Bisnow tag page Prime",
+      "url": "https://www.bisnow.com/tags/prime-data-centers"
+    },
+    {
+      "label": "CBRE — CBRE Chicago market",
+      "url": "https://www.cbre.com/insights/books/north-america-data-center-trends-h2-2025/chicago-data-center-market"
+    },
+    {
+      "label": "Orion Investment Real Estate — Orion Investment RE West Valley BESS",
+      "url": "https://www.orionprop.com/topfive/battery-storage-projects-advance-in-west-valley-as-data-center-demand-surges/"
+    },
+    {
+      "label": "Clune Construction — Clune Construction project page",
+      "url": "https://www.clunegc.com/project/prime-data-centers/"
+    },
+    {
+      "label": "Commercial Property Executive — CPE Vernon 33MW",
+      "url": "https://www.commercialsearch.com/news/prime-data-centers-expands-in-la-with-33mw-facility/"
+    },
+    {
+      "label": "Macquarie — Macquarie insights page on Prime",
+      "url": "https://www.macquarie.com/fr/en/insights/supporting-and-investing-in-large-scale-data-storage-in-the-americas.html"
+    },
+    {
+      "label": "ACCO Engineered Systems — project page: Prime Data Center, McClellan Park (Holder Construction GC, Corgan, kW Mission Critical Engineering)",
+      "url": "https://www.accoes.com/project/prime-data-center-mcclellan-park-ca/"
+    },
+    {
+      "label": "Baxtel — Baxtel provider list",
+      "url": "https://baxtel.com/data-centers/prime-data-centers"
+    },
+    {
+      "label": "Baxtel — Baxtel DFW04-01",
+      "url": "https://baxtel.com/data-center/prime-dallas-dfw04-01"
+    },
+    {
+      "label": "Baxtel — Baxtel DFW04-02",
+      "url": "https://baxtel.com/data-center/prime-dfw04-02"
+    },
+    {
+      "label": "Baxtel — Baxtel Garland DFW02-01",
+      "url": "https://baxtel.com/data-center/prime-garland-tx"
+    },
+    {
+      "label": "Baxtel — Baxtel DFW02-02",
+      "url": "https://baxtel.com/data-center/prime-dfw02-02"
+    },
+    {
+      "label": "Baxtel — Baxtel DFW01",
+      "url": "https://baxtel.com/data-center/prime-dallas-dfw01"
+    },
+    {
+      "label": "Baxtel — Baxtel Vernon",
+      "url": "https://baxtel.com/data-center/prime-vernon"
+    },
+    {
+      "label": "Baxtel — Baxtel Elk Grove",
+      "url": "https://baxtel.com/data-center/prime-elk-grove"
+    },
+    {
+      "label": "Baxtel — Baxtel ORD01-02",
+      "url": "https://baxtel.com/data-center/prime-ord01-02"
+    },
+    {
+      "label": "Baxtel — Baxtel Sacramento",
+      "url": "https://baxtel.com/data-center/prime-sacramento"
+    },
+    {
+      "label": "Baxtel — Baxtel Hayward",
+      "url": "https://baxtel.com/data-center/prime-hayward"
+    },
+    {
+      "label": "Baxtel — Baxtel Santa Clara 1111 Comstock",
+      "url": "https://baxtel.com/data-center/prime-santa-clara"
+    },
+    {
+      "label": "Baxtel — Baxtel Santa Clara (Martin)",
+      "url": "https://baxtel.com/data-center/prime-santa-clara-martin"
+    },
+    {
+      "label": "Baxtel — Baxtel San Jose",
+      "url": "https://baxtel.com/data-center/prime-san-jose"
+    },
+    {
+      "label": "Baxtel — Baxtel Sæby (withdrawn)",
+      "url": "https://baxtel.com/data-center/prime-saeby-denmark"
+    },
+    {
+      "label": "Baxtel — Baxtel Järvenpää",
+      "url": "https://baxtel.com/data-center/prime-jarvenpaa-finland"
+    },
+    {
+      "label": "Baxtel — Baxtel Austin campus",
+      "url": "https://baxtel.com/data-center/prime-austin-campus"
+    },
+    {
+      "label": "datacenterHawk — datacenterHawk provider",
+      "url": "https://datacenterhawk.com/marketplace/providers/prime-data-centers"
+    },
+    {
+      "label": "datacenterHawk — datacenterHawk ORD01-01",
+      "url": "https://datacenterhawk.com/marketplace/providers/prime-data-centers/1701-midway-court/ord01-01"
+    },
+    {
+      "label": "Cleanview — Cleanview ORD01-01",
+      "url": "https://cleanview.co/data-centers/illinois/956/prime-data-centers-ord01-01"
+    },
+    {
+      "label": "Cleanview — Cleanview DFW02-01",
+      "url": "https://cleanview.co/data-centers/texas/1606/prime-data-centers-dfw02-01"
+    },
+    {
+      "label": "Cleanview — Cleanview DFW04-01.01",
+      "url": "https://cleanview.co/public/data-centers/texas/990/prime-data-centers-dfw04-0101"
+    },
+    {
+      "label": "Equilar — Equilar org page",
+      "url": "https://people.equilar.com/bio/org/prime-data-centers/11159581"
+    },
+    {
+      "label": "CB Insights — CB Insights",
+      "url": "https://www.cbinsights.com/company/prime-data-centers"
+    },
+    {
+      "label": "LeadIQ — LeadIQ",
+      "url": "https://www.leadiq.com/c/prime-data-centers/5d9440b5408f0cc3d912b39a"
+    },
+    {
+      "label": "Edge IR — Edge IR company page",
+      "url": "https://www.edgeir.com/companies/prime-data-centers"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

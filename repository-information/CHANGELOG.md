@@ -3,11 +3,115 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.77r] — 2026-09-05 08:39:26 PM EST
+
+> **Prompt:** "Picking up from my last session, run Phase B session F8 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Fable 5.1 High as a fresh session: Fermi America, Tract, Prime Data Centers. This is the LAST Fable session of
+> Phase B.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest = F7 + two McCarthy fixes, Previous = F6);
+> PROFILER-COVERAGE-PLAN.md §2, §4 (the B-A / B8 row and the "Regrouping" paragraph), §7, and the three §8 rows
+> (`fermi-america`, `tract`, `prime-data-centers`); .claude/rules/profiler-app.md (Profiler Command incl. steps 5
+> and 7, Profiler Prep Command, Scheduled Refreshes, Archival Procedure); repository-information/PROFILER-SCHEMA.md
+> (relationships[] incl. `project` pins, sources[], Source provenance, named-projects registry);
+> repository-information/PROFILER-STYLES.md (active style: intel-briefing); PROFILER-CROSSREF-CALIBRATION.md →
+> "Relationships checker" incl. the X2, F6 and F7 adjudication logs.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
+> category `developer` per the §8 rows) and study guide (schema v2) — then the four after-write scripts
+> (`sync-profiler-registry.py`, `build-profiler-graph.py`, `check-profiler-study.py`,
+> `check-profiler-relationships.py`), a calendar row per company (verify ownership first: private or
+> sponsor-owned → `cadence: "quarterly"`; a listed company or listed parent → researched `nextReport` — Fermi
+> America is believed to have listed on Nasdaq in late 2025, so expect a `nextReport` row there and confirm the
+> ticker and fiscal calendar from the filings, not the brief), README tree entries (profile, study, study-prep
+> folder, lesson plan, any archive files, the execs count — 594 across 86 companies today), and flip the §8 rows
+> to `B8 → F8`. One push commit.
+>
+> SESSION-SPECIFIC:
+>   - Same peer family as F7: `Colocation & Cloud Capacity`. F7 recorded in §7 that the family mixes
+>     build-to-suit landlords with merchant storage developers — do not change Profiler.html or the family map;
+>     if Fermi's own generation makes `developer · ipp` defensible, decide it, write the reason in the §8 Closes
+>     column, and keep the category consistent between the dossier and the registry entry.
+>   - Named-project pins: F7 registered none (the campuses stayed in prose). Register Fermi's Amarillo campus
+>     (Project Matador / HyperGrid), a Tract park (Reno, Phoenix, Texas) or a Prime campus in
+>     `profiler-projects.json` ONLY if a relationship is ready to pin it, with the Scraper interest-topic seed in
+>     the same commit — otherwise prose.
+>   - Investor edges: none of the three sponsors is a covered slug, so no `investor` edges are expected. If a
+>     covered company is a shareholder, type it `investor`, accept the reciprocal with the reason written out,
+>     and do NOT add `portfolio` (14 accept entries exist; F7 added none).
+>   - Writer rules the checker enforces: a relationship `source` URL must be the EXACT registered string in
+>     that dossier's sources[]; when step 7 adds an inbound edge to an OLDER dossier, register the cited URL in
+>     that dossier's sources[] in the same edit, archive it, bump its profileVersion. F6 and F7's builders
+>     asserted sources[] membership before writing and refused any URL not in the agents' URL index — do the same.
+>   - Step 7 discipline: grep with word boundaries and case sensitivity — `\bFermi America\b` and `\bFermi\b`
+>     (Enrico Fermi plants and the Fermi 2 reactor will collide — classify), `\bTract\b` (a capitalised "Tract of
+>     land" at a sentence start will collide — classify), `\bPrime Data Centers\b` and `\bPrime\b` (prime
+>     contractor, Amazon Prime), plus `Amarillo`, `Matador`, `HyperGrid`. Known hits at v04.76r: Fermi America in
+>     `xcel-energy`; `\bFermi\b` also in `excelsior-energy-capital`; Tract in `compass-datacenters`,
+>     `hunt-energy-network`, `powerhouse-data-centers`; Prime Data Centers in `lambda`, `plus-power`; Amarillo in
+>     `intersect-power`, `xcel-energy`. Read every hit and classify it before writing an edge.
+>   - Study guides: read the start-here callouts of compass-datacenters, edgecore, powerhouse-data-centers (F7:
+>     sponsor-owned build-to-suit as the case study; the single-tenant campus lease from the landlord's chair;
+>     powered land and the utility-first campus) plus aligned, vantage, qts, switch, stack-infrastructure — and
+>     do not repeat them. Candidate angles the corpus does not hold: the generation-first campus that builds
+>     its own power plant behind the fence (gas turbines and nuclear on one site, and what a tenant is actually
+>     buying); the entitlement developer that sells or leases powered, permitted land to other developers (the
+>     developer's developer — where the margin sits, and what "shovel-ready" is worth); and, for Prime, either the
+>     recapitalisation of a build-to-suit pipeline (JV, sale-leaseback, fund) or the mid-tier developer competing
+>     for the same hyperscale tenants as the F7 landlords. If two share a model, one is the case study and the
+>     other the structural chapter.
+>   - Register shared concepts in `profiler-concepts.json` (895 today), not in local glossaries; check for alias
+>     collisions (`check-profiler-study.py` fails on them — F7 hit two on first registration).
+>
+> THE §4 ROW IS A HYPOTHESIS, NOT A BRIEF: the B8 `Why` cell ("Amarillo multi-GW behind-the-fence campus;
+> land-and-power entitlement developer; hyperscale build-to-suit") is prompt material. Treat every clause as an
+> unverified, dated claim — the GW figures, which company each clause describes, whether any tenant has signed,
+> ownership and listing status — and record in the §8 rows' Closes column what you actually found before you
+> commit, including "premise held". F7 found its row had fused three companies' facts into one cell.
+>
+> ENVIRONMENT (confirmed by F1–F7): `pip install playwright pillow` (never `playwright install` — use
+> /opt/pw-browsers/chromium-*/chrome-linux/chrome); the dossier harness pattern is in F6's and F7's session
+> records (threaded HTTP server, script.google.com stubbed, `wait_until='load'` with a 90 s reload timeout,
+> `.ov-sources ol li` with state='attached', `#ov-study-btn`, `.gd-term`); Business Wire, WAM and many corporate
+> newsrooms are 403 — cite the syndication mirror you actually read; build a URL index from the agent reports and
+> refuse any dossier URL not in it; no repo edits while agents run (the stop hook fires on uncommitted edits);
+> read agent reports in chunks; company headshots from leadership pages only, verified on a contact sheet (F7's
+> EdgeCore headshots were AVIF — `pip install pillow-avif-plugin`); check the brief's domains before trusting them
+> (F7 found PowerHouse's brief domains parked or dead).
+>
+> VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, check-profiler-relationships.py
+> exit 0 (any accepts listed and reasoned), check-profiler-crossrefs.py exit 0 (adjudicate any new candidate
+> under step 7), the three dossiers and guides render in Playwright with zero page errors. Report per company:
+> source count and first-party share, relationships written, any accepts, every §4 premise verdict, and the
+> ownership finding that decided the calendar row type.
+>
+> Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch (CHANGELOG counter is at
+> 93/100 — no rotation)."
+
+### Added
+- **Fermi America dossier (`fermi-america.profile.json`, schema v7, profileVersion 1, `developer`, intel-briefing)** — 132 sources (52% first-party: fermiamerica.com pages, the investor site, the S-1/424B4, 10-K, 10-Qs and 8-Ks on EDGAR, Business Wire releases via Yahoo Finance and PR Newswire mirrors, TCEQ and NRC dockets, Texas Tech releases, Amarillo Globe-News and Texas Tribune), 7 relationships (Xcel Energy/SPS, Siemens Energy, GE Vernova and Primoris `supplier`; Amazon `other` — the reported-and-denied 'First Tenant'; Crusoe and Vantage `competitor`), 6 policy regimes, 13 decision makers with 9 company-published headshots, 46 developments, 4 technical-spec bands, 7 confidence-tagged key judgments with indicators and collection gaps. The record: one asset — Project Matador on a 99-year Texas Tech ground lease in Carson County beside Pantex — planned at 'up to 11 GW … expandable up to approximately 17 GW'; 6 GW of gas permitted by the TCEQ (25 February 2026), 5 GW applied for, four AP1000s docketed at the NRC; about 1.5 GW of Siemens and GE turbines landed at the Port of Houston and nothing energised as of 13 August 2026 (first 210 MW due 1 July 2027 per the COO); public since 1 October 2025 (Nasdaq Global Select and LSE: FRMI; USD 21 IPO, USD 5.12 on 4 September 2026); one binding-but-conditional lease (TensorWave, 222 MW, closing due 30 September 2026); a going-concern paragraph in the 10-K and equipment lenders at 12–13%. HQ moved to Dallas per the 31 August 2026 8-K (the website still lists Amarillo). Category kept at `developer` rather than `developer · ipp` — the generation is captive to the campus and passed through to tenants, not sold into a market (reason recorded in §8).
+- **Tract dossier (`tract.profile.json`, schema v7, profileVersion 1, `developer`)** — 150 sources (33% first-party: tract.com, tractcapital.com and fleetdatacenters.com pages read via dated Wayback captures because the live sites sit behind a SiteGround captcha — cited at the canonical URLs with the capture date in the label; GlobeNewswire/Yahoo releases; Storey and Lyon County records; PUCN and Washoe County District Court filings; Bloomberg, DCF, DCD, the Reno Gazette Journal and This Is Reno), 8 relationships (NVIDIA `customer` — the AA- tenant Bloomberg names behind Fleet's two Storey County SPVs; Dominion Energy `supplier`; Switch and Microsoft `other`; Prime Data Centers, PowerHouse, EdgeCore and Vantage `competitor`), 6 policy regimes, 15 decision makers with 11 headshots, 33 developments, 7 key judgments. The record: 'a horizontal developer of master-planned data center parks' that sells shovel-ready sites 'as a product' — 14 parks, 21,078 acres, 18,695 MW on its projects page — and does not build; the only transactions on the record are intra-group sales to sister platform Fleet Data Centers' two Storey County SPVs (230 MW each, 197-month leases, USD 3.8bn + USD 4.6bn of 144A notes); NV Energy sued Tract on 24 July 2026 and the PUCN decides its two temporary gas plants on 8 September 2026. Brief corrections: HQ Denver (not Reno); no Georgia park, no Eloy project; Compass and Aligned are not TRIC neighbours in any source.
+- **Prime Data Centers dossier (`prime-data-centers.profile.json`, schema v7, profileVersion 1, `developer`)** — 171 sources (30% first-party: primedatacenters.com newsroom, location pages and tech-sheet PDFs read via Wayback captures because the live site returns 403; PR Newswire and GlobeNewswire; the European Commission's M.11843 decision; Fitch and KBRA bond commentary; Cook County, Vernon and Avondale records; Bisnow, DCD, Dallas Morning News and the Sacramento Bee; the three August 2026 fraud complaints), 8 relationships (CoreWeave `customer` — the 15-year ~USD 2.2bn Elk Grove Village lease behind USD 900m of 7.5% notes; Lambda `customer` — 21 MW at Vernon; Holder Construction and Oncor `supplier`; Plus Power `other` — the Sierra Estrella adjacency, caveated; Tract, PowerHouse and Aligned `competitor`), 7 policy regimes, 16 decision makers with 16 headshots, 27 developments, 7 key judgments. The record: founder-controlled through Data Realty Holding Corp. (jointly controlled with Macquarie and Ares per the Commission), about 151 MW operating across Chicago, Los Angeles, Dallas, Sacramento and Silicon Valley, 240 MW Avondale under construction from May 2026 for an unnamed hyperscaler, a '4+ GW' (or '7 GW') pipeline; a shelved USD 500m Nordic bond, Grain preferred equity at the parent and three fraud suits by seven former executives in 2026. Brief corrections: HQ Dallas; no 'Prime Group' in any source; no Northern Virginia, Kansas City or Denton site exists; the named tenants are neoclouds, not hyperscalers.
+- **Three schema v2 study guides + three lesson plans** — `fermi-america.study.json` (the generation-first campus: what a gas turbine is and the three classes a campus buys, simple cycle to combined cycle, time-to-power as the product, the private grid, financing generation before a tenant, the NRC COL and what '2033' means, reading a pre-revenue power developer; 14 sections); `tract.study.json` (the developer's developer: the land value ladder, horizontal and vertical, pricing the rungs, project bonds, who decides the price of power, the consent record; 13 sections); `prime-data-centers.study.json` (recapitalising a build-to-suit pipeline: the recapitalisation ladder, pricing a bond on a neocloud lease, phantom equity and the price of control, utility pacing, reading a founder-owned developer; 12 sections). Lesson plans under `repository-information/study-prep/<slug>/`. None repeats the compass-datacenters, edgecore, powerhouse-data-centers, aligned, vantage, qts, switch or stack-infrastructure start-here callouts. Timelines use decimal-year `x` values.
+- **27 shared concepts registered in `profiler-concepts.json`** (922 total) — generation-first campus, time-to-power, kW-month, total facility power, private grid, equipment warehouse facility, convertible notes, capped call, build-own-operate-transfer, applicant-prepared EIS, going concern, horizontal developer, land value ladder, horizontal-vertical split, intra-group sale, project bonds, senior secured notes, Rule 144A, loan-to-cost, large-load electric service agreement, arbitration clause, bridging generation, recapitalisation, recapitalisation ladder, phantom equity, strategic partner, joint control. One alias collision ('bridging power' against the existing `bridge-power`) caught on the dry run and resolved by dropping the alias.
+- **Three calendar rows** in `profiler-refresh-calendar.json` (97 rows) — Fermi America `nextReport: 2026-11-12` (`confirmed: false` — Nasdaq/LSE: FRMI, fiscal year to 31 December, Q1 and Q2 2026 reported 14 May and 13 August; the Q3 date is a cadence inference because the IR events page was empty), Tract `cadence: "quarterly"` (private; Tract Capital Management portfolio company with Berkshire, Permira, PSP, S2G and Columbia Capital named by trade press — no listed parent), Prime Data Centers `cadence: "quarterly"` (private; Data Realty Holding Corp. with Macquarie and Ares joint control — no listed parent).
+- **36 headshots** in `images/execs/` (Fermi America 9, Tract 11, Prime Data Centers 16), all company leadership-page portraits verified on a contact sheet; execs recount 630 images across 89 companies (a harvested Prime portrait for a VP who had left the leadership page by July 2026 was not used and was removed before commit).
+
+### Changed
+- **Step 7 reconciliation — two older dossiers revised and archived** (profileVersion +1, `lastUpdated` 2026-09-05): `xcel-energy` v2→v3 (`fermi-america` `customer` edge for SPS's electric service agreement, up to 200 MW, with the edge context recording Fermi's 10-K restatement of first power to the second half of 2026; the PR Newswire ESA release was already registered); `lambda` v4→v5 (`prime-data-centers` `supplier` edge for 21 MW of LAX01 at Vernon; Prime's Lambda partnership release registered in `sources[]` in the same edit). Corpus greps, classified: `\bFermi America\b` → xcel-energy (accurate, edge added); `\bFermi\b` → also excelsior-energy-capital ('Fermi-class campuses', generic positioning — left); `\bTract\b` → compass-datacenters and powerhouse-data-centers (accurate peer lists — left), hunt-energy-network ('Weil Tract', a battery site — left); `\bPrime Data Centers\b` → lambda (accurate, edge added), plus-power (the Sierra Estrella 'marketed as grid support for the adjacent Prime Data Centers campus' line left as written — SRP's release does not name Prime and Plus Power's JS-rendered microsite could not be read; recorded in the Prime dossier and the calibration log); `\bPrime\b` → amazon (Amazon Prime), switch ('Prime' campus brand), wartsila (service tier), caterpillar, cummins, rehlko and rolls-royce-power-systems (prime-power generation categories), huawei-digital-power (TÜV safety grade), openai and nscale (Prime Minister) — all non-company; `Amarillo` → intersect-power (ABC7 Amarillo source labels) and xcel-energy; `Matador` → xcel-energy only; `HyperGrid` → none. CoreWeave's dossier does not mention Elk Grove Village — the USD 2.2bn Prime lease is recorded on Prime's side only (a prompt for CoreWeave's next revision).
+- **`PROFILER-COVERAGE-PLAN.md`** — §8 rows `fermi-america`, `tract`, `prime-data-centers` flipped to `B8 → F8`, `v1 · v04.77r`, `✓ · v04.77r`, with every §4 premise verdict in the Closes column: 'Amarillo multi-GW behind-the-fence campus' held with corrections (Carson County, not Amarillo city; nothing energised; 'HyperGrid' is a trademark and hypergrid.com is not a Fermi domain; ownership public — the brief's Nasdaq expectation held); 'land-and-power entitlement developer' held with corrections (no third-party parcel sale on the record; HQ Denver); 'hyperscale build-to-suit' held with corrections (build-to-suit is the most common approach but the named tenants are neoclouds; Data Realty is the parent). The `developer` vs `developer · ipp` decision for Fermi is written out in the Closes column and the registry entry matches the dossier.
+- **`PROFILER-CROSSREF-CALIBRATION.md`** — F8 adjudication log entry under the Relationships checker (0 findings on the first run: 0 accepted · 0 corrected · 0 replaced · 0 registered), the step-7 substance, and a sourcing note on the Wayback-read company pages (canonical URLs cited with the capture date so provenance tiering reflects the publisher, not the archive host).
+- **Registry** synced (136 companies; Fermi domains `fermiamerica.com`, `investor.fermiamerica.com`, `irp.cdn-website.com` (the site's asset CDN); Tract `tract.com`, `tractcapital.com`, `fleetdatacenters.com`; Prime `primedatacenters.com`); graph rebuilt (1,012 edges, 749 curated); archive index +2 (`xcel-energy.profile.v2.json`, `lambda.profile.v4.json`).
+- **README tree** — entries for the three profiles, three study guides, three study-prep folders and lesson plans, two archive files, and the execs count.
+
+### Verified
+- `sync-profiler-registry.py --check` clean (0 of 136 out of sync) · `check-profiler-study.py` 0 errors, 0 warnings (110 guides, 922 concepts) · `check-profiler-relationships.py` exit 0 (0 findings; 14 accept entries unchanged; 721 exact URL matches, 0 URLs outside `sources[]`) · `check-profiler-crossrefs.py` exit 0 (no new candidate; one Tract `productsAndServices` scope of 2,877 characters over the 900-character cap listed as not examined) · Playwright: the three new dossiers (source counts 132/150/171 matching the files) and their study guides (33/20/10 resolved term spans), plus the revised xcel-energy (140 sources, 54 term spans) and lambda (29 sources; its guide carries no `{{term}}` spans) dossiers, render with zero page errors. No named project registered (`profiler-projects.json` unchanged — no second dossier was ready to pin Project Matador, a Tract park or Avondale); no `investor` or `portfolio` edges; `Profiler.html`, `Profiler.gs` and `Scraper.gs` unchanged (no page or GAS version bump).
 
 ## [v04.76r] — 2026-09-05 07:22:22 PM EST
 

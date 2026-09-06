@@ -64,6 +64,21 @@
       ]
     },
     {
+      "slug": "anthropic",
+      "cadence": "quarterly",
+      "source": "Private Delaware public benefit corporation; confidential draft S-1 filed 1 June 2026 with nothing public from it. First-party channels are the newsroom (compute commitments with Amazon, Google, Microsoft/NVIDIA, Fluidstack, SpaceX; run-rate revenue statements; the Series H; Build AI in America; the grid-upgrade pledge) and claude.com product pages. Counterparty filings carry the contract terms: Amazon 10-Qs (convertible notes, Series G/H preferred, the USD 20bn milestone facility), TeraWulf's 8-K (the 401 MW Hawesville lease, about USD 19bn), ERock's release (470 MW equipment order), Aker/Nscale and the Fluidstack landlords for the chains, court records via Fortune for Google's about 14%. The Nscale (about USD 45bn) and Lambda (about USD 35bn) contracts are press-reported only. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The S-1 going public: the first audited revenue, the compute commitments as a purchase-obligations table, supplier concentration in gigawatts per counterparty, the Long-Term Benefit Trust governance disclosure — re-run financials and judgments from it",
+        "Delivery window 2H 2026 → early 2028: Trainium 'nearly 1 GW' by end-2026, Fluidstack CB-5 (early 2027), Barber Lake (September 2026), River Bend (Q2 2027), Hawesville (2H 2027), Rockdale (December 2027), Monarch (late 2027), TPUs 'starting in 2027' — any missed milestone in a landlord's or supplier's filing, and any repeat of the May 2026 compute-shortage rate limits",
+        "Run-rate revenue after USD 47bn (May 2026): the next company statement; the take-or-pay book is affordable only while it compounds",
+        "Direct-counterparty moves: further leases in Anthropic's own name (Hawesville, Riot's 191 MW build-to-suit), the Theseus anchor-tenant platform, the Apollo–Blackstone chip vehicle's residual-value terms, any owned campus — the make-versus-lease answer may change",
+        "Power: ERock 470 MW order deliveries and permits, the '100% of grid upgrades' pledge in utility dockets (Entergy row is `announced`), Monarch's islanded 2 GW, transformer/switchgear lead times flagged as the Hawesville choke point",
+        "Shareholder-suppliers: Amazon's holding (about USD 190bn of Anthropic paper) and milestone releases, Google's about 14% and Fluidstack backstops, Microsoft up to USD 5bn and NVIDIA up to USD 10bn — any change in stake or in the Azure USD 30bn / 1 GW commitment",
+        "Chesterton check: the 401 MW Hawesville lease is at Justified (Hawesville, KY), direct with TeraWulf, no Fluidstack entity; Microsoft walked from Monarch and the Anthropic terms there are unconfirmed; Anthropic owns no campus. Do not re-import any of these premises"
+      ]
+    },
+    {
       "slug": "applied-digital",
       "nextReport": "2026-10-14",
       "confirmed": false,
@@ -77,6 +92,34 @@
         "Delivery milestones at PF1/PF2",
         "Financing actions (project notes, Macquarie preferred draws)",
         "ChronoScale (CHRN) status"
+      ]
+    },
+    {
+      "slug": "available-power",
+      "cadence": "quarterly",
+      "source": "Business unit of Available Infrastructure (Tysons Corner, VA), a private edge-AI and cybersecurity company since its July 2025 rebrand; no sponsor, lender, buyer or financial figure has ever been published for the storage business, and the corporate storage pages are gone (available-power.com redirects to the parent). First-party channels are availableinfrastructure.com/news and the parent's PRWeb releases; the only storage disclosures are the 2022–2024 partner releases (Stem, Linxon, CleanCapital, EIN Presswire) and two Energy-Storage.news interviews. The channels that would move the picture are an ERCOT or Cleanview record for a 100 MW / 200 MWh battery in Bastrop County, a buyer's release naming Available Power as seller, or a Datavault AI filing tying Project Qestrel sites to batteries. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Greenport's fate: an ERCOT commercial-operation entry or Cleanview listing for a 100 MW / 200 MWh battery in Bastrop County, or a buyer's release — the stated February 2026 operating date has no confirmation from any party",
+        "Any release from a financial owner naming Available Power as the seller of a 9.9 MW / 20 MWh portfolio — the three March 2024 sales are unverified",
+        "A storage-related release from Available Infrastructure or a project attributed to the CleanCapital joint venture — either would show the unit is active; the record has been silent since March 2024",
+        "Datavault AI's filings and the parent's Project Qestrel releases for any statement tying micro data-centre sites to on-site batteries — nothing does today",
+        "Bastrop County: the Central Texas Airport / GREENPORT campus approval status — the host site of the only named project remains unapproved",
+        "Chesterton check: Texas only (no CAISO); develop-and-sell at NTP, not owner-operator; no sponsor named; nothing operating under its ownership on any tracker; Sungrow is a caption in a 2024 article about another company's project, not a supplier. Do not re-import the 2026-09-03 premise"
+      ]
+    },
+    {
+      "slug": "aypa-power",
+      "cadence": "quarterly",
+      "source": "Private Blackstone Energy Transition Partners portfolio company under a signed, unclosed sale to Brookfield (announced 22 July 2026; about USD 7bn EV / USD 3bn equity; 'subject to customary regulatory approvals'). First-party channels are aypa.com/news and the PR Newswire feed (no project list, no leadership page, no financials); the real disclosure channels are counterparty and regulator records — SRP, Santee Cooper, NCPA, United Power releases; CPUC resolutions and PG&E advice letters; SC PSC docket 2025-318-E; county boards and CEQAnet — plus Brookfield Asset Management 8-Ks and Brookfield Renewable results for the transaction. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Closing of the Brookfield acquisition: a completion release from Brookfield or Blackstone, any FERC Section 203 or HSR record, and whether the USD 1.55bn corporate facility and USD 1.5bn warehouse survive the change of control or are refinanced — update ownership, summary and judgment 1 the day it closes",
+        "CODs the releases promised but no source confirms: Kuna (stated mid-2025), Cald (stated 2024), Vidal (2026), Elora and Hedley (mid-2027), Pinopolis (1 December 2027; SC PSC hearing 19 March 2026) — silence past the dates is slippage",
+        "Dirac's appeal in Chino after the 4–3 planning-commission refusal (15 July 2026) and the Marici/Gabriel interconnection dates (CAISO queue 2031/2033 against 2027 contracted deliveries)",
+        "Any supplier other than Canadian Solar e-STORAGE, any FEOC or domestic-content statement, and any named tax-credit-transfer buyer — each would move the supplier-concentration judgment",
+        "Project-count and pipeline reconciliation: Aypa's 42 against Brookfield's 35 and the 3,000 MW / 3,500 MW split; an Aypa-published operating figure would replace the buyer's",
+        "Chesterton check: the sale is signed, not closed; '6.5 GW' is Brookfield's figure; the Yadkins PPA counterparty and the Bypass offtaker are undisclosed; no Aypa fire incident is documented (the Hamilton County press claim is unsupported). Do not re-import these as facts"
       ]
     },
     {
@@ -161,6 +204,21 @@
       ]
     },
     {
+      "slug": "compass-datacenters",
+      "cadence": "quarterly",
+      "source": "Private, sponsor-owned (co-controlled by Brookfield Infrastructure and Ontario Teachers' Pension Plan since 3 October 2023; KKR asset-level partner since December 2025); no listing, no earnings calendar. Listed parents in the chain: Brookfield Infrastructure Partners (NYSE: BIP / TSX: BIP.UN) and BIPC report a 'data' segment quarterly (letters at bip.brookfield.com; 6-K exhibits on EDGAR) without naming Compass. Disclosure channels: compassdatacenters.com newsroom and in-the-news pages (retro-edited boilerplate — quote with dates), PR Newswire (readable) and Yahoo Finance mirrors, the annual Outcomes Report PDF (July/August), ABS presales via Bisnow / Asset Securitization Report / GlobalCapital, Mississippi PSC and Texas local press. Data Center Dynamics is 403 from this environment. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Hoffman Estates Building 1 energisation by ComEd (2024 target: mid-2026) and any named tenant; Meridian's hyperscale anchor (only Corderill LLC, USD 100m, is named) and the 320 MW (Markets page) vs ~500 MW (release) reconciliation",
+        "A fifth structured issuance (Red Oak or Meridian securitization) and whether Moody's AAA extends to new collateral; any disclosure of KKR's amount or the assets transferred under the December 2025 agreement",
+        "Second Red Oak campus (~830/890 acres): permits, first building, any renewed county abatement; Statesville, NC construction start and the reported Duke Energy ESA (Bloomberg/E&E, February 2026 — unverified)",
+        "Texas policy: PUCT/ERCOT implementation of Governor Abbott's data-center standards (August 2026), legislative action on abatements; Infrastructure for America (co-founded September 2026 with Digital Realty, QTS, Vantage) activity",
+        "Brookfield Infrastructure quarterly letters: any Compass-specific MW, FFO or 'commissioned' figure; any change in co-control (Ontario Teachers' or Brookfield stake sale)",
+        "Prime-power, BESS or Bloom Energy award at a Compass campus (would overturn the dossier's flexible-load judgment); the Phoenix 191 MW diesel microgrid status",
+        "Chesterton check: the coverage-plan cell's '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's and 'Joliet 1.8 GW' is Hillwood/PowerHouse's — neither describes Compass; Rosemount, MN is Meta's project, not Compass's; Compass names no tenant and no GC except Power Construction (Hoffman Estates); the '$5.5 billion' 2023 price is press-only (Brookfield: $1.35bn for the co-controlling stake). Do not re-import any of these"
+      ]
+    },
+    {
       "slug": "constellation-energy",
       "nextReport": "2026-11-09",
       "confirmed": true,
@@ -173,6 +231,21 @@
         "Calpine integration progress (55 GW combined fleet)",
         "PJM capacity-price politics and regulatory/legislative developments",
         "Section 45U PTC dynamics"
+      ]
+    },
+    {
+      "slug": "coolit",
+      "cadence": "quarterly",
+      "source": "Private subsidiary of Ecolab (NYSE: ECL) since 2 July 2026; no separate filings. The only revenue figures are the acquirer's — 'approximately $550 million in sales over the next 12 months' at the March 2026 signing and 'year-to-date sales have grown more than 100%' at close — so Ecolab's quarterly releases and 10-Qs are the disclosure channel to read (Global High-Tech segment commentary). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "Ecolab's Q3 2026 release and 10-Q (late October 2026): first quarter with CoolIT consolidated — any stated CoolIT sales, the Global High-Tech growth rate, and progress against the '$4 billion by 2030' target named at close",
+        "The next-generation CDU launched 28 September 2026 'for 1MW+ ultra-dense AI racks': name, kW rating and the approach temperature it is rated at; whether it is skidded/facility-scale rather than row-based",
+        "NVIDIA Recommended Vendor List rack counts after Vera Rubin NVL72 ships (SemiAnalysis: 180–220 kW per rack): whether CoolIT publishes racks-per-CDU for Rubin and whether a Rubin-class cold-plate series (CP-NV-VR) appears",
+        "Calgary capacity and headcount: 'nearly 900' at August 2026 from about 650 in March; the Starfield facility's stated 25x scaling; any new site outside Canada beyond Taipei, Vietnam and China",
+        "Channel concentration: named server-OEM design wins (Dell, HPE, Gigabyte are sourced; Supermicro and Lenovo run in-house designs) and any first named hyperscaler — CoolIT claims '4 of 5' hyperscalers without naming one",
+        "Litigation: the Asetek disputes ended in 2022 (summary judgment, settlement) with the Federal Circuit reviving CoolIT's '567 patent in March 2024 — watch for any new assertion now that a deep-pocketed parent owns the portfolio",
+        "Chesterton check: CoolIT was KKR/Mubadala-owned May 2023–July 2026, not 'KKR-owned since 2023' today, and no jury verdict was ever reached in Asetek v. CoolIT. Do not re-import either premise"
       ]
     },
     {
@@ -220,6 +293,21 @@
       ]
     },
     {
+      "slug": "dnv",
+      "cadence": "quarterly",
+      "source": "Foundation-owned (Stiftelsen Det Norske Veritas); no listing, no earnings calendar. Publishes an annual report each spring with NOK revenue and headcount (AR2025: NOK 43.9bn, 17,463 employees) — the only audited figures. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). dnv.com itself is unreadable from this environment (Cloudflare 403); the annual report was read from a mirror host and 14 dnv.com pages are cited by title only.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "The 2026 annual report (expected spring 2027): Energy Systems revenue and headcount, and whether the data-centre advisory line is broken out for the first time",
+        "Revision dates on the Energy Storage recommended practices — RP-0043 (grid-connected storage) and the battery-testing practice — and any new RP on data-centre power or hydrogen-ready plant; each revision changes what lenders cite",
+        "The next Battery Performance Scorecard edition and which cell makers are named; scorecard findings move independent-engineer assumptions on degradation and thermal-runaway onset",
+        "Named independent-engineer or technical-adviser roles on battery and hybrid financings above 500 MWh, and any first named data-centre campus engagement with a covered hyperscaler or developer",
+        "Grid-code and interconnection-study work in ERCOT, PJM and Europe as large-load rules change — DNV is cited on both the storage side and the load side",
+        "Ownership and structure: any change to the foundation model, a sale of a non-core unit, or an acquisition in digital assurance (Veracity, GreenPowerMonitor) that shifts the mix",
+        "Chesterton check: DNV is an assurance body, not a supplier — no order books, no backlog. Do not import revenue estimates from consultancy rankings; the annual report is the only figure"
+      ]
+    },
+    {
       "slug": "dominion-energy",
       "nextReport": "2026-10-30",
       "confirmed": false,
@@ -250,6 +338,21 @@
         "CalSTRS case rulings",
         "ENR bookings updates",
         "WND Ventures"
+      ]
+    },
+    {
+      "slug": "edgecore",
+      "cadence": "quarterly",
+      "source": "Private, sponsor-owned (Partners Group 'on behalf of its clients' since 11 November 2022; USD 1.9bn equity round September 2024, Partners Group remains majority investor); no listing, no earnings calendar. Partners Group Holding AG (SIX: PGHN) is listed but its annual and interim reports carry EdgeCore only as a label. Disclosure channels: edgecore.com press releases (the 2026 Webflow site; legacy /news/ paths redirect), campus pages (figures move without release), Yahoo Finance and PR Newswire mirrors, financing counsel pages (Davis Polk), Commercial Property Executive, Virginia Business, AZ Big Media, Data Center Frontier; Data Center Dynamics is 403. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "AS01 Sterling occupancy (November 2026) and AS02 (July 2027) — the first deliveries under the 2023 repositioning; any named tenant anywhere in the portfolio",
+        "Reno RN01 energisation and NV Energy power delivery (a year past the late-2025 target); PH02/PH03 Mesa completions; Culpeper (196 MW from mid-2029) and the Mesa expansion (two buildings after the SRP switchyard cut)",
+        "Louisa County (1.1+ GW, 697 acres): construction start, tenant, generation or transmission plan (REC / Hyperscale Energy; Valley Link 765 kV opposition); the county performance agreement (1 December 2025, unfetched)",
+        "Financing: a second ABS or a Mesa refinancing (2025 ECore 2025-1 rated S&P A-/BBB-); any change in the '$7.4 billion committed / $16.1B planned' figures; a Partners Group exit process (sale, continuation vehicle, IPO)",
+        "Arizona: ACC rules under HB 2756 for extra-high-load customers and the 2026–2029 sales-tax exemption pause (HB 4168) — whether Mesa buildings hold grandfathered certifications; SRP's Large Customer Integration Process",
+        "Ratepayer posture: any campus abandoned on power economics (Brewer: 'will abandon projects if power economics become financially unworkable'); Virginia's electricity consumption tax (USD 0.011/kWh, July 2026–June 2028)",
+        "Chesterton check: '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's own January 2026 wording (superseded by the site's 2.27+ GW / $7.4bn) — the verifiable operating base is two buildings (PH01 26 MW, SV01 36 MW); EdgeCore is Partners Group-owned, not Brookfield-owned (its only Brookfield link is buying Mesa land from a Brookfield Properties affiliate) and has no Illinois site; Holder's Mesa contract value is undisclosed (the '$1.9B' is EdgeCore's loan). Do not re-import any of these"
       ]
     },
     {
@@ -285,6 +388,20 @@
       ]
     },
     {
+      "slug": "esvolta",
+      "cadence": "quarterly",
+      "source": "Private, sponsor-owned (Generate Capital, acquired July 2022, terms undisclosed) and in a sale process — Infralogic (5 June 2026): Barclays and Truist mandated; no sponsor release. First-party channels are esvolta.com (Wix; /news holds 16 posts from January 2024, /media lists older releases; per-project pages 404), PR Newswire and Orrick deal notes; Business Wire mirrors (Batteries News, SFNet) for 2023 and earlier. Boilerplate figures move: 1.5 GWh (2024) → 1.4 → 1.7 (December 2025) → 2.0 GWh (March 2026).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The outcome of Generate Capital's sale process — buyer, structure and whether esVolta stays a develop-and-own platform; the June 2026 release still calls it a Generate portfolio company",
+        "Boxcar (COD 2027) and City Breeze (queue COD 18 March 2027) construction milestones, a supplier announcement for either, and the name of Boxcar's 'major corporate customer'",
+        "An SRP or ED3 contract and a 2026 groundbreaking at Cactus Wren (800 MW / 3,200 MWh, Pinal County) — the company's largest project by six times, permitted December 2025 with no offtake",
+        "PG&E or CAISO confirmation of Hummingbird's commercial operation (company page: March 2026; no third-party COD article) and any disclosure of the ERCOT hedge counterparty or tenor",
+        "The first named SPP or MISO project (promised since June 2026) and any FEOC-driven change from Sungrow on the 2026–2027 projects",
+        "Chesterton check: esVolta is in CAISO, ERCOT and WECC with SPP/MISO expansion — not PJM; the Captona deal was preferred equity, not a sale; Generate acquired it in July 2022, not 2023. Do not re-import the 2026-09-03 premise"
+      ]
+    },
+    {
       "slug": "eve-energy",
       "nextReport": "2026-08-20",
       "confirmed": true,
@@ -298,6 +415,57 @@
         "US DoD 1260H listing (verify the Reuters original)",
         "LG Energy Solution/Tulip ITC Section 337 case",
         "AI data-center BBU customer wins; Malaysia/Hungary plant progress"
+      ]
+    },
+    {
+      "slug": "excelsior-energy-capital",
+      "cadence": "quarterly",
+      "source": "Private fund manager (Excelsior Renewable Energy Management Company LP, SEC CRD 289890); no listing, no earnings calendar. Disclosure channels: SEC Form ADV annual amendment (late March — regulatory AUM, headcount), SEC Form D/D-A filings for fund vehicles, Business Wire releases mirrored on Yahoo Finance/AOL (businesswire.com is 403 from this environment), excelsiorcapital.com news page (excelsiorenergycapital.com redirects there), Lydian Energy releases. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Enel closing of the 830 MW Fund I portfolio sale (expected Q3 2026; ~USD 1bn consideration, ~USD 1.3bn EV) — confirm completion, FERC/FDI conditions, and whether Excelsior issues its own release",
+        "First named delivery of Fluence Gridstack Pro (2.2 GWh, from 2025) or LG Energy Solution Vertech (7.5 GWh, first delivery slated April 2026) to an Excelsior/Lydian site — no source has yet named a recipient project",
+        "Pintail, Crane and Headcamp COD (released target Q4 2025; ERCOT record for Headcamp showed July 2026) — energisation dates in ERCOT records; reconcile the two MWh sets (300/400/400 vs 391/521/521)",
+        "Lydian pipeline and Atlas North build-out: any financing or supplier named for the 450 MW / 1,800 MWh CAISO batteries; Faraday BESS Phase 1 progress",
+        "Fund III: a Form D or first-close release would end the 'two active funds' boilerplate; the March 2027 Form ADV amendment for regulatory AUM and headcount",
+        "Stella Power and CleanAmps alliances: any named site, MW or data-centre offtaker (none disclosed as of September 2026)",
+        "Chesterton check: the Fluence 2.2 GWh deal dates from 30 July 2024 (not December 2024 — that is the LG deal); no source names Holland, MI or a 2030 end year for the LG agreement; the fourth co-founder is Ryan Fegley (no 'Ryan Stephenson'); a 'Fund III $1.8bn' web claim is uncorroborated. Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "fermi-america",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "source": "Public since 1 October 2025 (Nasdaq Global Select: FRMI; secondary LSE listing). Fiscal year ends 31 December. Q1 2026 release and call 14 May 2026 (10-Q filed 15 May); Q2 2026 release and call 13 August 2026 (10-Q filed 14 August). Q3 2026 date not announced — the IR 'Upcoming Events' page (investor.fermiamerica.com/events-presentations) was empty on 5 September 2026; 2026-11-12 is a cadence inference (the Q3 2025 letter came 10 November; the emerging-growth 10-Q deadline is 16 November). Confirm against the IR events page or an 8-K. First annual meeting 30 October 2026 (record date 31 August). SEC filings at EDGAR CIK 2071778 are the ground truth; fermiamerica.com and investor.fermiamerica.com are readable; the IR press-release and quarterly-results pages are JS-rendered (use the RSS feed and 8-K exhibits); Business Wire and many mirrors are 403 — StockTitan, Finviz, Yahoo Finance and Newswire.com mirrors worked.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "TensorWave lease: closing on or before 30 September 2026 (extendable) — project-level financing, board approvals, the third-party 'backstop' guarantor the release stopped naming; any 8-K; delivery phases late 2027 to Q1 2028; the 650 MW expansion option",
+        "Q3 2026 results: cash against USD 91.7m at 30 June plus ~USD 382m of July convert proceeds; capex run-rate vs 'about USD 2 billion in the next 12 months'; going-concern language; MUFG 400 MW lease test (~10 November 2026); Keystone approved-customer deadline 31 December 2026; Yorkville note expiry ~30 September",
+        "Power: energisation of the 86 MW SPS block (10-K: second half of 2026) and the 114 MW by 1 October 2027; 210 MW on 1 July 2027 and 640 MW nameplate by Q4 2027 (COO, 13 August 2026); TM2500 pick-up July–September 2027; F-class EPC award; any TCEQ decision on the 5 GW increment",
+        "Hillcore: definitive documents within ~90 days of 11 August 2026 (~9 November), notice to proceed, the take-or-pay terms and the ~350 MW first block",
+        "Governance and legal: the 30 October 2026 annual meeting and any founder nominations (deadline 10 September); Neugebauer v. Fermi and the company's counter-suits; the Lupia class action; the EDNY subpoena and SEC request; Peña/Summers (>USD 415m); the 340 Energy and Bayonne suits",
+        "Nuclear: NRC Part 3 submission (target 31 December 2026), draft and final EIS (December 2026 target), Hyundai E&C EPC pathway, any DOE or Texas HB14 award",
+        "Chesterton check: Fermi is PUBLIC (Nasdaq and LSE: FRMI), not private; the campus is in Carson County (adjacent to Pantex), not Amarillo city; 'HyperGrid' is a trademark and hypergrid.com is not a Fermi domain; nothing is energised as of 13 August 2026; the first tenant is TensorWave (conditional), not Amazon (reported and denied); HQ moved to Dallas. Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "flex",
+      "nextReport": "2026-10-28",
+      "confirmed": false,
+      "source": "Inference from cadence; the company has published nothing and the trackers do not agree. Flex's own IR events calendar (https://investors.flex.com/events/default.aspx, read through the underlying Q4 Inc. events feed because the page is JavaScript-rendered) listed exactly one upcoming event on 2026-09-04 - the Goldman Sachs Communacopia + Technology Conference on 2026-09-09 - and no 'Announces Date for Second Quarter Fiscal 2027 Earnings Call' release had been issued. Flex normally publishes that release two to three weeks ahead, so expect it in early-to-mid October 2026. Tracker positions: Investing.com 2026-11-04; MarketBeat 2026-11-04 but explicitly 'estimated ... based on past reporting schedules. The company has not officially confirmed'; Market Chameleon a window of 2026-10-28 to 2026-11-02, also explicitly an estimate. The Nov 4 estimates and the Market Chameleon window DO NOT OVERLAP, which is the conflict to carry. The 2026-10-28 date used here is a cadence inference and is a Wednesday (verified with date -d): the last three prints were all Wednesdays - 2025-10-29, 2026-05-05/06 and 2026-07-29 - and fiscal Q2 ends around 2026-09-25. ONE FORWARD DATE IS COMPANY-CONFIRMED: an Investor Day on 2026-11-10, announced in the Q1 FY2027 release. Fiscal year ends 31 March on a 52/53-week convention (Q1 FY2027 ended 2026-06-26); cadence quarterly; SEC registrant CIK 0000866374, Nasdaq: FLEX, S&P 500 constituent since 2026-06-22.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "THE SPIN-OFF IS THE STORY. The board approved separating the entire Cloud and Power Infrastructure segment on 2026-05-05, targeted for Q1 calendar 2027, with CEO Revathi Advaithi going to the new company and president Michael Hartung becoming CEO of Flex. Watch for the Form 10 - it will put standalone segment financials on the public record for the first time and close this dossier's largest collection gap",
+        "The EPC Power acquisition agreed 2026-09-03 at $4.4bn, expected to close in Q4 calendar 2026 - into the segment weeks before it separates. Funded with debt AND equity; watch the share count and the financing terms",
+        "ALWAYS RECORD THE EPS BASIS. FY2026 GAAP diluted EPS was $2.33 against $3.30 adjusted, and FY2025 $2.11 against $2.65. Zacks, Investing.com, MarketBeat and StockStory report every quarter of both years as a beat on the adjusted basis; Simply Wall St reports misses of 5.5% and 5.3% on the statutory basis. Both are internally consistent and they do not reconcile",
+        "FREE CASH FLOW, not earnings, is what moved the stock. Q1 FY2027 produced $41m of free cash flow on $7,928m of revenue and management cut FY2027 conversion guidance to about 40% from about 60%; the shares fell about 9% on a beat-and-raise",
+        "The unnamed customer at 12% of Q1 FY2027 net sales, majority in Cloud and Power Infrastructure - roughly $950m in one quarter. The FY2026 10-K had said no customer exceeded 10%. Watch whether it is ever named and whether the concentration persists into the separated company",
+        "Segment margin inside CPI: 9.9% in FY2026 against 10.2% in FY2025 and 9.7% in Q1 FY2027, while revenue grew 38%. Analysts note Power growing above 70% with muted margins - watch whether the mix shift dilutes the segment's margin premium",
+        "SEGMENT COMPARABILITY BREAK: the three-segment structure (ITS / RMS / CPI) began in Q4 FY2026. FY2025 was originally reported as Flex Agility Solutions $14,074m and Flex Reliability Solutions $11,739m; do not mix those with the recast series",
+        "Whether Flex reappears in NVIDIA's own partner communications. It is named in NVIDIA's May 2025 800 VDC roster but absent from the May 2026 DSX partner release and from independent GTC 2026 ecosystem coverage",
+        "USMCA joint review in 2026, against Mexico at 25% of net sales and 36% of net PP&E. Flex quantifies FY2026 tariff impact at about one percent of revenues and cost of goods with negligible profit effect, which rests on a pass-through it says it may not always sustain",
+        "Singapore High Court approval for the capital reduction and distribution the separation requires - the same route the Nextracker spin took in January 2024",
+        "Collection gaps to close if possible: no standalone revenue exists for Anord Mardix, JetCool, Crown or EP2; Flex's individual rank in the MMI Top 50 and in4ma Global 100 is paywalled; no named ranking firm publishes a share for Anord Mardix or JetCool; and no contemporaneous analyst verdict on the Nextracker separation could be found"
       ]
     },
     {
@@ -323,6 +491,21 @@
       ]
     },
     {
+      "slug": "fluidstack",
+      "cadence": "quarterly",
+      "source": "Private (Fluidstack Limited, UK 10985545; HQ New York since December 2025); no filings of its own. The disclosure channel is its public landlords and counterparties — TeraWulf (10-Q/10-K/8-K: Lake Mariner CB-5, the Abernathy sale, the Google recognition agreements and penny warrants), Cipher Mining (Barber Lake, the USD 544.5m guarantee asset), Hut 8 (River Bend), Meridian Arc's bond disclosures (New Lebanon) — plus Anthropic's newsroom for the USD 50bn programme and Aker/Nscale filings where the two overlap. Funding is disclosed by investors (Series A USD 830m, January 2026) and by press (the reported USD 1.5bn at USD 18bn, September 2026 — unannounced by the company). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Commencement dates against the leases: CB-5 (moved '2H 2026' → 'early 2027'), Abernathy ('2H 2026' → 'Q4 2026'), Barber Lake (September 2026, reported on schedule), River Bend (Q2 2027), New Lebanon — each landlord's next 10-Q; the Google backstop only becomes effective at commencement, and a delay beyond 180 days lets the tenant terminate",
+        "Any Google publication naming Fluidstack (equity investment, the reported USD 100m talks tied to Ironwood TPU distribution, the Broadcom–Apollo–Blackstone chip vehicle) — today every backstop term is sourced from counterparties' filings and law-firm alerts, not from Google",
+        "The reported USD 1.5bn round at USD 18bn (Jane Street-led, September 2026): a company or investor announcement that confirms or corrects it; total funding stands at about USD 2.6bn on announced rounds",
+        "The owner-developer pivot: Abernathy (bought TeraWulf's 50.1% for about USD 530m, July 2026), Okmulgee OK, Sullivan County NY and Wythe County VA — financing announcements, utility agreements (Entergy, AEP rows are `announced`), and whether any lease is signed without a Google recognition agreement",
+        "Anthropic routing around the intermediary: Hawesville (401 MW direct with TeraWulf, July 2026), Riot, Hut 8 Beacon Point, Nscale, Lambda — each new direct contract reduces the credit-substitution half of Fluidstack's product",
+        "Europe: the withdrawn 1 GW France campus (March 2026), any remaining Nordic/UK colocation for Mistral, Poolside, Black Forest Labs; the Macquarie GPU-secured facility's status",
+        "Chesterton check: Fluidstack does not own Lake Mariner, Barber Lake, River Bend or New Lebanon — it is tenant of record; the USD 18bn valuation is reported, not announced; the 401 MW Hawesville lease has no Fluidstack entity in it. Do not re-import any of these premises"
+      ]
+    },
+    {
       "slug": "google",
       "nextReport": "2026-10-27",
       "confirmed": true,
@@ -334,6 +517,20 @@
         "Form Energy iron-air progress",
         "Demand-response scale and new BESS/storage procurement",
         "TPU v7 external-sales momentum"
+      ]
+    },
+    {
+      "slug": "gridstor",
+      "cadence": "quarterly",
+      "source": "Private, sponsor-created company owned by funds managed by Goldman Sachs Asset Management (trade press: Horizon Energy Storage); no fund name, commitment or ownership split is public. First-party channels are gridstor.com (WordPress with Yoast sitemaps — all 24 releases hosted in full, so Business Wire mirrors are unnecessary), the project pages and the June 2026 media kit; the disclosure channels that move the picture are lender and credit-buyer releases (NORD/LB, First Citizens, Siemens Financial Services, Foss & Company), counterparty releases (SCE, APS, Axpo), Modo Energy's ERCOT buildout reports, Enerdatics and Holland & Hart's deal notes. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Gunnar's commercial operation by end-2026 and the naming of its Fortune 500 tolling counterparty — a slip past first half 2027 repeats the Hidden Lakes delay",
+        "Offtake for Birdseye (Colorado, Xcel Energy's Riverdale substation) and the Oklahoma and Capacity Power Group projects, which carry no contract or date — confirmation that acquired projects are contracted before construction",
+        "A supplier name for Hidden Lakes, Gunnar or White Tank (Enerdatics' SolBank 3.0 attribution is unconfirmed) or a post-FEOC-guidance procurement announcement — the CTO's stated procurement pause is the supplier-relevant item",
+        "The pipeline figure in the next boilerplate ('over 5 GW' in September 2025, 'over 3 GW' since November 2025) and any update on the 2022 Los Angeles Basin portfolio beyond Santa Fe Springs",
+        "Any Goldman Sachs Asset Management release naming the fund, a co-investor, a continuation vehicle or a platform sale — the sponsor's exit route and commitment are undisclosed",
+        "Chesterton check: the company is contracted, not merchant (SCE RA, APS and Fortune 500 tolls, Axpo swap); the markets are CA, TX, AZ, OK and CO; HQ is Portland, not Los Angeles; the sponsor is a GSAM-managed fund, not 'GSAM Infrastructure' by name. Do not re-import the 2026-09-03 premise"
       ]
     },
     {
@@ -398,6 +595,69 @@
         "US/EU regulatory actions",
         "AIDC launches",
         "Gulf/APAC wins"
+      ]
+    },
+    {
+      "slug": "hunt-energy-network",
+      "cadence": "quarterly",
+      "source": "Private, Hunt-family-owned ('a part of the Hunt Energy Company'; 'managed by the Ray L. Hunt family') with Manulife Investment Management as joint-venture equity partner (USD 225 million 2021; USD 250 million 2024). First-party channels are thin: huntenergynetwork.com (13 pages, 2 posts, no press archive — the asset-development page is the project list and omits Fort Duncan), PR Newswire (three releases in five years), Hunt Consolidated's news page, and Pat Wood's testimony PDFs. The richest record is regulatory: PUCT Interchange filings (Projects 52196, 56556, 53911, 54335; Dockets 58315, 58964; Sharyland's affiliate report 36867) and Modo Energy's ERCOT benchmarks.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "An ERCOT interconnection agreement for Fizzle, Nanuluk, Whitetail or Amberjack2 (180 MW each; none has one) and Modo's cited 2027 commissioning for 360 MW of transmission-level assets",
+        "A second operating-asset purchase in ERCOT — Wood said the company is 'actively looking' — and whether it stays '100% merchant'",
+        "The TNMP rate case (Docket 58964) outcome on a substation-service rate class for storage and the AEP Texas UTM proceeding (Docket 58315)",
+        "A named third-party TraDER/QSE customer, a named data-centre customer, or a Caterpillar unit at an HEN site — none exists yet",
+        "Any lender, tax-equity or credit-transfer announcement; none has ever been published for a 420 MW fleet",
+        "The next fleet count (33 facilities in February 2026 vs '31 batteries' in May 2026) and whether the web project list is updated to include Fort Duncan",
+        "Chesterton check: HEN is ERCOT-only, fully merchant, and a sub-10 MW distributed owner (plus one 100 MW battery); Manulife is a JV equity partner, not an owner; the Caterpillar agreement is the parent's. Do not re-import the 2026-09-03 premise"
+      ]
+    },
+    {
+      "slug": "infineon",
+      "nextReport": "2026-11-10",
+      "confirmed": true,
+      "source": "Company-published, but the company itself marks it preliminary, and one tracker disagrees. Infineon prints its own financial calendar inside every quarterly release; the Q3 FY2026 release of 2026-08-05 (https://www.infineon.com/row/public/documents/corporate/press/2026/infpr202608-125e.pdf, pages 6-7) reads '10 November 2026* - Earnings Release for the Fourth Quarter and the 2026 Fiscal Year', where the company's own asterisk convention means preliminary. The standalone IR page https://www.infineon.com/about/investor/financial-calendar returns a soft 404 and https://www.infineon.com/about/investor is JavaScript-rendered, so the quarterly PDF is the authoritative source rather than a calendar page. Tracker positions on 2026-09-04: TipRanks 2026-11-10 labelled 'Confirmed' (its earnings module also carries an obvious typo, which lowers confidence in the label); Investing.com 2026-11-10 with consensus EPS 0.621 on revenue 4.67B; MarketBeat 2026-11-10 but explicitly 'estimated ... based on past reporting schedules'; AlphaQuery 2026-11-11; Nasdaq's earnings-calendar API returns 'No record found' for the IFNNY ADR on that date. NOTE THE WEEKDAY TELL: 2026-11-10 is a Tuesday and 2026-11-11 a Wednesday (verified with date -d), and the last four prints all landed on Wednesdays - 2025-11-12, 2026-02-04, 2026-05-06 and 2026-08-05 - so MarketBeat's own stated method points at AlphaQuery's date rather than at the one MarketBeat prints. Treat 10 or 11 November as the window and re-read the company calendar in the Q4 release cycle. Fiscal year ends 30 September (a Wednesday in 2026); cadence quarterly. Also company-published and preliminary: Q1 FY2027 earnings 2027-02-03, AGM 2027-02-25.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "Whether Q4 FY2026 lands Tuesday 2026-11-10 as the company's preliminary calendar says or Wednesday 2026-11-11 as AlphaQuery says and the four-quarter weekday pattern implies",
+        "The Q4 bar is the highest of the year: Vara consensus of 2026-08-18 wants EUR 4,704m of revenue at a 23.2% Segment Result margin, meaning Segment Result must rise from EUR 797m to EUR 1,092m in one quarter. Segment Result has missed Vara in three of the last four prints while revenue beat",
+        "THE FIRST REPORT ON THE NEW THREE-SEGMENT STRUCTURE (Automotive / Power Systems / Edge Systems, effective 2026-07-01). Pro-forma comparatives were promised; capture them, because every ATV/GIP/PSS/CSS series in this dossier ends at Q3 FY2026 and the AI data-centre business becomes separately visible inside Power Systems for the first time",
+        "ALWAYS RECORD THE EPS BASIS. Infineon publishes IFRS diluted and adjusted diluted EPS and they differ by roughly a third; Investing.com manufactured a 35.01% miss on the 2025-08-05 print by comparing an IFRS actual against an adjusted consensus. Use the Vara Research consensus Infineon commissions (https://www.infineon.com/assets/row/public/documents/corporate/investors/analyst-consensus/), which prints both bases side by side",
+        "Whether the FY2027 AI data-centre revenue projection is materially upgraded as management said it would be - the standing figure is above EUR 2.5bn after above EUR 1.6bn in FY2026",
+        "Any naming of the multi-year capacity reservation counterparties - a high single-digit billion euro cumulative volume with prepayments, from 'several leading customers across the AI data center ecosystem', all anonymised today. Same for the solid-state-transformer design partners and the 20-plus SSCB customers, of whom only Siemens is named",
+        "Whether the allocation position ('demand ... continues to outstrip available supply, we are in allocation') persists, and whether capex moves again from about EUR 2.7bn",
+        "The Innoscience GaN litigation in both directions, and specifically whether the Chinese injunction upheld on 2026-06-16 has any quantified effect",
+        "China's gallium licensing suspension expires 2026-11-27, seventeen days after this report. Infineon has published no gallium-specific statement or mitigation despite acquiring GaN Systems",
+        "SiC pricing: Yole reports an overcapacity correction persisting to 2027-2028 with upstream utilisation near 50%. Watch whether the 200 mm conversion at Kulim and Villach shows up in gross margin",
+        "Collection gap to close if possible: no verifiable per-vendor share for the overall power-semiconductor market exists from any ranking firm's own page. A circulating '19.5% in 2025' figure was deliberately omitted from this dossier as unattributable"
+      ]
+    },
+    {
+      "slug": "intersect-power",
+      "cadence": "quarterly",
+      "source": "Google subsidiary since 10 March 2026 (acquisition announced 22 December 2025; USD 4.75bn cash plus debt; USD 5,868m in Alphabet's Q2 2026 10-Q). Company channels: intersect.com (news, portfolio pages, about — intersectpower.com redirects), Kimber's blog; parent channels: abc.xyz IR, blog.google, datacenters.google, Alphabet 10-Q/10-K acquisition notes; sellers: TPG, Greenbelt, CAI; the carved-out fleet reports as IPX Power (ipxpower.com). Campus facts come from Gray County minutes (The Pampa News, High Plains Observer), New Project Media and trade press; no FERC, ERCOT or PUCT filing names Intersect. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The first published data-centre MW for Quantum or Meitner (Google, Intersect, an ERCOT large-load report or a PUCT SB 6 net-metering filing) and Meitner Phase 1 dates against 'late 2028'",
+        "Any Intersect entity in a PUCT co-location net-metering review, an ERCOT curtailment or large-load filing, or a FERC docket — which SB 6 path the parks take",
+        "Meitner's on-site gas: turbine or engine supplier, capacity and air permit; any FEOC-compliant battery statement; the split of the First Solar (11.4 GWdc) and Tesla (15.3 GWh) frameworks between Intersect and IPX Power",
+        "Any non-Google tenant or third-party project, which would refute the captive-developer judgment; Roman's scope and dates; Google's Armstrong and Wilbarger County campuses and whether Intersect is attached",
+        "Alphabet's next 10-Q for any Intersect operating disclosure or impairment; IPX Power's financings for what they say about the former fleet",
+        "Chesterton check: the deal is closed (10 March 2026), not pending; Google bought the development platform and parks, not the operating fleet; there is no Wyoming campus; the 840 MW Meitner load is a trade outlet's reading of filings, not a party statement. Do not re-import the brief's premises"
+      ]
+    },
+    {
+      "slug": "invenergy",
+      "cadence": "quarterly",
+      "source": "Private developer owned by CDPQ (52.4% economic ownership of Invenergy Renewables LLC), Blackstone Infrastructure Partners (about USD 4bn, 2022–2023) and management as managing member; no financial statements. First-party channels are invenergy.com (served from the wwww. host; the press index will not paginate — use site search), grainbeltexpress.com and the project microsites; the disclosure channels that move the picture are utility CPCN filings (IURC for Sycamore Riverside, Wisconsin PSC for the We Energies plants), counterparty releases (Meta, Verizon, SRP, APS, AEP), Grain Belt court and DOE records, BOEM and BLM lease records, and Cleanview's pipeline rankings. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Grain Belt Express financing: any bank group, bond or equity partner announced for the USD 11bn line after the DOE guarantee's July 2025 termination, and whether Phase 1 construction actually starts in 2026 — a financing closes judgment 5; silence through mid-2027 confirms the delay reading",
+        "Regulatory decisions on the build-and-transfer gas plants: the IURC's end-2026 order on Sycamore Riverside (918 MW to I&M, March 2029) and the Wisconsin PSC's decisions on Foundry Ridge and Red Oak Ridge for We Energies, plus the October 2026 application for Union Depot and Forest Junction (1,950 MW) — approvals confirm the gas-to-utility model, a denial strands the settlement capital",
+        "Any Invenergy release naming a battery integrator, cell supplier or an ISO-level storage total, and any CAISO record for the 200 MW Seahawk (Minto Road) project taken over in September 2026 — the dossier's largest collection gap",
+        "Ownership: a Blackstone or CDPQ stake change, a holding-company rating, a recapitalisation or IPO report from a primary source — the 2023 baseline is the last confirmed state; aggregator valuation claims are excluded",
+        "The 4 July 2026 begin-construction record for the 2027–2028 Meta and Verizon projects and Treasury's final FEOC rule — a project dropping from the Meta list would show the deadline bit",
+        "Chesterton check: 'largest privately held' is company language (Cleanview #2 by pipeline); the storage fleet is Arizona-contracted, not merchant; the NVIDIA/Emerald AI 'AI factory-ready sites' are stated intent with no named site; boilerplate megawatts (36/38 GW developed, 20/25 GW operated) move release to release. Do not re-import these as facts"
       ]
     },
     {
@@ -471,6 +731,22 @@
       ]
     },
     {
+      "slug": "mccarthy",
+      "cadence": "quarterly",
+      "source": "Private and 100% employee-owned; no filing record, no earnings calendar, no audited financials. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). The only company-published total revenue figure in existence is 'exceeding $4.8 billion' for 2020; third-party figures are self-reported survey responses and disagree.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "The ENR Top 400 rank, which is the most informative series available for a company with no income statement: 19 → 20 → 20 → 22 across four editions, the fall landing in the year the data-centre category grew 86.4%. The 2027 edition is the number to watch",
+        "The 418 MW built against 2 GW-plus in planning, design and preconstruction. Whether that preconstruction figure converts, and whether any hyperscale client other than Vantage is ever named",
+        "Lighthouse / Port Washington: the Turner-McCarthy JV on Buildings 13 and 14 (468 MW combined) inside the $8bn first phase, completion 2028. Also Vantage NV12 phased turnover from December 2027 to early 2029",
+        "The renewables pipeline after the OBBBA safe harbour. Credits terminate for wind and solar placed in service after 2027-12-31 unless construction began before 2026-07-04; Lupinus I/II broke ground March 2026 and sits inside it. What is in the book that could not start in time is the open question",
+        "The Palantir dependency: a multi-year, multi-million-dollar agreement with the internal technology team reportedly restructuring around embedded Palantir engineers. Watch for any published productivity result from Pulse, and for the investment amount, which is undisclosed",
+        "Leadership: Dhruv Patel became President and COO in August 2026 having scaled renewables from $20M to $2B-plus; Cathy Orquiola joined from PCL in August 2026 focused on self-perform and mission critical. Watch whether a data-centre-specific practice leadership emerges",
+        "Safety: the open OSHA health citation at Sparks NV (inspection 1826381.015, silica NEP) and whether any company-wide, dated EMR or TRIR is ever published — the existing 0.45 and 0.47 figures are undated and market-scoped",
+        "Chesterton check: no civil litigation, debarment, bid protest or licensing action was found after direct database and press searching. Three false attributions circulate and must not be re-imported — the Whiting-Turner Top 400 entry, EdgeCore Mesa (Holder), and Meta Beaver Dam (Mortenson)"
+      ]
+    },
+    {
       "slug": "meta",
       "nextReport": "2026-10-28",
       "confirmed": false,
@@ -481,6 +757,21 @@
         "Energy procurement: nuclear package, new BESS tolling deals beyond Enbridge Cowboy, the Noon LDES reservation",
         "SPV financing developments",
         "Whether the press-reported TPU purchases were ever confirmed (Low-confidence/unverified in the dossier)"
+      ]
+    },
+    {
+      "slug": "mgx",
+      "cadence": "quarterly",
+      "source": "Private ADGM fund manager (MGX Fund Management Limited, FSP 240067); no listing, no earnings calendar, no annual report. Disclosure channels: mgx.ae news-insights (pages ~15 MB — fetch with curl, not WebFetch; /en/ paths redirect), MGX's X account (via the oEmbed endpoint), board-meeting releases (two to four a year, also carried by the Abu Dhabi Media Office), co-issuer releases (AIP/BlackRock/GIP/Microsoft, Aligned, SoftBank for Stargate), ADGM FSRA register for licence and director changes. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "AIP's second investment after Aligned (power, chips or campuses) and any disclosure of MGX's percentage of Aligned or the acquisition debt package",
+        "The '8 GW by end-2026' contracted-capacity claim: any breakdown by asset in a board release",
+        "Stargate LLC: any first-party statement naming MGX's contribution (Bloomberg's ~USD 7bn is unconfirmed); whether later Stargate releases name MGX at all",
+        "US political risk: congressional action on UAE chip access (Country Group A:5, July 2026), the USD1/Binance matter, Commerce's stated favourable review of applications 'destined for MGX'",
+        "Successor fund or new commitments after the USD 49bn Fund I close (1 July 2026); any LP named",
+        "Regulated-entity governance: the ADGM register's licensed directors (Xiao and Edelman withdrawn 18 May 2026; Namphy and Dweik added) and any MGX statement explaining it",
+        "Chesterton check: MGX publishes no AUM total, ticket sizes, stakes or headcount — do not import press estimates as facts; the mgx.ae index headline '$18B Series K' for Databricks is a typo for USD 1bn; eight corpus 'MGX' hits are NVIDIA's MGX rack architecture, not this fund"
       ]
     },
     {
@@ -562,6 +853,40 @@
       ]
     },
     {
+      "slug": "nrg-energy",
+      "nextReport": "2026-11-05",
+      "confirmed": false,
+      "source": "No company announcement exists. NRG's practice is a dedicated release naming the date three to five weeks ahead (newsroom item 45441 for the 2026-05-06 print; 45736 for the 2026-08-04 print), and https://www.nrg.com/sitemap.xml crawled 2026-09-05 contains no such release for Q3 2026. Historical Q3 releases: 2023-11-02 (Thu), 2024-11-08 (Fri), 2025-11-06 (Thu) — the first week of November, with the call at 9:00 a.m. Eastern on the release day. This row uses Thursday 2026-11-05 as a pattern inference. CAUTION: investors.nrg.com returns 403/503 from this environment, so the IR events calendar cannot be used as a second source; verify from the nrg.com newsroom or the EDGAR 8-K feed (CIK 1013871).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Whether the 1.2 GW Texas project converts from 'aligned on principal commercial terms' to a signed agreement, and whether the hyperscaler is finally named. NRG's stated 2026 goal was to sign at least 1 GW under the Bring Your Own Power model; disclosed economics are about $3.2 billion at roughly $2,700/kW, about $500M annual adjusted EBITDA, about $375M FCF before growth, a 12-15 percent pre-tax unlevered IRR and a late-2029 COD, expandable to 2.4 GW",
+        "A firm turbine purchase order or a final investment decision under the GE Vernova and TIC Project Development Agreement. Slot reservations went 1.2 GW (Feb 2025) to 3.6 GW (FY2025 10-K) against an unchanged 5.4 GW ceiling; GE Vernova accounts for reservations separately from backlog. No site has ever been named. NOTE: this is a development agreement, not a joint venture — NRG's filings never use that phrase",
+        "The ERCOT interconnection audit ordered 2026-08-03 and its December 2026 verification report. NRG's signed 445 MW of data-centre retail agreements are grid-served and therefore exposed; behind-the-meter generation is exempt, which favours the BYOP model",
+        "The Texas residential electricity customer count: 2,928 to 2,909 to 2,860 thousand across three years. A fourth consecutive decline would make the retail erosion structural. Watch it alongside Vivint subscribers (2,111 to 2,226 to 2,419 thousand) and the provision for credit losses ($251M, $314M, $272M)",
+        "LS Power integration and its shareholding: the deal closed 2026-01-30 at $10,583M plus about $3.2bn of assumed debt; LS Power retains roughly 11 percent of NRG with voting capped at 10 percent through a trust, and sold 12.3 million shares in a March 2026 secondary. Purchase-price allocation is to be finalised by end-2026; goodwill is $3,802M preliminarily split $1,588M Texas / $2,214M East",
+        "The two remaining Texas Energy Fund projects: Cedar Bayou 5 (689 MW) and Greens Bayou 6 (443 MW), both mid-2028, on $562M and $370M of 3 percent loans. T.H. Wharton reached commercial operation 2026-05-26 with a completion-bonus grant agreement of up to $54.72M over ten instalments from 2027",
+        "Guidance credibility: two consecutive adjusted-EPS misses in 2026, both at exactly $1.49, against reaffirmed full-year guidance of $7.90-$9.90. First-half adjusted EPS of about $2.98 implies a heavily back-loaded year, and the $2.00-wide range is unusually loose",
+        "The valuation gap: a 52-week low of $111.85 on 2026-08-24 against a mean target near $189 and 13 of 16 ratings still Buy or Strong Buy. Every August broker action was a target cut without a rating change",
+        "Consumer-protection exposure: the $71 million New York PSC settlement approved 2026-04-16 across nine NRG-affiliated brands and about 278,000 customers (Case 25-M-0516). Watch for similar actions in other states",
+        "Chesterton check: investors.nrg.com is 403/503-blocked, so the percentage of expected generation hedged — a figure both Vistra and Talen publish — is unobtainable for NRG, as is any net leverage ratio. Nine of ten executive headshots are advertised at NRG asset paths that redirect to an error page. Absence of these is a collection gap, not evidence"
+      ]
+    },
+    {
+      "slug": "nscale",
+      "cadence": "quarterly",
+      "source": "Private; no filings of its own. The disclosure channel is Aker ASA's quarterly reports and presentations (Aker led Series B and C and reports the Narvik/Norway contracts, the replaced OpenAI LOI and the Monarch customer without naming it), the company's newsroom (Microsoft GPU contracts stated in chips, the DDTL and the investment-grade project loans, the RCF, Anyscale, Figure), Statnett and UK planning records for power, and press for revenue (about USD 33m 2025; about USD 100m Q2 2026), backlog (USD 51bn) and the reported USD 45bn Anthropic contract — none confirmed by the parties. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The Anthropic Monarch contract (reported about USD 45bn / six years / 460 MW, 26 August 2026): confirmation by either party, the site-company financing raised against it and its rating; Microsoft's withdrawal from the 1.35 GW LOI is press-sourced (Semafor)",
+        "The reported IPO of up to USD 3bn (Bloomberg): a public filing would be the first first-party revenue, backlog and debt disclosure — re-run the dossier's financials from it",
+        "Microsoft delivery milestones: Ward County TX, Sines PT, Loughton UK (slipped 'operational Q4 2026' → 2027), Narvik NO (52,000 GB300 → 30,000 Vera Rubin) — Aker's next quarterly for accepted capacity and any change in GPU counts or customer",
+        "Power: Statnett's May 2026 large-load halt and phase 2 at Narvik/Glomfjord beyond the 230 MW reservation; Loughton's planning and grid after the ministerial letter; Monarch's 2 GW Caterpillar gas order, air permits and any grid interconnection",
+        "Debt stack against revenue: about USD 6.1bn of facilities (February 2026 GPU-secured DDTL, August 2026 investment-grade Texas and North Carolina loans, USD 900m twelve-bank RCF) — drawdowns, covenant disclosures and the first audited revenue figure",
+        "Figure's USD 3.5bn compute commitment (3 September 2026): whether a lender rates a loan against a non-hyperscaler anchor; the Anyscale acquisition closing and what it adds to the software layer",
+        "Chesterton check: OpenAI is no longer the Narvik offtaker (LOI replaced by Microsoft per Aker, April 2026) and Stargate UK is paused; Microsoft is not the Monarch anchor; revenue and backlog figures are press-reported. Do not re-import any of these premises"
+      ]
+    },
+    {
       "slug": "nvidia",
       "nextReport": "2026-08-26",
       "confirmed": true,
@@ -572,6 +897,23 @@
         "Data-center segment results vs the $91B Q2 guide",
         "Rack-power architecture signals (800 VDC rollout, Vera Rubin/Kyber timing, power-smoothing features)",
         "Any changes to the published 800VDC partner list"
+      ]
+    },
+    {
+      "slug": "oklo",
+      "nextReport": "2026-11-11",
+      "confirmed": false,
+      "source": "Cadence-inferred, not announced. Oklo reported Q2 2026 on Friday 2026-08-07 and Q3 2025 on Wednesday 2025-11-12 — no consistent weekday, so the row infers only the position in the reporting month and uses 2026-11-11, one year on from the prior Q3 print. Confirm from https://oklo.com/investors and the 8-K feed (CIK 0001849056) before relying on it. Note the company files 10-Qs; there is no separate earnings-release cadence to cross-check.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "THE PJM/FERC DISPUTE, first. PJM withdrew the 750 MW Pike County interconnection request (150 MW nuclear / 300 MW fuel cells / 300 MW gas) on 2026-08-03 for failure to demonstrate voltage ride-through; Oklo filed an emergency complaint at FERC on 2026-08-28 claiming a delay of at least 14 months. PJM's response was due 2026-09-04. Track the FERC docket outcome — it governs the Meta campus date, not the reactor",
+        "Aurora-INL on the DOE ladder: OTA and NSDA approved 2026-03-17, PDSA approved 2026-06-11. The Documented Safety Analysis, readiness review and startup authorization are all still pending. Commissioning targeted late 2027 to early 2028",
+        "Whether an updated NRC combined licence application has actually been SUBMITTED. As of the Q2 2026 10-Q it had not, and the NRC's pages list pre-application activities only. The company website's regulatory page still describes the 2020 application in the present tense — treat the 10-K as authoritative",
+        "Conversion of any non-binding instrument into a definitive PPA. As of this writing there is not one in the record: Switch is a non-binding 12 GW master agreement, Diamondback / Prometheus Hyperscale / Equinix are LOIs, Eielson is a notice of intent conditional on an NRC licence, Meta is a prepayment structure. The only binding commercial contract is with Siemens Energy, a supplier",
+        "Revenue composition. The first-ever revenue ($1.210M in Q2 2026) is engineering, consulting and fabrication services from the ARMEC and Creative Engineers acquisitions — not power and not isotopes. Watch whether isotope sales from the Idaho materials licence appear as a named line",
+        "Cash burn against raised guidance: operating $120-150M and PP&E $400-500M for 2026, both raised from the March guide. Roughly 15% dilution in H1 2026 through at-the-market programmes; the 2026 $1bn ATM was still running at 30 June",
+        "Fuel: whether the Centrus letter of intent converts to a definitive contract (deliveries scheduled from 2029), whether the Piketon deconversion JV moves past 'discussions', and whether A3F startup holds for 2027",
+        "Chesterton check on the next refresh: no first-party source publishes a thermal rating for the 15-75 MWe class or a HALEU enrichment percentage, and the 2023 FOAK/NOAK unit economics describe a 15 MWe machine and have never been reaffirmed. Absence of a figure is not evidence it does not exist"
       ]
     },
     {
@@ -640,6 +982,36 @@
         "Section 232 exposure on steel, copper and aluminium - material cost is 45% of revenue and fixed-price contracts limit pass-through, but the company quantifies nothing",
         "Insider selling under 10b5-1 plans and short interest, which stood at 6.86% of shares outstanding and 8.67% of float",
         "Any restatement of pre-split per-share figures; the FY2025 10-K has not been restated for the 2026-04-02 three-for-one split"
+      ]
+    },
+    {
+      "slug": "powerhouse-data-centers",
+      "cadence": "quarterly",
+      "source": "Private, unit-level: a wholly owned division of American Real Estate Partners (AREP), a private McLean, VA fund manager; no listing, no earnings calendar; assets sit in project JVs (Harrison Street, Blue Owl/Chirisa, Provident, Hillwood, Poe, Town Lane, Pennsylvania Data Center Partners). Blue Owl Capital (NYSE: OWL) is a JV capital partner, not a parent. Disclosure channels: powerhousedata.com (NOT powerhousedatacenters.com, a parked domain) press releases and campus pages, americanrepartners.com news (NOT areprealestate.com), PR Newswire, Harrison Street and Provident partner releases, the Hillwood–PowerHouse Joliet project site (joliettechnologycenter.com, curl only), Utility Dive for the FERC/ComEd record, Shaw Local / Patch for Joliet litigation, Loudoun Now; the City of Joliet's site and FERC's are 403. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Joliet: the Will County residents' suit (hearing 8 September 2026), FERC's ruling on ComEd's 24 July 2026 cancellation of the transmission security agreement, the N.D. Ill. suit against ComEd, any replacement retail/transmission agreement; whether the 'early 2027' construction start survives",
+        "First buildings since ABX-1: Pacific power-on (Q3 2026) and delivery (Q3 2026–Q2 2027), PowerHouse 95 initial delivery (Q3 2026), Arcola (Q4 2026–Q1 2027, tenant unnamed), CTP-02/03 for CoreWeave (Q1 2027), Irving, Louisville (130 MW in Q4 2026)",
+        "Grand Prairie energisation (slipped from May 2026 to Q1 2027) and any named tenant; Circle T and Uhland entitlements in Texas; Charlotte substation energisation (April 2027); Carlisle Phase 1 (Q2 2027); Carrollton purchase options",
+        "Capital: any construction loan, ABS or valuation naming a PowerHouse borrower (none on the record); a third Blue Owl/Chirisa or Harrison Street tranche naming PowerHouse; AREP Fund V; any change in the 90/10 JV split",
+        "Boilerplate counters (140 data centers / ~10 GW on the homepage, 118 / 8.1 GW in January 2026): read against delivered (one building) and leased (Arcola, Chesterfield) — do not import the counter as capacity",
+        "Moratoria and rules: Louisville's proposed hyperscale moratorium (Rubbertown exempt), Merrillville IN moratorium to May 2027 (PowerHouse lists 750 MW there), ICC large-load deposit rules, Loudoun's posture on GIS substations",
+        "Chesterton check: 'Brookfield-owned' and '1.8 GW delivered or under development on $16.1B planned' do NOT describe PowerHouse (AREP-owned; the figures are EdgeCore's); Joliet's 1.8 GW is a plan, not a build; HQ is McLean (not Reston/Herndon); the executive is Luke Kipfer (no 'Luke Kinney'); the brief's domains were wrong. Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "prime-data-centers",
+      "cadence": "quarterly",
+      "source": "Private: Prime Data Centers, LLC is controlled by Data Realty Holding Corp. ('the founding and controlling shareholder'; 'majority founder-owned'), with joint control by Macquarie (via WDCAH) and Ares cleared by the European Commission in March 2025 (Case M.11843); Siemens Financial Services, Snowhawk/Nuveen and Grain Management (preferred equity at the parent, April 2026) are investors, none a listed parent. No listing, no earnings calendar. Disclosure channels: primedatacenters.com (returns 403 to automated fetches — read via Wayback captures; the company newsroom, location pages and tech-sheet PDFs are all there), PR Newswire and Business Wire mirrors (Yahoo Finance, FinancialContent), Bloomberg via Investing.com and swissinfo for the bonds, Baxtel and Cleanview status pages, Texas TDLR filings, KERA for the lawsuits. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Avondale PHX01: a delivery date for building 1 (groundbreaking 21 May 2026; DCK's July 'opened' claim unconfirmed), the hyperscaler's name, buildings 4–5 leasing, SRP large-load deposits",
+        "Capital: any relaunch of the shelved USD 500m Nordic bond; further Grain capital into Data Realty; a construction loan or ABS naming a Prime borrower; the '4+ GW' vs '7 GW' pipeline figure",
+        "Litigation: the three employee suits (Dallas County, S.D.N.Y., California) — any defence, motion or settlement; further executive departures",
+        "Texas: DFW04 Fort Worth opening (filed completion January 2026, none reported), DFW02 Garland (July 2026 target), Austin AUS01 phase 1 (June 2026–September 2027), Caldwell County abatement suspension",
+        "Europe: Esbjerg EIA outcome and any tenant; Järvenpää EIA; Madrid construction start 'subject to customer demand'; Sæby status (page vs Baxtel 'cancelled')",
+        "Pennsylvania: the UGI gas-fired campus — county, MW, permits, opposition",
+        "Chesterton check: HQ is Dallas (founded in California; Sacramento was the first campus), the parent is Data Realty Holding Corp. (no 'Prime Group' exists in any source), there is no Northern Virginia, Kansas City or Denton site, and CoreWeave (Elk Grove) and Lambda (Vernon) are the only named tenants. Do not re-import any of these"
       ]
     },
     {
@@ -744,6 +1116,21 @@
       ]
     },
     {
+      "slug": "sargent-lundy",
+      "cadence": "quarterly",
+      "source": "Private, 'privately owned and led by engineers' (not an ESOP — absent from the NCEO Employee Ownership 100). No filings, no revenue disclosure; the only external series is the ENR Top 500 Design Firms rank (22nd in 2026) and ENR sector rankings. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "The ENR 2027 Top 500 Design Firms rank and the power-sector and international rankings — the only comparable series for a firm with no income statement",
+        "Nuclear: Palisades restart operations, the TVA Clinch River BWRX-300 construction permit and the USD 400m DOE award, the Dow/X-energy Long Mott construction permit, and any new SMR or restart owner's-engineer role named on the firm's own channels",
+        "Data-centre campus power: any named hyperscaler or developer engagement beyond conference talks; the January 2026 POWERGEN keynote alongside NVIDIA and Google Cloud is the closest the firm has come to naming one",
+        "Grid and interconnection: substation and large-load interconnection work as utilities restructure large-load tariffs; the firm's engineers sit on IEEE protection and substation committees",
+        "Leadership: the 2026 executive appointments settling in; any succession signal around the CEO who won POWER's 2025 executive award",
+        "Headquarters: the Chicago HQ expansion and hiring announced January 2026 — headcount is otherwise undisclosed",
+        "Chesterton check: no litigation, debarment or NRC enforcement against the firm was found; the NRC vendor inspection 99900507/2025-201 closed with findings on procedure, not on design. Do not import the 'employee-owned' label — the firm does not use it"
+      ]
+    },
+    {
       "slug": "siemens-energy",
       "nextReport": "2026-11-11",
       "confirmed": true,
@@ -789,6 +1176,21 @@
       ]
     },
     {
+      "slug": "spearmint-energy",
+      "cadence": "quarterly",
+      "source": "Private, founder-led, no announced sponsor (lender Elda River: 'controlled by Roscommon Analytics'; no Blackstone link in any source). Business Wire is the release channel but returns 403 from this environment — read releases via Yahoo Finance, SFNet, 01net, Pulse 2.0, IREI and Energy Global mirrors; spearmintenergy.com/in-the-news lists titles. Lender and counsel releases (Paul Hastings, K&L Gates, Nuveen, Elda River), Minnesota PUC dockets (IP-7138/ESS-24-279; 24-294/24-295), interconnection.fyi ERCOT records and Modo Energy / Enverus for the market. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Red Egret construction and COD (company: 2027; interconnection-agreement COD 31 August 2026 per Energy-Storage.news) and the take-out of the USD 225m construction facility by Nuveen preferred equity and the ITC transfer — the buyer's name if released",
+        "A named CFO (Cory Magnuson's departure is press-reported only), headcount restated above 'over 50', and any corporate equity round or sponsor disclosure",
+        "A non-Sungrow supply contract or FEOC-compliant order (the May 2024 supplier search), and any Tesla order for Snowshoe/Midwater beyond the permit design basis",
+        "Minnesota: Snowshoe and Midwater financing and construction (Q1 2027 stated) — a third-party tolling counterparty in either financing would refute the captive-tolling judgment; Pumpkinvine, Green Eagle, Silverfield and Cloverleaf permit outcomes",
+        "ERCOT revenue recovery signals Modo names (RTC+B, HB 1500 firming, load growth) against a fleet that is 100% merchant; any Spearmint revenue or dispatch disclosure",
+        "Further Kyuden or utility stakes, or a whole-project sale, which would move the model toward develop-to-sell; the 'Nomadic' Cooke and Brazoria projects' status",
+        "Chesterton check: no Blackstone or other sponsor is evidenced; the '15 GWh' is company boilerplate dropped in May 2026; no offtaker, hedge or revenue put is named for any project; FERC MBR/QSE records were unreadable, not absent. Do not re-import the brief's premises"
+      ]
+    },
+    {
       "slug": "stack-infrastructure",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
@@ -800,6 +1202,21 @@
         "Further stabilized-asset drop-downs into Blue Owl's perpetual REIT",
         "EMEA restructuring under founder Cox after the Apollo colo carve-out",
         "Americas master-trust ABS cadence"
+      ]
+    },
+    {
+      "slug": "strata-clean-energy",
+      "cadence": "quarterly",
+      "source": "Private, founder-owned ('100% privately held company owned by our founders'); no sponsor, no sale process reported. First-party channels are stratacleanenergy.com (WordPress with Yoast sitemaps; the /news archive hosts releases in full back to 2010, so Business Wire mirrors are needed only for the November 2024 White Tank toll and the April 2021 rename), the case-study pages and the leadership page. Site statistics are internally inconsistent (285 vs 300+ projects; 1.8 vs 5 GWh storage developed) — quote with the page.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "A Justice Energy Storage (150 MW / 600 MWh, APS toll) completion release or APS confirmation — the company's schedule said April 2026; nothing has been published",
+        "The next APS, SRP or TEP toll Strata wins and whether it is sold before COD (Scatter Wash → CIP, White Tank → GridStor) or retained — the test of the originate-and-sell judgment",
+        "White Tank construction start (October 2026 per GridStor) and in-service date (first half 2027), which ends Strata's consultative role",
+        "A named hyperscaler, natural-gas or Power-to-X project after the April 2026 reorganisation; the only sizing so far is a regional piece by a firm that represents the company",
+        "Any equity sponsor, stake sale or platform sale — none in the record — and the status of the 2021 Blackstone Credit USD 150 million",
+        "Virginia siting outcomes after the Hanover (2024) and Culpeper (2026) denials, and the unverified DEQ stormwater citations on Dominion EPC jobs",
+        "Chesterton check: Strata owns no battery in ERCOT or PJM; its owned CAISO battery is Inland Empire (70 MW / 280 MWh, PG&E RA); its Arizona assets are in APS territory outside any ISO; Blackstone's 2021 money was credit. Do not re-import the 2026-09-03 premise"
       ]
     },
     {
@@ -829,6 +1246,25 @@
       ]
     },
     {
+      "slug": "talen-energy",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "source": "No company announcement exists. Talen's own practice is a standalone 'to report on [date]' release about three weeks ahead (2026-02-05 for the Feb 26 print; 2026-04-14 for May 5; 2026-07-15 for Aug 5), and its EDGAR index shows no filing of any kind after the 8-K/A of 2026-08-12. Trackers disagree by two weeks: MarketBeat says Wednesday 2026-11-04 and states openly that it is estimated; TipRanks says 2026-11-18 marked 'TBA (Not Confirmed)'; Investing.com also shows 2026-11-18. This row takes MarketBeat's date because it is the only tracker that admits it is inferring, and because it matches Talen's own weekday pattern (Q3 2025 was released Wednesday 2025-11-05; Q3 2024 was 2024-11-14). CAUTION: ir.talenenergy.com is hard-blocked by an Akamai WAF from this environment (503/403 on every path), so the IR events calendar cannot be checked — verify from the EDGAR 8-K feed (CIK 1622536) instead.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The PJM co-location rulebook: FERC's section 206 show-cause docket for PJM is EL26-67-000, with stakeholder comments due 2026-09-16. The December 2025 order created three new transmission services (interim non-firm, firm contract demand, non-firm contract demand) and April 2026 guidance recognised reduced-capacity, provisional and surplus interconnection pathways. Watch whether the final tariff prices co-located load on gross or net withdrawals — it governs the entire 'flywheel'",
+        "A second named large-load counterparty at any site other than Susquehanna. The pipeline figure has been 'approximately 4 GW of land development and data center contracting options' since Q2 2026 and no second hyperscaler exists in any filing. Pennsylvania's 2026-08-19 executive order conditions preferential permitting above 25 MW on new in-zone supply, which Jefferies read as closing the door to selling existing generation",
+        "The AWS ramp against the disclosed band: 240-960 MW in 2026, 360-960 in 2027, 480-960 in 2028, 840-1,200 in 2029, 1,680-1,920 in 2032. Watch for any acceleration notice, and remember the shortfall make-whole is capped at an estimated 50-65 percent of full impact",
+        "The Brandon Shores and H.A. Wagner RMR: RTO Insider reported FERC approved the extension to 2031 on 2026-08-24, but Talen's own 10-Q of 2026-08-05 said only that a decision was expected by mid-September. Confirm the order, the revised annual payment (the original was $312/MW-day and $137/MW-day, about $180M a year) and the status of the Maryland Office of People's Counsel appeal alleging an $83M annual windfall",
+        "PJM capacity: the 2030/2031 Base Residual Auction is scheduled for May 2027 on a non-delayed basis. The last three auctions all cleared at the administrative cap ($329.17, $333.44, $325.00). Whether the collar is extended past the 2029/2030 auction is the single largest swing factor in Talen's earnings",
+        "Guidance: 2026 was raised on 2026-08-05 to $2,025-$2,225M Adjusted EBITDA and $1,200-$1,350M Adjusted FCF, and the release says the 2027 and 2028 outlooks were increased without giving numbers — the revised ranges exist only in the Q2 2026 deck on the blocked IR site. Capture them at the next refresh",
+        "The Keystone sale: a June 2026 purchase and sale agreement for the 12.34 percent interest at $85 million cash, expected to close in the second half of 2026 subject to FERC approval, with the buyer entitled to net cash flow from 1 July 2026. 2026 guidance already excludes Keystone from that date",
+        "Colstrip: the 10-K says Talen may have to decide the plant's future before the MATS and greenhouse-gas litigation resolves. Watch the D.C. Circuit and D.D.C. abeyances, the April 2025 Clean Air Act section 112(i)(4) exemption, and the Rosebud Mine permit appeal at the Montana Supreme Court",
+        "Two federal suits naming Talen Energy Corporation were filed in the Southern District of Texas in August 2026 (4:26-cv-07161 filed 2026-08-27; 4:26-cv-06807 filed 2026-08-18, already showing a notice of dismissal). Their nature is unverified and they post-date the Q2 10-Q — check whether either is disclosed in the Q3 filing",
+        "Chesterton check: no ownership figure could be settled. The 2026 proxy shows Vanguard 10.5 percent, BlackRock 8.6 percent, Rubric 7.8 percent and MFN 6.6 percent as of March 2026, plus ECP at about 5 percent after the June 2026 close; an aggregator puts Rubric at roughly 22 percent. Resolve from a direct 13F/13G pull"
+      ]
+    },
+    {
       "slug": "terawulf",
       "nextReport": "2026-11-09",
       "confirmed": false,
@@ -853,6 +1289,39 @@
         "Energy segment: Megapack and Powerwall deployments in GWh",
         "Shanghai and Houston Megafactory ramp",
         "Energy gross margin and storage backlog"
+      ]
+    },
+    {
+      "slug": "tract",
+      "cadence": "quarterly",
+      "source": "Private: Tract is a portfolio company of Tract Capital Management (Denver alternative asset manager, ~USD 6bn AUM per Bloomberg); investors named by trade press are Berkshire Partners, Permira, PSP Partners, S2G and Columbia Capital — none a listed parent. Sister platform Fleet Data Centers I, LP issued USD 3.8bn and USD 4.6bn of 144A senior secured notes (2026) with no public reporting. No listing, no earnings calendar. Disclosure channels: tract.com, tractcapital.com and fleetdatacenters.com (all behind a SiteGround captcha for automated fetches — read via Wayback captures; /who-we-are/ rendered live via r.jina.ai), GlobeNewswire/Yahoo and EIN Presswire (kdhnews, natlawreview) release mirrors, Kirkland & Ellis, the PUCN docket index (pucweb1.state.nv.us), Storey County agenda PDFs, KOLO/2News/Nevada Independent, Baxtel park pages; DCD, This Is Reno, Nevada Current, NNBW and Nevada Appeal are Cloudflare-blocked. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Nevada power: PUCN decision on the Fleet SPVs' temporary gas plants (26-04026 South Valley 144 MW; 26-04027 Peru Ridge 218 MW) scheduled 8 September 2026; the 345 kV substation permit (26-04007); the NV Energy LLESA (26-05027); NV Energy v. Tract Capital Management (Washoe County CV26-02142) and the arbitration; Peru Shelf 'February 2027' and South Valley 'September 2027' energisation",
+        "Fleet: construction progress on the two Storey County campuses (operations targeted 2027), tenant confirmation (Bloomberg: Nvidia), a third Fleet campus, any further notes",
+        "The model's proof: any parcel sale or ground lease to a third-party developer with a named buyer or price — none exists on the record",
+        "Entitlements: Goochland VA conditional-use application (870 acres); any Chesterfield refile; Cannon Falls and Minnesota votes; Buckeye and Altoona first buyers; Caldwell first 250 MW (Q1 2028) and the county abatement suspension; Morris June 2028 first power under the FERC-approved ComEd TSA",
+        "Litigation: the Switch easement trial (set March 2026; outcome not found)",
+        "Leadership: whether the 2024 hires absent from the 2026 team page (CFO Stockard, Chief Energy Officer Sahlstrom, CIO Cox, Eubanks) have left; Tract Europe's first site",
+        "Chesterton check: HQ is Denver, not Reno; there is no Georgia park and no Eloy/Pinal County project (La Osa is Vermaland's); Compass and Aligned are not TRIC neighbours in any source; the Fleet tenant is unnamed by the company. Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "trane-technologies",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "source": "Tracker-sourced (TipRanks) and not company-announced as of 2026-09-04; TipRanks also carries a Q3 consensus of $4.72 against company guidance of about $4.70. DISCREPANCY worth carrying: Trane's last four prints were all Thursdays (2025-10-30, 2026-01-29, 2026-04-30, 2026-07-30, each verified), while the tracker's 2026-11-04 is a Wednesday — so the tracker date breaks the company's own cadence and the nearest cadence-consistent date is Thursday 2026-11-05. The tracker date is kept because it is the only sourced one; confirm from https://investors.tranetechnologies.com/news-and-events/events before relying on it. CAUTION when reading this ticker's trackers: TipRanks renders its forecast and actual EPS columns transposed for TT, verified across four quarters.",
+      "lastRefreshed": "2026-09-04",
+      "watch": [
+        "THE BASIS TRAP, first. Trane reports both GAAP and adjusted continuing EPS and in FY2025 and Q1 2026 GAAP EXCEEDED adjusted ($13.14 vs $13.06; $2.66 vs $2.63), traceable to non-cash contingent-consideration adjustments that cut S&A expense by $61.2M in 2025. Every published sell-side consensus located is adjusted-basis. Always state the basis of both sides of any beat/miss",
+        "Backlog conversion, not intake. $12.1bn at Q2 2026 (+70%) with Applied bookings +130% for a fourth consecutive quarter above 100% — but roughly $1bn of the Q1 step was acquired with Stellar Energy rather than booked, and about $6bn is scheduled for 2027 and beyond. Watch the organic-versus-acquired split and any cancellation-terms disclosure",
+        "Whether the company ever discloses a data-centre revenue figure. It has not: 'data center' appears four times in the FY2025 10-K, all inside an alphabetical product list, and the Q4 2025 and Q2 2026 releases carry no data-centre commentary. Do not derive one; the only quantification in existence is an unattributed analyst estimate relayed by a retail outlet",
+        "The residential divergence, unreconciled. AHRI industry shipments were down 29.2% YoY in January 2026 on an eighth consecutive monthly decline and Lennox guided volumes down, while Trane reported residential bookings up in the high twenties percent. One of these is wrong or they are measuring different things",
+        "EMEA: revenue fell 1% reported and 4% organic in Q2 2026 and segment adjusted EBITDA margin dropped 150 basis points in FY2025 to 18.3%. The only segment moving the wrong way",
+        "The asbestos estimation trial. Phase 1 in the Aldrich Pump / Murray Boiler Chapter 11 was scheduled for the week of 2026-08-10 before Judge Whitley and no outcome has been found; the Fourth Circuit affirmed in August 2025 with a dissent and an en banc denial on a six-vote split, and a Supreme Court petition in the related Bestwall line (No. 25-1013) is live",
+        "Policy dates with teeth: the 178 Section 301 exclusions — which specifically cover rotary compressors, DC blowers and electric motors — expire 2026-11-09; Section 232's temporary 15% residential HVAC rate runs to 2027-12-31; EPA's May 2026 amendments pushed industrial process chillers to 2030",
+        "Supply chain: the Chief Global Integrated Supply Chain Officer departed 2026-08-01 against an estimated ~$200M annual tariff cost after mitigation. Watch for a successor and for any change in the surcharge posture",
+        "Chesterton check: no source names a single hyperscaler, colocation operator or contractor as a Trane customer. The only publicly stated ecosystem relationships are the NVIDIA and Eaton reference designs. Absence of a named customer is not evidence of absence of orders"
       ]
     },
     {
@@ -902,6 +1371,25 @@
       ]
     },
     {
+      "slug": "vistra",
+      "nextReport": "2026-11-05",
+      "confirmed": false,
+      "source": "No company announcement exists: the IR newsroom archive for 2026 (18 releases, retrieved in full via ?year=2026&l=100) contains no 'Vistra to Report Third Quarter Results' item, and the most recent scheduling release is the 2026-07-06 announcement of the 2026-08-07 print. MarketBeat estimates Thursday 2026-11-05 and marks it explicitly estimated. The company's own recent Q3 releases were 2025-11-06 (per the IR URL slug) and, per MarketBeat's history table, 2024-11-07 — the two sources differ by a day on 2025, so treat the weekday as approximate. Vistra's practice is a scheduling release about a month ahead; confirm from https://investor.vistracorp.com/news?year=2026&l=100 before relying on this date.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "The Cogentrix close: 5,496 MW for about $4.0 billion net, announced 2026-01-05, FERC-approved August 2026, expected to close 'late 2026'. It takes the pro-forma fleet to roughly 50,000 MW and is excluded from both 2026 guidance and the 2027 midpoint opportunity — the first guide that includes it will not be comparable with the last one",
+        "The first signed large-load agreement at a GAS site. Every contracted megawatt today is nuclear (Amazon 1,200 MW at Comanche Peak; Meta 2,609 MW across Perry, Davis-Besse and 433 MW of uprates). The company's language for everything else has been unchanged across four filings: 'we continue to engage in discussions with various counterparties'. Roughly 3.2 GW including ERCOT uprates is stated as still available",
+        "Moss Landing Phase III (350 MW): the Q2 2026 10-Q says restart is under evaluation 'when or if'. Watch for a restart decision, a CAISO retirement request, and the EPA remediation estimate, which rose from about $110M to about $175M in Q2 2026 while the $500M insurance limit is fully collected. Phases I and II are permanently in the Asset Closure segment",
+        "The Moss Landing litigation and the science: two suits name Vistra, Dynegy Operating Company, LG Energy Solution and PG&E; docket numbers could not be confirmed (CourtListener 403). A San Jose State team led by Prof. Ivano Aiello reported Ni/Mn/Co at 10-1,000x baseline with a 2:1 nickel-to-cobalt ratio, but the journal and date conflict between sources (KQED says Scientific Reports, Dec 2025; Lookout says Nature, Feb 2026) — resolve by DOI before citing",
+        "The 754 MW disposal (Casco Bay, Beaver Falls, Syracuse), two of which came from Lotus eight months earlier. Buyer and price are undisclosed",
+        "Helix Digital Infrastructure: up to $1 billion committed to a KKR-managed fund alongside NVIDIA and the Kuwait Investment Authority, with the second $500 million tranche tied to 'commercial power supply milestones for our existing generation assets' and Vistra as 'preferred power provider'. It appears only inside the Q2 2026 10-Q and deck — watch for the first named project",
+        "The 860 MW Permian Basin expansion in Ward County: final investment decision September 2025, Texas Energy Fund loan finalised 2026-06-24 (the programme's eighth), online 2028. The loan amount was not disclosed in the governor's release",
+        "ERCOT: the 3 August 2026 pause on data-centre interconnections and the audit of a roughly 474 GW queue, plus the December 2025 move to real-time co-optimisation replacing the operating reserve demand curve with ancillary-service demand curves",
+        "PJM capacity: 10,924 MW cleared at $325.00/MW-day for 2028/2029; the reliability backstop auction proposed for September 2026; and whether the administrative price cap is extended to 2029/2030",
+        "Chesterton check: Vistra discloses storage in MW only. No MWh figure for any asset appears in any filing, deck or sustainability report, so every MWh figure in circulation is third-party. It also publishes no single employee headcount and no board headshots"
+      ]
+    },
+    {
       "slug": "wartsila",
       "nextReport": "2026-10-27",
       "confirmed": true,
@@ -911,6 +1399,22 @@
         "Energy Storage & Optimisation business results",
         "The announced 50/50 storage JV with RCT Solutions",
         "Order intake and backlog in Energy Storage"
+      ]
+    },
+    {
+      "slug": "x-energy",
+      "nextReport": "2026-11-13",
+      "confirmed": false,
+      "source": "Public since 24 April 2026 (Nasdaq: XE). Q1 2026 results 4 June 2026; Q2 2026 results 13 August 2026 (8-K Ex. 99.1 and 10-Q filed the same day). Q3 2026 date not announced — 2026-11-13 is a cadence inference from the Q2 date; Investing.com's calendar shows a projected 2 December 2026, so confirm against investors.x-energy.com (HTTP 503 from this environment) or the 8-K when the date is set. Non-accelerated filer 10-Q deadline for Q3 is mid-November.",
+      "lastRefreshed": "2026-09-05",
+      "watch": [
+        "Q3 2026 results: revenues and grant income vs USD 54.6m in Q2, operating expenses, cash burn against USD 1.9bn liquidity; whether the additional up to USD 1bn of ARDP cost share (DOE share up to USD 2.115bn, stated on the Q2 call) appears in the 10-Q or a DOE release",
+        "NRC Long Mott final safety evaluation (target November 2026) and construction permit decision (company: Q1 2027); any hearing; Dow's FID posture (no FID before 2028) and Dow's cost programme",
+        "Energy Northwest Cascade construction permit application (guided H1 2027) and Amazon's funding milestones; the 'next 1-gigawatt project' with an investor-owned utility described as in 'final throes' on the Q2 call",
+        "TX-1: core-and-shell completion, interior build-out, completion by H1 2028; HALEU deliveries under the Centrus and General Matter agreements and the DOE allocation",
+        "Centrica/Hartlepool: UK GDA progress (conclusion by end-2029), any definitive agreement replacing the non-binding JDA; Talen LOI and LG&E/KU study outcomes",
+        "Share register: Amazon 13G/13D changes (23.4% of Class A), Ares and Jane Street filings, lock-up expiry effects; analyst estimates once consensus forms",
+        "Chesterton check: X-energy is public (not private); the USD 700m Series D closed November 2025 led by Jane Street (there was no February 2026 Series D); headcount is 916 at 17 March 2026 — vendor headcounts of 1,400–1,800 are unreliable. Do not re-import any of these"
       ]
     },
     {
@@ -945,464 +1449,6 @@
         "Capital plan and financing: $60B base plus $10B-plus of line of sight, with ~$7B-plus of that line of sight already identified. 69.7 million forward shares were unsettled at 2026-06-30 representing $5.2B of minimum proceeds",
         "The clean-energy tax credit wind-down under Public Law 119-21: Xcel states its 2026–2030 base plan is protected by safe-harbor construction starts, and it relies on transferability (cash transfers of $652M in 2025) plus $1,474M of credit carryforwards. Watch further Treasury guidance on foreign entities of concern",
         "Southwestern Public Service leadership: company releases from 2026-03-25 onward quote Brad Baldridge as interim president, Xcel Energy – Texas, New Mexico, and Adrian Rodriguez was last quoted as president on 2026-01-28; no first-party release explains the change (documented as a collection gap in profileVersion 2). Re-check the 10-K executive-officer list and any appointment release rather than the newsroom gallery"
-      ]
-    },
-    {
-      "slug": "infineon",
-      "nextReport": "2026-11-10",
-      "confirmed": true,
-      "source": "Company-published, but the company itself marks it preliminary, and one tracker disagrees. Infineon prints its own financial calendar inside every quarterly release; the Q3 FY2026 release of 2026-08-05 (https://www.infineon.com/row/public/documents/corporate/press/2026/infpr202608-125e.pdf, pages 6-7) reads '10 November 2026* - Earnings Release for the Fourth Quarter and the 2026 Fiscal Year', where the company's own asterisk convention means preliminary. The standalone IR page https://www.infineon.com/about/investor/financial-calendar returns a soft 404 and https://www.infineon.com/about/investor is JavaScript-rendered, so the quarterly PDF is the authoritative source rather than a calendar page. Tracker positions on 2026-09-04: TipRanks 2026-11-10 labelled 'Confirmed' (its earnings module also carries an obvious typo, which lowers confidence in the label); Investing.com 2026-11-10 with consensus EPS 0.621 on revenue 4.67B; MarketBeat 2026-11-10 but explicitly 'estimated ... based on past reporting schedules'; AlphaQuery 2026-11-11; Nasdaq's earnings-calendar API returns 'No record found' for the IFNNY ADR on that date. NOTE THE WEEKDAY TELL: 2026-11-10 is a Tuesday and 2026-11-11 a Wednesday (verified with date -d), and the last four prints all landed on Wednesdays - 2025-11-12, 2026-02-04, 2026-05-06 and 2026-08-05 - so MarketBeat's own stated method points at AlphaQuery's date rather than at the one MarketBeat prints. Treat 10 or 11 November as the window and re-read the company calendar in the Q4 release cycle. Fiscal year ends 30 September (a Wednesday in 2026); cadence quarterly. Also company-published and preliminary: Q1 FY2027 earnings 2027-02-03, AGM 2027-02-25.",
-      "lastRefreshed": "2026-09-04",
-      "watch": [
-        "Whether Q4 FY2026 lands Tuesday 2026-11-10 as the company's preliminary calendar says or Wednesday 2026-11-11 as AlphaQuery says and the four-quarter weekday pattern implies",
-        "The Q4 bar is the highest of the year: Vara consensus of 2026-08-18 wants EUR 4,704m of revenue at a 23.2% Segment Result margin, meaning Segment Result must rise from EUR 797m to EUR 1,092m in one quarter. Segment Result has missed Vara in three of the last four prints while revenue beat",
-        "THE FIRST REPORT ON THE NEW THREE-SEGMENT STRUCTURE (Automotive / Power Systems / Edge Systems, effective 2026-07-01). Pro-forma comparatives were promised; capture them, because every ATV/GIP/PSS/CSS series in this dossier ends at Q3 FY2026 and the AI data-centre business becomes separately visible inside Power Systems for the first time",
-        "ALWAYS RECORD THE EPS BASIS. Infineon publishes IFRS diluted and adjusted diluted EPS and they differ by roughly a third; Investing.com manufactured a 35.01% miss on the 2025-08-05 print by comparing an IFRS actual against an adjusted consensus. Use the Vara Research consensus Infineon commissions (https://www.infineon.com/assets/row/public/documents/corporate/investors/analyst-consensus/), which prints both bases side by side",
-        "Whether the FY2027 AI data-centre revenue projection is materially upgraded as management said it would be - the standing figure is above EUR 2.5bn after above EUR 1.6bn in FY2026",
-        "Any naming of the multi-year capacity reservation counterparties - a high single-digit billion euro cumulative volume with prepayments, from 'several leading customers across the AI data center ecosystem', all anonymised today. Same for the solid-state-transformer design partners and the 20-plus SSCB customers, of whom only Siemens is named",
-        "Whether the allocation position ('demand ... continues to outstrip available supply, we are in allocation') persists, and whether capex moves again from about EUR 2.7bn",
-        "The Innoscience GaN litigation in both directions, and specifically whether the Chinese injunction upheld on 2026-06-16 has any quantified effect",
-        "China's gallium licensing suspension expires 2026-11-27, seventeen days after this report. Infineon has published no gallium-specific statement or mitigation despite acquiring GaN Systems",
-        "SiC pricing: Yole reports an overcapacity correction persisting to 2027-2028 with upstream utilisation near 50%. Watch whether the 200 mm conversion at Kulim and Villach shows up in gross margin",
-        "Collection gap to close if possible: no verifiable per-vendor share for the overall power-semiconductor market exists from any ranking firm's own page. A circulating '19.5% in 2025' figure was deliberately omitted from this dossier as unattributable"
-      ]
-    },
-    {
-      "slug": "flex",
-      "nextReport": "2026-10-28",
-      "confirmed": false,
-      "source": "Inference from cadence; the company has published nothing and the trackers do not agree. Flex's own IR events calendar (https://investors.flex.com/events/default.aspx, read through the underlying Q4 Inc. events feed because the page is JavaScript-rendered) listed exactly one upcoming event on 2026-09-04 - the Goldman Sachs Communacopia + Technology Conference on 2026-09-09 - and no 'Announces Date for Second Quarter Fiscal 2027 Earnings Call' release had been issued. Flex normally publishes that release two to three weeks ahead, so expect it in early-to-mid October 2026. Tracker positions: Investing.com 2026-11-04; MarketBeat 2026-11-04 but explicitly 'estimated ... based on past reporting schedules. The company has not officially confirmed'; Market Chameleon a window of 2026-10-28 to 2026-11-02, also explicitly an estimate. The Nov 4 estimates and the Market Chameleon window DO NOT OVERLAP, which is the conflict to carry. The 2026-10-28 date used here is a cadence inference and is a Wednesday (verified with date -d): the last three prints were all Wednesdays - 2025-10-29, 2026-05-05/06 and 2026-07-29 - and fiscal Q2 ends around 2026-09-25. ONE FORWARD DATE IS COMPANY-CONFIRMED: an Investor Day on 2026-11-10, announced in the Q1 FY2027 release. Fiscal year ends 31 March on a 52/53-week convention (Q1 FY2027 ended 2026-06-26); cadence quarterly; SEC registrant CIK 0000866374, Nasdaq: FLEX, S&P 500 constituent since 2026-06-22.",
-      "lastRefreshed": "2026-09-04",
-      "watch": [
-        "THE SPIN-OFF IS THE STORY. The board approved separating the entire Cloud and Power Infrastructure segment on 2026-05-05, targeted for Q1 calendar 2027, with CEO Revathi Advaithi going to the new company and president Michael Hartung becoming CEO of Flex. Watch for the Form 10 - it will put standalone segment financials on the public record for the first time and close this dossier's largest collection gap",
-        "The EPC Power acquisition agreed 2026-09-03 at $4.4bn, expected to close in Q4 calendar 2026 - into the segment weeks before it separates. Funded with debt AND equity; watch the share count and the financing terms",
-        "ALWAYS RECORD THE EPS BASIS. FY2026 GAAP diluted EPS was $2.33 against $3.30 adjusted, and FY2025 $2.11 against $2.65. Zacks, Investing.com, MarketBeat and StockStory report every quarter of both years as a beat on the adjusted basis; Simply Wall St reports misses of 5.5% and 5.3% on the statutory basis. Both are internally consistent and they do not reconcile",
-        "FREE CASH FLOW, not earnings, is what moved the stock. Q1 FY2027 produced $41m of free cash flow on $7,928m of revenue and management cut FY2027 conversion guidance to about 40% from about 60%; the shares fell about 9% on a beat-and-raise",
-        "The unnamed customer at 12% of Q1 FY2027 net sales, majority in Cloud and Power Infrastructure - roughly $950m in one quarter. The FY2026 10-K had said no customer exceeded 10%. Watch whether it is ever named and whether the concentration persists into the separated company",
-        "Segment margin inside CPI: 9.9% in FY2026 against 10.2% in FY2025 and 9.7% in Q1 FY2027, while revenue grew 38%. Analysts note Power growing above 70% with muted margins - watch whether the mix shift dilutes the segment's margin premium",
-        "SEGMENT COMPARABILITY BREAK: the three-segment structure (ITS / RMS / CPI) began in Q4 FY2026. FY2025 was originally reported as Flex Agility Solutions $14,074m and Flex Reliability Solutions $11,739m; do not mix those with the recast series",
-        "Whether Flex reappears in NVIDIA's own partner communications. It is named in NVIDIA's May 2025 800 VDC roster but absent from the May 2026 DSX partner release and from independent GTC 2026 ecosystem coverage",
-        "USMCA joint review in 2026, against Mexico at 25% of net sales and 36% of net PP&E. Flex quantifies FY2026 tariff impact at about one percent of revenues and cost of goods with negligible profit effect, which rests on a pass-through it says it may not always sustain",
-        "Singapore High Court approval for the capital reduction and distribution the separation requires - the same route the Nextracker spin took in January 2024",
-        "Collection gaps to close if possible: no standalone revenue exists for Anord Mardix, JetCool, Crown or EP2; Flex's individual rank in the MMI Top 50 and in4ma Global 100 is paywalled; no named ranking firm publishes a share for Anord Mardix or JetCool; and no contemporaneous analyst verdict on the Nextracker separation could be found"
-      ]
-    },
-    {
-      "slug": "mccarthy",
-      "cadence": "quarterly",
-      "source": "Private and 100% employee-owned; no filing record, no earnings calendar, no audited financials. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). The only company-published total revenue figure in existence is 'exceeding $4.8 billion' for 2020; third-party figures are self-reported survey responses and disagree.",
-      "lastRefreshed": "2026-09-04",
-      "watch": [
-        "The ENR Top 400 rank, which is the most informative series available for a company with no income statement: 19 → 20 → 20 → 22 across four editions, the fall landing in the year the data-centre category grew 86.4%. The 2027 edition is the number to watch",
-        "The 418 MW built against 2 GW-plus in planning, design and preconstruction. Whether that preconstruction figure converts, and whether any hyperscale client other than Vantage is ever named",
-        "Lighthouse / Port Washington: the Turner-McCarthy JV on Buildings 13 and 14 (468 MW combined) inside the $8bn first phase, completion 2028. Also Vantage NV12 phased turnover from December 2027 to early 2029",
-        "The renewables pipeline after the OBBBA safe harbour. Credits terminate for wind and solar placed in service after 2027-12-31 unless construction began before 2026-07-04; Lupinus I/II broke ground March 2026 and sits inside it. What is in the book that could not start in time is the open question",
-        "The Palantir dependency: a multi-year, multi-million-dollar agreement with the internal technology team reportedly restructuring around embedded Palantir engineers. Watch for any published productivity result from Pulse, and for the investment amount, which is undisclosed",
-        "Leadership: Dhruv Patel became President and COO in August 2026 having scaled renewables from $20M to $2B-plus; Cathy Orquiola joined from PCL in August 2026 focused on self-perform and mission critical. Watch whether a data-centre-specific practice leadership emerges",
-        "Safety: the open OSHA health citation at Sparks NV (inspection 1826381.015, silica NEP) and whether any company-wide, dated EMR or TRIR is ever published — the existing 0.45 and 0.47 figures are undated and market-scoped",
-        "Chesterton check: no civil litigation, debarment, bid protest or licensing action was found after direct database and press searching. Three false attributions circulate and must not be re-imported — the Whiting-Turner Top 400 entry, EdgeCore Mesa (Holder), and Meta Beaver Dam (Mortenson)"
-      ]
-    },
-    {
-      "slug": "oklo",
-      "nextReport": "2026-11-11",
-      "confirmed": false,
-      "source": "Cadence-inferred, not announced. Oklo reported Q2 2026 on Friday 2026-08-07 and Q3 2025 on Wednesday 2025-11-12 — no consistent weekday, so the row infers only the position in the reporting month and uses 2026-11-11, one year on from the prior Q3 print. Confirm from https://oklo.com/investors and the 8-K feed (CIK 0001849056) before relying on it. Note the company files 10-Qs; there is no separate earnings-release cadence to cross-check.",
-      "lastRefreshed": "2026-09-04",
-      "watch": [
-        "THE PJM/FERC DISPUTE, first. PJM withdrew the 750 MW Pike County interconnection request (150 MW nuclear / 300 MW fuel cells / 300 MW gas) on 2026-08-03 for failure to demonstrate voltage ride-through; Oklo filed an emergency complaint at FERC on 2026-08-28 claiming a delay of at least 14 months. PJM's response was due 2026-09-04. Track the FERC docket outcome — it governs the Meta campus date, not the reactor",
-        "Aurora-INL on the DOE ladder: OTA and NSDA approved 2026-03-17, PDSA approved 2026-06-11. The Documented Safety Analysis, readiness review and startup authorization are all still pending. Commissioning targeted late 2027 to early 2028",
-        "Whether an updated NRC combined licence application has actually been SUBMITTED. As of the Q2 2026 10-Q it had not, and the NRC's pages list pre-application activities only. The company website's regulatory page still describes the 2020 application in the present tense — treat the 10-K as authoritative",
-        "Conversion of any non-binding instrument into a definitive PPA. As of this writing there is not one in the record: Switch is a non-binding 12 GW master agreement, Diamondback / Prometheus Hyperscale / Equinix are LOIs, Eielson is a notice of intent conditional on an NRC licence, Meta is a prepayment structure. The only binding commercial contract is with Siemens Energy, a supplier",
-        "Revenue composition. The first-ever revenue ($1.210M in Q2 2026) is engineering, consulting and fabrication services from the ARMEC and Creative Engineers acquisitions — not power and not isotopes. Watch whether isotope sales from the Idaho materials licence appear as a named line",
-        "Cash burn against raised guidance: operating $120-150M and PP&E $400-500M for 2026, both raised from the March guide. Roughly 15% dilution in H1 2026 through at-the-market programmes; the 2026 $1bn ATM was still running at 30 June",
-        "Fuel: whether the Centrus letter of intent converts to a definitive contract (deliveries scheduled from 2029), whether the Piketon deconversion JV moves past 'discussions', and whether A3F startup holds for 2027",
-        "Chesterton check on the next refresh: no first-party source publishes a thermal rating for the 15-75 MWe class or a HALEU enrichment percentage, and the 2023 FOAK/NOAK unit economics describe a 15 MWe machine and have never been reaffirmed. Absence of a figure is not evidence it does not exist"
-      ]
-    },
-    {
-      "slug": "trane-technologies",
-      "nextReport": "2026-11-04",
-      "confirmed": false,
-      "source": "Tracker-sourced (TipRanks) and not company-announced as of 2026-09-04; TipRanks also carries a Q3 consensus of $4.72 against company guidance of about $4.70. DISCREPANCY worth carrying: Trane's last four prints were all Thursdays (2025-10-30, 2026-01-29, 2026-04-30, 2026-07-30, each verified), while the tracker's 2026-11-04 is a Wednesday — so the tracker date breaks the company's own cadence and the nearest cadence-consistent date is Thursday 2026-11-05. The tracker date is kept because it is the only sourced one; confirm from https://investors.tranetechnologies.com/news-and-events/events before relying on it. CAUTION when reading this ticker's trackers: TipRanks renders its forecast and actual EPS columns transposed for TT, verified across four quarters.",
-      "lastRefreshed": "2026-09-04",
-      "watch": [
-        "THE BASIS TRAP, first. Trane reports both GAAP and adjusted continuing EPS and in FY2025 and Q1 2026 GAAP EXCEEDED adjusted ($13.14 vs $13.06; $2.66 vs $2.63), traceable to non-cash contingent-consideration adjustments that cut S&A expense by $61.2M in 2025. Every published sell-side consensus located is adjusted-basis. Always state the basis of both sides of any beat/miss",
-        "Backlog conversion, not intake. $12.1bn at Q2 2026 (+70%) with Applied bookings +130% for a fourth consecutive quarter above 100% — but roughly $1bn of the Q1 step was acquired with Stellar Energy rather than booked, and about $6bn is scheduled for 2027 and beyond. Watch the organic-versus-acquired split and any cancellation-terms disclosure",
-        "Whether the company ever discloses a data-centre revenue figure. It has not: 'data center' appears four times in the FY2025 10-K, all inside an alphabetical product list, and the Q4 2025 and Q2 2026 releases carry no data-centre commentary. Do not derive one; the only quantification in existence is an unattributed analyst estimate relayed by a retail outlet",
-        "The residential divergence, unreconciled. AHRI industry shipments were down 29.2% YoY in January 2026 on an eighth consecutive monthly decline and Lennox guided volumes down, while Trane reported residential bookings up in the high twenties percent. One of these is wrong or they are measuring different things",
-        "EMEA: revenue fell 1% reported and 4% organic in Q2 2026 and segment adjusted EBITDA margin dropped 150 basis points in FY2025 to 18.3%. The only segment moving the wrong way",
-        "The asbestos estimation trial. Phase 1 in the Aldrich Pump / Murray Boiler Chapter 11 was scheduled for the week of 2026-08-10 before Judge Whitley and no outcome has been found; the Fourth Circuit affirmed in August 2025 with a dissent and an en banc denial on a six-vote split, and a Supreme Court petition in the related Bestwall line (No. 25-1013) is live",
-        "Policy dates with teeth: the 178 Section 301 exclusions — which specifically cover rotary compressors, DC blowers and electric motors — expire 2026-11-09; Section 232's temporary 15% residential HVAC rate runs to 2027-12-31; EPA's May 2026 amendments pushed industrial process chillers to 2030",
-        "Supply chain: the Chief Global Integrated Supply Chain Officer departed 2026-08-01 against an estimated ~$200M annual tariff cost after mitigation. Watch for a successor and for any change in the surcharge posture",
-        "Chesterton check: no source names a single hyperscaler, colocation operator or contractor as a Trane customer. The only publicly stated ecosystem relationships are the NVIDIA and Eaton reference designs. Absence of a named customer is not evidence of absence of orders"
-      ]
-    },
-    {
-      "slug": "dnv",
-      "cadence": "quarterly",
-      "source": "Foundation-owned (Stiftelsen Det Norske Veritas); no listing, no earnings calendar. Publishes an annual report each spring with NOK revenue and headcount (AR2025: NOK 43.9bn, 17,463 employees) — the only audited figures. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). dnv.com itself is unreadable from this environment (Cloudflare 403); the annual report was read from a mirror host and 14 dnv.com pages are cited by title only.",
-      "lastRefreshed": "2026-09-04",
-      "watch": [
-        "The 2026 annual report (expected spring 2027): Energy Systems revenue and headcount, and whether the data-centre advisory line is broken out for the first time",
-        "Revision dates on the Energy Storage recommended practices — RP-0043 (grid-connected storage) and the battery-testing practice — and any new RP on data-centre power or hydrogen-ready plant; each revision changes what lenders cite",
-        "The next Battery Performance Scorecard edition and which cell makers are named; scorecard findings move independent-engineer assumptions on degradation and thermal-runaway onset",
-        "Named independent-engineer or technical-adviser roles on battery and hybrid financings above 500 MWh, and any first named data-centre campus engagement with a covered hyperscaler or developer",
-        "Grid-code and interconnection-study work in ERCOT, PJM and Europe as large-load rules change — DNV is cited on both the storage side and the load side",
-        "Ownership and structure: any change to the foundation model, a sale of a non-core unit, or an acquisition in digital assurance (Veracity, GreenPowerMonitor) that shifts the mix",
-        "Chesterton check: DNV is an assurance body, not a supplier — no order books, no backlog. Do not import revenue estimates from consultancy rankings; the annual report is the only figure"
-      ]
-    },
-    {
-      "slug": "sargent-lundy",
-      "cadence": "quarterly",
-      "source": "Private, 'privately owned and led by engineers' (not an ESOP — absent from the NCEO Employee Ownership 100). No filings, no revenue disclosure; the only external series is the ENR Top 500 Design Firms rank (22nd in 2026) and ENR sector rankings. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-04",
-      "watch": [
-        "The ENR 2027 Top 500 Design Firms rank and the power-sector and international rankings — the only comparable series for a firm with no income statement",
-        "Nuclear: Palisades restart operations, the TVA Clinch River BWRX-300 construction permit and the USD 400m DOE award, the Dow/X-energy Long Mott construction permit, and any new SMR or restart owner's-engineer role named on the firm's own channels",
-        "Data-centre campus power: any named hyperscaler or developer engagement beyond conference talks; the January 2026 POWERGEN keynote alongside NVIDIA and Google Cloud is the closest the firm has come to naming one",
-        "Grid and interconnection: substation and large-load interconnection work as utilities restructure large-load tariffs; the firm's engineers sit on IEEE protection and substation committees",
-        "Leadership: the 2026 executive appointments settling in; any succession signal around the CEO who won POWER's 2025 executive award",
-        "Headquarters: the Chicago HQ expansion and hiring announced January 2026 — headcount is otherwise undisclosed",
-        "Chesterton check: no litigation, debarment or NRC enforcement against the firm was found; the NRC vendor inspection 99900507/2025-201 closed with findings on procedure, not on design. Do not import the 'employee-owned' label — the firm does not use it"
-      ]
-    },
-    {
-      "slug": "coolit",
-      "cadence": "quarterly",
-      "source": "Private subsidiary of Ecolab (NYSE: ECL) since 2 July 2026; no separate filings. The only revenue figures are the acquirer's — 'approximately $550 million in sales over the next 12 months' at the March 2026 signing and 'year-to-date sales have grown more than 100%' at close — so Ecolab's quarterly releases and 10-Qs are the disclosure channel to read (Global High-Tech segment commentary). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-04",
-      "watch": [
-        "Ecolab's Q3 2026 release and 10-Q (late October 2026): first quarter with CoolIT consolidated — any stated CoolIT sales, the Global High-Tech growth rate, and progress against the '$4 billion by 2030' target named at close",
-        "The next-generation CDU launched 28 September 2026 'for 1MW+ ultra-dense AI racks': name, kW rating and the approach temperature it is rated at; whether it is skidded/facility-scale rather than row-based",
-        "NVIDIA Recommended Vendor List rack counts after Vera Rubin NVL72 ships (SemiAnalysis: 180–220 kW per rack): whether CoolIT publishes racks-per-CDU for Rubin and whether a Rubin-class cold-plate series (CP-NV-VR) appears",
-        "Calgary capacity and headcount: 'nearly 900' at August 2026 from about 650 in March; the Starfield facility's stated 25x scaling; any new site outside Canada beyond Taipei, Vietnam and China",
-        "Channel concentration: named server-OEM design wins (Dell, HPE, Gigabyte are sourced; Supermicro and Lenovo run in-house designs) and any first named hyperscaler — CoolIT claims '4 of 5' hyperscalers without naming one",
-        "Litigation: the Asetek disputes ended in 2022 (summary judgment, settlement) with the Federal Circuit reviving CoolIT's '567 patent in March 2024 — watch for any new assertion now that a deep-pocketed parent owns the portfolio",
-        "Chesterton check: CoolIT was KKR/Mubadala-owned May 2023–July 2026, not 'KKR-owned since 2023' today, and no jury verdict was ever reached in Asetek v. CoolIT. Do not re-import either premise"
-      ]
-    },
-    {
-      "slug": "fluidstack",
-      "cadence": "quarterly",
-      "source": "Private (Fluidstack Limited, UK 10985545; HQ New York since December 2025); no filings of its own. The disclosure channel is its public landlords and counterparties — TeraWulf (10-Q/10-K/8-K: Lake Mariner CB-5, the Abernathy sale, the Google recognition agreements and penny warrants), Cipher Mining (Barber Lake, the USD 544.5m guarantee asset), Hut 8 (River Bend), Meridian Arc's bond disclosures (New Lebanon) — plus Anthropic's newsroom for the USD 50bn programme and Aker/Nscale filings where the two overlap. Funding is disclosed by investors (Series A USD 830m, January 2026) and by press (the reported USD 1.5bn at USD 18bn, September 2026 — unannounced by the company). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Commencement dates against the leases: CB-5 (moved '2H 2026' → 'early 2027'), Abernathy ('2H 2026' → 'Q4 2026'), Barber Lake (September 2026, reported on schedule), River Bend (Q2 2027), New Lebanon — each landlord's next 10-Q; the Google backstop only becomes effective at commencement, and a delay beyond 180 days lets the tenant terminate",
-        "Any Google publication naming Fluidstack (equity investment, the reported USD 100m talks tied to Ironwood TPU distribution, the Broadcom–Apollo–Blackstone chip vehicle) — today every backstop term is sourced from counterparties' filings and law-firm alerts, not from Google",
-        "The reported USD 1.5bn round at USD 18bn (Jane Street-led, September 2026): a company or investor announcement that confirms or corrects it; total funding stands at about USD 2.6bn on announced rounds",
-        "The owner-developer pivot: Abernathy (bought TeraWulf's 50.1% for about USD 530m, July 2026), Okmulgee OK, Sullivan County NY and Wythe County VA — financing announcements, utility agreements (Entergy, AEP rows are `announced`), and whether any lease is signed without a Google recognition agreement",
-        "Anthropic routing around the intermediary: Hawesville (401 MW direct with TeraWulf, July 2026), Riot, Hut 8 Beacon Point, Nscale, Lambda — each new direct contract reduces the credit-substitution half of Fluidstack's product",
-        "Europe: the withdrawn 1 GW France campus (March 2026), any remaining Nordic/UK colocation for Mistral, Poolside, Black Forest Labs; the Macquarie GPU-secured facility's status",
-        "Chesterton check: Fluidstack does not own Lake Mariner, Barber Lake, River Bend or New Lebanon — it is tenant of record; the USD 18bn valuation is reported, not announced; the 401 MW Hawesville lease has no Fluidstack entity in it. Do not re-import any of these premises"
-      ]
-    },
-    {
-      "slug": "nscale",
-      "cadence": "quarterly",
-      "source": "Private; no filings of its own. The disclosure channel is Aker ASA's quarterly reports and presentations (Aker led Series B and C and reports the Narvik/Norway contracts, the replaced OpenAI LOI and the Monarch customer without naming it), the company's newsroom (Microsoft GPU contracts stated in chips, the DDTL and the investment-grade project loans, the RCF, Anyscale, Figure), Statnett and UK planning records for power, and press for revenue (about USD 33m 2025; about USD 100m Q2 2026), backlog (USD 51bn) and the reported USD 45bn Anthropic contract — none confirmed by the parties. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "The Anthropic Monarch contract (reported about USD 45bn / six years / 460 MW, 26 August 2026): confirmation by either party, the site-company financing raised against it and its rating; Microsoft's withdrawal from the 1.35 GW LOI is press-sourced (Semafor)",
-        "The reported IPO of up to USD 3bn (Bloomberg): a public filing would be the first first-party revenue, backlog and debt disclosure — re-run the dossier's financials from it",
-        "Microsoft delivery milestones: Ward County TX, Sines PT, Loughton UK (slipped 'operational Q4 2026' → 2027), Narvik NO (52,000 GB300 → 30,000 Vera Rubin) — Aker's next quarterly for accepted capacity and any change in GPU counts or customer",
-        "Power: Statnett's May 2026 large-load halt and phase 2 at Narvik/Glomfjord beyond the 230 MW reservation; Loughton's planning and grid after the ministerial letter; Monarch's 2 GW Caterpillar gas order, air permits and any grid interconnection",
-        "Debt stack against revenue: about USD 6.1bn of facilities (February 2026 GPU-secured DDTL, August 2026 investment-grade Texas and North Carolina loans, USD 900m twelve-bank RCF) — drawdowns, covenant disclosures and the first audited revenue figure",
-        "Figure's USD 3.5bn compute commitment (3 September 2026): whether a lender rates a loan against a non-hyperscaler anchor; the Anyscale acquisition closing and what it adds to the software layer",
-        "Chesterton check: OpenAI is no longer the Narvik offtaker (LOI replaced by Microsoft per Aker, April 2026) and Stargate UK is paused; Microsoft is not the Monarch anchor; revenue and backlog figures are press-reported. Do not re-import any of these premises"
-      ]
-    },
-    {
-      "slug": "anthropic",
-      "cadence": "quarterly",
-      "source": "Private Delaware public benefit corporation; confidential draft S-1 filed 1 June 2026 with nothing public from it. First-party channels are the newsroom (compute commitments with Amazon, Google, Microsoft/NVIDIA, Fluidstack, SpaceX; run-rate revenue statements; the Series H; Build AI in America; the grid-upgrade pledge) and claude.com product pages. Counterparty filings carry the contract terms: Amazon 10-Qs (convertible notes, Series G/H preferred, the USD 20bn milestone facility), TeraWulf's 8-K (the 401 MW Hawesville lease, about USD 19bn), ERock's release (470 MW equipment order), Aker/Nscale and the Fluidstack landlords for the chains, court records via Fortune for Google's about 14%. The Nscale (about USD 45bn) and Lambda (about USD 35bn) contracts are press-reported only. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "The S-1 going public: the first audited revenue, the compute commitments as a purchase-obligations table, supplier concentration in gigawatts per counterparty, the Long-Term Benefit Trust governance disclosure — re-run financials and judgments from it",
-        "Delivery window 2H 2026 → early 2028: Trainium 'nearly 1 GW' by end-2026, Fluidstack CB-5 (early 2027), Barber Lake (September 2026), River Bend (Q2 2027), Hawesville (2H 2027), Rockdale (December 2027), Monarch (late 2027), TPUs 'starting in 2027' — any missed milestone in a landlord's or supplier's filing, and any repeat of the May 2026 compute-shortage rate limits",
-        "Run-rate revenue after USD 47bn (May 2026): the next company statement; the take-or-pay book is affordable only while it compounds",
-        "Direct-counterparty moves: further leases in Anthropic's own name (Hawesville, Riot's 191 MW build-to-suit), the Theseus anchor-tenant platform, the Apollo–Blackstone chip vehicle's residual-value terms, any owned campus — the make-versus-lease answer may change",
-        "Power: ERock 470 MW order deliveries and permits, the '100% of grid upgrades' pledge in utility dockets (Entergy row is `announced`), Monarch's islanded 2 GW, transformer/switchgear lead times flagged as the Hawesville choke point",
-        "Shareholder-suppliers: Amazon's holding (about USD 190bn of Anthropic paper) and milestone releases, Google's about 14% and Fluidstack backstops, Microsoft up to USD 5bn and NVIDIA up to USD 10bn — any change in stake or in the Azure USD 30bn / 1 GW commitment",
-        "Chesterton check: the 401 MW Hawesville lease is at Justified (Hawesville, KY), direct with TeraWulf, no Fluidstack entity; Microsoft walked from Monarch and the Anthropic terms there are unconfirmed; Anthropic owns no campus. Do not re-import any of these premises"
-      ]
-    },
-    {
-      "slug": "aypa-power",
-      "cadence": "quarterly",
-      "source": "Private Blackstone Energy Transition Partners portfolio company under a signed, unclosed sale to Brookfield (announced 22 July 2026; about USD 7bn EV / USD 3bn equity; 'subject to customary regulatory approvals'). First-party channels are aypa.com/news and the PR Newswire feed (no project list, no leadership page, no financials); the real disclosure channels are counterparty and regulator records — SRP, Santee Cooper, NCPA, United Power releases; CPUC resolutions and PG&E advice letters; SC PSC docket 2025-318-E; county boards and CEQAnet — plus Brookfield Asset Management 8-Ks and Brookfield Renewable results for the transaction. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Closing of the Brookfield acquisition: a completion release from Brookfield or Blackstone, any FERC Section 203 or HSR record, and whether the USD 1.55bn corporate facility and USD 1.5bn warehouse survive the change of control or are refinanced — update ownership, summary and judgment 1 the day it closes",
-        "CODs the releases promised but no source confirms: Kuna (stated mid-2025), Cald (stated 2024), Vidal (2026), Elora and Hedley (mid-2027), Pinopolis (1 December 2027; SC PSC hearing 19 March 2026) — silence past the dates is slippage",
-        "Dirac's appeal in Chino after the 4–3 planning-commission refusal (15 July 2026) and the Marici/Gabriel interconnection dates (CAISO queue 2031/2033 against 2027 contracted deliveries)",
-        "Any supplier other than Canadian Solar e-STORAGE, any FEOC or domestic-content statement, and any named tax-credit-transfer buyer — each would move the supplier-concentration judgment",
-        "Project-count and pipeline reconciliation: Aypa's 42 against Brookfield's 35 and the 3,000 MW / 3,500 MW split; an Aypa-published operating figure would replace the buyer's",
-        "Chesterton check: the sale is signed, not closed; '6.5 GW' is Brookfield's figure; the Yadkins PPA counterparty and the Bypass offtaker are undisclosed; no Aypa fire incident is documented (the Hamilton County press claim is unsupported). Do not re-import these as facts"
-      ]
-    },
-    {
-      "slug": "spearmint-energy",
-      "cadence": "quarterly",
-      "source": "Private, founder-led, no announced sponsor (lender Elda River: 'controlled by Roscommon Analytics'; no Blackstone link in any source). Business Wire is the release channel but returns 403 from this environment — read releases via Yahoo Finance, SFNet, 01net, Pulse 2.0, IREI and Energy Global mirrors; spearmintenergy.com/in-the-news lists titles. Lender and counsel releases (Paul Hastings, K&L Gates, Nuveen, Elda River), Minnesota PUC dockets (IP-7138/ESS-24-279; 24-294/24-295), interconnection.fyi ERCOT records and Modo Energy / Enverus for the market. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Red Egret construction and COD (company: 2027; interconnection-agreement COD 31 August 2026 per Energy-Storage.news) and the take-out of the USD 225m construction facility by Nuveen preferred equity and the ITC transfer — the buyer's name if released",
-        "A named CFO (Cory Magnuson's departure is press-reported only), headcount restated above 'over 50', and any corporate equity round or sponsor disclosure",
-        "A non-Sungrow supply contract or FEOC-compliant order (the May 2024 supplier search), and any Tesla order for Snowshoe/Midwater beyond the permit design basis",
-        "Minnesota: Snowshoe and Midwater financing and construction (Q1 2027 stated) — a third-party tolling counterparty in either financing would refute the captive-tolling judgment; Pumpkinvine, Green Eagle, Silverfield and Cloverleaf permit outcomes",
-        "ERCOT revenue recovery signals Modo names (RTC+B, HB 1500 firming, load growth) against a fleet that is 100% merchant; any Spearmint revenue or dispatch disclosure",
-        "Further Kyuden or utility stakes, or a whole-project sale, which would move the model toward develop-to-sell; the 'Nomadic' Cooke and Brazoria projects' status",
-        "Chesterton check: no Blackstone or other sponsor is evidenced; the '15 GWh' is company boilerplate dropped in May 2026; no offtaker, hedge or revenue put is named for any project; FERC MBR/QSE records were unreadable, not absent. Do not re-import the brief's premises"
-      ]
-    },
-    {
-      "slug": "intersect-power",
-      "cadence": "quarterly",
-      "source": "Google subsidiary since 10 March 2026 (acquisition announced 22 December 2025; USD 4.75bn cash plus debt; USD 5,868m in Alphabet's Q2 2026 10-Q). Company channels: intersect.com (news, portfolio pages, about — intersectpower.com redirects), Kimber's blog; parent channels: abc.xyz IR, blog.google, datacenters.google, Alphabet 10-Q/10-K acquisition notes; sellers: TPG, Greenbelt, CAI; the carved-out fleet reports as IPX Power (ipxpower.com). Campus facts come from Gray County minutes (The Pampa News, High Plains Observer), New Project Media and trade press; no FERC, ERCOT or PUCT filing names Intersect. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "The first published data-centre MW for Quantum or Meitner (Google, Intersect, an ERCOT large-load report or a PUCT SB 6 net-metering filing) and Meitner Phase 1 dates against 'late 2028'",
-        "Any Intersect entity in a PUCT co-location net-metering review, an ERCOT curtailment or large-load filing, or a FERC docket — which SB 6 path the parks take",
-        "Meitner's on-site gas: turbine or engine supplier, capacity and air permit; any FEOC-compliant battery statement; the split of the First Solar (11.4 GWdc) and Tesla (15.3 GWh) frameworks between Intersect and IPX Power",
-        "Any non-Google tenant or third-party project, which would refute the captive-developer judgment; Roman's scope and dates; Google's Armstrong and Wilbarger County campuses and whether Intersect is attached",
-        "Alphabet's next 10-Q for any Intersect operating disclosure or impairment; IPX Power's financings for what they say about the former fleet",
-        "Chesterton check: the deal is closed (10 March 2026), not pending; Google bought the development platform and parks, not the operating fleet; there is no Wyoming campus; the 840 MW Meitner load is a trade outlet's reading of filings, not a party statement. Do not re-import the brief's premises"
-      ]
-    },
-    {
-      "slug": "invenergy",
-      "cadence": "quarterly",
-      "source": "Private developer owned by CDPQ (52.4% economic ownership of Invenergy Renewables LLC), Blackstone Infrastructure Partners (about USD 4bn, 2022–2023) and management as managing member; no financial statements. First-party channels are invenergy.com (served from the wwww. host; the press index will not paginate — use site search), grainbeltexpress.com and the project microsites; the disclosure channels that move the picture are utility CPCN filings (IURC for Sycamore Riverside, Wisconsin PSC for the We Energies plants), counterparty releases (Meta, Verizon, SRP, APS, AEP), Grain Belt court and DOE records, BOEM and BLM lease records, and Cleanview's pipeline rankings. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Grain Belt Express financing: any bank group, bond or equity partner announced for the USD 11bn line after the DOE guarantee's July 2025 termination, and whether Phase 1 construction actually starts in 2026 — a financing closes judgment 5; silence through mid-2027 confirms the delay reading",
-        "Regulatory decisions on the build-and-transfer gas plants: the IURC's end-2026 order on Sycamore Riverside (918 MW to I&M, March 2029) and the Wisconsin PSC's decisions on Foundry Ridge and Red Oak Ridge for We Energies, plus the October 2026 application for Union Depot and Forest Junction (1,950 MW) — approvals confirm the gas-to-utility model, a denial strands the settlement capital",
-        "Any Invenergy release naming a battery integrator, cell supplier or an ISO-level storage total, and any CAISO record for the 200 MW Seahawk (Minto Road) project taken over in September 2026 — the dossier's largest collection gap",
-        "Ownership: a Blackstone or CDPQ stake change, a holding-company rating, a recapitalisation or IPO report from a primary source — the 2023 baseline is the last confirmed state; aggregator valuation claims are excluded",
-        "The 4 July 2026 begin-construction record for the 2027–2028 Meta and Verizon projects and Treasury's final FEOC rule — a project dropping from the Meta list would show the deadline bit",
-        "Chesterton check: 'largest privately held' is company language (Cleanview #2 by pipeline); the storage fleet is Arizona-contracted, not merchant; the NVIDIA/Emerald AI 'AI factory-ready sites' are stated intent with no named site; boilerplate megawatts (36/38 GW developed, 20/25 GW operated) move release to release. Do not re-import these as facts"
-      ]
-    },
-    {
-      "slug": "gridstor",
-      "cadence": "quarterly",
-      "source": "Private, sponsor-created company owned by funds managed by Goldman Sachs Asset Management (trade press: Horizon Energy Storage); no fund name, commitment or ownership split is public. First-party channels are gridstor.com (WordPress with Yoast sitemaps — all 24 releases hosted in full, so Business Wire mirrors are unnecessary), the project pages and the June 2026 media kit; the disclosure channels that move the picture are lender and credit-buyer releases (NORD/LB, First Citizens, Siemens Financial Services, Foss & Company), counterparty releases (SCE, APS, Axpo), Modo Energy's ERCOT buildout reports, Enerdatics and Holland & Hart's deal notes. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Gunnar's commercial operation by end-2026 and the naming of its Fortune 500 tolling counterparty — a slip past first half 2027 repeats the Hidden Lakes delay",
-        "Offtake for Birdseye (Colorado, Xcel Energy's Riverdale substation) and the Oklahoma and Capacity Power Group projects, which carry no contract or date — confirmation that acquired projects are contracted before construction",
-        "A supplier name for Hidden Lakes, Gunnar or White Tank (Enerdatics' SolBank 3.0 attribution is unconfirmed) or a post-FEOC-guidance procurement announcement — the CTO's stated procurement pause is the supplier-relevant item",
-        "The pipeline figure in the next boilerplate ('over 5 GW' in September 2025, 'over 3 GW' since November 2025) and any update on the 2022 Los Angeles Basin portfolio beyond Santa Fe Springs",
-        "Any Goldman Sachs Asset Management release naming the fund, a co-investor, a continuation vehicle or a platform sale — the sponsor's exit route and commitment are undisclosed",
-        "Chesterton check: the company is contracted, not merchant (SCE RA, APS and Fortune 500 tolls, Axpo swap); the markets are CA, TX, AZ, OK and CO; HQ is Portland, not Los Angeles; the sponsor is a GSAM-managed fund, not 'GSAM Infrastructure' by name. Do not re-import the 2026-09-03 premise"
-      ]
-    },
-    {
-      "slug": "available-power",
-      "cadence": "quarterly",
-      "source": "Business unit of Available Infrastructure (Tysons Corner, VA), a private edge-AI and cybersecurity company since its July 2025 rebrand; no sponsor, lender, buyer or financial figure has ever been published for the storage business, and the corporate storage pages are gone (available-power.com redirects to the parent). First-party channels are availableinfrastructure.com/news and the parent's PRWeb releases; the only storage disclosures are the 2022–2024 partner releases (Stem, Linxon, CleanCapital, EIN Presswire) and two Energy-Storage.news interviews. The channels that would move the picture are an ERCOT or Cleanview record for a 100 MW / 200 MWh battery in Bastrop County, a buyer's release naming Available Power as seller, or a Datavault AI filing tying Project Qestrel sites to batteries. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Greenport's fate: an ERCOT commercial-operation entry or Cleanview listing for a 100 MW / 200 MWh battery in Bastrop County, or a buyer's release — the stated February 2026 operating date has no confirmation from any party",
-        "Any release from a financial owner naming Available Power as the seller of a 9.9 MW / 20 MWh portfolio — the three March 2024 sales are unverified",
-        "A storage-related release from Available Infrastructure or a project attributed to the CleanCapital joint venture — either would show the unit is active; the record has been silent since March 2024",
-        "Datavault AI's filings and the parent's Project Qestrel releases for any statement tying micro data-centre sites to on-site batteries — nothing does today",
-        "Bastrop County: the Central Texas Airport / GREENPORT campus approval status — the host site of the only named project remains unapproved",
-        "Chesterton check: Texas only (no CAISO); develop-and-sell at NTP, not owner-operator; no sponsor named; nothing operating under its ownership on any tracker; Sungrow is a caption in a 2024 article about another company's project, not a supplier. Do not re-import the 2026-09-03 premise"
-      ]
-    },
-    {
-      "slug": "esvolta",
-      "cadence": "quarterly",
-      "source": "Private, sponsor-owned (Generate Capital, acquired July 2022, terms undisclosed) and in a sale process — Infralogic (5 June 2026): Barclays and Truist mandated; no sponsor release. First-party channels are esvolta.com (Wix; /news holds 16 posts from January 2024, /media lists older releases; per-project pages 404), PR Newswire and Orrick deal notes; Business Wire mirrors (Batteries News, SFNet) for 2023 and earlier. Boilerplate figures move: 1.5 GWh (2024) → 1.4 → 1.7 (December 2025) → 2.0 GWh (March 2026).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "The outcome of Generate Capital's sale process — buyer, structure and whether esVolta stays a develop-and-own platform; the June 2026 release still calls it a Generate portfolio company",
-        "Boxcar (COD 2027) and City Breeze (queue COD 18 March 2027) construction milestones, a supplier announcement for either, and the name of Boxcar's 'major corporate customer'",
-        "An SRP or ED3 contract and a 2026 groundbreaking at Cactus Wren (800 MW / 3,200 MWh, Pinal County) — the company's largest project by six times, permitted December 2025 with no offtake",
-        "PG&E or CAISO confirmation of Hummingbird's commercial operation (company page: March 2026; no third-party COD article) and any disclosure of the ERCOT hedge counterparty or tenor",
-        "The first named SPP or MISO project (promised since June 2026) and any FEOC-driven change from Sungrow on the 2026–2027 projects",
-        "Chesterton check: esVolta is in CAISO, ERCOT and WECC with SPP/MISO expansion — not PJM; the Captona deal was preferred equity, not a sale; Generate acquired it in July 2022, not 2023. Do not re-import the 2026-09-03 premise"
-      ]
-    },
-    {
-      "slug": "strata-clean-energy",
-      "cadence": "quarterly",
-      "source": "Private, founder-owned ('100% privately held company owned by our founders'); no sponsor, no sale process reported. First-party channels are stratacleanenergy.com (WordPress with Yoast sitemaps; the /news archive hosts releases in full back to 2010, so Business Wire mirrors are needed only for the November 2024 White Tank toll and the April 2021 rename), the case-study pages and the leadership page. Site statistics are internally inconsistent (285 vs 300+ projects; 1.8 vs 5 GWh storage developed) — quote with the page.",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "A Justice Energy Storage (150 MW / 600 MWh, APS toll) completion release or APS confirmation — the company's schedule said April 2026; nothing has been published",
-        "The next APS, SRP or TEP toll Strata wins and whether it is sold before COD (Scatter Wash → CIP, White Tank → GridStor) or retained — the test of the originate-and-sell judgment",
-        "White Tank construction start (October 2026 per GridStor) and in-service date (first half 2027), which ends Strata's consultative role",
-        "A named hyperscaler, natural-gas or Power-to-X project after the April 2026 reorganisation; the only sizing so far is a regional piece by a firm that represents the company",
-        "Any equity sponsor, stake sale or platform sale — none in the record — and the status of the 2021 Blackstone Credit USD 150 million",
-        "Virginia siting outcomes after the Hanover (2024) and Culpeper (2026) denials, and the unverified DEQ stormwater citations on Dominion EPC jobs",
-        "Chesterton check: Strata owns no battery in ERCOT or PJM; its owned CAISO battery is Inland Empire (70 MW / 280 MWh, PG&E RA); its Arizona assets are in APS territory outside any ISO; Blackstone's 2021 money was credit. Do not re-import the 2026-09-03 premise"
-      ]
-    },
-    {
-      "slug": "hunt-energy-network",
-      "cadence": "quarterly",
-      "source": "Private, Hunt-family-owned ('a part of the Hunt Energy Company'; 'managed by the Ray L. Hunt family') with Manulife Investment Management as joint-venture equity partner (USD 225 million 2021; USD 250 million 2024). First-party channels are thin: huntenergynetwork.com (13 pages, 2 posts, no press archive — the asset-development page is the project list and omits Fort Duncan), PR Newswire (three releases in five years), Hunt Consolidated's news page, and Pat Wood's testimony PDFs. The richest record is regulatory: PUCT Interchange filings (Projects 52196, 56556, 53911, 54335; Dockets 58315, 58964; Sharyland's affiliate report 36867) and Modo Energy's ERCOT benchmarks.",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "An ERCOT interconnection agreement for Fizzle, Nanuluk, Whitetail or Amberjack2 (180 MW each; none has one) and Modo's cited 2027 commissioning for 360 MW of transmission-level assets",
-        "A second operating-asset purchase in ERCOT — Wood said the company is 'actively looking' — and whether it stays '100% merchant'",
-        "The TNMP rate case (Docket 58964) outcome on a substation-service rate class for storage and the AEP Texas UTM proceeding (Docket 58315)",
-        "A named third-party TraDER/QSE customer, a named data-centre customer, or a Caterpillar unit at an HEN site — none exists yet",
-        "Any lender, tax-equity or credit-transfer announcement; none has ever been published for a 420 MW fleet",
-        "The next fleet count (33 facilities in February 2026 vs '31 batteries' in May 2026) and whether the web project list is updated to include Fort Duncan",
-        "Chesterton check: HEN is ERCOT-only, fully merchant, and a sub-10 MW distributed owner (plus one 100 MW battery); Manulife is a JV equity partner, not an owner; the Caterpillar agreement is the parent's. Do not re-import the 2026-09-03 premise"
-      ]
-    },
-    {
-      "slug": "talen-energy",
-      "nextReport": "2026-11-04",
-      "confirmed": false,
-      "source": "No company announcement exists. Talen's own practice is a standalone 'to report on [date]' release about three weeks ahead (2026-02-05 for the Feb 26 print; 2026-04-14 for May 5; 2026-07-15 for Aug 5), and its EDGAR index shows no filing of any kind after the 8-K/A of 2026-08-12. Trackers disagree by two weeks: MarketBeat says Wednesday 2026-11-04 and states openly that it is estimated; TipRanks says 2026-11-18 marked 'TBA (Not Confirmed)'; Investing.com also shows 2026-11-18. This row takes MarketBeat's date because it is the only tracker that admits it is inferring, and because it matches Talen's own weekday pattern (Q3 2025 was released Wednesday 2025-11-05; Q3 2024 was 2024-11-14). CAUTION: ir.talenenergy.com is hard-blocked by an Akamai WAF from this environment (503/403 on every path), so the IR events calendar cannot be checked — verify from the EDGAR 8-K feed (CIK 1622536) instead.",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "The PJM co-location rulebook: FERC's section 206 show-cause docket for PJM is EL26-67-000, with stakeholder comments due 2026-09-16. The December 2025 order created three new transmission services (interim non-firm, firm contract demand, non-firm contract demand) and April 2026 guidance recognised reduced-capacity, provisional and surplus interconnection pathways. Watch whether the final tariff prices co-located load on gross or net withdrawals — it governs the entire 'flywheel'",
-        "A second named large-load counterparty at any site other than Susquehanna. The pipeline figure has been 'approximately 4 GW of land development and data center contracting options' since Q2 2026 and no second hyperscaler exists in any filing. Pennsylvania's 2026-08-19 executive order conditions preferential permitting above 25 MW on new in-zone supply, which Jefferies read as closing the door to selling existing generation",
-        "The AWS ramp against the disclosed band: 240-960 MW in 2026, 360-960 in 2027, 480-960 in 2028, 840-1,200 in 2029, 1,680-1,920 in 2032. Watch for any acceleration notice, and remember the shortfall make-whole is capped at an estimated 50-65 percent of full impact",
-        "The Brandon Shores and H.A. Wagner RMR: RTO Insider reported FERC approved the extension to 2031 on 2026-08-24, but Talen's own 10-Q of 2026-08-05 said only that a decision was expected by mid-September. Confirm the order, the revised annual payment (the original was $312/MW-day and $137/MW-day, about $180M a year) and the status of the Maryland Office of People's Counsel appeal alleging an $83M annual windfall",
-        "PJM capacity: the 2030/2031 Base Residual Auction is scheduled for May 2027 on a non-delayed basis. The last three auctions all cleared at the administrative cap ($329.17, $333.44, $325.00). Whether the collar is extended past the 2029/2030 auction is the single largest swing factor in Talen's earnings",
-        "Guidance: 2026 was raised on 2026-08-05 to $2,025-$2,225M Adjusted EBITDA and $1,200-$1,350M Adjusted FCF, and the release says the 2027 and 2028 outlooks were increased without giving numbers — the revised ranges exist only in the Q2 2026 deck on the blocked IR site. Capture them at the next refresh",
-        "The Keystone sale: a June 2026 purchase and sale agreement for the 12.34 percent interest at $85 million cash, expected to close in the second half of 2026 subject to FERC approval, with the buyer entitled to net cash flow from 1 July 2026. 2026 guidance already excludes Keystone from that date",
-        "Colstrip: the 10-K says Talen may have to decide the plant's future before the MATS and greenhouse-gas litigation resolves. Watch the D.C. Circuit and D.D.C. abeyances, the April 2025 Clean Air Act section 112(i)(4) exemption, and the Rosebud Mine permit appeal at the Montana Supreme Court",
-        "Two federal suits naming Talen Energy Corporation were filed in the Southern District of Texas in August 2026 (4:26-cv-07161 filed 2026-08-27; 4:26-cv-06807 filed 2026-08-18, already showing a notice of dismissal). Their nature is unverified and they post-date the Q2 10-Q — check whether either is disclosed in the Q3 filing",
-        "Chesterton check: no ownership figure could be settled. The 2026 proxy shows Vanguard 10.5 percent, BlackRock 8.6 percent, Rubric 7.8 percent and MFN 6.6 percent as of March 2026, plus ECP at about 5 percent after the June 2026 close; an aggregator puts Rubric at roughly 22 percent. Resolve from a direct 13F/13G pull"
-      ]
-    },
-    {
-      "slug": "vistra",
-      "nextReport": "2026-11-05",
-      "confirmed": false,
-      "source": "No company announcement exists: the IR newsroom archive for 2026 (18 releases, retrieved in full via ?year=2026&l=100) contains no 'Vistra to Report Third Quarter Results' item, and the most recent scheduling release is the 2026-07-06 announcement of the 2026-08-07 print. MarketBeat estimates Thursday 2026-11-05 and marks it explicitly estimated. The company's own recent Q3 releases were 2025-11-06 (per the IR URL slug) and, per MarketBeat's history table, 2024-11-07 — the two sources differ by a day on 2025, so treat the weekday as approximate. Vistra's practice is a scheduling release about a month ahead; confirm from https://investor.vistracorp.com/news?year=2026&l=100 before relying on this date.",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "The Cogentrix close: 5,496 MW for about $4.0 billion net, announced 2026-01-05, FERC-approved August 2026, expected to close 'late 2026'. It takes the pro-forma fleet to roughly 50,000 MW and is excluded from both 2026 guidance and the 2027 midpoint opportunity — the first guide that includes it will not be comparable with the last one",
-        "The first signed large-load agreement at a GAS site. Every contracted megawatt today is nuclear (Amazon 1,200 MW at Comanche Peak; Meta 2,609 MW across Perry, Davis-Besse and 433 MW of uprates). The company's language for everything else has been unchanged across four filings: 'we continue to engage in discussions with various counterparties'. Roughly 3.2 GW including ERCOT uprates is stated as still available",
-        "Moss Landing Phase III (350 MW): the Q2 2026 10-Q says restart is under evaluation 'when or if'. Watch for a restart decision, a CAISO retirement request, and the EPA remediation estimate, which rose from about $110M to about $175M in Q2 2026 while the $500M insurance limit is fully collected. Phases I and II are permanently in the Asset Closure segment",
-        "The Moss Landing litigation and the science: two suits name Vistra, Dynegy Operating Company, LG Energy Solution and PG&E; docket numbers could not be confirmed (CourtListener 403). A San Jose State team led by Prof. Ivano Aiello reported Ni/Mn/Co at 10-1,000x baseline with a 2:1 nickel-to-cobalt ratio, but the journal and date conflict between sources (KQED says Scientific Reports, Dec 2025; Lookout says Nature, Feb 2026) — resolve by DOI before citing",
-        "The 754 MW disposal (Casco Bay, Beaver Falls, Syracuse), two of which came from Lotus eight months earlier. Buyer and price are undisclosed",
-        "Helix Digital Infrastructure: up to $1 billion committed to a KKR-managed fund alongside NVIDIA and the Kuwait Investment Authority, with the second $500 million tranche tied to 'commercial power supply milestones for our existing generation assets' and Vistra as 'preferred power provider'. It appears only inside the Q2 2026 10-Q and deck — watch for the first named project",
-        "The 860 MW Permian Basin expansion in Ward County: final investment decision September 2025, Texas Energy Fund loan finalised 2026-06-24 (the programme's eighth), online 2028. The loan amount was not disclosed in the governor's release",
-        "ERCOT: the 3 August 2026 pause on data-centre interconnections and the audit of a roughly 474 GW queue, plus the December 2025 move to real-time co-optimisation replacing the operating reserve demand curve with ancillary-service demand curves",
-        "PJM capacity: 10,924 MW cleared at $325.00/MW-day for 2028/2029; the reliability backstop auction proposed for September 2026; and whether the administrative price cap is extended to 2029/2030",
-        "Chesterton check: Vistra discloses storage in MW only. No MWh figure for any asset appears in any filing, deck or sustainability report, so every MWh figure in circulation is third-party. It also publishes no single employee headcount and no board headshots"
-      ]
-    },
-    {
-      "slug": "nrg-energy",
-      "nextReport": "2026-11-05",
-      "confirmed": false,
-      "source": "No company announcement exists. NRG's practice is a dedicated release naming the date three to five weeks ahead (newsroom item 45441 for the 2026-05-06 print; 45736 for the 2026-08-04 print), and https://www.nrg.com/sitemap.xml crawled 2026-09-05 contains no such release for Q3 2026. Historical Q3 releases: 2023-11-02 (Thu), 2024-11-08 (Fri), 2025-11-06 (Thu) — the first week of November, with the call at 9:00 a.m. Eastern on the release day. This row uses Thursday 2026-11-05 as a pattern inference. CAUTION: investors.nrg.com returns 403/503 from this environment, so the IR events calendar cannot be used as a second source; verify from the nrg.com newsroom or the EDGAR 8-K feed (CIK 1013871).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Whether the 1.2 GW Texas project converts from 'aligned on principal commercial terms' to a signed agreement, and whether the hyperscaler is finally named. NRG's stated 2026 goal was to sign at least 1 GW under the Bring Your Own Power model; disclosed economics are about $3.2 billion at roughly $2,700/kW, about $500M annual adjusted EBITDA, about $375M FCF before growth, a 12-15 percent pre-tax unlevered IRR and a late-2029 COD, expandable to 2.4 GW",
-        "A firm turbine purchase order or a final investment decision under the GE Vernova and TIC Project Development Agreement. Slot reservations went 1.2 GW (Feb 2025) to 3.6 GW (FY2025 10-K) against an unchanged 5.4 GW ceiling; GE Vernova accounts for reservations separately from backlog. No site has ever been named. NOTE: this is a development agreement, not a joint venture — NRG's filings never use that phrase",
-        "The ERCOT interconnection audit ordered 2026-08-03 and its December 2026 verification report. NRG's signed 445 MW of data-centre retail agreements are grid-served and therefore exposed; behind-the-meter generation is exempt, which favours the BYOP model",
-        "The Texas residential electricity customer count: 2,928 to 2,909 to 2,860 thousand across three years. A fourth consecutive decline would make the retail erosion structural. Watch it alongside Vivint subscribers (2,111 to 2,226 to 2,419 thousand) and the provision for credit losses ($251M, $314M, $272M)",
-        "LS Power integration and its shareholding: the deal closed 2026-01-30 at $10,583M plus about $3.2bn of assumed debt; LS Power retains roughly 11 percent of NRG with voting capped at 10 percent through a trust, and sold 12.3 million shares in a March 2026 secondary. Purchase-price allocation is to be finalised by end-2026; goodwill is $3,802M preliminarily split $1,588M Texas / $2,214M East",
-        "The two remaining Texas Energy Fund projects: Cedar Bayou 5 (689 MW) and Greens Bayou 6 (443 MW), both mid-2028, on $562M and $370M of 3 percent loans. T.H. Wharton reached commercial operation 2026-05-26 with a completion-bonus grant agreement of up to $54.72M over ten instalments from 2027",
-        "Guidance credibility: two consecutive adjusted-EPS misses in 2026, both at exactly $1.49, against reaffirmed full-year guidance of $7.90-$9.90. First-half adjusted EPS of about $2.98 implies a heavily back-loaded year, and the $2.00-wide range is unusually loose",
-        "The valuation gap: a 52-week low of $111.85 on 2026-08-24 against a mean target near $189 and 13 of 16 ratings still Buy or Strong Buy. Every August broker action was a target cut without a rating change",
-        "Consumer-protection exposure: the $71 million New York PSC settlement approved 2026-04-16 across nine NRG-affiliated brands and about 278,000 customers (Case 25-M-0516). Watch for similar actions in other states",
-        "Chesterton check: investors.nrg.com is 403/503-blocked, so the percentage of expected generation hedged — a figure both Vistra and Talen publish — is unobtainable for NRG, as is any net leverage ratio. Nine of ten executive headshots are advertised at NRG asset paths that redirect to an error page. Absence of these is a collection gap, not evidence"
-      ]
-    },
-    {
-      "slug": "excelsior-energy-capital",
-      "cadence": "quarterly",
-      "source": "Private fund manager (Excelsior Renewable Energy Management Company LP, SEC CRD 289890); no listing, no earnings calendar. Disclosure channels: SEC Form ADV annual amendment (late March — regulatory AUM, headcount), SEC Form D/D-A filings for fund vehicles, Business Wire releases mirrored on Yahoo Finance/AOL (businesswire.com is 403 from this environment), excelsiorcapital.com news page (excelsiorenergycapital.com redirects there), Lydian Energy releases. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Enel closing of the 830 MW Fund I portfolio sale (expected Q3 2026; ~USD 1bn consideration, ~USD 1.3bn EV) — confirm completion, FERC/FDI conditions, and whether Excelsior issues its own release",
-        "First named delivery of Fluence Gridstack Pro (2.2 GWh, from 2025) or LG Energy Solution Vertech (7.5 GWh, first delivery slated April 2026) to an Excelsior/Lydian site — no source has yet named a recipient project",
-        "Pintail, Crane and Headcamp COD (released target Q4 2025; ERCOT record for Headcamp showed July 2026) — energisation dates in ERCOT records; reconcile the two MWh sets (300/400/400 vs 391/521/521)",
-        "Lydian pipeline and Atlas North build-out: any financing or supplier named for the 450 MW / 1,800 MWh CAISO batteries; Faraday BESS Phase 1 progress",
-        "Fund III: a Form D or first-close release would end the 'two active funds' boilerplate; the March 2027 Form ADV amendment for regulatory AUM and headcount",
-        "Stella Power and CleanAmps alliances: any named site, MW or data-centre offtaker (none disclosed as of September 2026)",
-        "Chesterton check: the Fluence 2.2 GWh deal dates from 30 July 2024 (not December 2024 — that is the LG deal); no source names Holland, MI or a 2030 end year for the LG agreement; the fourth co-founder is Ryan Fegley (no 'Ryan Stephenson'); a 'Fund III $1.8bn' web claim is uncorroborated. Do not re-import any of these"
-      ]
-    },
-    {
-      "slug": "mgx",
-      "cadence": "quarterly",
-      "source": "Private ADGM fund manager (MGX Fund Management Limited, FSP 240067); no listing, no earnings calendar, no annual report. Disclosure channels: mgx.ae news-insights (pages ~15 MB — fetch with curl, not WebFetch; /en/ paths redirect), MGX's X account (via the oEmbed endpoint), board-meeting releases (two to four a year, also carried by the Abu Dhabi Media Office), co-issuer releases (AIP/BlackRock/GIP/Microsoft, Aligned, SoftBank for Stargate), ADGM FSRA register for licence and director changes. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "AIP's second investment after Aligned (power, chips or campuses) and any disclosure of MGX's percentage of Aligned or the acquisition debt package",
-        "The '8 GW by end-2026' contracted-capacity claim: any breakdown by asset in a board release",
-        "Stargate LLC: any first-party statement naming MGX's contribution (Bloomberg's ~USD 7bn is unconfirmed); whether later Stargate releases name MGX at all",
-        "US political risk: congressional action on UAE chip access (Country Group A:5, July 2026), the USD1/Binance matter, Commerce's stated favourable review of applications 'destined for MGX'",
-        "Successor fund or new commitments after the USD 49bn Fund I close (1 July 2026); any LP named",
-        "Regulated-entity governance: the ADGM register's licensed directors (Xiao and Edelman withdrawn 18 May 2026; Namphy and Dweik added) and any MGX statement explaining it",
-        "Chesterton check: MGX publishes no AUM total, ticket sizes, stakes or headcount — do not import press estimates as facts; the mgx.ae index headline '$18B Series K' for Databricks is a typo for USD 1bn; eight corpus 'MGX' hits are NVIDIA's MGX rack architecture, not this fund"
-      ]
-    },
-    {
-      "slug": "x-energy",
-      "nextReport": "2026-11-13",
-      "confirmed": false,
-      "source": "Public since 24 April 2026 (Nasdaq: XE). Q1 2026 results 4 June 2026; Q2 2026 results 13 August 2026 (8-K Ex. 99.1 and 10-Q filed the same day). Q3 2026 date not announced — 2026-11-13 is a cadence inference from the Q2 date; Investing.com's calendar shows a projected 2 December 2026, so confirm against investors.x-energy.com (HTTP 503 from this environment) or the 8-K when the date is set. Non-accelerated filer 10-Q deadline for Q3 is mid-November.",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Q3 2026 results: revenues and grant income vs USD 54.6m in Q2, operating expenses, cash burn against USD 1.9bn liquidity; whether the additional up to USD 1bn of ARDP cost share (DOE share up to USD 2.115bn, stated on the Q2 call) appears in the 10-Q or a DOE release",
-        "NRC Long Mott final safety evaluation (target November 2026) and construction permit decision (company: Q1 2027); any hearing; Dow's FID posture (no FID before 2028) and Dow's cost programme",
-        "Energy Northwest Cascade construction permit application (guided H1 2027) and Amazon's funding milestones; the 'next 1-gigawatt project' with an investor-owned utility described as in 'final throes' on the Q2 call",
-        "TX-1: core-and-shell completion, interior build-out, completion by H1 2028; HALEU deliveries under the Centrus and General Matter agreements and the DOE allocation",
-        "Centrica/Hartlepool: UK GDA progress (conclusion by end-2029), any definitive agreement replacing the non-binding JDA; Talen LOI and LG&E/KU study outcomes",
-        "Share register: Amazon 13G/13D changes (23.4% of Class A), Ares and Jane Street filings, lock-up expiry effects; analyst estimates once consensus forms",
-        "Chesterton check: X-energy is public (not private); the USD 700m Series D closed November 2025 led by Jane Street (there was no February 2026 Series D); headcount is 916 at 17 March 2026 — vendor headcounts of 1,400–1,800 are unreliable. Do not re-import any of these"
-      ]
-    },
-    {
-      "slug": "compass-datacenters",
-      "cadence": "quarterly",
-      "source": "Private, sponsor-owned (co-controlled by Brookfield Infrastructure and Ontario Teachers' Pension Plan since 3 October 2023; KKR asset-level partner since December 2025); no listing, no earnings calendar. Listed parents in the chain: Brookfield Infrastructure Partners (NYSE: BIP / TSX: BIP.UN) and BIPC report a 'data' segment quarterly (letters at bip.brookfield.com; 6-K exhibits on EDGAR) without naming Compass. Disclosure channels: compassdatacenters.com newsroom and in-the-news pages (retro-edited boilerplate — quote with dates), PR Newswire (readable) and Yahoo Finance mirrors, the annual Outcomes Report PDF (July/August), ABS presales via Bisnow / Asset Securitization Report / GlobalCapital, Mississippi PSC and Texas local press. Data Center Dynamics is 403 from this environment. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Hoffman Estates Building 1 energisation by ComEd (2024 target: mid-2026) and any named tenant; Meridian's hyperscale anchor (only Corderill LLC, USD 100m, is named) and the 320 MW (Markets page) vs ~500 MW (release) reconciliation",
-        "A fifth structured issuance (Red Oak or Meridian securitization) and whether Moody's AAA extends to new collateral; any disclosure of KKR's amount or the assets transferred under the December 2025 agreement",
-        "Second Red Oak campus (~830/890 acres): permits, first building, any renewed county abatement; Statesville, NC construction start and the reported Duke Energy ESA (Bloomberg/E&E, February 2026 — unverified)",
-        "Texas policy: PUCT/ERCOT implementation of Governor Abbott's data-center standards (August 2026), legislative action on abatements; Infrastructure for America (co-founded September 2026 with Digital Realty, QTS, Vantage) activity",
-        "Brookfield Infrastructure quarterly letters: any Compass-specific MW, FFO or 'commissioned' figure; any change in co-control (Ontario Teachers' or Brookfield stake sale)",
-        "Prime-power, BESS or Bloom Energy award at a Compass campus (would overturn the dossier's flexible-load judgment); the Phoenix 191 MW diesel microgrid status",
-        "Chesterton check: the coverage-plan cell's '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's and 'Joliet 1.8 GW' is Hillwood/PowerHouse's — neither describes Compass; Rosemount, MN is Meta's project, not Compass's; Compass names no tenant and no GC except Power Construction (Hoffman Estates); the '$5.5 billion' 2023 price is press-only (Brookfield: $1.35bn for the co-controlling stake). Do not re-import any of these"
-      ]
-    },
-    {
-      "slug": "edgecore",
-      "cadence": "quarterly",
-      "source": "Private, sponsor-owned (Partners Group 'on behalf of its clients' since 11 November 2022; USD 1.9bn equity round September 2024, Partners Group remains majority investor); no listing, no earnings calendar. Partners Group Holding AG (SIX: PGHN) is listed but its annual and interim reports carry EdgeCore only as a label. Disclosure channels: edgecore.com press releases (the 2026 Webflow site; legacy /news/ paths redirect), campus pages (figures move without release), Yahoo Finance and PR Newswire mirrors, financing counsel pages (Davis Polk), Commercial Property Executive, Virginia Business, AZ Big Media, Data Center Frontier; Data Center Dynamics is 403. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "AS01 Sterling occupancy (November 2026) and AS02 (July 2027) — the first deliveries under the 2023 repositioning; any named tenant anywhere in the portfolio",
-        "Reno RN01 energisation and NV Energy power delivery (a year past the late-2025 target); PH02/PH03 Mesa completions; Culpeper (196 MW from mid-2029) and the Mesa expansion (two buildings after the SRP switchyard cut)",
-        "Louisa County (1.1+ GW, 697 acres): construction start, tenant, generation or transmission plan (REC / Hyperscale Energy; Valley Link 765 kV opposition); the county performance agreement (1 December 2025, unfetched)",
-        "Financing: a second ABS or a Mesa refinancing (2025 ECore 2025-1 rated S&P A-/BBB-); any change in the '$7.4 billion committed / $16.1B planned' figures; a Partners Group exit process (sale, continuation vehicle, IPO)",
-        "Arizona: ACC rules under HB 2756 for extra-high-load customers and the 2026–2029 sales-tax exemption pause (HB 4168) — whether Mesa buildings hold grandfathered certifications; SRP's Large Customer Integration Process",
-        "Ratepayer posture: any campus abandoned on power economics (Brewer: 'will abandon projects if power economics become financially unworkable'); Virginia's electricity consumption tax (USD 0.011/kWh, July 2026–June 2028)",
-        "Chesterton check: '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's own January 2026 wording (superseded by the site's 2.27+ GW / $7.4bn) — the verifiable operating base is two buildings (PH01 26 MW, SV01 36 MW); EdgeCore is Partners Group-owned, not Brookfield-owned (its only Brookfield link is buying Mesa land from a Brookfield Properties affiliate) and has no Illinois site; Holder's Mesa contract value is undisclosed (the '$1.9B' is EdgeCore's loan). Do not re-import any of these"
-      ]
-    },
-    {
-      "slug": "powerhouse-data-centers",
-      "cadence": "quarterly",
-      "source": "Private, unit-level: a wholly owned division of American Real Estate Partners (AREP), a private McLean, VA fund manager; no listing, no earnings calendar; assets sit in project JVs (Harrison Street, Blue Owl/Chirisa, Provident, Hillwood, Poe, Town Lane, Pennsylvania Data Center Partners). Blue Owl Capital (NYSE: OWL) is a JV capital partner, not a parent. Disclosure channels: powerhousedata.com (NOT powerhousedatacenters.com, a parked domain) press releases and campus pages, americanrepartners.com news (NOT areprealestate.com), PR Newswire, Harrison Street and Provident partner releases, the Hillwood–PowerHouse Joliet project site (joliettechnologycenter.com, curl only), Utility Dive for the FERC/ComEd record, Shaw Local / Patch for Joliet litigation, Loudoun Now; the City of Joliet's site and FERC's are 403. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-      "lastRefreshed": "2026-09-05",
-      "watch": [
-        "Joliet: the Will County residents' suit (hearing 8 September 2026), FERC's ruling on ComEd's 24 July 2026 cancellation of the transmission security agreement, the N.D. Ill. suit against ComEd, any replacement retail/transmission agreement; whether the 'early 2027' construction start survives",
-        "First buildings since ABX-1: Pacific power-on (Q3 2026) and delivery (Q3 2026–Q2 2027), PowerHouse 95 initial delivery (Q3 2026), Arcola (Q4 2026–Q1 2027, tenant unnamed), CTP-02/03 for CoreWeave (Q1 2027), Irving, Louisville (130 MW in Q4 2026)",
-        "Grand Prairie energisation (slipped from May 2026 to Q1 2027) and any named tenant; Circle T and Uhland entitlements in Texas; Charlotte substation energisation (April 2027); Carlisle Phase 1 (Q2 2027); Carrollton purchase options",
-        "Capital: any construction loan, ABS or valuation naming a PowerHouse borrower (none on the record); a third Blue Owl/Chirisa or Harrison Street tranche naming PowerHouse; AREP Fund V; any change in the 90/10 JV split",
-        "Boilerplate counters (140 data centers / ~10 GW on the homepage, 118 / 8.1 GW in January 2026): read against delivered (one building) and leased (Arcola, Chesterfield) — do not import the counter as capacity",
-        "Moratoria and rules: Louisville's proposed hyperscale moratorium (Rubbertown exempt), Merrillville IN moratorium to May 2027 (PowerHouse lists 750 MW there), ICC large-load deposit rules, Loudoun's posture on GIS substations",
-        "Chesterton check: 'Brookfield-owned' and '1.8 GW delivered or under development on $16.1B planned' do NOT describe PowerHouse (AREP-owned; the figures are EdgeCore's); Joliet's 1.8 GW is a plan, not a build; HQ is McLean (not Reston/Herndon); the executive is Luke Kipfer (no 'Luke Kinney'); the brief's domains were wrong. Do not re-import any of these"
       ]
     }
   ]

@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 2,
+  "slug": "tract",
+  "title": "Tract — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-the-developers-developer",
+      "title": "Start here: the developer's developer",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The PowerHouse guide teaches what powered land is, the entitlement toolkit and the two utility contracts behind a gigawatt campus; the STACK guide teaches land-and-power banking as one rung of a developer's ladder; the Compass and EdgeCore guides teach how a landlord is funded and what it promises a tenant. All of them end at a building. This guide is about the company that stops before one: **the {{horizontal developer}} whose product is a finished parcel — zoned, permitted, watered, fibred, with a substation and a utility date — sold or leased to the developer who will build on it. Where does the margin sit between raw land and a leased campus, what is 'shovel-ready' worth, and what happens when the only buyer turns out to be your own affiliate?** Tract is the worked example because it is the purest one in the corpus: fourteen master-planned parks and about 21,000 entitled acres in seven states, a sister platform (Fleet Data Centers) that builds the campuses, USD 8.4 billion of high-yield notes raised by that affiliate against two leases to a tenant Bloomberg names as Nvidia, and — on the public record — not one parcel sold to anyone else.",
+        "**Four things this guide teaches.** The {{land value ladder}}: how a parcel's price moves from farmland to entitled to powered to leased, who captures each step, and why the powered rung is the widest and the slowest. The {{horizontal-vertical split}}: why a land developer grows a vertical arm, how an {{intra-group sale}} between sister funds works, and what it means when the affiliate is the only customer. {{Project bonds}}: how a 197-month lease to a AA- tenant becomes USD 3.8 billion and USD 4.6 billion of {{senior secured notes}} at 5.9–6.5%, what {{loan-to-cost}} means, and why the bond marketing names the tenant the company will not. And the fight over who decides the price of power: a {{large-load electric service agreement}} at the commission, an {{arbitration clause}} in a private contract, {{bridging generation}} while the substation is built, and a utility's lawsuit to keep the question in front of its regulator.",
+        "**What it deliberately leaves to other guides.** Entitlement instruments and the GP-fund model (PowerHouse); the build-to-suit lease itself (EdgeCore); the sponsor's capital stack and ABS (Compass); NV Energy's resource plan and Nevada's large-load rules from the utility side (no dossier yet); the neocloud lease from the tenant's chair (Fluidstack). Company history, executives and land prices stay in the dossier."
+      ]
+    },
+    {
+      "id": "the-land-value-ladder",
+      "title": "The land value ladder: from farmland to leased campus",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A data-center parcel is priced by what has been done to it, not by its acreage. At the bottom is raw land at agricultural or exurban industrial value — Tract paid about USD 66,000 an acre in Buckeye (USD 136 million for 2,069 acres in 2024) and about USD 150,000 an acre in Morris, Illinois (USD 51.5 million for 343 acres, already zoned). The first rung up is {{entitlement}}: by-right or rezoned data-center use, a development agreement, an annexation, a water reservation, road and utility commitments — the county's consent, which costs lawyers, hearings, community-benefit money and, at Hanover's second park, can be refused 4–3 after a 6–1 recommendation. The second rung is power: a signed utility instrument and a substation on the way, which is the rung that takes years and that no amount of money accelerates on its own. The third rung is a lease — a tenant's signature on a building — and it is the only rung a lender will lend against at scale.",
+        "Tract's claim is that it manufactures the first two rungs 'as a product' and sells the parcel at the powered rung to a developer who then adds the third. The published economics of the middle rungs are thin but consistent: 'typically spends USD 50 million to USD 100 million to prepare a site' (2025) or 'USD 100–150 million' (Bisnow), on parks bought for USD 33–136 million — so the horizontal developer roughly doubles its cost basis to reach shovel-ready and needs the powered rung to be worth several times raw land to earn a margin. What the corpus does not contain is a single third-party sale price at that rung; the model's arithmetic is unproven in public.",
+        "'{{ready-to-build}}' therefore has a precise meaning and a fuzzy one. Precisely, it is a parcel with zoning, a development agreement, graded pads, roads, water and sewer at the boundary and a dated utility commitment — Peru Ridge advertises '7-Day Grading and 30-Day Building Permits' and an existing pad. Fuzzily, it is the park page's 'Site energization February 2027', which is a date the utility, not the developer, will deliver or miss. A buyer pays for the first meaning and underwrites the second.",
+        "The ladder also says where the risk sits. A landlord's risk is a tenant that does not come; a horizontal developer's risk is a parcel that never reaches the powered rung — the Buckeye park 'planned or proposed' two years after purchase, Virginia Highlands' 8,590 acres with no utility date, Sapphire's 700 MW 'under utility study'. Acreage under control (25,000) is the counter the company publishes; acreage at the powered rung is the counter that would price it."
+      ]
+    },
+    {
+      "id": "horizontal-and-vertical-why-a-land-developer-grows-fleet",
+      "title": "Horizontal and vertical: why a land developer grows Fleet",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "'Horizontal' is the civil work and the paper — grading, roads, wet utilities, substations, zoning, permits, water rights; 'vertical' is the building and everything inside it. Tract Capital introduced Fleet Data Centers in January 2025 as 'the mega-campus vertical development strategy' beside Tract's 'horizontal powered land strategy', and the launch coverage gave the reason in four words: 'leasing model preferred over sales'. A parcel sold once earns a margin once; a campus leased for 197 months earns rent, is financeable in the bond market and keeps the land inside the group. The vertical arm exists because the widest rung on the ladder — powered to leased — is worth more than the rung the horizontal arm was built to sell.",
+        "The {{intra-group sale}} is how the two arms transact. Kirkland & Ellis's March 2026 release describes 'the lease and purchase and sale of real property' for the first 230 MW campus: Fleet's project company (SV RNO Property Owner I, LLC) bought a 252-acre Storey County parcel from 'private equity funds sponsored by Tract Capital' and leased the campus to the tenant. Two funds under one manager set a price for a parcel between themselves; the USD 4.6 billion notes' proceeds then 'reimburse the Issuer's sponsor for prior equity contributions used to fund acquisition of property' — the vertical fund's bondholders repay the equity that bought the land. Nothing is improper about the structure; what it removes is the market test. The only observed price for a Tract parcel was set by Tract.",
+        "Read the corporate structure with that in mind. Tract Capital Management (Denver, about USD 6 billion under management) sponsors 'Tract I' (the land fund, ~25,000 acres) and Fleet Data Centers I, LP (the campus fund, about USD 620 million of equity). Grant van Rooyen is CEO of the manager and executive chairman of both platforms; the former CIO is president of Tract; a Google Cloud and AWS data-center executive is president of Fleet. The 2024 hires who were to raise the next fund — a Head of Capital Formation, a CFO, a Chief Energy Officer — are absent from the 2026 team page. The platform that raised money for land became the platform that borrows against leases.",
+        "For a supplier or a tenant, the practical point is who signs. A parcel buyer contracts with a Tract fund entity (Grundy County Power NR I in Illinois; Reno Power in Nevada); a Fleet tenant contracts with a bankruptcy-remote project company whose only assets are one campus and one lease. The manager is the common thread; the balance sheets are separate by design."
+      ]
+    },
+    {
+      "id": "pricing-the-rungs",
+      "title": "Pricing the rungs: what the record says a parcel is worth",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "Every number the public record holds for a Tract parcel or campus, placed on the ladder. The empty cell is the model's proof.",
+      "cols": [
+        "Rung",
+        "What is disclosed",
+        "Per acre / per MW",
+        "What it depends on"
+      ],
+      "rows": [
+        [
+          "Raw land",
+          "Buckeye 2,069 acres, USD 136m (2024); Hanover 1,200 acres, USD 32.7m (2024); Morris 343 acres, USD 51.5m (2026, already zoned)",
+          "~USD 66k / ~USD 27k / ~USD 150k per acre",
+          "Seller, zoning at purchase (Morris was entitled), competition — Buckeye's seller had paid USD 40m two years earlier"
+        ],
+        [
+          "Entitled + serviced",
+          "'USD 50–100m' or 'USD 100–150m' per site of horizontal spend (press); Peru Shelf: NV Energy switch stations, roads, wet utilities; Tract '>USD 127m' spent on Nevada obligations",
+          "Adds roughly 1–2× the land cost",
+          "County approvals; utility agreement; water; the Switch covenant limited Peru Shelf's use"
+        ],
+        [
+          "Powered (utility date)",
+          "Peru Shelf February 2027; South Valley September 2027; Caldwell 250 MW Q1 2028; Morris June 2028; Hanover 2028",
+          "No third-party price on the record",
+          "NV Energy litigation; ComEd TSA; Bluebonnet/LCRA substation; Dominion equipment"
+        ],
+        [
+          "Sold to a third-party developer",
+          "None disclosed — no buyer, no price, in four years",
+          "—",
+          "The whole model"
+        ],
+        [
+          "Sold to the affiliate and leased",
+          "Two 230 MW / 200 MW IT campuses, 197-month NNN leases; USD 3.8bn + USD 4.6bn of notes; 'USD 4.6bn' build cost (KOLO)",
+          "~USD 17–20m per utility MW of notes",
+          "A AA- tenant (Bloomberg: Nvidia); a bond market that priced 5.875% and 6.5%"
+        ]
+      ]
+    },
+    {
+      "id": "project-bonds-a-lease-becomes-4-6-billion",
+      "title": "Project bonds: how a lease becomes USD 4.6 billion of notes",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "Fleet's two financings are {{project bonds}}: {{senior secured notes}} issued by a single-purpose company whose only assets are one campus, one substation and one lease, sold under {{Rule 144A}} to institutional buyers rather than through a bank loan. The first, USD 3.8 billion at 5.875% due 2031, priced on 13 February 2026 and closed eleven days later; the second, USD 4.6 billion at 6.500% due 2031, priced on 28–29 April at 99 (a 6.74% yield) and closed on 1 May. Each amortises 2.5% a year, carries a first-priority lien on the issuer's assets and on the equity of its holding company, and is 'due' at maturity — the balance is refinanced, not repaid, against a lease that runs 197 months.",
+        "What the bond buyer is buying is the tenant. The releases say only 'AA- investment grade rated tenant with a market cap in excess of USD 3 trillion' on a 197-month triple-net lease; Bloomberg's reporting named Nvidia with an initial term of about 16 years and two 10-year options. A AA- counterparty for sixteen years is why USD 8.4 billion of five-year paper could be sold at under 7% for two campuses that had not broken ground: the credit is the tenant's, the collateral is the campus, and the sponsor's equity — about USD 620 million in Fleet I — is a thin slice. Fleet itself called the first issue 'the highest-rated, largest issuance, highest {{loan-to-cost}}, and tightest pricing for any single data center high-yield bond project financing to date'.",
+        "Loan-to-cost is the ratio to watch. If the campus costs about USD 4.6 billion (KOLO's figure for the South Valley build) and the notes are USD 3.8–4.6 billion, the debt covers most or all of the cost and the sponsor is repaid its land equity from the proceeds. That is efficient for the sponsor and fragile for the bondholder: any construction overrun, any delay in the utility's energisation, any dispute with the tenant lands on a structure with little equity beneath it. The 2.5% amortisation and the debt reserves funded from proceeds are the cushions.",
+        "Compare the instruments the corpus already holds. Compass's ABS securitises operating, tenanted buildings; EdgeCore's limited-recourse loans are bank debt sized to a lease; PowerHouse's construction loan is a syndicate on one building. Fleet's notes are the same idea taken to the bond market before construction — possible only because the tenant is the strongest credit in the industry, and because the horizontal arm had already delivered the powered parcel. The bond is the vertical arm capitalising the horizontal arm's product."
+      ]
+    },
+    {
+      "id": "tract-money-ladder",
+      "title": "The disclosed ladder: what is public about Tract's money",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD millions (land prices as reported; the Nevada spend is Tract's own figure in the NV Energy dispute; Fleet figures are the affiliate's equity and notes)",
+      "intro": "Read the ladder as two companies: Tract's money is land and site work; Fleet's is a lease turned into bonds. Nothing on it is revenue.",
+      "items": [
+        {
+          "label": "Hanover, VA land (2024)",
+          "sub": "1,200 acres; about USD 32.7m",
+          "v": 33
+        },
+        {
+          "label": "Morris, IL land (Jan 2026)",
+          "sub": "343 acres, zoned; ~USD 51.5m from Clarius Partners",
+          "v": 52
+        },
+        {
+          "label": "Nevada obligations spent (Tract, 2026)",
+          "sub": "'more than USD 127 million' per Tract; KOLO reported 'over USD 50 million'",
+          "v": 127
+        },
+        {
+          "label": "Buckeye, AZ land (Aug 2024)",
+          "sub": "2,069 acres; USD 136m; still 'planned' in 2026",
+          "v": 136
+        },
+        {
+          "label": "Fleet I sponsor equity (Bloomberg)",
+          "sub": "'about USD 620 million'",
+          "v": 620
+        },
+        {
+          "label": "NV Energy's upgrade demand (per Tract)",
+          "sub": "'USD 1 billion in network infrastructure upgrades'",
+          "v": 1000
+        },
+        {
+          "label": "Fleet notes — SV RNO (Feb 2026)",
+          "sub": "5.875% due 2031; 252 acres; 230 MW",
+          "v": 3800
+        },
+        {
+          "label": "Fleet notes — PR RNO (May 2026)",
+          "sub": "6.500% due 2031; 517 acres; 230 MW",
+          "v": 4600
+        }
+      ]
+    },
+    {
+      "id": "who-decides-the-price-of-power",
+      "title": "Who decides the price of power: the commission, the contract or the arbitrator",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A powered parcel's power comes from a utility, and in Nevada the utility is a regulated monopoly whose prices, planning and cost allocation are set by the Public Utilities Commission of Nevada. A developer that reserves gigawatts years ahead of a tenant is asking the utility to build for it; the question is who pays. The utility's instruments are the {{large-load electric service agreement}} — filed with the PUCN, it fixes the customer's minimum take, deposits and share of upgrades (NV Energy filed one with the two Fleet SPVs on 29 May 2026, docket 26-05027) — and the resource plan, which decides what generation is built for whom. The developer's instrument is the private contract: Tract's June 2024 agreements with NV Energy for Peru Shelf and South Valley, signed through subsidiary Reno Power, which contain an {{arbitration clause}}.",
+        "The 2026 fight is about which of those instruments governs. On 16 June Tract demanded arbitration under the 2024 contracts; on 24 July NV Energy sued in Washoe County to keep 'power-supply adequacy, large-load cost allocation and integrated-resource-plan treatment' of Tract's loads before the commission, saying Tract 'wants NV Energy to reserve and provide enormous amounts of power for Tract's private development while shifting the infrastructure and energy costs to Nevada families'. Tract says the complaint 'seriously misstates … the contracts NV Energy signed', that it has spent more than USD 127 million meeting its obligations, and that the utility is demanding it commit USD 1 billion of network upgrades 'for the benefit of all NV Energy customers'. Stripped of the rhetoric: the utility wants the regulator to allocate the cost; the developer wants the contract's arbitrator to enforce the deal.",
+        "The scale explains the heat. NV Energy describes Tract's plan as 'at least five data centers with a combined load of nearly 5.5 GW' — about a third of the utility's generating capacity — and Northern Nevada's peak is about 2.1 GW. A large-load tariff written for a 100 MW customer does not obviously fit a customer larger than the system; a private contract written in 2024 did not obviously anticipate a 2026 resource plan with 22 GW of data-center requests. Both sides are right that the other's instrument was not built for this.",
+        "{{Bridging generation}} is the developer's hedge against the answer. While the substation and the dispute are pending, the two Fleet SPVs applied to the PUCN in April 2026 for temporary gas plants — 144 MW at South Valley and 218 MW at Peru Ridge — under the state's utility environmental permit process, with a decision scheduled for 8 September 2026. Temporary self-generation lets the campus energise on the tenant's clock rather than the commission's; it also, as the Nevada Independent reported, 'would skirt' the state's renewable standard, which is why the Sierra Club opposed it. A powered-land developer building its own power plant is the model admitting that 'powered' was never entirely in its gift."
+      ]
+    },
+    {
+      "id": "nevada-on-one-clock",
+      "title": "From Blockchains to arbitration: the Nevada parks on one clock",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Months on the horizontal axis. The land lane is Tract's acquisitions and approvals; the power lane is the utility instruments and disputes; the Fleet lane is the affiliate's campuses and bonds.",
+      "unit": "calendar year (decimal — .5 is July)",
+      "lanes": {
+        "land": "Land and entitlement",
+        "power": "Utility and litigation",
+        "fleet": "Fleet campuses and bonds"
+      },
+      "items": [
+        {
+          "x": 2023.58,
+          "lane": "land",
+          "label": "~2,200 acres bought from Blockchains LLC with 1,100 acre-feet of water",
+          "sub": "Peru Shelf and South Valley"
+        },
+        {
+          "x": 2023.58,
+          "lane": "power",
+          "label": "Switch sues over the 2015 TRIC colocation covenant",
+          "sub": "Case 23-RP-00005-1E"
+        },
+        {
+          "x": 2024.08,
+          "lane": "land",
+          "label": "517 acres inside TRIC (Peru Ridge)",
+          "sub": "Pre-graded pad; TRIGID water and sewer"
+        },
+        {
+          "x": 2024.25,
+          "lane": "land",
+          "label": "Peru Shelf groundbreaking",
+          "sub": "'initial power delivery in late 2026 or early 2027'"
+        },
+        {
+          "x": 2024.42,
+          "lane": "power",
+          "label": "June 2024 agreements with NV Energy (via Reno Power)",
+          "sub": "The contracts now in dispute"
+        },
+        {
+          "x": 2024.42,
+          "lane": "land",
+          "label": "8,590 acres — Virginia Highlands",
+          "sub": "Industrial zoning incl. commercial energy production"
+        },
+        {
+          "x": 2025.0,
+          "lane": "fleet",
+          "label": "Fleet Data Centers launched",
+          "sub": "'Leasing model preferred over sales'"
+        },
+        {
+          "x": 2025.67,
+          "lane": "land",
+          "label": "~1,060 acres at Silver Springs (Lyon County)",
+          "sub": "Rezoning and development agreement done"
+        },
+        {
+          "x": 2025.75,
+          "lane": "power",
+          "label": "Final judgment for Tract on the Switch covenant",
+          "sub": "Easement injunction stands; trial set March 2026"
+        },
+        {
+          "x": 2026.08,
+          "lane": "fleet",
+          "label": "USD 3.8bn 5.875% notes — SV RNO",
+          "sub": "Bloomberg names Nvidia"
+        },
+        {
+          "x": 2026.25,
+          "lane": "power",
+          "label": "PUCN applications: 144 MW + 218 MW temporary gas; 345 kV substation",
+          "sub": "Decision 8 September 2026"
+        },
+        {
+          "x": 2026.33,
+          "lane": "fleet",
+          "label": "USD 4.6bn 6.5% notes — PR RNO; groundbreaking with the Governor",
+          "sub": "'USD 4.6bn', 2M sq ft, 1,500 jobs"
+        },
+        {
+          "x": 2026.42,
+          "lane": "power",
+          "label": "Tract demands arbitration; NV Energy files LLESA",
+          "sub": "Docket 26-05027"
+        },
+        {
+          "x": 2026.5,
+          "lane": "power",
+          "label": "NV Energy sues Tract Capital Management",
+          "sub": "Washoe County CV26-02142"
+        }
+      ]
+    },
+    {
+      "id": "the-consent-record",
+      "title": "The consent record: six approvals, three defeats, one pending",
+      "kind": "table",
+      "read": "5 min",
+      "intro": "The entitlement rung is a vote. Read each park by who decided, what Tract offered, and what happened — the pattern is the product's failure mode.",
+      "cols": [
+        "Park",
+        "Decider",
+        "What Tract offered",
+        "Outcome"
+      ],
+      "rows": [
+        [
+          "Hanover Technology Park, VA (1,200 ac, 2.4 GW)",
+          "Planning commission + board of supervisors",
+          "USD 3.5m road cash; park contribution; USD 1.78bn tax claim over 20 years",
+          "Approved unanimously, May 2024"
+        ],
+        [
+          "Buckeye, AZ (2,069 ac, 1.8 GW)",
+          "City council",
+          "Development agreement; groundwater cap with system transfer to the city",
+          "Approved unanimously, August 2024 — with USD 50m reimbursement after USD 60m of city revenue"
+        ],
+        [
+          "Farmington, MN (343 ac)",
+          "City council",
+          "PUD and plat",
+          "Approved, November 2024; not on the projects page"
+        ],
+        [
+          "Chesterfield, VA (744 ac)",
+          "Planning commission",
+          "Buffers 725/250/100 ft; 60 dB generator limit; 2,000 gal/day/acre",
+          "Denial recommended June 2025; withdrawn 2 July 2025; county then required CUPs and 'signaled an end'"
+        ],
+        [
+          "Mooresville, NC (400 ac)",
+          "Town board",
+          "'USD 30 billion over two decades' claim",
+          "Withdrawn 13 August 2025 after resident opposition"
+        ],
+        [
+          "Silver Springs / Sapphire, NV (1,060 ac)",
+          "Lyon County",
+          "Rezoning and development agreement",
+          "Approved 2025"
+        ],
+        [
+          "Altoona, IA (453 ac)",
+          "City council",
+          "Annexation, rezoning, development agreement; 80 acres reserved for the city",
+          "Approved 2025"
+        ],
+        [
+          "Mountain Road, Hanover, VA (430 ac, 900 MW)",
+          "Board of supervisors",
+          "USD 15m water infrastructure; annual noise studies; USD 901m tax claim",
+          "Rejected 4–3, 27 May 2026, despite a 6–1 commission vote"
+        ],
+        [
+          "Goochland, VA (870 ac, 900 MW)",
+          "Board (CUP)",
+          "Generators ≥1,000 ft from homes; plan 'still tweaking'",
+          "Pre-application opposed, July 2026; not yet filed"
+        ]
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**No buyer but yourself.** Four years, fourteen parks, one customer — the sister fund. Until a third party pays a disclosed price for a powered parcel, the ladder's middle rung has no market value and the model is an assertion.",
+        "**The price the affiliate paid is not evidence.** An intra-group sale between two funds under one manager, repaid from the buyer's bond proceeds, sets no price a lender or a buyer can rely on.",
+        "**'Powered' is the utility's word.** Every energisation date on a park page is a promise the utility makes; NV Energy is in court over whose rules apply, and the temporary gas plants exist because the developer stopped waiting.",
+        "**Acres are not megawatts.** 25,000 acres and '25 GW' count land under control; 5,455 MW in Nevada is a plan NV Energy calls a third of its system. Ask which parks have a signed utility instrument (Morris, Caldwell, Hanover) and which have a study (Sapphire, Virginia Highlands).",
+        "**Consent is a coin toss in the wrong county.** Three Virginia proposals in two years produced one approval; a 6–1 planning recommendation lost 4–3 at the board.",
+        "**The credit is the tenant's, not the developer's.** USD 8.4 billion of notes at under 7% exist because a AA- tenant signed for 197 months; a thin equity slice and a five-year maturity leave the structure to be refinanced against that one signature."
+      ]
+    },
+    {
+      "id": "where-tract-slots-in",
+      "title": "Where Tract's businesses slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per business line in the dossier, read against the layer of the ecosystem it touches.",
+      "cols": [
+        "Business line",
+        "Layer",
+        "Who it deals with",
+        "What to watch"
+      ],
+      "rows": [
+        [
+          "Master-planned technology parks (14 parks, ~21,000 acres)",
+          "Horizontal development — entitlement, roads, water, substations",
+          "Counties and cities; NV Energy, ComEd, Dominion, Bluebonnet/LCRA, APS, Rocky Mountain Power; Silicon Ranch",
+          "A third-party parcel sale with a buyer and a price; Peru Shelf February 2027; Caldwell Q1 2028; Morris June 2028"
+        ],
+        [
+          "Nevada parks (12,390 acres; 5.5 GW of stated load)",
+          "The largest position and the disputed one",
+          "NV Energy / Sierra Pacific (LLESA, arbitration, lawsuit); PUCN; Storey and Lyon counties; Switch (covenant, easement)",
+          "PUCN order on the gas plants (8 September 2026); the Washoe County case; South Valley September 2027"
+        ],
+        [
+          "Fleet Data Centers (affiliate) — two 230 MW turnkey campuses",
+          "Vertical build-to-suit landlord on Tract land",
+          "The unnamed AA- tenant (Bloomberg: Nvidia); 144A noteholders; JPMorgan, Morgan Stanley; Kirkland & Ellis",
+          "Construction progress; tenant confirmation; a third campus; refinancing of the 2031 notes"
+        ],
+        [
+          "Sun Belt and Midwest parks (Texas, Arizona, Utah, Iowa, Illinois, Virginia)",
+          "Land bank with utility instruments in various states",
+          "Bluebonnet/LCRA, ComEd (FERC-approved TSA), Dominion, Rocky Mountain Power, MidAmerican; Prime and PowerHouse as neighbours",
+          "Buckeye's first buyer; Hanover bridging power; Goochland; Caldwell abatement suspension"
+        ],
+        [
+          "Energy services (gas desk, temporary generation, renewables collaboration)",
+          "Power pre-positioning that is turning into generation",
+          "PUCN; NDEP; Silicon Ranch; Kinder Morgan (adjacency)",
+          "Whether 'onsite power generation that will become grid connected' appears at Caldwell; any Silicon Ranch project"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What is a horizontal developer?",
+          "a": "One whose product is the finished site — grading, roads, water, sewer, substation, zoning and permits — sold or leased to a vertical developer who builds the data center."
+        },
+        {
+          "q": "Name the rungs of the land value ladder and the one a lender lends against at scale.",
+          "a": "Raw land → entitled and serviced → powered (a dated utility instrument) → leased. Only the leased rung supports large debt; Fleet's USD 8.4 billion of notes sit on it."
+        },
+        {
+          "q": "Why did a land developer launch a vertical arm?",
+          "a": "'Leasing model preferred over sales': a parcel sold earns a margin once; a campus leased for 197 months earns rent, is bond-financeable and keeps the land in the group."
+        },
+        {
+          "q": "What is an intra-group sale, and what does it fail to provide?",
+          "a": "A transaction between two funds under one manager — Fleet's project company buying a parcel from a Tract-sponsored fund. It sets no market price a third party can rely on."
+        },
+        {
+          "q": "What is a project bond?",
+          "a": "Senior secured notes issued by a single-purpose company whose only assets are one campus and one lease, sold under Rule 144A; the credit is the tenant's, the collateral is the campus."
+        },
+        {
+          "q": "What does loan-to-cost tell you about Fleet's notes?",
+          "a": "How much of the campus cost is debt. With USD 3.8–4.6 billion of notes against a build reported at USD 4.6 billion and sponsor equity repaid from proceeds, the equity beneath the bondholders is thin."
+        },
+        {
+          "q": "What is a large-load electric service agreement?",
+          "a": "The utility's filed contract with a very large customer setting minimum takes, deposits and the customer's share of upgrades — approved by the commission, which is why the utility wants disputes decided there."
+        },
+        {
+          "q": "Why did NV Energy sue Tract rather than arbitrate?",
+          "a": "Tract invoked the arbitration clause in its 2024 contracts; the utility wants cost allocation and supply adequacy decided by the PUCN under its rules, not by a private arbitrator under the contract."
+        },
+        {
+          "q": "What is bridging generation, and what does it cost politically?",
+          "a": "Temporary on-site plants (144 MW and 218 MW of gas at the two Fleet campuses) that let a campus energise before the substation and the dispute are resolved — at the cost of skirting the state's renewable standard, per the Nevada Independent."
+        },
+        {
+          "q": "Why is 'shovel-ready' both precise and fuzzy?",
+          "a": "Precisely: zoning, a development agreement, graded pads, utilities at the boundary. Fuzzily: 'Site energization February 2027' — a date only the utility can deliver."
+        },
+        {
+          "q": "What does '25,000 acres and 25 GW' measure?",
+          "a": "Land under control and planned capacity — not parcels sold, not megawatts energised, not utility instruments signed."
+        },
+        {
+          "q": "Why can a 6–1 planning-commission vote still lose?",
+          "a": "The commission recommends; the elected board decides. Hanover's Mountain Road park lost 4–3 at the board in May 2026 after a 6–1 recommendation."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A developer buys 2,069 acres for USD 136 million, wins by-right zoning and a development agreement, and two years later the park is still 'planned or proposed'. Which rung is it on?",
+          "c": [
+            "Powered",
+            "Leased",
+            "Entitled and serviced but not powered",
+            "Raw land"
+          ],
+          "a": 2,
+          "why": "Consent is in hand; the utility date is not. Powered means a dated, signed utility instrument."
+        },
+        {
+          "q": "The only disclosed sale of a Tract parcel was to a Fleet project company, and the buyer's bond proceeds reimbursed the sponsor's land equity. The best reading:",
+          "c": [
+            "The parcel's market value is proven at the bond amount",
+            "The transaction is a valid intra-group transfer that sets no market price",
+            "Fleet overpaid",
+            "Tract has no customers"
+          ],
+          "a": 1,
+          "why": "Two funds under one manager set the price; nothing in it tests what a third party would pay."
+        },
+        {
+          "q": "Fleet's USD 4.6 billion notes priced at 99 to yield 6.74% for a campus that had not broken ground. What made that possible?",
+          "c": [
+            "Tract's land bank",
+            "The AA- tenant's sixteen-year lease and a first-priority lien on the campus",
+            "Nevada tax abatements",
+            "The Switch judgment"
+          ],
+          "a": 1,
+          "why": "The credit is the tenant's; the bond market lends against the lease, not the acreage."
+        },
+        {
+          "q": "NV Energy sued in Washoe County rather than answering Tract's arbitration demand because:",
+          "c": [
+            "Arbitration is illegal in Nevada",
+            "It wants supply adequacy and cost allocation decided by the PUCN under its rules, not by a private arbitrator under a 2024 contract",
+            "The contracts had expired",
+            "Tract had not paid its deposits"
+          ],
+          "a": 1,
+          "why": "The suit seeks to keep the questions before the commission; the parties disagree about which instrument governs."
+        },
+        {
+          "q": "The Fleet SPVs' April 2026 PUCN applications for 144 MW and 218 MW of temporary gas plants are best described as:",
+          "c": [
+            "Replacement of the utility",
+            "Bridging generation so the campuses can energise before the substation and the dispute are resolved",
+            "Renewable-standard compliance",
+            "A Silicon Ranch project"
+          ],
+          "a": 1,
+          "why": "Temporary self-generation on the tenant's clock; the Nevada Independent reported it would skirt the renewable standard."
+        },
+        {
+          "q": "Which park has a FERC-accepted utility contract?",
+          "c": [
+            "Buckeye, Arizona",
+            "Morris, Illinois — a ComEd transmission security agreement",
+            "Virginia Highlands, Nevada",
+            "Sapphire, Nevada"
+          ],
+          "a": 1,
+          "why": "Approved April 2026 with committed revenue, minimum usage and shortfall payments; the same instrument ComEd cancelled on PowerHouse's Joliet campus."
+        },
+        {
+          "q": "A 6–1 planning-commission recommendation, a USD 15 million water pledge and a USD 901 million tax claim produced which result at Hanover's Mountain Road park?",
+          "c": [
+            "Unanimous approval",
+            "A 4–3 rejection by the board of supervisors",
+            "Withdrawal",
+            "Approval with conditions"
+          ],
+          "a": 1,
+          "why": "The elected board decides; consent offers price the vote but do not buy it."
+        },
+        {
+          "q": "'Over 25GW of planned capacity and over 25,000 acres of land under control' tells you:",
+          "c": [
+            "25 GW is contracted",
+            "25 GW is energised",
+            "How much land the company controls and how much it plans — not how much it has sold or powered",
+            "Nothing"
+          ],
+          "a": 2,
+          "why": "The counter is acreage and plans; the model's proof — a third-party sale at the powered rung — is absent from the record."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Fleet Data Centers",
+      "d": "Tract Capital Management's vertical sister platform (launched January 2025) that builds and operates 500 MW+ single-tenant campuses on Tract land; its two Storey County project companies are the only recorded buyers of Tract parcels."
+    },
+    {
+      "t": "Reno Power",
+      "d": "Tract's Nevada contracting subsidiary (Reno Power NR 1, LLC) that signed the June 2024 agreements with NV Energy for Peru Shelf and South Valley and demanded arbitration under them in June 2026."
+    }
+  ]
+}

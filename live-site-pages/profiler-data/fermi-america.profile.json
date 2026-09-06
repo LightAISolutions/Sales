@@ -1,0 +1,1713 @@
+{
+  "schemaVersion": 7,
+  "slug": "fermi-america",
+  "name": "Fermi Inc. (Fermi America)",
+  "shortName": "Fermi America",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://fermiamerica.com/",
+  "headquarters": "Dallas, Texas, USA (1845 Woodall Rodgers Freeway, Suite 1100 — per the 31 August 2026 8-K; the company website still lists 620 S. Taylor Street, Amarillo)",
+  "founded": 2025,
+  "employees": "35 full-time at 31 December 2025 (Form 10-K); no later count disclosed",
+  "ownership": {
+    "type": "public",
+    "ticker": "NASDAQ: FRMI (secondary listing LSE: FRMI)"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Fermi America is a pre-revenue, Nasdaq-listed developer of one asset — Project Matador, a behind-the-meter 'private grid' AI campus on a 99-year Texas Tech University System ground lease in Carson County, Texas — that has landed roughly 1.5 GW of gas turbines, permitted 6 GW of gas generation and filed for four Westinghouse AP1000 reactors, but as of 13 August 2026 has energised nothing, holds one binding but conditional tenant lease (TensorWave, 222 MW), and carries going-concern language in its latest 10-Q; whether the TensorWave lease closes with project financing by its 30 September 2026 deadline is the single fact that decides the next twelve months.\n\nBACKGROUND. Fermi LLC was formed on 10 January 2025 by former US Energy Secretary Rick Perry and Toby Neugebauer and converted to Fermi Inc., a Texas corporation, at its IPO: 37,375,000 shares at USD 21.00 (including the full over-allotment), first trade on the Nasdaq Global Select Market on 1 October 2025 with a secondary listing on the London Stock Exchange, USD 745.6 million of net proceeds per the cash-flow statement. The campus plan grew from 'up to 11 GW' at the IPO to 'up to 17 GW' after the TCEQ issued a final air permit for about 6 GW of gas generation on 25 February 2026 and the company filed for a further 5 GW in March. The record since the IPO is one of contraction rather than delivery: the investment-grade 'First Tenant' that signed a letter of intent and a USD 150 million advance-in-aid-of-construction agreement terminated it on 11 December 2025 without drawing funds; the founding CEO was removed on 17 April 2026 and terminated for cause on 30 April, then ran a consent solicitation and sued; the CFO resigned; the share price fell from a USD 36.99 high on 2 October 2025 to USD 4.47 on 9 April 2026 and closed at USD 5.12 on 4 September 2026 (market capitalisation about USD 3.3 billion). FY2025 net loss was USD 486.4 million (largely non-cash), the first half of 2026 lost USD 214.5 million, and cash plus restricted cash stood at USD 91.7 million on 30 June 2026 before USD 431.25 million of 5.00% convertible notes closed in July. The Q2 2026 quarter delivered the five '90-day objectives' the new chairman had set: a binding lease with TensorWave, a permanent CEO (Lee McIntire, from 11 August 2026), a 2.6 GW build-own-operate-transfer framework with Hillcore Energy Capital, contractor relationships with Primoris and TSK, and three Siemens SGT6-5000F turbines landed at the Port of Houston. Per company filings and releases; the price record per Yahoo Finance and StockAnalysis.",
+  "ecosystemRole": "The generation-first campus in this corpus: where the F7 landlords buy powered land and wait for the utility, Fermi builds its own power plant behind the fence and treats the utility — Xcel Energy's Southwestern Public Service, contracted for up to 200 MW — as the supplement. It is a buyer of Siemens Energy and GE Vernova turbines, an EPC customer of Primoris and TSK, a prospective owner of four AP1000s that Westinghouse, Hyundai E&C and Doosan are lined up to deliver, a 20-year lessee of Mobile Power Solutions' TM2500 fleet, and a landlord whose only signed tenant is an AMD-GPU neocloud. Reporters benchmark it against Crusoe's Abilene Stargate campus, Vantage's Frontier and VoltaGrid's behind-the-meter supply to Oracle; in this corpus its nearest relatives are Intersect Power's energy parks on the buyer side and the AIDC developers on the landlord side.",
+  "productsAndServices": [
+    {
+      "name": "Private-grid powered AI data-center capacity at Project Matador (the core product)",
+      "category": "Build-to-suit and turnkey data-center leasing on a behind-the-meter campus",
+      "description": "Fermi describes Project Matador as 'a utility-scale and utility-grade private-grid powered campus for AI-centric customers' and expects revenue from long-term leases of build-to-suit or turnkey data centers, powered shells and ground leases, with rent 'based on reserved power capacity expressed in kilowatts per month' plus fixed and variable power charges passed through to tenants (Q2 2026 10-Q). The plan is 'up to approximately 15 million square feet of AI-ready hyperscale compute' (10-K; 18 million square feet in third-party accounts). The company was pre-revenue at 30 June 2026.",
+      "highlights": [
+        "The one signed lease: TensorWave TEX1, LLC (a subsidiary of TensorWave Inc., an AMD-GPU neocloud) with Fermi Campus 1 LLC, signed 9 August 2026 — 222 MW of total facility power, about 311,496 square feet on about 250 acres, four data halls and a network hall, a 15-year initial term from final-phase commencement with two five-year renewals, about USD 6.5 billion of contracted revenue, and an expansion option to 650 MW that must be energised by 31 December 2028; delivery in phases from late 2027 into Q1 2028 (10-Q Note 9; IR release).",
+        "The lease is binding but conditional: effectiveness requires closing 'on or before September 30, 2026 (subject to extension)' with board approvals, 'requisite project guaranties' and project-level financing; either side may terminate if the conditions fail (10-Q). The original 10 August release said the obligations were expected 'to be guaranteed by one of the global leaders in AI'; the corrected release removed the line, and no guarantor had been named by 5 September 2026 (Pacific Software Ventures; IR release).",
+        "The lease that was not: an investment-grade 'First Tenant' signed a letter of intent on 19 September 2025 and a USD 150 million advance-in-aid-of-construction agreement on 3 November 2025, then terminated it on 11 December 2025 after exclusivity lapsed, with no funds drawn (8-K 12 December 2025). Business Insider reported the tenant was Amazon; Fermi 'categorically' denied it (Reuters via Yahoo Finance, 17 December 2025).",
+        "Pipeline in the company's words: 'seven potential tenants and twelve potential joint venture partners' (9 July 2026 offering memorandum excerpts); 'roughly a dozen prospective customers and strategic partners' (CCO, 13 August 2026 call). Fortune reported the company 'failed to secure anchor tenant by March deadline' in 2026.",
+        "Implied economics, third-party arithmetic: about USD 162.70 per kW-month on total facility power for the TensorWave lease (Pacific Software Ventures) — a calculation on the headline figures, not a disclosed rate."
+      ],
+      "positioning": "Company framing: 'the only private grid campus of its kind with over 2GW of secured long lead time generation assets, an approved ~6GW Clean Air Permit' (March 2026 release) and, per the chairman on 13 August 2026, 'There is no site we know of that has equipment and the ability to deliver 4.8 gigawatts during this time period'. The 10-K names no competitor by name (generic classes: data-center developers, powered-shell and colocation providers, IPPs, utilities, hyperscaler self-build). Reporters benchmark it against Crusoe's Stargate Abilene (200 MW live in 15 months), Vantage's Frontier campus north of Abilene and Meta's Hyperion (Distilled, April 2026); Barclays is reported to cite VoltaGrid's 2.3 GW of behind-the-meter supply to Oracle's Stargate as the comparator.",
+      "soldThrough": "Direct long-term leases to AI tenants (build-to-suit, turnkey, powered shell or ground lease); power sold to tenants as fixed and variable charges under a modified net lease; the Hillcore block would be bought under long-term power purchase agreements and resold to tenants.",
+      "targetSegments": [
+        "AI neoclouds (TensorWave signed)",
+        "Hyperscalers (the unnamed investment-grade First Tenant)",
+        "Enterprise compute operators and joint-venture partners (company pipeline language)"
+      ],
+      "roadmap": "200 MW of initial commercial power 'over the next six months' from 13 August 2026 and about 1.5 GW over 18–24 months, 'subject to binding customer agreements and approvals' (Q2 release); first 210 MW available 1 July 2027 and 640 MW nameplate by Q4 2027 (COO prepared remarks); TensorWave building late 2027 to Q1 2028; 4.8 GW 'within about 30 months' including Hillcore (17 August 2026 explainer). The company website still says 'first power online in 2026'."
+    },
+    {
+      "name": "Project Matador site — land, water, gas, fibre and the utility tie",
+      "category": "Powered land and site infrastructure (Carson County, Texas)",
+      "description": "A 99-year ground lease dated 14 May 2025 with the Texas Tech University System covers about 5,236 acres (4,523 acres commenced in September 2025; a 713-acre tract awaits a land exchange with the National Nuclear Security Administration), adjacent to the Department of Energy's Pantex Plant north-east of Amarillo; with adjacent purchases and options the company describes 'approximately 8,400 acres in the aggregate' (Q2 2026 10-Q; the 10-K said about 7,570). Phase 0 site enablement was 'substantially complete' by February 2026: more than 11 miles of perimeter fence, about 5 miles of high-pressure gas pipeline, 7 miles of water lines with a 2-million-gallon tank, about 300 acres prepared and the 'bathtub' excavations for six SGT-800 power islands (10-K; Q2 release).",
+      "highlights": [
+        "Lease economics as published by the Amarillo Tribune from the lease: base rent USD 1.2 million in year one rising to USD 3.5 million in year five then 3% a year; 1% of appraised value on the first USD 3 billion of improvements and 0.5% above; 1% of gross power sales; 25% of gross groundwater sales; a USD 4.75 million initial contribution and at least USD 1 million a year to an Excellence Fund; the university system estimates about USD 196 million a year at full build. The 30 March 2026 Collaboration Agreement added USD 2 million of prepaid rent and a USD 9 million escrow due 31 December 2026 (10-K).",
+        "Water: City of Amarillo agreement for up to 2.5 million gallons a day (framework to 10 MGD per the 10-K; 5.5 MGD per the Tribune), approved 4–1 in October 2025 at double the industrial rate with Fermi funding all infrastructure; a 30-year groundwater lease over about 2,542 acres (Q1 2026 10-Q); MVM EGI hybrid dry-wet cooling agreement (December 2025) claimed to cut water use by 80%. Amarillo's May 2026 moratorium proposal does not reach the campus, which is outside city limits.",
+        "Gas: a firm supply arrangement with Energy Transfer (9 October 2025) scalable to about 300,000 MMBtu/day, with a planned dedicated Waha interconnect; the initial 1 GW load needs about 175,000 MMBtu/day (10-K). Fibre: FiberLight, AT&T and Optimum corridors (prospectus).",
+        "Grid: the SPS electric service agreement for up to 200 MW over a 115 kV system (see the utility entry below). The Texas Tech lease requires subtenant approval above 200 MW per the S-11 as reported by the Amarillo Tribune."
+      ],
+      "positioning": "Carson County's 10-year property-tax abatement and reinvestment zone (October 2025) price the campus at USD 3 per square foot of improvements plus USD 2,500–2,750 per MW a year with a 600-job commitment (Amarillo Tribune). The site's distinguishing claims are permitted generation and secured turbines rather than a grid queue position.",
+      "soldThrough": "Held under the ground lease by Fermi subsidiaries; sublet to tenants and, under the Hillcore framework, about 400 acres subleased to the power partner.",
+      "targetSegments": [
+        "Data-center tenants",
+        "Behind-the-meter generation partners (Hillcore)"
+      ],
+      "roadmap": "Additional TCEQ air permit for about 5 GW filed 27 March 2026 (pending); the Part 3 site-specific nuclear application due 31 December 2026; NNSA land exchange for 713 acres pending."
+    },
+    {
+      "name": "Behind-the-meter gas generation — the owned turbine fleet and the Hillcore power center",
+      "category": "On-site generation (simple cycle first, combined cycle later)",
+      "description": "Fermi owns or leases four turbine fleets, none energised as of 13 August 2026: six Siemens Energy SGT-800s with six HRSGs and an SST-600 steam turbine (about 296 MW simple cycle, 396 MW combined per the Q2 deck; 478 MW ISO combined per the company site), bought from MAD Energy in the 'Firebird Acquisition' and financed by a USD 165 million Beal Bank/CSG facility; three Siemens SGT6-5000F F-class units (728 MW simple cycle, 1,042 MW combined) under a 28 January 2026 equipment purchase agreement at a fixed price of about USD 324.4 million, financed by MUFG's USD 500 million warehouse and landed at the Port of Houston in July 2026; three secondary-market GE Frame 6B units with a steam turbine (about 116 MW) from the Bayonne, New Jersey plant, refurbished in Houston; and seven GE TM2500 mobile units (157.5 MW nameplate, 126–132 MW at site elevation) under a 20-year lease with Mobile Power Solutions whose pick-up was deferred to July–September 2027. Further SGT-800s are 'on order and expected to be delivered in 2028' (Q2 2026 10-Q; deck; 10-K).",
+      "highlights": [
+        "Time-to-power as the company tables it: TM2500 two months, GE 6B eight months, SGT-800 fifteen months, SGT6-5000F twenty-two months (Q2 2026 investor presentation) — the fleet is sequenced so that the smallest, fastest units carry the first tenant.",
+        "Phase 1 is all simple cycle: about 200 MW of SPS grid power plus roughly 132 MW of TM2500s, 114 MW of GE 6Bs and 300 MW of SGT-800s; the COO's 13 August 2026 remarks put 'the first 210 megawatts available July 1, 2027' and '640 megawatts of nameplate capacity by the fourth quarter of 2027'. Phase 2 adds the HRSGs and steam turbines (combined cycle), more SGT-800s in 2028, solar and batteries; the F-class units carry '28/29 power delivery objectives' (prepared remarks; 10-Q).",
+        "Hillcore Power Center (framework agreement 11 August 2026, definitive documents within about 90 days): Hillcore Energy Capital — owned by the Hillcore Group and the JV Driver Group — would finance, build, own and operate about 2.6 GW (about 2.5 GW of gas plus about 100 MW of solar and storage) on about 400 subleased acres, with Fermi as anchor offtaker under long-term PPAs (take-or-pay on at least 50% of tenant load per the 10-Q), a first block of about 350–360 MW within 24 months of notice to proceed, and a 10-year Fermi option to buy at fair market value; the company says it 'doubles' power to market to about 4.8 GW over about 30 months (wire release; 17 August 2026 explainer).",
+        "Contractors: Primoris Services Corporation for Phase One balance of plant on the SGT-800s; TSK Electrónica y Electricidad USA for early-works and fast-start engineering on the F-class units (25 June 2026); Relevant Power Solutions leading the GE 6B and TM2500 deployment (COO remarks); Parkhill and Lee Lewis Construction announced as construction partners in August 2025 (newsroom index; POWER Magazine).",
+        "Fuel and equipment obligations: a Siemens Rated Capacity Agreement of up to about USD 240 million over 10 years on the F-class units; USD 142.6 million of remaining Siemens purchase commitments at 30 June 2026; a 2.5% net-profits interest to MAD Energy on the first 1 GW capped at USD 100 million NPV; TM2500 rent through 2045 (10-Q)."
+      ],
+      "positioning": "The fleet is the company's proof of scarcity: 'over 2GW of secured long lead time generation assets' at the TCEQ permit and 'total landed: 1.5 GW' by Q2 2026, against an industry turbine queue the company and its critics both describe as years long. The counter-claim, from Cleanview's satellite series and Distilled, is that no building had risen by April 2026 and the project was at least a year behind its IPO schedule.",
+      "soldThrough": "Owned by Fermi subsidiaries and financed asset by asset (MUFG, Beal/CSG, Keystone); the Hillcore block would be third-party owned with Fermi as anchor buyer; output sold to tenants as pass-through power charges.",
+      "targetSegments": [
+        "Project Matador tenants only — the generation is captive to the campus"
+      ],
+      "roadmap": "200 MW grid power over the next six months (Q2 release); simple-cycle first power 2027; combined-cycle conversion and 2028 SGT-800 deliveries; Hillcore first block within 24 months of NTP; total generation 'up to 11 GW … expandable up to approximately 17 GW' subject to land and TCEQ permits (10-K)."
+    },
+    {
+      "name": "Nuclear programme — four Westinghouse AP1000 units under a combined license application",
+      "category": "Large light-water reactors (about 4.4 GW), 2033–2036",
+      "description": "Fermi America filed Parts 1 and 2 of a combined license application for four Westinghouse AP1000 reactors (AP1000 DCD Revision 19) on 17 June and 20 August 2025; the NRC accepted them for review on 5 September 2025 under dockets 052-00051 to 052-00054 — the first large light-water COLA accepted since Turkey Point 6 and 7 in 2009 (POWER Magazine). Part 3, the site-specific portion, is targeted for 31 December 2026. Fermi is the first applicant in the NRC's applicant-prepared environmental impact statement pilot: the Federal Register scoping notice issued 20 March 2026, the applicant's draft EIS was completed in July 2026, and the NRC targets a final EIS in December 2026 (NRC COL page; ANS). The 10-K describes about 6.0 GW of nuclear across two islands at full build; the Q2 2026 10-Q schedules one unit in each of 2033, 2034, 2035 and 2036 (the first unit slipped about a year).",
+      "highlights": [
+        "Partners on the record: Westinghouse (licensing support, August 2025); Hyundai Engineering & Construction (MOU July 2025; FEED completed July 2026; 'potential EPC pathway' per the 11 February 2026 release); Doosan Enerbility (forging readiness agreement); ASP Isotopes and Quantum Leap Energy (HALEU MOU); KHNP and Samsung C&T named by World Nuclear News.",
+        "Funding: applications to DOE's Office of Energy Dominance Financing, the Advanced Reactor Demonstration Program and the Texas HB14 Advanced Nuclear Completion Fund; the company expects to monetise 45J, 45Q, 45V and 48C credits 'to the extent available' (10-Q). Total all-phase capital need is stated at 'USD 70 billion to USD 90 billion'.",
+        "Small modular reactors appear in the master plan but remain 'undecided' (ANS, April 2026); the site's progress page assigns 4.4 GW to 'Westinghouse AP1000s + SMRs'."
+      ],
+      "positioning": "Nuclear is the campus's long-dated differentiator and its political banner (the site is styled the 'President Donald J. Trump Advanced Energy and Intelligence Campus' in NRC and trade-press accounts); no tenant, PPA or financing is attached to it, and construction cannot begin before a COL.",
+      "soldThrough": "Not yet a product — a licensing programme; output would be sold to campus tenants.",
+      "targetSegments": [
+        "Long-term campus tenants",
+        "Federal and state nuclear funding programmes"
+      ],
+      "roadmap": "Part 3 by 31 December 2026; final EIS December 2026; mandatory hearing and Commission decision undated; construction about five years after a COL; first unit 2033 (10-Q)."
+    },
+    {
+      "name": "Utility interconnection and renewables — the SPS electric service agreement, solar and storage",
+      "category": "Grid supply and firming",
+      "description": "On 5 December 2025 Fermi executed an electric service agreement with Southwestern Public Service Company, Xcel Energy's Texas–New Mexico utility, for up to 200 MW over SPS's 115 kV system: the release said 86 MW would begin in January 2026 and ramp to 200 MW; the 10-K restated the 86 MW as 'expected to be energized in the second half of 2026', the incremental 114 MW targeted for year-end 2026 and 'contractually' by 1 October 2027; the Q2 2026 release still describes 'working with Xcel Energy toward 200 MW onsite power'. Solar and batteries appear in the master plan and in the Hillcore block (about 100 MW); the progress page assigns 1 GW to 'Xcel Interconnect, Solar & Battery' and says the company is 'vetting Solar and Battery Partners'.",
+      "highlights": [
+        "SPS sits in SPP, not ERCOT, so the campus is outside the Texas large-load verification directive the governor issued in August 2026 — the CEO's op-ed says the directive 'does not negatively impact Project Matador'.",
+        "No PUCT or SPP interconnection docket for the campus was located by this research; the 10-K conditions energisation on 'regulatory approvals, SPS interconnection work schedules'. Xcel did not name Fermi on its Q2 2026 earnings call.",
+        "On the FY2025 call the then-CEO put the value of an extension to the Xcel agreement at about USD 8–10 million (Investing.com transcript summary)."
+      ],
+      "positioning": "Grid power is the bridge, not the model: 200 MW is under 2% of the permitted campus, and the same figure is the first-phase 'commercial power' the company promised within six months of August 2026.",
+      "soldThrough": "Retail service from SPS under applicable tariffs; passed through to tenants.",
+      "targetSegments": [
+        "First-phase tenant energisation before on-site generation is live"
+      ],
+      "roadmap": "86 MW in H2 2026; 200 MW by 1 October 2027 contractually; solar and battery partner selection undated."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Project Matador generation fleet — Q2 2026 investor presentation (simple cycle | combined cycle; status at 13 August 2026)",
+      "specs": [
+        {
+          "band": "Siemens SGT6-5000F",
+          "label": "Units / capacity",
+          "value": "3 / 728 MW simple cycle; 1,042 MW combined cycle"
+        },
+        {
+          "band": "Siemens SGT6-5000F",
+          "label": "Status",
+          "value": "At Port of Houston, customs cleared; TSK early-works engineering; EPC in negotiation; time to power 22 months"
+        },
+        {
+          "band": "Siemens SGT6-5000F",
+          "label": "Structure",
+          "value": "Purchase — equipment purchase agreement 28 January 2026, fixed price approximately $324.4 million; MUFG $500 million warehouse facility"
+        },
+        {
+          "band": "Siemens SGT-800",
+          "label": "Units / capacity",
+          "value": "6 (+6 HRSG + SST-600) / 296 MW simple cycle; 396 MW combined cycle (ISO 478 MW combined per company site)"
+        },
+        {
+          "band": "Siemens SGT-800",
+          "label": "Status",
+          "value": "In Houston; six power-island 'bathtub' excavations complete; Primoris balance of plant; time to power 15 months"
+        },
+        {
+          "band": "Siemens SGT-800",
+          "label": "Structure",
+          "value": "Purchase (Firebird Acquisition from MAD Energy; NPI 2.5% of NOI on first 1 GW, $100 million cap); Beal/CSG $165 million facility at 12.00%"
+        },
+        {
+          "band": "GE Vernova Frame 6B",
+          "label": "Units / capacity",
+          "value": "3 (+ steam turbine) / 116 MW"
+        },
+        {
+          "band": "GE Vernova Frame 6B",
+          "label": "Status",
+          "value": "Refurbishment complete in Houston; foundations poured at site; time to power 8 months; purchased from the Bayonne, NJ plant ($18.0 million EPA, 26 June 2025 — now in litigation)"
+        },
+        {
+          "band": "GE TM2500 (leased)",
+          "label": "Units / capacity",
+          "value": "7 / 126 MW at site (157.5 MW nameplate)"
+        },
+        {
+          "band": "GE TM2500 (leased)",
+          "label": "Status",
+          "value": "Held by lessor until June 2027; pick-up 1 July–30 September 2027; 20-year lease with Mobile Power Solutions, rent through 2045; time to power 2 months"
+        },
+        {
+          "band": "Further SGT-800s",
+          "label": "Status",
+          "value": "'on order and expected to be delivered in 2028'"
+        },
+        {
+          "band": "Grid",
+          "label": "SPS / Xcel Energy",
+          "value": "Up to 200 MW via 115 kV; 86 MW expected H2 2026; 114 MW by 1 October 2027 contractually"
+        },
+        {
+          "band": "Hillcore Power Center",
+          "label": "Framework (11 August 2026)",
+          "value": "~2.6 GW (~2.5 GW gas + ~100 MW solar/BESS) on ~400 subleased acres; first ~350–360 MW within 24 months of NTP; Fermi anchor offtaker; 10-year FMV purchase option; definitive documents pending"
+        }
+      ],
+      "notes": "Company presentation, Q2 2026 10-Q and 10-K. Combined-cycle figures for the F-class units appear as 1,042 MW (deck), 'up to 780 megawatts combined' (July 2026 blog) and 1.1 GW (progress page)."
+    },
+    {
+      "product": "Site — Carson County, Texas",
+      "specs": [
+        {
+          "band": "Land",
+          "label": "Ground lease",
+          "value": "99-year Ground Lease dated 14 May 2025 with the Texas Tech University System; approximately 5,236 acres (4,523 commenced September 2025; 713-acre tract pending NNSA land exchange)"
+        },
+        {
+          "band": "Land",
+          "label": "Aggregate footprint",
+          "value": "approximately 8,400 acres in the aggregate (Q2 2026 10-Q; 10-K: ~7,570)"
+        },
+        {
+          "band": "Land",
+          "label": "Neighbour",
+          "value": "Adjacent to the DOE Pantex Plant; Caprock plateau; rail access"
+        },
+        {
+          "band": "Permits",
+          "label": "TCEQ air",
+          "value": "~6 GW natural-gas permit final 25 February 2026; incremental 5 GW application filed 27 March 2026 (pending)"
+        },
+        {
+          "band": "Permits",
+          "label": "NRC",
+          "value": "COL application dockets 052-00051 to 052-00054; Parts 1–2 accepted 5 September 2025; Part 3 target 31 December 2026; final EIS target December 2026"
+        },
+        {
+          "band": "Water",
+          "label": "Supply",
+          "value": "City of Amarillo up to 2.5 MGD (framework to 10 MGD); 30-year groundwater lease ~2,542 acres; 7 miles of water lines; 2-million-gallon tank"
+        },
+        {
+          "band": "Gas",
+          "label": "Supply",
+          "value": "Energy Transfer firm supply scalable to ~300,000 MMBtu/d; ~5 miles of high-pressure pipeline; planned Waha interconnect"
+        },
+        {
+          "band": "Buildings",
+          "label": "Program",
+          "value": "up to approximately 15 million square feet of AI-ready hyperscale compute"
+        },
+        {
+          "band": "Generation",
+          "label": "Design",
+          "value": "up to 11 GW of predominantly private power generation ... expandable up to approximately 17 GW, subject to ... land acquisitions and receipt of incremental TCEQ air permits"
+        }
+      ],
+      "notes": "Q2 2026 10-Q Note 6, 10-K Business section, company site. Acreage appears as 5,236 / 5,769 / 5,855 / 7,570 / 8,400 across sources; the leased core is 5,236."
+    },
+    {
+      "product": "TensorWave lease (Fermi Campus 1 LLC — TensorWave TEX1, LLC), signed 9 August 2026",
+      "specs": [
+        {
+          "band": "Facility",
+          "label": "Power / size",
+          "value": "222 MW total facility power; approximately 311,496 square feet; four data halls and one network hall on approximately 250 acres"
+        },
+        {
+          "band": "Term",
+          "label": "Initial / renewals",
+          "value": "15-year initial term from final-phase commencement; two 5-year renewals"
+        },
+        {
+          "band": "Term",
+          "label": "Contracted revenue",
+          "value": "approximately $6.5 billion"
+        },
+        {
+          "band": "Term",
+          "label": "Expansion",
+          "value": "Option to two more data centers, 650 MW total; must be energized by 31 December 2028"
+        },
+        {
+          "band": "Delivery",
+          "label": "Schedule",
+          "value": "Phased from late 2027 into Q1 2028; 'first power targeted for 2026' (release)"
+        },
+        {
+          "band": "Conditions",
+          "label": "Closing",
+          "value": "on or before September 30, 2026 (subject to extension) — Board approvals, requisite project guaranties, project-level financing; either party may terminate if unmet"
+        },
+        {
+          "band": "Credit",
+          "label": "Guaranties",
+          "value": "TensorWave Inc. parent guaranty; third-party 'backstop' guarantor under negotiation; Fermi landlord and completion guaranties"
+        }
+      ],
+      "notes": "Q2 2026 10-Q Note 9; IR release of 10 August 2026 (a corrected version removed the line that obligations were expected 'to be guaranteed by one of the global leaders in AI')."
+    },
+    {
+      "product": "Capital structure at 30 June 2026 and after",
+      "specs": [
+        {
+          "band": "Equity",
+          "label": "IPO",
+          "value": "37,375,000 shares at $21.00 (1 October 2025); net proceeds $745.6 million per the cash-flow statement"
+        },
+        {
+          "band": "Equity",
+          "label": "Shares outstanding",
+          "value": "638,115,075 (30 June 2026); 2,400,000,000 authorized; charter caps any holder at 2.5% with exceptions"
+        },
+        {
+          "band": "Debt",
+          "label": "MUFG equipment warehouse",
+          "value": "$500 million, SOFR + 4.0%, matures August 2027; $444.9 million drawn"
+        },
+        {
+          "band": "Debt",
+          "label": "Keystone / Cape high-voltage equipment facility",
+          "value": "$120 million + $100 million accordion at 12.90%; $77.3 million drawn; requires an approved customer agreement by 31 December 2026 and $20 million minimum liquidity"
+        },
+        {
+          "band": "Debt",
+          "label": "Beal Bank / CSG SGT-800 facility",
+          "value": "$165 million at 12.00%; $14.7 million drawn"
+        },
+        {
+          "band": "Debt",
+          "label": "Yorkville note",
+          "value": "$156.3 million 0% unsecured promissory note, undrawn, expiring about 30 September 2026"
+        },
+        {
+          "band": "Debt",
+          "label": "Convertible notes",
+          "value": "$431.25 million 5.00% senior notes due 15 July 2031, closed 14 July 2026; conversion ~$9.52; capped call to $14.64; net ~$416.8 million (~$382 million after capped calls)"
+        },
+        {
+          "band": "Balance",
+          "label": "Debt, net / cash",
+          "value": "$520.1 million debt, net; $62.5 million cash + $29.2 million restricted at 30 June 2026"
+        }
+      ],
+      "notes": "8-Ks of 10 February, 25 February, 27 March and 15 July 2026; Q2 2026 10-Q and earnings release; Newswire.com pricing release."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-01",
+      "category": "other",
+      "headline": "Company posts a 'Community Questions' FAQ stating Phase 1 is 'primarily natural gas'",
+      "read": "The public message has moved from nuclear to gas as the near-term fuel — the same sequence the filings describe.",
+      "source": "https://fermiamerica.com/community-questions/"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "corporate",
+      "headline": "8-K: first annual meeting set for 30 October 2026, record date 31 August, nomination and proposal deadline 10 September; Jeffrey Stein joins the Audit Committee",
+      "read": "The suspended consent solicitation now has a fixed venue; whether the former CEO nominated by 10 September was not on the record at 5 September.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026095719/ea0303852-8k_fermi.htm"
+    },
+    {
+      "date": "2026-08-20",
+      "category": "policy",
+      "headline": "CEO op-ed: the Texas governor's data-center interconnection directive 'does not negatively impact Project Matador'",
+      "read": "SPS is in SPP and the campus is behind the meter — the ERCOT large-load rules are somebody else's problem, which is the private-grid pitch in one sentence.",
+      "source": "https://fermiamerica.com/texas-is-sending-a-clear-message-on-ai-infrastructure-fermi-was-built-for-it/"
+    },
+    {
+      "date": "2026-08-18",
+      "category": "legal",
+      "headline": "Fermi discloses a 30 July 2026 subpoena from the US District Court for the Eastern District of New York and a 3 August SEC voluntary-production request concerning Project Matador and 'certain former members of management'; shares fall about 4%",
+      "read": "Federal scrutiny of the IPO-era disclosures is now a fact rather than a class-action allegation; the company says there is no allegation of wrongdoing.",
+      "source": "https://www.bisnow.com/news/national/data-center-capital-markets/fermi-project-matador-management-records-subpoena"
+    },
+    {
+      "date": "2026-08-17",
+      "category": "partnership",
+      "headline": "Company explainer: 'Fermi is continuing to build 2.2 GW itself' and the Hillcore block brings campus power to market to 4.8 GW 'within about 30 months'",
+      "read": "The 4.8 GW figure is 2.2 GW of owned turbines plus a framework agreement with no definitive documents — read it as capacity the company can describe, not capacity it controls.",
+      "source": "https://fermiamerica.com/fermi-and-hillcore-energy-capital-alliance/"
+    },
+    {
+      "date": "2026-08-14",
+      "category": "financial",
+      "headline": "Q2 2026 10-Q: net loss $25.8 million; cash and restricted cash $91.7 million; debt, net $520.1 million; going-concern 'substantial doubt' language that management concludes is alleviated by its plans",
+      "read": "The filing that names the conditions — the converts, undrawn facilities, capex sequencing and 'possible equipment monetization' — on which solvency through the year rests.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm"
+    },
+    {
+      "date": "2026-08-13",
+      "category": "financial",
+      "headline": "Q2 2026 results: 'all five 90-day objectives' delivered — binding TensorWave lease, permanent CEO, Hillcore alliance, Primoris and TSK relationships, three F-class turbines landed (1.5 GW of turbines 'landed'); 'about 200 megawatts of initial commercial power over the next six months'",
+      "read": "A reset quarter measured in objectives rather than megawatts; none of the 1.5 GW is energised.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000046/fermiq22026erex_991.htm"
+    },
+    {
+      "date": "2026-08-11",
+      "category": "leadership",
+      "headline": "Lee McIntire appointed Chief Executive Officer (base $750,000; $3 million RSU grant); former CH2M HILL chairman and TerraPower CEO, a Fermi director since the IPO",
+      "read": "An engineering-and-construction CEO for what the chairman calls the 'construction and power delivery phase' — the profile the founders lacked.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026089340/ea0302016-8k_fermi.htm"
+    },
+    {
+      "date": "2026-08-11",
+      "category": "partnership",
+      "headline": "Framework agreement with Hillcore Energy Capital for a ~2.6 GW build-own-operate-transfer power center on ~400 subleased acres; Fermi anchor offtaker; first power within 24 months of notice to proceed",
+      "read": "Fermi shifts about half of the campus's mid-term generation to a partner's balance sheet — capital it does not have for turbines it did not buy.",
+      "source": "https://www.stocktitan.net/news/FRMI/fermi-and-hillcore-energy-capital-announce-2-6-gigawatt-power-o3e2zcdffw5f.html"
+    },
+    {
+      "date": "2026-08-11",
+      "category": "market",
+      "headline": "Pacific Software Ventures notes the TensorWave release was reissued without the line that obligations were expected 'to be guaranteed by one of the global leaders in AI'; implied rate ~$162.70 per kW-month on total facility power",
+      "read": "The guarantor is the lease's credit; its absence from the corrected release is the open item the closing must resolve.",
+      "source": "https://pacificsoftwareventures.com/newsroom/fermi-tensorwave-data-center-lease-commercial-real-estate"
+    },
+    {
+      "date": "2026-08-10",
+      "category": "customer",
+      "headline": "Binding lease with TensorWave: 222 MW, about $6.5 billion over a 15-year initial term, expansion option to 650 MW; delivery late 2027 to Q1 2028; shares rise about 36%",
+      "read": "The first signed tenant since the IPO — an AMD-GPU neocloud rather than a hyperscaler, binding but conditional on financing and guaranties by 30 September 2026.",
+      "source": "https://investor.fermiamerica.com/fermi-announces-binding-lease-agreement-with-tensorwave"
+    },
+    {
+      "date": "2026-07-22",
+      "category": "leadership",
+      "headline": "Officers appointed: George Wentz General Counsel, Anna Bofa Chief Commercial Officer, Jacobo Ortiz Chief Operating Officer, Robert Masson Chief Financial Officer",
+      "read": "The Office of the CEO is dissolved into titles; the General Counsel is the founder of the company that sold Fermi its first six turbines.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026080917/ea0298895-8k_fermi.htm"
+    },
+    {
+      "date": "2026-07-21",
+      "category": "capacity",
+      "headline": "First three Siemens SGT6-5000F turbines arrive at the Port of Houston",
+      "read": "The largest units in the fleet are on US soil; the company's own page describes 'up to 780 megawatts combined' against 1,042 MW in the deck.",
+      "source": "https://fermiamerica.com/first-siemens-turbines-arrive-for-project-matador/"
+    },
+    {
+      "date": "2026-07-14",
+      "category": "financial",
+      "headline": "$431.25 million of 5.00% convertible senior notes due 2031 close (conversion ~$9.52; capped calls to $14.64); shares fell about 15% on the offering",
+      "read": "The bridge to the TensorWave closing, priced at a coupon and conversion that reflect a company with 90 days of cash.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026078366/ea0298074-8k_fermi.htm"
+    },
+    {
+      "date": "2026-07-10",
+      "category": "corporate",
+      "headline": "Director Miles Everson, the former CFO and a Neugebauer designee, resigns citing a books-and-records dispute",
+      "read": "The last founder-era executive leaves the board; the 8-K/A carries his response letter.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026077385/ea0297782-8k_fermi.htm"
+    },
+    {
+      "date": "2026-07-09",
+      "category": "financial",
+      "headline": "Convertible offering launched; offering memorandum excerpts disclose 'seven potential tenants and twelve potential joint venture partners', the deferred REIT election and that the Neugebauer consent solicitation was 'recently suspended'",
+      "read": "The clearest statement of the pipeline and the tax posture on the record — a C-corp 'at least through' 2026, and possibly forever.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026076788/ea029753501ex99-1.htm"
+    },
+    {
+      "date": "2026-07-03",
+      "category": "corporate",
+      "headline": "Toby Neugebauer suspends his consent solicitation after the Texas Business Court judge recuses an hour before a hearing; he claims more than 70% of votes cast supported a special meeting",
+      "read": "The fight paused without settling; the company's own tally on 7 July put consents at 31.0% against 36.4% revocations.",
+      "source": "https://finance.yahoo.com/energy/articles/fermi-ceo-neugebauer-suspends-proxy-174904527.html"
+    },
+    {
+      "date": "2026-06-25",
+      "category": "procurement",
+      "headline": "TSK Electrónica y Electricidad USA engaged for early-works and fast-start engineering on the three SGT6-5000F units; shares rise about 10%",
+      "read": "A named engineer for the F-class phase, after Parkhill and Lee Lewis Construction were named for the first phase in 2025.",
+      "source": "https://www.stocktitan.net/news/FRMI/fermi-inc-selects-tsk-spain-s-largest-epc-firm-to-deliver-early-75av9kmd413b.html"
+    },
+    {
+      "date": "2026-06-23",
+      "category": "market",
+      "headline": "Stifel cuts its price target from $29 to $17 (Buy) on 'contract delays'",
+      "read": "The sell side's numbers track tenant signings, not turbines; every target cut in 2026 cites the lease that had not been signed.",
+      "source": "https://www.investing.com/news/analyst-ratings/stifel-cuts-fermi-stock-price-target-to-17-on-contract-delays-93CH-4755290"
+    },
+    {
+      "date": "2026-06-10",
+      "category": "corporate",
+      "headline": "Duelling definitive consent statements: Neugebauer seeks seven board seats and the removal of Haas, Robbin-Coker and McIntire; the company's 12 June statement responds",
+      "read": "The former CEO's own filing puts his beneficial ownership at 22.7%; the company's later release says 'approximately 40%' — the gap is affiliates and dates.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026067352/ea0294314-defc14a_toby.htm"
+    },
+    {
+      "date": "2026-05-14",
+      "category": "financial",
+      "headline": "Q1 2026 10-Q: net loss $188.7 million (stock compensation $134.0 million); cash $207.5 million; Siemens F-class purchase and the NRC EIS pilot described",
+      "read": "Cash fell by half in a quarter on turbine progress payments; the loss is mostly equity awards.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000032/frmi-20260331.htm"
+    },
+    {
+      "date": "2026-05-13",
+      "category": "corporate",
+      "headline": "Bylaws amended to require a 70% vote of outstanding shares to change board-size provisions",
+      "read": "The 'insiders veto amendment' the former CEO is litigating — the board's structural answer to a 22–40% holder.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026056189/ea0290747-8k_fermi.htm"
+    },
+    {
+      "date": "2026-05-04",
+      "category": "leadership",
+      "headline": "Larry Kellerman, the company's Chief Power Officer, elected a director as the Neugebauer/Vicksburg nominee",
+      "read": "A settlement-shaped seat for the founder's side that did not end the contest.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026051895/ea0289160-8k_fermi.htm"
+    },
+    {
+      "date": "2026-05-01",
+      "category": "legal",
+      "headline": "Neugebauer sues the company and directors Haas, McIntire and Robbin-Coker in the Texas Business Court to void his removal and the bylaw amendment; Rick Perry added as a defendant on 2 July",
+      "read": "Co-founder against co-founder; the suit and the company's counter-suits ran through the summer.",
+      "source": "https://www.bisnow.com/national/news/data-center-personnel/fermi-ousts-co-founder-largest-shareholder-from-board-134380"
+    },
+    {
+      "date": "2026-04-30",
+      "category": "leadership",
+      "headline": "Toby Neugebauer terminated for cause and removed from the board; Robert Masson interim CFO",
+      "read": "The company's stated grounds — policy violations, misleading the board, damaging customer relationships — become the record the litigation tests.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026050183/ea0288605-8ka1_fermi.htm"
+    },
+    {
+      "date": "2026-04-20",
+      "category": "corporate",
+      "headline": "'Fermi 2.0': Marius Haas chairman, Jeffrey Stein director, CFO Miles Everson out, an Office of the CEO (Ortiz and Bofa), Dallas headquarters, Heidrick & Struggles CEO search; shares fall about 18%",
+      "read": "The reset that produced the 90-day objectives; Stifel's analyst noted 'friction between customers and the outgoing CEO'.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026045351/ea028692501ex99-1.htm"
+    },
+    {
+      "date": "2026-04-19",
+      "category": "market",
+      "headline": "Distilled: 'The World's Largest Planned Data Center Is Running Into Trouble' — satellite imagery shows minimal site change February–April 2026; project 'at least one year behind IPO schedule'",
+      "read": "The independent read that the IPO-era 1 GW-by-2026 schedule was gone; the company's later 2027 dates confirm it.",
+      "source": "https://www.distilled.earth/p/the-worlds-largest-planned-data-center"
+    },
+    {
+      "date": "2026-04-17",
+      "category": "leadership",
+      "headline": "Board removes Toby Neugebauer as President and CEO",
+      "read": "The founder who owned the story loses the company's; the share price was already 85% below its October high.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026045197/ea0286864-8k_fermiinc.htm"
+    },
+    {
+      "date": "2026-04-01",
+      "category": "financial",
+      "headline": "Yorkville Advisors $156.25 million 0% committed promissory note (undrawn); company cites 'over $1 billion' of total committed financing",
+      "read": "Expensive standby liquidity from a small-cap financier — the facility that expires with the TensorWave closing window.",
+      "source": "https://natlawreview.com/press-releases/fermi-america-secures-15625-million-committed-financing-facility-yorkville"
+    },
+    {
+      "date": "2026-03-30",
+      "category": "financial",
+      "headline": "FY2025 10-K: net loss $486.4 million (stock compensation $132.7 million; a $173.8 million charitable contribution of Class B units; fair-value losses); 35 employees; the Q4 call sends the stock down about 23% on the CFO's 'surrender collateral' remark",
+      "read": "The first annual report reads as a financing, not an operating, company — every large line is non-cash or equity.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000010/frmi-20251231.htm"
+    },
+    {
+      "date": "2026-03-27",
+      "category": "financial",
+      "headline": "Beal Bank/CSG $165 million facility at 12.00% for the six SGT-800s; additional ~5 GW TCEQ air-permit application filed",
+      "read": "Turbine-secured debt at double-digit coupons — the price of owning generation before owning a tenant.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026035482/ea0283735-8k_fermiinc.htm"
+    },
+    {
+      "date": "2026-03-24",
+      "category": "regulatory",
+      "headline": "NRC opens EIS scoping (docket NRC-2026-0100) for the four-unit COLA; Fermi is the first participant in the applicant-prepared EIS pilot",
+      "read": "A faster NEPA lane on paper; the schedule still ends in a Commission decision with no date.",
+      "source": "https://www.ans.org/news/2026-03-24/article-7875/project-matador-joins-eis-pilot-program-nrc-seeks-public-input/"
+    },
+    {
+      "date": "2026-02-25",
+      "category": "regulatory",
+      "headline": "TCEQ issues the final Clean Air Permit for about 6 GW of gas generation, described by the company as the nation's second largest; construction resumes",
+      "read": "The permit that makes the campus's gas plan legal; the 5 GW increment followed within a month.",
+      "source": "https://www.marketscreener.com/news/fermi-americaa-secures-final-6gw-clean-air-permit-from-the-texas-commission-on-environmental-quali-ce7e5cd8db81f227"
+    },
+    {
+      "date": "2026-02-19",
+      "category": "financial",
+      "headline": "Initial draw on a $200 million high-voltage equipment facility from Keystone National Group and Cape Commercial Finance (12.90%)",
+      "read": "Substations and switchgear financed separately from turbines — the third asset-backed lender in ten days.",
+      "source": "https://finviz.com/news/316528/fermi-america-makes-initial-draw-on-200-million-equipment-facility-from-keystone-national-group-and-cape-commercial-finance-to-accelerate-the-delivery-of-the-first-23gw-of-project-matadors-11gw-private-hypergrid-campus"
+    },
+    {
+      "date": "2026-02-17",
+      "category": "capacity",
+      "headline": "Six Siemens SGT-800s land at the Port of Houston — seven vessels, 160 containers, 400 truckloads to the Panhandle",
+      "read": "The first hardware, about one-third of the first gigawatt in the company's framing.",
+      "source": "https://pgjonline.com/news/2026/february/fermi-america-receives-siemens-gas-turbines-at-port-of-houston-for-texas-power-project"
+    },
+    {
+      "date": "2026-02-11",
+      "category": "partnership",
+      "headline": "Hyundai E&C partnership 'deepened' — FEED under way with a potential EPC pathway for the AP1000s",
+      "read": "The nuclear EPC is being lined up years before a licence; Hyundai completed the FEED in July 2026.",
+      "source": "https://finviz.com/news/308342/fermi-america-deepens-strategic-partnership-with-hyundai-ec-to-lead-the-return-of-large-scale-nuclear-construction-in-the-us-with-project-matador"
+    },
+    {
+      "date": "2026-02-10",
+      "category": "financial",
+      "headline": "MUFG $500 million equipment warehouse facility (SOFR + 4.0%, maturing August 2027); Macquarie's $100 million term loan refinanced",
+      "read": "The senior lender's facility carries an amortisation step-up if no lease of at least 400 MW exists by November 2026.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026014270/ea0276274-8k_fermi.htm"
+    },
+    {
+      "date": "2026-02-06",
+      "category": "capacity",
+      "headline": "Construction paused pending the TCEQ final permit; the CEO says Phase 0 finished 'so fast that we paused construction temporarily'",
+      "read": "The first visible stall; the permit came nineteen days later.",
+      "source": "https://www.newschannel10.com/2026/02/06/project-matador-construction-paused-fermi-america-awaits-clean-air-permit/"
+    },
+    {
+      "date": "2026-01-06",
+      "category": "legal",
+      "headline": "Securities class action Lupia v. Fermi Inc. (S.D.N.Y.) filed for the 1 October–11 December 2025 class period, alleging overstated tenant demand",
+      "read": "The IPO's disclosure on tenant interest is now a litigated question; the EDNY subpoena followed in July.",
+      "source": "https://natlawreview.com/press-releases/fermi-inc-frmi-slapped-securities-class-action-over-ipo-and-subsequent"
+    },
+    {
+      "date": "2025-12-17",
+      "category": "customer",
+      "headline": "Fermi 'categorically' denies a Business Insider report that Amazon was the prospective tenant that withdrew the $150 million agreement",
+      "read": "The tenant's identity stays unconfirmed on both sides; the denial is the company's only statement about who it was.",
+      "source": "https://finance.yahoo.com/news/amazon-prospective-tenant-withdrew-funding-014933872.html"
+    },
+    {
+      "date": "2025-12-12",
+      "category": "customer",
+      "headline": "8-K: the investment-grade 'First Tenant' terminates the $150 million advance-in-aid-of-construction agreement after its exclusivity expired on 9 December; no funds drawn; shares fall about a third",
+      "read": "The anchor the IPO was sold on leaves ten weeks after listing.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390025120940/ea0269377-8k_fermi.htm"
+    },
+    {
+      "date": "2025-12-08",
+      "category": "customer",
+      "headline": "Electric service agreement with Southwestern Public Service Company (Xcel Energy) for up to 200 MW over 115 kV; 86 MW 'beginning January 2026' per the release",
+      "read": "The only utility contract on the campus; the 10-K later moved the 86 MW to the second half of 2026.",
+      "source": "https://fermiamerica.com/fermi-america-electric-service-agreement-reached-with-xcel-energy-subsidiary/"
+    },
+    {
+      "date": "2025-11-10",
+      "category": "financial",
+      "headline": "Q3 2025 shareholder letter; TCEQ preliminary approval of the 6 GW permit",
+      "read": "The first report as a public company, written before the First Tenant's exit.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390025108289/ea0264721-8k_fermi.htm"
+    },
+    {
+      "date": "2025-10-30",
+      "category": "procurement",
+      "headline": "20-year lease with Mobile Power Solutions for seven GE TM2500 mobile turbines (157.5 MW)",
+      "read": "The fastest units in the fleet; their pick-up was later deferred to mid-2027.",
+      "source": "https://fermiamerica.com/fermi-america-secures-agreement-with-mobile-power-solutions-for-157-5-mw-of-ge-tm2500-turbines-securing-even-more-power-for-the-worlds-largest-11gw-private-energy-grid/"
+    },
+    {
+      "date": "2025-10-01",
+      "category": "financial",
+      "headline": "IPO: 37,375,000 shares at $21.00 on the Nasdaq Global Select Market (FRMI) with a secondary LSE listing; first-day open $25; all-time high $36.99 on 2 October",
+      "read": "A pre-revenue developer valued at roughly $12.5 billion at pricing on a permit, a lease and a letter of intent.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000121390025094424/ea0252333-11.htm"
+    },
+    {
+      "date": "2025-09-09",
+      "category": "regulatory",
+      "headline": "NRC accepts Parts 1 and 2 of the four-unit AP1000 combined license application — the first large light-water COLA accepted since 2009",
+      "read": "The nuclear claim is docketed; everything after it is a schedule.",
+      "source": "https://www.powermag.com/nrc-accepts-cola-for-fermi-americas-behemoth-four-unit-ap1000-nuclear-plant-in-texas/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "xcel-energy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-12",
+      "scale": "up to 200 MW",
+      "via": "Southwestern Public Service Company electric service agreement (115 kV)",
+      "note": "Xcel Energy's SPS utility supplies the campus's only grid power: up to 200 MW over its 115 kV system under a 5 December 2025 electric service agreement.",
+      "context": "The release said 86 MW would begin in January 2026 and ramp to 200 MW; the FY2025 10-K restated the 86 MW as expected 'in the second half of 2026', with the incremental 114 MW targeted for year-end 2026 and contractually due by 1 October 2027. The Q2 2026 earnings release still describes 'working with Xcel Energy toward 200 MW onsite power', so no grid power had been energised by mid-August 2026. Xcel's Texas–New Mexico president Adrian Rodriguez was quoted in the release; Xcel did not name Fermi on its Q2 2026 earnings call, and the company's Xcel dossier records the agreement as the only named SPS data-center contract and the smallest tier of its pipeline slide. No PUCT or SPP interconnection docket for the campus was located.",
+      "source": "https://fermiamerica.com/fermi-america-electric-service-agreement-reached-with-xcel-energy-subsidiary/"
+    },
+    {
+      "slug": "siemens-energy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025",
+      "scale": "6 SGT-800 + 3 SGT6-5000F (~1,024 MW simple cycle)",
+      "via": "SGT-800 and SGT6-5000F gas turbines; Rated Capacity Agreement",
+      "note": "Siemens Energy is the campus's principal turbine vendor: six SGT-800s with HRSGs and an SST-600 (via the Firebird Acquisition from MAD Energy) and three SGT6-5000F F-class units bought directly under a 28 January 2026 equipment purchase agreement.",
+      "context": "The Q1 and Q2 2026 10-Qs describe the F-class purchase at a fixed price of about USD 324.4 million, financed by MUFG's warehouse facility, with a Siemens Rated Capacity Agreement of up to about USD 240 million over ten years and USD 142.6 million of remaining purchase commitments at 30 June 2026. The SGT-800s arrived at the Port of Houston in February 2026 and the F-class units in July 2026; a September 2025 letter of intent for '1.1 GW F-class' and a nuclear collaboration appears in the company's newsroom index. None of the units was energised at 13 August 2026.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025",
+      "scale": "3 Frame 6B (~116 MW) + 7 TM2500 (157.5 MW nameplate, leased)",
+      "via": "Secondary-market Frame 6B units; TM2500 mobile turbines leased from Mobile Power Solutions",
+      "note": "GE Vernova equipment makes up the fast end of the fleet: three refurbished Frame 6B units bought from the Bayonne, New Jersey plant and seven TM2500 mobile turbines under a 20-year lease with Mobile Power Solutions.",
+      "context": "The Q2 2026 investor presentation tables the 6Bs at 116 MW with an eight-month time to power and foundations poured, and the TM2500s at 126 MW on site (157.5 MW nameplate) with a two-month time to power but held by the lessor until pick-up between 1 July and 30 September 2027. The 6B purchase (an USD 18.0 million equipment purchase agreement of 26 June 2025) is the subject of Bayonne Plant Holding's suit in the District of New Jersey over site-restoration claims. GE Vernova itself is not a contracting party in the filings — the units were bought second-hand and leased through a third party.",
+      "source": "https://irp.cdn-website.com/4ee5afac/files/uploaded/Fermi+2Q+2026+Investor+Presentation+vF.pdf"
+    },
+    {
+      "slug": "primoris",
+      "type": "supplier",
+      "status": "active",
+      "since": "2026",
+      "via": "Phase One balance-of-plant EPC for the six SGT-800s",
+      "note": "Primoris Services Corporation is the balance-of-plant contractor for Phase One (the six SGT-800 power islands), named in the Q2 2026 earnings release among the 'deepened relationships with contractors Primoris, TSK'.",
+      "context": "The company's fourth 90-day objective was contractor relationships; the earnings release names Primoris for Phase One balance of plant and TSK for the F-class early works. Contract value and scope beyond 'balance of plant' are not disclosed.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000046/fermiq22026erex_991.htm"
+    },
+    {
+      "slug": "amazon",
+      "type": "other",
+      "status": "historical",
+      "since": "2025-09",
+      "note": "Business Insider reported that Amazon was the investment-grade 'First Tenant' whose USD 150 million advance-in-aid-of-construction agreement was terminated on 11 December 2025; Fermi and its then-CEO 'categorically' denied the report.",
+      "context": "The 8-K of 12 December 2025 identifies the counterparty only as an investment-grade tenant that signed a letter of intent on 19 September 2025 and the agreement on 3 November 2025, and terminated it after exclusivity lapsed with no funds drawn. Reuters (via Yahoo Finance) carried the Business Insider attribution and Fermi's denial; Amazon did not comment. This dossier records the link as reported and denied, not as a relationship; the Amazon dossier carries nothing on Fermi.",
+      "source": "https://finance.yahoo.com/news/amazon-prospective-tenant-withdrew-funding-014933872.html"
+    },
+    {
+      "slug": "crusoe",
+      "type": "competitor",
+      "status": "active",
+      "note": "Reporters benchmark Project Matador's schedule against Crusoe's Stargate campus in Abilene, Texas, which put 200 MW online in about 15 months.",
+      "context": "Distilled's April 2026 analysis compares Fermi with Crusoe's Abilene build (1.2 GW; 200 MW live by September 2025), Vantage's Frontier campus north of Abilene and Meta's Hyperion, and estimates that even with an immediate tenant Fermi could not match Crusoe's pace before May 2027. Fermi's own filings name no competitor.",
+      "source": "https://www.distilled.earth/p/the-worlds-largest-planned-data-center"
+    },
+    {
+      "slug": "vantage",
+      "type": "competitor",
+      "status": "active",
+      "note": "Vantage's 1.2 GW Frontier campus north of Abilene, begun in September 2025, is the second Texas behind-the-meter campus reporters set against Project Matador.",
+      "context": "Same Distilled comparison: Frontier and Stargate Abilene are the two Texas campuses that broke ground in 2025 and had visible buildings by April 2026 while Fermi's satellite record showed site work only. In this corpus Vantage's Frontier is primary-powered by VoltaGrid gas microgrids — the closest structural analogue to Fermi's own private-grid claim.",
+      "source": "https://www.distilled.earth/p/the-worlds-largest-planned-data-center"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "NRC combined license (10 CFR Part 52) and the applicant-prepared EIS pilot",
+      "status": "in-effect",
+      "effectiveDate": "2025-09-05",
+      "exposure": "The four-unit AP1000 combined license application (dockets 052-00051 to 052-00054) was accepted for review on 5 September 2025; Part 3 is targeted for 31 December 2026 and the NRC targets a final environmental impact statement in December 2026, with the mandatory hearing and Commission decision undated. Construction of the nuclear islands cannot begin before a COL; the 10-Q's reactor schedule (2033–2036) already slipped a year.",
+      "mitigation": "Fermi is the first applicant in the NRC's pilot for applicant-prepared draft EISs under the amended NEPA process, which the NRC says shortens its review; the applicant's draft EIS was completed in July 2026.",
+      "source": "https://www.nrc.gov/reactors/new-reactors/large-lwr/col/fermi-energy-intel-campus"
+    },
+    {
+      "regime": "TCEQ Clean Air Act permitting (Texas)",
+      "status": "in-effect",
+      "effectiveDate": "2026-02-25",
+      "exposure": "The final permit for about 6 GW of gas-fired generation issued on 25 February 2026 after a self-imposed construction pause; an application for a further 5 GW was filed on 27 March 2026 and is pending. The 17 GW ambition, and any generation beyond the first 6 GW, depends on the second permit.",
+      "mitigation": "The company sequenced Phase 0 civil works ahead of the permit and resumed on issuance; the 5 GW application was filed within a month.",
+      "source": "https://www.marketscreener.com/news/fermi-americaa-secures-final-6gw-clean-air-permit-from-the-texas-commission-on-environmental-quali-ce7e5cd8db81f227"
+    },
+    {
+      "regime": "Texas large-load interconnection directive (ERCOT) — not applicable to SPS/SPP",
+      "status": "in-effect",
+      "effectiveDate": "2026-08",
+      "exposure": "The governor's August 2026 directive requiring ERCOT data-center interconnection verification does not reach the campus, which takes its grid power from SPS in the Southwest Power Pool and generates behind the meter; the CEO's op-ed says it 'does not negatively impact Project Matador'. The 10-K nonetheless conditions SPS energisation on 'regulatory approvals, SPS interconnection work schedules'.",
+      "source": "https://fermiamerica.com/texas-is-sending-a-clear-message-on-ai-infrastructure-fermi-was-built-for-it/"
+    },
+    {
+      "regime": "Securities litigation and federal inquiries",
+      "status": "in-effect",
+      "effectiveDate": "2026-01-05",
+      "exposure": "Lupia v. Fermi Inc. (S.D.N.Y. 1:26-cv-00050) alleges Securities Act and Exchange Act violations over tenant-demand disclosures for the 1 October–11 December 2025 class period; a 30 July 2026 subpoena from the Eastern District of New York and a 3 August SEC voluntary-production request concern Project Matador and former management. Four further suits are on the 10-Q: 340 Energy v. Firebird (turbine broker fee, motion to dismiss denied 11 August 2026), Neugebauer v. Fermi (Texas Business Court, seeking to void the 70% bylaw and his removal), Bayonne Plant Holding v. Fermi Equipment Holdco (D.N.J., site restoration) and Peña and Summers v. Fermi and Neugebauer (claims above USD 415 million).",
+      "mitigation": "The company states there is no allegation of wrongdoing in the subpoena and that it is cooperating; MAD Energy indemnifies the 340 Energy claim.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm"
+    },
+    {
+      "regime": "Federal and Texas nuclear and clean-energy incentives (45J, 45Q, 45V, 48C; DOE Office of Energy Dominance Financing; Texas HB14)",
+      "status": "announced",
+      "exposure": "The 10-Q describes a pre-approval process with the DOE Office of Energy Dominance Financing and applications to the Advanced Reactor Demonstration Program and the Texas Advanced Nuclear Completion Fund, and an expectation of monetising 45J, 45Q, 45V and 48C credits 'to the extent available'. No award is on the record.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm"
+    },
+    {
+      "regime": "Local water and tax agreements (City of Amarillo; Carson County)",
+      "status": "in-effect",
+      "effectiveDate": "2025-10",
+      "exposure": "Amarillo's council approved up to 2.5 million gallons a day at double the industrial rate with Fermi funding all infrastructure (4–1, October 2025); a May 2026 proposal for a two-year moratorium on large data centers inside the city does not apply to the campus. Carson County granted a 10-year abatement and reinvestment zone. The Texas Tech lease takes 25% of gross groundwater sales.",
+      "mitigation": "Hybrid dry-wet cooling (MVM EGI, December 2025) with a company claim of 80% less water than conventional designs; a 30-year groundwater lease over about 2,542 acres.",
+      "source": "https://abc7amarillo.com/news/local/amarillo-leaders-weigh-2-year-moratorium-on-large-scale-data-centers-amid-resource-concerns-mayor-cole-stanley-fermi-america-project-matador"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Lee McIntire",
+      "title": "Chief Executive Officer and Director (CEO from 11 August 2026)",
+      "photo": "images/execs/fermi-america-mcintire.jpg",
+      "background": [
+        "Chief Executive Officer, Fermi Inc. (August 2026–); independent director and Audit Committee member since the IPO (September 2025)",
+        "Lead independent director, McDermott International (2020–; interim President and CEO June 2021–February 2022)",
+        "Chief Executive Officer, TerraPower (2015–2018); Chairman, CEO and President, CH2M HILL (CEO from 2006)",
+        "Fifteen years at Bechtel (partner, executive vice president, board); boards of Spur Petroleum and Al Bawani Holding",
+        "BS Civil Engineering, University of Nebraska; MBA, Thunderbird"
+      ]
+    },
+    {
+      "name": "Marius Haas",
+      "title": "Chairman of the Board (since 20 April 2026)",
+      "background": [
+        "Chairman, Fermi Inc. (April 2026–); director since the IPO; Compensation and Audit Committees",
+        "Founding Partner, BayPine (2020–); adviser to KKR; boards of Harbor and HydroBlok NA",
+        "President and Chief Commercial Officer, Dell Technologies; Chief Strategy Officer and Head of Global M&A, HP; Compaq; Intel",
+        "BA, Georgetown; MBA, Thunderbird"
+      ]
+    },
+    {
+      "name": "Rick Perry",
+      "title": "Co-founder and Director",
+      "background": [
+        "Co-founder, Fermi America (2025); director; holder of about 2.6% through EPG Holdings LLC (10-K/A, April 2026); named a defendant in the former CEO's amended petition (July 2026)",
+        "14th US Secretary of Energy (2017–2019); Governor of Texas (2000–2015)",
+        "Director, Energy Transfer (January 2020–) — Fermi's firm gas supplier",
+        "Texas A&M; US Air Force C-130 pilot"
+      ]
+    },
+    {
+      "name": "Anna Bofa",
+      "title": "Chief Commercial Officer (from 22 July 2026; Co-President, Office of the CEO, April–August 2026)",
+      "photo": "images/execs/fermi-america-bofa.jpg",
+      "background": [
+        "Chief Commercial Officer, Fermi Inc. (July 2026–); Co-President of the Office of the CEO (April–August 2026); board observer since the IPO",
+        "Co-founder, Crate AI (2022)",
+        "Global Head of Product Programs, Meta (2017–2021); Pinterest (2013–2016); Dropbox (2011–2013); Google",
+        "BA, Dartmouth"
+      ]
+    },
+    {
+      "name": "Jacobo Ortiz Blanes",
+      "title": "Chief Operating Officer (since inception; Co-President, Office of the CEO, April–August 2026)",
+      "photo": "images/execs/fermi-america-ortiz.jpg",
+      "background": [
+        "Chief Operating Officer, Fermi America (2025–); Co-President of the Office of the CEO (April–August 2026); holder of about 3.9% (10-K/A)",
+        "President and founder, Las Brisas Property Management, Puerto Rico (2008–)",
+        "Fifteen years in marketing at S.C. Johnson; board of United Surety & Indemnity",
+        "BA, Haverford; MS, Cornell"
+      ]
+    },
+    {
+      "name": "Robert Masson",
+      "title": "Chief Financial Officer (interim from 29 April 2026; permanent from 22 July 2026)",
+      "photo": "images/execs/fermi-america-masson.jpg",
+      "background": [
+        "Chief Financial Officer, Fermi Inc. (2026–)",
+        "CFO, Noble Supply & Logistics (2023–2025); CFO, Latham Group (2022–2023); EVP and CFO, Hypertherm (2018–2022); VP Finance, Flowserve (2016–2018); business-unit CFO roles at Raytheon (2003–2016)",
+        "US Navy aviator (1992–2001); director, Intuitive Machines (audit chair) and Tech-Etch",
+        "BS, US Naval Academy; MBA, Harvard"
+      ]
+    },
+    {
+      "name": "Larry Kellerman",
+      "title": "Chief Power Officer (filings: Head of Power) and Director (from 4 May 2026)",
+      "photo": "images/execs/fermi-america-kellerman.jpg",
+      "background": [
+        "Chief Power Officer, Fermi America; director elected 4 May 2026 as the Neugebauer/Vicksburg nominee; IR page labels him a co-founder; about 1.8% via TFC Utilities Energy LLC",
+        "Managing Partner, Twenty First Century Utilities (2015–); CEO, Atlantic Power & Utilities (February 2023–May 2024); adviser to I Squared Capital",
+        "El Paso Corporation; partner and managing director, Goldman Sachs; CEO, Quantum Utility Generation",
+        "BA and MBA, West Coast University"
+      ]
+    },
+    {
+      "name": "Mesut Uzman",
+      "title": "Chief Nuclear Officer (filings: Chief Nuclear Construction Officer)",
+      "photo": "images/execs/fermi-america-m-uzman.jpg",
+      "background": [
+        "Chief Nuclear Officer, Fermi America (August 2025–); leads the four-unit AP1000 combined license application",
+        "Vice President, Emirates Nuclear Energy Corporation (Barakah APR-1400, 2023); Director of Engineering, ENEC (2022–2023)",
+        "Invensys/Framatome (CNNC instrumentation and control); Westinghouse AP1000 China consortium interface manager",
+        "BSEE, Anadolu University; MSEE, Ohio State"
+      ]
+    },
+    {
+      "name": "Charlie Hamilton",
+      "title": "Chief Site Officer (filings: Chief Site Development Officer)",
+      "photo": "images/execs/fermi-america-hamilton.jpg",
+      "background": [
+        "Chief Site Officer, Fermi America (2025–); about 1.4% holder (10-K/A)",
+        "Partner and co-founder, Banzai Capital Group (2018); co-founder of Caprock Partners, Caprock Development and Lubbock Land Company",
+        "Past chair of the Texas Tech CEO Roundtable",
+        "BBA, Texas Tech Rawls College of Business"
+      ]
+    },
+    {
+      "name": "George Wentz",
+      "title": "General Counsel (formally appointed 22 July 2026)",
+      "photo": "images/execs/fermi-america-wentz.jpg",
+      "background": [
+        "General Counsel, Fermi Inc. (2026–); signed the company's May 2026 8-K as GC before formal appointment",
+        "Founder and CEO, MAD Energy (2020–) — seller of the first six SGT-800s to Fermi, holder of a net-profits interest and co-defendant in the 340 Energy suit; a related party per the Q2 2026 10-Q",
+        "Partner, Davillier Law Group (2008–), company counsel to Fermi"
+      ]
+    },
+    {
+      "name": "Sezin Uzman",
+      "title": "Vice President, Nuclear Supply Chain and Compliance",
+      "photo": "images/execs/fermi-america-s-uzman.jpg",
+      "background": [
+        "Vice President of Nuclear Supply Chain and Compliance, Fermi America (August 2025–), hired alongside the Chief Nuclear Officer"
+      ]
+    },
+    {
+      "name": "Jeffrey S. Stein",
+      "title": "Director (from 19 April 2026; Audit Committee from 25 August 2026)",
+      "background": [
+        "Director, Fermi Inc. (April 2026–), Class II to the 2027 annual meeting",
+        "Co-founder, Breakpoint Advisory Partners (2025); Stein Advisors (2010–2025); Chairman, Octave Specialty Group",
+        "Former director of Sunnova, Vertex Energy, Rite Aid, Troika Media, Aearo, GWG Holdings, Intelsat Connect Finance, NMC Health, Westmoreland Coal and Dynegy"
+      ]
+    },
+    {
+      "name": "Cordel Robbin-Coker",
+      "title": "Director (Audit and Compensation Committees)",
+      "background": [
+        "Director, Fermi Inc. (2025–); named a defendant in the former CEO's Texas Business Court petition",
+        "Co-founder and CEO, Carry1st; director, The Hershey Company (Finance and Risk chair)",
+        "Vice President, Carlyle (Sub-Saharan Africa fund); Morgan Stanley",
+        "BA, Stanford"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "public",
+    "periods": [
+      {
+        "period": "H1 2026 (six months to 30 June 2026; Q2 2026 10-Q)",
+        "periodType": "half",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "$0 — pre-revenue",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Q2 2026 10-Q",
+            "kpi": "revenue",
+            "usdMillions": 0,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net loss",
+            "actual": "$(214.5) million for the six months — $(188.7) million in Q1 (stock compensation $134.0 million; $24.8 million Macquarie extinguishment loss) and $(25.8) million in Q2 (stock compensation a net credit of $15.3 million)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Q2 2026 10-Q; Q1 and Q2 earnings releases",
+            "kpi": "net-income",
+            "usdMillions": -214.5,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "EPS",
+            "actual": "$(0.34) basic and diluted for the six months; $(0.30) Q1, $(0.04) Q2",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-Q"
+          },
+          {
+            "name": "Cash and restricted cash",
+            "actual": "$62.5 million cash + $29.2 million restricted = $91.7 million at 30 June 2026 (from $243.3 million at 31 March)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Q2 2026 earnings release"
+          },
+          {
+            "name": "Debt, net",
+            "actual": "$520.1 million at 30 June 2026 (MUFG $444.9 million drawn; Keystone $77.3 million; Beal/CSG $14.7 million); $431.25 million of 5.00% convertible notes closed 14 July 2026, about $382 million net after capped calls",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Q2 2026 10-Q; 8-K 15 July 2026"
+          },
+          {
+            "name": "Capital expenditure",
+            "actual": "$626.2 million in the six months; operating cash outflow $56.0 million",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-Q cash-flow statement",
+            "kpi": "capex",
+            "usdMillions": 626.2,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Total assets / equity",
+            "actual": "$1,763.1 million / $1,031.7 million; PP&E, net $1,547.9 million; accumulated deficit $347.7 million",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-Q balance sheet"
+          },
+          {
+            "name": "Going concern",
+            "actual": "Conditions 'raise substantial doubt' before management's plans (converts, undrawn facilities, capex sequencing, possible equipment monetisation), which management concludes alleviate it",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-Q Note 1"
+          }
+        ],
+        "commentary": "No revenue and no consensus: trackers carry no revenue estimate for a pre-revenue developer, so 'expected' is left empty by rule. The half-year is a story of cash — USD 408.5 million at year-end to USD 91.7 million by June on USD 626 million of turbine and site capex — and of financing arranged at 12–13% coupons against equipment and 5% against converts. Operational guidance stands in for financial guidance: about 200 MW of initial commercial power within six months of August 2026 and about 1.5 GW over 18–24 months, Phase 0 plus Phase 1 capex 'could exceed $3 billion' with about USD 2 billion in the next twelve months."
+      },
+      {
+        "period": "FY2025 (inception 10 January 2025 to 31 December 2025; Form 10-K)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "$0",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-K",
+            "kpi": "revenue",
+            "usdMillions": 0,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net loss",
+            "actual": "$(486.4) million — G&A $177.8 million (stock compensation $132.7 million), a $173.8 million charitable contribution of Class B units to Dechomai Asset Trust, $111.6 million of fair-value losses on pre-IPO notes and a $23.7 million inducement charge; about $445 million described as non-cash",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-K; Investing.com summary of the FY2025 call",
+            "kpi": "net-income",
+            "usdMillions": -486.4,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "EPS",
+            "actual": "$(1.13) basic and diluted",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-K",
+            "kpi": "eps"
+          },
+          {
+            "name": "Cash",
+            "actual": "$408.5 million at 31 December 2025",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-K"
+          },
+          {
+            "name": "IPO proceeds",
+            "actual": "37,375,000 shares at $21.00; net proceeds $745.6 million per the cash-flow statement (prospectus estimate $733.0 million with the option)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "424B4; 10-K"
+          },
+          {
+            "name": "Pre-IPO capital",
+            "actual": "Seed notes $26.1 million; Series A notes $75.5 million; Series B notes (fair-valued); $107.6 million of Preferred Units led by Macquarie (August 2025); Macquarie $100 million term loan (repaid February 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "424B4; 10-K"
+          },
+          {
+            "name": "Capital expenditure",
+            "actual": "$569.3 million; operating cash outflow $34.2 million",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-K cash-flow statement",
+            "kpi": "capex",
+            "usdMillions": 569.3,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "PP&E, net / total assets / equity",
+            "actual": "$935.3 million / $1,413.3 million / $1,095.9 million; debt, net $109.8 million",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-K balance sheet"
+          },
+          {
+            "name": "Employees",
+            "actual": "35 full-time",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-K"
+          }
+        ],
+        "commentary": "The first annual report of a company that listed nine months after formation: every large line is an equity award, a fair-value mark on convertible notes or a charitable gift of units, and the operating outflow is USD 34 million. Consensus did not exist for the period and none is manufactured here. Analyst coverage that has since formed is priced on tenant signings — Stifel cut its target from USD 29 to USD 17 in June 2026 citing contract delays; TipRanks' August 2026 table runs from UBS at USD 6 (Hold) to Citizens at USD 30 (Market Outperform); MarketBeat's 13-analyst consensus of USD 20.67 and StockAnalysis's 8-analyst USD 17.13 disagree with each other on the same date."
+      }
+    ],
+    "commentary": "Fiscal year ends 31 December. The Q3 2026 report has no announced date: the IR 'Upcoming Events' page was empty on 5 September 2026 and the filing cadence (Q3 2025 letter 10 November 2025; Q1 2026 release 14 May; Q2 release 13 August, 10-Q the next day) points to a release in the week of 10 November 2026 with the 10-Q due by 16 November under the emerging-growth 45-day deadline. The first annual meeting is 30 October 2026 (record date 31 August). Nearer catalysts: the TensorWave closing deadline of 30 September 2026 (extendable), the Yorkville note's expiry about the same date, Hillcore definitive documents about 90 days from 11 August, the MUFG nine-month test of a lease of at least 400 MW around 10 November, the Keystone approved-customer-agreement deadline of 31 December 2026 and the USD 9 million Texas Tech escrow due the same day. Share price USD 5.12 on 4 September 2026 (all-time high USD 36.99 on 2 October 2025; low USD 4.47 on 9 April 2026); market capitalisation about USD 3.28 billion; short interest 7.69% of float."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Fermi's product is time-to-power rather than land or buildings, and that the company has converted its balance sheet into that claim: about 1.5 GW of turbines landed and 6 GW of gas permitted before any tenant, financed by three equipment lenders at 12–13% and a warehouse line that punishes the absence of a 400 MW lease by November 2026. Basis: the fleet table with time-to-power by unit in the Q2 2026 presentation; the MUFG, Keystone and Beal facility terms in the 8-Ks and 10-Q; the chairman's 'no site we know of that has equipment and the ability to deliver 4.8 gigawatts'.",
+    "(High confidence) We assess that the TensorWave lease is a conditional option on the company rather than a contract in force until it closes: effectiveness requires project-level financing, board approvals and a third-party guarantor by 30 September 2026 (extendable), the guarantor line was removed from the release, and the tenant is a venture-backed neocloud whose parent guaranty is the only credit named. Basis: 10-Q Note 9; the two versions of the 10 August release as documented by Pacific Software Ventures; TensorWave's investor list. Collection gap: no 8-K for the lease and no named guarantor by 5 September 2026.",
+    "(Moderate confidence) We assess that the Hillcore build-own-operate-transfer framework is a capital-substitution move that halves the generation Fermi must fund itself, at the cost of a take-or-pay obligation on at least half of tenant load and a partner that has not yet signed definitive documents. Basis: the framework's structure (Hillcore finances, builds, owns and operates; Fermi buys under long-term PPAs with a 10-year FMV purchase option) against Fermi's USD 91.7 million of cash and 'over $3 billion' of Phase 0–1 capex. The 2.2 GW self-build plus 2.6 GW Hillcore arithmetic that yields '4.8 GW' counts a framework as capacity.",
+    "(Moderate confidence) We assess that the governance conflict is unresolved rather than finished: the former CEO's consent solicitation is 'suspended', his litigation and the company's counter-suits continue, the 70% bylaw he contests remains, and the 30 October 2026 annual meeting is the first vote under the new board. Basis: the duelling DEFC14A filings, the July 2026 8-Ks, the 10-Q's litigation note and the 31 August 8-K. The two ownership figures — 22.7% in his filing, 'approximately 40%' in the company's — are a dispute about affiliates and dates, not a reconciliation.",
+    "(Moderate confidence) We assess that the schedule now on the record is 2027 for first on-site power and 2033 for first nuclear power, and that the company's website ('first power online in 2026') and the SPS release ('86 MW beginning January 2026') are stale. Basis: the COO's 13 August 2026 remarks (210 MW on 1 July 2027; 640 MW nameplate by Q4 2027), the 10-K's restatement of the SPS energisation to the second half of 2026, the 10-Q's reactor schedule, and the Cleanview and Distilled satellite record. Indicator: whether the '200 megawatts of initial commercial power over the next six months' (SPS grid power) is energised by February 2027.",
+    "(Low confidence) We assess that the AP1000 programme is a licensing asset and a political banner rather than a financeable project on any current horizon: no tenant, PPA, EPC contract or funding award is attached to it, the first unit slipped to 2033 inside a year, and the stated all-phase capital need is USD 70–90 billion for a company capitalised at about USD 3.3 billion. Basis: the NRC docket schedule, the 10-Q's nuclear section and the absence of nuclear-specific financing in any filing. The counter-evidence is real: the COLA is docketed, the EIS pilot is running, Hyundai completed the FEED and Doosan is lined up — the programme is further along than most announced US nuclear builds.",
+    "Collection gap: no PUCT or SPP interconnection docket for the SPS agreement; no first-party disclosure of the TensorWave guarantor, the Hillcore definitive agreement or the data-center general contractor; the July 2026 consent tally and the Bayonne and Peña/Summers suits are known only from the 10-Q's summary and mirrors; the Q3 2026 report date is inferred from cadence. INDICATORS TO WATCH: 30 September 2026 — TensorWave closing or extension, with or without a named guarantor; ~9 November 2026 — Hillcore definitive documents; 10 November 2026 — MUFG 400 MW lease test and the probable Q3 report; 30 October 2026 — the first annual meeting and any founder nominations; 31 December 2026 — Keystone approved-customer deadline, Texas Tech escrow, NRC Part 3; H2 2026 — energisation of the 86 MW SPS block, which would be the first watt delivered to the site."
+  ],
+  "sources": [
+    {
+      "label": "Fermi America — Community Questions FAQ",
+      "url": "https://fermiamerica.com/community-questions/",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "SEC EDGAR — 8-K AGM 2026-10-30 set; Stein to Audit",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026095719/ea0303852-8k_fermi.htm",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "StockTitan — StockTitan 8-K summary (annual meeting Oct 30, 2026; McIntire; Stein)",
+      "url": "https://www.stocktitan.net/sec-filings/FRMI/8-k-fermi-inc-reports-material-event-31ab1c6c0be6.html",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Fermi America — CEO McIntire op-ed on Gov. Abbott directive",
+      "url": "https://fermiamerica.com/texas-is-sending-a-clear-message-on-ai-infrastructure-fermi-was-built-for-it/",
+      "date": "2026-08-20"
+    },
+    {
+      "label": "Bisnow — EDNY subpoena",
+      "url": "https://www.bisnow.com/news/national/data-center-capital-markets/fermi-project-matador-management-records-subpoena",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "Fermi America — Hillcore alliance explainer (2.2 GW own + 2.6 GW = 4.8 GW)",
+      "url": "https://fermiamerica.com/fermi-and-hillcore-energy-capital-alliance/",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "MarketScreener — subpoena headline (body paywalled)",
+      "url": "https://www.marketscreener.com/news/fermi-shares-fall-after-receiving-subpoena-from-eastern-district-of-new-york-over-project-matador-ce7859dcda80f32d",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. Form 10-Q for the quarter ended 30 June 2026 (TensorWave lease, Hillcore framework, debt, litigation, going concern)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "SEC EDGAR — Schedule 13G/A Robert Randolph Neugebauer 1.8%",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026089998/xslSCHEDULE_13G_X02/primary_doc.xml",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. 8-K: Lee McIntire appointed Chief Executive Officer",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026089340/ea0302016-8k_fermi.htm",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "TipRanks — FRMI analyst price targets (Stifel, Evercore, UBS, Mizuho, Cantor, Citizens)",
+      "url": "https://www.tipranks.com/stocks/frmi/forecast",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "StockTitan — StockTitan 13G/A summary",
+      "url": "https://www.stocktitan.net/sec-filings/FRMI/schedule-13g-a-fermi-inc-amended-passive-investment-disclosure-e8373d7ce69d.html",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Q2 2026 earnings",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000046/frmi-20260813.htm",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. Q2 2026 earnings release (8-K exhibit 99.1): five 90-day objectives, 1.5 GW of turbines landed, liquidity",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000046/fermiq22026erex_991.htm",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Fermi America IR — Q2 2026 earnings call prepared remarks (Haas, Bofa, Ortiz, Masson): 210 MW on 1 July 2027, 640 MW nameplate by Q4 2027",
+      "url": "https://irp.cdn-website.com/4ee5afac/files/uploaded/Final+2Q26+Prepared+Remarks+8-13-26.pdf",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Fermi America IR — Q2 2026 investor presentation (generation fleet table, financing commitments)",
+      "url": "https://irp.cdn-website.com/4ee5afac/files/uploaded/Fermi+2Q+2026+Investor+Presentation+vF.pdf",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Investing.com — McIntire named CEO",
+      "url": "https://www.investing.com/news/company-news/fermi-appoints-lee-mcintire-as-chief-executive-officer-93CH-4856641",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "StockTitan (wire mirror) — Fermi and Hillcore Energy Capital announce 2.6 GW power alliance (build-own-operate-transfer framework)",
+      "url": "https://www.stocktitan.net/news/FRMI/fermi-and-hillcore-energy-capital-announce-2-6-gigawatt-power-o3e2zcdffw5f.html",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "Pacific Software Ventures — TensorWave lease critique",
+      "url": "https://pacificsoftwareventures.com/newsroom/fermi-tensorwave-data-center-lease-commercial-real-estate",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "Fermi America IR — Fermi announces binding lease agreement with TensorWave (222 MW, ~USD 6.5 billion, 15 years)",
+      "url": "https://investor.fermiamerica.com/fermi-announces-binding-lease-agreement-with-tensorwave",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Fermi America — IR RSS feed (one item)",
+      "url": "https://investor.fermiamerica.com/feed/rss2",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "StockTitan (wire mirror) — Fermi announces binding lease agreement with TensorWave",
+      "url": "https://www.stocktitan.net/news/FRMI/fermi-announces-binding-lease-agreement-with-tensor-61xewkzezm15.html",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "ABC7 Amarillo — TensorWave lease + turmoil timeline",
+      "url": "https://abc7amarillo.com/news/local/fermi-america-signs-six-point-five-billion-dollar-lease-for-worlds-largest-data-center-after-months-of-turmoil-tensorwave-amarillo-texas-carson-county-water-city-council-greg-abbott-audir",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "The Motley Fool — Xcel Q2-2026 call transcript (no Fermi mention)",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/08/03/xcel-energy-xel-q2-2026-earnings-call-transcript/",
+      "date": "2026-08-03"
+    },
+    {
+      "label": "SEC EDGAR — 8-K officer appointments (Wentz, Bofa, Ortiz, Masson)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026080917/ea0298895-8k_fermi.htm",
+      "date": "2026-07-23"
+    },
+    {
+      "label": "SEC EDGAR — 8-K/A Everson response letter",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026079998/ea0298708-8ka1_fermi.htm",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "Fermi America — First Siemens F-class turbines arrive (up to 780 MW combined)",
+      "url": "https://fermiamerica.com/first-siemens-turbines-arrive-for-project-matador/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "SEC EDGAR — Schedule 13G Caddis 8.2% (passive)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000212347026000005/xslSCHEDULE_13G_X02/primary_doc.xml",
+      "date": "2026-07-20"
+    },
+    {
+      "label": "SEC EDGAR — 8-K converts closed $431.25M",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026078366/ea0298074-8k_fermi.htm",
+      "date": "2026-07-15"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Everson resigns as director",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026077385/ea0297782-8k_fermi.htm",
+      "date": "2026-07-13"
+    },
+    {
+      "label": "Lubbock Lights — proxy fight paused",
+      "url": "https://lubbocklights.com/neugebauer-hits-brakes-on-fermi-proxy-fight-future-of-huge-data-center-project-with-texas-tech-still-to-be-decided/",
+      "date": "2026-07-10"
+    },
+    {
+      "label": "SEC EDGAR — 8-K converts launch; REIT deferral",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026076788/ea0297535-8k_fermi.htm",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Ex 99.1 preliminary offering memorandum excerpts (recent developments, litigation, capitalization)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026076788/ea029753501ex99-1.htm",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "Newswire.com — Convertible notes pricing PR (Newswire mirror)",
+      "url": "https://www.newswire.com/news/fermi-inc-prices-upsized-offering-of-375-million-of-convertible-senior-notes",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "SEC EDGAR — Schedule 13D/A Caddis 8.2%",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000212347026000004/xslSCHEDULE_13D_X02/primary_doc.xml",
+      "date": "2026-07-08"
+    },
+    {
+      "label": "StockTitan — Neugebauer suspends proxy campaign PR (StockTitan mirror)",
+      "url": "https://www.stocktitan.net/news/FRMI/neugebauer-suspends-current-proxy-campaign-while-leading-with-about-rjvqkuyywuxh.html",
+      "date": "2026-07-03"
+    },
+    {
+      "label": "Yahoo Finance — Reuters via Yahoo — proxy campaign suspended",
+      "url": "https://finance.yahoo.com/energy/articles/fermi-ceo-neugebauer-suspends-proxy-174904527.html",
+      "date": "2026-07-03"
+    },
+    {
+      "label": "StockTitan (wire mirror) — Fermi selects TSK for early-works engineering on three Siemens SGT6-5000F turbines",
+      "url": "https://www.stocktitan.net/news/FRMI/fermi-inc-selects-tsk-spain-s-largest-epc-firm-to-deliver-early-75av9kmd413b.html",
+      "date": "2026-06-25"
+    },
+    {
+      "label": "Yahoo Finance — Simply Wall St via Yahoo — governance rift / TSK",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/fermi-frmi-down-7-4-001532589.html",
+      "date": "2026-06-25"
+    },
+    {
+      "label": "Investing.com — Stifel PT cut to $17",
+      "url": "https://www.investing.com/news/analyst-ratings/stifel-cuts-fermi-stock-price-target-to-17-on-contract-delays-93CH-4755290",
+      "date": "2026-06-23"
+    },
+    {
+      "label": "StockTitan — Fermi consent-revocation statement PR (StockTitan mirror)",
+      "url": "https://www.stocktitan.net/news/FRMI/fermi-files-definitive-consent-revocation-statement-and-mails-letter-18qv08wnduqz.html",
+      "date": "2026-06-15"
+    },
+    {
+      "label": "SEC EDGAR — DEFC14A company consent revocation statement",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026067954/ea0291106-07.htm",
+      "date": "2026-06-12"
+    },
+    {
+      "label": "SEC EDGAR — DEFC14A Neugebauer consent statement (7 nominees)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026067352/ea0294314-defc14a_toby.htm",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "ABC7 Amarillo — moratorium debate",
+      "url": "https://abc7amarillo.com/news/local/amarillo-leaders-weigh-2-year-moratorium-on-large-scale-data-centers-amid-resource-concerns-mayor-cole-stanley-fermi-america-project-matador",
+      "date": "2026-05-29"
+    },
+    {
+      "label": "SEC EDGAR — Schedule 13G/A Pencross Energy/Steven Meisel 4.5%",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000114036126021647/xslSCHEDULE_13G_X02/primary_doc.xml",
+      "date": "2026-05-15"
+    },
+    {
+      "label": "SEC EDGAR — Schedule 13D Caddis Holdings/Griffin Perry 9.1%",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000212347026000002/xslSCHEDULE_13D_X02/primary_doc.xml",
+      "date": "2026-05-15"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. Form 10-Q for the quarter ended 31 March 2026 (Siemens F-class purchase, NRC EIS pilot, groundwater lease)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000032/frmi-20260331.htm",
+      "date": "2026-05-15"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Q1 2026 earnings",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000027/frmi-20260514.htm",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "SEC EDGAR — 8-K bylaws 70% amendment",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026056189/ea0290747-8k_fermi.htm",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. Q1 2026 earnings release (8-K exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002071778/000207177826000027/fermi1q26erex_991.htm",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "Electron Economics (Substack) — ElectronEconomics — \"Fermi's paradox\"",
+      "url": "https://electroneconomics.substack.com/p/fermis-paradox-a-permitted-11-gw",
+      "date": "2026-05-09"
+    },
+    {
+      "label": "SEC EDGAR — 8-K response to Neugebauer solicitation",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026052548/ea0289365-8k_fermi.htm",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "KCBD — Fermi/Neugebauer legal battle",
+      "url": "https://www.kcbd.com/2026/05/06/fermi-america-co-founder-neugebauer-legal-battle/",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Kellerman elected director",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026051895/ea0289160-8k_fermi.htm",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Ex 99.1 press release responding to Neugebauer",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026052548/ea028936501ex99-1.htm",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "Amarillo Tribune — Neugebauer lawsuit",
+      "url": "https://amarillotribune.org/2026/05/01/former-fermi-ceo-files-lawsuit-asking-for-his-termination-to-be-invalidated/",
+      "date": "2026-05-01"
+    },
+    {
+      "label": "Bisnow — ousted co-founder sues",
+      "url": "https://www.bisnow.com/national/news/data-center-personnel/fermi-ousts-co-founder-largest-shareholder-from-board-134380",
+      "date": "2026-05-01"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. Form 10-K/A (Part III: officer and director biographies, beneficial ownership at 26 April 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000018/frmi-20251231.htm",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "SEC EDGAR — 8-K/A Neugebauer terminated for Cause",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026050183/ea0288605-8ka1_fermi.htm",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Masson interim CFO",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026049696/ea0288469-8k_fermi.htm",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "ANS Nuclear Newswire — CEO/CFO step down",
+      "url": "https://www.ans.org/news/2026-04-22/article-7967/ceo-and-cfo-of-fermi-america-step-down/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "Fortune — CFO resigns",
+      "url": "https://fortune.com/2026/04/21/fermi-cfo-resigns-two-days-after-ceo-stepped-down/",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Stein appointed; Everson resigns CFO",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026045351/ea0286925-8k_fermi.htm",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Ex 99.1 'Fermi 2.0' press release",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026045351/ea028692501ex99-1.htm",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "Fortune — Fermi 2.0 reset",
+      "url": "https://fortune.com/2026/04/20/financially-struggling-ai-power-startup-fermi-loses-ceo-reset/",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "CFO Dive — shares slump",
+      "url": "https://www.cfodive.com/news/fermi-shares-slump-ceo-ceo-step-down/817994/",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "Distilled (Michael Thomas) — The world's largest planned data center is running into trouble",
+      "url": "https://www.distilled.earth/p/the-worlds-largest-planned-data-center",
+      "date": "2026-04-19"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Neugebauer departs CEO role; Everson to board",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026045197/ea0286864-8k_fermiinc.htm",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "SEC EDGAR — Schedule 13G/A Caddis/Griffin Perry 9.7%",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000195068326000001/xslSCHEDULE_13G_X02/primary_doc.xml",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Robert Bryce (Substack) — insider selling",
+      "url": "https://robertbryce.substack.com/p/as-fermi-falters-insiders-are-dumping",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "National Law Review — Yorkville $156.25M note PR (NatLawReview mirror)",
+      "url": "https://natlawreview.com/press-releases/fermi-america-secures-15625-million-committed-financing-facility-yorkville",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "Cleanview — Fermi America satellite-imagery progress report",
+      "url": "https://cleanview.co/reports/fermi",
+      "date": "2026-04"
+    },
+    {
+      "label": "Investing.com — FY2025 $486M loss",
+      "url": "https://www.investing.com/news/company-news/fermi-reports-486-million-loss-in-first-year-of-operations-93CH-4589154",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. Form 10-K for the period from inception (10 January 2025) to 31 December 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000010/frmi-20251231.htm",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "SEC EDGAR — 8-K FY2025 shareholder letter",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000007/frmi-20260330.htm",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "Investing.com — Q4-2025 call transcript summary",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-fermi-america-sees-stock-plunge-after-q4-2025-results-93CH-4588245",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Beal/CLMG $165M SGT-800 financing",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026035482/ea0283735-8k_fermiinc.htm",
+      "date": "2026-03-27"
+    },
+    {
+      "label": "ANS Nuclear Newswire — EIS pilot / scoping",
+      "url": "https://www.ans.org/news/2026-03-24/article-7875/project-matador-joins-eis-pilot-program-nrc-seeks-public-input/",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "Fermi America — Repost of PRNewswire release: 5 GW TCEQ filing, 17 GW plan",
+      "url": "https://fermiamerica.com/worlds-largest-private-grid-fermi-america-to-file-additional-5gw-clean-air-permit-for-project-matador-with-the-texas-commission-on-environmental-quality-tceq-upsizing-campus-proje/",
+      "date": "2026-03-13"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Keystone/Cape $120M HV facility",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026020399/ea0277810-8k_fermi.htm",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "Fermi America — Repost of KFDA article: TCEQ final 6 GW permit; Cathy Landtroop title",
+      "url": "https://fermiamerica.com/fermi-america-receives-nations-second-largest-clean-air-permit-for-project-matador/",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "MarketScreener (wire mirror) — Fermi America secures final 6 GW clean air permit from the TCEQ",
+      "url": "https://www.marketscreener.com/news/fermi-americaa-secures-final-6gw-clean-air-permit-from-the-texas-commission-on-environmental-quali-ce7e5cd8db81f227",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "Fermi America — Repost of PRNewswire release: Keystone/Cape $200M facility initial draw",
+      "url": "https://fermiamerica.com/fermi-america-makes-initial-draw-on-200-million-equipment-facility-from-keystone-national-group-and-cape-commercial-finance-to-accelerate-the-delivery-of-the-first-2-3gw-of-project-matador/",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Finviz (wire mirror) — Fermi America makes initial draw on USD 200 million equipment facility from Keystone National Group and Cape Commercial Finance",
+      "url": "https://finviz.com/news/316528/fermi-america-makes-initial-draw-on-200-million-equipment-facility-from-keystone-national-group-and-cape-commercial-finance-to-accelerate-the-delivery-of-the-first-23gw-of-project-matadors-11gw-private-hypergrid-campus",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "MarketScreener — Keystone draw (paywalled)",
+      "url": "https://www.marketscreener.com/news/fermi-america-makes-initial-draw-on-200-mln-facility-from-keystone-national-group-cape-commercial-ce7e5ddcd18eff23",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Pipeline & Gas Journal — SGT-800s at Port of Houston",
+      "url": "https://pgjonline.com/news/2026/february/fermi-america-receives-siemens-gas-turbines-at-port-of-houston-for-texas-power-project",
+      "date": "2026-02-17"
+    },
+    {
+      "label": "Finviz (wire mirror) — Fermi America deepens strategic partnership with Hyundai E&C for Project Matador nuclear construction",
+      "url": "https://finviz.com/news/308342/fermi-america-deepens-strategic-partnership-with-hyundai-ec-to-lead-the-return-of-large-scale-nuclear-construction-in-the-us-with-project-matador",
+      "date": "2026-02-11"
+    },
+    {
+      "label": "SEC EDGAR — 8-K MUFG $500M equipment financing",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026014270/ea0276274-8k_fermi.htm",
+      "date": "2026-02-10"
+    },
+    {
+      "label": "NewsChannel 10 Amarillo — construction pause",
+      "url": "https://www.newschannel10.com/2026/02/06/project-matador-construction-paused-fermi-america-awaits-clean-air-permit/",
+      "date": "2026-02-06"
+    },
+    {
+      "label": "National Law Review — NatLawReview/Hagens Berman — class action",
+      "url": "https://natlawreview.com/press-releases/fermi-inc-frmi-slapped-securities-class-action-over-ipo-and-subsequent",
+      "date": "2026-01-06"
+    },
+    {
+      "label": "Lubbock Lights — Texas Tech/Fermi",
+      "url": "https://lubbocklights.com/texas-tech-fermi-team-up-on-project-matador-to-power-artificial-intelligence-near-pantex-plant-in-panhandle/",
+      "date": "2025-12-29"
+    },
+    {
+      "label": "Reuters via Yahoo Finance — Fermi denies report that Amazon was the prospective tenant that withdrew funding",
+      "url": "https://finance.yahoo.com/news/amazon-prospective-tenant-withdrew-funding-014933872.html",
+      "date": "2025-12-17"
+    },
+    {
+      "label": "SEC EDGAR — 8-K First Tenant AICA terminated",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390025120940/ea0269377-8k_fermi.htm",
+      "date": "2025-12-12"
+    },
+    {
+      "label": "ConstructConnect — $150M deal fails",
+      "url": "https://news.constructconnect.com/150m-deal-fails-at-hypergrid-ai-project-fermi-america-stock-falls",
+      "date": "2025-12-12"
+    },
+    {
+      "label": "Yahoo Finance — Zacks via Yahoo — XEL unit to supply 200 MW",
+      "url": "https://finance.yahoo.com/news/xels-unit-supply-200-mw-184000535.html",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "Amarillo Tribune — Asked & answered",
+      "url": "https://amarillotribune.org/2025/12/09/asked-and-answered-fermi-america/",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "Fermi America — Electric service agreement reached with Xcel Energy subsidiary SPS (up to 200 MW; repost of MyHighPlains coverage)",
+      "url": "https://fermiamerica.com/fermi-america-electric-service-agreement-reached-with-xcel-energy-subsidiary/",
+      "date": "2025-12-08"
+    },
+    {
+      "label": "Finviz (PR Newswire mirror) — Fermi America executes electric service agreement with Southwestern Public Service Company, securing up to 200 MW",
+      "url": "https://finviz.com/news/247403/fermi-america-executes-electric-service-agreement-with-southwestern-public-service-company-a-subsidiary-of-xcel-energy-securing-up-to-200-mw-of-power",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "Yahoo Finance — SPS/Xcel ESA PR (Yahoo Finance mirror)",
+      "url": "https://finance.yahoo.com/news/fermi-america-executes-electric-agreement-213000296.html",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "Amarillo Tribune — TTUS lease terms",
+      "url": "https://amarillotribune.org/2025/11/17/fermi-americas-lease-with-the-texas-tech-university-system-establishes-research-facilities-scholarship-fund-and-more/",
+      "date": "2025-11-17"
+    },
+    {
+      "label": "SEC EDGAR — 8-K Q3 2025 shareholder letter",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390025108289/ea0264721-8k_fermi.htm",
+      "date": "2025-11-10"
+    },
+    {
+      "label": "Amarillo Tribune — Just facts",
+      "url": "https://amarillotribune.org/2025/11/05/just-facts-fermi-america-and-project-matador/",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "Fermi America — Repost of Yahoo Finance release: MPS 7× TM2500 157.5 MW 20-yr lease",
+      "url": "https://fermiamerica.com/fermi-america-secures-agreement-with-mobile-power-solutions-for-157-5-mw-of-ge-tm2500-turbines-securing-even-more-power-for-the-worlds-largest-11gw-private-energy-grid/",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Amarillo Tribune — S-11 filings / ownership",
+      "url": "https://amarillotribune.org/2025/10/08/digging-into-fermis-filings-carson-county-roads-and-company-leadership/",
+      "date": "2025-10-08"
+    },
+    {
+      "label": "SEC EDGAR — 8-K CEO/management employment agreements",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390025096560/ea0260350-8k_fermi.htm",
+      "date": "2025-10-06"
+    },
+    {
+      "label": "SEC EDGAR — 8-K underwriting agreement, LLC→corp conversion, board, LTIP",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390025095832/ea0260052-8k_fermi.htm",
+      "date": "2025-10-03"
+    },
+    {
+      "label": "Texas Standard — IPO reaction",
+      "url": "https://texasstandard.org/stories/fermi-america-nuclear-powered-data-center-ai-artificial-intelligence-perry-texas-amarillo/",
+      "date": "2025-10-03"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. prospectus (424B4): 32,500,000 shares at USD 21.00; Nasdaq and LSE listing",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390025094424/ea0252333-11.htm",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "Investing.com — IPO pricing",
+      "url": "https://www.investing.com/news/stock-market-news/fermi-prices-ipo-at-21-per-share-near-top-of-range-raises-6825-million-432SI-4264845",
+      "date": "2025-09-30"
+    },
+    {
+      "label": "IPOScoop — IPO buzz",
+      "url": "https://www.iposcoop.com/the-ipo-buzz-fermi-frmi-prices-ipo-at-21-above-the-mid-point/",
+      "date": "2025-09-30"
+    },
+    {
+      "label": "POWER Magazine — NRC accepts COLA",
+      "url": "https://www.powermag.com/nrc-accepts-cola-for-fermi-americas-behemoth-four-unit-ap1000-nuclear-plant-in-texas/",
+      "date": "2025-09-09"
+    },
+    {
+      "label": "World Nuclear News — NRC accepts partial application",
+      "url": "https://www.world-nuclear-news.org/articles/nrc-accepts-fermi-americas-partial-licence-application",
+      "date": "2025-09-09"
+    },
+    {
+      "label": "SEC EDGAR — Fermi Inc. filing index (CIK 2071778; fiscal year end 31 December; Dallas business address)",
+      "url": "https://data.sec.gov/submissions/CIK0002071778.json"
+    },
+    {
+      "label": "Fermi America — Homepage (17 GW, ~8,400 acres, 'first power online in 2026', TensorWave banner)",
+      "url": "https://fermiamerica.com/"
+    },
+    {
+      "label": "Fermi America — Vision page (7,570 acres, Waha, aquifer, fiber)",
+      "url": "https://fermiamerica.com/vision/"
+    },
+    {
+      "label": "Fermi America — Progress page (fleet: SGT-800s 478 MW ISO, F-class 1.1 GW CC, GE 6Bs; 4.4 GW nuclear; 1 GW Xcel/solar/battery)",
+      "url": "https://fermiamerica.com/progress/"
+    },
+    {
+      "label": "Fermi America — Executive leadership page (names, titles, headshots)",
+      "url": "https://fermiamerica.com/executive-leadership/"
+    },
+    {
+      "label": "Fermi America — Newsroom index",
+      "url": "https://fermiamerica.com/newsroom/"
+    },
+    {
+      "label": "Fermi America — Contact page (Amarillo HQ, Trent Sisemore, IR email)",
+      "url": "https://fermiamerica.com/contact/"
+    },
+    {
+      "label": "Fermi America — newsroom post index (dates and titles of every release)",
+      "url": "https://fermiamerica.com/wp-json/wp/v2/posts?per_page=60&_fields=date,link,title"
+    },
+    {
+      "label": "Fermi America — IR home",
+      "url": "https://investor.fermiamerica.com/"
+    },
+    {
+      "label": "Fermi America — IR board of directors (bios)",
+      "url": "https://investor.fermiamerica.com/board-of-directors"
+    },
+    {
+      "label": "Fermi America — IR committee composition (stale)",
+      "url": "https://investor.fermiamerica.com/committee-composition"
+    },
+    {
+      "label": "Fermi America — IR analyst coverage (11 firms)",
+      "url": "https://investor.fermiamerica.com/analyst-coverage"
+    },
+    {
+      "label": "Fermi America — IR contact (Rodrigo Acuna)",
+      "url": "https://investor.fermiamerica.com/contact-ir"
+    },
+    {
+      "label": "Fermi America — IR events & presentations (Q2 2026 call; no upcoming events)",
+      "url": "https://investor.fermiamerica.com/events-presentations"
+    },
+    {
+      "label": "Yahoo Finance — FRMI price history (USD 5.12 close on 4 September 2026; 52-week range 4.47–36.99)",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/FRMI?range=5d&interval=1d"
+    },
+    {
+      "label": "StockAnalysis — FRMI quote, market capitalisation and analyst consensus",
+      "url": "https://stockanalysis.com/stocks/frmi/"
+    },
+    {
+      "label": "MarketBeat — FRMI overview: analyst consensus, institutional holders, short interest",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/FRMI/"
+    },
+    {
+      "label": "Global Energy Monitor — Project Matador power station (permit-derived unit table)",
+      "url": "https://www.gem.wiki/Fermi_America_Project_Matador_power_station"
+    },
+    {
+      "label": "US NRC — Fermi America Project Matador combined license application page (dockets 052-00051 to 052-00054; review schedule)",
+      "url": "https://www.nrc.gov/reactors/new-reactors/large-lwr/col/fermi-energy-intel-campus"
+    },
+    {
+      "label": "Boardroom Alpha — Jul 15, 2026 special meeting page",
+      "url": "https://www.boardroomalpha.com/meetings/frmi-2026-special-meeting-jul"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

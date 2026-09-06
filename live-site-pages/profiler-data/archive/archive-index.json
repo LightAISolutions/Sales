@@ -893,6 +893,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "lambda.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 5
     }
   ],
   "lg-energy-solution": [
@@ -1949,6 +1955,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-04",
       "supersededBy": 2
+    },
+    {
+      "file": "xcel-energy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-09-05",
+      "supersededBy": 3
     }
   ],
   "invenergy": [

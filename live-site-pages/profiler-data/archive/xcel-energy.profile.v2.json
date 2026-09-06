@@ -1250,17 +1250,6 @@
       "note": "Tesla Powerwall owners in Colorado can enroll in Xcel's Renewable Battery Connect VPP, per Tesla's own program page; no Megapack or utility-scale supply link was found.",
       "context": "Tesla's support page describes Powerwall participation in Xcel Energy's Colorado program, and Itron's release describes the platform that aggregates Tesla and Enphase batteries. The link is deliberately typed as a residential-program partnership: no source connects Tesla to Xcel's utility-scale storage build (Sherco, Blue Lake, High Plains), whose integrators are undisclosed.",
       "source": "https://www.tesla.com/support/energy/virtual-power-plant/xcel-energy"
-    },
-    {
-      "slug": "fermi-america",
-      "type": "customer",
-      "status": "announced",
-      "since": "2025-12",
-      "scale": "up to 200 MW",
-      "via": "Southwestern Public Service Company electric service agreement (115 kV) — Project Matador, Carson County, TX",
-      "note": "SPS signed a definitive electric service agreement on 5 December 2025 to supply up to 200 MW to Fermi America's Project Matador campus near Amarillo — the only named SPS data-center contract.",
-      "context": "The PR Newswire release states 86 MW 'beginning January 2026' over SPS's 115 kV system, ramping to 200 MW, with Xcel's Texas–New Mexico president Adrian Rodriguez quoted. Fermi's FY2025 10-K later restated the 86 MW as 'expected to be energized in the second half of 2026' with the incremental 114 MW contractually due by 1 October 2027, and its Q2 2026 release still described 'working with Xcel Energy toward 200 MW onsite power' — so no power had been delivered by mid-August 2026, and Xcel did not name Fermi on its Q2 2026 call. The 200 MW is a grid supplement to a campus that plans up to 17 GW of its own generation; on Xcel's pipeline slide it is the smallest contracted tier. Recorded here from Fermi's account (the Fermi dossier, September 2026); Xcel has not separately announced the agreement.",
-      "source": "https://www.prnewswire.com/news-releases/fermi-america-executes-electric-service-agreement-with-southwestern-public-service-company-a-subsidiary-of-xcel-energy-securing-up-to-200-mw-of-power-302634443.html"
     }
   ],
   "policyExposure": [
@@ -2156,6 +2145,6 @@
       "url": "https://www.xcelenergy.com/company/rates_and_regulations/resource_plans/clean_energy_plan"
     }
   ],
-  "lastUpdated": "2026-09-05",
-  "profileVersion": 3
+  "lastUpdated": "2026-09-04",
+  "profileVersion": 2
 }

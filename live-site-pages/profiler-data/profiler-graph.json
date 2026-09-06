@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-05",
- "companies": 133,
+ "built": "2026-09-06",
+ "companies": 136,
  "edges": [
   {
    "a": "abb",
@@ -1888,6 +1888,21 @@
   },
   {
    "a": "aligned",
+   "b": "prime-data-centers",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Aligned's ORD3 campus is among the Chicago developments CBRE sets beside Prime's Elk Grove Village campus; Lambda leases from both landlords (Aligned DFW-04 Plano and Prime LAX01).",
+     "context": "CBRE's H2 2025 Chicago survey; the Lambda dossier's colocation list.",
+     "source": "https://www.cbre.com/insights/books/north-america-data-center-trends-h2-2025/chicago-data-center-market",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aligned",
    "b": "qts",
    "curated": {
     "b": {
@@ -2397,6 +2412,30 @@
     }
    ],
    "last": "2026-07-10"
+  },
+  {
+   "a": "amazon",
+   "b": "fermi-america",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Business Insider reported that Amazon was the investment-grade 'First Tenant' whose USD 150 million advance-in-aid-of-construction agreement was terminated on 11 December 2025; Fermi and its then-CEO 'categorically' denied the report.",
+     "context": "The 8-K of 12 December 2025 identifies the counterparty only as an investment-grade tenant that signed a letter of intent on 19 September 2025 and the agreement on 3 November 2025, and terminated it after exclusivity lapsed with no funds drawn. Reuters (via Yahoo Finance) carried the Business Insider attribution and Fermi's denial; Amazon did not comment. This dossier records the link as reported and denied, not as a relationship; the Amazon dossier carries nothing on Fermi.",
+     "source": "https://finance.yahoo.com/news/amazon-prospective-tenant-withdrew-funding-014933872.html",
+     "status": "historical",
+     "since": "2025-09"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Fermi 'categorically' denies a Business Insider report that Amazon was the prospective tenant that withdrew the $150 million agreement — The tenant's identity stays unconfirmed on both sides; the denial is the company's only statement about who it was.",
+     "src": "https://finance.yahoo.com/news/amazon-prospective-tenant-withdrew-funding-014933872.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-17"
   },
   {
    "a": "amazon",
@@ -3097,6 +3136,20 @@
     }
    ],
    "last": "2026-03-20"
+  },
+  {
+   "a": "amazon",
+   "b": "tract",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-09-06",
+     "text": "Yahoo Finance interview: van Rooyen says Tract does 'all the complicated and hard to do part[s] of infrastructure' so hyperscalers can 'move with speed and certainty'; names Microsoft, Nvidia, Amazon and Meta as the market — The pitch in the founder's words; none of the four is a disclosed customer.",
+     "src": "https://finance.yahoo.com/video/tract-helps-hyperscalers-meet-data-214719118.html",
+     "from": "b"
+    }
+   ],
+   "last": "2024-09-06"
   },
   {
    "a": "amazon",
@@ -10318,6 +10371,20 @@
   },
   {
    "a": "compass-datacenters",
+   "b": "tract",
+   "evid": [
+    {
+     "where": "Capabilities · Hyperscale single-tenant build-to-suit campuses (the core product)",
+     "date": "",
+     "text": "An independent 2026 buyer's guide lists it as a 'Dedicated hyperscale campus developer' alongside QTS, Vantage, CyrusOne, STACK, Aligned, DataBank, NTT, Equinix xScale, Digital Realty and Tract, and advises buyers to 'Confirm whether the project will be customer-owned, leased, or operated by Compass'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
    "b": "vantage",
    "curated": {
     "a": {
@@ -11622,6 +11689,74 @@
   },
   {
    "a": "coreweave",
+   "b": "prime-data-centers",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "CoreWeave is the tenant of Prime's Elk Grove Village campus under a 15-year build-to-suit lease worth about USD 2.2 billion with two seven-year renewals, disclosed through the June 2026 USD 900 million bond marketing.",
+     "context": "Bloomberg (via Investing.com, 2 June 2026) and GuruFocus report that Elk Grove Village Property LLC, a wholly owned indirect Prime subsidiary, priced USD 900 million of five-year 7.5% notes backed by the CoreWeave lease to refinance USD 500 million and fund remaining construction. Prime's location page shows all three Chicago buildings 'Leased' (72 + 54 + 54 MW) without naming the tenant, and CBRE's H2 2025 Chicago survey records the campus as fully leased. The CoreWeave dossier records nothing on Prime or Elk Grove Village.",
+     "source": "https://www.investing.com/news/stock-market-news/coreweave-data-center-raises-900-million-in-junkbond-sale--bloomberg-93CH-4723001",
+     "status": "active",
+     "since": "2025",
+     "scale": "~$2.2 billion, 15-year lease",
+     "via": "Elk Grove Village (ORD01) build-to-suit campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Prime Data Centers is a founder-controlled, privately held developer of wholesale and build-to-suit campuses — about 151 MW operating across Chicago, Los Angeles, Dallas, Sacramento and Silicon Valley, about 222 MW under construction led by the 240 MW Avondale, Arizona campus that broke ground in May 2026, and a '4+ GW' (or, in one April 2026 release, '7 GW') pipeline across Texas, Pennsylvania, Denmark, Finland, Germany and Spain — whose two named tenants are CoreWeave (a 15-year, about USD 2.2 billion lease at Elk Grove Village, financed by USD 900 million of 7.5% notes in June 2026) and Lambda (21 MW at Vernon), and whose 2026 has brought a shelved USD 500 million Nordic bond, a Grain Management preferred-equity injection into its parent, and companion lawsuits by seven former executives alleging more than USD 400 million of fraud on a company they say is now valued above USD 6 billion.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is CoreWeave's Chicago landlord and Lambda's Los Angeles landlord; a Holder Construction and Clune customer; an Oncor, ComEd, SRP, SMUD, Bluebonnet and Vernon Public Utilities large-load customer; Tract's neighbour and rival in Caldwell County; and the campus next door to Plus Power's Sierra Estrella battery in Avondale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the two named tenants — CoreWeave (about USD 2.2 billion over 15 years at Elk Grove Village) and Lambda (21 MW at Vernon) — make Prime a neocloud landlord first and a hyperscale landlord by aspiration: the 'leading hyperscaler' at Avondale is unnamed and the campus has no delivery date.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The US campus portfolio — Chicago, Los Angeles, Phoenix, Dallas–Fort Worth, Austin, Sacramento and Silicon Valley",
+     "date": "",
+     "text": "Chicago ORD01, Elk Grove Village: 29.75 acres, three hyperscale buildings, 270 MW on the page (72 + 54 + 54 per building), ComEd with an adjacent substation; ORD01-01 operational and leased, ORD01-02 and -03 in development and leased — the CoreWeave campus, built by Clune with Gensler design and refinanced in June 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-07",
+     "text": "KERA: seven former employees — including the former Chief Commercial Officer, VP of HR and Head of Utilities and Incentives — sue Prime, Data Realty Holdings, Laag and Pelz in Dallas County, the Southern District of New York and California for fraud, misrepresentation and civil RICO, claiming more than USD 400 million and a valuation that went 'from about $140 million to more than $6 billion' — The commercial leadership that signed CoreWeave and Lambda is now suing the founders; the USD 6 billion figure is the only valuation on the record and it is the plaintiffs'.",
+     "src": "https://www.keranews.org/business-economy/2026-08-07/dallas-data-center-company-denied-former-employees-400-million-in-compensation-lawsuit-says",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-22",
+     "text": "Bloomberg (via swissinfo): Prime 'shelved a planned Norwegian-law bond after investors balked at the proposed terms', having cut it from USD 600 million to USD 500 million; it 'may look to relaunch' — The first public financing failure — six weeks after the Elk Grove notes succeeded on a CoreWeave lease.",
+     "src": "https://www.swissinfo.ch/eng/ai-borrowers-are-pushing-a-niche-credit-market-to-its-limits/91783622",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-02",
+     "text": "Elk Grove Village Property LLC prices USD 900 million of five-year 7.5% notes at par (upsized from USD 850 million; Santander) to refinance USD 500 million and fund remaining construction; the campus is leased to CoreWeave for 15 years, about USD 2.2 billion — The first bond, the first named hyperscale-class tenant, and the first market coupon on a Prime asset — all disclosed through the bond, not the company.",
+     "src": "https://www.investing.com/news/stock-market-news/coreweave-data-center-raises-900-million-in-junkbond-sale--bloomberg-93CH-4723001",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-07"
+  },
+  {
+   "a": "coreweave",
    "b": "switch",
    "curated": {
     "a": {
@@ -11954,6 +12089,36 @@
      "where": "Key Judgments",
      "date": "",
      "text": "DPR's counter is to dominate the neocloud tier (Crusoe/Stargate) where single-lead awards at gigawatt scale are still available.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "crusoe",
+   "b": "fermi-america",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Reporters benchmark Project Matador's schedule against Crusoe's Stargate campus in Abilene, Texas, which put 200 MW online in about 15 months.",
+     "context": "Distilled's April 2026 analysis compares Fermi with Crusoe's Abilene build (1.2 GW; 200 MW live by September 2025), Vantage's Frontier campus north of Abilene and Meta's Hyperion, and estimates that even with an immediate tenant Fermi could not match Crusoe's pace before May 2027. Fermi's own filings name no competitor.",
+     "source": "https://www.distilled.earth/p/the-worlds-largest-planned-data-center",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Reporters benchmark it against Crusoe's Abilene Stargate campus, Vantage's Frontier and VoltaGrid's behind-the-meter supply to Oracle; in this corpus its nearest relatives are Intersect Power's energy parks on the buyer side and the AIDC developers on the landlord side.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Private-grid powered AI data-center capacity at Project Matador (the core product)",
+     "date": "",
+     "text": "Reporters benchmark it against Crusoe's Stargate Abilene (200 MW live in 15 months), Vantage's Frontier campus north of Abilene and Meta's Hyperion (Distilled, April 2026); Barclays is reported to cite VoltaGrid's 2.3 GW of behind-the-meter supply to Oracle's Stargate as the comparator.",
      "src": "",
      "from": "b"
     }
@@ -14243,6 +14408,32 @@
   },
   {
    "a": "dominion-energy",
+   "b": "tract",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Dominion Energy is the utility for Tract's Hanover park: up to eight substations for 2.4 GW, with 'long lead equipment for the initial substation' ordered in 2024 and bridging power expected 'as early as 2026'.",
+     "context": "Tract's 8 May 2024 release and the Hanover park page describe the Dominion plan; Capacity and the Greater Richmond Partnership repeat the 2028 energisation target. Tract's SVP Utility Development and a VP Utility Development are Dominion alumni. The Dominion dossier does not name Tract; Virginia Mercury reported Dominion's queue at 'up to seven years' in the Goochland pre-application.",
+     "source": "https://www.tract.com/news/tract-announces-acquisition-of-1200-acres-in-hanover-county-va/",
+     "status": "announced",
+     "since": "2024-05",
+     "scale": "up to 2,400 MW across 8 substations",
+     "via": "Hanover Technology Park, Virginia"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is a neighbour and rival of Vantage, EdgeCore, PowerHouse and Switch at TRIC (Switch is also its litigant), of Prime Data Centers and PowerHouse in Caldwell County, Texas, and of Meta, Google and QTS at Eagle Mountain; a Dominion Energy, ComEd, NV Energy, APS, Rocky Mountain Power, Bluebonnet and LCRA large-load customer; and, through Fleet, the reported landlord of Nvidia's first owned-lease campus.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-05"
+  },
+  {
+   "a": "dominion-energy",
    "b": "vantage",
    "curated": {
     "a": {
@@ -15472,6 +15663,21 @@
      "note": "STACK's NVA10 sits 0.52 miles from EdgeCore's Culpeper site; SVP Operations Ruben Thissen was a founding STACK executive.",
      "context": "datacenterHawk's listing for EdgeCore CP01-03 on Nalles Mill Road notes STACK Infrastructure's NVA10 '0.52 miles away' in the Culpeper Technology Zone; Thissen's bio describes him as a 'founding executive employee of STACK Infrastructure' for six years. Both compete for hyperscale build-to-suit leases in Virginia; no commercial dealing is recorded.",
      "source": "https://datacenterhawk.com/marketplace/providers/edgecore/nalles-mill-road/cp01-03",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "edgecore",
+   "b": "tract",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "EdgeCore's 216 MW Reno campus at TRIC is one of the operators Tract's Nevada parks compete with for hyperscale tenants.",
+     "context": "Data Center Frontier's NV1 article lists EdgeCore (216 MW, late 2025), Vantage NV1 (224 MW), Novva (60 MW), Switch and Google as the TRIC competitors alongside Tract's 11,000-plus acres and 'up to 2GW from 2026' NV Energy commitment; CPE's 2024 coverage names EdgeCore among the neighbours of the 517-acre parcel.",
+     "source": "https://www.datacenterfrontier.com/site-selection/article/55305086/nv1-and-the-nevada-hyperscale-boom-vantage-data-centers-bets-3b-on-the-ai-future",
      "status": "active"
     }
    },
@@ -17033,6 +17239,27 @@
   },
   {
    "a": "equinix",
+   "b": "prime-data-centers",
+   "evid": [
+    {
+     "where": "Capabilities · Build-to-suit, powered shell and turnkey wholesale data centers (the core product)",
+     "date": "",
+     "text": "Reporters set it beside Microsoft's Elk Grove Technology Park, CloudHQ and Meta in Chicago and beside Aligned, CyrusOne, Equinix and PowerHouse/Hillwood in CBRE's Chicago survey; beside STACK and Vantage in Phoenix; beside CoreSite and Digital Realty in Vernon; beside Tract and PowerHouse in Caldwell County; and beside Equinix, CyrusOne and Data4 in Madrid.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Europe — Madrid, Frankfurt, Esbjerg, Järvenpää, Sæby and Berlin",
+     "date": "",
+     "text": "Prime's European pitch is subsea-cable adjacency (Esbjerg's six cables) and district-heating reuse (Sæby, Järvenpää) rather than scale; its neighbours in Madrid are Equinix, CyrusOne and Data4.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "equinix",
    "b": "qts",
    "curated": {
     "b": {
@@ -18078,6 +18305,260 @@
    },
    "evid": [],
    "last": "2019-05"
+  },
+  {
+   "a": "fermi-america",
+   "b": "ge-vernova",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "GE Vernova equipment makes up the fast end of the fleet: three refurbished Frame 6B units bought from the Bayonne, New Jersey plant and seven TM2500 mobile turbines under a 20-year lease with Mobile Power Solutions.",
+     "context": "The Q2 2026 investor presentation tables the 6Bs at 116 MW with an eight-month time to power and foundations poured, and the TM2500s at 126 MW on site (157.5 MW nameplate) with a two-month time to power but held by the lessor until pick-up between 1 July and 30 September 2027. The 6B purchase (an USD 18.0 million equipment purchase agreement of 26 June 2025) is the subject of Bayonne Plant Holding's suit in the District of New Jersey over site-restoration claims. GE Vernova itself is not a contracting party in the filings — the units were bought second-hand and leased through a third party.",
+     "source": "https://irp.cdn-website.com/4ee5afac/files/uploaded/Fermi+2Q+2026+Investor+Presentation+vF.pdf",
+     "status": "active",
+     "since": "2025",
+     "scale": "3 Frame 6B (~116 MW) + 7 TM2500 (157.5 MW nameplate, leased)",
+     "via": "Secondary-market Frame 6B units; TM2500 mobile turbines leased from Mobile Power Solutions"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is a buyer of Siemens Energy and GE Vernova turbines, an EPC customer of Primoris and TSK, a prospective owner of four AP1000s that Westinghouse, Hyundai E&C and Doosan are lined up to deliver, a 20-year lessee of Mobile Power Solutions' TM2500 fleet, and a landlord whose only signed tenant is an AMD-GPU neocloud.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "fermi-america",
+   "b": "intersect-power",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Reporters benchmark it against Crusoe's Abilene Stargate campus, Vantage's Frontier and VoltaGrid's behind-the-meter supply to Oracle; in this corpus its nearest relatives are Intersect Power's energy parks on the buyer side and the AIDC developers on the landlord side.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "fermi-america",
+   "b": "meta",
+   "evid": [
+    {
+     "where": "Capabilities · Private-grid powered AI data-center capacity at Project Matador (the core product)",
+     "date": "",
+     "text": "Reporters benchmark it against Crusoe's Stargate Abilene (200 MW live in 15 months), Vantage's Frontier campus north of Abilene and Meta's Hyperion (Distilled, April 2026); Barclays is reported to cite VoltaGrid's 2.3 GW of behind-the-meter supply to Oracle's Stargate as the comparator.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "fermi-america",
+   "b": "oracle",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Reporters benchmark it against Crusoe's Abilene Stargate campus, Vantage's Frontier and VoltaGrid's behind-the-meter supply to Oracle; in this corpus its nearest relatives are Intersect Power's energy parks on the buyer side and the AIDC developers on the landlord side.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Private-grid powered AI data-center capacity at Project Matador (the core product)",
+     "date": "",
+     "text": "Reporters benchmark it against Crusoe's Stargate Abilene (200 MW live in 15 months), Vantage's Frontier campus north of Abilene and Meta's Hyperion (Distilled, April 2026); Barclays is reported to cite VoltaGrid's 2.3 GW of behind-the-meter supply to Oracle's Stargate as the comparator.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "fermi-america",
+   "b": "primoris",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Primoris Services Corporation is the balance-of-plant contractor for Phase One (the six SGT-800 power islands), named in the Q2 2026 earnings release among the 'deepened relationships with contractors Primoris, TSK'.",
+     "context": "The company's fourth 90-day objective was contractor relationships; the earnings release names Primoris for Phase One balance of plant and TSK for the F-class early works. Contract value and scope beyond 'balance of plant' are not disclosed.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000046/fermiq22026erex_991.htm",
+     "status": "active",
+     "since": "2026",
+     "via": "Phase One balance-of-plant EPC for the six SGT-800s"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The Q2 2026 quarter delivered the five '90-day objectives' the new chairman had set: a binding lease with TensorWave, a permanent CEO (Lee McIntire, from 11 August 2026), a 2.6 GW build-own-operate-transfer framework with Hillcore Energy Capital, contractor relationships with Primoris and TSK, and three Siemens SGT6-5000F turbines landed at the Port of Houston.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is a buyer of Siemens Energy and GE Vernova turbines, an EPC customer of Primoris and TSK, a prospective owner of four AP1000s that Westinghouse, Hyundai E&C and Doosan are lined up to deliver, a 20-year lessee of Mobile Power Solutions' TM2500 fleet, and a landlord whose only signed tenant is an AMD-GPU neocloud.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-13",
+     "text": "Q2 2026 results: 'all five 90-day objectives' delivered — binding TensorWave lease, permanent CEO, Hillcore alliance, Primoris and TSK relationships, three F-class turbines landed (1.5 GW of turbines 'landed'); 'about 200 megawatts of initial commercial power over the next six months' — A reset quarter measured in objectives rather than megawatts; none of the 1.5 GW is energised.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000046/fermiq22026erex_991.htm",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-13"
+  },
+  {
+   "a": "fermi-america",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Siemens Energy is the campus's principal turbine vendor: six SGT-800s with HRSGs and an SST-600 (via the Firebird Acquisition from MAD Energy) and three SGT6-5000F F-class units bought directly under a 28 January 2026 equipment purchase agreement.",
+     "context": "The Q1 and Q2 2026 10-Qs describe the F-class purchase at a fixed price of about USD 324.4 million, financed by MUFG's warehouse facility, with a Siemens Rated Capacity Agreement of up to about USD 240 million over ten years and USD 142.6 million of remaining purchase commitments at 30 June 2026. The SGT-800s arrived at the Port of Houston in February 2026 and the F-class units in July 2026; a September 2025 letter of intent for '1.1 GW F-class' and a nuclear collaboration appears in the company's newsroom index. None of the units was energised at 13 August 2026.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+     "status": "active",
+     "since": "2025",
+     "scale": "6 SGT-800 + 3 SGT6-5000F (~1,024 MW simple cycle)",
+     "via": "SGT-800 and SGT6-5000F gas turbines; Rated Capacity Agreement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is a buyer of Siemens Energy and GE Vernova turbines, an EPC customer of Primoris and TSK, a prospective owner of four AP1000s that Westinghouse, Hyundai E&C and Doosan are lined up to deliver, a 20-year lessee of Mobile Power Solutions' TM2500 fleet, and a landlord whose only signed tenant is an AMD-GPU neocloud.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Behind-the-meter gas generation — the owned turbine fleet and the Hillcore power center",
+     "date": "",
+     "text": "Fermi owns or leases four turbine fleets, none energised as of 13 August 2026: six Siemens Energy SGT-800s with six HRSGs and an SST-600 steam turbine (about 296 MW simple cycle, 396 MW combined per the Q2 deck; 478 MW ISO combined per the company site), bought from MAD Energy in the 'Firebird Acquisition' and financed by a USD 165 million Beal Bank/CSG facility; three Siemens SGT6-5000F F-class units (728 MW simple cycle, 1,042 MW combined) under a 28 January 2026 equipment purchase agreement at a fixed price of about USD 324.4 million, financed by MUFG's USD 500 million warehouse and landed at the Port of Houston in July 2026; three secondary-market GE Frame 6B units with a steam turbine (about 116 MW) from the Bayonne, New Jersey plant, refurbished in Houston; and seven GE TM2500 mobile units (157.5 MW nameplate, 126–132 MW at site elevation) under a 20-year lease with Mobile Power Solutions whose pick-up was deferred to July–September 2027.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "fermi-america",
+   "b": "tract",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that Tract's 2026 moves toward on-site generation — the Fleet gas plants in Nevada, 'onsite power generation that will become grid connected' at Caldwell, a gas-supply desk on the team page — are the beginning of a shift from powered land to power-generating land, which would put it in Fermi America's and Intersect Power's business rather than PowerHouse's.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "fermi-america",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Vantage's 1.2 GW Frontier campus north of Abilene, begun in September 2025, is the second Texas behind-the-meter campus reporters set against Project Matador.",
+     "context": "Same Distilled comparison: Frontier and Stargate Abilene are the two Texas campuses that broke ground in 2025 and had visible buildings by April 2026 while Fermi's satellite record showed site work only. In this corpus Vantage's Frontier is primary-powered by VoltaGrid gas microgrids — the closest structural analogue to Fermi's own private-grid claim.",
+     "source": "https://www.distilled.earth/p/the-worlds-largest-planned-data-center",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "fermi-america",
+   "b": "voltagrid",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Reporters benchmark it against Crusoe's Abilene Stargate campus, Vantage's Frontier and VoltaGrid's behind-the-meter supply to Oracle; in this corpus its nearest relatives are Intersect Power's energy parks on the buyer side and the AIDC developers on the landlord side.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Private-grid powered AI data-center capacity at Project Matador (the core product)",
+     "date": "",
+     "text": "Reporters benchmark it against Crusoe's Stargate Abilene (200 MW live in 15 months), Vantage's Frontier campus north of Abilene and Meta's Hyperion (Distilled, April 2026); Barclays is reported to cite VoltaGrid's 2.3 GW of behind-the-meter supply to Oracle's Stargate as the comparator.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "fermi-america",
+   "b": "xcel-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Xcel Energy's SPS utility supplies the campus's only grid power: up to 200 MW over its 115 kV system under a 5 December 2025 electric service agreement.",
+     "context": "The release said 86 MW would begin in January 2026 and ramp to 200 MW; the FY2025 10-K restated the 86 MW as expected 'in the second half of 2026', with the incremental 114 MW targeted for year-end 2026 and contractually due by 1 October 2027. The Q2 2026 earnings release still describes 'working with Xcel Energy toward 200 MW onsite power', so no grid power had been energised by mid-August 2026. Xcel's Texas–New Mexico president Adrian Rodriguez was quoted in the release; Xcel did not name Fermi on its Q2 2026 earnings call, and the company's Xcel dossier records the agreement as the only named SPS data-center contract and the smallest tier of its pipeline slide. No PUCT or SPP interconnection docket for the campus was located.",
+     "source": "https://fermiamerica.com/fermi-america-electric-service-agreement-reached-with-xcel-energy-subsidiary/",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "up to 200 MW",
+     "via": "Southwestern Public Service Company electric service agreement (115 kV)"
+    },
+    "b": {
+     "type": "customer",
+     "note": "SPS signed a definitive electric service agreement on 5 December 2025 to supply up to 200 MW to Fermi America's Project Matador campus near Amarillo — the only named SPS data-center contract.",
+     "context": "The PR Newswire release states 86 MW 'beginning January 2026' over SPS's 115 kV system, ramping to 200 MW, with Xcel's Texas–New Mexico president Adrian Rodriguez quoted. Fermi's FY2025 10-K later restated the 86 MW as 'expected to be energized in the second half of 2026' with the incremental 114 MW contractually due by 1 October 2027, and its Q2 2026 release still described 'working with Xcel Energy toward 200 MW onsite power' — so no power had been delivered by mid-August 2026, and Xcel did not name Fermi on its Q2 2026 call. The 200 MW is a grid supplement to a campus that plans up to 17 GW of its own generation; on Xcel's pipeline slide it is the smallest contracted tier. Recorded here from Fermi's account (the Fermi dossier, September 2026); Xcel has not separately announced the agreement.",
+     "source": "https://www.prnewswire.com/news-releases/fermi-america-executes-electric-service-agreement-with-southwestern-public-service-company-a-subsidiary-of-xcel-energy-securing-up-to-200-mw-of-power-302634443.html",
+     "status": "announced",
+     "since": "2025-12",
+     "scale": "up to 200 MW",
+     "via": "Southwestern Public Service Company electric service agreement (115 kV) — Project Matador, Carson County, TX"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The generation-first campus in this corpus: where the F7 landlords buy powered land and wait for the utility, Fermi builds its own power plant behind the fence and treats the utility — Xcel Energy's Southwestern Public Service, contracted for up to 200 MW — as the supplement.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility interconnection and renewables — the SPS electric service agreement, solar and storage",
+     "date": "",
+     "text": "On 5 December 2025 Fermi executed an electric service agreement with Southwestern Public Service Company, Xcel Energy's Texas–New Mexico utility, for up to 200 MW over SPS's 115 kV system: the release said 86 MW would begin in January 2026 and ramp to 200 MW; the 10-K restated the 86 MW as 'expected to be energized in the second half of 2026', the incremental 114 MW targeted for year-end 2026 and 'contractually' by 1 October 2027; the Q2 2026 release still describes 'working with Xcel Energy toward 200 MW onsite power'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-08",
+     "text": "Electric service agreement with Southwestern Public Service Company (Xcel Energy) for up to 200 MW over 115 kV; 86 MW 'beginning January 2026' per the release — The only utility contract on the campus; the 10-K later moved the 86 MW to the second half of 2026.",
+     "src": "https://fermiamerica.com/fermi-america-electric-service-agreement-reached-with-xcel-energy-subsidiary/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-08",
+     "text": "SPS signs a definitive Electric Service Agreement to supply up to 200 MW to Fermi America's Project Matador campus in Amarillo, 86 MW from January 2026 over a 115 kV system — The only named SPS data-center contract — and it is the smallest tier of the pipeline slide, in a state with no large-load tariff on file.",
+     "src": "https://www.prnewswire.com/news-releases/fermi-america-executes-electric-service-agreement-with-southwestern-public-service-company-a-subsidiary-of-xcel-energy-securing-up-to-200-mw-of-power-302634443.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-08"
   },
   {
    "a": "flex",
@@ -21855,6 +22336,62 @@
   },
   {
    "a": "google",
+   "b": "tract",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is a neighbour and rival of Vantage, EdgeCore, PowerHouse and Switch at TRIC (Switch is also its litigant), of Prime Data Centers and PowerHouse in Caldwell County, Texas, and of Meta, Google and QTS at Eagle Mountain; a Dominion Energy, ComEd, NV Energy, APS, Rocky Mountain Power, Bluebonnet and LCRA large-load customer; and, through Fleet, the reported landlord of Nvidia's first owned-lease campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Master-planned technology parks — shovel-ready, powered, entitled parcels sold as a product (the core business)",
+     "date": "",
+     "text": "It is described alongside Vantage, EdgeCore, Novva, Switch, Google and Apple as a TRIC neighbour (Data Center Frontier), beside Prime Data Centers' campus 'across the street' in Caldwell County (Muskin Elam) and beside Chirisa, AREP/PowerHouse and Torch Clean Energy in Virginia (Bisnow).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The Nevada parks — Peru Shelf, Peru Ridge, South Valley, Virginia Highlands and Sapphire (12,390 acres, 5,455 MW on the projects page)",
+     "date": "",
+     "text": "TRIC is the most crowded powered-land market in the corpus — Vantage NV1 (224 MW), EdgeCore (216 MW), Novva, PowerHouse, Switch, Google and Apple — and Tract holds the largest raw acreage by a wide margin; its 5.5 GW of stated load is, per NV Energy, about a third of the utility's generating capacity, which is the arithmetic behind the lawsuit.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The Sun Belt and Midwest parks — Texas, Arizona, Utah, Iowa, Illinois, Virginia and the Minnesota pipeline",
+     "date": "",
+     "text": "Eagle Mountain, Utah: 668 acres (January 2024) inside the RTI overlay with by-right use and 'more than 400 megawatts' from Rocky Mountain Power by 2028 (Pole Canyon 844 acres/1,700 MW; Pony Express 225 acres/120 MW next to Meta, Google and QTS).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Fleet Data Centers — the vertical sister platform (500 MW+ single-user campuses on Tract land)",
+     "date": "",
+     "text": "Tract Capital introduced Fleet Data Centers on 8 January 2025 as 'the mega-campus vertical development strategy' beside Tract's 'horizontal powered land strategy': 'a developer and operator of mega-scale, single-user data center campuses' targeting '500 MW+ build-to-suit megacampuses for single-user customers', led by President Chris Vonderhaar (ex-Google Cloud vice president and AWS data-center executive) with Grant van Rooyen as executive chairman.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-08",
+     "text": "Tract Capital introduces Fleet Data Centers — 'the mega-campus vertical development strategy' for 'customized 500MW+ campuses' — under President Chris Vonderhaar (ex-Google Cloud, AWS) — The horizontal developer grows a vertical arm; sixteen months later Fleet is the only buyer of a Tract parcel.",
+     "src": "https://tractcapital.com/news/tract-capital-introduces-fleet-data-centers-a-new-mega-scale-data-center-development-platform-focused-on-customized-500mw-campuses/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-01-18",
+     "text": "668 acres in Eagle Mountain, Utah inside the RTI overlay (by-right data-center use); 'more than 400 megawatts' from Rocky Mountain Power by 2028 — Utah entry next to Meta and Google.",
+     "src": "https://www.tract.com/news/tract-announces-acquisition-of-668-acres-in-eagle-mountain-ut-promising-further-investment-for-data-center-campuses/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-01-08"
+  },
+  {
+   "a": "google",
    "b": "vantage",
    "evid": [
     {
@@ -24070,6 +24607,38 @@
   },
   {
    "a": "holder-construction",
+   "b": "prime-data-centers",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Holder Construction was the general contractor for Prime's first building at McClellan Park, Sacramento, with Corgan as architect and kW Mission Critical Engineering as MEP engineer, per the mechanical contractor's project page.",
+     "context": "ACCO Engineered Systems' project page for 'Prime Data Center, McClellan Park' names Holder as GC; Prime's later buildings were built by Clune (Chicago, Sacramento SMF02) and ARCO/Murray (Avondale). The Holder dossier does not name Prime.",
+     "source": "https://www.accoes.com/project/prime-data-center-mcclellan-park-ca/",
+     "status": "historical",
+     "since": "2020",
+     "via": "SMF01, McClellan Park, Sacramento (general contractor)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is CoreWeave's Chicago landlord and Lambda's Los Angeles landlord; a Holder Construction and Clune customer; an Oncor, ComEd, SRP, SMUD, Bluebonnet and Vernon Public Utilities large-load customer; Tract's neighbour and rival in Caldwell County; and the campus next door to Plus Power's Sierra Estrella battery in Avondale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The US campus portfolio — Chicago, Los Angeles, Phoenix, Dallas–Fort Worth, Austin, Sacramento and Silicon Valley",
+     "date": "",
+     "text": "Sacramento SMF01, McClellan Park: 8 MW operational (Holder Construction GC) and SMF02's 18 MW under construction from May 2026 (Clune), SMUD.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2020"
+  },
+  {
+   "a": "holder-construction",
    "b": "turner-construction",
    "curated": {
     "a": {
@@ -24941,6 +25510,20 @@
    "last": "2024-07-17"
   },
   {
+   "a": "intersect-power",
+   "b": "tract",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that Tract's 2026 moves toward on-site generation — the Fleet gas plants in Nevada, 'onsite power generation that will become grid connected' at Caldwell, a gas-supply desk on the team page — are the beginning of a shift from powered land to power-generating land, which would put it in Fermi America's and Intersect Power's business rather than PowerHouse's.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "invenergy",
    "b": "kiewit",
    "curated": {
@@ -25332,6 +25915,20 @@
     }
    ],
    "last": "2025-02"
+  },
+  {
+   "a": "invenergy",
+   "b": "tract",
+   "evid": [
+    {
+     "where": "Capabilities · Energy and grid services around the parks — utility contracts, temporary generation, renewables and a gas desk",
+     "date": "",
+     "text": "Tract's team page lists a Chief Energy Officer (2024), an SVP Utility Development who founded Dominion's data-center services group, an SVP Energy Development from Calpine and Competitive Power Ventures, a VP Regulatory Affairs, a VP Energy Procurement 'responsible for ensuring the procurement of reliable, cost-effective supply to meet the needs of data centers' power generation facilities', a Manager of Gas Supply 'supporting the company's natural gas strategy', and transmission-planning directors from Invenergy and Recurrent.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "invenergy",
@@ -26387,6 +26984,84 @@
     }
    ],
    "last": "2026-08-12"
+  },
+  {
+   "a": "lambda",
+   "b": "prime-data-centers",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Prime Data Centers is Lambda's Los Angeles landlord: Lambda leases 21 MW of the 33 MW LAX01 building in Vernon for NVIDIA Blackwell systems, announced 13 November 2025.",
+     "context": "Prime's release says 'Lambda will initially lease a portion of the facility representing 21 MW of power' at a building that opened in November 2024 'one hundred percent leased by two artificial intelligence companies' — Lambda is one of the two and the other is unnamed. LAX01 was built for 40 kW per rack on air with liquid cooling to 120 kW. The lease is one of the colocation sites (with EdgeConneX Chicago, Cologix Columbus and Aligned DFW-04) that make Lambda's footprint colocation-first; the Prime dossier (September 2026) records it as one of Prime's two named tenants alongside CoreWeave.",
+     "source": "https://primedatacenters.com/news/prime-data-centers-and-lambda-partner-to-power-the-next-era-of-superintelligence-with-ai-optimized-infrastructure-in-southern-california/",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "21 MW of 33 MW",
+     "via": "LAX01, Vernon (Los Angeles) — wholesale lease"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Lambda leases 21 MW of Prime's 33 MW LAX01 building in Vernon for NVIDIA Blackwell systems, announced 13 November 2025.",
+     "context": "Prime's release says 'Lambda will initially lease a portion of the facility representing 21 MW of power'; LAX01 opened in November 2024 'one hundred percent leased by two artificial intelligence companies', so Lambda is one of the two and the other is unnamed. The Lambda dossier lists 'Prime Data Centers Vernon CA (LAX01): 21 of 33 MW leased' among its colocation sites.",
+     "source": "https://primedatacenters.com/news/prime-data-centers-and-lambda-partner-to-power-the-next-era-of-superintelligence-with-ai-optimized-infrastructure-in-southern-california/",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "21 MW of 33 MW",
+     "via": "LAX01, Vernon (Los Angeles)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Lambda as the price-and-flexibility neocloud moving up-market into the CoreWeave model — and as a demand signal rather than a power buyer for most of this ecosystem's vendors, because its footprint is colocation-first (EdgeConneX Chicago, Cologix Columbus, Prime Data Centers Vernon, Aligned DFW) with owned 'AI factories' only now emerging (Kansas City, 24 MW scaling to 100 MW+).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI factories (data-center layer)",
+     "date": "",
+     "text": "Lambda's physical footprint: 'contiguous AI factories' (75 MW+ campuses) and 'distributed AI factories' (5–75 MW metro sites), overwhelmingly leased from colocation partners today — EdgeConneX Chicago (23 MW, 600+ kW racks, RFS 2026) and Atlanta, Cologix Columbus (HGX B200, 44 kW air-cooled racks), Prime Data Centers Vernon CA (21 of 33 MW), Aligned DFW-04 Plano — plus the first owned-scale conversion in Kansas City, MO (~$500M, 24 MW at early-2026 launch, >10,000 Blackwell Ultra GPUs, scalable past 100 MW, dedicated to a single unnamed customer).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Prime Data Centers is a founder-controlled, privately held developer of wholesale and build-to-suit campuses — about 151 MW operating across Chicago, Los Angeles, Dallas, Sacramento and Silicon Valley, about 222 MW under construction led by the 240 MW Avondale, Arizona campus that broke ground in May 2026, and a '4+ GW' (or, in one April 2026 release, '7 GW') pipeline across Texas, Pennsylvania, Denmark, Finland, Germany and Spain — whose two named tenants are CoreWeave (a 15-year, about USD 2.2 billion lease at Elk Grove Village, financed by USD 900 million of 7.5% notes in June 2026) and Lambda (21 MW at Vernon), and whose 2026 has brought a shelved USD 500 million Nordic bond, a Grain Management preferred-equity injection into its parent, and companion lawsuits by seven former executives alleging more than USD 400 million of fraud on a company they say is now valued above USD 6 billion.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is CoreWeave's Chicago landlord and Lambda's Los Angeles landlord; a Holder Construction and Clune customer; an Oncor, ComEd, SRP, SMUD, Bluebonnet and Vernon Public Utilities large-load customer; Tract's neighbour and rival in Caldwell County; and the campus next door to Plus Power's Sierra Estrella battery in Avondale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the two named tenants — CoreWeave (about USD 2.2 billion over 15 years at Elk Grove Village) and Lambda (21 MW at Vernon) — make Prime a neocloud landlord first and a hyperscale landlord by aspiration: the 'leading hyperscaler' at Avondale is unnamed and the campus has no delivery date.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the bond disclosures, the Lambda release, the Avondale groundbreaking release; the company's own building-status fields.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-07",
+     "text": "KERA: seven former employees — including the former Chief Commercial Officer, VP of HR and Head of Utilities and Incentives — sue Prime, Data Realty Holdings, Laag and Pelz in Dallas County, the Southern District of New York and California for fraud, misrepresentation and civil RICO, claiming more than USD 400 million and a valuation that went 'from about $140 million to more than $6 billion' — The commercial leadership that signed CoreWeave and Lambda is now suing the founders; the USD 6 billion figure is the only valuation on the record and it is the plaintiffs'.",
+     "src": "https://www.keranews.org/business-economy/2026-08-07/dallas-data-center-company-denied-former-employees-400-million-in-compensation-lawsuit-says",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-07"
   },
   {
    "a": "lg-energy-solution",
@@ -28170,6 +28845,20 @@
   },
   {
    "a": "meta",
+   "b": "prime-data-centers",
+   "evid": [
+    {
+     "where": "Capabilities · Build-to-suit, powered shell and turnkey wholesale data centers (the core product)",
+     "date": "",
+     "text": "Reporters set it beside Microsoft's Elk Grove Technology Park, CloudHQ and Meta in Chicago and beside Aligned, CyrusOne, Equinix and PowerHouse/Hillwood in CBRE's Chicago survey; beside STACK and Vantage in Phoenix; beside CoreSite and Digital Realty in Vernon; beside Tract and PowerHouse in Caldwell County; and beside Equinix, CyrusOne and Data4 in Madrid.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "meta",
    "b": "primoris",
    "curated": {
     "b": {
@@ -28344,6 +29033,48 @@
     }
    ],
    "last": "2026-05-21"
+  },
+  {
+   "a": "meta",
+   "b": "tract",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is a neighbour and rival of Vantage, EdgeCore, PowerHouse and Switch at TRIC (Switch is also its litigant), of Prime Data Centers and PowerHouse in Caldwell County, Texas, and of Meta, Google and QTS at Eagle Mountain; a Dominion Energy, ComEd, NV Energy, APS, Rocky Mountain Power, Bluebonnet and LCRA large-load customer; and, through Fleet, the reported landlord of Nvidia's first owned-lease campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The Sun Belt and Midwest parks — Texas, Arizona, Utah, Iowa, Illinois, Virginia and the Minnesota pipeline",
+     "date": "",
+     "text": "Eagle Mountain, Utah: 668 acres (January 2024) inside the RTI overlay with by-right use and 'more than 400 megawatts' from Rocky Mountain Power by 2028 (Pole Canyon 844 acres/1,700 MW; Pony Express 225 acres/120 MW next to Meta, Google and QTS).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-01",
+     "text": "Altoona Now: 453 acres fully entitled for 'over 1GW' in Altoona, Iowa after annexation, rezoning and a development agreement; Graham Williams quoted as Chief Investment Officer — Des Moines is the eleventh market; MidAmerican's territory, near Meta.",
+     "src": "https://altoonanow.org/tract-brings-450-acre-data-center-campus-to-altoona-iowa/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-09-06",
+     "text": "Yahoo Finance interview: van Rooyen says Tract does 'all the complicated and hard to do part[s] of infrastructure' so hyperscalers can 'move with speed and certainty'; names Microsoft, Nvidia, Amazon and Meta as the market — The pitch in the founder's words; none of the four is a disclosed customer.",
+     "src": "https://finance.yahoo.com/video/tract-helps-hyperscalers-meet-data-214719118.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-01-18",
+     "text": "668 acres in Eagle Mountain, Utah inside the RTI overlay (by-right data-center use); 'more than 400 megawatts' from Rocky Mountain Power by 2028 — Utah entry next to Meta and Google.",
+     "src": "https://www.tract.com/news/tract-announces-acquisition-of-668-acres-in-eagle-mountain-ut-promising-further-investment-for-data-center-campuses/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-01"
   },
   {
    "a": "meta",
@@ -29490,6 +30221,20 @@
   },
   {
    "a": "microsoft",
+   "b": "prime-data-centers",
+   "evid": [
+    {
+     "where": "Capabilities · Build-to-suit, powered shell and turnkey wholesale data centers (the core product)",
+     "date": "",
+     "text": "Reporters set it beside Microsoft's Elk Grove Technology Park, CloudHQ and Meta in Chicago and beside Aligned, CyrusOne, Equinix and PowerHouse/Hillwood in CBRE's Chicago survey; beside STACK and Vantage in Phoenix; beside CoreSite and Digital Realty in Vernon; beside Tract and PowerHouse in Caldwell County; and beside Equinix, CyrusOne and Data4 in Madrid.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "microsoft",
    "b": "qts",
    "curated": {
     "b": {
@@ -29649,6 +30394,43 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "microsoft",
+   "b": "tract",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Microsoft's Castroville campus is adjacent to Tract's Medina Technology Park, and Microsoft won parcel-map approval for 274 acres near Tract's Silver Springs park in 2025; the company names Microsoft as part of the hyperscaler market it serves, not as a customer.",
+     "context": "The Medina park page advertises 'Adjacent to existing Microsoft campus in Castroville'; Baxtel's Silver Springs page notes Microsoft's 2025 parcel-map approval nearby; van Rooyen's September 2024 interview lists Microsoft, Nvidia, Amazon and Meta as the market. No transaction between the companies is on the record.",
+     "source": "https://www.tract.com/project/medina-technology-park/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · The Sun Belt and Midwest parks — Texas, Arizona, Utah, Iowa, Illinois, Virginia and the Minnesota pipeline",
+     "date": "",
+     "text": "Caldwell Valley, Texas ('Project Snow'): 1,515 acres closed 7 May 2025 after '18 months' of pre-work with a Bluebonnet Electric Cooperative facility design agreement for 360 MW in 2028, plus 1,458 acres in January 2026 for about 2,973 acres and 'more than 4 GW', a Bluebonnet/LCRA on-site substation 'capable of scaling to 1.6GW' with 'the first 250MW of capacity contracted for delivery in the first quarter of 2028', 345 kV lines and the Kinder Morgan Permian Highway pipeline, and 'plans for onsite power generation that will become grid connected'; Medina (265 acres, 500 MW, Medina Electric Cooperative, mid-2028, adjacent to Microsoft's Castroville campus) and Applewhite in south San Antonio (339 acres, 720 MW design).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-17",
+     "text": "Tract closes about 1,060 acres at Silver Springs, Lyon County (Sapphire) after a rezoning and development agreement: 'up to 1.6 gigawatts', 700 MW 'currently under utility study', adjacent to a planned transmission line and a gas transmission line — The Reno footprint crosses the county line; the first park adjacent to a Microsoft parcel.",
+     "src": "https://www.tract.com/news/tract-expands-its-greater-reno-portfolio-closing-on-1060-acres-in-silver-springs-nevada-following-successful-rezoning-and-development-agreement-with-lyon-county/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-09-06",
+     "text": "Yahoo Finance interview: van Rooyen says Tract does 'all the complicated and hard to do part[s] of infrastructure' so hyperscalers can 'move with speed and certainty'; names Microsoft, Nvidia, Amazon and Meta as the market — The pitch in the founder's words; none of the four is a disclosed customer.",
+     "src": "https://finance.yahoo.com/video/tract-helps-hyperscalers-meet-data-214719118.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-09-17"
   },
   {
    "a": "microsoft",
@@ -31737,6 +32519,20 @@
   },
   {
    "a": "nvidia",
+   "b": "prime-data-centers",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-13",
+     "text": "Lambda leases 21 MW of LAX01's 33 MW for NVIDIA Blackwell systems ('AI-optimized infrastructure in Southern California'); Vernon's mayor quoted — The second named tenant; LAX01 had been 'one hundred percent leased by two artificial intelligence companies' since opening.",
+     "src": "https://primedatacenters.com/news/prime-data-centers-and-lambda-partner-to-power-the-next-era-of-superintelligence-with-ai-optimized-infrastructure-in-southern-california/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-13"
+  },
+  {
+   "a": "nvidia",
    "b": "samsung-sdi",
    "curated": {
     "b": {
@@ -31978,6 +32774,24 @@
     }
    ],
    "last": "2026-03-16"
+  },
+  {
+   "a": "nvidia",
+   "b": "tract",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Bloomberg identifies Nvidia as the 'AA- investment grade rated tenant with a market cap in excess of $3 trillion' that has leased 100% of both Fleet Data Centers campuses on Tract's Storey County land for 197 months; Fleet and Tract have not named the tenant.",
+     "context": "Bloomberg (via Yahoo Finance Singapore, 13 February 2026) reported an initial term of about 16 years with two 10-year options on the campus financed by the USD 3.8 billion notes, and Bloomberg Law (28 April 2026) reported the USD 4.59 billion second issue for a campus 'expected to be leased to Nvidia'. Fleet's releases describe the tenant only by rating and market capitalisation. The lease is with Fleet's project companies, which bought the parcels from Tract-sponsored funds (Kirkland & Ellis, March 2026); Tract's relationship to the tenant is as land seller and affiliate of the landlord. The Nvidia dossier records nothing on Fleet or Storey County.",
+     "source": "https://sg.finance.yahoo.com/news/nvidia-lease-data-centre-funded-195216702.html",
+     "status": "active",
+     "since": "2026",
+     "scale": "two 230 MW / 200 MW IT campuses; 197-month leases",
+     "via": "Fleet Data Centers (affiliate) — SV RNO and PR RNO Property Owner I, LLC, Storey County"
+    }
+   },
+   "evid": [],
+   "last": "2026"
   },
   {
    "a": "nvidia",
@@ -32764,6 +33578,23 @@
    },
    "evid": [],
    "last": "2024-05"
+  },
+  {
+   "a": "oncor",
+   "b": "prime-data-centers",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Oncor is the utility for Prime's three Dallas–Fort Worth campuses; in November 2023 Prime said Oncor had pushed '2 GW of capacity across five separate data center projects throughout Texas' from 2025 into 2027.",
+     "context": "Bisnow's November 2023 report quotes Prime's then-EVP of Acquisitions on more than a year of negotiation with Oncor and the slipped delivery; Prime's Dallas location page lists Oncor with a substation 'in close proximity'. DFW04's filed completion date (January 2026) has no reported opening. The Oncor dossier does not name Prime.",
+     "source": "https://www.bisnow.com/national/news/data-center/its-going-to-be-frustrating-dallas-data-centers-face-two-new-power-problems-121711",
+     "status": "active",
+     "since": "2023",
+     "via": "DFW01 Dallas, DFW02 Garland and DFW04 Fort Worth"
+    }
+   },
+   "evid": [],
+   "last": "2023"
   },
   {
    "a": "oncor",
@@ -33890,6 +34721,50 @@
   },
   {
    "a": "plus-power",
+   "b": "prime-data-centers",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Plus Power's Sierra Estrella battery (250 MW / 1,000 MWh, SRP tolling) sits on the same Avondale Boulevard block as Prime's 240 MW PHX01 campus; trade and broker coverage describes it as grid support for the campus, but SRP's own release does not mention Prime and no contract between the companies is on the record.",
+     "context": "SRP's April 2023 groundbreaking release names SRP, Plus Power and the City of Avondale only; Orion Investment Real Estate's broker blog and the Plus Power dossier frame the battery as support for the adjacent data-center load. This dossier records adjacency, not a relationship.",
+     "source": "https://media.srpnet.com/srp-plus-power-and-avondale-to-break-ground-on-large-scale-battery-storage-facility/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its AIDC hook is the sharpest in the batch outside Eolian: Sierra Estrella (250 MW/1,000 MWh, SRP tolling) is explicitly marketed as grid support for the adjacent Prime Data Centers 240 MW hyperscale campus in Avondale, AZ, and Laurel Creek (250 MW/1,000 MWh, 2029) sits at a critical AEP substation in data-center-alley PJM.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AIDC adjacency (grid-side, not behind-the-meter)",
+     "date": "",
+     "text": "Sierra Estrella is explicitly marketed as 'critical grid infrastructure to support the adjacent Prime Data Center campus' — Prime Data Centers' $3B, 240 MW, 5-building hyperscale campus in Avondale, AZ (broke ground May 21, 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-21",
+     "text": "Prime Data Centers breaks ground on its $3B, 240 MW Avondale campus — the hyperscale load Sierra Estrella is marketed as supporting — The AI-load story sharpens from adjacency to visible construction — SRP's tolled Plus Power batteries are the grid shock-absorber for the campus.",
+     "src": "Prime Data Centers PR",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is CoreWeave's Chicago landlord and Lambda's Los Angeles landlord; a Holder Construction and Clune customer; an Oncor, ComEd, SRP, SMUD, Bluebonnet and Vernon Public Utilities large-load customer; Tract's neighbour and rival in Caldwell County; and the campus next door to Plus Power's Sierra Estrella battery in Avondale.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-21"
+  },
+  {
+   "a": "plus-power",
    "b": "solv-energy",
    "evid": [
     {
@@ -34111,6 +34986,44 @@
    "last": ""
   },
   {
+   "a": "powerhouse-data-centers",
+   "b": "prime-data-centers",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "CBRE's Chicago market survey lists PowerHouse/Hillwood's Joliet campus among the developments competing with Prime's fully leased Elk Grove Village campus; PowerHouse also holds a Uhland site near Prime's Lockhart campus.",
+     "context": "CBRE's H2 2025 Chicago report records Prime's campus as fully leased alongside Aligned's ORD3, CyrusOne's Wood Dale, Equinix's Minooka and the PowerHouse/Hillwood Joliet plan, with ComEd delivery delays 'until 2032 or later' market-wide. The PowerHouse dossier lists a 500-acre Uhland site in Texas.",
+     "source": "https://www.cbre.com/insights/books/north-america-data-center-trends-h2-2025/chicago-data-center-market",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "powerhouse-data-centers",
+   "b": "tract",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "PowerHouse Data Centers is a neighbour and rival in two of Tract's markets — the Tahoe-Reno Industrial Center (PowerHouse Reno, 200 MW) and Caldwell County, Texas (PowerHouse's Uhland site adjacent to Caldwell Valley).",
+     "context": "Commercial Property Executive's February 2024 coverage of the 517-acre purchase lists PowerHouse, EdgeCore and Novva among the TRIC operators near Tract's parcels, and Baxtel's Caldwell Valley page lists 'PowerHouse Austin adjacent'. The PowerHouse dossier names Tract among its TRIC peers. Neither company has a commercial relationship with the other on the record.",
+     "source": "https://www.commercialsearch.com/news/tract-acquires-another-517-acres-near-reno/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Powered core-and-shell and build-to-suit campuses for hyperscalers (the core product)",
+     "date": "",
+     "text": "Peers in the same markets: Compass, Aligned, EdgeCore, Vantage, Tract and Novva at the Tahoe-Reno Industrial Center; Digital Realty in Charlotte; Provident's other DFW ventures.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "prevalon",
    "b": "tesla",
    "curated": {
@@ -34157,6 +35070,101 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "prime-data-centers",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-30",
+     "text": "Donncha Ó Tuama appointed Chief Legal Officer (ex-General Counsel, Yondr Group) and Michael Hildebrand SVP Product Delivery, North America (ex-Tesla, Eli Lilly) — A legal chief who ran Yondr's USD 5.8 billion sale, nine months before the founders were sued.",
+     "src": "https://primedatacenters.com/news/prime-data-centers-appoints-donncha-o-tuama-as-chief-legal-officer-michael-hildebrand-as-senior-vice-president-of-product-delivery-north-america/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-30"
+  },
+  {
+   "a": "prime-data-centers",
+   "b": "tract",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Tract's Caldwell Valley park (about 2,973 acres, 'more than 4 GW') sits across the road from Prime's Lockhart campus in Caldwell County, Texas; both draw on Bluebonnet Electric Cooperative.",
+     "context": "The Caldwell DCAT tracker and Central Texas coverage place Prime's 'Project Snow' at 1395 Bob White Road and Tract's park on the same FM 2720 corridor; Prime's phase 1 (two shells, USD 400 million, June 2026–September 2027) and Tract's first 250 MW (Q1 2028) compete for the same cooperative capacity, and both sit under the county's August 2026 abatement suspension.",
+     "source": "https://caldwelldcat.org/",
+     "status": "active",
+     "since": "2025"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Prime Data Centers' USD 4 billion Lockhart campus sits 'across the street' from Tract's Caldwell Valley park in Caldwell County, Texas — the two developers compete for the same Bluebonnet-served hyperscale tenants.",
+     "context": "Muskin Elam's account of the May 2025 acquisition places Prime's campus across the road from the 1,515 acres; Baxtel's Caldwell Valley page puts Prime 1.43 miles away and PowerHouse's Austin site adjacent. Prime's AUS01 filing (May 2026) is a two-building, USD 400 million first phase on Bluebonnet power; Tract's first 250 MW is contracted for Q1 2028. Both are exposed to the county's August 2026 suspension of data-center abatements.",
+     "source": "https://muskin-elam.com/1500-acre-data-center-campus-800-jobs-confirmed-for-small-town-in-caldwell-county/",
+     "status": "active",
+     "since": "2025"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is CoreWeave's Chicago landlord and Lambda's Los Angeles landlord; a Holder Construction and Clune customer; an Oncor, ComEd, SRP, SMUD, Bluebonnet and Vernon Public Utilities large-load customer; Tract's neighbour and rival in Caldwell County; and the campus next door to Plus Power's Sierra Estrella battery in Avondale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that the UGI gas-fired campus in Pennsylvania and the hire of a power developer as EVP mark a turn toward behind-the-meter generation that the company has neither sized nor sited — a direction shared with Tract's Nevada gas plants and Fermi's private grid, and a departure from Prime's self-built-substation habit.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Build-to-suit, powered shell and turnkey wholesale data centers (the core product)",
+     "date": "",
+     "text": "Reporters set it beside Microsoft's Elk Grove Technology Park, CloudHQ and Meta in Chicago and beside Aligned, CyrusOne, Equinix and PowerHouse/Hillwood in CBRE's Chicago survey; beside STACK and Vantage in Phoenix; beside CoreSite and Digital Realty in Vernon; beside Tract and PowerHouse in Caldwell County; and beside Equinix, CyrusOne and Data4 in Madrid.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Power — on-site substations, utility large-load agreements and the Pennsylvania gas-fired campus",
+     "date": "",
+     "text": "A landlord that self-builds substations to shorten the utility clock, now adding behind-the-meter gas for the first time — the Fermi and Tract direction, a year behind them.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-22",
+     "text": "Caldwell County commissioners suspend Chapter 312 tax abatements for all large data centers after resident backlash — Prime's 2024 abatement for the Lockhart campus predates the suspension — The county that approved a 10-year, 100% abatement in 2024 has closed the window behind Prime and in front of Tract.",
+     "src": "https://www.yahoo.com/news/politics/articles/texas-county-suspends-tax-breaks-170000940.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is a neighbour and rival of Vantage, EdgeCore, PowerHouse and Switch at TRIC (Switch is also its litigant), of Prime Data Centers and PowerHouse in Caldwell County, Texas, and of Meta, Google and QTS at Eagle Mountain; a Dominion Energy, ComEd, NV Energy, APS, Rocky Mountain Power, Bluebonnet and LCRA large-load customer; and, through Fleet, the reported landlord of Nvidia's first owned-lease campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Master-planned technology parks — shovel-ready, powered, entitled parcels sold as a product (the core business)",
+     "date": "",
+     "text": "It is described alongside Vantage, EdgeCore, Novva, Switch, Google and Apple as a TRIC neighbour (Data Center Frontier), beside Prime Data Centers' campus 'across the street' in Caldwell County (Muskin Elam) and beside Chirisa, AREP/PowerHouse and Torch Clean Energy in Virginia (Bisnow).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-07",
+     "text": "Tract closes 1,515 acres in Caldwell County, Texas after an '18-month engagement', with a Facility Design Agreement with Bluebonnet Electric Cooperative and a 'target energization date for the initial 360MW in 2028'; Governor Abbott quoted — Entry into Central Texas across the road from Prime Data Centers' campus.",
+     "src": "https://finance.yahoo.com/news/tract-closes-acquisition-1-515-140000930.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-22"
   },
   {
    "a": "primoris",
@@ -35916,6 +36924,65 @@
   },
   {
    "a": "switch",
+   "b": "tract",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Adverse litigant: Switch sued Tract's Storey County entity in 2023 to enforce a 2015 TRIC covenant barring multi-tenant colocation on Peru Shelf; Tract won summary judgment on the covenant in October 2025 while Switch holds a preliminary injunction on a relocated easement.",
+     "context": "Tract's 13 October 2025 release reports the final judgment confirming its right to prepare Peru Shelf for 'any type of data center that is not a multi-tenant data center facility' and says the covenant affects 'only 5% of Tract's total Reno portfolio'; the Nevada Independent's series covers Switch's July 2025 injunction preserving a 100-foot easement and the March 2026 easement trial, whose outcome is not on the record. Tract's counterclaims accuse Switch, Rob Roy, DigitalBridge and Marc Ganzi of interference. Switch is also a TRIC neighbour and, at its Citadel campus, the incumbent the covenant was written to protect.",
+     "source": "https://www.tract.com/news/tract-achieves-major-court-victory-against-switch-in-reno-data-center-land-dispute/",
+     "status": "active",
+     "since": "2023-08"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The record since 2024 is one of entitlement wins and losses in roughly equal measure: Hanover, Buckeye, Altoona, Lyon County and Morris (with a FERC-approved ComEd transmission security agreement) approved; Chesterfield withdrawn, Mooresville withdrawn, Hanover's second park rejected 4–3 in May 2026; a summary-judgment win over Switch's colocation covenant at the Tahoe-Reno Industrial Center in October 2025; and, since July 2026, a Washoe County suit by NV Energy to keep Tract's power-supply obligations before the utility commission rather than an arbitrator.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is a neighbour and rival of Vantage, EdgeCore, PowerHouse and Switch at TRIC (Switch is also its litigant), of Prime Data Centers and PowerHouse in Caldwell County, Texas, and of Meta, Google and QTS at Eagle Mountain; a Dominion Energy, ComEd, NV Energy, APS, Rocky Mountain Power, Bluebonnet and LCRA large-load customer; and, through Fleet, the reported landlord of Nvidia's first owned-lease campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Master-planned technology parks — shovel-ready, powered, entitled parcels sold as a product (the core business)",
+     "date": "",
+     "text": "It is described alongside Vantage, EdgeCore, Novva, Switch, Google and Apple as a TRIC neighbour (Data Center Frontier), beside Prime Data Centers' campus 'across the street' in Caldwell County (Muskin Elam) and beside Chirisa, AREP/PowerHouse and Torch Clean Energy in Virginia (Bisnow).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The Nevada parks — Peru Shelf, Peru Ridge, South Valley, Virginia Highlands and Sapphire (12,390 acres, 5,455 MW on the projects page)",
+     "date": "",
+     "text": "TRIC is the most crowded powered-land market in the corpus — Vantage NV1 (224 MW), EdgeCore (216 MW), Novva, PowerHouse, Switch, Google and Apple — and Tract holds the largest raw acreage by a wide margin; its 5.5 GW of stated load is, per NV Energy, about a third of the utility's generating capacity, which is the arithmetic behind the lawsuit.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "Final judgment for Tract against Switch: the court confirms 'Tract's right to horizontally prepare the Peru Shelf for the development by others of any type of data center that is not a multi-tenant data center facility'; the 2015 covenant touches 'only 5% of Tract's total Reno portfolio' — Two years of litigation over a covenant that bars retail colocation on one park; the easement fight continued.",
+     "src": "https://www.tract.com/news/tract-achieves-major-court-victory-against-switch-in-reno-data-center-land-dispute/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-15",
+     "text": "Nevada Independent: Judge Woodbury grants Switch a preliminary injunction preserving its original 100-foot easement over Tract's relocated 20-foot easement ('Switch's link to utilities … effectively severed'); easement trial set for March 2026 — The one round Switch won; the trial's outcome is not on the record.",
+     "src": "https://thenevadaindependent.com/article/opinion-in-competing-data-center-developers-road-forward-switch-wins-for-now",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "switch",
    "b": "vantage",
    "curated": {
     "a": {
@@ -36379,6 +37446,21 @@
      "from": "b"
     }
    ],
+   "last": ""
+  },
+  {
+   "a": "tract",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Vantage's USD 3 billion, 224 MW NV1 campus at TRIC is the largest operating rival to Tract's Nevada parks.",
+     "context": "Data Center Frontier's NV1 profile sets Vantage's four-building campus beside Tract's Storey County holdings and NV Energy commitment; both compete for the same hyperscale tenants and the same NV Energy capacity.",
+     "source": "https://www.datacenterfrontier.com/site-selection/article/55305086/nv1-and-the-nevada-hyperscale-boom-vantage-data-centers-bets-3b-on-the-ai-future",
+     "status": "active"
+    }
+   },
+   "evid": [],
    "last": ""
   },
   {

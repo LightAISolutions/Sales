@@ -784,6 +784,26 @@
       "kpiNorm": false
     },
     {
+      "slug": "fermi-america",
+      "name": "Fermi America",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Nasdaq-listed (FRMI, October 2025) developer of one asset — Project Matador, a behind-the-meter private-grid AI campus on a 99-year Texas Tech ground lease near Amarillo — with ~1.5 GW of Siemens and GE turbines landed, 6 GW of gas permitted and four AP1000s under NRC review, nothing energised, one binding-but-conditional tenant (TensorWave, 222 MW, closing due 30 September 2026), a founder-CEO removed and litigating, going-concern language and a share price down 86% from its high.",
+      "hq": "Dallas, TX, USA",
+      "ticker": "NASDAQ: FRMI",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "fermiamerica.com",
+        "investor.fermiamerica.com",
+        "irp.cdn-website.com"
+      ],
+      "srcTotal": 132,
+      "srcFirstPct": 52,
+      "kpiNorm": true
+    },
+    {
       "slug": "flex",
       "name": "Flex",
       "categories": [
@@ -1210,12 +1230,12 @@
       "tagline": "The Superintelligence Cloud — Microsoft multibillion + NVIDIA leaseback anchors, $5.9B Series E, first IG-rated private-neocloud term loan; H2 2026 IPO window.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "lambda.ai"
       ],
-      "srcTotal": 28,
-      "srcFirstPct": 50,
+      "srcTotal": 29,
+      "srcFirstPct": 48,
       "kpiNorm": false
     },
     {
@@ -1796,6 +1816,23 @@
       "kpiNorm": false
     },
     {
+      "slug": "prime-data-centers",
+      "name": "Prime Data Centers",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Founder-controlled Dallas developer of wholesale and build-to-suit campuses — ~151 MW operating (Chicago, Los Angeles, Dallas, Sacramento, Silicon Valley), 240 MW Avondale under construction from May 2026, a '4+ GW' (or '7 GW') pipeline into Texas, Pennsylvania and the Nordics — whose named tenants are CoreWeave (15-year, ~USD 2.2bn Elk Grove lease behind USD 900m of 7.5% notes) and Lambda (21 MW at Vernon), recapitalised five times (Macquarie, Ares, Siemens FS, Snowhawk/Nuveen, Grain), with a shelved Nordic bond and three fraud suits by former executives in August 2026.",
+      "hq": "Dallas, TX, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "primedatacenters.com"
+      ],
+      "srcTotal": 171,
+      "srcFirstPct": 30,
+      "kpiNorm": false
+    },
+    {
       "slug": "primoris",
       "name": "Primoris",
       "categories": [
@@ -2257,6 +2294,25 @@
       "kpiNorm": true
     },
     {
+      "slug": "tract",
+      "name": "Tract",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Denver powered-land developer (Tract Capital Management, founded 2022 by Cologix's Grant van Rooyen) that entitles and services master-planned parks — 14 parks, ~21,000 acres, ~18.7 GW on its projects page, 12,000 acres of it at Reno's TRIC — and sells shovel-ready parcels; the only recorded buyer is sister platform Fleet Data Centers, whose two 230 MW Storey County campuses are leased 197 months to a tenant Bloomberg names as Nvidia and financed by USD 8.4bn of notes, while NV Energy sued Tract in July 2026 and the PUCN decides its temporary gas plants on 8 September.",
+      "hq": "Denver, CO, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-05",
+      "domains": [
+        "tract.com",
+        "tractcapital.com",
+        "fleetdatacenters.com"
+      ],
+      "srcTotal": 150,
+      "srcFirstPct": 33,
+      "kpiNorm": false
+    },
+    {
       "slug": "trane-technologies",
       "name": "Trane Technologies",
       "categories": [
@@ -2469,7 +2525,7 @@
       "hq": "Minneapolis, MN, USA",
       "ticker": "NASDAQ: XEL",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-05",
       "domains": [
         "xcelenergy.com",
         "investors.xcelenergy.com",

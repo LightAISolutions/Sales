@@ -1,0 +1,510 @@
+{
+  "schemaVersion": 2,
+  "slug": "prime-data-centers",
+  "title": "Prime Data Centers — Technology Study Guide",
+  "lastUpdated": "2026-09-05",
+  "sections": [
+    {
+      "id": "start-here-recapitalising-a-pipeline",
+      "title": "Start here: recapitalising a build-to-suit pipeline",
+      "kind": "callout",
+      "tone": "info",
+      "read": "4 min",
+      "ps": [
+        "The Compass guide teaches how a pension fund and an infrastructure fund own a landlord and how the same building is paid for three times; the EdgeCore guide teaches the lease and the limited-recourse loan; the PowerHouse guide teaches the GP fund that puts in 10% of the equity. Each of those developers has one sponsor. This guide is about the one that does not: **a founder-owned developer that has been {{recapitalised}} five times without giving up control — a strategic partner, two institutional investors, a joint-control clearance, a joint-venture cheque, {{preferred equity}} at the parent — and that finances its buildings one lease at a time in the bond market when the corporate raise stalls.** Prime Data Centers is the worked example because its record is unusually legible for a private company: the European Commission's notice of who controls it, Bloomberg's account of the bond it priced and the bond it shelved, a plaintiffs' complaint that states the valuation, and location pages that list every building's status.",
+        "**Four things this guide teaches.** The {{recapitalisation ladder}} of a founder-owned developer — what each round buys and gives away, why 'majority founder-owned' and 'jointly controlled' can both be true, and what a preferred round at the parent means for the operating company. Project debt priced on a neocloud: how a 15-year CoreWeave lease supports USD 900 million of 7.5% notes, why that coupon is higher than Fleet's 5.9% on a AA- tenant, and why a Nordic bond for the pipeline failed the same summer. {{Phantom equity}} and the price of a founder-controlled cap table: what former executives say they were promised, what a 'two-tiered valuation' would mean, and how to read a USD 6 billion number that only the plaintiffs have stated. And utility pacing: how Oncor's 2023 push of 2 GW to 2027, SRP's deposit regime and ComEd's queue set the delivery dates a developer's capital cannot.",
+        "**What it deliberately leaves to other guides.** The lease itself (EdgeCore, Fluidstack); the sponsor's fund and ABS machinery (Compass); powered land and the utility contracts (PowerHouse, Tract); the neocloud's own balance sheet (CoreWeave dossier). Company history, executives and site lists stay in the dossier."
+      ]
+    },
+    {
+      "id": "the-recapitalisation-ladder",
+      "title": "The recapitalisation ladder: five rounds without losing the company",
+      "kind": "prose",
+      "read": "8 min",
+      "ps": [
+        "A developer that owns its buildings needs equity roughly in proportion to its pipeline, and a founder who wants to keep control must raise it in forms that do not vote him out. Prime's five rounds are a catalogue of those forms. 2021: a {{strategic partner}} — Macquarie Capital's equity investment and a 'USD 5 billion over the next 10 years' capital plan, which buys a co-investor with deep pockets and a right to be consulted. 2023–2025: two 'existing institutional investors', Ares Management and Siemens Financial Services, added as the pipeline grew. Early 2025: {{joint control}} — the European Commission's clearance (Case M.11843) records that Ares acquired joint control 'through contractual means' alongside Macquarie and Data Realty Group, the founder's holding company. July 2025: a joint-venture cheque from Snowhawk and Nuveen during a reported USD 2 billion raise. April 2026: {{preferred equity}} from Grain Management into Data Realty Holding Corp. itself — money to the parent, not the company.",
+        "Two phrases have to be read together. 'Majority founder-owned' (the company's site) describes economic ownership; 'joint control' (the Commission's notice) describes who can block decisions. A founder can hold most of the shares and still need Macquarie's and Ares's consent for a budget, a sale or a new campus, because control in merger law means veto rights over strategic decisions, not a share count. The corpus's other developers are either sponsor-controlled outright (EdgeCore, Compass) or one-fund GP platforms (PowerHouse); Prime is the negotiated middle.",
+        "Preferred equity at the parent is the round that reveals the pressure. Preferred stock pays a fixed return ahead of common and converts or is redeemed on terms — cheaper than selling control, dearer than debt. Placing it in Data Realty Holding Corp. rather than in Prime means the founder's holding company borrowed against its stake to fund the operating company's plan without diluting the operating company's other investors; Grain's 'ability to provide additional capital over time' is an option on more of the same. The August 2026 suits name that parent as a defendant, which is why its cap table now matters to a bond buyer.",
+        "The failed raise is the missing rung. Infralogic reported in May 2025 that a roughly USD 2 billion equity raise run by Guggenheim and Moelis had slipped from the first quarter because of 'prolonged ongoing lease negotiations' — the capital would not come until the leases did. The pattern of 2025–2026 follows: sign CoreWeave, then sell a bond on the CoreWeave building; announce Snowhawk and Grain in the gaps; try a Nordic bond for the rest and withdraw it."
+      ]
+    },
+    {
+      "id": "pricing-a-bond-on-a-neocloud-lease",
+      "title": "Pricing a bond on a neocloud lease: 7.5% at Elk Grove, 5.9% at Fleet",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "Elk Grove Village Property LLC — 'a wholly-owned indirect subsidiary of Prime Data Centers LLC' — priced USD 900 million of five-year {{senior secured notes}} at par with a 7.5% coupon on 2 June 2026, upsized from USD 850 million with Santander as sole bookrunner, to refinance USD 500 million of existing debt and 'fund the remaining estimated construction costs'. The security is the campus and the lease: CoreWeave's 15-year build-to-suit lease of the three Chicago buildings, worth about USD 2.2 billion with two seven-year renewals. This is the same instrument as Fleet's Storey County notes and the same season; the coupon is 160 basis points higher.",
+        "The spread is the tenant. Fleet's tenant is 'AA- … market cap in excess of USD 3 trillion'; Prime's is CoreWeave — a listed neocloud with tens of billions of its own debt, a business that depends on a few AI customers and a credit rating several notches below investment grade. A {{credit tenant lease}} to a AA- name lets a landlord borrow at nearly the tenant's cost of funds; a lease to a single-B neocloud carries the neocloud's risk into the landlord's bond. The Fluidstack guide teaches the tenant's side of that chain; Prime shows it from the landlord's — the campus is fully leased and the debt is still 7.5%.",
+        "Why the Nordic bond failed is the same lesson in reverse. A Norwegian-law high-yield bond is a fast, covenant-light way for a private company to raise USD 300–600 million from Nordic and international funds; Prime cut its planned USD 600 million to USD 500 million and then shelved it in July 2026 'after investors balked at the proposed terms'. The Elk Grove notes had a specific building, a specific lease and a specific tenant behind them; the Nordic bond would have funded a pipeline — Phoenix, Austin, the Nordics — with tenants unnamed. Bond buyers in 2026 would lend against a signed lease at 7.5% and would not lend against a roadmap at any price the company would pay.",
+        "Read the two together as the capital markets' rule for a mid-tier developer: project debt is available building by building once a lease is signed, priced on the tenant's credit; corporate debt for the pipeline is not. That is why the site says '4+ GW' and the bond says 270 MW."
+      ]
+    },
+    {
+      "id": "prime-money-ladder",
+      "title": "The disclosed ladder: what is public about Prime's money",
+      "kind": "bars",
+      "read": "4 min",
+      "unit": "USD millions (as reported; equity rounds are undisclosed and shown only where a figure exists; campus figures are the company's investment claims)",
+      "intro": "Read the ladder for what is missing: none of the five equity rounds has a disclosed size, and the only market-priced instrument is the Elk Grove bond.",
+      "items": [
+        {
+          "label": "Silver Point land loans, Avondale (2023)",
+          "sub": "USD 22.2m + USD 59.8m",
+          "v": 82
+        },
+        {
+          "label": "Cerberus acquisition facility (Sep 2024)",
+          "sub": "Arranged by Newmark",
+          "v": 200
+        },
+        {
+          "label": "Austin phase 1 — two shells (2026 filing)",
+          "sub": "Was three buildings / USD 1.3bn in 2024",
+          "v": 400
+        },
+        {
+          "label": "Nordic bond — shelved (Jul 2026)",
+          "sub": "USD 600m cut to USD 500m, then withdrawn",
+          "v": 500
+        },
+        {
+          "label": "Elk Grove notes (Jun 2026)",
+          "sub": "7.5%, five-year, at par; refinances USD 500m; CoreWeave lease",
+          "v": 900
+        },
+        {
+          "label": "Equity raise targeted (2025)",
+          "sub": "'more than USD 2 billion this year' — Snowhawk/Nuveen closed, size undisclosed",
+          "v": 2000
+        },
+        {
+          "label": "CoreWeave lease value (15 years)",
+          "sub": "~USD 2.2bn per the bond marketing",
+          "v": 2200
+        },
+        {
+          "label": "Avondale investment claim",
+          "sub": "'more than USD 3 billion' plus customers' '2x more'",
+          "v": 3000
+        },
+        {
+          "label": "Plaintiffs' valuation claim (Aug 2026)",
+          "sub": "'more than USD 6 billion' — the only valuation on the record",
+          "v": 6000
+        }
+      ]
+    },
+    {
+      "id": "phantom-equity-and-the-price-of-control",
+      "title": "Phantom equity and the price of control: reading the employee suits",
+      "kind": "prose",
+      "read": "7 min",
+      "ps": [
+        "{{Phantom equity}} is a promise of cash equal to what a share would be worth, without the share: a private company grants an executive units that pay out on a sale or a valuation event, so the employee shares the upside and the founder keeps the cap table clean. It is common in founder-controlled developers because real equity would dilute control and complicate every investor round. Its weakness is that the value is whatever the company says it is — the valuation is set by the party that pays.",
+        "That is the substance of the August 2026 suits. Seven former employees, among them the former Chief Commercial Officer, the former VP of Human Resources and the former Head of Utilities and Incentives, sued Prime, Data Realty Holdings and the two founders in Dallas County, the Southern District of New York and California for fraud, misrepresentation and civil RICO, claiming USD 185 million in Texas and 'more than USD 400 million' in total. Their allegations, as reported: a 'two-tiered valuation system' (one number for investors, one for employees), coerced re-signing of phantom-equity agreements, 'undisclosed property transactions absorbing co-owner interests' and dilution through 'unfunded paper commitments' — and a company valuation that went 'from about USD 140 million to more than USD 6 billion'. No defence had been reported by September 2026; allegations are not findings.",
+        "Two things matter to a reader who is not a party. First, the USD 6 billion is the only valuation on the public record and it comes from the plaintiffs — it should be quoted as their claim, not as the company's worth; the company's own scale claims moved from '4+ GW' to '7 GW' inside the same spring. Second, the plaintiffs are the commercial team that signed Lambda and negotiated with Oncor; a developer whose commercial leadership is litigating against it is a counterparty whose institutional memory of its own deals is in the courtroom.",
+        "For a supplier, the operative question is the same one the bond market asked: which entity signs, and what stands behind it. Elk Grove's bondholders have a lien on a building and a CoreWeave lease; a vendor to Avondale has a project company and an unnamed hyperscaler; a vendor to the parent has a defendant."
+      ]
+    },
+    {
+      "id": "utility-pacing",
+      "title": "Utility pacing: the dates a developer's capital cannot buy",
+      "kind": "table",
+      "read": "6 min",
+      "intro": "Prime's Texas, Arizona and Illinois campuses on the utility's clock. Line up the developer's stated date against the utility's instrument and what actually happened.",
+      "cols": [
+        "Campus",
+        "Developer's date",
+        "Utility instrument",
+        "What happened"
+      ],
+      "rows": [
+        [
+          "Texas — five projects, 2 GW (Oncor)",
+          "2025",
+          "Oncor negotiation for over a year (2023)",
+          "Pushed 'into 2027' by Oncor (Bisnow, November 2023); DFW04's filed completion (January 2026) passed with no reported opening; Austin phase 1 cut to two shells"
+        ],
+        [
+          "Avondale PHX01 (SRP)",
+          "First building 'Q3 2025' (2023 release)",
+          "~250 MW on-site substation; SRP large-load programme with 15-year contracts, 80% minimum takes and collateral deposits",
+          "Groundbreaking on buildings 1–3 on 21 May 2026 with phase 1 of the substation commissioned for 144 MW; no delivery date released"
+        ],
+        [
+          "Elk Grove ORD01 (ComEd)",
+          "'USD 1 billion' campus, groundbreaking November 2022",
+          "275 MVA on-site substation; Illinois data-center tax exemption (first recipient)",
+          "ORD01-01 operational and leased by 2025; buildings 2–3 leased; ComEd's market-wide delays 'until 2032 or later' (CBRE) did not stop it"
+        ],
+        [
+          "Vernon LAX01 (Vernon Public Utilities)",
+          "33 MW announced June 2022",
+          "49.5 MVA, 66 kV substation 'built by Prime'",
+          "Opened November 2024, 100% leased — the fastest path was a municipal utility and a self-built substation"
+        ],
+        [
+          "Lockhart AUS01 (Bluebonnet)",
+          "USD 1.3bn, three buildings (2024)",
+          "Cooperative power; on-site substation; 10-year abatement with PILOT (2024)",
+          "Two shells, USD 400m, June 2026–September 2027 (filing); county suspended abatements August 2026"
+        ],
+        [
+          "Pennsylvania northern tier (UGI)",
+          "'three to five years' for >100,000 Dth/day of gas",
+          "Land sale from UGI for an on-site gas-fired plant",
+          "Announced May 2026; no county, MW or permit; local opposition within a fortnight"
+        ]
+      ]
+    },
+    {
+      "id": "prime-on-one-clock",
+      "title": "From Sacramento to the courtroom: Prime on one clock",
+      "kind": "timeline",
+      "read": "5 min",
+      "intro": "Years on the horizontal axis. The capital lane shows the rounds and bonds; the campus lane shows what was built and leased; the governance lane shows control and litigation.",
+      "unit": "calendar year",
+      "lanes": {
+        "cap": "Capital",
+        "campus": "Campuses and tenants",
+        "gov": "Control and litigation"
+      },
+      "items": [
+        {
+          "x": 2017,
+          "lane": "campus",
+          "label": "Established in California; McClellan Park first campus",
+          "sub": "8 MW build-to-suit to a public tech company (2021)"
+        },
+        {
+          "x": 2021,
+          "lane": "cap",
+          "label": "Macquarie Capital strategic partnership",
+          "sub": "'USD 5 billion over the next 10 years'; 400 MW pipeline"
+        },
+        {
+          "x": 2022,
+          "lane": "campus",
+          "label": "Chicago groundbreaking; Vernon 33 MW announced",
+          "sub": "'USD 1 billion' campus; Gensler and Clune"
+        },
+        {
+          "x": 2023,
+          "lane": "campus",
+          "label": "Cyxtera rejects two Santa Clara leases; Oncor pushes Texas to 2027",
+          "sub": "Tenant credit and utility pacing in one year"
+        },
+        {
+          "x": 2024,
+          "lane": "cap",
+          "label": "Cerberus USD 200m acquisition facility",
+          "sub": "Vernon opens 100% leased in November"
+        },
+        {
+          "x": 2025,
+          "lane": "gov",
+          "label": "European Commission clears joint control (Ares, Macquarie, Data Realty)",
+          "sub": "Case M.11843"
+        },
+        {
+          "x": 2025,
+          "lane": "cap",
+          "label": "Snowhawk + Nuveen equity; USD 2bn raise delayed by leases",
+          "sub": "Lambda leases 21 MW at Vernon in November"
+        },
+        {
+          "x": 2026,
+          "lane": "cap",
+          "label": "Grain preferred equity into the parent; USD 900m Elk Grove notes; Nordic bond shelved",
+          "sub": "7.5% on a CoreWeave lease; the pipeline bond fails"
+        },
+        {
+          "x": 2026,
+          "lane": "campus",
+          "label": "Avondale buildings 1–3 break ground; Sacramento SMF02; Austin shells filed",
+          "sub": "No Avondale delivery date; Austin cut to USD 400m"
+        },
+        {
+          "x": 2026,
+          "lane": "gov",
+          "label": "Seven former executives sue for >USD 400m",
+          "sub": "Fraud and RICO claims; USD 6bn valuation stated by plaintiffs"
+        }
+      ]
+    },
+    {
+      "id": "what-a-founder-owned-developer-discloses",
+      "title": "Reading a founder-owned developer: what is on the record and who put it there",
+      "kind": "table",
+      "read": "5 min",
+      "intro": "Prime publishes no accounts, but five outside parties have published pieces of its balance sheet. Learn which document answers which question.",
+      "cols": [
+        "Question",
+        "Best source",
+        "What it says",
+        "What it cannot say"
+      ],
+      "rows": [
+        [
+          "Who controls the company?",
+          "European Commission notice, Case M.11843 (2025)",
+          "Ares, Macquarie (via WDCAH) and Data Realty Group jointly control Prime",
+          "Percentages; the founder's personal stake; who owns Data Realty"
+        ],
+        [
+          "What is a building worth to a lender?",
+          "Bloomberg bond reporting (June 2026)",
+          "USD 900m at 7.5% on the CoreWeave campus; USD 500m refinanced",
+          "The lease rent, the building cost, the rating"
+        ],
+        [
+          "What is the company worth?",
+          "Plaintiffs' filings (August 2026)",
+          "'from about USD 140 million to more than USD 6 billion'",
+          "Anything a court or an investor has confirmed"
+        ],
+        [
+          "What is operating?",
+          "Company location pages (building status fields)",
+          "~151 MW 'Operational', 141 MW 'Leased'; 222 MW 'Construction'",
+          "Tenant names beyond CoreWeave and Lambda; delivery dates"
+        ],
+        [
+          "How big is the pipeline?",
+          "Company boilerplate, by date",
+          "'3+ GW / 22 locations' (2024 report) → '4+ GW / 13 campuses' (2025–26 site) → '7 GW / 38 sites' (Grain release, April 2026)",
+          "Which sites have power, permits or tenants"
+        ],
+        [
+          "Why did a financing fail?",
+          "Bloomberg via swissinfo (July 2026)",
+          "Nordic bond cut from USD 600m to USD 500m, then shelved; 'investors balked at the proposed terms'",
+          "The terms; whether it relaunches"
+        ]
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "ps": [
+        "**The pipeline number is a marketing figure.** '4+ GW' on the site and '7 GW' in the Grain release, in the same month, for a company operating 151 MW. Count buildings with a status field.",
+        "**Control and ownership are different sentences.** 'Majority founder-owned' and 'jointly controlled by Ares and Macquarie' are both true; a counterparty negotiating with the founder is negotiating with three vetoes.",
+        "**Project debt is not corporate capacity.** The Elk Grove notes financed one leased campus at 7.5%; the pipeline bond failed. Every unleased campus — Avondale's buildings 4–5, Austin, the Nordics — still needs the equity the 2025 raise did not deliver.",
+        "**The tenant sets the coupon.** A neocloud lease costs 160 basis points more than a AA- lease in the same market and season; 'fully leased' does not mean 'cheaply financed'.",
+        "**The commercial team is in court.** The executives who signed the leases and negotiated with Oncor are plaintiffs alleging a two-tiered valuation; the defendants include the parent that Grain just financed.",
+        "**Dates belong to the utility.** Oncor's 2027, SRP's deposits, a filed Fort Worth completion date with no opening, a Phoenix building whose first announced completion (Q3 2025) became a May 2026 groundbreaking."
+      ]
+    },
+    {
+      "id": "where-prime-slots-in",
+      "title": "Where Prime's businesses slot into the chain",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "One row per business line in the dossier, read against the layer of the ecosystem it touches.",
+      "cols": [
+        "Business line",
+        "Layer",
+        "Who it deals with",
+        "What to watch"
+      ],
+      "rows": [
+        [
+          "Build-to-suit, powered shell and turnkey wholesale (the model)",
+          "Landlord — wholesale leases, JV and sale-leaseback options",
+          "CoreWeave, Lambda, unnamed hyperscaler and enterprises; Clune, ARCO/Murray, Holder, Gensler",
+          "A named Avondale tenant; buildings 4–5; any sale-leaseback or JV transaction"
+        ],
+        [
+          "US campuses (~151 MW operating; ~222 MW under construction)",
+          "Owned metro-edge and hyperscale campuses",
+          "ComEd, Oncor, SRP, SMUD, Vernon Public Utilities, Bluebonnet, SVP/PG&E",
+          "Avondale building 1 delivery; DFW04 opening; Austin phase 1 (September 2027)"
+        ],
+        [
+          "European pipeline (Esbjerg 550 MW, Järvenpää, Madrid, Frankfurt)",
+          "Land and permits without financing",
+          "Brunswick Real Estate, AINS; Esbjerg and Järvenpää municipalities; Iberdrola, Nord Energi",
+          "Esbjerg EIA; a Nordic tenant; a relaunched bond"
+        ],
+        [
+          "Power — self-built substations and the UGI gas campus",
+          "Power delivery; first behind-the-meter generation",
+          "UGI Energy Services; SRP large-load programme; Plus Power's Sierra Estrella next door",
+          "Pennsylvania county, MW and permits; SRP deposits"
+        ],
+        [
+          "Capital — five equity rounds, Elk Grove notes, shelved Nordic bond",
+          "Recapitalisation of a founder-controlled platform",
+          "Macquarie, Ares, Siemens FS, Snowhawk/Nuveen, Grain; Santander; Guggenheim, Moelis",
+          "Further Grain capital; a corporate raise; the bond relaunch; the suits' first rulings"
+        ]
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What does 'recapitalise' mean for a private developer?",
+          "a": "To change who funds the company and on what terms — new equity, preferred stock or debt — usually to fund growth or refinance, without necessarily changing who runs it."
+        },
+        {
+          "q": "How can a company be 'majority founder-owned' and 'jointly controlled' by two investors at once?",
+          "a": "Ownership is a share count; control in merger law is veto rights over strategic decisions. A founder can hold most shares and still need Ares's and Macquarie's consent for a budget or a sale."
+        },
+        {
+          "q": "What is preferred equity, and why put it in the parent rather than the company?",
+          "a": "Stock with a fixed return paid ahead of common. Placing it in Data Realty Holding Corp. funds the founder's stake without diluting the operating company's other investors — cheaper than selling control, dearer than debt."
+        },
+        {
+          "q": "Why is the Elk Grove bond's coupon (7.5%) higher than Fleet's Nevada notes (5.875%)?",
+          "a": "The tenant: CoreWeave is a leveraged, sub-investment-grade neocloud; Fleet's tenant is AA-. Project bonds price on the lease counterparty's credit."
+        },
+        {
+          "q": "What is a Norwegian-law bond, and why did Prime's fail?",
+          "a": "A fast, covenant-light Nordic high-yield instrument. Prime's would have funded an unleased pipeline; investors 'balked at the proposed terms' in July 2026 while the CoreWeave-backed notes had sold in June."
+        },
+        {
+          "q": "What is phantom equity?",
+          "a": "A cash promise equal to a share's value without the share — keeps the founder's cap table clean; its value is whatever the company's valuation says, which is the dispute in the 2026 suits."
+        },
+        {
+          "q": "What is a 'two-tiered valuation system' as alleged?",
+          "a": "One valuation shown to investors and a lower one used to settle employees' phantom equity — the plaintiffs' allegation, not a finding."
+        },
+        {
+          "q": "Why did a USD 2 billion equity raise slip in 2025?",
+          "a": "'Prolonged ongoing lease negotiations' — investors wanted the leases before the equity, which is why the bond followed the CoreWeave signing rather than preceding it."
+        },
+        {
+          "q": "What does a building's 'Operational / Leased' status field tell you that a pipeline figure does not?",
+          "a": "That a specific building exists and has a tenant — the only counter that reconciles with revenue; '4+ GW' and '7 GW' count plans."
+        },
+        {
+          "q": "What is utility pacing?",
+          "a": "Delivery dates set by the utility's ability to connect load — Oncor's push of 2 GW to 2027, SRP's deposit regime, ComEd's queue — which capital cannot shorten."
+        },
+        {
+          "q": "Name the three things a supplier should identify before contracting with a founder-owned developer.",
+          "a": "Which entity signs (project company, operating company or parent), what stands behind it (a lease and a lien, an investor's consent, or a defendant), and whether the building has a status field or a pipeline claim."
+        },
+        {
+          "q": "What did the EC's clearance of Case M.11843 establish?",
+          "a": "That Ares, Macquarie and Data Realty Group jointly control Prime — the only public record of the control structure."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "Grain Management invested preferred equity in Data Realty Holding Corp. rather than in Prime Data Centers LLC. The most likely reason:",
+          "c": [
+            "Grain wanted operating control",
+            "To fund the founder's stake and the company's plan without diluting the operating company's other investors",
+            "EU merger rules required it",
+            "To refinance the Elk Grove notes"
+          ],
+          "a": 1,
+          "why": "Preferred equity at the parent leaves the operating company's cap table and the joint-control arrangement untouched."
+        },
+        {
+          "q": "Two project bonds price in the same season: 5.875% for a campus leased to a AA- tenant, 7.5% for a campus leased to a neocloud. The spread reflects:",
+          "c": [
+            "The state",
+            "The tenant's credit",
+            "The general contractor",
+            "The coupon frequency"
+          ],
+          "a": 1,
+          "why": "Project bonds lend against the lease; the lease counterparty's rating sets the price."
+        },
+        {
+          "q": "Prime's Nordic bond was shelved in July 2026 after the Elk Grove notes sold in June. The best explanation:",
+          "c": [
+            "Nordic investors dislike data centers",
+            "The Elk Grove notes had a building, a lease and a tenant; the Nordic bond would have funded an unleased pipeline",
+            "Interest rates rose",
+            "The company withdrew to relaunch bigger"
+          ],
+          "a": 1,
+          "why": "Bloomberg's account: investors 'balked at the proposed terms'; the difference between the two deals was the collateral."
+        },
+        {
+          "q": "'Majority founder-owned' (company site) and 'jointly controlled by Ares, Macquarie and Data Realty' (EC notice) are:",
+          "c": [
+            "Contradictory — one must be wrong",
+            "Both true — ownership is a share count, control is veto rights",
+            "Both marketing",
+            "Both out of date"
+          ],
+          "a": 1,
+          "why": "Merger-control 'joint control' means each party can block strategic decisions regardless of share percentages."
+        },
+        {
+          "q": "The USD 6 billion valuation of Prime Data Centers comes from:",
+          "c": [
+            "The company's audited accounts",
+            "Grain's investment release",
+            "The former employees' lawsuits",
+            "Bloomberg's bond reporting"
+          ],
+          "a": 2,
+          "why": "It is the plaintiffs' allegation of growth 'from about USD 140 million to more than USD 6 billion' — quote it as their claim."
+        },
+        {
+          "q": "Phantom equity differs from a share because:",
+          "c": [
+            "It votes",
+            "It pays cash equal to a share's value without issuing the share, at a valuation the company sets",
+            "It is publicly traded",
+            "It cannot be revoked"
+          ],
+          "a": 1,
+          "why": "That valuation dependence is exactly what the 'two-tiered valuation' allegation targets."
+        },
+        {
+          "q": "Which of these is the strongest evidence of Prime's operating scale?",
+          "c": [
+            "'7 gigawatts of operational and planned capacity'",
+            "'14 campuses … 4+GW pipeline'",
+            "Location-page building status fields summing to ~151 MW operational, 141 MW leased",
+            "'22 locations, 3+ GW road map'"
+          ],
+          "a": 2,
+          "why": "Status fields describe buildings; the other three describe plans, and they disagree with each other."
+        },
+        {
+          "q": "In November 2023 Oncor pushed Prime's five Texas projects from 2025 to 2027. By September 2026 the record shows:",
+          "c": [
+            "All five operating",
+            "DFW04's filed completion date passed with no reported opening and Austin's phase 1 cut to two shells",
+            "Prime left Texas",
+            "Oncor reversed the delay"
+          ],
+          "a": 1,
+          "why": "Utility pacing: the developer's capital could not buy the dates."
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "t": "Data Realty Holding Corp.",
+      "d": "The 'founding and controlling shareholder of Prime Data Centers' — the founder-controlled parent into which Grain Management made a preferred-equity investment in April 2026, and a defendant in the August 2026 employee suits."
+    },
+    {
+      "t": "Elk Grove Village Property LLC",
+      "d": "The wholly owned Prime subsidiary that owns the Chicago campus leased to CoreWeave and issued USD 900 million of five-year 7.5% senior notes in June 2026."
+    }
+  ]
+}

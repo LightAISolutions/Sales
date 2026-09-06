@@ -407,6 +407,63 @@ either way.
 (727 curated); 40 shared concepts registered (895 total); report pins
 unchanged (X3's job).
 
+**F8 — 2026-09-05, v04.77r, Fable 5.1 High.** Three `developer` dossiers
+(Fermi America, Tract, Prime Data Centers) — the last Fable session of Phase B
+— and two step-7 revisions (`xcel-energy` v2→v3, `lambda` v4→v5). The checker
+exited 0 on the first run with **0** findings of any kind: no reciprocal-type
+findings (no `investor` edges — none of the three sponsors is a covered slug,
+and Fermi's largest holders are its founders), **0** unregistered sources,
+**0** dangling slugs once the registry was synced, **0** unregistered project
+pins (Project Matador, the Tract parks and Avondale stayed in prose — no
+second dossier was ready to pin any of them; `profiler-projects.json`,
+`Scraper.gs` and `Profiler.html` untouched).
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **0** | — |
+| reciprocal-type · **corrected** | **0** | The two step-7 inbound edges paired coherently by construction: `xcel-energy`→`fermi-america` `customer` against Fermi's `supplier` (the SPS electric service agreement, up to 200 MW); `lambda`→`prime-data-centers` `supplier` against Prime's `customer` (21 MW of LAX01). The new `tract`↔`prime-data-centers` pair is `competitor`/`competitor` (symmetric) |
+| unregistered-source · **replaced** | **0** | Every relationship `source` was written by the builders as the exact registered string; a scratchpad validator asserted `sources[]` membership and URL-index membership before any file was emitted (as in F6 and F7) |
+| unregistered-source · **registered** | **0** | The Xcel edge cited the PR Newswire ESA release Xcel's dossier already carried; the Lambda edge registered Prime's Lambda release in `lambda`'s `sources[]` in the same edit |
+| unregistered-source · **accepted** | **0** | — |
+
+**Step 7 substance, for the record.** Fermi America: the `xcel-energy` dossier's
+December 2025 development ('86 MW from January 2026') was accurate as the
+release's wording and was left; the new edge's context records Fermi's 10-K
+restatement (second half of 2026) so the two dossiers no longer read as if the
+power were flowing. The `\bFermi\b` hit in `excelsior-energy-capital`
+('Fermi-class campuses') is a generic positioning reference and was left.
+Tract: the `compass-datacenters` and `powerhouse-data-centers` peer-list
+mentions were accurate; 'Weil Tract' in `hunt-energy-network` is a battery
+site. Prime: `lambda`'s five mentions (21 of 33 MW at Vernon) were accurate and
+gained a curated edge; `plus-power`'s 'marketed as grid support for the
+adjacent Prime Data Centers campus' was **not** revised — SRP's own release
+does not name Prime, the Prime research found the framing in broker and trade
+coverage, and Plus Power's Sierra Estrella microsite is JavaScript-rendered and
+could not be read to confirm or refute the quoted phrase; the Prime dossier
+records the adjacency as `other` with that caveat. `coreweave`'s dossier does
+not mention Elk Grove Village; the USD 2.2bn Prime lease surfaced only through
+Prime's June 2026 bond marketing and is recorded on Prime's side (one-sided,
+per the checker's design — a prompt for CoreWeave's next revision).
+
+**A sourcing note for the calibration record.** tract.com, tractcapital.com,
+fleetdatacenters.com and primedatacenters.com all block automated fetches
+(SiteGround captcha; a 403 WAF). Both company-side agents read the pages from
+dated Wayback captures of the exact URLs and recorded the capture timestamps;
+the dossiers cite the canonical company URLs with a '(read via Wayback capture
+of YYYY-MM-DD …)' note in the label, so the provenance tiering (`company` by
+registry domain) reflects who published the page rather than who served it.
+The first-party shares (33% and 30%) are therefore real, not an artefact of
+the archive's host.
+
+**Accept-list state.** 14 entries, unchanged. **Cross-reference checker.** Exit
+0, no new candidate; one Tract `productsAndServices` scope (2,877 characters)
+joins the not-examined list.
+
+**Side effects.** 136 dossiers on the roster; graph rebuilt to 1,012 edges
+(749 curated); 27 shared concepts registered (922 total; one alias collision
+— 'bridging power' against the existing `bridge-power` — caught before
+registration); report pins unchanged (X3's job).
+
 
 
 Developed by: LightAISolutions
