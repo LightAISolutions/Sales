@@ -3,11 +3,79 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.81r] — 2026-09-06 03:38:37 AM EST
+
+> **Prompt:** "Picking up from my last session, run Phase C session C7 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Opus 5 xhigh as a fresh session: Power Electronics. C6 landed at v04.80r; Phases A and B are complete and the §6
+> register in CLASSROOM-CURRICULUM-PLAN.md is dated at v04.78r — nothing in Phase C is a register closer, so do not
+> touch §6.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest = C6, Previous = C5); PROFILER-COVERAGE-PLAN.md §2
+> (the model rule and its three evidence notes), §5 (the demotion warning, the C5 and C6 rows as the two worked
+> examples of per-clause verdicts, and the C7 row), §7 (every bullet — especially "§5 — rewrite your own row", the
+> after-write checkers, the calendar bullet, the CHANGELOG-capacity bullet at 97/100, and the X3 peer-family bullet
+> as C6 extended it from a fourth end), the §8 `power-electronics` row (`supplier`, both columns at `—`), and §9.5;
+> .claude/rules/profiler-app.md (Profiler Command incl. steps 5 and 7, Profiler Prep Command, Scheduled Refreshes,
+> Archival Procedure); repository-information/PROFILER-SCHEMA.md (relationships[] incl. `project` pins, sources[],
+> Source provenance, named-projects registry); repository-information/PROFILER-STYLES.md (active style:
+> intel-briefing); PROFILER-CROSSREF-CALIBRATION.md → "Relationships checker" incl. the F6, F7, F8, C5 and C6
+> adjudication logs (the writer rules the builders followed: every relationship `source` is the exact registered
+> string in that dossier's sources[], asserted before the file is emitted — C6 caught one such defect pre-emission
+> with a scratchpad validator, and that validator is the cheapest thing to rebuild first).
+>
+> THE TASK: `profiler Power Electronics` then `profiler prep Power Electronics` — dossier (schema v7,
+> profileVersion 1, category `supplier` per the §8 row) and study guide (schema v2) — then the four after-write
+> scripts (sync-profiler-registry.py, build-profiler-graph.py, check-profiler-study.py,
+> check-profiler-relationships.py) plus check-profiler-crossrefs.py, a calendar row, README tree entries, and flip
+> the §8 row. One push commit. [Session-specific notes on the refuted count premise and the grep trap, the entity
+> and slug, what the dossier is for, teaching past the existing guides, the private-company calendar row, investor
+> edges, named-project pins, the peer family, JSON formatting and the CHANGELOG counter.]
+>
+> THE §5 ROW IS A HYPOTHESIS, NOT A BRIEF: the C7 `Why` cell ("The leading US utility-scale PCS specialist (six
+> dossiers) — pair with C6 if the session has room") is unverified prompt material. "(six dossiers)" is already
+> refuted above. "The leading US utility-scale PCS specialist" is the clause that actually needs testing — find an
+> independent market-share or ranking source for US utility-scale PCS, and if none exists say so plainly rather
+> than repeating the claim. Treat every clause as a premise to check, and before you commit rewrite that cell plus
+> the `Checked` column with what the sources actually showed, including "premise held" where it did. Record the
+> per-clause verdicts in the §8 `Closes` cell too, as C5 and C6 did.
+>
+> VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py 0 errors / 0 warnings,
+> check-profiler-relationships.py exit 0 with every finding either fixed or accepted with a reason,
+> check-profiler-crossrefs.py exit 0, the dossier and guide render (Playwright) with zero page errors. Add a C7
+> entry to the calibration log's Relationships checker adjudication log in the C5/C6 format. Report: source count
+> and first-party share, relationships written, any accepts, every §5 premise verdict, and the ownership finding
+> that decided the calendar row type. Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/*
+> branch."
+
+### Added
+
+- **Power Electronics dossier** (`power-electronics.profile.json`, schema v7, profileVersion 1, category `supplier`, intel-briefing style) — the corpus's first dedicated power-conversion specialist. **85 sources, 61% first-party.** Power Electronics España, S.L. of Llíria, Valencia: founded 1987, 3,685 employees, FY2025 revenue above €1.3bn with EBITDA above €250m, and **approximately 70% of group revenue earned in the United States** while manufacturing in Spain. Eight curated relationships, four `policyExposure` entries, five banded `technicalSpecs` groups and seven named decision makers.
+- **Power Electronics study guide** (`power-electronics.study.json`, schema v2, 11 sections) — deliberately written past the `sinexcel`, `sungrow` and `delta-electronics` guides, which already cover modular-versus-central conversion and the grid-forming metaphor. This one teaches the power triangle and why a converter is rated in kVA, how to read a capability curve and a derating table, grid-following against grid-forming as current source against voltage source, **the two separate US rulebooks** (IEEE 1547 with UL 1741 SA/SB at distribution against IEEE 2800 with NERC PRC-029-1 and FERC Order 901 at transmission), ride-through and the prohibition of momentary cessation, and what a developer buys when it buys conversion separately from cells.
+- **Power Electronics lesson plan** (`repository-information/study-prep/power-electronics/power-electronics-lesson-plan.md`) — five modules with exercises and pacing.
+- **Twelve shared concepts registered** in `profiler-concepts.json` (**951 total**): IEEE 1547, IEEE 2800, UL 1741, UL 1741 SA, UL 1741 SB, NERC, FERC Order 901, momentary cessation, capability curve, phase-locked loop, AC-coupled and DC-coupled — none of which existed in the registry before this session.
+- **Refresh-calendar row** (104 rows, 52 private) carrying `cadence: "quarterly"` per the private-company rule, with the ownership finding that decided it written into `source` and a nine-item `watch[]` closing on a Chesterton check.
+
+### Changed
+
+- **Step 7 — three dossiers revised and archived, splitting three ways.** `sinexcel` v6→v7 **contradicted**: it grouped Power Electronics with Sungrow and SMA as "integrated-inverter giants" competing on "full BESS supply", which is right about Sungrow and wrong about a company that makes no cells and sells no turnkey system — corrected in both the product positioning and the `relationships[6]` context, with Wood Mackenzie's BESS integrator ranking registered as the supporting source. `sungrow` v7→v8 **accurate and left alone**: its description of Power Electronics among conventional central-inverter competitors is corroborated by Wood Mackenzie's own CY2023 wording; curated edge added, no prose change. `terra-gen` v4→v5 **under-evidenced rather than wrong**: it stated "Power Electronics PCS" as fact in four places when the sole source, Mortenson's project page, writes "PE power conversion systems (PCS)" and never expands the mark — qualified in the development's `read` and in the curated edge's `context`, not deleted.
+- **§5 C7 row rewritten with per-clause verdicts** and the `Checked` column filled; **§8 C7 row flipped** to `v1 · v04.81r` / `✓ · v04.81r` with the same verdicts in `Closes`; §7's CHANGELOG-capacity bullet moved 97/100 → 98/100 and its rotation estimate to the second push from here.
+- **C7 entry added to the Relationships checker adjudication log** in `PROFILER-CROSSREF-CALIBRATION.md`, in the C5/C6 format.
+- Registry synced (143 companies), graph rebuilt to **1,096 edges (820 curated)**, README tree extended with four entries.
+
+### Fixed
+
+- **Two provenance traps that would have misstated the first-party share in opposite directions.** The company serves its own datasheets and brochures from an S3 bucket host, which the registry domain rule would tier `independent` — nine such sources carry an explicit `"party": "company"`. Conversely, `power-electronics.co.nz` describes itself as a **locally owned** supplier rather than a group subsidiary, so it was kept out of the registry's `domains` and tiers `independent`; its statement that Sinexcel manufactures its power-quality range is that distributor's supply relationship, not the manufacturer's, and no Sinexcel supplier edge was written on it.
+
+### Verification
+
+- `sync-profiler-registry.py --check` clean (143 entries) · `check-profiler-study.py` **0 errors / 0 warnings** (117 guides, 951 concepts) · `check-profiler-relationships.py` **exit 0, 0 findings**, accept list unchanged at 14 · `check-profiler-crossrefs.py` **exit 0, 0 new candidates**, 304 pairs compared (from 301) · Playwright render of the dossier and guide with **0 page errors and 0 console errors**.
+- **Premise verdicts — both §5 clauses failed.** "The leading US utility-scale PCS specialist" **failed as stated**: no independent ranking of US PCS suppliers exists, and the absence is structural because analyst houses rank global PV inverters or AC-integrated storage systems, excluding a conversion-only vendor by scope. The one independent US-leadership statement — Wood Mackenzie's CY2023 line naming Sungrow and Power Electronics — concerns **solar central inverters**, is a joint mention, is unquantified, and was not repeated the following year; and Flex's $4.4bn acquisition of the US pure-play EPC Power on 3 September 2026 contradicts the "US specialist" reading directly. "(six dossiers)" **failed — three, not six**: eight files match `\bPower Electronics\b` and five are not the company (Delta's own segment, EVE's own lab, and three citations of the trade publication *Power Electronics News*).
 
 ## [v04.80r] — 2026-09-06 01:55:54 AM EST
 

@@ -667,5 +667,121 @@ company-published headshots added for Clearway, verified on a contact sheet;
 report pins unchanged (X3's job).
 
 
+**C7 — 2026-09-06, v04.81r, Opus 5 xhigh.** One dossier — Power Electronics
+España, S.L. (`supplier`), the corpus's first dedicated power-conversion
+specialist — and **three** step-7 revisions, the smallest reconciliation tail
+since F7. The checker exited 0 on the first run with **0** findings of any kind:
+no reciprocal-type findings, **0** unregistered sources, **0** dangling slugs
+once the registry was synced, **0** unregistered project pins
+(`profiler-projects.json`, `Scraper.gs` and `Profiler.html` untouched).
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **0** | — |
+| reciprocal-type · **corrected** | **0** | All three new pairs cohere by construction: `terra-gen`→`power-electronics` `supplier` against the new dossier's `customer`; and the symmetric `competitor`/`competitor` pairs with `sungrow` and `sinexcel`. The five one-sided edges written this session (`mortenson` `partner`, `flex`, `abb` and `hitachi-energy` `competitor`, `trina-storage` `partner`) have no reciprocal because none of those dossiers makes a claim about the subject — step 7 imposes no obligation on them and one-sidedness is not an invariant |
+| unregistered-source · **replaced** | **0** | Every relationship `source` was written as the exact registered string. The scratchpad validator was rebuilt first, as C6 recommended, and asserted `sources[]` membership before the file was emitted; it reported 0 errors on the first run |
+| unregistered-source · **registered** | **2** | Both step-7 edges needing a source registered it in the older dossier in the same edit — `sungrow` the Wood Mackenzie CY2023 shipment release, `sinexcel` the Wood Mackenzie 2026 BESS integrator ranking (needed to support the correction below). The `terra-gen` edge cited the Mortenson project page that dossier already carried |
+| unregistered-source · **accepted** | **0** | — |
+
+**A competitor edge with no citable source, and the corpus precedent for it.**
+The `sinexcel` ↔ `power-electronics` pair is the one edge this session could not
+cite a URL for: no published source names both companies together, because
+**no ranking of conversion suppliers exists at all** (see below). It is written
+with a **bare label** — `"Dossier competitive assessment — third-party storage
+PCS"` — which the schema permits and disposition (c) explicitly does not flag,
+and which is exactly the form `sinexcel`'s own `sungrow` edge already used. The
+alternative, omitting `source` entirely, would have been equally legal and less
+honest about where the judgment came from. Label count moves 143 → 145.
+
+**Step 7 substance, for the record.** Three dossiers carried inbound claims and
+they split three ways — one contradicted, one accurate, one under-evidenced.
+**`sinexcel` was contradicted** and is the categorical class the checker cannot
+see. It grouped the subject with Sungrow and SMA as "integrated-inverter giants"
+whose model Sinexcel sells around "rather than competing with them on full BESS
+supply". That is right about Sungrow and **wrong about Power Electronics**, which
+manufactures no cells and sells no turnkey system — it is the same *kind* of
+business as Sinexcel at a different scale, and the real contrast is modular
+low-voltage against integrated medium-voltage architecture. The proof is Wood
+Mackenzie's own published scope for its BESS integrator ranking (factory-assembled
+AC-integrated systems), which excludes the subject **by definition rather than by
+performance**; that release was registered in `sinexcel`'s `sources[]` to support
+the correction, made in both the `productsAndServices` positioning and the
+`relationships[6]` context. **`sungrow` was accurate and left alone** — its
+description of the subject among conventional central-inverter competitors is
+independently corroborated by Wood Mackenzie's CY2023 wording, and the dossier
+gained a curated edge with no prose change. **`terra-gen` was under-evidenced
+rather than wrong**, and is the more interesting case: it stated "Power
+Electronics PCS" as fact in four places, and the sole source — Mortenson's
+Canyon Country project page — writes **"PE power conversion systems (PCS)"** and
+never expands the mark. "PE" is the company's own abbreviation and appears that
+way on its datasheet filenames, so the reading is sound; but Terra-Gen's own
+project page names no supplier and no independent source does either. The
+provenance was written out in the development's `read` and again in the curated
+edge's `context`, and the terse spec and headline mentions were left as shorthand
+backed by those two — **qualified, not deleted**, per Chesterton's Fence.
+
+**A false-positive class worth recording, because the brief predicted it and the
+grep confirms it.** `\bPower Electronics\b` matches **eight** dossiers and
+**five are not the company**: `delta-electronics` (Delta's own business segment
+is named Power Electronics), `eve-energy` (its own "Power Electronics Lab"), and
+`flex`, `infineon` and `vicor` (all citing the trade publication *Power
+Electronics News*). `vicor` alone carries three distinct false-positive kinds —
+the publication, the "IEEE William E. Newell Power Electronics Award", and a
+master's degree in the discipline. A company whose name is also its industry's
+name defeats word-boundary matching entirely; only reading each hit separates
+them. This is the counterpart to the `\bAES\b` and `\bRecurrent\b` cases from
+C5 and C6, and the most extreme instance so far.
+
+**A negative finding that is the session's main result.** There is **no
+independent ranking of US utility-scale PCS suppliers**, and the absence is
+structural rather than a search failure: every analyst house ranks either global
+PV inverters or AC-integrated storage systems, so a conversion-only vendor falls
+between two published categories. The consequence for the corpus is that any
+sentence of the form "the leading US PCS supplier" is **unfalsifiable rather than
+true or false**, and the dossier says so in `strategyRead` and in the study
+guide's "where this fails" section rather than repeating the claim.
+
+**Provenance traps caught, both of which would have inflated the record.** First,
+the company serves its own datasheets and brochures from an S3 bucket host, which
+the domain rule would tier `independent` — nine such sources carry an explicit
+`"party": "company"` so the first-party share reflects who published the document
+rather than who served it. Second, and in the other direction, **power-electronics.co.nz
+describes itself as a *locally owned* supplier, not a group subsidiary**, so it
+was deliberately kept out of the registry's `domains` and tiers `independent`; its
+statement that Sinexcel manufactures its power-quality range is the **distributor's**
+supply relationship, not the manufacturer's, and no Sinexcel supplier edge was
+written on that basis. A research agent had classified that site as first-party.
+Final share: **61% of 85 sources**.
+
+**Accept-list state.** 14 entries, unchanged. C7 wrote one `partner` edge and
+five `competitor` edges and no `investor` edge — the family is founder-owned
+through a holding company and no covered company holds any stake — so the
+`investor` ↔ `portfolio` enum gap gained no seventh instance and no evidence
+either way.
+
+**Cross-reference checker.** Exit 0, **no new candidate**; **304**
+mutually-mentioning pairs compared (from 301 at v04.80r). Accept list unchanged
+at 9 entries. Twenty scopes remain over the 900-character cap and are listed as
+not examined.
+
+**Side effects.** 143 dossiers on the roster; graph rebuilt to **1,096 edges
+(820 curated)**; twelve shared concepts registered (**951 total** — IEEE 1547,
+IEEE 2800, UL 1741, UL 1741 SA, UL 1741 SB, NERC, FERC Order 901, momentary
+cessation, capability curve, phase-locked loop, AC-coupled and DC-coupled, all
+absent from the registry before this session); no executive photographs added,
+because the company **publishes no leadership, management or board page in either
+language** — a structural finding confirmed against its 143-URL sitemap rather
+than assumed; report pins unchanged (X3's job).
+
+**A formatting note, inherited and confirmed.** C6's round-trip harness was
+rebuilt before anything was written and swept all 596 corpus JSON files: every
+live profile, study guide, registry, concepts file and calendar reproduces
+byte-identically under per-file detection of indent width, trailing newline and
+ASCII escaping. The 68 that do not are archive snapshots and reports written with
+compact single-line objects inside arrays — the `apex-clean-energy` class — none
+of which this session touched. Confirming this **before** writing, rather than
+discovering it in `git diff --stat` afterwards, is what kept the three step-7
+revisions to 17-21 changed lines each instead of full re-serialisations.
+
 
 Developed by: LightAISolutions

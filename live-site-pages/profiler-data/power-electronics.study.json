@@ -1,0 +1,435 @@
+{
+ "schemaVersion": 2,
+ "slug": "power-electronics",
+ "title": "Power Electronics — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the box between the battery and the grid",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "Three guides in this library already cover conversion hardware. **Sinexcel** teaches modular versus central {{PCS}} and why modular architectures win on serviceability. **Sungrow** teaches how a solar-plus-storage plant fits together. **Delta Electronics** teaches switch-mode power and the component-to-system margin ladder. **This guide assumes all of that and does not repeat it.**",
+    "It goes somewhere none of them do. Sinexcel's guide covers grid-forming with a good metaphor — the surfer and the metronome — and mentions {{IEEE 1547}} and {{UL 1741}} once, in a single line about certification being the product. That line is true and it hides an enormous amount. This guide opens it up.",
+    "**The four things you will be able to do at the end.** Read a {{capability curve}} and say what an inverter can be asked to do at three in the morning with no sun. Say which of two entirely separate American rulebooks applies to a given plant, and why getting that wrong is expensive. Explain what {{momentary cessation}} is and why regulators spent eight years banning something they had previously required. And say what a developer is actually buying — and not buying — when it buys conversion separately from cells.",
+    "**One framing to hold throughout.** A battery stores direct current at a voltage that suits chemistry. A grid runs on three-phase alternating current at a voltage, frequency and phase angle that suit everyone else. The {{PCS}} is the only thing standing between those two facts, and almost every obligation a storage plant owes its grid operator is discharged by that box rather than by the cells. The cells are the inventory. The conversion system is the employee."
+   ]
+  },
+  {
+   "id": "power-triangle",
+   "title": "Real, reactive and apparent power: why the box is rated in kVA",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Start with the thing that confuses everyone. This company's flagship storage inverter is rated **5,360 kVA**, not 5,360 kW. The unit is kilovolt-amperes, and the difference between kVA and kW is the whole subject of this section.",
+    "**Real power (P), in watts.** The part of the flow that does work — heats a element, spins a motor, charges a battery. This is what a meter bills and what a {{PPA}} prices.",
+    "**Reactive power (Q), in volt-amperes reactive, or var.** Alternating current reverses 50 or 60 times a second, and anything with a magnetic field — a motor, a transformer, a long cable — stores energy on one half of the cycle and hands it back on the next. That sloshing flow transfers no net energy over a cycle. It does zero useful work. And the grid cannot run without it, because it is what holds voltage up.",
+    "**Apparent power (S), in volt-amperes.** The two combine as vectors at right angles, so S² = P² + Q², which is why this is called the power triangle. The conductors, semiconductors and transformer all have to carry the **current**, and current is set by S, not by P. That is why the rating on the box is in kVA: it is a statement about how much current the hardware can survive, irrespective of how much of that current is doing anything useful.",
+    "**{{Power factor}} is the ratio P/S** — the cosine of the angle in that triangle. A datasheet line reading **'0.5 leading to 0.5 lagging'**, which is what this company publishes, means the inverter can be commanded anywhere from supplying a great deal of reactive power to absorbing a great deal of it. At a power factor of 0.5, half the machine's current-carrying capacity is available for real power and the other half is doing voltage support.",
+    "**Now the sentence that makes this concrete.** This company's solar inverter datasheets carry the line **'reactive power injection at night'**. A solar inverter at three in the morning has no sun, so P is zero — and the entire 5,260 kVA of the machine is available as Q. The plant earns nothing from energy and still holds up the local voltage. This is why a grid operator cares which inverter you bought even when your plant is generating nothing, and it is a capability that costs the developer almost nothing because the hardware is sitting there anyway.",
+    "**Why 'four-quadrant' appears on the datasheet.** Four quadrants means the machine can push or pull real power (charge or discharge) and, independently, push or pull reactive power. A solar inverter that only ever exports is a one-quadrant device. A storage {{PCS}} that can do all four is, electrically, a controllable load, a controllable generator and a {{STATCOM}} in one enclosure — and utilities increasingly buy it for the third of those as much as the first two."
+   ]
+  },
+  {
+   "id": "capability-curve",
+   "title": "The capability curve: what you can actually ask the box to do",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "A {{capability curve}} plots real power on one axis and reactive power on the other, and draws the boundary of what the machine can be commanded to do. The boundary is a circle of radius S — you can trade P for Q anywhere along it, but you cannot exceed the current rating. Reading one is the single most practical skill in this guide. Figures below are from this company's published datasheets and are used because they are concrete, not because they are unusual.",
+   "cols": [
+    "What the datasheet says",
+    "What it means physically",
+    "Why a buyer cares"
+   ],
+   "rows": [
+    [
+     "**5,360 kVA** apparent power, 690 V or 720 V AC",
+     "The current ceiling of the semiconductors, busbars and transformer combined. Every P and Q command must land inside a circle of this radius.",
+     "You are buying current-carrying capacity. If the grid operator demands reactive power, it comes out of the same budget as the megawatts you meant to sell."
+    ],
+    [
+     "**0.5 leading to 0.5 lagging** power factor, four-quadrant",
+     "At the extreme, half the rating goes to voltage support and half is left for energy. Leading absorbs reactive power and pushes voltage down; lagging supplies it and props voltage up.",
+     "This is the range of grid-support duties the plant can be contracted for. A narrower range means turning down revenue from ancillary obligations, or oversizing the hardware to meet them."
+    ],
+    [
+     "**5,240 / 5,020 / 4,800 / 4,360 kVA** at 30 / 35 / 40 / 50 °C",
+     "Derating. Semiconductors have a maximum junction temperature; hotter ambient air means less headroom, so the same box is a smaller machine in Phoenix in August than in Valencia in March.",
+     "The nameplate is a temperature-conditional promise. A plant sized on the 30 °C figure and built somewhere hot has silently bought less capacity than it thinks."
+    ],
+    [
+     "Overload **166% for 100 ms · 150% for 5 s · 120% for 8 s · 110% for 15 s**",
+     "A short, tiered permission to exceed the rating — thermal mass absorbs the heat before the junction cooks. The ladder shape follows the physics: the shorter the excursion, the more you can take.",
+     "This is what lets an inverter contribute {{fault current}} during a grid disturbance instead of tripping. It is the difference between riding through a fault and becoming part of it."
+    ],
+    [
+     "**THDi below 3%** per {{IEEE 519}}",
+     "Total harmonic distortion of current: how far the waveform the box draws or injects departs from a clean sine. Switching devices chop DC into AC in steps, and the steps are the distortion.",
+     "Harmonics heat transformers and trip protection elsewhere on the network. A distortion limit is a condition of the interconnection agreement, not a nicety."
+    ],
+    [
+     "**Three-level {{IGBT}}** topology",
+     "The output can sit at three voltage steps rather than two, so each switching step is smaller and the waveform is closer to a sine before filtering.",
+     "Lower distortion and lower switching loss for the same filter, which is how a 98.94% efficiency figure is reached at all."
+    ],
+    [
+     "**98.94% maximum / 98.51% CEC** efficiency",
+     "Peak against a weighted average across a realistic load profile. The weighted figure is always lower because efficiency sags at part load.",
+     "Compare weighted against weighted. A vendor quoting peak against a rival's weighted figure is not comparing anything."
+    ],
+    [
+     "**500 kA** DC short-circuit withstand at 1 ms",
+     "What the DC side survives if the battery faults. A large battery is an enormous, very low-impedance energy source with no inertia to slow it down.",
+     "This is why splitting the DC side into independent inputs matters: a fault takes out one input's worth of modules rather than the machine."
+    ]
+   ],
+   "note": "The capability curve is also where the grid code bites. {{IEEE 1547}} Category A and Category B differ precisely in how much reactive capability the resource must have and how it must be controlled — which means the standard is, in effect, a rule about how big a circle you must be able to draw."
+  },
+  {
+   "id": "following-and-forming",
+   "title": "Following and forming: past the surfer and the metronome",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "The Sinexcel guide gives the right metaphor: a {{grid-following}} inverter is a surfer riding an existing wave, a {{grid-forming}} inverter is a metronome setting the beat. Everything below is what the metaphor leaves out, and it is the part that decides whether a plant can be built where the developer wants it.",
+    "**How a following inverter actually works.** Inside sits a {{phase-locked loop}} — a control circuit that watches the grid voltage and continuously estimates its frequency and phase angle. The inverter then injects current synchronised to that estimate. It behaves as a **current source**: you tell it how many amps to push and it pushes them, and the grid's own voltage is a given, something the machine measures rather than something it makes.",
+    "**Why that breaks.** A phase-locked loop needs a stable voltage to lock onto. Its accuracy depends on how firmly the connection point holds its voltage — which engineers call {{system strength}}, and quantify as the short-circuit ratio: the network's fault capacity at that point divided by the plant's rating. Where a lot of conventional generation has retired and a lot of inverters have connected, the ratio falls, the estimate degrades, and inverters can begin interacting with each other's control loops in ways that destabilise all of them. There is no amount of following that fixes a location where there is nothing to follow.",
+    "**How a forming inverter works instead.** It behaves as a **voltage source**: it imposes a voltage waveform of its own chosen magnitude, frequency and phase, and lets current be whatever the network draws in response. That is exactly what a spinning synchronous generator does, which is why the control mode is called a {{virtual synchronous generator}} or, in this company's naming, VISMA — a virtual synchronous machine.",
+    "**What forming buys you, concretely.** Synthetic {{inertia}}, so the plant resists {{RoCoF}} — the rate at which frequency collapses in the seconds after a large generator trips — instead of standing by while it happens. {{Black start}}, so the plant can energise a dead network with nothing else running. Islanded operation, so a microgrid keeps its own voltage and frequency when the main grid disappears. And the ability to connect at all in a weak-grid location where a following inverter would be refused.",
+    "**And what it costs.** A voltage source has to be willing to supply whatever current the network asks for during a disturbance, which is a claim on the overload ladder in the previous section rather than on new hardware. This is the connection worth making: **the 166%-for-100-milliseconds line and the grid-forming claim are the same engineering fact seen twice.** A machine that cannot briefly exceed its rating cannot behave as a voltage source when the network faults, because it will hit its current limit and fall back to behaving like a current source at precisely the moment it mattered.",
+    "**The commercial point.** This company lists grid forming and black start as **Standard** on the Multi PCSK, HEM and HEMK datasheets rather than as a priced option. As grid codes move from permitting grid-forming to requiring it, standard-fit is a stronger position than an upsell. The honest caveat, and it is a real one: the capability is **named everywhere in the company's material and quantified nowhere** — no inertia constant, no fault-current contribution, no rate-of-change-of-frequency withstand is published in any datasheet. Naming a mode is not the same as publishing what it does."
+   ]
+  },
+  {
+   "id": "two-rulebooks",
+   "title": "The two rulebooks, and which one your plant is actually under",
+   "kind": "table",
+   "read": "10 min",
+   "intro": "This is the section that does not exist anywhere else in this library, and the single most useful thing in the guide. The United States has **two separate, non-interchangeable regimes** for inverter-based resources, and which applies depends on where the plant connects — not on how big it is, not on what it does. Getting this wrong means certifying to the wrong standard and discovering it at the interconnection study. Note also that {{IEEE 1547}} and {{UL 1741}} are different kinds of document: 1547 is the *requirement*, 1741 is the *test and listing* that proves you meet it.",
+   "cols": [
+    "",
+    "Distribution-connected",
+    "Transmission-connected"
+   ],
+   "rows": [
+    [
+     "**The requirement**",
+     "**{{IEEE 1547}}-2018** — the interconnection standard for distributed energy resources on a distribution system.",
+     "**{{IEEE 2800}}-2022** — the interconnection standard for inverter-based resources on transmission. Voluntary as an IEEE document."
+    ],
+    [
+     "**The teeth**",
+     "State interconnection rules adopt it — California Rule 21, Hawaii Rule 14H and their equivalents. Your utility enforces it.",
+     "**{{NERC}} PRC-029-1**, which made ride-through mandatory and enforceable, adopted in response to **{{FERC Order 901}}**. Your regional reliability organisation enforces it, with penalties."
+    ],
+    [
+     "**The test and listing**",
+     "**{{UL 1741 SA}}** certifies to California Rule 21 phase 1 using its own test methods. **{{UL 1741 SB}}** certifies to IEEE 1547-2018 using the IEEE 1547.1-2020 test procedures — the crucial difference is that SB stopped inventing tests and ran the ones the requirement specifies.",
+     "No single equivalent listing mark. Compliance is demonstrated through the interconnection study, model validation and performance testing against the transmission provider's requirements."
+    ],
+    [
+     "**Normal-operation categories**",
+     "**Category A and Category B** — how much reactive capability the resource must have and how it is controlled. B is the more demanding and inherently satisfies A.",
+     "Specified directly rather than by category, and generally more demanding, because a transmission-connected plant is large enough to move the system on its own."
+    ],
+    [
+     "**Abnormal-operation categories**",
+     "**Category I, II and III** — how far and how long the resource must ride through voltage and frequency excursions before it is allowed to trip. Higher numbers subsume lower ones.",
+     "Defined as **must-ride-through zones** in voltage-magnitude and duration terms, with {{momentary cessation}} prohibited inside them."
+    ],
+    [
+     "**What this company certifies to**",
+     "Datasheets list **UL 1741 SA and SB**, **IEEE 1547.1**, and for the medium-voltage units **Rule 21** and **Rule 14H** explicitly.",
+     "Not claimed as a listing on any datasheet, because there is no listing to claim. This is normal and is not a gap."
+    ],
+    [
+     "**Outside the US**",
+     "The same machine carries **IEC 62109-1/-2** for safety and **IEC 62116**, **G99** (Great Britain), **VDE 4110/4120/4130** (Germany), **CEI 0-16** (Italy), **NTS 2.1** (Spain) and **EN 50549** for interconnection.",
+     "National transmission codes — this company cites compliance with **Terna Annex A79** in Italy as a specific example."
+    ]
+   ],
+   "note": "Why this is a moat rather than paperwork: every one of those approvals is a separate laboratory campaign with a queue measured in months, and a vendor's certification portfolio is therefore years of accumulated work that a new entrant cannot buy. It is also why grid codes are the real product roadmap in this industry — the hardware changes slowly and the rulebooks do not."
+  },
+  {
+   "id": "ride-through",
+   "title": "Ride-through, and the eight years spent banning what was once required",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**{{Ride-through}} means staying connected and operating through a disturbance instead of disconnecting.** A voltage dip or a frequency excursion sweeps across a network in milliseconds; the question every inverter answers, thousands of times a year, is whether to hold on or let go.",
+    "**The old answer was: let go.** Early interconnection rules were written when distributed generation was rare and small, and the overriding worry was {{anti-islanding}} — a rooftop array energising a line that a utility crew believed was dead. Under that logic, a resource that disconnected quickly at the first sign of abnormality was behaving correctly. Tripping was the safe, compliant, responsible thing to do.",
+    "**{{Momentary cessation}} was the polite version of letting go.** The inverter stops injecting current for the duration of the disturbance while staying nominally connected, then rapidly resumes when voltage and frequency return to range. On one machine it is sensible. It is what happens when thousands of machines do it simultaneously that turned out to be the problem.",
+    "**What changed the answer was arithmetic, not ideology.** Once inverter-based resources became a large share of generation, a fault that made a big fraction of them momentarily cease was no longer a local event — the sudden loss of injection looked to the system exactly like losing a very large power station, at the worst possible moment, and could turn a survivable fault into a cascading one. The safe behaviour and the compliant behaviour had drifted apart.",
+    "**So the rules inverted.** {{IEEE 1547}}-2018 replaced the old must-trip posture with graded ride-through obligations under Categories I, II and III. On transmission, {{FERC Order 901}} directed reliability standards be written, {{NERC}} produced **PRC-029-1** adopting ride-through requirements aligned with {{IEEE 2800}}, and momentary cessation was **prohibited inside the must-ride-through zones**. A companion standard, PRC-030-1, requires resources to record and report unexplained losses of output so that the next event can actually be diagnosed.",
+    "**Where the hardware meets the rulebook.** Riding through a voltage dip means continuing to inject current into a fault — which is a demand on the overload ladder and on the {{fault current}} the machine can supply. The tiered overload figures in the capability-curve table are not a marketing flourish; they are the physical budget from which ride-through compliance is paid. It is also why this company's note that its full overload ladder on the medium-voltage unit is 'available from January 2027' is a genuinely interesting line in a datasheet rather than a footnote.",
+    "**The takeaway for a buyer.** Ride-through is the clearest case in this industry of a requirement that reversed direction within one equipment generation. Equipment certified against the older posture is not merely less capable — it is certified to do the wrong thing. When you read that a plant is compliant, the useful follow-up question is always *compliant with which vintage*."
+   ]
+  },
+  {
+   "id": "buying-conversion-separately",
+   "title": "What you are buying when you buy conversion separately from cells",
+   "kind": "proscons",
+   "read": "9 min",
+   "intro": "This is the commercial question the whole dossier turns on. A developer can buy a turnkey battery system — cells, conversion, controls, thermal management, all wrapped by one integrator — or it can buy the conversion layer separately from a specialist and assemble the rest. This company exists only in the second world: it makes no cells and sells no turnkey system. Below is what that choice genuinely costs and buys, with the industry's own numbers.",
+   "cards": [
+    {
+     "t": "Buy the conversion layer separately",
+     "meta": "A specialist supplies the PCS, the medium-voltage skid and the plant controller; you buy cells from whoever you like",
+     "adv": [
+      "Equipment-only procurement is routinely reported at **15–25% below turnkey** — you decline to pay someone else's integration margin",
+      "Chemistry independence: nine or ten selectable DC voltage windows match whichever cells you buy this year, and different ones next year",
+      "**{{Augmentation}} without oversizing** — a bidirectional DC/DC converter voltage-balances new strings against degraded ones, so capacity is added in phases rather than bought on day one and left idle",
+      "{{AC-coupled}}, {{DC-coupled}} and hybrid become a design choice rather than a vendor constraint; a controller supporting both couplings keeps it open per phase",
+      "Service continuity as a purchasable term: a twenty-five-year spare-parts guarantee, a factory that builds parts for discontinued generations, and a service network stated across 49 US states"
+     ],
+     "dis": [
+      "You now own the integration risk on the part that generates it — the industry's own figure is **roughly 15% of project cost and a disproportionate share of commissioning and operating problems**",
+      "**Nobody wraps the performance guarantee.** The cell vendor blames the conversion vendor and vice versa, and the {{availability guarantee}} a lender wanted has no single signatory",
+      "Fewer independent suppliers each year: EKS Energy into Hitachi Energy, Dynapower into Sensata, Gamesa Electric into ABB, EPC Power into Flex for $4.4bn in September 2026",
+      "You carry the grid-code compliance argument yourself, across two vendors, at the interconnection study"
+     ]
+    },
+    {
+     "t": "Buy a turnkey AC-integrated system",
+     "meta": "One integrator ships a factory-assembled block: cells, conversion, controls and thermal management, wrapped",
+     "adv": [
+      "One counterparty warrants round-trip efficiency, availability and capacity — the wrap a lender actually wants to see",
+      "Factory-assembled and factory-tested as a unit, so the commissioning surface is far smaller",
+      "The **AC block** is where the market has gone: analysts note most leading integrators now sell one, which is why Wood Mackenzie's integrator ranking is scoped to exactly these products",
+      "Integrators vertically integrated into conversion precisely so they could control the service strategy on the troublesome part"
+     ],
+     "dis": [
+      "You pay the integration margin, and the 15–25% premium is real money on a nine-figure project",
+      "You inherit the integrator's cell roadmap and its chemistry choices, including its supply-chain and policy exposure",
+      "Augmentation happens on the integrator's terms, which usually means oversizing on day one",
+      "Coupling architecture is decided for you; a DC-coupled hybrid may simply not be on the menu"
+     ]
+    }
+   ],
+   "note": "The honest summary: unbundling is cheaper and more flexible, and it transfers a category of risk that is small in cost and large in aggravation from the integrator to you. Whether that trade is good depends almost entirely on whether your organisation has the engineering depth to hold two vendors to one performance outcome — which is why the same choice looks obvious to a large repeat developer and reckless to a first-time owner."
+  },
+  {
+   "id": "conversion-on-one-clock",
+   "title": "The conversion layer on one clock",
+   "kind": "timeline",
+   "read": "4 min",
+   "intro": "Two things happened in parallel over eight years: the rules for inverters reversed direction, and the independent conversion vendors were bought one by one. Reading them on the same axis is the fastest way to see why this segment looks the way it does now.",
+   "items": [
+    {
+     "x": 2018.0,
+     "label": "IEEE 1547-2018 replaces the must-trip posture with graded ride-through obligations (Categories I, II, III)"
+    },
+    {
+     "x": 2020.0,
+     "label": "IHS Markit ranks the company first globally in energy storage inverters for 2019 — the last storage-specific ranking anyone publishes"
+    },
+    {
+     "x": 2020.5,
+     "label": "IEEE 1547.1-2020 publishes the conformance test procedures that UL 1741 SB will later adopt wholesale"
+    },
+    {
+     "x": 2022.0,
+     "label": "Dynapower sold to Sensata; Powin and LS Energy Solutions vertically integrate into conversion, citing service control"
+    },
+    {
+     "x": 2022.4,
+     "label": "Trina Storage and Power Electronics sign a letter of intent for over 1 GWh in Europe — never confirmed as delivered"
+    },
+    {
+     "x": 2022.7,
+     "label": "The industry settles on its own framing: conversion is ~15% of project cost and most of the headache"
+    },
+    {
+     "x": 2022.9,
+     "label": "IEEE 2800-2022 published — the first interconnection standard written for transmission-connected inverter-based resources"
+    },
+    {
+     "x": 2023.8,
+     "label": "Hitachi Energy buys EKS Energy from Powin; Power Electronics announces a $300m, 45-acre, 20 GW US plant at RE+"
+    },
+    {
+     "x": 2023.9,
+     "label": "FERC Order 901 directs NERC to write mandatory reliability standards for inverter-based resources"
+    },
+    {
+     "x": 2024.6,
+     "label": "Wood Mackenzie: 'the US market was led by central inverter manufacturers Sungrow and Power Electronics' (calendar 2023)"
+    },
+    {
+     "x": 2024.9,
+     "label": "Canyon Country energised — 80 MW / 320 MWh, BYD enclosures and 'PE' conversion, the company's only third-party-attributed US project"
+    },
+    {
+     "x": 2025.6,
+     "label": "GEN 3 Plus launched at RE+ with a statement that it will be manufactured in the United States"
+    },
+    {
+     "x": 2025.9,
+     "label": "US plan changes from building to renting; ABB acquires Gamesa Electric's power electronics division"
+    },
+    {
+     "x": 2026.2,
+     "label": "Houston reported at ~20,000 m² with the $300m investment postponed; NERC PRC-029-1 makes ride-through mandatory and bans momentary cessation in must-ride-through zones"
+    },
+    {
+     "x": 2026.57,
+     "label": "FCC adds all foreign-produced grid inverters and PCS to the Covered List — the test is where the hardware is built, not who owns the brand"
+    },
+    {
+     "x": 2026.65,
+     "label": "Executive Order 14420 declares a bulk-power emergency; DOE must name covered countries by 24 December 2026"
+    },
+    {
+     "x": 2026.68,
+     "label": "Flex agrees to buy EPC Power for $4.4bn — a US-domiciled conversion pure-play with 27 GW of American capacity"
+    }
+   ],
+   "note": "The two strands meet at the end. The regulatory strand made American manufacturing the decisive attribute for selling conversion hardware in the United States; the consolidation strand put most independent conversion capacity inside companies that already have it."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this guide stops, and what nobody can tell you",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Grid-forming performance is unpublished.** Every claim in this guide about what a forming inverter does is generic engineering. What this company's implementation actually delivers — inertia constant, fault-current contribution, {{RoCoF}} withstand — is in no datasheet, no release and no independent test result. Treat 'grid forming: standard' as a statement of intent that has not been quantified in public by anyone.",
+    "**There is no ranking of conversion suppliers.** Not paywalled — not published. Wood Mackenzie, S&P Global, BNEF and PV Tech Research all rank either global photovoltaic inverters or AC-integrated storage systems. A conversion-only vendor falls between the two, so any sentence of the form 'the leading US PCS supplier' is, as of today, unfalsifiable rather than true or false.",
+    "**Project-level attribution barely exists.** Developers and contractors almost never name the conversion vendor in announcements, and the federal generator inventory does not collect it. For a company claiming 170 GW installed, the public record contains one US project attributing conversion to it — and that attribution is a two-letter abbreviation on a contractor's web page.",
+    "**The policy picture is mid-flight.** The FCC order is in effect and its practical severity is genuinely disputed among analysts, from 'minimal disruption' to 'this will screw up project development for years'. Executive Order 14420's country scope is unknown until the Department of Energy publishes implementing rules, due 24 December 2026. Anything written about Spain's exposure before that date — including in this guide — is provisional.",
+    "**And one thing this guide deliberately does not teach.** The economics of the battery itself: chemistry, degradation, round-trip efficiency, augmentation cost curves. Those belong to the cell vendors' guides in this library. This one stops at the DC terminals."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "kind": "flashcards",
+   "read": "6 min",
+   "cards": [
+    {
+     "q": "Why is a storage inverter rated in kVA rather than kW?",
+     "a": "Because the hardware's limit is current, and current is set by apparent power S, not by real power P. Since S² = P² + Q², a machine delivering large reactive power carries current that does no useful work — but the semiconductors, busbars and transformer must survive it all the same."
+    },
+    {
+     "q": "What does 'reactive power injection at night' mean on a solar inverter datasheet, and why is it valuable?",
+     "a": "With no sun, real power is zero, so the entire apparent-power rating is available as reactive power. The plant earns nothing from energy while still holding up local voltage — grid support from hardware that would otherwise be idle."
+    },
+    {
+     "q": "What is the physical difference between a grid-following and a grid-forming inverter?",
+     "a": "A following inverter is a current source: a phase-locked loop estimates the grid's voltage phase and the machine injects current synchronised to it. A forming inverter is a voltage source: it imposes its own voltage magnitude, frequency and phase and lets current be whatever the network draws."
+    },
+    {
+     "q": "Why does a weak grid break a grid-following inverter?",
+     "a": "Its phase-locked loop needs a firm voltage to lock onto. Where system strength — the short-circuit ratio at the connection point — is low, the estimate degrades and inverters can interact with each other's control loops destabilisingly. No amount of following fixes a place with nothing to follow."
+    },
+    {
+     "q": "How are the overload rating and the grid-forming claim the same engineering fact?",
+     "a": "A voltage source must supply whatever current the network demands during a fault. Without brief overload headroom the machine hits its current limit mid-disturbance and reverts to behaving as a current source — exactly when forming mattered."
+    },
+    {
+     "q": "IEEE 1547 versus UL 1741: what is the difference in kind?",
+     "a": "IEEE 1547 is the requirement — what a distributed resource must do. UL 1741 is the test and listing that proves you meet it. They are not alternatives; you need the standard to define the duty and the listing to demonstrate compliance."
+    },
+    {
+     "q": "What changed between UL 1741 SA and UL 1741 SB?",
+     "a": "SA certified to California Rule 21 phase 1 using its own invented test methods. SB certifies to IEEE 1547-2018 using the IEEE 1547.1-2020 conformance procedures — it stopped inventing tests and runs the ones the requirement specifies."
+    },
+    {
+     "q": "Which standard governs a transmission-connected battery plant, and what gives it teeth?",
+     "a": "IEEE 2800-2022, which is voluntary as an IEEE document. NERC PRC-029-1 gives it teeth by making ride-through mandatory and enforceable, adopted in response to FERC Order 901. IEEE 1547 does not apply — that is the distribution rulebook."
+    },
+    {
+     "q": "What is momentary cessation, and why was it prohibited in must-ride-through zones?",
+     "a": "The inverter stops injecting current for the duration of a disturbance while staying nominally connected. Harmless on one machine; when a large share of generation does it at once, the loss of injection looks like losing a huge power station at the worst moment and can turn a survivable fault into a cascade."
+    },
+    {
+     "q": "Why can a conversion-only vendor never appear in Wood Mackenzie's storage integrator ranking?",
+     "a": "Because that ranking's published scope is factory-assembled AC-integrated systems bundling battery, conversion, management and controls into one AC-connected product. A vendor that sells no cells and no turnkey system is out of scope by definition, not by performance."
+    },
+    {
+     "q": "State the industry's standard argument for why integrators buy conversion companies.",
+     "a": "The conversion system is roughly 15% of a battery project's cost but accounts for a disproportionate share of commissioning and operating problems — so integrators want to own the service strategy on the part that causes the trouble rather than depend on a third party for it."
+    },
+    {
+     "q": "What does a DC/DC converter let an owner do that they otherwise could not?",
+     "a": "Augment. It voltage-balances new battery strings against degraded existing ones, so capacity can be added in phases over the asset's life instead of oversizing the battery on day one and leaving it idle."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "6 min",
+   "items": [
+    {
+     "q": "A 5,000 kVA inverter is commanded to a power factor of 0.5 lagging. Approximately how much real power can it deliver at the same time?",
+     "c": [
+      "5,000 kW — power factor does not affect real power",
+      "About 2,500 kW",
+      "About 4,330 kW",
+      "Zero — at 0.5 the machine is entirely reactive"
+     ],
+     "a": 1,
+     "why": "Power factor is P/S, so P = 0.5 × 5,000 = about 2,500 kW. The remaining capacity is carrying reactive current. This is the trade the capability curve draws: the circle has radius S, and moving around it exchanges real power for reactive power."
+    },
+    {
+     "q": "A developer is connecting a 250 MW battery plant at 230 kV to the transmission system. Which compliance path applies?",
+     "c": [
+      "IEEE 1547-2018, demonstrated by a UL 1741 SB listing",
+      "IEEE 2800-2022, with NERC PRC-029-1 as the enforceable requirement",
+      "Both, since IEEE 1547 applies to all inverter-based resources regardless of voltage",
+      "California Rule 21, if the equipment is already certified to it"
+     ],
+     "a": 1,
+     "why": "IEEE 1547 is the distribution rulebook and does not apply to a transmission interconnection. Transmission-connected inverter-based resources fall under IEEE 2800-2022, made enforceable through NERC PRC-029-1 following FERC Order 901. There is no UL listing mark that discharges the transmission obligation — compliance runs through the interconnection study and model validation."
+    },
+    {
+     "q": "A vendor's datasheet lists grid-forming as standard but publishes no inertia constant, fault-current contribution or RoCoF withstand. What is the most defensible reading?",
+     "c": [
+      "The capability does not exist and the claim is false",
+      "Grid-forming has no measurable parameters, so there is nothing to publish",
+      "The capability is claimed but unquantified, and the claim cannot be compared against a rival's",
+      "The omission is normal because these figures are commercially sensitive"
+     ],
+     "a": 2,
+     "why": "Naming a control mode is not the same as characterising it. Grid-forming performance is entirely measurable — inertia constant, fault-current contribution and rate-of-change-of-frequency withstand are the standard parameters — so their absence leaves a real capability unverifiable rather than absent. Treat it as a claim awaiting evidence, and ask for test reports."
+    },
+    {
+     "q": "Between 2022 and 2026, EKS Energy, Dynapower, Gamesa Electric and EPC Power were all acquired. What does this pattern most directly demonstrate?",
+     "c": [
+      "Power conversion is a declining business",
+      "Conversion hardware has become a commodity with no differentiation left",
+      "The conversion layer is worth more inside an integrator or a large electrical OEM than as a standalone line",
+      "Regulators forced consolidation to improve grid reliability"
+     ],
+     "a": 2,
+     "why": "The acquirers were integrators and large electrical groups, and the stated rationale was consistent: conversion is a small share of project cost but a large share of operating trouble, so owning it means controlling the service outcome. The $4.4bn EPC Power price shows the category is valuable, not declining — which is precisely why it is being absorbed."
+    },
+    {
+     "q": "A rule bars 'foreign-produced' grid inverters from a market, using a domestic-content test. A vendor headquartered in Europe with a US sales arm and European factories asks whether it is affected. What determines the answer?",
+     "c": [
+      "Where the company is headquartered",
+      "Whether the company is majority-owned by a domestic entity",
+      "Where the hardware is physically manufactured",
+      "Whether the equipment has remote-communication capability at all"
+     ],
+     "a": 2,
+     "why": "A domestic-content test turns on manufacturing location, not on ownership, branding or headquarters — which is why such a rule captures European-built equipment on the same footing as any other import. Remote-communication capability defines the scope of covered products, but it does not decide the foreign-produced question. The practical consequence is that the only durable remedy is domestic manufacturing at volume."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "VISMA",
+   "d": "This company's name for its grid-forming control mode — a virtual synchronous machine implementation, listed as standard rather than optional on its storage and solar inverter datasheets."
+  },
+  {
+   "t": "AC block",
+   "d": "A factory-assembled unit bundling battery, power conversion, management and controls into one AC-connected product. Its spread is what removes the separate conversion purchase decision from a developer's hands."
+  }
+ ]
+}

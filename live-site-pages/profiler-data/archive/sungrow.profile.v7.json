@@ -201,14 +201,6 @@
    "source": "Dossier competitive assessment — C&I storage",
    "via": "PowerStack",
    "status": "active"
-  },
-  {
-   "slug": "power-electronics",
-   "type": "competitor",
-   "note": "The other central-inverter manufacturer Wood Mackenzie named as leading the US market in 2023.",
-   "context": "Wood Mackenzie's August 2024 shipment release, covering calendar 2023, states that 'the US market was led by central inverter manufacturers Sungrow and Power Electronics' — the two companies named together, in solar central inverters specifically. This dossier's existing description of Power Electronics among conventional central-inverter competitors is accurate and is corroborated by that wording; it was checked this session and left unchanged.\n\nThe two are not symmetrically placed. Sungrow ranks second globally in Wood Mackenzie's H1 2025 inverter scorecard and first in its 2026 storage integrator ranking, and sells turnkey battery systems as well as conversion hardware. Power Electronics sells conversion hardware only — no cells, no turnkey system — which is why the integrator ranking's stated scope of factory-assembled AC-integrated systems cannot include it. Sungrow's greater exposure is regulatory: PV Tech identifies it as the largest single importer of photovoltaic inverters into the United States, at the moment the FCC's Covered List began barring foreign-produced inverters.",
-   "source": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/",
-   "status": "active"
   }
  ],
  "technicalSpecs": [
@@ -862,11 +854,6 @@
    "date": "2024-11"
   },
   {
-   "label": "Wood Mackenzie — global PV inverter shipments grew 56% in 2023 to 536 GWac: 'The US market was led by central inverter manufacturers Sungrow and Power Electronics'",
-   "url": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/",
-   "date": "2024-08-06"
-  },
-  {
    "label": "pv magazine — 7.8 GWh Saudi Algihaz order (Jul 2024)",
    "url": "https://www.pv-magazine.com/2024/07/16/",
    "date": "2024-07-16"
@@ -915,6 +902,6 @@
    "url": "https://stockanalysis.com/quote/she/300274/company/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 8
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

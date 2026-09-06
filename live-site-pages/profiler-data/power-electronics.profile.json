@@ -1,0 +1,1326 @@
+{
+ "schemaVersion": 7,
+ "slug": "power-electronics",
+ "name": "Power Electronics España, S.L.",
+ "shortName": "Power Electronics",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://power-electronics.com",
+ "headquarters": "Llíria, Valencia, Spain (US address of record: Houston, Texas)",
+ "founded": "1987",
+ "employees": "3,685 (2025); more than 600 in the United States",
+ "ownership": {
+  "type": "private"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Power Electronics is a Spanish family-owned manufacturer that earns roughly 70% of its €1.3bn revenue in the United States while building almost everything in Valencia — an exposure that stopped being theoretical on 28 July 2026, when the FCC barred foreign-produced grid inverters and power conversion systems from the US market on a test that turns on where hardware is assembled rather than who owns the brand. Its remedy is a Houston plant that was announced in September 2023 as a $300m, 45-acre, 20 GW build and was reported in March 2026 as a rented facility of about 20,000 m² with the investment postponed. BACKGROUND. Founded 1987 in Llíria, Valencia by Abelardo Salvo, who died in 2018, and run since by his sons; 3,685 employees, more than 600 of them in the United States; wholly owned by the holding company Power Electronics Internacional, S.L., with no outside capital anywhere in the public record. The product is power conversion and nothing else: HEM and HEMK solar inverters, PCSM and PCSK storage inverters to 5,360 kVA, DC/DC converters, medium-voltage skids, plant controllers, and AIPCS, a medium-voltage-to-800 VDC unit aimed at AI data centres. Grid forming through the company's virtual synchronous machine implementation is listed as standard rather than optional across the storage and solar lines. It states 170 GW of installed AC power as of June 2026 against 150 GW at the end of 2025.",
+ "ecosystemRole": "The corpus has taught the power conversion system almost entirely from the integrator's side — Sungrow, Fluence, Tesla and Canadian Solar sell it inside a battery, and Sinexcel sells a modular version around them. This company is the layer itself: it makes no cells and sells no turnkey battery system, so a developer buying from it is deliberately unbundling conversion from storage. That is why Wood Mackenzie's storage integrator ranking, whose stated scope is factory-assembled AC-integrated systems, cannot contain it, and why no independent ranking of US conversion suppliers exists to place it in. It matters to this ecosystem in two directions: it is the equipment layer that determines whether a battery plant can form a grid rather than merely follow one, and — through AIPCS — it is a grid-side vendor arguing that what a volatile AI data-centre load needs is storage-grade conversion rather than denser rack power.",
+ "productsAndServices": [
+  {
+   "name": "PCSM and Multi PCSM — medium-voltage utility-scale battery inverter",
+   "category": "Energy storage power conversion",
+   "description": "The company's largest utility-scale battery inverter and the one that defines its architecture: an all-in-one enclosure that integrates the medium-voltage transformer and switchgear with the conversion stage, rather than pairing a low-voltage inverter with a separate MV skid. Rated to 5,360 kVA at up to 1,500 Vdc, with grid voltages of 34.5 kV, 13.8 kV or 12.47 kV on the UL variants. Multi PCSM splits the DC side into two or four electrically independent inputs, each with its own short-circuit withstand, so a battery fault removes only the affected power modules. Cooling is proprietary forced air (iCOOL 4); the company states explicitly that it does not use liquid cooling. Topology is three-level IGBT.",
+   "highlights": [
+    "Integrated MV in the same enclosure — transformer and 38 kV switchgear inside the unit, not a separate skid",
+    "Grid-forming (VISMA, the company's virtual synchronous machine implementation) and black start listed as Standard, not optional",
+    "Two or four independent DC inputs on Multi PCSM, at 2,295 A or 1,148 A per input",
+    "98.00% maximum efficiency stated including the medium-voltage transformer",
+    "Certified to UL 1741 SA and SB, Rule 21, Rule 14H and IEEE 1547.1:2020"
+   ],
+   "positioning": "The company never names a competitor in any first-party document — the two 100-page brochures, the data-centre brochure, every product page and every 2025-2026 release position exclusively by absolute superlative ('#1 World Storage Leader', 'global leader'). Differentiation is asserted at the technology level instead: medium voltage integrated into the same enclosure rather than a separate skid, forced-air cooling with liquid cooling explicitly rejected, three-level IGBT topology, independent DC inputs, field-replaceable units, twenty-five-year spare-parts availability, and vertical integration into its own printed-circuit-board assemblies and sheet-metal enclosures through separately certified sister companies.",
+   "soldThrough": "Direct to developers, asset owners and infrastructure funds, with the company performing its own commissioning and aftersales. The website publishes two self-service enquiry questionnaires and a business-development booking form, and a supplier-registration portal — but no reseller, distributor or channel-partner portal. Own service organisations and warehouses are established per market rather than distribution agreements.",
+   "targetSegments": [
+    "Utility-scale standalone storage",
+    "Solar-plus-storage hybrids",
+    "Data-centre power",
+    "Transmission and distribution operators"
+   ],
+   "roadmap": "Footnote 8 of the PCSM UL datasheet marks the 166% / 150% / 120% / 110% overload capability as 'Available from January 2027' — the only dated forward-looking product commitment in any of the company's datasheets."
+  },
+  {
+   "name": "PCSK and Multi PCSK — low-voltage utility-scale battery inverter",
+   "category": "Energy storage power conversion",
+   "description": "The low-voltage sibling of PCSM and the company's highest-volume storage product, rated to 5,360 kVA at up to 1,500 Vdc on 690 V or 720 V AC. Published model codes run from FP1525K to FP5150K, the number in each code being the kVA rating, giving a granular ladder from about 1,525 kVA to 5,150 kVA. Nine to ten selectable DC voltage windows are offered so the same unit can be matched to different battery chemistries and string designs. Multi PCSK provides up to four independent DC inputs with separate short-circuit withstand, which the company states allows up to four times more battery capacity behind one unit than a single input would.",
+   "highlights": [
+    "Four-quadrant reactive power from 0.5 leading to 0.5 lagging, with current distortion below 3% per IEEE 519",
+    "Overload 166% for 100 ms, 150% for 5 s, 120% for 8 s, 110% for 15 s",
+    "500 kA DC short-circuit withstand at a 1 ms time constant, per input",
+    "98.94% maximum efficiency, 98.51% CEC weighted, on the 690 V unit",
+    "Operating range -40 °C to +60 °C, NEMA 3R / IP55, forced air"
+   ],
+   "positioning": "Sold as the low-voltage half of a pair whose distinguishing feature is what surrounds it: the company also supplies the MV Skid Compact and Twin Skid Compact that a low-voltage PCS needs, so a buyer can take the integrated MV product or the LV product plus the company's own skid from the same supplier. As above, no competitor is named in any first-party document.",
+   "soldThrough": "Direct, as for PCSM.",
+   "targetSegments": [
+    "Utility-scale standalone storage",
+    "Solar-plus-storage hybrids",
+    "Grid-scale merchant storage"
+   ],
+   "roadmap": "GEN 3 Plus, launched at RE+ in September 2025, is stated to exceed 5 MW of power density with optimised grid-forming and enhanced overload, and the company states it 'will be manufactured in the United States'."
+  },
+  {
+   "name": "HEM and HEMK — utility-scale solar inverters",
+   "category": "Solar power conversion",
+   "description": "The solar line, and the older of the two businesses. HEM is the integrated medium-voltage unit — up to 5,260 kVA at 34.5 kV or 22.8 kV with a 145 kV rated impulse withstand, up to forty DC inputs, and the MV transformer and 38 kV switchgear inside the same enclosure. HEMK is the low-voltage modular sibling at up to 5,260 kVA with a multilevel topology and 98.95% maximum efficiency. Both carry a Bus Plus connection for up to four DC/DC converters, which is how a DC-coupled battery of 1,200 kW to 4,800 kW is attached to a solar inverter without a second grid interface. The legacy Freesun HE and HEC series has been withdrawn and no longer appears on the company's site or sitemap.",
+   "highlights": [
+    "Grid-forming (VISMA) and black start listed as Standard on both HEM and HEMK",
+    "Reactive power injection at night — the inverter supports voltage when the array is dark",
+    "Up to forty DC inputs; three selectable DC voltage windows",
+    "Econ Mode removes no-load losses",
+    "Bus Plus attaches up to four DC/DC converters for DC-coupled storage"
+   ],
+   "positioning": "The company claims to be the '#1 manufacturer of solar inverters in America, Oceania and Europe' and states more than 13,000 solar inverters sold across more than 2,800 solar projects. No competitor is named and no independent citation is given for the ranking.",
+   "soldThrough": "Direct, as for the storage line.",
+   "targetSegments": [
+    "Utility-scale photovoltaic plants",
+    "Solar-plus-storage hybrids"
+   ],
+   "roadmap": "GEN 3 Plus applies to the solar line as well as storage; the company states more than 65 GW of GEN 3 technology was already installed worldwide as of August 2025."
+  },
+  {
+   "name": "DC/DC converters and hybrid architectures",
+   "category": "Energy storage power conversion",
+   "description": "A bidirectional 1,200 kW outdoor DC/DC converter, model FD1200R, rated to 1,500 V on both the PV and storage sides with a stated maximum efficiency of 99.18%. The company markets it for two distinct jobs under two legacy brand names. As Freemaq DC/DC it is an augmentation and life-extension product: it voltage-balances new battery strings against degraded existing ones so capacity can be added in phases rather than oversized on day one. As Freesun DC/DC it is the Advanced Hybrid Solution, placing the photovoltaic field on the DC/DC and the battery directly on the storage inverter, which the company describes as combining the equipment efficiency of a DC-coupled plant with the capabilities of an AC-coupled one while enabling full grid-forming operation.",
+   "highlights": [
+    "99.18% maximum efficiency; 1,200 kW at 30 °C derating to 1,040 kW at 50 °C",
+    "Battery augmentation without oversizing — the commercial argument for buying conversion separately from cells",
+    "500 kA DC short-circuit withstand on the storage side against 3 kA on the PV side",
+    "Altitude to 4,000 m with derating above 2,000 m"
+   ],
+   "positioning": "This is the product that makes the company's coupling-agnostic claim concrete: the same vendor supplies AC-coupled, DC-coupled and hybrid architectures, and the Hybrid Plant Controller supports both couplings inside one plant.",
+   "soldThrough": "Direct, alongside the inverter it attaches to.",
+   "targetSegments": [
+    "Solar-plus-storage hybrids",
+    "Storage augmentation and repowering",
+    "Existing plants reaching end of first battery life"
+   ]
+  },
+  {
+   "name": "Medium-voltage balance of plant — MV Skid Compact and Twin Skid Compact",
+   "category": "Balance of plant",
+   "description": "Pre-integrated medium-voltage skids that pair with the low-voltage PCSK. MV Skid Compact covers 6.6 kV to 36 kV on the high side and 480 V to 720 V on the low side at 1,525 to 5,360 kVA, serving one PCSK. Twin Skid Compact covers 11 kV to 36 kV at 3,050 to 10,720 kVA and serves two. The company's framing is that all the medium-voltage equipment arrives already integrated, which is the same argument the PCSM makes by putting it inside the inverter enclosure.",
+   "highlights": [
+    "One product line offers both answers to the MV question — integrated inside the inverter (PCSM) or as a separate pre-integrated skid (PCSK plus MV Skid)",
+    "Twin variant halves the number of skids on the largest plants"
+   ],
+   "soldThrough": "Direct, with the inverter.",
+   "targetSegments": [
+    "Utility-scale storage",
+    "Large hybrid plants"
+   ]
+  },
+  {
+   "name": "Plant controllers — PPC PRO, BPC PRO, HPC PRO and BCI",
+   "category": "Controls and software",
+   "description": "The supervisory layer that makes a field of inverters behave as one plant at the point of interconnection. PPC PRO is the general power plant controller for photovoltaic, storage, hybrid, self-consumption and zero-injection plants, distributing reactive power among inverters against a point-of-interconnection measurement. BPC PRO is the battery-specific controller. HPC PRO is the hybrid controller and is the one that supports AC and DC coupling in the same plant and carries grid-forming control strategies. BCI, the Battery Control Interface, sits between the power block and the controller and performs state-of-charge balancing, tapering charge, active-power distribution and augmentation handling across battery systems.",
+   "highlights": [
+    "Reactive power distribution across inverters against a POI measurement — the function a grid code actually tests",
+    "BCI performs state-of-charge balancing so mismatched or differently aged batteries share load proportionally",
+    "HPC PRO supports both couplings in a single plant"
+   ],
+   "positioning": "Controls are where a conversion vendor either does or does not own the plant-level compliance obligation. Supplying the controller alongside the inverters is what lets the company be accountable for point-of-interconnection behaviour rather than for boxes.",
+   "soldThrough": "Direct, with the conversion equipment.",
+   "targetSegments": [
+    "Utility-scale plant owners",
+    "Hybrid plant developers"
+   ]
+  },
+  {
+   "name": "AIPCS — medium-voltage to 800 VDC data-centre power supply",
+   "category": "Data-centre power",
+   "description": "The newest and most strategically loaded line: an integrated enclosure converting medium-voltage AC directly to an 800 VDC distribution bus for high-density AI racks, rated to 3,820 kVA at up to 1,000 Vdc with a stated 98.00% maximum efficiency including the medium-voltage transformer. Four modular power stages allow module-level servicing. The company's published reference architecture pairs AIPCS with HEM for photovoltaic input, PCSM and a battery, a DC/DC converter and a supercapacitor bank, feeding an 800 VDC compute bus — that is, it proposes the same conversion hardware it sells to storage developers as the front end of a data centre.",
+   "highlights": [
+    "Medium voltage to 800 VDC in one enclosure, removing conversion stages from the AI rack chain",
+    "98.00% maximum efficiency stated including the MV transformer",
+    "NEMA 3R, -25 °C to +60 °C",
+    "Marketed for AI load smoothing — the volatility argument the CEO makes in public"
+   ],
+   "positioning": "The company's entry into a market the corpus covers heavily from the rack side (Delta, LITEON, Vertiv, Megmeet) and the medium-voltage side (ABB, Powell, Schneider). Its distinctive claim is that the grid-facing skills it already sells — grid-forming conversion and storage — are what the volatile AI load actually needs, rather than denser rack power.",
+   "soldThrough": "Direct.",
+   "targetSegments": [
+    "AI data centres",
+    "Colocation and hyperscale operators"
+   ],
+   "roadmap": "The data-centre brochure is the only company document in which the phrase 'FEOC-free manufactured solutions' appears; it is absent from the website and from the solar and storage brochures."
+  },
+  {
+   "name": "Mobility and industrial drives",
+   "category": "Adjacent businesses",
+   "description": "Two businesses outside the utility-scale conversion story that nonetheless carry the group. Mobility is electric-vehicle charging — the NB range of standalone and cabinet chargers, the NB Station 1.44 MW hub, and a Megawatt Charging System rated to 1,500 A at 1,000 Vdc — and generated $110 million of revenue in 2023, the only divisional figure the company has ever published. Drives is the original 1987 business: low-voltage and medium-voltage variable-speed drives and soft starters, including the XMV670 medium-voltage drive the company now markets for data-centre chiller control.",
+   "highlights": [
+    "Mobility is IATF 16949 certified — an automotive quality regime the storage business does not need",
+    "$110 million Mobility revenue in 2023 is the only divisional revenue figure ever disclosed",
+    "The drives business supplies the data-centre cooling pitch, connecting the oldest product line to the newest market"
+   ],
+   "soldThrough": "Direct, with named charging customers unusually being the only customers the company names at all.",
+   "targetSegments": [
+    "Transit fleets and depots",
+    "Highway charging networks",
+    "Industrial automation",
+    "Data-centre cooling plant"
+   ]
+  },
+  {
+   "name": "Power On Support — aftersales and service",
+   "category": "Services",
+   "description": "The company calls this 'our secret' and treats it as a product rather than an obligation. The published commitments are concrete and unusually long-dated: spare-parts availability guaranteed for twenty-five years, 24/7 support every day of the year, a response commitment stated as 48 hours on the services brochure and under 24 hours on the services page, a dedicated Service Factory near the production plant that repairs subcomponents or manufactures equivalent replacements, and a separate legacy-generation factory producing previous-generation units for equipment no longer in production. In the United States the company states a service network across all 49 continental states.",
+   "highlights": [
+    "Twenty-five-year spare-parts guarantee — longer than most storage offtake contracts",
+    "A dedicated legacy factory building parts for discontinued generations",
+    "Service network stated across 49 US states; more than 600 US employees",
+    "Experience repowering old photovoltaic plants with new-generation equipment on existing electrical designs"
+   ],
+   "positioning": "For a private company with no published order book, the service estate is the most checkable evidence of installed base: 49-state coverage, 60-plus service professionals in the United Kingdom, and 45-plus technicians with a 2,800 m² warehouse in Australia are all first-party operational claims rather than marketing superlatives.",
+   "soldThrough": "Direct, with warranty extensions and preventative-maintenance packages sold on top.",
+   "targetSegments": [
+    "Existing plant owners",
+    "Asset managers",
+    "Repowering and augmentation projects"
+   ]
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-04",
+   "category": "market",
+   "headline": "Flex agrees to acquire the US conversion manufacturer EPC Power for $4.4bn",
+   "read": "The most consequential competitive event in the segment. EPC Power is a US-domiciled conversion pure-play at about $800m of 2026 revenue with 27 GW of South Carolina capacity — American manufacturing being the one attribute the FCC regime now rewards above all others.",
+   "source": "https://www.energy-storage.news/goldman-sachs-alternatives-cleanhill-partners-sell-pcs-manufacturer-epc-power-for-us4-4-billion/"
+  },
+  {
+   "date": "2026-08-26",
+   "category": "policy",
+   "headline": "Executive Order 14420 declares a national emergency over the bulk-power system, naming grid-connected inverters and storage at 69 kV and above",
+   "read": "A second regulatory overhang on top of the FCC rule, and one whose reach cannot yet be assessed: the Department of Energy must define the covered countries and companies by 24 December 2026.",
+   "source": "https://www.mcguirewoods.com/client-resources/alerts/2026/8/executive-order-expands-scrutiny-of-foreign-produced-bulk-power-equipment-what-energy-companies-should-know/"
+  },
+  {
+   "date": "2026-08-24",
+   "category": "policy",
+   "headline": "FCC refinement closes the hardwired exception and adds a 45X safe harbour",
+   "read": "Removes the argument that an Ethernet-only unit escapes the ban, and confirms that the escape route is US manufacturing verified through the tax code rather than any communications-hardware change.",
+   "source": "https://www.ess-news.com/2026/08/24/us-fcc-ban-updates-foreign-inverters-now-include-wired-devices-adds-45x-safe-harbor-for-bess/"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "market",
+   "headline": "PV Tech names the company among European manufacturers advantaged by the FCC ban, 'scaling Texas facility targeting 20GW+ annual capacity by 2027'",
+   "read": "The analyst framing is that the rule weeds out Chinese suppliers and rewards European firms that build in the US — a tailwind that is entirely conditional on Houston producing at volume. The 20 GW target is now dated 2027 rather than the 2026 the company gave in 2023.",
+   "source": "https://www.pv-tech.org/how-will-the-fcc-inverter-ban-impact-the-us-solar-industry-in-the-short-and-long-term/"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "policy",
+   "headline": "FCC adds all foreign-produced grid inverters and power conversion systems with remote-communication capability to the Covered List",
+   "read": "The single most important event in this dossier. It bars new equipment authorisation, import, marketing and sale, and it captures Spanish-built hardware exactly as it captures Chinese-built hardware, because the test is the Buy American domestic-end-product standard rather than ownership.",
+   "source": "https://www.pv-tech.org/us-government-bans-foreign-produced-inverters/"
+  },
+  {
+   "date": "2026-06-22",
+   "category": "corporate",
+   "headline": "170 GW of installed AC power worldwide, against 150 GW at the end of 2025, with 190 GW targeted for the end of 2026",
+   "read": "Twenty gigawatts added in under six months and a published forty-gigawatt annual target — the strongest momentum figure the company discloses. It is a cumulative installed-base metric, self-reported and unaudited, and it is stated in gigawatts of AC power rather than the gigawatt-hours a storage buyer would compare.",
+   "source": "https://www.power-electronics.com/en/blog/2026/170-gw-potencia-instalada"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "customer",
+   "headline": "LA Metro electric bus charging with Camber Operating Company, ahead of the 2028 Olympics",
+   "read": "A rare named US customer — and, tellingly, an electric-vehicle charging one. The company names no US solar or storage customer anywhere in its own material.",
+   "source": "https://power-electronics.com/en/blog/2026/power-electronics-la-metro-ev-bus-charging-camber"
+  },
+  {
+   "date": "2026-05-20",
+   "category": "customer",
+   "headline": "Greenlane's Colton Center: 29 standalone chargers field-upgraded from 180 kW to 240 kW at 99% average uptime",
+   "read": "The only published US performance figure of any kind, and evidence for the field-upgrade and serviceability argument the company makes across all its lines.",
+   "source": "https://power-electronics.com/en/blog/2026/inside-greenlanes-colton-center"
+  },
+  {
+   "date": "2026-04-27",
+   "category": "market",
+   "headline": "United Kingdom reaches 11 GW of installed AC power; 145 storage inverters in one project phase and 150 in a second",
+   "read": "Per-market unit counts are unusual disclosure for this company and give a rare sense of scale per project. The 2011 UK solar plant it notes as still operating is the durability argument behind the twenty-five-year parts guarantee.",
+   "source": "https://power-electronics.com/en/blog/2026/solar-storage-live-london"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "regulatory",
+   "headline": "JC Star-1 cybersecurity certification in Japan for the PCSK line; 23 Japanese storage projects, 10 delivered",
+   "read": "The first storage cybersecurity certification in the portfolio, and directly relevant as US regulators tighten inverter security requirements — the same anxiety that produced the FCC Covered List.",
+   "source": "https://power-electronics.com/en/blog/2026/certification-jcstar1"
+  },
+  {
+   "date": "2026-03-13",
+   "category": "financial",
+   "headline": "FY2025 revenue above €1.3bn, up more than 20%, with EBITDA above €250m, 3,685 employees, and the United States at approximately 70% of group revenue",
+   "read": "Establishes the concentration that governs everything else: this is a US business that manufactures in Spain. Management has separately set a target of reducing the US share to 50%, treating its own largest market as a risk.",
+   "source": "https://www.power-electronics.com/en/blog/2026/cierre-jercicio"
+  },
+  {
+   "date": "2026-03-10",
+   "category": "market",
+   "headline": "CEO argues at the UNC Cleantech Summit that grid-forming conversion is what secures US data-centre growth",
+   "read": "The chief executive personally fronting the data-centre pitch, and the clearest statement of the company's wedge: that AI loads are a grid-stability problem, which is the problem its existing products already solve.",
+   "source": "https://power-electronics.com/en/blog/2026/power-electronics-highlights-how-gridforming-technologies-can-secure-us-data-center-growth-at-the-unc-cleantech-summit"
+  },
+  {
+   "date": "2026-03-05",
+   "category": "capacity",
+   "headline": "Spanish business press reports Houston at about 20,000 m² launching production in 2026, with the previously announced investment of more than $300m postponed",
+   "read": "The critical disclosure the company has not itself made. The domestic manufacturing that would exempt it from the FCC rule has been descoped by roughly an order of magnitude in floor area and deferred, at exactly the moment it became most valuable.",
+   "source": "https://valenciaplaza.com/valenciaplaza/empresas1/power-electronics-supera-los-1300-millones-de-facturacion-y-avanza-en-su-expansion-en-eeuu"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "regulatory",
+   "headline": "Italian grid-forming and long-duration storage compliance with Terna Annex A79, targeting the FER-X and MACSE auctions",
+   "read": "Grid-code certification per market is the real barrier to entry in this business, and each national approval is a multi-year lab queue rather than a product feature.",
+   "source": "https://power-electronics.com/en/blog/2026/key-energy-rimini-italia"
+  },
+  {
+   "date": "2025-12-03",
+   "category": "market",
+   "headline": "ABB acquires the power electronics division of Gamesa Electric, with factories in Madrid and Valencia",
+   "read": "A direct Spanish peer absorbed into a tier-one electrical group, and ABB's re-entry into utility-scale conversion five years after selling that business to FIMER.",
+   "source": "https://www.energy-storage.news/abb-acquires-gamesa-electric-power-electronics-division-for-undisclosed-sum/"
+  },
+  {
+   "date": "2025-10-29",
+   "category": "market",
+   "headline": "All Energy Australia: more than 8 GW deployed in the region, 5 GW commissioned in twelve months",
+   "read": "The strongest regional throughput figure the company publishes, and a reminder that its storage position is claimed in three markets — the United States, Australia and the United Kingdom — rather than globally.",
+   "source": "https://power-electronics.com/en/blog/2025/all-energy"
+  },
+  {
+   "date": "2025-08-18",
+   "category": "product-launch",
+   "headline": "GEN 3 Plus launched at RE+ 2025: above 5 MW of power density, optimised grid forming, and a statement that it 'will be manufactured in the United States'",
+   "read": "The current flagship generation and the clearest US-manufacturing commitment on the record, made a year before the FCC rule turned that commitment into a licence to sell.",
+   "source": "https://power-electronics.com/en/blog/2025/replus-2025"
+  },
+  {
+   "date": "2025-01-29",
+   "category": "policy",
+   "headline": "Vice-president of technical operations says up to 60% of Llíria production could move to the United States if tariffs land",
+   "read": "An executive stating on the record that the majority of Spanish output is relocatable, with roughly 3,000 Llíria jobs framed as at stake. Read it as a negotiating position addressed to Brussels as much as an operating plan — but the direction of travel it describes is the same one the FCC rule now compels.",
+   "source": "https://valenciaplaza.com/valenciaplaza/empresas1/power-electronics-estudia-llevarse-a-eeuu-el-60-de-su-produccion-en-lliria-si-trump-pone-aranceles"
+  },
+  {
+   "date": "2024-08-06",
+   "category": "market",
+   "headline": "Wood Mackenzie states that the US market was led by central inverter manufacturers Sungrow and Power Electronics in calendar 2023",
+   "read": "The only independent statement of US leadership anywhere in this company's record — solar central inverters, a joint mention, unquantified, and not repeated in the following year's edition.",
+   "source": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that this is a United States business that happens to manufacture in Spain, and that the FCC's Covered List order is therefore an existential regulatory event for it rather than a trade irritant. Basis: the company's own FY2025 release puts the United States at approximately 70% of group revenue with more than 600 US employees, and FY2024 filings read by Spanish business press put it at 62.6% — €682.9m of €1,091m, against €58.6m in Spain. The FCC rule turns on the Buy American domestic-end-product test, so hardware assembled in Llíria is covered on the same footing as hardware assembled in China. Management's own stated target of cutting the US share to 50% indicates it reached the concentration conclusion before the regulator did.",
+  "**(Moderate confidence)** We assess that the Houston plant is now the single point of failure in the company's strategy, and that its trajectory has been downward at exactly the moment its value rose. Basis: announced at RE+ in September 2023 as more than $300m across 45 acres with 20 GW of capacity by 2026 and 600-plus jobs; reported by Spanish business press in November 2025 as switching from building to renting in order to reduce capital expenditure; and reported in March 2026 as about 20,000 m² with the $300m investment postponed. Against that, the FY2025 release describes Spain and the United States in the present tense as 'strategic manufacturing hubs', and PV Tech reported in August 2026 that the company is scaling a Texas facility targeting more than 20 GW by 2027. No commissioning milestone, production start or domestic-content percentage has been published by anyone. The confidence is moderate rather than high because the descoping is third-party sourced and the company has not addressed it.",
+  "**(High confidence)** We assess that the company is a conversion specialist rather than an integrator, and that this segment has been consolidating away from independence for four years. Basis: it manufactures no cells and sells no turnkey battery system, which is why Wood Mackenzie's storage integrator ranking — whose published scope is factory-assembled systems bundling battery, conversion, management and controls — structurally cannot contain it. Four independent conversion businesses have been absorbed in that period: EKS Energy by Hitachi Energy in 2023, Dynapower by Sensata in 2022, Gamesa Electric by ABB in 2025 and EPC Power by Flex in September 2026. The stated rationale is consistent across the trade record — conversion is roughly 15% of a battery project's cost but a disproportionate share of its commissioning and operating problems, so integrators want to own it. This company is now one of very few significant conversion suppliers that is neither vertically integrated into cells nor owned by a large electrical group.",
+  "**(Moderate confidence)** We assess that grid forming as a standard rather than optional capability is the company's most defensible technical differentiator, and that it is also its least verifiable claim. Basis: the datasheets for Multi PCSK, HEM UL, HEM IEC and HEMK all list 'Grid Forming (VISMA) / Black Start Capable' as Standard, which is a stronger commercial position than pricing it as an option as the market moves from grid-following to grid-forming requirements. Cutting against it: no inertia constant, fault-current contribution, rate-of-change-of-frequency withstand or independent test result is published in any datasheet or release, so the capability is named everywhere and quantified nowhere.",
+  "**(Low confidence)** We assess that the company's market-position claims are self-referential and should not be repeated without their provenance. Basis: '#1 World Storage Leader' and '#1 manufacturer of solar inverters in America, Oceania and Europe' appear in company brochures with no analyst citation; the company names no competitor in any published document; the only storage-specific ranking in existence dates to 2019, was published by IHS Markit, reached the public record through the company's own press release on a trade site's press-release channel, and has no successor edition; and the sole independent US statement is Wood Mackenzie's calendar-2023 sentence naming the company jointly with Sungrow in solar central inverters, which the calendar-2024 edition did not repeat. The company appears in no current inverter ranking, bankability rating or tier-one supplier list located.",
+  "**Collection gap:** this is a closely held Spanish limited company with no listed securities, no published audited accounts, no interim reporting and no analyst coverage, so every 'expected' field in the financial record is left empty rather than reconstructed. Beyond that: no order backlog, debt figure, balance sheet or capital-expenditure actual is disclosed; the only divisional revenue figure ever published is $110m for the electric-mobility division in 2023; volume is reported exclusively in gigawatts of installed AC power and never in megawatt-hours, so no energy-delivered metric exists to compare against battery suppliers; ultimate beneficial ownership sits behind three corporate vehicles above the holding company and is not public; and no customer-side confirmation of any US solar or storage supply exists beyond a single contractor's project page."
+ ],
+ "relationships": [
+  {
+   "slug": "terra-gen",
+   "type": "customer",
+   "note": "The only US project in the public record where a third party attributes the power conversion system to this company.",
+   "context": "Terra-Gen's Canyon Country Energy Storage Facility in Santa Clarita, California — 80 MW / 320 MWh on a 3.2-acre urban site, completed November 2024 and contracted to Pacific Gas and Electric — was built with BYD battery enclosures paired with this company's power conversion systems.\n\nThe attribution needs its provenance stated. It rests on a single source: the project page of Mortenson, the engineering and construction contractor, which writes 'BYD battery enclosures paired with PE power conversion systems (PCS)'. Mortenson abbreviates the vendor to the two-letter mark and never spells it out. 'PE' is the company's own mark and appears that way on its own datasheet filenames, so the reading is sound, but it is a reading. Terra-Gen's own Canyon Country page names no equipment supplier at all, and no independent source names one either.\n\nNo other US project attributes conversion equipment to this company. An X-ELIO release for the Liberty 1 storage project in Liberty County, Texas names both Saft and Power Electronics without stating either role, while Saft separately states it is delivering seventeen power conversion systems — so that project cannot be counted as a conversion win on the published record.",
+   "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
+   "status": "active",
+   "since": "2024",
+   "scale": "80 MW / 320 MWh",
+   "via": "PE power conversion systems (PCS)"
+  },
+  {
+   "slug": "mortenson",
+   "type": "partner",
+   "note": "The contractor that integrated this company's conversion equipment at Canyon Country and the only party to have published the attribution.",
+   "context": "Mortenson was the engineering, procurement and construction contractor on Terra-Gen's Canyon Country Energy Storage Facility, and its project page is the sole published record pairing BYD enclosures with this company's power conversion systems on that job.\n\nThe link is recorded as a partnership rather than a purchase because the source establishes co-participation on one completed project and nothing more: it does not say who contracted with whom, and neither party has published a framework, preferred-supplier or repeat-work arrangement. Mortenson is also the contractor on Terra-Gen's much larger Edwards & Sanborn project, but that project's published supplier list names modules, batteries, contractor, SCADA and metering and no inverter or conversion vendor at all — so no equipment link may be inferred there.",
+   "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
+   "since": "2024"
+  },
+  {
+   "slug": "sungrow",
+   "type": "competitor",
+   "note": "The one company an independent analyst has ever named alongside this one at the top of a US inverter market.",
+   "context": "Wood Mackenzie's August 2024 shipment release, covering calendar 2023, states that 'the US market was led by central inverter manufacturers Sungrow and Power Electronics'. That single sentence is the only independent statement of US leadership in this company's public record, and it is narrower than it is usually reported to be: it concerns solar central inverters rather than storage power conversion, it is a joint mention rather than a ranking, it carries no share or megawatt figure, and Wood Mackenzie's equivalent release for calendar 2024 does not mention this company at all.\n\nThe two firms are not symmetrically placed. Sungrow ranks second globally in Wood Mackenzie's H1 2025 inverter scorecard and first in its 2026 storage integrator ranking, sells turnkey battery systems as well as conversion hardware, and is identified by PV Tech as the largest single importer of photovoltaic inverters into the United States — which makes it the vendor most exposed to the FCC's foreign-produced-inverter regime, and this company's clearest opportunity if that regime bites as expected.\n\nThe existing Sungrow dossier's description of this company as a maker of conventional central inverters is accurate and is independently corroborated by the Wood Mackenzie wording above.",
+   "source": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/",
+   "status": "active"
+  },
+  {
+   "slug": "sinexcel",
+   "type": "competitor",
+   "note": "The corpus's other third-party conversion specialist — a closer structural peer than either dossier had recognised.",
+   "context": "Both companies sell power conversion hardware to battery integrators and developers rather than turnkey battery systems, which makes them the same kind of business rather than opposite kinds. Sinexcel differentiates on modular, module-parallel architecture at the smaller end and on power-quality products; this company differentiates on scale, on integrating the medium-voltage transformer and switchgear into the inverter enclosure, and on a service estate spanning 49 US states with a twenty-five-year spare-parts guarantee.\n\nOne correction to the record, made this session. Sinexcel's dossier grouped this company with Sungrow and SMA as 'integrated-inverter giants' whose model Sinexcel sells around 'rather than competing with them on full BESS supply'. That is right about Sungrow and wrong about this company: it manufactures no cells and sells no turnkey battery system, which is precisely why Wood Mackenzie's storage integrator ranking — whose stated scope is factory-assembled AC-integrated systems — cannot include it. The architectural contrast between integrated medium-voltage central conversion and modular low-voltage conversion is real; the business-model contrast asserted alongside it was not.\n\nA second point of care. The New Zealand company trading as Power Electronics NZ describes itself as locally owned and states that Sinexcel designs and manufactures its power-quality range. That is a supply relationship of that New Zealand distributor, not of this manufacturer, and no supplier link between the two companies is asserted here on that basis.",
+   "source": "Dossier competitive assessment — third-party storage PCS",
+   "status": "active"
+  },
+  {
+   "slug": "flex",
+   "type": "competitor",
+   "note": "Bought its way into utility-scale power conversion in September 2026, at a price that reprices the category.",
+   "context": "On 3 September 2026 Flex agreed to acquire EPC Power, a San Diego power-conversion manufacturer, for US$4.4bn, closing expected in the fourth quarter of 2026. EPC Power is expected to generate about US$800m of calendar-2026 revenue at roughly 30% EBITDA margins in 2027, from a South Carolina plant with 27 GW of nameplate capacity scalable to 40 GW.\n\nThis is the most consequential competitive event in the segment and it bears directly on how this company should be described. EPC Power is a US-domiciled conversion pure-play whose single-product revenue is roughly two thirds of this company's entire group revenue across solar, storage, electric-vehicle charging and industrial drives — and its capacity is American, which under the FCC's foreign-produced-inverter regime is the decisive attribute. Any characterisation of this company as the leading US utility-scale conversion specialist has to contend with that.\n\nThe acquisition also continues a pattern: EKS Energy to Hitachi Energy in 2023, Dynapower to Sensata in 2022, Gamesa Electric to ABB in 2025, and now EPC Power to Flex. Independent conversion businesses have repeatedly been worth more inside an integrator or a large electrical original-equipment manufacturer than as standalone product lines.",
+   "source": "https://www.energy-storage.news/goldman-sachs-alternatives-cleanhill-partners-sell-pcs-manufacturer-epc-power-for-us4-4-billion/",
+   "status": "announced",
+   "since": "2026-09",
+   "scale": "US$4.4bn acquisition of EPC Power",
+   "via": "EPC Power"
+  },
+  {
+   "slug": "abb",
+   "type": "competitor",
+   "note": "Re-entered utility-scale conversion by buying a Spanish peer with factories in the same country.",
+   "context": "ABB acquired the power electronics division of Gamesa Electric in December 2025 — utility-scale photovoltaic inverters, battery power conversion systems and wind converters, with factories in Madrid and Valencia plus operations in the United States, India, China and Australia. ABB had exited utility-scale solar inverters when it sold that business to FIMER in 2020, so this is a re-entry.\n\nThe competitive significance is specific rather than general. Gamesa Electric is a Spanish conversion manufacturer in the same country as this company, and its absorption places a direct domestic peer inside a tier-one global electrical original-equipment manufacturer with an established US industrial footprint and balance sheet. That leaves this company as one of very few significant conversion suppliers that is neither vertically integrated into cells nor owned by a large electrical group — which is either its differentiation or its exposure, and the public record does not settle which.",
+   "source": "https://www.energy-storage.news/abb-acquires-gamesa-electric-power-electronics-division-for-undisclosed-sum/",
+   "status": "active",
+   "since": "2025-12",
+   "via": "Gamesa Electric"
+  },
+  {
+   "slug": "hitachi-energy",
+   "type": "competitor",
+   "note": "Absorbed the Spanish conversion maker EKS Energy in 2023, the first of the four acquisitions that consolidated this segment.",
+   "context": "Hitachi Energy bought EKS Energy, a Seville-based power conversion and inverter manufacturer, from Powin in October 2023, describing the purchase as closing a gap in its portfolio; EKS had delivered more than 10 GW across 350-plus storage and renewables references.\n\nThe transaction is also the clearest published statement of why standalone conversion businesses keep being absorbed. The trade coverage around it restates the industry's own arithmetic: the conversion system is roughly 15% of a battery project's cost but accounts for a disproportionate share of commissioning and operating problems, which is the reason integrators have given for wanting to own it rather than buy it. That logic is the central commercial risk to a company whose whole business is selling conversion hardware to those same integrators.",
+   "source": "https://www.energy-storage.news/hitachi-energy-buys-pcs-and-inverter-maker-eks-energy-from-powin/",
+   "status": "active",
+   "since": "2023-10",
+   "via": "EKS Energy"
+  },
+  {
+   "slug": "trina-storage",
+   "type": "partner",
+   "note": "Signed a 2022 letter of intent to integrate this company's PCSK inverters into more than 1 GWh of battery systems; no delivery was ever confirmed.",
+   "context": "Trina Storage and this company signed a letter of intent at Intersolar Europe in May 2022 targeting more than 1 GWh of battery storage deployments integrating PCSK inverters, with the stated geography being mainland Europe and a US launch described only as forthcoming.\n\nIt is recorded as historical because nothing published since confirms it converted. No follow-up announcement, delivery confirmation or named project has appeared from either party in the four years since, and the target date in the announcement — the end of 2023 — has long passed. It is included because it is the only integrator partnership either company has announced with the other, and because an unconverted letter of intent is itself evidence about how the third-party conversion channel performs against the vertical-integration trend described on the Hitachi Energy link.",
+   "source": "https://www.energy-storage.news/trina-storage-power-electronics-partnership-targets-1gwh-bess-deployments-by-end-of-next-year/",
+   "status": "historical",
+   "since": "2022-05",
+   "scale": "More than 1 GWh targeted",
+   "via": "PCSK"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FCC Covered List — foreign-produced inverters and PCS",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-28",
+   "exposure": "The Federal Communications Commission added all foreign-produced utility-interactive power inverters and power conversion systems with remote-communication capability to the Covered List, prohibiting new equipment authorisation, import, marketing and sale. The rule turns on where the hardware is manufactured, not on the producer's nationality or ownership: a product is foreign-produced unless it meets the domestic-end-product standard at 48 C.F.R. § 25.101(a), so units built in Spain are covered exactly as units built in China are. A refinement on 20 August 2026 closed the hardwired exception, capturing Ethernet-only equipment. This company's storage inverters are marketed as SCADA- and plant-controller-commanded and are therefore in scope. Previously authorised models are grandfathered, and a blanket waiver permits software and firmware security updates through at least 1 January 2029.",
+   "mitigation": "The company's own stated response is US manufacturing. Its FY2025 results release describes Spain and the United States as 'strategic manufacturing hubs', it stated in August 2025 that GEN 3 Plus 'will be manufactured in the United States', and the data-centre brochure advertises 'FEOC-free manufactured solutions' — a phrase that appears in that one document and nowhere else in its published material. The company has never published a domestic-content percentage or any statement about eligibility for the 45X advanced manufacturing production credit, which is the specific carve-out the FCC order created.",
+   "source": "https://www.pv-tech.org/us-government-bans-foreign-produced-inverters/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Inverters are a listed eligible component for the 45X advanced manufacturing production credit, and the FCC's Covered List order exempts inverters eligible for it. The same domestic content also determines whether a developer buying the equipment can claim the domestic-content bonus. Both turn on US manufacturing at volume, which the public record does not yet show. At RE+ 2024 competitors including Enphase and SolarEdge published domestic-content percentages; this company published floor plans and no percentage, and no company or analyst statement of 45X eligibility appears in any source located.",
+   "source": "https://www.solarpowerworldonline.com/2024/09/inverter-manufacturers-highlight-higher-domestic-content-at-re-2024/"
+  },
+  {
+   "regime": "Executive Order 14420 — bulk-power system",
+   "status": "in-effect",
+   "effectiveDate": "2026-08-26",
+   "exposure": "The order declares a national emergency over the bulk-power system and bars the purchase, import or installation of grid equipment — expressly including grid-connected inverters and battery storage systems at 69 kV and above — tied to certain foreign adversaries, applying to transactions initiated after 26 August 2026 and permitting conditions to be imposed on equipment already installed. Whether Spain falls within scope is not currently knowable: the Department of Energy must publish implementing rules by 24 December 2026, and those rules define the covered countries and companies. Any assessment written before that date is speculation.",
+   "source": "https://www.mcguirewoods.com/client-resources/alerts/2026/8/executive-order-expands-scrutiny-of-foreign-produced-bulk-power-equipment-what-energy-companies-should-know/"
+  },
+  {
+   "regime": "US tariffs on EU goods",
+   "status": "in-effect",
+   "exposure": "The company manufactures in Spain and sells about 70% of its output into the United States, so tariff policy bears on it directly. In January 2025 the vice-president of technical operations, Lalo Salvo, told a Spanish outlet that up to 60% of Llíria production could move to the United States if tariffs landed — 'if there are tariffs we will accelerate construction of our new plant in Houston to manufacture there as soon as possible' — with roughly 3,000 Llíria jobs framed as at stake, while also appealing for European support and noting that earlier US protectionism had benefited the company by disadvantaging Chinese competitors. That statement is a negotiating posture addressed to Brussels as much as an operating plan and should be read as both.",
+   "mitigation": "The Houston facility, which the company has consistently named as its tariff and domestic-content answer.",
+   "source": "https://valenciaplaza.com/valenciaplaza/empresas1/power-electronics-estudia-llevarse-a-eeuu-el-60-de-su-produccion-en-lliria-si-trump-pone-aranceles"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Freemaq PCSK FP5020K — 690 V low-voltage battery inverter (datasheet v2.0.1, 2026-06-02)",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "AC output at 30 / 35 / 40 / 50 °C",
+     "value": "5,240 / 5,020 / 4,800 / 4,360 kVA"
+    },
+    {
+     "band": "Power",
+     "label": "Maximum AC output current at 30 °C",
+     "value": "4,385 A"
+    },
+    {
+     "band": "Power",
+     "label": "Overload",
+     "value": "166% / 100 ms · 150% / 5 s · 120% / 8 s · 110% / 15 s"
+    },
+    {
+     "band": "Electrical",
+     "label": "Grid voltage and frequency",
+     "value": "690 V ±10% / 50-60 Hz"
+    },
+    {
+     "band": "Electrical",
+     "label": "Power factor",
+     "value": "0.5 leading to 0.5 lagging, four-quadrant"
+    },
+    {
+     "band": "Electrical",
+     "label": "Current distortion",
+     "value": "THDi below 3% per IEEE 519"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC full-power window",
+     "value": "976 V - 1,500 V; maximum 1,500 V; ripple below 3%"
+    },
+    {
+     "band": "Electrical",
+     "label": "Maximum DC continuous current",
+     "value": "5,478 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "Maximum DC short-circuit current",
+     "value": "500 kA at 1 ms time constant"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency",
+     "value": "98.94% maximum / 98.51% CEC"
+    },
+    {
+     "band": "Design",
+     "label": "Cabinet",
+     "value": "3.0 x 2.0 x 2.3 m (9.8 x 6.5 x 7.5 ft), 4,700 kg"
+    },
+    {
+     "band": "Design",
+     "label": "Cooling and protection",
+     "value": "Forced air / NEMA 3R / IP55"
+    },
+    {
+     "band": "Design",
+     "label": "Temperature",
+     "value": "-40 °C to +60 °C, derating above 30 °C (optional kit below -25 °C)"
+    },
+    {
+     "band": "Design",
+     "label": "Altitude",
+     "value": "2,000 m, derating to a maximum of 4,000 m"
+    },
+    {
+     "band": "Design",
+     "label": "Battery compatibility",
+     "value": "All types (BMS required)"
+    },
+    {
+     "band": "Design",
+     "label": "Communications",
+     "value": "Modbus TCP"
+    },
+    {
+     "band": "Compliance",
+     "label": "Safety",
+     "value": "UL 1741 / CSA 22.2 No.107.1-16 / IEC 62109-1 / IEC 62109-2 / IEC 62477-1"
+    },
+    {
+     "band": "Compliance",
+     "label": "Installation",
+     "value": "NEC 2023"
+    },
+    {
+     "band": "Compliance",
+     "label": "Utility interconnection",
+     "value": "UL 1741 SA & SB / IEEE 1547.1 / IEC 62116 / G99 / VDE 4110-4120-4130 / CEI 0-16 / NTS 2.1 / EN 50549"
+    }
+   ],
+   "notes": "The 720 V sibling FP5150K rates 5,360 / 5,150 / 4,940 / 4,520 kVA across the same temperature points on a 1,019 V - 1,500 V DC window. Multi PCSK carries the same envelope but splits the DC side into two inputs at 2,740 A or four at 1,370 A, each with the full 500 kA withstand — and its datasheet, unlike the single-input sheet, states 'Grid Forming (VISMA) / Black Start Capable — Standard' explicitly."
+  },
+  {
+   "product": "Freemaq PCSM UL FP4200M — integrated medium-voltage battery inverter",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "AC output at 40 / 50 °C",
+     "value": "4,200 kVA / 3,900 kVA"
+    },
+    {
+     "band": "Electrical",
+     "label": "Grid voltage",
+     "value": "34.5 kV / 13.8 kV / 12.47 kV ±10%"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC window",
+     "value": "934 V - 1,500 V"
+    },
+    {
+     "band": "Electrical",
+     "label": "Maximum DC continuous current",
+     "value": "4,590 A"
+    },
+    {
+     "band": "Electrical",
+     "label": "Maximum DC short-circuit current",
+     "value": "500 kA at 1 ms"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency",
+     "value": "98.00% maximum / 97.53% CEC, including the medium-voltage transformer"
+    },
+    {
+     "band": "Design",
+     "label": "Cabinet",
+     "value": "6.5 x 2.0 x 2.3 m, 14,000 kg"
+    },
+    {
+     "band": "Design",
+     "label": "Enclosure and temperature",
+     "value": "NEMA 3R; -25 °C to +60 °C, derating above 40 °C"
+    },
+    {
+     "band": "Design",
+     "label": "General AC protection",
+     "value": "38 kV medium-voltage switchgear (20 or 25 kA)"
+    },
+    {
+     "band": "Design",
+     "label": "Independent DC inputs (Multi PCSM)",
+     "value": "Two at 2,295 A or four at 1,148 A"
+    },
+    {
+     "band": "Compliance",
+     "label": "Safety and installation",
+     "value": "UL 1741 / CSA 22.2 No.107.1-16 / NEC 2023"
+    },
+    {
+     "band": "Compliance",
+     "label": "Utility interconnection",
+     "value": "UL 1741 SA & SB / Rule 21 / Rule 14H / IEEE 1547.1:2020"
+    }
+   ],
+   "notes": "Footnote 8 of this datasheet marks the 166% / 150% / 120% / 110% overload capability 'Available from January 2027' — the only dated forward product commitment in any of the company's published datasheets. The FP4105M variant rates 4,105 / 3,810 kVA on a 913 V DC floor at 97.93% / 97.50% efficiency."
+  },
+  {
+   "product": "HEM UL FS5075MU — integrated medium-voltage solar inverter (datasheet v2.0.2, 2026-07-07)",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "AC output at 30 / 35 / 40 / 50 °C",
+     "value": "5,260 / 5,075 / 4,860 / 4,430 kVA"
+    },
+    {
+     "band": "Electrical",
+     "label": "Grid voltage and frequency",
+     "value": "34.5 kV / 22.8 kV ±10%, 60 Hz"
+    },
+    {
+     "band": "Electrical",
+     "label": "Rated impulse withstand",
+     "value": "145 kV"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC window and inputs",
+     "value": "976 V - 1,500 V; up to 40 DC inputs; 5,498 A; 8,000 A DC short circuit"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency",
+     "value": "98.00% maximum / 97.53% CEC, including the medium-voltage transformer"
+    },
+    {
+     "band": "Electrical",
+     "label": "Night-time capability",
+     "value": "Reactive power injection at night"
+    },
+    {
+     "band": "Design",
+     "label": "Cabinet",
+     "value": "6.5 x 2.0 x 2.3 m, 14,000 kg"
+    },
+    {
+     "band": "Design",
+     "label": "Enclosure and temperature",
+     "value": "NEMA 3R; -40 °C to +60 °C, derating above 30 °C"
+    },
+    {
+     "band": "Design",
+     "label": "General AC protection",
+     "value": "38 kV medium-voltage switchgear"
+    },
+    {
+     "band": "Design",
+     "label": "Ground fault",
+     "value": "GFDI plus insulation monitoring"
+    },
+    {
+     "band": "Compliance",
+     "label": "Grid support",
+     "value": "Grid forming (VISMA) / black start — Standard"
+    },
+    {
+     "band": "Compliance",
+     "label": "Safety and interconnection",
+     "value": "UL 1741 / CSA 22.2 No.107.1-16 / NEC 2023 / UL 1741 SA & SB / IEEE 1547.1"
+    }
+   ],
+   "notes": "The IEC variants (FS4999MH to FS5002MH) rate 4,999-5,030 kVA at 30 °C on 33 kV, 34.5 kV or 30 kV with the same 145 kV impulse withstand, certified instead to IEC 62109-1/-2 for safety and IEC 62116, G99, VDE 4110-4120-4130, CEI 0-16, NTS 2.1 and EN 50549 for interconnection. HEMK, the low-voltage sibling, reaches 98.95% maximum efficiency and 98.53% Euro-eta in a 3.0 x 2.0 x 2.3 m, 4,700 kg cabinet with an LV circuit breaker rather than MV switchgear."
+  },
+  {
+   "product": "DC/DC converter FD1200R (datasheet v1.1.1)",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Output at 30 / 40 / 50 °C",
+     "value": "1,200 / 1,120 / 1,040 kW"
+    },
+    {
+     "band": "Electrical",
+     "label": "PV and storage DC windows",
+     "value": "720 V - 1,500 V on both sides; maximum PV input 1,500 V; ripple below 3%"
+    },
+    {
+     "band": "Electrical",
+     "label": "Maximum DC short-circuit current",
+     "value": "500 kA at 1 ms on the storage side; 3 kA on the PV side"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency",
+     "value": "99.18% maximum"
+    },
+    {
+     "band": "Design",
+     "label": "Cabinet",
+     "value": "1.20 x 1.80 x 2.30 m"
+    },
+    {
+     "band": "Design",
+     "label": "Cooling, enclosure and temperature",
+     "value": "Forced air; NEMA 3R / IP54; -25 °C to +60 °C, derating above 30 °C"
+    },
+    {
+     "band": "Design",
+     "label": "Altitude",
+     "value": "4,000 m, derating above 2,000 m"
+    },
+    {
+     "band": "Design",
+     "label": "Connections",
+     "value": "Six positive and six negative PV; three positive and three negative to the inverter"
+    }
+   ],
+   "notes": "The asymmetry between the two short-circuit ratings — 500 kA on the storage side against 3 kA on the photovoltaic side — is the physical reason a battery and an array cannot simply share a DC bus, and is what the product exists to mediate."
+  },
+  {
+   "product": "AIPCS — medium-voltage to 800 VDC data-centre power supply",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Rating",
+     "value": "Up to 3,820 kVA"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC output",
+     "value": "Up to 1,000 Vdc"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency",
+     "value": "98.00% maximum, including the medium-voltage transformer"
+    },
+    {
+     "band": "Design",
+     "label": "Architecture",
+     "value": "Four power stages, modular, module-level servicing to minimise mean time to repair"
+    },
+    {
+     "band": "Design",
+     "label": "Enclosure and temperature",
+     "value": "NEMA 3R; -25 °C to +60 °C, maximum operating temperature up to 50 °C"
+    }
+   ],
+   "notes": "No independent test data, inertia constant, fault-current contribution or rate-of-change-of-frequency withstand is published for this or any other unit — the grid-forming capability is named and listed as standard, but its performance is not quantified anywhere in the company's public material."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "David Salvo Lillo",
+   "title": "Chief Executive Officer",
+   "background": [
+    "Chief executive since 2004; more than 28 years with the company",
+    "A member of the founding family and, per an interview conducted with him, a shareholder — the only affirmative statement in the public record that a named individual holds equity",
+    "Son of the founder Abelardo Salvo Babiloni",
+    "Personally fronts the US data-centre strategy: quoted at the UNC Cleantech Summit in March 2026 arguing that AI data centres create 'fast, highly volatile loads that the grid was never designed to manage', citing rack peaks above 100 kW and the April 2025 Iberian Peninsula blackout",
+    "Describes the United States as the company's 'most important market' and 'largest market to date'; quoted in the FY2023 and FY2025 results releases and at RE+ in 2023, 2024 and 2025"
+   ]
+  },
+  {
+   "name": "Raúl Padierna León",
+   "title": "Chief Sales Officer",
+   "background": [
+    "Named as Chief Sales Officer in the June 2026 release announcing 170 GW of installed AC power — the most recent first-party confirmation of the title",
+    "The commercial voice on volume and market position, where the chief executive carries the strategic and US-facing message"
+   ]
+  },
+  {
+   "name": "Ron Puryear",
+   "title": "President, Power Electronics USA (title as stated by the company in January 2024; not restated since)",
+   "background": [
+    "Named President of Power Electronics USA in the company's own Intersolar North America release of January 2024, quoted on the 49-state service network and more than 1,800 GEN 3 units commissioned in the United States",
+    "Based in Phoenix, Arizona",
+    "Title is contested: commercial data brokers list him as Vice President and General Manager rather than President, and the company has named no US business head in any 2025 or 2026 release. Treat the current US leadership as unconfirmed"
+   ]
+  },
+  {
+   "name": "Ander García",
+   "title": "Grid Connection Manager",
+   "background": [
+    "The company's technical and grid-code spokesperson, quoted at All Energy Australia in both October 2024 and October 2025",
+    "The closest thing to a published engineering voice: no chief technology officer or engineering lead is named anywhere in the company's material"
+   ]
+  },
+  {
+   "name": "Borja Monzó",
+   "title": "United Kingdom Country Manager",
+   "background": [
+    "Quoted in the April 2026 release recording 11 GW of installed AC power in the United Kingdom, 145 PCSK units in one battery project phase and 150 in a second, and more than 60 UK service professionals"
+   ]
+  },
+  {
+   "name": "David O'Donoghue",
+   "title": "Managing Director, Power Electronics Australia",
+   "background": [
+    "Quoted at All Energy Australia in October 2025 on more than 8 GW deployed in the region and 5 GW commissioned in the preceding twelve months"
+   ]
+  },
+  {
+   "name": "Abelardo Salvo Babiloni",
+   "title": "Founder and President (died 14 November 2018)",
+   "background": [
+    "Founded the business in Valencia in 1987, initially supplying variable-speed drives and soft starters before manufacturing its own products",
+    "Stepped back from daily management in 1987 following a workplace electrical accident in which he lost a hand; his eldest son Amadeo took over, and the business has been run by his sons Amadeo, Lalo and David since",
+    "Still quoted on the company's About page; the auditorium at the Llíria campus is named after him"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "EUR",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "More than €1.3 billion, up more than 20% on €1.091 billion in FY2024",
+      "expected": "",
+      "verdict": "",
+      "result": "No analyst consensus exists for a privately held company with no listed securities; the 'expected' field is left empty rather than reconstructed.",
+      "kpi": "revenue",
+      "usdMillions": 1468,
+      "fxBasis": "EUR at 1.1296 USD/EUR (2025 calendar-year average, exchange-rates.org / exchangerates.org.uk); the company reports in euros for FY2024 and FY2025 and reported in US dollars for FY2023"
+     },
+     {
+      "name": "EBITDA",
+      "actual": "More than €250 million",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-stated; no audited statement is published and no margin reconciliation is given."
+     },
+     {
+      "name": "Employees",
+      "actual": "3,685, an increase of 294 on 3,391 in FY2024",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-stated in the results release."
+     },
+     {
+      "name": "United States share of group revenue",
+      "actual": "Approximately 70%, with more than 600 employees in the United States",
+      "expected": "",
+      "verdict": "",
+      "result": "The single most consequential disclosure in the company's public record: it implies roughly €910 million of US revenue and makes this a US company headquartered in Spain rather than a European exporter."
+     }
+    ],
+    "commentary": "Announced 13 March 2026. The release is titled to claim a strengthened 'leadership position in the U.S. market' and describes Spain and the United States as 'strategic manufacturing hubs for the Group's future growth' — the only present-tense statement that US manufacturing exists. No divisional or geographic revenue split beyond the 70% figure is given, no net income is disclosed, and no balance sheet, order backlog or capital-expenditure actual is published."
+   },
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "€1.091 billion",
+      "expected": "",
+      "verdict": "",
+      "result": "Disclosed only as the comparative base inside the FY2025 release; no standalone FY2024 results release exists on the company's newsroom.",
+      "kpi": "revenue",
+      "usdMillions": 1181,
+      "fxBasis": "EUR at 1.0825 USD/EUR (2024 calendar-year average, exchange-rates.org / exchangerates.org.uk)"
+     },
+     {
+      "name": "Employees",
+      "actual": "3,391",
+      "expected": "",
+      "verdict": "",
+      "result": "Disclosed as the FY2025 comparative."
+     },
+     {
+      "name": "Net profit",
+      "actual": "€146.6 million, reported as up 7.4%",
+      "expected": "",
+      "verdict": "",
+      "result": "NOT a company disclosure. This figure comes from Spanish business press reading the company's Registro Mercantil filing; the company has never published a net income figure in any first-party channel."
+     }
+    ],
+    "commentary": "The year that needs the most care. FY2023 was reported in US dollars and FY2024 in euros, so the published series is not directly comparable: the FY2023 figure of more than $1.2 billion converts to roughly €1.07-1.14 billion across any plausible 2023 rate, a range that brackets the €1.091 billion of FY2024 and makes the year approximately flat rather than a decline. Spanish business press read the filings the same way, headlining that the company held revenue stable in 2024 after a record 2023. Any presentation of 2023 to 2024 as a fall is an artefact of the currency change."
+   },
+   {
+    "period": "FY2023",
+    "periodType": "annual",
+    "periodEnd": "2023-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "More than $1.2 billion, up 75%",
+      "expected": "",
+      "verdict": "",
+      "result": "Reported in US dollars, unlike FY2024 and FY2025.",
+      "kpi": "revenue",
+      "usdMillions": 1200,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "EBITDA",
+      "actual": "$228 million",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-stated."
+     },
+     {
+      "name": "Mobility division revenue",
+      "actual": "$110 million",
+      "expected": "",
+      "verdict": "",
+      "result": "The only divisional revenue figure the company has ever published, for any division, in any year."
+     }
+    ],
+    "commentary": "Closed the 2019-2023 strategic plan and announced a 2024-2027 capital-expenditure plan of more than $330 million covering a new electric-mobility facility at Llíria and new US facilities for chargers, solar inverters and storage inverters. The 75% growth rate makes FY2023 the record year against which every later comparison is drawn."
+   }
+  ],
+  "commentary": "COLLECTION GAP, stated rather than worked around. This is a closely held Spanish limited company with no listed securities, no audited accounts published anywhere on its own site, no annual report, no interim reporting and no analyst coverage. Everything above comes from two annual results press releases — for FY2023 and FY2025 — plus figures disclosed as comparatives within them. There is no order backlog, no debt figure, no balance sheet, no capital-expenditure actual against the $330 million plan, no divisional split beyond one 2023 Mobility figure, no geographic split beyond the 70% US share, and no interim figures for 2026. The company reports volume exclusively in gigawatts of installed AC power and has never published a megawatt-hour or gigawatt-hour figure, which means no energy-delivered metric exists to compare against battery suppliers. The one net-income figure in circulation is third-party, read from the statutory filing rather than disclosed."
+ },
+ "sources": [
+  {
+   "label": "Energy-Storage.News — Goldman Sachs Alternatives and Cleanhill Partners sell PCS manufacturer EPC Power to Flex for US$4.4bn; about US$800m of 2026 revenue and a 27 GW South Carolina plant",
+   "url": "https://www.energy-storage.news/goldman-sachs-alternatives-cleanhill-partners-sell-pcs-manufacturer-epc-power-for-us4-4-billion/",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "McGuireWoods — Executive Order 14420 expands scrutiny of foreign-produced bulk-power equipment; DOE implementing rules due 24 December 2026",
+   "url": "https://www.mcguirewoods.com/client-resources/alerts/2026/8/executive-order-expands-scrutiny-of-foreign-produced-bulk-power-equipment-what-energy-companies-should-know/",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "ESS News — FCC ban updated: foreign inverters now include hardwired devices, and a 45X safe harbour is added for storage",
+   "url": "https://www.ess-news.com/2026/08/24/us-fcc-ban-updates-foreign-inverters-now-include-wired-devices-adds-45x-safe-harbor-for-bess/",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "Power Electronics — from fleet electrification goals to deployable campus infrastructure",
+   "url": "https://power-electronics.com/en/blog/2026/from-fleet-electrification-goals-to-deployable-campus-infrastructure-",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Wiley Rein — FCC adds foreign-produced power inverters to the Covered List: the Buy American domestic-end-product test, the 45X carve-out and the firmware-update waiver to 2029",
+   "url": "https://www.wiley.law/alert-FCC-Adds-Foreign-Produced-Power-Inverters-and-Advanced-Robotic-Devices-to-the-Covered-List",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "PV Tech — how the FCC inverter ban will affect the US solar industry; names Power Electronics as scaling a Texas facility targeting over 20 GW of annual capacity by 2027",
+   "url": "https://www.pv-tech.org/how-will-the-fcc-inverter-ban-impact-the-us-solar-industry-in-the-short-and-long-term/",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Baker McKenzie — FCC adds inverters and robotics to the Covered List, confirming that units manufactured in Spain, Germany or Japan are covered regardless of the producer's nationality",
+   "url": "https://sanctionsnews.bakermckenzie.com/us-fcc-adds-inverters-and-robotics-to-covered-list/",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "PV Tech — US government bans foreign-produced inverters: scope, the 65% rising to 75% domestic-content threshold, and the Department of War / DHS conditional-approval route",
+   "url": "https://www.pv-tech.org/us-government-bans-foreign-produced-inverters/",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "PV Tech — European PV inverter manufacturing defying global trends: Power Electronics at 25 GW of Spanish capacity against SMA's 40 GW",
+   "url": "https://www.pv-tech.org/european-pv-inverter-manufacturing-defying-global-trends-regional-production/",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Wood Mackenzie — global BESS integrator ranking 2026, whose stated basis is AC-integrated systems bundling battery, PCS, BMS and controls, so PCS-only suppliers are out of scope",
+   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "Power Electronics — AI-driven control added to Power On Support for EV charging operations",
+   "url": "https://power-electronics.com/en/blog/2026/operaciones-carga-ia",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Power Electronics — 170 GW of installed AC power worldwide; 190 GW targeted by end-2026 (Raúl Padierna, CSO)",
+   "url": "https://www.power-electronics.com/en/blog/2026/170-gw-potencia-instalada",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Power Electronics — LA Metro electric bus charging with Camber Operating Company",
+   "url": "https://power-electronics.com/en/blog/2026/power-electronics-la-metro-ev-bus-charging-camber",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "El Español — the Valencian group reaches 1,500 engineers on FY2025 revenue of €1.3bn",
+   "url": "https://www.elespanol.com/valencia/economia/20260611/grupo-valenciano-power-electronics-alcanza-ingenieros-plantilla-facturo-millones/1003744281810_0.html",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Power Electronics — ranked first in LinkedIn's 2026 Top Companies list for Valencia",
+   "url": "https://power-electronics.com/en/blog/2026/topcompanies",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "Power Electronics — inside Greenlane's Colton Center: 29 NB240 chargers upgraded to 240 kW, 99% average uptime",
+   "url": "https://power-electronics.com/en/blog/2026/inside-greenlanes-colton-center",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "Power Electronics — UK expansion doubles to 11 GW installed AC; PCSK unit counts and 60+ UK service staff (Borja Monzó)",
+   "url": "https://power-electronics.com/en/blog/2026/solar-storage-live-london",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "Power Electronics — JC Star-1 cybersecurity certification in Japan for PCSK; 23 BESS projects, 10 delivered",
+   "url": "https://power-electronics.com/en/blog/2026/certification-jcstar1",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "Power Electronics — FY2025 results: revenue above €1.3bn, EBITDA above €250m, 3,685 employees, US ~70% of group revenue (David Salvo, CEO)",
+   "url": "https://www.power-electronics.com/en/blog/2026/cierre-jercicio",
+   "date": "2026-03-13"
+  },
+  {
+   "label": "Power Electronics — NB Station UK ultra-fast charging hub case study: 62,800+ sessions, 1.88 GWh in 2025",
+   "url": "https://power-electronics.com/en/blog/2026/casodeexito-nbstation",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "Power Electronics — CEO on grid-forming technology and US data-centre growth at the UNC Cleantech Summit",
+   "url": "https://power-electronics.com/en/blog/2026/power-electronics-highlights-how-gridforming-technologies-can-secure-us-data-center-growth-at-the-unc-cleantech-summit",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Valencia Plaza — Power Electronics passes €1.3bn of revenue and advances its US expansion: Houston at 20,000 m² launching production in 2026, with the previously announced $300m-plus investment postponed",
+   "url": "https://valenciaplaza.com/valenciaplaza/empresas1/power-electronics-supera-los-1300-millones-de-facturacion-y-avanza-en-su-expansion-en-eeuu",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "Power Electronics — Italy: grid-forming and long-duration storage compliant with Terna Annex A79; FER-X and MACSE tenders",
+   "url": "https://power-electronics.com/en/blog/2026/key-energy-rimini-italia",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "Institute for the Environment, UNC — interview with David Salvo: CEO since 2004, founding-family member and shareholder, Texas facility",
+   "url": "https://ie.unc.edu/cleantech-story/powering-the-renewable-grid-a-conversation-with-david-salvo-of-power-electronics/",
+   "date": "2026-02-01"
+  },
+  {
+   "label": "Wood Mackenzie — solar inverter manufacturer ranking H1 2025 (eight-criterion scorecard); Power Electronics appears in neither the top ten nor the Grade A list",
+   "url": "https://www.woodmac.com/press-releases/solar-inverter-ranking-h1-2025/",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "Energy-Storage.News — ABB acquires Gamesa Electric's power electronics division (utility PV inverters, BESS PCS and wind converters; Madrid and Valencia factories)",
+   "url": "https://www.energy-storage.news/abb-acquires-gamesa-electric-power-electronics-division-for-undisclosed-sum/",
+   "date": "2025-12-03"
+  },
+  {
+   "label": "Power Electronics — All Energy Australia 2025: over 8 GW deployed, 5 GW commissioned in twelve months",
+   "url": "https://power-electronics.com/en/blog/2025/all-energy",
+   "date": "2025-10-29"
+  },
+  {
+   "label": "Power Electronics — GEN 3 Plus launched at RE+ 2025: above 5 MW power density, to be manufactured in the United States",
+   "url": "https://power-electronics.com/en/blog/2025/replus-2025",
+   "date": "2025-08-18"
+  },
+  {
+   "label": "Wood Mackenzie — global PV inverter shipments grew 10% in 2024 to 589 GWac; the CY2024 edition does not mention Power Electronics and notes a slow year for US central inverters",
+   "url": "https://www.woodmac.com/press-releases/global-pv-inverter-shipments-grew-by-10-in-2024-to-589-gwac/",
+   "date": "2025-07-10"
+  },
+  {
+   "label": "Valencia Plaza — Power Electronics holds revenue at €1.091bn in 2024 but nets €146.6m, up 7.4% (Registro Mercantil filings)",
+   "url": "https://valenciaplaza.com/valenciaplaza/empresas1/power-electronics-mantiene-su-facturacion-en-1091-millones-pero-gana-1466-millones-un-74-mas",
+   "date": "2025-07-01"
+  },
+  {
+   "label": "Power Electronics — Milence MCS megawatt charging at Landvetter, Sweden",
+   "url": "https://power-electronics.com/en/blog/2025/mcs-milence-landvetter",
+   "date": "2025-06-01"
+  },
+  {
+   "label": "Power Electronics — University of Valencia joint chair for renewable-energy talent",
+   "url": "https://power-electronics.com/en/blog/2025/catedra-2025",
+   "date": "2025-03-01"
+  },
+  {
+   "label": "Valencia Plaza — Power Electronics would move 60% of Llíria production to the US if tariffs land: Lalo Salvo, VP of Technical Operations, on accelerating the Houston plant",
+   "url": "https://valenciaplaza.com/valenciaplaza/empresas1/power-electronics-estudia-llevarse-a-eeuu-el-60-de-su-produccion-en-lliria-si-trump-pone-aranceles",
+   "date": "2025-01-29"
+  },
+  {
+   "label": "Mortenson — Canyon Country Energy Storage Facility project page: 'BYD battery enclosures' with 'PE Power conversion systems (PCS)', 80 MW / 320 MWh, Santa Clarita, completed November 2024",
+   "url": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
+   "date": "2024-11-01"
+  },
+  {
+   "label": "Power Electronics — All Energy Australia 2024: 36 GW Oceania forecast, 2,800 m² warehouse, 45+ technicians (Ander García)",
+   "url": "https://www.power-electronics.com/en/blog/2024/all-energy-australia-2024",
+   "date": "2024-10-17"
+  },
+  {
+   "label": "Solar Power World — inverter manufacturers highlight higher domestic content at RE+ 2024; Power Electronics gives no domestic-content percentage where Enphase and SolarEdge do",
+   "url": "https://www.solarpowerworldonline.com/2024/09/inverter-manufacturers-highlight-higher-domestic-content-at-re-2024/",
+   "date": "2024-09-11"
+  },
+  {
+   "label": "Power Electronics — RE+ 2024: over a decade in the US, 45-acre facility announced",
+   "url": "https://power-electronics.com/en/blog/2024/re-plus",
+   "date": "2024-08-22"
+  },
+  {
+   "label": "Wood Mackenzie — global PV inverter shipments grew 56% in 2023 to 536 GWac: 'The US market was led by central inverter manufacturers Sungrow and Power Electronics'. The only independent statement of US leadership in the public record",
+   "url": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/",
+   "date": "2024-08-06"
+  },
+  {
+   "label": "pv-magazine — Power Electronics plans a 20 GW inverter factory in the US (sourced to a company spokesperson, including an unverified seventh-place 2022 global shipment ranking)",
+   "url": "https://www.pv-magazine.com/2024/03/13/power-electronics-plans-20-gw-inverter-factory-in-us/",
+   "date": "2024-03-13"
+  },
+  {
+   "label": "Power Electronics — FY2023 results: revenue above $1.2bn (+75%), EBITDA $228m, Mobility $110m, 2024-2027 capex plan above $330m",
+   "url": "https://power-electronics.com/en/blog/2024/cierre-ejercicio-2023",
+   "date": "2024-03-07"
+  },
+  {
+   "label": "Valencia Plaza — the American dream of Power Electronics: 70% of the business in the US behind a $300m plant, with Llíria refocused on Europe",
+   "url": "https://valenciaplaza.com/valenciaplaza/el-sueno-americano-de-power-electronics-70-del-negocio-en-eeuu-con-una-planta-de-300-millones",
+   "date": "2024-01-31"
+  },
+  {
+   "label": "Power Electronics — Intersolar North America 2024: 1,800+ GEN 3 units commissioned in the US, service network across 49 states (Ron Puryear, President, Power Electronics USA)",
+   "url": "https://www.power-electronics.com/en/blog/2024/intersolar-north-america",
+   "date": "2024-01-12"
+  },
+  {
+   "label": "Solar Power World — IRA-fuelled domestic solar inverter manufacturing takes off: a Houston factory shipping HEM and PCSM from mid-2025, 5 GW initial ramping to 20 GW",
+   "url": "https://www.solarpowerworldonline.com/2023/10/ira-fueled-domestic-solar-inverter-manufacturing-takes-off/",
+   "date": "2023-10-23"
+  },
+  {
+   "label": "Energy-Storage.News — Hitachi Energy buys PCS and inverter maker EKS Energy from Powin, closing a portfolio gap",
+   "url": "https://www.energy-storage.news/hitachi-energy-buys-pcs-and-inverter-maker-eks-energy-from-powin/",
+   "date": "2023-10-01"
+  },
+  {
+   "label": "Power Electronics — over $300m US investment announced at RE+: 45 acres, 20+ GW US manufacturing capacity by 2026, 600+ jobs",
+   "url": "https://power-electronics.com/en/blog/2023/power-electronics-announces-investment-at-re-plus",
+   "date": "2023-09-19"
+  },
+  {
+   "label": "Power Electronics — route electrification in the United States: 500+ charging stations across the Americas",
+   "url": "https://power-electronics.com/en/blog/2023/electrificacion-de-rutas-una-solucion-clave-para-reducir-las-emisiones-de-gases-de-efecto-invernadero-en-estados-unidos",
+   "date": "2023-06-01"
+  },
+  {
+   "label": "PR Newswire — X-ELIO launches a 60 MW battery storage project in Liberty County, Texas, naming Saft and Power Electronics without stating either role, while Saft separately states it delivers 17 power conversion systems",
+   "url": "https://www.prnewswire.com/news-releases/x-elio-launches-60mw-battery-energy-storage-system-project-in-liberty-county-texas-usa-301753665.html",
+   "date": "2023-02-23",
+   "party": "independent"
+  },
+  {
+   "label": "Energy-Storage.News — PCS is a small portion of cost but of high value to storage integrators: about 15% of project cost and a disproportionate share of commissioning and operating problems, the stated rationale for integrators absorbing PCS",
+   "url": "https://www.energy-storage.news/pcs-is-a-small-portion-of-cost-but-of-high-value-to-battery-storage-system-integrators/",
+   "date": "2022-09-26"
+  },
+  {
+   "label": "Energy-Storage.News — Trina Storage and Power Electronics letter of intent targeting over 1 GWh of BESS deployments integrating PCSK inverters, in Europe",
+   "url": "https://www.energy-storage.news/trina-storage-power-electronics-partnership-targets-1gwh-bess-deployments-by-end-of-next-year/",
+   "date": "2022-05-20"
+  },
+  {
+   "label": "PR Newswire — Power Electronics leads the energy storage market with a presence in more than 150 worldwide megaprojects: every leadership claim, no analyst citation",
+   "url": "https://www.prnewswire.com/news-releases/power-electronics-leads-the-energy-storage-market-with-a-presence-in-more-than-150-worldwide-megaprojects-301351107.html",
+   "date": "2021-08-26"
+  },
+  {
+   "label": "pv-magazine press-release channel — Power Electronics led the global energy storage inverter market in 2019, citing the IHS Markit Energy Storage Inverter Report 2020; the accompanying US claim carries no source",
+   "url": "https://www.pv-magazine.com/press-releases/power-electronics-led-the-global-energy-storage-inverter-market-in-2019/",
+   "date": "2020-10-15",
+   "party": "disclosure"
+  },
+  {
+   "label": "Valencia Plaza — obituary of founder Abelardo Salvo: the Ceyn origin, the 1987 succession and the three sons",
+   "url": "https://valenciaplaza.com/fallece-abelardo-salvo-fundador-y-presidente-de-power-electronics",
+   "date": "2018-11-15"
+  },
+  {
+   "label": "Power Electronics — About us",
+   "url": "https://power-electronics.com/en/about"
+  },
+  {
+   "label": "Power Electronics — Contact: all 22 offices and addresses, including the US address of record in Houston, Texas",
+   "url": "https://power-electronics.com/en/contact"
+  },
+  {
+   "label": "Power Electronics — Campus: Llíria buildings plus the Higueruelas, Tampa, Gilbert and Houston sites",
+   "url": "https://power-electronics.com/en/campus"
+  },
+  {
+   "label": "Power Electronics — Certificates: ISO 9001, 14001, 45001, 27001, IATF 16949 and the GHG Protocol opinion",
+   "url": "https://power-electronics.com/en/certificates"
+  },
+  {
+   "label": "Power Electronics — PCSM and Multi PCSM product page",
+   "url": "https://power-electronics.com/en/storage/pcsm-&-multi-pcsm"
+  },
+  {
+   "label": "Power Electronics — PCSK and Multi PCSK product page",
+   "url": "https://power-electronics.com/en/storage/pcsk-&-multi-pcsk"
+  },
+  {
+   "label": "Power Electronics — DC/DC converter product page",
+   "url": "https://power-electronics.com/en/storage/dc-dc"
+  },
+  {
+   "label": "Power Electronics — MV Skid Compact and Twin Skid Compact product page",
+   "url": "https://power-electronics.com/en/storage/mv-skid-compact"
+  },
+  {
+   "label": "Power Electronics — PPC PRO power plant controller product page",
+   "url": "https://power-electronics.com/en/storage/ppc-pro"
+  },
+  {
+   "label": "Power Electronics — HEM solar inverter product page",
+   "url": "https://power-electronics.com/en/solar/hem"
+  },
+  {
+   "label": "Power Electronics — HEMK solar inverter product page",
+   "url": "https://power-electronics.com/en/solar/hemk"
+  },
+  {
+   "label": "Power Electronics — AIPCS 800 V data-centre power supply product page",
+   "url": "https://power-electronics.com/en/data-centers/aipcs"
+  },
+  {
+   "label": "Power Electronics — Data Centers landing page and product set",
+   "url": "https://power-electronics.com/en/data-centers"
+  },
+  {
+   "label": "Power Electronics — Mobility (EV charging) product family",
+   "url": "https://power-electronics.com/en/mobility"
+  },
+  {
+   "label": "Power Electronics — Drives product family",
+   "url": "https://power-electronics.com/en/drives"
+  },
+  {
+   "label": "Power Electronics — Power On Support: 25-year spare parts, 24/7 service, dedicated legacy factory",
+   "url": "https://power-electronics.com/en/services"
+  },
+  {
+   "label": "Power Electronics — Freemaq PCSK 690 V datasheet, model FP5020K (v2.0.1)",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/storage/datasheets/EN/PowerElectronics-DS-PCSK-2.0.0-690V-GEN3-EN.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — Freemaq Multi PCSK 690 V datasheet, models FP5020K2/K4 (v2.0.2), stating grid forming (VISMA) and black start as Standard",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/storage/datasheets/EN/PowerElectronics-DS-MULTIPCSK-2.0.0-690V-GEN3-EN.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — MV Skid Compact storage datasheet (v2.0.0 GEN3)",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/storage/datasheets/EN/PowerElectronics-DS-MV-SKID-STORAGE-2.0.0-GEN3-EN.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — DC/DC converter datasheet, model FD1200R (v1.1.1)",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/storage/datasheets/EN/PowerElectronics-DS-DCDC-1.1.1-EN.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — HEM UL solar inverter datasheet (v2.0.0 GEN3)",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/solar/datasheets/EN/PowerElectronics-DS-HEM-UL-2.0.0-GEN3-EN.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — HEM IEC solar inverter datasheet (v2.0.0 GEN3)",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/solar/datasheets/EN/PowerElectronics-DS-HEM-IEC-2.0.0-GEN3-EN.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — HEMK solar inverter datasheet (v2.0.0 GEN3)",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/solar/datasheets/EN/PowerElectronics-DS-HEMK-2.0.0-GEN3-EN.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — Storage brochure: '#1 World Storage Leader', iCOOL 4, BPC/HPC PRO, BCI, full model reference list and the January 2027 overload footnote",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/storage/brochures/storage_brochure_en.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — Solar brochure: 13,000+ inverters sold, 2,800+ solar projects, 22 subsidiaries",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/solar/brochures/solar_brochure_en.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — Data Centers brochure: 45 GW annual capacity, 3,100 projects, 36 countries, the 'FEOC-free manufactured solutions' claim and the ISO/RTO storage-integration map",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/data-centers/data-center_brochure_en.pdf",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — group certificates archive, including the TÜV Rheinland ISO 9001 annex listing every legal entity and certified site",
+   "url": "https://bucket-software00.s3.eu-west-1.amazonaws.com/web-power-electronics/media/files/certificates/Certificates%20Power%20Electronics%202.zip",
+   "party": "company"
+  },
+  {
+   "label": "Power Electronics — English sitemap (143 URLs), the evidence base for the absence of any leadership or board page",
+   "url": "https://power-electronics.com/sitemap-0.xml"
+  },
+  {
+   "label": "Empresia — Power Electronics España, S.L. registry record: sole shareholder and sole administrator Power Electronics Internacional, S.L.; auditor Ernst & Young; subsidiary Villars Storage Renewables",
+   "url": "https://www.empresia.es/empresa/power-electronics-espana/"
+  },
+  {
+   "label": "eInforma — Power Electronics Internacional, S.L. (B97046361): the holding company above the operating entity, administered by the corporate vehicles Tucbros Management, Saguaro Capital Investments and Entreatment Projects Corporation",
+   "url": "https://www.einforma.com/informacion-empresa/power-electronics-internacional"
+  },
+  {
+   "label": "Power Technology — Edwards & Sanborn solar and storage project profile, whose supplier list names modules, batteries, EPC, SCADA and metering but no inverter or PCS vendor",
+   "url": "https://www.power-technology.com/projects/edwards-sanborn-solar-and-energy-storage-project-california-usa/"
+  },
+  {
+   "label": "Power Electronics NZ — About us. A LOCALLY OWNED New Zealand supplier, not a group subsidiary: source of the 'privately owned... family owned business' statement, the three-factory / 120,000 m² / 30 GW capacity figures, and the statement that Sinexcel designs and manufactures ITS power-quality range",
+   "url": "https://www.power-electronics.co.nz/about-us/",
+   "party": "independent"
+  },
+  {
+   "label": "Terra-Gen — Canyon Country project page: 80 MW, COD 2024, naming no equipment supplier",
+   "url": "https://terra-gen.com/canyon-country/"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

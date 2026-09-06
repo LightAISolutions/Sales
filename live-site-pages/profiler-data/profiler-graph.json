@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-06",
- "companies": 142,
+ "companies": 143,
  "edges": [
   {
    "a": "abb",
@@ -626,6 +626,45 @@
     }
    ],
    "last": "2006-08-07"
+  },
+  {
+   "a": "abb",
+   "b": "power-electronics",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Re-entered utility-scale conversion by buying a Spanish peer with factories in the same country.",
+     "context": "ABB acquired the power electronics division of Gamesa Electric in December 2025 — utility-scale photovoltaic inverters, battery power conversion systems and wind converters, with factories in Madrid and Valencia plus operations in the United States, India, China and Australia. ABB had exited utility-scale solar inverters when it sold that business to FIMER in 2020, so this is a re-entry.\n\nThe competitive significance is specific rather than general. Gamesa Electric is a Spanish conversion manufacturer in the same country as this company, and its absorption places a direct domestic peer inside a tier-one global electrical original-equipment manufacturer with an established US industrial footprint and balance sheet. That leaves this company as one of very few significant conversion suppliers that is neither vertically integrated into cells nor owned by a large electrical group — which is either its differentiation or its exposure, and the public record does not settle which.",
+     "source": "https://www.energy-storage.news/abb-acquires-gamesa-electric-power-electronics-division-for-undisclosed-sum/",
+     "status": "active",
+     "since": "2025-12",
+     "via": "Gamesa Electric"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Four independent conversion businesses have been absorbed in that period: EKS Energy by Hitachi Energy in 2023, Dynapower by Sensata in 2022, Gamesa Electric by ABB in 2025 and EPC Power by Flex in September 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AIPCS — medium-voltage to 800 VDC data-centre power supply",
+     "date": "",
+     "text": "The company's entry into a market the corpus covers heavily from the rack side (Delta, LITEON, Vertiv, Megmeet) and the medium-voltage side (ABB, Powell, Schneider).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-03",
+     "text": "ABB acquires the power electronics division of Gamesa Electric, with factories in Madrid and Valencia — A direct Spanish peer absorbed into a tier-one electrical group, and ABB's re-entry into utility-scale conversion five years after selling that business to FIMER.",
+     "src": "https://www.energy-storage.news/abb-acquires-gamesa-electric-power-electronics-division-for-undisclosed-sum/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-03"
   },
   {
    "a": "abb",
@@ -8633,7 +8672,7 @@
     {
      "where": "Recent Reporting",
      "date": "2024-11-01",
-     "text": "Canyon Country (80 MW/320 MWh, Santa Clarita) completed — BYD battery enclosures + Power Electronics PCS, Mortenson EPC — The last documented Chinese-container installation — proof the pre-pivot playbook ran right up to the LG signing.",
+     "text": "Canyon Country (80 MW/320 MWh, Santa Clarita) completed — BYD battery enclosures + Power Electronics PCS, Mortenson EPC — The last documented Chinese-container installation — proof the pre-pivot playbook ran right up to the LG signing. Note the provenance of the conversion attribution: Mortenson's project page, the only source naming any equipment vendor here, writes 'PE power conversion systems (PCS)' and never spells the name out. 'PE' is Power Electronics' own mark, so the expansion is sound, but Terra-Gen's own Canyon Country page names no supplier and no independent source confirms one.",
      "src": "Mortenson project page",
      "from": "b"
     }
@@ -14590,6 +14629,20 @@
   },
   {
    "a": "delta-electronics",
+   "b": "power-electronics",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Founded 1971 by Bruce Cheng; chairman/CEO Ping Cheng; four segments (Power Electronics, Infrastructure, Automation, Mobility) with Power Electronics + Infrastructure now 87% of sales.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "delta-electronics",
    "b": "vertiv",
    "curated": {
     "a": {
@@ -20291,6 +20344,32 @@
   },
   {
    "a": "flex",
+   "b": "power-electronics",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Bought its way into utility-scale power conversion in September 2026, at a price that reprices the category.",
+     "context": "On 3 September 2026 Flex agreed to acquire EPC Power, a San Diego power-conversion manufacturer, for US$4.4bn, closing expected in the fourth quarter of 2026. EPC Power is expected to generate about US$800m of calendar-2026 revenue at roughly 30% EBITDA margins in 2027, from a South Carolina plant with 27 GW of nameplate capacity scalable to 40 GW.\n\nThis is the most consequential competitive event in the segment and it bears directly on how this company should be described. EPC Power is a US-domiciled conversion pure-play whose single-product revenue is roughly two thirds of this company's entire group revenue across solar, storage, electric-vehicle charging and industrial drives — and its capacity is American, which under the FCC's foreign-produced-inverter regime is the decisive attribute. Any characterisation of this company as the leading US utility-scale conversion specialist has to contend with that.\n\nThe acquisition also continues a pattern: EKS Energy to Hitachi Energy in 2023, Dynapower to Sensata in 2022, Gamesa Electric to ABB in 2025, and now EPC Power to Flex. Independent conversion businesses have repeatedly been worth more inside an integrator or a large electrical original-equipment manufacturer than as standalone product lines.",
+     "source": "https://www.energy-storage.news/goldman-sachs-alternatives-cleanhill-partners-sell-pcs-manufacturer-epc-power-for-us4-4-billion/",
+     "status": "announced",
+     "since": "2026-09",
+     "scale": "US$4.4bn acquisition of EPC Power",
+     "via": "EPC Power"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Four independent conversion businesses have been absorbed in that period: EKS Energy by Hitachi Energy in 2023, Dynapower by Sensata in 2022, Gamesa Electric by ABB in 2025 and EPC Power by Flex in September 2026.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09"
+  },
+  {
+   "a": "flex",
    "b": "schneider-electric",
    "curated": {
     "a": {
@@ -20897,6 +20976,20 @@
     }
    ],
    "last": "2026-06-02"
+  },
+  {
+   "a": "fluence",
+   "b": "power-electronics",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The corpus has taught the power conversion system almost entirely from the integrator's side — Sungrow, Fluence, Tesla and Canadian Solar sell it inside a battery, and Sinexcel sells a modular version around them.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "fluence",
@@ -24757,6 +24850,31 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "hitachi-energy",
+   "b": "power-electronics",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Absorbed the Spanish conversion maker EKS Energy in 2023, the first of the four acquisitions that consolidated this segment.",
+     "context": "Hitachi Energy bought EKS Energy, a Seville-based power conversion and inverter manufacturer, from Powin in October 2023, describing the purchase as closing a gap in its portfolio; EKS had delivered more than 10 GW across 350-plus storage and renewables references.\n\nThe transaction is also the clearest published statement of why standalone conversion businesses keep being absorbed. The trade coverage around it restates the industry's own arithmetic: the conversion system is roughly 15% of a battery project's cost but accounts for a disproportionate share of commissioning and operating problems, which is the reason integrators have given for wanting to own it rather than buy it. That logic is the central commercial risk to a company whose whole business is selling conversion hardware to those same integrators.",
+     "source": "https://www.energy-storage.news/hitachi-energy-buys-pcs-and-inverter-maker-eks-energy-from-powin/",
+     "status": "active",
+     "since": "2023-10",
+     "via": "EKS Energy"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Four independent conversion businesses have been absorbed in that period: EKS Energy by Hitachi Energy in 2023, Dynapower by Sensata in 2022, Gamesa Electric by ABB in 2025 and EPC Power by Flex in September 2026.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023-10"
   },
   {
    "a": "hitachi-energy",
@@ -29335,6 +29453,20 @@
   },
   {
    "a": "liteon",
+   "b": "power-electronics",
+   "evid": [
+    {
+     "where": "Capabilities · AIPCS — medium-voltage to 800 VDC data-centre power supply",
+     "date": "",
+     "text": "The company's entry into a market the corpus covers heavily from the rack side (Delta, LITEON, Vertiv, Megmeet) and the medium-voltage side (ABB, Powell, Schneider).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "liteon",
    "b": "vertiv",
    "evid": [
     {
@@ -30244,6 +30376,20 @@
     }
    ],
    "last": "2026-05-29"
+  },
+  {
+   "a": "megmeet",
+   "b": "power-electronics",
+   "evid": [
+    {
+     "where": "Capabilities · AIPCS — medium-voltage to 800 VDC data-centre power supply",
+     "date": "",
+     "text": "The company's entry into a market the corpus covers heavily from the rack side (Delta, LITEON, Vertiv, Megmeet) and the medium-voltage side (ABB, Powell, Schneider).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "megmeet",
@@ -33207,6 +33353,21 @@
   },
   {
    "a": "mortenson",
+   "b": "power-electronics",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "The contractor that integrated this company's conversion equipment at Canyon Country and the only party to have published the attribution.",
+     "context": "Mortenson was the engineering, procurement and construction contractor on Terra-Gen's Canyon Country Energy Storage Facility, and its project page is the sole published record pairing BYD enclosures with this company's power conversion systems on that job.\n\nThe link is recorded as a partnership rather than a purchase because the source establishes co-participation on one completed project and nothing more: it does not say who contracted with whom, and neither party has published a framework, preferred-supplier or repeat-work arrangement. Mortenson is also the contractor on Terra-Gen's much larger Edwards & Sanborn project, but that project's published supplier list names modules, batteries, contractor, SCADA and metering and no inverter or conversion vendor at all — so no equipment link may be inferred there.",
+     "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
+     "since": "2024"
+    }
+   },
+   "evid": [],
+   "last": "2024"
+  },
+  {
+   "a": "mortenson",
    "b": "primoris",
    "curated": {
     "a": {
@@ -33373,7 +33534,7 @@
     {
      "where": "Recent Reporting",
      "date": "2024-11-01",
-     "text": "Canyon Country (80 MW/320 MWh, Santa Clarita) completed — BYD battery enclosures + Power Electronics PCS, Mortenson EPC — The last documented Chinese-container installation — proof the pre-pivot playbook ran right up to the LG signing.",
+     "text": "Canyon Country (80 MW/320 MWh, Santa Clarita) completed — BYD battery enclosures + Power Electronics PCS, Mortenson EPC — The last documented Chinese-container installation — proof the pre-pivot playbook ran right up to the LG signing. Note the provenance of the conversion attribution: Mortenson's project page, the only source naming any equipment vendor here, writes 'PE power conversion systems (PCS)' and never spells the name out. 'PE' is Power Electronics' own mark, so the expansion is sound, but Terra-Gen's own Canyon Country page names no supplier and no independent source confirms one.",
      "src": "Mortenson project page",
      "from": "b"
     }
@@ -37012,6 +37173,218 @@
    "last": ""
   },
   {
+   "a": "power-electronics",
+   "b": "sinexcel",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The corpus's other third-party conversion specialist — a closer structural peer than either dossier had recognised.",
+     "context": "Both companies sell power conversion hardware to battery integrators and developers rather than turnkey battery systems, which makes them the same kind of business rather than opposite kinds. Sinexcel differentiates on modular, module-parallel architecture at the smaller end and on power-quality products; this company differentiates on scale, on integrating the medium-voltage transformer and switchgear into the inverter enclosure, and on a service estate spanning 49 US states with a twenty-five-year spare-parts guarantee.\n\nOne correction to the record, made this session. Sinexcel's dossier grouped this company with Sungrow and SMA as 'integrated-inverter giants' whose model Sinexcel sells around 'rather than competing with them on full BESS supply'. That is right about Sungrow and wrong about this company: it manufactures no cells and sells no turnkey battery system, which is precisely why Wood Mackenzie's storage integrator ranking — whose stated scope is factory-assembled AC-integrated systems — cannot include it. The architectural contrast between integrated medium-voltage central conversion and modular low-voltage conversion is real; the business-model contrast asserted alongside it was not.\n\nA second point of care. The New Zealand company trading as Power Electronics NZ describes itself as locally owned and states that Sinexcel designs and manufactures its power-quality range. That is a supply relationship of that New Zealand distributor, not of this manufacturer, and no supplier link between the two companies is asserted here on that basis.",
+     "source": "Dossier competitive assessment — third-party storage PCS",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The larger third-party conversion specialist — a structural peer rather than an integrated-inverter giant.",
+     "context": "Both companies sell power conversion hardware to battery integrators and developers rather than turnkey battery systems, which makes them the same kind of business at different scales. Sinexcel differentiates on modular, module-parallel low-voltage architecture and on power-quality products; Power Electronics differentiates on scale, on integrating the medium-voltage transformer and switchgear into the inverter enclosure, and on a service estate spanning 49 US states behind a twenty-five-year spare-parts guarantee.\n\nThis dossier previously grouped Power Electronics with Sungrow and SMA as 'integrated-inverter giants' whose model Sinexcel sells around 'rather than competing with them on full BESS supply'. That was right about Sungrow and wrong about Power Electronics, which manufactures no cells and sells no turnkey system; the wording was corrected this session when the Power Electronics dossier was written.\n\nSeparately, the New Zealand company trading as Power Electronics NZ describes itself as locally owned and states that Sinexcel designs and manufactures its power-quality range. That is a supply relationship of that distributor, not of the Spanish manufacturer, and no supplier link between the two companies is asserted on that basis.",
+     "source": "Dossier competitive assessment — third-party storage PCS",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The corpus has taught the power conversion system almost entirely from the integrator's side — Sungrow, Fluence, Tesla and Canadian Solar sell it inside a battery, and Sinexcel sells a modular version around them.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy storage PCS & containerized systems",
+     "date": "",
+     "text": "Competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy storage PCS & containerized systems",
+     "date": "",
+     "text": "The grouping is architectural rather than commercial: Sungrow does sell full BESS, but SMA and Power Electronics sell conversion hardware only — Power Electronics manufactures no cells and no turnkey system, which is why Wood Mackenzie's storage integrator ranking, scoped to factory-assembled AC-integrated systems, cannot contain it.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "power-electronics",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The one company an independent analyst has ever named alongside this one at the top of a US inverter market.",
+     "context": "Wood Mackenzie's August 2024 shipment release, covering calendar 2023, states that 'the US market was led by central inverter manufacturers Sungrow and Power Electronics'. That single sentence is the only independent statement of US leadership in this company's public record, and it is narrower than it is usually reported to be: it concerns solar central inverters rather than storage power conversion, it is a joint mention rather than a ranking, it carries no share or megawatt figure, and Wood Mackenzie's equivalent release for calendar 2024 does not mention this company at all.\n\nThe two firms are not symmetrically placed. Sungrow ranks second globally in Wood Mackenzie's H1 2025 inverter scorecard and first in its 2026 storage integrator ranking, sells turnkey battery systems as well as conversion hardware, and is identified by PV Tech as the largest single importer of photovoltaic inverters into the United States — which makes it the vendor most exposed to the FCC's foreign-produced-inverter regime, and this company's clearest opportunity if that regime bites as expected.\n\nThe existing Sungrow dossier's description of this company as a maker of conventional central inverters is accurate and is independently corroborated by the Wood Mackenzie wording above.",
+     "source": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other central-inverter manufacturer Wood Mackenzie named as leading the US market in 2023.",
+     "context": "Wood Mackenzie's August 2024 shipment release, covering calendar 2023, states that 'the US market was led by central inverter manufacturers Sungrow and Power Electronics' — the two companies named together, in solar central inverters specifically. This dossier's existing description of Power Electronics among conventional central-inverter competitors is accurate and is corroborated by that wording; it was checked this session and left unchanged.\n\nThe two are not symmetrically placed. Sungrow ranks second globally in Wood Mackenzie's H1 2025 inverter scorecard and first in its 2026 storage integrator ranking, and sells turnkey battery systems as well as conversion hardware. Power Electronics sells conversion hardware only — no cells, no turnkey system — which is why the integrator ranking's stated scope of factory-assembled AC-integrated systems cannot include it. Sungrow's greater exposure is regulatory: PV Tech identifies it as the largest single importer of photovoltaic inverters into the United States, at the moment the FCC's Covered List began barring foreign-produced inverters.",
+     "source": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The corpus has taught the power conversion system almost entirely from the integrator's side — Sungrow, Fluence, Tesla and Canadian Solar sell it inside a battery, and Sinexcel sells a modular version around them.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: '#1 World Storage Leader' and '#1 manufacturer of solar inverters in America, Oceania and Europe' appear in company brochures with no analyst citation; the company names no competitor in any published document; the only storage-specific ranking in existence dates to 2019, was published by IHS Markit, reached the public record through the company's own press release on a trade site's press-release channel, and has no successor edition; and the sole independent US statement is Wood Mackenzie's calendar-2023 sentence naming the company jointly with Sungrow in solar central inverters, which the calendar-2024 edition did not repeat.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-08-06",
+     "text": "Wood Mackenzie states that the US market was led by central inverter manufacturers Sungrow and Power Electronics in calendar 2023 — The only independent statement of US leadership anywhere in this company's record — solar central inverters, a joint mention, unquantified, and not repeated in the following year's edition.",
+     "src": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · '1+X' modular inverters (utility central-class)",
+     "date": "",
+     "text": "Bridges the string-vs-central trade-off: central-class economics with module-level serviceability — competing against conventional central inverters (SMA, TMEIC, Power Electronics) and large string fleets in utility tenders",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-08-06"
+  },
+  {
+   "a": "power-electronics",
+   "b": "terra-gen",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "The only US project in the public record where a third party attributes the power conversion system to this company.",
+     "context": "Terra-Gen's Canyon Country Energy Storage Facility in Santa Clarita, California — 80 MW / 320 MWh on a 3.2-acre urban site, completed November 2024 and contracted to Pacific Gas and Electric — was built with BYD battery enclosures paired with this company's power conversion systems.\n\nThe attribution needs its provenance stated. It rests on a single source: the project page of Mortenson, the engineering and construction contractor, which writes 'BYD battery enclosures paired with PE power conversion systems (PCS)'. Mortenson abbreviates the vendor to the two-letter mark and never spells it out. 'PE' is the company's own mark and appears that way on its own datasheet filenames, so the reading is sound, but it is a reading. Terra-Gen's own Canyon Country page names no equipment supplier at all, and no independent source names one either.\n\nNo other US project attributes conversion equipment to this company. An X-ELIO release for the Liberty 1 storage project in Liberty County, Texas names both Saft and Power Electronics without stating either role, while Saft separately states it is delivering seventeen power conversion systems — so that project cannot be counted as a conversion win on the published record.",
+     "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
+     "status": "active",
+     "since": "2024",
+     "scale": "80 MW / 320 MWh",
+     "via": "PE power conversion systems (PCS)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Supplied the power conversion systems at Canyon Country, on the single-source attribution described below.",
+     "context": "Canyon Country (80 MW / 320 MWh, Santa Clarita, completed November 2024) pairs BYD battery enclosures with power conversion systems attributed to Power Electronics, the Valencian manufacturer whose US arm sells utility-scale storage inverters.\n\nThe attribution rests entirely on Mortenson's project page, which writes 'BYD battery enclosures paired with PE power conversion systems (PCS)'. The contractor abbreviates the vendor to a two-letter mark that it never expands. 'PE' is Power Electronics' own mark and appears that way on the company's datasheet filenames, so the reading is sound — but Terra-Gen's own project page names no equipment supplier at all, and no independent source names one either. Recorded here with that limitation stated rather than silently upgraded to a confirmed supply relationship.\n\nThis is the only US project in the public record attributing conversion equipment to that company.",
+     "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
+     "status": "active",
+     "since": "2024",
+     "scale": "80 MW / 320 MWh",
+     "via": "PE power conversion systems (PCS)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Standalone BESS fleet (CAISO) + NY development",
+     "date": "",
+     "text": "Tehachapi ES (77 MW, 2020 — first TG BESS); Valley Center (139-140 MW/560 MWh, San Diego Co., COD Mar 2022, SDG&E 15-yr RA — LG NMC packs; ~100 packs decommissioned after a 2022 fault, separate contained fire Sep 2023); Sagebrush A (80 MW, 2022) + B (99 MW, 2024) sharing wind interconnection at Tehachapi; Lockhart ESS (45 MW); Lockhart CL I & II (128.7 MW/515 MWh, 164 enclosures, COD Jan 7, 2026, two long-term PG&E RA agreements); Beaumont (100 MW, 2024); Canyon Country (80 MW/320 MWh, Santa Clarita, Nov 2024 — BYD enclosures + Power Electronics PCS, Mortenson EPC).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-11-01",
+     "text": "Canyon Country (80 MW/320 MWh, Santa Clarita) completed — BYD battery enclosures + Power Electronics PCS, Mortenson EPC — The last documented Chinese-container installation — proof the pre-pivot playbook ran right up to the LG signing. Note the provenance of the conversion attribution: Mortenson's project page, the only source naming any equipment vendor here, writes 'PE power conversion systems (PCS)' and never spells the name out. 'PE' is Power Electronics' own mark, so the expansion is sound, but Terra-Gen's own Canyon Country page names no supplier and no independent source confirms one.",
+     "src": "Mortenson project page",
+     "from": "b"
+    }
+   ],
+   "last": "2024-11-01"
+  },
+  {
+   "a": "power-electronics",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The corpus has taught the power conversion system almost entirely from the integrator's side — Sungrow, Fluence, Tesla and Canadian Solar sell it inside a battery, and Sinexcel sells a modular version around them.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "power-electronics",
+   "b": "trina-storage",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Signed a 2022 letter of intent to integrate this company's PCSK inverters into more than 1 GWh of battery systems; no delivery was ever confirmed.",
+     "context": "Trina Storage and this company signed a letter of intent at Intersolar Europe in May 2022 targeting more than 1 GWh of battery storage deployments integrating PCSK inverters, with the stated geography being mainland Europe and a US launch described only as forthcoming.\n\nIt is recorded as historical because nothing published since confirms it converted. No follow-up announcement, delivery confirmation or named project has appeared from either party in the four years since, and the target date in the announcement — the end of 2023 — has long passed. It is included because it is the only integrator partnership either company has announced with the other, and because an unconverted letter of intent is itself evidence about how the third-party conversion channel performs against the vertical-integration trend described on the Hitachi Energy link.",
+     "source": "https://www.energy-storage.news/trina-storage-power-electronics-partnership-targets-1gwh-bess-deployments-by-end-of-next-year/",
+     "status": "historical",
+     "since": "2022-05",
+     "scale": "More than 1 GWh targeted",
+     "via": "PCSK"
+    }
+   },
+   "evid": [],
+   "last": "2022-05"
+  },
+  {
+   "a": "power-electronics",
+   "b": "vertiv",
+   "evid": [
+    {
+     "where": "Capabilities · AIPCS — medium-voltage to 800 VDC data-centre power supply",
+     "date": "",
+     "text": "The company's entry into a market the corpus covers heavily from the rack side (Delta, LITEON, Vertiv, Megmeet) and the medium-voltage side (ABB, Powell, Schneider).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "power-electronics",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Capabilities · Power-on-Package and Vertical Power Delivery — MCM/MCD ChiP-sets, GCM/GTM current multipliers, Gen 5 ChiPs and 2nd-Gen VPD",
+     "date": "",
+     "text": "VPD systems' (Q2 2026 release) — and its VP of strategic marketing argued in Power Electronics News (July 2026) that VPD is 'effectively unavoidable' by about 2029 while in-package integrated voltage regulators offer 'no opportunity for rework'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-16",
+     "text": "Power Electronics News interview: Vicor's VP of strategic marketing argues vertical power delivery is 'effectively unavoidable' by about 2029 and that in-package voltage regulators leave 'no opportunity for rework' — The company's public framing of the VPD-versus-IVR contest, in its own voice, ahead of ADI's Empower integration and MPS's Z-axis parts.",
+     "src": "https://www.powerelectronicsnews.com/power-corner-vicors-maury-wood-on-vertical-power-delivery-for-ai-data-centers/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-19",
+     "text": "NVIDIA's GTC 2026 800 VDC partner roster, as reported by Power Electronics News, again lists ADI, Infineon, MPS, Navitas, onsemi, Renesas, ROHM, ST and TI for silicon and Delta, LITEON, Eaton, Schneider and Vertiv for racks — Vicor is not named — Third published list without Vicor; its 800 V position rests on module sockets and patents rather than ecosystem membership.",
+     "src": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-16"
+  },
+  {
    "a": "powerhouse-data-centers",
    "b": "prime-data-centers",
    "curated": {
@@ -38312,7 +38685,7 @@
     "a": {
      "type": "competitor",
      "note": "Integrated-inverter giant Sinexcel's third-party modular-PCS model sells around.",
-     "context": "In storage PCS, Sinexcel competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers rather than full BESS supply — differentiating on module-parallel architecture, 1.5x/60s overload headroom, and European grid-code certification breadth.",
+     "context": "In storage PCS, Sinexcel competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers. Of the three named, only Sungrow sells full BESS; SMA and Power Electronics are conversion-only suppliers like Sinexcel itself, so the contrast with them is modular low-voltage against integrated medium-voltage architecture — differentiating on module-parallel architecture, 1.5x/60s overload headroom, and European grid-code certification breadth.",
      "source": "Dossier competitive assessment — storage PCS",
      "status": "active"
     },
@@ -38329,7 +38702,7 @@
     {
      "where": "Capabilities · Energy storage PCS & containerized systems",
      "date": "",
-     "text": "Competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers rather than competing with them on full BESS supply; differentiation claims are module-parallel architecture, overload headroom (1.5x/60 s), reliability (MTBF >300,000 h, key-component swap <1 h), and breadth of European grid-code certification (early Poland cohort).",
+     "text": "Competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers.",
      "src": "",
      "from": "a"
     },

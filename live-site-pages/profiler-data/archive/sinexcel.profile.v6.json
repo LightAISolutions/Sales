@@ -28,7 +28,7 @@
     "Entered Japan's frequency-regulation market June 2026 (2 MW/8 MWh Matsusaka project on two 1,375 kW PCS; 60+ Japanese utility-scale projects, 10+ local EMS integrations, Tokyo subsidiary)",
     "Grid-code certifications: EN 50549-2/-10, IEC/EN 62477, RfG+PTPIREE (among the first PCS certified for Poland), Finland SJV2024 (160 kW PCS), UL 1741/IEEE 1547 (Sirius 135K, March 2026); FY2025 overseas storage revenue RMB 645M, +50.1% YoY, at a 61.3% gross margin (aggregator figures)"
    ],
-   "positioning": "Competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers. The grouping is architectural rather than commercial: Sungrow does sell full BESS, but SMA and Power Electronics sell conversion hardware only — Power Electronics manufactures no cells and no turnkey system, which is why Wood Mackenzie's storage integrator ranking, scoped to factory-assembled AC-integrated systems, cannot contain it. The real contrast with those two is modular low-voltage against integrated medium-voltage central conversion, not third-party supply against full BESS supply; differentiation claims are module-parallel architecture, overload headroom (1.5x/60 s), reliability (MTBF >300,000 h, key-component swap <1 h), and breadth of European grid-code certification (early Poland cohort).",
+   "positioning": "Competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers rather than competing with them on full BESS supply; differentiation claims are module-parallel architecture, overload headroom (1.5x/60 s), reliability (MTBF >300,000 h, key-component swap <1 h), and breadth of European grid-code certification (early Poland cohort).",
    "soldThrough": "Direct to BESS integrators, developers, and EPCs; in Japan through local developers and EMS platforms (Namcha Barwa partnership, June 2026); in the US through Sinexcel Inc. (California)",
    "targetSegments": "Utility-scale BESS developers (Europe, Asia-Pacific, Africa, Japan), C&I storage integrators, wind/solar co-located storage (e.g. Latvia's largest wind-farm BESS on 1725 kW PCS), frequency-regulation and ancillary-services players",
    "roadmap": "Spain and US certifications of StellaON stated as 'coming soon' at the June 2026 launch; company active in drafting grid-forming energy-storage standards (2025 PR)"
@@ -256,16 +256,8 @@
    "slug": "sungrow",
    "type": "competitor",
    "note": "Integrated-inverter giant Sinexcel's third-party modular-PCS model sells around.",
-   "context": "In storage PCS, Sinexcel competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers. Of the three named, only Sungrow sells full BESS; SMA and Power Electronics are conversion-only suppliers like Sinexcel itself, so the contrast with them is modular low-voltage against integrated medium-voltage architecture — differentiating on module-parallel architecture, 1.5x/60s overload headroom, and European grid-code certification breadth.",
+   "context": "In storage PCS, Sinexcel competes as a third-party modular-PCS specialist against integrated-inverter giants (Sungrow, Power Electronics, SMA) by selling conversion hardware to battery integrators and developers rather than full BESS supply — differentiating on module-parallel architecture, 1.5x/60s overload headroom, and European grid-code certification breadth.",
    "source": "Dossier competitive assessment — storage PCS",
-   "status": "active"
-  },
-  {
-   "slug": "power-electronics",
-   "type": "competitor",
-   "note": "The larger third-party conversion specialist — a structural peer rather than an integrated-inverter giant.",
-   "context": "Both companies sell power conversion hardware to battery integrators and developers rather than turnkey battery systems, which makes them the same kind of business at different scales. Sinexcel differentiates on modular, module-parallel low-voltage architecture and on power-quality products; Power Electronics differentiates on scale, on integrating the medium-voltage transformer and switchgear into the inverter enclosure, and on a service estate spanning 49 US states behind a twenty-five-year spare-parts guarantee.\n\nThis dossier previously grouped Power Electronics with Sungrow and SMA as 'integrated-inverter giants' whose model Sinexcel sells around 'rather than competing with them on full BESS supply'. That was right about Sungrow and wrong about Power Electronics, which manufactures no cells and sells no turnkey system; the wording was corrected this session when the Power Electronics dossier was written.\n\nSeparately, the New Zealand company trading as Power Electronics NZ describes itself as locally owned and states that Sinexcel designs and manufactures its power-quality range. That is a supply relationship of that distributor, not of the Spanish manufacturer, and no supplier link between the two companies is asserted on that basis.",
-   "source": "Dossier competitive assessment — third-party storage PCS",
    "status": "active"
   }
  ],
@@ -906,11 +898,6 @@
  },
  "sources": [
   {
-   "label": "Wood Mackenzie — global BESS integrator ranking 2026, whose stated scope is factory-assembled AC-integrated systems bundling battery, PCS, BMS and controls",
-   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
-   "date": "2026-07-14"
-  },
-  {
    "label": "Sinexcel news — Japan frequency-regulation market entry (2026-07-13)",
    "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=411",
    "date": "2026-07-13"
@@ -1098,6 +1085,6 @@
    "url": "https://www.charin.global/news/sinexcel-becomes-a-core-member-of-charin-e-v/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

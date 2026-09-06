@@ -1860,6 +1860,23 @@
       "kpiNorm": true
     },
     {
+      "slug": "power-electronics",
+      "name": "Power Electronics",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The Spanish family-owned conversion specialist that earns ~70% of its €1.3bn revenue in the United States and builds almost all of it in Valencia — grid forming shipped as standard, and a Houston plant cut from a $300m 45-acre build to a rented ~20,000 m² since the FCC barred foreign-produced inverters.",
+      "hq": "Llíria, Valencia, Spain",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "power-electronics.com"
+      ],
+      "srcTotal": 85,
+      "srcFirstPct": 61,
+      "kpiNorm": true
+    },
+    {
       "slug": "powerhouse-data-centers",
       "name": "PowerHouse Data Centers",
       "categories": [
@@ -2183,12 +2200,12 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 300693",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "en.sinexcel.com"
       ],
-      "srcTotal": 42,
-      "srcFirstPct": 64,
+      "srcTotal": 43,
+      "srcFirstPct": 63,
       "kpiNorm": true
     },
     {
@@ -2297,13 +2314,13 @@
       "hq": "Hefei, China",
       "ticker": "SZSE: 300274",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "en.sungrowpower.com",
         "sungrowpower.com"
       ],
-      "srcTotal": 41,
-      "srcFirstPct": 49,
+      "srcTotal": 42,
+      "srcFirstPct": 48,
       "kpiNorm": true
     },
     {
@@ -2390,7 +2407,7 @@
       "tagline": "The FEOC pivot case study — world's largest single BESS site (E&S, 3.3 GWh on LG/Samsung/BYD) then an 8 GWh, ~$1.43B US-made LG Vertech lock through 2029; Masdar/Igneo-owned with a 1 GWh NY build ahead.",
       "hq": "San Diego, CA, US",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "terra-gen.com"
       ],

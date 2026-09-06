@@ -181,7 +181,7 @@
    "date": "2024-11-01",
    "category": "project",
    "headline": "Canyon Country (80 MW/320 MWh, Santa Clarita) completed — BYD battery enclosures + Power Electronics PCS, Mortenson EPC",
-   "read": "The last documented Chinese-container installation — proof the pre-pivot playbook ran right up to the LG signing. Note the provenance of the conversion attribution: Mortenson's project page, the only source naming any equipment vendor here, writes 'PE power conversion systems (PCS)' and never spells the name out. 'PE' is Power Electronics' own mark, so the expansion is sound, but Terra-Gen's own Canyon Country page names no supplier and no independent source confirms one.",
+   "read": "The last documented Chinese-container installation — proof the pre-pivot playbook ran right up to the LG signing.",
    "source": "Mortenson project page"
   },
   {
@@ -251,17 +251,6 @@
    "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
    "via": "full EPC",
    "status": "active"
-  },
-  {
-   "slug": "power-electronics",
-   "type": "supplier",
-   "note": "Supplied the power conversion systems at Canyon Country, on the single-source attribution described below.",
-   "context": "Canyon Country (80 MW / 320 MWh, Santa Clarita, completed November 2024) pairs BYD battery enclosures with power conversion systems attributed to Power Electronics, the Valencian manufacturer whose US arm sells utility-scale storage inverters.\n\nThe attribution rests entirely on Mortenson's project page, which writes 'BYD battery enclosures paired with PE power conversion systems (PCS)'. The contractor abbreviates the vendor to a two-letter mark that it never expands. 'PE' is Power Electronics' own mark and appears that way on the company's datasheet filenames, so the reading is sound — but Terra-Gen's own project page names no equipment supplier at all, and no independent source names one either. Recorded here with that limitation stated rather than silently upgraded to a confirmed supply relationship.\n\nThis is the only US project in the public record attributing conversion equipment to that company.",
-   "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
-   "status": "active",
-   "since": "2024",
-   "scale": "80 MW / 320 MWh",
-   "via": "PE power conversion systems (PCS)"
   }
  ],
  "policyExposure": [
@@ -428,6 +417,6 @@
    "url": "https://terra-gen.com/projects/energy-storage/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }
