@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-06 12:41 AM EST
+**Repo version:** v04.79r — one push commit this session (`98c464b`, merged to `main`), plus this housekeeping commit
+**Branch:** `claude/phase-c5-profiler-coverage-k4env1`
+**Model:** Opus 5 xhigh — Phase C session **C5**: ENGIE North America · AES Clean Energy · RWE Clean Energy (`developer · ipp` storage and renewables owners). **The first Phase C dossier session after the Phase B close.** Six research subagents (two per company), three dossiers, three study guides, three lesson plans, **nine** step-7 revisions, all in one push commit.
+
+### What was done
+
+- **Three schema v7 dossiers at profileVersion 1, intel-briefing style.** `engie-north-america` (60 sources, 58% first-party, 12 relationships) — largest ERCOT battery owner at ~2.8 GW / 20% share (Modo) and second in the US at 3.662 GW (S&P Global), on a fleet **bought** with Broad Reach Power in August 2023 for >$1bn equity value; a one-hour fleet (1.8 GWh against 1.8 GW) built for an ancillary market whose revenues then fell ~90%; three minority sell-downs in ten months (Ares 49% of 905 MW, CBRE IM 49.5% of 2.4 GW, Ares +730 MW) with NA capital employed falling EUR 808m; Meta >1.3 GW across four Texas projects; **no permanent CEO since 1 August 2026**. `aes-clean-energy` (56 sources, 45% first-party, 12 relationships, 11 headshots) — 10,961 MW operating, 46 GW pipeline, third US battery owner at 1.978 GW (42 MW ahead of Google-owned Intersect); Bellefield 1 GW + 1 GW four-hour for Amazon; Maximo sold as a service to competing EPCs; tax attributes $1,540m against $2,871m Adjusted EBITDA; **the parent's $33.4bn take-private by GIP and EQT, signed 1 Mar 2026 and approved 26 Jun 2026, after which guidance and earnings calls stopped**. `rwe-clean-energy` (60 sources, 57% first-party, 14 relationships, 3 headshots) — **renamed RWE Americas, LLC in March 2026**; EUR 17bn to 2031 and 13→22 GW announced the same quarter as fifteen gas peakers; a US$1.22bn Interior settlement relinquishing three offshore leases with $900m into Louisiana LNG, and a California notice of intent to sue RWE over it on 1 September 2026.
+- **Three schema v2 study guides + three lesson plans**, each a curriculum no existing guide covers: ENGIE = what a battery sells inside an hour (ancillary stack, duration as a dated design decision, capital recycling, three data-centre products, co-location as a generator's fix); AES = building a gigawatt (module and tracker mechanics, the labour-cost crossover, reading a construction robot as a service business, tax equity and transferability, the construction clock); RWE = what an interconnection is worth (repowering and capacity factor, safe harbour, co-located vs standalone, iron-air chemistry, simple-cycle peakers, reading a segment report that hides your country). **Six concepts registered** (928 total).
+- **Step 7 — nine dossiers revised and archived**, the largest tail any session has run. **Two carried contradicted claims**: `amazon` said "AES owns roughly 28% of Fluence" (corrected to 28.19% at FY2025 and **22%** after the May 2026 sell-down) and `fluence` described AES as "reportedly being taken private by GIP/BlackRock for ~$38B" in three places (corrected to the signed, stockholder-approved GIP+EQT deal at $15.00/share). Seven were accurate and gained curated edges: `qts`, `blattner`, `mccarthy`, `jupiter-power`, `hunt-energy-network`, `plus-power`, `meta`. `canadian-solar`'s ENGIE mention was **left alone** — no source establishes whether that entity is North American, and the gap is stated in the calibration log rather than guessed.
+- **Three `cadence: "quarterly"` calendar rows** (100 rows total), each with the unit-level rule cited and a Chesterton-check watch item; §5 C5 row rewritten with per-clause verdicts; §8 rows flipped; §7's CHANGELOG bullet refreshed 86/100 → 96/100; §7's X3 bullet extended; C5 entry added to the calibration log.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean, `98c464b` merged to `main`. **Program state: 50 of 65 new companies, 4 of 30 guide passes. Phases A and B complete; C1-C5 and C11 shipped.** The C6 paste-in prompt (Clearway Energy · Recurrent Energy · Form Energy, Opus 5 xhigh) was handed to the developer in this session's chat.
+
+- **Remaining, in §9.5 order:** C6 · C7 · C8 · C9 · C10 · C12 (Opus 5 xhigh), then the 26 guide backfills (6 sessions), then X3, then Phase D.
+- **CHANGELOG is 96/100 — four pushes of headroom.** Rotation now falls around **C8 or C9**, inside the Phase C dossier block, not in the guide backfill. §7's bullet is corrected to say so.
+
+### Key decisions and findings
+
+- **The `investor` edge the brief expected was declined, deliberately.** AES ↔ Fluence is typed `supplier`/`customer`, not `investor`, because `type` reads from the stating side and this dossier's subject is the US renewables unit, which buys from Fluence; the 22% stake sits at **The AES Corporation**, in a different SBU. Typing it `investor` would have mis-stated the unit's position to win a graph colour. Reasoning is written into the calibration log; the accept list stayed at **14**.
+- **Premise verdicts, C5: two of five clauses held, two failed, one split.** Failed — ENGIE's "5.6 GW of storage" matches no source, and RWE's "~931 MW under construction" is a stale 2 October 2024 company figure whose three Texas projects were all commissioned by end-2025. Held — "absorbed Broad Reach". Held with correction — "sold a 2.4 GW stake to CBRE IM" was a **49.5% minority interest** with control retained. Split — AES's hyperscaler ranking holds commercially but is company-sourced only, and its "(five dossiers)" parenthetical failed at eight hits / three substantive.
+- **A formatting trap worth inheriting: the corpus has MIXED JSON indentation.** Most dossiers are indent=1, but `amazon`, `fluence`, `hunt-energy-network`, `profiler-companies.json`, `profiler-concepts.json`, the archive index and the refresh calendar are indent=2, and trailing newlines vary. A writer forcing indent=1 produced a 27,000-line formatting diff, caught at the pre-stage `git diff --stat` review and fixed by re-serialising each file at its original indentation (`amazon` 1,057 → 17 lines; `profiler-concepts.json` 16,248 → 56).
+- **Peer family, from a third end:** these three are the first `developer · ipp` companies that are also **named PPA counterparties to the data-centre developers already in `Colocation & Cloud Capacity`**, so the family lights their own customers. It is behaving as a **market map** rather than a peer set — which is a real adjacency, not a sorting error. Recorded in §7 for X3; family map untouched.
+- **Calendar rows:** all three unit-level → `cadence: "quarterly"` per the rule, with the reasoning written into each `source` rather than left implicit. AES's row flags that the take-private will end the filing stream that dossier depends on.
+
+### Active context
+
+- Branch `claude/phase-c5-profiler-coverage-k4env1`; repo version **v04.79r**; CHANGELOG **96/100**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
+- Checker state at v04.79r: registry sync clean (0 of 139) · study 0/0 (113 guides, 928 concepts) · relationships exit 0 with **0 findings** (14 accepts) · crossrefs exit 0 (286 pairs, 0 new candidates, 20 scopes over the cap) · graph 1,050 edges (784 curated) · reports not run (X3's job).
+- Environment notes: `pip install playwright pillow` then `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; the Profiler hash route is `#<slug>`, not `#company/<slug>`; the study-guide button is role-gated, so render a guide with `ovFetchJson(slug+'.study.json').then(ovShowStudy)` in page context; `aescleanenergy.com` returns 520 and `us.rwe.com`/`rwecleanenergy.com` do not resolve.
+
+### Recommendation for next session
+
+- **Run Phase C session C6 on Opus 5 xhigh — Clearway Energy, Recurrent Energy, Form Energy (§8 rows at `—`/`—`; Clearway and Recurrent `developer · ipp`, Form `supplier`), dossier + study guide each, the four after-write checkers plus crossrefs, a calendar row per company decided separately because the three have different ownership shapes (Clearway listed, Recurrent a Canadian Solar unit, Form private), README tree entries, flip the §8 rows and rewrite the §5 C6 row with per-clause verdicts. Expect the largest step-7 tail yet — `\bRecurrent\b` already hits ten dossiers and `canadian-solar` calls Recurrent its wholly-owned developer with an 80.6 GWh pipeline, which is very likely the figure the C6 cell mis-attributes to Form Energy. One push commit.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
+**To continue:** type `run Phase C session C6 on Opus 5 xhigh`
+
+## Previous Sessions
+
+### Session — Phase B closeout and §6 register re-run (Fable 5.1 High)
+
 **Date:** 2026-09-05 09:22 PM EST
 **Repo version:** v04.78r — one push commit this session (`0b30312`, merged to `main`), plus this housekeeping commit
 **Branch:** `claude/phase-b-closeout-verify-rx201s` (rebased onto `origin/main` after the merge)
@@ -44,58 +88,3 @@ Nothing is in flight. Working tree clean. **Program state: 47 of 65 new companie
 
 - **Run Phase C session C5 on Opus 5 xhigh — ENGIE North America, AES Clean Energy, RWE Clean Energy (`developer · ipp`, §8 rows at `—`/`—`), dossier + study guide each, the four after-write checkers plus crossrefs, calendar rows per `.claude/rules/profiler-app.md` Scheduled Refreshes, README tree entries, flip the §8 rows and rewrite the §5 C5 row with premise verdicts. One push commit.** The paste-in prompt was handed over in the v04.78r closeout session's chat; the §7 template in `PROFILER-COVERAGE-PLAN.md` regenerates it.
 **To continue:** type `run Phase C session C5 on Opus 5 xhigh`
-
-## Previous Sessions
-
-### Session — Phase B F8, Fermi America · Tract · Prime Data Centers (Fable 5.1 High)
-**Date:** 2026-09-05 08:47 PM EST
-**Repo version:** v04.77r — one push commit this session (`8ed8487`, merged to `main`), plus this housekeeping commit
-**Branch:** `claude/phase-b-f8-profiler-setw9a` (rebased onto `origin/main` after the merge)
-**Model:** Fable 5.1 High — Phase B session **F8**: Fermi America · Tract · Prime Data Centers (AIDC developers) — **the last Fable session of Phase B; all 29 Phase B companies are now covered.** Six research subagents (two per company), dossiers, guides, lesson plans, step 7 reconciliation, all in one push commit. Context compacted once mid-session (after the concept-registration step) and recovered without loss.
-
-### What was done
-
-- **Three dossiers** (schema v7, profileVersion 1, intel-briefing, category `developer`): `fermi-america` (132 sources, 52% first-party, 7 relationships; `ownership.type: public`, Nasdaq Global Select + LSE: FRMI), `tract` (150, 33%, 8; private), `prime-data-centers` (171, 30%, 8; private). 36 company-published headshots (execs 630 across 89 companies — one harvested Prime portrait was orphaned and removed). Tract's and Prime's company pages were read from dated Wayback captures (live sites block automated fetches) and cited at the canonical URLs with the capture date in the label.
-- **Three schema v2 guides + lesson plans**: Fermi (the generation-first campus — gas turbines and a COL behind the fence, time-to-power as the product), Tract (the developer's developer — the land value ladder, project bonds, who decides the price of power), Prime (recapitalising a build-to-suit pipeline — five rounds, a 7.5% bond on a neocloud lease, phantom equity). 27 shared concepts registered (922 total); one alias collision (`bridging power` vs `bridge-power`) caught before registration.
-- **Step 7 reconciliation**: `xcel-energy` v3 (Fermi `customer` edge — SPS ESA up to 200 MW; edge context records the 10-K restatement of first power to H2 2026); `lambda` v5 (Prime `supplier` edge — 21 MW of LAX01; Prime's Lambda release registered). Every `\bFermi\b`, `\bTract\b`, `\bPrime\b`, Amarillo, Matador and HyperGrid hit classified (recorded in the v04.77r CHANGELOG entry). `plus-power`'s Sierra Estrella "adjacent Prime campus" line left as written — SRP's release does not name Prime and the Plus Power microsite is JS-rendered.
-- **Calendar rows** (97): Fermi `nextReport: 2026-11-12`, `confirmed: false` (cadence inference — IR events page empty on 5 Sept; Q1/Q2 2026 reported 14 May / 13 Aug); Tract and Prime `cadence: "quarterly"`.
-- **Checkers at v04.77r**: registry sync clean (136 companies) · study 0 errors / 0 warnings (110 guides, 922 concepts) · relationships exit 0, **0 new accepts** (14 unchanged; no `investor`/`portfolio` edges) · crossrefs exit 0, 0 new candidates (one Tract `productsAndServices` scope at 2,877 chars over the cap, listed as not examined) · Playwright: all five dossiers zero page errors (lambda's guide has no `{{term}}` spans — the `.gd-term` wait timing out there is expected).
-- **Bookkeeping**: §8 rows flipped `B8 → F8` with every premise verdict; F8 entry in the calibration log (0/0/0/0/0); README tree (+3 profiles, +3 guides, +3 study-prep folders, +2 archive lines, execs count); CHANGELOG **94/100**.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean, branch rebased onto `origin/main`. **Program state: 47 of 65 new companies, 4 of 30 guide passes. Phase B is complete** (F1–F8 all landed; B1–B2 utilities ran earlier under §2 substitutions). The Phase B closeout paste-in prompt was handed to the developer in this session's chat.
-
-- **Next action is the Phase B closeout** — the §7 "Register checks" obligation: re-run the `CLASSROOM-CURRICULUM-PLAN.md` §6 gap register in full against the corpus and date it (as the Phase A close did at v04.44r), plus the coverage-plan bookkeeping that marks Phase B done.
-- **Opus remaining after that:** C5–C10, C12, 26 guide backfills, X3, then Phase D.
-
-### Key decisions and findings
-
-- **Premise verdicts (§4 → §8 Closes):** all three B8 clauses **held with corrections**. "Amarillo multi-GW behind-the-fence campus" — Project Matador is in Carson County beside Pantex on a 99-year Texas Tech ground lease; up to 11 GW expandable to ~17 GW planned, 6 GW of gas TCEQ-permitted, four AP1000s at the NRC, ~1.5 GW of turbines landed, **nothing energised** (first 210 MW due July 2027); one binding-but-conditional tenant (TensorWave, 222 MW). "Land-and-power entitlement developer" — Tract sells shovel-ready parcels and does not build, but **no third-party sale is on the record** (only intra-group sales to Fleet's Storey County SPVs; USD 3.8bn + 4.6bn of notes). "Hyperscale build-to-suit" — Prime's most common model, but the named tenants are **neoclouds** (CoreWeave ~USD 2.2bn Elk Grove Village, Lambda Vernon); ~151 MW operating against a "4+ GW" pipeline.
-- **Fermi stays `developer`, not `developer · ipp`** — generation is captive to the campus and passed through to tenants, not sold into a market; reason written in §8, registry matches.
-- **Ownership → calendar row type:** Fermi public (brief's Nasdaq expectation held); Tract private (Tract Capital Management, no listed parent); Prime private (Data Realty Holding Corp., Macquarie/Ares joint control per EC M.11843, no listed parent).
-- **Brief corrections:** Tract HQ Denver (not Reno), no Georgia park, no Eloy; Prime HQ Dallas, parent is Data Realty (no "Prime Group"), no NoVA/Kansas City/Denton site; Fermi HQ moved to Dallas per the 31 Aug 2026 8-K; "HyperGrid" is a trademark, not a domain.
-- **No project pins** — Project Matador, the Tract parks and Avondale stayed in prose (no second dossier ready to pin); `profiler-projects.json`, Scraper.gs and Profiler.html untouched (page stays v01.82w).
-- **Loose threads for later revisions:** CoreWeave's dossier does not carry the Elk Grove Village lease (one-sided on Prime's side); Tract's PUCN decision on two temporary gas plants is due **8 Sept 2026**; Fermi's Q3 date is unconfirmed.
-- **Peer group:** F6, F7 and F8 all noted that `Colocation & Cloud Capacity` mixes generation-first, powered-land and build-to-suit developers with merchant battery developers; family map unchanged by instruction — a candidate item for the closeout or X3, not for a dossier session.
-- **Environment:** Wayback-read company pages need the canonical-URL citation convention (so first-party share stays honest); concept registration must run from the repo root (relative paths); the harness pattern from F6/F7 held.
-
-### Active context
-
-- Branch `claude/phase-b-f8-profiler-setw9a`; repo version **v04.77r**; CHANGELOG **94/100** — 6 pushes of headroom.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
-- Checker state at v04.77r: registry sync clean · study clean · relationships exit 0 (14 accepts) · crossrefs exit 0 (8 accepts) · reports not re-run (X3 re-pins) · roles not run.
-
-### Recommendation for next session
-
-- **Run the Phase B closeout on Fable 5.1 High — the §7 "Register checks" obligation: re-run all twelve `CLASSROOM-CURRICULUM-PLAN.md` §6 rows against the corpus (files by slug, guide section titles, `guidanceDocs_()` ids — not against the rows' own text), append a dated "Where the register stands after Phase B" trail paragraph and refresh the Standings, then mark Phase B complete in `PROFILER-COVERAGE-PLAN.md` (§4 header/Regrouping note, §9.5 run-order row 2, the §1-style counts) and carry the peer-family observation into a §7 bullet for X3.** One push commit; no dossier work.
-**To continue:** type `run the Phase B closeout on Fable 5.1 High`
-
-### Session — Phase B F7, Compass Datacenters · EdgeCore · PowerHouse Data Centers (Fable 5.1 High)
-**Date:** 2026-09-05 07:27 PM EST
-**Repo version:** v04.76r — three push commits this session (`a560905` v04.74r F7, `df0ef87` v04.75r, `de70a93` v04.76r; all merged to `main`), plus this housekeeping commit
-**Branch:** `claude/phase-b-f7-aidc-landlords-3h01nd` (rebased onto `origin/main` after each merge)
-**Model:** Fable 5.1 High — Phase B session **F7**: Compass Datacenters · EdgeCore Digital Infrastructure · PowerHouse Data Centers (the AIDC landlords), then two follow-up fixes to the `mccarthy` dossier. Six research subagents (two per company), dossiers, guides, lesson plans, step 7 reconciliation, all in one push commit; context compacted once, just before that commit.
-
-Developed by: LightAISolutions
