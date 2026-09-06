@@ -1,0 +1,338 @@
+{
+ "schemaVersion": 2,
+ "slug": "macquarie",
+ "title": "Macquarie — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the whole life of an infrastructure investment",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Macquarie is the one company in this corpus where you can watch a data-centre investment from first day to last.",
+   "ps": [
+    "Most dossiers catch an owner mid-hold. Macquarie's Aligned Data Centers position is **complete**: bought April 2018 at two facilities and 85 MW, sold July 2026 at 51 campuses and more than 6.4 GW of operational and planned capacity, at about USD 40bn enterprise value.",
+    "That makes it the best available teaching case for how infrastructure funds actually create value — and for the difference between building something bigger and selling the same thing at a higher price.",
+    "The second thing this guide teaches is **why Macquarie is so often misread**. In this corpus it appears more frequently as a *lender* than as an owner, and the tell is which of its four operating groups a source names."
+   ]
+  },
+  {
+   "id": "the-lifecycle",
+   "title": "The fund lifecycle: raise, deploy, build, harvest",
+   "kind": "prose",
+   "read": "Why a closed-end fund must eventually sell, however good the asset is.",
+   "ps": [
+    "A {{closed-end fund}} raises a fixed pool of capital, invests it over a few years, holds for a few more, then sells everything and returns the money. Ten to twelve years is typical. The manager charges a {{management fee}} throughout and keeps a share of the gains — {{carried interest}} — at the end.",
+    "The consequence is a clock. However well an asset is performing, the fund's life ends and the asset must be sold. This is not a judgement about the market; it is a contractual obligation to the investors.",
+    "Aligned was held in **Macquarie Infrastructure Partners IV**, which entered in April 2018, and **Macquarie Infrastructure Partners V**, which joined in July 2020. Eight years later it was sold.",
+    "Contrast Blackstone's QTS, held since 2021 in {{perpetual-capital vehicle}}s that never have to sell. Same asset class, opposite structural obligation — and the two behaved exactly as their structures predict.",
+    "**One subtlety worth carrying:** Macquarie recorded A$1,381m of performance fees in the year to 31 March 2026, driven by Macquarie Infrastructure Partners IV and Aligned co-investor fees — so the manager was monetising the position before the sale itself closed."
+   ]
+  },
+  {
+   "id": "build-vs-arbitrage",
+   "title": "Two ways to make money, and which one this was",
+   "kind": "proscons",
+   "read": "The distinction separates operators from traders, and the Aligned numbers settle it.",
+   "intro": "An investor can profit by growing the business or by selling it at a higher valuation ratio than it paid. The two look identical on an internal rate of return and are completely different skills.",
+   "cards": [
+    {
+     "t": "{{platform build-out}} — what Aligned actually was",
+     "meta": "Two facilities and 85 MW in April 2018; 51 campuses and more than 6.4 GW of operational and planned capacity in July 2026.",
+     "adv": [
+      "**The asset genuinely got bigger.** A roughly seventy-fold increase in capacity is construction, not re-rating.",
+      "**Value creation is visible and durable.** The buyer inherits a platform, not a spreadsheet assumption.",
+      "**It does not depend on selling into a good market**, though selling into one certainly helps."
+     ],
+     "dis": [
+      "**It is slow.** Eight years, and most of the capacity arrived late in the hold.",
+      "**It consumes capital.** Building gigawatts requires continuous funding — Aligned raised over USD 12bn in a single pre-sale round.",
+      "**Execution risk is real.** Every megawatt has to be permitted, powered, built and leased."
+     ]
+    },
+    {
+     "t": "{{multiple arbitrage}} — what it was not",
+     "meta": "Buying at one valuation ratio and selling at a higher one, with the business broadly unchanged.",
+     "adv": [
+      "**Fast, when it works.** No construction, no permitting, no operating risk.",
+      "**Little capital required** beyond the original purchase."
+     ],
+     "dis": [
+      "**It depends entirely on market timing**, which is not a repeatable skill.",
+      "**Nothing is left behind.** The next owner inherits the same business at a higher price.",
+      "**It cannot explain a seventy-fold capacity increase**, which is why it is the wrong description of this deal."
+     ]
+    }
+   ],
+   "note": "A caution on the exit figure: the roughly 6.4 GW is the seller's number and blends **operational with planned** capacity. It is not an operating-capacity measure, and no independent publisher ranks data-centre owners in a way that would let you check it."
+  },
+  {
+   "id": "ev-vs-equity",
+   "title": "Enterprise value is not what the seller received",
+   "kind": "prose",
+   "read": "The most consequential number-reading skill in this guide.",
+   "ps": [
+    "**{{enterprise value}}** is the value of the whole business — its equity plus its debt, less its cash. It is what the operation is worth regardless of how it was funded.",
+    "**Equity consideration** is what the shareholders are actually paid. If a business carries a lot of debt, the two differ enormously.",
+    "For Aligned the headline is about **USD 40bn of enterprise value**, characterised identically by the seller, by one of the buyers and by the sell-side legal adviser. The **equity cheque is separately reported at about USD 21bn**. No source published a debt figure that reconciles the two, though the gap is consistent with roughly USD 19bn of assumed or refinanced debt.",
+    "A further USD 5bn of growth capital was committed **at closing** — and appears in no Macquarie document at all. It is a buyer-side commitment to fund the platform's future, not part of the price.",
+    "**Two habits to build.** First, when you see a very large transaction figure, find out whether it is enterprise value or equity before repeating it. Second, check the currency: Macquarie quotes Aligned in US dollars and AirTrunk at A$24bn, and comparing the two without converting is a live error inside this very corpus."
+   ]
+  },
+  {
+   "id": "lender-not-owner",
+   "title": "Financier or owner? The single most useful question",
+   "kind": "table",
+   "read": "Macquarie appears in this corpus more often as a source of capital than as a shareholder.",
+   "intro": "Which operating group a source names tells you what kind of relationship it is. These are the live examples in this ecosystem.",
+   "cols": [
+    "Counterparty",
+    "Operating group",
+    "Instrument",
+    "Is it ownership?"
+   ],
+   "rows": [
+    [
+     "Aligned Data Centers",
+     "Macquarie Asset Management",
+     "Fund equity via Macquarie Infrastructure Partners IV and V",
+     "Yes — and now exited"
+    ],
+    [
+     "Prime Data Centers",
+     "Macquarie Capital",
+     "Principal equity, joint control via a holding company",
+     "It was; the remaining stake was sold during FY26"
+    ],
+    [
+     "Fluidstack",
+     "Commodities and Global Markets",
+     "Senior debt secured on the GPUs themselves",
+     "No — {{asset-backed lending}}"
+    ],
+    [
+     "Fermi America",
+     "Commodities and Global Markets",
+     "Senior loan plus preferred equity",
+     "Partly — a capital-stack position, not a shareholding"
+    ],
+    [
+     "Applied Digital",
+     "Macquarie Asset Management",
+     "Preferred equity plus a reported minority",
+     "Yes — an equity position"
+    ],
+    [
+     "Trina Storage project",
+     "Macquarie",
+     "Tax-equity partnership on one project",
+     "No — a financing role on a single asset"
+    ]
+   ],
+   "note": "An {{arranger}} structures a financing and may hold little of it afterwards; a {{principal investment}} uses the firm's own balance sheet and keeps the whole gain. Trade press describes all of these as 'Macquarie', which is why the operating group is the thing to look for."
+  },
+  {
+   "id": "annuity-vs-markets",
+   "title": "Annuity-style and markets-facing income",
+   "kind": "prose",
+   "read": "Macquarie's own way of splitting its earnings, and a useful lens for any financial firm.",
+   "ps": [
+    "Macquarie divides its income into **{{annuity-style income}}** — management fees, lending margins and service charges that recur each year — and **{{markets-facing income}}**, which depends on trading and transaction activity and swings with conditions.",
+    "The split is a summary of how volatile the earnings should be. A firm that is mostly annuity-style should produce a smooth line; one that is mostly markets-facing will not.",
+    "Macquarie's FY26, the year to 31 March 2026, shows why this matters. Group net profit was **A$4,847m, up 30%** — but the second half alone was **A$3,192m, 93% above the first half**. That is not what an annuity looks like.",
+    "The largest contributor was Commodities and Global Markets at A$4,221m of {{net profit contribution}}, up 49%; Macquarie Capital rose 43%; the asset manager rose 27%. Trading and principal realisations did the work.",
+    "**And a structural note:** the operating groups' contributions sum to A$9,924m, which is nearly double group net profit. That is by design — {{net profit contribution}} is stated before unallocated corporate costs, staff profit share and tax."
+   ]
+  },
+  {
+   "id": "reading-traps",
+   "title": "Four traps in reading this company",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Each of these has produced a real error in coverage of Macquarie.",
+   "ps": [
+    "**The {{fiscal year end}}.** Macquarie's year ends **31 March**, and half-years end 30 September. 'FY26' means the year to March 2026. The Aligned sale closed on 21 July 2026 — *after* that year-end — so the gain is not in the FY26 result at all.",
+    "**The currency.** Macquarie reports in Australian dollars; its deal releases often quote US dollars. A$4,847m of profit and USD 40bn of enterprise value are not in the same unit.",
+    "**The restatement.** Macquarie Asset Management's FY25 profit contribution was published as A$1,610m and appears as A$2,049m as the FY26 comparative, because loss-making balance-sheet green assets moved to a corporate portfolio on 1 September 2025. Comparing the two published figures produces a false growth rate.",
+    "**The look-alike.** Macquarie Infrastructure Corporation filed US annual reports until it deregistered in July 2022. It is a different, now-wound-down entity, and treating its filings as the group's would be an error spanning a decade."
+   ]
+  },
+  {
+   "id": "searching-a-non-us-filer",
+   "title": "How to research a company that does not file where you are looking",
+   "kind": "prose",
+   "read": "A transferable research method, taught through a real null result.",
+   "ps": [
+    "Macquarie Group Limited is Australian. It files **no annual report with the US Securities and Exchange Commission**. A researcher who searches EDGAR, finds nothing and concludes the information does not exist has made a routing error, not a discovery.",
+    "The correct method has two halves. First, find the right route: Macquarie's own investor site and the Australian Securities Exchange announcement service both carry the full reporting record.",
+    "Second — and this is the transferable part — **bound the null with controls before you write it down**. Searching EDGAR for 'Macquarie Group Limited' returns more than ten thousand filings, all lodged by *other* companies naming it as a party. 'Macquarie Asset Management' returns over three thousand. The search mechanism plainly works.",
+    "So the honest, narrow statement is: *Macquarie Group Limited is not an SEC periodic-reporting registrant.* The wrong, broad statement is: *Macquarie does not appear in SEC filings.* The first is true and useful; the second is false.",
+    "**The general rule:** a null result on a name bounds only that name. Before concluding a source is silent on a subject, search the subject's mechanism words too — and run a control that proves your search would have found something if it were there."
+   ]
+  },
+  {
+   "id": "lifecycle-clock",
+   "title": "Aligned on one clock",
+   "kind": "timeline",
+   "read": "An eight-year hold, with the milestones that mark each phase of the fund lifecycle.",
+   "unit": "calendar year",
+   "lanes": {
+    "hold": "The investment",
+    "fund": "Fund and process"
+   },
+   "items": [
+    {
+     "x": 2018,
+     "lane": "hold",
+     "label": "Macquarie enters at 2 facilities and 85 MW",
+     "sub": "April 2018, through Macquarie Infrastructure Partners IV"
+    },
+    {
+     "x": 2020,
+     "lane": "fund",
+     "label": "Macquarie Infrastructure Partners V joins the position",
+     "sub": "July 2020 — a second vintage into the same platform"
+    },
+    {
+     "x": 2023,
+     "lane": "fund",
+     "label": "Mubadala takes a minority stake",
+     "sub": "August 2023; it exits alongside Macquarie in 2026"
+    },
+    {
+     "x": 2025,
+     "lane": "hold",
+     "label": "USD 12bn+ raise — over USD 5bn of equity and USD 7bn of debt",
+     "sub": "Led by Macquarie Asset Management; in hindsight the pre-sale dress rehearsal"
+    },
+    {
+     "x": 2025,
+     "lane": "fund",
+     "label": "Sale announced at about USD 40bn enterprise value",
+     "sub": "15 October 2025; guidance was to close in the first half of 2026"
+    },
+    {
+     "x": 2026,
+     "lane": "fund",
+     "label": "European Commission clears the deal",
+     "sub": "19 January 2026, Case M.12259 — and it names only two acquirers of joint control, not three"
+    },
+    {
+     "x": 2026,
+     "lane": "hold",
+     "label": "Closing: 51 campuses, 6.4 GW operational and planned",
+     "sub": "21 July 2026 — after the 31 March year-end, so the gain lands in FY27"
+    }
+   ],
+   "note": "The deal closed about three weeks past the parties' own guidance and no source explains the slip. Note also that Macquarie has published **no return figure** for the investment anywhere — an eight-year hold whose outcome is public in price but not in performance."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this reading fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "What the public record does not support, stated rather than glossed.",
+   "ps": [
+    "**No return figure exists.** Macquarie has never published what it made on Aligned. The USD 40bn is a price, not a performance.",
+    "**The fund attribution is thinly sourced.** Macquarie's own materials name Macquarie Infrastructure Partners IV and V; no primary release states which fund held what share.",
+    "**The buyer set is described differently by the marketing and the regulator.** Press releases name three buyers; the European Commission's clearance names only two acquirers of joint control — BlackRock's Global Infrastructure Management and MGX. The AI Infrastructure Partnership appears in the framing, and Microsoft, NVIDIA and xAI are its members rather than acquirers.",
+    "**No independent ranking of data-centre owners exists**, so 'the largest' claims about any investor in this space cannot be checked. Self-reported figures use incompatible units — one firm cites dollars including construction, another megawatts, another 'operational and planned' gigawatts."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Mechanics and reading skills.",
+   "cards": [
+    {
+     "q": "Why must a {{closed-end fund}} sell an asset even when it is performing well?",
+     "a": "Because the fund has a fixed life — typically ten to twelve years — and a contractual obligation to return capital to its investors. The clock is structural, not a market judgement."
+    },
+    {
+     "q": "Distinguish {{platform build-out}} from {{multiple arbitrage}}.",
+     "a": "Build-out grows the business itself — more capacity, more customers — so the asset is physically bigger at exit. Multiple arbitrage sells a broadly unchanged business at a higher valuation ratio. The first shows up as capacity growth; the second depends on market timing."
+    },
+    {
+     "q": "A deal is announced at 'USD 40bn'. What must you establish before repeating it?",
+     "a": "Whether it is {{enterprise value}} or equity consideration. Enterprise value includes debt; the shareholders receive only the equity. For Aligned the two are about USD 40bn and about USD 21bn."
+    },
+    {
+     "q": "What distinguishes {{asset-backed lending}} from an equity investment?",
+     "a": "The lender's claim is on specific physical assets and is capped at repayment plus interest — it does not share in the upside. An equity investor owns a share of the business and its future value. Financing GPUs against the GPUs is lending, not owning."
+    },
+    {
+     "q": "A company's {{fiscal year end}} is 31 March and a large sale closes on 21 July. Which year does the gain fall in?",
+     "a": "The following fiscal year. A transaction closing after the year-end is not in the result just reported, however prominently it features in the news around it."
+    },
+    {
+     "q": "You search a regulator's database for a company and get no annual reports. What must you do before concluding it does not file?",
+     "a": "Run a control that proves the search works — for example, searching the same name unrestricted, which for Macquarie returns over ten thousand filings by other companies. A null on a name bounds only that name, not the subject."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Five questions on lifecycle and reading.",
+   "items": [
+    {
+     "q": "An infrastructure fund buys a platform at 85 MW and sells it eight years later at over 6 GW. The dominant source of value creation was:",
+     "c": [
+      "Multiple arbitrage",
+      "Platform build-out",
+      "Currency movement",
+      "Fee reduction"
+     ],
+     "a": 1,
+     "why": "A roughly seventy-fold capacity increase is construction. Multiple arbitrage would mean selling broadly the same business at a higher ratio, which cannot account for that growth."
+    },
+    {
+     "q": "A transaction is reported at USD 40bn enterprise value with an equity cheque of about USD 21bn. The difference is best explained as:",
+     "c": [
+      "Fees paid to advisers",
+      "Debt assumed or refinanced in the transaction",
+      "The seller's profit",
+      "An error in one of the figures"
+     ],
+     "a": 1,
+     "why": "Enterprise value is equity plus debt less cash. A roughly USD 19bn gap is consistent with the platform's borrowings — though in this case no source published the debt figure that would confirm it."
+    },
+    {
+     "q": "You read that 'Macquarie backed' an AI compute provider. The single most useful next question is:",
+     "c": [
+      "How much was invested",
+      "Which operating group — Macquarie Asset Management, Macquarie Capital or Commodities and Global Markets",
+      "When it was announced",
+      "Whether the provider is profitable"
+     ],
+     "a": 1,
+     "why": "The operating group identifies the instrument. Macquarie Asset Management deploys fund equity, Macquarie Capital invests the balance sheet, and Commodities and Global Markets lends. In this corpus the Fluidstack relationship is pure senior debt secured on GPUs."
+    },
+    {
+     "q": "A group's four divisions report contributions summing to A$9,924m while group net profit is A$4,847m. This means:",
+     "c": [
+      "The accounts are wrong",
+      "Divisional figures are stated before unallocated corporate costs, staff profit share and tax",
+      "Two divisions are loss-making",
+      "The group has minority interests taking half the profit"
+     ],
+     "a": 1,
+     "why": "{{net profit contribution}} is a management-accounting measure defined before group-level costs, profit share and tax. Divisional totals are not designed to reconcile to group profit."
+    },
+    {
+     "q": "A researcher finds no annual report for an Australian company on the US regulator's database and writes that it 'does not appear in SEC filings'. The error is:",
+     "c": [
+      "There is no error",
+      "Confusing absence of registrant status with absence from the record — the name appears in over ten thousand filings by other companies",
+      "Using the wrong company name",
+      "Searching the wrong year"
+     ],
+     "a": 1,
+     "why": "The company is not a periodic-reporting registrant, which is narrow and true. It is named constantly in other registrants' filings, so the broad claim is false. A null on a name bounds only that name."
+    }
+   ]
+  }
+ ]
+}

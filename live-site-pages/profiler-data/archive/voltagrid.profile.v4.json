@@ -256,16 +256,6 @@
    "context": "VoltaGrid's QPac is explicitly marketed with 'zero reliance on battery storage', designing BESS out of prime-power campuses. For Hithium the read-through is double-edged: the >$10B valuation mark and $1B/yr single-site revenue validate the size of the AIDC energy budget — while proving that budget can be captured entirely without batteries, by a FEOC-clean-by-construction stack (Austrian engines, Swiss electricals, Texas manufacturing).",
    "source": "Dossier competitive assessment — BESS displacement",
    "status": "active"
-  },
-  {
-   "slug": "blackstone",
-   "type": "investor",
-   "status": "active",
-   "since": "2026-05",
-   "scale": "USD 1.0bn (USD 775m primary / USD 225m secondary)",
-   "note": "Blackstone Tactical Opportunities led the May 2026 round with Halliburton — a late-stage strategic investment, not a seed.",
-   "context": "VoltaGrid was founded in 2020 and had raised more than USD 580m across four prior rounds — from CPP Investments, Longbow Capital, Carnelian Energy Capital, Pilot Company and Walter Ventures — before Blackstone appeared. The structure settles any 'seed' characterisation: USD 775m of primary capital plus **USD 225m of secondary purchases from existing investors**, and a secondary component exists precisely to give early holders liquidity. The vehicle was Blackstone Tactical Opportunities, the drawdown hybrid-capital strategy, not an infrastructure fund.",
-   "source": "VoltaGrid / Blackstone PR, DCD"
   }
  ],
  "policyExposure": [
@@ -449,6 +439,6 @@
    "url": "https://voltagrid.com/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

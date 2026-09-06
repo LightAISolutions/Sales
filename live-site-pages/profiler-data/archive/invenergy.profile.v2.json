@@ -726,16 +726,6 @@
    "note": "Cleanview's wind-developer ranking places Invenergy second and Apex fourth; the Apex dossier in this corpus records the same table and the 2021 sale of Apex's Jayhawk Wind to WEC Energy Group with Invenergy as 10% owner and operator.",
    "context": "The Jayhawk transaction (190 MW, Kansas, Facebook PPA) is recorded in the Apex dossier from its own sources; the North American Windpower report was unreachable in this session, so the operating link is noted here from the corpus rather than curated as a partner relationship.",
    "source": "https://cleanview.co/content/top-wind-developers"
-  },
-  {
-   "slug": "blackstone",
-   "type": "investor",
-   "status": "active",
-   "since": "2022",
-   "scale": "~USD 4bn of equity across 2022-2023",
-   "note": "Blackstone Infrastructure Partners holds a minority equity position in Invenergy Renewables Holdings.",
-   "context": "Approximately USD 3bn in January 2022 and a further USD 1bn in June 2023, described by both parties as a combined investment of about USD 4bn into Invenergy Renewables Holdings LLC. It is a minority position — CDPQ holds 52.4% economic ownership of Invenergy Renewables LLC and management is the managing member — and it is one of the few Blackstone positions in this corpus that is unambiguously equity rather than credit.",
-   "source": "Company and Blackstone releases"
   }
  ],
  "policyExposure": [
@@ -1668,6 +1658,6 @@
    "date": "2025-02-26"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 2
 }

@@ -55,6 +55,12 @@
       "pair": "form-energy x xcel-energy",
       "why": "Marker false positive on a shared 'Sherco' anchor. The Form passage is a collection-gap sentence whose 'Also unresolved' clause concerns a possible New York Power Authority or Rochester project, for which no first-party Form release exists; the Xcel passage it was matched against states that Form has a 10 MW / 1,000 MWh pilot at Sherco approved in 2023, which is accurate, already recorded on both sides, and does not bear on the New York question at all. Nothing to close.",
       "when": "2026-09-06"
+    },
+    {
+      "id": "9062c39b5b8d",
+      "pair": "brookfield x stack-infrastructure",
+      "why": "An open question that genuinely stands unanswered on both sides. Both dossiers independently record the same June 2026 Bloomberg-sourced report that Blue Owl is preparing a sale of STACK's Asia-Pacific portfolio with Brookfield among the reported suitors, and both mark it unconfirmed. STACK's matched passage describes the construction of that portfolio, not the sale process, so it cannot close the question. No party has confirmed and no first-party source exists on either side.",
+      "when": "2026-09-06"
     }
   ]
 }

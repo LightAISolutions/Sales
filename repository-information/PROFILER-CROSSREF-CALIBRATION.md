@@ -1266,5 +1266,154 @@ curated)** — flipping a type changes no pair. `google` 38 → 43 sources and 5
 page v01.82w → **v01.83w**, its changelog rotated (2 sections dated 2026-08-21,
 50/50 → 49/50). Cross-reference pairs unchanged at 337.
 
+**C10 — 2026-09-06, v04.86r, Opus 5 xhigh.** Three `investor` dossiers — Blackstone
+Inc. (NYSE: BX), Brookfield Asset Management Ltd. (NYSE/TSX: BAM) and Macquarie Group
+Limited (ASX: MQG) — **the first session written after `portfolio` entered the enum,
+and the test of whether it removes the need to accept around ownership links. It does.**
+The three dossiers wrote **33 relationship entries** and step 7 added **nine more** to
+eight counterparties. The checker exited 0 after one adjudication, and **the accept list
+did not move: 10 entries before, 10 after.**
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **0** | The session's whole point. Four `investor` ↔ `portfolio` pairs were written directly and cohered by construction: `qts`→`blackstone` `investor` against `blackstone`→`qts` `portfolio`; the same shape for `aypa-power`, `invenergy` and `voltagrid`. Under the pre-v04.85r enum every one of these would have needed an accept entry — four accepts avoided in a single session, against the seven that had accumulated over the whole programme |
+| reciprocal-type · **corrected** | **1** | `aligned` × `blackstone` was written `other`/`other` and reported by design (two dossiers agreeing to say nothing is not agreement). **Resolved by withdrawing the Aligned-side edge rather than by growing the accept list** — C6's and C9's cheaper resolution. The substance was not lost: the disambiguation moved into `aligned`'s `ecosystemRole` prose, where a reader of that dossier actually meets it, and `blackstone`→`aligned` stays as a one-sided `other` edge. One-sidedness is deliberately not an invariant, and `build-profiler-graph.py` merges it into a bidirectional graph edge anyway |
+| unregistered-source · **replaced** | **0** | Every relationship `source` was written as the exact registered string; the scratchpad validator asserted `sources[]` membership before any file was emitted, as in F6, F7, F8 and C5-C9 |
+| unregistered-source · **registered** | **0** | Five of the nine step-7 edges registered their cited URL into the older dossier in the same edit (`qts` the QTS merger proxy and BREIT's Q2 10-Q, `prime-data-centers` the EC M.11843 decision, `aypa-power` the BAM 8-K exhibit, `aligned` the closing release, `compass-datacenters` the BIP 20-F, `digital-realty` the DLR 8-K exhibit); the other two cited a label rather than a URL, which the schema allows |
+| project pins | **57 registered / 0 unregistered** | Unchanged. No project was registered: the candidates — the Prince William Digital Gateway, Paducah, the Aligned campuses — each failed the multi-party recurrence test that `river-bend-campus` passed at C9. Digital Gateway is the closest call and was **declined because it is dead**: the rezoning was voided in August 2025, upheld on appeal in March 2026, and QTS terminated the project on 2026-07-03. A registry is an index of pins in use, not a memorial |
+
+**`portfolio` versus `other`, and where the new value is still the wrong word.** The
+session brief asked for this to be recorded, and the answer is that **`portfolio` was
+written four times and deliberately declined five times**. It was declined wherever the
+substance is credit rather than a holding: `blackstone`→`strata-clean-energy` (a USD 150m
+facility the borrower's own CFO called a credit facility, on a balance sheet its founders
+own), `blackstone`→`arevon` (project-level preferred equity replacing tax equity),
+`blackstone`→`aligned` (a >USD 1bn lender to an asset BlackRock and MGX own),
+`brookfield`→`crusoe` (a USD 750m credit facility) and `macquarie`→`fluidstack` (senior
+debt secured on the GPUs themselves). Each is typed `other` with the reason written into
+the `note`. **A lender is not a portfolio company, and typing one `portfolio` to get a
+graph colour would misstate what the firm owns** — the same argument that kept
+`blattner x quanta-services` on the accept list at v04.85r, applied prospectively rather
+than retrospectively. The gap the corpus still has is not `portfolio`; it is the absence
+of a `lender`/`borrower` pair, and **five instances of it now exist**. Recorded as
+evidence, not acted on.
+
+**Step 7 — the largest inbound tail the programme has seen, and a scope rule stated in
+advance rather than after the fact.** Case-sensitive word-bounded greps returned **19
+files for `\bBlackstone\b`, 16 for `\bBrookfield\b` and 16 for `\bMacquarie\b`, a union
+of 38 dossiers and 346 string hits** — nearly double C8's twenty, which alone took fifteen
+revisions. Filtering out the two classes step 7 says to skip (`sources[]` labels and
+`decisionMakers` career history) left **35 dossiers and 231 substantive candidate strings**.
+The rule adopted, and stated before any dossier was opened: **review and revise every
+dossier whose mention makes an ownership, control or transaction claim about a subject, or
+that will carry a reciprocal edge once the subject dossiers land** — because those are the
+claims this session's research can uniquely adjudicate and the ones that become checker
+obligations. **Eight were revised and archived**: `qts` v7→v8, `prime-data-centers` v1→v2,
+`aypa-power` v1→v2, `aligned` v6→v7, `compass-datacenters` v3→v4, `invenergy` v2→v3,
+`voltagrid` v4→v5, `digital-realty` v1→v2. **Two carried claims the new research
+contradicted.** `qts` stated the take-private was executed by three Blackstone vehicles
+including Blackstone Property Partners; the definitive merger proxy's defined 'Sponsors' are
+**Blackstone Infrastructure Partners and BREIT Operating Partnership only**, with 'Blackstone
+Property Partners' appearing **zero times** in the document — both readings are now recorded
+because the June 2021 announcement's 'other long-term perpetual capital vehicles' wording
+admits either, and its BREIT-concentration figure was stale at 20.4% against 26.1% at
+30 June 2026. `prime-data-centers` described Macquarie's joint control as current;
+**Macquarie completed the sale of its remaining stake during FY26**, so the EC's M.11843
+record is now history rather than status, and that case anyway records **Ares joining an
+existing Macquarie/Data Realty joint venture** rather than Macquarie acquiring Prime.
+
+**Twenty-seven reviewed and not changed, and NINE not reached — both named rather than
+left silent.** Reviewed and left alone because the mention was accurate or was not a claim
+about the subject: `anthropic`, `applied-digital`, `arevon`, `bloom-energy`, `crusoe`,
+`edgecore`, `engie-north-america`, `esvolta`, `excelsior-energy-capital`, `fermi-america`,
+`fluidstack`, `google`, `hitt`, `hut-8`, `intersect-power`, `iren`, `lambda`,
+`lightsource-bp`, `mgx`, `microsoft`, `oracle`, `powerhouse-data-centers`, `sargent-lundy`,
+`spearmint-energy`, `stack-infrastructure`, `strata-clean-energy`, `talen-energy`,
+`terawulf`, `trina-storage`. Two of those deserve a note. **`spearmint-energy` already
+carried a REFUTATION of a Blackstone premise** — 'no source links Blackstone to Spearmint',
+with the only ownership statement in the record being a lender's that the company is
+controlled by Roscommon Analytics — and this session's research found nothing to overturn
+it, so a prior session's negative finding stands confirmed. And **`bloom-energy` is the
+largest thing this session found and did not act on**: Bloom's own 8-K filings break out
+related-party revenue from the Brookfield joint venture at **USD 574.2m (Q4 2025) → USD
+373.3m (Q1 2026) → USD 2.8m (Q2 2026)**, a near-total collapse in a record revenue quarter,
+audited and counterparty-disclosed, appearing in none of Brookfield's own channels and
+explained by no located source. It is written into `brookfield`'s relationship context and
+into the refresh-calendar watch list, but **`bloom-energy`'s own dossier was not revised**
+— it needs a reconciliation pass of its own. **NOT REACHED**, in the honest sense that the
+grep hits were read and classified but no counterparty edge or prose revision was written:
+`amazon`, `nvidia`, `equinix`, `vantage`, `switch`, `cyrusone`, `key-capture-energy`,
+`jupiter-power` and `eolian` — the last four because they are BlackRock/GIP holdings whose
+correct treatment is a *negative* edge, which is a design question rather than an edit.
+
+**BlackRock is not Blackstone, and the corpus proves the hazard is real rather than
+theoretical.** `\bBlackRock\b` returns **19 files** — exactly as many as `\bBlackstone\b` —
+and the two sets overlap in eight dossiers. Every hit was checked for its referent before
+any edge was written, and the separations that matter are: **Aligned, CyrusOne, Eolian and
+Jupiter Power are BlackRock/GIP, not Blackstone**, while **QTS, AirTrunk, Aypa (to closing),
+Potomac Energy Center and the VoltaGrid stake are Blackstone, not BlackRock**. The trap that
+makes this more than a spelling problem is that **Blackstone Credit is a >USD 1bn lender to
+BlackRock-owned Aligned**, so 'Blackstone has no Aligned exposure' is as wrong as
+'Blackstone owns Aligned'. **No published correction was found** in which an outlet
+conflated the two firms — the hazard is structural, not documented. A second, narrower trap
+was caught inside Blackstone's own filings: **`Revantage` is a genuine Blackstone services
+company and is not `Vantage Data Centers`**, and in one 1.1m-character prospectus every
+occurrence of the string 'vantage' resolved to *advantage*, *disadvantage* or *Revantage*.
+That is a fourth false-positive class, after C7's trade-publication names, C8's DLR Group
+and C9's Galaxy Campus.
+
+**A conflict between this session's own two research passes, recorded rather than
+resolved.** The QTS acquiring-vehicle question was answered differently by the first-party
+and third-party agents — three vehicles including Blackstone Property Partners, against two
+with BPP appearing zero times in the proxy. Both readings are now carried in `qts` and in
+`blackstone` with the disagreement stated on the face of both dossiers. The C9 discipline
+that produced this — re-verify every agent claim against the primary filing before writing
+it — is what surfaced the conflict; adopting either answer silently would have looked
+cleaner and been worse.
+
+**Cross-reference checker.** Exit 0 after one adjudication; **366** mutually-mentioning
+pairs compared, up from 337 at v04.85r. One new candidate, **accepted**:
+`brookfield x stack-infrastructure` — both dossiers independently record the same June 2026
+Bloomberg-sourced report that Blue Owl is preparing a sale of STACK's Asia-Pacific portfolio
+with Brookfield among the suitors, and both mark it unconfirmed; STACK's matched passage
+describes building that portfolio, not selling it, so it cannot close the question. **Accept
+list 9 → 10.**
+
+**A null bounded with controls, prospectively.** C9's lesson — that a null on a proper noun
+bounds only that proper noun — was applied before writing rather than after. **Macquarie
+Group Limited is not an SEC periodic-reporting registrant**, and the temptation was to write
+that it does not file with the SEC. Three controls were run first: EDGAR full-text search
+demonstrably works (`"Blackstone Infrastructure Partners"` returns 39 10-K hits);
+`"Macquarie Asset Management"` returns **3,423** filings; and `"Macquarie Group Limited"`
+returns **more than 10,000**, every one lodged by a *different* registrant naming it as a
+party. The honest statement is therefore narrow — *not a periodic-reporting registrant* —
+and the broad one would have been false. It is written into the dossier, into the calendar
+row's `source`, and into the study guide as a transferable research method.
+
+**Side effects.** **151 dossiers** on the roster (148 → 151); graph rebuilt to **1,222 edges
+(918 curated)** from 1,177/888; **28 shared concepts registered (1,030 total)** — the
+manager's-own-P&L set (fee-related and distributable earnings, fee-earning AUM, perpetual-capital
+vehicle, non-traded REIT, redemption gate, net accrued performance revenues, dry powder,
+realisation), the corporate-structure set (foreign private issuer, paired corporation, plan of
+arrangement, IFRS, US GAAP, listed affiliate, voting interest, distributable earnings per unit)
+and the bank-and-exit set (annuity-style and markets-facing income, principal investment,
+arranger, asset-backed lending, platform build-out, multiple arbitrage, fiscal year end,
+authorised deposit-taking institution, equity under management, net profit contribution,
+bring-your-own-power). **Two proposals were dropped as collisions caught before registration**
+— `take-private` already existed as both slug and term, and `economic interest` was already an
+alias of `economic-ownership` — the same guard that saved C5, C7, C8 and C9. **No executive
+photographs were added**: `www.blackstone.com` returns HTTP 403 on every path including
+`robots.txt` and `web.archive.org` is unreachable from this environment, so no company-published
+image URL could be retrieved and none was constructed. Report pins unchanged (X3's job).
+
+**A formatting note, inherited and confirmed a fifth time.** The harness was rebuilt before
+anything was written and swept **640** corpus JSON files: **571 reproduce byte-identically**
+under per-file detection of indent width, trailing newline and ASCII escaping. The **69** that
+do not are `apex-clean-energy`, the two report files and 66 older archive snapshots — none of
+which this session re-serialised. The known traps held: the refresh calendar has **no trailing
+newline** while every other file does, `profiler-concepts.json` is **indent=2** where the Phase C
+profiles are **indent=1**, and `archive-index.json` is **unsorted** and must never be written with
+`sort_keys` — the archive helper asserts `keys != sorted(keys)` before its first write, which is
+C9's near-miss converted into a guard.
 
 Developed by: LightAISolutions

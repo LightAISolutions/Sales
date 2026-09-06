@@ -602,16 +602,6 @@
       "note": "Named alongside Compass in the Texas Governor's data-centre standards release; both operate large Texas campuses.",
       "context": "Compass Datacenters and Galaxy were named together, with Montera Infrastructure, in the Texas Governor's release of 13 August 2026 announcing commitments to comply with his data-centre standards — paying for electric infrastructure, reusing their own water, reducing electricity costs, avoiding residential neighbourhoods and taking no taxpayer incentives.\n\nThe release names no legal entity beyond the bare word 'Galaxy'. The identification is Galaxy Digital Inc., established from Texas Department of Licensing and Regulation construction records that list **Galaxy Helios II LLC of 300 Vesey Street, 13th Floor, New York** — Galaxy Digital's own registered head office — as owner of the Helios 2 and Helios 3 projects at 1003 FM 193, Afton, Dickens County. No other Texas data-centre developer using the name was found.\n\nThe two compete for Texas interconnection capacity and hyperscale demand from opposite starting points: Compass is a sponsor-owned build-to-suit landlord, Galaxy a securities broker-dealer whose campus is one segment of three.",
       "source": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026014892"
-    },
-    {
-      "slug": "brookfield",
-      "type": "investor",
-      "status": "active",
-      "since": "2023-10",
-      "scale": "~15% interest for about USD 400m",
-      "note": "Brookfield-managed funds co-control Compass with Ontario Teachers'; Brookfield Infrastructure Partners itself holds about 15%.",
-      "context": "BIP's FY2025 Form 20-F records 'an approximate 15% interest in a North American hyperscale data center platform, for total consideration of approximately $400 million', acquired 3 October 2023 and carried at 15% at both 31 December 2025 and 31 December 2024 as an **investment in an associate — equity-accounted, not consolidated**.\n\nThat is the figure that corrects 'Brookfield owns Compass'. Ontario Teachers', the pre-existing investor, called Brookfield a 'co-controlling shareholder' in its own release. The deal value is unreconciled across three incompatible figures: about USD 5.5bn and USD 5.7bn as platform valuations, against BIP's own Q2 2023 letter stating a USD 1.35bn co-controlling stake 'including Brookfield Infrastructure's equity of approximately $375 million'.",
-      "source": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm"
     }
   ],
   "policyExposure": [
@@ -938,11 +928,6 @@
     "INDICATORS TO WATCH — *Mid-2026 to 2027 — ComEd energises Hoffman Estates Building 1:* on time would confirm the nine-month-delivery claim on a 200 MW greenfield; a slip into 2027 would indicate the Sears-site programme is behind its 2024 schedule. *2026–2027 — a fifth ABS series or a Red Oak/Meridian securitization:* would confirm Judgment 2's recycling thesis and show whether Moody's AAA extends to new collateral. *Any first-party or filing disclosure of the KKR amount or the assets transferred:* would size the third sponsor. *A named hyperscale tenant at Meridian or a Mississippi Power docket showing the contracted MW:* would test Judgment 3 and reconcile 320 MW against 500 MW. *Ellis County or Texas legislative action on data-center abatements after the Abbott standards:* would show whether pre-emption bought Compass anything. *A prime-power, BESS or Bloom Energy award at a Compass campus:* would overturn Judgment 6."
   ],
   "sources": [
-    {
-      "label": "Brookfield Infrastructure Partners Form 20-F for FY2025",
-      "url": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm",
-      "date": "2026-03-17"
-    },
     {
       "label": "Texas Department of Licensing and Regulation TABS2026014892 — Galaxy Helios Phase 2, owner Galaxy Helios II LLC, 300 Vesey Street, Afton, Dickens County",
       "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026014892"
@@ -1448,5 +1433,5 @@
     }
   ],
   "lastUpdated": "2026-09-06",
-  "profileVersion": 4
+  "profileVersion": 3
 }

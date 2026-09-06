@@ -220,14 +220,14 @@
       "tagline": "Blackstone-owned standalone battery-storage platform under a signed, pending sale to Brookfield — about 6.5 GW operating, under construction and contracted, 95% contracted per the buyer",
       "hq": "Austin, United States",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "aypa.com",
         "elora.aypa.com",
         "hedley.aypa.com"
       ],
-      "srcTotal": 91,
-      "srcFirstPct": 44,
+      "srcTotal": 92,
+      "srcFirstPct": 45,
       "kpiNorm": false
     },
     {
@@ -265,6 +265,26 @@
       "kpiNorm": false
     },
     {
+      "slug": "blackstone",
+      "name": "Blackstone",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "The largest alternative asset manager by AUM (USD 1,346.3bn at 30 June 2026) and the ecosystem's biggest landlord-by-proxy — owner of QTS since 2021, seller of Aypa Power to Brookfield, lender to a competitor's Aligned, and eighth in independent infrastructure fundraising.",
+      "hq": "New York, NY, United States",
+      "ticker": "NYSE: BX",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "blackstone.com",
+        "breit.com",
+        "bxdc.com"
+      ],
+      "srcTotal": 32,
+      "srcFirstPct": 75,
+      "kpiNorm": true
+    },
+    {
       "slug": "blattner",
       "name": "Blattner",
       "categories": [
@@ -298,6 +318,29 @@
       ],
       "srcTotal": 14,
       "srcFirstPct": 50,
+      "kpiNorm": true
+    },
+    {
+      "slug": "brookfield",
+      "name": "Brookfield",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Brookfield Asset Management (NYSE: BAM) — the listed asset manager with USD 672bn of fee-bearing capital, a USD 100bn AI-infrastructure programme anchored by NVIDIA and the Kuwait Investment Authority, and minority equity-accounted interests in Compass, Data4, Ascenty and Csquare.",
+      "hq": "New York, NY, United States",
+      "ticker": "NYSE: BAM",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "brookfield.com",
+        "bam.brookfield.com",
+        "bip.brookfield.com",
+        "bep.brookfield.com",
+        "bn.brookfield.com",
+        "greeninvestmentgroup.com"
+      ],
+      "srcTotal": 35,
+      "srcFirstPct": 91,
       "kpiNorm": true
     },
     {
@@ -426,7 +469,7 @@
       "domains": [
         "compassdatacenters.com"
       ],
-      "srcTotal": 103,
+      "srcTotal": 104,
       "srcFirstPct": 42,
       "kpiNorm": false
     },
@@ -614,7 +657,7 @@
         "digitalrealty.de",
         "digitalrealty.fr"
       ],
-      "srcTotal": 78,
+      "srcTotal": 79,
       "srcFirstPct": 72,
       "kpiNorm": true
     },
@@ -1241,7 +1284,7 @@
       "tagline": "Chicago's privately held developer-operator — #2 US pipeline behind NextEra, CDPQ- and Blackstone-owned, storage in Arizona, gas plants for utilities' data-centre load, Grain Belt Express",
       "hq": "Chicago, IL, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "invenergy.com",
         "grainbeltexpress.com",
@@ -1427,6 +1470,26 @@
       ],
       "srcTotal": 20,
       "srcFirstPct": 60,
+      "kpiNorm": false
+    },
+    {
+      "slug": "macquarie",
+      "name": "Macquarie",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Macquarie Group (ASX: MQG) — the finite-life infrastructure fund exemplar: owner of Aligned Data Centers from 85 MW in 2018 to a ~USD 40bn exit in July 2026, seller of AirTrunk to Blackstone, and more often a lender (Fluidstack, Fermi America) than an owner in this corpus.",
+      "hq": "Sydney, NSW, Australia",
+      "ticker": "ASX: MQG",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "macquarie.com",
+        "macquariegroup.com",
+        "greeninvestmentgroup.com"
+      ],
+      "srcTotal": 28,
+      "srcFirstPct": 75,
       "kpiNorm": false
     },
     {
@@ -1960,11 +2023,11 @@
       "tagline": "Founder-controlled Dallas developer of wholesale and build-to-suit campuses — ~151 MW operating (Chicago, Los Angeles, Dallas, Sacramento, Silicon Valley), 240 MW Avondale under construction from May 2026, a '4+ GW' (or '7 GW') pipeline into Texas, Pennsylvania and the Nordics — whose named tenants are CoreWeave (15-year, ~USD 2.2bn Elk Grove lease behind USD 900m of 7.5% notes) and Lambda (21 MW at Vernon), recapitalised five times (Macquarie, Ares, Siemens FS, Snowhawk/Nuveen, Grain), with a shelved Nordic bond and three fraud suits by former executives in August 2026.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "primedatacenters.com"
       ],
-      "srcTotal": 171,
+      "srcTotal": 172,
       "srcFirstPct": 30,
       "kpiNorm": false
     },
@@ -2016,8 +2079,8 @@
       "domains": [
         "q.com"
       ],
-      "srcTotal": 45,
-      "srcFirstPct": 53,
+      "srcTotal": 47,
+      "srcFirstPct": 55,
       "kpiNorm": false
     },
     {
@@ -2630,7 +2693,7 @@
       "tagline": "Volume leader of behind-the-meter AIDC gas power — 2.3 GW Oracle/OpenAI, >1 GW Vantage; Blackstone/Halliburton $1B equity, $5B debt; the defining FEOC-immune adjacent competitor",
       "hq": "Houston, Texas, United States",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "voltagrid.com"
       ],

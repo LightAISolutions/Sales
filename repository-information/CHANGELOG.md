@@ -3,11 +3,45 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.86r] — 2026-09-06 09:47:58 AM EST — v01.83w
+
+> **Prompt:** "Picking up from my last session, run Phase C session C10 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Opus 5 xhigh as a fresh session: Blackstone, Brookfield and Macquarie. […] THE §5 ROW IS A HYPOTHESIS, NOT A BRIEF […]
+> VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py 0 errors / 0 warnings,
+> check-profiler-relationships.py exit 0 with every finding either fixed or accepted with a reason,
+> check-profiler-crossrefs.py exit 0, all three dossiers and all three guides render (Playwright) with zero page errors."
+
+### Added
+
+- **Three `investor` dossiers at schema v7, profileVersion 1** — `blackstone` (32 sources, 75% first-party, 12 relationships), `brookfield` (35 / 91% / 11) and `macquarie` (28 / 75% / 10). The roster moves 148 → **151 companies** and the `investor` category triples from two members to five.
+- **Three study guides at schema v2 and three lesson plans**, written past the two existing `investor` guides. Blackstone teaches the manager's own profit and loss account; Brookfield teaches corporate structure as a subject; Macquarie teaches the complete infrastructure life cycle and how to research a company that files outside the database you are searching. Guides 122 → **125**.
+- **28 shared concepts registered (1,002 → 1,030)** across three groups — the manager's P&L, corporate structure, and the bank-and-exit vocabulary. Two proposals were dropped as collisions caught before registration.
+- **Three refresh-calendar rows (109 → 112)**. Macquarie's is **company-confirmed** — 2026-11-06, from Macquarie's own investor calendar — one of only 14 confirmed rows in the whole file. Blackstone's and Brookfield's are cadence inferences and say so: no Brookfield entity had published a Q3 2026 date, and Blackstone's investor feed listed only a September conference.
+- **A C10 entry in `PROFILER-CROSSREF-CALIBRATION.md`**'s relationships adjudication log.
+
+### Changed
+
+- **The §5 C10 row rewritten with per-clause verdicts, and the three §8 rows flipped.** Two clauses held with correction, three failed, one held precisely, and both dossier counts failed.
+- **Eight step-7 revisions, each archived before editing** — `qts` v7→v8, `prime-data-centers` v1→v2, `aypa-power` v1→v2, `aligned` v6→v7, `compass-datacenters` v3→v4, `invenergy` v2→v3, `voltagrid` v4→v5, `digital-realty` v1→v2.
+- **The §7 X3 bullet extended from a seventh viewpoint**, the first from outside the `developer` family.
+- Graph rebuilt to **1,222 edges (918 curated)**; cross-reference pairs 337 → **366**; crossref accept list 9 → 10.
+
+### Fixed
+
+- **`qts` carried a contradicted claim about the acquiring vehicle set.** The definitive merger proxy's defined "Sponsors" are Blackstone Infrastructure Partners and BREIT Operating Partnership only — "Blackstone Property Partners" appears **zero times** in that document. Both readings are now recorded because the announcement wording admits either; neither is adopted. Its BREIT-concentration figure was also stale at 20.4% against 26.1% at 30 June 2026.
+- **`prime-data-centers` described Macquarie's joint control as current.** Macquarie completed the sale of its remaining stake during FY26, so the European Commission's M.11843 record is history rather than status — and that case records **Ares joining an existing Macquarie/Data Realty joint venture**, not Macquarie acquiring Prime.
+
+### Notes
+
+- **The `portfolio` enum did what it was added for.** Four `investor` ↔ `portfolio` pairs were written directly and cohered by construction; under the previous enum each would have needed an accept entry. **The relationships accept list did not move: 10 before, 10 after.** `portfolio` was also **declined five times** where the substance is credit rather than a holding, each typed `other` with the reason written into the note. The gap that remains is a `lender`/`borrower` pair, now with five instances — recorded as evidence, not acted on.
+- **Step 7 scope, stated in advance.** The inbound union was **38 dossiers and 346 string hits**, the largest the programme has seen. Eight were revised, **27 reviewed and unchanged**, and **nine explicitly not reached** — all named in the calibration log.
+- CHANGELOG `Sections: 88/100` → `89/100`; eleven pushes of headroom, no rotation due.
 
 ## [v04.85r] — 2026-09-06 08:33:03 AM EST — v01.83w
 

@@ -1644,6 +1644,48 @@
         "Executive churn below the CEO. Three named C-suite officers left the leadership page with NO departure announcement — Fran Federman (Chief Investment Officer), Krupal Raval (Chief Strategy Officer, hired June 2025 into a newly created role) and Matthew Pullen (EVP Managing Director Europe). Rob Johnson's title changed from Chief Business Officer to Chief Operating Officer undated and unannounced. Eric Schwartz's post-CEO role is undisclosed. Detect these by page diff, not by release",
         "Chesterton check, do not re-import: THE COMPANY HAS NO 'FAIRFIELD CAMPUS' — it calls the site FREESTONE COUNTY, and the Fairfield address (1366 FM488, Fairfield TX 75840) belongs to CALPINE'S POWER PLANT, which the community page cites only as a landmark. '760 MW' APPEARS NOWHERE IN CYRUSONE'S OWN CORPUS (zero hits site-wide) — it is 380 + 380 summed by readers, and the two tranches are NOT equivalent: Phase 1 is signed, Phase 2 is an exclusive agreement to provide. 'THAD HILL' IS A REAL CALPINE PLANT (the Thad Hill Energy Center, Bosque County), not a mis-transcribed executive name — verified against the 2026-02-09 release. The colocation page's 'more than 350 data centers' is a SITE ERROR against 'over 60' everywhere else. The 77.8% carbon-free electricity figure is 52.9 POINTS CUSTOMER-PROCURED; CyrusOne's own procurement is about 24.8%. The FRA7 route to 126 MW BY 2029 IS CANCELLED — the 61 MW E.ON generation component was removed in May 2026, disclosed only as an update prepended to the 2025 release; the facility page still reads 81 MW. Pre-2022 issuer ratings ('BB-', 'BB+') describe the LISTED company that no longer exists. Microsoft and Oracle tenancy references are 2016-era and STALE. ATLANTA appears nowhere in the portfolio despite being commonly listed; 'Raleigh' on one page is DURHAM (DUR1-DUR2) on the navigation"
       ]
+    },
+    {
+      "slug": "blackstone",
+      "nextReport": "2026-10-22",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE: BX (Blackstone Inc., CIK 0001393818, SIC 6282 Investment Advice, fiscal year end 31 December). THE DATE IS NOT COMPANY-CONFIRMED. As of 2026-09-06 the investor-relations events feed at ir.blackstone.com listed exactly ONE upcoming event — the Barclays Global Financial Services Conference on 2026-09-15 with CFO Michael Chae — and no Q3 2026 earnings date. This is a cadence inference from Q3 2025 reported 2025-10-23 and Q3 2024 reported 2024-10-17, both Thursdays. HOW TO CONFIRM: Blackstone issues a scheduling notice roughly three weeks ahead; check ir.blackstone.com/news-and-events/events and the 8-K feed on EDGAR. ACCESS NOTE: www.blackstone.com returns HTTP 403 on every path including robots.txt, and web.archive.org is unreachable from the session environment — use ir.blackstone.com (reachable) and SEC EDGAR instead.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "BCRED redemption gate — did the June 2026 proration repeat in Q3? The figures currently carried (about 10% of shares requested against a 5% cap, on a USD 94.62bn fund) are from secondary reporting because the primary outlet returned HTTP 403; re-verify against BCRED's own 8-K or prospectus supplement.",
+        "BXDC deployment — the data-centre REIT held NO data-centre assets at 2026-06-30 and is a declared blind pool. First acquisition, and the price paid, is the single most informative forthcoming datum about Blackstone's data-centre strategy.",
+        "Aypa Power closing — signed 2026-07-22 to Brookfield at about USD 7bn EV / USD 3bn equity, NOT closed as of 2026-09-06. CHESTERTON CHECK: Aypa remains a Blackstone portfolio company until closing; do not flip the `portfolio` edge or the Brookfield reciprocal until a completion is announced. No FERC 203, HSR or CFIUS docket has been located.",
+        "BREIT's QTS concentration — 22.5% of BREIT's real-estate value at 2026-03-31 rising to 26.1% at 2026-06-30, with the stake itself reported at both 35.4% and 35.7%. Two figures, unreconciled; watch whether either is restated.",
+        "Senate Banking Committee follow-up to the 2026-06-10 letters — no published Blackstone response has been located."
+      ]
+    },
+    {
+      "slug": "brookfield",
+      "nextReport": "2026-11-07",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE/TSX: BAM (Brookfield Asset Management Ltd., CIK 0001937926, US domestic filer on Form 10-K/10-Q since FY2024 only; it filed 20-F for FY2022 and 40-F for FY2023). THE DATE IS NOT COMPANY-CONFIRMED. Checked directly on 2026-09-06: NO Brookfield entity had published a Q3 2026 earnings date. The only forward items on the investor calendars were a Brookfield Investor Day on 2026-09-17 in New York and a BIP/BEP Investor Day on 2026-09-29 in Toronto. 2026-11-07 is a cadence inference from BAM's Q3 2025 date; the siblings inferred at BEP 2026-11-05, BIP 2026-11-07 and BN 2026-11-13. ENTITY NOTE: the dossier subject is BAM. Brookfield Corporation (BN) files Form 40-F under IFRS; BIP, BIPC, BEP and BEPC file Form 20-F under IFRS. Do not mix figures across entities.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "THREE REORGANISATIONS COMPLETING IN Q4 2026 — BIP+BIPC and BEP+BEPC each hold special meetings on 2026-10-14, and BN is combining with Brookfield Wealth Solutions into Brookfield Corporation Ltd. Every share-count, ticker and entity-name fact in the dossier has a shelf life of weeks. This is the highest-priority watch item on this row.",
+        "Aypa Power closing — BEP's Q2 2026 interim statements, Note 22, say closing 'is expected to occur in the second half of 2026 and is subject to customary closing conditions'. CHESTERTON CHECK: the `portfolio` edge to aypa-power is written `announced`, not `active`; flip it only on a completion announcement, and flip Blackstone's side in the same commit.",
+        "Bloom Energy joint-venture revenue — Bloom's own 8-Ks show related-party revenue from the Brookfield JV at USD 574.2m (Q4 2025), USD 373.3m (Q1 2026) and USD 2.8m (Q2 2026), a near-total collapse in a record quarter for Bloom, appearing in none of Brookfield's channels and explained by no located source. Chase this from Bloom's side.",
+        "Microsoft 10.5 GW framework — the build window opened in 2026 and NO contracted-or-delivered figure has ever been published. Watch for the first one.",
+        "BAIIF deployment against the USD 100bn programme ambition — the fund targets USD 10bn of equity with USD 5bn committed; watch that coverage does not conflate the two."
+      ]
+    },
+    {
+      "slug": "macquarie",
+      "nextReport": "2026-11-06",
+      "confirmed": true,
+      "source": "PUBLIC COMPANY — ASX: MQG (Macquarie Group Limited, ABN 94 122 169 279). DATE IS COMPANY-CONFIRMED: the '2027 Half Year Result announcement' on Friday 2026-11-06 appears on Macquarie's own investor calendar at macquarie.com/au/en/investors.html. FISCAL CALENDAR IS NOT US-QUARTERLY: the year ends 31 MARCH, half-years end 30 September, the full-year result comes in early May, the AGM in late July and a separate Operational Briefing in February (2026's was 10 February). Do not infer a quarterly cadence. FILING REGIME: Macquarie is NOT an SEC periodic-reporting registrant — no 20-F, no annual report on EDGAR. It DOES file 13F-HR, SC 13G/13D, N-PX and a Rule 12g3-2(b) exemption under CIK 0001418333, and 'Macquarie Group Limited' appears in 10,000+ filings by OTHER registrants. Use macquarie.com/assets/macq/investor/ PDFs and announcements.asx.com.au/asxpdf/ — the asx.com.au company page and the macquarie.com reports index are JavaScript shells that return nothing.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "CEO TRANSITION ON THE SAME DAY AS THE RESULT — Shemara Wikramanayake retires 2026-11-06 and Greg Ward becomes MD & CEO on 2026-11-07. The half-year result and the handover are consecutive days. CFO Frank Kwok succeeded Alex Harvey on 2026-01-01; secondary sources naming Harvey are stale.",
+        "THE ALIGNED GAIN LANDS IN FY27 — the sale closed 2026-07-21, after the 31 March year-end, so it is absent from the FY26 result and should appear in the 1H27 numbers announced on 2026-11-06. Macquarie has published NO return figure for the eight-year hold; this is the most likely occasion for one.",
+        "CHESTERTON CHECK: the aligned edge is typed `portfolio` with status `historical` because the position is EXITED, and the prime-data-centers edge is `historical` because Macquarie sold its remaining stake during FY26. Neither should be reactivated without a new transaction — a reader encountering EC case M.11843 may wrongly infer Macquarie still holds Prime.",
+        "Green Investments — an A$379m impairment in FY26 against A$57m in FY25, after the 2025-09-01 transfer of balance-sheet green assets from MAM to a Macquarie Group corporate portfolio. Watch for further impairment and remember the MAM FY25 restatement from A$1,610m to A$2,049m.",
+        "ASIC matters — three concurrent proceedings aggregating roughly A$356m, including a A$35m penalty against Macquarie Securities (2026-03-16) and Federal Court declarations over the Shield Master Fund (2026-03-20) with about A$321m already remediated to roughly 3,000 members."
+      ]
     }
   ]
 }

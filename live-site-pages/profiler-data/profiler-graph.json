@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-06",
- "companies": 148,
+ "companies": 151,
  "edges": [
   {
    "a": "abb",
@@ -2103,6 +2103,58 @@
   },
   {
    "a": "aligned",
+   "b": "blackstone",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Blackstone Credit & Insurance is a lender to Aligned Data Centers — a platform Blackstone does not own and whose owners are its competitors.",
+     "context": "This edge exists to prevent a specific error. Aligned was acquired in July 2026 by the AI Infrastructure Partnership, MGX and BlackRock's Global Infrastructure Partners, from funds managed by Macquarie Asset Management. Blackstone is not an owner. But Blackstone Credit & Insurance has a separately announced financing partnership with Aligned surpassing USD 1bn of commitments, so it is a creditor to an asset its competitors own. Both 'Blackstone owns Aligned' and 'Blackstone has no Aligned exposure' are wrong, and the type here is `other` rather than `investor` because a credit commitment is not an equity holding.",
+     "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "status": "active",
+     "scale": ">USD 1bn of credit commitments"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A disambiguation worth carrying, verified 2026-09-06: Aligned is owned by AIP, MGX and BlackRock's Global Infrastructure Partners — NOT by Blackstone, a different firm.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Both 'Blackstone owns Aligned' and 'Blackstone has no Aligned exposure' are wrong.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Build-to-Scale hyperscale campuses (the wholesale core)",
+     "date": "",
+     "text": "Sits in the private wholesale cohort against Vantage, QTS (Blackstone), STACK, Switch, and CyrusOne; differentiates on adaptive density (air-to-liquid transition inside a live hall, 'slab to megawatts') and waterless cooling rather than on land-bank scale alone.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Blackstone Credit & Insurance lends to companies Blackstone does not own — Strata Clean Energy's 2021 facility was credit and the company's own chief financial officer said so; Arevon's Condor financing was preferred equity replacing tax equity at project level; and Blackstone Credit is a lender to Aligned Data Centers, which BlackRock's GIP and MGX own.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Credit & Insurance (BXCI)",
+     "date": "",
+     "text": "BXCI is the vector by which Blackstone appears in dossiers of companies it has no equity in — Strata Clean Energy's 2021 facility was credit, Arevon's Condor financing was preferred equity replacing tax equity, and Blackstone Credit is a lender to Aligned Data Centers, a platform BlackRock's GIP owns.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aligned",
    "b": "cipher-mining",
    "curated": {
     "b": {
@@ -2267,6 +2319,103 @@
   },
   {
    "a": "aligned",
+   "b": "macquarie",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Macquarie Asset Management owned Aligned from April 2018 until the sale closed on 21 July 2026.",
+     "context": "Held through Macquarie Infrastructure Partners IV, which entered in April 2018 when the platform was two operational facilities and 85 MW, and Macquarie Infrastructure Partners V, which joined in July 2020. The USD 40bn is an **enterprise value**, characterised identically by Aligned, by GIP and by sell-side counsel; the equity cheque is separately reported at about USD 21bn and no source reconciles the two with a stated debt figure. The USD 5bn of growth capital was committed at close and appears in no Macquarie document.\n\nOne refinement from the regulatory record: the European Commission's clearance (Case M.12259, 19 January 2026) names only **two** acquirers of joint control — Global Infrastructure Management LLC, ultimately BlackRock, and MGX Fund Management Limited. The AI Infrastructure Partnership appears in the marketing framing but not as a controlling party, and Microsoft, NVIDIA and xAI are AIP members rather than acquirers. The decision does not mention Macquarie, so it cannot corroborate the seller's identity.",
+     "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "status": "historical",
+     "since": "2018-04",
+     "scale": "~USD 40bn enterprise value at exit"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Macquarie Asset Management owned Aligned Data Centers from April 2018 until the sale closed on 21 July 2026 — the largest data-centre transaction on record.",
+     "context": "Held through Macquarie Infrastructure Partners IV, which entered in April 2018, and Macquarie Infrastructure Partners V, which joined in July 2020. At entry the platform was two operational facilities and 85 MW; at exit it was 51 campuses and more than 6.4 GW of operational and planned capacity — a seller's figure that blends operational with planned.\n\nThe buyers were the AI Infrastructure Partnership, MGX and BlackRock's Global Infrastructure Partners, acquiring 100% of the equity from funds managed by Macquarie Asset Management and its co-invest partners. **USD 40bn is an enterprise value**, characterised identically by Aligned, by GIP and by sell-side counsel; the equity cheque is separately reported at about USD 21bn and nothing reconciles the two. The USD 5bn of growth capital was committed at close and appears in no Macquarie document. Mubadala, which took a minority in August 2023, CenterSquare and other co-investors exited alongside. Macquarie has published no return figure. Typed `historical` because the position is exited.",
+     "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "status": "historical",
+     "since": "2018-04",
+     "scale": "~USD 40bn enterprise value at exit"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Aligned Data Centers is the subject of the largest data-center M&A transaction on record — on 21 July 2026 the Artificial Intelligence Infrastructure Partnership (AIP), MGX, and BlackRock's Global Infrastructure Partners (GIP) closed their acquisition of 100% of the equity from funds managed by Macquarie Asset Management and co-invest partners at an enterprise value of approximately $40B, with a further $5B of growth capital committed at closing; the deal — AIP's first-ever investment against its $30B equity / up-to-$100B-with-debt mandate — hands a platform of 51 campuses and 6.4 GW of operational and planned capacity across the US, Brazil, Mexico, Chile and Colombia to a consortium whose backers include Microsoft, NVIDIA, xAI, Cisco, GE Vernova, NextEra, Kuwait Investment Authority and Temasek.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The gigascale phase is underway: the 540 MW Project Caprock campus in Hale County, TX broke ground April 2026 with first delivery targeted Q1 2027, and the capital machine re-opened post-close with a $1.183B securitization within a week of the acquisition closing (all per company releases, Macquarie sale materials, and trade press).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: company releases, Macquarie sale materials, and trade press; we note Aligned publishes no revenue or backlog figures, so scale must be read from capacity and financing disclosures.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "AIP, MGX, and BlackRock's GIP close the ~$40B acquisition of 100% of Aligned's equity from Macquarie Asset Management-managed funds — the largest data-center M&A deal on record; $5B of additional growth capital committed; Schaap and management retained, HQ stays in Dallas; platform stated at 51 campuses / 6.4 GW operational and planned — The single defining event of the dossier: the AI-capital complex (Microsoft, NVIDIA, xAI among AIP's backers) now owns the landlord — vertical alignment of demand and capacity that no competitor sale has matched at this scale.",
+     "src": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-22",
+     "text": "Calibrant Energy (Macquarie-backed) to deploy a 31 MW / 62 MWh battery energy storage system at Aligned's Pacific Northwest campus, operational 2026 — described as the first US battery system purpose-built to accelerate data-center interconnection — Storage as a queue-jumping instrument: converting the campus into a flexible grid load buys interconnection speed in power-constrained markets — a template Aligned says it will repeat.",
+     "src": "https://aligneddc.com/press-release/aligned-and-calibrant-to-deploy-first-of-its-kind-energy-solution/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX, and BlackRock's GIP agree to acquire all equity in Aligned at ~$40B enterprise value — AIP's first investment; anchor investors Kuwait Investment Authority and Temasek; strategic partners Microsoft, NVIDIA, xAI, Cisco, GE Vernova, NextEra; Macquarie exits a position built from 85 MW (April 2018) to 5+ GW / 50 campuses — The record sale price (derived ~$8M per MW of announced operational-and-planned capacity, unverifiable without financials) is best read as the market's price for a proven multi-GW delivery machine plus its cooling IP — and as Macquarie's textbook infrastructure exit.",
+     "src": "https://www.macquarie.com/us/en/about/news/2025/macquarie-asset-management-to-lead-sale-of-aligned-data-centers-at-an-enterprise-value-of-us-40-billion.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-15",
+     "text": "$12B+ capital raise completed — $5B+ new primary equity led by Macquarie Asset Management with unnamed global digital-infrastructure investors, plus $7B+ of new debt commitments, to accelerate 5+ GW of planned capacity — In hindsight, the pre-sale dress rehearsal: the raise proved third-party appetite at scale nine months before Macquarie monetized the whole platform at $40B.",
+     "src": "https://aligneddc.com/press-release/aligned-data-centers-completes-12-billion-capital-raise/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**The single most important fact for this corpus:** Macquarie sold **Aligned Data Centers** — the largest data-centre transaction on record at about **USD 40bn enterprise value** — closing 21 July 2026, having entered the platform in April 2018 at 85 MW across two facilities.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "The sale of Aligned Data Centers closes at about USD 40bn enterprise value — An eight-year hold from 85 MW to more than 6.4 GW of operational and planned capacity; because Macquarie's year ends 31 March the gain falls into FY27, and the firm has published no return figure.",
+     "src": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX and BlackRock's GIP agree to acquire all equity in Aligned Data Centers from funds managed by Macquarie Asset Management — Announced with guidance to close in the first half of 2026; it closed on 21 July 2026, and no source explains the slip.",
+     "src": "https://aligneddc.com/press-release/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-21"
+  },
+  {
+   "a": "aligned",
    "b": "mgx",
    "curated": {
     "a": {
@@ -2293,6 +2442,13 @@
      "where": "Summary",
      "date": "",
      "text": "BOTTOM LINE UP FRONT: Aligned Data Centers is the subject of the largest data-center M&A transaction on record — on 21 July 2026 the Artificial Intelligence Infrastructure Partnership (AIP), MGX, and BlackRock's Global Infrastructure Partners (GIP) closed their acquisition of 100% of the equity from funds managed by Macquarie Asset Management and co-invest partners at an enterprise value of approximately $40B, with a further $5B of growth capital committed at closing; the deal — AIP's first-ever investment against its $30B equity / up-to-$100B-with-debt mandate — hands a platform of 51 campuses and 6.4 GW of operational and planned capacity across the US, Brazil, Mexico, Chile and Colombia to a consortium whose backers include Microsoft, NVIDIA, xAI, Cisco, GE Vernova, NextEra, Kuwait Investment Authority and Temasek.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A disambiguation worth carrying, verified 2026-09-06: Aligned is owned by AIP, MGX and BlackRock's Global Infrastructure Partners — NOT by Blackstone, a different firm.",
      "src": "",
      "from": "a"
     },
@@ -4193,6 +4349,34 @@
   },
   {
    "a": "anthropic",
+   "b": "blackstone",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its make-versus-lease answer is neither: it leases buildings, has chips bought by an Apollo–Blackstone vehicle with Broadcom residual-value support, and buys the generation.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 401 MW Justified lease in its own name, Riot's 191 MW build-to-suit (tenant per Bloomberg), the 470 MW ERock equipment order, the Theseus anchor-tenant platform and the Apollo–Blackstone chip vehicle — leases, generation and lessor-owned chips, but no owned campus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial tranche of about USD 35 billion to buy Google TPUs and lease them to Anthropic at Fluidstack-based sites in New York, Texas, Louisiana and Indiana from mid-2026, with Broadcom supporting residual value — The chips are neither the lab's nor the operator's — a lessor vehicle with the chip designer standing behind the residual.",
+     "src": "https://finance.yahoo.com/sectors/technology/articles/anthropics-36-billion-ai-chip-183819700.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-10"
+  },
+  {
+   "a": "anthropic",
    "b": "cipher-mining",
    "curated": {
     "b": {
@@ -4919,6 +5103,27 @@
     }
    ],
    "last": "2026-09-02"
+  },
+  {
+   "a": "anthropic",
+   "b": "macquarie",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The compute buyer this corpus's landlords, utilities and power vendors are building for: named in Amazon's, Google's, Microsoft's and NVIDIA's own releases as the counterparty for gigawatt-denominated silicon; the end user behind Fluidstack's Google-backstopped leases at TeraWulf, Cipher and Hut 8; the direct tenant at TeraWulf's Justified campus and, per Bloomberg, at Riot's Rockdale; ERock's largest-ever order (470 MW of gas gensets); the reported anchor at Nscale's Monarch campus and, through Lambda and NVIDIA, at Hut 8's Beacon Point; and the anchor tenant of Theseus, the Macquarie–GIC platform that will 'develop, own, operate, and lease' facilities to it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Sites, leases and power — TeraWulf Justified, Fluidstack's five campuses, Riot Rockdale, Hut 8 River Bend and Beacon Point, ERock generation, Theseus",
+     "date": "",
+     "text": "Where Anthropic itself, rather than a cloud, is the tenant, end user or equipment buyer: a 20-year, 401 MW lease at TeraWulf's Justified campus in Hawesville, Kentucky (about USD 19 billion initial term, up to about USD 33 billion with extensions, 'supported by an investment-grade credit'); the USD 50 billion Fluidstack programme whose leases the landlords file under Fluidstack's name with Google backstops; Riot's 191 MW build-to-suit at Rockdale, Texas (USD 9.1 billion over 20 years; tenant unnamed by Riot, Anthropic per Bloomberg); Hut 8's River Bend (245 MW for Anthropic via Fluidstack, up to 2,295 MW) and Beacon Point (704 MW, NVIDIA lease, Lambda operator, Anthropic buyer per CoinDesk); ERock's 470 MW RockBlock order; and Theseus, the Macquarie Asset Management–GIC platform formed to 'develop, own, operate, and lease' facilities to Anthropic.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "anthropic",
@@ -6362,6 +6567,58 @@
   },
   {
    "a": "applied-digital",
+   "b": "macquarie",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Macquarie Asset Management holds preferred equity and a reported minority position in Applied Digital.",
+     "context": "Recorded on MAM's side of the digital-infrastructure map alongside Aligned, AirTrunk, VIRTUS and Netrality. Typed `investor` because this is an equity position rather than a facility — the distinction that separates it from the Fluidstack and Fermi America relationships in this same dossier.",
+     "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html",
+     "status": "active",
+     "scale": "preferred equity plus a reported ~15% minority"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The funding stack is the story's second half: $6.1B of project notes (9.25%/6.75%/7.00%), a $5B Macquarie perpetual preferred at 12.75% PIK with a 1.80x MOIC floor and 15% of the HPC equity, and debt that went $911M → ~$5.0B in one fiscal year.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: ~$6.1B of project notes at 6.75–9.25%, the Macquarie preferred at 12.75% PIK with a 1.80x MOIC floor plus 15% of the HPC equity, shares outstanding up ~27% in a year, and a -$720M single-quarter FCF burn.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-13",
+     "text": "$2.35B 9.25% project notes priced (at 97) plus the second Macquarie preferred draw ($787.5M at 12.75% PIK); shares fell ~24% on the week — The cost of building without an investment-grade balance sheet, priced in public: the market briefly asked whether the AI data-center debt party was over.",
+     "src": "https://ir.applieddigital.com/news-events/press-releases/detail/136",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Macquarie Asset Management holds Aligned, AirTrunk, VIRTUS, Netrality and Applied Digital; **Macquarie Capital** held Prime Data Centers, Onivia, PhilTower and CloudExtel; **Commodities and Global Markets** provides the Fluidstack and Fermi America debt.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its two largest data-centre positions have both been exited — AirTrunk to Blackstone in 2024 and Aligned to a BlackRock/MGX consortium in 2026 — and its live appearances in other dossiers are Fluidstack's GPU-secured facility, Fermi America's senior loan, Applied Digital's preferred equity and Trina Storage's tax-equity partnership.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-13"
+  },
+  {
+   "a": "applied-digital",
    "b": "microsoft",
    "curated": {
     "a": {
@@ -6448,6 +6705,37 @@
      "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
      "src": "",
      "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "arevon",
+   "b": "blackstone",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Blackstone Credit supplied preferred equity at project level on Arevon's Condor financing, replacing traditional tax equity — a structured financing, not a platform holding.",
+     "context": "Arevon's Condor project financing used Blackstone Credit preferred equity in place of conventional tax equity, alongside a Stifel investment-tax-credit transfer purchase. The position is at the project, not the platform, and Arevon's sponsors are unaffected by it. Typed `other` for the same reason as Strata: a project-level preferred instrument is neither an equity holding in the company nor a customer or supplier relationship.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+     "status": "active",
+     "scale": "USD 350m Condor financing"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Arevon as the case study in single-integrator lock-in at scale: a ~1-2 GWh/yr CAISO buying cadence channeled entirely through Tesla, financed by a transferability machine (JPMorgan, Stifel, Wells Fargo, Blackstone/Goldman/Acadia preferred) whose ITC dependence makes FEOC compliance economically existential.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Financing & transferability machine",
+     "date": "",
+     "text": "Morgan — among the first IRA transferability deals in the US (IJGlobal Renewables Deal of the Year); Condor $350M used Blackstone Credit preferred equity replacing traditional tax equity plus a Stifel ITC-transfer purchase; Nighthawk $920M (Mar 2026) = $482M debt + $169M Goldman Sachs Alternatives preferred + $268M tax-credit transfer to an unnamed corporate.",
+     "src": "",
+     "from": "a"
     }
    ],
    "last": ""
@@ -6838,6 +7126,220 @@
     }
    ],
    "last": "2026-03-05"
+  },
+  {
+   "a": "aypa-power",
+   "b": "blackstone",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Blackstone acquired the platform as NRStor C&I in March 2020 and owns it until the Brookfield sale closes.",
+     "context": "Blackstone Energy Partners acquired NRStor C&I in March 2020 and rebranded it Aypa Power that August — the purchase of a three-year-old operating platform that already held over 200 MWh of operational, in-construction and contracted projects, not a seeding. The seller of record on the pending exit is funds managed by Blackstone Energy Transition Partners.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+     "status": "active",
+     "since": "2020-03"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Blackstone acquired the platform in March 2020 and has agreed to sell it to Brookfield; the sale is signed and not closed.",
+     "context": "Blackstone Energy Partners acquired NRStor C&I — a behind-the-meter commercial and industrial storage developer founded in 2017 and then the Ontario market leader — in **March 2020**, rebranding it Aypa Power that August. It was the purchase of an operating platform, not a seeding: the rebrand release states the acquisition date plainly, and the business already held over 200 MWh of operational, in-construction and contracted projects.\n\nOn 22 July 2026 Brookfield agreed to acquire Aypa from funds managed by Blackstone Energy Transition Partners at about USD 7bn enterprise value and USD 3bn equity value. Brookfield's own filed exhibit says only that the transaction is 'subject to customary regulatory approvals' — it names no regulator and no expected closing date, and no completion has been announced as of 6 September 2026. Until it closes, Aypa remains a Blackstone portfolio company, and Aypa's own site still describes itself as one.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+     "status": "active",
+     "since": "2020-03",
+     "scale": "~USD 7bn enterprise value / USD 3bn equity on the pending exit"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Aypa Power is a Blackstone-owned standalone battery-storage platform under a signed but unclosed sale to Brookfield — announced 22 July 2026 at about USD 7 billion enterprise value and USD 3 billion of equity, 'subject to customary regulatory approvals', with no closing announced as of 4 September 2026 — and what Brookfield is buying is a contracted asset base (about 6.5 GW operating, under construction and contracted, '95% contracted' with an average 17 years remaining, per the buyer) plus a 20 GW-plus pipeline and about 200 people; the premise 'Brookfield is buying Aypa' is confirmed as a pending transaction and the '~6.5 GW' figure is Brookfield's, split by Brookfield Renewable as about 3,000 MW operating and under construction and about 3,500 MW contracted, a split Aypa itself has never published.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Founded in Toronto as NRStor C&I (2016 per the company's bio, 2017 per its South Carolina PSC filing), acquired by funds managed by Blackstone Energy Partners in March 2020 with about 200 MWh of Ontario behind-the-meter projects, and relaunched as Aypa Power in August 2020 with a US headquarters in Austin.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the Brookfield transaction is signed and pending, not closed, and that Aypa remains owned by funds managed by Blackstone Energy Transition Partners until it closes.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 22 July 2026 joint release and Brookfield Asset Management's 8-K say 'entered into an agreement' and 'subject to customary regulatory approvals'; Brookfield Renewable's 31 July results and call give no closing date; Aypa has issued no release of its own and its site still reads 'A Blackstone Portfolio Company'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The premise 'Blackstone → Brookfield' is correct as a transaction; 'Brookfield-owned' is not yet.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) a closing announcement from Brookfield or Blackstone, and any FERC Section 203 or HSR record naming the Aypa entities — closing converts the ownership judgment; a lapse past Q1 2027 would indicate a regulatory or financing problem the parties have not disclosed; (2) whether the USD 1.55 billion corporate facility and the USD 1.5 billion warehouse survive the change of control unchanged, or are refinanced under Brookfield — a refinancing would show the debt was priced on Blackstone's sponsorship; (3) Dirac's appeal in Chino and the Pinopolis certificate decision at the South Carolina PSC (hearing set 19 March 2026; COD 1 December 2027) — a second California loss would confirm the permitting judgment; (4) CODs for Kuna (stated 'mid-2025'), Cald (stated 2024) and Vidal (2026), none confirmed by any source read — silence past those dates would indicate slippage the releases do not admit; (5) a supplier announcement naming anyone other than e-STORAGE, or an Aypa statement on FEOC-compliant supply, which would refute the concentration judgment.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Commercial and industrial behind-the-meter storage (NRStor C&I legacy)",
+     "date": "",
+     "text": "The Ontario business Blackstone acquired in March 2020 as NRStor C&I: behind-the-meter storage for commercial and industrial customers, sold as a 'turn-key solution that requires no capital outlay and no operational experience from you'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-22",
+     "text": "Brookfield agrees to acquire Aypa from funds managed by Blackstone Energy Transition Partners at about USD 7 billion enterprise value and USD 3 billion equity value, 'subject to customary regulatory approvals'; the whole platform plus about 200 staff, through the second vintage of Brookfield's global transition strategy with Brookfield Renewable — Signed, not closed: as of the newest source Aypa is still Blackstone-owned and its own site still reads 'A Blackstone Portfolio Company'.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1937926/000117184326004839/exh_991.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-19",
+     "text": "Infralogic reports Blackstone exploring a sale of Aypa ('Project Alpha'), with Bank of America and Cantor Fitzgerald advising — Press-reported; matched five months later by the Brookfield signing with the same advisors.",
+     "src": "https://ionanalytics.com/insights/infralogic/blackstone-explores-sale-of-aypa-power/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-22",
+     "text": "Brookfield agrees to acquire Aypa Power from funds managed by Blackstone Energy Transition Partners at about USD 7bn enterprise value and USD 3bn equity value — Signed, not closed: Brookfield's own filed exhibit says only 'subject to customary regulatory approvals', names no regulator and gives no date. Aypa remains a Blackstone portfolio company until it closes.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2020-08-04",
+     "text": "NRStor C&I relaunches as Aypa Power following its acquisition by Blackstone Energy Partners in March 2020 — The record is explicit that Blackstone acquired a three-year-old operating platform rather than founding or seeding one — the rebrand release dates the acquisition to March 2020, not 2021.",
+     "src": "https://www.prnewswire.com/news-releases/nrstor-ci-relaunches-as-aypa-power-301105755.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-22"
+  },
+  {
+   "a": "aypa-power",
+   "b": "brookfield",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Brookfield Global Transition Fund II, with Brookfield Renewable, has agreed to acquire Aypa — signed, not closed.",
+     "context": "Announced 22 July 2026. The acquiring vehicle is BGTF II, which closed in October 2025 at USD 20bn plus about USD 3.5bn of co-investment, alongside Brookfield Renewable, whose share is stated as about USD 420m net in its results release and about USD 760m in its Q2 2026 management discussion — both carried as stated.\n\nBrookfield Renewable's Q2 2026 interim financial statements, Note 22, say closing 'is expected to occur in the second half of 2026 and is subject to customary closing conditions'. No completion had been announced as of 6 September 2026.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "~USD 7bn EV / USD 3bn equity"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Brookfield Global Transition Fund II, alongside Brookfield Renewable, has agreed to acquire Aypa Power from Blackstone — signed, not closed.",
+     "context": "Announced 22 July 2026 at about USD 7bn enterprise value and USD 3bn of equity value, for a platform of about 6.5 GW operating, under construction and contracted, 95% contracted with an average remaining contract life of 17 years, a development pipeline above 20 GW and about 200 staff.\n\nThe acquiring vehicle is the second vintage of Brookfield's flagship global transition strategy, BGTF II, which closed in October 2025 at USD 20bn plus about USD 3.5bn of co-investment. Brookfield Renewable's share is stated two ways in its own documents — about USD 420m net in the results release and about USD 760m in the Q2 2026 management discussion — and both are carried as stated. **The transaction has not closed.** BEP's Q2 2026 interim financial statements, Note 22, say closing 'is expected to occur in the second half of 2026 and is subject to customary closing conditions'; no regulator is named, and no completion had been announced as of 6 September 2026.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "~USD 7bn EV / USD 3bn equity"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Aypa Power is a Blackstone-owned standalone battery-storage platform under a signed but unclosed sale to Brookfield — announced 22 July 2026 at about USD 7 billion enterprise value and USD 3 billion of equity, 'subject to customary regulatory approvals', with no closing announced as of 4 September 2026 — and what Brookfield is buying is a contracted asset base (about 6.5 GW operating, under construction and contracted, '95% contracted' with an average 17 years remaining, per the buyer) plus a 20 GW-plus pipeline and about 200 people; the premise 'Brookfield is buying Aypa' is confirmed as a pending transaction and the '~6.5 GW' figure is Brookfield's, split by Brookfield Renewable as about 3,000 MW operating and under construction and about 3,500 MW contracted, a split Aypa itself has never published.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its Brookfield sale is the clearest recent mark of what a contracted standalone-storage platform is worth to an infrastructure fund; its Indiana and Chino denials are the clearest recent marks of where the pipeline-to-operating conversion breaks.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the Brookfield transaction is signed and pending, not closed, and that Aypa remains owned by funds managed by Blackstone Energy Transition Partners until it closes.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 22 July 2026 joint release and Brookfield Asset Management's 8-K say 'entered into an agreement' and 'subject to customary regulatory approvals'; Brookfield Renewable's 31 July results and call give no closing date; Aypa has issued no release of its own and its site still reads 'A Blackstone Portfolio Company'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The premise 'Blackstone → Brookfield' is correct as a transaction; 'Brookfield-owned' is not yet.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that what Brookfield is paying USD 7 billion of enterprise value for is a contracted book rather than a merchant fleet.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Whether Brookfield's diligence priced this is not knowable from the record.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) a closing announcement from Brookfield or Blackstone, and any FERC Section 203 or HSR record naming the Aypa entities — closing converts the ownership judgment; a lapse past Q1 2027 would indicate a regulatory or financing problem the parties have not disclosed; (2) whether the USD 1.55 billion corporate facility and the USD 1.5 billion warehouse survive the change of control unchanged, or are refinanced under Brookfield — a refinancing would show the debt was priced on Blackstone's sponsorship; (3) Dirac's appeal in Chino and the Pinopolis certificate decision at the South Carolina PSC (hearing set 19 March 2026; COD 1 December 2027) — a second California loss would confirm the permitting judgment; (4) CODs for Kuna (stated 'mid-2025'), Cald (stated 2024) and Vidal (2026), none confirmed by any source read — silence past those dates would indicate slippage the releases do not admit; (5) a supplier announcement naming anyone other than e-STORAGE, or an Aypa statement on FEOC-compliant supply, which would refute the concentration judgment.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Development platform (pipeline, co-development, M&A)",
+     "date": "",
+     "text": "The South Carolina PSC application describes 'in excess of 22 gigawatts of qualified development projects'; Brookfield's release calls it 'a >20 GW development pipeline'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-19",
+     "text": "Infralogic reports Blackstone exploring a sale of Aypa ('Project Alpha'), with Bank of America and Cantor Fitzgerald advising — Press-reported; matched five months later by the Brookfield signing with the same advisors.",
+     "src": "https://ionanalytics.com/insights/infralogic/blackstone-explores-sale-of-aypa-power/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Every marquee announcement in this corpus's period (the USD 100bn AI infrastructure programme with NVIDIA and the Kuwait Investment Authority, France, Sweden, Qatar, Korea, Paducah and Aypa Power) is published under BAM's name and deployed through BAM-managed funds.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-23",
+     "text": "Brookfield agrees to acquire Aypa Power from Blackstone Energy Transition Partners at about USD 7bn enterprise value and USD 3bn equity value — Acquired through Brookfield Global Transition Fund II alongside Brookfield Renewable; BEP's Q2 interim statements put expected closing in the second half of 2026, subject to customary closing conditions.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-23"
   },
   {
    "a": "aypa-power",
@@ -7610,6 +8112,641 @@
    "last": "2025-10-23"
   },
   {
+   "a": "blackstone",
+   "b": "brookfield",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Direct peers in infrastructure and digital infrastructure, and counterparties on the pending Aypa Power sale.",
+     "context": "Infrastructure Investor's 2026 edition ranks Brookfield third at USD 99.1bn of five-year infrastructure fundraising and Blackstone eighth at USD 45.7bn — Brookfield raises roughly twice as much infrastructure capital. They compete for the same assets and, in July 2026, transacted with each other: Brookfield's second global transition vintage agreed to buy Aypa Power from Blackstone Energy Transition Partners. Both were also named, with four other firms, in NVIDIA's August 2026 programme to mobilise over USD 500bn of third-party capital for AI infrastructure.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Direct peers in infrastructure fundraising, and counterparties on the pending Aypa Power sale.",
+     "context": "Infrastructure Investor's 2026 edition ranks Brookfield third at USD 99.1bn of five-year infrastructure fundraising against Blackstone's eighth at USD 45.7bn. The two transacted directly in July 2026, when BGTF II agreed to buy Aypa Power from Blackstone Energy Transition Partners, and both were named with four other firms in NVIDIA's August 2026 programme to mobilise over USD 500bn of third-party capital.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "(NYSE: BX)**, because at Blackstone the parent *is* the asset manager: unlike Brookfield, where the manager is a separately listed subsidiary, and unlike Macquarie, where it is an operating group inside a bank, there is one filer and one set of accounts.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Real Estate",
+     "date": "",
+     "text": "Against Brookfield's and Macquarie's real-assets franchises, Blackstone's distinguishing feature is the perpetual-capital share: USD 555.6bn of perpetual-capital AUM at 30 June 2026, up 15% year on year, of which USD 463.0bn is fee-earning — 48% of all fee-earning AUM.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Private Equity — including Blackstone Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition, measuring five-year infrastructure capital raised, places Blackstone **eighth at USD 45.7bn** — behind BlackRock (USD 113.4bn), KKR, Brookfield, Macquarie, EQT, Stonepeak and DigitalBridge.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA names Blackstone one of six capital partners in a programme to mobilise over USD 500bn of third-party capital for AI infrastructure — Blackstone is one of six firms — with Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — and no per-firm allocation is published, so this is a memorandum of understanding rather than a committed sum.",
+     "src": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee minority writes to Blackstone, BlackRock, KKR and Brookfield Infrastructure over data-centre ownership and rising electricity prices — The letter's 'footprint in both energy supply and demand' framing lands on Blackstone more squarely than on any other addressee, because it owns QTS on the demand side and Potomac Energy Center, Invenergy and VoltaGrid on the supply side.",
+     "src": "https://www.banking.senate.gov/newsroom/minority",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For vendors in this corpus, Brookfield is reached through Compass, Data4, Ascenty and Csquare on the data-centre side and through Brookfield Renewable on the power side, and — as with Blackstone — it appears in supplier dossiers as an ownership attribution rather than as a direct counterparty.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess that **BAM earns the fees while its parent keeps most of the carry, and that this is the structural difference from Blackstone**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "At Blackstone the listed parent is the manager and keeps its own carry.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition ranks Brookfield **third at USD 99.1bn** of five-year infrastructure fundraising, behind BlackRock (USD 113.4bn) and KKR (USD 100.5bn) and ahead of Macquarie (USD 87.9bn) and Blackstone (USD 45.7bn).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Infrastructure",
+     "date": "",
+     "text": "Brookfield raises roughly twice as much infrastructure capital as Blackstone and about 13% more than Macquarie on this measure — but IPE Real Assets' AUM table for the prior year put **Macquarie first and Brookfield second**, both above USD 300bn.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-23",
+     "text": "Brookfield agrees to acquire Aypa Power from Blackstone Energy Transition Partners at about USD 7bn enterprise value and USD 3bn equity value — Acquired through Brookfield Global Transition Fund II alongside Brookfield Renewable; BEP's Q2 interim statements put expected closing in the second half of 2026, subject to customary closing conditions.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee minority writes to Brookfield Infrastructure, alongside Blackstone, BlackRock and KKR, on data-centre ownership and electricity prices — Brookfield is exposed to the 'supply and demand' framing through the same franchise: it owns generation through Brookfield Renewable and data-centre demand through Compass, Data4 and Csquare.",
+     "src": "https://www.banking.senate.gov/newsroom/minority",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "blackstone",
+   "b": "digital-realty",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Blackstone and Digital Realty were joint-venture partners in Northern Virginia from 2023 until Digital Realty bought Blackstone out on 30 June 2026.",
+     "context": "Digital Realty acquired Blackstone's 80% interest in two Manassas data centres and its 50% interest in one on the Digital Dulles campus in Sterling — a blended 64% equity interest across 288 MW of IT capacity, fully leased to three investment-grade hyperscale customers. Consideration was USD 3.5bn, of which USD 1.2bn was cash and USD 2.3bn was Digital Realty stock, so Blackstone took over 65% of the price in the buyer's equity and did not fully exit. Digital Realty disclosed an expected initial stabilised capitalisation rate of over 6.5% — a rare independently-published cap rate for a Blackstone data-centre exit. The seller was described by the counterparty as Blackstone-affiliated funds managed by Real Estate, Infrastructure and Tactical Opportunities: three vehicles, where Blackstone's own coverage says one name.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1297996/000129799626000071/dlr-20260629xex991.htm",
+     "status": "historical",
+     "since": "2023",
+     "scale": "USD 3.5bn for a blended 64% interest; USD 7.8bn gross at 100%"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Joint-venture partners in Northern Virginia from 2023 until Digital Realty bought Blackstone out on 30 June 2026.",
+     "context": "Digital Realty acquired Blackstone's 80% interest in two Manassas data centres and its 50% interest in one on the Digital Dulles campus in Sterling — a blended 64% equity interest across 288 MW of IT capacity (96 MW each), fully leased to three distinct investment-grade hyperscale customers. Consideration was USD 3.5bn: USD 1.2bn cash and USD 2.3bn in Digital Realty shares, so Blackstone took over 65% of the price in the buyer's own stock. Gross value at 100% share was USD 7.8bn including assumed debt and remaining capex, at an expected initial stabilised capitalisation rate of over 6.5%. The JV entities, Digital Carver Dulles 9 and Digital Carver Brickyard, became wholly-owned on completion. The counterparty described the seller as Blackstone-affiliated funds managed by Real Estate, Infrastructure and Tactical Opportunities.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1297996/000129799626000071/dlr-20260629xex991.htm",
+     "status": "historical",
+     "since": "2023",
+     "scale": "USD 3.5bn for a blended 64% interest; USD 7.8bn gross at 100%"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-30",
+     "text": "Digital Realty completes the buy-out of Blackstone's interests in three Northern Virginia data centres for USD 3.5bn — The 2026 data-centre sale was the 2023 Digital Realty joint venture, not QTS — and Blackstone took over 65% of the price in Digital Realty stock rather than cash, so it did not fully exit.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1297996/000129799626000071/dlr-20260629xex991.htm",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: a REIT must distribute most of its taxable income, so it cannot retain earnings to fund a USD 4.25-4.75bn annual development programme, and must issue equity and debt instead — the company issued 6.3 million shares at a weighted average USD 197.54 in June 2026 alone and a further 12.3 million for the Blackstone buy-in.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Strategic private capital — funds, joint ventures and fee income",
+     "date": "",
+     "text": "The supplemental lists twenty unconsolidated entities: Ascenty, Blackstone NoVa, Clise, Digital Realty DC Partners NA Fund, GI Partners, Mapletree, Menlo, Mitsubishi, Realty Income, TPG Real Estate, Walsh, Digital Realty Bersama, Digital Connexion, Lumen, MC Digital Realty, Blackstone Frankfurt, Blackstone Paris, Medallion, Mivne and Digital Core REIT.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-30",
+     "text": "Purchase of Blackstone's interest in three Northern Virginia data centres completes — blended 64% of 288 MW at a USD 7.8bn gross value, USD 3.5bn consideration in USD 1.2bn cash and USD 2.3bn of shares — Buying back a joint-venture partner's majority at an above-6.5% initial stabilised cap rate, then placing Blackstone's residual equity through a secondary — the fund model unwinding at one campus while it scales elsewhere.",
+     "src": "https://www.digitalrealty.com/about/newsroom/press-releases/30426/digital-realty-announces-purchase-of-blackstone-interest-in-three-northern-virginia-data-centers",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-30"
+  },
+  {
+   "a": "blackstone",
+   "b": "excelsior-energy-capital",
+   "evid": [
+    {
+     "where": "Capabilities · Closed-end renewable infrastructure funds (Fund I and Fund II)",
+     "date": "",
+     "text": "A middle-market owner-operator rather than a mega-fund: Fund I and Fund II together are roughly USD 1.5 billion of equity against Brookfield, Blackstone or BlackRock GIP vehicles an order of magnitude larger.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackstone",
+   "b": "fluidstack",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Blackstone is reported as a participant in the Broadcom-Apollo-Blackstone vehicle that buys chips and leases them to Anthropic at Fluidstack sites.",
+     "context": "Press accounts of a chip-leasing platform describe an initial USD 35bn tranche to facilitate about 1 GW of compute that Anthropic is expected to deploy at Fluidstack-operated sites, with the vehicle buying Google-designed TPUs and leasing them onward. Bloomberg separately reported in September 2026 that Blackstone was weighing a second debt package for the same arrangement. **This is trade reporting, not a filed arrangement**: no Blackstone filing located names Fluidstack, Anthropic or the vehicle, and the Broadcom release page was unreachable. It is recorded as `other` and as reported rather than confirmed.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526340208/d158269d10q.htm",
+     "status": "announced",
+     "since": "2026-06",
+     "scale": "reported USD 35bn initial tranche of the chip vehicle"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that Google's position — guarantor of the leases, warrant-holder in two landlords, reported prospective shareholder in the tenant and, through the Broadcom–Apollo–Blackstone vehicle, the designer of the chips leased to the end user — makes the Fluidstack chain a Google TPU distribution channel to Anthropic as much as a neocloud.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GPU and capacity financing — Macquarie asset-backed facility, capacity purchases from smaller neoclouds, the Broadcom–Apollo–Blackstone chip vehicle",
+     "date": "",
+     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (the Broadcom–Apollo–Blackstone platform, June 2026, reported at about USD 35 billion for the first tranche).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Press reports the Broadcom–Apollo–Blackstone chip-leasing platform: an initial USD 35 billion tranche 'to facilitate 1GW of compute infrastructure Anthropic is expected to deploy in Fluidstack-based sites, starting in mid-2026', with the vehicle buying Google TPUs and leasing them to Anthropic and Broadcom supporting residual value — The chips at the Fluidstack sites belong to neither Fluidstack nor Anthropic — the tenant-operator model now extends to the silicon.",
+     "src": "https://www.artificialintelligence-news.com/news/new-data-centre-projects-mark-anthropic-biggest-us-expansion/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
+  },
+  {
+   "a": "blackstone",
+   "b": "invenergy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Blackstone Infrastructure Partners holds a minority equity position in Invenergy Renewables Holdings; CDPQ and management hold the majority.",
+     "context": "Blackstone Infrastructure Partners invested approximately USD 3bn in January 2022 and a further USD 1bn in June 2023 into Invenergy Renewables Holdings LLC, described by both parties as a combined investment of about USD 4bn. It is a minority position: CDPQ holds 52.4% economic ownership of Invenergy Renewables LLC and management is the managing member. This is one of the few Blackstone positions in this corpus that is unambiguously an equity holding rather than a credit facility.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+     "status": "active",
+     "since": "2022",
+     "scale": "~USD 4bn of equity across 2022-2023"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Blackstone Infrastructure Partners holds a minority equity position in Invenergy Renewables Holdings.",
+     "context": "Approximately USD 3bn in January 2022 and a further USD 1bn in June 2023, described by both parties as a combined investment of about USD 4bn into Invenergy Renewables Holdings LLC. It is a minority position — CDPQ holds 52.4% economic ownership of Invenergy Renewables LLC and management is the managing member — and it is one of the few Blackstone positions in this corpus that is unambiguously equity rather than credit.",
+     "source": "Company and Blackstone releases",
+     "status": "active",
+     "since": "2022",
+     "scale": "~USD 4bn of equity across 2022-2023"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It owns the demand side through QTS and the supply side through Potomac Energy Center, its Invenergy position and VoltaGrid, and it lends across both through Blackstone Credit & Insurance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee minority writes to Blackstone, BlackRock, KKR and Brookfield Infrastructure over data-centre ownership and rising electricity prices — The letter's 'footprint in both energy supply and demand' framing lands on Blackstone more squarely than on any other addressee, because it owns QTS on the demand side and Potomac Energy Center, Invenergy and VoltaGrid on the supply side.",
+     "src": "https://www.banking.senate.gov/newsroom/minority",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Invenergy is the second-largest US developer by development pipeline on Cleanview's live rankings (41,328 MW across 212 projects, behind NextEra Energy's 68,229 MW and ahead of Engie and Intersect), which makes it the largest non-utility developer on that measure — the 'largest privately held' phrase is Invenergy's and Blackstone's own language, not an independent ranking, and the ranking measure is pipeline megawatts, not operating capacity.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The company is owned by CDPQ (52.4% economic ownership of Invenergy Renewables LLC after May 2018, invested since 2013), Blackstone Infrastructure Partners (about USD 3 billion in January 2022 plus about USD 1 billion in June 2023 into Invenergy Renewables Holdings LLC, 'approximately $4 billion' combined) and management, with 'CDPQ and Invenergy management' stated as majority owners and Invenergy as managing member; no 2024–2026 stake sale, recapitalisation or valuation appears in any release, filing or reputable report read.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Structure per the company's own releases: Invenergy Renewables Holdings LLC is the vehicle Blackstone invested in; Invenergy Renewables LLC carries CDPQ's stake; Invenergy Clean Power LLC holds the gas portfolio in a 2018 50/50 partnership with AMP Capital (now InfraBridge); Invenergy Transmission LLC holds Grain Belt Express; Invenergy Renewables Operating I LLC borrows the USD 1.5 billion revolver; Invenergy Thermal Operating I LLC carried Moody's Ba2 rating in 2021.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Cleanview's live rankings (5 September 2026) place it second to NextEra Energy in every table (overall 41,328 MW against 68,229 MW), and S&P Global's 2023 ranking had the same order; no independent source names Invenergy first among private developers, and the phrase appears only in Invenergy's, Blackstone's and I&M's own text.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the ownership stack is unchanged since June 2023 — CDPQ (52.4% economic ownership of Invenergy Renewables LLC after 2018), Blackstone Infrastructure Partners (about USD 4 billion into Invenergy Renewables Holdings LLC across 2022–2023) and management as managing member — and that the gas portfolio sits separately in Invenergy Clean Power LLC with InfraBridge.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the company's releases and capabilities page, CDPQ's 2018 release, Blackstone's 2022 release as mirrored by CDPQ; no 2024–2026 stake sale, recapitalisation, bond or rating action on the holding company was found.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) a Wisconsin PSC decision on Foundry Ridge and Red Oak Ridge (application filed November 2025) and the IURC's end-2026 Sycamore Riverside order — approvals confirm the gas-to-utility model and its pricing; a denial would strand development capital the settlement proceeds were meant to recycle; (2) a Grain Belt Express financing announcement (bank group, bond or equity partner) before Phase 1 construction — its absence through mid-2027 would indicate the DOE termination was fatal to the 2026 schedule; (3) any Invenergy release naming a battery supplier or an ISO-level storage total, or a CAISO record for Seahawk — the first would close the largest collection gap in this dossier; (4) Treasury's final FEOC rule and the 4 July 2026 begin-construction record for the 2027 Meta and Verizon projects — a project dropping from the Meta list would show the deadline bit; (5) Illuminate USA output and any Invenergy storage project specifying domestic cells — the test of whether the module affiliate's playbook is repeated in batteries; (6) a Blackstone or CDPQ disclosure of a stake change, or a holding-company rating — either would replace the ownership judgment's 2023 baseline.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-scale wind and solar — development, ownership and farmdown",
+     "date": "",
+     "text": "The commercial model is to develop, contract and build, then hold or farm down: WEC Energy Group is 'majority owner' of Delilah I Solar (300 MW, Texas, commercial February 2025) and Hardin III Solar (250 MW, Ohio, commercial June 2025) with Invenergy as developer and operator; NIPSCO took Fairbanks Solar (250 MW, Indiana, commercial July 2025) under a build-transfer agreement; AEP's SWEPCO and PSO bought 1 GW of wind and solar for about USD 2.2 billion with construction financed by a Natixis-led USD 1.27 billion facility; and an Invenergy-led consortium with CDPQ and Blackstone bought AEP's 1,365 MW unregulated renewables portfolio for USD 1.5 billion enterprise value in August 2023.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
+  },
+  {
+   "a": "blackstone",
+   "b": "macquarie",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Peers in infrastructure fundraising, and counterparties on the 2024 AirTrunk sale — Blackstone bought the platform Macquarie was exiting.",
+     "context": "Macquarie Asset Management ranks fourth at USD 87.9bn of five-year infrastructure fundraising against Blackstone's eighth at USD 45.7bn. The two met directly on AirTrunk: in September 2024 Blackstone-managed vehicles agreed to acquire the Asia-Pacific platform from Macquarie Asset Management and PSP Investments at an implied enterprise value above A$24bn, with CPP Investments taking 12% alongside. Four Blackstone vehicles participated — Blackstone Real Estate Partners, Blackstone Infrastructure Partners, Blackstone Tactical Opportunities and its private-equity strategy for individual investors — so Blackstone-managed capital holds about 88%, not 100%.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Peers in infrastructure, and counterparties on AirTrunk — Blackstone bought the Asia-Pacific platform Macquarie was exiting in 2024.",
+     "context": "Infrastructure Investor's 2026 edition ranks Macquarie Asset Management fourth at USD 87.9bn of five-year infrastructure fundraising against Blackstone's eighth at USD 45.7bn. In September 2024 Blackstone-managed vehicles agreed to acquire AirTrunk from Macquarie Asset Management and PSP Investments at an implied enterprise value above A$24bn, with CPP Investments taking 12% alongside four Blackstone vehicles. Note the currency: Macquarie quotes AirTrunk in Australian dollars and Aligned in US dollars, and the two are routinely compared without the conversion.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "(NYSE: BX)**, because at Blackstone the parent *is* the asset manager: unlike Brookfield, where the manager is a separately listed subsidiary, and unlike Macquarie, where it is an operating group inside a bank, there is one filer and one set of accounts.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Real Estate",
+     "date": "",
+     "text": "Against Brookfield's and Macquarie's real-assets franchises, Blackstone's distinguishing feature is the perpetual-capital share: USD 555.6bn of perpetual-capital AUM at 30 June 2026, up 15% year on year, of which USD 463.0bn is fee-earning — 48% of all fee-earning AUM.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Real Estate",
+     "date": "",
+     "text": "Perpetual capital does not have to sell, which is why QTS is still held five years after the take-private while Macquarie's comparable platform was exited at eight.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Private Equity — including Blackstone Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition, measuring five-year infrastructure capital raised, places Blackstone **eighth at USD 45.7bn** — behind BlackRock (USD 113.4bn), KKR, Brookfield, Macquarie, EQT, Stonepeak and DigitalBridge.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its two largest data-centre positions have both been exited — AirTrunk to Blackstone in 2024 and Aligned to a BlackRock/MGX consortium in 2026 — and its live appearances in other dossiers are Fluidstack's GPU-secured facility, Fermi America's senior loan, Applied Digital's preferred equity and Trina Storage's tax-equity partnership.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Value was created by building the platform out, not by re-rating it — and the exit happened because a closed-end fund must eventually return capital, which is precisely the obligation Blackstone's perpetual vehicles do not carry over QTS.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackstone",
+   "b": "mgx",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Blackstone Credit & Insurance lends to companies Blackstone does not own — Strata Clean Energy's 2021 facility was credit and the company's own chief financial officer said so; Arevon's Condor financing was preferred equity replacing tax equity at project level; and Blackstone Credit is a lender to Aligned Data Centers, which BlackRock's GIP and MGX own.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · MGX Fund I — the USD 49 billion AI fund",
+     "date": "",
+     "text": "Comparable pools of AI-infrastructure capital in the corpus are AIP itself (USD 30 billion equity / USD 100 billion with debt), Brookfield's and Blackstone's infrastructure funds, and SoftBank's Vision Funds; none is a state AI champion in the way MGX describes itself.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP) and Aligned Data Centers",
+     "date": "",
+     "text": "AIP is the vehicle through which MGX competes with Brookfield, Blackstone/QTS, DigitalBridge and KKR for hyperscale landlords; Aligned's 6.4 GW makes the consortium one of the largest owners of US data-centre capacity after one transaction.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-13",
+     "text": "Databricks closes a USD 5 billion strategic round at a USD 190 billion valuation led by Coatue with Blackstone, MGX, T. Rowe Price accounts and Sixth Street Growth — MGX's fourth Databricks round — A repeat position that MGX reposts verbatim rather than announces; the ticket is again undisclosed.",
+     "src": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-13"
+  },
+  {
+   "a": "blackstone",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Named by NVIDIA as one of six capital partners in a programme to mobilise third-party capital for AI-infrastructure buildout.",
+     "context": "On 10 August 2026 NVIDIA announced memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over USD 500bn of third-party capital. No per-firm allocation is published and the arrangement is a memorandum rather than a committed sum, so the figure describes the programme and not Blackstone's share of it.",
+     "source": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+     "status": "announced",
+     "since": "2026-08",
+     "scale": "one of six firms in a >USD 500bn programme"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA names Blackstone one of six capital partners in a programme to mobilise over USD 500bn of third-party capital for AI infrastructure — Blackstone is one of six firms — with Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — and no per-firm allocation is published, so this is a memorandum of understanding rather than a committed sum.",
+     "src": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "blackstone",
+   "b": "oracle",
+   "evid": [
+    {
+     "where": "Capabilities · Stargate campus buildout (compute landlord role)",
+     "date": "",
+     "text": "Oracle-partnered Stargate sites: Abilene TX (flagship — 8 buildings, 1,100 acres; ~42% of capacity delivered as of June 2026; ~0.3 GW live per independent tracking, building to 1.2 GW by Q4 2026), Shackelford County TX (2.0 GW, off-grid genset microgrid, delivery from 1H 2027), Doña Ana County NM (2.2 GW, Bloom fuel-cell microgrids), Port Washington WI (1.3 GW with Vantage, ~70% zero-emission), Saline Township MI (1.4 GW, DTE grid + BESS, Related Digital/Blackstone/PIMCO financing).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackstone",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "QTS is Blackstone's anchor data-centre holding, taken private on 31 August 2021 and never sold down.",
+     "context": "The definitive merger proxy names the Sponsors as Blackstone Infrastructure Partners L.P. and BREIT Operating Partnership L.P., acquiring through Volt Upper Holdings LLC. Consideration was USD 78.00 a share in cash for both common classes, with about USD 6.2bn paid to common holders, equity-award holders and minority limited partners and about USD 107m to the Series A preferred. The frequently-quoted 'approximately $10 billion' is a transaction-value headline including debt, and it does not reconcile with the filed figures: equity plus preferred plus about USD 1.8bn of consolidated debt is roughly USD 8.1bn, and no located source closes the gap.\n\nThe position has grown rather than shrunk. BREIT's stake was 33% at the take-private and is reported at **35.4%** and **35.7%** for 2026 in two separate readings of BREIT's own disclosure — no source reconciles the two, and both are carried. By 30 June 2026 the position was 26.1% of BREIT's entire real-estate asset value, up from 22.5% three months earlier, and BREIT deployed USD 3.3bn at its share into QTS development in the second quarter alone. Blackstone bought out founder Chad Williams' rolled-over units for a reported ~USD 3bn in March 2025. There is no QTS initial public offering in the record; the 2026 listing was BXDC, a separate blind-pool vehicle.\n\n**A conflict inside this session's own research, left unresolved rather than smoothed.** One research pass read the definitive proxy's defined 'Sponsors' as **only** Blackstone Infrastructure Partners and BREIT Operating Partnership, recording zero occurrences of 'Blackstone Property Partners' in the document. A second read the acquirer set as **three** vehicles, BIP + BREIT + BPP, which is also how secondary accounts and the corpus's existing QTS dossier describe it. The June 2021 announcement language — 'and other long-term perpetual capital vehicles managed by Blackstone' — admits both. Both readings are recorded here; neither is adopted.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1577368/000119312521221563/d187231ddefm14a.htm",
+     "status": "active",
+     "since": "2021-08",
+     "scale": "USD 78.00 per share; ~USD 10bn including debt"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Blackstone has owned QTS since the August 2021 take-private and has not sold down; BREIT's stake has risen.",
+     "context": "The definitive merger proxy names Parent as Volt Upper Holdings LLC, an affiliate of Blackstone Infrastructure Partners L.P. and BREIT Operating Partnership L.P. — the two entities it defines as the 'Sponsors'. Consideration was $78.00 a share in cash for both common classes, about $6.2B in aggregate to common holders, equity-award holders and minority limited partners, plus about $107M for the Series A preferred, with a $805M reverse termination fee guaranteed by the Sponsors.\n\nBREIT's position has grown rather than been sold down: 33% at the take-private, and 26.1% of BREIT's entire real-estate asset value by 30 June 2026, up from 22.5% three months earlier. Blackstone bought out founder Chad Williams' rolled-over units for a reported ~$3B in March 2025. There has been no QTS IPO — the 2026 Blackstone listing was BXDC, a separate blind-pool data-centre REIT.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1577368/000119312521221563/d187231ddefm14a.htm",
+     "status": "active",
+     "since": "2021-08",
+     "scale": "$78.00/share; ~$10B including debt"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: QTS is Blackstone's flagship AI-infrastructure asset — taken private in August 2021 for approximately $10B and grown since into what the company's own March 2025 release calls a '$60 billion global industry leader': leased capacity up 14x since the acquisition, 2GW of critical power operating as of March 2025 (3GW+ across 70+ facilities per 2026 trade rankings) and a $30B+ development pipeline pre-leased to investment-grade technology companies on 15-20-year escalating leases, per BREIT's FY2025 annual report.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Built from Overland Park, Kansas colocation roots into a wholesale REIT (NYSE: QTS, 2013), the company was acquired at $78.00/share by Blackstone Infrastructure Partners, BREIT and Blackstone Property Partners, closing 31 August 2021.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess QTS is Blackstone's template for converting permanent capital into supply velocity — the platform most likely to set the market-clearing pace of US wholesale delivery.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Hyperscale build-to-suit & wholesale mega-campuses (core business)",
+     "date": "",
+     "text": "Against Vantage, Aligned, STACK and CloudHQ, QTS pairs what Blackstone calls one of the largest data-center pipelines in the world with a 3,000+ acre power-ready land bank and an in-house construction-management organization billed as among North America's largest; unlike public REITs Digital Realty and Equinix, perpetual private capital lets it buy land and power years ahead of leases.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Capital-markets & energy franchise",
+     "date": "",
+     "text": "Vantage invented the data-center ABS; QTS is the current volume leader in issuance cadence, and Blackstone sponsorship gives it simultaneous access to ABS, CMBS and IG bond markets that few private developers can match.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-25",
+     "text": "Founder and CEO Chad Williams steps down (effective April 18) after 20+ years, returning to Quality Group of Companies; COO David Robey and Chief Growth Officer Tag Greason appointed co-CEOs — the release cites a '$60 billion global industry leader' with 1,600+ employees and 2GW of critical power — Founder exit at the top of the cycle — Blackstone installs an operator/seller duo, the standard PE succession for a platform this scaled.",
+     "src": "https://q.com/news/qts-ceo-chad-williams-to-step-down-after-founding-and-leading-qts-over-20-year-career/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-03-25"
+  },
+  {
+   "a": "blackstone",
+   "b": "spearmint-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The premise '15 GWh in development' is the company's own boilerplate, stated in January and May 2026 and dropped from 21 May 2026 onward; the premise of a Blackstone sponsor is unsupported — no source links Blackstone to Spearmint, and the only ownership statement in the record is lender Elda River's that the company 'is controlled by Roscommon Analytics', an FTR and congestion trading firm founded by board chairman Kevin Kelley.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no Blackstone reference exists in any source; the company names no owner; the single ownership statement is Elda River's 'controlled by Roscommon Analytics'; the board carries two Bain Capital-affiliated directors and an Encompass Capital partner without any stated shareholding.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackstone",
+   "b": "strata-clean-energy",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Blackstone Credit provided a USD 150m facility in May 2021 — credit, not equity, and typed `other` for that reason.",
+     "context": "Strata Clean Energy's own chief financial officer described the 2021 Blackstone money as a credit facility rather than an equity stake, and Strata's financing page says the company is owned by its founders. `portfolio` would be the wrong word here: Blackstone holds no equity, so there is nothing in its portfolio to name. Whether the facility remains outstanding is not stated by either party.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+     "status": "active",
+     "since": "2021-05",
+     "scale": "USD 150m credit facility"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Blackstone Credit & Insurance lends to companies Blackstone does not own — Strata Clean Energy's 2021 facility was credit and the company's own chief financial officer said so; Arevon's Condor financing was preferred equity replacing tax equity at project level; and Blackstone Credit is a lender to Aligned Data Centers, which BlackRock's GIP and MGX own.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Credit & Insurance (BXCI)",
+     "date": "",
+     "text": "BXCI is the vector by which Blackstone appears in dossiers of companies it has no equity in — Strata Clean Energy's 2021 facility was credit, Arevon's Condor financing was preferred equity replacing tax equity, and Blackstone Credit is a lender to Aligned Data Centers, a platform BlackRock's GIP owns.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the financing page ('owned by our founders'), the CFO's description of the 2021 Blackstone money as a credit facility, and three successive Nomura- or Zions-led revolvers (USD 170 million → 300 million → 450 million).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gap: the owned fleet by ISO and technology, the sale prices of Ventura, Scatter Wash and White Tank, the Justice and Inland Empire financings, the reason Inland Empire was built at 70 percent of its contracted size, the status of the 2021 Blackstone facility, and the board of the founder-owned holding company are all unreported.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2021-05"
+  },
+  {
+   "a": "blackstone",
+   "b": "voltagrid",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Blackstone Tactical Opportunities led VoltaGrid's USD 1.0bn round with Halliburton in May 2026 — a late-stage strategic investment, not a seed.",
+     "context": "VoltaGrid was founded in 2020 and had already raised more than USD 580m across four rounds — from CPP Investments, Longbow Capital, Carnelian Energy Capital, Pilot Company and Walter Ventures — before Blackstone appeared. The structure settles the question: USD 775m of primary capital plus **USD 225m of secondary purchases from existing investors**. A seed round does not have a secondary component; a secondary component exists to give early holders liquidity.\n\nThe vehicle was Blackstone Tactical Opportunities, the firm's drawdown hybrid-capital strategy, not an infrastructure fund. Proceeds were stated as accelerating deployment of behind-the-meter generation for data centres, microgrids and industrial applications, alongside a definitive agreement to acquire Propell Energy Technology.",
+     "source": "https://www.prnewswire.com/news-releases/nrstor-ci-relaunches-as-aypa-power-301105755.html",
+     "status": "active",
+     "since": "2026-05",
+     "scale": "USD 1.0bn (USD 775m primary / USD 225m secondary)"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Blackstone Tactical Opportunities led the May 2026 round with Halliburton — a late-stage strategic investment, not a seed.",
+     "context": "VoltaGrid was founded in 2020 and had raised more than USD 580m across four prior rounds — from CPP Investments, Longbow Capital, Carnelian Energy Capital, Pilot Company and Walter Ventures — before Blackstone appeared. The structure settles any 'seed' characterisation: USD 775m of primary capital plus **USD 225m of secondary purchases from existing investors**, and a secondary component exists precisely to give early holders liquidity. The vehicle was Blackstone Tactical Opportunities, the drawdown hybrid-capital strategy, not an infrastructure fund.",
+     "source": "VoltaGrid / Blackstone PR, DCD",
+     "status": "active",
+     "since": "2026-05",
+     "scale": "USD 1.0bn (USD 775m primary / USD 225m secondary)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It owns the demand side through QTS and the supply side through Potomac Energy Center, its Invenergy position and VoltaGrid, and it lends across both through Blackstone Credit & Insurance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee minority writes to Blackstone, BlackRock, KKR and Brookfield Infrastructure over data-centre ownership and rising electricity prices — The letter's 'footprint in both energy supply and demand' framing lands on Blackstone more squarely than on any other addressee, because it owns QTS on the demand side and Potomac Energy Center, Invenergy and VoltaGrid on the supply side.",
+     "src": "https://www.banking.senate.gov/newsroom/minority",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-11",
+     "text": "$1.0B strategic equity from Blackstone Tactical Opportunities + Halliburton ($775M primary); definitive agreement to acquire Propell Energy Technology (~1,000 staff, QPac manufacturer); 7.5 GW order book through 2030 cited — The capital and manufacturing base for the order book lands in one announcement — and Halliburton converts from alliance partner to owner with board seats.",
+     "src": "VoltaGrid / Blackstone PR, DCD",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
+  },
+  {
    "a": "blattner",
    "b": "clearway-energy",
    "curated": {
@@ -7997,6 +9134,31 @@
   },
   {
    "a": "bloom-energy",
+   "b": "brookfield",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Bloom Energy supplies behind-the-meter fuel cells under a framework Brookfield describes as a seed AI-infrastructure investment for its AI fund.",
+     "context": "The original framework covered up to 1 GW of behind-the-meter power for data centres and AI factories at about USD 5bn, and Brookfield described it as 'a seed AI infrastructure investment for the Fund' when launching BAIIF. It was expanded fivefold to USD 25bn of total capex, confirmed independently in BIP's, BN's and BAM's Q2 2026 disclosures, and BIP increased its equity commitment in the same quarter.\n\n**A figure worth carrying with the relationship:** Bloom Energy's own Form 8-K filings break out related-party revenue from the Brookfield joint venture at USD 574.2m in Q4 2025, USD 373.3m in Q1 2026 and USD 2.8m in Q2 2026 — a near-total collapse in what was a record revenue quarter for Bloom. The figure is audited and counterparty-disclosed, and it appears in none of Brookfield's own channels. No source located explains the fall.",
+     "source": "https://bam.brookfield.com/press-releases/brookfield-asset-management-reports-second-quarter-2026-results",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "framework expanded from USD 5bn to USD 25bn of total capex"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Bloom Energy is the fastest workaround to the grid-interconnection queue — solid-oxide fuel cells delivering whole-data-center prime power in as little as 55 days against multi-year interconnect waits — and demand has repriced the company: revenue guidance for 2026 has been raised twice to $3.9-4.2B (~100% growth at midpoint), the Oracle master agreement reaches up to 2.8 GW (up to 2.45 GW earmarked for the Doña Ana 'Project Jupiter' campus, displacing planned gas turbines and diesel), AEP firmed a 1 GW / $2.65B order, and Brookfield expanded its financing framework fivefold to $25B.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10"
+  },
+  {
+   "a": "bloom-energy",
    "b": "caterpillar",
    "curated": {
     "b": {
@@ -8244,6 +9406,472 @@
     }
    ],
    "last": "2026-08-28"
+  },
+  {
+   "a": "brookfield",
+   "b": "compass-datacenters",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Brookfield-managed funds co-control Compass with Ontario Teachers'; BIP itself holds an approximate 15% equity-accounted interest.",
+     "context": "Brookfield Infrastructure and Ontario Teachers' Pension Plan agreed on 20 June 2023 to acquire Compass Datacenters from RedBird Capital Partners and the Azrieli Group, closing 3 October 2023. Ontario Teachers', already an investor, described Brookfield in its own release as a 'co-controlling shareholder' — the counterparty's own word, and the reason 'owns' overstates it.\n\nBIP's FY2025 Form 20-F is precise about BIP's own position: 'an approximate 15% interest in a North American hyperscale data center platform, for total consideration of approximately $400 million', carried at 15% at both 31 December 2025 and 31 December 2024 as an investment in an associate — equity-accounted, not consolidated. BIP's Q2 2023 letter puts the co-controlling stake at USD 1.35bn 'including Brookfield Infrastructure's equity of approximately $375 million', against a platform valuation reported elsewhere at about USD 5.5bn. Those are three different measures and no source reconciles them.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm",
+     "status": "active",
+     "since": "2023-10",
+     "scale": "~15% interest for about USD 400m"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Brookfield-managed funds co-control Compass with Ontario Teachers'; Brookfield Infrastructure Partners itself holds about 15%.",
+     "context": "BIP's FY2025 Form 20-F records 'an approximate 15% interest in a North American hyperscale data center platform, for total consideration of approximately $400 million', acquired 3 October 2023 and carried at 15% at both 31 December 2025 and 31 December 2024 as an **investment in an associate — equity-accounted, not consolidated**.\n\nThat is the figure that corrects 'Brookfield owns Compass'. Ontario Teachers', the pre-existing investor, called Brookfield a 'co-controlling shareholder' in its own release. The deal value is unreconciled across three incompatible figures: about USD 5.5bn and USD 5.7bn as platform valuations, against BIP's own Q2 2023 letter stating a USD 1.35bn co-controlling stake 'including Brookfield Infrastructure's equity of approximately $375 million'.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm",
+     "status": "active",
+     "since": "2023-10",
+     "scale": "~15% interest for about USD 400m"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its listed affiliates BIP and BEP are **minority co-investors** in the deals BAM's funds lead, and a dossier written around either would understate the figures by 80-90%: BIP holds about **15% of Compass Datacenters**, equity-accounted, and BEP took about USD 420m of Aypa's roughly USD 3bn equity cheque.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2023-10-03",
+     "text": "Brookfield Infrastructure acquires an approximate 15% interest in Compass Datacenters for about USD 400m — The number that corrects 'Brookfield owns Compass': co-control sits with Brookfield-managed funds alongside Ontario Teachers', and BIP's own interest is a minority stake carried as an equity-accounted associate.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Compass Datacenters is a Dallas developer-owner of single-tenant hyperscale campuses that is co-controlled by Brookfield Infrastructure and Ontario Teachers' Pension Plan (closing 3 October 2023) with KKR as an asset-level 'permanent capital' partner since December 2025; it publishes no portfolio total, names no tenant and no general contractor, funds growth through a serial asset-backed securities programme (four structured issuances in two years, the February 2026 USD 830 million deal the first hyperscale data-center ABS to carry a Moody's AAA), and in 2026 lost the Prince William Digital Gateway to litigation while winning a second ~830-acre Red Oak campus by a 4–1 midnight vote amid organised opposition.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Ownership history per the parties' releases and Brookfield's letters: RedBird Capital Partners and Ontario Teachers' (2017 majority stake per trade press), Azrieli Group (2019, 20% per trade press), then Brookfield Infrastructure and Ontario Teachers' as equal co-controlling partners from October 2023 — Brookfield Infrastructure's Q2 2023 letter priced the co-controlling stake at USD 1.35 billion including its own equity of about USD 375 million; the press figure of USD 5.5 billion including debt was never confirmed by the parties.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "At signing Compass had about 170 MW operating and 735 MW operating, contracted and reserved, 675 MW of it contracted on a 13-year weighted average term with about 60% triple-net (Brookfield Q2 2023 letter).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gap: no revenue, EBITDA, valuation, tenant identity, GC or company-stated portfolio MW exists in any fetched source; Brookfield Infrastructure's 2025–2026 letters aggregate Compass into a data segment without naming it.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Bisnow's reading of the KKR deal as capital recycling from stabilized assets into development, Compass's own 'evergreen financing partnership' framing, and Brookfield's Q1 2026 description of the ABS as funding 'contracted growth'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the company publishes no portfolio total; the Markets page sum (1,279 MW) mixes operating, 'nearing completion' and 'development' campuses; Meridian is 320 MW on the Markets page and ~500 MW of supply in the release; Goodyear is 212 MW today against a 2019 plan of 350 MW; three different offsite-fabrication percentages appear on the company's own pages; and the boilerplate on 2019–2025 releases was retro-edited to add KKR as a backer after the December 2025 deal, while the January 2026 wire release still named only Ontario Teachers' and Brookfield.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Phoenix '191 MW Tier-4 diesel-powered microgrid under development' (Hawkins, May 2025), the Storm Fern statement that it can 'island' facilities on HVO generators, and the Abbott-standards commitment to reduce load during grid stress; against this, Brookfield's 1 GW Bloom Energy framework is never tied to Compass, and no on-site prime power, PPA or battery project is disclosed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gap: no revenue, EBITDA, valuation, debt total, tenant, general contractor (except Power Construction at Hoffman Estates) or company-stated portfolio MW; Brookfield Infrastructure's 2025–2026 letters do not name Compass; the Green Finance Framework and the Ontario Teachers' 2025 annual report could not be read as text; Mississippi Today's Plant Daniel coal-extension report and six Data Center Dynamics articles were blocked.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Premise check against the coverage-plan row 'Brookfield-owned hyperscale builder; 1.8 GW delivered or under development on $16.1B planned; Joliet 1.8 GW campus': only the first clause describes Compass, and imprecisely — it is co-controlled by Brookfield Infrastructure and Ontario Teachers' with KKR at asset level; the 1.8 GW / USD 16.1 billion figures are EdgeCore's January 2026 release and Joliet is Hillwood and PowerHouse's campus (Compass's Illinois campus is Hoffman Estates, 200 MW).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Capital programme — ABS master trusts, green finance framework and the KKR partnership",
+     "date": "",
+     "text": "Sponsor context: Brookfield Infrastructure's Q4 2025 letter reports a data-center platform with '3.6 GW' of development potential, '1.2 GW of operating capacity', a '1.1 GW' contracted backlog and a '1.3 GW' land bank — figures that aggregate all of Brookfield's platforms and do not break out Compass.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-23",
+     "text": "Compass supports Energy Secretary Wright's directive to unleash backup generation ahead of Storm Fern — it can 'island' facilities, removing load from the grid during peak weather, on HVO-fuelled generators — Compass is positioning its campuses as flexible load in ERCOT's winter-peak politics; the wire release's boilerplate still named only Ontario Teachers' and Brookfield.",
+     "src": "https://www.prnewswire.com/news-releases/compass-datacenters-supports-secretary-wrights-directive-to-unleash-backup-generation-ahead-of-storm-fern-302668764.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-23"
+  },
+  {
+   "a": "brookfield",
+   "b": "crusoe",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Brookfield's relationship with Crusoe is a USD 750m credit facility, not an equity position.",
+     "context": "Confirmed first-party as a credit facility. Typed `other` rather than `portfolio` for the same reason as Blackstone's lending relationships: a facility is not a holding, and recording it as one would misstate what Brookfield owns.",
+     "source": "https://bam.brookfield.com/press-releases/brookfield-asset-management-reports-second-quarter-2026-results",
+     "status": "active",
+     "scale": "USD 750m credit facility"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "brookfield",
+   "b": "digital-realty",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Joint-venture partner in Ascenty (Latin America) and Digital Connexion (India).",
+     "context": "Ascenty is a joint venture with Digital Realty described by Brookfield as the leading data-centre infrastructure company in Latin America; BIP's associate interest is 12%. Digital Connexion is an Indian joint venture with Digital Realty and Reliance Jio, operating under the brand 'Digital Connexion: A Brookfield, Jio and Digital Realty Company', with BIP's associate interest at 8% and active developments in Chennai and Mumbai.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "brookfield",
+   "b": "edgecore",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Premise check against the coverage-plan row 'Brookfield-owned hyperscale builder; 1.8 GW delivered or under development on $16.1B planned; Joliet 1.8 GW campus': only the middle clause describes EdgeCore, and it is EdgeCore's own January 2026 wording — true as stated then, already superseded by the site's 2.27+ GW and USD 7.4 billion; EdgeCore is Partners Group-owned (its only Brookfield link is the purchase of Mesa land from a Brookfield Properties affiliate) and has no Illinois site.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-11",
+     "text": "Mesa Planning & Zoning approves a revised expansion: 1,236,960 sq ft in two buildings, down from 2.1 million sq ft and three, 'to accommodate an SRP switchyard expansion'; the 43.87 acres were bought in May 2025 for USD 43.95 million from a Brookfield Properties affiliate — The utility's need for switchyard land cost EdgeCore roughly 800,000 sq ft of building — a concrete example of power infrastructure setting the campus footprint.",
+     "src": "https://realestatedaily-news.com/edgecore-returns-with-revised-mesa-data-center-plan/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-20",
+     "text": "Metro Phoenix market expanded to '450+ MW' with 43.87 additional acres; SRP CEO Jim Pratt quoted; PH01 Green Globes, PH02/PH03 'Designed to Earn ENERGY STAR' — Mesa is the anchor market: three buildings built or building and another 250+ MW planned on land bought from Brookfield Properties.",
+     "src": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-expansion-of-its-metro-phoenix-data-center-market-to-over-450-mw",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-11"
+  },
+  {
+   "a": "brookfield",
+   "b": "excelsior-energy-capital",
+   "evid": [
+    {
+     "where": "Capabilities · Closed-end renewable infrastructure funds (Fund I and Fund II)",
+     "date": "",
+     "text": "A middle-market owner-operator rather than a mega-fund: Fund I and Fund II together are roughly USD 1.5 billion of equity against Brookfield, Blackstone or BlackRock GIP vehicles an order of magnitude larger.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "brookfield",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Google is the counterparty to the Hydro Framework Agreement for up to 3,000 MW of carbon-free hydroelectric capacity across the United States.",
+     "context": "Announced 15 July 2025 and described by the parties as the world's largest corporate clean-power deal for hydroelectricity. The first contracts cover Holtwood and Safe Harbor in Pennsylvania — more than USD 3bn of power and 670 MW of capacity on 20-year power purchase agreements supporting Google's PJM operations. Brookfield acquired Holtwood's two hydro stations, 296 MW, in 2016, so this monetises a fleet it has held for a decade.",
+     "source": "https://bep.brookfield.com/press-releases/bep/brookfield-and-google-sign-hydro-framework-agreement-deliver-3000-mw-homegrown",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "up to 3,000 MW; first contracts >USD 3bn / 670 MW"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Renewable Power & Transition (marketed as 'Energy')",
+     "date": "",
+     "text": "The Microsoft framework is the largest corporate renewable agreement in the corpus by nameplate, and the Google hydro agreement is described by the parties as the world's largest corporate clean-power deal for hydroelectricity.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-15",
+     "text": "Brookfield and Google sign a Hydro Framework Agreement for up to 3,000 MW of carbon-free hydroelectric capacity — Described by the parties as the world's largest corporate clean-power deal for hydroelectricity; the first contracts are Holtwood and Safe Harbor in Pennsylvania at more than USD 3bn and 670 MW on 20-year terms.",
+     "src": "https://bep.brookfield.com/press-releases/bep/brookfield-and-google-sign-hydro-framework-agreement-deliver-3000-mw-homegrown",
+     "from": "a"
+    }
+   ],
+   "last": "2025-07-15"
+  },
+  {
+   "a": "brookfield",
+   "b": "macquarie",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Peers in infrastructure, and the two rankings that measure them disagree about which is larger.",
+     "context": "Infrastructure Investor's 2026 edition, measuring five-year capital raised, ranks Brookfield third at USD 99.1bn and Macquarie Asset Management fourth at USD 87.9bn. IPE Real Assets' table for the prior year, measuring assets under management, ranks Macquarie first and Brookfield second, both above USD 300bn. One measures flow and the other stock; nothing reconciles them and both are carried. The two also sit on opposite sides of the same asset class in this corpus — Brookfield holds its data-centre platforms through minority equity-accounted interests, Macquarie exited its largest at eight years.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Peers in infrastructure whose relative size depends entirely on which ranking is used.",
+     "context": "Infrastructure Investor's 2026 edition, measuring five-year capital raised, ranks Brookfield third at USD 99.1bn and Macquarie fourth at USD 87.9bn. IPE Real Assets' table for the prior year, measuring assets under management, ranks Macquarie first and Brookfield second, both above USD 300bn. One measures flow and the other stock; nothing reconciles them and both are carried.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition ranks Brookfield **third at USD 99.1bn** of five-year infrastructure fundraising, behind BlackRock (USD 113.4bn) and KKR (USD 100.5bn) and ahead of Macquarie (USD 87.9bn) and Blackstone (USD 45.7bn).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Infrastructure",
+     "date": "",
+     "text": "Brookfield raises roughly twice as much infrastructure capital as Blackstone and about 13% more than Macquarie on this measure — but IPE Real Assets' AUM table for the prior year put **Macquarie first and Brookfield second**, both above USD 300bn.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition puts Macquarie Asset Management fourth at USD 87.9bn of five-year capital raised, behind BlackRock, KKR and Brookfield; IPE Real Assets' table for the prior year puts it first by assets under management.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Macquarie Asset Management (MAM)",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition ranks Macquarie Asset Management **fourth at USD 87.9bn** of five-year infrastructure capital raised, behind BlackRock, KKR and Brookfield — while IPE Real Assets' table for the prior year ranks it **first by assets under management**.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "brookfield",
+   "b": "mgx",
+   "evid": [
+    {
+     "where": "Capabilities · MGX Fund I — the USD 49 billion AI fund",
+     "date": "",
+     "text": "Comparable pools of AI-infrastructure capital in the corpus are AIP itself (USD 30 billion equity / USD 100 billion with debt), Brookfield's and Blackstone's infrastructure funds, and SoftBank's Vision Funds; none is a state AI champion in the way MGX describes itself.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP) and Aligned Data Centers",
+     "date": "",
+     "text": "AIP is the vehicle through which MGX competes with Brookfield, Blackstone/QTS, DigitalBridge and KKR for hyperscale landlords; Aligned's 6.4 GW makes the consortium one of the largest owners of US data-centre capacity after one transaction.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "brookfield",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft is the counterparty to Brookfield Renewable's global renewable energy framework agreement for over 10.5 GW between 2026 and 2030.",
+     "context": "Announced 1 May 2024 by Brookfield Asset Management together with Brookfield Renewable and filed as a BEP Form 6-K exhibit, covering the United States and Europe with potential extension to Asia-Pacific, India and Latin America. It is a framework, not delivered capacity: the build window opens in 2026 and no party has published a contracted-or-delivered figure against the 10.5 GW. Microsoft's own SEC filings contain no full-text mention of Brookfield outside incidental benefit-plan filings, so the arrangement is legible only from Brookfield's side.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1533232/000117184324002391/exh_991.htm",
+     "status": "announced",
+     "since": "2024-05",
+     "scale": "over 10.5 GW framework"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that **the Microsoft 10.5 GW framework is materially undelivered and that no party publishes the figure that would settle it**.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No contracted-or-delivered megawatt figure against the 10.5 GW has been published by either party, and Microsoft's own SEC filings contain no full-text mention of Brookfield outside incidental benefit-plan filings.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Renewable Power & Transition (marketed as 'Energy')",
+     "date": "",
+     "text": "The Microsoft framework is the largest corporate renewable agreement in the corpus by nameplate, and the Google hydro agreement is described by the parties as the world's largest corporate clean-power deal for hydroelectricity.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Renewable Power & Transition (marketed as 'Energy')",
+     "date": "",
+     "text": "Both are frameworks rather than delivered capacity: the Microsoft build window **starts** in 2026, and no party publishes a contracted-or-delivered figure against the 10.5 GW.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Renewable Power & Transition (marketed as 'Energy')",
+     "date": "",
+     "text": "Notably, Microsoft's own SEC filings contain no full-text mention of Brookfield outside incidental benefit-plan filings.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-05-01",
+     "text": "Brookfield Asset Management and Brookfield Renewable sign a framework agreement with Microsoft for over 10.5 GW of new renewable capacity between 2026 and 2030 — The largest corporate renewable framework in this corpus by nameplate — and, two years on, one whose build window has only just opened and against which no delivered figure is published.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1533232/000117184324002391/exh_991.htm",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The Fairwater Atlanta design deliberately runs on resilient grid power with no on-site generators or UPS (4x9 availability at 3x9 cost), meaning Microsoft buys firmness upstream: TMI/Crane nuclear (835 MW), the record 10.5 GW Brookfield renewables framework, a ~40 GW clean-energy portfolio, and fusion options.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-05-01"
+  },
+  {
+   "a": "brookfield",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "NVIDIA is a founding partner and investor in the Brookfield AI Infrastructure Fund, and named Brookfield one of six capital partners in its August 2026 financing programme.",
+     "context": "NVIDIA and the Kuwait Investment Authority were named investors and founding partners at BAIIF's launch on 19 November 2025, with USD 5bn committed against a USD 10bn equity target. Brookfield simultaneously launched Radiant, its own AI cloud service and a new NVIDIA Cloud Partner building AI factories on NVIDIA's DSX reference design. On 10 August 2026 NVIDIA named Brookfield with Apollo, BlackRock, Blackstone, Goldman Sachs and KKR in a programme to mobilise over USD 500bn — six firms, no per-firm allocation.",
+     "source": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "founding partner of a USD 10bn fund; six-firm >USD 500bn programme"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Every marquee announcement in this corpus's period (the USD 100bn AI infrastructure programme with NVIDIA and the Kuwait Investment Authority, France, Sweden, Qatar, Korea, Paducah and Aypa Power) is published under BAM's name and deployed through BAM-managed funds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "BAIIF targets USD 10bn of equity and had USD 5bn committed at first close, including Brookfield's own money alongside NVIDIA's and the Kuwait Investment Authority's.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Korea arrangement is described by NVIDIA as a non-binding term sheet; the France upsize from €20bn to €30bn appears only as a line in an earnings release with no standalone announcement located.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA names Brookfield one of six capital partners in a programme to mobilise over USD 500bn for AI infrastructure — Six firms, no per-firm allocation, and a memorandum rather than a commitment — the figure describes the programme, not Brookfield's share. Blackstone is named in the same release.",
+     "src": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-27",
+     "text": "NAVER, NVIDIA and Brookfield agree to grow Korea's national AI factory from 55 MW to 200 MW by 2028 — Brookfield would fund up to USD 9bn as NAVER's exclusive capital partner — but NVIDIA's own account describes a non-binding term sheet, so this is an intention rather than a commitment.",
+     "src": "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-19",
+     "text": "Brookfield launches a USD 100bn AI infrastructure programme anchored by the Brookfield AI Infrastructure Fund, with NVIDIA and the Kuwait Investment Authority as founding partners — The USD 100bn is the programme's asset-acquisition ambition including debt and co-investment; the fund itself targets USD 10bn of equity and had USD 5bn committed. Conflating the two overstates the fund tenfold.",
+     "src": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "brookfield",
+   "b": "powerhouse-data-centers",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Premise check against the coverage-plan row 'Brookfield-owned hyperscale builder; 1.8 GW delivered or under development on $16.1B planned; Joliet 1.8 GW campus': only the last clause describes PowerHouse, and 'campus' is a plan — 1.8 GW is Joliet's ceiling on an annexed but unbuilt site whose utility contract has been cancelled; PowerHouse is wholly owned by AREP (no Brookfield, Ontario Teachers' or Partners Group link) and neither '1.8 GW delivered or under development' nor 'USD 16.1 billion' appears in any PowerHouse source (they are EdgeCore's figures).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "brookfield",
+   "b": "stack-infrastructure",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Brookfield is named among reported suitors for Blue Owl's STACK Asia-Pacific portfolio — a report, not a transaction.",
+     "context": "Bloomberg-sourced reporting from June 2026 places Brookfield among reported bidders for STACK's Tokyo, Osaka, Sydney, Melbourne and Johor portfolio, alongside the AI Infrastructure Partnership, IFM, KKR and DigitalBridge, in a process that could exceed USD 30bn. No party has confirmed. Typed `other` because a reported interest is not an ownership, customer or supplier relationship, and recorded here only so a reader of STACK's dossier can see the claim has been checked from this side and remains unconfirmed.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "announced"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · APAC platform (reported sale process)",
+     "date": "",
+     "text": "Per Bloomberg-sourced reporting (June 2026), Blue Owl is preparing a sale of the APAC portfolio that could exceed $30B, with the BlackRock/Microsoft/MGX-backed AI Infrastructure Partnership, Brookfield, IFM, KKR and DigitalBridge among reported suitors.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-25",
+     "text": "Bloomberg-sourced reports: Blue Owl preparing a sale of STACK's APAC data-center portfolio (Tokyo, Osaka, Sydney, Melbourne, Johor) that could exceed $30B — the BlackRock/Microsoft/MGX-backed AIP, Brookfield, IFM, KKR and DigitalBridge among reported suitors, process as soon as July — The sponsor is monetizing an entire region at AI-era marks — a whole-platform exit lane that reframes every regional buildout as inventory.",
+     "src": "https://www.thestar.com.my/business/business-news/2026/06/25/blackrock-backed-aip-eyes-stack-data-centres",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-25"
   },
   {
    "a": "burns-mcdonnell",
@@ -21309,6 +22937,21 @@
   },
   {
    "a": "esvolta",
+   "b": "macquarie",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "esVolta is held through Macquarie's Green Investment Group.",
+     "context": "The Green Investment Group's location inside Macquarie has moved twice — Macquarie Capital from 2017, Macquarie Asset Management from 2022, and with the balance-sheet assets moved to a Macquarie Group corporate portfolio on 1 September 2025 — so the operating group that owns this relationship depends on the date of the source describing it.",
+     "source": "https://www.greeninvestmentgroup.com/en.html",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "esvolta",
    "b": "nrg-energy",
    "evid": [
     {
@@ -22149,6 +23792,51 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "fermi-america",
+   "b": "macquarie",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Macquarie provided Fermi America with preferred equity and a senior loan from Commodities and Global Markets.",
+     "context": "A financing rather than a platform holding, and split across instruments: preferred equity alongside a senior loan from the Commodities and Global Markets group. Typed `other` for the same reason as Fluidstack — the substance is credit and structured capital, not a shareholding, and typing it `investor` would put Macquarie in Fermi's ownership when it is in its capital stack.",
+     "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html",
+     "status": "active",
+     "scale": "USD 100m preferred equity plus a USD 250m loan"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-10",
+     "text": "MUFG $500 million equipment warehouse facility (SOFR + 4.0%, maturing August 2027); Macquarie's $100 million term loan refinanced — The senior lender's facility carries an amortisation step-up if no lease of at least 400 MW exists by November 2026.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026014270/ea0276274-8k_fermi.htm",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Macquarie Asset Management holds Aligned, AirTrunk, VIRTUS, Netrality and Applied Digital; **Macquarie Capital** held Prime Data Centers, Onivia, PhilTower and CloudExtel; **Commodities and Global Markets** provides the Fluidstack and Fermi America debt.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its two largest data-centre positions have both been exited — AirTrunk to Blackstone in 2024 and Aligned to a BlackRock/MGX consortium in 2026 — and its live appearances in other dossiers are Fluidstack's GPU-secured facility, Fermi America's senior loan, Applied Digital's preferred equity and Trina Storage's tax-equity partnership.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Fermi America is a senior loan alongside preferred equity.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-02-10"
   },
   {
    "a": "fermi-america",
@@ -24153,6 +25841,59 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "fluidstack",
+   "b": "macquarie",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Commodities and Global Markets provided Fluidstack's GPU-secured senior debt facility — lending, not ownership.",
+     "context": "Announced 1 April 2025 as a strategic GPU financing arrangement to supply GPUs to AI research labs across Europe, with the financing structure secured by the GPUs themselves and the equipment deployed in an Icelandic data centre. The amount was not stated by either party. The lender is the Specialised and Asset Finance division of Commodities and Global Markets — a third operating group, neither Macquarie Asset Management nor Macquarie Capital. Typed `other` because asset-backed lending is neither an equity holding nor a customer or supplier relationship.",
+     "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html",
+     "status": "active",
+     "since": "2025-04",
+     "scale": "senior facility secured on NVIDIA GPUs"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Founded in 2017 at Oxford by Gary Wu, César Maklary and Jamie Cox as a GPU marketplace, Fluidstack ran H100/H200 clusters for Mistral, Poolside, Black Forest Labs and Character.AI in third-party European colocation, financed GPUs through a Macquarie senior facility secured on the chips (April 2025), and signed a €10 billion, 1 GW French campus memorandum at the AI Action Summit (February 2025) that it abandoned in March 2026 as it pivoted to the United States.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · GPU and capacity financing — Macquarie asset-backed facility, capacity purchases from smaller neoclouds, the Broadcom–Apollo–Blackstone chip vehicle",
+     "date": "",
+     "text": "The capital side of the model: GPUs financed against themselves (Macquarie, 2025), GPU capacity bought in from smaller providers when needed (a two-year, USD 127 million contract with Boost Run, December 2025), and, for the Anthropic sites, TPUs bought by a special-purpose vehicle and leased to Anthropic rather than to Fluidstack (the Broadcom–Apollo–Blackstone platform, June 2026, reported at about USD 35 billion for the first tranche).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Macquarie Asset Management holds Aligned, AirTrunk, VIRTUS, Netrality and Applied Digital; **Macquarie Capital** held Prime Data Centers, Onivia, PhilTower and CloudExtel; **Commodities and Global Markets** provides the Fluidstack and Fermi America debt.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its two largest data-centre positions have both been exited — AirTrunk to Blackstone in 2024 and Aligned to a BlackRock/MGX consortium in 2026 — and its live appearances in other dossiers are Fluidstack's GPU-secured facility, Fermi America's senior loan, Applied Digital's preferred equity and Trina Storage's tax-equity partnership.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Commodities and Global Markets (CGM)",
+     "date": "",
+     "text": "The corpus records the Fluidstack facility as 'secured by the GPUs themselves' — asset-backed lending, not an equity position.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-04"
   },
   {
    "a": "fluidstack",
@@ -29817,6 +31558,27 @@
   },
   {
    "a": "hut-8",
+   "b": "macquarie",
+   "evid": [
+    {
+     "where": "Capabilities · Power and development pipeline — 710 MW under management and about 8.7 GW in the pipeline",
+     "date": "",
+     "text": "Owned generation is now **zero**: the entire fleet was the Far North JV — Iroquois Falls and Kingston at 120 MW each and North Bay and Kapuskasing at 35 MW each — held 80.1% with Macquarie, acquired out of a court-approved stalking-horse bid in February 2024 and sold to TransAlta on 2 February 2026 for a gain of USD 34.7m.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-02-15",
+     "text": "Completes the acquisition of four Ontario power generation facilities totalling 310 MW in partnership with Macquarie — Acquired through a court-approved stalking-horse bid and recorded with a USD 3.1m gain on bargain purchase; sold two years later for a USD 34.7m gain.",
+     "src": "https://www.hut8.com/news-insights/press-releases",
+     "from": "a"
+    }
+   ],
+   "last": "2024-02-15"
+  },
+  {
+   "a": "hut-8",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -30973,6 +32735,20 @@
      "where": "Capabilities · IREN Cloud™ (AI Cloud services)",
      "date": "",
      "text": "The sharpest quality dispute in the cohort: SemiAnalysis ClusterMAX rates IREN 'Underperforming' (vs CoreWeave Platinum, Nebius Gold, Lambda Silver) while NVIDIA's own programs certify it — the Mirantis acquisition (>1,500 enterprise customers, k0rdent AI platform, NVIDIA DSX OS integration) is the answer to the software-maturity gap.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "iren",
+   "b": "macquarie",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Founded 2018 in Sydney by ex-Macquarie brothers Daniel and Will Roberts as renewable-powered bitcoin miner Iris Energy; peaked at 50 EH/s (June 2025), then began decommissioning miners for GPUs — $172M of ASIC impairments across two quarters, and Bitcoin has vanished from the company boilerplate.",
      "src": "",
      "from": "a"
     }
@@ -32246,6 +34022,34 @@
   },
   {
    "a": "lightsource-bp",
+   "b": "macquarie",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The dominant fact about the account is ownership volatility: bp's renewables retreat turned its 2024 acquisition into a 2026 disposal process, the Woolooga asset itself may have moved to Aula Energy (Macquarie) in the Feb 2026 1 GW portfolio sale, and a Kuwaiti-consortium acquisition would reset procurement strategy entirely.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · APAC hybrid & storage platform (where the Hithium relationship lives)",
+     "date": "",
+     "text": "Woolooga solar) plus options over ~800 MW/800 MWh of co-located BESS sold to Aula Energy (Macquarie); retained APAC pipeline 9.5 GW+.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-23",
+     "text": "1,037 MWdc Australian operating solar portfolio (incl. Woolooga) + options over ~800 MWh of co-located BESS sold to Aula Energy (Macquarie); APAC strategy restated as hybrids for 'data centre and AI-driven demand'; follows the FIRB-blocked ~A$800M sale to Beijing Energy International — Two lessons: Australian scrutiny bites on Chinese asset OWNERSHIP (BJEI blocked) while Chinese SUPPLY proceeds unimpeded — and the entity that signed Hithium's Woolooga contract may no longer own the asset.",
+     "src": "pv magazine Australia / ESN / ess-news",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-23"
+  },
+  {
+   "a": "lightsource-bp",
    "b": "mccarthy",
    "curated": {
     "a": {
@@ -32756,6 +34560,196 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "macquarie",
+   "b": "mgx",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "MGX was one of the buyers of Aligned Data Centers from Macquarie-managed funds — a transaction counterparty, not an ongoing relationship.",
+     "context": "MGX acquired Aligned alongside the AI Infrastructure Partnership and BlackRock's Global Infrastructure Partners, closing 21 July 2026. The European Commission's clearance for the transaction, Case M.12259, names only Global Infrastructure Management LLC and MGX Fund Management Limited as acquiring joint control — the AI Infrastructure Partnership appears in the marketing framing but not as a controlling party, and Microsoft, NVIDIA and xAI are AIP members rather than acquirers. Typed `other` because the two firms stood on opposite sides of a single completed transaction and neither invests in nor supplies the other.",
+     "source": "https://ec.europa.eu/competition/mergers/cases1/202604/M_12259_10869557_118_3.pdf",
+     "status": "historical",
+     "since": "2026-07"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its two largest data-centre positions have both been exited — AirTrunk to Blackstone in 2024 and Aligned to a BlackRock/MGX consortium in 2026 — and its live appearances in other dossiers are Fluidstack's GPU-secured facility, Fermi America's senior loan, Applied Digital's preferred equity and Trina Storage's tax-equity partnership.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-19",
+     "text": "European Commission clears the Aligned acquisition under Article 6(1)(b) — Case M.12259, GIM / MGX / Aligned — The clearance names only two acquirers of joint control, BlackRock's Global Infrastructure Management and MGX, and does not mention Macquarie at all — so the regulatory record cannot corroborate the seller's identity.",
+     "src": "https://ec.europa.eu/competition/mergers/cases1/202604/M_12259_10869557_118_3.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX and BlackRock's GIP agree to acquire all equity in Aligned Data Centers from funds managed by Macquarie Asset Management — Announced with guidance to close in the first half of 2026; it closed on 21 July 2026, and no source explains the slip.",
+     "src": "https://aligneddc.com/press-release/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP) and Aligned Data Centers",
+     "date": "",
+     "text": "AIP's first investment — with MGX and GIP as direct co-buyers — was Aligned Data Centers: 100% of the equity from Macquarie Asset Management funds at about USD 40 billion enterprise value, announced 15 October 2025 and closed 21 July 2026 with 'an additional $5 billion of growth capital' committed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "AIP, MGX and BlackRock's GIP close the acquisition of 100% of Aligned Data Centers from Macquarie-managed funds at about USD 40 billion enterprise value — 51 campuses, more than 6.4 GW operational and planned, USD 5 billion of additional growth capital committed; the largest data-centre deal on record — MGX becomes an owner of the landlord its portfolio labs lease from; AIP's first investment is also its thesis in one asset.",
+     "src": "https://www.mgx.ae/news-insights/aip-mgx-and-blackrocks-gip-close-acquisition-aligned-data-centers",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-21"
+  },
+  {
+   "a": "macquarie",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "NVIDIA GPUs are the collateral in the Fluidstack facility; the relationship is to the hardware as security, not to NVIDIA as a counterparty.",
+     "context": "Recorded so a reader does not infer a Macquarie-NVIDIA commercial relationship from the Fluidstack financing. Macquarie's exposure is to GPUs as an asset class — it lent against them and they were deployed in Iceland — and no source describes a direct arrangement between the two firms. Typed `other` and carried deliberately as a negative-shaped edge.",
+     "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "macquarie",
+   "b": "prime-data-centers",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Macquarie Capital — not Macquarie Asset Management — held a joint-control interest in Prime Data Centers, and sold its remaining stake during FY26.",
+     "context": "The position originated in Macquarie Capital's June 2021 equity partnership with Prime, framed at the time as more than USD 5bn of capital over ten years. It was held through **Wholesale DC Asset Holdings LLC**, which the European Commission describes as a holding company within Macquarie through which it holds its interest in Prime and attributes to Macquarie Group Limited.\n\nThe Commission's decision in Case M.11843, dated 18 March 2025, records **Ares joining an existing joint venture**: Prime Data Centers LLC was already jointly controlled by Wholesale DC Asset Holdings and Data Realty Group, and Ares was the party obtaining joint control. The target is Prime Data Centers LLC; Data Realty Holding Corp sits on the acquirer side as parent of Data Realty Group, not as the entity being controlled. **The position is now historical**: Macquarie completed the sale of its remaining Prime stake during FY26.",
+     "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+     "status": "historical",
+     "since": "2021-06"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Macquarie Capital held a joint-control interest in Prime from June 2021 and sold its remaining stake during Macquarie's FY26.",
+     "context": "The position originated in Macquarie Capital's June 2021 equity partnership — not Macquarie Asset Management — and was held through Wholesale DC Asset Holdings LLC, which the European Commission describes as a holding company within Macquarie and attributes to Macquarie Group Limited.\n\nThe Commission's decision in Case M.11843 records **Ares joining an existing joint venture**: Prime Data Centers LLC was already jointly controlled by Wholesale DC Asset Holdings and Data Realty Group, and Ares was the party obtaining joint control. The target is Prime Data Centers LLC; Data Realty Holding Corp sits on the acquirer side as parent of Data Realty Group.\n\n**Status corrected 2026-09-06:** Macquarie completed the sale of its remaining Prime stake during its FY26 (year ended 31 March 2026). A reader encountering the M.11843 clearance alone would wrongly infer Macquarie is still a joint controller.",
+     "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+     "status": "historical",
+     "since": "2021-06"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Macquarie Asset Management holds Aligned, AirTrunk, VIRTUS, Netrality and Applied Digital; **Macquarie Capital** held Prime Data Centers, Onivia, PhilTower and CloudExtel; **Commodities and Global Markets** provides the Fluidstack and Fermi America debt.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Macquarie Capital",
+     "date": "",
+     "text": "This is the arm that held Prime Data Centers, and it is not MAM.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-18",
+     "text": "European Commission clears Ares joining the existing Macquarie / Data Realty Group joint control of Prime Data Centers (Case M.11843) — The decision records Ares JOINING a joint venture Macquarie and Data Realty Group already controlled — it is not Macquarie acquiring Prime, and the Macquarie entity is Macquarie Capital via Wholesale DC Asset Holdings LLC.",
+     "src": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its capital came in layers: Macquarie Capital's June 2021 equity partnership (a 'USD 5 billion over the next 10 years' plan), Ares Management and Siemens Financial Services as later institutional investors, joint control by Macquarie, Ares and Data Realty Group cleared by the European Commission in March 2025 (Case M.11843), a Snowhawk/Nuveen strategic investment in July 2025 during a reported USD 2 billion raise, and Grain Management's April 2026 preferred equity in Data Realty Holding Corp., 'the founding and controlling shareholder'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The mid-tier build-to-suit developer competing for the same hyperscale and neocloud tenants as the F7 landlords, and the corpus's clearest recapitalisation case: a founder's platform that has taken Macquarie, Ares, Siemens, Snowhawk/Nuveen and Grain money in five rounds, shelved a bond, and financed its one fully leased campus with project-level high-yield debt.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that Prime's model is recapitalisation as much as development: five equity rounds (Macquarie 2021, Ares and Siemens, Snowhawk/Nuveen 2025, Grain 2026 at the parent), an acquisition line, project-level high-yield debt on the one fully leased campus, and a bond that failed — against about 151 MW operating after nine years.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-31",
+     "text": "Snowhawk LP and Nuveen make a strategic equity investment alongside 'existing institutional investors' Macquarie Capital, Ares Management and Siemens Financial Services; Prime is 'raising more than $2 billion this year' on a 'four gigawatts (GW) roadmap' — The fourth investor group; the USD 2 billion raise had been delayed from Q1 by lease negotiations per Infralogic.",
+     "src": "https://primedatacenters.com/news/snowhawk-and-nuveen-make-strategic-investment-in-prime-data-centers/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-19",
+     "text": "European Commission clears joint control of Prime by Ares, Macquarie (via WDCAH) and Data Realty Group (Case M.11843, simplified procedure) — The only regulatory record of who controls the company.",
+     "src": "https://www.marketscreener.com/quote/stock/MACQUARIE-GROUP-LIMITED-6491460/news/European-Commission-OKs-Prime-Data-Centers-Takeover-by-Ares-Macquarie-Data-Realty-49376294/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-07-31"
+  },
+  {
+   "a": "macquarie",
+   "b": "sargent-lundy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "First, the visible independent-engineer and owner's-engineer record: owner's engineer on Ørsted's Eleven Mile (300 MW solar plus 300 MW / 1,200 MWh BESS, Arizona), independent engineer on Leeward's Big Plain and Oak Trail solar financings and on Lotus Infrastructure's Ten West Link 500 kV line, technical adviser to EWEC on the UAE's first 400 MW / 800 MWh BESS tender, independent engineer for EVgo's DOE loan guarantee of up to USD 1.05 billion and for Macquarie's USD 2.4 billion Dow asset acquisition — 'nearly 25 gigawatts of solar, wind, battery storage, and other clean energy technologies' in owner's and independent engineering, 'over 7 GW' of storage experience.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "macquarie",
+   "b": "trina-storage",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its two largest data-centre positions have both been exited — AirTrunk to Blackstone in 2024 and Aligned to a BlackRock/MGX consortium in 2026 — and its live appearances in other dossiers are Fluidstack's GPU-secured facility, Fermi America's senior loan, Applied Digital's preferred equity and Trina Storage's tax-equity partnership.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Trina Storage's Houston project records Macquarie as a tax-equity partner.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-23",
+     "text": "371 MWh Houston BESS with FlexGen as integrator (HybridOS EMS) for developer SMT Energy — Trina Storage's largest North American grid-scale deployment; Macquarie and KeyBank as equity/tax partners — The flagship US reference — notably delivered through a US integrator wrapping Trina DC blocks, the channel structure FEOC pressure favors.",
+     "src": "Company PR via PRNewswire, 2025-04-23",
+     "from": "b"
+    }
+   ],
+   "last": "2025-04-23"
   },
   {
    "a": "mainspring-energy",

@@ -259,6 +259,11 @@
       ]
     },
     {
+      "slug": "annuity-style-income",
+      "term": "annuity-style income",
+      "def": "Revenue a financial firm expects to repeat each year — management fees, lending margins, service charges. Contrasted with income that depends on market conditions, and valued more highly because it is predictable."
+    },
+    {
       "slug": "anti-islanding",
       "term": "anti-islanding",
       "def": "Protection that stops an on-site generator from continuing to energize a utility line after the utility has disconnected. It exists to protect line workers, and it is why a set that runs in parallel with the grid needs more relaying than one that only ever runs on a dead bus.",
@@ -346,6 +351,11 @@
       ]
     },
     {
+      "slug": "arranger",
+      "term": "arranger",
+      "def": "The institution that structures and syndicates a loan or financing, often without holding much of it afterwards. Being named as arranger on a deal says nothing about whether the firm owns any of the asset."
+    },
+    {
       "slug": "as-converted",
       "term": "as-converted",
       "def": "A way of stating a convertible holder's stake as the percentage they would own if they converted into ordinary shares today. It is a point-in-time figure: if the instrument accrues paid-in-kind dividends, the as-converted share drifts upward over time.",
@@ -384,6 +394,11 @@
       ]
     },
     {
+      "slug": "asset-backed-lending",
+      "term": "asset-backed lending",
+      "def": "Lending secured on specific physical assets rather than on a company's general creditworthiness — the lender can take the equipment if the borrower fails. Financing GPUs against the GPUs themselves is a pure example."
+    },
+    {
       "slug": "asset-manager",
       "term": "asset manager",
       "def": "A firm that invests other people's money — pension funds, insurers, sovereign funds — through funds it manages for a fee. Goldman Sachs Asset Management is the arm of the bank that runs such funds; when it 'owns' GridStor, the owners are really the fund's investors.",
@@ -419,6 +434,14 @@
       "slug": "augmentation",
       "term": "augmentation",
       "def": "Adding new battery capacity to an operating storage plant to offset degradation, keeping the plant at its contracted capacity over its life."
+    },
+    {
+      "slug": "authorised-deposit-taking-institution",
+      "term": "authorised deposit-taking institution",
+      "def": "An Australian bank licensed to accept deposits and supervised by the prudential regulator. Other companies in the same corporate group are not banks, and their obligations are not the bank's.",
+      "aliases": [
+        "ADI"
+      ]
     },
     {
       "slug": "automatic-voltage-regulator",
@@ -727,6 +750,11 @@
         "temporary power plant",
         "self-generation project"
       ]
+    },
+    {
+      "slug": "bring-your-own-power",
+      "term": "bring-your-own-power",
+      "def": "Building dedicated generation for a data centre rather than waiting for the grid to supply it. It turns a multi-year interconnection queue into a construction problem the developer controls."
     },
     {
       "slug": "brownfield",
@@ -2293,6 +2321,14 @@
       ]
     },
     {
+      "slug": "distributable-earnings",
+      "term": "distributable earnings",
+      "def": "An asset manager's own measure of cash profit available to pay out to shareholders — fee-related earnings plus realised performance income and investment gains, less cash costs. It is not a standard accounting measure, so two managers can define it slightly differently.",
+      "aliases": [
+        "DE"
+      ]
+    },
+    {
       "slug": "distributed-generation-resource",
       "term": "distributed generation resource",
       "def": "ERCOT's registration class for a generator or battery connected to a distribution system rather than the transmission grid — typically under 10 MW. It follows a lighter interconnection path than a transmission-connected resource, which is why developers size projects at 9.9 MW.",
@@ -2446,6 +2482,11 @@
       "slug": "dry-cooler",
       "term": "dry cooler",
       "def": "A closed-loop finned coil that rejects heat from a fluid straight to ambient air, with no evaporation and no water. It trades efficiency and hot-day capacity for using no water at all."
+    },
+    {
+      "slug": "dry-powder",
+      "term": "dry powder",
+      "def": "Money investors have committed to a fund that the manager has not yet invested. It earns no fee in most structures until it is deployed, so a large balance is both a war chest and a drag."
     },
     {
       "slug": "dry-type-transformer",
@@ -2861,6 +2902,14 @@
       ]
     },
     {
+      "slug": "equity-under-management",
+      "term": "equity under management",
+      "def": "The investor capital a manager has raised and can deploy, measured before any borrowing. It sits below assets under management, which counts the borrowed money and the assets bought with it.",
+      "aliases": [
+        "EUM"
+      ]
+    },
+    {
       "slug": "ercot",
       "term": "ERCOT",
       "def": "The Texas grid operator. An energy-only market with its own interconnection process — faster to connect, more volatile to operate in — which is why so much US storage and data-center buildout lands in Texas."
@@ -3053,6 +3102,23 @@
       "def": "The current that flows into a short circuit before a breaker clears it — many times the normal load current. A protection scheme needs enough of it to be sure the right breaker trips fast: a rotating machine delivers a large surge from its stored magnetic energy, while an inverter can supply only a little more than its rating, which changes how the downstream protection must be designed."
     },
     {
+      "slug": "fee-earning-aum",
+      "term": "fee-earning AUM",
+      "def": "The portion of assets under management that actually pays a management fee. Total AUM includes money committed but not yet drawn, co-investment that pays nothing, and assets in wind-down — so fee-earning AUM is the number that drives revenue.",
+      "aliases": [
+        "fee-paying AUM",
+        "FEAUM"
+      ]
+    },
+    {
+      "slug": "fee-related-earnings",
+      "term": "fee-related earnings",
+      "def": "The profit an asset manager makes from management fees alone, before any share of investment gains. It is the recurring, predictable half of a manager's earnings, and analysts weight it more heavily than performance income because it does not depend on selling anything.",
+      "aliases": [
+        "FRE"
+      ]
+    },
+    {
       "slug": "feoc",
       "term": "FEOC",
       "def": "Foreign entity of concern: a US legal designation (tied to China, Russia, Iran, and North Korea) that disqualifies projects and products with too much such involvement from federal tax credits — a central bankability question for China-linked battery supply.",
@@ -3189,6 +3255,11 @@
       ]
     },
     {
+      "slug": "fiscal-year-end",
+      "term": "fiscal year end",
+      "def": "The date a company closes its accounting year, which need not be 31 December. Comparing two companies' annual results without checking their year-ends can compare different twelve-month periods."
+    },
+    {
       "slug": "fission",
       "term": "Fission",
       "def": "Splitting a heavy nucleus into lighter fragments, releasing energy and two or three free neutrons. Those neutrons are what make a chain reaction possible: the energy is a by-product of a neutron economy.",
@@ -3297,6 +3368,11 @@
         "EFORd"
       ],
       "def": "The share of time a generating unit is unavailable because something broke, as opposed to planned maintenance. Capacity markets use it to discount what a plant is credited with: a unit that fails often is worth fewer accredited megawatts than its nameplate."
+    },
+    {
+      "slug": "foreign-private-issuer",
+      "term": "foreign private issuer",
+      "def": "A non-US company listed in the United States that reports under a lighter regime than a domestic filer — annually on Form 20-F or 40-F rather than quarterly on 10-K and 10-Q, and often under international rather than US accounting rules."
     },
     {
       "slug": "form-adv",
@@ -4028,6 +4104,14 @@
       ]
     },
     {
+      "slug": "ifrs",
+      "term": "IFRS",
+      "def": "The accounting rulebook used in most of the world outside the United States. It differs from US rules most visibly in letting companies carry some assets at current market value rather than at original cost.",
+      "aliases": [
+        "International Financial Reporting Standards"
+      ]
+    },
+    {
       "slug": "igbt",
       "term": "IGBT",
       "aliases": [
@@ -4666,6 +4750,11 @@
       "def": "A contractual right for preferred shareholders to be paid a set amount — often a multiple of what they invested — before ordinary shareholders receive anything in a sale or wind-up. A 1.3x preference means the holder takes 1.3 times its money off the top."
     },
     {
+      "slug": "listed-affiliate",
+      "term": "listed affiliate",
+      "def": "A separately stock-exchange-listed company that an asset manager controls or manages, holding a slice of the same assets its private funds hold. It gives the manager permanent capital and gives public investors access to private assets."
+    },
+    {
       "slug": "llc-converter",
       "term": "LLC converter",
       "def": "An isolated converter that uses a resonant tank so its switches turn on when the voltage across them is already near zero. That removes most of the switching loss and lets the stage run at high frequency, which is how a kilowatt supply fits in a small box.",
@@ -4916,6 +5005,11 @@
       "aliases": [
         "market maker"
       ]
+    },
+    {
+      "slug": "markets-facing-income",
+      "term": "markets-facing income",
+      "def": "Revenue that depends on trading, transaction volumes or market conditions, and therefore swings year to year. A firm's mix of annuity-style and markets-facing income is a summary of how volatile its earnings should be."
     },
     {
       "slug": "mass-grading",
@@ -5199,6 +5293,11 @@
       ]
     },
     {
+      "slug": "multiple-arbitrage",
+      "term": "multiple arbitrage",
+      "def": "Making money by selling a business at a higher valuation ratio than you paid, without the business itself changing much. The alternative to growing earnings, and the one most dependent on market timing."
+    },
+    {
       "slug": "n-minus-1",
       "term": "N-1",
       "def": "The planning rule that a network must survive losing any single element without shedding load. It is why transmission looks over-built on a normal day, and why one outage can make a region's apparent spare capacity vanish at once.",
@@ -5270,6 +5369,11 @@
       ]
     },
     {
+      "slug": "net-accrued-performance-revenue",
+      "term": "net accrued performance revenues",
+      "def": "Performance fees a manager has earned on paper because its investments have risen in value, but has not yet collected because the assets have not been sold. It reverses if values fall before the exit."
+    },
+    {
       "slug": "net-asset-value",
       "term": "net asset value",
       "def": "What a firm's assets are worth after subtracting what it owes. For a trading and investing business it is the most meaningful measure of size, because revenue can be enormous while the capital at risk is small, or the reverse.",
@@ -5294,6 +5398,11 @@
         "short position"
       ],
       "def": "How much more electricity a company has committed to sell than it can produce, or the reverse, over a given period. Being long means owning output with no buyer yet; being short means owing power that has not been secured."
+    },
+    {
+      "slug": "net-profit-contribution",
+      "term": "net profit contribution",
+      "def": "A management-accounting figure showing what each division earned before group-level costs, staff profit share and tax. Divisional figures added together will not equal group profit, by design."
     },
     {
       "slug": "network-difficulty",
@@ -5377,6 +5486,11 @@
       "slug": "non-binding-agreement",
       "term": "non-binding agreement",
       "def": "A letter of intent, memorandum or master agreement that expresses intent to transact without obligating either party to do so. In a pre-revenue pipeline it is a marker of interest, not of a sale."
+    },
+    {
+      "slug": "non-traded-reit",
+      "term": "non-traded REIT",
+      "def": "A real-estate investment trust sold to individual investors that is not listed on a stock exchange. Investors get their money back by asking the fund to buy their shares, not by selling to another investor — which works until too many ask at once."
     },
     {
       "slug": "nox",
@@ -5614,6 +5728,11 @@
       ]
     },
     {
+      "slug": "paired-corporation",
+      "term": "paired corporation",
+      "def": "A corporation created alongside a partnership so that its shares are economically identical to the partnership's units and exchangeable one for one. It exists to let investors who cannot or will not hold partnership units buy the same economics."
+    },
+    {
       "slug": "paralleling-switchgear",
       "term": "paralleling switchgear",
       "def": "Switchgear whose controller synchronizes several generators onto one common bus, adds them in a set order, shares the load between them and sheds low-priority load if generation runs short — a room of engines behaving as one plant. It is what turns a collection of standby gen-sets into a campus-scale power source.",
@@ -5786,6 +5905,11 @@
       ]
     },
     {
+      "slug": "perpetual-capital-vehicle",
+      "term": "perpetual-capital vehicle",
+      "def": "A fund with no fixed end date, so it never has to sell an asset to return capital to investors. The opposite of a closed-end fund with a ten-year life, and the reason two owners of similar assets can face completely different pressure to exit."
+    },
+    {
       "slug": "pfc",
       "term": "power factor correction",
       "def": "A stage at the front of an AC supply that forces the current it draws to follow the shape of the mains voltage. Without it the supply draws current in short peaks, which wastes capacity in every transformer and cable upstream and is limited by standards.",
@@ -5829,6 +5953,11 @@
       "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
     },
     {
+      "slug": "plan-of-arrangement",
+      "term": "plan of arrangement",
+      "def": "A court-approved corporate reorganisation used in Canada to restructure share ownership between related companies. It is how a parent can move a business into a listed subsidiary in exchange for newly issued shares."
+    },
+    {
       "slug": "planned-unit-development",
       "term": "planned unit development",
       "def": "A zoning approval that treats a large site as one negotiated plan — uses, heights, setbacks, phasing, community obligations — instead of applying the standard district rules lot by lot. The instrument under which a multi-building campus is approved.",
@@ -5856,6 +5985,11 @@
       "aliases": [
         "brazed plate heat exchanger"
       ]
+    },
+    {
+      "slug": "platform-build-out",
+      "term": "platform build-out",
+      "def": "Growing an acquired business by building far more of what it already does, rather than by improving its margins or reselling it at a higher multiple. It is the value-creation route that takes the longest and shows up as capacity growth."
     },
     {
       "slug": "platform-investment",
@@ -6146,6 +6280,11 @@
       "aliases": [
         "prime generation"
       ]
+    },
+    {
+      "slug": "principal-investment",
+      "term": "principal investment",
+      "def": "An investment a firm makes with its own balance-sheet money rather than with money raised from clients. The firm keeps all the gain and bears all the loss, unlike fund investing where it takes a fee and a slice."
     },
     {
       "slug": "principal-trading",
@@ -6515,6 +6654,14 @@
       ]
     },
     {
+      "slug": "realisation",
+      "term": "realisation",
+      "def": "The moment a fund sells an investment and turns a paper gain into cash. Managers' earnings are lumpy because realisations are lumpy — a single large sale can dominate a quarter.",
+      "aliases": [
+        "realization"
+      ]
+    },
+    {
       "slug": "rear-door-heat-exchanger",
       "term": "rear-door heat exchanger",
       "def": "A liquid-cooled radiator that replaces a rack's back door and neutralises the servers' hot exhaust air before it reaches the room, while the servers themselves stay air-cooled. The transitional step that brings liquid to the rack without touching the IT hardware.",
@@ -6555,6 +6702,11 @@
       "slug": "rectifier",
       "term": "rectifier",
       "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
+    },
+    {
+      "slug": "redemption-gate",
+      "term": "redemption gate",
+      "def": "A cap on how much money investors can withdraw from a fund in one period, usually a percentage of net asset value per quarter. When requests exceed the cap everyone is paid a proportional share, which is called prorating."
     },
     {
       "slug": "redomiciliation",
@@ -8421,6 +8573,11 @@
       ]
     },
     {
+      "slug": "us-gaap",
+      "term": "US GAAP",
+      "def": "The accounting rulebook used by companies reporting to the US Securities and Exchange Commission as domestic filers. It is generally more prescriptive than IFRS and more reluctant to revalue assets upward."
+    },
+    {
       "slug": "vacuum-circuit-breaker",
       "term": "vacuum circuit breaker",
       "def": "A medium-voltage breaker whose contacts part inside a sealed vacuum bottle. With almost nothing to ionise, the arc dies at the first current zero and the gap recovers its strength in microseconds — which is why vacuum displaced oil and gas interruption at distribution voltages and why the bottle, not the mechanism, is the part that defines the breaker's life.",
@@ -8552,6 +8709,11 @@
         "VSC",
         "modular multilevel converter"
       ]
+    },
+    {
+      "slug": "voting-interest",
+      "term": "voting interest",
+      "def": "The share of votes someone controls in a company, which can differ sharply from the share of the economics they own when there are multiple share classes. Control normally follows votes, and consolidation in the accounts follows control."
     },
     {
       "slug": "vrla",

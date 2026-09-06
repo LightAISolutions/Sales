@@ -1,0 +1,345 @@
+{
+ "schemaVersion": 2,
+ "slug": "brookfield",
+ "title": "Brookfield — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: one franchise, five listed companies",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Brookfield is the corpus's hardest entity puzzle, and solving it is most of understanding the firm.",
+   "ps": [
+    "Say 'Blackstone' and you mean one filer. Say 'Brookfield' and you could mean any of **five separately listed companies**, each with its own ticker, its own accounts and its own regulator's filing form.",
+    "They are not divisions. Brookfield Corporation, Brookfield Asset Management, Brookfield Infrastructure Partners, Brookfield Renewable Partners and Brookfield Wealth Solutions each file their own reports, and a figure from one says nothing reliable about another.",
+    "This guide teaches why a franchise would organise itself this way, what a {{listed affiliate}} is for, how to read a company that reports under different accounting rules from its siblings, and — the part most often missed — **why the company that earns the fees is not the company that keeps most of the profit share**."
+   ]
+  },
+  {
+   "id": "the-five-entities",
+   "title": "The five entities, and how to tell them apart",
+   "kind": "table",
+   "read": "Learn this table and most Brookfield confusion disappears.",
+   "intro": "All five report in US dollars. What differs is the accounting rulebook, the filing form and what each one actually owns.",
+   "cols": [
+    "Entity",
+    "Ticker",
+    "Files",
+    "Accounting",
+    "What it is"
+   ],
+   "rows": [
+    [
+     "Brookfield Corporation",
+     "BN",
+     "Form 40-F",
+     "{{IFRS}}",
+     "The parent. Holds about 73-75% of BAM plus insurance, the affiliate stakes and real estate. Total assets USD 525,515m."
+    ],
+    [
+     "Brookfield Asset Management",
+     "BAM",
+     "Form 10-K, 10-Q, 8-K",
+     "{{US GAAP}}",
+     "The listed asset manager. Owns 100% of the fund-management business. Total assets USD 20,080m — small by design."
+    ],
+    [
+     "Brookfield Infrastructure Partners",
+     "BIP",
+     "Form 20-F",
+     "IFRS",
+     "A {{listed affiliate}} holding utilities, transport, midstream and data infrastructure. Total assets USD 128.2bn."
+    ],
+    [
+     "Brookfield Renewable Partners",
+     "BEP",
+     "Form 20-F",
+     "IFRS",
+     "A listed affiliate holding hydro, wind, solar, storage and the Westinghouse stake."
+    ],
+    [
+     "BIPC and BEPC",
+     "BIPC, BEPC",
+     "Form 20-F",
+     "IFRS",
+     "{{paired corporation}}s — economically identical twins of BIP and BEP, exchangeable one for one."
+    ]
+   ],
+   "note": "BAM is the only one filing US domestic forms, and only since FY2024 — it filed Form 20-F for FY2022 and Form 40-F for FY2023. A three-year comparative series therefore crosses two regime changes."
+  },
+  {
+   "id": "foreign-private-issuer",
+   "title": "Why the forms differ, and what you lose",
+   "kind": "prose",
+   "read": "The filing form is not bureaucratic trivia; it determines how much you can see and how often.",
+   "ps": [
+    "A US company listed in the United States is a **domestic filer**: it reports quarterly on Form 10-Q, annually on Form 10-K, and immediately on Form 8-K when something material happens. It uses {{US GAAP}}.",
+    "A non-US company can qualify as a **{{foreign private issuer}}**, which reports annually on Form 20-F — or, for Canadian companies using a bilateral arrangement, Form 40-F — and files interim material on Form 6-K when its home market requires it. It may use {{IFRS}}.",
+    "The practical difference is depth and frequency. A 10-K carries a full management discussion, segment tables and risk factors on a US timetable. A 20-F is annual and thinner. So the same franchise gives you quarterly US-style disclosure for BAM and annual IFRS disclosure for the vehicles that actually hold the data centres.",
+    "The accounting rulebook matters too. IFRS permits carrying some assets at current market value where US GAAP would hold them at cost, so a BIP balance sheet and a BAM balance sheet are not directly comparable even in the same currency.",
+    "**The habit to build:** before comparing two Brookfield numbers, check which entity, which form and which rulebook each came from."
+   ]
+  },
+  {
+   "id": "manager-vs-vehicle",
+   "title": "Manager and vehicle: who does the deal, who holds the asset",
+   "kind": "prose",
+   "read": "The distinction that makes the difference between an 80-90% error and a correct figure.",
+   "ps": [
+    "BAM raises and manages funds. The funds buy assets. BIP and BEP **co-invest alongside those funds** as listed permanent capital, typically taking a minority slice.",
+    "Compass Datacenters makes this concrete. Brookfield-managed funds acquired co-control alongside Ontario Teachers' Pension Plan in October 2023. **BIP's own interest is approximately 15%**, acquired for about USD 400m and carried as an equity-accounted investment in an associate — not consolidated onto its balance sheet.",
+    "Aypa Power is the same shape. The acquirer is Brookfield Global Transition Fund II, a BAM-managed fund that closed at USD 20bn plus about USD 3.5bn of co-investment. Brookfield Renewable's share is about USD 420m of a roughly USD 3bn equity cheque.",
+    "So a study of 'Brookfield's data-centre business' written from BIP's accounts would see 15% of Compass and mistake it for the whole. Written from BAM's, it would see the fund that did the deal. Written from Brookfield Corporation's, it would see a holding company dominated by insurance float.",
+    "**The rule:** the entity that announces a deal, the fund that pays for it and the listed vehicle that reports a slice of it are three different things, and press coverage names them all 'Brookfield'."
+   ]
+  },
+  {
+   "id": "where-the-carry-goes",
+   "title": "The twist: BAM earns the fees, BN keeps the carry",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "An arrangement with no equivalent at Blackstone, and it changes what owning BAM shares means.",
+   "ps": [
+    "Under a Relationship Agreement between the two companies, **Brookfield Corporation retains an economic interest equal to effectively 100% of the {{carried interest}} earned in mature funds, and 33.3% on newer funds**.",
+    "So BAM — the listed asset manager, the entity whose name is on the AI-infrastructure announcements — collects management fees but passes most of the performance upside to its parent.",
+    "Compare Blackstone, where the listed parent *is* the manager and keeps its own carry. Two firms that sit next to each other on a league table have opposite answers to the question of who owns the upside.",
+    "There is a second effect worth understanding. BAM's net income attributable to shareholders jumped from USD 541m in FY2024 to USD 2,398m in FY2025. Almost none of that is operations improving: on 4 February 2025 a court-approved **{{plan of arrangement}}** transferred Brookfield Corporation's roughly 73% interest in the asset-management business into BAM. BAM went from holding about 27% of the manager to 100% of it, and the attributable income restated accordingly."
+   ]
+  },
+  {
+   "id": "fee-bearing-capital",
+   "title": "Fee-bearing capital, and why it is the number to watch",
+   "kind": "bars",
+   "read": "Brookfield's own preferred measure, and the one that maps to revenue.",
+   "unit": "USD billions of fee-bearing capital at 31 December 2025",
+   "intro": "Brookfield uses 'fee-bearing capital' where Blackstone says {{fee-earning AUM}} — the same idea: capital that actually pays a fee.",
+   "items": [
+    {
+     "label": "Credit",
+     "v": 279.4
+    },
+    {
+     "label": "Infrastructure",
+     "v": 106.4
+    },
+    {
+     "label": "Real Estate",
+     "v": 101.7
+    },
+    {
+     "label": "Renewable Power & Transition",
+     "v": 67.2
+    },
+    {
+     "label": "Private Equity",
+     "v": 48.0
+    }
+   ],
+   "note": "Total USD 602.7bn at end-2025, against USD 538.5bn a year earlier and USD 457.0bn the year before — and USD 672bn by 30 June 2026. 87% is long-dated or perpetual. A further USD 149bn is committed but uncalled, of which about USD 68bn will produce roughly USD 680m of annual fees once deployed: contracted revenue not yet earned."
+  },
+  {
+   "id": "bring-your-own-power",
+   "title": "Bring your own power: the operating-owner advantage",
+   "kind": "prose",
+   "read": "What a firm that owns generation can offer that a pure financial investor cannot.",
+   "ps": [
+    "The binding constraint on AI data centres is not capital or land — it is grid connection. Utilities have interconnection queues measured in years, and a campus that cannot get power cannot open.",
+    "**{{bring-your-own-power}}** is the response: build dedicated generation for the campus instead of waiting in the queue. It converts a regulatory waiting problem into a construction problem the developer controls.",
+    "Brookfield can do this inside one franchise because it owns generation. The Paducah project, announced 29 July 2026, is the clearest example — a consortium with NextEra and three Kentucky utilities to develop a campus at a US Department of Energy site, supporting up to 1.8 GW of utility capacity and over 1.2 GW of compute, backed by up to 4.6 GW of dedicated generation, complete in 2032.",
+    "The same logic runs through the power agreements: over 10.5 GW framed with Microsoft between 2026 and 2030, and up to 3,000 MW of hydro framed with Google from July 2025 — of which the first contracts, Holtwood and Safe Harbor in Pennsylvania, are 670 MW on 20-year terms.",
+    "**The caution that belongs beside all of it:** these are *frameworks*. The Microsoft build window only opened in 2026, and no party publishes how much of the 10.5 GW has been contracted or delivered. A framework is an intention with a number attached, not installed capacity."
+   ]
+  },
+  {
+   "id": "fund-vs-programme",
+   "title": "The trap: a fund is not a programme",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "An order-of-magnitude error that is easy to make and common in coverage.",
+   "ps": [
+    "Brookfield announced a **USD 100bn AI infrastructure programme** in November 2025, anchored by the Brookfield AI Infrastructure Fund with NVIDIA and the Kuwait Investment Authority as founding partners.",
+    "The **fund** targets **USD 10bn of equity** and had USD 5bn committed at its first close — including Brookfield's own money.",
+    "The **USD 100bn** is what the programme intends to *acquire* once co-investment and borrowing are applied on top of that equity. Reporting the fund at USD 100bn overstates it tenfold.",
+    "The same discipline applies to the sovereign programmes. France (€20bn, later €30bn), Sweden (SEK 95bn), Qatar (USD 20bn) and Korea (up to USD 9bn) are commitments to frameworks spanning years. NVIDIA's own account of the Korean arrangement describes a **non-binding term sheet**.",
+    "**Ask three questions of any large infrastructure number:** is it equity or total assets? Is it committed or aspirational? And is it a fund's size or a programme's ambition?"
+   ]
+  },
+  {
+   "id": "franchise-clock",
+   "title": "Brookfield on one clock",
+   "kind": "timeline",
+   "read": "Three reorganisations closing at once means any structural fact here has a short shelf life.",
+   "unit": "calendar year",
+   "lanes": {
+    "corp": "Corporate structure",
+    "deal": "AI infrastructure and power"
+   },
+   "items": [
+    {
+     "x": 2017,
+     "lane": "corp",
+     "label": "UK Green Investment Bank acquired",
+     "sub": "Not Brookfield — this is Macquarie's, and the two are often confused in green-infrastructure coverage"
+    },
+    {
+     "x": 2022,
+     "lane": "corp",
+     "label": "Brookfield Asset Management separated from the parent",
+     "sub": "December 2022; BAM listed as a distinct company"
+    },
+    {
+     "x": 2023,
+     "lane": "deal",
+     "label": "Compass Datacenters — co-control with Ontario Teachers'",
+     "sub": "Closed 3 October 2023; BIP's own interest about 15% for around USD 400m"
+    },
+    {
+     "x": 2024,
+     "lane": "deal",
+     "label": "Microsoft framework for over 10.5 GW",
+     "sub": "Announced 1 May 2024, build window 2026-2030"
+    },
+    {
+     "x": 2025,
+     "lane": "corp",
+     "label": "The 2025 Arrangement — BAM takes 100% of the asset manager",
+     "sub": "4 February 2025; BN's stake in BAM becomes about 73%"
+    },
+    {
+     "x": 2025,
+     "lane": "deal",
+     "label": "Google Hydro Framework Agreement, up to 3,000 MW",
+     "sub": "15 July 2025; Holtwood and Safe Harbor first at 670 MW"
+    },
+    {
+     "x": 2025,
+     "lane": "deal",
+     "label": "USD 100bn AI programme and the AI Infrastructure Fund launched",
+     "sub": "19 November 2025 with NVIDIA and the Kuwait Investment Authority"
+    },
+    {
+     "x": 2026,
+     "lane": "deal",
+     "label": "Csquare IPO, Paducah, Aypa agreed",
+     "sub": "Csquare listed July 2026 with Brookfield retaining 64%; Aypa signed 22 July and not closed"
+    },
+    {
+     "x": 2026,
+     "lane": "corp",
+     "label": "Three reorganisations set for Q4",
+     "sub": "BIP+BIPC and BEP+BEPC special meetings on 14 October 2026; BN and Wealth Solutions combining"
+    }
+   ],
+   "note": "The 2017 entry is deliberately included as a negative: the Green Investment Bank is Macquarie's, and mixing it into a Brookfield timeline is a real and common error."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this reading fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "The honest limits of what the public record supports.",
+   "ps": [
+    "**No Q3 2026 earnings date exists for any Brookfield entity** as of early September 2026. Any quarterly date you see for them is an inference from last year's cadence.",
+    "**The Compass deal value does not reconcile.** Three incompatible figures circulate — about USD 5.5bn and USD 5.7bn as platform valuations, against USD 1.35-1.4bn as the stake consideration, of which BIP's own equity was about USD 375m. They measure different things and no source reconciles them.",
+    "**The Microsoft framework has no published delivery figure**, and Microsoft's own SEC filings do not mention Brookfield outside incidental benefit-plan filings. The arrangement is legible only from one side.",
+    "**A counterparty's accounts can contradict the story.** Bloom Energy's own filings show related-party revenue from its Brookfield joint venture falling from USD 574.2m in Q4 2025 to USD 373.3m and then USD 2.8m — in what was a record revenue quarter for Bloom. That figure appears in none of Brookfield's channels and nothing located explains it."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Structure and mechanics only.",
+   "cards": [
+    {
+     "q": "What is a {{foreign private issuer}}, and what does it change about what you can read?",
+     "a": "A non-US company listed in the US that reports annually on Form 20-F or 40-F instead of quarterly on 10-K and 10-Q, often under {{IFRS}} rather than {{US GAAP}}. You get less frequent and generally thinner disclosure, under a different accounting rulebook."
+    },
+    {
+     "q": "What is a {{paired corporation}} and why create one?",
+     "a": "A corporation whose shares are economically identical to a partnership's units and exchangeable one for one. It exists so investors who cannot or will not hold partnership units — for tax or mandate reasons — can still buy the same economics."
+    },
+    {
+     "q": "A manager's fund buys a platform and its listed affiliate reports a 15% interest. What is the affiliate's balance sheet showing?",
+     "a": "An equity-accounted investment in an associate — a single line carrying its share of the platform's value, not the platform's assets and debts consolidated. Reading the affiliate's accounts as the platform's would understate everything."
+    },
+    {
+     "q": "Why did BAM's attributable net income rise from USD 541m to USD 2,398m without operations improving fourfold?",
+     "a": "A {{plan of arrangement}} in February 2025 moved the parent's roughly 73% interest in the asset-management business into BAM, so BAM went from holding about 27% of the manager to 100% of it. The step is an ownership restatement."
+    },
+    {
+     "q": "If a firm announces a 'USD 100bn AI infrastructure programme' with a USD 10bn fund, what does each number mean?",
+     "a": "The USD 10bn is the equity investors commit. The USD 100bn is the total asset value the programme intends to acquire once co-investment and debt are layered on top. They differ by roughly the leverage and co-investment multiple."
+    },
+    {
+     "q": "What does {{bring-your-own-power}} solve, and what does it cost?",
+     "a": "It solves the grid interconnection queue by building dedicated generation for a campus rather than waiting for utility capacity. The cost is that the developer takes on power-plant construction, permitting and operating risk it would otherwise leave to a utility."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Five questions on entities and structure.",
+   "items": [
+    {
+     "q": "You find a data-centre capacity figure in a Brookfield Infrastructure Partners 20-F. To use it correctly you must first establish:",
+     "c": [
+      "The exchange rate",
+      "Whether it describes BIP's proportionate interest or the platform's total capacity",
+      "The filing date",
+      "Whether BIP pays a dividend"
+     ],
+     "a": 1,
+     "why": "BIP holds minority equity-accounted interests in Compass, Data4, Ascenty and others. A platform-level capacity figure and BIP's share of it differ by roughly five to ten times."
+    },
+    {
+     "q": "Which entity in the Brookfield complex files a US-domestic Form 10-K?",
+     "c": [
+      "Brookfield Corporation",
+      "Brookfield Asset Management",
+      "Brookfield Infrastructure Partners",
+      "All of them"
+     ],
+     "a": 1,
+     "why": "Only BAM, and only since FY2024. Brookfield Corporation files Form 40-F; BIP, BIPC, BEP and BEPC file Form 20-F. BAM itself filed 20-F for FY2022 and 40-F for FY2023."
+    },
+    {
+     "q": "A framework agreement for 10.5 GW of renewable capacity, signed in 2024 with a build window of 2026-2030, tells you:",
+     "c": [
+      "10.5 GW is now operating",
+      "10.5 GW is contracted and under construction",
+      "An intention has been agreed; delivery is a separate question the framework does not answer",
+      "The buyer has paid for 10.5 GW"
+     ],
+     "a": 2,
+     "why": "A framework sets terms under which future projects may be contracted. The build window here only opened in 2026, and no party publishes how much has been contracted or delivered against the headline."
+    },
+    {
+     "q": "Under an agreement routing carried interest to the parent, an investor buying shares in the listed manager is mainly buying:",
+     "c": [
+      "The performance upside of the funds",
+      "The management-fee stream, with most of the profit share going elsewhere",
+      "The underlying data centres",
+      "Nothing of value"
+     ],
+     "a": 1,
+     "why": "If the parent retains effectively all carried interest on mature funds and a third on newer ones, the listed manager's shareholders own principally the fee annuity. That is a materially different asset from a manager that keeps its own carry."
+    },
+    {
+     "q": "Three reorganisations at one franchise are set to complete in the same quarter. The practical consequence for a written profile is:",
+     "c": [
+      "Nothing — reorganisations are cosmetic",
+      "Share counts, tickers and entity names have a shelf life of weeks and must be dated",
+      "The financial statements become invalid",
+      "The company must delist"
+     ],
+     "a": 1,
+     "why": "Combinations change share counts, tickers and sometimes legal names. Any structural fact recorded without a date can silently go stale, which is why entity facts in this corpus carry the date they were true."
+    }
+   ]
+  }
+ ]
+}

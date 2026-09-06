@@ -55,6 +55,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-06",
       "supersededBy": 6
+    },
+    {
+      "file": "aligned.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 7
     }
   ],
   "amazon": [
@@ -1491,6 +1497,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-09-06",
       "supersededBy": 7
+    },
+    {
+      "file": "qts.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 8
     }
   ],
   "quanta-services": [
@@ -2035,6 +2047,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-09-05",
       "supersededBy": 4
+    },
+    {
+      "file": "voltagrid.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 5
     }
   ],
   "wartsila": [
@@ -2179,6 +2197,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-05",
       "supersededBy": 2
+    },
+    {
+      "file": "invenergy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 3
     }
   ],
   "mccarthy": [
@@ -2317,6 +2341,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-09-06",
       "supersededBy": 3
+    },
+    {
+      "file": "compass-datacenters.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 4
     }
   ],
   "fluidstack": [
@@ -2354,6 +2384,30 @@
   "hut-8": [
     {
       "file": "hut-8.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "prime-data-centers": [
+    {
+      "file": "prime-data-centers.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "aypa-power": [
+    {
+      "file": "aypa-power.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "digital-realty": [
+    {
+      "file": "digital-realty.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-09-06",
       "supersededBy": 2

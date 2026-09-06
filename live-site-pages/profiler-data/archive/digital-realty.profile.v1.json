@@ -379,16 +379,6 @@
    "context": "The Nebius dossier records that its roughly GBP 1.7bn, approximately 65 MW-by-2027 UK programme runs across Vantage's CWL1 campus in Newport, Kao Data Harlow, the Ark Chertsey site and Digital Realty Docklands colocation.\n\nThe relationship is one-sided in the corpus: Nebius names Digital Realty as a colocation provider, and Digital Realty names no AI-cloud tenants at all. Tenant identity is redacted throughout its filings, so the neocloud side is the only place these arrangements surface.",
    "source": "https://nebius.com/newsroom/nebius-expands-in-uk-with-more-nvidia-powered-infrastructure-more-customers-and-more-cloud-capabilities-for-agentic-and-enterprise-ai",
    "status": "active"
-  },
-  {
-   "slug": "blackstone",
-   "type": "partner",
-   "status": "historical",
-   "since": "2023",
-   "scale": "USD 3.5bn for a blended 64% interest; USD 7.8bn gross at 100%",
-   "note": "Joint-venture partners in Northern Virginia from 2023 until Digital Realty bought Blackstone out on 30 June 2026.",
-   "context": "Digital Realty acquired Blackstone's 80% interest in two Manassas data centres and its 50% interest in one on the Digital Dulles campus in Sterling — a blended 64% equity interest across 288 MW of IT capacity (96 MW each), fully leased to three distinct investment-grade hyperscale customers. Consideration was USD 3.5bn: USD 1.2bn cash and USD 2.3bn in Digital Realty shares, so Blackstone took over 65% of the price in the buyer's own stock. Gross value at 100% share was USD 7.8bn including assumed debt and remaining capex, at an expected initial stabilised capitalisation rate of over 6.5%. The JV entities, Digital Carver Dulles 9 and Digital Carver Brickyard, became wholly-owned on completion. The counterparty described the seller as Blackstone-affiliated funds managed by Real Estate, Infrastructure and Tactical Opportunities.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000129799626000071/dlr-20260629xex991.htm"
   }
  ],
  "policyExposure": [
@@ -844,11 +834,6 @@
  },
  "sources": [
   {
-   "label": "Digital Realty Trust Form 8-K exhibit 99.1 — acquisition of Blackstone's interests in three Northern Virginia data centres",
-   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000129799626000071/dlr-20260629xex991.htm",
-   "date": "2026-06-29"
-  },
-  {
    "label": "Digital Realty — Appoints Guilherme Reis as Managing Director for Iberia",
    "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3355819/digital-realty-appoints-guilherme-reis-as-managing-director-for-iberia",
    "date": "2026-09-03"
@@ -1217,5 +1202,5 @@
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 2
+ "profileVersion": 1
 }

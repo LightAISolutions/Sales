@@ -7,7 +7,7 @@
  ],
  "hq": "Sterling, VA, USA",
  "founded": "Founded by Chad Williams out of his family's Quality Group of Companies (Overland Park, Kansas; the company cites a 20+ year history); NYSE-listed as QTS Realty Trust 2013-2021; taken private by Blackstone August 2021",
- "ownership": "private (Blackstone — acquired 31 August 2021 at $78.00 per share in cash. The definitive merger proxy's defined 'Sponsors' are Blackstone Infrastructure Partners L.P. and BREIT Operating Partnership L.P. ONLY; 'Blackstone Property Partners' appears zero times in that document, though secondary accounts and the June 2021 announcement's 'other long-term perpetual capital vehicles' wording admit a third vehicle. Both readings are recorded; no source reconciles them. The often-quoted ~$10B is a transaction value including debt — the filed equity consideration is ~$6.2B plus ~$107M for the preferred against ~$1.8B of consolidated debt, about $8.1B, and the ~$1.9B gap is not publicly closed)",
+ "ownership": "private (Blackstone — acquired 31 August 2021 for ~$10B including debt by Blackstone Infrastructure Partners, Blackstone Real Estate Income Trust (BREIT) and Blackstone Property Partners perpetual-capital vehicles)",
  "employees": "1,600+ (March 2025 company release — latest disclosed)",
  "website": "https://q.com",
  "summary": "BOTTOM LINE UP FRONT: QTS is Blackstone's flagship AI-infrastructure asset — taken private in August 2021 for approximately $10B and grown since into what the company's own March 2025 release calls a '$60 billion global industry leader': leased capacity up 14x since the acquisition, 2GW of critical power operating as of March 2025 (3GW+ across 70+ facilities per 2026 trade rankings) and a $30B+ development pipeline pre-leased to investment-grade technology companies on 15-20-year escalating leases, per BREIT's FY2025 annual report. The growth machine is a standardized 'Freedom' building (36-72MW each) stamped across roughly two dozen US mega-campus sites — Fayetteville, GA (13 buildings, ~6.2M sq ft, housing at least one Microsoft AI 'superfactory' per trade press) is the flagship — funded by the sector's fastest securitization cadence and capped by an April 2026 $4.6B green bond that drew $12.5B of peak demand at QTS's first investment-grade rating (Baa2). Founder Chad Williams stepped down in April 2025; co-CEOs Tag Greason and David Robey now run the company. BACKGROUND: Built from Overland Park, Kansas colocation roots into a wholesale REIT (NYSE: QTS, 2013), the company was acquired at $78.00/share by Blackstone Infrastructure Partners, BREIT and Blackstone Property Partners, closing 31 August 2021. US headquarters is now Sterling, Virginia — a 77,000 sq ft Reston Station headquarters lease was signed August 2026 for ~2027 occupancy, with Overland Park operations retained — plus a London office. Europe: two operational Dutch sites (Eemshaven 20MW, Groningen 4MW), the £10B Cambois campus under construction in Northumberland, UK (approved at up to 720MW IT — repeatedly cited as the UK's largest AI data-centre project), and sites in consideration in Spain, Finland and Italy. The company rebranded its web presence to Q.com in March 2026. Expansion is meeting organized local resistance: QTS withdrew a $12B Dane County, Wisconsin campus in January 2026 after the Village of DeForest moved to reject annexation, and the Fayetteville campus drew a July 2026 water-use records controversy (county attributes ~29-30M unbilled gallons to a missed meter during a smart-meter transition; QTS paid at double construction rates once billed). Collection gap: no revenue or EBITDA has been disclosed since the take-private; the final public-year revenue was ~$540M (FY2020).",
@@ -328,16 +328,6 @@
    "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
    "status": "active",
    "since": "2026-09"
-  },
-  {
-   "slug": "blackstone",
-   "type": "investor",
-   "status": "active",
-   "since": "2021-08",
-   "scale": "$78.00/share; ~$10B including debt",
-   "note": "Blackstone has owned QTS since the August 2021 take-private and has not sold down; BREIT's stake has risen.",
-   "context": "The definitive merger proxy names Parent as Volt Upper Holdings LLC, an affiliate of Blackstone Infrastructure Partners L.P. and BREIT Operating Partnership L.P. — the two entities it defines as the 'Sponsors'. Consideration was $78.00 a share in cash for both common classes, about $6.2B in aggregate to common holders, equity-award holders and minority limited partners, plus about $107M for the Series A preferred, with a $805M reverse termination fee guaranteed by the Sponsors.\n\nBREIT's position has grown rather than been sold down: 33% at the take-private, and 26.1% of BREIT's entire real-estate asset value by 30 June 2026, up from 22.5% three months earlier. Blackstone bought out founder Chad Williams' rolled-over units for a reported ~$3B in March 2025. There has been no QTS IPO — the 2026 Blackstone listing was BXDC, a separate blind-pool data-centre REIT.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1577368/000119312521221563/d187231ddefm14a.htm"
   }
  ],
  "policyExposure": [
@@ -549,7 +539,7 @@
       "actual": "QTS represents 20.4% of BREIT's real-estate value per the FY2025 annual report; leased capacity up 14x since the 2021 acquisition",
       "expected": "",
       "verdict": "inline",
-      "result": "The single largest position in BREIT's portfolio UPDATED 2026-09-06: BREIT's QTS position rose to 22.5% of BREIT's real-estate asset value at 31 March 2026 and 26.1% at 30 June 2026; the stake itself is reported at both 35.4% and 35.7% for 2026 in two readings of BREIT's disclosure and no source reconciles them."
+      "result": "The single largest position in BREIT's portfolio"
      },
      {
       "name": "Platform context",
@@ -621,16 +611,6 @@
   "commentary": "Collection gap: QTS has published no revenue, EBITDA, leverage or balance-sheet figures since the August 2021 take-private. Scale must be read through sponsor disclosures (BREIT annual reports, Blackstone earnings commentary), securitization collateral data and rating-agency reports; the '$60B industry leader' and '14x leased capacity' figures are company/sponsor-attributed and independently unverified. No analyst consensus exists for any period — every 'expected' field is left empty rather than reconstructed."
  },
  "sources": [
-  {
-   "label": "BREIT Form 10-Q, quarter ended 30 June 2026",
-   "url": "https://www.sec.gov/Archives/edgar/data/1662972/000166297226000111/breit-20260630.htm",
-   "date": "2026-08-07"
-  },
-  {
-   "label": "QTS Realty Trust definitive merger proxy statement (DEFM14A)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1577368/000119312521221563/d187231ddefm14a.htm",
-   "date": "2021-07-19"
-  },
   {
    "label": "QTS — ENGIE partnership on ABEI Energy's Lubio Solar project (48MWac PPA, Irving)",
    "url": "https://q.com/news/engie-and-qts-strengthen-renewable-energy-partnership-in-texas-with-abei-energys-lubio-solar-project/",
@@ -848,5 +828,5 @@
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 8
+ "profileVersion": 7
 }

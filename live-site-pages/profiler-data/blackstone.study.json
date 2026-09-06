@@ -1,0 +1,308 @@
+{
+ "schemaVersion": 2,
+ "slug": "blackstone",
+ "title": "Blackstone — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the firm is not the funds",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Almost every mistake made about Blackstone comes from treating one name as one pot of money.",
+   "ps": [
+    "Blackstone Inc. is a **manager**. It raises money from other people, invests it through funds, charges a fee for doing so, and keeps a slice of the gains. Its own balance sheet is small relative to the ~USD 1.35 trillion it manages.",
+    "When a news story says 'Blackstone bought X', the buyer was almost always a **specific fund or vehicle**, and which one it was tells you what kind of investor Blackstone is being in that deal.",
+    "This guide teaches the machinery: how a manager earns, why {{fee-earning AUM}} is the number that matters, what a {{perpetual-capital vehicle}} changes, and why a firm can beat its earnings forecast every quarter and still lose a quarter of its market value."
+   ]
+  },
+  {
+   "id": "what-a-manager-earns",
+   "title": "How an asset manager actually makes money",
+   "kind": "prose",
+   "read": "Two income streams with completely different personalities — and confusing them is the classic error.",
+   "ps": [
+    "An alternative asset manager has two engines. The first is the **management fee**: a percentage, typically 1-2%, of the investor capital it looks after, charged every year whether investments go up or down. This is the boring, predictable engine, and the profit it produces is called {{fee-related earnings}}.",
+    "The second engine is **performance income** — the manager's share of the profits, historically around 20% above a hurdle, known as {{carried interest}}. This engine only fires when investments are sold at a gain, so it is lumpy: one large {{realisation}} can dominate a quarter.",
+    "Because accounting profit for a manager is distorted by unrealised marks and by the economics of funds it consolidates but does not own, managers publish their own measure of cash profit, {{distributable earnings}}. Blackstone's FY2025 distributable earnings were USD 7.1bn, or USD 5.57 a share, against US GAAP net income attributable to Blackstone Inc. of USD 3,019.2m.",
+    "**The lesson to carry:** for a manager, the accounting profit line is the least informative number on the page. Fee-related earnings tell you the floor; distributable earnings tell you the cash; and the gap between them tells you how much of the year depended on selling things."
+   ]
+  },
+  {
+   "id": "aum-is-three-numbers",
+   "title": "Assets under management is three different numbers",
+   "kind": "table",
+   "read": "Only one of them generates revenue, and press coverage almost always quotes a different one.",
+   "intro": "Blackstone's figures at 30 June 2026, used to show what each measure includes and excludes.",
+   "cols": [
+    "Measure",
+    "Figure",
+    "What it counts",
+    "Why it differs"
+   ],
+   "rows": [
+    [
+     "Total AUM",
+     "USD 1,346.3bn",
+     "Everything the firm manages, including capital committed but not yet drawn, co-investment that pays no fee, and assets winding down",
+     "The biggest, most quotable number, and the least connected to revenue"
+    ],
+    [
+     "{{fee-earning AUM}}",
+     "USD 961.6bn",
+     "Only the capital actually paying a management fee",
+     "About 71% of total AUM — the roughly USD 385bn difference earns the firm nothing today"
+    ],
+    [
+     "Perpetual-capital AUM",
+     "USD 555.6bn",
+     "Capital in vehicles with no fixed end date",
+     "Says nothing about revenue and everything about whether the firm is ever forced to sell"
+    ],
+    [
+     "Fee-earning perpetual capital",
+     "USD 463.0bn",
+     "The overlap of the two ideas above",
+     "48% of all fee-earning AUM — nearly half the fee base can never be redeemed by a fund's expiry"
+    ]
+   ],
+   "note": "{{dry powder}} — committed but undeployed money — sits inside total AUM and usually outside fee-earning AUM, which is why a big fundraise does not immediately raise revenue."
+  },
+  {
+   "id": "perpetual-vs-finite",
+   "title": "The clock: why two owners of the same asset behave differently",
+   "kind": "proscons",
+   "read": "This is the single most useful idea in the guide, and the corpus contains a controlled experiment for it.",
+   "intro": "A traditional fund has a life — typically ten years, sometimes extendable. It must eventually sell everything and give the money back. A perpetual vehicle need not. Compare two data-centre platforms bought two or three years apart.",
+   "cards": [
+    {
+     "t": "Perpetual capital: Blackstone and QTS",
+     "meta": "Bought August 2021 through Blackstone Infrastructure Partners and BREIT Operating Partnership — both perpetual vehicles. Still owned in September 2026.",
+     "adv": [
+      "**No forced sale.** Five years in, the position has grown rather than shrunk: BREIT's stake went from 33% at the take-private to about 35% in 2026.",
+      "**Time to build.** Leased capacity grew fourteen-fold under Blackstone's ownership, which is a construction programme, not a trade.",
+      "**Compounding without a deadline.** The manager can keep charging a fee on an asset it never has to market."
+     ],
+     "dis": [
+      "**Concentration builds up.** QTS reached 26.1% of BREIT's entire real-estate value — a quarter of a retail-sold vehicle in one illiquid platform.",
+      "**The manager marks its own homework.** With no sale to set a price, the value investors see is the manager's estimate.",
+      "**Redemption pressure replaces sale pressure.** If enough individual investors ask for their money at once, the vehicle gates — which is what happened at BCRED in June 2026."
+     ]
+    },
+    {
+     "t": "Finite-life fund: Macquarie and Aligned",
+     "meta": "Bought April 2018 through Macquarie Infrastructure Partners IV, a closed-end fund. Sold July 2026 at about USD 40bn enterprise value.",
+     "adv": [
+      "**A price gets discovered.** The exit produces a real number that no manager's estimate can dispute.",
+      "**Capital comes back.** Investors get cash and can decide whether to reinvest.",
+      "**Value creation is legible.** Two facilities and 85 MW at entry, 51 campuses and 6.4 GW at exit — {{platform build-out}}, not {{multiple arbitrage}}."
+     ],
+     "dis": [
+      "**The clock forces the sale.** The fund had to sell eventually regardless of whether 2026 was the best year to do it.",
+      "**The buyer captures the next decade.** Everything the platform earns after July 2026 accrues to someone else.",
+      "**Fees stop.** The manager's revenue from that asset ends at the closing."
+     ]
+    }
+   ],
+   "note": "Neither structure is better. They are answers to different questions, and knowing which one an owner has tells you roughly how it will behave under pressure."
+  },
+  {
+   "id": "gating",
+   "title": "What a gate is, and why it moved the share price",
+   "kind": "prose",
+   "read": "A liquidity mechanism, not a solvency problem — but the market did not read it that way.",
+   "ps": [
+    "A {{non-traded REIT}} or a non-traded credit fund is sold to individual investors who cannot sell their shares on an exchange. Instead, the fund offers to buy shares back — typically up to 2% of net asset value a month and 5% a quarter. That cap is a {{redemption gate}}.",
+    "The gate is a design feature, not a failure. It exists because the fund owns buildings and loans that take months to sell, while investors can ask for cash in days. Without a cap, a rush of withdrawals would force fire sales that damage the investors who stayed.",
+    "In June 2026 Blackstone's BCRED — a USD 94.62bn non-traded business development company — enforced its gate for the first time, when requests reached roughly 10% of shares against the 5% quarterly cap. Requests above the cap were **prorated**: everyone got a proportional share.",
+    "The precedent was BREIT, which prorated for sixteen consecutive months from November 2022, with requests peaking at USD 5.3bn in January 2023, and took a USD 4.5bn investment from a university endowment during the episode.",
+    "**Why it matters for this ecosystem:** the money in these vehicles is the same perpetual capital that lets Blackstone hold QTS indefinitely. The gate is what makes perpetual capital perpetual — and it is also the thing that frightened the market in 2026."
+   ]
+  },
+  {
+   "id": "beat-and-fall",
+   "title": "Beating forecasts and losing a quarter of your value",
+   "kind": "bars",
+   "read": "When the earnings and the share price disagree this sharply, the market is pricing something the income statement does not contain.",
+   "unit": "USD per share, distributable earnings",
+   "intro": "Blackstone's quarterly distributable earnings per share against the published consensus. Every measurable quarter is a beat.",
+   "items": [
+    {
+     "label": "Q4 2024 — actual",
+     "v": 1.69
+    },
+    {
+     "label": "Q4 2024 — consensus",
+     "v": 1.47
+    },
+    {
+     "label": "Q3 2025 — actual",
+     "v": 1.52
+    },
+    {
+     "label": "Q3 2025 — consensus",
+     "v": 1.24
+    },
+    {
+     "label": "Q4 2025 — actual",
+     "v": 1.75
+    },
+    {
+     "label": "Q4 2025 — consensus",
+     "v": 1.54
+    },
+    {
+     "label": "Q1 2026 — actual",
+     "v": 1.36
+    },
+    {
+     "label": "Q1 2026 — consensus",
+     "v": 1.35
+    },
+    {
+     "label": "Q2 2026 — actual",
+     "v": 1.52
+    },
+    {
+     "label": "Q2 2026 — consensus",
+     "v": 1.35
+    }
+   ],
+   "note": "Over the same period the shares fell roughly 25-30% across 2026. Q3 2025 is the sharpest illustration: a 22.6% beat on distributable earnings, a 3.4% miss on revenue, and a 4.4% pre-market fall. The market was trading the redemption gate and the sector's liquidity structure, not the quarter."
+  },
+  {
+   "id": "take-private",
+   "title": "What a take-private does to a company",
+   "kind": "prose",
+   "read": "The QTS transaction, used to teach the mechanics rather than the headline.",
+   "ps": [
+    "A **{{take-private}}** is the purchase of every share of a listed company, after which it deregisters and stops filing. QTS Realty Trust was bought at USD 78.00 a share in cash on 31 August 2021.",
+    "The first thing to learn is that the headline number is usually not the price of the shares. The proxy statement records about USD 6.2bn paid to common holders, equity-award holders and minority partners, plus about USD 107m for preferred shares. The widely-quoted 'approximately USD 10 billion' is a transaction value including debt — and adding the filed figures gives about USD 8.1bn, so even that does not reconcile.",
+    "The second is what disappears. Before 2021 QTS filed quarterly reports with revenue, occupancy and leverage. After it, nothing. Its scale can only be read through its sponsor's disclosures, its securitisation documents and rating-agency reports.",
+    "The third is what the new owner can do that the old one could not. A listed real-estate trust must pay out most of its income and answer to quarterly investors. A perpetual private vehicle can buy land and power years before it has a tenant — which is exactly the strategy QTS ran, and the reason its leased capacity grew fourteen-fold.",
+    "**The trade-off, stated plainly:** the company gained patience and lost transparency, and everyone analysing it afterwards has to work from someone else's account of it."
+   ]
+  },
+  {
+   "id": "lender-not-owner",
+   "title": "The trap: a Blackstone appearance is often a loan",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Three examples from this corpus where reading 'Blackstone' as ownership gives the wrong answer.",
+   "ps": [
+    "**Strata Clean Energy.** Blackstone provided USD 150m in 2021. Strata's own chief financial officer called it a credit facility, and Strata's financing page says the company is owned by its founders. Blackstone holds no equity.",
+    "**Arevon.** Blackstone Credit supplied {{preferred equity}} on the Condor project financing, replacing conventional {{tax equity}}. That is a position in one project's capital stack, not a stake in the company.",
+    "**Aligned Data Centers.** Blackstone Credit has a financing partnership with Aligned exceeding USD 1bn — while Aligned is owned by BlackRock's Global Infrastructure Partners and MGX. Blackstone is a **creditor to an asset its competitors own**.",
+    "The tell is the vehicle name. Blackstone Credit & Insurance lends; Blackstone Infrastructure Partners and BREIT own; Tactical Opportunities does hybrids that can be either. If the source does not name the vehicle, the relationship is not yet established."
+   ]
+  },
+  {
+   "id": "blackrock-is-not-blackstone",
+   "title": "BlackRock is not Blackstone",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Two different firms, both enormous, both buying data centres in the same eighteen months.",
+   "ps": [
+    "**BlackRock** is a listed investment manager best known for index funds. It acquired **Global Infrastructure Partners** on 1 October 2024, and GIP owns CyrusOne with KKR, part of Aligned, Eolian and Jupiter Power.",
+    "**Blackstone** is a listed alternative asset manager. It owns QTS, bought AirTrunk, and lends to Aligned.",
+    "The two are confused constantly, and the confusion is structural rather than careless: in one nine-month window BlackRock's GIP closed the USD 40bn Aligned purchase while Blackstone sold a USD 3.5bn data-centre stake and floated a data-centre trust. A headline reading 'Black— buys data centres' is unsafe throughout the period.",
+    "There is a second trap inside Blackstone's own filings: **Revantage** is a genuine Blackstone services company and is not **Vantage Data Centers**. In one prospectus every single occurrence of the string 'vantage' resolved to *advantage*, *disadvantage* or *Revantage*."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date or a name.",
+   "cards": [
+    {
+     "q": "Why is {{fee-related earnings}} watched more closely than total profit for an asset manager?",
+     "a": "Because it comes only from management fees charged on committed capital, so it recurs whether or not anything is sold. Performance income depends on {{realisation}}s and is therefore lumpy and unpredictable."
+    },
+    {
+     "q": "A manager reports USD 1,346bn of total AUM and USD 962bn of fee-earning AUM. What is the USD 384bn difference?",
+     "a": "Capital that is committed but not yet drawn, co-investment vehicles that pay no fee, and assets in wind-down. It generates no revenue today, though the committed portion will once deployed."
+    },
+    {
+     "q": "What does a {{perpetual-capital vehicle}} change about how an owner behaves?",
+     "a": "It removes the obligation to sell. A closed-end fund must return capital by the end of its life; a perpetual vehicle can hold an asset indefinitely, which permits building rather than trading — and shifts the pressure from forced sales to investor redemptions."
+    },
+    {
+     "q": "What is a {{redemption gate}}, and is triggering one a sign of insolvency?",
+     "a": "A cap on withdrawals per period, usually a percentage of net asset value. It is not insolvency — it is the designed response to investors wanting cash faster than illiquid assets can be sold, and requests above the cap are prorated."
+    },
+    {
+     "q": "Why can the headline price of a {{take-private}} exceed what shareholders received?",
+     "a": "Because the headline is usually a transaction value including assumed or refinanced debt, while shareholders receive only the equity consideration. The two can differ by billions and do not always reconcile publicly."
+    },
+    {
+     "q": "You read that Blackstone 'backed' a renewables developer. What must you establish before recording it as ownership?",
+     "a": "Which vehicle, and what instrument. A Blackstone Credit facility or project-level {{preferred equity}} is not a shareholding, and several companies in this ecosystem have a Blackstone financing while being owned entirely by their founders."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Five questions on the mechanics.",
+   "items": [
+    {
+     "q": "A manager's total AUM rises by USD 50bn on a new fund close, but revenue does not move. The most likely reason is:",
+     "c": [
+      "The fee rate was cut",
+      "The capital is committed but not yet drawn, so it is not yet {{fee-earning AUM}}",
+      "Performance fees fell by the same amount",
+      "The fund is denominated in another currency"
+     ],
+     "a": 1,
+     "why": "Committed-but-undeployed capital — {{dry powder}} — typically sits in total AUM but outside fee-earning AUM in most structures, so a large close raises the headline before it raises revenue."
+    },
+    {
+     "q": "Which pairing correctly describes the structural difference between Blackstone's QTS position and Macquarie's Aligned position?",
+     "c": [
+      "Both were closed-end funds; only the exit timing differed",
+      "QTS was held in perpetual vehicles with no obligation to sell; Aligned was held in closed-end funds that had to return capital",
+      "Aligned was perpetual and QTS was closed-end",
+      "Neither owner faced any structural constraint on timing"
+     ],
+     "a": 1,
+     "why": "QTS sits in Blackstone Infrastructure Partners and BREIT, both perpetual, and is still held after five years. Aligned sat in Macquarie Infrastructure Partners IV and V, closed-end funds, and was sold after eight."
+    },
+    {
+     "q": "A non-traded fund prorates redemption requests at 5% of net asset value when 10% is requested. This means:",
+     "c": [
+      "The fund is insolvent",
+      "Investors lose half their money",
+      "Each investor receives about half of what they asked to withdraw, and the rest stays invested",
+      "The fund must liquidate within a year"
+     ],
+     "a": 2,
+     "why": "Prorating is the designed mechanism: the cap is applied and everyone receives a proportional share of their request. It reflects a mismatch between how fast investors want cash and how fast the assets can be sold, not a loss of value."
+    },
+    {
+     "q": "A firm beats its distributable-earnings forecast in five consecutive quarters and its shares fall about 25% over the same period. The best reading is:",
+     "c": [
+      "The forecasts were wrong",
+      "The market is pricing something the earnings do not capture, such as liquidity structure",
+      "Distributable earnings are fraudulent",
+      "The share count rose sharply"
+     ],
+     "a": 1,
+     "why": "Consistent beats with a falling price means the market's concern is not the current quarter's profit. In 2026 the reported drivers were the redemption gate at the firm's retail credit fund and a sector-wide re-rating of liquidity risk."
+    },
+    {
+     "q": "You find that 'Blackstone' appears in a solar developer's dossier. Which single fact most changes the interpretation?",
+     "c": [
+      "The year of the transaction",
+      "Whether the vehicle named is Blackstone Credit or Blackstone Infrastructure Partners",
+      "The size of the developer",
+      "Whether the developer is US-based"
+     ],
+     "a": 1,
+     "why": "The vehicle identifies the instrument. Blackstone Credit lends and takes structured positions; Blackstone Infrastructure Partners takes equity. In this corpus at least three companies have Blackstone financing and no Blackstone ownership."
+    }
+   ]
+  }
+ ]
+}

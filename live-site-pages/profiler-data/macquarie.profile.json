@@ -1,0 +1,765 @@
+{
+ "schemaVersion": 7,
+ "slug": "macquarie",
+ "name": "Macquarie Group Limited",
+ "shortName": "Macquarie",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.macquarie.com/",
+ "headquarters": "1 Elizabeth Street, Sydney NSW 2000, Australia",
+ "founded": "1969",
+ "employees": "19,124 (31 March 2026), about 50% outside Australia, across 30 markets",
+ "ownership": {
+  "type": "public",
+  "ticker": "ASX: MQG"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** This dossier's subject is **Macquarie Group Limited (ASX: MQG)**, the listed parent, because the asset-management arm has no separate financial statements, no reporting calendar and no ticker to anchor on — and because Macquarie's positions in this ecosystem are split across **three** operating groups, so a dossier keyed to any one of them would misattribute the rest. Macquarie Asset Management holds Aligned, AirTrunk, VIRTUS, Netrality and Applied Digital; **Macquarie Capital** held Prime Data Centers, Onivia, PhilTower and CloudExtel; **Commodities and Global Markets** provides the Fluidstack and Fermi America debt.\n\n**BACKGROUND.** Founded 1969, ABN 94 122 169 279, a Level 3 non-operating holding company above the APRA-regulated Macquarie Bank. **Fiscal year ends 31 March.** FY26 net profit **A$4,847m, up 30%** on FY25's A$3,715m, on net operating income of A$19,477m, earnings per share A$12.77, dividends A$7.00 and a 14.0% return on equity. Assets under management **A$722.1b** at 31 March 2026.\n\n**The single most important fact for this corpus:** Macquarie sold **Aligned Data Centers** — the largest data-centre transaction on record at about **USD 40bn enterprise value** — closing 21 July 2026, having entered the platform in April 2018 at 85 MW across two facilities. That is the ecosystem's clearest worked example of an infrastructure fund's whole life cycle, and because it closed after the 31 March year-end the gain lands in FY27, not in the FY26 result above.",
+ "ecosystemRole": "We assess Macquarie as the ecosystem's exemplar of the finite-life infrastructure fund, and as the counterparty that most often appears in this corpus as a **lender or arranger rather than an owner**. Its two largest data-centre positions have both been exited — AirTrunk to Blackstone in 2024 and Aligned to a BlackRock/MGX consortium in 2026 — and its live appearances in other dossiers are Fluidstack's GPU-secured facility, Fermi America's senior loan, Applied Digital's preferred equity and Trina Storage's tax-equity partnership. Reading a Macquarie mention as ownership is the commonest error made about this firm in the corpus, and the fix is to ask which of the four operating groups the source names.",
+ "productsAndServices": [
+  {
+   "name": "Macquarie Asset Management (MAM)",
+   "category": "Operating group",
+   "description": "The fiduciary funds business, and the arm that held Aligned and AirTrunk. Macquarie's own description is 'a leading global asset manager, trusted by institutions, individuals and communities to responsibly manage approximately A$722.1b in assets'. FY26 net profit contribution A$2,602m, up 27%; 1,735 staff across 19 markets. Its ownership positions are held on behalf of managed funds and co-investors, not on Macquarie's balance sheet.",
+   "highlights": [
+    "AUM A$722.1b at 31 March 2026 — Private Markets A$416.1b (up 7%) and Public Investments A$306.0b",
+    "Private Markets equity under management A$218.0b, of which A$192.3b is fee-paying",
+    "About 190 portfolio companies operating across 33 markets and employing more than 240,000 people",
+    "FY26 performance fees A$1,381m, driven by Macquarie Infrastructure Partners IV and Aligned co-investor fees",
+    "Roughly A$250b of AUM transferred out in the second half of FY26 following the sale of the North American and European public investments business — the reason the headline AUM and the like-for-like growth figure differ"
+   ],
+   "positioning": "Infrastructure Investor's 2026 edition ranks Macquarie Asset Management **fourth at USD 87.9bn** of five-year infrastructure capital raised, behind BlackRock, KKR and Brookfield — while IPE Real Assets' table for the prior year ranks it **first by assets under management**. Macquarie's own site still advertised twelve consecutive years at number one on a page dated 2023. Stock and flow point in opposite directions, and the divergence is the finding: Macquarie manages more infrastructure assets than anyone and is no longer raising the most new capital.",
+   "soldThrough": "Closed-end and open-end funds and separately managed accounts sold to institutions; retail and adviser channels for the public-investments business.",
+   "targetSegments": [
+    "Pension funds",
+    "Sovereign wealth funds",
+    "Insurers",
+    "Retail and adviser channels"
+   ],
+   "roadmap": "Macquarie Infrastructure Partners VI is in market."
+  },
+  {
+   "name": "Macquarie Capital",
+   "category": "Operating group",
+   "description": "Advisory and principal investment off Macquarie's own balance sheet — 'a global adviser and investor … we deliver strategic advice … and invest our own capital to develop projects, facilitate transactions, and grow businesses'. FY26 net profit contribution A$1,491m, up 43%; 1,515 staff across 22 markets. This is the arm that held Prime Data Centers, and it is not MAM.",
+   "highlights": [
+    "Committed private credit portfolio A$27.3b at 31 March 2026",
+    "Committed equity portfolio A$5.2b at 31 March 2026",
+    "Held the Prime Data Centers position from June 2021 through Wholesale DC Asset Holdings LLC — and completed the sale of its remaining stake during FY26",
+    "Other digital-infrastructure positions: Onivia, PhilTower, CloudExtel, Telstra Towers, Foresight"
+   ],
+   "positioning": "The distinction from MAM is mechanical rather than stylistic: MAM invests third-party fund capital at multi-billion scale and Macquarie Capital invests Macquarie's own balance sheet at development stage, then realises it into the income statement. Both make data-centre investments, and the corpus contains examples of each.",
+   "soldThrough": "Direct principal investment and advisory mandates.",
+   "targetSegments": [
+    "Corporates",
+    "Sponsors",
+    "Developers"
+   ]
+  },
+  {
+   "name": "Commodities and Global Markets (CGM)",
+   "category": "Operating group",
+   "description": "The largest operating group by profit — FY26 net profit contribution A$4,221m, up 49%; 2,727 staff across 20 markets. 'A global business offering capital and financing, risk management, market access, physical execution and logistics solutions … across Commodities, Financial Markets and Asset Finance.' Its Specialised and Asset Finance division is the source of the GPU-secured and project debt that appears in this corpus.",
+   "highlights": [
+    "Provided Fluidstack's senior facility secured on NVIDIA GPUs (April 2025)",
+    "Provided Fermi America's senior loan alongside preferred equity",
+    "Runs the North American gas and power trading book that data centres ultimately buy from, plus Erova, Corona and OnStream"
+   ],
+   "positioning": "CGM is why a Macquarie mention in a neocloud or developer dossier is usually a financing rather than a shareholding. The corpus records the Fluidstack facility as 'secured by the GPUs themselves' — asset-backed lending, not an equity position.",
+   "soldThrough": "Direct lending, structured finance and trading relationships.",
+   "targetSegments": [
+    "Energy and commodity producers",
+    "Data-centre and compute operators",
+    "Corporates"
+   ]
+  },
+  {
+   "name": "Banking and Financial Services (BFS)",
+   "category": "Operating group",
+   "description": "Personal banking, business banking and wealth management for about 2.3 million Australian clients. FY26 net profit contribution A$1,610m, up 17%; 4,252 staff. Deposits A$215.3b, loan portfolio A$199.9b and funds on platform A$155.9b at 31 March 2026.",
+   "highlights": [
+    "Deposits A$215.3b",
+    "Loan portfolio A$199.9b",
+    "Funds on platform A$155.9b"
+   ],
+   "soldThrough": "Direct and broker channels in Australia.",
+   "targetSegments": [
+    "Australian retail and business customers"
+   ]
+  },
+  {
+   "name": "Green Investment Group",
+   "category": "Platform",
+   "description": "Acquired as the UK Green Investment Bank in 2017 and moved twice since. Its current location is the thing most often got wrong: as at September 2026 the fiduciary green-investment business sits inside MAM, while the balance-sheet green principal assets were transferred to a Macquarie Group corporate portfolio on 1 September 2025.",
+   "highlights": [
+    "A Macquarie-led consortium — Macquarie Group, Macquarie European Infrastructure Fund 5 and the Universities Superannuation Scheme — completed the £2.3bn acquisition of UK Green Investment Bank Limited on 18 August 2017",
+    "Folded into Macquarie Capital in 2017, moved into Macquarie Asset Management in 2022",
+    "On 1 September 2025 the retained balance-sheet assets moved to a centrally managed Macquarie Group corporate portfolio, with prior comparatives restated",
+    "Green Investments impairment A$379m in FY26 against A$57m in FY25"
+   ],
+   "positioning": "The 2025 transfer is a restatement trap: MAM's FY25 net profit contribution was originally reported at A$1,610m and appears as A$2,049m as the FY26 comparative, because the loss-making balance-sheet green assets moved out. Comparing the two published FY25 figures without knowing that produces a false growth rate.",
+   "soldThrough": "Fund vehicles for the fiduciary business.",
+   "targetSegments": [
+    "Institutional LPs in green infrastructure"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "The Aligned Data Centers exit — an eight-year infrastructure hold, end to end",
+   "specs": [
+    {
+     "band": "Entry",
+     "label": "Date and scale at entry",
+     "value": "April 2018 — 2 operational facilities and 85 MW"
+    },
+    {
+     "band": "Entry",
+     "label": "Holding funds",
+     "value": "Macquarie Infrastructure Partners IV (April 2018) and Macquarie Infrastructure Partners V (July 2020)"
+    },
+    {
+     "band": "Exit",
+     "label": "Scale at exit",
+     "value": "51 campuses and more than 6.4 GW of operational and planned capacity across the Americas — a seller's figure blending operational with planned"
+    },
+    {
+     "band": "Exit",
+     "label": "Headline value",
+     "value": "approximately USD 40 billion — an ENTERPRISE VALUE, characterised identically by Aligned, by GIP and by sell-side counsel"
+    },
+    {
+     "band": "Exit",
+     "label": "Equity consideration",
+     "value": "reported separately at about USD 21 billion; no source reconciles the two figures with a stated debt number"
+    },
+    {
+     "band": "Exit",
+     "label": "Buyers",
+     "value": "the AI Infrastructure Partnership (AIP), MGX and BlackRock's Global Infrastructure Partners, acquiring 100% of the equity"
+    },
+    {
+     "band": "Exit",
+     "label": "Growth capital",
+     "value": "USD 5 billion committed AT CLOSE, not at announcement — and it appears in no Macquarie document; it is a buyer-side figure"
+    },
+    {
+     "band": "Timeline",
+     "label": "Announced",
+     "value": "15 October 2025"
+    },
+    {
+     "band": "Timeline",
+     "label": "EU clearance",
+     "value": "19 January 2026 — Case M.12259, C(2026) 414 final, Article 6(1)(b) non-opposition, notified 11 December 2025"
+    },
+    {
+     "band": "Timeline",
+     "label": "Closed",
+     "value": "21 July 2026 — past the parties' own 'expected H1 2026' guidance, with no explanation published"
+    },
+    {
+     "band": "Accounting",
+     "label": "Which fiscal year",
+     "value": "Macquarie's year ends 31 March, so the closing falls in FY27 and not in the FY26 result"
+    }
+   ],
+   "notes": "Two refinements the press releases do not give. First, the European Commission's decision names only **two** acquirers of joint control — Global Infrastructure Management LLC, ultimately BlackRock, and MGX Fund Management Limited — not the three in the marketing framing; AIP is a partnership vehicle, and Microsoft, NVIDIA and xAI are AIP members rather than acquirers. Second, the EC decision does not mention Macquarie anywhere, so the clearance record cannot be used to corroborate the seller's identity; that rests on the buyers' releases and on sell-side counsel naming its client. Macquarie has disclosed no return figure for the investment."
+  },
+  {
+   "product": "FY26 result, year ended 31 March 2026 (A$)",
+   "specs": [
+    {
+     "band": "Group",
+     "label": "Net profit",
+     "value": "A$4,847m, up 30% on FY25"
+    },
+    {
+     "band": "Group",
+     "label": "Second half",
+     "value": "A$3,192m, up 93% on the first half — the year is heavily back-loaded"
+    },
+    {
+     "band": "Group",
+     "label": "Net operating income",
+     "value": "A$19,477m"
+    },
+    {
+     "band": "Group",
+     "label": "Basic earnings per share",
+     "value": "A$12.77"
+    },
+    {
+     "band": "Group",
+     "label": "Dividend per ordinary share",
+     "value": "A$7.00"
+    },
+    {
+     "band": "Group",
+     "label": "Return on equity",
+     "value": "14.0%"
+    },
+    {
+     "band": "Group",
+     "label": "Total assets",
+     "value": "A$540.1b"
+    },
+    {
+     "band": "Operating groups",
+     "label": "Commodities and Global Markets",
+     "value": "A$4,221m net profit contribution, up 49%"
+    },
+    {
+     "band": "Operating groups",
+     "label": "Macquarie Asset Management",
+     "value": "A$2,602m, up 27%"
+    },
+    {
+     "band": "Operating groups",
+     "label": "Banking and Financial Services",
+     "value": "A$1,610m, up 17%"
+    },
+    {
+     "band": "Operating groups",
+     "label": "Macquarie Capital",
+     "value": "A$1,491m, up 43%"
+    },
+    {
+     "band": "Operating groups",
+     "label": "Total",
+     "value": "A$9,924m, up 36% — before unallocated corporate items, profit share and tax"
+    }
+   ],
+   "notes": "Net profit contribution is management-accounting profit before unallocated corporate items, profit share and income tax, so the operating-group total does not reconcile to group net profit. The 2H26 skew is consistent with the sale of the North American and European public investments business landing in the second half."
+  },
+  {
+   "product": "Filing regime — where Macquarie's own reporting actually lives",
+   "specs": [
+    {
+     "band": "Primary",
+     "label": "macquarie.com investor centre",
+     "value": "Annual and half-year reports, result presentations and transcripts, and the financial calendar. The reports and results index pages are JavaScript-driven and return nothing to a plain fetch; the per-period landing pages and the direct PDF paths under /assets/macq/investor/ work"
+    },
+    {
+     "band": "Primary",
+     "label": "ASX announcements",
+     "value": "announcements.asx.com.au/asxpdf/YYYYMMDD/pdf/<key>.pdf serves the real lodgements; the asx.com.au company page is a JavaScript shell"
+    },
+    {
+     "band": "SEC",
+     "label": "What Macquarie Group Limited does file",
+     "value": "CIK 0001418333 — Forms 13F-HR, SC 13G and 13D, N-PX, Forms 3/4/5, and a Rule 12g3-2(b) exemption filing. It files as an institutional investment manager and beneficial owner"
+    },
+    {
+     "band": "SEC",
+     "label": "What it does NOT file",
+     "value": "No Form 20-F and no annual report. Macquarie is not an SEC registrant for periodic reporting"
+    },
+    {
+     "band": "SEC",
+     "label": "The control that bounds that null",
+     "value": "'Macquarie Group Limited' appears in more than 10,000 EDGAR filings — all by OTHER registrants naming it as a party. 'Macquarie Asset Management' returns 3,423. The absence is registrant status, not absence from the record"
+    },
+    {
+     "band": "SEC",
+     "label": "A deregistered look-alike",
+     "value": "Macquarie Infrastructure Corporation (CIK 0001289790) filed 10-K, 10-Q and DEF 14A as a full US domestic filer until it deregistered on 21 July 2022. It is a different, now-wound-down entity and is not the group's US filings"
+    }
+   ],
+   "notes": "This table exists because 'Macquarie does not file with the SEC' is a claim that fails a control. The proper-noun null is real and narrow: Macquarie Group Limited is not a periodic-reporting registrant. It is named in over ten thousand other registrants' filings, and roughly twenty Macquarie advisers file Form ADV."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-07-23",
+   "category": "corporate",
+   "headline": "2026 Annual General Meeting held; all resolutions decided by poll",
+   "read": "The AGM confirms the board transition timetable that makes 6 November 2026 a double event — the half-year result and the change of chief executive on consecutive days.",
+   "source": "https://announcements.asx.com.au/asxpdf/20260723/pdf/071zxfh509m00b.pdf"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "ma",
+   "headline": "The sale of Aligned Data Centers closes at about USD 40bn enterprise value",
+   "read": "An eight-year hold from 85 MW to more than 6.4 GW of operational and planned capacity; because Macquarie's year ends 31 March the gain falls into FY27, and the firm has published no return figure.",
+   "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
+  },
+  {
+   "date": "2026-05-08",
+   "category": "financial",
+   "headline": "FY26 result: net profit A$4,847m, up 30%, on net operating income of A$19,477m",
+   "read": "Growth is concentrated in Commodities and Global Markets (+49%) and Macquarie Capital (+43%) rather than in the asset manager, and 2H26 was 93% above 1H26.",
+   "source": "https://www.macquarie.com/us/en/about/news/2026/macquarie-group-fy26-result-announcement.html"
+  },
+  {
+   "date": "2026-02-10",
+   "category": "corporate",
+   "headline": "2026 Operational Briefing",
+   "read": "Macquarie's reporting cadence is half-yearly with a separate February operational briefing — not the US quarterly pattern, which is why an inferred quarterly date for this company would be wrong.",
+   "source": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-2026-operational-briefing-presentation.pdf"
+  },
+  {
+   "date": "2026-01-19",
+   "category": "regulatory",
+   "headline": "European Commission clears the Aligned acquisition under Article 6(1)(b) — Case M.12259, GIM / MGX / Aligned",
+   "read": "The clearance names only two acquirers of joint control, BlackRock's Global Infrastructure Management and MGX, and does not mention Macquarie at all — so the regulatory record cannot corroborate the seller's identity.",
+   "source": "https://ec.europa.eu/competition/mergers/cases1/202604/M_12259_10869557_118_3.pdf"
+  },
+  {
+   "date": "2025-11-06",
+   "category": "financial",
+   "headline": "1H26 result: net profit A$1,655m",
+   "read": "The weak first half against which the 93% second-half step is measured.",
+   "source": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-hy26-presentation.pdf"
+  },
+  {
+   "date": "2025-10-15",
+   "category": "ma",
+   "headline": "AIP, MGX and BlackRock's GIP agree to acquire all equity in Aligned Data Centers from funds managed by Macquarie Asset Management",
+   "read": "Announced with guidance to close in the first half of 2026; it closed on 21 July 2026, and no source explains the slip.",
+   "source": "https://aligneddc.com/press-release/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/"
+  },
+  {
+   "date": "2025-09-01",
+   "category": "corporate",
+   "headline": "Green Investments balance-sheet assets transferred from Macquarie Asset Management to a centrally managed Macquarie Group corporate portfolio",
+   "read": "The restatement that makes MAM's FY25 comparative move from A$1,610m to A$2,049m — a reader comparing the two published figures without knowing this would compute a false growth rate.",
+   "source": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-hy26-presentation.pdf"
+  },
+  {
+   "date": "2025-03-18",
+   "category": "regulatory",
+   "headline": "European Commission clears Ares joining the existing Macquarie / Data Realty Group joint control of Prime Data Centers (Case M.11843)",
+   "read": "The decision records Ares JOINING a joint venture Macquarie and Data Realty Group already controlled — it is not Macquarie acquiring Prime, and the Macquarie entity is Macquarie Capital via Wholesale DC Asset Holdings LLC.",
+   "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
+  },
+  {
+   "date": "2017-08-18",
+   "category": "ma",
+   "headline": "A Macquarie-led consortium completes the £2.3bn acquisition of the UK Green Investment Bank",
+   "read": "The origin of the Green Investment Group, which has since moved between Macquarie Capital, Macquarie Asset Management and the group's corporate portfolio.",
+   "source": "https://www.macquarie.com/au/en/about/news/2017/macquarie-led-consortium-completes-acquisition-of-the-green-investment-bank.html"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **Macquarie is the corpus's clearest worked example of the finite-life infrastructure fund, and that Aligned is the proof**. Macquarie Infrastructure Partners IV entered in April 2018 at two facilities and 85 MW and exited in July 2026 at 51 campuses and more than 6.4 GW of operational and planned capacity. Value was created by building the platform out, not by re-rating it — and the exit happened because a closed-end fund must eventually return capital, which is precisely the obligation Blackstone's perpetual vehicles do not carry over QTS. Same asset class, opposite structural clock.",
+  "**(High confidence)** We assess that **the USD 40bn is an enterprise value and that reporting it as what Macquarie received would be wrong**. Aligned, Global Infrastructure Partners and the sell-side counsel all characterise it identically as enterprise value; the equity cheque is separately reported at about USD 21bn, and no source reconciles the two with a stated debt figure. The USD 5bn of growth capital was committed at close rather than at announcement and appears in no Macquarie document at all — it is a buyer-side commitment to the asset's future, not part of the consideration.",
+  "**(High confidence)** We assess that **Macquarie appears in this corpus far more often as a financier than as an owner, and that the distinction is the main source of error about it**. Fluidstack's facility is senior debt secured on the GPUs themselves, from the Specialised and Asset Finance division of Commodities and Global Markets. Fermi America is a senior loan alongside preferred equity. Trina Storage's Houston project records Macquarie as a tax-equity partner. None of these is a shareholding, and the operating group named in the source is the reliable tell.",
+  "**(Moderate confidence)** We assess that **Macquarie has lost the infrastructure fundraising crown while keeping the assets**, and that the two published rankings say so in opposite directions. Infrastructure Investor's 2026 edition puts Macquarie Asset Management fourth at USD 87.9bn of five-year capital raised, behind BlackRock, KKR and Brookfield; IPE Real Assets' table for the prior year puts it first by assets under management. Macquarie's own site still carried a twelve-consecutive-years-at-number-one claim on a page dated 2023. Stock and flow are diverging, and the judgment is moderate because a single edition of one ranking is thin evidence for a trend.",
+  "**(Moderate confidence)** We assess that **the FY26 result is more back-loaded than a headline reader would expect, and that the reason is disposals rather than trading**. The second half delivered A$3,192m against the first half's A$1,655m — 93% higher — and the year included the sale of the North American and European public investments business, which moved roughly A$250b of assets under management out of the reported base. The Aligned closing falls after the 31 March year-end and is therefore not in this result at all.",
+  "**Two collection gaps and a trap, stated.** First, Macquarie is **not** an SEC periodic-reporting registrant, which is a routing fact rather than an absence of information: 'Macquarie Group Limited' appears in more than ten thousand EDGAR filings by other registrants, and the durable route to its own reporting is macquarie.com's asset paths and the ASX announcement PDFs. Second, Macquarie has published **no return figure** for Aligned anywhere. And the trap: Macquarie Infrastructure Corporation filed 10-Ks until it deregistered in July 2022 — it is a different, now-wound-down entity, and treating its filings as the group's would be a decade-scale error."
+ ],
+ "policyExposure": [
+  {
+   "regime": "ASIC enforcement and licence conditions",
+   "status": "in-effect",
+   "effectiveDate": "2026-03-20",
+   "exposure": "Three concurrent Australian Securities and Investments Commission matters were reported against Macquarie entities in 2025-2026, aggregating roughly A$356m: additional licence conditions imposed on Macquarie Bank in May 2025 after a compliance failure that had gone undetected for about a decade; a A$35m New South Wales Supreme Court penalty against Macquarie Securities in March 2026 over misreported short sales spanning fourteen years; and Federal Court declarations against Macquarie Investment Management in March 2026 in connection with the Shield Master Fund, where about A$321m had already been paid to roughly 3,000 members. The remediation is nearly ten times the penalty and is the larger figure.",
+   "mitigation": "The Shield remediation payments were made before the declarations; no consolidated Macquarie statement on the three matters was located.",
+   "source": "https://announcements.asx.com.au/asxpdf/20260508/pdf/06zcwby8r05n9g.pdf"
+  },
+  {
+   "regime": "APRA prudential supervision — non-operating holding company structure",
+   "status": "in-effect",
+   "exposure": "Macquarie Group Limited is a Level 3 non-operating holding company above Macquarie Bank Limited, the authorised deposit-taking institution regulated by the Australian Prudential Regulation Authority. Macquarie's own presentations state that, other than Macquarie Bank Limited, no Macquarie group entity is an authorised deposit-taking institution and that their obligations do not represent deposits or other liabilities of the bank, which does not guarantee them. The structure separates the regulated bank from the funds and principal-investment businesses that hold this corpus's positions.",
+   "source": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-fy26-presentation.pdf"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "aligned",
+   "type": "portfolio",
+   "status": "historical",
+   "since": "2018-04",
+   "scale": "~USD 40bn enterprise value at exit",
+   "note": "Macquarie Asset Management owned Aligned Data Centers from April 2018 until the sale closed on 21 July 2026 — the largest data-centre transaction on record.",
+   "context": "Held through Macquarie Infrastructure Partners IV, which entered in April 2018, and Macquarie Infrastructure Partners V, which joined in July 2020. At entry the platform was two operational facilities and 85 MW; at exit it was 51 campuses and more than 6.4 GW of operational and planned capacity — a seller's figure that blends operational with planned.\n\nThe buyers were the AI Infrastructure Partnership, MGX and BlackRock's Global Infrastructure Partners, acquiring 100% of the equity from funds managed by Macquarie Asset Management and its co-invest partners. **USD 40bn is an enterprise value**, characterised identically by Aligned, by GIP and by sell-side counsel; the equity cheque is separately reported at about USD 21bn and nothing reconciles the two. The USD 5bn of growth capital was committed at close and appears in no Macquarie document. Mubadala, which took a minority in August 2023, CenterSquare and other co-investors exited alongside. Macquarie has published no return figure. Typed `historical` because the position is exited.",
+   "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
+  },
+  {
+   "slug": "mgx",
+   "type": "other",
+   "status": "historical",
+   "since": "2026-07",
+   "note": "MGX was one of the buyers of Aligned Data Centers from Macquarie-managed funds — a transaction counterparty, not an ongoing relationship.",
+   "context": "MGX acquired Aligned alongside the AI Infrastructure Partnership and BlackRock's Global Infrastructure Partners, closing 21 July 2026. The European Commission's clearance for the transaction, Case M.12259, names only Global Infrastructure Management LLC and MGX Fund Management Limited as acquiring joint control — the AI Infrastructure Partnership appears in the marketing framing but not as a controlling party, and Microsoft, NVIDIA and xAI are AIP members rather than acquirers. Typed `other` because the two firms stood on opposite sides of a single completed transaction and neither invests in nor supplies the other.",
+   "source": "https://ec.europa.eu/competition/mergers/cases1/202604/M_12259_10869557_118_3.pdf"
+  },
+  {
+   "slug": "prime-data-centers",
+   "type": "portfolio",
+   "status": "historical",
+   "since": "2021-06",
+   "note": "Macquarie Capital — not Macquarie Asset Management — held a joint-control interest in Prime Data Centers, and sold its remaining stake during FY26.",
+   "context": "The position originated in Macquarie Capital's June 2021 equity partnership with Prime, framed at the time as more than USD 5bn of capital over ten years. It was held through **Wholesale DC Asset Holdings LLC**, which the European Commission describes as a holding company within Macquarie through which it holds its interest in Prime and attributes to Macquarie Group Limited.\n\nThe Commission's decision in Case M.11843, dated 18 March 2025, records **Ares joining an existing joint venture**: Prime Data Centers LLC was already jointly controlled by Wholesale DC Asset Holdings and Data Realty Group, and Ares was the party obtaining joint control. The target is Prime Data Centers LLC; Data Realty Holding Corp sits on the acquirer side as parent of Data Realty Group, not as the entity being controlled. **The position is now historical**: Macquarie completed the sale of its remaining Prime stake during FY26.",
+   "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
+  },
+  {
+   "slug": "blackstone",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peers in infrastructure, and counterparties on AirTrunk — Blackstone bought the Asia-Pacific platform Macquarie was exiting in 2024.",
+   "context": "Infrastructure Investor's 2026 edition ranks Macquarie Asset Management fourth at USD 87.9bn of five-year infrastructure fundraising against Blackstone's eighth at USD 45.7bn. In September 2024 Blackstone-managed vehicles agreed to acquire AirTrunk from Macquarie Asset Management and PSP Investments at an implied enterprise value above A$24bn, with CPP Investments taking 12% alongside four Blackstone vehicles. Note the currency: Macquarie quotes AirTrunk in Australian dollars and Aligned in US dollars, and the two are routinely compared without the conversion.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "brookfield",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peers in infrastructure whose relative size depends entirely on which ranking is used.",
+   "context": "Infrastructure Investor's 2026 edition, measuring five-year capital raised, ranks Brookfield third at USD 99.1bn and Macquarie fourth at USD 87.9bn. IPE Real Assets' table for the prior year, measuring assets under management, ranks Macquarie first and Brookfield second, both above USD 300bn. One measures flow and the other stock; nothing reconciles them and both are carried.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "fluidstack",
+   "type": "other",
+   "status": "active",
+   "since": "2025-04",
+   "scale": "senior facility secured on NVIDIA GPUs",
+   "note": "Commodities and Global Markets provided Fluidstack's GPU-secured senior debt facility — lending, not ownership.",
+   "context": "Announced 1 April 2025 as a strategic GPU financing arrangement to supply GPUs to AI research labs across Europe, with the financing structure secured by the GPUs themselves and the equipment deployed in an Icelandic data centre. The amount was not stated by either party. The lender is the Specialised and Asset Finance division of Commodities and Global Markets — a third operating group, neither Macquarie Asset Management nor Macquarie Capital. Typed `other` because asset-backed lending is neither an equity holding nor a customer or supplier relationship.",
+   "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html"
+  },
+  {
+   "slug": "applied-digital",
+   "type": "investor",
+   "status": "active",
+   "scale": "preferred equity plus a reported ~15% minority",
+   "note": "Macquarie Asset Management holds preferred equity and a reported minority position in Applied Digital.",
+   "context": "Recorded on MAM's side of the digital-infrastructure map alongside Aligned, AirTrunk, VIRTUS and Netrality. Typed `investor` because this is an equity position rather than a facility — the distinction that separates it from the Fluidstack and Fermi America relationships in this same dossier.",
+   "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html"
+  },
+  {
+   "slug": "fermi-america",
+   "type": "other",
+   "status": "active",
+   "scale": "USD 100m preferred equity plus a USD 250m loan",
+   "note": "Macquarie provided Fermi America with preferred equity and a senior loan from Commodities and Global Markets.",
+   "context": "A financing rather than a platform holding, and split across instruments: preferred equity alongside a senior loan from the Commodities and Global Markets group. Typed `other` for the same reason as Fluidstack — the substance is credit and structured capital, not a shareholding, and typing it `investor` would put Macquarie in Fermi's ownership when it is in its capital stack.",
+   "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html"
+  },
+  {
+   "slug": "esvolta",
+   "type": "investor",
+   "status": "active",
+   "note": "esVolta is held through Macquarie's Green Investment Group.",
+   "context": "The Green Investment Group's location inside Macquarie has moved twice — Macquarie Capital from 2017, Macquarie Asset Management from 2022, and with the balance-sheet assets moved to a Macquarie Group corporate portfolio on 1 September 2025 — so the operating group that owns this relationship depends on the date of the source describing it.",
+   "source": "https://www.greeninvestmentgroup.com/en.html"
+  },
+  {
+   "slug": "nvidia",
+   "type": "other",
+   "status": "active",
+   "note": "NVIDIA GPUs are the collateral in the Fluidstack facility; the relationship is to the hardware as security, not to NVIDIA as a counterparty.",
+   "context": "Recorded so a reader does not infer a Macquarie-NVIDIA commercial relationship from the Fluidstack financing. Macquarie's exposure is to GPUs as an asset class — it lent against them and they were deployed in Iceland — and no source describes a direct arrangement between the two firms. Typed `other` and carried deliberately as a negative-shaped edge.",
+   "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Shemara Wikramanayake",
+   "title": "Managing Director and Chief Executive Officer (retiring 6 November 2026)",
+   "background": [
+    "Managing Director and Chief Executive Officer of Macquarie Group; announced retirement effective 6 November 2026",
+    "Previously Head of Macquarie Asset Management",
+    "Still in post as of 6 September 2026 — many secondary sources describing the succession as complete are premature"
+   ]
+  },
+  {
+   "name": "Greg Ward",
+   "title": "Managing Director and Chief Executive Officer designate (from 7 November 2026)",
+   "background": [
+    "Takes over as Managing Director and Chief Executive Officer on 7 November 2026, the day after the 2027 half-year result is announced"
+   ]
+  },
+  {
+   "name": "Frank Kwok",
+   "title": "Chief Financial Officer",
+   "background": [
+    "Succeeded Alex Harvey as Chief Financial Officer on 1 January 2026",
+    "Secondary sources naming Alex Harvey as the current CFO are stale"
+   ]
+  },
+  {
+   "name": "Glenn Stevens AC",
+   "title": "Independent Chair, Macquarie Group Limited and Macquarie Bank Limited",
+   "background": [
+    "Independent Chair of both the group and the bank since 10 May 2022",
+    "Former Governor of the Reserve Bank of Australia"
+   ]
+  },
+  {
+   "name": "Stuart Green",
+   "title": "Chief Executive Officer, Macquarie Bank Limited",
+   "background": [
+    "Chief Executive Officer of the APRA-regulated banking subsidiary since 2021, which has its own board separate from the group's"
+   ]
+  },
+  {
+   "name": "Simone Kovacic",
+   "title": "Company Secretary",
+   "background": [
+    "Company Secretary of Macquarie Group Limited; signatory on ASX lodgements"
+   ]
+  },
+  {
+   "name": "Ed Northam",
+   "title": "Head of Green Investments, Macquarie Asset Management",
+   "background": [
+    "Leads the fiduciary green-investment platform that remained in Macquarie Asset Management after the September 2025 transfer of balance-sheet green assets to the group's corporate portfolio"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "AUD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2025 (ended 31 March 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-03-31",
+    "metrics": [
+     {
+      "name": "Net profit attributable to ordinary shareholders",
+      "actual": "A$3,715m, up 5% on FY24",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Reported as in line with market expectations, and noted by one Australian broker as the first in-line result in eight reporting periods. The specific consensus number was not locatable from a named provider and the field is left empty rather than reconstructed.",
+      "kpi": "net-income"
+     },
+     {
+      "name": "Macquarie Asset Management net profit contribution",
+      "actual": "A$1,610m as originally reported; restated to A$2,049m as the FY26 comparative",
+      "expected": "",
+      "verdict": "",
+      "result": "The restatement follows the 1 September 2025 transfer of loss-making balance-sheet Green Investments assets out of MAM and into a Macquarie Group corporate portfolio. Comparing the two published figures without knowing that produces a false growth rate."
+     }
+    ],
+    "commentary": "FY25 is the comparative base for the 30% FY26 step."
+   },
+   {
+    "period": "1H26 (half ended 30 September 2025)",
+    "periodType": "half",
+    "periodEnd": "2025-09-30",
+    "metrics": [
+     {
+      "name": "Net profit",
+      "actual": "A$1,655m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Reported below the Visible Alpha consensus, and the shares fell on the day. The specific consensus figure was not locatable from a named provider and is left empty."
+     }
+    ],
+    "commentary": "The weak half that makes the FY26 second-half step look as large as it does."
+   },
+   {
+    "period": "FY2026 (ended 31 March 2026)",
+    "periodType": "annual",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Net profit attributable to ordinary shareholders",
+      "actual": "A$4,847m, up 30% on FY25",
+      "expected": "about A$4.4bn",
+      "verdict": "beat",
+      "result": "The consensus figure is an unverified relay from Australian financial press rather than a named-provider number, and is carried with that caveat.",
+      "kpi": "net-income"
+     },
+     {
+      "name": "Second-half net profit",
+      "actual": "A$3,192m, up 93% on 1H26",
+      "expected": "",
+      "verdict": "",
+      "result": "The year is heavily back-loaded, consistent with the sale of the North American and European public investments business landing in the second half."
+     },
+     {
+      "name": "Net operating income",
+      "actual": "A$19,477m",
+      "expected": "",
+      "verdict": "",
+      "result": "Group total."
+     },
+     {
+      "name": "Basic earnings per share",
+      "actual": "A$12.77",
+      "expected": "",
+      "verdict": "",
+      "result": "Against A$9.79 and A$8.41 in the two prior comparatives shown in the same presentation."
+     },
+     {
+      "name": "Dividend per ordinary share",
+      "actual": "A$7.00",
+      "expected": "",
+      "verdict": "",
+      "result": "Against A$6.50 in the prior year."
+     },
+     {
+      "name": "Return on equity",
+      "actual": "14.0%",
+      "expected": "",
+      "verdict": "",
+      "result": "Annualised."
+     },
+     {
+      "name": "Assets under management",
+      "actual": "A$722.1b at 31 March 2026",
+      "expected": "",
+      "verdict": "",
+      "result": "Private Markets A$416.1b (up 7%) and Public Investments A$306.0b. Roughly A$250b of AUM transferred out in the second half following the sale of the North American and European public investments business, so the headline and the like-for-like growth figures differ."
+     },
+     {
+      "name": "Total assets",
+      "actual": "A$540.1b",
+      "expected": "",
+      "verdict": "",
+      "result": "Group balance sheet."
+     },
+     {
+      "name": "Performance fees",
+      "actual": "A$1,381m",
+      "expected": "",
+      "verdict": "",
+      "result": "Driven by Macquarie Infrastructure Partners IV and Aligned co-investor fees — the fund that held Aligned monetising it before the sale itself closed."
+     }
+    ],
+    "commentary": "**The Aligned closing on 21 July 2026 falls after this year-end and is therefore not in this result.** It will land in FY27. Macquarie has published no return figure for the investment in any document located."
+   }
+  ],
+  "commentary": "**All figures are Australian dollars.** Macquarie reports in AUD while its asset-management deal releases frequently quote US dollars — Aligned is quoted at USD 40bn and AirTrunk at A$24bn, and comparing them without conversion is a live error. The fiscal year ends 31 March, so 'FY26' means the year to 31 March 2026 and the half-years end 30 September. No `usdMillions` overlay is carried on the net-profit lines: the schema requires a sourced conversion basis for any non-USD figure, and no citable rate for Macquarie's reporting periods was researched in this pass, so an unsourced conversion would be fabricated precision."
+ },
+ "sources": [
+  {
+   "label": "Macquarie Group Limited — results of the 2026 Annual General Meeting (ASX release)",
+   "url": "https://announcements.asx.com.au/asxpdf/20260723/pdf/071zxfh509m00b.pdf",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Macquarie Group FY26 Annual General Meeting presentation",
+   "url": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-fy26-agm-presentation.pdf",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Aligned Data Centers — AIP, MGX and BlackRock's GIP close the acquisition of Aligned Data Centers",
+   "url": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Latham & Watkins advises on the completed sale of Aligned Data Centers by Macquarie Asset Management",
+   "url": "https://www.lw.com/en/news/2026/07/latham-advises-on-completed-sale-of-aligned-data-centers-by-macquarie-asset-management",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Macquarie Group notice of the 2026 Annual General Meeting (ASX release)",
+   "url": "https://announcements.asx.com.au/asxpdf/20260617/pdf/070qkw075hknft.pdf",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "Infrastructure Investor 100 — 2026 edition, five-year infrastructure capital raised",
+   "url": "https://www.infrastructureinvestor.com/ii-100/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Macquarie Group FY26 annual result presentation, year ended 31 March 2026",
+   "url": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-fy26-presentation.pdf",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Macquarie Group FY26 result announcement",
+   "url": "https://www.macquarie.com/us/en/about/news/2026/macquarie-group-fy26-result-announcement.html",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Macquarie Group FY26 result transcript",
+   "url": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-fy26-transcript.pdf",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Macquarie Group Annual Report 2026 (ASX lodgement)",
+   "url": "https://announcements.asx.com.au/asxpdf/20260508/pdf/06zcwby8r05n9g.pdf",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Macquarie Group 2026 Operational Briefing presentation",
+   "url": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-2026-operational-briefing-presentation.pdf",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "European Commission merger decision M.12259 — GIM / MGX / Aligned",
+   "url": "https://ec.europa.eu/competition/mergers/cases1/202604/M_12259_10869557_118_3.pdf",
+   "date": "2026-01-19"
+  },
+  {
+   "label": "Macquarie Group 1H26 half-year result presentation, half ended 30 September 2025",
+   "url": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2026/macquarie-group-hy26-presentation.pdf",
+   "date": "2025-11-06"
+  },
+  {
+   "label": "Aligned Data Centers — AIP, MGX and BlackRock's GIP to acquire all equity in Aligned Data Centers",
+   "url": "https://aligneddc.com/press-release/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+   "date": "2025-10-15"
+  },
+  {
+   "label": "Global Infrastructure Partners — AIP, MGX and BlackRock's GIP to acquire Aligned Data Centers",
+   "url": "https://www.global-infra.com/news/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+   "date": "2025-10-15"
+  },
+  {
+   "label": "Macquarie — investing across the digital ecosystem",
+   "url": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html",
+   "date": "2025-10"
+  },
+  {
+   "label": "Macquarie Group FY25 annual result presentation, year ended 31 March 2025",
+   "url": "https://www.macquarie.com/assets/macq/investor/results-and-presentations/2025/macquarie-group-fy25-presentation.pdf",
+   "date": "2025-05-09"
+  },
+  {
+   "label": "European Commission merger decision M.11843 — Ares / Macquarie / Data Realty Group / Prime Data Centers",
+   "url": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "Macquarie-led consortium completes the acquisition of the UK Green Investment Bank",
+   "url": "https://www.macquarie.com/au/en/about/news/2017/macquarie-led-consortium-completes-acquisition-of-the-green-investment-bank.html",
+   "date": "2017-08-18"
+  },
+  {
+   "label": "Macquarie Group investor centre — financial calendar and reporting dates",
+   "url": "https://www.macquarie.com/au/en/investors.html"
+  },
+  {
+   "label": "Macquarie Group board of directors",
+   "url": "https://www.macquarie.com/au/en/about/company/board-of-directors.html"
+  },
+  {
+   "label": "Macquarie Group executive committee",
+   "url": "https://www.macquarie.com/au/en/about/company/executive-committee.html"
+  },
+  {
+   "label": "Macquarie Asset Management — company page",
+   "url": "https://www.macquarie.com/au/en/about/company/macquarie-asset-management.html"
+  },
+  {
+   "label": "Macquarie Capital — company page",
+   "url": "https://www.macquarie.com/au/en/about/company/macquarie-capital.html"
+  },
+  {
+   "label": "Commodities and Global Markets — company page",
+   "url": "https://www.macquarie.com/au/en/about/company/commodities-and-global-markets.html"
+  },
+  {
+   "label": "Green Investment Group",
+   "url": "https://www.greeninvestmentgroup.com/en.html"
+  },
+  {
+   "label": "Macquarie Group Limited EDGAR submissions record (CIK 0001418333)",
+   "url": "https://data.sec.gov/submissions/CIK0001418333.json"
+  },
+  {
+   "label": "EDGAR full-text search — \"Macquarie Group Limited\" as a named party in other registrants' filings",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Macquarie+Group+Limited%22"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

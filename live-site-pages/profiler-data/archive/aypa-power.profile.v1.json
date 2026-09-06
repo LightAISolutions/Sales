@@ -533,25 +533,6 @@
       "note": "Enerdatics' note on the Brookfield deal lists Key Capture Energy (SK) and esVolta as the comparable standalone storage platforms against which it benchmarks Aypa's implied about USD 1.1 million per MW.",
       "context": "The comparison is an analyst's, not a party's. Enerdatics derives the per-MW value from the USD 7 billion enterprise value and Brookfield's about 6.5 GW, and sets it 'just below the ~$1.27mn/MW median for comparable US standalone battery assets at build-ready or construction stage since 2023'. No independent ranking of standalone storage developers placing Aypa was found.",
       "source": "https://www.enerdatics.com/flashnotes-updates-brookfield-aypa"
-    },
-    {
-      "slug": "blackstone",
-      "type": "investor",
-      "status": "active",
-      "since": "2020-03",
-      "note": "Blackstone acquired the platform as NRStor C&I in March 2020 and owns it until the Brookfield sale closes.",
-      "context": "Blackstone Energy Partners acquired NRStor C&I in March 2020 and rebranded it Aypa Power that August — the purchase of a three-year-old operating platform that already held over 200 MWh of operational, in-construction and contracted projects, not a seeding. The seller of record on the pending exit is funds managed by Blackstone Energy Transition Partners.",
-      "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm"
-    },
-    {
-      "slug": "brookfield",
-      "type": "investor",
-      "status": "announced",
-      "since": "2026-07",
-      "scale": "~USD 7bn EV / USD 3bn equity",
-      "note": "Brookfield Global Transition Fund II, with Brookfield Renewable, has agreed to acquire Aypa — signed, not closed.",
-      "context": "Announced 22 July 2026. The acquiring vehicle is BGTF II, which closed in October 2025 at USD 20bn plus about USD 3.5bn of co-investment, alongside Brookfield Renewable, whose share is stated as about USD 420m net in its results release and about USD 760m in its Q2 2026 management discussion — both carried as stated.\n\nBrookfield Renewable's Q2 2026 interim financial statements, Note 22, say closing 'is expected to occur in the second half of 2026 and is subject to customary closing conditions'. No completion had been announced as of 6 September 2026.",
-      "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm"
     }
   ],
   "policyExposure": [
@@ -792,11 +773,6 @@
     "Indicators to watch: (1) a closing announcement from Brookfield or Blackstone, and any FERC Section 203 or HSR record naming the Aypa entities — closing converts the ownership judgment; a lapse past Q1 2027 would indicate a regulatory or financing problem the parties have not disclosed; (2) whether the USD 1.55 billion corporate facility and the USD 1.5 billion warehouse survive the change of control unchanged, or are refinanced under Brookfield — a refinancing would show the debt was priced on Blackstone's sponsorship; (3) Dirac's appeal in Chino and the Pinopolis certificate decision at the South Carolina PSC (hearing set 19 March 2026; COD 1 December 2027) — a second California loss would confirm the permitting judgment; (4) CODs for Kuna (stated 'mid-2025'), Cald (stated 2024) and Vidal (2026), none confirmed by any source read — silence past those dates would indicate slippage the releases do not admit; (5) a supplier announcement naming anyone other than e-STORAGE, or an Aypa statement on FEOC-compliant supply, which would refute the concentration judgment."
   ],
   "sources": [
-    {
-      "label": "Brookfield Asset Management Form 8-K exhibit 99.1 — agreement to acquire Aypa Power",
-      "url": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
-      "date": "2026-07-23"
-    },
     {
       "label": "Brookfield Renewable Q2 2026 results release — Aypa 'for ~$3 billion (~$420 million net)', 3,000 MW + 3,500 MW + 20 GW",
       "url": "https://www.globenewswire.com/news-release/2026/07/31/3336706/0/en/Brookfield-Renewable-Reports-Strong-Second-Quarter-Results.html",
@@ -1233,6 +1209,6 @@
       "url": "https://job-boards.greenhouse.io/aypapower"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

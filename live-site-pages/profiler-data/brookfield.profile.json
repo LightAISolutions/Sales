@@ -1,0 +1,839 @@
+{
+ "schemaVersion": 7,
+ "slug": "brookfield",
+ "name": "Brookfield Asset Management Ltd.",
+ "shortName": "Brookfield",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://bam.brookfield.com/",
+ "headquarters": "Brookfield Place, 225 Liberty Street, New York, NY, United States",
+ "founded": "Incorporated 2022; the Brookfield franchise claims over 125 years of operating history",
+ "employees": "Over 5,800 investment and asset-management professionals (over 60% in the US after the Oaktree completion); about 250,000 operating employees across the managed businesses",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: BAM"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** This dossier's subject is **Brookfield Asset Management Ltd. (NYSE/TSX: BAM)** — the listed asset manager — and not Brookfield Corporation, Brookfield Infrastructure or Brookfield Renewable, because BAM is where the AI-infrastructure deals are actually executed. Every marquee announcement in this corpus's period (the USD 100bn AI infrastructure programme with NVIDIA and the Kuwait Investment Authority, France, Sweden, Qatar, Korea, Paducah and Aypa Power) is published under BAM's name and deployed through BAM-managed funds. BAM is also the only entity in the complex filing US-domestic forms.\n\n**BACKGROUND.** BAM holds **100% of Brookfield's asset-management business** following the 2025 Arrangement of 4 February 2025, in which Brookfield Corporation transferred its roughly 73% interest in that business to BAM for newly issued Class A shares. Fee-bearing capital **USD 602,714m at 31 December 2025** and **USD 672bn at 30 June 2026** (+19% year on year), against total AUM the firm states as 'over USD 1 trillion'. FY2025 revenues USD 4,817m and net income USD 2,398m under US GAAP.\n\n**The structure is the subject.** BAM is a fee-and-carry entity with a deliberately small balance sheet — total assets USD 20,080m at 30 June 2026 against Brookfield Corporation's USD 525,515m. Its listed affiliates BIP and BEP are **minority co-investors** in the deals BAM's funds lead, and a dossier written around either would understate the figures by 80-90%: BIP holds about **15% of Compass Datacenters**, equity-accounted, and BEP took about USD 420m of Aypa's roughly USD 3bn equity cheque.",
+ "ecosystemRole": "We assess Brookfield as the ecosystem's most operationally integrated investor — the one that owns generation, transmission-adjacent assets and data-centre platforms inside a single franchise and can therefore offer a 'bring-your-own-power' proposition that a pure financial sponsor cannot. The Paducah campus is the clearest expression: Brookfield assembled a consortium with NextEra and three local utilities to build up to 1.8 GW of utility capacity and over 1.2 GW of compute at a US Department of Energy site. For vendors in this corpus, Brookfield is reached through Compass, Data4, Ascenty and Csquare on the data-centre side and through Brookfield Renewable on the power side, and — as with Blackstone — it appears in supplier dossiers as an ownership attribution rather than as a direct counterparty.",
+ "productsAndServices": [
+  {
+   "name": "Infrastructure",
+   "category": "Strategy",
+   "description": "USD 247bn of AUM and USD 106,398m of fee-bearing capital at 31 December 2025; about 230 investment professionals and about 64,000 operating employees. Brookfield's own framing covers utilities, transport, midstream and data infrastructure — the last defined as 'businesses that provide essential services and critical infrastructure to transmit and store data globally, including telecom towers and active rooftop sites, fiber optic cable and data centers'.",
+   "highlights": [
+    "Brookfield Infrastructure Fund (BIF) flagship series — the sixth vintage raised USD 9.3bn in Q2 2026 alone and is expected to be the largest in the series; BIF V holds Compass",
+    "Brookfield AI Infrastructure Fund (BAIIF) — launched 19 November 2025 with a USD 10bn equity target, USD 5bn committed at launch from Brookfield, NVIDIA and the Kuwait Investment Authority; first close held in Q2 2026 at USD 5bn",
+    "Brookfield Infrastructure Structured Solutions (BISS) — inaugural vintage closed 11 March 2025 at about USD 1bn",
+    "Brookfield Infrastructure Debt Fund IV — first close over USD 4bn announced 1 October 2025",
+    "BIP, the listed perpetual vehicle, with USD 128.2bn of total assets at 31 December 2025 and a USD 29.2bn market capitalisation"
+   ],
+   "positioning": "Infrastructure Investor's 2026 edition ranks Brookfield **third at USD 99.1bn** of five-year infrastructure fundraising, behind BlackRock (USD 113.4bn) and KKR (USD 100.5bn) and ahead of Macquarie (USD 87.9bn) and Blackstone (USD 45.7bn). Brookfield raises roughly twice as much infrastructure capital as Blackstone and about 13% more than Macquarie on this measure — but IPE Real Assets' AUM table for the prior year put **Macquarie first and Brookfield second**, both above USD 300bn. The two rankings measure flow and stock respectively and nothing reconciles them; both are carried.",
+   "soldThrough": "Institutional limited partners; private wealth through the Brookfield Infrastructure Income Fund and the listed affiliates.",
+   "targetSegments": [
+    "Pension funds",
+    "Sovereign wealth funds",
+    "Insurers",
+    "Private wealth"
+   ],
+   "roadmap": "BIF VI targeting first close in 2026; BAIIF's USD 100bn figure is an **asset-acquisition ambition for the programme, not the size of the fund** — the fund targets USD 10bn of equity."
+  },
+  {
+   "name": "Renewable Power & Transition (marketed as 'Energy')",
+   "category": "Strategy",
+   "description": "USD 143bn of AUM and USD 67,245m of fee-bearing capital at 31 December 2025; about 175 investment professionals and about 20,100 operating employees. Hydro, utility-scale solar, wind, distributed energy and battery storage, plus 'sustainable solutions' including the Westinghouse nuclear-services stake held with Cameco.",
+   "highlights": [
+    "Brookfield Global Transition Fund II — final institutional close 7 October 2025 at USD 20bn plus about USD 3.5bn of co-investment, roughly USD 23.5bn for the vintage. This is the fund acquiring Aypa Power",
+    "Microsoft renewable energy framework agreement — over 10.5 GW of new capacity between 2026 and 2030 in the US and Europe, announced 1 May 2024 and filed as a BEP exhibit",
+    "Google Hydro Framework Agreement — up to 3,000 MW of carbon-free hydroelectric capacity across the US, announced 15 July 2025, with Holtwood and Safe Harbor in Pennsylvania the first contracts at more than USD 3bn and 670 MW on 20-year power purchase agreements",
+    "Westinghouse — the US Department of Energy committed USD 17.5bn of conditional loan facilities for long-lead equipment for up to ten AP1000 reactors",
+    "BEP delivered about 3,100 MW of new capacity in the first half of 2026 and targets about 10,000 MW a year by 2027"
+   ],
+   "positioning": "The Microsoft framework is the largest corporate renewable agreement in the corpus by nameplate, and the Google hydro agreement is described by the parties as the world's largest corporate clean-power deal for hydroelectricity. Both are frameworks rather than delivered capacity: the Microsoft build window **starts** in 2026, and no party publishes a contracted-or-delivered figure against the 10.5 GW. Notably, Microsoft's own SEC filings contain no full-text mention of Brookfield outside incidental benefit-plan filings.",
+   "soldThrough": "Institutional LPs through the BGTF series and the Catalytic Transition Fund; corporate offtakers through framework agreements.",
+   "targetSegments": [
+    "Hyperscalers and large corporate power buyers",
+    "Institutional LPs",
+    "Utilities"
+   ],
+   "roadmap": "BEP is guiding to about 10,000 MW of new projects a year by 2027, having signed power purchase agreements for about 2,600 MW of advanced-pipeline projects in Q2 2026."
+  },
+  {
+   "name": "Credit — including Oaktree",
+   "category": "Strategy",
+   "description": "The largest strategy by both measures — USD 363bn of AUM and USD 279,383m of fee-bearing capital at 31 December 2025, including the only liquid-strategies book in the franchise at USD 77bn. About 1,800 investment professionals including Oaktree.",
+   "highlights": [
+    "Brookfield completed the acquisition of the roughly 26% of Oaktree it did not own on 3 August 2026 for approximately USD 3bn, taking it to 100%",
+    "After Oaktree, the US is BAM's largest market — over 60% of its employee base and nearly half of its revenue",
+    "Brookfield Wealth Solutions is BAM's largest credit client: of USD 51bn of credit capital raised in Q2 2026, USD 45bn came from BWS including a USD 40bn Just Group mandate",
+    "Oaktree Opportunities Fund XII final-closed 11 February 2025 at about USD 16bn"
+   ],
+   "soldThrough": "Institutions, financial advisers and individuals; and the affiliated insurance balance sheet.",
+   "targetSegments": [
+    "Insurers",
+    "Institutional credit allocators",
+    "Private wealth"
+   ]
+  },
+  {
+   "name": "Real Estate and Private Equity",
+   "category": "Strategy",
+   "description": "Real Estate carries over USD 273bn of AUM and USD 101,682m of fee-bearing capital with about 2,150 professionals; Private Equity carries USD 155bn of AUM and USD 48,006m of fee-bearing capital with about 260 professionals and about 136,900 operating employees — the largest operating headcount of any strategy.",
+   "highlights": [
+    "Brookfield Capital Partners' seventh vintage raised USD 6.7bn in Q2 2026",
+    "Pinegrove Ventures' opportunistic strategy final-closed in January 2026 at USD 2.2bn",
+    "Brookfield Strategic Real Estate Partners V held a final close during 2025"
+   ],
+   "soldThrough": "Institutional LPs; private wealth through perpetual and semi-liquid vehicles including the Brookfield Private Equity Fund launched 22 October 2025.",
+   "targetSegments": [
+    "Institutional LPs",
+    "Private wealth"
+   ]
+  },
+  {
+   "name": "Data-centre platforms",
+   "category": "Investment theme",
+   "description": "Brookfield's data-centre exposure runs through five named platforms held at minority, equity-accounted interests by BIP, alongside the funds BAM manages. The distinction between the platform's scale and Brookfield's interest in it is the thing most often lost.",
+   "highlights": [
+    "Compass Datacenters — US, Canada, Israel and Italy; BIP holds an approximate 15% interest acquired 3 October 2023 for about USD 400m, carried as an equity-accounted investment in associate",
+    "Data4 — European hyperscale, over 30 data centres; BIP's effective interest about 18-19%; a 90% interest in a portfolio of stabilised assets was sold in Q3 2025 for about USD 1.7bn total",
+    "Ascenty — Latin America, a joint venture with Digital Realty; BIP's associate interest 12%",
+    "Digital Connexion — India, with Digital Realty and Reliance Jio; BIP's associate interest 8%",
+    "Csquare, Inc. (NYSE: CSQR) — the US colocation platform built out of Cyxtera, IPO'd July 2026 for about USD 1.2bn of gross proceeds with Brookfield retaining 64%; 64 sites, over 1,700 customers, capacity grown from 115 MW to about 390 MW"
+   ],
+   "positioning": "Two first-party capacity figures exist with different scopes and must not be merged. Brookfield's group-level page states that Compass and Data4 together support 'more than 1.6 GW of contracted capacity and over 3.5 GW of development potential' — and carries **no publication date**. BIP's FY2025 Form 20-F states its own portfolio at 'over 150 operational data centers, with approximately 1.2 gigawatts of critical load capacity and 1.1 gigawatts of contracted capacity that will be built out' as at 31 December 2025. The first is a platform figure, the second is BIP's portfolio. **No independent ranking of data-centre owners exists** against which either could be placed.",
+   "soldThrough": "Not sold directly; Brookfield's exposure is through fund and affiliate interests in the platforms.",
+   "targetSegments": [
+    "Hyperscalers and cloud-service providers, via the platforms"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "The listed Brookfield complex — five filers, four regimes",
+   "specs": [
+    {
+     "band": "Entity",
+     "label": "Brookfield Corporation (BN)",
+     "value": "CIK 0001001085; NYSE and TSX; files Form 40-F under the Canadian MJDS as a foreign private issuer; IFRS; HQ Brookfield Place, 181 Bay Street, Toronto; EDGAR profile carries SIC 6512, Operators of Nonresidential Buildings"
+    },
+    {
+     "band": "Entity",
+     "label": "Brookfield Asset Management Ltd. (BAM)",
+     "value": "CIK 0001937926; NYSE and TSX; files Form 10-K/10-Q/8-K as a US domestic filer, and only since FY2024 — it filed 20-F for FY2022 and 40-F for FY2023; US GAAP; HQ New York"
+    },
+    {
+     "band": "Entity",
+     "label": "Brookfield Infrastructure Partners L.P. (BIP)",
+     "value": "CIK 0001406234; NYSE and TSX; files Form 20-F; IFRS; Bermuda limited partnership; EDGAR SIC 4400, Water Transportation"
+    },
+    {
+     "band": "Entity",
+     "label": "Brookfield Renewable Partners L.P. (BEP)",
+     "value": "CIK 0001533232; NYSE and TSX; files Form 20-F; IFRS; Bermuda limited partnership; EDGAR SIC 4911, Electric Services"
+    },
+    {
+     "band": "Entity",
+     "label": "Paired corporations",
+     "value": "Brookfield Infrastructure Corp (BIPC, CIK 0001788348) and Brookfield Renewable Corp (BEPC, CIK 0001791863) are economically equivalent twins of BIP and BEP, exchangeable one-for-one, created to widen the investor base"
+    },
+    {
+     "band": "Ownership",
+     "label": "BN's interest in BAM",
+     "value": "Three published figures, all correct on their own basis: about 73% of BAM's Class A shares (BAM's FY2025 10-K); 75% combined with Brookfield Wealth Solutions at 31 December 2025; and 74% at 31 March 2026, being 70% directly and 4% through BWS (BN's Q1 2026 interim report)"
+    },
+    {
+     "band": "Ownership",
+     "label": "Carried interest",
+     "value": "BN retains an economic interest equal to effectively 100% of carried interest earned in mature funds and 33.3% on newer funds, under the Relationship Agreement — so BAM earns the fees while its parent keeps most of the carry"
+    }
+   ],
+   "notes": "Four different SIC codes across one franchise — Investment Advice, Nonresidential Building Operators, Water Transportation and Electric Services — and not one of them describes an AI-infrastructure investor. The entity that co-controls Compass Datacenters is classified by the SEC as a water-transportation company."
+  },
+  {
+   "product": "Fee-bearing capital by strategy at 31 December 2025",
+   "specs": [
+    {
+     "band": "Credit",
+     "label": "AUM / fee-bearing capital",
+     "value": "USD 363bn / USD 279,383m"
+    },
+    {
+     "band": "Real Estate",
+     "label": "AUM / fee-bearing capital",
+     "value": "over USD 273bn / USD 101,682m"
+    },
+    {
+     "band": "Infrastructure",
+     "label": "AUM / fee-bearing capital",
+     "value": "USD 247bn / USD 106,398m"
+    },
+    {
+     "band": "Private Equity",
+     "label": "AUM / fee-bearing capital",
+     "value": "USD 155bn / USD 48,006m"
+    },
+    {
+     "band": "Renewable Power & Transition",
+     "label": "AUM / fee-bearing capital",
+     "value": "USD 143bn / USD 67,245m"
+    },
+    {
+     "band": "Total",
+     "label": "Fee-bearing capital",
+     "value": "USD 602,714m at 31 December 2025, against USD 538,541m a year earlier and USD 456,998m at 31 December 2023"
+    },
+    {
+     "band": "Total",
+     "label": "Long-dated or perpetual share",
+     "value": "87% of fee-bearing capital"
+    },
+    {
+     "band": "Total",
+     "label": "Q2 2026 update",
+     "value": "USD 672bn of fee-bearing capital, up 19% year on year, on USD 163bn of trailing-twelve-month fundraising"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Uncalled commitments",
+     "value": "USD 149bn at 30 June 2026, of which USD 68bn will generate about USD 680m of annual fees once deployed"
+    }
+   ],
+   "notes": "Segment AUM sums to roughly USD 1,181bn against the firm's own 'over USD 1 trillion' framing. Fee-bearing capital, not AUM, is the number that drives revenue."
+  },
+  {
+   "product": "Three reorganisations closing in Q4 2026",
+   "specs": [
+    {
+     "band": "Combination",
+     "label": "BIP + BIPC",
+     "value": "Intention to combine into a single publicly traded corporation; special meeting of securityholders 14 October 2026; completion expected Q4 2026"
+    },
+    {
+     "band": "Combination",
+     "label": "BEP + BEPC",
+     "value": "Same structure and the same 14 October 2026 special-meeting date; completion expected Q4 2026"
+    },
+    {
+     "band": "Combination",
+     "label": "BN + Brookfield Wealth Solutions",
+     "value": "Reorganisation into Brookfield Corporation Ltd., also targeted at Q4 2026"
+    }
+   ],
+   "notes": "Three simultaneous reorganisations mean any share-count, ticker or entity-name fact in this dossier has a shelf life measured in weeks. The 14 October 2026 special meetings are the first hard date."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-10",
+   "category": "partnership",
+   "headline": "NVIDIA names Brookfield one of six capital partners in a programme to mobilise over USD 500bn for AI infrastructure",
+   "read": "Six firms, no per-firm allocation, and a memorandum rather than a commitment — the figure describes the programme, not Brookfield's share. Blackstone is named in the same release.",
+   "source": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "financial",
+   "headline": "Q2 2026: fee-bearing capital USD 672bn, up 19% year on year on USD 163bn of trailing-twelve-month fundraising",
+   "read": "Fundraising rather than markets is doing the work; USD 149bn of uncalled commitments means roughly USD 680m of annual fees are contracted but not yet earned.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-asset-management-reports-second-quarter-2026-results"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "ma",
+   "headline": "Brookfield completes the acquisition of the remaining ~26% of Oaktree for approximately USD 3bn",
+   "read": "The US becomes BAM's largest market — over 60% of employees and nearly half of revenue — and Oaktree management fees now consolidate at 100% ownership.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-completes-acquisition-oaktree"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "corporate",
+   "headline": "BEP and BEPC announce an intention to combine into a single publicly traded corporation, with a special meeting set for 14 October 2026",
+   "read": "The paired-corporation structure that widened the investor base is being unwound; the same is happening at BIP and BIPC on the same date.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1533232/000117184326005105/exh_991.htm"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "project",
+   "headline": "Brookfield, NextEra and three Kentucky utilities selected by the US Department of Energy to develop a USD 100bn AI data-centre campus at the Paducah site",
+   "read": "The clearest expression of the bring-your-own-power model: up to 1.8 GW of utility capacity and over 1.2 GW of compute backed by up to 4.6 GW of dedicated generation, complete in 2032.",
+   "source": "https://bam.brookfield.com/press-releases/doe-site-western-kentucky-revitalized-data-center-campus-and-dedicated-energy"
+  },
+  {
+   "date": "2026-07-27",
+   "category": "partnership",
+   "headline": "NAVER, NVIDIA and Brookfield agree to grow Korea's national AI factory from 55 MW to 200 MW by 2028",
+   "read": "Brookfield would fund up to USD 9bn as NAVER's exclusive capital partner — but NVIDIA's own account describes a non-binding term sheet, so this is an intention rather than a commitment.",
+   "source": "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "ma",
+   "headline": "Brookfield agrees to acquire Aypa Power from Blackstone Energy Transition Partners at about USD 7bn enterprise value and USD 3bn equity value",
+   "read": "Acquired through Brookfield Global Transition Fund II alongside Brookfield Renewable; BEP's Q2 interim statements put expected closing in the second half of 2026, subject to customary closing conditions.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm"
+  },
+  {
+   "date": "2026-06-10",
+   "category": "policy",
+   "headline": "Senate Banking Committee minority writes to Brookfield Infrastructure, alongside Blackstone, BlackRock and KKR, on data-centre ownership and electricity prices",
+   "read": "Brookfield is exposed to the 'supply and demand' framing through the same franchise: it owns generation through Brookfield Renewable and data-centre demand through Compass, Data4 and Csquare.",
+   "source": "https://www.banking.senate.gov/newsroom/minority"
+  },
+  {
+   "date": "2026-03-02",
+   "category": "financial",
+   "headline": "FY2025: revenues USD 4,817m and net income USD 2,398m under US GAAP; fee-bearing capital USD 602,714m",
+   "read": "Net income attributable to BAM jumped from USD 541m to USD 2,398m — almost entirely because the 2025 Arrangement gave BAM 100% of the asset-management business it had previously held about 27% of, not because operations changed by that magnitude.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm"
+  },
+  {
+   "date": "2025-12-09",
+   "category": "partnership",
+   "headline": "Brookfield and Qai form a USD 20bn strategic investment partnership for AI infrastructure in Qatar and selected international markets",
+   "read": "The third sovereign AI programme after France and Sweden, and the pattern is consistent: a government or state fund supplies the demand and the site, Brookfield supplies the capital.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-and-qai-form-20-billion-strategic-investment-partnership-ai"
+  },
+  {
+   "date": "2025-11-19",
+   "category": "corporate",
+   "headline": "Brookfield launches a USD 100bn AI infrastructure programme anchored by the Brookfield AI Infrastructure Fund, with NVIDIA and the Kuwait Investment Authority as founding partners",
+   "read": "The USD 100bn is the programme's asset-acquisition ambition including debt and co-investment; the fund itself targets USD 10bn of equity and had USD 5bn committed. Conflating the two overstates the fund tenfold.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program"
+  },
+  {
+   "date": "2025-07-15",
+   "category": "partnership",
+   "headline": "Brookfield and Google sign a Hydro Framework Agreement for up to 3,000 MW of carbon-free hydroelectric capacity",
+   "read": "Described by the parties as the world's largest corporate clean-power deal for hydroelectricity; the first contracts are Holtwood and Safe Harbor in Pennsylvania at more than USD 3bn and 670 MW on 20-year terms.",
+   "source": "https://bep.brookfield.com/press-releases/bep/brookfield-and-google-sign-hydro-framework-agreement-deliver-3000-mw-homegrown"
+  },
+  {
+   "date": "2025-06-04",
+   "category": "capacity",
+   "headline": "Brookfield commits SEK 95bn to a new AI centre at Strängnäs, Sweden, more than doubling site capacity from 300 MW to 750 MW",
+   "read": "A ten-to-fifteen-year build with a land allocation of about 350,000 square metres — the sovereign-AI pattern applied to a single site rather than a national programme.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-advance-ai-infrastructure-sweden-through-sek-95-billion-investment"
+  },
+  {
+   "date": "2025-02-10",
+   "category": "policy",
+   "headline": "Brookfield commits €20bn to France's AI infrastructure by 2030, announced at the Paris AI Action Summit",
+   "read": "Up to €15bn of data-centre investment led by Data4; the framework was later expanded to €30bn, disclosed only as a line in the Q2 2026 results release with no standalone announcement located.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-invest-eu20-billion-frances-ai-infrastructure"
+  },
+  {
+   "date": "2025-02-04",
+   "category": "corporate",
+   "headline": "The 2025 Arrangement completes: Brookfield Corporation transfers its ~73% interest in the asset-management business to BAM for newly issued Class A shares",
+   "read": "This is the transaction that makes BAM the right dossier subject — it owns 100% of the asset manager from this date, and BN owns about 73% of BAM.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-asset-management-closes-transaction-broaden-shareholder-ownership-and"
+  },
+  {
+   "date": "2024-05-01",
+   "category": "partnership",
+   "headline": "Brookfield Asset Management and Brookfield Renewable sign a framework agreement with Microsoft for over 10.5 GW of new renewable capacity between 2026 and 2030",
+   "read": "The largest corporate renewable framework in this corpus by nameplate — and, two years on, one whose build window has only just opened and against which no delivered figure is published.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1533232/000117184324002391/exh_991.htm"
+  },
+  {
+   "date": "2023-10-03",
+   "category": "ma",
+   "headline": "Brookfield Infrastructure acquires an approximate 15% interest in Compass Datacenters for about USD 400m",
+   "read": "The number that corrects 'Brookfield owns Compass': co-control sits with Brookfield-managed funds alongside Ontario Teachers', and BIP's own interest is a minority stake carried as an equity-accounted associate.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **the entity question is the single most consequential fact about Brookfield in this corpus, and that BAM is the right answer**. Basis: every AI-infrastructure announcement in the period is published under BAM's name and deployed through BAM-managed funds (BAIIF, BIF VI, BGTF II); BAM is the only entity in the complex filing US-domestic forms; and BIP and BEP are minority co-investors, holding about 15% of Compass and about USD 420m of Aypa's roughly USD 3bn equity respectively. A dossier written around BIP or BEP would understate every figure by 80-90%; one written around BN would describe a USD 525bn balance sheet dominated by insurance float and consolidated operating assets.",
+  "**(High confidence)** We assess that **the 'Brookfield owns Compass' formulation fails, and the corrected version is more interesting than the error**. BIP acquired an approximate 15% interest on 3 October 2023 for about USD 400m, carried as an equity-accounted investment in an associate rather than consolidated. Ontario Teachers' — the pre-existing investor — used the phrase 'co-controlling shareholder' in its own release, and co-control sits with Brookfield-managed funds alongside it. The 2023 deal value is itself unreconciled across three incompatible figures (about USD 5.5bn and USD 5.7bn as platform valuations against USD 1.35-1.4bn as the stake consideration), and BIP's own Q2 2023 letter states USD 1.35bn 'including Brookfield Infrastructure's equity of approximately $375 million'. Every one of those numbers is a different thing.",
+  "**(High confidence)** We assess that **the USD 100bn AI figure is an asset-acquisition ambition and not a fund, and that the distinction is routinely lost**. BAIIF targets USD 10bn of equity and had USD 5bn committed at first close, including Brookfield's own money alongside NVIDIA's and the Kuwait Investment Authority's. The USD 100bn is what the programme intends to acquire once co-investment and leverage are applied. Reporting the fund at USD 100bn overstates it by an order of magnitude.",
+  "**(Moderate confidence)** We assess that **Brookfield's sovereign-AI programmes are commitments to a framework rather than to capacity, and that none of them has yet been shown to convert**. France (€20bn, later €30bn), Sweden (SEK 95bn), Qatar (USD 20bn) and Korea (up to USD 9bn) share a shape: a government or state fund supplies demand and siting, Brookfield supplies capital, and the announcement precedes the build by years. The Korea arrangement is described by NVIDIA as a non-binding term sheet; the France upsize from €20bn to €30bn appears only as a line in an earnings release with no standalone announcement located. The judgment is moderate because the pattern is clear but no completion data exists yet for any of them.",
+  "**(Moderate confidence)** We assess that **the Microsoft 10.5 GW framework is materially undelivered and that no party publishes the figure that would settle it**. The agreement dates from 1 May 2024 and its build window covers 2026 to 2030 — it has only just opened. No contracted-or-delivered megawatt figure against the 10.5 GW has been published by either party, and Microsoft's own SEC filings contain no full-text mention of Brookfield outside incidental benefit-plan filings. A reader treating 10.5 GW as installed capacity would be wrong by an unknown but large margin.",
+  "**(High confidence)** We assess that **BAM earns the fees while its parent keeps most of the carry, and that this is the structural difference from Blackstone**. Under the Relationship Agreement, Brookfield Corporation retains an economic interest equal to effectively 100% of carried interest earned in mature funds and 33.3% on newer ones. At Blackstone the listed parent is the manager and keeps its own carry. So two firms that look like peers on a league table have opposite answers to the question of who owns the upside — and BAM's FY2025 net income jump from USD 541m to USD 2,398m is largely the 2025 Arrangement restating ownership, not operations improving fourfold.",
+  "**Collection gap, stated:** no Brookfield entity had published a Q3 2026 earnings date as of 6 September 2026. The only forward items on the investor calendars are a Brookfield Investor Day on 17 September 2026 in New York and a BIP/BEP Investor Day on 29 September 2026 in Toronto. Every Q3 date carried in this dossier's refresh calendar is a cadence inference from the 2025 actuals and is labelled as such. Separately, no first-party source states a founding year for the franchise; the '125 years' framing comes from Brookfield's own capability page and is carried as the company's wording rather than as a date."
+ ],
+ "policyExposure": [
+  {
+   "regime": "Senate Banking Committee oversight — data-centre ownership and retail electricity prices",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-10",
+   "exposure": "Brookfield Infrastructure Partners was one of four addressees — with Blackstone, BlackRock and KKR — of letters from the minority of the Senate Committee on Banking, Housing and Urban Affairs seeking documentation of efforts to mitigate the regulatory risks of owning data centres and an explanation of how a significant footprint in both energy supply and demand will not raise costs for consumers. Brookfield is exposed to the framing through a single franchise that owns generation (Brookfield Renewable's hydro fleet, the Westinghouse stake) and data-centre demand (Compass, Data4, Ascenty, Csquare).",
+   "mitigation": "No published Brookfield response to the letters was located.",
+   "source": "https://www.banking.senate.gov/newsroom/minority"
+  },
+  {
+   "regime": "US Department of Energy support for Westinghouse AP1000 deployment",
+   "status": "announced",
+   "effectiveDate": "2026-02-05",
+   "exposure": "The Department of Energy committed USD 17.5bn in conditional loan facilities to finance long-lead equipment for up to ten large-scale Westinghouse AP1000 reactors in the United States. Separately, under an October 2025 agreement between Brookfield, Cameco and the US Government, a contingent profit interest in Westinghouse vests for the Government once it makes a final investment decision and enters definitive agreements for new Westinghouse reactors with an aggregate value of at least USD 80bn before January 2029, in exchange for the Government arranging financing and facilitating permitting.",
+   "mitigation": "Westinghouse is held through Brookfield Renewable's sustainable-solutions segment and co-owned with Cameco, so the exposure is shared rather than borne by BAM alone.",
+   "source": "https://bam.brookfield.com/press-releases/us-department-energy-announces-conditional-175-billion-financing-support"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "compass-datacenters",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2023-10",
+   "scale": "~15% interest for about USD 400m",
+   "note": "Brookfield-managed funds co-control Compass with Ontario Teachers'; BIP itself holds an approximate 15% equity-accounted interest.",
+   "context": "Brookfield Infrastructure and Ontario Teachers' Pension Plan agreed on 20 June 2023 to acquire Compass Datacenters from RedBird Capital Partners and the Azrieli Group, closing 3 October 2023. Ontario Teachers', already an investor, described Brookfield in its own release as a 'co-controlling shareholder' — the counterparty's own word, and the reason 'owns' overstates it.\n\nBIP's FY2025 Form 20-F is precise about BIP's own position: 'an approximate 15% interest in a North American hyperscale data center platform, for total consideration of approximately $400 million', carried at 15% at both 31 December 2025 and 31 December 2024 as an investment in an associate — equity-accounted, not consolidated. BIP's Q2 2023 letter puts the co-controlling stake at USD 1.35bn 'including Brookfield Infrastructure's equity of approximately $375 million', against a platform valuation reported elsewhere at about USD 5.5bn. Those are three different measures and no source reconciles them.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm"
+  },
+  {
+   "slug": "aypa-power",
+   "type": "portfolio",
+   "status": "announced",
+   "since": "2026-07",
+   "scale": "~USD 7bn EV / USD 3bn equity",
+   "note": "Brookfield Global Transition Fund II, alongside Brookfield Renewable, has agreed to acquire Aypa Power from Blackstone — signed, not closed.",
+   "context": "Announced 22 July 2026 at about USD 7bn enterprise value and USD 3bn of equity value, for a platform of about 6.5 GW operating, under construction and contracted, 95% contracted with an average remaining contract life of 17 years, a development pipeline above 20 GW and about 200 staff.\n\nThe acquiring vehicle is the second vintage of Brookfield's flagship global transition strategy, BGTF II, which closed in October 2025 at USD 20bn plus about USD 3.5bn of co-investment. Brookfield Renewable's share is stated two ways in its own documents — about USD 420m net in the results release and about USD 760m in the Q2 2026 management discussion — and both are carried as stated. **The transaction has not closed.** BEP's Q2 2026 interim financial statements, Note 22, say closing 'is expected to occur in the second half of 2026 and is subject to customary closing conditions'; no regulator is named, and no completion had been announced as of 6 September 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm"
+  },
+  {
+   "slug": "blackstone",
+   "type": "competitor",
+   "status": "active",
+   "note": "Direct peers in infrastructure fundraising, and counterparties on the pending Aypa Power sale.",
+   "context": "Infrastructure Investor's 2026 edition ranks Brookfield third at USD 99.1bn of five-year infrastructure fundraising against Blackstone's eighth at USD 45.7bn. The two transacted directly in July 2026, when BGTF II agreed to buy Aypa Power from Blackstone Energy Transition Partners, and both were named with four other firms in NVIDIA's August 2026 programme to mobilise over USD 500bn of third-party capital.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "macquarie",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peers in infrastructure, and the two rankings that measure them disagree about which is larger.",
+   "context": "Infrastructure Investor's 2026 edition, measuring five-year capital raised, ranks Brookfield third at USD 99.1bn and Macquarie Asset Management fourth at USD 87.9bn. IPE Real Assets' table for the prior year, measuring assets under management, ranks Macquarie first and Brookfield second, both above USD 300bn. One measures flow and the other stock; nothing reconciles them and both are carried. The two also sit on opposite sides of the same asset class in this corpus — Brookfield holds its data-centre platforms through minority equity-accounted interests, Macquarie exited its largest at eight years.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "announced",
+   "since": "2024-05",
+   "scale": "over 10.5 GW framework",
+   "note": "Microsoft is the counterparty to Brookfield Renewable's global renewable energy framework agreement for over 10.5 GW between 2026 and 2030.",
+   "context": "Announced 1 May 2024 by Brookfield Asset Management together with Brookfield Renewable and filed as a BEP Form 6-K exhibit, covering the United States and Europe with potential extension to Asia-Pacific, India and Latin America. It is a framework, not delivered capacity: the build window opens in 2026 and no party has published a contracted-or-delivered figure against the 10.5 GW. Microsoft's own SEC filings contain no full-text mention of Brookfield outside incidental benefit-plan filings, so the arrangement is legible only from Brookfield's side.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1533232/000117184324002391/exh_991.htm"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-07",
+   "scale": "up to 3,000 MW; first contracts >USD 3bn / 670 MW",
+   "note": "Google is the counterparty to the Hydro Framework Agreement for up to 3,000 MW of carbon-free hydroelectric capacity across the United States.",
+   "context": "Announced 15 July 2025 and described by the parties as the world's largest corporate clean-power deal for hydroelectricity. The first contracts cover Holtwood and Safe Harbor in Pennsylvania — more than USD 3bn of power and 670 MW of capacity on 20-year power purchase agreements supporting Google's PJM operations. Brookfield acquired Holtwood's two hydro stations, 296 MW, in 2016, so this monetises a fleet it has held for a decade.",
+   "source": "https://bep.brookfield.com/press-releases/bep/brookfield-and-google-sign-hydro-framework-agreement-deliver-3000-mw-homegrown"
+  },
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-11",
+   "scale": "founding partner of a USD 10bn fund; six-firm >USD 500bn programme",
+   "note": "NVIDIA is a founding partner and investor in the Brookfield AI Infrastructure Fund, and named Brookfield one of six capital partners in its August 2026 financing programme.",
+   "context": "NVIDIA and the Kuwait Investment Authority were named investors and founding partners at BAIIF's launch on 19 November 2025, with USD 5bn committed against a USD 10bn equity target. Brookfield simultaneously launched Radiant, its own AI cloud service and a new NVIDIA Cloud Partner building AI factories on NVIDIA's DSX reference design. On 10 August 2026 NVIDIA named Brookfield with Apollo, BlackRock, Blackstone, Goldman Sachs and KKR in a programme to mobilise over USD 500bn — six firms, no per-firm allocation.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program"
+  },
+  {
+   "slug": "digital-realty",
+   "type": "partner",
+   "status": "active",
+   "note": "Joint-venture partner in Ascenty (Latin America) and Digital Connexion (India).",
+   "context": "Ascenty is a joint venture with Digital Realty described by Brookfield as the leading data-centre infrastructure company in Latin America; BIP's associate interest is 12%. Digital Connexion is an Indian joint venture with Digital Realty and Reliance Jio, operating under the brand 'Digital Connexion: A Brookfield, Jio and Digital Realty Company', with BIP's associate interest at 8% and active developments in Chennai and Mumbai.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm"
+  },
+  {
+   "slug": "bloom-energy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-10",
+   "scale": "framework expanded from USD 5bn to USD 25bn of total capex",
+   "note": "Bloom Energy supplies behind-the-meter fuel cells under a framework Brookfield describes as a seed AI-infrastructure investment for its AI fund.",
+   "context": "The original framework covered up to 1 GW of behind-the-meter power for data centres and AI factories at about USD 5bn, and Brookfield described it as 'a seed AI infrastructure investment for the Fund' when launching BAIIF. It was expanded fivefold to USD 25bn of total capex, confirmed independently in BIP's, BN's and BAM's Q2 2026 disclosures, and BIP increased its equity commitment in the same quarter.\n\n**A figure worth carrying with the relationship:** Bloom Energy's own Form 8-K filings break out related-party revenue from the Brookfield joint venture at USD 574.2m in Q4 2025, USD 373.3m in Q1 2026 and USD 2.8m in Q2 2026 — a near-total collapse in what was a record revenue quarter for Bloom. The figure is audited and counterparty-disclosed, and it appears in none of Brookfield's own channels. No source located explains the fall.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-asset-management-reports-second-quarter-2026-results"
+  },
+  {
+   "slug": "crusoe",
+   "type": "other",
+   "status": "active",
+   "scale": "USD 750m credit facility",
+   "note": "Brookfield's relationship with Crusoe is a USD 750m credit facility, not an equity position.",
+   "context": "Confirmed first-party as a credit facility. Typed `other` rather than `portfolio` for the same reason as Blackstone's lending relationships: a facility is not a holding, and recording it as one would misstate what Brookfield owns.",
+   "source": "https://bam.brookfield.com/press-releases/brookfield-asset-management-reports-second-quarter-2026-results"
+  },
+  {
+   "slug": "stack-infrastructure",
+   "type": "other",
+   "status": "announced",
+   "note": "Brookfield is named among reported suitors for Blue Owl's STACK Asia-Pacific portfolio — a report, not a transaction.",
+   "context": "Bloomberg-sourced reporting from June 2026 places Brookfield among reported bidders for STACK's Tokyo, Osaka, Sydney, Melbourne and Johor portfolio, alongside the AI Infrastructure Partnership, IFM, KKR and DigitalBridge, in a process that could exceed USD 30bn. No party has confirmed. Typed `other` because a reported interest is not an ownership, customer or supplier relationship, and recorded here only so a reader of STACK's dossier can see the claim has been checked from this side and remains unconfirmed.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Connor Teskey",
+   "title": "Chief Executive Officer, Brookfield Asset Management; and Chief Executive Officer, Energy",
+   "background": [
+    "Appointed Chief Executive Officer of Brookfield Asset Management on 4 February 2026, announced alongside the FY2025 results",
+    "Holds the Energy chief executive role concurrently and signs Brookfield Renewable's results as its Chief Executive Officer",
+    "Bruce Flatt described the appointment as 'the next step in the succession process we started four years ago'"
+   ]
+  },
+  {
+   "name": "Bruce Flatt",
+   "title": "Chief Executive Officer, Brookfield Corporation; Chair of the Board, Brookfield Asset Management",
+   "background": [
+    "Became Chair of Brookfield Asset Management on 16 January 2025, replacing Mark Carney, who resigned the same day to contest the Canadian Liberal Party leadership",
+    "Quoted as 'CEO of Brookfield' in the NVIDIA financing-platform release of 10 August 2026 — an example of the brand being used across entities"
+   ]
+  },
+  {
+   "name": "Nicholas Goodman",
+   "title": "President and Chief Financial Officer, Brookfield Corporation",
+   "background": [
+    "Signs Brookfield Corporation's quarterly results as President"
+   ]
+  },
+  {
+   "name": "Sam Pollock",
+   "title": "Chief Executive Officer, Infrastructure",
+   "background": [
+    "Signs Brookfield Infrastructure's FY2025 and Q2 2026 releases as Chief Executive Officer",
+    "Guided in January 2026 that BIP's funds from operations 'will inflect higher in 2026 as these investments fully contribute … and we expand our growth pipeline to include AI infrastructure'"
+   ]
+  },
+  {
+   "name": "Anuj Ranjan",
+   "title": "Chief Executive Officer, Private Equity",
+   "background": [
+    "Leads the private-equity strategy, the segment with the largest operating headcount at about 136,900 employees"
+   ]
+  },
+  {
+   "name": "Sikander Rashid",
+   "title": "Global Head of AI Infrastructure",
+   "background": [
+    "Title moved twice in fifteen months — 'Head of Europe' at the Sweden announcement in June 2025, 'Head of AI Infrastructure' at the programme launch in November 2025, and 'global head of AI infrastructure' by the NAVER announcement in July 2026",
+    "Named spokesman for the USD 100bn AI infrastructure programme"
+   ]
+  },
+  {
+   "name": "Jehangir Vevaina",
+   "title": "Chief Investment Officer, Energy",
+   "background": [
+    "Quoted in the Aypa Power acquisition release of 22 July 2026"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenues",
+      "actual": "USD 3,980m",
+      "expected": "",
+      "verdict": "",
+      "result": "US GAAP, from XBRL company-facts.",
+      "kpi": "revenue",
+      "usdMillions": 3980.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to BAM",
+      "actual": "USD 541m",
+      "expected": "",
+      "verdict": "",
+      "result": "The pre-Arrangement figure: BAM then held about 27% of the asset-management business.",
+      "kpi": "net-income",
+      "usdMillions": 541.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Fee-bearing capital",
+      "actual": "USD 538,541m at 31 December 2024",
+      "expected": "",
+      "verdict": "",
+      "result": "Against USD 456,998m at 31 December 2023."
+     }
+    ],
+    "commentary": "BAM became a US domestic filer only from FY2024; it filed Form 20-F for FY2022 and Form 40-F for FY2023, so the comparative series changes reporting regime twice in three years."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenues",
+      "actual": "USD 4,817m (+21.0%)",
+      "expected": "",
+      "verdict": "",
+      "result": "US GAAP, XBRL company-facts.",
+      "kpi": "revenue",
+      "usdMillions": 4817.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to BAM",
+      "actual": "USD 2,398m",
+      "expected": "",
+      "verdict": "",
+      "result": "Up from USD 541m — but the step is substantially the 2025 Arrangement giving BAM 100% of the asset-management business rather than a fourfold operating improvement. Total profit (before the attribution split) was USD 2,108m in FY2024 and USD 2,398m in FY2025, and those two figures converging is the tell.",
+      "kpi": "net-income",
+      "usdMillions": 2398.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Fee-bearing capital",
+      "actual": "USD 602,714m at 31 December 2025 (+12%)",
+      "expected": "",
+      "verdict": "",
+      "result": "Of the +USD 64.2bn, about +USD 91bn came from fundraising and about +USD 25bn from higher market capitalisation of the perpetual affiliates, offset by distributions and expiries. 87% is long-dated or perpetual."
+     },
+     {
+      "name": "Assets under management",
+      "actual": "'over USD 1 trillion' (segment AUM sums to about USD 1,181bn)",
+      "expected": "",
+      "verdict": "",
+      "result": "Credit USD 363bn, Real Estate over USD 273bn, Infrastructure USD 247bn, Private Equity USD 155bn, Renewable Power & Transition USD 143bn."
+     },
+     {
+      "name": "Capital deployed",
+      "actual": "USD 65.6bn deployed; about USD 80bn of assets sold realising about USD 50bn of equity",
+      "expected": "",
+      "verdict": "",
+      "result": "Infrastructure USD 10.9bn, renewable/transition USD 6.9bn, private equity USD 4.0bn, real estate USD 7.5bn, credit USD 36.3bn."
+     }
+    ],
+    "commentary": "Published analyst consensus exists for BAM at the quarterly level only: Q4 2025 earnings per share USD 0.40 against a Zacks consensus of USD 0.39, and Q1 2026 USD 0.43 against USD 0.42 with revenue missing by 1.72%. No full-year consensus was locatable for any metric and those fields are left empty."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Fee-bearing capital",
+      "actual": "USD 672bn (+19% y/y)",
+      "expected": "",
+      "verdict": "",
+      "result": "On USD 163bn of trailing-twelve-month fundraising."
+     },
+     {
+      "name": "Uncalled fund commitments",
+      "actual": "USD 149bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Of which USD 68bn will generate about USD 680m of annual fees once deployed — contracted revenue not yet earned."
+     },
+     {
+      "name": "Capital deployed / monetised",
+      "actual": "USD 21bn deployed; USD 11bn monetised",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes the Csquare IPO, which BAM describes as raising over USD 1bn of proceeds."
+     },
+     {
+      "name": "Total assets",
+      "actual": "USD 20,080m",
+      "expected": "",
+      "verdict": "",
+      "result": "Against Brookfield Corporation's USD 525,515m — the balance-sheet difference between a manager and a holding company."
+     },
+     {
+      "name": "Earnings per share",
+      "actual": "not published in the sources read",
+      "expected": "",
+      "verdict": "",
+      "result": "No Q2 2026 consensus was published by any provider located, so no comparison is offered."
+     }
+    ],
+    "commentary": "BAM intends to pay out at least approximately 90% of its distributable earnings quarterly. Corporate liquidity was USD 3.1bn at 30 June 2026, with cash reserved for the Oaktree purchase completed in July."
+   }
+  ],
+  "commentary": "All four listed Brookfield entities report in US dollars — BAM under US GAAP, BN and the partnerships under IFRS. Figures here are BAM's unless stated. **A caution about a widely-circulated miss:** Brookfield Corporation's Q2 2026 headline of USD 0.14 against a USD 0.65 consensus appears to be a data-provider mapping artefact — the same feed showed a revenue consensus of USD 1.67bn against USD 19.41bn actual, and the shares moved less than 1% — so it is not carried as a result."
+ },
+ "sources": [
+  {
+   "label": "NVIDIA partners with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over $500bn for AI infrastructure",
+   "url": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Csquare, Inc. Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/2105398/000210539826000004/csqr-20260630.htm",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Brookfield Asset Management Q2 2026 results release",
+   "url": "https://bam.brookfield.com/press-releases/brookfield-asset-management-reports-second-quarter-2026-results",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Brookfield completes the acquisition of Oaktree",
+   "url": "https://bam.brookfield.com/press-releases/brookfield-completes-acquisition-oaktree",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Brookfield Renewable Partners Q2 2026 results",
+   "url": "https://bep.brookfield.com/press-releases/bep/brookfield-renewable-reports-strong-second-quarter-results",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Brookfield Renewable Form 6-K exhibit 99.1 — proposed combination of BEP and BEPC",
+   "url": "https://www.sec.gov/Archives/edgar/data/1533232/000117184326005105/exh_991.htm",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Brookfield Infrastructure Partners Form 6-K exhibit 99.1 — proposed combination of BIP and BIPC",
+   "url": "https://www.sec.gov/Archives/edgar/data/1406234/000117184326005054/exh_991.htm",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "DOE site in western Kentucky to be revitalised as a data-centre campus with dedicated energy",
+   "url": "https://bam.brookfield.com/press-releases/doe-site-western-kentucky-revitalized-data-center-campus-and-dedicated-energy",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "NAVER, NVIDIA and Brookfield expand Korea's national AI factory infrastructure",
+   "url": "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Brookfield Asset Management Form 8-K exhibit 99.1 — agreement to acquire Aypa Power",
+   "url": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Csquare, Inc. Form 424B4 initial public offering prospectus",
+   "url": "https://www.sec.gov/Archives/edgar/data/2105398/000110465926084293/tm264837-15_424b4.htm",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "US Senate Committee on Banking, Housing and Urban Affairs (Minority) — letters to Blackstone, BlackRock, KKR and Brookfield Infrastructure on data-centre ownership and electricity costs",
+   "url": "https://www.banking.senate.gov/newsroom/minority",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Infrastructure Investor 100 — 2026 edition, five-year infrastructure capital raised",
+   "url": "https://www.infrastructureinvestor.com/ii-100/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Brookfield Corporation Form 6-K — Q1 2026 interim report",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001001085/000100108526000015/a2026-q1bninterimreport.htm",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "Brookfield Corporation Form 40-F for FY2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1001085/000100108526000006/bn-20251231.htm",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "Brookfield Infrastructure Partners Form 20-F for FY2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1406234/000140623426000002/bip-20251231.htm",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "Brookfield Asset Management Ltd. Form 10-K for FY2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "US Department of Energy announces conditional $17.5bn financing support for Westinghouse AP1000 reactors",
+   "url": "https://bam.brookfield.com/press-releases/us-department-energy-announces-conditional-175-billion-financing-support",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Brookfield and Qai form a $20 billion strategic investment partnership for AI",
+   "url": "https://bam.brookfield.com/press-releases/brookfield-and-qai-form-20-billion-strategic-investment-partnership-ai",
+   "date": "2025-12-09"
+  },
+  {
+   "label": "Brookfield launches a $100 billion AI infrastructure program",
+   "url": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
+   "date": "2025-11-19"
+  },
+  {
+   "label": "Brookfield — Building the Backbone of AI (white paper)",
+   "url": "https://www.brookfield.com/sites/default/files/documents/Brookfield_Building_the_Backbone_of_AI.pdf",
+   "date": "2025-08"
+  },
+  {
+   "label": "Brookfield and Google sign a Hydro Framework Agreement to deliver up to 3,000 MW",
+   "url": "https://bep.brookfield.com/press-releases/bep/brookfield-and-google-sign-hydro-framework-agreement-deliver-3000-mw-homegrown",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Brookfield to advance AI infrastructure in Sweden through a SEK 95 billion investment",
+   "url": "https://bam.brookfield.com/press-releases/brookfield-advance-ai-infrastructure-sweden-through-sek-95-billion-investment",
+   "date": "2025-06-04"
+  },
+  {
+   "label": "Brookfield to invest €20 billion in France's AI infrastructure",
+   "url": "https://bam.brookfield.com/press-releases/brookfield-invest-eu20-billion-frances-ai-infrastructure",
+   "date": "2025-02-10"
+  },
+  {
+   "label": "Brookfield Asset Management closes the transaction to broaden shareholder ownership and enhance index eligibility (the 2025 Arrangement)",
+   "url": "https://bam.brookfield.com/press-releases/brookfield-asset-management-closes-transaction-broaden-shareholder-ownership-and",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "Brookfield Renewable Form 6-K exhibit 99.1 — Microsoft renewable energy framework agreement for over 10.5 GW",
+   "url": "https://www.sec.gov/Archives/edgar/data/1533232/000117184324002391/exh_991.htm",
+   "date": "2024-05-01"
+  },
+  {
+   "label": "Brookfield Infrastructure Partners Q2 2023 letter to unitholders — Compass Datacenters terms",
+   "url": "https://bip.brookfield.com/bip/reports-filings/letters-unitholders/bip-q2-2023-letter-unitholders",
+   "date": "2023-08-02"
+  },
+  {
+   "label": "Brookfield Infrastructure and Ontario Teachers' to acquire Compass Datacenters from RedBird Capital Partners and the Azrieli Group",
+   "url": "https://www.compassdatacenters.com/news/brookfield-infrastructure-and-ontario-teachers-to-acquire-compass-datacenters-from-redbird-capital-partners-and-azrieli-group/",
+   "date": "2023-06-20"
+  },
+  {
+   "label": "Brookfield — infrastructure capability page (data centres, Compass and Data4 platform figures)",
+   "url": "https://www.brookfield.com/about-us/capabilities/infrastructure"
+  },
+  {
+   "label": "Brookfield — leadership page",
+   "url": "https://www.brookfield.com/about-us/leadership"
+  },
+  {
+   "label": "Brookfield — AI opportunities",
+   "url": "https://www.brookfield.com/ai-opportunities"
+  },
+  {
+   "label": "Brookfield Asset Management Ltd. EDGAR submissions record (CIK 0001937926)",
+   "url": "https://data.sec.gov/submissions/CIK0001937926.json"
+  },
+  {
+   "label": "Brookfield Asset Management Ltd. XBRL company facts",
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001937926.json"
+  },
+  {
+   "label": "Brookfield Corporation EDGAR submissions record (CIK 0001001085)",
+   "url": "https://data.sec.gov/submissions/CIK0001001085.json"
+  },
+  {
+   "label": "SEC company tickers file — Brookfield entity ticker/CIK mapping",
+   "url": "https://www.sec.gov/files/company_tickers.json"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

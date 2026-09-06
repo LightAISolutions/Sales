@@ -515,15 +515,6 @@
       "note": "Aligned's ORD3 campus is among the Chicago developments CBRE sets beside Prime's Elk Grove Village campus; Lambda leases from both landlords (Aligned DFW-04 Plano and Prime LAX01).",
       "context": "CBRE's H2 2025 Chicago survey; the Lambda dossier's colocation list.",
       "source": "https://www.cbre.com/insights/books/north-america-data-center-trends-h2-2025/chicago-data-center-market"
-    },
-    {
-      "slug": "macquarie",
-      "type": "investor",
-      "status": "historical",
-      "since": "2021-06",
-      "note": "Macquarie Capital held a joint-control interest in Prime from June 2021 and sold its remaining stake during Macquarie's FY26.",
-      "context": "The position originated in Macquarie Capital's June 2021 equity partnership — not Macquarie Asset Management — and was held through Wholesale DC Asset Holdings LLC, which the European Commission describes as a holding company within Macquarie and attributes to Macquarie Group Limited.\n\nThe Commission's decision in Case M.11843 records **Ares joining an existing joint venture**: Prime Data Centers LLC was already jointly controlled by Wholesale DC Asset Holdings and Data Realty Group, and Ares was the party obtaining joint control. The target is Prime Data Centers LLC; Data Realty Holding Corp sits on the acquirer side as parent of Data Realty Group.\n\n**Status corrected 2026-09-06:** Macquarie completed the sale of its remaining Prime stake during its FY26 (year ended 31 March 2026). A reader encountering the M.11843 clearance alone would wrongly infer Macquarie is still a joint controller.",
-      "source": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf"
     }
   ],
   "policyExposure": [
@@ -818,11 +809,6 @@
     "Collection gap: the live primedatacenters.com returns 403, so every company page was read from Wayback captures dated March–August 2026; the new Solutions pages, the Avondale groundbreaking post and 2026 blog posts are not archived; the ownership of Data Realty Holding Corp., headcount, revenue, the Avondale hyperscaler, LAX01's second tenant, DFW04's status and the bond terms beyond coupon and size are unknown; DCD, Bloomberg originals and court dockets were unreadable. INDICATORS TO WATCH: Avondale building 1 delivery; a named hyperscaler; a relaunched or failed Nordic bond; the first court response in the employee suits; Austin phase 1 completion (September 2027); Esbjerg EIA outcome; any sale of the Hayward joint-venture building."
   ],
   "sources": [
-    {
-      "label": "European Commission merger decision M.11843 — Ares / Macquarie / Data Realty Group / Prime Data Centers",
-      "url": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
-      "date": "2025-03-18"
-    },
     {
       "label": "Yahoo News — Yahoo/Texas county suspends abatements",
       "url": "https://www.yahoo.com/news/politics/articles/texas-county-suspends-tax-breaks-170000940.html",
@@ -1612,6 +1598,6 @@
       "url": "https://www.edgeir.com/companies/prime-data-centers"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }
