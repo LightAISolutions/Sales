@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.92r] — 2026-09-06 06:37:41 PM EST — v01.83w
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response: "Add a `disclosure`-tier reachability probe to the checker suite — one
+> call against a known-good `sec.gov` endpoint, reported as a warning rather than a failure — so a session learns EDGAR is
+> blocked *before* it plans research around it rather than 20 minutes in, and so the shift toward newsroom-only sourcing
+> shows up as a recorded condition instead of an invisible drift.")*
+
+### Added
+
+- **`scripts/check-source-reachability.py`** — probes the disclosure-tier filing hosts and reports the corpus's provenance mix. Five probes: two SEC endpoints (`www.sec.gov` and `data.sec.gov` sit behind different infrastructure and block independently), `asx.com.au`, `londonstockexchange.com`, and one **control** on a company host. Verdicts are `ok` / `partial` / `tier-blocked` / `inconclusive`. Flags: `--no-net`, `--days N`, `--json`.
+
+### Changed
+
+- **`PROFILER-SCHEMA.md` → Source provenance** and **`.claude/rules/profiler-app.md` step 2** now state that the `disclosure` tier depends on an environment condition and name the probe, with the instruction to run it *before* planning research rather than at commit time. README tree entry added.
+
+### Notes
+
+- **The first run changed the finding it was built to record.** Both SEC endpoints are blocked from this session, but `asx.com.au` and `londonstockexchange.com` both return **200**. The verdict is therefore `PARTIAL`, not "filings are unreachable" — the filing *route* is alive and it is **SEC specifically** that is unavailable. That matters directly: the ASX route this program needs for Macquarie works. The two SEC hosts also fail differently — `data.sec.gov` returns the "Undeclared Automated Tool" body while `www.sec.gov` returns a bare 403 — which is why both are probed rather than one standing in for the other.
+- **The control host is the point, not decoration.** Without a probe against a host known to answer, "sec.gov is unreachable" cannot be distinguished from "this session has no outbound network," and a null on one host would be read as a null on the whole route. When the control is down the script reports `inconclusive` and explicitly declines to blame the filing hosts. This is the "a null on a proper noun bounds only that proper noun" rule applied to network probes.
+- **It always exits 0.** A blocked government host is not a repo defect and must never fail a commit; `2` is reserved for broken input and is never `1`, because `1` means "findings present" in the other five checkers and this script has no findings in that sense. This is also why it is a separate script rather than folded into `sync-profiler-registry.py` the way the bijection was: that script asserts invariants, runs after every profile write, and must stay fast and offline — putting network calls in it would make a hot path slow and flaky.
+- **No new state file, deliberately.** The recommendation promised a "recorded condition." A results file that rewrites on every run is churn that goes stale, so the record comes from data already committed: the script measures the provenance mix across all dossiers and across a recent window, using `sync-profiler-registry.py`'s own classifier — imported by path, never reimplemented, because that file already carries the warning that it mirrors `ovSourceParty` in `Profiler.html` and a third copy would make it three places that drift apart.
+- **The recent-window comparison is currently degenerate, and the script says so rather than printing a number.** The oldest `lastUpdated` in the corpus is 2026-08-29, so a 30-day window contains all 151 dossiers and the delta is zero by construction. The first draft printed `+0 pt` as though it were a measurement; it now prints `NO COMPARISON` with the reason. Baseline for later comparison: **company 41% · disclosure 11% · independent 48%** across 8,344 sources, and the same three figures at `--days 3` (130 of 151 dossiers), so the mix is stable rather than merely unmeasured.
+- **Two defects in the draft were found by testing it to failure, both invisible to a passing run.** (1) `probe()` documented itself as never raising, but `urllib.request.Request()` raises `ValueError` on a malformed URL and was being constructed *outside* the try — a typo in the probe list would have crashed the whole report instead of producing one bad row. (2) `load_sync()` guarded on `spec is None`, which never fires for a missing file because `spec_from_file_location` returns a spec for a nonexistent path; the failure surfaces in `exec_module`, so a missing sync script exited **1 with a traceback** instead of **2 with a message** — breaking the exit-code contract the docstring had just declared. Both are fixed and both carry a comment saying how they were found.
+- **Tested against ten states**: all six `read_verdict` branches (all up / SEC down with ASX up / all filings down / control down too / control down with filings up / throttled-is-not-up), plus live probe classification of a nonexistent DNS name, a 404 on a live host, and a malformed URL, plus four broken-input paths (missing sync script, syntactically broken sync script, missing registry, corrupt registry) in an isolated sandbox. The real repo was untouched by the testing — `git status` showed only the new file.
+- CHANGELOG `Sections: 94/100` -> `95/100`; five pushes of headroom before archive rotation is due.
 
 ## [v04.91r] — 2026-09-06 06:17:12 PM EST — v01.83w
 
