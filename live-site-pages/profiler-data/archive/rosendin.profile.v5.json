@@ -50,12 +50,12 @@
    "description": "Turnkey utility-scale EPC: solar (rooftop to 720+ MW single-axis tracker sites), BESS (peak shaving, frequency regulation, grid stability, microgrid support), substations (1–800+ MVA), transmission, and SCADA. Company-reported record over 15 years: ~32 GW of clean energy delivered, 7.1+ GW solar installed, 9.5–10+ GWh of BESS installed, 151 substations, 330+ projects across the US, Canada, Puerto Rico, and Guam.",
    "highlights": [
     "Townsite Solar+Storage (Boulder City, NV): 232 MWdc solar + 90 MWac Tesla Megapack BESS — completion corroborated by owner Arevon",
-    "Tranquility BESS 72 MW/288 MWh (developed by Recurrent Energy for owners Southern Power and AIP Management), Garland BESS 88 MW/352 MWh, Mustang BESS 75 MW/300 MWh — named California projects",
+    "Tranquility BESS 72 MW/288 MWh (Recurrent Energy), Garland BESS 88 MW/352 MWh, Mustang BESS 75 MW/300 MWh — named California projects",
     "February 2026: new Energy Group leadership (Billy Watts, ex-Primoris/Mortenson/Siemens Energy) with BESS and substation expansion explicitly aimed at data-center support and grid stability",
     "Exploring floating solar, small modular reactors, and gas turbines per the February 2026 announcement — a whole-of-grid posture beyond renewables"
    ],
    "positioning": "Solar Power World ranks Rosendin roughly #8–#10 among national solar contractors/EPCs (2024–2025, company-cited). The differentiator is the combination: few firms hold hyperscale electrical delivery and GW-scale BESS/solar EPC under one roof",
-   "soldThrough": "EPC and design-build contracts with project owners and developers (Arevon, Recurrent Energy among corroborated customers; on the Recurrent retrofits the asset owner is a third party — Southern Power with AIP Management at Tranquility and Garland, MN8 Energy at Mustang)",
+   "soldThrough": "EPC and design-build contracts with project owners and developers (Arevon, Recurrent Energy among corroborated customers)",
    "targetSegments": "Utility-scale developers, IPPs, utilities, and increasingly data-center-adjacent grid work"
   },
   {
@@ -167,28 +167,6 @@
    "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings",
    "via": "data-center electrical",
    "status": "active"
-  },
-  {
-   "slug": "recurrent-energy",
-   "type": "customer",
-   "status": "historical",
-   "since": "2016",
-   "scale": "Tranquility 72 MWac / 288 MWh at $12.5m over 15.8 months; Mustang 75 MW battery retrofit",
-   "via": "Electrical EPC on battery retrofits to operating solar plants",
-   "note": "Recurrent Energy was Rosendin's client on the Tranquility and Mustang battery retrofits.",
-   "context": "Rosendin's own project page names Recurrent Energy as the client on Tranquility, a $12.5m, 15.8-month scope adding 72 MWac / 288 MWh to an operating solar plant in Fresno County. Two distinctions matter and were corrected in this revision. Recurrent provided a development service rather than ownership: EIA Form 860M attributes the Tranquility and Garland assets to Southern Power with AIP Management and Mustang to MN8 Energy, so none of them belongs in a tally of Recurrent's fleet. And the battery supplier at Tranquility was Powin, not Canadian Solar — the clearest published counterexample to the assumption that Recurrent projects always buy their parent's e-STORAGE hardware. Rosendin's Mustang page cites 75,000 kW / 300,000 kWh where EIA registers 75 MW / 75 MWh; no source reconciles the two.",
-   "source": "https://www.rosendin.com/projects/tranquility-bess/"
-  },
-  {
-   "slug": "clearway-energy",
-   "type": "customer",
-   "status": "historical",
-   "since": "2025",
-   "scale": "320 MW / 1,280 MWh (Honeycomb Portfolio)",
-   "via": "Electrical EPC on a four-project battery portfolio",
-   "note": "Rosendin was the EPC on Clearway's Honeycomb battery portfolio in Utah.",
-   "context": "Clearway Energy Group's March 2025 financing release names Rosendin as EPC on the four-project, 320 MW / 1,280 MWh Honeycomb Portfolio in Beaver and Iron Counties, financed at $605m and contracted to PacifiCorp on 20-year tolling agreements to 2046. The portfolio reached substantial completion on 1 May 2026, having already been dropped down to the listed Clearway Energy, Inc. in October 2025 — so the construction relationship was with the private sponsor while the asset now sits with the listed company. It is one of the larger single battery portfolios in Rosendin's roughly 10 GWh of installed BESS EPC.",
-   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/"
   }
  ],
  "technicalSpecs": [
@@ -208,7 +186,7 @@
     {
      "band": "Projects",
      "label": "Tranquility BESS (Fresno Co., CA)",
-     "value": "72 MW / 288 MWh — developed by Recurrent Energy, which was Rosendin's client; the underlying Tranquility solar plant and the battery are owned by Southern Power with AIP Management, per EIA Form 860M, not by Recurrent"
+     "value": "72 MW / 288 MWh — owner Recurrent Energy"
     },
     {
      "band": "Projects",
@@ -405,21 +383,8 @@
   {
    "label": "Rosendin — Renewable Energy sector page",
    "url": "https://www.rosendin.com/sectors/renewable-energy/"
-  },
-  {
-   "label": "US Energy Information Administration — Preliminary Monthly Electric Generator Inventory, July 2026 vintage (ownership of the Tranquility, Garland and Mustang assets)",
-   "url": "https://www.eia.gov/electricity/data/eia860m/xls/july_generator2026.xlsx"
-  },
-  {
-   "label": "Rosendin — Tranquility BESS project page: 72 MWac / 288 MWh, $12.5m, Recurrent Energy as client, battery supplier Powin",
-   "url": "https://www.rosendin.com/projects/tranquility-bess/"
-  },
-  {
-   "label": "Clearway Energy Group — $605m financing closes and construction begins on the 320 MW / 1,280 MWh Honeycomb storage portfolio in Utah (Rosendin as EPC)",
-   "url": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/",
-   "date": "2025-03-11"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

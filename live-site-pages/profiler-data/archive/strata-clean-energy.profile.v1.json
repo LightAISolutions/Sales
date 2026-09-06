@@ -443,17 +443,6 @@
       "note": "SOLV Energy is a top-five EPC on the same Solar Power World 2026 list on which Strata ranks #25.",
       "context": "Ranking comparable only; no shared project is reported.",
       "source": "https://www.solarpowerworldonline.com/2026-top-solar-contractors/"
-    },
-    {
-      "slug": "recurrent-energy",
-      "type": "competitor",
-      "status": "active",
-      "since": "2024",
-      "scale": "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
-      "via": "Arizona Public Service storage procurement",
-      "note": "Recurrent Energy met Strata as a competing bidder in the same Arizona Public Service storage solicitations.",
-      "context": "This dossier already names Recurrent's Desert Bloom at 150 MW / 600 MWh alongside EDF Renewables' Beehive as the peers Strata met in the APS rounds. The two companies are structurally opposite at the exit: Strata originates with its own land, interconnection and EPC teams and sells before a long-dated toll ties up its founder-owned balance sheet, while Recurrent took the 20-year APS tolling agreement and kept the asset. Recurrent's October 2025 financing release confirms Desert Bloom at 600 MWh on a 20-year APS toll with Primoris as EPC.",
-      "source": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/"
     }
   ],
   "policyExposure": [
@@ -1171,13 +1160,8 @@
     {
       "label": "SunCast — Episode 700: Markus Wilhelm on Strata Clean Energy",
       "url": "https://www.suncast.media/episode/episode-700-behind-the-success-of-strata-clean-energy-markus-wilhelm"
-    },
-    {
-      "label": "Recurrent Energy — $825m project financing for the Arizona energy projects (Desert Bloom Storage, 600 MWh, on a 20-year APS tolling agreement)",
-      "url": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/",
-      "date": "2025-10-21"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

@@ -829,14 +829,6 @@
    "note": "Ranked third, immediately below Vistra, in the Enverus 2023 storage-developer ranking.",
    "context": "The same Enverus table that places Vistra second on megawatts brought online during 2023 places Terra-Gen third at 671 MW — within a hundred megawatts of Vistra on a measure of one year's completions. The rest of the top ten is CIM Group, Plus Power, Clearway, Intersect Power, Key Capture Energy, NV Energy and First Solar.\n\nThis is a ranking co-appearance rather than a commercial relationship, and it is recorded as such. Its analytical value is the shape of the field: the storage owners nearest Vistra by annual completions are pure-play developers with no generation fleet and no retail book, which is why a single project loss changed Vistra's storage standing so sharply and would not have changed theirs.",
    "source": "https://www.enverus.com/blog/top-10-storage-developers-in-north-america-by-megawatts-brought-online-in-2023/"
-  },
-  {
-   "slug": "clearway-energy",
-   "type": "competitor",
-   "status": "active",
-   "note": "Clearway appears alongside Vistra in the Enverus ranking of owners by storage megawatts brought online in 2023 that this dossier already records.",
-   "context": "This dossier's Terra-Gen entry lists the rest of that top ten as CIM Group, Plus Power, Clearway, Intersect Power, Key Capture Energy, NV Energy and First Solar. The Clearway comparison is the most instructive of them because the two businesses are structural opposites: Vistra is an integrated merchant whose five-million-customer retail book hedges 43,641 MW of generation, while Clearway sells essentially all of its output on long-term contracts, holds no retail position and is externally managed by a private sponsor with no employees of its own. That is why a single project loss moved Vistra's storage standing sharply while Clearway's contracted fleet earns the same whatever the market does. A ranking co-appearance, recorded as such rather than as a commercial relationship.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
   }
  ],
  "policyExposure": [
@@ -1384,13 +1376,8 @@
   {
    "label": "Gibson Dunn — multi-billion-dollar victory for Luminant Energy in the Winter Storm Uri litigation at the Supreme Court of Texas",
    "url": "https://www.gibsondunn.com/gibson-dunn-secures-multi-billion-dollar-victory-for-luminant-energy-in-winter-storm-uri-litigation-at-supreme-court-of-texas/"
-  },
-  {
-   "label": "Clearway Energy — FY2025 Form 10-K (fleet, contracted position and external management structure)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm",
-   "date": "2026-02-24"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 3
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 2
 }

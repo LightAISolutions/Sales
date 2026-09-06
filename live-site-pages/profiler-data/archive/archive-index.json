@@ -175,6 +175,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-09-06",
       "supersededBy": 4
+    },
+    {
+      "file": "blattner.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 5
     }
   ],
   "bloom-energy": [
@@ -249,6 +255,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-30",
       "supersededBy": 3
+    },
+    {
+      "file": "canadian-solar.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 4
     }
   ],
   "caterpillar": [
@@ -353,6 +365,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "crusoe.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 5
     }
   ],
   "delta-electronics": [
@@ -467,6 +485,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-09-05",
       "supersededBy": 4
+    },
+    {
+      "file": "eolian.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 5
     }
   ],
   "equinix": [
@@ -641,6 +665,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-09-04",
       "supersededBy": 5
+    },
+    {
+      "file": "google.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 6
     }
   ],
   "hitachi-energy": [
@@ -1435,6 +1465,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-09-05",
       "supersededBy": 5
+    },
+    {
+      "file": "rosendin.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 6
     }
   ],
   "samsung-ct": [
@@ -2003,6 +2039,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-09-05",
       "supersededBy": 3
+    },
+    {
+      "file": "xcel-energy.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 4
     }
   ],
   "invenergy": [
@@ -2045,6 +2087,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-05",
       "supersededBy": 2
+    },
+    {
+      "file": "vistra.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 3
     }
   ],
   "oklo": [
@@ -2090,6 +2138,20 @@
   "hunt-energy-network": [
     {
       "file": "hunt-energy-network.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    },
+    {
+      "file": "hunt-energy-network.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 3
+    }
+  ],
+  "strata-clean-energy": [
+    {
+      "file": "strata-clean-energy.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-09-06",
       "supersededBy": 2

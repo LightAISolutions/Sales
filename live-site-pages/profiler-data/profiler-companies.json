@@ -278,8 +278,8 @@
       "domains": [
         "blattnercompany.com"
       ],
-      "srcTotal": 18,
-      "srcFirstPct": 56,
+      "srcTotal": 21,
+      "srcFirstPct": 52,
       "kpiNorm": false
     },
     {
@@ -346,11 +346,11 @@
       "hq": "Guelph, Canada",
       "ticker": "NASDAQ: CSIQ",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "csestorage.com"
       ],
-      "srcTotal": 27,
+      "srcTotal": 29,
       "srcFirstPct": 59,
       "kpiNorm": true
     },
@@ -390,6 +390,27 @@
       ],
       "srcTotal": 44,
       "srcFirstPct": 32,
+      "kpiNorm": true
+    },
+    {
+      "slug": "clearway-energy",
+      "name": "Clearway Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "The listed Clearway yieldco — 13.9 GW across 27 states with 1,439 MW of contracted batteries, a single share class since CWEN.A was retired in May 2026, and a first guidance cut in three years on an El Niño wind shortfall.",
+      "hq": "Princeton, New Jersey, United States",
+      "ticker": "NYSE: CWEN",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "clearwayenergy.com",
+        "investor.clearwayenergy.com",
+        "clearwayenergygroup.com"
+      ],
+      "srcTotal": 46,
+      "srcFirstPct": 83,
       "kpiNorm": true
     },
     {
@@ -512,12 +533,12 @@
       "tagline": "The energy-first AI factory builder — Abilene 1.2 GW for OpenAI/Oracle, ~4.9 GW contracted of a 40+ GW pipeline; the deepest private-developer energy stack.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "crusoe.ai"
       ],
-      "srcTotal": 17,
-      "srcFirstPct": 47,
+      "srcTotal": 18,
+      "srcFirstPct": 44,
       "kpiNorm": false
     },
     {
@@ -745,7 +766,7 @@
       "tagline": "The American-built ideologue and energy-plus-load pioneer — CyrusOne DFW7 monetizes a BESS interconnection, Flint Grid is PJM's largest battery in the Columbus AI corridor, and both GWh-class supplier slots are open (to FEOC-clean vendors).",
       "hq": "Burlingame, CA, US",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "eolianenergy.com"
       ],
@@ -930,6 +951,23 @@
       "kpiNorm": false
     },
     {
+      "slug": "form-energy",
+      "name": "Form Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The only company manufacturing 100-hour iron-air storage at scale — about 80 GWh of stated backlog against one operating 1.5 MW project, a Weirton factory that reaches nameplate in 2028, and a chemistry deliberately bad at everything lithium is good at.",
+      "hq": "Somerville, Massachusetts, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "formenergy.com"
+      ],
+      "srcTotal": 59,
+      "srcFirstPct": 37,
+      "kpiNorm": false
+    },
+    {
       "slug": "ge-vernova",
       "name": "GE Vernova",
       "categories": [
@@ -957,14 +995,14 @@
       "hq": "Mountain View, CA, USA",
       "ticker": "NASDAQ: GOOGL",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "abc.xyz",
         "google",
         "google.com"
       ],
-      "srcTotal": 23,
-      "srcFirstPct": 43,
+      "srcTotal": 24,
+      "srcFirstPct": 46,
       "kpiNorm": true
     },
     {
@@ -1946,6 +1984,28 @@
       "kpiNorm": true
     },
     {
+      "slug": "recurrent-energy",
+      "name": "Recurrent Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Canadian Solar's development-and-selective-ownership arm — no longer wholly owned since BlackRock took 20% as-converted, carrying an 84.1 GWh pipeline that is 85% early-stage against roughly 1.5 GWh of net operating storage.",
+      "hq": "Subsidiary of Canadian Solar Inc., Kitchener, Ontario, Canada",
+      "ticker": "NASDAQ: CSIQ (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "recurrentenergy.com",
+        "csestorage.com",
+        "canadiansolar.com",
+        "investors.canadiansolar.com"
+      ],
+      "srcTotal": 48,
+      "srcFirstPct": 79,
+      "kpiNorm": true
+    },
+    {
       "slug": "rehlko",
       "name": "Rehlko",
       "categories": [
@@ -1995,12 +2055,12 @@
       "tagline": "#2 US electrical contractor (ESOP, $5.6B revenue) — 15+ GW of data-center power built; BESSUPS with FlexGen moves BESS inside the fence.",
       "hq": "San Jose, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "rosendin.com"
       ],
-      "srcTotal": 12,
-      "srcFirstPct": 58,
+      "srcTotal": 15,
+      "srcFirstPct": 53,
       "kpiNorm": false
     },
     {
@@ -2219,11 +2279,11 @@
       "tagline": "Founder-owned developer-EPC-owner that wins utility tolls and sells the battery with the contract attached — Scatter Wash to CIP, White Tank to GridStor — while keeping about 1 GW of owned solar",
       "hq": "Durham, NC, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "stratacleanenergy.com"
       ],
-      "srcTotal": 103,
+      "srcTotal": 104,
       "srcFirstPct": 50,
       "kpiNorm": false
     },
@@ -2496,13 +2556,13 @@
       "hq": "Irving, TX, USA",
       "ticker": "NYSE: VST",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "vistracorp.com",
         "investor.vistracorp.com",
         "mosslandingresponse.com"
       ],
-      "srcTotal": 82,
+      "srcTotal": 83,
       "srcFirstPct": 37,
       "kpiNorm": true
     },
@@ -2588,7 +2648,7 @@
       "hq": "Minneapolis, MN, USA",
       "ticker": "NASDAQ: XEL",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "xcelenergy.com",
         "investors.xcelenergy.com",
@@ -2598,7 +2658,7 @@
         "xcelenergytransmission.com",
         "coloradospowerpathway.com"
       ],
-      "srcTotal": 140,
+      "srcTotal": 142,
       "srcFirstPct": 54,
       "kpiNorm": true
     },

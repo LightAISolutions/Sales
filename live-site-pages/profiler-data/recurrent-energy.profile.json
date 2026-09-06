@@ -1,0 +1,1059 @@
+{
+ "schemaVersion": 7,
+ "slug": "recurrent-energy",
+ "name": "Recurrent Energy B.V.",
+ "shortName": "Recurrent Energy",
+ "categories": [
+  "developer",
+  "ipp"
+ ],
+ "website": "https://recurrentenergy.com",
+ "headquarters": "Subsidiary of Canadian Solar Inc., Kitchener, Ontario, Canada (no separate HQ published)",
+ "founded": "2006 (acquired by Canadian Solar 2015; the parent's Global Energy segment was renamed Recurrent Energy in April 2023)",
+ "employees": "Not separately disclosed",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "NASDAQ: CSIQ (parent)"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Recurrent Energy is Canadian Solar's development-and-selective-ownership arm, and the single most important fact about it is that it is no longer wholly owned — BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% of Recurrent Energy B.V. on an as-converted basis, paid in two tranches that closed in May and September 2024, carrying a 9% dividend that compounds quarterly in kind, a 1.3x liquidation preference, one board seat and an exit-demand right that opens on 31 May 2029. BACKGROUND: a global utility-scale solar and storage platform — approximately 12.4 GWp of solar and 6.4 GWh of storage developed and connected since 2009, about 15 GW under long-term operations and maintenance, and a filed development pipeline of 84.1 GWh of storage and 21.7 GWp of solar at 30 June 2026. That pipeline is the number the market quotes and the number most likely to mislead: 84.7% of it is early-stage development, only about 13 GWh of storage has secured interconnection, and Recurrent's own website still advertises 74 GWh. The operating reality is far smaller — roughly 2.6 GWh of US battery capacity on a gross basis per EIA Form 860M, and about 1.5 GWh net of the 80% of Crimson that Axium Infrastructure owns. Recurrent is one of Canadian Solar's two reportable segments, carries $4.1 billion of the group's $7.1 billion of debt, and has posted an operating loss in each of the last three quarters while selling assets to deleverage. Two chief executives changed in fourteen weeks in 2026.",
+ "ecosystemRole": "We assess Recurrent as the clearest working example of the captive-channel model in utility-scale storage: a developer inside a manufacturer, whose projects supply demand to its own group's battery arm. That structure is a genuine advantage on cost, schedule and warranty alignment, and it is simultaneously the mechanism by which Recurrent inherits Canadian Solar's FEOC, AD/CVD and Section 232 exposure at exactly the point where US tax equity is most sensitive to it. For this ecosystem it matters twice over — as the demand side that makes e-STORAGE's SolBank volumes look larger than its third-party wins alone, and as a seller of finished operating assets into the balance sheets that do want to hold them: MN8, Southern Power, Axium and Hunt Energy Network are all buyers of Recurrent projects rather than competitors for them.",
+ "productsAndServices": [
+  {
+   "name": "Utility-scale battery storage development, ownership and operation",
+   "category": "Energy storage development",
+   "description": "The growth engine and the reason this dossier exists. Filed pipeline of 84.1 GWh at 30 June 2026 — 600 MWh under construction, 4,378 MWh in backlog, 7,841 MWh in advanced development and 71,238 MWh early-stage. Regional split EMEA 32,270 MWh, North America 23,040 MWh, Asia Pacific 16,581 MWh, Latin America 12,166 MWh. The operating reality is a small fraction of that: EIA Form 860M (July 2026 vintage) attributes 670 MW / 2,620 MWh of operating US battery capacity to Recurrent-controlled 'RE' entities — Papago 300 MW / 1,200 MWh, Crimson 350 MW / 1,400 MWh and Gaskell West 2 at 20 MW / 20 MWh — and Crimson is only 20% Recurrent-owned.",
+   "highlights": [
+    "84.1 GWh storage development pipeline at 30 June 2026, up from 80.6 GWh at 31 March and 83.5 GWh at 31 December 2025 — the figure churns rather than compounds",
+    "84.7% of the pipeline is early-stage development, defined by the company as projects 'in the process of securing interconnection rights'",
+    "Management stated on the Q2 2026 call that about 13 GWh of storage had secured interconnection globally, excluding projects already in operation",
+    "6.4 GWh of storage contracted and deployed cumulatively since entering the market in 2014 — the pipeline is roughly 13x lifetime delivered volume",
+    "North America carries 21,840 of its 23,040 MWh in early-stage development and zero MWh in backlog"
+   ],
+   "positioning": "Not a top-tier US storage developer on any independent measure. Recurrent is absent from Cleanview's top-25 US battery storage developers by pipeline MW, a list led by ENGIE at 18,252 MW, Hecate at 10,779 MW, NextEra at 10,452 MW, Intersect Power at 9,280 MW and Jupiter Power at 9,091 MW; Cleanview attributes 15 projects and 2,606 MW planned across seven states to Recurrent, with no operating projects. The only top-ten ranking Canadian Solar can point to is Wood Mackenzie's 2026 global BESS integrator ranking, which measures e-STORAGE the equipment vendor, not Recurrent the developer — a conflation that would materially overstate this company's standing.",
+   "soldThrough": "Develops, owns and operates; also sells completed and under-construction assets to infrastructure buyers to recycle capital",
+   "targetSegments": [
+    "Regulated utilities under long-term tolling agreements (APS)",
+    "Merchant ISO markets (ERCOT, CAISO)",
+    "Infrastructure funds and utility balance sheets buying finished assets"
+   ],
+   "roadmap": "600 MWh under construction and 4.4 GWh in backlog at 30 June 2026; Desert Bloom (600 MWh, APS toll) shown by EIA as construction-complete but not yet commercial, planned August 2026 against a company-guided first-half 2026"
+  },
+  {
+   "name": "Utility-scale solar development",
+   "category": "Solar development",
+   "description": "The original business and still the larger asset base: approximately 12.4 GWp developed, built and connected since 2009 across six continents, against a filed development pipeline of 21.7 GWp at 30 June 2026 — Latin America 6,746 MWp, EMEA 6,293 MWp, North America 5,650 MWp, Asia Pacific 2,978 MWp. The solar pipeline is contracting: 23.7 GWp at 31 March 2026 and 26 GW at the September 2023 basis quoted when BlackRock invested.",
+   "highlights": [
+    "Rey Solar, Carmona, Seville — 426 MWp, inaugurated 1 June 2026, the flagship Iberian asset and the driver of a sequential rise in Recurrent electricity revenue",
+    "Carwarp Energy Park, Victoria, Australia — 171 MWp / 150 MWac energised 12 August 2026 ahead of schedule under a long-term Microsoft PPA, using about 243,000 Canadian Solar TOPCon modules, with approval held for a 120 MW battery",
+    "Cobalt Solar, Riverside County, California — 330 MW under construction with Blattner Energy as EPC, COD targeted end-2027",
+    "Tillbridge Solar, Lincolnshire — Development Consent Order secured 2 December 2025, an NSIP-scale UK solar and storage project",
+    "Four UK projects totalling 122 MWp won Contracts for Difference in the AR7 auction, 16 February 2026"
+   ],
+   "positioning": "Geographically diversified in a way most US-focused storage developers are not — the UK, Spain, Italy, Australia, Brazil and Argentina all carry operating or consented assets — which is the strategic argument for the platform and also why its pipeline is hard to benchmark against US-only trackers.",
+   "soldThrough": "Develops and builds, then either retains or sells; module supply is captive to Canadian Solar",
+   "targetSegments": [
+    "Corporate PPA offtakers (Microsoft)",
+    "European CfD and auction regimes",
+    "Community-choice aggregators and universities"
+   ],
+   "roadmap": "1,724 MWp under construction and 2,208 MWp in backlog at 30 June 2026"
+  },
+  {
+   "name": "Asset sales and capital recycling",
+   "category": "Project monetisation",
+   "description": "The revenue line that swings the segment and the strategy management has been explicit about. Asset sales were $61.1m of Recurrent's $117.3m Q2 2026 revenue and $88.5m of $137.4m in Q1. The company's stated posture is 'selective sales of operating assets and development-stage projects, to manage cash flow and debt levels'. The buyers are the owner-operators Recurrent has chosen not to out-hold: MN8 Energy (Slate, Mustang), Southern Power with AIP Management (Garland, Tranquility), Axium Infrastructure (80% of Crimson) and Hunt Energy Network (Fort Duncan).",
+   "highlights": [
+    "Fort Duncan, 100 MW / 200 MWh in ERCOT South, sold to Hunt Energy Network — completion announced 24 February 2026, price undisclosed, revenue recognised in Canadian Solar's Q1 2026",
+    "Gunning Energy Park, 275 MWdc solar plus a 120 MW battery in New South Wales, sold 17 November 2025 to an undisclosed European infrastructure and investment group",
+    "Higher Witheven in the UK sold, announced 30 March 2026",
+    "Q2 2026 carried a $24m impairment tied to a Latin America project sale, inside a $19.4m segment operating loss",
+    "Then-CEO Ismael Guerrero, May 2026: monetising assets means 'the impact on our results of operations may be less favorable in the near term. However, this strategy remains necessary to deleverage our balance sheet and recycle capital.'"
+   ],
+   "positioning": "A developer-and-seller rather than a pure owner-operator, notwithstanding the stated pivot to long-term ownership that the BlackRock proceeds were raised to fund. The tension between those two descriptions is the central strategic question about this business.",
+   "soldThrough": "Bilateral sales to infrastructure funds, utility affiliates and merchant owners",
+   "targetSegments": [
+    "Infrastructure funds",
+    "Utility holding companies",
+    "Merchant ERCOT owners"
+   ],
+   "roadmap": "Management guided the project sales deferred out of Q2 2026 to close in the second half, driving a sequentially stronger third quarter"
+  },
+  {
+   "name": "Power services — operations and maintenance",
+   "category": "Asset services",
+   "description": "The recurring-revenue leg: about 15 GW of contracted projects under long-term operations and maintenance agreements, with a stated availability guarantee above 99%. Power services produced $20.1m of Q2 2026 revenue and electricity and BESS operations a further $32.7m — together roughly $53m a quarter, about $210m annualised, against $4.1bn of segment debt. ISO 9001 and ISO 45001 certifications for O&M were achieved 17 October 2025.",
+   "highlights": [
+    "About 15 GW under long-term O&M contract, more than the company has ever built for itself",
+    "Availability guarantee stated at over 99%",
+    "Recurring lines are roughly 45% of segment revenue but do not cover segment interest expense of $41.9m in Q2 2026 alone",
+    "Dylan Marx, appointed CEO in July 2026, had run this power-services business since 2023"
+   ],
+   "positioning": "The steadiest part of a lumpy business, and the part the incoming chief executive came from — a reasonable signal about where management believes durable value sits.",
+   "soldThrough": "Long-term O&M and asset-management agreements, including on assets Recurrent has sold",
+   "targetSegments": [
+    "Buyers of Recurrent-developed assets",
+    "Third-party owners",
+    "Canadian Solar Infrastructure Fund"
+   ],
+   "roadmap": "No published expansion target"
+  },
+  {
+   "name": "Market optimisation and offtake structuring",
+   "category": "Commercial services",
+   "description": "An emerging line: Recurrent signed its first battery optimisation agreement with Octopus Energy in Italy on 4 August 2026, and an 8.05 MWp PPA in Piedmont with a major Italian fashion group on 25 February 2026. In the US the commercial model is the opposite — 20-year tolling agreements with Arizona Public Service on Papago Storage and Desert Bloom, under which the utility takes market risk and Recurrent takes availability risk.",
+   "highlights": [
+    "Papago Storage sits on a 20-year APS tolling agreement — the anchor commercial relationship in the US portfolio",
+    "Desert Bloom carries a second 20-year APS toll; the November 2024 package covered three projects totalling 1,800 MWh of storage and 150 MWac of solar",
+    "Fort Duncan by contrast ran fully merchant in ERCOT South and was sold rather than contracted",
+    "First European optimisation agreement signed with Octopus Energy, Italy, August 2026"
+   ],
+   "positioning": "Contracted in the US, increasingly merchant-adjacent in Europe. Energy-Storage.news reported the November 2024 Arizona round as a head-to-head between Recurrent and Avantus with D. E. Shaw Renewable Investments — the clearest published read on who competes for Recurrent's most important utility relationship.",
+   "soldThrough": "Direct utility tolling agreements; corporate PPAs; third-party optimisers in Europe",
+   "targetSegments": [
+    "Regulated utilities",
+    "Corporate offtakers",
+    "European merchant markets"
+   ],
+   "roadmap": "No further tolling awards announced since the 2024 APS package"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Papago Storage (Maricopa County, Arizona)",
+   "specs": [
+    {
+     "band": "Rating",
+     "label": "Power / energy",
+     "value": "300 MW / 1,200 MWh AC (1,519 MWh DC nominal)"
+    },
+    {
+     "band": "Rating",
+     "label": "Duration",
+     "value": "4 hours"
+    },
+    {
+     "band": "Commercial",
+     "label": "Offtake",
+     "value": "20-year tolling agreement with Arizona Public Service"
+    },
+    {
+     "band": "Commercial",
+     "label": "Status",
+     "value": "EIA Form 860M records RE Papago LLC in service 5/2025; the company announced commercial operation in July 2025"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Integrator",
+     "value": "Canadian Solar's e-STORAGE — turnkey EPC, SolBank supply and a 20-year long-term service agreement"
+    },
+    {
+     "band": "Finance",
+     "label": "Project financing",
+     "value": "$513m closed 2024-06-20 — $249m construction and term loan, $163m tax-equity bridge loan, $101m letter-of-credit facility"
+    },
+    {
+     "band": "Finance",
+     "label": "Lenders",
+     "value": "Coordinating lead arrangers MUFG and Nord/LB; joint lead arrangers Bank of America, CoBank, DNB, Rabobank, Siemens Financial Services, Zions"
+    }
+   ],
+   "notes": "The only large battery Recurrent both owns outright and operates. Trade press describes it as among Arizona's largest."
+  },
+  {
+   "product": "Crimson Storage (Riverside County, California)",
+   "specs": [
+    {
+     "band": "Rating",
+     "label": "Power / energy",
+     "value": "350 MW / 1,400 MWh"
+    },
+    {
+     "band": "Rating",
+     "label": "Status",
+     "value": "Commercial operation October 2022, on Bureau of Land Management public land"
+    },
+    {
+     "band": "Ownership",
+     "label": "Recurrent share",
+     "value": "20% — a fund managed by Axium Infrastructure holds 80%; the FY2025 20-F lists RE Crimson Holdings LLC at 20% ownership, carried as an equity-method affiliate at $22.142m at 31 December 2025, down from $25.230m"
+    },
+    {
+     "band": "Commercial",
+     "label": "Offtake",
+     "value": "Southern California Edison 200 MW / 800 MWh and PG&E 150 MW / 600 MWh"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Integrator",
+     "value": "CSI Energy Storage, now e-STORAGE, as turnkey system integrator delivering EPC and long-term operational services"
+    },
+    {
+     "band": "Related party",
+     "label": "Intra-group BESS deliveries to Crimson",
+     "value": "$17.182m (2023), $5.300m (2024), $13.008m (2025) per the FY2025 20-F related-party note"
+    }
+   ],
+   "notes": "Frequently counted in full against Recurrent's operating fleet. On a net-equity basis only about 280 MWh of it is Recurrent's — adding the full 1,400 MWh overstates the asset roughly fivefold."
+  },
+  {
+   "product": "Fort Duncan Battery Storage (Maverick County, Texas) — sold February 2026",
+   "specs": [
+    {
+     "band": "Rating",
+     "label": "Power / energy",
+     "value": "100 MW / 200 MWh (EIA registers 102.6 MW / 205.1 MWh)"
+    },
+    {
+     "band": "Rating",
+     "label": "Status",
+     "value": "Commercial operation June 2025; ERCOT South load zone"
+    },
+    {
+     "band": "Commercial",
+     "label": "Revenue model",
+     "value": "Fully merchant — 'Fort Duncan Storage operates on a merchant basis'; described by Energy-Storage.news as a top-performing standalone BESS in ERCOT South"
+    },
+    {
+     "band": "Transaction",
+     "label": "Sale",
+     "value": "Completed sale to Hunt Energy Network announced 2026-02-24; price undisclosed; revenue recognised in Canadian Solar's Q1 2026"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Batteries / EPC",
+     "value": "e-STORAGE supplied the storage systems; Burns & McDonnell was EPC"
+    },
+    {
+     "band": "Finance",
+     "label": "Pre-sale financing",
+     "value": "$183m of project financing and tax equity"
+    }
+   ],
+   "notes": "The clearest illustration of the model: build merchant, prove performance, sell to a balance sheet that wants the merchant risk. EIA had not re-attributed the plant to Hunt as of the July 2026 vintage."
+  },
+  {
+   "product": "Desert Bloom Storage (Maricopa County, Arizona)",
+   "specs": [
+    {
+     "band": "Rating",
+     "label": "Power / energy",
+     "value": "150 MW / 600 MWh standalone"
+    },
+    {
+     "band": "Commercial",
+     "label": "Offtake",
+     "value": "20-year tolling agreement with Arizona Public Service"
+    },
+    {
+     "band": "Schedule",
+     "label": "Guided vs recorded",
+     "value": "Company guided commercial operation in the first half of 2026; EIA Form 860M (July 2026 vintage) still shows '(TS) Construction complete, but not yet in commercial operation' with planned operation 8/2026"
+    },
+    {
+     "band": "Delivery",
+     "label": "EPC",
+     "value": "Primoris Services Corporation"
+    },
+    {
+     "band": "Finance",
+     "label": "Financing",
+     "value": "Part of the $825m Arizona package closed 2025-10-21 with Nord/LB, MUFG, CoBank and Siemens Financial Services, tax equity from Wells Fargo; the 20-F books $505.949m of debt, tax-equity bridge and letter-of-credit facilities across RE Papago PV LLC, RE Desert Bloom LLC and Sun Dog Class B LLC, maturing April 2046"
+    }
+   ],
+   "notes": "A modest but independently documented slip past the company's own guided window — the kind of schedule detail a developer does not volunteer."
+  },
+  {
+   "product": "Development-services engagements often mis-attributed to Recurrent's owned fleet",
+   "specs": [
+    {
+     "band": "Not owned",
+     "label": "Slate Solar + Storage, Kings County, CA",
+     "value": "300 MWac solar + 140.25 MW / 561 MWh storage; sold to Goldman Sachs Renewable Power, which has since been renamed MN8 Energy LLC — EIA lists MN8 as today's owner; five offtakers including BART, Central Coast Community Energy, Silicon Valley Clean Energy, PWRPA and Stanford University"
+    },
+    {
+     "band": "Not owned",
+     "label": "Mustang, Kings County, CA",
+     "value": "EIA: RE Mustang LLC owned by MN8 Energy LLC — 100 MW solar plus a 75 MW / 75 MWh battery in service 10/2021. Rosendin's page describes the BESS as 75,000 kW / 300,000 kWh; the EIA-registered nameplate energy is 75 MWh and no source reconciles the two"
+    },
+    {
+     "band": "Not owned",
+     "label": "Garland, Kern County, CA",
+     "value": "EIA: Southern Power Co owns RE Garland and RE Garland A — 205 MW solar plus 88 MW / 352 MWh of batteries in service August and December 2021; Recurrent provided the development service to add the storage"
+    },
+    {
+     "band": "Not owned",
+     "label": "Tranquility, Fresno County, CA",
+     "value": "72 MWac / 288 MWh added to a 200 MW solar project owned by Southern Power and AIP Management; Rosendin was EPC on a $12.5m, 15.8-month scope, and the battery supplier was Powin — not Canadian Solar"
+    }
+   ],
+   "notes": "Tranquility is the single clearest published counterexample to the captive-supply thesis: a Recurrent-run development scope that bought a competitor's batteries."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-27",
+   "category": "financial",
+   "headline": "Q2 2026: Recurrent revenue $117.3m, operating loss $19.4m including a $24m impairment on a Latin America project sale; storage pipeline restated to 84.1 GWh and segment debt to $4.1bn",
+   "read": "The third consecutive quarterly operating loss. Management attributed the weak quarter to project sales deferred into the second half — the swing line that decides this segment's results.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926101856/tm2623883d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "financial",
+   "headline": "Cobalt Solar closes $695m: about $484m of debt led by MUFG and Nord/LB plus $211m of Wells Fargo tax equity for 330 MW in Riverside County, California",
+   "read": "MUFG and Nord/LB are now the repeat coordinating lead arrangers across Papago, the Arizona package and Cobalt, and Wells Fargo the repeat tax-equity investor — a stable bank group is this platform's most durable asset.",
+   "source": "https://recurrentenergy.com/recurrent-energy-secures-695-million-in-project-financing-for-330-mw-california-solar-project/"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "project",
+   "headline": "Carwarp Energy Park energised ahead of schedule in Victoria, Australia — 150 MWac under a long-term Microsoft PPA, using about 243,000 Canadian Solar TOPCon modules",
+   "read": "A hyperscaler PPA won outside the United States, and captive on the module side as well as the development side.",
+   "source": "https://recurrentenergy.com/recurrent-energy-powers-up-carwarp-energy-park-in-australia-under-long-term-microsoft-ppa/"
+  },
+  {
+   "date": "2026-07-06",
+   "category": "leadership",
+   "headline": "Dylan Marx appointed CEO of Recurrent Energy, effective immediately; Ismael Guerrero steps down to a non-executive advisory role through 31 December 2026",
+   "read": "The second chief-executive change in fourteen weeks across the two levels that matter, and it came one quarter after Guerrero publicly described asset sales as necessary to deleverage.",
+   "source": "https://www.prnewswire.com/news-releases/canadian-solar-announces-leadership-change-at-recurrent-energy-302818537.html"
+  },
+  {
+   "date": "2026-06-01",
+   "category": "project",
+   "headline": "Rey Solar inaugurated at Carmona, Seville — 426 MWp, the flagship Iberian asset",
+   "read": "Drove the sequential increase in Recurrent's electricity revenue and anchors the EMEA position that now holds the largest share of the storage pipeline.",
+   "source": "https://recurrentenergy.com/media/"
+  },
+  {
+   "date": "2026-05-14",
+   "category": "leadership",
+   "headline": "Colin Parkin appointed CEO of Canadian Solar; founder Shawn Qu moves to Executive Chairman and Chief Technology Officer",
+   "read": "Parkin came from the presidency of e-STORAGE. The head of the battery-manufacturing business now runs the parent that owns both it and Recurrent, which is directly relevant to how the captive-supply relationship gets priced.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926060672/tm2614624d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-05-14",
+   "category": "financial",
+   "headline": "Q1 2026: storage pipeline reported at 80.6 GWh as of 31 March; Recurrent revenue $139.2m on a negative 10.4% gross margin and a $60.3m operating loss",
+   "read": "This filing is the sole primary source of the 80.6 GWh figure that circulates in the market. It was a one-quarter snapshot and has since been superseded twice.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926060672/tm2614624d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-04-10",
+   "category": "corporate",
+   "headline": "FY2025 Form 20-F sets out the BlackRock Series A terms in full: 9% dividend compounding quarterly in kind, 1.3x liquidation preference, one board seat, a 60%-of-Series-A consent block and exit rights from the fifth anniversary of the first closing",
+   "read": "The filing is what turns a press-release headline into a capital structure. The preferred sits in temporary equity because redemption is not solely within Canadian Solar's control.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm"
+  },
+  {
+   "date": "2026-03-30",
+   "category": "ma",
+   "headline": "Sale of the Higher Witheven project in the United Kingdom announced",
+   "read": "Continues the pattern of monetising European development assets rather than holding them.",
+   "source": "https://recurrentenergy.com/media/"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "financial",
+   "headline": "Q4 and FY2025: group gross margin fell to 10.2% from 17.2% on project-asset impairments and delayed project sales; storage pipeline 83.5 GWh at 31 December 2025",
+   "read": "The impairments are the concrete evidence that an 84 GWh pipeline is not costlessly held — early-stage positions get written down when they stop clearing.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926031701/tm269349d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "ma",
+   "headline": "Completed sale of the 100 MW / 200 MWh Fort Duncan battery in Maverick County, Texas to Hunt Energy Network; price undisclosed",
+   "read": "Recurrent built a merchant ERCOT battery, ran it for eight months, and sold it to an owner that wanted the merchant risk. That is the business model in one transaction.",
+   "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/"
+  },
+  {
+   "date": "2026-02-16",
+   "category": "regulatory",
+   "headline": "Four UK projects totalling 122 MWp awarded Contracts for Difference in the AR7 auction",
+   "read": "Contracted European revenue of the kind the US portfolio gets from APS tolls.",
+   "source": "https://recurrentenergy.com/media/"
+  },
+  {
+   "date": "2025-12-02",
+   "category": "regulatory",
+   "headline": "Development Consent Order secured for the Tillbridge solar and battery project in Lincolnshire",
+   "read": "An NSIP-scale UK consent — the largest single planning milestone in the EMEA pipeline that now carries 32.3 GWh of the storage total.",
+   "source": "https://recurrentenergy.com/media/"
+  },
+  {
+   "date": "2025-11-17",
+   "category": "ma",
+   "headline": "Sale of the hybrid 275 MWdc solar and 120 MW battery Gunning Energy Park in New South Wales to an undisclosed European infrastructure and investment group",
+   "read": "Australia joins the list of markets where Recurrent develops and exits rather than holds.",
+   "source": "https://recurrentenergy.com/media/"
+  },
+  {
+   "date": "2025-10-21",
+   "category": "financial",
+   "headline": "$825m of construction financing and tax equity closed for Desert Bloom Storage (600 MWh) and Papago Solar (150 MWac) in Maricopa County, Arizona",
+   "read": "Nord/LB, MUFG, CoBank and Siemens Financial Services on debt; Wells Fargo on tax equity; Primoris and Blattner as EPCs. The 20-F books $505.9m of it as borrowings maturing April 2046.",
+   "source": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/"
+  },
+  {
+   "date": "2025-07-08",
+   "category": "project",
+   "headline": "Papago Storage reaches commercial operation — 300 MW / 1,200 MWh in Maricopa County on a 20-year APS tolling agreement, with e-STORAGE supplying turnkey EPC, SolBank and a 20-year service agreement",
+   "read": "The only large battery Recurrent both owns outright and operates, and the fullest expression of the captive channel: the group developed it, supplied it and services it.",
+   "source": "https://www.energy-storage.news/recurrent-energys-1200mwh-arizona-bess-reaches-operations/"
+  },
+  {
+   "date": "2024-10-03",
+   "category": "corporate",
+   "headline": "Final closing of BlackRock's $500m investment — 20% of Recurrent Energy B.V. on an as-converted basis, with Canadian Solar retaining the remaining majority",
+   "read": "The sentence that ends 'wholly owned'. Canadian Solar's own wording is that it will 'continue to own the remaining majority shares', which is not the same claim.",
+   "source": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "canadian-solar",
+   "type": "supplier",
+   "status": "active",
+   "since": "2015",
+   "scale": "$13.0m of BESS delivered to Crimson in 2025 alone",
+   "via": "e-STORAGE SolBank systems, turnkey EPC and long-term service agreements",
+   "note": "Canadian Solar is Recurrent's parent and, through its e-STORAGE arm, the usual supplier of its battery systems.",
+   "context": "The relationship runs two ways and both matter. Structurally, Recurrent Energy B.V. is one of Canadian Solar's two reportable segments and is fully consolidated — but it is not wholly owned: BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% of Recurrent on an as-converted basis at closing, carried in temporary equity. Commercially, e-STORAGE sits inside the parent's Manufacturing segment and supplies Recurrent's projects, so this is an intersegment flow the parent eliminates in consolidation: eliminated intersegment revenue was $790.1m in FY2024, $420.6m in FY2025 and $18.1m in the first half of 2026, and the FY2024 elimination also removed $253.5m of gross profit. e-STORAGE supplied Papago, Fort Duncan and Crimson.\n\nThe channel is usual but demonstrably not exclusive — the Tranquility battery retrofit, a Recurrent development-services scope, bought Powin batteries. The 20-F asserts intersegment terms are comparable to those with unaffiliated third parties; no independent source has tested that. Typed supplier rather than investor because the capital relationship runs the other way and the enum has no parent value; the ownership is set out here instead of bought as a graph colour.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm"
+  },
+  {
+   "slug": "hunt-energy-network",
+   "type": "customer",
+   "status": "historical",
+   "since": "2026-02",
+   "scale": "100 MW / 200 MWh (Fort Duncan)",
+   "via": "Sale of an operating merchant ERCOT battery",
+   "note": "Hunt Energy Network bought the Fort Duncan battery from Recurrent; completion was announced on 24 February 2026 and the price was not disclosed.",
+   "context": "Recurrent built Fort Duncan in Maverick County, Texas, brought it to commercial operation in June 2025 on $183m of project financing and tax equity, ran it fully merchant in the ERCOT South load zone, and sold it eight months later. Canadian Solar recognised the revenue in Q1 2026 and its then-chief executive named the sale as the driver of that quarter's sequential revenue improvement. e-STORAGE supplied the batteries and Burns & McDonnell was the EPC, so the asset carried the captive supply chain with it. Hunt's fleet reached 33 ERCOT facilities and 420 MW on completion — its first transmission-level battery and first purchase of an operating asset. Typed customer because Hunt bought a finished asset; the relationship is historical rather than continuing.",
+   "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/"
+  },
+  {
+   "slug": "burns-mcdonnell",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2024",
+   "scale": "Fort Duncan, 100 MW / 200 MWh",
+   "via": "EPC on a merchant ERCOT battery",
+   "note": "Burns & McDonnell was the EPC contractor on Fort Duncan, built for Recurrent before the sale to Hunt Energy Network.",
+   "context": "Energy-Storage.news names Burns & McDonnell as the engineering, procurement and construction contractor on Fort Duncan. The pairing is notable because it shows the captive supply chain is partial rather than total: the batteries came from the parent's own e-STORAGE arm while the construction scope went to a third-party engineer. Hunt Energy Network's own dossier records the same arrangement from the buyer's side.",
+   "source": "https://www.energy-storage.news/recurrent-energy-sells-200mwh-texas-bess-to-hunt-energy-network/"
+  },
+  {
+   "slug": "blattner",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025",
+   "scale": "Papago Solar 150 MWac and Cobalt Solar 330 MW",
+   "via": "Solar EPC",
+   "note": "Blattner Energy is the EPC on Papago Solar and on the 330 MW Cobalt Solar project financed in August 2026.",
+   "context": "Blattner is named as EPC in Recurrent's own financing releases for both the Arizona package and Cobalt. Blattner's dossier independently lists Recurrent among its repeat-owner frameworks, alongside Pattern, Orsted, RWE and NextEra, and records the Slate project — 390 MWp of solar with 140.25 MW / 561 MWh of storage on Canadian Solar integration — as a documented Blattner storage build for Recurrent before that asset was sold. Two live projects and a historical one make this a standing relationship rather than a single award.",
+   "source": "https://recurrentenergy.com/recurrent-energy-secures-695-million-in-project-financing-for-330-mw-california-solar-project/"
+  },
+  {
+   "slug": "primoris",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025",
+   "scale": "Desert Bloom Storage, 600 MWh",
+   "via": "Battery storage EPC",
+   "note": "Primoris Services Corporation is the EPC on Desert Bloom Storage, the 600 MWh Arizona battery contracted to APS.",
+   "context": "Named in Recurrent's October 2025 financing release for the $825m Arizona package, which covered Desert Bloom Storage and Papago Solar and split the EPC scopes between Primoris and Blattner. EIA Form 860M's July 2026 vintage still records Desert Bloom as construction-complete but not yet in commercial operation, with planned operation in August 2026 — a slip past the first-half 2026 window the financing release guided to.",
+   "source": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/"
+  },
+  {
+   "slug": "rosendin",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2016",
+   "scale": "Tranquility 72 MWac / 288 MWh; Mustang 75 MW BESS retrofit",
+   "via": "Electrical EPC on battery retrofits",
+   "note": "Rosendin was the electrical EPC on the Tranquility and Mustang battery retrofits that Recurrent developed.",
+   "context": "Rosendin's own project page names Recurrent Energy as the client on Tranquility, a $12.5m, 15.8-month scope adding 72 MWac / 288 MWh to an existing solar plant in Fresno County. Two things follow that the corpus should not blur. First, Recurrent provided a development service — the underlying asset is owned by Southern Power and AIP Management, not by Recurrent, so Tranquility does not belong in any tally of Recurrent's fleet. Second, the battery supplier at Tranquility was Powin, not Canadian Solar, which makes it the clearest published counterexample to the captive-supply thesis. Rosendin's Mustang page cites 75,000 kW / 300,000 kWh where EIA registers 75 MW / 75 MWh; no source reconciles the two and the discrepancy is left stated.",
+   "source": "https://www.rosendin.com/projects/tranquility-bess/"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-08",
+   "scale": "150 MWac (Carwarp Energy Park)",
+   "via": "Long-term corporate PPA on an Australian solar project",
+   "note": "Microsoft is the offtaker under a long-term power purchase agreement for Carwarp Energy Park in Victoria, Australia.",
+   "context": "Carwarp reached commercial operation on 12 August 2026, ahead of schedule, at 171 MWp / 150 MWac using about 243,000 Canadian Solar TOPCon modules — captive on the module side as well as the development side. The site holds approval for a 120 MW battery that has not been built. This is Recurrent's clearest hyperscaler relationship and it sits outside the United States, which is worth noting against a corpus that treats data-centre demand as a North American story.",
+   "source": "https://recurrentenergy.com/recurrent-energy-powers-up-carwarp-energy-park-in-australia-under-long-term-microsoft-ppa/"
+  },
+  {
+   "slug": "strata-clean-energy",
+   "type": "competitor",
+   "status": "active",
+   "since": "2024",
+   "scale": "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
+   "via": "Arizona Public Service storage procurement",
+   "note": "Strata and Recurrent were competing bidders into the same Arizona Public Service storage solicitations.",
+   "context": "Recurrent's own financing release documents Desert Bloom at 600 MWh on a 20-year APS toll; Strata's dossier records the same procurement from the other side, naming Recurrent's Desert Bloom at 150 MW / 600 MWh alongside EDF Renewables' Beehive as the peers it met in those solicitations, sourced there to Energy-Storage.news. Both companies are late-stage developers selling into the same regulated buyer, and both monetise rather than hold: Strata exits before the long-dated toll ties up its balance sheet, while Recurrent took the 20-year APS toll and kept the asset. The contrast is the useful part of the comparison.",
+   "source": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/"
+  },
+  {
+   "slug": "engie-north-america",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both are utility-scale storage developers in the same US markets; Cleanview's developer table places ENGIE first by planned battery megawatts and does not rank Recurrent in its top 25.",
+   "context": "A ranking comparison rather than a commercial relationship, and it is recorded as such. Cleanview tracks 334 US battery storage developers and 2,102 projects; its top five by planned megawatts are ENGIE at 18,252 MW, Hecate at 10,779 MW, NextEra at 10,452 MW, Intersect Power at 9,280 MW and Jupiter Power at 9,091 MW. Recurrent appears at 15 projects and 2,606 MW planned across seven states, with no operating projects attributed, and is absent from the top 25. The analytical value is the gap between Recurrent's 84.1 GWh global development pipeline and its visible US position — the pipeline is a global, largely early-stage inventory, and it does not convert into a US ranking.",
+   "source": "https://cleanview.co/power-projects/developers/battery-storage"
+  },
+  {
+   "slug": "intersect-power",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both develop utility-scale storage in the same US markets; Cleanview ranks Intersect fourth by planned battery megawatts while Recurrent falls outside the top 25.",
+   "context": "A ranking co-appearance on the same Cleanview table. The comparison is sharper than most because Intersect took the opposite structural path: it was bought outright by Google in March 2026 for its development platform, while Recurrent sold a 20% as-converted preferred stake to an infrastructure investor and stayed inside a manufacturer. Two developers, two answers to the same capital problem. Intersect's dossier also records two of its executives as Recurrent alumni, which is career history rather than a corporate link.",
+   "source": "https://cleanview.co/power-projects/developers/battery-storage"
+  },
+  {
+   "slug": "jupiter-power",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both develop utility-scale storage in the same US markets; Cleanview ranks Jupiter fifth by planned battery megawatts, with Recurrent outside the top 25.",
+   "context": "A ranking co-appearance on the Cleanview developer table rather than a commercial relationship. Jupiter is a useful contrast because it is a pure-play merchant storage owner with no manufacturing parent and no module business — the cleanest available comparison for what Recurrent's storage arm would look like without the captive channel and without the solar pipeline.",
+   "source": "https://cleanview.co/power-projects/developers/battery-storage"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "Recurrent runs the tightest version of the prohibited-foreign-entity test in US development, because its usual battery supplier is inside its own group. Canadian Solar's FY2025 20-F records that the One Big Beautiful Bill Act 'added and amended provisions of the U.S. Internal Revenue Code that can reduce or disallow certain U.S. clean energy tax credits based on involvement of a prohibited foreign entity, including where a taxpayer is a prohibited foreign entity or where a facility, energy storage technology, or eligible component is treated as receiving material assistance from a PFE'. Recurrent's US projects are financed with tax equity — Wells Fargo on Papago, the Arizona package and Cobalt, and $207.7m of tax-equity contributions to consolidated variable interest entities in 2025 alone — and supplied with e-STORAGE batteries. Citi named FEOC as the second of five reasons for cutting Canadian Solar to Sell in October 2025.",
+   "mitigation": "The parent states that it has 'made compliance with the OBBBA's PFE provisions a core operational priority' and restructured US manufacturing under CS PowerTech Inc., a vehicle in which it holds 75.1%, to resume direct oversight of US operations. Collection gap: no independent analysis has publicly stress-tested Recurrent's specific material-assistance cost ratio, and the company publishes no project-level ratio.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm"
+  },
+  {
+   "regime": "AD/CVD (Solar 3 and Solar 4)",
+   "status": "in-effect",
+   "effectiveDate": "2025",
+   "exposure": "Parent-level trade exposure that sets Recurrent's equipment cost and credit eligibility. The FY2025 20-F records final rates applicable to Canadian Solar of 111.45% antidumping and 255.39% countervailing on Thai-origin crystalline silicon products, with an affirmative threat determination for Thailand and a negative critical-circumstances finding producing some refunds; the matter was appealed to the Court of International Trade in July 2025. Solar 4 petitions covering India, Indonesia and Laos were filed on 17 July 2025, Commerce initiated on 12 August 2025, and affirmative preliminary countervailing determinations followed on 26 February 2026 including critical circumstances for India and Indonesia.",
+   "mitigation": "Canadian Solar has appealed the Thailand circumvention determination to the Federal Circuit and diversified module sourcing; no Recurrent-specific mitigation is published.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm"
+  },
+  {
+   "regime": "ITC/45X (One Big Beautiful Bill Act phase-out)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "Recurrent's US project economics rest on transferable investment tax credits monetised through tax equity. The FY2025 20-F states that if 'tax credits applicable to our manufacturing activities or our customers' project economics could be adversely affected'. Treasury and the IRS issued Notice 2026-15 on 12 February 2026 setting out material-assistance cost ratio safe harbours; reported thresholds are stricter for energy storage than for standard installations.",
+   "mitigation": "Wells Fargo has been the repeat tax-equity investor across Papago, the Arizona package and Cobalt, and the Cobalt structure closed as recently as August 2026 — evidence the tax-equity market remains open to Recurrent's projects.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm"
+  },
+  {
+   "regime": "Section 232 polysilicon investigation",
+   "status": "proposed",
+   "effectiveDate": "2025-07-01",
+   "exposure": "An open Commerce investigation into polysilicon imports that could reach Canadian Solar's upstream supply. Citi named it as the third of five reasons for its Sell rating on the parent. No determination had issued as of the FY2025 20-F.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm"
+  },
+  {
+   "regime": "IEEPA tariffs",
+   "status": "expired",
+   "effectiveDate": "2026-02-20",
+   "exposure": "The Supreme Court found the IEEPA tariffs unlawful on 20 February 2026 and the Court of International Trade ordered refunds; Canadian Solar filed suit in the CIT to preserve its refund rights. This is the source of the tariff-refund benefit that lifted the parent's Q1 2026 gross margin to 25.1% and whose absence dropped Q2 2026 to 13.9% — a reminder that recent margin movement at the parent is partly a legal artefact rather than an operating one.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm"
+  },
+  {
+   "regime": "Active anode material AD/CVD",
+   "status": "expired",
+   "effectiveDate": "2026-03-12",
+   "exposure": "A resolved risk worth recording because the corpus may still carry it as live. Commerce held active anode material in downstream battery products out of scope on 11 February 2026, and the International Trade Commission made a negative material-retardation finding on 12 March 2026, so no order will issue. This is a favourable outcome for the storage supply chain Recurrent depends on.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Dylan Marx",
+   "title": "Chief Executive Officer, Recurrent Energy (from 6 July 2026)",
+   "background": [
+    "Chief Operating Officer, Canadian Solar Inc. — stepped down from the role to lead Recurrent",
+    "President, Recurrent Energy power services business (from 2023)",
+    "President of Operations and Maintenance, Recurrent Energy",
+    "Quoted as Recurrent's chief executive in the Carwarp and Cobalt Solar releases of August 2026, which confirms the appointment is live"
+   ]
+  },
+  {
+   "name": "Ismael Guerrero",
+   "title": "Former Chief Executive Officer; non-executive advisor through 31 December 2026",
+   "background": [
+    "Chief Executive Officer, Recurrent Energy — led the company through the BlackRock transaction and the owner-operator pivot",
+    "Corporate Vice President, Canadian Solar Inc.",
+    "President and Head of Origination, TerraForm Global",
+    "Chief Executive Officer, SunEdison Southeast Asia",
+    "More than fifteen years in solar"
+   ]
+  },
+  {
+   "name": "Colin Parkin",
+   "title": "Chief Executive Officer, Canadian Solar Inc. (parent, from 14 May 2026)",
+   "background": [
+    "President, Canadian Solar Inc.",
+    "President, e-STORAGE — led global strategy for battery technologies and the build-out of cell and system manufacturing in the US, Southeast Asia and China",
+    "Vice President, Recurrent Energy",
+    "Director of Canadian Solar since December 2025"
+   ]
+  },
+  {
+   "name": "Shawn Qu",
+   "title": "Executive Chairman and Chief Technology Officer, Canadian Solar Inc. (parent)",
+   "background": [
+    "Founder of Canadian Solar in 2001; Chairman and Chief Executive Officer until May 2026",
+    "Took the company public on NASDAQ in 2006",
+    "Quoted at the BlackRock announcement that the capital 'will provide the resources needed to further scale the Recurrent Energy platform'"
+   ]
+  },
+  {
+   "name": "Inés Arrimadas",
+   "title": "Chief ESG and Communications Officer",
+   "background": [
+    "Appointed 14 December 2023",
+    "President of the Ciudadanos party, Spain",
+    "Member of the Spanish Congress of Deputies and parliamentary spokesperson",
+    "Member of the Parliament of Catalonia and opposition leader during the separatist process",
+    "Law and Business Administration, Pablo de Olavide University, Seville; International Business Management, IPAG Nice"
+   ]
+  },
+  {
+   "name": "Isabel Zhang",
+   "title": "Chief of Staff to the President and Chief Executive Officer, Recurrent Energy",
+   "background": [
+    "Director of Investor Relations and Strategic Analysis, Canadian Solar Inc. (since 2019)"
+   ]
+  },
+  {
+   "name": "David Giordano",
+   "title": "Global Head of Climate Infrastructure, BlackRock (investor-side counterpart)",
+   "background": [
+    "Led the fund investment that took 20% of Recurrent on an as-converted basis",
+    "Stated at final closing that Recurrent is 'well-positioned to accelerate the growth of its solar and battery storage projects at utility scale in critical, fast-growing markets'",
+    "BlackRock holds one seat on the Recurrent Energy B.V. board under the Series A terms"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Recurrent Energy segment net revenues",
+      "actual": "$323.5m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Segment table, FY2025 20-F Note 24. No segment-level consensus exists — Recurrent is not separately covered or guided",
+      "kpi": "revenue",
+      "usdMillions": 323.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Segment gross profit",
+      "actual": "$65.5m (20.2% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Segment table, FY2025 20-F"
+     },
+     {
+      "name": "Segment loss from operations",
+      "actual": "$(90.1)m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Loss-making at the operating line before the 2025 deterioration"
+     },
+     {
+      "name": "Segment interest expense",
+      "actual": "$(63.5)m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Rises with the project-debt balance"
+     },
+     {
+      "name": "Eliminated intersegment revenue (group)",
+      "actual": "$(790.1)m, with $(253.5)m of gross profit also eliminated",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The scale of the captive channel — modules, EPC and battery systems sold from Manufacturing into Recurrent and removed in consolidation"
+     }
+    ],
+    "commentary": "BlackRock's Series A preferred was issued during this year; the FY2024 statement of changes records 'Subsidiary's issuance of redeemable preferred shares' at $328.9m against a $500m headline, a difference the filings retrieved do not explain on their face."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Recurrent Energy segment net revenues",
+      "actual": "$403.6m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Up 24.8% year on year. The 20-F's MD&A prose cites $394.3m for 'net revenues related to Recurrent Energy'; the difference is elimination and presentation — the segment table is authoritative",
+      "kpi": "revenue",
+      "usdMillions": 403.6,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Segment gross profit",
+      "actual": "$83.5m (20.7% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Margin roughly flat on FY2024 despite the higher revenue"
+     },
+     {
+      "name": "Segment loss from operations",
+      "actual": "$(152.7)m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The operating loss widened 69% year on year as operating expenses rose from $155.6m to $236.1m"
+     },
+     {
+      "name": "Segment interest expense",
+      "actual": "$(99.1)m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Up 56% on FY2024, tracking the project-debt build"
+     },
+     {
+      "name": "Parent revenue",
+      "actual": "$5,595.1m",
+      "expected": "$7,300m–$8,300m (company guidance given March 2025)",
+      "verdict": "miss",
+      "result": "About 25% below the low end of Canadian Solar's own guidance, and roughly 2.1% below sell-side consensus"
+     },
+     {
+      "name": "Parent net income attributable to shareholders",
+      "actual": "$(104.1)m, EPS $(2.50)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Against +$36.1m in FY2024"
+     },
+     {
+      "name": "Storage development pipeline",
+      "actual": "83,485 MWh at 31 December 2025",
+      "expected": "",
+      "verdict": "inline",
+      "result": "805 MWh under construction, 5,430 MWh backlog, 8,730 MWh advanced, 68,521 MWh early-stage",
+      "kpi": "backlog-gwh",
+      "qty": 83.485
+     }
+    ],
+    "commentary": "The year the pipeline stopped being free. Q4 gross margin fell to 10.2% from 17.2% on project-asset impairments and delayed project sales, and the company began describing asset monetisation as a deleveraging necessity rather than a choice. Citi cut Canadian Solar to Sell on 21 October 2025 with an $11 target, naming 'relatively high leverage in the project development business' as the fourth of five reasons — the clearest published sell-side statement that Recurrent is a liability in the equity story."
+   },
+   {
+    "period": "H1 2026 (latest interim)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Recurrent Energy segment net revenues",
+      "actual": "$256.5m (Q1 $139.2m, Q2 $117.3m)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Q2 composition: asset sales $61.1m, electricity and BESS operations $32.7m, power services $20.1m",
+      "kpi": "revenue",
+      "usdMillions": 256.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Segment gross profit",
+      "actual": "$21.5m (8.4% margin)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Q1 posted a negative 10.4% gross margin; Q2 recovered to 30.7%"
+     },
+     {
+      "name": "Segment loss from operations",
+      "actual": "$(79.6)m (Q1 $(60.3)m, Q2 $(19.4)m)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "A third and fourth consecutive quarterly operating loss. Q2 included a $24m impairment tied to a Latin America project sale"
+     },
+     {
+      "name": "Segment interest expense",
+      "actual": "$(73.6)m (Q2 alone $(41.9)m)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Q2 interest expense was 36% of segment revenue"
+     },
+     {
+      "name": "Recurrent Energy debt",
+      "actual": "$4.1bn at 30 June 2026 — $2.6bn non-recourse, $1.3bn other borrowings",
+      "expected": "",
+      "verdict": "inline",
+      "result": "About 58% of Canadian Solar's $7.1bn consolidated debt, against roughly 10% of group revenue. Segment unrestricted cash was $74.9m"
+     },
+     {
+      "name": "Storage development pipeline",
+      "actual": "84,057 MWh at 30 June 2026",
+      "expected": "",
+      "verdict": "inline",
+      "result": "600 MWh under construction, 4,378 MWh backlog, 7,841 MWh advanced, 71,238 MWh early-stage; EMEA 32,270, North America 23,040, Asia Pacific 16,581, Latin America 12,166",
+      "kpi": "backlog-gwh",
+      "qty": 84.057
+     },
+     {
+      "name": "Redeemable non-controlling interests (mezzanine, group)",
+      "actual": "$317.797m at 30 June 2026, from $326.559m at 31 December 2025",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Commingles the BlackRock Series A with US tax-equity Class A interests; the filings do not disaggregate, so BlackRock's carrying value cannot be stated"
+     }
+    ],
+    "commentary": "Management guided the project sales deferred out of Q2 to close in the second half, driving a sequentially stronger third quarter. Two structural facts sit behind the numbers: the recurring lines — power services plus electricity — run at roughly $53m a quarter, about $210m annualised, against $4.1bn of debt; and the 9% Series A dividend is being paid in kind rather than cash, which Canadian Solar confirms by disclosing that diluted EPS includes 'paid-in-kind dividends on the Recurrent Energy redeemable preferred shares'."
+   }
+  ],
+  "commentary": "Recurrent Energy has no separate public reporting, no standalone segment EBITDA and no analyst consensus of its own — it is one of Canadian Solar's two reportable segments and anyone quoting a 'Recurrent consensus' has invented one. Canadian Solar files a Form 20-F annually and Forms 6-K quarterly under CIK 0001375877 as a foreign private issuer with a December year-end. Collection gap: the $500m BlackRock headline against a $328.9m recognised issuance is unexplained in the filings retrieved, and the redeemable non-controlling interest line does not separate the preferred from tax equity."
+ },
+ "strategyRead": [
+  "(High confidence) We assess that the single most consequential fact about Recurrent is one the corpus and the company's own sister brand both get wrong: it is not wholly owned. Basis: Canadian Solar's own final-closing release states BlackRock's $500m represents '20% of the outstanding fully diluted shares of Recurrent Energy on an as-converted basis' while Canadian Solar 'will continue to own the remaining majority shares', and the FY2025 20-F sets out a 9% dividend compounding quarterly in kind, a 1.3x liquidation preference, one board seat, a 60%-of-Series-A consent block and exit rights from the fifth anniversary of the first closing. e-STORAGE's own project page still says 'wholly-owned', which is how the error propagates.",
+  "(High confidence) We assess the 84.1 GWh storage pipeline is a development-optionality number that should never be set beside an operating-capacity figure. Basis: 71,238 of 84,057 MWh — 84.7% — is early-stage development, defined by the company as projects 'in the process of securing interconnection rights'; only 600 MWh is under construction; management stated about 13 GWh of storage has secured interconnection globally. Against that, EIA Form 860M attributes 2,620 MWh of operating US battery capacity to Recurrent entities, and Crimson's 1,400 MWh of it is 80% owned by Axium. Net-equity operating storage is roughly 1.5 GWh, about 1.9% of the pipeline figure and well under lifetime delivered volume of 6.4 GWh.",
+  "(High confidence) We assess the pipeline number churns rather than compounds, and that this is a feature of the disclosure rather than a failure of the business. Basis: 83.5 GWh at 31 December 2025, 80.6 GWh at 31 March 2026, 84.1 GWh at 30 June 2026 — with the June increase driven by Latin America nearly doubling while EMEA was pruned by 3.3 GWh. Management describes the posture as 'pruning less attractive projects'. Recurrent's own website meanwhile advertises 74 GWh with no as-of date, so the company contradicts itself across channels by 10 GWh.",
+  "(Moderate confidence) We assess the captive channel is the platform's genuine competitive advantage and simultaneously its largest single risk. Basis: e-STORAGE supplied Papago, Fort Duncan and Crimson, and intersegment eliminations of $790.1m in FY2024 show the flow's scale. But the same structure means Recurrent's US tax equity depends on projects supplied by a China-founded group's storage arm at exactly the moment the material-assistance thresholds bite hardest on storage. Citi named FEOC as the second of five reasons for cutting the parent to Sell. Cutting against the thesis: Tranquility bought Powin batteries, so the channel is usual rather than exclusive.",
+  "(Moderate confidence) We assess Recurrent is a developer-and-seller that has not completed the pivot to owner-operator the BlackRock proceeds were raised to fund. Basis: the 2024 use-of-proceeds language was to support the transition to 'both a developer and a long-term owner/operator', yet asset sales were $61.1m of $117.3m of Q2 2026 revenue, the company sold Fort Duncan eight months after commissioning it, and its then-chief executive described monetisation as 'necessary to deleverage our balance sheet and recycle capital'. The buyers — MN8, Southern Power with AIP, Axium, Hunt — are the balance sheets Recurrent chose not to out-hold.",
+  "(Moderate confidence) We assess the balance sheet, not the pipeline, is the binding constraint. Basis: $4.1bn of segment debt against roughly $210m of annualised recurring revenue and $74.9m of segment cash; Q2 2026 interest expense of $41.9m against $117.3m of segment revenue; four consecutive quarterly operating losses; and a 9% preferred dividend compounding in kind against that. Canadian Solar confirms the dividend is being paid in kind rather than cash by disclosing its dilutive effect on EPS.",
+  "(Low confidence) We assess the two 2026 chief-executive changes point toward tighter integration between the manufacturer and the developer rather than a separation. Basis: Colin Parkin came to the parent's chief executive role from the presidency of e-STORAGE, and Dylan Marx came to Recurrent's from its power-services business and the parent's chief operating officer role, with Ismael Guerrero — who led the BlackRock deal and the ownership pivot — leaving one quarter after describing asset sales as a deleveraging necessity. This is an inference from appointments, not from any stated strategy, and it is offered as a reading rather than a finding.",
+  "Collection gap: BlackRock's current as-converted percentage is not public. The 20% is stated 'as determined immediately upon closing' and no filing updates it, while the 9% compounding paid-in-kind dividend means the economic claim has almost certainly drifted upward. The redeemable non-controlling interest line commingles the preferred with US tax-equity Class A interests and the 20-F does not disaggregate, so neither BlackRock's carrying value nor its accreted stated value can be stated. Recurrent Energy B.V. is a Dutch entity whose Chamber of Commerce filings were not retrieved.",
+  "Collection gap: no independent ranking places Recurrent among the top US storage developers or owners. Cleanview lists it at 15 projects and 2,606 MW planned across seven states with no operating projects, and it is absent from that tracker's top 25. The only top-ten placement Canadian Solar can point to is Wood Mackenzie's 2026 global BESS integrator ranking, which measures e-STORAGE the equipment vendor and says nothing about Recurrent's standing as a developer. No sale price was disclosed for Fort Duncan, Slate, Crimson or the Latin America asset behind the Q2 2026 impairment.",
+  "Collection gap: no litigation naming Recurrent Energy as a party surfaced, and no community-opposition or permit-denial event attributable to a Recurrent project could be found. Local-government and small-market press are poorly indexed, so this is unproven absence rather than proven absence. Two projects do appear on EIA's canceled-or-postponed sheet — RE Bravepost, 200 MW in Tom Green County, Texas, and RE Maplewood in Pecos County, now under Onward Energy."
+ ],
+ "sources": [
+  {
+   "label": "Canadian Solar — Q2 2026 results, Form 6-K Exhibit 99.1 (Recurrent revenue $117.3m, operating loss $19.4m, 84.1 GWh storage pipeline and $4.1bn segment debt at 30 June 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926101856/tm2623883d1_ex99-1.htm",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Canadian Solar — Q2 2026 results (wire copy of the company release)",
+   "url": "https://www.prnewswire.com/news-releases/canadian-solar-reports-second-quarter-2026-results-302861334.html",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Recurrent Energy — $695m project financing for the 330 MW Cobalt Solar project, California",
+   "url": "https://recurrentenergy.com/recurrent-energy-secures-695-million-in-project-financing-for-330-mw-california-solar-project/",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Recurrent Energy — Cobalt Solar financing, Form 6-K Exhibit 99.1",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926095449/tm2622845d1_ex99-1.htm",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Recurrent Energy — Carwarp Energy Park energised in Australia under a long-term Microsoft PPA",
+   "url": "https://recurrentenergy.com/recurrent-energy-powers-up-carwarp-energy-park-in-australia-under-long-term-microsoft-ppa/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Schedule 13G — BlackRock, Inc. reports 5,319,520 Canadian Solar common shares (7.8%), distinct from the Recurrent preferred",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000201238326002145/primary_doc.xml",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "PV Tech — Canadian Solar appoints a new chief executive at Recurrent Energy",
+   "url": "https://www.pv-tech.org/canadian-solar-appoints-new-ceo-recurrent-energy/",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Canadian Solar — leadership change at Recurrent Energy: Dylan Marx appointed CEO, Ismael Guerrero to a non-executive advisory role",
+   "url": "https://www.prnewswire.com/news-releases/canadian-solar-announces-leadership-change-at-recurrent-energy-302818537.html",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "Canadian Solar — Q1 2026 results, Form 6-K Exhibit 99.1 (the sole primary source of the 80.6 GWh pipeline figure, as of 31 March 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926060672/tm2614624d1_ex99-1.htm",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Canadian Solar — Q1 2026 results and appointment of Colin Parkin as chief executive (wire copy)",
+   "url": "https://www.prnewswire.com/news-releases/canadian-solar-reports-first-quarter-2026-results-and-announces-appointment-of-chief-executive-officer-302772213.html",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Canadian Solar — FY2025 Form 20-F (BlackRock Series A terms, redeemable non-controlling interest classification, segment results, trade and FEOC disclosure, subsequent events)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "Canadian Solar FY2025 20-F — Redeemable Non-Controlling Interests note",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/R34.htm",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "Canadian Solar FY2025 20-F — Redeemable non-controlling interest details (9% dividend, 1.3x liquidation preference, one director, 30-day optional redemption notice)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/R126.htm",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "Canadian Solar FY2025 20-F — Consolidated statements of changes in redeemable non-controlling interests and equity",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/R6.htm",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "Canadian Solar — Q4 and FY2025 results, Form 6-K Exhibit 99.1 (83.5 GWh pipeline at 31 December 2025; project-asset impairments)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926031701/tm269349d1_ex99-1.htm",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Energy-Storage.news — Recurrent Energy sells the 200 MWh Fort Duncan battery in Texas to Hunt Energy Network (Burns & McDonnell EPC, e-STORAGE batteries)",
+   "url": "https://www.energy-storage.news/recurrent-energy-sells-200mwh-texas-bess-to-hunt-energy-network/",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Recurrent Energy — completed sale of the 200 MWh Fort Duncan battery storage facility to Hunt Energy Network",
+   "url": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "PR Newswire — Hunt Energy Network acquires the 100 MW battery from Recurrent Energy (buyer-side release)",
+   "url": "https://www.prnewswire.com/news-releases/hunt-energy-network-acquires-100mw-battery-from-recurrent-energy-302695223.html",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Recurrent Energy — $825m of project financing for the Arizona energy projects (Desert Bloom Storage and Papago Solar)",
+   "url": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/",
+   "date": "2025-10-21"
+  },
+  {
+   "label": "Energy-Storage.news — Recurrent Energy's 1,200 MWh Arizona battery reaches operations (e-STORAGE turnkey EPC and support)",
+   "url": "https://www.energy-storage.news/recurrent-energys-1200mwh-arizona-bess-reaches-operations/",
+   "date": "2025-07-08"
+  },
+  {
+   "label": "Recurrent Energy — closing of the $500m investment from BlackRock (20% of Recurrent on an as-converted basis; Canadian Solar retains the remaining majority)",
+   "url": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/",
+   "date": "2024-10-03"
+  },
+  {
+   "label": "Recurrent Energy — initial closing of the BlackRock investment (BlackRock Climate Infrastructure Global Renewable Power Fund IV)",
+   "url": "https://www.prnewswire.com/news-releases/recurrent-energy-announces-initial-closing-of-investment-from-blackrock-302161583.html",
+   "date": "2024-06-03"
+  },
+  {
+   "label": "Recurrent Energy — $513m of financing for the 1,200 MWh Papago Storage project in Arizona",
+   "url": "https://recurrentenergy.com/recurrent-energy-closes-513-million-in-financing-for-1200-mwh-energy-storage-project-in-arizona/",
+   "date": "2024-06-20"
+  },
+  {
+   "label": "Utility Dive — BlackRock commits $500m to Recurrent Energy (independent contemporaneous account)",
+   "url": "https://www.utilitydive.com/news/blackrock-commits-500M-to-recurrent-energy/705586/",
+   "date": "2024-01-25"
+  },
+  {
+   "label": "Recurrent Energy — $500m capital commitment from BlackRock to grow its global renewable energy platform",
+   "url": "https://recurrentenergy.com/recurrent-energy-announces-500-million-capital-commitment-from-blackrock-to-grow-its-global-renewable-energy-platform/",
+   "date": "2024-01-23"
+  },
+  {
+   "label": "Recurrent Energy — Inés Arrimadas joins as Chief ESG and Communications Officer",
+   "url": "https://recurrentenergy.com/recurrent-energy-welcomes-ines-arrimadas-as-chief-esg-and-communications-officer/",
+   "date": "2023-12-14"
+  },
+  {
+   "label": "Energy-Storage.news — Goldman Sachs brings the Slate solar-plus-storage project online in California",
+   "url": "https://www.energy-storage.news/goldman-sachs-brings-online-california-solar-plus-storage-project-slate/",
+   "date": "2022-03-16"
+  },
+  {
+   "label": "Recurrent Energy — Crimson Energy Storage, 350 MW / 1,400 MWh, comes online in California",
+   "url": "https://recurrentenergy.com/crimson-energy-storage-350mw-1400mwh-battery-storage-plant-comes-online-in-california/",
+   "date": "2022-10"
+  },
+  {
+   "label": "PR Newswire — Axium Infrastructure with Canadian Solar's Recurrent Energy and CSI Energy Storage announce operation of Crimson",
+   "url": "https://www.prnewswire.com/news-releases/axium-infrastructure-and-canadian-solars-subsidiaries-recurrent-energy-and-csi-energy-storage-announce-operation-of-worlds-largest-single-phase-energy-storage-project-301651926.html",
+   "date": "2022-10"
+  },
+  {
+   "label": "Recurrent Energy — Garland Solar Facility, 200 MW, completed",
+   "url": "https://recurrentenergy.com/canadian-solar-subsidiary-recurrent-energy-completes-200-megawatt-garland-solar-facility/",
+   "date": "2016-12"
+  },
+  {
+   "label": "Recurrent Energy — Tranquillity 200 MW completion",
+   "url": "https://recurrentenergy.com/tranquillity-launch/",
+   "date": "2016-09"
+  },
+  {
+   "label": "US Energy Information Administration — Preliminary Monthly Electric Generator Inventory, July 2026 vintage (generator-level ownership, capacity and status for Recurrent 'RE' entities)",
+   "url": "https://www.eia.gov/electricity/data/eia860m/xls/july_generator2026.xlsx"
+  },
+  {
+   "label": "Cleanview — top US battery storage developers by planned megawatts (Recurrent absent from the top 25)",
+   "url": "https://cleanview.co/power-projects/developers/battery-storage"
+  },
+  {
+   "label": "Cleanview — Recurrent Energy developer profile: 15 projects, 2,606 MW planned across seven states, no operating projects attributed",
+   "url": "https://cleanview.co/power-projects/developers/recurrent-energy"
+  },
+  {
+   "label": "Recurrent Energy — project portfolio page (advertises 74 GWh of storage under development against 84.1 GWh filed)",
+   "url": "https://recurrentenergy.com/project-portfolio/"
+  },
+  {
+   "label": "Recurrent Energy — About Us",
+   "url": "https://recurrentenergy.com/about/"
+  },
+  {
+   "label": "Recurrent Energy — Technologies: Energy Storage (vendor-neutral; makes no mention of e-STORAGE or SolBank)",
+   "url": "https://recurrentenergy.com/technologies/energy-storage/"
+  },
+  {
+   "label": "Recurrent Energy — media and press-release archive",
+   "url": "https://recurrentenergy.com/media/"
+  },
+  {
+   "label": "e-STORAGE — Papago project page (SolBank supply, 1,200 MWh AC / 1,519 MWh DC, 20-year service agreement; still describes Recurrent as wholly owned)",
+   "url": "https://csestorage.com/papago/"
+  },
+  {
+   "label": "e-STORAGE — Crimson project page (CSI Energy Storage as turnkey system integrator; Axium 80% / Recurrent 20%)",
+   "url": "https://csestorage.com/crimson/"
+  },
+  {
+   "label": "Rosendin — Tranquility BESS project page: 72 MWac / 288 MWh, $12.5m EPC, Recurrent Energy as client, battery supplier Powin",
+   "url": "https://www.rosendin.com/projects/tranquility-bess/"
+  },
+  {
+   "label": "Rosendin — Mustang BESS project page (75,000 kW / 300,000 kWh, against 75 MWh registered with EIA)",
+   "url": "https://www.rosendin.com/projects/mustang-bess/"
+  },
+  {
+   "label": "Recurrent Energy — Mustang sale to Goldman Sachs",
+   "url": "https://recurrentenergy.com/mustang-sale/"
+  },
+  {
+   "label": "Recurrent Energy — Blue Moon Solar, Kentucky, $260m financing",
+   "url": "https://recurrentenergy.com/recurrent-energy-secures-260-million-financing-for-blue-moon-solar-project-in-kentucky/"
+  },
+  {
+   "label": "Recurrent Energy — EUR 61.5m non-recourse financing for the Italian portfolio",
+   "url": "https://recurrentenergy.com/recurrent-energy-secures-eur-61-5-million-in-non-recourse-financing-for-italian-portfolio/"
+  },
+  {
+   "label": "Recurrent Energy — planned sale of a 100 MWp solar project in Salta, Argentina",
+   "url": "https://recurrentenergy.com/recurrent-energy-executes-planned-sale-of-100-mwp-solar-project-in-salta/"
+  },
+  {
+   "label": "Canadian Solar — Colin Parkin management biography",
+   "url": "https://investors.canadiansolar.com/board-member-management/colin-parkin-0"
+  },
+  {
+   "label": "SEC EDGAR — Canadian Solar Inc. filing index, CIK 0001375877",
+   "url": "https://data.sec.gov/submissions/CIK0001375877.json"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

@@ -547,6 +547,125 @@ and CAISO; `contracted backlog` and `peaker` were proposed and dropped as
 already present); 14 company-published headshots added (AES 11, RWE 3), verified
 on a contact sheet; report pins unchanged (X3's job).
 
+**C6 — 2026-09-06, v04.80r, Opus 5 xhigh.** Three dossiers — Clearway
+Energy (`developer · ipp`), Recurrent Energy (`developer · ipp`) and Form
+Energy (`supplier`, the corpus's first iron-air company) — and **nine** step-7
+revisions. The checker exited 0 on the first run with **0** findings of any
+kind: no reciprocal-type findings, **0** unregistered sources, **0** dangling
+slugs once the registry was synced, **0** unregistered project pins
+(`profiler-projects.json`, `Scraper.gs` and `Profiler.html` untouched).
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **0** | — |
+| reciprocal-type · **corrected** | **0** | Every new pair coheres by construction: `canadian-solar`→`recurrent-energy` `customer` against Recurrent's `supplier`; `hunt-energy-network`→ `supplier` against Recurrent's `customer`; `blattner`→ and `rosendin`→`recurrent-energy` `customer` against Recurrent's `supplier`; `blattner`→ and `rosendin`→`clearway-energy` `customer` against Clearway's `supplier`; `xcel-energy`→`clearway-energy` `supplier` against Clearway's `customer`; `xcel-energy`→, `crusoe`→ and `google`→`form-energy` `supplier` against Form's `customer`; `eolian`↔`form-energy` symmetric `partner`; and the symmetric `competitor` edges with `strata-clean-energy`, `vistra`, `engie-north-america`, `intersect-power`, `jupiter-power`, `nextera-energy-resources` and `aes-clean-energy` |
+| unregistered-source · **replaced** | **1** | Caught **before emission**, not by the checker. A scratchpad validator asserting `sources[]` membership rejected the Form↔Eolian edge, whose `source` had been written as an Energy-Storage.News technology-comparison URL rather than the energystorage.org coalition release the claim rests on. Substituted the registered string and added the coalition source — the X2 defect class, caught one step earlier than X2 caught it |
+| unregistered-source · **registered** | **0** | All nine step-7 edges registered their cited URL in the older dossier in the same edit where it was absent |
+| unregistered-source · **accepted** | **0** | — |
+
+**The `investor` edge that was written, and the reciprocal that was not.**
+Unlike C5, this session did write an `investor` edge: `form-energy` →
+`ge-vernova`, on the Series F and Series G participation plus the strategic
+memorandum of understanding. **No reciprocal was written on GE Vernova's
+side.** The coherent inverse is `portfolio`, which the enum does not carry, so
+the only alternatives were an incoherent `other` needing a fifteenth accept-list
+entry, or nothing. Nothing is correct here on its own merits rather than as
+avoidance: `ge-vernova`'s dossier makes **no claim about Form Energy at all**,
+so step 7 imposes no obligation on it, and one-sidedness is deliberately not an
+invariant. **Accept-list state: 14 entries, unchanged** — the six `investor` ↔
+`portfolio` enum-gap entries from X2 and F6 gained no seventh, but C6 is the
+first session to hit the gap and route around it by leaving the counterparty
+silent rather than by accepting an incoherent pair. That is a cheaper resolution
+than an accept entry and it should be preferred wherever the counterparty
+dossier is genuinely silent.
+
+**Step 7 substance, for the record.** Nine older dossiers revised and archived,
+and **two carried claims the new research contradicted**. `canadian-solar`
+described Recurrent Energy as its "wholly-owned developer" in the summary and
+again in `productsAndServices`, and as a "captive developer" in
+`ecosystemRole` — wrong since May 2024, when BlackRock's Climate Infrastructure
+business took Series A convertible preferred representing 20% of Recurrent
+Energy B.V. on an as-converted basis. Canadian Solar's own final-closing release
+says it "will continue to own the remaining **majority** shares", which is not
+the same claim. The same dossier's "80.6 GWh" and "$3.8B Recurrent project debt"
+were stale (84.1 GWh and $4.1bn at 30 June 2026) and its Dylan Marx line
+predated his move to Recurrent's chief executive role. `rosendin` attributed
+ownership of the Tranquility battery to Recurrent — EIA Form 860M attributes it
+to Southern Power with AIP Management, and Recurrent provided a development
+service; the same project's batteries came from **Powin**, which makes it the
+clearest published counterexample to the captive-supply thesis and is now
+recorded as such on both sides. The other seven were accurate and gained curated
+edges without a prose change: `hunt-energy-network` (Fort Duncan),
+`blattner` (Papago Solar and Cobalt, plus Clearway's Spindle), `strata-clean-energy`
+(the APS solicitations), `vistra` (the Enverus completions table),
+`xcel-energy` (Spindle, and all three Form projects), `crusoe` (the 12 GWh
+reservation) and `eolian` (the storage coalition). Classified and **left
+alone**: `\bRecurrent\b` in `intersect-power` and `tract` is executive career
+history; in `rwe-clean-energy` it appears only inside a quotation of Blattner's
+repeat-owner list; `trina-storage` uses it as a rhetorical comparison for its own
+captive channel; `mccarthy` records a *stated absence* of any relationship with
+Recurrent or Clearway, which the new research does not contradict;
+`gridstor`'s two `\bClearway\b` hits are executive career history at Clearway
+Energy **Group**; and `spearmint-energy`'s is a source label on a trade roundup.
+
+**A scope deferral, stated rather than skimmed.** The Profiler Command's step-7
+scope note warns that NVIDIA, Tesla, Microsoft, Google and Meta each carry 40+
+inbound mentions and that reconciling one is a session of its own. `google` was
+the only one of the five in this session's hit list. It received **one curated
+edge** — the Pine Island supply relationship, with the customer-not-investor
+distinction written out, because that is precisely the error the wider market is
+making — and its existing Form Energy prose was checked and found accurate. **No
+full reconciliation of the `google` dossier was attempted**, and none is claimed.
+
+**A note on the peer family, from a fourth end.** C6 takes the `developer · ipp`
+count to fourteen and adds a distinction the earlier three sessions could not
+see. Clearway and Recurrent are the first members whose storage is *contracted*
+rather than merchant — 20-year PacifiCorp and Arizona Public Service tolls, not
+the ancillary stack that defines Aypa, Spearmint and Gridstor. And Clearway is
+the first company in the family whose data-centre exposure sits at a **different
+legal entity** from the dossier's subject: the Google, Microsoft and Royal Slope
+agreements were originated at Clearway Energy **Group**, the private sponsor, not
+at the listed Clearway Energy, Inc. A family keyed on category tags cannot
+express that at all. Recorded in `PROFILER-COVERAGE-PLAN.md` §7 for X3; no
+family-map change was made.
+
+**A sourcing note for the calibration record.** `formenergy.com` sits behind a
+JavaScript proof-of-work wall (Sucuri/GoDaddy `sgcaptcha`) returning HTTP 202
+with an empty stub to WebFetch, curl and reader proxies alike. Every first-party
+Form page was read from dated Wayback Machine captures of the canonical URLs, and
+the dossier's source labels say so, exactly as F8 handled `tract.com` and
+`primedatacenters.com`. Form's first-party share of 37% is therefore real rather
+than an artefact of the archive host. Two other hosts blocked this session:
+`investor.clearwayenergy.com` (Akamai, 503/403 — worked around via SEC EDGAR and
+GlobeNewswire) and the whole of `investors.canadiansolar.com` (503 — worked
+around via EDGAR, which is authoritative anyway).
+
+**A formatting note worth inheriting.** C5 recorded that the corpus has mixed
+JSON indentation. It is worse than that: **60 `.study.json` files are written
+with `ensure_ascii=True`** (escaped `\u2014`) while the profiles are not, so a
+writer that re-serialises with `ensure_ascii=False` produces a ~2,200-line diff
+across files it never meant to touch. A round-trip harness over every corpus file
+now detects indent width, trailing newline **and** ASCII-escaping per file and
+reproduces all of them byte-identically, with one exception:
+`apex-clean-energy.profile.json` is hand-formatted with compact single-line
+objects inside arrays and must never be re-serialised — a targeted text edit only.
+
+**Cross-reference checker.** Exit 0 after one accept; **301** mutually-mentioning
+pairs compared (from 286 at v04.79r). The one new candidate, `form-energy` ×
+`xcel-energy` (`35945358a20e`), is a marker false positive on a shared "Sherco"
+anchor: the Form passage is a collection-gap sentence whose "Also unresolved"
+clause concerns a possible New York Power Authority or Rochester project, and the
+Xcel passage it matched states accurately that Form has a Sherco pilot approved
+in 2023. Nothing to close. Accept list now **9 entries**. Twenty scopes remain
+over the 900-character cap and are listed as not examined.
+
+**Side effects.** 142 dossiers on the roster; graph rebuilt to **1,081 edges
+(812 curated)**; eleven shared concepts registered (**939 total** — yieldco,
+CAFD, drop-down, HLBV, P-50, hydrogen evolution reaction, passivation, coulombic
+efficiency, paid-in-kind, liquidation preference and as-converted); eight
+company-published headshots added for Clearway, verified on a contact sheet;
+report pins unchanged (X3's job).
+
 
 
 Developed by: LightAISolutions

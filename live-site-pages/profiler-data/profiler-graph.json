@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-06",
- "companies": 139,
+ "companies": 142,
  "edges": [
   {
    "a": "abb",
@@ -1637,6 +1637,21 @@
      "type": "competitor",
      "note": "Fifth-largest US battery owner at 1.470 GW and closing on AES.",
      "context": "S&P Global's Q2 2026 owner table lists Arevon Energy fifth at 1.470 GW, up from outside the top five a year earlier, against AES's 1.978 GW. Arevon's portfolio spans more than 4,500 MW across 17 states with about 1,400 MW under construction. The two compete for the same utility and corporate offtake in the same western markets.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "clearway-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Both are contracted US renewables and storage owners selling to hyperscalers; S&P Global measures AES at 1.978 GW of operating batteries against Clearway's 1,439 MW rated / 849 MW net.",
+     "context": "The closest peer on storage scale in the covered set, and the comparison exposes the ownership question. Clearway reports storage at both rated and net capacity because most of the California fleet sits in partnerships at 25% to 50% — 844 MW rated becomes 391 MW net. A rated-to-rated comparison with AES therefore flatters Clearway, and a net comparison is the honest one. Both companies also sit on the buyer side of the same hyperscaler demand, AES through Amazon and Microsoft and Clearway through Google and Microsoft.",
      "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
      "status": "active"
     }
@@ -7070,6 +7085,34 @@
   },
   {
    "a": "blattner",
+   "b": "clearway-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Blattner Energy is the EPC on Clearway's Spindle battery project in Weld County, Colorado.",
+     "context": "Spindle is a 199 MW / 398 MWh two-hour Tesla installation contracted to Public Service Company of Colorado, financed at $261m in February 2026 and targeted for commercial operation in late 2026. It fits this dossier's recorded pattern precisely: on Blattner sites the owner furnishes the batteries, and Clearway procured its Tesla Megapack units directly under a portfolio order rather than through the contractor. Clearway joins Pattern, Orsted, RWE, Recurrent and NextEra among Blattner's repeat renewables owners.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm",
+     "status": "active",
+     "since": "2026",
+     "scale": "199 MW / 398 MWh (Spindle)",
+     "via": "Battery storage EPC"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Blattner Energy is the EPC on the Spindle battery project in Weld County, Colorado.",
+     "context": "Spindle is a 199 MW / 398 MWh two-hour Tesla installation contracted to Public Service Company of Colorado, financed at $261m in February 2026 and targeted for commercial operation in late 2026. Blattner's own dossier lists repeat-owner frameworks with Pattern, Orsted, RWE, Recurrent and NextEra and records that on Blattner sites the owner furnishes the batteries — consistent with Clearway having procured the Tesla units directly under its own Megapack order rather than through the contractor.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm",
+     "status": "active",
+     "since": "2026",
+     "scale": "199 MW / 398 MWh (Spindle)",
+     "via": "Battery storage EPC"
+    }
+   },
+   "evid": [],
+   "last": "2026"
+  },
+  {
+   "a": "blattner",
    "b": "fluence",
    "curated": {
     "a": {
@@ -7341,6 +7384,42 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "blattner",
+   "b": "recurrent-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Recurrent Energy is one of Blattner's repeat solar owners, named as EPC on Papago Solar and on the 330 MW Cobalt Solar project.",
+     "context": "This dossier already lists Recurrent among Blattner's repeat-owner frameworks alongside Pattern, Orsted, RWE and NextEra, and records the Slate build — 390 MW of solar with 140.25 MW / 561 MWh of storage on Canadian Solar integration — as a documented Blattner storage project for Recurrent before that asset was sold to what is now MN8 Energy. Two current awards confirm the framework is live: Recurrent's October 2025 Arizona financing release names Blattner as EPC on the 150 MWac Papago Solar project, and its August 2026 Cobalt Solar release names Blattner as EPC on 330 MW in Riverside County with commercial operation targeted for the end of 2027.",
+     "source": "https://recurrentenergy.com/recurrent-energy-secures-695-million-in-project-financing-for-330-mw-california-solar-project/",
+     "status": "active",
+     "since": "2020",
+     "scale": "Papago Solar 150 MWac and Cobalt Solar 330 MW; historically Slate at 390 MWp plus 140.25 MW / 561 MWh",
+     "via": "Solar EPC on Recurrent-developed projects"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Blattner Energy is the EPC on Papago Solar and on the 330 MW Cobalt Solar project financed in August 2026.",
+     "context": "Blattner is named as EPC in Recurrent's own financing releases for both the Arizona package and Cobalt. Blattner's dossier independently lists Recurrent among its repeat-owner frameworks, alongside Pattern, Orsted, RWE and NextEra, and records the Slate project — 390 MWp of solar with 140.25 MW / 561 MWh of storage on Canadian Solar integration — as a documented Blattner storage build for Recurrent before that asset was sold. Two live projects and a historical one make this a standing relationship rather than a single award.",
+     "source": "https://recurrentenergy.com/recurrent-energy-secures-695-million-in-project-financing-for-330-mw-california-solar-project/",
+     "status": "active",
+     "since": "2025",
+     "scale": "Papago Solar 150 MWac and Cobalt Solar 330 MW",
+     "via": "Solar EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-21",
+     "text": "$825m of construction financing and tax equity closed for Desert Bloom Storage (600 MWh) and Papago Solar (150 MWac) in Maricopa County, Arizona — Nord/LB, MUFG, CoBank and Siemens Financial Services on debt; Wells Fargo on tax equity; Primoris and Blattner as EPCs. The 20-F books $505.9m of it as borrowings maturing April 2046.",
+     "src": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-21"
   },
   {
    "a": "blattner",
@@ -7803,6 +7882,24 @@
     }
    ],
    "last": "2026-06-24"
+  },
+  {
+   "a": "burns-mcdonnell",
+   "b": "recurrent-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Burns & McDonnell was the EPC contractor on Fort Duncan, built for Recurrent before the sale to Hunt Energy Network.",
+     "context": "Energy-Storage.news names Burns & McDonnell as the engineering, procurement and construction contractor on Fort Duncan. The pairing is notable because it shows the captive supply chain is partial rather than total: the batteries came from the parent's own e-STORAGE arm while the construction scope went to a third-party engineer. Hunt Energy Network's own dossier records the same arrangement from the buyer's side.",
+     "source": "https://www.energy-storage.news/recurrent-energy-sells-200mwh-texas-bess-to-hunt-energy-network/",
+     "status": "historical",
+     "since": "2024",
+     "scale": "Fort Duncan, 100 MW / 200 MWh",
+     "via": "EPC on a merchant ERCOT battery"
+    }
+   },
+   "evid": [],
+   "last": "2024"
   },
   {
    "a": "burns-mcdonnell",
@@ -8800,6 +8897,56 @@
     }
    ],
    "last": "2025-06-03"
+  },
+  {
+   "a": "canadian-solar",
+   "b": "recurrent-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Recurrent Energy is Canadian Solar's majority-owned development arm and the captive buyer of e-STORAGE hardware.",
+     "context": "Recurrent is one of Canadian Solar's two reportable segments and is fully consolidated, but it is not wholly owned: BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% on an as-converted basis, closed in two 2024 tranches and carried in temporary equity. e-STORAGE sits in the Manufacturing segment, so supply to Recurrent is an intersegment flow eliminated in consolidation — $790.1m of revenue in FY2024, $420.6m in FY2025 and $18.1m in the first half of 2026. Q2 2026 is the only quarter with a quantified internal figure: 471 MWh of 3.7 GWh shipped went to internal projects. e-STORAGE supplied Papago, Fort Duncan and Crimson; the Tranquility retrofit used Powin, so the channel is usual rather than exclusive.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926101856/tm2623883d1_ex99-1.htm",
+     "status": "active",
+     "since": "2015",
+     "scale": "471 MWh of 3.7 GWh shipped to internal projects in Q2 2026",
+     "via": "e-STORAGE SolBank systems, turnkey EPC and long-term service agreements"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Canadian Solar is Recurrent's parent and, through its e-STORAGE arm, the usual supplier of its battery systems.",
+     "context": "The relationship runs two ways and both matter. Structurally, Recurrent Energy B.V. is one of Canadian Solar's two reportable segments and is fully consolidated — but it is not wholly owned: BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% of Recurrent on an as-converted basis at closing, carried in temporary equity. Commercially, e-STORAGE sits inside the parent's Manufacturing segment and supplies Recurrent's projects, so this is an intersegment flow the parent eliminates in consolidation: eliminated intersegment revenue was $790.1m in FY2024, $420.6m in FY2025 and $18.1m in the first half of 2026, and the FY2024 elimination also removed $253.5m of gross profit. e-STORAGE supplied Papago, Fort Duncan and Crimson.\n\nThe channel is usual but demonstrably not exclusive — the Tranquility battery retrofit, a Recurrent development-services scope, bought Powin batteries. The 20-F asserts intersegment terms are comparable to those with unaffiliated third parties; no independent source has tested that. Typed supplier rather than investor because the capital relationship runs the other way and the enum has no parent value; the ownership is set out here instead of bought as a graph colour.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm",
+     "status": "active",
+     "since": "2015",
+     "scale": "$13.0m of BESS delivered to Crimson in 2025 alone",
+     "via": "e-STORAGE SolBank systems, turnkey EPC and long-term service agreements"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Three-arm structure: CSI Solar (China-listed manufacturing subsidiary), e-STORAGE (utility-scale BESS design, manufacture and integration; >20 GWh shipped cumulatively; 15 GWh/yr system plus 3 GWh/yr cell capacity company-claimed), and majority-owned developer Recurrent Energy (84.1 GWh storage development pipeline at 30 June 2026, a captive channel and reference engine; BlackRock holds Series A convertible preferred representing 20% of Recurrent on an as-converted basis, so it is no longer wholly owned).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Recurrent Energy (captive developer/owner-operator)",
+     "date": "",
+     "text": "BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% of Recurrent Energy B.V.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-24",
+     "text": "Colin Parkin promoted to President of Canadian Solar with a board seat; Dylan Marx (ex-Recurrent operations) appointed COO — Parkin became group CEO in May 2026 and Marx became CEO of Recurrent Energy in July 2026 — The succession sequence that culminated in May 2026 — both promotions came from the storage and project businesses, not modules.",
+     "src": "PRNewswire, 2025-12-24",
+     "from": "a"
+    }
+   ],
+   "last": "2025-12-24"
   },
   {
    "a": "canadian-solar",
@@ -9930,6 +10077,20 @@
   },
   {
    "a": "catl",
+   "b": "form-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: iron-air uses no lithium, cobalt, nickel or graphite, so the foreign-entity-of-concern material-assistance tests, the Section 301 and AD/CVD actions and the cell-sourcing questions that bind Canadian Solar, CATL-supplied integrators and every Chinese-manufactured system simply do not reach its cells.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "catl",
    "b": "hithium",
    "curated": {
     "a": {
@@ -10637,6 +10798,223 @@
     }
    ],
    "last": "2026-08-14"
+  },
+  {
+   "a": "clearway-energy",
+   "b": "constellation-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Constellation Energy Generation is the offtaker at the 55 MW Dan's Mountain wind farm in Maryland, to 2037.",
+     "context": "Dan's Mountain reached commercial operation in May 2025 in Allegany County, Maryland, and is held 50%. The contract runs to 2037. It is a small position but a clean example of the portfolio's structure — a competitive retail and wholesale supplier buying contracted renewable output rather than a utility or a hyperscaler.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm",
+     "status": "active",
+     "since": "2025",
+     "scale": "55 MW (Dan's Mountain)",
+     "via": "Long-term power purchase agreement"
+    }
+   },
+   "evid": [],
+   "last": "2025"
+  },
+  {
+   "a": "clearway-energy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Google is the counterparty to a portfolio of three 2025 power purchase agreements across Missouri, Texas and West Virginia, announced on 15 January 2026.",
+     "context": "The partnership totals about 1.24 GW and more than $2.4bn of infrastructure investment, serving Google data centres in SPP, ERCOT and PJM. The distinction that matters is which balance sheet holds it: the PPAs were originated at Clearway Energy Group, and only the Goat Mountain repower — 360 MW on a 15-year Google PPA for the second half of 2027 — has been committed to the listed company. Swan Solar, 650 MW in Missouri on a 20-year Google PPA for 2028, and Catamount in West Virginia have been offered to Clearway Energy, Inc. but not yet approved by its independent directors. Separately, Google is already an offtaker at the 115 MW Black Rock wind farm alongside Toyota, to 2036.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm",
+     "status": "announced",
+     "since": "2025",
+     "scale": "about 1.17 GW across three PPAs; 1.24 GW including an existing West Virginia contract",
+     "via": "Long-term power purchase agreements originated by Clearway Energy Group"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The hyperscaler contracts are originated at Clearway Energy Group — about 1.17 GW of Google PPAs across Missouri, Texas and West Virginia, 335 MW of Microsoft at Mount Storm, 520 MW at Royal Slope for a Washington utility serving data-centre growth — and reach the listed company only when a project is offered down and the independent directors approve it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: about 1.17 GW of Google PPAs, 335 MW of Microsoft at Mount Storm and 520 MW at Royal Slope were all originated at Clearway Energy Group; of these only the Goat Mountain repower is committed to the listed company, while Swan Solar, Catamount and Royal Slope are offered and unapproved.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-15",
+     "text": "A portfolio of three 2025 Google PPAs totalling about 1.17 GW across Missouri, Texas and West Virginia is announced, taking the partnership to 1.24 GW and more than $2.4bn of infrastructure investment — Originated at Clearway Energy Group, not the listed company. Only Goat Mountain has been committed to Clearway Energy, Inc. so far; Swan Solar and Catamount are offered but unapproved.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-15"
+  },
+  {
+   "a": "clearway-energy",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft holds a 20-year power purchase agreement for 335 MW at the Mount Storm wind farm in West Virginia.",
+     "context": "Clearway paid roughly $35m in May 2025 and a further $39m in July 2025 to buy out Mount Storm's legacy offtake hedge ahead of the Microsoft agreement — the cost of clearing a merchant position to make room for a contracted one. Mount Storm is being repowered to 335 MW for the second half of 2026, with the listed company agreeing a $336m tax-equity Class B purchase to acquire the repowered asset after having sold it to Clearway Renew for $152m in October 2025 so the sponsor could carry out the work.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm",
+     "status": "active",
+     "since": "2025",
+     "scale": "335 MW",
+     "via": "20-year power purchase agreement at Mount Storm"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The hyperscaler contracts are originated at Clearway Energy Group — about 1.17 GW of Google PPAs across Missouri, Texas and West Virginia, 335 MW of Microsoft at Mount Storm, 520 MW at Royal Slope for a Washington utility serving data-centre growth — and reach the listed company only when a project is offered down and the independent directors approve it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: about 1.17 GW of Google PPAs, 335 MW of Microsoft at Mount Storm and 520 MW at Royal Slope were all originated at Clearway Energy Group; of these only the Goat Mountain repower is committed to the listed company, while Swan Solar, Catamount and Royal Slope are offered and unapproved.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "clearway-energy",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Both own large contracted US renewables and storage fleets; S&P Global's US battery-owner table places NextEra first at 5.779 GW, where Clearway's 1.439 GW does not appear.",
+     "context": "A ranking comparison rather than a commercial relationship. The useful contrast is structural: NextEra Energy Resources is the development arm of a regulated utility holding company and retains what it builds, while Clearway Energy, Inc. is an externally managed listed vehicle that buys finished assets from a sponsor and has no employees of its own. Both compete for the same hyperscaler PPAs — NextEra directly, Clearway through Clearway Energy Group's origination team.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "S&P Global's published US battery-owner table runs NextEra Energy Resources, ENGIE and AES and does not include Clearway; Modo Energy publishes market totals but names no owners; Wood Mackenzie's published rankings measure integrators rather than owners; and the American Clean Power Association's owner data is members-only.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale battery energy storage",
+     "date": "",
+     "text": "S&P Global's US battery-owner table runs NextEra Energy Resources at 5.779 GW, ENGIE at 3.662 GW and AES at 1.978 GW; Clearway's 1.439 GW does not appear in that published table, and no independent tracker measures its fleet at owner level.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "clearway-energy",
+   "b": "rosendin",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Rosendin was the EPC contractor on the four-project Honeycomb storage portfolio in Utah.",
+     "context": "Named in Clearway Energy Group's March 2025 financing release for the $605m Honeycomb package. The portfolio reached substantial completion on 1 May 2026 and had already been dropped down to the listed company in October 2025, so the construction relationship sits with the sponsor while the asset sits with Clearway Energy, Inc. Rosendin's own dossier records roughly 10 GWh of installed battery EPC across the ecosystem, of which this is one of the larger single portfolios.",
+     "source": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/",
+     "status": "historical",
+     "since": "2025",
+     "scale": "320 MW / 1,280 MWh (Honeycomb Portfolio)",
+     "via": "Electrical EPC"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Rosendin was the EPC on Clearway's Honeycomb battery portfolio in Utah.",
+     "context": "Clearway Energy Group's March 2025 financing release names Rosendin as EPC on the four-project, 320 MW / 1,280 MWh Honeycomb Portfolio in Beaver and Iron Counties, financed at $605m and contracted to PacifiCorp on 20-year tolling agreements to 2046. The portfolio reached substantial completion on 1 May 2026, having already been dropped down to the listed Clearway Energy, Inc. in October 2025 — so the construction relationship was with the private sponsor while the asset now sits with the listed company. It is one of the larger single battery portfolios in Rosendin's roughly 10 GWh of installed BESS EPC.",
+     "source": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/",
+     "status": "historical",
+     "since": "2025",
+     "scale": "320 MW / 1,280 MWh (Honeycomb Portfolio)",
+     "via": "Electrical EPC on a four-project battery portfolio"
+    }
+   },
+   "evid": [],
+   "last": "2025"
+  },
+  {
+   "a": "clearway-energy",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Tesla is the battery supplier across the Honeycomb, California and Colorado storage portfolios.",
+     "context": "Clearway announced the incremental Megapack 2 XL order on 5 June 2025, bringing total ordered volume to just over a gigawatt with all deliveries scheduled in 2026 for the California and Colorado portfolios. The units are built in Lathrop, California with cells partly from Sparks, Nevada, which matters for domestic-content adders under the tax credits. Honeycomb's 320 MW / 1,280 MWh in Utah and Spindle's 199 MW / 398 MWh in Colorado are both Tesla-equipped, at four hours and two hours respectively.",
+     "source": "https://www.clearwayenergygroup.com/press-releases/clearway-announces-major-energy-storage-procurement-order-from-tesla/",
+     "status": "active",
+     "since": "2025",
+     "scale": "490 MW / 1,356 MWh ordered on top of an existing 520 MW / 1,680 MWh",
+     "via": "Megapack 2 XL"
+    }
+   },
+   "evid": [],
+   "last": "2025"
+  },
+  {
+   "a": "clearway-energy",
+   "b": "vistra",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Both own California and Texas generation and appear together in independent storage-completion rankings; Vistra's dossier records Clearway among the top ten owners by megawatts brought online in 2023 on an Enverus table.",
+     "context": "A ranking co-appearance rather than a commercial relationship, and it is recorded as such on both sides. The businesses are structurally opposite: Vistra is an integrated merchant with a five-million-customer retail book hedging its generation, while Clearway sells essentially all of its output on long-term contracts and holds no retail position. That difference is why Vistra's storage revenue swings with market prices and Clearway's does not, and it is the more instructive comparison than the megawatt counts.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Clearway appears alongside Vistra in the Enverus ranking of owners by storage megawatts brought online in 2023 that this dossier already records.",
+     "context": "This dossier's Terra-Gen entry lists the rest of that top ten as CIM Group, Plus Power, Clearway, Intersect Power, Key Capture Energy, NV Energy and First Solar. The Clearway comparison is the most instructive of them because the two businesses are structural opposites: Vistra is an integrated merchant whose five-million-customer retail book hedges 43,641 MW of generation, while Clearway sells essentially all of its output on long-term contracts, holds no retail position and is externally managed by a private sponsor with no employees of its own. That is why a single project loss moved Vistra's storage standing sharply while Clearway's contracted fleet earns the same whatever the market does. A ranking co-appearance, recorded as such rather than as a commercial relationship.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "clearway-energy",
+   "b": "xcel-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Public Service Company of Colorado, an Xcel Energy operating utility, is the offtaker for the Spindle battery project.",
+     "context": "Spindle is a two-hour, 199 MW / 398 MWh Tesla installation in Weld County targeted for late 2026. Worth stating precisely because the market has misreported it: at least one trade outlet attributed a 200 MW Colorado storage contract to Microsoft, and the counterparty is the regulated utility, not a hyperscaler. Xcel's own dossier records its Colorado storage procurement from the buyer's side.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm",
+     "status": "announced",
+     "since": "2025",
+     "scale": "199 MW / 398 MWh (Spindle)",
+     "via": "Storage offtake with Public Service Company of Colorado"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Clearway is building the Spindle battery in Weld County under contract to Public Service Company of Colorado.",
+     "context": "Spindle is a 199 MW / 398 MWh two-hour Tesla installation, financed at $261m in February 2026 with Blattner as EPC and targeted for commercial operation in late 2026. Worth recording precisely because the market has misreported the counterparty: at least one trade outlet attributed a 200 MW Colorado storage contract to Microsoft, when the offtaker is the regulated Xcel operating utility. Clearway acquired the project from its own private sponsor, with its independent directors approving the drop-down alongside Rosamond South II for about $93m of combined corporate capital.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm",
+     "status": "announced",
+     "since": "2025",
+     "scale": "199 MW / 398 MWh (Spindle)",
+     "via": "Storage offtake with Public Service Company of Colorado"
+    }
+   },
+   "evid": [],
+   "last": "2025"
   },
   {
    "a": "compass-datacenters",
@@ -12675,6 +13053,91 @@
   },
   {
    "a": "crusoe",
+   "b": "form-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Crusoe reserved 12 GWh of Form Energy iron-air capacity for its AI data centres, with deliveries starting in 2027.",
+     "context": "Announced at CERAWeek on 24 March 2026, with Crusoe securing reserved volume, pricing and delivery terms and all systems to be built at Form Factory 1 in Weirton, West Virginia. It is the only Form agreement publicly described as binding on volume and price, and at 12 GWh it is the second largest in Form's order book after the 30 GWh Google and Xcel project. For this dossier it is the long-duration leg of the deepest energy stack any data-centre developer here has assembled, alongside the GE Vernova turbines, Bergen engines and ON.energy medium-voltage batteries already recorded. The technology is a different product from those: 100-hour discharge at 35–50% round-trip efficiency, cycling roughly eight to thirteen times a year, bought for multi-day firming rather than ride-through.",
+     "source": "https://formenergy.com/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers/",
+     "status": "announced",
+     "since": "2026-03",
+     "scale": "12 GWh",
+     "via": "100-hour iron-air multi-day storage under a bring-your-own-capacity reservation"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Crusoe reserved 12 GWh of iron-air capacity for AI data centres, with deliveries starting in 2027.",
+     "context": "Announced at CERAWeek on 24 March 2026, with Crusoe securing reserved volume, pricing and delivery terms and all systems to be built at Form Factory 1. It is the only Form agreement described in public as binding on volume and price, and it is the second of the two 2026 AI-data-centre deals that together account for the large majority of the itemisable backlog. Crusoe's own dossier already records the arrangement at 12 GWh from 2027 alongside its GE Vernova turbines, Bergen engines and ON.energy medium-voltage batteries — Form is the long-duration leg of the deepest energy stack any data-centre developer in this corpus has assembled.",
+     "source": "https://formenergy.com/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers/",
+     "status": "announced",
+     "since": "2026-03",
+     "scale": "12 GWh",
+     "via": "Strategic capacity reservation under Crusoe's bring-your-own-capacity model"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "1 gas JV, 5 GW of ON.energy medium-voltage battery UPS, 12 GWh of Form Energy iron-air storage, and two nuclear plays (Blue Energy gas-to-nuclear conversion up to 1.5 GW; Aalo microreactors).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: its procurement list reads like this report's supplier index (GE Vernova turbines, Bergen engines, ON.energy MV-BESS at 5 GW — one of the largest battery-UPS commitments anywhere, Form Energy iron-air, Blue Energy and Aalo nuclear), and its build speed (200+ MW energized in under a year at Abilene) is the industry's proof that behind-the-fence generation beats the interconnection queue.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: minor-permit pathways for the Abilene plant (Texas Tribune), a pending major permit that would rank among Texas's largest fossil plants, community cost-shifting reporting (85%/20-year abatements), and a 'clean' brand whose flare-gas substance was sold to NYDIG — the Form Energy/nuclear deals hedge the narrative but deliver post-2027.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Behind-the-fence energy platform (Power Peninsula)",
+     "date": "",
+     "text": "1/GE Vernova gas JV, 5 GW of ON.energy 'AI UPS' medium-voltage BESS (commissioning 2026-27, ERCOT ride-through validated), 12 GWh of Form Energy iron-air 100-hour storage (from 2027), solar/wind/grid integration, and nuclear optionality (Blue Energy: gas bridge 2028 → nuclear 2031 at Port of Victoria; Aalo: 10 MWe reactor pilots toward 50 MWe plants by 2029).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-24",
+     "text": "Form Energy: 12 GWh of iron-air batteries (up to 100-hour duration) from 2027; Redwood Materials microgrid expanded to 20 MW / 24 Spark units — Long-duration storage enters the AI-campus stack — the 'Bring Your Own Capacity' framing turns multi-day storage into interconnection currency.",
+     "src": "https://www.crusoe.ai/resources/newsroom/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Form's wording is that the growth 'includes' the Google, Crusoe and Ireland deals, never that it consists of them, so roughly 24 GWh corresponds to agreements it has not press-released.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Pine Island at 30 GWh and Crusoe at 12 GWh are 74% of the itemisable total, both signed in 2026, both for AI data centres, and neither delivering before 2027.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-12",
+     "text": "Series G raises $750m led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 new; total equity raised passes $2bn and the backlog is stated as having grown from about 20 GWh to about 80 GWh — The backlog claim is the headline and the number to interrogate: it is Form's own word, 'backlog', and the release says the growth 'includes' the Google, Crusoe and Ireland agreements rather than consisting of them.",
+     "src": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-12"
+  },
+  {
+   "a": "crusoe",
    "b": "ge-vernova",
    "curated": {
     "a": {
@@ -14660,6 +15123,32 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "dominion-energy",
+   "b": "form-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Dominion Energy Virginia is deploying a 100-hour Form system at Darbytown alongside an Eos zinc-hybrid battery.",
+     "context": "Filed with the Virginia State Corporation Commission in September 2023 and approved in May 2024 as one of three long-duration storage pilots, at a combined cost of $70.6m for the Form and Eos systems together. The split between the two technologies is not public, which is why no cost per kilowatt-hour can be derived from it — an arithmetic half would imply about $70/kWh, three and a half times Form's target, but that is an unverified division of a combined number and is not stated as a cost. Dominion's own dossier records the pilot from the utility side. Form has published no status update since the filing, against a late-2026 operational target.",
+     "source": "https://formenergy.com/dominion-energy-explores-pioneering-battery-storage-technologies-in-virginia/",
+     "status": "announced",
+     "since": "2023-09",
+     "scale": "about 4.95 MW / 494 MWh within a $70.6m two-technology pilot",
+     "via": "Darbytown Storage Pilot"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2023-09-19",
+     "text": "Dominion Energy Virginia files the Darbytown Storage Pilot with the Virginia State Corporation Commission — a 100-hour Form system paired with an Eos zinc-hybrid battery — Approved in May 2024 at $70.6m for the two technologies combined, with no public split between them, which is why no cost per kilowatt-hour can be derived from it.",
+     "src": "https://formenergy.com/dominion-energy-explores-pioneering-battery-storage-technologies-in-virginia/",
+     "from": "b"
+    }
+   ],
+   "last": "2023-09-19"
   },
   {
    "a": "dominion-energy",
@@ -16749,6 +17238,21 @@
   },
   {
    "a": "engie-north-america",
+   "b": "recurrent-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Both are utility-scale storage developers in the same US markets; Cleanview's developer table places ENGIE first by planned battery megawatts and does not rank Recurrent in its top 25.",
+     "context": "A ranking comparison rather than a commercial relationship, and it is recorded as such. Cleanview tracks 334 US battery storage developers and 2,102 projects; its top five by planned megawatts are ENGIE at 18,252 MW, Hecate at 10,779 MW, NextEra at 10,452 MW, Intersect Power at 9,280 MW and Jupiter Power at 9,091 MW. Recurrent appears at 15 projects and 2,606 MW planned across seven states, with no operating projects attributed, and is absent from the top 25. The analytical value is the gap between Recurrent's 84.1 GWh global development pipeline and its visible US position — the pipeline is a global, largely early-stage inventory, and it does not convert into a US ranking.",
+     "source": "https://cleanview.co/power-projects/developers/battery-storage",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "engie-north-america",
    "b": "rwe-clean-energy",
    "curated": {
     "a": {
@@ -17517,6 +18021,40 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "eolian",
+   "b": "form-energy",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Form Energy is a US Energy Storage Coalition co-member alongside Eolian in the American-built storage campaign.",
+     "context": "Form sits with Eolian, Tesla, LG Energy Solution Vertech and Fluence in the coalition whose March 2026 report claims American factories can supply 100% of US projects. As with Fluence, this is a policy alliance rather than a supply relationship — no Form hardware appears in Eolian's fleet, and Form's product serves a different duration entirely at 100 hours. Form is the strongest version of the coalition's own argument: its iron-air chemistry uses no lithium, cobalt, nickel or graphite, it states about 80% domestic content, and it manufactures at a single plant in West Virginia.",
+     "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds",
+     "status": "active",
+     "since": "2026-03",
+     "via": "US Energy Storage Coalition"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Form and Eolian sit together in the US Energy Storage Coalition, whose March 2026 report argued American factories can supply the whole US storage market.",
+     "context": "Eolian's dossier records the coalition membership alongside Tesla, LG Energy Solution Vertech and Fluence, and quotes its chief executive Aaron Zubaty saying that 'with our American factories now capable of fully supplying the systems we need, energy storage is a pivotal component in American infrastructure supporting AI-driven power demand'. This is a policy alliance rather than a commercial relationship — no Form hardware appears in Eolian's fleet, exactly as Eolian's dossier says of Fluence. It is worth recording because Form's domestic-content position, about 80% of components sourced within the United States and a chemistry outside the lithium supply chain, is the strongest version of the argument the coalition makes.",
+     "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds",
+     "status": "active",
+     "since": "2026-03",
+     "via": "US Energy Storage Coalition"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The hard part: Eolian publicly campaigns for American-built storage — a US Energy Storage Coalition member alongside Tesla, LG Energy Solution Vertech, Fluence and Form Energy, with CEO Aaron Zubaty on record (Mar 2026) that 'our American factories [are] now capable of fully supplying the systems we need' — its supplier progression runs Sungrow (Chisholm, 2021, NMC) → Wärtsilä (Madero/Ignacio, 2023) → Tesla (the entire 400 MW/1.8 GWh Padua complex), it invented standalone-storage ITC monetization (the Feb 2023 Churchill Stateside tax-equity first), and it has zero Hithium contact.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03"
   },
   {
    "a": "eolian",
@@ -21288,6 +21826,240 @@
     }
    ],
    "last": "2026-08-05"
+  },
+  {
+   "a": "form-energy",
+   "b": "ge-vernova",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "GE Vernova invested in Form's Series F and Series G rounds and signed a memorandum of understanding on strategic collaboration.",
+     "context": "GE Vernova joined as a new investor in the $405m Series F announced on 9 October 2024 and continued into the $750m Series G in August 2026. Alongside the equity it signed a memorandum of understanding covering areas of strategic collaboration to support Form as it ramps manufacturing and commercial deployments. Together with ArcelorMittal — Series D lead and a non-exclusive supplier of iron materials — it is one of two industrial strategics on the cap table, and the only one on the power-equipment side.\n\nTyped investor from the stating side. No reciprocal edge is written on GE Vernova's dossier: the coherent inverse would be portfolio, which the schema enum does not carry, and GE Vernova's dossier makes no claim about Form Energy that requires reconciliation. A one-sided edge is preferred here to either an incoherent reciprocal or an accept-list entry.",
+     "source": "https://formenergy.com/form-energy-secures-405m-in-series-f-financing-to-expand-iron-air-battery-business-and-operations/",
+     "status": "active",
+     "since": "2024-10",
+     "via": "Series F and Series G participation plus a strategic memorandum of understanding"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-09",
+     "text": "Series F raises $405m led by T. Rowe Price with GE Vernova new and a memorandum of understanding on strategic collaboration; total funding passes $1.2bn — GE Vernova arriving as both investor and commercial partner is the closest Form has to a strategic industrial backer on the power-equipment side, alongside ArcelorMittal on the iron side.",
+     "src": "https://formenergy.com/form-energy-secures-405m-in-series-f-financing-to-expand-iron-air-battery-business-and-operations/",
+     "from": "a"
+    }
+   ],
+   "last": "2024-10-09"
+  },
+  {
+   "a": "form-energy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Google is the load behind the Pine Island project and the party paying for the battery — a customer, not an investor.",
+     "context": "Xcel Energy will serve a new Google data centre at Pine Island, Minnesota with 1,400 MW of wind, 200 MW of solar and a 300 MW / 30 GWh Form iron-air battery, the largest battery project by energy capacity announced anywhere. Google pays all costs through a Clean Energy Accelerator Charge inside the Electric Service Agreement, modelled on the Clean Transition Tariff it developed with NV Energy, plus $50m into Xcel's Capacity*Connect programme. TechCrunch, citing The Information, reported the price to Form as about $1bn; Canary Media called it undisclosed and Xcel's release does not state it.\n\nThe typing matters. Several outlets describe Form as 'Google-backed' and one headline reads 'Google Invests $1 Billion in Form Energy'. That is loose language for an offtake: no Alphabet entity appears in any Form funding round from Series A to Series G, nor on Form's investor wall, nor in the investor list Form filed to ISO New England. This edge is typed customer for that reason, and Google's dossier records the same arrangement from the buyer's side.",
+     "source": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota",
+     "status": "announced",
+     "since": "2026-02",
+     "scale": "300 MW / 30 GWh",
+     "via": "Xcel Energy Electric Service Agreement and Clean Energy Accelerator Charge"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Form Energy supplies the 300 MW / 30 GWh iron-air battery serving Google's Pine Island data centre through Xcel Energy's tariff.",
+     "context": "The largest battery project by energy capacity announced anywhere, and Google pays for it: all costs of the new service and any new grid infrastructure sit with Google under a Clean Energy Accelerator Charge modelled on the Clean Transition Tariff it developed with NV Energy, plus $50m into Xcel's Capacity*Connect programme. TechCrunch, citing The Information, reported the price to Form as about $1bn — roughly $33 per kilowatt-hour — while Canary Media called it undisclosed and Xcel's release does not state it.\n\nOne characterisation to avoid, because several outlets use it: Google is not an investor in Form Energy. No Alphabet, GV or CapitalG entity appears in any Form funding round from Series A through the August 2026 Series G, on Form's investor wall, or in the investor list Form filed to ISO New England. Headlines describing Google as 'backing' Form, or as having 'invested $1 billion', are loose language for this offtake. The Electric Service Agreement remains pending before the Minnesota commission in docket E002/M-26-170.",
+     "source": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota",
+     "status": "announced",
+     "since": "2026-02",
+     "scale": "300 MW / 30 GWh",
+     "via": "Xcel Energy Electric Service Agreement and Clean Energy Accelerator Charge"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that Google is a customer of Form Energy and not an investor, and that the widespread 'Google-backed' description is wrong.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Form's wording is that the growth 'includes' the Google, Crusoe and Ireland deals, never that it consists of them, so roughly 24 GWh corresponds to agreements it has not press-released.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Project development and regulatory support",
+     "date": "",
+     "text": "The commercial work is therefore as much regulatory as it is technical: Minnesota PUC approval for Sherco, a Virginia SCC pilot approval for Darbytown, inclusion in Georgia Power's integrated resource plan, a California Energy Commission grant, a NYSERDA award, and a Minnesota tariff for the Google arrangement.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-12",
+     "text": "Series G raises $750m led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 new; total equity raised passes $2bn and the backlog is stated as having grown from about 20 GWh to about 80 GWh — The backlog claim is the headline and the number to interrogate: it is Form's own word, 'backlog', and the release says the growth 'includes' the Google, Crusoe and Ireland agreements rather than consisting of them.",
+     "src": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "Xcel Energy will serve a new Google data centre at Pine Island, Minnesota with 1,400 MW of wind, 200 MW of solar and a 300 MW / 30 GWh Form iron-air battery — the largest battery project by energy capacity announced anywhere — Ten times larger than anything Form had built or announced. Google pays through a Clean Energy Accelerator Charge inside the Electric Service Agreement, so the risk of the technology underperforming sits with Google's carbon accounting rather than with Xcel's ratepayers.",
+     "src": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power, ~$4.75B — 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Google as the ecosystem's most storage-forward buyer and its most vertically integrated: the Intersect acquisition brings development in-house ('energy parks' co-locating data centers with behind-the-meter solar+BESS to bypass interconnection queues — first: Haskell County TX, 640 MW solar + 1.3 GWh BESS beside a new campus), 1 GW of data-center demand response is signed across five utilities, and the Form Energy deal legitimizes multi-day (100-hour) storage for AI load.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy Parks & Storage Procurement",
+     "date": "",
+     "text": "Form Energy iron-air multi-day storage: 300 MW / 30 GWh with Xcel serving the Pine Island, MN data center (largest battery project by energy capacity announced worldwide; Google pays full costs via a new tariff + $50M into Xcel's distributed-battery program).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "Pine Island, MN data center powered via Xcel: 1,400 MW wind + 200 MW solar + 300 MW/30 GWh Form Energy iron-air battery — the largest battery project by energy capacity announced anywhere — Multi-day (100-hour) storage enters hyperscale procurement — a category-defining deal for LDES and a template (Google pays full costs via a dedicated tariff).",
+     "src": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/data-center-pine-island/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-12"
+  },
+  {
+   "a": "form-energy",
+   "b": "mortenson",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-08-15",
+     "text": "Great River Energy and Form Energy break ground on the Cambridge, Minnesota project — 1.5 MW / 150 MWh, the first commercial deployment, with Mortenson as EPC — The first unit out of the factory and the reference the rest of the ledger is measured against; batteries were delivered from October 2025 and the full project was expected online in 2026.",
+     "src": "https://formenergy.com/great-river-energy-and-form-energy-break-ground-on-first-of-its-kind-multi-day-energy-storage-project/",
+     "from": "a"
+    }
+   ],
+   "last": "2024-08-15"
+  },
+  {
+   "a": "form-energy",
+   "b": "panasonic",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-12",
+     "text": "Navneet Govil joins as Chief Financial Officer from SoftBank Investment Advisers, and Wes Sloan as Chief Operating Officer from Panasonic Energy North America — Both hires point at the same problem. A CFO from a late-stage investment platform and a COO who ran Panasonic's Nevada cell production is the pairing a company makes when the next task is financing and building a factory rather than proving a chemistry.",
+     "src": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-12"
+  },
+  {
+   "a": "form-energy",
+   "b": "southern-company",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Georgia Power, the Southern Company utility, holds a definitive agreement for a 15 MW / 1,500 MWh iron-air system.",
+     "context": "A collaboration announced in February 2022 became a definitive agreement on 12 June 2023, subject to regulatory approvals, with a target of as early as 2026. The project rides inside Georgia Power's integrated resource planning rather than carrying a discrete docket; the 2025 IRP, approved unanimously on 15 July 2025 in docket 56002, includes 1,500 MW of battery storage overall. No first-party status update on the Form system has appeared in more than three years and no cost has been disclosed. Georgia Power also used Form's Formware model in evaluating the project.",
+     "source": "https://formenergy.com/form-energy-georgia-power-continue-forward-with-15-megawatt-iron-air-battery-system-agreement/",
+     "status": "announced",
+     "since": "2022-02",
+     "scale": "15 MW / 1,500 MWh",
+     "via": "Georgia Power integrated resource planning"
+    }
+   },
+   "evid": [],
+   "last": "2022-02"
+  },
+  {
+   "a": "form-energy",
+   "b": "xcel-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Xcel Energy is Form's largest and longest-standing utility customer, across three projects in two states.",
+     "context": "The relationship began in January 2023 with two 10 MW / 1,000 MWh projects, at Sherco in Minnesota and Comanche in Colorado. Minnesota regulators approved Sherco on 6 July 2023 in docket 20233-193670-01, imposing a cost cap unless overruns are shown prudent and recovering the cost through a renewable rate rider at about 30 cents a month per residential customer; the project cost itself was filed as a trade secret. The Colorado half has never had a first-party approval or construction announcement. In February 2026 the relationship expanded by an order of magnitude with the 300 MW / 30 GWh Pine Island system serving Google, whose Electric Service Agreement sits in Minnesota docket E002/M-26-170, filed 15 April 2026 and still pending with the Attorney General and ratepayer advocates objecting. Xcel is also the public voice defending the technology's low round-trip efficiency on the ground that the asset cycles rarely and charges on surplus.",
+     "source": "https://formenergy.com/xcel-energy-receives-approval-to-build-multi-day-battery-storage-at-sherco-site/",
+     "status": "active",
+     "since": "2023-01",
+     "scale": "30 GWh at Pine Island plus 1,000 MWh at Sherco and 1,000 MWh at Comanche",
+     "via": "Regulated utility procurement and a large-load tariff"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Form Energy supplies Xcel's three iron-air projects, including the 300 MW / 30 GWh system serving Google at Pine Island.",
+     "context": "The relationship began in January 2023 with two 10 MW / 1,000 MWh projects at Sherco in Minnesota and Comanche in Colorado. Minnesota regulators approved Sherco on 6 July 2023 in docket 20233-193670-01, imposing a cost cap unless overruns are shown prudent and recovering the cost through a renewable rate rider at about 30 cents a month per residential customer; the project cost itself was filed as a trade secret, which is why no rate filing anywhere states a price for 100-hour iron-air. The Colorado project has had no first-party approval or construction announcement from either party. Pine Island expands the relationship tenfold and its Electric Service Agreement sits in docket E002/M-26-170, filed 15 April 2026 and still pending. Xcel is also the public voice defending iron-air's 35–50% round-trip efficiency, on the ground that the asset cycles roughly eight to thirteen times a year and charges on surplus that would otherwise be curtailed.",
+     "source": "https://formenergy.com/xcel-energy-receives-approval-to-build-multi-day-battery-storage-at-sherco-site/",
+     "status": "active",
+     "since": "2023-01",
+     "scale": "30 GWh at Pine Island plus 1,000 MWh each at Sherco and Comanche",
+     "via": "100-hour iron-air multi-day storage"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Google is a customer, not an investor: it agreed to pay a reported $1bn for the 300 MW / 30 GWh Pine Island system, which reaches Form through an Xcel Energy tariff still pending before the Minnesota commission.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Formware — grid modelling software",
+     "date": "",
+     "text": "Xcel Energy and Georgia Power are both named as having used it in their project evaluations, and a login portal exists at formware.formenergy.com.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "Xcel Energy will serve a new Google data centre at Pine Island, Minnesota with 1,400 MW of wind, 200 MW of solar and a 300 MW / 30 GWh Form iron-air battery — the largest battery project by energy capacity announced anywhere — Ten times larger than anything Form had built or announced. Google pays through a Clean Energy Accelerator Charge inside the Electric Service Agreement, so the risk of the technology underperforming sits with Google's carbon accounting rather than with Xcel's ratepayers.",
+     "src": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2023-01-26",
+     "text": "Xcel Energy partners with Form on two projects — 10 MW / 1,000 MWh each at Sherco in Minnesota and Comanche in Colorado — The Colorado half has never had a first-party approval or construction announcement, which is the clearest instance of a wider pattern of dark projects.",
+     "src": "https://formenergy.com/form-energy-partners-with-xcel-energy-on-two-multi-day-energy-storage-projects/",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Google Pine Island package — Electric Service Agreement plus Clean Energy Accelerator Charge",
+     "date": "",
+     "text": "A February 2026 agreement under which NSP-Minnesota serves Google's Pine Island, Minnesota data center and adds 1,900 MW of new resources — 1,400 MW of wind, 200 MW of solar and 300 MW of long-duration storage including a 300 MW / 30 GWh Form Energy iron-air battery — recovered from Google through a Clean Energy Accelerator Charge, with Google also funding $50 million of the Capacity*Connect distributed-storage program and paying all new grid infrastructure costs, per the company's February 23–24, 2026 releases.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "Google Pine Island: 1,900 MW of new clean energy and storage (1,400 MW wind, 200 MW solar, 300 MW / 30 GWh Form Energy iron-air) recovered through a Clean Energy Accelerator Charge; Google pays all grid costs and $50 million to Capacity*Connect — The first hyperscaler contract in the corpus that puts a named 100-hour battery into a customer charge — Xcel is selling a tariff design as much as power.",
+     "src": "https://newsroom.xcelenergy.com/news/xcel-energy-to-power-new-google-data-center-in-minnesota",
+     "from": "b"
+    }
+   ],
+   "last": "2026-02-24"
   },
   {
    "a": "ge-vernova",
@@ -25846,6 +26618,84 @@
   },
   {
    "a": "hunt-energy-network",
+   "b": "recurrent-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Hunt bought the Fort Duncan battery from Recurrent Energy, Canadian Solar's majority-owned development arm, in a completion announced on 24 February 2026.",
+     "context": "Recurrent developed Fort Duncan in Maverick County, brought it to commercial operation in June 2025 on $183m of project financing and tax equity, and sold it eight months later; Canadian Solar recognised the revenue in its Q1 2026 and named the sale as the driver of that quarter's sequential revenue improvement. The asset carried Recurrent's captive supply chain with it — e-STORAGE supplied the batteries and Burns & McDonnell was EPC. One correction to note against this dossier's existing text: Recurrent is Canadian Solar's majority-owned rather than wholly-owned subsidiary, since BlackRock took Series A convertible preferred representing 20% on an as-converted basis in 2024. Recurrent's chief executive changed in July 2026, so Ismael Guerrero, quoted in the February release, is no longer in that role.",
+     "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/",
+     "status": "historical",
+     "since": "2026-02",
+     "scale": "Fort Duncan, 100 MW / 200 MWh",
+     "via": "Purchase of an operating merchant ERCOT battery"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Hunt Energy Network bought the Fort Duncan battery from Recurrent; completion was announced on 24 February 2026 and the price was not disclosed.",
+     "context": "Recurrent built Fort Duncan in Maverick County, Texas, brought it to commercial operation in June 2025 on $183m of project financing and tax equity, ran it fully merchant in the ERCOT South load zone, and sold it eight months later. Canadian Solar recognised the revenue in Q1 2026 and its then-chief executive named the sale as the driver of that quarter's sequential revenue improvement. e-STORAGE supplied the batteries and Burns & McDonnell was the EPC, so the asset carried the captive supply chain with it. Hunt's fleet reached 33 ERCOT facilities and 420 MW on completion — its first transmission-level battery and first purchase of an operating asset. Typed customer because Hunt bought a finished asset; the relationship is historical rather than continuing.",
+     "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/",
+     "status": "historical",
+     "since": "2026-02",
+     "scale": "100 MW / 200 MWh (Fort Duncan)",
+     "via": "Sale of an operating merchant ERCOT battery"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Fleet as released: 'Hunt Energy Network and its affiliates now own and operate 33 BESS facilities in ERCOT with a combined capacity of 420MW' (February 2026) — 32 'distribution-level' sites 'with a capacity of 10MW each' plus Fort Duncan (Eagle Pass, Maverick County; commissioned June 2025; bought from Recurrent Energy, price undisclosed, TenOaks advising); the PUCT registration lists every distributed unit at 9.9 MW with its wire company (TNMP, Oncor, AEP Texas, South Texas Electric Cooperative); Modo Energy describes the sites as 'one-hour' 9.9 MW distributed generation resources.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Transmission-level batteries — Fort Duncan and the 180 MW projects",
+     "date": "",
+     "text": "Fort Duncan (Eagle Pass, Maverick County; 100 MW / 200 MWh; 'commissioned in June 2025'; 'a 100% merchant facility') was acquired from Recurrent Energy in a transaction announced 24 February 2026 — the company's first purchase of an operating asset and first transmission-level battery, to be dispatched by TraDER; Recurrent had financed it with 'USD 183 million in project financing and tax equity' before the sale, its batteries were 'supplied by Canadian Solar's e-STORAGE division' and Burns & McDonnell was the EPC per Energy-Storage.news; TenOaks Power & Infrastructure advised HEN; the price is undisclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "Acquires the 100 MW / 200 MWh Fort Duncan battery from Recurrent Energy — '100% merchant'; fleet now 33 facilities / 420 MW; 'actively looking to acquire additional BESS and generation assets' — First operating-asset purchase and first transmission-level battery; the model shifts from build-small to buy-big while staying merchant.",
+     "src": "https://www.prnewswire.com/news-releases/hunt-energy-network-acquires-100mw-battery-from-recurrent-energy-302695223.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "Recurrent Energy: Fort Duncan reached commercial operation in June 2025 and carried 'USD 183 million in project financing and tax equity' before the sale — The seller's financing, not HEN's; the purchase price is undisclosed.",
+     "src": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For this ecosystem it matters twice over — as the demand side that makes e-STORAGE's SolBank volumes look larger than its third-party wins alone, and as a seller of finished operating assets into the balance sheets that do want to hold them: MN8, Southern Power, Axium and Hunt Energy Network are all buyers of Recurrent projects rather than competitors for them.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Asset sales and capital recycling",
+     "date": "",
+     "text": "The buyers are the owner-operators Recurrent has chosen not to out-hold: MN8 Energy (Slate, Mustang), Southern Power with AIP Management (Garland, Tranquility), Axium Infrastructure (80% of Crimson) and Hunt Energy Network (Fort Duncan).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "Completed sale of the 100 MW / 200 MWh Fort Duncan battery in Maverick County, Texas to Hunt Energy Network; price undisclosed — Recurrent built a merchant ERCOT battery, ran it for eight months, and sold it to an owner that wanted the merchant risk. That is the business model in one transaction.",
+     "src": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-02-24"
+  },
+  {
+   "a": "hunt-energy-network",
    "b": "tesla",
    "evid": [
     {
@@ -26261,6 +27111,36 @@
      "text": "Two-vendor concentration by design — one module maker, one battery integrator — which is the opposite of the dual-sourcing pattern this corpus's Plus Power dossier describes.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "intersect-power",
+   "b": "recurrent-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Both develop utility-scale storage in the same US markets; Cleanview ranks Intersect fourth by planned battery megawatts while Recurrent falls outside the top 25.",
+     "context": "A ranking co-appearance on the same Cleanview table. The comparison is sharper than most because Intersect took the opposite structural path: it was bought outright by Google in March 2026 for its development platform, while Recurrent sold a 20% as-converted preferred stake to an infrastructure investor and stayed inside a manufacturer. Two developers, two answers to the same capital problem. Intersect's dossier also records two of its executives as Recurrent alumni, which is career history rather than a corporate link.",
+     "source": "https://cleanview.co/power-projects/developers/battery-storage",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Founded in 2016 by Sheldon Kimber (ex-COO of Recurrent Energy), Intersect developed and sold 1.7 GWdc of solar by 2019, then raised USD 127 million (2021), USD 750 million led by TPG Rise Climate (2022) and 'over $800 million' led by TPG and Google (December 2024) to build and own Athos III, Radian, Oberon and Lumina — 2.2 GWdc of solar and 2.4 GWh of storage financed in USD 2.6 billion (2021), USD 3.075 billion (2022) and USD 837 million (2024) rounds with HPS Investment Partners, MUFG and Santander, on hedges, corporate offtake and merchant batteries rather than utility PPAs.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale battery storage development, ownership and operation",
+     "date": "",
+     "text": "Recurrent is absent from Cleanview's top-25 US battery storage developers by pipeline MW, a list led by ENGIE at 18,252 MW, Hecate at 10,779 MW, NextEra at 10,452 MW, Intersect Power at 9,280 MW and Jupiter Power at 9,091 MW; Cleanview attributes 15 projects and 2,606 MW planned across seven states to Recurrent, with no operating projects.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -27244,6 +28124,29 @@
      "text": "One of the largest ERCOT storage owners (grouped by Modo with Enel, SMT and Tesla among 2025's biggest adders; reported third owner past 1 GWh installed alongside Plus Power and ENGIE — aggregator-level).",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "jupiter-power",
+   "b": "recurrent-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Both develop utility-scale storage in the same US markets; Cleanview ranks Jupiter fifth by planned battery megawatts, with Recurrent outside the top 25.",
+     "context": "A ranking co-appearance on the Cleanview developer table rather than a commercial relationship. Jupiter is a useful contrast because it is a pure-play merchant storage owner with no manufacturing parent and no module business — the cleanest available comparison for what Recurrent's storage arm would look like without the captive channel and without the solar pipeline.",
+     "source": "https://cleanview.co/power-projects/developers/battery-storage",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Utility-scale battery storage development, ownership and operation",
+     "date": "",
+     "text": "Recurrent is absent from Cleanview's top-25 US battery storage developers by pipeline MW, a list led by ENGIE at 18,252 MW, Hecate at 10,779 MW, NextEra at 10,452 MW, Intersect Power at 9,280 MW and Jupiter Power at 9,091 MW; Cleanview attributes 15 projects and 2,606 MW planned across seven states to Recurrent, with no operating projects.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -31314,6 +32217,32 @@
     }
    ],
    "last": "2026-04-06"
+  },
+  {
+   "a": "microsoft",
+   "b": "recurrent-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Microsoft is the offtaker under a long-term power purchase agreement for Carwarp Energy Park in Victoria, Australia.",
+     "context": "Carwarp reached commercial operation on 12 August 2026, ahead of schedule, at 171 MWp / 150 MWac using about 243,000 Canadian Solar TOPCon modules — captive on the module side as well as the development side. The site holds approval for a 120 MW battery that has not been built. This is Recurrent's clearest hyperscaler relationship and it sits outside the United States, which is worth noting against a corpus that treats data-centre demand as a North American story.",
+     "source": "https://recurrentenergy.com/recurrent-energy-powers-up-carwarp-energy-park-in-australia-under-long-term-microsoft-ppa/",
+     "status": "active",
+     "since": "2026-08",
+     "scale": "150 MWac (Carwarp Energy Park)",
+     "via": "Long-term corporate PPA on an Australian solar project"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-12",
+     "text": "Carwarp Energy Park energised ahead of schedule in Victoria, Australia — 150 MWac under a long-term Microsoft PPA, using about 243,000 Canadian Solar TOPCon modules — A hyperscaler PPA won outside the United States, and captive on the module side as well as the development side.",
+     "src": "https://recurrentenergy.com/recurrent-energy-powers-up-carwarp-energy-park-in-australia-under-long-term-microsoft-ppa/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-12"
   },
   {
    "a": "microsoft",
@@ -36280,6 +37209,32 @@
   },
   {
    "a": "primoris",
+   "b": "recurrent-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Primoris Services Corporation is the EPC on Desert Bloom Storage, the 600 MWh Arizona battery contracted to APS.",
+     "context": "Named in Recurrent's October 2025 financing release for the $825m Arizona package, which covered Desert Bloom Storage and Papago Solar and split the EPC scopes between Primoris and Blattner. EIA Form 860M's July 2026 vintage still records Desert Bloom as construction-complete but not yet in commercial operation, with planned operation in August 2026 — a slip past the first-half 2026 window the financing release guided to.",
+     "source": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/",
+     "status": "active",
+     "since": "2025",
+     "scale": "Desert Bloom Storage, 600 MWh",
+     "via": "Battery storage EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-21",
+     "text": "$825m of construction financing and tax equity closed for Desert Bloom Storage (600 MWh) and Papago Solar (150 MWac) in Maricopa County, Arizona — Nord/LB, MUFG, CoBank and Siemens Financial Services on debt; Wells Fargo on tax equity; Primoris and Blattner as EPCs. The 20-F books $505.9m of it as borrowings maturing April 2046.",
+     "src": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-21"
+  },
+  {
+   "a": "primoris",
    "b": "rosendin",
    "evid": [
     {
@@ -36519,6 +37474,78 @@
    },
    "evid": [],
    "last": "2026"
+  },
+  {
+   "a": "recurrent-energy",
+   "b": "rosendin",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Rosendin was the electrical EPC on the Tranquility and Mustang battery retrofits that Recurrent developed.",
+     "context": "Rosendin's own project page names Recurrent Energy as the client on Tranquility, a $12.5m, 15.8-month scope adding 72 MWac / 288 MWh to an existing solar plant in Fresno County. Two things follow that the corpus should not blur. First, Recurrent provided a development service — the underlying asset is owned by Southern Power and AIP Management, not by Recurrent, so Tranquility does not belong in any tally of Recurrent's fleet. Second, the battery supplier at Tranquility was Powin, not Canadian Solar, which makes it the clearest published counterexample to the captive-supply thesis. Rosendin's Mustang page cites 75,000 kW / 300,000 kWh where EIA registers 75 MW / 75 MWh; no source reconciles the two and the discrepancy is left stated.",
+     "source": "https://www.rosendin.com/projects/tranquility-bess/",
+     "status": "historical",
+     "since": "2016",
+     "scale": "Tranquility 72 MWac / 288 MWh; Mustang 75 MW BESS retrofit",
+     "via": "Electrical EPC on battery retrofits"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Recurrent Energy was Rosendin's client on the Tranquility and Mustang battery retrofits.",
+     "context": "Rosendin's own project page names Recurrent Energy as the client on Tranquility, a $12.5m, 15.8-month scope adding 72 MWac / 288 MWh to an operating solar plant in Fresno County. Two distinctions matter and were corrected in this revision. Recurrent provided a development service rather than ownership: EIA Form 860M attributes the Tranquility and Garland assets to Southern Power with AIP Management and Mustang to MN8 Energy, so none of them belongs in a tally of Recurrent's fleet. And the battery supplier at Tranquility was Powin, not Canadian Solar — the clearest published counterexample to the assumption that Recurrent projects always buy their parent's e-STORAGE hardware. Rosendin's Mustang page cites 75,000 kW / 300,000 kWh where EIA registers 75 MW / 75 MWh; no source reconciles the two.",
+     "source": "https://www.rosendin.com/projects/tranquility-bess/",
+     "status": "historical",
+     "since": "2016",
+     "scale": "Tranquility 72 MWac / 288 MWh at $12.5m over 15.8 months; Mustang 75 MW battery retrofit",
+     "via": "Electrical EPC on battery retrofits to operating solar plants"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: company disclosures corroborated by EC&M rankings and owner press (Arevon, Recurrent Energy projects).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2016"
+  },
+  {
+   "a": "recurrent-energy",
+   "b": "strata-clean-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Strata and Recurrent were competing bidders into the same Arizona Public Service storage solicitations.",
+     "context": "Recurrent's own financing release documents Desert Bloom at 600 MWh on a 20-year APS toll; Strata's dossier records the same procurement from the other side, naming Recurrent's Desert Bloom at 150 MW / 600 MWh alongside EDF Renewables' Beehive as the peers it met in those solicitations, sourced there to Energy-Storage.news. Both companies are late-stage developers selling into the same regulated buyer, and both monetise rather than hold: Strata exits before the long-dated toll ties up its balance sheet, while Recurrent took the 20-year APS toll and kept the asset. The contrast is the useful part of the comparison.",
+     "source": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/",
+     "status": "active",
+     "since": "2024",
+     "scale": "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
+     "via": "Arizona Public Service storage procurement"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Recurrent Energy met Strata as a competing bidder in the same Arizona Public Service storage solicitations.",
+     "context": "This dossier already names Recurrent's Desert Bloom at 150 MW / 600 MWh alongside EDF Renewables' Beehive as the peers Strata met in the APS rounds. The two companies are structurally opposite at the exit: Strata originates with its own land, interconnection and EPC teams and sells before a long-dated toll ties up its founder-owned balance sheet, while Recurrent took the 20-year APS tolling agreement and kept the asset. Recurrent's October 2025 financing release confirms Desert Bloom at 600 MWh on a 20-year APS toll with Primoris as EPC.",
+     "source": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/",
+     "status": "active",
+     "since": "2024",
+     "scale": "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
+     "via": "Arizona Public Service storage procurement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Originate, contract and sell — utility-tolled storage projects sold with the contract attached",
+     "date": "",
+     "text": "Peers in the same APS RFPs per Energy-Storage.news: Recurrent Energy (Desert Bloom 150 MW / 600 MWh) and EDF Renewables (Beehive 250 MW / 1,000 MWh).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024"
   },
   {
    "a": "rehlko",

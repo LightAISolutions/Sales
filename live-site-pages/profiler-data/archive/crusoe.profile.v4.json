@@ -185,17 +185,6 @@
    "status": "active",
    "since": "2026-07",
    "scale": "5 GW"
-  },
-  {
-   "slug": "form-energy",
-   "type": "supplier",
-   "status": "announced",
-   "since": "2026-03",
-   "scale": "12 GWh",
-   "via": "100-hour iron-air multi-day storage under a bring-your-own-capacity reservation",
-   "note": "Crusoe reserved 12 GWh of Form Energy iron-air capacity for its AI data centres, with deliveries starting in 2027.",
-   "context": "Announced at CERAWeek on 24 March 2026, with Crusoe securing reserved volume, pricing and delivery terms and all systems to be built at Form Factory 1 in Weirton, West Virginia. It is the only Form agreement publicly described as binding on volume and price, and at 12 GWh it is the second largest in Form's order book after the 30 GWh Google and Xcel project. For this dossier it is the long-duration leg of the deepest energy stack any data-centre developer here has assembled, alongside the GE Vernova turbines, Bergen engines and ON.energy medium-voltage batteries already recorded. The technology is a different product from those: 100-hour discharge at 35–50% round-trip efficiency, cycling roughly eight to thirteen times a year, bought for multi-day firming rather than ride-through.",
-   "source": "https://formenergy.com/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers/"
   }
  ],
  "policyExposure": [
@@ -435,13 +424,8 @@
   {
    "label": "Sacra — Crusoe company profile (estimates)",
    "url": "https://sacra.com/c/crusoe/"
-  },
-  {
-   "label": "Form Energy — Crusoe agreement for 12 GWh of iron-air batteries for AI data centres (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
-   "url": "https://formenergy.com/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers/",
-   "date": "2026-03-24"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

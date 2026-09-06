@@ -3,11 +3,73 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.80r] — 2026-09-06 01:55:54 AM EST
+
+> **Prompt:** "Picking up from my last session, run Phase C session C6 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Opus 5 xhigh as a fresh session: Clearway Energy, Recurrent Energy, Form Energy. C5 landed at v04.79r; Phases A
+> and B are complete and the §6 register in CLASSROOM-CURRICULUM-PLAN.md is dated at v04.78r — nothing in Phase C
+> is a register closer, so do not touch §6.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest = C5, Previous = Phase B closeout);
+> PROFILER-COVERAGE-PLAN.md §2 (the model rule and its three evidence notes), §5 (the demotion warning, the C5 row
+> as the worked example of a per-clause verdict, and the C6 row), §7 (every bullet — especially "§5 — rewrite your
+> own row", the after-write checkers, the calendar bullet, the CHANGELOG-capacity bullet and the X3 peer-family
+> bullet as C5 extended it), the three §8 rows (`clearway-energy` and `recurrent-energy` both `developer · ipp`,
+> `form-energy` `supplier`, all six columns at `—`), and §9.5; .claude/rules/profiler-app.md (Profiler Command
+> incl. steps 5 and 7, Profiler Prep Command, Scheduled Refreshes, Archival Procedure);
+> repository-information/PROFILER-SCHEMA.md (relationships[] incl. `project` pins, sources[], Source provenance,
+> named-projects registry); repository-information/PROFILER-STYLES.md (active style: intel-briefing);
+> PROFILER-CROSSREF-CALIBRATION.md → "Relationships checker" incl. the F6, F7, F8 and C5 adjudication logs (the
+> writer rules the builders followed: every relationship `source` is the exact registered string in that dossier's
+> sources[], asserted before the file is emitted).
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
+> categories per the §8 rows) and study guide (schema v2) — then the four after-write scripts
+> (sync-profiler-registry.py, build-profiler-graph.py, check-profiler-study.py, check-profiler-relationships.py)
+> plus check-profiler-crossrefs.py, a calendar row per company, README tree entries, and flip the three §8 rows.
+> One push commit. [Session-specific notes on the three ownership shapes, the step-7 tail, the premise trap, the
+> Classroom `where-batteries-stop` reference, investor edges, named-project pins, the peer family, JSON formatting
+> and the CHANGELOG counter.]
+>
+> THE §5 ROW IS A HYPOTHESIS, NOT A BRIEF: the C6 `Why` cell is unverified prompt material. Treat every clause as
+> a premise to check, and before you commit rewrite that cell plus the `Checked` column with what the sources
+> actually showed, including "premise held" where it did. Record the per-clause verdicts in the §8 `Closes` cells
+> too, as C5 did.
+>
+> VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py 0 errors / 0 warnings,
+> check-profiler-relationships.py exit 0 with every finding either fixed or accepted with a reason,
+> check-profiler-crossrefs.py exit 0, the three dossiers and guides render (Playwright) with zero page errors.
+> Add a C6 entry to the calibration log's Relationships checker adjudication log in the C5 format. Report per
+> company: source count and first-party share, relationships written, any accepts, every §5 premise verdict, and
+> the ownership finding that decided the calendar row type. Normal Pre-Commit and Pre-Push checklists; one push
+> commit on a claude/* branch."
+
+### Added
+
+- **Three schema-v7 dossiers at `profileVersion` 1, intel-briefing style** — `clearway-energy` (46 sources, 83% first-party, 10 relationships, 8 company-published headshots), `recurrent-energy` (48 sources, 79% first-party, 11 relationships) and `form-energy` (59 sources, 37% first-party, 7 relationships), the corpus's first iron-air company.
+- **Three schema-v2 study guides and three full-depth lesson plans.** Clearway teaches how contracted renewables are financed (the yieldco as a distribution vehicle, CAFD against net income, tax equity and HLBV, resource adequacy as the product an idle gas plant sells, P-50 and unhedged volume risk, rated against net capacity). Recurrent teaches how to read a pipeline and a preferred stake (the four development stages, interconnection as the traded asset, hold against sell, the captive channel, and the five terms behind "BlackRock bought 20%"). Form teaches past the C5 RWE iron-air section deliberately — the four physical loss mechanisms inside the cell, the manufacturing story and the Weirton plant, the $/kWh against $/kW denominator problem, and what a utility actually buys when it buys 100 hours.
+- **Eleven shared concepts registered** (939 total): yieldco, CAFD, drop-down, HLBV, P-50, hydrogen evolution reaction, passivation, coulombic efficiency, paid-in-kind, liquidation preference, as-converted.
+- **Three refresh-calendar rows decided separately by ownership shape** (103 rows): `clearway-energy` public with a researched but unconfirmed `nextReport` of 2026-11-03 and the announcement-release trigger written into the source; `recurrent-energy` and `form-energy` `cadence: "quarterly"` per the unit-level and private-company rules, each with the rule cited and a Chesterton-check watch item.
+
+### Fixed
+
+- **`canadian-solar` v3 → v4 — contradicted claim corrected.** It described Recurrent Energy as a "wholly-owned developer" in two places and as a "captive developer" in a third. Wrong since May 2024: BlackRock's Climate Infrastructure business holds Series A convertible preferred representing **20% of Recurrent Energy B.V. on an as-converted basis**, and Canadian Solar's own final-closing release says it "will continue to own the remaining **majority** shares". Also corrected: the 80.6 GWh pipeline (a 31 March 2026 snapshot, now 84.1 GWh at 30 June) and "$3.8B Recurrent project debt" (now $4.1bn, $2.6bn of it non-recourse), and the Dylan Marx line, which predated his move to Recurrent's chief executive role.
+- **`rosendin` v5 → v6 — contradicted claim corrected.** It attributed ownership of the Tranquility battery to Recurrent Energy; EIA Form 860M attributes the asset to Southern Power with AIP Management, and Recurrent provided a development service. The same project's batteries came from **Powin**, not Canadian Solar — the clearest published counterexample to the captive-supply thesis, now recorded on both sides.
+
+### Changed
+
+- **Step 7 — nine older dossiers revised and archived.** Beyond the two contradictions above, seven were accurate and gained curated edges without a prose change: `hunt-energy-network`, `blattner`, `strata-clean-energy`, `vistra`, `xcel-energy`, `crusoe`, `eolian` and `google`. Classified and left alone: Recurrent in `intersect-power` and `tract` (executive career history), in `rwe-clean-energy` (inside a quotation of Blattner's repeat-owner list) and in `trina-storage` (a rhetorical comparison); Clearway in `gridstor` (career history at Clearway Energy **Group**) and `spearmint-energy` (a source label); and `mccarthy`'s *stated absence* of any relationship with either company, which the new research does not contradict.
+- **A scope deferral, stated rather than skimmed.** `google` was the only 40+-inbound-mention dossier in the hit list. It received one curated edge — with the customer-not-investor distinction written out, because that is the error the wider market is making — and its existing Form Energy prose was checked and found accurate. No full reconciliation of `google` was attempted and none is claimed.
+- **`PROFILER-COVERAGE-PLAN.md`** — §5 C6 row rewritten with per-clause verdicts, §8 rows flipped with the same verdicts, §7's CHANGELOG-capacity bullet refreshed 96/100 → 97/100, and §7's X3 peer-family bullet extended from a fourth end.
+- **`PROFILER-CROSSREF-CALIBRATION.md`** — C6 entry added to the Relationships checker adjudication log, recording the `investor` edge that *was* written (`form-energy` → `ge-vernova`) and the reciprocal that deliberately was not, the pre-emission catch of one unregistered-source defect, the sourcing notes for three blocked hosts, and a formatting note the corpus should inherit.
+- **Checker state at v04.80r** — registry sync clean (142 dossiers); study validator 0 errors / 0 warnings across 116 guides and 939 concepts; relationships checker **exit 0 with 0 findings** and 14 accepts unchanged; crossrefs **exit 0** after one accept (9 entries), 301 mutually-mentioning pairs compared; graph rebuilt to **1,081 edges (812 curated)**. All six pages render with zero page errors.
+- CHANGELOG `Sections: 96/100` → `97/100`; rotation now due on the third push from here.
 
 ## [v04.79r] — 2026-09-06 12:08:52 AM EST
 

@@ -1,0 +1,1042 @@
+{
+ "schemaVersion": 7,
+ "slug": "form-energy",
+ "name": "Form Energy, Inc.",
+ "shortName": "Form Energy",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://formenergy.com",
+ "headquarters": "Somerville, Massachusetts, United States",
+ "founded": "2017",
+ "employees": "About 1,000 across all sites; roughly 400 at Form Factory 1, with 750+ targeted there by 2028",
+ "ownership": {
+  "type": "private"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Form Energy is the only company manufacturing multi-day iron-air storage at scale, and the single most important thing to understand about it is that its technology is deliberately bad at everything lithium-ion is good at. Round-trip efficiency is 35–50% against 85–90% for lithium, it discharges at a 0.01C rate over 100 hours, and it is expected to cycle roughly eight to thirteen times a year. In exchange the active materials are iron, air and water, and Form targets about $20 per kilowatt-hour of energy capacity against roughly $250 for four-hour lithium. BACKGROUND: founded 2017 by Mateo Jaramillo, Yet-Ming Chiang, Marco Ferrara, Billy Woodford and Ted Wiley; iron-air selected in 2018; chemistry disclosed July 2021. Form Factory 1 occupies a 55-acre former Weirton Steel site in West Virginia on a $760m investment and a $290m state incentive package, and is targeted at at least 500 MW a year — about 50 GWh at 100-hour duration — by 2028. The company raised $750m of Series G in August 2026, taking total funding past $2bn, and said its backlog had grown from about 20 GWh to about 80 GWh in the year. Google is a customer, not an investor: it agreed to pay a reported $1bn for the 300 MW / 30 GWh Pine Island system, which reaches Form through an Xcel Energy tariff still pending before the Minnesota commission.",
+ "ecosystemRole": "We assess Form as the reference case for whether multi-day storage becomes a market or stays a demonstration programme, and as the one storage vendor in this corpus whose product a data centre buys for a reason unrelated to arbitrage. Every other battery in these dossiers is sold against an evening peak, an ancillary-services stack or a resource-adequacy obligation measured in four-hour blocks. Form is sold against a still, overcast week — which is why its two largest announced counterparties are AI data-centre buyers rather than merchant developers, and why its commercial risk is concentrated in whether regulators will let a utility rate-base a 100-hour asset. The chemistry also puts it outside the lithium supply chain entirely, so the FEOC, AD/CVD and cell-sourcing exposures that dominate every other storage dossier here simply do not apply to it.",
+ "productsAndServices": [
+  {
+   "name": "Iron-air multi-day battery system (100-hour duration)",
+   "category": "Long-duration energy storage",
+   "description": "The company's only commercial product. It stores energy by reversible rusting: discharging, the battery breathes in oxygen from the air and converts iron metal to rust; charging, an electrical current converts the rust back to iron and the battery breathes out oxygen. Cells contain iron and air electrodes in a water-based, non-flammable electrolyte the company compares to that in an AA battery. The published hierarchy runs cell to module to shipping-container-sized enclosure, with hundreds of enclosures grouped into megawatt-scale power blocks.",
+   "highlights": [
+    "100-hour rated discharge duration — Form's marketing says 'up to 100 hours' and '100+ hour duration'; the 2020 Great River Energy pilot was specified as 1 MW held continuously for 150 hours",
+    "Footprint of half an acre per megawatt in the least dense configuration and more than 3 MW per acre at high density; the Xcel Sherco system puts 10 MW / 1,000 MWh on about five acres",
+    "UL9540A cell-level testing completed December 2024 with no thermal runaway, no flame, no dendrite formation and no propagation, including seven continuous days of overcharge — Form asserts the systems can be deployed without fireproof barriers",
+    "About 80% of components sourced domestically within the United States; no heavy or rare-earth metals",
+    "Company claim of storing energy at 'less than one tenth the cost of lithium-ion battery technology' — the only cost figure Form publishes on its own site"
+   ],
+   "positioning": "Positioned by Form as complementary to lithium-ion rather than competitive with it: 'unlike lithium-ion batteries, which are typically used for intraday energy storage, Form's battery system is designed to serve inter-day periods'. That framing is supported by the physics. Independent assessments put iron-air round-trip efficiency at 35–50% against 85–90% for lithium-ion, and Form's own architecture — about 0.15 kW per 15 kWh cell — is a 100-hour discharge rate by construction, so fast frequency response and short-burst peaking are not addressable applications.",
+   "soldThrough": "Direct long-term supply agreements with regulated utilities, cooperatives and data-centre developers, frequently underwritten by a state grant or a regulated cost-recovery mechanism",
+   "targetSegments": [
+    "Regulated utilities seeking resource adequacy and multi-day firming",
+    "AI data-centre developers",
+    "Electric cooperatives",
+    "State energy agencies funding demonstrations"
+   ],
+   "roadmap": "Deliveries to the Google and Xcel Pine Island project begin in 2028, with clean-energy installations phasing in through 2031; the FuturEnergy Ireland system is targeted for 2029"
+  },
+  {
+   "name": "Form Factory 1 — Weirton, West Virginia",
+   "category": "Manufacturing",
+   "description": "A 55-acre former Weirton Steel tin-mill site converted into the company's first factory on a $760m investment and a $290m West Virginia incentive package, of which $75m was committed and $215m to be secured, collateralised by state ownership of the land and buildings. About 550,000 square feet today, targeted at roughly 850,000 by 2028.",
+   "highlights": [
+    "Nameplate target of at least 500 MW of batteries a year by 2028 — about 50 GWh at 100-hour duration",
+    "A separate DOE-cofunded production line under the $150m Project RAPID award is targeted at up to 20 GWh a year by 2027",
+    "Iron anodes and discharge air cathodes are made in house",
+    "Roughly 400 employees at the site today against a 750+ target by 2028; the site opened officially in September 2024 with 250+",
+    "The 2028 floor-area target was revised down from 'more than one million square feet', stated in the October 2024 Series F release, to about 850,000 square feet on the current site"
+   ],
+   "positioning": "The physical answer to the question every long-duration vendor is asked. Form is the only iron-air company with a factory at this scale, and the plant's location on a steel site is deliberate — the supply chain is iron, and ArcelorMittal is both an investor and an iron partner.",
+   "soldThrough": "Not applicable — internal manufacturing",
+   "targetSegments": [
+    "Form's own project deliveries"
+   ],
+   "roadmap": "Commercial production slipped from a 'late 2024' target given to ISO New England to a first grid delivery in October 2025; the 500 MW-per-year nameplate is not reached until 2028"
+  },
+  {
+   "name": "Formware — grid modelling software",
+   "category": "Software",
+   "description": "A technology-neutral resource adequacy, investment and operational model launched in 2020, which optimises the investments and operations of any portfolio of technologies over multi-year, hourly-resolution datasets. Xcel Energy and Georgia Power are both named as having used it in their project evaluations, and a login portal exists at formware.formenergy.com.",
+   "highlights": [
+    "Used jointly with utility partners to build the case for the multi-day storage they then procure",
+    "Underpins Form's published market claims — 35 GW of multi-day and long-duration storage in a least-cost 2040 New York portfolio, and about $2bn a year of California system-cost savings by 2045",
+    "Developed with academic institutions and documented through peer-reviewed studies"
+   ],
+   "positioning": "The commercially important thing about Formware is who runs it: a vendor supplying the planning model that sizes the need for its own product is a structure worth naming, even though the model is described as technology-neutral and the utilities run their own cases.",
+   "soldThrough": "Provided to utility partners alongside project development",
+   "targetSegments": [
+    "Regulated utilities",
+    "System operators",
+    "State energy agencies"
+   ],
+   "roadmap": "No published commercial roadmap for the software as a standalone product"
+  },
+  {
+   "name": "Project development and regulatory support",
+   "category": "Commercial",
+   "description": "Because no merchant market pays for 100-hour storage, essentially every Form deployment reaches its customer through a regulated proceeding or a public grant. The commercial work is therefore as much regulatory as it is technical: Minnesota PUC approval for Sherco, a Virginia SCC pilot approval for Darbytown, inclusion in Georgia Power's integrated resource plan, a California Energy Commission grant, a NYSERDA award, and a Minnesota tariff for the Google arrangement.",
+   "highlights": [
+    "Minnesota PUC docket 20233-193670-01 approved the Sherco system on 6 July 2023, with a cost cap unless the utility can show overruns were prudent and beyond its control, recovered through a renewable rate rider at about 30 cents a month per residential customer",
+    "The Xcel and Google Pine Island Electric Service Agreement sits in Minnesota PUC docket E002/M-26-170, filed 15 April 2026 and still pending, with the Attorney General and ratepayer advocates raising concerns",
+    "Federal and state support totals well over $200m across DOE, the California Energy Commission, NYSERDA and West Virginia",
+    "Two dockets the market assumes exist do not: the PG&E Mendocino project is a California Energy Commission grant rather than a CPUC rate proceeding, and the New York system is a NYSERDA award rather than a PSC proceeding"
+   ],
+   "positioning": "The regulatory route is the moat and the constraint at once. It gives Form long-dated, credit-worthy offtake that no merchant developer would write, and it means the company's growth rate is set by commission calendars rather than by its factory.",
+   "soldThrough": "Regulated cost recovery, state grants and bilateral agreements with data-centre developers",
+   "targetSegments": [
+    "State public utility commissions",
+    "State energy agencies",
+    "The US Department of Energy"
+   ],
+   "roadmap": "The Minnesota decision on the Google arrangement is the nearest binding regulatory event"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Iron-air battery — performance envelope",
+   "specs": [
+    {
+     "band": "Duration",
+     "label": "Rated discharge duration",
+     "value": "100 hours (company: 'up to 100 hours', '100+ hour duration'); the 2020 Great River Energy pilot was specified as 1 MW continuously for 150 hours"
+    },
+    {
+     "band": "Duration",
+     "label": "Discharge rate",
+     "value": "About 0.01C by construction — roughly 0.15 kW per 15 kWh cell per the company's ISO New England technical presentation"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Round-trip efficiency",
+     "value": "35–50% per independent assessment, best point estimate about 40%, against 85–90% for lithium-ion. Energy Solution Intelligence (January 2026): 'for every 10MWh you put in, you only get 4-5MWh back'. Form publishes no round-trip-efficiency figure anywhere on its own site or in its ISO New England deck"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Utilisation",
+     "value": "About 8 to 13 cycles a year per Form's own figures — roughly 800 to 1,300 hours of discharge — against about 365 cycles and 1,400 hours for the lithium-ion comparator on the same company slide"
+    },
+    {
+     "band": "Footprint",
+     "label": "Land area",
+     "value": "Half an acre per MW in the least dense configuration; more than 3 MW per acre at high density; about 2 MW per acre in the ISO New England deck, which at 100 hours is roughly 200 MWh per acre"
+    },
+    {
+     "band": "Safety",
+     "label": "UL9540A result",
+     "value": "Cell-level testing completed December 2024: no uncontrolled heating, no thermal runaway, no dendrite formation and no fire across all abuse scenarios, including charging while short-circuited and seven continuous days of overcharge"
+    },
+    {
+     "band": "Materials",
+     "label": "Active materials and content",
+     "value": "Iron, air and water; water-based non-flammable alkaline electrolyte; no heavy or rare-earth metals; about 80% of components sourced domestically"
+    },
+    {
+     "band": "Not published",
+     "label": "Absent first-party figures",
+     "value": "Cycle life, calendar life, degradation rate, response time, minimum discharge duration, operating temperature range, water consumption, per-module or per-enclosure ratings and auxiliary load are all absent from formenergy.com"
+    }
+   ],
+   "notes": "The efficiency gap is the product, not a defect: Form's and Xcel's position is that a battery cycling eight to thirteen times a year on otherwise-curtailed surplus is not sensibly judged on round-trip efficiency. The counter-argument is that the asset then sits idle about 97% of the year, which is what makes the cost per kilowatt bite."
+  },
+  {
+   "product": "Iron-air battery — cost, as far as it is public",
+   "specs": [
+    {
+     "band": "Company target",
+     "label": "Energy capacity",
+     "value": "About $20/kWh, stated to the ISO New England Energy Technologies Working Group in October 2024; the CEO's public target has been 'less than $20/kWh' since 2021"
+    },
+    {
+     "band": "Company target",
+     "label": "Power capacity",
+     "value": "About $2,000/kW"
+    },
+    {
+     "band": "Company comparator",
+     "label": "Four-hour lithium-ion",
+     "value": "About $250/kWh and about $1,000/kW on Form's own slide; 12-hour flow at about $150/kWh and $2,000/kW"
+    },
+    {
+     "band": "Implied actual",
+     "label": "Google Pine Island transaction",
+     "value": "About $33/kWh and about $3,333/kW — arithmetic on a reported $1bn for 300 MW / 30 GWh. The $1bn rests on The Information as relayed by TechCrunch; Canary Media called the price 'still undisclosed' and Xcel's own release does not state it"
+    },
+    {
+     "band": "Materials",
+     "label": "Active-material cost",
+     "value": "About $6/kWh for iron-air against $50–80/kWh for lithium-ion, per company figures relayed by trade press"
+    },
+    {
+     "band": "Disclosure gap",
+     "label": "No rate filing states a cost",
+     "value": "Xcel filed the Sherco system cost as a trade secret under Minnesota law; Dominion's $70.6m Darbytown figure bundles the Form system with an Eos zinc-hybrid; Georgia and Colorado disclose nothing. There is no $/kWh for 100-hour iron-air anywhere in a public rate filing"
+    }
+   ],
+   "notes": "The strongest independent criticism attaches to the power figure rather than the energy figure: capacity markets pay for kilowatts, and at $2,000–3,333/kW iron-air is more expensive per kilowatt than a gas peaker and two to three times four-hour lithium."
+  },
+  {
+   "product": "Physical architecture (from the ISO New England technical presentation, October 2024)",
+   "specs": [
+    {
+     "band": "Cell",
+     "label": "Rating and size",
+     "value": "About 0.15 kW / 15 kWh — a 100-hour rate — at roughly 1.37 m x 0.94 m x 70 mm"
+    },
+    {
+     "band": "Module",
+     "label": "Rating and composition",
+     "value": "About 4.5 kW / 450 kWh from 30 cells, roughly 1.8 m x 1 m x 2.5 m"
+    },
+    {
+     "band": "Enclosure",
+     "label": "Rating and composition",
+     "value": "About 45 kW / 4,500 kWh from 10 modules, roughly 9.5 x 8 x 40 feet"
+    },
+    {
+     "band": "Power block",
+     "label": "Configuration",
+     "value": "2.5 MW with a 3–4 MW inverter and an auxiliary skid per four enclosures, in roughly 200-foot enclosure runs, at about 2 MW per acre, with an optional water-treatment skid"
+    },
+    {
+     "band": "Certification",
+     "label": "Targets stated October 2024",
+     "value": "UL 1973, UL 9540 and UL 9540A, IEEE 1547 and UL 1741, NFPA 855, NFPA 70, NFPA 1, IBC 2021 and IFC 2021 — the deck describes these as target certifications rather than completed ones"
+    }
+   ],
+   "notes": "Form's own website publishes none of these per-unit ratings; they exist only in the deck it filed to a grid operator. That is a useful asymmetry to know about: the regulator-facing disclosure is materially more specific than the marketing."
+  },
+  {
+   "product": "Known engineering difficulties of iron-air, per independent and technical sources",
+   "specs": [
+    {
+     "band": "Loss mechanism",
+     "label": "Parasitic hydrogen evolution",
+     "value": "The dominant loss and self-discharge mechanism at the iron anode, competing directly with iron reduction and driving coulombic efficiency to about 45–60% in prototype systems. Intrinsic to alkaline iron electrodes rather than a manufacturing defect"
+    },
+    {
+     "band": "Loss mechanism",
+     "label": "Air-electrode overpotential",
+     "value": "Oxygen evolution and reduction on the same bifunctional electrode is kinetically poor, and the electrode degrades under repeated oxygen evolution"
+    },
+    {
+     "band": "Degradation",
+     "label": "Iron-electrode passivation",
+     "value": "Iron hydroxide and oxide layers build on the anode during discharge, raising internal resistance and thickening with cycling"
+    },
+    {
+     "band": "Degradation",
+     "label": "Electrolyte carbonation",
+     "value": "A battery that breathes ambient air ingests carbon dioxide, forming carbonates that degrade the alkaline electrolyte — a failure mode structurally absent from sealed lithium cells"
+    },
+    {
+     "band": "Degradation",
+     "label": "Self-discharge",
+     "value": "Capacity losses of roughly 1–3% a day at ambient are reported for iron-air systems, which is material for an asset whose value is holding energy across multi-day gaps"
+    },
+    {
+     "band": "Validation gap",
+     "label": "No national-laboratory cost or performance validation",
+     "value": "Iron-air appears in neither the DOE Office of Electricity's 2024 eleven-technology long-duration storage cost analysis nor PNNL's Energy Storage Cost and Performance Database. No independent laboratory teardown or bench validation of a Form cell exists in public sources"
+    }
+   ],
+   "notes": "A 2026 review in Advanced Sustainable Systems frames iron-anode redox kinetics as the unsolved problem, and European public research programmes at Fraunhofer UMSICHT and Holland High Tech exist specifically to improve iron-air efficiency — independent confirmation that efficiency is the binding constraint rather than a solved engineering detail."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-12",
+   "category": "financial",
+   "headline": "Series G raises $750m led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 new; total equity raised passes $2bn and the backlog is stated as having grown from about 20 GWh to about 80 GWh",
+   "read": "The backlog claim is the headline and the number to interrogate: it is Form's own word, 'backlog', and the release says the growth 'includes' the Google, Crusoe and Ireland agreements rather than consisting of them.",
+   "source": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "leadership",
+   "headline": "Navneet Govil joins as Chief Financial Officer from SoftBank Investment Advisers, and Wes Sloan as Chief Operating Officer from Panasonic Energy North America",
+   "read": "Both hires point at the same problem. A CFO from a late-stage investment platform and a COO who ran Panasonic's Nevada cell production is the pairing a company makes when the next task is financing and building a factory rather than proving a chemistry.",
+   "source": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/"
+  },
+  {
+   "date": "2026-03-24",
+   "category": "customer",
+   "headline": "Crusoe agrees a 12 GWh strategic capacity reservation for AI data centres, with reserved volume, pricing and delivery terms and all systems to be built at Form Factory 1; Form states more than 75 GWh under agreement",
+   "read": "The single largest commercial agreement Form has disclosed after Pine Island, and the clearest signal that multi-day storage found its first non-utility buyer in AI compute.",
+   "source": "https://formenergy.com/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers/"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "customer",
+   "headline": "FuturEnergy Ireland — a joint venture of the state utility ESB and the national forestry body Coillte — agrees a 10 MW / 1,000 MWh system, Form's first international deployment, for 2029; Form states more than 65 GWh under agreement",
+   "read": "The first deployment outside the United States, and it arrives through a state-owned joint venture rather than a merchant developer, which is consistent with the pattern: someone with a public mandate underwrites the first unit.",
+   "source": "https://formenergy.com/form-energy-and-futurenergy-ireland-announce-agreement-to-deploy-first-iron-air-battery-storage-project-in-ireland/"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "customer",
+   "headline": "Xcel Energy will serve a new Google data centre at Pine Island, Minnesota with 1,400 MW of wind, 200 MW of solar and a 300 MW / 30 GWh Form iron-air battery — the largest battery project by energy capacity announced anywhere",
+   "read": "Ten times larger than anything Form had built or announced. Google pays through a Clean Energy Accelerator Charge inside the Electric Service Agreement, so the risk of the technology underperforming sits with Google's carbon accounting rather than with Xcel's ratepayers.",
+   "source": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota"
+  },
+  {
+   "date": "2024-12-12",
+   "category": "product-launch",
+   "headline": "UL9540A cell-level safety testing completed with no thermal runaway, no flame, no dendrite formation and no propagation across all abuse scenarios, including seven continuous days of overcharge",
+   "read": "The commercially useful consequence is siting: Form asserts the systems can be deployed without fireproof barriers, and a PNNL technical advisor is quoted in the release saying cell-level results of this kind remove the need for module and system testing.",
+   "source": "https://formenergy.com/form-energys-breakthrough-iron-air-battery-technology-sets-a-new-benchmark-for-safety-in-energy-storage-systems/"
+  },
+  {
+   "date": "2024-10-14",
+   "category": "capacity",
+   "headline": "Expansion of Form Factory 1 begins to increase manufacturing capacity",
+   "read": "The expansion target has since been revised: the 2024 releases spoke of more than one million square feet by 2028, and the current site says about 850,000.",
+   "source": "https://formenergy.com/form-energy-begins-expansion-of-form-factory-1-to-increase-manufacturing-capacity/"
+  },
+  {
+   "date": "2024-10-09",
+   "category": "financial",
+   "headline": "Series F raises $405m led by T. Rowe Price with GE Vernova new and a memorandum of understanding on strategic collaboration; total funding passes $1.2bn",
+   "read": "GE Vernova arriving as both investor and commercial partner is the closest Form has to a strategic industrial backer on the power-equipment side, alongside ArcelorMittal on the iron side.",
+   "source": "https://formenergy.com/form-energy-secures-405m-in-series-f-financing-to-expand-iron-air-battery-business-and-operations/"
+  },
+  {
+   "date": "2024-09-20",
+   "category": "policy",
+   "headline": "US Department of Energy selects Form Energy for a $150m Project RAPID award to build out the West Virginia factory, funding a line targeted at up to 20 GWh a year by 2027",
+   "read": "Federal money buying capacity rather than demonstration units — a different kind of support from the state grants that funded the first projects.",
+   "source": "https://formenergy.com/department-of-energy-selects-form-energy-for-150-award-for-the-buildout-of-west-virginia-battery-factory/"
+  },
+  {
+   "date": "2024-08-15",
+   "category": "project",
+   "headline": "Great River Energy and Form Energy break ground on the Cambridge, Minnesota project — 1.5 MW / 150 MWh, the first commercial deployment, with Mortenson as EPC",
+   "read": "The first unit out of the factory and the reference the rest of the ledger is measured against; batteries were delivered from October 2025 and the full project was expected online in 2026.",
+   "source": "https://formenergy.com/great-river-energy-and-form-energy-break-ground-on-first-of-its-kind-multi-day-energy-storage-project/"
+  },
+  {
+   "date": "2024-08-06",
+   "category": "policy",
+   "headline": "Power Up New England selected for a $389m DOE Grid Innovation Program award including an 85 MW / 8,500 MWh Form system on a former paper-mill site in Lincoln, Maine",
+   "read": "At announcement Form called it the most energy capacity of any battery system announced anywhere — a record Pine Island took eighteen months later.",
+   "source": "https://formenergy.com/massachusetts-new-england-states-selected-to-receive-389-million-in-federal-funding-for-transformative-electric-grid-project/"
+  },
+  {
+   "date": "2023-12-13",
+   "category": "policy",
+   "headline": "California Energy Commission awards a $30m grant for a 5 MW / 500 MWh system on PG&E substation land in Mendocino County — California's largest long-duration storage project",
+   "read": "Worth stating precisely because it is commonly mis-described: this is a CEC grant, not a CPUC rate proceeding, so there is no rate case and no disclosed cost of service.",
+   "source": "https://formenergy.com/form-energy-awarded-30m-grant-from-the-california-energy-commission-to-deploy-first-multi-day-energy-storage-project-in-california/"
+  },
+  {
+   "date": "2023-09-19",
+   "category": "project",
+   "headline": "Dominion Energy Virginia files the Darbytown Storage Pilot with the Virginia State Corporation Commission — a 100-hour Form system paired with an Eos zinc-hybrid battery",
+   "read": "Approved in May 2024 at $70.6m for the two technologies combined, with no public split between them, which is why no cost per kilowatt-hour can be derived from it.",
+   "source": "https://formenergy.com/dominion-energy-explores-pioneering-battery-storage-technologies-in-virginia/"
+  },
+  {
+   "date": "2023-08-17",
+   "category": "policy",
+   "headline": "NYSERDA awards $12m — the largest share of a roughly $15m four-project long-duration demonstration programme — for a 10 MW / 1,000 MWh system in New York",
+   "read": "A grant rather than a Public Service Commission proceeding. No New York Power Authority or Rochester project appears in any Form release, so attributions of one are unverified.",
+   "source": "https://formenergy.com/form-energy-awarded-grant-to-deploy-first-multi-day-battery-system-in-new-york/"
+  },
+  {
+   "date": "2023-07-06",
+   "category": "regulatory",
+   "headline": "Minnesota regulators approve the 10 MW / 1,000 MWh Sherco system on about five acres, with a cost cap unless overruns are shown to be prudent, recovered through a renewable rate rider at about 30 cents a month per residential customer",
+   "read": "The approval that established the template, and the one where the cost was filed as a trade secret — the reason no rate filing anywhere states a price for 100-hour iron-air.",
+   "source": "https://formenergy.com/xcel-energy-receives-approval-to-build-multi-day-battery-storage-at-sherco-site/"
+  },
+  {
+   "date": "2023-06-12",
+   "category": "customer",
+   "headline": "Georgia Power and Form Energy confirm a definitive agreement for a 15 MW / 1,500 MWh system",
+   "read": "No first-party status update has followed in more than three years, against a target of as early as 2026.",
+   "source": "https://formenergy.com/form-energy-georgia-power-continue-forward-with-15-megawatt-iron-air-battery-system-agreement/"
+  },
+  {
+   "date": "2023-01-26",
+   "category": "customer",
+   "headline": "Xcel Energy partners with Form on two projects — 10 MW / 1,000 MWh each at Sherco in Minnesota and Comanche in Colorado",
+   "read": "The Colorado half has never had a first-party approval or construction announcement, which is the clearest instance of a wider pattern of dark projects.",
+   "source": "https://formenergy.com/form-energy-partners-with-xcel-energy-on-two-multi-day-energy-storage-projects/"
+  },
+  {
+   "date": "2021-07-22",
+   "category": "product-launch",
+   "headline": "Form unveils iron-air as its chemistry alongside a $200m Series D led by ArcelorMittal's XCarb innovation fund, with ArcelorMittal to supply iron materials non-exclusively",
+   "read": "Four years of development under the description 'aqueous air battery' ended here. The investor and the raw-material supplier being the same company is the structural feature of Form's supply chain.",
+   "source": "https://formenergy.com/form-energy-unveils-chemistry-of-multi-day-storage-battery-technology/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-02",
+   "scale": "300 MW / 30 GWh",
+   "via": "Xcel Energy Electric Service Agreement and Clean Energy Accelerator Charge",
+   "note": "Google is the load behind the Pine Island project and the party paying for the battery — a customer, not an investor.",
+   "context": "Xcel Energy will serve a new Google data centre at Pine Island, Minnesota with 1,400 MW of wind, 200 MW of solar and a 300 MW / 30 GWh Form iron-air battery, the largest battery project by energy capacity announced anywhere. Google pays all costs through a Clean Energy Accelerator Charge inside the Electric Service Agreement, modelled on the Clean Transition Tariff it developed with NV Energy, plus $50m into Xcel's Capacity*Connect programme. TechCrunch, citing The Information, reported the price to Form as about $1bn; Canary Media called it undisclosed and Xcel's release does not state it.\n\nThe typing matters. Several outlets describe Form as 'Google-backed' and one headline reads 'Google Invests $1 Billion in Form Energy'. That is loose language for an offtake: no Alphabet entity appears in any Form funding round from Series A to Series G, nor on Form's investor wall, nor in the investor list Form filed to ISO New England. This edge is typed customer for that reason, and Google's dossier records the same arrangement from the buyer's side.",
+   "source": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota"
+  },
+  {
+   "slug": "xcel-energy",
+   "type": "customer",
+   "status": "active",
+   "since": "2023-01",
+   "scale": "30 GWh at Pine Island plus 1,000 MWh at Sherco and 1,000 MWh at Comanche",
+   "via": "Regulated utility procurement and a large-load tariff",
+   "note": "Xcel Energy is Form's largest and longest-standing utility customer, across three projects in two states.",
+   "context": "The relationship began in January 2023 with two 10 MW / 1,000 MWh projects, at Sherco in Minnesota and Comanche in Colorado. Minnesota regulators approved Sherco on 6 July 2023 in docket 20233-193670-01, imposing a cost cap unless overruns are shown prudent and recovering the cost through a renewable rate rider at about 30 cents a month per residential customer; the project cost itself was filed as a trade secret. The Colorado half has never had a first-party approval or construction announcement. In February 2026 the relationship expanded by an order of magnitude with the 300 MW / 30 GWh Pine Island system serving Google, whose Electric Service Agreement sits in Minnesota docket E002/M-26-170, filed 15 April 2026 and still pending with the Attorney General and ratepayer advocates objecting. Xcel is also the public voice defending the technology's low round-trip efficiency on the ground that the asset cycles rarely and charges on surplus.",
+   "source": "https://formenergy.com/xcel-energy-receives-approval-to-build-multi-day-battery-storage-at-sherco-site/"
+  },
+  {
+   "slug": "crusoe",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-03",
+   "scale": "12 GWh",
+   "via": "Strategic capacity reservation under Crusoe's bring-your-own-capacity model",
+   "note": "Crusoe reserved 12 GWh of iron-air capacity for AI data centres, with deliveries starting in 2027.",
+   "context": "Announced at CERAWeek on 24 March 2026, with Crusoe securing reserved volume, pricing and delivery terms and all systems to be built at Form Factory 1. It is the only Form agreement described in public as binding on volume and price, and it is the second of the two 2026 AI-data-centre deals that together account for the large majority of the itemisable backlog. Crusoe's own dossier already records the arrangement at 12 GWh from 2027 alongside its GE Vernova turbines, Bergen engines and ON.energy medium-voltage batteries — Form is the long-duration leg of the deepest energy stack any data-centre developer in this corpus has assembled.",
+   "source": "https://formenergy.com/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers/"
+  },
+  {
+   "slug": "southern-company",
+   "type": "customer",
+   "status": "announced",
+   "since": "2022-02",
+   "scale": "15 MW / 1,500 MWh",
+   "via": "Georgia Power integrated resource planning",
+   "note": "Georgia Power, the Southern Company utility, holds a definitive agreement for a 15 MW / 1,500 MWh iron-air system.",
+   "context": "A collaboration announced in February 2022 became a definitive agreement on 12 June 2023, subject to regulatory approvals, with a target of as early as 2026. The project rides inside Georgia Power's integrated resource planning rather than carrying a discrete docket; the 2025 IRP, approved unanimously on 15 July 2025 in docket 56002, includes 1,500 MW of battery storage overall. No first-party status update on the Form system has appeared in more than three years and no cost has been disclosed. Georgia Power also used Form's Formware model in evaluating the project.",
+   "source": "https://formenergy.com/form-energy-georgia-power-continue-forward-with-15-megawatt-iron-air-battery-system-agreement/"
+  },
+  {
+   "slug": "dominion-energy",
+   "type": "customer",
+   "status": "announced",
+   "since": "2023-09",
+   "scale": "about 4.95 MW / 494 MWh within a $70.6m two-technology pilot",
+   "via": "Darbytown Storage Pilot",
+   "note": "Dominion Energy Virginia is deploying a 100-hour Form system at Darbytown alongside an Eos zinc-hybrid battery.",
+   "context": "Filed with the Virginia State Corporation Commission in September 2023 and approved in May 2024 as one of three long-duration storage pilots, at a combined cost of $70.6m for the Form and Eos systems together. The split between the two technologies is not public, which is why no cost per kilowatt-hour can be derived from it — an arithmetic half would imply about $70/kWh, three and a half times Form's target, but that is an unverified division of a combined number and is not stated as a cost. Dominion's own dossier records the pilot from the utility side. Form has published no status update since the filing, against a late-2026 operational target.",
+   "source": "https://formenergy.com/dominion-energy-explores-pioneering-battery-storage-technologies-in-virginia/"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "investor",
+   "status": "active",
+   "since": "2024-10",
+   "via": "Series F and Series G participation plus a strategic memorandum of understanding",
+   "note": "GE Vernova invested in Form's Series F and Series G rounds and signed a memorandum of understanding on strategic collaboration.",
+   "context": "GE Vernova joined as a new investor in the $405m Series F announced on 9 October 2024 and continued into the $750m Series G in August 2026. Alongside the equity it signed a memorandum of understanding covering areas of strategic collaboration to support Form as it ramps manufacturing and commercial deployments. Together with ArcelorMittal — Series D lead and a non-exclusive supplier of iron materials — it is one of two industrial strategics on the cap table, and the only one on the power-equipment side.\n\nTyped investor from the stating side. No reciprocal edge is written on GE Vernova's dossier: the coherent inverse would be portfolio, which the schema enum does not carry, and GE Vernova's dossier makes no claim about Form Energy that requires reconciliation. A one-sided edge is preferred here to either an incoherent reciprocal or an accept-list entry.",
+   "source": "https://formenergy.com/form-energy-secures-405m-in-series-f-financing-to-expand-iron-air-battery-business-and-operations/"
+  },
+  {
+   "slug": "eolian",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-03",
+   "via": "US Energy Storage Coalition",
+   "note": "Form and Eolian sit together in the US Energy Storage Coalition, whose March 2026 report argued American factories can supply the whole US storage market.",
+   "context": "Eolian's dossier records the coalition membership alongside Tesla, LG Energy Solution Vertech and Fluence, and quotes its chief executive Aaron Zubaty saying that 'with our American factories now capable of fully supplying the systems we need, energy storage is a pivotal component in American infrastructure supporting AI-driven power demand'. This is a policy alliance rather than a commercial relationship — no Form hardware appears in Eolian's fleet, exactly as Eolian's dossier says of Fluence. It is worth recording because Form's domestic-content position, about 80% of components sourced within the United States and a chemistry outside the lithium supply chain, is the strongest version of the argument the coalition makes.",
+   "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "State utility cost recovery",
+   "status": "in-effect",
+   "effectiveDate": "2023-07-06",
+   "exposure": "Form's commercial model depends on regulators letting a utility rate-base a technology with no operating track record. The Minnesota Public Utilities Commission approved the Sherco system in docket 20233-193670-01 on 6 July 2023 but imposed a cost cap unless the utility can show overruns were prudent and beyond its control, and allowed recovery through a renewable rate rider costing about 30 cents a month per residential customer. The Pine Island Electric Service Agreement between Xcel and Google sits in docket E002/M-26-170, filed 15 April 2026 and still pending, with ratepayer advocates and the Minnesota Attorney General questioning why the associated Capacity*Connect programme costs significantly more than Colorado's comparable initiative.",
+   "mitigation": "The Pine Island structure removes ratepayers from the technology risk: Google pays all costs of its new service and any new grid infrastructure, so a system that underperforms damages Google's carbon accounting rather than Xcel's customers.",
+   "source": "https://formenergy.com/xcel-energy-receives-approval-to-build-multi-day-battery-storage-at-sherco-site/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Form's projects and its factory both sit inside the US clean-energy credit regime — the Sherco approval referenced investment tax credits alongside the state rider, and Form Factory 1 was built partly on the expectation of production credits. Form's exposure differs in kind from every lithium supplier in this corpus: iron-air uses no lithium, no cobalt, no nickel and no graphite, so the foreign-entity-of-concern and material-assistance tests that dominate lithium storage do not bind on its cells.",
+   "mitigation": "Form states that about 80% of all components are sourced domestically within the United States and that the chemistry avoids geopolitically risky supply chains — the strongest domestic-content position of any storage supplier covered here.",
+   "source": "https://formenergy.com/form-energys-breakthrough-iron-air-battery-technology-sets-a-new-benchmark-for-safety-in-energy-storage-systems/"
+  },
+  {
+   "regime": "Federal energy demonstration funding",
+   "status": "in-effect",
+   "effectiveDate": "2024-09-20",
+   "exposure": "A material share of Form's deployed base and its factory expansion is federally funded rather than commercially procured: a $150m Project RAPID award for the West Virginia line targeted at up to 20 GWh a year by 2027, an 85 MW / 8,500 MWh system inside the $389m Power Up New England Grid Innovation Program award, and $10m contingent grants against each of the two original Xcel projects. That concentrates policy risk: a change in federal demonstration funding reaches Form's order book directly.",
+   "mitigation": "The two largest 2026 agreements — Google and Pine Island at 30 GWh, and Crusoe at 12 GWh — are commercially procured rather than grant-funded, which is the strongest evidence to date that the technology can sell without a subsidy attached.",
+   "source": "https://formenergy.com/department-of-energy-selects-form-energy-for-150-award-for-the-buildout-of-west-virginia-battery-factory/"
+  },
+  {
+   "regime": "West Virginia incentive package",
+   "status": "in-effect",
+   "effectiveDate": "2022-12-22",
+   "exposure": "Form Factory 1 rests on a $290m West Virginia incentive package against a $760m investment, of which $75m was committed and $215m remained to be secured, collateralised by state ownership of the land and buildings. The state therefore holds title to the collateral behind the company's only factory.",
+   "mitigation": "Form has met its visible commitments at the site — official opening September 2024, roughly 400 employees against a 750+ target for 2028 — but the 2028 floor-area target has been revised down from more than one million square feet to about 850,000.",
+   "source": "https://formenergy.com/form-factory-1/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Mateo Jaramillo",
+   "title": "Co-founder and Chief Executive Officer",
+   "background": [
+    "Vice President of Products and Programs, Tesla stationary energy storage — an effort he started, responsible for Tesla Energy's product line, business-model definition, global policy and business development",
+    "Director of Powertrain Business Development, Tesla (joined 2009); commercial lead on more than $100m of new development and $500m of production contracts",
+    "Chief Operating Officer and founding team member, Gaia Power Technologies",
+    "Board of Directors, American Clean Power Association",
+    "A.B. in Economics, Harvard; Masters in Theology, Yale Divinity School"
+   ]
+  },
+  {
+   "name": "Ted Wiley",
+   "title": "Co-founder and President",
+   "background": [
+    "Oversees manufacturing engineering, manufacturing operations, global supply chain, programme management and environmental health and safety",
+    "Built Form's finance, HR, facilities, business development and policy functions",
+    "Co-founder and Head of Product, Aquion Energy; Vice President of Product, MassChallenge; President, McDonough Innovation",
+    "US Army Infantry Officer, served in Iraq; recognised by the Secretary of the Army as a Pentathlete Leader; later aide-de-camp in the Program Executive Office for Weapons and Ammunition",
+    "MBA, Harvard Business School; World Economic Forum Young Global Leader, 2013"
+   ]
+  },
+  {
+   "name": "Yet-Ming Chiang",
+   "title": "Co-founder and Chief Science Officer",
+   "background": [
+    "Kyocera Professor, Department of Materials Science and Engineering, MIT — faculty since 1985",
+    "Member of the US National Academy of Engineering; Fellow of the Electrochemical Society, Materials Research Society, American Ceramic Society and National Academy of Inventors",
+    "Co-founder of Desktop Metal, 24M Technologies, A123 Systems and American Superconductor",
+    "Co-author of the cost-first design work in Joule (2017) that produced the iron-air thesis, and of the iron-energy-nexus paper in One Earth (2022)"
+   ]
+  },
+  {
+   "name": "William Woodford",
+   "title": "Co-founder and Chief Technology Officer",
+   "background": [
+    "Director of Advanced R&D, 24M Technologies — low-cost automotive and grid lithium-ion",
+    "MIT Technology Review TR35 award, 2018",
+    "PhD, MIT and BS, Penn State, both in Materials Science and Engineering"
+   ]
+  },
+  {
+   "name": "Marco Ferrara",
+   "title": "Co-founder and Chief Digital Officer",
+   "background": [
+    "Vice President of Energy Analytics and Optimization, IHI Inc.",
+    "Created ESWare at 24M Technologies, later acquired by IHI",
+    "Lead developer of portfolio-valuation software, Edison Mission Marketing and Trading",
+    "Board of Directors, LDES Council",
+    "PhD Nuclear Engineering, MIT; PhD Electrical Engineering and Computer Science, University of L'Aquila"
+   ]
+  },
+  {
+   "name": "Navneet Govil",
+   "title": "Chief Financial Officer (from August 2026)",
+   "background": [
+    "Executive Managing Partner, Chief Financial Officer and Investment Committee member, SoftBank Investment Advisers (SoftBank Vision Funds)",
+    "More than three decades of finance leadership",
+    "Leads finance, financial strategy, capital formation and investor relations"
+   ]
+  },
+  {
+   "name": "Wes Sloan",
+   "title": "Chief Operating Officer (from August 2026)",
+   "background": [
+    "Executive Vice President, Panasonic Energy North America — oversaw Panasonic's Nevada production",
+    "Senior roles at Rolls-Royce including engine assembly and testing; led Lean Six Sigma deployment across the services division in the UK, Americas and Europe",
+    "More than 25 years across aerospace, automotive and energy"
+   ]
+  },
+  {
+   "name": "RJ Johnson",
+   "title": "Chief Commercial Officer",
+   "background": [
+    "Listed on Form Energy's leadership page; leads commercial activity across the utility and data-centre accounts"
+   ]
+  },
+  {
+   "name": "Marc Mezvinsky",
+   "title": "Board member; Partner, TPG",
+   "background": [
+    "Senior member of TPG's climate investing team",
+    "Joined the board with the $450m Series E in October 2022, which TPG Rise led"
+   ]
+  },
+  {
+   "name": "Katie Rae",
+   "title": "Board member; Managing Partner and Chief Executive, The Engine",
+   "background": [
+    "The Engine provided Form's initial seed funding and lab space in 2017 and co-led the Series A",
+    "Quoted as a Form Energy board member from October 2022"
+   ]
+  },
+  {
+   "name": "Michael Skelly",
+   "title": "Board member",
+   "background": [
+    "Senior Advisor, Lazard",
+    "Founder and President, Clean Line Energy — a pioneer of long-distance renewable transmission development",
+    "Joined the board with the $40m Series B in August 2019"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "Cumulative equity funding to August 2026",
+    "periodType": "other",
+    "periodEnd": "2026-08-12",
+    "metrics": [
+     {
+      "name": "Total equity raised",
+      "actual": "More than $2bn",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Form Energy's own statement in the Series G release. The company has never published a valuation figure in any first-party channel"
+     },
+     {
+      "name": "Series G",
+      "actual": "$750m, announced 12 August 2026",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Led by T. Rowe Price for the second consecutive round. New: Sequoia Capital, Janus Henderson, Franklin Templeton, PEAK6 Investments. Continuing: Prelude, Engine Ventures, TPG Rise Climate, Capricorn, Breakthrough Energy Ventures, Dustin Moskovitz and Cari Tuna, Gigascale, Coatue, Energy Impact Partners, NGP, GE Vernova, Blindspot, M&G Catalyst. Morgan Stanley was sole placement agent"
+     },
+     {
+      "name": "Series F",
+      "actual": "$405m, announced 9 October 2024",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Led by T. Rowe Price; GE Vernova new alongside a strategic memorandum of understanding. Cumulative funding stated as more than $1.2bn at the time"
+     },
+     {
+      "name": "Series E",
+      "actual": "$450m, announced 4 October 2022",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Led by TPG Rise; GIC and Canada Pension Plan Investment Board new; Marc Mezvinsky joined the board"
+     },
+     {
+      "name": "Series D",
+      "actual": "$240m, closed 24 August 2024 after a $200m announcement on 22 July 2021",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Led by ArcelorMittal's XCarb innovation fund, which is also a non-exclusive supplier of iron materials. Cumulative funding stated as more than $360m at the time"
+     },
+     {
+      "name": "Earlier rounds",
+      "actual": "Series C $76m (2020, Coatue); Series B $40m (2019, Eni Next); Series A $9m (2018, Breakthrough Energy Ventures, Prelude and The Engine); seed 2017",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Temasek and GIC entered at Series C and E respectively and are not named in the Series G list"
+     },
+     {
+      "name": "Reported valuation",
+      "actual": "About $1.75bn pre-money at the Series G, against about $3bn in October 2024 — a reported down round of roughly 42%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Axios Pro reporting, unconfirmed by the company, which publishes no valuation. Treat as third-party and single-sourced. It sits against a backlog the company says quadrupled over the same period"
+     }
+    ],
+    "commentary": "Form Energy is private and publishes no revenue, no order value, no gross margin and no valuation. There is no analyst consensus and no expectations column can honestly be filled — the 'expected' fields are left empty rather than reconstructed."
+   },
+   {
+    "period": "Commercial backlog and announced projects (as at August 2026)",
+    "periodType": "other",
+    "periodEnd": "2026-08-12",
+    "metrics": [
+     {
+      "name": "Stated commercial backlog",
+      "actual": "About 80 GWh — 'the company increased its backlog from approximately 20 gigawatt-hours to 80 gigawatt-hours of iron-air battery systems'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company-stated and tracked through 2026: about 20 GWh entering the year, more than 65 GWh on 17 March, more than 75 GWh on 24 March, about 80 GWh in June and August. Corroborated by NAM, Pulse2, Energy-Storage.News and TechCrunch — all reporting the company's figure",
+      "kpi": "backlog-gwh",
+      "qty": 80
+     },
+     {
+      "name": "Publicly itemisable volume",
+      "actual": "About 55.7 GWh across eleven named agreements — 43.65 GWh of sited projects plus the 12 GWh Crusoe reservation",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Pine Island 30 GWh, Crusoe 12 GWh, Lincoln Maine 8.5 GWh, Georgia Power 1.5 GWh, Sherco 1 GWh, Comanche 1 GWh, NYSERDA 1 GWh, Ireland 1 GWh, Mendocino 0.5 GWh, Great River Energy 0.15 GWh, plus Dominion Darbytown whose size Form does not publish. About 24 GWh of the stated backlog is therefore not individually announced — Form's wording is that the growth 'includes' the named agreements, never that it consists of them"
+     },
+     {
+      "name": "Named power capacity",
+      "actual": "About 446.5 MW across the sited projects",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Against Form's own statement of more than 750 MW under agreement in March 2026. At 100-hour duration an 80 GWh backlog implies about 800 MW"
+     },
+     {
+      "name": "Operating capacity",
+      "actual": "One project — Great River Energy's Cambridge system at 1.5 MW / 150 MWh, delivered from October 2025 and expected fully operational in 2026",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Canary Media's framing in February 2026 was that Form 'has yet to finish its first commercial installation'",
+      "kpi": "mw-energized",
+      "qty": 1.5
+     }
+    ],
+    "commentary": "The gap between an 80 GWh backlog and one operating 1.5 MW project is the whole investment question. Two 2026 agreements — Google and Pine Island at 30 GWh, Crusoe at 12 GWh — are 74% of the itemisable total, so the backlog is highly concentrated in two counterparties, both buying for AI data centres, both with first deliveries in 2027 and 2028."
+   },
+   {
+    "period": "Manufacturing and headcount",
+    "periodType": "other",
+    "periodEnd": "2026-08-12",
+    "metrics": [
+     {
+      "name": "Form Factory 1 investment",
+      "actual": "$760m against a $290m West Virginia incentive package",
+      "expected": "",
+      "verdict": "inline",
+      "result": "$75m of the incentive committed and $215m to be secured, collateralised by state ownership of the land and buildings; 55-acre former Weirton Steel tin-mill site"
+     },
+     {
+      "name": "Factory floor area",
+      "actual": "About 550,000 square feet, targeted at about 850,000 by 2028",
+      "expected": "More than 1,000,000 square feet by 2028 (stated October 2024)",
+      "verdict": "miss",
+      "result": "The 2028 target has been revised down between the Series F release and the current site copy"
+     },
+     {
+      "name": "Nameplate capacity",
+      "actual": "At least 500 MW of batteries a year by 2028 — about 50 GWh at 100-hour duration — plus a DOE-cofunded line targeted at up to 20 GWh a year by 2027",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Against an 80 GWh backlog, full-rate output represents roughly 1.6 years of production, deliverable no earlier than 2027 to 2031"
+     },
+     {
+      "name": "Headcount",
+      "actual": "About 400 at Form Factory 1 against a 750+ target for 2028; roughly 1,000 across all sites",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company headcount has been roughly flat over the last two years while the stated backlog quadrupled"
+     },
+     {
+      "name": "Commercial production start",
+      "actual": "First grid delivery October 2025",
+      "expected": "Late 2024 (stated to the ISO New England Energy Technologies Working Group)",
+      "verdict": "miss",
+      "result": "About a year later than the date given to a grid operator in October 2024"
+     }
+    ],
+    "commentary": "Cumulative validation as Form publishes it: more than 34,700 sub-scale cells, 6,200 full-scale cells, 170 modules and more than ten grid-connected packs by 2026, with the company claiming continuous 100-hour duration demonstrated."
+   }
+  ],
+  "commentary": "Form Energy is private, publishes no financial statements, and has never disclosed a valuation, revenue figure or order value. Everything above is either a company statement about funding and backlog or a third-party report clearly labelled as such. Two caveats govern the whole section: the 80 GWh backlog is self-reported and only about 70% itemisable from public announcements, and the only transaction price in existence — about $1bn for Pine Island, implying roughly $33 per kilowatt-hour — rests on The Information as relayed by TechCrunch, because Xcel filed the comparable Sherco cost as a trade secret."
+ },
+ "strategyRead": [
+  "(High confidence) We assess that Google is a customer of Form Energy and not an investor, and that the widespread 'Google-backed' description is wrong. Basis: no Alphabet, GV or CapitalG entity appears in any funding round from Series A through the August 2026 Series G, on Form's own investor wall, or in the investor roster Form filed to the ISO New England Energy Technologies Working Group. Google's role is the load behind Pine Island, paying through a Clean Energy Accelerator Charge inside Xcel's Electric Service Agreement, with a reported price of about $1bn. Form is private and publishes no cap table, so a small undisclosed position cannot be excluded absolutely — but nothing in any tier asserts one.",
+  "(High confidence) We assess the technology is deliberately optimised against the metrics lithium-ion wins on, and that judging it by round-trip efficiency misses the design. Basis: independent estimates put iron-air round-trip efficiency at 35–50% against 85–90% for lithium, and Form's own architecture is a 100-hour discharge rate by construction at roughly 0.15 kW per 15 kWh cell. Form's own expected duty cycle is eight to thirteen cycles a year. Xcel's public defence — that the asset charges on otherwise-curtailed surplus and exists for extended low-generation periods — is coherent. Cutting against it: Form publishes no efficiency figure anywhere, including in the thirty-slide technical deck it filed to a grid operator, which is a conspicuous omission on the metric where it is weakest.",
+  "(High confidence) We assess the strongest independent criticism attaches to cost per kilowatt rather than cost per kilowatt-hour, and that this is where the commercial case is genuinely contested. Basis: Form's own target is about $2,000/kW against about $1,000/kW for four-hour lithium on the same company slide, and the Pine Island transaction implies about $3,333/kW. Capacity markets pay for kilowatts. At PJM-type capacity rates one published analysis calculates roughly sixteen years of record capacity revenue to return capital before financing and operations. The counter is that Form is not selling into a capacity market — it is selling a rate-based reliability asset and, latterly, a data-centre firming product.",
+  "(High confidence) We assess the 80 GWh backlog figure is genuine as a company statement but only about 70% verifiable, and that the corpus should carry it with that qualification rather than as a fact. Basis: the figure is Form's own word in the Series G release and tracks coherently through 2026, but summing all eleven individually announced agreements gives about 55.7 GWh. Form's wording is that the growth 'includes' the Google, Crusoe and Ireland deals, never that it consists of them, so roughly 24 GWh corresponds to agreements it has not press-released. An independent analyst reached the same wall from the other direction, itemising only about 43 GWh.",
+  "(Moderate confidence) We assess the backlog's concentration is a larger risk than its verifiability. Basis: Pine Island at 30 GWh and Crusoe at 12 GWh are 74% of the itemisable total, both signed in 2026, both for AI data centres, and neither delivering before 2027. Pine Island is additionally contingent on a Minnesota commission decision that had not been made as of early September 2026, in a docket where the Attorney General and ratepayer advocates have filed objections. A single adverse regulatory outcome would remove more than half the verifiable order book.",
+  "(Moderate confidence) We assess the manufacturing story has slipped quietly and repeatedly, and that this is the operational risk to watch rather than the chemistry. Basis: commercial production moved from a 'late 2024' target given to ISO New England to a first grid delivery in October 2025; the 2028 factory footprint target fell from more than one million square feet to about 850,000; headcount has been roughly flat over two years while the stated backlog quadrupled; and the 500 MW-a-year nameplate is not reached until 2028, which at 100-hour duration is about 50 GWh a year against an 80 GWh order book. The company also went about fourteen months without issuing any press release, from December 2024 to February 2026.",
+  "(Moderate confidence) We assess Form is structurally insulated from the trade and sourcing regimes that dominate every other storage supplier in this corpus, and that this is an under-appreciated commercial advantage. Basis: iron-air uses no lithium, cobalt, nickel or graphite, so the foreign-entity-of-concern material-assistance tests, the Section 301 and AD/CVD actions and the cell-sourcing questions that bind Canadian Solar, CATL-supplied integrators and every Chinese-manufactured system simply do not reach its cells. Form states about 80% domestic content and no heavy or rare-earth metals. The corresponding exposure is different in kind: federal demonstration funding and state cost-recovery decisions.",
+  "(Low confidence) We assess the reported Series G down round is real and that it is best read as a financing-market repricing rather than a verdict on the technology. Basis: Axios Pro reported about $1.75bn pre-money against about $3bn in October 2024, a fall of roughly 42%, in the same round where the company said its backlog quadrupled and added Sequoia, Janus Henderson, Franklin Templeton and PEAK6 as new investors. The company publishes no valuation and has not confirmed the figure, so this is single-sourced third-party reporting and is offered as a reading rather than a finding.",
+  "Collection gap: five of the eleven announced projects have had no first-party status update since 2023 — Comanche in Colorado, Georgia Power, Dominion's Darbytown, PG&E's Mendocino system and the NYSERDA New York project — and all carried 2025 or 2026 target dates. The Colorado half of the original Xcel pair has never had a first-party approval or construction announcement at all. Their status is genuinely unknown rather than known to be bad.",
+  "Collection gap: no independent laboratory validation of iron-air at 100-hour duration exists. Iron-air appears in neither the Department of Energy Office of Electricity's 2024 analysis of eleven long-duration storage technologies nor PNNL's Energy Storage Cost and Performance Database, and no third-party teardown, destructive test or bench validation of a Form cell is public. Every 100-hour iron-air cost figure in circulation traces to Form itself or to the reported Pine Island transaction price. That is a materially weaker evidentiary position than vanadium flow or compressed air.",
+  "Collection gap: no rate filing anywhere discloses a cost per kilowatt-hour for a Form system. Xcel filed the Sherco cost as a trade secret under Minnesota law, Dominion's $70.6m Darbytown figure bundles the Form system with an Eos zinc-hybrid and is not split, and Georgia and Colorado disclose nothing. Form itself publishes no dollar figure on its own site — only 'less than one tenth the cost of lithium-ion'. Also unresolved: no New York Power Authority or Rochester project appears in any Form release, so attributions of one are unverified against first-party channels.",
+  "Collection note on sourcing: formenergy.com sits behind a JavaScript proof-of-work wall that returns an empty stub to automated fetches, so every first-party page cited here was read from a dated Wayback Machine capture of the canonical URL. The provenance tiering reflects who published the page rather than who served it, exactly as the Phase B sessions handled tract.com and primedatacenters.com."
+ ],
+ "sources": [
+  {
+   "label": "Latitude Media — what is behind Form Energy's downgraded valuation",
+   "url": "https://www.latitudemedia.com/news/whats-behind-form-energys-downgraded-valuation/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "WINSS — Form Energy raises $750m Series G at a lower valuation; backlog progression 65 → 75 → 80 GWh",
+   "url": "https://www.winssolutions.org/form-energy-750m-series-g/",
+   "date": "2026-08-19"
+  },
+  {
+   "label": "Pulse 2.0 — Form Energy raises $750m Series G as the iron-air backlog jumps to 80 GWh",
+   "url": "https://pulse2.com/form-energy-raises-750-million-series-g-as-iron-air-battery-backlog-jumps-to-80-gwh/",
+   "date": "2026-08-16"
+  },
+  {
+   "label": "Business Model Analyst — Form Energy raised $750m for a battery priced in the wrong unit: the dollar-per-kilowatt critique and round-trip efficiency under 50%",
+   "url": "https://businessmodelanalyst.com/form-energy-100-hour-battery-kilowatt-problem/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Axios Pro — Form Energy lowers its valuation in the Series G raise, about $1.75bn pre-money",
+   "url": "https://www.axios.com/pro/climate-deals/2026/08/12/form-energy-valuation-series-g-lower",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "TechCrunch — Form Energy raises $750m to build more 100-hour batteries for the grid; Google described as a customer",
+   "url": "https://techcrunch.com/2026/08/12/form-energy-raises-750m-to-build-more-100-hour-batteries-for-the-grid/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Energy-Storage.News — iron-air long-duration storage startup Form Energy secures $750m Series G",
+   "url": "https://www.energy-storage.news/iron-air-us-ldes-startup-form-energy-secures-us750-million-series-g-financing/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Form Energy — Series G $750m financing; backlog stated as growing from about 20 GWh to about 80 GWh; Govil and Sloan appointments (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Electron Economics — Form Energy's announced pipeline has crossed 80 GWh, and the bottleneck is the factory",
+   "url": "https://electroneconomics.substack.com/p/form-energys-announced-pipeline-has",
+   "date": "2026-07-11"
+  },
+  {
+   "label": "National Association of Manufacturers — Form Energy triples commercial sales and scales manufacturing; about 400 workers at Weirton",
+   "url": "https://nam.org/6-form-energy-triples-commercial-sales-and-scales-manufacturing-to-meet-demand-for-reliable-power/",
+   "date": "2026-06"
+  },
+  {
+   "label": "Minnesota Public Utilities Commission — notice of objection period, Xcel and Echo Zone Electric Service Agreement, docket E002/M-26-170",
+   "url": "https://legalectric.org/f/2026/04/Notice-of-Objection-Period_20264-230633-01.pdf",
+   "date": "2026-04"
+  },
+  {
+   "label": "Energy-Storage.News — 100-hour long-duration technologies from Form, Noon and Ore compared: round-trip efficiency 35–40%, $15–20/kWh, 25–43 cycles a year",
+   "url": "https://www.energy-storage.news/100-hour-ldes-battery-technologies-from-form-noon-and-ore-how-do-they-compare/",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Form Energy — Crusoe agreement for 12 GWh of iron-air batteries for AI data centres; more than 75 GWh under agreement (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers/",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Energy-Storage.News — Form Energy signs a 12 GWh agreement to supply multi-day iron-air batteries to Crusoe",
+   "url": "https://www.energy-storage.news/form-energy-signs-12gwh-agreement-to-supply-multi-day-iron-air-batteries-to-crusoe/",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "energystorage.org — US Energy Storage Coalition report: the industry is poised to supply 100% of US projects with American-built battery systems",
+   "url": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "Form Energy — FuturEnergy Ireland agreement for the first iron-air project in Ireland; more than 65 GWh under agreement (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-and-futurenergy-ireland-announce-agreement-to-deploy-first-iron-air-battery-storage-project-in-ireland/",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "Energy-Storage.News — Google bets big on 30 GWh of Form Energy iron-air despite efficiency trade-offs; Xcel's response on round-trip efficiency",
+   "url": "https://www.energy-storage.news/google-bets-big-on-30gwh-of-form-energys-iron-air-battery-storage/",
+   "date": "2026-03-11"
+  },
+  {
+   "label": "Latitude Media — is Form ready for the public market?",
+   "url": "https://www.latitudemedia.com/news/is-form-ready-for-the-public-market/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Utility Dive — the world's largest grid battery is part of the Google and Xcel Energy agreement; the Clean Energy Accelerator Charge and the Attorney General's concerns",
+   "url": "https://www.utilitydive.com/news/worlds-largest-grid-battery-part-of-google-xcel-energy-agreement/",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "TechCrunch — Google paid Form Energy about $1bn for its 100-hour battery, citing The Information",
+   "url": "https://techcrunch.com/2026/02/26/google-paid-startup-form-energy-1b-for-its-massive-100-hour-battery/",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Xcel Energy — Xcel Energy to power a new Google data centre in Minnesota: 1,400 MW wind, 200 MW solar and a 300 MW / 30 GWh Form iron-air battery",
+   "url": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Xcel Energy newsroom — Xcel Energy to power a new Google data centre in Minnesota",
+   "url": "https://newsroom.xcelenergy.com/news/xcel-energy-to-power-new-google-data-center-in-minnesota",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Canary Media — a gigantic Form Energy battery will power a Google data centre in Minnesota; price still undisclosed and Form has yet to finish its first commercial installation",
+   "url": "https://www.canarymedia.com/articles/batteries/gigantic-form-energy-battery-google-minnesota-data-center",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Colorado Sun — Xcel cleared to build solar, wind and battery projects with the Public Utilities Commission wary about costs",
+   "url": "https://coloradosun.com/2026/02/05/xcel-projects-solar-wind-battery-colorado-public-utilities-commission/",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Latitude Media — Form Energy's first 100-hour batteries are hitting the grid",
+   "url": "https://www.latitudemedia.com/news/forms-first-100-hour-batteries-are-hitting-the-grid/",
+   "date": "2025-10-29"
+  },
+  {
+   "label": "Georgia Public Service Commission — media advisory on the 2025 integrated resource plan vote, docket 56002",
+   "url": "https://psc.ga.gov/site/assets/files/8932/media_advisory_2025_irp_vote.pdf",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Form Energy — UL9540A safety testing completed with no thermal runaway, no flame and no propagation; about 80% domestic content (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energys-breakthrough-iron-air-battery-technology-sets-a-new-benchmark-for-safety-in-energy-storage-systems/",
+   "date": "2024-12-12"
+  },
+  {
+   "label": "Denver Gazette — Xcel Energy's 10 MW iron-air battery demonstration takes off in Pueblo",
+   "url": "https://www.denvergazette.com/2024/11/22/xcel-energys-10-megawatt-iron-air-battery-demonstration-project-takes-off-in-pueblo-abe543c8-a918-1.html",
+   "date": "2024-11-22"
+  },
+  {
+   "label": "ISO New England — Form Energy technical presentation to the Energy Technologies Working Group: cost targets, footprint, cell, module and enclosure specifications, cycle counts and the project map",
+   "url": "https://www.iso-ne.com/static-assets/documents/100017/2024-10-29_etwg_a05_iso-ne_form_energy.pdf",
+   "date": "2024-10-29"
+  },
+  {
+   "label": "Form Energy — expansion of Form Factory 1 begins to increase manufacturing capacity (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-begins-expansion-of-form-factory-1-to-increase-manufacturing-capacity/",
+   "date": "2024-10-14"
+  },
+  {
+   "label": "Form Energy — Series F $405m financing led by T. Rowe Price with GE Vernova new; total funding over $1.2bn (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-secures-405m-in-series-f-financing-to-expand-iron-air-battery-business-and-operations/",
+   "date": "2024-10-09"
+  },
+  {
+   "label": "Form Energy — Department of Energy selects Form Energy for a $150m Project RAPID award for the West Virginia factory buildout (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/department-of-energy-selects-form-energy-for-150-award-for-the-buildout-of-west-virginia-battery-factory/",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "pv magazine USA — Form Energy iron-air battery in Maine granted $147m",
+   "url": "https://pv-magazine-usa.com/2024/08/16/form-energy-iron-air-battery-in-maine-granted-147-million/",
+   "date": "2024-08-16"
+  },
+  {
+   "label": "Form Energy — Great River Energy and Form Energy break ground on the first-of-its-kind multi-day storage project at Cambridge, Minnesota (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/great-river-energy-and-form-energy-break-ground-on-first-of-its-kind-multi-day-energy-storage-project/",
+   "date": "2024-08-15"
+  },
+  {
+   "label": "Maine Office of the Governor — about $150m federal grant announced for the world's largest multi-day storage project at Lincoln, Maine (85 MW / 8,500 MWh)",
+   "url": "https://www.maine.gov/governor/mills/news/governor-mills-senators-collins-king-and-congressman-golden-announce-federal-grant",
+   "date": "2024-08-06"
+  },
+  {
+   "label": "Form Energy — Massachusetts and the New England states selected for $389m in federal funding for the Power Up New England grid project (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/massachusetts-new-england-states-selected-to-receive-389-million-in-federal-funding-for-transformative-electric-grid-project/",
+   "date": "2024-08-06"
+  },
+  {
+   "label": "VPM News — Dominion approved for three long-term battery storage pilots",
+   "url": "https://www.vpm.org/news/2024-05-16/dominion-approved-for-3-long-term-battery-storage-pilots",
+   "date": "2024-05-16"
+  },
+  {
+   "label": "California Energy Commission — CEC awards $30m to a 100-hour long-duration energy storage project",
+   "url": "https://www.energy.ca.gov/news/2023-12/cec-awards-30-million-100-hour-long-duration-energy-storage-project",
+   "date": "2023-12-13"
+  },
+  {
+   "label": "Form Energy — $30m grant from the California Energy Commission for the first multi-day storage project in California (5 MW / 500 MWh, Mendocino County) (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-awarded-30m-grant-from-the-california-energy-commission-to-deploy-first-multi-day-energy-storage-project-in-california/",
+   "date": "2023-12-13"
+  },
+  {
+   "label": "Renewable Energy World — Dominion proposes lithium-ion alternative battery pilots with Form and Eos; 4.95 MW / 494 MWh",
+   "url": "https://www.renewableenergyworld.com/energy-storage/battery/dominion-energy-proposes-lithium-ion-alternative-battery-pilots/",
+   "date": "2023-09-20"
+  },
+  {
+   "label": "Virginia Business — Dominion pitches the state on a $70m battery storage pilot; $70.6m across 8.94 MW combined",
+   "url": "https://virginiabusiness.com/dominion-pitches-state-on-70m-battery-storage-pilot/",
+   "date": "2023-09-19"
+  },
+  {
+   "label": "Dominion Energy — Dominion Energy explores pioneering battery storage technologies in Virginia (Darbytown Storage Pilot) (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/dominion-energy-explores-pioneering-battery-storage-technologies-in-virginia/",
+   "date": "2023-09-19"
+  },
+  {
+   "label": "NYSERDA — Governor Hochul announces nearly $15m for long-duration energy storage demonstration projects",
+   "url": "https://www.nyserda.ny.gov/About/Newsroom/2023-Announcements/2023-08-17-Governor-Hochul-Announces-Nearly-15-Million-in-Long-Duration-Energy",
+   "date": "2023-08-17"
+  },
+  {
+   "label": "Form Energy — grant awarded to deploy the first multi-day battery system in New York (10 MW / 1,000 MWh) (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-awarded-grant-to-deploy-first-multi-day-battery-system-in-new-york/",
+   "date": "2023-08-17"
+  },
+  {
+   "label": "Utility Dive — Minnesota Public Utilities Commission approves the Xcel and Form Energy 10 MW / 1,000 MWh Sherco battery, docket 20233-193670-01, with a cost cap and a roughly 30-cent monthly rider",
+   "url": "https://www.utilitydive.com/news/minnesota-puc-xcel-form-energy-battery-sherco-solar/685460/",
+   "date": "2023-07-07"
+  },
+  {
+   "label": "Form Energy — Xcel Energy receives approval to build multi-day battery storage at the Sherco site (10 MW / 1,000 MWh on about five acres) (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/xcel-energy-receives-approval-to-build-multi-day-battery-storage-at-sherco-site/",
+   "date": "2023-07-06"
+  },
+  {
+   "label": "Star Tribune — Minnesota regulators approve the Xcel battery project in Becker; its cost was not disclosed",
+   "url": "https://www.startribune.com/minnesota-public-utilities-commission-approve-xcel-energy-form-energy-battery-project-becker/600287844",
+   "date": "2023-07-06"
+  },
+  {
+   "label": "Center of the American Experiment — the Minnesota commission approves an iron-air battery, citing Form's own decks at 35–38% round-trip efficiency, or 2.63 MWh in per 1 MWh out",
+   "url": "https://www.americanexperiment.org/the-minnesota-public-utilities-commission-approves-xcel-energys-horribly-inefficient-iron-air-battery/",
+   "date": "2023-07"
+  },
+  {
+   "label": "Form Energy — Georgia Power and Form Energy continue forward with the 15 MW / 1,500 MWh iron-air battery agreement (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-georgia-power-continue-forward-with-15-megawatt-iron-air-battery-system-agreement/",
+   "date": "2023-06-12"
+  },
+  {
+   "label": "Utility Dive — Xcel Energy plans Form Energy multi-day storage at retired coal plant sites",
+   "url": "https://www.utilitydive.com/news/xcel-energy-form-energy-storage-coal-iron-battery/641386/",
+   "date": "2023-01-30"
+  },
+  {
+   "label": "Form Energy — Form Energy partners with Xcel Energy on two multi-day storage projects (Sherco, Minnesota and Comanche, Colorado) (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-partners-with-xcel-energy-on-two-multi-day-energy-storage-projects/",
+   "date": "2023-01-26"
+  },
+  {
+   "label": "Form Energy — chemistry of the multi-day storage battery unveiled alongside the Series D led by ArcelorMittal's XCarb innovation fund (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-energy-unveils-chemistry-of-multi-day-storage-battery-technology/",
+   "date": "2021-07-22"
+  },
+  {
+   "label": "Form Energy — Battery Technology: reversible rusting, the battery cycle, footprint and key advantages (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/technology/battery-technology/"
+  },
+  {
+   "label": "Form Energy — Technology overview and applications (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/technology/"
+  },
+  {
+   "label": "Form Energy — Form Factory 1: site, floor area, nameplate target and workforce (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/form-factory-1/"
+  },
+  {
+   "label": "Form Energy — About: leadership, investor wall and the year-by-year validation timeline (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/about/"
+  },
+  {
+   "label": "Form Energy — Formware grid modelling software (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
+   "url": "https://formenergy.com/technology/grid-modeling-software/"
+  },
+  {
+   "label": "CEQAnet — East Road Storage Project environmental record, SCH 2023100833",
+   "url": "https://ceqanet.lci.ca.gov/Project/2023100833"
+  },
+  {
+   "label": "American Public Power Association — the Minnesota Google data centre agreement includes a 300 MW iron-air battery system",
+   "url": "https://www.publicpower.org/periodical/article/minnesota-google-data-center-agreement-includes-300-mw-iron-air-battery-system"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

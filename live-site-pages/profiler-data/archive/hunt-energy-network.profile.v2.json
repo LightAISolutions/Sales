@@ -366,17 +366,6 @@
       "note": "Owner of Sweeny, the one third-party-named peer distributed generation resource this dossier benchmarks Faulkner against.",
       "context": "Modo Energy published a head-to-head of two 9.9 MW one-hour ERCOT distributed generation resources — ENGIE's Sweeny and Hunt Energy Network's Faulkner — comparing revenues, operational strategy, cycling rates, capacity allocation and regulation and ECRS arbitrage. ENGIE's own project page lists Sweeny at 10 MWac in Brazoria County, Texas. Beyond the sub-10 MW niche the two compete at very different scales: ENGIE is the largest ERCOT storage owner at about 2.8 GW.",
       "source": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-sweeny-engie-faulkner-hunt-energy-network-revenues-operational-strategy-cycling-rates-capacity-allocation-regulation-ecrs-arbitrage-comparison"
-    },
-    {
-      "slug": "recurrent-energy",
-      "type": "supplier",
-      "status": "historical",
-      "since": "2026-02",
-      "scale": "Fort Duncan, 100 MW / 200 MWh",
-      "via": "Purchase of an operating merchant ERCOT battery",
-      "note": "Hunt bought the Fort Duncan battery from Recurrent Energy, Canadian Solar's majority-owned development arm, in a completion announced on 24 February 2026.",
-      "context": "Recurrent developed Fort Duncan in Maverick County, brought it to commercial operation in June 2025 on $183m of project financing and tax equity, and sold it eight months later; Canadian Solar recognised the revenue in its Q1 2026 and named the sale as the driver of that quarter's sequential revenue improvement. The asset carried Recurrent's captive supply chain with it — e-STORAGE supplied the batteries and Burns & McDonnell was EPC. One correction to note against this dossier's existing text: Recurrent is Canadian Solar's majority-owned rather than wholly-owned subsidiary, since BlackRock took Series A convertible preferred representing 20% on an as-converted basis in 2024. Recurrent's chief executive changed in July 2026, so Ismael Guerrero, quoted in the February release, is no longer in that role.",
-      "source": "https://recurrentenergy.com/recurrent-energy-completes-sale-of-200-mwh-battery-storage-facility-to-hunt-energy-network-in-texas/"
     }
   ],
   "policyExposure": [
@@ -940,5 +929,5 @@
     }
   ],
   "lastUpdated": "2026-09-06",
-  "profileVersion": 3
+  "profileVersion": 2
 }

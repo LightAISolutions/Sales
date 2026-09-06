@@ -1,0 +1,371 @@
+{
+ "schemaVersion": 2,
+ "slug": "clearway-energy",
+ "title": "Clearway Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here-loss-and-dividend",
+   "title": "Start here: a company that lost $231 million and raised its dividend",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "In 2025 Clearway Energy reported a **net loss of $231 million** and paid shareholders **$1.77 a share**, up from $1.65. Both numbers are correct and neither is a trick. Understanding why is most of what you need to know about how contracted renewables are financed in America.",
+    "The gap has two causes and this guide takes them in turn. **Depreciation** of $682m is a real expense in accounting and no cash at all. And **{{HLBV}}** allocation pushed $(400)m of the loss onto tax-equity investors rather than onto Clearway's own shareholders — leaving net income *attributable to Clearway Energy, Inc.* at a positive $169m inside a $(231)m consolidated loss.",
+    "So the dividend is not paid out of profit. It is paid out of **{{CAFD}}**, which was $430m. Learn that one distinction and most yieldco reporting stops being confusing."
+   ]
+  },
+  {
+   "id": "what-a-yieldco-is",
+   "title": "What a yieldco actually is, and what it deliberately is not",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A **{{yieldco}}** owns operating power plants and passes most of their cash to shareholders. It is a distribution vehicle wearing the clothes of an operating company.",
+    "Look at what Clearway Energy, Inc. does *not* have. It has **no employees** — every one of them transferred to Clearway Energy Group on 1 January 2025, and the listed company now pays the sponsor about **$23.8m a year** under a services agreement to be run. It has **no development arm**: the sponsor originates and builds. It does not choose most of its own growth — the sponsor *offers* assets and the listed company's **independent directors** approve or decline.",
+    "The sponsor, Clearway Energy Group, is owned **50/50 by Global Infrastructure Partners — now part of BlackRock — and TotalEnergies**. It holds all the Class B and Class D shares and controls more than half the votes.",
+    "**Why build it this way?** Development is lumpy, risky and capital-hungry; operating a contracted wind farm is none of those things. Splitting them lets each half raise the money it suits. Public shareholders buy a bond-like stream of contracted cash flows at an equity yield; the sponsor keeps the risky, high-return development business private and recycles capital by selling finished projects into the listed vehicle.",
+    "**The cost of building it this way** is the conflict sitting in the middle. Every {{drop-down}} is a related-party transaction: the same people own both sides. There is no auction setting the price. In Clearway's case there is not even a right-of-first-offer agreement any more — the words 'right of first offer' appear **zero times** in the 2025 annual report. What protects the public shareholder is three independent directors and a fairness process."
+   ]
+  },
+  {
+   "id": "cafd-vs-net-income",
+   "title": "Reading the two income statements a yieldco really has",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Every figure below is Clearway's FY2025. Read down the column and watch the same year tell two different stories.",
+   "cols": [
+    "Line",
+    "FY2025",
+    "What it measures",
+    "Why it moves"
+   ],
+   "rows": [
+    [
+     "Total operating revenues",
+     "$1,429m",
+     "Energy and capacity sold",
+     "Volume × contracted price. Volume is weather"
+    ],
+    [
+     "Depreciation and amortisation",
+     "$(682)m",
+     "Accounting spread of capital already spent",
+     "Nothing — it is fixed by the asset base and does not consume cash this year"
+    ],
+    [
+     "Net loss",
+     "$(231)m",
+     "The GAAP bottom line",
+     "Depreciation and interest, mostly"
+    ],
+    [
+     "…of which attributable to non-controlling interests",
+     "$(400)m",
+     "The tax-equity partners' share under {{HLBV}}",
+     "How the partnership agreements allocate, not who lost money"
+    ],
+    [
+     "Net income attributable to Clearway Energy, Inc.",
+     "$169m",
+     "The parent's GAAP share",
+     "Positive, inside a consolidated loss"
+    ],
+    [
+     "Adjusted EBITDA",
+     "$1,217m",
+     "Cash earnings before financing and depreciation",
+     "Operations"
+    ],
+    [
+     "**{{CAFD}}**",
+     "**$430m**",
+     "**Cash left after debt service, maintenance capital and taxes**",
+     "**This is what sets the dividend**"
+    ],
+    [
+     "Dividend paid",
+     "$1.77/share",
+     "The distribution",
+     "Management policy: about 6.5% annual growth"
+    ]
+   ],
+   "note": "The trap for an outsider is treating the net loss as the headline. For this structure it is close to meaningless — it is an artefact of depreciation and of how tax-equity partnerships allocate. The number that constrains behaviour is CAFD, and there is no published analyst consensus for it: sell-side models cover earnings per share and revenue instead. So any 'beat' or 'miss' on CAFD is measured against the company's own guidance and nothing else."
+  },
+  {
+   "id": "tax-equity-and-hlbv",
+   "title": "Tax equity: why someone else takes the loss",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "American renewables are part-financed by selling tax benefits to someone with a large tax bill. A bank puts cash into the project and takes most of the {{ITC}} or production credits plus most of the taxable loss for a set period; the developer keeps the cash and the asset.",
+    "This creates a partnership whose profit share changes over time, which ordinary consolidation cannot express. The answer is **{{HLBV}}** — hypothetical liquidation at book value. Each period you ask: if we liquidated this project today at book value, what would each partner get? The change in that answer is the partner's income or loss for the period.",
+    "The consequence is the $(400)m line above. It is not that the tax-equity investor lost $400m of money; it is that its claim on a hypothetical liquidation fell by that much, largely because it absorbed depreciation and credits.",
+    "**Why this matters beyond accounting.** In January 2026 Clearway disclosed a **material weakness in internal control** over exactly this calculation, and PwC issued an adverse opinion on internal control for the year. The revisions themselves were immaterial and changed neither net income nor operating cash flow — but the weakness sits in the mechanism through which the entire tax-credit economics reach the income statement, which is why it is a live diligence item rather than a footnote.",
+    "**The transferability change.** Credits became sellable outright under the 2022 law, so a developer can now sell a credit for cash instead of assembling a partnership. That is simpler and cheaper, and it is slowly shrinking the role of classic tax equity — but existing partnerships run for years, so HLBV will be distorting these income statements for a long time yet."
+   ]
+  },
+  {
+   "id": "what-a-peaker-sells-when-idle",
+   "title": "What a gas plant sells when it almost never runs",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Clearway's Flexible Generation segment is 2,770 MW of California gas. In 2025 it generated **323 GWh** — down from 847 GWh the year before — and produced **$210m of Adjusted EBITDA** on $291m of revenue. Roughly 17% of the company's cash earnings came from plants that ran about 1% of the time.",
+    "They are not selling electricity. They are selling **resource adequacy**: a commitment to be available when the grid operator needs them. California requires every load-serving entity to contract enough capacity to cover peak demand plus a reserve margin, and it buys that obligation in megawatts of availability, not megawatt-hours delivered.",
+    "This is the same product a four-hour battery sells, which is why the two compete — and why {{ELCC}} matters. A gas plant is credited close to its nameplate because it can run as long as fuel lasts. A four-hour battery is credited well below nameplate, because at hour five it is empty. Accreditation is the exchange rate between a technology and a capacity payment.",
+    "**Where the risk is.** Marsh Landing at 820 MW has contracts expiring between 2026 and 2030; Walnut Creek at 501 MW between 2026 and 2027. That is 1,321 MW recontracting into a market whose prices have risen sharply. Clearway signed new agreements for both in the second quarter of 2026 and published **no tenor, no price and no megawatts** — the single largest undisclosed variable in the company.",
+    "Note also what is *not* happening: the repowering programme is **wind only**. There is no gas repowering anywhere in the filings."
+   ]
+  },
+  {
+   "id": "p50-and-the-weather",
+   "title": "Why a fully contracted portfolio still misses guidance",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "In August 2026 Clearway cut its {{CAFD}} guidance from $470–510m to $430–470m — its first cut in three years. Nothing about its contracts changed. The wind did.",
+    "A wind or solar contract pays per megawatt-hour delivered. The forecast behind the guidance is a **{{P-50}}** estimate: the output the plant should exceed half the time. Clearway measured **CAISO wind at 87% of P-50** and ERCOT at 98%, on a strong El Niño pattern, and second-quarter renewable output came in about **5% below** what the guidance mid-point needed.",
+    "This is the structural point. Being contracted removes *price* risk. It does not remove *volume* risk, and for wind the volume is weather. The only defences are geographic diversity, which Clearway has, and contracts written per megawatt of capacity rather than per megawatt-hour — which is exactly what the gas fleet and the battery tolls are.",
+    "Worth noticing: the same quarter **beat** on earnings and revenue, and the shares fell 1.73%. The market was pricing the guidance, not the quarter."
+   ]
+  },
+  {
+   "id": "storage-contracted-not-merchant",
+   "title": "A battery fleet that never touches an arbitrage market",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Clearway's 1,439 MW of batteries earn almost nothing from trading. Compare how each block is paid — and note the rated-versus-net gap, which is where partnership ownership hides.",
+   "cols": [
+    "Portfolio",
+    "Rated MW",
+    "Net MW",
+    "Duration",
+    "How it is paid"
+   ],
+   "rows": [
+    [
+     "California (Arica, three Daggetts, two Rosamonds, Victory Pass)",
+     "844",
+     "391",
+     "not disclosed",
+     "Resource adequacy and utility contracts to 2033–2041; most held at 25–50% in partnerships"
+    ],
+    [
+     "Honeycomb, Utah",
+     "320",
+     "320",
+     "Four hours (1,280 MWh)",
+     "20-year {{tolling agreement}} with PacifiCorp to 2046 — wholly owned"
+    ],
+    [
+     "Pine Forest, ERCOT",
+     "200",
+     "100",
+     "not disclosed",
+     "Held at 50%; part of a solar-plus-storage centre"
+    ],
+    [
+     "Hawaii (Mililani I, Waiawa)",
+     "75",
+     "38",
+     "not disclosed",
+     "Hawaiian Electric to 2042–2043"
+    ],
+    [
+     "Spindle, Colorado (building)",
+     "199",
+     "—",
+     "Two hours (398 MWh)",
+     "Public Service Company of Colorado"
+    ]
+   ],
+   "note": "Two lessons. First, **rated is not owned**: 844 MW of California batteries is 391 MW of economic interest, so any comparison against a wholly-owned fleet on rated megawatts is roughly double-counting. Second, **duration follows the buyer** — PacifiCorp bought four hours, Colorado bought two. Duration is a commercial decision, not a technical default. And note what is missing from the table: Clearway's filings state storage in megawatts only, so no MWh figure exists in any company source for the entire California fleet."
+  },
+  {
+   "id": "clearway-on-one-clock",
+   "title": "Clearway on one clock",
+   "kind": "timeline",
+   "read": "4 min",
+   "intro": "Three threads run together: the storage fleet leaves California, the share structure simplifies, and the weather arrives.",
+   "items": [
+    {
+     "x": 2025.19,
+     "label": "Honeycomb financed: $605m for 320 MW / 1,280 MWh in Utah on 20-year PacifiCorp tolls"
+    },
+    {
+     "x": 2025.43,
+     "label": "Tesla Megapack order — 490 MW / 1,356 MWh on top of an existing 520 MW / 1,680 MWh"
+    },
+    {
+     "x": 2025.6,
+     "label": "A 122 MW data centre announced co-located with the Elbow Creek wind farm in Texas"
+    },
+    {
+     "x": 2026.02,
+     "label": "Material weakness in internal control disclosed; PwC issues an adverse opinion for FY2025"
+    },
+    {
+     "x": 2026.04,
+     "label": "$600m of 5.750% notes due 2034 — two points above the 2031s, the cost of capital having moved"
+    },
+    {
+     "x": 2026.05,
+     "label": "About 1.17 GW of Google PPAs announced, originated at the sponsor rather than the listed company"
+    },
+    {
+     "x": 2026.24,
+     "label": "Mesquite Sky recontracted onto a 15-year hyperscaler PPA"
+    },
+    {
+     "x": 2026.25,
+     "label": "Cardinal Portfolio bought for $322m — 613 MW, more than doubling distributed solar"
+    },
+    {
+     "x": 2026.33,
+     "label": "Class A converts into Class C; CWEN.A retired; a voting trust preserves the sponsor's exact relative power"
+    },
+    {
+     "x": 2026.33,
+     "label": "Honeycomb reaches substantial completion — the largest storage addition, and it is in Utah"
+    },
+    {
+     "x": 2026.54,
+     "label": "CAISO wind measured at 87% of P-50"
+    },
+    {
+     "x": 2026.59,
+     "label": "2026 CAFD guidance cut to $430–470m — the first cut in three years"
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this model fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**The dividend is a promise against cash you do not control.** The listed company has no employees, no developers and no pipeline of its own. If the sponsor stops offering good assets at fair prices, growth stops — and the sponsor is owned by two investors with their own portfolio priorities.",
+    "**Growth requires capital, and capital has repriced.** The 2034 notes came at 5.750% against 3.750% on the 2031s and 2032s. Total debt reached $9,137m against $543m of cash while liquidity fell from $1,330m to $985m in two years. A vehicle that grows by buying assets is directly exposed to its own cost of funds.",
+    "**Weather is an unhedged input.** A contracted portfolio removes price risk and keeps volume risk. One El Niño took 8% off CAISO wind and $40m off the guidance mid-point.",
+    "**The gas cliff is undisclosed.** 1,321 MW of Marsh Landing and Walnut Creek recontracting from 2026, on terms the company has not published.",
+    "**And the accounting that produces the headline number was found defective.** Not fatally — no restatement, no cash-flow impact — but the HLBV control weakness was unremediated at the year end, in exactly the calculation that decides how much of the loss belongs to whom."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "5 min",
+   "cards": [
+    {
+     "q": "A yieldco reports a $231m net loss and raises its dividend. What are the two mechanisms that make both true?",
+     "a": "Depreciation of $682m is a non-cash charge, and HLBV allocation pushed $(400)m of the loss onto tax-equity partners rather than onto the parent's shareholders. The dividend is paid from cash available for distribution, which was $430m — not from accounting profit."
+    },
+    {
+     "q": "Why is there no analyst consensus for the metric Clearway guides to?",
+     "a": "Sell-side coverage models earnings per share and revenue, which are GAAP outputs. CAFD is a company-defined non-GAAP measure, so no published consensus exists for it in any period — a 'beat' on CAFD is measured only against the company's own guidance."
+    },
+    {
+     "q": "What does a gas plant that ran 1% of the year actually sell for $210m of EBITDA?",
+     "a": "Resource adequacy — a contractual commitment to be available at peak. California buys it in megawatts of availability, not megawatt-hours delivered, which is why generation can collapse from 847 GWh to 323 GWh while earnings hold."
+    },
+    {
+     "q": "A developer's battery fleet is quoted at 844 MW rated and 391 MW net. What does the gap tell you?",
+     "a": "That most of the fleet is held in partnerships at minority stakes — here 25% to 50%. The rated figure is the physical plant; the net figure is the economic interest. Comparing one company's rated megawatts against another's net megawatts roughly doubles the answer."
+    },
+    {
+     "q": "Clearway's contracts are fully priced and long-dated, yet it cut guidance. What risk did the contracts not remove?",
+     "a": "Volume. A per-megawatt-hour contract removes price risk and leaves resource risk with the owner. CAISO wind at 87% of P-50 is a shortfall no offtake agreement compensates for."
+    },
+    {
+     "q": "Why did retiring the Class A shares change nothing about who controls the company?",
+     "a": "Because the sponsor simultaneously placed 41,678,637 Class B shares into a voting trust required to vote in the same proportion as all stockholders. Post-conversion voting power reproduced the pre-conversion 54.88/45.12 split exactly — public holders gained a single deeper class, the sponsor gave up no relative votes."
+    },
+    {
+     "q": "What is the structural conflict in a drop-down, and what mitigates it here?",
+     "a": "The sponsor sells to a listed company it controls, so no auction sets the price. The mitigations are approval by independent directors and a fairness process. Notably there is no right-of-first-offer agreement — the term appears nowhere in the 2025 annual report."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "6 min",
+   "items": [
+    {
+     "q": "A contracted renewables owner reports rising revenue and a widening net loss. What should you check first?",
+     "c": [
+      "Whether offtakers are defaulting",
+      "Depreciation and the HLBV allocation to non-controlling interests",
+      "Whether the fleet is being curtailed",
+      "Interest-rate hedges"
+     ],
+     "a": 1,
+     "why": "A growing asset base raises depreciation, and tax-equity partnerships absorb much of the loss through HLBV. In FY2025 that combination produced a $(231)m consolidated loss alongside $169m of net income attributable to the parent and $430m of CAFD. Check the non-cash and allocation lines before concluding anything about the business."
+    },
+    {
+     "q": "A yieldco announces that its sponsor has 'offered' it a 210 MW battery portfolio. What has actually happened?",
+     "c": [
+      "The purchase is contractually committed",
+      "Nothing binding — independent directors must still approve it",
+      "The sponsor is obliged to sell at an appraised price",
+      "The yieldco has a right of first offer it can exercise"
+     ],
+     "a": 1,
+     "why": "An offer starts a negotiation. Each drop-down is subject to negotiation with the sponsor and to review and approval by the listed company's independent directors. There is no right-of-first-offer agreement in the current filings, so nothing obliges either party until terms are agreed."
+    },
+    {
+     "q": "Which pair of numbers tells you most about how much of a battery fleet its owner actually owns?",
+     "c": [
+      "Megawatts and megawatt-hours",
+      "Rated capacity and net capacity",
+      "Nameplate and capacity factor",
+      "Contracted and merchant megawatts"
+     ],
+     "a": 1,
+     "why": "Rated capacity is the physical plant; net capacity is the owner's economic share after partnership interests. Clearway's California batteries are 844 MW rated and 391 MW net — a comparison on rated megawatts overstates the position by more than double."
+    },
+    {
+     "q": "Why does duration differ between Clearway's Utah and Colorado batteries — four hours against two?",
+     "c": [
+      "Different battery chemistries",
+      "Different climates",
+      "Because each buyer bought a different product",
+      "Colorado's grid cannot absorb four hours"
+     ],
+     "a": 2,
+     "why": "Both are Tesla installations. PacifiCorp contracted a four-hour product under a 20-year toll; Public Service Company of Colorado contracted two hours. Duration is set at procurement by what the offtaker will pay for, and it fixes which markets the asset can serve for its whole life."
+    },
+    {
+     "q": "A company discloses a material weakness in its HLBV controls, with no restatement and no cash-flow impact. How should you weigh it?",
+     "c": [
+      "Ignore it — no numbers changed",
+      "Treat it as fatal to the financials",
+      "As a live diligence item, because HLBV is how the tax-credit economics reach the income statement",
+      "As a routine first-year reporting issue"
+     ],
+     "a": 2,
+     "why": "The revisions were immaterial and left net income and operating cash flow untouched, so it is not a restatement. But the weakness sits in the exact mechanism that allocated $(400)m away from the parent in FY2025, it drew an adverse opinion from the auditor, and it was unremediated at the year end."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "Clearway Energy Group",
+   "d": "The private sponsor, owned 50/50 by Global Infrastructure Partners (now part of BlackRock) and TotalEnergies. It employs the staff, develops the projects and holds all the Class B and Class D shares of the listed company."
+  },
+  {
+   "t": "Honeycomb Portfolio",
+   "d": "Four 80 MW battery projects in Beaver and Iron Counties, Utah — 320 MW / 1,280 MWh of four-hour Tesla batteries on 20-year PacifiCorp tolling agreements, substantially complete on 1 May 2026."
+  },
+  {
+   "t": "Clean Energy Accelerator Charge",
+   "d": "A tariff mechanism under which a large customer pays the full cost of the new generation built to serve it, rather than spreading that cost across all ratepayers."
+  }
+ ]
+}

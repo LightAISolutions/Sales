@@ -1261,28 +1261,6 @@
       "note": "SPS signed a definitive electric service agreement on 5 December 2025 to supply up to 200 MW to Fermi America's Project Matador campus near Amarillo — the only named SPS data-center contract.",
       "context": "The PR Newswire release states 86 MW 'beginning January 2026' over SPS's 115 kV system, ramping to 200 MW, with Xcel's Texas–New Mexico president Adrian Rodriguez quoted. Fermi's FY2025 10-K later restated the 86 MW as 'expected to be energized in the second half of 2026' with the incremental 114 MW contractually due by 1 October 2027, and its Q2 2026 release still described 'working with Xcel Energy toward 200 MW onsite power' — so no power had been delivered by mid-August 2026, and Xcel did not name Fermi on its Q2 2026 call. The 200 MW is a grid supplement to a campus that plans up to 17 GW of its own generation; on Xcel's pipeline slide it is the smallest contracted tier. Recorded here from Fermi's account (the Fermi dossier, September 2026); Xcel has not separately announced the agreement.",
       "source": "https://www.prnewswire.com/news-releases/fermi-america-executes-electric-service-agreement-with-southwestern-public-service-company-a-subsidiary-of-xcel-energy-securing-up-to-200-mw-of-power-302634443.html"
-    },
-    {
-      "slug": "clearway-energy",
-      "type": "supplier",
-      "status": "announced",
-      "since": "2025",
-      "scale": "199 MW / 398 MWh (Spindle)",
-      "via": "Storage offtake with Public Service Company of Colorado",
-      "note": "Clearway is building the Spindle battery in Weld County under contract to Public Service Company of Colorado.",
-      "context": "Spindle is a 199 MW / 398 MWh two-hour Tesla installation, financed at $261m in February 2026 with Blattner as EPC and targeted for commercial operation in late 2026. Worth recording precisely because the market has misreported the counterparty: at least one trade outlet attributed a 200 MW Colorado storage contract to Microsoft, when the offtaker is the regulated Xcel operating utility. Clearway acquired the project from its own private sponsor, with its independent directors approving the drop-down alongside Rosamond South II for about $93m of combined corporate capital.",
-      "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm"
-    },
-    {
-      "slug": "form-energy",
-      "type": "supplier",
-      "status": "active",
-      "since": "2023-01",
-      "scale": "30 GWh at Pine Island plus 1,000 MWh each at Sherco and Comanche",
-      "via": "100-hour iron-air multi-day storage",
-      "note": "Form Energy supplies Xcel's three iron-air projects, including the 300 MW / 30 GWh system serving Google at Pine Island.",
-      "context": "The relationship began in January 2023 with two 10 MW / 1,000 MWh projects at Sherco in Minnesota and Comanche in Colorado. Minnesota regulators approved Sherco on 6 July 2023 in docket 20233-193670-01, imposing a cost cap unless overruns are shown prudent and recovering the cost through a renewable rate rider at about 30 cents a month per residential customer; the project cost itself was filed as a trade secret, which is why no rate filing anywhere states a price for 100-hour iron-air. The Colorado project has had no first-party approval or construction announcement from either party. Pine Island expands the relationship tenfold and its Electric Service Agreement sits in docket E002/M-26-170, filed 15 April 2026 and still pending. Xcel is also the public voice defending iron-air's 35–50% round-trip efficiency, on the ground that the asset cycles roughly eight to thirteen times a year and charges on surplus that would otherwise be curtailed.",
-      "source": "https://formenergy.com/xcel-energy-receives-approval-to-build-multi-day-battery-storage-at-sherco-site/"
     }
   ],
   "policyExposure": [
@@ -2176,18 +2154,8 @@
     {
       "label": "Colorado Clean Energy Plan (xcelenergy.com)",
       "url": "https://www.xcelenergy.com/company/rates_and_regulations/resource_plans/clean_energy_plan"
-    },
-    {
-      "label": "Clearway Energy — 8-K on the Spindle (199 MW BESS, Colorado) purchase agreement",
-      "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm",
-      "date": "2025-12-02"
-    },
-    {
-      "label": "Form Energy — Xcel Energy receives approval to build multi-day battery storage at the Sherco site (read via a dated Wayback Machine capture; formenergy.com serves an empty stub to automated fetches)",
-      "url": "https://formenergy.com/xcel-energy-receives-approval-to-build-multi-day-battery-storage-at-sherco-site/",
-      "date": "2023-07-06"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 4
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 3
 }

@@ -1,0 +1,334 @@
+{
+ "schemaVersion": 2,
+ "slug": "recurrent-energy",
+ "title": "Recurrent Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here-the-pipeline-number",
+   "title": "Start here: the most misleading number in renewables",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "3 min",
+   "ps": [
+    "Recurrent Energy reports an **84.1 GWh storage {{development pipeline}}**. Its operating battery fleet in the United States, on the regulator's own generator inventory, is **2,620 MWh gross** — and about **1,500 MWh** once you strip out the 80% of the Crimson project that Axium Infrastructure owns.",
+    "The pipeline is roughly **fifty-six times** the net operating fleet, and about **thirteen times** everything the company has built in its entire history. That is not a scandal and nobody is lying. It is what the word 'pipeline' means in this industry, and almost every developer quotes one.",
+    "This guide is about learning to read that number — what it counts, what converts, and why an early-stage pipeline megawatt-hour and an operating megawatt-hour are different objects that happen to share a unit."
+   ]
+  },
+  {
+   "id": "what-a-pipeline-counts",
+   "title": "The four stages, and what each one really is",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "These are the company's own stage definitions, with its 30 June 2026 figures. Read the definitions first, then the numbers.",
+   "cols": [
+    "Stage",
+    "The company's definition",
+    "30 June 2026",
+    "Share",
+    "What it actually is"
+   ],
+   "rows": [
+    [
+     "Early-stage development",
+     "Projects controlled by Recurrent that are 'in the process of securing interconnection rights'",
+     "71,238 MWh",
+     "84.7%",
+     "A queue position and some land control. Most will never be built"
+    ],
+    [
+     "Advanced development",
+     "'Secured or have more than 90% certainty of securing an interconnection agreement'",
+     "7,841 MWh",
+     "9.3%",
+     "A real grid connection, or nearly. Now it is a project"
+    ],
+    [
+     "Backlog",
+     "'Late-stage projects that have passed their risk cliff date and expected to start construction within the next 1-4 years'",
+     "4,378 MWh",
+     "5.2%",
+     "Committed. Financeable"
+    ],
+    [
+     "Under construction",
+     "Being built",
+     "600 MWh",
+     "0.7%",
+     "Steel in the ground"
+    ]
+   ],
+   "note": "Two things follow. First, the headline is dominated by its weakest category — take away early-stage and the number falls from 84.1 GWh to 12.8 GWh. Second, the number **churns rather than compounds**: it was 83.5 GWh at the end of 2025, 80.6 GWh in March 2026 and 84.1 GWh in June, with the June rise driven almost entirely by Latin America nearly doubling while Europe was pruned by 3.3 GWh. Management's word for this is 'pruning less attractive projects'. A pipeline that only ever goes up is a pipeline nobody is cleaning."
+  },
+  {
+   "id": "interconnection-is-the-asset",
+   "title": "Why the interconnection is the thing being bought",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A generator cannot simply plug into the grid. It joins an **{{interconnection queue}}**, waits for studies that determine what network upgrades its connection would require, and signs an agreement committing it to pay for them. In most American markets this now takes years, and the majority of projects that enter the queue never leave it as operating plants.",
+    "That scarcity is why a developer's pipeline is mostly queue positions, and why the honest question about any pipeline is not 'how big' but 'how much of it is connected'.",
+    "Recurrent's management gave the answer on its second-quarter 2026 call: about **6 GW of solar and 13 GWh of storage** had secured grid interconnection globally, excluding projects already operating. Against an 84.1 GWh pipeline that is roughly **15%**.",
+    "The comparison over time is more useful than the level. At the January 2024 BlackRock announcement the company cited **12 GWh interconnected out of 55 GWh** — about 22%. So the pipeline has grown much faster than the connected subset within it. That is the single most informative fact in this dossier, and it comes from an earnings call rather than a filing.",
+    "**The reason it matters commercially:** an interconnection agreement is transferable with the project. When Recurrent sells a development-stage asset, a large part of what the buyer is paying for is the queue position and the studies behind it. The land, the panels and the batteries can be bought by anyone; the connection cannot."
+   ]
+  },
+  {
+   "id": "develop-and-sell",
+   "title": "Two ways to make money from a project, and Recurrent does both",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "A developer reaches a fork at commercial operation: keep the asset and collect contracted revenue for twenty years, or sell it and recycle the capital into the next one. The choice looks philosophical and is actually a balance-sheet decision.",
+   "sales": "When a company says it is 'becoming an owner-operator', check the revenue mix. If asset sales are still half of revenue, the transition has been announced rather than completed.",
+   "cards": [
+    {
+     "t": "Hold — own and operate",
+     "meta": "Papago Storage: 300 MW / 1,200 MWh on a 20-year APS {{tolling agreement}}",
+     "adv": [
+      "Twenty years of contracted cash flow from one construction effort",
+      "The {{tolling agreement}} puts market risk on the utility; the owner carries availability risk only",
+      "Builds an operating track record, which is what lenders price next time",
+      "Recurring O&M and asset-management fees on top"
+     ],
+     "dis": [
+      "Consumes equity that cannot fund the next project",
+      "Adds project debt — Recurrent carries $4.1bn against roughly $210m of annualised recurring revenue",
+      "Returns arrive over decades, so reported earnings stay thin for years",
+      "Interest expense was $41.9m against $117.3m of segment revenue in one quarter"
+     ]
+    },
+    {
+     "t": "Sell — develop and exit",
+     "meta": "Fort Duncan: built, operated merchant for eight months, sold to Hunt Energy Network",
+     "adv": [
+      "Converts years of development work into cash in one quarter",
+      "Recycles capital into the next project without new equity",
+      "Removes long-dated operating and market risk",
+      "Recurrent's own words: 'necessary to deleverage our balance sheet and recycle capital'"
+     ],
+     "dis": [
+      "Revenue becomes lumpy and timing-driven — deferred sales caused the weak second quarter of 2026",
+      "You sell the asset that would have produced the recurring revenue",
+      "Buyers know when you need the cash",
+      "The operating fleet never compounds"
+     ]
+    }
+   ],
+   "note": "Recurrent raised $500m from BlackRock in 2024 explicitly to support a transition to 'both a developer and a long-term owner/operator'. Two years later asset sales were $61.1m of $117.3m of quarterly revenue. Both cards are still being played."
+  },
+  {
+   "id": "captive-channel",
+   "title": "The captive channel: a developer inside a manufacturer",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Recurrent is a subsidiary of Canadian Solar, whose **e-STORAGE** arm makes the SolBank battery system. So when Recurrent builds a battery, the group can sell it hardware. That is a **captive channel** — demand a manufacturer creates for itself.",
+    "The advantages are real: coordinated schedules, aligned warranties, and a reference project the vendor can show other buyers. e-STORAGE supplied Papago, Fort Duncan and Crimson.",
+    "The accounting shows the scale. Because both sit inside one group, the sales are **eliminated in consolidation** — you cannot book profit selling to yourself. Eliminated intersegment revenue was **$790.1m in FY2024**, $420.6m in FY2025 and $18.1m in the first half of 2026, and the FY2024 elimination also removed **$253.5m of gross profit**.",
+    "**But it is not exclusive, and this is where most summaries go wrong.** The Tranquility battery retrofit — a Recurrent development scope — bought **Powin** batteries. And the one internal-supply figure the parent publishes runs the other way from how it is usually quoted: in the second quarter of 2026, **471 MWh of 3.7 GWh** of e-STORAGE shipments went to internal projects. That is a measure of *e-STORAGE's* internal exposure at about 13% — not of Recurrent's supplier share. Inverting it is a common and material error.",
+    "**The cost of the structure.** Recurrent's American projects are financed with tax equity, and its usual supplier is the storage arm of a Chinese-founded group at exactly the moment when foreign-entity rules bite hardest on storage. A developer whose captive supplier sits inside that group is running the tightest possible version of the test. When Citi cut the parent to Sell it listed foreign-entity restrictions second and 'relatively high leverage in the project development business' fourth."
+   ]
+  },
+  {
+   "id": "preferred-equity",
+   "title": "What BlackRock actually bought, and why '20%' understates it",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "In 2024 BlackRock's climate infrastructure business put **$500m** into Recurrent for what the press release calls 20% on an **{{as-converted}}** basis. Reading that as 'BlackRock owns a fifth of Recurrent' misses most of the instrument.",
+    "It is not ordinary shares. It is **Series A convertible preferred**, and preferred equity is a contract, not a proportion. Five terms do the work.",
+    "**A 9% dividend, compounding quarterly, {{paid-in-kind}}.** The dividend need not be paid in cash — it can be added to the amount owed instead, and it is: Canadian Solar discloses that diluted earnings per share include 'paid-in-kind dividends on the Recurrent Energy redeemable preferred shares'. Two years of that on $500m compounds to roughly $598m of stated value, and because the conversion is off stated value, **the as-converted share ratchets upward for as long as the dividend goes unpaid**. The 20% is explicitly stated 'as determined immediately upon closing'. Nobody publishes what it is now.",
+    "**A 1.3x {{liquidation preference}}.** On a sale BlackRock takes the greater of 1.3 times its money or its converted share — $650m off the top before ordinary shareholders see anything.",
+    "**An exit clock.** From the fifth anniversary of the first closing — 31 May 2029 — BlackRock can demand an exit: a company sale or a qualified listing.",
+    "**Governance.** One board seat, plus a consent block over certain actions.",
+    "**And it is not permanent equity.** Because redemption can be triggered by events outside the parent's control, it sits in **mezzanine** — temporary equity — between liabilities and equity on the balance sheet. The carrying line was $317.8m at 30 June 2026, but it commingles the BlackRock preferred with American tax-equity interests and the filings do not separate them, so BlackRock's carrying value is genuinely not public.",
+    "**Put the pieces together.** A preferred claim compounding at 9%, senior on liquidation at 1.3x, with a forced-exit right in 2029 — sitting on a subsidiary that has posted an operating loss for four consecutive quarters. The instrument is doing something closer to expensive debt than to a minority shareholding, and 2029 is a date to have in mind."
+   ]
+  },
+  {
+   "id": "recurrent-on-one-clock",
+   "title": "Recurrent on one clock",
+   "kind": "timeline",
+   "read": "4 min",
+   "intro": "An ownership change, a pivot to holding assets, and then a retreat back to selling them.",
+   "items": [
+    {
+     "x": 2024.06,
+     "label": "BlackRock's $500m announced: 20% as-converted, 9% compounding, 1.3x preference"
+    },
+    {
+     "x": 2024.47,
+     "label": "Papago Storage financed at $513m — 1,200 MWh on a 20-year APS toll"
+    },
+    {
+     "x": 2024.76,
+     "label": "Final closing of the BlackRock investment; 'Canadian Solar will continue to own the remaining majority'"
+    },
+    {
+     "x": 2025.5,
+     "label": "Papago reaches commercial operation — the only large battery Recurrent both owns and operates"
+    },
+    {
+     "x": 2025.8,
+     "label": "$825m Arizona package for Desert Bloom and Papago Solar"
+    },
+    {
+     "x": 2025.92,
+     "label": "FY2025: segment operating loss widens 69% to $(152.7)m; project-asset impairments begin"
+    },
+    {
+     "x": 2026.15,
+     "label": "Fort Duncan sold to Hunt Energy Network eight months after commissioning"
+    },
+    {
+     "x": 2026.25,
+     "label": "Q1 2026 posts a negative gross margin at segment level"
+    },
+    {
+     "x": 2026.37,
+     "label": "Colin Parkin, formerly president of e-STORAGE, becomes CEO of the parent"
+    },
+    {
+     "x": 2026.51,
+     "label": "Dylan Marx replaces Ismael Guerrero as CEO of Recurrent"
+    },
+    {
+     "x": 2026.65,
+     "label": "Pipeline restated to 84.1 GWh; segment debt $4.1bn; a fourth consecutive operating loss"
+    },
+    {
+     "x": 2029.41,
+     "label": "BlackRock's exit right opens"
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this model fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**The pipeline is not collateral.** Impairments in the fourth quarter of 2025 and a $24m charge in the second quarter of 2026 are what it looks like when early-stage positions stop clearing. A pipeline is an option portfolio and options expire.",
+    "**The balance sheet is the constraint, not the opportunity.** $4.1bn of segment debt — 58% of the group's total — against roughly $210m of annualised recurring revenue and $74.9m of segment cash. Interest alone was 36% of segment revenue in the second quarter of 2026.",
+    "**The preferred compounds whether or not the business earns.** A 9% paid-in-kind dividend accretes against four consecutive quarterly operating losses, and the exit clock starts in 2029.",
+    "**No independent ranking places this company where its pipeline implies.** Cleanview lists Recurrent at 15 projects and 2,606 MW planned across seven states, with no operating projects attributed, and it is absent from that tracker's top 25 American battery developers. The only top-ten placement the group can point to measures e-STORAGE as an equipment vendor, not Recurrent as a developer.",
+    "**And the captive channel is a two-way exposure.** It supplies demand to the parent's factory and imports the parent's trade and foreign-entity risk into the developer's tax equity."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "5 min",
+   "cards": [
+    {
+     "q": "A developer quotes an 84.1 GWh storage pipeline. What is the first question to ask?",
+     "a": "How much of it has secured interconnection. Here it is about 13 GWh — roughly 15%. Early-stage development is 84.7% of the total and the company's own definition of it is projects 'in the process of securing interconnection rights', which is a queue position rather than a project."
+    },
+    {
+     "q": "Why can a pipeline figure fall from 83.5 to 80.6 and then rise to 84.1 GWh in six months?",
+     "a": "Because it is an inventory that is pruned as well as replenished. Latin America nearly doubled while Europe was cut by 3.3 GWh. A pipeline that only rises is one nobody is cleaning — the churn is a sign of discipline, not instability."
+    },
+    {
+     "q": "Recurrent reports 2,620 MWh of operating US batteries but roughly 1,500 MWh net. What explains the gap?",
+     "a": "Crimson is 350 MW / 1,400 MWh but only 20% Recurrent-owned — Axium Infrastructure holds 80%, and the parent carries it as an equity-method affiliate at $22.1m. Counting Crimson in full overstates that asset roughly fivefold."
+    },
+    {
+     "q": "e-STORAGE shipped 471 MWh of 3.7 GWh to internal projects. What does that figure measure, and what does it not?",
+     "a": "It measures e-STORAGE's exposure to internal demand — about 13% of its shipments. It does not measure Recurrent's supplier share, which is not disclosed. Inverting the two is a material error; Recurrent's own storage page never mentions SolBank, and Tranquility used Powin."
+    },
+    {
+     "q": "Why does a 20% as-converted preferred stake understate the holder's position?",
+     "a": "Because a 9% dividend compounds quarterly and is paid in kind, so stated value grows and the as-converted share ratchets upward; because a 1.3x liquidation preference pays out ahead of ordinary shareholders; and because the 20% was fixed 'as determined immediately upon closing' and has never been restated publicly."
+    },
+    {
+     "q": "Why does the BlackRock preferred sit in mezzanine rather than in equity?",
+     "a": "Because redemption can be triggered by conditions not solely within the parent's control, which disqualifies it from permanent equity. It sits between liabilities and equity, and its carrying line commingles the preferred with tax-equity interests so its individual value is not public."
+    },
+    {
+     "q": "What is a developer actually selling when it sells a development-stage project?",
+     "a": "Largely the interconnection position and the studies behind it. Land, panels and batteries are available to anyone; a queue position that has cleared years of study is not, and it transfers with the project."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "6 min",
+   "items": [
+    {
+     "q": "Two developers each claim an 80 GWh storage pipeline. Which additional figure separates them best?",
+     "c": [
+      "Number of countries",
+      "Megawatt-hours with secured interconnection",
+      "Total employees",
+      "Average project size"
+     ],
+     "a": 1,
+     "why": "Pipeline counts control, not connection. The interconnected subset is what can actually be built on a known timetable. Recurrent's is about 13 GWh of 84.1 GWh, and the ratio has fallen from about 22% in 2024 — a decline the headline hides entirely."
+    },
+    {
+     "q": "A subsidiary posts four consecutive operating losses while carrying a 9% preferred that pays in kind. What happens to the preferred holder's stake?",
+     "c": [
+      "It falls as losses erode book value",
+      "It stays fixed at the stated percentage",
+      "It ratchets upward as unpaid dividends compound into stated value",
+      "It converts automatically"
+     ],
+     "a": 2,
+     "why": "A paid-in-kind dividend is settled by increasing the amount owed. Conversion is off stated value, so an unpaid compounding dividend increases the as-converted share regardless of how the business performs. The disclosed 20% is a closing-date figure."
+    },
+    {
+     "q": "A manufacturer's developer subsidiary buys a competitor's batteries on one project. What does that establish?",
+     "c": [
+      "The captive relationship has ended",
+      "The captive channel is usual but not exclusive",
+      "The parent's product is uncompetitive",
+      "Nothing — it is an error"
+     ],
+     "a": 1,
+     "why": "Tranquility used Powin while Papago, Fort Duncan and Crimson used e-STORAGE. One counterexample does not end a channel, but it does refute the claim of exclusivity — and on development-services scopes the asset owner, not the developer, often chooses the equipment."
+    },
+    {
+     "q": "Which figure best captures why a developer is selling assets it said it would hold?",
+     "c": [
+      "Pipeline size",
+      "Segment interest expense against segment revenue",
+      "Number of countries",
+      "Employee headcount"
+     ],
+     "a": 1,
+     "why": "$41.9m of interest against $117.3m of quarterly revenue, on $4.1bn of debt with $74.9m of segment cash, is the pressure that turns a stated owner-operator strategy back into asset sales. The company's own words were that monetisation is 'necessary to deleverage our balance sheet and recycle capital'."
+    },
+    {
+     "q": "Why is an intersegment elimination of $790m informative rather than just an accounting entry?",
+     "c": [
+      "It shows the group overstated revenue",
+      "It sizes the captive channel — how much the manufacturer sold to its own developer",
+      "It measures the developer's profit",
+      "It is a tax adjustment"
+     ],
+     "a": 1,
+     "why": "You cannot book profit selling to yourself, so intra-group sales are removed in consolidation. The size of what gets removed is the clearest published measure of how much demand the developer generates for the manufacturer — and its collapse to $18.1m in the first half of 2026 is a signal in its own right, though the filings do not explain it."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "e-STORAGE",
+   "d": "Canadian Solar's majority-owned battery integration business, maker of the SolBank system. It sits in the parent's Manufacturing segment, not inside Recurrent, so supply to Recurrent projects is an intersegment flow eliminated in consolidation."
+  },
+  {
+   "t": "Papago Storage",
+   "d": "A 300 MW / 1,200 MWh battery in Maricopa County, Arizona on a 20-year Arizona Public Service tolling agreement — the only large battery Recurrent both owns outright and operates."
+  },
+  {
+   "t": "Crimson",
+   "d": "A 350 MW / 1,400 MWh California battery operating since 2022 in which Recurrent retains only 20%; a fund managed by Axium Infrastructure holds the other 80%."
+  }
+ ]
+}

@@ -247,17 +247,6 @@
    "note": "Zacks reports Flex has secured substantial incremental business from hyperscaler and data-centre customers including Google, with those projects moving into the capital deployment phase.",
    "context": "Curated on a single third-party source that names the counterparty explicitly, and flagged as such rather than presented as firmly established.\n\nFlex itself has never named Google as a customer. Its own material mentions Google only in a sentence listing hyperscalers as participants in the data-centre market, which is commentary and not a customer statement — and Flex's annual report discloses that its ten largest customers were 45% of FY2026 net sales while naming none of them.\n\nThe link carries less weight than Flex's Amazon relationship, which rests on a filed warrant agreement. It should not be read as establishing the unnamed customer that reached 12% of Flex's net sales in the quarter ended June 2026.",
    "source": "https://finance.yahoo.com/technology/articles/flexs-hyperscaler-wins-drive-sustained-132200927.html"
-  },
-  {
-   "slug": "form-energy",
-   "type": "supplier",
-   "status": "announced",
-   "since": "2026-02",
-   "scale": "300 MW / 30 GWh",
-   "via": "Xcel Energy Electric Service Agreement and Clean Energy Accelerator Charge",
-   "note": "Form Energy supplies the 300 MW / 30 GWh iron-air battery serving Google's Pine Island data centre through Xcel Energy's tariff.",
-   "context": "The largest battery project by energy capacity announced anywhere, and Google pays for it: all costs of the new service and any new grid infrastructure sit with Google under a Clean Energy Accelerator Charge modelled on the Clean Transition Tariff it developed with NV Energy, plus $50m into Xcel's Capacity*Connect programme. TechCrunch, citing The Information, reported the price to Form as about $1bn — roughly $33 per kilowatt-hour — while Canary Media called it undisclosed and Xcel's release does not state it.\n\nOne characterisation to avoid, because several outlets use it: Google is not an investor in Form Energy. No Alphabet, GV or CapitalG entity appears in any Form funding round from Series A through the August 2026 Series G, on Form's investor wall, or in the investor list Form filed to ISO New England. Headlines describing Google as 'backing' Form, or as having 'invested $1 billion', are loose language for this offtake. The Electric Service Agreement remains pending before the Minnesota commission in docket E002/M-26-170.",
-   "source": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota"
   }
  ],
  "policyExposure": [
@@ -558,13 +547,8 @@
   {
    "label": "Lightsource bp — Honeysuckle solar online (supporting Google Fort Wayne)",
    "url": "https://lightsourcebp.com/news/honeysuckle-solar-goes-online/"
-  },
-  {
-   "label": "Xcel Energy — Xcel Energy to power a new Google data centre in Minnesota: 1,400 MW wind, 200 MW solar and a 300 MW / 30 GWh Form iron-air battery",
-   "url": "https://www.businesswire.com/news/home/20260224545187/en/Xcel-Energy-to-Power-New-Google-Data-Center-in-Minnesota",
-   "date": "2026-02-24"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 5
 }

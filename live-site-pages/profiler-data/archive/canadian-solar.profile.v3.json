@@ -14,8 +14,8 @@
   "type": "public",
   "ticker": "NASDAQ: CSIQ"
  },
- "summary": "BOTTOM LINE UP FRONT: Canadian Solar's e-STORAGE arm is the West-facing bridge case among Chinese-manufacturing BESS integrators — a NASDAQ-listed, Canadian-headquartered parent shipping a record 7.8 GWh of storage in 2025 (3.9 GWh into the US), holding a $3.5B contracted backlog, and restructuring itself around the FEOC rules by moving US manufacturing under a 75.1%-parent-owned vehicle (CS PowerTech) and opening a $712M cell-and-module plant in Shelbyville, Kentucky — whose actual production ramp remains publicly unconfirmed and is the single biggest swing factor in its US story. BACKGROUND: Founded 2001 by Dr. Shawn Qu; NASDAQ-listed since 2006. Three-arm structure: CSI Solar (China-listed manufacturing subsidiary), e-STORAGE (utility-scale BESS design, manufacture and integration; >20 GWh shipped cumulatively; 15 GWh/yr system plus 3 GWh/yr cell capacity company-claimed), and majority-owned developer Recurrent Energy (84.1 GWh storage development pipeline at 30 June 2026, a captive channel and reference engine; BlackRock holds Series A convertible preferred representing 20% of Recurrent on an as-converted basis, so it is no longer wholly owned). FY2025: revenue $5.6B, net loss $104M as the module business absorbed the PV price collapse while storage became the profit engine at ~24% of revenue. A 2.5 GWh single order for a major unnamed US utility (March 2026) was explicitly framed as supporting data-center power demand — one of the largest AIDC-attributed BESS orders yet disclosed. Leadership changed in May 2026: e-STORAGE veteran Colin Parkin became group CEO, with Qu moving to Executive Chairman and CTO — storage now explicitly the strategic center of gravity.",
- "ecosystemRole": "We assess e-STORAGE as the most instructive direct comparison for any Chinese containerized-BESS supplier attacking the US: it is what the FEOC-adaptation playbook looks like executed early and at scale — Western listing and governance, a domestic cell plant announced before the rules bit, a corporate restructuring (CS PowerTech, 75.1% parent-held) designed to clear foreign-entity ownership tests, and a captive developer (Recurrent, majority- not wholly-owned since BlackRock took a 20% as-converted preferred stake in 2024) that manufactures its own demand. It ranks in Wood Mackenzie's 2026 global top-10 on bankability while sitting outside the volume top-5, and its 3.9 GWh 2025 US delivery volume makes it one of the largest actual movers of storage into the American grid. For the AIDC web specifically, its March 2026 2.5 GWh data-center-demand order shows where containerized BESS meets AI load: through a utility procurement, not a hyperscaler contract.",
+ "summary": "BOTTOM LINE UP FRONT: Canadian Solar's e-STORAGE arm is the West-facing bridge case among Chinese-manufacturing BESS integrators — a NASDAQ-listed, Canadian-headquartered parent shipping a record 7.8 GWh of storage in 2025 (3.9 GWh into the US), holding a $3.5B contracted backlog, and restructuring itself around the FEOC rules by moving US manufacturing under a 75.1%-parent-owned vehicle (CS PowerTech) and opening a $712M cell-and-module plant in Shelbyville, Kentucky — whose actual production ramp remains publicly unconfirmed and is the single biggest swing factor in its US story. BACKGROUND: Founded 2001 by Dr. Shawn Qu; NASDAQ-listed since 2006. Three-arm structure: CSI Solar (China-listed manufacturing subsidiary), e-STORAGE (utility-scale BESS design, manufacture and integration; >20 GWh shipped cumulatively; 15 GWh/yr system plus 3 GWh/yr cell capacity company-claimed), and wholly-owned developer Recurrent Energy (80.6 GWh storage development pipeline, a captive channel and reference engine). FY2025: revenue $5.6B, net loss $104M as the module business absorbed the PV price collapse while storage became the profit engine at ~24% of revenue. A 2.5 GWh single order for a major unnamed US utility (March 2026) was explicitly framed as supporting data-center power demand — one of the largest AIDC-attributed BESS orders yet disclosed. Leadership changed in May 2026: e-STORAGE veteran Colin Parkin became group CEO, with Qu moving to Executive Chairman and CTO — storage now explicitly the strategic center of gravity.",
+ "ecosystemRole": "We assess e-STORAGE as the most instructive direct comparison for any Chinese containerized-BESS supplier attacking the US: it is what the FEOC-adaptation playbook looks like executed early and at scale — Western listing and governance, a domestic cell plant announced before the rules bit, a corporate restructuring (CS PowerTech, 75.1% parent-held) designed to clear foreign-entity ownership tests, and a captive developer (Recurrent) that manufactures its own demand. It ranks in Wood Mackenzie's 2026 global top-10 on bankability while sitting outside the volume top-5, and its 3.9 GWh 2025 US delivery volume makes it one of the largest actual movers of storage into the American grid. For the AIDC web specifically, its March 2026 2.5 GWh data-center-demand order shows where containerized BESS meets AI load: through a utility procurement, not a hyperscaler contract.",
  "productsAndServices": [
   {
    "name": "SolBank 3.0 / 3.0 Plus (workhorse DC block)",
@@ -51,11 +51,11 @@
   },
   {
    "name": "Recurrent Energy (captive developer/owner-operator)",
-   "description": "Majority-owned global developer with 84.1 GWh of storage in development at 30 June 2026 (80.6 GWh at 31 March 2026), increasingly an owner-operator: Papago Storage AZ (1,200 MWh energized 2025) and Desert Bloom (600 MWh, guided H1 2026 and shown by EIA as construction-complete but not yet commercial) under 20-year APS tolling agreements — billed as Arizona's largest standalone storage. BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% of Recurrent Energy B.V. on an as-converted basis, closed in two tranches during 2024, so 'wholly-owned' no longer describes it.",
-   "positioning": "Captive demand for e-STORAGE hardware and a reference-project engine; also the group's project-finance balance-sheet consumer ($4.1B of the group's $7.1B debt at 30 June 2026, of which $2.6B is non-recourse). The channel is usual but not exclusive — Recurrent's Tranquility battery retrofit used Powin batteries.",
+   "description": "Wholly-owned global developer with 80.6 GWh of storage in development (Mar 2026), increasingly an owner-operator: Papago Storage AZ (1,200 MWh energized 2025) and Desert Bloom (600 MWh, 2026) under 20-year APS tolling agreements — billed as Arizona's largest standalone storage.",
+   "positioning": "Captive demand for e-STORAGE hardware and a reference-project engine; also the group's project-finance balance-sheet consumer ($3.8B of the group's $6.8B debt).",
    "soldThrough": "Develops, owns and operates; sells projects and power",
    "targetSegments": "US Southwest and Texas concentrations — data-center growth markets",
-   "roadmap": "600 MWh under construction and 4.4 GWh in backlog as of 30 June 2026"
+   "roadmap": "5.0 GWh under construction and in backlog as of March 2026"
   }
  ],
  "technicalSpecs": [
@@ -189,7 +189,7 @@
   {
    "date": "2025-12-24",
    "category": "other",
-   "headline": "Colin Parkin promoted to President of Canadian Solar with a board seat; Dylan Marx (ex-Recurrent operations) appointed COO — Parkin became group CEO in May 2026 and Marx became CEO of Recurrent Energy in July 2026",
+   "headline": "Colin Parkin promoted to President of Canadian Solar with a board seat; Dylan Marx (ex-Recurrent operations) appointed COO",
    "read": "The succession sequence that culminated in May 2026 — both promotions came from the storage and project businesses, not modules.",
    "source": "PRNewswire, 2025-12-24"
   },
@@ -267,17 +267,6 @@
    "type": "competitor",
    "note": "Smartstack's 7.5–10 MWh skid is among the 6+ MWh blocks SolBank 4.0 was launched to match.",
    "via": "SolBank 4.0"
-  },
-  {
-   "slug": "recurrent-energy",
-   "type": "customer",
-   "status": "active",
-   "since": "2015",
-   "scale": "471 MWh of 3.7 GWh shipped to internal projects in Q2 2026",
-   "via": "e-STORAGE SolBank systems, turnkey EPC and long-term service agreements",
-   "note": "Recurrent Energy is Canadian Solar's majority-owned development arm and the captive buyer of e-STORAGE hardware.",
-   "context": "Recurrent is one of Canadian Solar's two reportable segments and is fully consolidated, but it is not wholly owned: BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% on an as-converted basis, closed in two 2024 tranches and carried in temporary equity. e-STORAGE sits in the Manufacturing segment, so supply to Recurrent is an intersegment flow eliminated in consolidation — $790.1m of revenue in FY2024, $420.6m in FY2025 and $18.1m in the first half of 2026. Q2 2026 is the only quarter with a quantified internal figure: 471 MWh of 3.7 GWh shipped went to internal projects. e-STORAGE supplied Papago, Fort Duncan and Crimson; the Tranquility retrofit used Powin, so the channel is usual rather than exclusive.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926101856/tm2623883d1_ex99-1.htm"
   }
  ],
  "policyExposure": [
@@ -398,18 +387,13 @@
     ]
    }
   ],
-  "commentary": "Balance sheet at Mar 31, 2026: cash $1.9B against total debt $6.8B ($4.1B Recurrent segment debt at 30 June 2026, $2.6B of it non-recourse, $2.6B manufacturing, $0.4B converts) — net debt ~$4.9B; 2026 capex ~$1.3B funding US manufacturing. Q2 2026 results due August 27, 2026. Analyst consensus ~Hold with a wide $9-$30 target dispersion — treat point targets with caution."
+  "commentary": "Balance sheet at Mar 31, 2026: cash $1.9B against total debt $6.8B ($3.8B Recurrent project debt, $2.6B manufacturing, $0.4B converts) — net debt ~$4.9B; 2026 capex ~$1.3B funding US manufacturing. Q2 2026 results due August 27, 2026. Analyst consensus ~Hold with a wide $9-$30 target dispersion — treat point targets with caution."
  },
  "sources": [
   {
-   "label": "Canadian Solar — Q2 2026 results, Form 6-K Exhibit 99.1 (84.1 GWh storage pipeline and $4.1bn Recurrent debt at 30 June 2026)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926101856/tm2623883d1_ex99-1.htm",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "Wood Mackenzie — Global BESS Integrator 2026 Ranking (Canadian Solar top-10)",
-   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
-   "date": "2026-07-14"
+   "label": "Canadian Solar Q1 2026 results + CEO appointment (SEC 6-K)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926060672/tm2614624d1_ex99-1.htm",
+   "date": "2026-05-14"
   },
   {
    "label": "e-STORAGE — 426 MWh Florida utility order",
@@ -422,19 +406,14 @@
    "date": "2026-06-24"
   },
   {
-   "label": "Canadian Solar Q1 2026 results + CEO appointment (SEC 6-K)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926060672/tm2614624d1_ex99-1.htm",
-   "date": "2026-05-14"
+   "label": "Wood Mackenzie — Global BESS Integrator 2026 Ranking (Canadian Solar top-10)",
+   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
+   "date": "2026-07-14"
   },
   {
    "label": "Canadian Solar Q1 2026 earnings call transcript",
    "url": "https://www.fool.com/earnings/call-transcripts/2026/05/14/canadian-solar-csiq-q1-2026-earnings-transcript/",
    "date": "2026-05-14"
-  },
-  {
-   "label": "SaurEnergy — 2026 guidance, CS PowerTech, US targets",
-   "url": "https://www.saurenergy.com/solar-energy-news/canadian-solar-eyes-up-to-7-gw-us-module-shipments-55-gwh-storage-after-biz-reset-11254458",
-   "date": "2026-03-23"
   },
   {
    "label": "Canadian Solar Q4/FY2025 results",
@@ -452,13 +431,13 @@
    "date": "2026-03-17"
   },
   {
-   "label": "Morgan Lewis — How FEOC rules are reshaping storage tax-credit eligibility",
-   "url": "https://www.morganlewis.com/pubs/2026/03/how-feoc-rules-are-reshaping-energy-storage-tax-credit-eligibility",
-   "date": "2026-03"
+   "label": "SaurEnergy — 2026 guidance, CS PowerTech, US targets",
+   "url": "https://www.saurenergy.com/solar-energy-news/canadian-solar-eyes-up-to-7-gw-us-module-shipments-55-gwh-storage-after-biz-reset-11254458",
+   "date": "2026-03-23"
   },
   {
-   "label": "SolBank 3.0 datasheet v1.64_NA",
-   "url": "https://csestorage.com/wp-content/uploads/2025/06/CS-Datasheet_SolBank-3.0_v1.64_NA.pdf",
+   "label": "Morgan Lewis — How FEOC rules are reshaping storage tax-credit eligibility",
+   "url": "https://www.morganlewis.com/pubs/2026/03/how-feoc-rules-are-reshaping-energy-storage-tax-credit-eligibility",
    "date": "2026-03"
   },
   {
@@ -467,19 +446,9 @@
    "date": "2026-02-05"
   },
   {
-   "label": "Battery-Tech Network — Section 301 duties on Chinese ESS batteries to 25%",
-   "url": "https://battery-tech.net/battery-markets-news/u-s-raises-section-301-duties-on-chinese-ess-batteries/",
-   "date": "2026-01"
-  },
-  {
    "label": "Parkin President / Marx COO appointments",
    "url": "https://www.prnewswire.com/news-releases/canadian-solar-appoints-colin-parkin-as-president-and-dylan-marx-as-chief-operating-officer-302649077.html",
    "date": "2025-12-24"
-  },
-  {
-   "label": "ess-news — InfoLink: Canadian Solar enters global ESS top ten",
-   "url": "https://www.ess-news.com/2025/12/05/global-ess-shipments-hit-286-gwh-as-tesla-and-chinese-heavyweights-out-front-infolink-says/",
-   "date": "2025-12-05"
   },
   {
    "label": "ess-news — CS PowerTech US manufacturing consolidation (75.1/24.9)",
@@ -487,14 +456,19 @@
    "date": "2025-12-01"
   },
   {
-   "label": "Canadian Solar Q3 2025 results",
-   "url": "https://www.prnewswire.com/news-releases/canadian-solar-reports-third-quarter-2025-results-302614244.html",
-   "date": "2025-11-13"
+   "label": "ess-news — InfoLink: Canadian Solar enters global ESS top ten",
+   "url": "https://www.ess-news.com/2025/12/05/global-ess-shipments-hit-286-gwh-as-tesla-and-chinese-heavyweights-out-front-infolink-says/",
+   "date": "2025-12-05"
   },
   {
    "label": "e-STORAGE — Skyview 2 (Ontario) 1,858 MWh, largest SolBank contract",
    "url": "https://csestorage.com/e-storage-to-deliver-1-86-gwh-dc-of-energy-storage-solutions-for-the-skyview-2-project-in-ontario-canada/",
    "date": "2025-11-12"
+  },
+  {
+   "label": "Canadian Solar Q3 2025 results",
+   "url": "https://www.prnewswire.com/news-releases/canadian-solar-reports-third-quarter-2025-results-302614244.html",
+   "date": "2025-11-13"
   },
   {
    "label": "e-STORAGE — Aypa Ontario 2.1 GWh expansion with 20-year LTSAs",
@@ -512,14 +486,14 @@
    "date": "2025-08-07"
   },
   {
-   "label": "e-STORAGE — SolBank 3.0 passes CSA C800:25 large-scale fire testing",
-   "url": "https://csestorage.com/e-storages-solbank-3-0-successfully-passes-large-scale-fire-testing-lsft/",
-   "date": "2025-06-03"
-  },
-  {
    "label": "Recurrent Energy — Papago Storage 1,200 MWh energized (Arizona)",
    "url": "https://recurrentenergy.com/recurrent-energy-energizes-1200-mwh-storage-facility-in-arizona-ahead-of-peak-summer-demand/",
    "date": "2025-06"
+  },
+  {
+   "label": "e-STORAGE — SolBank 3.0 passes CSA C800:25 large-scale fire testing",
+   "url": "https://csestorage.com/e-storages-solbank-3-0-successfully-passes-large-scale-fire-testing-lsft/",
+   "date": "2025-06-03"
   },
   {
    "label": "e-STORAGE — Aypa Power 1.8 GWh DC across US markets",
@@ -532,9 +506,14 @@
    "date": "2024-11-20"
   },
   {
-   "label": "Recurrent Energy — closing of the $500m BlackRock investment: 20% of Recurrent on an as-converted basis, Canadian Solar retaining the remaining majority",
-   "url": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/",
-   "date": "2024-10-03"
+   "label": "Battery-Tech Network — Section 301 duties on Chinese ESS batteries to 25%",
+   "url": "https://battery-tech.net/battery-markets-news/u-s-raises-section-301-duties-on-chinese-ess-batteries/",
+   "date": "2026-01"
+  },
+  {
+   "label": "SolBank 3.0 datasheet v1.64_NA",
+   "url": "https://csestorage.com/wp-content/uploads/2025/06/CS-Datasheet_SolBank-3.0_v1.64_NA.pdf",
+   "date": "2026-03"
   },
   {
    "label": "SolBank 4.0 product page",
@@ -545,6 +524,6 @@
    "url": "https://csestorage.com/mediapr/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

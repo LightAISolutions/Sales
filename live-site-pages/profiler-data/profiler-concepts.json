@@ -314,6 +314,15 @@
       ]
     },
     {
+      "slug": "as-converted",
+      "term": "as-converted",
+      "def": "A way of stating a convertible holder's stake as the percentage they would own if they converted into ordinary shares today. It is a point-in-time figure: if the instrument accrues paid-in-kind dividends, the as-converted share drifts upward over time.",
+      "aliases": [
+        "as-converted basis",
+        "fully diluted as-converted"
+      ]
+    },
+    {
       "slug": "ashrae-15",
       "term": "ASHRAE 15",
       "def": "The refrigeration-systems safety standard that governs machine rooms: charge limits, refrigerant detection, ventilation and relief. It is the reason a refrigerant change is a building change."
@@ -759,6 +768,14 @@
       "slug": "cable-charging-current",
       "term": "cable charging current",
       "def": "The current an AC cable draws simply to charge its own capacitance, growing with length and voltage. Beyond roughly a hundred kilometres of subsea cable it consumes the whole rating, which is why long submarine links are direct current."
+    },
+    {
+      "slug": "cafd",
+      "term": "CAFD",
+      "def": "Cash available for distribution: the cash a contracted-generation owner has left after debt service, maintenance capital and taxes, and the number a yieldco actually sets its dividend from. It can be large and growing in a year the same company reports a net loss, because depreciation and tax-equity allocations are non-cash.",
+      "aliases": [
+        "cash available for distribution"
+      ]
     },
     {
       "slug": "caiso",
@@ -1486,6 +1503,11 @@
       ]
     },
     {
+      "slug": "coulombic-efficiency",
+      "term": "coulombic efficiency",
+      "def": "The share of electric charge put into a cell that comes back out, ignoring voltage losses. It isolates how much current went into the intended reaction rather than into side reactions, so a low figure points at a chemical loss rather than a resistive one."
+    },
+    {
       "slug": "counterparty-chain",
       "term": "counterparty chain",
       "def": "The sequence of parties between the owner of a building and the user of the computers inside it — landlord, tenant of record, operator, guarantor, chip lessor, end user. Each link carries a different risk and a different credit.",
@@ -2206,6 +2228,15 @@
         "speed droop",
         "droop control",
         "droop mode"
+      ]
+    },
+    {
+      "slug": "drop-down",
+      "term": "drop-down",
+      "def": "The sale of a completed project from a private sponsor to the listed vehicle it controls. Because both sides share an owner, the price is set by negotiation rather than an auction, and independent directors are usually the only check on it.",
+      "aliases": [
+        "dropdown",
+        "drop down"
       ]
     },
     {
@@ -3520,6 +3551,14 @@
       ]
     },
     {
+      "slug": "hlbv",
+      "term": "HLBV",
+      "def": "Hypothetical liquidation at book value: the accounting method that splits a tax-equity partnership's profit or loss by asking what each partner would receive if the project were liquidated at book value today. It is why a renewables owner's reported net loss can be far larger than its economic loss — most of it is allocated to the tax-equity investor.",
+      "aliases": [
+        "hypothetical liquidation at book value"
+      ]
+    },
+    {
       "slug": "hold-up-time",
       "term": "hold-up time",
       "def": "How long a server power supply can carry its load on internal capacitors after its input disappears — roughly 10 to 20 milliseconds. It is the physics referee for every power transfer: a switchover completed inside that window is invisible to the IT load, and one that misses it is an outage.",
@@ -3637,6 +3676,15 @@
         "co-fire",
         "hydrogen blending",
         "hydrogen blend"
+      ]
+    },
+    {
+      "slug": "hydrogen-evolution-reaction",
+      "term": "hydrogen evolution reaction",
+      "def": "A side reaction at a battery's negative electrode in which water is split into hydrogen instead of the intended reaction occurring. It consumes charging current without storing energy, and in iron electrodes it is the main reason round-trip efficiency is low.",
+      "aliases": [
+        "HER",
+        "parasitic hydrogen evolution"
       ]
     },
     {
@@ -4346,6 +4394,11 @@
         "LDs",
         "delay damages"
       ]
+    },
+    {
+      "slug": "liquidation-preference",
+      "term": "liquidation preference",
+      "def": "A contractual right for preferred shareholders to be paid a set amount — often a multiple of what they invested — before ordinary shareholders receive anything in a sale or wind-up. A 1.3x preference means the holder takes 1.3 times its money off the top."
     },
     {
       "slug": "llc-converter",
@@ -5209,6 +5262,24 @@
       ]
     },
     {
+      "slug": "p50",
+      "term": "P-50",
+      "def": "The output level a wind or solar plant is expected to exceed half the time — the central estimate a forecast and a financing are built on. A year at 87% of P-50 means the wind simply blew less than the median expectation, which is a revenue miss no contract protects against.",
+      "aliases": [
+        "p-50",
+        "p50 estimate"
+      ]
+    },
+    {
+      "slug": "paid-in-kind",
+      "term": "paid-in-kind",
+      "def": "A dividend or interest payment settled by increasing the amount owed rather than by paying cash. It preserves cash today at the cost of a claim that compounds, so a paid-in-kind preferred stake grows its share of the company for as long as it goes unpaid.",
+      "aliases": [
+        "PIK",
+        "payment-in-kind"
+      ]
+    },
+    {
       "slug": "paralleling-switchgear",
       "term": "paralleling switchgear",
       "def": "Switchgear whose controller synchronizes several generators onto one common bus, adds them in a set order, shares the load between them and sheds low-priority load if generation runs short — a room of engines behaving as one plant. It is what turns a collection of standby gen-sets into a campus-scale power source.",
@@ -5279,6 +5350,11 @@
         "pass-throughs",
         "pass-through obligations"
       ]
+    },
+    {
+      "slug": "passivation",
+      "term": "passivation",
+      "def": "The build-up of an oxide or hydroxide layer on an electrode that blocks further reaction. In iron batteries it thickens with cycling, raising internal resistance and gradually cutting the capacity and power the cell can deliver."
     },
     {
       "slug": "passive-safety",
@@ -8139,6 +8215,15 @@
       "aliases": [
         "xenon-135",
         "xenon pit"
+      ]
+    },
+    {
+      "slug": "yieldco",
+      "term": "yieldco",
+      "def": "A listed company that owns operating power plants under long-term contracts and passes most of the cash they generate to shareholders as a dividend. It buys finished assets rather than developing them, usually from a sponsor that keeps the development business private.",
+      "aliases": [
+        "yield co",
+        "yield company"
       ]
     },
     {

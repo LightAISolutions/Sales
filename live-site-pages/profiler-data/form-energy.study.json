@@ -1,0 +1,345 @@
+{
+ "schemaVersion": 2,
+ "slug": "form-energy",
+ "title": "Form Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here-designed-to-be-bad",
+   "title": "Start here: a battery designed to be bad at almost everything",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "The **RWE** guide in this library already covers what {{iron-air}} is: reversible rusting, cheap and abundant active materials, bulky and slow, aimed at multi-day gaps rather than the evening peak. This guide assumes all of that and goes three places it does not — **inside the cell**, **inside the factory**, and **inside the rate case**.",
+    "Hold on to one framing. A lithium cell is a good battery made from expensive materials. An iron-air cell is a **poor battery made from nearly free materials**. Round-trip efficiency is 35–50% against 85–90%. It discharges at about **0.01C**. Form expects it to cycle **eight to thirteen times a year** — idle roughly 97% of the time.",
+    "Every one of those is a deliberate trade, and the trade only pays if iron and air are cheap enough to buy a hundred hours of them. Whether they are is the question this guide teaches you to interrogate."
+   ]
+  },
+  {
+   "id": "inside-the-cell",
+   "title": "Inside the cell: where the missing half of the energy goes",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "Discharging, the cell breathes in oxygen and converts iron metal to rust. Charging, current converts the rust back to iron and the cell breathes out oxygen. Simple to state — and four specific physical problems sit inside it, each of which costs efficiency.",
+    "**One: the {{hydrogen evolution reaction}}.** In an alkaline water-based electrolyte the iron electrode has a competitor. Some of the charging current splits water into hydrogen instead of reducing iron oxide back to iron. That current is spent and stores nothing. It is the dominant loss, it drives {{coulombic efficiency}} to roughly 45–60% in prototype systems, and it is **intrinsic to alkaline iron electrodes** — not a manufacturing defect anyone can polish out.",
+    "**Two: the air electrode.** The positive electrode must do two opposite jobs on the same surface — reduce oxygen when discharging, evolve it when charging. Both are kinetically poor, so you pay a voltage penalty in each direction, and repeated oxygen evolution degrades the electrode itself. This is the second efficiency loss and the main durability question.",
+    "**Three: {{passivation}}.** As iron discharges it grows hydroxide and oxide layers on its own surface. Those layers impede electron transfer, raise internal resistance and thicken with cycling — so capacity and power fade in a way that compounds.",
+    "**Four: carbonation.** A battery that literally breathes ambient air also inhales carbon dioxide, which reacts with the alkaline electrolyte to form carbonates and degrades it. A sealed lithium cell has no equivalent failure mode; this one is the price of using the atmosphere as a reactant.",
+    "Add self-discharge of roughly 1–3% a day and you can see why the number matters: an asset whose entire purpose is *holding* energy across several days leaks some of it while holding.",
+    "**Why this is worth knowing rather than just noting.** A 2026 review in *Advanced Sustainable Systems* frames iron-anode redox kinetics as the unsolved problem; European public research programmes at Fraunhofer UMSICHT and Holland High Tech exist specifically to improve iron-air efficiency. These are live research questions in 2026, not settled engineering — and Form publishes **no round-trip-efficiency figure anywhere**, including in the thirty-slide technical deck it filed to a grid operator, which does contain costs, footprints, cell dimensions, cycle counts and safety certifications."
+   ]
+  },
+  {
+   "id": "making-one",
+   "title": "Making one: why the factory is on a steel site",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "This is the part no other guide in the library covers. A chemistry is not a product until someone can make it by the million, and Form's answer occupies **55 acres of the former Weirton Steel tin mill** in West Virginia.",
+    "**What is actually manufactured.** Form makes its **iron anodes and discharge air cathodes in house** — the two components that carry the intellectual property. The rest of the stack is deliberately unremarkable: a water-based alkaline electrolyte compared by the company to what is in an AA battery, and enclosures about the size of a shipping container.",
+    "**The unit hierarchy** is where the 100-hour design becomes concrete. A cell is roughly **0.15 kW / 15 kWh** — divide those and you get 100 hours, so the duration is built into the cell, not configured later. Thirty cells make a module of about 4.5 kW / 450 kWh; ten modules make an enclosure of about 45 kW / 4,500 kWh; four enclosures plus an inverter and an auxiliary skid make a 2.5 MW power block, laid out in roughly 200-foot runs at about 2 MW per acre.",
+    "**Why a steel site.** Three reasons, and only one is sentimental. The input is iron, and **ArcelorMittal is both a Series D lead investor and a non-exclusive supplier of iron materials** — the raw material and the backer are the same company. A former mill has heavy-industrial power, rail and structure already in place. And West Virginia put up a **$290m incentive package** against a **$760m** investment, of which $75m was committed and $215m to be secured, collateralised by state ownership of the land and buildings — the state holds title to the collateral behind the company's only factory.",
+    "**The number that governs everything else.** Nameplate is **at least 500 MW a year by 2028** — which at 100-hour duration is about **50 GWh a year** — plus a DOE-cofunded line targeted at up to 20 GWh a year by 2027. Set that against a stated backlog of about 80 GWh and the arithmetic is unforgiving: the order book is roughly **1.6 years of eventual full-rate output**, and full rate does not arrive until 2028.",
+    "**Read the slippage honestly.** Commercial production was described to a grid operator in October 2024 as starting 'late 2024'; the first grid delivery was October 2025. The 2028 floor-area target fell from more than one million square feet to about 850,000. Headcount has been roughly flat at about 1,000 across two years while the stated backlog quadrupled. None of that is fatal and all of it is the ordinary friction of building a first factory — but the constraint on this company is the plant, not the chemistry."
+   ]
+  },
+  {
+   "id": "the-two-cost-questions",
+   "title": "The denominator problem: $/kWh and $/kW answer different questions",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Long-duration storage is sold on cost per kilowatt-hour and paid on cost per kilowatt. Getting the denominator right is the whole argument. Figures are Form's own targets from its ISO New England deck unless marked.",
+   "cols": [
+    "Measure",
+    "Iron-air, 100 h",
+    "Lithium-ion, 4 h",
+    "Who wins",
+    "Why"
+   ],
+   "rows": [
+    [
+     "Energy capacity, $/kWh",
+     "About $20 target; about $33 implied by the reported Google price",
+     "About $250",
+     "**Iron-air, heavily**",
+     "Iron, air and water cost about $6/kWh of active material against $50–80 for lithium. Buying hours is cheap"
+    ],
+    [
+     "Power capacity, $/kW",
+     "About $2,000 target; about $3,333 implied",
+     "About $1,000",
+     "**Lithium**",
+     "To deliver a megawatt you need a hundred hours of hardware behind it. Buying megawatts is expensive"
+    ],
+    [
+     "{{Round-trip efficiency}}",
+     "35–50%",
+     "85–90%",
+     "**Lithium, heavily**",
+     "Every stored megawatt-hour costs about two to buy"
+    ],
+    [
+     "Cycles per year",
+     "8–13 (Form's own figure)",
+     "About 365",
+     "**Lithium**",
+     "Fixed costs spread over far fewer revenue events"
+    ],
+    [
+     "Duration available",
+     "100 h",
+     "2–8 h",
+     "**Iron-air**",
+     "The only product that covers a still, overcast week"
+    ],
+    [
+     "Energy sited per acre",
+     "About 200 MWh/acre",
+     "About 20–40 MWh/acre",
+     "**Iron-air**",
+     "Worse per megawatt, better per megawatt-hour — say which"
+    ]
+   ],
+   "note": "The strongest published criticism of Form attacks the second row, not the third. **{{Capacity market}}s pay for kilowatts.** At $2,000–3,333/kW iron-air is dearer per kilowatt than a gas peaker and two to three times four-hour lithium; one analysis calculates roughly sixteen years of record capacity revenue to return capital before financing and operations. Form's answer is that it is not selling into a capacity market at all — it is selling a rate-based reliability asset, and latterly a data-centre firming product. Whether that market exists at scale is the open question."
+  },
+  {
+   "id": "what-a-utility-buys",
+   "title": "What a utility is actually buying when it buys 100 hours",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "A merchant developer buys a battery to earn from price spreads. No merchant market anywhere pays for 100 hours of duration. So essentially every Form deployment reaches its customer through a **regulated proceeding or a public grant** — and that changes what is being bought.",
+    "**The utility is buying accreditation and avoided cost, not arbitrage.** A regulated utility must show its commission it can meet peak demand plus a reserve margin. What counts toward that is not nameplate but **{{ELCC}}** — how much of a resource the system operator credits at peak. A four-hour battery is credited well below nameplate because at hour five it is empty. A resource that can run for a hundred hours is credited very differently, especially in a winter-peaking system where the binding risk is a multi-day cold, still, dark stretch rather than a summer evening.",
+    "**And it is buying it into {{rate base}}.** Once a commission approves the asset, the utility earns a regulated return on the capital and recovers the cost from customers. That is why Form's growth rate is set by commission calendars rather than by its sales team — and why its counterparties are creditworthy in a way no merchant developer is.",
+    "**Watch how the commissions actually behaved**, because it is more interesting than either the boosters or the critics suggest. Minnesota approved the 10 MW / 1,000 MWh Sherco system in 2023 — but imposed a **cost cap** unless the utility can show overruns were prudent and beyond its control, and recovered it through a rider costing about **30 cents a month** per residential customer. That is a regulator saying yes and hedging.",
+    "**Then read the cost line, and notice it is not there.** Xcel filed the Sherco project cost as a **trade secret** under Minnesota law. Dominion's Darbytown pilot is $70.6m for a Form system *and* an Eos zinc-hybrid together, unsplit. Georgia and Colorado disclose nothing. **There is no cost per kilowatt-hour for 100-hour iron-air in any public rate filing anywhere.** The best number available — about $33/kWh — is arithmetic on a reported $1bn Google purchase, sourced to a paywalled outlet and never confirmed by any party.",
+    "**The Google structure is the most interesting variation and worth understanding on its own.** At Pine Island the battery is not rate-based across all customers. Google pays all costs of the new service and any new grid infrastructure through a **Clean Energy Accelerator Charge** inside its Electric Service Agreement. That is a deliberate answer to the obvious objection: if a novel technology underperforms, the damage lands on Google's carbon accounting rather than on Minnesota ratepayers. It is also why the arrangement needed a commission proceeding of its own — docket E002/M-26-170, filed April 2026 and still pending, with the state Attorney General and ratepayer advocates objecting on cost grounds."
+   ]
+  },
+  {
+   "id": "the-order-book",
+   "title": "Reading a private company's order book",
+   "kind": "bars",
+   "unit": "GWh",
+   "read": "5 min",
+   "intro": "Form says its backlog grew from about 20 GWh to about 80 GWh during 2026. Here is that claim against what can be counted from named agreements.",
+   "items": [
+    {
+     "label": "Stated backlog (company, Aug 2026)",
+     "v": 80
+    },
+    {
+     "label": "Sum of all eleven named agreements",
+     "v": 55.7
+    },
+    {
+     "label": "…of which the two 2026 AI data-centre deals",
+     "v": 42
+    },
+    {
+     "label": "Everything else, named",
+     "v": 13.7
+    },
+    {
+     "label": "Operating today",
+     "v": 0.15
+    }
+   ],
+   "note": "About 24 GWh of the stated backlog corresponds to agreements Form has not individually announced — its wording is that the growth 'includes' the Google, Crusoe and Ireland deals, never that it consists of them. An independent analyst hit the same wall from the other direction. Two further facts belong beside this chart: 74% of the itemisable total is two counterparties signed in the same year, neither delivering before 2027; and exactly one project is operating — Great River Energy's 1.5 MW / 150 MWh system."
+  },
+  {
+   "id": "form-on-one-clock",
+   "title": "Form Energy on one clock",
+   "kind": "timeline",
+   "read": "4 min",
+   "intro": "Thirteen years from a chemistry choice to a gigawatt-hour order book, with the factory arriving in the middle.",
+   "items": [
+    {
+     "x": 2018.0,
+     "label": "Iron-air chosen as the first product after techno-economic analysis"
+    },
+    {
+     "x": 2021.55,
+     "label": "Chemistry disclosed publicly alongside a Series D led by ArcelorMittal's XCarb fund"
+    },
+    {
+     "x": 2022.97,
+     "label": "West Virginia announces the Weirton siting — $760m investment against a $290m incentive package"
+    },
+    {
+     "x": 2023.07,
+     "label": "Xcel partners on two 10 MW / 1,000 MWh projects, in Minnesota and Colorado"
+    },
+    {
+     "x": 2023.51,
+     "label": "Minnesota approves Sherco with a cost cap; the cost itself is filed as a trade secret"
+    },
+    {
+     "x": 2024.6,
+     "label": "An 85 MW / 8,500 MWh Maine project lands inside a $389m federal award"
+    },
+    {
+     "x": 2024.72,
+     "label": "DOE selects Form for a $150m award for a line targeted at 20 GWh a year by 2027"
+    },
+    {
+     "x": 2024.95,
+     "label": "UL9540A testing passes with no thermal runaway — deployable without fireproof barriers"
+    },
+    {
+     "x": 2025.82,
+     "label": "First batteries delivered to the grid at Great River Energy, about a year later than told to ISO New England"
+    },
+    {
+     "x": 2026.15,
+     "label": "Google and Xcel announce Pine Island — 300 MW / 30 GWh, ten times anything built before"
+    },
+    {
+     "x": 2026.23,
+     "label": "Crusoe reserves 12 GWh for AI data centres from 2027"
+    },
+    {
+     "x": 2026.61,
+     "label": "$750m Series G; backlog stated at about 80 GWh; valuation reportedly down about 42%"
+    },
+    {
+     "x": 2028.0,
+     "label": "Factory nameplate of at least 500 MW a year — about 50 GWh — is due"
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The market may simply not exist at scale.** Multi-day storage is a solution to a problem grids currently solve with gas. If firm gas stays available and cheap, the willingness to pay for a hundred hours never materialises — and no merchant market prices it today.",
+    "**Concentration.** Two counterparties signed in one year are 74% of the itemisable backlog, and the larger of them depends on a Minnesota commission decision that had not been made in September 2026, in a docket with active objections. One adverse ruling removes more than half the verifiable order book.",
+    "**The factory is the constraint.** 500 MW a year arrives in 2028; the backlog is about 1.6 years of that. Commercial production already slipped a year and the floor-area target was cut.",
+    "**Five projects have gone dark.** Comanche, Georgia Power, Darbytown, Mendocino and the New York system have had no first-party update since 2023 and all carried 2025 or 2026 targets. Their status is unknown, not known to be bad — but a company that went fourteen months without a press release has not made it easy to tell.",
+    "**And nobody independent has validated the chemistry at duration.** Iron-air appears in neither the Department of Energy's 2024 eleven-technology long-duration cost study nor PNNL's cost database, and no third-party teardown of a Form cell exists. Every 100-hour cost figure in circulation traces to Form or to one reported transaction price."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "6 min",
+   "cards": [
+    {
+     "q": "Where does the missing half of an iron-air battery's energy actually go?",
+     "a": "Mostly into the hydrogen evolution reaction — charging current splitting water into hydrogen instead of reducing iron oxide back to iron. That drives coulombic efficiency to about 45–60%. The rest goes to overpotential at the bifunctional air electrode, which must both reduce and evolve oxygen on one surface."
+    },
+    {
+     "q": "Why is duration built into an iron-air cell rather than configured at the site?",
+     "a": "Because the cell itself is about 0.15 kW and 15 kWh — a 100-hour ratio by construction. You cannot run it fast. Fast frequency response and short-burst peaking are not addressable applications at any configuration."
+    },
+    {
+     "q": "An iron-air system is quoted at about $20/kWh and about $2,000/kW. Which figure is the problem?",
+     "a": "The $/kW. Capacity markets pay for kilowatts, and $2,000/kW is above a gas peaker and roughly double four-hour lithium. The $/kWh is the selling point; the $/kW is the objection, and they are the same system measured on different denominators."
+    },
+    {
+     "q": "Why does a battery that breathes air have a failure mode a sealed lithium cell does not?",
+     "a": "Carbonation. Ambient air carries carbon dioxide, which reacts with the alkaline electrolyte to form carbonates and degrades it. Using the atmosphere as a reactant means ingesting everything else in it."
+    },
+    {
+     "q": "What is a utility buying when it procures 100-hour storage, if not arbitrage?",
+     "a": "Accredited capacity and avoided cost. It must demonstrate to its commission that it can meet peak plus a reserve margin, and ELCC decides how much of a resource counts. A resource that runs for a hundred hours is credited very differently from a four-hour battery in a system whose binding risk is a multi-day still, cold, dark stretch."
+    },
+    {
+     "q": "Why is there no public cost per kilowatt-hour for a Form system?",
+     "a": "Because the one utility that filed a real number filed it as a trade secret. Xcel redacted the Sherco cost under Minnesota law, Dominion's $70.6m bundles Form with an Eos system unsplit, and Georgia and Colorado disclose nothing. The best figure available is arithmetic on a reported $1bn Google purchase."
+    },
+    {
+     "q": "Form's factory reaches 500 MW a year in 2028. Why does that number matter more than the chemistry?",
+     "a": "At 100-hour duration it is about 50 GWh a year, and the stated backlog is about 80 GWh — roughly 1.6 years of eventual full-rate output, deliverable no earlier than 2027 to 2031. The binding constraint on this company is manufacturing throughput, not electrochemistry."
+    },
+    {
+     "q": "Google is frequently described as 'backing' Form Energy. What is the actual relationship?",
+     "a": "Customer. Google pays for the Pine Island battery through a Clean Energy Accelerator Charge inside Xcel's Electric Service Agreement — a reported $1bn for 300 MW / 30 GWh. No Alphabet entity appears in any Form funding round, on its investor wall, or in the investor list it filed to ISO New England."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "6 min",
+   "items": [
+    {
+     "q": "A vendor's technical deck to a grid operator contains costs, footprints, cell dimensions, cycle counts and safety certifications — but no round-trip efficiency. What is the most reasonable inference?",
+     "c": [
+      "The metric is irrelevant to grid operators",
+      "It is commercially sensitive in a way costs are not",
+      "The omission is on the metric where the technology is weakest",
+      "It was an oversight"
+     ],
+     "a": 2,
+     "why": "Round-trip efficiency is a standard disclosure and the deck is otherwise detailed, including on cost — which is usually the more sensitive figure. At 35–50% against 85–90% for lithium, this is the number that invites the hardest question. The defence Form and Xcel make in public is that the metric is the wrong lens for an asset cycling eight to thirteen times a year; the deck simply does not engage it."
+    },
+    {
+     "q": "Why is 'footprint' a meaningless comparison for iron-air unless you name the denominator?",
+     "c": [
+      "Because acreage varies by site",
+      "Because it is better per megawatt-hour and worse per megawatt",
+      "Because land costs differ by state",
+      "Because the systems are modular"
+     ],
+     "a": 1,
+     "why": "At about 2 MW per acre iron-air is worse per megawatt than four-hour lithium at 5–10 MW per acre. But at 100 hours that same acre holds about 200 MWh against 20–40 MWh. The land argument cuts for iron-air on energy and against it on power, so a bare 'footprint' claim is uninterpretable."
+    },
+    {
+     "q": "A private company states an 80 GWh backlog and names agreements summing to about 56 GWh. What is the correct treatment?",
+     "c": [
+      "Use 80 GWh — it is the company's own figure",
+      "Use 56 GWh — only named deals count",
+      "Carry 80 GWh with the itemisable share stated",
+      "Discard both as unverifiable"
+     ],
+     "a": 2,
+     "why": "The 80 GWh is genuine as a company statement, tracked consistently through 2026 and corroborated by several outlets reporting it. But it is self-reported and about 70% itemisable, and the company's wording is that the growth 'includes' the named deals rather than consisting of them. Carrying the figure with its verifiable share attached is more useful than either accepting or discarding it."
+    },
+    {
+     "q": "Which fact best explains why iron-air's cost claims are harder to check than a flow battery's?",
+     "c": [
+      "Form is private",
+      "Iron-air appears in neither DOE's long-duration cost study nor PNNL's database",
+      "The chemistry is newer",
+      "Utilities do not publish contracts"
+     ],
+     "a": 1,
+     "why": "Vanadium flow, compressed air and pumped hydro all carry national-laboratory cost and performance baselines that an outsider can check a vendor against. Iron-air has none — it is absent from DOE's 2024 eleven-technology analysis and from PNNL's cost database, and no independent teardown exists. Every figure traces to the vendor or to one transaction."
+    },
+    {
+     "q": "Google pays the full cost of the Pine Island battery through a tariff rather than it entering general rate base. What problem does that structure solve?",
+     "c": [
+      "It reduces the project cost",
+      "It puts the technology risk on the party choosing the technology, not on ratepayers",
+      "It avoids needing commission approval",
+      "It secures the tax credits"
+     ],
+     "a": 1,
+     "why": "A novel technology at ten times any prior deployment is exactly what a ratepayer advocate objects to. Routing the cost to the customer that wants it means underperformance damages Google's carbon accounting rather than Minnesota bills. It still needs commission approval — docket E002/M-26-170 was pending with active objections as of September 2026."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "Form Factory 1",
+   "d": "Form Energy's only plant, on 55 acres of the former Weirton Steel tin mill in West Virginia. About 550,000 square feet today, targeted at roughly 850,000 and at least 500 MW of annual output by 2028."
+  },
+  {
+   "t": "Clean Energy Accelerator Charge",
+   "d": "The Minnesota tariff mechanism under which Google pays the full cost of the generation and grid infrastructure built to serve its Pine Island data centre, rather than that cost being spread across all of Xcel's customers."
+  },
+  {
+   "t": "Pine Island",
+   "d": "A 300 MW / 30 GWh Form iron-air battery in Minnesota serving a Google data centre through Xcel Energy — the largest battery project by energy capacity announced anywhere, and about ten times larger than anything Form had previously built."
+  }
+ ]
+}

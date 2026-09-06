@@ -208,28 +208,6 @@
    "note": "RWE is one of Blattner's repeat-owner frameworks; Blattner built Emily Solar, the project that completed RWE's first gigawatt in Illinois.",
    "context": "RWE's May 2026 ribbon-cutting release credits Blattner with building the 273.6 MW Emily Solar project in Clark, Cumberland and Coles counties, with about 400 peak construction jobs, and publicly cites 'Blattner's delivery credibility'. The relationship predates it — Blattner's own positioning lists RWE among its repeat-owner frameworks alongside Pattern, Orsted, Recurrent/Goldman and NextEra/FPL. On Blattner sites the owner furnishes the batteries, so any storage procurement on RWE's co-located projects stays RWE's decision.",
    "source": "https://www.prnewswire.com/news-releases/rwe-celebrates-1-gigawatt-emily-solar-302770003.html"
-  },
-  {
-   "slug": "recurrent-energy",
-   "type": "customer",
-   "status": "active",
-   "since": "2020",
-   "scale": "Papago Solar 150 MWac and Cobalt Solar 330 MW; historically Slate at 390 MWp plus 140.25 MW / 561 MWh",
-   "via": "Solar EPC on Recurrent-developed projects",
-   "note": "Recurrent Energy is one of Blattner's repeat solar owners, named as EPC on Papago Solar and on the 330 MW Cobalt Solar project.",
-   "context": "This dossier already lists Recurrent among Blattner's repeat-owner frameworks alongside Pattern, Orsted, RWE and NextEra, and records the Slate build — 390 MW of solar with 140.25 MW / 561 MWh of storage on Canadian Solar integration — as a documented Blattner storage project for Recurrent before that asset was sold to what is now MN8 Energy. Two current awards confirm the framework is live: Recurrent's October 2025 Arizona financing release names Blattner as EPC on the 150 MWac Papago Solar project, and its August 2026 Cobalt Solar release names Blattner as EPC on 330 MW in Riverside County with commercial operation targeted for the end of 2027.",
-   "source": "https://recurrentenergy.com/recurrent-energy-secures-695-million-in-project-financing-for-330-mw-california-solar-project/"
-  },
-  {
-   "slug": "clearway-energy",
-   "type": "customer",
-   "status": "active",
-   "since": "2026",
-   "scale": "199 MW / 398 MWh (Spindle)",
-   "via": "Battery storage EPC",
-   "note": "Blattner Energy is the EPC on Clearway's Spindle battery project in Weld County, Colorado.",
-   "context": "Spindle is a 199 MW / 398 MWh two-hour Tesla installation contracted to Public Service Company of Colorado, financed at $261m in February 2026 and targeted for commercial operation in late 2026. It fits this dossier's recorded pattern precisely: on Blattner sites the owner furnishes the batteries, and Clearway procured its Tesla Megapack units directly under a portfolio order rather than through the contractor. Clearway joins Pattern, Orsted, RWE, Recurrent and NextEra among Blattner's repeat renewables owners.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm"
   }
  ],
  "policyExposure": [
@@ -382,23 +360,8 @@
   {
    "label": "Blattner — about, leadership, projects, storage expertise pages",
    "url": "https://www.blattnercompany.com/expertise/storage"
-  },
-  {
-   "label": "Recurrent Energy — $695m project financing for the 330 MW Cobalt Solar project, California (Blattner Energy as EPC)",
-   "url": "https://recurrentenergy.com/recurrent-energy-secures-695-million-in-project-financing-for-330-mw-california-solar-project/",
-   "date": "2026-08-13"
-  },
-  {
-   "label": "Recurrent Energy — $825m project financing for the Arizona energy projects (Blattner Energy as EPC on Papago Solar)",
-   "url": "https://recurrentenergy.com/recurrent-energy-closes-825-million-in-project-financing-for-arizona-energy-projects/",
-   "date": "2025-10-21"
-  },
-  {
-   "label": "Clearway Energy — 8-K on the Spindle (199 MW BESS, Colorado) and Rosamond South II purchase agreement",
-   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm",
-   "date": "2025-12-02"
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "profileVersion": 4
 }

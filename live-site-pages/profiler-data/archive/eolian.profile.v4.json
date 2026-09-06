@@ -259,16 +259,6 @@
    "context": "LG Energy Solution Vertech is a fellow US Energy Storage Coalition member, and the dossier assesses the open supplier slots for Flint Grid — 200 MW/1.06 GWh under construction (PJM's largest battery), with Phase 1 delivering ~2027 and Phase 2 ~2029 — as effectively reserved for FEOC-clean vendors, with Tesla and LGES Vertech the structural favorites given the coalition posture and the Padua precedent.",
    "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds",
    "status": "active"
-  },
-  {
-   "slug": "form-energy",
-   "type": "partner",
-   "status": "active",
-   "since": "2026-03",
-   "via": "US Energy Storage Coalition",
-   "note": "Form Energy is a US Energy Storage Coalition co-member alongside Eolian in the American-built storage campaign.",
-   "context": "Form sits with Eolian, Tesla, LG Energy Solution Vertech and Fluence in the coalition whose March 2026 report claims American factories can supply 100% of US projects. As with Fluence, this is a policy alliance rather than a supply relationship — no Form hardware appears in Eolian's fleet, and Form's product serves a different duration entirely at 100 hours. Form is the strongest version of the coalition's own argument: its iron-air chemistry uses no lithium, cobalt, nickel or graphite, it states about 80% domestic content, and it manufactures at a single plant in West Virginia.",
-   "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds"
   }
  ],
  "policyExposure": [
@@ -440,6 +430,6 @@
    "url": "https://www.eolianenergy.com/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }
