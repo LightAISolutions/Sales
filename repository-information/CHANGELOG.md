@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.93r] — 2026-09-06 06:52:23 PM EST — v01.83w
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response: "Do the CHANGELOG archive rotation now, at 95/100, rather than at 100
+> … doing it under time pressure at exactly 100 … is how the SHA-enrichment and capacity-counter steps get rushed.")*
+
+### Changed
+
+- **`CHANGELOG-archive.md` → Rotation Logic step 6 now opens with a mandatory deepen-the-clone step**, ahead of SHA enrichment, and the fallback is rewritten: `[SHA unavailable]` is reachable only *after* the clone has been deepened. A failed lookup on a still-shallow clone is no longer a permitted outcome — it is the deepen step being skipped.
+- **`.claude/rules/changelogs.md`** restates the same thing as a precondition rather than a "shallow clone fix" buried mid-paragraph, with the measured figures.
+
+### Notes
+
+- **The recommendation was wrong and was not carried out.** `CHANGELOG-archive.md` → Rotation Logic step 2 says: *"if the count is **100 or fewer**, stop — no rotation needed."* The count is **95**. The rule also already contains the slack the recommendation was worried about — the current-day exemption lets the file exceed 100 and self-correct — so an early rotation would have moved a date group irreversibly, against an explicit instruction, for no capacity benefit. What was done instead is the thing the recommendation was reaching for: de-risking the rotation before it triggers, entirely within the rules.
+- **The dry run found a real defect, and it is not the one the recommendation predicted.** The risk is not time pressure at the cap — it is the **shallow clone**. Sessions start shallow; the sections due for rotation are by definition the *oldest*; so they are precisely the ones beyond the shallow horizon. Measured today: the clone held **63 commits reaching back only to `v04.38r`**, and **all 16 sections in the first two rotation groups** (`v03.98r`–`v04.13r`, the 2026-08-31 and 2026-09-01 date groups) resolved to **nothing**. A session rotating in that state would have archived all sixteen as `[SHA unavailable]` — permanently, since the archive is never re-enriched.
+- **The prescribed fix was tested rather than assumed, and it works.** `git fetch --unshallow origin main` — the exact command as documented — took **8 seconds** and moved the clone from 63 to **977 commits**. Re-testing afterwards: **95 of 95** version sections in the active changelog resolve to a commit, zero unresolvable. Both figures are now written into the procedure so the next session sees evidence rather than an assertion.
+- **The procedure was contradicting itself, which is why this was worth fixing.** Step 6 named shallow history as the cause of lookup failure and then told the reader to *accept* the loss — *"If the lookup fails (commit not found — common when git history is shallow), move the section as-is without a SHA link"* — while the one command that prevents it lived only in `.claude/rules/changelogs.md`, a different file. A reader following the canonical step-by-step would have done the wrong thing while believing they had followed the rule.
+- **This has been hit twice before and recovered by luck of attention, not by procedure.** The v02.62r and v02.51r archive entries both record deepening the clone first and both note that every lookup would otherwise have failed silently. Two prior sessions caught it; the step-by-step still did not tell them to.
+- **The existing archive is clean.** The documented post-rotation verification — `grep '^## \[v' CHANGELOG-archive.md | grep -v '— \['` — returns nothing across all **297** archived sections. Past rotations did enrich correctly. No repair was needed and none was made.
+- **State when rotation next triggers, recorded so the next session does not have to re-derive it.** 96 sections after this push; today's date group (2026-09-06) is exempt at 15; the seven date groups run 2026-08-31 (3), 09-01 (13), 09-02 (21), 09-03 (13), 09-04 (13), 09-05 (18), 09-06 (15). The trigger is on the **total**, the re-check on the **non-exempt** count, so the first rotation will move the three-section 2026-08-31 group and then re-check — the Scenario F pattern already recorded in this archive.
+- The counter and the file agree exactly (95 before this push, 96 after); no drift to correct. CHANGELOG `Sections: 95/100` -> `96/100`.
 
 ## [v04.92r] — 2026-09-06 06:37:41 PM EST — v01.83w
 
