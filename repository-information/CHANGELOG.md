@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.88r] — 2026-09-06 05:26:43 PM EST — v01.83w
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response: "Run a calendar reconciliation pass — diff `profiler-companies.json`
+> against `profiler-refresh-calendar.json` and add a row for every covered company that lacks one, public rows with a
+> researched-or-inferred date and private rows on the quarterly cadence. It is bounded, mechanical, and it closes a gap
+> that currently hides itself.")*
+
+### Added
+
+- **38 refresh-calendar rows — the calendar and the roster are now in bijection at 151.** The gap was 113 rows against 151 covered companies, and it is the kind of failure that hides itself: an unscheduled company simply never comes up in the desk's queue. It surfaced only because a watch-item edit to `bloom-energy` at v04.87r silently did nothing.
+- **19 dated rows**, every one `confirmed: false` with its cadence basis written into `source`: `canadian-solar`, `coreweave`, `delta-electronics`, `eaton`, `enchanted-rock`, `ge-vernova`, `hyperstrong`, `liteon`, `mastec`, `megmeet`, `narada`, `nextera-energy-resources`, `oracle`, `samsung-ct`, `schneider-electric`, `solv-energy`, `sunwoda`, `vertiv`, `zhonhen`.
+- **19 rows on the quarterly sweep** — five unit-level (`blattner`, `crrc-zhuzhou`, `ls-energy-solutions`, `prevalon`, `trina-storage`) and fourteen private (`apex-clean-energy`, `arevon`, `envision-energy`, `eolian`, `jupiter-power`, `key-capture-energy`, `lightsource-bp`, `mainspring-energy`, `on-energy`, `openai`, `plus-power`, `proenergy`, `terra-gen`, `voltagrid`).
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §7's calendar bullet** now records the reconciliation, the unit-level rule it followed, and a standing suggestion to re-check the bijection at each phase close.
+
+### Notes
+
+- **The public/private split came from each dossier's own `ownership` field, not from a guess**, and the unit-level rule follows the convention already in the file: a subsidiary of a listed parent gets a **dated** row only where the parent reports it as a **named segment** — `nextera-energy-resources` is one of NextEra Energy's two segments, on the `mitsubishi-power` / `rolls-royce-power-systems` precedent — and otherwise goes on the quarterly sweep, on the `engie-north-america` / `aes-clean-energy` / `rwe-clean-energy` / `recurrent-energy` precedent.
+- **Cadence bases are sourced, not invented.** For the twelve US filers the basis is the company's own EDGAR filing history, with the prior-year quarter's filing date quoted in the row. For the non-US issuers it is the dossier's own latest reported period plus the statutory reporting window of the exchange — Chinese A-shares by 31 October, Taiwan by mid-November, Korea late October — and each row says which.
+- **`oracle` is due within days** (fiscal year ending 31 May, Q1 FY2027 inferred at 2026-09-10) and is flagged in its own `source` as the desk's seven-day confirm-the-date work. It is also the one row whose fiscal calendar does not line up with any other on the desk.
+- **Queue impact checked, not assumed.** The desk is capped at three companies a day; the 38 additions land 40 rows in October and 31 in November, comfortably inside a ~65-a-month capacity. Seven rows were already overdue before this pass (`byd`, `eve-energy`, `iren`, `jinko`, `nvidia`, `sinexcel`, `sungrow`) and remain so — they are pre-existing, not introduced here.
+- **Watch items are drawn from each dossier's own stated gaps, not boilerplate.** Several carry Chesterton checks against errors this session and its predecessors already corrected — that `blackstone` did not seed VoltaGrid, that Macquarie's role at Trina's Houston project is tax equity rather than ownership, that `eolian` and `jupiter-power` are BlackRock/GIP and not Blackstone, and that the `blattner x quanta-services` accept was re-reasoned and kept rather than retyped to `portfolio`.
+- **A repeat of the v04.86r near-miss, caught the same way.** Sorting the calendar reordered rows five earlier sessions had appended. Reverted; the diff is +437/-0, purely additive. The registry has the same unsorted tail and the same rule now applies to both: insert into the alphabetical prefix, leave the appended tail alone.
+- CHANGELOG `Sections: 90/100` -> `91/100`; nine pushes of headroom, no rotation due.
 
 ## [v04.87r] — 2026-09-06 05:14:08 PM EST — v01.83w
 

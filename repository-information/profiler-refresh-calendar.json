@@ -94,6 +94,17 @@
       ]
     },
     {
+      "slug": "apex-clean-energy",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Majority owned since November 2021 by funds managed by Ares Management. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "The dossier's own framing: 'the observable financial record is lender behavior, not accounts'. Nearly USD 7bn of project financing closed in the 13 months to January 2026 on traditional tax equity from four banks, plus a USD 1.05bn corporate facility. Watch the financing cadence as the proxy for activity.",
+        "CEO Ken Young became Chair of the American Clean Power Association in August 2026, with ACP citing more than 11 GW commercialized. Trade-body leadership is a visibility signal, not a company disclosure.",
+        "Apex is queued for a `profiler prep` study-guide backfill among the IPPs in §5. IF ARES SELLS OR LISTS IT, convert this row."
+      ]
+    },
+    {
       "slug": "applied-digital",
       "nextReport": "2026-10-14",
       "confirmed": false,
@@ -107,6 +118,17 @@
         "Delivery milestones at PF1/PF2",
         "Financing actions (project notes, Macquarie preferred draws)",
         "ChronoScale (CHRN) status"
+      ]
+    },
+    {
+      "slug": "arevon",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). 100% pension and sovereign capital at formation — APG (Netherlands) and CDPQ (Quebec). IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Nighthawk (300 MW / 1,200 MWh, Poway) reached commercial operation in August 2026 under a PG&E long-term offtake. Watch the CAISO resource-adequacy contracting cadence.",
+        "THE FINANCING PATTERN IS THE STORY: Vikings included a USD 191m ITC+PTC transfer to J.P. Morgan among the first IRA transferability deals; Condor used **Blackstone Credit preferred equity replacing traditional tax equity**; Nighthawk used a Goldman Sachs Alternatives preferred plus a USD 268m credit transfer to an unnamed corporate. Watch which structure recurs.",
+        "NOTE ON THE BLACKSTONE LINK: it is PROJECT-LEVEL preferred equity, not a platform holding, and `blackstone`→`arevon` is typed `other` for exactly that reason. Do not read it as ownership. Arevon is queued for a §5 guide backfill."
       ]
     },
     {
@@ -164,6 +186,17 @@
       ]
     },
     {
+      "slug": "blattner",
+      "cadence": "quarterly",
+      "source": "UNIT-LEVEL — a subsidiary or business unit of a listed parent that does NOT break it out as a named reporting segment, so there is no separate result to wait for. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1) on the `engie-north-america` / `aes-clean-energy` / `rwe-clean-energy` / `recurrent-energy` precedent. Contrast `nextera-energy-resources`, `mitsubishi-power` and `rolls-royce-power-systems`, which ARE named segments of their parents and therefore carry dated rows. Parent: Quanta Services, Inc. (NYSE: PWR, CIK 0001050915). Blattner sits inside Quanta's Renewable Energy Infrastructure segment but is not itself the segment, so its own figures are not separately reported. Quanta's cadence, for context when reading parent disclosure: Q3 2025 10-Q filed 2025-10-30, Q2 2026 filed 2026-07-30.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Quanta's record backlog (USD 53.4bn at Q2 2026, FY2026 guidance raised to USD 39.3-39.7bn) is the parent-level proxy; watch the renewable segment's share of it.",
+        "CHESTERTON CHECK carried from v04.85r: the `blattner x quanta-services` reciprocal sits on the relationships accept list and was RE-REASONED AND KEPT — `portfolio` was considered and rejected, because a wholly-owned operating construction subsidiary is not a financial holding. The types actually missing are `parent`/`subsidiary`. Do not re-type this edge to `portfolio`.",
+        "RWE's Emily Solar and the Lafitte project are Blattner's in-corpus links; C5 corrected the `mccarthy` dossier's claim that no RWE relationship existed beyond Bright Arrow."
+      ]
+    },
+    {
       "slug": "bloom-energy",
       "nextReport": "2026-10-27",
       "confirmed": false,
@@ -199,6 +232,18 @@
         "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[]",
         "BYD Energy Storage (BESS) shipments and the MC Cube line",
         "Blade/second-gen cell roadmap and overseas ESS wins"
+      ]
+    },
+    {
+      "slug": "canadian-solar",
+      "nextReport": "2026-11-24",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NASDAQ: CSIQ (Canadian Solar Inc., CIK 0001375877). **FOREIGN PRIVATE ISSUER** — it files Form 20-F annually and Form 6-K for interim results, NOT 10-Q, so there is no quarterly filing cadence to infer from. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the dossier's latest reported period is Q1 2026, and Canadian Solar has historically released Q3 results in late November. HOW TO CONFIRM: Canadian Solar issues a scheduling press release about two weeks ahead and files it on EDGAR as a 6-K; check CIK 0001375877.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "e-STORAGE / SolBank is the line this corpus tracks, not the module business. Watch SolBank 3.0 shipments and the contracted backlog.",
+        "The June 2026 426 MWh DC / 95 MW contract with an UNNAMED Florida electric utility — watch for the counterparty becoming nameable.",
+        "Recurrent Energy is Canadian Solar's development arm and has its OWN dossier and calendar row; C6 established BlackRock holds Series A convertible preferred representing 20% as-converted. Keep the two rows' facts consistent."
       ]
     },
     {
@@ -324,6 +369,29 @@
       ]
     },
     {
+      "slug": "coreweave",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NASDAQ: CRWV (CoreWeave, Inc., CIK 0001769628, fiscal year end 31 December). THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis, from CoreWeave's own EDGAR filing history: Q3 2025 10-Q filed 2025-11-13, Q1 2026 filed 2026-05-08, Q2 2026 filed 2026-08-12. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0001769628 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Contracted revenue backlog and its concentration — the dossier records multi-year, multi-billion agreements (Hudson River Trading, August 2026) but the customer mix behind the backlog is the recurring question.",
+        "The Elk Grove Village lease from Prime Data Centers — about USD 2.2bn over 15 years, recorded ONE-SIDEDLY on Prime's side because it surfaced only through Prime's June 2026 bond marketing. CoreWeave's own dossier does not carry it. Close this at the next refresh; it has been flagged since F8.",
+        "Galaxy Digital's Helios campus — CoreWeave is the sole tenant of 800 MW gross / 526 MW critical IT across Phases I-III on 15-year terms. Watch delivery against the phase schedule."
+      ]
+    },
+    {
+      "slug": "crrc-zhuzhou",
+      "cadence": "quarterly",
+      "source": "UNIT-LEVEL — a subsidiary or business unit of a listed parent that does NOT break it out as a named reporting segment, so there is no separate result to wait for. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1) on the `engie-north-america` / `aes-clean-energy` / `rwe-clean-energy` / `recurrent-energy` precedent. Contrast `nextera-energy-resources`, `mitsubishi-power` and `rolls-royce-power-systems`, which ARE named segments of their parents and therefore carry dated rows. Parent: CRRC Corporation Limited (SHA: 601766 / HKG: 1766), a central state-owned enterprise. The Comprehensive Energy business unit is not separately reported.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "The dossier's own flagged gap: integration capacity of 21.5 GWh/yr across seven bases against 14.16 GWh of 2024 shipments — a capacity overhang amid a >100-vendor domestic price war. **The 2025 full-year shipment figure and global rank are UNDISCLOSED.** Establishing either is the priority.",
+        "The 6.X liquid-cooled system shown at The smarter E Europe (June 2026) — +25% energy density, >20% smaller footprint. Watch for a shipping product and a customer.",
+        "CRRC Zhuzhou is queued for a `profiler prep` study-guide backfill among the integrators in §5."
+      ]
+    },
+    {
       "slug": "crusoe",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
@@ -350,6 +418,18 @@
         "The unverified $150M Fridley, Minnesota QSK95 expansion attributed to Mordor Intelligence - no Cummins release, IR item or filing corroborates it",
         "Accelera: with new electrolyzer activity stopped, whether FY2026 is the first year in three without a segment charge distorting GAAP EPS",
         "Emissions consent-decree residuals: the 85%-in-three-years recall obligation and the company's stated communications with non-US regulators"
+      ]
+    },
+    {
+      "slug": "delta-electronics",
+      "nextReport": "2026-11-13",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — TWSE: 2308 (Delta Electronics, Inc., Taiwan Stock Exchange). NOT an SEC registrant; use Delta's investor-relations site and TWSE's Market Observation Post System. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the dossier's latest reported period is Q2 2026, released 2026-07-29. Taiwanese issuers must file Q3 reports by mid-November. HOW TO CONFIRM: Delta publishes a board-meeting notice ahead of results on MOPS.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Q2 2026 was a record — revenue NT$183.2bn (+48%), EPS NT$9.68 — and AI data-centre power plus cooling crossed 50% of revenue for the first time. Watch whether that share keeps rising.",
+        "THE CONTESTED CLAIM the dossier flags: Chinese-press reporting that Megmeet displaced LITEON as the #2 NVL72 power-shelf supplier. Delta's #1 position is not in question; the #2 slot is. Watch for any ranking with a stated methodology — the corpus has found none.",
+        "800 VDC and the sidecar architecture — Delta, LITEON, Megmeet and Vicor all sit in this chain and their dossiers should stay consistent."
       ]
     },
     {
@@ -401,6 +481,18 @@
       ]
     },
     {
+      "slug": "eaton",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE: ETN (Eaton Corporation plc, CIK 0001551182, fiscal year end 31 December). THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: Q3 2025 10-Q filed 2025-11-04, Q1 2026 filed 2026-05-05, Q2 2026 filed 2026-07-31. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0001551182 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "The Mobility spin-off announced for Q1 2027 — watch the perimeter, because it changes what the remaining Eaton is and therefore what its data-centre exposure is as a share of the whole.",
+        "Record Q2 2026 revenue USD 8.53bn (+21.4%) with both lines beating. Watch whether electrical backlog growth holds as the AI build-out matures.",
+        "Boyd Thermal and Motivair sit inside Eaton's and Schneider's dossiers rather than having their own; watch for any disclosure that would justify separating them."
+      ]
+    },
+    {
       "slug": "edgecore",
       "cadence": "quarterly",
       "source": "Private, sponsor-owned (Partners Group 'on behalf of its clients' since 11 November 2022; USD 1.9bn equity round September 2024, Partners Group remains majority investor); no listing, no earnings calendar. Partners Group Holding AG (SIX: PGHN) is listed but its annual and interim reports carry EdgeCore only as a label. Disclosure channels: edgecore.com press releases (the 2026 Webflow site; legacy /news/ paths redirect), campus pages (figures move without release), Yahoo Finance and PR Newswire mirrors, financing counsel pages (Davis Polk), Commercial Property Executive, Virginia Business, AZ Big Media, Data Center Frontier; Data Center Dynamics is 403. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
@@ -413,6 +505,18 @@
         "Arizona: ACC rules under HB 2756 for extra-high-load customers and the 2026–2029 sales-tax exemption pause (HB 4168) — whether Mesa buildings hold grandfathered certifications; SRP's Large Customer Integration Process",
         "Ratepayer posture: any campus abandoned on power economics (Brewer: 'will abandon projects if power economics become financially unworkable'); Virginia's electricity consumption tax (USD 0.011/kWh, July 2026–June 2028)",
         "Chesterton check: '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's own January 2026 wording (superseded by the site's 2.27+ GW / $7.4bn) — the verifiable operating base is two buildings (PH01 26 MW, SV01 36 MW); EdgeCore is Partners Group-owned, not Brookfield-owned (its only Brookfield link is buying Mesa land from a Brookfield Properties affiliate) and has no Illinois site; Holder's Mesa contract value is undisclosed (the '$1.9B' is EdgeCore's loan). Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "enchanted-rock",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE: EROC (ERock, Inc., CIK 0002110029, fiscal year end 31 December). **RECENTLY LISTED — IPO'd June 2026**, and it has filed exactly ONE 10-Q, so this is the weakest cadence inference on the desk. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the sole Q2 2026 10-Q was filed 2026-08-12; a Q3 filing roughly three months later implies mid-November. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0002110029 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "CNBC/BofA framed EROC in August 2026 as 'a play on the Anthropic IPO'. That is third-party framing, not a disclosed relationship — watch for any Anthropic or data-centre contract EROC itself discloses.",
+        "As a June 2026 IPO there are no full-year comparatives yet. The FY2026 10-K will be the first.",
+        "Bridge-power and resiliency-as-a-service microgrids — watch the contracted megawatt figure, which the dossier records as the key scale measure."
       ]
     },
     {
@@ -446,6 +550,28 @@
         "Hut 8 River Bend: the first 330 MW in Q2 2027 and any generation filed for its growth to 1,000 MW; Waterford 6/Westlake (U-37853) and the Cottonwood acquisition (U-37801) decisions in Q4 2026; Babel–Webre 500 kV",
         "Louisiana phase-one: the Blue Owl joint-venture guaranty question the intervenors raised; the transparency ruling; the Sierra Club air-permit challenge",
         "Chesterton check on next refresh: the LPSC order text for U-37425 was not retrievable this session — the ESA terms rest on the intervenors' quotations and the company's 2026 testimony; re-pull the order if the LPSC portal is reachable"
+      ]
+    },
+    {
+      "slug": "envision-energy",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Envision Group; no cap table published. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "**THE SINGLE BIGGEST OPEN QUESTION IN THAT FILE**, in the dossier's own words: whether the Fixx structure survives Treasury's final FEOC regulations, due late 2026. If continuing licensing and IP ties are ruled to taint effective control, the structure fails. This is the priority item.",
+        "Galaxy Campus (Ulanqab) commissioned its first building in August 2026, billed as the world's largest AIDC building running on on-site renewables. NAME TRAP: this 'Galaxy' is Envision's campus and is NOT Galaxy Digital — C9 recorded it as a confirmed false-positive class along with `piller`'s hit and Schneider's Galaxy VXL UPS product family.",
+        "Envision is queued for a `profiler prep` study-guide backfill among the integrators in §5."
+      ]
+    },
+    {
+      "slug": "eolian",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). A portfolio company of Global Infrastructure Partners — **which has been part of BlackRock since 1 October 2024**. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "DISAMBIGUATION, and the reason it is the first item here: Eolian is **BlackRock/GIP**, NOT Blackstone. C10 recorded that `\\bBlackRock\\b` and `\\bBlackstone\\b` each hit 19 files in this corpus and overlap in eight. Verify the referent before writing any edge.",
+        "Flint Grid — 200 MW / 1.06 GWh, PJM's largest battery, BALANCE-SHEET FINANCED and under construction as of July 2026. Balance-sheet financing from a sponsor-owned developer is unusual; watch whether it recurs.",
+        "The `eolian`/`jupiter-power` pair sits on the relationships accept list as an `other`/`other` corporate-structure link (both GIP-owned), reported by design. Do not re-type it."
       ]
     },
     {
@@ -611,6 +737,18 @@
       ]
     },
     {
+      "slug": "ge-vernova",
+      "nextReport": "2026-10-21",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE: GEV (GE Vernova Inc., CIK 0001996810, fiscal year end 31 December). THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: Q3 2025 10-Q filed 2025-10-22, Q1 2026 filed 2026-04-22, Q2 2026 filed 2026-07-22. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0001996810 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Gas turbine slot reservations and the NRG Project Development Agreement — C4 established this is a PDA with slot reservations and NO firm order, correcting a 'JV' characterisation. Watch for conversion to firm orders.",
+        "The Charleroi, PA switchgear and breaker expansion — part of a USD 138m programme adding ~275 jobs through 2028. Watch delivery against that schedule.",
+        "GE Vernova is named in the AI Infrastructure Partnership's strategic-partner list alongside Microsoft, NVIDIA and NextEra; watch whether that converts into disclosed equipment commitments."
+      ]
+    },
+    {
       "slug": "google",
       "nextReport": "2026-10-27",
       "confirmed": true,
@@ -736,6 +874,18 @@
       ]
     },
     {
+      "slug": "hyperstrong",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — SSE STAR: 688411 (Beijing HyperStrong Technology Co., Ltd.). NOT an SEC registrant; use SSE STAR Market disclosure. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the dossier carries Q1 2026 plus an H1 2026 forecast issued 2026-07-30. Chinese A-share Q3 deadline is 31 October. HOW TO CONFIRM: the SSE disclosure portal.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "H1 2026 forecast: revenue RMB 5.6-6.9bn (+24-53%) with net profit RMB 620-700m (+96-122%) — profit growing roughly twice as fast as revenue. Watch whether the actual confirms the margin expansion.",
+        "THE OPEN QUESTION the dossier flags: the integrator-without-cells model rests on a >=200 GWh CATL pact and a 50 GWh EVE agreement whose PRICING TERMS ARE UNDISCLOSED. Watch for any disclosure of terms.",
+        "The US position is 'structurally capped but deliberately kept alive' — Houston, Chicago and San Francisco offices, the Luminous MoU, and a full UL certification stack. Watch whether FEOC rules close or open it."
+      ]
+    },
+    {
       "slug": "infineon",
       "nextReport": "2026-11-10",
       "confirmed": true,
@@ -812,6 +962,28 @@
       ]
     },
     {
+      "slug": "jupiter-power",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Owned by funds managed by BlackRock's Diversified Infrastructure business. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "DISAMBIGUATION: BlackRock, not Blackstone. Same caution as `eolian`, with which it shares an accept-list entry.",
+        "The dossier's own judgment: the AIDC angle is 'siting-led and latent' — **no named data-centre offtake exists**, but Callisto (Houston) and Trimount (Boston/Mystic) are sited for it and the CEO frames storage as the fast answer to data-centre load. Watch for the first named offtake; that would change the judgment.",
+        "Trimount received final Massachusetts EFSB approval in early March 2026 with Hithium 5.015 MWh units confirmed. Watch construction and the Hithium supply relationship."
+      ]
+    },
+    {
+      "slug": "key-capture-energy",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). SK-owned: SK E&S took majority control in December 2021. **AND IN PLAY** — the dossier records a monetization push. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "**OWNERSHIP IS THE LIVE ITEM.** SK Innovation's own balance-sheet stress (battery losses drove the E&S merger) underlies a monetization push. If KCE is sold, this row's ownership facts and every in-corpus reference change together.",
+        "A USD 300m letter-of-credit facility closed August 2026 with Standard Chartered as sole provider and arranger, to post development-phase credit support. Watch drawdown as a build-rate proxy.",
+        "ERCOT merchant softness through 2025-26 (mild weather, algorithmic competition) is the stated revenue pressure. Aypa's own dossier benchmarks against KCE and esVolta as comparable standalone storage platforms."
+      ]
+    },
+    {
       "slug": "kiewit",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
@@ -854,6 +1026,63 @@
       ]
     },
     {
+      "slug": "lightsource-bp",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Wholly owned by bp since 24 October 2024 (GBP 400m for the remaining 50.03%). **AND IN PLAY.** IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "**THE SALE IS THE STORY.** FT via Reuters, 24 July 2026: bp is in advanced talks to sell the ENTIRE Lightsource business to a Kuwait-backed consortium including Wren House. Sale-process valuations are undisclosed. If it completes, ownership, strategy and every in-corpus reference change at once — and the row may need converting if the buyer is listed.",
+        "Platform data per bp's February 2025 capital-markets day: 5.7 GW operating across 19 markets, >2 GW completed in 2024, a 3-5 GW/yr addition target — but that target was set BEFORE bp's renewables retreat and the dossier records its credibility as now unclear. Do not repeat it without that caveat.",
+        "Lightsource bp is queued for a `profiler prep` study-guide backfill among the IPPs in §5."
+      ]
+    },
+    {
+      "slug": "liteon",
+      "nextReport": "2026-11-13",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — TWSE: 2301 (LITE-ON Technology Corporation, Taiwan Stock Exchange). NOT an SEC registrant; use LITE-ON's investor site and TWSE MOPS. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the dossier's latest reported period is Q2 2026, released 2026-07-31. Taiwanese Q3 reporting deadline is mid-November. HOW TO CONFIRM: board-meeting notice on MOPS.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Q2 2026 all-time records — revenue NT$52.7bn (+30%), EPS NT$3.14 (+126%), gross margin 27.2%, operating margin 15.6%. Watch margin durability.",
+        "The #2 NVL72 power-shelf position is contested by Megmeet per Chinese-press reporting carried in the Delta dossier. No ranking with a stated methodology exists. Watch for one.",
+        "Keep the Delta / LITEON / Megmeet / Vicor power-shelf accounts consistent across the four dossiers."
+      ]
+    },
+    {
+      "slug": "ls-energy-solutions",
+      "cadence": "quarterly",
+      "source": "UNIT-LEVEL — a subsidiary or business unit of a listed parent that does NOT break it out as a named reporting segment, so there is no separate result to wait for. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1) on the `engie-north-america` / `aes-clean-energy` / `rwe-clean-energy` / `recurrent-energy` precedent. Contrast `nextera-energy-resources`, `mitsubishi-power` and `rolls-royce-power-systems`, which ARE named segments of their parents and therefore carry dated rows. Parent: LS ELECTRIC Co., Ltd. (KRX: 010120, LS Group), which acquired the business and does not report it as a named segment.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Parent LS ELECTRIC won a USD 34m Bloom Energy power order for a hyperscale data centre in Wyoming (a REPEAT order, August 2026) — watch whether the relationship becomes a disclosed programme.",
+        "The Samsung C&T JV's 500 MW Texas BESS is the joint event to track from both sides; keep this row and `samsung-ct` consistent.",
+        "LS Energy Solutions is queued for a `profiler prep` study-guide backfill among the integrators in §5."
+      ]
+    },
+    {
+      "slug": "mainspring-energy",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). More than USD 800m raised across rounds (Series D USD 95m, April 2021, and later). IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "A ~USD 1bn data-centre pipeline is reported by Latitude, alongside an UNNAMED islanded AI data centre already running on Mainspring linear generators. Watch for the site or customer becoming nameable.",
+        "CHESTERTON CHECK: the `amazon`/`mainspring-energy` reciprocal was among the seven edges flipped `other` → `portfolio` at v04.85r when the enum gained the value. It should now read coherently; do not revert it.",
+        "Mainspring is queued for a `profiler prep` study-guide backfill among the bridge-power suppliers in §5."
+      ]
+    },
+    {
+      "slug": "mastec",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE: MTZ (MasTec, Inc., CIK 0000015615, fiscal year end 31 December). THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: Q3 2025 10-Q filed 2025-10-30, Q1 2026 filed 2026-04-30, Q2 2026 filed 2026-07-30. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0000015615 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Record backlog USD 21.4bn at Q2 2026 with FY2026 guidance raised to USD 18.2bn revenue and USD 9.30 adjusted EPS. Watch backlog conversion and the hyperscaler share of it.",
+        "MasTec is one of the EPCs queued for a `profiler prep` study-guide backfill in PROFILER-COVERAGE-PLAN.md §5. A refresh that changes the service-line record should note it.",
+        "Multiple hyperscaler programmes were referenced on the Q2 call without naming customers; watch for any that become nameable."
+      ]
+    },
+    {
       "slug": "mccarthy",
       "cadence": "quarterly",
       "source": "Private and 100% employee-owned; no filing record, no earnings calendar, no audited financials. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). The only company-published total revenue figure in existence is 'exceeding $4.8 billion' for 2020; third-party figures are self-reported survey responses and disagree.",
@@ -867,6 +1096,18 @@
         "Leadership: Dhruv Patel became President and COO in August 2026 having scaled renewables from $20M to $2B-plus; Cathy Orquiola joined from PCL in August 2026 focused on self-perform and mission critical. Watch whether a data-centre-specific practice leadership emerges",
         "Safety: the open OSHA health citation at Sparks NV (inspection 1826381.015, silica NEP) and whether any company-wide, dated EMR or TRIR is ever published — the existing 0.45 and 0.47 figures are undated and market-scoped",
         "Chesterton check: no civil litigation, debarment, bid protest or licensing action was found after direct database and press searching. Three false attributions circulate and must not be re-imported — the Whiting-Turner Top 400 entry, EdgeCore Mesa (Holder), and Meta Beaver Dam (Mortenson)"
+      ]
+    },
+    {
+      "slug": "megmeet",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — SZSE: 002851 (Shenzhen Megmeet Electrical Co., Ltd.). NOT an SEC registrant; use SZSE disclosure and the company's investor site. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the dossier's latest reported period is Q1 2026. Chinese A-share issuers must publish Q3 reports by 31 October. HOW TO CONFIRM: the SZSE disclosure portal.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "THE CLAIM TO TEST: trade reporting that Megmeet displaced LITEON as the #2 NVIDIA power-shelf source behind Delta. The company has not confirmed it and the dossier carries it as unverified market reporting at LOW confidence. Watch for confirmation or refutation.",
+        "FY2025 net profit fell 66.6% to RMB 146m with operating cash flow negative for the first time, attributed by management to deliberate investment. Watch whether AI-DC revenue converts at scale.",
+        "Megmeet is the corpus's reference dossier for the intel-briefing writing style (the PROFILER-STYLES.md mock-ups are Megmeet excerpts). A revision that changes its prose should stay consistent with those mock-ups."
       ]
     },
     {
@@ -961,6 +1202,18 @@
       ]
     },
     {
+      "slug": "narada",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — SZSE: 300068 (Narada Power Source Co., Ltd.). NOT an SEC registrant; use SZSE disclosure. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: FY2025 was reported 29-30 April 2026 and Q1 2026 alongside it. Chinese A-share Q3 deadline is 31 October. HOW TO CONFIRM: SZSE disclosure portal.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "**DISTRESS IS THE HEADLINE RISK ON THIS ROW.** The dossier records near-term obligations of ~RMB 6.35bn against cash of ~RMB 1.86bn, 163 frozen accounts, and a reorganization petition whose court acceptance is UNCONFIRMED. Establishing whether the court accepted it is the single most important item here.",
+        "The dossier's own judgment is that the real moat is the 30-year backup-power franchise (#2 in CNESA's 2024 base-station and data-centre backup shipments; China Tower, China Mobile, China Telecom, GDS, ByteDance, Alibaba) rather than grid BESS. Watch whether distress touches that franchise.",
+        "Narada is the intended subject of the G9 study guide per PROFILER-COVERAGE-PLAN.md §5; a solvency event would change what that guide can teach."
+      ]
+    },
+    {
       "slug": "nebius",
       "nextReport": "2026-11-10",
       "confirmed": false,
@@ -973,6 +1226,18 @@
         "Meta agreement #2 buildout toward H1 2027; 'Meta Compute' competitor developments",
         "The August $5.0B convert settlement and any new financing",
         "Token Factory/inference traction"
+      ]
+    },
+    {
+      "slug": "nextera-energy-resources",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "source": "UNIT-LEVEL, BUT SEPARATELY REPORTED — NextEra Energy Resources is one of the two named reporting segments of NextEra Energy, Inc. (NYSE: NEE, CIK 0000753308, fiscal year end 31 December), alongside Florida Power & Light. It therefore gets a dated row rather than the quarterly cadence used for unit-level companies whose parent does NOT break them out (the `engie-north-america` / `aes-clean-energy` / `rwe-clean-energy` precedent). THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: NEE's Q3 2025 10-Q filed 2025-10-28, Q1 2026 filed 2026-04-23, Q2 2026 filed 2026-07-24. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0000753308 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Backlog 35.1 GW at Q2 2026 (+3.6 GW, of which 2.0 GW storage). Watch the storage share, which is the figure this corpus cares about.",
+        "SUPPLIER CONCENTRATION is the dossier's own flagged reopening scenario: 2026-2029 demand is covered by Samsung SDI plus one UNDISCLOSED master supplier. A Korean or US LFP ramp slip would force NextEra back to the merchant market. Watch for the second supplier being named.",
+        "The Dominion merger is tracking to 2H 2027 — watch for perimeter changes that would move assets between the two segments."
       ]
     },
     {
@@ -1040,6 +1305,17 @@
       ]
     },
     {
+      "slug": "on-energy",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). More than USD 250m of cumulative capital (equity plus project debt). IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "**THE MOST VALUABLE OPEN QUESTION THIS DOSSIER TRACKS**, in its own words: the UNNAMED AI UPS cell supplier. A 5 GW deployment implies one of the largest non-Chinese cell procurements in the US market, and whoever wins it matters to a dozen other dossiers. Naming it is the priority.",
+        "Crusoe and ON.energy announced 5 GW of AI UPS across multiple hyperscale campuses in July 2026, commissioning 2026-2027. Watch the first commissioning against that schedule.",
+        "ON.energy is queued for a `profiler prep` study-guide backfill among the bridge-power suppliers in §5."
+      ]
+    },
+    {
       "slug": "oncor",
       "nextReport": "2026-11-04",
       "confirmed": false,
@@ -1057,6 +1333,29 @@
         "Generation queue mix as a leading indicator of what will serve the load: storage has slid 48% → 46% and gas has risen 4% → 7% across four quarters on a 552-request queue",
         "Sempra's capital recycling — the 45% Sempra Infrastructure Partners stake to KKR affiliates ($10B, expected to close in Q3 2026) and Port Arthur LNG Phase 2 (49.9%, $7B). No Oncor or Sempra Texas stake sale is reported in any source reviewed; a first report of one would change the ownership object",
         "Chesterton check on next refresh: Oncor names no data-center customer, EPC or transformer OEM anywhere in its first-party materials (only Landis+Gyr for meters and Toyota for vehicle-to-grid). Do not read a later silence as a change in policy — Texas law restricts customer-information disclosure, so the silence is structural"
+      ]
+    },
+    {
+      "slug": "openai",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Microsoft holds ~27% as-converted and the Foundation ~26%, per the dossier's confidence-tagged reading. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Planned compute spend was raised to USD 750bn through 2030, from ~USD 600bn, in July 2026, alongside Project Camellia in Effingham County, Georgia. Watch the figure and the site list, both of which move often.",
+        "SCOPE NOTE: OpenAI is in the 40+-inbound-mention class alongside NVIDIA, Microsoft, Google, Amazon and Oracle. A full step-7 reconciliation is a session of its own and has been deferred repeatedly. Do not attempt it inside a refresh.",
+        "The `microsoft`/`openai` and `mgx`/`openai` reciprocals both sit on the relationships accept list — the first as genuinely partner AND investor, the second retired at v04.85r when `portfolio` arrived. Check the current accept list before touching either."
+      ]
+    },
+    {
+      "slug": "oracle",
+      "nextReport": "2026-09-10",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE: ORCL (Oracle Corporation, CIK 0001341439). **FISCAL YEAR ENDS 31 MAY**, so Oracle's quarters do not line up with the calendar quarters of every other company on this desk: Q1 FY2027 ends 31 August 2026. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis, from Oracle's own EDGAR filing history: Q1 FY2026 10-Q filed 2025-09-10, Q2 filed 2025-12-11, Q3 filed 2026-03-11, FY2026 10-K filed 2026-06-22. **THIS ROW IS DUE WITHIN DAYS** — it is the desk's confirm-the-date work under the seven-day rule. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0001341439 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "RPO of USD 638bn (+363%) against free cash flow of MINUS USD 23.7bn at FY2026 — the widest gap between contracted backlog and cash generation in the corpus. Watch whether the next quarter narrows or widens it.",
+        "The ~USD 40bn of additional planned financing that moved the stock ~10% on the FY2026 print. Watch the form it takes and what it is secured on.",
+        "SCOPE NOTE: Oracle is in the 40+-inbound-mention class. A full step-7 reconciliation of what other dossiers say about Oracle is a session of its own and has been deferred by C6, C9 and C10. Do not attempt it inside a refresh."
       ]
     },
     {
@@ -1086,6 +1385,17 @@
         "First published M+ Series order or hyperscaler customer; Nebius's 'much larger' US CleanSource order (2026 delivery); Active Power's four-fold output",
         "Leadership: successor as President of Piller Power Systems Inc after Dean Richards' move; whether Jack Pearce now leads Bergen Engines Inc",
         "Competitor moves in the rotary niche: Hitec (Air Water), Rolls-Royce Solutions Liège (mtu Kinetic PowerPack), Hitzinger; ABB HiPerGuard MV UPS deployments"
+      ]
+    },
+    {
+      "slug": "plus-power",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Founders and management plus undisclosed institutional investors. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "**A STANDING UNRESOLVED ATTRIBUTION**, flagged by F8 and left deliberately: Sierra Estrella is described as 'marketed as grid support for the adjacent Prime Data Centers campus', but SRP's own release does not name Prime and Plus Power's microsite is JavaScript-rendered and could not be read. Prime's dossier records the adjacency as `other` with that caveat. Settling it needs the microsite or a party statement.",
+        "Prime Data Centers broke ground on its USD 3bn, 240 MW Avondale campus in May 2026 — the hyperscale load Sierra Estrella is marketed against. Watch whether either party ever names the other.",
+        "Plus Power is queued for a `profiler prep` study-guide backfill among the IPPs in §5. Bat Cave and North Fork went to Broad Reach in 2020 and are now ENGIE's."
       ]
     },
     {
@@ -1140,6 +1450,17 @@
       ]
     },
     {
+      "slug": "prevalon",
+      "cadence": "quarterly",
+      "source": "UNIT-LEVEL — a subsidiary or business unit of a listed parent that does NOT break it out as a named reporting segment, so there is no separate result to wait for. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1) on the `engie-north-america` / `aes-clean-energy` / `rwe-clean-energy` / `recurrent-energy` precedent. Contrast `nextera-energy-resources`, `mitsubishi-power` and `rolls-royce-power-systems`, which ARE named segments of their parents and therefore carry dated rows. Parent: Nextpower Inc. (NASDAQ: NXT, CIK 0001852131, formerly Nextracker), **fiscal year ending 31 March**. The Prevalon acquisition completed 2026-07-20 for up to USD 365m in cash and stock with 810,733 performance RSUs vesting from 2026; Prevalon is not a named reporting segment.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "**THE SINGLE MOST IMPORTANT UNVERIFIED NUMBER IN THAT DOSSIER**, in its own words: the 1.3 GW hyperscaler contract book. No customer is named, no third party has corroborated it, and the company's own website conflates figures. Corroboration or refutation is the priority at every refresh.",
+        "Prevalon's differentiation is recorded as provenance engineering rather than product scale — US-built IEC 62443-certified controls, CSA large-scale fire testing, IEEE 693 seismic qualification. Watch whether FEOC rules make that a pricing advantage.",
+        "Mitsubishi Power is Prevalon's former parent and the `mitsubishi-power`/`prevalon` pair sits on the relationships accept list as an `other`/`other` corporate-structure link, reported by design. Do not 'fix' it by re-typing."
+      ]
+    },
+    {
       "slug": "prime-data-centers",
       "cadence": "quarterly",
       "source": "Private: Prime Data Centers, LLC is controlled by Data Realty Holding Corp. ('the founding and controlling shareholder'; 'majority founder-owned'), with joint control by Macquarie (via WDCAH) and Ares cleared by the European Commission in March 2025 (Case M.11843); Siemens Financial Services, Snowhawk/Nuveen and Grain Management (preferred equity at the parent, April 2026) are investors, none a listed parent. No listing, no earnings calendar. Disclosure channels: primedatacenters.com (returns 403 to automated fetches — read via Wayback captures; the company newsroom, location pages and tech-sheet PDFs are all there), PR Newswire and Business Wire mirrors (Yahoo Finance, FinancialContent), Bloomberg via Investing.com and swissinfo for the bonds, Baxtel and Cleanview status pages, Texas TDLR filings, KERA for the lawsuits. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
@@ -1167,6 +1488,17 @@
         "Securities class action status (Hagens Berman; class period 2025-08-05 to 2026-06-22; lead plaintiff was due 2026-09-21)",
         "COO and permanent Renewables-president searches under CEO Koti Vadlamudi",
         "PayneCrest integration and data-center awards (Meta Nebraska, Crusoe West Texas)"
+      ]
+    },
+    {
+      "slug": "proenergy",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Energy Capital Partners acquired a majority interest in September. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Trade press confirms a Crusoe delivery target of summer 2027. Watch delivery against it — bridge-power schedules in this corpus slip more often than they hold.",
+        "ProEnergy is queued for a `profiler prep` study-guide backfill among the bridge-power suppliers in §5.",
+        "Aeroderivative gas turbines are the product; watch the used-turbine supply chain, which is the constraint the dossier identifies."
       ]
     },
     {
@@ -1275,6 +1607,18 @@
       ]
     },
     {
+      "slug": "samsung-ct",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — KRX: 028260 (Samsung C&T Corporation, Korea Exchange). NOT an SEC registrant; use Samsung C&T's investor site and the KIND/DART disclosure systems. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the dossier's latest reported period is H1 2026. Korean issuers publish Q3 reports in late October or mid-November. HOW TO CONFIRM: DART (dart.fss.or.kr).",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Trading & Investment outlined ~20 GW across 100+ US projects, a hydrogen entry via a JERA MOU, and 'considering expanding development capacity'. Watch conversion.",
+        "THE TWO EVENTS THE DOSSIER SAYS TO TRACK: the LS ELECTRIC JV's 500 MW Texas BESS and the LandBridge Permian options — the first time Samsung C&T stays in projects past the flip point, which changes what it procures and from whom.",
+        "Samsung C&T is queued for a `profiler prep` study-guide backfill among the EPCs in §5."
+      ]
+    },
+    {
       "slug": "samsung-sdi",
       "nextReport": "2026-10-27",
       "confirmed": false,
@@ -1303,6 +1647,18 @@
       ]
     },
     {
+      "slug": "schneider-electric",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — EPA: SU (Schneider Electric SE, Euronext Paris). **NOT AN SEC REGISTRANT** — this is a routing fact, not a gap: use schneider-electric.com's investor pages and Euronext regulated-information filings. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the dossier's latest reported period is H1 2026, released 2026-07-30. Schneider reports Q1 and Q3 as revenue-only trading updates and H1/FY as full results, with Q3 revenue historically published in late October. HOW TO CONFIRM: the investor-relations financial calendar on schneider-electric.com.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "H1 2026 was a record — revenue EUR 21.2bn (+14% organic), adjusted EBITA EUR 4.09bn (+22% organic) against ~EUR 3.8bn expected. Watch whether the data-centre segment growth rate holds.",
+        "Q3 is a REVENUE-ONLY trading update, so there will be no margin or EBITA figure. Do not expect a full result and do not record an absence as a miss.",
+        "Schneider is queued for a `profiler prep` study-guide REVISION in §5 so the guide carries a UPS section — note anything in the refresh that bears on it."
+      ]
+    },
+    {
       "slug": "siemens-energy",
       "nextReport": "2026-11-11",
       "confirmed": true,
@@ -1326,6 +1682,18 @@
         "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[]",
         "H1 2026 revenue/margin vs the FY2025 base",
         "ESS PCS and charging-pile order momentum"
+      ]
+    },
+    {
+      "slug": "solv-energy",
+      "nextReport": "2026-11-12",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NASDAQ: MWH (SOLV Energy, Inc., CIK 0002065636, fiscal year end 31 December). **RECENTLY LISTED — IPO'd February 2026**, so the cadence has only two data points and is correspondingly weak. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: FY2025 10-K filed 2026-03-25, Q1 2026 10-Q filed 2026-05-13, Q2 2026 filed 2026-08-14. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0002065636 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "'Majority of projects are solar plus storage now' and 'actively exploring storage for data centers' (Q2 2026 call) — watch whether the data-centre storage line becomes a disclosed segment or backlog figure.",
+        "As a 2026 IPO the disclosure record is short; the first full year of comparatives arrives with FY2026. Treat pre-IPO figures as company-sourced.",
+        "SOLV is queued for a `profiler prep` study-guide backfill among the EPCs in §5."
       ]
     },
     {
@@ -1404,6 +1772,18 @@
       ]
     },
     {
+      "slug": "sunwoda",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — SZSE: 300207 (Sunwoda Electronic Co., Ltd.). NOT an SEC registrant; use SZSE disclosure. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: FY2025 and Q1 2026 were both reported 2026-04-23. Chinese A-share Q3 deadline is 31 October. HOW TO CONFIRM: SZSE disclosure portal.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "The RMB 500m energy-storage equity fund registered July 2026 (Tianjin Kaixin LP; a Sunwoda subsidiary holds 48%; at least 70% earmarked for standalone storage). Watch deployment.",
+        "Sunwoda is queued for a `profiler prep` study-guide backfill among the integrators in §5.",
+        "FEOC and Section 301 exposure applies to every Chinese cell maker in this corpus; watch for changes that would move the policyExposure entries."
+      ]
+    },
+    {
       "slug": "switch",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
@@ -1452,6 +1832,17 @@
       ]
     },
     {
+      "slug": "terra-gen",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Masdar (Abu Dhabi Future Energy Company) 50% plus Igneo Infrastructure Partners. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Alcazar (250 MW / 1,000 MWh, Town of Ulster, New York) submitted its draft environmental impact statement in August 2026 and town review is advancing. Watch the permitting track, which is the binding constraint in New York.",
+        "**A QUALIFIED ATTRIBUTION TO KEEP QUALIFIED:** C7 established that Terra-Gen's Power Electronics PCS attribution rests on a TWO-LETTER ABBREVIATION ('PE') on a single EPC page. Step 7 qualified rather than deleted it. Do not harden it without a better source.",
+        "Terra-Gen is queued for a `profiler prep` study-guide backfill among the IPPs in §5."
+      ]
+    },
+    {
       "slug": "tesla",
       "nextReport": "2026-10-21",
       "confirmed": false,
@@ -1497,6 +1888,17 @@
       ]
     },
     {
+      "slug": "trina-storage",
+      "cadence": "quarterly",
+      "source": "UNIT-LEVEL — a subsidiary or business unit of a listed parent that does NOT break it out as a named reporting segment, so there is no separate result to wait for. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1) on the `engie-north-america` / `aes-clean-energy` / `rwe-clean-energy` / `recurrent-energy` precedent. Contrast `nextera-energy-resources`, `mitsubishi-power` and `rolls-royce-power-systems`, which ARE named segments of their parents and therefore carry dated rows. Parent: Trina Solar (SSE STAR: 688599). Trina Storage is a business line rather than a separately reported segment.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Wood Mackenzie's inaugural Global BESS Integrator Comprehensive Ranking (July 2026) placed Trina Storage tied #5 with Envision. That is one of the very few rankings in this corpus with a stated methodology — watch for the next edition and whether the position moves.",
+        "The Houston 371 MWh deployment for SMT Energy with FlexGen as integrator and Macquarie/KeyBank as equity and tax partners — note that Macquarie's role there is TAX EQUITY on one project, not ownership. Keep consistent with the `macquarie` dossier.",
+        "Trina Storage is queued for a `profiler prep` study-guide backfill among the integrators in §5. FEOC and Section 301 exposure applies."
+      ]
+    },
+    {
       "slug": "turner-construction",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
@@ -1522,6 +1924,18 @@
         "The Port Washington referendum litigation (MMAC suit) and Lighthouse TIF status",
         "Whether the customary January annual growth recap returns",
         "France/Altarea and Nebius CWL1 execution"
+      ]
+    },
+    {
+      "slug": "vertiv",
+      "nextReport": "2026-10-21",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE: VRT (Vertiv Holdings Co, CIK 0001674101, fiscal year end 31 December). THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: Q3 2025 10-Q filed 2025-10-22, Q1 2026 filed 2026-04-22, Q2 2026 filed 2026-07-29. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0001674101 for 8-K filings, and its investor-relations events page for the advance notice.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Q2 2026 was the FIRST revenue miss of the run — USD 3.27bn against ~USD 3.37bn consensus — despite an EPS beat, and the stock fell 10-17%. Watch whether Q3 confirms a demand inflection or reads as a one-quarter timing effect.",
+        "The dossier's guide work flagged that Vertiv's UPS section was thin; a `profiler prep` revision is queued in PROFILER-COVERAGE-PLAN.md §5's study-guide list. Note it if the refresh changes the product record.",
+        "800 VDC and the NVIDIA reference architecture — watch Vertiv's position against Delta, LITEON and Megmeet in the power-shelf chain."
       ]
     },
     {
@@ -1559,6 +1973,17 @@
         "ERCOT: the 3 August 2026 pause on data-centre interconnections and the audit of a roughly 474 GW queue, plus the December 2025 move to real-time co-optimisation replacing the operating reserve demand curve with ancillary-service demand curves",
         "PJM capacity: 10,924 MW cleared at $325.00/MW-day for 2028/2029; the reliability backstop auction proposed for September 2026; and whether the administrative price cap is extended to 2029/2030",
         "Chesterton check: Vistra discloses storage in MW only. No MWh figure for any asset appears in any filing, deck or sustainability report, so every MWh figure in circulation is third-party. It also publishes no single employee headcount and no board headshots"
+      ]
+    },
+    {
+      "slug": "voltagrid",
+      "cadence": "quarterly",
+      "source": "PRIVATE COMPANY — no earnings clock. Carried on the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). May 2026: USD 1.0bn strategic equity from Blackstone Tactical Opportunities and Halliburton (USD 775m primary / USD 225m secondary; Halliburton took two board seats). Earlier backers CPP Investments, Longbow Capital, Carnelian, Pilot Company and Walter Ventures. IF IT LISTS, CONVERT THIS ROW: the watch items below flag the candidates, and a `cadence` row becomes a `nextReport` row per PROFILER-SCHEMA.md → Refresh calendar. ",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "**BLOOMBERG REPORTED (FEBRUARY 2026) THAT VOLTAGRID IS EXPLORING AN IPO OR SALE AT A >USD 10BN VALUATION.** If it lists, convert this row to `nextReport`. This is the clearest listing candidate on the private side of the desk.",
+        "CHESTERTON CHECK from C10: Blackstone did NOT seed this company. It arrived at the fifth round, six years after founding, and the USD 225m secondary component is what proves it. `blackstone`→`voltagrid` is typed `portfolio` and `voltagrid`→`blackstone` `investor`; the pair coheres. Do not restate the round as a seeding.",
+        "The Propell Energy Technology acquisition (definitive agreement, ~1,000 staff, QPac manufacturer) and a 7.5 GW order book through 2030. Watch closing and order-book conversion."
       ]
     },
     {
@@ -1621,6 +2046,18 @@
         "Capital plan and financing: $60B base plus $10B-plus of line of sight, with ~$7B-plus of that line of sight already identified. 69.7 million forward shares were unsettled at 2026-06-30 representing $5.2B of minimum proceeds",
         "The clean-energy tax credit wind-down under Public Law 119-21: Xcel states its 2026–2030 base plan is protected by safe-harbor construction starts, and it relies on transferability (cash transfers of $652M in 2025) plus $1,474M of credit carryforwards. Watch further Treasury guidance on foreign entities of concern",
         "Southwestern Public Service leadership: company releases from 2026-03-25 onward quote Brad Baldridge as interim president, Xcel Energy – Texas, New Mexico, and Adrian Rodriguez was last quoted as president on 2026-01-28; no first-party release explains the change (documented as a collection gap in profileVersion 2). Re-check the 10-K executive-officer list and any appointment release rather than the newsroom gallery"
+      ]
+    },
+    {
+      "slug": "zhonhen",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — SZSE: 002364 (Zhongheng Electric / Zhonhen). NOT an SEC registrant; use SZSE disclosure. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: FY2025 was reported in April 2026 and the dossier notes H1 2026 was NOT published as of 2026-08-18 — so this issuer runs late against the statutory window and the inference is correspondingly weak. Chinese A-share Q3 deadline is 31 October. HOW TO CONFIRM: SZSE disclosure portal.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "NVIDIA's second 800 VDC white paper (Industry Alignment & Execution, August 2026) names the Panama Architecture as a transformer-rectifier reference. Watch whether that converts into disclosed orders.",
+        "OVERDUE-FILING HISTORY: H1 2026 had not appeared by 2026-08-18. If the Q3 report is also late, that is itself the finding and should be recorded rather than treated as a data gap.",
+        "800 VDC and the transformer-rectifier chain — keep consistent with the Delta, LITEON, Megmeet and Vicor accounts."
       ]
     },
     {
