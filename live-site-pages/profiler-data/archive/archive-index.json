@@ -87,6 +87,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-09-05",
       "supersededBy": 7
+    },
+    {
+      "file": "amazon.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 8
     }
   ],
   "applied-digital": [
@@ -163,6 +169,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-30",
       "supersededBy": 3
+    },
+    {
+      "file": "blattner.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 4
     }
   ],
   "bloom-energy": [
@@ -571,6 +583,12 @@
       "profileVersion": 7,
       "archivedAt": "2026-09-05",
       "supersededBy": 8
+    },
+    {
+      "file": "fluence.profile.v8.json",
+      "profileVersion": 8,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 9
     }
   ],
   "ge-vernova": [
@@ -833,6 +851,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "jupiter-power.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 5
     }
   ],
   "key-capture-energy": [
@@ -1071,6 +1095,12 @@
       "profileVersion": 7,
       "archivedAt": "2026-09-05",
       "supersededBy": 8
+    },
+    {
+      "file": "meta.profile.v8.json",
+      "profileVersion": 8,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 9
     }
   ],
   "microsoft": [
@@ -1291,6 +1321,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-30",
       "supersededBy": 3
+    },
+    {
+      "file": "plus-power.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 4
     }
   ],
   "prevalon": [
@@ -1353,6 +1389,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-09-05",
       "supersededBy": 5
+    },
+    {
+      "file": "qts.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 6
     }
   ],
   "quanta-services": [
@@ -1989,6 +2031,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-09-05",
       "supersededBy": 4
+    },
+    {
+      "file": "mccarthy.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 5
     }
   ],
   "vistra": [
@@ -2036,6 +2084,14 @@
       "file": "southern-company.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-09-05",
+      "supersededBy": 2
+    }
+  ],
+  "hunt-energy-network": [
+    {
+      "file": "hunt-energy-network.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
       "supersededBy": 2
     }
   ]

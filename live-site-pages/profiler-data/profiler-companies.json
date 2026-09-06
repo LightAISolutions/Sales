@@ -62,6 +62,27 @@
       "kpiNorm": true
     },
     {
+      "slug": "aes-clean-energy",
+      "name": "AES Clean Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Third-largest US battery owner and, by its own account, the largest corporate clean-energy seller — inside a parent most of the way through a US$33.4bn take-private.",
+      "hq": "Arlington, Virginia, United States",
+      "ticker": "NYSE: AES (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "aes.com",
+        "aescleanenergy.com",
+        "s202.q4cdn.com"
+      ],
+      "srcTotal": 56,
+      "srcFirstPct": 45,
+      "kpiNorm": true
+    },
+    {
       "slug": "aligned",
       "name": "Aligned Data Centers",
       "categories": [
@@ -88,7 +109,7 @@
       "hq": "Seattle, WA, USA",
       "ticker": "NASDAQ: AMZN",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "aboutamazon.com",
         "amazon.com"
@@ -253,7 +274,7 @@
       "hq": "Avon, MN, US",
       "ticker": "NYSE: PWR (parent Quanta)",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "blattnercompany.com"
       ],
@@ -650,6 +671,28 @@
       "kpiNorm": true
     },
     {
+      "slug": "engie-north-america",
+      "name": "ENGIE North America",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "The largest battery owner in ERCOT and second in the US, recycling capital through minority sell-downs while its parent buys a UK grid — and running without a permanent CEO.",
+      "hq": "Houston, Texas, United States",
+      "ticker": "EPA: ENGI (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "engie-na.com",
+        "engieresources.com",
+        "engie.com",
+        "newsroom.engie.com"
+      ],
+      "srcTotal": 60,
+      "srcFirstPct": 58,
+      "kpiNorm": false
+    },
+    {
       "slug": "entergy",
       "name": "Entergy",
       "categories": [
@@ -858,12 +901,12 @@
       "hq": "Arlington, VA, USA",
       "ticker": "NASDAQ: FLNC",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "fluenceenergy.com"
       ],
-      "srcTotal": 31,
-      "srcFirstPct": 58,
+      "srcTotal": 33,
+      "srcFirstPct": 61,
       "kpiNorm": true
     },
     {
@@ -1041,7 +1084,7 @@
       "tagline": "Hunt-family-owned, Manulife-funded merchant owner-trader of 32 distribution-connected 9.9 MW batteries plus a 100 MW transmission battery in ERCOT, dispatched by its own QSE",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "huntenergynetwork.com",
         "huntconsolidated.com",
@@ -1179,7 +1222,7 @@
       "tagline": "Hithium's biggest disclosed US customer — 3 GWh safe-harbored (2024), prospectus-named, and the 2.8 GWh Trimount design win — while its own channels stay silent and message domestic content. BlackRock-owned, ~8.8 GWh op/UC/contracted.",
       "hq": "Austin, TX, US",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "jupiterpower.io"
       ],
@@ -1355,7 +1398,7 @@
       "tagline": "162-year-old, 100% employee-owned national builder: 418 MW of data centres delivered against 2 GW+ in preconstruction, and an ENR Top 400 rank that slipped 20 → 22 in the data-centre year.",
       "hq": "St. Louis / Dallas, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "mccarthy.com",
         "digcastle.com"
@@ -1392,14 +1435,14 @@
       "hq": "Menlo Park, CA, USA",
       "ticker": "NASDAQ: META",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "meta.com",
         "fb.com",
         "atmeta.com"
       ],
-      "srcTotal": 21,
-      "srcFirstPct": 48,
+      "srcTotal": 23,
+      "srcFirstPct": 43,
       "kpiNorm": true
     },
     {
@@ -1749,12 +1792,12 @@
       "tagline": "The tolling franchise — 1,650 MW/4,150 MWh across 5 states, dual-sourced Tesla + Sungrow (330+ PowerTitan containers), no public FEOC posture, and Sierra Estrella marketed as grid support for a 240 MW hyperscale campus.",
       "hq": "The Woodlands, TX, US",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "pluspower.com"
       ],
-      "srcTotal": 19,
-      "srcFirstPct": 42,
+      "srcTotal": 20,
+      "srcFirstPct": 40,
       "kpiNorm": false
     },
     {
@@ -1876,7 +1919,7 @@
       "tagline": "Blackstone's $60B growth machine — leased capacity 14× since the take-private, 3 GW+ live with a $30B pre-leased pipeline stamped from the water-free Freedom design; the $4.6B Baa2 green bond marked the wholesale sector's IG debut.",
       "hq": "Sterling, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "q.com"
       ],
@@ -1958,6 +2001,26 @@
       ],
       "srcTotal": 12,
       "srcFirstPct": 58,
+      "kpiNorm": false
+    },
+    {
+      "slug": "rwe-clean-energy",
+      "name": "RWE Clean Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "Renamed RWE Americas in March 2026: EUR 17bn of US investment to 2031, 13 GW to 22 GW, a US$1.22bn offshore exit and fifteen gas peakers in the pipeline.",
+      "hq": "Austin, Texas and Chicago, Illinois, United States",
+      "ticker": "ETR: RWE (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "rwe.com",
+        "americas.rwe.com"
+      ],
+      "srcTotal": 60,
+      "srcFirstPct": 57,
       "kpiNorm": false
     },
     {

@@ -464,6 +464,89 @@ joins the not-examined list.
 — 'bridging power' against the existing `bridge-power` — caught before
 registration); report pins unchanged (X3's job).
 
+**C5 — 2026-09-06, v04.79r, Opus 5 xhigh.** Three `developer · ipp` dossiers
+(ENGIE North America, AES Clean Energy, RWE Clean Energy) — the first Phase C
+dossier session after the Phase B close — and **nine** step-7 revisions, the
+largest reconciliation tail any session has run. The checker exited 0 on the
+first run with **0** findings of any kind: no reciprocal-type findings, **0**
+unregistered sources, **0** dangling slugs once the registry was synced, **0**
+unregistered project pins (`profiler-projects.json`, `Scraper.gs` and
+`Profiler.html` untouched).
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **0** | — |
+| reciprocal-type · **corrected** | **0** | Every new pair coheres by construction: `qts`→`engie-north-america` `supplier` against ENGIE's `customer`; `blattner`→ and `mccarthy`→`rwe-clean-energy` `customer` against RWE's `supplier`; `amazon`→ and `meta`→`aes-clean-energy` `supplier` against AES's `customer`; `meta`→`rwe-clean-energy` `supplier` against RWE's `customer`; `fluence`→`aes-clean-energy` `customer` against AES's `supplier`; and the symmetric `competitor`/`competitor` edges among the three new dossiers and with `nextera-energy-resources`, `jupiter-power`, `hunt-energy-network`, `plus-power`, `intersect-power`, `arevon` and `invenergy` |
+| unregistered-source · **replaced** | **0** | Every relationship `source` was written as the exact registered string; a scratchpad validator asserted `sources[]` membership before any file was emitted (as in F6, F7 and F8) |
+| unregistered-source · **registered** | **0** | Five of the nine step-7 edges cited a URL the older dossier already carried (`qts` the q.com Lubio release, `blattner` the PR Newswire Emily Solar release, `jupiter-power` and `hunt-energy-network` the two Modo reports, `amazon` the AES annual-report PDF); the other four registered theirs in the same edit — `plus-power` the Energy-Storage.News Broad Reach acquisition, `meta` the AES/Meta PPA PDF and the RWE Rabbit's Foot release, `fluence` the AES FY2025 10-K and the GIP/EQT merger release |
+| unregistered-source · **accepted** | **0** | — |
+
+**The `investor` edge that was considered and not written.** The session brief
+anticipated an `investor`-typed AES ↔ Fluence edge with an accepted reciprocal.
+It was written as `supplier`/`customer` instead, and the reason is a scope
+distinction worth recording. `type` reads from the stating side's perspective —
+"B is A's `<type>`" — and this dossier's subject is **AES Clean Energy, the US
+renewables unit**, which buys from Fluence and does not hold the stake. The
+28.19% economic interest (cut to 22% in May 2026) is held by **The AES
+Corporation**, a different entity in a different SBU. Typing the unit's edge
+`investor` to surface a capital flow the unit does not carry would have been a
+mis-statement bought for a graph colour. The ownership is written out in full in
+the `context` on both sides instead, and the pair coheres with no accept-list
+entry. **Accept-list state: 14 entries, unchanged** — the six `investor` ↔
+`portfolio` enum-gap entries from X2 and F6 gained no seventh, and C5 adds no
+evidence either way, since it declined the typing rather than testing it.
+
+**Step 7 substance, for the record.** Nine older dossiers were revised and
+archived, and **two carried claims the new research contradicted**. `amazon`
+stated that "AES owns roughly 28% of Fluence" as the basis for a low-confidence
+inference about the Bellefield battery supplier; the correct figures are 28.19%
+at 31 December 2025 and **22% after the May 2026 redemption and public sale**
+(10,066,414 units, USD 207m net, USD 186m pre-tax gain), and the sentence now
+carries both with the inference itself left standing and still flagged as
+unsourced. `fluence` described AES as "reportedly being taken private by
+GIP/BlackRock for ~$38B" in three places — the summary, a `strategyRead` bullet
+and a financial-period commentary; the October 2025 report was real but was
+superseded by a **signed** agreement on 1 March 2026 with **GIP and EQT** at
+USD 15.00 a share (about USD 10.7bn of equity, USD 33.4bn of enterprise value),
+stockholder-approved on 26 June 2026. All three were corrected, with the
+October report kept as history in the commentary. The other seven mentions were
+accurate and gained a curated edge without a prose change: `qts` (the ENGIE
+Lubio PPA), `blattner` (RWE's Emily Solar), `mccarthy` (Bright Arrow for RWE
+Renewables Americas — the dossier's own line that no relationship was found
+"with ... RWE beyond Bright Arrow" is now two, with Lafitte), `jupiter-power`
+and `hunt-energy-network` (both Modo comparisons naming ENGIE), `plus-power`
+(Bat Cave and North Fork, sold to Broad Reach in 2020 and now ENGIE's) and
+`meta`. Classified and **left alone**: `canadian-solar` lists "ENGIE" among
+SolBank customers in a roster that also names Colbún and Axpo, and no source
+establishes whether that ENGIE entity is North American — the edge was not
+written and the gap is recorded here rather than guessed; `\bAES\b` in
+`aypa-power` and `oracle` is executive career history; `plus-power`'s "replaces
+AES coal" at Kapolei is The AES Corporation's legacy thermal fleet, not AES
+Clean Energy; `invenergy`'s NVIDIA/Emerald AI programme names AES among six
+participants and was left as accurate; `\bCBRE\b` in `equinix` and
+`prime-data-centers` is CBRE the research publisher, not CBRE Investment
+Management, and is unrelated to the ENGIE farmdown.
+
+**A note on the peer family, from a third end.** F6, F7 and F8 each recorded
+that `Colocation & Cloud Capacity` mixes data-centre developers with storage
+developers. C5's three are the first `developer · ipp` companies that are also
+**named PPA counterparties to the developers already in that family**, so for
+them the family lights their own customers. That is a real commercial adjacency,
+which means the family is not simply mis-sorted — it is behaving as a market map
+rather than a peer set. Recorded in `PROFILER-COVERAGE-PLAN.md` §7 for X3; no
+family-map change was made.
+
+**Cross-reference checker.** Exit 0, no new candidate; 286 mutually-mentioning
+pairs compared (from 260 at v04.69r). Twenty scopes remain over the
+900-character cap and are listed as not examined.
+
+**Side effects.** 139 dossiers on the roster; graph rebuilt to **1,050 edges
+(784 curated)**; six shared concepts registered (**928 total** — renewable
+energy certificate, hourly matching, repowering, single-axis tracker, PV module
+and CAISO; `contracted backlog` and `peaker` were proposed and dropped as
+already present); 14 company-published headshots added (AES 11, RWE 3), verified
+on a contact sheet; report pins unchanged (X3's job).
+
 
 
 Developed by: LightAISolutions

@@ -1,0 +1,369 @@
+{
+ "schemaVersion": 2,
+ "slug": "rwe-clean-energy",
+ "title": "RWE Clean Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here-the-second-life",
+   "title": "Start here: the second life of a wind site, and what a grid connection is really worth",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "There is one asset in American power that is scarcer than land, cheaper than turbines and impossible to buy quickly: **a completed interconnection**. This guide is about companies that already have them, and the two very different things they can do with them.",
+    "RWE's US business is a good subject because it did both in the same eighteen months. It **{{repowering}}** its oldest Texas wind sites — tearing out the original 2006 machines and rebuilding on the same land, under the same connection — and it announced fifteen gas {{peaker}} projects that will 'leverage already-secured grid interconnections to add firm capacity on an accelerated timeline'. Same asset, two products.",
+    "It also renamed itself. RWE Clean Energy, LLC became **RWE Americas, LLC** in March 2026, the same quarter it announced the gas pipeline and a EUR 17 billion US investment programme. When a business changes what it sells, watch whether it changes its name to match.",
+    "Along the way this guide covers the thing every US developer now organises around — a tax-credit clock with hard dates — and the one genuinely novel technology choice in RWE's book: pairing four-hour lithium-ion with {{iron-air}} long-duration storage on a single Colorado site."
+   ]
+  },
+  {
+   "id": "why-repowering",
+   "title": "Repowering: why you demolish a working wind farm",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "RWE's first US wind project, Forest Creek in Texas, came online in 2006 with 54 Siemens Mark II turbines of 2.3 MW each on 400-foot towers — 124.2 MW in total. In 2025 RWE finished a **repower**: every original tower, turbine and component decommissioned, new foundations poured, and **45 GE Vernova turbines of 2.82 MW** installed. The site is now 126.9 MW.",
+    "Read those numbers again. Nine fewer turbines. Two megawatts more nameplate. That is not the point of a repower, and mistaking nameplate for the benefit is the classic error.",
+    "The gain is in **{{capacity factor}}** — the fraction of a year's theoretical output the plant actually delivers. Twenty years of turbine design bought bigger rotors, taller hubs and better control. A larger rotor sweeps more area, so it starts generating at a lower wind speed and reaches rated power sooner; a taller hub reaches steadier, faster wind. The same site with modern machines produces substantially more energy per year even at similar nameplate, because it converts more of the hours in between.",
+    "The second gain is time. RWE states the repower extends operating life 'for an additional 30 years'. A wind site's economics are set by a 20-to-30-year design life; a repower restarts that clock on land you already control.",
+    "The third gain is the one that decides whether it happens: **you keep the connection**. The land rights, the access roads, the collection system, the substation, the transmission position — all of it survives. A greenfield project would have to win those again through a queue whose median time in ERCOT has stretched past four years, with only about 27% of large projects that leave the queue ever operating.",
+    "Repowering also restarts tax eligibility, which is why it clusters when credits change. And there is a disposal problem the industry is still solving: RWE routes decommissioned blades, rotors and nacelles through Wanzek Construction, a MasTec company, for repurposing or recycling. Blades are the hard part — thermoset composite, designed never to come apart."
+   ]
+  },
+  {
+   "id": "the-clock",
+   "title": "The clock every US developer now builds to",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The One Big Beautiful Bill Act replaced an open-ended credit with a race against dates. RWE's position in its own annual report is unusually flat: 'As all the investment projects we will be implementing in the coming years have safe harbour status, they remain eligible for these tax credits.' The table is the ruleset behind that sentence.",
+   "cols": [
+    "Requirement",
+    "The rule as RWE states it",
+    "Why it changes behaviour"
+   ],
+   "rows": [
+    [
+     "Commissioning deadline",
+     "New wind and solar assets 'must be commissioned by the end of 2027 to remain eligible for funding'",
+     "Any project not already deep in development is racing a fixed calendar date, not a market signal"
+    ],
+    [
+     "{{Safe harbor}} route",
+     "Developers can secure credits for assets completed after 2027 'if they can prove by mid-2026 that construction on them has commenced'",
+     "Creates a bulge of construction starts before a deadline — activity driven by tax law rather than by demand"
+    ],
+    [
+     "The four-year tail",
+     "Safe-harboured assets 'must start operating no later than four years from the beginning of construction works'",
+     "Safe harbour is not permanent. It buys four years, then expires"
+    ],
+    [
+     "What RWE did about it",
+     "'We responded quickly to the shift in energy policy by purchasing components early, enabling us to secure important state funding'",
+     "Buying turbines and modules before you need them is how you evidence a construction start — and how you pre-empt tariffs at the same time"
+    ],
+    [
+     "Tariff overlay",
+     "A 15% rate on EU goods from August 2025, ruled unconstitutional by the Supreme Court in February 2026, replaced by a 10% global tariff for 150 days; 50% on steel and aluminium since June 2025; punitive duties on Southeast Asian solar manufacturers",
+     "Component cost is now a moving target set by litigation, so early purchase hedges two risks at once"
+    ],
+    [
+     "Contractual hedge",
+     "RWE 'reach[es] agreements with suppliers and power purchasers that oblige them to pay a share of any additional levies'",
+     "Tariff risk is being pushed into contracts rather than absorbed — a detail most disclosure omits"
+    ]
+   ],
+   "note": "RWE uses neither 'FEOC' nor 'domestic content' terminology anywhere in its first-party material, though its stated posture — increasingly sourcing from US suppliers, GE Vernova turbines described as domestically produced — is functionally adjacent. Absence of the statutory language in a filing is worth noticing, not assuming away."
+  },
+  {
+   "id": "co-location-two-continents",
+   "title": "Why RWE pairs storage with solar in America and not in Europe",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "RWE runs batteries on both sides of the Atlantic and configures them differently, and it says why in one sentence: 'In the USA, we often build storage facilities and solar farms together to optimise the timing of photovoltaic feed-ins to the local grid. Conversely, our large-scale batteries in Germany and other European markets are usually operated independently.'",
+    "The reasoning is about what the battery is being paid to fix. A co-located battery shares the solar plant's land, substation and — critically — its **{{point of interconnection}}**. It charges from a plant that is already producing more than the line can carry at midday, and discharges through the same line in the evening when the line is empty. You have effectively raised the energy the connection delivers without enlarging it, which matters enormously where connections are scarce and midday solar output is routinely clipped.",
+    "The trade is flexibility. A co-located battery is usually restricted in what it can do — charging patterns, and sometimes grid-charging rights, are constrained by the shared interconnection agreement and by tax-credit rules that historically required charging from the paired plant.",
+    "A standalone battery gives that flexibility back. It can buy from the grid whenever power is cheapest, sell whenever it is dearest, and chase {{ancillary services}} without reference to a host plant's output. In Germany, where the value is in trading a volatile national market rather than in relieving one plant's congestion, standalone wins.",
+    "RWE's US fleet shows the pattern: Stoneridge (200 MW solar with a 100 MW / 200 MWh battery) and the small Texas Waves units co-located at the Inadale and Pyron wind farms, alongside standalone Crowned Heron (150 MW / 300 MWh) and Cartwheel (150 MW / 300 MWh). Its development book leans co-located — Sleeping Giant, Yellow Bell, Janus, Maryland Blue Crab, Independence.",
+    "One caution the corpus should carry: RWE publishes no US-only operating storage figure at all. Its disclosures are group-level — 1.7 GW operational pro rata, 2.4 GW under construction. A widely repeated '931 MW under construction in the US' comes from a single RWE press release dated 2 October 2024, and the three Texas projects that pushed it past 900 MW were all commissioned by the end of 2025. It cannot describe today."
+   ]
+  },
+  {
+   "id": "iron-air",
+   "title": "Planet Rock: two chemistries on one site, and why",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "RWE's largest announced storage asset anywhere is Planet Rock in Pueblo County, Colorado: **1,550 MW** on 180 acres a mile from a substation, phased with the first 550 MW operating in 2029. What makes it worth studying is the split — **1,500 MW of four-hour lithium-ion plus 50 MW of {{iron-air}}** long-duration storage.",
+    "Lithium-ion is an energy-dense, high-power, expensive-per-kilowatt-hour technology. It is superb at moving energy a few hours and doing it thousands of times. Push it to very long durations and the economics break: to store a hundred hours you must buy a hundred hours of cells, and cells are the cost.",
+    "{{Iron-air}} inverts every one of those properties. It stores energy by **rusting iron and then un-rusting it** — reversible oxidation, with oxygen from ambient air as the other reactant. The active materials are iron and air, two of the cheapest and most abundant inputs on the planet, so cost per kilowatt-hour of storage is very low. In exchange it is bulky, slow, and round-trip inefficient compared with lithium.",
+    "That combination makes it useless for the products lithium serves and potentially decisive for one lithium cannot: **multi-day** storage. A four-hour battery covers an evening peak. It does nothing for a still, overcast week.",
+    "So a hybrid site is a portfolio decision, not a hedge. The lithium tranche earns in the daily markets — {{energy arbitrage}}, {{ancillary services}}, capacity. The iron-air tranche is a bet that a market for multi-day firming will exist by the time it is built, and the 50 MW next to 1,500 MW is the right way to make that bet: large enough to learn from, small enough that being wrong is survivable.",
+    "The rest of RWE's US storage book is conventional four-hour lithium — Fourth Quarter (500 MW, four-hour, on the retired Dickerson coal site in Maryland), Wythe County (52 MW / 208.8 MWh, a clean 4.02 hours), Erie Canal, Elliot, White Clover, Basecamp, Covina. RWE assumes a **10 to 15 year useful life** for battery facilities against 25 to 35 years for solar, which is the single most under-appreciated number in storage economics: the batteries will be replaced once or twice inside the solar plant's life."
+   ]
+  },
+  {
+   "id": "peakers",
+   "title": "The pivot: what a peaker is, and why an interconnection converts into one",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "In March 2026 RWE announced fifteen natural gas peaking projects across MISO, WECC, PJM and ERCOT, more than 3 GW of gas targeted by 2035, grid connections secured for up to 10 GW, and a US$300 million turbine reservation. Understanding why requires knowing what a {{peaker}} is and is not.",
+    "A {{simple cycle}} gas turbine is a jet engine bolted to a generator. Air is compressed, fuel burns, hot gas spins a turbine, exhaust goes up the stack. Roughly 30-40% of the fuel's energy becomes electricity; the rest leaves as heat. That is poor efficiency by any standard — and it is the point.",
+    "A {{combined cycle}} plant captures that exhaust heat in a boiler, raises steam and runs a second turbine, reaching 55-64% efficiency. It is much more efficient, considerably more expensive, slower to build, and slower to start.",
+    "Which you build depends on how often it runs. A plant running 6,000 hours a year lives or dies on fuel efficiency, so you pay for combined cycle. A plant running 200 hours a year barely burns any fuel at all, so efficiency hardly matters and what you want is low capital cost and a fast start. That is a peaker.",
+    "Now the strategic point. What makes RWE's gas pipeline credible is not turbines — anyone can order those, and RWE reserved US$300m of them. It is that RWE **already holds the interconnection rights**. A grid connection is technology-neutral in a way most people do not expect: a position secured years ago for wind or solar can, subject to the operator's process, host a different resource. RWE is converting a queue position it won as a renewables developer into firm capacity it can sell today.",
+    "That is what 'speed to power' means, and it is why the same phrase appears in every data-centre pitch in this corpus. The scarce good is not generation. It is a connected point at which generation may legally exist.",
+    "It is also why the name changed. A business whose growth line is dispatchable gas cannot keep a subsidiary name that says clean energy — and RWE changed the name in the same quarter it announced the pipeline."
+   ]
+  },
+  {
+   "id": "reading-a-segment-report",
+   "title": "Reading a segment report that hides the country you care about",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "RWE runs 'RWE Clean Energy' as an operating segment and then merges it into a reportable segment with Europe and Australia, on the stated ground that the two 'have comparable economic features'. There is therefore no US profit and loss. This table is where to look instead.",
+   "cols": [
+    "What you want",
+    "Where RWE actually discloses it",
+    "FY2025 value",
+    "What it does and does not tell you"
+   ],
+   "rows": [
+    [
+     "US earnings",
+     "Nowhere",
+     "—",
+     "The reportable segment Onshore Wind/Solar earned EUR 1,740m of adjusted EBITDA, but that spans Europe, Australia and the Americas"
+    ],
+    [
+     "US capacity",
+     "The audited installed-capacity table by country",
+     "11,177 MW — 5,432 MW onshore wind, 5,745 MW solar",
+     "Excludes battery storage entirely, which is why it will never reconcile to the ~13 GW figure in press releases"
+    ],
+    [
+     "US business value",
+     "The goodwill note, where RWE Clean Energy is a separate cash-generating unit",
+     "Goodwill EUR 1,351m, down from EUR 1,528m",
+     "The most useful single disclosure. A ten-year detailed planning period is used here against three for other units, 'due to the growth business'"
+    ],
+    [
+     "The market's view of US risk",
+     "The {{discount rate}} on that cash-generating unit",
+     "Raised from 5.25% to 6.25% after tax; terminal growth from 1.50% to 2.00%",
+     "RWE attributes the rise to a method change — discounting in dollars rather than converting to euros first — so read it as a currency-basis change, not purely a risk repricing"
+    ],
+    [
+     "Whether anything was written off",
+     "The impairment note",
+     "An impairment in the USA within Onshore Wind/Solar with a recoverable amount of 'EUR 0 billion'; intangibles recorded for California battery development projects; EUR 132m of most significant segment impairments",
+     "RWE does not name the project"
+    ]
+   ],
+   "note": "Four different US capacity bases circulate — RWE's ~13 GW marketing figure including storage, the audited 11,177 MW excluding it, an EIA-860M-derived 15.3 GW counting nameplate differently, and a generation-based utility ranking that is not a capacity measure at all. No source reconciles any pair. When a company gives you four numbers for one thing, cite the one whose definition you can state."
+  },
+  {
+   "id": "rwe-on-one-clock",
+   "title": "Pause, exit, pivot: RWE's US arc on one clock",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Three strands: the capital decision, the offshore exit, and what replaced it.",
+   "items": [
+    {
+     "x": 2023.15,
+     "lane": "build",
+     "label": "Con Edison Clean Energy Businesses acquired for $6.8bn",
+     "sub": "About 8 GW, roughly 60% onshore wind and 40% solar, financed partly by a EUR 2.4bn mandatory convertible to a Qatar Investment Authority subsidiary. Becomes RWE Clean Energy."
+    },
+    {
+     "x": 2024.85,
+     "lane": "capital",
+     "label": "US offshore investment delayed 'due to greater risks'",
+     "sub": "The first signal, in November, before any formal capex decision."
+    },
+    {
+     "x": 2025.2,
+     "lane": "capital",
+     "label": "EUR 10bn cut from the 2025-2030 programme; hurdle rate raised from 8% to above 8.5%",
+     "sub": "Savings routed to a EUR 1.5bn buyback. Elliott discloses about 5% days later and calls the return of capital insufficient."
+    },
+    {
+     "x": 2025.25,
+     "lane": "build",
+     "label": "GE Vernova partnership expanded to 109 turbines for two West Texas projects",
+     "sub": "Components bought early — the safe-harbour and tariff hedge in one purchase."
+    },
+    {
+     "x": 2025.85,
+     "lane": "risk",
+     "label": "Blade failure at Future Generation Wind, Plymouth, Massachusetts",
+     "sub": "A 75-100 foot blade lands in a cranberry bog; no injuries; Siemens Gamesa runs the root-cause analysis with RWE."
+    },
+    {
+     "x": 2026.0,
+     "lane": "build",
+     "label": "2 GW commissioned across 15 US projects in seven states during 2025",
+     "sub": "The largest US year in RWE's history — delivered during the supposed pause."
+    },
+    {
+     "x": 2026.2,
+     "lane": "capital",
+     "label": "EUR 17bn committed to the US to 2031; 13 GW to 22 GW; fifteen gas peakers announced; the business is renamed RWE Americas",
+     "sub": "The chief executive credits the One Big Beautiful Bill Act with providing the 'clarity' to resume — a bill that cut credits. Certainty, not favourability."
+    },
+    {
+     "x": 2026.55,
+     "lane": "capital",
+     "label": "US Distributed Clean Energy business sold to Goldman Sachs Alternatives",
+     "sub": "About 348 MWdc operating across 16 states plus a 1.2 GW pipeline and the teams. Narrowing to utility-scale."
+    },
+    {
+     "x": 2026.6,
+     "lane": "risk",
+     "label": "US$1.22bn settlement with the Interior Department; three offshore leases relinquished",
+     "sub": "Roughly 5.9-7 GW abandoned after more than $1bn invested, with $900m redeployed into a 16% stake in a Louisiana LNG project and $300m into turbines."
+    },
+    {
+     "x": 2026.67,
+     "lane": "risk",
+     "label": "California serves notice of intent to sue Interior and RWE over the Humboldt cancellation",
+     "sub": "Alleged OCSLA violations including no hearing, no suspension, no governor coordination, and compensation exceeding statutory formulas."
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this model fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "3 min",
+   "ps": [
+    "**A settlement is not final until the litigation is.** California's Attorney General and Energy Commission served notice on 1 September 2026 to sue both the Interior Department and RWE over the Humboldt lease cancellation, with sixty days to file. The money is received; the legal position is not settled.",
+    "**Capital allocated centrally can be withdrawn centrally.** RWE's US business did not choose the 2025 pause and did not choose the 2026 resumption. Both were group decisions taken against European alternatives, and the H1 2026 segment commentary notes US earnings 'offset by negative effects arising from the conversion of US dollars to euros' — the American contribution is diluted by currency before it reaches the parent's numbers.",
+    "**The company's own rankings do not survive checking.** 'Third largest owner and operator of onshore wind, solar and battery storage in the U.S.' is boilerplate no independent source corroborates, and on storage specifically RWE does not appear in the independent top five of US owners at all.",
+    "**Repowering has a ceiling.** It works on sites old enough to justify replacement and well-sited enough to be worth it. Once the 2006-2010 fleet is done, that runway ends.",
+    "**A blade came off a turbine.** No injuries, but the root cause was still under investigation at the time of writing, on a fleet acquired from another owner and maintained by its original manufacturer. Fleet-wide findings are the risk, not the single event."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "5 min",
+   "cards": [
+    {
+     "q": "Why does repowering a wind farm to almost the same nameplate still increase output substantially?",
+     "a": "Because the gain is in capacity factor, not nameplate. Bigger rotors start generating at lower wind speeds and reach rated power sooner; taller hubs reach steadier wind. The plant converts more of the hours in between, even with fewer, similar-rated machines."
+    },
+    {
+     "q": "What is the most valuable thing a repower preserves?",
+     "a": "The interconnection, plus the land rights, roads, collection system and substation. A greenfield project would have to win a queue position whose ERCOT median has stretched past four years, with only about 27% of exiting large projects ever operating."
+    },
+    {
+     "q": "Why does a co-located battery raise the energy a grid connection delivers without enlarging it?",
+     "a": "It charges from midday output the line cannot carry and discharges in the evening when the line is empty, shifting energy into unused hours on the same point of interconnection."
+    },
+    {
+     "q": "What does a co-located battery give up compared with a standalone one?",
+     "a": "Flexibility. Charging patterns and sometimes grid-charging rights are constrained by the shared interconnection agreement and historically by tax-credit rules, so it cannot freely chase the best price or the best ancillary product."
+    },
+    {
+     "q": "How does an iron-air battery store energy?",
+     "a": "By reversibly rusting iron — oxidising it with oxygen from ambient air to discharge, and reducing it back to iron to charge. The active materials are iron and air, which is why cost per kilowatt-hour of storage is very low."
+    },
+    {
+     "q": "Why pair 50 MW of iron-air with 1,500 MW of lithium-ion rather than choosing one?",
+     "a": "They serve different products. Lithium earns in daily markets — arbitrage, ancillary services, capacity — where iron-air's slowness and inefficiency disqualify it. Iron-air targets multi-day firming, which lithium cannot reach economically. The small tranche is a sized bet on a market that does not exist yet."
+    },
+    {
+     "q": "Why build a simple-cycle peaker rather than a more efficient combined-cycle plant?",
+     "a": "Because the plant runs a few hundred hours a year. Fuel efficiency barely matters at that duty; low capital cost and fast starting do. Combined cycle earns its extra capital back only on plants that run thousands of hours."
+    },
+    {
+     "q": "How does a renewables developer convert an old queue position into gas capacity?",
+     "a": "An interconnection right is a connected point at which generation may exist, and is not permanently tied to one technology. Subject to the operator's process, a position won for wind or solar can host a peaker — which is why 'already-secured grid interconnections' is the asset in RWE's gas announcement, not the turbines."
+    },
+    {
+     "q": "Why does a 10-15 year useful life for batteries against 25-35 for solar matter so much?",
+     "a": "Because the batteries in a co-located project will be replaced once or twice inside the solar plant's life. Any model that depreciates them over the solar asset's life understates the cost of the storage."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 min",
+   "items": [
+    {
+     "q": "A developer repowers a 124 MW wind farm and the new nameplate is 127 MW. Was the project worth it?",
+     "c": [
+      "No — a 2% capacity gain cannot justify the cost",
+      "It depends on capacity factor, life extension and the retained interconnection",
+      "Only if turbine prices fell",
+      "Only if the site qualifies for a capacity market"
+     ],
+     "a": 1,
+     "why": "Nameplate is the wrong measure. Modern rotors and taller hubs raise annual output substantially at similar rating, the asset gets roughly 30 more years of life, and the connection, land and substation are preserved — the parts that cannot be bought quickly."
+    },
+    {
+     "q": "Why does RWE co-locate storage with solar in the US but run standalone batteries in Germany?",
+     "c": [
+      "US fire codes require co-location",
+      "US tax credits forbid standalone storage",
+      "Co-location relieves congestion on a scarce shared interconnection, which is the binding US constraint",
+      "German batteries are larger"
+     ],
+     "a": 2,
+     "why": "RWE states it builds them together in the US 'to optimise the timing of photovoltaic feed-ins to the local grid'. In Germany the value is in trading a volatile national market, where a standalone battery's flexibility is worth more than congestion relief."
+    },
+    {
+     "q": "An announcement says fifteen gas peakers will 'leverage already-secured grid interconnections'. What is the scarce asset?",
+     "c": [
+      "The gas turbines",
+      "The gas pipeline capacity",
+      "The interconnection rights",
+      "The construction workforce"
+     ],
+     "a": 2,
+     "why": "Turbines can be ordered — RWE reserved $300m of them. A connected point at which generation may legally exist takes years to win, and a position secured for renewables can, subject to process, host a different resource. That conversion is the whole strategy."
+    },
+    {
+     "q": "A company's own materials say it is the 'third largest owner and operator of onshore wind, solar and battery storage in the U.S.' How should a dossier treat that?",
+     "c": [
+      "Repeat it, since the company should know",
+      "Record it as a company claim and note that no independent ranking corroborates it",
+      "Discard it entirely",
+      "Convert it to a percentage share"
+     ],
+     "a": 1,
+     "why": "The claim is boilerplate repeated verbatim by trade press with no independent source behind it, and on storage the company does not appear in the independent US top five at all. The honest treatment is to attribute it and state the gap."
+    },
+    {
+     "q": "A group reports one segment covering the US, Europe and Australia together. Where do you look for the US business's value?",
+     "c": [
+      "The revenue-by-destination note",
+      "The goodwill note, where the US unit is a separate cash-generating unit",
+      "The order backlog",
+      "The headcount disclosure"
+     ],
+     "a": 1,
+     "why": "RWE merges RWE Clean Energy into Onshore Wind/Solar for reporting but discloses it separately as a cash-generating unit — goodwill of EUR 1,351m, an after-tax discount rate of 6.25%, a terminal growth rate of 2.00% and a ten-year planning period. That is the only US-specific valuation disclosure it makes."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "Planet Rock",
+   "d": "RWE's 1,550 MW storage project in Pueblo County, Colorado — 1,500 MW of four-hour lithium-ion plus 50 MW of iron-air long-duration storage, phased with a first 550 MW operating in 2029."
+  },
+  {
+   "t": "discount rate",
+   "d": "The rate at which future cash flows are reduced to a present value in an impairment test. A higher rate means the same forecast is worth less today, so a rise signals either greater perceived risk or a change in the currency basis of the calculation."
+  }
+ ]
+}

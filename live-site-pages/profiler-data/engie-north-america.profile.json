@@ -1,0 +1,1160 @@
+{
+ "schemaVersion": 7,
+ "slug": "engie-north-america",
+ "name": "ENGIE North America Inc.",
+ "shortName": "ENGIE North America",
+ "categories": [
+  "developer",
+  "ipp"
+ ],
+ "website": "https://www.engie-na.com/",
+ "headquarters": "Houston, Texas, United States",
+ "employees": "~2,000 (ENGIE's About page) — its Renewables page says 3,000+; both undated and unreconciled",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "EPA: ENGI (parent, ENGIE SA)"
+ },
+ "summary": "BOTTOM LINE UP FRONT: ENGIE North America is the largest battery-storage owner in ERCOT and the second largest in the United States, but it is being run for cash by a parent whose 2026 capital went to a UK regulated network, and it has had no permanent chief executive since 1 August 2026. BACKGROUND. Houston-based, wholly owned by ENGIE SA (Euronext Paris: ENGI) and carried in the parent's scope of consolidation as \"ENGIE North America — Electricity distribution and generation, Natural gaz, LNG, Energy services — United States — 100.0%\". Four lines: utility-scale renewables development and ownership, battery energy storage, C&I retail supply through ENGIE Resources, and wholesale marketing through ENGIE Energy Marketing NA, with a local energy-infrastructure concession business on university and medical campuses. ENGIE states 11+ GW of generation operating or in construction in North America, 3.5+ GW of BESS across 35+ operational projects, 80+ renewable projects online and over 45,000 (its homepage says 50,000+) commercial and industrial retail customers. S&P Global Commodity Insights, working from government filings, independently measures 3.662 GW of operating US battery storage at 30 June 2026 — second only to NextEra Energy Resources — and Modo Energy measures ~2.8 GW in ERCOT alone, a 20% share and more than twice the next owner. The storage platform was bought, not built: ENGIE acquired Broad Reach Power in August 2023 for more than US$1 billion of equity value. Since then the business has been recycling that capital, selling a 49% interest in 905 MW to Ares (March 2025), a 49.5% interest in a 2.4 GW, 31-project battery portfolio to CBRE Investment Management (May 2025) and a further 730 MW to Ares (January 2026), retaining control and operations in each. The parent reported FY2025 revenue of EUR 71.9bn and net recurring income Group share of EUR 4.9bn; North America contributed EUR 5,807m of revenue (8.1%) and EUR 11,051m of industrial capital employed (15.5%). ENGIE publishes no North American EBIT.",
+ "ecosystemRole": "We assess ENGIE North America as the ecosystem's largest merchant battery counterparty and one of its two most important corporate-PPA sellers. For a storage supplier it is a buyer that has already bought at scale and now funds growth by selling minority stakes rather than by issuing parent equity, which puts an infrastructure fund's diligence between a vendor and a signature. For a data-centre operator it is a counterparty that sells three different things — project-tied PPAs (Meta, Google), retail supply and hourly 24/7 matching (Microsoft, AstraZeneca, Aker BioMarine), and co-location of compute at its own generation and storage sites (Prometheus Hyperscale, Cipher Mining) — and the third is the one that is new and unproven.",
+ "productsAndServices": [
+  {
+   "name": "Battery energy storage (grid-scale and behind-the-meter)",
+   "category": "Storage development, ownership and operation",
+   "description": "ENGIE states 3.5+ GW of BESS capacity in North America across 35+ operational projects, against a global target of 10 GW by 2030. Its own project pages publish 31 storage assets, 29 of them in ERCOT and 2 in CAISO: stand-alone units from 10 MW to 200 MW (Dickens, Hydra, Paleo, Libra and Cachi at 200 MW each; Pavo 175 MW; Avila 160 MW; Carina 150 MW; Longhorn 135 MW; Bat Cave and North Fork at 100 MW) plus three co-located solar-and-storage sites (Five Wells 320 MW solar + 220 MW BESS; Chillingham 350 MW + 150 MW; Sun Valley 250 MW + 100 MW). The revenue stack ENGIE names is peak shaving and load shifting, demand response and ancillary services, dispatched by ENGIE Energy Marketing NA. A separate behind-the-meter line sells financed on-site batteries to utilities, cooperatives, universities and municipalities with no upfront capital.",
+   "highlights": [
+    "Modo Energy measures ~2.8 GW in ERCOT entering 2026 — a 20% share, #1 owner and more than twice the next (Enel Green Power, 1,147 MW)",
+    "S&P Global Commodity Insights puts ENGIE North America #2 in the US at 3.662 GW operating at 30 June 2026, behind NextEra (5.779 GW)",
+    "The platform came from the August 2023 acquisition of Broad Reach Power for 'in excess of $1 billion' of equity value — ENGIE's own 2024 milestone release credits the acceleration to it",
+    "Duration is short: the only MWh ENGIE publishes are Sun Valley at 100 MW/100 MWh (one hour) and a fleet figure of 1.8 GWh against 1.8 GW installed in September 2024",
+    "Modo records a strategy shift in Q3 2025 — five 50+ MW two-hour batteries commissioned (788 MW), departing from a historically one-hour fleet",
+    "ENGIE names no cell, module or integrator supplier for any North American battery project in any first-party source"
+   ],
+   "positioning": "ENGIE names no competitor anywhere on its own properties; it positions by rank instead — '#1 battery operator in Texas', 'Top 5 battery storage owner operator and developer in the U.S.', and 'the only TOP 5 commercial electricity provider in North America without significant merchant thermal generation'. The independent tables broadly support the first two: Modo has it first in ERCOT, S&P second in the US. The moat is early-mover interconnection — Modo attributes ENGIE's lead to applications filed as early as 2020 — and it is eroding by entrant count: 18 new owners brought 3.1 GW online in ERCOT in 2025, 52% of that year's additions.",
+   "soldThrough": "Direct development, ownership and operation, monetised in ERCOT and CAISO energy and ancillary-services markets through ENGIE Energy Marketing NA; behind-the-meter systems sold as energy-as-a-service with ENGIE financing; growth funded by selling minority stakes to infrastructure funds while retaining a controlling share and O&M",
+   "targetSegments": [
+    "ERCOT and CAISO wholesale energy and ancillary-services markets",
+    "Investor-owned utilities, municipal utilities and rural electric cooperatives",
+    "Universities, municipalities and commercial facilities (behind-the-meter)"
+   ],
+   "roadmap": "10 GW of storage capacity globally by 2030 (company target); no published North American storage target"
+  },
+  {
+   "name": "Utility-scale renewables development and ownership",
+   "category": "Solar and onshore wind",
+   "description": "Full-lifecycle develop, build, own and operate, with ENGIE describing itself as a long-term owner and operator rather than a seller of projects. It states 17 grid-scale solar projects totalling over 3 GW, 27 onshore grid-scale wind projects of about 4 GW (25 operating, 3,275 MW), 40 community solar gardens totalling 100 MW, and 11+ GW operating or in construction across North America. Offshore sits outside this line, in the Ocean Winds 50/50 joint venture with EDP Renewables. The largest single asset is Swenson Ranch Solar, 600 MW in Stonewall County, Texas, a US$900m build for Meta due in 2027.",
+   "highlights": [
+    "The United States was ENGIE SA's largest single source of 2025 capacity additions: 2.4 GW of the group's 6.2 GW",
+    "ENGIE SA reports 57.2 GW installed renewables and BESS at 31 December 2025, rising to 59.5 GW at 30 June 2026, against a 95 GW target for 2030",
+    "Group renewable capital expenditure fell in FY2025 'mainly due to project delays in the US' — ENGIE's own words",
+    "The Distributed Solar & Storage business is being sold with a ~EUR 250m impairment, while the Renewables page still markets '500+ distributed solar projects in the U.S.'",
+    "Ocean Winds surrendered the Bluepoint (US$765m) and Golden State (US$120m) leases in April 2026 for ~US$885m of federal reimbursement conditioned on equal investment in US LNG, oil and energy infrastructure; SouthCoast Wind was not cancelled"
+   ],
+   "positioning": "ENGIE's ranking claims here are thinner than on storage. The 'top 10 US clean power owner, #4 US developer' line traces to American Clean Power's 2023 market report and reaches the open web almost only through ENGIE's own releases; ACP's current owner and developer tables are members-only. Cleanview ranks ENGIE first among US battery developers by pipeline but publishes three different totals for it (17,581 / 18,188 / 18,252 MW) with no data date.",
+   "soldThrough": "Long-term corporate PPAs and Environmental Attributes Purchase Agreements direct to offtakers; utility offtake to IOUs, municipals and cooperatives; minority-stake sell-downs to infrastructure funds with ENGIE retaining control",
+   "targetSegments": [
+    "Hyperscalers and data-centre operators",
+    "Commercial and industrial manufacturers",
+    "Investor-owned, municipal and cooperative utilities"
+   ],
+   "roadmap": "Swenson Ranch Solar (600 MW, Meta, US$900m) operational 2027; Lubio Solar (ABEI Energy, ~61 MWac) with COD reported around April 2028"
+  },
+  {
+   "name": "Data-centre power and cooling, and compute co-location",
+   "category": "AI and data-centre infrastructure",
+   "description": "Two productised offers plus one co-development motion. The products are Sustainable Microgrids — on-site, local and renewable generation with battery storage and grid connections — and Low-Carbon District Energy Networks, which distribute cooling to data centres and place waste heat with local consumers. ENGIE states it assumes full lifecycle risk with performance guarantees on a capacity-based consumption model, i.e. energy-as-a-service rather than equipment sale. The co-development motion is the September 2025 collaboration with Prometheus Hyperscale, siting liquid-cooled AI data centres at ENGIE renewable and battery sites along the Texas I-35 corridor with Conduit supplying bridging generation; first facilities were slated for 2026 and more from 2027, with no MW disclosed. A May 2025 preliminary agreement with Cipher Mining contemplates up to 300 MW of co-located data centre at a West Texas wind site.",
+   "highlights": [
+    "ENGIE SA reports a 7 GW data-centre load pipeline at 30 June 2026, of which 4 GW is advanced-stage — up from 0.8 GW advanced at the end of 2025",
+    "7 GW of PPAs now signed with technology and data-centre companies; 47% of the 2030 target of 50 TWh delivered to the segment is secured",
+    "The 2030 goal is 3 to 4 GW of co-located data centres supported by a 6 GW pipeline",
+    "The QTS agreement is resale, not ENGIE generation: ENGIE holds a back-to-back PPA on ABEI Energy's Lubio Solar and passes 48 MWac to QTS with retail supply and energy management bundled",
+    "No third party independently verified Prometheus Hyperscale's construction progress, financing or load commitment; coverage derives from the joint release"
+   ],
+   "positioning": "ENGIE's differentiated play is co-location of compute at generation, not nuclear or gas. Third parties writing about the AI power race name NextEra, Constellation, Vistra and Dominion and do not name ENGIE; no independent source ranks ENGIE among leading AI-power suppliers. What ENGIE does hold is the corporate-PPA franchise: BloombergNEF ranked it the world's number-one seller of clean energy to corporations in 2025 at 3.6 GW, and first cumulatively for 2011-2025 at 13.8 GW — in a market that fell 10% in 2025 to 55.9 GW.",
+   "soldThrough": "Long-term PPAs and Environmental Attributes Purchase Agreements; retail supply and 24/7 hourly matching through ENGIE Resources; capacity-based energy-as-a-service for microgrids and district cooling; joint co-development for compute co-location",
+   "targetSegments": [
+    "Hyperscalers (Meta, Google, Microsoft, Amazon)",
+    "Colocation and wholesale data-centre operators (QTS)",
+    "AI and high-performance-compute developers (Prometheus Hyperscale, Cipher Mining)"
+   ],
+   "roadmap": "First Prometheus Hyperscale sites stated for 2026 with more from 2027; 3-4 GW of co-located data centres and 50 TWh to the technology segment by 2030"
+  },
+  {
+   "name": "ENGIE Resources — commercial and industrial retail supply",
+   "category": "Retail energy supply",
+   "description": "Deregulated-market electricity and gas supply to commercial, industrial and institutional customers since 2002, trading as 'America's Energy Greentailer'. ENGIE states over 45,000 customers on its Supply page and 50,000+ on its homepage, across 14 US states, with 50+ TWh of retail renewable electricity delivered in North America in 2024 and a claim to serve over half of the Fortune 100. The product set is fixed-price, Flex and Float structures, RECs, physical and virtual corporate PPAs, ESG-certified natural gas, and the My ENGIE Portal self-service platform. The flagship innovation is 24/7 Carbon-Free Energy, matching hourly site consumption to dedicated local renewable and flexible assets.",
+   "highlights": [
+    "AstraZeneca signed a nine-year retail supply agreement through 2034 for its Coppell, Texas manufacturing site, sourced from the 114 MW Tyson Nick Solar project",
+    "Aker BioMarine is the first named US reference for 24/7 CFE, at approximately 90% hourly matching",
+    "Daikin contracted 100% renewable supply across all Texas facilities for five years, including its North American headquarters",
+    "A broker and consultant channel is explicit — ENGIE's own 2026 Business Energy Census surveyed aggregators, brokers and consultants representing 5,000+ customer locations",
+    "A breach-of-contract class action against ENGIE Power & Gas was partially dismissed by a New York federal court; case number and date could not be resolved from any accessible source"
+   ],
+   "positioning": "ENGIE markets itself as the only top-five commercial electricity provider in North America without significant merchant thermal generation — an implicit contrast with retailers backed by merchant gas fleets. It cites a BBB+ investment-grade rating and a net promoter score of 40.",
+   "soldThrough": "Direct enterprise sales with dedicated account management, plus an explicit broker and consultant channel",
+   "targetSegments": [
+    "Commercial, industrial and institutional buyers in 14 deregulated US states",
+    "Multi-site manufacturers seeking hourly-matched carbon-free supply",
+    "Aggregators, brokers and energy consultants"
+   ],
+   "roadmap": "24/7 Carbon-Free Energy is the stated growth product; no published customer or volume target"
+  },
+  {
+   "name": "ENGIE Energy Marketing NA — wholesale marketing and asset optimisation",
+   "category": "Trading, dispatch and structured products",
+   "description": "The group's Global Energy Management and Sales arm in North America, Houston-based, serving ERCOT, NYISO, ISO-NE, PJM, MISO, SPP and IESO. Power services cover PPAs and battery-storage services, energy hedging and risk management, physical market access and dispatch, and asset management for wind, solar and storage. Natural-gas services cover physical access and hedging across major pipelines, storage and transport optimisation, off-take and supply, and responsibly-sourced-gas marketing and certification. Energy management covers 24/7 real-time dispatch, day-ahead and real-time bidding, NERC CIP compliance, ISO interface management, settlement reconciliation and regulatory reporting. Structured products include battery hedges, structured REC deals, environmental-credit management and credit and payment financing facilities.",
+   "highlights": [
+    "This is the unit that turns the ERCOT battery fleet into revenue — the storage business has no separate trading desk",
+    "Narsimha Misra, its chief executive since January 2024, came in as Broad Reach Power's Chief Commercial Officer",
+    "Provided a US$40m wholesale power supply facility to Branch Energy, an example of the credit-and-financing line",
+    "ENGIE Energy Marketing NA has itself filed a complaint against ERCOT at the PUCT (control number 53377) — as complainant, not respondent"
+   ],
+   "positioning": "Sold as market access and dispatch capability rather than as a merchant trading book; ENGIE's public framing is that it has no significant merchant thermal generation behind its retail and wholesale positions.",
+   "soldThrough": "Direct wholesale relationships with asset owners, load-serving entities and industrial counterparties",
+   "targetSegments": [
+    "Renewable and storage asset owners needing scheduling and dispatch",
+    "Load-serving entities and retailers needing supply and credit",
+    "Industrial gas and power hedgers"
+   ],
+   "roadmap": "No published roadmap"
+  },
+  {
+   "name": "Local Energy Infrastructure — campus and district energy concessions",
+   "category": "Energy-as-a-service concessions",
+   "description": "Long-term concessions that own and operate a campus's utility systems. ENGIE names Ohio State University, the University of Iowa, Georgetown University and MATEP at the Longwood Medical Center as its portfolio, with project pages also existing for Howard University, Coors Brewing, United Launch Alliance and Nassau Energy Corp. Sector briefs market the same model to airports, food and beverage manufacturers and healthcare systems as long-term partnerships that bring expertise and funding to upgrade infrastructure and deliver performance.",
+   "highlights": [
+    "Collection gap: every one of the named North American campus project pages returns 'There are no project details for this project currently' — no MW, no contract term, no concession value is published first-party",
+    "The group figures ENGIE does publish for this line are Europe-weighted: EUR 9.5bn of order intake in 2025, 372 operated networks against a 550 target for 2030, and more than 1,300 energy performance contracts won",
+    "Local Energy Infrastructure EBIT was EUR 482m in FY2025 against EUR 491m in FY2024 — flat, and reported globally rather than by region"
+   ],
+   "positioning": "ENGIE sells 50 years of designing, building and maintaining energy infrastructure as the credential; it names no competing concession operator.",
+   "soldThrough": "Long-term concession and energy-performance contracts with campus and municipal owners",
+   "targetSegments": [
+    "Universities and academic medical centres",
+    "Airports, healthcare systems and food and beverage manufacturers",
+    "Municipalities"
+   ],
+   "roadmap": "Group target of 550 operated networks by 2030; no North American target published"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Sun Valley co-located storage (Hill County, Texas)",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Battery capacity",
+     "value": "100MW / 100MWh"
+    },
+    {
+     "band": "Power",
+     "label": "Co-located solar",
+     "value": "250 MW (COD 2022); storage COD 2023"
+    },
+    {
+     "band": "Design",
+     "label": "Battery cabinets",
+     "value": "308 battery cabinets"
+    },
+    {
+     "band": "Design",
+     "label": "Charging",
+     "value": "chargeable from both the co-located solar facility and the wider grid"
+    },
+    {
+     "band": "Design",
+     "label": "Construction effort",
+     "value": "over 3,500 workdays to construct"
+    },
+    {
+     "band": "Output",
+     "label": "Peak supply",
+     "value": "can supply electricity to approximately 10,000 average homes during peak hours"
+    }
+   ],
+   "notes": "The only North American ENGIE battery project for which an MWh figure is published first-party — a one-hour duration. Described by ENGIE at commissioning as 'our first 100MW+ co-located energy storage project in the U.S.'"
+  },
+  {
+   "product": "North American BESS fleet (as ENGIE publishes it)",
+   "specs": [
+    {
+     "band": "Fleet",
+     "label": "Stated capacity",
+     "value": "3.5+ GW BESS capacity in N.A."
+    },
+    {
+     "band": "Fleet",
+     "label": "Operational projects",
+     "value": "35+ operational energy storage projects in the U.S."
+    },
+    {
+     "band": "Fleet",
+     "label": "Dispatchable energy (Sept 2024)",
+     "value": "1.8 GWh of total dispatchable energy capability across ERCOT and CAISO combined, against 1.8 GW installed"
+    },
+    {
+     "band": "Fleet",
+     "label": "Unit sizing",
+     "value": "stand-alone units ranging from 10 MW to 200 MW"
+    },
+    {
+     "band": "Fleet",
+     "label": "Market split (published projects)",
+     "value": "29 of 31 storage assets in ERCOT; 2 in CAISO (Cascade 45 MWac, Sierra 10 MW)"
+    },
+    {
+     "band": "Independent",
+     "label": "ERCOT position",
+     "value": "2,524 MW at Q3 2025 rising to ~2.8 GW / 20% share entering 2026 (Modo Energy)"
+    },
+    {
+     "band": "Independent",
+     "label": "US position",
+     "value": "3.662 GW operating at 30 June 2026, ranked #2 nationally (S&P Global Commodity Insights)"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Cells, modules, integrator",
+     "value": "not disclosed in any first-party source"
+    }
+   ],
+   "notes": "The fleet-level 1.8 GWh against 1.8 GW implies an approximately one-hour average duration, consistent with ERCOT ancillary-services economics. Modo recorded five 50+ MW two-hour batteries commissioned in Q3 2025 (788 MW), the first departure from that pattern."
+  },
+  {
+   "product": "Largest co-located and stand-alone assets",
+   "specs": [
+    {
+     "band": "Co-located",
+     "label": "Five Wells (Bell County, TX)",
+     "value": "320 MW solar & 220 MW storage; solar COD 2023, storage COD 2024"
+    },
+    {
+     "band": "Co-located",
+     "label": "Chillingham (Hill County, TX)",
+     "value": "350 MW solar & 150 MW storage; data fields give solar COD 2024, storage COD 2025 — the same page's prose says 2022 and 2023"
+    },
+    {
+     "band": "Stand-alone",
+     "label": "200 MW class (ERCOT)",
+     "value": "Dickens, Hydra, Paleo (2024); Libra (2023); Cachi (2025)"
+    },
+    {
+     "band": "Stand-alone",
+     "label": "Broad Reach heritage",
+     "value": "Bat Cave (Mason County, 100 MWac, 2021) and North Fork (Williamson County, 100 MWac, 2021)"
+    },
+    {
+     "band": "Solar",
+     "label": "Swenson Ranch (Stonewall County, TX)",
+     "value": "600 MW, US$900m, 100% of output to Meta, operational 2027"
+    },
+    {
+     "band": "Wind",
+     "label": "Largest wind assets",
+     "value": "Limestone 301 MW; Priddy 302.4 MW; Iron Star 297.6 MW; Solomon Forks 276.63 MW; Big Sampson 270 MW"
+    }
+   ],
+   "notes": "ENGIE's Five Wells page carries a typo in its own source ('220MMW storage') and the Chillingham page contradicts itself on commercial operation dates; neither should be treated as authoritative without corroboration."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-18",
+   "category": "customer",
+   "headline": "ENGIE and QTS extend their Texas partnership: 48 MWac of ABEI Energy's ~61 MWac Lubio Solar (Kaufman County) to QTS's Irving data centres, ~150 GWh a year, with retail supply and energy management bundled",
+   "read": "The first ENGIE data-centre deal that is resale rather than ENGIE generation — a lighter-capital route into colocation load, and a lower-margin one.",
+   "source": "https://www.engie-na.com/engie-qts-solar-power-purchase-agreement-texas/"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "leadership",
+   "headline": "David Carroll resigns as CEO of ENGIE North America and Chief Renewables Officer after six years; Anne-Laure Chassanite named interim CEO from 1 August while remaining CEO of ENGIE Resources, with Emmanuel Sbravati interim Chief Renewables Officer",
+   "read": "The regional business is running without a permanent chief executive or renewables chief, and both interims hold their previous jobs concurrently.",
+   "source": "https://www.engie-na.com/anne-laure-chassanite-interim-ceo-during-leadership-transition/"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "financial",
+   "headline": "ENGIE SA H1 2026: EBIT excluding nuclear EUR 5.3bn against a EUR 5.1bn consensus; FY2026 net recurring income guidance raised to EUR 4.9-5.5bn; data-centre advanced-stage pipeline up from 0.8 GW to 4 GW in six months",
+   "read": "The data-centre pipeline moved five-fold in half a year while North American revenue fell 3.1% — the pipeline is a forward claim, the revenue is a reported one.",
+   "source": "https://www.engie.com/app/uploads/2026/07/PR-ENGIE-H1-2026-results.pdf"
+  },
+  {
+   "date": "2026-07-17",
+   "category": "market",
+   "headline": "ENGIE's 2026 Business Energy Census: 48% of respondents now call energy strategically important, up from 38%; 73% would pay a premium for renewable supply",
+   "read": "ENGIE's own demand-side evidence for the retail franchise, drawn from brokers and consultants covering 5,000+ locations.",
+   "source": "https://www.engie-na.com/2026census/"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "customer",
+   "headline": "Aker BioMarine signs a 24/7 renewable energy agreement covering its Houston manufacturing site, with approximately 90% of consumption matched hourly from Impact Solar and other designated assets",
+   "read": "The first named US reference customer for the 24/7 hourly-matching product — the thing ENGIE is trying to sell data centres.",
+   "source": "https://www.engie-na.com/24-7-renewable-energy-agreement-aker-biomarine/"
+  },
+  {
+   "date": "2026-05-01",
+   "category": "ma",
+   "headline": "Arcadia acquires ENGIE Impact; the transaction closed 29 April 2026, terms undisclosed",
+   "read": "ENGIE exits utility-expense management and sustainability advisory entirely, narrowing North America to generation, storage, supply and campus infrastructure.",
+   "source": "https://www.engie-na.com/arcadia-acquires-engie-impact-energy-management-platform/"
+  },
+  {
+   "date": "2026-04-28",
+   "category": "policy",
+   "headline": "Ocean Winds — ENGIE's 50/50 joint venture with EDP Renewables — surrenders the Bluepoint Wind (US$765m) and Golden State Wind (US$120m) leases; the Interior Department is to reimburse about US$885m, contingent on equal investment in US LNG, oil and energy infrastructure. SouthCoast Wind was not cancelled",
+   "read": "About 4.4 GW of US offshore development abandoned for cash on terms that redirect the proceeds into fossil infrastructure — the defining negative of the period, and one ENGIE did not announce first.",
+   "source": "https://www.utilitydive.com/news/two-more-offshore-wind-projects-scrapped-under-trump-administration-pressur/818681/"
+  },
+  {
+   "date": "2026-05-04",
+   "category": "legal",
+   "headline": "ENGIE resolves its late-2025 lawsuit against Fannin County, Texas over the 300 MW Platinum Energy Storage project at Savoy; settlement terms undisclosed, with first-responder orientation, funding for volunteer fire department equipment, training protocols and an NFPA 855 compliance walk-through",
+   "read": "The reputational cost of a bought pipeline: the tax abatement was secured by Belltown before ENGIE owned the project, and the county replaced its entire board of commissioners over it.",
+   "source": "https://www.kten.com/news/texas-headlines/fannin-county-resolves-issues-with-savoy-battery-storage-facility/article_f7669d75-d08d-4fd0-8a1e-bdc10dca82c5.html"
+  },
+  {
+   "date": "2026-02-06",
+   "category": "market",
+   "headline": "Modo Energy records ERCOT battery interconnection applications down 50% in the second half of 2025, median queue time out from 3.5 to 4.1 years, and only 27% of large battery projects that exited the queue reaching operation",
+   "read": "ENGIE's ERCOT lead was built on 2020-vintage interconnection applications; the door it walked through is closing behind it.",
+   "source": "https://www.ess-news.com/2026/02/06/ercot-bess-interconnection-applications-drop-50-in-h2-2025-as-faults-in-the-boom-emerge/"
+  },
+  {
+   "date": "2026-02-25",
+   "category": "financial",
+   "headline": "ENGIE SA FY2025: revenue EUR 71.9bn, EBIT excluding nuclear EUR 8.8bn against a EUR 9.1bn consensus, net recurring income Group share EUR 4.9bn in line; UK Power Networks agreed for about EUR 12.2bn net cash plus EUR 6.6bn of assumed debt",
+   "read": "The group's largest 2026 capital decision moved money and attention to UK regulated networks; the US was simultaneously the largest single source of new capacity, at 2.4 GW of 6.2 GW.",
+   "source": "https://www.stockopedia.com/share-prices/engie-sa-EPA:ENGI/news/engie-raises-2026-2028-targets-announces-10-5-billion-pound-uk-power-networks-deal-updated-019e6a0f-a745-74e6-8dce-9d751dd306a7/"
+  },
+  {
+   "date": "2026-02-19",
+   "category": "market",
+   "headline": "BloombergNEF ranks ENGIE the world's number-one seller of clean energy to corporations for 2025 at 3.6 GW, and first cumulatively for 2011-2025 at 13.8 GW",
+   "read": "A genuine independent ranking — and the market it leads shrank 10% in 2025, with four buyers accounting for 49% of global volume.",
+   "source": "https://about.bnef.com/insights/clean-energy/corporate-clean-energy-buying-fell-in-2025-after-nearly-a-decade-of-growth/"
+  },
+  {
+   "date": "2026-01-13",
+   "category": "ma",
+   "headline": "Ares Management partnership expands by 730 MW — one wind and two solar operating projects, all ERCOT — taking the cumulative Ares relationship to 4.3 GW",
+   "read": "Capital recycling is now the primary funding engine for US growth; ENGIE keeps control and operations, the fund takes the minority economics.",
+   "source": "https://www.engie-na.com/engie-expands-ares-partnership-730mw-renewables/"
+  },
+  {
+   "date": "2025-11-12",
+   "category": "customer",
+   "headline": "AstraZeneca signs a nine-year renewable supply agreement through 2034 for its Coppell, Texas manufacturing site, sourced from the 114 MW Tyson Nick Solar project",
+   "read": "The longest-dated named ENGIE Resources retail deal on the record — retail supply, not a project PPA.",
+   "source": "https://www.engie-na.com/astrazeneca-texas-manufacturing-site/"
+  },
+  {
+   "date": "2025-10-27",
+   "category": "order-win",
+   "headline": "Meta relationship expands past 1.3 GW across four Texas projects with Swenson Ranch Solar — 600 MW in Stonewall County, US$900m, Meta taking 100% of output, operational 2027",
+   "read": "ENGIE's largest solar project ever and the largest single asset in its 11 GW North American portfolio, contracted to one buyer.",
+   "source": "https://www.engie-na.com/engie-and-meta-expand-ppa-to-more-than-1-3-gw/"
+  },
+  {
+   "date": "2025-09-02",
+   "category": "partnership",
+   "headline": "ENGIE collaborates with Prometheus Hyperscale to co-develop AI-ready data centres at ENGIE renewable and battery sites on the Texas I-35 corridor, with Conduit supplying bridging generation; first facilities slated for 2026",
+   "read": "The move from selling electrons to co-developing compute sites — and the leg of the strategy with no disclosed MW and no independent verification.",
+   "source": "https://www.engie-na.com/engie-collaborates-with-prometheus-hyperscale-to-co-develop-next-generation-ai-ready-data-centers-in-texas/"
+  },
+  {
+   "date": "2025-05-15",
+   "category": "ma",
+   "headline": "CBRE Investment Management takes a 49.5% minority stake in a 2.4 GW, 31-project operating battery portfolio in ERCOT and CAISO; ENGIE retains a controlling share and continues to operate and manage the assets",
+   "read": "One of the largest operating BESS sell-downs completed anywhere — and a minority stake, not a sale of the fleet.",
+   "source": "https://www.engie-na.com/engie-cbre-battery-storage-partnership/"
+  },
+  {
+   "date": "2025-05-13",
+   "category": "customer",
+   "headline": "Preliminary agreement with Cipher Mining for up to 300 MW of co-located data centre at an unnamed West Texas wind facility, framed as relieving transmission congestion, offsetting basis risk and mitigating curtailment",
+   "read": "Co-location sold as a grid-economics fix rather than a sustainability story — the honest version of the pitch.",
+   "source": "https://www.engie-na.com/engie-teams-up-with-cipher-mining-to-power-texas-data-center/"
+  },
+  {
+   "date": "2025-03-24",
+   "category": "ma",
+   "headline": "Ares Management acquires a 49% interest in a 905 MW portfolio of US solar and storage for US$430m, taking the Ares relationship to 3.7 GW",
+   "read": "The template ENGIE repeats: sell just under half, keep the controlling share, keep the O&M contract.",
+   "source": "https://www.engie-na.com/engie-expands-partnership-with-ares-management-with-addition-of-nearly-1-gw-portfolio-of-solar-and-storage-assets-in-the-u-s/"
+  },
+  {
+   "date": "2025-02-03",
+   "category": "market",
+   "headline": "ENGIE signed 4.3 GW of new PPAs globally in 2024 across 85 agreements, of which North America was 1.5 GW across eight new projects",
+   "read": "North America was roughly a third of global PPA origination — the region's commercial weight is larger than its 8% revenue share suggests.",
+   "source": "https://www.engie-na.com/engie-signed-4-3-gw-of-new-power-purchase-agreements-ppas-in-2024/"
+  },
+  {
+   "date": "2025-01-13",
+   "category": "customer",
+   "headline": "Meta adds a 200 MW agreement on Anson 2 Solar in Jones County, Texas",
+   "read": "The second of four Meta projects; the relationship compounds inside one state and one ISO.",
+   "source": "https://www.engie-na.com/engie-and-meta-announce-new-200-mw-renewable-energy-agreement-expanding-existing-relationship-to-meet-growing-power-demand/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "qts",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-08",
+   "scale": "48 MWac (~150 GWh/year)",
+   "via": "ENGIE Resources retail supply plus a back-to-back PPA on ABEI Energy's Lubio Solar",
+   "note": "QTS buys 48 MWac for its Irving, Texas data centres under an ENGIE-intermediated solar PPA, with retail supply and energy management bundled.",
+   "context": "ENGIE holds a long-term PPA on ABEI Energy's ~61 MWac Lubio Solar project in Kaufman County, Texas — ABEI's first US transaction with ENGIE — and passes 48 MWac of it to QTS, about 150 GWh a year, avoiding a stated 100,778 tonnes of CO2 annually. The electrons are ABEI's, not ENGIE's: this is ENGIE Resources acting as a retail intermediary rather than ENGIE selling its own generation, and it should not be aggregated into ENGIE-owned capacity contracted to data centres. QTS's own dossier records the same agreement and an earlier 20 MW arrangement across three Texas wind projects.",
+   "source": "https://www.engie-na.com/engie-qts-solar-power-purchase-agreement-texas/"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-10",
+   "scale": "more than 1.3 GW across four Texas projects",
+   "via": "Environmental Attributes Purchase Agreements on ENGIE-owned solar",
+   "note": "Meta is ENGIE North America's largest corporate offtaker, taking 100% of output from four Texas solar projects.",
+   "context": "The relationship runs Sypert Branch Solar (260 MW, Milam County, about ten miles from Meta's Temple data centre, October 2024), Anson 2 Solar (200 MW, Jones County, January 2025) and Swenson Ranch Solar (600 MW, Stonewall County, October 2025 — a US$900m build operational in 2027 and ENGIE's largest single asset), with a fourth project unnamed in the accessible releases. Meta's own dossier records the ENGIE relationship only indirectly; ENGIE's releases are the disclosure channel.",
+   "source": "https://www.engie-na.com/engie-and-meta-expand-ppa-to-more-than-1-3-gw/"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-10",
+   "scale": "90 MW",
+   "via": "Chillingham Solar (350 MW, Bell County, Texas)",
+   "note": "Google takes 90 MW of ENGIE's Chillingham Solar project — the fifth ENGIE-Google project globally and the first in the United States.",
+   "context": "Transacted through LevelTen Energy's Accelerated Process (LEAP), with ENGIE citing more than US$72m of lifetime tax revenue for the county. Chillingham also carries 150 MW of co-located storage. ENGIE's own project page contradicts itself on commercial operation dates — its data fields give solar 2024 and storage 2025 while its prose says 2022 and 2023 — so the COD should not be treated as settled.",
+   "source": "https://www.engie-na.com/google-ppa-chillingham-solar/"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "since": "2023-09",
+   "via": "24x7 Renewable Energy Matching Program across an ENGIE Texas wind, solar and battery portfolio",
+   "note": "Microsoft buys hourly-matched supply for its ERCOT data-centre load from an ENGIE Texas portfolio.",
+   "context": "ENGIE describes the arrangement as matching Microsoft's Texas data-centre consumption hour by hour against a portfolio of ENGIE wind, solar and battery assets, in support of Microsoft's 100/100/0 goal for 2030. No MW figure is published by either party. This is the earliest of ENGIE's hourly-matching references and the design the later AstraZeneca and Aker BioMarine agreements productised.",
+   "source": "https://www.engie-na.com/engie-to-supply-microsoft-data-centers-in-texas-with-24x7-renewable-energy-matching-program/"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "scale": "650 MW of contracts (United States and Europe combined)",
+   "note": "ENGIE's data-centre page states 650 MW of contracts with Amazon across the US and Europe in support of Amazon's 2030 net-zero goals.",
+   "context": "The figure is ENGIE's own, undated, and explicitly spans two continents. No North American Amazon project is named by either party in any accessible source; the only ENGIE-Amazon deal that resolves to a named asset is Moray West offshore wind in the United Kingdom (473 MW), which is not North American. Recorded here because ENGIE asserts the relationship on its own data-centre page, with the geography gap stated rather than closed.",
+   "source": "https://www.engie-na.com/data-center-power/"
+  },
+  {
+   "slug": "plus-power",
+   "type": "competitor",
+   "status": "active",
+   "since": "2020",
+   "note": "Fellow ERCOT gigawatt-hour-class storage owner, and the seller of two ENGIE batteries: Plus Power sold Bat Cave and North Fork to Broad Reach in 2020, and ENGIE acquired Broad Reach in 2023.",
+   "context": "Plus Power's dossier records that it developed and sold Bat Cave and North Fork to Broad Reach Power in 2020. ENGIE's own project pages now list both — Bat Cave, Mason County, 100 MWac, COD 2021, and North Fork, Williamson County, 100 MWac, COD 2021 — because ENGIE acquired Broad Reach in August 2023 for more than US$1 billion of equity value. The two are now direct competitors in ERCOT energy and ancillary markets, with Plus Power's 700 MW merchant fleet against ENGIE's ~2.8 GW.",
+   "source": "https://www.energy-storage.news/engie-acquires-broad-reach-power-bess-business-for-over-us1-billion-equity-value/"
+  },
+  {
+   "slug": "jupiter-power",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fellow top-tier ERCOT storage owner; Modo groups both among the market's largest owners.",
+   "context": "Modo Energy's ERCOT annual buildout report ranks ENGIE first at about 2.8 GW and a 20% share, more than twice the next owner, and records Jupiter as the third owner past 1 GWh installed alongside Plus Power and ENGIE. Jupiter's dossier already carries that framing from the same source; the relationship is direct competition for the same energy and ancillary revenue stack, with ENGIE's fleet historically one-hour and Jupiter's mostly one-to-two-hour.",
+   "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
+  },
+  {
+   "slug": "hunt-energy-network",
+   "type": "competitor",
+   "status": "active",
+   "note": "Competing ERCOT distributed generation resource operator; Modo benchmarks ENGIE's Sweeny against Hunt's Faulkner.",
+   "context": "Modo Energy published a head-to-head of two 9.9 MW one-hour distributed generation resources in ERCOT — ENGIE's Sweeny and Hunt Energy Network's Faulkner — comparing revenues, operational strategy, cycling rates, capacity allocation and regulation and ECRS arbitrage. Hunt's dossier names Sweeny as the one third-party-named peer DGR. ENGIE's own project page lists Sweeny at 10 MWac in Brazoria County, Texas. The two compete in the same sub-10 MW distribution-connected niche as well as in the utility-scale market.",
+   "source": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-sweeny-engie-faulkner-hunt-energy-network-revenues-operational-strategy-cycling-rates-capacity-allocation-regulation-ecrs-arbitrage-comparison"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "competitor",
+   "status": "active",
+   "note": "The only US battery owner larger than ENGIE, and the developer above it in every independent ranking.",
+   "context": "S&P Global Commodity Insights, working from government filings, ranks NextEra Energy Resources first in US operating battery storage at 5.779 GW at 30 June 2026 against ENGIE North America second at 3.662 GW — a gap that widened over the preceding year, when the figures were 4.141 GW and 3.251 GW. NextEra is also technology-diverse in a way ENGIE is not in the United States, with nuclear and gas positions alongside renewables; ENGIE's differentiated play is co-location of compute at its own generation.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "aes-clean-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "The next US battery owner below ENGIE and its closest rival for corporate and hyperscaler PPAs.",
+   "context": "S&P Global's Q2 2026 table places AES Clean Energy Development third at 1.978 GW behind ENGIE's 3.662 GW. The sharper contest is commercial: AES states it is BloombergNEF's top seller of clean energy to corporations in the US and the Americas for 2025, while BNEF's own public write-up of the same report names ENGIE the number-one global seller at 3.6 GW and publishes no US seller table. Both claims can be true — they are different scopes — and no public source reconciles them.",
+   "source": "https://about.bnef.com/insights/clean-energy/corporate-clean-energy-buying-fell-in-2025-after-nearly-a-decade-of-growth/"
+  },
+  {
+   "slug": "rwe-clean-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fellow European-utility-owned US renewables platform, competing for the same corporate PPAs and the same Texas interconnection positions.",
+   "context": "Both are US businesses of listed European parents whose American capital competes internally against European projects, and both signed multi-project Meta solar PPAs in Texas during the same period. They diverge on storage: S&P Global's Q2 2026 US owner table lists ENGIE second and does not list RWE at all, and RWE's own storage disclosure is a group figure of 1.7 GW pro rata rather than a US number. They also diverge on offshore — both exited US offshore leases for federal payments in 2026, ENGIE through Ocean Winds and RWE through RWE U.S. Offshore.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "intersect-power",
+   "type": "competitor",
+   "status": "active",
+   "note": "Google-owned ERCOT storage developer and one of the eighteen new owners that took 52% of ERCOT's 2025 battery additions.",
+   "context": "Modo Energy records that 18 owners with no prior Texas battery assets brought 3.1 GW online in ERCOT during 2025 — 52% of that year's additions — naming Intersect among them alongside TotalEnergies, Eni, Equinor, Brookfield, Gridstor, esVolta and Tokyo Gas America. Intersect is the sharpest case because Alphabet acquired it in March 2026, putting one of ENGIE's own PPA counterparties on the other side of the market as an owner.",
+   "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "ITC/45X (One Big Beautiful Bill Act phase-out)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "ENGIE SA's FY2025 consolidated financial statements name the OBBBA as providing 'for the scheduled phase-out of subsidies to renewable energies (IRA Investment Tax Credits and Production Tax Credits)' and identify two exposed business units — Renewables & Flex Power through solar, wind and battery activities, and LEI Rest of World through the Distributed Solar & Storage business being sold. ENGIE states it has 'around EUR 2.0 billion in capitalized costs related to US projects currently under construction' which 'are not affected, as construction has already begun and the necessary equipment has been secured'. The EUR 0.6bn of intangible development costs and pipeline did take a hit: an impairment of approximately EUR 100m, plus EUR 225m against North American equity-method assets, both attributed to the new law.",
+   "mitigation": "ENGIE states that construction has begun and equipment has been secured for the EUR 2.0bn under-construction book, and that its viability analysis of the development pipeline weighed 'the progress made in sourcing key components, their origin, their potential use in different projects'.",
+   "source": "https://www.engie.com/app/uploads/2026/03/2025-Management-report-and-annual-consolidated-financial-statements.pdf"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "The same note records that the law imposes 'restrictions on projects receiving material assistance from Foreign Entities of Concern (FEOC)' and that ENGIE's pipeline test took component 'origin' into account — the FEOC screen applied to development-stage projects. ENGIE publishes no supplier list for any North American battery project, so the exposure cannot be assessed from outside.",
+   "mitigation": "ENGIE is a signatory to SEIA's Forced Labor Prevention Pledge, the only supply-chain commitment published on its North American site.",
+   "source": "https://www.engie.com/app/uploads/2026/03/2025-Management-report-and-annual-consolidated-financial-statements.pdf"
+  },
+  {
+   "regime": "Beginning-of-construction safe harbor (IRS Notice 2025-42)",
+   "status": "in-effect",
+   "effectiveDate": "2025-08",
+   "exposure": "IRS Notice 2025-42 generally eliminated the 5% safe harbor for establishing beginning of construction for wind and solar above 1.5 MW, narrowing the route ENGIE's under-construction book relies on. A federal district court vacated the Notice in full on 6 June 2026, restoring the prior position — but that ruling is under appeal, so any project that qualified via the restored safe harbor holds a tax position that could be reversed retroactively.",
+   "source": "https://www.swlaw.com/publication/safe-harbor-restored-federal-court-strikes-down-irs-attempt-to-narrow-clean-energy-tax-credit-eligibility/"
+  },
+  {
+   "regime": "Offshore wind leasing suspension and lease relinquishment",
+   "status": "in-effect",
+   "effectiveDate": "2026-04-28",
+   "exposure": "Through Ocean Winds, its 50/50 joint venture with EDP Renewables, ENGIE surrendered the Bluepoint Wind (US$765m paid) and Golden State Wind (US$120m paid) leases, roughly 4.4 GW, in exchange for about US$885m of federal reimbursement conditioned on equal investment in US LNG, oil and energy infrastructure. SouthCoast Wind (2.4 GW) was not cancelled but is stalled by the federal permit freeze with PPA contracts slipped to 2026 and a 2030 COD target. Senator Sheldon Whitehouse opened an investigation into the comparable TotalEnergies buyout, citing legal concerns about the government's authority to refund lease payments.",
+   "mitigation": "ENGIE booked no additional 2025 impairment on Ocean Winds, maintaining a four-year development delay as its central scenario and stating it 'has a solid legal basis to defend, if necessary, the value of its permits'.",
+   "source": "https://www.utilitydive.com/news/two-more-offshore-wind-projects-scrapped-under-trump-administration-pressur/818681/"
+  },
+  {
+   "regime": "ERCOT market design and ancillary-services procurement",
+   "status": "in-effect",
+   "exposure": "ENGIE's storage fleet is 29 of 31 published projects in ERCOT, and ERCOT battery economics deteriorated sharply over the period: Enverus measures average revenue falling from $149/kW in 2023 to a projected $17/kW in 2025 with most major operators posting year-to-date profitability below 2.2%, while Modo measures merchant revenue at $192/kW in 2023 against a $43/kW average for 2024-25. The two series disagree and no source reconciles them. Ancillary-services revenues fell about 90% and their share of BESS revenue halved from 84% to 48% in two years, against a fleet that grew from 7.8 GW to 13.9 GW across 2025.",
+   "mitigation": "ENGIE's stated commercial answer is co-location of load — the Cipher Mining and Prometheus Hyperscale agreements are both framed as relieving congestion, offsetting basis risk and mitigating curtailment — and a shift into two-hour duration, five 50+ MW units of which were commissioned in Q3 2025.",
+   "source": "https://www.enverus.com/newsroom/ercot-battery-profits-drop-as-market-saturation-reshapes-texas-storage/"
+  },
+  {
+   "regime": "Retail supply regulation (state PUCs)",
+   "status": "in-effect",
+   "exposure": "ENGIE Resources supplies 14 deregulated states, and a breach-of-contract class action against ENGIE Power & Gas was partially dismissed by a New York federal court. The case name, number and date could not be resolved from any accessible source and the underlying allegations are known only at headline level; a separate purported 2017 settlement circulating under a similar name belongs to Genie Energy, not ENGIE, and must not be attributed here. No PUCT enforcement action or penalty against ENGIE Resources was found.",
+   "source": "https://www.engie-na.com/supply/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Anne-Laure Chassanite",
+   "title": "Chief Executive Officer (Interim), North America, and CEO, ENGIE Resources (interim CEO from 1 August 2026)",
+   "background": [
+    "Interim CEO, ENGIE North America — effective 1 August 2026, held concurrently with the ENGIE Resources chief executive role",
+    "CEO, ENGIE Resources — the US B2B retail supply business",
+    "Managing Director, Storengy UK (ENGIE's gas storage business) — April 2022 to January 2025",
+    "VP of Power Supply, ENGIE North America",
+    "Joined ENGIE in 2007; ~19-20 years across power retail, wholesale gas, portfolio management, infrastructure and storage in Europe and the US",
+    "ENGIE's own bio credits her with US$19 billion of capital invested across 11 states and more than 100 communities"
+   ]
+  },
+  {
+   "name": "Emmanuel Sbravati",
+   "title": "Interim Chief Renewables Officer, North America; Chief Revenue and Strategy Officer, North America Renewables and BESS",
+   "background": [
+    "Took Chief Renewables Officer duties on an interim basis after David Carroll's August 2026 departure",
+    "Chief Revenue and Strategy Officer, ENGIE North America Renewables and BESS — P&L, commercial strategy and partnership management",
+    "16+ years at ENGIE, joined 2010; roles across Global Energy Management & Sales, Finance and Renewables",
+    "Power and gas portfolio management, origination, M&A and market risk"
+   ]
+  },
+  {
+   "name": "Narsimha Misra",
+   "title": "Chief Executive Officer, ENGIE Energy Marketing NA (EEMNA)",
+   "background": [
+    "EEMNA CEO since January 2024 — the desk that dispatches and monetises the ERCOT and CAISO battery fleet",
+    "Joined ENGIE through the August 2023 Broad Reach Power acquisition, where he was Chief Commercial Officer",
+    "30+ years in power: trading, marketing, risk and structured products",
+    "Prior roles at NV Energy, Enron, Bank of America Merrill Lynch and Credit Suisse"
+   ]
+  },
+  {
+   "name": "Barnabe Janssen",
+   "title": "Chief Financial Officer, North America",
+   "background": [
+    "Deputy CFO, ENGIE North America before taking the CFO role",
+    "VP Finance LatAm, Flexible Generation (Santiago)",
+    "Performance Manager, Flex Gen & Retail GBU (Paris) — 2022 to 2023",
+    "Business Control lead to 2021; BU Generation Europe financial reporting 2016-18",
+    "18 years at ENGIE (12 in Finance), joined 2008 after co-founding FOODSTERBOX, a Belgian food-delivery startup"
+   ]
+  },
+  {
+   "name": "Martin Sieh",
+   "title": "Managing Director, Local Energy Infrastructure (LEI) / Campuses, North America",
+   "background": [
+    "Owns the Ohio State, University of Iowa, Georgetown and Longwood (MATEP) concessions plus North American campuses and cogeneration",
+    "20+ years at ENGIE",
+    "CEO of RED Engineering's global MEP activities within Tractebel",
+    "COO, ENGIE Impact — the global sustainability services business ENGIE has since sold to Arcadia",
+    "COO, ENGIE Insight / Ecova"
+   ]
+  },
+  {
+   "name": "Will Davis",
+   "title": "Chief Legal and Ethics Officer, Government and Regulatory Affairs, North America",
+   "background": [
+    "North American General Counsel from 2017",
+    "Joined ENGIE in 2011 as Senior Counsel, Generation Group",
+    "21+ years in energy law",
+    "Associate at Hunton & Williams and Paul Hastings (Washington DC)",
+    "SunCoke Energy, the former Sunoco subsidiary"
+   ]
+  },
+  {
+   "name": "Carolyn Whiteman",
+   "title": "Chief Human Resources Officer, North America",
+   "background": [
+    "20+ years in global HR, based in Houston",
+    "Senior HR roles at LyondellBasell including Head of Global Talent Acquisition",
+    "Alcon — global manufacturing and quality",
+    "10+ years at Shell across the US, Europe, Asia and Latin America"
+   ]
+  },
+  {
+   "name": "Oumar Ndoye",
+   "title": "GBS North America Country Lead and Head of GBS HR Americas",
+   "background": [
+    "19 years at ENGIE",
+    "Previously oversaw Integration and Transformation for ENGIE North America",
+    "Business and IT across gas, thermal and renewables, plus high tech, steel and transport",
+    "Graduate Engineer and PhD in Industrial Systems Engineering, Ecole Nationale Superieure d'Arts et Metiers"
+   ]
+  },
+  {
+   "name": "Ouss Housni",
+   "title": "Chief Information Officer, North America",
+   "background": [
+    "15+ years in information systems, digital transformation and data strategy",
+    "Leads regional IT, digital and data strategy — cloud-first ecosystem, cybersecurity governance, AI and data adoption",
+    "Master's degrees in Information Systems Engineering and Software Engineering"
+   ]
+  },
+  {
+   "name": "Taymur Bunkheila",
+   "title": "Regional Vice President and Retail Supply Lead, ENGIE's US 24/7 product",
+   "background": [
+    "The operational owner of the data-centre and 24/7 carbon-free commercial motion",
+    "Quoted by ENGIE on both the QTS Lubio Solar agreement and the Aker BioMarine 24/7 agreement"
+   ]
+  },
+  {
+   "name": "David Carroll",
+   "title": "Former CEO, ENGIE North America and Chief Renewables Officer (departed August 2026)",
+   "background": [
+    "Six years in the role; the named quote in nearly every 2024-2026 ENGIE North America release",
+    "Departure announced with the interim appointments on 3 August 2026; a permanent successor search is ongoing",
+    "Chairs the American Clean Power Association's 2026 board"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "EUR",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "EUR 73.8bn",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ENGIE SA consolidated, as restated in the FY2025 comparative column"
+     },
+     {
+      "name": "EBIT excluding nuclear",
+      "actual": "EUR 8.9bn (-5.6% organic)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No published FY2024 consensus could be located; searches returned the FY2025 LSEG numbers bled backwards"
+     },
+     {
+      "name": "Net recurring income, Group share",
+      "actual": "EUR 5.5bn (+3.4% organic)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "High end of company guidance; dividend EUR 1.48/share"
+     },
+     {
+      "name": "North America revenue (geographic note)",
+      "actual": "EUR 5,525m of EUR 73,812m group revenue",
+      "expected": "",
+      "verdict": "inline",
+      "result": "IFRS 8 geographic disclosure, by destination of products and services sold"
+     },
+     {
+      "name": "North America industrial capital employed",
+      "actual": "EUR 11,859m at 31 December 2024",
+      "expected": "",
+      "verdict": "inline",
+      "result": "By geographic location of consolidated companies"
+     },
+     {
+      "name": "Renewables added",
+      "actual": "4.2 GW group, of which 0.9 GW in the United States",
+      "expected": "",
+      "verdict": "inline",
+      "result": "A record year for group additions at the time"
+     }
+    ],
+    "commentary": "ENGIE does not report a North America segment. Its primary segmentation is by Global Business Unit; the only regional disclosure is the IFRS 8 geographic note, which gives revenue and industrial capital employed and no earnings measure."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "EUR 71.9bn (-2.5% gross, -0.7% organic)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ENGIE SA consolidated"
+     },
+     {
+      "name": "EBIT excluding nuclear",
+      "actual": "EUR 8.8bn (-1.5% gross, +2.2% organic)",
+      "expected": "EUR 9.1bn (LSEG consensus)",
+      "verdict": "miss",
+      "result": "Reuters attributed the shortfall to lower hydro output not offset by higher gas sales; nuclear EBIT separately fell 50.7% organically on the Belgian phase-out"
+     },
+     {
+      "name": "Net recurring income, Group share",
+      "actual": "EUR 4.9bn (-11.5% gross, -7.3% organic)",
+      "expected": "EUR 4.9bn (LSEG consensus)",
+      "verdict": "inline",
+      "result": "Printed at the consensus number and at the upper end of company guidance, even as the wire framing was that ENGIE missed expectations — the miss was on EBIT excluding nuclear and on IFRS net income (EUR 3.8bn against EUR 4.1bn). No source reconciles the two framings."
+     },
+     {
+      "name": "Renewables & BESS EBIT",
+      "actual": "EUR 2,485m (+3.9% gross, +6.2% organic)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The GBU that carries North American renewables and storage; reported globally, not by region"
+     },
+     {
+      "name": "North America revenue (geographic note)",
+      "actual": "EUR 5,807m of EUR 71,944m group revenue — 8.1%, up 5.1% year on year while group revenue fell 2.5%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "IFRS 8 geographic disclosure"
+     },
+     {
+      "name": "North America industrial capital employed",
+      "actual": "EUR 11,051m at 31 December 2025 — 15.5% of the group total, down EUR 808m across the year",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The fall is consistent with the Ares and CBRE IM minority sell-downs"
+     },
+     {
+      "name": "North America impairments",
+      "actual": "EUR 143m on onshore renewable assets (~EUR 100m of it capitalised development costs written down under the OBBBA), EUR 225m under share in net income of equity-method entities, ~EUR 250m against the Distributed Solar & Storage business being sold, and EUR 73m on Local Energy Infrastructure Rest of World assets",
+      "expected": "",
+      "verdict": "inline",
+      "result": "All from the FY2025 consolidated financial statements; no additional Ocean Winds impairment was taken in 2025"
+     },
+     {
+      "name": "Renewables and BESS added",
+      "actual": "6.2 GW group, of which 2.4 GW in the United States — the largest single contributor at 39%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Installed base 57.2 GW at 31 December 2025 against a 95 GW target for 2030"
+     },
+     {
+      "name": "Net growth capex",
+      "actual": "EUR 5.3bn, 'down compared to last year, mainly due to project delays in the US'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ENGIE's own wording — the clearest first-party signal on the US build rate"
+     }
+    ],
+    "commentary": "Economic net debt/EBITDA 3.1x, stable. Dividend proposed at EUR 1.35/share, a 67% payout. The 2026-2028 plan raised EBIT excluding nuclear guidance to EUR 8.7-9.7bn for 2026 and EUR 10.3-11.3bn for 2028, with gross capex of EUR 34-38bn of which about 90% to renewables, batteries and infrastructure — announced alongside the EUR 12.2bn net cash acquisition of UK Power Networks."
+   },
+   {
+    "period": "H1 2026",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "EUR 36.7bn (-3.6% gross, -2.9% organic)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ENGIE SA consolidated"
+     },
+     {
+      "name": "EBIT excluding nuclear",
+      "actual": "EUR 5.3bn (+3.3% gross, +1.2% organic)",
+      "expected": "EUR 5.1bn (reported as an LSEG poll)",
+      "verdict": "beat",
+      "result": "Drivers cited were strong gas trading and higher electricity transmission tariffs; the consensus figure is single-sourced through a search summary and no primary source carrying it could be opened"
+     },
+     {
+      "name": "Net recurring income, Group share",
+      "actual": "EUR 3.0bn (-3.3% gross, -3.9% organic)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Down year on year on the Belgian nuclear phase-out"
+     },
+     {
+      "name": "North America revenue (geographic note)",
+      "actual": "EUR 2,799m of EUR 36,707m — 7.6%, down 3.1% year on year",
+      "expected": "",
+      "verdict": "inline",
+      "result": "North American revenue fell while the group's data-centre pipeline grew"
+     },
+     {
+      "name": "North America industrial capital employed",
+      "actual": "EUR 11,569m at 30 June 2026, up EUR 518m from year-end",
+      "expected": "",
+      "verdict": "inline",
+      "result": "IFRS 8 geographic disclosure"
+     },
+     {
+      "name": "Data-centre pipeline",
+      "actual": "7 GW of data-centre load, of which 4 GW advanced-stage against 0.8 GW at the end of 2025; 7 GW of PPAs with technology and data-centre companies; 47% of the 50 TWh 2030 target secured",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Group figures, not North America only"
+     },
+     {
+      "name": "Economic net debt / EBITDA",
+      "actual": "4.2x, up 1.1x",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The UK Power Networks acquisition added EUR 19.0bn of growth capex and consolidated from May 2026"
+     }
+    ],
+    "commentary": "FY2026 net recurring income guidance raised to EUR 4.9-5.5bn and EBIT excluding nuclear to EUR 9.2-10.2bn. PPAs signed in H1 2026 were 2.4 GW, twice the level of the prior first half."
+   }
+  ],
+  "commentary": "All figures are ENGIE SA consolidated in euros; ENGIE publishes no North American EBIT, EBITDA or net income, and the IFRS 8 geographic note is the ceiling of regional disclosure. The shape it reveals is a capital-intensive, low-revenue-intensity region: 8.1% of FY2025 revenue against 15.5% of industrial capital employed. Credit ratings are stable across all three agencies — Moody's Baa1/P-2 (3 March 2026, conditioned on FFO/net debt reaching 17%), S&P BBB+/A-2 with guidance lowered on the UKPN acquisition, and Fitch BBB+/F1 (26 February 2026); no downgrade or negative outlook occurred in the period. Collection gap: no published FY2024 consensus exists in accessible sources, and the H1 2026 consensus figure is single-sourced — both are left as stated rather than reconstructed."
+ },
+ "strategyRead": [
+  "(High confidence) We assess ENGIE North America's storage leadership is real, bought rather than built, and measured independently. Basis: S&P Global Commodity Insights, working from government filings, ranks it second in US operating battery storage at 3.662 GW (30 June 2026), and Modo Energy measures ~2.8 GW in ERCOT entering 2026 — a 20% share and more than twice the next owner. ENGIE's own 2024 milestone release credits the acceleration to the August 2023 Broad Reach Power acquisition, and two of its published projects (Bat Cave, North Fork) trace through Broad Reach to Plus Power.",
+  "(High confidence) We assess the business is being run for capital recycling rather than balance-sheet growth. Basis: three consecutive minority sell-downs — Ares 49% of 905 MW for US$430m (March 2025), CBRE Investment Management 49.5% of a 2.4 GW battery portfolio (May 2025, in three tranches of US$291m, US$221m and ~US$70m), Ares again for 730 MW (January 2026) — each with the identical formula that ENGIE 'will retain a controlling share in the portfolio and will continue to operate and manage the assets'. North American industrial capital employed fell EUR 808m across FY2025 while the region's revenue rose 5.1%.",
+  "(High confidence) We assess the group's 2026 capital priority moved away from North America. Basis: ENGIE agreed to buy UK Power Networks for about EUR 12.2bn net cash plus EUR 6.6bn of assumed debt, making the UK its second-largest EBIT country; group net growth capex fell in FY2025 'mainly due to project delays in the US' in ENGIE's own words; ENGIE Impact was sold to Arcadia and the Distributed Solar & Storage business is being sold with a ~EUR 250m impairment; and North American revenue fell 3.1% year on year in H1 2026. This is recycling, not net deployment.",
+  "(Moderate confidence) We assess the ERCOT concentration is now the central commercial risk, not the central asset. Basis: 29 of 31 published storage projects sit in ERCOT, where Enverus measures average battery revenue falling from $149/kW (2023) to a projected $17/kW (2025) with most major operators below 2.2% year-to-date profitability, and ancillary-services revenues down about 90%. Modo separately measures merchant revenue at $43/kW for 2024-25 against $192/kW in 2023 — the two series disagree and no source reconciles them. Cutting against this judgment: interconnection applications fell 50% in H2 2025 and the median queue lengthened to 4.1 years, which protects incumbents.",
+  "(Moderate confidence) We assess co-location of compute is ENGIE's differentiated answer to that revenue compression, and that it is the least proven part of the strategy. Basis: the Cipher Mining preliminary agreement (up to 300 MW) and the Prometheus Hyperscale collaboration are both framed by ENGIE in market-structure terms — relieving congestion, offsetting basis risk, mitigating curtailment — rather than as sustainability deals. Neither discloses MW under contract; no third party has verified Prometheus's construction progress, financing or load commitment; and the group's own data-centre disclosure moved advanced-stage pipeline from 0.8 GW to 4 GW in six months, which is a forward claim rather than a delivered one.",
+  "(Moderate confidence) We assess the corporate-PPA franchise, not the storage fleet, is what makes ENGIE strategically important to this ecosystem. Basis: BloombergNEF ranks ENGIE the world's number-one seller of clean energy to corporations for 2025 at 3.6 GW and first cumulatively for 2011-2025 at 13.8 GW; North America was 1.5 GW of the 4.3 GW signed globally in 2024, and H1 2026 origination doubled year on year to 2.4 GW. The counterweight is buyer concentration: BNEF records the global corporate PPA market falling 10% in 2025 to 55.9 GW with Amazon, Meta, Google and Microsoft alone at 49% of volume — ENGIE leads a shrinking market whose demand sits in four accounts.",
+  "(Low confidence) We assess the leadership vacancy is a live execution risk rather than a formality. Basis: David Carroll left after six years on 1 August 2026 with no permanent successor named, the interim CEO is simultaneously running ENGIE Resources, and the interim Chief Renewables Officer holds his previous commercial role concurrently. Recharge's headline explicitly ties the departure to the renewables build-out and the offshore retreat, but that article is paywalled and only its headline was readable, so the causal link is unverified.",
+  "Collection gap: ENGIE publishes no North America EBIT, EBITDA or net income — the IFRS 8 geographic note (EUR 5,807m revenue, EUR 11,051m industrial capital employed at FY2025) is the ceiling of regional disclosure. It publishes MWh for exactly one of 31 storage projects, names no cell, module, inverter or turbine supplier anywhere in North America, publishes no MW or contract term for any of its named campus concessions, and its own pages disagree on employees (2,000 against 3,000+), retail customers (45,000 against 50,000+) and US tenure (45 years against four decades against 50). No EIA-860-derived third-party tally of ENGIE's US operating storage MWh exists in open sources.",
+  "Indicators to watch: (1) a permanent CEO appointment for ENGIE North America, and whether the successor comes from the renewables side or the retail side — the choice tells you which business the parent thinks it owns; (2) ENGIE SA's FY2026 results (February 2027) for whether North American revenue resumes growth after the H1 2026 decline and whether the 4 GW advanced data-centre pipeline converts to signed PPAs; (3) the first disclosed MW at a Prometheus Hyperscale site or a definitive Cipher Mining agreement — either would move the co-location judgment from announced to real; (4) any further minority sell-down, which would confirm capital recycling as policy rather than opportunism; (5) whether ENGIE commissions further two-hour batteries in ERCOT, extending the Q3 2025 shift away from its one-hour fleet."
+ ],
+ "sources": [
+  {
+   "label": "ENGIE — ENGIE and QTS strengthen renewable energy partnership in Texas with ABEI Energy's Lubio Solar project",
+   "url": "https://www.engie-na.com/engie-qts-solar-power-purchase-agreement-texas/",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "Data Center Dynamics — QTS signs 48MW solar PPA with Engie in Irving, Texas",
+   "url": "https://www.datacenterdynamics.com/en/news/qts-signs-48mw-solar-ppa-with-engie-in-irving-texas/",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "S&P Global Commodity Insights — WECC leads US battery storage additions with 2.2 GW in Q2 (US owner ranking; ENGIE North America 3.662 GW, #2)",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "EnergyChoiceMatters — ENGIE North America names interim CEO",
+   "url": "http://www.energychoicematters.com/stories/20260805a.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "ENGIE — Anne-Laure Chassanite named interim CEO during leadership transition",
+   "url": "https://www.engie-na.com/anne-laure-chassanite-interim-ceo-during-leadership-transition/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "ENGIE SA — H1 2026 results press release (PDF)",
+   "url": "https://www.engie.com/app/uploads/2026/07/PR-ENGIE-H1-2026-results.pdf",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "ENGIE SA — 2026 First-Half Financial Report (PDF; Note 4.3 geographic areas)",
+   "url": "https://www.engie.com/app/uploads/2026/07/2026-First-Half-financial-report-1.pdf",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Investing.com — ENGIE H1 2026 slides: guidance raised on infrastructure growth",
+   "url": "https://www.investing.com/news/company-news/engie-h1-2026-slides-guidance-raised-on-infrastructure-growth-93CH-4826991",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "ENGIE — 2026 Business Energy Census",
+   "url": "https://www.engie-na.com/2026census/",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "ENGIE — 24/7 renewable energy agreement with Aker BioMarine",
+   "url": "https://www.engie-na.com/24-7-renewable-energy-agreement-aker-biomarine/",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Snell & Wilmer — Safe harbor restored: federal court strikes down IRS attempt to narrow clean energy tax credit eligibility",
+   "url": "https://www.swlaw.com/publication/safe-harbor-restored-federal-court-strikes-down-irs-attempt-to-narrow-clean-energy-tax-credit-eligibility/",
+   "date": "2026-06"
+  },
+  {
+   "label": "KTEN — Fannin County resolves issues with Savoy battery storage facility",
+   "url": "https://www.kten.com/news/texas-headlines/fannin-county-resolves-issues-with-savoy-battery-storage-facility/article_f7669d75-d08d-4fd0-8a1e-bdc10dca82c5.html",
+   "date": "2026-05-04"
+  },
+  {
+   "label": "ENGIE — Arcadia acquires ENGIE Impact energy management platform",
+   "url": "https://www.engie-na.com/arcadia-acquires-engie-impact-energy-management-platform/",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "ESG Dive — Arcadia acquires Engie Impact to create unified energy management platform",
+   "url": "https://www.esgdive.com/news/arcadia-acquires-engie-impact-unified-energy-management-platform/819341/",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Utility Dive — 2 more offshore wind projects scrapped under Trump administration pressure (Bluepoint and Golden State lease surrender)",
+   "url": "https://www.utilitydive.com/news/two-more-offshore-wind-projects-scrapped-under-trump-administration-pressur/818681/",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "Canary Media — Another offshore wind firm is seeking a payout as Trump stifles sector",
+   "url": "https://www.canarymedia.com/articles/offshore-wind/engie-trump-deal-cancel-leases-us",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "ENGIE SA — 2025 Management Report and Annual Consolidated Financial Statements (PDF; Note 4.2.1 OBBBA, Note 6.4 geographic areas, Note 16.2.4 North America transactions)",
+   "url": "https://www.engie.com/app/uploads/2026/03/2025-Management-report-and-annual-consolidated-financial-statements.pdf",
+   "date": "2026-03"
+  },
+  {
+   "label": "ENGIE SA — FY2025 results press release (PDF)",
+   "url": "https://en.newsroom.engie.com/assets/pr-engie-fy-2025-results-vdef-29123-314df.html?dl=1",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Reuters via Stockopedia — Engie raises 2026-2028 targets, announces GBP 10.5bn UK Power Networks deal (carries the LSEG consensus)",
+   "url": "https://www.stockopedia.com/share-prices/engie-sa-EPA:ENGI/news/engie-raises-2026-2028-targets-announces-10-5-billion-pound-uk-power-networks-deal-updated-019e6a0f-a745-74e6-8dce-9d751dd306a7/",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "pv magazine — Corporate PPA deals down 10% in 2025 as AI demand plugs gaps",
+   "url": "https://www.pv-magazine.com/2026/02/20/corporate-ppa-deals-down-10-in-2025-as-ai-demand-plugs-gaps/",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "ENGIE — ENGIE confirmed world leader in renewable corporate PPAs for 2025",
+   "url": "https://www.engie-na.com/engie-world-leader-renewable-corporate-ppas-2025/",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "BloombergNEF — Corporate clean energy buying fell in 2025 after nearly a decade of growth",
+   "url": "https://about.bnef.com/insights/clean-energy/corporate-clean-energy-buying-fell-in-2025-after-nearly-a-decade-of-growth/",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "ess-news — ERCOT BESS interconnection applications drop 50% in H2 2025 as faults in the boom emerge",
+   "url": "https://www.ess-news.com/2026/02/06/ercot-bess-interconnection-applications-drop-50-in-h2-2025-as-faults-in-the-boom-emerge/",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "Modo Energy — ERCOT annual buildout report: battery capacity reaches 14 GW entering 2026",
+   "url": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+   "date": "2026-02-02"
+  },
+  {
+   "label": "ENGIE — ENGIE expands Ares partnership with 730 MW of operating US solar and wind",
+   "url": "https://www.engie-na.com/engie-expands-ares-partnership-730mw-renewables/",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "The Tax Adviser — IRS generally eliminates 5% safe harbor for determining beginning of construction for wind and solar projects",
+   "url": "https://www.thetaxadviser.com/issues/2026/jan/irs-generally-eliminates-5-safe-harbor-for-determining-beginning-of-construction-for-wind-and-solar-projects/",
+   "date": "2026-01"
+  },
+  {
+   "label": "Orrick — ENGIE and Ares expand renewables partnership with 730 MW of operating U.S. solar and wind assets",
+   "url": "https://www.orrick.com/en/News/2026/01/ENGIE-and-Ares-Expand-Renewables-Partnership-With-730-MW-of-Operating-U-S-Solar-and-Wind-Assets",
+   "date": "2026-01"
+  },
+  {
+   "label": "Enverus — ERCOT battery profits drop as market saturation reshapes Texas storage",
+   "url": "https://www.enverus.com/newsroom/ercot-battery-profits-drop-as-market-saturation-reshapes-texas-storage/",
+   "date": "2025-11-19"
+  },
+  {
+   "label": "ENGIE — AstraZeneca Texas manufacturing site renewable supply agreement",
+   "url": "https://www.engie-na.com/astrazeneca-texas-manufacturing-site/",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "ENGIE — ENGIE and Meta expand PPA to more than 1.3 GW (Swenson Ranch Solar, 600 MW)",
+   "url": "https://www.engie-na.com/engie-and-meta-expand-ppa-to-more-than-1-3-gw/",
+   "date": "2025-10-27"
+  },
+  {
+   "label": "Electrek — A $900M Texas solar mega-farm will power Meta's data centers",
+   "url": "https://electrek.co/2025/10/27/900m-texas-solar-mega-farm-will-power-meta-data-centers/",
+   "date": "2025-10-27"
+  },
+  {
+   "label": "Modo Energy — ERCOT buildout report: battery capacity crosses 12 GW in Q3 2025 (ENGIE 2,524 MW, #1 owner)",
+   "url": "https://modoenergy.com/research/en/ercot-battery-buildout-report-q3-2025",
+   "date": "2025-10-16"
+  },
+  {
+   "label": "S&P Global Commodity Insights via Advanced Power Alliance — ERCOT surpasses CAISO in Q2 for most operating battery storage capacity in the US (owner ranking)",
+   "url": "https://poweralliance.org/2025/09/20/us-battery-storage-ercot-surpasses-caiso-in-q2-for-most-operating-battery-storage-capacity-in-us/",
+   "date": "2025-09-20"
+  },
+  {
+   "label": "ENGIE — ENGIE collaborates with Prometheus Hyperscale to co-develop next-generation AI-ready data centers in Texas",
+   "url": "https://www.engie-na.com/engie-collaborates-with-prometheus-hyperscale-to-co-develop-next-generation-ai-ready-data-centers-in-texas/",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "Energy-Storage.News — Engie seeks to reassure locals on safety of 300MW BESS project in Texas (Platinum, Savoy)",
+   "url": "https://www.energy-storage.news/engie-seeks-to-reassure-locals-on-safety-of-300mw-bess-project-in-texas/",
+   "date": "2025-05-23"
+  },
+  {
+   "label": "Energy-Storage.News — CBRE IM invests in ENGIE's Texas and California BESS portfolio",
+   "url": "https://www.energy-storage.news/engie-acquires-31-bess-across-texas-california-totalling-24gw/",
+   "date": "2025-05-19"
+  },
+  {
+   "label": "ENGIE — ENGIE and CBRE Investment Management battery storage partnership (2.4 GW, 31 projects)",
+   "url": "https://www.engie-na.com/engie-cbre-battery-storage-partnership/",
+   "date": "2025-05-15"
+  },
+  {
+   "label": "ENGIE — ENGIE teams up with Cipher Mining to power a Texas data center",
+   "url": "https://www.engie-na.com/engie-teams-up-with-cipher-mining-to-power-texas-data-center/",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "ENGIE — ENGIE expands partnership with Ares Management with nearly 1 GW of solar and storage assets in the US",
+   "url": "https://www.engie-na.com/engie-expands-partnership-with-ares-management-with-addition-of-nearly-1-gw-portfolio-of-solar-and-storage-assets-in-the-u-s/",
+   "date": "2025-03-24"
+  },
+  {
+   "label": "ENGIE — ENGIE signed 4.3 GW of new power purchase agreements in 2024",
+   "url": "https://www.engie-na.com/engie-signed-4-3-gw-of-new-power-purchase-agreements-ppas-in-2024/",
+   "date": "2025-02-03"
+  },
+  {
+   "label": "ENGIE — ENGIE and Meta announce a new 200 MW renewable energy agreement (Anson 2 Solar)",
+   "url": "https://www.engie-na.com/engie-and-meta-announce-new-200-mw-renewable-energy-agreement-expanding-existing-relationship-to-meet-growing-power-demand/",
+   "date": "2025-01-13"
+  },
+  {
+   "label": "ENGIE — ENGIE and Meta announce a 260 MW renewable energy agreement (Sypert Branch Solar)",
+   "url": "https://www.engie-na.com/engie-and-meta-announce-260-mw-renewable-energy-agreement/",
+   "date": "2024-10-31"
+  },
+  {
+   "label": "ENGIE — Google PPA on Chillingham Solar (90 MW)",
+   "url": "https://www.engie-na.com/google-ppa-chillingham-solar/",
+   "date": "2024-10-24"
+  },
+  {
+   "label": "ENGIE — ENGIE reaches more than 1.8 GW of BESS installed capacity in the US, of which 1 GW added since January 2024",
+   "url": "https://www.engie-na.com/engie-reaches-more-than-1-8-gw-of-battery-energy-storage-systems-installed-capacity-in-the-u-s-of-which-1-gw-added-since-january-2024/",
+   "date": "2024-09-24"
+  },
+  {
+   "label": "Energy-Storage.News — Engie California BESS faces further delays; additional safety mitigation agreed following US battery fires (Ripon)",
+   "url": "https://www.energy-storage.news/engie-california-bess-faces-further-delays-additional-safety-mitigation-agreed-following-us-battery-fires/",
+   "date": "2024-09-12"
+  },
+  {
+   "label": "Modo Energy — Sweeny (ENGIE) versus Faulkner (Hunt Energy Network): 9.9 MW one-hour DGR revenues",
+   "url": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-sweeny-engie-faulkner-hunt-energy-network-revenues-operational-strategy-cycling-rates-capacity-allocation-regulation-ecrs-arbitrage-comparison",
+   "date": "2024-04"
+  },
+  {
+   "label": "ENGIE — Commissioning of the 100MW Sun Valley utility-scale battery storage project",
+   "url": "https://www.engie-na.com/engie-announces-commissioning-of-its-100mw-sun-valley-utility-scale-battery-storage-project-in-us/",
+   "date": "2023-12-19"
+  },
+  {
+   "label": "ENGIE — ENGIE to supply Microsoft data centers in Texas with a 24x7 renewable energy matching program",
+   "url": "https://www.engie-na.com/engie-to-supply-microsoft-data-centers-in-texas-with-24x7-renewable-energy-matching-program/",
+   "date": "2023-09-20"
+  },
+  {
+   "label": "Energy-Storage.News — ENGIE acquires Broad Reach Power BESS business for 'over US$1 billion equity value'",
+   "url": "https://www.energy-storage.news/engie-acquires-broad-reach-power-bess-business-for-over-us1-billion-equity-value/",
+   "date": "2023-08"
+  },
+  {
+   "label": "ENGIE — Energy storage expertise page (3.5+ GW BESS in North America, 35+ operational projects)",
+   "url": "https://www.engie-na.com/storage/"
+  },
+  {
+   "label": "ENGIE — Data center power and cooling (Sustainable Microgrids, Low-Carbon District Energy Networks, Amazon 650 MW, QTS 20 MW)",
+   "url": "https://www.engie-na.com/data-center-power/"
+  },
+  {
+   "label": "ENGIE — Renewables overview (11+ GW operating and in construction, 500+ distributed solar projects)",
+   "url": "https://www.engie-na.com/renewables/"
+  },
+  {
+   "label": "ENGIE — Solar expertise page (17 grid-scale projects, 3+ GW; 40 community solar gardens)",
+   "url": "https://www.engie-na.com/expertise/solar/"
+  },
+  {
+   "label": "ENGIE — Wind expertise page (27 onshore projects, ~4 GW; Ocean Winds 6.1 GW planned)",
+   "url": "https://www.engie-na.com/expertise/wind/"
+  },
+  {
+   "label": "ENGIE — Energy supply page (ENGIE Resources; 45,000+ C&I customers, 14 states, BBB+ rating)",
+   "url": "https://www.engie-na.com/supply/"
+  },
+  {
+   "label": "ENGIE — Wholesale energy marketing page (EEMNA; ERCOT, NYISO, ISO-NE, PJM, MISO, SPP, IESO)",
+   "url": "https://www.engie-na.com/marketing/"
+  },
+  {
+   "label": "ENGIE — Public power utilities and cooperatives (Holyoke, United Power, New Hampshire Electric Co-op BESS case studies)",
+   "url": "https://www.engie-na.com/public-power-utilities-and-cooperatives/"
+  },
+  {
+   "label": "ENGIE — Executive leadership, ENGIE North America",
+   "url": "https://www.engie-na.com/execleadership/"
+  },
+  {
+   "label": "ENGIE — About ENGIE North America",
+   "url": "https://www.engie-na.com/about/"
+  },
+  {
+   "label": "ENGIE Resources — America's Energy Greentailer (product set, broker and consultant channel)",
+   "url": "https://www.engieresources.com/"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

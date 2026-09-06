@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-06",
- "companies": 136,
+ "companies": 139,
  "edges": [
   {
    "a": "abb",
@@ -1480,6 +1480,24 @@
   },
   {
    "a": "aep",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Indiana Michigan Power, an AEP company, buys the full output of RWE's 200 MW Prairie Creek project under a fifteen-year PPA with COD in 2028.",
+     "context": "Announced 18 December 2025 — the first named utility PPA of this cycle and a reminder that RWE's offtake book is not only hyperscalers. AEP is the most-cited utility in this corpus, and Indiana Michigan Power is the operating company serving the northern Indiana and southwestern Michigan territory where Prairie Creek sits.",
+     "source": "https://www.rwe.com/en/press/rwe-clean-energy/2025-12-18-rwe-and-indiana-michigan-power-company-partner-on-200-mw-solar-project/",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "200 MW, fifteen years",
+     "via": "Prairie Creek solar, Blackford County, Indiana"
+    }
+   },
+   "evid": [],
+   "last": "2025-12"
+  },
+  {
+   "a": "aep",
    "b": "sargent-lundy",
    "curated": {
     "b": {
@@ -1574,6 +1592,382 @@
     }
    ],
    "last": "2026-03-06"
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "amazon",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Amazon is AES Clean Energy's most-named offtaker, taking Bellefield 1, McFarland B, Oak Ridge, Delta, Baldy Mesa and Silver Peak.",
+     "context": "The FY2025 10-K facility table names Amazon on six operating US assets: Bellefield 1 (California, Solar 500 + Storage 500, 75% AES equity, COD 2025, contract to 2040), McFarland B (Arizona, Solar 300 + Storage 150, to 2043), Oak Ridge (Louisiana, Solar 200, to 2043), Delta (Mississippi, Wind 185, to 2043-44), Baldy Mesa (California, Solar 150 + Storage 75, to 2043) and Silver Peak (California, Solar 50 + Storage 25, to 2044). Amazon's own dossier records Bellefield as its flagship reference project and names AES as the counterparty channel; it also carries a low-confidence inference that Fluence supplies the Bellefield batteries, which no release, filing or trade report supports and which AES has never disclosed.",
+     "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm",
+     "status": "active",
+     "since": "2020",
+     "scale": "Bellefield 1 alone is 500 MW solar + 500 MW / 4-hour storage on a contract to 2040",
+     "via": "Long-term PPAs on AES-owned solar and paired storage"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "AES Clean Energy is the developer-owner behind six of Amazon's named US renewable assets, including Bellefield.",
+     "context": "The AES FY2025 10-K facility table names Amazon as the customer on Bellefield 1 (California, Solar 500 + Storage 500, 75% AES equity, COD 2025, contract to 2040), McFarland B (Arizona, Solar 300 + Storage 150, to 2043), Oak Ridge (Louisiana, Solar 200, to 2043), Delta (Mississippi, Wind 185, to 2043-44), Baldy Mesa (California, Solar 150 + Storage 75, to 2043) and Silver Peak (California, Solar 50 + Storage 25, to 2044). AES has never disclosed the Bellefield battery supplier, and the inference that it is Fluence rests only on the corporate stake, which the parent cut from 28% to 22% in May 2026.",
+     "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000072/aes-2025annualreport.pdf",
+     "status": "active",
+     "since": "2020",
+     "scale": "Bellefield 1 alone is 500 MW solar + 500 MW / 4-hour storage on a contract to 2040",
+     "via": "Long-term PPAs on AES-owned solar and paired storage"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The named record supports scale — Amazon on six operating assets, Microsoft on six, Meta at 650 MW in SPP.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2020"
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "arevon",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Fifth-largest US battery owner at 1.470 GW and closing on AES.",
+     "context": "S&P Global's Q2 2026 owner table lists Arevon Energy fifth at 1.470 GW, up from outside the top five a year earlier, against AES's 1.978 GW. Arevon's portfolio spans more than 4,500 MW across 17 states with about 1,400 MW under construction. The two compete for the same utility and corporate offtake in the same western markets.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "engie-north-america",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The second-largest US battery owner, immediately above AES, and its closest rival for corporate PPAs.",
+     "context": "S&P Global's Q2 2026 owner table puts ENGIE North America second at 3.662 GW against AES third at 1.978 GW. The commercial contest is sharper than the storage one and unresolved in public: AES states it was BloombergNEF's top seller of clean energy to corporations in the US and the Americas in 2025, while BNEF's own public write-up of the same report names ENGIE the number-one global seller at 3.6 GW and publishes no US or Americas seller table. Both can be true at different scopes; no public source reconciles them.",
+     "source": "https://about.bnef.com/insights/clean-energy/corporate-clean-energy-buying-fell-in-2025-after-nearly-a-decade-of-growth/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The next US battery owner below ENGIE and its closest rival for corporate and hyperscaler PPAs.",
+     "context": "S&P Global's Q2 2026 table places AES Clean Energy Development third at 1.978 GW behind ENGIE's 3.662 GW. The sharper contest is commercial: AES states it is BloombergNEF's top seller of clean energy to corporations in the US and the Americas for 2025, while BNEF's own public write-up of the same report names ENGIE the number-one global seller at 3.6 GW and publishes no US seller table. Both claims can be true — they are different scopes — and no public source reconciles them.",
+     "source": "https://about.bnef.com/insights/clean-energy/corporate-clean-energy-buying-fell-in-2025-after-nearly-a-decade-of-growth/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "fluence",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Fluence supplies and builds AES storage projects, and AES's parent holds 22% of it after a May 2026 sell-down.",
+     "context": "AES's FY2025 10-K Note 29 states that 'many of the Company's energy storage construction projects utilize Fluence as either a BESS supplier or EPC contractor', recorded primarily in property, plant and equipment; the related-party PP&E balance rose from US$851m to US$1,254m across 2025, the closest available proxy since AES discloses no Fluence-specific figure. The ownership sits at the parent, not at this unit: The AES Corporation created Fluence with Siemens in 2018, held a 28.19% economic interest at 31 December 2025, and in May 2026 redeemed 10,066,414 units and sold the resulting Class A shares for US$207m net and a US$186m pre-tax gain, cutting its interest to 22% while retaining significant influence and equity-method treatment. The edge is typed supplier rather than investor because this dossier's subject is the US renewables unit, which buys from Fluence and does not hold the stake; the ownership is recorded here rather than in the type.",
+     "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm",
+     "status": "active",
+     "since": "2018",
+     "scale": "about 24% of Fluence revenue is with related parties, primarily AES; 13% of Fluence's US$5.3bn of remaining performance obligations",
+     "via": "Battery energy storage systems and EPC services on AES storage projects"
+    },
+    "b": {
+     "type": "customer",
+     "note": "AES Clean Energy is Fluence's largest customer as well as, through its parent, its second-largest shareholder.",
+     "context": "AES's FY2025 10-K states that 'many of the Company's energy storage construction projects utilize Fluence as either a BESS supplier or EPC contractor', recorded primarily in property, plant and equipment; AES's related-party PP&E rose from $851M to $1,254M across 2025, though AES discloses no Fluence-specific figure. From this side the dependence is measurable: Fluence's own FY2025 10-K reports about 24% of revenue with related parties, primarily AES and affiliates, revenue from AES of $1,082.3M in FY2024, and 13% of $5.3B of remaining performance obligations with AES. The equity sits at The AES Corporation rather than at the US renewables unit, which is why this edge is typed on the commercial relationship.",
+     "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm",
+     "status": "active",
+     "since": "2018",
+     "scale": "about 24% of Fluence revenue is with related parties, primarily AES; 13% of the $5.3B remaining performance obligations",
+     "via": "BESS supply and EPC services on AES US storage projects"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It owns 22% of Fluence and buys from it — the 10-K states that \"many of the Company's energy storage construction projects utilize Fluence as either a BESS supplier or EPC contractor\" — which makes AES the one large US storage owner whose procurement decision is entangled with an equity position.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the Fluence entanglement is a genuine structural feature rather than a footnote, and that the parent is stepping back from it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: AES created Fluence with Siemens in 2018, its 10-K states that many of its storage construction projects use Fluence as BESS supplier or EPC contractor, Fluence's own 10-K reports about 24% of revenue with related parties primarily AES and 13% of a US$5.3bn backlog with AES — and AES cut its economic interest from 28% to 22% in May 2026, selling at US$21.00 a share three months before Fluence cut FY2026 guidance and traded near US$11.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "AES is also a named defendant in Fluence's securities class action.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Cutting against a simple reading: AES discloses no Fluence-specific procurement figure, so the commercial dependence can only be sized from Fluence's side.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "AES publishes no consolidated US operating storage MW or MWh, no ISO/RTO for any asset except New York Wind, no cell chemistry for any grid-scale project, no Fluence-specific procurement figure, and no named AES Clean Energy chief executive, chief operating officer or chief development officer since Ken Zagzebski moved to Utilities.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · New Energy Technologies portfolio — Fluence, AI Fund, Uplight, 5B",
+     "date": "",
+     "text": "Fluence, created in 2018 as a joint venture of AES and Siemens and listed on Nasdaq since November 2021, is the largest: AES held a 28.19% economic interest at 31 December 2025, redeemed 10,066,414 Fluence Energy LLC common units in May 2026 and sold the resulting Class A shares publicly for US$207 million net and a US$186 million pre-tax gain, taking its interest from 28% to 22% while retaining significant influence and equity-method accounting.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · New Energy Technologies portfolio — Fluence, AI Fund, Uplight, 5B",
+     "date": "",
+     "text": "AES is simultaneously Fluence's largest shareholder after Siemens, its largest customer, and a co-defendant in its securities litigation — a three-way entanglement no other large US storage owner has with its supplier.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-15",
+     "text": "AES redeems 10,066,414 Fluence Energy LLC units and sells the resulting Class A shares publicly for US$207m net and a US$186m pre-tax gain, cutting its interest from 28% to 22% while retaining equity-method accounting — AES sold at US$21.00 three months before Fluence cut guidance and traded near US$11 — good timing, and a signal about how the parent now values the stake.",
+     "src": "https://www.stocktitan.net/sec-filings/FLNC/form-4-fluence-energy-inc-insider-trading-activity-b5a98e698bc0.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05-15"
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "AES names Google its top corporate buyer in 2025, though no US project-level Google PPA is disclosed first-party.",
+     "context": "AES's February 2026 release states that BloombergNEF ranked it the top provider of clean energy to corporations in the US and the Americas for 2025 and that Google was its top corporate buyer that year. The 10-K facility table names Google only on Chilean assets belonging to AES Andes — Andes Solar 4, Andes Solar 2a, Los Olmos and Mesamavida — not on any US project, and trade coverage of a reported 727 MW Texas and 310 MW Ohio arrangement could not be matched to any AES first-party document. The commercial relationship is asserted by AES; its US project composition is a collection gap.",
+     "source": "https://www.prnewswire.com/news-releases/aes-recognized-by-bnef-as-top-provider-of-clean-energy-to-corporations-in-the-us-and-the-americas-in-2025-302692906.html",
+     "status": "active",
+     "since": "2025"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A reported 727 MW Texas and 310 MW Ohio Google arrangement could not be matched to any AES document and is not recorded here.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-19",
+     "text": "BloombergNEF names AES the top provider of clean energy to corporations in the US and the Americas for 2025, a fifth consecutive year, with Google its top corporate buyer; AES states corporate PPAs are nearly two-thirds of backlog and about 85% of 2025's long-term renewable contracts — A real ranking behind a paywall, reaching the public record only through AES's own release — BNEF's free write-up names ENGIE the number-one global seller and publishes no US table.",
+     "src": "https://www.prnewswire.com/news-releases/aes-recognized-by-bnef-as-top-provider-of-clean-energy-to-corporations-in-the-us-and-the-americas-in-2025-302692906.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-19"
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "intersect-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Now Alphabet-owned and 42 MW behind AES in US operating storage — the competitor that turned into a customer's subsidiary.",
+     "context": "S&P Global's Q2 2026 table places Intersect Power fourth at 1.936 GW, within 42 MW of AES, having overtaken Enel Green Power and Plus Power in a year. Alphabet completed its roughly US$4.75bn acquisition of Intersect in March 2026. Cleanview ranks Intersect fourth by development pipeline at 29,242 MW, nearly double AES's 17,065 MW. AES names Google its top corporate buyer for 2025, which makes this the most structurally awkward competitive relationship in the peer set.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "S&P Global Commodity Insights, working from government filings, ranks AES Clean Energy Development third among US battery owners at 1.978 GW operating at 30 June 2026 — 42 MW ahead of Intersect Power, which Alphabet now owns.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: S&P Global Commodity Insights ranks AES Clean Energy Development third among US owners at 1.978 GW at 30 June 2026, from 1.484 GW a year earlier — but Intersect Power closed to within 42 MW over the same period and Arevon reached 1.470 GW, while NextEra extended to 5.779 GW and ENGIE to 3.662 GW.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) FERC and the Ohio and New York commission decisions on the merger, and whether the advocacy petitions asking FERC to condition or block it get a docket — the outside date is 1 June 2027 and the termination fee US$320,651,487; (2) whether Bellefield Phase 2 reached commercial operation in the second half of 2026 as stated, which would complete the largest US solar-plus-storage facility; (3) the next S&P Global quarterly owner table, for whether Intersect Power passes AES into third place; (4) any AES disclosure naming the Texas private-use-network customer, or a second such agreement, which would establish DTAs as a repeatable line rather than a single contract; (5) whether the Maximo fleet expands past five units against the stated 2026 installation backlog, and whether any third-party EPC is named as a customer.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "invenergy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Second-largest US developer by pipeline and a fellow member of the NVIDIA and Emerald AI flexible-AI-factory programme.",
+     "context": "Cleanview ranks Invenergy second among US renewable developers by pipeline at 41,328 MW across 212 projects against AES ninth at 17,065 MW. Invenergy's own dossier records that it joined NVIDIA and Emerald AI's 'flexible AI factories as grid assets' initiative in March 2026 alongside AES, Constellation, NextEra, Nscale and Vistra — the two are simultaneously competitors for data-centre offtake and participants in the same reference architecture.",
+     "source": "https://cleanview.co/content/top-renewable-developers",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Meta contracted 650 MW of AES solar across Texas and Kansas in May 2025.",
+     "context": "AES's own release states the two PPAs support Meta's data centres with 650 MW of solar that AES is bringing online in the Southwest Power Pool. It is the transaction alongside which AES first quantified its hyperscaler position — 10.1 GW of contractual arrangements with major global hyperscalers, including 7.7 GW of long-term PPAs. Meta's dossier records the relationship in its portfolio line as 'AES (650 MW)', consistent with AES's figure.",
+     "source": "https://s202.q4cdn.com/986265382/files/doc_news/2025/05/05-20-25-AES-Meta-PR_FINAL.pdf",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "650 MW",
+     "via": "Two long-term PPAs on AES solar projects in the SPP market"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "AES Clean Energy contracted 650 MW of solar to Meta across Texas and Kansas in May 2025.",
+     "context": "AES's own release states the two PPAs support Meta's data centres with 650 MW of solar that AES is bringing online in the Southwest Power Pool, and quotes Meta's global head of energy. It is the transaction alongside which AES first quantified its hyperscaler position — 10.1 GW of contractual arrangements with major global hyperscalers including 7.7 GW of long-term PPAs, later restated as 11.8 GW of signed agreements with major technology firms. This dossier's portfolio line already carried 'AES (650 MW)', consistent with AES's figure.",
+     "source": "https://s202.q4cdn.com/986265382/files/doc_news/2025/05/05-20-25-AES-Meta-PR_FINAL.pdf",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "650 MW",
+     "via": "Two long-term solar PPAs in the SPP market"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The named record supports scale — Amazon on six operating assets, Microsoft on six, Meta at 650 MW in SPP.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · 24/7 carbon-free energy, co-location and private-use networks for data centres",
+     "date": "",
+     "text": "Gluski's framing on the Meta deal was 'energy solutions that offer fast time-to-power and low-cost electricity'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-21",
+     "text": "AES and Meta sign two long-term PPAs for 650 MW of solar in Texas and Kansas, in the SPP market; AES states 10.1 GW of contractual arrangements with major global hyperscalers including 7.7 GW of long-term PPAs — The first-party confirmation of hyperscaler scale — and Gluski's framing was time-to-power, not sustainability.",
+     "src": "https://s202.q4cdn.com/986265382/files/doc_news/2025/05/05-20-25-AES-Meta-PR_FINAL.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2025-05-21"
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft is named on six AES operating assets, including a share of the 485 MW Spotsylvania project.",
+     "context": "The FY2025 10-K names Microsoft on Morris (Missouri, Solar 250, to 2040), Raceway 1 (California, Solar 125 + Storage 80, to 2043), Calhoun (Michigan, Solar 125, with MPPA, to 2039), Cavalier Solar A2 (Virginia, Solar 84, to 2044), Keydet North (Virginia, Solar 58, to 2045) and Spotsylvania (Virginia, Solar 485, alongside Apple, Akamai and Etsy, to 2035). Microsoft is also named on San Matias in Chile, which belongs to AES Andes rather than to AES Clean Energy.",
+     "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm",
+     "status": "active",
+     "since": "2020",
+     "scale": "six named operating assets",
+     "via": "Long-term PPAs on AES-owned solar and paired storage"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The named record supports scale — Amazon on six operating assets, Microsoft on six, Meta at 650 MW in SPP.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2020"
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The largest US battery owner and the largest developer by pipeline, ahead of AES on both measures.",
+     "context": "S&P Global Commodity Insights ranks NextEra Energy Resources first in US operating battery storage at 5.779 GW at 30 June 2026 against AES Clean Energy Development's 1.978 GW, a gap that widened from 4.141 GW versus 1.484 GW a year earlier. Cleanview separately ranks NextEra first among US renewable developers by pipeline at 68,229 MW across 403 projects against AES ninth at 17,065 MW. AES's counter-positioning is not scale but corporate-PPA share and time-to-power.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "plus-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Pure-play storage developer that was fifth in the US owner table at Q2 2025 and out of the top five by Q2 2026.",
+     "context": "S&P Global ranked Plus Power fifth at 1.219 GW at 30 June 2025; by 30 June 2026 the fifth position belonged to Arevon at 1.470 GW and Plus Power no longer appeared. Plus Power's Kapolei flagship in Hawaii replaced an AES coal plant — an asset of The AES Corporation's legacy thermal fleet, not of AES Clean Energy, and the two businesses should not be conflated when reading that reference.",
+     "source": "https://poweralliance.org/2025/09/20/us-battery-storage-ercot-surpasses-caiso-in-q2-for-most-operating-battery-storage-capacity-in-us/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Fellow large US renewables platform competing for the same corporate PPAs, though absent from the independent storage owner tables AES appears in.",
+     "context": "Both sell multi-hundred-megawatt solar PPAs to the same buyers — Meta signed 650 MW with AES in May 2025 and 872 MW across four projects with RWE over the same window — and both were reshaped by the One Big Beautiful Bill Act's safe-harbor timetable. They diverge on storage disclosure: S&P Global's US owner table lists AES third and does not list RWE at all, and RWE publishes only a group storage figure rather than a US one.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Competing US renewables platform selling to the same four hyperscalers, and a battery owner RWE does not rank alongside.",
+     "context": "Both signed large Meta solar PPAs over the same period — 650 MW to AES in SPP in May 2025 against 872 MW to RWE across four projects — and both restructured their development plans around the One Big Beautiful Bill Act's safe-harbor timetable, RWE stating that all its investment projects hold safe-harbour status and AES stating that its backlog is resilient to the change. S&P Global's Q2 2026 owner table places AES third at 1.978 GW; RWE is absent.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "aligned",
@@ -2354,6 +2748,30 @@
   },
   {
    "a": "amazon",
+   "b": "engie-north-america",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "ENGIE's data-centre page states 650 MW of contracts with Amazon across the US and Europe in support of Amazon's 2030 net-zero goals.",
+     "context": "The figure is ENGIE's own, undated, and explicitly spans two continents. No North American Amazon project is named by either party in any accessible source; the only ENGIE-Amazon deal that resolves to a named asset is Moray West offshore wind in the United Kingdom (473 MW), which is not North American. Recorded here because ENGIE asserts the relationship on its own data-centre page, with the geography gap stated rather than closed.",
+     "source": "https://www.engie-na.com/data-center-power/",
+     "status": "active",
+     "scale": "650 MW of contracts (United States and Europe combined)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The counterweight is buyer concentration: BNEF records the global corporate PPA market falling 10% in 2025 to 55.9 GW with Amazon, Meta, Google and Microsoft alone at 49% of volume — ENGIE leads a shrinking market whose demand sits in four accounts.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amazon",
    "b": "entergy",
    "curated": {
     "b": {
@@ -2483,7 +2901,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "(Low confidence) Fluence is the intuitive guess for the Bellefield battery supplier given AES owns roughly 28% of Fluence, but we found no press release, filing, or trade coverage naming the supplier for that project.",
+     "text": "(Low confidence) Fluence is the intuitive guess for the Bellefield battery supplier given The AES Corporation's stake in it — 28.19% at 31 December 2025, cut to 22% by a May 2026 redemption and public sale — but we found no press release, filing, or trade coverage naming the supplier for that project.",
      "src": "",
      "from": "a"
     }
@@ -2877,6 +3295,60 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "amazon",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon holds seven long-term US contracts with RWE totalling 1.1 GW, alongside a framework in which AWS supplies RWE with cloud and AI services.",
+     "context": "RWE's own annual report states the seven US PPAs and 1.1 GW; the individual projects are not disclosed. The June 2025 framework agreement runs in both directions — RWE supplies clean power to Amazon data centres and AWS supplies RWE with cloud, AI and data-analytics services for trading models and wind and solar forecasting. A separate 110 MW fifteen-year offshore PPA from Nordseecluster B, signed by RWE Supply & Trading in February 2026, is German and does not belong to this unit. There is no Amazon equity stake in RWE: the shareholder register at 12 March 2026 shows Qatar Holding at 9.3% and BlackRock at 5.9%, and German disclosure thresholds begin at 3%.",
+     "source": "https://www.rwe.com/-/media/RWE/documents/05-investor-relations/finanzkalendar-und-veroeffentlichungen/2025-GJ/RWE-Annual-Report-2025.pdf",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "1.1 GW across seven US PPAs",
+     "via": "Long-term wind and solar PPAs plus an AWS cloud, AI and data-analytics framework"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a corporate offtaker it is a reliable multi-project counterparty — 872 MW to Meta across four solar farms, 1.1 GW to Amazon across seven contracts, 446 MW to Microsoft on two 15-year wind PPAs, 155 MW to Google in Oklahoma.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess the Amazon relationship is commercial and contractual only, with no equity component, contrary to a claim in circulation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: RWE's shareholder register at 12 March 2026 shows Qatar Holding at 9.3% and BlackRock at 5.9% with no Amazon holding, and German voting-rights notifications begin at 3%.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "What exists instead is a June 2025 framework — RWE supplies clean power to Amazon data centres while AWS supplies RWE with cloud, AI and data-analytics services — seven US PPAs totalling 1.1 GW, and Amazon's purchase of RWE's former Didcot A site in the UK for about EUR 225m, a buyer identified by Deutsche Bank analysts rather than disclosed by RWE.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-03",
+     "text": "RWE signs a 15-year PPA with Google for the total output of Crooked Creek Solar, 155 MWac in McCurtain County — RWE's first solar project in Oklahoma, with COD in 2028 — The fourth hyperscaler in the book, and the first Google contract; the buyer set is now Amazon, Meta, Microsoft and Google.",
+     "src": "https://www.rwe.com/en/press/rwe-americas/2026-08-03-rwe-and-google-sign-ppa-for-oklahoma-solar-project/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-03"
   },
   {
    "a": "amazon",
@@ -6869,6 +7341,54 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "blattner",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "RWE is one of Blattner's repeat-owner frameworks; Blattner built Emily Solar, the project that completed RWE's first gigawatt in Illinois.",
+     "context": "RWE's May 2026 ribbon-cutting release credits Blattner with building the 273.6 MW Emily Solar project in Clark, Cumberland and Coles counties, with about 400 peak construction jobs, and publicly cites 'Blattner's delivery credibility'. The relationship predates it — Blattner's own positioning lists RWE among its repeat-owner frameworks alongside Pattern, Orsted, Recurrent/Goldman and NextEra/FPL. On Blattner sites the owner furnishes the batteries, so any storage procurement on RWE's co-located projects stays RWE's decision.",
+     "source": "https://www.prnewswire.com/news-releases/rwe-celebrates-1-gigawatt-emily-solar-302770003.html",
+     "status": "active",
+     "scale": "Emily Solar, 273.6 MW",
+     "via": "EPC construction on utility-scale solar"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Blattner is one of RWE's repeat-framework EPC contractors; it built Emily Solar, the project that completed RWE's first gigawatt in Illinois.",
+     "context": "RWE's May 2026 ribbon-cutting release credits Blattner with building the 273.6 MW Emily Solar project, with about 400 peak construction jobs. Blattner's own dossier lists RWE among its repeat-owner frameworks alongside Pattern, Orsted, Recurrent/Goldman and NextEra/FPL, and records that RWE 'explicitly cites Blattner's delivery credibility'. On Blattner sites the owner furnishes the batteries — the procurement decision on any co-located storage stays with RWE.",
+     "source": "https://americas.rwe.com/press/2026-05-12-rwe-celebrates-1-gigawatt-of-energy-projects/",
+     "status": "active",
+     "scale": "Emily Solar, 273.6 MW",
+     "via": "EPC construction on utility-scale solar"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For an equipment or EPC vendor it is a repeat-framework owner: RWE publicly credits Blattner's delivery credibility, ran McCarthy on Bright Arrow and Lafitte, and expanded GE Vernova to 109 turbines for two Texas projects.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-scale solar and co-located solar plus storage",
+     "date": "",
+     "text": "The 2025 cohort added Emily Solar (273.6 MW, Illinois, Blattner-built, completing RWE's first gigawatt in that state), Casey Fork Solar (150 MW, Illinois), Stoneridge (200 MW, Texas), Lafitte Solar (100 MW, Louisiana — RWE's first project in the state, built by McCarthy), Ashwood Solar (86 MW, Kentucky) and Arlington Valley Solar (125 MW, Arizona).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-12",
+     "text": "RWE reaches 1 GW of operating capacity in Illinois with the ribbon-cutting of Emily Solar, 273.6 MW, built by Blattner with about 400 peak jobs — The repeat-owner EPC framework in action; RWE publicly credits Blattner's delivery credibility rather than its price.",
+     "src": "https://americas.rwe.com/press/2026-05-12-rwe-celebrates-1-gigawatt-of-energy-projects/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-12"
   },
   {
    "a": "bloom-energy",
@@ -15967,6 +16487,303 @@
    "last": ""
   },
   {
+   "a": "engie-north-america",
+   "b": "flex",
+   "evid": [
+    {
+     "where": "Capabilities · ENGIE Resources — commercial and industrial retail supply",
+     "date": "",
+     "text": "The product set is fixed-price, Flex and Float structures, RECs, physical and virtual corporate PPAs, ESG-certified natural gas, and the My ENGIE Portal self-service platform.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "engie-north-america",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Google takes 90 MW of ENGIE's Chillingham Solar project — the fifth ENGIE-Google project globally and the first in the United States.",
+     "context": "Transacted through LevelTen Energy's Accelerated Process (LEAP), with ENGIE citing more than US$72m of lifetime tax revenue for the county. Chillingham also carries 150 MW of co-located storage. ENGIE's own project page contradicts itself on commercial operation dates — its data fields give solar 2024 and storage 2025 while its prose says 2022 and 2023 — so the COD should not be treated as settled.",
+     "source": "https://www.engie-na.com/google-ppa-chillingham-solar/",
+     "status": "active",
+     "since": "2024-10",
+     "scale": "90 MW",
+     "via": "Chillingham Solar (350 MW, Bell County, Texas)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a data-centre operator it is a counterparty that sells three different things — project-tied PPAs (Meta, Google), retail supply and hourly 24/7 matching (Microsoft, AstraZeneca, Aker BioMarine), and co-location of compute at its own generation and storage sites (Prometheus Hyperscale, Cipher Mining) — and the third is the one that is new and unproven.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The counterweight is buyer concentration: BNEF records the global corporate PPA market falling 10% in 2025 to 55.9 GW with Amazon, Meta, Google and Microsoft alone at 49% of volume — ENGIE leads a shrinking market whose demand sits in four accounts.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-10"
+  },
+  {
+   "a": "engie-north-america",
+   "b": "hunt-energy-network",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Competing ERCOT distributed generation resource operator; Modo benchmarks ENGIE's Sweeny against Hunt's Faulkner.",
+     "context": "Modo Energy published a head-to-head of two 9.9 MW one-hour distributed generation resources in ERCOT — ENGIE's Sweeny and Hunt Energy Network's Faulkner — comparing revenues, operational strategy, cycling rates, capacity allocation and regulation and ECRS arbitrage. Hunt's dossier names Sweeny as the one third-party-named peer DGR. ENGIE's own project page lists Sweeny at 10 MWac in Brazoria County, Texas. The two compete in the same sub-10 MW distribution-connected niche as well as in the utility-scale market.",
+     "source": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-sweeny-engie-faulkner-hunt-energy-network-revenues-operational-strategy-cycling-rates-capacity-allocation-regulation-ecrs-arbitrage-comparison",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Owner of Sweeny, the one third-party-named peer distributed generation resource this dossier benchmarks Faulkner against.",
+     "context": "Modo Energy published a head-to-head of two 9.9 MW one-hour ERCOT distributed generation resources — ENGIE's Sweeny and Hunt Energy Network's Faulkner — comparing revenues, operational strategy, cycling rates, capacity allocation and regulation and ECRS arbitrage. ENGIE's own project page lists Sweeny at 10 MWac in Brazoria County, Texas. Beyond the sub-10 MW niche the two compete at very different scales: ENGIE is the largest ERCOT storage owner at about 2.8 GW.",
+     "source": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-sweeny-engie-faulkner-hunt-energy-network-revenues-operational-strategy-cycling-rates-capacity-allocation-regulation-ecrs-arbitrage-comparison",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "engie-north-america",
+   "b": "intersect-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Google-owned ERCOT storage developer and one of the eighteen new owners that took 52% of ERCOT's 2025 battery additions.",
+     "context": "Modo Energy records that 18 owners with no prior Texas battery assets brought 3.1 GW online in ERCOT during 2025 — 52% of that year's additions — naming Intersect among them alongside TotalEnergies, Eni, Equinor, Brookfield, Gridstor, esVolta and Tokyo Gas America. Intersect is the sharpest case because Alphabet acquired it in March 2026, putting one of ENGIE's own PPA counterparties on the other side of the market as an owner.",
+     "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "engie-north-america",
+   "b": "jupiter-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Fellow top-tier ERCOT storage owner; Modo groups both among the market's largest owners.",
+     "context": "Modo Energy's ERCOT annual buildout report ranks ENGIE first at about 2.8 GW and a 20% share, more than twice the next owner, and records Jupiter as the third owner past 1 GWh installed alongside Plus Power and ENGIE. Jupiter's dossier already carries that framing from the same source; the relationship is direct competition for the same energy and ancillary revenue stack, with ENGIE's fleet historically one-hour and Jupiter's mostly one-to-two-hour.",
+     "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The largest ERCOT storage owner, named in the same Modo ranking that places Jupiter third past 1 GWh installed.",
+     "context": "Modo Energy's ERCOT annual buildout report ranks ENGIE first at about 2.8 GW and a 20% share, more than twice the next owner, and reports Jupiter the third owner past 1 GWh installed alongside Plus Power and ENGIE. The two run parallel merchant fleets against the same energy and ancillary revenue stack; ENGIE's fleet has historically been one-hour, with five 50+ MW two-hour units commissioned in Q3 2025, against Jupiter's mostly one-to-two-hour durations.",
+     "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "engie-north-america",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Meta is ENGIE North America's largest corporate offtaker, taking 100% of output from four Texas solar projects.",
+     "context": "The relationship runs Sypert Branch Solar (260 MW, Milam County, about ten miles from Meta's Temple data centre, October 2024), Anson 2 Solar (200 MW, Jones County, January 2025) and Swenson Ranch Solar (600 MW, Stonewall County, October 2025 — a US$900m build operational in 2027 and ENGIE's largest single asset), with a fourth project unnamed in the accessible releases. Meta's own dossier records the ENGIE relationship only indirectly; ENGIE's releases are the disclosure channel.",
+     "source": "https://www.engie-na.com/engie-and-meta-expand-ppa-to-more-than-1-3-gw/",
+     "status": "active",
+     "since": "2024-10",
+     "scale": "more than 1.3 GW across four Texas projects",
+     "via": "Environmental Attributes Purchase Agreements on ENGIE-owned solar"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a data-centre operator it is a counterparty that sells three different things — project-tied PPAs (Meta, Google), retail supply and hourly 24/7 matching (Microsoft, AstraZeneca, Aker BioMarine), and co-location of compute at its own generation and storage sites (Prometheus Hyperscale, Cipher Mining) — and the third is the one that is new and unproven.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The counterweight is buyer concentration: BNEF records the global corporate PPA market falling 10% in 2025 to 55.9 GW with Amazon, Meta, Google and Microsoft alone at 49% of volume — ENGIE leads a shrinking market whose demand sits in four accounts.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale renewables development and ownership",
+     "date": "",
+     "text": "The largest single asset is Swenson Ranch Solar, 600 MW in Stonewall County, Texas, a US$900m build for Meta due in 2027.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-10"
+  },
+  {
+   "a": "engie-north-america",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft buys hourly-matched supply for its ERCOT data-centre load from an ENGIE Texas portfolio.",
+     "context": "ENGIE describes the arrangement as matching Microsoft's Texas data-centre consumption hour by hour against a portfolio of ENGIE wind, solar and battery assets, in support of Microsoft's 100/100/0 goal for 2030. No MW figure is published by either party. This is the earliest of ENGIE's hourly-matching references and the design the later AstraZeneca and Aker BioMarine agreements productised.",
+     "source": "https://www.engie-na.com/engie-to-supply-microsoft-data-centers-in-texas-with-24x7-renewable-energy-matching-program/",
+     "status": "active",
+     "since": "2023-09",
+     "via": "24x7 Renewable Energy Matching Program across an ENGIE Texas wind, solar and battery portfolio"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a data-centre operator it is a counterparty that sells three different things — project-tied PPAs (Meta, Google), retail supply and hourly 24/7 matching (Microsoft, AstraZeneca, Aker BioMarine), and co-location of compute at its own generation and storage sites (Prometheus Hyperscale, Cipher Mining) — and the third is the one that is new and unproven.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The counterweight is buyer concentration: BNEF records the global corporate PPA market falling 10% in 2025 to 55.9 GW with Amazon, Meta, Google and Microsoft alone at 49% of volume — ENGIE leads a shrinking market whose demand sits in four accounts.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2023-09"
+  },
+  {
+   "a": "engie-north-america",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The only US battery owner larger than ENGIE, and the developer above it in every independent ranking.",
+     "context": "S&P Global Commodity Insights, working from government filings, ranks NextEra Energy Resources first in US operating battery storage at 5.779 GW at 30 June 2026 against ENGIE North America second at 3.662 GW — a gap that widened over the preceding year, when the figures were 4.141 GW and 3.251 GW. NextEra is also technology-diverse in a way ENGIE is not in the United States, with nuclear and gas positions alongside renewables; ENGIE's differentiated play is co-location of compute at its own generation.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "S&P Global Commodity Insights, working from government filings, independently measures 3.662 GW of operating US battery storage at 30 June 2026 — second only to NextEra Energy Resources — and Modo Energy measures ~2.8 GW in ERCOT alone, a 20% share and more than twice the next owner.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "engie-north-america",
+   "b": "plus-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Fellow ERCOT gigawatt-hour-class storage owner, and the seller of two ENGIE batteries: Plus Power sold Bat Cave and North Fork to Broad Reach in 2020, and ENGIE acquired Broad Reach in 2023.",
+     "context": "Plus Power's dossier records that it developed and sold Bat Cave and North Fork to Broad Reach Power in 2020. ENGIE's own project pages now list both — Bat Cave, Mason County, 100 MWac, COD 2021, and North Fork, Williamson County, 100 MWac, COD 2021 — because ENGIE acquired Broad Reach in August 2023 for more than US$1 billion of equity value. The two are now direct competitors in ERCOT energy and ancillary markets, with Plus Power's 700 MW merchant fleet against ENGIE's ~2.8 GW.",
+     "source": "https://www.energy-storage.news/engie-acquires-broad-reach-power-bess-business-for-over-us1-billion-equity-value/",
+     "status": "active",
+     "since": "2020"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The largest ERCOT storage owner, and the current owner of Bat Cave and North Fork — the two projects Plus Power sold to Broad Reach in 2020.",
+     "context": "Plus Power developed Bat Cave and North Fork and sold them to Broad Reach Power in 2020. ENGIE acquired Broad Reach in August 2023 for more than US$1 billion of equity value, and ENGIE's own project pages now list both — Bat Cave, Mason County, 100 MWac, COD 2021, and North Fork, Williamson County, 100 MWac, COD 2021. The two are now direct ERCOT competitors at very different scale: Modo Energy measures ENGIE at about 2.8 GW and a 20% share entering 2026, against Plus Power's seasoned 700 MW merchant fleet.",
+     "source": "https://www.energy-storage.news/engie-acquires-broad-reach-power-bess-business-for-over-us1-billion-equity-value/",
+     "status": "active",
+     "since": "2020"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "ENGIE's own 2024 milestone release credits the acceleration to the August 2023 Broad Reach Power acquisition, and two of its published projects (Bat Cave, North Fork) trace through Broad Reach to Plus Power.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2020"
+  },
+  {
+   "a": "engie-north-america",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "QTS buys 48 MWac for its Irving, Texas data centres under an ENGIE-intermediated solar PPA, with retail supply and energy management bundled.",
+     "context": "ENGIE holds a long-term PPA on ABEI Energy's ~61 MWac Lubio Solar project in Kaufman County, Texas — ABEI's first US transaction with ENGIE — and passes 48 MWac of it to QTS, about 150 GWh a year, avoiding a stated 100,778 tonnes of CO2 annually. The electrons are ABEI's, not ENGIE's: this is ENGIE Resources acting as a retail intermediary rather than ENGIE selling its own generation, and it should not be aggregated into ENGIE-owned capacity contracted to data centres. QTS's own dossier records the same agreement and an earlier 20 MW arrangement across three Texas wind projects.",
+     "source": "https://www.engie-na.com/engie-qts-solar-power-purchase-agreement-texas/",
+     "status": "active",
+     "since": "2026-08",
+     "scale": "48 MWac (~150 GWh/year)",
+     "via": "ENGIE Resources retail supply plus a back-to-back PPA on ABEI Energy's Lubio Solar"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "ENGIE supplies QTS's Irving, Texas data centres with 48 MWac of solar plus bundled retail supply and energy management.",
+     "context": "ENGIE holds a long-term PPA on ABEI Energy's ~61 MWac Lubio Solar project in Kaufman County — ABEI's first US transaction with ENGIE — and passes 48 MWac to QTS, about 150 GWh a year, avoiding a stated 100,778 tonnes of CO2 annually. The generation is ABEI's; ENGIE Resources is acting as a retail intermediary rather than selling its own output, which is why this sits alongside rather than inside QTS's utility-first procurement pattern. QTS also holds an earlier 20 MW arrangement across three ENGIE Texas wind projects.",
+     "source": "https://q.com/news/engie-and-qts-strengthen-renewable-energy-partnership-in-texas-with-abei-energys-lubio-solar-project/",
+     "status": "active",
+     "since": "2026-08",
+     "scale": "48 MWac (~150 GWh/year)",
+     "via": "ENGIE Resources retail supply plus a back-to-back PPA on ABEI Energy's Lubio Solar"
+    }
+   },
+   "evid": [],
+   "last": "2026-08"
+  },
+  {
+   "a": "engie-north-america",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Fellow European-utility-owned US renewables platform, competing for the same corporate PPAs and the same Texas interconnection positions.",
+     "context": "Both are US businesses of listed European parents whose American capital competes internally against European projects, and both signed multi-project Meta solar PPAs in Texas during the same period. They diverge on storage: S&P Global's Q2 2026 US owner table lists ENGIE second and does not list RWE at all, and RWE's own storage disclosure is a group figure of 1.7 GW pro rata rather than a US number. They also diverge on offshore — both exited US offshore leases for federal payments in 2026, ENGIE through Ocean Winds and RWE through RWE U.S. Offshore.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Fellow US business of a listed European parent, competing for the same corporate PPAs and, in Texas, the same storage revenue.",
+     "context": "Both are American platforms whose capital competes internally against European projects, both signed multi-project Meta solar PPAs in Texas over the same window, and both exited US offshore leases for federal payments in 2026 — ENGIE through the Ocean Winds joint venture in April, RWE through RWE U.S. Offshore in August. They diverge on storage: S&P Global's Q2 2026 US owner table lists ENGIE second at 3.662 GW and does not list RWE.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "engie-north-america",
+   "b": "vistra",
+   "evid": [
+    {
+     "where": "Capabilities · Data-centre power and cooling, and compute co-location",
+     "date": "",
+     "text": "Third parties writing about the AI power race name NextEra, Constellation, Vistra and Dominion and do not name ENGIE; no independent source ranks ENGIE among leading AI-power suppliers.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "entergy",
    "b": "fluidstack",
    "curated": {
@@ -19278,6 +20095,20 @@
   },
   {
    "a": "flexgen",
+   "b": "rwe-clean-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicators to watch: (1) whether California files the OCSLA suit inside its sixty-day window from 1 September 2026, and whether New York or Massachusetts joins — the settlement money is not final until the litigation is; (2) the close of the Goldman Sachs Alternatives distributed-generation sale in Q4 2026 and whether RWE restates its ~13 GW headline afterwards; (3) the first named FlexGen site, turbine order or offtaker, which would move the gas pivot from a pipeline to a project; (4) Planet Rock's phase-one financing and any iron-air supplier announcement, the only long-duration technology decision in RWE's US book; (5) Siemens Gamesa's root-cause finding on the Plymouth blade failure and whether it reaches other turbines in the Con Edison-acquired fleet; (6) whether RWE ever appears in an independent US storage owner ranking, which would settle the gap between its own claim and the published tables.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flexgen",
    "b": "sungrow",
    "curated": {
     "a": {
@@ -21161,6 +21992,46 @@
   },
   {
    "a": "ge-vernova",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "GE Vernova supplies the turbines for RWE's two largest West Texas wind builds under an expanded partnership.",
+     "context": "RWE's March 2025 release states an expanded GE Vernova partnership covering 109 domestically produced turbines of 2.82 MW for Forest Creek Repower (127 MW, of which 45 turbines) and Honey Mesquite (181 MW), against US$9bn RWE has invested in Texas since 2007. RWE frames the domestic manufacture as part of its tariff mitigation — buying components early and sourcing increasingly from US suppliers. GE turbines also run RWE's legacy Pyron and Panther Creek fleets.",
+     "source": "https://americas.rwe.com/press/2025-03-18-rwe-expands-partnership-with-ge-vernova/",
+     "status": "active",
+     "since": "2025-03",
+     "scale": "109 turbines of 2.82 MW, 308 MW combined",
+     "via": "Onshore wind turbine supply for Forest Creek Repower and Honey Mesquite"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For an equipment or EPC vendor it is a repeat-framework owner: RWE publicly credits Blattner's delivery credibility, ran McCarthy on Bright Arrow and Lafitte, and expanded GE Vernova to 109 turbines for two Texas projects.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-scale onshore wind, including repowering",
+     "date": "",
+     "text": "RWE describes Forest Creek's as decommissioning every original tower, turbine and component and building new foundations for 45 new GE Vernova turbines, extending operating life by a further 30 years, with blades, rotors and nacelles repurposed or recycled through Wanzek Construction, a MasTec Renewables company.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-18",
+     "text": "RWE expands its GE Vernova partnership to 109 turbines of 2.82 MW for Forest Creek Repower (127 MW) and Honey Mesquite (181 MW) in West Texas, on US$9bn invested in the state since 2007 — Domestic content bought early — RWE's stated tariff mitigation was to purchase components ahead of the rules changing.",
+     "src": "https://americas.rwe.com/press/2025-03-18-rwe-expands-partnership-with-ge-vernova/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-03-18"
+  },
+  {
+   "a": "ge-vernova",
    "b": "sargent-lundy",
    "curated": {
     "b": {
@@ -22159,6 +23030,39 @@
     }
    ],
    "last": "2025-08-12"
+  },
+  {
+   "a": "google",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Google takes the total output of Crooked Creek Solar, RWE's first Oklahoma solar project, under a fifteen-year PPA with COD in 2028.",
+     "context": "Announced 3 August 2026 and quoted by RWE with Will Conkling, Google's Director of Energy and Power. It is the fourth hyperscaler in RWE's book after Meta, Amazon and Microsoft, and the contract that took RWE's stated technology-company PPA total past 2 GW. The project is not yet built; the relationship is contractual rather than delivered.",
+     "source": "https://www.rwe.com/en/press/rwe-americas/2026-08-03-rwe-and-google-sign-ppa-for-oklahoma-solar-project/",
+     "status": "active",
+     "since": "2026-08",
+     "scale": "155 MWac, fifteen years",
+     "via": "Crooked Creek Solar, McCurtain County, Oklahoma"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a corporate offtaker it is a reliable multi-project counterparty — 872 MW to Meta across four solar farms, 1.1 GW to Amazon across seven contracts, 446 MW to Microsoft on two 15-year wind PPAs, 155 MW to Google in Oklahoma.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-03",
+     "text": "RWE signs a 15-year PPA with Google for the total output of Crooked Creek Solar, 155 MWac in McCurtain County — RWE's first solar project in Oklahoma, with COD in 2028 — The fourth hyperscaler in the book, and the first Google contract; the buyer set is now Amazon, Meta, Microsoft and Google.",
+     "src": "https://www.rwe.com/en/press/rwe-americas/2026-08-03-rwe-and-google-sign-ppa-for-oklahoma-solar-project/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-03"
   },
   {
    "a": "google",
@@ -25838,6 +26742,29 @@
   },
   {
    "a": "invenergy",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The largest private US developer, and a fellow recipient of a federal offshore-wind buyout.",
+     "context": "Invenergy reports roughly 31,000 MW including construction and awarded projects with about 13,800 MW installed, against RWE's approximately 13 GW operating. Both took Department of the Interior payments to exit US offshore wind leases in 2026, in a sequence that also included TotalEnergies, Duke, Ocean Winds and BlackRock's GIP. Both are now selling firm and flexible capacity to data-centre load rather than renewables alone.",
+     "source": "https://maritime-executive.com/article/trump-administration-to-pay-rwe-1-22b-in-fifth-deal-to-end-offshore-wind",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · FlexGen — flexible gas generation and energy campuses",
+     "date": "",
+     "text": "NextEra and Invenergy long ago normalised gas inside renewables portfolios; for RWE this is new.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "invenergy",
    "b": "siemens-energy",
    "curated": {
     "a": {
@@ -27872,6 +28799,31 @@
   },
   {
    "a": "mastec",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "MasTec's Wanzek Construction handles the decommissioning and component recycling on RWE's Texas repowering programme.",
+     "context": "RWE states that on Forest Creek Repower every original wind tower, turbine and component was decommissioned and new tower foundations built for 45 new GE Vernova turbines, with blades, rotors and nacelles repurposed or recycled through Wanzek Construction, a MasTec Renewables company. Repowering is a distinct EPC scope from greenfield construction and RWE has run it through a different contractor than its solar frameworks.",
+     "source": "https://americas.rwe.com/press/2025-03-18-rwe-expands-partnership-with-ge-vernova/",
+     "status": "active",
+     "since": "2025",
+     "via": "Wanzek Construction, a MasTec Renewables company — turbine decommissioning and repowering works"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Utility-scale onshore wind, including repowering",
+     "date": "",
+     "text": "RWE describes Forest Creek's as decommissioning every original tower, turbine and component and building new foundations for 45 new GE Vernova turbines, extending operating life by a further 30 years, with blades, rotors and nacelles repurposed or recycled through Wanzek Construction, a MasTec Renewables company.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "mastec",
    "b": "sungrow",
    "curated": {
     "a": {
@@ -28098,6 +29050,54 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "mccarthy",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "RWE is the owner of Bright Arrow in Hopkins County, Texas, the project where McCarthy pioneered its underground prefabrication strategy, and of Lafitte Solar in Louisiana.",
+     "context": "McCarthy's own project record for Bright Arrow, built for RWE Renewables Americas, covers 300 MWac / 390 MWdc of solar plus a 100 MWac / 200 MWh battery on more than 3,000 acres, 876,000 panels and 85 central inverters, and identifies it as the project where McCarthy pioneered a prefabrication strategy for all underground installations that it has since expanded portfolio-wide. RWE separately names McCarthy as the EPC on Lafitte Solar, the 100 MW project in Ouachita Parish that was RWE's first in Louisiana, completed in November 2025 and enabled by a Meta PPA. This dossier's own summary of its developer set already noted that no relationship was found with RWE 'beyond Bright Arrow'; Lafitte is the second.",
+     "source": "https://www.mccarthy.com/projects/bright-arrow-solar-storage",
+     "status": "active",
+     "scale": "Bright Arrow, 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
+     "via": "EPC construction on solar-plus-storage and utility-scale solar"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "McCarthy built RWE's first Louisiana project and, earlier, the Bright Arrow solar-plus-storage project in Hopkins County, Texas.",
+     "context": "RWE's November 2025 release names McCarthy as the EPC on Lafitte Solar, the 100 MW project in Ouachita Parish that was RWE's first in Louisiana and was enabled by a Meta PPA. McCarthy's own dossier records Bright Arrow in Hopkins County, Texas for RWE Renewables Americas — 300 MWac / 390 MWdc plus a 100 MWac / 200 MWh battery on more than 3,000 acres, 876,000 panels and 85 central inverters — as the project where McCarthy pioneered a prefabrication strategy for all underground installations that it has since expanded portfolio-wide.",
+     "source": "https://www.rwe.com/en/press/rwe-clean-energy/2025-11-13-rwes-first-project-in-louisiana-completes-construction/",
+     "status": "active",
+     "scale": "Lafitte Solar 100 MW; Bright Arrow 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
+     "via": "EPC construction on utility-scale solar and solar-plus-storage"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For an equipment or EPC vendor it is a repeat-framework owner: RWE publicly credits Blattner's delivery credibility, ran McCarthy on Bright Arrow and Lafitte, and expanded GE Vernova to 109 turbines for two Texas projects.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-scale solar and co-located solar plus storage",
+     "date": "",
+     "text": "The 2025 cohort added Emily Solar (273.6 MW, Illinois, Blattner-built, completing RWE's first gigawatt in that state), Casey Fork Solar (150 MW, Illinois), Stoneridge (200 MW, Texas), Lafitte Solar (100 MW, Louisiana — RWE's first project in the state, built by McCarthy), Ashwood Solar (86 MW, Kentucky) and Arlington Valley Solar (125 MW, Arizona).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-13",
+     "text": "Lafitte Solar, 100 MW, completes construction as RWE's first project in Louisiana, built by McCarthy and enabled by a Meta PPA — A new state entered on the back of a hyperscaler contract — the offtake comes first, the geography follows.",
+     "src": "https://www.rwe.com/en/press/rwe-clean-energy/2025-11-13-rwes-first-project-in-louisiana-completes-construction/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-13"
   },
   {
    "a": "mccarthy",
@@ -28922,6 +29922,56 @@
     }
    ],
    "last": "2024-12"
+  },
+  {
+   "a": "meta",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "RWE Clean Energy is Meta's four-project solar counterparty across Illinois, Louisiana and Texas.",
+     "context": "The named projects are Emily Solar (274 MW, Illinois) and Lafitte Solar (100 MW, Louisiana) announced together in August 2024, Waterloo Solar (200 MWac, Bastrop County, Texas) in March 2025 and Rabbit's Foot Solar (298 MWac, Bowie County, Texas) in June 2026 with COD at end-2027. Three totals circulate for the same relationship and no source reconciles them: 374 MW for the first pair, 574 MW in one account that substitutes Waterloo for one of them, and 872 MW for 'agreements totalling 872 MW during the last two years'. RWE renamed the business RWE Americas, LLC in March 2026.",
+     "source": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/",
+     "status": "active",
+     "since": "2024-08",
+     "scale": "872 MW across four solar PPAs",
+     "via": "Long-term PPAs on RWE-owned solar"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Meta is RWE Clean Energy's largest corporate offtaker, across four US solar projects signed over two years.",
+     "context": "The named projects are Emily Solar (274 MW, Illinois) and Lafitte Solar (100 MW, Louisiana) announced together in August 2024, Waterloo Solar (200 MWac, Bastrop County, Texas) in March 2025 and Rabbit's Foot Solar (298 MWac, Bowie County, Texas) in June 2026 with COD at end-2027. Three different totals circulate for the same relationship and no source reconciles them: 374 MW for the first two projects, 574 MW in one Solar Power World account that substitutes Waterloo for one of them, and 872 MW for 'agreements totalling 872 MW during the last two years'. Meta's dossier does not record RWE among its named PPA counterparties.",
+     "source": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/",
+     "status": "active",
+     "since": "2024-08",
+     "scale": "872 MW across four solar PPAs",
+     "via": "Long-term PPAs on RWE-owned solar"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a corporate offtaker it is a reliable multi-project counterparty — 872 MW to Meta across four solar farms, 1.1 GW to Amazon across seven contracts, 446 MW to Microsoft on two 15-year wind PPAs, 155 MW to Google in Oklahoma.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-03",
+     "text": "RWE signs a 15-year PPA with Google for the total output of Crooked Creek Solar, 155 MWac in McCurtain County — RWE's first solar project in Oklahoma, with COD in 2028 — The fourth hyperscaler in the book, and the first Google contract; the buyer set is now Amazon, Meta, Microsoft and Google.",
+     "src": "https://www.rwe.com/en/press/rwe-americas/2026-08-03-rwe-and-google-sign-ppa-for-oklahoma-solar-project/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-13",
+     "text": "Lafitte Solar, 100 MW, completes construction as RWE's first project in Louisiana, built by McCarthy and enabled by a Meta PPA — A new state entered on the back of a hyperscaler contract — the offtake comes first, the geography follows.",
+     "src": "https://www.rwe.com/en/press/rwe-clean-energy/2025-11-13-rwes-first-project-in-louisiana-completes-construction/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-03"
   },
   {
    "a": "meta",
@@ -30303,6 +31353,38 @@
     }
    ],
    "last": "2025-08-12"
+  },
+  {
+   "a": "microsoft",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Microsoft contracted 446 MW combined from two RWE Texas wind farms on fifteen-year terms.",
+     "context": "RWE announced the two PPAs in May 2024 covering Peyton Creek II and Lane City, both in Texas and both fifteen years. Lane City (203 MW) and Peyton Creek II (243 MW) both appear in RWE's 2025 commissioning cohort, so the contracted capacity is now operating. Microsoft's dossier does not record RWE among its named counterparties.",
+     "source": "https://www.rwe.com/en/press/rwe-americas/2026-03-05-rwe-commissions-2-gw-of-new-energy-projects-in-the-us/",
+     "status": "active",
+     "scale": "446 MW across two 15-year wind PPAs",
+     "via": "Peyton Creek II and Lane City onshore wind, Texas"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For a corporate offtaker it is a reliable multi-project counterparty — 872 MW to Meta across four solar farms, 1.1 GW to Amazon across seven contracts, 446 MW to Microsoft on two 15-year wind PPAs, 155 MW to Google in Oklahoma.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-03",
+     "text": "RWE signs a 15-year PPA with Google for the total output of Crooked Creek Solar, 155 MWac in McCurtain County — RWE's first solar project in Oklahoma, with COD in 2028 — The fourth hyperscaler in the book, and the first Google contract; the buyer set is now Amazon, Meta, Microsoft and Google.",
+     "src": "https://www.rwe.com/en/press/rwe-americas/2026-08-03-rwe-and-google-sign-ppa-for-oklahoma-solar-project/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-03"
   },
   {
    "a": "microsoft",
@@ -31700,6 +32782,21 @@
     }
    ],
    "last": "2026-08"
+  },
+  {
+   "a": "nextera-energy-resources",
+   "b": "rwe-clean-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The largest US renewables owner and the largest US battery owner, ahead of RWE on both.",
+     "context": "S&P Global Commodity Insights ranks NextEra Energy Resources first among US battery owners at 5.779 GW at 30 June 2026; RWE does not appear in that top five at all, and its own storage disclosure is a group figure of 1.7 GW pro rata rather than a US number. The gap matters for RWE's own boilerplate, which claims it is 'the third largest owner and operator of onshore wind, solar and battery storage in the U.S.' — a claim no independent ranking corroborates.",
+     "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "nextera-energy-resources",
@@ -35636,6 +36733,23 @@
     }
    ],
    "last": "2025-08-12"
+  },
+  {
+   "a": "rwe-clean-energy",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Siemens Gamesa, part of Siemens Energy, supplied and maintains RWE's oldest US wind assets and is running the root-cause analysis on the November 2025 blade failure.",
+     "context": "RWE's first US wind project, Forest Creek in Texas (2006), used 54 Siemens Mark II 2.3 MW turbines, and Champion used 55 of the same class; Sand Bluff was RWE's first Gamesa project. The relationship is now also a liability question: on 7 November 2025 a 75 to 100 foot blade detached from a turbine at Future Generation Wind in Plymouth, Massachusetts, and RWE states that Siemens Gamesa, which built and maintains the turbine, is conducting an exhaustive root-cause analysis with RWE. The Forest Creek turbines have since been replaced with GE Vernova machines under the repowering programme.",
+     "source": "https://www.nbcboston.com/news/local/mass-wind-turbine-blade-damage/3841685/",
+     "status": "active",
+     "since": "2006",
+     "via": "Onshore wind turbines and long-term maintenance (Siemens Gamesa)"
+    }
+   },
+   "evid": [],
+   "last": "2006"
   },
   {
    "a": "samsung-ct",

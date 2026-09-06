@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
   "companies": [
     {
@@ -33,6 +33,21 @@
         "Consensus and guidance: whether the operating EPS guidance range moves, and the growth rate reaffirmed against the capital plan. Note Investing.com's column-transposition problem when reading its quarterly history",
         "Cost-allocation challenges: the Ohio Consumers' Counsel and Buckeye Institute arguments on the tariff, IEEFA's West Virginia figure, and the Citizens Action Coalition's I&M cost-shift claim. An adverse appellate ruling on the Ohio tariff would reach the largest single block of signed load outside Texas",
         "Chesterton check on next refresh: no third-party source names a battery supplier, an SMR vendor beyond GE Hitachi via TVA, or an EPC on an AEP storage project. Absence of a name is not evidence of absence of a contract"
+      ]
+    },
+    {
+      "slug": "aes-clean-energy",
+      "cadence": "quarterly",
+      "source": "Unit-level, not separately reported. AES Clean Energy is the US renewables business of The AES Corporation (NYSE: AES) and is a sub-unit of the Renewables strategic business unit, not a reportable segment — so it has no earnings clock of its own and carries cadence 'quarterly' per the unit-level rule in .claude/rules/profiler-app.md ('Scheduled Refreshes'). Its numbers appear inside the parent's SEC filings: 10-K (FY2025 filed 2026-03-02) and 10-Q (Q2 2026 filed 2026-08-04), EDGAR CIK 0000874761. IMPORTANT: the parent has issued no earnings release, Item 2.02 8-K or earnings call since 2025-11-04 and no 2026 guidance exists — the Q4/FY2025 call was cancelled after the merger announcement — so a refresh must read the filings themselves, not a press release. The parent is being taken private by Global Infrastructure Partners and EQT (signed 2026-03-01, stockholders approved 2026-06-26, HSR expired 2026-06-22, CFIUS cleared 2026-08-27); closing is expected late 2026 or early 2027 and will end the filing stream, at which point this row should be re-assessed. aescleanenergy.com returned HTTP 520 throughout the v1 research pass — retry it. aes.com is readable but its newsroom listing is JS-gated to three items; use the sitemap. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Merger completion: FERC, the Public Utilities Commission of Ohio and the New York Public Service Commission are the outstanding approvals against a 1 June 2027 outside date (extendable twice by three months) and a USD 320,651,487 company termination fee. Also watch the reported advocacy petitions asking FERC to condition or block the deal, and whether they acquire a docket number — none could be resolved at v1",
+        "Q3 2026 (scheduled 2026-11-03) and the FY2026 10-K: Renewables SBU revenue and segment Adjusted EBITDA (Q2 2026 was USD 939m and USD 369m, up 54%), how much of the improvement is US development services (USD 62m in Q2 alone), and whether AES resumes presenting segment Adjusted EBITDA with Tax Attributes — it dropped the metric from its 2026 10-Qs",
+        "AES Clean Energy portfolio update at FY2026: operating MW against 10,961, under construction against 3,031 MW (1,542 wind / 939 solar / 550 storage), backlog against 7.6 GW and pipeline against 46 GW — the pipeline fell from 53 GW after the February 2025 restructuring and the direction matters",
+        "Bellefield Phase 2 commercial operation, stated for the second half of 2026; and any AES disclosure naming the Texas private-use-network customer or a second development framework agreement (the first carries a ~USD 481m transaction price with USD 245m of contract liability at year-end)",
+        "Fluence: whether AES sells below 22%, whether equity-method treatment survives, and any disclosure of Fluence-specific procurement spend — AES has never published one. Also the securities class action naming the AES defendants (purchasers 28 October 2021 to 10 February 2025)",
+        "Maximo fleet size against the five units at 31 December 2025, and whether any third-party EPC is named as a customer — the service-to-competitors model is asserted but unproven",
+        "Chesterton check: the parent is being taken private and has stopped issuing guidance and earnings calls; AES Clean Energy is NOT a reportable segment; the Escondido 2024 battery fire was SDG&E-owned (AES built it in 2017) and the McMicken 2019 explosion was APS-owned with Fluence as integrator — neither is an AES-owned incident; the Utility Dive 'AES layoffs' article that dominates search is from 2018, not the 2025 restructuring; there is no AES product called 'Atlas'. Do not re-import any of these"
       ]
     },
     {
@@ -353,6 +368,21 @@
         "Arizona: ACC rules under HB 2756 for extra-high-load customers and the 2026–2029 sales-tax exemption pause (HB 4168) — whether Mesa buildings hold grandfathered certifications; SRP's Large Customer Integration Process",
         "Ratepayer posture: any campus abandoned on power economics (Brewer: 'will abandon projects if power economics become financially unworkable'); Virginia's electricity consumption tax (USD 0.011/kWh, July 2026–June 2028)",
         "Chesterton check: '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's own January 2026 wording (superseded by the site's 2.27+ GW / $7.4bn) — the verifiable operating base is two buildings (PH01 26 MW, SV01 36 MW); EdgeCore is Partners Group-owned, not Brookfield-owned (its only Brookfield link is buying Mesa land from a Brookfield Properties affiliate) and has no Illinois site; Holder's Mesa contract value is undisclosed (the '$1.9B' is EdgeCore's loan). Do not re-import any of these"
+      ]
+    },
+    {
+      "slug": "engie-north-america",
+      "cadence": "quarterly",
+      "source": "Unit-level, not separately reported. ENGIE North America is the wholly owned US and Canadian business of ENGIE SA (Euronext Paris: ENGI) and carries cadence 'quarterly' per the unit-level rule in .claude/rules/profiler-app.md ('Scheduled Refreshes'). ENGIE SA's primary segmentation is by Global Business Unit, not geography, so there is NO North American EBIT, EBITDA or net income anywhere — the only regional disclosure is the IFRS 8 geographic note (revenue and industrial capital employed), in the annual Management Report and Consolidated Financial Statements (Note 6.4) and the First-Half Financial Report (Note 4.3). The parent reports twice a year: FY results in late February (FY2025 on 2026-02-25) and H1 results at end-July (H1 2026 on 2026-07-31), with the geographic notes appearing in the accompanying PDFs rather than the press releases. First-party channels: engie-na.com (news archive at /category/news/ across ~7 pages, and project pages via /project-sitemap.xml — the /news/ page is JS-paginated and shows only 6 items), engieresources.com, en.newsroom.engie.com, engie.com. The FY Databook PDF returns 403. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "A permanent CEO for ENGIE North America. David Carroll resigned in August 2026; Anne-Laure Chassanite is interim while also running ENGIE Resources, and Emmanuel Sbravati is interim Chief Renewables Officer while holding his commercial role. Whether the successor comes from the renewables or the retail side is the signal",
+        "ENGIE SA FY2026 results (expected late February 2027): the North America line in the geographic note against EUR 5,807m of FY2025 revenue and EUR 11,051m of industrial capital employed — H1 2026 revenue fell 3.1% year on year — and the US share of group renewable and BESS additions against 2.4 GW of 6.2 GW in 2025",
+        "Data-centre conversion: the group's advanced-stage pipeline moved 0.8 GW to 4 GW in six months against a 7 GW total and 7 GW of technology-sector PPAs. Watch for the first disclosed megawatts at a Prometheus Hyperscale site or a definitive Cipher Mining agreement (preliminary, up to 300 MW) — both are announced with no MW",
+        "Any further minority sell-down after Ares (49% of 905 MW, March 2025; +730 MW, January 2026) and CBRE Investment Management (49.5% of 2.4 GW, May 2025). A fourth would confirm capital recycling as policy; the CBRE final tranche of about USD 70m was scheduled for Q1 2026",
+        "Duration mix: whether more two-hour batteries follow the five 50+ MW units Modo recorded in Q3 2025, and whether ENGIE publishes any MWh figure beyond Sun Valley's 100 MW / 100 MWh. Also any named cell, module or integrator supplier — there is none in any first-party source",
+        "Ocean Winds and SouthCoast Wind (2.4 GW, not cancelled, COD target 2030) after the April 2026 surrender of the Bluepoint and Golden State leases for about USD 885m conditioned on equal investment in US LNG, oil and energy infrastructure; and the Senate investigation into the comparable TotalEnergies buyout",
+        "Chesterton check: ENGIE Impact was DIVESTED to Arcadia (closed 2026-04-29) and is no longer an ENGIE business; the Distributed Solar & Storage business is being sold with a ~EUR 250m impairment even though the Renewables page still markets '500+ distributed solar projects'; the QTS deal is resale of ABEI Energy's generation, not ENGIE's own; the only resolvable ENGIE-Amazon named asset is Moray West in the UK, not North America; ENGIE Energy Access is African and irrelevant; a '$9m 2017 class action settlement' circulating under a similar name belongs to Genie Energy, not ENGIE. Do not re-import any of these"
       ]
     },
     {
@@ -1100,6 +1130,22 @@
       "watch": [
         "Data-center electrical scope awards",
         "Employee-ownership and revenue disclosures"
+      ]
+    },
+    {
+      "slug": "rwe-clean-energy",
+      "cadence": "quarterly",
+      "source": "Unit-level, not separately reported. The US business of RWE AG (Frankfurt: RWE), renamed RWE Clean Energy, LLC to RWE Americas, LLC effective March 2026 (confirmed by the leadership CVs at americas.rwe.com; the legal entity persists in the parent's shareholdings list). It carries cadence 'quarterly' per the unit-level rule in .claude/rules/profiler-app.md ('Scheduled Refreshes'). RWE runs 'RWE Clean Energy' as an OPERATING segment and merges it into the REPORTABLE segment 'Onshore Wind/Solar' with Europe and Australia, so there is no US profit and loss; the one separate US disclosure is the RWE Clean Energy cash-generating unit in the Annual Report's goodwill note. Parent reporting: FY results in March (FY2025 on 2026-03-12), Q1 statement in May, H1 in August (2026-08-13), Q3 in November. First-party: americas.rwe.com (press list is JS-loaded — use the sitemap) and rwe.com; us.rwe.com and rwecleanenergy.com DO NOT RESOLVE. Some RWE PDFs use subset-encoded fonts and need a full renderer; the Factbook was not opened at v1 and is the best remaining target for a capacity-under-construction split by region. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "California's OCSLA suit against the Department of the Interior and RWE over the Humboldt lease cancellation — notice of intent served 2026-09-01 with a sixty-day window, so a filing is due around 31 October 2026. Watch whether New York or Massachusetts joins, and any effect on the USD 1.22bn settlement",
+        "Close of the US Distributed Clean Energy sale to Goldman Sachs Alternatives (~348 MWdc / 308 MWac across 16 states plus a 1.2 GW pipeline), expected Q4 2026 — and whether RWE restates its ~13 GW headline afterwards. Trade coverage notes RWE has not said whether the headline already excludes these assets",
+        "First named FlexGen site, turbine order or offtaker against the fifteen-project gas peaker pipeline (MISO, WECC, PJM, ERCOT), the USD 300m turbine reservation and the stated 3+ GW of gas by 2035; and any disclosure of which interconnection positions are being converted",
+        "FY2026 results (expected March 2027): Onshore Wind/Solar adjusted EBITDA against EUR 1,740m for FY2025 and EUR 1,016m for H1 2026; the US installed-capacity table against 11,177 MW (5,432 wind / 5,745 solar, excluding storage); and the RWE Clean Energy CGU goodwill against EUR 1,351m at a 6.25% after-tax discount rate",
+        "Planet Rock (Pueblo County, Colorado; 1,500 MW four-hour lithium-ion plus 50 MW iron-air, first 550 MW in 2029): financing, any iron-air supplier announcement, and phase-one FID. It is the only long-duration technology decision in RWE's US book",
+        "Siemens Gamesa's root-cause finding on the 7 November 2025 blade failure at Future Generation Wind, Plymouth, Massachusetts, and whether it reaches other turbines in the Con Edison-acquired fleet; plus the MassDEP and Plymouth reviews",
+        "Whether RWE ever appears in an independent US storage owner ranking — it is absent from the S&P Global and Tamarindo top fives — which would settle the gap with its own 'third largest owner and operator of onshore wind, solar and battery storage' claim",
+        "Chesterton check: the entity is now RWE Americas, LLC; there is NO Amazon equity stake in RWE (Qatar Holding 9.3%, BlackRock 5.9% at 12 March 2026) — the Amazon relationship is seven US PPAs totalling 1.1 GW plus an AWS cloud framework plus a UK data-centre site sale; the '931 MW of US storage under construction' figure is RWE's own from 2 October 2024 and is stale because all three underlying Texas projects were commissioned by end-2025; the 2025 US layoffs were 73 OFFSHORE roles in Massachusetts, not the onshore Clean Energy business; RWE's own '#3'/'#4' US rankings are boilerplate no independent source corroborates. Do not re-import any of these"
       ]
     },
     {

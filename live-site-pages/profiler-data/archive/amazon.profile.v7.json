@@ -130,7 +130,7 @@
     "(Low confidence) Reports of direct external Trainium sales and of adoption beyond Anthropic (OpenAI/Apple/Uber workloads) circulate on low-authority outlets only — unverified, and partly contradicted by the NVIDIA-based OpenAI deal.",
     "(High confidence) We assess Amazon's storage procurement splits into three layers that must not be conflated when qualifying an opportunity. Layer 1 — utility-scale BESS: Amazon signs PPAs, developers own the assets and choose the cells, so the OEM decision sits with AES (Bellefield, 1 GW/4 GWh at completion) and Primergy (600 MW Nevada), not Amazon. Layer 2 — behind-the-meter BESS at the campus: no announced Amazon deployments, a genuine structural contrast with xAI (Megapack fleet) and Crusoe (integrated energy stack). Layer 3 — rack-level BBU inside the white space, which is where AI-specific battery demand actually lands. Basis: Amazon's own renewables disclosures name developers but never battery vendors; no first-party or trade source documents an Amazon on-site BESS installation. The practical consequence: 'does Amazon buy BESS?' has no single answer — the buying center, the decision criteria, and the vendor set differ per layer.",
     "(Low confidence) Korean and Taiwanese trade press place Samsung SDI in the Layer-3 BBU position: an April 2026 report of final-stage talks with AWS on a battery supply agreement for BBU-based UPS (~$700M, pricing the last open term), and July 2026 reporting that Samsung SDI ships BBU cells through Taiwan's Simplo with Amazon among the end customers. Neither company has confirmed either arrangement, both rest on unnamed sources, and Samsung SDI is reported in parallel talks with Meta and Google — so this is a supplier winning a slot in a supply-short market, not an exclusive win. Treat as unverified reporting and attribute it as such in any external conversation.",
-    "(Low confidence) Fluence is the intuitive guess for the Bellefield battery supplier given The AES Corporation's stake in it — 28.19% at 31 December 2025, cut to 22% by a May 2026 redemption and public sale — but we found no press release, filing, or trade coverage naming the supplier for that project. This is an untested inference from a corporate relationship, not a sourced fact — do not repeat it as one; the AES project team is the only reliable path to confirmation."
+    "(Low confidence) Fluence is the intuitive guess for the Bellefield battery supplier given AES owns roughly 28% of Fluence, but we found no press release, filing, or trade coverage naming the supplier for that project. This is an untested inference from a corporate relationship, not a sourced fact — do not repeat it as one; the AES project team is the only reliable path to confirmation."
   ],
   "relationships": [
     {
@@ -208,17 +208,6 @@
       "note": "X-energy is Amazon's SMR technology partner — Amazon anchored the ~$500M Series C-1, holds 23.4% of the Class A after X-energy's April 2026 IPO, funds the feasibility phase of Energy Northwest's Cascade project and holds rights to its power, with options on 'more than 5 gigawatts' of Xe-100 capacity by 2039.",
       "context": "Amazon's own page describes the agreements with Energy Northwest and X-energy and the 'more than 5 gigawatts' ambition; X-energy's prospectus records Amazon's 'priority queue slots, rights of first refusal, and most favored pricing' and a cost-efficiency payment from the fifth year of the first project's operation (X-energy dossier, this corpus). Amazon is investor and prospective offtaker at once; this side is typed `supplier` because the commercial relation is Amazon buying Xe-100 capacity — the schema has no 'portfolio' value for the investor side, and the X-energy dossier types Amazon `investor`.",
       "source": "https://www.aboutamazon.com/news/sustainability/amazon-nuclear-small-modular-reactor-net-carbon-zero"
-    },
-    {
-      "slug": "aes-clean-energy",
-      "type": "supplier",
-      "status": "active",
-      "since": "2020",
-      "scale": "Bellefield 1 alone is 500 MW solar + 500 MW / 4-hour storage on a contract to 2040",
-      "via": "Long-term PPAs on AES-owned solar and paired storage",
-      "note": "AES Clean Energy is the developer-owner behind six of Amazon's named US renewable assets, including Bellefield.",
-      "context": "The AES FY2025 10-K facility table names Amazon as the customer on Bellefield 1 (California, Solar 500 + Storage 500, 75% AES equity, COD 2025, contract to 2040), McFarland B (Arizona, Solar 300 + Storage 150, to 2043), Oak Ridge (Louisiana, Solar 200, to 2043), Delta (Mississippi, Wind 185, to 2043-44), Baldy Mesa (California, Solar 150 + Storage 75, to 2043) and Silver Peak (California, Solar 50 + Storage 25, to 2044). AES has never disclosed the Bellefield battery supplier, and the inference that it is Fluence rests only on the corporate stake, which the parent cut from 28% to 22% in May 2026.",
-      "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000072/aes-2025annualreport.pdf"
     }
   ],
   "policyExposure": [
@@ -564,6 +553,6 @@
       "url": "https://www.aboutamazon.com/news/sustainability/amazon-renewable-energy-updates"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 8
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 7
 }

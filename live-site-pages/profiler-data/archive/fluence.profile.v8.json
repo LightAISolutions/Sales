@@ -14,7 +14,7 @@
     "type": "public",
     "ticker": "NASDAQ: FLNC"
   },
-  "summary": "BOTTOM LINE UP FRONT: Fluence's US domestic-content supply chain and two hyperscaler master agreements have converted AI data-center demand into a record $6.4B backlog; we assess manufacturing execution, not demand, is now the binding constraint. BACKGROUND: Fluence is a pure-play global provider of grid-scale battery energy storage products (Smartstack, Gridstack Pro), services/O&M, and asset-optimization software (Fluence OS, Mosaic, Nispera). Formed in January 2018 as a 50/50 Siemens–AES joint venture and IPO'd in October 2021, it remains Nasdaq-listed (Siemens held 38.9% as of Dec 2025; AES and Siemens sold a combined $420M of shares in a May 2026 secondary; AES cut its own economic interest from 28.19% to 22% in the same May 2026 transaction and, on 1 March 2026, agreed to be taken private by a consortium led by Global Infrastructure Partners and EQT at $15.00 a share — about $10.7B of equity and $33.4B of enterprise value — which stockholders approved on 26 June 2026). Its US differentiation is a domestic-content supply chain — US-made cells (AESC Tennessee) and Utah module assembly qualifying customers for the IRA domestic-content ITC bonus.",
+  "summary": "BOTTOM LINE UP FRONT: Fluence's US domestic-content supply chain and two hyperscaler master agreements have converted AI data-center demand into a record $6.4B backlog; we assess manufacturing execution, not demand, is now the binding constraint. BACKGROUND: Fluence is a pure-play global provider of grid-scale battery energy storage products (Smartstack, Gridstack Pro), services/O&M, and asset-optimization software (Fluence OS, Mosaic, Nispera). Formed in January 2018 as a 50/50 Siemens–AES joint venture and IPO'd in October 2021, it remains Nasdaq-listed (Siemens held 38.9% as of Dec 2025; AES and Siemens sold a combined $420M of shares in a May 2026 secondary; AES itself was reportedly being taken private by GIP/BlackRock for ~$38B). Its US differentiation is a domestic-content supply chain — US-made cells (AESC Tennessee) and Utah module assembly qualifying customers for the IRA domestic-content ITC bonus.",
   "ecosystemRole": "One of the two leading Western system integrators (with Tesla) in a market now dominated by Chinese vertically integrated players — ranked #7 in Wood Mackenzie's first Global BESS Integrator Comprehensive Ranking (July 2026) as annual global installs passed 100 GW. Cumulative deployed capacity 6.8 GW (Sep 2025, +36% YoY); record $6.4B backlog by June 2026, boosted by master supply agreements with two major hyperscalers and AI/data-center demand.",
   "productsAndServices": [
     {
@@ -182,7 +182,7 @@
     "(High confidence) We assess Fluence's US differentiation is domestic content — AESC Tennessee cells and Utah module assembly qualifying customers for the ITC domestic-content bonus; the tariff-mitigation story became shipping product in 2025.",
     "(High confidence) We assess AI/data-center demand is a contracted channel, not pipeline talk: roughly $850M of data-center orders through July 2026 and master supply agreements with two hyperscalers underpin the record $6.4B backlog. Basis: company disclosures.",
     "(Moderate confidence) We assess execution of the new manufacturing footprint — not demand — is the binding constraint on converting backlog to revenue; the FY2025 tariff-driven guidance collapse demonstrates the downside when the supply chain slips.",
-    "(Low confidence) Ownership overhang is a monitoring item: Siemens and AES sold $420M of shares in May 2026, AES cut its interest from 28.19% to 22% in that transaction, and AES's own take-private by GIP and EQT is signed and stockholder-approved with FERC and two state commissions outstanding — so the largest anchor shareholder will itself have new owners."
+    "(Low confidence) Ownership overhang is a monitoring item: Siemens and AES sold $420M of shares in May 2026 and AES was reportedly being taken private — anchor-shareholder intentions are unverified."
   ],
   "relationships": [
     {
@@ -240,17 +240,6 @@
       "note": "Excelsior Energy Capital signed a multiyear 2.2 GWh agreement (30 July 2024) for US-manufactured Gridstack Pro systems — Tennessee cells, Utah modules — with deliveries beginning in 2025 across five to ten sites in ERCOT and CAISO.",
       "context": "Fluence's release: 'Excelsior will deploy Fluence's Gridstack Pro product line' with 'battery cells primarily manufactured in Tennessee and battery modules manufactured by Fluence in Utah', 'one of the first energy storage solutions expected to qualify as domestic content under the Inflation Reduction Act'. John Zahurancik: 'This deal is a testament to the competitiveness of U.S.-manufactured battery storage systems.' No release names the recipient projects and no delivery to an Excelsior site has been confirmed by either party; Excelsior does not appear in Fluence's SEC filings (Excelsior dossier, this corpus).",
       "source": "https://www.globenewswire.com/news-release/2024/07/30/2921042/0/en/Excelsior-and-Fluence-to-Deploy-2-2-GWh-of-Energy-Storage-Projects-Using-Domestically-Manufactured-Battery-Systems-Starting-in-2025.html"
-    },
-    {
-      "slug": "aes-clean-energy",
-      "type": "customer",
-      "status": "active",
-      "since": "2018",
-      "scale": "about 24% of Fluence revenue is with related parties, primarily AES; 13% of the $5.3B remaining performance obligations",
-      "via": "BESS supply and EPC services on AES US storage projects",
-      "note": "AES Clean Energy is Fluence's largest customer as well as, through its parent, its second-largest shareholder.",
-      "context": "AES's FY2025 10-K states that 'many of the Company's energy storage construction projects utilize Fluence as either a BESS supplier or EPC contractor', recorded primarily in property, plant and equipment; AES's related-party PP&E rose from $851M to $1,254M across 2025, though AES discloses no Fluence-specific figure. From this side the dependence is measurable: Fluence's own FY2025 10-K reports about 24% of revenue with related parties, primarily AES and affiliates, revenue from AES of $1,082.3M in FY2024, and 13% of $5.3B of remaining performance obligations with AES. The equity sits at The AES Corporation rather than at the US renewables unit, which is why this edge is typed on the commercial relationship.",
-      "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
     }
   ],
   "policyExposure": [
@@ -562,7 +551,7 @@
             "result": "Offsets: record $1.44B quarterly order intake (≈3× YoY) and record $6.4B backlog"
           }
         ],
-        "commentary": "Ownership context: the October 2025 report of a ~$38B AES take-private by GIP drove a ~24.5% one-day FLNC pop on stake speculation; the deal actually signed on 1 March 2026 at $15.00 a share (~$10.7B equity, ~$33.4B enterprise value) with GIP and EQT, and stockholders approved it on 26 June 2026. AES and Siemens trimmed via the May 2026 $420M secondary (20M shares at $21), taking AES from 28.19% to 22%. No Fluence take-private has occurred.",
+        "commentary": "Ownership context: AES's reported ~$38B take-private by GIP/BlackRock (Oct 2025) drove a ~24.5% one-day FLNC pop on stake speculation; AES and Siemens then trimmed via the May 2026 $420M secondary (20M shares at $21). No Fluence take-private has occurred.",
         "periodType": "other"
       }
     ],
@@ -623,16 +612,6 @@
       "label": "Davis Graham — FEOC compliance, Fixx Energy cell supply agreement context (2026)",
       "url": "https://davisgraham.com/news-events/battery-storage-for-data-centers-in-2026-feoc-compliance-ferc-co-location-and-the-deals-getting-done-now/",
       "date": "2026-04"
-    },
-    {
-      "label": "PR Newswire — Consortium led by Global Infrastructure Partners and EQT agrees to acquire AES (US$15.00 per share; US$10.7bn equity, US$33.4bn enterprise value)",
-      "url": "https://www.prnewswire.com/news-releases/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes-302700916.html",
-      "date": "2026-03-02"
-    },
-    {
-      "label": "SEC Form 10-K — The AES Corporation, FY2025 (Note 29 related-party transactions: Fluence as BESS supplier or EPC contractor; 28.19% economic interest)",
-      "url": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm",
-      "date": "2026-03-02"
     },
     {
       "label": "ESS News — energy storage 2025 year in review (AC-block competitive context)",
@@ -727,6 +706,6 @@
       "url": "https://fluenceenergy.com/domestic-content/"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 9
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 8
 }

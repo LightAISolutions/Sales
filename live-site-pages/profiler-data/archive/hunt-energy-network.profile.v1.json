@@ -358,14 +358,6 @@
       "note": "Oncor is the interconnecting wire company for eight of HEN's 9.9 MW batteries per the April 2024 PUCT registration.",
       "context": "Interconnection adjacency only; Wood's House testimony cites Oncor's application requirements and technical screens as an example of the non-standard DER interconnection rules HEN wants the PUCT to harmonise.",
       "source": "https://interchange.puc.texas.gov/Documents/56556_1_1387683.PDF"
-    },
-    {
-      "slug": "engie-north-america",
-      "type": "competitor",
-      "status": "active",
-      "note": "Owner of Sweeny, the one third-party-named peer distributed generation resource this dossier benchmarks Faulkner against.",
-      "context": "Modo Energy published a head-to-head of two 9.9 MW one-hour ERCOT distributed generation resources — ENGIE's Sweeny and Hunt Energy Network's Faulkner — comparing revenues, operational strategy, cycling rates, capacity allocation and regulation and ECRS arbitrage. ENGIE's own project page lists Sweeny at 10 MWac in Brazoria County, Texas. Beyond the sub-10 MW niche the two compete at very different scales: ENGIE is the largest ERCOT storage owner at about 2.8 GW.",
-      "source": "https://modoenergy.com/research/ercot-battery-energy-storage-systems-sweeny-engie-faulkner-hunt-energy-network-revenues-operational-strategy-cycling-rates-capacity-allocation-regulation-ecrs-arbitrage-comparison"
     }
   ],
   "policyExposure": [
@@ -928,6 +920,6 @@
       "url": "https://opengovus.com/texas-taxpayer/32072940474"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

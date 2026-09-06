@@ -567,16 +567,6 @@
    "note": "Ranked twelfth to McCarthy's twenty-second in the same ENR edition, having risen three places on a hyperscale book.",
    "context": "Holder moved from fifteenth to twelfth in the ENR 2026 Top 400 while McCarthy fell from twentieth to twenty-second, in an edition where the telecommunications and data-centre category grew 86.4%. Independent reporting places Holder on Google's Fort Wayne campus and EdgeCore's $1.9bn Mesa campus — the latter a project misattributed to McCarthy in aggregator content and corrected here.\n\nBasis for the link is the same comparative ranking rather than any commercial dealing; no relationship between the two firms was found in any source.",
    "source": "https://www.constructiondive.com/news/holder-construction-arizona-data-center/704098/"
-  },
-  {
-   "slug": "rwe-clean-energy",
-   "type": "customer",
-   "status": "active",
-   "scale": "Bright Arrow, 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
-   "via": "EPC construction on solar-plus-storage and utility-scale solar",
-   "note": "RWE is the owner of Bright Arrow in Hopkins County, Texas, the project where McCarthy pioneered its underground prefabrication strategy, and of Lafitte Solar in Louisiana.",
-   "context": "McCarthy's own project record for Bright Arrow, built for RWE Renewables Americas, covers 300 MWac / 390 MWdc of solar plus a 100 MWac / 200 MWh battery on more than 3,000 acres, 876,000 panels and 85 central inverters, and identifies it as the project where McCarthy pioneered a prefabrication strategy for all underground installations that it has since expanded portfolio-wide. RWE separately names McCarthy as the EPC on Lafitte Solar, the 100 MW project in Ouachita Parish that was RWE's first in Louisiana, completed in November 2025 and enabled by a Meta PPA. This dossier's own summary of its developer set already noted that no relationship was found with RWE 'beyond Bright Arrow'; Lafitte is the second.",
-   "source": "https://www.mccarthy.com/projects/bright-arrow-solar-storage"
   }
  ],
  "policyExposure": [
@@ -1283,6 +1273,6 @@
    "url": "https://vantage-dc.com/news/vantage-data-centers-invests-3-billion-to-deliver-ai-campus-in-growing-nevada-market/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

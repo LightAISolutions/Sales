@@ -1,0 +1,390 @@
+{
+ "schemaVersion": 2,
+ "slug": "aes-clean-energy",
+ "title": "AES Clean Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here-building-a-gigawatt",
+   "title": "Start here: what it actually takes to build a gigawatt of solar and storage",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "Every other developer guide in this library teaches you how a project is financed or how it is sold. This one teaches how it is **physically built**, and why the two companies that care most about that — the owner and the tax authority — are the same two that decide whether it happens at all.",
+    "AES Clean Energy is the right subject because it is the only large US owner that built its own construction robot and sells it to competitors, and because a third of its parent's headline earnings measure is not electricity at all. In FY2025 The AES Corporation reported Adjusted EBITDA of $2,871m and **Adjusted EBITDA with Tax Attributes of $4,411m**. The $1,540m difference is tax credits.",
+    "Its flagship, Bellefield in Kern County, California, is 1 GW of solar and 1 GW of four-hour batteries across two phases on about 7,500 acres, connected by a fourteen-mile line to Southern California Edison's Windhub substation. Phase one came online in 2025 on a fifteen-year contract to Amazon running to 2040.",
+    "By the end of that build AES had five {{Maximo}} robots on site. This guide explains what they were doing, why a robot is the answer to that particular problem, and why the tax code shapes the schedule more than the weather does."
+   ]
+  },
+  {
+   "id": "the-labour-problem",
+   "title": "The thing a utility-scale solar site actually is",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Strip away the finance and a solar plant is an enormous repetitive assembly job carried out in the open, on uneven ground, by people lifting the same object over and over.",
+    "A modern {{PV module}} is roughly two to two and a half metres long and weighs 25 to 35 kilograms. A 500 MW plant needs something on the order of a million of them. Each one has to be lifted from a pallet, carried to a row, aligned against its neighbour on a {{single-axis tracker}}, and clamped to a torque tube — a steel spine that will rotate the whole row east to west through the day.",
+    "Trackers are why the job is hard rather than merely large. Fixed-tilt racking is a static frame; a tracker is a machine, with bearings, dampers, motors and a torque tube that must stay straight under load. Modules clamped even slightly out of alignment put a twisting load into that tube. In exchange for that precision you get 15 to 25% more annual energy from the same modules, which is why essentially all utility-scale US solar is tracked.",
+    "So the binding constraints on a gigawatt build are not panels or money. They are: how many people you can put on site, how fast they can safely lift, how consistent their alignment is across a million repetitions, and how the ground behaves — sand, mud, ruts — under whatever is carrying the modules.",
+    "This matters commercially because construction labour is one of the few large costs in a solar plant that has not fallen. Module prices collapsed by an order of magnitude over fifteen years; the cost of a person lifting a panel did not. As modules got cheaper, the labour share of a project got bigger — which is exactly the condition under which automating the lift becomes worth doing."
+   ]
+  },
+  {
+   "id": "maximo",
+   "title": "Maximo: reading a construction robot as a business, not a gadget",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "AES describes {{Maximo}} as an AI-enabled robot that automates the heavy lifting of placing and attaching solar modules, installing in **50% less time and at 50% of the cost** of standard mechanical installation. Take that claim apart into the engineering problems it has to solve.",
+    "**Lifting and placing.** A high-speed robotic arm takes a module from a rack and sets it in position. This is the easy half — industrial arms have done pick-and-place for decades — but it is normally done on a factory floor with known geometry.",
+    "**Knowing where it is.** A construction site has no known geometry. AES uses cameras, sensors and a neural-network spatial model to give the machine awareness of the row it is building, and computer vision to detect inconsistencies and self-correct. This is the hard half, and it is why the machine is described as AI-enabled rather than merely automated.",
+    "**Attaching.** A second, lower arm auto-tightens the clamps. Clamping is the step where human variation shows up most — torque applied by hand across a million fasteners is not uniform — so mechanising it improves consistency, not just speed.",
+    "**Getting around.** The machine sits on a **tracked base** rather than wheels, for sandy, muddy and rutted ground, and works across different torque-tube heights. Terrain is what defeats most site automation.",
+    "**Powering itself.** There is no grid on a construction site, so Maximo carries a mobile microgrid with {{LFP}} batteries plus AC/DC inverters and phase converters to make three-phase power. Lithium-iron-phosphate is chosen for the same reasons it dominates stationary storage: cycle life, thermal tolerance and no cobalt.",
+    "**Not hurting anyone.** Personnel-detection sensors halt operation — the requirement that governs everything else on a site where people and machines share space.",
+    "Two design choices tell you what the business is. Maximo is **technology-agnostic** across modules, clamps, rails and trackers, which is only necessary if you intend to work on other people's sites. And AES states that Maximo's results are driven by 'module installation service revenue' and 'profit margins on customer contracts with solar EPC companies', serving demand 'from AES and other leading owners'. It is a service sold to {{EPC}} contractors, including competitors' — not a capital asset AES keeps to itself."
+   ]
+  },
+  {
+   "id": "tax-attributes",
+   "title": "Why a third of the earnings measure is not electricity",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "A US renewables developer earns money three ways at once, and only one of them is selling power. Understanding the other two is the difference between reading these companies correctly and misreading them badly.",
+    "**The credit.** A qualifying project earns either an {{ITC}} — a one-time credit worth a percentage of the capital cost — or a production credit worth a fixed amount per megawatt-hour generated over ten years. The owner chooses. Storage generally takes the investment credit; wind has historically taken production.",
+    "**The problem with credits.** A credit only helps if you owe tax. A developer spending billions on construction usually has enormous depreciation and little taxable income, so the credits pile up unused. For two decades the industry solved this with **{{tax equity}}**: a bank or insurer with a large tax bill invests in the project, takes most of the tax attributes and a slice of cash for a period, then its share drops sharply once it has earned its target return. That drop is the **{{partnership flip}}**. AES states plainly that 'the majority of solar projects under AES Clean Energy have been financed with tax equity structures'.",
+    "**What changed in 2023.** The Inflation Reduction Act allowed credits to be **sold outright** for cash to any taxpayer — transferability. AES began monetising credits this way in 2023, and it notes that these sales reduce its effective tax rate under US GAAP. Transfer is simpler than a tax-equity partnership: no flip, no partnership accounting, just a sale at a discount to face value.",
+    "**Why it dominates the reported numbers.** AES reports two versions of the same measure. FY2025 Adjusted EBITDA was $2,871m; Adjusted EBITDA **with Tax Attributes** was $4,411m. Of the $1,540m gap, $1,374m came from US renewables. Inside the Renewables segment the ratio is starker still — segment Adjusted EBITDA $932m against $2,306m with tax attributes.",
+    "Read that carefully. For this business the tax credit is not a subsidy at the margin. It is roughly the same size as the operating earnings. Any change to the credit regime does not trim the business — it re-founds it."
+   ]
+  },
+  {
+   "id": "the-construction-clock",
+   "title": "The clock: what 'begun construction' means and why it decides everything",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The One Big Beautiful Bill Act, signed 4 July 2025, ended the open-ended credit for wind and solar and replaced it with a race against dates. The table is the ruleset AES and every peer now build to. Note the asymmetry between technologies — it explains a lot of capital allocation.",
+   "cols": [
+    "Rule",
+    "Wind and solar",
+    "Energy storage",
+    "What it forces a developer to do"
+   ],
+   "rows": [
+    [
+     "Credit availability",
+     "Full credit if construction begins within twelve months of enactment",
+     "Full credit if construction begins by **2033**",
+     "Storage keeps a decade of runway; wind and solar have months. Expect portfolios to tilt toward storage on the margin"
+    ],
+    [
+     "Placed-in-service deadline",
+     "If construction begins after that window, the plant must be operating by the end of **2027**",
+     "No tighter deadline imposed",
+     "A wind or solar project not already started is now a race against a fixed calendar date, not a market"
+    ],
+    [
+     "Four-year rule",
+     "Projects that began construction in time must operate within four calendar years of the year construction began",
+     "Same principle",
+     "{{Safe harbor}} status is not permanent — it starts its own clock"
+    ],
+    [
+     "What counts as beginning construction",
+     "Physical work of a significant nature, or (historically) spending 5% of total cost. IRS Notice 2025-42 in August 2025 generally removed the 5% route for wind and solar above 1.5 MW",
+     "Same guidance applies",
+     "Buying equipment early stopped being sufficient on its own; physical work matters more"
+    ],
+    [
+     "{{FEOC}} restrictions",
+     "Projects starting construction after 31 December 2025 lose credits if they receive material assistance from a prohibited foreign entity, with permitted Chinese-content percentages varying by year and technology",
+     "Same",
+     "Forces supply-chain re-sourcing. AES states all its 2026 and 2027 battery needs are contracted, almost all from US or South Korean suppliers"
+    ],
+    [
+     "Ownership test",
+     "Projects starting construction after 31 December 2024 are barred if a prohibited foreign entity owns or effectively controls them",
+     "Same",
+     "A diligence question on every joint venture and tax-equity partner"
+    ]
+   ],
+   "note": "AES's stated position is that it ran 'a program designed to ensure our backlog of U.S. renewables projects satisfy IRS safe harbor requirements' and does not expect a material impact. Its merger proxy goes further, assuming the safe-harbor strategy secures credits for all megawatts through 2030. A federal court vacated Notice 2025-42 in June 2026 and the ruling is under appeal — so positions taken under the restored rule are reversible."
+  },
+  {
+   "id": "selling-the-project-instead-of-the-power",
+   "title": "Develop-transfer agreements: selling the project instead of the power",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "A developer does not have to keep what it develops. AES runs three distinct commercial models, and in 2025 the least capital-intensive one became a visible earnings driver — US development services added $91m to Renewables segment operating margin in FY2025 and $62m in the second quarter of 2026 alone.",
+   "sales": "When a developer's margin improves, establish whether it sold more electricity or sold more projects. They are different businesses with different multiples.",
+   "cards": [
+    {
+     "t": "{{Develop-to-own}} — build it and keep it",
+     "meta": "The classic model: develop, build, own, sell the output under a long-term contract",
+     "adv": [
+      "Earnings compound for 25-35 years",
+      "Captures the tax attributes directly",
+      "Control over dispatch, augmentation and refinancing"
+     ],
+     "dis": [
+      "Enormous capital consumption — AES Clean Energy's construction budget is over $12bn",
+      "The merger proxy's standalone case shows the unit consuming cash until 2029 on this model",
+      "Ties up balance sheet that could start the next project"
+     ]
+    },
+    {
+     "t": "Develop-transfer agreement — sell it construction-ready",
+     "meta": "AES manages permitting, engineering and procurement, then transfers the project once it is ready to build",
+     "adv": [
+      "Fee income with almost no capital held",
+      "Serves regulated utilities that want to own but not develop",
+      "Monetises the scarcest skill — getting a site permitted and connected — without waiting 30 years for it"
+     ],
+     "dis": [
+      "One-time revenue, not an annuity",
+      "You hand over the asset and the tax attributes",
+      "Lumpy and hard to forecast, which is why it makes a quarter look volatile"
+     ]
+    },
+    {
+     "t": "{{Powered land}} and private-use networks",
+     "meta": "Sell the site and its grid connection, or build a dedicated network for one customer",
+     "adv": [
+      "The scarcest commodity in the market is an interconnected site, and this sells it directly",
+      "AES's July 2025 development framework agreement for a Texas data centre carries a transaction price of about $481m over roughly two years",
+      "No generation risk at all"
+     ],
+     "dis": [
+      "AES has not named the customer, so the model is proven by one contract",
+      "Recognition is spread over a performance period, leaving $245m of contract liability at year-end",
+      "Depends entirely on continued data-centre demand in one geography"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "where-the-earnings-sit",
+   "title": "Where AES Clean Energy actually sits in its parent",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "A recurring trap in this sector: the business you want is not the segment that is reported. Reading AES requires knowing four entity layers apart.",
+   "cols": [
+    "Layer",
+    "What it is",
+    "Reported separately?",
+    "FY2025 figure"
+   ],
+   "rows": [
+    [
+     "The AES Corporation",
+     "The listed parent (NYSE: AES), being taken private by Global Infrastructure Partners and EQT",
+     "Yes — consolidated",
+     "Revenue $12,233m; Adjusted EBITDA $2,871m; with tax attributes $4,411m"
+    ],
+    [
+     "Renewables SBU",
+     "The reportable segment: solar, wind, storage and hydro across ten countries including Chile, Colombia, Panama and Bulgaria",
+     "Yes — this is the segment",
+     "Revenue $2,913m; segment Adjusted EBITDA $932m; with tax attributes $2,306m"
+    ],
+    [
+     "**AES Clean Energy**",
+     "The US renewables business — AES Renewable Holdings, sPower, AES Clean Energy Development and other renewables assets",
+     "**No** — a sub-unit of the segment",
+     "10,961 MW operating; 3,031 MW under construction; 7.6 GW {{contracted backlog}}; 46 GW pipeline"
+    ],
+    [
+     "AES Indiana / AES Ohio",
+     "Regulated utilities in the Utilities SBU",
+     "Yes, separately",
+     "Their solar and storage — including a 200 MW / 800 MWh battery on a retired coal site — is **not** AES Clean Energy"
+    ]
+   ],
+   "note": "The only public forward view of AES Clean Energy on its own appears in a merger proxy, which is an unusual place to find segment guidance and exists only because the parent stopped issuing it. Standalone case: Adjusted EBITDA of $661m in 2026 rising to $1,285m in 2030, on a run-rate ramping to 2.8 GW placed in service per year from 2028."
+  },
+  {
+   "id": "bellefield-anatomy",
+   "title": "Bellefield, from the ground up",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "One project, read as a sequence. The dates are what a gigawatt-class solar-plus-storage build actually takes.",
+   "items": [
+    {
+     "x": 2023.4,
+     "lane": "build",
+     "label": "Phase 1 construction begins",
+     "sub": "About 7,500 acres of privately owned land at California City and Mojave, Kern County. Roughly 1,000 union jobs at peak."
+    },
+    {
+     "x": 2024.0,
+     "lane": "build",
+     "label": "Phase 2 construction begins in parallel",
+     "sub": "The two phases overlap — a second 500 MW of solar and 500 MW of four-hour storage."
+    },
+    {
+     "x": 2024.8,
+     "lane": "tech",
+     "label": "Maximo deployed at scale",
+     "sub": "About 10 MW installed by robot as of October 2024, with 100 MW projected by end-2025."
+    },
+    {
+     "x": 2025.5,
+     "lane": "grid",
+     "label": "Fourteen-mile line to Windhub",
+     "sub": "Interconnection to Southern California Edison's Windhub substation — the piece that cannot be accelerated by adding people."
+    },
+    {
+     "x": 2025.7,
+     "lane": "build",
+     "label": "Phase 1 complete: 500 MW solar + 500 MW / 4-hour storage",
+     "sub": "Fifteen-year contract to Amazon running to 2040; AES holds 75% equity. Stated output equivalent to 467,000 homes."
+    },
+    {
+     "x": 2025.95,
+     "lane": "tech",
+     "label": "Five Maximo units in operation, all at Bellefield",
+     "sub": "AES states it expects to expand the fleet against a growing backlog of installation contracts in 2026."
+    },
+    {
+     "x": 2026.5,
+     "lane": "build",
+     "label": "Phase 2 expected online",
+     "sub": "Completing 1 GW of solar and 1 GW of storage — described by trade press as the largest US solar-plus-storage facility."
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this model fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "3 min",
+   "ps": [
+    "**The permit, not the panel.** AES withdrew the 320 MW / 1,280 MWh Seguro project near Escondido in March 2026 after roughly three years. The site was 1,600 feet from a hospital whose board voted the project down and refused to let transmission cross its property. No robot, no tax credit and no offtake contract solves that.",
+    "**A county can undo a permit it already granted.** Huntingburg, Indiana imposed a solar moratorium in November 2025 and its zoning board unanimously voided the 2023 development-plan approval for AES Crossvine in March 2026 — while site mobilisation was under way. By the end of 2025 all 88 Ohio counties restricted wind and 31 restricted or banned solar.",
+    "**Buying from a company you own is a governance question as well as a commercial one.** AES's own filing states that many of its storage projects use Fluence as BESS supplier or EPC contractor, while its parent held 28.19% of Fluence at the end of 2025 and cut that to 22% in May 2026. Fluence's own accounts show about 24% of its revenue with related parties, primarily AES. AES is also a named defendant in Fluence's securities class action.",
+    "**Automation does not remove the schedule risk, it moves it.** Five robots on one site is a pilot, not a fleet. AES's own throughput figures — about 10 MW by October 2024, 100 MW projected by end-2025 — are a small fraction of the multi-gigawatt backlog they are meant to serve.",
+    "**When earnings are a third tax credits, policy risk is not a footnote.** A change to the credit regime does not reduce margins; it changes what the asset is worth."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "5 min",
+   "cards": [
+    {
+     "q": "Why does a single-axis tracker make solar construction harder as well as more productive?",
+     "a": "A tracker is a machine, not a frame — bearings, motors and a torque tube that must stay straight under load. Modules clamped out of alignment twist the tube. The payoff is 15-25% more annual energy from the same modules, which is why it is the utility-scale standard."
+    },
+    {
+     "q": "Why did automating module installation become worth doing when it wasn't before?",
+     "a": "Module prices fell by an order of magnitude while the cost of a person lifting one did not. As the hardware got cheaper the labour share of the project grew, and the economics of replacing the lift crossed over."
+    },
+    {
+     "q": "What is a tax-equity partnership flip?",
+     "a": "A structure where an investor with a large tax bill funds part of a project and takes most of the tax attributes plus some cash until it hits a target return, at which point its share drops sharply — the flip — and the developer keeps the rest of the asset's life."
+    },
+    {
+     "q": "How does transferability differ from tax equity, and why does it matter?",
+     "a": "Transferability, allowed from 2023, lets the owner sell credits outright for cash to any taxpayer. No partnership, no flip, no complex accounting — just a sale at a discount. It widened the buyer pool from a handful of banks to any profitable company."
+    },
+    {
+     "q": "Under the 2025 Act, why might a developer prefer to start a storage project over a solar project?",
+     "a": "Storage keeps the full credit if construction begins any time up to 2033; wind and solar had a twelve-month window from enactment and otherwise face a hard end-2027 placed-in-service deadline. The runway differs by about six years."
+    },
+    {
+     "q": "What does 'safe harbor' status actually secure, and what does it not?",
+     "a": "It secures that construction was deemed to begin before a deadline, preserving credit eligibility. It does not stop the clock — the project must still reach operation within four calendar years of the year construction began."
+    },
+    {
+     "q": "Why is a develop-transfer agreement attractive to a developer with a capital constraint?",
+     "a": "It monetises the scarce skill — permitting, engineering, procurement and grid connection — as fee income without holding the asset, so the balance sheet is free to start the next project. The cost is giving up the annuity and the tax attributes."
+    },
+    {
+     "q": "Why can 'Adjusted EBITDA' and 'Adjusted EBITDA with Tax Attributes' differ by more than half?",
+     "a": "Because for a US renewables owner the tax credits are comparable in size to operating earnings. AES's FY2025 figures were $2,871m and $4,411m; inside the Renewables segment, $932m against $2,306m."
+    },
+    {
+     "q": "Why does a construction robot need its own microgrid?",
+     "a": "There is no grid on a construction site. Maximo carries LFP batteries with inverters and phase converters to make three-phase power — the same chemistry choice as stationary storage, for cycle life and thermal tolerance."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 min",
+   "items": [
+    {
+     "q": "A developer reports Adjusted EBITDA of $2.9bn and 'Adjusted EBITDA with Tax Attributes' of $4.4bn. What does the gap represent?",
+     "c": [
+      "Non-cash depreciation add-backs",
+      "Realised and realisable renewable tax credits",
+      "Unconsolidated joint-venture earnings",
+      "Deferred revenue from construction contracts"
+     ],
+     "a": 1,
+     "why": "Tax attributes are the ITC and PTC value the business generates. For AES in FY2025 the gap was $1,540m, of which $1,374m came from US renewables — comparable in size to the operating earnings themselves."
+    },
+    {
+     "q": "Under the 2025 Act's rules as AES describes them, which project has the longest runway to begin construction and still claim the full credit?",
+     "c": [
+      "A utility-scale solar farm",
+      "An onshore wind repowering",
+      "A standalone battery storage project",
+      "All three are treated identically"
+     ],
+     "a": 2,
+     "why": "The Act imposes no tighter timeline on storage and allows the full credit if construction begins by 2033. Wind and solar face a twelve-month window from enactment or a hard end-2027 placed-in-service deadline."
+    },
+    {
+     "q": "AES sells Maximo's installation as a service to third-party EPC contractors. What does that design choice tell you?",
+     "c": [
+      "The robot is not reliable enough for AES's own sites",
+      "AES intends it to be a revenue line, not just an internal cost saving",
+      "AES is exiting solar construction",
+      "It is required by the tax credit rules"
+     ],
+     "a": 1,
+     "why": "Making it technology-agnostic across modules, clamps, rails and trackers is only necessary if you plan to work on other owners' sites. AES states the results are driven by installation service revenue and margins on contracts with EPC companies."
+    },
+    {
+     "q": "Why is 'AES Clean Energy' not a line you can find in the segment tables?",
+     "c": [
+      "It is too small to disclose",
+      "It is a sub-unit of the Renewables SBU, which also spans nine other countries",
+      "It was divested in 2025",
+      "It is consolidated into the Utilities segment"
+     ],
+     "a": 1,
+     "why": "The reportable segment is Renewables, covering Chile, Argentina, Colombia, Panama, the Dominican Republic, Mexico, Bulgaria, Jordan and the Netherlands as well as the US. AES Clean Energy's own figures appear as portfolio disclosures, not as a P&L — except in the merger proxy."
+    },
+    {
+     "q": "A 320 MW battery project is withdrawn after three years of development. What does that most likely reflect?",
+     "c": [
+      "Battery prices rose",
+      "The offtake contract fell through",
+      "Local siting opposition the developer could not overcome",
+      "Loss of tax credit eligibility"
+     ],
+     "a": 2,
+     "why": "AES's Seguro project was withdrawn after a hospital board 1,600 feet away voted it down and refused transmission across its property, alongside an organised local campaign. Siting, not capital or offtake, is the binding constraint in populated counties."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "Maximo",
+   "d": "AES's AI-enabled robot for placing and clamping solar modules on trackers, powered by its own lithium-iron-phosphate microgrid and sold as an installation service to EPC contractors as well as used on AES's own sites."
+  },
+  {
+   "t": "Bellefield",
+   "d": "AES's flagship in Kern County, California: 1 GW of solar and 1 GW of four-hour battery storage across two phases on about 7,500 acres, connected by a fourteen-mile line to Southern California Edison's Windhub substation."
+  }
+ ]
+}

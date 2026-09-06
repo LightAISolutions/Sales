@@ -214,15 +214,6 @@
    "via": "PowerTitan",
    "status": "active",
    "scale": "330+ PowerTitan containers"
-  },
-  {
-   "slug": "engie-north-america",
-   "type": "competitor",
-   "status": "active",
-   "since": "2020",
-   "note": "The largest ERCOT storage owner, and the current owner of Bat Cave and North Fork — the two projects Plus Power sold to Broad Reach in 2020.",
-   "context": "Plus Power developed Bat Cave and North Fork and sold them to Broad Reach Power in 2020. ENGIE acquired Broad Reach in August 2023 for more than US$1 billion of equity value, and ENGIE's own project pages now list both — Bat Cave, Mason County, 100 MWac, COD 2021, and North Fork, Williamson County, 100 MWac, COD 2021. The two are now direct ERCOT competitors at very different scale: Modo Energy measures ENGIE at about 2.8 GW and a 20% share entering 2026, against Plus Power's seasoned 700 MW merchant fleet.",
-   "source": "https://www.energy-storage.news/engie-acquires-broad-reach-power-bess-business-for-over-us1-billion-equity-value/"
   }
  ],
  "policyExposure": [
@@ -335,14 +326,14 @@
    "date": "2024-11-25"
   },
   {
-   "label": "Electrek — giant 1.3 GWh Tesla Megapack project in Arizona",
-   "url": "https://electrek.co/2024/06/27/tesla-megapack-arizona-sierra-estrella/",
-   "date": "2024-06-27"
-  },
-  {
    "label": "SRP media — Two new batteries on SRP's grid (Tesla Megapack; 276 units at Sierra Estrella)",
    "url": "https://media.srpnet.com/two-new-batteries-on-srps-grid/",
    "date": "2024-06-24"
+  },
+  {
+   "label": "Electrek — giant 1.3 GWh Tesla Megapack project in Arizona",
+   "url": "https://electrek.co/2024/06/27/tesla-megapack-arizona-sierra-estrella/",
+   "date": "2024-06-27"
   },
   {
    "label": "Batteries News — $98M tax equity for merchant Ebony (Greenprint; 176 Sungrow containers)",
@@ -375,11 +366,6 @@
    "date": "2023-10"
   },
   {
-   "label": "Energy-Storage.News — ENGIE acquires Broad Reach Power BESS business for 'over US$1 billion equity value'",
-   "url": "https://www.energy-storage.news/engie-acquires-broad-reach-power-bess-business-for-over-us1-billion-equity-value/",
-   "date": "2023-08"
-  },
-  {
    "label": "S&P Global MI — 'We're in a perpetual short' (Keefe; 6.5 GWh secured; excess resale)",
    "url": "https://www.spglobal.com/marketintelligence/en/news-insights/",
    "date": "2022-12-30"
@@ -399,6 +385,6 @@
    "url": "https://pluspower.com/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

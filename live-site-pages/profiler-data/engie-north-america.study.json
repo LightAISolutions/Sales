@@ -1,0 +1,366 @@
+{
+ "schemaVersion": 2,
+ "slug": "engie-north-america",
+ "title": "ENGIE North America — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here-the-bought-fleet",
+   "title": "Start here: a fleet that was bought, and a revenue stack that fell out from under it",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The other storage guides in this library teach you how a developer is financed, how a merchant trades, how a park sits behind one fence. This one teaches the two things that decide whether the largest battery fleet in Texas is a good business: **where the money comes from inside an hour**, and **where the money comes from to build the next one**.",
+    "ENGIE North America did not build its way to the top of the ERCOT table. It bought Broad Reach Power in August 2023 for more than a billion dollars of equity value and inherited a fleet. Independent measurement puts it at about 2.8 GW in ERCOT — a 20% share and more than twice the next owner — and second in the United States at 3.662 GW.",
+    "In the same window the thing those batteries sell collapsed. Average ERCOT battery revenue fell from roughly $149/kW in 2023 toward a projected $17/kW in 2025 on one measure, and {{ancillary services}} revenues fell about 90%. Nothing about the batteries changed. What changed was how many of them there are.",
+    "So the questions this guide answers are: what does a one-hour battery actually sell, why did that market saturate, what does an owner do next — and how do you keep building when the asset you own earns less every year?"
+   ]
+  },
+  {
+   "id": "what-a-battery-sells-in-an-hour",
+   "title": "What a battery sells, minute by minute",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A grid-scale battery is not a power plant that runs. It is a device that can change its output very fast, and almost everything it earns follows from that one property.",
+    "**Energy arbitrage** is the obvious business and the smallest one early on. Charge when power is cheap, discharge when it is expensive, keep the spread minus your losses. A lithium-ion system returns about 85-90% of what you put in — the rest is heat — so the spread has to beat the {{round-trip efficiency}} loss before you have earned anything.",
+    "**{{ancillary services}}** are the business that actually paid for the first wave of ERCOT batteries, and they are a different product entirely. The grid operator does not buy energy here; it buys *readiness*. Responsive Reserve Service ({{RRS}}) pays you to sit at a state of charge where you could inject power within seconds if a large generator trips. ERCOT Contingency Reserve Service ({{ECRS}}) pays for a slightly slower version of the same promise. Regulation pays you to follow a signal up and down all day to hold frequency at 60 Hz.",
+    "The economics of readiness are strange and worth understanding, because they explain the whole ERCOT boom and bust. You are paid for *capacity you are holding back*, not for energy delivered. A 100 MW battery can sell 100 MW of reserve without discharging a single megawatt-hour. That means a **one-hour** battery — 100 MW that can run for sixty minutes, 100 MWh of storage — competes on equal terms with a four-hour battery for the same reserve product, at a quarter of the cell cost.",
+    "That is why ENGIE's fleet is one-hour. Its own disclosure gives 1.8 GWh of dispatchable energy against 1.8 GW installed in September 2024, and the only project for which it publishes an energy figure, Sun Valley, is 100 MW / 100 MWh. It is a deliberate design for an ancillary-services market, not an oversight.",
+    "And it is why the collapse hurt. Ancillary-services markets are small and inelastic: ERCOT needs a fixed quantity of reserve regardless of how many batteries want to sell it. As the fleet went from 7.8 GW to 13.9 GW across 2025, the same fixed demand was split more ways. Ancillary revenues fell about 90% and their share of battery income halved from 84% to 48%. The batteries that remain must earn the difference from {{energy arbitrage}}, and one hour of duration is a poor arbitrage asset."
+   ]
+  },
+  {
+   "id": "duration-table",
+   "title": "Why duration is the design decision that dates a fleet",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Duration is energy divided by power. A 100 MW battery with 400 MWh of cells is a four-hour battery. The choice is made once, at procurement, and it decides which markets the asset can serve for its whole life.",
+   "cols": [
+    "Duration",
+    "Cells per MW",
+    "Ancillary services",
+    "Energy arbitrage",
+    "Capacity value",
+    "Typical era"
+   ],
+   "rows": [
+    [
+     "1 hour",
+     "1 MWh",
+     "Full participation — reserve is priced on MW, not MWh",
+     "Weak: one hour of discharge captures only the sharpest price spike",
+     "Low — most markets discount short assets",
+     "ERCOT 2020-2023"
+    ],
+    [
+     "2 hours",
+     "2 MWh",
+     "Full participation",
+     "Moderate: covers a typical evening ramp",
+     "Moderate",
+     "ERCOT from 2025"
+    ],
+    [
+     "4 hours",
+     "4 MWh",
+     "Full participation",
+     "Strong: spans a full evening peak",
+     "High — the reference duration for {{ELCC}} accreditation in most markets",
+     "CAISO throughout; ERCOT increasingly"
+    ],
+    [
+     "8+ hours",
+     "8+ MWh",
+     "Full participation but rarely economic on this alone",
+     "Strong, plus multi-day shifting",
+     "Highest",
+     "Long-duration and {{iron-air}} pilots"
+    ]
+   ],
+   "note": "Modo Energy recorded ENGIE commissioning five 50+ MW two-hour batteries in the third quarter of 2025 — 788 MW — the first departure from its historically one-hour fleet. That is what a fleet strategy looks like when the market it was designed for stops paying."
+  },
+  {
+   "id": "the-money-to-build-the-next-one",
+   "title": "Capital recycling: how you fund the next battery when the last one earns less",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A developer has three ways to pay for the next project. It can use its parent's balance sheet. It can borrow against the project. Or it can sell part of what it already owns and put the proceeds into what it is building. The third is called {{capital recycling}}, or a {{farmdown}}, and it is now ENGIE North America's primary funding engine.",
+    "The mechanics are worth being precise about, because the headline numbers are misleading. In May 2025 CBRE Investment Management took a **49.5%** interest in a portfolio of 31 operating batteries totalling 2.4 GW in Texas and California. ENGIE did not sell 2.4 GW. It sold just under half of the economics of 2.4 GW, and the release says exactly what it kept: ENGIE 'will retain a controlling share in the portfolio and will continue to operate and manage the assets'.",
+    "Read that sentence as three separate things. **Control** means ENGIE still consolidates the assets and still decides how they are dispatched and when they are augmented. **Operations** means ENGIE keeps an O&M contract, which is fee income that survives the sale. And **just under half** is not an accident: staying below 50% keeps the accounting and the governance where ENGIE wants them.",
+    "Why does an infrastructure fund buy the other half? Because an operating battery with a track record is a different risk than a battery on a drawing board. The fund is buying contracted or proven merchant cash flow with the development risk already spent; the developer is buying the ability to start again. Both sides get the risk they are set up to hold. This is the same logic as a {{partnership flip}} in {{tax equity}}, applied to operating assets rather than to tax attributes.",
+    "The pattern repeats in ENGIE's record: Ares took 49% of 905 MW for $430m in March 2025 and added 730 MW in January 2026, taking that relationship to 4.3 GW. Three sell-downs in ten months.",
+    "The number that tells you it is real: North American industrial capital employed **fell** by 808 million euros across 2025 while the region's revenue rose 5%. ENGIE is running the American business for cash, not for balance-sheet growth."
+   ]
+  },
+  {
+   "id": "three-ways-to-sell-a-megawatt",
+   "title": "Three different products that all look like 'selling clean power'",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "ENGIE sells electricity to data centres three ways, and confusing them is the most common error an outsider makes. They have different margins, different capital needs and different counterparty risk.",
+   "sales": "When someone says a developer 'has a hyperscaler deal', ask which of these three it is. The answer changes the size of the opportunity by an order of magnitude.",
+   "cards": [
+    {
+     "t": "Project PPA / {{environmental attribute purchase agreement}} — Meta, Google",
+     "meta": "ENGIE builds and owns a named plant; the buyer takes its output",
+     "adv": [
+      "Underwrites the project: the contract is what makes the plant financeable",
+      "Large — Meta takes 100% of the 600 MW Swenson Ranch build, a $900m asset",
+      "Delivers {{additionality}}: a new plant exists that would not otherwise"
+     ],
+     "dis": [
+      "ENGIE must own and build the asset, so it consumes capital",
+      "Long construction lead time — Swenson Ranch was signed in 2025 for 2027",
+      "Concentrated: one buyer, one plant, one point of failure"
+     ]
+    },
+    {
+     "t": "Retail supply and hourly matching — Microsoft, AstraZeneca, Aker BioMarine",
+     "meta": "ENGIE Resources sells the customer their electricity and matches it hour by hour",
+     "adv": [
+      "Much harder to replicate than an annual {{renewable energy certificate}} match — it requires a fleet with flexibility in it",
+      "No new plant needed, so almost no capital consumed",
+      "Sticky: AstraZeneca's agreement runs nine years to 2034"
+     ],
+     "dis": [
+      "Thinner margin than owning generation",
+      "Only works in deregulated states — ENGIE Resources serves 14",
+      "Requires ENGIE to carry shape and balancing risk on the customer's load"
+     ]
+    },
+    {
+     "t": "Intermediated resale — QTS",
+     "meta": "A PPA on someone else's plant, passed through with supply and management bundled",
+     "adv": [
+      "Fastest route to a signed data-centre deal — no build, no land, no queue",
+      "Uses ENGIE's credit and trading desk as the product"
+     ],
+     "dis": [
+      "The generation is not ENGIE's, so it does not add to ENGIE's fleet",
+      "Lowest margin of the three, and easiest for a competitor to copy",
+      "Must not be counted as ENGIE-owned capacity contracted to data centres — a common misreading"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-co-location-idea",
+   "title": "Co-location: moving the load to the power instead of the power to the load",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The reason data-centre developers are talking to battery owners at all is a queue. Connecting a large new load to the transmission system takes years — median times in ERCOT have stretched past four years for generation, and large loads face their own studies. Meanwhile a developer like ENGIE already holds interconnection rights at hundreds of sites, secured years ago.",
+    "**Co-location** inverts the problem. Instead of building a data centre and asking the grid for power, you build the data centre next to generation that is already connected. ENGIE's agreements with Prometheus Hyperscale on the Texas I-35 corridor and its preliminary agreement with Cipher Mining for up to 300 MW at a West Texas wind site are both this idea.",
+    "ENGIE's own framing of the Cipher deal is unusually honest and worth reading closely: co-location 'alleviates transmission congestion, offsets {{basis risk}}, and mitigates {{curtailment}} challenges in West Texas'. Every one of those is a problem the generator has, not a favour to the data centre.",
+    "**{{Curtailment}}** is when the grid tells a wind farm to stop producing because there is nowhere for the power to go. **{{Basis risk}}** is the gap between the price at the plant's {{load zone}} and the hub price the PPA settles against — in West Texas, where generation is abundant and transmission is thin, that gap can be brutally negative. A co-located load consumes power at the plant, which fixes both: nothing is curtailed and nothing has to travel.",
+    "So the honest read is that co-location is a *generator's* solution being sold as a *buyer's* solution, and it happens to serve both. The open question is delivery. Neither the Prometheus nor the Cipher agreement discloses megawatts under contract; no independent source has verified construction, financing or a load commitment; and the group's advanced-stage data-centre pipeline moved from 0.8 GW to 4 GW in six months, which is a forward claim rather than a delivered one."
+   ]
+  },
+  {
+   "id": "ercot-revenue-fall",
+   "title": "The ERCOT battery revenue fall, in numbers",
+   "kind": "bars",
+   "unit": "$/kW-year",
+   "read": "3 min",
+   "intro": "Two independent measurement houses, two methodologies, two answers — and no source reconciles them. Both show the same shape.",
+   "items": [
+    {
+     "label": "Enverus: 2023 average",
+     "v": 149
+    },
+    {
+     "label": "Modo: 2023 merchant",
+     "v": 192
+    },
+    {
+     "label": "Modo: 2024-25 merchant average",
+     "v": 43
+    },
+    {
+     "label": "Enverus: 2025 projected",
+     "v": 17
+    }
+   ],
+   "note": "Enverus measures all-revenue and projects 2025; Modo measures merchant revenue realised. Enverus separately reports most major operators posting year-to-date profitability below 2.2%. When two credible sources disagree this far, the honest treatment is to carry both and say so."
+  },
+  {
+   "id": "engie-on-one-clock",
+   "title": "ENGIE North America on one clock",
+   "kind": "timeline",
+   "read": "4 min",
+   "intro": "Three storylines run in parallel: the fleet grows, the capital leaves, and the parent's attention moves to Britain.",
+   "items": [
+    {
+     "x": 2023.6,
+     "label": "Broad Reach Power acquired for over $1bn of equity value — the fleet is bought, not built"
+    },
+    {
+     "x": 2023.9,
+     "label": "Sun Valley commissioned: 100 MW / 100 MWh, the only project with a published energy figure"
+    },
+    {
+     "x": 2024.7,
+     "label": "1.8 GW of BESS installed, 1 GW of it added since January — and 1.8 GWh dispatchable, a one-hour fleet"
+    },
+    {
+     "x": 2025.2,
+     "label": "Ares takes 49% of 905 MW for $430m — capital recycling begins"
+    },
+    {
+     "x": 2025.4,
+     "label": "CBRE Investment Management takes 49.5% of 2.4 GW across 31 operating batteries"
+    },
+    {
+     "x": 2025.7,
+     "label": "Prometheus Hyperscale co-location agreement on the Texas I-35 corridor"
+    },
+    {
+     "x": 2025.8,
+     "label": "Five 50+ MW two-hour batteries commissioned — the duration strategy shifts"
+    },
+    {
+     "x": 2026.15,
+     "label": "ENGIE SA agrees to buy UK Power Networks for about EUR 12.2bn — the group's capital priority moves"
+    },
+    {
+     "x": 2026.3,
+     "label": "Ocean Winds surrenders two US offshore leases for about $885m, conditioned on equal investment in oil, LNG and energy infrastructure"
+    },
+    {
+     "x": 2026.6,
+     "label": "CEO David Carroll departs; an interim CEO runs the region while also running ENGIE Resources"
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this model fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "3 min",
+   "ps": [
+    "**The moat is a queue position, and queues close.** ENGIE's ERCOT lead was built on interconnection applications filed as early as 2020. In the second half of 2025 new ERCOT battery applications fell 50%, median queue time went from 3.5 to 4.1 years, and of 453 large battery projects that exited the queue only 27% ever operated. That protects the incumbent — and it also means the incumbent cannot easily add to its own position.",
+    "**Eighteen new owners took 52% of 2025's ERCOT additions.** TotalEnergies, Eni, Equinor, Brookfield, Intersect, Gridstor, esVolta, Tokyo Gas America — none of them had a Texas battery before. Absolute megawatts can grow while share erodes.",
+    "**Capital recycling has a floor.** You can sell just under half of a portfolio once. Selling the next half means giving up control, and control is what the model depends on.",
+    "**A bought fleet carries bought problems.** The 300 MW Platinum project at Savoy came with a tax abatement Belltown had secured in 2022, before ENGIE owned it. Fannin County replaced its entire board of commissioners, its fire marshal said publicly that local firefighting capability was limited, ENGIE sued the county, and the dispute was settled in May 2026 on undisclosed terms with first-responder training and NFPA 855 walk-throughs attached.",
+    "**Nobody is in charge.** Since 1 August 2026 the region's chief executive and chief renewables officer are both interim, and both hold their previous jobs at the same time."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "5 min",
+   "cards": [
+    {
+     "q": "Why can a one-hour battery compete with a four-hour battery for the same ancillary-services product?",
+     "a": "Because reserve products are priced on megawatts of readiness, not megawatt-hours delivered. A 100 MW battery can sell 100 MW of reserve without discharging anything, so duration does not affect eligibility — only the cell cost, which is four times lower."
+    },
+    {
+     "q": "What does 'retains a controlling share and will continue to operate and manage the assets' actually buy the seller?",
+     "a": "Three things: consolidation and dispatch control, a continuing O&M fee stream, and governance — by staying just under 50% sold, the seller keeps the accounting and the decisions."
+    },
+    {
+     "q": "Why did ERCOT ancillary-services revenue fall about 90% while the battery fleet nearly doubled?",
+     "a": "Ancillary demand is fixed by the grid operator's reliability requirement, not by supply. Doubling the fleet split the same procurement more ways, so price per unit of readiness collapsed."
+    },
+    {
+     "q": "What is basis risk, and why does co-locating load at a West Texas wind farm reduce it?",
+     "a": "Basis risk is the difference between the price at the plant's own location and the hub price its contract settles against. Consuming the power on site means the energy never has to travel to the hub, so the locational gap stops mattering."
+    },
+    {
+     "q": "What is round-trip efficiency and why does it set a floor on arbitrage?",
+     "a": "The fraction of stored energy you get back — about 85-90% for lithium-ion. You must buy roughly 1.15 MWh to sell 1 MWh, so the price spread has to exceed that loss before arbitrage earns anything."
+    },
+    {
+     "q": "Distinguish a project PPA from 24/7 carbon-free supply.",
+     "a": "A project PPA buys the output of one named plant, usually underwriting its construction. A 24/7 agreement matches a customer's actual hourly consumption against a portfolio of generation and storage — no new plant is required, but it demands a flexible fleet."
+    },
+    {
+     "q": "Why is intermediated resale not the same as contracting your own capacity?",
+     "a": "The generation belongs to a third party. The developer is lending its credit, its trading desk and its retail licence, not its assets — so the deal adds revenue but no megawatts to the fleet."
+    },
+    {
+     "q": "What does curtailment cost a wind farm, and how does co-location address it?",
+     "a": "Curtailment means being told to stop producing because the grid cannot absorb the output — lost revenue on an asset that is working perfectly. A co-located load consumes the power on site, so there is nothing to curtail."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 min",
+   "items": [
+    {
+     "q": "A developer announces a '2.4 GW battery portfolio transaction with an infrastructure fund'. What is the first thing to establish?",
+     "c": [
+      "The technology of the batteries",
+      "What percentage was sold and who keeps control",
+      "The credit rating of the fund",
+      "Whether the projects are in ERCOT or CAISO"
+     ],
+     "a": 1,
+     "why": "A 49.5% minority sale with the seller retaining control and the O&M contract is capital recycling — it funds the next project. A full sale is an exit. The megawatt number is identical either way, so it tells you nothing on its own."
+    },
+    {
+     "q": "An ERCOT battery owner reports growing megawatts and falling revenue per kilowatt. What does that most likely indicate?",
+     "c": [
+      "The batteries are degrading faster than expected",
+      "The owner is losing market share",
+      "Ancillary-services prices fell as the whole fleet grew",
+      "The owner switched to a worse trading strategy"
+     ],
+     "a": 2,
+     "why": "Ancillary demand is set by the grid operator's reliability requirement, not by how many batteries want to sell. As the ERCOT fleet went from 7.8 GW to 13.9 GW across 2025, the same fixed procurement was split more ways and prices collapsed — for everyone, not just one owner."
+    },
+    {
+     "q": "Why should a company's stated '3.5+ GW of BESS in North America' not be averaged with an independent tally of '3.662 GW operating'?",
+     "c": [
+      "Because company figures are always wrong",
+      "Because they may measure different things and no source reconciles them",
+      "Because independent tallies exclude California",
+      "Because one is in megawatts and one in megawatt-hours"
+     ],
+     "a": 1,
+     "why": "The bases differ — operating versus operating-plus-construction, batteries only versus batteries plus pumped hydro, one market versus national. Averaging or adding figures with unknown definitional bases manufactures a number no source supports."
+    },
+    {
+     "q": "A hyperscaler announces a clean-power deal with a developer. What determines whether new generation actually gets built?",
+     "c": [
+      "The length of the contract",
+      "Whether it is a project PPA on a specific new plant",
+      "The size in megawatts",
+      "Whether the buyer is investment grade"
+     ],
+     "a": 1,
+     "why": "Only a project-tied PPA underwrites construction and delivers additionality. Retail supply, hourly matching and intermediated resale all move existing electrons — valuable, but they add no plant."
+    },
+    {
+     "q": "What problem does co-locating a data centre at a West Texas wind farm solve for the generator?",
+     "c": [
+      "It raises the wind farm's capacity factor",
+      "It removes curtailment and basis risk by consuming the power on site",
+      "It shortens the turbine maintenance cycle",
+      "It qualifies the project for a larger tax credit"
+     ],
+     "a": 1,
+     "why": "ENGIE frames it exactly this way: co-location 'alleviates transmission congestion, offsets basis risk, and mitigates curtailment challenges'. All three are the generator's problems, solved by never sending the power anywhere."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "Broad Reach Power",
+   "d": "The Texas battery storage platform ENGIE acquired in August 2023 for more than US$1 billion of equity value, which became the core of its ERCOT fleet."
+  },
+  {
+   "t": "Sun Valley",
+   "d": "ENGIE's co-located solar and storage site in Hill County, Texas — the only North American ENGIE battery for which an energy figure (100 MW / 100 MWh) is published first-party."
+  }
+ ]
+}

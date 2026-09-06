@@ -761,6 +761,14 @@
       "def": "The current an AC cable draws simply to charge its own capacitance, growing with length and voltage. Beyond roughly a hundred kilometres of subsea cable it consumes the whole rating, which is why long submarine links are direct current."
     },
     {
+      "slug": "caiso",
+      "term": "CAISO",
+      "def": "The California Independent System Operator, which runs the transmission grid and wholesale market for most of California. Its evening ramp — solar falling as demand rises — is the steepest in North America, which is why four-hour batteries became the default duration there long before they did in Texas.",
+      "aliases": [
+        "California ISO"
+      ]
+    },
+    {
       "slug": "capacity-agreement",
       "term": "capacity agreement",
       "def": "A binding contract to supply a stated amount of compute or power for a stated period at agreed terms — the document a lender will finance against, as opposed to an announcement, an option or a letter of intent.",
@@ -3575,6 +3583,16 @@
       ]
     },
     {
+      "slug": "hourly-matching",
+      "term": "hourly matching",
+      "def": "Matching a site's electricity consumption to carbon-free generation in every hour, rather than netting annual totals. It is far harder than an annual match because it requires generation or storage available at 3am as well as at noon, which is why it is sold as a premium product.",
+      "aliases": [
+        "24/7 carbon-free energy",
+        "24/7 CFE",
+        "time-matched supply"
+      ]
+    },
+    {
       "slug": "hrsg",
       "term": "HRSG",
       "def": "Heat-recovery steam generator: the boiler that sits in a gas turbine's exhaust and makes steam from heat that a simple-cycle plant throws away. It is where a combined-cycle plant's extra third of output comes from, and it is also most of the extra equipment, the extra water treatment and the extra construction time.",
@@ -5865,6 +5883,16 @@
       ]
     },
     {
+      "slug": "pv-module",
+      "term": "PV module",
+      "def": "The framed, glazed assembly of interconnected solar cells that is the unit of installation on a solar site — typically 2 to 2.5 metres long and 25 to 35 kilograms, which is why placing them is the most labour-intensive step in building a solar plant.",
+      "aliases": [
+        "solar module",
+        "solar panel",
+        "PV modules"
+      ]
+    },
+    {
       "slug": "pwm",
       "term": "PWM",
       "def": "Pulse-width modulation: controlling a converter by switching fully on and fully off at a fixed rate and varying only the fraction of each cycle spent on — the duty cycle. A switch that is either fully on or fully off wastes little, which is the basic reason switching converters beat the old linear ones.",
@@ -6144,6 +6172,15 @@
       ]
     },
     {
+      "slug": "renewable-energy-certificate",
+      "term": "renewable energy certificate",
+      "def": "A tradable certificate representing the environmental attributes of one megawatt-hour of renewable generation, separable from the electricity itself. Buying certificates alone matches consumption on paper; buying them bundled with the power from a named new plant is what makes a purchase additional.",
+      "aliases": [
+        "REC",
+        "RECs"
+      ]
+    },
+    {
       "slug": "rent-escalator",
       "term": "rent escalator",
       "def": "A clause raising rent by a fixed percentage each year (2–3% is common in data-center leases). Over a 15–20-year term it compounds into a large share of the contract's headline value.",
@@ -6151,6 +6188,15 @@
         "escalator",
         "annual escalator",
         "base rent escalator"
+      ]
+    },
+    {
+      "slug": "repowering",
+      "term": "repowering",
+      "def": "Replacing the turbines, and often the foundations, on an existing wind site while keeping its land rights and grid connection. A repower typically raises output substantially on the same acreage and restarts the asset's depreciation and warranty life, because the valuable part of an old wind farm is its interconnection, not its hardware.",
+      "aliases": [
+        "repower",
+        "repowered"
       ]
     },
     {
@@ -6721,6 +6767,16 @@
         "SAC",
         "Sine Amplitude Converter",
         "sine-amplitude converter"
+      ]
+    },
+    {
+      "slug": "single-axis-tracker",
+      "term": "single-axis tracker",
+      "def": "The steel structure that rotates a row of solar modules east to west through the day, following the sun on one axis. Trackers raise annual energy yield by roughly 15-25% over fixed-tilt mounting and are the standard for utility-scale solar, but they add moving parts, torque tubes and motors that construction crews must install and align precisely.",
+      "aliases": [
+        "tracker",
+        "trackers",
+        "torque tube"
       ]
     },
     {

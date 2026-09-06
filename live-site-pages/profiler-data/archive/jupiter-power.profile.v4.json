@@ -239,14 +239,6 @@
    "context": "Jupiter was reported the third storage owner past 1 GWh installed in ERCOT alongside Plus Power and ENGIE — parallel merchant BESS fleets contesting the same Texas revenue stack, both now expanding into Northeastern capacity markets.",
    "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
    "status": "active"
-  },
-  {
-   "slug": "engie-north-america",
-   "type": "competitor",
-   "status": "active",
-   "note": "The largest ERCOT storage owner, named in the same Modo ranking that places Jupiter third past 1 GWh installed.",
-   "context": "Modo Energy's ERCOT annual buildout report ranks ENGIE first at about 2.8 GW and a 20% share, more than twice the next owner, and reports Jupiter the third owner past 1 GWh installed alongside Plus Power and ENGIE. The two run parallel merchant fleets against the same energy and ancillary revenue stack; ENGIE's fleet has historically been one-hour, with five 50+ MW two-hour units commissioned in Q3 2025, against Jupiter's mostly one-to-two-hour durations.",
-   "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
   }
  ],
  "policyExposure": [
@@ -423,6 +415,6 @@
    "url": "https://jupiterpower.io/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

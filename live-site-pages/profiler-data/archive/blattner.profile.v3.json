@@ -198,16 +198,6 @@
    "slug": "hithium",
    "type": "other",
    "note": "No relationship — the dossier treats Blattner compatibility as a qualification checkbox for Hithium, not a sales pursuit; its Quanta storage volume (4.3 GWh/yr) is the denominator of US BESS construction."
-  },
-  {
-   "slug": "rwe-clean-energy",
-   "type": "customer",
-   "status": "active",
-   "scale": "Emily Solar, 273.6 MW",
-   "via": "EPC construction on utility-scale solar",
-   "note": "RWE is one of Blattner's repeat-owner frameworks; Blattner built Emily Solar, the project that completed RWE's first gigawatt in Illinois.",
-   "context": "RWE's May 2026 ribbon-cutting release credits Blattner with building the 273.6 MW Emily Solar project in Clark, Cumberland and Coles counties, with about 400 peak construction jobs, and publicly cites 'Blattner's delivery credibility'. The relationship predates it — Blattner's own positioning lists RWE among its repeat-owner frameworks alongside Pattern, Orsted, Recurrent/Goldman and NextEra/FPL. On Blattner sites the owner furnishes the batteries, so any storage procurement on RWE's co-located projects stays RWE's decision.",
-   "source": "https://www.prnewswire.com/news-releases/rwe-celebrates-1-gigawatt-emily-solar-302770003.html"
   }
  ],
  "policyExposure": [
@@ -362,6 +352,6 @@
    "url": "https://www.blattnercompany.com/expertise/storage"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

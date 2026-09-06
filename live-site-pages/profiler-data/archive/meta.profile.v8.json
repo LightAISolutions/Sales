@@ -237,28 +237,6 @@
    "note": "Prepayment agreement supporting a 1.2 GW clean-energy campus in Pike County, Ohio — Meta prepays for power and funds powerhouse deployment.",
    "context": "Announced 9 January 2026, signed on 5 January, and the strongest instrument in Oklo's entire customer book because it moves money rather than intent: Oklo states the funding is applied to securing nuclear fuel for the first phase. First phase targeted as early as 2030 with the full 1.2 GW by 2034.\n\nThe interconnection is the live risk. PJM withdrew the 750 MW Pike County request on 3 August 2026 — 150 MW nuclear, 300 MW fuel cells and 300 MW gas — stating Oklo never demonstrated ride-through of a sudden voltage drop; Oklo filed an emergency complaint at FERC on 28 August 2026 claiming a delay of at least 14 months.",
    "source": "https://oklo.com/newsroom/news-details/2026/Oklo-Meta-Announce-Agreement-in-Support-of-1-2-GW-Nuclear-Energy-Development-in-Southern-Ohio/default.aspx"
-  },
-  {
-   "slug": "aes-clean-energy",
-   "type": "supplier",
-   "status": "active",
-   "since": "2025-05",
-   "scale": "650 MW",
-   "via": "Two long-term solar PPAs in the SPP market",
-   "note": "AES Clean Energy contracted 650 MW of solar to Meta across Texas and Kansas in May 2025.",
-   "context": "AES's own release states the two PPAs support Meta's data centres with 650 MW of solar that AES is bringing online in the Southwest Power Pool, and quotes Meta's global head of energy. It is the transaction alongside which AES first quantified its hyperscaler position — 10.1 GW of contractual arrangements with major global hyperscalers including 7.7 GW of long-term PPAs, later restated as 11.8 GW of signed agreements with major technology firms. This dossier's portfolio line already carried 'AES (650 MW)', consistent with AES's figure.",
-   "source": "https://s202.q4cdn.com/986265382/files/doc_news/2025/05/05-20-25-AES-Meta-PR_FINAL.pdf"
-  },
-  {
-   "slug": "rwe-clean-energy",
-   "type": "supplier",
-   "status": "active",
-   "since": "2024-08",
-   "scale": "872 MW across four solar PPAs",
-   "via": "Long-term PPAs on RWE-owned solar",
-   "note": "RWE Clean Energy is Meta's four-project solar counterparty across Illinois, Louisiana and Texas.",
-   "context": "The named projects are Emily Solar (274 MW, Illinois) and Lafitte Solar (100 MW, Louisiana) announced together in August 2024, Waterloo Solar (200 MWac, Bastrop County, Texas) in March 2025 and Rabbit's Foot Solar (298 MWac, Bowie County, Texas) in June 2026 with COD at end-2027. Three totals circulate for the same relationship and no source reconciles them: 374 MW for the first pair, 574 MW in one account that substitutes Waterloo for one of them, and 872 MW for 'agreements totalling 872 MW during the last two years'. RWE renamed the business RWE Americas, LLC in March 2026.",
-   "source": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/"
   }
  ],
  "policyExposure": [
@@ -493,11 +471,6 @@
    "date": "2026-07"
   },
   {
-   "label": "RWE — Meta expands its partnership with RWE (Rabbit's Foot Solar, 298 MWac, Bowie County, Texas)",
-   "url": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/",
-   "date": "2026-06-11"
-  },
-  {
    "label": "Utility Dive — Enbridge/Meta Cowboy solar+storage",
    "url": "https://www.utilitydive.com/news/enbridge-meta-build-365-mw200-mw-solarstorage-project/820905/",
    "date": "2026-05-21"
@@ -558,11 +531,6 @@
    "date": "2025-06-03"
   },
   {
-   "label": "AES — AES and Meta sign long-term PPAs to deliver 650 MW of solar capacity in Texas and Kansas (PDF)",
-   "url": "https://s202.q4cdn.com/986265382/files/doc_news/2025/05/05-20-25-AES-Meta-PR_FINAL.pdf",
-   "date": "2025-05-21"
-  },
-  {
    "label": "Meta — sustainability/energy portfolio page",
    "url": "https://sustainability.atmeta.com/energy/"
   },
@@ -575,6 +543,6 @@
    "url": "https://www.ucs.org/about/news/judge-orders-meta-explain-new-gas-demand-hyperscale-louisiana-data-center"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 9
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 8
 }

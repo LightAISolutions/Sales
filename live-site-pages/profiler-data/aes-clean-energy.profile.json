@@ -1,0 +1,1208 @@
+{
+ "schemaVersion": 7,
+ "slug": "aes-clean-energy",
+ "name": "AES Clean Energy",
+ "shortName": "AES Clean Energy",
+ "categories": [
+  "developer",
+  "ipp"
+ ],
+ "website": "https://www.aes.com/energy-solutions/carbon-free-energy",
+ "headquarters": "Arlington, Virginia, United States (reported from The AES Corporation, 4300 Wilson Boulevard); the unit's own site, aescleanenergy.com, returned HTTP 520 throughout this research pass",
+ "employees": "Not separately disclosed; The AES Corporation cut about 10% of its workforce (~1,000 roles) in a restructuring approved in February 2025",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "NYSE: AES (parent, The AES Corporation) — under a signed agreement to be taken private by Global Infrastructure Partners and EQT"
+ },
+ "summary": "BOTTOM LINE UP FRONT: AES Clean Energy is the third-largest owner of operating battery storage in the United States and, by its own account, the largest seller of clean energy to corporations globally — and its listed parent is most of the way through a US$33.4 billion take-private that has already ended earnings guidance and public earnings calls. BACKGROUND. AES Clean Energy is the US renewables business of The AES Corporation (NYSE: AES) and, per the FY2025 10-K, \"comprises AES Renewable Holdings, sPower, AES Clean Energy Development, and other renewables assets\". It is a sub-unit of the Renewables strategic business unit, not a reportable segment: the Renewables SBU also carries Chile, Argentina, Colombia, Panama, the Dominican Republic, Mexico, Bulgaria, Jordan and the Netherlands, and reported 17,836 MW of operating capacity at 31 December 2025. AES Clean Energy itself reported 10,961 MW operating, 3,031 MW under construction (1,542 MW wind, 939 MW solar, 550 MW storage), a 7.6 GW backlog of signed PPAs and a 46 GW development pipeline, down from 53 GW a year earlier after a February 2025 restructuring that cut about 10% of the parent's workforce and \"right-sized our development company to focus on executing on the backlog and pursuing larger but fewer projects\". S&P Global Commodity Insights, working from government filings, ranks AES Clean Energy Development third among US battery owners at 1.978 GW operating at 30 June 2026 — 42 MW ahead of Intersect Power, which Alphabet now owns. On 1 March 2026 the parent signed a merger agreement with a consortium led by Global Infrastructure Partners and EQT Infrastructure VI, with CalPERS and the Qatar Investment Authority as co-underwriters, at US$15.00 a share — about US$10.7bn of equity and US$33.4bn of enterprise value. Stockholders approved it on 26 June 2026 and CFIUS cleared it on 27 August 2026; FERC and the Ohio and New York commissions have not.",
+ "ecosystemRole": "We assess AES Clean Energy as the ecosystem's most concentrated hyperscaler-facing renewables platform and one of its three largest storage buyers. Three things make it structurally different from its peers. It sells into the same four accounts everyone else does but has committed further: corporate PPAs are about two-thirds of the parent's backlog and about 85% of the long-term renewable contracts signed in 2025. It owns 22% of Fluence and buys from it — the 10-K states that \"many of the Company's energy storage construction projects utilize Fluence as either a BESS supplier or EPC contractor\" — which makes AES the one large US storage owner whose procurement decision is entangled with an equity position. And it is building its own construction automation: Maximo, a module-installing robot that AES sells as a service to third-party EPCs as well as running on its own sites.",
+ "productsAndServices": [
+  {
+   "name": "Utility-scale renewables and storage under long-term corporate PPAs",
+   "category": "Development, ownership and operation",
+   "description": "The core business. AES markets six named carbon-free offerings — Utility Scale Renewables, Solar + Storage, Behind the Meter, Co-location, 24/7 Carbon-Free Energy and Microgrid — and the 10-K states that the financial results of AES Clean Energy \"are primarily driven by the efficient construction and operation of renewable energy facilities across the U.S. under long-term PPAs (including long-term REC contracts), through which the energy price on the entire production of these facilities is determined\". At 31 December 2025 the unit reported 10,961 MW operating (from 8,927 MW a year earlier), 3,031 MW under construction against a construction budget of over US$12 billion, a 7.6 GW signed-PPA backlog expected online through 2029, and 2,776 MW of PPAs signed or awarded during 2025.",
+   "highlights": [
+    "S&P Global Commodity Insights ranks AES Clean Energy Development third in US operating battery storage at 1.978 GW (30 June 2026), behind NextEra (5.779 GW) and ENGIE North America (3.662 GW)",
+    "AES does not publish a consolidated US operating storage MW or MWh figure; summing the US 'Energy Storage' rows in the FY2025 10-K facility table gives approximately 2,290 MW across 27 rows, a computation rather than an AES statement",
+    "The development pipeline fell from 53 GW to 46 GW across 2025 — the February 2025 restructuring explicitly 'right-sized our development company'",
+    "Cleanview ranks AES ninth among US renewable developers by pipeline at 17,065 MW across 131 projects, while its own AES page shows 58 projects and 9,273 MW; neither is dated and no source reconciles them",
+    "The under-construction mix inverted year on year: 1,282 MW of storage and 500 MW of wind at end-2024 became 550 MW of storage and 1,542 MW of wind at end-2025"
+   ],
+   "positioning": "AES names no competitor. It positions by ranking: 'consistently rated by Bloomberg New Energy Finance as one of the top two largest sellers globally of renewable power to corporate customers', 'the leading U.S. renewables growth platform in serving large corporations with its 46 GW development pipeline', and 'the largest supplier of clean energy to corporations globally'. The independent check is partial: BNEF's public write-up of the same 2025 report names ENGIE the number-one global seller at 3.6 GW and publishes no US or Americas seller table, so AES's US ranking is real but reaches the open web only through AES's own release of a paywalled report.",
+   "soldThrough": "Long-term PPAs and REC contracts direct to corporates and utilities; Develop-Transfer Agreements that hand over construction-ready projects and powered land; tax-equity partnerships on the majority of solar projects; IRA tax-credit transferability since 2023; and minority-stake capital recycling on operating assets",
+   "targetSegments": [
+    "Technology and data centres (about two-thirds of parent backlog is corporate PPAs)",
+    "Mining and metals; commercial and industrial",
+    "Utilities, public power and cooperatives"
+   ],
+   "roadmap": "Backlog of 7.6 GW expected online through 2029; the merger proxy's standalone case assumes a run-rate of 2.8 GW placed in service per year from 2028, the acquisition case 5.5 GW per year from 2030"
+  },
+  {
+   "name": "24/7 carbon-free energy, co-location and private-use networks for data centres",
+   "category": "Data-centre power",
+   "description": "The commercial motion AES has bet the platform on. The 10-K describes it as \"advanced 24/7 carbon-free energy offerings tailored to support large energy-intensive operations, such as hyperscale data centers, by combining renewables, storage, and load-siting solutions\". Two adjacent structures sit beside the PPA: Develop-Transfer Agreements, under which AES manages the full greenfield development process and transfers a construction-ready project or powered land to a utility or corporate buyer; and, from July 2025, a development framework agreement to build \"a private-use network structure to support the customer's planned data center in Texas\", carrying a transaction price of about US$481 million over roughly two years, of which US$105 million was recognised in 2025. AES does not name that customer.",
+   "highlights": [
+    "AES states 11.8 GW of signed agreements to supply power to major technology firms (March 2026), from 10.1 GW of hyperscaler arrangements including 7.7 GW of long-term PPAs (May 2025)",
+    "Corporate PPAs are about two-thirds of the parent's backlog; roughly 85% of 2025's long-term renewable contracts, excluding storage, were with corporate customers",
+    "AES names Google its top corporate buyer in 2025, its fifth consecutive year in BNEF's top provider position for the US and the Americas",
+    "Development services in the US added US$91m to Renewables SBU operating margin in FY2025 and US$123m in H1 2026 — the DTA line is now a visible earnings driver, not a side business",
+    "No independent source verifies AES's rank among hyperscaler PPA counterparties; the claim rests on a paywalled BNEF report relayed through AES's own release"
+   ],
+   "positioning": "AES's stated wedge is speed: its own material sets 12-18 month wind, solar and battery deployment against 5+ years for new gas, against roughly 2,600 GW awaiting grid connection. Gluski's framing on the Meta deal was 'energy solutions that offer fast time-to-power and low-cost electricity'.",
+   "soldThrough": "Long-term PPAs; Develop-Transfer Agreements; development framework agreements for private-use networks; 24/7 hourly-matched supply structures",
+   "targetSegments": [
+    "Hyperscalers — Amazon, Microsoft, Meta and Google are all named offtakers",
+    "Large corporates outside technology (BP, Northrop Grumman, the University of Pennsylvania, Constellation)",
+    "Regulated utilities buying construction-ready projects through DTAs"
+   ],
+   "roadmap": "The Texas private-use network carries a two-year performance period from July 2025 with US$245m of contract liability at 31 December 2025; Bellefield Phase 2 was expected online in 2H 2026"
+  },
+  {
+   "name": "Maximo — robotic solar module installation",
+   "category": "Construction automation (New Energy Technologies SBU)",
+   "description": "An AI-enabled robot that automates the heavy lifting of placing and attaching solar modules. AES describes it as installing in 50% less time and at 50% of the cost of standard mechanical installation. A high-speed robotic arm places modules while a lower arm auto-tightens clamps; AI computer vision detects inconsistencies and self-corrects; sensors, cameras and a neural-net spatial model give it awareness, and personnel-detection sensors halt operation. It runs off a mobile microgrid with lithium-iron-phosphate batteries and AC/DC inverters, sits on a tracked base for sandy, muddy or uneven terrain, and is technology-agnostic across modules, clamps, rails and single-axis trackers. Critically, AES sells it as a service: its results are \"driven by the growth in its module installation service revenue\" and \"profit margins on customer contracts with solar EPC companies\", serving demand \"from AES and other leading owners\".",
+   "highlights": [
+    "Five units were in operation at 31 December 2025, all assisting construction at the 2 GW Bellefield facility, with AES expecting to expand the fleet against a growing backlog of installation contracts in 2026",
+    "About 10 MW installed as of an October 2024 AES blog, with 100 MW projected by the end of 2025 and a target of up to 5 GW of AES backlog and pipeline over three years",
+    "Deployment states named by AES: California, Ohio, New York, Washington DC and Louisiana; named projects Bellefield, Cavalier (first MW-scale deployment) and Oak Ridge, Louisiana (260 MW)",
+    "Higher v3.0 throughput figures in circulation (over 500 installations a day, 180,000 cumulative robotic installations) are third-party and were not verified against any AES source",
+    "No AES-published product named 'Atlas' exists in the 10-K, 10-Q, proxy or on aes.com"
+   ],
+   "positioning": "AES is the only large US renewables owner selling its own construction-automation product to competing EPCs. The positioning is labour-cost and schedule risk rather than technology differentiation, and AES names no competing robot.",
+   "soldThrough": "Module installation service contracts with solar EPC companies, including AES's own projects and third-party owners",
+   "targetSegments": [
+    "Solar EPC contractors",
+    "Utility-scale solar owners and developers"
+   ],
+   "roadmap": "Fleet expansion in 2026 against a stated backlog of installation contracts"
+  },
+  {
+   "name": "New Energy Technologies portfolio — Fluence, AI Fund, Uplight, 5B",
+   "category": "Ownership stakes and venture platforms (parent-level)",
+   "description": "The AES Corporation's stakes in third-party platforms and internally developed initiatives sit in a separate SBU from AES Clean Energy but bear directly on it. Fluence, created in 2018 as a joint venture of AES and Siemens and listed on Nasdaq since November 2021, is the largest: AES held a 28.19% economic interest at 31 December 2025, redeemed 10,066,414 Fluence Energy LLC common units in May 2026 and sold the resulting Class A shares publicly for US$207 million net and a US$186 million pre-tax gain, taking its interest from 28% to 22% while retaining significant influence and equity-method accounting. Uplight is being sold — a March 2026 agreement covers AES's 25% interest and convertible note for up to US$40 million, with equity-method accounting suspended in Q4 2025. The AI Fund partnership made its first equity investments in two co-built companies during 2025; 5B is held under the measurement alternative.",
+   "highlights": [
+    "AES's 10-K states plainly that 'many of the Company's energy storage construction projects utilize Fluence as either a BESS supplier or EPC contractor', recorded primarily in property, plant and equipment",
+    "Fluence's own FY2025 10-K reports that about 24% of its revenue was with related parties, primarily AES and affiliates — US$1,082.3m in FY2024 — and that 13% of its US$5.3bn of remaining performance obligations is with AES",
+    "AES sold its Class A tranche at US$21.00 in May 2026; Fluence closed at US$10.88 on 28 August 2026 after cutting FY2026 revenue guidance on contract-manufacturing delays",
+    "Related-party property, plant and equipment rose from US$851m to US$1,254m across 2025, the closest available proxy for Fluence procurement — AES discloses no Fluence-specific figure",
+    "A consolidated securities complaint filed in June 2025 names Fluence, individual Fluence defendants and the AES defendants on behalf of purchasers of Fluence Class A stock between 28 October 2021 and 10 February 2025"
+   ],
+   "positioning": "AES is simultaneously Fluence's largest shareholder after Siemens, its largest customer, and a co-defendant in its securities litigation — a three-way entanglement no other large US storage owner has with its supplier.",
+   "soldThrough": "Equity stakes held at parent level; procurement flows through AES Clean Energy construction contracts on arm's-length terms disclosed as related-party transactions",
+   "targetSegments": [
+    "Not sold — these are ownership positions"
+   ],
+   "roadmap": "Uplight sale expected to close in the second half of 2026"
+  },
+  {
+   "name": "Flexible capacity, grid infrastructure and digital operations",
+   "category": "Adjacent solution families",
+   "description": "Two solution families sit alongside carbon-free energy in AES's own taxonomy. Flexible Capacity sells energy security through around-the-clock thermal generation and energy storage — the thermal side belongs to the Energy Infrastructure SBU, not to AES Clean Energy. Grid Infrastructure covers smart grid, grid digitalisation and microgrids. On the operating side, AES deployed Haven Safety AI across its US utilities and renewables facilities in March 2026, reporting more than a 50% reduction in the time to complete safety-incident investigations and in root-cause-analysis labour time, and was named a CIO 100 award winner for a third consecutive year.",
+   "highlights": [
+    "AES Indiana and AES Ohio sit in the Utilities SBU — their solar and storage, including the 200 MW / 800 MWh Pike County BESS on a retired coal site, is not AES Clean Energy",
+    "AES was the first company to test and use the first versions of the AI Fund's co-built products",
+    "A grid-virtualisation collaboration with X, the moonshot factory, covering Indiana and Ohio, dates from August 2021 and is outside the current window"
+   ],
+   "positioning": "Sold as operational capability rather than as a product line; AES does not publish revenue for any of it.",
+   "soldThrough": "Internal deployment and utility programmes",
+   "targetSegments": [
+    "AES's own US utilities and renewables operations"
+   ],
+   "roadmap": "No published roadmap"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Bellefield Solar + Storage (Kern County, California)",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Total capacity",
+     "value": "1 GW solar + 1 GW battery across two phases; the 10-K and data-centre page call it 'the 2 GW Bellefield solar-plus-storage facility'"
+    },
+    {
+     "band": "Power",
+     "label": "Phase structure",
+     "value": "two phases of 500 MW solar + 500 MW / 4-hour battery each"
+    },
+    {
+     "band": "Power",
+     "label": "Bellefield 1 (operating)",
+     "value": "Solar 500 MW + Energy Storage 500 MW, AES equity 75%, COD 2025, contract to 2040, customer Amazon"
+    },
+    {
+     "band": "Power",
+     "label": "Bellefield 2 (under construction)",
+     "value": "Solar 500 MW + Energy Storage 500 MW, AES equity 75%, expected COD 2H 2026"
+    },
+    {
+     "band": "Design",
+     "label": "Site",
+     "value": "approximately 7,500 acres of privately owned land at California City and Mojave"
+    },
+    {
+     "band": "Electrical",
+     "label": "Interconnection",
+     "value": "14-mile transmission line to Southern California Edison's Windhub Substation (CAISO)"
+    },
+    {
+     "band": "Output",
+     "label": "Stated output",
+     "value": "equivalent of 467,000 homes annually"
+    },
+    {
+     "band": "Economics",
+     "label": "Local impact",
+     "value": "US$150 million in lifetime tax revenue; 1,000 union jobs at peak construction"
+    },
+    {
+     "band": "Construction",
+     "label": "Automation",
+     "value": "Maximo robots used for module installation; all five units in operation at 31 December 2025 were at Bellefield"
+    }
+   ],
+   "notes": "Described by trade press as the largest solar-plus-storage facility in the United States. Phase MWh figures circulating in third-party coverage are internally inconsistent (2,000 MWh for phase one plus 4,000 MWh for phase two against a stated 4,000 MWh combined), so MW and duration are the safe figures. The battery supplier for Bellefield has never been disclosed by AES; the inference that it is Fluence, drawn from the ownership stake, is not supported by any release, filing or trade report."
+  },
+  {
+   "product": "AES Clean Energy portfolio (as AES states it, 31 December 2025)",
+   "specs": [
+    {
+     "band": "Operating",
+     "label": "US operating capacity",
+     "value": "10,961 MW (8,927 MW at 31 December 2024)"
+    },
+    {
+     "band": "Construction",
+     "label": "Under construction",
+     "value": "3,031 MW, including 1,542 MW of wind, 939 MW of solar and 550 MW of energy storage"
+    },
+    {
+     "band": "Construction",
+     "label": "Construction budget",
+     "value": "over US$12 billion (over US$9 billion a year earlier)"
+    },
+    {
+     "band": "Backlog",
+     "label": "Signed-PPA backlog",
+     "value": "7.6 GW, the majority expected online through 2029"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Development pipeline",
+     "value": "46 GW (53 GW at 31 December 2024)"
+    },
+    {
+     "band": "Origination",
+     "label": "PPAs signed or awarded in 2025",
+     "value": "2,776 MW (3,506 MW in 2024); ACE Development added over 2.1 GW to backlog"
+    },
+    {
+     "band": "Independent",
+     "label": "US storage owner ranking",
+     "value": "third at 1.978 GW operating, 30 June 2026 (S&P Global Commodity Insights), from 1.484 GW at Q2 2025"
+    },
+    {
+     "band": "Derived",
+     "label": "US operating storage (computed)",
+     "value": "approximately 2,290 MW across 27 US 'Energy Storage' rows in the FY2025 10-K facility table — a computation from the filing, not an AES figure"
+    }
+   ],
+   "notes": "AES publishes storage only as an under-construction sub-line, as per-project rows, or as international totals; it discloses no portfolio-level MWh or duration. Parent-level context: 34,740 MW owned and/or operated, Renewables SBU 17,836 MW, backlog 12.0 GW including 5.7 GW under construction, 3.2 GW completed and 4.0 GW of new PPAs signed or awarded in 2025."
+  },
+  {
+   "product": "Largest US assets and the under-construction book",
+   "specs": [
+    {
+     "band": "Operating",
+     "label": "New York Wind (OpCo D)",
+     "value": "Wind 612 MW, NYISO, 75% equity, 2021 — the only asset for which AES states an ISO/RTO"
+    },
+    {
+     "band": "Operating",
+     "label": "Spotsylvania (Virginia)",
+     "value": "Solar 485 MW, 50% equity, 2020-2021, contract to 2035, customers Apple, Akamai, Etsy and Microsoft"
+    },
+    {
+     "band": "Operating",
+     "label": "Chevelon Butte / West Camp (Arizona)",
+     "value": "Wind 454 MW and Wind 420 MW, offtaker APS"
+    },
+    {
+     "band": "Operating",
+     "label": "Rexford (California)",
+     "value": "Solar 300 MW + Storage 240 MW, offtaker Clean Power Alliance"
+    },
+    {
+     "band": "Operating",
+     "label": "McFarland B (Arizona)",
+     "value": "Solar 300 MW + Storage 150 MW, 75% equity, 2023-24, contract to 2043, customer Amazon"
+    },
+    {
+     "band": "Construction",
+     "label": "Four Horizons (Texas)",
+     "value": "Wind 945 MW, 75% equity, expected 2H 2027 - 1H 2028 — the largest project in the book"
+    },
+    {
+     "band": "Construction",
+     "label": "Buffalo Gap Repowering (Texas)",
+     "value": "Wind 527 MW, 100% equity, expected 1H 2027"
+    },
+    {
+     "band": "Construction",
+     "label": "Puerto Rico",
+     "value": "Jobos Solar 80 MW + Storage 110 MW and Salinas Solar 120 MW + Storage 175 MW, both 70% equity, expected 1H 2026"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Battery sourcing",
+     "value": "all 2026 and 2027 battery needs contracted, 'with almost all of such batteries coming from U.S. or South Korean suppliers'; US domestically manufactured battery modules contracted through 2027"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Cell chemistry",
+     "value": "not disclosed for any grid-scale project; the only AES-published chemistry is the lithium-iron-phosphate pack in Maximo's mobile microgrid"
+    }
+   ],
+   "notes": "AES does not tabulate ISO/RTO for any asset except New York Wind; every other market assignment has to be inferred from state and offtaker. The Meta transaction is the exception — AES states it is in SPP."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-27",
+   "category": "ma",
+   "headline": "CFIUS clears the Global Infrastructure Partners and EQT acquisition of The AES Corporation",
+   "read": "One of the named closing conditions falls; FERC and the Ohio and New York commissions are what is left.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000114036126034714/ef20081101_8k.htm"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026 Form 10-Q: Renewables SBU revenue US$939m and segment Adjusted EBITDA US$369m, up 54% year on year, with US$62m of the quarter's improvement from US development services; no earnings press release was issued",
+   "read": "The unit is compounding hard while the parent has stopped talking to the market — the filings are now the only channel.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000144/aes-20260630.htm"
+  },
+  {
+   "date": "2026-06-26",
+   "category": "ma",
+   "headline": "Stockholders approve the merger: 489,710,776 shares representing 68.66% of those outstanding were present, and 97.92% of votes cast were in favour",
+   "read": "The shareholder condition is satisfied; the deal's remaining risk is regulatory and political, not a vote.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000114036126026562/ef20076870_8k.htm"
+  },
+  {
+   "date": "2026-05-15",
+   "category": "financial",
+   "headline": "The DEFM14A merger proxy publishes standalone and acquisition-case projections for AES Clean Energy — the first public forward view of the unit on its own",
+   "read": "A take-private proxy is an odd place to find segment guidance, and it is now the best forward disclosure the unit has.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000114036126021662/ny20067536x2_defm14a.htm"
+  },
+  {
+   "date": "2026-05-15",
+   "category": "corporate",
+   "headline": "AES redeems 10,066,414 Fluence Energy LLC units and sells the resulting Class A shares publicly for US$207m net and a US$186m pre-tax gain, cutting its interest from 28% to 22% while retaining equity-method accounting",
+   "read": "AES sold at US$21.00 three months before Fluence cut guidance and traded near US$11 — good timing, and a signal about how the parent now values the stake.",
+   "source": "https://www.stocktitan.net/sec-filings/FLNC/form-4-fluence-energy-inc-insider-trading-activity-b5a98e698bc0.html"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "leadership",
+   "headline": "Sherry Kohan steps down as SVP and Chief Accounting Officer to become CFO of AES's US Utilities; Aubrey Jarred is appointed VP and Controller and principal accounting officer",
+   "read": "Finance-leadership churn while the 2025 material weakness is still being remediated and a take-private is pending.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000075/aes-20260414.htm"
+  },
+  {
+   "date": "2026-04-09",
+   "category": "project",
+   "headline": "AES formally withdraws the 320 MW / 1,280 MWh Seguro Energy Storage application in Eden Valley near Escondido after a roughly three-year fight; the site sat 1,600 feet from Palomar Medical Center, whose board voted the project down and refused high-voltage wires across its property",
+   "read": "The clearest evidence that siting, not capital or offtake, is the binding constraint on US storage growth in populated counties.",
+   "source": "https://www.canarymedia.com/articles/batteries/aes-san-diego-area-battery-opposition"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "product-launch",
+   "headline": "AES deploys Haven Safety AI across its US utilities and renewables facilities, reporting more than a 50% reduction in safety-incident investigation time and in root-cause-analysis labour",
+   "read": "Operational tooling rather than a product line — but it is the kind of cost line a private-equity owner will measure.",
+   "source": "https://www.aes.com/newsroom/aes-deploys-ai-safety-platform-us-operations"
+  },
+  {
+   "date": "2026-03-02",
+   "category": "ma",
+   "headline": "A consortium led by Global Infrastructure Partners and EQT Infrastructure VI, with CalPERS and the Qatar Investment Authority as co-underwriters, agrees to acquire The AES Corporation for US$15.00 a share — about US$10.7bn of equity and US$33.4bn of enterprise value, a 40.3% premium to the 30-day VWAP before 8 July 2025",
+   "read": "The defining fact for this dossier: AES Clean Energy's owner changes, and the board's own stated reason was that funding growth beyond 2027 as a listed company would likely have required cutting the dividend.",
+   "source": "https://www.prnewswire.com/news-releases/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes-302700916.html"
+  },
+  {
+   "date": "2026-03-02",
+   "category": "leadership",
+   "headline": "Ricardo Falu is appointed President and Juan Ignacio Rubiolo EVP, COO and President of the Energy Infrastructure SBU; Andres Gluski continues as chief executive only",
+   "read": "Succession positioning immediately alongside the merger announcement.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000119312526084157/d100078d8k.htm"
+  },
+  {
+   "date": "2026-03-02",
+   "category": "financial",
+   "headline": "The FY2025 Form 10-K is filed the same day as the merger announcement; no Q4 or FY2025 earnings release, 8-K Item 2.02 or earnings call was issued",
+   "read": "Guidance and public earnings communication effectively ended with Q3 2025 — any FY2025 adjusted figure now has to come out of the filing itself.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "date": "2026-02-19",
+   "category": "market",
+   "headline": "BloombergNEF names AES the top provider of clean energy to corporations in the US and the Americas for 2025, a fifth consecutive year, with Google its top corporate buyer; AES states corporate PPAs are nearly two-thirds of backlog and about 85% of 2025's long-term renewable contracts",
+   "read": "A real ranking behind a paywall, reaching the public record only through AES's own release — BNEF's free write-up names ENGIE the number-one global seller and publishes no US table.",
+   "source": "https://www.prnewswire.com/news-releases/aes-recognized-by-bnef-as-top-provider-of-clean-energy-to-corporations-in-the-us-and-the-americas-in-2025-302692906.html"
+  },
+  {
+   "date": "2025-11-04",
+   "category": "financial",
+   "headline": "Q3 2025: net income US$517m, Adjusted EBITDA US$830m, Adjusted EBITDA with Tax Attributes US$1,256m, adjusted EPS US$0.75 against a US$0.77 consensus; FY2025 guidance reaffirmed",
+   "read": "The last quarter AES issued guidance, and a rare small miss in a year of beats.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476125000086/q32025earningsreleaseexs.htm"
+  },
+  {
+   "date": "2025-05-21",
+   "category": "customer",
+   "headline": "AES and Meta sign two long-term PPAs for 650 MW of solar in Texas and Kansas, in the SPP market; AES states 10.1 GW of contractual arrangements with major global hyperscalers including 7.7 GW of long-term PPAs",
+   "read": "The first-party confirmation of hyperscaler scale — and Gluski's framing was time-to-power, not sustainability.",
+   "source": "https://s202.q4cdn.com/986265382/files/doc_news/2025/05/05-20-25-AES-Meta-PR_FINAL.pdf"
+  },
+  {
+   "date": "2025-04-16",
+   "category": "financial",
+   "headline": "AES Clean Energy secures a US$700m revolving credit facility for 2 GW of construction across nine states with CIBC as administrative agent and thirteen lenders — the largest warehouse-structured deal in AES history",
+   "read": "Project-finance capacity for the backlog, arranged a year before the parent agreed to go private.",
+   "source": "https://www.aes.com/newsroom/aes-us-based-clean-energy-unit-secures-optimized-funding-construction-2-gw-clean-energy"
+  },
+  {
+   "date": "2025-03-11",
+   "category": "legal",
+   "headline": "An Item 4.02 non-reliance 8-K states that the Q2 and Q3 2024 statements of operations should no longer be relied upon — an impairment on the AES Brasil sale was overstated by about US$192m in Q2 and US$5m in Q3 — and AES reports a material weakness in internal control over financial reporting",
+   "read": "No effect on revenue, operating margin, net income, cash flow or Adjusted EBITDA, and none on FY2024 totals — but a material weakness is the sort of thing an acquirer diligences hard.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000095010325003226/dp226102_8k.htm"
+  },
+  {
+   "date": "2025-02-27",
+   "category": "corporate",
+   "headline": "A restructuring approved in February 2025 cuts about 10% of staff, roughly 1,000 roles, targeting about US$300m of annual savings and cutting planned renewables investment by US$1.3bn through 2027; the development pipeline falls from 53 GW to 46 GW",
+   "read": "AES chose fewer, larger projects over pipeline breadth a year before the take-private — the same logic the buyers are paying for.",
+   "source": "https://www.latitudemedia.com/news/aes-lays-off-10-of-its-staff-despite-emphasizing-strong-demand/"
+  },
+  {
+   "date": "2024-12-07",
+   "category": "corporate",
+   "headline": "Air Products exits the roughly US$4bn, 1.4 GW green hydrogen joint venture with AES in Wilbarger County, Texas, selling its development rights to its partners; the project never reached final investment decision",
+   "read": "The hydrogen leg of the strategy ended quietly, and AES did not say at the time whether it would proceed alone.",
+   "source": "https://renewablesnow.com/news/air-products-pulls-out-of-green-hydrogen-jv-project-in-texas-874030/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2020",
+   "scale": "Bellefield 1 alone is 500 MW solar + 500 MW / 4-hour storage on a contract to 2040",
+   "via": "Long-term PPAs on AES-owned solar and paired storage",
+   "note": "Amazon is AES Clean Energy's most-named offtaker, taking Bellefield 1, McFarland B, Oak Ridge, Delta, Baldy Mesa and Silver Peak.",
+   "context": "The FY2025 10-K facility table names Amazon on six operating US assets: Bellefield 1 (California, Solar 500 + Storage 500, 75% AES equity, COD 2025, contract to 2040), McFarland B (Arizona, Solar 300 + Storage 150, to 2043), Oak Ridge (Louisiana, Solar 200, to 2043), Delta (Mississippi, Wind 185, to 2043-44), Baldy Mesa (California, Solar 150 + Storage 75, to 2043) and Silver Peak (California, Solar 50 + Storage 25, to 2044). Amazon's own dossier records Bellefield as its flagship reference project and names AES as the counterparty channel; it also carries a low-confidence inference that Fluence supplies the Bellefield batteries, which no release, filing or trade report supports and which AES has never disclosed.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-05",
+   "scale": "650 MW",
+   "via": "Two long-term PPAs on AES solar projects in the SPP market",
+   "note": "Meta contracted 650 MW of AES solar across Texas and Kansas in May 2025.",
+   "context": "AES's own release states the two PPAs support Meta's data centres with 650 MW of solar that AES is bringing online in the Southwest Power Pool. It is the transaction alongside which AES first quantified its hyperscaler position — 10.1 GW of contractual arrangements with major global hyperscalers, including 7.7 GW of long-term PPAs. Meta's dossier records the relationship in its portfolio line as 'AES (650 MW)', consistent with AES's figure.",
+   "source": "https://s202.q4cdn.com/986265382/files/doc_news/2025/05/05-20-25-AES-Meta-PR_FINAL.pdf"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "since": "2020",
+   "scale": "six named operating assets",
+   "via": "Long-term PPAs on AES-owned solar and paired storage",
+   "note": "Microsoft is named on six AES operating assets, including a share of the 485 MW Spotsylvania project.",
+   "context": "The FY2025 10-K names Microsoft on Morris (Missouri, Solar 250, to 2040), Raceway 1 (California, Solar 125 + Storage 80, to 2043), Calhoun (Michigan, Solar 125, with MPPA, to 2039), Cavalier Solar A2 (Virginia, Solar 84, to 2044), Keydet North (Virginia, Solar 58, to 2045) and Spotsylvania (Virginia, Solar 485, alongside Apple, Akamai and Etsy, to 2035). Microsoft is also named on San Matias in Chile, which belongs to AES Andes rather than to AES Clean Energy.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2025",
+   "note": "AES names Google its top corporate buyer in 2025, though no US project-level Google PPA is disclosed first-party.",
+   "context": "AES's February 2026 release states that BloombergNEF ranked it the top provider of clean energy to corporations in the US and the Americas for 2025 and that Google was its top corporate buyer that year. The 10-K facility table names Google only on Chilean assets belonging to AES Andes — Andes Solar 4, Andes Solar 2a, Los Olmos and Mesamavida — not on any US project, and trade coverage of a reported 727 MW Texas and 310 MW Ohio arrangement could not be matched to any AES first-party document. The commercial relationship is asserted by AES; its US project composition is a collection gap.",
+   "source": "https://www.prnewswire.com/news-releases/aes-recognized-by-bnef-as-top-provider-of-clean-energy-to-corporations-in-the-us-and-the-americas-in-2025-302692906.html"
+  },
+  {
+   "slug": "fluence",
+   "type": "supplier",
+   "status": "active",
+   "since": "2018",
+   "scale": "about 24% of Fluence revenue is with related parties, primarily AES; 13% of Fluence's US$5.3bn of remaining performance obligations",
+   "via": "Battery energy storage systems and EPC services on AES storage projects",
+   "note": "Fluence supplies and builds AES storage projects, and AES's parent holds 22% of it after a May 2026 sell-down.",
+   "context": "AES's FY2025 10-K Note 29 states that 'many of the Company's energy storage construction projects utilize Fluence as either a BESS supplier or EPC contractor', recorded primarily in property, plant and equipment; the related-party PP&E balance rose from US$851m to US$1,254m across 2025, the closest available proxy since AES discloses no Fluence-specific figure. The ownership sits at the parent, not at this unit: The AES Corporation created Fluence with Siemens in 2018, held a 28.19% economic interest at 31 December 2025, and in May 2026 redeemed 10,066,414 units and sold the resulting Class A shares for US$207m net and a US$186m pre-tax gain, cutting its interest to 22% while retaining significant influence and equity-method treatment. The edge is typed supplier rather than investor because this dossier's subject is the US renewables unit, which buys from Fluence and does not hold the stake; the ownership is recorded here rather than in the type.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "competitor",
+   "status": "active",
+   "note": "The largest US battery owner and the largest developer by pipeline, ahead of AES on both measures.",
+   "context": "S&P Global Commodity Insights ranks NextEra Energy Resources first in US operating battery storage at 5.779 GW at 30 June 2026 against AES Clean Energy Development's 1.978 GW, a gap that widened from 4.141 GW versus 1.484 GW a year earlier. Cleanview separately ranks NextEra first among US renewable developers by pipeline at 68,229 MW across 403 projects against AES ninth at 17,065 MW. AES's counter-positioning is not scale but corporate-PPA share and time-to-power.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "engie-north-america",
+   "type": "competitor",
+   "status": "active",
+   "note": "The second-largest US battery owner, immediately above AES, and its closest rival for corporate PPAs.",
+   "context": "S&P Global's Q2 2026 owner table puts ENGIE North America second at 3.662 GW against AES third at 1.978 GW. The commercial contest is sharper than the storage one and unresolved in public: AES states it was BloombergNEF's top seller of clean energy to corporations in the US and the Americas in 2025, while BNEF's own public write-up of the same report names ENGIE the number-one global seller at 3.6 GW and publishes no US or Americas seller table. Both can be true at different scopes; no public source reconciles them.",
+   "source": "https://about.bnef.com/insights/clean-energy/corporate-clean-energy-buying-fell-in-2025-after-nearly-a-decade-of-growth/"
+  },
+  {
+   "slug": "intersect-power",
+   "type": "competitor",
+   "status": "active",
+   "note": "Now Alphabet-owned and 42 MW behind AES in US operating storage — the competitor that turned into a customer's subsidiary.",
+   "context": "S&P Global's Q2 2026 table places Intersect Power fourth at 1.936 GW, within 42 MW of AES, having overtaken Enel Green Power and Plus Power in a year. Alphabet completed its roughly US$4.75bn acquisition of Intersect in March 2026. Cleanview ranks Intersect fourth by development pipeline at 29,242 MW, nearly double AES's 17,065 MW. AES names Google its top corporate buyer for 2025, which makes this the most structurally awkward competitive relationship in the peer set.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "arevon",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fifth-largest US battery owner at 1.470 GW and closing on AES.",
+   "context": "S&P Global's Q2 2026 owner table lists Arevon Energy fifth at 1.470 GW, up from outside the top five a year earlier, against AES's 1.978 GW. Arevon's portfolio spans more than 4,500 MW across 17 states with about 1,400 MW under construction. The two compete for the same utility and corporate offtake in the same western markets.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "plus-power",
+   "type": "competitor",
+   "status": "active",
+   "note": "Pure-play storage developer that was fifth in the US owner table at Q2 2025 and out of the top five by Q2 2026.",
+   "context": "S&P Global ranked Plus Power fifth at 1.219 GW at 30 June 2025; by 30 June 2026 the fifth position belonged to Arevon at 1.470 GW and Plus Power no longer appeared. Plus Power's Kapolei flagship in Hawaii replaced an AES coal plant — an asset of The AES Corporation's legacy thermal fleet, not of AES Clean Energy, and the two businesses should not be conflated when reading that reference.",
+   "source": "https://poweralliance.org/2025/09/20/us-battery-storage-ercot-surpasses-caiso-in-q2-for-most-operating-battery-storage-capacity-in-us/"
+  },
+  {
+   "slug": "invenergy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Second-largest US developer by pipeline and a fellow member of the NVIDIA and Emerald AI flexible-AI-factory programme.",
+   "context": "Cleanview ranks Invenergy second among US renewable developers by pipeline at 41,328 MW across 212 projects against AES ninth at 17,065 MW. Invenergy's own dossier records that it joined NVIDIA and Emerald AI's 'flexible AI factories as grid assets' initiative in March 2026 alongside AES, Constellation, NextEra, Nscale and Vistra — the two are simultaneously competitors for data-centre offtake and participants in the same reference architecture.",
+   "source": "https://cleanview.co/content/top-renewable-developers"
+  },
+  {
+   "slug": "rwe-clean-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fellow large US renewables platform competing for the same corporate PPAs, though absent from the independent storage owner tables AES appears in.",
+   "context": "Both sell multi-hundred-megawatt solar PPAs to the same buyers — Meta signed 650 MW with AES in May 2025 and 872 MW across four projects with RWE over the same window — and both were reshaped by the One Big Beautiful Bill Act's safe-harbor timetable. They diverge on storage disclosure: S&P Global's US owner table lists AES third and does not list RWE at all, and RWE publishes only a group storage figure rather than a US one.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "ITC/45X (One Big Beautiful Bill Act phase-out)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "The FY2025 10-K states that wind and solar projects beginning construction within twelve months of enactment remain eligible for 100% of the credit without the 2027 placed-in-service deadline provided they are placed in service no more than four calendar years after the year construction began; projects beginning construction later must be in service no later than 2027. Storage is treated far more favourably: 'The 2025 Act does not impose tighter timelines for energy storage projects to qualify for the ITC and PTC, and it allows energy storage projects to receive the full ITC or PTC credit if they begin construction by 2033.' Tax attributes are material to AES's economics — US$1,540m realised in FY2025 against Adjusted EBITDA of US$2,871m, of which US$1,374m came from US renewables.",
+   "mitigation": "AES states it implemented 'a program designed to ensure our backlog of U.S. renewables projects satisfy IRS safe harbor requirements' and that its contracted and advanced-stage development backlog 'is resilient to recent changes in the IRA'. The merger proxy's standalone case assumes the safe-harbor strategy secures tax credits for all megawatts through 2030.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The 10-K describes a restriction precluding credits for renewables and storage projects starting construction after 31 December 2025 that receive material assistance from a prohibited foreign entity, 'effectively limiting the percentage of total project costs that may be derived from products that are mined, produced or manufactured in China, with varying permissible percentages depending on the calendar year and applicable technology', and a separate bar on projects starting construction after 31 December 2024 owned or effectively controlled by such an entity. AES states plainly that 'the Department of Treasury has not yet issued comprehensive guidance implementing the FEOC restrictions' and that further guidance 'may be material'.",
+   "mitigation": "AES states that for 2026 and 2027 it has 'contracted all our battery needs, with almost all of such batteries coming from U.S. or South Korean suppliers' and has completed contracting of US domestically manufactured battery modules for the remainder of its US storage growth through 2027.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "regime": "Beginning-of-construction safe harbor (IRS Notice 2025-42 and the 7 July 2025 Executive Order)",
+   "status": "in-effect",
+   "effectiveDate": "2025-08-15",
+   "exposure": "The 7 July 2025 Executive Order directed Treasury to enforce the 2025 Act and implement the FEOC restrictions, and Treasury issued updated beginning-of-construction guidance on 15 August 2025 that generally eliminated the 5% safe harbor for wind and for solar above 1.5 MW. AES states it 'does not expect the modifications to the start of construction guidance to materially impact its projects' but also that the Treasury action 'may impose additional burdens in qualifying for the ITC and PTC'. A federal district court vacated the Notice in full on 6 June 2026 and the ruling is under appeal, leaving positions taken under the restored safe harbor reversible.",
+   "source": "https://www.thetaxadviser.com/issues/2026/jan/irs-generally-eliminates-5-safe-harbor-for-determining-beginning-of-construction-for-wind-and-solar-facilities/"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The 10-K records Section 301 tariffs on Chinese-made lithium-ion batteries and related components used for energy storage 'currently set at 25% effective January 1, 2026', up from 7.5%. Ongoing AD/CVD investigations into Chinese natural and synthetic graphite for lithium-ion anode material, with final determinations expected in the first quarter of 2026, 'could result in price increases'.",
+   "mitigation": "AES states it accelerated imports into the US and increased contracting for domestically manufactured solar panels, batteries, wind turbines and trackers; for its 2026 backlog it has contracted and received delivery of all wind turbines, and for 2027 it is fully contracted with US suppliers or suppliers with primarily US-manufactured turbines.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "regime": "AD/CVD and Section 201/232 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2025-06-24",
+   "exposure": "Final Commerce determinations on Cambodia, Malaysia, Thailand and Vietnam landed on 18 April 2025, with the ITC injury determination on 13 June 2025 and orders issued on 24 June 2025; AES states 'we do not expect these AD/CVD orders will have a negative impact on our business'. The Section 201 global safeguard tariff on solar cells and modules, most recently 14% ad valorem, expired in February 2026. Section 232 steel and aluminium tariffs were expanded to 25% in February 2025 and raised to 50% effective 4 June 2025, which AES does not expect to be material. Under the UFLPA, AES states it 'has managed this issue without significant impact to our projects'.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "regime": "Federal permitting — Department of the Interior three-phase review",
+   "status": "in-effect",
+   "effectiveDate": "2025-07",
+   "exposure": "The 10-K records an Interior memorandum requiring any decisions, actions, consultations and other undertakings for wind or solar projects under Interior jurisdiction to pass a three-phase approval process ending with the Secretary's sign-off. AES states that 'our U.S. wind and solar projects are developed primarily on private land and are designed in a manner that minimizes the potential of a federal nexus' but that 'due to the broad language of the memorandum, there may be some impact to projects developed on private land'.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+  },
+  {
+   "regime": "Merger regulatory approvals (FERC, PUCO, NYPSC, CFIUS, HSR)",
+   "status": "in-effect",
+   "effectiveDate": "2026-03-01",
+   "exposure": "The merger agreement names PUCO, the New York Public Service Commission, FERC, CFIUS and the HSR waiting period, plus certain foreign approvals, as conditions, 'so long as such approval does not result in a Burdensome Condition'. The HSR period expired on 22 June 2026 and CFIUS cleared on 27 August 2026; FERC and the two state commissions have not. The outside date is 1 June 2027, extendable by two successive three-month periods if only regulatory conditions remain, with a company termination fee of US$320,651,487. The deal is not conditioned on financing. Consumer and pension-advocacy groups have petitioned FERC to block it or to force BlackRock to divest utility holdings as a condition, and Indiana's state treasurer urged FERC and the IURC to block it; no docket number for those petitions could be resolved.",
+   "mitigation": "DPL LLC, AES Ohio's holding company, ran a consent solicitation in March 2026 on its 4.35% senior notes due 2029 so the merger would not constitute a change of control and GIP and EQT affiliates would be permitted holders — amended and extended twice with the consent fee raised.",
+   "source": "https://www.sec.gov/Archives/edgar/data/874761/000119312526084157/d100078d8k.htm"
+  },
+  {
+   "regime": "Local siting and permitting",
+   "status": "in-effect",
+   "exposure": "AES withdrew the 320 MW / 1,280 MWh Seguro Energy Storage application near Escondido, California in March 2026 after roughly three years of opposition; the site was 1,600 feet from Palomar Medical Center, whose board voted the project down in 2024 and refused high-voltage wires across its property. Separately, Huntingburg, Indiana imposed a solar moratorium in November 2025 and its Board of Zoning Appeals unanimously voided the 2023 development-plan approval for AES Crossvine in March 2026, while site mobilisation continued. Ohio provides the backdrop: by the end of 2025 all 88 counties restricted wind and 31 restricted or banned solar.",
+   "source": "https://www.canarymedia.com/articles/batteries/aes-san-diego-area-battery-opposition"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "James Marshall",
+   "title": "Senior Vice President and Renewables SBU President — leads AES US Renewables and Power",
+   "photo": "images/execs/aes-clean-energy-marshall.webp",
+   "background": [
+    "The top of the US renewables line — AES publishes no separate 'AES Clean Energy CEO' title",
+    "Previously Chief Financial Officer of AES Clean Energy, the title he held on the April 2025 US$700m construction warehouse facility",
+    "AES credits him with expanding the business and managing capital strategy through a period of rapid growth",
+    "At AES since 2007 in M&A, capital raising, corporate governance and risk management",
+    "Prior: PricewaterhouseCoopers",
+    "B.S. Commerce, McIntire School, University of Virginia; MBA, McCombs, University of Texas at Austin"
+   ]
+  },
+  {
+   "name": "Kleber Costa",
+   "title": "Chief Commercial Officer — commercial and origination for AES Clean Energy's US Renewables division",
+   "photo": "images/execs/aes-clean-energy-costa.webp",
+   "background": [
+    "Responsible for origination and structuring of energy solutions combining solar, wind, storage, digitalisation and commodities trading",
+    "Previously VP and Chief Commercial Officer, South America",
+    "Chief Commercial Officer for the Mexico, Central America and Caribbean SBU",
+    "20+ years across power, natural gas, oil and LNG at corporations and investment banks in New York and Houston"
+   ]
+  },
+  {
+   "name": "Andres Gluski",
+   "title": "Chief Executive Officer, The AES Corporation (President title relinquished 2 March 2026)",
+   "photo": "images/execs/aes-clean-energy-gluski.webp",
+   "background": [
+    "Chief executive since September 2011",
+    "Under his tenure AES states it holds over 10 GW of direct agreements with technology customers",
+    "Chairman, Council of the Americas; Edison Electric Institute board executive committee; board of Waste Management; co-chair of the World Economic Forum's Electricity Industry community",
+    "M.A. and PhD in Economics, University of Virginia"
+   ]
+  },
+  {
+   "name": "Ricardo Manuel Falu",
+   "title": "President, The AES Corporation (effective 2 March 2026)",
+   "photo": "images/execs/aes-clean-energy-falu.webp",
+   "background": [
+    "EVP, COO and President of the New Energy Technologies SBU — February 2024 to March 2026",
+    "SVP and COO, July 2023 to February 2024; SVP and Chief Strategy and Commercial Officer, August 2022 to July 2023",
+    "President, Andes region, January to August 2022; CEO of AES Andes, April 2018 to August 2022; CFO Andes 2014-18; CFO MCAC 2012-14",
+    "Joined AES in 2003; director of Fluence Energy, Inc. and of IPALCO, AES Andes, DPL LLC and AES Colombia",
+    "CPA, Universidad Nacional de Salta; Executive MBA summa cum laude, IAE"
+   ]
+  },
+  {
+   "name": "Stephen Coughlin",
+   "title": "Executive Vice President and Chief Financial Officer, The AES Corporation",
+   "photo": "images/execs/aes-clean-energy-coughlin.webp",
+   "background": [
+    "Signs the 10-K and 8-K filings as EVP and CFO",
+    "The finance principal through the restatement, the restructuring and the take-private"
+   ]
+  },
+  {
+   "name": "Juan Ignacio Rubiolo",
+   "title": "Executive Vice President and Chief Operating Officer, and President, Energy Infrastructure SBU (effective 2 March 2026)",
+   "photo": "images/execs/aes-clean-energy-rubiolo.webp",
+   "background": [
+    "EVP and President, Energy Infrastructure SBU — March 2023 to March 2026",
+    "EVP and President, International Businesses, 2022-23; SVP and President, MCAC SBU, 2018-22; CEO AES Mexico 2014-18",
+    "Joined AES in 2001",
+    "B.Sc. Business, Universidad Austral; M.Project Management, Quebec University"
+   ]
+  },
+  {
+   "name": "Chris Shelton",
+   "title": "Senior Vice President, Chief Product Officer and President, AES Next",
+   "photo": "images/execs/aes-clean-energy-shelton.webp",
+   "background": [
+    "Pioneered lithium-ion battery storage in power markets in 2008 and was instrumental in establishing Fluence",
+    "Board member of Fluence, Uplight and 5B",
+    "Holds patents in battery storage, renewable integration and distributed-energy-resource management",
+    "B.S. Physics, Indiana University of Pennsylvania; executive certificates from Georgetown and MIT"
+   ]
+  },
+  {
+   "name": "Ken Zagzebski",
+   "title": "Senior Vice President and President, Utilities",
+   "photo": "images/execs/aes-clean-energy-zagzebski.webp",
+   "background": [
+    "Most recently Chief Operating Officer of AES Clean Energy, overseeing global execution, engineering and construction integration",
+    "Joined AES in 2007; former President of AES Southland Energy and of the AES US SBU",
+    "President and CEO of both IPL (AES Indiana) and DP&L (AES Ohio)",
+    "B.S. University of Wisconsin-Eau Claire; MBA Carlson, University of Minnesota"
+   ]
+  },
+  {
+   "name": "Paul Freedman",
+   "title": "Executive Vice President, General Counsel and Corporate Secretary",
+   "photo": "images/execs/aes-clean-energy-freedman.webp",
+   "background": [
+    "Legal principal across the merger agreement, the securities litigation and the merger-related stockholder complaints"
+   ]
+  },
+  {
+   "name": "Tish Mendoza",
+   "title": "Executive Vice President and Chief Human Resources Officer",
+   "photo": "images/execs/aes-clean-energy-mendoza.webp",
+   "background": [
+    "Owns the February 2025 restructuring that cut about 10% of the workforce"
+   ]
+  },
+  {
+   "name": "Jay Morse",
+   "title": "Chairman and Lead Independent Director (since December 2008)",
+   "photo": "images/execs/aes-clean-energy-morse.webp",
+   "background": [
+    "Stated the board's rationale for the sale: 'AES has a significant need for capital to support growth beyond 2027 ... would likely require reduction or elimination of the dividend'",
+    "Retired SVP Finance and CFO, The Washington Post Company — 19 years, 100+ investments",
+    "Partner at Price Waterhouse for 17+ years",
+    "B.A. University of Virginia; MBA Wharton; CPA"
+   ]
+  },
+  {
+   "name": "Sherry Kohan",
+   "title": "Chief Financial Officer, AES US Utilities (effective 7 May 2026); formerly SVP and Chief Accounting Officer",
+   "background": [
+    "Moved from the accounting principal role during the merger's pendency and while the 2025 material weakness was being remediated"
+   ]
+  },
+  {
+   "name": "Aubrey Jarred",
+   "title": "Vice President and Controller, principal accounting officer (effective 7 May 2026)",
+   "background": [
+    "Managing Director, Technical Accounting Services at AES since 2022",
+    "Nine years at LKQ Corporation, latterly head of consolidations, reporting and accounting policy for LKQ Europe",
+    "Five years at KPMG",
+    "University of Notre Dame, magna cum laude, Accounting and Spanish"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue (The AES Corporation)",
+      "kpi": "revenue",
+      "usdMillions": 12278,
+      "fxBasis": "as reported",
+      "actual": "US$12,278m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Consolidated"
+     },
+     {
+      "name": "Net income",
+      "actual": "US$802m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Consolidated"
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "US$2.14",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Zacks called the FY2024 result materially above guidance; no full-year consensus figure could be resolved. The Q4 2024 print was adjusted EPS US$0.54 against a US$0.34 Zacks consensus (a 58.8% beat) on revenue of US$2.96bn against US$3.26bn expected (a 9.1% miss)."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "US$2,639m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "With tax attributes of US$1,313m, US$3,952m"
+     },
+     {
+      "name": "AES Clean Energy operating capacity",
+      "actual": "8,927 MW operating; 3,306 MW under construction (1,524 MW solar, 500 MW wind, 1,282 MW storage); 7.3 GW backlog; 53 GW pipeline",
+      "expected": "",
+      "verdict": "inline",
+      "result": "FY2024 10-K; 3,506 MW of PPAs signed in 2024"
+     },
+     {
+      "name": "Renewables SBU Adjusted EBITDA (as revised)",
+      "actual": "US$612m on revenue of US$2,617m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "As originally reported in the FY2024 10-K the figures were US$552m on US$2,510m; AES moved its Chile businesses into the Renewables SBU in Q1 2025 and retrospectively revised prior periods, so the two vintages are not comparable"
+     }
+    ],
+    "commentary": "AES Clean Energy is not a reportable segment; the Renewables SBU is, and it spans ten countries. The FY2024 restatement of segment composition means any FY2024 Renewables figure must be labelled with which 10-K it came from."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue (The AES Corporation)",
+      "kpi": "revenue",
+      "usdMillions": 12233,
+      "fxBasis": "as reported",
+      "actual": "US$12,233m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Broadly flat year on year"
+     },
+     {
+      "name": "Net income",
+      "actual": "US$162m (from US$802m)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Income from continuing operations before taxes fell to US$20m from US$868m; diluted EPS from continuing operations US$1.33 against US$2.37"
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "US$2.34",
+      "expected": "US$2.10-2.26 (company guidance, reaffirmed at Q3 2025)",
+      "verdict": "beat",
+      "result": "Above the top of AES's own reaffirmed range. No analyst consensus comparison is possible for the full year: the Q4/FY2025 earnings call was cancelled after the merger announcement and no earnings release was issued. The Q4 print itself drew opposite verdicts in aggregator coverage — adjusted EPS US$0.81 against a US$0.61 consensus reads as a beat, GAAP diluted EPS US$0.45 against the same number reads as a miss, and no source reconciles the two."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "US$2,871m",
+      "expected": "US$2,650-2,850m (company guidance)",
+      "verdict": "beat",
+      "result": "Above the top of the reaffirmed range"
+     },
+     {
+      "name": "Adjusted EBITDA with Tax Attributes",
+      "actual": "US$4,411m, including US$1,540m of tax attributes",
+      "expected": "US$3,950-4,350m (company guidance)",
+      "verdict": "beat",
+      "result": "Tax attributes are 35% of the total — the credit regime is not a subsidy at the margin for AES, it is a third of the earnings measure"
+     },
+     {
+      "name": "Renewables SBU",
+      "actual": "Revenue US$2,913m; segment Adjusted EBITDA US$932m; Adjusted EBITDA with Tax Attributes US$2,306m; operating margin US$503m; US renewables tax attributes realised US$1,374m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Operating margin rose US$104m, of which US$91m from development services in the US and US$60m from AES Andes moving into the segment, offset by US$177m from the 2024 sale of AES Brasil"
+     },
+     {
+      "name": "AES Clean Energy operating capacity",
+      "actual": "10,961 MW operating; 3,031 MW under construction (1,542 MW wind, 939 MW solar, 550 MW storage) on a budget of over US$12bn; 7.6 GW backlog through 2029; 46 GW pipeline",
+      "expected": "",
+      "verdict": "inline",
+      "result": "2,776 MW of PPAs signed or awarded in 2025; ACE Development added over 2.1 GW to backlog"
+     },
+     {
+      "name": "Parent portfolio and backlog",
+      "actual": "34,740 MW owned and/or operated; 12.0 GW backlog including 5.7 GW under construction; 3.2 GW of solar, storage and wind completed; 4.0 GW of new long-term PPAs signed or awarded",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Renewables SBU operating capacity 17,836 MW"
+     },
+     {
+      "name": "Capital expenditure",
+      "actual": "US$5,929m (from US$7,392m)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Down 20% as the February 2025 restructuring cut planned renewables investment by US$1.3bn through 2027"
+     }
+    ],
+    "commentary": "Guidance ended here. AES filed no Item 2.02 results 8-K after 4 November 2025 — no Q4/FY2025, Q1 2026 or Q2 2026 earnings release exists — and the string '2026 guidance' appears nowhere in the FY2025 10-K or the Q2 2026 10-Q. Analyst coverage moved to deal arbitrage: Morgan Stanley cut AES to Equalweight with a US$15 target explicitly on deal outcome rather than fundamentals, Jefferies moved to Underperform, and Barclays downgraded on take-under risk."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue (The AES Corporation)",
+      "actual": "US$3,422m (+20% year on year)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "H1 2026 revenue US$6,602m"
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "US$0.60",
+      "expected": "US$0.52 / US$0.49 / US$0.45 across three aggregators",
+      "verdict": "beat",
+      "result": "The consensus figures disagree with each other and at least one comparison is against GAAP rather than adjusted EPS; treat the magnitude as unreliable and the direction as a beat"
+     },
+     {
+      "name": "Renewables SBU segment Adjusted EBITDA",
+      "actual": "US$369m in the quarter (+54%) and US$638m in H1 2026 (+59%)",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Driven by US$76m from favourable US energy derivatives, US$62m from US development services and US$34m from higher spot sales and prices"
+     },
+     {
+      "name": "Renewables SBU revenue",
+      "actual": "US$939m in the quarter (from US$644m); US$1,759m in H1 2026 (from US$1,310m)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Operating margin US$247m in the quarter against US$85m"
+     },
+     {
+      "name": "Fluence interest",
+      "actual": "Reduced from 28% to 22% on the May 2026 redemption and public sale — US$207m net proceeds, US$186m pre-tax gain, about US$42m of discrete tax expense on the gain and about US$54m of discrete tax benefit from releasing a valuation allowance on US capital losses",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Equity-method accounting retained; Fluence sits in the New Energy Technologies SBU"
+     },
+     {
+      "name": "Restructuring",
+      "actual": "Cumulative restructuring cost US$54m through 30 June 2026; US$52m of pre-tax severance fell in H1 2025 and none in H1 2026; AES Clean Energy Development recognised US$51m of pre-tax asset impairment in Q2 2025",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The programme has substantially run its course"
+     }
+    ],
+    "commentary": "AES stopped presenting segment-level Adjusted EBITDA with Tax Attributes in its 2026 10-Qs — the term survives in the glossary but the metric is not shown, so the 2026 quarters cannot be compared to 2025 on that measure."
+   },
+   {
+    "period": "AES Clean Energy projections (DEFM14A merger proxy, forward-looking)",
+    "periodType": "other",
+    "periodEnd": "2030-12-31",
+    "metrics": [
+     {
+      "name": "Standalone case — AES Clean Energy Adjusted EBITDA",
+      "actual": "US$661m (2026), US$785m (2027), US$824m (2028), US$1,071m (2029), US$1,285m (2030)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Assumes a run-rate ramping to 2.8 GW placed in service per year from 2028, 35-year project lives with an implied 4% average annual growth as debt amortises into a merchant tail, and a start-of-construction safe-harbor strategy securing tax credits for all megawatts through 2030"
+     },
+     {
+      "name": "Standalone case — AES Clean Energy levered free cash flow",
+      "actual": "US$(413)m (2026), US$(156)m (2027), US$(44)m (2028), US$201m (2029), US$60m (2030), rising to US$1,035m (2034) and US$1,151m (2035)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The unit consumes cash for the rest of the decade on the standalone plan — the board's stated reason for selling"
+     },
+     {
+      "name": "Acquisition case — AES Clean Energy Adjusted EBITDA",
+      "actual": "US$703m (2026), US$681m (2027), US$799m (2028), US$1,084m (2029)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Assumes a steady state of 5.5 GW per year from 2030 and regular capital recycling through minority-stake sales, which raises levered free cash flow while reducing Adjusted EBITDA per gigawatt retained"
+     },
+     {
+      "name": "Acquisition case — AES Clean Energy levered free cash flow",
+      "actual": "US$463m (2026), US$349m (2027), US$312m (2028), US$314m (2029), US$538m (2030)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Positive from year one — the difference is the capital-recycling assumption, not the assets"
+     }
+    ],
+    "commentary": "These are projections disclosed in a merger proxy, not results, and they are the only public forward view of AES Clean Energy as a standalone unit. They are included because the parent discontinued guidance, and they should be read as the parties' negotiating cases rather than as company guidance."
+   }
+  ],
+  "commentary": "The AES Corporation reports in USD and AES Clean Energy is a sub-unit of the Renewables SBU rather than a reportable segment, so no unit-level P&L exists outside the merger proxy. Credit: Fitch affirmed The AES Corporation at BBB- with a stable outlook on 5 February 2026, before the merger announcement; no resolvable Moody's or S&P rating action tied to the buyout could be found, and the DPL consent solicitation's rating-event amendment is the best available evidence that ratings risk was a live negotiating point. Collection gap: no third-party source states FY2025 full-year adjusted EPS because no earnings release or call accompanied it, and the figures above come from the 10-K itself."
+ },
+ "strategyRead": [
+  "(High confidence) We assess the take-private is the single fact that reorganises everything else about this dossier. Basis: a merger agreement signed 1 March 2026 at US$15.00 a share — about US$10.7bn of equity and US$33.4bn of enterprise value — approved by 97.92% of votes cast on 26 June 2026, HSR expired 22 June and CFIUS cleared 27 August, with FERC and the Ohio and New York commissions outstanding against a 1 June 2027 outside date. The board's own stated reason, from its lead independent director, was that funding growth beyond 2027 as a listed company 'would likely require reduction or elimination of the dividend'. Any read of AES Clean Energy as a listed-company growth platform is now stale.",
+  "(High confidence) We assess the hyperscaler-counterparty claim is commercially real but not independently verified, and the dossier should carry it that way. Basis: AES states 11.8 GW of signed agreements with major technology firms (March 2026), up from 10.1 GW of hyperscaler arrangements including 7.7 GW of PPAs (May 2025), with corporate PPAs about two-thirds of parent backlog and about 85% of 2025's long-term renewable contracts. The named record supports scale — Amazon on six operating assets, Microsoft on six, Meta at 650 MW in SPP. But BloombergNEF's public write-up of the report AES cites names ENGIE the number-one global seller at 3.6 GW and publishes no US or Americas seller table, so the ranking reaches the record only through AES's own release of a paywalled document.",
+  "(High confidence) We assess AES's storage position is third and being caught. Basis: S&P Global Commodity Insights ranks AES Clean Energy Development third among US owners at 1.978 GW at 30 June 2026, from 1.484 GW a year earlier — but Intersect Power closed to within 42 MW over the same period and Arevon reached 1.470 GW, while NextEra extended to 5.779 GW and ENGIE to 3.662 GW. The under-construction mix also rotated away from storage: 1,282 MW of storage and 500 MW of wind at end-2024 became 550 MW of storage and 1,542 MW of wind at end-2025.",
+  "(Moderate confidence) We assess the Fluence entanglement is a genuine structural feature rather than a footnote, and that the parent is stepping back from it. Basis: AES created Fluence with Siemens in 2018, its 10-K states that many of its storage construction projects use Fluence as BESS supplier or EPC contractor, Fluence's own 10-K reports about 24% of revenue with related parties primarily AES and 13% of a US$5.3bn backlog with AES — and AES cut its economic interest from 28% to 22% in May 2026, selling at US$21.00 a share three months before Fluence cut FY2026 guidance and traded near US$11. AES is also a named defendant in Fluence's securities class action. Cutting against a simple reading: AES discloses no Fluence-specific procurement figure, so the commercial dependence can only be sized from Fluence's side.",
+  "(Moderate confidence) We assess development services, not generation, are the marginal earnings driver right now. Basis: US development services added US$91m to Renewables SBU operating margin in FY2025 and US$62m in Q2 2026 alone, and the segment's Adjusted EBITDA rose 54% in the quarter and 59% in the half. The July 2025 development framework agreement for a private-use network serving an unnamed Texas data centre carries a transaction price of about US$481m over roughly two years with US$105m recognised in 2025. Selling construction-ready projects and powered land is a different business from owning generation, with different capital intensity and different customers.",
+  "(Moderate confidence) We assess siting, not capital or offtake, is the binding constraint on AES's US storage growth. Basis: the 320 MW Seguro project near Escondido was withdrawn in March 2026 after roughly three years, defeated by a hospital board that refused transmission across its property and by an organised local campaign; the AES Crossvine solar project's 2023 approval was voided by a Huntingburg, Indiana zoning board in March 2026 under a new moratorium; and by end-2025 all 88 Ohio counties restricted wind with 31 restricting or banning solar. AES's own answer — projects 'developed primarily on private land and designed in a manner that minimizes the potential of a federal nexus' — addresses federal permitting, not county politics.",
+  "(Low confidence) We assess the February 2025 restructuring pre-figured the take-private rather than responding to market conditions alone. Basis: AES cut about 10% of staff, targeted US$300m of annual savings, cut planned renewables investment by US$1.3bn through 2027 and 'right-sized our development company to focus on executing on the backlog and pursuing larger but fewer projects' — reducing the pipeline from 53 GW to 46 GW — roughly four months before Bloomberg reported the company was exploring a sale. The sequencing is suggestive; no source states a causal link, and AES attributed the programme to market conditions and policy uncertainty.",
+  "Collection gap: aescleanenergy.com returned HTTP 520 throughout this research pass, so the unit's own site contributed nothing and every AES Clean Energy fact here comes from aes.com or SEC filings. AES publishes no consolidated US operating storage MW or MWh, no ISO/RTO for any asset except New York Wind, no cell chemistry for any grid-scale project, no Fluence-specific procurement figure, and no named AES Clean Energy chief executive, chief operating officer or chief development officer since Ken Zagzebski moved to Utilities. FY2025 full-year adjusted figures appear in no third-party source because no earnings release or call accompanied them. A reported 727 MW Texas and 310 MW Ohio Google arrangement could not be matched to any AES document and is not recorded here.",
+  "Indicators to watch: (1) FERC and the Ohio and New York commission decisions on the merger, and whether the advocacy petitions asking FERC to condition or block it get a docket — the outside date is 1 June 2027 and the termination fee US$320,651,487; (2) whether Bellefield Phase 2 reached commercial operation in the second half of 2026 as stated, which would complete the largest US solar-plus-storage facility; (3) the next S&P Global quarterly owner table, for whether Intersect Power passes AES into third place; (4) any AES disclosure naming the Texas private-use-network customer, or a second such agreement, which would establish DTAs as a repeatable line rather than a single contract; (5) whether the Maximo fleet expands past five units against the stated 2026 installation backlog, and whether any third-party EPC is named as a customer."
+ ],
+ "sources": [
+  {
+   "label": "GCN — AES Bellefield phase two as the US grid passes 52 GW of storage",
+   "url": "https://gcn.com/battery-storage-aes-bellefield-phase-two/21206",
+   "date": "2026-08-29"
+  },
+  {
+   "label": "SEC 8-K — AES receives CFIUS approval for the GIP/EQT merger",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126034714/ef20081101_8k.htm",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "energynews.pro citing S&P Global Energy CERA — US utility-scale battery storage market piles up commissioning delays",
+   "url": "https://energynews.pro/en/us-utility-scale-battery-storage-market-piles-up-commissioning-delays",
+   "date": "2026-08-19"
+  },
+  {
+   "label": "S&P Global Commodity Insights — WECC leads US battery storage additions with 2.2 GW in Q2 (US owner ranking; AES Clean Energy Development 1.978 GW, #3)",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "SEC Form 10-Q — The AES Corporation, quarter ended 30 June 2026 (Renewables SBU, Fluence redemption, restructuring, battery sourcing)",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000144/aes-20260630.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Simply Wall St — Fluence Energy cuts FY2026 revenue guidance",
+   "url": "https://simplywall.st/stocks/us/capital-goods/nasdaq-flnc/fluence-energy/news/fluence-energy-flnc-is-down-163-after-cutting-2026-revenue-g",
+   "date": "2026-08"
+  },
+  {
+   "label": "LevelTen Energy — North American PPA Price Index, Q2 2026",
+   "url": "https://www.leveltenenergy.com/post/levelten-north-american-ppa-price-index-q2-2026",
+   "date": "2026-07"
+  },
+  {
+   "label": "PR Newswire — AES stockholders approve acquisition by the GIP and EQT-led consortium",
+   "url": "https://www.prnewswire.com/news-releases/aes-stockholders-approve-acquisition-by-global-infrastructure-partners-and-eqt-led-consortium-302812261.html",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "SEC 8-K — special meeting vote result and HSR waiting period expiry",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126026562/ef20076870_8k.htm",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "SEC Schedule 13G/A via StockTitan — AES and AES Grid Stability beneficial ownership of Fluence (22.48%; group 63.9%)",
+   "url": "https://www.stocktitan.net/sec-filings/FLNC/schedule-13g-a-fluence-energy-inc-amended-passive-investment-disclosu-bc1b9604bddb.html",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "SEC DEFM14A — AES merger proxy, including AES Clean Energy standalone and acquisition-case projections",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126021662/ny20067536x2_defm14a.htm",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "SEC Form 4 via StockTitan — AES Grid Stability sells 10,066,414 Fluence Class A shares at US$21.00",
+   "url": "https://www.stocktitan.net/sec-filings/FLNC/form-4-fluence-energy-inc-insider-trading-activity-b5a98e698bc0.html",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "SEC 8-K — Chief Accounting Officer transition and Controller appointment",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000075/aes-20260414.htm",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "Canary Media — AES pulls out of a San Diego-area battery project after local opposition (Seguro)",
+   "url": "https://www.canarymedia.com/articles/batteries/aes-san-diego-area-battery-opposition",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "pv magazine USA — AES scraps 320 MW California battery project amid fierce local opposition",
+   "url": "https://pv-magazine-usa.com/2026/04/09/aes-scraps-320-mw-california-battery-project-amid-fierce-local-opposition/",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "AES — AES deploys an AI safety platform across US operations (Haven Safety AI)",
+   "url": "https://www.aes.com/newsroom/aes-deploys-ai-safety-platform-us-operations",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "SEC Form 10-K — The AES Corporation, FY2025 (AES Clean Energy portfolio, facility table, Fluence related-party note, policy exposure, merger subsequent event)",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "PR Newswire — Consortium led by Global Infrastructure Partners and EQT agrees to acquire AES",
+   "url": "https://www.prnewswire.com/news-releases/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes-302700916.html",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "SEC 8-K — merger agreement and executive appointments (Falu, Rubiolo)",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000119312526084157/d100078d8k.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Global Infrastructure Partners — Consortium led by GIP and EQT agrees to acquire AES",
+   "url": "https://www.global-infra.com/news/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes/",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "EQT — Consortium led by Global Infrastructure Partners and EQT agrees to acquire AES",
+   "url": "https://eqtgroup.com/news/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes-2026-03-02",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Quiver Quantitative — The AES Corporation releases Q4 2025 earnings: revenue growth but EPS miss (GAAP comparison)",
+   "url": "https://www.quiverquant.com/news/The+AES+Corporation+(AES)+Releases+Q4+2025+Earnings:+Revenue+Growth+but+EPS+Miss",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "WITZ AM/FM — Looking back: the AES Crossvine solar project's path to construction (Huntingburg moratorium and voided approval)",
+   "url": "https://www.witzamfm.com/news/looking-back-the-aes-crossvine-solar-project-s-path-to-construction",
+   "date": "2026-03"
+  },
+  {
+   "label": "The AES Corporation — 2025 Annual Report (PDF)",
+   "url": "https://www.aes.com/sites/vault/files/2026-03/AES-Corp-2025-Annual-Report-03-20-2026.pdf",
+   "date": "2026-03"
+  },
+  {
+   "label": "Virginia Business — AES signs 20-year power supply deal with Google",
+   "url": "https://virginiabusiness.com/aes-signs-20-year-power-supply-deal-with-google/",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "PR Newswire — AES recognized by BNEF as top provider of clean energy to corporations in the US and the Americas in 2025 (Google named top corporate buyer)",
+   "url": "https://www.prnewswire.com/news-releases/aes-recognized-by-bnef-as-top-provider-of-clean-energy-to-corporations-in-the-us-and-the-americas-in-2025-302692906.html",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "BloombergNEF — Corporate clean energy buying fell in 2025 after nearly a decade of growth (ENGIE named #1 global seller; no US seller table published)",
+   "url": "https://about.bnef.com/insights/clean-energy/corporate-clean-energy-buying-fell-in-2025-after-nearly-a-decade-of-growth/",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "pv magazine USA — Google acquires clean energy developer Intersect Power for nearly $5 billion",
+   "url": "https://pv-magazine-usa.com/2026/01/02/google-acquires-clean-energy-developer-intersect-power-for-nearly-5-billion/",
+   "date": "2026-01-02"
+  },
+  {
+   "label": "The Tax Adviser — IRS generally eliminates the 5% safe harbor for determining beginning of construction for wind and solar facilities",
+   "url": "https://www.thetaxadviser.com/issues/2026/jan/irs-generally-eliminates-5-safe-harbor-for-determining-beginning-of-construction-for-wind-and-solar-facilities/",
+   "date": "2026-01"
+  },
+  {
+   "label": "SEC EX-99.1 — AES Q3 2025 earnings press release (the last guidance issued)",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000087476125000086/q32025earningsreleaseexs.htm",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "SEC Form 10-K — Fluence Energy, FY2025 (related-party revenue with AES; 13% of remaining performance obligations)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1868941/000186894125000081/flnc-20250930.htm",
+   "date": "2025-11"
+  },
+  {
+   "label": "S&P Global Commodity Insights via Advanced Power Alliance — ERCOT surpasses CAISO in Q2 for most operating battery storage capacity in the US (owner ranking, Q2 2025)",
+   "url": "https://poweralliance.org/2025/09/20/us-battery-storage-ercot-surpasses-caiso-in-q2-for-most-operating-battery-storage-capacity-in-us/",
+   "date": "2025-09-20"
+  },
+  {
+   "label": "Energy-Storage.News — AES completes phase one of the largest solar-plus-storage project in the US",
+   "url": "https://www.energy-storage.news/aes-completes-phase-one-of-largest-solar-plus-storage-in-the-us/",
+   "date": "2025-06-13"
+  },
+  {
+   "label": "AES — AES and Meta sign long-term PPAs to deliver 650 MW of solar capacity in Texas and Kansas (PDF)",
+   "url": "https://s202.q4cdn.com/986265382/files/doc_news/2025/05/05-20-25-AES-Meta-PR_FINAL.pdf",
+   "date": "2025-05-21"
+  },
+  {
+   "label": "PR Newswire — AES reaffirms 2025 guidance and long-term growth rate targets",
+   "url": "https://www.prnewswire.com/news-releases/aes-reaffirms-2025-guidance-and-long-term-growth-rate-targets-302444591.html",
+   "date": "2025-05-01"
+  },
+  {
+   "label": "Energy-Storage.News — AES opens a 200MW/800MWh BESS at a former coal site in Indiana (AES Indiana, Utilities SBU)",
+   "url": "https://www.energy-storage.news/aes-opens-200mw-800mwh-bess-at-former-coal-site-in-indiana/",
+   "date": "2025-04-22"
+  },
+  {
+   "label": "AES — AES's US-based clean energy unit secures optimized funding for construction of 2 GW of clean energy",
+   "url": "https://www.aes.com/newsroom/aes-us-based-clean-energy-unit-secures-optimized-funding-construction-2-gw-clean-energy",
+   "date": "2025-04-16"
+  },
+  {
+   "label": "SEC 8-K Item 4.02 — non-reliance on Q2 and Q3 2024 statements of operations; material weakness reported",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000095010325003226/dp226102_8k.htm",
+   "date": "2025-03-11"
+  },
+  {
+   "label": "SEC Form 10-K — The AES Corporation, FY2024 (as originally reported segment figures; 28.5% Fluence interest)",
+   "url": "https://www.sec.gov/Archives/edgar/data/874761/000087476125000013/aes-20241231.htm",
+   "date": "2025-03-11"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — AES Corp Q4 2024 earnings beat",
+   "url": "https://finance.yahoo.com/news/aes-corp-q4-earnings-beat-163000655.html",
+   "date": "2025-03-03"
+  },
+  {
+   "label": "Latitude Media — AES lays off 10% of its staff despite emphasizing strong demand",
+   "url": "https://www.latitudemedia.com/news/aes-lays-off-10-of-its-staff-despite-emphasizing-strong-demand/",
+   "date": "2025-03-03"
+  },
+  {
+   "label": "Renewables Now — Air Products pulls out of the green hydrogen JV project in Texas",
+   "url": "https://renewablesnow.com/news/air-products-pulls-out-of-green-hydrogen-jv-project-in-texas-874030/",
+   "date": "2024-12"
+  },
+  {
+   "label": "KPBS — Fire at an SDG&E battery storage facility in Escondido prompts evacuations (AES-built, SDG&E-owned)",
+   "url": "https://www.kpbs.org/news/public-safety/2024/09/05/fire-at-sdg-e-battery-storage-facility-in-escondido-prompts-evacuations",
+   "date": "2024-09-05"
+  },
+  {
+   "label": "Energy-Storage.News — AES investigating the cause of thermal runaway at an Arizona site (Dorman BESS, Chandler)",
+   "url": "https://www.energy-storage.news/aes-investigating-cause-of-thermal-runaway-at-arizona-site/",
+   "date": "2022-04"
+  },
+  {
+   "label": "Data Center Dynamics — 4MW of AES lithium batteries burn in Chandler, Arizona",
+   "url": "https://www.datacenterdynamics.com/en/news/4mw-of-aes-lithium-batteries-burn-in-chandler-arizona/",
+   "date": "2022-04"
+  },
+  {
+   "label": "Investing.com — Morgan Stanley cuts AES stock rating on takeover uncertainty",
+   "url": "https://www.investing.com/news/analyst-ratings/morgan-stanley-cuts-aes-stock-rating-on-takeover-uncertainty-93CH-4546202"
+  },
+  {
+   "label": "public.com — AES quarterly EPS estimate versus actual table (aggregator)",
+   "url": "https://public.com/stocks/aes/earnings"
+  },
+  {
+   "label": "Cleanview — Top renewable developers in the US (AES ranked ninth by pipeline; the site's own AES page gives a different total)",
+   "url": "https://cleanview.co/content/top-renewable-developers"
+  },
+  {
+   "label": "interconnection.fyi — EIA Form 860M-derived plant list for developer 'AES Clean Energy'",
+   "url": "https://www.interconnection.fyi/eia/projects/developer/AES%20Clean%20Energy"
+  },
+  {
+   "label": "AES — Carbon-free energy solutions (the six named offerings)",
+   "url": "https://www.aes.com/energy-solutions/carbon-free-energy"
+  },
+  {
+   "label": "AES — Technology and data centers industry page",
+   "url": "https://www.aes.com/industries/technology-and-data-centers"
+  },
+  {
+   "label": "AES — Bellefield Solar + Storage project page",
+   "url": "https://www.aes.com/sustainability-impact/people-communities/projects/bellefield-solar-storage"
+  },
+  {
+   "label": "AES — Maximo innovation page (specifications and deployment)",
+   "url": "https://www.aes.com/about-us/innovation/maximo"
+  },
+  {
+   "label": "AES — Meet Maximo, the AI-powered robot changing the solar energy sector",
+   "url": "https://www.aes.com/blog/meet-maximo-ai-powered-robot-changing-solar-energy-sector"
+  },
+  {
+   "label": "AES — Our leadership (executive profiles and company-published headshots)",
+   "url": "https://www.aes.com/about-us/our-people/our-leadership"
+  },
+  {
+   "label": "AES Indiana — rate review (Utilities SBU context)",
+   "url": "https://www.aesindiana.com/rate-review"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

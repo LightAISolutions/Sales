@@ -1,0 +1,1165 @@
+{
+ "schemaVersion": 7,
+ "slug": "rwe-clean-energy",
+ "name": "RWE Americas, LLC (formerly RWE Clean Energy, LLC)",
+ "shortName": "RWE Clean Energy",
+ "categories": [
+  "developer",
+  "ipp"
+ ],
+ "website": "https://americas.rwe.com/",
+ "headquarters": "Austin, Texas and Chicago, Illinois, United States",
+ "employees": "'a talented workforce of 2,000 employees' (RWE Americas homepage, undated); RWE AG's Onshore Wind/Solar segment employed 3,767 FTE globally at 31 December 2025",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "ETR: RWE (parent, RWE AG)"
+ },
+ "summary": "BOTTOM LINE UP FRONT: RWE's US business paused, wrote off its American offshore ambition for a US$1.22 billion federal settlement, and came back with a bigger cheque and a different product — EUR 17 billion of net US investment to 2031, 13 GW of operating capacity rising to 22 GW, and a pipeline of fifteen gas peakers inside a subsidiary that until March 2026 was called Clean Energy. BACKGROUND. RWE Clean Energy, LLC was renamed RWE Americas, LLC effective March 2026 — confirmed by the leadership CVs on RWE's own site — while the underlying legal entity persists in the parent's list of shareholdings. The business was assembled from RWE Renewables Americas plus the Con Edison Clean Energy Businesses, bought for US$6.8 billion and closed on 1 March 2023, which added roughly 8 GW. RWE states approximately 13 GW operating across 27 states; its parent's audited table gives 11,177 MW of US renewables at 31 December 2025 (5,432 MW onshore wind, 5,745 MW solar) and excludes storage, so the two figures are not reconcilable. It commissioned 2 GW across 15 projects in seven states during 2025. The United States is now 52% of RWE's renewable capacity and takes almost half of a EUR 35 billion group investment programme. RWE reports no US profit and loss: RWE Clean Energy is an operating segment merged into the reportable segment Onshore Wind/Solar, which earned adjusted EBITDA of EUR 1,740m in FY2025 and EUR 1,016m in the first half of 2026. What RWE does disclose separately is RWE Clean Energy as a cash-generating unit: goodwill of EUR 1,351m, down from EUR 1,528m, at a discount rate raised from 5.25% to 6.25%.",
+ "ecosystemRole": "We assess RWE Clean Energy as the ecosystem's clearest case of a European utility rationing American capital and then changing what it buys with it. For a corporate offtaker it is a reliable multi-project counterparty — 872 MW to Meta across four solar farms, 1.1 GW to Amazon across seven contracts, 446 MW to Microsoft on two 15-year wind PPAs, 155 MW to Google in Oklahoma. For an equipment or EPC vendor it is a repeat-framework owner: RWE publicly credits Blattner's delivery credibility, ran McCarthy on Bright Arrow and Lafitte, and expanded GE Vernova to 109 turbines for two Texas projects. For anyone modelling US load growth, the important fact is the pivot: fifteen gas peaking projects across MISO, WECC, PJM and ERCOT, using interconnection rights RWE already holds, sold as 'speed to power' inside a business whose name still says clean energy.",
+ "productsAndServices": [
+  {
+   "name": "Utility-scale onshore wind, including repowering",
+   "category": "Development, ownership and operation",
+   "description": "RWE's oldest and largest US line: 5,432 MW of installed US onshore wind at 31 December 2025, up from 4,815 MW a year earlier, on a base that began with Forest Creek in Texas in 2006. Repowering is an explicit product, not a maintenance activity — two repowers were commissioned in 2025, Champion Repower at 126.8 MW and Forest Creek Repower at 126.9 MW, both in Texas. RWE describes Forest Creek's as decommissioning every original tower, turbine and component and building new foundations for 45 new GE Vernova turbines, extending operating life by a further 30 years, with blades, rotors and nacelles repurposed or recycled through Wanzek Construction, a MasTec Renewables company.",
+   "highlights": [
+    "gridinfo.com, built on EIA and FERC EQR filings, ranks RWE Clean Energy third of 749 US utilities by net generation from wind and 26th of 5,343 overall",
+    "Peyton Creek II (243 MW) and Lane City (203 MW) in Texas and Baron Winds II (117 MW) in New York were among the 2025 commissioning cohort",
+    "GE Vernova supplies 109 turbines of 2.82 MW each for Forest Creek Repower and Honey Mesquite, 308 MW combined, in an expanded partnership RWE frames as domestic content",
+    "The legacy fleet runs on Siemens (Forest Creek 54 x 2.3 MW, Champion 55 x 2.3 MW), Mitsubishi (Roscoe 209 x 1 MW, Inadale 197 x 1 MW), GE (Pyron 166 x 1.5 MW, Panther Creek I-III) and Gamesa (Sand Bluff 90 MW)",
+    "On 7 November 2025 a 75 to 100 foot blade detached from a turbine at Future Generation Wind in Plymouth, Massachusetts, landing in a cranberry bog with no injuries; the tower top was charred, the project was shut down and Siemens Gamesa, which built and maintains the turbine, is conducting the root-cause analysis with RWE"
+   ],
+   "positioning": "RWE's own claim is that it is 'the third largest owner and operator of onshore wind, solar and battery storage in the U.S.' — company boilerplate that trade press repeats verbatim and that no independent source corroborates. The independent rankings that do exist measure something else: generation rather than capacity. On storage specifically, RWE does not appear in the independent US top five at all, which sits awkwardly beside the same sentence.",
+   "soldThrough": "Direct development, ownership and operation, contracted through long-term corporate and utility PPAs; capacity built with repeat-owner EPC frameworks",
+   "targetSegments": [
+    "Hyperscalers and large corporates",
+    "Regulated and municipal utilities",
+    "Merchant markets in ERCOT"
+   ],
+   "roadmap": "US capacity from 13 GW to 22 GW by 2031 on EUR 17bn of net investment; repowering the 2006-2010 Texas fleet is the organic renewal line"
+  },
+  {
+   "name": "Utility-scale solar and co-located solar plus storage",
+   "category": "Development, ownership and operation",
+   "description": "US installed solar reached 5,745 MW at 31 December 2025 from 4,811 MW, overtaking onshore wind for the first time. RWE claims on its own project pages to rank 'number 2 in the United States for solar energy with over 6 gigawatts'. Its largest named US solar asset is Copper Mountain Solar in Clark County, Nevada at 812 MW. The 2025 cohort added Emily Solar (273.6 MW, Illinois, Blattner-built, completing RWE's first gigawatt in that state), Casey Fork Solar (150 MW, Illinois), Stoneridge (200 MW, Texas), Lafitte Solar (100 MW, Louisiana — RWE's first project in the state, built by McCarthy), Ashwood Solar (86 MW, Kentucky) and Arlington Valley Solar (125 MW, Arizona). RWE states plainly why it pairs the two technologies in America and not in Europe: 'In the USA, we often build storage facilities and solar farms together to optimise the timing of photovoltaic feed-ins to the local grid.'",
+   "highlights": [
+    "Co-located projects in development include Sleeping Giant (Colorado, 215 MW PV + 125 MW BESS), Yellow Bell (Arizona, 200 MW + 800 MWh into APS's Panda 230 kV substation), Independence (Louisiana, 200 MW + 60 MW), Janus (California, 80 MW + 320 MWh), Maryland Blue Crab (100 MW + 25 MW, COD end-2028) and Magnolia Lake (Mississippi, MISO)",
+    "RWE publicly credits 'Blattner's delivery credibility' — the repeat-owner framework is the disclosed procurement model",
+    "No PV module supplier is named in any RWE first-party source",
+    "Sandy Run Solar (198 MW, Berkeley County, South Carolina) has faced more than a year of local opposition tied explicitly to fears that data centres follow solar; a county panel advanced lifting a development moratorium for the roughly 1,500 acres RWE needs"
+   ],
+   "positioning": "RWE's differentiation on solar is execution reliability through a small set of repeat EPC partners rather than technology or cost. It names no solar competitor.",
+   "soldThrough": "Long-term corporate and utility PPAs; repeat-owner EPC frameworks with Blattner, McCarthy and MasTec's Wanzek",
+   "targetSegments": [
+    "Hyperscalers and technology buyers",
+    "Investor-owned utilities",
+    "State and municipal offtakers"
+   ],
+   "roadmap": "Rabbit's Foot Solar (298 MWac, Bowie County, Texas) for Meta with COD at end-2027; Crooked Creek Solar (155 MWac, McCurtain County, Oklahoma) for Google with COD in 2028"
+  },
+  {
+   "name": "Battery energy storage — standalone and co-located",
+   "category": "Storage development, ownership and operation",
+   "description": "RWE reports group operational battery capacity of 1.7 GW pro rata at the close of 2025 with a further 2.4 GW under construction, and the Onshore Wind/Solar segment's 'pumped storage, batteries' line at 1,316 MW against 814 MW a year earlier. It publishes no US-only operating storage figure and no US storage target. The named US operating fleet is Texas-weighted: Crowned Heron (150 MW / 300 MWh, Fort Bend County, the first standalone BESS in that county, online March 2025, 92 batteries on 15 acres with a stated 20-year life), Cartwheel (150 MW / 300 MWh, Sulphur Springs, 2025), Stoneridge BESS (100 MW / 200 MWh, Milam County, commissioned 26 November 2025) and the two 9.9 MW / 5 MWh Texas Waves units at Inadale and Pyron, plus Ventasso in California (50 MW, with RWE's own releases giving both 200 MWh and 220 MWh) and Iron Horse in Arizona (10 MW / 2.5 MWh with 2.4 MW of PV, dispatched by Tucson Electric Power). Westside Canal 2A (119 MW, Imperial Valley) was sold to San Diego Gas & Electric, closing in July 2026.",
+   "highlights": [
+    "Planet Rock Energy Storage in Pueblo County, Colorado is the outlier and the most technically interesting asset in the book: 1,550 MW combined, of which 1,500 MW is four-hour lithium-ion and 50 MW is iron-air long-duration, phased with the first 550 MW operating in 2029",
+    "The development pipeline is national rather than Texan: Fourth Quarter (500 MW four-hour, on the retired Dickerson Generating Station in Maryland), Erie Canal (230 MW, New York), Elliot (200 MW, Indiana), White Clover (200 MW, Illinois), Basecamp (170 MW, New York), Covina (110 MW, California, operations 2027) and Wythe County (52 MW / 208.8 MWh, Virginia, 2027)",
+    "The widely repeated '931 MW of US storage under construction' figure is RWE's own, from a press release dated 2 October 2024, syndicated unchanged and never independently recomputed; the three Texas projects that pushed it past 900 MW were all commissioned by the end of 2025, so it cannot describe the position today",
+    "RWE does not appear in Tamarindo's independent ranking of the top five US storage owners by operating capacity, which sits uneasily beside its own 'third largest ... and battery storage' formulation",
+    "The only supplier RWE names is LG, from a 2021 press release header announcing a deal to procure integrated battery energy storage systems",
+    "RWE's accounting assumes a 10 to 15 year useful life for battery storage facilities against 25 to 35 years for solar"
+   ],
+   "positioning": "RWE sells 'one-stop energy storage systems' and lists competencies in battery chemistry, electrical engineering, application analytics, business development and market design, with services spanning peak-load management, transmission and distribution deferral, frequency regulation, spinning and non-spinning reserves, voltage control and black start. It names no storage competitor.",
+   "soldThrough": "Direct ownership with market access through RWE Clean Energy QSE, LLC in ERCOT and RWE Trading Americas Inc.; utility tolling and dispatch agreements (Tucson Electric Power at Iron Horse); occasional asset sales to utilities (Westside Canal 2A to SDG&E)",
+   "targetSegments": [
+    "ERCOT and CAISO wholesale markets",
+    "Vertically integrated and investor-owned utilities",
+    "Co-location alongside RWE's own solar"
+   ],
+   "roadmap": "Planet Rock phase one, 550 MW, operating 2029; Covina and Wythe County in 2027; group storage under construction 2.4 GW at 31 December 2025"
+  },
+  {
+   "name": "FlexGen — flexible gas generation and energy campuses",
+   "category": "Dispatchable generation (new line, announced March 2026)",
+   "description": "The largest change to RWE's US product set, and not a renewables line. RWE's own page states: 'With more than 125 years of global energy experience and nearly 20 years of renewable energy expertise in the U.S. market across wind, solar, and battery storage, RWE Americas is now also developing collocated flexible gas generation projects.' The March 2026 announcement describes a pipeline of fifteen natural gas peaking projects across MISO, WECC, PJM and ERCOT and a plan to 'leverage already-secured grid interconnections to add firm capacity on an accelerated timeline', packaged as 'energy campuses' that co-locate generation, storage and infrastructure to operate as a coordinated system for 'speed to power'. It is backed by a US$300 million turbine reservation agreement announced in August 2026, and RWE has separately stated a target of more than 3 GW of gas by 2035 with grid connections secured for up to 10 GW.",
+   "highlights": [
+    "The interconnection rights are the asset: RWE is monetising queue positions it already holds rather than joining the back of the queue",
+    "Funded in part by the offshore settlement — the same August 2026 release that announced the US$1.22bn DOI payment announced the turbine reservation and a US$900m indirect 16% stake in Woodside's Louisiana LNG project",
+    "RWE is the only named US developer to have paired a federal offshore-wind buyout with an LNG equity investment, which is what drew state litigation and an advocacy campaign",
+    "The line sits inside a subsidiary called Clean Energy until March 2026 and Americas thereafter — the rename and the gas pivot are the same quarter"
+   ],
+   "positioning": "Sold as speed to power and firm capacity for load growth rather than as a transition asset. NextEra and Invenergy long ago normalised gas inside renewables portfolios; for RWE this is new.",
+   "soldThrough": "Customised power solutions combining renewables, storage and gas, sold as energy campuses; secured interconnections as the differentiator",
+   "targetSegments": [
+    "Data centres and other large loads needing firm capacity quickly",
+    "MISO, WECC, PJM and ERCOT capacity and energy markets"
+   ],
+   "roadmap": "Fifteen peaking projects in the pipeline from 2026; more than 3 GW of gas targeted by 2035"
+  },
+  {
+   "name": "Energy services — wholesale, retail and asset management",
+   "category": "Commercial and operational services",
+   "description": "A distinct commercial arm in RWE's own site navigation, split into Wholesale Energy Services and Energy Management — sold explicitly to energy asset owners, renewable developers and load-serving entities — and Retail Energy Services and Distributed Clean Energy. Market access runs through RWE Trading Americas Inc. and RWE Clean Energy QSE, LLC, the qualified scheduling entity for ERCOT. Operations and asset management are productised in their own legal entities: RWE Clean Energy O&M, LLC, RWE Clean Energy Asset Management, LLC and RWE Clean Energy Services, LLC. On the Texas Waves projects RWE states that it 'owns the project in addition to providing the development, financing, operations and maintenance' with 'System Dispatching and Energy Management ... provided by RWE on a daily basis'.",
+   "highlights": [
+    "The distributed and community solar half of this line is being sold: Goldman Sachs Alternatives agreed on 29 July 2026 to acquire RWE's US Distributed Clean Energy business — about 348 MWdc / 308 MWac operating across 16 states, a 1.2 GW development pipeline, and the operating and development teams",
+    "Price undisclosed; close expected in the fourth quarter of 2026 subject to regulatory approval",
+    "RWE framed the sale as reinforcing 'RWE Americas' focus on its utility-scale power business'",
+    "Trade coverage notes the announcement does not clarify whether RWE's headline ~13 GW figure already excludes these assets — an open question RWE has not answered"
+   ],
+   "positioning": "Sold as market access and operational capability to third-party owners as well as to RWE's own fleet; the retreat from distributed generation narrows it to utility-scale.",
+   "soldThrough": "Direct service agreements with asset owners, developers and load-serving entities; ERCOT market access through RWE's own QSE",
+   "targetSegments": [
+    "Energy asset owners",
+    "Renewable developers",
+    "Load-serving entities"
+   ],
+   "roadmap": "Distributed Clean Energy divestment closing in Q4 2026, leaving a utility-scale-only services business"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Planet Rock Energy Storage (Pueblo County, Colorado)",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Combined capacity",
+     "value": "1,550 MW"
+    },
+    {
+     "band": "Power",
+     "label": "Lithium-ion tranche",
+     "value": "1,500 MW, four-hour duration"
+    },
+    {
+     "band": "Power",
+     "label": "Long-duration tranche",
+     "value": "50 MW iron-air"
+    },
+    {
+     "band": "Design",
+     "label": "Site",
+     "value": "180 acres, one mile north of the Tundra Substation"
+    },
+    {
+     "band": "Schedule",
+     "label": "Phasing",
+     "value": "phased, with the first 550 MW operating in 2029"
+    }
+   ],
+   "notes": "The only US project in RWE's book pairing lithium-ion with iron-air long-duration storage, and by a wide margin the largest single storage asset it has announced anywhere."
+  },
+  {
+   "product": "US operating battery fleet (as RWE publishes it)",
+   "specs": [
+    {
+     "band": "Texas",
+     "label": "Crowned Heron (Fort Bend County)",
+     "value": "150 MW / 300 MWh, ERCOT, online March 2025; 92 batteries on 15 acres; 20-year life; stated tax revenue 'upward from $1,000,000'"
+    },
+    {
+     "band": "Texas",
+     "label": "Cartwheel (Sulphur Springs)",
+     "value": "150 MW / 300 MWh, ERCOT, 2025 — EIA-derived data records it as 300 MW, a nameplate-convention difference no source reconciles"
+    },
+    {
+     "band": "Texas",
+     "label": "Stoneridge BESS (Milam County)",
+     "value": "100 MW / 200 MWh, ERCOT, commissioned 26 November 2025, paired with 200 MW of solar"
+    },
+    {
+     "band": "Texas",
+     "label": "Texas Waves I",
+     "value": "Inadale and Pyron, 9.9 MW / 5.0 MWh each, ERCOT day-ahead ancillary, co-located at the respective wind farms"
+    },
+    {
+     "band": "California",
+     "label": "Ventasso (San Diego)",
+     "value": "50 MW; RWE's 2025 release says 200 MWh and its 2026 release says 220 MWh; 33 outdoor battery containers"
+    },
+    {
+     "band": "Arizona",
+     "label": "Iron Horse (Tucson)",
+     "value": "10 MW / 2.5 MWh plus 2.4 MW PV; Tucson Electric Power buys energy and capacity and dispatches the battery"
+    },
+    {
+     "band": "Divested",
+     "label": "Westside Canal 2A (Imperial Valley)",
+     "value": "119 MW, CAISO, online December 2024, sold to San Diego Gas & Electric — contract September 2025, CPUC approval June 2026, closed July 2026"
+    },
+    {
+     "band": "Accounting",
+     "label": "Useful life",
+     "value": "battery storage facilities 10-15 years; solar assets 25-35 years"
+    }
+   ],
+   "notes": "RWE publishes no US-only operating storage total. The group figures are 1.7 GW operational pro rata and 2.4 GW under construction at 31 December 2025, with the Onshore Wind/Solar segment's pumped-storage-and-batteries line at 1,316 MW. Group taxonomy-aligned capital expenditure on battery storage systems was EUR 687m in 2025 against EUR 743m in 2024."
+  },
+  {
+   "product": "US portfolio and the figures that do not reconcile",
+   "specs": [
+    {
+     "band": "Company-stated",
+     "label": "US operating capacity",
+     "value": "approximately 13 GW across 27 states (press releases, 2026); '12.7+ GW ... nearly 13 GW' in March 2026"
+    },
+    {
+     "band": "Audited",
+     "label": "US installed renewables, 31 Dec 2025",
+     "value": "11,177 MW — onshore wind 5,432 MW and solar 5,745 MW; the table excludes battery storage"
+    },
+    {
+     "band": "Audited",
+     "label": "US installed renewables, 31 Dec 2024",
+     "value": "9,625 MW — onshore wind 4,815 MW and solar 4,811 MW"
+    },
+    {
+     "band": "Company-stated",
+     "label": "2025 commissioning",
+     "value": "2 GW across 15 projects in seven states — six solar, four BESS, five wind; about 3,500 construction jobs"
+    },
+    {
+     "band": "Company-stated",
+     "label": "Under construction (June 2025)",
+     "value": "29 projects, 3,875 MW, across 11 states"
+    },
+    {
+     "band": "Independent",
+     "label": "EIA Form 860M-derived",
+     "value": "15,266.2 MW across 166 plants (155 operational, 9 planned, 2 expanding) per interconnection.fyi; a search-indexed version of the same page reported 214 projects at the same capacity"
+    },
+    {
+     "band": "Independent",
+     "label": "Generation ranking",
+     "value": "26th of 5,343 US utilities by net generation and 3rd of 749 by wind generation (gridinfo.com, EIA plus FERC EQR, updated December 2025)"
+    },
+    {
+     "band": "Facilities",
+     "label": "Facility count",
+     "value": "RWE says 'more than 170 facilities in 24 U.S. states'; the two independent EIA-derived databases say 166 and 169 plants across roughly 25 to 27 states"
+    }
+   ],
+   "notes": "Four distinct capacity bases are in circulation — RWE's ~13 GW marketing figure including storage, its parent's audited 11,177 MW excluding storage, an EIA-derived 15.3 GW that counts nameplate differently, and a generation-based ranking that is not a capacity measure at all. None of them reconciles to another and no source attempts it."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-02",
+   "category": "legal",
+   "headline": "California's Attorney General and Energy Commission serve a notice of intent to sue the Department of the Interior and RWE over the cancellation of the Humboldt floating-wind lease, alleging OCSLA violations including no pre-cancellation hearing, no five-year suspension, no governor notification, and compensation of US$121.3m exceeding statutory formulas",
+   "read": "RWE is a named party, not a bystander — the offshore exit bought cash and a lawsuit, and the 60-day pre-filing window was still running as this dossier was written.",
+   "source": "https://www.offshorewind.biz/2026/09/02/california-moves-to-sue-trump-administration-rwe-over-deal-to-cancel-floating-wind-project/"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "financial",
+   "headline": "H1 2026: group adjusted EBITDA EUR 3.01bn against a EUR 2.72bn consensus compiled by the company from ten analyst estimates; Onshore Wind/Solar adjusted EBITDA EUR 1,016m against EUR 830m; adjusted EPS EUR 1.77, up more than 60%",
+   "read": "The cleanest beat on the record — and driven substantially by a EUR 332m Dutch coal-compensation payment and an energy-trading rebound rather than by US operations.",
+   "source": "https://www.investing.com/news/earnings/rwe-firsthalf-profit-beats-on-dutch-payment-energy-trading-rebound-4856613"
+  },
+  {
+   "date": "2026-08-06",
+   "category": "policy",
+   "headline": "RWE U.S. Offshore settles with the Department of the Interior for US$1.22bn, relinquishing the New York Bight, California Humboldt and Louisiana leases — roughly 5.9 to 7 GW — after investing more than US$1bn and concluding 'there is no path forward to permit these projects in the U.S. for the foreseeable future'",
+   "read": "The fifth federal offshore buyout, and the one that came with a fossil reinvestment: US$900m for an indirect 16% stake in Woodside's Louisiana LNG and a US$300m gas turbine reservation announced the same day.",
+   "source": "https://www.rwe.com/en/press/rwe-americas/2026-08-06-rwe-us-offshore-reaches-settlement-with-doi-on-offshore-wind-leases/"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "customer",
+   "headline": "RWE signs a 15-year PPA with Google for the total output of Crooked Creek Solar, 155 MWac in McCurtain County — RWE's first solar project in Oklahoma, with COD in 2028",
+   "read": "The fourth hyperscaler in the book, and the first Google contract; the buyer set is now Amazon, Meta, Microsoft and Google.",
+   "source": "https://www.rwe.com/en/press/rwe-americas/2026-08-03-rwe-and-google-sign-ppa-for-oklahoma-solar-project/"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "ma",
+   "headline": "RWE agrees to sell its US Distributed Clean Energy business to Infrastructure at Goldman Sachs Alternatives — about 348 MWdc / 308 MWac operating across 16 states, a 1.2 GW development pipeline and the operating and development teams; price undisclosed, close expected in Q4 2026",
+   "read": "RWE exits distributed and community solar to concentrate on utility-scale, and has not said whether its headline ~13 GW figure already excludes these assets.",
+   "source": "https://americas.rwe.com/press/2026-07-29-rwe-signs-agreement-to-sell-us-distributed-generation-business/"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "financial",
+   "headline": "RWE raises FY2026 and FY2027 guidance: FY2026 adjusted EBITDA to EUR 5,750-6,350m, adjusted net income to EUR 1,950-2,450m and adjusted EPS to EUR 2.60-3.30; 2031 EPS target lifted to EUR 4.55; 2026 net investment guidance raised from EUR 6-8bn to EUR 9-11bn",
+   "read": "A different company from the one that cut EUR 10bn of capex sixteen months earlier — the retrenchment story became a deployment story.",
+   "source": "https://www.rwe.com/en/press/rwe-ag/2026-07-28-rwe-raises-outlook-for-fiscal-years-2026-and-2027/"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "customer",
+   "headline": "Meta expands its RWE partnership with a PPA on Rabbit's Foot Solar, 298 MWac in Bowie County, Texas, with COD at end-2027, taking the relationship to 872 MW over two years",
+   "read": "Meta is RWE's largest corporate counterparty; three different totals for the same relationship circulate (374 MW, 574 MW, 872 MW) and no source reconciles them.",
+   "source": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/"
+  },
+  {
+   "date": "2026-06-03",
+   "category": "financial",
+   "headline": "RWE completes the EUR 1.5bn share buyback begun in November 2024 in three EUR 500m tranches",
+   "read": "Closes the loop on the capital reallocation that started when RWE pulled back from the US — the money that did not go into American projects came back to shareholders.",
+   "source": "https://www.rwe.com/en/press/rwe-ag/2026-06-03-rwe-completes-share-buyback-programme/"
+  },
+  {
+   "date": "2026-05-12",
+   "category": "capacity",
+   "headline": "RWE reaches 1 GW of operating capacity in Illinois with the ribbon-cutting of Emily Solar, 273.6 MW, built by Blattner with about 400 peak jobs",
+   "read": "The repeat-owner EPC framework in action; RWE publicly credits Blattner's delivery credibility rather than its price.",
+   "source": "https://americas.rwe.com/press/2026-05-12-rwe-celebrates-1-gigawatt-of-energy-projects/"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "corporate",
+   "headline": "RWE commits EUR 17bn net to the United States over 2026-2031 — almost half of a EUR 35bn group programme — taking US capacity from 13 GW to 22 GW by 2031, and enters flexible gas generation with a pipeline of fifteen peaking projects across MISO, WECC, PJM and ERCOT",
+   "read": "The pause ends and the product changes: RWE's chief executive credited the One Big Beautiful Bill Act with providing the 'clarity' to resume, a bill that cut clean-energy credits — certainty, not favourability, restarted the capital.",
+   "source": "https://americas.rwe.com/press/2026-03-12-rwe-accelerates-u-s-growth-with-17-billion-planned-investment/"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "financial",
+   "headline": "FY2025: group adjusted EBITDA EUR 5,087m from EUR 5,680m, adjusted net income EUR 1,803m from EUR 2,320m, adjusted EPS EUR 2.48 — at the upper end of guidance; a EUR 35bn net investment plan to 2031 announced",
+   "read": "Profit fell 22% on power-margin normalisation while the investment plan grew — the earnings and the ambition are moving in opposite directions.",
+   "source": "https://www.investing.com/news/earnings/rwe-2025-profit-falls-22-as-power-margins-normalize-outlines-35-bln-plan-4556096"
+  },
+  {
+   "date": "2026-03-05",
+   "category": "capacity",
+   "headline": "RWE commissions 2 GW across 15 US projects in seven states during 2025 — six solar, four battery and five wind, including two Texas repowers — supporting about 3,500 construction jobs",
+   "read": "The largest single-year US addition in RWE's history, delivered during the year it was supposedly paused.",
+   "source": "https://www.rwe.com/en/press/rwe-americas/2026-03-05-rwe-commissions-2-gw-of-new-energy-projects-in-the-us/"
+  },
+  {
+   "date": "2025-12-18",
+   "category": "customer",
+   "headline": "Indiana Michigan Power, an AEP company, signs a 15-year PPA for the full output of the 200 MW Prairie Creek project in Blackford County, Indiana, with COD in 2028",
+   "read": "The first named utility PPA of the cycle — RWE's offtake book is not only hyperscalers.",
+   "source": "https://www.rwe.com/en/press/rwe-clean-energy/2025-12-18-rwe-and-indiana-michigan-power-company-partner-on-200-mw-solar-project/"
+  },
+  {
+   "date": "2025-11-26",
+   "category": "project",
+   "headline": "Stoneridge is commissioned in Milam County, Texas — 200 MW of solar with a 100 MW / 200 MWh battery",
+   "read": "The co-located pattern RWE says it runs in America and not in Europe, delivered.",
+   "source": "https://www.rwe.com/en/press/rwe-clean-energy/2025-11-26-rwe-brings-more-american-generated-power-to-texax-with-stoneridge-project/"
+  },
+  {
+   "date": "2025-11-13",
+   "category": "project",
+   "headline": "Lafitte Solar, 100 MW, completes construction as RWE's first project in Louisiana, built by McCarthy and enabled by a Meta PPA",
+   "read": "A new state entered on the back of a hyperscaler contract — the offtake comes first, the geography follows.",
+   "source": "https://www.rwe.com/en/press/rwe-clean-energy/2025-11-13-rwes-first-project-in-louisiana-completes-construction/"
+  },
+  {
+   "date": "2025-11-07",
+   "category": "incident",
+   "headline": "A 75 to 100 foot blade detaches from a turbine at Future Generation Wind in Plymouth, Massachusetts and lands in a cranberry bog; no injuries, the tower top was charred, the project shut down as a precaution, and Siemens Gamesa is conducting the root-cause analysis with RWE alongside MassDEP and town reviews",
+   "read": "The one verified safety incident in the US fleet, on an asset acquired through the Con Edison deal and maintained by its original manufacturer.",
+   "source": "https://www.nbcboston.com/news/local/mass-wind-turbine-blade-damage/3841685/"
+  },
+  {
+   "date": "2025-06-17",
+   "category": "capacity",
+   "headline": "RWE reports 29 projects and 3,875 MW under construction across 11 US states",
+   "read": "Peak US construction disclosure — the pause never reached the projects already funded.",
+   "source": "https://americas.rwe.com/press/2025-06-17-rwe-continues-to-support-us-energy-dominance/"
+  },
+  {
+   "date": "2025-06-12",
+   "category": "leadership",
+   "headline": "Kevin Kroll departs as Chief Operating Officer of RWE Clean Energy 'by mutual agreement'; the executive leadership team becomes Flanagan as CEO, Ritzenhofen as CFO and Hunfeld as CCO",
+   "read": "The COO role is eliminated from the leadership team; the org that emerges nine months later is a renamed one with a gas line.",
+   "source": "https://americas.rwe.com/press/2025-06-12-changes-in-management-and-organization-of-rwe-clean-energy/"
+  },
+  {
+   "date": "2025-03-20",
+   "category": "financial",
+   "headline": "RWE cuts its 2025-2030 investment programme by EUR 10bn, about 25%, raises its project hurdle rate from an average 8% to more than 8.5%, and directs the savings to a EUR 1.5bn buyback, citing US offshore risk and a slower European hydrogen ramp",
+   "read": "The formal pullback. Elliott Investment Management disclosed a roughly 5% stake four days later and called the return of capital insufficient.",
+   "source": "https://www.renewableenergyworld.com/energy-business/rwe-cuts-capital-expenditure-by-11bn-citing-investment-risks/"
+  },
+  {
+   "date": "2025-03-18",
+   "category": "procurement",
+   "headline": "RWE expands its GE Vernova partnership to 109 turbines of 2.82 MW for Forest Creek Repower (127 MW) and Honey Mesquite (181 MW) in West Texas, on US$9bn invested in the state since 2007",
+   "read": "Domestic content bought early — RWE's stated tariff mitigation was to purchase components ahead of the rules changing.",
+   "source": "https://americas.rwe.com/press/2025-03-18-rwe-expands-partnership-with-ge-vernova/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-08",
+   "scale": "872 MW across four solar PPAs",
+   "via": "Long-term PPAs on RWE-owned solar",
+   "note": "Meta is RWE Clean Energy's largest corporate offtaker, across four US solar projects signed over two years.",
+   "context": "The named projects are Emily Solar (274 MW, Illinois) and Lafitte Solar (100 MW, Louisiana) announced together in August 2024, Waterloo Solar (200 MWac, Bastrop County, Texas) in March 2025 and Rabbit's Foot Solar (298 MWac, Bowie County, Texas) in June 2026 with COD at end-2027. Three different totals circulate for the same relationship and no source reconciles them: 374 MW for the first two projects, 574 MW in one Solar Power World account that substitutes Waterloo for one of them, and 872 MW for 'agreements totalling 872 MW during the last two years'. Meta's dossier does not record RWE among its named PPA counterparties.",
+   "source": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-06",
+   "scale": "1.1 GW across seven US PPAs",
+   "via": "Long-term wind and solar PPAs plus an AWS cloud, AI and data-analytics framework",
+   "note": "Amazon holds seven long-term US contracts with RWE totalling 1.1 GW, alongside a framework in which AWS supplies RWE with cloud and AI services.",
+   "context": "RWE's own annual report states the seven US PPAs and 1.1 GW; the individual projects are not disclosed. The June 2025 framework agreement runs in both directions — RWE supplies clean power to Amazon data centres and AWS supplies RWE with cloud, AI and data-analytics services for trading models and wind and solar forecasting. A separate 110 MW fifteen-year offshore PPA from Nordseecluster B, signed by RWE Supply & Trading in February 2026, is German and does not belong to this unit. There is no Amazon equity stake in RWE: the shareholder register at 12 March 2026 shows Qatar Holding at 9.3% and BlackRock at 5.9%, and German disclosure thresholds begin at 3%.",
+   "source": "https://www.rwe.com/-/media/RWE/documents/05-investor-relations/finanzkalendar-und-veroeffentlichungen/2025-GJ/RWE-Annual-Report-2025.pdf"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "scale": "446 MW across two 15-year wind PPAs",
+   "via": "Peyton Creek II and Lane City onshore wind, Texas",
+   "note": "Microsoft contracted 446 MW combined from two RWE Texas wind farms on fifteen-year terms.",
+   "context": "RWE announced the two PPAs in May 2024 covering Peyton Creek II and Lane City, both in Texas and both fifteen years. Lane City (203 MW) and Peyton Creek II (243 MW) both appear in RWE's 2025 commissioning cohort, so the contracted capacity is now operating. Microsoft's dossier does not record RWE among its named counterparties.",
+   "source": "https://www.rwe.com/en/press/rwe-americas/2026-03-05-rwe-commissions-2-gw-of-new-energy-projects-in-the-us/"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-08",
+   "scale": "155 MWac, fifteen years",
+   "via": "Crooked Creek Solar, McCurtain County, Oklahoma",
+   "note": "Google takes the total output of Crooked Creek Solar, RWE's first Oklahoma solar project, under a fifteen-year PPA with COD in 2028.",
+   "context": "Announced 3 August 2026 and quoted by RWE with Will Conkling, Google's Director of Energy and Power. It is the fourth hyperscaler in RWE's book after Meta, Amazon and Microsoft, and the contract that took RWE's stated technology-company PPA total past 2 GW. The project is not yet built; the relationship is contractual rather than delivered.",
+   "source": "https://www.rwe.com/en/press/rwe-americas/2026-08-03-rwe-and-google-sign-ppa-for-oklahoma-solar-project/"
+  },
+  {
+   "slug": "aep",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-12",
+   "scale": "200 MW, fifteen years",
+   "via": "Prairie Creek solar, Blackford County, Indiana",
+   "note": "Indiana Michigan Power, an AEP company, buys the full output of RWE's 200 MW Prairie Creek project under a fifteen-year PPA with COD in 2028.",
+   "context": "Announced 18 December 2025 — the first named utility PPA of this cycle and a reminder that RWE's offtake book is not only hyperscalers. AEP is the most-cited utility in this corpus, and Indiana Michigan Power is the operating company serving the northern Indiana and southwestern Michigan territory where Prairie Creek sits.",
+   "source": "https://www.rwe.com/en/press/rwe-clean-energy/2025-12-18-rwe-and-indiana-michigan-power-company-partner-on-200-mw-solar-project/"
+  },
+  {
+   "slug": "blattner",
+   "type": "supplier",
+   "status": "active",
+   "scale": "Emily Solar, 273.6 MW",
+   "via": "EPC construction on utility-scale solar",
+   "note": "Blattner is one of RWE's repeat-framework EPC contractors; it built Emily Solar, the project that completed RWE's first gigawatt in Illinois.",
+   "context": "RWE's May 2026 ribbon-cutting release credits Blattner with building the 273.6 MW Emily Solar project, with about 400 peak construction jobs. Blattner's own dossier lists RWE among its repeat-owner frameworks alongside Pattern, Orsted, Recurrent/Goldman and NextEra/FPL, and records that RWE 'explicitly cites Blattner's delivery credibility'. On Blattner sites the owner furnishes the batteries — the procurement decision on any co-located storage stays with RWE.",
+   "source": "https://americas.rwe.com/press/2026-05-12-rwe-celebrates-1-gigawatt-of-energy-projects/"
+  },
+  {
+   "slug": "mccarthy",
+   "type": "supplier",
+   "status": "active",
+   "scale": "Lafitte Solar 100 MW; Bright Arrow 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
+   "via": "EPC construction on utility-scale solar and solar-plus-storage",
+   "note": "McCarthy built RWE's first Louisiana project and, earlier, the Bright Arrow solar-plus-storage project in Hopkins County, Texas.",
+   "context": "RWE's November 2025 release names McCarthy as the EPC on Lafitte Solar, the 100 MW project in Ouachita Parish that was RWE's first in Louisiana and was enabled by a Meta PPA. McCarthy's own dossier records Bright Arrow in Hopkins County, Texas for RWE Renewables Americas — 300 MWac / 390 MWdc plus a 100 MWac / 200 MWh battery on more than 3,000 acres, 876,000 panels and 85 central inverters — as the project where McCarthy pioneered a prefabrication strategy for all underground installations that it has since expanded portfolio-wide.",
+   "source": "https://www.rwe.com/en/press/rwe-clean-energy/2025-11-13-rwes-first-project-in-louisiana-completes-construction/"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-03",
+   "scale": "109 turbines of 2.82 MW, 308 MW combined",
+   "via": "Onshore wind turbine supply for Forest Creek Repower and Honey Mesquite",
+   "note": "GE Vernova supplies the turbines for RWE's two largest West Texas wind builds under an expanded partnership.",
+   "context": "RWE's March 2025 release states an expanded GE Vernova partnership covering 109 domestically produced turbines of 2.82 MW for Forest Creek Repower (127 MW, of which 45 turbines) and Honey Mesquite (181 MW), against US$9bn RWE has invested in Texas since 2007. RWE frames the domestic manufacture as part of its tariff mitigation — buying components early and sourcing increasingly from US suppliers. GE turbines also run RWE's legacy Pyron and Panther Creek fleets.",
+   "source": "https://americas.rwe.com/press/2025-03-18-rwe-expands-partnership-with-ge-vernova/"
+  },
+  {
+   "slug": "siemens-energy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2006",
+   "via": "Onshore wind turbines and long-term maintenance (Siemens Gamesa)",
+   "note": "Siemens Gamesa, part of Siemens Energy, supplied and maintains RWE's oldest US wind assets and is running the root-cause analysis on the November 2025 blade failure.",
+   "context": "RWE's first US wind project, Forest Creek in Texas (2006), used 54 Siemens Mark II 2.3 MW turbines, and Champion used 55 of the same class; Sand Bluff was RWE's first Gamesa project. The relationship is now also a liability question: on 7 November 2025 a 75 to 100 foot blade detached from a turbine at Future Generation Wind in Plymouth, Massachusetts, and RWE states that Siemens Gamesa, which built and maintains the turbine, is conducting an exhaustive root-cause analysis with RWE. The Forest Creek turbines have since been replaced with GE Vernova machines under the repowering programme.",
+   "source": "https://www.nbcboston.com/news/local/mass-wind-turbine-blade-damage/3841685/"
+  },
+  {
+   "slug": "mastec",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025",
+   "via": "Wanzek Construction, a MasTec Renewables company — turbine decommissioning and repowering works",
+   "note": "MasTec's Wanzek Construction handles the decommissioning and component recycling on RWE's Texas repowering programme.",
+   "context": "RWE states that on Forest Creek Repower every original wind tower, turbine and component was decommissioned and new tower foundations built for 45 new GE Vernova turbines, with blades, rotors and nacelles repurposed or recycled through Wanzek Construction, a MasTec Renewables company. Repowering is a distinct EPC scope from greenfield construction and RWE has run it through a different contractor than its solar frameworks.",
+   "source": "https://americas.rwe.com/press/2025-03-18-rwe-expands-partnership-with-ge-vernova/"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "competitor",
+   "status": "active",
+   "note": "The largest US renewables owner and the largest US battery owner, ahead of RWE on both.",
+   "context": "S&P Global Commodity Insights ranks NextEra Energy Resources first among US battery owners at 5.779 GW at 30 June 2026; RWE does not appear in that top five at all, and its own storage disclosure is a group figure of 1.7 GW pro rata rather than a US number. The gap matters for RWE's own boilerplate, which claims it is 'the third largest owner and operator of onshore wind, solar and battery storage in the U.S.' — a claim no independent ranking corroborates.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "engie-north-america",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fellow US business of a listed European parent, competing for the same corporate PPAs and, in Texas, the same storage revenue.",
+   "context": "Both are American platforms whose capital competes internally against European projects, both signed multi-project Meta solar PPAs in Texas over the same window, and both exited US offshore leases for federal payments in 2026 — ENGIE through the Ocean Winds joint venture in April, RWE through RWE U.S. Offshore in August. They diverge on storage: S&P Global's Q2 2026 US owner table lists ENGIE second at 3.662 GW and does not list RWE.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "aes-clean-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Competing US renewables platform selling to the same four hyperscalers, and a battery owner RWE does not rank alongside.",
+   "context": "Both signed large Meta solar PPAs over the same period — 650 MW to AES in SPP in May 2025 against 872 MW to RWE across four projects — and both restructured their development plans around the One Big Beautiful Bill Act's safe-harbor timetable, RWE stating that all its investment projects hold safe-harbour status and AES stating that its backlog is resilient to the change. S&P Global's Q2 2026 owner table places AES third at 1.978 GW; RWE is absent.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "invenergy",
+   "type": "competitor",
+   "status": "active",
+   "note": "The largest private US developer, and a fellow recipient of a federal offshore-wind buyout.",
+   "context": "Invenergy reports roughly 31,000 MW including construction and awarded projects with about 13,800 MW installed, against RWE's approximately 13 GW operating. Both took Department of the Interior payments to exit US offshore wind leases in 2026, in a sequence that also included TotalEnergies, Duke, Ocean Winds and BlackRock's GIP. Both are now selling firm and flexible capacity to data-centre load rather than renewables alone.",
+   "source": "https://maritime-executive.com/article/trump-administration-to-pay-rwe-1-22b-in-fifth-deal-to-end-offshore-wind"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "ITC/45X (One Big Beautiful Bill Act phase-out)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "RWE's 2025 annual report states that the OBBB provides for 'the discontinuation of tax credits for investments in wind and solar farms', that new assets must be commissioned by the end of 2027 to remain eligible, and that safe-harbour rules allow credits for assets completed after 2027 if construction is proven to have commenced by mid-2026, with operation no later than four years after construction began. RWE's position is unqualified: 'As all the investment projects we will be implementing in the coming years have safe harbour status, they remain eligible for these tax credits.' Its risk report repeats it: 'As we did this early on, our investment projects remain eligible for tax credits.'",
+   "mitigation": "RWE states it 'responded quickly to the shift in energy policy by purchasing components early, enabling us to secure important state funding for new wind and solar projects' and that it diversified supply chains toward domestic sources.",
+   "source": "https://www.rwe.com/-/media/RWE/documents/05-investor-relations/finanzkalendar-und-veroeffentlichungen/2025-GJ/RWE-Annual-Report-2025.pdf"
+  },
+  {
+   "regime": "Section 301 tariffs and reciprocal tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2025-08",
+   "exposure": "The annual report records a standard 15% rate on goods from the EU set in August 2025, a February 2026 Supreme Court ruling that the act cited lent no legitimacy to the country-specific tariffs, and a subsequent 10% global tariff introduced for 150 days under a separate law. It notes the Department of Commerce examining product-specific tariffs that 'would impact wind turbine components and critical minerals', a 50% duty on steel and aluminium from nearly all countries since June 2025, and punitive tariffs on Southeast Asian solar module manufacturers.",
+   "mitigation": "RWE states it 'carefully evaluate[s] the countries from which we procure supplies, while increasingly seeking local sources' and that it reaches 'agreements with suppliers and power purchasers that oblige them to pay a share of any additional levies' — a contractual pass-through rather than only a sourcing change. It also 'purchased plant components and built inventories for ongoing projects early on'.",
+   "source": "https://www.rwe.com/-/media/RWE/documents/05-investor-relations/finanzkalendar-und-veroeffentlichungen/2025-GJ/RWE-Annual-Report-2025.pdf"
+  },
+  {
+   "regime": "Federal permitting and offshore wind leasing suspension",
+   "status": "in-effect",
+   "effectiveDate": "2025-01",
+   "exposure": "RWE records an executive order suspending the issuance of new offshore leases, a comprehensive review of federal approval processes for wind projects, and a later order temporarily suspending construction of several competitors' offshore projects, with the courts to decide whether those assets proceed. It states the exposure directly: 'We are also exposed to the risk of federal authorities refusing to grant permits ... If we cannot continue them, we will have to recognise an impairment loss for capitalised development and investment expenses.' Its onshore position is deliberately contrasted: 'We consider our onshore solar and wind projects to be less exposed to such risks. The necessary federal approvals have continued to be granted for these investments.'",
+   "mitigation": "Resolved by exit: RWE U.S. Offshore settled with the Department of the Interior in August 2026 for US$1.22bn, relinquishing three leases after concluding there was 'no path forward to permit these projects in the U.S. for the foreseeable future'.",
+   "source": "https://www.rwe.com/-/media/RWE/documents/05-investor-relations/finanzkalendar-und-veroeffentlichungen/2025-GJ/RWE-Annual-Report-2025.pdf"
+  },
+  {
+   "regime": "OCSLA litigation over the lease relinquishment",
+   "status": "announced",
+   "effectiveDate": "2026-09-01",
+   "exposure": "California's Attorney General and Energy Commission served a notice of intent to sue the Department of the Interior and RWE on 1 September 2026 over the cancellation of lease OCS-P 0561 (Humboldt, 1.6 GW floating), alleging no hearing before cancellation, no five-year suspension, no notification or coordination with affected governors, statutory offshore-renewables priorities disregarded, relinquishment regulations not followed, and that the US$121.3m compensation exceeds statutory formulas. California has sixty days before formal filing. New York and Massachusetts sit in a separate seven-state coalition challenging the parallel TotalEnergies deal.",
+   "source": "https://www.offshorewind.biz/2026/09/02/california-moves-to-sue-trump-administration-rwe-over-deal-to-cancel-floating-wind-project/"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "Collection gap rather than a finding: RWE uses neither 'FEOC' nor 'domestic content' terminology in any first-party source reviewed. Its stated posture is functionally adjacent — 'increasingly sourcing from suppliers in the US', GE Vernova turbines described as domestically produced, and early component purchases — but the statutory tests are not addressed, and RWE names no battery cell or module supplier beyond a 2021 LG procurement announcement.",
+   "source": "https://www.rwe.com/-/media/RWE/documents/05-investor-relations/finanzkalendar-und-veroeffentlichungen/2025-GJ/RWE-Annual-Report-2025.pdf"
+  },
+  {
+   "regime": "Local siting and permitting",
+   "status": "in-effect",
+   "exposure": "Sandy Run Solar, 198 MW in Berkeley County, South Carolina, has drawn more than a year of local opposition tied explicitly to fears that AI data centres follow solar; a county panel advanced lifting a development moratorium over more than 7,500 acres for the roughly 1,500 acres RWE needs. In Ottawa County, Michigan a roughly 1,900-acre project on the Zeeland and Jamestown township border met significant resistance at a March 2026 information meeting. No RWE-specific interconnection-queue dispute or curtailment problem surfaced in resolvable sources, and no US regulatory penalty, prosecution or environmental fine against RWE was found.",
+   "source": "https://www.live5news.com/2026/05/11/wrong-all-levels-cross-residents-oppose-request-lift-development-moratorium/"
+  },
+  {
+   "regime": "Turbine safety and product liability",
+   "status": "in-effect",
+   "effectiveDate": "2025-11-07",
+   "exposure": "A 75 to 100 foot blade detached from a roughly 300 foot turbine at Future Generation Wind in Plymouth, Massachusetts on 7 November 2025 and landed several hundred feet away in a cranberry bog. There were no injuries; aerial footage showed the tower top charred where the blade separated; the turbine entered fail-safe automatically and the project was shut down as a precaution. MassDEP and Plymouth building inspectors opened reviews. No US battery storage fire, OSHA citation or worker fatality at an RWE Clean Energy site was found.",
+   "mitigation": "Siemens Gamesa, which built and maintains the turbine, is conducting an exhaustive root-cause analysis with RWE. The site came to RWE through the March 2023 Con Edison Clean Energy Businesses acquisition.",
+   "source": "https://www.nbcboston.com/news/local/mass-wind-turbine-blade-damage/3841685/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Andrew Flanagan",
+   "title": "Chief Executive Officer, RWE Americas, LLC (since March 2026)",
+   "photo": "images/execs/rwe-clean-energy-flanagan.png",
+   "background": [
+    "CEO, RWE Clean Energy, LLC — January 2024 to February 2026, before the entity was renamed",
+    "Chief Development Officer, RWE Clean Energy — March 2023 to January 2024",
+    "Chief Operating Officer, RWE Renewables Americas — July 2022 to February 2023",
+    "SVP and Chief Development Officer, Leeward Renewable Energy — 2016 to June 2022; VP Asset Management and Development, Leeward — 2011 to 2016",
+    "VP Business Development, Invenergy — 2004 to 2011",
+    "Calpine and Skygen — 1998 to 2004; engineer at Caterpillar 1997-98",
+    "US Navy and Naval Reserve officer, Lieutenant, 1997-2005",
+    "MBA, Kellogg School of Management, Northwestern University, 2004"
+   ]
+  },
+  {
+   "name": "Dr. Ingmar Ritzenhofen",
+   "title": "Chief Commercial Officer, RWE Supply & Trading Americas and RWE Americas, LLC",
+   "photo": "images/execs/rwe-clean-energy-ritzenhofen.png",
+   "background": [
+    "CCO, RWE Americas since March 2026; CCO, RWE Supply & Trading Americas (Chicago) since October 2025",
+    "CCO, RWE Clean Energy — October 2025 to February 2026",
+    "Chief Financial Officer, RWE Clean Energy — March 2023 to September 2025",
+    "CFO, RWE Renewables Americas — January 2022 to February 2023",
+    "Head of Controlling and Risk Management, RWE AG — 2021",
+    "Partner, McKinsey & Company (energy; strategy and corporate finance) — 2020 to 2021; Associate Partner 2018-19; Project Leader 2016-18",
+    "PhD, 'Electricity Markets and Renewable Energy Support Schemes', WHU - Otto Beisheim School of Management, with joint research at Chicago Booth"
+   ]
+  },
+  {
+   "name": "Malte Kuss",
+   "title": "Chief Financial Officer, RWE Americas, LLC (since March 2026)",
+   "photo": "images/execs/rwe-clean-energy-kuss.jpg",
+   "background": [
+    "CFO, RWE Clean Energy — October 2025 to February 2026",
+    "Director, Controlling and Risk Management, RWE AG — January 2022 to September 2025",
+    "Director, Strategy and Sustainability, RWE AG — 2021; Director, Portfolio Management and M&A, RWE AG — 2019 to 2021",
+    "Director, Strategy and Corporate Affairs, E.ON Climate & Renewables — 2018 to 2019; Director, Inhouse Consulting, E.ON SE — 2012 to 2018",
+    "Booz & Company — 2006 to 2012",
+    "MBA, INSEAD, 2011; PhD in Machine Learning, Max Planck Institute for Intelligent Systems, 2006; MSc Computer Science, TU Berlin"
+   ]
+  },
+  {
+   "name": "Hanson Wood",
+   "title": "Chief Development Officer, RWE Americas",
+   "background": [
+    "Named as Chief Development Officer on the May 2026 Illinois gigawatt release",
+    "Listed under Utility Scale Development on the June 2025 leadership reorganisation notice"
+   ]
+  },
+  {
+   "name": "Sam Eaton",
+   "title": "Senior Vice President and Chief Development Officer, Flexible Generation Solutions, RWE Americas",
+   "background": [
+    "Named with the March 2026 launch of the flexible gas generation business",
+    "Owns the fifteen-project gas peaker pipeline across MISO, WECC, PJM and ERCOT"
+   ]
+  },
+  {
+   "name": "Corey Hopper",
+   "title": "Project Execution, RWE Americas",
+   "background": [
+    "Named to the extended leadership team in the June 2025 reorganisation"
+   ]
+  },
+  {
+   "name": "Tim Nelson",
+   "title": "Operations and Asset Management, RWE Americas",
+   "background": [
+    "Named to the extended leadership team in the June 2025 reorganisation"
+   ]
+  },
+  {
+   "name": "Kevin Kroll",
+   "title": "Former Chief Operating Officer, RWE Clean Energy (departed June 2025)",
+   "background": [
+    "Left the executive leadership team 'by mutual agreement', announced 12 June 2025",
+    "The COO role was eliminated from the leadership team rather than refilled"
+   ]
+  },
+  {
+   "name": "Dr. Markus Krebber",
+   "title": "Chief Executive Officer, RWE AG",
+   "background": [
+    "Contract extended to 2031 on 9 July 2025",
+    "Author of the March 2025 decision to cut EUR 10bn from the investment programme and raise the hurdle rate above 8.5%",
+    "Credited the One Big Beautiful Bill Act with providing the clarity that allowed RWE to 'resume investment activities in full' in the US",
+    "Stated the pivot plainly: 'In the US, we are broadening our portfolio and now focusing on gas in addition to renewables.'"
+   ]
+  },
+  {
+   "name": "Dr. Michael Muller",
+   "title": "Chief Financial Officer, RWE AG",
+   "background": [
+    "Member of the Executive Board",
+    "Owns the EUR 35bn to 2031 investment programme and the EUR 1.5bn buyback completed in June 2026"
+   ]
+  },
+  {
+   "name": "Katja van Doren",
+   "title": "Member of the Executive Board, RWE AG",
+   "background": [
+    "Contract extended to 2029 on 25 September 2025"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "EUR",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "External revenue (RWE AG)",
+      "actual": "EUR 24,224m excluding gas and electricity tax; gross revenue including commercial optimisation EUR 55,959m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2025 comparative column"
+     },
+     {
+      "name": "Adjusted EBITDA (core business)",
+      "actual": "EUR 5,680m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No publicly resolvable adjusted-EBITDA consensus exists for FY2024; the only consensus comparison found is on statutory figures (revenue EUR 29.8bn missing estimates by 7.7% and statutory EPS EUR 6.91 beating by 98%), which are not the measures RWE guides on"
+     },
+     {
+      "name": "Adjusted net income",
+      "actual": "EUR 2.3bn",
+      "expected": "",
+      "verdict": "inline",
+      "result": "RWE beat its own November guidance"
+     },
+     {
+      "name": "Onshore Wind/Solar segment adjusted EBITDA",
+      "actual": "EUR 1,502m on external revenue of EUR 2,394m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The reportable segment that contains RWE Clean Energy"
+     },
+     {
+      "name": "US installed renewables",
+      "actual": "9,625 MW — onshore wind 4,815 MW, solar 4,811 MW",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Audited capacity table; excludes battery storage"
+     },
+     {
+      "name": "RWE Clean Energy CGU goodwill",
+      "actual": "EUR 1,528m at an after-tax discount rate of 5.25% and a terminal growth rate of 1.50%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The one place RWE discloses the US business separately"
+     }
+    ],
+    "commentary": "The capital decision of the year: RWE cut its 2025-2030 investment programme by about EUR 10bn, roughly 25%, raised its project hurdle rate from an average 8% to more than 8.5%, and routed the savings into a EUR 1.5bn buyback. Elliott Investment Management disclosed a roughly 5% stake days later and called the return of capital insufficient."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "External revenue (RWE AG)",
+      "actual": "EUR 17,628m, down 27%; gross revenue EUR 35,700m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2025"
+     },
+     {
+      "name": "Adjusted EBITDA (core business)",
+      "actual": "EUR 5,087m",
+      "expected": "EUR 4,550-5,150m (company guidance)",
+      "verdict": "beat",
+      "result": "At the upper end of the guided range. No analyst consensus figure was published in the reachable coverage, so beat-or-miss against the street is unresolved for FY2025."
+     },
+     {
+      "name": "Adjusted net income",
+      "actual": "EUR 1,803m (restated EUR 1,820m), from EUR 2,320m — down 22% on power-margin normalisation",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Adjusted EPS EUR 2.48 (restated EUR 2.50) on 727.6m shares"
+     },
+     {
+      "name": "Onshore Wind/Solar segment adjusted EBITDA",
+      "actual": "EUR 1,740m, up EUR 238m, on external revenue of EUR 2,638m",
+      "expected": "",
+      "verdict": "beat",
+      "result": "The only segment measure that contains the US business; RWE publishes no US-only profit measure"
+     },
+     {
+      "name": "US installed renewables",
+      "actual": "11,177 MW — onshore wind 5,432 MW, solar 5,745 MW; solar overtook wind for the first time",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The United States is 26% of group installed capacity and 52% of renewable capacity; more than half of the group's 2.8 GW of 2025 additions was American"
+     },
+     {
+      "name": "RWE Clean Energy CGU goodwill",
+      "actual": "EUR 1,351m, down from EUR 1,528m, at an after-tax discount rate raised to 6.25% and a terminal growth rate raised to 2.00%; ten-year detailed planning period",
+      "expected": "",
+      "verdict": "inline",
+      "result": "RWE attributes the discount-rate rise to a change in method — cash flows are now discounted on a USD basis rather than converted to euros and discounted on a EUR basis"
+     },
+     {
+      "name": "US impairment",
+      "actual": "An impairment in the USA within Onshore Wind/Solar with a recoverable amount of EUR 0 billion, and intangible assets recorded for battery storage development projects in California; the most significant impairments in the segment were EUR 132m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "RWE does not attribute the US write-down to a named project"
+     },
+     {
+      "name": "Group storage",
+      "actual": "1.7 GW operational pro rata with 2.4 GW under construction; the Onshore Wind/Solar 'pumped storage, batteries' line was 1,316 MW against 814 MW",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No US split is published; taxonomy-aligned capital expenditure on battery storage was EUR 687m against EUR 743m"
+     },
+     {
+      "name": "Gross capital expenditure",
+      "actual": "EUR 10,014m against EUR 9,377m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Workforce 20,120 FTE from 20,985; the Onshore Wind/Solar segment employed 3,767 FTE"
+     }
+    ],
+    "commentary": "The reversal year. RWE announced a EUR 35bn net investment programme to 2031 with EUR 17bn — almost half — allocated to the United States, lifting US capacity from 13 GW to 22 GW and adding flexible gas generation to the portfolio. The 2031 adjusted EPS target was set at EUR 4.40, later raised to EUR 4.55, with dividends growing 10% a year and an average IRR above 8.5%."
+   },
+   {
+    "period": "H1 2026",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Adjusted EBITDA (RWE AG)",
+      "actual": "EUR 3.01bn",
+      "expected": "EUR 2.72bn (consensus of ten analyst estimates compiled by the company)",
+      "verdict": "beat",
+      "result": "A 10.7% beat, but the consensus is RWE's own collected table rather than an independent LSEG or Reuters poll, and the drivers were largely non-operating or non-US — a EUR 332m compensation payment from the Dutch government for 2022 coal-fired generation restrictions, an energy-trading rebound, favourable wind and higher UK capacity-market revenue"
+     },
+     {
+      "name": "Adjusted EBIT",
+      "actual": "EUR 1.79bn",
+      "expected": "EUR 1.48bn",
+      "verdict": "beat",
+      "result": "A 21% beat on the same company-compiled consensus"
+     },
+     {
+      "name": "Adjusted net income",
+      "actual": "EUR 1.26bn",
+      "expected": "EUR 0.98bn",
+      "verdict": "beat",
+      "result": "A 28.6% beat; adjusted EPS EUR 1.77, up more than 60% year on year"
+     },
+     {
+      "name": "Onshore Wind/Solar segment adjusted EBITDA",
+      "actual": "EUR 1,016m against EUR 830m in H1 2025",
+      "expected": "",
+      "verdict": "beat",
+      "result": "RWE attributes the gain to continued capacity expansion and more favourable European wind, 'offset by negative effects arising from the conversion of US dollars to euros' — the US contribution is diluted by currency, not by operations"
+     },
+     {
+      "name": "Capacity under construction",
+      "actual": "10.3 GW group-wide; 752 MW commissioned since mid-2025 bringing the portfolio to nearly 41 GW",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No US split published"
+     },
+     {
+      "name": "Guidance raised",
+      "actual": "FY2026 adjusted EBITDA to EUR 5,750-6,350m, adjusted net income to EUR 1,950-2,450m, adjusted EPS to EUR 2.60-3.30; FY2027 adjusted EBITDA EUR 6,700-7,300m; 2026 net investment to EUR 9-11bn from EUR 6-8bn",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Sources disagree on the lower bound of the raised FY2026 EBITDA range — one transcript gives EUR 5.57bn and a Reuters headline EUR 5.75bn — and no source reconciles them"
+     }
+    ],
+    "commentary": "Market reaction was muted at about +1% premarket on the ADR. The buyback completed on 3 June 2026, and the Amprion majority-stake transaction accounts for much of the raised investment guidance, creating a new Regulated Grid Infrastructure segment from FY2027."
+   }
+  ],
+  "commentary": "RWE AG reports in euros and runs RWE Clean Energy as an operating segment merged into the reportable segment Onshore Wind/Solar alongside Europe and Australia, on the stated ground that the two have comparable economic features. There is therefore no US profit and loss. The one separate US disclosure is the RWE Clean Energy cash-generating unit in the goodwill note. Credit ratings are stable: Moody's affirmed Baa2 with a stable outlook on 20 August 2026, covering RWE Finance US, LLC among others, and Fitch rates BBB+ stable; RWE's own ratings page lists no S&P rating. No rating action of any kind was tied to the US pause, the offshore exit or the capex increase. Collection gap: no independent adjusted-EBITDA consensus is publicly resolvable for FY2024 or FY2025, and the only clean consensus comparison, H1 2026, uses a consensus RWE itself collected."
+ },
+ "strategyRead": [
+  "(High confidence) We assess RWE's US retrenchment was a group capital decision imposed on the American business, not an American market judgment, and that it has been reversed. Basis: in March 2025 RWE cut its 2025-2030 programme by about EUR 10bn and raised its hurdle rate from an average 8% to more than 8.5%, citing offshore risk and a slower European hydrogen ramp; in March 2026 it committed EUR 17bn net to the United States through 2031, almost half of a EUR 35bn group programme, taking capacity from 13 GW to 22 GW. RWE's own report is explicit that onshore was never the problem: 'We consider our onshore solar and wind projects to be less exposed to such risks. The necessary federal approvals have continued to be granted.' The 2 GW commissioned across fifteen projects in 2025 was its largest US year ever, delivered during the supposed pause.",
+  "(High confidence) We assess the offshore exit converted a stranded development book into gas and LNG, and bought a lawsuit with it. Basis: RWE U.S. Offshore relinquished three leases — New York Bight, California Humboldt and Louisiana, roughly 5.9 to 7 GW — for US$1.22bn on 6 August 2026 after investing more than US$1bn, and announced in the same release a US$900m indirect 16% stake in Woodside's Louisiana LNG project and a US$300m gas turbine reservation. On 1 September 2026 California's Attorney General and Energy Commission served notice of intent to sue the Department of the Interior and RWE over the Humboldt cancellation. RWE is the only named developer to have paired a federal offshore buyout with an LNG equity investment.",
+  "(High confidence) We assess the March 2026 rename from RWE Clean Energy to RWE Americas is the tell, not a formality. Basis: the leadership CVs on RWE's own site date the change to 03/2026, the same quarter the company announced fifteen gas peaking projects across MISO, WECC, PJM and ERCOT and a target of more than 3 GW of gas by 2035 with grid connections secured for up to 10 GW. The stated product is 'speed to power' from interconnection rights RWE already holds. A business whose growth line is dispatchable gas cannot keep a name that says clean energy, and RWE changed the name first.",
+  "(Moderate confidence) We assess RWE's own ranking claims are the weakest part of its public record and should not be repeated. Basis: 'the third largest owner and operator of onshore wind, solar and battery storage in the U.S.' and 'number 4 renewable energy company in the U.S. and the country's second largest solar owner' are company boilerplate that trade press repeats verbatim; no independent ranking corroborates either. The independent measures that exist are different metrics — gridinfo ranks RWE 26th of 5,343 US utilities by net generation and third of 749 by wind generation — and on storage specifically RWE does not appear in the independent top five of US owners at all. American Clean Power's owner tables, which would settle it, are members-only.",
+  "(Moderate confidence) We assess the '931 MW of US storage under construction' figure that circulates about RWE is stale company material and should be retired. Basis: it originates in a single RWE press release dated 2 October 2024, syndicated unchanged by Yahoo Finance, Energy Global and others, triggered by groundbreaking on Crowned Heron 1, Crowned Heron 2 and Cartwheel 1. All three were reported commissioned by the end of 2025, so the figure cannot describe today's position, and no EIA-, S&P- or Wood Mackenzie-derived tally ever recomputed it. RWE's current disclosure is a group figure — 2.4 GW under construction — with no US split.",
+  "(Moderate confidence) We assess the portfolio is being narrowed to utility-scale on purpose, and that RWE has not said what that does to its headline number. Basis: the Goldman Sachs Alternatives sale of the US Distributed Clean Energy business — about 348 MWdc / 308 MWac operating across 16 states plus a 1.2 GW pipeline and the teams — was framed by RWE as reinforcing 'RWE Americas' focus on its utility-scale power business', with close expected in Q4 2026. Trade coverage notes RWE has not clarified whether the ~13 GW headline already excludes those assets. Read alongside the Westside Canal 2A sale to San Diego Gas & Electric, the pattern is a smaller, more concentrated book.",
+  "(Low confidence) We assess the Amazon relationship is commercial and contractual only, with no equity component, contrary to a claim in circulation. Basis: RWE's shareholder register at 12 March 2026 shows Qatar Holding at 9.3% and BlackRock at 5.9% with no Amazon holding, and German voting-rights notifications begin at 3%. What exists instead is a June 2025 framework — RWE supplies clean power to Amazon data centres while AWS supplies RWE with cloud, AI and data-analytics services — seven US PPAs totalling 1.1 GW, and Amazon's purchase of RWE's former Didcot A site in the UK for about EUR 225m, a buyer identified by Deutsche Bank analysts rather than disclosed by RWE. The likely source of the confusion is the EUR 2.4bn mandatory convertible issued to a Qatar Investment Authority subsidiary to finance the Con Edison acquisition.",
+  "Collection gap: RWE publishes no US profit measure, no US-only operating storage MW or MWh, no US development pipeline in gigawatts, no dated US employee count, no PV module supplier and no FEOC or domestic-content statement despite a functionally adjacent sourcing posture. Four different US capacity bases are in circulation — RWE's ~13 GW marketing figure, its parent's audited 11,177 MW excluding storage, an EIA-860M-derived 15.3 GW, and a generation-based ranking that is not a capacity measure — and no source reconciles any pair of them. RWE's own releases give Ventasso as both 200 MWh and 220 MWh, and EIA-derived data records Cartwheel at 300 MW against RWE's 150 MW / 300 MWh. The domains us.rwe.com and rwecleanenergy.com do not resolve; americas.rwe.com is the live site.",
+  "Indicators to watch: (1) whether California files the OCSLA suit inside its sixty-day window from 1 September 2026, and whether New York or Massachusetts joins — the settlement money is not final until the litigation is; (2) the close of the Goldman Sachs Alternatives distributed-generation sale in Q4 2026 and whether RWE restates its ~13 GW headline afterwards; (3) the first named FlexGen site, turbine order or offtaker, which would move the gas pivot from a pipeline to a project; (4) Planet Rock's phase-one financing and any iron-air supplier announcement, the only long-duration technology decision in RWE's US book; (5) Siemens Gamesa's root-cause finding on the Plymouth blade failure and whether it reaches other turbines in the Con Edison-acquired fleet; (6) whether RWE ever appears in an independent US storage owner ranking, which would settle the gap between its own claim and the published tables."
+ ],
+ "sources": [
+  {
+   "label": "offshorewind.biz — California moves to sue the Trump administration and RWE over the deal to cancel a floating wind project",
+   "url": "https://www.offshorewind.biz/2026/09/02/california-moves-to-sue-trump-administration-rwe-over-deal-to-cancel-floating-wind-project/",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Moody's via TradingView — Moody's Ratings affirms RWE's Baa2 rating, outlook stable",
+   "url": "https://www.tradingview.com/news/moodys:b2b3666e9b18b:0-moody-s-ratings-affirms-rwe-s-baa2-rating-outlook-stable/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "S&P Global Commodity Insights — WECC leads US battery storage additions with 2.2 GW in Q2 (US owner ranking)",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "RWE — RWE delivers strong first-half results",
+   "url": "https://www.rwe.com/en/press/rwe-ag/2026-08-13-rwe-delivers-strong-first-half-results/",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Investing.com — RWE first-half profit beats on Dutch payment and energy-trading rebound (company-compiled consensus of ten estimates)",
+   "url": "https://www.investing.com/news/earnings/rwe-firsthalf-profit-beats-on-dutch-payment-energy-trading-rebound-4856613",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "offshorewind.biz — US government reaches USD 1.2 billion offshore wind exit deal with RWE",
+   "url": "https://www.offshorewind.biz/2026/08/07/us-government-reaches-usd-1-2-billion-offshore-wind-exit-deal-with-rwe/",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "RWE — RWE U.S. Offshore reaches settlement with DOI on offshore wind leases",
+   "url": "https://www.rwe.com/en/press/rwe-americas/2026-08-06-rwe-us-offshore-reaches-settlement-with-doi-on-offshore-wind-leases/",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "Maritime Executive — Trump administration to pay RWE $1.22B in the fifth deal to end offshore wind",
+   "url": "https://maritime-executive.com/article/trump-administration-to-pay-rwe-1-22b-in-fifth-deal-to-end-offshore-wind",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "RWE — RWE and Google sign a PPA for an Oklahoma solar project (Crooked Creek, 155 MWac, fifteen years)",
+   "url": "https://www.rwe.com/en/press/rwe-americas/2026-08-03-rwe-and-google-sign-ppa-for-oklahoma-solar-project/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "pv magazine USA — Goldman Sachs Alternatives to acquire RWE's US distributed energy business",
+   "url": "https://pv-magazine-usa.com/2026/08/03/goldman-sachs-alternatives-to-acquire-rwe-u-s-distributed-energy-business/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "RWE — RWE signs an agreement to sell its US distributed generation business",
+   "url": "https://americas.rwe.com/press/2026-07-29-rwe-signs-agreement-to-sell-us-distributed-generation-business/",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Ask the Grid — Goldman's RWE deal turns on a 1.2 GW pipeline's tax-credit status",
+   "url": "https://askthegrid.com/stories/rwe-distributed-generation-acquisition",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "RWE — RWE raises its outlook for fiscal years 2026 and 2027",
+   "url": "https://www.rwe.com/en/press/rwe-ag/2026-07-28-rwe-raises-outlook-for-fiscal-years-2026-and-2027/",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "RWE — Meta expands its partnership with RWE (Rabbit's Foot Solar, 298 MWac)",
+   "url": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "RWE — RWE completes its share buyback programme",
+   "url": "https://www.rwe.com/en/press/rwe-ag/2026-06-03-rwe-completes-share-buyback-programme/",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "Solar Power World — RWE secures a Meta PPA on a 298 MW Texas solar project",
+   "url": "https://www.solarpowerworldonline.com/2026/06/rwe-secures-meta-ppa-on-298-mw-texas-solar-project/",
+   "date": "2026-06"
+  },
+  {
+   "label": "RWE — RWE delivers a strong start to the year (Q1 2026)",
+   "url": "https://www.rwe.com/en/press/rwe-ag/2026-05-13-rwe-delivers-strong-start-to-the-year/",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "RWE — RWE celebrates 1 gigawatt of energy projects in Illinois (Emily Solar, Blattner-built)",
+   "url": "https://americas.rwe.com/press/2026-05-12-rwe-celebrates-1-gigawatt-of-energy-projects/",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Live 5 News — 'Wrong on all levels': Cross residents oppose a request to lift a development moratorium (Sandy Run Solar)",
+   "url": "https://www.live5news.com/2026/05/11/wrong-all-levels-cross-residents-oppose-request-lift-development-moratorium/",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "RWE — RWE accelerates US growth with EUR 17 billion of planned investment and enters flexible gas generation",
+   "url": "https://americas.rwe.com/press/2026-03-12-rwe-accelerates-u-s-growth-with-17-billion-planned-investment/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "RWE — RWE delivers strong financial performance (FY2025 results and the EUR 35bn plan)",
+   "url": "https://www.rwe.com/en/press/rwe-ag/2026-03-12-rwe-delivers-strong-financial-performance/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "RWE AG — Annual Report 2025 (PDF; segment reporting, US capacity table, RWE Clean Energy CGU, OBBB and tariff exposure)",
+   "url": "https://www.rwe.com/-/media/RWE/documents/05-investor-relations/finanzkalendar-und-veroeffentlichungen/2025-GJ/RWE-Annual-Report-2025.pdf",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "Utility Dive — Germany's RWE plans nearly $20B US investment, including gas peakers",
+   "url": "https://www.utilitydive.com/news/germanys-rwe-plans-20b-us-investment-including-gas-peakers/814533/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "Investing.com — RWE 2025 profit falls 22% as power margins normalize; outlines EUR 35bn plan",
+   "url": "https://www.investing.com/news/earnings/rwe-2025-profit-falls-22-as-power-margins-normalize-outlines-35-bln-plan-4556096",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "Energy-Storage.News — RWE brings online four BESS projects in a 13GW US clean energy portfolio",
+   "url": "https://www.energy-storage.news/rwe-brings-online-four-bess-projects-in-13gw-us-clean-energy-portfolio/",
+   "date": "2026-03-11"
+  },
+  {
+   "label": "pv magazine USA — RWE Americas touts 2 GW of clean energy projects commissioned in 2025",
+   "url": "https://pv-magazine-usa.com/2026/03/06/rwe-americas-touts-2-gw-of-clean-energy-projects-commissioned-in-2025/",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "RWE — RWE commissions 2 GW of new energy projects in the US",
+   "url": "https://www.rwe.com/en/press/rwe-americas/2026-03-05-rwe-commissions-2-gw-of-new-energy-projects-in-the-us/",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "Power Engineering — RWE announces its first US gas generation projects with 9 GW in the pipeline",
+   "url": "https://www.power-eng.com/gas/rwe-announces-first-u-s-gas-generation-projects-with-9-gw-in-the-pipeline/",
+   "date": "2026"
+  },
+  {
+   "label": "RWE — RWE and Indiana Michigan Power partner on a 200 MW solar project (Prairie Creek, fifteen years)",
+   "url": "https://www.rwe.com/en/press/rwe-clean-energy/2025-12-18-rwe-and-indiana-michigan-power-company-partner-on-200-mw-solar-project/",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "gridinfo.com — RWE Clean Energy electricity generation summary (EIA plus FERC EQR; 26th of 5,343 utilities, 3rd of 749 by wind generation)",
+   "url": "https://www.gridinfo.com/rwe-clean-energy",
+   "date": "2025-12"
+  },
+  {
+   "label": "RWE — RWE brings more American-generated power to Texas with the Stoneridge project",
+   "url": "https://www.rwe.com/en/press/rwe-clean-energy/2025-11-26-rwe-brings-more-american-generated-power-to-texax-with-stoneridge-project/",
+   "date": "2025-11-26"
+  },
+  {
+   "label": "RWE — RWE's first project in Louisiana completes construction (Lafitte Solar, McCarthy-built)",
+   "url": "https://www.rwe.com/en/press/rwe-clean-energy/2025-11-13-rwes-first-project-in-louisiana-completes-construction/",
+   "date": "2025-11-13"
+  },
+  {
+   "label": "NBC Boston — Blade breaks off a wind turbine and falls into a Massachusetts cranberry bog (Future Generation Wind)",
+   "url": "https://www.nbcboston.com/news/local/mass-wind-turbine-blade-damage/3841685/",
+   "date": "2025-11-07"
+  },
+  {
+   "label": "Kirkland & Ellis — 'One Big Beautiful Bill Act' brings big changes to green energy tax credits",
+   "url": "https://www.kirkland.com/publications/kirkland-alert/2025/08/one-big-beautiful-bill-act-brings-big-changes-to-green-energy-tax-credits",
+   "date": "2025-08"
+  },
+  {
+   "label": "RWE — RWE continues to support US energy dominance (29 projects, 3,875 MW under construction)",
+   "url": "https://americas.rwe.com/press/2025-06-17-rwe-continues-to-support-us-energy-dominance/",
+   "date": "2025-06-17"
+  },
+  {
+   "label": "RWE — Changes in management and organization of RWE Clean Energy",
+   "url": "https://americas.rwe.com/press/2025-06-12-changes-in-management-and-organization-of-rwe-clean-energy/",
+   "date": "2025-06-12"
+  },
+  {
+   "label": "RWE Americas — Changes in management and organization of RWE Clean Energy (PDF)",
+   "url": "https://americas.rwe.com/-/media/RWE/RWE-USA/documents/2025-06-12-changes-in-management-and-organization-of-rwe-clean-energy.pdf",
+   "date": "2025-06-12"
+  },
+  {
+   "label": "Windpower Monthly — RWE and Amazon Web Services sign a renewable energy deal",
+   "url": "https://www.windpowermonthly.com/article/1921753/rwe-amazon-web-services-sign-renewable-energy-deal",
+   "date": "2025-06"
+  },
+  {
+   "label": "offshorewind.biz — National Grid books EUR 360 million impairment after the Community Offshore Wind project is paused",
+   "url": "https://www.offshorewind.biz/2025/05/15/national-grid-books-eur-360-million-impairment-after-community-offshore-wind-project-paused/",
+   "date": "2025-05-15"
+  },
+  {
+   "label": "Renewable Energy World — RWE cuts capital expenditure by $11bn citing investment risks",
+   "url": "https://www.renewableenergyworld.com/energy-business/rwe-cuts-capital-expenditure-by-11bn-citing-investment-risks/",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "RWE — RWE achieves strong earnings in 2024 (the EUR 10bn capex cut and the hurdle-rate rise)",
+   "url": "https://www.rwe.com/en/press/rwe-ag/2025-03-20-rwe-achieves-strong-earnings-in-2024/",
+   "date": "2025-03-20"
+  },
+  {
+   "label": "RWE — RWE expands its partnership with GE Vernova (109 turbines, 308 MW)",
+   "url": "https://americas.rwe.com/press/2025-03-18-rwe-expands-partnership-with-ge-vernova/",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "RWE — RWE signs a long-term PPA with Meta (Waterloo Solar, 200 MWac)",
+   "url": "https://www.rwe.com/en/press/rwe-clean-energy/2025-03-18-rwe-signs-long-term-ppa-with-meta/",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "Tamarindo — RWE under pressure as Elliott builds a 5% stake",
+   "url": "https://tamarindo.global/insight/analysis/rwe-under-pressure-as-elliott-builds-5-stake/",
+   "date": "2025-03"
+  },
+  {
+   "label": "GlobeNewswire (RWE release) — RWE surpasses 900 MW of battery storage projects under construction in the US (the origin of the 931 MW figure)",
+   "url": "https://www.globenewswire.com/news-release/2024/10/02/2957084/0/en/RWE-surpasses-900-MW-of-battery-storage-projects-under-construction-in-the-U-S.html",
+   "date": "2024-10-02"
+  },
+  {
+   "label": "ESG Today — Meta signs PPAs with RWE to power data centers from new US solar farms (374 MW)",
+   "url": "https://www.esgtoday.com/meta-signs-ppas-with-rwe-to-power-data-centers-from-new-u-s-solar-farms/",
+   "date": "2024-08"
+  },
+  {
+   "label": "Utility Dive — RWE completes its $6.8B acquisition of the Con Edison Clean Energy Businesses",
+   "url": "https://www.utilitydive.com/news/rwe-con-edison-sale-clean-energy-businesses/643974/",
+   "date": "2023-03"
+  },
+  {
+   "label": "Tamarindo — Who are the top 5 US storage companies by operating capacity? (RWE absent)",
+   "url": "https://tamarindo.global/insight/analysis/who-are-the-top-5-us-storage-companies-by-operating-capacity/"
+  },
+  {
+   "label": "interconnection.fyi — EIA Form 860M-derived plant list for developer 'RWE Clean Energy'",
+   "url": "https://www.interconnection.fyi/eia/projects/developer/RWE%20Clean%20Energy"
+  },
+  {
+   "label": "RWE — Shareholder structure (Qatar Holding 9.3%, BlackRock 5.9%; no Amazon holding)",
+   "url": "https://www.rwe.com/en/investor-relations/rwe-share/share-at-a-glance/shareholder-structure/"
+  },
+  {
+   "label": "RWE — Credit ratings (Moody's Baa2 stable, Fitch BBB+ stable, no S&P rating)",
+   "url": "https://www.rwe.com/en/investor-relations/debt-and-credit-ratings/credit-ratings/"
+  },
+  {
+   "label": "RWE Americas — FlexGen (flexible gas generation and energy campuses)",
+   "url": "https://americas.rwe.com/our-energy/flexgen/"
+  },
+  {
+   "label": "RWE Americas — Energy storage overview",
+   "url": "https://americas.rwe.com/our-energy/storage/"
+  },
+  {
+   "label": "RWE Americas — Storage projects and locations",
+   "url": "https://americas.rwe.com/our-energy/storage/storage-projects-and-locations/"
+  },
+  {
+   "label": "RWE Americas — homepage (~13 GW across 27 states; 2,000 employees)",
+   "url": "https://americas.rwe.com/"
+  },
+  {
+   "label": "RWE Americas — Our Energy (US business lines; more than 11 GW developed and constructed since 2007)",
+   "url": "https://americas.rwe.com/our-energy/"
+  },
+  {
+   "label": "RWE Americas — Management page",
+   "url": "https://americas.rwe.com/rwe-americas/management/"
+  },
+  {
+   "label": "RWE Americas — Andrew Flanagan CV (records the March 2026 rename to RWE Americas, LLC)",
+   "url": "https://americas.rwe.com/rwe-americas/management/andrew-flanagan/"
+  },
+  {
+   "label": "RWE Americas — Ingmar Ritzenhofen CV",
+   "url": "https://americas.rwe.com/rwe-americas/management/ingmar-ritzenhofen/"
+  },
+  {
+   "label": "RWE Americas — Malte Kuss CV",
+   "url": "https://americas.rwe.com/rwe-americas/management/malte-kuss/"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}
