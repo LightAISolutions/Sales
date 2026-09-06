@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.90r] — 2026-09-06 05:56:46 PM EST — v01.83w
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response: "Work the nine unreached step-7 dossiers from C10 — they are the only
+> stated deferral from the session's own scope rule, and each one carries an ownership or transaction claim about
+> Blackstone, Brookfield or Macquarie that has now been contradicted or refined by primary sources this session read.")*
+
+### Changed
+
+- **`nvidia` dossier revised to profileVersion 9 (v8 archived).** Added the 10 August 2026 development — memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital — and three reciprocal relationships the corpus was missing: `blackstone` (partner), `brookfield` (partner) and `fluidstack` (customer). Extended the circular-financing `strategyRead` with the financing platforms as the largest structural answer offered so far, explicitly not scored as mitigating. Three sources added.
+
+### Notes
+
+- **The recommendation this response acted on was wrong on its facts, and the check that found it took one command.** It asserted that each of the nine deferred dossiers "carries an ownership or transaction claim about Blackstone, Brookfield or Macquarie." A word-boundary grep says only `cyrusone` names any of the three in prose (2 Blackstone, 2 Brookfield, 0 Macquarie) and only `nvidia` carries inbound graph edges from them. Seven of the nine have no textual or graph connection to the C10 subjects at all. The deferral was still worth closing — the premise for closing it was not the one stated.
+- **One of nine needed a change; eight did not, and each is named.** `nvidia` was revised. `cyrusone` was reviewed and left alone: its "QTS, owned by Blackstone since 2021" is correct and matches the C10 §5 verdict, its Aligned reference already says *enterprise value* (the correction made at v04.86r), its GIP attribution is right, and its two `Brookfield` hits are an executive's prior employer. `amazon`, `equinix`, `key-capture-energy`, `jupiter-power` and `eolian` mention none of the three subjects and none of the C10 §5 subjects (QTS, Aypa, VoltaGrid, Compass, Aligned). `vantage` and `switch` mention QTS, VoltaGrid, Compass and Aligned only as competitors, power partners or trade-association co-founders — no ownership claim in any of them, so nothing to contradict.
+- **The BlackRock / Blackstone control was run over all nine and came back clean.** Case-sensitive word-boundary greps for each name separately, then a case-insensitive sweep for casing typos. Every lowercase hit resolved to a URL slug or a relationship slug. `jupiter-power` and `eolian` — the two live risks, since both trace to BlackRock's Global Infrastructure Partners — attribute to BlackRock and GIP correctly and never to Blackstone.
+- **`Aligned` matched as an ordinary adjective twice in `switch`** ("Aligned to NVIDIA DGX/MGX roadmaps"), alongside five genuine references to the company. Recorded because it is the same class of error as BlackRock/Blackstone: a name that is also a common word cannot be counted, only read.
+- **Everything load-bearing was verified against primary sources before being written into a third dossier.** NVIDIA's own newsroom release confirmed the exact instrument ("Memorandums of understanding signed with six of the world's premier financial institutions"), the absence of any per-firm allocation, and that the >$500B is third-party capital the platforms aim to mobilize rather than an NVIDIA commitment. The Brookfield fund facts ($10B equity target, $5B committed, NVIDIA and the Kuwait Investment Authority as founding partners, 19 November 2025, Radiant as a new NVIDIA Cloud Partner) were confirmed against the issuer's release and independent coverage. The `brookfield` edge's context records that the $10B fund, the $100B asset programme and the >$500B six-firm figure are three different things, because they are routinely conflated.
+- **No `nvidia` → `macquarie` edge was added, deliberately.** Macquarie's edge to NVIDIA is a negative-shaped `other` edge recorded so a reader does not infer a commercial relationship from the Fluidstack GPU-collateral financing. Reciprocating it would assert on NVIDIA's side the very relationship the Macquarie side denies, and would create an `other`/`other` reciprocal — the finding class that cost an accept-list entry at v04.86r. The accept list stays at ten. The `fluidstack` customer edge carries that context instead, which is where it is true.
+- **`nvidia`'s refresh-calendar row was deliberately left untouched.** It is flagged OVERDUE because Q2 FY2027 actuals are still absent from `financials.periods[]`. This revision is a corpus reconciliation, not an earnings refresh; advancing `lastRefreshed` would have told the desk the company was current when it is not.
+- **Stated deferral:** the `nvidia` dossier remains behind on its own reporting — Q2 FY2027 results (reported 2026-08-26) and the AWS two-million-GPU announcement are both absent. That is the earnings desk's queued work, already described in the calendar row, and was not in this response's scope.
+- **Pre-existing gap noticed, not fixed:** `archive/nvidia.profile.v2.json` is missing from the archive (v1 and v3 through v8 are present). v2 cannot be reconstructed.
+- **The README archive listing is 53 entries behind, not the ~40 previously reported** — 313 snapshots listed against 366 on disk. The entry for `nvidia.profile.v8.json` was added here because this commit created that file; the other 52 were left alone deliberately. The listing is not consistently ordered (an alphabetical run followed by later appends), so a mechanical backfill would assert an ordering the file does not have. It needs a decision about ordering first, not a script.
+- Data-only change per `.claude/rules/profiler-app.md`: no Profiler page version bump and no page changelog entry; the Profiler page is an indirect affect. CHANGELOG `Sections: 92/100` -> `93/100`.
 
 ## [v04.89r] — 2026-09-06 05:39:00 PM EST — v01.83w
 

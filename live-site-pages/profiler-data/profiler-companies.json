@@ -1785,12 +1785,12 @@
       "hq": "Santa Clara, CA, USA",
       "ticker": "NASDAQ: NVDA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "nvidia.com"
       ],
-      "srcTotal": 18,
-      "srcFirstPct": 56,
+      "srcTotal": 21,
+      "srcFirstPct": 57,
       "kpiNorm": true
     },
     {

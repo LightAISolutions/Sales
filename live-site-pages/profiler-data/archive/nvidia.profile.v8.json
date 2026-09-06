@@ -61,13 +61,6 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-08-10",
-   "category": "partnership",
-   "headline": "Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital",
-   "read": "We assess this externalizes the financing of NVIDIA's own demand. The instruments are memorandums of understanding rather than committed capital — the release states MOUs were 'signed with six of the world's premier financial institutions' to establish the platforms, publishes no per-firm allocation, and frames the >$500B as third-party capital the platforms aim to mobilize over time rather than an NVIDIA commitment. Read against the circular-financing critique this dossier rates the most serious structural risk, it is the largest structural answer NVIDIA has offered: it moves demand financing toward independent underwriters instead of NVIDIA's own balance sheet.",
-   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
-  },
-  {
    "date": "2026-05-20",
    "category": "financial",
    "headline": "Q1 FY2027: revenue $81.6B (+85% YoY) vs $78.8B consensus; Q2 guided to $91B; dividend raised 25x, +$80B buyback",
@@ -127,7 +120,7 @@
  "strategyRead": [
   "(High confidence) We assess NVIDIA has converted its compute roadmap into control of the data-center power agenda: by publishing the 800VDC architecture, naming the qualified vendor slate, and prescribing storage placement (rack supercaps + interconnection BESS), it sets the requirements every power/BESS supplier in this app must meet for the 2027 Kyber generation. Basis: NVIDIA's own technical blogs and whitepaper.",
   "(High confidence) We assess demand is now denominated in gigawatts: OpenAI (10 GW LOI), Anthropic (up to 1 GW initial), and >1.7 GW already deployed across NVIDIA Cloud Partners. Third-party projections of ~233 GW of cumulative new AI data-center power demand 2025–2030 rest heavily on NVIDIA's shipment cadence — the single most important demand variable for this ecosystem.",
-  "(Moderate confidence) We assess the circular-financing critique is the most serious structural risk: up to $100B invested in OpenAI as it buys NVIDIA systems, reported discussions of guaranteeing up to $250B of OpenAI lease payments, and four direct customers at 61% of revenue. Bernstein and Bloomberg Intelligence analysts flag it; Burry's depreciation-understatement thesis (~$176B, 2026–2028) is the bear case NVIDIA felt compelled to rebut directly. The August 2026 compute-financing platforms — memorandums with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilize over $500B of third-party capital — are the largest structural answer offered so far, moving demand financing toward independent underwriters rather than NVIDIA's balance sheet. We do not yet score it as mitigating: the instruments are memorandums, no per-firm allocation is published, and no platform has been shown funding a transaction.",
+  "(Moderate confidence) We assess the circular-financing critique is the most serious structural risk: up to $100B invested in OpenAI as it buys NVIDIA systems, reported discussions of guaranteeing up to $250B of OpenAI lease payments, and four direct customers at 61% of revenue. Bernstein and Bloomberg Intelligence analysts flag it; Burry's depreciation-understatement thesis (~$176B, 2026–2028) is the bear case NVIDIA felt compelled to rebut directly.",
   "(Moderate confidence) We assess the GB300 power-smoothing feature set (rack energy storage, ramp control, up to 30% peak-demand reduction) partially internalizes what would otherwise be BESS-supplier revenue — but simultaneously legitimizes storage-at-the-rack, expanding the BBU/supercapacitor market (~$2.8B → ~$7.1B by 2033 per analyst estimates) faster than it cannibalizes it.",
   "(High confidence) China is now regulatory downside only: guidance assumes zero China data-center compute revenue after the H20 whipsaw ($4.5B charge, then a 15%-of-revenue export deal, then Beijing's effective blacklisting), and the SAMR Mellanox probe carries a potential ~$2.9B fine. Basis: filings, Commerce testimony, SAMR announcements."
  ],
@@ -269,37 +262,6 @@
    "note": "Thermal-management reference designs for gigawatt-scale AI factories, engineered for the NVIDIA Omniverse DSX Blueprint.",
    "context": "Announced 28 October 2025 as the first comprehensive thermal-management system reference design at gigawatt scale, supporting GB300 NVL72 and next-generation Vera Rubin systems with OpenUSD-based SimReady assets.\n\nOptimised 16 March 2026 with a stated 10% improvement in overall thermal performance that frees 22 MW of cooling capacity for IT power, delivered as a 250 MW duplex system and a 1 GW magnetic-bearing air-cooled architecture. LiquidStack, a Trane company since March 2026, subsequently launched a GigaModular CDU built to Vera Rubin specifications and scaling to 14 MW.",
    "source": "https://www.businesswire.com/news/home/20251028272299/en/Trane-Technologies-Unveils-Industrys-First-Comprehensive-Thermal-Management-System-Reference-Design-for-Gigawatt-Scale-NVIDIA-AI-Factories"
-  },
-  {
-   "slug": "blackstone",
-   "type": "partner",
-   "note": "One of six financial institutions with which NVIDIA signed memorandums of understanding to establish AI compute financing platforms (10 August 2026).",
-   "context": "Announced alongside Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — Blackstone and BlackRock are both named and are different firms. No per-firm allocation is published and the instrument is a memorandum, so the >$500B figure describes the programme and not Blackstone's share of it; Blackstone is not singled out with any commitment separate from the six-firm group. This is the reciprocal of the edge Blackstone's dossier already carried.",
-   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
-   "status": "announced",
-   "since": "2026-08",
-   "scale": "one of six firms in a programme targeting >$500B of third-party capital"
-  },
-  {
-   "slug": "brookfield",
-   "type": "partner",
-   "note": "NVIDIA is a founding partner and investor in the Brookfield AI Infrastructure Fund, and named Brookfield among the six capital partners in the August 2026 financing programme.",
-   "context": "Two distinct arrangements, and the figures attached to them are routinely conflated. On 19 November 2025 Brookfield launched BAIIF with a $10B equity target and $5B already committed, naming Brookfield, NVIDIA and the Kuwait Investment Authority as founding partners; the fund plus co-investment and financing is framed as acquiring up to $100B of AI infrastructure assets, and Brookfield simultaneously launched Radiant as a new NVIDIA Cloud Partner. On 10 August 2026 NVIDIA separately named Brookfield in the six-firm compute-financing programme. The $10B fund, the $100B asset programme and the >$500B six-firm figure are three different things. Reciprocal of the edge Brookfield's dossier already carried.",
-   "source": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
-   "status": "active",
-   "since": "2025-11",
-   "scale": "founding partner of a $10B-target fund ($5B committed); one of six firms in the >$500B programme"
-  },
-  {
-   "slug": "fluidstack",
-   "type": "customer",
-   "note": "Neocloud running NVIDIA HGX H200 clusters and contributing GPUs to the DGX Cloud Lepton marketplace. Reciprocal of the supplier edge Fluidstack's dossier already carried.",
-   "context": "NVIDIA's DGX Cloud Lepton release (11 June 2025) lists Fluidstack among the providers contributing Blackwell and other NVIDIA-architecture GPUs to the marketplace, and Fluidstack deployed HGX H200 clusters with Quantum-2 InfiniBand in Iceland from March 2025. Recorded on this side because Macquarie's dossier records lending against Fluidstack's NVIDIA GPUs as collateral — the accelerators are the security in that financing — which is only legible with the NVIDIA-side edge present. NVIDIA's share of Fluidstack's 2026 fleet is not disclosed; at the US Anthropic sites the accelerators are reported to be Google TPUs.",
-   "source": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem",
-   "via": "HGX H200, Quantum-2 InfiniBand; DGX Cloud Lepton marketplace",
-   "status": "active",
-   "since": "2025-03",
-   "scale": "HGX H200 clusters (Iceland); DGX Cloud Lepton contributor"
   }
  ],
  "policyExposure": [
@@ -585,23 +547,8 @@
   {
    "label": "TrendForce — AI data-center energy storage demand",
    "url": "https://insights.trendforce.com/p/ai-data-center-energy-storage-demand"
-  },
-  {
-   "label": "NVIDIA — MOUs with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms",
-   "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
-   "date": "2026-08-10"
-  },
-  {
-   "label": "Brookfield — launch of the $100 billion AI infrastructure programme and the Brookfield AI Infrastructure Fund",
-   "url": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
-   "date": "2025-11-19"
-  },
-  {
-   "label": "NVIDIA — DGX Cloud Lepton connects Europe's developers to the global NVIDIA compute ecosystem",
-   "url": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem",
-   "date": "2025-06-11"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 9
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 8
 }

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-06 05:39:00 PM EST` · Repo version: `v04.89r`
+Last updated: `2026-09-06 05:56:46 PM EST` · Repo version: `v04.90r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -558,6 +558,7 @@ Last updated: `2026-09-06 05:39:00 PM EST` · Repo version: `v04.89r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nvidia.profile.v5.json">nvidia.profile.v5.json</a> — Archived v5 dossier (NVIDIA)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nvidia.profile.v6.json">nvidia.profile.v6.json</a> — Archived v6 dossier (NVIDIA)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nvidia.profile.v7.json">nvidia.profile.v7.json</a> — Archived v7 dossier (NVIDIA Corporation)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nvidia.profile.v8.json">nvidia.profile.v8.json</a> — Archived v8 dossier (NVIDIA Corporation)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/oklo.profile.v1.json">oklo.profile.v1.json</a> — Archived v1 dossier (Oklo)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/on-energy.profile.v2.json">on-energy.profile.v2.json</a> — Archived v2 dossier (ON.energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/on-energy.profile.v3.json">on-energy.profile.v3.json</a> — Archived v3 dossier (ON.energy)

@@ -8535,6 +8535,15 @@
      "status": "announced",
      "since": "2026-08",
      "scale": "one of six firms in a >USD 500bn programme"
+    },
+    "b": {
+     "type": "partner",
+     "note": "One of six financial institutions with which NVIDIA signed memorandums of understanding to establish AI compute financing platforms (10 August 2026).",
+     "context": "Announced alongside Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — Blackstone and BlackRock are both named and are different firms. No per-firm allocation is published and the instrument is a memorandum, so the >$500B figure describes the programme and not Blackstone's share of it; Blackstone is not singled out with any commitment separate from the six-firm group. This is the reciprocal of the edge Blackstone's dossier already carried.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "status": "announced",
+     "since": "2026-08",
+     "scale": "one of six firms in a programme targeting >$500B of third-party capital"
     }
    },
    "evid": [
@@ -8544,6 +8553,20 @@
      "text": "NVIDIA names Blackstone one of six capital partners in a programme to mobilise over USD 500bn of third-party capital for AI infrastructure — Blackstone is one of six firms — with Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — and no per-firm allocation is published, so this is a memorandum of understanding rather than a committed sum.",
      "src": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
      "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The August 2026 compute-financing platforms — memorandums with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilize over $500B of third-party capital — are the largest structural answer offered so far, moving demand financing toward independent underwriters rather than NVIDIA's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital — We assess this externalizes the financing of NVIDIA's own demand. The instruments are memorandums of understanding rather than committed capital — the release states MOUs were 'signed with six of the world's premier financial institutions' to establish the platforms, publishes no per-firm allocation, and frames the >$500B as third-party capital the platforms aim to mobilize over time rather than an NVIDIA commitment. Read against the circular-financing critique this dossier rates the most serious structural risk, it is the largest structural answer NVIDIA has offered: it moves demand financing toward independent underwriters instead of NVIDIA's own balance sheet.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
     }
    ],
    "last": "2026-08-10"
@@ -9832,6 +9855,15 @@
      "status": "active",
      "since": "2025-11",
      "scale": "founding partner of a USD 10bn fund; six-firm >USD 500bn programme"
+    },
+    "b": {
+     "type": "partner",
+     "note": "NVIDIA is a founding partner and investor in the Brookfield AI Infrastructure Fund, and named Brookfield among the six capital partners in the August 2026 financing programme.",
+     "context": "Two distinct arrangements, and the figures attached to them are routinely conflated. On 19 November 2025 Brookfield launched BAIIF with a $10B equity target and $5B already committed, naming Brookfield, NVIDIA and the Kuwait Investment Authority as founding partners; the fund plus co-investment and financing is framed as acquiring up to $100B of AI infrastructure assets, and Brookfield simultaneously launched Radiant as a new NVIDIA Cloud Partner. On 10 August 2026 NVIDIA separately named Brookfield in the six-firm compute-financing programme. The $10B fund, the $100B asset programme and the >$500B six-firm figure are three different things. Reciprocal of the edge Brookfield's dossier already carried.",
+     "source": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "founding partner of a $10B-target fund ($5B committed); one of six firms in the >$500B programme"
     }
    },
    "evid": [
@@ -9876,6 +9908,20 @@
      "text": "Brookfield launches a USD 100bn AI infrastructure programme anchored by the Brookfield AI Infrastructure Fund, with NVIDIA and the Kuwait Investment Authority as founding partners — The USD 100bn is the programme's asset-acquisition ambition including debt and co-investment; the fund itself targets USD 10bn of equity and had USD 5bn committed. Conflating the two overstates the fund tenfold.",
      "src": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
      "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The August 2026 compute-financing platforms — memorandums with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilize over $500B of third-party capital — are the largest structural answer offered so far, moving demand financing toward independent underwriters rather than NVIDIA's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital — We assess this externalizes the financing of NVIDIA's own demand. The instruments are memorandums of understanding rather than committed capital — the release states MOUs were 'signed with six of the world's premier financial institutions' to establish the platforms, publishes no per-firm allocation, and frames the >$500B as third-party capital the platforms aim to mobilize over time rather than an NVIDIA commitment. Read against the circular-financing critique this dossier rates the most serious structural risk, it is the largest structural answer NVIDIA has offered: it moves demand financing toward independent underwriters instead of NVIDIA's own balance sheet.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
     }
    ],
    "last": "2026-08-10"
@@ -26101,6 +26147,16 @@
      "status": "active",
      "since": "2025-03",
      "scale": "HGX H200 clusters (Iceland); NVIDIA DGX Cloud Lepton contributor",
+     "via": "HGX H200, Quantum-2 InfiniBand; DGX Cloud Lepton marketplace"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Neocloud running NVIDIA HGX H200 clusters and contributing GPUs to the DGX Cloud Lepton marketplace. Reciprocal of the supplier edge Fluidstack's dossier already carried.",
+     "context": "NVIDIA's DGX Cloud Lepton release (11 June 2025) lists Fluidstack among the providers contributing Blackwell and other NVIDIA-architecture GPUs to the marketplace, and Fluidstack deployed HGX H200 clusters with Quantum-2 InfiniBand in Iceland from March 2025. Recorded on this side because Macquarie's dossier records lending against Fluidstack's NVIDIA GPUs as collateral — the accelerators are the security in that financing — which is only legible with the NVIDIA-side edge present. NVIDIA's share of Fluidstack's 2026 fleet is not disclosed; at the US Anthropic sites the accelerators are reported to be Google TPUs.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem",
+     "status": "active",
+     "since": "2025-03",
+     "scale": "HGX H200 clusters (Iceland); DGX Cloud Lepton contributor",
      "via": "HGX H200, Quantum-2 InfiniBand; DGX Cloud Lepton marketplace"
     }
    },

@@ -1341,6 +1341,12 @@
       "profileVersion": 7,
       "archivedAt": "2026-09-05",
       "supersededBy": 8
+    },
+    {
+      "file": "nvidia.profile.v8.json",
+      "profileVersion": 8,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 9
     }
   ],
   "on-energy": [
