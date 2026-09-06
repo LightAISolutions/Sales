@@ -373,8 +373,8 @@
    "url": "https://www.congress.gov/crs-product/R48933"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 3,
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 2,
  "summary": "BOTTOM LINE UP FRONT: Mitsubishi Electric is a ¥5.89 trillion Japanese electrical conglomerate whose relevance to AI data-center power sits in one segment — Infrastructure — and specifically in three product families: large static uninterruptible power supplies to 2 MW, power transformers to 765 kV, and gas-insulated switchgear and circuit breakers to 800 kV. That segment is where the company's growth now is: Infrastructure revenue rose 19% to ¥1,463.4bn in the year ended 2026-03-31 with operating profit up 73%, and Energy Systems orders rose 80% year on year in the quarter ended 2026-06-30 on what the company attributes to North American transformer business expansion. BACKGROUND. Founded 1921, listed in Tokyo (6503), roughly 150,000 employees across 200+ group companies. FY2026 (year ended 2026-03-31) revenue ¥5,894.7bn (+7%) and operating profit ¥433.1bn per company filings; net profit attributable to stockholders ¥407.8bn (+26%). The US arm is Mitsubishi Electric Power Products, Inc. (MEPPI), Warrendale, Pennsylvania, founded 1985 as a joint venture with Westinghouse Electric and wholly owned since 1989; its Critical Power Solutions Division in Pittsburgh has manufactured UPS since 1964 and is the entity that actually sells into data centers. Note the fiscal-year convention: the company labels the year ending 31 March 2026 as FY2026.",
  "ecosystemRole": "One of a small number of vendors that can supply the medium- and high-voltage equipment upstream of a data-center hall and the uninterruptible supply inside it from the same corporate parent — transformers, gas-insulated switchgear, vacuum circuit breakers and large static UPS. It is consistently named in the leading vendor set for data-center UPS, power transformers and gas-insulated switchgear by market-research firms, but no firm reachable in this research published a market-share percentage for it in any of those three markets, and where sources rank rather than list it falls below the top five in transformers. Its distinctive technical claim is vertical integration into its own power semiconductors, which underwrites both its silicon-carbide UPS line and its stated position against eco-mode.",
  "productsAndServices": [
@@ -1287,14 +1287,6 @@
    "note": "A data-centre switchgear survey names Mitsubishi Electric and Flex's Anord Mardix business among the key players in the same market.",
    "context": "The link rests on third-party surveys naming both in one defined market. The switchgear survey lists Anord Mardix alongside Schneider Electric, Eaton, Hitachi Energy, Mitsubishi Electric, Siemens, Vertiv, Huawei, Legrand, Toshiba, Kehua, Rittal, Socomec and Cummins.\n\nA separate North American data-centre power grouping places ABB, Schneider, Vertiv, Eaton and Mitsubishi Electric at roughly 62% combined — a ranking that includes Mitsubishi Electric and excludes Flex, which is itself informative about relative position.\n\nFlex acquired its way into this market: Anord Mardix in December 2021 for $540m, Crown Technical Systems in November 2024 for $319m and Electrical Power Products in May 2026 for about $1.1bn. Flex names no competitors in any of its own filings, so every competitor link involving it is third-party sourced.",
    "source": "https://www.futuremarketinsights.com/reports/switchgear-for-data-centers-market"
-  },
-  {
-   "slug": "cyrusone",
-   "type": "customer",
-   "note": "CyrusOne is one of the colocation operators on the published UPS customer roster.",
-   "context": "CyrusOne appears among the colocation operators on Mitsubishi Electric Power Products' published customer roster, alongside Sabey, CoreSite, Flexential, TierPoint, Cologix, Serverfarm, Element Critical, Evocative and QTS.\n\nThe caveat this dossier states about every roster entry applies here in full: no capacity, site or date is published, and the company publishes no named data-centre deployment anywhere. The roster is evidence of installed base, not of scale. CyrusOne, for its part, has never named a UPS vendor in any first-party source.",
-   "source": "https://mitsubishicritical.com/our-customers/",
-   "status": "active"
   }
  ],
  "policyExposure": [

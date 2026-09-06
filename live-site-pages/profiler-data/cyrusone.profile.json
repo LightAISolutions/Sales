@@ -1,0 +1,1086 @@
+{
+ "schemaVersion": 7,
+ "slug": "cyrusone",
+ "name": "CyrusOne LLC",
+ "shortName": "CyrusOne",
+ "categories": [
+  "developer"
+ ],
+ "website": "https://www.cyrusone.com",
+ "headquarters": "Dallas, Texas, United States",
+ "ownership": {
+  "type": "private"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** CyrusOne is the clearest test in this corpus of what a data-centre landlord looks like when it answers to sponsors rather than a share price — taken private by KKR and Global Infrastructure Partners in March 2022 at about USD 15bn, it publishes no revenue, EBITDA, backlog or bookings figure of any kind, and reaches the capital markets instead through serial securitisation, whose collateral tables are the only public window on its tenancy. Two events in the last ten months reset the picture. On 28 November 2025 a cooling failure at its Aurora, Illinois campus took CME Group's markets down for more than ten hours; CyrusOne's own account is that staff and contractors **failed to follow standard procedures for draining cooling towers ahead of freezing temperatures**, and Goldman Sachs paused a USD 1.3bn bond sale secured on that very campus, where CME was about 14% of underwritten rent — the deal returned later at USD 1.25bn. And on 10 August 2026 Reuters reported that the sponsors are preparing an IPO **as early as 2027** at around USD 5bn; every named party declined to comment, so it is unconfirmed single-source reporting rather than fact. John Hatem became chief executive on 30 July 2026.\n\n**BACKGROUND.** Dallas-headquartered, more than 60 operational data centres and more than 50 in development across the United States, Europe and Japan, about 16.2 million square feet and more than one gigawatt of critical load, per the company's own June 2026 sustainability report; roughly 30% of the portfolio sits in Texas. The product line is build-to-suit and hyperscale under a 'Massively Modular' design methodology the company now more often calls a manufacturing-driven approach, wholesale and enterprise colocation at a standard 17 kW per cabinet, and **Intelliscale**, the AI product, specified for cooling up to 300 kW per rack and more than 2,000 watts per square foot with zero water consumption. Ownership is unchanged since 2022 — KKR and GIP, the latter part of BlackRock since October 2024 — with one platform-level joint venture, a 50:50 vehicle with Kansai Electric Power targeting 900 MW in Japan. **Collection gap:** no revenue, EBITDA, leverage, backlog, bookings or customer-name disclosure exists in any first-party source, and no current corporate credit rating from any agency was resolvable.",
+ "ecosystemRole": "The private counterweight to Digital Realty in this corpus, and the landlord that has taken the co-location-with-generation model furthest. Where Digital Realty buys utility power under an energy service agreement, CyrusOne's two largest Texas campuses sit physically beside Calpine gas plants under 'powered land' agreements that bundle power, grid connectivity and site infrastructure — 760 MW contracted at the Freestone Energy Center and 400 MW at the Thad Hill Energy Center — and a third, DFW7 in Fort Worth, sits on top of Eolian's Chisholm Grid battery. That is the energy-plus-load thesis this corpus tracks from the storage side, seen from the tenant's chair. It also makes CyrusOne the most exposed operator here to Texas Senate Bill 6, under which a co-located large load must curtail fully within thirty minutes of an ERCOT emergency instruction, without compensation. Elsewhere it is a buyer of completed buildings from other developers — it leased and then bought PowerHouse's ABX-1 in Ashburn — a customer of DPR and Rosendin in Northern Virginia, and one of the small set of sponsor-owned platforms whose cost of capital is set in the asset-backed market rather than by an equity multiple.",
+ "productsAndServices": [
+  {
+   "name": "Intelliscale — the AI and high-density product",
+   "category": "AI infrastructure",
+   "description": "Launched 24 August 2023 as 'a state-of-the-art, artificial intelligence (AI) workload-specific data center solution', developed as an enhancement to the build-to-suit line rather than as a separate business. It is the only place CyrusOne publishes hard density figures, and they are the most aggressive in this corpus: cooling up to 300 kW per rack via liquid-to-chip, rear-door heat exchanger or immersion, and more than 2,000 watts per square foot — which the company's own blog puts at 600 to 1,200 per cent more watts per square foot than typical data-centre density. Because the power is concentrated, the building shrinks: Intelliscale 'can occupy just 25% of the space of typical data centers, depending on the application and needs'.",
+   "highlights": [
+    "Cooling 'up to 300kW per rack' — liquid-to-chip, rear-door heat exchanger and immersion all named",
+    "Redundancy is optional rather than fixed: 'N, N+1, 2N, N+2c', on a block-redundant electrical system of multiple independently operating power blocks",
+    "'Low PUE' and 'Zero water consumption' with closed-loop chillers; LEED design, or BREEAM in Europe",
+    "Retrofittable — existing data centres can be converted because Intelliscale uses CyrusOne's standard design kit",
+    "The standard colocation comparison is the useful contrast: 17 kW per cabinet on the ordinary facility pages against 300 kW per rack here"
+   ],
+   "positioning": "CyrusOne names no competitor anywhere — not on any product page, press release, sustainability report or framework document. Its competitive claims are entirely self-referential superlatives: 'the data center industry's first-of-its-kind AI solution', 'unmatched speed', 'industry-leading deployment speeds'. Independent placement is inconsistent: Site Selection Group ranks it third among US colocation operators without publishing a metric, ABI Research puts it seventh in the US on active IT load at 674 MW, and USDataMap puts it twelfth overall on tracked capacity at 3,026 MW. The AI Data Center Index, the one AI-specific capacity ranking located, does not list CyrusOne at all.",
+   "soldThrough": "Direct and hyperscaler-direct. Sales sits under the Chief Operating Officer alongside strategic partnerships, customer success and global operations. No broker, reseller or channel programme is published.",
+   "targetSegments": "Hyperscale and enterprise; the Green Finance Framework quantifies the base as nearly 1,000 customers including approximately 200 Fortune 1000 companies",
+   "roadmap": "Intelliscale3 was announced as 'imminent' in the 30 September 2025 release elevating John Hatem to President, described as the next generation of AI-oriented data-centre infrastructure. **A year later no product page, specification sheet or launch release for Intelliscale3 exists on the company's site** — checked against the full 334-URL sitemap."
+  },
+  {
+   "name": "Build-to-suit and hyperscale campuses",
+   "category": "Development",
+   "description": "The core business. Build-to-suit offers varied redundancy levels, cooling technologies and power densities against a specific customer's requirement; hyperscale is pitched on 'Accelerated Deployment', 'Strategic Scale' — modular designs, an established supply chain, strategic land acquisition and campus development — and 'Advanced Infrastructure'. The delivery methodology is the 'Massively Modular Architecture', which survives on exactly one page of the site as a section heading while the live marketing register has shifted to a 'manufacturing-driven approach to data center construction'.",
+   "highlights": [
+    "Freestone County, Texas (DFW20): 380 MW signed plus an exclusive agreement for a further 380 MW in Phase 2, adjacent to Calpine's Freestone Energy Center; three buildings of 306,215 sq ft each on 506 acres, USD 1.5bn, targeted for completion August 2027",
+    "Bosque County, Texas (DFW10, Thad Hill Energy Center): 190 MW agreed July 2025 and a further 210 MW in November 2025 for 400 MW total, a USD 1.2bn infrastructure investment, operational target Q4 2026",
+    "Fort Worth (DFW7): a 200 MW campus co-located on Eolian's Chisholm Grid battery, broken ground April 2025 with initial IT capacity around 70 MW",
+    "Yorkville, Illinois: 480 MW from ComEd across eight single-storey buildings and 1,854,805 sq ft, first building operational Q1 2028, phased over ten to twenty years",
+    "Largest operating campuses by published capacity: Chandler, Arizona at 169 MW across 2,000,000 sq ft; Sterling, Virginia (NVA5-NVA7) at 116 MW; Aurora, Illinois at 114 MW; London LON6 at 108 MW",
+    "**No delivery lead time is published anywhere** — speed is marketed relentlessly and never quantified"
+   ],
+   "positioning": "No first-party competitive positioning exists. The independently observable differentiator is siting: three of the four largest announced campuses are co-located with a generation or storage asset rather than connected to a utility in the ordinary way.",
+   "soldThrough": "Direct to hyperscale and enterprise customers; capacity is also acquired ready-built from other developers, as at Ashburn ABX-1.",
+   "targetSegments": "Hyperscale cloud and AI operators, and Fortune 1000 enterprises",
+   "roadmap": "Six development sites publish capital investment rather than capacity: Sulphur Springs, Texas at USD 5-10bn; Lee County, North Carolina at over USD 900m for Phase I and approximately USD 7bn at full buildout; Medina County, Texas at USD 4-6bn; Yorkville at more than USD 1bn; Freestone County at over USD 500m across multiple phases; and Bosque County with no figure published."
+  },
+  {
+   "name": "Colocation and interconnection",
+   "category": "Colocation",
+   "description": "Wholesale and enterprise colocation 'from single cabinets to dedicated cages' at a published standard density of 17 kW per cabinet, carrier-neutral at every site. The connectivity layer is named and specific: National IX for interconnection between facilities across markets, Metro IX for connections within a metropolitan area in fibre, coax or CAT 6, C2C Optical Wave dense-wave-division-multiplexing circuits with guaranteed bandwidth, and IP Bandwidth offering unique global IPv4 and IPv6 addressing with multi-homed transit via ASN 62.",
+   "highlights": [
+    "Megaport is the only named cloud on-ramp partner",
+    "Facility compliance runs SOC 1 Type 2 and SOC 2 Type 2, PCI DSS, HIPAA, ISO 27001 and FISMA, with HITRUST and FISMA-High at Council Bluffs",
+    "**No Uptime Institute Tier certification and no EN 50600 certification appear anywhere in the first-party record** — unusual for a European operator, which instead uses BREEAM and the ISO management-system suite",
+    "No named remote-hands or managed-services product exists, consistent with a wholesale-weighted book"
+   ],
+   "positioning": "Not stated by the company. Reporters place CyrusOne beside Aligned, Equinix and PowerHouse in Chicago, beside Equinix, Prime and Data4 in Madrid, and inside the private wholesale cohort with Vantage, QTS, STACK and Switch.",
+   "soldThrough": "Direct sales; a customer portal handles service management.",
+   "targetSegments": "Enterprise and wholesale tenants across roughly 1,000 customers",
+   "roadmap": "No dated forward commitment is published for the colocation line."
+  },
+  {
+   "name": "Europe and Japan",
+   "category": "International",
+   "description": "Nineteen European facilities across London, Frankfurt, Amsterdam, Paris, Dublin, Madrid and now Milan, differentiated by energy and heat engineering rather than by a separate product: 100% renewable electricity since 2021, BREEAM in place of LEED, and waste-heat export. Japan is a joint venture rather than a product — CyrusOne KEP, owned 50:50 with Kansai Electric Power, which plans to invest at least one trillion yen, more than USD 7bn, over a decade and reach a business scale of 900 MW.",
+   "highlights": [
+    "Frankfurt FRA7 offers heat reuse capability up to 40 MW for campus heating, described as one of the largest waste-heat utilisation projects in Europe",
+    "Milan MIL1 broke ground 25 March 2026 — 27 MW across three 9 MW halls and 7,000 square metres, with about EUR 6m into local infrastructure; MIL2 is planned at 54 MW on the same site",
+    "Madrid MAD1 is stated to be the first data centre in Spain to achieve a BREEAM Outstanding rating",
+    "Osaka OSK1: 11,562 square metres of technical space, six 8 MW halls over four floors, 70 MVA at 77 kV from a new grid connection and dedicated substation, first phase operational Q1 2028",
+    "**A cancellation that was not announced as one:** the E.ON partnership's 61 MW of local generation at FRA7 — the route to 126 MW of IT capacity by 2029 — was removed in May 2026, disclosed only as an 'Update May 2026' prepended to the original 2025 release. The facility page still reads 81 MW"
+   ],
+   "positioning": "Not stated by the company.",
+   "soldThrough": "Direct; the Japanese vehicle sells through the joint venture with its utility partner.",
+   "targetSegments": "European and Japanese hyperscale and enterprise demand",
+   "roadmap": "CyrusOne KEP targets 900 MW in Japan over a decade; MIL2 at 54 MW is planned at the Segrate site."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-10",
+   "category": "corporate",
+   "headline": "Reuters reports KKR and Global Infrastructure Partners are preparing an initial public offering as early as 2027, potentially raising about USD 5 billion, with Goldman Sachs and Morgan Stanley pitching for roles",
+   "read": "The first exit signal since the 2022 take-private, and it is unconfirmed: BlackRock, KKR, Goldman, Morgan Stanley all declined to comment and CyrusOne had no comment. Treat as single-source reporting. It landed eleven days after the chief executive changed and eight months after the CME outage; no source connects those facts and this dossier does not.",
+   "source": "https://finance.yahoo.com/markets/stocks/articles/data-center-operator-cyrusone-plans-100520897.html"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "policy",
+   "headline": "Letter to Governor Abbott supporting Texas data-centre directives discloses more than USD 5 billion invested across five active Texas development sites and flags ERCOT 'Batch Zero' interconnection risk",
+   "read": "The first time CyrusOne has publicly conceded schedule risk from the grid: two projects due to complete initial phases in 2026 or 2027 'now face uncertainty regarding the timely availability of electric service'. A landlord selling speed to power is saying the power may not arrive on time.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-supports-governor-abbotts-vision-for-texas-digital-infrastructure-future"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "leadership",
+   "headline": "John Hatem named Chief Executive Officer and a director, effective immediately; Eric Schwartz steps down",
+   "read": "An internal succession after fifteen years in the company — Hatem joined in 2011, became COO in 2020 and President in September 2025, and is credited with the manufacturing-driven construction approach. Both sponsors spoke in their own names, which is the clearest available confirmation that the KKR/GIP stack is intact.",
+   "source": "https://www.businesswire.com/news/home/20260730005910/en/CyrusOne-Names-John-Hatem-Chief-Executive-Officer-to-Accelerate-its-Global-Digital-Infrastructure-Strategy"
+  },
+  {
+   "date": "2026-07-14",
+   "category": "regulatory",
+   "headline": "Yorkville, Illinois imposes binding conditions on the 480 MW campus: a USD 15 million up-front payment, a water cap cut from 500,000 to 40,000 gallons a day with penalties, and noise limits of 60 dB daytime and 50 dB at night with continuous monitoring",
+   "read": "The clearest published example of a municipality pricing consent. An alderman cited CyrusOne's own Aurora noise problems and delayed mitigation as the reason for the conditions — a reputational cost carried from one Illinois site to the next.",
+   "source": "https://www.shawlocal.com/kendall-county-now/2026/07/14/228-acre-cyrusone-data-center-agrees-to-pay-yorkville-15-million-up-front-city-imposes-water-use-limits/"
+  },
+  {
+   "date": "2026-07-06",
+   "category": "legal",
+   "headline": "Waverly residents sue Sangamon County and its board over the conditional-use approval for the roughly 634 MW Illinois campus; CyrusOne is named a necessary party in interest rather than a defendant",
+   "read": "The claim is procedural — that the county should have required a rezoning rather than a conditional-use permit, which would have triggered stronger protections. As of mid-July no land had been conveyed to CyrusOne and no project labour agreement signed, so the project is reversible in a way the Texas campuses are not.",
+   "source": "https://www.illinoistimes.com/news/residents-sue-sangamon-county-cyrusone/"
+  },
+  {
+   "date": "2026-06-17",
+   "category": "policy",
+   "headline": "CyrusOne rescinds its tax-abatement request for Phase 2 of the Freestone County campus; the county judge cancels the public hearing, stating 'now that CyrusOne has taken their request for a Tax Abatement off the table, we no longer have any say'",
+   "read": "Withdrawing the abatement does not slow the project — it removes the county's only lever over it. Fifteen to twenty citizens were heard for the record on noise, water and emissions after the mechanism that would have let the county impose conditions had already gone.",
+   "source": "https://freestonecountytimesonline.com/cyrusone-rescinds-tax-abatement-request-commissioners-hear-concerns/"
+  },
+  {
+   "date": "2026-05-20",
+   "category": "financial",
+   "headline": "CONE 2026-DFW3 green-bond CMBS of USD 1.05 billion, secured on a data centre near Dallas",
+   "read": "Securitisation remains the funding engine; each campus is refinanced individually once stabilised.",
+   "source": "https://www.kirkland.com/news/press-release/2026/05/kirkland-advises-kkr--and-gip-owned-cyrusone-on-1-05b-cmbs-financing"
+  },
+  {
+   "date": "2026-03-25",
+   "category": "capacity",
+   "headline": "Breaks ground on MIL1 in Segrate, its first Italian data centre — 27 MW across three 9 MW halls, about EUR 6 million into local infrastructure",
+   "read": "Southern-European expansion on the heat-reuse and community-investment template rather than on scale.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-breaks-ground-on-first-data-center-in-italy"
+  },
+  {
+   "date": "2026-03-24",
+   "category": "financial",
+   "headline": "Upsizes and extends revolving credit and US term loan facilities to approximately USD 8.0 billion in aggregate commitments — the revolver up nearly USD 1 billion to about USD 3.8 billion and the term loan up nearly USD 300 million to USD 4.2 billion, both with sustainability-linked pricing grids",
+   "read": "Announced on the strength of 'a record bookings year in 2025' — a qualitative claim with no number behind it anywhere in the public record.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-upsizes-and-extends-8.0-billion-in-loan-facilities-to-support-strategic-growth-and-sustainability-goals-while-strengthening-liq-1774318130463"
+  },
+  {
+   "date": "2026-02-09",
+   "category": "order-win",
+   "headline": "Constellation's Calpine unit signs a 380 MW agreement to serve a new CyrusOne data centre adjacent to the Freestone Energy Center in Freestone County, Texas, plus an exclusive agreement for a 380 MW Phase 2 — bringing 'a total of over 1100 MW under contract for CyrusOne data centers in Texas'",
+   "read": "The 760 MW figure in circulation is the sum of these two tranches, and the release never sums them. They are not equivalent: Phase 1 is signed, Phase 2 is an exclusive agreement to provide — an option-like commitment rather than contracted capacity.",
+   "source": "https://www.constellationenergy.com/news/2026/02/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas.html"
+  },
+  {
+   "date": "2026-01-13",
+   "category": "partnership",
+   "headline": "Partners with Eolian on a 200 MW Fort Worth campus (DFW7) co-located at Chisholm Grid, a 100 MW battery operating in ERCOT since 2021, which Eolian will modernise and upgrade",
+   "read": "The purest expression of the energy-plus-load thesis: an existing battery's interconnection is the asset being monetised, and speed to power is the product. Eolian is itself GIP-owned, so this is a sponsor-adjacent transaction.",
+   "source": "https://www.prnewswire.com/news-releases/cyrusone-and-eolian-partner-to-enable-rapid-deployment-of-200-megawatt-data-center-campus-in-fort-worth-texas-302658969.html"
+  },
+  {
+   "date": "2025-12-09",
+   "category": "financial",
+   "headline": "Bloomberg reports CyrusOne is considering selling about EUR 600 million of debt tied to its European data centres, working with an adviser on a potential ABS or CMBS",
+   "read": "Would extend the securitisation model to Europe for the first time. Single-sourced, paywalled, and no closing has been reported.",
+   "source": "https://www.bloomberg.com/news/articles/2025-12-09/cyrusone-mulls-600-million-of-debt-tied-to-europe-data-centers"
+  },
+  {
+   "date": "2025-12-04",
+   "category": "financial",
+   "headline": "Goldman Sachs pauses a planned USD 1.3 billion mortgage-bond sale — what would have been CyrusOne's largest CMBS — secured on the three-data-centre Aurora campus where CME was about 14% of underwritten total rent and the second-largest customer",
+   "read": "The outage repriced the paper. The wider read-across, in the reporting, was that data-centre lease agreements 'are breakable, with termination clauses baked into many of them in the event of multiple recurring outages' — a reminder that a landlord's contracted revenue is contingent on operations. The deal returned later as CONE 2026-ACD6 at USD 1.25 billion, priced.",
+   "source": "https://www.chicagobusiness.com/finance-banking/cyrusone-halts-bond-sale-after-data-center-failure-cripples-cme"
+  },
+  {
+   "date": "2025-11-28",
+   "category": "incident",
+   "headline": "A cooling failure at the Aurora, Illinois campus takes CME Group's global markets down for more than ten hours, halting equity, FX, gold, oil and rates futures from Tokyo to London",
+   "read": "CyrusOne's own account is that onsite staff and contractors 'failed to follow standard procedures for draining cooling towers ahead of freezing temperatures'; follow-up reporting cites outdated architecture, absent automated controls and inadequate temperature monitoring. CME's remediation attempts 'further exacerbated the problem'. The company added cooling redundancy, revised cold-weather procedures and increased onsite engineers. This is the single most consequential event in the dossier and it was operational, not commercial.",
+   "source": "https://sg.finance.yahoo.com/news/cme-data-centre-outage-caused-163157268.html"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "order-win",
+   "headline": "Calpine and CyrusOne announce Phase 2 of the powered-land agreement at the Thad Hill Energy Center, Bosque County — a further 210 MW on top of 190 MW for 400 MW total, operational target Q4 2026",
+   "read": "The releases are explicit about the trade being made: the parties will 'coordinate our operations to ensure grid reliability in times of supply scarcity... curtailing in times of need'. Curtailability is being sold as a feature, which is what Texas Senate Bill 6 now requires in any case.",
+   "source": "https://www.calpine.com/calpine-and-cyrusone-announce-phase-2-of-powered-land-agreement-to-support-hyperscale-data-center-at-thad-hill-energy-center-in-texas/"
+  },
+  {
+   "date": "2025-09-30",
+   "category": "leadership",
+   "headline": "John Hatem elevated to President with global sales, global procurement and US design and construction; the release announces the 'imminent release of Intelliscale3'",
+   "read": "The succession step that led to the CEO appointment ten months later. Intelliscale3 has still not shipped a specification a year on.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-elevates-john-hatem-to-president-to-accelerate-global-growth-strategy"
+  },
+  {
+   "date": "2025-07-30",
+   "category": "order-win",
+   "headline": "Calpine and CyrusOne announce a 190 MW hyperscale development at the Thad Hill Energy Center, Bosque County — a USD 1.2 billion infrastructure investment described as the first US data centre co-located with an existing energy source",
+   "read": "The template the Freestone deal then repeated at twice the scale. The boilerplate on this release is also the clearest ownership statement the company has published: 'backed by leading investment firms Global Infrastructure Partners (GIP), a part of BlackRock, and KKR'.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas"
+  },
+  {
+   "date": "2025-06-02",
+   "category": "partnership",
+   "headline": "E.ON preferred partnership announced — an E.ON IQ Energy Center at Frankfurt FRA7 adding 61 MW of electrical output by 2029 and a further 45 MW of IT capacity, taking the campus to 126 MW",
+   "read": "**Superseded.** An 'Update May 2026' prepended to this release records that CyrusOne 'has made the strategic decision to remove the long-term local power generation component from its FRA7 development' to prioritise the grid-connected build. The partnership survives; the generation does not. Any figure of 126 MW by 2029 is stale, and the facility page still reads 81 MW.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-e.on-announce-strategic-partnership-to-advance-sustainable-data-center-power-solutions"
+  },
+  {
+   "date": "2025-04-04",
+   "category": "capacity",
+   "headline": "Breaks ground on the DFW7 Fort Worth campus, its first in the city, with initial IT capacity of around 70 MW; total Texas capital investment stated at more than USD 2.4 billion",
+   "read": "The site that the Eolian battery co-location would later scale to a headline 200 MW.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-breaks-ground-on-new-fort-worth-data-center-campus"
+  },
+  {
+   "date": "2024-12-10",
+   "category": "ma",
+   "headline": "Buys PowerHouse ABX-1 in Ashburn — 265,000 sq ft and 60 MW, the building it had already leased for thirty years in May 2023 — for USD 154.1 million",
+   "read": "A tenant buying its own landlord's building. Commercial Observer noted that it is 'unclear why the tenant ultimately decided to buy the asset' and neither party commented; it remains the only completed development cycle PowerHouse can document.",
+   "source": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/"
+  },
+  {
+   "date": "2024-05-15",
+   "category": "financial",
+   "headline": "Closes a USD 1.175 billion asset-backed securities offering in five- and seven-year tranches, classified as Secured Green Collateral Bonds — the fourth issuance since the programme launched in May 2023, taking it to USD 2.6 billion across eleven assets in Northern Virginia and San Antonio",
+   "read": "Described by the company as the largest data-centre ABS issuance since 2021. The master-trust model is how a private landlord recycles capital without an equity market.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-closes-1-175-billion-abs-issuance"
+  }
+ ],
+ "strategyRead": [
+  "1. **(High confidence)** We assess that CyrusOne has made co-location with generation its primary differentiator, and that this is a bet on interconnection scarcity rather than on real estate. Basis: three of its four largest announced campuses sit on someone else's electrical asset — 760 MW contracted beside Calpine's Freestone Energy Center, 400 MW beside the Thad Hill Energy Center, and 200 MW on top of Eolian's Chisholm Grid battery — and the Calpine releases describe power, grid connectivity and site infrastructure sold as one package. The company's own Abbott letter states the risk this hedges: two Texas projects due to complete initial phases in 2026 or 2027 face 'uncertainty regarding the timely availability of electric service'. Speed to power, not price per kilowatt, is what the model is selling.",
+  "2. **(High confidence)** We assess the November 2025 Aurora outage is the most consequential event in the company's recent history because it converted an operational failure into a cost of capital. Basis: CyrusOne's own account attributes the failure to staff and contractors failing to follow standard cooling-tower draining procedures ahead of freezing weather — a procedural lapse, not an engineering limit — and within a week Goldman Sachs paused a USD 1.3bn bond sale secured on the same campus, where the affected tenant was about 14% of underwritten rent. The deal returned at USD 1.25bn. The read-across reported at the time is the durable point: data-centre leases carry termination clauses for recurring outages, so a landlord's contracted revenue is contingent on operations in a way its collateral tables do not show.",
+  "3. **(Moderate confidence)** We assess the 2027 IPO reporting is credible but should not yet be treated as a decision. Basis: Reuters named the banks, the timing and an approximate size, which is a specific enough account to be more than speculation, and an IPO would fit a sponsor stack four years into a hold with heavy securitised debt. Against it: every named party declined to comment, the reporting is effectively single-source, and no size or valuation has been decided even on the reporting's own terms. **We explicitly decline to connect it to the July 2026 chief-executive change or the CME outage** — the sequence is suggestive and no source asserts a link.",
+  "4. **(Moderate confidence)** We assess the company is systematically trading regulatory oversight for speed, and that Freestone is the clearest instance. Basis: CyrusOne withdrew its own tax-abatement request in Freestone County in June 2026, which removed the mechanism through which the county could have attached conditions — the county judge said so in as many words. In Yorkville, by contrast, where no such withdrawal occurred, the city extracted a USD 15m payment, a water cap cut more than tenfold and continuous noise monitoring. The two outcomes are the same company meeting two different levels of local leverage; the abatement is the variable.",
+  "5. **(Moderate confidence)** We assess the disclosure gap is now a competitive fact rather than merely an inconvenience for analysts. Basis: no revenue, EBITDA, leverage, backlog or bookings figure exists in any first-party source, and no current corporate credit rating from any agency was resolvable; the only public windows are securitisation collateral tables and rating-agency presales on individual deals. Published third-party rankings consequently disagree by a factor of about 4.5 — 3,026 MW of tracked capacity on one measure against 674 MW of active IT load on another — because each is estimating a different thing from the outside. If the IPO proceeds, the resulting disclosure is itself a material event.",
+  "6. **(Low confidence)** We assess the Aurora noise problem is a design characteristic rather than a site-specific fault, contrary to the company's own framing. Basis: CyrusOne has told reporters the noise issue is 'unique to their Aurora location', but residents near a Chandler, Arizona facility raised the same complaint in 2019 and the company fitted muffling devices to chiller fans then too. Confidence is low because two instances seven years apart in different climates is thin evidence and no independent acoustic assessment of the fleet exists. **A dated test is available:** Aurora's enforcement agreement with the city requires the permanent chiller sound solution to be complete by 30 September 2026."
+ ],
+ "relationships": [
+  {
+   "slug": "constellation-energy",
+   "type": "supplier",
+   "note": "Calpine, a Constellation business unit, contracted 380 MW at the Freestone Energy Center with an exclusive further 380 MW in Phase 2, on top of 400 MW at the Thad Hill Energy Center.",
+   "context": "Constellation's Calpine unit is CyrusOne's largest disclosed power counterparty. On 9 February 2026 Calpine signed a 380 MW agreement to connect and serve a new data centre adjacent to the Freestone Energy Center in Freestone County, Texas, and entered an exclusive agreement to provide power, grid connectivity and site infrastructure for a Phase 2 of a further 380 MW. The release's own subheadline puts the running total at 'over 1100 MW under contract for CyrusOne data centers in Texas', which sums Freestone's two tranches with the 400 MW previously agreed at the Thad Hill Energy Center in Bosque County.\n\nThe product being bought is Calpine's 'Powered Land Capabilities' — the plant, the interconnection and the site sold together — and the November 2025 Phase 2 release is explicit that the arrangement runs both ways: the parties will 'coordinate our operations to ensure grid reliability in times of supply scarcity... curtailing in times of need'. That is now also a statutory obligation under Texas Senate Bill 6.",
+   "source": "https://www.constellationenergy.com/news/2026/02/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas.html",
+   "status": "active",
+   "since": "2025-07",
+   "scale": "over 1,100 MW under contract in Texas"
+  },
+  {
+   "slug": "eolian",
+   "type": "partner",
+   "note": "DFW7, a 200 MW Fort Worth campus, is co-located on Eolian's Chisholm Grid battery, whose existing interconnection is the asset being monetised.",
+   "context": "Announced 13 January 2026, the DFW7 partnership places a 200 MW CyrusOne campus at Chisholm Grid, a 100 MW battery that has operated in ERCOT since 2021 about seven miles north-west of downtown Fort Worth. Eolian modernises and upgrades the battery and the existing high-voltage interconnection carries the campus's initial phases from 2026 — speed to power bought by reusing a connection that already exists rather than joining a queue.\n\nEolian's own dossier treats this as the marquee example of its 'energy-plus-load' model and lists campus partnerships with CyrusOne as a route to market. There is a sponsor adjacency worth stating: Eolian is itself owned by Global Infrastructure Partners, which is also one of CyrusOne's two owners.",
+   "source": "https://www.prnewswire.com/news-releases/cyrusone-and-eolian-partner-to-enable-rapid-deployment-of-200-megawatt-data-center-campus-in-fort-worth-texas-302658969.html",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "200 MW campus",
+   "via": "Chisholm Grid BESS"
+  },
+  {
+   "slug": "powerhouse-data-centers",
+   "type": "supplier",
+   "note": "CyrusOne leased PowerHouse's ABX-1 in Ashburn for thirty years in May 2023, then bought the building outright for USD 154.1 million in December 2024.",
+   "context": "ABX-1 is a 265,000 square foot, 60 MW powered shell in Ashburn, Virginia, developed by PowerHouse Data Centers in a joint venture with Harrison Street on a site carrying a 300 MW Dominion substation. CyrusOne signed a thirty-year lease for the entire building in May 2023, brokered by Avison Young, and then acquired it for USD 154.1 million on 10 December 2024.\n\nIt is the only completed development cycle PowerHouse can document, and that dossier records it as such. Commercial Observer, which reported the price, noted that it is 'unclear why the tenant ultimately decided to buy the asset' and that neither party commented — so the rationale is unexplained in the public record rather than merely unstated here.",
+   "source": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/",
+   "status": "historical",
+   "since": "2023-05",
+   "scale": "USD 154.1m; 60 MW"
+  },
+  {
+   "slug": "rosendin",
+   "type": "supplier",
+   "note": "Rosendin records 20 MW of electrical infrastructure delivered in 26 weeks on Project Goliath, a CyrusOne facility in Sterling, Virginia.",
+   "context": "The Rosendin dossier records Project Goliath — a CyrusOne building in Sterling, Virginia — as a company-claimed construction speed record: 20 diesel generators, 40 uninterruptible power supplies and 120 distribution devices, 20 MW of electrical infrastructure, in 26 weeks.\n\nRosendin is separately recorded by the industry press as the electrical subcontractor on CyrusOne's Project Kincora, also in Sterling, which won an ENR Award of Merit. CyrusOne itself names no contractor on any project, so both attributions come from the builder's side.",
+   "source": "https://www.enr.com/articles/45505-award-of-merit-manufacturing-cyrusone-project-kincora-data-center",
+   "status": "historical"
+  },
+  {
+   "slug": "dpr",
+   "type": "supplier",
+   "note": "DPR Construction lists CyrusOne on its published colocation and wholesale client roster and names itself general contractor on CyrusOne's Project Kincora in Sterling, Virginia.",
+   "context": "DPR Construction's advanced-technology market page carries a named colocation and wholesale client roster including CyrusOne alongside CoreSite, DataBank, Digital Realty, Equinix, Flexential, Global Switch, NTT, QTS, Stream and Vantage. DPR's own project pages separately name it as general contractor on CyrusOne Project Kincora in Sterling, Virginia.\n\nDPR was also the general contractor on PowerHouse's ABX-1, the Ashburn building CyrusOne leased and then bought — so the two companies meet on both sides of that transaction.",
+   "source": "https://www.dpr.com/company/advanced-technology",
+   "status": "active"
+  },
+  {
+   "slug": "mitsubishi-electric",
+   "type": "supplier",
+   "note": "CyrusOne appears on Mitsubishi Electric's published uninterruptible power supply customer roster.",
+   "context": "The Mitsubishi Electric dossier records CyrusOne among the colocation operators on its published UPS customer roster, alongside Sabey, CoreSite, Flexential, TierPoint, Cologix, Serverfarm, Element Critical, Evocative and QTS.\n\nThe attribution carries the caveat that dossier itself states: no capacity, site or date is published for any roster entry, and Mitsubishi Electric publishes no named data-centre deployment anywhere. The roster is evidence of installed base, not of scale, and CyrusOne has never named a UPS vendor.",
+   "source": "https://mitsubishicritical.com/our-customers/",
+   "status": "active"
+  },
+  {
+   "slug": "digital-realty",
+   "type": "competitor",
+   "note": "The listed-versus-private comparison in this corpus — the same wholesale and hyperscale leases, contested from opposite capital structures.",
+   "context": "CyrusOne and Digital Realty compete for the same wholesale and hyperscale tenants in Northern Virginia, Dallas, Phoenix, Chicago and across the European FLAP-D markets, and independent buyer's guides list them in the same set of dedicated hyperscale campus developers.\n\nThe contrast is the capital structure rather than the product. Digital Realty publishes quarterly results, a twenty-largest-customer table and a development pipeline with pre-leasing percentages; CyrusOne publishes none of that and funds itself in the asset-backed market. Independent rankings place them close and disagree on the order: USDataMap's tracked-capacity table has CyrusOne at 3,026 MW against Digital Realty's 2,878 MW, while ABI Research's active-IT-load measure has Digital Realty at 686 MW against CyrusOne's 674 MW — a reminder that the two measures answer different questions.",
+   "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
+   "status": "active"
+  },
+  {
+   "slug": "qts",
+   "type": "competitor",
+   "note": "The closest structural peer — a sponsor-owned US wholesale platform at comparable scale, and the one CyrusOne is reported to have fallen behind.",
+   "context": "QTS, owned by Blackstone since 2021, is the nearest like-for-like comparison to CyrusOne: a large private US wholesale and hyperscale landlord funded by perpetual capital and serial investment-grade issuance rather than by public equity.\n\nOne strand of reporting on the CME outage stated that CyrusOne 'fell behind competitors like QTS in recent market share rankings' — a single-sourced characterisation rather than a measured finding. Independent measures are equivocal: ABI Research puts QTS at 811 MW of active IT load against CyrusOne's 674 MW, while USDataMap's tracked-capacity table puts CyrusOne ahead at 3,026 MW against 3,260 MW. Both sponsors also hold competing exposures — Blackstone owns QTS while KKR has separately invested in Compass Datacenters and GIP backed Aligned.",
+   "source": "https://www.insurancejournal.com/news/midwest/2025/12/19/851780.htm",
+   "status": "active"
+  },
+  {
+   "slug": "aligned",
+   "type": "competitor",
+   "note": "Named in the same private wholesale cohort in Aligned's own positioning.",
+   "context": "Aligned Data Centers' dossier places itself 'in the private wholesale cohort against Vantage, QTS (Blackstone), STACK, Switch, and CyrusOne', differentiating on adaptive density and waterless cooling rather than land-bank scale.\n\nThe two are also joined by ownership adjacency rather than commerce: BlackRock's Global Infrastructure Partners, one of CyrusOne's two owners, was part of the consortium that acquired Aligned at an approximately USD 40bn enterprise value in July 2026.",
+   "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
+   "status": "active"
+  },
+  {
+   "slug": "compass-datacenters",
+   "type": "competitor",
+   "note": "Both are Dallas-based single-tenant hyperscale campus developers listed in the same independent buyer's guide.",
+   "context": "Compass Datacenters and CyrusOne are both headquartered in Dallas and both build single-tenant hyperscale campuses funded through serial asset-backed securitisation. An independent 2026 buyer's guide cited in the Compass dossier lists both as dedicated hyperscale campus developers alongside QTS, Vantage, STACK, Aligned, DataBank, NTT, Equinix xScale, Digital Realty and Tract.\n\nThe sponsor overlap is again worth noting: KKR, one of CyrusOne's two owners, became an asset-level partner in Compass in December 2025.",
+   "source": "https://www.insurancejournal.com/news/midwest/2025/12/19/851780.htm",
+   "status": "active"
+  },
+  {
+   "slug": "prime-data-centers",
+   "type": "competitor",
+   "note": "Named neighbours in Chicago and Madrid in third-party market surveys.",
+   "context": "The Prime Data Centers dossier records reporters placing Prime beside Aligned, CyrusOne, Equinix and PowerHouse in CBRE's Chicago survey, and beside Equinix, CyrusOne and Data4 in Madrid. CBRE's H2 2025 Chicago report specifically lists CyrusOne's Wood Dale campus as fully leased alongside Prime's, Aligned's ORD3 and Equinix's Minooka, with ComEd delivery delays affecting the market to 2032 or later.\n\nThe edge is a market-adjacency observation from third-party surveys rather than any transaction between the two.",
+   "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
+   "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Texas Senate Bill 6 — large-load interconnection and mandatory curtailment in ERCOT",
+   "status": "in-effect",
+   "effectiveDate": "2025-06-20",
+   "exposure": "SB 6 applies to loads of 75 MW or more and imposes new interconnection cost responsibility, changes to delivery charges, and mandatory load flexibility in grid emergencies. The provision that bears hardest on this company: a co-located large load must be able to curtail fully within thirty minutes of an ERCOT emergency instruction, without compensation, and new large loads after 31 December 2025 must install remote-disconnect equipment for firm load-shedding. Every flagship CyrusOne Texas campus is both co-located and above the threshold — 760 MW contracted at the Freestone Energy Center, 400 MW at Thad Hill and 200 MW at DFW7 on Eolian's battery. The PUCT has already affirmed curtailment authority over co-located data centres in its first net-metering case under the statute.",
+   "mitigation": "The company has made curtailability a stated feature rather than a concession: the Calpine Phase 2 release commits to 'coordinate our operations to ensure grid reliability in times of supply scarcity... curtailing in times of need', and the Freestone community page states plainly that the local utility 'will respond when required by state law to have us curtail our load and provide the power to the electric grid'.",
+   "source": "https://www.bracewell.com/resources/texas-senate-bill-6-ushers-in-major-overhaul-of-large-load-interconnection-and-grid-access-rules/"
+  },
+  {
+   "regime": "Illinois Data Center Investment Program — incentives paused",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-01",
+   "exposure": "Governor Pritzker directed the state to halt new data-centre incentives for two years from 1 July 2026, after the POWER Act failed by the 31 May 2026 deadline; agreements entered before that date are honoured. Between 2020 and 2024 twenty-seven Illinois data centres received more than USD 983m in incentives. Illinois is CyrusOne's largest non-Texas concentration: the operating Aurora campus at 114 MW, Yorkville approved at 480 MW, and Sangamon County at roughly 634 MW and under litigation.",
+   "mitigation": "**No source establishes whether any individual CyrusOne Illinois agreement falls inside the grandfather**, and this dossier does not infer it.",
+   "source": "https://capitolnewsillinois.com/news/gov-jb-pritzker-to-suspend-tax-breaks-for-data-centers-urging-more-discussion/"
+  },
+  {
+   "regime": "Ohio — AEP Ohio data-centre tariff (PUCO)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-23",
+   "exposure": "PUCO ordered a data-centre-specific tariff for AEP Ohio applying to new data centres with peak load of 25 MW or more, requiring payment for a minimum 85% of subscribed usage regardless of actual consumption for up to twelve years, and ending AEP Ohio's moratorium on new data-centre service. Existing facilities are grandfathered. CyrusOne's Ohio and Northern Kentucky sites — Cincinnati CIN2, Lebanon CIN5 and Florence CIN6 in Kentucky — are long-established and therefore grandfathered.",
+   "mitigation": "Grandfathering is the mitigation. No new CyrusOne Ohio project appears in the public record that would be caught by the 85% take-or-pay.",
+   "source": "https://puco.ohio.gov/news/puco-orders-aep-ohio-to-create-data-center-specific-tariff"
+  },
+  {
+   "regime": "Virginia data-centre sales and use tax exemption reform",
+   "status": "proposed",
+   "effectiveDate": "2026",
+   "exposure": "Virginia's exemption is contested with no consensus reached in the 2026 session — the Senate proposed an impact fee in lieu of elimination and the House an accountability study. Northern Virginia is CyrusOne's largest operating concentration: five Sterling facility groups totalling 233 MW plus the acquired Ashburn ABX-1, and Northern Virginia was 61.7% of the 2025-1 securitisation pool by location.",
+   "mitigation": "None stated by the company.",
+   "source": "https://www.multistate.us/insider/2026/6/22/state-data-center-policy-shifts-as-governors-impose-new-restrictions"
+  },
+  {
+   "regime": "Ireland — CRU large energy user connection policy (CRU/2025/236)",
+   "status": "in-effect",
+   "effectiveDate": "2025-12-12",
+   "exposure": "Ireland's final policy, published December 2025 and applying to connection applications after 12 December 2025, ends the de-facto Dublin moratorium but replaces it with conditions: large energy users above 10 MVA must provide new on-site or proximate generation or storage, that generation must participate in the Single Electricity Market, demand curtailment is mandatory absent performance standards, and 80% of annual electricity demand must be met by additional Irish renewable generation within six years of energisation. Data centres are roughly 50% of Dublin's regional electricity demand. CyrusOne operates DUB1 at 14 MW; the existing load is unaffected, but any new Dublin capacity now requires the company to build or contract generation of its own.",
+   "mitigation": "The E.ON 'preferred partnership' to design and deliver local power generation across Europe is the structural answer. **Its first application was withdrawn**: the 61 MW generation component at Frankfurt FRA7 was removed in May 2026 to prioritise the grid-connected build.",
+   "source": "https://www.williamfry.com/knowledge/cru-publishes-long-awaited-final-policy-on-data-centre-connections/"
+  },
+  {
+   "regime": "EU Energy Efficiency Directive 2023/1791 and Delegated Regulation (EU) 2024/1364",
+   "status": "in-effect",
+   "effectiveDate": "2026-05-15",
+   "exposure": "Data centres with 500 kW or more of installed IT power demand report 24 performance indicators annually by 15 May, covering energy consumption, capacity utilisation, waste heat and water, published into a European database. All nineteen CyrusOne European facilities materially exceed the threshold.",
+   "mitigation": "The company reports against ISO/IEC 30134-2 with an operating PUE of 1.46 and a design range of 1.18 to 1.28, site WUE of 0.25 litres per kWh with standard dry facilities at 0.00, and waste-heat capability up to 40 MW at Frankfurt FRA7 — an Annex II indicator it already engineers for.",
+   "source": "https://www.whitecase.com/insight-alert/data-centres-and-energy-consumption-evolving-eu-regulatory-landscape-and-outlook-2026"
+  },
+  {
+   "regime": "Arizona data-centre sales-tax exemption moratorium",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-01",
+   "exposure": "A three-year moratorium from 1 July 2026 to 30 June 2029 bars the Arizona Commerce Authority from accepting new applications. CyrusOne's largest single operating campus is Chandler, Arizona, at 169 MW across 2,000,000 square feet.",
+   "mitigation": "The existing Chandler campus is unaffected; the moratorium bars new applications. No new Arizona CyrusOne project appears in the public record.",
+   "source": "https://www.multistate.us/insider/2026/6/22/state-data-center-policy-shifts-as-governors-impose-new-restrictions"
+  },
+  {
+   "regime": "Section 232 tariffs on steel, aluminium and copper derivative articles",
+   "status": "in-effect",
+   "effectiveDate": "2027-12-31",
+   "exposure": "Transformers and switchgear carry a reduced 15% rate through 31 December 2027 while steel, aluminium and copper derivative articles are tariffed at 25% of full customs value; power-transformer lead times run to roughly 128 weeks and medium-voltage switchgear is effectively sold out through 2028. A landlord whose entire proposition is speed to market carries this as a schedule risk before it is a cost risk.",
+   "mitigation": "None disclosed. Unlike Digital Realty, CyrusOne has announced no supply-capacity agreement with an equipment maker.",
+   "source": "https://atekdistribution.com/electrical-equipment-prices-lead-times-2026/"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Intelliscale — AI data-centre design (launch release 24 August 2023 and design one-pager)",
+   "specs": [
+    {
+     "band": "Cooling",
+     "label": "Rack cooling capacity",
+     "value": "up to 300kW per rack"
+    },
+    {
+     "band": "Cooling",
+     "label": "Cooling methods",
+     "value": "liquid-to-chip, rear-door heat exchanger, immersion"
+    },
+    {
+     "band": "Power",
+     "label": "Power density",
+     "value": ">2,000 watts ft²"
+    },
+    {
+     "band": "Power",
+     "label": "Density relative to conventional",
+     "value": "600-to-1,200 percent more watts per square foot than typical data center power density"
+    },
+    {
+     "band": "Design",
+     "label": "Footprint",
+     "value": "can occupy just 25% of the space of typical data centers, depending on the application and needs"
+    },
+    {
+     "band": "Design",
+     "label": "Redundancy options",
+     "value": "N, N+1, 2N, N+2c"
+    },
+    {
+     "band": "Electrical",
+     "label": "Topology",
+     "value": "block-redundant electrical system — multiple, independently operating power blocks with built-in redundancy"
+    },
+    {
+     "band": "Water",
+     "label": "Water consumption",
+     "value": "Zero water consumption"
+    },
+    {
+     "band": "Compliance",
+     "label": "Green building",
+     "value": "LEED Design; LEED or BREEAM certified"
+    }
+   ],
+   "notes": "Verbatim from the Intelliscale launch release and design one-pager. The comparison that gives the figures meaning is the standard colocation page's '17 kW per cabinet capacity'. No floor loading is published on any facility page, and no Uptime Institute Tier or EN 50600 certification appears anywhere in the first-party record."
+  },
+  {
+   "product": "Portfolio efficiency (2026 Sustainability Report, published June 2026, covering calendar 2025)",
+   "specs": [
+    {
+     "band": "Efficiency",
+     "label": "Design PUE (ISO dPUE1, standard dry)",
+     "value": "ranges from 1.18 to 1.28, depending on local climate"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Operating PUE (ISO PUE1, all facilities)",
+     "value": "1.59 (2018) → 1.47 (2024) → 1.46 (2025)"
+    },
+    {
+     "band": "Water",
+     "label": "WUE Site (ISO WUE1), all facilities",
+     "value": "0.49 → 0.29 → 0.25 L/kWh (2018/2024/2025); standard dry facilities 0.00"
+    },
+    {
+     "band": "Water",
+     "label": "WUE Source (ISO WUE3)",
+     "value": "2.85 → 1.43 → 1.21 L/kWh"
+    },
+    {
+     "band": "Carbon",
+     "label": "Carbon usage effectiveness",
+     "value": "0.10 kg CO2e per IT kWh; net Scope 1 plus market-based Scope 2 of 453,648 MTCO2e; Scope 3 of 805,638 MTCO2e"
+    },
+    {
+     "band": "Energy",
+     "label": "Electricity procured as carbon-free",
+     "value": "77.8% of all electricity delivered (target 100% by 2030)"
+    },
+    {
+     "band": "Energy",
+     "label": "Origination split of that 77.8%",
+     "value": "CyrusOne-procured renewables 19.4% · CyrusOne-procured nuclear 5.4% · customer-procured renewables 52.9% · certificates 0.1%"
+    },
+    {
+     "band": "Water",
+     "label": "Net positive water",
+     "value": "net positive at 14 data centers and the Dallas headquarters; 41% of facilities in high-stress regions (target 100%)"
+    },
+    {
+     "band": "Carbon",
+     "label": "Target",
+     "value": "Climate Neutral by 2030, accelerated from 2040 in December 2022; SBTi-validated near-term target to reduce Scope 1 and 2 by 38% by 2030 from a 2021 base"
+    }
+   ],
+   "notes": "Assured to a moderate ('type 2') level by ISOS Group. Two caveats the company states itself: data for most categories was measured for the first nine months of 2025 and projected for the last three, and 'Operating PUE will always be higher than Design PUE because, to maintain flexible capacity, colocation data centers are almost never run at full capacity'. A third caveat is arithmetical rather than stated — 52.9 of the 77.8 percentage points of carbon-free electricity are customer-procured, so CyrusOne's own procurement is about 24.8%."
+  },
+  {
+   "product": "Portfolio scale and largest campuses (company facility pages and 2026 Sustainability Report)",
+   "specs": [
+    {
+     "band": "Scale",
+     "label": "Operational estate",
+     "value": "more than 60 mission-critical data center facilities across the United States and Europe with upcoming expansion into Japan... more than one gigawatt of Critical Load Capacity worldwide"
+    },
+    {
+     "band": "Scale",
+     "label": "Homepage counters",
+     "value": "60+ operational data centers · 50+ in development · 16.2M sq. ft. · 1+GW · 9 countries"
+    },
+    {
+     "band": "Scale",
+     "label": "Texas share",
+     "value": "30% of CyrusOne's portfolio is located in Texas"
+    },
+    {
+     "band": "Campus",
+     "label": "Chandler, AZ (PHX1-PHX8)",
+     "value": "169 megawatts across 2,000,000 sq. ft."
+    },
+    {
+     "band": "Campus",
+     "label": "Sterling, VA (NVA5-NVA7)",
+     "value": "116 MW across 1,177,019 sq. ft."
+    },
+    {
+     "band": "Campus",
+     "label": "Aurora, IL (CHI1-CHI3)",
+     "value": "114 MW across 450,000 sq. ft."
+    },
+    {
+     "band": "Campus",
+     "label": "London LON6 (Iver Heath)",
+     "value": "108 MW across 30,000 sq. m."
+    },
+    {
+     "band": "Campus",
+     "label": "Frankfurt FRA6 / FRA7",
+     "value": "90 MW (Sossenheim) / 81 MW (Griesheim, with heat reuse up to 40 MW)"
+    },
+    {
+     "band": "Campus",
+     "label": "Osaka OSK1 (CyrusOne KEP joint venture)",
+     "value": "48 MW — six 8 MW data halls over four floors, 70 MVA at 77 kV, first phase operational Q1 2028"
+    },
+    {
+     "band": "Density",
+     "label": "Standard colocation cabinet",
+     "value": "17 kW per cabinet capacity"
+    }
+   ],
+   "notes": "The company's colocation page separately states the infrastructure 'spans more than 350 data centers across the U.S, Europe, and Asia' — against 'over 60' everywhere else including the June 2026 sustainability report. That is a site error rather than a portfolio claim and is recorded here so it is not repeated. The boilerplate stepped from 'over 55' to 'over 60' between 13 January and 9 February 2026."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "John Hatem",
+   "title": "President and Chief Executive Officer",
+   "background": [
+    "Chief Executive Officer and a director since 30 July 2026, succeeding Eric Schwartz in a stated long-term succession plan",
+    "President from September 2025 — global sales, global procurement and US design and construction; Chief Operating Officer from 2020 covering design, construction, IT and operations",
+    "Joined CyrusOne in 2011; credited with the manufacturing-driven approach to data-centre construction and with the Intelliscale rollout",
+    "Director of Design and Construction, ConceptCSI Global Data Center Solutions",
+    "Began as a network operations engineer at JPMorgan Chase (formerly Bear Stearns), Deutsche Bank and Morgan Stanley"
+   ]
+  },
+  {
+   "name": "Owen Morris",
+   "title": "Executive Vice President, Chief Financial Officer",
+   "background": [
+    "Joined CyrusOne as Chief Financial Officer in January 2024",
+    "Chief Financial Officer, United Surgical Partners International (Tenet Healthcare) for five years",
+    "About two decades in investment banking and venture capital, primarily with the real estate investment banking team at Goldman Sachs",
+    "University of Texas at Austin; MBA, Stanford Graduate School of Business"
+   ]
+  },
+  {
+   "name": "Rob Johnson",
+   "title": "Executive Vice President, Chief Operating Officer",
+   "background": [
+    "Joined January 2026 as Chief Business Officer; the leadership page now carries the Chief Operating Officer title — the change is undated and unannounced, and post-dates June 2026",
+    "Leads sales, strategic partnerships, customer success and global operations, plus portfolio performance",
+    "Executive Vice President of Networks for the Americas, Ericsson — associated with a USD 14 billion Tier 1 carrier contract",
+    "Siemens IT Solutions and Services; HPE Services; CSC"
+   ]
+  },
+  {
+   "name": "Jim Roche",
+   "title": "Executive Vice President, Chief Technology Officer",
+   "background": [
+    "Joined CyrusOne in 2014; promoted to Senior Vice President of Engineering and subsequently Chief Technology Officer",
+    "Leads technology, engineering, design, construction and quality",
+    "Data Center Vice President, JPMorgan Chase",
+    "Data Center Alliance advisory board since 2014"
+   ]
+  },
+  {
+   "name": "Gene Alessandrini",
+   "title": "Executive Vice President, Chief Development Officer",
+   "background": [
+    "Leads energy and land — site evaluation, land acquisition, power strategy, entitlements and incentives through to shovel-ready status; joined as Senior Vice President of Energy",
+    "Chief Commercial Officer, TerraForm Power (Brookfield Renewable)",
+    "Brookfield Renewable; PPL EnergyPlus",
+    "BSEE, Villanova University; Executive MBA, University of Delaware"
+   ]
+  },
+  {
+   "name": "Robert M. Jackson",
+   "title": "Executive Vice President, General Counsel and Secretary",
+   "background": [
+    "Joined CyrusOne in 2015; legal plus environment, health, safety and security; sits on the capital and pricing committees and is Secretary to the Board of Managers",
+    "Also led human resources from 2020 to 2024",
+    "The company credits him with a pivotal role in the 2022 take-private, which it values at USD 15 billion",
+    "Board and executive committee of the Data Center Coalition; director, Tech Titans",
+    "BS, Indiana University Kelley School of Business; JD, UMKC; LLM in Tax, University of Florida"
+   ]
+  },
+  {
+   "name": "Andrea Muñoz",
+   "title": "Executive Vice President, Chief People Officer",
+   "background": [
+    "Joined CyrusOne in 2014; previously led service delivery, US data-centre operations and global physical security",
+    "Seventeen years in telecommunications before CyrusOne",
+    "Executive sponsor of the CyrusOne Women's Initiative Network",
+    "BBA, Texas Woman's University"
+   ]
+  },
+  {
+   "name": "Andreas Paduch",
+   "title": "Managing Director, Europe",
+   "background": [
+    "Promoted to Managing Director for Europe on 9 July 2026 and joined the global executive team; joined CyrusOne in 2022 as Vice President of Sales",
+    "More than twenty years at CBRE across EMEA and Asia Pacific",
+    "Succeeds Matthew Pullen, who held the role at Executive Vice President level"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Capital raised",
+      "actual": "Nearly USD 12 billion across the year, comprising a USD 7.9 billion warehouse credit facility, a USD 1.8 billion revolving credit facility (both sustainability-linked to greenhouse-gas reduction targets), a USD 1.175 billion asset-backed securities offering and a USD 687.1 million single-asset single-borrower CMBS on DFW1",
+      "expected": "",
+      "verdict": "",
+      "result": "No analyst consensus exists for a company with no listed equity; the 'expected' field is left empty rather than reconstructed."
+     },
+     {
+      "name": "Securitisation programme to date",
+      "actual": "USD 2.6 billion raised across four issuances since the programme launched in May 2023, encompassing eleven assets across Northern Virginia and San Antonio",
+      "expected": "",
+      "verdict": "",
+      "result": "The May 2024 tranche was described by the company as the largest data-centre ABS issuance since 2021."
+     },
+     {
+      "name": "Asset acquisition",
+      "actual": "USD 154.1 million for PowerHouse ABX-1, Ashburn — 265,000 sq ft and 60 MW, previously leased for thirty years from May 2023",
+      "expected": "",
+      "verdict": "",
+      "result": "Reported by Commercial Observer; neither party commented on the rationale."
+     }
+    ],
+    "commentary": "**No revenue, EBITDA, net income, backlog or bookings figure was disclosed for FY2024 by the company or recoverable from any source.** The only financial series a reader can construct for CyrusOne is a financing series."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Bookings",
+      "actual": "'a record bookings year in 2025' — the company's own characterisation, quoted in the March 2026 financing release",
+      "expected": "",
+      "verdict": "",
+      "result": "Qualitative only. No booking figure, contracted megawatt total or backlog value has ever been published."
+     },
+     {
+      "name": "Revenue and profitability",
+      "actual": "'a period of record revenue growth and profitability marked by the largest customer expansion in our history' — the joint statement of KKR and GIP partners on the July 2026 chief-executive change",
+      "expected": "",
+      "verdict": "",
+      "result": "Also qualitative. One independent aggregator estimates trailing-twelve-month revenue of about USD 1.20 billion as of June 2026, but its provenance for a private company is unexplained and it is single-sourced; it is recorded here as low-confidence rather than adopted."
+     },
+     {
+      "name": "Securitisation, CONE 2025-1",
+      "actual": "USD 575 million single A2 class rated 'A-' by S&P, five-year anticipated and 25-year legal final; collateral of 13 data centres — Northern Virginia 61.7%, San Antonio and Houston — appraised at USD 4.4 billion, 98 tenants, 83.5% investment grade, weighted average lease term 8.6 years, DSCR 1.6 times, weighted average cap rate 8.0%. Arrangers MUFG Securities Americas and KKR Capital Markets",
+      "expected": "",
+      "verdict": "",
+      "result": "The collateral table is the only public window on CyrusOne's tenancy quality, and it is the closest thing to a valuation disclosure the company produces."
+     },
+     {
+      "name": "Customer concentration in earlier pools",
+      "actual": "CONE 2023-2: one tenant at 56.7% of aggregate annualised base rent and the top five at 88.3%. CONE 2023-1: one tenant at 41.7% of leased capacity and 45.3% of annualised base rent, 70.3% investment-grade tenants across 65.25 MW of critical load",
+      "expected": "",
+      "verdict": "",
+      "result": "Concentration improved materially by the 2025-1 pool. Tenants are never named in these documents — only credit quality and concentration are disclosed."
+     }
+    ],
+    "commentary": "**No corporate or issuer-level credit rating from any agency was resolvable for the post-take-private company.** The only issuer ratings in circulation ('BB-' and 'BB+') pre-date the 2022 buyout and describe the listed CyrusOne Inc.; they must not be read as current. The structured-finance ratings on individual series are sound and sourced."
+   },
+   {
+    "period": "2026 year to date (latest available)",
+    "periodType": "other",
+    "periodEnd": "2026-09-06",
+    "metrics": [
+     {
+      "name": "Corporate facilities",
+      "actual": "Revolving credit facility and US term loan upsized and extended to approximately USD 8.0 billion of aggregate commitments in March 2026 — the revolver up nearly USD 1 billion to about USD 3.8 billion and the term loan up nearly USD 300 million to USD 4.2 billion, jointly led by Goldman Sachs and Wells Fargo, both with sustainability-linked pricing grids",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Securitisation",
+      "actual": "CONE 2026-DFW3, a USD 1.05 billion green-bond single-asset single-borrower CMBS on a data centre near Dallas (May 2026); CONE 2026-ACD6, a USD 1.25 billion single-asset single-borrower deal on the three-data-centre Aurora campus, priced after an earlier USD 1.3 billion attempt was paused",
+      "expected": "",
+      "verdict": "",
+      "result": "Spreads, tranching and ratings for both 2026 deals sit behind paywalled trade coverage and were not obtained."
+     },
+     {
+      "name": "Capital deployed",
+      "actual": "'Across our portfolio of five active development sites, we have already invested more than USD 5 billion in land acquisition, engineering, equipment, infrastructure, and labor, supporting more than 5,000 jobs' — the company's letter to the Governor of Texas, 10 August 2026",
+      "expected": "",
+      "verdict": "",
+      "result": "The largest single capital figure the company has stated, and it covers Texas development sites only."
+     },
+     {
+      "name": "Market conditions",
+      "actual": "AAA single-borrower data-centre CMBS spreads widened to 168 basis points over SOFR at 28 July 2026 from 153 a year earlier, and BBB- from 321 to 332; two of three recent data-centre CMBS transactions required repricing at wider levels before achieving demand, and CyrusOne is named as one of the two",
+      "expected": "",
+      "verdict": "",
+      "result": "The cost of the funding channel this company depends on is rising, and it is being named specifically in the reporting on why."
+     }
+    ],
+    "commentary": "An IPO as early as 2027 raising about USD 5 billion was reported by Reuters on 10 August 2026, with Goldman Sachs and Morgan Stanley pitching for roles. Every named party declined to comment; it is unconfirmed, effectively single-sourced, and no size or valuation has been decided even on the reporting's own terms."
+   }
+  ],
+  "commentary": "CyrusOne has published no income statement since its March 2022 take-private, and the schema's expectations-honesty rule bites hard here: there is no consensus to beat or miss because there are no published results. What can be assembled is a financing history — roughly USD 12 billion raised in 2024 alone, a securitisation master trust running since May 2023, and about USD 8.0 billion of corporate facilities as of March 2026 — plus the collateral disclosures inside each securitisation, which are the only public evidence about tenant quality and concentration. Whether that changes depends on the reported 2027 IPO."
+ },
+ "sources": [
+  {
+   "label": "Reuters (via Yahoo Finance) — Data center operator CyrusOne plans IPO as early as 2027; Goldman Sachs and Morgan Stanley pitched; could raise about USD 5 billion; all parties declined to comment",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/data-center-operator-cyrusone-plans-100520897.html",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "CyrusOne — Supports Governor Abbott's vision for Texas digital infrastructure (>USD 5bn across five active Texas sites; ERCOT 'Batch Zero' schedule risk conceded)",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-supports-governor-abbotts-vision-for-texas-digital-infrastructure-future",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Briefs.co (relaying Bloomberg) — Investors turn cooler on data center debt: AAA single-borrower spreads 153 → 168 bp; CyrusOne named among deals repriced wider",
+   "url": "https://www.briefs.co/news/investors-turn-cooler-on-data-center-debt/",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "US Data Center Projects — CyrusOne files permits for a three-building USD 1.5 billion campus in Fairfield, Texas: DFW20A/B/C, 306,215 sq ft each, 918,650 sq ft total, 760 MW, completion August 2027",
+   "url": "https://usdatacenterprojects.com/texas/cyrusone-files-permits-for-three-building-usd-1-5-billion-data-center-campus-in-texas",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "WSIU — How Aurora and DeKalb residents are dealing with data centers",
+   "url": "https://www.wsiu.org/state-of-illinois/2026-08-03/how-aurora-and-dekalb-residents-are-dealing-with-data-centers",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Business Wire — CyrusOne names John Hatem Chief Executive Officer; Eric Schwartz steps down; KKR and GIP partners quoted",
+   "url": "https://www.businesswire.com/news/home/20260730005910/en/CyrusOne-Names-John-Hatem-Chief-Executive-Officer-to-Accelerate-its-Global-Digital-Infrastructure-Strategy",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Shaw Local — Sound limits placed on the CyrusOne Yorkville data center (60 dB day / 50 dB night, continuous monitoring)",
+   "url": "https://www.shawlocal.com/kendall-county-now/2026/07/17/sound-limits-placed-on-cyrusone-data-center-in-yorkville-residents-still-worried-about-construction-noise/",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "Illinois Times — Residents sue Sangamon County over the CyrusOne conditional-use approval; CyrusOne named a necessary party in interest",
+   "url": "https://www.illinoistimes.com/news/residents-sue-sangamon-county-cyrusone/",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Shaw Local — 228-acre CyrusOne data center agrees to pay Yorkville USD 15 million up front; city imposes water-use limits (480 MW from ComEd; eight buildings; 1,854,805 sq ft)",
+   "url": "https://www.shawlocal.com/kendall-county-now/2026/07/14/228-acre-cyrusone-data-center-agrees-to-pay-yorkville-15-million-up-front-city-imposes-water-use-limits/",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "CyrusOne — Appoints Andreas Paduch as Managing Director, Europe",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-appoints-andreas-paduch-as-managing-director-europe",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "CyrusOne — 2026 Sustainability Report (published June 2026, covering calendar 2025): PUE, WUE, CUE, carbon-free electricity origination, targets; assured by ISOS Group",
+   "url": "https://www.cyrusone.com/hubfs/CyrusOne/2026%20Sustainability%20Report.pdf",
+   "date": "2026-06"
+  },
+  {
+   "label": "CyrusOne — Appoints Bob Hennegan as Senior Vice President, US Operations",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-appoints-bob-hennegan-as-senior-vice-president-us-operations",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "Freestone County Times — CyrusOne rescinds its tax-abatement request; commissioners hear concerns; 'we no longer have any say'",
+   "url": "https://freestonecountytimesonline.com/cyrusone-rescinds-tax-abatement-request-commissioners-hear-concerns/",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "Freestone County Times — CyrusOne data center: economic boost, rural burden (up to 760 MW across two phases of 380 MW each; 506 acres)",
+   "url": "https://freestonecountytimesonline.com/cyrusone-data-center-economic-boost-rural-burden/",
+   "date": "2026-06-07"
+  },
+  {
+   "label": "MultiState — State data center policy shifts as governors impose new restrictions (Illinois, Texas, Ohio, Virginia, Arizona)",
+   "url": "https://www.multistate.us/insider/2026/6/22/state-data-center-policy-shifts-as-governors-impose-new-restrictions",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Capitol News Illinois — Governor Pritzker to suspend tax breaks for data centers",
+   "url": "https://capitolnewsillinois.com/news/gov-jb-pritzker-to-suspend-tax-breaks-for-data-centers-urging-more-discussion/",
+   "date": "2026-06-05"
+  },
+  {
+   "label": "Kirkland & Ellis — Advises KKR- and GIP-owned CyrusOne on a USD 1.05 billion CMBS financing (CONE 2026-DFW3 green bond)",
+   "url": "https://www.kirkland.com/news/press-release/2026/05/kirkland-advises-kkr--and-gip-owned-cyrusone-on-1-05b-cmbs-financing",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "BeBeez — CyrusOne breaks ground on its first Italian data centre outside Milan (27 MW, three 9 MW halls, ~EUR 6m local infrastructure; 'more than 50 data centers')",
+   "url": "https://bebeez.eu/2026/03/26/cyrusone-breaks-ground-on-first-italian-data-center-outside-milan/",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "CyrusOne — Breaks ground on its first data center in Italy",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-breaks-ground-on-first-data-center-in-italy",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "CyrusOne — Upsizes and extends USD 8.0 billion in loan facilities ('after a record bookings year in 2025')",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-upsizes-and-extends-8.0-billion-in-loan-facilities-to-support-strategic-growth-and-sustainability-goals-while-strengthening-liq-1774318130463",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Constellation Energy — Constellation and CyrusOne announce an agreement to support a new data center facility at the Freestone Energy Center in Texas (380 MW plus an exclusive 380 MW Phase 2; 'over 1100 MW under contract' in Texas; the Thad Hill Energy Center 400 MW)",
+   "url": "https://www.constellationenergy.com/news/2026/02/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas.html",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "ABI Research — Top 25 largest data center companies in the United States by active IT load (CyrusOne 674 MW across 43 US data centres, ranked 7th; Digital Realty 686 MW; QTS 811 MW)",
+   "url": "https://www.abiresearch.com/blog/top-25-largest-data-center-companies-united-states",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Data Center Frontier — CyrusOne hones AI-era data center strategy for power, pace and reliability (Sangamon County ~600 MW; Robert Johnson appointment)",
+   "url": "https://www.datacenterfrontier.com/hyperscale/article/55344695/cyrusone-hones-ai-era-data-center-strategy-for-power-pace-and-reliability",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "ABC7 Chicago — Aurora residents on data-centre noise and electric bills; CyrusOne says the issue is 'unique to their Aurora location'; Illinois Pollution Control Board reports zero noise enforcement proceedings in 2025",
+   "url": "https://abc7chicago.com/post/what-is-data-center-expect-more-centers-illinois-like-cyrusone-aurora-il-amid-noise-electric-bill-complaints/18610141/",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "PR Newswire — CyrusOne and Eolian partner to enable rapid deployment of a 200 megawatt data center campus in Fort Worth, Texas (DFW7 at Chisholm Grid)",
+   "url": "https://www.prnewswire.com/news-releases/cyrusone-and-eolian-partner-to-enable-rapid-deployment-of-200-megawatt-data-center-campus-in-fort-worth-texas-302658969.html",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "Insurance Journal (relaying Bloomberg) — CME outage fallout: KKR/GIP ownership across infrastructure, real-estate and Strategic Holdings funds; JLL facilities management of ~50 North American sites; 'fell behind competitors like QTS'",
+   "url": "https://www.insurancejournal.com/news/midwest/2025/12/19/851780.htm",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "Bloomberg — CyrusOne mulls EUR 600 million of debt tied to Europe data centers (headline and summary only; paywalled)",
+   "url": "https://www.bloomberg.com/news/articles/2025-12-09/cyrusone-mulls-600-million-of-debt-tied-to-europe-data-centers",
+   "date": "2025-12-09"
+  },
+  {
+   "label": "Yahoo Finance (relaying Bloomberg) — CME data centre outage caused by staff failing to follow standard cooling-tower draining procedures ahead of freezing temperatures",
+   "url": "https://sg.finance.yahoo.com/news/cme-data-centre-outage-caused-163157268.html",
+   "date": "2025-12-06"
+  },
+  {
+   "label": "Crain's Chicago Business — CyrusOne halts bond sale after the data center failure that crippled CME (USD 1.3bn Aurora-campus CMBS paused; CME ~14% of underwritten rent)",
+   "url": "https://www.chicagobusiness.com/finance-banking/cyrusone-halts-bond-sale-after-data-center-failure-cripples-cme",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "Insurance Journal — CME Group trading halt traced to the CyrusOne Aurora cooling failure",
+   "url": "https://www.insurancejournal.com/news/midwest/2025/12/01/849319.htm",
+   "date": "2025-12-01"
+  },
+  {
+   "label": "Calpine — Calpine and CyrusOne announce Phase 2 of the powered land agreement at the Thad Hill Energy Center in Texas (+210 MW to 400 MW; curtailment language)",
+   "url": "https://www.calpine.com/calpine-and-cyrusone-announce-phase-2-of-powered-land-agreement-to-support-hyperscale-data-center-at-thad-hill-energy-center-in-texas/",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "CyrusOne — Elevates John Hatem to President (announces the 'imminent release of Intelliscale3')",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-elevates-john-hatem-to-president-to-accelerate-global-growth-strategy",
+   "date": "2025-09-30"
+  },
+  {
+   "label": "CyrusOne and Calpine — New hyperscale data center development in Texas (DFW10 Bosque County, 190 MW, USD 1.2bn; 'backed by ... Global Infrastructure Partners (GIP), a part of BlackRock, and KKR')",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas",
+   "date": "2025-07-30"
+  },
+  {
+   "label": "PUCO — Orders AEP Ohio to create a data-center-specific tariff (85% minimum take for new loads at or above 25 MW, up to twelve years)",
+   "url": "https://puco.ohio.gov/news/puco-orders-aep-ohio-to-create-data-center-specific-tariff",
+   "date": "2025-07-09"
+  },
+  {
+   "label": "CyrusOne and E.ON — Strategic partnership for sustainable data center power solutions (61 MW at FRA7 by 2029; carries the 'Update May 2026' notice that the local generation component has been removed)",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-e.on-announce-strategic-partnership-to-advance-sustainable-data-center-power-solutions",
+   "date": "2025-06-02"
+  },
+  {
+   "label": "Bracewell — Texas Senate Bill 6 ushers in a major overhaul of large-load interconnection and grid-access rules (75 MW threshold; 30-minute curtailment without compensation)",
+   "url": "https://www.bracewell.com/resources/texas-senate-bill-6-ushers-in-major-overhaul-of-large-load-interconnection-and-grid-access-rules/",
+   "date": "2025-07"
+  },
+  {
+   "label": "CyrusOne — Breaks ground on the new Fort Worth data center campus (initial IT capacity around 70 MW; Texas capital investment >USD 2.4bn)",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-breaks-ground-on-new-fort-worth-data-center-campus",
+   "date": "2025-04-04"
+  },
+  {
+   "label": "William Fry — CRU publishes its final policy on data-centre connections in Ireland (CRU/2025/236)",
+   "url": "https://www.williamfry.com/knowledge/cru-publishes-long-awaited-final-policy-on-data-centre-connections/",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "S&P Global (via Alacra) — CyrusOne Data Centers Issuer I LLC Series 2025-1 assigned 'A-' rating",
+   "url": "http://www.alacrastore.com/s-and-p-credit-research/CyrusOne-Data-Centers-Issuer-I-LLC-Series-2025-1-Assigned-Rating-3325785",
+   "date": "2025-02-19"
+  },
+  {
+   "label": "Asset Securitization Report — CyrusOne offers USD 575 million in ABS on Virginia and Texas data centers (CONE 2025-1: 13 assets, USD 4.4bn appraised, 98 tenants, 83.5% investment grade, 8.6-year WALT, 1.6x DSCR, 8.0% cap rate)",
+   "url": "https://asreport.americanbanker.com/news/cyrusone-offers-575-million-in-abs-on-virginia-and-texas-data-centers",
+   "date": "2025-02-10"
+  },
+  {
+   "label": "Commercial Observer — CyrusOne acquires the Ashburn ABX-1 data center from PowerHouse for USD 154.1 million",
+   "url": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/",
+   "date": "2024-12-10"
+  },
+  {
+   "label": "Data Center Frontier — CyrusOne secures nearly USD 12 billion in financing for data center growth (USD 7.9bn warehouse, USD 1.8bn revolver, USD 1.175bn ABS, USD 687.1m DFW1 CMBS)",
+   "url": "https://www.datacenterfrontier.com/cloud/article/55128131/cyrusone-secures-nearly-12-billion-in-financing-for-data-center-growth-ai-digital-infrastructure-expansion",
+   "date": "2024-07-24"
+  },
+  {
+   "label": "CyrusOne — Closes a USD 1.175 billion ABS issuance (fourth since May 2023; USD 2.6bn programme to date across eleven assets)",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-closes-1-175-billion-abs-issuance",
+   "date": "2024-05-15"
+  },
+  {
+   "label": "Asset Securitization Report — CyrusOne returns to issue USD 488 million (CONE 2023-2: one tenant at 56.7% of AABR, top five at 88.3%)",
+   "url": "https://asreport.americanbanker.com/news/cyrusone-returns-to-issue-488-million",
+   "date": "2023-11-21"
+  },
+  {
+   "label": "Asset Securitization Report — CyrusOne Data Centers prepares to issue USD 701 million in CMBS (CONE 2023-1: 65.25 MW critical load; one tenant at 41.7% of leased capacity)",
+   "url": "https://asreport.americanbanker.com/news/cyrusone-data-centers-prepares-to-issue-701-million-in-cmbs",
+   "date": "2023-04-19"
+  },
+  {
+   "label": "CyrusOne and KEPCO — Announce a 50:50 Japan joint venture, CyrusOne KEP (at least one trillion yen, more than USD 7bn, over a decade; 900 MW)",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-kansai-electric-power-company-inc-kepco-announce-joint-venture",
+   "date": "2023-05-22"
+  },
+  {
+   "label": "CyrusOne — Green Finance Framework ('wholly owned by GIP and KKR' following the 25 March 2022 take-private; nearly 1,000 customers including ~200 Fortune 1000)",
+   "url": "https://www.cyrusone.com/hubfs/Website%20Documents%202025/CyrusOne%20Green%20Finance%20Framework.pdf",
+   "date": "2023-03"
+  },
+  {
+   "label": "CyrusOne — Announces Intelliscale, an AI data center solution (up to 300 kW per rack; >2,000 W/ft²; N, N+1, 2N, N+2c; zero water)",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-announced-intelliscale-an-ai-data-center-solution",
+   "date": "2023-08-24"
+  },
+  {
+   "label": "SEC — CyrusOne Holdco LLC Form 15-12B, deregistration following the take-private",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001553023&type=15-12B&dateb=&owner=include&count=40",
+   "date": "2022-04-14"
+  },
+  {
+   "label": "SEC — Exhibit 99.1: KKR and GIP complete the acquisition of CyrusOne (approximately USD 15 billion including assumed debt; Nasdaq trading suspended)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1553023/000110465922038090/tm229713d1_ex99-1.htm",
+   "date": "2022-03-25"
+  },
+  {
+   "label": "Global Infrastructure Partners — KKR and GIP complete the acquisition of CyrusOne",
+   "url": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/",
+   "date": "2022-03-25"
+  },
+  {
+   "label": "BlackRock — Completes the acquisition of Global Infrastructure Partners (branded 'Global Infrastructure Partners (GIP), a part of BlackRock')",
+   "url": "https://www.blackrock.com/corporate/newsroom/press-releases/article/corporate-one/press-releases/blackrock-completes-acquisition-of-global-infrastructure-partners",
+   "date": "2024-10-01"
+  },
+  {
+   "label": "ENR — Award of Merit: CyrusOne Project Kincora data center, Sterling VA (Rosendin electrical)",
+   "url": "https://www.enr.com/articles/45505-award-of-merit-manufacturing-cyrusone-project-kincora-data-center",
+   "date": "2018-10-16"
+  },
+  {
+   "label": "White & Case — Data centres and energy consumption: the evolving EU regulatory landscape and outlook for 2026",
+   "url": "https://www.whitecase.com/insight-alert/data-centres-and-energy-consumption-evolving-eu-regulatory-landscape-and-outlook-2026"
+  },
+  {
+   "label": "ATEK Distribution — Electrical equipment prices and lead times 2026 (transformers ~128 weeks; medium-voltage switchgear sold out through 2028)",
+   "url": "https://atekdistribution.com/electrical-equipment-prices-lead-times-2026/"
+  },
+  {
+   "label": "USDataMap — Biggest data center operators by tracked capacity (CyrusOne 3,026 MW across 33 facilities, 12th; Digital Realty 2,878 MW; QTS 3,260 MW)",
+   "url": "https://usdatamap.com/rankings/biggest-data-center-operators"
+  },
+  {
+   "label": "Site Selection Group — The largest U.S. data center operators in 2026 (CyrusOne 3rd among colocation operators; no metric or methodology disclosed)",
+   "url": "https://info.siteselectiongroup.com/blog/the-largest-u-s-data-center-operators-in-2026"
+  },
+  {
+   "label": "The AI Data Center Index — Largest AI data centres by IT load (ranks facilities, not operators; CyrusOne does not appear)",
+   "url": "https://aidatacenterindex.com/largest/"
+  },
+  {
+   "label": "CyrusOne — Freestone County, Texas community page ('we will be near the Freestone Energy Center, 1366 FM488 Fairfield, TX 75840'; >USD 500m across multiple phases; ERCOT curtailment obligation)",
+   "url": "https://www.cyrusone.com/data-centers/north-america/freestone-county-texas"
+  },
+  {
+   "label": "CyrusOne — Bosque County, Texas (DFW10) facility page",
+   "url": "https://www.cyrusone.com/data-centers/north-america/bosque-county-tx"
+  },
+  {
+   "label": "CyrusOne — AI data centers / Intelliscale solutions page",
+   "url": "https://www.cyrusone.com/solutions/ai-data-centers"
+  },
+  {
+   "label": "CyrusOne — Build-to-suit solutions page ('Massively Modular Architecture')",
+   "url": "https://www.cyrusone.com/solutions/build-to-suit"
+  },
+  {
+   "label": "CyrusOne — Hyperscale solutions page",
+   "url": "https://www.cyrusone.com/solutions/hyperscale"
+  },
+  {
+   "label": "CyrusOne — Colocation solutions page (National IX, Metro IX, C2C Wave, IP Bandwidth via ASN 62, Megaport on-ramps; the '350 data centers' site error)",
+   "url": "https://www.cyrusone.com/solutions/colocation"
+  },
+  {
+   "label": "CyrusOne — Leadership page (executive team, titles and biographies)",
+   "url": "https://www.cyrusone.com/company/leadership"
+  },
+  {
+   "label": "CyrusOne — Intelliscale design one-pager (>2,000 W/ft²; N, N+1, 2N, N+2c; single or multi-storey)",
+   "url": "https://documents.cyrusone.com/wp-content/uploads/2023/08/CyrusOne-Intelliscale-Design.pdf"
+  },
+  {
+   "label": "Mitsubishi Electric Power Products — published customer roster (CyrusOne among the colocation operators)",
+   "url": "https://mitsubishicritical.com/our-customers/"
+  },
+  {
+   "label": "DPR Construction — Advanced Technology market page (named colocation and wholesale client roster including CyrusOne)",
+   "url": "https://www.dpr.com/company/advanced-technology"
+  },
+  {
+   "label": "Baxtel — CyrusOne Fairfield, Texas (506-acre lot, 918,650 sq ft, three buildings, under construction, completion August 2027, utility Calpine LLC)",
+   "url": "https://baxtel.com/data-center/cyrusone-fairfield-texas"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

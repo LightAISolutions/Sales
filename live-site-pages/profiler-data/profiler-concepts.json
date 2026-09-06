@@ -99,6 +99,14 @@
       ]
     },
     {
+      "slug": "affo",
+      "term": "AFFO",
+      "def": "Adjusted funds from operations: funds from operations minus the recurring capital spending and leasing costs needed just to keep the existing buildings earning. It is the closest published approximation of cash actually available to pay dividends.",
+      "aliases": [
+        "adjusted funds from operations"
+      ]
+    },
+    {
       "slug": "afudc",
       "term": "AFUDC",
       "def": "Allowance for funds used during construction: the financing cost a utility is allowed to add to the price of a plant while it is being built, so the plant enters rate base at construction cost plus the interest and equity return accrued during the build. It is a non-cash earning until the plant enters service.",
@@ -794,6 +802,15 @@
       ]
     },
     {
+      "slug": "cap-rate",
+      "term": "cap rate",
+      "def": "A property's annual net operating income divided by its price or value, expressed as a percentage. It is the yield a buyer accepts for owning a finished, leased building — so a lower cap rate means a more expensive asset.",
+      "aliases": [
+        "capitalisation rate",
+        "capitalization rate"
+      ]
+    },
+    {
       "slug": "capability-curve",
       "term": "capability curve",
       "def": "The boundary of what an inverter can be commanded to do, drawn with real power on one axis and reactive power on the other. Because the hardware's limit is current, the boundary is a circle whose radius is the apparent-power rating: real power can be traded for reactive power anywhere along it, but the total cannot be exceeded.",
@@ -1120,6 +1137,15 @@
       ]
     },
     {
+      "slug": "cmbs",
+      "term": "CMBS",
+      "def": "Commercial mortgage-backed securities: bonds secured on one or more commercial properties and the rent they produce. A single-asset single-borrower deal secures the bonds on one property or campus rather than a pool.",
+      "aliases": [
+        "commercial mortgage-backed securities",
+        "single-asset single-borrower"
+      ]
+    },
+    {
       "slug": "co-control",
       "term": "co-control",
       "def": "An ownership structure in which two sponsors each hold a large but non-majority stake and must agree on major decisions — new campuses, new debt, a sale — while the operating team keeps running the company.",
@@ -1325,6 +1351,14 @@
       ]
     },
     {
+      "slug": "constant-currency",
+      "term": "constant currency",
+      "def": "A restatement that holds exchange rates fixed between two periods, so a change in reported results reflects the business rather than currency movement. Essential for a landlord earning in many currencies.",
+      "aliases": [
+        "constant-currency"
+      ]
+    },
+    {
       "slug": "constant-power-rating",
       "term": "constant-power rating",
       "def": "How a standby battery is really specified: the watts per cell it will hold for a stated time down to a stated end voltage at a stated temperature. Amp-hours describe a slow discharge and mislead badly at the rates a UPS actually uses.",
@@ -1380,6 +1414,14 @@
       "slug": "contingency",
       "term": "contingency",
       "def": "Money held inside a budget for the work that is certain to be needed and not yet identified. Whose contingency it is, and who keeps what is unspent, is a negotiated term rather than an accounting detail."
+    },
+    {
+      "slug": "continuation-vehicle",
+      "term": "continuation vehicle",
+      "def": "A new fund a private-equity or infrastructure sponsor raises to buy an asset from its own older fund, so the sponsor can keep running the asset past that fund's life instead of selling it to someone else.",
+      "aliases": [
+        "continuation fund"
+      ]
     },
     {
       "slug": "continuous-rating",
@@ -1465,6 +1507,11 @@
         "protective device coordination",
         "coordination studies"
       ]
+    },
+    {
+      "slug": "core-ffo",
+      "term": "Core FFO",
+      "def": "Funds from operations adjusted for items management considers non-recurring, such as transaction costs, debt-extinguishment charges or one-off incentive fees. It is usually the number a REIT guides to, and because each company defines its own adjustments it is not strictly comparable between companies."
     },
     {
       "slug": "corrosion-inhibitor",
@@ -1620,6 +1667,16 @@
       "def": "The chain of activities whose durations add up to the project's finish date. Only work on this chain can make the project later, and only work on it can make it earlier.",
       "aliases": [
         "critical path method"
+      ]
+    },
+    {
+      "slug": "cross-connect",
+      "term": "cross connect",
+      "def": "A physical cable linking two customers inside the same data centre, usually through a shared meet-me room. Each one is a small recurring fee for the operator and a reason for both customers to stay.",
+      "aliases": [
+        "cross-connect",
+        "cross connects",
+        "cross-connects"
       ]
     },
     {
@@ -2030,6 +2087,11 @@
         "pipeline MW",
         "project pipeline"
       ]
+    },
+    {
+      "slug": "development-spread",
+      "term": "development spread",
+      "def": "The gap between the yield on cost of building a data centre and the cap rate a finished one sells for. That gap is the developer's profit for taking construction and leasing risk, and it is why building can be worth more than buying."
     },
     {
       "slug": "development-stage-ladder",
@@ -3592,6 +3654,11 @@
       ]
     },
     {
+      "slug": "hold-period",
+      "term": "hold period",
+      "def": "How long a private-equity or infrastructure fund expects to own an asset before selling it, typically four to seven years for buyout capital and longer for infrastructure. The clock shapes when a sponsor starts preparing a sale or listing."
+    },
+    {
       "slug": "hold-up-time",
       "term": "hold-up time",
       "def": "How long a server power supply can carry its load on internal capacitors after its input disappears — roughly 10 to 20 milliseconds. It is the physics referee for every power transfer: a switchover completed inside that window is invisible to the IT load, and one that misses it is an outage.",
@@ -5038,6 +5105,14 @@
       ]
     },
     {
+      "slug": "net-lease",
+      "term": "net lease",
+      "def": "A lease under which the tenant, not the landlord, pays the property's operating costs — taxes, insurance and maintenance. A triple-net lease passes all three, which makes the landlord's rent unusually predictable.",
+      "aliases": [
+        "net-lease"
+      ]
+    },
+    {
       "slug": "net-position",
       "term": "net position",
       "aliases": [
@@ -5096,6 +5171,14 @@
       "def": "The ERCOT rule requiring new large electronic loads — data centers of 75 MW and up — to ride through voltage and frequency disturbances instead of tripping off together. It is a load rule rather than a storage standard (those are NOGRR 245 and 272), and it is what makes buffering between the grid and the GPUs close to mandatory in Texas.",
       "aliases": [
         "NOGRR282"
+      ]
+    },
+    {
+      "slug": "noi",
+      "term": "NOI",
+      "def": "Net operating income: a property's rental income minus the direct costs of operating it, before interest, tax, depreciation and corporate overhead. It is the number that gets divided by a cap rate to value a building.",
+      "aliases": [
+        "net operating income"
       ]
     },
     {
@@ -5960,6 +6043,11 @@
       ]
     },
     {
+      "slug": "promote-income",
+      "term": "promote income",
+      "def": "The performance fee a fund manager earns when a vehicle it manages beats an agreed return. For a landlord that manages third-party money it is real income, but it is lumpy and unrelated to how the buildings performed that quarter."
+    },
+    {
       "slug": "prudence-review",
       "term": "prudence review",
       "def": "The commission's after-the-fact test of whether a utility's spending was reasonable when the decision was made; imprudent cost is disallowed and falls on shareholders instead of customers. It is the reason a regulated buyer cares so much about a supplier's bankability and paperwork: every purchase must survive this review years later.",
@@ -6293,6 +6381,14 @@
       ]
     },
     {
+      "slug": "reit",
+      "term": "REIT",
+      "def": "A real estate investment trust: a company that earns mostly rent-like income and distributes at least 90% of its taxable income to shareholders, and in exchange pays no corporate income tax. Data centres qualify because renting space, power and cooling counts as property income.",
+      "aliases": [
+        "real estate investment trust"
+      ]
+    },
+    {
       "slug": "reliability-must-run",
       "term": "reliability must-run",
       "aliases": [
@@ -6335,6 +6431,14 @@
         "escalator",
         "annual escalator",
         "base rent escalator"
+      ]
+    },
+    {
+      "slug": "replacement-cost",
+      "term": "replacement cost",
+      "def": "What it would cost today to build the same asset from scratch, including land, power and equipment. It is a floor under the value of an existing building when new supply is slow or constrained.",
+      "aliases": [
+        "replacement-cost"
       ]
     },
     {
@@ -6605,6 +6709,15 @@
         "data center sales tax exemption",
         "sales and use tax exemption",
         "sales-and-use tax exemption"
+      ]
+    },
+    {
+      "slug": "same-store",
+      "term": "same-store",
+      "def": "A comparison limited to properties owned throughout both periods being compared, so growth is not flattered by acquisitions or new construction. Landlords often call it same-capital.",
+      "aliases": [
+        "same-capital",
+        "same store"
       ]
     },
     {
@@ -7521,6 +7634,15 @@
       ]
     },
     {
+      "slug": "take-private",
+      "term": "take-private",
+      "def": "A transaction in which investors buy all the shares of a listed company and delist it. The company stops publishing quarterly results and answers to its new owners instead of to a share price.",
+      "aliases": [
+        "taken private",
+        "going private"
+      ]
+    },
+    {
       "slug": "tap-off-box",
       "term": "tap-off box",
       "def": "A plug-in unit that clamps onto an energised busway to take a circuit off it, usually carrying its own breaker or fuses. It is what makes busway reconfigurable, and it is also the point where a new load can be added without anyone re-checking the protection upstream.",
@@ -7983,6 +8105,15 @@
       ]
     },
     {
+      "slug": "upreit",
+      "term": "UPREIT",
+      "def": "A structure in which a REIT holds its properties through an operating partnership rather than directly. Sellers can take partnership units instead of cash and defer tax, which is why large property deals are often paid for partly in units.",
+      "aliases": [
+        "operating partnership",
+        "op units"
+      ]
+    },
+    {
       "slug": "ups",
       "term": "UPS",
       "def": "Uninterruptible power supply: a power stage backed by stored energy — a battery string or a spinning flywheel — that carries the load through grid disturbances until generators start. In data centers it sits between utility power and the IT load.",
@@ -8308,6 +8439,16 @@
       "aliases": [
         "xenon-135",
         "xenon pit"
+      ]
+    },
+    {
+      "slug": "yield-on-cost",
+      "term": "yield on cost",
+      "def": "The stabilised net operating income a development is expected to produce, divided by everything it cost to build. Compared against the cap rate on a finished building, it says whether construction created value.",
+      "aliases": [
+        "development yield",
+        "stabilised yield",
+        "stabilized yield"
       ]
     },
     {

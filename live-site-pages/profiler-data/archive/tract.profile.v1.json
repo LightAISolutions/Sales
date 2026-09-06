@@ -579,15 +579,6 @@
       "note": "Microsoft's Castroville campus is adjacent to Tract's Medina Technology Park, and Microsoft won parcel-map approval for 274 acres near Tract's Silver Springs park in 2025; the company names Microsoft as part of the hyperscaler market it serves, not as a customer.",
       "context": "The Medina park page advertises 'Adjacent to existing Microsoft campus in Castroville'; Baxtel's Silver Springs page notes Microsoft's 2025 parcel-map approval nearby; van Rooyen's September 2024 interview lists Microsoft, Nvidia, Amazon and Meta as the market. No transaction between the companies is on the record.",
       "source": "https://www.tract.com/project/medina-technology-park/"
-    },
-    {
-      "slug": "digital-realty",
-      "type": "other",
-      "note": "Tract's executive chairman led the Teraco sale to Digital Realty; the two are not commercial counterparties.",
-      "context": "Grant van Rooyen led the acquisition of Teraco and its sale to Digital Realty, which completed a 55% majority interest on 1 August 2022 in a transaction valuing Teraco at approximately USD 3.5 billion and raised the holding to 77% in June 2026. The link is biographical rather than commercial: no transaction, lease or supply arrangement exists between Tract and Digital Realty.\n\nThis dossier previously recorded the transaction as a 'sale of 51% ... for about USD 3.5 billion'. Both halves were wrong and were corrected at v2: the interest was 55%, and USD 3.5 billion was Teraco's enterprise valuation rather than the consideration paid for the stake.",
-      "source": "https://www.prnewswire.com/news-releases/digital-realty-completes-acquisition-of-teraco-301596692.html",
-      "status": "historical",
-      "since": "2022-08"
     }
   ],
   "policyExposure": [
@@ -641,7 +632,7 @@
       "title": "Executive Chairman, Tract (Chief Executive Officer and Managing Partner, Tract Capital Management; Executive Chairman, Fleet Data Centers)",
       "background": [
         "Founded Tract (2022) and Fleet Data Centers (2025) as Tract Capital Management portfolio companies; chairs TCM's executive, management and investment committees; styled 'CEO and Managing Partner' of Tract in 2024 releases, 'Executive Chairman' from 2025",
-        "Led the acquisition of Teraco (South Africa) with a private-equity syndicate for about USD 850 million and its subsequent sale to Digital Realty — a 55% majority interest, completed 1 August 2022, in a transaction that valued Teraco at approximately USD 3.5 billion (Digital Realty raised the holding to 77% in June 2026); acquired 49% of MedOne (Israel) in a USD 450 million deal",
+        "Led the acquisition of Teraco (South Africa) with a private-equity syndicate for about USD 850 million and the sale of 51% to Digital Realty for about USD 3.5 billion; acquired 49% of MedOne (Israel) in a USD 450 million deal",
         "Founded Cologix (2010; recapitalisations of about USD 1.4 billion in 2017 and USD 4 billion in 2022), Communications Realty Investments and the van Rooyen Group (2010)",
         "Twelve years at Level 3 Communications, President of Content Markets (32 acquisitions); born in South Africa, raised in South Africa and Australia; degree in economics and finance"
       ]
@@ -1595,13 +1586,8 @@
     {
       "label": "PUCN — electric docket index: 26-05027 (LLESA with PR RNO and SV RNO), 26-04026 and 26-04027 (temporary gas plants), 26-04007 (345 kV substation), 25-09008, 26-02021",
       "url": "https://pucweb1.state.nv.us/PUC2/Dktinfo.aspx?Util=Electric"
-    },
-    {
-      "label": "PR Newswire — Digital Realty completes acquisition of Teraco (a majority interest, 'in a transaction valuing Teraco at approximately $3.5 billion')",
-      "url": "https://www.prnewswire.com/news-releases/digital-realty-completes-acquisition-of-teraco-301596692.html",
-      "date": "2022-08-01"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

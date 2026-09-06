@@ -585,15 +585,6 @@
       "context": "Globes (November 2025) describes the AWS data centers in Israel as 'executed by Azrieli and its former subsidiary Compass, which has since exited the field in Israel'. No current AWS lease at any Compass campus is disclosed; Bisnow's gloss that the securitized tenants are 'major tech firms like Amazon, Microsoft, Google, and Meta' is a characterisation of 'investment-grade hyperscale tenants', not a disclosure.",
       "source": "https://en.globes.co.il/en/article-aws-to-double-data-center-capacity-in-israel-1001526360",
       "status": "historical"
-    },
-    {
-      "slug": "digital-realty",
-      "type": "partner",
-      "note": "Co-founder of the Infrastructure for America 501(c)(4), launched 2 September 2026 with Compass, QTS and Vantage.",
-      "context": "Digital Realty is one of the four co-founders of Infrastructure for America, the 501(c)(4) launched on 2 September 2026 to set host-community standards for data-centre developers, alongside Compass, QTS and Vantage. The four compete directly for hyperscale leases; the coalition is a single-issue alliance formed after consent fights cost the industry specific projects, including the Prince William Digital Gateway.\n\nThe two are otherwise opposites in capital structure, and this dossier's founder makes the distinction himself — Chris Crosby, a former Digital Realty senior vice president, on the difference between 'building to last and building to exit'. Compass is co-controlled by Brookfield Infrastructure and Ontario Teachers' and publishes no accounts; Digital Realty is a listed REIT that publishes quarterly.",
-      "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
-      "status": "active",
-      "since": "2026-09"
     }
   ],
   "policyExposure": [
@@ -1420,6 +1411,6 @@
       "url": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2020019741"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

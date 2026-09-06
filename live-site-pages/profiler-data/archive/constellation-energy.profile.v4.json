@@ -141,16 +141,6 @@
    "type": "other",
    "note": "No direct deal documented — FERC's 2024 rejection of the Talen/Amazon co-location arrangement chilled behind-the-meter deals and prompted Constellation's own complaint, which won a December 2025 order directing PJM to write co-location rules.",
    "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
-  },
-  {
-   "slug": "cyrusone",
-   "type": "customer",
-   "note": "Calpine contracted 380 MW at the Freestone Energy Center with an exclusive further 380 MW, on top of 400 MW at Thad Hill — 'over 1100 MW under contract' in Texas.",
-   "context": "Calpine, a Constellation business unit, is the counterparty on both of CyrusOne's largest Texas campuses. The 9 February 2026 release signed 380 MW to serve a new data centre adjacent to the Freestone Energy Center in Freestone County and added an exclusive agreement for a Phase 2 of a further 380 MW; its subheadline puts the running total at 'over 1100 MW under contract for CyrusOne data centers in Texas', which includes the 400 MW previously agreed at the Thad Hill Energy Center in Bosque County (190 MW in July 2025 plus 210 MW in November 2025).\n\nThe product is Calpine's Powered Land Capabilities — plant, interconnection and site sold together — and the arrangement is explicitly two-way: the parties will 'coordinate our operations to ensure grid reliability in times of supply scarcity... curtailing in times of need'. Texas Senate Bill 6 now requires that of any co-located load at or above 75 MW in any case.",
-   "source": "https://www.constellationenergy.com/news/2026/02/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas.html",
-   "status": "active",
-   "since": "2025-07",
-   "scale": "over 1,100 MW under contract in Texas"
   }
  ],
  "policyExposure": [
@@ -396,6 +386,6 @@
    "date": "2024-02"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

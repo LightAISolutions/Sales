@@ -242,22 +242,6 @@
    "slug": "oracle",
    "type": "other",
    "note": "Indirect: Oracle leases and operates the Abilene campus DPR builds for Crusoe — no direct DPR–Oracle award documented."
-  },
-  {
-   "slug": "cyrusone",
-   "type": "customer",
-   "note": "CyrusOne appears on DPR's published colocation and wholesale client roster; DPR is named general contractor on CyrusOne's Project Kincora in Sterling, Virginia.",
-   "context": "CyrusOne sits on DPR's named colocation and wholesale client roster alongside CoreSite, DataBank, Digital Realty, Equinix, Flexential, Global Switch, NTT, QTS, Stream and Vantage, and DPR's project pages name it general contractor on CyrusOne Project Kincora in Sterling, Virginia.\n\nThe two companies also meet on both sides of one transaction: DPR was general contractor on PowerHouse's ABX-1 in Ashburn, the building CyrusOne leased for thirty years in 2023 and then bought outright in December 2024.",
-   "source": "https://www.dpr.com/company/advanced-technology",
-   "status": "active"
-  },
-  {
-   "slug": "digital-realty",
-   "type": "customer",
-   "note": "Digital Realty appears on DPR's published colocation and wholesale client roster.",
-   "context": "Digital Realty is named on DPR's colocation and wholesale client roster. The attribution is DPR's own client list: no specific Digital Realty project, campus or contract value is named by either party.\n\nDigital Realty publishes no general-contractor relationships at all, and a search of industry contractor rankings establishes only that both companies appear in the same market listings rather than that one builds for the other. The edge is recorded at the level the source supports.",
-   "source": "https://www.dpr.com/company/advanced-technology",
-   "status": "active"
   }
  ],
  "technicalSpecs": [
@@ -602,6 +586,6 @@
    "url": "https://en.wikipedia.org/wiki/DPR_Construction"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 5
 }

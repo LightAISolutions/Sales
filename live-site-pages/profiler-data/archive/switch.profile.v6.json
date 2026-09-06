@@ -22,7 +22,7 @@
     "300+ acres banked at Apex Industrial Park, North Las Vegas (~$180M, Dec 2025-2026 purchases) for future Nevada growth",
     "Customers per Reuters include NVIDIA, Dell Technologies and FedEx; CoreWeave is the marquee AI tenant"
    ],
-   "positioning": "Against Vantage/Aligned/QTS-style pure wholesale developers, Switch sells a standards-and-density story (Tier 5 Platinum, 2MW per rack) rather than raw build-to-suit scale; against Equinix, the retail-colocation and interconnection incumbent, it wins on campus power depth and single-operator design control (Digital Realty, often grouped with Equinix as a 'retail incumbent', in fact leads the WHOLESALE segment at about 28% share and is second to Equinix in retail — the two are not the same competitor). Its five-zone US footprint is a deliberate latency lattice — every campus pitched as covering a quadrant of the country — rather than a metro-by-metro land bank.",
+   "positioning": "Against Vantage/Aligned/QTS-style pure wholesale developers, Switch sells a standards-and-density story (Tier 5 Platinum, 2MW per rack) rather than raw build-to-suit scale; against retail incumbents Equinix and Digital Realty it wins on campus power depth and single-operator design control. Its five-zone US footprint is a deliberate latency lattice — every campus pitched as covering a quadrant of the country — rather than a metro-by-metro land bank.",
    "soldThrough": "Direct colocation contracts (retail cabinets to multi-hall wholesale) plus long-term single-tenant leases; capacity is financed through ABS/CMBS against in-place leases.",
    "targetSegments": [
     "Hyperscalers and AI clouds (CoreWeave, and per Reuters NVIDIA and Dell as customers)",
@@ -266,8 +266,8 @@
   {
    "slug": "equinix",
    "type": "competitor",
-   "note": "Retail-colocation and interconnection incumbent; Switch beats on campus power depth, not network density.",
-   "context": "Against Equinix, the retail-colocation incumbent, Switch wins on campus power depth and single-operator design control (Tier 5 Platinum, 2MW per rack); Switch CONNECT is explicitly not an interconnection-ecosystem play — the pitch is cost reduction and latency, not Equinix-style network density.\n\nThis dossier previously grouped Digital Realty with Equinix as a 'retail incumbent'. That is a category error and was corrected at v7: Synergy Research measures Equinix as the retail leader at about 17% share while Digital Realty holds about 28% of the WHOLESALE segment, and Equinix's own dossier describes competing for 'the wholesale capacity Digital Realty leads'. Switch competes with Equinix on interconnection density and with Digital Realty on wholesale campus capacity; conflating the two describes neither.",
+   "note": "Retail-colocation incumbent Switch beats on campus power depth, not network density.",
+   "context": "Against retail incumbents Equinix and Digital Realty, Switch wins on campus power depth and single-operator design control (Tier 5 Platinum, 2MW per rack); Switch CONNECT is explicitly not an interconnection-ecosystem play — the pitch is cost reduction and latency, not Equinix-style network density.",
    "source": "Dossier competitive assessment — colocation",
    "status": "active"
   },
@@ -298,14 +298,6 @@
    "note": "Non-binding master power agreement for Aurora powerhouses — a framework, with individual binding agreements to be finalised as project milestones are reached.",
    "context": "Signed 18 December 2024 and described by both parties as one of the largest corporate clean-power agreements ever signed. Utility Dive's contemporaneous account is explicit that it is 'not yet binding on either party'.\n\nThe arithmetic is worth carrying: Oklo's stated order book reached approximately 14 GW after this signing, so roughly six sevenths of that pipeline sits inside this single instrument — and Oklo stopped publishing a pipeline figure after mid-2025.",
    "source": "https://www.utilitydive.com/news/oklo-aurora-smr-advanced-nuclear-reactor-supply-agreement-data-center-developer-switch/735933/"
-  },
-  {
-   "slug": "digital-realty",
-   "type": "competitor",
-   "note": "Wholesale-segment incumbent; the competitor Switch meets on campus capacity rather than on network density.",
-   "context": "Digital Realty leads the wholesale colocation segment at about 28% share on Synergy Research's measure, and is second to Equinix in North American retail. Switch competes with it on campus power depth, single-operator design control and its five-zone latency lattice, rather than on the interconnection ecosystem where Equinix leads.\n\nThe structural contrast Switch's own dossier draws — that it prices delivery credibility without public-REIT overhead — applies to Digital Realty specifically: as a REIT it must distribute most of its taxable income and therefore funds development through equity issuance, debt and third-party funds rather than retained earnings.",
-   "source": "Dossier competitive assessment — wholesale colocation",
-   "status": "active"
   }
  ],
  "policyExposure": [
@@ -850,6 +842,6 @@
    "url": "https://www.switch.com/atlanta/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

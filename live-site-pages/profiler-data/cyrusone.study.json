@@ -1,0 +1,552 @@
+{
+ "schemaVersion": 2,
+ "slug": "cyrusone",
+ "title": "CyrusOne — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here-no-share-price",
+   "title": "Start here: the same asset, without a share price",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The **Digital Realty** guide in this library teaches how a listed data-centre landlord is valued and financed — {{REIT}} status, {{FFO}}, {{cap rate}}, {{yield on cost}}, {{mark-to-market}} on renewal. **Read that first if you have not.** This guide is its mirror image: the same buildings, the same tenants, the same physics, owned by two private-equity sponsors instead of by shareholders.",
+    "The question it answers is narrow and important: **when a company stops publishing accounts, how does anyone work out what it is worth or whether it is safe to lend to?** CyrusOne has published no revenue, EBITDA, backlog or bookings figure since March 2022. It still borrows billions. Somebody is underwriting that, and this guide teaches how.",
+    "Other guides cover neighbouring ground and are not repeated here. **QTS** and **STACK** teach perpetual capital and the ownership chain of funds and fund managers. **Compass** teaches reading a private landlord through its listed sponsor. **Switch** teaches the securitisation round-trip. **Prime** teaches the recapitalisation ladder. What is unclaimed — and what this guide takes — is **the collateral table as a substitute for accounts**, the sponsor's exit clock, and the way an operational failure becomes a financing event.",
+    "**Assumed:** the Digital Realty guide's vocabulary. **Not assumed:** any knowledge of private-equity mechanics or structured credit."
+   ]
+  },
+  {
+   "id": "what-a-take-private-changes",
+   "title": "What a take-private actually changes",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "In March 2022 KKR and Global Infrastructure Partners bought every share of CyrusOne for about USD 15 billion including assumed debt, and it stopped trading on Nasdaq. That is a **{{take-private}}**. Three things change immediately, and one thing does not change at all.",
+    "**Reporting stops.** A listed company files quarterly under securities law. A private one files nothing, and CyrusOne deregistered in April 2022. Everything a reader knew about revenue, margins, occupancy and tenant concentration simply stopped arriving.",
+    "**The owner changes character.** A share price is a continuous, anonymous, impatient verdict. Two sponsors are a small number of identifiable people with a fund, a mandate and a clock. They can accept a bad year for a good outcome in year five in a way a listed board finds hard.",
+    "**The capital structure gets heavier.** Buyouts use debt, and the equity is expected to work harder. That is a feature, not an accident: leverage magnifies the return on the sponsor's equity if the asset performs.",
+    "**What does not change is the building.** The same halls, the same tenants, the same power constraints, the same {{cap rate}} arithmetic. The asset is identical; only the ownership wrapper differs. Hold on to that — it is why the valuation tools from the Digital Realty guide still work here, even with no accounts to apply them to.",
+    "One correction worth carrying. **Global Infrastructure Partners has been part of BlackRock since October 2024**, so the accurate formulation today is 'funds managed by KKR and Global Infrastructure Partners, GIP itself now part of BlackRock'. CyrusOne's own boilerplate says exactly that — 'backed by leading investment firms Global Infrastructure Partners (GIP), a part of BlackRock, and KKR'. Any description of the company as simply 'GIP-owned' is three years out of date, and BlackRock is not itself a CyrusOne owner in the way that phrasing implies."
+   ]
+  },
+  {
+   "id": "two-answers-same-question",
+   "title": "The same landlord question, answered two ways",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Digital Realty and CyrusOne compete for the same tenants in the same metros. What a reader can learn about each is completely different. This table is the practical core of the guide.",
+   "cols": [
+    "Question",
+    "How you answer it for a listed REIT",
+    "How you answer it for a sponsor-owned landlord"
+   ],
+   "rows": [
+    [
+     "What is its revenue?",
+     "Read the income statement. Digital Realty: USD 6,112.7m in FY2025",
+     "**You cannot.** No figure exists. One aggregator estimates ~USD 1.20bn trailing revenue with unexplained provenance — treat as unusable"
+    ],
+    [
+     "Who are its biggest tenants?",
+     "The top-20 table in the 10-K, with percentages — though nine of Digital Realty's twenty are redacted",
+     "Only by accident. CME Group became known as a top Aurora tenant at ~14% of underwritten rent **because a securitisation prospectus disclosed it after an outage**"
+    ],
+    [
+     "What are the buildings worth?",
+     "{{NOI}} ÷ {{cap rate}}, with a real disclosed cap rate — Digital Realty's Blackstone deal at >6.5%",
+     "From the {{cap rate}} inside a securitisation collateral table. CONE 2025-1: 8.0% weighted average on USD 4.4bn of appraised value"
+    ],
+    [
+     "How levered is it?",
+     "Net debt to EBITDA, published: 4.7×",
+     "**Unknowable.** No EBITDA is published, so no leverage ratio can be computed. Deal-level {{DSCR}} is the only proxy — 1.6× on CONE 2025-1"
+    ],
+    [
+     "Is its credit sound?",
+     "Corporate ratings: Moody's Baa2, S&P BBB+, Fitch BBB",
+     "**No current corporate rating from any agency was resolvable.** Only the individual bonds are rated ('A-' on the ABS series). Pre-2022 ratings describe a company that no longer exists"
+    ],
+    [
+     "Is it growing?",
+     "Bookings, backlog, pre-leasing percentages, quarter by quarter",
+     "Adjectives. 'A record bookings year in 2025'; 'record revenue growth and profitability'. No number has ever accompanied either"
+    ],
+    [
+     "What will happen to it?",
+     "Whatever management guides to, revised quarterly",
+     "The sponsors' {{hold period}}. Four years in, the reported answer is an IPO"
+    ]
+   ]
+  },
+  {
+   "id": "reading-a-collateral-table",
+   "title": "The collateral table: accounts by another route",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Here is the substitution that makes a private landlord readable. CyrusOne borrows by **securitising** buildings: it puts a set of data centres into a special entity, that entity issues bonds, and the rent from those buildings pays the bondholders. This is {{CMBS}} when it is secured on property, and the industry calls a deal on one campus a single-asset single-borrower.",
+    "Bondholders will not buy blind. So every deal comes with a **presale report** in which a rating agency describes the collateral in detail — and *that* disclosure is public even though the company's accounts are not. The company tells you nothing; the bonds tell you a great deal.",
+    "Learn to read six fields, using CyrusOne's CONE 2025-1 deal of February 2025 as the worked example. It raised **USD 575 million** against **13 data centres**.",
+    "**Appraised value — USD 4.4 billion.** What an independent valuer says the collateral is worth. Against USD 575m of bonds, that is heavy over-collateralisation, which is why the bonds rate 'A-' while the company has no rating at all.",
+    "**Weighted average {{cap rate}} — 8.0%.** The yield the appraiser used. Compare it with the >6.5% Digital Realty disclosed on its Northern Virginia buy-in and you have a real market observation: this collateral was valued more conservatively.",
+    "**Tenant count and credit — 98 tenants, 83.5% investment grade.** Diversification and quality. Contrast the earlier CONE 2023-2 pool, where **one tenant was 56.7% of rent and the top five were 88.3%** — the same company, two years earlier, far more concentrated.",
+    "**{{WALT}} — 8.6 years.** Weighted average lease term remaining. How long the rent is contracted for. Longer is safer for a lender and less responsive to {{mark-to-market}} upside for an owner: the two interests genuinely conflict.",
+    "**{{DSCR}} — 1.6×.** Debt service coverage: NOI divided by debt payments. At 1.6× the buildings earn 60% more than the bonds require, so income could fall by over a third before the bonds are at risk.",
+    "**What you have just done is build a partial balance sheet for a company that publishes none** — asset value, yield, tenant quality, lease duration and coverage, on thirteen of its sixty-plus buildings. That is the technique. Its limit is equally important: it covers only the securitised assets, only at issuance, and never names a tenant."
+   ]
+  },
+  {
+   "id": "collateral-progression",
+   "title": "One company, four deals: what the collateral tables show",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Read down the concentration column. This is a real, dated improvement in business quality that no income statement ever disclosed — and it is only visible because the company borrows this way.",
+   "cols": [
+    "Deal",
+    "Size",
+    "Collateral",
+    "Tenant concentration",
+    "Rating"
+   ],
+   "rows": [
+    [
+     "CONE 2023-1",
+     "USD 701m",
+     "5 data centres — 3 Sterling VA, 2 San Antonio; 65.25 MW critical load; 70.3% investment grade",
+     "**One tenant = 41.7% of leased capacity, 45.3% of rent**",
+     "'A-' on A-2; 'BBB-' on Class B"
+    ],
+    [
+     "CONE 2023-2",
+     "USD 488m",
+     "6 data centres; 77.2% investment grade",
+     "**One tenant = 56.7% of rent; top five = 88.3%**",
+     "'A-'"
+    ],
+    [
+     "CONE 2024-2 / 2024-3",
+     "USD 1.175bn",
+     "11 operating data centres, Northern Virginia and San Antonio; Secured Green Collateral Bonds",
+     "Not disclosed in accessible coverage",
+     "'A-'"
+    ],
+    [
+     "CONE 2025-1",
+     "USD 575m",
+     "13 data centres — NoVa 61.7%, San Antonio, Houston; USD 4.4bn appraised; 8.0% cap rate; 1.6× DSCR; 8.6-yr WALT",
+     "**98 tenants, 83.5% investment grade**",
+     "'A-'"
+    ]
+   ]
+  },
+  {
+   "id": "sponsor-economics",
+   "title": "The sponsor's clock: hold periods, MOIC and the exit",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A sponsor does not buy a company to keep it. It buys with money raised from pension funds, insurers and sovereign wealth funds into a fund with a finite life, and it must eventually return that money with a profit. The pressure this creates is the single biggest behavioural difference from a listed company.",
+    "**{{Hold period}}** is the expected ownership span — typically four to seven years for buyout capital, longer for infrastructure funds, which is the category most data-centre money sits in. CyrusOne was bought in March 2022, so 2026 is year four.",
+    "Return is measured two ways and they can disagree. **{{MOIC}}** — multiple on invested capital — is simply money out divided by money in; 1.7× means you got USD 1.70 back for each dollar. **{{IRR}}** is the annualised rate, so it depends on *when* the money came back. A 1.7× over three years is an excellent IRR; the same 1.7× over ten years is mediocre. This is why sponsors care about timing, not just outcome.",
+    "There is one public look-through into CyrusOne's equity. **Pantheon Infrastructure**, a listed vehicle, invested alongside KKR and reports its CyrusOne stake at a **1.7× MOIC** on about GBP 21 million of NAV as of April 2026. A single limited partner's mark is not a valuation of the company — but it is the only quantified equity data point that exists.",
+    "**Three exits are available** and each says something different. A **trade sale** to another operator or sponsor is fastest. A **{{continuation vehicle}}** — the sponsor raising a new fund to buy the asset from its own older fund — keeps a good asset without forcing a sale. An **IPO** returns the company to public markets, usually in stages.",
+    "On 10 August 2026 Reuters reported that KKR and GIP are preparing an IPO **as early as 2027**, potentially raising about USD 5 billion, with Goldman Sachs and Morgan Stanley pitching for roles.",
+    "**Weigh that carefully, because it is a lesson in reading sourcing.** It is specific — named banks, a year, a size — which is more than speculation. But every named party declined to comment, no size or valuation has been decided even on the reporting's own terms, and the story is effectively single-source. It is credible reporting of a *preparation*, not a decision. The temptation to link it to the chief-executive change eleven days earlier, or to the outage eight months before, should be resisted: no source asserts any connection.",
+    "**If it happens, the disclosure itself is the event** — a listing would force publication of everything this guide has just taught you to reconstruct."
+   ]
+  },
+  {
+   "id": "outage-as-financing-event",
+   "title": "Why an outage is a financing event",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "On 28 November 2025 a cooling failure at CyrusOne's Aurora, Illinois campus took **CME Group's** global markets down for more than ten hours. Futures on equities, foreign exchange, gold, oil and interest rates stopped trading from Tokyo to London.",
+    "The cause was not exotic. CyrusOne's own account is that onsite staff and contractors **'failed to follow standard procedures for draining cooling towers ahead of freezing temperatures'**, which overloaded the cooling system; follow-up reporting cites outdated architecture, absent automated controls and inadequate temperature monitoring. CME's own remediation attempts 'further exacerbated the problem'. A procedural lapse in winterisation, not a design limit.",
+    "Now follow what happened next, because this is the part that matters for the money layer. Within a week, **Goldman Sachs paused a planned USD 1.3 billion bond sale** — what would have been CyrusOne's largest {{CMBS}} — secured on the three-data-centre Aurora campus. CME was about **14% of underwritten rent** on that very collateral and its second-largest customer.",
+    "Think about why the pause was rational. The bonds are repaid from that campus's rent. A large slice of that rent came from a tenant whose business had just been interrupted by the campus itself. Investors were being asked to price collateral whose largest risk had materialised days earlier.",
+    "The read-across in the reporting was broader and sharper than the deal: data-centre lease agreements **'are breakable, with termination clauses baked into many of them in the event of multiple recurring outages'**. Citigroup specifically flagged those termination clauses.",
+    "**That is the lesson.** A landlord's contracted revenue looks like the safest cash flow in infrastructure — long leases, investment-grade tenants, high {{DSCR}}. But the contracts are conditional on operations. A {{WALT}} of 8.6 years is 8.6 years only while the halls stay cold. Uptime is not an operational metric that sits beside the financial ones; it is an input to them.",
+    "The deal did return, at **USD 1.25 billion**. And the wider market moved too: AAA single-borrower data-centre CMBS spreads widened from 153 to 168 basis points over the year to July 2026, with two of three recent deals needing to reprice wider before clearing — CyrusOne named as one of the two."
+   ]
+  },
+  {
+   "id": "capital-ladder",
+   "title": "The disclosed ladder: what is public about CyrusOne's money",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "USD millions (facilities are commitments; securitisations are bonds issued; the capital figure is stated investment)",
+   "intro": "Every dollar figure CyrusOne has put on the public record, on one axis. Note what is absent: no revenue, no EBITDA, no backlog. A company can be this large and this legible on funding while remaining opaque on earnings.",
+   "items": [
+    {
+     "label": "Corporate facilities (Mar 2026)",
+     "sub": "Revolver ~USD 3.8bn + US term loan USD 4.2bn, sustainability-linked",
+     "v": 8000
+    },
+    {
+     "label": "Warehouse credit facility (2024)",
+     "sub": "Morgan Stanley, TD Securities, KKR Capital Markets",
+     "v": 7900
+    },
+    {
+     "label": "Texas capital deployed (Aug 2026)",
+     "sub": "Five active development sites; 5,000+ jobs",
+     "v": 5000
+    },
+    {
+     "label": "Take-private (Mar 2022)",
+     "sub": "KKR and GIP, including assumed debt",
+     "v": 15000
+    },
+    {
+     "label": "CONE 2026-ACD6 (priced)",
+     "sub": "Aurora campus, after the paused USD 1.3bn attempt",
+     "v": 1250
+    },
+    {
+     "label": "CONE 2026-DFW3 green bond",
+     "sub": "Single-asset single-borrower, near Dallas",
+     "v": 1050
+    },
+    {
+     "label": "CONE 2024-2 + 2024-3",
+     "sub": "11 assets; largest data-centre ABS since 2021",
+     "v": 1175
+    },
+    {
+     "label": "CONE 2023-1",
+     "sub": "5 data centres, 65.25 MW",
+     "v": 701
+    },
+    {
+     "label": "DFW1 SASB CMBS (2024)",
+     "sub": "First enterprise data-centre SASB since 2008",
+     "v": 687
+    },
+    {
+     "label": "CONE 2025-1",
+     "sub": "13 data centres, USD 4.4bn appraised",
+     "v": 575
+    },
+    {
+     "label": "CONE 2023-2",
+     "sub": "6 data centres",
+     "v": 488
+    },
+    {
+     "label": "ABX-1 Ashburn acquisition (Dec 2024)",
+     "sub": "60 MW bought from its own landlord, PowerHouse",
+     "v": 154
+    }
+   ]
+  },
+  {
+   "id": "co-location-bargain",
+   "title": "Powered land, and the curtailment bargain",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "CyrusOne's distinguishing operational choice is where it puts buildings. Three of its four largest announced campuses sit **on top of somebody else's electrical asset** rather than waiting in a utility interconnection queue.",
+    "At **Freestone County, Texas**, 380 MW is contracted with Calpine adjacent to the Freestone Energy Center, with an exclusive agreement for a further 380 MW in a second phase. At **Bosque County**, 400 MW sits beside the Thad Hill Energy Center. At **Fort Worth**, a 200 MW campus sits on Eolian's Chisholm Grid, a 100 MW battery that has been operating in ERCOT since 2021.",
+    "The product Calpine sells for this is called **{{powered land}}** — the plant, the grid connection and the site sold as one package. What the tenant is really buying is *time*. An interconnection queue can run for years; an existing connection does not.",
+    "That Fort Worth deal is worth pausing on because it inverts how you might expect a battery to be used. Eolian is not primarily selling stored energy — it is **monetising the interconnection its battery already holds**, and modernising the battery so the campus can use it. The grid connection, not the electrons, is the scarce asset.",
+    "**Every advantage here has a price, and it is written into Texas law.** Senate Bill 6, effective June 2025, applies to loads of 75 MW and above: a co-located large load must be able to **curtail fully within thirty minutes of an ERCOT emergency instruction, without compensation**, and new large loads must install remote-disconnect equipment. Every CyrusOne Texas flagship is both co-located and far above the threshold.",
+    "The parties have made a virtue of this. The Calpine Phase 2 release commits to 'coordinate our operations to ensure grid reliability in times of supply scarcity... curtailing in times of need', and CyrusOne's own Freestone community page tells residents plainly that the utility 'will respond when required by state law to have us curtail our load'.",
+    "**Hold both halves of the trade at once.** Co-location buys speed to power, which is the scarcest thing in this industry. It also converts the campus into a grid resource that can be switched off by an operator's instruction — and a tenant training a model has views about that. Whether the trade is good depends entirely on how often ERCOT calls."
+   ]
+  },
+  {
+   "id": "cyrusone-clock",
+   "title": "CyrusOne on one clock",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Years across the bottom. The upper lane is ownership and operations; the lower lane is the funding channel. Watch how tightly the two couple at the end of 2025.",
+   "unit": "calendar year",
+   "lanes": {
+    "own": "Ownership and operations",
+    "cap": "Funding"
+   },
+   "items": [
+    {
+     "x": 2022,
+     "lane": "own",
+     "label": "Taken private by KKR and GIP for ~USD 15bn",
+     "sub": "Nasdaq listing ends; deregistered April 2022"
+    },
+    {
+     "x": 2023,
+     "lane": "cap",
+     "label": "Securitisation programme launches",
+     "sub": "CONE 2023-1 (USD 701m) and 2023-2 (USD 488m)"
+    },
+    {
+     "x": 2023,
+     "lane": "own",
+     "label": "Intelliscale launched; KEPCO joint venture agreed",
+     "sub": "Up to 300 kW/rack; ¥1tn and 900 MW targeted in Japan"
+    },
+    {
+     "x": 2024,
+     "lane": "cap",
+     "label": "~USD 12bn raised in one year",
+     "sub": "USD 7.9bn warehouse, USD 1.8bn revolver, USD 1.175bn ABS, USD 687m DFW1 CMBS"
+    },
+    {
+     "x": 2024,
+     "lane": "own",
+     "label": "GIP becomes part of BlackRock (October)",
+     "sub": "Ownership description changes; owners do not"
+    },
+    {
+     "x": 2024,
+     "lane": "own",
+     "label": "Buys ABX-1 in Ashburn for USD 154.1m",
+     "sub": "The building it had already leased for thirty years"
+    },
+    {
+     "x": 2025,
+     "lane": "own",
+     "label": "Calpine powered-land deals: 190 MW then 400 MW at Thad Hill",
+     "sub": "Co-location with generation becomes the model"
+    },
+    {
+     "x": 2025,
+     "lane": "own",
+     "label": "28 November: Aurora cooling failure halts CME for 10+ hours",
+     "sub": "Cooling towers not drained before freezing weather"
+    },
+    {
+     "x": 2025,
+     "lane": "cap",
+     "label": "December: Goldman pauses the USD 1.3bn Aurora CMBS",
+     "sub": "CME was ~14% of underwritten rent on that collateral"
+    },
+    {
+     "x": 2026,
+     "lane": "cap",
+     "label": "Facilities upsized to ~USD 8.0bn; DFW3 and ACD6 price",
+     "sub": "ACD6 returns at USD 1.25bn; spreads wider market-wide"
+    },
+    {
+     "x": 2026,
+     "lane": "own",
+     "label": "February: 760 MW contracted at Freestone County",
+     "sub": "380 MW signed plus an exclusive 380 MW phase 2"
+    },
+    {
+     "x": 2026,
+     "lane": "own",
+     "label": "June: tax abatement rescinded in Freestone County",
+     "sub": "'We no longer have any say' — the county judge"
+    },
+    {
+     "x": 2026,
+     "lane": "own",
+     "label": "30 July: John Hatem becomes chief executive",
+     "sub": "Internal succession after fifteen years"
+    },
+    {
+     "x": 2026,
+     "lane": "cap",
+     "label": "10 August: Reuters reports IPO preparation for 2027",
+     "sub": "~USD 5bn; all parties declined to comment"
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The collateral-table technique has hard limits.** It covers only securitised buildings, only as at issuance, and never names a tenant — CME became known only because an outage forced it into the reporting. Thirteen buildings out of sixty-plus is not a company.",
+    "**Rankings of this company disagree by a factor of 4.5, and all of them are estimates.** USDataMap puts CyrusOne twelfth at 3,026 MW of tracked capacity; ABI Research puts it seventh in the US at 674 MW of *active IT load*; Site Selection Group puts it third and publishes no metric at all. These are not contradictory — they measure announced capacity, energised capacity and reputation respectively. Quote none of them without its definition attached.",
+    "**And CyrusOne appears in no AI-specific ranking.** The AI Data Center Index, the one index that ranks by AI-attributable load, does not list it — because that index ranks *facilities*, not operators. As with Digital Realty, the 'leading AI landlord' framing is **unmeasurable rather than wrong**.",
+    "**There is no current corporate credit rating.** None from Moody's, S&P, Fitch, KBRA or DBRS was resolvable. The 'BB-' and 'BB+' ratings that surface in search results are **pre-2022 and describe the listed company that no longer exists**. They will look plausible and current to a reader. They are neither.",
+    "**The company's own site contradicts itself.** Its colocation page claims infrastructure 'spans more than 350 data centers' against 'over 60' everywhere else including the June 2026 sustainability report. That is a site error, not a portfolio claim.",
+    "**Read the sustainability headline arithmetic before quoting it.** CyrusOne reports 77.8% of electricity as carbon-free — but **52.9 of those 78 percentage points are customer-procured**, not bought by CyrusOne. Its own procurement is about 24.8%. Both numbers are honestly disclosed in the same table; only one of them is usually quoted.",
+    "**And one cancellation was never announced as one.** The E.ON partnership's 61 MW of local generation at Frankfurt FRA7 — the route to 126 MW — was removed in May 2026, disclosed only as an update prepended to the original 2025 release. Any figure of 126 MW by 2029 is stale."
+   ]
+  },
+  {
+   "id": "where-the-businesses-slot-in",
+   "title": "Where CyrusOne's businesses slot into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "One row per business line, with the evidence a reader can actually obtain for each — which for a private company is the whole difficulty.",
+   "cols": [
+    "Business line",
+    "Layer",
+    "Who it deals with",
+    "What evidence exists"
+   ],
+   "rows": [
+    [
+     "Hyperscale build-to-suit",
+     "Wholesale landlord",
+     "Unnamed hyperscale tenants",
+     "Contracted megawatts via the *utility's* releases, not CyrusOne's; permit filings for building counts and square footage"
+    ],
+    [
+     "Intelliscale high-density",
+     "AI capacity",
+     "AI and HPC workloads",
+     "Published design specs only — up to 300 kW/rack. No named deployment, and Intelliscale3 announced 'imminent' in 2025 has still not shipped a spec"
+    ],
+    [
+     "Colocation and interconnection",
+     "Retail and wholesale",
+     "~1,000 customers including ~200 Fortune 1000",
+     "A company-stated customer count in a bond framework; 17 kW/cabinet standard density"
+    ],
+    [
+     "Powered-land co-location",
+     "Landlord plus grid resource",
+     "Calpine (Constellation), Eolian; ERCOT as counterparty of last resort",
+     "Counterparty press releases, and the curtailment obligations written into Texas SB 6"
+    ],
+    [
+     "Securitisation programme",
+     "Financing",
+     "Bond investors, rating agencies, KKR Capital Markets",
+     "**The richest disclosure the company produces** — appraised values, {{cap rate}}, {{DSCR}}, {{WALT}}, tenant credit and concentration"
+    ],
+    [
+     "Sponsor equity",
+     "Ownership",
+     "KKR and GIP (part of BlackRock)",
+     "One limited partner's 1.7× {{MOIC}} mark; otherwise nothing. A 2027 IPO would end the opacity"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Name three things a take-private changes and one thing it does not.",
+     "a": "Reporting stops; the owner becomes a small number of identifiable investors with a fund clock rather than an anonymous market; the capital structure gets more levered. What does not change is the building — the same halls, tenants, power constraints and cap-rate arithmetic."
+    },
+    {
+     "q": "How can you estimate what a private landlord's buildings are worth with no accounts?",
+     "a": "Read the securitisation presale. It discloses appraised value, weighted average cap rate, tenant count and credit quality, WALT and DSCR for the collateral pool — a partial balance sheet for the buildings in that deal."
+    },
+    {
+     "q": "CONE 2025-1: USD 4.4bn appraised, 8.0% cap rate, 98 tenants, 83.5% investment grade, 8.6-year WALT, 1.6× DSCR. What does the DSCR tell you?",
+     "a": "The collateral's net operating income is 1.6 times the debt service, so income could fall by more than a third before the bonds are at risk. It is the lender's safety margin."
+    },
+    {
+     "q": "Why is a longer WALT good for a lender but mixed for an owner?",
+     "a": "A lender wants the rent contracted for as long as possible. An owner in a rising market wants leases to expire so they can be repriced — a long WALT locks out mark-to-market upside."
+    },
+    {
+     "q": "Distinguish MOIC from IRR.",
+     "a": "MOIC is money out divided by money in, ignoring time — 1.7× is 1.7× whenever it arrives. IRR annualises it, so the same 1.7× is excellent over three years and mediocre over ten. This is why sponsors care about exit timing."
+    },
+    {
+     "q": "Why did an outage cause a bond sale to be paused?",
+     "a": "The bonds were secured on the Aurora campus, and CME — the tenant whose markets the outage halted — was about 14% of the underwritten rent on that same collateral. Investors were being asked to price collateral whose main risk had just materialised."
+    },
+    {
+     "q": "What does 'leases are breakable' mean for a landlord's credit?",
+     "a": "Many data-centre leases carry termination clauses triggered by multiple recurring outages. So contracted revenue is conditional on operations — a long WALT with investment-grade tenants is only as durable as uptime."
+    },
+    {
+     "q": "What is powered land and what is really being bought?",
+     "a": "A package of generation, grid connection and site sold together, as Calpine sells it to CyrusOne. What the buyer is really purchasing is time — an existing interconnection instead of years in a queue."
+    },
+    {
+     "q": "Under Texas SB 6, what does a co-located load above 75 MW have to accept?",
+     "a": "Full curtailment within thirty minutes of an ERCOT emergency instruction, without compensation, plus remote-disconnect equipment for new large loads. Speed to power is paid for with interruptibility."
+    },
+    {
+     "q": "CyrusOne reports 77.8% carbon-free electricity. Why is that not its own achievement?",
+     "a": "52.9 of those 77.8 percentage points are customer-procured. CyrusOne's own procurement is about 24.8% — 19.4% renewables plus 5.4% nuclear. Both figures sit in the same disclosed table."
+    },
+    {
+     "q": "Three published rankings put CyrusOne at 3,026 MW, 674 MW and third place. Why?",
+     "a": "They measure different things — announced/tracked capacity, energised active IT load, and an undisclosed reputational methodology. None is wrong; none is comparable with another."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A private landlord publishes no accounts. Which document most reliably reveals what its buildings are worth?",
+     "c": [
+      "Its sustainability report",
+      "A rating agency presale for its securitisation",
+      "Its careers page headcount",
+      "An aggregator's estimated revenue figure"
+     ],
+     "a": 1,
+     "why": "The presale must describe the collateral for bondholders: appraised value, cap rate, tenant credit, WALT and DSCR. The company's own accounts do not exist, and aggregator revenue estimates for private companies have unexplained provenance."
+    },
+    {
+     "q": "A collateral pool shows DSCR of 1.6× and WALT of 8.6 years. A bondholder should conclude:",
+     "c": [
+      "The bonds are risk-free",
+      "Income has 37% of headroom before debt service is threatened, and the rent is contracted for 8.6 years on average — subject to leases remaining enforceable",
+      "The company's leverage is 1.6×",
+      "The buildings are worth 8.6 times NOI"
+     ],
+     "a": 1,
+     "why": "DSCR is coverage on that pool, not company leverage, and WALT is contracted duration. The CME episode is the reason for the qualifier: lease terminations for recurring outages can shorten that duration."
+    },
+    {
+     "q": "Why did the CME outage widen CyrusOne's cost of debt rather than only damaging its reputation?",
+     "c": [
+      "Because the company was fined",
+      "Because the affected tenant was ~14% of the rent underwriting a bond then in the market, so the collateral's main risk had just materialised",
+      "Because cooling equipment is capitalised",
+      "Because the sponsors sold shares"
+     ],
+     "a": 1,
+     "why": "Goldman Sachs paused the USD 1.3bn deal secured on the Aurora campus; it returned later at USD 1.25bn, and market-wide AAA spreads widened from 153 to 168 basis points with CyrusOne named among the deals repriced."
+    },
+    {
+     "q": "A sponsor's fund is four years into ownership and reporting a 1.7× MOIC on its stake. What does that predict?",
+     "c": [
+      "The company will be sold within a month",
+      "Nothing on its own, but it places the asset inside the normal window in which sponsors begin preparing an exit",
+      "That the IRR is 17%",
+      "That the company is unprofitable"
+     ],
+     "a": 1,
+     "why": "MOIC ignores timing and one limited partner's mark is not a company valuation. Four years is simply inside the typical hold period, which is context for the reported 2027 IPO preparation rather than evidence for it."
+    },
+    {
+     "q": "CyrusOne's Texas campuses sit beside gas plants and a battery. The main thing being bought is:",
+     "c": [
+      "Cheaper electricity",
+      "An existing grid interconnection, and therefore time",
+      "Backup generation",
+      "Renewable energy certificates"
+     ],
+     "a": 1,
+     "why": "Powered land bundles plant, connection and site. In a market where interconnection queues run years, the connection is the scarce asset — which is also why Eolian's contribution at Fort Worth is its battery's existing connection rather than its stored energy."
+    },
+    {
+     "q": "An operator reports 77.8% carbon-free electricity, of which 52.9 points are customer-procured. The fair statement is:",
+     "c": [
+      "The operator procures 77.8% carbon-free power",
+      "The operator procures about 24.8%; the rest is bought by its tenants",
+      "The figure is fabricated",
+      "Customer-procured power should be excluded from any total"
+     ],
+     "a": 1,
+     "why": "Both figures are honestly disclosed in the same table. The headline is a true statement about electricity delivered to the sites; it is not a statement about what the operator itself buys, and only one of the two is usually quoted."
+    }
+   ]
+  }
+ ]
+}

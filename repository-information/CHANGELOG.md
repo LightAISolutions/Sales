@@ -3,11 +3,86 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.82r] — 2026-09-06 05:39:39 AM EST
+
+> **Prompt:** "> Picking up from my last session, run Phase C session C8 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Opus 5 xhigh as a fresh session: Digital Realty and CyrusOne. C7 landed at v04.81r; Phases A and B are complete
+> and the §6 register in CLASSROOM-CURRICULUM-PLAN.md is dated at v04.78r — nothing in Phase C is a register
+> closer, so do not touch §6.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest = C7, Previous = C6); PROFILER-COVERAGE-PLAN.md §2
+> (the model rule and its three evidence notes), §5 (the demotion warning, and the C5, C6 and C7 rows as three
+> worked examples of per-clause verdicts — C7 is the one to study, because its verdict was that a premise was
+> UNFALSIFIABLE rather than true or false), §7 (every bullet — especially "§5 — rewrite your own row", the
+> after-write checkers, the calendar bullet, the CHANGELOG-capacity bullet at 98/100, and the X3 peer-family
+> bullet as C5, C6 and C7 extended it), the two §8 rows (`digital-realty` and `cyrusone`, both `developer`, both
+> columns at `—`), and §9.5; .claude/rules/profiler-app.md (Profiler Command incl. steps 5 and 7, Profiler Prep
+> Command, Scheduled Refreshes, Archival Procedure); repository-information/PROFILER-SCHEMA.md (relationships[]
+> incl. `project` pins, sources[], Source provenance, named-projects registry);
+> repository-information/PROFILER-STYLES.md (active style: intel-briefing); PROFILER-CROSSREF-CALIBRATION.md →
+> "Relationships checker" incl. the F6, F7, F8, C5, C6 and C7 adjudication logs (the writer rules the builders
+> followed: every relationship `source` is the exact registered string in that dossier's sources[], asserted
+> before the file is emitted — rebuild that scratchpad validator and the JSON round-trip harness FIRST, as C6 and
+> C7 both did; C7 reports both taking about ten minutes and catching two provenance errors that would otherwise
+> have shipped).
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion
+> 1, category `developer` per the §8 rows) and study guide (schema v2) — then the four after-write scripts
+> (sync-profiler-registry.py, build-profiler-graph.py, check-profiler-study.py, check-profiler-relationships.py)
+> plus check-profiler-crossrefs.py, a calendar row per company, README tree entries, and flip both §8 rows. One
+> push commit. [Session-specific notes on the step-7 tail, the absent false-positive class, the refuted count
+> premise, stale KKR/GIP phrasing, two calendar row types, expected absence of investor edges, the two clauses
+> needing testing, the peer family, CHANGELOG headroom, named-project pins, JSON formatting and guide scope.]
+>
+> THE §5 ROW IS A HYPOTHESIS, NOT A BRIEF: the C8 `Why` cell ("The largest missing AIDC landlord (13 dossiers;
+> 2 GW Kansas City energy-service agreement); KKR/GIP-owned with a 760 MW Fairfield campus") is unverified prompt
+> material. [...] Treat every clause as a premise to check, and before you commit rewrite that cell plus the
+> `Checked` column with what the sources actually showed, including "premise held" where it did. Record the
+> per-clause verdicts in both §8 `Closes` cells too, as C5, C6 and C7 did.
+>
+> VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py 0 errors / 0 warnings,
+> check-profiler-relationships.py exit 0 with every finding either fixed or accepted with a reason,
+> check-profiler-crossrefs.py exit 0, both dossiers and both guides render (Playwright) with zero page errors.
+> Add a C8 entry to the calibration log's Relationships checker adjudication log in the C5/C6/C7 format. Report:
+> source count and first-party share per company, relationships written, any accepts, every §5 premise verdict,
+> the step-7 count reviewed versus changed versus deferred, and the ownership finding that decided each calendar
+> row type. Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch."
+
+### Added
+
+- **Digital Realty dossier** (`digital-realty.profile.json`, schema v7, profileVersion 1, `developer`) — the largest listed wholesale data-centre landlord: 310 data centres, ~3.1 GW of in-place IT capacity and ~8.5 GW buildable at 30 June 2026, FY2025 revenue USD 6,112.7m (+10.0%) and Core FFO USD 7.39 a share, a 1,402 MW development pipeline whose pre-leased share **fell from 64% to 54% while capacity underway rose 82%**, a 25.4% cash mark-to-market on renewals with the >1 MW book at +66.7%, and a USD 3.25bn hyperscale fund that answers the REIT retained-earnings constraint. **78 sources, 72% first-party; 12 relationships; 7 `policyExposure` entries.**
+- **CyrusOne dossier** (`cyrusone.profile.json`, schema v7, profileVersion 1, `developer`) — the sponsor-owned counterweight: KKR- and GIP-owned since March 2022 at ~USD 15bn, publishing **no revenue, EBITDA, backlog or bookings figure of any kind** and funded entirely through securitisation, with 60+ data centres, Intelliscale specified to 300 kW/rack, and three flagship Texas campuses co-located on Calpine plants and an Eolian battery. **69 sources, 38% first-party; 11 relationships; 8 `policyExposure` entries.**
+- **Two schema v2 study guides** written deliberately past the nine existing colocation guides, which already cover powered shell, PUE, build-to-suit, interconnection and ABS mechanics. The unclaimed gap was the **money layer**: `digital-realty.study.json` (16 sections) teaches the REIT bargain and the funding constraint inside it, why depreciation makes property earnings meaningless and the three replacements, **cap rate against yield on cost and the development spread**, mark-to-market on renewal, and growing without retained earnings; `cyrusone.study.json` (14 sections) teaches what a take-private changes, **reading a securitisation collateral table as a substitute income statement**, hold periods and MOIC against IRR, why an outage became a financing event, and the curtailment bargain behind powered land.
+- **Two full-depth lesson plans** under `repository-information/study-prep/`, five modules each with exercises and pacing.
+- **Eighteen shared concepts registered** (969 total) — REIT, AFFO, Core FFO, cap rate, NOI, yield on cost, development spread, replacement cost, net lease, same-store, UPREIT, take-private, hold period, continuation vehicle, promote income, constant currency, CMBS and cross connect. Two further proposals were dropped as **alias collisions caught before registration**.
+- **Two refresh-calendar rows of different types** (106 rows, 53 private): Digital Realty carries a researched `nextReport` of 2026-10-22 with `confirmed: false` and the reason it is unconfirmed; CyrusOne carries `cadence: "quarterly"` with the ownership finding that decides it written into `source`. Both carry a Chesterton-check watch item.
+
+### Changed
+
+- **§5 C8 row rewritten with per-clause verdicts** and both §8 ledger rows flipped. **One clause unfalsifiable, one failed, three held with correction.** *'The largest missing AIDC landlord'* is **unfalsifiable rather than false** — no published ranking measures the category, and the one AI-specific index found ranks facilities rather than operators and lists neither company. *'(13 dossiers)'* **failed — fifteen**. *'2 GW Kansas City energy-service agreement'*, *'KKR/GIP-owned'* and *'760 MW Fairfield campus'* each **held with correction**.
+- **§7's X3 peer-family bullet extended from a fifth viewpoint**, and the first that simplifies rather than complicates the question: Digital Realty and CyrusOne are the corpus's **first pure landlords** — `developer` and nothing else — so `Colocation & Cloud Capacity` lights 28 cards of which the merchant battery owners share no counterparty, revenue model or adjacency. That undercuts C5's market-map defence, which rested on ENGIE, AES and RWE genuinely selling power to landlords in the same family. `Profiler.html` and the family map untouched.
+- **§7's CHANGELOG-capacity bullet 98/100 → 99/100.** C8 did not rotate; **the next push commit crosses 100 and must**.
+- **Step 7 — fifteen dossiers revised and archived from a twenty-dossier union, the largest reconciliation tail in the program, completed without a deferral.** Three carried contradicted claims: `switch` grouped Digital Realty with Equinix as a "retail incumbent" when Digital Realty leads the **wholesale** segment at ~28% share; `tract` recorded the Teraco sale as "51% ... for about USD 3.5 billion" when the interest was **55%** and USD 3.5bn was the **valuation**, not the consideration; `aligned` wrote "Ascenty (Digital Realty)" when the FY2025 10-K lists Ascenty among **unconsolidated entities at 49%**. Twelve more were accurate and gained curated edges: `constellation-energy`, `eolian`, `powerhouse-data-centers`, `rosendin`, `dpr` (two), `mitsubishi-electric`, `schneider-electric`, `equinix`, `compass-datacenters`, `qts`, `nebius`, `stack-infrastructure`. Five were classified as needing no change, including `mccarthy`'s **stated absence**, re-tested and still accurate.
+- **A C8 entry added to the relationships-checker adjudication log** in the C5/C6/C7 format, recording a **URL-fabrication near-miss** the pre-emit validator caught (three relationship sources were URLs constructed from plausible site structure rather than copied — a different defect class from X2's clipped prefixes), the `DLR Group` false positive the brief did not anticipate, and the finding that the brief's own refutation of the Fairfield clause was wrong because the corroboration was filed under the **plant name** rather than the town name.
+
+### Fixed
+
+- **`switch` v6 → v7, `tract` v1 → v2, `aligned` v5 → v6** — three contradicted claims corrected, outgoing versions archived.
+- Twelve further dossiers archived and version-bumped for the curated edges they gained.
+
+### Notes
+
+- **`Profiler.html` was not changed** — a data-only change; the Profiler page is an indirect affect and no page or GAS version was bumped.
+- **No named-project pins registered.** Astra Enterprise Park and the Freestone County campus are each referenced by a single dossier, and `profiler-projects.json` is an index of pins in use rather than a research surface. `Scraper.gs` untouched.
+- **No `investor` edges written**, which is the F7 shape rather than an oversight: KKR, GIP, BlackRock, Blackstone and Brookfield are all uncovered slugs, so neither company's owners can be linked. The `investor` ↔ `portfolio` enum gap gained no seventh instance. **C10 will change this.**
+- **No executive photographs added**, stated rather than left silent: Digital Realty publishes eleven headshots and CyrusOne eight, both deferred in favour of completing the twenty-dossier step-7 tail.
+- **A README drift flagged and not fixed:** the tree lists archived snapshots individually and is **32 files behind** (313 entries against 345 on disk), with C5, C6 and C7's archives all missing. C8 added eighteen more and followed the precedent; the developer should decide whether the tree is regenerated mechanically or archive snapshots are excluded by rule.
 
 ## [v04.81r] — 2026-09-06 03:38:37 AM EST
 

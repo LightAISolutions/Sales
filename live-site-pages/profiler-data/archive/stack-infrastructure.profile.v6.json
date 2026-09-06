@@ -294,14 +294,6 @@
    "context": "QTS competes in the same private-capital wholesale class; STACK's counter is named-tenant program scale (Amazon Louisiana, Stargate Jupiter) and one of the sector's longest-running securitization programs (ten series since 2019), while carrying no public-REIT overhead and pricing delivery credibility, not interconnection ecosystems.",
    "source": "Dossier competitive assessment — wholesale platforms",
    "status": "active"
-  },
-  {
-   "slug": "digital-realty",
-   "type": "competitor",
-   "note": "The listed-REIT comparison this dossier draws — STACK prices delivery credibility without public-REIT overhead.",
-   "context": "This dossier positions STACK against Equinix and Digital Realty on the ground that it carries no public-REIT overhead and prices delivery credibility rather than interconnection ecosystems. The characterisation holds and is concrete on Digital Realty's side: REIT status requires distributing at least 90% of taxable income, so it cannot fund a USD 4.25-4.75bn 2026 development programme from retained earnings and instead issues equity and debt and raises third-party funds — including a USD 3.25bn US hyperscale fund closed in March 2026 in which it holds 20% and the management mandate.\n\nThe two compete for the same gigawatt-class named-tenant campuses, with Digital Realty at 310 data centres and approximately 3.1 GW of in-place IT capacity against STACK's platform scale.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
-   "status": "active"
   }
  ],
  "technicalSpecs": [
@@ -773,13 +765,8 @@
   {
    "label": "STACK — solutions overview (campus development, single-tenant, multi-tenant; cloud vs AI/ML density)",
    "url": "https://www.stackinfra.com/solutions/"
-  },
-  {
-   "label": "SEC — Digital Realty Trust FY2025 Form 10-K (REIT structure, competitor disclosure, development pipeline)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
-   "date": "2026-02-13"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

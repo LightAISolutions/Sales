@@ -189,14 +189,6 @@
    "note": "Rosendin was the EPC on Clearway's Honeycomb battery portfolio in Utah.",
    "context": "Clearway Energy Group's March 2025 financing release names Rosendin as EPC on the four-project, 320 MW / 1,280 MWh Honeycomb Portfolio in Beaver and Iron Counties, financed at $605m and contracted to PacifiCorp on 20-year tolling agreements to 2046. The portfolio reached substantial completion on 1 May 2026, having already been dropped down to the listed Clearway Energy, Inc. in October 2025 — so the construction relationship was with the private sponsor while the asset now sits with the listed company. It is one of the larger single battery portfolios in Rosendin's roughly 10 GWh of installed BESS EPC.",
    "source": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/"
-  },
-  {
-   "slug": "cyrusone",
-   "type": "customer",
-   "note": "Project Goliath in Sterling, Virginia — 20 MW of electrical infrastructure in 26 weeks, a company-claimed speed record; Rosendin was also electrical subcontractor on CyrusOne's Project Kincora.",
-   "context": "Rosendin records Project Goliath, a CyrusOne facility in Sterling, Virginia, as a construction speed record: 20 diesel generators, 40 uninterruptible power supplies and 120 distribution devices — 20 MW of electrical infrastructure — installed in 26 weeks.\n\nThe relationship extends beyond that project: industry coverage records Rosendin as the electrical subcontractor on CyrusOne's Project Kincora, also in Sterling, which took an ENR Award of Merit. Both attributions come from the builder's side; CyrusOne itself names no contractor on any project anywhere in its public record.",
-   "source": "https://www.enr.com/articles/45505-award-of-merit-manufacturing-cyrusone-project-kincora-data-center",
-   "status": "historical"
   }
  ],
  "technicalSpecs": [
@@ -426,13 +418,8 @@
    "label": "Clearway Energy Group — $605m financing closes and construction begins on the 320 MW / 1,280 MWh Honeycomb storage portfolio in Utah (Rosendin as EPC)",
    "url": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/",
    "date": "2025-03-11"
-  },
-  {
-   "label": "ENR — Award of Merit: CyrusOne Project Kincora data center, Sterling VA (Rosendin electrical)",
-   "url": "https://www.enr.com/articles/45505-award-of-merit-manufacturing-cyrusone-project-kincora-data-center",
-   "date": "2018-10-16"
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "profileVersion": 6
 }

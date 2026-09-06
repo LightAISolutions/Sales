@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-06",
- "companies": 143,
+ "companies": 145,
  "edges": [
   {
    "a": "abb",
@@ -2060,6 +2060,59 @@
   },
   {
    "a": "aligned",
+   "b": "cyrusone",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named in the same private wholesale cohort in Aligned's own positioning.",
+     "context": "Aligned Data Centers' dossier places itself 'in the private wholesale cohort against Vantage, QTS (Blackstone), STACK, Switch, and CyrusOne', differentiating on adaptive density and waterless cooling rather than land-bank scale.\n\nThe two are also joined by ownership adjacency rather than commerce: BlackRock's Global Infrastructure Partners, one of CyrusOne's two owners, was part of the consortium that acquired Aligned at an approximately USD 40bn enterprise value in July 2026.",
+     "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Build-to-Scale hyperscale campuses (the wholesale core)",
+     "date": "",
+     "text": "Sits in the private wholesale cohort against Vantage, QTS (Blackstone), STACK, Switch, and CyrusOne; differentiates on adaptive density (air-to-liquid transition inside a live hall, 'slab to megawatts') and waterless cooling rather than on land-bank scale alone.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aligned",
+   "b": "digital-realty",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Competes in Latin American hyperscale through Ascenty, Digital Realty's 49%-held joint venture; Aligned's chief executive is a former Digital Realty executive.",
+     "context": "Aligned's Latin American business, built on the ODATA acquisition, competes against Ascenty, Scala Data Centers and Equinix. Ascenty is commonly described as Digital Realty's Brazilian arm, but the FY2025 10-K lists it among unconsolidated entities at a 49% ownership interest — a minority joint-venture stake rather than a subsidiary, and the 10-K notes that percentage itself includes an approximate 2% interest held by one of Digital Realty's non-controlling interest holders.\n\nThe two also share a lineage: Aligned's chief executive Andrew Schaap spent eleven years at Digital Realty, rising to senior vice president for global large-scale client-driven builds.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Dallas-based build-to-scale operator-landlord, founded 2013 as Aligned Energy; CEO Andrew Schaap (ex-Digital Realty) since 2017, retained post-close along with the Dallas HQ.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ODATA — the Latin America platform",
+     "date": "",
+     "text": "Positions Aligned against Ascenty (a Digital Realty joint venture, 49%-held and unconsolidated per Digital Realty's FY2025 10-K, not a wholly owned arm), Scala Data Centers, and Equinix in LatAm hyperscale; solving Querétaro's power scarcity with self-built substation capacity is the regional moat claim.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aligned",
    "b": "equinix",
    "curated": {
     "a": {
@@ -2078,7 +2131,7 @@
     {
      "where": "Capabilities · ODATA — the Latin America platform",
      "date": "",
-     "text": "Positions Aligned against Ascenty (Digital Realty), Scala Data Centers, and Equinix in LatAm hyperscale; solving Querétaro's power scarcity with self-built substation capacity is the regional moat claim.",
+     "text": "Positions Aligned against Ascenty (a Digital Realty joint venture, 49%-held and unconsolidated per Digital Realty's FY2025 10-K, not a wholly owned arm), Scala Data Centers, and Equinix in LatAm hyperscale; solving Querétaro's power scarcity with self-built substation capacity is the regional moat claim.",
      "src": "",
      "from": "a"
     }
@@ -11080,6 +11133,89 @@
   },
   {
    "a": "compass-datacenters",
+   "b": "cyrusone",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Both are Dallas-based single-tenant hyperscale campus developers listed in the same independent buyer's guide.",
+     "context": "Compass Datacenters and CyrusOne are both headquartered in Dallas and both build single-tenant hyperscale campuses funded through serial asset-backed securitisation. An independent 2026 buyer's guide cited in the Compass dossier lists both as dedicated hyperscale campus developers alongside QTS, Vantage, STACK, Aligned, DataBank, NTT, Equinix xScale, Digital Realty and Tract.\n\nThe sponsor overlap is again worth noting: KKR, one of CyrusOne's two owners, became an asset-level partner in Compass in December 2025.",
+     "source": "https://www.insurancejournal.com/news/midwest/2025/12/19/851780.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Hyperscale single-tenant build-to-suit campuses (the core product)",
+     "date": "",
+     "text": "An independent 2026 buyer's guide lists it as a 'Dedicated hyperscale campus developer' alongside QTS, Vantage, CyrusOne, STACK, Aligned, DataBank, NTT, Equinix xScale, Digital Realty and Tract, and advises buyers to 'Confirm whether the project will be customer-owned, leased, or operated by Compass'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "digital-realty",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-founder of the Infrastructure for America 501(c)(4), launched 2 September 2026 with Compass, QTS and Vantage.",
+     "context": "Digital Realty is one of the four co-founders of Infrastructure for America, the 501(c)(4) launched on 2 September 2026 to set host-community standards for data-centre developers, alongside Compass, QTS and Vantage. The four compete directly for hyperscale leases; the coalition is a single-issue alliance formed after consent fights cost the industry specific projects, including the Prince William Digital Gateway.\n\nThe two are otherwise opposites in capital structure, and this dossier's founder makes the distinction himself — Chris Crosby, a former Digital Realty senior vice president, on the difference between 'building to last and building to exit'. Compass is co-controlled by Brookfield Infrastructure and Ontario Teachers' and publishes no accounts; Digital Realty is a listed REIT that publishes quarterly.",
+     "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "status": "active",
+     "since": "2026-09"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Co-founder of the Infrastructure for America 501(c)(4), launched 2 September 2026; Compass was founded by a former Digital Realty executive.",
+     "context": "Compass Datacenters and Digital Realty co-founded Infrastructure for America with QTS and Vantage on 2 September 2026. Compass's dossier records the launch and quotes founder Chris Crosby — himself a former Digital Realty senior vice president — on the distinction between 'building to last and building to exit'.\n\nThe two sit at opposite ends of the ownership spectrum in this corpus: Compass is co-controlled by Brookfield Infrastructure and Ontario Teachers' with KKR at asset level and publishes no accounts, while Digital Realty publishes quarterly. An independent 2026 buyer's guide lists both, with QTS, Vantage, CyrusOne, STACK, Aligned, DataBank, NTT, Equinix xScale and Tract, as dedicated hyperscale campus developers.",
+     "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "status": "active",
+     "since": "2026-09"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Founded in 2011 by Chris Crosby (ex-Digital Realty); first 1.2 MW data center in 2012; 195 employees at the end of 2025 per the 2026 Outcomes Report.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it is the counterparty on Mississippi Power's PSC-approved special contract for the ~500 MW Meridian campus (the Southern Company dossier's Mississippi large-load), a buyer of Schneider Electric power centres and Vertiv cooling, and — after the April 2026 withdrawal from the Prince William Digital Gateway it co-developed with QTS — a co-founder with QTS, Vantage and Digital Realty of the Infrastructure for America coalition (September 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Prince William Digital Gateway (2,000 acres, with QTS) died in court in April 2026; the second Red Oak campus passed 4–1 at midnight with Somervell and Ellis counties passing anti-data-center resolutions and the county abatement withdrawn; Compass answered with USD 27.6 million of local donations, public endorsement of Governor Abbott's standards, and the Infrastructure for America coalition with QTS, Vantage and Digital Realty.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Hyperscale single-tenant build-to-suit campuses (the core product)",
+     "date": "",
+     "text": "An independent 2026 buyer's guide lists it as a 'Dedicated hyperscale campus developer' alongside QTS, Vantage, CyrusOne, STACK, Aligned, DataBank, NTT, Equinix xScale, Digital Realty and Tract, and advises buyers to 'Confirm whether the project will be customer-owned, leased, or operated by Compass'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-02",
+     "text": "Infrastructure for America launches — a 501(c)(4) co-founded by Compass, Digital Realty, QTS and Vantage; Crosby: 'There's a difference between building to last and building to exit' — Compass is organising the landlord tier's answer to moratoria: a shared standard that host communities can hold every developer to, positioned against 'build to exit' rivals.",
+     "src": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-02"
+  },
+  {
+   "a": "compass-datacenters",
    "b": "equinix",
    "evid": [
     {
@@ -11382,6 +11518,54 @@
     }
    ],
    "last": "2026-07-31"
+  },
+  {
+   "a": "constellation-energy",
+   "b": "cyrusone",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Calpine contracted 380 MW at the Freestone Energy Center with an exclusive further 380 MW, on top of 400 MW at Thad Hill — 'over 1100 MW under contract' in Texas.",
+     "context": "Calpine, a Constellation business unit, is the counterparty on both of CyrusOne's largest Texas campuses. The 9 February 2026 release signed 380 MW to serve a new data centre adjacent to the Freestone Energy Center in Freestone County and added an exclusive agreement for a Phase 2 of a further 380 MW; its subheadline puts the running total at 'over 1100 MW under contract for CyrusOne data centers in Texas', which includes the 400 MW previously agreed at the Thad Hill Energy Center in Bosque County (190 MW in July 2025 plus 210 MW in November 2025).\n\nThe product is Calpine's Powered Land Capabilities — plant, interconnection and site sold together — and the arrangement is explicitly two-way: the parties will 'coordinate our operations to ensure grid reliability in times of supply scarcity... curtailing in times of need'. Texas Senate Bill 6 now requires that of any co-located load at or above 75 MW in any case.",
+     "source": "https://www.constellationenergy.com/news/2026/02/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas.html",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "over 1,100 MW under contract in Texas"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Calpine, a Constellation business unit, contracted 380 MW at the Freestone Energy Center with an exclusive further 380 MW in Phase 2, on top of 400 MW at the Thad Hill Energy Center.",
+     "context": "Constellation's Calpine unit is CyrusOne's largest disclosed power counterparty. On 9 February 2026 Calpine signed a 380 MW agreement to connect and serve a new data centre adjacent to the Freestone Energy Center in Freestone County, Texas, and entered an exclusive agreement to provide power, grid connectivity and site infrastructure for a Phase 2 of a further 380 MW. The release's own subheadline puts the running total at 'over 1100 MW under contract for CyrusOne data centers in Texas', which sums Freestone's two tranches with the 400 MW previously agreed at the Thad Hill Energy Center in Bosque County.\n\nThe product being bought is Calpine's 'Powered Land Capabilities' — the plant, the interconnection and the site sold together — and the November 2025 Phase 2 release is explicit that the arrangement runs both ways: the parties will 'coordinate our operations to ensure grid reliability in times of supply scarcity... curtailing in times of need'. That is now also a statutory obligation under Texas Senate Bill 6.",
+     "source": "https://www.constellationenergy.com/news/2026/02/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas.html",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "over 1,100 MW under contract in Texas"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The PPA book now includes Meta (1,121 MW Clinton, from 2027), Walmart's first nuclear PPA (176 MW Dresden), 920 MW of additional long-term deals signed in Q2 2026 alone, and CyrusOne gas-adjacent arrangements at two Calpine sites in Texas.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Calpine gas & geothermal fleet (data-center site power)",
+     "date": "",
+     "text": "Data-center productization is already visible: CyrusOne agreements for 380 MW (plus an exclusive 380 MW phase 2) adjacent to the Freestone Energy Center and ~400 MW at Thad Hill — power, grid connectivity, and site infrastructure sold together.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-09",
+     "text": "CyrusOne agreement: 380 MW plus an exclusive 380 MW phase 2 adjacent to Calpine's Freestone Energy Center, on top of ~400 MW at Thad Hill — The Calpine data-center product in action — gas-adjacent power, interconnection, and site infrastructure sold as one package in ERCOT.",
+     "src": "https://www.constellationenergy.com/news/2026/02/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-09"
   },
   {
    "a": "constellation-energy",
@@ -14271,6 +14455,373 @@
    "last": ""
   },
   {
+   "a": "cyrusone",
+   "b": "digital-realty",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The listed-versus-private comparison in this corpus — the same wholesale and hyperscale leases, contested from opposite capital structures.",
+     "context": "CyrusOne and Digital Realty compete for the same wholesale and hyperscale tenants in Northern Virginia, Dallas, Phoenix, Chicago and across the European FLAP-D markets, and independent buyer's guides list them in the same set of dedicated hyperscale campus developers.\n\nThe contrast is the capital structure rather than the product. Digital Realty publishes quarterly results, a twenty-largest-customer table and a development pipeline with pre-leasing percentages; CyrusOne publishes none of that and funds itself in the asset-backed market. Independent rankings place them close and disagree on the order: USDataMap's tracked-capacity table has CyrusOne at 3,026 MW against Digital Realty's 2,878 MW, while ABI Research's active-IT-load measure has Digital Realty at 686 MW against CyrusOne's 674 MW — a reminder that the two measures answer different questions.",
+     "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Both are wholesale and hyperscale data-centre landlords; the contrast between them is listed-REIT against sponsor-owned capital structure.",
+     "context": "CyrusOne and Digital Realty compete for the same wholesale and hyperscale leases in Northern Virginia, Dallas, Phoenix, Chicago, Frankfurt, London, Amsterdam, Paris, Madrid and Dublin, and independent buyer's guides list them in the same set of dedicated hyperscale campus developers.\n\nThey are the cleanest listed-versus-private comparison available in this corpus. Digital Realty publishes quarterly results, a top-twenty tenant table and a development pipeline; CyrusOne, taken private by KKR and Global Infrastructure Partners in March 2022, publishes no revenue, EBITDA or backlog and reaches the capital markets through asset-backed securitisations whose collateral tables are the only public window on its tenancy. Independent rankings place them close together and disagree about the order: USDataMap's tracked-capacity table puts CyrusOne at 3,026 MW against Digital Realty's 2,878 MW, while ABI Research's active-IT-load measure puts Digital Realty at 686 MW against CyrusOne's 674 MW.",
+     "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The private counterweight to Digital Realty in this corpus, and the landlord that has taken the co-location-with-generation model furthest.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Where Digital Realty buys utility power under an energy service agreement, CyrusOne's two largest Texas campuses sit physically beside Calpine gas plants under 'powered land' agreements that bundle power, grid connectivity and site infrastructure — 760 MW contracted at the Freestone Energy Center and 400 MW at the Thad Hill Energy Center — and a third, DFW7 in Fort Worth, sits on top of Eolian's Chisholm Grid battery.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Digital Realty sits on the landlord side of this corpus alongside Equinix, QTS, Vantage, Aligned, STACK, Compass, EdgeCore and CyrusOne, and is the one whose economics are fully public: a REIT that must distribute most of its taxable income and therefore funds a USD 4.25-4.75bn annual development programme from equity issuance, unsecured notes and — increasingly — third-party capital it manages for a fee.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Colocation — data centre services, suites and High-Density Colocation",
+     "date": "",
+     "text": "The company publishes no competitor-relative positioning of any kind — no first-party page names Equinix, NTT, CyrusOne, Vantage, QTS or any other operator and argues against it.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "dpr",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "DPR Construction lists CyrusOne on its published colocation and wholesale client roster and names itself general contractor on CyrusOne's Project Kincora in Sterling, Virginia.",
+     "context": "DPR Construction's advanced-technology market page carries a named colocation and wholesale client roster including CyrusOne alongside CoreSite, DataBank, Digital Realty, Equinix, Flexential, Global Switch, NTT, QTS, Stream and Vantage. DPR's own project pages separately name it as general contractor on CyrusOne Project Kincora in Sterling, Virginia.\n\nDPR was also the general contractor on PowerHouse's ABX-1, the Ashburn building CyrusOne leased and then bought — so the two companies meet on both sides of that transaction.",
+     "source": "https://www.dpr.com/company/advanced-technology",
+     "status": "active"
+    },
+    "b": {
+     "type": "customer",
+     "note": "CyrusOne appears on DPR's published colocation and wholesale client roster; DPR is named general contractor on CyrusOne's Project Kincora in Sterling, Virginia.",
+     "context": "CyrusOne sits on DPR's named colocation and wholesale client roster alongside CoreSite, DataBank, Digital Realty, Equinix, Flexential, Global Switch, NTT, QTS, Stream and Vantage, and DPR's project pages name it general contractor on CyrusOne Project Kincora in Sterling, Virginia.\n\nThe two companies also meet on both sides of one transaction: DPR was general contractor on PowerHouse's ABX-1 in Ashburn, the building CyrusOne leased for thirty years in 2023 and then bought outright in December 2024.",
+     "source": "https://www.dpr.com/company/advanced-technology",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "eolian",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "DFW7, a 200 MW Fort Worth campus, is co-located on Eolian's Chisholm Grid battery, whose existing interconnection is the asset being monetised.",
+     "context": "Announced 13 January 2026, the DFW7 partnership places a 200 MW CyrusOne campus at Chisholm Grid, a 100 MW battery that has operated in ERCOT since 2021 about seven miles north-west of downtown Fort Worth. Eolian modernises and upgrades the battery and the existing high-voltage interconnection carries the campus's initial phases from 2026 — speed to power bought by reusing a connection that already exists rather than joining a queue.\n\nEolian's own dossier treats this as the marquee example of its 'energy-plus-load' model and lists campus partnerships with CyrusOne as a route to market. There is a sponsor adjacency worth stating: Eolian is itself owned by Global Infrastructure Partners, which is also one of CyrusOne's two owners.",
+     "source": "https://www.prnewswire.com/news-releases/cyrusone-and-eolian-partner-to-enable-rapid-deployment-of-200-megawatt-data-center-campus-in-fort-worth-texas-302658969.html",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "200 MW campus",
+     "via": "Chisholm Grid BESS"
+    },
+    "b": {
+     "type": "partner",
+     "note": "The DFW7 energy-plus-load partnership — a 200 MW CyrusOne campus co-located at Chisholm Grid, monetising the battery's existing interconnection.",
+     "context": "Announced 13 January 2026, the partnership places a 200 MW CyrusOne data-centre campus at Chisholm Grid, Eolian's 100 MW battery operating in ERCOT since 2021 about seven miles north-west of downtown Fort Worth. Eolian modernises and upgrades the system and the existing high-voltage interconnection carries the campus's initial phases from 2026.\n\nThis is the marquee example of the energy-plus-load model this dossier describes: what is being sold is the interconnection rather than the stored energy, because a grid connection that already exists is worth more to a data-centre developer than years in a queue. CyrusOne's own dossier records a sponsor adjacency worth noting — Eolian and CyrusOne share an owner in Global Infrastructure Partners.",
+     "source": "https://www.prnewswire.com/news-releases/cyrusone-and-eolian-partner-to-enable-rapid-deployment-of-200-megawatt-data-center-campus-in-fort-worth-texas-302658969.html",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "200 MW campus",
+     "via": "Chisholm Grid BESS"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Where Digital Realty buys utility power under an energy service agreement, CyrusOne's two largest Texas campuses sit physically beside Calpine gas plants under 'powered land' agreements that bundle power, grid connectivity and site infrastructure — 760 MW contracted at the Freestone Energy Center and 400 MW at the Thad Hill Energy Center — and a third, DFW7 in Fort Worth, sits on top of Eolian's Chisholm Grid battery.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: three of its four largest announced campuses sit on someone else's electrical asset — 760 MW contracted beside Calpine's Freestone Energy Center, 400 MW beside the Thad Hill Energy Center, and 200 MW on top of Eolian's Chisholm Grid battery — and the Calpine releases describe power, grid connectivity and site infrastructure sold as one package.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-13",
+     "text": "Partners with Eolian on a 200 MW Fort Worth campus (DFW7) co-located at Chisholm Grid, a 100 MW battery operating in ERCOT since 2021, which Eolian will modernise and upgrade — The purest expression of the energy-plus-load thesis: an existing battery's interconnection is the asset being monetised, and speed to power is the product. Eolian is itself GIP-owned, so this is a sponsor-adjacent transaction.",
+     "src": "https://www.prnewswire.com/news-releases/cyrusone-and-eolian-partner-to-enable-rapid-deployment-of-200-megawatt-data-center-campus-in-fort-worth-texas-302658969.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-04",
+     "text": "Breaks ground on the DFW7 Fort Worth campus, its first in the city, with initial IT capacity of around 70 MW; total Texas capital investment stated at more than USD 2.4 billion — The site that the Eolian battery co-location would later scale to a headline 200 MW.",
+     "src": "https://www.cyrusone.com/resources/press-releases/cyrusone-breaks-ground-on-new-fort-worth-data-center-campus",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The thesis part: the CyrusOne DFW7 deal (Jan 2026) monetizes Chisholm's existing interconnection to fast-track a 200 MW Fort Worth data-center campus, and Flint Grid — 200 MW/1.06 GWh, PJM's largest battery, under construction since Jul 2026 in the AWS/Meta/Google/Intel corridor near Columbus — cleared the PJM 2027/28 capacity auction at the price cap.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Eolian as the ideological anchor of the domestic-storage coalition and the pioneer of turning batteries into data-center on-ramps: 'energy-plus-load' converts a BESS interconnection into speed-to-power for a hyperscale campus (CyrusOne DFW7 is the first marquee ERCOT example), and Flint demonstrates the buildable version — a 5.3-hour, GWh-class battery sited where AI load is exploding and sold through capacity markets with hyperscaler offtakes anticipated.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess the energy-plus-load model as the most important strategic idea in the batch for Hithium's market thesis: Eolian is proving that BESS interconnections are data-center currency (CyrusOne DFW7) and that GWh-class long-duration batteries get funded by capacity scarcity in AI corridors (Flint at the PJM price cap).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Owned/operating BESS fleet (ERCOT + PJM + delivered OR)",
+     "date": "",
+     "text": "Madero & Ignacio Grid (Mission, TX — 200 MW/>500 MWh combined ~2.5-hr, COD Mar 2023; world's largest fully-merchant BESS at COD; Wärtsilä GridSolv Quantum + GEMS with a Service+ GAP agreement; dispatch via Eolian's own software); Chisholm Grid (Fort Worth — 100 MW/125 MWh, COD 2021, Sungrow NMC, Mortenson EPC; now being modernized and repurposed to enable the CyrusOne DFW7 campus); Padua Grid Storage Complex (Bexar Co.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy-plus-load (interconnection monetization)",
+     "date": "",
+     "text": "The CyrusOne DFW7 partnership (announced Jan 13, 2026): a 200 MW data-center campus co-located at Chisholm Grid — Eolian monetizes the existing high-voltage interconnection/substation ('speed to power'), modernizes the BESS, and the battery supplies initial campus phases with capacity delivery from 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-13",
+     "text": "CyrusOne-Eolian partnership: 200 MW Fort Worth data-center campus (DFW7) co-located at Chisholm Grid; Eolian monetizes the interconnection, modernizes the BESS; capacity delivery from 2026 — The first marquee BESS-to-data-center conversion in ERCOT — and a template Eolian says it is replicating at multiple unannounced sites.",
+     "src": "PRN",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-13"
+  },
+  {
+   "a": "cyrusone",
+   "b": "equinix",
+   "evid": [
+    {
+     "where": "Capabilities · Colocation and interconnection",
+     "date": "",
+     "text": "Reporters place CyrusOne beside Aligned, Equinix and PowerHouse in Chicago, beside Equinix, Prime and Data4 in Madrid, and inside the private wholesale cohort with Vantage, QTS, STACK and Switch.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "mitsubishi-electric",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "CyrusOne appears on Mitsubishi Electric's published uninterruptible power supply customer roster.",
+     "context": "The Mitsubishi Electric dossier records CyrusOne among the colocation operators on its published UPS customer roster, alongside Sabey, CoreSite, Flexential, TierPoint, Cologix, Serverfarm, Element Critical, Evocative and QTS.\n\nThe attribution carries the caveat that dossier itself states: no capacity, site or date is published for any roster entry, and Mitsubishi Electric publishes no named data-centre deployment anywhere. The roster is evidence of installed base, not of scale, and CyrusOne has never named a UPS vendor.",
+     "source": "https://mitsubishicritical.com/our-customers/",
+     "status": "active"
+    },
+    "b": {
+     "type": "customer",
+     "note": "CyrusOne is one of the colocation operators on the published UPS customer roster.",
+     "context": "CyrusOne appears among the colocation operators on Mitsubishi Electric Power Products' published customer roster, alongside Sabey, CoreSite, Flexential, TierPoint, Cologix, Serverfarm, Element Critical, Evocative and QTS.\n\nThe caveat this dossier states about every roster entry applies here in full: no capacity, site or date is published, and the company publishes no named data-centre deployment anywhere. The roster is evidence of installed base, not of scale. CyrusOne, for its part, has never named a UPS vendor in any first-party source.",
+     "source": "https://mitsubishicritical.com/our-customers/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gap — no named data-center UPS deployment exists anywhere in the public record.** The company publishes a customer roster naming NVIDIA, Tesla, Oracle, QTS, Sabey, CoreSite, CyrusOne, Flexential and several hundred others, and publishes case studies for Element Critical, Sabey, UScellular and Grupo Salinas.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "CyrusOne leased PowerHouse's ABX-1 in Ashburn for thirty years in May 2023, then bought the building outright for USD 154.1 million in December 2024.",
+     "context": "ABX-1 is a 265,000 square foot, 60 MW powered shell in Ashburn, Virginia, developed by PowerHouse Data Centers in a joint venture with Harrison Street on a site carrying a 300 MW Dominion substation. CyrusOne signed a thirty-year lease for the entire building in May 2023, brokered by Avison Young, and then acquired it for USD 154.1 million on 10 December 2024.\n\nIt is the only completed development cycle PowerHouse can document, and that dossier records it as such. Commercial Observer, which reported the price, noted that it is 'unclear why the tenant ultimately decided to buy the asset' and that neither party commented — so the rationale is unexplained in the public record rather than merely unstated here.",
+     "source": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/",
+     "status": "historical",
+     "since": "2023-05",
+     "scale": "USD 154.1m; 60 MW"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Leased ABX-1 in Ashburn for thirty years in May 2023, then bought the building for USD 154.1 million in December 2024 — the only completed development cycle in this dossier.",
+     "context": "CyrusOne signed a thirty-year lease for the whole of ABX-1 — 265,850 sq ft and 60 MW on a 300 MW Dominion substation — in May 2023, brokered by Avison Young, and then acquired the building outright for USD 154.1 million on 10 December 2024 in a sale by PowerHouse and Harrison Street.\n\nIt remains the single documented completed cycle for this developer, from land through delivery to exit. Commercial Observer, which reported the price, noted that it is 'unclear why the tenant ultimately decided to buy the asset' and that neither party commented; the rationale is unexplained in the public record rather than merely unstated here. CyrusOne is now a covered dossier and records the transaction from the buyer's side.",
+     "source": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/",
+     "status": "historical",
+     "since": "2023-05",
+     "scale": "USD 154.1m; 60 MW"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: PowerHouse Data Centers is the data-center division of American Real Estate Partners (AREP), a private McLean, Virginia fund manager, and a developer of powered core-and-shell and build-to-suit campuses for hyperscalers that it finances project by project through joint ventures with institutional capital (Harrison Street, Blue Owl/Chirisa, Provident, Hillwood, Poe, Town Lane, Pennsylvania Data Center Partners) in which AREP's own funds contribute roughly 5–10% of the equity; its boilerplate has climbed from 57 buildings and 4.1 GW (December 2024) to '140 data centers' and '~10 GW' (September 2026), but only one building is documented as delivered — ABX-1 in Ashburn, leased for 30 years to CyrusOne and sold to it for USD 154.1 million — and its flagship 1.8 GW Joliet Technology Center, annexed 8–1 in March 2026, lost its ComEd transmission security agreement in July 2026 and is now in litigation with the utility and with residents.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gap: no revenue, EBITDA, headcount, valuation or lease terms beyond ABX-1's 30 years; tenants are named only at ABX-1 (CyrusOne) and Chesterfield (CoreWeave); no general contractor beyond DPR (ABX-1) and E.E.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that tenant demand behind the pipeline is thin on the public record: two named tenants (CyrusOne at ABX-1, CoreWeave at Chesterfield through the Blue Owl/Chirisa vehicle) and one unnamed hyperscale lease at Arcola across a claimed 140 buildings.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-15",
+     "text": "PowerHouse executes a 'long-term hyperscale lease' at PowerHouse Arcola (37 acres, 615,000 sq ft, up to 120 MW), funded by AREP Strategic Opportunity Fund III; boilerplate '118 buildings ... over 8.1 GW ... eight major U.S. markets' — The second hyperscale lease in the company's history after CyrusOne's, and the first funded from AREP's own fund rather than a JV.",
+     "src": "https://www.prnewswire.com/news-releases/powerhouse-data-centers-executes-hyperscale-lease-at-powerhouse-arcola-advancing-northern-virginia-expansion-302661927.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-17",
+     "text": "Harrison Street and PowerHouse sell ABX-1 (265,580 sq ft, 60 MW, leased to CyrusOne) to CyrusOne — 'USD 154.1 million' per Commercial Observer; the JV has 'committed $3.2 billion'; boilerplate '57 buildings ... over 4.1 GW' — The full cycle — buy land, build the substation, lease for 30 years, sell to the tenant — completed once, 14 months after delivery.",
+     "src": "https://harrisonst.com/wp-content/uploads/2024/12/Harrison-Street-and-PowerHouse-Data-Centers-Sell-Powered-Shell-Data-Center.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-15"
+  },
+  {
+   "a": "cyrusone",
+   "b": "prime-data-centers",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named neighbours in Chicago and Madrid in third-party market surveys.",
+     "context": "The Prime Data Centers dossier records reporters placing Prime beside Aligned, CyrusOne, Equinix and PowerHouse in CBRE's Chicago survey, and beside Equinix, CyrusOne and Data4 in Madrid. CBRE's H2 2025 Chicago report specifically lists CyrusOne's Wood Dale campus as fully leased alongside Prime's, Aligned's ORD3 and Equinix's Minooka, with ComEd delivery delays affecting the market to 2032 or later.\n\nThe edge is a market-adjacency observation from third-party surveys rather than any transaction between the two.",
+     "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Build-to-suit, powered shell and turnkey wholesale data centers (the core product)",
+     "date": "",
+     "text": "Reporters set it beside Microsoft's Elk Grove Technology Park, CloudHQ and Meta in Chicago and beside Aligned, CyrusOne, Equinix and PowerHouse/Hillwood in CBRE's Chicago survey; beside STACK and Vantage in Phoenix; beside CoreSite and Digital Realty in Vernon; beside Tract and PowerHouse in Caldwell County; and beside Equinix, CyrusOne and Data4 in Madrid.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Europe — Madrid, Frankfurt, Esbjerg, Järvenpää, Sæby and Berlin",
+     "date": "",
+     "text": "Prime's European pitch is subsea-cable adjacency (Esbjerg's six cables) and district-heating reuse (Sæby, Järvenpää) rather than scale; its neighbours in Madrid are Equinix, CyrusOne and Data4.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The closest structural peer — a sponsor-owned US wholesale platform at comparable scale, and the one CyrusOne is reported to have fallen behind.",
+     "context": "QTS, owned by Blackstone since 2021, is the nearest like-for-like comparison to CyrusOne: a large private US wholesale and hyperscale landlord funded by perpetual capital and serial investment-grade issuance rather than by public equity.\n\nOne strand of reporting on the CME outage stated that CyrusOne 'fell behind competitors like QTS in recent market share rankings' — a single-sourced characterisation rather than a measured finding. Independent measures are equivocal: ABI Research puts QTS at 811 MW of active IT load against CyrusOne's 674 MW, while USDataMap's tracked-capacity table puts CyrusOne ahead at 3,026 MW against 3,260 MW. Both sponsors also hold competing exposures — Blackstone owns QTS while KKR has separately invested in Compass Datacenters and GIP backed Aligned.",
+     "source": "https://www.insurancejournal.com/news/midwest/2025/12/19/851780.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "rosendin",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Rosendin records 20 MW of electrical infrastructure delivered in 26 weeks on Project Goliath, a CyrusOne facility in Sterling, Virginia.",
+     "context": "The Rosendin dossier records Project Goliath — a CyrusOne building in Sterling, Virginia — as a company-claimed construction speed record: 20 diesel generators, 40 uninterruptible power supplies and 120 distribution devices, 20 MW of electrical infrastructure, in 26 weeks.\n\nRosendin is separately recorded by the industry press as the electrical subcontractor on CyrusOne's Project Kincora, also in Sterling, which won an ENR Award of Merit. CyrusOne itself names no contractor on any project, so both attributions come from the builder's side.",
+     "source": "https://www.enr.com/articles/45505-award-of-merit-manufacturing-cyrusone-project-kincora-data-center",
+     "status": "historical"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Project Goliath in Sterling, Virginia — 20 MW of electrical infrastructure in 26 weeks, a company-claimed speed record; Rosendin was also electrical subcontractor on CyrusOne's Project Kincora.",
+     "context": "Rosendin records Project Goliath, a CyrusOne facility in Sterling, Virginia, as a construction speed record: 20 diesel generators, 40 uninterruptible power supplies and 120 distribution devices — 20 MW of electrical infrastructure — installed in 26 weeks.\n\nThe relationship extends beyond that project: industry coverage records Rosendin as the electrical subcontractor on CyrusOne's Project Kincora, also in Sterling, which took an ENR Award of Merit. Both attributions come from the builder's side; CyrusOne itself names no contractor on any project anywhere in its public record.",
+     "source": "https://www.enr.com/articles/45505-award-of-merit-manufacturing-cyrusone-project-kincora-data-center",
+     "status": "historical"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Elsewhere it is a buyer of completed buildings from other developers — it leased and then bought PowerHouse's ABX-1 in Ashburn — a customer of DPR and Rosendin in Northern Virginia, and one of the small set of sponsor-owned platforms whose cost of capital is set in the asset-backed market rather than by an equity multiple.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "switch",
+   "evid": [
+    {
+     "where": "Capabilities · Colocation and interconnection",
+     "date": "",
+     "text": "Reporters place CyrusOne beside Aligned, Equinix and PowerHouse in Chicago, beside Equinix, Prime and Data4 in Madrid, and inside the private wholesale cohort with Vantage, QTS, STACK and Switch.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "delta-electronics",
    "b": "eaton",
    "curated": {
@@ -14735,6 +15286,480 @@
     }
    ],
    "last": "2026-07-24"
+  },
+  {
+   "a": "digital-realty",
+   "b": "dpr",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Digital Realty appears on DPR Construction's published colocation and wholesale client roster.",
+     "context": "DPR Construction's dossier records a named colocation and wholesale customer roster that includes Digital Realty alongside CoreSite, CyrusOne, DataBank, Equinix, Flexential, Global Switch, NTT, QTS, Stream and Vantage.\n\nThe attribution is DPR's own client list and no specific Digital Realty project, campus or contract value is named by either party. Digital Realty publishes no general-contractor relationships at all, and a Stage 2 search of industry contractor rankings found only that both companies appear in the same market listings — not that one builds for the other. The edge is recorded at the level the source supports: a builder's published client roster.",
+     "source": "https://www.dpr.com/company/advanced-technology",
+     "status": "active"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Digital Realty appears on DPR's published colocation and wholesale client roster.",
+     "context": "Digital Realty is named on DPR's colocation and wholesale client roster. The attribution is DPR's own client list: no specific Digital Realty project, campus or contract value is named by either party.\n\nDigital Realty publishes no general-contractor relationships at all, and a search of industry contractor rankings establishes only that both companies appear in the same market listings rather than that one builds for the other. The edge is recorded at the level the source supports.",
+     "source": "https://www.dpr.com/company/advanced-technology",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "edgecore",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It competes for the same single-tenant hyperscale leases as Vantage, STACK, QTS, Aligned and Compass, and its executives are drawn from Vantage, QTS, STACK, DuPont Fabros, CoreSite and Digital Realty.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Single-tenant hyperscale campuses — 'Designed for Density' (the core product)",
+     "date": "",
+     "text": "Named competitors: none on any first-party page; the executive bench comes from Vantage (Kestler, Conner, Thompson), QTS (Heiden), STACK (Thissen), DuPont Fabros, CoreSite and Digital Realty, which is the peer set in practice.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "equinix",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named as a competitor in Digital Realty's own 10-K — and simultaneously its sixth-largest customer at 2.0% of annualised recurring revenue.",
+     "context": "Digital Realty's FY2025 10-K names Equinix first among competitors: 'We compete with numerous data center providers globally... including Equinix, Inc. and NTT'. The same filing lists Equinix as the sixth-largest customer at USD 95.6m, 2.0% of annualised recurring revenue, across 14 locations on a 4.6-year weighted average term — the clearest illustration in the corpus that colocation operators lease from each other where footprints do not overlap.\n\nThe two lead different segments and the corpus records it from Equinix's side: Equinix is the retail-segment leader at about 17% share per Synergy and leader in 16 of the top 25 metros, with Digital Realty second in North America; Equinix's dossier separately describes competing for 'the wholesale capacity Digital Realty leads'. On measurables Equinix is larger by revenue (USD 9.2bn against USD 6.11bn in FY2025) and market value, while Digital Realty is larger by net rentable area and development pipeline.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other listed data-centre REIT — Equinix leads retail colocation and interconnection, Digital Realty leads wholesale; and Equinix is also its sixth-largest tenant.",
+     "context": "The two lead different segments of the same market. Synergy Research measures Equinix as the retail-segment leader at about 17% share and leader in 16 of the top 25 metros, while Digital Realty holds roughly 28% of the wholesale segment. On scale, Equinix is larger by revenue (USD 9.2bn against USD 6.11bn in FY2025) and by market value; Digital Realty is larger by net rentable area, by data-centre count (310 against 280) and by development pipeline.\n\nThey are also counterparties. Digital Realty's FY2025 10-K names Equinix first among its competitors and, in the same filing, lists Equinix as its sixth-largest customer at USD 95.6m of annualised recurring revenue, 2.0% of the total, across 14 locations on a 4.6-year weighted average term.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** Digital Realty is the largest listed wholesale data-centre landlord by leasable area and development pipeline — 310 data centres, approximately 3.1 GW of in-place IT capacity and approximately 8.5 GW buildable at 30 June 2026 — but it is the second-largest listed data-centre REIT by revenue and market value behind Equinix, and the proposition that it leads an 'AI landlord' market is **unfalsifiable rather than true or false**: no published ranking measures AI-attributable landlord capacity, and the sponsor-owned platforms a January 2026 Bank of America downgrade identified as capturing that demand disclose nothing comparable.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Digital Realty sits on the landlord side of this corpus alongside Equinix, QTS, Vantage, Aligned, STACK, Compass, EdgeCore and CyrusOne, and is the one whose economics are fully public: a REIT that must distribute most of its taxable income and therefore funds a USD 4.25-4.75bn annual development programme from equity issuance, unsecured notes and — increasingly — third-party capital it manages for a fee.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The defensible statement is narrower: largest by leasable area and development pipeline, second to Equinix on revenue and market value.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Colocation — data centre services, suites and High-Density Colocation",
+     "date": "",
+     "text": "The company publishes no competitor-relative positioning of any kind — no first-party page names Equinix, NTT, CyrusOne, Vantage, QTS or any other operator and argues against it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Connectivity and interconnection — ServiceFabric, cross connects, DRIX and IP Bandwidth",
+     "date": "",
+     "text": "The corpus's other dossiers place this layer second to Equinix by design: Equinix's own dossier records it as the retail-segment leader at about 17% share per Synergy and leader in 16 of the top 25 metros, with Digital Realty second in North America; QTS's dossier states that it does not compete with Equinix or Digital Realty on internet-exchange density.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Strategic private capital — funds, joint ventures and fee income",
+     "date": "",
+     "text": "The corpus reads this from the other side: QTS's dossier argues that unlike public REITs Digital Realty and Equinix, perpetual private capital lets a sponsor-owned landlord buy land and power years ahead of leases, and STACK's argues it prices delivery credibility without public-REIT overhead.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Retail colocation & interconnection (IBX)",
+     "date": "",
+     "text": "Retail-segment leader (~17% per Synergy; leader in 16 of the top 25 metros); #2 North America behind Digital Realty, #3 APAC behind NTT.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · xScale hyperscale program & atNorth",
+     "date": "",
+     "text": "Keeps hyperscale AI expansion largely off Equinix's balance sheet while competing for the wholesale capacity Digital Realty leads — the answer to 'colo missed the AI training wave.'",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "flex",
+   "evid": [
+    {
+     "where": "Capabilities · Colocation — data centre services, suites and High-Density Colocation",
+     "date": "",
+     "text": "Turn-Key Flex pre-commissioned suites in a distributed-redundant design that can be subdivided; Data Center Services covering on-demand and scheduled remote work (tape swaps, hard and soft reboots, patch-cord installation, equipment transport, KVM output, cross-connect loopback verification, rack-and-stack and structured cabling, maintenance-window support) with more than ten services offered 24 hours a day, 365 days a year; and High-Density Colocation, the AI product, which the company states starts at 30 kW per cabinet and scales to multi-megawatt deployments at up to 150 kW per cabinet using Air-Assisted Liquid Cooling and Direct Liquid Cooling.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Eighth-largest customer at 1.6% of annualised recurring revenue across 49 locations, named in the FY2025 10-K.",
+     "context": "Meta Platforms, Inc. is named in the FY2025 10-K's twenty-largest-customer table at USD 73.5m of annualised recurring revenue, 1.6% of the total, spread across 49 locations with a 2.8-year weighted average remaining lease term. LinkedIn Corporation appears separately at 1.6% across 8 locations.\n\nThe location count is the interesting figure rather than the revenue: 49 sites at USD 1.5m each on average is a distributed edge and interconnection footprint, not hyperscale capacity, which Meta self-builds.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+     "status": "active",
+     "scale": "1.6% of annualised recurring revenue; 49 locations"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Three Microsoft Azure ExpressRoute cloud on-ramps deployed on the platform, announced 24 April 2025.",
+     "context": "Digital Realty announced the deployment of three Microsoft Azure ExpressRoute cloud on-ramps on 24 April 2025, and Microsoft Azure is one of eight named cloud and technology alliances in the site navigation. ExpressRoute on-ramps are the mechanism by which a colocation tenant reaches Azure over a private path rather than the public internet, and on-ramp count is one of the two numbers Digital Realty publishes for its fabric — 350-plus across 800-plus sites.\n\n**No source establishes Microsoft as a Digital Realty tenant.** The largest customer in the FY2025 10-K is disclosed only as a 'Fortune 50 Software Company' at 11.7% of annualised recurring revenue, and the filing declines to name it; this dossier does not infer the identity.",
+     "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123318/digital-realty-deploys-three-microsoft-azure-expressroute-cloud-on-ramps",
+     "status": "active",
+     "via": "Azure ExpressRoute"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-24",
+     "text": "Deploys three Microsoft Azure ExpressRoute cloud on-ramps — On-ramp density is the interconnection moat; each new on-ramp raises the switching cost for hybrid-cloud tenants.",
+     "src": "https://www.digitalrealty.com/about/newsroom/press-releases/123318/digital-realty-deploys-three-microsoft-azure-expressroute-cloud-on-ramps",
+     "from": "a"
+    }
+   ],
+   "last": "2025-04-24"
+  },
+  {
+   "a": "digital-realty",
+   "b": "nebius",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Nebius's UK programme includes Digital Realty Docklands colocation, recorded on Nebius's side.",
+     "context": "The Nebius dossier records that its roughly GBP 1.7bn, approximately 65 MW-by-2027 UK programme runs across Vantage's CWL1 campus in Newport, Kao Data Harlow, the Ark Chertsey site and Digital Realty Docklands colocation.\n\nThe relationship is one-sided in the corpus: Nebius names Digital Realty as a colocation provider, and Digital Realty names no AI-cloud tenants at all. Tenant identity is redacted throughout its filings, so the neocloud side is the only place these arrangements surface.",
+     "source": "https://nebius.com/newsroom/nebius-expands-in-uk-with-more-nvidia-powered-infrastructure-more-customers-and-more-cloud-capabilities-for-agentic-and-enterprise-ai",
+     "status": "active"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Digital Realty Docklands colocation is one of the four UK sites in the roughly GBP 1.7bn, ~65 MW-by-2027 programme.",
+     "context": "Nebius's UK programme runs across Vantage's CWL1 campus in Newport, Kao Data Harlow, the Ark Chertsey site and Digital Realty Docklands colocation.\n\nThe relationship is recorded only from this side. Digital Realty names no AI-cloud tenants anywhere: tenant identity is redacted throughout its filings, and nine of the twenty largest customers in its FY2025 10-K appear only as descriptions such as 'Fortune 50 Software Company'. For that reason the neocloud dossiers are where these arrangements surface at all.",
+     "source": "https://nebius.com/newsroom/nebius-expands-in-uk-with-more-nvidia-powered-infrastructure-more-customers-and-more-cloud-capabilities-for-agentic-and-enterprise-ai",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Supports the NVIDIA AI Factory Research Center and the NVIDIA DSX Blueprint; holds an NVIDIA certification for a liquid-cooled data centre in Japan.",
+     "context": "Digital Realty announced support for the NVIDIA AI Factory Research Center and the NVIDIA DSX Blueprint on 3 November 2025, and debuted an NVIDIA certification for a liquid-cooled data centre in Japan on 9 February 2026. In September 2025 the two joined Oxford Quantum Circuits to launch what the parties describe as the first quantum-AI data centre in New York City.\n\nThe relationship is a specification one rather than a supply one: aligning a hall design to a reference architecture is how a landlord gets written into an AI deployment before competitive bidding. NVIDIA's dossier types its vendor relationships as partner rather than supplier for the same reason.",
+     "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123357/digital-realty-advances-ai-infrastructure-innovation-supporting-nvidia-ai-factory-research-center-and-nvidia-dsx-blueprint",
+     "status": "active",
+     "since": "2025-11"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-09",
+     "text": "NVIDIA certification for a liquid-cooled data centre in Japan — Certification is becoming the gate for AI tenancy; a landlord without it cannot bid for reference-architecture deployments.",
+     "src": "https://www.digitalrealty.com/about/newsroom/press-releases/20011/digital-realty-debuts-nvidia-certification-for-liquid-cooled-data-center-in-japan",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-03",
+     "text": "Supports the NVIDIA AI Factory Research Center and the NVIDIA DSX Blueprint — Aligning to a reference design is how a landlord gets specified into an AI build before competitive bidding starts.",
+     "src": "https://www.digitalrealty.com/about/newsroom/press-releases/123357/digital-realty-advances-ai-infrastructure-innovation-supporting-nvidia-ai-factory-research-center-and-nvidia-dsx-blueprint",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-16",
+     "text": "With OQC and NVIDIA, launches what it describes as the first quantum-AI data centre in New York City — A frontier-workload marker rather than a revenue event.",
+     "src": "https://www.digitalrealty.com/about/newsroom/press-releases/123345/digital-realty-and-oqc-team-with-nvidia-to-launch-first-quantum-ai-data-center-in-new-york-city",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-09"
+  },
+  {
+   "a": "digital-realty",
+   "b": "oracle",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Second-largest customer at 9.0% of annualised recurring revenue across 42 locations, named in the FY2025 10-K.",
+     "context": "Oracle Corporation is the largest named customer in Digital Realty's twenty-largest-customer table — USD 424.1m of annualised recurring revenue, 9.0% of the total, across 42 locations, with a 10.2-year weighted average remaining lease term, the longest of any top-five tenant. Only the redacted 'Fortune 50 Software Company' at 11.7% is larger.\n\nThe commercial relationship runs beyond tenancy in both directions: Digital Realty deployed Oracle FastConnect in Singapore in December 2025 and announced a teaming arrangement with Oracle Solution Centers in July 2025. Oracle Cloud is one of the eight named cloud and technology alliances in the site navigation.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+     "status": "active",
+     "scale": "9.0% of annualised recurring revenue; 42 locations"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "powerhouse-data-centers",
+   "evid": [
+    {
+     "where": "Capabilities · Powered core-and-shell and build-to-suit campuses for hyperscalers (the core product)",
+     "date": "",
+     "text": "Peers in the same markets: Compass, Aligned, EdgeCore, Vantage, Tract and Novva at the Tahoe-Reno Industrial Center; Digital Realty in Charlotte; Provident's other DFW ventures.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "prime-data-centers",
+   "evid": [
+    {
+     "where": "Capabilities · Build-to-suit, powered shell and turnkey wholesale data centers (the core product)",
+     "date": "",
+     "text": "Reporters set it beside Microsoft's Elk Grove Technology Park, CloudHQ and Meta in Chicago and beside Aligned, CyrusOne, Equinix and PowerHouse/Hillwood in CBRE's Chicago survey; beside STACK and Vantage in Phoenix; beside CoreSite and Digital Realty in Vernon; beside Tract and PowerHouse in Caldwell County; and beside Equinix, CyrusOne and Data4 in Madrid.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-founder with QTS, Vantage and Compass Datacenters of Infrastructure for America, a 501(c)(4) launched 2 September 2026 to set host-community standards.",
+     "context": "On 2 September 2026 Compass Datacenters, Digital Realty, QTS and Vantage launched Infrastructure for America, a 501(c)(4) setting host-community standards for data-centre developers. The four are direct competitors for the same hyperscale leases; the coalition is a joint response to a consent environment that has cost the industry specific projects, including the Prince William Digital Gateway that QTS and Compass lost in court.\n\nThe corpus records the coalition from Compass's side, where it sits inside a broader account of consent as a cost line. QTS's own dossier separately argues that unlike public REITs Digital Realty and Equinix, perpetual private capital lets it buy land and power years ahead of leases — so the two are allies on consent and opponents on capital structure.",
+     "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "status": "active",
+     "since": "2026-09"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Co-founder of the Infrastructure for America 501(c)(4), launched 2 September 2026 — and the listed REIT this dossier contrasts itself against on capital structure.",
+     "context": "QTS and Digital Realty co-founded Infrastructure for America with Compass and Vantage on 2 September 2026, a 501(c)(4) setting host-community standards. Both had lost ground in the same consent environment — QTS withdrew from the Prince William Digital Gateway on 2 July 2026 after the Court of Appeals upheld the voiding of the rezoning.\n\nThey are allies on consent and opponents on capital. This dossier's own positioning argues that unlike public REITs Digital Realty and Equinix, perpetual private capital lets QTS buy land and power years ahead of leases — a constraint Digital Realty has been answering from the other direction by raising third-party funds, including a USD 3.25bn US hyperscale fund closed in March 2026 in which it holds 20% and the management mandate.",
+     "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "status": "active",
+     "since": "2026-09"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Hyperscale build-to-suit & wholesale mega-campuses (core business)",
+     "date": "",
+     "text": "Against Vantage, Aligned, STACK and CloudHQ, QTS pairs what Blackstone calls one of the largest data-center pipelines in the world with a 3,000+ acre power-ready land bank and an in-house construction-management organization billed as among North America's largest; unlike public REITs Digital Realty and Equinix, perpetual private capital lets it buy land and power years ahead of leases.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Enterprise colocation & connectivity",
+     "date": "",
+     "text": "QTS does not compete with Equinix/Digital Realty on internet-exchange density; it competes on campus-scale interconnection plus SDP transparency, and buys backbone reach through partners rather than owning fiber.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09"
+  },
+  {
+   "a": "digital-realty",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "USD 373m supply capacity agreement for uninterruptible power supplies, low-voltage switchgear and pre-fabricated skids, announced 19 November 2025.",
+     "context": "The two companies announced a USD 373m supply capacity agreement on 19 November 2025 covering uninterruptible power supply systems, low-voltage switchgear and pre-fabricated skids. The structure is the point: this is a commitment to reserve manufacturing capacity rather than an order for equipment, which is what a buyer does when substation transformers run 75 to 110 weeks and medium-voltage switchgear is sold out into 2028.\n\nIt is the largest disclosed supplier commitment by any landlord in this corpus. Schneider's own dossier cites it as evidence that its design-led sales motion converts, while noting that no design-linked bookings figure is published and the conversion is therefore inferred.",
+     "source": "https://www.prnewswire.com/news-releases/schneider-electric-and-digital-realty-announce-373m-supply-capacity-agreement-to-meet-rising-data-center-demand-302620427.html",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "USD 373m"
+    },
+    "b": {
+     "type": "customer",
+     "note": "The USD 373m supply capacity agreement of 19 November 2025 — uninterruptible power supplies, low-voltage switchgear and pre-fabricated skids.",
+     "context": "Announced 19 November 2025, the agreement covers uninterruptible power supply systems, low-voltage switchgear and pre-fabricated skids. Its structure is what makes it notable: it reserves manufacturing capacity rather than ordering equipment, which is the response available to a buyer when substation transformers run 75 to 110 weeks and medium-voltage switchgear is sold out into 2028.\n\nIt is the largest disclosed equipment commitment by any data-centre landlord in this corpus, and this dossier cites it as evidence that the design-led sales motion converts — with the caveat, which stands, that no design-linked bookings figure is published and the conversion is therefore inferred rather than disclosed.",
+     "source": "https://www.prnewswire.com/news-releases/schneider-electric-and-digital-realty-announce-373m-supply-capacity-agreement-to-meet-rising-data-center-demand-302620427.html",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "USD 373m"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the equipment suppliers in this corpus it is a named buyer under a USD 373m Schneider Electric supply-capacity agreement; for the power side it is an energy-services counterparty in Kansas and a PPA buyer in Europe; and for the private landlords it is the public comparable their sponsors are implicitly marked against.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-19",
+     "text": "Schneider Electric and Digital Realty announce a USD 373m supply capacity agreement covering uninterruptible power supplies, low-voltage switchgear and pre-fabricated skids — Buying equipment capacity rather than equipment — the response to switchgear and transformer lead times that now run into years. This is the single largest disclosed supplier commitment in the corpus's landlord set.",
+     "src": "https://www.prnewswire.com/news-releases/schneider-electric-and-digital-realty-announce-373m-supply-capacity-agreement-to-meet-rising-data-center-demand-302620427.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: the only vendor with co-developed NVIDIA designs spanning power management, liquid-cooling controls (Mission Control-interoperable), and gigawatt AI-factory blueprints; a disclosed $373M supply-capacity agreement with Digital Realty; and Dell'Oro's shared #1.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The caveat: no design-linked order figures are published; conversion is inferred from triple-digit demand growth and the $373M Digital Realty agreement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NVIDIA reference designs & AI-factory blueprints (grid to chip)",
+     "date": "",
+     "text": "The most complete design-led sales machine among incumbents; conversion to orders is inferred rather than disclosed (no design-linked bookings published), but triple-digit DC demand growth and the $373M Digital Realty agreement are consistent with it working.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-19"
+  },
+  {
+   "a": "digital-realty",
+   "b": "stack-infrastructure",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The listed-REIT comparison this dossier draws — STACK prices delivery credibility without public-REIT overhead.",
+     "context": "This dossier positions STACK against Equinix and Digital Realty on the ground that it carries no public-REIT overhead and prices delivery credibility rather than interconnection ecosystems. The characterisation holds and is concrete on Digital Realty's side: REIT status requires distributing at least 90% of taxable income, so it cannot fund a USD 4.25-4.75bn 2026 development programme from retained earnings and instead issues equity and debt and raises third-party funds — including a USD 3.25bn US hyperscale fund closed in March 2026 in which it holds 20% and the management mandate.\n\nThe two compete for the same gigawatt-class named-tenant campuses, with Digital Realty at 310 data centres and approximately 3.1 GW of in-place IT capacity against STACK's platform scale.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Americas hyperscale platform (core business)",
+     "date": "",
+     "text": "One of the small set of private wholesale platforms delivering gigawatt-class named-tenant campuses — bigger US program wins than Aligned or QTS's disclosed AI deals, and a peer of Vantage in Stargate delivery, though at smaller total platform scale (13GW current + pipeline vs Vantage's ~9GW power capacity claim); unlike Equinix/Digital Realty it carries no public-REIT overhead and prices delivery credibility, not interconnection ecosystems.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "switch",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Wholesale-segment incumbent; the competitor Switch meets on campus capacity rather than on network density.",
+     "context": "Digital Realty leads the wholesale colocation segment at about 28% share on Synergy Research's measure, and is second to Equinix in North American retail. Switch competes with it on campus power depth, single-operator design control and its five-zone latency lattice, rather than on the interconnection ecosystem where Equinix leads.\n\nThe structural contrast Switch's own dossier draws — that it prices delivery credibility without public-REIT overhead — applies to Digital Realty specifically: as a REIT it must distribute most of its taxable income and therefore funds development through equity issuance, debt and third-party funds rather than retained earnings.",
+     "source": "Dossier competitive assessment — wholesale colocation",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Colocation — data centre services, suites and High-Density Colocation",
+     "date": "",
+     "text": "Its own 10-K, by contrast, does name competitors: Equinix, NTT and Global Switch, plus unnamed US private and regional operators.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Exascale Prime campuses — retail and wholesale colocation (core business)",
+     "date": "",
+     "text": "Against Vantage/Aligned/QTS-style pure wholesale developers, Switch sells a standards-and-density story (Tier 5 Platinum, 2MW per rack) rather than raw build-to-suit scale; against Equinix, the retail-colocation and interconnection incumbent, it wins on campus power depth and single-operator design control (Digital Realty, often grouped with Equinix as a 'retail incumbent', in fact leads the WHOLESALE segment at about 28% share and is second to Equinix in retail — the two are not the same competitor).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "tract",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Tract's executive chairman led the Teraco sale to Digital Realty; the two are not commercial counterparties.",
+     "context": "Grant van Rooyen led the acquisition of Teraco and its sale to Digital Realty, which completed a 55% majority interest on 1 August 2022 in a transaction valuing Teraco at approximately USD 3.5 billion and raised the holding to 77% in June 2026. The link is biographical rather than commercial: no transaction, lease or supply arrangement exists between Tract and Digital Realty.\n\nThis dossier previously recorded the transaction as a 'sale of 51% ... for about USD 3.5 billion'. Both halves were wrong and were corrected at v2: the interest was 55%, and USD 3.5 billion was Teraco's enterprise valuation rather than the consideration paid for the stake.",
+     "source": "https://www.prnewswire.com/news-releases/digital-realty-completes-acquisition-of-teraco-301596692.html",
+     "status": "historical",
+     "since": "2022-08"
+    }
+   },
+   "evid": [],
+   "last": "2022-08"
+  },
+  {
+   "a": "digital-realty",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-founder of the Infrastructure for America 501(c)(4) alongside Compass, Digital Realty and QTS, launched 2 September 2026.",
+     "context": "Vantage Data Centers is one of the four co-founders of Infrastructure for America, announced 2 September 2026, a 501(c)(4) that sets host-community standards for data-centre developers. Vantage and Digital Realty compete directly for hyperscale capacity in Northern Virginia, Phoenix and the Nordics, and the coalition is a narrow, single-issue alliance rather than a commercial relationship.",
+     "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "status": "active",
+     "since": "2026-09"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Co-founder of the Infrastructure for America 501(c)(4), launched 2 September 2026 with Compass, Digital Realty and QTS.",
+     "context": "Vantage is one of four co-founders of Infrastructure for America, announced 2 September 2026, a 501(c)(4) that sets host-community standards for data-centre developers. Vantage and Digital Realty compete directly for hyperscale capacity in Northern Virginia, Phoenix and the Nordics; the coalition is a narrow single-issue alliance rather than a commercial relationship.",
+     "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+     "status": "active",
+     "since": "2026-09"
+    }
+   },
+   "evid": [],
+   "last": "2026-09"
   },
   {
    "a": "dnv",
@@ -18737,8 +19762,8 @@
    "curated": {
     "b": {
      "type": "competitor",
-     "note": "Retail-colocation incumbent Switch beats on campus power depth, not network density.",
-     "context": "Against retail incumbents Equinix and Digital Realty, Switch wins on campus power depth and single-operator design control (Tier 5 Platinum, 2MW per rack); Switch CONNECT is explicitly not an interconnection-ecosystem play — the pitch is cost reduction and latency, not Equinix-style network density.",
+     "note": "Retail-colocation and interconnection incumbent; Switch beats on campus power depth, not network density.",
+     "context": "Against Equinix, the retail-colocation incumbent, Switch wins on campus power depth and single-operator design control (Tier 5 Platinum, 2MW per rack); Switch CONNECT is explicitly not an interconnection-ecosystem play — the pitch is cost reduction and latency, not Equinix-style network density.\n\nThis dossier previously grouped Digital Realty with Equinix as a 'retail incumbent'. That is a category error and was corrected at v7: Synergy Research measures Equinix as the retail leader at about 17% share while Digital Realty holds about 28% of the WHOLESALE segment, and Equinix's own dossier describes competing for 'the wholesale capacity Digital Realty leads'. Switch competes with Equinix on interconnection density and with Digital Realty on wholesale campus capacity; conflating the two describes neither.",
      "source": "Dossier competitive assessment — colocation",
      "status": "active"
     }
@@ -18747,7 +19772,7 @@
     {
      "where": "Capabilities · Exascale Prime campuses — retail and wholesale colocation (core business)",
      "date": "",
-     "text": "Against Vantage/Aligned/QTS-style pure wholesale developers, Switch sells a standards-and-density story (Tier 5 Platinum, 2MW per rack) rather than raw build-to-suit scale; against retail incumbents Equinix and Digital Realty it wins on campus power depth and single-operator design control.",
+     "text": "Against Vantage/Aligned/QTS-style pure wholesale developers, Switch sells a standards-and-density story (Tier 5 Platinum, 2MW per rack) rather than raw build-to-suit scale; against Equinix, the retail-colocation and interconnection incumbent, it wins on campus power depth and single-operator design control (Digital Realty, often grouped with Equinix as a 'retail incumbent', in fact leads the WHOLESALE segment at about 28% share and is second to Equinix in retail — the two are not the same competitor).",
      "src": "",
      "from": "b"
     },

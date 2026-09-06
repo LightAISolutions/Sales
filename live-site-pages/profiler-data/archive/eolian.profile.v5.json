@@ -269,17 +269,6 @@
    "note": "Form Energy is a US Energy Storage Coalition co-member alongside Eolian in the American-built storage campaign.",
    "context": "Form sits with Eolian, Tesla, LG Energy Solution Vertech and Fluence in the coalition whose March 2026 report claims American factories can supply 100% of US projects. As with Fluence, this is a policy alliance rather than a supply relationship — no Form hardware appears in Eolian's fleet, and Form's product serves a different duration entirely at 100 hours. Form is the strongest version of the coalition's own argument: its iron-air chemistry uses no lithium, cobalt, nickel or graphite, it states about 80% domestic content, and it manufactures at a single plant in West Virginia.",
    "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds"
-  },
-  {
-   "slug": "cyrusone",
-   "type": "partner",
-   "note": "The DFW7 energy-plus-load partnership — a 200 MW CyrusOne campus co-located at Chisholm Grid, monetising the battery's existing interconnection.",
-   "context": "Announced 13 January 2026, the partnership places a 200 MW CyrusOne data-centre campus at Chisholm Grid, Eolian's 100 MW battery operating in ERCOT since 2021 about seven miles north-west of downtown Fort Worth. Eolian modernises and upgrades the system and the existing high-voltage interconnection carries the campus's initial phases from 2026.\n\nThis is the marquee example of the energy-plus-load model this dossier describes: what is being sold is the interconnection rather than the stored energy, because a grid connection that already exists is worth more to a data-centre developer than years in a queue. CyrusOne's own dossier records a sponsor adjacency worth noting — Eolian and CyrusOne share an owner in Global Infrastructure Partners.",
-   "source": "https://www.prnewswire.com/news-releases/cyrusone-and-eolian-partner-to-enable-rapid-deployment-of-200-megawatt-data-center-campus-in-fort-worth-texas-302658969.html",
-   "status": "active",
-   "since": "2026-01",
-   "scale": "200 MW campus",
-   "via": "Chisholm Grid BESS"
   }
  ],
  "policyExposure": [
@@ -452,5 +441,5 @@
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "profileVersion": 5
 }

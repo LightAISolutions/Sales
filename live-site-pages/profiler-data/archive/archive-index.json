@@ -49,6 +49,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-09-05",
       "supersededBy": 5
+    },
+    {
+      "file": "aligned.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 6
     }
   ],
   "amazon": [
@@ -309,6 +315,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "constellation-energy.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 5
     }
   ],
   "core-scientific": [
@@ -411,6 +423,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-08-30",
       "supersededBy": 5
+    },
+    {
+      "file": "dpr.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 6
     }
   ],
   "eaton": [
@@ -491,6 +509,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-09-06",
       "supersededBy": 5
+    },
+    {
+      "file": "eolian.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 6
     }
   ],
   "equinix": [
@@ -517,6 +541,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-05",
       "supersededBy": 6
+    },
+    {
+      "file": "equinix.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 7
     }
   ],
   "eve-energy": [
@@ -1217,6 +1247,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "nebius.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 5
     }
   ],
   "nextera-energy-resources": [
@@ -1425,6 +1461,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-06",
       "supersededBy": 6
+    },
+    {
+      "file": "qts.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 7
     }
   ],
   "quanta-services": [
@@ -1471,6 +1513,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-06",
       "supersededBy": 6
+    },
+    {
+      "file": "rosendin.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 7
     }
   ],
   "samsung-ct": [
@@ -1543,6 +1591,12 @@
       "profileVersion": 7,
       "archivedAt": "2026-09-05",
       "supersededBy": 8
+    },
+    {
+      "file": "schneider-electric.profile.v8.json",
+      "profileVersion": 8,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 9
     }
   ],
   "siemens-energy": [
@@ -1641,6 +1695,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-05",
       "supersededBy": 6
+    },
+    {
+      "file": "stack-infrastructure.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 7
     }
   ],
   "sungrow": [
@@ -1719,6 +1779,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-05",
       "supersededBy": 6
+    },
+    {
+      "file": "switch.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 7
     }
   ],
   "terawulf": [
@@ -1875,6 +1941,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-09-05",
       "supersededBy": 7
+    },
+    {
+      "file": "vantage.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 8
     }
   ],
   "vertiv": [
@@ -2035,6 +2107,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-04",
       "supersededBy": 2
+    },
+    {
+      "file": "mitsubishi-electric.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 3
     }
   ],
   "powell-industries": [
@@ -2170,6 +2248,30 @@
   "strata-clean-energy": [
     {
       "file": "strata-clean-energy.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "tract": [
+    {
+      "file": "tract.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "powerhouse-data-centers": [
+    {
+      "file": "powerhouse-data-centers.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "compass-datacenters": [
+    {
+      "file": "compass-datacenters.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-09-06",
       "supersededBy": 2

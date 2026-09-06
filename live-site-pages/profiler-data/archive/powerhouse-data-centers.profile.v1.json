@@ -502,16 +502,6 @@
       "context": "The Petersburg award release lists AWS among the hyperscalers whose campuses she has led; McGrath's August 2024 hiring release credits 'managing Northeast U.S. construction for AWS'; the Joliet Technology Center site's Hillwood profile cites Amazon as a Hillwood client. No AWS lease at a PowerHouse campus is disclosed.",
       "source": "https://www.powerhousedata.com/news/powerhouse-data-centers-karen-petersburg-named-dcd-woman-of-the-year-at-its-2025-global-awards",
       "status": "announced"
-    },
-    {
-      "slug": "cyrusone",
-      "type": "customer",
-      "note": "Leased ABX-1 in Ashburn for thirty years in May 2023, then bought the building for USD 154.1 million in December 2024 — the only completed development cycle in this dossier.",
-      "context": "CyrusOne signed a thirty-year lease for the whole of ABX-1 — 265,850 sq ft and 60 MW on a 300 MW Dominion substation — in May 2023, brokered by Avison Young, and then acquired the building outright for USD 154.1 million on 10 December 2024 in a sale by PowerHouse and Harrison Street.\n\nIt remains the single documented completed cycle for this developer, from land through delivery to exit. Commercial Observer, which reported the price, noted that it is 'unclear why the tenant ultimately decided to buy the asset' and that neither party commented; the rationale is unexplained in the public record rather than merely unstated here. CyrusOne is now a covered dossier and records the transaction from the buyer's side.",
-      "source": "https://commercialobserver.com/2024/12/cyrusone-nova-data-center-154m/",
-      "status": "historical",
-      "since": "2023-05",
-      "scale": "USD 154.1m; 60 MW"
     }
   ],
   "policyExposure": [
@@ -1393,6 +1383,6 @@
       "url": "https://www.pecva.org/region/loudoun/loudoun-updates-summer-2025/"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

@@ -1,0 +1,1206 @@
+{
+ "schemaVersion": 7,
+ "slug": "digital-realty",
+ "name": "Digital Realty Trust, Inc.",
+ "shortName": "Digital Realty",
+ "categories": [
+  "developer"
+ ],
+ "website": "https://www.digitalrealty.com",
+ "headquarters": "Austin, Texas, United States",
+ "founded": 2004,
+ "employees": "4,282 full-time (31 December 2025) — 1,948 North America, 2,040 EMEA, 294 Asia Pacific",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: DLR"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Digital Realty is the largest listed wholesale data-centre landlord by leasable area and development pipeline — 310 data centres, approximately 3.1 GW of in-place IT capacity and approximately 8.5 GW buildable at 30 June 2026 — but it is the second-largest listed data-centre REIT by revenue and market value behind Equinix, and the proposition that it leads an 'AI landlord' market is **unfalsifiable rather than true or false**: no published ranking measures AI-attributable landlord capacity, and the sponsor-owned platforms a January 2026 Bank of America downgrade identified as capturing that demand disclose nothing comparable. The company's own superlative is always narrowed to 'cloud- and carrier-neutral' and is never attributed to a third party. Two things inflected in 2026: capacity under development rose 82% in six months to 1,402 MW while the pre-leased share of it fell from 64% to 54%, and the cash mark-to-market on renewals reached 25.4% on a greater-than-1 MW book repricing at 66.7% — with 25.9% of annualised rent expiring in 2026 alone.\n\n**BACKGROUND.** Maryland real estate investment trust incorporated 9 March 2004, listed as NYSE: DLR, with the operating partnership Digital Realty Trust, L.P. organised 21 July 2004; headquarters 601 W. 2nd Street, Austin, Texas; 4,282 full-time employees at 31 December 2025, a majority of them in EMEA (2,040 against 1,948 in North America) — the demographic residue of the Interxion combination. FY2025 revenue USD 6,112.7m (+10.0%), net income available to common stockholders USD 1,267.9m, Core FFO USD 7.39 a share, Adjusted EBITDA about USD 3.34bn, per SEC filings. Customer concentration is high and partly undisclosed: the twenty largest customers are 50.9% of annualised recurring revenue and the top three are approximately 26%, while the largest single customer at 11.7% is identified in the 10-K only as a 'Fortune 50 Software Company'. The platform was assembled by acquisition — Telx (2015), DuPont Fabros (2017), Ascenty (2018), Interxion (2020) and a 55% interest in Teraco (2022, raised to 77% in June 2026) — and the company now states three growth pillars: colocation and connectivity, hyperscale, and strategic private capital, the third running USD 190.2m of annualised net development and management fees.",
+ "ecosystemRole": "The listed benchmark for what a data-centre landlord is worth and how one is financed. Digital Realty sits on the landlord side of this corpus alongside Equinix, QTS, Vantage, Aligned, STACK, Compass, EdgeCore and CyrusOne, and is the one whose economics are fully public: a REIT that must distribute most of its taxable income and therefore funds a USD 4.25-4.75bn annual development programme from equity issuance, unsecured notes and — increasingly — third-party capital it manages for a fee. That third channel is the strategically live part: a USD 3.25bn US hyperscale fund closed in March 2026 with Digital Realty retaining 20% and the management mandate, twenty unconsolidated joint ventures, and fee income that nearly doubled year on year. For the equipment suppliers in this corpus it is a named buyer under a USD 373m Schneider Electric supply-capacity agreement; for the power side it is an energy-services counterparty in Kansas and a PPA buyer in Europe; and for the private landlords it is the public comparable their sponsors are implicitly marked against.",
+ "productsAndServices": [
+  {
+   "name": "Colocation — data centre services, suites and High-Density Colocation",
+   "category": "Colocation",
+   "description": "The retail-to-scale end of the platform, sold under the PlatformDIGITAL banner. Turn-Key Flex pre-commissioned suites in a distributed-redundant design that can be subdivided; Data Center Services covering on-demand and scheduled remote work (tape swaps, hard and soft reboots, patch-cord installation, equipment transport, KVM output, cross-connect loopback verification, rack-and-stack and structured cabling, maintenance-window support) with more than ten services offered 24 hours a day, 365 days a year; and High-Density Colocation, the AI product, which the company states starts at 30 kW per cabinet and scales to multi-megawatt deployments at up to 150 kW per cabinet using Air-Assisted Liquid Cooling and Direct Liquid Cooling. The high-density page cites 170 sites across 33 markets.",
+   "highlights": [
+    "High-Density Colocation: '30 kW per cabinet … scales to multi-MW sizes and up to 150 kW per cabinet' (company page); the same 30-150 kW range is repeated on the AI solutions page",
+    "Named cooling technologies are Air-Assisted Liquid Cooling (AALC) and Direct Liquid Cooling (DLC). No first-party source names rear-door heat exchangers as a product option",
+    "Two liquid-cooling proof points in 2026: the first direct liquid-cooled AI deployment in the UK with Imperial College London (2 February) and an NVIDIA certification for a liquid-cooled data centre in Japan (9 February)",
+    "0-1 MW plus interconnection was 52% of Q2 2026 bookings at USD 108m of USD 208.5m — the small-deployment book is half the sales engine, not a legacy tail",
+    "Renewal pricing splits sharply by size: 0-1 MW renewed at +5.2% cash in Q2 2026 against +66.7% for greater-than-1 MW deals"
+   ],
+   "positioning": "The company publishes no competitor-relative positioning of any kind — no first-party page names Equinix, NTT, CyrusOne, Vantage, QTS or any other operator and argues against it. Its competitive framing is self-superlative plus third-party validation it elects to publicise, such as being named a Leader in the IDC MarketScape worldwide datacenter colocation services assessment for a fourth time (14 August 2025). Its own 10-K, by contrast, does name competitors: Equinix, NTT and Global Switch, plus unnamed US private and regional operators.",
+   "soldThrough": "Direct sales alongside the unified PartnerOne programme, which carries a resell track ('compelling margins'), a referral track ('comprehensive commissions') and a separate PartnerOne Broker Programme for real-estate brokers. Named partner categories: technology services distributors, agents, referral consultants, network providers, value-added resellers, systems integrators, managed service providers and alliance partners. Cloud and technology alliances listed in the site navigation are AWS, Google Cloud, IBM Cloud, Oracle Cloud, NVIDIA, HPE GreenLake, Microsoft Azure and Dell.",
+   "targetSegments": "AI, data, cloud and network providers; financial services, public sector, healthcare, retail, insurance, manufacturing, transportation, media and entertainment, utilities, automotive and professional services",
+   "roadmap": "Singapore: selected to develop 50 MW of new capacity (25 August 2026), inside a stated near-S$7bn investment programme with more than S$4.3bn earmarked for new developments and headcount rising to 400 by 2030."
+  },
+  {
+   "name": "Hyperscale and build-to-suit, including Powered Base Buildings",
+   "category": "Hyperscale",
+   "description": "Custom capacity for the largest customers. Build-to-Suit lets a customer co-design electrical, mechanical and cooling systems on a pad-ready parcel, along with entrances, truck bays and office space, with roughly 5 GW of buildable IT capacity cited as available; the pitch is avoiding the upfront cost of self-build while still getting a custom design. Powered Base Buildings are fit-out-ready shells on power- and fibre-provisioned sites, and are a reported revenue category in their own right — the supplemental defines 'Other' revenue as including Powered Base Building shell capacity alongside storage and office space, and it contributed USD 0.3m, under 1%, of Q2 2026 bookings.",
+   "highlights": [
+    "1,402 MW of projects underway at 30 June 2026 — an 82% increase in six months — of which 54% was pre-leased, down from 64% on 769 MW at 31 December 2025",
+    "Estimated pre-tax stabilised cash yield on the whole 1,402 MW is approximately 11.5% (10-Q)",
+    "More than 7 GW of additional future development capacity, roughly 70% of it in locations with more than 100 MW of buildable capacity",
+    "Two hyperscale leases signed in July 2026 alone for USD 410m at 100% share, USD 205m at Digital Realty's share",
+    "Q1 2026 carried 'the largest hyperscale lease in company history'; greater-than-1 MW bookings that quarter were about USD 325m at share"
+   ],
+   "positioning": "No first-party competitive positioning is published. Independently, the January 2026 Bank of America downgrade argued the opposite of a leadership claim: that growth is 'constrained by the scale and location of its development pipeline, which is a poor fit for current AI driven demand', with AI capacity shifting to private operators in non-traditional locations.",
+   "soldThrough": "Direct, and increasingly through managed vehicles — the US Hyperscale Data Center Fund and the joint ventures hold hyperscale assets in which Digital Realty is both minority owner and manager.",
+   "targetSegments": "Hyperscale cloud providers, AI model developers and large enterprises taking multi-megawatt capacity",
+   "roadmap": "Kansas City: approximately 1,440 acres at Astra Enterprise Park, De Soto, Kansas, bought April 2026, with an energy service agreement for 600 MW by early 2028 rising to 2 GW at full delivery; the company's own community page describes Astra North as roughly 280 acres, nine buildings and about 3 million sq ft, developed in phases, and states no megawatt figure. Two Atlanta land assemblages for 1 GW-plus campuses closed in June 2026."
+  },
+  {
+   "name": "Connectivity and interconnection — ServiceFabric, cross connects, DRIX and IP Bandwidth",
+   "category": "Interconnection",
+   "description": "The network layer that distinguishes a colocation platform from a warehouse. ServiceFabric is described as a private, open virtual connectivity layer reaching 800-plus data centres and 350-plus cloud on-ramps, with a single multi-service port, a service directory and software-defined provisioning. Cross Connect is the physical meet-me-room connection ordered through the Marketplace Portal, offered at 255-plus facilities. Digital Realty Internet Exchange runs six exchanges in the United States and is pitched as a way of bypassing IP transit costs. IP Bandwidth is a dedicated multi-homed internet service at 100-plus facilities. Campus Connect and Metro Connect complete the set.",
+   "highlights": [
+    "ServiceFabric MCP, launched 17 June 2026, is the platform's most substantial product event of the period: a Model Context Protocol control plane available immediately across more than 800 Digital Realty and partner-connected data centres, with intent-based connectivity provisioning, real-time capacity and topology discovery, OAuth 2 identity control and agent-assisted diagnostics integrating Slack, Microsoft Teams, Splunk and Datadog, built on patented AI Private Exchange orchestration",
+    "Interconnection contributed USD 20.5m, 10%, of Q2 2026 bookings at Digital Realty's share",
+    "Two conflicting first-party cross-connect counts are published — 230,000 on the partner-programme page and 235,500-plus on the sponsored Digital Core REIT site; neither is dated",
+    "The 800-plus figure includes partner-connected sites, not only owned ones — a scope distinction the page makes and summaries routinely drop"
+   ],
+   "positioning": "The corpus's other dossiers place this layer second to Equinix by design: Equinix's own dossier records it as the retail-segment leader at about 17% share per Synergy and leader in 16 of the top 25 metros, with Digital Realty second in North America; QTS's dossier states that it does not compete with Equinix or Digital Realty on internet-exchange density. Digital Realty itself publishes no such comparison.",
+   "soldThrough": "Self-service through the Marketplace Portal for cross connects, direct sales for fabric and bandwidth, and the PartnerOne channel.",
+   "targetSegments": "Network and cloud providers, enterprises building hybrid architectures, and AI companies needing private paths between training and inference estates",
+   "roadmap": "No dated forward commitment is published for the connectivity line beyond the MCP launch itself."
+  },
+  {
+   "name": "Strategic private capital — funds, joint ventures and fee income",
+   "category": "Capital management",
+   "description": "Named by the company as one of its three core pillars of growth alongside colocation and connectivity and hyperscale, and the pillar that changes what kind of business this is. Digital Realty raises third-party equity, contributes a minority stake, keeps the development and management mandate, and books a fee. The supplemental lists twenty unconsolidated entities: Ascenty, Blackstone NoVa, Clise, Digital Realty DC Partners NA Fund, GI Partners, Mapletree, Menlo, Mitsubishi, Realty Income, TPG Real Estate, Walsh, Digital Realty Bersama, Digital Connexion, Lumen, MC Digital Realty, Blackstone Frankfurt, Blackstone Paris, Medallion, Mivne and Digital Core REIT.",
+   "highlights": [
+    "Fee income and other rose 98.3% in FY2025, from USD 72.5m to USD 143.8m — the fastest-growing line in the income statement",
+    "Annualised net development and management fees excluding promote income were USD 190.2m at Q2 2026; fee income grew 38% year on year on the same exclusion",
+    "The US Hyperscale Data Center Fund closed on 30 March 2026 at USD 3.25bn of equity commitments from public pensions, sovereign wealth funds, endowments, corporate pensions, insurers and family offices, targeting Northern Virginia, Santa Clara, Dallas, Atlanta, Charlotte and New York; Digital Realty holds 20% and is the manager",
+    "The Columbia Capital acquisition, announced 22 June 2026 for approximately USD 485m in 2.3 million shares with a lockup and performance earnout, brings roughly USD 9bn of fund commitments and is expected to close in the second half of 2026",
+    "The model also runs in reverse: on 29 June 2026 Digital Realty bought a blended 64% interest in three fully leased Northern Virginia data centres from Blackstone — 288 MW at a USD 7.8bn gross value and an initial stabilised cap rate above 6.5%, for USD 3.5bn in USD 1.2bn cash and USD 2.3bn of shares",
+    "Promote income now distorts the headline: Q2 2026 Core FFO was USD 2.65 a share including net promote and USD 2.13 excluding it"
+   ],
+   "positioning": "The corpus reads this from the other side: QTS's dossier argues that unlike public REITs Digital Realty and Equinix, perpetual private capital lets a sponsor-owned landlord buy land and power years ahead of leases, and STACK's argues it prices delivery credibility without public-REIT overhead. The fund business is the answer to exactly that critique — third-party capital on a REIT's balance sheet — and no independent source assesses whether it closes the gap.",
+   "soldThrough": "Institutional fundraising and bilateral joint ventures; Digital Core REIT is a separately listed Singapore vehicle that Digital Realty sponsors and manages.",
+   "targetSegments": "Public pensions, sovereign wealth funds, endowments and foundations, corporate pensions, insurers, asset managers and family offices",
+   "roadmap": "Columbia Capital close expected in the second half of 2026, subject to regulatory approvals."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-03",
+   "category": "leadership",
+   "headline": "Guilherme Reis appointed Managing Director for Iberia",
+   "read": "Third regional managing-director appointment in eighteen months; the platform is being run through country and regional heads as the European estate grows.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/3355819/digital-realty-appoints-guilherme-reis-as-managing-director-for-iberia"
+  },
+  {
+   "date": "2026-08-25",
+   "category": "capacity",
+   "headline": "Selected to develop 50 MW of new data centre capacity in Singapore",
+   "read": "Singapore allocates capacity by competitive application rather than open connection; winning an allocation is a regulatory outcome, not a commercial one, and is the only route to growth in that market.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30616/digital-realty-selected-to-develop-50-megawatts-of-new-data-center-capacity-in-singapore"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "policy",
+   "headline": "Welcomes Governor Abbott's initiative for responsible and transparent data-centre investment in Texas",
+   "read": "The same pre-emptive consent posture Compass, QTS and Vantage adopted; endorsing state standards is cheaper than fighting county by county.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30576/digital-realty-welcomes-governor-abbott-s-initiative-for-responsible-and-transparent-data-center-investment-in-texas"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "financial",
+   "headline": "Q2 2026: revenue USD 1.92bn (+29%), Core FFO USD 2.13 a share excluding net promote, record backlog USD 1.9bn at 100% share, cash renewal spread 25.4%; full-year Core FFO outlook raised to USD 8.15-8.20",
+   "read": "The third consecutive raise. The quarter is genuinely strong on the operating line, but the headline Core FFO of USD 2.65 includes net promote income and is not comparable to the USD 1.98 consensus — the honest comparison is USD 2.13.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926086270/dlr-20260723xex99d1.htm"
+  },
+  {
+   "date": "2026-06-30",
+   "category": "ma",
+   "headline": "Purchase of Blackstone's interest in three Northern Virginia data centres completes — blended 64% of 288 MW at a USD 7.8bn gross value, USD 3.5bn consideration in USD 1.2bn cash and USD 2.3bn of shares",
+   "read": "Buying back a joint-venture partner's majority at an above-6.5% initial stabilised cap rate, then placing Blackstone's residual equity through a secondary — the fund model unwinding at one campus while it scales elsewhere.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30426/digital-realty-announces-purchase-of-blackstone-interest-in-three-northern-virginia-data-centers"
+  },
+  {
+   "date": "2026-06-22",
+   "category": "ma",
+   "headline": "Transactions to drive continued platform growth: approximately 1,440 acres at Astra Enterprise Park near Kansas City for about USD 475m; an energy service agreement for 600 MW by early 2028 rising to two gigawatts at full delivery; Teraco raised to 77% for about USD 650m; Columbia Capital for about USD 485m",
+   "read": "The single most consequential announcement of the period, and the source of the '2 GW Kansas City' claim in circulation. The contracted figure is 600 MW; two gigawatts is the stated ceiling at full delivery. The release names only 'the local utility' — Evergy is a trade-press attribution.",
+   "source": "https://www.globenewswire.com/news-release/2026/06/22/3315175/0/en/Digital-Realty-Announces-Transactions-to-Drive-Continued-Platform-Growth.html"
+  },
+  {
+   "date": "2026-06-17",
+   "category": "product-launch",
+   "headline": "ServiceFabric MCP launches — a Model Context Protocol control plane across more than 800 data centres",
+   "read": "Positions the interconnection layer as something an AI agent can provision directly. Whether customers use it is unmeasurable from outside; no adoption figure has been published.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30386/digital-realty-launches-servicefabric-mcp-bringing-ai-native-programmable-control-to-800-data-centers"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "corporate",
+   "headline": "2025 Impact Report: 93% global renewable coverage, 1.7 GW of contracted large-scale renewables, PUE 1.38 globally and 1.20 average design PUE on six new builds, WUE 0.59",
+   "read": "The design-versus-operating PUE gap is the number to hold: new builds are specified at 1.20 while the operating fleet runs at 1.38, which is what a twenty-year-old portfolio costs.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30251/digital-realty-publishes-2025-impact-report-highlighting-sustainability-progress"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "customer",
+   "headline": "Mistral AI expands its AI services across Europe on Digital Realty",
+   "read": "A named sovereign-AI logo in Europe, where tenant identities are otherwise almost entirely redacted.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30246/mistral-ai-leverages-digital-realty-to-expand-its-ai-services-across-europe"
+  },
+  {
+   "date": "2026-04-23",
+   "category": "financial",
+   "headline": "Q1 2026: Core FFO USD 2.04 against USD 1.95 consensus, revenue USD 1.635bn; full-year outlook raised to USD 8.00-8.10",
+   "read": "First raise of the year, on the largest hyperscale lease in company history.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30156/digital-realty-reports-first-quarter-2026-results"
+  },
+  {
+   "date": "2026-04-09",
+   "category": "capacity",
+   "headline": "Targets nearly S$7bn of investment in Singapore, with more than S$4.3bn for new developments and headcount to 400 by 2030",
+   "read": "The largest single-market commitment the company has announced, in the market with the tightest regulatory ceiling on capacity.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30111/digital-realty-targets-nearly-s-7-billion-investment-to-strengthen-singapore-as-asia-pacific-ai-hub"
+  },
+  {
+   "date": "2026-03-30",
+   "category": "financial",
+   "headline": "Final close of the USD 3.25bn US Hyperscale Data Center Fund; Digital Realty retains 20% and serves as manager",
+   "read": "Proof that the third pillar raises institutional money at scale. It also means a growing share of reported growth sits in vehicles the company does not consolidate.",
+   "source": "https://www.globenewswire.com/news-release/2026/03/30/3264485/0/en/Digital-Realty-Announces-Final-Close-of-3-25-billion-U-S-Hyperscale-Data-Center-Fund.html"
+  },
+  {
+   "date": "2026-03-25",
+   "category": "customer",
+   "headline": "Delivers colocation infrastructure to Samsung Electronics in Seoul",
+   "read": "A rare named enterprise logo; most of the top-20 tenant table is redacted.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/30016/digital-realty-delivers-colocation-infrastructure-support-to-samsung-electronics-in-seoul"
+  },
+  {
+   "date": "2026-02-13",
+   "category": "financial",
+   "headline": "FY2025 Form 10-K: 310 data centres, approximately 57.6 million rentable sq ft, 84.7% leased, 769 MW underway at 64% pre-leased, top-20 customers at 50.9% of annualised recurring revenue, total debt USD 18.56bn at a 2.90% effective rate",
+   "read": "The concentration and the debt cost are the two facts that matter most and neither appears in the earnings release: half the revenue sits with twenty customers, and a 2.9% average coupon is a legacy stack that reprices upward on every refinancing.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm"
+  },
+  {
+   "date": "2026-02-09",
+   "category": "product-launch",
+   "headline": "NVIDIA certification for a liquid-cooled data centre in Japan",
+   "read": "Certification is becoming the gate for AI tenancy; a landlord without it cannot bid for reference-architecture deployments.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/20011/digital-realty-debuts-nvidia-certification-for-liquid-cooled-data-center-in-japan"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "financial",
+   "headline": "Q4/FY2025 results: FY2025 revenue USD 6.11bn (+10%), Core FFO USD 7.39 a share against USD 7.35 consensus; initial FY2026 Core FFO guidance USD 7.90-8.00 excluding net promote",
+   "read": "Guidance was set above the USD 7.87 consensus — an unusual posture, and one the company then beat twice.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/20001/digital-realty-reports-fourth-quarter-2025-results"
+  },
+  {
+   "date": "2026-02-02",
+   "category": "product-launch",
+   "headline": "First direct liquid-cooled AI deployment in the United Kingdom, with Imperial College London",
+   "read": "A research anchor tenant is a cheap way to commission a liquid-cooling reference site.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/19976/digital-realty-and-imperial-college-london-collaborate-on-first-direct-liquid-cooled-ai-deployment-in-the-uk"
+  },
+  {
+   "date": "2026-01-08",
+   "category": "market",
+   "headline": "Bank of America downgrades Digital Realty to Neutral from Buy, price target cut to USD 170 from USD 210",
+   "read": "The most substantive published challenge to the AI-landlord thesis: growth 'constrained by the scale and location of its development pipeline, which is a poor fit for current AI driven demand', with AI capacity shifting to private operators in non-traditional locations.",
+   "source": "https://finance.yahoo.com/news/digital-realty-hit-downgrade-data-185201518.html"
+  },
+  {
+   "date": "2025-11-19",
+   "category": "procurement",
+   "headline": "Schneider Electric and Digital Realty announce a USD 373m supply capacity agreement covering uninterruptible power supplies, low-voltage switchgear and pre-fabricated skids",
+   "read": "Buying equipment capacity rather than equipment — the response to switchgear and transformer lead times that now run into years. This is the single largest disclosed supplier commitment in the corpus's landlord set.",
+   "source": "https://www.prnewswire.com/news-releases/schneider-electric-and-digital-realty-announce-373m-supply-capacity-agreement-to-meet-rising-data-center-demand-302620427.html"
+  },
+  {
+   "date": "2025-11-12",
+   "category": "financial",
+   "headline": "Prices EUR 600m of guaranteed notes due 2033 and EUR 800m of guaranteed notes due 2037",
+   "read": "Euro funding against euro assets is the natural hedge the company cites; 46% of revenue is non-USD.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/19796/digital-realty-announces-pricing-of-600-million-of-guaranteed-notes-due-2033-and-800-million-of-guaranteed-notes-due-2037"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "partnership",
+   "headline": "Supports the NVIDIA AI Factory Research Center and the NVIDIA DSX Blueprint",
+   "read": "Aligning to a reference design is how a landlord gets specified into an AI build before competitive bidding starts.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123357/digital-realty-advances-ai-infrastructure-innovation-supporting-nvidia-ai-factory-research-center-and-nvidia-dsx-blueprint"
+  },
+  {
+   "date": "2025-09-16",
+   "category": "partnership",
+   "headline": "With OQC and NVIDIA, launches what it describes as the first quantum-AI data centre in New York City",
+   "read": "A frontier-workload marker rather than a revenue event.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123345/digital-realty-and-oqc-team-with-nvidia-to-launch-first-quantum-ai-data-center-in-new-york-city"
+  },
+  {
+   "date": "2025-09-15",
+   "category": "partnership",
+   "headline": "Expands the US clean-energy portfolio with a hydropower agreement",
+   "read": "Hydro is one of the few round-the-clock carbon-free products available to a buyer that needs hourly matching rather than annual certificates.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123344/digital-realty-expands-u-s-clean-energy-portfolio-with-hydropower-deal"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "partnership",
+   "headline": "Partners with Lumen on high-capacity connectivity for AI-ready data services",
+   "read": "Lumen is simultaneously the platform's 13th-largest tenant at 112 locations and a network partner — the carrier-neutral model in practice.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123353/digital-realty-and-lumen-partner-to-accelerate-ai-ready-data-services-with-high-capacity-connectivity"
+  },
+  {
+   "date": "2025-08-14",
+   "category": "market",
+   "headline": "Named a Leader in the IDC MarketScape worldwide datacenter colocation services 2025 vendor assessment for a fourth time",
+   "read": "The only third-party validation the company itself cites, and it is a leadership placement rather than a size ranking — which is the distinction its own superlative elides.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123337/digital-realty-named-a-leader-in-idc-marketscape-worldwide-datacenter-colocation-services-2025-vendor-assessment-for-fourth-time"
+  },
+  {
+   "date": "2025-04-24",
+   "category": "partnership",
+   "headline": "Deploys three Microsoft Azure ExpressRoute cloud on-ramps",
+   "read": "On-ramp density is the interconnection moat; each new on-ramp raises the switching cost for hybrid-cloud tenants.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123318/digital-realty-deploys-three-microsoft-azure-expressroute-cloud-on-ramps"
+  }
+ ],
+ "strategyRead": [
+  "1. **(High confidence)** We assess that the claim Digital Realty is the largest AI-data-centre landlord is **unfalsifiable rather than true or false**, and that the company knows it. Basis: every published ranking measures something else — Synergy measures colocation revenue share, Cushman & Wakefield ranks markets not operators, ABI Research measures active IT load, and no source ranks operators by AI-attributable leased capacity. The private platforms that a January 2026 Bank of America downgrade identified as capturing AI demand publish no comparable megawatt or revenue figure, so a category ranking would omit half the field by construction. Digital Realty's own superlative is always narrowed — 'the world's largest cloud- and carrier-neutral data center platform' — and is never attributed to a third party; the qualifier excludes hyperscaler self-build, which dwarfs both listed REITs. The defensible statement is narrower: largest by leasable area and development pipeline, second to Equinix on revenue and market value.",
+  "2. **(High confidence)** We assess the fund-management pillar is a structural response to the REIT constraint rather than a diversification play. Basis: a REIT must distribute most of its taxable income, so it cannot retain earnings to fund a USD 4.25-4.75bn annual development programme, and must issue equity and debt instead — the company issued 6.3 million shares at a weighted average USD 197.54 in June 2026 alone and a further 12.3 million for the Blackstone buy-in. Third-party capital breaks that constraint: the USD 3.25bn fund lets Digital Realty control assets on 20% of the equity while collecting a fee, and fee income rose 98.3% in FY2025. The cost is transparency — twenty unconsolidated entities now sit between the reader and the assets, and promote income has made the headline Core FFO number non-comparable to consensus.",
+  "3. **(Moderate confidence)** We assess the pre-leasing decline is a deliberate acceptance of speculative risk rather than a demand signal. Basis: capacity underway rose 82% in six months to 1,402 MW while the pre-leased share fell from 64% to 54%, meaning speculative capacity roughly doubled in absolute terms. Management simultaneously raised guidance three times and cites an 11.5% stabilised cash yield on the whole pipeline, which is only realisable if the unleased half leases. The judgment is moderate rather than high because no source establishes management intent; an equally consistent reading is that leases are lagging construction starts in a market where power, not demand, sets the schedule.",
+  "4. **(Moderate confidence)** We assess that the 2026 lease-expiry concentration is a larger near-term earnings lever than the development pipeline. Basis: 25.9% of annualised rent expires in 2026, and the greater-than-1 MW book renewed at +66.7% cash and +92.3% GAAP in Q2 2026, taking expiring rent from USD 159 to USD 265 per kW. Applied across a heavy expiry year in a supply-constrained market, mark-to-market on existing space can move earnings faster than 1,402 MW that commences over 2026-2028. Management's own guidance action is consistent — the full-year cash renewal-spread range was raised 250 basis points to 9.0-11.0%. Confidence is moderate because the 66.7% is one quarter, was attributed to APAC strength, and is not a run rate.",
+  "5. **(Moderate confidence)** We assess customer concentration is materially understated by the disclosure. Basis: the twenty largest customers are 50.9% of annualised recurring revenue and the top three approximately 26%, but nine of the twenty are redacted — including the largest at 11.7% ('Fortune 50 Software Company'), the third at 5.3% and the fourth at 4.5% — so roughly 24.6% of recurring revenue cannot be assigned to a named counterparty from public disclosure. Twenty of 310 data centres are single-customer buildings, including those occupied solely by the top three. **Collection gap:** we decline to infer the identities. No source we found resolves them, and the filing declines to say.",
+  "6. **(Low confidence)** We assess the legacy debt stack is the most underweighted risk in the equity story. Basis: USD 18.56bn of debt carries a 2.90% effective rate with a 4.5-year weighted average maturity, and USD 8.9bn matures across 2027-2029 into a materially higher rate environment; the company guided to USD 1.5-2.0bn of new long-term issuance in the second half of 2026 at 4.5-5.5%, roughly double the existing coupon. Confidence is low because no source models the earnings effect, the balance sheet is conservatively levered at 4.7 times net debt to Adjusted EBITDA with 5.2 times fixed-charge coverage, and 92% of the stack is fixed or swapped."
+ ],
+ "relationships": [
+  {
+   "slug": "oracle",
+   "type": "customer",
+   "note": "Second-largest customer at 9.0% of annualised recurring revenue across 42 locations, named in the FY2025 10-K.",
+   "context": "Oracle Corporation is the largest named customer in Digital Realty's twenty-largest-customer table — USD 424.1m of annualised recurring revenue, 9.0% of the total, across 42 locations, with a 10.2-year weighted average remaining lease term, the longest of any top-five tenant. Only the redacted 'Fortune 50 Software Company' at 11.7% is larger.\n\nThe commercial relationship runs beyond tenancy in both directions: Digital Realty deployed Oracle FastConnect in Singapore in December 2025 and announced a teaming arrangement with Oracle Solution Centers in July 2025. Oracle Cloud is one of the eight named cloud and technology alliances in the site navigation.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+   "status": "active",
+   "scale": "9.0% of annualised recurring revenue; 42 locations"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "note": "Eighth-largest customer at 1.6% of annualised recurring revenue across 49 locations, named in the FY2025 10-K.",
+   "context": "Meta Platforms, Inc. is named in the FY2025 10-K's twenty-largest-customer table at USD 73.5m of annualised recurring revenue, 1.6% of the total, spread across 49 locations with a 2.8-year weighted average remaining lease term. LinkedIn Corporation appears separately at 1.6% across 8 locations.\n\nThe location count is the interesting figure rather than the revenue: 49 sites at USD 1.5m each on average is a distributed edge and interconnection footprint, not hyperscale capacity, which Meta self-builds.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+   "status": "active",
+   "scale": "1.6% of annualised recurring revenue; 49 locations"
+  },
+  {
+   "slug": "equinix",
+   "type": "competitor",
+   "note": "Named as a competitor in Digital Realty's own 10-K — and simultaneously its sixth-largest customer at 2.0% of annualised recurring revenue.",
+   "context": "Digital Realty's FY2025 10-K names Equinix first among competitors: 'We compete with numerous data center providers globally... including Equinix, Inc. and NTT'. The same filing lists Equinix as the sixth-largest customer at USD 95.6m, 2.0% of annualised recurring revenue, across 14 locations on a 4.6-year weighted average term — the clearest illustration in the corpus that colocation operators lease from each other where footprints do not overlap.\n\nThe two lead different segments and the corpus records it from Equinix's side: Equinix is the retail-segment leader at about 17% share per Synergy and leader in 16 of the top 25 metros, with Digital Realty second in North America; Equinix's dossier separately describes competing for 'the wholesale capacity Digital Realty leads'. On measurables Equinix is larger by revenue (USD 9.2bn against USD 6.11bn in FY2025) and market value, while Digital Realty is larger by net rentable area and development pipeline.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+   "status": "active"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "supplier",
+   "note": "USD 373m supply capacity agreement for uninterruptible power supplies, low-voltage switchgear and pre-fabricated skids, announced 19 November 2025.",
+   "context": "The two companies announced a USD 373m supply capacity agreement on 19 November 2025 covering uninterruptible power supply systems, low-voltage switchgear and pre-fabricated skids. The structure is the point: this is a commitment to reserve manufacturing capacity rather than an order for equipment, which is what a buyer does when substation transformers run 75 to 110 weeks and medium-voltage switchgear is sold out into 2028.\n\nIt is the largest disclosed supplier commitment by any landlord in this corpus. Schneider's own dossier cites it as evidence that its design-led sales motion converts, while noting that no design-linked bookings figure is published and the conversion is therefore inferred.",
+   "source": "https://www.prnewswire.com/news-releases/schneider-electric-and-digital-realty-announce-373m-supply-capacity-agreement-to-meet-rising-data-center-demand-302620427.html",
+   "status": "active",
+   "since": "2025-11",
+   "scale": "USD 373m"
+  },
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "note": "Supports the NVIDIA AI Factory Research Center and the NVIDIA DSX Blueprint; holds an NVIDIA certification for a liquid-cooled data centre in Japan.",
+   "context": "Digital Realty announced support for the NVIDIA AI Factory Research Center and the NVIDIA DSX Blueprint on 3 November 2025, and debuted an NVIDIA certification for a liquid-cooled data centre in Japan on 9 February 2026. In September 2025 the two joined Oxford Quantum Circuits to launch what the parties describe as the first quantum-AI data centre in New York City.\n\nThe relationship is a specification one rather than a supply one: aligning a hall design to a reference architecture is how a landlord gets written into an AI deployment before competitive bidding. NVIDIA's dossier types its vendor relationships as partner rather than supplier for the same reason.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123357/digital-realty-advances-ai-infrastructure-innovation-supporting-nvidia-ai-factory-research-center-and-nvidia-dsx-blueprint",
+   "status": "active",
+   "since": "2025-11"
+  },
+  {
+   "slug": "qts",
+   "type": "partner",
+   "note": "Co-founder with QTS, Vantage and Compass Datacenters of Infrastructure for America, a 501(c)(4) launched 2 September 2026 to set host-community standards.",
+   "context": "On 2 September 2026 Compass Datacenters, Digital Realty, QTS and Vantage launched Infrastructure for America, a 501(c)(4) setting host-community standards for data-centre developers. The four are direct competitors for the same hyperscale leases; the coalition is a joint response to a consent environment that has cost the industry specific projects, including the Prince William Digital Gateway that QTS and Compass lost in court.\n\nThe corpus records the coalition from Compass's side, where it sits inside a broader account of consent as a cost line. QTS's own dossier separately argues that unlike public REITs Digital Realty and Equinix, perpetual private capital lets it buy land and power years ahead of leases — so the two are allies on consent and opponents on capital structure.",
+   "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+   "status": "active",
+   "since": "2026-09"
+  },
+  {
+   "slug": "vantage",
+   "type": "partner",
+   "note": "Co-founder of the Infrastructure for America 501(c)(4) alongside Compass, Digital Realty and QTS, launched 2 September 2026.",
+   "context": "Vantage Data Centers is one of the four co-founders of Infrastructure for America, announced 2 September 2026, a 501(c)(4) that sets host-community standards for data-centre developers. Vantage and Digital Realty compete directly for hyperscale capacity in Northern Virginia, Phoenix and the Nordics, and the coalition is a narrow, single-issue alliance rather than a commercial relationship.",
+   "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+   "status": "active",
+   "since": "2026-09"
+  },
+  {
+   "slug": "compass-datacenters",
+   "type": "partner",
+   "note": "Co-founder of the Infrastructure for America 501(c)(4), launched 2 September 2026; Compass was founded by a former Digital Realty executive.",
+   "context": "Compass Datacenters and Digital Realty co-founded Infrastructure for America with QTS and Vantage on 2 September 2026. Compass's dossier records the launch and quotes founder Chris Crosby — himself a former Digital Realty senior vice president — on the distinction between 'building to last and building to exit'.\n\nThe two sit at opposite ends of the ownership spectrum in this corpus: Compass is co-controlled by Brookfield Infrastructure and Ontario Teachers' with KKR at asset level and publishes no accounts, while Digital Realty publishes quarterly. An independent 2026 buyer's guide lists both, with QTS, Vantage, CyrusOne, STACK, Aligned, DataBank, NTT, Equinix xScale and Tract, as dedicated hyperscale campus developers.",
+   "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+   "status": "active",
+   "since": "2026-09"
+  },
+  {
+   "slug": "cyrusone",
+   "type": "competitor",
+   "note": "Both are wholesale and hyperscale data-centre landlords; the contrast between them is listed-REIT against sponsor-owned capital structure.",
+   "context": "CyrusOne and Digital Realty compete for the same wholesale and hyperscale leases in Northern Virginia, Dallas, Phoenix, Chicago, Frankfurt, London, Amsterdam, Paris, Madrid and Dublin, and independent buyer's guides list them in the same set of dedicated hyperscale campus developers.\n\nThey are the cleanest listed-versus-private comparison available in this corpus. Digital Realty publishes quarterly results, a top-twenty tenant table and a development pipeline; CyrusOne, taken private by KKR and Global Infrastructure Partners in March 2022, publishes no revenue, EBITDA or backlog and reaches the capital markets through asset-backed securitisations whose collateral tables are the only public window on its tenancy. Independent rankings place them close together and disagree about the order: USDataMap's tracked-capacity table puts CyrusOne at 3,026 MW against Digital Realty's 2,878 MW, while ABI Research's active-IT-load measure puts Digital Realty at 686 MW against CyrusOne's 674 MW.",
+   "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
+   "status": "active"
+  },
+  {
+   "slug": "dpr",
+   "type": "supplier",
+   "note": "Digital Realty appears on DPR Construction's published colocation and wholesale client roster.",
+   "context": "DPR Construction's dossier records a named colocation and wholesale customer roster that includes Digital Realty alongside CoreSite, CyrusOne, DataBank, Equinix, Flexential, Global Switch, NTT, QTS, Stream and Vantage.\n\nThe attribution is DPR's own client list and no specific Digital Realty project, campus or contract value is named by either party. Digital Realty publishes no general-contractor relationships at all, and a Stage 2 search of industry contractor rankings found only that both companies appear in the same market listings — not that one builds for the other. The edge is recorded at the level the source supports: a builder's published client roster.",
+   "source": "https://www.dpr.com/company/advanced-technology",
+   "status": "active"
+  },
+  {
+   "slug": "microsoft",
+   "type": "partner",
+   "note": "Three Microsoft Azure ExpressRoute cloud on-ramps deployed on the platform, announced 24 April 2025.",
+   "context": "Digital Realty announced the deployment of three Microsoft Azure ExpressRoute cloud on-ramps on 24 April 2025, and Microsoft Azure is one of eight named cloud and technology alliances in the site navigation. ExpressRoute on-ramps are the mechanism by which a colocation tenant reaches Azure over a private path rather than the public internet, and on-ramp count is one of the two numbers Digital Realty publishes for its fabric — 350-plus across 800-plus sites.\n\n**No source establishes Microsoft as a Digital Realty tenant.** The largest customer in the FY2025 10-K is disclosed only as a 'Fortune 50 Software Company' at 11.7% of annualised recurring revenue, and the filing declines to name it; this dossier does not infer the identity.",
+   "source": "https://www.digitalrealty.com/about/newsroom/press-releases/123318/digital-realty-deploys-three-microsoft-azure-expressroute-cloud-on-ramps",
+   "status": "active",
+   "via": "Azure ExpressRoute"
+  },
+  {
+   "slug": "nebius",
+   "type": "customer",
+   "note": "Nebius's UK programme includes Digital Realty Docklands colocation, recorded on Nebius's side.",
+   "context": "The Nebius dossier records that its roughly GBP 1.7bn, approximately 65 MW-by-2027 UK programme runs across Vantage's CWL1 campus in Newport, Kao Data Harlow, the Ark Chertsey site and Digital Realty Docklands colocation.\n\nThe relationship is one-sided in the corpus: Nebius names Digital Realty as a colocation provider, and Digital Realty names no AI-cloud tenants at all. Tenant identity is redacted throughout its filings, so the neocloud side is the only place these arrangements surface.",
+   "source": "https://nebius.com/newsroom/nebius-expands-in-uk-with-more-nvidia-powered-infrastructure-more-customers-and-more-cloud-capabilities-for-agentic-and-enterprise-ai",
+   "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FERC co-location and large-load rules for PJM (Docket EL25-49)",
+   "status": "in-effect",
+   "effectiveDate": "2025-12-18",
+   "exposure": "FERC directed PJM on 18 December 2025, by a 5-0 vote, to create transparent rules for co-locating large loads with grid-connected generation and to revise its behind-the-meter generation rules, establishing three new transmission services: Firm Contract Demand, Non-Firm Contract Demand and Interim Non-Firm. Compliance filings were due 20 January and 16 February 2026, and FERC partially accepted and partially rejected them on 16 April 2026. Digital Realty's largest land bank sits inside PJM: the FY2025 10-K states more than 1,000 MW of developable capacity in Northern Virginia alone, and Northern Virginia carries 842 MW of white-space IT load across 32 data centres at 98.6% occupancy.",
+   "mitigation": "None stated by the company. Digital Realty has not published a position on the docket.",
+   "source": "https://www.bdlaw.com/publications/ferc-orders-pjm-to-create-clear-rules-for-co-located-data-centers-and-large-loads/"
+  },
+  {
+   "regime": "EU Energy Efficiency Directive 2023/1791 and Delegated Regulation (EU) 2024/1364 — data-centre reporting",
+   "status": "in-effect",
+   "effectiveDate": "2026-05-15",
+   "exposure": "Data centres with 500 kW or more of installed IT power demand must report 24 performance indicators annually by 15 May — the 2026 deadline covered calendar 2025 — spanning energy consumption, capacity utilisation, waste heat and water, published into a European database at EU and country level. Every Digital Realty European site materially exceeds the threshold; the Interxion-legacy estate spans Frankfurt (184 MW across 29 data centres), London (96 MW), Amsterdam (140 MW), Paris, Dublin, Madrid, Marseille and the Nordics.",
+   "mitigation": "The company reports fleet PUE of 1.38 globally and 1.31 across EMEA, WUE of 0.59, and CarbonNeutral certification covering Denmark, France, the Netherlands and Sweden — 42% of the European portfolio by IT capacity.",
+   "source": "https://www.whitecase.com/insight-alert/data-centres-and-energy-consumption-evolving-eu-regulatory-landscape-and-outlook-2026"
+  },
+  {
+   "regime": "Ireland — CRU large energy user connection policy and the EirGrid Dublin constraint",
+   "status": "in-effect",
+   "effectiveDate": "2025-12",
+   "exposure": "Ireland's de-facto Dublin connection moratorium, in place since 2021, was replaced in December 2025 by a policy under which new large energy users above 10 MVA must provide new on-site or proximate generation or storage, participate in the Single Electricity Market, accept mandatory demand curtailment absent performance standards, and meet 80% of annual demand from additional Irish renewable generation within six years of energisation. Digital Realty's exposure is concrete rather than prospective: its fully built DUB4 facility at Grange Castle has been reported as sitting idle awaiting grid access after two failed connection appeals.",
+   "mitigation": "Following Ireland's July 2026 policy statement permitting private wires and on-site generation, the company was reported as intending to partner with an energy company to build its own gas plant for the Dublin site. **This is single-sourced trade-press reporting that could not be read directly** — the reporting host returned HTTP 403 and no archive capture was reachable — so the DUB4 capacity and cost figures in circulation are recorded here as unverified.",
+   "source": "https://www.williamfry.com/knowledge/cru-publishes-long-awaited-final-policy-on-data-centre-connections/"
+  },
+  {
+   "regime": "Kansas Large Load Power Service tariff",
+   "status": "in-effect",
+   "effectiveDate": "2026",
+   "exposure": "The Astra Enterprise Park campus at De Soto, Johnson County, Kansas is served under the state's Large Load Power Service rate structure, and the City of De Soto's own project page states that Digital Realty will fund the transmission, substation and other electric infrastructure improvements. The same page records a 1 million gallon per day water allocation with air cooling for 85-90% of the year and evaporative cooling at peak.",
+   "mitigation": "Self-funding the interconnection is the mitigation — the same 'pay for our own power delivery' posture EdgeCore and Compass have adopted.",
+   "source": "https://www.desotoks.us/498/Digital-Realty-Data-Center"
+  },
+  {
+   "regime": "Section 232 tariffs on steel, aluminium and copper derivative articles",
+   "status": "in-effect",
+   "effectiveDate": "2027-12-31",
+   "exposure": "Transformers and switchgear carry a 15% rate through 31 December 2025 to 2027 under the reduced schedule for industrial and electrical grid equipment, while steel, aluminium and copper derivative articles are tariffed at 25% of full customs value. Lead times compound the cost: substation transformers at 75 to 110 weeks, generator step-up units at 100 to 150-plus weeks, and 15 kV medium-voltage switchgear at 52 to 80 weeks with many manufacturers sold out through 2028. The FY2025 10-K carries a matching risk factor on supply-chain and procurement disruption and increased supply-chain costs.",
+   "mitigation": "The USD 373m Schneider Electric supply capacity agreement of November 2025 reserves manufacturing capacity for uninterruptible power supplies, low-voltage switchgear and pre-fabricated skids rather than ordering equipment — a direct answer to the lead-time constraint.",
+   "source": "https://www.csis.org/analysis/impact-tariffs-ai-data-center-buildout-balancing-supply-chain-security-and-ai"
+  },
+  {
+   "regime": "US state data-centre tax exemptions under review — Virginia, Ohio, Georgia, Texas",
+   "status": "proposed",
+   "effectiveDate": "2026",
+   "exposure": "Virginia's sales and use tax exemption, worth about USD 1.6bn a year against a FY2025 state and local cost of USD 1.94bn, is contested — the Senate has sought elimination or an impact fee while the House has sought environmental-compliance conditions, with fifteen data-centre bills passing in the 2026 session and no consensus reached. Ohio paused its subsidy for new applicants in May 2026 after disclosing a USD 1.6bn 2025 cost. Georgia's SB 410 would end the exemption for new data centres while grandfathering existing ones. Texas has deferred its review to the 2027 session. Digital Realty's largest US concentrations are Northern Virginia, Chicago, Dallas and Atlanta, so three of the four regimes bear directly on the portfolio.",
+   "mitigation": "The company publicly welcomed Governor Abbott's Texas standards initiative on 7 August 2026 and co-founded the Infrastructure for America coalition on 2 September 2026 — pre-emptive engagement rather than opposition.",
+   "source": "https://www.multistate.us/insider/2026/3/30/virginia-lawmakers-pass-15-data-center-bills-as-tax-exemption-fight-looms"
+  },
+  {
+   "regime": "Singapore data-centre capacity allocation scheme",
+   "status": "in-effect",
+   "exposure": "Singapore's 2019 moratorium on new data centres has been replaced by a competitive, efficiency-gated call-for-applications process rather than open connection. Digital Realty was selected to develop 50 MW of new capacity on 25 August 2026, inside a stated near-S$7bn investment programme with more than S$4.3bn for new developments.",
+   "mitigation": "Winning an allocation is itself the mitigation; the company also opened a Global Command Center in Singapore in December 2025 and an Innovation Lab there in February 2026.",
+   "source": "https://www.datacentres.com/news/singapore-lifts-data-centre-moratorium"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "High-Density Colocation — the AI product (company product page, undated)",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Rack density range",
+     "value": "Starting at just 30 kW per cabinet, this solution scales to multi-MW sizes and up to 150 kW per cabinet"
+    },
+    {
+     "band": "Cooling",
+     "label": "Named cooling technologies",
+     "value": "Air-Assisted Liquid Cooling (AALC) and Direct Liquid Cooling (DLC)"
+    },
+    {
+     "band": "Footprint",
+     "label": "Availability",
+     "value": "170 sites across 33 markets"
+    },
+    {
+     "band": "Energy",
+     "label": "Renewable coverage claim",
+     "value": "100% Renewable coverage achieved for our U.S. colocation and European portfolios"
+    }
+   ],
+   "notes": "Verbatim from the High-Density Colocation and AI solutions pages. No first-party source names rear-door heat exchangers as a product option, and no first-party source publishes N+1 or 2N topology, UPS and generator configuration, floor loading, ceiling heights or ASHRAE ranges — those reach customers through sales-cycle documents rather than the web."
+  },
+  {
+   "product": "Portfolio efficiency and scale (2025 Impact Report, 27 May 2026; Corporate Profile, 30 June 2026)",
+   "specs": [
+    {
+     "band": "Efficiency",
+     "label": "Fleet PUE, global",
+     "value": "1.38 PUE globally"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Fleet PUE, EMEA",
+     "value": "1.31 PUE across EMEA portfolio"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Design PUE, 2025 new builds",
+     "value": "1.20 average design PUE for six new 2025 data centers (1.8M sq ft, 196 MW-IT)"
+    },
+    {
+     "band": "Water",
+     "label": "Water usage effectiveness",
+     "value": "0.59 WUE globally, a 15.7% improvement year on year; 45% of water from non-potable sources"
+    },
+    {
+     "band": "Energy",
+     "label": "Renewable coverage",
+     "value": "93% global renewable energy coverage, up 18% over the prior year; 1.7 GW of large-scale renewable energy capacity; 205 sites matched 100%"
+    },
+    {
+     "band": "Scale",
+     "label": "Data centres",
+     "value": "310 data centers, including 89 data centers held as investments in unconsolidated entities"
+    },
+    {
+     "band": "Scale",
+     "label": "IT capacity",
+     "value": "approximately 3.1 gigawatts of IT capacity, as well as approximately 8.5 gigawatts of buildable IT capacity under active development and held for future development"
+    },
+    {
+     "band": "Scale",
+     "label": "Rentable area and occupancy",
+     "value": "approximately 57.6 million rentable square feet... approximately 84.7% leased (31 December 2025)"
+    },
+    {
+     "band": "Scale",
+     "label": "Under construction",
+     "value": "1,402 megawatts of projects underway, an approximately 82% increase... 54% pre-leased (30 June 2026)"
+    },
+    {
+     "band": "Returns",
+     "label": "Stabilised yield on pipeline",
+     "value": "pre-tax stabilized cash yields on our total 1,402 megawatts... is approximately 11.5%"
+    }
+   ],
+   "notes": "Scale figures from the Q2 2026 Corporate Profile and the FY2025 10-K; efficiency figures from the 2025 Impact Report. The design-versus-operating PUE gap (1.20 against 1.38) is the age of the portfolio, not a measurement inconsistency. Caution on a figure in circulation: several aggregator pages state '2,967.7 MW of white-space IT load' — that is a misreading of USD 2,945.0m of non-US revenue, and the FY2025 10-K publishes no single total operating-megawatt figure."
+  },
+  {
+   "product": "Connectivity platform (company product pages, undated)",
+   "specs": [
+    {
+     "band": "Fabric",
+     "label": "ServiceFabric reach",
+     "value": "800+ data centers and 350+ cloud on-ramps"
+    },
+    {
+     "band": "Fabric",
+     "label": "Cross Connect availability",
+     "value": "255+ Digital Realty facilities offering Cross Connects"
+    },
+    {
+     "band": "Fabric",
+     "label": "Cross connects deployed",
+     "value": "230,000 (partner-programme page) / 235,500+ (Digital Core REIT sponsor page)"
+    },
+    {
+     "band": "Fabric",
+     "label": "Internet exchanges",
+     "value": "6 Number of DRIX exchanges in the US"
+    },
+    {
+     "band": "Fabric",
+     "label": "IP Bandwidth availability",
+     "value": "100+ facilities that offer IP Bandwidth"
+    },
+    {
+     "band": "Availability",
+     "label": "Uptime claim",
+     "value": "unequaled uptime (99.999%); 3,300+ site years of operational excellence"
+    },
+    {
+     "band": "Compliance",
+     "label": "Certifications",
+     "value": "SOC 1, SOC 2, SOC 3, ISAE 3402 Type 2, ISO 9001, 14001, 20000-1, 22301, 27001, 27701, 37001, 37301, 45001, 50001, PCI-DSS, NIST SP 800-53, TISAX, HDS, FINMA RS-18/3, ENS, EN 50600, MAS and MAS TVRA"
+    },
+    {
+     "band": "Compliance",
+     "label": "Tier certifications",
+     "value": "Tier II, Tier III, Tier IV"
+    }
+   ],
+   "notes": "The two cross-connect counts are both first-party, both undated and mutually inconsistent; both are quoted rather than reconciled. The 800-plus ServiceFabric figure includes partner-connected sites, not owned facilities. HIPAA and HITRUST do not appear on the published certifications page despite a healthcare vertical page — a gap, not an omission by this dossier."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Andrew P. Power",
+   "title": "President and Chief Executive Officer",
+   "background": [
+    "President and Chief Executive Officer since 2022; also a director since 2022, age 46 per the 2026 proxy",
+    "Chief Financial Officer of Digital Realty before becoming CEO",
+    "The Chair and CEO roles are held separately — Mary Hogan Preusse is independent Board Chair, so no lead independent director is designated"
+   ]
+  },
+  {
+   "name": "Matthew R. Mercier",
+   "title": "Chief Financial Officer",
+   "background": [
+    "Chief Financial Officer, Digital Realty",
+    "Listed as 'Matt Mercier' on the company leadership page and 'Matthew R. Mercier' in the quarterly supplement's senior-management block"
+   ]
+  },
+  {
+   "name": "Gregory S. Wright",
+   "title": "Chief Investment Officer",
+   "background": [
+    "Chief Investment Officer, Digital Realty — the officer over the acquisition, disposition and fund-formation programme that closed the USD 3.25bn US Hyperscale Data Center Fund and the USD 3.5bn Blackstone Northern Virginia buy-in in 2026"
+   ]
+  },
+  {
+   "name": "Christopher L. Sharp",
+   "title": "Chief Technology Officer",
+   "background": [
+    "Chief Technology Officer, Digital Realty — the officer over PlatformDIGITAL, the PDx design methodology and the ServiceFabric product line, including the June 2026 MCP launch"
+   ]
+  },
+  {
+   "name": "Colin M. McLean",
+   "title": "Chief Revenue Officer",
+   "background": [
+    "Chief Revenue Officer, Digital Realty"
+   ]
+  },
+  {
+   "name": "Jeff Tapley",
+   "title": "Chief Operating Officer",
+   "background": [
+    "Chief Operating Officer, Digital Realty"
+   ]
+  },
+  {
+   "name": "Jeannie Lee",
+   "title": "Executive Vice President, General Counsel and Secretary",
+   "background": [
+    "Executive Vice President, General Counsel and Secretary, Digital Realty"
+   ]
+  },
+  {
+   "name": "Cindy Fiedelman",
+   "title": "Chief Human Resources Officer",
+   "background": [
+    "Chief Human Resources Officer, Digital Realty"
+   ]
+  },
+  {
+   "name": "Steve Smith",
+   "title": "Managing Director, Americas",
+   "background": [
+    "Managing Director for the Americas — the region carrying 156 data centres and 1,809 MW of white-space IT load at 95.7% occupancy at 30 June 2026"
+   ]
+  },
+  {
+   "name": "Paula Cogan",
+   "title": "EMEA Managing Director",
+   "background": [
+    "EMEA Managing Director, appointed February 2025",
+    "Runs the Interxion-legacy estate, which carries the majority of the company's 4,282 employees — 2,040 in EMEA against 1,948 in North America"
+   ]
+  },
+  {
+   "name": "Serene Nah",
+   "title": "Managing Director and Head of Asia Pacific",
+   "background": [
+    "Managing Director and Head of Asia Pacific",
+    "The region behind the near-S$7bn Singapore programme, the 50 MW Singapore allocation of August 2026 and the NVIDIA-certified liquid-cooled facility in Japan"
+   ]
+  },
+  {
+   "name": "Mary Hogan Preusse",
+   "title": "Board Chair (independent)",
+   "background": [
+    "Independent Board Chair; director since 2017, age 57 per the 2026 proxy",
+    "Senior Advisor, Fifth Wall",
+    "Chairs a board of ten directors, nine of them independent"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "USD 5,554,968 thousand",
+      "expected": "",
+      "verdict": "",
+      "result": "No separate revenue consensus was recoverable for the full year; the comparable consensus that year was on Core FFO per share.",
+      "kpi": "revenue",
+      "usdMillions": 5555,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income available to common stockholders",
+      "actual": "USD 561,766 thousand",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 562,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Constant-currency Core FFO per share",
+      "actual": "USD 6.72, up about 2% year on year",
+      "expected": "USD 6.71 (Zacks consensus)",
+      "verdict": "beat",
+      "result": "A one-cent beat — in substance in line. Q4 2024 revenue of USD 1.44bn missed a USD 1.46bn consensus in the same reporting cycle."
+     }
+    ],
+    "commentary": "The base year against which the 2025-2026 acceleration is measured. Fee income was USD 72,496 thousand."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "USD 6,112,692 thousand, up USD 557,724 thousand or 10.0%; rental and other services USD 5,968,918 thousand and fee income and other USD 143,774 thousand, the latter up 98.3%",
+      "expected": "USD 6.06bn (Zacks consensus)",
+      "verdict": "beat",
+      "result": "Beat on revenue and on Core FFO in the same print.",
+      "kpi": "revenue",
+      "usdMillions": 6113,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income available to common stockholders",
+      "actual": "USD 1,267,865 thousand; USD 3.58 a diluted share",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 1268,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Core FFO per share",
+      "actual": "USD 7.39, up 10.1%; FFO per share USD 6.96; constant-currency Core FFO per share USD 7.29",
+      "expected": "USD 7.35 (Zacks consensus)",
+      "verdict": "beat",
+      "result": "Beat by four cents. Core FFO rather than net income is the REIT's headline earnings measure because depreciation on buildings that are not losing value distorts GAAP earnings."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "approximately USD 3.340 billion",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Total bookings at Digital Realty's share",
+      "actual": "USD 175m — USD 96m from 0-1 MW plus interconnection and USD 78m from greater-than-1 MW; USD 400m at 100% share. Backlog USD 817m of annualised GAAP base rent, 58.6 MW",
+      "expected": "",
+      "verdict": "",
+      "result": "The FY2025 booking mix inverted in 2026: greater-than-1 MW went from USD 78m for the whole of 2025 to about USD 325m in Q1 2026 alone."
+     },
+     {
+      "name": "Total debt and cost",
+      "actual": "USD 18,557 million at a 2.90% effective interest rate; 92.2% fixed including swaps; maturities of USD 904.7m in 2026, USD 1,441.3m in 2027, USD 2,559.2m in 2028 and USD 3,801.5m in 2029",
+      "expected": "",
+      "verdict": "",
+      "result": "The legacy coupon is the underappreciated exposure — USD 8.9bn matures across 2027-2029 against second-half-2026 issuance guided at 4.5-5.5%."
+     }
+    ],
+    "commentary": "The 10-K also discloses the concentration that the earnings release does not: the twenty largest customers are approximately 51% of total annualised recurring revenue, the top three approximately 26%, and 20 of 310 data centres are single-customer buildings including those occupied solely by the top three. 25.9% of annualised rent expires in 2026. No material legal proceedings were disclosed and there is no material weakness or going-concern language."
+   },
+   {
+    "period": "Q2 2026 (latest interim)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "USD 1,924,040 thousand, up 18% sequentially and 29% year on year",
+      "expected": "USD 1.67bn consensus",
+      "verdict": "beat",
+      "result": "A large beat, helped by the consolidation of the three Northern Virginia assets bought from Blackstone on 30 June 2026."
+     },
+     {
+      "name": "Core FFO per share excluding net promote income",
+      "actual": "USD 2.13, a record and up 14% year on year; reported Core FFO including net promote was USD 2.65 and FFO was USD 2.73",
+      "expected": "USD 1.98 consensus",
+      "verdict": "beat",
+      "result": "The honest comparison is USD 2.13 against USD 1.98. Consensus was framed excluding promote income, so any 'beat by USD 0.67' reading against the USD 2.65 headline is wrong."
+     },
+     {
+      "name": "Net income available to common stockholders",
+      "actual": "USD 443.1 million, USD 1.21 a diluted share, against USD 2.94 a share in Q2 2025",
+      "expected": "",
+      "verdict": "",
+      "result": "The year-on-year fall is a gains-on-sale comparison rather than an operating deterioration."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "USD 978 million, up 6% sequentially and 19% year on year",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Cash rental rate change on renewals",
+      "actual": "25.4% cash and 32.0% GAAP overall; 0-1 MW at 5.2% cash on 55% of renewals and greater-than-1 MW at 66.7% cash and 92.3% GAAP on 44%; expiring-to-renewed cash rent moved USD 331 to USD 348 per kW for 0-1 MW and USD 159 to USD 265 per kW for greater-than-1 MW on USD 261 million of signed renewals",
+      "expected": "",
+      "verdict": "",
+      "result": "Described by the company as a record cash mark-to-market led by APAC strength; full-year renewal-spread guidance was raised 250 basis points to 9.0-11.0% cash."
+     },
+     {
+      "name": "Total bookings at Digital Realty's share",
+      "actual": "USD 208.5 million (USD 307 million at 100% share) — 0-1 MW USD 87.8m at 42%, interconnection USD 20.5m at 10%, greater-than-1 MW USD 99.8m at 48%, other USD 0.3m; 142 new logos; bookings growth 21% year on year. Two further hyperscale leases signed in July for USD 410 million at 100% share",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Backlog",
+      "actual": "USD 1,427 million at Digital Realty's share and a record USD 1.9 billion at 100% share, about 30% of in-place data-centre rent at share; commencing USD 635m in 2026, USD 480m in 2027 and USD 312m in 2028 and beyond, on a nine-month weighted-average lag",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "In-place IT capacity",
+      "actual": "approximately 3.1 gigawatts of IT capacity across 310 data centres, with approximately 8.5 gigawatts buildable under active and future development",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "mw-energized",
+      "qty": 3100
+     },
+     {
+      "name": "Leverage",
+      "actual": "Net debt to Adjusted EBITDA 4.7 times; fixed-charge coverage 5.2 times; total debt USD 18,635 million against a total enterprise value of USD 87,034 million, 21.4%; 92% unsecured, 90% fixed, weighted average maturity 4.5 years at a 2.9% weighted average coupon",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     }
+    ],
+    "commentary": "Guidance was raised for the third time in three quarters: full-year Core FFO per share excluding net promote income to USD 8.15-8.20 from USD 8.00-8.10 in April and USD 7.90-8.00 in February, with revenue to USD 6.85-6.95bn, Adjusted EBITDA to USD 3.75-3.85bn, same-capital cash NOI growth to 4.25-5.25% and development capital expenditure net to USD 4.25-4.75bn from USD 3.50-4.00bn. Currency exposure is material and disclosed: 54% USD, 23% EUR, 5% SGD, 5% GBP, 4% ZAR, with a plus or minus 10% move in either GBP or EUR worth about 2% of Core FFO per share, and full-year guidance assuming a USD 0.05 per-share FX drag."
+   }
+  ],
+  "commentary": "Digital Realty reports as a REIT, so Core FFO per share rather than earnings per share is the number management guides and the market trades. Three consecutive guidance raises through 2026 sit against one substantive published challenge — the January 2026 Bank of America downgrade to Neutral with the price target cut to USD 170 from USD 210, arguing the pipeline is poorly located for AI demand. Two comparability warnings apply to any series built from these figures: net promote income makes Q2 2026 reported Core FFO non-comparable with consensus and with prior quarters, and the Q1 2026 consensus figure is disputed across outlets (USD 1.95 in one, USD 1.80 in another) and could not be reconciled. No published consensus was found for FY2023 or for Q2 and Q3 2025, and none has been reconstructed."
+ },
+ "sources": [
+  {
+   "label": "Digital Realty — Appoints Guilherme Reis as Managing Director for Iberia",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3355819/digital-realty-appoints-guilherme-reis-as-managing-director-for-iberia",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Compass Datacenters — Infrastructure for America launches, co-founded with Digital Realty, QTS and Vantage",
+   "url": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Digital Realty — Breaks ground on new data center in Switzerland",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3351782/digital-realty-breaks-ground-on-new-state-of-the-art-data-center-in-switzerland",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Digital Realty — Selected to develop 50 megawatts of new data center capacity in Singapore",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30616/digital-realty-selected-to-develop-50-megawatts-of-new-data-center-capacity-in-singapore",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Digital Realty — Welcomes Governor Abbott's initiative for responsible and transparent data center investment in Texas",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30576/digital-realty-welcomes-governor-abbott-s-initiative-for-responsible-and-transparent-data-center-investment-in-texas",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "SEC — Digital Realty Trust Form 10-Q for the quarter ended 30 June 2026 (1,402 MW underway, 54% pre-leased, 11.5% stabilised yield, Astra land at USD 482m)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926089296/dlr-20260630x10q.htm",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "SEC — Digital Realty 8-K Exhibit 99.1, Q2 2026 earnings release and financial supplement (bookings, backlog, renewal spreads, occupancy, guidance, Corporate Profile)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926086270/dlr-20260723xex99d1.htm",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Digital Realty — Reports second quarter 2026 results",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30551/digital-realty-reports-second-quarter-2026-results",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "KCUR — De Soto data center complaints (residents petition for a moratorium; the separate Beale Infrastructure project)",
+   "url": "https://www.kcur.org/housing-development-section/2026-07-09/de-soto-data-center-complaints-beale-infrastructure",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "Digital Realty — Prices secondary offering of common stock by Blackstone",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30456/digital-realty-prices-secondary-offering-of-common-stock-by-blackstone",
+   "date": "2026-06-30"
+  },
+  {
+   "label": "Digital Realty — Announces purchase of Blackstone interest in three Northern Virginia data centers (blended 64% of 288 MW; USD 7.8bn gross value; >6.5% initial stabilised cap rate)",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30426/digital-realty-announces-purchase-of-blackstone-interest-in-three-northern-virginia-data-centers",
+   "date": "2026-06-29"
+  },
+  {
+   "label": "Johnson County Post — De Soto Digital Realty data center",
+   "url": "https://johnsoncountypost.com/2026/06/29/de-soto-digital-realty-data-center-289786/",
+   "date": "2026-06-29"
+  },
+  {
+   "label": "Commercial Property Executive — Digital Realty enters Kansas City to build 600MW campus (attributes the local utility as Evergy; 'scalable up to 2 gigawatts after initial delivery')",
+   "url": "https://www.commercialsearch.com/news/digital-realty-enters-kansas-city-to-build-600mw-campus/",
+   "date": "2026-06-25"
+  },
+  {
+   "label": "GlobeNewswire — Digital Realty announces transactions to drive continued platform growth (Astra Enterprise Park ~1,440 acres for ~USD 475m; 600 MW energy service agreement rising to two gigawatts; Teraco to 77%; Columbia Capital)",
+   "url": "https://www.globenewswire.com/news-release/2026/06/22/3315175/0/en/Digital-Realty-Announces-Transactions-to-Drive-Continued-Platform-Growth.html",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Digital Realty — Launches ServiceFabric MCP, bringing AI-native programmable control to 800+ data centers",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30386/digital-realty-launches-servicefabric-mcp-bringing-ai-native-programmable-control-to-800-data-centers",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "SEC — Digital Realty 8-K Item 5.07, results of the 2026 annual meeting (the water-policy shareholder proposal rejected)",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001297996&type=8-K&dateb=&owner=include&count=40",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Digital Realty — Publishes 2025 Impact Report (93% renewable coverage, 1.7 GW contracted, PUE 1.38 / design 1.20, WUE 0.59)",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30251/digital-realty-publishes-2025-impact-report-highlighting-sustainability-progress",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Digital Realty — Mistral AI leverages Digital Realty to expand its AI services across Europe",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30246/mistral-ai-leverages-digital-realty-to-expand-its-ai-services-across-europe",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Cushman & Wakefield — Global Data Center Market Comparison 2026 (ranks markets, not operators: Dallas #1, Atlanta #2, Virginia #3)",
+   "url": "https://www.cushmanwakefield.com/en/news/2026/05/dallas-texas-ranked-number-one-primary-data-market-in-the-world",
+   "date": "2026-05"
+  },
+  {
+   "label": "ICCR — Digital Realty water-proposal rebuttal (2026 proxy season)",
+   "url": "https://www.iccr.org/wp-content/uploads/2026/04/DLR-ES.pdf",
+   "date": "2026-04"
+  },
+  {
+   "label": "Digital Realty — Reports first quarter 2026 results (Core FFO USD 2.04; guidance raised; largest hyperscale lease in company history)",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30156/digital-realty-reports-first-quarter-2026-results",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "SEC — Digital Realty Trust DEF 14A proxy statement (board roster, ages, tenure, independence)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000130817926000296/dlr015307-def14a.htm",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "Digital Realty — Targets nearly S$7 billion investment to strengthen Singapore as Asia Pacific AI hub",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30111/digital-realty-targets-nearly-s-7-billion-investment-to-strengthen-singapore-as-asia-pacific-ai-hub",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "MultiState — Virginia lawmakers pass 15 data center bills as the tax-exemption fight looms (Ohio, Georgia and Texas exemption status)",
+   "url": "https://www.multistate.us/insider/2026/3/30/virginia-lawmakers-pass-15-data-center-bills-as-tax-exemption-fight-looms",
+   "date": "2026-03-30"
+  },
+  {
+   "label": "GlobeNewswire — Digital Realty announces final close of the USD 3.25 billion U.S. Hyperscale Data Center Fund (20% retained, manager)",
+   "url": "https://www.globenewswire.com/news-release/2026/03/30/3264485/0/en/Digital-Realty-Announces-Final-Close-of-3-25-billion-U-S-Hyperscale-Data-Center-Fund.html",
+   "date": "2026-03-30"
+  },
+  {
+   "label": "Digital Realty — Delivers colocation infrastructure support to Samsung Electronics in Seoul",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/30016/digital-realty-delivers-colocation-infrastructure-support-to-samsung-electronics-in-seoul",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Benzinga — Digital Realty Q4 tests the S&P / Fitch / Moody's credit-rating divide (S&P BBB+, Fitch BBB stable, Moody's Baa2)",
+   "url": "https://www.benzinga.com/Opinion/26/02/50925295/digital-realty-q4-tests-the-s-and-p-fitch-moodys-credit-rating-divide",
+   "date": "2026-02"
+  },
+  {
+   "label": "Mintz — FERC directs PJM to issue new rules for co-location",
+   "url": "https://www.mintz.com/insights-center/viewpoints/2151/2026-02-02-ferc-directs-pjm-issue-new-rules-co-location",
+   "date": "2026-02-02"
+  },
+  {
+   "label": "SEC — Digital Realty Trust FY2025 Form 10-K (310 data centres, 57.6m sq ft, 84.7% leased, top-20 customer table, lease expirations, debt ladder, competitors, employees)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "Digital Realty — Debuts NVIDIA certification for liquid-cooled data center in Japan",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/20011/digital-realty-debuts-nvidia-certification-for-liquid-cooled-data-center-in-japan",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "Digital Realty — Reports fourth quarter 2025 results (FY2025 Core FFO USD 7.39; initial FY2026 guidance)",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/20001/digital-realty-reports-fourth-quarter-2025-results",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Digital Realty — With Imperial College London, first direct liquid-cooled AI deployment in the UK",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/19976/digital-realty-and-imperial-college-london-collaborate-on-first-direct-liquid-cooled-ai-deployment-in-the-uk",
+   "date": "2026-02-02"
+  },
+  {
+   "label": "Digital Realty — Enters Malaysia, strengthening Southeast Asia's digital backbone",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/19966/digital-realty-enters-malaysia-strengthening-southeast-asia-s-digital-backbone",
+   "date": "2026-01-19"
+  },
+  {
+   "label": "Yahoo Finance — Digital Realty hit with a downgrade: Bank of America cuts to Neutral, price target to USD 170 from USD 210, on a pipeline 'poor fit for current AI driven demand'",
+   "url": "https://finance.yahoo.com/news/digital-realty-hit-downgrade-data-185201518.html",
+   "date": "2026-01-08"
+  },
+  {
+   "label": "Digital Realty — Appoints Stephen Bolze to the board of directors",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/19861/digital-realty-appoints-stephen-bolze-to-board-of-directors",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "Digital Realty — Reinforces operational continuity with Global Command Center in Singapore",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/19856/digital-realty-reinforces-operational-continuity-with-global-command-center-in-singapore",
+   "date": "2025-12-10"
+  },
+  {
+   "label": "PR Newswire — Schneider Electric and Digital Realty announce a USD 373M supply capacity agreement (UPS, low-voltage switchgear, pre-fabricated skids)",
+   "url": "https://www.prnewswire.com/news-releases/schneider-electric-and-digital-realty-announce-373m-supply-capacity-agreement-to-meet-rising-data-center-demand-302620427.html",
+   "date": "2025-11-19"
+  },
+  {
+   "label": "Digital Realty — Prices EUR 600 million of guaranteed notes due 2033 and EUR 800 million due 2037",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/19796/digital-realty-announces-pricing-of-600-million-of-guaranteed-notes-due-2033-and-800-million-of-guaranteed-notes-due-2037",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "Digital Realty — Advances AI infrastructure innovation supporting the NVIDIA AI Factory Research Center and NVIDIA DSX Blueprint",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123357/digital-realty-advances-ai-infrastructure-innovation-supporting-nvidia-ai-factory-research-center-and-nvidia-dsx-blueprint",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Digital Realty — Enters Ghana with its first data center",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123355/digital-realty-unveils-first-data-center-in-ghana-strengthening-west-africas-digital-infrastructure",
+   "date": "2025-10-31"
+  },
+  {
+   "label": "Cbonds — Moody's affirms Digital Realty at Baa2 and revises the outlook to positive from stable",
+   "url": "https://cbonds.com/news/3659203/",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Digital Realty — Reports third quarter 2025 results",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123354/digital-realty-reports-third-quarter-2025-results",
+   "date": "2025-10-23"
+  },
+  {
+   "label": "Digital Realty — Partners with Lumen to accelerate AI-ready data services with high-capacity connectivity",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123353/digital-realty-and-lumen-partner-to-accelerate-ai-ready-data-services-with-high-capacity-connectivity",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "Digital Realty — With OQC and NVIDIA, launches the first quantum-AI data center in New York City",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123345/digital-realty-and-oqc-team-with-nvidia-to-launch-first-quantum-ai-data-center-in-new-york-city",
+   "date": "2025-09-16"
+  },
+  {
+   "label": "Digital Realty — Expands the U.S. clean energy portfolio with a hydropower deal",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123344/digital-realty-expands-u-s-clean-energy-portfolio-with-hydropower-deal",
+   "date": "2025-09-15"
+  },
+  {
+   "label": "Digital Realty — Launches Innovation Lab to accelerate AI and hybrid cloud implementation",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123343/digital-realty-launches-innovation-lab-to-accelerate-ai-and-hybrid-cloud-implementation",
+   "date": "2025-09-10"
+  },
+  {
+   "label": "Digital Realty — Partners with Vultr to deliver global AI infrastructure for businesses",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123336/digital-realty-and-vultr-partner-to-deliver-global-ai-infrastructure-for-businesses",
+   "date": "2025-08-27"
+  },
+  {
+   "label": "Digital Realty — Named a Leader in the IDC MarketScape worldwide datacenter colocation services 2025 vendor assessment for a fourth time",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123337/digital-realty-named-a-leader-in-idc-marketscape-worldwide-datacenter-colocation-services-2025-vendor-assessment-for-fourth-time",
+   "date": "2025-08-14"
+  },
+  {
+   "label": "Digital Realty — Teams with Oracle Solution Centers to help organizations accelerate AI and cloud innovation",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123332/digital-realty-teams-with-oracle-solution-centers-to-help-organizations-accelerate-ai-and-cloud-innovation",
+   "date": "2025-07-24"
+  },
+  {
+   "label": "Digital Realty — Announces pricing of EUR 850 million of guaranteed notes due 2034",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123326/digital-realty-announces-pricing-of-850-million-of-guaranteed-notes-due-2034",
+   "date": "2025-06-17"
+  },
+  {
+   "label": "Digital Realty — Deploys three Microsoft Azure ExpressRoute cloud on-ramps",
+   "url": "https://www.digitalrealty.com/about/newsroom/press-releases/123318/digital-realty-deploys-three-microsoft-azure-expressroute-cloud-on-ramps",
+   "date": "2025-04-24"
+  },
+  {
+   "label": "Nebius — UK expansion, roughly GBP 1.7bn across four sites including Digital Realty Docklands colocation",
+   "url": "https://nebius.com/newsroom/nebius-expands-in-uk-with-more-nvidia-powered-infrastructure-more-customers-and-more-cloud-capabilities-for-agentic-and-enterprise-ai",
+   "date": "2026-06-08"
+  },
+  {
+   "label": "Beveridge & Diamond — FERC orders PJM to create clear rules for co-located data centers and large loads (Docket EL25-49)",
+   "url": "https://www.bdlaw.com/publications/ferc-orders-pjm-to-create-clear-rules-for-co-located-data-centers-and-large-loads/",
+   "date": "2026-01"
+  },
+  {
+   "label": "William Fry — CRU publishes its final policy on data-centre connections in Ireland (CRU/2025/236)",
+   "url": "https://www.williamfry.com/knowledge/cru-publishes-long-awaited-final-policy-on-data-centre-connections/",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "PR Newswire — Digital Realty completes acquisition of Teraco (a majority interest, in a transaction valuing Teraco at approximately USD 3.5 billion)",
+   "url": "https://www.prnewswire.com/news-releases/digital-realty-completes-acquisition-of-teraco-301596692.html",
+   "date": "2022-08-01"
+  },
+  {
+   "label": "White & Case — Data centres and energy consumption: the evolving EU regulatory landscape and outlook for 2026 (EED reporting, 500 kW threshold, 15 May deadline)",
+   "url": "https://www.whitecase.com/insight-alert/data-centres-and-energy-consumption-evolving-eu-regulatory-landscape-and-outlook-2026"
+  },
+  {
+   "label": "CSIS — The impact of tariffs on the AI data center buildout (Section 232 rates and electrical-equipment lead times)",
+   "url": "https://www.csis.org/analysis/impact-tariffs-ai-data-center-buildout-balancing-supply-chain-security-and-ai"
+  },
+  {
+   "label": "DataCentres.com — Singapore lifts its data centre moratorium (successor allocation scheme)",
+   "url": "https://www.datacentres.com/news/singapore-lifts-data-centre-moratorium"
+  },
+  {
+   "label": "City of De Soto, Kansas — Digital Realty data center project page (Astra North ~280 acres, nine buildings, ~3m sq ft, LLPS rate structure, 1 MGD water allocation)",
+   "url": "https://www.desotoks.us/498/Digital-Realty-Data-Center"
+  },
+  {
+   "label": "USDataMap — Biggest data center operators by tracked capacity (Digital Realty 2,878 MW across 59 facilities; CyrusOne 3,026 MW across 33)",
+   "url": "https://usdatamap.com/rankings/biggest-data-center-operators"
+  },
+  {
+   "label": "Synergy Research Group — Equinix, Digital Realty and NTT lead the colocation market (retail vs wholesale split; Digital Realty at 28% of the wholesale segment)",
+   "url": "https://www.srgresearch.com/articles/equinix-digital-realty-and-ntt-lead-colocation-market-helped-aggressive-m-strategy"
+  },
+  {
+   "label": "Digital Realty — PlatformDIGITAL platform page (PDx methodology, 99.999% uptime, 3,300+ site years)",
+   "url": "https://www.digitalrealty.com/platform-digital"
+  },
+  {
+   "label": "Digital Realty — High-Density Colocation product page (30-150 kW per cabinet, AALC and DLC, 170 sites across 33 markets)",
+   "url": "https://www.digitalrealty.com/platform-digital/colocation/high-density-colocation"
+  },
+  {
+   "label": "Digital Realty — Build-to-Suit product page (~5 GW of buildable IT capacity)",
+   "url": "https://www.digitalrealty.com/platform-digital/colocation/build-to-suit"
+  },
+  {
+   "label": "Digital Realty — Powered Base Buildings product page",
+   "url": "https://www.digitalrealty.com/platform-digital/colocation/powered-base-buildings"
+  },
+  {
+   "label": "Digital Realty — Data Center Suites product page (Turn-Key Flex, distributed redundant design)",
+   "url": "https://www.digitalrealty.com/platform-digital/colocation/data-center-suites"
+  },
+  {
+   "label": "Digital Realty — Data Center Services page (10+ on-demand and prescheduled services, 24/365)",
+   "url": "https://www.digitalrealty.com/platform-digital/colocation/services"
+  },
+  {
+   "label": "Digital Realty — ServiceFabric product page (800+ data centers, 350+ cloud on-ramps)",
+   "url": "https://www.digitalrealty.com/platform-digital/connectivity/service-fabric"
+  },
+  {
+   "label": "Digital Realty — Cross Connect product page (255+ facilities; Marketplace Portal ordering)",
+   "url": "https://www.digitalrealty.com/platform-digital/connectivity/cross-connect"
+  },
+  {
+   "label": "Digital Realty — Internet Exchange product page (6 DRIX exchanges in the US)",
+   "url": "https://www.digitalrealty.com/platform-digital/connectivity/internet-exchange"
+  },
+  {
+   "label": "Digital Realty — IP Bandwidth product page (100+ facilities, multi-homed)",
+   "url": "https://www.digitalrealty.com/platform-digital/connectivity/ip-bandwidth"
+  },
+  {
+   "label": "Digital Realty — Certifications and compliance page (SOC, ISO, PCI-DSS, EN 50600, Tier II/III/IV; HIPAA absent)",
+   "url": "https://www.digitalrealty.com/data-centers/design/certifications-compliance"
+  },
+  {
+   "label": "Digital Realty — AI solutions page (30 kW to 150 kW per cabinet)",
+   "url": "https://www.digitalrealty.com/expertise/solutions/ai"
+  },
+  {
+   "label": "Digital Realty — Leadership page (executive team and titles)",
+   "url": "https://www.digitalrealty.com/about/leadership"
+  },
+  {
+   "label": "Digital Realty — PartnerOne partner programme page (resell, referral and broker tracks; 230,000 cross connects)",
+   "url": "https://www.digitalrealty.com/partners/partner-program"
+  },
+  {
+   "label": "Digital Realty — De Soto project page (community information for the Astra Enterprise Park campus)",
+   "url": "https://www.digitalrealty.com/about/projects/de-soto"
+  },
+  {
+   "label": "DPR Construction — Advanced Technology market page (named colocation and wholesale client roster including Digital Realty and CyrusOne)",
+   "url": "https://www.dpr.com/company/advanced-technology"
+  },
+  {
+   "label": "Digital Core REIT — The Sponsor page (Digital Realty-sponsored, Digital Realty-managed SGX vehicle; 235,500+ cross connects)",
+   "url": "https://www.digitalcorereit.com/about-us/the-sponsor"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

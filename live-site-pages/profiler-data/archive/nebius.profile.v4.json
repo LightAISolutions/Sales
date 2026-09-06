@@ -246,14 +246,6 @@
    "via": "CWL1 campus",
    "status": "active",
    "since": "2026-08"
-  },
-  {
-   "slug": "digital-realty",
-   "type": "supplier",
-   "note": "Digital Realty Docklands colocation is one of the four UK sites in the roughly GBP 1.7bn, ~65 MW-by-2027 programme.",
-   "context": "Nebius's UK programme runs across Vantage's CWL1 campus in Newport, Kao Data Harlow, the Ark Chertsey site and Digital Realty Docklands colocation.\n\nThe relationship is recorded only from this side. Digital Realty names no AI-cloud tenants anywhere: tenant identity is redacted throughout its filings, and nine of the twenty largest customers in its FY2025 10-K appear only as descriptions such as 'Fortune 50 Software Company'. For that reason the neocloud dossiers are where these arrangements surface at all.",
-   "source": "https://nebius.com/newsroom/nebius-expands-in-uk-with-more-nvidia-powered-infrastructure-more-customers-and-more-cloud-capabilities-for-agentic-and-enterprise-ai",
-   "status": "active"
   }
  ],
  "policyExposure": [
@@ -652,6 +644,6 @@
    "url": "https://public.com/stocks/nbis/earnings"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

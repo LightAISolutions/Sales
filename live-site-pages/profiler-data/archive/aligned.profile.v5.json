@@ -91,7 +91,7 @@
         "Renewable sourcing via LatAm PPAs: Serena Energia (Bahia wind, expanded +135%), Casa dos Ventos, Atlas Renewable Energy",
         "Delta Cube arrays introduced to LatAm, manufactured in Brazil"
       ],
-      "positioning": "Positions Aligned against Ascenty (a Digital Realty joint venture, 49%-held and unconsolidated per Digital Realty's FY2025 10-K, not a wholly owned arm), Scala Data Centers, and Equinix in LatAm hyperscale; solving Querétaro's power scarcity with self-built substation capacity is the regional moat claim.",
+      "positioning": "Positions Aligned against Ascenty (Digital Realty), Scala Data Centers, and Equinix in LatAm hyperscale; solving Querétaro's power scarcity with self-built substation capacity is the regional moat claim.",
       "soldThrough": "Wholesale and colocation contracts under the ODATA brand.",
       "targetSegments": [
         "Hyperscalers localizing cloud/AI capacity in Brazil, Mexico, Colombia, Chile"
@@ -281,14 +281,6 @@
       "slug": "vertiv",
       "type": "other",
       "note": "Not a disclosed supplier: Aligned's in-house Delta³/DeltaFlow cooling IP is its moat claim versus peers who buy merchant CRAH/CDU equipment from Vertiv and others."
-    },
-    {
-      "slug": "digital-realty",
-      "type": "competitor",
-      "note": "Competes in Latin American hyperscale through Ascenty, Digital Realty's 49%-held joint venture; Aligned's chief executive is a former Digital Realty executive.",
-      "context": "Aligned's Latin American business, built on the ODATA acquisition, competes against Ascenty, Scala Data Centers and Equinix. Ascenty is commonly described as Digital Realty's Brazilian arm, but the FY2025 10-K lists it among unconsolidated entities at a 49% ownership interest — a minority joint-venture stake rather than a subsidiary, and the 10-K notes that percentage itself includes an approximate 2% interest held by one of Digital Realty's non-controlling interest holders.\n\nThe two also share a lineage: Aligned's chief executive Andrew Schaap spent eleven years at Digital Realty, rising to senior vice president for global large-scale client-driven builds.",
-      "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
-      "status": "active"
     }
   ],
   "policyExposure": [
@@ -791,13 +783,8 @@
     {
       "label": "Aligned — locations (US and LatAm markets)",
       "url": "https://aligneddc.com/locations/"
-    },
-    {
-      "label": "SEC — Digital Realty Trust FY2025 Form 10-K (unconsolidated entities and ownership percentages: Ascenty 49%)",
-      "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
-      "date": "2026-02-13"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 6
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 5
 }

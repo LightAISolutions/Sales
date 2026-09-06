@@ -319,15 +319,6 @@
    "note": "ENGIE supplies QTS's Irving, Texas data centres with 48 MWac of solar plus bundled retail supply and energy management.",
    "context": "ENGIE holds a long-term PPA on ABEI Energy's ~61 MWac Lubio Solar project in Kaufman County — ABEI's first US transaction with ENGIE — and passes 48 MWac to QTS, about 150 GWh a year, avoiding a stated 100,778 tonnes of CO2 annually. The generation is ABEI's; ENGIE Resources is acting as a retail intermediary rather than selling its own output, which is why this sits alongside rather than inside QTS's utility-first procurement pattern. QTS also holds an earlier 20 MW arrangement across three ENGIE Texas wind projects.",
    "source": "https://q.com/news/engie-and-qts-strengthen-renewable-energy-partnership-in-texas-with-abei-energys-lubio-solar-project/"
-  },
-  {
-   "slug": "digital-realty",
-   "type": "partner",
-   "note": "Co-founder of the Infrastructure for America 501(c)(4), launched 2 September 2026 — and the listed REIT this dossier contrasts itself against on capital structure.",
-   "context": "QTS and Digital Realty co-founded Infrastructure for America with Compass and Vantage on 2 September 2026, a 501(c)(4) setting host-community standards. Both had lost ground in the same consent environment — QTS withdrew from the Prince William Digital Gateway on 2 July 2026 after the Court of Appeals upheld the voiding of the rezoning.\n\nThey are allies on consent and opponents on capital. This dossier's own positioning argues that unlike public REITs Digital Realty and Equinix, perpetual private capital lets QTS buy land and power years ahead of leases — a constraint Digital Realty has been answering from the other direction by raising third-party funds, including a USD 3.25bn US hyperscale fund closed in March 2026 in which it holds 20% and the management mandate.",
-   "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
-   "status": "active",
-   "since": "2026-09"
   }
  ],
  "policyExposure": [
@@ -820,13 +811,8 @@
   {
    "label": "Site Selection Group — the largest US data center operators in 2026 (QTS: 70+ facilities, 3GW+, largest independent)",
    "url": "https://info.siteselectiongroup.com/blog/the-largest-u-s-data-center-operators-in-2026"
-  },
-  {
-   "label": "Compass Datacenters — Infrastructure for America launches, co-founded with Digital Realty, QTS and Vantage",
-   "url": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
-   "date": "2026-09-02"
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "profileVersion": 6
 }

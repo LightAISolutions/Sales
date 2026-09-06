@@ -1,0 +1,505 @@
+{
+ "schemaVersion": 2,
+ "slug": "digital-realty",
+ "title": "Digital Realty — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here-the-money-layer",
+   "title": "Start here: the layer the other colocation guides skip",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "This library already has nine guides on data-centre landlords. **Equinix** teaches colocation economics, interconnection and what a {{REIT}} is. **QTS** teaches the standardized building and what perpetual capital changes. **STACK** teaches the product ladder and the ownership chain. **Aligned** teaches cooling and power-first development. **Switch** teaches Uptime tiers, density and the securitisation round-trip. **Compass**, **EdgeCore**, **PowerHouse** and **Prime** teach the sponsor's chair, the build-to-suit lease, powered land and the recapitalisation ladder. This guide repeats none of them.",
+    "What none of them reaches is **how a finished data centre is valued and paid for** — the money layer. That is this guide. By the end you should be able to read a landlord's results and answer four questions: what is this building worth, who paid for it, what happens to the rent when the lease expires, and why does a company that cannot keep its own profits still grow.",
+    "Digital Realty is the right subject because it is the only large data-centre landlord whose economics are fully public. It publishes quarterly, in detail, under securities law. Everything taught here can be checked against a filing — and the same arithmetic applies to the private landlords in this library, whose sponsors are simply doing it where you cannot see.",
+    "**Assumed:** high-school maths. **Not assumed:** any accounting. Every term is defined the first time it appears."
+   ]
+  },
+  {
+   "id": "the-reit-bargain",
+   "title": "The REIT bargain, and the trap inside it",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A {{REIT}} is not a kind of building, it is a kind of tax status. A company that earns mostly rent-like income and hands at least 90% of its taxable income to shareholders pays **no corporate income tax**. Profits are taxed once, at the shareholder, instead of twice. Data centres qualify because renting out space, power and cooling counts as property income in the eyes of the law.",
+    "That is a genuinely large saving, and it comes with a condition that shapes everything else: **if you must pay out almost all your profit, you cannot keep it to build with.** An ordinary company funds growth from retained earnings. A REIT structurally cannot.",
+    "So a REIT that wants to grow must raise the money from outside, every single time, in one of three ways: borrow it, sell new shares, or bring in a partner. Digital Realty did all three in a single quarter of 2026 — it issued 6.3 million shares at an average of USD 197.54 to fund the Kansas City land and the Teraco increase, issued 12.3 million more to buy Blackstone out of three Northern Virginia buildings, and guided to another USD 1.5–2.0 billion of long-term debt in the second half of the year.",
+    "Selling shares to grow has a cost that is easy to miss: **every new share dilutes the old ones.** Growth only helps existing shareholders if what the money buys earns more than the shares cost. Hold on to that idea — it is the whole reason the {{development spread}} in a later section matters.",
+    "One structural detail you will meet in the filings. Digital Realty is an {{UPREIT}}: the REIT itself owns almost nothing directly, and the buildings sit inside an operating partnership. This is why a seller can be paid in *units* rather than shares — the Kansas City land was bought for 'cash and common units'. Taking units lets a seller defer tax, which makes the buyer's paper more attractive than cash."
+   ]
+  },
+  {
+   "id": "why-ffo-exists",
+   "title": "Why earnings lie about property, and what replaced them",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Accounting requires you to **depreciate** a building — to record a slice of its cost as an expense each year, on the theory that it is wearing out. For a factory machine that is sensible. For a well-maintained data centre in Ashburn that is worth more than it cost, it is close to fiction. Depreciation is also **non-cash**: no money leaves the business.",
+    "The distortion is enormous. In FY2025 Digital Realty reported net income to common shareholders of USD 1.27 billion. Depreciation and amortisation that year ran to roughly USD 1.9 billion. GAAP earnings for a property company are therefore mostly a statement about accounting, not about cash.",
+    "So the industry invented {{FFO}} — funds from operations: net income, add back property depreciation and amortisation, and strip out gains and losses on selling buildings. The logic is that selling a building is not the business; renting it is.",
+    "You will meet **three variants** and they are not interchangeable:",
+    "**{{FFO}}** is the standardised industry definition. **{{Core FFO}}** is FFO after management strips out whatever it considers non-recurring — transaction costs, debt-extinguishment charges, one-off fees. Every company defines its own adjustments, so Core FFO is comparable across quarters for one company and **not comparable between companies**. **{{AFFO}}** goes the other way and subtracts the recurring capital spending needed just to keep existing buildings earning; it is the closest thing to cash actually available for dividends, and it is the most conservative.",
+    "There is a fourth adjustment specific to a global landlord: **{{constant currency}}**. Digital Realty earns 54% of revenue in dollars and 46% in euros, Singapore dollars, sterling, rand, yen and more. A 10% move in either sterling or the euro is worth about 2% of Core FFO per share. Constant-currency figures hold exchange rates fixed so you can see whether the business grew or the currency did.",
+    "**The discipline to carry away:** whenever a landlord quotes an earnings number, ask which definition, and whether the comparison you are making uses the same one."
+   ]
+  },
+  {
+   "id": "one-quarter-five-numbers",
+   "title": "One quarter, five earnings numbers — Digital Realty, Q2 2026",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Every figure below describes the same three months. They differ by a factor of more than two. This is not manipulation; it is five questions with five answers. The last column is the one to internalise.",
+   "cols": [
+    "Measure",
+    "Q2 2026 per share",
+    "What it answers",
+    "Why it differs"
+   ],
+   "rows": [
+    [
+     "Net income to common",
+     "USD 1.21",
+     "What the accountants say we earned",
+     "After roughly USD 480m a quarter of non-cash depreciation, and after gains on sale. Fell from USD 2.94 a year earlier purely on the gains comparison"
+    ],
+    [
+     "{{FFO}}",
+     "USD 2.73",
+     "What the buildings produced, on the industry's standard definition",
+     "Depreciation added back, property gains removed"
+    ],
+    [
+     "{{Core FFO}} as reported",
+     "USD 2.65",
+     "What management calls the underlying result",
+     "FFO less management's non-recurring adjustments"
+    ],
+    [
+     "Core FFO **excluding net {{promote income}}**",
+     "**USD 2.13**",
+     "What the buildings produced without the fund-management performance fee",
+     "This is the honest comparison figure — see the note below"
+    ],
+    [
+     "Constant-currency Core FFO ex-promote",
+     "USD 2.11",
+     "The same, with exchange rates held fixed",
+     "Currency was a small tailwind in the quarter"
+    ]
+   ]
+  },
+  {
+   "id": "the-promote-trap",
+   "title": "The trap in that table",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "3 min",
+   "ps": [
+    "Analysts' consensus for the quarter was **USD 1.98**. The headline Core FFO was **USD 2.65**. It is very tempting to call that a 67-cent beat. It is not.",
+    "Consensus was framed **excluding {{promote income}}** — the performance fee Digital Realty earns when a fund it manages beats an agreed return. The comparable reported figure is **USD 2.13**, so the real beat is fifteen cents. Still good; not extraordinary.",
+    "This matters beyond one quarter. Promote income is lumpy, arrives when a fund crystallises rather than when buildings perform, and is growing as the fund business grows. Any series you build from headline Core FFO across 2025 and 2026 will contain a step change that has nothing to do with data centres.",
+    "**The general lesson:** when a company adds a new income stream of a different character, its headline earnings measure quietly stops meaning what it used to. Read the exclusions line before the number."
+   ]
+  },
+  {
+   "id": "cap-rate-and-yield-on-cost",
+   "title": "What a finished data centre is worth: cap rate and yield on cost",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Start with {{NOI}} — net operating income. Take the rent a building collects, subtract the direct costs of running it, and stop. No interest, no tax, no depreciation, no head-office overhead. NOI is the building's own earning power, independent of who owns it or how they financed it.",
+    "Now the central equation of all property investing. A **{{cap rate}}** is NOI divided by price. If a data centre produces USD 65 million of NOI a year and sells for USD 1 billion, the cap rate is 6.5%. Rearranged, that same equation is a valuation tool: **value = NOI ÷ cap rate.**",
+    "Because you divide by it, a *lower* cap rate means a *more expensive* asset. A 5% cap rate values a given NOI at twenty times; an 8% cap rate values it at twelve and a half. Cap rates fall when buyers are confident and money is cheap, and rise when they are not — so the same building can change value by half without the rent moving at all.",
+    "We have a real number. When Digital Realty bought Blackstone's 64% of three Northern Virginia buildings in June 2026, it disclosed an **initial stabilised cap rate above 6.5%** on a USD 7.8 billion gross value for 288 MW. That is what finished, fully leased, investment-grade-tenanted AI-era capacity traded at.",
+    "Now the other side. **{{yield on cost}}** is the stabilised NOI a *development* is expected to produce, divided by everything it cost to build — land, shell, power, equipment, fees, capitalised interest. Digital Realty states this too: an estimated **pre-tax stabilised cash yield of approximately 11.5%** on its 1,402 MW pipeline.",
+    "Put the two together and you have the **{{development spread}}**: build at 11.5%, and the finished thing is valued at a 6.5% cap rate. That gap is the entire economic case for being a developer rather than a buyer.",
+    "**Do the arithmetic, because it is startling.** A project costing USD 100 at an 11.5% yield produces USD 11.5 of NOI. Valued at a 6.5% cap rate, USD 11.5 ÷ 0.065 = **USD 177**. Spending USD 100 created USD 77 of value — *if* it gets built on budget and leased at the assumed rent.",
+    "Everything difficult about this industry lives inside that 'if'. Construction can overrun. Power can arrive late. And the building may not lease — which is why the pre-leasing percentage in the next section is the number to watch."
+   ]
+  },
+  {
+   "id": "valuing-three-ways",
+   "title": "Three ways to value the same building, and when each one governs",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Cap rates are the default, but they need a stabilised income to work on. When there is none, or when the market is dislocated, the other two take over. A good analyst carries all three.",
+   "cols": [
+    "Method",
+    "How it works",
+    "When it governs",
+    "What it misses"
+   ],
+   "rows": [
+    [
+     "Income / {{cap rate}}",
+     "{{NOI}} ÷ cap rate",
+     "The normal case: a finished, leased, stabilised building",
+     "Needs a stabilised NOI, so it says nothing about a half-built or empty asset. Highly sensitive to the cap rate assumed"
+    ],
+    [
+     "{{Replacement cost}}",
+     "What it would cost to build the same thing today, including land and secured power",
+     "When new supply is constrained. If you cannot get a grid connection until 2032, an existing connected building is worth more than its rent implies",
+     "Ignores whether anyone wants a building there. A perfectly built data centre in the wrong metro is worth less than it cost"
+    ],
+    [
+     "Per-megawatt comparison",
+     "Price divided by MW of IT capacity",
+     "Quick cross-deal sanity check. The Blackstone deal implies about USD 27m per MW of gross value; the Fairfield permits imply about USD 1.63m per MW of *construction* cost",
+     "Compares unlike things unless lease terms, tenant credit and whether power is secured are all held constant. A powered shell and a fitted-out hall are not the same megawatt"
+    ]
+   ]
+  },
+  {
+   "id": "mark-to-market",
+   "title": "What a lease is worth when it ends: churn and mark-to-market",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A signed lease fixes the rent for its term. The interesting question is what happens at the end of it — and for a landlord in a supply-constrained market, this is often a bigger short-term earnings lever than anything under construction.",
+    "**{{Mark-to-market}}** — also called the renewal spread or re-leasing spread — is the percentage change between the expiring rent and the new rent on the same space. Positive means the market moved in the landlord's favour while the tenant was locked in.",
+    "Digital Realty's Q2 2026 renewals came in at **+25.4% cash** overall. Split by deal size, the number tells a much sharper story:",
+    "Small deployments of 0–1 MW renewed at **+5.2%**, moving from USD 331 to USD 348 per kW. Large deployments above 1 MW renewed at **+66.7% cash and +92.3% on a GAAP basis**, moving from USD 159 to USD 265 per kW.",
+    "Look at the *levels*, not just the changes. Big wholesale tenants were paying USD 159 per kW — less than half what small tenants paid — because they signed long leases years ago when capacity was abundant and they had the bargaining power of size. That discount is now being repriced, hard, and the landlord is not the one under pressure any more.",
+    "Two figures decide how much this is worth. First, **how much rolls over**: 25.9% of Digital Realty's annualised rent expires in 2026 alone. A big repricing on a quarter of the book is material. Second, **{{churn}}** — the share of recurring revenue that cancels rather than renewing. A landlord with brilliant renewal spreads and terrible churn is repricing an emptying building.",
+    "**The judgment to form:** high mark-to-market is a windfall from past scarcity, not a permanent capability. It reverses when supply catches up. Ask how many years of expiries are left to reprice before assuming it continues."
+   ]
+  },
+  {
+   "id": "renewal-spreads-bars",
+   "title": "Renewal spreads by deal size, Q2 2026",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "per cent change in cash rent on renewal",
+   "intro": "The same quarter, the same landlord, three tenant sizes. The gap between the first and second bar is the single most informative number in the quarter — and the blended figure at the bottom hides it.",
+   "items": [
+    {
+     "label": "0–1 MW deployments",
+     "sub": "55% of renewals by value; USD 331 → USD 348 per kW",
+     "v": 5.2
+    },
+    {
+     "label": "Above 1 MW deployments",
+     "sub": "44% of renewals; USD 159 → USD 265 per kW",
+     "v": 66.7
+    },
+    {
+     "label": "Other (shell, storage, office)",
+     "sub": "1% of renewals",
+     "v": 7.6
+    },
+    {
+     "label": "Blended total",
+     "sub": "USD 261m of annualised rent renewed",
+     "v": 25.4
+    }
+   ]
+  },
+  {
+   "id": "backlog-and-pipeline",
+   "title": "Reading a landlord's leading indicators",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Rent already being collected tells you about the past. Three disclosures tell you about the next two years.",
+    "**Bookings** are new leases signed in the quarter, quoted as annualised rent. Digital Realty signed USD 208.5m at its share in Q2 2026. Note the mix: 0–1 MW plus interconnection was USD 108m, **52% of the total**. The small-deployment business is half the sales engine, not a legacy remnant — a useful corrective to the assumption that a wholesale landlord lives on hyperscale deals.",
+    "**Backlog** is signed leases that have not started paying yet, because the space is still being built or fitted out. Digital Realty's stood at a record USD 1.9 billion at 100% share, about 30% of in-place rent, commencing on a nine-month average lag: USD 635m in 2026, USD 480m in 2027, USD 312m in 2028 and beyond. Backlog is the most reliable forward indicator a landlord publishes, because the contracts are signed.",
+    "**The development pipeline** is capacity under construction, and the number that matters is not its size but **how much of it is already leased**. Here is where Digital Realty's disclosure gets interesting: capacity underway rose from 769 MW to 1,402 MW in six months — up 82% — while the pre-leased share fell from **64% to 54%**.",
+    "Work out what that means in megawatts rather than percentages. At 64% of 769 MW, about 277 MW was unleased. At 54% of 1,402 MW, about 645 MW is unleased. **Speculative capacity more than doubled.** The percentage fall understates the change.",
+    "That is not automatically bad — in a market where power is the constraint, starting construction before signing a tenant may be the only way to have capacity when a tenant appears. But it moves risk onto the landlord's balance sheet, and it is the specific thing a January 2026 Bank of America downgrade attacked, arguing the pipeline was 'a poor fit for current AI driven demand'.",
+    "**The test to apply:** track pre-leasing quarter by quarter. If megawatts underway keep rising while the pre-leased share keeps falling, the company is taking more leasing risk, whatever the guidance says."
+   ]
+  },
+  {
+   "id": "funding-without-retained-earnings",
+   "title": "Growing when you cannot keep your profits",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Return to the trap in the first section. A {{REIT}} pays out its profits, so growth must be externally funded. Digital Realty guided to USD 4.25–4.75 billion of development spending in 2026 alone. Where does that come from?",
+    "**Debt** is the cheapest, and Digital Realty's is unusually cheap: USD 18.6 billion at a 2.90% average rate, 92% fixed or swapped. That is a legacy of borrowing in a low-rate era, and it is also the quiet risk — USD 8.9 billion matures across 2027–2029, and new issuance is guided at 4.5–5.5%. Roughly doubling the coupon on a third of the stack is a real earnings headwind that no analyst note in the record models.",
+    "**Equity** works but dilutes, as covered earlier. There is a discipline here: issuing shares at USD 197.54 to build at an 11.5% {{yield on cost}} creates value; issuing them to build at 6% would not.",
+    "**Third-party capital** is the interesting one, and it is why this section exists. Instead of owning 100% of a campus, the landlord raises a fund, puts in a slice, and manages the whole thing for a fee. Digital Realty closed a **USD 3.25 billion US hyperscale fund** in March 2026, keeping 20% and the management mandate, and runs twenty unconsolidated joint ventures.",
+    "The economics are attractive: control the asset on a fifth of the capital, and earn a fee on the rest. Fee income rose **98.3%** in FY2025 to USD 143.8m, and annualised net development and management fees reached USD 190.2m. The company calls this one of its three growth pillars.",
+    "It also runs backwards, which is what {{capital recycling}} means in practice. In June 2026 Digital Realty *bought* Blackstone's 64% of three Northern Virginia buildings for USD 3.5 billion, taking full ownership of assets it had part-owned. Partners are brought in when capital is scarce and bought out when the asset is proven.",
+    "**The cost of all this is transparency.** Twenty unconsolidated entities sit between a reader and the buildings. Earnings arrive partly as fees and {{promote income}} rather than rent. And the reported growth of a landlord that increasingly manages other people's money is not the same thing as the growth of its own portfolio."
+   ]
+  },
+  {
+   "id": "capital-machine-timeline",
+   "title": "The capital machine on one clock",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Years across the bottom. The upper lane is how the portfolio was assembled; the lower lane is how it was paid for. Read them together — the funding channel changes character around 2024.",
+   "unit": "calendar year",
+   "lanes": {
+    "port": "Portfolio",
+    "cap": "How it was funded"
+   },
+   "items": [
+    {
+     "x": 2004,
+     "lane": "port",
+     "label": "Incorporated in Maryland; NYSE listing",
+     "sub": "A REIT from the start"
+    },
+    {
+     "x": 2015,
+     "lane": "port",
+     "label": "Telx acquired",
+     "sub": "Buys the interconnection business"
+    },
+    {
+     "x": 2017,
+     "lane": "port",
+     "label": "DuPont Fabros acquired",
+     "sub": "All-stock — equity as currency"
+    },
+    {
+     "x": 2018,
+     "lane": "port",
+     "label": "Ascenty (Brazil)",
+     "sub": "Latin America, in joint venture"
+    },
+    {
+     "x": 2020,
+     "lane": "port",
+     "label": "Interxion combination",
+     "sub": "Creates the EMEA estate — and the EMEA-majority workforce"
+    },
+    {
+     "x": 2022,
+     "lane": "port",
+     "label": "Teraco — 55% majority interest",
+     "sub": "Valued at ~USD 3.5bn; South Africa"
+    },
+    {
+     "x": 2024,
+     "lane": "cap",
+     "label": "Blackstone hyperscale JV deploys",
+     "sub": "~USD 7bn of development, Blackstone 80% / Digital Realty 20%"
+    },
+    {
+     "x": 2025,
+     "lane": "cap",
+     "label": "EUR 850m, EUR 600m and EUR 800m note issues",
+     "sub": "Euro debt against euro assets — the natural hedge"
+    },
+    {
+     "x": 2025,
+     "lane": "port",
+     "label": "USD 373m Schneider Electric supply capacity agreement",
+     "sub": "Reserving factory capacity, not ordering equipment"
+    },
+    {
+     "x": 2026,
+     "lane": "cap",
+     "label": "USD 3.25bn US Hyperscale Fund closes",
+     "sub": "20% retained plus the management mandate"
+    },
+    {
+     "x": 2026,
+     "lane": "port",
+     "label": "Kansas City: ~1,440 acres, 600 MW rising to 2 GW",
+     "sub": "Paid in cash and operating-partnership units"
+    },
+    {
+     "x": 2026,
+     "lane": "cap",
+     "label": "Blackstone bought out of three NoVa buildings",
+     "sub": "USD 3.5bn at a >6.5% cap rate — recycling in reverse"
+    },
+    {
+     "x": 2026,
+     "lane": "port",
+     "label": "Teraco raised to 77%; Columbia Capital agreed",
+     "sub": "~USD 9bn of fund commitments acquired"
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The superlative does not survive contact with the data.** 'Largest AI data-centre landlord' cannot be tested, because no published ranking measures that category. Synergy measures colocation revenue share; Cushman & Wakefield ranks markets, not operators; ABI Research measures active IT load. On revenue and market value Equinix is larger. Digital Realty's own claim is always narrowed to 'the world's largest cloud- and carrier-neutral data center platform' — and that qualifier excludes the hyperscalers' own estates, which dwarf both. It is **unfalsifiable rather than false**, and that is a different and more useful thing to know.",
+    "**Half the customer base cannot be named.** The twenty largest customers are 50.9% of recurring revenue and the top three about 26% — but nine of the twenty are redacted, including the largest at 11.7%, described only as a 'Fortune 50 Software Company'. About 24.6% of recurring revenue cannot be attributed to any named company from public disclosure. Twenty of 310 buildings are single-tenant. Do not guess the identities; the filing declines to say.",
+    "**Cap rates are an assumption, not a fact.** Every valuation in this guide runs through a cap rate, and cap rates move with interest rates and sentiment, not with the building. The same NOI is worth 40% less at an 8% cap rate than at a 5% one. Treat any single-cap-rate valuation as one scenario.",
+    "**Yield on cost is a forecast.** The 11.5% pipeline yield assumes construction on budget and lease-up at assumed rents. With 645 MW of that pipeline unleased, a meaningful part of the 11.5% is a hope, not a contract.",
+    "**Two first-party numbers contradict each other.** Cross connects are published as both 230,000 and 235,500+. Customers appear as both 5,500+ and 6,000+. The Kansas City land cost USD 475m in the press release and USD 482m in the 10-Q. None is a scandal; all are a reminder that 'first-party' does not mean 'reconciled'.",
+    "**And a number in circulation is simply wrong.** Several aggregators state Digital Realty has '2,967.7 MW of white-space IT load'. That is USD 2,945.0 million of non-US *revenue*, misread as megawatts. The FY2025 10-K publishes no single total operating-megawatt figure at all."
+   ]
+  },
+  {
+   "id": "where-the-businesses-slot-in",
+   "title": "Where Digital Realty's businesses slot into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "One row per business line, read against the layer of the ecosystem it touches and the number that tells you whether it is working.",
+   "cols": [
+    "Business line",
+    "Layer",
+    "Who it deals with",
+    "The number to watch"
+   ],
+   "rows": [
+    [
+     "Colocation and high-density AI capacity",
+     "Retail-to-scale landlord",
+     "Enterprises, network providers, AI companies; 142 new logos in Q2 2026",
+     "0–1 MW renewal spread and {{churn}} — pricing power on the sticky book"
+    ],
+    [
+     "Hyperscale and build-to-suit",
+     "Wholesale landlord",
+     "Hyperscalers and AI labs, mostly unnamed in filings",
+     "Pre-leased share of the pipeline, now 54% and falling"
+    ],
+    [
+     "Connectivity and interconnection",
+     "Network layer",
+     "Carriers, clouds, exchanges; 350+ cloud on-ramps",
+     "Interconnection bookings and {{cross connect}} count — the switching cost that keeps tenants"
+    ],
+    [
+     "Strategic private capital",
+     "Asset manager",
+     "Pensions, sovereign funds, insurers; twenty joint ventures",
+     "Fee income growth, and how much of Core FFO is {{promote income}} rather than rent"
+    ],
+    [
+     "Balance sheet",
+     "Financier of everything above",
+     "Bond markets, equity markets, JV partners",
+     "Net debt to EBITDA (4.7x), and the 2027–2029 maturity wall at 2.9% refinancing into 4.5–5.5%"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why can't a REIT fund growth from its own profits?",
+     "a": "Because REIT status requires distributing at least 90% of taxable income to shareholders. There is almost nothing left to retain, so growth must be funded with new debt, new shares or a partner's capital."
+    },
+    {
+     "q": "Why do property companies report FFO instead of net income?",
+     "a": "Because depreciation is a large non-cash charge on buildings that often are not losing value. FFO adds property depreciation back and removes gains on sales, so it describes what the buildings earn rather than what the accounting says."
+    },
+    {
+     "q": "A building produces USD 65m of NOI and sells for USD 1bn. What is the cap rate, and what happens to the value if cap rates rise to 8%?",
+     "a": "6.5%. At an 8% cap rate the same NOI is worth USD 65m ÷ 0.08 = USD 812.5m — a fall of nearly 19% with no change to the rent."
+    },
+    {
+     "q": "What is the development spread, and why does it justify building rather than buying?",
+     "a": "The gap between yield on cost (what a development earns on what it cost to build) and the cap rate a finished building trades at. Building at 11.5% and having it valued at 6.5% turns USD 100 of spending into about USD 177 of value — payment for taking construction and leasing risk."
+    },
+    {
+     "q": "Large tenants renewed at +66.7% while small ones renewed at +5.2%. Why is the large number so much bigger?",
+     "a": "Because big wholesale tenants had locked in low rents years ago when capacity was abundant — USD 159 per kW against USD 331 for small deployments. The spread is that historic discount being repriced, not superior pricing power today."
+    },
+    {
+     "q": "Pipeline megawatts rose 82% while pre-leasing fell from 64% to 54%. What happened in absolute terms?",
+     "a": "Unleased capacity more than doubled, from about 277 MW to about 645 MW. The percentage understates the increase in speculative risk."
+    },
+    {
+     "q": "What is promote income and why does it break earnings comparisons?",
+     "a": "A performance fee earned when a managed fund beats a target return. It is lumpy, unrelated to how the buildings did that quarter, and its inclusion made reported Core FFO of USD 2.65 non-comparable with a USD 1.98 consensus framed on the USD 2.13 ex-promote figure."
+    },
+    {
+     "q": "Name the three ways to value a data centre and when replacement cost takes over.",
+     "a": "Income divided by cap rate; replacement cost; and price per megawatt. Replacement cost governs when new supply is constrained — if a new grid connection takes until 2032, an existing connected building is worth more than its current rent implies."
+    },
+    {
+     "q": "What does it mean that a REIT is structured as an UPREIT?",
+     "a": "The buildings sit in an operating partnership rather than in the REIT directly, so a seller can take partnership units instead of cash and defer tax. It is why big property deals are often paid partly in units."
+    },
+    {
+     "q": "Why is a 2.90% average interest rate a risk rather than a strength?",
+     "a": "Because it is a legacy of cheap-money borrowing. USD 8.9bn matures across 2027–2029 and new issuance is guided at 4.5–5.5%, so refinancing roughly doubles the coupon on a large part of the stack."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A data centre produces USD 40m of stabilised NOI. Comparable buildings trade at a 6.5% cap rate. Roughly what is it worth?",
+     "c": [
+      "USD 260m",
+      "USD 615m",
+      "USD 40m",
+      "Not determinable without the depreciation schedule"
+     ],
+     "a": 1,
+     "why": "Value = NOI ÷ cap rate = 40 ÷ 0.065 ≈ USD 615m. Depreciation is irrelevant to this calculation — that is precisely why property is valued on NOI rather than on accounting earnings."
+    },
+    {
+     "q": "A developer builds at an 11% yield on cost. Finished assets trade at a 7% cap rate. USD 200m of spending creates roughly how much value?",
+     "c": [
+      "USD 200m — cost equals value",
+      "USD 314m",
+      "USD 22m",
+      "USD 140m"
+     ],
+     "a": 1,
+     "why": "USD 200m at 11% produces USD 22m of NOI; at a 7% cap rate that is 22 ÷ 0.07 ≈ USD 314m. The USD 114m uplift is the development spread, and it is compensation for construction and leasing risk rather than free money."
+    },
+    {
+     "q": "A landlord reports headline Core FFO well above consensus, and the release notes the figure includes net promote income. The right response is:",
+     "c": [
+      "Record it as a large beat",
+      "Find the ex-promote figure and compare that with consensus, which is normally framed the same way",
+      "Ignore the quarter entirely",
+      "Add promote income to consensus"
+     ],
+     "a": 1,
+     "why": "Consensus for Digital Realty's Q2 2026 was framed excluding promote. Comparing USD 2.65 with USD 1.98 overstates the beat more than fourfold; the honest comparison is USD 2.13 against USD 1.98."
+    },
+    {
+     "q": "Capacity underway doubles while the pre-leased percentage falls modestly. What has happened to the landlord's risk?",
+     "c": [
+      "It fell, because the pipeline is bigger",
+      "It is unchanged, because the percentage barely moved",
+      "Unleased megawatts rose sharply — percentages hide absolute risk",
+      "It cannot be assessed without the cap rate"
+     ],
+     "a": 2,
+     "why": "Percentages of a growing base are misleading. Digital Realty's pre-leasing fell only ten points but unleased capacity went from roughly 277 MW to roughly 645 MW."
+    },
+    {
+     "q": "Why is a high renewal mark-to-market not necessarily a durable strength?",
+     "c": [
+      "Because renewals are non-cash",
+      "Because it reflects past scarcity repricing to today's market, and reverses once supply catches up",
+      "Because it only applies to small tenants",
+      "Because it is excluded from FFO"
+     ],
+     "a": 1,
+     "why": "The +66.7% on large deals came from leases signed when capacity was abundant at USD 159 per kW. Once the below-market book has been repriced, the uplift is spent — so ask how many years of expiries remain."
+    },
+    {
+     "q": "What does a landlord give up by growing through third-party funds rather than on its own balance sheet?",
+     "c": [
+      "Nothing — it is strictly better",
+      "Transparency and a clean read on portfolio growth, since assets sit in unconsolidated entities and earnings arrive partly as fees",
+      "The ability to use debt",
+      "Its REIT status"
+     ],
+     "a": 1,
+     "why": "The fund model breaks the REIT's retained-earnings constraint and earns fees on other people's capital, but it puts twenty unconsolidated entities between the reader and the buildings, and mixes fee and promote income into an earnings line that used to be rent."
+    }
+   ]
+  }
+ ]
+}

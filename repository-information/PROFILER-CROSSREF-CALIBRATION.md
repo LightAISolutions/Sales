@@ -784,4 +784,195 @@ discovering it in `git diff --stat` afterwards, is what kept the three step-7
 revisions to 17-21 changed lines each instead of full re-serialisations.
 
 
+**C8 — 2026-09-06, v04.82r, Opus 5 xhigh.** Two `developer` dossiers — Digital
+Realty Trust (NYSE: DLR) and CyrusOne LLC, the corpus's first pair of **pure
+data-centre landlords with no generation or storage business at all** — and
+**fifteen** step-7 revisions from a twenty-dossier union, the largest
+reconciliation tail any session has run. The checker exited 0 on the first run
+with **0** findings of any kind: no reciprocal-type findings, **0** unregistered
+sources, **0** dangling slugs once the registry was synced, **0** unregistered
+project pins (`profiler-projects.json`, `Scraper.gs` and `Profiler.html`
+untouched).
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **0** | — |
+| reciprocal-type · **corrected** | **0** | Every new pair coheres by construction: `constellation-energy`→`cyrusone` `customer` against CyrusOne's `supplier`; `powerhouse-data-centers`→, `rosendin`→, `dpr`→ and `mitsubishi-electric`→`cyrusone` `customer` against CyrusOne's `supplier`; `eolian`↔`cyrusone` symmetric `partner`; `schneider-electric`→`digital-realty` `customer` against Digital Realty's `supplier`; `dpr`→`digital-realty` `customer` against Digital Realty's `supplier`; `nebius`→`digital-realty` `supplier` against Digital Realty's `customer`; `compass-datacenters`→, `qts`→ and `vantage`→`digital-realty` symmetric `partner`; and the symmetric `competitor` pairs `equinix`↔`digital-realty`, `digital-realty`↔`cyrusone`, `switch`→, `stack-infrastructure`→ and `aligned`→`digital-realty`, and `cyrusone`→`qts`/`aligned`/`compass-datacenters`/`prime-data-centers` |
+| unregistered-source · **replaced** | **0** | Every relationship `source` was written as the exact registered string. The scratchpad validator was rebuilt first, as C6 and C7 both recommend, and asserted `sources[]` membership before either file was emitted; it reported 0 errors on the first run for both dossiers |
+| unregistered-source · **registered** | **6** | Six step-7 edges needed a source the older dossier did not carry and registered it in the same edit — `constellation-energy` the Constellation Freestone release, `rosendin` the ENR Project Kincora award, `schneider-electric` the PR Newswire supply-capacity release, `equinix` and `stack-infrastructure` and `aligned` the Digital Realty FY2025 10-K, `qts` and `vantage` the Compass Infrastructure for America release, and `tract` the PR Newswire Teraco completion release. The `eolian`, `dpr`, `powerhouse-data-centers` and `mitsubishi-electric` edges cited URLs those dossiers already held |
+| unregistered-source · **accepted** | **0** | — |
+
+**A URL-fabrication near-miss, caught by the validator's design rather than by
+the validator.** Three relationship `source` values in the first draft of the
+Digital Realty dossier were URLs **constructed from plausible site structure**
+rather than copied from a source — a Compass `/infrastructure-for-america/`
+path, a DPR `/work/advanced-technology` path and a Nebius `/blog/posts/` path.
+None existed. They were caught because the pre-emit validator requires every
+relationship URL to be an exact member of `sources[]`, which forced the question
+"where did this string come from?" before emission. The fix in each case was to
+read the **registered** URL out of the counterparty dossier that already carried
+the claim. This is a **different defect class from X2's clipped prefixes**: not a
+copy error but an invention, and it is the one the no-fabrication rule exists
+for. Worth recording because the guard that caught it was a membership assertion,
+not a URL checker — a session that writes `source` as a bare label would not have
+been protected.
+
+**Step 7 substance, for the record — the largest tail in the program, and it did
+not need a deferral.** Case-sensitive word-bounded greps returned **fifteen**
+files for `\bDigital Realty\b` and **ten** for `\bCyrusOne\b`, a union of
+**twenty**, of which **eighteen** carry something beyond executive career
+history. All twenty were read; **fifteen were revised and archived** and five
+were classified as needing no change. **Three carried claims the new research
+contradicted.** `switch` grouped Digital Realty with Equinix as a "retail
+incumbent" in both `productsAndServices` and a relationship `context` — a
+category error, since Synergy measures Equinix as the retail leader at about 17%
+while Digital Realty holds about **28% of the wholesale segment**, and Equinix's
+own dossier describes competing for "the wholesale capacity Digital Realty
+leads"; corrected in both places and a separate `digital-realty` edge added so
+the two competitors are no longer conflated. `tract` recorded the Teraco
+transaction as "the sale of **51%** to Digital Realty for about USD 3.5 billion"
+— **both halves wrong**: the interest was **55%** and USD 3.5bn was Teraco's
+**valuation**, not the consideration; the PR Newswire completion release says
+"a majority interest ... in a transaction valuing Teraco at approximately $3.5
+billion" and states no percentage or price, and Digital Realty raised the holding
+to 77% in June 2026. `aligned` wrote "Ascenty (Digital Realty)", which implies a
+subsidiary; the FY2025 10-K lists Ascenty among **unconsolidated entities at
+49%**, and notes that percentage itself includes an approximate 2% interest held
+by a non-controlling holder. Twelve more were accurate and gained curated edges
+without a prose change: `constellation-energy`, `eolian`, `powerhouse-data-centers`,
+`rosendin`, `dpr` (two edges, one per new slug), `mitsubishi-electric`,
+`schneider-electric`, `equinix`, `compass-datacenters`, `qts`, `nebius` and
+`stack-infrastructure`. Classified and **left alone**: `edgecore` and `nscale` are
+pure executive career history; `mccarthy`'s **stated absence** — that no CyrusOne
+project is named anywhere on its site or by any independent source — was
+re-tested against a fresh third-party sweep and **remains accurate**;
+`dominion-energy`'s single hit is a 2022 Data Center Frontier quotation about the
+Loudoun constraint, accurate as history; and `prime-data-centers`'s mentions are
+CBRE market-survey adjacencies (CyrusOne's Wood Dale in Chicago, both companies in
+Madrid and Vernon) that the new research confirms.
+
+**A false-positive class the brief predicted would not exist, and a real one it
+missed.** The session brief stated plainly that "Digital Realty" and "CyrusOne"
+are unambiguous proper nouns with no false-positive class, unlike C7's
+`\bPower Electronics\b`. That held for the full names. It did **not** hold for
+the abbreviation: the brief's watch item said a bare `DLR` in `aligned` and
+`edgecore` is the ticker. In `aligned` it is — inside a career-history bullet. In
+`edgecore` **all six hits are `DLR Group`, an architecture and engineering firm**,
+which is not Digital Realty at all and is cited for a PUE figure and a building
+capacity. A three-letter abbreviation that is also another firm's name is the
+weaker cousin of the C7 case, and it argues for greping abbreviations separately
+from names rather than trusting a brief's assurance that a name is unambiguous.
+
+**A premise the brief refuted incorrectly, which is itself the finding.** The
+brief stated that neither the Kansas City nor the Fairfield clause is
+"corroborated anywhere in the current corpus", and noted that the "Fairfield"
+hits in `esvolta` and `schneider-electric` are different places. Both statements
+about those two files are right and the conclusion is wrong: the Fairfield claim
+**was** already corroborated, in `constellation-energy`, under the **plant name**
+rather than the town name — a 380 MW agreement plus an exclusive 380 MW Phase 2
+adjacent to Calpine's **Freestone Energy Center**, which sits at 1366 FM488,
+Fairfield, Texas. Searching the corpus for the place name missed it. **The
+generalisable point for future sessions: a campus is named in dossiers by
+whichever of town, county, plant or project code the source used, and a
+single-term grep will miss the other three.** The same session also confirmed
+that `constellation-energy`'s terse "~400 MW at Thad Hill" — which read like a
+mis-transcribed executive name, Calpine's chief executive being Thad Hill — is in
+fact **accurate**: the 2026-02-09 release names "the **Thad Hill Energy Center**
+in Bosque County, Texas". Flagged as a candidate, tested, refuted, left alone.
+
+**A negative finding that repeats C7's shape at a different layer.** There is
+**no published ranking of AI-data-centre landlords**, and as with C7's PCS
+suppliers the absence is structural rather than a search failure: analyst houses
+rank colocation **revenue** share (Synergy), **markets** rather than operators
+(Cushman & Wakefield, Structure Research), or **active IT load** across all
+operator types (ABI Research). The one AI-specific index located — the AI Data
+Center Index, current to July 2026 — ranks **facilities, not operators**, and
+lists neither subject. Consequently the coverage plan's "largest missing AIDC
+landlord" is **unfalsifiable rather than false**, and both dossiers say so in
+`strategyRead` and in their study guides rather than repeating it. Two measurable
+substitutes are recorded instead, and they disagree with each other by design:
+USDataMap's tracked-capacity table puts CyrusOne at **3,026 MW** against Digital
+Realty's **2,878 MW**, while ABI's active-IT-load measure puts Digital Realty at
+**686 MW** against CyrusOne's **674 MW** — announced capacity against energised
+capacity, a factor of roughly 4.5 apart for the same company.
+
+**A provenance decision worth recording, in the conservative direction.** Digital
+Realty's registry `domains` were limited to `digitalrealty.com` and its three
+regional TLDs. **`digitalcorereit.com`, `teraco.co.za` and `ascenty.com` were
+deliberately excluded** even though all three are group-adjacent: Digital Core
+REIT is a separately listed Singapore vehicle that Digital Realty sponsors and
+manages rather than a company channel, and Teraco and Ascenty are a 77%-held
+subsidiary and a 49%-held unconsolidated joint venture respectively. Excluding
+them tiers one cited source `independent` that could arguably have been
+`company`, which **understates** the first-party share rather than inflating it —
+the direction the schema says is safe. Final shares: **72% of 78 sources** for
+Digital Realty and **38% of 69** for CyrusOne, the latter genuinely low because a
+private company's record is mostly other people's reporting. On the CyrusOne side
+`cyrusone.co.uk` was checked and **kept out**: it serves a "Launching Soon"
+placeholder with no CyrusOne branding and is a parked third-party domain, the
+same trap C7 recorded for `power-electronics.co.nz` in the opposite direction.
+
+**Accept-list state.** 14 entries, unchanged. C8 wrote **no `investor` edge** —
+KKR, Global Infrastructure Partners, BlackRock, Brookfield and Blackstone are all
+uncovered slugs (Blackstone, Brookfield and Macquarie are C10 and not yet run), so
+CyrusOne's sponsors and Digital Realty's largest joint-venture counterparty cannot
+be linked at all. This is the **F7 shape** — a landlord whose owners sit outside
+coverage — and it means the `investor` ↔ `portfolio` enum gap gained neither a
+seventh instance nor any evidence either way. C10 will be the session that changes
+this: once Blackstone and Brookfield are covered, Digital Realty's twenty
+unconsolidated entities become linkable and the gap will be exercised hard.
+
+**A note on the peer family, from a fifth end — and the first one that simplifies
+the question.** F6, F7, F8, C5, C6 and C7 each observed `Colocation & Cloud
+Capacity` mixing data-centre landlords with the F3-F5 storage developers, always
+from the storage side or from a landlord that also develops power. Digital Realty
+and CyrusOne are the corpus's **first pure landlords** — `developer` and nothing
+else, no `ipp` tag, no generation, no storage, no PPA origination. For them the
+family lights 28 cards of which the merchant battery owners are simply unrelated
+businesses: no shared counterparty, no shared revenue model, no commercial
+adjacency of any kind. That **undercuts C5's market-map defence**, which rested on
+ENGIE, AES and RWE genuinely selling power to the landlords in the same family.
+The defence does not generalise, and the case for a `renewables-developer` split is
+stronger after C8 than before it. Recorded in `PROFILER-COVERAGE-PLAN.md` §7 for
+X3; no family-map change was made.
+
+**Cross-reference checker.** Exit 0, **no new candidate**; **324**
+mutually-mentioning pairs compared (from 304 at v04.81r — the largest single-session
+increase in the program, reflecting two landlords in a densely cross-referenced
+part of the corpus). Accept list unchanged at 9 entries. Twenty scopes remain over
+the 900-character cap and are listed as not examined.
+
+**Side effects.** 145 dossiers on the roster; graph rebuilt to **1,128 edges (846
+curated)**; eighteen shared concepts registered (**969 total** — REIT, AFFO, Core
+FFO, cap rate, NOI, yield on cost, development spread, replacement cost, net lease,
+same-store, UPREIT, take-private, hold period, continuation vehicle, promote income,
+constant currency, CMBS and cross connect; two further proposals, 'development
+margin' and 'promote', were **dropped as alias collisions caught before
+registration**, the same guard that saved C5 and C7); **no executive photographs
+added** — Digital Realty publishes eleven Cloudinary headshots and CyrusOne eight
+HubSpot ones, and both sets were left for a later pass in favour of completing the
+twenty-dossier step-7 tail, which is stated here rather than left as a silent
+omission; report pins unchanged (X3's job).
+
+**A README drift worth flagging, not fixed.** The README tree lists archived
+dossier snapshots individually and is **32 files behind** — 313 entries against 345
+on disk — with C5, C6 and C7's archives all missing. C8 added eighteen more and
+**followed the precedent rather than adding them**, because unilaterally inserting
+~350 lines into the README is beyond a dossier session's scope and the omission is
+systematic rather than this session's. Either the tree should be regenerated
+mechanically or archive snapshots should be excluded from it by rule; the developer
+should decide which.
+
+**A formatting note, inherited and confirmed a third time.** The round-trip harness
+was rebuilt before anything was written and swept all 598 corpus JSON files: **529
+reproduce byte-identically** under per-file detection of indent width, trailing
+newline and ASCII escaping. The 69 that do not are `apex-clean-energy`, two reports
+and 66 archive snapshots — the compact-single-line-object class — none of which this
+session re-serialised. Two traps the harness caught in advance: the **refresh
+calendar has no trailing newline** while every other file does, and
+`profiler-concepts.json` is **indent=2** where the profiles are indent=1. The
+seventeen step-7 revisions came to **8-20 changed lines each** rather than full
+rewrites.
+
+
 Developed by: LightAISolutions

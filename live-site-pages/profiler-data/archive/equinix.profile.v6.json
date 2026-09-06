@@ -164,14 +164,6 @@
    "note": "Non-binding letters of intent with a $25M prepayment and a right of first refusal — reported as the first colocation-operator SMR agreement.",
    "context": "The letter of intent was executed on 16 February 2024 and disclosed in an AltC SEC filing on 2 April 2024; Oklo names Equinix among its LOI counterparties in its FY2025 10-K without ever having issued a dedicated release. Independent reporting describes a $25M prepayment and a right of first refusal on 100 to 500 MWe for up to 36 months, a window that expires around February 2027.\n\nRead alongside the rest of this dossier's firm-power book, it is the most speculative instrument in it: Oklo has no operating Aurora, no NRC reactor licence, and its first unit is proceeding under a Department of Energy authorization pathway targeted at late 2027 to early 2028.",
    "source": "https://www.datacenterdynamics.com/en/news/equinix-signs-deal-to-procure-up-to-500mw-of-nuclear-power-from-oklo-smrs-makes-25m-pre-payment/"
-  },
-  {
-   "slug": "digital-realty",
-   "type": "competitor",
-   "note": "The other listed data-centre REIT — Equinix leads retail colocation and interconnection, Digital Realty leads wholesale; and Equinix is also its sixth-largest tenant.",
-   "context": "The two lead different segments of the same market. Synergy Research measures Equinix as the retail-segment leader at about 17% share and leader in 16 of the top 25 metros, while Digital Realty holds roughly 28% of the wholesale segment. On scale, Equinix is larger by revenue (USD 9.2bn against USD 6.11bn in FY2025) and by market value; Digital Realty is larger by net rentable area, by data-centre count (310 against 280) and by development pipeline.\n\nThey are also counterparties. Digital Realty's FY2025 10-K names Equinix first among its competitors and, in the same filing, lists Equinix as its sixth-largest customer at USD 95.6m of annualised recurring revenue, 2.0% of the total, across 14 locations on a 4.6-year weighted average term.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
-   "status": "active"
   }
  ],
  "policyExposure": [
@@ -405,13 +397,8 @@
    "label": "Synergy Research — colocation share",
    "url": "https://www.srgresearch.com/articles/equinix-digital-realty-and-ntt-control-30-of-the-growing-worldwide-colocation-market",
    "date": "2023-03"
-  },
-  {
-   "label": "SEC — Digital Realty Trust FY2025 Form 10-K (competitor disclosure; Equinix as the sixth-largest customer at 2.0% of annualised recurring revenue)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
-   "date": "2026-02-13"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

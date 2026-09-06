@@ -91,12 +91,12 @@
       "tagline": "The record $40B exit — AIP/MGX/GIP bought the 51-campus, 6.4 GW Americas platform from Macquarie with Microsoft, NVIDIA and xAI inside the buyer consortium; patented Delta³/DeltaFlow waterless cooling (600+ kW/rack hybrid) is the moat.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "aligneddc.com"
       ],
-      "srcTotal": 39,
-      "srcFirstPct": 77,
+      "srcTotal": 40,
+      "srcFirstPct": 78,
       "kpiNorm": false
     },
     {
@@ -422,7 +422,7 @@
       "tagline": "Dallas single-tenant hyperscale campus developer co-controlled by Brookfield Infrastructure and Ontario Teachers' (October 2023) with KKR at asset level since December 2025 — a manufacturing model (84% offsite Moonraker building, Schneider factory on the Red Oak campus), a serial ABS programme with the first Moody's AAA on hyperscale collateral, Meridian's ~500 MW Mississippi Power contract, and a 2026 consent fight that lost the Prince William Digital Gateway and won a second Red Oak campus 4–1.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "compassdatacenters.com"
       ],
@@ -440,7 +440,7 @@
       "hq": "Baltimore, MD, USA",
       "ticker": "NASDAQ: CEG",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "constellationenergy.com"
       ],
@@ -562,6 +562,23 @@
       "kpiNorm": true
     },
     {
+      "slug": "cyrusone",
+      "name": "CyrusOne",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "KKR- and GIP-owned since 2022 and preparing a reported 2027 IPO — 60+ data centres funded entirely in the securitisation market, three flagship Texas campuses co-located on Calpine plants and an Eolian battery, and a November 2025 cooling failure that took CME's markets down and paused a USD 1.3bn bond sale.",
+      "hq": "Dallas, TX, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "cyrusone.com"
+      ],
+      "srcTotal": 69,
+      "srcFirstPct": 38,
+      "kpiNorm": false
+    },
+    {
       "slug": "delta-electronics",
       "name": "Delta Electronics",
       "categories": [
@@ -578,6 +595,27 @@
       ],
       "srcTotal": 16,
       "srcFirstPct": 50,
+      "kpiNorm": true
+    },
+    {
+      "slug": "digital-realty",
+      "name": "Digital Realty",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The largest listed wholesale data-centre landlord by leasable area and pipeline — 310 data centres, ~3.1 GW in place and ~8.5 GW buildable, a 1,402 MW pipeline whose pre-leasing fell 64% to 54% while it grew 82%, a 25.4% cash mark-to-market on renewals, and a USD 3.25bn hyperscale fund that breaks the REIT equity constraint.",
+      "hq": "Austin, TX, USA",
+      "ticker": "NYSE: DLR",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "digitalrealty.com",
+        "digitalrealty.co.uk",
+        "digitalrealty.de",
+        "digitalrealty.fr"
+      ],
+      "srcTotal": 78,
+      "srcFirstPct": 72,
       "kpiNorm": true
     },
     {
@@ -630,7 +668,7 @@
       "tagline": "The technical builder of Stargate Abilene — self-performing GC with ~6,000 craft workers and prefab on 90%+ of new work; ENR #7 at $14.0B with $26.1B of new contracts booked.",
       "hq": "Redwood City, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "dpr.com"
       ],
@@ -784,12 +822,12 @@
       "hq": "Redwood City, CA, USA",
       "ticker": "NASDAQ: EQIX",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "equinix.com"
       ],
-      "srcTotal": 13,
-      "srcFirstPct": 46,
+      "srcTotal": 14,
+      "srcFirstPct": 50,
       "kpiNorm": true
     },
     {
@@ -1528,7 +1566,7 @@
       "hq": "Tokyo, Japan",
       "ticker": "TSE: 6503",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "mitsubishielectric.com",
         "mitsubishielectric.co.jp",
@@ -1610,7 +1648,7 @@
       "hq": "Amsterdam, Netherlands",
       "ticker": "NASDAQ: NBIS",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "nebius.com"
       ],
@@ -1885,7 +1923,7 @@
       "tagline": "American Real Estate Partners' powered-shell and build-to-suit platform: AREP's GP funds put 5–10% into project JVs with Harrison Street (USD 3.2bn), Blue Owl/Chirisa (USD 5bn, CoreWeave at Chesterfield), Provident, Hillwood, Poe and others; one building delivered and sold (ABX-1 to CyrusOne, USD 154.1m); the 1.8 GW Joliet campus annexed 8–1 in March 2026 lost its ComEd transmission security agreement in July and is in litigation.",
       "hq": "McLean, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "powerhousedata.com",
         "americanrepartners.com",
@@ -1978,8 +2016,8 @@
       "domains": [
         "q.com"
       ],
-      "srcTotal": 44,
-      "srcFirstPct": 55,
+      "srcTotal": 45,
+      "srcFirstPct": 53,
       "kpiNorm": false
     },
     {
@@ -2076,8 +2114,8 @@
       "domains": [
         "rosendin.com"
       ],
-      "srcTotal": 15,
-      "srcFirstPct": 53,
+      "srcTotal": 16,
+      "srcFirstPct": 50,
       "kpiNorm": false
     },
     {
@@ -2164,12 +2202,12 @@
       "hq": "Rueil-Malmaison, France",
       "ticker": "EPA: SU",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "se.com"
       ],
-      "srcTotal": 17,
-      "srcFirstPct": 65,
+      "srcTotal": 18,
+      "srcFirstPct": 67,
       "kpiNorm": true
     },
     {
@@ -2278,11 +2316,11 @@
       "tagline": "Blue Owl's named-tenant build engine — developer-owner of all three campuses in Amazon's $18B Louisiana program plus the 1 GW+ Stargate 'Project Jupiter'; 13 GW stated pipeline across three ring-fenced regions, ten ABS series since 2019, a reported $30B+ APAC sale in motion.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "stackinfra.com"
       ],
-      "srcTotal": 40,
+      "srcTotal": 41,
       "srcFirstPct": 80,
       "kpiNorm": false
     },
@@ -2353,7 +2391,7 @@
       "tagline": "Patent-moated Tier 5 landlord of the AI-factory era — five US Prime campuses, 2 MW-per-rack EVO halls, a 12 GW Oklo nuclear option and $24B raised since 2024; a confidential S-1 is filed at a reported $50–80B.",
       "hq": "Las Vegas, NV, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "switch.com"
       ],
@@ -2442,14 +2480,14 @@
       "tagline": "Denver powered-land developer (Tract Capital Management, founded 2022 by Cologix's Grant van Rooyen) that entitles and services master-planned parks — 14 parks, ~21,000 acres, ~18.7 GW on its projects page, 12,000 acres of it at Reno's TRIC — and sells shovel-ready parcels; the only recorded buyer is sister platform Fleet Data Centers, whose two 230 MW Storey County campuses are leased 197 months to a tenant Bloomberg names as Nvidia and financed by USD 8.4bn of notes, while NV Energy sued Tract in July 2026 and the PUCN decides its temporary gas plants on 8 September.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "tract.com",
         "tractcapital.com",
         "fleetdatacenters.com"
       ],
-      "srcTotal": 150,
-      "srcFirstPct": 33,
+      "srcTotal": 151,
+      "srcFirstPct": 34,
       "kpiNorm": false
     },
     {
@@ -2518,12 +2556,12 @@
       "tagline": "The giga-scale Stargate landlord — 41 campuses / ~9 GW on five continents, 1.4 GW Frontier + 902 MW Lighthouse for Oracle/OpenAI behind a record $38B loan; invented the data-center ABS, now reportedly exploring a ~$100B IPO.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "vantage-dc.com"
       ],
-      "srcTotal": 45,
-      "srcFirstPct": 84,
+      "srcTotal": 46,
+      "srcFirstPct": 83,
       "kpiNorm": false
     },
     {
